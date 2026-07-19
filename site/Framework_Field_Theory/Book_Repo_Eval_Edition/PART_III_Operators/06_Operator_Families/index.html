@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>06 Operator Families | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_III_Operators/06_Operator_Families/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="06 Operator Families" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_III_Operators/06_Operator_Families/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="06 Operator Families" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_III_Operators/06_Operator_Families.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "06 Operator Families",
+    "headline": "06 Operator Families",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_III_Operators/06_Operator_Families/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#the-universal-grammar-of-framework-behavior">The universal grammar of framework behavior</a></li>
+<li><a href="#identity-definition-separation">Identity, definition, separation</a></li>
+<li><a href="#history-inheritance-continuity">History, inheritance, continuity</a></li>
+<li><a href="#connection-comparison-interaction">Connection, comparison, interaction</a></li>
+<li><a href="#change-movement-transformation">Change, movement, transformation</a></li>
+<li><a href="#context-container-environment">Context, container, environment</a></li>
+<li><a href="#timing-cadence-periodicity">Timing, cadence, periodicity</a></li>
+<li><a href="#stability-integration-paradoxresolution">Stability, integration, paradox‑resolution</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Framework_Field_Theory/" itemprop="item">
+                <span itemprop="name">Framework Field Theory</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Framework_Field_Theory/Book_Repo_Eval_Edition/" itemprop="item">
+                <span itemprop="name">Book Repo Eval Edition</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_III_Operators/" itemprop="item">
+                <span itemprop="name">Part Iii Operators</span>
+              </a>
+            <meta itemprop="position" content="4" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">06 Operator Families</span>
+            <meta itemprop="position" content="5" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">06 Operator Families</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="chapter-6-the-seven-operator-families-of-framework-field-theory"><strong>Chapter 6 — The Seven Operator Families of Framework Field Theory</strong><a class="toc-permalink" href="#chapter-6-the-seven-operator-families-of-framework-field-theory" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="the-universal-grammar-of-framework-behavior"><em>The universal grammar of framework behavior</em><a class="toc-permalink" href="#the-universal-grammar-of-framework-behavior" title="Permanent link to this heading">&para;</a></h3>
+<p>Operators are the <strong>atomic units</strong> of Framework Field Theory.<br />
+They are the smallest meaningful actions a framework can take — the verbs that shape identity, relation, transition, stability, and coherence.</p>
+<p>Every framework, from the simplest checklist to the most complex multidimensional system, is built from combinations of these operators.</p>
+<p>FFT identifies <strong>seven universal operator families</strong>:</p>
+<ol>
+<li><strong>Boundary Operators (B‑Ops)</strong>  </li>
+<li><strong>Lineage Operators (L‑Ops)</strong>  </li>
+<li><strong>Relation Operators (R‑Ops)</strong>  </li>
+<li><strong>Transition Operators (T‑Ops)</strong>  </li>
+<li><strong>Envelope Operators (E‑Ops)</strong>  </li>
+<li><strong>Rhythm Operators (H‑Ops)</strong>  </li>
+<li><strong>Coherence Operators (C‑Ops)</strong>  </li>
+</ol>
+<p>These seven families form the <strong>Operator Grammar</strong> — the foundation of the entire field.</p>
+<hr />
+<h1 id="1-boundary-operators-bops"><strong>1. Boundary Operators (B‑Ops)</strong><a class="toc-permalink" href="#1-boundary-operators-bops" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="identity-definition-separation"><em>Identity, definition, separation</em><a class="toc-permalink" href="#identity-definition-separation" title="Permanent link to this heading">&para;</a></h3>
+<p>Boundary Operators define:</p>
+<ul>
+<li>what the framework <em>is</em>  </li>
+<li>what the framework <em>is not</em>  </li>
+<li>what belongs inside  </li>
+<li>what belongs outside  </li>
+</ul>
+<p>They create:</p>
+<ul>
+<li>identity  </li>
+<li>scope  </li>
+<li>constraints  </li>
+<li>protective edges  </li>
+</ul>
+<p>B‑Ops are the first operators to appear in any framework.<br />
+Without boundaries, nothing can be recognized as a framework at all.</p>
+<p><strong>Examples of B‑Ops in the wild:</strong></p>
+<ul>
+<li>“In scope / out of scope”  </li>
+<li>“This model applies when…”  </li>
+<li>“These are the core principles”  </li>
+<li>“This is the domain boundary”  </li>
+</ul>
+<p>B‑Ops are the <strong>identity layer</strong> of frameworks.</p>
+<hr />
+<h1 id="2-lineage-operators-lops"><strong>2. Lineage Operators (L‑Ops)</strong><a class="toc-permalink" href="#2-lineage-operators-lops" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="history-inheritance-continuity"><em>History, inheritance, continuity</em><a class="toc-permalink" href="#history-inheritance-continuity" title="Permanent link to this heading">&para;</a></h3>
+<p>Lineage Operators express:</p>
+<ul>
+<li>where the framework comes from  </li>
+<li>what it inherits  </li>
+<li>what it preserves  </li>
+<li>what it evolves from  </li>
+</ul>
+<p>They create:</p>
+<ul>
+<li>continuity  </li>
+<li>narrative  </li>
+<li>legitimacy  </li>
+<li>memory  </li>
+</ul>
+<p>L‑Ops allow frameworks to:</p>
+<ul>
+<li>trace their origins  </li>
+<li>maintain coherence across time  </li>
+<li>evolve without losing identity  </li>
+</ul>
+<p><strong>Examples of L‑Ops:</strong></p>
+<ul>
+<li>“Version 2.0 builds on…”  </li>
+<li>“This method descends from…”  </li>
+<li>“This tradition originates in…”  </li>
+</ul>
+<p>L‑Ops are the <strong>ancestral layer</strong> of frameworks.</p>
+<hr />
+<h1 id="3-relation-operators-rops"><strong>3. Relation Operators (R‑Ops)</strong><a class="toc-permalink" href="#3-relation-operators-rops" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="connection-comparison-interaction"><em>Connection, comparison, interaction</em><a class="toc-permalink" href="#connection-comparison-interaction" title="Permanent link to this heading">&para;</a></h3>
+<p>Relation Operators define how elements:</p>
+<ul>
+<li>connect  </li>
+<li>compare  </li>
+<li>interact  </li>
+<li>influence each other  </li>
+</ul>
+<p>They create:</p>
+<ul>
+<li>structure  </li>
+<li>adjacency  </li>
+<li>tension  </li>
+<li>symmetry  </li>
+</ul>
+<p>R‑Ops are responsible for:</p>
+<ul>
+<li>matrices  </li>
+<li>quadrants  </li>
+<li>networks  </li>
+<li>relational maps  </li>
+</ul>
+<p><strong>Examples of R‑Ops:</strong></p>
+<ul>
+<li>“A influences B”  </li>
+<li>“These two forces oppose each other”  </li>
+<li>“This sits between these two domains”  </li>
+</ul>
+<p>R‑Ops are the <strong>interaction layer</strong> of frameworks.</p>
+<hr />
+<h1 id="4-transition-operators-tops"><strong>4. Transition Operators (T‑Ops)</strong><a class="toc-permalink" href="#4-transition-operators-tops" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="change-movement-transformation"><em>Change, movement, transformation</em><a class="toc-permalink" href="#change-movement-transformation" title="Permanent link to this heading">&para;</a></h3>
+<p>Transition Operators describe:</p>
+<ul>
+<li>how something becomes something else  </li>
+<li>how states shift  </li>
+<li>how processes unfold  </li>
+<li>how systems evolve  </li>
+</ul>
+<p>They create:</p>
+<ul>
+<li>motion  </li>
+<li>flow  </li>
+<li>progression  </li>
+<li>transformation  </li>
+</ul>
+<p>T‑Ops are responsible for:</p>
+<ul>
+<li>processes  </li>
+<li>cycles  </li>
+<li>developmental stages  </li>
+<li>causal chains  </li>
+</ul>
+<p><strong>Examples of T‑Ops:</strong></p>
+<ul>
+<li>“Step 1 → Step 2 → Step 3”  </li>
+<li>“This phase transitions into the next”  </li>
+<li>“This condition triggers a shift”  </li>
+</ul>
+<p>T‑Ops are the <strong>change layer</strong> of frameworks.</p>
+<hr />
+<h1 id="5-envelope-operators-eops"><strong>5. Envelope Operators (E‑Ops)</strong><a class="toc-permalink" href="#5-envelope-operators-eops" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="context-container-environment"><em>Context, container, environment</em><a class="toc-permalink" href="#context-container-environment" title="Permanent link to this heading">&para;</a></h3>
+<p>Envelope Operators define:</p>
+<ul>
+<li>the container a framework lives inside  </li>
+<li>the context that shapes behavior  </li>
+<li>the environment that constrains or enables  </li>
+</ul>
+<p>They create:</p>
+<ul>
+<li>boundaries of possibility  </li>
+<li>environmental conditions  </li>
+<li>contextual envelopes  </li>
+</ul>
+<p>E‑Ops explain why a framework behaves differently in different contexts.</p>
+<p><strong>Examples of E‑Ops:</strong></p>
+<ul>
+<li>“In complex environments…”  </li>
+<li>“Under high uncertainty…”  </li>
+<li>“Within this organizational structure…”  </li>
+</ul>
+<p>E‑Ops are the <strong>contextual layer</strong> of frameworks.</p>
+<hr />
+<h1 id="6-rhythm-operators-hops"><strong>6. Rhythm Operators (H‑Ops)</strong><a class="toc-permalink" href="#6-rhythm-operators-hops" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="timing-cadence-periodicity"><em>Timing, cadence, periodicity</em><a class="toc-permalink" href="#timing-cadence-periodicity" title="Permanent link to this heading">&para;</a></h3>
+<p>Rhythm Operators express:</p>
+<ul>
+<li>timing  </li>
+<li>pacing  </li>
+<li>cycles  </li>
+<li>oscillations  </li>
+<li>periodic behavior  </li>
+</ul>
+<p>They create:</p>
+<ul>
+<li>beats  </li>
+<li>pulses  </li>
+<li>intervals  </li>
+<li>synchrony  </li>
+</ul>
+<p>H‑Ops explain:</p>
+<ul>
+<li>why some frameworks feel fast or slow  </li>
+<li>why some processes require cadence  </li>
+<li>why some systems oscillate  </li>
+</ul>
+<p><strong>Examples of H‑Ops:</strong></p>
+<ul>
+<li>“Weekly retrospectives”  </li>
+<li>“Quarterly planning cycles”  </li>
+<li>“Iterative loops”  </li>
+</ul>
+<p>H‑Ops are the <strong>temporal layer</strong> of frameworks.</p>
+<hr />
+<h1 id="7-coherence-operators-cops"><strong>7. Coherence Operators (C‑Ops)</strong><a class="toc-permalink" href="#7-coherence-operators-cops" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="stability-integration-paradoxresolution"><em>Stability, integration, paradox‑resolution</em><a class="toc-permalink" href="#stability-integration-paradoxresolution" title="Permanent link to this heading">&para;</a></h3>
+<p>Coherence Operators determine:</p>
+<ul>
+<li>whether a framework holds together  </li>
+<li>whether it collapses under paradox  </li>
+<li>whether it integrates new information  </li>
+<li>whether it remains legible under stress  </li>
+</ul>
+<p>They create:</p>
+<ul>
+<li>stability  </li>
+<li>integration  </li>
+<li>resilience  </li>
+<li>harmony  </li>
+</ul>
+<p>C‑Ops are the rarest and most powerful operators.<br />
+They are responsible for:</p>
+<ul>
+<li>paradox resolution  </li>
+<li>dimensional integration  </li>
+<li>long‑range stability  </li>
+<li>field‑level coherence  </li>
+</ul>
+<p><strong>Examples of C‑Ops:</strong></p>
+<ul>
+<li>“Both/and resolution”  </li>
+<li>“Integrative synthesis”  </li>
+<li>“Meta‑coherence across layers”  </li>
+</ul>
+<p>C‑Ops are the <strong>stability engine</strong> of frameworks.</p>
+<hr />
+<h1 id="8-why-these-seven-operators-are-universal"><strong>8. Why These Seven Operators Are Universal</strong><a class="toc-permalink" href="#8-why-these-seven-operators-are-universal" title="Permanent link to this heading">&para;</a></h1>
+<p>These seven operators appear in:</p>
+<ul>
+<li>strategy frameworks  </li>
+<li>psychological models  </li>
+<li>organizational systems  </li>
+<li>scientific methods  </li>
+<li>creative processes  </li>
+<li>educational pedagogies  </li>
+<li>research methodologies  </li>
+<li>narrative structures  </li>
+</ul>
+<p>They are universal because they describe <strong>how conceptual systems behave</strong>, not what they contain.</p>
+<p>Operators are the <strong>grammar</strong> of frameworks.</p>
+<hr />
+<h1 id="9-operator-families-as-a-system"><strong>9. Operator Families as a System</strong><a class="toc-permalink" href="#9-operator-families-as-a-system" title="Permanent link to this heading">&para;</a></h1>
+<p>The seven operator families form a <strong>triadic ecology</strong>:</p>
+<ul>
+<li><strong>Identity Zone</strong>  </li>
+<li>
+<p>B‑Ops + L‑Ops  </p>
+</li>
+<li>
+<p><strong>Interaction Zone</strong>  </p>
+</li>
+<li>
+<p>R‑Ops + T‑Ops + E‑Ops  </p>
+</li>
+<li>
+<p><strong>Stability Zone</strong>  </p>
+</li>
+<li>H‑Ops + C‑Ops  </li>
+</ul>
+<p>This ecology explains:</p>
+<ul>
+<li>how frameworks stabilize  </li>
+<li>how frameworks evolve  </li>
+<li>how frameworks collapse  </li>
+<li>how frameworks hybridize  </li>
+</ul>
+<p>Operators are not isolated.<br />
+They are <strong>relational, ecological, and dimensional</strong>.</p>
+<hr />
+<h1 id="10-operators-are-the-foundation-of-fft"><strong>10. Operators Are the Foundation of FFT</strong><a class="toc-permalink" href="#10-operators-are-the-foundation-of-fft" title="Permanent link to this heading">&para;</a></h1>
+<p>Everything in FFT emerges from operators:</p>
+<ul>
+<li>dimensional layers  </li>
+<li>regime structures  </li>
+<li>coherence envelopes  </li>
+<li>signatures  </li>
+<li>translation pathways  </li>
+<li>evolution arcs  </li>
+<li>motion semantics  </li>
+<li>meta‑architecture  </li>
+</ul>
+<p>Operators are the <strong>atoms</strong> of the field.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_III_Operators/06_Operator_Families.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_III_Operators/06_Operator_Families.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

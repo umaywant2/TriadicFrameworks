@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Session Lineage Map | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/Mode/session-lineage-map/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Session Lineage Map" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/Mode/session-lineage-map/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Session Lineage Map" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/Mode/session-lineage-map.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Session Lineage Map",
+    "headline": "Session Lineage Map",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/Mode/session-lineage-map/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#session-context">Session Context</a></li>
+<li><a href="#1-purpose">1. Purpose</a></li>
+<li><a href="#2-layer-architecture">2. Layer Architecture</a></li>
+<li><a href="#3-module-lineage-cards">3. Module Lineage Cards</a><ul>
+<li><a href="#31-mode-m">3.1 Mode (M)</a></li>
+<li><a href="#32-opacity-o">3.2 Opacity (O)</a></li>
+<li><a href="#33-capture-c">3.3 Capture (C)</a></li>
+<li><a href="#34-context-cx">3.4 Context (Cx)</a></li>
+</ul>
+</li>
+<li><a href="#4-dependency-matrix">4. Dependency Matrix</a></li>
+<li><a href="#5-propagation-flow-map">5. Propagation Flow Map</a></li>
+<li><a href="#6-triadic-role-summary">6. Triadic Role Summary</a></li>
+<li><a href="#7-regime-interaction-map">7. Regime Interaction Map</a></li>
+<li><a href="#8-ancestry-chain">8. Ancestry Chain</a></li>
+<li><a href="#9-canon-rules">9. Canon Rules</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Mode/" itemprop="item">
+                <span itemprop="name">Mode</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Session Lineage Map</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Session Lineage Map</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="triadic-lineage-map-session-layer">🗺️ Triadic Lineage Map — Session Layer<a class="toc-permalink" href="#triadic-lineage-map-session-layer" title="Permanent link to this heading">&para;</a></h1>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<p><img alt="Layer" src="https://img.shields.io/badge/Layer-Session-09f" /><br />
+<img alt="Scope" src="https://img.shields.io/badge/Scope-Full_Lineage-ffe600" /><br />
+<img alt="Status" src="https://img.shields.io/badge/Status-Active-0af" /><br />
+<img alt="RTT" src="https://img.shields.io/badge/RTT%2F1-Aligned-8A2BE2" /></p>
+<hr />
+<h2 id="session-context">Session Context<a class="toc-permalink" href="#session-context" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>Document:    Triadic Lineage Map — Session Layer
+Version:     1.0
+Status:      active
+Layer:       Session
+Coherence:   declared
+Drift:       bounded
+Canon:       active
+Audience:    students + AIs
+</code></pre></div>
+
+<hr />
+<h2 id="1-purpose">1. Purpose<a class="toc-permalink" href="#1-purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>This document maps the <strong>complete lineage</strong> of the RTT/1 Session Layer —<br />
+every module, every dependency, every propagation path. It is the structural<br />
+spine that prevents drift, preserves module identity, and ensures no<br />
+component operates orphaned from its ancestry.</p>
+<p><strong>Design principle:</strong> Every module must know where it came from, what it<br />
+feeds, and what constrains it. Lineage is not documentation — it is<br />
+load-bearing structure.</p>
+<hr />
+<h2 id="2-layer-architecture">2. Layer Architecture<a class="toc-permalink" href="#2-layer-architecture" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>RTT/1 Stack (simplified)
+═══════════════════════════════════════════════
+
+  ┌─────────────────────────────────────────┐
+  │            REGIME LAYER                 │
+  │  coherence · drift · paradox · posture  │
+  └──────────────────┬──────────────────────┘
+                     │ inherits
+                     ▼
+  ┌─────────────────────────────────────────┐
+  │            SESSION LAYER                │
+  │                                         │
+  │   ┌────────┐  ┌─────────┐  ┌────────┐   │
+  │   │  Mode  │  │ Opacity │  │Capture │   │
+  │   │  (M)   │  │  (O)    │  │  (C)   │   │
+  │   └───┬────┘  └────┬────┘  └───┬────┘   │
+  │       │            │           │        │
+  │       │    ┌───────┴───────┐   │        │
+  │       └───▶│   Context    │◀──┘        │
+  │            │    (Cx)      │             │
+  │            └──────────────┘             │
+  └─────────────────────────────────────────┘
+</code></pre></div>
+
+<hr />
+<h2 id="3-module-lineage-cards">3. Module Lineage Cards<a class="toc-permalink" href="#3-module-lineage-cards" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="31-mode-m">3.1 Mode (M)<a class="toc-permalink" href="#31-mode-m" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Canonical ID:   MODE
+Layer:          Session
+Triadic Role:   Stabilize · Shift · Invert (maps all three)
+Parent:         Regime Layer (coherence posture inheritance)
+Siblings:       Opacity, Capture, Context
+Children:       none (terminal operator)
+Feeds:          Opacity (session.mode parameter)
+                Capture (mode events)
+                Context (stance → window behavior)
+Constraints:    MCL (3 invariants, 5 guardrails)
+Propagation:    push-based, event-driven
+Default State:  M_chat
+Files:          operators.md, constraints.md, propagation.md,
+                tests.md, diagram.svg
+</code></pre></div>
+
+<p><strong>Identity statement:</strong> Mode governs <em>how</em> the system engages — posture,<br />
+not payload. It is orthogonal to content and substrate.</p>
+<h3 id="32-opacity-o">3.2 Opacity (O)<a class="toc-permalink" href="#32-opacity-o" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Canonical ID:   OPACITY
+Layer:          Session
+Triadic Role:   Stabilize (transparency calibration)
+Parent:         Regime Layer
+Siblings:       Mode, Capture, Context
+Children:       none (terminal operator)
+Receives:       Mode (session.mode → transparency weight)
+                Regime (opacity posture inheritance)
+Feeds:          Context (visibility parameters)
+                Capture (opacity state logged)
+Constraints:    Opacity Constraint Layer (OCL)
+Propagation:    recalculates on Mode transition events
+Default State:  balanced transparency
+</code></pre></div>
+
+<p><strong>Identity statement:</strong> Opacity governs <em>how much</em> is visible — the<br />
+transparency dial of the session. It weights visibility based on mode,<br />
+regime, and user preference.</p>
+<h3 id="33-capture-c">3.3 Capture (C)<a class="toc-permalink" href="#33-capture-c" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Canonical ID:   CAPTURE
+Layer:          Session
+Triadic Role:   Stabilize (immutable record)
+Parent:         Regime Layer
+Siblings:       Mode, Opacity, Context
+Children:       none (terminal operator)
+Receives:       Mode (mode_transition, mode_violation events)
+                Opacity (opacity state changes)
+                Context (context window snapshots)
+Feeds:          external consumers (session logs, audit)
+Constraints:    append-only within session; immutable after close
+Propagation:    receives from all siblings; pushes to none
+Default State:  empty log, recording active
+</code></pre></div>
+
+<p><strong>Identity statement:</strong> Capture is the session&rsquo;s memory — the append-only,<br />
+immutable log of everything that happened. It does not interpret; it records.</p>
+<h3 id="34-context-cx">3.4 Context (Cx)<a class="toc-permalink" href="#34-context-cx" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Canonical ID:   CONTEXT
+Layer:          Session
+Triadic Role:   Shift (adaptive window)
+Parent:         Regime Layer
+Siblings:       Mode, Opacity, Capture
+Children:       none (terminal operator)
+Receives:       Mode (stance → window behavior)
+                Opacity (visibility parameters)
+                Regime (context scope inheritance)
+Feeds:          runtime processing (active context window)
+Constraints:    window must adjust before next input processed
+Propagation:    receives from Mode and Opacity; feeds runtime
+Default State:  wide context (Chat Mode aligned)
+</code></pre></div>
+
+<p><strong>Identity statement:</strong> Context governs <em>what</em> is in scope — the active<br />
+window of attention. It adapts its shape based on the current mode and<br />
+opacity state.</p>
+<hr />
+<h2 id="4-dependency-matrix">4. Dependency Matrix<a class="toc-permalink" href="#4-dependency-matrix" title="Permanent link to this heading">&para;</a></h2>
+<p>This matrix shows every directed dependency in the Session Layer.<br />
+Read as: <strong>row depends on column</strong>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: center;">Regime</th>
+<th style="text-align: center;">Mode</th>
+<th style="text-align: center;">Opacity</th>
+<th style="text-align: center;">Capture</th>
+<th style="text-align: center;">Context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Mode</strong></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Opacity</strong></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Capture</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">✓</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Context</strong></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key observations:</strong></p>
+<ul>
+<li><strong>Mode</strong> depends only on the Regime Layer (upward inheritance).</li>
+<li><strong>Opacity</strong> depends on both Regime and Mode.</li>
+<li><strong>Capture</strong> receives from all siblings but depends on none for its own operation.</li>
+<li><strong>Context</strong> is the most dependent — it synthesizes Mode, Opacity, and Regime.</li>
+<li><strong>No circular dependencies exist.</strong> The graph is a directed acyclic graph (DAG).</li>
+</ul>
+<hr />
+<h2 id="5-propagation-flow-map">5. Propagation Flow Map<a class="toc-permalink" href="#5-propagation-flow-map" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>Regime Layer
+    │
+    ├──▶ Mode ──push──▶ Opacity
+    │      │                │
+    │      ├──push──▶ Capture ◀── Opacity (state)
+    │      │                │
+    │      └──push──▶ Context ◀── Opacity (visibility)
+    │                   │
+    └───────────────────┘ (Regime → Context direct)
+</code></pre></div>
+
+<p><strong>Event flow sequence for a mode transition:</strong></p>
+<div class="codehilite"><pre><span></span><code>1. User requests mode change          (origin: user)
+2. MCL validates transition            (constraints check)
+3. Mode Operator executes transition   (stance changes)
+4. Mode pushes event → Capture         (logged before completion)
+5. Mode pushes event → Opacity         (recalculates transparency)
+6. Mode pushes event → Context         (adjusts window)
+7. Opacity pushes state → Context      (visibility updated)
+8. Context ready for next input        (window stabilized)
+</code></pre></div>
+
+<p><strong>Invariant:</strong> Steps 4–6 happen in parallel. Step 7 follows Opacity<br />
+recalculation. Step 8 is the final gate before the next user input<br />
+is processed.</p>
+<hr />
+<h2 id="6-triadic-role-summary">6. Triadic Role Summary<a class="toc-permalink" href="#6-triadic-role-summary" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Module</th>
+<th style="text-align: left;">Primary Role</th>
+<th style="text-align: left;">Secondary Role</th>
+<th style="text-align: left;">Triadic Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Mode</td>
+<td style="text-align: left;">all three</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">Maps stances to Stabilize/Shift/Invert</td>
+</tr>
+<tr>
+<td style="text-align: left;">Opacity</td>
+<td style="text-align: left;">Stabilize</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">Calibrates; holds steady visibility</td>
+</tr>
+<tr>
+<td style="text-align: left;">Capture</td>
+<td style="text-align: left;">Stabilize</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">Records; preserves immutable state</td>
+</tr>
+<tr>
+<td style="text-align: left;">Context</td>
+<td style="text-align: left;">Shift</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">Adapts; reshapes the active window</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Session Layer triadic profile:</strong></p>
+<ul>
+<li><strong>Stabilize-heavy:</strong> 3 of 4 modules have Stabilize as primary.<br />
+  This is by design — the Session Layer&rsquo;s job is to hold steady.</li>
+<li><strong>Shift present:</strong> Context provides adaptive capacity.</li>
+<li><strong>Invert absent at layer level:</strong> Inversion lives <em>inside</em> Mode<br />
+  (Debug Mode) rather than as a separate Session module. This keeps<br />
+  the layer structurally minimal.</li>
+</ul>
+<hr />
+<h2 id="7-regime-interaction-map">7. Regime Interaction Map<a class="toc-permalink" href="#7-regime-interaction-map" title="Permanent link to this heading">&para;</a></h2>
+<p>The Session Layer inherits its operating constraints from the Regime Layer.<br />
+This table shows how each regime posture affects each Session module.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Regime Posture</th>
+<th style="text-align: left;">Mode</th>
+<th style="text-align: left;">Opacity</th>
+<th style="text-align: left;">Capture</th>
+<th style="text-align: left;">Context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">declared</td>
+<td style="text-align: left;">All transitions explicit</td>
+<td style="text-align: left;">Full transparency range</td>
+<td style="text-align: left;">Normal logging</td>
+<td style="text-align: left;">Wide context available</td>
+</tr>
+<tr>
+<td style="text-align: left;">inferred</td>
+<td style="text-align: left;">Transitions may be proposed</td>
+<td style="text-align: left;">Weighted transparency</td>
+<td style="text-align: left;">Normal logging</td>
+<td style="text-align: left;">Adaptive context</td>
+</tr>
+<tr>
+<td style="text-align: left;">suspended</td>
+<td style="text-align: left;">Chat Mode only; others locked</td>
+<td style="text-align: left;">Minimal transparency</td>
+<td style="text-align: left;">Violation logging active</td>
+<td style="text-align: left;">Narrow context; read-only</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="8-ancestry-chain">8. Ancestry Chain<a class="toc-permalink" href="#8-ancestry-chain" title="Permanent link to this heading">&para;</a></h2>
+<p>The full ancestry chain from root to terminal:</p>
+<div class="codehilite"><pre><span></span><code>RTT (root theory)
+ └── RTT/1 (runtime specification)
+      └── Regime Layer (coherence governance)
+           └── Session Layer
+                ├── Mode (M)
+                │    └── MCL (constraint sub-layer)
+                ├── Opacity (O)
+                │    └── OCL (constraint sub-layer)
+                ├── Capture (C)
+                └── Context (Cx)
+</code></pre></div>
+
+<p><strong>Every module in this chain can trace its lineage to RTT.</strong><br />
+No orphan modules exist. No module operates without a declared parent.</p>
+<hr />
+<h2 id="9-canon-rules">9. Canon Rules<a class="toc-permalink" href="#9-canon-rules" title="Permanent link to this heading">&para;</a></h2>
+<ol>
+<li><strong>No module may be added to the Session Layer</strong> without a lineage<br />
+   card, dependency entry, and propagation path.</li>
+<li><strong>No module may be removed</strong> without verifying that no sibling<br />
+   depends on it.</li>
+<li><strong>All propagation paths must remain acyclic.</strong> Introducing a cycle<br />
+   is a canon violation.</li>
+<li><strong>The Regime Layer is the sole source of coherence posture.</strong><br />
+   No Session module may self-declare coherence.</li>
+<li><strong>Mode is the sole source of interaction stance.</strong><br />
+   No sibling module may independently set mode state.</li>
+</ol>
+<hr />
+<p>🔙 <a href="./README.md">Back to Mode Module</a> · <a href="./operators.md">Operators</a> · <a href="./constraints.md">Constraints</a> · <a href="./propagation.md">Propagation</a></p>
+<hr />
+<p><em>Session Layer Triadic Lineage Map v1.0 · RTT/1 · TriadicFrameworks</em></p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Mode/session-lineage-map.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/Mode/session-lineage-map.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

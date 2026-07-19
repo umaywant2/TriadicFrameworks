@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Partial Alignment Strategies | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/Governance_Substrate_Model/10_Adapters/Partial_Alignment_Strategies/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Partial Alignment Strategies" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/Governance_Substrate_Model/10_Adapters/Partial_Alignment_Strategies/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Partial Alignment Strategies" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/Governance_Substrate_Model/10_Adapters/Partial_Alignment_Strategies.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Partial Alignment Strategies",
+    "headline": "Partial Alignment Strategies",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/Governance_Substrate_Model/10_Adapters/Partial_Alignment_Strategies/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#why-partial-alignment-is-necessary">Why Partial Alignment Is Necessary</a></li>
+<li><a href="#what-partial-alignment-is">What Partial Alignment Is</a></li>
+<li><a href="#core-principles-of-partial-alignment">Core Principles of Partial Alignment</a><ul>
+<li><a href="#explicit-misalignment-declaration">Explicit Misalignment Declaration</a></li>
+<li><a href="#boundary-tightening">Boundary Tightening</a></li>
+<li><a href="#signal-preservation">Signal Preservation</a></li>
+<li><a href="#reversibility-maximization">Reversibility Maximization</a></li>
+<li><a href="#authority-minimization">Authority Minimization</a></li>
+</ul>
+</li>
+<li><a href="#common-partial-alignment-strategies">Common Partial Alignment Strategies</a><ul>
+<li><a href="#contained-operation">Contained Operation</a></li>
+<li><a href="#parallel-incubation">Parallel Incubation</a></li>
+<li><a href="#thresholdbased-pausing">Threshold‑Based Pausing</a></li>
+<li><a href="#stewardship-rotation">Stewardship Rotation</a></li>
+</ul>
+</li>
+<li><a href="#role-of-ai-in-partial-alignment">Role of AI in Partial Alignment</a></li>
+<li><a href="#failure-mode">Failure Mode</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Governance_Substrate_Model/" itemprop="item">
+                <span itemprop="name">Governance Substrate Model</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Governance_Substrate_Model/10_Adapters/" itemprop="item">
+                <span itemprop="name">10 Adapters</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Partial Alignment Strategies</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Partial Alignment Strategies</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="partial-alignment-strategies">Partial Alignment Strategies<a class="toc-permalink" href="#partial-alignment-strategies" title="Permanent link to this heading">&para;</a></h1>
+<p>Partial alignment strategies define <strong>how systems operate safely and productively when full alignment is not yet achievable</strong>. This adapter exists to prevent false binaries between “aligned” and “failed,” allowing governance to function under constraint, uncertainty, or transitional conditions without escalating authority or suppressing learning.</p>
+<p>Partial alignment is not compromise.<br />
+It is <strong>disciplined operation under known misalignment</strong>.</p>
+<hr />
+<h2 id="why-partial-alignment-is-necessary">Why Partial Alignment Is Necessary<a class="toc-permalink" href="#why-partial-alignment-is-necessary" title="Permanent link to this heading">&para;</a></h2>
+<p>Full alignment is often unavailable because:<br />
+- Systems are mid‑transition between phases.<br />
+- Legacy constraints limit immediate correction.<br />
+- Stakeholders hold incompatible assumptions.<br />
+- Reversibility has been partially lost.<br />
+- External pressures distort incentives.</p>
+<p>Pretending alignment exists when it does not accelerates collapse.</p>
+<hr />
+<h2 id="what-partial-alignment-is">What Partial Alignment Is<a class="toc-permalink" href="#what-partial-alignment-is" title="Permanent link to this heading">&para;</a></h2>
+<p>Partial alignment is:<br />
+- Explicit acknowledgment of misalignment.<br />
+- Bounded operation within safe limits.<br />
+- Continuous signal preservation.<br />
+- Temporary posture, not end state.</p>
+<p>It is not:<br />
+- Acceptance of drift.<br />
+- Normalization of harm.<br />
+- Narrative justification.<br />
+- Deferred responsibility.</p>
+<p>Partial alignment buys time — not absolution.</p>
+<hr />
+<h2 id="core-principles-of-partial-alignment">Core Principles of Partial Alignment<a class="toc-permalink" href="#core-principles-of-partial-alignment" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="explicit-misalignment-declaration">Explicit Misalignment Declaration<a class="toc-permalink" href="#explicit-misalignment-declaration" title="Permanent link to this heading">&para;</a></h3>
+<p>Systems must:<br />
+- Name where alignment is broken.<br />
+- Document affected invariants.<br />
+- Make uncertainty visible.</p>
+<p>Unacknowledged misalignment compounds silently.</p>
+<hr />
+<h3 id="boundary-tightening">Boundary Tightening<a class="toc-permalink" href="#boundary-tightening" title="Permanent link to this heading">&para;</a></h3>
+<p>When alignment is partial:<br />
+- Scope is reduced.<br />
+- Impact is limited.<br />
+- Expansion is paused.</p>
+<p>Boundaries protect the substrate while learning continues.</p>
+<hr />
+<h3 id="signal-preservation">Signal Preservation<a class="toc-permalink" href="#signal-preservation" title="Permanent link to this heading">&para;</a></h3>
+<p>Partial alignment requires:<br />
+- Protection of dissent.<br />
+- Visibility of weak signals.<br />
+- Resistance to narrative smoothing.</p>
+<p>Signal loss is more dangerous than misalignment.</p>
+<hr />
+<h3 id="reversibility-maximization">Reversibility Maximization<a class="toc-permalink" href="#reversibility-maximization" title="Permanent link to this heading">&para;</a></h3>
+<p>Strategies must:<br />
+- Avoid new irreversible commitments.<br />
+- Restore rollback paths where possible.<br />
+- Treat irreversibility as escalation trigger.</p>
+<p>Learning ends when rollback disappears.</p>
+<hr />
+<h3 id="authority-minimization">Authority Minimization<a class="toc-permalink" href="#authority-minimization" title="Permanent link to this heading">&para;</a></h3>
+<p>Partial alignment must not:<br />
+- Increase enforcement.<br />
+- Centralize control.<br />
+- Punish participants for structural failure.</p>
+<p>Authority escalation masks misalignment — it does not fix it.</p>
+<hr />
+<h2 id="common-partial-alignment-strategies">Common Partial Alignment Strategies<a class="toc-permalink" href="#common-partial-alignment-strategies" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="contained-operation">Contained Operation<a class="toc-permalink" href="#contained-operation" title="Permanent link to this heading">&para;</a></h3>
+<p>Operate the system:<br />
+- Within reduced scope.<br />
+- With explicit risk acknowledgment.<br />
+- Under heightened observation.</p>
+<p>Containment prevents cascade failure.</p>
+<hr />
+<h3 id="parallel-incubation">Parallel Incubation<a class="toc-permalink" href="#parallel-incubation" title="Permanent link to this heading">&para;</a></h3>
+<p>While the main system operates partially aligned:<br />
+- Alternative structures are incubated.<br />
+- Assumptions are tested safely.<br />
+- Replacement is explored without commitment.</p>
+<p>Incubation preserves optionality.</p>
+<hr />
+<h3 id="thresholdbased-pausing">Threshold‑Based Pausing<a class="toc-permalink" href="#thresholdbased-pausing" title="Permanent link to this heading">&para;</a></h3>
+<p>Introduce thresholds that:<br />
+- Halt escalation when risk increases.<br />
+- Force reassessment at predefined points.<br />
+- Prevent silent drift.</p>
+<p>Pauses are corrective tools, not failures.</p>
+<hr />
+<h3 id="stewardship-rotation">Stewardship Rotation<a class="toc-permalink" href="#stewardship-rotation" title="Permanent link to this heading">&para;</a></h3>
+<p>Distribute responsibility to:<br />
+- Prevent burnout.<br />
+- Reduce authority concentration.<br />
+- Preserve perspective diversity.</p>
+<p>Stewardship fatigue accelerates misalignment.</p>
+<hr />
+<h2 id="role-of-ai-in-partial-alignment">Role of AI in Partial Alignment<a class="toc-permalink" href="#role-of-ai-in-partial-alignment" title="Permanent link to this heading">&para;</a></h2>
+<p>AI may assist by:<br />
+- Monitoring drift indicators.<br />
+- Surfacing suppressed signals.<br />
+- Tracking boundary violations.<br />
+- Highlighting confidence collapse.</p>
+<p>AI must not:<br />
+- Declare alignment sufficient.<br />
+- Optimize within misalignment.<br />
+- Justify continued operation without correction.</p>
+<p>Judgment remains human.</p>
+<hr />
+<h2 id="failure-mode">Failure Mode<a class="toc-permalink" href="#failure-mode" title="Permanent link to this heading">&para;</a></h2>
+<p>Partial alignment fails when:<br />
+- Temporary measures become permanent.<br />
+- Misalignment is normalized.<br />
+- Authority substitutes for correction.<br />
+- Learning is deferred indefinitely.</p>
+<p>At that point, partial alignment becomes structural decay.</p>
+<hr />
+<p>Partial alignment strategies are <strong>how governance survives imperfect conditions without lying to itself</strong>.</p>
+<p>By operating honestly within constraint,<br />
+systems preserve learning capacity —<br />
+and retain the ability to realign<br />
+<em>before correction becomes crisis</em>.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Governance_Substrate_Model/10_Adapters/Partial_Alignment_Strategies.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/Governance_Substrate_Model/10_Adapters/Partial_Alignment_Strategies.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

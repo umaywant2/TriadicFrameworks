@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Y Canon Driftγçæcorrection Algorithms | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/datacenter_reports/appendices/Y_Canon_DriftΓÇæCorrection_Algorithms/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Y Canon Driftγçæcorrection Algorithms" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/datacenter_reports/appendices/Y_Canon_DriftΓÇæCorrection_Algorithms/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Y Canon Driftγçæcorrection Algorithms" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/datacenter_reports/appendices/Y_Canon_DriftΓÇæCorrection_Algorithms.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Y Canon Drift\u03b3\u00e7\u00e6correction Algorithms",
+    "headline": "Y Canon Drift\u03b3\u00e7\u00e6correction Algorithms",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/datacenter_reports/appendices/Y_Canon_Drift\u0393\u00c7\u00e6Correction_Algorithms/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#y1-the-five-drift-types">🧭 Y.1 — The Five Drift Types</a><ul>
+<li><a href="#1-structural-drift">1. Structural Drift</a></li>
+<li><a href="#2-dimensional-drift">2. Dimensional Drift</a></li>
+<li><a href="#3-regime-drift">3. Regime Drift</a></li>
+<li><a href="#4-coherence-drift">4. Coherence Drift</a></li>
+<li><a href="#5-field-drift">5. Field Drift</a></li>
+</ul>
+</li>
+<li><a href="#y2-drift-detection-algorithms">🔍 Y.2 — Drift Detection Algorithms</a><ul>
+<li><a href="#y21-structural-drift-detection-algorithm-sdda">Y.2.1 Structural Drift Detection Algorithm (SDDA)</a></li>
+<li><a href="#y22-dimensional-drift-detection-algorithm-ddda">Y.2.2 Dimensional Drift Detection Algorithm (DDDA)</a></li>
+<li><a href="#y23-regime-drift-detection-algorithm-rdda">Y.2.3 Regime Drift Detection Algorithm (RDDA)</a></li>
+<li><a href="#y24-coherence-drift-detection-algorithm-cdda">Y.2.4 Coherence Drift Detection Algorithm (CDDA)</a></li>
+<li><a href="#y25-field-drift-detection-algorithm-fdda">Y.2.5 Field Drift Detection Algorithm (FDDA)</a></li>
+</ul>
+</li>
+<li><a href="#y3-drift-classification-system">🧱 Y.3 — Drift Classification System</a><ul>
+<li><a href="#level-1-soft-drift">Level 1 — Soft Drift</a></li>
+<li><a href="#level-2-hard-drift">Level 2 — Hard Drift</a></li>
+<li><a href="#level-3-critical-drift">Level 3 — Critical Drift</a></li>
+</ul>
+</li>
+<li><a href="#y4-driftcorrection-algorithms">🔧 Y.4 — Drift‑Correction Algorithms</a><ul>
+<li><a href="#y41-structural-driftcorrection-algorithm-sdca">Y.4.1 Structural Drift‑Correction Algorithm (SDCA)</a></li>
+<li><a href="#y42-dimensional-driftcorrection-algorithm-ddca">Y.4.2 Dimensional Drift‑Correction Algorithm (DDCA)</a></li>
+<li><a href="#y43-regime-driftcorrection-algorithm-rdca">Y.4.3 Regime Drift‑Correction Algorithm (RDCA)</a></li>
+<li><a href="#y44-coherence-driftcorrection-algorithm-cdca2">Y.4.4 Coherence Drift‑Correction Algorithm (CDCA‑2)</a></li>
+<li><a href="#y45-field-driftcorrection-algorithm-fdca">Y.4.5 Field Drift‑Correction Algorithm (FDCA)</a></li>
+</ul>
+</li>
+<li><a href="#y5-driftcorrection-pipeline">🔁 Y.5 — Drift‑Correction Pipeline</a></li>
+<li><a href="#y6-emergency-driftcorrection-protocol-edcp">🚨 Y.6 — Emergency Drift‑Correction Protocol (EDCP)</a><ul>
+<li><a href="#edcp-steps">EDCP Steps</a></li>
+</ul>
+</li>
+<li><a href="#y7-driftcorrection-templates">🧩 Y.7 — Drift‑Correction Templates</a><ul>
+<li><a href="#template-a-drift-detection-sheet">Template A — Drift Detection Sheet</a></li>
+<li><a href="#template-b-driftcorrection-sheet">Template B — Drift‑Correction Sheet</a></li>
+<li><a href="#template-c-drift-log-entry">Template C — Drift Log Entry</a></li>
+</ul>
+</li>
+<li><a href="#y8-crossmodule-propagation">🔗 Y.8 — Cross‑Module Propagation</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/datacenter_reports/" itemprop="item">
+                <span itemprop="name">Datacenter Reports</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/datacenter_reports/appendices/" itemprop="item">
+                <span itemprop="name">Appendices</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Y Canon Driftγçæcorrection Algorithms</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Y Canon Driftγçæcorrection Algorithms</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="appendix-y-canon-driftcorrection-algorithms"><strong>Appendix Y — Canon Drift‑Correction Algorithms</strong><a class="toc-permalink" href="#appendix-y-canon-driftcorrection-algorithms" title="Permanent link to this heading">&para;</a></h1>
+<p>RTT‑Inside • Drift Layer • Correction Engine<br />
+Datacenter Reports — Appendix Y</p>
+<p>Canon Drift‑Correction Algorithms (CDCA) define the RTT mechanisms used to detect,<br />
+classify, route, and correct drift across datacenter ecosystems.<br />
+Drift occurs when:</p>
+<ul>
+<li>structural fields misalign  </li>
+<li>dimensional envelopes diverge  </li>
+<li>operator ecology destabilizes  </li>
+<li>coherence decays  </li>
+<li>paradox accumulates  </li>
+<li>regime transitions destabilize  </li>
+<li>tensors lose alignment  </li>
+</ul>
+<p>CDCA ensures the canon remains coherent, stable, and evolution‑ready.</p>
+<hr />
+<h2 id="y1-the-five-drift-types">🧭 Y.1 — The Five Drift Types<a class="toc-permalink" href="#y1-the-five-drift-types" title="Permanent link to this heading">&para;</a></h2>
+<p>All drift in datacenter ecosystems falls into one of five categories:</p>
+<h3 id="1-structural-drift"><strong>1. Structural Drift</strong><a class="toc-permalink" href="#1-structural-drift" title="Permanent link to this heading">&para;</a></h3>
+<p>Facilities, governance, culture, standards, human envelope misalign.</p>
+<h3 id="2-dimensional-drift"><strong>2. Dimensional Drift</strong><a class="toc-permalink" href="#2-dimensional-drift" title="Permanent link to this heading">&para;</a></h3>
+<p>Planetary, cultural, governance, economic, compute, infrastructure envelopes diverge.</p>
+<h3 id="3-regime-drift"><strong>3. Regime Drift</strong><a class="toc-permalink" href="#3-regime-drift" title="Permanent link to this heading">&para;</a></h3>
+<p>Regime transitions become unstable or mis‑timed.</p>
+<h3 id="4-coherence-drift"><strong>4. Coherence Drift</strong><a class="toc-permalink" href="#4-coherence-drift" title="Permanent link to this heading">&para;</a></h3>
+<p>Paradox overwhelms coherence capacity.</p>
+<h3 id="5-field-drift"><strong>5. Field Drift</strong><a class="toc-permalink" href="#5-field-drift" title="Permanent link to this heading">&para;</a></h3>
+<p>Entire fields diverge from canonical structure.</p>
+<p>Each drift type has its own detection and correction algorithm.</p>
+<hr />
+<h2 id="y2-drift-detection-algorithms">🔍 Y.2 — Drift Detection Algorithms<a class="toc-permalink" href="#y2-drift-detection-algorithms" title="Permanent link to this heading">&para;</a></h2>
+<p>Detection is the first stage of correction.<br />
+Each algorithm outputs:</p>
+<ul>
+<li>drift type  </li>
+<li>drift magnitude  </li>
+<li>drift direction  </li>
+<li>drift cause  </li>
+<li>drift risk level  </li>
+</ul>
+<h3 id="y21-structural-drift-detection-algorithm-sdda"><strong>Y.2.1 Structural Drift Detection Algorithm (SDDA)</strong><a class="toc-permalink" href="#y21-structural-drift-detection-algorithm-sdda" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Input: Structural Field S
+Output: Drift Score DS, Drift Type DT
+
+1. Compare S to canonical alignment
+2. Measure structural imbalance
+3. Detect field collisions
+4. Identify missing structural anchors
+5. Compute DS
+6. Classify DT
+</code></pre></div>
+
+<h3 id="y22-dimensional-drift-detection-algorithm-ddda"><strong>Y.2.2 Dimensional Drift Detection Algorithm (DDDA)</strong><a class="toc-permalink" href="#y22-dimensional-drift-detection-algorithm-ddda" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Input: Dimensional Envelope E
+Output: Drift Vector DV
+
+1. Identify active dimensions
+2. Identify dormant dimensions
+3. Detect upward/downward drift
+4. Measure envelope distortion
+5. Compute DV
+</code></pre></div>
+
+<h3 id="y23-regime-drift-detection-algorithm-rdda"><strong>Y.2.3 Regime Drift Detection Algorithm (RDDA)</strong><a class="toc-permalink" href="#y23-regime-drift-detection-algorithm-rdda" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Input: Regime Map R
+Output: Regime Drift Index RDI
+
+1. Identify regime transitions
+2. Detect premature transitions
+3. Detect delayed transitions
+4. Identify interference zones
+5. Compute RDI
+</code></pre></div>
+
+<h3 id="y24-coherence-drift-detection-algorithm-cdda"><strong>Y.2.4 Coherence Drift Detection Algorithm (CDDA)</strong><a class="toc-permalink" href="#y24-coherence-drift-detection-algorithm-cdda" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Input: Paradox Load P, Coherence Capacity C
+Output: Coherence Drift Score CDS
+
+1. Measure paradox accumulation
+2. Measure coherence decay
+3. Detect paradox routing failures
+4. Compute CDS = P / C
+</code></pre></div>
+
+<h3 id="y25-field-drift-detection-algorithm-fdda"><strong>Y.2.5 Field Drift Detection Algorithm (FDDA)</strong><a class="toc-permalink" href="#y25-field-drift-detection-algorithm-fdda" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Input: Field Signature F
+Output: Field Drift Profile FDP
+
+1. Map dimensional clusters
+2. Identify hybrid density
+3. Detect coherence gradients
+4. Identify collapse cascades
+5. Compute FDP
+</code></pre></div>
+
+<hr />
+<h2 id="y3-drift-classification-system">🧱 Y.3 — Drift Classification System<a class="toc-permalink" href="#y3-drift-classification-system" title="Permanent link to this heading">&para;</a></h2>
+<p>Drift is classified into three severity levels:</p>
+<h3 id="level-1-soft-drift"><strong>Level 1 — Soft Drift</strong><a class="toc-permalink" href="#level-1-soft-drift" title="Permanent link to this heading">&para;</a></h3>
+<p>Minor misalignment, easily corrected.</p>
+<h3 id="level-2-hard-drift"><strong>Level 2 — Hard Drift</strong><a class="toc-permalink" href="#level-2-hard-drift" title="Permanent link to this heading">&para;</a></h3>
+<p>Structural misalignment requiring algorithmic correction.</p>
+<h3 id="level-3-critical-drift"><strong>Level 3 — Critical Drift</strong><a class="toc-permalink" href="#level-3-critical-drift" title="Permanent link to this heading">&para;</a></h3>
+<p>Coherence collapse, paradox saturation, field fragmentation.</p>
+<p>Critical drift triggers <strong>Emergency Drift‑Correction Protocols</strong>.</p>
+<hr />
+<h2 id="y4-driftcorrection-algorithms">🔧 Y.4 — Drift‑Correction Algorithms<a class="toc-permalink" href="#y4-driftcorrection-algorithms" title="Permanent link to this heading">&para;</a></h2>
+<p>Each drift type has a corresponding correction algorithm.</p>
+<h3 id="y41-structural-driftcorrection-algorithm-sdca"><strong>Y.4.1 Structural Drift‑Correction Algorithm (SDCA)</strong><a class="toc-permalink" href="#y41-structural-driftcorrection-algorithm-sdca" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Input: Drift Score DS, Structural Field S
+Output: Corrected Structural Field S&#39;
+
+1. Identify missing anchors
+2. Identify overloaded fields
+3. Rebalance structural distribution
+4. Restore structural lineage
+5. Output S&#39;
+</code></pre></div>
+
+<h3 id="y42-dimensional-driftcorrection-algorithm-ddca"><strong>Y.4.2 Dimensional Drift‑Correction Algorithm (DDCA)</strong><a class="toc-permalink" href="#y42-dimensional-driftcorrection-algorithm-ddca" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Input: Drift Vector DV, Envelope E
+Output: Corrected Envelope E&#39;
+
+1. Identify drift direction
+2. Apply upward/downward correction
+3. Rebuild dimensional envelope
+4. Validate envelope integrity
+5. Output E&#39;
+</code></pre></div>
+
+<h3 id="y43-regime-driftcorrection-algorithm-rdca"><strong>Y.4.3 Regime Drift‑Correction Algorithm (RDCA)</strong><a class="toc-permalink" href="#y43-regime-driftcorrection-algorithm-rdca" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Input: Regime Drift Index RDI
+Output: Corrected Regime Map R&#39;
+
+1. Identify unstable transitions
+2. Rebuild regime boundaries
+3. Re‑establish regime thresholds
+4. Stabilize interference zones
+5. Output R&#39;
+</code></pre></div>
+
+<h3 id="y44-coherence-driftcorrection-algorithm-cdca2"><strong>Y.4.4 Coherence Drift‑Correction Algorithm (CDCA‑2)</strong><a class="toc-permalink" href="#y44-coherence-driftcorrection-algorithm-cdca2" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Input: Paradox Load P, Coherence Capacity C
+Output: Corrected Coherence Profile C&#39;
+
+1. Route paradox to correct operators
+2. Increase coherence engine activation
+3. Emit coherence waves
+4. Reduce paradox load
+5. Output C&#39;
+</code></pre></div>
+
+<h3 id="y45-field-driftcorrection-algorithm-fdca"><strong>Y.4.5 Field Drift‑Correction Algorithm (FDCA)</strong><a class="toc-permalink" href="#y45-field-driftcorrection-algorithm-fdca" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Input: Field Drift Profile FDP
+Output: Corrected Field Signature F&#39;
+
+1. Rebuild dimensional clusters
+2. Stabilize coherence gradients
+3. Reduce hybrid overload
+4. Repair collapse cascades
+5. Output F&#39;
+</code></pre></div>
+
+<hr />
+<h2 id="y5-driftcorrection-pipeline">🔁 Y.5 — Drift‑Correction Pipeline<a class="toc-permalink" href="#y5-driftcorrection-pipeline" title="Permanent link to this heading">&para;</a></h2>
+<p>All drift‑correction algorithms run in a unified pipeline:</p>
+<div class="codehilite"><pre><span></span><code>[Detect Drift]
+      ↓
+[Classify Drift]
+      ↓
+[Select Algorithm]
+      ↓
+[Apply Correction]
+      ↓
+[Validate Coherence]
+      ↓
+[Update Canon]
+</code></pre></div>
+
+<p>This pipeline ensures consistency across the canon.</p>
+<hr />
+<h2 id="y6-emergency-driftcorrection-protocol-edcp">🚨 Y.6 — Emergency Drift‑Correction Protocol (EDCP)<a class="toc-permalink" href="#y6-emergency-driftcorrection-protocol-edcp" title="Permanent link to this heading">&para;</a></h2>
+<p>Triggered when:</p>
+<ul>
+<li>coherence collapses  </li>
+<li>paradox saturates  </li>
+<li>dimensional fragmentation occurs  </li>
+<li>field destabilizes  </li>
+</ul>
+<h3 id="edcp-steps"><strong>EDCP Steps</strong><a class="toc-permalink" href="#edcp-steps" title="Permanent link to this heading">&para;</a></h3>
+<ol>
+<li>Freeze field state  </li>
+<li>Route paradox to C‑Ops  </li>
+<li>Activate coherence engines  </li>
+<li>Rebuild dimensional envelope  </li>
+<li>Reconstruct regime map  </li>
+<li>Revalidate operator lineage  </li>
+<li>Restore field signature  </li>
+</ol>
+<hr />
+<h2 id="y7-driftcorrection-templates">🧩 Y.7 — Drift‑Correction Templates<a class="toc-permalink" href="#y7-driftcorrection-templates" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="template-a-drift-detection-sheet"><strong>Template A — Drift Detection Sheet</strong><a class="toc-permalink" href="#template-a-drift-detection-sheet" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>DRIFT DETECTION
+────────────────────────────────
+Drift Type:
+Drift Score:
+Drift Direction:
+Cause:
+Risk Level:
+────────────────────────────────
+</code></pre></div>
+
+<h3 id="template-b-driftcorrection-sheet"><strong>Template B — Drift‑Correction Sheet</strong><a class="toc-permalink" href="#template-b-driftcorrection-sheet" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>DRIFT CORRECTION
+────────────────────────────────
+Algorithm Used:
+Corrective Steps:
+Coherence Behavior:
+Residual Drift:
+Validation Result:
+────────────────────────────────
+</code></pre></div>
+
+<h3 id="template-c-drift-log-entry"><strong>Template C — Drift Log Entry</strong><a class="toc-permalink" href="#template-c-drift-log-entry" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>DRIFT LOG
+────────────────────────────────
+Drift Event:
+Severity:
+Cause:
+Correction Applied:
+Version Impact:
+Reviewer:
+────────────────────────────────
+</code></pre></div>
+
+<hr />
+<h2 id="y8-crossmodule-propagation">🔗 Y.8 — Cross‑Module Propagation<a class="toc-permalink" href="#y8-crossmodule-propagation" title="Permanent link to this heading">&para;</a></h2>
+<p>Canon Drift‑Correction Algorithms propagate into:</p>
+<ul>
+<li>Field‑Level Validation Framework (Appendix X)  </li>
+<li>Coherence Engines (Appendix F)  </li>
+<li>Regime Transitions (Appendix E)  </li>
+<li>Field Diagnostics Toolkit (Appendix I)  </li>
+<li>Ecosystem Simulation Models (Appendix M)  </li>
+</ul>
+<p>Ensuring drift‑correction behavior is consistent across the RTT canon.</p>
+<hr />
+<h1 id="end-of-appendix-y-canon-driftcorrection-algorithms">End of Appendix Y — Canon Drift‑Correction Algorithms<a class="toc-permalink" href="#end-of-appendix-y-canon-driftcorrection-algorithms" title="Permanent link to this heading">&para;</a></h1>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/datacenter_reports/appendices/Y_Canon_DriftΓÇæCorrection_Algorithms.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/datacenter_reports/appendices/Y_Canon_DriftΓÇæCorrection_Algorithms.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

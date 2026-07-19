@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Blueprint Naming Conventions | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/Integrations/UE6/Blueprint_Naming_Conventions/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Blueprint Naming Conventions" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/Integrations/UE6/Blueprint_Naming_Conventions/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Blueprint Naming Conventions" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/Integrations/UE6/Blueprint_Naming_Conventions.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Blueprint Naming Conventions",
+    "headline": "Blueprint Naming Conventions",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/Integrations/UE6/Blueprint_Naming_Conventions/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#1-naming-rules-canonical">1. Naming Rules (Canonical)</a></li>
+<li><a href="#2-core-operator-nodes-vr">2. Core Operator Nodes (φ–V–R)</a></li>
+<li><a href="#3-invariant-nodes-3c">3. Invariant Nodes (3C)</a></li>
+<li><a href="#4-entropy-nodes">4. Entropy Nodes</a></li>
+<li><a href="#5-hybrid-multiregime-nodes">5. Hybrid / Multi‑Regime Nodes</a></li>
+<li><a href="#6-utility-nodes">6. Utility Nodes</a></li>
+<li><a href="#7-naming-antipatterns-do-not-use">7. Naming Anti‑Patterns (Do Not Use)</a></li>
+<li><a href="#8-summary">8. Summary</a></li>
+<li><a href="#status">Status</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Integrations/" itemprop="item">
+                <span itemprop="name">Integrations</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Integrations/UE6/" itemprop="item">
+                <span itemprop="name">Ue6</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Blueprint Naming Conventions</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Blueprint Naming Conventions</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="blueprint-node-naming-conventions">Blueprint Node Naming Conventions<a class="toc-permalink" href="#blueprint-node-naming-conventions" title="Permanent link to this heading">&para;</a></h1>
+<p><strong>RTT / Integrations / UE6</strong></p>
+<p>This document defines the canonical naming conventions for all RTT Blueprint nodes inside Unreal Engine 6.<br />
+Names follow the RTT operator grammar (φ–V–R, 3C, entropy, hybrid) and UE6’s Blueprint style rules.</p>
+<p>All names are <strong>minimal</strong>, <strong>operator‑first</strong>, <strong>mechanically queryable</strong>, and <strong>stable across versions</strong>.</p>
+<hr />
+<h2 id="1-naming-rules-canonical">1. Naming Rules (Canonical)<a class="toc-permalink" href="#1-naming-rules-canonical" title="Permanent link to this heading">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Prefix all RTT nodes with <code>RTT_</code></strong><br />
+   Ensures mechanical discoverability in the Blueprint palette.</p>
+</li>
+<li>
+<p><strong>Use PascalCase after the prefix</strong><br />
+   Example: <code>RTT_PhiField</code>, not <code>RTT_phifield</code>.</p>
+</li>
+<li>
+<p><strong>Operator‑first naming</strong><br />
+   Node names begin with the operator or invariant they expose.</p>
+</li>
+<li>
+<p><strong>No abbreviations except φ–V–R</strong><br />
+   - φ → Phi<br />
+   - V → Variance<br />
+   - R → Resonance  </p>
+</li>
+<li>
+<p><strong>No suffixes like “Node”, “BP”, “Func”</strong><br />
+   RTT nodes are primitives, not helpers.</p>
+</li>
+<li>
+<p><strong>One operator per node</strong><br />
+   Multi‑operator nodes are hybrid nodes and must use the <code>Hybrid</code> prefix.</p>
+</li>
+</ol>
+<hr />
+<h2 id="2-core-operator-nodes-vr">2. Core Operator Nodes (φ–V–R)<a class="toc-permalink" href="#2-core-operator-nodes-vr" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>RTT Operator</th>
+<th>Blueprint Node Name</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>φ</strong></td>
+<td><code>RTT_PhiField</code></td>
+<td>emergence field sampling</td>
+</tr>
+<tr>
+<td><strong>V</strong></td>
+<td><code>RTT_VarianceStabilizer</code></td>
+<td>variance smoothing / temporal stabilization</td>
+</tr>
+<tr>
+<td><strong>R</strong></td>
+<td><code>RTT_ResonanceProbe</code></td>
+<td>resonance envelope extraction</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-invariant-nodes-3c">3. Invariant Nodes (3C)<a class="toc-permalink" href="#3-invariant-nodes-3c" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Invariant</th>
+<th>Blueprint Node Name</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Coherence</strong></td>
+<td><code>RTT_CoherenceCheck</code></td>
+<td>coherence rise detection</td>
+</tr>
+<tr>
+<td><strong>Consistency</strong></td>
+<td><code>RTT_ConsistencyCheck</code></td>
+<td>geometry + lighting consistency</td>
+</tr>
+<tr>
+<td><strong>Continuity</strong></td>
+<td><code>RTT_ContinuityCheck</code></td>
+<td>harmonic continuity detection</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-entropy-nodes">4. Entropy Nodes<a class="toc-permalink" href="#4-entropy-nodes" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Entropy Concept</th>
+<th>Blueprint Node Name</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entropy Flow</td>
+<td><code>RTT_EntropyTrace</code></td>
+<td>entropy gradient tracing</td>
+</tr>
+<tr>
+<td>Entropy Collapse</td>
+<td><code>RTT_EntropyCollapseCheck</code></td>
+<td>collapse signature detection</td>
+</tr>
+<tr>
+<td>Entropy Boundary</td>
+<td><code>RTT_EntropyBoundary</code></td>
+<td>world‑partition boundary mapping</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-hybrid-multiregime-nodes">5. Hybrid / Multi‑Regime Nodes<a class="toc-permalink" href="#5-hybrid-multiregime-nodes" title="Permanent link to this heading">&para;</a></h2>
+<p>Hybrid nodes combine classical + spectral + temporal behavior.</p>
+<table>
+<thead>
+<tr>
+<th>Hybrid Concept</th>
+<th>Blueprint Node Name</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hybrid Operator</td>
+<td><code>RTT_HybridOperator</code></td>
+<td>multi‑regime operator evaluation</td>
+</tr>
+<tr>
+<td>Hybrid State</td>
+<td><code>RTT_HybridStateProbe</code></td>
+<td>hybrid state extraction</td>
+</tr>
+<tr>
+<td>Hybrid Ladder</td>
+<td><code>RTT_HybridLadder</code></td>
+<td>quantum‑classical ladder evaluation</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-utility-nodes">6. Utility Nodes<a class="toc-permalink" href="#6-utility-nodes" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Utility</th>
+<th>Blueprint Node Name</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Debug Resonance</td>
+<td><code>RTT_DebugResonance</code></td>
+<td>visualize resonance envelopes</td>
+</tr>
+<tr>
+<td>Debug Entropy</td>
+<td><code>RTT_DebugEntropy</code></td>
+<td>visualize entropy fields</td>
+</tr>
+<tr>
+<td>Operator Timeline</td>
+<td><code>RTT_OperatorTimeline</code></td>
+<td>operator‑timeline debugging</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-naming-antipatterns-do-not-use">7. Naming Anti‑Patterns (Do Not Use)<a class="toc-permalink" href="#7-naming-antipatterns-do-not-use" title="Permanent link to this heading">&para;</a></h2>
+<p>❌ <code>RTT_phi_field</code><br />
+❌ <code>RTT-Resonance-Probe</code><br />
+❌ <code>ResonanceProbeRTT</code><br />
+❌ <code>RTT_OperatorNode</code><br />
+❌ <code>RTT_ResonanceProbe_v2</code><br />
+❌ <code>RTT_Entropy</code> (too vague)  </p>
+<hr />
+<h2 id="8-summary">8. Summary<a class="toc-permalink" href="#8-summary" title="Permanent link to this heading">&para;</a></h2>
+<p>All RTT Blueprint nodes in UE6 must follow:</p>
+<div class="codehilite"><pre><span></span><code>RTT_&lt;Operator&gt;&lt;Descriptor&gt;
+</code></pre></div>
+
+<p>Examples:</p>
+<div class="codehilite"><pre><span></span><code>RTT_PhiField
+RTT_VarianceStabilizer
+RTT_ResonanceProbe
+RTT_EntropyTrace
+RTT_HybridOperator
+</code></pre></div>
+
+<p>These conventions ensure:</p>
+<ul>
+<li>cross‑module consistency  </li>
+<li>AI‑parsability  </li>
+<li>zero drift  </li>
+<li>predictable operator discovery  </li>
+<li>stable integration with Benchmarks + TEL  </li>
+</ul>
+<hr />
+<h2 id="status">Status<a class="toc-permalink" href="#status" title="Permanent link to this heading">&para;</a></h2>
+<p>Active, stable, and aligned with the 2026 RTT Integrations standard.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Integrations/UE6/Blueprint_Naming_Conventions.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/Integrations/UE6/Blueprint_Naming_Conventions.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

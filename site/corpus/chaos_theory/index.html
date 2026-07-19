@@ -1,0 +1,2558 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Chaos Theory | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/corpus/chaos_theory/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Chaos Theory" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/corpus/chaos_theory/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Chaos Theory" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/corpus/chaos_theory.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Chaos Theory",
+    "headline": "Chaos Theory",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/corpus/chaos_theory/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#triadicframeworks-docstheorieschaos_theory">TriadicFrameworks /docs/theories/chaos_theory/</a></li>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#module-structure">Module Structure</a></li>
+<li><a href="#regime-placement">Regime Placement</a></li>
+<li><a href="#what-this-module-is-and-is-not">What This Module Is (and Is Not)</a></li>
+<li><a href="#how-to-use-this-module">How to Use This Module</a></li>
+<li><a href="#philosophy">Philosophy</a><ul>
+<li><a href="#triadicframeworks-docstheorieschaos_theorycoherence_mapmd">TriadicFrameworks /docs/theories/chaos_theory/coherence_map.md</a></li>
+</ul>
+</li>
+<li><a href="#11-sensitivity-coherence">1.1 Sensitivity Coherence</a></li>
+<li><a href="#12-divergence-coherence">1.2 Divergence Coherence</a></li>
+<li><a href="#13-attractor-coherence">1.3 Attractor Coherence</a></li>
+<li><a href="#14-iteration-coherence">1.4 Iteration Coherence</a></li>
+<li><a href="#15-geometric-coherence">1.5 Geometric Coherence</a></li>
+<li><a href="#c0-incoherent">C0 — Incoherent</a></li>
+<li><a href="#c1-weak-coherence">C1 — Weak Coherence</a></li>
+<li><a href="#c2-moderate-coherence">C2 — Moderate Coherence</a></li>
+<li><a href="#c3-strong-coherence">C3 — Strong Coherence</a></li>
+<li><a href="#c4-perfect-coherence-ideal">C4 — Perfect Coherence (Ideal)</a></li>
+<li><a href="#ch1-operator-collapse">CH1 — Operator Collapse</a></li>
+<li><a href="#ch2-divergence-collapse">CH2 — Divergence Collapse</a></li>
+<li><a href="#ch3-coherence-collapse">CH3 — Coherence Collapse</a></li>
+<li><a href="#ch4-parameter-collapse">CH4 — Parameter Collapse</a></li>
+<li><a href="#ch5-geometry-collapse">CH5 — Geometry Collapse</a></li>
+<li><a href="#r1-stable-lowsensitivity">R1 — Stable / Low‑Sensitivity</a></li>
+<li><a href="#r2-transitional-moderatesensitivity">R2 — Transitional / Moderate‑Sensitivity</a></li>
+<li><a href="#r3-fully-chaotic-highsensitivity">R3 — Fully Chaotic / High‑Sensitivity</a><ul>
+<li><a href="#triadicframeworks-docstheorieschaos_theorycross_modulemd">TriadicFrameworks /docs/theories/chaos_theory/cross_module.md</a></li>
+<li><a href="#triadicframeworks-docstheorieschaos_theoryengine_notesmd">TriadicFrameworks /docs/theories/chaos_theory/engine_notes.md</a></li>
+<li><a href="#triadicframeworks-docstheorieschaos_theoryexamplesmd">TriadicFrameworks /docs/theories/chaos_theory/examples.md</a></li>
+<li><a href="#input">Input</a></li>
+<li><a href="#operation">Operation</a></li>
+<li><a href="#interpretation">Interpretation</a></li>
+<li><a href="#input_1">Input</a></li>
+<li><a href="#operation_1">Operation</a></li>
+<li><a href="#interpretation_1">Interpretation</a></li>
+<li><a href="#input_2">Input</a></li>
+<li><a href="#operation_2">Operation</a></li>
+<li><a href="#interpretation_2">Interpretation</a></li>
+<li><a href="#input_3">Input</a></li>
+<li><a href="#operation_3">Operation</a></li>
+<li><a href="#interpretation_3">Interpretation</a></li>
+<li><a href="#input_4">Input</a></li>
+<li><a href="#operation_4">Operation</a></li>
+<li><a href="#possible-outputs">Possible Outputs</a></li>
+<li><a href="#interpretation_4">Interpretation</a></li>
+<li><a href="#input_5">Input</a></li>
+<li><a href="#operation_5">Operation</a></li>
+<li><a href="#interpretation_5">Interpretation</a></li>
+<li><a href="#input_6">Input</a></li>
+<li><a href="#operation_6">Operation</a></li>
+<li><a href="#interpretation_6">Interpretation</a></li>
+<li><a href="#input_7">Input</a></li>
+<li><a href="#operation_7">Operation</a></li>
+<li><a href="#possible-outputs_1">Possible Outputs</a></li>
+<li><a href="#interpretation_7">Interpretation</a></li>
+<li><a href="#triadicframeworks-docstheorieschaos_theoryfaqmd">TriadicFrameworks /docs/theories/chaos_theory/faq.md</a></li>
+</ul>
+</li>
+<li><a href="#what-is-chaos-theory-in-this-module">❓ What is Chaos Theory in this module?</a></li>
+<li><a href="#is-chaos-random">❓ Is chaos random?</a></li>
+<li><a href="#what-causes-chaotic-behavior">❓ What causes chaotic behavior?</a></li>
+<li><a href="#what-is-a-strange-attractor">❓ What is a strange attractor?</a></li>
+<li><a href="#what-is-sensitivity-to-initial-conditions">❓ What is sensitivity to initial conditions?</a></li>
+<li><a href="#what-is-the-butterfly-effect">❓ What is the “butterfly effect”?</a></li>
+<li><a href="#what-are-the-chaos-theory-regimes">❓ What are the Chaos Theory regimes?</a><ul>
+<li><a href="#r1-stable-lowsensitivity_1">R1 — Stable / Low‑Sensitivity</a></li>
+<li><a href="#r2-transitional-moderatesensitivity_1">R2 — Transitional / Moderate‑Sensitivity</a></li>
+<li><a href="#r3-fully-chaotic-highsensitivity_1">R3 — Fully Chaotic / High‑Sensitivity</a></li>
+</ul>
+</li>
+<li><a href="#what-are-the-core-operators">❓ What are the core operators?</a></li>
+<li><a href="#what-is-coherence-in-chaos-theory">❓ What is coherence in Chaos Theory?</a></li>
+<li><a href="#what-are-collapse-modes">❓ What are collapse modes?</a></li>
+<li><a href="#how-should-students-use-this-module">❓ How should students use this module?</a></li>
+<li><a href="#summary_3">Summary</a><ul>
+<li><a href="#triadicframeworks-docstheorieschaos_theoryfrontdoormd">TriadicFrameworks /docs/theories/chaos_theory/frontdoor.md</a></li>
+</ul>
+</li>
+<li><a href="#1-start-here">1. Start here</a></li>
+<li><a href="#2-what-this-module-is">2. What this module is</a></li>
+<li><a href="#3-structure-of-the-module">3. Structure of the module</a></li>
+<li><a href="#4-how-to-use-this-module">4. How to use this module</a><ul>
+<li><a href="#for-students">For students</a></li>
+<li><a href="#for-ai-agents-tools">For AI agents / tools</a></li>
+</ul>
+</li>
+<li><a href="#5-summary">5. Summary</a><ul>
+<li><a href="#triadicframeworks-docstheorieschaos_theorylineagemd">TriadicFrameworks /docs/theories/chaos_theory/lineage.md</a></li>
+</ul>
+</li>
+<li><a href="#11-early-deterministic-systems">1.1 Early Deterministic Systems</a></li>
+<li><a href="#12-poincares-insight">1.2 Poincaré’s Insight</a></li>
+<li><a href="#21-deterministic-maps-flows">2.1 Deterministic Maps &amp; Flows</a></li>
+<li><a href="#22-bifurcation-theory">2.2 Bifurcation Theory</a></li>
+<li><a href="#31-lorenz-1963">3.1 Lorenz (1963)</a></li>
+<li><a href="#32-logistic-map-feigenbaum">3.2 Logistic Map &amp; Feigenbaum</a></li>
+<li><a href="#41-strange-attractors">4.1 Strange Attractors</a></li>
+<li><a href="#42-smale-topological-chaos">4.2 Smale &amp; Topological Chaos</a></li>
+<li><a href="#61-information-theory">6.1 Information Theory</a></li>
+<li><a href="#62-thermodynamics">6.2 Thermodynamics</a></li>
+<li><a href="#63-geometry-topology">6.3 Geometry &amp; Topology</a></li>
+<li><a href="#64-systems-physics">6.4 Systems Physics</a><ul>
+<li><a href="#triadicframeworks-docstheorieschaos_theoryoperatorsmd">TriadicFrameworks /docs/theories/chaos_theory/operators.md</a></li>
+<li><a href="#purpose_1">Purpose</a></li>
+<li><a href="#form">Form</a></li>
+<li><a href="#notes">Notes</a></li>
+<li><a href="#purpose_2">Purpose</a></li>
+<li><a href="#form_1">Form</a></li>
+<li><a href="#notes_1">Notes</a></li>
+<li><a href="#purpose_3">Purpose</a></li>
+<li><a href="#form_2">Form</a></li>
+<li><a href="#notes_2">Notes</a></li>
+<li><a href="#purpose_4">Purpose</a></li>
+<li><a href="#form_3">Form</a></li>
+<li><a href="#notes_3">Notes</a></li>
+<li><a href="#purpose_5">Purpose</a></li>
+<li><a href="#outputs">Outputs</a></li>
+<li><a href="#notes_4">Notes</a></li>
+<li><a href="#purpose_6">Purpose</a></li>
+<li><a href="#form_4">Form</a></li>
+<li><a href="#notes_5">Notes</a></li>
+<li><a href="#purpose_7">Purpose</a></li>
+<li><a href="#form_5">Form</a></li>
+<li><a href="#notes_6">Notes</a></li>
+<li><a href="#purpose_8">Purpose</a></li>
+<li><a href="#form_6">Form</a></li>
+<li><a href="#modes">Modes</a></li>
+<li><a href="#triadicframeworks-docstheorieschaos_theoryoperator_examplesmd">TriadicFrameworks /docs/theories/chaos_theory/operator_examples.md</a></li>
+<li><a href="#goal">Goal</a></li>
+<li><a href="#input_8">Input</a></li>
+<li><a href="#operation_8">Operation</a></li>
+<li><a href="#interpretation_8">Interpretation</a></li>
+<li><a href="#goal_1">Goal</a></li>
+<li><a href="#input_9">Input</a></li>
+<li><a href="#operation_9">Operation</a></li>
+<li><a href="#interpretation_9">Interpretation</a></li>
+<li><a href="#goal_2">Goal</a></li>
+<li><a href="#input_10">Input</a></li>
+<li><a href="#operation_10">Operation</a></li>
+<li><a href="#interpretation_10">Interpretation</a></li>
+<li><a href="#goal_3">Goal</a></li>
+<li><a href="#input_11">Input</a></li>
+<li><a href="#operation_11">Operation</a></li>
+<li><a href="#interpretation_11">Interpretation</a></li>
+<li><a href="#goal_4">Goal</a></li>
+<li><a href="#input_12">Input</a></li>
+<li><a href="#operation_12">Operation</a></li>
+<li><a href="#possible-outputs_2">Possible Outputs</a></li>
+<li><a href="#interpretation_12">Interpretation</a></li>
+<li><a href="#goal_5">Goal</a></li>
+<li><a href="#input_13">Input</a></li>
+<li><a href="#operation_13">Operation</a></li>
+<li><a href="#interpretation_13">Interpretation</a></li>
+<li><a href="#goal_6">Goal</a></li>
+<li><a href="#input_14">Input</a></li>
+<li><a href="#operation_14">Operation</a></li>
+<li><a href="#interpretation_14">Interpretation</a></li>
+<li><a href="#goal_7">Goal</a></li>
+<li><a href="#input_15">Input</a></li>
+<li><a href="#operation_15">Operation</a></li>
+<li><a href="#possible-outputs_3">Possible Outputs</a></li>
+<li><a href="#interpretation_15">Interpretation</a></li>
+<li><a href="#triadicframeworks-docstheorieschaos_theoryregimesmd">TriadicFrameworks /docs/theories/chaos_theory/regimes.md</a></li>
+<li><a href="#deterministic-coherent-predictable">(Deterministic, coherent, predictable)</a></li>
+<li><a href="#emerging-complexity-bifurcations-structural-sensitivity">(Emerging complexity, bifurcations, structural sensitivity)</a></li>
+<li><a href="#deterministic-chaos-fractal-attractors-multiscale-divergence">(Deterministic chaos, fractal attractors, multi‑scale divergence)</a></li>
+<li><a href="#r1-r2">R1 → R2</a></li>
+<li><a href="#r2-r3">R2 → R3</a></li>
+<li><a href="#r3-r2">R3 → R2</a></li>
+<li><a href="#r2-r1">R2 → R1</a></li>
+<li><a href="#triadicframeworks-docstheorieschaos_theorysession_contextmd">TriadicFrameworks /docs/theories/chaos_theory/session_context.md</a></li>
+</ul>
+</li>
+<li><a href="#canon">Canon</a></li>
+<li><a href="#modules">Modules</a></li>
+<li><a href="#drift">Drift</a></li>
+<li><a href="#coherence">Coherence</a></li>
+<li><a href="#version">Version</a></li>
+<li><a href="#format">Format</a></li>
+<li><a href="#front-door">Front door</a></li>
+<li><a href="#every-page">Every page</a></li>
+<li><a href="#audience">Audience</a></li>
+<li><a href="#summary_8">Summary</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/corpus/" itemprop="item">
+                <span itemprop="name">Corpus</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Chaos Theory</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Chaos Theory</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<p>chaos_theory </p>
+<h1 id="chaos-theory-a-regimeaware-module">Chaos Theory — A Regime‑Aware Module<a class="toc-permalink" href="#chaos-theory-a-regimeaware-module" title="Permanent link to this heading">&para;</a></h1>
+<ul>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/chaos_theory/module.json"><code>module.json</code></a> — Agentic module schema role assignments</li>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/chaos_theory/module_rtt1.json"><code>module_rtt1.json</code></a> — Agentic module schema role assignments</li>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/chaos_theory/module_rtt2.json"><code>module_rtt2.json</code></a> — Agentic module schema role assignments</li>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/chaos_theory/module_rtt3.json"><code>module_rtt3.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<h3 id="triadicframeworks-docstheorieschaos_theory">TriadicFrameworks /docs/theories/chaos_theory/<a class="toc-permalink" href="#triadicframeworks-docstheorieschaos_theory" title="Permanent link to this heading">&para;</a></h3>
+<p>Chaos Theory describes the behavior of nonlinear systems that exhibit<br />
+extreme sensitivity to initial conditions, finite‑precision divergence,<br />
+and complex temporal patterns. Within TriadicFrameworks, chaos is treated<br />
+as a <strong>derived regime</strong>, not a foundational ontology.</p>
+<p>This module provides a structured, RTT‑aligned interface to Chaos Theory<br />
+so students, researchers, and agentic AIs can explore its tools without<br />
+absorbing its historical assumptions.</p>
+<hr />
+<h2 id="purpose">Purpose<a class="toc-permalink" href="#purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>This module clarifies:</p>
+<ul>
+<li>What chaos theory <em>actually</em> measures  </li>
+<li>Why chaotic behavior emerges in low‑dimensional projections  </li>
+<li>How divergence, recurrence, and attractors function as <strong>diagnostics</strong>  </li>
+<li>Where chaos sits within the RTT regime structure  </li>
+<li>How to use chaos tools without adopting chaos metaphysics</li>
+</ul>
+<p>Chaos is not the substrate.<br />
+Chaos is a <strong>signal</strong> produced when resolution, lineage, or coherence<br />
+is insufficient to reveal underlying structure.</p>
+<hr />
+<h2 id="module-structure">Module Structure<a class="toc-permalink" href="#module-structure" title="Permanent link to this heading">&para;</a></h2>
+<p>This theory includes four canonical files:</p>
+<ol>
+<li>
+<p><strong>module.json</strong><br />
+   Conceptual base: identity, lineage, operators, drift boundaries,<br />
+   coherence markers, and cross‑module references.</p>
+</li>
+<li>
+<p><strong>module_rtt1.json</strong><br />
+   RTT/1 engine: operator grammar, dimensional mapping, divergence<br />
+   indicators, and minimal examples.</p>
+</li>
+<li>
+<p><strong>module_rtt2.json</strong><br />
+   RTT/2 engine: resonance mapping, stabilizers, recurrence structures,<br />
+   and cross‑module propagation.</p>
+</li>
+<li>
+<p><strong>module_rtt3.json</strong><br />
+   RTT/3 engine: triadic‑substrate integration, multi‑regime simulation<br />
+   hooks, and hybrid‑canon scaffolding.</p>
+</li>
+</ol>
+<p>Together, these files allow construction of a <strong>Chaos Theory<br />
+RTT‑AI‑Hybrid Canon</strong>, enabling structured reasoning and comparison<br />
+across domains.</p>
+<hr />
+<h2 id="regime-placement">Regime Placement<a class="toc-permalink" href="#regime-placement" title="Permanent link to this heading">&para;</a></h2>
+<p>Chaos Theory primarily operates in:</p>
+<ul>
+<li><strong>R3</strong> — Nonlinear 3D behavior  </li>
+<li><strong>R2 → R3</strong> — Divergence under dimensional compression  </li>
+<li><strong>R1</strong> — Sensitivity amplified by incomplete lineage tracking</li>
+</ul>
+<p>Chaos is not a root‑cause theory.<br />
+It is a <strong>behavioral description</strong> of systems observed at insufficient<br />
+resolution or under constrained projection.</p>
+<hr />
+<h2 id="what-this-module-is-and-is-not">What This Module Is (and Is Not)<a class="toc-permalink" href="#what-this-module-is-and-is-not" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>This module <em>is</em>:</strong></p>
+<ul>
+<li>A clean, minimal, student‑ready interface  </li>
+<li>A diagnostic lens for nonlinear behavior  </li>
+<li>A bridge between classical chaos tools and RTT coherence  </li>
+<li>A structured environment for agentic‑AI reasoning</li>
+</ul>
+<p><strong>This module is <em>not</em>:</strong></p>
+<ul>
+<li>A metaphysical claim about disorder  </li>
+<li>A universal explanation for complexity  </li>
+<li>A replacement for substrate‑level models  </li>
+<li>A justification for unpredictability as ontology</li>
+</ul>
+<hr />
+<h2 id="how-to-use-this-module">How to Use This Module<a class="toc-permalink" href="#how-to-use-this-module" title="Permanent link to this heading">&para;</a></h2>
+<p>Students and researchers can:</p>
+<ul>
+<li>Explore divergence, recurrence, and attractors as <strong>regime signals</strong>  </li>
+<li>Compare chaos with other theories using shared operator grammar  </li>
+<li>Identify where chaos tools are useful and where they fail  </li>
+<li>Build a hybrid‑canon instance for simulation and analysis</li>
+</ul>
+<p>Agentic AIs can:</p>
+<ul>
+<li>Load the module.json files as structured metadata  </li>
+<li>Perform regime‑aware reasoning  </li>
+<li>Maintain coherence across modules  </li>
+<li>Generate examples, tests, and cross‑theory mappings</li>
+</ul>
+<hr />
+<h2 id="philosophy">Philosophy<a class="toc-permalink" href="#philosophy" title="Permanent link to this heading">&para;</a></h2>
+<p>Chaos is not the enemy of structure.<br />
+Chaos is what structure looks like when resolution is low.</p>
+<p>This module helps you see the difference.<br />
+# Coherence Map — Chaos Theory  </p>
+<h3 id="triadicframeworks-docstheorieschaos_theorycoherence_mapmd">TriadicFrameworks /docs/theories/chaos_theory/coherence_map.md<a class="toc-permalink" href="#triadicframeworks-docstheorieschaos_theorycoherence_mapmd" title="Permanent link to this heading">&para;</a></h3>
+<p>Chaos Theory in TriadicFrameworks is a <strong>structural sensitivity theory</strong>,<br />
+not a randomness theory and not a pop‑science “butterfly effect”<br />
+narrative.</p>
+<p>Chaos = <strong>deterministic sensitivity to operator iteration</strong>.<br />
+Attractors = <strong>coherence surfaces</strong>, not metaphors.<br />
+Unpredictability = <strong>coherence decay</strong>, not randomness.</p>
+<p>This file defines how coherence is evaluated across operators,<br />
+trajectories, attractors, geometry, and RTT regimes.</p>
+<hr />
+<h1 id="1-coherence-dimensions">1. Coherence Dimensions<a class="toc-permalink" href="#1-coherence-dimensions" title="Permanent link to this heading">&para;</a></h1>
+<p>Chaos Theory uses <strong>five structural coherence dimensions</strong>:</p>
+<h2 id="11-sensitivity-coherence">1.1 Sensitivity Coherence<a class="toc-permalink" href="#11-sensitivity-coherence" title="Permanent link to this heading">&para;</a></h2>
+<p>Stability of sensitivity under iteration.</p>
+<p>Coherent when:</p>
+<ul>
+<li>divergence is bounded  </li>
+<li>sensitivity amplification is structural  </li>
+<li>no randomness is introduced  </li>
+</ul>
+<hr />
+<h2 id="12-divergence-coherence">1.2 Divergence Coherence<a class="toc-permalink" href="#12-divergence-coherence" title="Permanent link to this heading">&para;</a></h2>
+<p>Stability of trajectory separation.</p>
+<p>Coherent when:</p>
+<ul>
+<li>divergence follows deterministic structure  </li>
+<li>exponential divergence is bounded by attractor geometry  </li>
+<li>divergence does not collapse into noise  </li>
+</ul>
+<hr />
+<h2 id="13-attractor-coherence">1.3 Attractor Coherence<a class="toc-permalink" href="#13-attractor-coherence" title="Permanent link to this heading">&para;</a></h2>
+<p>Stability of attractor geometry.</p>
+<p>Coherent when:</p>
+<ul>
+<li>attractor structure is consistent  </li>
+<li>fractal geometry is stable  </li>
+<li>trajectories remain bounded  </li>
+<li>no topological collapse occurs  </li>
+</ul>
+<hr />
+<h2 id="14-iteration-coherence">1.4 Iteration Coherence<a class="toc-permalink" href="#14-iteration-coherence" title="Permanent link to this heading">&para;</a></h2>
+<p>Stability of operator iteration.</p>
+<p>Coherent when:</p>
+<ul>
+<li>maps and flows remain valid  </li>
+<li>iteration does not introduce instability  </li>
+<li>operator composition remains deterministic  </li>
+</ul>
+<hr />
+<h2 id="15-geometric-coherence">1.5 Geometric Coherence<a class="toc-permalink" href="#15-geometric-coherence" title="Permanent link to this heading">&para;</a></h2>
+<p>Compatibility with state‑space geometry.</p>
+<p>Coherent when:</p>
+<ul>
+<li>trajectories respect geometric constraints  </li>
+<li>attractors embed correctly  </li>
+<li>divergence aligns with geometry  </li>
+</ul>
+<hr />
+<h1 id="2-coherence-levels-c0-c4">2. Coherence Levels (C0 → C4)<a class="toc-permalink" href="#2-coherence-levels-c0-c4" title="Permanent link to this heading">&para;</a></h1>
+<p>Coherence is evaluated on a <strong>five‑level structural scale</strong>:</p>
+<h2 id="c0-incoherent"><strong>C0 — Incoherent</strong><a class="toc-permalink" href="#c0-incoherent" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>unbounded divergence  </li>
+<li>invalid attractor structure  </li>
+<li>operator instability  </li>
+<li>geometry incompatible  </li>
+</ul>
+<p>System cannot support chaotic behavior.</p>
+<hr />
+<h2 id="c1-weak-coherence"><strong>C1 — Weak Coherence</strong><a class="toc-permalink" href="#c1-weak-coherence" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>partial divergence stability  </li>
+<li>fragile attractor structure  </li>
+<li>iteration unstable  </li>
+</ul>
+<p>Chaos cannot sustain.</p>
+<hr />
+<h2 id="c2-moderate-coherence"><strong>C2 — Moderate Coherence</strong><a class="toc-permalink" href="#c2-moderate-coherence" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>bounded divergence  </li>
+<li>stable iteration  </li>
+<li>attractor formation begins  </li>
+</ul>
+<p>Chaos emerging.</p>
+<hr />
+<h2 id="c3-strong-coherence"><strong>C3 — Strong Coherence</strong><a class="toc-permalink" href="#c3-strong-coherence" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>stable fractal attractors  </li>
+<li>deterministic divergence  </li>
+<li>multi‑scale structure  </li>
+<li>geometry compatible  </li>
+</ul>
+<p>Full chaotic behavior supported.</p>
+<hr />
+<h2 id="c4-perfect-coherence-ideal"><strong>C4 — Perfect Coherence (Ideal)</strong><a class="toc-permalink" href="#c4-perfect-coherence-ideal" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>perfect attractor stability  </li>
+<li>perfect divergence structure  </li>
+<li>perfect iteration stability  </li>
+</ul>
+<p>C4 is theoretical; real systems approach C3.</p>
+<hr />
+<h1 id="3-collapse-modes-ch1-ch5">3. Collapse Modes (CH1 → CH5)<a class="toc-permalink" href="#3-collapse-modes-ch1-ch5" title="Permanent link to this heading">&para;</a></h1>
+<p>Collapse occurs when coherence fails structurally.</p>
+<h2 id="ch1-operator-collapse"><strong>CH1 — Operator Collapse</strong><a class="toc-permalink" href="#ch1-operator-collapse" title="Permanent link to this heading">&para;</a></h2>
+<p>Invalid map/flow.</p>
+<h2 id="ch2-divergence-collapse"><strong>CH2 — Divergence Collapse</strong><a class="toc-permalink" href="#ch2-divergence-collapse" title="Permanent link to this heading">&para;</a></h2>
+<p>Unbounded or undefined divergence.</p>
+<h2 id="ch3-coherence-collapse"><strong>CH3 — Coherence Collapse</strong><a class="toc-permalink" href="#ch3-coherence-collapse" title="Permanent link to this heading">&para;</a></h2>
+<p>Iteration instability.</p>
+<h2 id="ch4-parameter-collapse"><strong>CH4 — Parameter Collapse</strong><a class="toc-permalink" href="#ch4-parameter-collapse" title="Permanent link to this heading">&para;</a></h2>
+<p>Invalid parameter region.</p>
+<h2 id="ch5-geometry-collapse"><strong>CH5 — Geometry Collapse</strong><a class="toc-permalink" href="#ch5-geometry-collapse" title="Permanent link to this heading">&para;</a></h2>
+<p>State‑space incompatibility.</p>
+<p>Collapse is structural, not random.</p>
+<hr />
+<h1 id="4-regime-behavior-r1-r3">4. Regime Behavior (R1 → R3)<a class="toc-permalink" href="#4-regime-behavior-r1-r3" title="Permanent link to this heading">&para;</a></h1>
+<p>Coherence behaves differently across RTT regimes:</p>
+<h2 id="r1-stable-lowsensitivity"><strong>R1 — Stable / Low‑Sensitivity</strong><a class="toc-permalink" href="#r1-stable-lowsensitivity" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>bounded divergence  </li>
+<li>stable iteration  </li>
+<li>simple attractors  </li>
+</ul>
+<p>Coherence dominated by iteration stability.</p>
+<hr />
+<h2 id="r2-transitional-moderatesensitivity"><strong>R2 — Transitional / Moderate‑Sensitivity</strong><a class="toc-permalink" href="#r2-transitional-moderatesensitivity" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>bifurcations  </li>
+<li>emerging fractal structure  </li>
+<li>partial coherence decay  </li>
+</ul>
+<p>Coherence dominated by attractor formation.</p>
+<hr />
+<h2 id="r3-fully-chaotic-highsensitivity"><strong>R3 — Fully Chaotic / High‑Sensitivity</strong><a class="toc-permalink" href="#r3-fully-chaotic-highsensitivity" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>exponential divergence  </li>
+<li>fractal attractors  </li>
+<li>multi‑scale structure  </li>
+</ul>
+<p>Coherence dominated by divergence structure + attractor stability.</p>
+<hr />
+<h1 id="5-coherence-evaluation-procedure">5. Coherence Evaluation Procedure<a class="toc-permalink" href="#5-coherence-evaluation-procedure" title="Permanent link to this heading">&para;</a></h1>
+<p>To evaluate coherence:</p>
+<ol>
+<li>Validate sensitivity structure  </li>
+<li>Validate divergence behavior  </li>
+<li>Validate attractor geometry  </li>
+<li>Validate iteration stability  </li>
+<li>Validate geometric compatibility  </li>
+<li>Validate regime alignment  </li>
+</ol>
+<p>If any step fails → classify collapse mode.</p>
+<hr />
+<h1 id="6-summary">6. Summary<a class="toc-permalink" href="#6-summary" title="Permanent link to this heading">&para;</a></h1>
+<p>Chaos Theory coherence is:</p>
+<ul>
+<li><strong>structural</strong>  </li>
+<li><strong>deterministic</strong>  </li>
+<li><strong>operator‑driven</strong>  </li>
+<li><strong>multi‑scale</strong>  </li>
+<li><strong>geometry‑embedded</strong>  </li>
+<li><strong>regime‑aware</strong>  </li>
+<li><strong>zero drift</strong></li>
+</ul>
+<p>Chaos = <strong>deterministic structural sensitivity</strong>.<br />
+Attractors = <strong>coherence surfaces</strong>.<br />
+Dynamics = <strong>operator‑driven iteration</strong>.<br />
+# Cross‑Module Integration — Chaos Theory  </p>
+<h3 id="triadicframeworks-docstheorieschaos_theorycross_modulemd">TriadicFrameworks /docs/theories/chaos_theory/cross_module.md<a class="toc-permalink" href="#triadicframeworks-docstheorieschaos_theorycross_modulemd" title="Permanent link to this heading">&para;</a></h3>
+<p>Chaos Theory in TriadicFrameworks is a <strong>structural sensitivity theory</strong>,<br />
+not a randomness theory and not a pop‑science “butterfly effect”<br />
+narrative.</p>
+<p>Chaos = <strong>deterministic sensitivity to operator iteration</strong>.<br />
+Attractors = <strong>coherence surfaces</strong>, not metaphors.<br />
+Unpredictability = <strong>coherence decay</strong>, not randomness.</p>
+<p>This file defines how Chaos Theory integrates with other modules in the<br />
+TriadicFrameworks canon.</p>
+<hr />
+<h1 id="1-integration-with-dynamical-systems">1. Integration with Dynamical Systems<a class="toc-permalink" href="#1-integration-with-dynamical-systems" title="Permanent link to this heading">&para;</a></h1>
+<p>Dynamical Systems provides:</p>
+<ul>
+<li>maps and flows  </li>
+<li>phase‑space geometry  </li>
+<li>stability analysis  </li>
+</ul>
+<p>Chaos Theory provides:</p>
+<ul>
+<li>sensitivity structure  </li>
+<li>divergence behavior  </li>
+<li>fractal attractors  </li>
+</ul>
+<p><strong>Integration:</strong><br />
+Chaos Theory is the <strong>nonlinear, high‑sensitivity extension</strong> of<br />
+Dynamical Systems.</p>
+<hr />
+<h1 id="2-integration-with-information-theory">2. Integration with Information Theory<a class="toc-permalink" href="#2-integration-with-information-theory" title="Permanent link to this heading">&para;</a></h1>
+<p>Information Theory provides:</p>
+<ul>
+<li>distinctions  </li>
+<li>amplification metrics  </li>
+<li>structural invariants  </li>
+</ul>
+<p>Chaos Theory provides:</p>
+<ul>
+<li>sensitivity ↔ information amplification  </li>
+<li>attractors ↔ stable information surfaces  </li>
+<li>divergence ↔ information separation  </li>
+</ul>
+<p><strong>Integration:</strong><br />
+Chaotic systems act as <strong>information amplifiers</strong>.</p>
+<hr />
+<h1 id="3-integration-with-thermodynamics">3. Integration with Thermodynamics<a class="toc-permalink" href="#3-integration-with-thermodynamics" title="Permanent link to this heading">&para;</a></h1>
+<p>Thermodynamics provides:</p>
+<ul>
+<li>energy flow  </li>
+<li>entropy production  </li>
+<li>stability surfaces  </li>
+</ul>
+<p>Chaos Theory provides:</p>
+<ul>
+<li>coherence decay  </li>
+<li>divergence structure  </li>
+<li>attractor stability  </li>
+</ul>
+<p><strong>Integration:</strong><br />
+Coherence decay in chaos parallels <strong>entropy increase</strong> in thermodynamics.</p>
+<hr />
+<h1 id="4-integration-with-geometry-topology">4. Integration with Geometry &amp; Topology<a class="toc-permalink" href="#4-integration-with-geometry-topology" title="Permanent link to this heading">&para;</a></h1>
+<p>Geometry/Topology provides:</p>
+<ul>
+<li>invariant sets  </li>
+<li>manifolds  </li>
+<li>symbolic dynamics  </li>
+<li>fractal structure  </li>
+</ul>
+<p>Chaos Theory provides:</p>
+<ul>
+<li>strange attractors  </li>
+<li>multi‑scale geometry  </li>
+<li>topological instability  </li>
+</ul>
+<p><strong>Integration:</strong><br />
+Chaotic attractors are <strong>geometric coherence surfaces</strong>.</p>
+<hr />
+<h1 id="5-integration-with-systems-physics">5. Integration with Systems Physics<a class="toc-permalink" href="#5-integration-with-systems-physics" title="Permanent link to this heading">&para;</a></h1>
+<p>Systems Physics provides:</p>
+<ul>
+<li>feedback loops  </li>
+<li>nonlinear coupling  </li>
+<li>multi‑component interactions  </li>
+</ul>
+<p>Chaos Theory provides:</p>
+<ul>
+<li>sensitivity amplification  </li>
+<li>divergence structure  </li>
+<li>regime transitions  </li>
+</ul>
+<p><strong>Integration:</strong><br />
+Chaotic systems are <strong>nonlinear feedback networks</strong>.</p>
+<hr />
+<h1 id="6-integration-with-complexity-theory">6. Integration with Complexity Theory<a class="toc-permalink" href="#6-integration-with-complexity-theory" title="Permanent link to this heading">&para;</a></h1>
+<p>Complexity Theory provides:</p>
+<ul>
+<li>emergent behavior  </li>
+<li>multi‑scale structure  </li>
+<li>adaptive dynamics  </li>
+</ul>
+<p>Chaos Theory provides:</p>
+<ul>
+<li>fractal attractors  </li>
+<li>sensitivity‑driven complexity  </li>
+<li>regime‑dependent behavior  </li>
+</ul>
+<p><strong>Integration:</strong><br />
+Chaos Theory is a <strong>deterministic engine</strong> for complex behavior.</p>
+<hr />
+<h1 id="7-integration-with-probability-theory">7. Integration with Probability Theory<a class="toc-permalink" href="#7-integration-with-probability-theory" title="Permanent link to this heading">&para;</a></h1>
+<p>Probability Theory provides:</p>
+<ul>
+<li>randomness  </li>
+<li>distributions  </li>
+<li>stochastic processes  </li>
+</ul>
+<p>Chaos Theory provides:</p>
+<ul>
+<li>deterministic divergence  </li>
+<li>structural unpredictability  </li>
+<li>coherence decay  </li>
+</ul>
+<p><strong>Integration:</strong><br />
+Chaos is <strong>not</strong> randomness, but chaotic divergence can <strong>appear</strong><br />
+probabilistic at coarse scales.</p>
+<hr />
+<h1 id="8-integration-with-computation-simulation">8. Integration with Computation &amp; Simulation<a class="toc-permalink" href="#8-integration-with-computation-simulation" title="Permanent link to this heading">&para;</a></h1>
+<p>Computation provides:</p>
+<ul>
+<li>numerical solvers  </li>
+<li>discretization  </li>
+<li>simulation frameworks  </li>
+</ul>
+<p>Chaos Theory provides:</p>
+<ul>
+<li>sensitivity constraints  </li>
+<li>divergence limits  </li>
+<li>attractor detection  </li>
+</ul>
+<p><strong>Integration:</strong><br />
+Simulations must preserve <strong>deterministic iteration</strong> and <strong>coherence<br />
+structure</strong>.</p>
+<hr />
+<h1 id="9-integration-with-machine-learning">9. Integration with Machine Learning<a class="toc-permalink" href="#9-integration-with-machine-learning" title="Permanent link to this heading">&para;</a></h1>
+<p>Machine Learning provides:</p>
+<ul>
+<li>function approximation  </li>
+<li>pattern extraction  </li>
+<li>high‑dimensional modeling  </li>
+</ul>
+<p>Chaos Theory provides:</p>
+<ul>
+<li>sensitivity constraints  </li>
+<li>divergence patterns  </li>
+<li>attractor geometry  </li>
+</ul>
+<p><strong>Integration:</strong><br />
+Chaotic systems challenge ML models due to <strong>sensitivity amplification</strong>.</p>
+<hr />
+<h1 id="summary">Summary<a class="toc-permalink" href="#summary" title="Permanent link to this heading">&para;</a></h1>
+<p>Chaos Theory integrates with the canon by providing:</p>
+<ul>
+<li>the <strong>structural sensitivity framework</strong>  </li>
+<li>the <strong>operator grammar for nonlinear systems</strong>  </li>
+<li>the <strong>coherence‑decay model</strong>  </li>
+<li>the <strong>multi‑scale regime structure</strong>  </li>
+<li>the <strong>collapse classification system</strong>  </li>
+</ul>
+<p>Chaos = <strong>deterministic structural sensitivity</strong>.<br />
+Attractors = <strong>coherence surfaces</strong>.<br />
+Dynamics = <strong>operator‑driven iteration</strong>.<br />
+# Engine Notes — Chaos Theory  </p>
+<h3 id="triadicframeworks-docstheorieschaos_theoryengine_notesmd">TriadicFrameworks /docs/theories/chaos_theory/engine_notes.md<a class="toc-permalink" href="#triadicframeworks-docstheorieschaos_theoryengine_notesmd" title="Permanent link to this heading">&para;</a></h3>
+<p>Chaos Theory in TriadicFrameworks is a <strong>structural sensitivity theory</strong>,<br />
+not a randomness theory and not a pop‑science “butterfly effect”<br />
+narrative.</p>
+<p>Chaos = <strong>deterministic sensitivity to operator iteration</strong>.<br />
+Attractors = <strong>coherence surfaces</strong>, not metaphors.<br />
+Unpredictability = <strong>coherence decay</strong>, not randomness.</p>
+<p>These engine notes define the internal behavior, constraints, and<br />
+execution semantics for the Chaos Theory module. They are intended for<br />
+AI agents, compilers, simulation engines, and orchestrators.</p>
+<hr />
+<h1 id="1-identity-lock">1. Identity Lock<a class="toc-permalink" href="#1-identity-lock" title="Permanent link to this heading">&para;</a></h1>
+<p>The module identity must remain:</p>
+<ul>
+<li>deterministic  </li>
+<li>operator‑driven  </li>
+<li>coherence‑based  </li>
+<li>sensitivity‑structured  </li>
+<li>geometry‑compatible  </li>
+<li>regime‑aware (R1 → R3)  </li>
+<li>zero drift  </li>
+</ul>
+<p>The engine must reject any interpretation that:</p>
+<ul>
+<li>introduces randomness‑first framing  </li>
+<li>uses “butterfly effect” metaphors  </li>
+<li>introduces mysticism or teleology  </li>
+<li>anthropomorphizes systems  </li>
+<li>treats chaos as noise  </li>
+<li>treats attractors as metaphors rather than coherence surfaces  </li>
+</ul>
+<p>Identity lock is strict.</p>
+<hr />
+<h1 id="2-system-object-semantics">2. System Object Semantics<a class="toc-permalink" href="#2-system-object-semantics" title="Permanent link to this heading">&para;</a></h1>
+<p>The engine must treat the following as <strong>first‑class dynamical objects</strong>:</p>
+<ul>
+<li><strong>state_vector</strong> (system state)  </li>
+<li><strong>map operator (𝓜)</strong>  </li>
+<li><strong>flow operator (𝓕ˡᵒʷ)</strong>  </li>
+<li><strong>sensitivity operator (𝓢ₛₑₙ)</strong>  </li>
+<li><strong>divergence operator (𝓓ᵢᵥ)</strong>  </li>
+<li><strong>attractor operator (𝓐ₜₜᵣ)</strong>  </li>
+<li><strong>coherence operator (𝓒ₒₕ)</strong>  </li>
+<li><strong>regime state (R1 → R3)</strong>  </li>
+<li><strong>geometry</strong> (state‑space structure)  </li>
+</ul>
+<p>All objects must be:</p>
+<ul>
+<li>deterministic  </li>
+<li>structurally valid  </li>
+<li>coherence‑compatible  </li>
+<li>geometry‑compatible  </li>
+<li>regime‑consistent  </li>
+</ul>
+<p>Invalid objects must trigger collapse classification.</p>
+<hr />
+<h1 id="3-operator-semantics">3. Operator Semantics<a class="toc-permalink" href="#3-operator-semantics" title="Permanent link to this heading">&para;</a></h1>
+<p>Chaos Theory uses the following operator grammar:</p>
+<ul>
+<li><strong>𝓜</strong> — map operator (discrete iteration)  </li>
+<li><strong>𝓕ˡᵒʷ</strong> — flow operator (continuous evolution)  </li>
+<li><strong>𝓢ₛₑₙ</strong> — sensitivity operator  </li>
+<li><strong>𝓓ᵢᵥ</strong> — divergence operator  </li>
+<li><strong>𝓐ₜₜᵣ</strong> — attractor operator  </li>
+<li><strong>𝓒ₒₕ</strong> — coherence operator  </li>
+<li><strong>𝓡𝓮𝓰</strong> — regime transition operator  </li>
+<li><strong>𝓒𝓁</strong> — collapse operator  </li>
+</ul>
+<p>Operators must:</p>
+<ul>
+<li>preserve determinism  </li>
+<li>avoid randomness  </li>
+<li>avoid teleology  </li>
+<li>maintain structural consistency  </li>
+<li>maintain geometry compatibility  </li>
+<li>maintain regime compatibility  </li>
+<li>avoid metaphor drift  </li>
+</ul>
+<p>Operators must be <strong>pure</strong>: no side effects outside defined system<br />
+objects.</p>
+<hr />
+<h1 id="4-regime-execution-model">4. Regime Execution Model<a class="toc-permalink" href="#4-regime-execution-model" title="Permanent link to this heading">&para;</a></h1>
+<p>Chaos Theory uses the RTT regime stack:</p>
+<ul>
+<li><strong>R1:</strong> stable, low‑sensitivity dynamics  </li>
+<li><strong>R2:</strong> transitional, bifurcating, moderate sensitivity  </li>
+<li><strong>R3:</strong> fully chaotic, high‑sensitivity, fractal attractors  </li>
+</ul>
+<p>The engine must:</p>
+<ul>
+<li>enforce regime‑specific constraints  </li>
+<li>preserve deterministic iteration  </li>
+<li>maintain coherence evaluation  </li>
+<li>prevent illegal transitions (e.g., R3 → R1 without structural cause)  </li>
+</ul>
+<p>Regime transitions must be monotonic unless collapse is detected.</p>
+<hr />
+<h1 id="5-coherence-evaluation">5. Coherence Evaluation<a class="toc-permalink" href="#5-coherence-evaluation" title="Permanent link to this heading">&para;</a></h1>
+<p>Coherence = <strong>stability of operator iteration</strong>.</p>
+<p>The engine must evaluate coherence using:</p>
+<ul>
+<li>bounded sensitivity  </li>
+<li>divergence structure  </li>
+<li>attractor consistency  </li>
+<li>geometric compatibility  </li>
+<li>regime alignment  </li>
+</ul>
+<p>Coherence must not:</p>
+<ul>
+<li>use randomness metrics  </li>
+<li>use noise‑based interpretations  </li>
+<li>use teleology  </li>
+<li>use probability‑first framing  </li>
+</ul>
+<p>Coherence is structural.</p>
+<hr />
+<h1 id="6-collapse-modes">6. Collapse Modes<a class="toc-permalink" href="#6-collapse-modes" title="Permanent link to this heading">&para;</a></h1>
+<p>The engine must classify dynamical failure using:</p>
+<ul>
+<li><strong>CH1:</strong> operator collapse (invalid map/flow)  </li>
+<li><strong>CH2:</strong> trajectory divergence collapse (unbounded growth)  </li>
+<li><strong>CH3:</strong> coherence collapse (iteration instability)  </li>
+<li><strong>CH4:</strong> parameter collapse (invalid parameter region)  </li>
+<li><strong>CH5:</strong> geometry collapse (state‑space incompatibility)  </li>
+</ul>
+<p>Collapse is <strong>structural</strong>, not random.</p>
+<p>Collapse must:</p>
+<ul>
+<li>halt regime transitions  </li>
+<li>freeze system objects  </li>
+<li>return diagnostic metadata  </li>
+<li>prevent reinforcement  </li>
+</ul>
+<hr />
+<h1 id="7-reinforcement-semantics">7. Reinforcement Semantics<a class="toc-permalink" href="#7-reinforcement-semantics" title="Permanent link to this heading">&para;</a></h1>
+<p>Reinforcement increases dynamical coherence through repeated stable<br />
+operator cycles.</p>
+<p>Rules:</p>
+<ul>
+<li>reinforcement must be monotonic  </li>
+<li>reinforcement cannot repair CH4 or CH5 collapse  </li>
+<li>reinforcement cannot introduce new system objects  </li>
+<li>reinforcement must preserve structural invariants  </li>
+</ul>
+<p>Reinforcement is structural, not purposeful.</p>
+<hr />
+<h1 id="8-crossmodule-constraints">8. Cross‑Module Constraints<a class="toc-permalink" href="#8-crossmodule-constraints" title="Permanent link to this heading">&para;</a></h1>
+<p>Chaos Theory integrates with:</p>
+<ul>
+<li><strong>Information Theory:</strong> sensitivity ↔ information amplification  </li>
+<li><strong>Thermodynamics:</strong> coherence decay ↔ entropy production  </li>
+<li><strong>Geometry/Topology:</strong> attractor geometry, invariant sets  </li>
+<li><strong>Systems Physics:</strong> nonlinear coupling, feedback loops  </li>
+<li><strong>Complexity Theory:</strong> multi‑scale structure  </li>
+</ul>
+<p>The engine must:</p>
+<ul>
+<li>preserve cross‑module invariants  </li>
+<li>prevent identity drift  </li>
+<li>maintain operator compatibility  </li>
+<li>enforce multi‑scale consistency  </li>
+</ul>
+<p>Chaos Theory is a <strong>core nonlinear‑systems module</strong>.</p>
+<hr />
+<h1 id="9-simulation-hooks">9. Simulation Hooks<a class="toc-permalink" href="#9-simulation-hooks" title="Permanent link to this heading">&para;</a></h1>
+<p>The engine must implement:</p>
+<ul>
+<li>system initialization  </li>
+<li>operator application  </li>
+<li>iteration  </li>
+<li>sensitivity evaluation  </li>
+<li>divergence measurement  </li>
+<li>attractor detection  </li>
+<li>coherence evaluation  </li>
+<li>regime transitions  </li>
+<li>collapse detection  </li>
+<li>reinforcement  </li>
+</ul>
+<p>See <code>simulation_hooks.json</code> for full schema.</p>
+<hr />
+<h1 id="10-safety-drift-prevention">10. Safety &amp; Drift Prevention<a class="toc-permalink" href="#10-safety-drift-prevention" title="Permanent link to this heading">&para;</a></h1>
+<p>The engine must reject:</p>
+<ul>
+<li>randomness‑first framing  </li>
+<li>“butterfly effect” metaphors  </li>
+<li>mysticism  </li>
+<li>teleology  </li>
+<li>anthropomorphism  </li>
+<li>noise‑based explanations  </li>
+<li>probability‑first interpretations  </li>
+</ul>
+<p>The module must remain:</p>
+<ul>
+<li>deterministic  </li>
+<li>operator‑driven  </li>
+<li>coherence‑based  </li>
+<li>geometry‑compatible  </li>
+<li>regime‑aware  </li>
+<li>zero drift  </li>
+</ul>
+<hr />
+<h1 id="summary_1">Summary<a class="toc-permalink" href="#summary_1" title="Permanent link to this heading">&para;</a></h1>
+<p>These engine notes define how Chaos Theory must run:</p>
+<ul>
+<li>maps and flows define deterministic evolution  </li>
+<li>sensitivity emerges from operator iteration  </li>
+<li>divergence defines structural separation  </li>
+<li>attractors are coherence surfaces  </li>
+<li>coherence decay defines chaos  </li>
+<li>regimes structure behavior  </li>
+<li>collapse is structural  </li>
+<li>drift is not allowed  </li>
+</ul>
+<p>Chaos = <strong>deterministic structural sensitivity</strong>.<br />
+Attractors = <strong>coherence surfaces</strong>.<br />
+Dynamics = <strong>operator‑driven iteration</strong>.<br />
+# Examples — Chaos Theory  </p>
+<h3 id="triadicframeworks-docstheorieschaos_theoryexamplesmd">TriadicFrameworks /docs/theories/chaos_theory/examples.md<a class="toc-permalink" href="#triadicframeworks-docstheorieschaos_theoryexamplesmd" title="Permanent link to this heading">&para;</a></h3>
+<p>Chaos Theory in TriadicFrameworks is a <strong>structural sensitivity theory</strong>,<br />
+not a randomness theory and not a pop‑science “butterfly effect”<br />
+narrative.</p>
+<p>Chaos = <strong>deterministic sensitivity to operator iteration</strong>.<br />
+Attractors = <strong>coherence surfaces</strong>, not metaphors.<br />
+Unpredictability = <strong>coherence decay</strong>, not randomness.</p>
+<p>These examples illustrate the core operators and behaviors across R1 → R3.</p>
+<hr />
+<h1 id="1-logistic-map-m-sensitivity-emergence">1. Logistic Map (𝓜) — Sensitivity Emergence<a class="toc-permalink" href="#1-logistic-map-m-sensitivity-emergence" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="input">Input<a class="toc-permalink" href="#input" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>x₀ = 0.2
+map = logistic_map(r = 3.8)
+</code></pre></div>
+
+<h3 id="operation">Operation<a class="toc-permalink" href="#operation" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>x₁ = 𝓜(x₀)
+x₂ = 𝓜(x₁)
+...
+</code></pre></div>
+
+<h3 id="interpretation">Interpretation<a class="toc-permalink" href="#interpretation" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>deterministic iteration  </li>
+<li>sensitivity emerges structurally  </li>
+<li>no randomness involved  </li>
+</ul>
+<hr />
+<h1 id="2-lorenz-flow-flow-continuous-chaos">2. Lorenz Flow (𝓕ˡᵒʷ) — Continuous Chaos<a class="toc-permalink" href="#2-lorenz-flow-flow-continuous-chaos" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="input_1">Input<a class="toc-permalink" href="#input_1" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>state = (x, y, z)
+flow = Lorenz_flow(σ=10, ρ=28, β=8/3)
+</code></pre></div>
+
+<h3 id="operation_1">Operation<a class="toc-permalink" href="#operation_1" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>dx/dt = 𝓕ˡᵒʷ(state)
+</code></pre></div>
+
+<h3 id="interpretation_1">Interpretation<a class="toc-permalink" href="#interpretation_1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>deterministic continuous evolution  </li>
+<li>geometry shapes allowable trajectories  </li>
+<li>no teleology (“system tries to…”)  </li>
+</ul>
+<hr />
+<h1 id="3-sensitivity-example-ssen">3. Sensitivity Example (𝓢ₛₑₙ)<a class="toc-permalink" href="#3-sensitivity-example-ssen" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="input_2">Input<a class="toc-permalink" href="#input_2" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>x₀  = 0.2
+x₀&#39; = 0.200001
+map = logistic_map(r = 4)
+</code></pre></div>
+
+<h3 id="operation_2">Operation<a class="toc-permalink" href="#operation_2" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>sensitivity = 𝓢ₛₑₙ(x₀, x₀&#39;)
+</code></pre></div>
+
+<h3 id="interpretation_2">Interpretation<a class="toc-permalink" href="#interpretation_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>sensitivity = divergence under iteration  </li>
+<li>deterministic, measurable  </li>
+<li>not randomness  </li>
+</ul>
+<hr />
+<h1 id="4-divergence-example-div">4. Divergence Example (𝓓ᵢᵥ)<a class="toc-permalink" href="#4-divergence-example-div" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="input_3">Input<a class="toc-permalink" href="#input_3" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>trajectory₁ = iterate(map, x₀)
+trajectory₂ = iterate(map, x₀&#39;)
+</code></pre></div>
+
+<h3 id="operation_3">Operation<a class="toc-permalink" href="#operation_3" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>divergence_rate = 𝓓ᵢᵥ(trajectory₁, trajectory₂)
+</code></pre></div>
+
+<h3 id="interpretation_3">Interpretation<a class="toc-permalink" href="#interpretation_3" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>exponential divergence → chaos  </li>
+<li>bounded divergence → coherence  </li>
+</ul>
+<hr />
+<h1 id="5-attractor-example-attr">5. Attractor Example (𝓐ₜₜᵣ)<a class="toc-permalink" href="#5-attractor-example-attr" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="input_4">Input<a class="toc-permalink" href="#input_4" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>trajectory = iterate(Lorenz_flow, initial_state)
+</code></pre></div>
+
+<h3 id="operation_4">Operation<a class="toc-permalink" href="#operation_4" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>attractor = 𝓐ₜₜᵣ(trajectory)
+</code></pre></div>
+
+<h3 id="possible-outputs">Possible Outputs<a class="toc-permalink" href="#possible-outputs" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>fixed point  </li>
+<li>limit cycle  </li>
+<li>torus  </li>
+<li>strange attractor (fractal coherence surface)</li>
+</ul>
+<h3 id="interpretation_4">Interpretation<a class="toc-permalink" href="#interpretation_4" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>attractors are <strong>coherence surfaces</strong>  </li>
+<li>not metaphors or “weird shapes”  </li>
+</ul>
+<hr />
+<h1 id="6-coherence-evaluation-example-coh">6. Coherence Evaluation Example (𝓒ₒₕ)<a class="toc-permalink" href="#6-coherence-evaluation-example-coh" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="input_5">Input<a class="toc-permalink" href="#input_5" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>trajectory = logistic_map_trajectory
+map = logistic_map(r = 3.5)
+geometry = 1D_interval
+</code></pre></div>
+
+<h3 id="operation_5">Operation<a class="toc-permalink" href="#operation_5" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>coh = 𝓒ₒₕ(trajectory, map, geometry)
+</code></pre></div>
+
+<h3 id="interpretation_5">Interpretation<a class="toc-permalink" href="#interpretation_5" title="Permanent link to this heading">&para;</a></h3>
+<p>Coherence requires:</p>
+<ul>
+<li>stable operator iteration  </li>
+<li>bounded sensitivity  </li>
+<li>attractor consistency  </li>
+<li>geometry compatibility  </li>
+</ul>
+<p>Coherence decay = chaos.</p>
+<hr />
+<h1 id="7-regime-transition-example-reg">7. Regime Transition Example (𝓡𝓮𝓰)<a class="toc-permalink" href="#7-regime-transition-example-reg" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="input_6">Input<a class="toc-permalink" href="#input_6" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>system_state = logistic_map(r = 2.9)
+</code></pre></div>
+
+<h3 id="operation_6">Operation<a class="toc-permalink" href="#operation_6" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>state_R2 = 𝓡𝓮𝓰(system_state, R1 → R2)
+</code></pre></div>
+
+<h3 id="interpretation_6">Interpretation<a class="toc-permalink" href="#interpretation_6" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>bifurcations appear  </li>
+<li>sensitivity increases  </li>
+<li>coherence weakens  </li>
+</ul>
+<hr />
+<h1 id="8-collapse-classification-example-cl">8. Collapse Classification Example (𝓒𝓁)<a class="toc-permalink" href="#8-collapse-classification-example-cl" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="input_7">Input<a class="toc-permalink" href="#input_7" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>trajectory = unstable_or_unbounded
+</code></pre></div>
+
+<h3 id="operation_7">Operation<a class="toc-permalink" href="#operation_7" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>mode = 𝓒𝓁(trajectory)
+</code></pre></div>
+
+<h3 id="possible-outputs_1">Possible Outputs<a class="toc-permalink" href="#possible-outputs_1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>CH1:</strong> operator collapse  </li>
+<li><strong>CH2:</strong> trajectory divergence collapse  </li>
+<li><strong>CH3:</strong> coherence collapse  </li>
+<li><strong>CH4:</strong> parameter collapse  </li>
+<li><strong>CH5:</strong> geometry collapse  </li>
+</ul>
+<h3 id="interpretation_7">Interpretation<a class="toc-permalink" href="#interpretation_7" title="Permanent link to this heading">&para;</a></h3>
+<p>Collapse is structural, not random.</p>
+<hr />
+<h1 id="summary_2">Summary<a class="toc-permalink" href="#summary_2" title="Permanent link to this heading">&para;</a></h1>
+<p>These examples show Chaos Theory as:</p>
+<ul>
+<li><strong>deterministic</strong>  </li>
+<li><strong>operator‑driven</strong>  </li>
+<li><strong>coherence‑based</strong>  </li>
+<li><strong>regime‑aware</strong>  </li>
+<li><strong>geometry‑compatible</strong>  </li>
+<li><strong>zero drift</strong></li>
+</ul>
+<p>Chaos = <strong>deterministic structural sensitivity</strong>, not randomness.<br />
+Attractors = <strong>coherence surfaces</strong>.<br />
+Dynamics = <strong>operator‑driven iteration</strong>.</p>
+<div class="codehilite"><pre><span></span><code># Explanations — Chaos Theory  
+### TriadicFrameworks /docs/theories/chaos_theory/explanations.md
+
+Chaos Theory in TriadicFrameworks is a **structural sensitivity theory**,
+not a randomness theory and not a pop‑science “butterfly effect”
+narrative.
+
+Chaos = **deterministic sensitivity to operator iteration**.  
+Attractors = **coherence surfaces**, not metaphors.  
+Unpredictability = **coherence decay**, not randomness.
+
+This file explains the core concepts of Chaos Theory in a zero‑drift,
+operator‑first, coherence‑based way.
+
+---
+
+# 1. What is Chaos Theory?
+
+Chaos Theory studies **deterministic systems** whose trajectories exhibit:
+
+- sensitivity to initial conditions  
+- divergence under iteration  
+- fractal attractor structure  
+- multi‑scale behavior  
+
+Chaos is **not** randomness.  
+Chaos is **deterministic structural sensitivity**.
+
+---
+
+# 2. What are maps and flows?
+
+Maps and flows are the **operators** that define system evolution.
+
+## Maps (𝓜)  
+Discrete iteration:
+</code></pre></div>
+
+<p>xₙ₊₁ = 𝓜(xₙ)</p>
+<div class="codehilite"><pre><span></span><code>## Flows (𝓕ˡᵒʷ)  
+Continuous evolution:
+</code></pre></div>
+
+<p>dx/dt = 𝓕ˡᵒʷ(x(t))</p>
+<div class="codehilite"><pre><span></span><code>Both are:
+
+- deterministic  
+- structural  
+- non‑teleological  
+
+Iteration is **operator application**, not a temporal metaphor.
+
+---
+
+# 3. What is sensitivity to initial conditions?
+
+Sensitivity = **structural divergence** of nearby trajectories.
+
+If:
+</code></pre></div>
+
+<p>x₀ and x₀&rsquo; differ slightly</p>
+<div class="codehilite"><pre><span></span><code>then:
+</code></pre></div>
+
+<p>|xₙ − xₙ&rsquo;| grows under iteration</p>
+<div class="codehilite"><pre><span></span><code>Sensitivity is:
+
+- deterministic  
+- measurable  
+- operator‑driven  
+
+It is not randomness or mysticism.
+
+---
+
+# 4. What is divergence?
+
+Divergence measures how trajectories separate.
+
+- **bounded divergence** → coherent dynamics  
+- **exponential divergence** → chaotic dynamics  
+
+Divergence is structural, not random.
+
+---
+
+# 5. What are attractors?
+
+Attractors are **coherence surfaces** that trajectories approach.
+
+Types:
+
+- fixed point  
+- limit cycle  
+- torus  
+- strange attractor (fractal coherence surface)
+
+Strange attractors are:
+
+- deterministic  
+- bounded  
+- multi‑scale  
+- fractal  
+
+They are not metaphors or “weird shapes.”
+
+---
+
+# 6. What is coherence?
+
+Coherence = **stability of operator iteration**.
+
+Coherence requires:
+
+- bounded sensitivity  
+- attractor consistency  
+- geometric compatibility  
+- stable operator behavior  
+
+Coherence decay = chaos.
+
+---
+
+# 7. What are the Chaos Theory regimes?
+
+Chaos Theory uses RTT regimes:
+
+## **R1 — Stable / Low‑Sensitivity**  
+Predictable, coherent, low divergence.
+
+## **R2 — Transitional / Moderate‑Sensitivity**  
+Bifurcations, emerging complexity.
+
+## **R3 — Fully Chaotic / High‑Sensitivity**  
+Exponential divergence, fractal attractors.
+
+Regimes describe **structural behavior**, not energy or complexity.
+
+---
+
+# 8. What is a bifurcation?
+
+A bifurcation is a **structural change** in system behavior as parameters
+vary.
+
+Examples:
+
+- period‑doubling  
+- saddle‑node  
+- Hopf  
+
+Bifurcations mark transitions from R1 → R2 → R3.
+
+---
+
+# 9. What is a strange attractor?
+
+A strange attractor is a **fractal coherence surface** with:
+
+- bounded trajectories  
+- deterministic structure  
+- multi‑scale geometry  
+- exponential divergence  
+
+It is the hallmark of R3 behavior.
+
+---
+
+# 10. What causes chaotic behavior?
+
+Chaos emerges when:
+
+- sensitivity amplifies  
+- divergence becomes exponential  
+- coherence decays  
+- attractors become fractal  
+
+All of this is **deterministic**.
+
+---
+
+# 11. What are collapse modes?
+
+Chaos Theory uses structural collapse modes:
+
+- **CH1:** operator collapse  
+- **CH2:** trajectory divergence collapse  
+- **CH3:** coherence collapse  
+- **CH4:** parameter collapse  
+- **CH5:** geometry collapse  
+
+Collapse is structural, not random.
+
+---
+
+# Summary
+
+Chaos Theory here is:
+
+- **deterministic**  
+- **operator‑driven**  
+- **coherence‑based**  
+- **regime‑aware**  
+- **zero drift**
+
+Chaos = **structural sensitivity**, not randomness.  
+Attractors = **coherence surfaces**.  
+Dynamics = **operator‑driven iteration**.
+</code></pre></div>
+
+<p># FAQ — Chaos Theory  </p>
+<h3 id="triadicframeworks-docstheorieschaos_theoryfaqmd">TriadicFrameworks /docs/theories/chaos_theory/faq.md<a class="toc-permalink" href="#triadicframeworks-docstheorieschaos_theoryfaqmd" title="Permanent link to this heading">&para;</a></h3>
+<p>Chaos Theory in TriadicFrameworks is a <strong>structural sensitivity theory</strong>,<br />
+not a randomness theory and not a pop‑science “butterfly effect”<br />
+narrative.</p>
+<p>Chaos = <strong>deterministic sensitivity to operator iteration</strong>.<br />
+Attractors = <strong>coherence surfaces</strong>, not metaphors.<br />
+Unpredictability = <strong>coherence decay</strong>, not randomness.</p>
+<p>This FAQ answers common questions in a zero‑drift, operator‑first way.</p>
+<hr />
+<h2 id="what-is-chaos-theory-in-this-module">❓ What is Chaos Theory in this module?<a class="toc-permalink" href="#what-is-chaos-theory-in-this-module" title="Permanent link to this heading">&para;</a></h2>
+<p>Chaos Theory is a <strong>deterministic dynamical framework</strong> where:</p>
+<ul>
+<li>maps and flows are operators  </li>
+<li>sensitivity arises from operator iteration  </li>
+<li>attractors are coherence surfaces  </li>
+<li>unpredictability is coherence decay  </li>
+</ul>
+<p>Chaos is <strong>not</strong> randomness.</p>
+<hr />
+<h2 id="is-chaos-random">❓ Is chaos random?<a class="toc-permalink" href="#is-chaos-random" title="Permanent link to this heading">&para;</a></h2>
+<p>No.</p>
+<p>Chaos is:</p>
+<ul>
+<li>deterministic  </li>
+<li>structural  </li>
+<li>operator‑driven  </li>
+</ul>
+<p>Randomness belongs to Probability Theory, not Chaos Theory.</p>
+<hr />
+<h2 id="what-causes-chaotic-behavior">❓ What causes chaotic behavior?<a class="toc-permalink" href="#what-causes-chaotic-behavior" title="Permanent link to this heading">&para;</a></h2>
+<p>Chaotic behavior emerges when:</p>
+<ul>
+<li>sensitivity amplifies under iteration  </li>
+<li>divergence becomes exponential  </li>
+<li>coherence decays  </li>
+<li>attractors become fractal  </li>
+</ul>
+<p>All of this is <strong>deterministic</strong>.</p>
+<hr />
+<h2 id="what-is-a-strange-attractor">❓ What is a strange attractor?<a class="toc-permalink" href="#what-is-a-strange-attractor" title="Permanent link to this heading">&para;</a></h2>
+<p>A strange attractor is a <strong>fractal coherence surface</strong>.</p>
+<p>It is:</p>
+<ul>
+<li>bounded  </li>
+<li>deterministic  </li>
+<li>multi‑scale  </li>
+<li>structurally stable  </li>
+</ul>
+<p>It is not a metaphor or a “weird shape.”</p>
+<hr />
+<h2 id="what-is-sensitivity-to-initial-conditions">❓ What is sensitivity to initial conditions?<a class="toc-permalink" href="#what-is-sensitivity-to-initial-conditions" title="Permanent link to this heading">&para;</a></h2>
+<p>Sensitivity = <strong>structural divergence</strong> of nearby trajectories.</p>
+<p>It is:</p>
+<ul>
+<li>deterministic  </li>
+<li>measurable  </li>
+<li>operator‑driven  </li>
+</ul>
+<p>It is not randomness or mysticism.</p>
+<hr />
+<h2 id="what-is-the-butterfly-effect">❓ What is the “butterfly effect”?<a class="toc-permalink" href="#what-is-the-butterfly-effect" title="Permanent link to this heading">&para;</a></h2>
+<p>In this module, the phrase is avoided.</p>
+<p>The underlying concept is:</p>
+<ul>
+<li><strong>sensitivity amplification</strong>  </li>
+<li><strong>operator iteration</strong>  </li>
+<li><strong>coherence decay</strong>  </li>
+</ul>
+<p>No metaphors. No pop‑science drift.</p>
+<hr />
+<h2 id="what-are-the-chaos-theory-regimes">❓ What are the Chaos Theory regimes?<a class="toc-permalink" href="#what-are-the-chaos-theory-regimes" title="Permanent link to this heading">&para;</a></h2>
+<p>Chaos Theory uses RTT regimes:</p>
+<h3 id="r1-stable-lowsensitivity_1"><strong>R1 — Stable / Low‑Sensitivity</strong><a class="toc-permalink" href="#r1-stable-lowsensitivity_1" title="Permanent link to this heading">&para;</a></h3>
+<p>Predictable, coherent, low divergence.</p>
+<h3 id="r2-transitional-moderatesensitivity_1"><strong>R2 — Transitional / Moderate‑Sensitivity</strong><a class="toc-permalink" href="#r2-transitional-moderatesensitivity_1" title="Permanent link to this heading">&para;</a></h3>
+<p>Bifurcations, emerging complexity.</p>
+<h3 id="r3-fully-chaotic-highsensitivity_1"><strong>R3 — Fully Chaotic / High‑Sensitivity</strong><a class="toc-permalink" href="#r3-fully-chaotic-highsensitivity_1" title="Permanent link to this heading">&para;</a></h3>
+<p>Exponential divergence, fractal attractors.</p>
+<hr />
+<h2 id="what-are-the-core-operators">❓ What are the core operators?<a class="toc-permalink" href="#what-are-the-core-operators" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><strong>𝓜</strong> — map operator  </li>
+<li><strong>𝓕ˡᵒʷ</strong> — flow operator  </li>
+<li><strong>𝓢ₛₑₙ</strong> — sensitivity operator  </li>
+<li><strong>𝓓ᵢᵥ</strong> — divergence operator  </li>
+<li><strong>𝓐ₜₜᵣ</strong> — attractor operator  </li>
+<li><strong>𝓒ₒₕ</strong> — coherence operator  </li>
+<li><strong>𝓡𝓮𝓰</strong> — regime transition operator  </li>
+<li><strong>𝓒𝓁</strong> — collapse operator  </li>
+</ul>
+<p>All operators are deterministic.</p>
+<hr />
+<h2 id="what-is-coherence-in-chaos-theory">❓ What is coherence in Chaos Theory?<a class="toc-permalink" href="#what-is-coherence-in-chaos-theory" title="Permanent link to this heading">&para;</a></h2>
+<p>Coherence = <strong>stability of operator iteration</strong>.</p>
+<p>It requires:</p>
+<ul>
+<li>bounded sensitivity  </li>
+<li>attractor consistency  </li>
+<li>geometric compatibility  </li>
+</ul>
+<p>Coherence decay = chaos.</p>
+<hr />
+<h2 id="what-are-collapse-modes">❓ What are collapse modes?<a class="toc-permalink" href="#what-are-collapse-modes" title="Permanent link to this heading">&para;</a></h2>
+<p>Chaos Theory uses structural collapse modes:</p>
+<ul>
+<li><strong>CH1:</strong> operator collapse  </li>
+<li><strong>CH2:</strong> trajectory divergence collapse  </li>
+<li><strong>CH3:</strong> coherence collapse  </li>
+<li><strong>CH4:</strong> parameter collapse  </li>
+<li><strong>CH5:</strong> geometry collapse  </li>
+</ul>
+<p>Collapse is structural, not random.</p>
+<hr />
+<h2 id="how-should-students-use-this-module">❓ How should students use this module?<a class="toc-permalink" href="#how-should-students-use-this-module" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>treat maps/flows as operators  </li>
+<li>treat attractors as coherence surfaces  </li>
+<li>treat sensitivity as structural  </li>
+<li>avoid randomness‑first framing  </li>
+<li>avoid pop‑science metaphors  </li>
+</ul>
+<p>Chaos = <strong>deterministic structural sensitivity</strong>.</p>
+<hr />
+<h2 id="summary_3">Summary<a class="toc-permalink" href="#summary_3" title="Permanent link to this heading">&para;</a></h2>
+<p>Chaos Theory here is:</p>
+<ul>
+<li><strong>deterministic</strong>  </li>
+<li><strong>operator‑driven</strong>  </li>
+<li><strong>coherence‑based</strong>  </li>
+<li><strong>regime‑aware</strong>  </li>
+<li><strong>zero drift</strong></li>
+</ul>
+<p>Chaos = <strong>structural sensitivity</strong>, not randomness.<br />
+Attractors = <strong>coherence surfaces</strong>.<br />
+Dynamics = <strong>operator‑driven iteration</strong>.<br />
+# Chaos Theory — Front Door  </p>
+<h3 id="triadicframeworks-docstheorieschaos_theoryfrontdoormd">TriadicFrameworks /docs/theories/chaos_theory/frontdoor.md<a class="toc-permalink" href="#triadicframeworks-docstheorieschaos_theoryfrontdoormd" title="Permanent link to this heading">&para;</a></h3>
+<p>Chaos Theory in TriadicFrameworks is a <strong>structural sensitivity theory</strong>,<br />
+not a randomness theory and not a pop‑science “butterfly effect”<br />
+narrative.</p>
+<p>Chaos = <strong>deterministic sensitivity to operator iteration</strong>.<br />
+Attractors = <strong>coherence surfaces</strong>, not metaphors.<br />
+Unpredictability = <strong>coherence decay</strong>, not randomness.</p>
+<p>This front door orients students, researchers, and AI agents to the<br />
+identity, structure, and safe‑use boundaries of the Chaos Theory module.</p>
+<hr />
+<h2 id="1-start-here">1. Start here<a class="toc-permalink" href="#1-start-here" title="Permanent link to this heading">&para;</a></h2>
+<p>If you are new to this module, read in this order:</p>
+<ol>
+<li>
+<p><strong>Session context</strong><br />
+<code>/docs/theories/chaos_theory/session_context.md</code><br />
+   Identity, drift boundaries, audience, and scope.</p>
+</li>
+<li>
+<p><strong>Regimes</strong><br />
+<code>/docs/theories/chaos_theory/regimes.md</code><br />
+   R1 → R3: stable dynamics, transitional sensitivity, fully chaotic behavior.</p>
+</li>
+<li>
+<p><strong>Operators</strong><br />
+<code>/docs/theories/chaos_theory/operators.md</code><br />
+   𝓜, 𝓕ˡᵒʷ, 𝓢ₛₑₙ, 𝓓ᵢᵥ, 𝓐ₜₜᵣ, 𝓒ₒₕ, 𝓡𝓮𝓰, 𝓒𝓁.</p>
+</li>
+<li>
+<p><strong>Operator examples</strong><br />
+<code>/docs/theories/chaos_theory/operator_examples.md</code><br />
+   Concrete examples of maps, flows, sensitivity, divergence, attractors,<br />
+   coherence, and regime transitions.</p>
+</li>
+</ol>
+<hr />
+<h2 id="2-what-this-module-is">2. What this module is<a class="toc-permalink" href="#2-what-this-module-is" title="Permanent link to this heading">&para;</a></h2>
+<p>Chaos Theory here is:</p>
+<ul>
+<li><strong>deterministic</strong>  </li>
+<li><strong>operator‑driven</strong>  </li>
+<li><strong>coherence‑based</strong>  </li>
+<li><strong>sensitivity‑structured</strong>  </li>
+<li><strong>geometry‑compatible</strong>  </li>
+<li><strong>regime‑aware (R1 → R3)</strong>  </li>
+<li><strong>zero drift</strong></li>
+</ul>
+<p>Chaos Theory is not:</p>
+<ul>
+<li>randomness  </li>
+<li>mysticism  </li>
+<li>“butterfly effect” pop‑science  </li>
+<li>teleology  </li>
+<li>anthropomorphic (“systems try to…”)  </li>
+</ul>
+<p>Chaos = <strong>deterministic structural sensitivity</strong>.</p>
+<hr />
+<h2 id="3-structure-of-the-module">3. Structure of the module<a class="toc-permalink" href="#3-structure-of-the-module" title="Permanent link to this heading">&para;</a></h2>
+<p>Core structural files:</p>
+<ul>
+<li><strong><code>session_context.md</code></strong> — identity, drift, audience  </li>
+<li><strong><code>regimes.md</code></strong> — R1 → R3 sensitivity behavior  </li>
+<li><strong><code>operators.md</code></strong> — operator grammar  </li>
+<li><strong><code>operator_examples.md</code></strong> — worked examples  </li>
+<li><strong><code>coherence_map.md</code></strong> — coherence across sensitivity, divergence, attractors  </li>
+<li><strong><code>lineage.md</code></strong> — pre‑chaos → Poincaré → Lorenz → RTT  </li>
+<li><strong><code>cross_module.md</code></strong> — integration with IT, Thermodynamics, Geometry, Systems Physics  </li>
+<li><strong><code>engine_notes.md</code></strong> — internal behavior for AI/compilers  </li>
+<li><strong><code>simulation_hooks.json</code></strong> — operator‑level hooks for simulators  </li>
+</ul>
+<hr />
+<h2 id="4-how-to-use-this-module">4. How to use this module<a class="toc-permalink" href="#4-how-to-use-this-module" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="for-students">For students<a class="toc-permalink" href="#for-students" title="Permanent link to this heading">&para;</a></h3>
+<p>Treat Chaos Theory as a <strong>deterministic dynamical framework</strong>:</p>
+<ul>
+<li>maps and flows are operators  </li>
+<li>attractors are coherence surfaces  </li>
+<li>sensitivity is structural  </li>
+<li>unpredictability is coherence decay  </li>
+<li>fractal structure emerges from iteration, not randomness  </li>
+</ul>
+<p>Avoid randomness‑first or pop‑science metaphors.</p>
+<h3 id="for-ai-agents-tools">For AI agents / tools<a class="toc-permalink" href="#for-ai-agents-tools" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Use <code>session_context.md</code> as the identity anchor.  </li>
+<li>Use <code>engine_notes.md</code> and <code>simulation_hooks.json</code> for execution.  </li>
+<li>Preserve determinism, avoid randomness‑first framing.  </li>
+<li>Maintain structural, operator‑driven coherence.  </li>
+</ul>
+<hr />
+<h2 id="5-summary">5. Summary<a class="toc-permalink" href="#5-summary" title="Permanent link to this heading">&para;</a></h2>
+<p>Chaos Theory in TriadicFrameworks is:</p>
+<ul>
+<li>a <strong>structural sensitivity theory</strong>  </li>
+<li>an <strong>operator system</strong> (maps, flows, attractors)  </li>
+<li>a <strong>regime‑aware dynamical model</strong> (R1 → R3)  </li>
+<li>a <strong>cross‑module backbone</strong> for nonlinear systems, fractals, predictability limits  </li>
+</ul>
+<p>It is <strong>not</strong>:</p>
+<ul>
+<li>randomness  </li>
+<li>mysticism  </li>
+<li>pop‑science “butterfly effect”  </li>
+<li>teleological  </li>
+</ul>
+<p>Chaos = <strong>deterministic structural sensitivity</strong>.<br />
+Attractors = <strong>coherence surfaces</strong>.<br />
+Dynamics = <strong>operator‑driven iteration</strong>.<br />
+# Lineage — Chaos Theory  </p>
+<h3 id="triadicframeworks-docstheorieschaos_theorylineagemd">TriadicFrameworks /docs/theories/chaos_theory/lineage.md<a class="toc-permalink" href="#triadicframeworks-docstheorieschaos_theorylineagemd" title="Permanent link to this heading">&para;</a></h3>
+<p>Chaos Theory in TriadicFrameworks is a <strong>structural sensitivity theory</strong>,<br />
+not a randomness theory and not a pop‑science “butterfly effect”<br />
+narrative.</p>
+<p>Chaos = <strong>deterministic sensitivity to operator iteration</strong>.<br />
+Attractors = <strong>coherence surfaces</strong>, not metaphors.<br />
+Unpredictability = <strong>coherence decay</strong>, not randomness.</p>
+<p>This file traces the lineage of Chaos Theory from early dynamical<br />
+systems to its RTT‑aligned, operator‑driven, coherence‑based form.</p>
+<hr />
+<h1 id="1-prechaos-lineage-prer1">1. Pre‑Chaos Lineage (Pre‑R1)<a class="toc-permalink" href="#1-prechaos-lineage-prer1" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="11-early-deterministic-systems">1.1 Early Deterministic Systems<a class="toc-permalink" href="#11-early-deterministic-systems" title="Permanent link to this heading">&para;</a></h2>
+<p>Classical mathematics studied:</p>
+<ul>
+<li>differential equations  </li>
+<li>periodic oscillators  </li>
+<li>stable equilibria  </li>
+<li>simple nonlinearities  </li>
+</ul>
+<p>But lacked:</p>
+<ul>
+<li>sensitivity framing  </li>
+<li>attractor structure  </li>
+<li>operator iteration perspective  </li>
+</ul>
+<h2 id="12-poincares-insight">1.2 Poincaré’s Insight<a class="toc-permalink" href="#12-poincares-insight" title="Permanent link to this heading">&para;</a></h2>
+<p>Poincaré introduced:</p>
+<ul>
+<li>qualitative dynamics  </li>
+<li>sensitivity to initial conditions  </li>
+<li>non‑integrable systems  </li>
+</ul>
+<p>This marks the <strong>proto‑chaos</strong> era.</p>
+<hr />
+<h1 id="2-foundational-lineage-r1-foundations">2. Foundational Lineage (R1 Foundations)<a class="toc-permalink" href="#2-foundational-lineage-r1-foundations" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="21-deterministic-maps-flows">2.1 Deterministic Maps &amp; Flows<a class="toc-permalink" href="#21-deterministic-maps-flows" title="Permanent link to this heading">&para;</a></h2>
+<p>Early work established:</p>
+<ul>
+<li>discrete maps (𝓜)  </li>
+<li>continuous flows (𝓕ˡᵒʷ)  </li>
+<li>deterministic iteration  </li>
+<li>geometric trajectories  </li>
+</ul>
+<p>Chaos is still latent but structurally present.</p>
+<h2 id="22-bifurcation-theory">2.2 Bifurcation Theory<a class="toc-permalink" href="#22-bifurcation-theory" title="Permanent link to this heading">&para;</a></h2>
+<p>Mathematicians discovered:</p>
+<ul>
+<li>period‑doubling  </li>
+<li>saddle‑node bifurcations  </li>
+<li>Hopf bifurcations  </li>
+</ul>
+<p>These reveal <strong>sensitivity amplification</strong>.</p>
+<hr />
+<h1 id="3-modern-chaos-lineage-r1-r2">3. Modern Chaos Lineage (R1 → R2)<a class="toc-permalink" href="#3-modern-chaos-lineage-r1-r2" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="31-lorenz-1963">3.1 Lorenz (1963)<a class="toc-permalink" href="#31-lorenz-1963" title="Permanent link to this heading">&para;</a></h2>
+<p>Lorenz discovered:</p>
+<ul>
+<li>deterministic sensitivity  </li>
+<li>non‑periodic attractors  </li>
+<li>exponential divergence  </li>
+</ul>
+<p>This transitions Chaos Theory into <strong>R2</strong>.</p>
+<h2 id="32-logistic-map-feigenbaum">3.2 Logistic Map &amp; Feigenbaum<a class="toc-permalink" href="#32-logistic-map-feigenbaum" title="Permanent link to this heading">&para;</a></h2>
+<p>Feigenbaum revealed:</p>
+<ul>
+<li>universality constants  </li>
+<li>scaling laws  </li>
+<li>structural sensitivity patterns  </li>
+</ul>
+<p>Chaos becomes <strong>operator‑structured</strong>.</p>
+<hr />
+<h1 id="4-strange-attractor-lineage-r2-r3">4. Strange Attractor Lineage (R2 → R3)<a class="toc-permalink" href="#4-strange-attractor-lineage-r2-r3" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="41-strange-attractors">4.1 Strange Attractors<a class="toc-permalink" href="#41-strange-attractors" title="Permanent link to this heading">&para;</a></h2>
+<p>Systems exhibit:</p>
+<ul>
+<li>fractal geometry  </li>
+<li>multi‑scale structure  </li>
+<li>bounded divergence  </li>
+</ul>
+<p>Attractors become <strong>coherence surfaces</strong>.</p>
+<h2 id="42-smale-topological-chaos">4.2 Smale &amp; Topological Chaos<a class="toc-permalink" href="#42-smale-topological-chaos" title="Permanent link to this heading">&para;</a></h2>
+<p>Smale introduced:</p>
+<ul>
+<li>horseshoes  </li>
+<li>symbolic dynamics  </li>
+<li>structural instability  </li>
+</ul>
+<p>Chaos becomes <strong>topologically grounded</strong>.</p>
+<hr />
+<h1 id="5-triadicframeworks-lineage-canonical-era">5. TriadicFrameworks Lineage (Canonical Era)<a class="toc-permalink" href="#5-triadicframeworks-lineage-canonical-era" title="Permanent link to this heading">&para;</a></h1>
+<p>Chaos Theory becomes:</p>
+<ul>
+<li><strong>deterministic</strong>  </li>
+<li><strong>operator‑driven</strong>  </li>
+<li><strong>coherence‑based</strong>  </li>
+<li><strong>regime‑aware (R1 → R3)</strong>  </li>
+<li><strong>geometry‑compatible</strong>  </li>
+<li><strong>multi‑scale</strong>  </li>
+</ul>
+<p>Operators become:</p>
+<ul>
+<li>𝓜 — map operator  </li>
+<li>𝓕ˡᵒʷ — flow operator  </li>
+<li>𝓢ₛₑₙ — sensitivity operator  </li>
+<li>𝓓ᵢᵥ — divergence operator  </li>
+<li>𝓐ₜₜᵣ — attractor operator  </li>
+<li>𝓒ₒₕ — coherence operator  </li>
+<li>𝓡𝓮𝓰 — regime operator  </li>
+<li>𝓒𝓁 — collapse operator  </li>
+</ul>
+<p>Chaos is reframed as <strong>structural sensitivity</strong>, not randomness.</p>
+<hr />
+<h1 id="6-crossmodule-lineage-integration-era">6. Cross‑Module Lineage (Integration Era)<a class="toc-permalink" href="#6-crossmodule-lineage-integration-era" title="Permanent link to this heading">&para;</a></h1>
+<p>Chaos Theory integrates with:</p>
+<h2 id="61-information-theory">6.1 Information Theory<a class="toc-permalink" href="#61-information-theory" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>sensitivity ↔ information amplification  </li>
+<li>attractors ↔ stable information surfaces  </li>
+</ul>
+<h2 id="62-thermodynamics">6.2 Thermodynamics<a class="toc-permalink" href="#62-thermodynamics" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>coherence decay ↔ entropy production  </li>
+<li>stability surfaces ↔ energy landscapes  </li>
+</ul>
+<h2 id="63-geometry-topology">6.3 Geometry &amp; Topology<a class="toc-permalink" href="#63-geometry-topology" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>attractor geometry  </li>
+<li>invariant sets  </li>
+<li>symbolic dynamics  </li>
+</ul>
+<h2 id="64-systems-physics">6.4 Systems Physics<a class="toc-permalink" href="#64-systems-physics" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>feedback loops  </li>
+<li>nonlinear coupling  </li>
+<li>multi‑scale behavior  </li>
+</ul>
+<hr />
+<h1 id="7-modern-canon-lineage-rttaligned">7. Modern Canon Lineage (RTT‑Aligned)<a class="toc-permalink" href="#7-modern-canon-lineage-rttaligned" title="Permanent link to this heading">&para;</a></h1>
+<p>Chaos Theory now provides:</p>
+<ul>
+<li>the <strong>structural sensitivity framework</strong>  </li>
+<li>the <strong>operator grammar for nonlinear systems</strong>  </li>
+<li>the <strong>coherence‑decay model</strong>  </li>
+<li>the <strong>multi‑scale regime structure</strong>  </li>
+<li>the <strong>collapse classification system</strong>  </li>
+</ul>
+<p>Chaos is no longer framed as:</p>
+<ul>
+<li>randomness  </li>
+<li>mysticism  </li>
+<li>pop‑science “butterfly effect”  </li>
+<li>teleology  </li>
+</ul>
+<p>Chaos = <strong>deterministic structural sensitivity</strong>.<br />
+Attractors = <strong>coherence surfaces</strong>.<br />
+Dynamics = <strong>operator‑driven iteration</strong>.</p>
+<hr />
+<h1 id="summary_4">Summary<a class="toc-permalink" href="#summary_4" title="Permanent link to this heading">&para;</a></h1>
+<p>Chaos Theory’s lineage moves from:</p>
+<ul>
+<li>early deterministic systems →  </li>
+<li>Poincaré →  </li>
+<li>bifurcation theory →  </li>
+<li>Lorenz →  </li>
+<li>strange attractors →  </li>
+<li>universality →  </li>
+<li>RTT integration →  </li>
+<li>cross‑module coherence  </li>
+</ul>
+<p>Chaos = <strong>deterministic structural sensitivity</strong>, not randomness.<br />
+Attractors = <strong>coherence surfaces</strong>.<br />
+Dynamics = <strong>operator‑driven iteration</strong>.<br />
+# Operators — Chaos Theory  </p>
+<h3 id="triadicframeworks-docstheorieschaos_theoryoperatorsmd">TriadicFrameworks /docs/theories/chaos_theory/operators.md<a class="toc-permalink" href="#triadicframeworks-docstheorieschaos_theoryoperatorsmd" title="Permanent link to this heading">&para;</a></h3>
+<p>Chaos Theory in TriadicFrameworks is a <strong>structural sensitivity theory</strong>,<br />
+not a randomness theory and not a pop‑science “butterfly effect”<br />
+narrative.</p>
+<p>Chaos = <strong>deterministic sensitivity to operator iteration</strong>.<br />
+Attractors = <strong>coherence surfaces</strong>, not metaphors.<br />
+Unpredictability = <strong>coherence decay</strong>, not randomness.</p>
+<p>This file defines the canonical operators for Chaos Theory across<br />
+R1 → R3.</p>
+<hr />
+<h1 id="operator-list">Operator List<a class="toc-permalink" href="#operator-list" title="Permanent link to this heading">&para;</a></h1>
+<p>The core operators are:</p>
+<ul>
+<li><strong>𝓜</strong> — map operator (discrete iteration)  </li>
+<li><strong>𝓕ˡᵒʷ</strong> — flow operator (continuous evolution)  </li>
+<li><strong>𝓢ₛₑₙ</strong> — sensitivity operator  </li>
+<li><strong>𝓓ᵢᵥ</strong> — divergence operator (trajectory separation)  </li>
+<li><strong>𝓐ₜₜᵣ</strong> — attractor operator  </li>
+<li><strong>𝓒ₒₕ</strong> — coherence operator  </li>
+<li><strong>𝓡𝓮𝓰</strong> — regime transition operator  </li>
+<li><strong>𝓒𝓁</strong> — collapse operator  </li>
+</ul>
+<p>Each operator is deterministic, structural, and non‑teleological.</p>
+<hr />
+<h1 id="1-map-operator-m">1. Map Operator (𝓜)<a class="toc-permalink" href="#1-map-operator-m" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="purpose_1">Purpose<a class="toc-permalink" href="#purpose_1" title="Permanent link to this heading">&para;</a></h3>
+<p>Evolve a system via discrete iteration.</p>
+<h3 id="form">Form<a class="toc-permalink" href="#form" title="Permanent link to this heading">&para;</a></h3>
+<p>𝓜(xₙ) = xₙ₊₁</p>
+<h3 id="notes">Notes<a class="toc-permalink" href="#notes" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>maps are <strong>deterministic operators</strong>, not metaphors  </li>
+<li>iteration is structural, not temporal  </li>
+<li>no randomness or noise injection  </li>
+</ul>
+<hr />
+<h1 id="2-flow-operator-flow">2. Flow Operator (𝓕ˡᵒʷ)<a class="toc-permalink" href="#2-flow-operator-flow" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="purpose_2">Purpose<a class="toc-permalink" href="#purpose_2" title="Permanent link to this heading">&para;</a></h3>
+<p>Evolve a system via continuous dynamics.</p>
+<h3 id="form_1">Form<a class="toc-permalink" href="#form_1" title="Permanent link to this heading">&para;</a></h3>
+<p>𝓕ˡᵒʷ(x(t)) = dx/dt</p>
+<h3 id="notes_1">Notes<a class="toc-permalink" href="#notes_1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>flows are deterministic  </li>
+<li>no teleology (“system tries to…”)  </li>
+<li>geometry defines allowable trajectories  </li>
+</ul>
+<hr />
+<h1 id="3-sensitivity-operator-ssen">3. Sensitivity Operator (𝓢ₛₑₙ)<a class="toc-permalink" href="#3-sensitivity-operator-ssen" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="purpose_3">Purpose<a class="toc-permalink" href="#purpose_3" title="Permanent link to this heading">&para;</a></h3>
+<p>Measure structural sensitivity to initial conditions.</p>
+<h3 id="form_2">Form<a class="toc-permalink" href="#form_2" title="Permanent link to this heading">&para;</a></h3>
+<p>𝓢ₛₑₙ(x₀, δx₀) → sensitivity_profile</p>
+<h3 id="notes_2">Notes<a class="toc-permalink" href="#notes_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>sensitivity = divergence under iteration  </li>
+<li>not randomness  </li>
+<li>not probability  </li>
+</ul>
+<hr />
+<h1 id="4-divergence-operator-div">4. Divergence Operator (𝓓ᵢᵥ)<a class="toc-permalink" href="#4-divergence-operator-div" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="purpose_4">Purpose<a class="toc-permalink" href="#purpose_4" title="Permanent link to this heading">&para;</a></h3>
+<p>Quantify separation of nearby trajectories.</p>
+<h3 id="form_3">Form<a class="toc-permalink" href="#form_3" title="Permanent link to this heading">&para;</a></h3>
+<p>𝓓ᵢᵥ(trajectory₁, trajectory₂) = separation_rate</p>
+<h3 id="notes_3">Notes<a class="toc-permalink" href="#notes_3" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>exponential divergence → chaos  </li>
+<li>bounded divergence → coherence  </li>
+<li>divergence is structural, not random  </li>
+</ul>
+<hr />
+<h1 id="5-attractor-operator-attr">5. Attractor Operator (𝓐ₜₜᵣ)<a class="toc-permalink" href="#5-attractor-operator-attr" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="purpose_5">Purpose<a class="toc-permalink" href="#purpose_5" title="Permanent link to this heading">&para;</a></h3>
+<p>Identify attractor structure.</p>
+<h3 id="outputs">Outputs<a class="toc-permalink" href="#outputs" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>fixed point  </li>
+<li>limit cycle  </li>
+<li>torus  </li>
+<li>strange attractor (fractal coherence surface)</li>
+</ul>
+<h3 id="notes_4">Notes<a class="toc-permalink" href="#notes_4" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>attractors are <strong>coherence surfaces</strong>  </li>
+<li>not metaphors  </li>
+<li>not “strange shapes”  </li>
+</ul>
+<hr />
+<h1 id="6-coherence-operator-coh">6. Coherence Operator (𝓒ₒₕ)<a class="toc-permalink" href="#6-coherence-operator-coh" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="purpose_6">Purpose<a class="toc-permalink" href="#purpose_6" title="Permanent link to this heading">&para;</a></h3>
+<p>Evaluate dynamical coherence.</p>
+<h3 id="form_4">Form<a class="toc-permalink" href="#form_4" title="Permanent link to this heading">&para;</a></h3>
+<p>𝓒ₒₕ(trajectory, map_or_flow, geometry) → coherence_score</p>
+<h3 id="notes_5">Notes<a class="toc-permalink" href="#notes_5" title="Permanent link to this heading">&para;</a></h3>
+<p>Coherence requires:</p>
+<ul>
+<li>stable operator iteration  </li>
+<li>bounded sensitivity  </li>
+<li>attractor consistency  </li>
+<li>geometry compatibility  </li>
+</ul>
+<p>Coherence decay = chaos.</p>
+<hr />
+<h1 id="7-regime-transition-operator-reg">7. Regime Transition Operator (𝓡𝓮𝓰)<a class="toc-permalink" href="#7-regime-transition-operator-reg" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="purpose_7">Purpose<a class="toc-permalink" href="#purpose_7" title="Permanent link to this heading">&para;</a></h3>
+<p>Transition system behavior across R1 → R3.</p>
+<h3 id="form_5">Form<a class="toc-permalink" href="#form_5" title="Permanent link to this heading">&para;</a></h3>
+<p>𝓡𝓮𝓰(system_state, Rᵢ → Rⱼ) → transitioned_state</p>
+<h3 id="notes_6">Notes<a class="toc-permalink" href="#notes_6" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>R1: stable, low‑sensitivity  </li>
+<li>R2: transitional, bifurcating  </li>
+<li>R3: fully chaotic, high‑sensitivity  </li>
+<li>transitions must preserve determinism  </li>
+</ul>
+<hr />
+<h1 id="8-collapse-operator-cl">8. Collapse Operator (𝓒𝓁)<a class="toc-permalink" href="#8-collapse-operator-cl" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="purpose_8">Purpose<a class="toc-permalink" href="#purpose_8" title="Permanent link to this heading">&para;</a></h3>
+<p>Classify dynamical failure modes.</p>
+<h3 id="form_6">Form<a class="toc-permalink" href="#form_6" title="Permanent link to this heading">&para;</a></h3>
+<p>𝓒𝓁(trajectory) → collapse_mode</p>
+<h3 id="modes">Modes<a class="toc-permalink" href="#modes" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>CH1:</strong> operator collapse  </li>
+<li><strong>CH2:</strong> trajectory divergence collapse  </li>
+<li><strong>CH3:</strong> coherence collapse  </li>
+<li><strong>CH4:</strong> parameter collapse  </li>
+<li><strong>CH5:</strong> geometry collapse  </li>
+</ul>
+<p>Collapse is structural, not random.</p>
+<hr />
+<h1 id="summary_5">Summary<a class="toc-permalink" href="#summary_5" title="Permanent link to this heading">&para;</a></h1>
+<p>Chaos Theory operators define:</p>
+<ul>
+<li>deterministic iteration (𝓜, 𝓕ˡᵒʷ)  </li>
+<li>sensitivity structure (𝓢ₛₑₙ, 𝓓ᵢᵥ)  </li>
+<li>attractor geometry (𝓐ₜₜᵣ)  </li>
+<li>coherence evaluation (𝓒ₒₕ)  </li>
+<li>regime transitions (𝓡𝓮𝓰)  </li>
+<li>collapse modes (𝓒𝓁)</li>
+</ul>
+<p>Chaos = <strong>deterministic structural sensitivity</strong>, not randomness.<br />
+Attractors = <strong>coherence surfaces</strong>.<br />
+Dynamics = <strong>operator‑driven iteration</strong>.<br />
+# Operator Examples — Chaos Theory  </p>
+<h3 id="triadicframeworks-docstheorieschaos_theoryoperator_examplesmd">TriadicFrameworks /docs/theories/chaos_theory/operator_examples.md<a class="toc-permalink" href="#triadicframeworks-docstheorieschaos_theoryoperator_examplesmd" title="Permanent link to this heading">&para;</a></h3>
+<p>Chaos Theory in TriadicFrameworks is a <strong>structural sensitivity theory</strong>,<br />
+not a randomness theory and not a pop‑science “butterfly effect”<br />
+narrative.</p>
+<p>Chaos = <strong>deterministic sensitivity to operator iteration</strong>.<br />
+Attractors = <strong>coherence surfaces</strong>, not metaphors.<br />
+Unpredictability = <strong>coherence decay</strong>, not randomness.</p>
+<p>These examples illustrate the canonical operators across R1 → R3.</p>
+<hr />
+<h1 id="1-map-operator-example-m">1. Map Operator Example (𝓜)<a class="toc-permalink" href="#1-map-operator-example-m" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="goal">Goal<a class="toc-permalink" href="#goal" title="Permanent link to this heading">&para;</a></h3>
+<p>Show deterministic discrete iteration.</p>
+<h3 id="input_8">Input<a class="toc-permalink" href="#input_8" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>x₀ = 0.2
+map = logistic_map(r = 3.8)
+</code></pre></div>
+
+<h3 id="operation_8">Operation<a class="toc-permalink" href="#operation_8" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>x₁ = 𝓜(x₀)
+x₂ = 𝓜(x₁)
+...
+</code></pre></div>
+
+<h3 id="interpretation_8">Interpretation<a class="toc-permalink" href="#interpretation_8" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>iteration is <strong>structural</strong>, not temporal  </li>
+<li>no randomness  </li>
+<li>sensitivity emerges from repeated operator application  </li>
+</ul>
+<hr />
+<h1 id="2-flow-operator-example-flow">2. Flow Operator Example (𝓕ˡᵒʷ)<a class="toc-permalink" href="#2-flow-operator-example-flow" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="goal_1">Goal<a class="toc-permalink" href="#goal_1" title="Permanent link to this heading">&para;</a></h3>
+<p>Show continuous deterministic evolution.</p>
+<h3 id="input_9">Input<a class="toc-permalink" href="#input_9" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>x(t) = Lorenz_state
+flow = Lorenz_flow(σ=10, ρ=28, β=8/3)
+</code></pre></div>
+
+<h3 id="operation_9">Operation<a class="toc-permalink" href="#operation_9" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>dx/dt = 𝓕ˡᵒʷ(x(t))
+</code></pre></div>
+
+<h3 id="interpretation_9">Interpretation<a class="toc-permalink" href="#interpretation_9" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>flows are deterministic  </li>
+<li>geometry shapes allowable trajectories  </li>
+<li>no teleology (“system tries to…”)  </li>
+</ul>
+<hr />
+<h1 id="3-sensitivity-operator-example-ssen">3. Sensitivity Operator Example (𝓢ₛₑₙ)<a class="toc-permalink" href="#3-sensitivity-operator-example-ssen" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="goal_2">Goal<a class="toc-permalink" href="#goal_2" title="Permanent link to this heading">&para;</a></h3>
+<p>Measure structural sensitivity to initial conditions.</p>
+<h3 id="input_10">Input<a class="toc-permalink" href="#input_10" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>x₀ = 0.2
+x₀&#39; = 0.200001
+map = logistic_map(r = 4)
+</code></pre></div>
+
+<h3 id="operation_10">Operation<a class="toc-permalink" href="#operation_10" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>sensitivity = 𝓢ₛₑₙ(x₀, x₀&#39;)
+</code></pre></div>
+
+<h3 id="interpretation_10">Interpretation<a class="toc-permalink" href="#interpretation_10" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>sensitivity = divergence under iteration  </li>
+<li>not randomness  </li>
+<li>not probability  </li>
+</ul>
+<hr />
+<h1 id="4-divergence-operator-example-div">4. Divergence Operator Example (𝓓ᵢᵥ)<a class="toc-permalink" href="#4-divergence-operator-example-div" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="goal_3">Goal<a class="toc-permalink" href="#goal_3" title="Permanent link to this heading">&para;</a></h3>
+<p>Quantify separation of nearby trajectories.</p>
+<h3 id="input_11">Input<a class="toc-permalink" href="#input_11" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>trajectory₁ = iterate(map, x₀)
+trajectory₂ = iterate(map, x₀&#39;)
+</code></pre></div>
+
+<h3 id="operation_11">Operation<a class="toc-permalink" href="#operation_11" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>divergence_rate = 𝓓ᵢᵥ(trajectory₁, trajectory₂)
+</code></pre></div>
+
+<h3 id="interpretation_11">Interpretation<a class="toc-permalink" href="#interpretation_11" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>exponential divergence → chaos  </li>
+<li>bounded divergence → coherence  </li>
+<li>divergence is structural, not random  </li>
+</ul>
+<hr />
+<h1 id="5-attractor-operator-example-attr">5. Attractor Operator Example (𝓐ₜₜᵣ)<a class="toc-permalink" href="#5-attractor-operator-example-attr" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="goal_4">Goal<a class="toc-permalink" href="#goal_4" title="Permanent link to this heading">&para;</a></h3>
+<p>Identify attractor structure.</p>
+<h3 id="input_12">Input<a class="toc-permalink" href="#input_12" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>trajectory = iterate(Lorenz_flow, initial_state)
+</code></pre></div>
+
+<h3 id="operation_12">Operation<a class="toc-permalink" href="#operation_12" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>attractor = 𝓐ₜₜᵣ(trajectory)
+</code></pre></div>
+
+<h3 id="possible-outputs_2">Possible Outputs<a class="toc-permalink" href="#possible-outputs_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>fixed point  </li>
+<li>limit cycle  </li>
+<li>torus  </li>
+<li>strange attractor (fractal coherence surface)</li>
+</ul>
+<h3 id="interpretation_12">Interpretation<a class="toc-permalink" href="#interpretation_12" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>attractors are <strong>coherence surfaces</strong>  </li>
+<li>not metaphors  </li>
+<li>not “strange shapes”  </li>
+</ul>
+<hr />
+<h1 id="6-coherence-operator-example-coh">6. Coherence Operator Example (𝓒ₒₕ)<a class="toc-permalink" href="#6-coherence-operator-example-coh" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="goal_5">Goal<a class="toc-permalink" href="#goal_5" title="Permanent link to this heading">&para;</a></h3>
+<p>Evaluate dynamical coherence.</p>
+<h3 id="input_13">Input<a class="toc-permalink" href="#input_13" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>trajectory = logistic_map_trajectory
+map = logistic_map(r = 3.5)
+geometry = 1D_interval
+</code></pre></div>
+
+<h3 id="operation_13">Operation<a class="toc-permalink" href="#operation_13" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>coh = 𝓒ₒₕ(trajectory, map, geometry)
+</code></pre></div>
+
+<h3 id="interpretation_13">Interpretation<a class="toc-permalink" href="#interpretation_13" title="Permanent link to this heading">&para;</a></h3>
+<p>Coherence requires:</p>
+<ul>
+<li>stable operator iteration  </li>
+<li>bounded sensitivity  </li>
+<li>attractor consistency  </li>
+<li>geometry compatibility  </li>
+</ul>
+<p>Coherence decay = chaos.</p>
+<hr />
+<h1 id="7-regime-transition-example-reg_1">7. Regime Transition Example (𝓡𝓮𝓰)<a class="toc-permalink" href="#7-regime-transition-example-reg_1" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="goal_6">Goal<a class="toc-permalink" href="#goal_6" title="Permanent link to this heading">&para;</a></h3>
+<p>Transition system behavior from R1 → R2.</p>
+<h3 id="input_14">Input<a class="toc-permalink" href="#input_14" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>system_state = logistic_map(r = 2.9)
+</code></pre></div>
+
+<h3 id="operation_14">Operation<a class="toc-permalink" href="#operation_14" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>state_R2 = 𝓡𝓮𝓰(system_state, R1 → R2)
+</code></pre></div>
+
+<h3 id="interpretation_14">Interpretation<a class="toc-permalink" href="#interpretation_14" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>bifurcations appear  </li>
+<li>sensitivity increases  </li>
+<li>coherence weakens  </li>
+</ul>
+<hr />
+<h1 id="8-collapse-classification-example-cl_1">8. Collapse Classification Example (𝓒𝓁)<a class="toc-permalink" href="#8-collapse-classification-example-cl_1" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="goal_7">Goal<a class="toc-permalink" href="#goal_7" title="Permanent link to this heading">&para;</a></h3>
+<p>Classify dynamical failure.</p>
+<h3 id="input_15">Input<a class="toc-permalink" href="#input_15" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>trajectory = unstable_or_unbounded
+</code></pre></div>
+
+<h3 id="operation_15">Operation<a class="toc-permalink" href="#operation_15" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>mode = 𝓒𝓁(trajectory)
+</code></pre></div>
+
+<h3 id="possible-outputs_3">Possible Outputs<a class="toc-permalink" href="#possible-outputs_3" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>CH1:</strong> operator collapse  </li>
+<li><strong>CH2:</strong> trajectory divergence collapse  </li>
+<li><strong>CH3:</strong> coherence collapse  </li>
+<li><strong>CH4:</strong> parameter collapse  </li>
+<li><strong>CH5:</strong> geometry collapse  </li>
+</ul>
+<h3 id="interpretation_15">Interpretation<a class="toc-permalink" href="#interpretation_15" title="Permanent link to this heading">&para;</a></h3>
+<p>Collapse is structural, not random.</p>
+<hr />
+<h1 id="summary_6">Summary<a class="toc-permalink" href="#summary_6" title="Permanent link to this heading">&para;</a></h1>
+<p>These examples show Chaos Theory as:</p>
+<ul>
+<li><strong>deterministic</strong>  </li>
+<li><strong>operator‑driven</strong>  </li>
+<li><strong>coherence‑based</strong>  </li>
+<li><strong>regime‑aware</strong>  </li>
+<li><strong>geometry‑compatible</strong>  </li>
+<li><strong>zero drift</strong></li>
+</ul>
+<p>Chaos = <strong>deterministic structural sensitivity</strong>, not randomness.<br />
+Attractors = <strong>coherence surfaces</strong>.<br />
+Dynamics = <strong>operator‑driven iteration</strong>.<br />
+```<br />
+# Regimes — Chaos Theory  </p>
+<h3 id="triadicframeworks-docstheorieschaos_theoryregimesmd">TriadicFrameworks /docs/theories/chaos_theory/regimes.md<a class="toc-permalink" href="#triadicframeworks-docstheorieschaos_theoryregimesmd" title="Permanent link to this heading">&para;</a></h3>
+<p>Chaos Theory in TriadicFrameworks is a <strong>structural sensitivity theory</strong>,<br />
+not a randomness theory and not a pop‑science “butterfly effect”<br />
+narrative.</p>
+<p>Chaos = <strong>deterministic sensitivity to operator iteration</strong>.<br />
+Unpredictability = <strong>coherence decay</strong>, not randomness.<br />
+Attractors = <strong>coherence surfaces</strong>, not metaphors.</p>
+<p>This file defines how chaotic behavior emerges across RTT regimes<br />
+(R1 → R3).</p>
+<hr />
+<h1 id="r1-stable-lowsensitivity-regime">R1 — Stable / Low‑Sensitivity Regime<a class="toc-permalink" href="#r1-stable-lowsensitivity-regime" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="deterministic-coherent-predictable">(Deterministic, coherent, predictable)<a class="toc-permalink" href="#deterministic-coherent-predictable" title="Permanent link to this heading">&para;</a></h3>
+<p>R1 systems exhibit:</p>
+<ul>
+<li>stable operator iteration  </li>
+<li>low sensitivity to initial conditions  </li>
+<li>predictable trajectories  </li>
+<li>fixed points or simple limit cycles  </li>
+<li>strong coherence under iteration  </li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>linear maps  </li>
+<li>weakly nonlinear flows  </li>
+<li>stable equilibria  </li>
+<li>periodic oscillators  </li>
+</ul>
+<p>Coherence in R1 = <strong>operator stability + bounded sensitivity</strong>.</p>
+<p>Chaos is <strong>not</strong> present in R1.</p>
+<hr />
+<h1 id="r2-transitional-moderatesensitivity-regime">R2 — Transitional / Moderate‑Sensitivity Regime<a class="toc-permalink" href="#r2-transitional-moderatesensitivity-regime" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="emerging-complexity-bifurcations-structural-sensitivity">(Emerging complexity, bifurcations, structural sensitivity)<a class="toc-permalink" href="#emerging-complexity-bifurcations-structural-sensitivity" title="Permanent link to this heading">&para;</a></h3>
+<p>R2 systems exhibit:</p>
+<ul>
+<li>moderate sensitivity to initial conditions  </li>
+<li>bifurcations and period‑doubling  </li>
+<li>onset of complex attractor structure  </li>
+<li>partial coherence decay  </li>
+<li>deterministic but increasingly intricate behavior  </li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>logistic map near r ≈ 3  </li>
+<li>Lorenz system near onset of instability  </li>
+<li>quasi‑periodic tori approaching breakdown  </li>
+</ul>
+<p>Coherence in R2 =<br />
+<strong>operator stability + partial sensitivity amplification + attractor formation</strong>.</p>
+<p>Chaos begins to <strong>emerge</strong> in R2.</p>
+<hr />
+<h1 id="r3-fully-chaotic-highsensitivity-regime">R3 — Fully Chaotic / High‑Sensitivity Regime<a class="toc-permalink" href="#r3-fully-chaotic-highsensitivity-regime" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="deterministic-chaos-fractal-attractors-multiscale-divergence">(Deterministic chaos, fractal attractors, multi‑scale divergence)<a class="toc-permalink" href="#deterministic-chaos-fractal-attractors-multiscale-divergence" title="Permanent link to this heading">&para;</a></h3>
+<p>R3 systems exhibit:</p>
+<ul>
+<li>high sensitivity to initial conditions  </li>
+<li>exponential divergence of trajectories  </li>
+<li>strange attractors (fractal coherence surfaces)  </li>
+<li>multi‑scale structure  </li>
+<li>coherence decay under iteration  </li>
+<li>deterministic unpredictability  </li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>logistic map at r = 4  </li>
+<li>Lorenz attractor (σ=10, ρ=28, β=8/3)  </li>
+<li>Hénon map  </li>
+<li>Smale horseshoe  </li>
+</ul>
+<p>Coherence in R3 =<br />
+<strong>bounded divergence + attractor stability + structural invariants</strong>.</p>
+<p>Chaos is <strong>fully expressed</strong> in R3.</p>
+<hr />
+<h1 id="regime-transitions">Regime Transitions<a class="toc-permalink" href="#regime-transitions" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="r1-r2">R1 → R2<a class="toc-permalink" href="#r1-r2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>nonlinearity increases  </li>
+<li>bifurcations appear  </li>
+<li>sensitivity begins to amplify  </li>
+<li>coherence weakens  </li>
+</ul>
+<h3 id="r2-r3">R2 → R3<a class="toc-permalink" href="#r2-r3" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>attractors become fractal  </li>
+<li>divergence becomes exponential  </li>
+<li>coherence decays under iteration  </li>
+<li>multi‑scale structure emerges  </li>
+</ul>
+<h3 id="r3-r2">R3 → R2<a class="toc-permalink" href="#r3-r2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>parameters move out of chaotic region  </li>
+<li>attractors simplify  </li>
+<li>sensitivity decreases  </li>
+</ul>
+<h3 id="r2-r1">R2 → R1<a class="toc-permalink" href="#r2-r1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>system returns to stable, low‑sensitivity behavior  </li>
+</ul>
+<p>Transitions must preserve:</p>
+<ul>
+<li>determinism  </li>
+<li>operator validity  </li>
+<li>structural consistency  </li>
+<li>geometry compatibility  </li>
+</ul>
+<hr />
+<h1 id="collapse-modes-ch1-ch5">Collapse Modes (CH1 → CH5)<a class="toc-permalink" href="#collapse-modes-ch1-ch5" title="Permanent link to this heading">&para;</a></h1>
+<p>Chaos Theory uses structural collapse modes:</p>
+<ul>
+<li><strong>CH1:</strong> operator collapse (invalid map/flow)  </li>
+<li><strong>CH2:</strong> trajectory divergence collapse (unbounded growth)  </li>
+<li><strong>CH3:</strong> coherence collapse (iteration instability)  </li>
+<li><strong>CH4:</strong> parameter collapse (invalid parameter region)  </li>
+<li><strong>CH5:</strong> geometry collapse (state‑space incompatibility)  </li>
+</ul>
+<p>Collapse is <strong>structural</strong>, not random.</p>
+<hr />
+<h1 id="summary_7">Summary<a class="toc-permalink" href="#summary_7" title="Permanent link to this heading">&para;</a></h1>
+<p>Chaos Theory across regimes:</p>
+<ul>
+<li><strong>R1:</strong> stable, low‑sensitivity dynamics  </li>
+<li><strong>R2:</strong> transitional, bifurcating, emerging complexity  </li>
+<li><strong>R3:</strong> fully chaotic, high‑sensitivity, fractal attractors  </li>
+</ul>
+<p>Chaos = <strong>deterministic structural sensitivity</strong>, not randomness.<br />
+Attractors = <strong>coherence surfaces</strong>, not metaphors.<br />
+Dynamics = <strong>operator‑driven iteration</strong>.<br />
+# Session Context — Chaos Theory  </p>
+<h3 id="triadicframeworks-docstheorieschaos_theorysession_contextmd">TriadicFrameworks /docs/theories/chaos_theory/session_context.md<a class="toc-permalink" href="#triadicframeworks-docstheorieschaos_theorysession_contextmd" title="Permanent link to this heading">&para;</a></h3>
+<p>Chaos Theory in TriadicFrameworks is a <strong>structural sensitivity theory</strong>,<br />
+not a randomness theory and not a pop‑science “butterfly effect”<br />
+narrative.</p>
+<p>Chaos = <strong>sensitivity of trajectories to structural operators</strong>.<br />
+Systems = <strong>deterministic</strong>, but <strong>operator‑sensitive</strong>.<br />
+Unpredictability = <strong>coherence loss under iteration</strong>, not randomness.</p>
+<p>This session context establishes the identity, drift boundaries, regime<br />
+behavior, and audience alignment for the Chaos Theory module.</p>
+<hr />
+<h2 id="canon">Canon<a class="toc-permalink" href="#canon" title="Permanent link to this heading">&para;</a></h2>
+<p>Chaos Theory is framed as a <strong>deterministic operator system</strong> in which:</p>
+<ul>
+<li>maps and flows are <strong>operators</strong>, not metaphors  </li>
+<li>sensitivity arises from <strong>operator amplification</strong>, not randomness  </li>
+<li>attractors are <strong>coherence surfaces</strong>, not “strange shapes”  </li>
+<li>divergence of trajectories is <strong>structural</strong>, not mystical  </li>
+<li>iteration is an <strong>operator cycle</strong>, not a temporal metaphor  </li>
+<li>unpredictability is <strong>coherence decay</strong>, not noise  </li>
+</ul>
+<p>Chaos Theory is <strong>structure‑first</strong>, <strong>operator‑driven</strong>, and<br />
+<strong>coherence‑based</strong>.</p>
+<hr />
+<h2 id="modules">Modules<a class="toc-permalink" href="#modules" title="Permanent link to this heading">&para;</a></h2>
+<p>Chaos Theory participates in the following module lineage:</p>
+<ul>
+<li><strong>Upstream:</strong> Dynamical Systems, Differential Equations, Topology  </li>
+<li><strong>Lateral:</strong> Information Theory, Thermodynamics, Complexity Theory  </li>
+<li><strong>Downstream:</strong> Fractals, Nonlinear Systems, Predictability Limits  </li>
+</ul>
+<p>It is a <strong>core mathematical‑physics module</strong> with strong cross‑module<br />
+propagation.</p>
+<hr />
+<h2 id="drift">Drift<a class="toc-permalink" href="#drift" title="Permanent link to this heading">&para;</a></h2>
+<p>Drift must be strictly avoided:</p>
+<ul>
+<li><strong>No “butterfly effect” pop‑science metaphors</strong>  </li>
+<li><strong>No randomness framing</strong> (chaos ≠ randomness)  </li>
+<li><strong>No mysticism or teleology</strong>  </li>
+<li><strong>No “unpredictable by nature” narratives</strong>  </li>
+<li><strong>No anthropomorphic language</strong> (“systems try to…”)  </li>
+<li><strong>No probability‑first framing</strong> (handled in Probability Theory)  </li>
+</ul>
+<p>Chaos Theory = <strong>deterministic structural sensitivity</strong>, not randomness.</p>
+<hr />
+<h2 id="coherence">Coherence<a class="toc-permalink" href="#coherence" title="Permanent link to this heading">&para;</a></h2>
+<p>Coherence in Chaos Theory is:</p>
+<ul>
+<li>stability of operator iteration  </li>
+<li>sensitivity boundedness  </li>
+<li>attractor consistency  </li>
+<li>divergence structure validity  </li>
+<li>regime‑compatible behavior  </li>
+</ul>
+<p>A system is chaotic when <strong>coherence decays under iteration</strong>, not when<br />
+it becomes random.</p>
+<hr />
+<h2 id="version">Version<a class="toc-permalink" href="#version" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>1.0 — structural‑sensitivity, operator‑ready, regime‑aligned.</strong></p>
+<p>Compatible with RTT/1, RTT/2, RTT/3.</p>
+<hr />
+<h2 id="format">Format<a class="toc-permalink" href="#format" title="Permanent link to this heading">&para;</a></h2>
+<p>This module uses:</p>
+<ul>
+<li>markdown (conceptual clarity)  </li>
+<li>html (front‑door rendering)  </li>
+<li>operator tables  </li>
+<li>attractor diagrams  </li>
+<li>regime maps  </li>
+<li>cross‑module integration  </li>
+</ul>
+<p>All files are AI‑parsable and student‑ready.</p>
+<hr />
+<h2 id="front-door">Front door<a class="toc-permalink" href="#front-door" title="Permanent link to this heading">&para;</a></h2>
+<p>The front door for this module is:</p>
+<p><code>/docs/theories/chaos_theory/frontdoor.md</code></p>
+<p>This session context is the <strong>identity anchor</strong> for all subpages.</p>
+<hr />
+<h2 id="every-page">Every page<a class="toc-permalink" href="#every-page" title="Permanent link to this heading">&para;</a></h2>
+<p>Every page in this module must be:</p>
+<ul>
+<li>structure‑first  </li>
+<li>operator‑aware  </li>
+<li>coherence‑aligned  </li>
+<li>regime‑compatible  </li>
+<li>zero drift  </li>
+<li>student‑parsable  </li>
+<li>AI‑parsable  </li>
+</ul>
+<p>No page may use randomness‑first, mysticism‑first, or pop‑science<br />
+framing.</p>
+<hr />
+<h2 id="audience">Audience<a class="toc-permalink" href="#audience" title="Permanent link to this heading">&para;</a></h2>
+<p>This module is written for:</p>
+<ul>
+<li>students  </li>
+<li>researchers  </li>
+<li>theorists  </li>
+<li>engineers  </li>
+<li>AI agents  </li>
+</ul>
+<p>It is designed to be <strong>immediately teachable</strong>, <strong>structurally clear</strong>,<br />
+and <strong>canon‑consistent</strong>.</p>
+<hr />
+<h2 id="summary_8">Summary<a class="toc-permalink" href="#summary_8" title="Permanent link to this heading">&para;</a></h2>
+<p>Chaos Theory in TriadicFrameworks is:</p>
+<ul>
+<li>a <strong>structural sensitivity theory</strong>  </li>
+<li>an <strong>operator system</strong> (maps, flows, attractors)  </li>
+<li>a <strong>regime‑aware dynamical model</strong> (R1 → R3)  </li>
+<li>a <strong>cross‑module backbone</strong> for nonlinear systems, fractals, and<br />
+  predictability limits  </li>
+</ul>
+<p>It is <strong>not</strong>:</p>
+<ul>
+<li>randomness  </li>
+<li>mysticism  </li>
+<li>pop‑science “butterfly effect”  </li>
+<li>teleological  </li>
+</ul>
+<p>Chaos = <strong>deterministic structural sensitivity</strong>.<br />
+Attractors = <strong>coherence surfaces</strong>.<br />
+Dynamics = <strong>operator‑driven iteration</strong>.<br />
+</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/corpus/chaos_theory.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/corpus/chaos_theory.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

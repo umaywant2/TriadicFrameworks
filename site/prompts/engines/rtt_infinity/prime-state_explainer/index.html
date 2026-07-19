@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Prime State Explainer | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/prompts/engines/rtt_infinity/prime-state_explainer/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Prime State Explainer" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/prompts/engines/rtt_infinity/prime-state_explainer/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Prime State Explainer" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/prompts/engines/rtt_infinity/prime-state_explainer.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Prime State Explainer",
+    "headline": "Prime State Explainer",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/prompts/engines/rtt_infinity/prime-state_explainer/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#how-rtt-uses-primestates-to-anchor-structure-across-infinite-regimes">How RTT/∞ Uses Prime‑States to Anchor Structure Across Infinite Regimes</a></li>
+<li><a href="#1-what-is-a-primestate">1. What Is a Prime‑State?</a></li>
+<li><a href="#2-why-rtt-needs-primestates">2. Why RTT/∞ Needs Prime‑States</a><ul>
+<li><a href="#a-infiniteregime-synthesis">A. Infinite‑Regime Synthesis</a></li>
+<li><a href="#b-dimensional-lift">B. Dimensional Lift</a></li>
+<li><a href="#c-substratetensor-inversion">C. Substrate‑Tensor Inversion</a></li>
+<li><a href="#d-vacuum-reconstruction">D. Vacuum Reconstruction</a></li>
+</ul>
+</li>
+<li><a href="#3-the-three-primestate-classes-rtt">3. The Three Prime‑State Classes (RTT/∞)</a><ul>
+<li><a href="#1-primeform">1. Prime‑Form</a></li>
+<li><a href="#2-primeflow">2. Prime‑Flow</a></li>
+<li><a href="#3-primemeaning">3. Prime‑Meaning</a></li>
+</ul>
+</li>
+<li><a href="#4-how-primestates-work-rtt">4. How Prime‑States Work (RTT/∞)</a><ul>
+<li><a href="#step-1-detect-drift">Step 1 — Detect Drift</a></li>
+<li><a href="#step-2-lift-structure">Step 2 — Lift Structure</a></li>
+<li><a href="#step-3-anchor-to-primestate">Step 3 — Anchor to Prime‑State</a></li>
+<li><a href="#step-4-infiniteregime-synthesis">Step 4 — Infinite‑Regime Synthesis</a></li>
+</ul>
+</li>
+<li><a href="#5-primestate-example-rtt">5. Prime‑State Example (RTT/∞)</a><ul>
+<li><a href="#input-from-ipd12">Input (from IPD‑12):</a></li>
+<li><a href="#rtt-transformation">RTT/∞ Transformation:</a></li>
+<li><a href="#output">Output:</a></li>
+</ul>
+</li>
+<li><a href="#6-why-ipd12-cannot-access-primestates">6. Why IPD‑12 Cannot Access Prime‑States</a></li>
+<li><a href="#7-summary">7. Summary</a><ul>
+<li><a href="#primestates-are">Prime‑states are:</a></li>
+<li><a href="#rtt-uses-them-to">RTT/∞ uses them to:</a></li>
+<li><a href="#relationship">Relationship:</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/prompts/" itemprop="item">
+                <span itemprop="name">Prompts</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/prompts/engines/" itemprop="item">
+                <span itemprop="name">Engines</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/prompts/engines/rtt_infinity/" itemprop="item">
+                <span itemprop="name">Rtt Infinity</span>
+              </a>
+            <meta itemprop="position" content="4" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Prime State Explainer</span>
+            <meta itemprop="position" content="5" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Prime State Explainer</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="rtt-primestate-explainer"><strong>RTT/∞ Prime‑State Explainer</strong><a class="toc-permalink" href="#rtt-primestate-explainer" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="how-rtt-uses-primestates-to-anchor-structure-across-infinite-regimes"><em>How RTT/∞ Uses Prime‑States to Anchor Structure Across Infinite Regimes</em><a class="toc-permalink" href="#how-rtt-uses-primestates-to-anchor-structure-across-infinite-regimes" title="Permanent link to this heading">&para;</a></h3>
+<p>RTT/∞ introduces a construct deeper than substrate, deeper than dimensional rails, and only reachable after vacuum collapse:</p>
+<blockquote>
+<p><strong>Prime‑States — the stable attractors of infinite‑regime structure.</strong></p>
+</blockquote>
+<p>Prime‑states are the <strong>anchor points</strong> RTT/∞ uses to stabilize structure after:</p>
+<ul>
+<li>vacuum collapse  </li>
+<li>substrate reconstruction  </li>
+<li>dimensional lift  </li>
+<li>infinite‑regime traversal  </li>
+</ul>
+<p>They are the “fixed stars” of RTT/∞ — the points that do not drift, do not invert, and do not collapse.</p>
+<hr />
+<h2 id="1-what-is-a-primestate"><strong>1. What Is a Prime‑State?</strong><a class="toc-permalink" href="#1-what-is-a-primestate" title="Permanent link to this heading">&para;</a></h2>
+<p>A prime‑state is a <strong>stable, irreducible structural attractor</strong> in RTT/∞.</p>
+<p>It is not a dimension.<br />
+It is not a substrate primitive.<br />
+It is not a regime.</p>
+<p>It is the <strong>final alignment target</strong> for structure traveling through:</p>
+<ul>
+<li>vacuum  </li>
+<li>substrate  </li>
+<li>dimensional rails  </li>
+<li>infinite regimes  </li>
+</ul>
+<p>In RTT/∞:</p>
+<blockquote>
+<p><strong>A prime‑state is the point where structure stops drifting.</strong></p>
+</blockquote>
+<hr />
+<h2 id="2-why-rtt-needs-primestates"><strong>2. Why RTT/∞ Needs Prime‑States</strong><a class="toc-permalink" href="#2-why-rtt-needs-primestates" title="Permanent link to this heading">&para;</a></h2>
+<p>RTT/∞ performs transformations that require a stable endpoint:</p>
+<h3 id="a-infiniteregime-synthesis"><strong>A. Infinite‑Regime Synthesis</strong><a class="toc-permalink" href="#a-infiniteregime-synthesis" title="Permanent link to this heading">&para;</a></h3>
+<p>Infinite regimes cannot blend unless they anchor to a prime‑state.</p>
+<h3 id="b-dimensional-lift"><strong>B. Dimensional Lift</strong><a class="toc-permalink" href="#b-dimensional-lift" title="Permanent link to this heading">&para;</a></h3>
+<p>Structure lifted through dimensional rails must align to a prime‑state to avoid collapse.</p>
+<h3 id="c-substratetensor-inversion"><strong>C. Substrate‑Tensor Inversion</strong><a class="toc-permalink" href="#c-substratetensor-inversion" title="Permanent link to this heading">&para;</a></h3>
+<p>Inverted tensors must be stabilized in a prime‑state before reconstitution.</p>
+<h3 id="d-vacuum-reconstruction"><strong>D. Vacuum Reconstruction</strong><a class="toc-permalink" href="#d-vacuum-reconstruction" title="Permanent link to this heading">&para;</a></h3>
+<p>Structure rebuilt from vacuum must anchor to a prime‑state to regain coherence.</p>
+<p>Prime‑states are the <strong>only non‑drifting objects</strong> in RTT/∞.</p>
+<hr />
+<h2 id="3-the-three-primestate-classes-rtt"><strong>3. The Three Prime‑State Classes (RTT/∞)</strong><a class="toc-permalink" href="#3-the-three-primestate-classes-rtt" title="Permanent link to this heading">&para;</a></h2>
+<p>RTT/∞ defines <strong>three</strong> canonical prime‑state classes:</p>
+<h3 id="1-primeform"><strong>1. Prime‑Form</strong><a class="toc-permalink" href="#1-primeform" title="Permanent link to this heading">&para;</a></h3>
+<p>The irreducible geometric attractor.<br />
+Stabilizes structure after geometric drift.</p>
+<h3 id="2-primeflow"><strong>2. Prime‑Flow</strong><a class="toc-permalink" href="#2-primeflow" title="Permanent link to this heading">&para;</a></h3>
+<p>The irreducible operational attractor.<br />
+Stabilizes structure after operational drift.</p>
+<h3 id="3-primemeaning"><strong>3. Prime‑Meaning</strong><a class="toc-permalink" href="#3-primemeaning" title="Permanent link to this heading">&para;</a></h3>
+<p>The irreducible conceptual attractor.<br />
+Stabilizes structure after interpretive drift.</p>
+<p>These correspond directly to the drift‑tensor layers you use in IPD‑12 — but at infinite‑regime depth.</p>
+<hr />
+<h2 id="4-how-primestates-work-rtt"><strong>4. How Prime‑States Work (RTT/∞)</strong><a class="toc-permalink" href="#4-how-primestates-work-rtt" title="Permanent link to this heading">&para;</a></h2>
+<p>Prime‑states operate in a <strong>four‑step alignment cycle</strong>:</p>
+<h3 id="step-1-detect-drift"><strong>Step 1 — Detect Drift</strong><a class="toc-permalink" href="#step-1-detect-drift" title="Permanent link to this heading">&para;</a></h3>
+<p>RTT/∞ receives drift‑tensor output from IPD‑12.</p>
+<h3 id="step-2-lift-structure"><strong>Step 2 — Lift Structure</strong><a class="toc-permalink" href="#step-2-lift-structure" title="Permanent link to this heading">&para;</a></h3>
+<p>RTT/∞ uses dimensional rails to lift structure into dimensional space.</p>
+<h3 id="step-3-anchor-to-primestate"><strong>Step 3 — Anchor to Prime‑State</strong><a class="toc-permalink" href="#step-3-anchor-to-primestate" title="Permanent link to this heading">&para;</a></h3>
+<p>Structure aligns to the appropriate prime‑state:</p>
+<ul>
+<li>geometric drift → prime‑form  </li>
+<li>operational drift → prime‑flow  </li>
+<li>conceptual drift → prime‑meaning  </li>
+</ul>
+<h3 id="step-4-infiniteregime-synthesis"><strong>Step 4 — Infinite‑Regime Synthesis</strong><a class="toc-permalink" href="#step-4-infiniteregime-synthesis" title="Permanent link to this heading">&para;</a></h3>
+<p>Aligned structure is blended into infinite‑regime composites.</p>
+<p>This cycle is the backbone of RTT/∞ synthesis.</p>
+<hr />
+<h2 id="5-primestate-example-rtt"><strong>5. Prime‑State Example (RTT/∞)</strong><a class="toc-permalink" href="#5-primestate-example-rtt" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="input-from-ipd12">Input (from IPD‑12):<a class="toc-permalink" href="#input-from-ipd12" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>drift_tensor(L1–L5)
+</code></pre></div>
+
+<h3 id="rtt-transformation">RTT/∞ Transformation:<a class="toc-permalink" href="#rtt-transformation" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>vacuum()
+→ reconstitute()
+→ substrate_tensor
+→ dimensional_rail()
+→ prime_state_align()
+→ infinite_regime_synthesis
+</code></pre></div>
+
+<h3 id="output">Output:<a class="toc-permalink" href="#output" title="Permanent link to this heading">&para;</a></h3>
+<p>A <strong>prime‑state‑aligned substrate‑tensor</strong>, ready for infinite‑regime blending.</p>
+<hr />
+<h2 id="6-why-ipd12-cannot-access-primestates"><strong>6. Why IPD‑12 Cannot Access Prime‑States</strong><a class="toc-permalink" href="#6-why-ipd12-cannot-access-primestates" title="Permanent link to this heading">&para;</a></h2>
+<p>IPD‑12 lacks:</p>
+<ul>
+<li>substrate grammar  </li>
+<li>dimensional rails  </li>
+<li>vacuum logic  </li>
+<li>prime‑state profiles  </li>
+<li>infinite‑regime synthesis  </li>
+</ul>
+<p>IPD‑12 can <strong>detect drift</strong>,<br />
+but only RTT/∞ can <strong>resolve drift at infinite‑regime depth</strong>.</p>
+<hr />
+<h2 id="7-summary"><strong>7. Summary</strong><a class="toc-permalink" href="#7-summary" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="primestates-are">Prime‑states are:<a class="toc-permalink" href="#primestates-are" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>irreducible  </li>
+<li>non‑drifting  </li>
+<li>infinite‑regime stable  </li>
+<li>substrate‑anchored  </li>
+<li>dimensional‑aligned  </li>
+</ul>
+<h3 id="rtt-uses-them-to">RTT/∞ uses them to:<a class="toc-permalink" href="#rtt-uses-them-to" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>stabilize inverted tensors  </li>
+<li>anchor dimensional lifts  </li>
+<li>rebuild structure from vacuum  </li>
+<li>synthesize infinite regimes  </li>
+</ul>
+<h3 id="relationship">Relationship:<a class="toc-permalink" href="#relationship" title="Permanent link to this heading">&para;</a></h3>
+<blockquote>
+<p><strong>IPD‑12 detects drift.<br />
+RTT/∞ aligns drift to prime‑states.<br />
+Then synthesizes infinite‑regime structure.</strong></p>
+</blockquote>
+<p>Prime‑states are the <strong>final alignment layer</strong> of RTT/∞.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/prompts/engines/rtt_infinity/prime-state_explainer.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/prompts/engines/rtt_infinity/prime-state_explainer.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

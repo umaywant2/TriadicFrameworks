@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Vcg Client | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/projects/VCG/src/gen1/vcg/clients/cpp/vcg_client/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Vcg Client" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/projects/VCG/src/gen1/vcg/clients/cpp/vcg_client/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Vcg Client" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/projects/VCG/src/gen1/vcg/clients/cpp/vcg_client.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Vcg Client",
+    "headline": "Vcg Client",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/projects/VCG/src/gen1/vcg/clients/cpp/vcg_client/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#public-interface">Public interface</a><ul>
+<li><a href="#header-file">Header file</a></li>
+<li><a href="#implementation">Implementation</a></li>
+</ul>
+</li>
+<li><a href="#build-notes">Build notes</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/projects/" itemprop="item">
+                <span itemprop="name">Projects</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/projects/VCG/" itemprop="item">
+                <span itemprop="name">Vcg</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/projects/VCG/src/" itemprop="item">
+                <span itemprop="name">Src</span>
+              </a>
+            <meta itemprop="position" content="4" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/projects/VCG/src/gen1/" itemprop="item">
+                <span itemprop="name">Gen1</span>
+              </a>
+            <meta itemprop="position" content="5" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/projects/VCG/src/gen1/vcg/" itemprop="item">
+                <span itemprop="name">Vcg</span>
+              </a>
+            <meta itemprop="position" content="6" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/projects/VCG/src/gen1/vcg/clients/" itemprop="item">
+                <span itemprop="name">Clients</span>
+              </a>
+            <meta itemprop="position" content="7" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/projects/VCG/src/gen1/vcg/clients/cpp/" itemprop="item">
+                <span itemprop="name">Cpp</span>
+              </a>
+            <meta itemprop="position" content="8" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Vcg Client</span>
+            <meta itemprop="position" content="9" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Vcg Client</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="vcg_client-c-helper-for-gen1-workloads">vcg_client – C++ helper for Gen1 workloads<a class="toc-permalink" href="#vcg_client-c-helper-for-gen1-workloads" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="purpose">Purpose<a class="toc-permalink" href="#purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>Provide a minimal C++ API for communicating with the VCG orchestrator and Resonant Time Daemon using Unix domain datagram sockets. Matches the Python/Rust client semantics.</p>
+<hr />
+<h2 id="public-interface">Public interface<a class="toc-permalink" href="#public-interface" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><strong>await_window(sock_path):</strong> Block until a WINDOW_TICK arrives for this dimension.</li>
+<li><strong>send_route(from_d, to_d, payload):</strong> Route a payload to another dimension via the orchestrator.</li>
+<li><strong>recv_route(dimension_id):</strong> Receive next routed payload for this dimension.</li>
+</ul>
+<hr />
+<h3 id="header-file">Header file<a class="toc-permalink" href="#header-file" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="c1">// include/vcg_client.hpp</span>
+<span class="cp">#pragma once</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;optional&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;nlohmann/json.hpp&gt;</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">vcg</span><span class="w"> </span><span class="p">{</span>
+
+<span class="k">struct</span><span class="w"> </span><span class="nc">Result</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">bool</span><span class="w"> </span><span class="n">ok</span><span class="p">;</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">error</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">Result</span><span class="w"> </span><span class="nf">await_window</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">sock_path</span><span class="p">);</span>
+
+<span class="n">Result</span><span class="w"> </span><span class="n">send_route</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">from_d</span><span class="p">,</span>
+<span class="w">                  </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">to_d</span><span class="p">,</span>
+<span class="w">                  </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">payload</span><span class="p">,</span>
+<span class="w">                  </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">route_sock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;/run/vcg/vcg_route.sock&quot;</span><span class="p">);</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">nlohmann</span><span class="o">::</span><span class="n">json</span><span class="o">&gt;</span><span class="w"> </span><span class="n">recv_route</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">dimension_id</span><span class="p">);</span>
+
+<span class="p">}</span><span class="w"> </span><span class="c1">// namespace vcg</span>
+</code></pre></div>
+
+<h3 id="implementation">Implementation<a class="toc-permalink" href="#implementation" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="c1">// src/vcg_client.cpp</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;vcg_client.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/socket.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/un.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;unistd.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">vcg</span><span class="w"> </span><span class="p">{</span>
+
+<span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">connect_dgram</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">path</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">err</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">fd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">::</span><span class="n">socket</span><span class="p">(</span><span class="n">AF_UNIX</span><span class="p">,</span><span class="w"> </span><span class="n">SOCK_DGRAM</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fd</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;socket() failed&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="n">sockaddr_un</span><span class="w"> </span><span class="n">addr</span><span class="p">{};</span>
+<span class="w">  </span><span class="n">addr</span><span class="p">.</span><span class="n">sun_family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AF_UNIX</span><span class="p">;</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">snprintf</span><span class="p">(</span><span class="n">addr</span><span class="p">.</span><span class="n">sun_path</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">addr</span><span class="p">.</span><span class="n">sun_path</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;%s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">path</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">::</span><span class="n">connect</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="n">sockaddr</span><span class="o">*&gt;</span><span class="p">(</span><span class="o">&amp;</span><span class="n">addr</span><span class="p">),</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">addr</span><span class="p">))</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;connect() failed to &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">path</span><span class="p">;</span><span class="w"> </span><span class="o">::</span><span class="n">close</span><span class="p">(</span><span class="n">fd</span><span class="p">);</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">fd</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">Result</span><span class="w"> </span><span class="nf">await_window</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">sock_path</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">err</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">fd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">connect_dgram</span><span class="p">(</span><span class="n">sock_path</span><span class="p">,</span><span class="w"> </span><span class="n">err</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fd</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="n">err</span><span class="p">};</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="n">buf</span><span class="p">(</span><span class="mi">65535</span><span class="p">);</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(;;)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">ssize_t</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">::</span><span class="n">recv</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="n">buf</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="n">buf</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">continue</span><span class="p">;</span>
+<span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">auto</span><span class="w"> </span><span class="n">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nlohmann</span><span class="o">::</span><span class="n">json</span><span class="o">::</span><span class="n">parse</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="n">buf</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="n">n</span><span class="p">));</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">msg</span><span class="p">.</span><span class="n">contains</span><span class="p">(</span><span class="s">&quot;type&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">msg</span><span class="p">[</span><span class="s">&quot;type&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;WINDOW_TICK&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">::</span><span class="n">close</span><span class="p">(</span><span class="n">fd</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">};</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(...)</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">Result</span><span class="w"> </span><span class="nf">send_route</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">from_d</span><span class="p">,</span>
+<span class="w">                  </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">to_d</span><span class="p">,</span>
+<span class="w">                  </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">payload</span><span class="p">,</span>
+<span class="w">                  </span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">route_sock</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">err</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">fd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">connect_dgram</span><span class="p">(</span><span class="n">route_sock</span><span class="p">,</span><span class="w"> </span><span class="n">err</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fd</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="n">err</span><span class="p">};</span>
+<span class="w">  </span><span class="n">nlohmann</span><span class="o">::</span><span class="n">json</span><span class="w"> </span><span class="n">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">{</span><span class="s">&quot;type&quot;</span><span class="p">,</span><span class="s">&quot;VCG_ROUTE&quot;</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="s">&quot;from_d&quot;</span><span class="p">,</span><span class="n">from_d</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="s">&quot;to_d&quot;</span><span class="p">,</span><span class="n">to_d</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="s">&quot;payload&quot;</span><span class="p">,</span><span class="n">payload</span><span class="p">}</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="w">  </span><span class="k">auto</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">msg</span><span class="p">.</span><span class="n">dump</span><span class="p">();</span>
+<span class="w">  </span><span class="o">::</span><span class="n">send</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">  </span><span class="o">::</span><span class="n">close</span><span class="p">(</span><span class="n">fd</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">};</span>
+<span class="p">}</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">optional</span><span class="o">&lt;</span><span class="n">nlohmann</span><span class="o">::</span><span class="n">json</span><span class="o">&gt;</span><span class="w"> </span><span class="n">recv_route</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">dimension_id</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">sock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;/run/vcg/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">{</span><span class="n">dimension_id</span><span class="p">};</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">sock</span><span class="p">)</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">tolower</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+<span class="w">  </span><span class="n">sock</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="s">&quot;.sock&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">err</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">fd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">connect_dgram</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span><span class="w"> </span><span class="n">err</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fd</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">nullopt</span><span class="p">;</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="n">buf</span><span class="p">(</span><span class="mi">65535</span><span class="p">);</span>
+<span class="w">  </span><span class="kt">ssize_t</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">::</span><span class="n">recv</span><span class="p">(</span><span class="n">fd</span><span class="p">,</span><span class="w"> </span><span class="n">buf</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="n">buf</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">  </span><span class="o">::</span><span class="n">close</span><span class="p">(</span><span class="n">fd</span><span class="p">);</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">nullopt</span><span class="p">;</span>
+<span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">msg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nlohmann</span><span class="o">::</span><span class="n">json</span><span class="o">::</span><span class="n">parse</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">(</span><span class="n">buf</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="w"> </span><span class="n">n</span><span class="p">));</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">msg</span><span class="p">.</span><span class="n">contains</span><span class="p">(</span><span class="s">&quot;type&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">msg</span><span class="p">[</span><span class="s">&quot;type&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;VCG_ROUTE&quot;</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">msg</span><span class="p">.</span><span class="n">contains</span><span class="p">(</span><span class="s">&quot;payload&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="n">nlohmann</span><span class="o">::</span><span class="n">json</span><span class="o">::</span><span class="n">parse</span><span class="p">(</span><span class="n">msg</span><span class="p">[</span><span class="s">&quot;payload&quot;</span><span class="p">].</span><span class="n">get</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(...)</span><span class="w"> </span><span class="p">{}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">nullopt</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">}</span><span class="w"> </span><span class="c1">// namespace vcg</span>
+</code></pre></div>
+
+<h2 id="build-notes">Build notes<a class="toc-permalink" href="#build-notes" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><strong>Deps:</strong> nlohmann/json (single‑header), glibc, Linux UDS.</li>
+<li><strong>Compile:</strong> g++ -O2 -std=c++20 -Iinclude src/vcg_client.cpp -o libvcg_client.a (or build as a static lib).</li>
+<li><strong>Link:</strong> Add -lrt if your distro requires it for CLOCK_MONOTONIC_RAW usage elsewhere.</li>
+</ul>
+<hr />
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/projects/VCG/src/gen1/vcg/clients/cpp/vcg_client.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/projects/VCG/src/gen1/vcg/clients/cpp/vcg_client.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

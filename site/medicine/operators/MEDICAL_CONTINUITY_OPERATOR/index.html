@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Medical Continuity Operator | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/medicine/operators/MEDICAL_CONTINUITY_OPERATOR/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Medical Continuity Operator" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/medicine/operators/MEDICAL_CONTINUITY_OPERATOR/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Medical Continuity Operator" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/medicine/operators/MEDICAL_CONTINUITY_OPERATOR.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Medical Continuity Operator",
+    "headline": "Medical Continuity Operator",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/medicine/operators/MEDICAL_CONTINUITY_OPERATOR/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#rtt-operator-medicine-module">RTT Operator — Medicine Module</a></li>
+<li><a href="#structural-continuity-across-medical-regimes">Structural Continuity Across Medical Regimes</a></li>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#what-this-operator-detects">What This Operator Detects</a><ul>
+<li><a href="#1-structural-continuity">1. Structural Continuity</a></li>
+<li><a href="#2-regimeinvariant-medical-principles">2. Regime‑Invariant Medical Principles</a></li>
+<li><a href="#3-crossdomain-alignment">3. Cross‑Domain Alignment</a></li>
+</ul>
+</li>
+<li><a href="#inputs">Inputs</a></li>
+<li><a href="#outputs">Outputs</a><ul>
+<li><a href="#1-continuity-kernel">1. Continuity Kernel</a></li>
+<li><a href="#2-continuity-map">2. Continuity Map</a></li>
+<li><a href="#3-continuity-score">3. Continuity Score</a></li>
+<li><a href="#4-continuity-flags">4. Continuity Flags</a></li>
+</ul>
+</li>
+<li><a href="#continuity-kernel-extraction-algorithm">Continuity Kernel Extraction (Algorithm)</a></li>
+<li><a href="#continuity-kernel-example-generic">Continuity Kernel Example (Generic)</a></li>
+<li><a href="#regimespecific-variations-handled-by-operator">Regime‑Specific Variations (Handled by Operator)</a><ul>
+<li><a href="#cleveland-clinic-us">Cleveland Clinic (US)</a></li>
+<li><a href="#ping-an-china">Ping An (China)</a></li>
+<li><a href="#nhsuk-uk">NHS.uk (UK)</a></li>
+</ul>
+</li>
+<li><a href="#continuity-flags">Continuity Flags</a></li>
+<li><a href="#continuity-score-01">Continuity Score (0–1)</a></li>
+<li><a href="#why-this-operator-matters">Why This Operator Matters</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/medicine/" itemprop="item">
+                <span itemprop="name">Medicine</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/medicine/operators/" itemprop="item">
+                <span itemprop="name">Operators</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Medical Continuity Operator</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Medical Continuity Operator</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="medical_continuity_operator"><strong>MEDICAL_CONTINUITY_OPERATOR</strong><a class="toc-permalink" href="#medical_continuity_operator" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="rtt-operator-medicine-module"><em>RTT Operator — Medicine Module</em><a class="toc-permalink" href="#rtt-operator-medicine-module" title="Permanent link to this heading">&para;</a></h3>
+<h3 id="structural-continuity-across-medical-regimes"><em>Structural Continuity Across Medical Regimes</em><a class="toc-permalink" href="#structural-continuity-across-medical-regimes" title="Permanent link to this heading">&para;</a></h3>
+<hr />
+<h2 id="purpose"><strong>Purpose</strong><a class="toc-permalink" href="#purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>The <strong>MEDICAL_CONTINUITY_OPERATOR</strong> identifies the <em>persistent structural elements</em> that remain stable across:</p>
+<ul>
+<li>time  </li>
+<li>templates  </li>
+<li>languages  </li>
+<li>medical regimes  </li>
+<li>cultural framing  </li>
+<li>substrate noise  </li>
+<li>drift events  </li>
+</ul>
+<p>This operator extracts the <strong>continuity kernel</strong> — the medically stable backbone that survives drift across Cleveland Clinic (US), Ping An (China), and NHS.uk (UK).</p>
+<hr />
+<h2 id="what-this-operator-detects"><strong>What This Operator Detects</strong><a class="toc-permalink" href="#what-this-operator-detects" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="1-structural-continuity"><strong>1. Structural Continuity</strong><a class="toc-permalink" href="#1-structural-continuity" title="Permanent link to this heading">&para;</a></h3>
+<p>Elements that remain stable across snapshots and regimes:</p>
+<ul>
+<li>symptom clusters  </li>
+<li>risk factors  </li>
+<li>red‑flag indicators  </li>
+<li>time‑course patterns  </li>
+<li>escalation thresholds  </li>
+<li>diagnostic anchors  </li>
+<li>treatment classes (not brands)  </li>
+</ul>
+<h3 id="2-regimeinvariant-medical-principles"><strong>2. Regime‑Invariant Medical Principles</strong><a class="toc-permalink" href="#2-regimeinvariant-medical-principles" title="Permanent link to this heading">&para;</a></h3>
+<p>These are the “physics” of medicine:</p>
+<ul>
+<li>airway → breathing → circulation  </li>
+<li>infection → inflammation → resolution  </li>
+<li>acute vs chronic patterns  </li>
+<li>dose → response relationships  </li>
+<li>risk → mitigation pathways  </li>
+</ul>
+<h3 id="3-crossdomain-alignment"><strong>3. Cross‑Domain Alignment</strong><a class="toc-permalink" href="#3-crossdomain-alignment" title="Permanent link to this heading">&para;</a></h3>
+<p>The operator aligns continuity across:</p>
+<table>
+<thead>
+<tr>
+<th>Regime</th>
+<th>Contribution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cleveland Clinic (US)</strong></td>
+<td>Clinical stability, conservative framing</td>
+</tr>
+<tr>
+<td><strong>Ping An (China)</strong></td>
+<td>High‑drift, multilingual, AI‑augmented patterns</td>
+</tr>
+<tr>
+<td><strong>NHS.uk (UK)</strong></td>
+<td>Public‑health stability, clarity, low drift</td>
+</tr>
+</tbody>
+</table>
+<p>The continuity kernel is the <strong>intersection</strong> of these three.</p>
+<hr />
+<h2 id="inputs"><strong>Inputs</strong><a class="toc-permalink" href="#inputs" title="Permanent link to this heading">&para;</a></h2>
+<p>The operator accepts:</p>
+<ul>
+<li>multi‑snapshot medical pages  </li>
+<li>multi‑regime medical sources  </li>
+<li>multilingual medical content  </li>
+<li>AI‑augmented triage outputs  </li>
+<li>patient‑facing symptom descriptions  </li>
+</ul>
+<hr />
+<h2 id="outputs"><strong>Outputs</strong><a class="toc-permalink" href="#outputs" title="Permanent link to this heading">&para;</a></h2>
+<p>The operator produces:</p>
+<h3 id="1-continuity-kernel"><strong>1. Continuity Kernel</strong><a class="toc-permalink" href="#1-continuity-kernel" title="Permanent link to this heading">&para;</a></h3>
+<p>A distilled set of medically stable elements that persist across:</p>
+<ul>
+<li>time  </li>
+<li>regimes  </li>
+<li>templates  </li>
+<li>languages  </li>
+</ul>
+<h3 id="2-continuity-map"><strong>2. Continuity Map</strong><a class="toc-permalink" href="#2-continuity-map" title="Permanent link to this heading">&para;</a></h3>
+<p>A structural map showing:</p>
+<ul>
+<li>stable elements  </li>
+<li>semi‑stable elements  </li>
+<li>drift‑sensitive elements  </li>
+<li>regime‑specific elements  </li>
+</ul>
+<h3 id="3-continuity-score"><strong>3. Continuity Score</strong><a class="toc-permalink" href="#3-continuity-score" title="Permanent link to this heading">&para;</a></h3>
+<p>A 0–1 score indicating how stable the medical information is across regimes.</p>
+<h3 id="4-continuity-flags"><strong>4. Continuity Flags</strong><a class="toc-permalink" href="#4-continuity-flags" title="Permanent link to this heading">&para;</a></h3>
+<p>Flags for:</p>
+<ul>
+<li>missing elements  </li>
+<li>contradictory elements  </li>
+<li>culturally‑specific elements  </li>
+<li>translation‑sensitive elements  </li>
+<li>AI‑generated instability  </li>
+</ul>
+<hr />
+<h2 id="continuity-kernel-extraction-algorithm"><strong>Continuity Kernel Extraction (Algorithm)</strong><a class="toc-permalink" href="#continuity-kernel-extraction-algorithm" title="Permanent link to this heading">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Normalize substrate</strong><br />
+   Remove ads, SEO noise, template artifacts, and translation drift.</p>
+</li>
+<li>
+<p><strong>Extract structural elements</strong><br />
+   Identify symptom clusters, risk factors, red flags, and treatment classes.</p>
+</li>
+<li>
+<p><strong>Cross‑regime alignment</strong><br />
+   Align US → China → UK medical structures.</p>
+</li>
+<li>
+<p><strong>Drift filtering</strong><br />
+   Remove elements that appear only in high‑drift regimes (e.g., Ping An).</p>
+</li>
+<li>
+<p><strong>Continuity intersection</strong><br />
+   Compute the stable intersection across all three regimes.</p>
+</li>
+<li>
+<p><strong>Continuity scoring</strong><br />
+   Assign stability weights based on persistence and cross‑regime agreement.</p>
+</li>
+</ol>
+<hr />
+<h2 id="continuity-kernel-example-generic"><strong>Continuity Kernel Example (Generic)</strong><a class="toc-permalink" href="#continuity-kernel-example-generic" title="Permanent link to this heading">&para;</a></h2>
+<p>For a condition like <em>chest pain</em>, the continuity kernel might be:</p>
+<ul>
+<li><strong>Stable symptoms:</strong> pressure, tightness, radiating pain  </li>
+<li><strong>Stable risks:</strong> age, hypertension, diabetes, smoking  </li>
+<li><strong>Stable red flags:</strong> shortness of breath, sweating, fainting  </li>
+<li><strong>Stable actions:</strong> seek emergency care if red flags present  </li>
+<li><strong>Stable differentials:</strong> cardiac, pulmonary, musculoskeletal  </li>
+</ul>
+<p>These persist across:</p>
+<ul>
+<li>Cleveland Clinic  </li>
+<li>Ping An  </li>
+<li>NHS.uk  </li>
+</ul>
+<p>Even if the <em>presentation</em>, <em>language</em>, or <em>template</em> differs.</p>
+<hr />
+<h2 id="regimespecific-variations-handled-by-operator"><strong>Regime‑Specific Variations (Handled by Operator)</strong><a class="toc-permalink" href="#regimespecific-variations-handled-by-operator" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="cleveland-clinic-us"><strong>Cleveland Clinic (US)</strong><a class="toc-permalink" href="#cleveland-clinic-us" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Conservative framing  </li>
+<li>Strong clinical anchors  </li>
+<li>Low drift  </li>
+</ul>
+<h3 id="ping-an-china"><strong>Ping An (China)</strong><a class="toc-permalink" href="#ping-an-china" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>AI triage suggestions  </li>
+<li>Higher drift  </li>
+<li>Multilingual substrate  </li>
+<li>Commercial overlays  </li>
+</ul>
+<h3 id="nhsuk-uk"><strong>NHS.uk (UK)</strong><a class="toc-permalink" href="#nhsuk-uk" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Public‑health framing  </li>
+<li>Very low drift  </li>
+<li>Clear escalation pathways  </li>
+</ul>
+<p>The operator isolates <strong>what is stable</strong> and <strong>what is regime‑specific</strong>.</p>
+<hr />
+<h2 id="continuity-flags"><strong>Continuity Flags</strong><a class="toc-permalink" href="#continuity-flags" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>
+<p><strong>⚠️ Drift‑Sensitive Element</strong><br />
+  Appears only in high‑drift regimes (e.g., Ping An template shifts).</p>
+</li>
+<li>
+<p><strong>⚠️ Translation‑Sensitive Element</strong><br />
+  Chinese → English translation introduces semantic drift.</p>
+</li>
+<li>
+<p><strong>⚠️ Regime‑Specific Element</strong><br />
+  Only appears in US or UK framing.</p>
+</li>
+<li>
+<p><strong>⚠️ AI‑Augmented Instability</strong><br />
+  Ping An’s AI triage introduces non‑stable suggestions.</p>
+</li>
+</ul>
+<hr />
+<h2 id="continuity-score-01"><strong>Continuity Score (0–1)</strong><a class="toc-permalink" href="#continuity-score-01" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0.9–1.0</strong></td>
+<td>Highly stable across all regimes</td>
+</tr>
+<tr>
+<td><strong>0.7–0.89</strong></td>
+<td>Mostly stable, minor regime drift</td>
+</tr>
+<tr>
+<td><strong>0.4–0.69</strong></td>
+<td>Moderate drift, regime differences</td>
+</tr>
+<tr>
+<td><strong>0.0–0.39</strong></td>
+<td>High drift, low continuity</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="why-this-operator-matters"><strong>Why This Operator Matters</strong><a class="toc-permalink" href="#why-this-operator-matters" title="Permanent link to this heading">&para;</a></h2>
+<p>Patients often see:</p>
+<ul>
+<li>conflicting advice  </li>
+<li>template‑driven noise  </li>
+<li>culturally‑specific framing  </li>
+<li>AI‑generated suggestions  </li>
+<li>translation drift  </li>
+</ul>
+<p>The <strong>MEDICAL_CONTINUITY_OPERATOR</strong> extracts the <strong>stable medical truth</strong> beneath all that.</p>
+<p>This is the operator that makes the entire module <em>clinically meaningful</em>.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/medicine/operators/MEDICAL_CONTINUITY_OPERATOR.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/medicine/operators/MEDICAL_CONTINUITY_OPERATOR.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

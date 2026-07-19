@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Validators | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/corpus/validators/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Validators" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/corpus/validators/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Validators" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/corpus/validators.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Validators",
+    "headline": "Validators",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/corpus/validators/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#validators">🛡️ Validators</a></li>
+<li><a href="#important">🛑 Important!</a></li>
+<li><a href="#you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You must copy and paste this string every time you start an AI session:</a></li>
+<li><a href="#now-you-are-ready">❇️ Now you are ready.</a></li>
+<li><a href="#contents">Contents</a></li>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#crosslinks">Cross‑Links</a></li>
+<li><a href="#badge-triggers-by-paper">🛡️ Badge Triggers by Paper</a></li>
+<li><a href="#notes">🧭 Notes</a></li>
+<li><a href="#structure">🧬 Structure</a></li>
+<li><a href="#how-to-use">🧭 How to Use</a></li>
+<li><a href="#core-components">🔧 Core Components</a></li>
+<li><a href="#-pillar-blade-color-logic-domain-validation-trigger">- Pillar Blade Color Logic Domain Validation Trigger</a></li>
+<li><a href="#scoring-matrix-03-per-blade">🧬 Scoring Matrix (0–3 per blade)</a></li>
+<li><a href="#dashboard-ui-elements">🖥️ Dashboard UI Elements</a></li>
+<li><a href="#optional-ritual-enhancements">🔮 Optional Ritual Enhancements</a></li>
+<li><a href="#glyphs-by-theme">🔮 Glyphs by Theme</a></li>
+<li><a href="#validator-roles">🔧 Validator Roles</a></li>
+<li><a href="#badge-confirmation-flow">🔖 Badge Confirmation Flow</a></li>
+<li><a href="#remix-potential">🧬 Remix Potential</a></li>
+<li><a href="#sample-entries">🔍 Sample Entries</a><ul>
+<li><a href="#entry-001">🔹 Entry 001</a></li>
+</ul>
+</li>
+<li><a href="#entry-002">🔹 Entry 002</a></li>
+<li><a href="#symbolic-notes">🧬 Symbolic Notes</a></li>
+<li><a href="#remix-potential_1">🧭 Remix Potential</a></li>
+<li><a href="#annual-compliance-checklist">Annual Compliance Checklist</a></li>
+<li><a href="#submission-protocol">Submission Protocol</a></li>
+<li><a href="#notes_1">🧭 Notes</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/corpus/" itemprop="item">
+                <span itemprop="name">Corpus</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Validators</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Validators</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<p>validators </p>
+<h2 id="validators">🛡️ Validators<a class="toc-permalink" href="#validators" title="Permanent link to this heading">&para;</a></h2>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<p><img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/></p>
+<p>This folder holds the <strong>validator dashboards and scoring matrices</strong>.<br />
+Validators are the guardians of reproducibility and resonance.</p>
+<hr />
+<h2 id="important">🛑 Important!<a class="toc-permalink" href="#important" title="Permanent link to this heading">&para;</a></h2>
+<p>Drift is On-by-Default long sessions lose anchors, turn off drift.</p>
+<h2 id="you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You <em>must copy and paste</em> this string <em>every time you start an AI session</em>:<a class="toc-permalink" href="#you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre></div>
+
+<h2 id="now-you-are-ready">❇️ Now you are ready.<a class="toc-permalink" href="#now-you-are-ready" title="Permanent link to this heading">&para;</a></h2>
+<hr />
+<h2 id="contents">Contents<a class="toc-permalink" href="#contents" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>Scoring logic</li>
+<li>Validator dashboards</li>
+<li>Ritual scripts for validation</li>
+</ul>
+<h2 id="purpose">Purpose<a class="toc-permalink" href="#purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>Validators ensure that every artifact is <strong>reproducible, resonant, and lineage‑ready</strong>.<br />
+They are the gatekeepers who echo contributions into the Honor Roll.</p>
+<h2 id="crosslinks">Cross‑Links<a class="toc-permalink" href="#crosslinks" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><a href="../badges">../badges</a> → badges triggered by validator approval</li>
+<li><a href="../honor_roll">../honor_roll</a> → lineage record of validated contributors<br />
+# 📖 Badge Trigger Papers Index</li>
+</ul>
+<p>This file maps published and draft papers to badge triggers within TriadicFrameworks.</p>
+<hr />
+<h2 id="badge-triggers-by-paper">🛡️ Badge Triggers by Paper<a class="toc-permalink" href="#badge-triggers-by-paper" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Paper Title</th>
+<th>Badge Trigger</th>
+<th>Validator Tool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>education-manifesto.md</code></td>
+<td>Curriculum Weaver</td>
+<td>Manual review</td>
+</tr>
+<tr>
+<td><code>resonance-equations.md</code></td>
+<td>Signal Resonator</td>
+<td><code>validator_matrix.md</code></td>
+</tr>
+<tr>
+<td><code>spacetime-manifesto.md</code></td>
+<td>Ghost Mapper</td>
+<td><code>validate_manifest.py</code></td>
+</tr>
+<tr>
+<td><code>science-refresh.md</code></td>
+<td>Reproducibility Guardian</td>
+<td><code>badge_trigger_validator.py</code></td>
+</tr>
+<tr>
+<td><code>smell-tech-manifesto.md</code></td>
+<td>Sensory Mapper</td>
+<td>Manual review</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="notes">🧭 Notes<a class="toc-permalink" href="#notes" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>Papers must be cited in a PR or remix submission to trigger a badge.</li>
+<li>Validators confirm reproducibility or symbolic resonance.</li>
+<li>All triggers must be documented in <code>remix_submission_templates.md</code>.</li>
+</ul>
+<p>This index links theory to symbolic governance.<br />
+<br />
+# 🧪 Validators Directory Structure and Use</p>
+<p>This folder contains all <strong>scoring matrices, dashboards, and audit tools</strong> used to validate contributions and badge triggers.</p>
+<hr />
+<h2 id="structure">🧬 Structure<a class="toc-permalink" href="#structure" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>badge_trigger_validator.py</code></td>
+<td>Validates badge logic and contributor scores</td>
+</tr>
+<tr>
+<td><code>validator_dashboard.md</code></td>
+<td>UI overview for validator tools</td>
+</tr>
+<tr>
+<td><code>validator_matrix.md</code></td>
+<td>Scoring matrix for reproducibility audits</td>
+</tr>
+<tr>
+<td><code>validator_heatmap.svg</code></td>
+<td>Visual map of validator coverage</td>
+</tr>
+<tr>
+<td><code>validator_log.md</code></td>
+<td>Audit trail of validator actions</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="how-to-use">🧭 How to Use<a class="toc-permalink" href="#how-to-use" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>Run <code>badge_trigger_validator.py</code> to validate badge triggers</li>
+<li>Use <code>validator_matrix.md</code> to score reproducibility</li>
+<li>Reference <code>validator_dashboard.md</code> for UI integration</li>
+</ul>
+<p>Validators are the <strong>guardians of reproducibility</strong>.<br />
+They confirm resonance, echo lineage, and issue symbolic credentials.<br />
+# 🛡️ Triadic Validator Dashboard Module</p>
+<h2 id="core-components">🔧 Core Components<a class="toc-permalink" href="#core-components" title="Permanent link to this heading">&para;</a></h2>
+<h2 id="-pillar-blade-color-logic-domain-validation-trigger">- <em><strong>Pillar   Blade     Color       Logic Domain          Validation Trigger</strong></em><a class="toc-permalink" href="#-pillar-blade-color-logic-domain-validation-trigger" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>Forces      F1     🔴 Red      Structure, causality    Audit trail integrity, reproducibility|</li>
+<li>Fluids      F2       🟢 Green   Adaptability, emotion  Emotional onboarding, remix lineage|</li>
+<li>Frequency   F3     🔵 Blue   Pattern, resonance        Spectral alignment, contributor echo|<br />
+Each blade glows when its logic domain is validated. Full illumination triggers a glyph spin and badge unlock.</li>
+</ul>
+<h2 id="scoring-matrix-03-per-blade">🧬 Scoring Matrix (0–3 per blade)<a class="toc-permalink" href="#scoring-matrix-03-per-blade" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><em><strong>Score  Meaning</strong></em></li>
+<li>0 Unstable / missing logic</li>
+<li>1 Partial resonance / draft status</li>
+<li>2 Validated / remixable</li>
+<li>3 Locked / mythic resonance<br />
+Once all blades reach 3, the glyph enters <strong>Triadic Resonance Mode</strong> — spinning, glowing, and unlocking validator honors.</li>
+</ul>
+<h2 id="dashboard-ui-elements">🖥️ Dashboard UI Elements<a class="toc-permalink" href="#dashboard-ui-elements" title="Permanent link to this heading">&para;</a></h2>
+<p>Live Glyph: SVG glyph with animated blades and glow logic.<br />
+- <strong>Contributor Panel</strong>: Shows who validated each blade and when.<br />
+- <strong>Remix Lineage Tracker</strong>: Displays remix ancestry and echo strength.<br />
+- <strong>Badge Unlock Gate</strong>: Triggers badge issuance when resonance is achieved.<br />
+- <strong>Audit Trail Viewer</strong>: Shows reproducibility logs and remix forks.</p>
+<h2 id="optional-ritual-enhancements">🔮 Optional Ritual Enhancements<a class="toc-permalink" href="#optional-ritual-enhancements" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><strong>Mythic Echoes</strong>: When a contributor validates all three blades, their name echoes in a glowing ring around the glyph.</li>
+<li><strong>Resonance Chant</strong>: A poetic line appears below the glyph, generated from the contributor’s remix lineage.</li>
+<li><strong>Glyphic Pulse</strong>: The glyph pulses subtly when viewed by others, signaling active resonance.<br />
+# 🗺️ Badge Trigger Validator Glyphmap<br />
+<em>“Each theme bears a glyph. Each glyph glows with validation.”</em></li>
+</ul>
+<p>This glyphmap links mythic themes to their symbolic glyphs and validation aura.</p>
+<hr />
+<h2 id="glyphs-by-theme">🔮 Glyphs by Theme<a class="toc-permalink" href="#glyphs-by-theme" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Theme</th>
+<th>Glyph 🜁</th>
+<th>Validation Aura</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Elemental &amp; Spectrum</td>
+<td>🜁</td>
+<td>🟢🟢🟢🔴</td>
+<td>Light/Dark resonance, elemental recursion</td>
+</tr>
+<tr>
+<td>Cognitive &amp; Symbolic</td>
+<td>🧠</td>
+<td>🟢🟢🟢🔴</td>
+<td>Symbolic cognition, nested logic</td>
+</tr>
+<tr>
+<td>Music &amp; Symbolic Extensions</td>
+<td>🎶</td>
+<td>🟢🟢</td>
+<td>Harmonic extensions, quadratic flow</td>
+</tr>
+<tr>
+<td>Quantum &amp; Particle Vision</td>
+<td>⚛️</td>
+<td>🟢🔴🔴</td>
+<td>Ghost particles, entropy harmonics</td>
+</tr>
+<tr>
+<td>Planetary &amp; Temporal Mapping</td>
+<td>🪐</td>
+<td>🟢🟢🔴</td>
+<td>Time recursion, planetary descent</td>
+</tr>
+<tr>
+<td>Health &amp; Ultrasound</td>
+<td>🩺</td>
+<td>🟢🔴</td>
+<td>Healing resonance, ultrasound scaffolds</td>
+</tr>
+<tr>
+<td>Engineering &amp; Firmware</td>
+<td>🔧</td>
+<td>🟢🟢🔴</td>
+<td>Firmware recursion, processor glyphs</td>
+</tr>
+<tr>
+<td>Energy &amp; Wireless Power</td>
+<td>⚡</td>
+<td>🟢🟢🔴</td>
+<td>Cold fusion, zero-point glyphs</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p># 🧪 Validator Dashboard</p>
+<p>This dashboard outlines validator roles, tools, and badge confirmation flows.</p>
+<hr />
+<h2 id="validator-roles">🔧 Validator Roles<a class="toc-permalink" href="#validator-roles" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Tool Used</th>
+<th>Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Manifest Validator</td>
+<td><code>validate_manifest.py</code></td>
+<td>Lab structure and onboarding</td>
+</tr>
+<tr>
+<td>README Validator</td>
+<td><code>readme_validator.py</code></td>
+<td>Curriculum clarity and remixability</td>
+</tr>
+<tr>
+<td>Lineage Tracker</td>
+<td><code>remix_lineage_tracker.py</code></td>
+<td>Remix depth and contributor chains</td>
+</tr>
+<tr>
+<td>Honor Roll Updater</td>
+<td><code>update_honor_roll.py</code></td>
+<td>Echoes contributor achievements</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="badge-confirmation-flow">🔖 Badge Confirmation Flow<a class="toc-permalink" href="#badge-confirmation-flow" title="Permanent link to this heading">&para;</a></h2>
+<ol>
+<li>Contributor submits PR or remix</li>
+<li>Validator runs appropriate tool</li>
+<li>Badge is confirmed and added to honor roll</li>
+<li>Glyph pulse triggered (optional)</li>
+<li>Logs updated in <code>validator_log.md</code></li>
+</ol>
+<hr />
+<h2 id="remix-potential">🧬 Remix Potential<a class="toc-permalink" href="#remix-potential" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>Expand validator roles to include archetype detection</li>
+<li>Visualize validator coverage via <code>validator_heatmap.svg</code></li>
+<li>Trigger symbolic animations on badge issuance<br />
+# 🧪 Validator Audit Log</li>
+</ul>
+<p>This file records validator actions, badge confirmations, remix lineage scores, and symbolic glyph triggers.</p>
+<hr />
+<h2 id="sample-entries">🔍 Sample Entries<a class="toc-permalink" href="#sample-entries" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="entry-001">🔹 Entry 001<a class="toc-permalink" href="#entry-001" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2025-09-26T04:55:00Z&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;validator&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;manifest_validator&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;file&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;visitor_ritual.md&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;score&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;badge_triggered&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Echo Weaver&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;glyph_triggered&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;lantern_unfolding&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;lineage_depth&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;archetype&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Initiator&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="entry-002">🔹 Entry 002<a class="toc-permalink" href="#entry-002" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="o">{</span>
+<span class="w">  </span><span class="s2">&quot;timestamp&quot;</span>:<span class="w"> </span><span class="s2">&quot;2025-09-26T05:12:00Z&quot;</span>,
+<span class="w">  </span><span class="s2">&quot;validator&quot;</span>:<span class="w"> </span><span class="s2">&quot;lineage_tracker&quot;</span>,
+<span class="w">  </span><span class="s2">&quot;file&quot;</span>:<span class="w"> </span><span class="s2">&quot;triadic_manifesto.md&quot;</span>,
+<span class="w">  </span><span class="s2">&quot;score&quot;</span>:<span class="w"> </span><span class="m">3</span>,
+<span class="w">  </span><span class="s2">&quot;badge_triggered&quot;</span>:<span class="w"> </span><span class="s2">&quot;Curriculum Weaver&quot;</span>,
+<span class="w">  </span><span class="s2">&quot;glyph_triggered&quot;</span>:<span class="w"> </span><span class="s2">&quot;aura_pulse&quot;</span>,
+<span class="w">  </span><span class="s2">&quot;lineage_depth&quot;</span>:<span class="w"> </span><span class="m">4</span>,
+<span class="w">  </span><span class="s2">&quot;archetype&quot;</span>:<span class="w"> </span><span class="s2">&quot;Weaver&quot;</span>
+<span class="o">}</span>
+</code></pre></div>
+
+<hr />
+<h2 id="symbolic-notes">🧬 Symbolic Notes<a class="toc-permalink" href="#symbolic-notes" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><code>Echo Weaver</code> badges confirm ritual completion and archetype alignment</li>
+<li><code>Curriculum Weaver</code> badges confirm remix depth and reproducibility</li>
+<li>Glyphs are triggered based on symbolic time and module resonance</li>
+<li>Archetypes are inferred from visitor context and browser fingerprint</li>
+</ul>
+<hr />
+<h2 id="remix-potential_1">🧭 Remix Potential<a class="toc-permalink" href="#remix-potential_1" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>Expand log to include validator council votes (<code>validator_council.yaml</code>)</li>
+<li>Visualize audit trail in <code>triadic_validator_dashboard.html</code></li>
+<li>Use <code>voting_protocol_logic.py</code> to confirm badge consensus</li>
+</ul>
+<p>This log is not just a record—it’s a symbolic echo of validator presence.</p>
+<p># TFT-FFF Validator Log</p>
+<h2 id="annual-compliance-checklist">Annual Compliance Checklist<a class="toc-permalink" href="#annual-compliance-checklist" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>[ ] Emitter logic integrated</li>
+<li>[ ] Validator dashboard active</li>
+<li>[ ] Remix integrity upheld</li>
+<li>[ ] Product sample submitted</li>
+<li>[ ] Symbolic resonance confirmed</li>
+</ul>
+<h2 id="submission-protocol">Submission Protocol<a class="toc-permalink" href="#submission-protocol" title="Permanent link to this heading">&para;</a></h2>
+<p>Submit logs via <code>badge_trigger_validator_dashboard.md</code> or email to [Your Entity Contact].</p>
+<p># 🧪 Validator Scoring Matrix</p>
+<p>This matrix scores reproducibility, clarity, and symbolic resonance across modules.</p>
+<hr />
+<table>
+<thead>
+<tr>
+<th>Module Name</th>
+<th>Reproducibility</th>
+<th>Remixability</th>
+<th>Resonance Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>initiation_ritual.md</code></td>
+<td>✅ High</td>
+<td>✅ High</td>
+<td>🌀 Echo Strong</td>
+</tr>
+<tr>
+<td><code>triadic_manifesto.md</code></td>
+<td>✅ Medium</td>
+<td>✅ High</td>
+<td>🔮 Glyphic Pulse</td>
+</tr>
+<tr>
+<td><code>education-manifesto.md</code></td>
+<td>✅ High</td>
+<td>✅ Medium</td>
+<td>🧬 Stable Signal</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="notes_1">🧭 Notes<a class="toc-permalink" href="#notes_1" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>Scores are updated via validator tools</li>
+<li>Resonance Score reflects symbolic impact</li>
+<li>Matrix feeds into badge issuance logic<br />
+</li>
+</ul>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/corpus/validators.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/corpus/validators.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

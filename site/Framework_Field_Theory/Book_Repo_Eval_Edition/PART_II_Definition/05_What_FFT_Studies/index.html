@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>05 What Fft Studies | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_II_Definition/05_What_FFT_Studies/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="05 What Fft Studies" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_II_Definition/05_What_FFT_Studies/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="05 What Fft Studies" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_II_Definition/05_What_FFT_Studies.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "05 What Fft Studies",
+    "headline": "05 What Fft Studies",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_II_Definition/05_What_FFT_Studies/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#the-objects-behaviors-and-dynamics-that-define-the-field">The objects, behaviors, and dynamics that define the field</a></li>
+<li><a href="#the-atomic-units-of-framework-behavior">The atomic units of framework behavior</a></li>
+<li><a href="#the-structural-space-frameworks-inhabit">The structural space frameworks inhabit</a></li>
+<li><a href="#the-zones-of-stability-tension-and-transition">The zones of stability, tension, and transition</a></li>
+<li><a href="#the-ability-of-a-framework-to-hold-paradox-and-remain-stable">The ability of a framework to hold paradox and remain stable</a></li>
+<li><a href="#the-identity-pattern-of-a-framework">The identity pattern of a framework</a></li>
+<li><a href="#how-frameworks-connect-map-and-hybridize">How frameworks connect, map, and hybridize</a></li>
+<li><a href="#how-frameworks-change-over-time">How frameworks change over time</a></li>
+<li><a href="#how-frameworks-behave-dynamically">How frameworks behave dynamically</a></li>
+<li><a href="#the-systemlevel-structure-frameworks-inhabit">The system‑level structure frameworks inhabit</a></li>
+<li><a href="#the-interframework-ecosystem">The inter‑framework ecosystem</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Framework_Field_Theory/" itemprop="item">
+                <span itemprop="name">Framework Field Theory</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Framework_Field_Theory/Book_Repo_Eval_Edition/" itemprop="item">
+                <span itemprop="name">Book Repo Eval Edition</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_II_Definition/" itemprop="item">
+                <span itemprop="name">Part Ii Definition</span>
+              </a>
+            <meta itemprop="position" content="4" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">05 What Fft Studies</span>
+            <meta itemprop="position" content="5" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">05 What Fft Studies</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="chapter-5-what-framework-field-theory-studies"><strong>Chapter 5 — What Framework Field Theory Studies</strong><a class="toc-permalink" href="#chapter-5-what-framework-field-theory-studies" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="the-objects-behaviors-and-dynamics-that-define-the-field"><em>The objects, behaviors, and dynamics that define the field</em><a class="toc-permalink" href="#the-objects-behaviors-and-dynamics-that-define-the-field" title="Permanent link to this heading">&para;</a></h3>
+<p>Framework Field Theory (FFT) studies <strong>frameworks as field objects</strong> — entities with operators, dimensions, regimes, coherence patterns, and evolutionary behavior.<br />
+It is the first discipline to treat frameworks not as tools, but as <strong>systems with structure, motion, and developmental trajectories</strong>.</p>
+<p>This chapter defines the core research objects of FFT.</p>
+<hr />
+<h1 id="1-fft-studies-operators"><strong>1. FFT Studies Operators</strong><a class="toc-permalink" href="#1-fft-studies-operators" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="the-atomic-units-of-framework-behavior"><em>The atomic units of framework behavior</em><a class="toc-permalink" href="#the-atomic-units-of-framework-behavior" title="Permanent link to this heading">&para;</a></h3>
+<p>Operators are the smallest meaningful actions a framework can take.<br />
+FFT identifies <strong>seven universal operator families</strong>:</p>
+<ul>
+<li><strong>B‑Ops</strong> — Boundary  </li>
+<li><strong>L‑Ops</strong> — Lineage  </li>
+<li><strong>R‑Ops</strong> — Relation  </li>
+<li><strong>T‑Ops</strong> — Transition  </li>
+<li><strong>E‑Ops</strong> — Envelope  </li>
+<li><strong>H‑Ops</strong> — Rhythm  </li>
+<li><strong>C‑Ops</strong> — Coherence  </li>
+</ul>
+<p>FFT studies:</p>
+<ul>
+<li>how operators behave  </li>
+<li>how operators combine  </li>
+<li>how operators conflict  </li>
+<li>how operators scale  </li>
+<li>how operators generate higher‑order structure  </li>
+</ul>
+<p>Operators are the <strong>verbs</strong> of frameworks.<br />
+They are the foundation of the field.</p>
+<hr />
+<h1 id="2-fft-studies-dimensions"><strong>2. FFT Studies Dimensions</strong><a class="toc-permalink" href="#2-fft-studies-dimensions" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="the-structural-space-frameworks-inhabit"><em>The structural space frameworks inhabit</em><a class="toc-permalink" href="#the-structural-space-frameworks-inhabit" title="Permanent link to this heading">&para;</a></h3>
+<p>Frameworks operate across dimensional layers:</p>
+<ul>
+<li><strong>0D</strong> identity  </li>
+<li><strong>1D</strong> lineage  </li>
+<li><strong>2D</strong> relation  </li>
+<li><strong>3D</strong> transition  </li>
+<li><strong>4D</strong> envelope  </li>
+<li><strong>5D</strong> rhythm  </li>
+<li><strong>6D</strong> coherence  </li>
+<li><strong>7D–9D</strong> meta‑dimensional behavior  </li>
+</ul>
+<p>FFT studies:</p>
+<ul>
+<li>how frameworks move between dimensions  </li>
+<li>how dimensional collapse occurs  </li>
+<li>how dimensional upgrades occur  </li>
+<li>how dimensional assumptions shape expressive power  </li>
+<li>how dimensional drift destabilizes or strengthens frameworks  </li>
+</ul>
+<p>Dimensions are the <strong>structural substrate</strong> of the field.</p>
+<hr />
+<h1 id="3-fft-studies-regimes"><strong>3. FFT Studies Regimes</strong><a class="toc-permalink" href="#3-fft-studies-regimes" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="the-zones-of-stability-tension-and-transition"><em>The zones of stability, tension, and transition</em><a class="toc-permalink" href="#the-zones-of-stability-tension-and-transition" title="Permanent link to this heading">&para;</a></h3>
+<p>Regimes are the structural zones inside a framework:</p>
+<ul>
+<li>stable regimes  </li>
+<li>transitional regimes  </li>
+<li>paradox regimes  </li>
+<li>interference regimes  </li>
+<li>collapse regimes  </li>
+</ul>
+<p>FFT studies:</p>
+<ul>
+<li>regime boundaries  </li>
+<li>regime collisions  </li>
+<li>regime drift  </li>
+<li>regime‑to‑field transitions  </li>
+<li>regime stabilization through coherence  </li>
+</ul>
+<p>Regimes explain why frameworks behave differently under stress.</p>
+<hr />
+<h1 id="4-fft-studies-coherence"><strong>4. FFT Studies Coherence</strong><a class="toc-permalink" href="#4-fft-studies-coherence" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="the-ability-of-a-framework-to-hold-paradox-and-remain-stable"><em>The ability of a framework to hold paradox and remain stable</em><a class="toc-permalink" href="#the-ability-of-a-framework-to-hold-paradox-and-remain-stable" title="Permanent link to this heading">&para;</a></h3>
+<p>Coherence is the heart of framework resilience.</p>
+<p>FFT studies:</p>
+<ul>
+<li>coherence envelopes  </li>
+<li>coherence engines  </li>
+<li>coherence waves  </li>
+<li>coherence cascades  </li>
+<li>paradox routing  </li>
+<li>coherence‑driven evolution  </li>
+</ul>
+<p>Coherence determines:</p>
+<ul>
+<li>whether a framework collapses  </li>
+<li>whether it can scale  </li>
+<li>whether it can hybridize  </li>
+<li>whether it can be taught  </li>
+<li>whether it can survive translation  </li>
+</ul>
+<p>Coherence is the <strong>stability engine</strong> of the field.</p>
+<hr />
+<h1 id="5-fft-studies-framework-signatures"><strong>5. FFT Studies Framework Signatures</strong><a class="toc-permalink" href="#5-fft-studies-framework-signatures" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="the-identity-pattern-of-a-framework"><em>The identity pattern of a framework</em><a class="toc-permalink" href="#the-identity-pattern-of-a-framework" title="Permanent link to this heading">&para;</a></h3>
+<p>A framework’s signature is the combination of:</p>
+<ul>
+<li>operator pattern  </li>
+<li>dimensional envelope  </li>
+<li>regime structure  </li>
+<li>coherence profile  </li>
+</ul>
+<p>FFT studies:</p>
+<ul>
+<li>how signatures form  </li>
+<li>how signatures predict behavior  </li>
+<li>how signatures evolve  </li>
+<li>how signatures compare across frameworks  </li>
+</ul>
+<p>Signatures are the <strong>identity layer</strong> of the field.</p>
+<hr />
+<h1 id="6-fft-studies-translation"><strong>6. FFT Studies Translation</strong><a class="toc-permalink" href="#6-fft-studies-translation" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="how-frameworks-connect-map-and-hybridize"><em>How frameworks connect, map, and hybridize</em><a class="toc-permalink" href="#how-frameworks-connect-map-and-hybridize" title="Permanent link to this heading">&para;</a></h3>
+<p>Frameworks rarely exist alone.<br />
+They collide, overlap, and interact constantly.</p>
+<p>FFT studies:</p>
+<ul>
+<li>operator‑to‑operator mapping  </li>
+<li>dimensional translation  </li>
+<li>regime alignment  </li>
+<li>coherence matching  </li>
+<li>paradox routing  </li>
+<li>hybrid framework formation  </li>
+</ul>
+<p>Translation is the <strong>bridge layer</strong> of the field.</p>
+<hr />
+<h1 id="7-fft-studies-evolution"><strong>7. FFT Studies Evolution</strong><a class="toc-permalink" href="#7-fft-studies-evolution" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="how-frameworks-change-over-time"><em>How frameworks change over time</em><a class="toc-permalink" href="#how-frameworks-change-over-time" title="Permanent link to this heading">&para;</a></h3>
+<p>Frameworks evolve through:</p>
+<ul>
+<li>operator emergence  </li>
+<li>dimensional drift  </li>
+<li>regime collapse  </li>
+<li>coherence expansion  </li>
+<li>hybridization  </li>
+<li>signature transformation  </li>
+</ul>
+<p>FFT studies:</p>
+<ul>
+<li>evolutionary arcs  </li>
+<li>evolutionary pressures  </li>
+<li>evolutionary attractors  </li>
+<li>evolutionary failure modes  </li>
+</ul>
+<p>Evolution is the <strong>temporal layer</strong> of the field.</p>
+<hr />
+<h1 id="8-fft-studies-motion"><strong>8. FFT Studies Motion</strong><a class="toc-permalink" href="#8-fft-studies-motion" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="how-frameworks-behave-dynamically"><em>How frameworks behave dynamically</em><a class="toc-permalink" href="#how-frameworks-behave-dynamically" title="Permanent link to this heading">&para;</a></h3>
+<p>Frameworks are not static.<br />
+They move.</p>
+<p>FFT studies:</p>
+<ul>
+<li>operator‑motion (O)  </li>
+<li>regime‑motion (Ω)  </li>
+<li>field‑motion (Φ)  </li>
+<li>meta‑motion (Ψ)  </li>
+<li>cross‑layer coupling  </li>
+<li>dimensional continuity  </li>
+</ul>
+<p>Motion reveals:</p>
+<ul>
+<li>tension  </li>
+<li>resonance  </li>
+<li>drift  </li>
+<li>collapse  </li>
+<li>coherence  </li>
+<li>attractor dynamics  </li>
+</ul>
+<p>Motion is the <strong>behavioral layer</strong> of the field.</p>
+<hr />
+<h1 id="9-fft-studies-metaarchitecture"><strong>9. FFT Studies Meta‑Architecture</strong><a class="toc-permalink" href="#9-fft-studies-metaarchitecture" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="the-systemlevel-structure-frameworks-inhabit"><em>The system‑level structure frameworks inhabit</em><a class="toc-permalink" href="#the-systemlevel-structure-frameworks-inhabit" title="Permanent link to this heading">&para;</a></h3>
+<p>Meta‑architecture includes:</p>
+<ul>
+<li>meta‑fields  </li>
+<li>dimensional echo lattices  </li>
+<li>triadic cycle engines  </li>
+<li>cross‑layer modulation channels  </li>
+<li>long‑range coherence patterns  </li>
+</ul>
+<p>FFT studies:</p>
+<ul>
+<li>how frameworks behave at the system level  </li>
+<li>how frameworks influence each other  </li>
+<li>how fields evolve over time  </li>
+</ul>
+<p>Meta‑architecture is the <strong>highest‑order layer</strong> of the field.</p>
+<hr />
+<h1 id="10-fft-studies-the-space-between-frameworks"><strong>10. FFT Studies the Space Between Frameworks</strong><a class="toc-permalink" href="#10-fft-studies-the-space-between-frameworks" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="the-interframework-ecosystem"><em>The inter‑framework ecosystem</em><a class="toc-permalink" href="#the-interframework-ecosystem" title="Permanent link to this heading">&para;</a></h3>
+<p>FFT is not only about individual frameworks.<br />
+It studies the <strong>ecosystem</strong>:</p>
+<ul>
+<li>collisions  </li>
+<li>resonances  </li>
+<li>translations  </li>
+<li>hybridizations  </li>
+<li>dimensional mismatches  </li>
+<li>paradox interactions  </li>
+</ul>
+<p>This is the <strong>field‑level behavior</strong> that no other discipline studies.</p>
+<hr />
+<h1 id="11-fft-studies-frameworks-as-living-systems"><strong>11. FFT Studies Frameworks as Living Systems</strong><a class="toc-permalink" href="#11-fft-studies-frameworks-as-living-systems" title="Permanent link to this heading">&para;</a></h1>
+<p>Ultimately, FFT studies frameworks as:</p>
+<ul>
+<li>dynamic  </li>
+<li>dimensional  </li>
+<li>operator‑driven  </li>
+<li>coherence‑seeking  </li>
+<li>paradox‑negotiating  </li>
+<li>evolving  </li>
+<li>interacting  </li>
+<li>generative  </li>
+</ul>
+<p>Frameworks are not diagrams.<br />
+They are <strong>living conceptual systems</strong>.</p>
+<p>FFT is the field that studies them.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_II_Definition/05_What_FFT_Studies.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_II_Definition/05_What_FFT_Studies.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

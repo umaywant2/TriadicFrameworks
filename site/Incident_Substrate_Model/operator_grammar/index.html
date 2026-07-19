@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Operator Grammar | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/Incident_Substrate_Model/operator_grammar/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Operator Grammar" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/Incident_Substrate_Model/operator_grammar/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Operator Grammar" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/Incident_Substrate_Model/operator_grammar.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Operator Grammar",
+    "headline": "Operator Grammar",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/Incident_Substrate_Model/operator_grammar/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#preamble">Preamble</a><ul>
+<li><a href="#rtt1-grammar-conventions">RTT/1 Grammar Conventions</a></li>
+</ul>
+</li>
+<li><a href="#1-operator-family-ingestion">1. Operator Family: Ingestion</a><ul>
+<li><a href="#incidentingest">incident.ingest</a></li>
+</ul>
+</li>
+<li><a href="#2-operator-family-classification">2. Operator Family: Classification</a><ul>
+<li><a href="#incidentclassify">incident.classify</a></li>
+</ul>
+</li>
+<li><a href="#3-operator-family-surface-mapping">3. Operator Family: Surface Mapping</a><ul>
+<li><a href="#incidentmap_surface_area">incident.map_surface_area</a></li>
+</ul>
+</li>
+<li><a href="#4-operator-family-rectification-planning">4. Operator Family: Rectification Planning</a><ul>
+<li><a href="#incidentderive_rectification_steps">incident.derive_rectification_steps</a></li>
+<li><a href="#incidentgenerate_readonly_plan">incident.generate_readonly_plan</a></li>
+<li><a href="#incidentflag_uncertainty">incident.flag_uncertainty</a></li>
+</ul>
+</li>
+<li><a href="#5-operator-family-approval-flow">5. Operator Family: Approval Flow</a><ul>
+<li><a href="#incidentrequest_operator_approval">incident.request_operator_approval</a></li>
+<li><a href="#incidenthold_for_review">incident.hold_for_review</a></li>
+</ul>
+</li>
+<li><a href="#6-operator-family-bounded-execution">6. Operator Family: Bounded Execution</a><ul>
+<li><a href="#incidentexecuteremove_file">incident.execute.remove_file</a></li>
+<li><a href="#incidentexecuterotate_secret">incident.execute.rotate_secret</a></li>
+<li><a href="#incidentexecutepatch_dependency">incident.execute.patch_dependency</a></li>
+<li><a href="#incidentexecuteflag_for_followup">incident.execute.flag_for_followup</a></li>
+</ul>
+</li>
+<li><a href="#7-state-machine">7. State Machine</a></li>
+<li><a href="#8-type-registry">8. Type Registry</a></li>
+<li><a href="#9-substrate-constants">9. Substrate Constants</a></li>
+<li><a href="#10-grammar-invariants">10. Grammar Invariants</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Incident_Substrate_Model/" itemprop="item">
+                <span itemprop="name">Incident Substrate Model</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Operator Grammar</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Operator Grammar</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="operator-grammar-incident-substrate-model">Operator Grammar — Incident Substrate Model<a class="toc-permalink" href="#operator-grammar-incident-substrate-model" title="Permanent link to this heading">&para;</a></h1>
+<p><strong>Document:</strong> <code>operator_grammar.md</code><br />
+<strong>Path:</strong> <code>/docs/Incident_Substrate_Model/operator_grammar.md</code><br />
+<strong>Revision:</strong> RTT/1 · Canon Edition<br />
+<strong>Status:</strong> Authoritative<br />
+<strong>Issued:</strong> 2026-05-20</p>
+<hr />
+<h2 id="preamble">Preamble<a class="toc-permalink" href="#preamble" title="Permanent link to this heading">&para;</a></h2>
+<p>This document defines the complete operator grammar for the <strong>Incident Substrate Model (ISM)</strong> within the TriadicFrameworks canon. All operators are specified under the <strong>RTT/1</strong> (Recursive Triadic Taxonomy, version 1) protocol.</p>
+<h3 id="rtt1-grammar-conventions">RTT/1 Grammar Conventions<a class="toc-permalink" href="#rtt1-grammar-conventions" title="Permanent link to this heading">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Convention</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>OPERATOR</code></td>
+<td>Fully-qualified operator identifier in dot-namespace notation</td>
+</tr>
+<tr>
+<td><code>IN(...)</code></td>
+<td>Required input fields; typed and ordered</td>
+</tr>
+<tr>
+<td><code>OUT(...)</code></td>
+<td>Emitted output fields; typed and deterministic</td>
+</tr>
+<tr>
+<td><code>PRE[...]</code></td>
+<td>Precondition predicates — must all evaluate <code>true</code> before execution</td>
+</tr>
+<tr>
+<td><code>POST[...]</code></td>
+<td>Postcondition assertions — must all hold immediately after execution</td>
+</tr>
+<tr>
+<td><code>GUARD(...)</code></td>
+<td>Operator-level safety gates; failure aborts the operator</td>
+</tr>
+<tr>
+<td><code>YIELDS →</code></td>
+<td>Terminal state transition emitted on success</td>
+</tr>
+<tr>
+<td><code>FAULTS →</code></td>
+<td>Named fault states; each must be handled by the calling substrate</td>
+</tr>
+<tr>
+<td><code>MODE</code></td>
+<td>Execution mode: <code>READONLY</code>, <code>MUTATING</code>, or <code>APPROVAL_GATED</code></td>
+</tr>
+<tr>
+<td><code>IDEMPOTENT</code></td>
+<td>Operator may be safely retried without side-effect accumulation</td>
+</tr>
+</tbody>
+</table>
+<p>All operators are <strong>deterministic</strong>: identical inputs under identical substrate state must produce identical outputs. Non-determinism is a grammar fault.</p>
+<p>Operators marked <code>READONLY</code> must not alter any persisted substrate state. Operators marked <code>MUTATING</code> must declare all state transitions in <code>POST[...]</code>. Operators marked <code>APPROVAL_GATED</code> must not proceed past their <code>GUARD(...)</code> until an approval token is present in <code>IN(...)</code>.</p>
+<p>Namespace prefix <code>incident.</code> scopes all operators to the ISM substrate. Sub-namespace <code>incident.execute.*</code> is reserved for bounded, reversible-or-acknowledged execution operators only.</p>
+<hr />
+<h2 id="1-operator-family-ingestion">1. Operator Family: Ingestion<a class="toc-permalink" href="#1-operator-family-ingestion" title="Permanent link to this heading">&para;</a></h2>
+<hr />
+<h3 id="incidentingest"><code>incident.ingest</code><a class="toc-permalink" href="#incidentingest" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>MODE:</strong> <code>MUTATING</code> · <strong>IDEMPOTENT:</strong> Yes (keyed on <code>signal_id</code>)</p>
+<p><strong>Purpose:</strong> Accept a raw incident signal from any upstream emitter and normalize it into a canonical ISM <code>IncidentRecord</code>. This is the sole entry point for external signal traffic into the substrate.</p>
+<div class="codehilite"><pre><span></span><code>OPERATOR  incident.ingest
+
+IN(
+  signal_id      : UUID,          -- Emitter-assigned unique signal identifier
+  source         : String,        -- Emitter identity (service name, sensor label, etc.)
+  raw_payload    : Bytes,         -- Unprocessed signal body; encoding declared by content_type
+  content_type   : MIME,          -- e.g. &quot;application/json&quot;, &quot;text/plain&quot;
+  emitted_at     : Timestamp,     -- Emitter-side emission time (UTC ISO-8601)
+  severity_hint  : SeverityHint?  -- Optional emitter-declared severity; may be overridden downstream
+)
+
+OUT(
+  record_id      : UUID,          -- ISM-assigned canonical record identifier
+  ingested_at    : Timestamp,     -- Substrate-side ingestion time (UTC ISO-8601)
+  status         : IngestionStatus -- ACCEPTED | DUPLICATE | REJECTED
+)
+
+PRE[
+  signal_id is syntactically valid UUID,
+  source is non-empty and registered in the emitter registry,
+  raw_payload byte length &gt; 0,
+  content_type is a supported MIME type,
+  emitted_at &lt;= substrate_clock.now()
+]
+
+POST[
+  status == ACCEPTED  →  IncidentRecord(record_id) exists in substrate with state = INGESTED,
+  status == DUPLICATE →  no new record created; existing record_id returned,
+  status == REJECTED  →  no record created; fault emitted
+]
+
+GUARD(
+  emitter is authorized: source ∈ allowed_emitter_set,
+  payload size &lt;= MAX_PAYLOAD_BYTES
+)
+
+YIELDS  → INGESTED
+FAULTS  → UNAUTHORIZED_EMITTER | PAYLOAD_TOO_LARGE | MALFORMED_SIGNAL | UNSUPPORTED_CONTENT_TYPE
+</code></pre></div>
+
+<hr />
+<h2 id="2-operator-family-classification">2. Operator Family: Classification<a class="toc-permalink" href="#2-operator-family-classification" title="Permanent link to this heading">&para;</a></h2>
+<hr />
+<h3 id="incidentclassify"><code>incident.classify</code><a class="toc-permalink" href="#incidentclassify" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>MODE:</strong> <code>MUTATING</code> · <strong>IDEMPOTENT:</strong> No (classification may evolve; each call is versioned)</p>
+<p><strong>Purpose:</strong> Assign a structured classification to an <code>IncidentRecord</code>. Classification is versioned — successive calls append a new <code>ClassificationVersion</code> rather than overwriting, preserving the full classification history on the record.</p>
+<div class="codehilite"><pre><span></span><code>OPERATOR  incident.classify
+
+IN(
+  record_id      : UUID,          -- Target IncidentRecord
+  classifier_id  : String,        -- Identity of the classifying agent or model
+  category       : IncidentCategory,  -- Primary taxonomy node (e.g. SECRET_LEAK, DEPENDENCY_CVE)
+  subcategory    : String?,        -- Optional free-form subcategory label
+  confidence     : Float[0.0,1.0], -- Classifier confidence in this classification
+  rationale      : String          -- Human-readable classification rationale
+)
+
+OUT(
+  record_id      : UUID,
+  classification_version : UInt,   -- Monotonically increasing version index on this record
+  effective_at   : Timestamp
+)
+
+PRE[
+  IncidentRecord(record_id) exists,
+  IncidentRecord(record_id).state ∈ {INGESTED, CLASSIFIED, SURFACE_MAPPED},
+  confidence ∈ [0.0, 1.0],
+  rationale is non-empty
+]
+
+POST[
+  IncidentRecord(record_id).classification == ClassificationVersion(classification_version),
+  IncidentRecord(record_id).state == CLASSIFIED,
+  classification_version == previous_version + 1
+]
+
+GUARD(
+  classifier_id is registered,
+  confidence &gt;= MIN_CLASSIFICATION_CONFIDENCE  -- substrate-configured threshold
+)
+
+YIELDS  → CLASSIFIED
+FAULTS  → RECORD_NOT_FOUND | INVALID_CATEGORY | CONFIDENCE_BELOW_THRESHOLD | INVALID_STATE_TRANSITION
+</code></pre></div>
+
+<hr />
+<h2 id="3-operator-family-surface-mapping">3. Operator Family: Surface Mapping<a class="toc-permalink" href="#3-operator-family-surface-mapping" title="Permanent link to this heading">&para;</a></h2>
+<hr />
+<h3 id="incidentmap_surface_area"><code>incident.map_surface_area</code><a class="toc-permalink" href="#incidentmap_surface_area" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>MODE:</strong> <code>MUTATING</code> · <strong>IDEMPOTENT:</strong> Yes (keyed on <code>record_id</code> + <code>surface_snapshot_hash</code>)</p>
+<p><strong>Purpose:</strong> Enumerate all substrate surfaces (files, secrets, dependencies, services, configurations) that the classified incident touches. The surface area map is the authoritative scope boundary for all downstream rectification and execution operators.</p>
+<div class="codehilite"><pre><span></span><code>OPERATOR  incident.map_surface_area
+
+IN(
+  record_id         : UUID,
+  scanner_id        : String,               -- Identity of the surface scanner agent
+  surfaces          : List&lt;SurfaceEntry&gt;,   -- See SurfaceEntry schema below
+  surface_snapshot_hash : Hash              -- Content hash of the surfaces list for idempotency
+)
+
+-- SurfaceEntry schema:
+--   surface_type   : SurfaceType  (FILE | SECRET | DEPENDENCY | SERVICE | CONFIG)
+--   surface_ref    : String       (path, ARN, package@version, service name, config key)
+--   access_mode    : AccessMode   (READ | WRITE | EXECUTE | UNKNOWN)
+--   confidence     : Float[0.0,1.0]
+--   notes          : String?
+
+OUT(
+  record_id         : UUID,
+  surface_map_id    : UUID,       -- Stable identifier for this surface map snapshot
+  surface_count     : UInt,
+  mapped_at         : Timestamp
+)
+
+PRE[
+  IncidentRecord(record_id) exists,
+  IncidentRecord(record_id).state == CLASSIFIED,
+  surfaces is non-empty,
+  all surface_ref values are syntactically valid for their surface_type,
+  surface_snapshot_hash == hash(surfaces)
+]
+
+POST[
+  IncidentRecord(record_id).surface_map_id == surface_map_id,
+  IncidentRecord(record_id).state == SURFACE_MAPPED,
+  SurfaceMap(surface_map_id).entries.count == surface_count
+]
+
+GUARD(
+  scanner_id is registered,
+  surface_count &lt;= MAX_SURFACE_ENTRIES  -- prevents unbounded scope creep
+)
+
+YIELDS  → SURFACE_MAPPED
+FAULTS  → RECORD_NOT_FOUND | INVALID_STATE_TRANSITION | EMPTY_SURFACE_LIST
+         | SURFACE_REF_INVALID | SURFACE_LIMIT_EXCEEDED | HASH_MISMATCH
+</code></pre></div>
+
+<hr />
+<h2 id="4-operator-family-rectification-planning">4. Operator Family: Rectification Planning<a class="toc-permalink" href="#4-operator-family-rectification-planning" title="Permanent link to this heading">&para;</a></h2>
+<hr />
+<h3 id="incidentderive_rectification_steps"><code>incident.derive_rectification_steps</code><a class="toc-permalink" href="#incidentderive_rectification_steps" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>MODE:</strong> <code>MUTATING</code> · <strong>IDEMPOTENT:</strong> No (step derivation is versioned per surface map)</p>
+<p><strong>Purpose:</strong> Derive an ordered, bounded list of rectification steps from the surface area map. Each step maps to exactly one <code>incident.execute.*</code> operator. This operator does not execute anything — it produces a typed, operator-bound plan only.</p>
+<div class="codehilite"><pre><span></span><code>OPERATOR  incident.derive_rectification_steps
+
+IN(
+  record_id      : UUID,
+  surface_map_id : UUID,
+  planner_id     : String,           -- Identity of the planning agent
+  steps          : List&lt;RectificationStep&gt;  -- See RectificationStep schema below
+)
+
+-- RectificationStep schema:
+--   step_index     : UInt          (0-based; must be unique and gapless)
+--   operator_ref   : OperatorRef   (must resolve to an incident.execute.* operator)
+--   target_ref     : String        (must exist in SurfaceMap(surface_map_id).entries)
+--   parameters     : Map&lt;String,Any&gt;
+--   reversible     : Bool
+--   rationale      : String
+
+OUT(
+  record_id      : UUID,
+  plan_id        : UUID,
+  step_count     : UInt,
+  derived_at     : Timestamp
+)
+
+PRE[
+  IncidentRecord(record_id) exists,
+  IncidentRecord(record_id).state == SURFACE_MAPPED,
+  IncidentRecord(record_id).surface_map_id == surface_map_id,
+  steps is non-empty,
+  step indices are 0-based, unique, and gapless,
+  all operator_ref values resolve to valid incident.execute.* operators,
+  all target_ref values exist in SurfaceMap(surface_map_id).entries
+]
+
+POST[
+  IncidentRecord(record_id).plan_id == plan_id,
+  IncidentRecord(record_id).state == PLAN_DERIVED,
+  RectificationPlan(plan_id).steps.count == step_count
+]
+
+GUARD(
+  planner_id is registered,
+  step_count &lt;= MAX_PLAN_STEPS,
+  all operator_ref values are within the incident.execute.* namespace only
+)
+
+YIELDS  → PLAN_DERIVED
+FAULTS  → RECORD_NOT_FOUND | INVALID_STATE_TRANSITION | SURFACE_MAP_MISMATCH
+         | STEP_INDEX_INVALID | UNKNOWN_OPERATOR_REF | TARGET_NOT_IN_SURFACE_MAP
+         | PLAN_STEP_LIMIT_EXCEEDED
+</code></pre></div>
+
+<hr />
+<h3 id="incidentgenerate_readonly_plan"><code>incident.generate_readonly_plan</code><a class="toc-permalink" href="#incidentgenerate_readonly_plan" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>MODE:</strong> <code>READONLY</code> · <strong>IDEMPOTENT:</strong> Yes</p>
+<p><strong>Purpose:</strong> Render a human-readable, read-only representation of the current <code>RectificationPlan</code> for review. This operator does not modify any substrate state. It is the canonical gate before <code>incident.request_operator_approval</code>.</p>
+<div class="codehilite"><pre><span></span><code>OPERATOR  incident.generate_readonly_plan
+
+IN(
+  record_id      : UUID,
+  plan_id        : UUID,
+  format         : PlanFormat   -- MARKDOWN | JSON | TEXT
+)
+
+OUT(
+  record_id      : UUID,
+  plan_id        : UUID,
+  rendered_plan  : String,      -- Plan body in requested format; no executable content
+  rendered_at    : Timestamp
+)
+
+PRE[
+  IncidentRecord(record_id) exists,
+  IncidentRecord(record_id).plan_id == plan_id,
+  IncidentRecord(record_id).state ∈ {PLAN_DERIVED, PENDING_APPROVAL, APPROVED, HOLD},
+  format ∈ {MARKDOWN, JSON, TEXT}
+]
+
+POST[
+  no substrate state modified,
+  rendered_plan is non-empty,
+  rendered_plan contains no embedded operator invocations or executable directives
+]
+
+GUARD(
+  rendered_plan must not contain control characters or script injection patterns
+)
+
+YIELDS  → (no state transition; read-only)
+FAULTS  → RECORD_NOT_FOUND | PLAN_NOT_FOUND | PLAN_ID_MISMATCH | UNSUPPORTED_FORMAT
+</code></pre></div>
+
+<hr />
+<h3 id="incidentflag_uncertainty"><code>incident.flag_uncertainty</code><a class="toc-permalink" href="#incidentflag_uncertainty" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>MODE:</strong> <code>MUTATING</code> · <strong>IDEMPOTENT:</strong> Yes (keyed on <code>record_id</code> + <code>uncertainty_code</code>)</p>
+<p><strong>Purpose:</strong> Attach a structured uncertainty annotation to a record when the substrate or a planning agent lacks sufficient confidence to proceed without human review. Flagging uncertainty does not block the record — it enriches the approval context and may trigger escalation routing.</p>
+<div class="codehilite"><pre><span></span><code>OPERATOR  incident.flag_uncertainty
+
+IN(
+  record_id        : UUID,
+  flagging_agent   : String,
+  uncertainty_code : UncertaintyCode,  -- See UncertaintyCode registry below
+  affected_field   : String?,          -- Optional pointer to the uncertain field or step
+  detail           : String            -- Human-readable description of the uncertainty
+)
+
+-- UncertaintyCode registry:
+--   CLASSIFICATION_AMBIGUOUS    -- Multiple categories plausible with similar confidence
+--   SURFACE_INCOMPLETE          -- Scanner may have missed surfaces
+--   STEP_REVERSIBILITY_UNKNOWN  -- Cannot confirm if a rectification step is reversible
+--   AUTHORIZATION_AMBIGUOUS     -- Approver set is unclear
+--   EXTERNAL_DEPENDENCY_UNKNOWN -- Third-party behavior required for rectification is unverified
+--   OTHER                       -- Catch-all; detail is mandatory when used
+
+OUT(
+  record_id        : UUID,
+  flag_id          : UUID,
+  flagged_at       : Timestamp
+)
+
+PRE[
+  IncidentRecord(record_id) exists,
+  uncertainty_code ∈ UncertaintyCode registry,
+  detail is non-empty,
+  if uncertainty_code == OTHER then detail.length &gt;= MIN_OTHER_DETAIL_LENGTH
+]
+
+POST[
+  UncertaintyFlag(flag_id) attached to IncidentRecord(record_id),
+  IncidentRecord(record_id).uncertainty_flags.count increased by 1
+]
+
+GUARD(
+  flagging_agent is registered
+)
+
+YIELDS  → (no state transition; annotation only)
+FAULTS  → RECORD_NOT_FOUND | UNKNOWN_UNCERTAINTY_CODE | EMPTY_DETAIL
+         | INSUFFICIENT_OTHER_DETAIL
+</code></pre></div>
+
+<hr />
+<h2 id="5-operator-family-approval-flow">5. Operator Family: Approval Flow<a class="toc-permalink" href="#5-operator-family-approval-flow" title="Permanent link to this heading">&para;</a></h2>
+<hr />
+<h3 id="incidentrequest_operator_approval"><code>incident.request_operator_approval</code><a class="toc-permalink" href="#incidentrequest_operator_approval" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>MODE:</strong> <code>APPROVAL_GATED</code> · <code>MUTATING</code> · <strong>IDEMPOTENT:</strong> No</p>
+<p><strong>Purpose:</strong> Formally request human operator approval for the <code>RectificationPlan</code>. Transitions the record to <code>PENDING_APPROVAL</code> and notifies the designated approver set. No <code>incident.execute.*</code> operator may proceed until this request is satisfied.</p>
+<div class="codehilite"><pre><span></span><code>OPERATOR  incident.request_operator_approval
+
+IN(
+  record_id        : UUID,
+  plan_id          : UUID,
+  requesting_agent : String,
+  approver_set     : List&lt;ApproverRef&gt;,  -- At least one approver required
+  approval_policy  : ApprovalPolicy,    -- ANY_ONE | MAJORITY | ALL
+  context_note     : String?            -- Optional note for the approver set
+)
+
+OUT(
+  record_id        : UUID,
+  approval_request_id : UUID,
+  requested_at     : Timestamp,
+  approver_count   : UInt
+)
+
+PRE[
+  IncidentRecord(record_id) exists,
+  IncidentRecord(record_id).plan_id == plan_id,
+  IncidentRecord(record_id).state == PLAN_DERIVED,
+  approver_set is non-empty,
+  all ApproverRef values are resolvable in the approver registry,
+  approval_policy ∈ {ANY_ONE, MAJORITY, ALL}
+]
+
+POST[
+  IncidentRecord(record_id).state == PENDING_APPROVAL,
+  IncidentRecord(record_id).approval_request_id == approval_request_id,
+  approver_set notified via substrate notification channel
+]
+
+GUARD(
+  requesting_agent is registered,
+  plan_id refers to a non-empty, validated RectificationPlan,
+  record has no open uncertainty flags with severity &gt;= BLOCKING
+    unless explicitly acknowledged in context_note
+)
+
+YIELDS  → PENDING_APPROVAL
+FAULTS  → RECORD_NOT_FOUND | PLAN_NOT_FOUND | INVALID_STATE_TRANSITION
+         | EMPTY_APPROVER_SET | UNKNOWN_APPROVER | BLOCKING_UNCERTAINTY_FLAGS
+         | INVALID_APPROVAL_POLICY
+</code></pre></div>
+
+<hr />
+<h3 id="incidenthold_for_review"><code>incident.hold_for_review</code><a class="toc-permalink" href="#incidenthold_for_review" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>MODE:</strong> <code>MUTATING</code> · <strong>IDEMPOTENT:</strong> Yes (hold is idempotent if reason matches existing hold)</p>
+<p><strong>Purpose:</strong> Place a record into a <code>HOLD</code> state, suspending all pending execution. A hold may be placed at any point after <code>PLAN_DERIVED</code>. Holds must be explicitly released by an authorized operator before execution can resume. This operator is the primary safety brake in the ISM approval flow.</p>
+<div class="codehilite"><pre><span></span><code>OPERATOR  incident.hold_for_review
+
+IN(
+  record_id    : UUID,
+  held_by      : String,      -- Identity of the hold-placing operator or agent
+  reason_code  : HoldReason,  -- See HoldReason registry below
+  detail       : String,      -- Mandatory detail regardless of reason_code
+  resume_after : Timestamp?   -- Optional: earliest time hold may be lifted
+)
+
+-- HoldReason registry:
+--   MANUAL_REVIEW_REQUESTED
+--   BLOCKING_UNCERTAINTY
+--   APPROVAL_DISPUTED
+--   EXTERNAL_DEPENDENCY_PENDING
+--   POLICY_ESCALATION
+--   SUBSTRATE_FAULT
+
+OUT(
+  record_id   : UUID,
+  hold_id     : UUID,
+  held_at     : Timestamp,
+  prior_state : RecordState   -- State the record was in before hold
+)
+
+PRE[
+  IncidentRecord(record_id) exists,
+  IncidentRecord(record_id).state ∈ {PLAN_DERIVED, PENDING_APPROVAL, APPROVED},
+  reason_code ∈ HoldReason registry,
+  detail is non-empty
+]
+
+POST[
+  IncidentRecord(record_id).state == HOLD,
+  IncidentRecord(record_id).hold_id == hold_id,
+  HoldRecord(hold_id).prior_state == prior_state,
+  all queued incident.execute.* steps for record_id are suspended
+]
+
+GUARD(
+  held_by is authorized to place holds on this record
+)
+
+YIELDS  → HOLD
+FAULTS  → RECORD_NOT_FOUND | INVALID_STATE_TRANSITION | UNKNOWN_HOLD_REASON
+         | HOLD_UNAUTHORIZED | EMPTY_DETAIL
+</code></pre></div>
+
+<hr />
+<h2 id="6-operator-family-bounded-execution">6. Operator Family: Bounded Execution<a class="toc-permalink" href="#6-operator-family-bounded-execution" title="Permanent link to this heading">&para;</a></h2>
+<p>All <code>incident.execute.*</code> operators share these invariants:</p>
+<blockquote>
+<p><strong>Execution Invariants (apply to all operators in this family)</strong><br />
+1. Target must exist in <code>SurfaceMap</code> of the parent <code>IncidentRecord</code>.<br />
+2. Parent record must be in state <code>APPROVED</code>.<br />
+3. No execution operator may exceed the scope declared in the approved <code>RectificationPlan</code>.<br />
+4. Each execution operator emits an immutable <code>ExecutionRecord</code> on completion (success or fault).<br />
+5. Faulted executions must not leave targets in a partially-modified state without a <code>PARTIAL_EXECUTION</code> fault being emitted.<br />
+6. Operators with <code>reversible: false</code> steps require explicit step-level re-acknowledgment at execution time.</p>
+</blockquote>
+<hr />
+<h3 id="incidentexecuteremove_file"><code>incident.execute.remove_file</code><a class="toc-permalink" href="#incidentexecuteremove_file" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>MODE:</strong> <code>MUTATING</code> · <strong>IDEMPOTENT:</strong> Yes (if file absent, reports ALREADY_ABSENT)</p>
+<p><strong>Purpose:</strong> Remove a specific file declared in the surface area map. Removal is logged immutably. The file path must exactly match a <code>FILE</code>-typed surface entry in the approved plan.</p>
+<div class="codehilite"><pre><span></span><code>OPERATOR  incident.execute.remove_file
+
+IN(
+  record_id     : UUID,
+  plan_id       : UUID,
+  step_index    : UInt,
+  file_path     : String,       -- Absolute canonical path; must match surface entry exactly
+  checksum      : Hash?,        -- Optional pre-removal checksum for audit
+  dry_run       : Bool          -- If true, validate only; do not remove
+)
+
+OUT(
+  record_id      : UUID,
+  execution_id   : UUID,
+  status         : ExecutionStatus,  -- REMOVED | ALREADY_ABSENT | DRY_RUN_OK
+  removed_at     : Timestamp?,
+  prior_checksum : Hash?
+)
+
+PRE[
+  IncidentRecord(record_id).state == APPROVED,
+  IncidentRecord(record_id).plan_id == plan_id,
+  RectificationPlan(plan_id).steps[step_index].operator_ref == &quot;incident.execute.remove_file&quot;,
+  RectificationPlan(plan_id).steps[step_index].target_ref == file_path,
+  file_path ∈ SurfaceMap(IncidentRecord(record_id).surface_map_id) with surface_type == FILE
+]
+
+POST[
+  dry_run == false AND status == REMOVED →
+    file at file_path no longer exists,
+    ExecutionRecord(execution_id) created with status REMOVED,
+  dry_run == true →
+    no filesystem state changed,
+    ExecutionRecord(execution_id) created with status DRY_RUN_OK
+]
+
+GUARD(
+  executor has filesystem write access to file_path,
+  file_path does not resolve outside declared substrate boundaries (no path traversal)
+)
+
+YIELDS  → STEP_EXECUTED
+FAULTS  → RECORD_NOT_FOUND | PLAN_STEP_MISMATCH | FILE_NOT_IN_SURFACE_MAP
+         | ACCESS_DENIED | PATH_TRAVERSAL_DETECTED | PARTIAL_EXECUTION
+         | CHECKSUM_MISMATCH
+</code></pre></div>
+
+<hr />
+<h3 id="incidentexecuterotate_secret"><code>incident.execute.rotate_secret</code><a class="toc-permalink" href="#incidentexecuterotate_secret" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>MODE:</strong> <code>MUTATING</code> · <strong>IDEMPOTENT:</strong> No (each rotation produces a new secret version)</p>
+<p><strong>Purpose:</strong> Rotate a secret (API key, credential, token, certificate) declared in the surface area map. The old secret value is invalidated and the new value is stored via the substrate&rsquo;s secret management layer. The new secret value is never emitted in <code>OUT</code>.</p>
+<div class="codehilite"><pre><span></span><code>OPERATOR  incident.execute.rotate_secret
+
+IN(
+  record_id         : UUID,
+  plan_id           : UUID,
+  step_index        : UInt,
+  secret_ref        : String,         -- ARN, vault path, or secret identifier; must match surface entry
+  rotation_policy   : RotationPolicy, -- IMMEDIATE | SCHEDULED
+  notify_dependents : Bool            -- If true, substrate notifies registered secret consumers
+)
+
+OUT(
+  record_id          : UUID,
+  execution_id       : UUID,
+  status             : ExecutionStatus,  -- ROTATED | SCHEDULED
+  new_secret_version : String,           -- Version identifier only; NOT the secret value
+  rotated_at         : Timestamp?
+)
+
+PRE[
+  IncidentRecord(record_id).state == APPROVED,
+  IncidentRecord(record_id).plan_id == plan_id,
+  RectificationPlan(plan_id).steps[step_index].operator_ref == &quot;incident.execute.rotate_secret&quot;,
+  RectificationPlan(plan_id).steps[step_index].target_ref == secret_ref,
+  secret_ref ∈ SurfaceMap(IncidentRecord(record_id).surface_map_id) with surface_type == SECRET,
+  rotation_policy ∈ {IMMEDIATE, SCHEDULED}
+]
+
+POST[
+  status == ROTATED →
+    old secret version invalidated in secret management layer,
+    new_secret_version active,
+    notify_dependents == true → dependent consumers notified,
+  ExecutionRecord(execution_id) created,
+  new secret value never stored in ExecutionRecord or any ISM log
+]
+
+GUARD(
+  executor has secret rotation authorization for secret_ref,
+  new secret value is never written to OUT or any audit log (zero-secret-value guarantee)
+)
+
+YIELDS  → STEP_EXECUTED
+FAULTS  → RECORD_NOT_FOUND | PLAN_STEP_MISMATCH | SECRET_NOT_IN_SURFACE_MAP
+         | ROTATION_UNAUTHORIZED | ROTATION_PROVIDER_ERROR | PARTIAL_EXECUTION
+         | DEPENDENT_NOTIFICATION_FAILED
+</code></pre></div>
+
+<hr />
+<h3 id="incidentexecutepatch_dependency"><code>incident.execute.patch_dependency</code><a class="toc-permalink" href="#incidentexecutepatch_dependency" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>MODE:</strong> <code>MUTATING</code> · <strong>IDEMPOTENT:</strong> Yes (keyed on <code>record_id</code> + <code>package_ref</code> + <code>target_version</code>)</p>
+<p><strong>Purpose:</strong> Apply a dependency patch — upgrading or pinning a package to a declared target version. The dependency must be declared in the surface area map as a <code>DEPENDENCY</code>-typed surface entry. Patch application is followed by a deterministic verification step.</p>
+<div class="codehilite"><pre><span></span><code>OPERATOR  incident.execute.patch_dependency
+
+IN(
+  record_id       : UUID,
+  plan_id         : UUID,
+  step_index      : UInt,
+  package_ref     : String,          -- Package identifier, e.g. &quot;npm:lodash&quot; or &quot;pypi:requests&quot;
+  current_version : String,          -- Version being replaced; must match installed version
+  target_version  : String,          -- Version to install; must be a known-good release
+  package_manager : PackageManager,  -- NPM | PIP | CARGO | MAVEN | GRADLE | OTHER
+  verify_checksum : Hash?,           -- Optional expected checksum of target package
+  dry_run         : Bool
+)
+
+OUT(
+  record_id       : UUID,
+  execution_id    : UUID,
+  status          : ExecutionStatus,  -- PATCHED | DRY_RUN_OK | ALREADY_AT_TARGET
+  patched_version : String?,
+  patched_at      : Timestamp?
+)
+
+PRE[
+  IncidentRecord(record_id).state == APPROVED,
+  IncidentRecord(record_id).plan_id == plan_id,
+  RectificationPlan(plan_id).steps[step_index].operator_ref == &quot;incident.execute.patch_dependency&quot;,
+  RectificationPlan(plan_id).steps[step_index].target_ref == package_ref,
+  package_ref ∈ SurfaceMap(IncidentRecord(record_id).surface_map_id) with surface_type == DEPENDENCY,
+  current_version is semver-valid,
+  target_version is semver-valid,
+  target_version &gt; current_version OR target_version is an explicit pinned release
+]
+
+POST[
+  dry_run == false AND status == PATCHED →
+    package at package_ref upgraded to target_version,
+    verify_checksum provided → checksum verified against installed package,
+    ExecutionRecord(execution_id) created,
+  dry_run == true →
+    no package state changed,
+    ExecutionRecord(execution_id) created with DRY_RUN_OK
+]
+
+GUARD(
+  executor has write access to the dependency manifest and lock file,
+  target_version is not marked deprecated or yanked in package_manager registry,
+  verify_checksum provided → checksum must match before activation
+)
+
+YIELDS  → STEP_EXECUTED
+FAULTS  → RECORD_NOT_FOUND | PLAN_STEP_MISMATCH | DEPENDENCY_NOT_IN_SURFACE_MAP
+         | VERSION_MISMATCH | TARGET_VERSION_INVALID | PACKAGE_MANAGER_ERROR
+         | CHECKSUM_MISMATCH | PARTIAL_EXECUTION
+</code></pre></div>
+
+<hr />
+<h3 id="incidentexecuteflag_for_followup"><code>incident.execute.flag_for_followup</code><a class="toc-permalink" href="#incidentexecuteflag_for_followup" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>MODE:</strong> <code>MUTATING</code> · <strong>IDEMPOTENT:</strong> Yes (keyed on <code>record_id</code> + <code>followup_code</code>)</p>
+<p><strong>Purpose:</strong> Mark a surface entry or plan step as requiring post-incident follow-up action that cannot be completed within the current remediation window. This operator closes the step without mutating the target, emitting a structured follow-up ticket into the substrate&rsquo;s tracking layer.</p>
+<div class="codehilite"><pre><span></span><code>OPERATOR  incident.execute.flag_for_followup
+
+IN(
+  record_id       : UUID,
+  plan_id         : UUID,
+  step_index      : UInt,
+  target_ref      : String,           -- Surface entry or step reference being deferred
+  followup_code   : FollowupCode,     -- See FollowupCode registry below
+  priority        : FollowupPriority, -- CRITICAL | HIGH | MEDIUM | LOW
+  assigned_to     : List&lt;String&gt;,     -- Assignee identifiers; at least one required
+  due_by          : Timestamp?,       -- Optional deadline
+  detail          : String            -- Mandatory description of follow-up action required
+)
+
+-- FollowupCode registry:
+--   MANUAL_REMEDIATION_REQUIRED     -- Step requires human action beyond substrate capability
+--   THIRD_PARTY_COORDINATION        -- Remediation depends on external party
+--   DEFERRAL_APPROVED               -- Approved deferral; reason documented in detail
+--   RISK_ACCEPTED                   -- Risk explicitly accepted; documented in detail
+--   MONITORING_REQUIRED             -- No action now; ongoing monitoring required
+
+OUT(
+  record_id    : UUID,
+  execution_id : UUID,
+  followup_id  : UUID,            -- Tracking ticket identifier
+  status       : ExecutionStatus, -- FLAGGED
+  flagged_at   : Timestamp
+)
+
+PRE[
+  IncidentRecord(record_id).state == APPROVED,
+  IncidentRecord(record_id).plan_id == plan_id,
+  RectificationPlan(plan_id).steps[step_index].operator_ref == &quot;incident.execute.flag_for_followup&quot;,
+  followup_code ∈ FollowupCode registry,
+  priority ∈ {CRITICAL, HIGH, MEDIUM, LOW},
+  assigned_to is non-empty,
+  detail is non-empty
+]
+
+POST[
+  FollowupTicket(followup_id) created in substrate tracking layer,
+  FollowupTicket(followup_id).assigned_to == assigned_to,
+  ExecutionRecord(execution_id) created with status FLAGGED,
+  step_index marked FLAGGED_FOR_FOLLOWUP in RectificationPlan(plan_id)
+]
+
+GUARD(
+  all assigned_to identifiers resolvable in operator registry,
+  if followup_code == RISK_ACCEPTED →
+    detail.length &gt;= MIN_RISK_ACCEPTANCE_DETAIL_LENGTH
+)
+
+YIELDS  → STEP_EXECUTED
+FAULTS  → RECORD_NOT_FOUND | PLAN_STEP_MISMATCH | UNKNOWN_FOLLOWUP_CODE
+         | INVALID_PRIORITY | EMPTY_ASSIGNEE_LIST | UNRESOLVABLE_ASSIGNEE
+         | INSUFFICIENT_RISK_DETAIL | EMPTY_DETAIL
+</code></pre></div>
+
+<hr />
+<h2 id="7-state-machine">7. State Machine<a class="toc-permalink" href="#7-state-machine" title="Permanent link to this heading">&para;</a></h2>
+<p>The canonical ISM record state machine governs legal state transitions. Only transitions listed below are valid; all others are grammar faults.</p>
+<div class="codehilite"><pre><span></span><code>INGESTED
+  → CLASSIFIED            via  incident.classify
+  → HOLD                  via  incident.hold_for_review
+
+CLASSIFIED
+  → SURFACE_MAPPED        via  incident.map_surface_area
+  → CLASSIFIED            via  incident.classify            (re-classification; version++)
+  → HOLD                  via  incident.hold_for_review
+
+SURFACE_MAPPED
+  → PLAN_DERIVED          via  incident.derive_rectification_steps
+  → CLASSIFIED            via  incident.classify            (reclassify; resets to CLASSIFIED)
+  → HOLD                  via  incident.hold_for_review
+
+PLAN_DERIVED
+  → PENDING_APPROVAL      via  incident.request_operator_approval
+  → HOLD                  via  incident.hold_for_review
+
+PENDING_APPROVAL
+  → APPROVED              via  [approval resolution: external to grammar]
+  → PLAN_DERIVED          via  [approval rejection: external to grammar]
+  → HOLD                  via  incident.hold_for_review
+
+HOLD
+  → [prior_state]         via  [hold release: external to grammar; restores prior_state]
+
+APPROVED
+  → EXECUTING             via  [first incident.execute.* invocation]
+  → HOLD                  via  incident.hold_for_review
+
+EXECUTING
+  → RESOLVED              via  [all plan steps STEP_EXECUTED or FLAGGED_FOR_FOLLOWUP]
+  → HOLD                  via  incident.hold_for_review
+  → FAULTED               via  [any PARTIAL_EXECUTION fault on any step]
+
+RESOLVED   -- Terminal: no further state transitions permitted
+FAULTED    -- Terminal: requires manual intervention; may spawn new record via incident.ingest
+</code></pre></div>
+
+<hr />
+<h2 id="8-type-registry">8. Type Registry<a class="toc-permalink" href="#8-type-registry" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>UUID              ::= RFC 4122 v4 UUID string
+Timestamp         ::= ISO-8601 UTC datetime string, precision to milliseconds
+Hash              ::= SHA-256 hex digest string (64 hex characters)
+MIME              ::= IANA-registered MIME type string
+SeverityHint      ::= CRITICAL | HIGH | MEDIUM | LOW | UNKNOWN
+IncidentCategory  ::= SECRET_LEAK | DEPENDENCY_CVE | MISCONFIGURATION | UNAUTHORIZED_ACCESS
+                    | DATA_EXPOSURE | SUPPLY_CHAIN | POLICY_VIOLATION | UNKNOWN
+SurfaceType       ::= FILE | SECRET | DEPENDENCY | SERVICE | CONFIG
+AccessMode        ::= READ | WRITE | EXECUTE | UNKNOWN
+IngestionStatus   ::= ACCEPTED | DUPLICATE | REJECTED
+ExecutionStatus   ::= REMOVED | ROTATED | PATCHED | FLAGGED | ALREADY_ABSENT
+                    | ALREADY_AT_TARGET | DRY_RUN_OK | SCHEDULED
+RecordState       ::= INGESTED | CLASSIFIED | SURFACE_MAPPED | PLAN_DERIVED
+                    | PENDING_APPROVAL | APPROVED | EXECUTING | HOLD | RESOLVED | FAULTED
+PlanFormat        ::= MARKDOWN | JSON | TEXT
+ApprovalPolicy    ::= ANY_ONE | MAJORITY | ALL
+PackageManager    ::= NPM | PIP | CARGO | MAVEN | GRADLE | OTHER
+FollowupPriority  ::= CRITICAL | HIGH | MEDIUM | LOW
+OperatorRef       ::= Fully-qualified dot-namespace string resolving to an incident.execute.* operator
+ApproverRef       ::= Opaque string resolvable in the approver registry
+</code></pre></div>
+
+<hr />
+<h2 id="9-substrate-constants">9. Substrate Constants<a class="toc-permalink" href="#9-substrate-constants" title="Permanent link to this heading">&para;</a></h2>
+<p>These values are substrate-configured and must be overridden via the ISM configuration layer, not hardcoded in operator implementations.</p>
+<table>
+<thead>
+<tr>
+<th>Constant</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MAX_PAYLOAD_BYTES</code></td>
+<td>10 485 760 (10 MiB)</td>
+<td>Maximum raw_payload size for ingestion</td>
+</tr>
+<tr>
+<td><code>MIN_CLASSIFICATION_CONFIDENCE</code></td>
+<td>0.70</td>
+<td>Minimum confidence for classification to proceed</td>
+</tr>
+<tr>
+<td><code>MAX_SURFACE_ENTRIES</code></td>
+<td>500</td>
+<td>Maximum surface entries per surface map</td>
+</tr>
+<tr>
+<td><code>MAX_PLAN_STEPS</code></td>
+<td>50</td>
+<td>Maximum rectification steps per plan</td>
+</tr>
+<tr>
+<td><code>MIN_OTHER_DETAIL_LENGTH</code></td>
+<td>80 chars</td>
+<td>Minimum detail length when UncertaintyCode is OTHER</td>
+</tr>
+<tr>
+<td><code>MIN_RISK_ACCEPTANCE_DETAIL_LENGTH</code></td>
+<td>150 chars</td>
+<td>Minimum detail for RISK_ACCEPTED follow-up flags</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="10-grammar-invariants">10. Grammar Invariants<a class="toc-permalink" href="#10-grammar-invariants" title="Permanent link to this heading">&para;</a></h2>
+<p>The following invariants hold across the entire ISM operator grammar. Violation of any invariant is a substrate fault, not an operator fault.</p>
+<ol>
+<li><strong>Namespace isolation:</strong> No operator outside the <code>incident.*</code> namespace may modify an <code>IncidentRecord</code>.</li>
+<li><strong>Plan immutability:</strong> A <code>RectificationPlan</code> is immutable once <code>PENDING_APPROVAL</code> is entered. Re-planning requires returning to <code>PLAN_DERIVED</code> via approval rejection.</li>
+<li><strong>Surface scope enforcement:</strong> <code>incident.execute.*</code> operators may only act on targets declared in the approved <code>SurfaceMap</code>. Out-of-scope targets are a grammar fault.</li>
+<li><strong>Zero secret value guarantee:</strong> Secret values must never appear in any <code>OUT</code>, <code>ExecutionRecord</code>, log, or audit trail. Version identifiers and references are permitted.</li>
+<li><strong>Execution sequencing:</strong> <code>incident.execute.*</code> steps must be executed in <code>step_index</code> order unless the <code>RectificationPlan</code> declares explicit parallel groups. Default is strictly sequential.</li>
+<li><strong>Approval gate:</strong> No <code>incident.execute.*</code> operator may begin unless <code>IncidentRecord.state == APPROVED</code> and <code>approval_request_id</code> is present on the record.</li>
+<li><strong>Uncertainty flag escalation:</strong> Uncertainty flags with severity <code>BLOCKING</code> must be resolved or explicitly acknowledged before <code>incident.request_operator_approval</code> may proceed.</li>
+<li><strong>Hold supremacy:</strong> A record in state <code>HOLD</code> cannot have any <code>incident.execute.*</code> operator invoked against it, regardless of approval status.</li>
+<li><strong>Terminal state finality:</strong> Records in <code>RESOLVED</code> or <code>FAULTED</code> states are immutable. New incident signals must enter via <code>incident.ingest</code> as new records.</li>
+<li><strong>Determinism requirement:</strong> All operators must produce identical <code>OUT</code> for identical <code>IN</code> under identical substrate state. Any operator exhibiting non-determinism is a grammar fault.</li>
+</ol>
+<hr />
+<p><em>End of operator grammar document.</em><br />
+<em>Canonical source: <code>/docs/Incident_Substrate_Model/operator_grammar.md</code> · TriadicFrameworks repository</em><br />
+<em>RTT/1 Canon · ISM Grammar v1.0</em></p>
+<hr />
+<p><strong>What&rsquo;s covered:</strong> all 12 operators across 6 families, a 10-state deterministic record state machine, a complete type registry, substrate constants table, and 10 cross-cutting grammar invariants — all in RTT/1 <code>OPERATOR / IN / OUT / PRE / POST / GUARD / YIELDS / FAULTS</code> form.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Incident_Substrate_Model/operator_grammar.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/Incident_Substrate_Model/operator_grammar.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

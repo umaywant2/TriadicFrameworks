@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Triadic Pattern Design Manual | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/packages/tft-3pack/TRIADIC_PATTERN_DESIGN_MANUAL/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Triadic Pattern Design Manual" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/packages/tft-3pack/TRIADIC_PATTERN_DESIGN_MANUAL/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Triadic Pattern Design Manual" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/packages/tft-3pack/TRIADIC_PATTERN_DESIGN_MANUAL.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Triadic Pattern Design Manual",
+    "headline": "Triadic Pattern Design Manual",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/packages/tft-3pack/TRIADIC_PATTERN_DESIGN_MANUAL/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#how-to-choose-the-right-3pack-pattern-for-your-workflow">How to choose the right 3‑Pack pattern for your workflow</a></li>
+<li><a href="#use-when-the-action-is-simple-atomic-or-selfcontained">Use when the action is simple, atomic, or self‑contained.</a></li>
+<li><a href="#use-when-the-workflow-repeats-the-same-triadic-rhythm">Use when the workflow repeats the same triadic rhythm.</a></li>
+<li><a href="#use-when-a-transformation-itself-requires-a-full-triad">Use when a transformation itself requires a full triad.</a></li>
+<li><a href="#use-when-each-primitive-needs-elaboration-or-depth">Use when each primitive needs elaboration or depth.</a></li>
+<li><a href="#use-when-the-workflow-ascends-in-abstraction-or-refinement">Use when the workflow ascends in abstraction or refinement.</a></li>
+<li><a href="#use-when-the-workflow-must-be-reversible-or-symmetric">Use when the workflow must be reversible or symmetric.</a></li>
+<li><a href="#use-when-each-cycle-deepens-widens-or-grows">Use when each cycle deepens, widens, or grows.</a></li>
+<li><a href="#use-when-multiple-triads-orbit-a-shared-intent">Use when multiple triads orbit a shared intent.</a></li>
+<li><a href="#use-when-triads-interleave-across-threads-or-layers">Use when triads interleave across threads or layers.</a></li>
+<li><a href="#use-when-each-triad-triggers-the-next">Use when each triad triggers the next.</a></li>
+<li><a href="#use-when-p2-needs-variation-branching-or-experimentation">Use when P2 needs variation, branching, or experimentation.</a></li>
+<li><a href="#use-when-the-triad-reframes-another-process">Use when the triad reframes another process.</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/packages/" itemprop="item">
+                <span itemprop="name">Packages</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/packages/tft-3pack/" itemprop="item">
+                <span itemprop="name">Tft 3Pack</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Triadic Pattern Design Manual</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Triadic Pattern Design Manual</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="triadic-pattern-design-manual">🧭 <strong>Triadic Pattern Design Manual</strong><a class="toc-permalink" href="#triadic-pattern-design-manual" title="Permanent link to this heading">&para;</a></h1>
+<h6 id="by-nawder-loswin-142026-wwwtriadicframeworksorg">By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org<a class="toc-permalink" href="#by-nawder-loswin-142026-wwwtriadicframeworksorg" title="Permanent link to this heading">&para;</a></h6>
+<h3 id="how-to-choose-the-right-3pack-pattern-for-your-workflow"><em>How to choose the right 3‑Pack pattern for your workflow</em><a class="toc-permalink" href="#how-to-choose-the-right-3pack-pattern-for-your-workflow" title="Permanent link to this heading">&para;</a></h3>
+<p>The <strong>3‑Pack</strong> (P1 → P2 → P3) is the smallest complete RTT‑aligned action.<br />
+But real systems require more than a single triad — they require <strong>patterns</strong>.</p>
+<p>This manual helps you choose the right triadic pattern based on:</p>
+<ul>
+<li>workflow shape  </li>
+<li>complexity  </li>
+<li>temporal structure  </li>
+<li>resonance depth  </li>
+<li>multi‑agent needs  </li>
+<li>reversibility  </li>
+<li>concurrency  </li>
+<li>growth or refinement  </li>
+</ul>
+<p>Think of this as the <strong>design grammar</strong> for triadic systems.</p>
+<hr />
+<h1 id="1-core-3pack">🔹 1. <strong>Core 3‑Pack</strong><a class="toc-permalink" href="#1-core-3pack" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="use-when-the-action-is-simple-atomic-or-selfcontained"><em>Use when the action is simple, atomic, or self‑contained.</em><a class="toc-permalink" href="#use-when-the-action-is-simple-atomic-or-selfcontained" title="Permanent link to this heading">&para;</a></h3>
+<p>Choose this when:</p>
+<ul>
+<li>the task has a clear beginning, middle, and end  </li>
+<li>you want predictable structure  </li>
+<li>you need a safe, minimal RTT‑aligned action  </li>
+<li>the operation is not recursive or multi‑layered  </li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>a single API call  </li>
+<li>a one‑shot computation  </li>
+<li>a simple shell command  </li>
+<li>a single WRSADC dispatch  </li>
+</ul>
+<p><strong>If the action fits in one breath, use the Core 3‑Pack.</strong></p>
+<hr />
+<h1 id="2-sequential-triads-triadic-chain">🔸 2. <strong>Sequential Triads (Triadic Chain)</strong><a class="toc-permalink" href="#2-sequential-triads-triadic-chain" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="use-when-the-workflow-repeats-the-same-triadic-rhythm"><em>Use when the workflow repeats the same triadic rhythm.</em><a class="toc-permalink" href="#use-when-the-workflow-repeats-the-same-triadic-rhythm" title="Permanent link to this heading">&para;</a></h3>
+<p>Choose this when:</p>
+<ul>
+<li>you have a pipeline  </li>
+<li>you have multiple stages of similar shape  </li>
+<li>each cycle is independent  </li>
+<li>you want rhythmic, predictable progression  </li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>ETL pipelines  </li>
+<li>batch processing  </li>
+<li>repeated simulation steps  </li>
+<li>multi‑stage data cleaning  </li>
+</ul>
+<p><strong>If the workflow moves in pulses, use Sequential Triads.</strong></p>
+<hr />
+<h1 id="3-nested-triads">🔺 3. <strong>Nested Triads</strong><a class="toc-permalink" href="#3-nested-triads" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="use-when-a-transformation-itself-requires-a-full-triad"><em>Use when a transformation itself requires a full triad.</em><a class="toc-permalink" href="#use-when-a-transformation-itself-requires-a-full-triad" title="Permanent link to this heading">&para;</a></h3>
+<p>Choose this when:</p>
+<ul>
+<li>a step contains sub‑steps  </li>
+<li>you need recursion  </li>
+<li>you need multi‑layered reasoning  </li>
+<li>you want to preserve lineage inside lineage  </li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>evolutionary algorithms  </li>
+<li>nested loops  </li>
+<li>multi‑phase transformations  </li>
+<li>hierarchical workflows  </li>
+</ul>
+<p><strong>If a step contains a story, use Nested Triads.</strong></p>
+<hr />
+<h1 id="4-triadic-expansion-33-pattern">🔻 4. <strong>Triadic Expansion (3×3 Pattern)</strong><a class="toc-permalink" href="#4-triadic-expansion-33-pattern" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="use-when-each-primitive-needs-elaboration-or-depth"><em>Use when each primitive needs elaboration or depth.</em><a class="toc-permalink" href="#use-when-each-primitive-needs-elaboration-or-depth" title="Permanent link to this heading">&para;</a></h3>
+<p>Choose this when:</p>
+<ul>
+<li>each phase (begin, transform, close) has its own triadic arc  </li>
+<li>you want deep exploration  </li>
+<li>you want full‑cycle elaboration  </li>
+<li>you need stable, multi‑phase simulation steps  </li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>physics simulations  </li>
+<li>multi‑phase rendering  </li>
+<li>complex state machines  </li>
+<li>multi‑layer data refinement  </li>
+</ul>
+<p><strong>If each phase deserves its own triad, use Triadic Expansion.</strong></p>
+<hr />
+<h1 id="5-triadic-ladder">🔼 5. <strong>Triadic Ladder</strong><a class="toc-permalink" href="#5-triadic-ladder" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="use-when-the-workflow-ascends-in-abstraction-or-refinement"><em>Use when the workflow ascends in abstraction or refinement.</em><a class="toc-permalink" href="#use-when-the-workflow-ascends-in-abstraction-or-refinement" title="Permanent link to this heading">&para;</a></h3>
+<p>Choose this when:</p>
+<ul>
+<li>each level builds on the previous  </li>
+<li>you want progressive refinement  </li>
+<li>you want staged reasoning  </li>
+<li>you want a “zoom‑in” or “zoom‑out” effect  </li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>multi‑resolution analysis  </li>
+<li>hierarchical modeling  </li>
+<li>progressive summarization  </li>
+<li>multi‑stage optimization  </li>
+</ul>
+<p><strong>If the workflow climbs, use the Triadic Ladder.</strong></p>
+<hr />
+<h1 id="6-triadic-mirror">🔁 6. <strong>Triadic Mirror</strong><a class="toc-permalink" href="#6-triadic-mirror" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="use-when-the-workflow-must-be-reversible-or-symmetric"><em>Use when the workflow must be reversible or symmetric.</em><a class="toc-permalink" href="#use-when-the-workflow-must-be-reversible-or-symmetric" title="Permanent link to this heading">&para;</a></h3>
+<p>Choose this when:</p>
+<ul>
+<li>you need forward + backward passes  </li>
+<li>you want reversible transformations  </li>
+<li>you want symmetry‑aware reasoning  </li>
+<li>you want to “undo” or “reflect” a process  </li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>neural network forward/backprop  </li>
+<li>reversible computations  </li>
+<li>overlay‑driven reframing  </li>
+<li>bidirectional reasoning  </li>
+</ul>
+<p><strong>If the workflow must return through itself, use the Triadic Mirror.</strong></p>
+<hr />
+<h1 id="7-triadic-spiral">🌀 7. <strong>Triadic Spiral</strong><a class="toc-permalink" href="#7-triadic-spiral" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="use-when-each-cycle-deepens-widens-or-grows"><em>Use when each cycle deepens, widens, or grows.</em><a class="toc-permalink" href="#use-when-each-cycle-deepens-widens-or-grows" title="Permanent link to this heading">&para;</a></h3>
+<p>Choose this when:</p>
+<ul>
+<li>the system accumulates context  </li>
+<li>each iteration expands scope  </li>
+<li>you want iterative refinement  </li>
+<li>you want resonance‑aware growth  </li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>agent learning loops  </li>
+<li>iterative solvers  </li>
+<li>adaptive systems  </li>
+<li>exploratory simulations  </li>
+</ul>
+<p><strong>If the workflow grows, use the Triadic Spiral.</strong></p>
+<hr />
+<h1 id="8-triadic-constellation">✨ 8. <strong>Triadic Constellation</strong><a class="toc-permalink" href="#8-triadic-constellation" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="use-when-multiple-triads-orbit-a-shared-intent"><em>Use when multiple triads orbit a shared intent.</em><a class="toc-permalink" href="#use-when-multiple-triads-orbit-a-shared-intent" title="Permanent link to this heading">&para;</a></h3>
+<p>Choose this when:</p>
+<ul>
+<li>you have multiple agents  </li>
+<li>you have distributed processes  </li>
+<li>each triad is independent but aligned  </li>
+<li>you want parallel resonance  </li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>multi‑agent systems  </li>
+<li>distributed pipelines  </li>
+<li>parallel tasks with shared goals  </li>
+<li>collaborative workflows  </li>
+</ul>
+<p><strong>If many actors share one purpose, use the Triadic Constellation.</strong></p>
+<hr />
+<h1 id="9-triadic-weave">🧵 9. <strong>Triadic Weave</strong><a class="toc-permalink" href="#9-triadic-weave" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="use-when-triads-interleave-across-threads-or-layers"><em>Use when triads interleave across threads or layers.</em><a class="toc-permalink" href="#use-when-triads-interleave-across-threads-or-layers" title="Permanent link to this heading">&para;</a></h3>
+<p>Choose this when:</p>
+<ul>
+<li>you need concurrency  </li>
+<li>you have layered operations  </li>
+<li>you want braided workflows  </li>
+<li>you want interleaving without collision  </li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>concurrent pipelines  </li>
+<li>multi‑threaded processing  </li>
+<li>layered rendering  </li>
+<li>multi‑stream data flows  </li>
+</ul>
+<p><strong>If the workflow braids, use the Triadic Weave.</strong></p>
+<hr />
+<h1 id="10-triadic-cascade">🌊 10. <strong>Triadic Cascade</strong><a class="toc-permalink" href="#10-triadic-cascade" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="use-when-each-triad-triggers-the-next"><em>Use when each triad triggers the next.</em><a class="toc-permalink" href="#use-when-each-triad-triggers-the-next" title="Permanent link to this heading">&para;</a></h3>
+<p>Choose this when:</p>
+<ul>
+<li>stages depend on each other  </li>
+<li>you want waterfall‑style flow  </li>
+<li>you want controlled progression  </li>
+<li>you want predictable stage transitions  </li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>CI/CD pipelines  </li>
+<li>staged deployments  </li>
+<li>multi‑phase build systems  </li>
+<li>dependent workflows  </li>
+</ul>
+<p><strong>If each stage unlocks the next, use the Triadic Cascade.</strong></p>
+<hr />
+<h1 id="11-triadic-mutation">🧬 11. <strong>Triadic Mutation</strong><a class="toc-permalink" href="#11-triadic-mutation" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="use-when-p2-needs-variation-branching-or-experimentation"><em>Use when P2 needs variation, branching, or experimentation.</em><a class="toc-permalink" href="#use-when-p2-needs-variation-branching-or-experimentation" title="Permanent link to this heading">&para;</a></h3>
+<p>Choose this when:</p>
+<ul>
+<li>you want micro‑variation  </li>
+<li>you want branching behavior  </li>
+<li>you want evolutionary search  </li>
+<li>you want adaptive transformations  </li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>genetic algorithms  </li>
+<li>stochastic processes  </li>
+<li>mutation‑based optimization  </li>
+<li>adaptive tuning  </li>
+</ul>
+<p><strong>If the transformation must explore, use Triadic Mutation.</strong></p>
+<hr />
+<h1 id="12-triadic-lens-pattern">🔭 12. <strong>Triadic Lens Pattern</strong><a class="toc-permalink" href="#12-triadic-lens-pattern" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="use-when-the-triad-reframes-another-process"><em>Use when the triad reframes another process.</em><a class="toc-permalink" href="#use-when-the-triad-reframes-another-process" title="Permanent link to this heading">&para;</a></h3>
+<p>Choose this when:</p>
+<ul>
+<li>you want to apply an overlay  </li>
+<li>you want perspective shifts  </li>
+<li>you want interpretive passes  </li>
+<li>you want to wrap a process in a triadic lens  </li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>overlay‑driven reframing  </li>
+<li>interpretive transforms  </li>
+<li>structural‑awareness passes  </li>
+<li>WRSADC boundary lenses  </li>
+</ul>
+<p><strong>If the triad is a viewpoint, use the Triadic Lens.</strong></p>
+<hr />
+<h1 id="mythmatical-architects-note">🧙 Mythmatical Architect’s Note<a class="toc-permalink" href="#mythmatical-architects-note" title="Permanent link to this heading">&para;</a></h1>
+<p>Patterns are not rules — they are <strong>shapes of intention</strong>.<br />
+Choosing a pattern is choosing a <em>way of moving</em> through structure.</p>
+<ul>
+<li>If the action is simple → <strong>Core 3‑Pack</strong>  </li>
+<li>If it repeats → <strong>Sequential</strong>  </li>
+<li>If it contains depth → <strong>Nested</strong>  </li>
+<li>If each phase deserves its own arc → <strong>Expansion</strong>  </li>
+<li>If it climbs → <strong>Ladder</strong>  </li>
+<li>If it reflects → <strong>Mirror</strong>  </li>
+<li>If it grows → <strong>Spiral</strong>  </li>
+<li>If it distributes → <strong>Constellation</strong>  </li>
+<li>If it interleaves → <strong>Weave</strong>  </li>
+<li>If it triggers → <strong>Cascade</strong>  </li>
+<li>If it mutates → <strong>Mutation</strong>  </li>
+<li>If it reframes → <strong>Lens</strong></li>
+</ul>
+<p>This manual is your compass for designing triadic systems with clarity and resonance.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/TRIADIC_PATTERN_DESIGN_MANUAL.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/packages/tft-3pack/TRIADIC_PATTERN_DESIGN_MANUAL.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

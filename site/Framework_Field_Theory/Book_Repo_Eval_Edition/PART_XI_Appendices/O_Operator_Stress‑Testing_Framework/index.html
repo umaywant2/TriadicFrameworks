@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>O Operator Stress‑Testing Framework | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/O_Operator_Stress‑Testing_Framework/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="O Operator Stress‑Testing Framework" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/O_Operator_Stress‑Testing_Framework/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="O Operator Stress‑Testing Framework" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/O_Operator_Stress‑Testing_Framework.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "O Operator Stress\u2011Testing Framework",
+    "headline": "O Operator Stress\u2011Testing Framework",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/O_Operator_Stress\u2011Testing_Framework/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#the-canonical-framework-for-evaluating-operator-stability-paradox-behavior-dimensional-drift-and-coherence-response-under-stress">The canonical framework for evaluating operator stability, paradox behavior, dimensional drift, and coherence response under stress</a></li>
+<li><a href="#the-universal-matrix-for-operator-stresstesting">The universal matrix for operator stress‑testing</a></li>
+<li><a href="#31-bops-boundary-operators">3.1 B‑Ops — Boundary Operators</a><ul>
+<li><a href="#identity-separation-constraint">Identity, separation, constraint</a></li>
+</ul>
+</li>
+<li><a href="#32-lops-lineage-operators">3.2 L‑Ops — Lineage Operators</a><ul>
+<li><a href="#continuity-inheritance-progression">Continuity, inheritance, progression</a></li>
+</ul>
+</li>
+<li><a href="#33-rops-relational-operators">3.3 R‑Ops — Relational Operators</a><ul>
+<li><a href="#connection-comparison-mapping">Connection, comparison, mapping</a></li>
+</ul>
+</li>
+<li><a href="#34-tops-transition-operators">3.4 T‑Ops — Transition Operators</a><ul>
+<li><a href="#flow-change-transformation">Flow, change, transformation</a></li>
+</ul>
+</li>
+<li><a href="#35-eops-envelope-operators">3.5 E‑Ops — Envelope Operators</a><ul>
+<li><a href="#context-conditions-modulation">Context, conditions, modulation</a></li>
+</ul>
+</li>
+<li><a href="#36-hops-rhythm-operators">3.6 H‑Ops — Rhythm Operators</a><ul>
+<li><a href="#cadence-iteration-oscillation">Cadence, iteration, oscillation</a></li>
+</ul>
+</li>
+<li><a href="#37-cops-coherence-operators">3.7 C‑Ops — Coherence Operators</a><ul>
+<li><a href="#integration-paradox-resolution-stability">Integration, paradox resolution, stability</a></li>
+<li><a href="#how-metaoperators-behave-under-stress">How meta‑operators behave under stress</a></li>
+</ul>
+</li>
+<li><a href="#m1-modulate">M1 — Modulate</a></li>
+<li><a href="#m2-transpose">M2 — Transpose</a></li>
+<li><a href="#m3-amplify">M3 — Amplify</a></li>
+<li><a href="#m4-reconcile">M4 — Reconcile</a></li>
+<li><a href="#m5-generate">M5 — Generate</a></li>
+<li><a href="#template-a-operator-stress-sheet">Template A — Operator Stress Sheet</a></li>
+<li><a href="#template-b-multioperator-stress-grid">Template B — Multi‑Operator Stress Grid</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Framework_Field_Theory/" itemprop="item">
+                <span itemprop="name">Framework Field Theory</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Framework_Field_Theory/Book_Repo_Eval_Edition/" itemprop="item">
+                <span itemprop="name">Book Repo Eval Edition</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/" itemprop="item">
+                <span itemprop="name">Part Xi Appendices</span>
+              </a>
+            <meta itemprop="position" content="4" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">O Operator Stress‑Testing Framework</span>
+            <meta itemprop="position" content="5" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">O Operator Stress‑Testing Framework</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="appendix-o-operator-stresstesting-framework"><strong>Appendix O — Operator Stress‑Testing Framework</strong><a class="toc-permalink" href="#appendix-o-operator-stresstesting-framework" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="the-canonical-framework-for-evaluating-operator-stability-paradox-behavior-dimensional-drift-and-coherence-response-under-stress"><em>The canonical framework for evaluating operator stability, paradox behavior, dimensional drift, and coherence response under stress</em><a class="toc-permalink" href="#the-canonical-framework-for-evaluating-operator-stability-paradox-behavior-dimensional-drift-and-coherence-response-under-stress" title="Permanent link to this heading">&para;</a></h3>
+<p>Operator Stress‑Testing is the <strong>mechanical evaluation layer</strong> of Framework Field Theory.<br />
+It determines:</p>
+<ul>
+<li>how each operator behaves under pressure  </li>
+<li>how paradox accumulates or dissipates  </li>
+<li>how dimensional drift is triggered  </li>
+<li>how coherence engines respond  </li>
+<li>how collapse or evolution emerges  </li>
+</ul>
+<p>This appendix provides the <strong>complete stress‑testing framework</strong> for all seven operator families (B–C) and the five meta‑dimensional operators (M1–M5).</p>
+<p>It is designed for:</p>
+<ul>
+<li>research  </li>
+<li>diagnostics  </li>
+<li>hybrid evaluation  </li>
+<li>generative engine testing  </li>
+<li>field‑level simulation  </li>
+</ul>
+<hr />
+<h1 id="1-the-five-stress-conditions"><strong>1. The Five Stress Conditions</strong><a class="toc-permalink" href="#1-the-five-stress-conditions" title="Permanent link to this heading">&para;</a></h1>
+<p>Every operator is tested under five canonical stress conditions:</p>
+<ol>
+<li><strong>Contradiction Stress</strong> — direct logical or structural conflict  </li>
+<li><strong>Overload Stress</strong> — too much input, complexity, or demand  </li>
+<li><strong>Dimensional Drift Stress</strong> — forced upward or downward movement  </li>
+<li><strong>Interference Stress</strong> — collision with another operator  </li>
+<li><strong>Paradox Saturation Stress</strong> — paradox exceeds coherence capacity  </li>
+</ol>
+<p>Each condition reveals different failure modes and evolution triggers.</p>
+<hr />
+<h1 id="2-the-operator-stress-grid-bc"><strong>2. The Operator Stress Grid (B–C)</strong><a class="toc-permalink" href="#2-the-operator-stress-grid-bc" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="the-universal-matrix-for-operator-stresstesting"><em>The universal matrix for operator stress‑testing</em><a class="toc-permalink" href="#the-universal-matrix-for-operator-stresstesting" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Operator × Stress Condition → Behavior Pattern
+</code></pre></div>
+
+<p>Each operator is evaluated across:</p>
+<ul>
+<li>stability  </li>
+<li>distortion  </li>
+<li>collapse mode  </li>
+<li>recovery mode  </li>
+<li>drift tendency  </li>
+<li>coherence requirement  </li>
+</ul>
+<p>This grid is the backbone of the appendix.</p>
+<hr />
+<h1 id="3-stresstest-profiles-for-each-operator-family"><strong>3. Stress‑Test Profiles for Each Operator Family</strong><a class="toc-permalink" href="#3-stresstest-profiles-for-each-operator-family" title="Permanent link to this heading">&para;</a></h1>
+<p>Below are the canonical stress‑test profiles for all seven operator families.</p>
+<hr />
+<h2 id="31-bops-boundary-operators"><strong>3.1 B‑Ops — Boundary Operators</strong><a class="toc-permalink" href="#31-bops-boundary-operators" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="identity-separation-constraint"><em>Identity, separation, constraint</em><a class="toc-permalink" href="#identity-separation-constraint" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Under Contradiction:</strong><br />
+- rigidify<br />
+- over‑constrain<br />
+- collapse to 1D  </p>
+<p><strong>Under Overload:</strong><br />
+- boundary fragmentation<br />
+- identity distortion  </p>
+<p><strong>Under Drift Stress:</strong><br />
+- resist upward drift<br />
+- collapse downward  </p>
+<p><strong>Under Interference:</strong><br />
+- conflict with T‑Ops and H‑Ops  </p>
+<p><strong>Under Paradox Saturation:</strong><br />
+- paradox rejection<br />
+- coherence engine required for recovery  </p>
+<hr />
+<h2 id="32-lops-lineage-operators"><strong>3.2 L‑Ops — Lineage Operators</strong><a class="toc-permalink" href="#32-lops-lineage-operators" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="continuity-inheritance-progression"><em>Continuity, inheritance, progression</em><a class="toc-permalink" href="#continuity-inheritance-progression" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Under Contradiction:</strong><br />
+- sequence break<br />
+- lineage inversion  </p>
+<p><strong>Under Overload:</strong><br />
+- chain overextension<br />
+- historical distortion  </p>
+<p><strong>Under Drift Stress:</strong><br />
+- drift upward into R‑Ops<br />
+- collapse downward into B‑Ops  </p>
+<p><strong>Under Interference:</strong><br />
+- conflict with C‑Ops (integration)  </p>
+<p><strong>Under Paradox Saturation:</strong><br />
+- lineage collapse<br />
+- requires T‑Ops for recovery  </p>
+<hr />
+<h2 id="33-rops-relational-operators"><strong>3.3 R‑Ops — Relational Operators</strong><a class="toc-permalink" href="#33-rops-relational-operators" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="connection-comparison-mapping"><em>Connection, comparison, mapping</em><a class="toc-permalink" href="#connection-comparison-mapping" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Under Contradiction:</strong><br />
+- relational inversion<br />
+- category collapse  </p>
+<p><strong>Under Overload:</strong><br />
+- network saturation<br />
+- mapping distortion  </p>
+<p><strong>Under Drift Stress:</strong><br />
+- drift upward into T‑Ops<br />
+- collapse downward into L‑Ops  </p>
+<p><strong>Under Interference:</strong><br />
+- conflict with E‑Ops (context)  </p>
+<p><strong>Under Paradox Saturation:</strong><br />
+- paradox amplification<br />
+- requires C‑Ops for recovery  </p>
+<hr />
+<h2 id="34-tops-transition-operators"><strong>3.4 T‑Ops — Transition Operators</strong><a class="toc-permalink" href="#34-tops-transition-operators" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="flow-change-transformation"><em>Flow, change, transformation</em><a class="toc-permalink" href="#flow-change-transformation" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Under Contradiction:</strong><br />
+- oscillation<br />
+- unstable switching  </p>
+<p><strong>Under Overload:</strong><br />
+- runaway transitions<br />
+- process collapse  </p>
+<p><strong>Under Drift Stress:</strong><br />
+- drift upward into E‑Ops<br />
+- collapse downward into R‑Ops  </p>
+<p><strong>Under Interference:</strong><br />
+- conflict with H‑Ops (rhythm)  </p>
+<p><strong>Under Paradox Saturation:</strong><br />
+- transition loops<br />
+- requires E‑Ops for recovery  </p>
+<hr />
+<h2 id="35-eops-envelope-operators"><strong>3.5 E‑Ops — Envelope Operators</strong><a class="toc-permalink" href="#35-eops-envelope-operators" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="context-conditions-modulation"><em>Context, conditions, modulation</em><a class="toc-permalink" href="#context-conditions-modulation" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Under Contradiction:</strong><br />
+- context inversion<br />
+- envelope collapse  </p>
+<p><strong>Under Overload:</strong><br />
+- contextual overload<br />
+- environmental distortion  </p>
+<p><strong>Under Drift Stress:</strong><br />
+- drift upward into H‑Ops<br />
+- collapse downward into T‑Ops  </p>
+<p><strong>Under Interference:</strong><br />
+- conflict with R‑Ops (mapping)  </p>
+<p><strong>Under Paradox Saturation:</strong><br />
+- paradox diffusion<br />
+- requires H‑Ops for recovery  </p>
+<hr />
+<h2 id="36-hops-rhythm-operators"><strong>3.6 H‑Ops — Rhythm Operators</strong><a class="toc-permalink" href="#36-hops-rhythm-operators" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="cadence-iteration-oscillation"><em>Cadence, iteration, oscillation</em><a class="toc-permalink" href="#cadence-iteration-oscillation" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Under Contradiction:</strong><br />
+- rhythm break<br />
+- oscillation instability  </p>
+<p><strong>Under Overload:</strong><br />
+- frequency distortion<br />
+- amplitude collapse  </p>
+<p><strong>Under Drift Stress:</strong><br />
+- drift upward into C‑Ops<br />
+- collapse downward into E‑Ops  </p>
+<p><strong>Under Interference:</strong><br />
+- conflict with T‑Ops (flow)  </p>
+<p><strong>Under Paradox Saturation:</strong><br />
+- paradox oscillation<br />
+- requires C‑Ops for recovery  </p>
+<hr />
+<h2 id="37-cops-coherence-operators"><strong>3.7 C‑Ops — Coherence Operators</strong><a class="toc-permalink" href="#37-cops-coherence-operators" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="integration-paradox-resolution-stability"><em>Integration, paradox resolution, stability</em><a class="toc-permalink" href="#integration-paradox-resolution-stability" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Under Contradiction:</strong><br />
+- paradox intensification<br />
+- coherence strain  </p>
+<p><strong>Under Overload:</strong><br />
+- coherence saturation<br />
+- integration failure  </p>
+<p><strong>Under Drift Stress:</strong><br />
+- drift upward into meta‑structure<br />
+- collapse downward into H‑Ops  </p>
+<p><strong>Under Interference:</strong><br />
+- conflict with B‑Ops (rigidity)  </p>
+<p><strong>Under Paradox Saturation:</strong><br />
+- coherence collapse<br />
+- requires meta‑coherence engine  </p>
+<hr />
+<h1 id="4-stresstest-profiles-for-metadimensional-operators-m1m5"><strong>4. Stress‑Test Profiles for Meta‑Dimensional Operators (M1–M5)</strong><a class="toc-permalink" href="#4-stresstest-profiles-for-metadimensional-operators-m1m5" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="how-metaoperators-behave-under-stress"><em>How meta‑operators behave under stress</em><a class="toc-permalink" href="#how-metaoperators-behave-under-stress" title="Permanent link to this heading">&para;</a></h3>
+<hr />
+<h2 id="m1-modulate"><strong>M1 — Modulate</strong><a class="toc-permalink" href="#m1-modulate" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Failure Mode:</strong> dimensional instability<br />
+<strong>Recovery:</strong> coherence engine  </p>
+<h2 id="m2-transpose"><strong>M2 — Transpose</strong><a class="toc-permalink" href="#m2-transpose" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Failure Mode:</strong> domain mismatch<br />
+<strong>Recovery:</strong> envelope rebuild  </p>
+<h2 id="m3-amplify"><strong>M3 — Amplify</strong><a class="toc-permalink" href="#m3-amplify" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Failure Mode:</strong> coherence overload<br />
+<strong>Recovery:</strong> paradox routing  </p>
+<h2 id="m4-reconcile"><strong>M4 — Reconcile</strong><a class="toc-permalink" href="#m4-reconcile" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Failure Mode:</strong> cross‑framework paradox explosion<br />
+<strong>Recovery:</strong> meta‑coherence engine  </p>
+<h2 id="m5-generate"><strong>M5 — Generate</strong><a class="toc-permalink" href="#m5-generate" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Failure Mode:</strong> generative cascade collapse<br />
+<strong>Recovery:</strong> dimensional rebuild  </p>
+<hr />
+<h1 id="5-the-stresstesting-cycle-diagramready"><strong>5. The Stress‑Testing Cycle (Diagram‑Ready)</strong><a class="toc-permalink" href="#5-the-stresstesting-cycle-diagramready" title="Permanent link to this heading">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code>[Apply Stress]
+      ↓
+[Observe Operator Behavior]
+      ↓
+[Identify Failure Mode]
+      ↓
+[Trigger Recovery Pathway]
+      ↓
+[Measure Coherence]
+      ↓
+[Repeat]
+</code></pre></div>
+
+<p>This cycle is used in all operator diagnostics.</p>
+<hr />
+<h1 id="6-stresstesting-templates-copyready"><strong>6. Stress‑Testing Templates (Copy‑Ready)</strong><a class="toc-permalink" href="#6-stresstesting-templates-copyready" title="Permanent link to this heading">&para;</a></h1>
+<hr />
+<h2 id="template-a-operator-stress-sheet"><strong>Template A — Operator Stress Sheet</strong><a class="toc-permalink" href="#template-a-operator-stress-sheet" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>OPERATOR STRESS TEST
+────────────────────────────────
+Operator:
+Stress Condition:
+Observed Behavior:
+Failure Mode:
+Recovery Pathway:
+Dimensional Drift:
+Coherence Requirement:
+────────────────────────────────
+</code></pre></div>
+
+<hr />
+<h2 id="template-b-multioperator-stress-grid"><strong>Template B — Multi‑Operator Stress Grid</strong><a class="toc-permalink" href="#template-b-multioperator-stress-grid" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>Operator × Stress Condition → Behavior Pattern
+</code></pre></div>
+
+<hr />
+<h1 id="7-appendix-o-in-one-sentence"><strong>7. Appendix O in One Sentence</strong><a class="toc-permalink" href="#7-appendix-o-in-one-sentence" title="Permanent link to this heading">&para;</a></h1>
+<blockquote>
+<p><strong>Appendix O defines the Operator Stress‑Testing Framework — the canonical system for evaluating how operators behave under contradiction, overload, drift, interference, and paradox saturation across the 0D–9D stack.</strong></p>
+</blockquote>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/O_Operator_Stress‑Testing_Framework.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/O_Operator_Stress‑Testing_Framework.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

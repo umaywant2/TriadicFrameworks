@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Modules | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/NoS/MODULES/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Modules" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/NoS/MODULES/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Modules" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/NoS/MODULES.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Modules",
+    "headline": "Modules",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/NoS/MODULES/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#design-principles">Design Principles</a></li>
+<li><a href="#module-overview">Module Overview</a></li>
+<li><a href="#validatecorridor">validateCorridor 🛤️</a><ul>
+<li><a href="#what-it-does">What it does</a></li>
+<li><a href="#invariant">Invariant</a></li>
+<li><a href="#signals-observed">Signals Observed</a></li>
+<li><a href="#breach-condition">Breach Condition</a></li>
+<li><a href="#output">Output</a></li>
+</ul>
+</li>
+<li><a href="#wrapcheck">wrapCheck 🔄</a><ul>
+<li><a href="#what-it-does_1">What it does</a></li>
+<li><a href="#invariant_1">Invariant</a></li>
+<li><a href="#signals-observed_1">Signals Observed</a></li>
+<li><a href="#breach-condition_1">Breach Condition</a></li>
+<li><a href="#output_1">Output</a></li>
+</ul>
+</li>
+<li><a href="#substrateaudit">substrateAudit 🧱</a><ul>
+<li><a href="#what-it-does_2">What it does</a></li>
+<li><a href="#invariant_2">Invariant</a></li>
+<li><a href="#signals-observed_2">Signals Observed</a></li>
+<li><a href="#breach-condition_2">Breach Condition</a></li>
+<li><a href="#output_2">Output</a></li>
+</ul>
+</li>
+<li><a href="#emitbadge">emitBadge 🏷️</a><ul>
+<li><a href="#what-it-does_3">What it does</a></li>
+<li><a href="#badge-fields-example">Badge Fields (example)</a></li>
+<li><a href="#invariant_3">Invariant</a></li>
+</ul>
+</li>
+<li><a href="#module-interaction-model">Module Interaction Model 🔗</a></li>
+<li><a href="#extending-the-module-set">Extending the Module Set 🧪</a></li>
+<li><a href="#why-this-matters">Why This Matters</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/NoS/" itemprop="item">
+                <span itemprop="name">Nos</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Modules</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Modules</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="nawderos-modules">NawderOS Modules 🧩<a class="toc-permalink" href="#nawderos-modules" title="Permanent link to this heading">&para;</a></h1>
+<p><em>(RTT‑Aligned System Components)</em></p>
+<p>NawderOS is intentionally small. Rather than dozens of subsystems, it defines a <strong>minimal set of RTT‑aligned modules</strong> that observe, validate, and emit signals about system coherence over time.</p>
+<p>Each module exists to answer a simple question:</p>
+<blockquote>
+<p><em>Is the system still behaving the way it thinks it is?</em> 🙂</p>
+</blockquote>
+<hr />
+<h2 id="design-principles">Design Principles<a class="toc-permalink" href="#design-principles" title="Permanent link to this heading">&para;</a></h2>
+<p>All NawderOS modules follow the same rules:</p>
+<ul>
+<li><strong>Observation over enforcement</strong></li>
+<li><strong>Validation over prediction</strong></li>
+<li><strong>Signals over side effects</strong></li>
+<li><strong>Forkability over completeness</strong></li>
+</ul>
+<p>Modules are meant to be understandable, replaceable, and extensible.</p>
+<hr />
+<h2 id="module-overview">Module Overview<a class="toc-permalink" href="#module-overview" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>validateCorridor</code></td>
+<td>Ensures behavior remains within expected coherence bounds</td>
+</tr>
+<tr>
+<td><code>wrapCheck</code></td>
+<td>Observes transitions across system boundaries</td>
+</tr>
+<tr>
+<td><code>substrateAudit</code></td>
+<td>Assesses baseline alignment at boot and runtime</td>
+</tr>
+<tr>
+<td><code>emitBadge</code></td>
+<td>Emits structured, machine‑readable system signals</td>
+</tr>
+</tbody>
+</table>
+<p>Each module maps directly to an RTT concept and can be implemented independently.</p>
+<hr />
+<h2 id="validatecorridor"><code>validateCorridor</code> 🛤️<a class="toc-permalink" href="#validatecorridor" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>RTT Concept:</strong> Coherence corridors<br />
+<strong>Role:</strong> Observe whether system behavior remains within expected bounds</p>
+<h3 id="what-it-does">What it does<a class="toc-permalink" href="#what-it-does" title="Permanent link to this heading">&para;</a></h3>
+<p><code>validateCorridor</code> watches defined regions of system behavior (memory access, scheduling windows, module execution) and checks whether activity remains coherent relative to declared assumptions.</p>
+<p>It does <strong>not</strong> block by default. It observes and reports.</p>
+<h3 id="invariant">Invariant<a class="toc-permalink" href="#invariant" title="Permanent link to this heading">&para;</a></h3>
+<blockquote>
+<p>Behavior within a declared corridor remains structurally consistent with its assumptions.</p>
+</blockquote>
+<h3 id="signals-observed">Signals Observed<a class="toc-permalink" href="#signals-observed" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Memory region access</li>
+<li>Scheduler transitions</li>
+<li>Module entry/exit points</li>
+</ul>
+<h3 id="breach-condition">Breach Condition<a class="toc-permalink" href="#breach-condition" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Access or transition occurs outside a declared corridor boundary</li>
+</ul>
+<h3 id="output">Output<a class="toc-permalink" href="#output" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Emits a <code>CORRIDOR_BREACH</code> badge with context</li>
+</ul>
+<p>🙂 <em>Think of this as a “this still makes sense, right?” check.</em></p>
+<hr />
+<h2 id="wrapcheck"><code>wrapCheck</code> 🔄<a class="toc-permalink" href="#wrapcheck" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>RTT Concept:</strong> Boundary resonance<br />
+<strong>Role:</strong> Observe transitions between system layers</p>
+<h3 id="what-it-does_1">What it does<a class="toc-permalink" href="#what-it-does_1" title="Permanent link to this heading">&para;</a></h3>
+<p><code>wrapCheck</code> monitors moments where control or context shifts:<br />
+- user → kernel<br />
+- kernel → module<br />
+- process → process</p>
+<p>These are high‑risk points for coherence drift.</p>
+<h3 id="invariant_1">Invariant<a class="toc-permalink" href="#invariant_1" title="Permanent link to this heading">&para;</a></h3>
+<blockquote>
+<p>Transitions preserve expected structural context.</p>
+</blockquote>
+<h3 id="signals-observed_1">Signals Observed<a class="toc-permalink" href="#signals-observed_1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Syscall entry/exit</li>
+<li>Context switches</li>
+<li>Module load/unload</li>
+</ul>
+<h3 id="breach-condition_1">Breach Condition<a class="toc-permalink" href="#breach-condition_1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Transition occurs without expected context or metadata</li>
+</ul>
+<h3 id="output_1">Output<a class="toc-permalink" href="#output_1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Emits a <code>WRAP_DRIFT</code> badge</li>
+</ul>
+<p>🙂 <em>This is where “we crossed a boundary and something felt off” gets logged.</em></p>
+<hr />
+<h2 id="substrateaudit"><code>substrateAudit</code> 🧱<a class="toc-permalink" href="#substrateaudit" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>RTT Concept:</strong> Substrate alignment<br />
+<strong>Role:</strong> Assess baseline system coherence</p>
+<h3 id="what-it-does_2">What it does<a class="toc-permalink" href="#what-it-does_2" title="Permanent link to this heading">&para;</a></h3>
+<p><code>substrateAudit</code> runs at boot and optionally at runtime to assess whether the system’s foundational assumptions still hold.</p>
+<p>This includes:<br />
+- kernel version expectations<br />
+- module compatibility<br />
+- declared RTT feature flags</p>
+<h3 id="invariant_2">Invariant<a class="toc-permalink" href="#invariant_2" title="Permanent link to this heading">&para;</a></h3>
+<blockquote>
+<p>The system substrate matches its declared operating assumptions.</p>
+</blockquote>
+<h3 id="signals-observed_2">Signals Observed<a class="toc-permalink" href="#signals-observed_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Boot parameters</li>
+<li>Kernel configuration</li>
+<li>Module metadata</li>
+</ul>
+<h3 id="breach-condition_2">Breach Condition<a class="toc-permalink" href="#breach-condition_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Mismatch between declared and observed substrate state</li>
+</ul>
+<h3 id="output_2">Output<a class="toc-permalink" href="#output_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Emits a <code>SUBSTRATE_DRIFT</code> badge</li>
+</ul>
+<p>🙂 <em>This answers: “Are we still standing on the ground we think we are?”</em></p>
+<hr />
+<h2 id="emitbadge"><code>emitBadge</code> 🏷️<a class="toc-permalink" href="#emitbadge" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>RTT Concept:</strong> Lineage and validation signaling<br />
+<strong>Role:</strong> Emit structured system events</p>
+<h3 id="what-it-does_3">What it does<a class="toc-permalink" href="#what-it-does_3" title="Permanent link to this heading">&para;</a></h3>
+<p><code>emitBadge</code> is the common output path for all modules.<br />
+Badges are <strong>signals</strong>, not alerts.</p>
+<p>They are:<br />
+- machine‑readable<br />
+- append‑only<br />
+- fork‑friendly</p>
+<h3 id="badge-fields-example">Badge Fields (example)<a class="toc-permalink" href="#badge-fields-example" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><code>badge_type</code></li>
+<li><code>timestamp</code></li>
+<li><code>module</code></li>
+<li><code>context</code></li>
+<li><code>severity</code></li>
+</ul>
+<h3 id="invariant_3">Invariant<a class="toc-permalink" href="#invariant_3" title="Permanent link to this heading">&para;</a></h3>
+<blockquote>
+<p>System events are observable without altering system behavior.</p>
+</blockquote>
+<p>🙂 <em>Badges are boring on purpose. Boring scales.</em></p>
+<hr />
+<h2 id="module-interaction-model">Module Interaction Model 🔗<a class="toc-permalink" href="#module-interaction-model" title="Permanent link to this heading">&para;</a></h2>
+<p>Modules do <strong>not</strong> call each other directly.</p>
+<p>Instead:<br />
+- Each module observes independently<br />
+- All output flows through <code>emitBadge</code><br />
+- Downstream tools decide what matters</p>
+<p>This keeps the system:<br />
+- composable<br />
+- debuggable<br />
+- non‑fragile</p>
+<hr />
+<h2 id="extending-the-module-set">Extending the Module Set 🧪<a class="toc-permalink" href="#extending-the-module-set" title="Permanent link to this heading">&para;</a></h2>
+<p>Forking NawderOS often means adding new modules.</p>
+<p>When doing so:<br />
+1. Define the RTT concept you’re expressing<br />
+2. Declare a clear invariant<br />
+3. Specify breach conditions<br />
+4. Emit badges — don’t enforce behavior</p>
+<p>If your module needs to <em>control</em> the system, it probably doesn’t belong here 😉</p>
+<hr />
+<h2 id="why-this-matters">Why This Matters<a class="toc-permalink" href="#why-this-matters" title="Permanent link to this heading">&para;</a></h2>
+<p>RTT is about <strong>maintaining coherence across time</strong>, not enforcing correctness at every step.</p>
+<p>These modules give you:<br />
+- visibility into drift<br />
+- language for alignment<br />
+- signals you can reason about</p>
+<p>They don’t tell you what to do.<br />
+They tell you what’s happening.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/NoS/MODULES.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/NoS/MODULES.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

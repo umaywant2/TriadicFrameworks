@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Atlas | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/packages/tft-3pack/3pak-shell/tft_primitive_wrappers/ATLAS/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Atlas" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/packages/tft-3pack/3pak-shell/tft_primitive_wrappers/ATLAS/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Atlas" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/packages/tft-3pack/3pak-shell/tft_primitive_wrappers/ATLAS.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Atlas",
+    "headline": "Atlas",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/packages/tft-3pack/3pak-shell/tft_primitive_wrappers/ATLAS/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#a-visual-guide-to-higherorder-3pack-structures">A Visual Guide to Higher‑Order 3‑Pack Structures</a></li>
+<li><a href="#the-fundamental-triadic-gesture">The fundamental triadic gesture</a></li>
+<li><a href="#triads-in-a-row-a-triadic-chain">Triads in a row — a triadic chain</a></li>
+<li><a href="#a-triad-inside-a-triad-recursion-with-structure">A triad inside a triad — recursion with structure</a></li>
+<li><a href="#each-primitive-becomes-its-own-triad">Each primitive becomes its own triad</a></li>
+<li><a href="#each-cycle-ascends-in-scope-or-abstraction">Each cycle ascends in scope or abstraction</a></li>
+<li><a href="#forward-and-backward-symmetry">Forward and backward symmetry</a></li>
+<li><a href="#each-cycle-grows-widens-or-deepens">Each cycle grows, widens, or deepens</a></li>
+<li><a href="#multiple-triads-orbiting-a-central-purpose">Multiple triads orbiting a central purpose</a></li>
+<li><a href="#interleaving-triads-parallel-resonance">Interleaving triads — parallel resonance</a></li>
+<li><a href="#each-closure-triggers-the-next-beginning">Each closure triggers the next beginning</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/packages/" itemprop="item">
+                <span itemprop="name">Packages</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/packages/tft-3pack/" itemprop="item">
+                <span itemprop="name">Tft 3Pack</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/packages/tft-3pack/3pak-shell/" itemprop="item">
+                <span itemprop="name">3Pak Shell</span>
+              </a>
+            <meta itemprop="position" content="4" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/packages/tft-3pack/3pak-shell/tft_primitive_wrappers/" itemprop="item">
+                <span itemprop="name">Tft Primitive Wrappers</span>
+              </a>
+            <meta itemprop="position" content="5" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Atlas</span>
+            <meta itemprop="position" content="6" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Atlas</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="triadicpattern-atlas">🌌 <strong>Triadic‑Pattern Atlas</strong><a class="toc-permalink" href="#triadicpattern-atlas" title="Permanent link to this heading">&para;</a></h1>
+<h6 id="by-nawder-loswin-142026-wwwtriadicframeworksorg">By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org<a class="toc-permalink" href="#by-nawder-loswin-142026-wwwtriadicframeworksorg" title="Permanent link to this heading">&para;</a></h6>
+<h3 id="a-visual-guide-to-higherorder-3pack-structures"><em>A Visual Guide to Higher‑Order 3‑Pack Structures</em><a class="toc-permalink" href="#a-visual-guide-to-higherorder-3pack-structures" title="Permanent link to this heading">&para;</a></h3>
+<p>The <strong>3‑Pack</strong> is the smallest complete unit of RTT‑aligned action:</p>
+<ul>
+<li><strong>Primitive 1</strong> — Begin  </li>
+<li><strong>Primitive 2</strong> — Transform  </li>
+<li><strong>Primitive 3</strong> — Close  </li>
+</ul>
+<p>But triads become powerful when they <strong>combine</strong>, <strong>nest</strong>, <strong>expand</strong>, and <strong>spiral</strong>.<br />
+This atlas visualizes the major triadic patterns used throughout TriadicFrameworks.</p>
+<hr />
+<h1 id="1-the-core-3pack">1. <strong>The Core 3‑Pack</strong><a class="toc-permalink" href="#1-the-core-3pack" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="the-fundamental-triadic-gesture"><em>The fundamental triadic gesture</em><a class="toc-permalink" href="#the-fundamental-triadic-gesture" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>   🔹 P1 — Begin
+        ↓
+   🔸 P2 — Transform
+        ↓
+   🔺 P3 — Close
+</code></pre></div>
+
+<p>This is the heartbeat of RTT‑aligned action.</p>
+<hr />
+<h1 id="2-sequential-triads">2. <strong>Sequential Triads</strong><a class="toc-permalink" href="#2-sequential-triads" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="triads-in-a-row-a-triadic-chain"><em>Triads in a row — a triadic chain</em><a class="toc-permalink" href="#triads-in-a-row-a-triadic-chain" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Cycle 1:   P1 → P2 → P3
+Cycle 2:   P1 → P2 → P3
+Cycle 3:   P1 → P2 → P3
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>P1 → P2 → P3 → P1 → P2 → P3 → P1 → P2 → P3
+</code></pre></div>
+
+<p>Used for workflows that progress in rhythmic pulses.</p>
+<hr />
+<h1 id="3-nested-triads">3. <strong>Nested Triads</strong><a class="toc-permalink" href="#3-nested-triads" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="a-triad-inside-a-triad-recursion-with-structure"><em>A triad inside a triad — recursion with structure</em><a class="toc-permalink" href="#a-triad-inside-a-triad-recursion-with-structure" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Outer Cycle:
+   P1
+    ↓
+   P2 ──┐
+        │ Nested Cycle:
+        │   P1 → P2 → P3
+        └───
+    ↓
+   P3
+</code></pre></div>
+
+<p>This creates a <strong>triadic pulse inside a triadic wave</strong>.</p>
+<hr />
+<h1 id="4-triadic-expansion-33-pattern">4. <strong>Triadic Expansion (3×3 Pattern)</strong><a class="toc-permalink" href="#4-triadic-expansion-33-pattern" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="each-primitive-becomes-its-own-triad"><em>Each primitive becomes its own triad</em><a class="toc-permalink" href="#each-primitive-becomes-its-own-triad" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>P1 expands → P1 → P2 → P3
+P2 expands → P1 → P2 → P3
+P3 expands → P1 → P2 → P3
+</code></pre></div>
+
+<p>Visualized:</p>
+<div class="codehilite"><pre><span></span><code>P1:  🔹 → 🔸 → 🔺
+P2:  🔹 → 🔸 → 🔺
+P3:  🔹 → 🔸 → 🔺
+</code></pre></div>
+
+<p>This forms a <strong>9‑step resonance arc</strong>.</p>
+<hr />
+<h1 id="5-triadic-ladder">5. <strong>Triadic Ladder</strong><a class="toc-permalink" href="#5-triadic-ladder" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="each-cycle-ascends-in-scope-or-abstraction"><em>Each cycle ascends in scope or abstraction</em><a class="toc-permalink" href="#each-cycle-ascends-in-scope-or-abstraction" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Level 1:  P1 → P2 → P3
+Level 2:      P1 → P2 → P3
+Level 3:           P1 → P2 → P3
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>P1 → P2 → P3
+      P1 → P2 → P3
+            P1 → P2 → P3
+</code></pre></div>
+
+<p>Used for progressive refinement or staged reasoning.</p>
+<hr />
+<h1 id="6-triadic-mirror-pattern">6. <strong>Triadic Mirror Pattern</strong><a class="toc-permalink" href="#6-triadic-mirror-pattern" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="forward-and-backward-symmetry"><em>Forward and backward symmetry</em><a class="toc-permalink" href="#forward-and-backward-symmetry" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Forward:   P1 → P2 → P3
+Mirror:    P3 → P2 → P1
+</code></pre></div>
+
+<p>Combined:</p>
+<div class="codehilite"><pre><span></span><code>P1 → P2 → P3 → P2 → P1
+</code></pre></div>
+
+<p>A resonance‑preserving reflection.</p>
+<hr />
+<h1 id="7-triadic-spiral">7. <strong>Triadic Spiral</strong><a class="toc-permalink" href="#7-triadic-spiral" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="each-cycle-grows-widens-or-deepens"><em>Each cycle grows, widens, or deepens</em><a class="toc-permalink" href="#each-cycle-grows-widens-or-deepens" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Cycle 1:  P1 → P2 → P3
+Cycle 2:  P1 → P2 → P2 → P3 → P3 → P1
+Cycle 3:  Full expansion (3×3)
+</code></pre></div>
+
+<p>Visual spiral:</p>
+<div class="codehilite"><pre><span></span><code>      P1
+     ↙  ↘
+   P2 →  P3
+    ↘   ↙
+      P1
+</code></pre></div>
+
+<p>This pattern is used for <strong>growth</strong>, <strong>exploration</strong>, and <strong>deepening context</strong>.</p>
+<hr />
+<h1 id="8-triadic-constellation">8. <strong>Triadic Constellation</strong><a class="toc-permalink" href="#8-triadic-constellation" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="multiple-triads-orbiting-a-central-purpose"><em>Multiple triads orbiting a central purpose</em><a class="toc-permalink" href="#multiple-triads-orbiting-a-central-purpose" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>           [ Core Intent ]
+           /      |      \
+         T1       T2      T3
+       (P1-2-3) (P1-2-3) (P1-2-3)
+</code></pre></div>
+
+<p>Used when several triadic cycles support a shared goal.</p>
+<hr />
+<h1 id="9-triadic-weave">9. <strong>Triadic Weave</strong><a class="toc-permalink" href="#9-triadic-weave" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="interleaving-triads-parallel-resonance"><em>Interleaving triads — parallel resonance</em><a class="toc-permalink" href="#interleaving-triads-parallel-resonance" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Thread A:  P1 ——→ P2 ——→ P3
+Thread B:     P1 ——→ P2 ——→ P3
+Thread C:        P1 ——→ P2 ——→ P3
+</code></pre></div>
+
+<p>This creates a <strong>braided triadic structure</strong>, ideal for multi‑agent or multi‑module workflows.</p>
+<hr />
+<h1 id="10-triadic-cascade">10. <strong>Triadic Cascade</strong><a class="toc-permalink" href="#10-triadic-cascade" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="each-closure-triggers-the-next-beginning"><em>Each closure triggers the next beginning</em><a class="toc-permalink" href="#each-closure-triggers-the-next-beginning" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>P1 → P2 → P3 ↘
+              P1 → P2 → P3 ↘
+                            P1 → P2 → P3
+</code></pre></div>
+
+<p>A waterfall of triads — used for pipelines and staged processes.</p>
+<hr />
+<h1 id="mythmatical-architects-note">🧙 Mythmatical Architect’s Note<a class="toc-permalink" href="#mythmatical-architects-note" title="Permanent link to this heading">&para;</a></h1>
+<p>Triads are not steps — they are <strong>shapes</strong>.<br />
+When you chain them, they become <strong>rhythms</strong>.<br />
+When you nest them, they become <strong>structures</strong>.<br />
+When you spiral them, they become <strong>growth</strong>.<br />
+When you weave them, they become <strong>systems</strong>.</p>
+<p>The atlas above is your <strong>constellation map</strong> for building higher‑order RTT‑aligned behavior.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/3pak-shell/tft_primitive_wrappers/ATLAS.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/packages/tft-3pack/3pak-shell/tft_primitive_wrappers/ATLAS.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

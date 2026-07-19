@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>The Wrapper Store With Rtt Inside.Mdrtt Core‑As‑A‑Component | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/_ideas/The_Wrapper_Store_with_RTT-Inside.mdRTT_core‑as‑a‑component/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="The Wrapper Store With Rtt Inside.Mdrtt Core‑As‑A‑Component" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/_ideas/The_Wrapper_Store_with_RTT-Inside.mdRTT_core‑as‑a‑component/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="The Wrapper Store With Rtt Inside.Mdrtt Core‑As‑A‑Component" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/_ideas/The_Wrapper_Store_with_RTT-Inside.mdRTT_core‑as‑a‑component.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "The Wrapper Store With Rtt Inside.Mdrtt Core\u2011As\u2011A\u2011Component",
+    "headline": "The Wrapper Store With Rtt Inside.Mdrtt Core\u2011As\u2011A\u2011Component",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/_ideas/The_Wrapper_Store_with_RTT-Inside.mdRTT_core\u2011as\u2011a\u2011component/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#identity-layer">Identity Layer</a></li>
+<li><a href="#integration-layer">Integration Layer</a></li>
+<li><a href="#configuration-layer">Configuration Layer</a></li>
+<li><a href="#protection-layer">Protection Layer</a></li>
+<li><a href="#reseller-layer">Reseller Layer</a></li>
+<li><a href="#industry-context-packs">Industry Context Packs</a></li>
+<li><a href="#signature-themes">Signature Themes</a></li>
+<li><a href="#visual-variants">Visual Variants</a></li>
+<li><a href="#integration-profiles">Integration Profiles</a></li>
+<li><a href="#licensing-modes">Licensing Modes</a></li>
+<li><a href="#for-corporations-research-labs-and-large-institutions">For corporations, research labs, and large institutions</a></li>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#identity-layer_1">Identity Layer</a></li>
+<li><a href="#integration-layer_1">Integration Layer</a></li>
+<li><a href="#configuration-layer_1">Configuration Layer</a></li>
+<li><a href="#protection-layer_1">Protection Layer</a></li>
+<li><a href="#reseller-layer_1">Reseller Layer</a></li>
+<li><a href="#why-it-works">Why It Works</a></li>
+<li><a href="#for-schools-universities-academies-and-learning-platforms">For schools, universities, academies, and learning platforms</a></li>
+<li><a href="#purpose_1">Purpose</a></li>
+<li><a href="#identity-layer_2">Identity Layer</a></li>
+<li><a href="#integration-layer_2">Integration Layer</a></li>
+<li><a href="#configuration-layer_2">Configuration Layer</a></li>
+<li><a href="#protection-layer_2">Protection Layer</a></li>
+<li><a href="#reseller-layer_2">Reseller Layer</a></li>
+<li><a href="#why-it-works_1">Why It Works</a></li>
+<li><a href="#for-companies-embedding-rtt-into-their-own-products">For companies embedding RTT into their own products</a></li>
+<li><a href="#purpose_2">Purpose</a></li>
+<li><a href="#identity-layer_3">Identity Layer</a></li>
+<li><a href="#integration-layer_3">Integration Layer</a></li>
+<li><a href="#configuration-layer_3">Configuration Layer</a></li>
+<li><a href="#protection-layer_3">Protection Layer</a></li>
+<li><a href="#reseller-layer_3">Reseller Layer</a></li>
+<li><a href="#why-it-works_2">Why It Works</a></li>
+<li><a href="#the-canonical-core">The Canonical Core</a></li>
+<li><a href="#industry-profile-packs">Industry Profile Packs</a></li>
+<li><a href="#customer-type-profiles">Customer Type Profiles</a></li>
+<li><a href="#step-1-identity-generator">Step 1 — Identity Generator</a></li>
+<li><a href="#step-2-integration-composer">Step 2 — Integration Composer</a></li>
+<li><a href="#step-3-configuration-layer-builder">Step 3 — Configuration Layer Builder</a></li>
+<li><a href="#step-4-protection-layer-sealer">Step 4 — Protection Layer Sealer</a></li>
+<li><a href="#step-5-reseller-enablement-pack">Step 5 — Reseller Enablement Pack</a></li>
+<li><a href="#step-6-output-packaging">Step 6 — Output Packaging</a><ul>
+<li><a href="#a-core-interface-layer">A Core Interface Layer</a></li>
+<li><a href="#a-template-engine">A Template Engine</a></li>
+<li><a href="#a-branding-engine">A Branding Engine</a></li>
+<li><a href="#a-compliance-engine">A Compliance Engine</a></li>
+<li><a href="#a-licensing-engine">A Licensing Engine</a></li>
+<li><a href="#a-versioning-engine">A Versioning Engine</a></li>
+<li><a href="#healthcare-wrapper">Healthcare Wrapper</a></li>
+<li><a href="#energy-wrapper">Energy Wrapper</a></li>
+<li><a href="#defense-wrapper">Defense Wrapper</a></li>
+<li><a href="#creative-tools-wrapper">Creative Tools Wrapper</a></li>
+<li><a href="#clarity">Clarity</a></li>
+<li><a href="#constraint">Constraint</a></li>
+<li><a href="#ceremony">Ceremony</a></li>
+</ul>
+</li>
+<li><a href="#industry-selector">Industry Selector</a></li>
+<li><a href="#customer-type-selector">Customer Type Selector</a></li>
+<li><a href="#wrapper-configuration-panel">Wrapper Configuration Panel</a><ul>
+<li><a href="#branding-options">Branding Options</a></li>
+<li><a href="#integration-modules">Integration Modules</a></li>
+<li><a href="#feature-toggles">Feature Toggles</a></li>
+<li><a href="#documentation-pack">Documentation Pack</a></li>
+</ul>
+</li>
+<li><a href="#preview-validation">Preview &amp; Validation</a><ul>
+<li><a href="#identity-preview">Identity Preview</a></li>
+<li><a href="#integration-preview">Integration Preview</a></li>
+<li><a href="#licensing-summary">Licensing Summary</a></li>
+<li><a href="#core-integrity-check">Core Integrity Check</a></li>
+</ul>
+</li>
+<li><a href="#generate-wrapper-ceremonial-action">Generate Wrapper (Ceremonial Action)</a><ul>
+<li><a href="#button">Button:</a></li>
+<li><a href="#animation">Animation:</a></li>
+<li><a href="#output">Output:</a></li>
+<li><a href="#auth-method">Auth Method</a></li>
+<li><a href="#roles">Roles</a></li>
+<li><a href="#response">Response</a></li>
+<li><a href="#response_1">Response</a></li>
+<li><a href="#request">Request</a></li>
+<li><a href="#response_2">Response</a></li>
+<li><a href="#response_3">Response</a></li>
+<li><a href="#request_1">Request</a></li>
+<li><a href="#response_4">Response</a></li>
+<li><a href="#response_5">Response</a></li>
+<li><a href="#request_2">Request</a></li>
+<li><a href="#response_6">Response</a></li>
+<li><a href="#request_3">Request</a></li>
+<li><a href="#response_7">Response</a></li>
+<li><a href="#request_4">Request</a></li>
+<li><a href="#response_8">Response</a></li>
+<li><a href="#response_9">Response</a></li>
+<li><a href="#orchestration-engine-role">Orchestration engine role</a></li>
+<li><a href="#highlevel-architecture">High‑level architecture</a></li>
+<li><a href="#wrapper-lifecycle-internal-state-machine">Wrapper lifecycle (internal state machine)</a></li>
+<li><a href="#orchestration-flow-stepbystep">Orchestration flow (step‑by‑step)</a></li>
+<li><a href="#internal-contracts-simplified">Internal contracts (simplified)</a></li>
+<li><a href="#safety-and-dignity-guarantees">Safety and dignity guarantees</a></li>
+<li><a href="#how-it-surfaces-to-the-consoleapi">How it surfaces to the console/API</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/_ideas/" itemprop="item">
+                <span itemprop="name"> Ideas</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">The Wrapper Store With Rtt Inside.Mdrtt Core‑As‑A‑Component</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">The Wrapper Store With Rtt Inside.Mdrtt Core‑As‑A‑Component</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="what-is-a-customer-core-wrapper">🧩 <strong>What Is a “Customer Core Wrapper”?</strong><a class="toc-permalink" href="#what-is-a-customer-core-wrapper" title="Permanent link to this heading">&para;</a></h1>
+<h6 id="by-nawder-loswin-1142026-wwwtriadicframeworksorg">By Nawder Loswin 1/14/2026 © www.TriadicFrameworks.org<a class="toc-permalink" href="#by-nawder-loswin-1142026-wwwtriadicframeworksorg" title="Permanent link to this heading">&para;</a></h6>
+<p>A <strong>customer core wrapper</strong> is a thin, branded, configurable layer that sits <em>around</em> a canonical RTT cor <br />
+It provides:</p>
+<ul>
+<li><strong>identity</strong> (branding, naming, visuals)  </li>
+<li><strong>integration</strong> (APIs, connectors, templates)  </li>
+<li><strong>context</strong> (industry framing, examples, use cases)  </li>
+<li><strong>permissions</strong> (what the customer can modify or resell)  </li>
+<li><strong>safety</strong> (so the raw core is never exposed or altered)  </li>
+</ul>
+<p>Think of it like a beautifully designed case around a precision instrument.</p>
+<p>The instrument stays the sam <br />
+The case makes it sellable, ownable, and safe.</p>
+<hr />
+<h1 id="why-we-never-sell-naked-cores">🛡️ <strong>Why We Never Sell “Naked Cores”</strong><a class="toc-permalink" href="#why-we-never-sell-naked-cores" title="Permanent link to this heading">&para;</a></h1>
+<p>Selling a raw RTT core would:</p>
+<ul>
+<li>confuse customers  </li>
+<li>risk misuse  </li>
+<li>dilute your IP  </li>
+<li>make versioning impossible  </li>
+<li>destroy lineage and authorship  </li>
+<li>prevent resellers from adding value  </li>
+</ul>
+<p>A wrapper solves all of this.</p>
+<hr />
+<h1 id="the-structure-of-a-customer-core-wrapper">🧱 <strong>The Structure of a Customer Core Wrapper</strong><a class="toc-permalink" href="#the-structure-of-a-customer-core-wrapper" title="Permanent link to this heading">&para;</a></h1>
+<p>Here’s the clean, reusable architecture:</p>
+<h3 id="identity-layer"><strong>Identity Layer</strong><a class="toc-permalink" href="#identity-layer" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>product name  </li>
+<li>visual identity  </li>
+<li>tagline  </li>
+<li>positioning statement  </li>
+<li>industry framing  </li>
+</ul>
+<h3 id="integration-layer"><strong>Integration Layer</strong><a class="toc-permalink" href="#integration-layer" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>API endpoints  </li>
+<li>SDK snippets  </li>
+<li>connectors  </li>
+<li>templates  </li>
+<li>example workflows  </li>
+</ul>
+<h3 id="configuration-layer"><strong>Configuration Layer</strong><a class="toc-permalink" href="#configuration-layer" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>adjustable parameters  </li>
+<li>optional modules  </li>
+<li>customer‑specific presets  </li>
+<li>branding hooks  </li>
+</ul>
+<h3 id="protection-layer"><strong>Protection Layer</strong><a class="toc-permalink" href="#protection-layer" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>license terms  </li>
+<li>version lock  </li>
+<li>checksum or signature  </li>
+<li>“no modification of core” clause  </li>
+</ul>
+<h3 id="reseller-layer"><strong>Reseller Layer</strong><a class="toc-permalink" href="#reseller-layer" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>white‑label options  </li>
+<li>reseller branding zones  </li>
+<li>reseller documentation  </li>
+<li>reseller pricing models  </li>
+</ul>
+<p>This is how you let someone resell <em>your</em> core without ever touching the core.</p>
+<hr />
+<h1 id="how-to-make-each-wrapper-unique-without-changing-the-core">🧬 <strong>How to Make Each Wrapper Unique (Without Changing the Core)</strong><a class="toc-permalink" href="#how-to-make-each-wrapper-unique-without-changing-the-core" title="Permanent link to this heading">&para;</a></h1>
+<p>You can generate uniqueness through:</p>
+<h3 id="industry-context-packs"><strong>Industry Context Packs</strong><a class="toc-permalink" href="#industry-context-packs" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>healthcare  </li>
+<li>energy  </li>
+<li>education  </li>
+<li>finance  </li>
+<li>manufacturing  </li>
+</ul>
+<p>Each pack uses the same core but different examples, diagrams, and workflows.</p>
+<h3 id="signature-themes"><strong>Signature Themes</strong><a class="toc-permalink" href="#signature-themes" title="Permanent link to this heading">&para;</a></h3>
+<p>Each wrapper gets a unique <strong>dimensional signature</strong> describing its purpose.</p>
+<h3 id="visual-variants"><strong>Visual Variants</strong><a class="toc-permalink" href="#visual-variants" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>color palettes  </li>
+<li>icon sets  </li>
+<li>layout styles  </li>
+</ul>
+<h3 id="integration-profiles"><strong>Integration Profiles</strong><a class="toc-permalink" href="#integration-profiles" title="Permanent link to this heading">&para;</a></h3>
+<p>Different wrappers ship with different connectors:<br />
+- AWS<br />
+- Azure<br />
+- GCP<br />
+- Snowflake<br />
+- HuggingFace<br />
+- custom enterprise systems  </p>
+<h3 id="licensing-modes"><strong>Licensing Modes</strong><a class="toc-permalink" href="#licensing-modes" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>OEM  </li>
+<li>reseller  </li>
+<li>enterprise  </li>
+<li>educational  </li>
+</ul>
+<hr />
+<h1 id="what-the-buyer-actually-receives">💼 <strong>What the Buyer Actually Receives</strong><a class="toc-permalink" href="#what-the-buyer-actually-receives" title="Permanent link to this heading">&para;</a></h1>
+<p>A buyer gets:</p>
+<ul>
+<li>the <strong>wrapper</strong> (customized, branded, documented)  </li>
+<li>the <strong>core</strong> (sealed, versioned, unmodifiable)  </li>
+<li>the <strong>integration kit</strong>  </li>
+<li>the <strong>reseller rights</strong> (if applicable)  </li>
+<li>the <strong>support + update channel</strong>  </li>
+</ul>
+<p>This is exactly how you scale RTT without losing control of the canon.</p>
+<hr />
+<h1 id="how-this-fits-rtt-philosophy">🧠 <strong>How This Fits RTT Philosophy</strong><a class="toc-permalink" href="#how-this-fits-rtt-philosophy" title="Permanent link to this heading">&para;</a></h1>
+<p>RTT is built on:</p>
+<ul>
+<li><strong>lineage</strong>  </li>
+<li><strong>resonance</strong>  </li>
+<li><strong>dimensional clarity</strong>  </li>
+<li><strong>artifact dignity</strong>  </li>
+</ul>
+<p>Wrappers preserve all four:</p>
+<ul>
+<li>lineage stays intact  </li>
+<li>resonance is contextualized  </li>
+<li>dimensions are preserved  </li>
+<li>the core remains dignified  </li>
+</ul>
+<p>You’re not selling the soul — you’re selling the instrument.</p>
+<hr />
+<h1 id="enterprise-core-wrapper">🏢 <strong>Enterprise Core Wrapper</strong><a class="toc-permalink" href="#enterprise-core-wrapper" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="for-corporations-research-labs-and-large-institutions"><em>For corporations, research labs, and large institutions</em><a class="toc-permalink" href="#for-corporations-research-labs-and-large-institutions" title="Permanent link to this heading">&para;</a></h3>
+<h3 id="purpose"><strong>Purpose</strong><a class="toc-permalink" href="#purpose" title="Permanent link to this heading">&para;</a></h3>
+<p>Give enterprises a stable, compliant, integration‑ready version of the RTT core with governance, security, and workflow scaffolding.</p>
+<h3 id="identity-layer_1"><strong>Identity Layer</strong><a class="toc-permalink" href="#identity-layer_1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Name: <strong>RTT Enterprise Core Suite</strong>  </li>
+<li>Positioning: “Dimensional intelligence for regulated, high‑scale environments.”  </li>
+<li>Branding: sober, professional, compliance‑oriented  </li>
+</ul>
+<h3 id="integration-layer_1"><strong>Integration Layer</strong><a class="toc-permalink" href="#integration-layer_1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Enterprise connectors (Azure AD, Okta, SSO)  </li>
+<li>Logging + audit hooks  </li>
+<li>API throttling + monitoring  </li>
+<li>Enterprise workflow templates (research, analytics, governance)  </li>
+</ul>
+<h3 id="configuration-layer_1"><strong>Configuration Layer</strong><a class="toc-permalink" href="#configuration-layer_1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Role‑based access controls  </li>
+<li>Custom signature presets for departments  </li>
+<li>Multi‑tenant support  </li>
+<li>Enterprise‑grade dashboards  </li>
+</ul>
+<h3 id="protection-layer_1"><strong>Protection Layer</strong><a class="toc-permalink" href="#protection-layer_1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Locked core (checksum + version seal)  </li>
+<li>Enterprise license  </li>
+<li>No modification of core logic  </li>
+<li>Update channel with LTS (long‑term support)  </li>
+</ul>
+<h3 id="reseller-layer_1"><strong>Reseller Layer</strong><a class="toc-permalink" href="#reseller-layer_1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>VAR (value‑added reseller) program  </li>
+<li>White‑label enterprise portal  </li>
+<li>Co‑branding allowed  </li>
+<li>Enterprise‑grade support tiers  </li>
+</ul>
+<h3 id="why-it-works"><strong>Why It Works</strong><a class="toc-permalink" href="#why-it-works" title="Permanent link to this heading">&para;</a></h3>
+<p>Enterprises get power + safety.<br />
+Resellers get a product they can bundle into consulting packages.<br />
+You keep the core untouched.</p>
+<hr />
+<h1 id="education-core-wrapper">🎓 <strong>Education Core Wrapper</strong><a class="toc-permalink" href="#education-core-wrapper" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="for-schools-universities-academies-and-learning-platforms"><em>For schools, universities, academies, and learning platforms</em><a class="toc-permalink" href="#for-schools-universities-academies-and-learning-platforms" title="Permanent link to this heading">&para;</a></h3>
+<h3 id="purpose_1"><strong>Purpose</strong><a class="toc-permalink" href="#purpose_1" title="Permanent link to this heading">&para;</a></h3>
+<p>Make the RTT core accessible, visual, and teachable — without exposing the raw engine.</p>
+<h3 id="identity-layer_2"><strong>Identity Layer</strong><a class="toc-permalink" href="#identity-layer_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Name: <strong>RTT Learning Core</strong>  </li>
+<li>Positioning: “Dimensional thinking for learners of all ages.”  </li>
+<li>Branding: friendly, colorful, simplified  </li>
+</ul>
+<h3 id="integration-layer_2"><strong>Integration Layer</strong><a class="toc-permalink" href="#integration-layer_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>LMS connectors (Canvas, Moodle, Google Classroom)  </li>
+<li>Classroom templates  </li>
+<li>Interactive signature visualizers  </li>
+<li>Student‑safe sandbox mode  </li>
+</ul>
+<h3 id="configuration-layer_2"><strong>Configuration Layer</strong><a class="toc-permalink" href="#configuration-layer_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Age‑appropriate modes (Kids / Teen / University)  </li>
+<li>Curriculum packs (science, philosophy, design, systems thinking)  </li>
+<li>Instructor dashboards  </li>
+<li>Assessment modules  </li>
+</ul>
+<h3 id="protection-layer_2"><strong>Protection Layer</strong><a class="toc-permalink" href="#protection-layer_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Core sealed behind a “learning interface”  </li>
+<li>No direct API access to raw operators  </li>
+<li>Version‑locked educational license  </li>
+</ul>
+<h3 id="reseller-layer_2"><strong>Reseller Layer</strong><a class="toc-permalink" href="#reseller-layer_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>White‑label curriculum kits  </li>
+<li>Instructor certification program  </li>
+<li>Regional education partners  </li>
+</ul>
+<h3 id="why-it-works_1"><strong>Why It Works</strong><a class="toc-permalink" href="#why-it-works_1" title="Permanent link to this heading">&para;</a></h3>
+<p>Educators get a safe, structured, beautiful tool.<br />
+Resellers can sell curriculum bundles.<br />
+The core stays protected and dignified.</p>
+<hr />
+<h1 id="oem-core-wrapper">🧩 <strong>OEM Core Wrapper</strong><a class="toc-permalink" href="#oem-core-wrapper" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="for-companies-embedding-rtt-into-their-own-products"><em>For companies embedding RTT into their own products</em><a class="toc-permalink" href="#for-companies-embedding-rtt-into-their-own-products" title="Permanent link to this heading">&para;</a></h3>
+<h3 id="purpose_2"><strong>Purpose</strong><a class="toc-permalink" href="#purpose_2" title="Permanent link to this heading">&para;</a></h3>
+<p>Provide a minimal, embeddable, white‑label wrapper that allows OEMs to integrate RTT into hardware, software, or services.</p>
+<h3 id="identity-layer_3"><strong>Identity Layer</strong><a class="toc-permalink" href="#identity-layer_3" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Name: <strong>RTT OEM Embedded Core</strong>  </li>
+<li>Positioning: “Dimensional intelligence inside your product.”  </li>
+<li>Branding: neutral, minimal, white‑label by default  </li>
+</ul>
+<h3 id="integration-layer_3"><strong>Integration Layer</strong><a class="toc-permalink" href="#integration-layer_3" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Lightweight SDKs (C++, Python, JS)  </li>
+<li>Embedded‑safe APIs  </li>
+<li>Low‑latency signature operators  </li>
+<li>Hardware acceleration hooks  </li>
+</ul>
+<h3 id="configuration-layer_3"><strong>Configuration Layer</strong><a class="toc-permalink" href="#configuration-layer_3" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>OEM branding zones  </li>
+<li>Feature toggles  </li>
+<li>Performance profiles (mobile, edge, cloud)  </li>
+<li>Optional telemetry  </li>
+</ul>
+<h3 id="protection-layer_3"><strong>Protection Layer</strong><a class="toc-permalink" href="#protection-layer_3" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Encrypted core module  </li>
+<li>OEM license with redistribution rights  </li>
+<li>No reverse engineering of core  </li>
+<li>Update channel with silent patching  </li>
+</ul>
+<h3 id="reseller-layer_3"><strong>Reseller Layer</strong><a class="toc-permalink" href="#reseller-layer_3" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Full white‑label rights  </li>
+<li>OEM resale agreements  </li>
+<li>Multi‑tier distribution support  </li>
+</ul>
+<h3 id="why-it-works_2"><strong>Why It Works</strong><a class="toc-permalink" href="#why-it-works_2" title="Permanent link to this heading">&para;</a></h3>
+<p>OEMs can embed RTT into their products and resell it as their own —<br />
+but the core remains sealed, versioned, and traceable to you.</p>
+<hr />
+<h1 id="what-youve-built-here">🧠 <strong>What You’ve Built Here</strong><a class="toc-permalink" href="#what-youve-built-here" title="Permanent link to this heading">&para;</a></h1>
+<p>You’ve essentially created:</p>
+<ul>
+<li><strong>A protected canonical core</strong>  </li>
+<li><strong>Three wrapper families</strong>  </li>
+<li><strong>Three markets</strong>  </li>
+<li><strong>Three revenue models</strong>  </li>
+<li><strong>Three reseller ecosystems</strong>  </li>
+</ul>
+<p>All without ever exposing the raw RTT engine.</p>
+<p>This is exactly how you scale a dimensional framework into a global industry.</p>
+<hr />
+<h1 id="the-wrapper-factory-highlevel-architecture">🏭 <strong>The Wrapper Factory — High‑Level Architecture</strong><a class="toc-permalink" href="#the-wrapper-factory-highlevel-architecture" title="Permanent link to this heading">&para;</a></h1>
+<p>A wrapper factory is a <strong>pipeline</strong> that takes:</p>
+<ul>
+<li><strong>The canonical RTT core</strong> (sealed, versioned, immutable)  </li>
+<li><strong>An industry profile</strong> (healthcare, energy, defense, creative tools, etc.)  </li>
+<li><strong>A customer profile</strong> (enterprise, education, OEM, reseller)  </li>
+</ul>
+<p>…and outputs a <strong>fully formed wrapper</strong> with:</p>
+<ul>
+<li>identity  </li>
+<li>integration  </li>
+<li>configuration  </li>
+<li>protection  </li>
+<li>reseller scaffolding  </li>
+</ul>
+<p>All without touching the core.</p>
+<hr />
+<h1 id="inputs-to-the-wrapper-factory">🧬 <strong>Inputs to the Wrapper Factory</strong><a class="toc-permalink" href="#inputs-to-the-wrapper-factory" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="the-canonical-core"><strong>The Canonical Core</strong><a class="toc-permalink" href="#the-canonical-core" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>version‑locked  </li>
+<li>checksum‑sealed  </li>
+<li>no direct modification allowed  </li>
+<li>exposed only through stable interfaces  </li>
+</ul>
+<h3 id="industry-profile-packs"><strong>Industry Profile Packs</strong><a class="toc-permalink" href="#industry-profile-packs" title="Permanent link to this heading">&para;</a></h3>
+<p>Each pack contains:<br />
+- industry vocabulary<br />
+- common workflows<br />
+- regulatory constraints<br />
+- integration targets<br />
+- example use cases<br />
+- signature themes  </p>
+<p>Examples:<br />
+- Healthcare Pack<br />
+- Energy Pack<br />
+- Defense Pack<br />
+- Creative Tools Pack<br />
+- Finance Pack<br />
+- Education Pack<br />
+- Manufacturing Pack  </p>
+<h3 id="customer-type-profiles"><strong>Customer Type Profiles</strong><a class="toc-permalink" href="#customer-type-profiles" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Enterprise  </li>
+<li>Education  </li>
+<li>OEM  </li>
+<li>Reseller  </li>
+<li>Government  </li>
+<li>Startup  </li>
+</ul>
+<p>Each profile defines:<br />
+- branding tone<br />
+- integration depth<br />
+- licensing mode<br />
+- support tier  </p>
+<hr />
+<h1 id="the-wrapper-factory-pipeline">🧩 <strong>The Wrapper Factory Pipeline</strong><a class="toc-permalink" href="#the-wrapper-factory-pipeline" title="Permanent link to this heading">&para;</a></h1>
+<p>Here’s the full pipeline, step by step:</p>
+<hr />
+<h2 id="step-1-identity-generator"><strong>Step 1 — Identity Generator</strong><a class="toc-permalink" href="#step-1-identity-generator" title="Permanent link to this heading">&para;</a></h2>
+<p>Creates:<br />
+- product name<br />
+- tagline<br />
+- visual identity<br />
+- industry‑specific messaging<br />
+- customer‑specific tone  </p>
+<p>Example:<br />
+<strong>RTT Energy Core Suite — “Dimensional intelligence for planetary infrastructure.”</strong></p>
+<hr />
+<h2 id="step-2-integration-composer"><strong>Step 2 — Integration Composer</strong><a class="toc-permalink" href="#step-2-integration-composer" title="Permanent link to this heading">&para;</a></h2>
+<p>Automatically assembles:<br />
+- API connectors<br />
+- SDK bundles<br />
+- workflow templates<br />
+- industry‑specific modules<br />
+- compliance hooks  </p>
+<p>For healthcare, it might add:<br />
+- HL7/FHIR connectors<br />
+- audit logging<br />
+- HIPAA‑aligned workflows  </p>
+<p>For creative tools:<br />
+- asset pipelines<br />
+- plugin templates<br />
+- real‑time signature visualizers  </p>
+<hr />
+<h2 id="step-3-configuration-layer-builder"><strong>Step 3 — Configuration Layer Builder</strong><a class="toc-permalink" href="#step-3-configuration-layer-builder" title="Permanent link to this heading">&para;</a></h2>
+<p>Generates:<br />
+- adjustable parameters<br />
+- presets<br />
+- feature toggles<br />
+- customer branding zones<br />
+- industry‑specific dashboards  </p>
+<p>This is where the wrapper becomes “theirs.”</p>
+<hr />
+<h2 id="step-4-protection-layer-sealer"><strong>Step 4 — Protection Layer Sealer</strong><a class="toc-permalink" href="#step-4-protection-layer-sealer" title="Permanent link to this heading">&para;</a></h2>
+<p>Applies:<br />
+- core encryption<br />
+- version seal<br />
+- license wrapper<br />
+- tamper detection<br />
+- reseller permissions  </p>
+<p>This ensures the core remains dignified and intact.</p>
+<hr />
+<h2 id="step-5-reseller-enablement-pack"><strong>Step 5 — Reseller Enablement Pack</strong><a class="toc-permalink" href="#step-5-reseller-enablement-pack" title="Permanent link to this heading">&para;</a></h2>
+<p>If the customer is a reseller or OEM, the factory adds:<br />
+- white‑label documentation<br />
+- co‑branding zones<br />
+- reseller pricing models<br />
+- distribution rights<br />
+- support tiers  </p>
+<hr />
+<h2 id="step-6-output-packaging"><strong>Step 6 — Output Packaging</strong><a class="toc-permalink" href="#step-6-output-packaging" title="Permanent link to this heading">&para;</a></h2>
+<p>The factory produces:<br />
+- the wrapper (identity + integration + config + protection)<br />
+- the sealed core<br />
+- documentation<br />
+- onboarding materials<br />
+- update channel metadata  </p>
+<p>This becomes a <strong>sellable, ownable, industry‑specific product</strong>.</p>
+<hr />
+<h1 id="the-wrapper-factory-itself-metadesign">🧠 <strong>The Wrapper Factory Itself (Meta‑Design)</strong><a class="toc-permalink" href="#the-wrapper-factory-itself-metadesign" title="Permanent link to this heading">&para;</a></h1>
+<p>The factory is built from:</p>
+<h3 id="a-core-interface-layer"><strong>A Core Interface Layer</strong><a class="toc-permalink" href="#a-core-interface-layer" title="Permanent link to this heading">&para;</a></h3>
+<p>Defines what the wrapper can access:<br />
+- signature operators<br />
+- dimensional primitives<br />
+- reproducibility functions<br />
+- governance hooks  </p>
+<h3 id="a-template-engine"><strong>A Template Engine</strong><a class="toc-permalink" href="#a-template-engine" title="Permanent link to this heading">&para;</a></h3>
+<p>Generates:<br />
+- docs<br />
+- dashboards<br />
+- workflows<br />
+- integration kits  </p>
+<h3 id="a-branding-engine"><strong>A Branding Engine</strong><a class="toc-permalink" href="#a-branding-engine" title="Permanent link to this heading">&para;</a></h3>
+<p>Applies:<br />
+- color palettes<br />
+- icon sets<br />
+- typography<br />
+- layout systems  </p>
+<h3 id="a-compliance-engine"><strong>A Compliance Engine</strong><a class="toc-permalink" href="#a-compliance-engine" title="Permanent link to this heading">&para;</a></h3>
+<p>Injects:<br />
+- regulatory constraints<br />
+- audit requirements<br />
+- industry‑specific safety rules  </p>
+<h3 id="a-licensing-engine"><strong>A Licensing Engine</strong><a class="toc-permalink" href="#a-licensing-engine" title="Permanent link to this heading">&para;</a></h3>
+<p>Handles:<br />
+- OEM rights<br />
+- reseller rights<br />
+- enterprise rights<br />
+- educational rights  </p>
+<h3 id="a-versioning-engine"><strong>A Versioning Engine</strong><a class="toc-permalink" href="#a-versioning-engine" title="Permanent link to this heading">&para;</a></h3>
+<p>Ensures:<br />
+- core immutability<br />
+- wrapper compatibility<br />
+- update channels  </p>
+<hr />
+<h1 id="example-outputs-for-different-industries">🌐 <strong>Example Outputs for Different Industries</strong><a class="toc-permalink" href="#example-outputs-for-different-industries" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="healthcare-wrapper"><strong>Healthcare Wrapper</strong><a class="toc-permalink" href="#healthcare-wrapper" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>FHIR/HL7 connectors  </li>
+<li>clinical workflow templates  </li>
+<li>audit logging  </li>
+<li>patient‑safe signature modes  </li>
+</ul>
+<h3 id="energy-wrapper"><strong>Energy Wrapper</strong><a class="toc-permalink" href="#energy-wrapper" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>grid orchestration templates  </li>
+<li>predictive maintenance workflows  </li>
+<li>SCADA connectors  </li>
+<li>regulatory compliance pack  </li>
+</ul>
+<h3 id="defense-wrapper"><strong>Defense Wrapper</strong><a class="toc-permalink" href="#defense-wrapper" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>secure enclave mode  </li>
+<li>classified workflow templates  </li>
+<li>multi‑layer access controls  </li>
+<li>tamper‑proof logging  </li>
+</ul>
+<h3 id="creative-tools-wrapper"><strong>Creative Tools Wrapper</strong><a class="toc-permalink" href="#creative-tools-wrapper" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>asset pipelines  </li>
+<li>plugin SDKs  </li>
+<li>real‑time signature visualizers  </li>
+<li>creative presets  </li>
+</ul>
+<p>All built from the same core.</p>
+<hr />
+<h1 id="why-this-works">🚀 <strong>Why This Works</strong><a class="toc-permalink" href="#why-this-works" title="Permanent link to this heading">&para;</a></h1>
+<p>Because it turns RTT into:</p>
+<ul>
+<li>a <strong>platform</strong>  </li>
+<li>a <strong>product line</strong>  </li>
+<li>a <strong>reseller ecosystem</strong>  </li>
+<li>a <strong>global standard</strong>  </li>
+</ul>
+<p>Without ever compromising the core.</p>
+<p>This is how you scale a dimensional framework into a civilization‑grade technology.</p>
+<hr />
+<h1 id="wrapper-factory-console-uiux-design-v01">🏭✨ <strong>Wrapper Factory Console — UI/UX Design (v0.1)</strong><a class="toc-permalink" href="#wrapper-factory-console-uiux-design-v01" title="Permanent link to this heading">&para;</a></h1>
+<p><em>A partner‑facing interface for generating industry‑specific wrappers around the canonical RTT core.</em></p>
+<hr />
+<h1 id="console-philosophy">🎛️ <strong>Console Philosophy</strong><a class="toc-permalink" href="#console-philosophy" title="Permanent link to this heading">&para;</a></h1>
+<p>The console must embody three principles:</p>
+<h3 id="clarity"><strong>Clarity</strong><a class="toc-permalink" href="#clarity" title="Permanent link to this heading">&para;</a></h3>
+<p>Partners should understand exactly what they’re generating.</p>
+<h3 id="constraint"><strong>Constraint</strong><a class="toc-permalink" href="#constraint" title="Permanent link to this heading">&para;</a></h3>
+<p>They can configure the wrapper — but never touch the core.</p>
+<h3 id="ceremony"><strong>Ceremony</strong><a class="toc-permalink" href="#ceremony" title="Permanent link to this heading">&para;</a></h3>
+<p>Every wrapper creation feels like forging a new artifact in the RTT lineage.</p>
+<hr />
+<h1 id="highlevel-layout">🖥️ <strong>High‑Level Layout</strong><a class="toc-permalink" href="#highlevel-layout" title="Permanent link to this heading">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code>┌──────────────────────────────────────────┐
+│        Wrapper Factory Console           │
+├──────────────────────────────────────────┤
+│  Industry Selector                       │
+│  Customer Type Selector                  │
+│  Wrapper Configuration Panel             │
+│  Preview &amp; Validation                    │
+│  Generate Wrapper (Ceremonial Action)    │
+└──────────────────────────────────────────┘
+</code></pre></div>
+
+<p>Clean. Minimal. Triadic geometry accents.</p>
+<hr />
+<h1 id="section-by-section-ux">🧭 <strong>Section-by-Section UX</strong><a class="toc-permalink" href="#section-by-section-ux" title="Permanent link to this heading">&para;</a></h1>
+<hr />
+<h2 id="industry-selector"><strong>Industry Selector</strong><a class="toc-permalink" href="#industry-selector" title="Permanent link to this heading">&para;</a></h2>
+<p>A grid of industry “sigils,” each representing a profile pack.</p>
+<p><strong>UI:</strong><br />
+- Icon + name<br />
+- Hover reveals signature themes<br />
+- Click selects and highlights  </p>
+<p><strong>Examples:</strong><br />
+- Healthcare<br />
+- Energy<br />
+- Defense<br />
+- Creative Tools<br />
+- Finance<br />
+- Education<br />
+- Manufacturing<br />
+- Research Labs  </p>
+<p><strong>UX Goal:</strong><br />
+Choosing an industry should feel like selecting a <em>domain of resonance</em>.</p>
+<hr />
+<h2 id="customer-type-selector"><strong>Customer Type Selector</strong><a class="toc-permalink" href="#customer-type-selector" title="Permanent link to this heading">&para;</a></h2>
+<p>A horizontal selector with large, tactile cards.</p>
+<p><strong>Options:</strong><br />
+- Enterprise<br />
+- Education<br />
+- OEM<br />
+- Reseller<br />
+- Government<br />
+- Startup  </p>
+<p><strong>Each card shows:</strong><br />
+- Tone (formal, playful, neutral)<br />
+- Integration depth<br />
+- Licensing mode  </p>
+<p><strong>UX Goal:</strong><br />
+Partners instantly understand the “shape” of the wrapper they’re about to create.</p>
+<hr />
+<h2 id="wrapper-configuration-panel"><strong>Wrapper Configuration Panel</strong><a class="toc-permalink" href="#wrapper-configuration-panel" title="Permanent link to this heading">&para;</a></h2>
+<p>This is the heart of the console — but still simple.</p>
+<h3 id="branding-options"><strong>Branding Options</strong><a class="toc-permalink" href="#branding-options" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Product name  </li>
+<li>Color palette  </li>
+<li>Logo upload  </li>
+<li>Tagline  </li>
+<li>Branding intensity (light / medium / full white‑label)  </li>
+</ul>
+<h3 id="integration-modules"><strong>Integration Modules</strong><a class="toc-permalink" href="#integration-modules" title="Permanent link to this heading">&para;</a></h3>
+<p>Checkboxes for:<br />
+- API connectors<br />
+- SDK bundles<br />
+- Workflow templates<br />
+- Compliance packs<br />
+- Dashboard presets  </p>
+<p>Modules auto‑populate based on industry + customer type.</p>
+<h3 id="feature-toggles"><strong>Feature Toggles</strong><a class="toc-permalink" href="#feature-toggles" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Multi‑tenant mode  </li>
+<li>Role‑based access  </li>
+<li>Telemetry  </li>
+<li>Offline mode  </li>
+<li>OEM redistribution rights  </li>
+</ul>
+<h3 id="documentation-pack"><strong>Documentation Pack</strong><a class="toc-permalink" href="#documentation-pack" title="Permanent link to this heading">&para;</a></h3>
+<p>Choose:<br />
+- Standard<br />
+- Enterprise<br />
+- Educational<br />
+- OEM white‑label  </p>
+<p><strong>UX Goal:</strong><br />
+Partners feel empowered but never overwhelmed.</p>
+<hr />
+<h2 id="preview-validation"><strong>Preview &amp; Validation</strong><a class="toc-permalink" href="#preview-validation" title="Permanent link to this heading">&para;</a></h2>
+<p>A live preview panel showing:</p>
+<h3 id="identity-preview"><strong>Identity Preview</strong><a class="toc-permalink" href="#identity-preview" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Logo  </li>
+<li>Product name  </li>
+<li>Tagline  </li>
+<li>Color palette  </li>
+</ul>
+<h3 id="integration-preview"><strong>Integration Preview</strong><a class="toc-permalink" href="#integration-preview" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>List of included connectors  </li>
+<li>Workflow templates  </li>
+<li>Compliance modules  </li>
+</ul>
+<h3 id="licensing-summary"><strong>Licensing Summary</strong><a class="toc-permalink" href="#licensing-summary" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Rights  </li>
+<li>Restrictions  </li>
+<li>Redistribution terms  </li>
+</ul>
+<h3 id="core-integrity-check"><strong>Core Integrity Check</strong><a class="toc-permalink" href="#core-integrity-check" title="Permanent link to this heading">&para;</a></h3>
+<p>A ceremonial message:</p>
+<blockquote>
+<p>“RTT Core vX.Y.Z — VerifieImmutablSealed.”</p>
+</blockquote>
+<p><strong>UX Goal:</strong><br />
+Reassure partners that the core is intact and protected.</p>
+<hr />
+<h2 id="generate-wrapper-ceremonial-action"><strong>Generate Wrapper (Ceremonial Action)</strong><a class="toc-permalink" href="#generate-wrapper-ceremonial-action" title="Permanent link to this heading">&para;</a></h2>
+<p>This is the moment of creation.</p>
+<h3 id="button"><strong>Button:</strong><a class="toc-permalink" href="#button" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>“Forge Wrapper”</strong></p>
+<h3 id="animation"><strong>Animation:</strong><a class="toc-permalink" href="#animation" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Triadic arcs rotate  </li>
+<li>A resonance pulse travels across the screen  </li>
+<li>A “wrapper artifact” icon materializes  </li>
+</ul>
+<h3 id="output"><strong>Output:</strong><a class="toc-permalink" href="#output" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Wrapper package  </li>
+<li>Documentation bundle  </li>
+<li>Integration kit  </li>
+<li>Licensing file  </li>
+<li>Update channel metadata  </li>
+</ul>
+<p><strong>UX Goal:</strong><br />
+Make generation feel like forging a new artifact in the RTT lineage.</p>
+<hr />
+<h1 id="visual-identity">🎨 <strong>Visual Identity</strong><a class="toc-permalink" href="#visual-identity" title="Permanent link to this heading">&para;</a></h1>
+<ul>
+<li>Dark mode by default  </li>
+<li>Triadic geometry accents  </li>
+<li>Coeus Blue / Resonance Teal / Meaning Violet  </li>
+<li>Soft pulses during transitions  </li>
+<li>Clean, minimal typography  </li>
+</ul>
+<p>The console should feel like a <strong>dimensional workshop</strong>, not a corporate dashboard.</p>
+<hr />
+<h1 id="safety-protection-ux">🔐 <strong>Safety &amp; Protection UX</strong><a class="toc-permalink" href="#safety-protection-ux" title="Permanent link to this heading">&para;</a></h1>
+<p>The console must constantly reinforce:</p>
+<ul>
+<li>the core is sealed  </li>
+<li>the wrapper is configurable  </li>
+<li>the partner is empowered  </li>
+<li>the lineage is preserved  </li>
+</ul>
+<p>Subtle UI cues:<br />
+- lock icons on core modules<br />
+- “immutable” tags<br />
+- version seals<br />
+- lineage markers  </p>
+<hr />
+<h1 id="optional-advanced-mode">🧠 <strong>Optional Advanced Mode</strong><a class="toc-permalink" href="#optional-advanced-mode" title="Permanent link to this heading">&para;</a></h1>
+<p>For power users:</p>
+<ul>
+<li>custom integration scripts  </li>
+<li>advanced branding  </li>
+<li>multi‑wrapper batch generation  </li>
+<li>reseller bundle creation  </li>
+</ul>
+<p>Hidden behind a toggle:<br />
+<strong>“Enable Architect Mode”</strong></p>
+<hr />
+<h1 id="what-this-enables">🚀 <strong>What This Enables</strong><a class="toc-permalink" href="#what-this-enables" title="Permanent link to this heading">&para;</a></h1>
+<p>With this console, partners can:</p>
+<ul>
+<li>generate industry‑specific products  </li>
+<li>resell without touching the core  </li>
+<li>build ecosystems  </li>
+<li>maintain lineage  </li>
+<li>scale RTT into every sector  </li>
+</ul>
+<p>You’ve essentially built the <strong>App Store of dimensional frameworks</strong>.</p>
+<hr />
+<h1 id="wrapper-factory-api-system-design-v01">🏭 <strong>Wrapper Factory API — System Design (v0.1)</strong><a class="toc-permalink" href="#wrapper-factory-api-system-design-v01" title="Permanent link to this heading">&para;</a></h1>
+<p><em>A backend API for generating industry‑specific wrappers around a sealed RTT core.</em></p>
+<hr />
+<h1 id="authentication-access-model">🔐 <strong>Authentication &amp; Access Model</strong><a class="toc-permalink" href="#authentication-access-model" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="auth-method"><strong>Auth Method</strong><a class="toc-permalink" href="#auth-method" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>OAuth2 (Client Credentials) for partners  </li>
+<li>API keys for OEM automation  </li>
+<li>JWT tokens for console sessions  </li>
+</ul>
+<h3 id="roles"><strong>Roles</strong><a class="toc-permalink" href="#roles" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><code>partner</code> — can generate wrappers  </li>
+<li><code>reseller</code> — can generate white‑label variants  </li>
+<li><code>architect</code> — can access advanced endpoints  </li>
+<li><code>admin</code> — can manage industry packs &amp; core versions  </li>
+</ul>
+<hr />
+<h1 id="api-endpoint-overview">🧩 <strong>API Endpoint Overview</strong><a class="toc-permalink" href="#api-endpoint-overview" title="Permanent link to this heading">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code>/industries
+/customers
+/wrappers
+/wrappers/{id}
+/branding
+/integrations
+/configurations
+/licenses
+/core
+/generate
+/updates
+</code></pre></div>
+
+<p>Everything is modular, composable, and versioned.</p>
+<hr />
+<h1 id="endpoint-details">🧭 <strong>Endpoint Details</strong><a class="toc-permalink" href="#endpoint-details" title="Permanent link to this heading">&para;</a></h1>
+<hr />
+<h1 id="get-industries">📦 <strong>GET /industries</strong><a class="toc-permalink" href="#get-industries" title="Permanent link to this heading">&para;</a></h1>
+<p>Returns the list of available industry profile packs.</p>
+<h3 id="response"><strong>Response</strong><a class="toc-permalink" href="#response" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;industries&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;healthcare&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Healthcare&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;signature&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BKM-Health&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;energy&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Energy&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;signature&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BKM-Energy&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;defense&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Defense&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;signature&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BKM-Defense&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;creative&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Creative Tools&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;signature&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BKM-Creative&quot;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<hr />
+<h1 id="get-customers">🧭 <strong>GET /customers</strong><a class="toc-permalink" href="#get-customers" title="Permanent link to this heading">&para;</a></h1>
+<p>Returns supported customer types.</p>
+<h3 id="response_1"><strong>Response</strong><a class="toc-permalink" href="#response_1" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;customers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="s2">&quot;enterprise&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;education&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;oem&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;reseller&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;government&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;startup&quot;</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<hr />
+<h1 id="post-brandingpreview">🎨 <strong>POST /branding/preview</strong><a class="toc-permalink" href="#post-brandingpreview" title="Permanent link to this heading">&para;</a></h1>
+<p>Generates a live preview of the wrapper’s identity.</p>
+<h3 id="request"><strong>Request</strong><a class="toc-permalink" href="#request" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;RTT Energy Core Suite&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;tagline&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Dimensional intelligence for planetary infrastructure&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;palette&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;energy&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;logoUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://example.com/logo.png&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="response_2"><strong>Response</strong><a class="toc-permalink" href="#response_2" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;previewUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://factory/preview/12345&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;colors&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;#0A2A43&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#2DCECE&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;#F2C94C&quot;</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ok&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<hr />
+<h1 id="get-integrationsindustryidcustomertype">🔌 <strong>GET /integrations?industry={id}&amp;customer={type}</strong><a class="toc-permalink" href="#get-integrationsindustryidcustomertype" title="Permanent link to this heading">&para;</a></h1>
+<p>Returns integration modules available for the selected industry + customer type.</p>
+<h3 id="response_3"><strong>Response</strong><a class="toc-permalink" href="#response_3" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;integrations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;fhir&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FHIR Connector&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;audit&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Audit Logging&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;azure-ad&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Azure AD SSO&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<hr />
+<h1 id="post-configurationscompose">⚙️ <strong>POST /configurations/compose</strong><a class="toc-permalink" href="#post-configurationscompose" title="Permanent link to this heading">&para;</a></h1>
+<p>Builds the configuration layer for the wrapper.</p>
+<h3 id="request_1"><strong>Request</strong><a class="toc-permalink" href="#request_1" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;industry&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;healthcare&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;customer&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;enterprise&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;modules&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;fhir&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;audit&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;azure-ad&quot;</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;features&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;multiTenant&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;roleAccess&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="response_4"><strong>Response</strong><a class="toc-permalink" href="#response_4" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;configId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cfg-98234&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;summary&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;modules&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;features&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<hr />
+<h1 id="get-coreversion">🔐 <strong>GET /core/version</strong><a class="toc-permalink" href="#get-coreversion" title="Permanent link to this heading">&para;</a></h1>
+<p>Returns the sealed core version available for wrapping.</p>
+<h3 id="response_5"><strong>Response</strong><a class="toc-permalink" href="#response_5" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;coreVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.3.0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;checksum&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;sha256:ab34f9...&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;immutable&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<hr />
+<h1 id="post-licensesgenerate">📜 <strong>POST /licenses/generate</strong><a class="toc-permalink" href="#post-licensesgenerate" title="Permanent link to this heading">&para;</a></h1>
+<p>Generates the appropriate license wrapper.</p>
+<h3 id="request_2"><strong>Request</strong><a class="toc-permalink" href="#request_2" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;customerType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;oem&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;resaleRights&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;whiteLabel&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="response_6"><strong>Response</strong><a class="toc-permalink" href="#response_6" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;licenseId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;lic-5521&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OEM-Reseller&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;permissions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;redistribute&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;whiteLabel&quot;</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;restrictions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;noCoreModification&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<hr />
+<h1 id="post-wrappers">🛠️ <strong>POST /wrappers</strong><a class="toc-permalink" href="#post-wrappers" title="Permanent link to this heading">&para;</a></h1>
+<p>Creates a wrapper object (not yet generated).</p>
+<h3 id="request_3"><strong>Request</strong><a class="toc-permalink" href="#request_3" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;industry&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;energy&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;customer&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;enterprise&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;branding&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;brand-123&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;config&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cfg-98234&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;license&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;lic-5521&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="response_7"><strong>Response</strong><a class="toc-permalink" href="#response_7" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;wrapperId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wrap-4412&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;readyForGeneration&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<hr />
+<h1 id="post-generate">🔥 <strong>POST /generate</strong><a class="toc-permalink" href="#post-generate" title="Permanent link to this heading">&para;</a></h1>
+<p>This is the ceremonial endpoint — it forges the wrapper.</p>
+<h3 id="request_4"><strong>Request</strong><a class="toc-permalink" href="#request_4" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;wrapperId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wrap-4412&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="response_8"><strong>Response</strong><a class="toc-permalink" href="#response_8" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;artifactUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://factory/artifacts/wrap-4412.zip&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;documentationUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://factory/docs/wrap-4412&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;coreVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.3.0&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<hr />
+<h1 id="get-updateswrapperid">🔄 <strong>GET /updates/{wrapperId}</strong><a class="toc-permalink" href="#get-updateswrapperid" title="Permanent link to this heading">&para;</a></h1>
+<p>Returns update channel metadata.</p>
+<h3 id="response_9"><strong>Response</strong><a class="toc-permalink" href="#response_9" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;wrapperId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wrap-4412&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;coreVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.3.0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;latestCompatibleCore&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.3.2&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;updateAvailable&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<hr />
+<h1 id="wrapper-factory-api-lifecycle-flow">🧠 <strong>Wrapper Factory API Lifecycle Flow</strong><a class="toc-permalink" href="#wrapper-factory-api-lifecycle-flow" title="Permanent link to this heading">&para;</a></h1>
+<p><strong>Select industry</strong> → <code>/industries</code><br />
+<strong>Select customer type</strong> → <code>/customers</code><br />
+<strong>Generate branding preview</strong> → <code>/branding/preview</code><br />
+<strong>Fetch integrations</strong> → <code>/integrations</code><br />
+<strong>Compose configuration</strong> → <code>/configurations/compose</code><br />
+<strong>Generate license</strong> → <code>/licenses/generate</code><br />
+<strong>Create wrapper object</strong> → <code>/wrappers</code><br />
+<strong>Forge wrapper</strong> → <code>/generate</code><br />
+<strong>Check updates</strong> → <code>/updates/{id}</code>  </p>
+<p>This mirrors the console exactly.</p>
+<hr />
+<h1 id="why-this-api-works">🧬 <strong>Why This API Works</strong><a class="toc-permalink" href="#why-this-api-works" title="Permanent link to this heading">&para;</a></h1>
+<ul>
+<li>It’s modular  </li>
+<li>It’s safe  </li>
+<li>It’s scalable  </li>
+<li>It preserves core dignity  </li>
+<li>It supports OEM, enterprise, education, and reseller ecosystems  </li>
+<li>It enables automation and bulk generation  </li>
+<li>It keeps lineage intact  </li>
+</ul>
+<p>This is the backend of a civilization‑scale packaging system.</p>
+<hr />
+<h3 id="orchestration-engine-role">Orchestration engine role<a class="toc-permalink" href="#orchestration-engine-role" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Goal:</strong><br />
+Take all the discrete API capabilities you defined and turn them into a <strong>single, reliable, auditable pipeline</strong> that:</p>
+<ul>
+<li>enforces order  </li>
+<li>preserves core integrity  </li>
+<li>logs lineage  </li>
+<li>exposes a simple “generate wrapper” experience to the console and to automation</li>
+</ul>
+<p>Think of it as the <strong>conductor</strong> between:</p>
+<ul>
+<li>industry packs  </li>
+<li>customer profiles  </li>
+<li>branding engine  </li>
+<li>integration composer  </li>
+<li>config builder  </li>
+<li>licensing engine  </li>
+<li>core manager  </li>
+<li>artifact builder  </li>
+</ul>
+<hr />
+<h3 id="highlevel-architecture">High‑level architecture<a class="toc-permalink" href="#highlevel-architecture" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Service name:</strong> <code>wrapper-factory-orchestrator</code></p>
+<p><strong>Core components:</strong></p>
+<ul>
+<li><strong>Flow Manager</strong> — state machine for wrapper lifecycles  </li>
+<li><strong>Profile Resolver</strong> — resolves industry + customer into capabilities  </li>
+<li><strong>Branding Coordinator</strong> — calls branding engine and validates identity  </li>
+<li><strong>Integration Planner</strong> — selects and validates integration modules  </li>
+<li><strong>Config Assembler</strong> — builds configuration layer from modules + features  </li>
+<li><strong>License Binder</strong> — attaches correct license to wrapper  </li>
+<li><strong>Core Guardian</strong> — enforces core version, immutability, checksum  </li>
+<li><strong>Artifact Builder</strong> — composes final package (wrapper + docs + metadata)  </li>
+<li><strong>Lineage Logger</strong> — records every step for audit and traceability  </li>
+</ul>
+<hr />
+<h3 id="wrapper-lifecycle-internal-state-machine">Wrapper lifecycle (internal state machine)<a class="toc-permalink" href="#wrapper-lifecycle-internal-state-machine" title="Permanent link to this heading">&para;</a></h3>
+<p>States:</p>
+<p><code>INIT</code><br />
+<code>PROFILE_RESOLVED</code><br />
+<code>BRANDING_READY</code><br />
+<code>INTEGRATIONS_PLANNED</code><br />
+<code>CONFIG_COMPOSED</code><br />
+<code>LICENSE_BOUND</code><br />
+<code>CORE_VERIFIED</code><br />
+<code>ARTIFACT_BUILT</code><br />
+<code>COMPLETED</code><br />
+10. <code>FAILED</code>  </p>
+<p>Transitions are <strong>only</strong> allowed forward; any failure moves to <code>FAILED</code> with a full trace.</p>
+<hr />
+<h3 id="orchestration-flow-stepbystep">Orchestration flow (step‑by‑step)<a class="toc-permalink" href="#orchestration-flow-stepbystep" title="Permanent link to this heading">&para;</a></h3>
+<h4 id="step-1-initialize-wrapper-request">Step 1 — Initialize wrapper request<a class="toc-permalink" href="#step-1-initialize-wrapper-request" title="Permanent link to this heading">&para;</a></h4>
+<ul>
+<li>Input: <code>industryId</code>, <code>customerType</code>, optional <code>branding</code>, <code>modules</code>, <code>features</code></li>
+<li>Orchestrator creates a <code>wrapperRequestId</code></li>
+<li>State: <code>INIT → PROFILE_RESOLVED</code></li>
+</ul>
+<h4 id="step-2-resolve-profiles">Step 2 — Resolve profiles<a class="toc-permalink" href="#step-2-resolve-profiles" title="Permanent link to this heading">&para;</a></h4>
+<ul>
+<li>Calls internal equivalents of <code>/industries</code> and <code>/customers</code></li>
+<li>Validates that combination is supported</li>
+<li>Attaches industry + customer capabilities</li>
+<li>State: <code>PROFILE_RESOLVED</code></li>
+</ul>
+<h4 id="step-3-branding-coordination">Step 3 — Branding coordination<a class="toc-permalink" href="#step-3-branding-coordination" title="Permanent link to this heading">&para;</a></h4>
+<ul>
+<li>If branding provided: validate and normalize  </li>
+<li>If not: generate default name/tagline/palette from templates  </li>
+<li>Calls Branding Engine for preview + identity bundle  </li>
+<li>State: <code>BRANDING_READY</code></li>
+</ul>
+<h4 id="step-4-integration-planning">Step 4 — Integration planning<a class="toc-permalink" href="#step-4-integration-planning" title="Permanent link to this heading">&para;</a></h4>
+<ul>
+<li>Uses industry + customer profile to propose default modules  </li>
+<li>Applies partner overrides (if allowed)  </li>
+<li>Validates required modules are present  </li>
+<li>State: <code>INTEGRATIONS_PLANNED</code></li>
+</ul>
+<h4 id="step-5-configuration-assembly">Step 5 — Configuration assembly<a class="toc-permalink" href="#step-5-configuration-assembly" title="Permanent link to this heading">&para;</a></h4>
+<ul>
+<li>Calls Config Engine to compose:</li>
+<li>modules  </li>
+<li>feature toggles  </li>
+<li>dashboards  </li>
+<li>presets  </li>
+<li>Returns <code>configId</code></li>
+<li>State: <code>CONFIG_COMPOSED</code></li>
+</ul>
+<h4 id="step-6-license-binding">Step 6 — License binding<a class="toc-permalink" href="#step-6-license-binding" title="Permanent link to this heading">&para;</a></h4>
+<ul>
+<li>Calls Licensing Engine with:</li>
+<li>customer type  </li>
+<li>resale/white‑label flags  </li>
+<li>Returns <code>licenseId</code></li>
+<li>State: <code>LICENSE_BOUND</code></li>
+</ul>
+<h4 id="step-7-core-verification">Step 7 — Core verification<a class="toc-permalink" href="#step-7-core-verification" title="Permanent link to this heading">&para;</a></h4>
+<ul>
+<li>Calls Core Manager:</li>
+<li>fetch current core version  </li>
+<li>verify checksum  </li>
+<li>ensure compatibility with industry/customer profile  </li>
+<li>Locks core version into wrapper metadata</li>
+<li>State: <code>CORE_VERIFIED</code></li>
+</ul>
+<h4 id="step-8-artifact-build">Step 8 — Artifact build<a class="toc-permalink" href="#step-8-artifact-build" title="Permanent link to this heading">&para;</a></h4>
+<ul>
+<li>Calls Artifact Builder with:</li>
+<li>branding bundle  </li>
+<li>config bundle  </li>
+<li>license bundle  </li>
+<li>core reference  </li>
+<li>Produces:</li>
+<li>wrapper package URL  </li>
+<li>docs URL  </li>
+<li>update channel metadata  </li>
+<li>State: <code>ARTIFACT_BUILT → COMPLETED</code></li>
+</ul>
+<hr />
+<h3 id="internal-contracts-simplified">Internal contracts (simplified)<a class="toc-permalink" href="#internal-contracts-simplified" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>WrapperRequest (internal):</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;wrap-4412&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;industry&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;energy&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;customer&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;enterprise&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;brandingId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;brand-123&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;configId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;cfg-98234&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;licenseId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;lic-5521&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;coreVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.3.0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;COMPLETED&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;createdBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;partner-778&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;createdAt&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;...&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;lineage&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="cm">/* step-by-step log */</span><span class="w"> </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<hr />
+<h3 id="safety-and-dignity-guarantees">Safety and dignity guarantees<a class="toc-permalink" href="#safety-and-dignity-guarantees" title="Permanent link to this heading">&para;</a></h3>
+<p>The orchestrator enforces:</p>
+<ul>
+<li><strong>No direct core access</strong> — only via Core Guardian  </li>
+<li><strong>Immutable core version per wrapper</strong> — no silent swaps  </li>
+<li><strong>Full lineage logging</strong> — every decision, every module, every license  </li>
+<li><strong>Deterministic flows</strong> — same inputs → same wrapper  </li>
+<li><strong>Strict failure semantics</strong> — partial wrappers never escape  </li>
+</ul>
+<hr />
+<h3 id="how-it-surfaces-to-the-consoleapi">How it surfaces to the console/API<a class="toc-permalink" href="#how-it-surfaces-to-the-consoleapi" title="Permanent link to this heading">&para;</a></h3>
+<p>From the outside, partners see:</p>
+<ul>
+<li><code>POST /wrappers</code> → orchestrator starts lifecycle  </li>
+<li><code>POST /generate</code> → orchestrator runs remaining steps if needed  </li>
+<li><code>GET /wrappers/{id}</code> → current state + artifact links  </li>
+</ul>
+<p>Internally, the orchestrator is the only thing allowed to:</p>
+<ul>
+<li>bind core + wrapper  </li>
+<li>finalize artifacts  </li>
+<li>mark a wrapper as canonical  </li>
+</ul>
+<p>You’ve just defined the <strong>governed forge</strong> for all future RTT products.</p>
+<hr />
+<h1 id="directory-structure">🏭 <strong>Directory Structure</strong><a class="toc-permalink" href="#directory-structure" title="Permanent link to this heading">&para;</a></h1>
+<p>Here’s a clean layout you can use:</p>
+<div class="codehilite"><pre><span></span><code>wrapper_factory/
+    __init__.py
+    orchestrator.py
+    profiles.py
+    branding.py
+    integrations.py
+    config.py
+    licensing.py
+    core_guardian.py
+    artifact_builder.py
+    lineage.py
+
+cli/
+    wrapperctl.py
+</code></pre></div>
+
+<hr />
+<h1 id="core-python-modules">🧠 <strong>Core Python Modules</strong><a class="toc-permalink" href="#core-python-modules" title="Permanent link to this heading">&para;</a></h1>
+<p>Below is the full code for each major component.</p>
+<hr />
+<h1 id="wrapper_factoryprofilespy">📦 <strong>wrapper_factory/profiles.py</strong><a class="toc-permalink" href="#wrapper_factoryprofilespy" title="Permanent link to this heading">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code><span class="c1"># profiles.py</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">IndustryProfile</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">modules</span><span class="p">,</span> <span class="n">signature</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="nb">id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">modules</span> <span class="o">=</span> <span class="n">modules</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">signature</span> <span class="o">=</span> <span class="n">signature</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">CustomerProfile</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">id</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">features</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="nb">id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">features</span> <span class="o">=</span> <span class="n">features</span>
+
+
+<span class="n">INDUSTRIES</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;healthcare&quot;</span><span class="p">:</span> <span class="n">IndustryProfile</span><span class="p">(</span>
+        <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;healthcare&quot;</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Healthcare&quot;</span><span class="p">,</span>
+        <span class="n">modules</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;fhir&quot;</span><span class="p">,</span> <span class="s2">&quot;audit&quot;</span><span class="p">,</span> <span class="s2">&quot;compliance&quot;</span><span class="p">],</span>
+        <span class="n">signature</span><span class="o">=</span><span class="s2">&quot;BKM-Health&quot;</span>
+    <span class="p">),</span>
+    <span class="s2">&quot;energy&quot;</span><span class="p">:</span> <span class="n">IndustryProfile</span><span class="p">(</span>
+        <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;energy&quot;</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Energy&quot;</span><span class="p">,</span>
+        <span class="n">modules</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;grid&quot;</span><span class="p">,</span> <span class="s2">&quot;predictive&quot;</span><span class="p">,</span> <span class="s2">&quot;scada&quot;</span><span class="p">],</span>
+        <span class="n">signature</span><span class="o">=</span><span class="s2">&quot;BKM-Energy&quot;</span>
+    <span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">CUSTOMERS</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;enterprise&quot;</span><span class="p">:</span> <span class="n">CustomerProfile</span><span class="p">(</span>
+        <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;enterprise&quot;</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Enterprise&quot;</span><span class="p">,</span>
+        <span class="n">features</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;multiTenant&quot;</span><span class="p">,</span> <span class="s2">&quot;roleAccess&quot;</span><span class="p">]</span>
+    <span class="p">),</span>
+    <span class="s2">&quot;oem&quot;</span><span class="p">:</span> <span class="n">CustomerProfile</span><span class="p">(</span>
+        <span class="nb">id</span><span class="o">=</span><span class="s2">&quot;oem&quot;</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;OEM&quot;</span><span class="p">,</span>
+        <span class="n">features</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;whiteLabel&quot;</span><span class="p">,</span> <span class="s2">&quot;redistribute&quot;</span><span class="p">]</span>
+    <span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<hr />
+<h1 id="wrapper_factorybrandingpy">🎨 <strong>wrapper_factory/branding.py</strong><a class="toc-permalink" href="#wrapper_factorybrandingpy" title="Permanent link to this heading">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code><span class="c1"># branding.py</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">BrandingEngine</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">generate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">tagline</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">logo</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">name</span><span class="p">,</span>
+            <span class="s2">&quot;tagline&quot;</span><span class="p">:</span> <span class="n">tagline</span><span class="p">,</span>
+            <span class="s2">&quot;palette&quot;</span><span class="p">:</span> <span class="n">palette</span><span class="p">,</span>
+            <span class="s2">&quot;logo&quot;</span><span class="p">:</span> <span class="n">logo</span><span class="p">,</span>
+            <span class="s2">&quot;brandingId&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;brand-</span><span class="si">{</span><span class="nb">hash</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">99999</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">}</span>
+</code></pre></div>
+
+<hr />
+<h1 id="wrapper_factoryintegrationspy">🔌 <strong>wrapper_factory/integrations.py</strong><a class="toc-permalink" href="#wrapper_factoryintegrationspy" title="Permanent link to this heading">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code><span class="c1"># integrations.py</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">IntegrationPlanner</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">plan</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">industry_profile</span><span class="p">,</span> <span class="n">customer_profile</span><span class="p">):</span>
+        <span class="n">modules</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">industry_profile</span><span class="o">.</span><span class="n">modules</span> <span class="o">+</span> <span class="n">customer_profile</span><span class="o">.</span><span class="n">features</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;modules&quot;</span><span class="p">:</span> <span class="nb">list</span><span class="p">(</span><span class="n">modules</span><span class="p">),</span>
+            <span class="s2">&quot;integrationId&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;int-</span><span class="si">{</span><span class="nb">hash</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="n">modules</span><span class="p">))</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">99999</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="p">}</span>
+</code></pre></div>
+
+<hr />
+<h1 id="wrapper_factoryconfigpy">⚙️ <strong>wrapper_factory/config.py</strong><a class="toc-permalink" href="#wrapper_factoryconfigpy" title="Permanent link to this heading">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code><span class="c1"># config.py</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ConfigAssembler</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">assemble</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">modules</span><span class="p">,</span> <span class="n">features</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;configId&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;cfg-</span><span class="si">{</span><span class="nb">hash</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="n">modules</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">features</span><span class="p">))</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">99999</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;modules&quot;</span><span class="p">:</span> <span class="n">modules</span><span class="p">,</span>
+            <span class="s2">&quot;features&quot;</span><span class="p">:</span> <span class="n">features</span>
+        <span class="p">}</span>
+</code></pre></div>
+
+<hr />
+<h1 id="wrapper_factorylicensingpy">📜 <strong>wrapper_factory/licensing.py</strong><a class="toc-permalink" href="#wrapper_factorylicensingpy" title="Permanent link to this heading">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code><span class="c1"># licensing.py</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">LicenseEngine</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">generate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">customer_type</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">customer_type</span> <span class="o">==</span> <span class="s2">&quot;oem&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="s2">&quot;licenseId&quot;</span><span class="p">:</span> <span class="s2">&quot;lic-oem&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;permissions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;redistribute&quot;</span><span class="p">,</span> <span class="s2">&quot;whiteLabel&quot;</span><span class="p">],</span>
+                <span class="s2">&quot;restrictions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;noCoreModification&quot;</span><span class="p">]</span>
+            <span class="p">}</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;licenseId&quot;</span><span class="p">:</span> <span class="s2">&quot;lic-ent&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;permissions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;internalUse&quot;</span><span class="p">],</span>
+            <span class="s2">&quot;restrictions&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;noResale&quot;</span><span class="p">,</span> <span class="s2">&quot;noCoreModification&quot;</span><span class="p">]</span>
+        <span class="p">}</span>
+</code></pre></div>
+
+<hr />
+<h1 id="wrapper_factorycore_guardianpy">🔐 <strong>wrapper_factory/core_guardian.py</strong><a class="toc-permalink" href="#wrapper_factorycore_guardianpy" title="Permanent link to this heading">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code><span class="c1"># core_guardian.py</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">CoreGuardian</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">verify</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;coreVersion&quot;</span><span class="p">:</span> <span class="s2">&quot;1.3.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;checksum&quot;</span><span class="p">:</span> <span class="s2">&quot;sha256:abc123&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;immutable&quot;</span><span class="p">:</span> <span class="kc">True</span>
+        <span class="p">}</span>
+</code></pre></div>
+
+<hr />
+<h1 id="wrapper_factoryartifact_builderpy">🛠️ <strong>wrapper_factory/artifact_builder.py</strong><a class="toc-permalink" href="#wrapper_factoryartifact_builderpy" title="Permanent link to this heading">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code><span class="c1"># artifact_builder.py</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ArtifactBuilder</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">build</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">wrapper</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;artifactUrl&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;https://factory/artifacts/</span><span class="si">{</span><span class="n">wrapper</span><span class="p">[</span><span class="s1">&#39;wrapperId&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">.zip&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;documentationUrl&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;https://factory/docs/</span><span class="si">{</span><span class="n">wrapper</span><span class="p">[</span><span class="s1">&#39;wrapperId&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span>
+        <span class="p">}</span>
+</code></pre></div>
+
+<hr />
+<h1 id="wrapper_factorylineagepy">🧬 <strong>wrapper_factory/lineage.py</strong><a class="toc-permalink" href="#wrapper_factorylineagepy" title="Permanent link to this heading">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code><span class="c1"># lineage.py</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">LineageLogger</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">steps</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">log</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">steps</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">export</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">steps</span>
+</code></pre></div>
+
+<hr />
+<h1 id="wrapper_factoryorchestratorpy">🧭 <strong>wrapper_factory/orchestrator.py</strong><a class="toc-permalink" href="#wrapper_factoryorchestratorpy" title="Permanent link to this heading">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code><span class="c1"># orchestrator.py</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.profiles</span><span class="w"> </span><span class="kn">import</span> <span class="n">INDUSTRIES</span><span class="p">,</span> <span class="n">CUSTOMERS</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.branding</span><span class="w"> </span><span class="kn">import</span> <span class="n">BrandingEngine</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.integrations</span><span class="w"> </span><span class="kn">import</span> <span class="n">IntegrationPlanner</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.config</span><span class="w"> </span><span class="kn">import</span> <span class="n">ConfigAssembler</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.licensing</span><span class="w"> </span><span class="kn">import</span> <span class="n">LicenseEngine</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.core_guardian</span><span class="w"> </span><span class="kn">import</span> <span class="n">CoreGuardian</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.artifact_builder</span><span class="w"> </span><span class="kn">import</span> <span class="n">ArtifactBuilder</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.lineage</span><span class="w"> </span><span class="kn">import</span> <span class="n">LineageLogger</span>
+
+
+<span class="k">class</span><span class="w"> </span><span class="nc">WrapperOrchestrator</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">branding</span> <span class="o">=</span> <span class="n">BrandingEngine</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">integrations</span> <span class="o">=</span> <span class="n">IntegrationPlanner</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">ConfigAssembler</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">licensing</span> <span class="o">=</span> <span class="n">LicenseEngine</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">core</span> <span class="o">=</span> <span class="n">CoreGuardian</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">builder</span> <span class="o">=</span> <span class="n">ArtifactBuilder</span><span class="p">()</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">generate_wrapper</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">industry</span><span class="p">,</span> <span class="n">customer</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">tagline</span><span class="p">):</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">LineageLogger</span><span class="p">()</span>
+
+        <span class="n">log</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Resolving profiles&quot;</span><span class="p">)</span>
+        <span class="n">industry_profile</span> <span class="o">=</span> <span class="n">INDUSTRIES</span><span class="p">[</span><span class="n">industry</span><span class="p">]</span>
+        <span class="n">customer_profile</span> <span class="o">=</span> <span class="n">CUSTOMERS</span><span class="p">[</span><span class="n">customer</span><span class="p">]</span>
+
+        <span class="n">log</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Generating branding&quot;</span><span class="p">)</span>
+        <span class="n">branding</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">branding</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">tagline</span><span class="p">)</span>
+
+        <span class="n">log</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Planning integrations&quot;</span><span class="p">)</span>
+        <span class="n">integrations</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">integrations</span><span class="o">.</span><span class="n">plan</span><span class="p">(</span><span class="n">industry_profile</span><span class="p">,</span> <span class="n">customer_profile</span><span class="p">)</span>
+
+        <span class="n">log</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Assembling configuration&quot;</span><span class="p">)</span>
+        <span class="n">config</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">assemble</span><span class="p">(</span>
+            <span class="n">modules</span><span class="o">=</span><span class="n">integrations</span><span class="p">[</span><span class="s2">&quot;modules&quot;</span><span class="p">],</span>
+            <span class="n">features</span><span class="o">=</span><span class="n">customer_profile</span><span class="o">.</span><span class="n">features</span>
+        <span class="p">)</span>
+
+        <span class="n">log</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Binding license&quot;</span><span class="p">)</span>
+        <span class="n">license_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">licensing</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="n">customer</span><span class="p">)</span>
+
+        <span class="n">log</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Verifying core&quot;</span><span class="p">)</span>
+        <span class="n">core_info</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">verify</span><span class="p">()</span>
+
+        <span class="n">wrapper</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">&quot;wrapperId&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;wrap-</span><span class="si">{</span><span class="nb">hash</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">99999</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;branding&quot;</span><span class="p">:</span> <span class="n">branding</span><span class="p">,</span>
+            <span class="s2">&quot;integrations&quot;</span><span class="p">:</span> <span class="n">integrations</span><span class="p">,</span>
+            <span class="s2">&quot;config&quot;</span><span class="p">:</span> <span class="n">config</span><span class="p">,</span>
+            <span class="s2">&quot;license&quot;</span><span class="p">:</span> <span class="n">license_data</span><span class="p">,</span>
+            <span class="s2">&quot;core&quot;</span><span class="p">:</span> <span class="n">core_info</span><span class="p">,</span>
+            <span class="s2">&quot;lineage&quot;</span><span class="p">:</span> <span class="n">log</span><span class="o">.</span><span class="n">export</span><span class="p">()</span>
+        <span class="p">}</span>
+
+        <span class="n">log</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">&quot;Building artifact&quot;</span><span class="p">)</span>
+        <span class="n">artifact</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">builder</span><span class="o">.</span><span class="n">build</span><span class="p">(</span><span class="n">wrapper</span><span class="p">)</span>
+
+        <span class="n">wrapper</span><span class="p">[</span><span class="s2">&quot;artifact&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">artifact</span>
+        <span class="n">wrapper</span><span class="p">[</span><span class="s2">&quot;lineage&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">log</span><span class="o">.</span><span class="n">export</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">wrapper</span>
+</code></pre></div>
+
+<hr />
+<h1 id="cli-tool-wrapperctlpy">🖥️ <strong>CLI Tool — <code>wrapperctl.py</code></strong><a class="toc-permalink" href="#cli-tool-wrapperctlpy" title="Permanent link to this heading">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code><span class="ch">#!/usr/bin/env python3</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">argparse</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">wrapper_factory.orchestrator</span><span class="w"> </span><span class="kn">import</span> <span class="n">WrapperOrchestrator</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">():</span>
+    <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">&quot;RTT Wrapper Factory CLI&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--industry&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Industry profile&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--customer&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Customer type&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--name&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Wrapper product name&quot;</span><span class="p">)</span>
+    <span class="n">parser</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">&quot;--tagline&quot;</span><span class="p">,</span> <span class="n">required</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">help</span><span class="o">=</span><span class="s2">&quot;Wrapper tagline&quot;</span><span class="p">)</span>
+
+    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">()</span>
+
+    <span class="n">orchestrator</span> <span class="o">=</span> <span class="n">WrapperOrchestrator</span><span class="p">()</span>
+    <span class="n">wrapper</span> <span class="o">=</span> <span class="n">orchestrator</span><span class="o">.</span><span class="n">generate_wrapper</span><span class="p">(</span>
+        <span class="n">industry</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">industry</span><span class="p">,</span>
+        <span class="n">customer</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">customer</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+        <span class="n">tagline</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">tagline</span>
+    <span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== Wrapper Generated ===&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Wrapper ID: </span><span class="si">{</span><span class="n">wrapper</span><span class="p">[</span><span class="s1">&#39;wrapperId&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Artifact URL: </span><span class="si">{</span><span class="n">wrapper</span><span class="p">[</span><span class="s1">&#39;artifact&#39;</span><span class="p">][</span><span class="s1">&#39;artifactUrl&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Documentation: </span><span class="si">{</span><span class="n">wrapper</span><span class="p">[</span><span class="s1">&#39;artifact&#39;</span><span class="p">][</span><span class="s1">&#39;documentationUrl&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Lineage:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="n">wrapper</span><span class="p">[</span><span class="s2">&quot;lineage&quot;</span><span class="p">]:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; - </span><span class="si">{</span><span class="n">step</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</code></pre></div>
+
+<hr />
+<h1 id="what-you-now-have">🚀 <strong>What You Now Have</strong><a class="toc-permalink" href="#what-you-now-have" title="Permanent link to this heading">&para;</a></h1>
+<p>You’ve just built:</p>
+<ul>
+<li>a <strong>real orchestration engine</strong>  </li>
+<li>a <strong>clean CLI</strong>  </li>
+<li>a <strong>modular factory architecture</strong>  </li>
+<li>a <strong>sealed‑core, RTT‑aligned wrapper system</strong>  </li>
+</ul>
+<p>This is the skeleton of a commercial‑grade packaging pipeline.</p>
+<p>If you want, I can now help you <strong>add plugin support</strong>, <strong>add YAML config ingestion</strong>, or <strong>package this as a pip‑installable tool</strong>.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/The_Wrapper_Store_with_RTT-Inside.mdRTT_core‑as‑a‑component.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/_ideas/The_Wrapper_Store_with_RTT-Inside.mdRTT_core‑as‑a‑component.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

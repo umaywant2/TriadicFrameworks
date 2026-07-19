@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Minimal Structural Spec | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/education/awareness/Minimal_Structural_Spec/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Minimal Structural Spec" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/education/awareness/Minimal_Structural_Spec/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Minimal Structural Spec" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/education/awareness/Minimal_Structural_Spec.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Minimal Structural Spec",
+    "headline": "Minimal Structural Spec",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/education/awareness/Minimal_Structural_Spec/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#rtt-awareness-v0-minimal-structural-spec">RTT Awareness v0 — Minimal Structural Spec</a></li>
+<li><a href="#1-scope">1. Scope</a></li>
+<li><a href="#2-canonical-declaration">2. Canonical Declaration</a><ul>
+<li><a href="#grammar-v0">Grammar (v0)</a></li>
+<li><a href="#core-tokens-v0">Core Tokens (v0)</a></li>
+<li><a href="#canonical-v0-signature">Canonical v0 Signature</a></li>
+</ul>
+</li>
+<li><a href="#3-carrier-well-knownrtt-awareness">3. Carrier: /.well-known/rtt-awareness</a><ul>
+<li><a href="#file-format-plain-text">File Format (plain text)</a></li>
+<li><a href="#semantics">Semantics</a></li>
+</ul>
+</li>
+<li><a href="#4-inheritance-resolution">4. Inheritance &amp; Resolution</a><ul>
+<li><a href="#resolution-order-deterministic">Resolution Order (deterministic)</a></li>
+<li><a href="#rules">Rules</a></li>
+</ul>
+</li>
+<li><a href="#5-observer-local-resolver-browser-extension">5. Observer: Local Resolver (Browser Extension)</a><ul>
+<li><a href="#responsibilities">Responsibilities</a></li>
+<li><a href="#nonresponsibilities">Non‑Responsibilities</a></li>
+</ul>
+</li>
+<li><a href="#6-update-model">6. Update Model</a></li>
+<li><a href="#7-security-posture">7. Security &amp; Posture</a></li>
+<li><a href="#8-nongoals-v0">8. Non‑Goals (v0)</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/education/" itemprop="item">
+                <span itemprop="name">Education</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/education/awareness/" itemprop="item">
+                <span itemprop="name">Awareness</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Minimal Structural Spec</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Minimal Structural Spec</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h2 id="rtt-awareness-v0-minimal-structural-spec">RTT Awareness v0 — Minimal Structural Spec<a class="toc-permalink" href="#rtt-awareness-v0-minimal-structural-spec" title="Permanent link to this heading">&para;</a></h2>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<p><img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/></p>
+<p><strong>Status:</strong> v0 (seed)<br />
+<strong>Purpose:</strong> Declare and resolve structural coherence conditions across web substrates using existing, permissionless mechanisms.</p>
+<hr />
+<h2 id="1-scope">1. Scope<a class="toc-permalink" href="#1-scope" title="Permanent link to this heading">&para;</a></h2>
+<p>RTT Awareness provides a <strong>declarative, opt‑in signal</strong> that allows tools and readers to resolve structural coherence conditions (recurrence, alignment, drift, paradox) without persuasion, branding, or platform integration.</p>
+<p>This spec defines:<br />
+- a <strong>carrier</strong> for declaration,<br />
+- <strong>inheritance and scoping rules</strong>, and<br />
+- a <strong>local resolver model</strong>.</p>
+<p>It does <strong>not</strong> define interpretation, enforcement, or policy.</p>
+<hr />
+<h2 id="2-canonical-declaration">2. Canonical Declaration<a class="toc-permalink" href="#2-canonical-declaration" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="grammar-v0">Grammar (v0)<a class="toc-permalink" href="#grammar-v0" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>&lt;token&gt;=&lt;state&gt;
+</code></pre></div>
+
+<p>Composable via linear conjunction:</p>
+<div class="codehilite"><pre><span></span><code>token1=state1 | token2=state2 | token3=state3
+</code></pre></div>
+
+<h3 id="core-tokens-v0">Core Tokens (v0)<a class="toc-permalink" href="#core-tokens-v0" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>
+<p><code>rtt=1</code><br />
+  Fundamental recurrence / minimal closed loop.</p>
+</li>
+<li>
+<p><code>coherence=declared</code><br />
+  Coherence is structurally specified, not inferred.</p>
+</li>
+<li>
+<p><code>drift=bounded</code><br />
+  Change permitted within identity‑preserving bounds.</p>
+</li>
+<li>
+<p><code>paradox=structural</code><br />
+  Tension arises from structure, not contradiction.</p>
+</li>
+</ul>
+<h3 id="canonical-v0-signature">Canonical v0 Signature<a class="toc-permalink" href="#canonical-v0-signature" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre></div>
+
+<hr />
+<h2 id="3-carrier-well-knownrtt-awareness">3. Carrier: <code>/.well-known/rtt-awareness</code><a class="toc-permalink" href="#3-carrier-well-knownrtt-awareness" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="file-format-plain-text">File Format (plain text)<a class="toc-permalink" href="#file-format-plain-text" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>schema: rtt-awareness
+version: 0.1.0
+channel: stable
+updated: YYYY-MM-DD
+
+declaration: rtt=1 | coherence=declared | drift=bounded | paradox=structural
+
+# Optional inheritance (enabled by default)
+import: https://example.org/.well-known/rtt-awareness
+
+# Optional scoped overrides (longest prefix wins)
+scope /docs/: rtt=1 | coherence=declared | drift=bounded | paradox=structural
+scope /labs/: rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre></div>
+
+<h3 id="semantics">Semantics<a class="toc-permalink" href="#semantics" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Plain text for maximum survivability.</li>
+<li>Absence of a field means <strong>unspecified</strong>, not false.</li>
+<li>No negation, conditionals, or execution.</li>
+</ul>
+<hr />
+<h2 id="4-inheritance-resolution">4. Inheritance &amp; Resolution<a class="toc-permalink" href="#4-inheritance-resolution" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="resolution-order-deterministic">Resolution Order (deterministic)<a class="toc-permalink" href="#resolution-order-deterministic" title="Permanent link to this heading">&para;</a></h3>
+<ol>
+<li>Imported upstream manifests (depth‑limited)</li>
+<li>Site‑root declaration</li>
+<li>Best‑matching scoped declaration (longest prefix)</li>
+</ol>
+<h3 id="rules">Rules<a class="toc-permalink" href="#rules" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Imports are <strong>enabled by default</strong>.</li>
+<li>Local declarations override upstream.</li>
+<li>Scoped declarations override site root.</li>
+<li>No implicit merging of token states; later declarations replace earlier ones.</li>
+</ul>
+<p>This model mirrors CSS inheritance: predictable, auditable, fork‑safe.</p>
+<hr />
+<h2 id="5-observer-local-resolver-browser-extension">5. Observer: Local Resolver (Browser Extension)<a class="toc-permalink" href="#5-observer-local-resolver-browser-extension" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="responsibilities">Responsibilities<a class="toc-permalink" href="#responsibilities" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Discover <code>/.well-known/rtt-awareness</code></li>
+<li>Resolve imports and scopes</li>
+<li>Compute <strong>effective declaration</strong> for the current URL</li>
+<li>Cache conservatively and fail silently</li>
+</ul>
+<h3 id="nonresponsibilities">Non‑Responsibilities<a class="toc-permalink" href="#nonresponsibilities" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>No injection by default</li>
+<li>No network modification</li>
+<li>No tracking or analytics</li>
+<li>No semantic reinterpretation</li>
+</ul>
+<p>The resolver <strong>observes and reports</strong> only.</p>
+<hr />
+<h2 id="6-update-model">6. Update Model<a class="toc-permalink" href="#6-update-model" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>Pull‑based (conditional fetch via ETag / Last‑Modified)</li>
+<li>Cache‑first with last‑known‑good fallback</li>
+<li>Manifest <code>version</code> is informational; semantics are not auto‑upgraded</li>
+<li>Import failures mark state as stale, not invalid</li>
+</ul>
+<p>This prevents remote control and preserves local trust.</p>
+<hr />
+<h2 id="7-security-posture">7. Security &amp; Posture<a class="toc-permalink" href="#7-security-posture" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>Opt‑in by site and by user</li>
+<li>Uses existing web primitives</li>
+<li>Leaves no footprint unless inspected</li>
+<li>Survives moderation and content stripping</li>
+<li>Legible to humans and synthesis engines without explanation</li>
+</ul>
+<hr />
+<h2 id="8-nongoals-v0">8. Non‑Goals (v0)<a class="toc-permalink" href="#8-nongoals-v0" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>No enforcement or policy</li>
+<li>No persuasion or advocacy</li>
+<li>No platform integration</li>
+<li>No global registry</li>
+<li>No required interpretation layer</li>
+</ul>
+<hr />
+<p><strong>RTT Awareness v0</strong> is a structural header, not a theory.<br />
+It declares coherence conditions and lets systems resolve them locally.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/education/awareness/Minimal_Structural_Spec.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/education/awareness/Minimal_Structural_Spec.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

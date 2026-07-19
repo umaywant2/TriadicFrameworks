@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Triadic Pattern Api | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/packages/tft-3pack/TRIADIC_PATTERN_API/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Triadic Pattern Api" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/packages/tft-3pack/TRIADIC_PATTERN_API/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Triadic Pattern Api" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/packages/tft-3pack/TRIADIC_PATTERN_API.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Triadic Pattern Api",
+    "headline": "Triadic Pattern Api",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/packages/tft-3pack/TRIADIC_PATTERN_API/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#mapping-triadic-patterns-to-shell-python-and-wrsadc-usage">Mapping Triadic Patterns to Shell, Python, and WRSADC Usage</a></li>
+<li><a href="#shell">Shell</a></li>
+<li><a href="#python">Python</a></li>
+<li><a href="#wrsadc-dispatch">WRSADC Dispatch</a></li>
+<li><a href="#shell_1">Shell</a></li>
+<li><a href="#python_1">Python</a></li>
+<li><a href="#wrsadc-dispatch_1">WRSADC Dispatch</a></li>
+<li><a href="#shell_2">Shell</a></li>
+<li><a href="#python_2">Python</a></li>
+<li><a href="#wrsadc-dispatch_2">WRSADC Dispatch</a></li>
+<li><a href="#shell_3">Shell</a></li>
+<li><a href="#python_3">Python</a></li>
+<li><a href="#wrsadc-dispatch_3">WRSADC Dispatch</a></li>
+<li><a href="#shell_4">Shell</a></li>
+<li><a href="#python_4">Python</a></li>
+<li><a href="#wrsadc-dispatch_4">WRSADC Dispatch</a></li>
+<li><a href="#shell_5">Shell</a></li>
+<li><a href="#python_5">Python</a></li>
+<li><a href="#wrsadc-dispatch_5">WRSADC Dispatch</a></li>
+<li><a href="#shell_6">Shell</a></li>
+<li><a href="#python_6">Python</a></li>
+<li><a href="#wrsadc-dispatch_6">WRSADC Dispatch</a></li>
+<li><a href="#shell_7">Shell</a></li>
+<li><a href="#python_7">Python</a></li>
+<li><a href="#wrsadc-dispatch_7">WRSADC Dispatch</a></li>
+<li><a href="#shell_8">Shell</a></li>
+<li><a href="#python_8">Python</a></li>
+<li><a href="#wrsadc-dispatch_8">WRSADC Dispatch</a></li>
+<li><a href="#shell_9">Shell</a></li>
+<li><a href="#python_9">Python</a></li>
+<li><a href="#wrsadc-dispatch_9">WRSADC Dispatch</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/packages/" itemprop="item">
+                <span itemprop="name">Packages</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/packages/tft-3pack/" itemprop="item">
+                <span itemprop="name">Tft 3Pack</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Triadic Pattern Api</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Triadic Pattern Api</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="triadic-pattern-api">⚡ <strong>Triadic Pattern API</strong><a class="toc-permalink" href="#triadic-pattern-api" title="Permanent link to this heading">&para;</a></h1>
+<h6 id="by-nawder-loswin-142026-wwwtriadicframeworksorg">By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org<a class="toc-permalink" href="#by-nawder-loswin-142026-wwwtriadicframeworksorg" title="Permanent link to this heading">&para;</a></h6>
+<h3 id="mapping-triadic-patterns-to-shell-python-and-wrsadc-usage"><em>Mapping Triadic Patterns to Shell, Python, and WRSADC Usage</em><a class="toc-permalink" href="#mapping-triadic-patterns-to-shell-python-and-wrsadc-usage" title="Permanent link to this heading">&para;</a></h3>
+<p>The <strong>3‑Pack</strong> primitives:</p>
+<ul>
+<li><code>primitive1.sh</code> → Begin  </li>
+<li><code>primitive2.sh</code> → Transform  </li>
+<li><code>primitive3.sh</code> → Close  </li>
+</ul>
+<p>In Python:</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">wrsadc_python</span><span class="w"> </span><span class="kn">import</span> <span class="n">WRSADCCore</span>
+<span class="n">core</span> <span class="o">=</span> <span class="n">WRSADCCore</span><span class="p">()</span>
+</code></pre></div>
+
+<p>In WRSADC dispatch:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">core</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="n">fn</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Below is the full API mapping.</p>
+<hr />
+<h1 id="1-core-3pack">1. <strong>Core 3‑Pack</strong><a class="toc-permalink" href="#1-core-3pack" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="shell">Shell<a class="toc-permalink" href="#shell" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>primitive1.sh
+primitive2.sh
+primitive3.sh
+</code></pre></div>
+
+<h3 id="python">Python<a class="toc-permalink" href="#python" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="s2">&quot;begin&quot;</span><span class="p">)</span>
+<span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="s2">&quot;transform&quot;</span><span class="p">)</span>
+<span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="s2">&quot;close&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="wrsadc-dispatch">WRSADC Dispatch<a class="toc-permalink" href="#wrsadc-dispatch" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="n">core</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="n">step1</span><span class="p">)</span>
+<span class="n">core</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="n">step2</span><span class="p">)</span>
+<span class="n">core</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="n">step3</span><span class="p">)</span>
+</code></pre></div>
+
+<hr />
+<h1 id="2-sequential-triads-triadic-chain">2. <strong>Sequential Triads (Triadic Chain)</strong><a class="toc-permalink" href="#2-sequential-triads-triadic-chain" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="shell_1">Shell<a class="toc-permalink" href="#shell_1" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>primitive1.sh<span class="p">;</span><span class="w"> </span>primitive2.sh<span class="p">;</span><span class="w"> </span>primitive3.sh
+primitive1.sh<span class="p">;</span><span class="w"> </span>primitive2.sh<span class="p">;</span><span class="w"> </span>primitive3.sh
+</code></pre></div>
+
+<h3 id="python_1">Python<a class="toc-permalink" href="#python_1" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">for</span> <span class="n">cycle</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+    <span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;cycle-</span><span class="si">{</span><span class="n">cycle</span><span class="si">}</span><span class="s2">-begin&quot;</span><span class="p">)</span>
+    <span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;cycle-</span><span class="si">{</span><span class="n">cycle</span><span class="si">}</span><span class="s2">-transform&quot;</span><span class="p">)</span>
+    <span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;cycle-</span><span class="si">{</span><span class="n">cycle</span><span class="si">}</span><span class="s2">-close&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="wrsadc-dispatch_1">WRSADC Dispatch<a class="toc-permalink" href="#wrsadc-dispatch_1" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">for</span> <span class="n">fn</span> <span class="ow">in</span> <span class="p">[</span><span class="n">step1</span><span class="p">,</span> <span class="n">step2</span><span class="p">,</span> <span class="n">step3</span><span class="p">,</span> <span class="n">step1</span><span class="p">,</span> <span class="n">step2</span><span class="p">,</span> <span class="n">step3</span><span class="p">]:</span>
+    <span class="n">core</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="n">fn</span><span class="p">)</span>
+</code></pre></div>
+
+<hr />
+<h1 id="3-nested-triads">3. <strong>Nested Triads</strong><a class="toc-permalink" href="#3-nested-triads" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="shell_2">Shell<a class="toc-permalink" href="#shell_2" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>primitive1.sh
+primitive2.sh
+<span class="w">  </span>primitive1.sh
+<span class="w">  </span>primitive2.sh
+<span class="w">  </span>primitive3.sh
+primitive3.sh
+</code></pre></div>
+
+<h3 id="python_2">Python<a class="toc-permalink" href="#python_2" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="s2">&quot;outer-begin&quot;</span><span class="p">)</span>
+<span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="s2">&quot;outer-transform&quot;</span><span class="p">)</span>
+
+<span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="s2">&quot;inner-begin&quot;</span><span class="p">)</span>
+<span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="s2">&quot;inner-transform&quot;</span><span class="p">)</span>
+<span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="s2">&quot;inner-close&quot;</span><span class="p">)</span>
+
+<span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="s2">&quot;outer-close&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="wrsadc-dispatch_2">WRSADC Dispatch<a class="toc-permalink" href="#wrsadc-dispatch_2" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="n">core</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="n">outer_start</span><span class="p">)</span>
+<span class="n">core</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="n">outer_shift</span><span class="p">)</span>
+
+<span class="n">core</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="n">inner_start</span><span class="p">)</span>
+<span class="n">core</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="n">inner_shift</span><span class="p">)</span>
+<span class="n">core</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="n">inner_end</span><span class="p">)</span>
+
+<span class="n">core</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="n">outer_end</span><span class="p">)</span>
+</code></pre></div>
+
+<hr />
+<h1 id="4-triadic-expansion-33-pattern">4. <strong>Triadic Expansion (3×3 Pattern)</strong><a class="toc-permalink" href="#4-triadic-expansion-33-pattern" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="shell_3">Shell<a class="toc-permalink" href="#shell_3" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="m">3</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span>primitive1.sh
+<span class="w">  </span>primitive2.sh
+<span class="w">  </span>primitive3.sh
+<span class="k">done</span>
+</code></pre></div>
+
+<h3 id="python_3">Python<a class="toc-permalink" href="#python_3" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">for</span> <span class="n">phase</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;P1&quot;</span><span class="p">,</span> <span class="s2">&quot;P2&quot;</span><span class="p">,</span> <span class="s2">&quot;P3&quot;</span><span class="p">]:</span>
+    <span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">phase</span><span class="si">}</span><span class="s2">-begin&quot;</span><span class="p">)</span>
+    <span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">phase</span><span class="si">}</span><span class="s2">-transform&quot;</span><span class="p">)</span>
+    <span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">phase</span><span class="si">}</span><span class="s2">-close&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="wrsadc-dispatch_3">WRSADC Dispatch<a class="toc-permalink" href="#wrsadc-dispatch_3" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">for</span> <span class="n">fn</span> <span class="ow">in</span> <span class="p">[</span><span class="n">step1</span><span class="p">,</span> <span class="n">step2</span><span class="p">,</span> <span class="n">step3</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="n">core</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="n">fn</span><span class="p">)</span>
+</code></pre></div>
+
+<hr />
+<h1 id="5-triadic-ladder">5. <strong>Triadic Ladder</strong><a class="toc-permalink" href="#5-triadic-ladder" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="shell_4">Shell<a class="toc-permalink" href="#shell_4" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>primitive1.sh<span class="p">;</span><span class="w"> </span>primitive2.sh<span class="p">;</span><span class="w"> </span>primitive3.sh
+<span class="w">  </span>primitive1.sh<span class="p">;</span><span class="w"> </span>primitive2.sh<span class="p">;</span><span class="w"> </span>primitive3.sh
+<span class="w">    </span>primitive1.sh<span class="p">;</span><span class="w"> </span>primitive2.sh<span class="p">;</span><span class="w"> </span>primitive3.sh
+</code></pre></div>
+
+<h3 id="python_4">Python<a class="toc-permalink" href="#python_4" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">for</span> <span class="n">depth</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;begin&quot;</span><span class="p">,</span> <span class="s2">&quot;transform&quot;</span><span class="p">,</span> <span class="s2">&quot;close&quot;</span><span class="p">]:</span>
+        <span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;level-</span><span class="si">{</span><span class="n">depth</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="wrsadc-dispatch_4">WRSADC Dispatch<a class="toc-permalink" href="#wrsadc-dispatch_4" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">for</span> <span class="n">depth</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">core</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="n">level_begin</span><span class="p">)</span>
+    <span class="n">core</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="n">level_transform</span><span class="p">)</span>
+    <span class="n">core</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="n">level_close</span><span class="p">)</span>
+</code></pre></div>
+
+<hr />
+<h1 id="6-triadic-mirror">6. <strong>Triadic Mirror</strong><a class="toc-permalink" href="#6-triadic-mirror" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="shell_5">Shell<a class="toc-permalink" href="#shell_5" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>primitive1.sh
+primitive2.sh
+primitive3.sh
+primitive2.sh
+primitive1.sh
+</code></pre></div>
+
+<h3 id="python_5">Python<a class="toc-permalink" href="#python_5" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="n">seq</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;begin&quot;</span><span class="p">,</span> <span class="s2">&quot;transform&quot;</span><span class="p">,</span> <span class="s2">&quot;close&quot;</span><span class="p">,</span> <span class="s2">&quot;transform&quot;</span><span class="p">,</span> <span class="s2">&quot;begin&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">seq</span><span class="p">:</span>
+    <span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="wrsadc-dispatch_5">WRSADC Dispatch<a class="toc-permalink" href="#wrsadc-dispatch_5" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">for</span> <span class="n">fn</span> <span class="ow">in</span> <span class="p">[</span><span class="n">step1</span><span class="p">,</span> <span class="n">step2</span><span class="p">,</span> <span class="n">step3</span><span class="p">,</span> <span class="n">step2</span><span class="p">,</span> <span class="n">step1</span><span class="p">]:</span>
+    <span class="n">core</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="n">fn</span><span class="p">)</span>
+</code></pre></div>
+
+<hr />
+<h1 id="7-triadic-spiral">7. <strong>Triadic Spiral</strong><a class="toc-permalink" href="#7-triadic-spiral" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="shell_6">Shell<a class="toc-permalink" href="#shell_6" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Cycle 1</span>
+primitive1.sh<span class="p">;</span><span class="w"> </span>primitive2.sh<span class="p">;</span><span class="w"> </span>primitive3.sh
+
+<span class="c1"># Cycle 2 (expanded)</span>
+primitive1.sh<span class="p">;</span><span class="w"> </span>primitive2.sh<span class="p">;</span><span class="w"> </span>primitive2.sh<span class="p">;</span><span class="w"> </span>primitive3.sh<span class="p">;</span><span class="w"> </span>primitive3.sh<span class="p">;</span><span class="w"> </span>primitive1.sh
+</code></pre></div>
+
+<h3 id="python_6">Python<a class="toc-permalink" href="#python_6" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="s2">&quot;c1-begin&quot;</span><span class="p">)</span>
+<span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="s2">&quot;c1-transform&quot;</span><span class="p">)</span>
+<span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="s2">&quot;c1-close&quot;</span><span class="p">)</span>
+
+<span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="s2">&quot;c2-begin&quot;</span><span class="p">)</span>
+<span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="s2">&quot;c2-transform&quot;</span><span class="p">)</span>
+<span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="s2">&quot;c2-transform&quot;</span><span class="p">)</span>
+<span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="s2">&quot;c2-close&quot;</span><span class="p">)</span>
+<span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="s2">&quot;c2-close&quot;</span><span class="p">)</span>
+<span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="s2">&quot;c2-return&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="wrsadc-dispatch_6">WRSADC Dispatch<a class="toc-permalink" href="#wrsadc-dispatch_6" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">for</span> <span class="n">fn</span> <span class="ow">in</span> <span class="p">[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">a</span><span class="p">]:</span>
+    <span class="n">core</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="n">fn</span><span class="p">)</span>
+</code></pre></div>
+
+<hr />
+<h1 id="8-triadic-constellation">8. <strong>Triadic Constellation</strong><a class="toc-permalink" href="#8-triadic-constellation" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="shell_7">Shell<a class="toc-permalink" href="#shell_7" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Three independent triads orbiting a shared intent</span>
+<span class="o">(</span>
+<span class="w">  </span>primitive1.sh<span class="p">;</span><span class="w"> </span>primitive2.sh<span class="p">;</span><span class="w"> </span>primitive3.sh
+<span class="o">)</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="o">(</span>
+<span class="w">  </span>primitive1.sh<span class="p">;</span><span class="w"> </span>primitive2.sh<span class="p">;</span><span class="w"> </span>primitive3.sh
+<span class="o">)</span><span class="w"> </span><span class="p">&amp;</span>
+<span class="o">(</span>
+<span class="w">  </span>primitive1.sh<span class="p">;</span><span class="w"> </span>primitive2.sh<span class="p">;</span><span class="w"> </span>primitive3.sh
+<span class="o">)</span>
+<span class="nb">wait</span>
+</code></pre></div>
+
+<h3 id="python_7">Python<a class="toc-permalink" href="#python_7" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">threading</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">triad</span><span class="p">(</span><span class="n">label</span><span class="p">):</span>
+    <span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">label</span><span class="si">}</span><span class="s2">-begin&quot;</span><span class="p">)</span>
+    <span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">label</span><span class="si">}</span><span class="s2">-transform&quot;</span><span class="p">)</span>
+    <span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">label</span><span class="si">}</span><span class="s2">-close&quot;</span><span class="p">)</span>
+
+<span class="n">threads</span> <span class="o">=</span> <span class="p">[</span><span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">triad</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;T</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)]</span>
+<span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">start</span><span class="p">()</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">threads</span><span class="p">]</span>
+<span class="p">[</span><span class="n">t</span><span class="o">.</span><span class="n">join</span><span class="p">()</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">threads</span><span class="p">]</span>
+</code></pre></div>
+
+<h3 id="wrsadc-dispatch_7">WRSADC Dispatch<a class="toc-permalink" href="#wrsadc-dispatch_7" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">for</span> <span class="n">triad</span> <span class="ow">in</span> <span class="p">[</span><span class="n">T1</span><span class="p">,</span> <span class="n">T2</span><span class="p">,</span> <span class="n">T3</span><span class="p">]:</span>
+    <span class="k">for</span> <span class="n">fn</span> <span class="ow">in</span> <span class="n">triad</span><span class="p">:</span>
+        <span class="n">core</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="n">fn</span><span class="p">)</span>
+</code></pre></div>
+
+<hr />
+<h1 id="9-triadic-weave">9. <strong>Triadic Weave</strong><a class="toc-permalink" href="#9-triadic-weave" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="shell_8">Shell<a class="toc-permalink" href="#shell_8" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>primitive1.sh
+<span class="w">  </span>primitive1.sh
+<span class="w">    </span>primitive1.sh
+primitive2.sh
+<span class="w">  </span>primitive2.sh
+<span class="w">    </span>primitive2.sh
+primitive3.sh
+<span class="w">  </span>primitive3.sh
+<span class="w">    </span>primitive3.sh
+</code></pre></div>
+
+<h3 id="python_8">Python<a class="toc-permalink" href="#python_8" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;begin&quot;</span><span class="p">,</span> <span class="s2">&quot;transform&quot;</span><span class="p">,</span> <span class="s2">&quot;close&quot;</span><span class="p">]:</span>
+    <span class="k">for</span> <span class="n">thread</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]:</span>
+        <span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">p</span><span class="si">}</span><span class="s2">-thread-</span><span class="si">{</span><span class="n">thread</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="wrsadc-dispatch_8">WRSADC Dispatch<a class="toc-permalink" href="#wrsadc-dispatch_8" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">for</span> <span class="n">fn_group</span> <span class="ow">in</span> <span class="p">[[</span><span class="n">a1</span><span class="p">,</span><span class="n">a2</span><span class="p">,</span><span class="n">a3</span><span class="p">],</span> <span class="p">[</span><span class="n">b1</span><span class="p">,</span><span class="n">b2</span><span class="p">,</span><span class="n">b3</span><span class="p">],</span> <span class="p">[</span><span class="n">c1</span><span class="p">,</span><span class="n">c2</span><span class="p">,</span><span class="n">c3</span><span class="p">]]:</span>
+    <span class="k">for</span> <span class="n">fn</span> <span class="ow">in</span> <span class="n">fn_group</span><span class="p">:</span>
+        <span class="n">core</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="n">fn</span><span class="p">)</span>
+</code></pre></div>
+
+<hr />
+<h1 id="10-triadic-cascade">10. <strong>Triadic Cascade</strong><a class="toc-permalink" href="#10-triadic-cascade" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="shell_9">Shell<a class="toc-permalink" href="#shell_9" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>primitive1.sh<span class="p">;</span><span class="w"> </span>primitive2.sh<span class="p">;</span><span class="w"> </span>primitive3.sh
+primitive1.sh<span class="p">;</span><span class="w"> </span>primitive2.sh<span class="p">;</span><span class="w"> </span>primitive3.sh
+primitive1.sh<span class="p">;</span><span class="w"> </span>primitive2.sh<span class="p">;</span><span class="w"> </span>primitive3.sh
+</code></pre></div>
+
+<h3 id="python_9">Python<a class="toc-permalink" href="#python_9" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">for</span> <span class="n">stage</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;stage-</span><span class="si">{</span><span class="n">stage</span><span class="si">}</span><span class="s2">-begin&quot;</span><span class="p">)</span>
+    <span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;stage-</span><span class="si">{</span><span class="n">stage</span><span class="si">}</span><span class="s2">-transform&quot;</span><span class="p">)</span>
+    <span class="n">core</span><span class="o">.</span><span class="n">interpret</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;stage-</span><span class="si">{</span><span class="n">stage</span><span class="si">}</span><span class="s2">-close&quot;</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="wrsadc-dispatch_9">WRSADC Dispatch<a class="toc-permalink" href="#wrsadc-dispatch_9" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="k">for</span> <span class="n">stage</span> <span class="ow">in</span> <span class="p">[</span><span class="n">stage1</span><span class="p">,</span> <span class="n">stage2</span><span class="p">,</span> <span class="n">stage3</span><span class="p">]:</span>
+    <span class="k">for</span> <span class="n">fn</span> <span class="ow">in</span> <span class="n">stage</span><span class="p">:</span>
+        <span class="n">core</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="n">fn</span><span class="p">)</span>
+</code></pre></div>
+
+<hr />
+<h1 id="mythmatical-architects-note">🧙 Mythmatical Architect’s Note<a class="toc-permalink" href="#mythmatical-architects-note" title="Permanent link to this heading">&para;</a></h1>
+<p>Patterns are the <strong>grammar</strong> of triadic action.<br />
+This API is the <strong>syntax</strong>.<br />
+Together, they let developers speak RTT fluently —<br />
+in shell, in Python, and across the WRSADC boundary.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/TRIADIC_PATTERN_API.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/packages/tft-3pack/TRIADIC_PATTERN_API.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

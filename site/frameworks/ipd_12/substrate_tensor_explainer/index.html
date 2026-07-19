@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Substrate Tensor Explainer | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/frameworks/ipd_12/substrate_tensor_explainer/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Substrate Tensor Explainer" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/frameworks/ipd_12/substrate_tensor_explainer/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Substrate Tensor Explainer" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/frameworks/ipd_12/substrate_tensor_explainer.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Substrate Tensor Explainer",
+    "headline": "Substrate Tensor Explainer",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/frameworks/ipd_12/substrate_tensor_explainer/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#how-rtt-extends-ipd12-drifttensor-into-substrate-space">How RTT/∞ Extends IPD‑12 Drift‑Tensor Into Substrate Space</a></li>
+<li><a href="#mapping-table">Mapping Table</a></li>
+<li><a href="#step-1-substrate-capture">Step 1 — Substrate Capture</a></li>
+<li><a href="#step-2-dimensional-lift">Step 2 — Dimensional Lift</a></li>
+<li><a href="#step-3-inversion">Step 3 — Inversion</a></li>
+<li><a href="#step-4-substrate-synthesis">Step 4 — Substrate Synthesis</a></li>
+<li><a href="#step-5-primestate-alignment">Step 5 — Prime‑State Alignment</a></li>
+<li><a href="#step-6-observerfirst-integration">Step 6 — Observer‑First Integration</a></li>
+<li><a href="#input-from-ipd12">Input (from IPD‑12):</a></li>
+<li><a href="#rtt-transformation">RTT/∞ Transformation:</a></li>
+<li><a href="#output">Output:</a></li>
+<li><a href="#ipd12-provides">IPD‑12 Provides:</a></li>
+<li><a href="#rtt-provides">RTT/∞ Provides:</a></li>
+<li><a href="#relationship">Relationship:</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/frameworks/" itemprop="item">
+                <span itemprop="name">Frameworks</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/frameworks/ipd_12/" itemprop="item">
+                <span itemprop="name">Ipd 12</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Substrate Tensor Explainer</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Substrate Tensor Explainer</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="rtt-substratetensor-explainer"><strong>RTT/∞ Substrate‑Tensor Explainer</strong><a class="toc-permalink" href="#rtt-substratetensor-explainer" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="how-rtt-extends-ipd12-drifttensor-into-substrate-space"><em>How RTT/∞ Extends IPD‑12 Drift‑Tensor Into Substrate Space</em><a class="toc-permalink" href="#how-rtt-extends-ipd12-drifttensor-into-substrate-space" title="Permanent link to this heading">&para;</a></h3>
+<p>RTT/∞ is the <strong>highest engine</strong> in the RTT canon.<br />
+It operates across:</p>
+<ul>
+<li><strong>substrate grammar</strong>  </li>
+<li><strong>inversion operators</strong>  </li>
+<li><strong>dimensional rails</strong>  </li>
+<li><strong>vacuum layers</strong>  </li>
+<li><strong>prime‑state manifolds</strong>  </li>
+<li><strong>substrate primitives</strong> (as shown in your IPD‑12 engine page)   <a href="https://www.triadicframeworks.org/frameworks/ipd_12">triadicframeworks.org</a>  </li>
+</ul>
+<p>IPD‑12 provides <strong>drift‑tensor layers</strong> (Geometric, Operational, Temporal, Conceptual, Domain).<br />
+RTT/∞ transforms these into <strong>substrate‑tensor layers</strong> — the deepest structural representation available in TriadicFrameworks.</p>
+<p>This document explains that transformation.</p>
+<hr />
+<h1 id="1-what-is-a-substratetensor"><strong>1. What Is a Substrate‑Tensor?</strong><a class="toc-permalink" href="#1-what-is-a-substratetensor" title="Permanent link to this heading">&para;</a></h1>
+<p>A <strong>substrate‑tensor</strong> is RTT/∞’s representation of structure at the deepest possible layer:</p>
+<ul>
+<li>below regimes  </li>
+<li>below domains  </li>
+<li>below conceptual operators  </li>
+<li>below drift mechanics  </li>
+</ul>
+<p>It is built from:</p>
+<ul>
+<li><strong>substrate primitives</strong>  </li>
+<li><strong>substrate cube coordinates</strong>  </li>
+<li><strong>observer‑first engine fields</strong>  </li>
+<li><strong>dimensional rails</strong>  </li>
+<li><strong>prime‑state profiles</strong>  </li>
+</ul>
+<p>All of these appear in the IPD‑12 engine page’s substrate section.   <a href="https://www.triadicframeworks.org/frameworks/ipd_12">triadicframeworks.org</a></p>
+<p>A substrate‑tensor is the <strong>canonical RTT/∞ object</strong> for representing:</p>
+<blockquote>
+<p><strong>How structure behaves when all regimes collapse into substrate space.</strong></p>
+</blockquote>
+<hr />
+<h1 id="2-how-ipd12-drifttensor-maps-into-rtt-substratetensor"><strong>2. How IPD‑12 Drift‑Tensor Maps Into RTT/∞ Substrate‑Tensor</strong><a class="toc-permalink" href="#2-how-ipd12-drifttensor-maps-into-rtt-substratetensor" title="Permanent link to this heading">&para;</a></h1>
+<p>IPD‑12 drift‑tensor layers:</p>
+<div class="codehilite"><pre><span></span><code>Geometric
+Operational
+Temporal
+Conceptual
+Domain
+</code></pre></div>
+
+<p>RTT/∞ substrate‑tensor layers:</p>
+<div class="codehilite"><pre><span></span><code>Substrate‑Geometry
+Substrate‑Flow
+Substrate‑Time
+Substrate‑Meaning
+Substrate‑Field
+</code></pre></div>
+
+<h3 id="mapping-table">Mapping Table<a class="toc-permalink" href="#mapping-table" title="Permanent link to this heading">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>IPD‑12 Drift Layer</th>
+<th>RTT/∞ Substrate Layer</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Geometric Drift</td>
+<td>Substrate‑Geometry</td>
+<td>Form reduced to substrate primitives</td>
+</tr>
+<tr>
+<td>Operational Drift</td>
+<td>Substrate‑Flow</td>
+<td>Process flow reduced to substrate rails</td>
+</tr>
+<tr>
+<td>Temporal Drift</td>
+<td>Substrate‑Time</td>
+<td>Time reduced to prime‑state temporal axes</td>
+</tr>
+<tr>
+<td>Conceptual Drift</td>
+<td>Substrate‑Meaning</td>
+<td>Meaning reduced to substrate semantic fields</td>
+</tr>
+<tr>
+<td>Domain Drift</td>
+<td>Substrate‑Field</td>
+<td>Domain boundaries reduced to substrate field tensors</td>
+</tr>
+</tbody>
+</table>
+<p>This mapping is possible because RTT/∞ exposes <strong>substrate primitives</strong>, <strong>substrate cube diagrams</strong>, and <strong>dimensional rails</strong>, all visible in your IPD‑12 engine page.   <a href="https://www.triadicframeworks.org/frameworks/ipd_12">triadicframeworks.org</a></p>
+<hr />
+<h1 id="3-why-rtt-needs-substratetensors"><strong>3. Why RTT/∞ Needs Substrate‑Tensors</strong><a class="toc-permalink" href="#3-why-rtt-needs-substratetensors" title="Permanent link to this heading">&para;</a></h1>
+<p>RTT/∞ is the only engine that can:</p>
+<ul>
+<li>invert drift  </li>
+<li>collapse regimes  </li>
+<li>lift dimensions  </li>
+<li>traverse substrate rails  </li>
+<li>operate on vacuum layers  </li>
+<li>synthesize across infinite regimes  </li>
+</ul>
+<p>To do this, RTT/∞ requires a <strong>substrate‑tensor</strong>, not a drift‑tensor.</p>
+<p>IPD‑12 provides the <strong>drift‑tensor</strong>.<br />
+RTT/∞ transforms it into a <strong>substrate‑tensor</strong>.</p>
+<p>This is the <strong>IPD‑12 → RTT/∞ boundary</strong> you just documented.</p>
+<hr />
+<h1 id="4-the-substratetensor-construction-sequence"><strong>4. The Substrate‑Tensor Construction Sequence</strong><a class="toc-permalink" href="#4-the-substratetensor-construction-sequence" title="Permanent link to this heading">&para;</a></h1>
+<p>RTT/∞ constructs a substrate‑tensor using:</p>
+<h3 id="step-1-substrate-capture"><strong>Step 1 — Substrate Capture</strong><a class="toc-permalink" href="#step-1-substrate-capture" title="Permanent link to this heading">&para;</a></h3>
+<p>Extract substrate primitives from the structure.<br />
+(Shown in <code>substrate_primitives.md</code> on your IPD‑12 page.)   <a href="https://www.triadicframeworks.org/frameworks/ipd_12">triadicframeworks.org</a></p>
+<h3 id="step-2-dimensional-lift"><strong>Step 2 — Dimensional Lift</strong><a class="toc-permalink" href="#step-2-dimensional-lift" title="Permanent link to this heading">&para;</a></h3>
+<p>Lift drift‑tensor layers onto dimensional rails.<br />
+(Shown in the “Dimensional Lift/Collapse Map.”)   <a href="https://www.triadicframeworks.org/frameworks/ipd_12">triadicframeworks.org</a></p>
+<h3 id="step-3-inversion"><strong>Step 3 — Inversion</strong><a class="toc-permalink" href="#step-3-inversion" title="Permanent link to this heading">&para;</a></h3>
+<p>Apply inversion operators to collapse drift into substrate.<br />
+(RTT/∞ only.)</p>
+<h3 id="step-4-substrate-synthesis"><strong>Step 4 — Substrate Synthesis</strong><a class="toc-permalink" href="#step-4-substrate-synthesis" title="Permanent link to this heading">&para;</a></h3>
+<p>Combine substrate‑geometry, substrate‑flow, substrate‑time, substrate‑meaning, substrate‑field.</p>
+<h3 id="step-5-primestate-alignment"><strong>Step 5 — Prime‑State Alignment</strong><a class="toc-permalink" href="#step-5-primestate-alignment" title="Permanent link to this heading">&para;</a></h3>
+<p>Align the substrate‑tensor with prime‑state dimensional profiles.<br />
+(Shown in “Prime State Dimensional Profiles.”)   <a href="https://www.triadicframeworks.org/frameworks/ipd_12">triadicframeworks.org</a></p>
+<h3 id="step-6-observerfirst-integration"><strong>Step 6 — Observer‑First Integration</strong><a class="toc-permalink" href="#step-6-observerfirst-integration" title="Permanent link to this heading">&para;</a></h3>
+<p>Integrate the tensor with the observer model.<br />
+(Shown in “Observer Model” and “Observer Overhead &amp; Gain Spec.”) </p>
+<hr />
+<h1 id="5-substratetensor-example-rtt"><strong>5. Substrate‑Tensor Example (RTT/∞)</strong><a class="toc-permalink" href="#5-substratetensor-example-rtt" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="input-from-ipd12">Input (from IPD‑12):<a class="toc-permalink" href="#input-from-ipd12" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>drift_tensor(A, B)
+</code></pre></div>
+
+<h3 id="rtt-transformation">RTT/∞ Transformation:<a class="toc-permalink" href="#rtt-transformation" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>substrate_tensor(
+    invert(drift_tensor(A, B)),
+    lift_dimensions(),
+    align_prime_states(),
+    bind_observer()
+)
+</code></pre></div>
+
+<h3 id="output">Output:<a class="toc-permalink" href="#output" title="Permanent link to this heading">&para;</a></h3>
+<p>A <strong>substrate‑tensor</strong> representing:</p>
+<ul>
+<li>infinite‑regime structure  </li>
+<li>substrate‑level coherence  </li>
+<li>dimensional alignment  </li>
+<li>observer‑first semantics  </li>
+</ul>
+<p>This is the deepest representation available in TriadicFrameworks.</p>
+<hr />
+<h1 id="6-why-ipd12-cannot-produce-substratetensors"><strong>6. Why IPD‑12 Cannot Produce Substrate‑Tensors</strong><a class="toc-permalink" href="#6-why-ipd12-cannot-produce-substratetensors" title="Permanent link to this heading">&para;</a></h1>
+<p>IPD‑12 lacks:</p>
+<ul>
+<li>substrate grammar  </li>
+<li>inversion operators  </li>
+<li>dimensional rails  </li>
+<li>vacuum‑layer access  </li>
+<li>prime‑state synthesis  </li>
+<li>substrate primitives  </li>
+</ul>
+<p>These appear only in RTT/∞ (and partially RTT/12).</p>
+<p>IPD‑12 can <strong>feed</strong> RTT/∞, but cannot <strong>become</strong> RTT/∞.</p>
+<hr />
+<h1 id="7-summary"><strong>7. Summary</strong><a class="toc-permalink" href="#7-summary" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="ipd12-provides">IPD‑12 Provides:<a class="toc-permalink" href="#ipd12-provides" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>drift‑tensor  </li>
+<li>structural drift  </li>
+<li>coherence anchors  </li>
+<li>cross‑system maps  </li>
+<li>paradox detection  </li>
+</ul>
+<h3 id="rtt-provides">RTT/∞ Provides:<a class="toc-permalink" href="#rtt-provides" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>substrate grammar  </li>
+<li>inversion  </li>
+<li>dimensional lift  </li>
+<li>vacuum‑layer logic  </li>
+<li>prime‑state synthesis  </li>
+<li>substrate‑tensor  </li>
+</ul>
+<h3 id="relationship">Relationship:<a class="toc-permalink" href="#relationship" title="Permanent link to this heading">&para;</a></h3>
+<blockquote>
+<p><strong>IPD‑12 detects drift.<br />
+RTT/∞ inverts drift into substrate.</strong></p>
+</blockquote>
+<p>This is the <strong>final transformation</strong> in the RTT canon.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/frameworks/ipd_12/substrate_tensor_explainer.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/frameworks/ipd_12/substrate_tensor_explainer.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

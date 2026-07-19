@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Cross Module Audit | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/ai/cross_module_audit/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Cross Module Audit" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/ai/cross_module_audit/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Cross Module Audit" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/ai/cross_module_audit.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Cross Module Audit",
+    "headline": "Cross Module Audit",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/ai/cross_module_audit/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#absolute-metadata-identity-relative-content-path-correction">Absolute Metadata Identity + Relative Content Path Correction</a></li>
+<li><a href="#version-10-canonaligned-audit-protocol">Version 1.0 — Canon‑Aligned Audit Protocol</a></li>
+<li><a href="#21-absolute-metadata-identity">2.1 Absolute Metadata Identity</a></li>
+<li><a href="#22-relative-content-linking">2.2 Relative Content Linking</a></li>
+<li><a href="#23-canonical-file-placement">2.3 Canonical File Placement</a></li>
+<li><a href="#24-zero-drift-across-renderers">2.4 Zero Drift Across Renderers</a></li>
+<li><a href="#step-1-identify-module-root">Step 1 — Identify Module Root</a></li>
+<li><a href="#step-2-verify-absolute-metadata-identity">Step 2 — Verify Absolute Metadata Identity</a></li>
+<li><a href="#step-3-scan-for-incorrect-relative-paths">Step 3 — Scan for Incorrect Relative Paths</a></li>
+<li><a href="#step-4-scan-for-incorrect-absolute-content-paths">Step 4 — Scan for Incorrect Absolute Content Paths</a></li>
+<li><a href="#step-5-validate-crossrenderer-behavior">Step 5 — Validate Cross‑Renderer Behavior</a><ul>
+<li><a href="#51-metadata-correction">5.1 Metadata Correction</a></li>
+<li><a href="#52-content-correction">5.2 Content Correction</a></li>
+<li><a href="#53-modulejson-correction">5.3 Module.json Correction</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/ai/" itemprop="item">
+                <span itemprop="name">Ai</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Cross Module Audit</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Cross Module Audit</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="rtt-crossmodule-audit"><strong>RTT Cross‑Module Audit</strong><a class="toc-permalink" href="#rtt-crossmodule-audit" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="absolute-metadata-identity-relative-content-path-correction"><em>Absolute Metadata Identity + Relative Content Path Correction</em><a class="toc-permalink" href="#absolute-metadata-identity-relative-content-path-correction" title="Permanent link to this heading">&para;</a></h3>
+<h3 id="version-10-canonaligned-audit-protocol"><strong>Version 1.0 — Canon‑Aligned Audit Protocol</strong><a class="toc-permalink" href="#version-10-canonaligned-audit-protocol" title="Permanent link to this heading">&para;</a></h3>
+<p>This audit ensures that <strong>every module</strong> in TriadicFrameworks uses:</p>
+<ul>
+<li><strong>absolute paths</strong> for <code>module.json</code> (canonical identity)  </li>
+<li><strong>relative paths</strong> for all internal content (renderer‑agnostic behavior)  </li>
+<li><strong>consistent activation surfaces</strong>  </li>
+<li><strong>zero drift</strong> across Docsbook.io, GitHub, GitHub Pages, and future renderers  </li>
+</ul>
+<p>This is the official cross‑module correction protocol.</p>
+<hr />
+<h1 id="1-audit-scope"><strong>1. Audit Scope</strong><a class="toc-permalink" href="#1-audit-scope" title="Permanent link to this heading">&para;</a></h1>
+<p>This audit applies to <strong>all modules</strong> under:</p>
+<div class="codehilite"><pre><span></span><code>/docs/
+</code></pre></div>
+
+<p>Including but not limited to:</p>
+<ul>
+<li>AI modules  </li>
+<li>RTT modules  </li>
+<li>Structural Detection  </li>
+<li>SARG  </li>
+<li>Paradoxes Canon  </li>
+<li>NoS  </li>
+<li>L.D. Structures  </li>
+<li>Inverted Economics  </li>
+<li>Governance Substrate Model  </li>
+<li>Framework Field Theory  </li>
+<li>Opacity  </li>
+<li>Mode  </li>
+<li>TEL  </li>
+<li>All experimental modules  </li>
+<li>All host modules (C64host, Amiga, etc.)  </li>
+<li>All glossaries, maps, signatures, diagnostics  </li>
+</ul>
+<p>Total modules: <strong>~120</strong><br />
+Total files affected: <strong>~1,200+</strong></p>
+<hr />
+<h1 id="2-audit-objective"><strong>2. Audit Objective</strong><a class="toc-permalink" href="#2-audit-objective" title="Permanent link to this heading">&para;</a></h1>
+<p>Ensure <strong>every module</strong> satisfies:</p>
+<h3 id="21-absolute-metadata-identity"><strong>2.1 Absolute Metadata Identity</strong><a class="toc-permalink" href="#21-absolute-metadata-identity" title="Permanent link to this heading">&para;</a></h3>
+<p>Each module MUST expose:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;rtt-module&quot;</span>
+      <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://raw.githubusercontent.com/&lt;user&gt;/&lt;repo&gt;/main/&lt;path&gt;/module.json&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<h3 id="22-relative-content-linking"><strong>2.2 Relative Content Linking</strong><a class="toc-permalink" href="#22-relative-content-linking" title="Permanent link to this heading">&para;</a></h3>
+<p>All internal links MUST be relative:</p>
+<div class="codehilite"><pre><span></span><code>./examples.md
+../operators/flow.md
+../../maps/overview.md
+</code></pre></div>
+
+<h3 id="23-canonical-file-placement"><strong>2.3 Canonical File Placement</strong><a class="toc-permalink" href="#23-canonical-file-placement" title="Permanent link to this heading">&para;</a></h3>
+<p>Each module MUST contain:</p>
+<div class="codehilite"><pre><span></span><code>module.json
+README.md or index.html
+</code></pre></div>
+
+<h3 id="24-zero-drift-across-renderers"><strong>2.4 Zero Drift Across Renderers</strong><a class="toc-permalink" href="#24-zero-drift-across-renderers" title="Permanent link to this heading">&para;</a></h3>
+<p>Docsbook.io, GitHub, and triadicframeworks.org MUST render identically.</p>
+<hr />
+<h1 id="3-audit-procedure"><strong>3. Audit Procedure</strong><a class="toc-permalink" href="#3-audit-procedure" title="Permanent link to this heading">&para;</a></h1>
+<p>This is the <strong>canonical 5‑step audit loop</strong>.</p>
+<hr />
+<h2 id="step-1-identify-module-root"><strong>Step 1 — Identify Module Root</strong><a class="toc-permalink" href="#step-1-identify-module-root" title="Permanent link to this heading">&para;</a></h2>
+<p>For each directory under <code>/docs/</code>:</p>
+<ul>
+<li>Confirm it is a module root  </li>
+<li>Confirm it contains <code>module.json</code>  </li>
+<li>Confirm it contains a primary document (<code>README.md</code> or <code>index.html</code>)</li>
+</ul>
+<p>If missing, flag for correction.</p>
+<hr />
+<h2 id="step-2-verify-absolute-metadata-identity"><strong>Step 2 — Verify Absolute Metadata Identity</strong><a class="toc-permalink" href="#step-2-verify-absolute-metadata-identity" title="Permanent link to this heading">&para;</a></h2>
+<p>Open the module’s primary document.</p>
+<p>Check for:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;rtt-module&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;...&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p>Audit criteria:</p>
+<ul>
+<li>MUST exist  </li>
+<li>MUST use absolute raw URL  </li>
+<li>MUST point to the correct module.json  </li>
+<li>MUST NOT use relative paths  </li>
+<li>MUST NOT use GitHub UI URLs  </li>
+<li>MUST NOT use triadicframeworks.org URLs  </li>
+</ul>
+<p>If incorrect, replace with:</p>
+<div class="codehilite"><pre><span></span><code>https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/&lt;path&gt;/module.json
+</code></pre></div>
+
+<hr />
+<h2 id="step-3-scan-for-incorrect-relative-paths"><strong>Step 3 — Scan for Incorrect Relative Paths</strong><a class="toc-permalink" href="#step-3-scan-for-incorrect-relative-paths" title="Permanent link to this heading">&para;</a></h2>
+<p>Search the module for:</p>
+<ul>
+<li><code>./module.json</code>  </li>
+<li><code>../module.json</code>  </li>
+<li><code>../../module.json</code>  </li>
+<li>any relative reference to metadata  </li>
+</ul>
+<p>These MUST be replaced with absolute URLs.</p>
+<hr />
+<h2 id="step-4-scan-for-incorrect-absolute-content-paths"><strong>Step 4 — Scan for Incorrect Absolute Content Paths</strong><a class="toc-permalink" href="#step-4-scan-for-incorrect-absolute-content-paths" title="Permanent link to this heading">&para;</a></h2>
+<p>Search for:</p>
+<ul>
+<li><code>https://www.triadicframeworks.org/...</code>  </li>
+<li><code>https://github.com/.../blob/main/...</code>  </li>
+<li><code>https://raw.githubusercontent.com/...</code> (for content files)  </li>
+</ul>
+<p>These MUST be replaced with <strong>relative paths</strong>.</p>
+<p>Only metadata uses absolute URLs.</p>
+<hr />
+<h2 id="step-5-validate-crossrenderer-behavior"><strong>Step 5 — Validate Cross‑Renderer Behavior</strong><a class="toc-permalink" href="#step-5-validate-crossrenderer-behavior" title="Permanent link to this heading">&para;</a></h2>
+<p>Open the module in:</p>
+<ul>
+<li>GitHub  </li>
+<li>triadicframeworks.org  </li>
+<li>Docsbook.io  </li>
+</ul>
+<p>Confirm:</p>
+<ul>
+<li>navigation works  </li>
+<li>examples load  </li>
+<li>maps load  </li>
+<li>operators load  </li>
+<li>no broken links  </li>
+<li>metadata resolves  </li>
+<li>Docsbook sidebar shows the module  </li>
+<li>Docsbook AI assistant recognizes the module  </li>
+</ul>
+<p>If any renderer fails, flag for correction.</p>
+<hr />
+<h1 id="4-drift-detection-rules"><strong>4. Drift Detection Rules</strong><a class="toc-permalink" href="#4-drift-detection-rules" title="Permanent link to this heading">&para;</a></h1>
+<p>A module is considered <strong>drifted</strong> if:</p>
+<ul>
+<li>metadata link is missing  </li>
+<li>metadata link is relative  </li>
+<li>metadata link points to wrong path  </li>
+<li>content links are absolute  </li>
+<li>module.json is missing required fields  </li>
+<li>module.json is not at module root  </li>
+<li>module.json is not raw‑fetchable  </li>
+<li>Docsbook cannot index the module  </li>
+<li>GitHub Pages cannot resolve internal links  </li>
+</ul>
+<p>Drift MUST be corrected immediately.</p>
+<hr />
+<h1 id="5-correction-rules"><strong>5. Correction Rules</strong><a class="toc-permalink" href="#5-correction-rules" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="51-metadata-correction"><strong>5.1 Metadata Correction</strong><a class="toc-permalink" href="#51-metadata-correction" title="Permanent link to this heading">&para;</a></h3>
+<p>Replace any incorrect metadata link with:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;rtt-module&quot;</span>
+      <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/&lt;path&gt;/module.json&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<h3 id="52-content-correction"><strong>5.2 Content Correction</strong><a class="toc-permalink" href="#52-content-correction" title="Permanent link to this heading">&para;</a></h3>
+<p>Replace any absolute content link with a relative one.</p>
+<p>Examples:</p>
+<ul>
+<li>❌ <code>https://www.triadicframeworks.org/docs/ai/operators.md</code>  </li>
+<li>
+<p>✔ <code>./operators.md</code></p>
+</li>
+<li>
+<p>❌ <code>https://github.com/.../blob/main/docs/maps/overview.md</code>  </p>
+</li>
+<li>✔ <code>../maps/overview.md</code></li>
+</ul>
+<h3 id="53-modulejson-correction"><strong>5.3 Module.json Correction</strong><a class="toc-permalink" href="#53-modulejson-correction" title="Permanent link to this heading">&para;</a></h3>
+<p>Ensure:</p>
+<ul>
+<li>required fields exist  </li>
+<li>version is present  </li>
+<li>operators are declared  </li>
+<li>roles are declared  </li>
+<li>files map is correct  </li>
+</ul>
+<hr />
+<h1 id="6-completion-criteria"><strong>6. Completion Criteria</strong><a class="toc-permalink" href="#6-completion-criteria" title="Permanent link to this heading">&para;</a></h1>
+<p>A module passes the audit when:</p>
+<ul>
+<li>[ ] <code>module.json</code> exists  </li>
+<li>[ ] metadata link uses absolute raw URL  </li>
+<li>[ ] all content links are relative  </li>
+<li>[ ] Docsbook indexes the module  </li>
+<li>[ ] GitHub renders correctly  </li>
+<li>[ ] triadicframeworks.org renders correctly  </li>
+<li>[ ] no drift detected  </li>
+</ul>
+<p>When all modules pass, the repo is <strong>RTT‑Agentic‑Stable</strong>.</p>
+<hr />
+<h1 id="7-postaudit-actions"><strong>7. Post‑Audit Actions</strong><a class="toc-permalink" href="#7-postaudit-actions" title="Permanent link to this heading">&para;</a></h1>
+<p>After completing the audit:</p>
+<ul>
+<li>regenerate sitemap  </li>
+<li>regenerate module registry  </li>
+<li>update module.json manifests  </li>
+<li>update cross‑module propagation maps  </li>
+<li>update session‑context blocks  </li>
+<li>update AI metadata index  </li>
+</ul>
+<p>This locks in the new canonical identity layer.</p>
+<hr />
+<h1 id="8-versioning"><strong>8. Versioning</strong><a class="toc-permalink" href="#8-versioning" title="Permanent link to this heading">&para;</a></h1>
+<p>This is <strong>RTT Cross‑Module Audit Protocol v1.0</strong>.<br />
+Future versions may extend but MUST NOT break:</p>
+<ul>
+<li>absolute metadata identity  </li>
+<li>relative content linking  </li>
+<li>renderer‑agnostic behavior  </li>
+</ul>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/ai/cross_module_audit.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/ai/cross_module_audit.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>C Gradientary Thresholds | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/Conditions_Substrate_Model/c_Gradientary_Thresholds/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="C Gradientary Thresholds" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/Conditions_Substrate_Model/c_Gradientary_Thresholds/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="C Gradientary Thresholds" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/Conditions_Substrate_Model/c_Gradientary_Thresholds.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "C Gradientary Thresholds",
+    "headline": "C Gradientary Thresholds",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/Conditions_Substrate_Model/c_Gradientary_Thresholds/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#gradientary-thresholds-conditions-substrate-model">Gradientary Thresholds — Conditions Substrate Model</a></li>
+<li><a href="#threshold_drift_narrowing">threshold_drift_narrowing</a></li>
+<li><a href="#threshold_drift_oscillation">threshold_drift_oscillation</a></li>
+<li><a href="#threshold_drift_destabilization">threshold_drift_destabilization</a></li>
+<li><a href="#threshold_drift_collapse">threshold_drift_collapse</a></li>
+<li><a href="#threshold_coherence_stability">threshold_coherence_stability</a></li>
+<li><a href="#threshold_coherence_expansion">threshold_coherence_expansion</a></li>
+<li><a href="#threshold_coherence_peak">threshold_coherence_peak</a></li>
+<li><a href="#threshold_coherence_regeneration">threshold_coherence_regeneration</a></li>
+<li><a href="#threshold_resonance_identity">threshold_resonance_identity</a></li>
+<li><a href="#threshold_resonance_oscillation">threshold_resonance_oscillation</a></li>
+<li><a href="#threshold_resonance_collapse">threshold_resonance_collapse</a></li>
+<li><a href="#threshold_regime_stability">threshold_regime_stability</a></li>
+<li><a href="#threshold_regime_expansion">threshold_regime_expansion</a></li>
+<li><a href="#threshold_regime_coherence">threshold_regime_coherence</a></li>
+<li><a href="#threshold_regime_oscillation">threshold_regime_oscillation</a></li>
+<li><a href="#threshold_regime_narrowing">threshold_regime_narrowing</a></li>
+<li><a href="#threshold_regime_destabilization">threshold_regime_destabilization</a></li>
+<li><a href="#threshold_regime_collapse">threshold_regime_collapse</a></li>
+<li><a href="#threshold_regime_regeneration">threshold_regime_regeneration</a></li>
+<li><a href="#threshold_propagation_collapse">threshold_propagation_collapse</a></li>
+<li><a href="#threshold_propagation_coherence">threshold_propagation_coherence</a></li>
+<li><a href="#threshold_propagation_oscillation">threshold_propagation_oscillation</a></li>
+<li><a href="#threshold_propagation_regeneration">threshold_propagation_regeneration</a></li>
+<li><a href="#threshold_substrate_collapse">threshold_substrate_collapse</a></li>
+<li><a href="#threshold_substrate_coherence">threshold_substrate_coherence</a></li>
+<li><a href="#threshold_substrate_oscillation">threshold_substrate_oscillation</a></li>
+<li><a href="#threshold_substrate_identity">threshold_substrate_identity</a></li>
+<li><a href="#threshold_cascade_collapse">threshold_cascade_collapse</a></li>
+<li><a href="#threshold_cascade_regeneration">threshold_cascade_regeneration</a></li>
+<li><a href="#threshold_cascade_coherence">threshold_cascade_coherence</a></li>
+<li><a href="#threshold_cascade_oscillation">threshold_cascade_oscillation</a></li>
+<li><a href="#threshold_cycle_drift">threshold_cycle_drift</a></li>
+<li><a href="#threshold_cycle_coherence">threshold_cycle_coherence</a></li>
+<li><a href="#threshold_cycle_epochal">threshold_cycle_epochal</a></li>
+<li><a href="#threshold_chain_collapse">threshold_chain_collapse</a></li>
+<li><a href="#threshold_chain_regeneration">threshold_chain_regeneration</a></li>
+<li><a href="#threshold_chain_coherence">threshold_chain_coherence</a></li>
+<li><a href="#threshold_chain_oscillation">threshold_chain_oscillation</a></li>
+<li><a href="#threshold_web_collapse">threshold_web_collapse</a></li>
+<li><a href="#threshold_web_coherence">threshold_web_coherence</a></li>
+<li><a href="#threshold_web_oscillation">threshold_web_oscillation</a></li>
+<li><a href="#threshold_web_identity">threshold_web_identity</a></li>
+<li><a href="#threshold_planetary">threshold_planetary</a></li>
+<li><a href="#threshold_biospheric">threshold_biospheric</a></li>
+<li><a href="#threshold_geological">threshold_geological</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Conditions_Substrate_Model/" itemprop="item">
+                <span itemprop="name">Conditions Substrate Model</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">C Gradientary Thresholds</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">C Gradientary Thresholds</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="c_gradientary_thresholdsmd">c_Gradientary_Thresholds.md<a class="toc-permalink" href="#c_gradientary_thresholdsmd" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="gradientary-thresholds-conditions-substrate-model">Gradientary Thresholds — Conditions Substrate Model<a class="toc-permalink" href="#gradientary-thresholds-conditions-substrate-model" title="Permanent link to this heading">&para;</a></h3>
+<p>TriadicFrameworks Canon (2026.07)</p>
+<p>Thresholds are the <strong>critical inflection points</strong> of the Conditions Substrate Model — the exact moments where systems flip into new states.<br />
+They define collapse ignition, stability ignition, oscillation ignition, scarcity ignition, and regeneration ignition.</p>
+<p>This dictionary defines the canonical threshold operators used across all substrates (D0–D7).</p>
+<hr />
+<h1 id="1-drift-thresholds">1. Drift Thresholds<a class="toc-permalink" href="#1-drift-thresholds" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="threshold_drift_narrowing">threshold_drift_narrowing<a class="toc-permalink" href="#threshold_drift_narrowing" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> D0,D5,D1 drift↑<br />
+<strong>Operator Notes:</strong> scarcity ignition<br />
+<strong>Pattern:</strong> narrowing threshold</p>
+<h2 id="threshold_drift_oscillation">threshold_drift_oscillation<a class="toc-permalink" href="#threshold_drift_oscillation" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> D1,D7,D5 drift↑↑<br />
+<strong>Operator Notes:</strong> volatility ignition<br />
+<strong>Pattern:</strong> oscillation threshold</p>
+<h2 id="threshold_drift_destabilization">threshold_drift_destabilization<a class="toc-permalink" href="#threshold_drift_destabilization" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> D0,D7,D1 drift↑↑↑<br />
+<strong>Operator Notes:</strong> collapse precursor<br />
+<strong>Pattern:</strong> destabilization threshold</p>
+<h2 id="threshold_drift_collapse">threshold_drift_collapse<a class="toc-permalink" href="#threshold_drift_collapse" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> D0,D1,D5,D7 drift↑↑↑↑<br />
+<strong>Operator Notes:</strong> terminal collapse<br />
+<strong>Pattern:</strong> collapse threshold</p>
+<hr />
+<h1 id="2-coherence-thresholds">2. Coherence Thresholds<a class="toc-permalink" href="#2-coherence-thresholds" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="threshold_coherence_stability">threshold_coherence_stability<a class="toc-permalink" href="#threshold_coherence_stability" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> Coh(d_i) &gt; Drift(d_i)<br />
+<strong>Operator Notes:</strong> stability ignition<br />
+<strong>Pattern:</strong> stability threshold</p>
+<h2 id="threshold_coherence_expansion">threshold_coherence_expansion<a class="toc-permalink" href="#threshold_coherence_expansion" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> Coh↑↑, Drift↑<br />
+<strong>Operator Notes:</strong> growth ignition<br />
+<strong>Pattern:</strong> expansion threshold</p>
+<h2 id="threshold_coherence_peak">threshold_coherence_peak<a class="toc-permalink" href="#threshold_coherence_peak" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> C7,C1,C4,C0 coh↑↑↑<br />
+<strong>Operator Notes:</strong> apex stability<br />
+<strong>Pattern:</strong> peak threshold</p>
+<h2 id="threshold_coherence_regeneration">threshold_coherence_regeneration<a class="toc-permalink" href="#threshold_coherence_regeneration" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> Coh↑, Drift↓<br />
+<strong>Operator Notes:</strong> recovery ignition<br />
+<strong>Pattern:</strong> regeneration threshold</p>
+<hr />
+<h1 id="3-resonance-thresholds">3. Resonance Thresholds<a class="toc-permalink" href="#3-resonance-thresholds" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="threshold_resonance_identity">threshold_resonance_identity<a class="toc-permalink" href="#threshold_resonance_identity" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> R(D2,D4,D1)↑↑↑<br />
+<strong>Operator Notes:</strong> identity cascade ignition<br />
+<strong>Pattern:</strong> identity threshold</p>
+<h2 id="threshold_resonance_oscillation">threshold_resonance_oscillation<a class="toc-permalink" href="#threshold_resonance_oscillation" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> R(D1,D7,D5)↑↑↑<br />
+<strong>Operator Notes:</strong> volatility cascade ignition<br />
+<strong>Pattern:</strong> oscillation threshold</p>
+<h2 id="threshold_resonance_collapse">threshold_resonance_collapse<a class="toc-permalink" href="#threshold_resonance_collapse" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> R(D0,D1,D5,D7)↑↑↑<br />
+<strong>Operator Notes:</strong> collapse cascade ignition<br />
+<strong>Pattern:</strong> collapse threshold</p>
+<hr />
+<h1 id="4-regime-thresholds">4. Regime Thresholds<a class="toc-permalink" href="#4-regime-thresholds" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="threshold_regime_stability">threshold_regime_stability<a class="toc-permalink" href="#threshold_regime_stability" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> Coh↑, Drift↓<br />
+<strong>Pattern:</strong> stability state ignition</p>
+<h2 id="threshold_regime_expansion">threshold_regime_expansion<a class="toc-permalink" href="#threshold_regime_expansion" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> Coh↑↑, Drift↑<br />
+<strong>Pattern:</strong> expansion state ignition</p>
+<h2 id="threshold_regime_coherence">threshold_regime_coherence<a class="toc-permalink" href="#threshold_regime_coherence" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> Coh↑↑↑, Drift↓<br />
+<strong>Pattern:</strong> coherence state ignition</p>
+<h2 id="threshold_regime_oscillation">threshold_regime_oscillation<a class="toc-permalink" href="#threshold_regime_oscillation" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> Drift(D1,D7,D5) &gt;&gt; Coh<br />
+<strong>Pattern:</strong> oscillation state ignition</p>
+<h2 id="threshold_regime_narrowing">threshold_regime_narrowing<a class="toc-permalink" href="#threshold_regime_narrowing" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> Drift(D0,D5,D1) &gt; Coh<br />
+<strong>Pattern:</strong> narrowing state ignition</p>
+<h2 id="threshold_regime_destabilization">threshold_regime_destabilization<a class="toc-permalink" href="#threshold_regime_destabilization" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> Drift(D0,D7,D1) &gt;&gt; Coh<br />
+<strong>Pattern:</strong> destabilization state ignition</p>
+<h2 id="threshold_regime_collapse">threshold_regime_collapse<a class="toc-permalink" href="#threshold_regime_collapse" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> Drift across ≥4 dims &gt;&gt; Coh≈0<br />
+<strong>Pattern:</strong> collapse state ignition</p>
+<h2 id="threshold_regime_regeneration">threshold_regime_regeneration<a class="toc-permalink" href="#threshold_regime_regeneration" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> Coh↑, Drift↓<br />
+<strong>Pattern:</strong> regeneration state ignition</p>
+<hr />
+<h1 id="5-propagation-thresholds">5. Propagation Thresholds<a class="toc-permalink" href="#5-propagation-thresholds" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="threshold_propagation_collapse">threshold_propagation_collapse<a class="toc-permalink" href="#threshold_propagation_collapse" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> D0→D7→D1→D5<br />
+<strong>Pattern:</strong> collapse topology ignition</p>
+<h2 id="threshold_propagation_coherence">threshold_propagation_coherence<a class="toc-permalink" href="#threshold_propagation_coherence" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> D7→D1→D4→D0<br />
+<strong>Pattern:</strong> stability topology ignition</p>
+<h2 id="threshold_propagation_oscillation">threshold_propagation_oscillation<a class="toc-permalink" href="#threshold_propagation_oscillation" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> D1→D7→D5→D4<br />
+<strong>Pattern:</strong> volatility topology ignition</p>
+<h2 id="threshold_propagation_regeneration">threshold_propagation_regeneration<a class="toc-permalink" href="#threshold_propagation_regeneration" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> D0→D7→D1→D4<br />
+<strong>Pattern:</strong> recovery topology ignition</p>
+<hr />
+<h1 id="6-substrate-thresholds">6. Substrate Thresholds<a class="toc-permalink" href="#6-substrate-thresholds" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="threshold_substrate_collapse">threshold_substrate_collapse<a class="toc-permalink" href="#threshold_substrate_collapse" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> D0,D1,D5,D7 drift↑↑↑<br />
+<strong>Pattern:</strong> collapse substrate ignition</p>
+<h2 id="threshold_substrate_coherence">threshold_substrate_coherence<a class="toc-permalink" href="#threshold_substrate_coherence" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> D7,D1,D4,D0 coh↑↑↑<br />
+<strong>Pattern:</strong> stability substrate ignition</p>
+<h2 id="threshold_substrate_oscillation">threshold_substrate_oscillation<a class="toc-permalink" href="#threshold_substrate_oscillation" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> D1,D7,D5 drift↑↑<br />
+<strong>Pattern:</strong> oscillation substrate ignition</p>
+<h2 id="threshold_substrate_identity">threshold_substrate_identity<a class="toc-permalink" href="#threshold_substrate_identity" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> D2,D4,D1 resonance↑↑↑<br />
+<strong>Pattern:</strong> identity substrate ignition</p>
+<hr />
+<h1 id="7-cascade-thresholds">7. Cascade Thresholds<a class="toc-permalink" href="#7-cascade-thresholds" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="threshold_cascade_collapse">threshold_cascade_collapse<a class="toc-permalink" href="#threshold_cascade_collapse" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> D0→D7→D1→D5<br />
+<strong>Pattern:</strong> collapse cascade ignition</p>
+<h2 id="threshold_cascade_regeneration">threshold_cascade_regeneration<a class="toc-permalink" href="#threshold_cascade_regeneration" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> D0→D7→D1→D4<br />
+<strong>Pattern:</strong> recovery cascade ignition</p>
+<h2 id="threshold_cascade_coherence">threshold_cascade_coherence<a class="toc-permalink" href="#threshold_cascade_coherence" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> D7→D1→D4→D0<br />
+<strong>Pattern:</strong> stability cascade ignition</p>
+<h2 id="threshold_cascade_oscillation">threshold_cascade_oscillation<a class="toc-permalink" href="#threshold_cascade_oscillation" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> D1→D7→D5→D4<br />
+<strong>Pattern:</strong> volatility cascade ignition</p>
+<hr />
+<h1 id="8-cycle-thresholds">8. Cycle Thresholds<a class="toc-permalink" href="#8-cycle-thresholds" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="threshold_cycle_drift">threshold_cycle_drift<a class="toc-permalink" href="#threshold_cycle_drift" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> rise → peak → decline → reset<br />
+<strong>Pattern:</strong> drift cycle ignition</p>
+<h2 id="threshold_cycle_coherence">threshold_cycle_coherence<a class="toc-permalink" href="#threshold_cycle_coherence" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> stabilize → expand → peak → soften → reset<br />
+<strong>Pattern:</strong> coherence cycle ignition</p>
+<h2 id="threshold_cycle_epochal">threshold_cycle_epochal<a class="toc-permalink" href="#threshold_cycle_epochal" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> E5→E6→E7→E0<br />
+<strong>Pattern:</strong> epochal collapse ignition</p>
+<hr />
+<h1 id="9-chain-thresholds">9. Chain Thresholds<a class="toc-permalink" href="#9-chain-thresholds" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="threshold_chain_collapse">threshold_chain_collapse<a class="toc-permalink" href="#threshold_chain_collapse" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> D0→D7→D1→D5<br />
+<strong>Pattern:</strong> collapse chain ignition</p>
+<h2 id="threshold_chain_regeneration">threshold_chain_regeneration<a class="toc-permalink" href="#threshold_chain_regeneration" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> D0→D7→D1→D4<br />
+<strong>Pattern:</strong> recovery chain ignition</p>
+<h2 id="threshold_chain_coherence">threshold_chain_coherence<a class="toc-permalink" href="#threshold_chain_coherence" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> D7→D1→D4→D0<br />
+<strong>Pattern:</strong> stability chain ignition</p>
+<h2 id="threshold_chain_oscillation">threshold_chain_oscillation<a class="toc-permalink" href="#threshold_chain_oscillation" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> D1→D7→D5→D4<br />
+<strong>Pattern:</strong> volatility chain ignition</p>
+<hr />
+<h1 id="10-web-thresholds">10. Web Thresholds<a class="toc-permalink" href="#10-web-thresholds" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="threshold_web_collapse">threshold_web_collapse<a class="toc-permalink" href="#threshold_web_collapse" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> D0→D7→D1→D5→D0<br />
+<strong>Pattern:</strong> collapse web ignition</p>
+<h2 id="threshold_web_coherence">threshold_web_coherence<a class="toc-permalink" href="#threshold_web_coherence" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> D7→D1→D4→D0<br />
+<strong>Pattern:</strong> stability web ignition</p>
+<h2 id="threshold_web_oscillation">threshold_web_oscillation<a class="toc-permalink" href="#threshold_web_oscillation" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> D1→D7→D5→D4→D1<br />
+<strong>Pattern:</strong> oscillation web ignition</p>
+<h2 id="threshold_web_identity">threshold_web_identity<a class="toc-permalink" href="#threshold_web_identity" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> D2→D4→D1→D2<br />
+<strong>Pattern:</strong> identity web ignition</p>
+<hr />
+<h1 id="11-deeptime-thresholds">11. Deep‑Time Thresholds<a class="toc-permalink" href="#11-deeptime-thresholds" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="threshold_planetary">threshold_planetary<a class="toc-permalink" href="#threshold_planetary" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> D0,D1,D5,D7↑↑↑ collapse; D7,D1,D4,D0↑↑↑ coherence<br />
+<strong>Pattern:</strong> planetary ignition</p>
+<h2 id="threshold_biospheric">threshold_biospheric<a class="toc-permalink" href="#threshold_biospheric" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> collapse → regenerate → stabilize → expand → coherence → collapse<br />
+<strong>Pattern:</strong> biospheric ignition</p>
+<h2 id="threshold_geological">threshold_geological<a class="toc-permalink" href="#threshold_geological" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> instability → collapse → stabilization → expansion → coherence → instability<br />
+<strong>Pattern:</strong> geological ignition</p>
+<hr />
+<h1 id="12-threshold-dictionary-summary">12. Threshold Dictionary Summary<a class="toc-permalink" href="#12-threshold-dictionary-summary" title="Permanent link to this heading">&para;</a></h1>
+<p>This dictionary defines:</p>
+<ul>
+<li>Drift Thresholds  </li>
+<li>Coherence Thresholds  </li>
+<li>Resonance Thresholds  </li>
+<li>Regime Thresholds  </li>
+<li>Propagation Thresholds  </li>
+<li>Substrate Thresholds  </li>
+<li>Cascade Thresholds  </li>
+<li>Cycle Thresholds  </li>
+<li>Chain Thresholds  </li>
+<li>Web Thresholds  </li>
+<li>Deep‑Time Thresholds  </li>
+</ul>
+<p>This is the <strong>complete threshold lexicon</strong> of the Conditions Substrate Model.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Conditions_Substrate_Model/c_Gradientary_Thresholds.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/Conditions_Substrate_Model/c_Gradientary_Thresholds.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

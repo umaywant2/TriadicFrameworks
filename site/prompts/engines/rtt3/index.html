@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Rtt3 | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/prompts/engines/rtt3/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Rtt3" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/prompts/engines/rtt3/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Rtt3" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/prompts/engines/rtt3.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Rtt3",
+    "headline": "Rtt3",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/prompts/engines/rtt3/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#contents">Contents</a></li>
+<li><a href="#explainer">Explainer</a></li>
+<li><a href="#prompts">Prompts</a></li>
+<li><a href="#diagnostics">Diagnostics</a></li>
+<li><a href="#worksheets">Worksheets</a></li>
+<li><a href="#posters">Posters</a></li>
+<li><a href="#crosslinks">Cross‑Links</a><ul>
+<li><a href="#prompts-site">Prompts Site</a></li>
+<li><a href="#docsbook">Docsbook</a></li>
+<li><a href="#s3-spine-visualizer">S3 Spine Visualizer</a></li>
+<li><a href="#github-source">GitHub Source</a></li>
+</ul>
+</li>
+<li><a href="#related-files">Related Files</a></li>
+<li><a href="#manifest">Manifest</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/prompts/" itemprop="item">
+                <span itemprop="name">Prompts</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/prompts/engines/" itemprop="item">
+                <span itemprop="name">Engines</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Rtt3</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Rtt3</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="rtt3-advanced-engine">RTT/3 — Advanced Engine<a class="toc-permalink" href="#rtt3-advanced-engine" title="Permanent link to this heading">&para;</a></h1>
+<p>RTT/3 is the advanced engine of the TriadicFrameworks canon.<br />
+It builds on RTT/1 and RTT/2 by introducing complex drift patterns, multi‑regime<br />
+coherence restoration, advanced operator grammar, and cross‑layer structural synthesis.</p>
+<p>RTT/3 is used for high‑complexity analysis, teaching, research, and multi‑layer<br />
+structural reasoning.</p>
+<hr />
+<h2 id="purpose">Purpose<a class="toc-permalink" href="#purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>RTT/3 establishes:</p>
+<ul>
+<li>advanced drift → coherence cycles  </li>
+<li>multi‑regime traversal  </li>
+<li>cross‑layer operator grammar  </li>
+<li>structural synthesis across layers  </li>
+<li>advanced diagnostic workflows  </li>
+<li>teaching and research‑grade alignment  </li>
+</ul>
+<p>It prepares users for RTT/12 and RTT∞.</p>
+<hr />
+<h2 id="contents">Contents<a class="toc-permalink" href="#contents" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><strong>RTT/3 Explainer</strong> — advanced‑layer concepts  </li>
+<li><strong>RTT/3 Prompts</strong> — structured prompt blocks for RTT/3 sessions  </li>
+<li><strong>RTT/3 Diagnostics</strong> — drift, coherence, operator, regime, and alignment checks  </li>
+<li><strong>RTT/3 Worksheets</strong> — advanced alignment and teaching worksheets  </li>
+<li><strong>RTT/3 Posters</strong> — visual aids for advanced structural mapping  </li>
+</ul>
+<hr />
+<h2 id="explainer">Explainer<a class="toc-permalink" href="#explainer" title="Permanent link to this heading">&para;</a></h2>
+<p>The RTT/3 explainer introduces:</p>
+<ul>
+<li>multi‑regime structural traversal  </li>
+<li>advanced drift patterns  </li>
+<li>coherence restoration across layers  </li>
+<li>cross‑layer operator grammar  </li>
+<li>structural synthesis workflows  </li>
+</ul>
+<p>It provides the conceptual grounding required before moving to RTT/12.</p>
+<hr />
+<h2 id="prompts">Prompts<a class="toc-permalink" href="#prompts" title="Permanent link to this heading">&para;</a></h2>
+<p>RTT/3 prompt blocks include:</p>
+<ul>
+<li>multi‑regime operator identification  </li>
+<li>structural mapping across multiple layers  </li>
+<li>advanced drift detection  </li>
+<li>coherence restoration workflows  </li>
+<li>synthesis prompts for teaching and analysis  </li>
+<li>operator‑driven session composition  </li>
+</ul>
+<p>These prompts extend RTT/2 and prepare for RTT/12.</p>
+<hr />
+<h2 id="diagnostics">Diagnostics<a class="toc-permalink" href="#diagnostics" title="Permanent link to this heading">&para;</a></h2>
+<p>RTT/3 diagnostics cover:</p>
+<ul>
+<li>advanced drift → coherence checks  </li>
+<li>operator consistency across layers and regimes  </li>
+<li>structural alignment  </li>
+<li>regime detection  </li>
+<li>cross‑stack diagnostic workflows  </li>
+<li>synthesis diagnostics  </li>
+</ul>
+<p>Diagnostics are used in teaching, analysis, and multi‑regime sessions.</p>
+<hr />
+<h2 id="worksheets">Worksheets<a class="toc-permalink" href="#worksheets" title="Permanent link to this heading">&para;</a></h2>
+<p>RTT/3 worksheets provide:</p>
+<ul>
+<li>multi‑regime operator alignment  </li>
+<li>structural mapping  </li>
+<li>drift → coherence exercises  </li>
+<li>teaching‑ready activities  </li>
+<li>advanced traversal practice  </li>
+<li>synthesis worksheets  </li>
+</ul>
+<p>They are used in classrooms, tutorials, and guided sessions.</p>
+<hr />
+<h2 id="posters">Posters<a class="toc-permalink" href="#posters" title="Permanent link to this heading">&para;</a></h2>
+<p>RTT/3 posters include:</p>
+<ul>
+<li>multi‑regime operator chart  </li>
+<li>advanced drift → coherence cycle diagram  </li>
+<li>traversal map for RTT/1 → RTT/2 → RTT/3 → RTT/12  </li>
+</ul>
+<p>These posters support teaching and visual learning.</p>
+<hr />
+<h2 id="crosslinks">Cross‑Links<a class="toc-permalink" href="#crosslinks" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="prompts-site">Prompts Site<a class="toc-permalink" href="#prompts-site" title="Permanent link to this heading">&para;</a></h3>
+<p>https://www.triadicframeworks.org/prompts/</p>
+<h3 id="docsbook">Docsbook<a class="toc-permalink" href="#docsbook" title="Permanent link to this heading">&para;</a></h3>
+<p>https://docs.triadicframeworks.org/docs/rtt/rtt3</p>
+<h3 id="s3-spine-visualizer">S3 Spine Visualizer<a class="toc-permalink" href="#s3-spine-visualizer" title="Permanent link to this heading">&para;</a></h3>
+<p>https://www.triadicframeworks.org/spine</p>
+<h3 id="github-source">GitHub Source<a class="toc-permalink" href="#github-source" title="Permanent link to this heading">&para;</a></h3>
+<p>https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/engines</p>
+<hr />
+<h2 id="related-files">Related Files<a class="toc-permalink" href="#related-files" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><code>rtt1.md</code> — foundational engine  </li>
+<li><code>rtt2.md</code> — intermediate engine  </li>
+<li><code>rtt12.md</code> — full‑spectrum engine  </li>
+<li><code>rtt_infinity.md</code> — deep‑layer engine  </li>
+<li><code>rtt_ipd_12/</code> — paradox engine  </li>
+<li><code>modules.md</code> — full module registry  </li>
+<li><code>stacks.md</code> — stack overview  </li>
+<li><code>templates.md</code> — template overview  </li>
+<li><code>ui.md</code> — UI logic and unlock rules  </li>
+</ul>
+<hr />
+<h2 id="manifest">Manifest<a class="toc-permalink" href="#manifest" title="Permanent link to this heading">&para;</a></h2>
+<p>See <code>module.json</code> for the full registry of engines, stacks, templates, UI modules, and<br />
+navigation structure.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/prompts/engines/rtt3.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/prompts/engines/rtt3.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

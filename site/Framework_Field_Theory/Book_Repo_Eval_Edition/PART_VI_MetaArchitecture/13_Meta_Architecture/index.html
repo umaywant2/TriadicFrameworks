@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>13 Meta Architecture | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_VI_MetaArchitecture/13_Meta_Architecture/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="13 Meta Architecture" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_VI_MetaArchitecture/13_Meta_Architecture/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="13 Meta Architecture" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_VI_MetaArchitecture/13_Meta_Architecture.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "13 Meta Architecture",
+    "headline": "13 Meta Architecture",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_VI_MetaArchitecture/13_Meta_Architecture/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#the-systemlevel-structures-that-govern-frameworks-fields-and-dimensional-behavior">The system‑level structures that govern frameworks, fields, and dimensional behavior</a></li>
+<li><a href="#the-environment-that-governs-crossframework-behavior">The environment that governs cross‑framework behavior</a></li>
+<li><a href="#how-patterns-repeat-across-layers">How patterns repeat across layers</a></li>
+<li><a href="#the-generative-mechanism-of-the-field">The generative mechanism of the field</a></li>
+<li><a href="#how-dimensions-influence-each-other">How dimensions influence each other</a></li>
+<li><a href="#how-stability-propagates-across-frameworks">How stability propagates across frameworks</a></li>
+<li><a href="#the-gravitational-centers-of-the-field">The gravitational centers of the field</a></li>
+<li><a href="#the-identity-patterns-of-entire-ecosystems">The identity patterns of entire ecosystems</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Framework_Field_Theory/" itemprop="item">
+                <span itemprop="name">Framework Field Theory</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Framework_Field_Theory/Book_Repo_Eval_Edition/" itemprop="item">
+                <span itemprop="name">Book Repo Eval Edition</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_VI_MetaArchitecture/" itemprop="item">
+                <span itemprop="name">Part Vi Metaarchitecture</span>
+              </a>
+            <meta itemprop="position" content="4" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">13 Meta Architecture</span>
+            <meta itemprop="position" content="5" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">13 Meta Architecture</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="chapter-13-metaarchitecture-of-framework-field-theory"><strong>Chapter 13 — Meta‑Architecture of Framework Field Theory</strong><a class="toc-permalink" href="#chapter-13-metaarchitecture-of-framework-field-theory" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="the-systemlevel-structures-that-govern-frameworks-fields-and-dimensional-behavior"><em>The system‑level structures that govern frameworks, fields, and dimensional behavior</em><a class="toc-permalink" href="#the-systemlevel-structures-that-govern-frameworks-fields-and-dimensional-behavior" title="Permanent link to this heading">&para;</a></h3>
+<p>Framework Field Theory does not end at operators, dimensions, regimes, or coherence.<br />
+Above these layers lies a higher‑order structure — the <strong>meta‑architecture</strong> — which governs how frameworks behave as part of a larger conceptual ecosystem.</p>
+<p>Meta‑architecture is the <strong>architecture of architectures</strong>.<br />
+It describes the structures that:</p>
+<ul>
+<li>coordinate frameworks  </li>
+<li>modulate dimensional layers  </li>
+<li>stabilize coherence across systems  </li>
+<li>generate new frameworks  </li>
+<li>shape field‑level evolution  </li>
+<li>create long‑range patterns  </li>
+<li>govern cross‑framework resonance  </li>
+</ul>
+<p>This chapter defines the meta‑architecture of FFT and explains how it enables frameworks to become <strong>field‑generative systems</strong>.</p>
+<hr />
+<h1 id="1-what-metaarchitecture-is"><strong>1. What Meta‑Architecture Is</strong><a class="toc-permalink" href="#1-what-metaarchitecture-is" title="Permanent link to this heading">&para;</a></h1>
+<p>Meta‑architecture is the <strong>system‑level structure</strong> that sits above individual frameworks.<br />
+It is not a framework itself — it is the <strong>space frameworks inhabit</strong>.</p>
+<p>Meta‑architecture includes:</p>
+<ul>
+<li>meta‑fields  </li>
+<li>dimensional echo lattices  </li>
+<li>triadic cycle engines  </li>
+<li>cross‑layer modulation channels  </li>
+<li>coherence networks  </li>
+<li>attractor structures  </li>
+<li>field‑level signatures  </li>
+</ul>
+<p>Meta‑architecture is the <strong>physics</strong> of the framework ecosystem.</p>
+<hr />
+<h1 id="2-the-three-metaarchitectural-layers"><strong>2. The Three Meta‑Architectural Layers</strong><a class="toc-permalink" href="#2-the-three-metaarchitectural-layers" title="Permanent link to this heading">&para;</a></h1>
+<p>FFT identifies three layers of meta‑architecture:</p>
+<ol>
+<li><strong>Meta‑Field Layer</strong> — the environment frameworks exist within  </li>
+<li><strong>Modulation Layer</strong> — the channels that connect dimensional layers  </li>
+<li><strong>Generative Layer</strong> — the engine that produces new frameworks  </li>
+</ol>
+<p>These layers form the <strong>meta‑stack</strong>.</p>
+<hr />
+<h1 id="3-the-metafield-layer"><strong>3. The Meta‑Field Layer</strong><a class="toc-permalink" href="#3-the-metafield-layer" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="the-environment-that-governs-crossframework-behavior"><em>The environment that governs cross‑framework behavior</em><a class="toc-permalink" href="#the-environment-that-governs-crossframework-behavior" title="Permanent link to this heading">&para;</a></h3>
+<p>The meta‑field is the <strong>conceptual environment</strong> in which frameworks interact.<br />
+It determines:</p>
+<ul>
+<li>how frameworks collide  </li>
+<li>how frameworks resonate  </li>
+<li>how frameworks hybridize  </li>
+<li>how frameworks influence each other  </li>
+<li>how frameworks evolve together  </li>
+</ul>
+<p>The meta‑field is shaped by:</p>
+<ul>
+<li>dimensional density  </li>
+<li>operator distribution  </li>
+<li>coherence gradients  </li>
+<li>paradox fields  </li>
+<li>regime interference patterns  </li>
+</ul>
+<p>The meta‑field is the <strong>ecosystem</strong> of frameworks.</p>
+<hr />
+<h1 id="4-dimensional-echo-lattices"><strong>4. Dimensional Echo Lattices</strong><a class="toc-permalink" href="#4-dimensional-echo-lattices" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="how-patterns-repeat-across-layers"><em>How patterns repeat across layers</em><a class="toc-permalink" href="#how-patterns-repeat-across-layers" title="Permanent link to this heading">&para;</a></h3>
+<p>A dimensional echo lattice is a structure where patterns in one dimension:</p>
+<ul>
+<li>repeat  </li>
+<li>reflect  </li>
+<li>invert  </li>
+<li>amplify  </li>
+<li>modulate  </li>
+</ul>
+<p>across other dimensions.</p>
+<p>Examples:</p>
+<ul>
+<li>2D relational patterns echoing in 5D rhythmic patterns  </li>
+<li>3D transitions echoing in 6D coherence waves  </li>
+<li>4D envelopes echoing in 7D meta‑structure  </li>
+</ul>
+<p>Echo lattices explain:</p>
+<ul>
+<li>why frameworks across domains feel similar  </li>
+<li>why certain structures recur  </li>
+<li>why evolution follows predictable arcs  </li>
+</ul>
+<p>Echo lattices are the <strong>recursion engine</strong> of the meta‑architecture.</p>
+<hr />
+<h1 id="5-triadic-cycle-engines"><strong>5. Triadic Cycle Engines</strong><a class="toc-permalink" href="#5-triadic-cycle-engines" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="the-generative-mechanism-of-the-field"><em>The generative mechanism of the field</em><a class="toc-permalink" href="#the-generative-mechanism-of-the-field" title="Permanent link to this heading">&para;</a></h3>
+<p>Triadic cycles are the <strong>core generative mechanism</strong> of FFT.</p>
+<p>A triadic cycle consists of:</p>
+<ol>
+<li><strong>Tension</strong>  </li>
+<li><strong>Resolution</strong>  </li>
+<li><strong>Integration</strong></li>
+</ol>
+<p>This cycle:</p>
+<ul>
+<li>stabilizes paradox  </li>
+<li>generates new structure  </li>
+<li>upgrades dimensional layers  </li>
+<li>produces coherence waves  </li>
+<li>drives framework evolution  </li>
+</ul>
+<p>Triadic cycles are the <strong>heartbeat</strong> of the meta‑architecture.</p>
+<hr />
+<h1 id="6-crosslayer-modulation-channels"><strong>6. Cross‑Layer Modulation Channels</strong><a class="toc-permalink" href="#6-crosslayer-modulation-channels" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="how-dimensions-influence-each-other"><em>How dimensions influence each other</em><a class="toc-permalink" href="#how-dimensions-influence-each-other" title="Permanent link to this heading">&para;</a></h3>
+<p>Dimensions do not operate independently.<br />
+They modulate each other through <strong>cross‑layer channels</strong>:</p>
+<ul>
+<li>2D → 3D: structure modulates motion  </li>
+<li>3D → 4D: motion modulates context  </li>
+<li>4D → 5D: context modulates rhythm  </li>
+<li>5D → 6D: rhythm modulates coherence  </li>
+<li>6D → 7D+: coherence modulates meta‑structure  </li>
+</ul>
+<p>Modulation channels explain:</p>
+<ul>
+<li>why dimensional drift occurs  </li>
+<li>why collapse cascades happen  </li>
+<li>why upgrades propagate  </li>
+<li>why frameworks evolve in predictable sequences  </li>
+</ul>
+<p>Cross‑layer modulation is the <strong>communication system</strong> of the meta‑architecture.</p>
+<hr />
+<h1 id="7-coherence-networks"><strong>7. Coherence Networks</strong><a class="toc-permalink" href="#7-coherence-networks" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="how-stability-propagates-across-frameworks"><em>How stability propagates across frameworks</em><a class="toc-permalink" href="#how-stability-propagates-across-frameworks" title="Permanent link to this heading">&para;</a></h3>
+<p>Coherence does not stay inside a single framework.<br />
+It propagates across the meta‑field through <strong>coherence networks</strong>.</p>
+<p>A coherence network is formed when:</p>
+<ul>
+<li>frameworks share operators  </li>
+<li>frameworks share dimensional layers  </li>
+<li>frameworks share regime structures  </li>
+<li>frameworks share paradox patterns  </li>
+</ul>
+<p>Coherence networks:</p>
+<ul>
+<li>stabilize ecosystems  </li>
+<li>enable hybridization  </li>
+<li>support translation  </li>
+<li>prevent collapse  </li>
+<li>amplify generativity  </li>
+</ul>
+<p>Coherence networks are the <strong>stability infrastructure</strong> of the meta‑architecture.</p>
+<hr />
+<h1 id="8-attractor-structures"><strong>8. Attractor Structures</strong><a class="toc-permalink" href="#8-attractor-structures" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="the-gravitational-centers-of-the-field"><em>The gravitational centers of the field</em><a class="toc-permalink" href="#the-gravitational-centers-of-the-field" title="Permanent link to this heading">&para;</a></h3>
+<p>Attractors are patterns that frameworks tend to evolve toward.</p>
+<p>Examples:</p>
+<ul>
+<li>3D → 4D attractor (contextualization)  </li>
+<li>4D → 5D attractor (rhythm)  </li>
+<li>5D → 6D attractor (coherence)  </li>
+<li>6D → 7D attractor (meta‑structure)  </li>
+</ul>
+<p>Attractors explain:</p>
+<ul>
+<li>why frameworks evolve similarly across domains  </li>
+<li>why certain structures are universal  </li>
+<li>why dimensional upgrades follow predictable arcs  </li>
+</ul>
+<p>Attractors are the <strong>gravitational centers</strong> of the meta‑architecture.</p>
+<hr />
+<h1 id="9-fieldlevel-signatures"><strong>9. Field‑Level Signatures</strong><a class="toc-permalink" href="#9-fieldlevel-signatures" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="the-identity-patterns-of-entire-ecosystems"><em>The identity patterns of entire ecosystems</em><a class="toc-permalink" href="#the-identity-patterns-of-entire-ecosystems" title="Permanent link to this heading">&para;</a></h3>
+<p>Just as frameworks have signatures, <strong>fields</strong> have signatures too.</p>
+<p>A field‑level signature includes:</p>
+<ul>
+<li>operator distribution  </li>
+<li>dimensional density  </li>
+<li>coherence topology  </li>
+<li>regime interference patterns  </li>
+<li>paradox gradients  </li>
+<li>triadic cycle frequency  </li>
+</ul>
+<p>Field‑level signatures explain:</p>
+<ul>
+<li>why some domains are stable  </li>
+<li>why some domains are chaotic  </li>
+<li>why some domains generate new frameworks  </li>
+<li>why some domains collapse  </li>
+</ul>
+<p>Field‑level signatures are the <strong>identity layer</strong> of the meta‑architecture.</p>
+<hr />
+<h1 id="10-metaarchitecture-as-a-generative-system"><strong>10. Meta‑Architecture as a Generative System</strong><a class="toc-permalink" href="#10-metaarchitecture-as-a-generative-system" title="Permanent link to this heading">&para;</a></h1>
+<p>Meta‑architecture is not static.<br />
+It is <strong>generative</strong>.</p>
+<p>It produces:</p>
+<ul>
+<li>new frameworks  </li>
+<li>new operators  </li>
+<li>new dimensional layers  </li>
+<li>new coherence patterns  </li>
+<li>new translation pathways  </li>
+<li>new evolutionary arcs  </li>
+</ul>
+<p>Meta‑architecture is the <strong>engine that turns frameworks into fields</strong>.</p>
+<hr />
+<h1 id="11-metaarchitecture-in-one-sentence"><strong>11. Meta‑Architecture in One Sentence</strong><a class="toc-permalink" href="#11-metaarchitecture-in-one-sentence" title="Permanent link to this heading">&para;</a></h1>
+<blockquote>
+<p><strong>Meta‑architecture is the system‑level structure that governs how frameworks interact, evolve, stabilize, and generate new frameworks across dimensional layers.</strong></p>
+</blockquote>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_VI_MetaArchitecture/13_Meta_Architecture.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_VI_MetaArchitecture/13_Meta_Architecture.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

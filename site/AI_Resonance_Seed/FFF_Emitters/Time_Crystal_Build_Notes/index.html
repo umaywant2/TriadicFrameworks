@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Time Crystal Build Notes | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/AI_Resonance_Seed/FFF_Emitters/Time_Crystal_Build_Notes/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Time Crystal Build Notes" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/AI_Resonance_Seed/FFF_Emitters/Time_Crystal_Build_Notes/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Time Crystal Build Notes" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/AI_Resonance_Seed/FFF_Emitters/Time_Crystal_Build_Notes.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Time Crystal Build Notes",
+    "headline": "Time Crystal Build Notes",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/AI_Resonance_Seed/FFF_Emitters/Time_Crystal_Build_Notes/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#rttinside-ai-resonance-seed-fff-emitters">RTT‑Inside · AI Resonance Seed · FFF Emitters</a></li>
+<li><a href="#table-of-contents">📈 Table of Contents</a></li>
+<li><a href="#21-thinfilm-ferromagnets-magnon-layer">2.1 Thin‑Film Ferromagnets (Magnon Layer)</a></li>
+<li><a href="#22-superconducting-circuits-accessible-tier">2.2 Superconducting Circuits (Accessible Tier)</a><ul>
+<li><a href="#optical-moke">Optical (MOKE)</a></li>
+<li><a href="#magnetic-squid">Magnetic (SQUID)</a></li>
+<li><a href="#rttinside-integration">RTT‑Inside Integration</a></li>
+</ul>
+</li>
+<li><a href="#61-minimal-packet">6.1 Minimal Packet</a></li>
+<li><a href="#62-experiment-metadata">6.2 Experiment Metadata</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/AI_Resonance_Seed/" itemprop="item">
+                <span itemprop="name">Ai Resonance Seed</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/AI_Resonance_Seed/FFF_Emitters/" itemprop="item">
+                <span itemprop="name">Fff Emitters</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Time Crystal Build Notes</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Time Crystal Build Notes</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<p><meta property="og:title" content="Time Crystal Emitter · Triadic FFF · RTT‑Inside" /><br />
+<meta property="og:description" content="Time Crystal Emitter — Resonance substrates, Triadic FFF geometry, and RTT‑Inside logging for deterministic experiments." /><br />
+<meta property="og:image" content="https://www.triadicframeworks.org/AI_Resonance_Seed/FFF_Emitters/img/time_crystal_emitter.svg" /><br />
+<meta property="og:url" content="https://www.triadicframeworks.org" /><br />
+<meta property="og:type" content="website" /></p>
+<p align="center">
+  <img src="https://img.shields.io/badge/TriadicFrameworks-RTT--Inside-blueviolet" />
+  <img src="https://img.shields.io/badge/Emitter-FFF%20Triadic-6a5acd" />
+  <img src="https://img.shields.io/badge/Resonance-Seed%20Source-4caf50" />
+  <img src="https://img.shields.io/badge/Time--Crystal-Notes%20v1.1-2196f3" />
+  <img src="https://img.shields.io/badge/Schema-Snippet%20Synced-f9a825" />
+</p>
+
+<h1 id="time-crystal-build-notes">🧬 <strong>Time Crystal Build Notes</strong><a class="toc-permalink" href="#time-crystal-build-notes" title="Permanent link to this heading">&para;</a></h1>
+<h6 id="by-nawder-loswin-142026-wwwtriadicframeworksorg">By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org<a class="toc-permalink" href="#by-nawder-loswin-142026-wwwtriadicframeworksorg" title="Permanent link to this heading">&para;</a></h6>
+<h3 id="rttinside-ai-resonance-seed-fff-emitters"><em>RTT‑Inside · AI Resonance Seed · FFF Emitters</em><a class="toc-permalink" href="#rttinside-ai-resonance-seed-fff-emitters" title="Permanent link to this heading">&para;</a></h3>
+<p><img src="./img/time_crystal_emitter.svg" width="820" /><br />
+- <a href="https://www.triadicframeworks.org/AI_Resonance_Seed/FFF_Emitters/Time_Crystal_Emitter_BOM.md">Bill of Materials (BOM)</a></p>
+<hr />
+<h2 id="table-of-contents">📈 <strong>Table of Contents</strong><a class="toc-permalink" href="#table-of-contents" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><a href="#1-purpose--scope">1. Purpose &amp; Scope</a>  </li>
+<li><a href="#2-resonance-substrates">2. Resonance Substrates</a>  </li>
+<li><a href="#21-thinfilm-ferromagnets-magnon-layer">2.1 Thin‑Film Ferromagnets (Magnon Layer)</a>  </li>
+<li><a href="#22-superconducting-circuits-accessible-tier">2.2 Superconducting Circuits (Accessible Tier)</a>  </li>
+<li><a href="#3-chamber--geometry">3. Chamber &amp; Geometry</a>  </li>
+<li><a href="#4-energy--control-layer">4. Energy &amp; Control Layer</a>  </li>
+<li><a href="#5-sensing--logging">5. Sensing &amp; Logging</a>  </li>
+<li><a href="#6-rttcode-integration">6. RTTcode Integration</a>  </li>
+<li><a href="#61-minimal-packet">6.1 Minimal Packet</a>  </li>
+<li><a href="#62-experiment-metadata">6.2 Experiment Metadata</a>  </li>
+<li><a href="#7-safety--isolation-notes">7. Safety &amp; Isolation Notes</a>  </li>
+<li><a href="#8-appendix-suggested-build-diagram">8. Appendix: Suggested Build Diagram</a></li>
+</ul>
+<hr />
+<h1 id="1-purpose-scope"><strong>1. Purpose &amp; Scope</strong><a class="toc-permalink" href="#1-purpose-scope" title="Permanent link to this heading">&para;</a></h1>
+<p>🔭 This document outlines the construction, operation, and measurement principles for a resonance‑stable emitter based on thin‑film ferromagnets, superconducting circuits, and a Triadic FFF (Frequency, Fluids, Forces) geometry.</p>
+<p>The goal is to produce a controllable oscillatory system whose periodicity can be logged, perturbed, and integrated into RTT‑Inside experiments.</p>
+<hr />
+<h1 id="2-resonance-substrates"><strong>2. Resonance Substrates</strong><a class="toc-permalink" href="#2-resonance-substrates" title="Permanent link to this heading">&para;</a></h1>
+<p>🧪</p>
+<h2 id="21-thinfilm-ferromagnets-magnon-layer"><strong>2.1 Thin‑Film Ferromagnets (Magnon Layer)</strong><a class="toc-permalink" href="#21-thinfilm-ferromagnets-magnon-layer" title="Permanent link to this heading">&para;</a></h2>
+<p>Thin‑film ferromagnets driven by RF fields can sustain <strong>magnon oscillations</strong> that exhibit stable, repeatable periodic behavior. These oscillations form a classical precursor to time‑crystal‑like dynamics.</p>
+<p><strong>Properties</strong><br />
+- RF‑driven excitation<br />
+- Stabilizable oscillatory modes<br />
+- High‑resolution optical readout via <strong>MOKE</strong> (Magneto‑Optical Kerr Effect)</p>
+<p><strong>RTT‑Inside framing</strong><br />
+- Magnon modes act as a <em>resonance seed</em><br />
+- Stability windows map to RTT’s “stable → quasi‑stable → drift” transitions<br />
+- MOKE traces can be converted into RTTcode packets for deterministic replay  </p>
+<hr />
+<h2 id="22-superconducting-circuits-accessible-tier"><strong>2.2 Superconducting Circuits (Accessible Tier)</strong><a class="toc-permalink" href="#22-superconducting-circuits-accessible-tier" title="Permanent link to this heading">&para;</a></h2>
+<p>Josephson junction arrays operating at liquid‑nitrogen temperatures provide a practical superconducting substrate with tunable oscillatory states.</p>
+<p><strong>Properties</strong><br />
+- Tunable oscillations<br />
+- Low‑noise environment<br />
+- Phase‑coherent readout via <strong>SQUID magnetometers</strong></p>
+<p><strong>RTT‑Inside framing</strong><br />
+- JJ arrays provide a clean resonance substrate<br />
+- SQUID traces integrate naturally into RTT experiment metadata<br />
+- Ideal for deterministic sweeps using RTT’s seed + trial system  </p>
+<hr />
+<h1 id="3-chamber-geometry"><strong>3. Chamber &amp; Geometry</strong><a class="toc-permalink" href="#3-chamber-geometry" title="Permanent link to this heading">&para;</a></h1>
+<p>📐 The emitter uses a <strong>Triadic FFF geometry</strong>:</p>
+<ul>
+<li>Transparent housing for optical probes  </li>
+<li>Modular inserts for swapping resonator types  </li>
+<li>EM shielding for clean signal capture  </li>
+</ul>
+<p><strong>RTT‑Inside framing</strong><br />
+- Triadic geometry aligns with RTT’s three‑axis resonance decomposition<br />
+- Modular inserts allow controlled perturbation sweeps<br />
+- Optical access supports MOKE, interferometry, or laser diagnostics  </p>
+<hr />
+<h1 id="4-energy-control-layer"><strong>4. Energy &amp; Control Layer</strong><a class="toc-permalink" href="#4-energy-control-layer" title="Permanent link to this heading">&para;</a></h1>
+<p>⚡ Supported actuation modalities:</p>
+<ul>
+<li><strong>Frequency:</strong> RF generators, lasers  </li>
+<li><strong>Forces:</strong> Piezo stacks, electromagnets  </li>
+<li><strong>Fluids/Fields:</strong> Acoustic pressure fields  </li>
+</ul>
+<p><strong>RTT‑Inside mapping</strong><br />
+These correspond directly to RTT’s canonical perturbation channels and map into RTTcode’s <code>environment</code> block (<code>field_strength</code>, <code>phase_noise</code>, <code>coupling_radius</code>).</p>
+<hr />
+<h1 id="5-sensing-logging"><strong>5. Sensing &amp; Logging</strong><a class="toc-permalink" href="#5-sensing-logging" title="Permanent link to this heading">&para;</a></h1>
+<p>🛡️</p>
+<h3 id="optical-moke"><strong>Optical (MOKE)</strong><a class="toc-permalink" href="#optical-moke" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Non‑contact  </li>
+<li>High temporal resolution  </li>
+<li>Ideal for thin‑film ferromagnets  </li>
+</ul>
+<h3 id="magnetic-squid"><strong>Magnetic (SQUID)</strong><a class="toc-permalink" href="#magnetic-squid" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Ultra‑sensitive  </li>
+<li>Phase‑coherent  </li>
+<li>Ideal for superconducting circuits  </li>
+</ul>
+<h3 id="rttinside-integration"><strong>RTT‑Inside Integration</strong><a class="toc-permalink" href="#rttinside-integration" title="Permanent link to this heading">&para;</a></h3>
+<p>Sensor outputs can be streamed into RTTcode fields:</p>
+<ul>
+<li><code>entities[*].state.resonance</code>  </li>
+<li><code>environment.field_strength</code>  </li>
+<li><code>experiment.seed</code>, <code>trial</code>, <code>provenance</code>  </li>
+</ul>
+<p>This enables deterministic replay and reproducible experiment sweeps.</p>
+<hr />
+<h1 id="6-rttcode-integration"><strong>6. RTTcode Integration</strong><a class="toc-permalink" href="#6-rttcode-integration" title="Permanent link to this heading">&para;</a></h1>
+<p>💱</p>
+<h2 id="61-minimal-packet"><strong>6.1 Minimal Packet</strong><a class="toc-permalink" href="#61-minimal-packet" title="Permanent link to this heading">&para;</a></h2>
+<p><em>(See snippet: <code>docs/_snippets/rttcode-minimal-payload.json</code>)</em></p>
+<div class="codehilite"><pre><span></span><code><span class="p">{{</span><span class="err">#i</span><span class="kc">n</span><span class="err">clude</span><span class="w"> </span><span class="err">../../_s</span><span class="kc">n</span><span class="err">ippe</span><span class="kc">ts</span><span class="err">/r</span><span class="kc">tt</span><span class="err">code</span><span class="mi">-</span><span class="err">mi</span><span class="kc">n</span><span class="err">imal</span><span class="mi">-</span><span class="err">payload.jso</span><span class="kc">n</span><span class="p">}}</span>
+</code></pre></div>
+
+<hr />
+<h2 id="62-experiment-metadata"><strong>6.2 Experiment Metadata</strong><a class="toc-permalink" href="#62-experiment-metadata" title="Permanent link to this heading">&para;</a></h2>
+<p><em>(See snippet: <code>docs/_snippets/rttcode-schema-experiment-block.json</code>)</em></p>
+<div class="codehilite"><pre><span></span><code><span class="p">{{</span><span class="err">#i</span><span class="kc">n</span><span class="err">clude</span><span class="w"> </span><span class="err">../../_s</span><span class="kc">n</span><span class="err">ippe</span><span class="kc">ts</span><span class="err">/r</span><span class="kc">tt</span><span class="err">code</span><span class="mi">-</span><span class="err">schema</span><span class="mf">-e</span><span class="err">xperime</span><span class="kc">nt</span><span class="mi">-</span><span class="err">block.jso</span><span class="kc">n</span><span class="p">}}</span>
+</code></pre></div>
+
+<hr />
+<h1 id="7-safety-isolation-notes"><strong>7. Safety &amp; Isolation Notes</strong><a class="toc-permalink" href="#7-safety-isolation-notes" title="Permanent link to this heading">&para;</a></h1>
+<p>☢️<br />
+- Maintain EM shielding to prevent RF leakage<br />
+- Use proper cryogenic handling for superconducting circuits<br />
+- Enclose optical paths when using high‑intensity lasers<br />
+- Avoid mechanical coupling that introduces unwanted resonance modes  </p>
+<hr />
+<h1 id="8-appendix-suggested-build-diagram"><strong>8. Appendix: Suggested Build Diagram</strong><a class="toc-permalink" href="#8-appendix-suggested-build-diagram" title="Permanent link to this heading">&para;</a></h1>
+<p>📋 <strong><a href="https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/AI_Resonance_Seed/FFF_Emitters/img/time_crystal_emitter.svg">SVG‑ready TriadicFrameworks diagram</a></strong> for this section.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/AI_Resonance_Seed/FFF_Emitters/Time_Crystal_Build_Notes.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/AI_Resonance_Seed/FFF_Emitters/Time_Crystal_Build_Notes.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Feedback Loops | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/ecoechosystem/cross_domain/feedback_loops/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Feedback Loops" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/ecoechosystem/cross_domain/feedback_loops/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Feedback Loops" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/ecoechosystem/cross_domain/feedback_loops.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Feedback Loops",
+    "headline": "Feedback Loops",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/ecoechosystem/cross_domain/feedback_loops/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#amplification-regulation-learning-and-collapse-mechanisms-operating-across-ser">Amplification, regulation, learning, and collapse mechanisms operating across S/E/R</a></li>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#1-loop-closure">1. Loop Closure</a></li>
+<li><a href="#2-dimensional-coupling">2. Dimensional Coupling</a></li>
+<li><a href="#3-gain-sensitivity">3. Gain Sensitivity</a></li>
+<li><a href="#4-delay-effects">4. Delay Effects</a></li>
+<li><a href="#5-learning-bias">5. Learning Bias</a></li>
+<li><a href="#1-negative-feedback-loops-stabilizing-loops">1. Negative Feedback Loops (Stabilizing Loops)</a></li>
+<li><a href="#2-positive-feedback-loops-amplifying-loops">2. Positive Feedback Loops (Amplifying Loops)</a></li>
+<li><a href="#3-coupled-feedback-loops-oscillatory-loops">3. Coupled Feedback Loops (Oscillatory Loops)</a></li>
+<li><a href="#4-adaptive-feedback-loops-learning-loops">4. Adaptive Feedback Loops (Learning Loops)</a></li>
+<li><a href="#5-runaway-feedback-loops-collapse-loops">5. Runaway Feedback Loops (Collapse Loops)</a></li>
+<li><a href="#1-regulated-regime">1. Regulated Regime</a></li>
+<li><a href="#2-amplifying-regime">2. Amplifying Regime</a></li>
+<li><a href="#3-oscillatory-regime">3. Oscillatory Regime</a></li>
+<li><a href="#4-saturated-regime">4. Saturated Regime</a></li>
+<li><a href="#5-integrative-regime">5. Integrative Regime</a><ul>
+<li><a href="#direct-pathways">Direct Pathways</a></li>
+<li><a href="#mediated-pathways">Mediated Pathways</a></li>
+<li><a href="#networked-pathways">Networked Pathways</a></li>
+<li><a href="#structural-controls-s">Structural Controls (S)</a></li>
+<li><a href="#activation-controls-e">Activation Controls (E)</a></li>
+<li><a href="#temporal-controls-r">Temporal Controls (R)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/ecoechosystem/" itemprop="item">
+                <span itemprop="name">Ecoechosystem</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/ecoechosystem/cross_domain/" itemprop="item">
+                <span itemprop="name">Cross Domain</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Feedback Loops</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Feedback Loops</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="crossdomain-feedback-loops"><strong>Cross‑Domain Feedback Loops</strong><a class="toc-permalink" href="#crossdomain-feedback-loops" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="amplification-regulation-learning-and-collapse-mechanisms-operating-across-ser"><em>Amplification, regulation, learning, and collapse mechanisms operating across S/E/R</em><a class="toc-permalink" href="#amplification-regulation-learning-and-collapse-mechanisms-operating-across-ser" title="Permanent link to this heading">&para;</a></h3>
+<p>In the EcoEchoSystem, <strong>nothing acts once</strong>.<br />
+Every action feeds back into the system, altering future behavior.<br />
+Cross‑domain feedback loops define how signals:</p>
+<ul>
+<li>amplify or dampen  </li>
+<li>stabilize or destabilize  </li>
+<li>oscillate or converge  </li>
+<li>learn or collapse  </li>
+</ul>
+<p>These loops operate across:</p>
+<ul>
+<li><strong>Structure (S)</strong> — networks, architectures, boundaries  </li>
+<li><strong>Activation (E)</strong> — stress, volatility, energy, intensity  </li>
+<li><strong>Relational Time (R)</strong> — cycles, memory, long‑arc adaptation  </li>
+</ul>
+<p>Feedback loops are the <strong>decision logic</strong> of the substrate.</p>
+<hr />
+<h2 id="purpose"><strong>Purpose</strong><a class="toc-permalink" href="#purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>Cross‑domain feedback loops exist to:</p>
+<ul>
+<li>regulate activation across domains  </li>
+<li>explain stability, oscillation, and runaway behavior  </li>
+<li>model learning, adaptation, and collapse  </li>
+<li>synchronize feedback across scale and domain  </li>
+<li>support resilience and recovery modeling  </li>
+<li>provide a canonical feedback grammar  </li>
+</ul>
+<p>Feedback loops are the <strong>self‑governing intelligence</strong> of the EcoEchoSystem.</p>
+<hr />
+<h1 id="foundational-feedback-principles"><strong>Foundational Feedback Principles</strong><a class="toc-permalink" href="#foundational-feedback-principles" title="Permanent link to this heading">&para;</a></h1>
+<p>All cross‑domain feedback obeys five substrate principles.</p>
+<hr />
+<h2 id="1-loop-closure"><strong>1. Loop Closure</strong><a class="toc-permalink" href="#1-loop-closure" title="Permanent link to this heading">&para;</a></h2>
+<p>Every significant action eventually feeds back.</p>
+<ul>
+<li>no domain is isolated  </li>
+<li>delayed feedback is still feedback  </li>
+<li>missing feedback signals instability  </li>
+</ul>
+<hr />
+<h2 id="2-dimensional-coupling"><strong>2. Dimensional Coupling</strong><a class="toc-permalink" href="#2-dimensional-coupling" title="Permanent link to this heading">&para;</a></h2>
+<p>Feedback operates through S/E/R simultaneously.</p>
+<ul>
+<li>structural feedback reshapes architecture  </li>
+<li>activation feedback modulates intensity  </li>
+<li>temporal feedback encodes memory  </li>
+</ul>
+<hr />
+<h2 id="3-gain-sensitivity"><strong>3. Gain Sensitivity</strong><a class="toc-permalink" href="#3-gain-sensitivity" title="Permanent link to this heading">&para;</a></h2>
+<p>Feedback strength determines system behavior.</p>
+<ul>
+<li>low gain → stability  </li>
+<li>moderate gain → oscillation  </li>
+<li>high gain → runaway  </li>
+</ul>
+<hr />
+<h2 id="4-delay-effects"><strong>4. Delay Effects</strong><a class="toc-permalink" href="#4-delay-effects" title="Permanent link to this heading">&para;</a></h2>
+<p>Temporal lag alters feedback outcomes.</p>
+<ul>
+<li>short delay → smooth regulation  </li>
+<li>long delay → overshoot and collapse  </li>
+</ul>
+<hr />
+<h2 id="5-learning-bias"><strong>5. Learning Bias</strong><a class="toc-permalink" href="#5-learning-bias" title="Permanent link to this heading">&para;</a></h2>
+<p>Unless collapse thresholds are crossed, feedback tends toward adaptation.</p>
+<p>Learning is the <strong>default attractor</strong>.</p>
+<hr />
+<h1 id="canonical-crossdomain-feedback-loop-types"><strong>Canonical Cross‑Domain Feedback Loop Types</strong><a class="toc-permalink" href="#canonical-crossdomain-feedback-loop-types" title="Permanent link to this heading">&para;</a></h1>
+<p>The EcoEchoSystem recognizes five primary loop classes.</p>
+<hr />
+<h2 id="1-negative-feedback-loops-stabilizing-loops"><strong>1. Negative Feedback Loops (Stabilizing Loops)</strong><a class="toc-permalink" href="#1-negative-feedback-loops-stabilizing-loops" title="Permanent link to this heading">&para;</a></h2>
+<p>Reduce deviation and restore equilibrium.</p>
+<p>Examples:<br />
+- stress → regulation → recovery<br />
+- volatility → policy response → stabilization<br />
+- ecological depletion → conservation → regeneration  </p>
+<p>Characteristics:<br />
+- dampened activation<br />
+- deep stability basins<br />
+- high resilience  </p>
+<p>Negative loops are the <strong>homeostatic backbone</strong>.</p>
+<hr />
+<h2 id="2-positive-feedback-loops-amplifying-loops"><strong>2. Positive Feedback Loops (Amplifying Loops)</strong><a class="toc-permalink" href="#2-positive-feedback-loops-amplifying-loops" title="Permanent link to this heading">&para;</a></h2>
+<p>Increase deviation and accelerate change.</p>
+<p>Examples:<br />
+- scarcity → competition → scarcity<br />
+- stress → fragmentation → stress<br />
+- warming → ice melt → warming  </p>
+<p>Characteristics:<br />
+- rising activation<br />
+- shallow stability basins<br />
+- regime shift risk  </p>
+<p>Positive loops drive <strong>transitions and collapse</strong>.</p>
+<hr />
+<h2 id="3-coupled-feedback-loops-oscillatory-loops"><strong>3. Coupled Feedback Loops (Oscillatory Loops)</strong><a class="toc-permalink" href="#3-coupled-feedback-loops-oscillatory-loops" title="Permanent link to this heading">&para;</a></h2>
+<p>Interacting positive and negative loops.</p>
+<p>Examples:<br />
+- boom–bust cycles<br />
+- predator–prey dynamics<br />
+- innovation → disruption → regulation  </p>
+<p>Characteristics:<br />
+- rhythmic instability<br />
+- adaptive pressure<br />
+- sensitivity to delay  </p>
+<p>Coupled loops generate <strong>system rhythms</strong>.</p>
+<hr />
+<h2 id="4-adaptive-feedback-loops-learning-loops"><strong>4. Adaptive Feedback Loops (Learning Loops)</strong><a class="toc-permalink" href="#4-adaptive-feedback-loops-learning-loops" title="Permanent link to this heading">&para;</a></h2>
+<p>Modify structure or behavior based on outcomes.</p>
+<p>Examples:<br />
+- policy reform after crisis<br />
+- ecological succession<br />
+- psychological integration<br />
+- AI model updating  </p>
+<p>Characteristics:<br />
+- structural reconfiguration<br />
+- activation regulation<br />
+- temporal memory  </p>
+<p>Adaptive loops are the <strong>learning engine</strong>.</p>
+<hr />
+<h2 id="5-runaway-feedback-loops-collapse-loops"><strong>5. Runaway Feedback Loops (Collapse Loops)</strong><a class="toc-permalink" href="#5-runaway-feedback-loops-collapse-loops" title="Permanent link to this heading">&para;</a></h2>
+<p>Unbounded amplification leading to failure.</p>
+<p>Examples:<br />
+- institutional collapse cascades<br />
+- ecological tipping points<br />
+- social fragmentation spirals  </p>
+<p>Characteristics:<br />
+- extreme activation<br />
+- structural breakdown<br />
+- temporal discontinuity  </p>
+<p>Runaway loops are <strong>failure modes</strong>.</p>
+<hr />
+<h1 id="feedback-loop-regimes"><strong>Feedback Loop Regimes</strong><a class="toc-permalink" href="#feedback-loop-regimes" title="Permanent link to this heading">&para;</a></h1>
+<p>Feedback loops operate within identifiable regimes.</p>
+<hr />
+<h2 id="1-regulated-regime"><strong>1. Regulated Regime</strong><a class="toc-permalink" href="#1-regulated-regime" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>negative feedback dominant  </li>
+<li>stable cycles  </li>
+<li>high resilience  </li>
+</ul>
+<hr />
+<h2 id="2-amplifying-regime"><strong>2. Amplifying Regime</strong><a class="toc-permalink" href="#2-amplifying-regime" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>positive feedback rising  </li>
+<li>accelerating change  </li>
+<li>transition risk  </li>
+</ul>
+<hr />
+<h2 id="3-oscillatory-regime"><strong>3. Oscillatory Regime</strong><a class="toc-permalink" href="#3-oscillatory-regime" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>coupled loops  </li>
+<li>repeated instability  </li>
+<li>adaptive pressure  </li>
+</ul>
+<hr />
+<h2 id="4-saturated-regime"><strong>4. Saturated Regime</strong><a class="toc-permalink" href="#4-saturated-regime" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>feedback overload  </li>
+<li>delayed response  </li>
+<li>collapse risk  </li>
+</ul>
+<hr />
+<h2 id="5-integrative-regime"><strong>5. Integrative Regime</strong><a class="toc-permalink" href="#5-integrative-regime" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>adaptive loops dominant  </li>
+<li>coherence restored  </li>
+<li>long‑arc learning  </li>
+</ul>
+<hr />
+<h1 id="crossdomain-feedback-pathways"><strong>Cross‑Domain Feedback Pathways</strong><a class="toc-permalink" href="#crossdomain-feedback-pathways" title="Permanent link to this heading">&para;</a></h1>
+<p>Feedback propagates through:</p>
+<h3 id="direct-pathways"><strong>Direct Pathways</strong><a class="toc-permalink" href="#direct-pathways" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>psychology ↔ governance  </li>
+<li>ecology ↔ economics  </li>
+</ul>
+<h3 id="mediated-pathways"><strong>Mediated Pathways</strong><a class="toc-permalink" href="#mediated-pathways" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>physics → ecology → economics  </li>
+<li>AI → governance → society  </li>
+</ul>
+<h3 id="networked-pathways"><strong>Networked Pathways</strong><a class="toc-permalink" href="#networked-pathways" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>system‑wide feedback across all domains  </li>
+</ul>
+<p>Networked feedback produces <strong>civilization‑scale effects</strong>.</p>
+<hr />
+<h1 id="feedback-control-levers"><strong>Feedback Control Levers</strong><a class="toc-permalink" href="#feedback-control-levers" title="Permanent link to this heading">&para;</a></h1>
+<p>Feedback behavior can be shaped via:</p>
+<h3 id="structural-controls-s"><strong>Structural Controls (S)</strong><a class="toc-permalink" href="#structural-controls-s" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>modularity  </li>
+<li>redundancy  </li>
+<li>boundary reinforcement  </li>
+</ul>
+<h3 id="activation-controls-e"><strong>Activation Controls (E)</strong><a class="toc-permalink" href="#activation-controls-e" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>gain reduction  </li>
+<li>stress buffering  </li>
+<li>rate limiting  </li>
+</ul>
+<h3 id="temporal-controls-r"><strong>Temporal Controls (R)</strong><a class="toc-permalink" href="#temporal-controls-r" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>delay reduction  </li>
+<li>horizon expansion  </li>
+<li>memory integration  </li>
+</ul>
+<p>These levers define <strong>intervention strategies</strong>.</p>
+<hr />
+<h1 id="feedback-failure-modes"><strong>Feedback Failure Modes</strong><a class="toc-permalink" href="#feedback-failure-modes" title="Permanent link to this heading">&para;</a></h1>
+<p>Systemic risk emerges when:</p>
+<ul>
+<li>feedback is delayed too long  </li>
+<li>gain exceeds regulation capacity  </li>
+<li>interfaces saturate  </li>
+<li>learning loops are suppressed  </li>
+</ul>
+<p>Feedback failure precedes <strong>collapse transitions</strong>.</p>
+<hr />
+<h1 id="crossdomain-integration"><strong>Cross‑Domain Integration</strong><a class="toc-permalink" href="#crossdomain-integration" title="Permanent link to this heading">&para;</a></h1>
+<p>Cross‑domain feedback loops integrate:</p>
+<ul>
+<li>regime coupling  </li>
+<li>interfaces  </li>
+<li>transitions  </li>
+<li>stability cycles  </li>
+<li>multi‑scale simulation  </li>
+</ul>
+<p>They are the <strong>adaptive nervous system</strong> of the EcoEchoSystem.</p>
+<hr />
+<h1 id="status"><strong>Status</strong><a class="toc-permalink" href="#status" title="Permanent link to this heading">&para;</a></h1>
+<p>This file defines the canonical cross‑domain feedback loop framework for the EcoEchoSystem.<br />
+Additional loop types may be added as new domains and behaviors emerge.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/ecoechosystem/cross_domain/feedback_loops.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/ecoechosystem/cross_domain/feedback_loops.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

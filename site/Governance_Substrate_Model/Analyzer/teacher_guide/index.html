@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Teacher Guide | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/teacher_guide/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Teacher Guide" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/teacher_guide/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Teacher Guide" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/Governance_Substrate_Model/Analyzer/teacher_guide.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Teacher Guide",
+    "headline": "Teacher Guide",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/teacher_guide/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#1-teaching-goals">1. Teaching goals</a></li>
+<li><a href="#2-core-concepts-to-teach">2. Core concepts to teach</a><ul>
+<li><a href="#structural-vectors">Structural vectors</a></li>
+<li><a href="#invariants">Invariants</a></li>
+<li><a href="#physics-forces">Physics forces</a></li>
+<li><a href="#drift">Drift</a></li>
+<li><a href="#basins">Basins</a></li>
+<li><a href="#regime-modes">Regime modes</a></li>
+<li><a href="#phase-discipline">Phase discipline</a></li>
+<li><a href="#observer-lenses">Observer lenses</a></li>
+</ul>
+</li>
+<li><a href="#3-teaching-sequence">3. Teaching sequence</a><ul>
+<li><a href="#step-1-manifold-and-vectors">Step 1 — Manifold and vectors</a></li>
+<li><a href="#step-2-invariants-and-physics">Step 2 — Invariants and physics</a></li>
+<li><a href="#step-3-drift-and-movement">Step 3 — Drift and movement</a></li>
+<li><a href="#step-4-basins-and-transitions">Step 4 — Basins and transitions</a></li>
+<li><a href="#step-5-regime-modes-and-phases">Step 5 — Regime modes and phases</a></li>
+<li><a href="#step-6-observer-lenses">Step 6 — Observer lenses</a></li>
+<li><a href="#step-7-simulation-engine">Step 7 — Simulation engine</a></li>
+<li><a href="#step-8-scenarios">Step 8 — Scenarios</a></li>
+</ul>
+</li>
+<li><a href="#4-classroom-exercises">4. Classroom exercises</a><ul>
+<li><a href="#exercise-a-vector-construction">Exercise A — Vector construction</a></li>
+<li><a href="#exercise-b-drift-classification">Exercise B — Drift classification</a></li>
+<li><a href="#exercise-c-basin-identification">Exercise C — Basin identification</a></li>
+<li><a href="#exercise-d-regime-mode-diagnosis">Exercise D — Regime mode diagnosis</a></li>
+<li><a href="#exercise-e-phase-discipline">Exercise E — Phase discipline</a></li>
+<li><a href="#exercise-f-simulation-interpretation">Exercise F — Simulation interpretation</a></li>
+<li><a href="#exercise-g-scenario-exploration">Exercise G — Scenario exploration</a></li>
+</ul>
+</li>
+<li><a href="#5-teaching-materials">5. Teaching materials</a></li>
+<li><a href="#6-assessment-ideas">6. Assessment ideas</a></li>
+<li><a href="#7-teaching-philosophy">7. Teaching philosophy</a></li>
+<li><a href="#8-instructor-tips">8. Instructor tips</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Governance_Substrate_Model/" itemprop="item">
+                <span itemprop="name">Governance Substrate Model</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/" itemprop="item">
+                <span itemprop="name">Analyzer</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Teacher Guide</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Teacher Guide</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="teacher-guide">Teacher Guide<a class="toc-permalink" href="#teacher-guide" title="Permanent link to this heading">&para;</a></h1>
+<p><em>A teaching framework for the Governance Substrate Model (GSM) Analyzer</em></p>
+<p>This guide supports instructors teaching the GSM to students, analysts, and practitioners. It provides a structured path from foundational concepts to hands‑on analysis, simulation, and interpretation. It is designed for classroom use, workshops, and self‑guided study.</p>
+<hr />
+<h2 id="1-teaching-goals">1. Teaching goals<a class="toc-permalink" href="#1-teaching-goals" title="Permanent link to this heading">&para;</a></h2>
+<p>Students should be able to:</p>
+<ul>
+<li>Understand the five‑axis manifold and structural vectors  </li>
+<li>Identify invariants, tension, and violations  </li>
+<li>Interpret physics forces and drift categories  </li>
+<li>Classify basin identity and boundary proximity  </li>
+<li>Recognize regime modes and phase states  </li>
+<li>Use the Observer (history, now, future)  </li>
+<li>Run simulations and interpret outputs  </li>
+<li>Map statements into structural vectors  </li>
+<li>Evaluate structural coherence and transitions  </li>
+</ul>
+<p>The goal is not prediction—it is structural literacy.</p>
+<hr />
+<h2 id="2-core-concepts-to-teach">2. Core concepts to teach<a class="toc-permalink" href="#2-core-concepts-to-teach" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="structural-vectors">Structural vectors<a class="toc-permalink" href="#structural-vectors" title="Permanent link to this heading">&para;</a></h3>
+<p>Explain the five axes (C, M, O, A, T) and how vectors represent governance structure.</p>
+<h3 id="invariants">Invariants<a class="toc-permalink" href="#invariants" title="Permanent link to this heading">&para;</a></h3>
+<p>Teach aligned vs. tension vs. violated invariants and how they shape stability.</p>
+<h3 id="physics-forces">Physics forces<a class="toc-permalink" href="#physics-forces" title="Permanent link to this heading">&para;</a></h3>
+<p>Show how cross‑axis forces (C↔O, M↔A, O↔T) create compensatory or destabilizing movement.</p>
+<h3 id="drift">Drift<a class="toc-permalink" href="#drift" title="Permanent link to this heading">&para;</a></h3>
+<p>Introduce micro, meso, macro, and regime‑shift drift categories.</p>
+<h3 id="basins">Basins<a class="toc-permalink" href="#basins" title="Permanent link to this heading">&para;</a></h3>
+<p>Teach the five basins (CPL, CPF, CTR, PCL, HCL) and how systems move within and between them.</p>
+<h3 id="regime-modes">Regime modes<a class="toc-permalink" href="#regime-modes" title="Permanent link to this heading">&para;</a></h3>
+<p>Explain stable, tension, drift, compensatory, transition, absorptive, fragmentation, reconstruction.</p>
+<h3 id="phase-discipline">Phase discipline<a class="toc-permalink" href="#phase-discipline" title="Permanent link to this heading">&para;</a></h3>
+<p>Show how systems move through phases and how structural debt accumulates.</p>
+<h3 id="observer-lenses">Observer lenses<a class="toc-permalink" href="#observer-lenses" title="Permanent link to this heading">&para;</a></h3>
+<p>Teach history, now, and future lenses as structural perspectives.</p>
+<hr />
+<h2 id="3-teaching-sequence">3. Teaching sequence<a class="toc-permalink" href="#3-teaching-sequence" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="step-1-manifold-and-vectors">Step 1 — Manifold and vectors<a class="toc-permalink" href="#step-1-manifold-and-vectors" title="Permanent link to this heading">&para;</a></h3>
+<p>Students learn to read and construct structural vectors.</p>
+<h3 id="step-2-invariants-and-physics">Step 2 — Invariants and physics<a class="toc-permalink" href="#step-2-invariants-and-physics" title="Permanent link to this heading">&para;</a></h3>
+<p>Introduce tension, violations, and cross‑axis forces.</p>
+<h3 id="step-3-drift-and-movement">Step 3 — Drift and movement<a class="toc-permalink" href="#step-3-drift-and-movement" title="Permanent link to this heading">&para;</a></h3>
+<p>Students classify drift and compute magnitude.</p>
+<h3 id="step-4-basins-and-transitions">Step 4 — Basins and transitions<a class="toc-permalink" href="#step-4-basins-and-transitions" title="Permanent link to this heading">&para;</a></h3>
+<p>Teach basin identity, distance, and boundary proximity.</p>
+<h3 id="step-5-regime-modes-and-phases">Step 5 — Regime modes and phases<a class="toc-permalink" href="#step-5-regime-modes-and-phases" title="Permanent link to this heading">&para;</a></h3>
+<p>Students interpret operational behavior and phase discipline.</p>
+<h3 id="step-6-observer-lenses">Step 6 — Observer lenses<a class="toc-permalink" href="#step-6-observer-lenses" title="Permanent link to this heading">&para;</a></h3>
+<p>Students encode history, evaluate now, and project futures.</p>
+<h3 id="step-7-simulation-engine">Step 7 — Simulation engine<a class="toc-permalink" href="#step-7-simulation-engine" title="Permanent link to this heading">&para;</a></h3>
+<p>Students run stepwise simulations and interpret outputs.</p>
+<h3 id="step-8-scenarios">Step 8 — Scenarios<a class="toc-permalink" href="#step-8-scenarios" title="Permanent link to this heading">&para;</a></h3>
+<p>Students explore structured scenarios (stable, tension, drift, transition, regime‑shift, etc.).</p>
+<hr />
+<h2 id="4-classroom-exercises">4. Classroom exercises<a class="toc-permalink" href="#4-classroom-exercises" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="exercise-a-vector-construction">Exercise A — Vector construction<a class="toc-permalink" href="#exercise-a-vector-construction" title="Permanent link to this heading">&para;</a></h3>
+<p>Give students statements and have them map them into vectors using mapping rules.</p>
+<h3 id="exercise-b-drift-classification">Exercise B — Drift classification<a class="toc-permalink" href="#exercise-b-drift-classification" title="Permanent link to this heading">&para;</a></h3>
+<p>Provide vector deltas and ask students to classify drift category.</p>
+<h3 id="exercise-c-basin-identification">Exercise C — Basin identification<a class="toc-permalink" href="#exercise-c-basin-identification" title="Permanent link to this heading">&para;</a></h3>
+<p>Give vectors and ask students to identify nearest basin and boundary proximity.</p>
+<h3 id="exercise-d-regime-mode-diagnosis">Exercise D — Regime mode diagnosis<a class="toc-permalink" href="#exercise-d-regime-mode-diagnosis" title="Permanent link to this heading">&para;</a></h3>
+<p>Provide structural states and ask students to classify regime mode.</p>
+<h3 id="exercise-e-phase-discipline">Exercise E — Phase discipline<a class="toc-permalink" href="#exercise-e-phase-discipline" title="Permanent link to this heading">&para;</a></h3>
+<p>Give sequences of states and ask students to identify phase transitions and structural debt.</p>
+<h3 id="exercise-f-simulation-interpretation">Exercise F — Simulation interpretation<a class="toc-permalink" href="#exercise-f-simulation-interpretation" title="Permanent link to this heading">&para;</a></h3>
+<p>Provide simulation outputs and ask students to narrate structural movement.</p>
+<h3 id="exercise-g-scenario-exploration">Exercise G — Scenario exploration<a class="toc-permalink" href="#exercise-g-scenario-exploration" title="Permanent link to this heading">&para;</a></h3>
+<p>Students run a scenario and present structural narratives.</p>
+<hr />
+<h2 id="5-teaching-materials">5. Teaching materials<a class="toc-permalink" href="#5-teaching-materials" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>Structural vector reference  </li>
+<li>Invariant definitions  </li>
+<li>Physics force diagrams  </li>
+<li>Drift category examples  </li>
+<li>Basin topology map  </li>
+<li>Regime mode table  </li>
+<li>Phase discipline chart  </li>
+<li>Observer schemas  </li>
+<li>Simulation engine overview  </li>
+<li>Scenario templates  </li>
+</ul>
+<p>These materials help students build intuition.</p>
+<hr />
+<h2 id="6-assessment-ideas">6. Assessment ideas<a class="toc-permalink" href="#6-assessment-ideas" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>Short quizzes on vector interpretation  </li>
+<li>Drift and basin classification exercises  </li>
+<li>Narrative explanations of structural movement  </li>
+<li>Simulation‑based case studies  </li>
+<li>Group scenario presentations  </li>
+<li>Final project: encode a historical governance profile  </li>
+</ul>
+<p>Assessment focuses on structural reasoning, not memorization.</p>
+<hr />
+<h2 id="7-teaching-philosophy">7. Teaching philosophy<a class="toc-permalink" href="#7-teaching-philosophy" title="Permanent link to this heading">&para;</a></h2>
+<p>The GSM is best taught through:</p>
+<ul>
+<li>hands‑on exploration  </li>
+<li>structural reasoning  </li>
+<li>narrative interpretation  </li>
+<li>scenario‑based learning  </li>
+<li>collaborative analysis  </li>
+</ul>
+<p>Students should learn to <em>see structure</em>, not memorize rules.</p>
+<hr />
+<h2 id="8-instructor-tips">8. Instructor tips<a class="toc-permalink" href="#8-instructor-tips" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>Start with simple vectors before introducing drift or basins.  </li>
+<li>Use visual diagrams for physics forces and basin topology.  </li>
+<li>Encourage students to narrate structural movement in plain language.  </li>
+<li>Emphasize that the GSM is descriptive, not prescriptive.  </li>
+<li>Reinforce that projections are plausible futures, not predictions.  </li>
+</ul>
+<p>A strong teaching environment emphasizes clarity, curiosity, and structural literacy.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Governance_Substrate_Model/Analyzer/teacher_guide.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/Governance_Substrate_Model/Analyzer/teacher_guide.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

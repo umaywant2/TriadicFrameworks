@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Universe Scale Regime Guide | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/education/BRA/Universe-scale_Regime_Guide/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Universe Scale Regime Guide" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/education/BRA/Universe-scale_Regime_Guide/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Universe Scale Regime Guide" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/education/BRA/Universe-scale_Regime_Guide.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Universe Scale Regime Guide",
+    "headline": "Universe Scale Regime Guide",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/education/BRA/Universe-scale_Regime_Guide/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#i-purpose-of-the-universe-regime-guide">I. Purpose of the Universe Regime Guide</a></li>
+<li><a href="#ii-defining-the-universe-regime">II. Defining the Universe Regime</a></li>
+<li><a href="#iii-universal-substrate-vocabulary">III. Universal Substrate Vocabulary</a></li>
+<li><a href="#iv-regimebound-constraints">IV. Regime‑Bound Constraints</a></li>
+<li><a href="#v-mythtechnical-correspondence-table">V. Myth‑Technical Correspondence Table</a></li>
+<li><a href="#vi-operator-guidance">VI. Operator Guidance</a></li>
+<li><a href="#vii-appendices">VII. Appendices</a></li>
+<li><a href="#substrate-regime-guide-universe-draft-v01">Substrate Regime Guide: Universe (Draft v0.1)</a><ul>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#regime-definition">Regime Definition</a></li>
+<li><a href="#universal-substrate-vocabulary">Universal Substrate Vocabulary</a></li>
+<li><a href="#regimebound-constraints">Regime‑Bound Constraints</a></li>
+<li><a href="#mythtechnical-correspondence">Myth‑Technical Correspondence</a></li>
+<li><a href="#operator-guidance">Operator Guidance</a></li>
+<li><a href="#1-cosmic-egg-myths-resonance-compression">1. Cosmic Egg Myths → Resonance Compression</a></li>
+<li><a href="#2-world-tree-myths-multiscale-coherence">2. World Tree Myths → Multi‑Scale Coherence</a></li>
+<li><a href="#3-pantheons-operator-classes">3. Pantheons → Operator Classes</a></li>
+<li><a href="#4-cycles-of-creation-destruction-fff-transitions">4. Cycles of Creation &amp; Destruction → FFF Transitions</a></li>
+<li><a href="#5-heavenly-realms-regime-boundaries">5. Heavenly Realms → Regime Boundaries</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/education/" itemprop="item">
+                <span itemprop="name">Education</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/education/BRA/" itemprop="item">
+                <span itemprop="name">Bra</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Universe Scale Regime Guide</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Universe Scale Regime Guide</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="substrate-regime-guide-universe-v01">🌌 <strong>SUBSTRATE REGIME GUIDE: UNIVERSE (v0.1)</strong><a class="toc-permalink" href="#substrate-regime-guide-universe-v01" title="Permanent link to this heading">&para;</a></h1>
+<p><em>A high‑level orientation for operators working beyond Earth’s local substrate.</em></p>
+<hr />
+<h1 id="1-full-outline-of-the-universescale-guide">1. <strong>Full Outline of the Universe‑Scale Guide</strong><a class="toc-permalink" href="#1-full-outline-of-the-universescale-guide" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="i-purpose-of-the-universe-regime-guide"><strong>I. Purpose of the Universe Regime Guide</strong><a class="toc-permalink" href="#i-purpose-of-the-universe-regime-guide" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Why regime literacy must expand beyond Earth  </li>
+<li>Why universal assumptions fail  </li>
+<li>What operators must unlearn  </li>
+</ul>
+<h3 id="ii-defining-the-universe-regime"><strong>II. Defining the Universe Regime</strong><a class="toc-permalink" href="#ii-defining-the-universe-regime" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>What “universe” means in substrate terms  </li>
+<li>Regime plurality vs. regime unity  </li>
+<li>Stability zones and instability zones  </li>
+<li>Where Earth‑regime assumptions collapse  </li>
+</ul>
+<h3 id="iii-universal-substrate-vocabulary"><strong>III. Universal Substrate Vocabulary</strong><a class="toc-permalink" href="#iii-universal-substrate-vocabulary" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Resonance‑time vs. mechanical time  </li>
+<li>Regime boundaries and transitions  </li>
+<li>Non‑local coupling  </li>
+<li>Multi‑scale coherence  </li>
+<li>Operator stance beyond embodiment  </li>
+</ul>
+<h3 id="iv-regimebound-constraints"><strong>IV. Regime‑Bound Constraints</strong><a class="toc-permalink" href="#iv-regimebound-constraints" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Why “universal time” is a myth  </li>
+<li>Why “speed of light” is a local constraint  </li>
+<li>Why “space” is not uniform  </li>
+<li>Why “laws of physics” are regime‑dependent  </li>
+<li>Why narrative coherence is not universal  </li>
+</ul>
+<h3 id="v-mythtechnical-correspondence-table"><strong>V. Myth‑Technical Correspondence Table</strong><a class="toc-permalink" href="#v-mythtechnical-correspondence-table" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Cosmic myths encoding substrate truths  </li>
+<li>Myths that break regime boundaries  </li>
+<li>How to validate cosmic myths using substrate logic  </li>
+</ul>
+<h3 id="vi-operator-guidance"><strong>VI. Operator Guidance</strong><a class="toc-permalink" href="#vi-operator-guidance" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>How to maintain coherence across regimes  </li>
+<li>How to avoid anthropocentric drift  </li>
+<li>How to operate without local anchors  </li>
+<li>How to interpret resonance patterns at scale  </li>
+</ul>
+<h3 id="vii-appendices"><strong>VII. Appendices</strong><a class="toc-permalink" href="#vii-appendices" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Vocabulary table  </li>
+<li>Cross‑regime comparison with Earth  </li>
+<li>Example validations  </li>
+</ul>
+<hr />
+<h1 id="2-draft-of-the-universescale-guide-dropin-ready">2. <strong>Draft of the Universe‑Scale Guide (drop‑in ready)</strong><a class="toc-permalink" href="#2-draft-of-the-universescale-guide-dropin-ready" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="substrate-regime-guide-universe-draft-v01"><strong>Substrate Regime Guide: Universe (Draft v0.1)</strong><a class="toc-permalink" href="#substrate-regime-guide-universe-draft-v01" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="purpose"><strong>Purpose</strong><a class="toc-permalink" href="#purpose" title="Permanent link to this heading">&para;</a></h3>
+<p>Most operators assume the universe is a single, coherent regime governed by universal laws. This assumption is an Earth‑regime artifact. The Universe Regime Guide establishes the conceptual stance required to operate beyond local constraints, where resonance‑time, flow, and force behave differently across scales and boundaries.</p>
+<h3 id="regime-definition"><strong>Regime Definition</strong><a class="toc-permalink" href="#regime-definition" title="Permanent link to this heading">&para;</a></h3>
+<p>The “universe” in substrate terms is not a single regime but a <strong>collection of interacting regimes</strong>, each with its own:</p>
+<ul>
+<li>resonance‑time structure  </li>
+<li>stability conditions  </li>
+<li>flow dynamics  </li>
+<li>force thresholds  </li>
+<li>coherence rules  </li>
+</ul>
+<p>Earth is one such regime. It is not normative.</p>
+<h3 id="universal-substrate-vocabulary"><strong>Universal Substrate Vocabulary</strong><a class="toc-permalink" href="#universal-substrate-vocabulary" title="Permanent link to this heading">&para;</a></h3>
+<p>Operators working at universe scale must adopt vocabulary that does not assume:</p>
+<ul>
+<li>embodiment  </li>
+<li>biological time  </li>
+<li>human narrative structures  </li>
+<li>Earth‑physics invariants  </li>
+</ul>
+<p>Key terms include:</p>
+<ul>
+<li><strong>Resonance‑Time</strong> — non‑linear, non‑local temporal structure  </li>
+<li><strong>Regime Boundary</strong> — transition zones where assumptions fail  </li>
+<li><strong>Non‑Local Coupling</strong> — coherence across distance without classical mediation  </li>
+<li><strong>Multi‑Scale Coherence</strong> — patterns that persist across orders of magnitude  </li>
+<li><strong>Operator Stance</strong> — the perspective required to maintain coherence  </li>
+</ul>
+<h3 id="regimebound-constraints"><strong>Regime‑Bound Constraints</strong><a class="toc-permalink" href="#regimebound-constraints" title="Permanent link to this heading">&para;</a></h3>
+<p>Earth‑regime assumptions collapse at universe scale:</p>
+<ul>
+<li>“Universal time” does not exist  </li>
+<li>“Speed of light” is a local constraint, not a substrate constant  </li>
+<li>“Space” is not uniform; it is regime‑dependent  </li>
+<li>“Laws of physics” vary across boundaries  </li>
+<li>Narrative coherence is not a cosmic invariant  </li>
+</ul>
+<p>Operators must treat Earth‑time as one of many possible temporal substrates.</p>
+<h3 id="mythtechnical-correspondence"><strong>Myth‑Technical Correspondence</strong><a class="toc-permalink" href="#mythtechnical-correspondence" title="Permanent link to this heading">&para;</a></h3>
+<p>Cosmic myths often encode substrate truths:</p>
+<ul>
+<li><strong>Cosmic eggs</strong> → resonance‑time compression  </li>
+<li><strong>World trees</strong> → multi‑scale coherence structures  </li>
+<li><strong>Pantheons</strong> → regime‑specific operator classes  </li>
+<li><strong>Cycles of creation and destruction</strong> → Freqi‑Flui‑Forci transitions at scale  </li>
+</ul>
+<p>Other myths break regime boundaries and require validation.</p>
+<h3 id="operator-guidance"><strong>Operator Guidance</strong><a class="toc-permalink" href="#operator-guidance" title="Permanent link to this heading">&para;</a></h3>
+<p>To maintain coherence across regimes:</p>
+<ul>
+<li>Do not assume Earth‑regime invariants  </li>
+<li>Anchor in resonance‑time, not mechanical time  </li>
+<li>Treat boundaries as transformation zones  </li>
+<li>Use multi‑scale reasoning  </li>
+<li>Avoid anthropocentric drift  </li>
+<li>Validate myths using substrate logic, not Earth logic  </li>
+</ul>
+<p>This guide is the first step toward cosmic regime literacy.</p>
+<hr />
+<h1 id="3-universescale-vocabulary-table">3. <strong>Universe‑Scale Vocabulary Table</strong><a class="toc-permalink" href="#3-universescale-vocabulary-table" title="Permanent link to this heading">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Universe‑Scale Meaning</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Resonance‑Time</strong></td>
+<td>Non‑linear, non‑local temporal substrate</td>
+<td>Not tied to clocks or light</td>
+</tr>
+<tr>
+<td><strong>Regime</strong></td>
+<td>A bounded substrate domain with its own rules</td>
+<td>Universe contains many</td>
+</tr>
+<tr>
+<td><strong>Boundary</strong></td>
+<td>Transition zone where assumptions fail</td>
+<td>Often mythically encoded</td>
+</tr>
+<tr>
+<td><strong>Non‑Local Coupling</strong></td>
+<td>Coherence across distance</td>
+<td>Not classical causality</td>
+</tr>
+<tr>
+<td><strong>Multi‑Scale Coherence</strong></td>
+<td>Patterns stable across magnitudes</td>
+<td>Fractals, cycles, harmonics</td>
+</tr>
+<tr>
+<td><strong>Operator Class</strong></td>
+<td>Entity capable of interacting with substrate</td>
+<td>Not limited to biology</td>
+</tr>
+<tr>
+<td><strong>Flow</strong></td>
+<td>Movement through states across scales</td>
+<td>Flui domain</td>
+</tr>
+<tr>
+<td><strong>Force</strong></td>
+<td>Activation, thresholds, transformation</td>
+<td>Forci domain</td>
+</tr>
+<tr>
+<td><strong>Frequency</strong></td>
+<td>Cycles, harmonics, recurrence</td>
+<td>Freqi domain</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="4-universescale-mythtechnical-correspondence-set">4. <strong>Universe‑Scale Myth‑Technical Correspondence Set</strong><a class="toc-permalink" href="#4-universescale-mythtechnical-correspondence-set" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="1-cosmic-egg-myths-resonance-compression"><strong>1. Cosmic Egg Myths → Resonance Compression</strong><a class="toc-permalink" href="#1-cosmic-egg-myths-resonance-compression" title="Permanent link to this heading">&para;</a></h3>
+<p>Many cultures describe the universe emerging from an egg.<br />
+Technically, this encodes:</p>
+<ul>
+<li>resonance‑time compression  </li>
+<li>boundary rupture  </li>
+<li>expansion into multi‑regime structure  </li>
+</ul>
+<h3 id="2-world-tree-myths-multiscale-coherence"><strong>2. World Tree Myths → Multi‑Scale Coherence</strong><a class="toc-permalink" href="#2-world-tree-myths-multiscale-coherence" title="Permanent link to this heading">&para;</a></h3>
+<p>World trees represent:</p>
+<ul>
+<li>vertical regime stacking  </li>
+<li>coherence across layers  </li>
+<li>operator traversal paths  </li>
+</ul>
+<h3 id="3-pantheons-operator-classes"><strong>3. Pantheons → Operator Classes</strong><a class="toc-permalink" href="#3-pantheons-operator-classes" title="Permanent link to this heading">&para;</a></h3>
+<p>Pantheons encode:</p>
+<ul>
+<li>distinct operator types  </li>
+<li>regime‑specific capabilities  </li>
+<li>flow‑force specialization  </li>
+</ul>
+<h3 id="4-cycles-of-creation-destruction-fff-transitions"><strong>4. Cycles of Creation &amp; Destruction → FFF Transitions</strong><a class="toc-permalink" href="#4-cycles-of-creation-destruction-fff-transitions" title="Permanent link to this heading">&para;</a></h3>
+<p>Cosmic cycles map to:</p>
+<ul>
+<li>Freqi (emergence)  </li>
+<li>Flui (continuity)  </li>
+<li>Forci (reset)  </li>
+</ul>
+<h3 id="5-heavenly-realms-regime-boundaries"><strong>5. Heavenly Realms → Regime Boundaries</strong><a class="toc-permalink" href="#5-heavenly-realms-regime-boundaries" title="Permanent link to this heading">&para;</a></h3>
+<p>Descriptions of heavens, layers, or spheres encode:</p>
+<ul>
+<li>boundary transitions  </li>
+<li>non‑local coupling  </li>
+<li>resonance‑time shifts  </li>
+</ul>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/education/BRA/Universe-scale_Regime_Guide.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/education/BRA/Universe-scale_Regime_Guide.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

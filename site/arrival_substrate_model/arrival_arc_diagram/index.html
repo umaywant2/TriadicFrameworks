@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Arrival Arc Diagram | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/arrival_substrate_model/arrival_arc_diagram/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Arrival Arc Diagram" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/arrival_substrate_model/arrival_arc_diagram/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Arrival Arc Diagram" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/arrival_substrate_model/arrival_arc_diagram.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Arrival Arc Diagram",
+    "headline": "Arrival Arc Diagram",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/arrival_substrate_model/arrival_arc_diagram/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#arrival-arc-diagram">Arrival Arc Diagram</a></li>
+<li><a href="#ascii-diagram-canonical-version">ASCII Diagram (Canonical Version)</a></li>
+<li><a href="#interpretation">Interpretation</a><ul>
+<li><a href="#microarrival">Micro‑Arrival</a></li>
+<li><a href="#mesoarrival">Meso‑Arrival</a></li>
+<li><a href="#macroarrival">Macro‑Arrival</a></li>
+</ul>
+</li>
+<li><a href="#triadic-structure">Triadic Structure</a></li>
+<li><a href="#why-the-arrival-arc-matters">Why the Arrival Arc Matters</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/arrival_substrate_model/" itemprop="item">
+                <span itemprop="name">Arrival Substrate Model</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Arrival Arc Diagram</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Arrival Arc Diagram</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h2 id="arrival-arc-diagram"><strong>Arrival Arc Diagram</strong><a class="toc-permalink" href="#arrival-arc-diagram" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>The Arrival Arc</strong> models how living systems continuously enter, negotiate, and stabilize within new regimes.<br />
+It appears at <strong>three nested scales</strong> — micro, meso, and macro — each following the same triadic path:</p>
+<p><strong>A → B → C</strong><br />
+<strong>Initiation → Mediation → Integration</strong></p>
+<hr />
+<h2 id="ascii-diagram-canonical-version"><strong>ASCII Diagram (Canonical Version)</strong><a class="toc-permalink" href="#ascii-diagram-canonical-version" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>          MACRO-ARRIVAL (Generational / Evolutionary)
+          -------------------------------------------
+                    ▲
+                    │   Integration (C)
+                    │   — new regime stabilized
+                    │
+            ┌───────┴───────────────────────────────┐
+            │                                       │
+            │        MESO-ARRIVAL (Life Events)     │
+            │        ---------------------------    │
+            │        • migration                    │
+            │        • career shifts                │
+            │        • ecosystem changes            │
+            │                                       │
+   Initiation (A)                                   │
+   — entry into new regime                          │
+            │                                       │
+            │        MICRO-ARRIVAL (Moment-to-      │
+            │        Moment / Daily Cycles)         │
+            │        ---------------------------    │
+            │        • new interactions             │
+            │        • new contexts                 │
+            │        • new states                   │
+            └───────────────────────────────────────┘
+                    │
+                    │   Mediation (B)
+                    │   — adaptation / negotiation
+                    ▼
+
+   ARRIVAL ARC = A (initiate) → B (mediate) → C (integrate)
+   at micro, meso, and macro scales, continuously.
+</code></pre></div>
+
+<hr />
+<h2 id="interpretation"><strong>Interpretation</strong><a class="toc-permalink" href="#interpretation" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="microarrival"><strong>Micro‑Arrival</strong><a class="toc-permalink" href="#microarrival" title="Permanent link to this heading">&para;</a></h3>
+<p>Moment‑to‑moment transitions:<br />
+- new interactions<br />
+- new contexts<br />
+- new internal states  </p>
+<h3 id="mesoarrival"><strong>Meso‑Arrival</strong><a class="toc-permalink" href="#mesoarrival" title="Permanent link to this heading">&para;</a></h3>
+<p>Life‑event transitions:<br />
+- migration<br />
+- role changes<br />
+- environmental shifts  </p>
+<h3 id="macroarrival"><strong>Macro‑Arrival</strong><a class="toc-permalink" href="#macroarrival" title="Permanent link to this heading">&para;</a></h3>
+<p>Long‑arc transitions:<br />
+- generational change<br />
+- evolutionary adaptation<br />
+- civilizational regime shifts  </p>
+<hr />
+<h2 id="triadic-structure"><strong>Triadic Structure</strong><a class="toc-permalink" href="#triadic-structure" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A — Initiation</strong></td>
+<td>Boundary Crossing</td>
+<td>The system enters a new regime or condition.</td>
+</tr>
+<tr>
+<td><strong>B — Mediation</strong></td>
+<td>Adaptation</td>
+<td>The system negotiates constraints, updates structure, and stabilizes.</td>
+</tr>
+<tr>
+<td><strong>C — Integration</strong></td>
+<td>Continuity</td>
+<td>The system becomes coherent within the new regime.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="why-the-arrival-arc-matters"><strong>Why the Arrival Arc Matters</strong><a class="toc-permalink" href="#why-the-arrival-arc-matters" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>It reveals that <strong>life is always arriving</strong>, not just at birth or migration.  </li>
+<li>It provides a <strong>universal pattern</strong> for biological, social, cognitive, and ecological transitions.  </li>
+<li>It aligns with the <strong>Arrival Operator (Aᵣ)</strong> and the <strong>Arrival Literacy</strong> framework.  </li>
+<li>It integrates cleanly with your <strong>Structural Life‑Regime Profiles</strong> and <strong>Higher‑Dimensional Energy</strong> models.</li>
+</ul>
+<hr />
+<h1 id="1-frontmatter-yaml-block">🧾 <strong>1. Front‑Matter YAML Block</strong><a class="toc-permalink" href="#1-frontmatter-yaml-block" title="Permanent link to this heading">&para;</a></h1>
+<p>Place this at the top of <code>arrival_arc_diagram.md</code>:</p>
+<div class="codehilite"><pre><span></span><code><span class="nn">---</span>
+<span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Arrival</span><span class="nv"> </span><span class="s">Arc</span><span class="nv"> </span><span class="s">Diagram&quot;</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Triadic</span><span class="nv"> </span><span class="s">diagram</span><span class="nv"> </span><span class="s">showing</span><span class="nv"> </span><span class="s">how</span><span class="nv"> </span><span class="s">living</span><span class="nv"> </span><span class="s">systems</span><span class="nv"> </span><span class="s">continuously</span><span class="nv"> </span><span class="s">arrive</span><span class="nv"> </span><span class="s">into</span><span class="nv"> </span><span class="s">new</span><span class="nv"> </span><span class="s">regimes</span><span class="nv"> </span><span class="s">across</span><span class="nv"> </span><span class="s">micro,</span><span class="nv"> </span><span class="s">meso,</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">macro</span><span class="nv"> </span><span class="s">scales.&quot;</span>
+<span class="nt">category</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Arrival</span><span class="nv"> </span><span class="s">Substrate</span><span class="nv"> </span><span class="s">Model&quot;</span>
+<span class="nt">tags</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">arrival</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">triadic</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">substrate-models</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">resonance-transition</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">diagrams</span>
+<span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span>
+<span class="nt">icon</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;🔺&quot;</span>
+<span class="nn">---</span>
+</code></pre></div>
+
+<p>Notes:<br />
+- <code>weight</code> controls ordering within the module.<br />
+- <code>icon</code> matches your diagrammatic style (triangles for transitions).  </p>
+<hr />
+<h1 id="2-sidebar-entry">📚 <strong>2. Sidebar Entry</strong><a class="toc-permalink" href="#2-sidebar-entry" title="Permanent link to this heading">&para;</a></h1>
+<p>Add this to your sidebar or module index:</p>
+<div class="codehilite"><pre><span></span><code>🔺 Arrival Arc Diagram
+   • Micro / Meso / Macro Arrivals
+   • Triadic A→B→C Structure
+   • Continuous Regime Transitions
+</code></pre></div>
+
+<p>If your sidebar supports nesting:</p>
+<div class="codehilite"><pre><span></span><code>📁 Arrival Substrate Model
+   ├─ 🧬 Arrival Operator (Aᵣ)
+   ├─ 🔺 Arrival Arc Diagram
+   ├─ 📚 Arrival Literacy
+   ├─ 🌐 Regime Alignment
+   └─ 🏛️ Governance Integration
+</code></pre></div>
+
+<p>This keeps the Arrival Arc Diagram clearly positioned as the <strong>visual core</strong> of the module.</p>
+<hr />
+<h1 id="3-crosslinks-dropin-block">🔗 <strong>3. Cross‑Links (drop‑in block)</strong><a class="toc-permalink" href="#3-crosslinks-dropin-block" title="Permanent link to this heading">&para;</a></h1>
+<p>Place this at the bottom of the file under a <code>## Cross‑Links</code> header:</p>
+<div class="codehilite"><pre><span></span><code><span class="gu">## Cross‑Links</span>
+
+<span class="k">-</span><span class="w"> </span><span class="gs">**Arrival Operator (Aᵣ)**</span>  
+  The triadic engine behind all arrival arcs.  
+  [<span class="nt">/docs/arrival_substrate_model/arrival_operator</span>](<span class="na">../arrival_operator.md</span>)
+
+<span class="k">-</span><span class="w"> </span><span class="gs">**Arrival Literacy**</span>  
+  How systems interpret and navigate continuous arrival.  
+  [<span class="nt">/docs/arrival_substrate_model/arrival_literacy</span>](<span class="na">../arrival_literacy.md</span>)
+
+<span class="k">-</span><span class="w"> </span><span class="gs">**Structural Life‑Regime Profiles**</span>  
+  Macro‑arrival patterns across biological and social systems.  
+  https://www.triadicframeworks.org/structural_life_regime_profiles/
+
+<span class="k">-</span><span class="w"> </span><span class="gs">**Governance Substrate Model — Immigrant Awareness**</span>  
+  Applied arrival arcs in governance contexts.  
+  https://www.triadicframeworks.org/Governance_Substrate_Model/#IMMIGRANT_AWARENESS
+
+<span class="k">-</span><span class="w"> </span><span class="gs">**Energy Model — Higher Dimensions Within**</span>  
+  Arrival as a resonance‑transition across dimensional substrates.  
+  https://www.triadicframeworks.org/energy/#HIGHER_DIMS_WITHIN
+</code></pre></div>
+
+<p>This mirrors your existing cross‑linking style:<br />
+- internal links use relative paths<br />
+- external links point to your published site<br />
+- each link has a one‑line purpose statement  </p>
+<hr />
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/arrival_substrate_model/arrival_arc_diagram.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/arrival_substrate_model/arrival_arc_diagram.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

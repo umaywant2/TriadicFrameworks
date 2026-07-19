@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Inequality Dynamics | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/ecoechosystem/templates/city_sim/inequality_dynamics/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Inequality Dynamics" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/ecoechosystem/templates/city_sim/inequality_dynamics/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Inequality Dynamics" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/ecoechosystem/templates/city_sim/inequality_dynamics.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Inequality Dynamics",
+    "headline": "Inequality Dynamics",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/ecoechosystem/templates/city_sim/inequality_dynamics/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#how-uneven-distribution-of-resources-opportunity-and-risk-shapes-urban-stability">How uneven distribution of resources, opportunity, and risk shapes urban stability</a></li>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#inequality-as-substrate-expression">Inequality as Substrate Expression</a></li>
+<li><a href="#1-broadly-distributed-regime">1. Broadly Distributed Regime</a></li>
+<li><a href="#2-mild-stratification-regime">2. Mild Stratification Regime</a></li>
+<li><a href="#3-concentrated-advantage-regime">3. Concentrated Advantage Regime</a></li>
+<li><a href="#4-polarized-regime">4. Polarized Regime</a></li>
+<li><a href="#5-fracture-regime">5. Fracture Regime</a></li>
+<li><a href="#6-rebalancing-integration-regime">6. Rebalancing / Integration Regime</a><ul>
+<li><a href="#population-activation">Population Activation</a></li>
+<li><a href="#economic-activation">Economic Activation</a></li>
+<li><a href="#governance-response">Governance Response</a></li>
+<li><a href="#information-flow">Information Flow</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/ecoechosystem/" itemprop="item">
+                <span itemprop="name">Ecoechosystem</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/ecoechosystem/templates/" itemprop="item">
+                <span itemprop="name">Templates</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/ecoechosystem/templates/city_sim/" itemprop="item">
+                <span itemprop="name">City Sim</span>
+              </a>
+            <meta itemprop="position" content="4" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Inequality Dynamics</span>
+            <meta itemprop="position" content="5" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Inequality Dynamics</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="inequality-dynamics"><strong>Inequality Dynamics</strong><a class="toc-permalink" href="#inequality-dynamics" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="how-uneven-distribution-of-resources-opportunity-and-risk-shapes-urban-stability"><em>How uneven distribution of resources, opportunity, and risk shapes urban stability</em><a class="toc-permalink" href="#how-uneven-distribution-of-resources-opportunity-and-risk-shapes-urban-stability" title="Permanent link to this heading">&para;</a></h3>
+<p>Inequality dynamics describe <strong>how differences accumulate</strong> within a city — not just in wealth, but in access, exposure, influence, and recovery capacity.</p>
+<p>Inequality is not a moral variable.<br />
+It is a <strong>structural stress gradient</strong>.</p>
+<p>Cities rarely collapse from absolute scarcity; they fracture from <strong>uneven burden</strong>.</p>
+<hr />
+<h2 id="purpose"><strong>Purpose</strong><a class="toc-permalink" href="#purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>Inequality dynamics exist to:</p>
+<ul>
+<li>model distributional imbalance across populations  </li>
+<li>explain latent instability during apparent growth  </li>
+<li>link economic structure to population activation  </li>
+<li>expose legitimacy erosion before overt crisis  </li>
+<li>support long‑arc resilience and reform simulation  </li>
+</ul>
+<p>Inequality is the <strong>slowest‑moving destabilizer</strong> — and the hardest to reverse.</p>
+<hr />
+<h2 id="inequality-as-substrate-expression"><strong>Inequality as Substrate Expression</strong><a class="toc-permalink" href="#inequality-as-substrate-expression" title="Permanent link to this heading">&para;</a></h2>
+<p>Urban inequality expresses the shared substrate as:</p>
+<ul>
+<li><strong>Structure (S)</strong> — stratified networks, spatial segregation, access boundaries  </li>
+<li><strong>Activation (E)</strong> — stress concentration, resentment, disengagement  </li>
+<li><strong>Relational Time (R)</strong> — recovery asymmetry, generational lag, memory persistence  </li>
+</ul>
+<p>Inequality embeds itself into <strong>structure and time</strong>, not just behavior.</p>
+<hr />
+<h1 id="canonical-inequality-regimes"><strong>Canonical Inequality Regimes</strong><a class="toc-permalink" href="#canonical-inequality-regimes" title="Permanent link to this heading">&para;</a></h1>
+<p>City simulations recognize six primary inequality regimes.</p>
+<hr />
+<h2 id="1-broadly-distributed-regime"><strong>1. Broadly Distributed Regime</strong><a class="toc-permalink" href="#1-broadly-distributed-regime" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>S:</strong><br />
+- overlapping social and economic networks<br />
+- high mobility  </p>
+<p><strong>E:</strong><br />
+- low stress concentration<br />
+- shared opportunity  </p>
+<p><strong>R:</strong><br />
+- synchronized recovery<br />
+- short generational lag  </p>
+<p><strong>Description:</strong><br />
+Supports trust, cooperation, and long‑term stability.</p>
+<hr />
+<h2 id="2-mild-stratification-regime"><strong>2. Mild Stratification Regime</strong><a class="toc-permalink" href="#2-mild-stratification-regime" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>S:</strong><br />
+- emerging tiers<br />
+- partial segregation  </p>
+<p><strong>E:</strong><br />
+- localized stress<br />
+- manageable resentment  </p>
+<p><strong>R:</strong><br />
+- uneven recovery<br />
+- early generational divergence  </p>
+<p><strong>Description:</strong><br />
+Common in growing cities; stable if addressed early.</p>
+<hr />
+<h2 id="3-concentrated-advantage-regime"><strong>3. Concentrated Advantage Regime</strong><a class="toc-permalink" href="#3-concentrated-advantage-regime" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>S:</strong><br />
+- elite network consolidation<br />
+- access bottlenecks  </p>
+<p><strong>E:</strong><br />
+- stress displaced downward<br />
+- disengagement rising  </p>
+<p><strong>R:</strong><br />
+- long recovery lag for lower tiers  </p>
+<p><strong>Description:</strong><br />
+Economic growth masks rising instability.</p>
+<hr />
+<h2 id="4-polarized-regime"><strong>4. Polarized Regime</strong><a class="toc-permalink" href="#4-polarized-regime" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>S:</strong><br />
+- sharply divided networks<br />
+- spatial and social separation  </p>
+<p><strong>E:</strong><br />
+- high stress concentration<br />
+- identity hardening  </p>
+<p><strong>R:</strong><br />
+- desynchronized futures<br />
+- generational entrenchment  </p>
+<p><strong>Description:</strong><br />
+High unrest risk even without economic collapse.</p>
+<hr />
+<h2 id="5-fracture-regime"><strong>5. Fracture Regime</strong><a class="toc-permalink" href="#5-fracture-regime" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>S:</strong><br />
+- network disconnection<br />
+- institutional capture  </p>
+<p><strong>E:</strong><br />
+- chronic activation in marginalized groups<br />
+- apathy or defensiveness in advantaged groups  </p>
+<p><strong>R:</strong><br />
+- lost future orientation<br />
+- intergenerational trauma  </p>
+<p><strong>Description:</strong><br />
+Governance legitimacy collapses before infrastructure does.</p>
+<hr />
+<h2 id="6-rebalancing-integration-regime"><strong>6. Rebalancing / Integration Regime</strong><a class="toc-permalink" href="#6-rebalancing-integration-regime" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>S:</strong><br />
+- access expansion<br />
+- network reconnection  </p>
+<p><strong>E:</strong><br />
+- regulated stress<br />
+- renewed engagement  </p>
+<p><strong>R:</strong><br />
+- horizon expansion<br />
+- generational repair  </p>
+<p><strong>Description:</strong><br />
+Requires intentional policy and long‑arc commitment.</p>
+<hr />
+<h1 id="inequality-drivers"><strong>Inequality Drivers</strong><a class="toc-permalink" href="#inequality-drivers" title="Permanent link to this heading">&para;</a></h1>
+<p>Inequality dynamics are driven by:</p>
+<ul>
+<li>economic structure  </li>
+<li>resource allocation  </li>
+<li>infrastructure access  </li>
+<li>governance policy  </li>
+<li>information asymmetry  </li>
+<li>historical legacy  </li>
+</ul>
+<p>Inequality often <strong>persists through inertia</strong>, not intent.</p>
+<hr />
+<h1 id="crossdomain-coupling"><strong>Cross‑Domain Coupling</strong><a class="toc-permalink" href="#crossdomain-coupling" title="Permanent link to this heading">&para;</a></h1>
+<p>Inequality dynamics strongly influence:</p>
+<h3 id="population-activation"><strong>Population Activation</strong><a class="toc-permalink" href="#population-activation" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>unrest localization  </li>
+<li>disengagement patterns  </li>
+</ul>
+<h3 id="economic-activation"><strong>Economic Activation</strong><a class="toc-permalink" href="#economic-activation" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>labor instability  </li>
+<li>consumption divergence  </li>
+</ul>
+<h3 id="governance-response"><strong>Governance Response</strong><a class="toc-permalink" href="#governance-response" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>legitimacy erosion  </li>
+<li>enforcement bias  </li>
+</ul>
+<h3 id="information-flow"><strong>Information Flow</strong><a class="toc-permalink" href="#information-flow" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>narrative polarization  </li>
+<li>trust fragmentation  </li>
+</ul>
+<p>Inequality is a <strong>silent cascade amplifier</strong>.</p>
+<hr />
+<h1 id="feedback-loops"><strong>Feedback Loops</strong><a class="toc-permalink" href="#feedback-loops" title="Permanent link to this heading">&para;</a></h1>
+<p>Common feedback patterns:<br />
+- inequality ↔ stress concentration<br />
+- inequality ↔ disengagement<br />
+- inequality ↔ legitimacy loss  </p>
+<p>These loops are <strong>slow, deep, and self‑reinforcing</strong>.</p>
+<hr />
+<h1 id="simulation-hooks"><strong>Simulation Hooks</strong><a class="toc-permalink" href="#simulation-hooks" title="Permanent link to this heading">&para;</a></h1>
+<p>Inequality dynamics expose:</p>
+<ul>
+<li>distribution indices  </li>
+<li>access gradients  </li>
+<li>recovery lag metrics  </li>
+<li>generational persistence  </li>
+<li>policy redistribution levers  </li>
+</ul>
+<p>These hooks enable <strong>long‑arc stability modeling</strong>.</p>
+<hr />
+<h1 id="failure-modes"><strong>Failure Modes</strong><a class="toc-permalink" href="#failure-modes" title="Permanent link to this heading">&para;</a></h1>
+<p>Inequality failure often emerges as:<br />
+- chronic unrest without clear trigger<br />
+- institutional capture<br />
+- loss of shared future<br />
+- normalization of instability  </p>
+<p>Cities fracture <strong>quietly before they erupt</strong>.</p>
+<hr />
+<h1 id="integration-notes"><strong>Integration Notes</strong><a class="toc-permalink" href="#integration-notes" title="Permanent link to this heading">&para;</a></h1>
+<p>Inequality dynamics:<br />
+- outlast economic cycles<br />
+- shape population identity<br />
+- constrain governance options<br />
+- determine recovery success  </p>
+<p>A city’s future is decided by <strong>who recovers first</strong>.</p>
+<hr />
+<h1 id="status"><strong>Status</strong><a class="toc-permalink" href="#status" title="Permanent link to this heading">&para;</a></h1>
+<p>Canonical city‑scale inequality dynamics framework.<br />
+Designed for extension by demographic, historical, or policy layers.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/ecoechosystem/templates/city_sim/inequality_dynamics.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/ecoechosystem/templates/city_sim/inequality_dynamics.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

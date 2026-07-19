@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>04 Flight Examples | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/_ideas/How_RTT_Helps_Planes_Not_Go_Boom/04_Flight_Examples/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="04 Flight Examples" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/_ideas/How_RTT_Helps_Planes_Not_Go_Boom/04_Flight_Examples/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="04 Flight Examples" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/_ideas/How_RTT_Helps_Planes_Not_Go_Boom/04_Flight_Examples.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "04 Flight Examples",
+    "headline": "04 Flight Examples",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/_ideas/How_RTT_Helps_Planes_Not_Go_Boom/04_Flight_Examples/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#scenario">Scenario</a></li>
+<li><a href="#domain-signals">Domain Signals</a></li>
+<li><a href="#rtt-interpretation">RTT Interpretation</a></li>
+<li><a href="#advisory">Advisory</a></li>
+<li><a href="#reintegration-pathway">Reintegration Pathway</a></li>
+<li><a href="#scenario_1">Scenario</a></li>
+<li><a href="#domain-signals_1">Domain Signals</a></li>
+<li><a href="#rtt-interpretation_1">RTT Interpretation</a></li>
+<li><a href="#advisory_1">Advisory</a></li>
+<li><a href="#reintegration-pathway_1">Reintegration Pathway</a></li>
+<li><a href="#scenario_2">Scenario</a></li>
+<li><a href="#domain-signals_2">Domain Signals</a></li>
+<li><a href="#rtt-interpretation_2">RTT Interpretation</a></li>
+<li><a href="#advisory_2">Advisory</a></li>
+<li><a href="#reintegration-pathway_2">Reintegration Pathway</a></li>
+<li><a href="#scenario_3">Scenario</a></li>
+<li><a href="#domain-signals_3">Domain Signals</a></li>
+<li><a href="#rtt-interpretation_3">RTT Interpretation</a></li>
+<li><a href="#advisory_3">Advisory</a></li>
+<li><a href="#reintegration-pathway_3">Reintegration Pathway</a></li>
+<li><a href="#scenario_4">Scenario</a></li>
+<li><a href="#domain-signals_4">Domain Signals</a></li>
+<li><a href="#rtt-interpretation_4">RTT Interpretation</a></li>
+<li><a href="#advisory_4">Advisory</a></li>
+<li><a href="#reintegration-pathway_4">Reintegration Pathway</a></li>
+<li><a href="#scenario_5">Scenario</a></li>
+<li><a href="#domain-signals_5">Domain Signals</a></li>
+<li><a href="#rtt-interpretation_5">RTT Interpretation</a></li>
+<li><a href="#advisory_5">Advisory</a></li>
+<li><a href="#reintegration-pathway_5">Reintegration Pathway</a></li>
+<li><a href="#scenario_6">Scenario</a></li>
+<li><a href="#domain-signals_6">Domain Signals</a></li>
+<li><a href="#rtt-interpretation_6">RTT Interpretation</a></li>
+<li><a href="#advisory_6">Advisory</a></li>
+<li><a href="#reintegration-pathway_6">Reintegration Pathway</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/_ideas/" itemprop="item">
+                <span itemprop="name"> Ideas</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/_ideas/How_RTT_Helps_Planes_Not_Go_Boom/" itemprop="item">
+                <span itemprop="name">How Rtt Helps Planes Not Go Boom</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">04 Flight Examples</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">04 Flight Examples</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="flight-examples-rtt-in-action">✈️ <strong>Flight Examples: RTT in Action</strong><a class="toc-permalink" href="#flight-examples-rtt-in-action" title="Permanent link to this heading">&para;</a></h1>
+<p>This file contains concrete aviation scenarios showing how <strong>Resonance Time Theory (RTT)</strong> detects and classifies drift <em>before</em> it becomes dangerous.<br />
+Each example illustrates how the three domains — <strong>Aircraft Body</strong>, <strong>Environment</strong>, and <strong>Pilot/Automation</strong> — interact, align, or fall out of sync.</p>
+<p>RTT’s role is not to fly the airplane.<br />
+Its role is to <strong>notice misalignment early</strong> and help guide reintegration.</p>
+<hr />
+<h1 id="1-turbulence-onset">🌀 <strong>1. Turbulence Onset</strong><a class="toc-permalink" href="#1-turbulence-onset" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="scenario"><strong>Scenario</strong><a class="toc-permalink" href="#scenario" title="Permanent link to this heading">&para;</a></h3>
+<p>The aircraft enters an area of light‑to‑moderate turbulence.</p>
+<h3 id="domain-signals"><strong>Domain Signals</strong><a class="toc-permalink" href="#domain-signals" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Aircraft Body:</strong> small oscillations, increased vibration  </li>
+<li><strong>Environment:</strong> rising gust factor, vertical shear  </li>
+<li><strong>Pilot/Automation:</strong> autopilot holding altitude, pilot workload rising  </li>
+</ul>
+<h3 id="rtt-interpretation"><strong>RTT Interpretation</strong><a class="toc-permalink" href="#rtt-interpretation" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Soft drift detected between aircraft body and environment  </li>
+<li>Timing windows narrowing  </li>
+<li>Forcing increasing  </li>
+</ul>
+<h3 id="advisory"><strong>Advisory</strong><a class="toc-permalink" href="#advisory" title="Permanent link to this heading">&para;</a></h3>
+<p>“Sky mood rising. Prepare for increased forcing. Consider adjusting workload or altitude.”</p>
+<h3 id="reintegration-pathway"><strong>Reintegration Pathway</strong><a class="toc-permalink" href="#reintegration-pathway" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Reduce automation aggressiveness  </li>
+<li>Smooth control inputs  </li>
+<li>Adjust altitude to calmer air  </li>
+</ul>
+<hr />
+<h1 id="2-pilotautomation-disagreement">⚡ <strong>2. Pilot–Automation Disagreement</strong><a class="toc-permalink" href="#2-pilotautomation-disagreement" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="scenario_1"><strong>Scenario</strong><a class="toc-permalink" href="#scenario_1" title="Permanent link to this heading">&para;</a></h3>
+<p>Pilot attempts to override autopilot during a climb.</p>
+<h3 id="domain-signals_1"><strong>Domain Signals</strong><a class="toc-permalink" href="#domain-signals_1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Aircraft Body:</strong> pitch oscillations  </li>
+<li><strong>Environment:</strong> stable  </li>
+<li><strong>Pilot/Automation:</strong> conflicting inputs (pilot pulling, autopilot pushing)  </li>
+</ul>
+<h3 id="rtt-interpretation_1"><strong>RTT Interpretation</strong><a class="toc-permalink" href="#rtt-interpretation_1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Hard drift in intent  </li>
+<li>Cross‑domain conflict  </li>
+<li>Regime boundary violation (manual vs. automated control)  </li>
+</ul>
+<h3 id="advisory_1"><strong>Advisory</strong><a class="toc-permalink" href="#advisory_1" title="Permanent link to this heading">&para;</a></h3>
+<p>“Intent mismatch detected. Clarify control authority.”</p>
+<h3 id="reintegration-pathway_1"><strong>Reintegration Pathway</strong><a class="toc-permalink" href="#reintegration-pathway_1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Disconnect autopilot  </li>
+<li>Re‑establish manual control  </li>
+<li>Re‑engage automation once stable  </li>
+</ul>
+<hr />
+<h1 id="3-icing-and-performance-degradation">❄️ <strong>3. Icing and Performance Degradation</strong><a class="toc-permalink" href="#3-icing-and-performance-degradation" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="scenario_2"><strong>Scenario</strong><a class="toc-permalink" href="#scenario_2" title="Permanent link to this heading">&para;</a></h3>
+<p>Aircraft begins accumulating ice on approach.</p>
+<h3 id="domain-signals_2"><strong>Domain Signals</strong><a class="toc-permalink" href="#domain-signals_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Aircraft Body:</strong> reduced lift, increased drag, sluggish response  </li>
+<li><strong>Environment:</strong> temperature drop, visible moisture  </li>
+<li><strong>Pilot/Automation:</strong> autopilot compensating aggressively  </li>
+</ul>
+<h3 id="rtt-interpretation_2"><strong>RTT Interpretation</strong><a class="toc-permalink" href="#rtt-interpretation_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Hard drift in aircraft body domain  </li>
+<li>Forcing mismatch  </li>
+<li>Timing windows collapsing  </li>
+</ul>
+<h3 id="advisory_2"><strong>Advisory</strong><a class="toc-permalink" href="#advisory_2" title="Permanent link to this heading">&para;</a></h3>
+<p>“Performance degradation detected. Check for icing. Adjust configuration.”</p>
+<h3 id="reintegration-pathway_2"><strong>Reintegration Pathway</strong><a class="toc-permalink" href="#reintegration-pathway_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Activate anti‑ice systems  </li>
+<li>Increase power  </li>
+<li>Adjust approach profile  </li>
+</ul>
+<hr />
+<h1 id="4-engine-asymmetry">🔧 <strong>4. Engine Asymmetry</strong><a class="toc-permalink" href="#4-engine-asymmetry" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="scenario_3"><strong>Scenario</strong><a class="toc-permalink" href="#scenario_3" title="Permanent link to this heading">&para;</a></h3>
+<p>One engine produces slightly less thrust than the other.</p>
+<h3 id="domain-signals_3"><strong>Domain Signals</strong><a class="toc-permalink" href="#domain-signals_3" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Aircraft Body:</strong> yaw tendency, trim changes  </li>
+<li><strong>Environment:</strong> stable  </li>
+<li><strong>Pilot/Automation:</strong> autopilot trimming aggressively  </li>
+</ul>
+<h3 id="rtt-interpretation_3"><strong>RTT Interpretation</strong><a class="toc-permalink" href="#rtt-interpretation_3" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Cross‑domain drift  </li>
+<li>Body domain diverging from pilot intent  </li>
+<li>Slow‑building instability  </li>
+</ul>
+<h3 id="advisory_3"><strong>Advisory</strong><a class="toc-permalink" href="#advisory_3" title="Permanent link to this heading">&para;</a></h3>
+<p>“Asymmetric forcing detected. Verify engine performance.”</p>
+<h3 id="reintegration-pathway_3"><strong>Reintegration Pathway</strong><a class="toc-permalink" href="#reintegration-pathway_3" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Adjust power settings  </li>
+<li>Re‑trim  </li>
+<li>Monitor engine parameters  </li>
+</ul>
+<hr />
+<h1 id="5-crosswind-landing">🌬️ <strong>5. Crosswind Landing</strong><a class="toc-permalink" href="#5-crosswind-landing" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="scenario_4"><strong>Scenario</strong><a class="toc-permalink" href="#scenario_4" title="Permanent link to this heading">&para;</a></h3>
+<p>Strong crosswind during final approach.</p>
+<h3 id="domain-signals_4"><strong>Domain Signals</strong><a class="toc-permalink" href="#domain-signals_4" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Aircraft Body:</strong> lateral drift, crab angle  </li>
+<li><strong>Environment:</strong> gusty crosswind  </li>
+<li><strong>Pilot/Automation:</strong> pilot correcting manually  </li>
+</ul>
+<h3 id="rtt-interpretation_4"><strong>RTT Interpretation</strong><a class="toc-permalink" href="#rtt-interpretation_4" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>High forcing  </li>
+<li>Domains aligned but stressed  </li>
+<li>Timing windows tight  </li>
+</ul>
+<h3 id="advisory_4"><strong>Advisory</strong><a class="toc-permalink" href="#advisory_4" title="Permanent link to this heading">&para;</a></h3>
+<p>“High forcing alignment. Maintain coordinated corrections.”</p>
+<h3 id="reintegration-pathway_4"><strong>Reintegration Pathway</strong><a class="toc-permalink" href="#reintegration-pathway_4" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Continue stabilized approach  </li>
+<li>Adjust for gust factor  </li>
+<li>Execute go‑around if coherence degrades  </li>
+</ul>
+<hr />
+<h1 id="6-sensor-disagreement-pitotstatic-issue">📡 <strong>6. Sensor Disagreement (Pitot‑Static Issue)</strong><a class="toc-permalink" href="#6-sensor-disagreement-pitotstatic-issue" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="scenario_5"><strong>Scenario</strong><a class="toc-permalink" href="#scenario_5" title="Permanent link to this heading">&para;</a></h3>
+<p>One airspeed indicator begins reading incorrectly.</p>
+<h3 id="domain-signals_5"><strong>Domain Signals</strong><a class="toc-permalink" href="#domain-signals_5" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Aircraft Body:</strong> stable  </li>
+<li><strong>Environment:</strong> stable  </li>
+<li><strong>Pilot/Automation:</strong> autopilot reacting to faulty airspeed  </li>
+</ul>
+<h3 id="rtt-interpretation_5"><strong>RTT Interpretation</strong><a class="toc-permalink" href="#rtt-interpretation_5" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Cross‑domain drift  </li>
+<li>Sensor domain diverging from body/environment  </li>
+<li>Potential automation misbehavior  </li>
+</ul>
+<h3 id="advisory_5"><strong>Advisory</strong><a class="toc-permalink" href="#advisory_5" title="Permanent link to this heading">&para;</a></h3>
+<p>“Sensor disagreement detected. Cross‑check airspeed sources.”</p>
+<h3 id="reintegration-pathway_5"><strong>Reintegration Pathway</strong><a class="toc-permalink" href="#reintegration-pathway_5" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Switch to alternate air data source  </li>
+<li>Disable affected automation modes  </li>
+<li>Maintain pitch‑power settings  </li>
+</ul>
+<hr />
+<h1 id="7-high-workload-cognitive-overload">🧠 <strong>7. High Workload / Cognitive Overload</strong><a class="toc-permalink" href="#7-high-workload-cognitive-overload" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="scenario_6"><strong>Scenario</strong><a class="toc-permalink" href="#scenario_6" title="Permanent link to this heading">&para;</a></h3>
+<p>Pilot becomes overloaded during a complex approach.</p>
+<h3 id="domain-signals_6"><strong>Domain Signals</strong><a class="toc-permalink" href="#domain-signals_6" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Aircraft Body:</strong> stable  </li>
+<li><strong>Environment:</strong> moderate forcing  </li>
+<li><strong>Pilot/Automation:</strong> delayed responses, mode confusion  </li>
+</ul>
+<h3 id="rtt-interpretation_6"><strong>RTT Interpretation</strong><a class="toc-permalink" href="#rtt-interpretation_6" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Intent drift  </li>
+<li>Timing window collapse  </li>
+<li>Human‑machine misalignment  </li>
+</ul>
+<h3 id="advisory_6"><strong>Advisory</strong><a class="toc-permalink" href="#advisory_6" title="Permanent link to this heading">&para;</a></h3>
+<p>“Pilot workload rising. Simplify tasks or adjust automation.”</p>
+<h3 id="reintegration-pathway_6"><strong>Reintegration Pathway</strong><a class="toc-permalink" href="#reintegration-pathway_6" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Reduce manual workload  </li>
+<li>Re‑engage stable automation modes  </li>
+<li>Slow down the operation tempo  </li>
+</ul>
+<hr />
+<h1 id="why-these-examples-matter">🎯 <strong>Why These Examples Matter</strong><a class="toc-permalink" href="#why-these-examples-matter" title="Permanent link to this heading">&para;</a></h1>
+<p>Each scenario shows how drift emerges <strong>before</strong> a failure — and how RTT’s structural lens helps detect it early.</p>
+<p>RTT is not a warning system.<br />
+It is a <strong>coherence system</strong>.</p>
+<p>It helps:<br />
+- humans<br />
+- automation<br />
+- and the aircraft itself  </p>
+<p>…stay aligned across changing conditions.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/How_RTT_Helps_Planes_Not_Go_Boom/04_Flight_Examples.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/_ideas/How_RTT_Helps_Planes_Not_Go_Boom/04_Flight_Examples.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

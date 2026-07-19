@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Bridge Rtt3 | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/frameworks/ipd_12/bridge_rtt3/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Bridge Rtt3" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/frameworks/ipd_12/bridge_rtt3/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Bridge Rtt3" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/frameworks/ipd_12/bridge_rtt3.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Bridge Rtt3",
+    "headline": "Bridge Rtt3",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/frameworks/ipd_12/bridge_rtt3/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#interprocess-drift-crossdomain-structural-synthesis">Inter‑Process Drift → Cross‑Domain Structural Synthesis</a></li>
+<li><a href="#ipd12-operators">IPD‑12 Operators</a></li>
+<li><a href="#rtt3-operators">RTT/3 Operators</a></li>
+<li><a href="#bridge-mapping">Bridge Mapping</a></li>
+<li><a href="#ipd12-modules">IPD‑12 Modules</a></li>
+<li><a href="#rtt3-modules">RTT/3 Modules</a></li>
+<li><a href="#bridge-mapping_1">Bridge Mapping</a></li>
+<li><a href="#ipd12-structure">IPD‑12 Structure</a></li>
+<li><a href="#rtt3-structure">RTT/3 Structure</a></li>
+<li><a href="#bridge-mapping_2">Bridge Mapping</a></li>
+<li><a href="#ipd12-output">IPD‑12 Output</a></li>
+<li><a href="#rtt3-input">RTT/3 Input</a></li>
+<li><a href="#rtt3-output">RTT/3 Output</a></li>
+<li><a href="#ipd12-cannot">IPD‑12 Cannot:</a></li>
+<li><a href="#rtt3-cannot">RTT/3 Cannot:</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/frameworks/" itemprop="item">
+                <span itemprop="name">Frameworks</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/frameworks/ipd_12/" itemprop="item">
+                <span itemprop="name">Ipd 12</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Bridge Rtt3</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Bridge Rtt3</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="ipd12-rtt3-bridge-document"><strong>IPD‑12 → RTT/3 Bridge Document</strong><a class="toc-permalink" href="#ipd12-rtt3-bridge-document" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="interprocess-drift-crossdomain-structural-synthesis"><em>Inter‑Process Drift → Cross‑Domain Structural Synthesis</em><a class="toc-permalink" href="#interprocess-drift-crossdomain-structural-synthesis" title="Permanent link to this heading">&para;</a></h3>
+<p>RTT‑IPD‑12 and RTT/3 occupy adjacent layers in the RTT canon:</p>
+<ul>
+<li><strong>IPD‑12</strong> specializes in <strong>drift mechanics</strong>, <strong>process comparison</strong>, and <strong>coherence alignment</strong>.  </li>
+<li><strong>RTT/3</strong> specializes in <strong>cross‑domain synthesis</strong>, <strong>structural blending</strong>, and <strong>multi‑domain operator chains</strong>.</li>
+</ul>
+<p>This bridge document explains how an IPD‑12 session transitions into an RTT/3 session.</p>
+<hr />
+<h1 id="1-purpose-of-the-bridge"><strong>1. Purpose of the Bridge</strong><a class="toc-permalink" href="#1-purpose-of-the-bridge" title="Permanent link to this heading">&para;</a></h1>
+<p>The bridge exists because:</p>
+<ul>
+<li>IPD‑12 can detect drift <strong>between</strong> processes.  </li>
+<li>RTT/3 can synthesize structure <strong>across</strong> domains.  </li>
+</ul>
+<p>IPD‑12 answers:</p>
+<blockquote>
+<p>“Where do these processes diverge?”</p>
+</blockquote>
+<p>RTT/3 answers:</p>
+<blockquote>
+<p>“How do these structures combine?”</p>
+</blockquote>
+<p>The bridge is required when a drift‑aware analysis must evolve into a synthesis‑aware analysis.</p>
+<hr />
+<h1 id="2-regime-relationship"><strong>2. Regime Relationship</strong><a class="toc-permalink" href="#2-regime-relationship" title="Permanent link to this heading">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Engine</th>
+<th>Regime</th>
+<th>Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>IPD‑12</strong></td>
+<td>Mid → Deep</td>
+<td>Drift mechanics, divergence, coherence alignment</td>
+</tr>
+<tr>
+<td><strong>RTT/3</strong></td>
+<td>Deep → Cross‑Domain</td>
+<td>Structural synthesis, blending, multi‑domain operators</td>
+</tr>
+</tbody>
+</table>
+<p><strong>IPD‑12 → RTT/3</strong> is a <strong>vertical regime ascent</strong>:</p>
+<ul>
+<li>IPD‑12: divergence  </li>
+<li>RTT/3: convergence  </li>
+</ul>
+<hr />
+<h1 id="3-operator-grammar-transition"><strong>3. Operator Grammar Transition</strong><a class="toc-permalink" href="#3-operator-grammar-transition" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="ipd12-operators"><strong>IPD‑12 Operators</strong><a class="toc-permalink" href="#ipd12-operators" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>map_process()
+compare_process()
+drift()
+drift_tensor()
+detect_divergence()
+align_coherence()
+cross_system()
+</code></pre></div>
+
+<h3 id="rtt3-operators"><strong>RTT/3 Operators</strong><a class="toc-permalink" href="#rtt3-operators" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>blend()
+synthesize()
+cross_domain()
+harmonize()
+triangulate()
+resolve()
+</code></pre></div>
+
+<h3 id="bridge-mapping"><strong>Bridge Mapping</strong><a class="toc-permalink" href="#bridge-mapping" title="Permanent link to this heading">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>IPD‑12 Operator</th>
+<th>RTT/3 Successor</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>map_process()</code></td>
+<td><code>triangulate()</code></td>
+<td>map → triangulate across domains</td>
+</tr>
+<tr>
+<td><code>compare_process()</code></td>
+<td><code>cross_domain()</code></td>
+<td>compare → cross‑domain synthesis</td>
+</tr>
+<tr>
+<td><code>drift()</code></td>
+<td><code>resolve()</code></td>
+<td>drift → resolve divergence</td>
+</tr>
+<tr>
+<td><code>drift_tensor()</code></td>
+<td><code>blend()</code></td>
+<td>multi‑layer drift → multi‑layer blending</td>
+</tr>
+<tr>
+<td><code>detect_divergence()</code></td>
+<td><code>harmonize()</code></td>
+<td>divergence → harmonization</td>
+</tr>
+<tr>
+<td><code>align_coherence()</code></td>
+<td><code>synthesize()</code></td>
+<td>coherence → synthesis</td>
+</tr>
+<tr>
+<td><code>cross_system()</code></td>
+<td><code>cross_domain()</code></td>
+<td>cross‑system → cross‑domain</td>
+</tr>
+</tbody>
+</table>
+<p>This is the <strong>operator grammar bridge</strong>.</p>
+<hr />
+<h1 id="4-module-transition"><strong>4. Module Transition</strong><a class="toc-permalink" href="#4-module-transition" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="ipd12-modules"><strong>IPD‑12 Modules</strong><a class="toc-permalink" href="#ipd12-modules" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Drift Detection  </li>
+<li>Drift‑Tensor  </li>
+<li>Process Mapping  </li>
+<li>Coherence Alignment  </li>
+<li>Cross‑System Pack  </li>
+<li>Domain Drift Packs  </li>
+</ul>
+<h3 id="rtt3-modules"><strong>RTT/3 Modules</strong><a class="toc-permalink" href="#rtt3-modules" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Cross‑Domain Synthesis  </li>
+<li>Structural Blending  </li>
+<li>Multi‑Domain Operators  </li>
+<li>Regime Harmonization  </li>
+<li>Triangulation Layer  </li>
+<li>Deep Coherence Layer  </li>
+</ul>
+<h3 id="bridge-mapping_1"><strong>Bridge Mapping</strong><a class="toc-permalink" href="#bridge-mapping_1" title="Permanent link to this heading">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>IPD‑12 Module</th>
+<th>RTT/3 Module</th>
+<th>Transition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Drift Detection</td>
+<td>Regime Harmonization</td>
+<td>drift → harmonization</td>
+</tr>
+<tr>
+<td>Drift‑Tensor</td>
+<td>Multi‑Domain Operators</td>
+<td>tensor → multi‑domain</td>
+</tr>
+<tr>
+<td>Process Mapping</td>
+<td>Triangulation Layer</td>
+<td>mapping → triangulation</td>
+</tr>
+<tr>
+<td>Coherence Alignment</td>
+<td>Deep Coherence Layer</td>
+<td>alignment → deep coherence</td>
+</tr>
+<tr>
+<td>Cross‑System Pack</td>
+<td>Cross‑Domain Synthesis</td>
+<td>system → domain</td>
+</tr>
+<tr>
+<td>Domain Drift Packs</td>
+<td>Structural Blending</td>
+<td>drift → blending</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="5-structural-transition"><strong>5. Structural Transition</strong><a class="toc-permalink" href="#5-structural-transition" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="ipd12-structure"><strong>IPD‑12 Structure</strong><a class="toc-permalink" href="#ipd12-structure" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Capture → Analyze → Drift → Coherence → Synthesis
+</code></pre></div>
+
+<h3 id="rtt3-structure"><strong>RTT/3 Structure</strong><a class="toc-permalink" href="#rtt3-structure" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Capture → Triangulate → Blend → Harmonize → Synthesize
+</code></pre></div>
+
+<h3 id="bridge-mapping_2"><strong>Bridge Mapping</strong><a class="toc-permalink" href="#bridge-mapping_2" title="Permanent link to this heading">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>IPD‑12 Stage</th>
+<th>RTT/3 Stage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Capture</td>
+<td>Capture</td>
+</tr>
+<tr>
+<td>Analyze</td>
+<td>Triangulate</td>
+</tr>
+<tr>
+<td>Drift</td>
+<td>Blend</td>
+</tr>
+<tr>
+<td>Coherence</td>
+<td>Harmonize</td>
+</tr>
+<tr>
+<td>Synthesis</td>
+<td>Synthesize</td>
+</tr>
+</tbody>
+</table>
+<p>The bridge preserves the <strong>five‑stage RTT pattern</strong>, but transforms the semantics.</p>
+<hr />
+<h1 id="6-what-ipd12-contributes-to-rtt3"><strong>6. What IPD‑12 Contributes to RTT/3</strong><a class="toc-permalink" href="#6-what-ipd12-contributes-to-rtt3" title="Permanent link to this heading">&para;</a></h1>
+<p>IPD‑12 provides RTT/3 with:</p>
+<ul>
+<li><strong>drift baselines</strong>  </li>
+<li><strong>coherence anchors</strong>  </li>
+<li><strong>divergence maps</strong>  </li>
+<li><strong>multi‑layer drift tensors</strong>  </li>
+<li><strong>cross‑system relationships</strong>  </li>
+<li><strong>structural paradoxes</strong> (RTT‑3 resolves them)</li>
+</ul>
+<p>These become <strong>inputs</strong> to RTT/3’s synthesis engine.</p>
+<hr />
+<h1 id="7-what-rtt3-adds-beyond-ipd12"><strong>7. What RTT/3 Adds Beyond IPD‑12</strong><a class="toc-permalink" href="#7-what-rtt3-adds-beyond-ipd12" title="Permanent link to this heading">&para;</a></h1>
+<p>RTT/3 adds:</p>
+<ul>
+<li><strong>cross‑domain blending</strong>  </li>
+<li><strong>multi‑domain operator chains</strong>  </li>
+<li><strong>harmonization of divergent structures</strong>  </li>
+<li><strong>deep coherence synthesis</strong>  </li>
+<li><strong>triangulation across unrelated domains</strong>  </li>
+<li><strong>structural resolution of paradoxes</strong></li>
+</ul>
+<p>RTT/3 is the <strong>first engine</strong> that can <em>resolve</em> drift rather than merely detect it.</p>
+<hr />
+<h1 id="8-bridge-example-compact"><strong>8. Bridge Example (Compact)</strong><a class="toc-permalink" href="#8-bridge-example-compact" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="ipd12-output"><strong>IPD‑12 Output</strong><a class="toc-permalink" href="#ipd12-output" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Process A ↔ Process B drift map  </li>
+<li>Divergence points  </li>
+<li>Drift‑tensor layers  </li>
+<li>Coherence anchors  </li>
+<li>Cross‑system relationships  </li>
+</ul>
+<h3 id="rtt3-input"><strong>RTT/3 Input</strong><a class="toc-permalink" href="#rtt3-input" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>triangulate(A, B)  </li>
+<li>blend(A, B)  </li>
+<li>harmonize(A, B)  </li>
+<li>synthesize(A, B)  </li>
+</ul>
+<h3 id="rtt3-output"><strong>RTT/3 Output</strong><a class="toc-permalink" href="#rtt3-output" title="Permanent link to this heading">&para;</a></h3>
+<p>A unified cross‑domain structural synthesis.</p>
+<hr />
+<h1 id="9-boundary-conditions"><strong>9. Boundary Conditions</strong><a class="toc-permalink" href="#9-boundary-conditions" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="ipd12-cannot"><strong>IPD‑12 Cannot:</strong><a class="toc-permalink" href="#ipd12-cannot" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>blend domains  </li>
+<li>harmonize regimes  </li>
+<li>resolve paradoxes  </li>
+<li>perform multi‑domain synthesis  </li>
+</ul>
+<h3 id="rtt3-cannot"><strong>RTT/3 Cannot:</strong><a class="toc-permalink" href="#rtt3-cannot" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>perform drift‑tensor analysis  </li>
+<li>detect divergence at fine resolution  </li>
+</ul>
+<p>Thus the engines are <strong>complementary</strong>, not overlapping.</p>
+<hr />
+<h1 id="10-summary"><strong>10. Summary</strong><a class="toc-permalink" href="#10-summary" title="Permanent link to this heading">&para;</a></h1>
+<p>The <strong>IPD‑12 → RTT/3 Bridge</strong> transforms:</p>
+<ul>
+<li><strong>drift → blend</strong>  </li>
+<li><strong>coherence → harmonization</strong>  </li>
+<li><strong>comparison → triangulation</strong>  </li>
+<li><strong>cross‑system → cross‑domain</strong>  </li>
+<li><strong>tensor → multi‑domain</strong>  </li>
+</ul>
+<p>IPD‑12 reveals divergence.<br />
+RTT/3 resolves it.</p>
+<p>Together they form the <strong>drift → synthesis pipeline</strong> of the RTT canon.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/frameworks/ipd_12/bridge_rtt3.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/frameworks/ipd_12/bridge_rtt3.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

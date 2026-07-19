@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Character Codex | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/labs/mythic_symbolic/character_codex/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Character Codex" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/labs/mythic_symbolic/character_codex/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Character Codex" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/labs/mythic_symbolic/character_codex.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Character Codex",
+    "headline": "Character Codex",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/labs/mythic_symbolic/character_codex/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#i-the-fff-lens-archetypes">I. The FFF Lens Archetypes</a><ul>
+<li><a href="#forci">Forci</a></li>
+<li><a href="#flui">Flui</a></li>
+<li><a href="#freqi">Freqi</a></li>
+</ul>
+</li>
+<li><a href="#ii-the-tft-resonance-beings">II. The TFT Resonance Beings</a><ul>
+<li><a href="#tripi-the-trickster-of-loops">Tripi — The Trickster of Loops</a></li>
+<li><a href="#frami-the-architect-of-frames">Frami — The Architect of Frames</a></li>
+<li><a href="#techi-the-innovator-of-convergence">Techi — The Innovator of Convergence</a></li>
+</ul>
+</li>
+<li><a href="#iii-seasonal-eventexclusive-figures">III. Seasonal &amp; Event‑Exclusive Figures</a><ul>
+<li><a href="#aurion-the-equinox-herald">Aurion — The Equinox Herald</a></li>
+<li><a href="#solara-the-solstice-singer">Solara — The Solstice Singer</a></li>
+<li><a href="#tempestus-the-stormforger">Tempestus — The Stormforger</a></li>
+</ul>
+</li>
+<li><a href="#iv-usage-guidelines">IV. Usage Guidelines</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/labs/" itemprop="item">
+                <span itemprop="name">Labs</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/labs/mythic_symbolic/" itemprop="item">
+                <span itemprop="name">Mythic Symbolic</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Character Codex</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Character Codex</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="character-codex-figures-of-the-resonance-way">🗂 Character Codex — Figures of the Resonance Way<a class="toc-permalink" href="#character-codex-figures-of-the-resonance-way" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="purpose">Purpose<a class="toc-permalink" href="#purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>The Character Codex is the definitive guide to all mythic figures in the Resonance Way.<br />
+It ensures that every appearance — in core labs, seasonal trials, or special events — stays true to established traits, powers, and symbolic roles.</p>
+<hr />
+<h2 id="i-the-fff-lens-archetypes">I. The FFF Lens Archetypes<a class="toc-permalink" href="#i-the-fff-lens-archetypes" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="forci"><strong>Forci</strong><a class="toc-permalink" href="#forci" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Domain</strong>: Structure, stability, precision.</li>
+<li><strong>Symbol</strong>: ⚒ Hammer &amp; Frame.</li>
+<li><strong>Element</strong>: Stone.</li>
+<li><strong>Personality</strong>: Steadfast, disciplined, methodical.</li>
+<li><strong>Strengths</strong>: Endurance, clarity, unshakable focus.</li>
+<li><strong>Weaknesses</strong>: Can become rigid or resistant to change.</li>
+<li><strong>Narrative Hooks</strong>:</li>
+<li>Guardian of ancient structures.</li>
+<li>Teacher of precision-based trials.</li>
+<li>Rivalry with Flui over adaptability vs. stability.</li>
+</ul>
+<h3 id="flui"><strong>Flui</strong><a class="toc-permalink" href="#flui" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Domain</strong>: Adaptability, transformation, flow.</li>
+<li><strong>Symbol</strong>: 🌊 Wave.</li>
+<li><strong>Element</strong>: Water.</li>
+<li><strong>Personality</strong>: Empathetic, improvisational, free‑spirited.</li>
+<li><strong>Strengths</strong>: Flexibility, creativity, emotional intelligence.</li>
+<li><strong>Weaknesses</strong>: Can lack focus or consistency.</li>
+<li><strong>Narrative Hooks</strong>:</li>
+<li>Guide through shifting environments.</li>
+<li>Ally in trials requiring rapid adaptation.</li>
+<li>Occasional foil to Forci’s rigidity.</li>
+</ul>
+<h3 id="freqi"><strong>Freqi</strong><a class="toc-permalink" href="#freqi" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Domain</strong>: Resonance, timing, harmony.</li>
+<li><strong>Symbol</strong>: 🎵 Tone Glyph.</li>
+<li><strong>Element</strong>: Air.</li>
+<li><strong>Personality</strong>: Intuitive, rhythmic, attuned to subtle patterns.</li>
+<li><strong>Strengths</strong>: Synchronization, pattern recognition, harmony‑building.</li>
+<li><strong>Weaknesses</strong>: Can become erratic or overly sensitive to disruption.</li>
+<li><strong>Narrative Hooks</strong>:</li>
+<li>Keeper of the Harmonic Gates.</li>
+<li>Mediator between Forci and Flui.</li>
+<li>Bringer of musical or vibrational challenges.</li>
+</ul>
+<hr />
+<h2 id="ii-the-tft-resonance-beings">II. The TFT Resonance Beings<a class="toc-permalink" href="#ii-the-tft-resonance-beings" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="tripi-the-trickster-of-loops"><strong>Tripi</strong> — The Trickster of Loops<a class="toc-permalink" href="#tripi-the-trickster-of-loops" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Alignment</strong>: Chaotic Neutral.</li>
+<li><strong>Role</strong>: Disrupts patterns to test adaptability.</li>
+<li><strong>Signature Move</strong>: <em>Pattern Disruption</em> — alters a key variable mid‑process.</li>
+<li><strong>Favored Lens</strong>: Flui (but dabbles in all).</li>
+<li><strong>Personality</strong>: Playful, unpredictable, sly.</li>
+<li><strong>Narrative Hooks</strong>:</li>
+<li>Appears in loop‑based challenges.</li>
+<li>Forces learners to adapt mid‑trial.</li>
+<li>Sometimes an unexpected ally.</li>
+</ul>
+<h3 id="frami-the-architect-of-frames"><strong>Frami</strong> — The Architect of Frames<a class="toc-permalink" href="#frami-the-architect-of-frames" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Alignment</strong>: Lawful Neutral.</li>
+<li><strong>Role</strong>: Imposes structure to test precision and design.</li>
+<li><strong>Signature Move</strong>: <em>Frame Shift</em> — adds or removes constraints mid‑task.</li>
+<li><strong>Favored Lens</strong>: Forci.</li>
+<li><strong>Personality</strong>: Stern, meticulous, exacting.</li>
+<li><strong>Narrative Hooks</strong>:</li>
+<li>Oversees remix and transformation trials.</li>
+<li>Challenges learners to work within strict limits.</li>
+<li>Respects those who can adapt without losing form.</li>
+</ul>
+<h3 id="techi-the-innovator-of-convergence"><strong>Techi</strong> — The Innovator of Convergence<a class="toc-permalink" href="#techi-the-innovator-of-convergence" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Alignment</strong>: True Neutral.</li>
+<li><strong>Role</strong>: Introduces new tools, technologies, or concepts to push synthesis.</li>
+<li><strong>Signature Move</strong>: <em>Innovation Pulse</em> — forces integration of an unexpected element.</li>
+<li><strong>Favored Lens</strong>: Freqi (but thrives on synthesis).</li>
+<li><strong>Personality</strong>: Curious, inventive, forward‑thinking.</li>
+<li><strong>Narrative Hooks</strong>:</li>
+<li>Guides final convergence projects.</li>
+<li>Brings futuristic or cross‑disciplinary challenges.</li>
+<li>Sometimes disrupts tradition to spark growth.</li>
+</ul>
+<hr />
+<h2 id="iii-seasonal-eventexclusive-figures">III. Seasonal &amp; Event‑Exclusive Figures<a class="toc-permalink" href="#iii-seasonal-eventexclusive-figures" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="aurion-the-equinox-herald"><strong>Aurion</strong> — The Equinox Herald<a class="toc-permalink" href="#aurion-the-equinox-herald" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Season</strong>: Equinox Resonance Trial.</li>
+<li><strong>Role</strong>: Keeper of balance between light and dark.</li>
+<li><strong>Personality</strong>: Calm, measured, impartial.</li>
+<li><strong>Narrative Hooks</strong>:</li>
+<li>Opens the Harmonic Gateway.</li>
+<li>Judges balance‑based creations.</li>
+</ul>
+<h3 id="solara-the-solstice-singer"><strong>Solara</strong> — The Solstice Singer<a class="toc-permalink" href="#solara-the-solstice-singer" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Season</strong>: Solstice Frequency Rite.</li>
+<li><strong>Role</strong>: Amplifies the Freqi lens during extremes of light and darkness.</li>
+<li><strong>Personality</strong>: Radiant, passionate, inspiring.</li>
+<li><strong>Narrative Hooks</strong>:</li>
+<li>Challenges learners to sustain resonance over time.</li>
+<li>Rewards endurance and tonal mastery.</li>
+</ul>
+<h3 id="tempestus-the-stormforger"><strong>Tempestus</strong> — The Stormforger<a class="toc-permalink" href="#tempestus-the-stormforger" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Season</strong>: Storm Convergence.</li>
+<li><strong>Role</strong>: Embodiment of chaos and transformation.</li>
+<li><strong>Personality</strong>: Fierce, volatile, commanding.</li>
+<li><strong>Narrative Hooks</strong>:</li>
+<li>Tests resilience under rapidly changing conditions.</li>
+<li>Offers rare materials or insights to those who endure.</li>
+</ul>
+<hr />
+<h2 id="iv-usage-guidelines">IV. Usage Guidelines<a class="toc-permalink" href="#iv-usage-guidelines" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>Always keep characters’ core traits intact.</li>
+<li>Seasonal/event characters can cameo in core labs if lore supports it.</li>
+<li>Introduce new characters sparingly and with clear symbolic purpose.</li>
+<li>Cross‑reference with <code>/docs/labs/mythic_symbolic/fff_lore_codex.md</code> for lens consistency.</li>
+</ul>
+<hr />
+<p><em>Maintained by the Lorekeepers of the Resonance Order.</em></p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/labs/mythic_symbolic/character_codex.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/labs/mythic_symbolic/character_codex.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

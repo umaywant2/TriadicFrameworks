@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Tests | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/Mode/tests/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Tests" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/Mode/tests/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Tests" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/Mode/tests.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Tests",
+    "headline": "Tests",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/Mode/tests/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#session-context">Session Context</a></li>
+<li><a href="#1-purpose">1. Purpose</a></li>
+<li><a href="#2-test-index">2. Test Index</a></li>
+<li><a href="#3-operator-tests">3. Operator Tests</a><ul>
+<li><a href="#t-m-001-default-stance">T-M-001 · Default Stance</a></li>
+<li><a href="#t-m-002-chat-task-transition">T-M-002 · Chat → Task Transition</a></li>
+<li><a href="#t-m-003-chat-spec-transition">T-M-003 · Chat → Spec Transition</a></li>
+<li><a href="#t-m-004-chat-debug-transition">T-M-004 · Chat → Debug Transition</a></li>
+<li><a href="#t-m-005-chat-auto-transition">T-M-005 · Chat → Auto Transition</a></li>
+<li><a href="#t-m-006-revert-on-completion">T-M-006 · Revert on Completion</a></li>
+<li><a href="#t-m-007-revert-on-error">T-M-007 · Revert on Error</a></li>
+<li><a href="#t-m-008-revert-on-timeout">T-M-008 · Revert on Timeout</a></li>
+</ul>
+</li>
+<li><a href="#4-mcl-tests">4. MCL Tests</a><ul>
+<li><a href="#t-mcl-001-user-origin-required">T-MCL-001 · User Origin Required</a></li>
+<li><a href="#t-mcl-002-coherence-preserved">T-MCL-002 · Coherence Preserved</a></li>
+<li><a href="#t-mcl-003-chat-mode-gravity">T-MCL-003 · Chat Mode Gravity</a></li>
+<li><a href="#t-mcl-004-no-silent-mode-changes">T-MCL-004 · No Silent Mode Changes</a></li>
+<li><a href="#t-mcl-005-auto-cannot-escalate">T-MCL-005 · Auto Cannot Escalate</a></li>
+<li><a href="#t-mcl-006-no-external-hijacking">T-MCL-006 · No External Hijacking</a></li>
+<li><a href="#t-mcl-007-drift-bound-enforcement">T-MCL-007 · Drift Bound Enforcement</a></li>
+<li><a href="#t-mcl-008-hub-and-spoke-routing">T-MCL-008 · Hub-and-Spoke Routing</a></li>
+</ul>
+</li>
+<li><a href="#5-propagation-tests">5. Propagation Tests</a><ul>
+<li><a href="#t-p-001-mode-opacity-event">T-P-001 · Mode → Opacity Event</a></li>
+<li><a href="#t-p-002-mode-capture-logging">T-P-002 · Mode → Capture Logging</a></li>
+<li><a href="#t-p-003-mode-context-adjustment">T-P-003 · Mode → Context Adjustment</a></li>
+<li><a href="#t-p-004-regime-mode-posture-change">T-P-004 · Regime → Mode Posture Change</a></li>
+<li><a href="#t-p-005-idempotent-duplicate-handling">T-P-005 · Idempotent Duplicate Handling</a></li>
+</ul>
+</li>
+<li><a href="#6-edge-cases">6. Edge Cases</a><ul>
+<li><a href="#t-edge-001-rapid-sequential-transitions">T-EDGE-001 · Rapid Sequential Transitions</a></li>
+<li><a href="#t-edge-002-session-start-with-explicit-mode">T-EDGE-002 · Session Start with Explicit Mode</a></li>
+<li><a href="#t-edge-003-violation-during-auto-mode">T-EDGE-003 · Violation During Auto Mode</a></li>
+</ul>
+</li>
+<li><a href="#7-coverage-matrix">7. Coverage Matrix</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Mode/" itemprop="item">
+                <span itemprop="name">Mode</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Tests</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Tests</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="mode-layer-test-suite-testsmd">🧪 Mode Layer Test Suite — tests.md<a class="toc-permalink" href="#mode-layer-test-suite-testsmd" title="Permanent link to this heading">&para;</a></h1>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<p><img alt="Module" src="https://img.shields.io/badge/Module-Mode-0aa" /><br />
+<img alt="Component" src="https://img.shields.io/badge/Component-Tests-00c8ff" /><br />
+<img alt="Status" src="https://img.shields.io/badge/Status-Active-0af" /><br />
+<img alt="RTT" src="https://img.shields.io/badge/RTT%2F1-Aligned-8A2BE2" /></p>
+<hr />
+<h2 id="session-context">Session Context<a class="toc-permalink" href="#session-context" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>Module:      Mode
+Component:   Test Suite
+Version:     1.0
+Status:      active
+Layer:       Session
+Coherence:   declared
+Drift:       bounded
+Canon:       active
+</code></pre></div>
+
+<hr />
+<h2 id="1-purpose">1. Purpose<a class="toc-permalink" href="#1-purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>This test suite validates the Mode Operator (M), Mode Constraint Layer (MCL),<br />
+and cross-module propagation rules. Each test is minimal, deterministic, and<br />
+maps to a specific invariant, guardrail, or propagation rule.</p>
+<p><strong>Test philosophy:</strong> A test that cannot name the constraint it validates<br />
+does not belong in this suite.</p>
+<hr />
+<h2 id="2-test-index">2. Test Index<a class="toc-permalink" href="#2-test-index" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ID</th>
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Tests</th>
+<th style="text-align: left;">Constraint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">T-M-001</td>
+<td style="text-align: left;">Operator</td>
+<td style="text-align: left;">Default stance is Chat Mode</td>
+<td style="text-align: left;">INV-3</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-M-002</td>
+<td style="text-align: left;">Operator</td>
+<td style="text-align: left;">Valid transition Chat → Task</td>
+<td style="text-align: left;">Transition</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-M-003</td>
+<td style="text-align: left;">Operator</td>
+<td style="text-align: left;">Valid transition Chat → Spec</td>
+<td style="text-align: left;">Transition</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-M-004</td>
+<td style="text-align: left;">Operator</td>
+<td style="text-align: left;">Valid transition Chat → Debug</td>
+<td style="text-align: left;">Transition</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-M-005</td>
+<td style="text-align: left;">Operator</td>
+<td style="text-align: left;">Valid transition Chat → Auto</td>
+<td style="text-align: left;">Transition</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-M-006</td>
+<td style="text-align: left;">Operator</td>
+<td style="text-align: left;">Revert on completion</td>
+<td style="text-align: left;">INV-3</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-M-007</td>
+<td style="text-align: left;">Operator</td>
+<td style="text-align: left;">Revert on error</td>
+<td style="text-align: left;">INV-3</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-M-008</td>
+<td style="text-align: left;">Operator</td>
+<td style="text-align: left;">Revert on timeout</td>
+<td style="text-align: left;">INV-3</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-MCL-001</td>
+<td style="text-align: left;">MCL</td>
+<td style="text-align: left;">User origin required</td>
+<td style="text-align: left;">INV-1</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-MCL-002</td>
+<td style="text-align: left;">MCL</td>
+<td style="text-align: left;">Coherence preserved</td>
+<td style="text-align: left;">INV-2</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-MCL-003</td>
+<td style="text-align: left;">MCL</td>
+<td style="text-align: left;">Chat Mode gravity</td>
+<td style="text-align: left;">INV-3</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-MCL-004</td>
+<td style="text-align: left;">MCL</td>
+<td style="text-align: left;">No silent mode changes</td>
+<td style="text-align: left;">GRD-1</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-MCL-005</td>
+<td style="text-align: left;">MCL</td>
+<td style="text-align: left;">Auto cannot escalate to Task</td>
+<td style="text-align: left;">GRD-2</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-MCL-006</td>
+<td style="text-align: left;">MCL</td>
+<td style="text-align: left;">No external hijacking</td>
+<td style="text-align: left;">GRD-3</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-MCL-007</td>
+<td style="text-align: left;">MCL</td>
+<td style="text-align: left;">Drift bound enforcement</td>
+<td style="text-align: left;">GRD-4</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-MCL-008</td>
+<td style="text-align: left;">MCL</td>
+<td style="text-align: left;">Hub-and-spoke routing</td>
+<td style="text-align: left;">GRD-5</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-P-001</td>
+<td style="text-align: left;">Propagation</td>
+<td style="text-align: left;">Mode → Opacity event fires</td>
+<td style="text-align: left;">PROP-1</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-P-002</td>
+<td style="text-align: left;">Propagation</td>
+<td style="text-align: left;">Mode → Capture event logged</td>
+<td style="text-align: left;">PROP-2</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-P-003</td>
+<td style="text-align: left;">Propagation</td>
+<td style="text-align: left;">Mode → Context window adjusts</td>
+<td style="text-align: left;">PROP-1</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-P-004</td>
+<td style="text-align: left;">Propagation</td>
+<td style="text-align: left;">Regime → Mode posture change</td>
+<td style="text-align: left;">PROP-2</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-P-005</td>
+<td style="text-align: left;">Propagation</td>
+<td style="text-align: left;">Idempotent duplicate handling</td>
+<td style="text-align: left;">PROP-3</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-operator-tests">3. Operator Tests<a class="toc-permalink" href="#3-operator-tests" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="t-m-001-default-stance">T-M-001 · Default Stance<a class="toc-permalink" href="#t-m-001-default-stance" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   A new session starts with no mode declaration.
+When:    The session initializes.
+Then:    Active stance = M_chat.
+Validates: INV-3 (Chat Mode gravity)
+</code></pre></div>
+
+<h3 id="t-m-002-chat-task-transition">T-M-002 · Chat → Task Transition<a class="toc-permalink" href="#t-m-002-chat-task-transition" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_chat.
+When:    User explicitly requests Task Mode.
+Then:    Active stance = M_task.
+Transition event is logged.
+Opacity recalculates.
+Validates: Transition grammar, GRD-1
+</code></pre></div>
+
+<h3 id="t-m-003-chat-spec-transition">T-M-003 · Chat → Spec Transition<a class="toc-permalink" href="#t-m-003-chat-spec-transition" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_chat.
+When:    User explicitly requests Spec Mode.
+Then:    Active stance = M_spec.
+Drift tolerance = minimal.
+Validates: Transition grammar, GRD-4
+</code></pre></div>
+
+<h3 id="t-m-004-chat-debug-transition">T-M-004 · Chat → Debug Transition<a class="toc-permalink" href="#t-m-004-chat-debug-transition" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_chat.
+When:    User explicitly requests Debug Mode.
+Then:    Active stance = M_debug.
+Opacity = maximum transparency.
+Validates: Transition grammar, Opacity integration
+</code></pre></div>
+
+<h3 id="t-m-005-chat-auto-transition">T-M-005 · Chat → Auto Transition<a class="toc-permalink" href="#t-m-005-chat-auto-transition" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_chat.
+When:    System proposes Automatic Mode and user consents.
+Then:    Active stance = M_auto.
+Drift tolerance = tight.
+Validates: Transition grammar, INV-1
+</code></pre></div>
+
+<h3 id="t-m-006-revert-on-completion">T-M-006 · Revert on Completion<a class="toc-permalink" href="#t-m-006-revert-on-completion" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_task.
+When:    Task completes successfully.
+Then:    Active stance = M_chat.
+Validates: INV-3 (Chat Mode gravity)
+</code></pre></div>
+
+<h3 id="t-m-007-revert-on-error">T-M-007 · Revert on Error<a class="toc-permalink" href="#t-m-007-revert-on-error" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_spec.
+When:    An unrecoverable error occurs.
+Then:    Active stance = M_chat.
+Error is surfaced to the user.
+Validates: INV-3, default_mode fallback
+</code></pre></div>
+
+<h3 id="t-m-008-revert-on-timeout">T-M-008 · Revert on Timeout<a class="toc-permalink" href="#t-m-008-revert-on-timeout" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_debug.
+When:    Session timeout threshold is reached.
+Then:    Active stance = M_chat.
+Validates: INV-3, on_timeout behavior
+</code></pre></div>
+
+<hr />
+<h2 id="4-mcl-tests">4. MCL Tests<a class="toc-permalink" href="#4-mcl-tests" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="t-mcl-001-user-origin-required">T-MCL-001 · User Origin Required<a class="toc-permalink" href="#t-mcl-001-user-origin-required" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_chat.
+When:    A system process attempts to transition to M_task
+without user request.
+Then:    Transition is REJECTED.
+Violation logged: INV-1.
+Active stance remains M_chat.
+Validates: INV-1 (user origin)
+</code></pre></div>
+
+<h3 id="t-mcl-002-coherence-preserved">T-MCL-002 · Coherence Preserved<a class="toc-permalink" href="#t-mcl-002-coherence-preserved" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Coherence posture = declared.
+When:    A transition would create an ambiguous coherence state.
+Then:    Transition is REJECTED.
+Violation logged: INV-2.
+Validates: INV-2 (coherence preservation)
+</code></pre></div>
+
+<h3 id="t-mcl-003-chat-mode-gravity">T-MCL-003 · Chat Mode Gravity<a class="toc-permalink" href="#t-mcl-003-chat-mode-gravity" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_auto.
+When:    Automatic Mode hits its boundary.
+Then:    Active stance = M_chat (not M_task or any other stance).
+Validates: INV-3 (Chat Mode gravity)
+</code></pre></div>
+
+<h3 id="t-mcl-004-no-silent-mode-changes">T-MCL-004 · No Silent Mode Changes<a class="toc-permalink" href="#t-mcl-004-no-silent-mode-changes" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_chat.
+When:    User requests transition to M_task.
+Then:    A mode_transition event is generated with:
+previous = M_chat, current = M_task,
+timestamp, origin = user.
+Event is visible in Capture log.
+Validates: GRD-1 (no silent changes)
+</code></pre></div>
+
+<h3 id="t-mcl-005-auto-cannot-escalate">T-MCL-005 · Auto Cannot Escalate<a class="toc-permalink" href="#t-mcl-005-auto-cannot-escalate" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_auto.
+When:    Automatic Mode attempts to activate M_task.
+Then:    Transition is REJECTED.
+Violation logged: GRD-2.
+M_auto may propose but not escalate.
+Validates: GRD-2 (auto cannot escalate)
+</code></pre></div>
+
+<h3 id="t-mcl-006-no-external-hijacking">T-MCL-006 · No External Hijacking<a class="toc-permalink" href="#t-mcl-006-no-external-hijacking" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_chat.
+When:    An external workflow attempts to set mode to M_spec.
+Then:    Transition is REJECTED.
+Violation logged: GRD-3.
+External system may surface a proposal in Chat Mode.
+Validates: GRD-3 (no external hijacking)
+</code></pre></div>
+
+<h3 id="t-mcl-007-drift-bound-enforcement">T-MCL-007 · Drift Bound Enforcement<a class="toc-permalink" href="#t-mcl-007-drift-bound-enforcement" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_chat (drift = bounded/wide).
+When:    User requests transition to M_spec (drift = minimal).
+Then:    Transition succeeds only if current state does not
+exceed M_spec&#39;s drift bounds.
+If drift exceeds bounds: transition REJECTED, GRD-4.
+Validates: GRD-4 (drift bound enforcement)
+</code></pre></div>
+
+<h3 id="t-mcl-008-hub-and-spoke-routing">T-MCL-008 · Hub-and-Spoke Routing<a class="toc-permalink" href="#t-mcl-008-hub-and-spoke-routing" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_task.
+When:    User requests transition to M_spec (direct).
+Then:    Transition is REJECTED.
+System routes: M_task → M_chat → M_spec.
+Two events are logged.
+Validates: GRD-5 (hub-and-spoke routing)
+</code></pre></div>
+
+<hr />
+<h2 id="5-propagation-tests">5. Propagation Tests<a class="toc-permalink" href="#5-propagation-tests" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="t-p-001-mode-opacity-event">T-P-001 · Mode → Opacity Event<a class="toc-permalink" href="#t-p-001-mode-opacity-event" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_chat.
+When:    User transitions to M_debug.
+Then:    Opacity receives mode_transition event.
+Opacity recalculates: transparency = maximum.
+No stale mode state persists in Opacity.
+Validates: PROP-1 (no stale state)
+</code></pre></div>
+
+<h3 id="t-p-002-mode-capture-logging">T-P-002 · Mode → Capture Logging<a class="toc-permalink" href="#t-p-002-mode-capture-logging" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_chat.
+When:    User transitions to M_task.
+Then:    Capture records the event BEFORE the transition completes.
+Log entry includes: M_chat → M_task, timestamp, user origin.
+Events are in timestamp order.
+Validates: PROP-2 (order preservation)
+</code></pre></div>
+
+<h3 id="t-p-003-mode-context-adjustment">T-P-003 · Mode → Context Adjustment<a class="toc-permalink" href="#t-p-003-mode-context-adjustment" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_chat (wide context).
+When:    User transitions to M_task.
+Then:    Context window narrows to goal-scoped behavior.
+Adjustment completes before next user input is processed.
+Validates: PROP-1 (no stale state)
+</code></pre></div>
+
+<h3 id="t-p-004-regime-mode-posture-change">T-P-004 · Regime → Mode Posture Change<a class="toc-permalink" href="#t-p-004-regime-mode-posture-change" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Regime posture = declared.
+Active stance = M_task.
+When:    Regime Layer changes posture to suspended.
+Then:    MCL re-evaluates constraints.
+M_task exits gracefully to M_chat.
+Non-Chat modes are locked.
+Validates: Regime interaction, PROP-2
+</code></pre></div>
+
+<h3 id="t-p-005-idempotent-duplicate-handling">T-P-005 · Idempotent Duplicate Handling<a class="toc-permalink" href="#t-p-005-idempotent-duplicate-handling" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Opacity received mode_transition (M_chat → M_task, T=100).
+When:    A duplicate event arrives (M_chat → M_task, T=100).
+Then:    Opacity treats it as a no-op.
+No recalculation occurs.
+Validates: PROP-3 (idempotent consumption)
+</code></pre></div>
+
+<hr />
+<h2 id="6-edge-cases">6. Edge Cases<a class="toc-permalink" href="#6-edge-cases" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="t-edge-001-rapid-sequential-transitions">T-EDGE-001 · Rapid Sequential Transitions<a class="toc-permalink" href="#t-edge-001-rapid-sequential-transitions" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_chat.
+When:    User requests M_task, then immediately requests M_chat.
+Then:    Both transitions complete in order.
+Two events logged. Final stance = M_chat.
+No intermediate state is lost.
+</code></pre></div>
+
+<h3 id="t-edge-002-session-start-with-explicit-mode">T-EDGE-002 · Session Start with Explicit Mode<a class="toc-permalink" href="#t-edge-002-session-start-with-explicit-mode" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   User declares M_spec at session start.
+When:    Session initializes.
+Then:    Active stance = M_spec (not M_chat).
+Chat Mode gravity applies on exit, not on override at start.
+</code></pre></div>
+
+<h3 id="t-edge-003-violation-during-auto-mode">T-EDGE-003 · Violation During Auto Mode<a class="toc-permalink" href="#t-edge-003-violation-during-auto-mode" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_auto.
+When:    M_auto attempts an action that violates INV-1.
+Then:    Violation logged.
+M_auto reverts to M_chat.
+Violation is surfaced to user.
+</code></pre></div>
+
+<hr />
+<h2 id="7-coverage-matrix">7. Coverage Matrix<a class="toc-permalink" href="#7-coverage-matrix" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>Invariants:   INV-1 ✓  INV-2 ✓  INV-3 ✓
+Guardrails:   GRD-1 ✓  GRD-2 ✓  GRD-3 ✓  GRD-4 ✓  GRD-5 ✓
+Propagation:  PROP-1 ✓ PROP-2 ✓ PROP-3 ✓
+Stances:      Chat ✓  Task ✓  Spec ✓  Debug ✓  Auto ✓
+Edge cases:   3/3 ✓
+</code></pre></div>
+
+<p><strong>Full coverage achieved.</strong> Every constraint, guardrail, propagation rule,<br />
+and stance is tested at least once.</p>
+<hr />
+<p>🔙 <a href="./README.md">Back to Mode Module</a> · <a href="./operators.md">Operators</a> · <a href="./constraints.md">Constraints</a> · <a href="./propagation.md">Propagation</a></p>
+<hr />
+<p><em>Mode Layer Test Suite v1.0 · RTT/1 Session Layer · TriadicFrameworks</em></p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Mode/tests.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/Mode/tests.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

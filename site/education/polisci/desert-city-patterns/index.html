@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Desert City Patterns | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/education/polisci/desert-city-patterns/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Desert City Patterns" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/education/polisci/desert-city-patterns/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Desert City Patterns" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/education/polisci/desert-city-patterns.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Desert City Patterns",
+    "headline": "Desert City Patterns",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/education/polisci/desert-city-patterns/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#0-purpose">0. Purpose</a></li>
+<li><a href="#1-pattern-6under1over-stack">1. Pattern: 6‑Under‑1‑Over Stack</a><ul>
+<li><a href="#intent">Intent</a></li>
+<li><a href="#structure">Structure</a></li>
+<li><a href="#regime-bindings">Regime Bindings</a></li>
+<li><a href="#governance-notes">Governance Notes</a></li>
+</ul>
+</li>
+<li><a href="#2-pattern-reverseskyscraper-megalith">2. Pattern: Reverse‑Skyscraper Megalith</a><ul>
+<li><a href="#intent_1">Intent</a></li>
+<li><a href="#structure_1">Structure</a></li>
+<li><a href="#regime-bindings_1">Regime Bindings</a></li>
+<li><a href="#governance-notes_1">Governance Notes</a></li>
+</ul>
+</li>
+<li><a href="#3-pattern-rttinside-room">3. Pattern: RTT‑Inside Room</a><ul>
+<li><a href="#intent_2">Intent</a></li>
+<li><a href="#structure_2">Structure</a></li>
+<li><a href="#regime-bindings_2">Regime Bindings</a></li>
+<li><a href="#governance-notes_2">Governance Notes</a></li>
+</ul>
+</li>
+<li><a href="#4-pattern-dew-farm-array">4. Pattern: Dew Farm Array</a><ul>
+<li><a href="#intent_3">Intent</a></li>
+<li><a href="#structure_3">Structure</a></li>
+<li><a href="#regime-bindings_3">Regime Bindings</a></li>
+<li><a href="#governance-notes_3">Governance Notes</a></li>
+</ul>
+</li>
+<li><a href="#5-pattern-triadic-water-stack">5. Pattern: Triadic Water Stack</a><ul>
+<li><a href="#intent_4">Intent</a></li>
+<li><a href="#structure_4">Structure</a></li>
+<li><a href="#regime-bindings_4">Regime Bindings</a></li>
+<li><a href="#governance-notes_4">Governance Notes</a></li>
+</ul>
+</li>
+<li><a href="#6-pattern-seedcore-city-layout">6. Pattern: Seed‑Core City Layout</a><ul>
+<li><a href="#intent_5">Intent</a></li>
+<li><a href="#structure_5">Structure</a></li>
+<li><a href="#regime-bindings_5">Regime Bindings</a></li>
+<li><a href="#governance-notes_5">Governance Notes</a></li>
+</ul>
+</li>
+<li><a href="#7-pattern-subsurface-transit-grid">7. Pattern: Subsurface Transit Grid</a><ul>
+<li><a href="#intent_6">Intent</a></li>
+<li><a href="#structure_6">Structure</a></li>
+<li><a href="#regime-bindings_6">Regime Bindings</a></li>
+<li><a href="#governance-notes_6">Governance Notes</a></li>
+</ul>
+</li>
+<li><a href="#8-pattern-light-well">8. Pattern: Light Well</a><ul>
+<li><a href="#intent_7">Intent</a></li>
+<li><a href="#structure_7">Structure</a></li>
+<li><a href="#regime-bindings_7">Regime Bindings</a></li>
+<li><a href="#governance-notes_7">Governance Notes</a></li>
+</ul>
+</li>
+<li><a href="#9-pattern-reservoir-vault">9. Pattern: Reservoir Vault</a><ul>
+<li><a href="#intent_8">Intent</a></li>
+<li><a href="#structure_8">Structure</a></li>
+<li><a href="#regime-bindings_8">Regime Bindings</a></li>
+<li><a href="#governance-notes_8">Governance Notes</a></li>
+</ul>
+</li>
+<li><a href="#10-pattern-ecological-surface-band">10. Pattern: Ecological Surface Band</a><ul>
+<li><a href="#intent_9">Intent</a></li>
+<li><a href="#structure_9">Structure</a></li>
+<li><a href="#regime-bindings_9">Regime Bindings</a></li>
+<li><a href="#governance-notes_9">Governance Notes</a></li>
+</ul>
+</li>
+<li><a href="#11-pattern-regime-boundary">11. Pattern: Regime Boundary</a><ul>
+<li><a href="#intent_10">Intent</a></li>
+<li><a href="#structure_10">Structure</a></li>
+<li><a href="#regime-bindings_10">Regime Bindings</a></li>
+<li><a href="#governance-notes_10">Governance Notes</a></li>
+</ul>
+</li>
+<li><a href="#12-pattern-civic-comfort-bands">12. Pattern: Civic Comfort Bands</a><ul>
+<li><a href="#intent_11">Intent</a></li>
+<li><a href="#structure_11">Structure</a></li>
+<li><a href="#regime-bindings_11">Regime Bindings</a></li>
+<li><a href="#governance-notes_11">Governance Notes</a></li>
+</ul>
+</li>
+<li><a href="#13-pattern-industrial-closed-loop">13. Pattern: Industrial Closed Loop</a><ul>
+<li><a href="#intent_12">Intent</a></li>
+<li><a href="#structure_12">Structure</a></li>
+<li><a href="#regime-bindings_12">Regime Bindings</a></li>
+<li><a href="#governance-notes_12">Governance Notes</a></li>
+</ul>
+</li>
+<li><a href="#14-pattern-desert-restoration-zone">14. Pattern: Desert Restoration Zone</a><ul>
+<li><a href="#intent_13">Intent</a></li>
+<li><a href="#structure_13">Structure</a></li>
+<li><a href="#regime-bindings_13">Regime Bindings</a></li>
+<li><a href="#governance-notes_13">Governance Notes</a></li>
+</ul>
+</li>
+<li><a href="#15-summary">15. Summary</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/education/" itemprop="item">
+                <span itemprop="name">Education</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/education/polisci/" itemprop="item">
+                <span itemprop="name">Polisci</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Desert City Patterns</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Desert City Patterns</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="triadicframeworks-desert-city-patterns"><strong>TriadicFrameworks — Desert City Patterns</strong><a class="toc-permalink" href="#triadicframeworks-desert-city-patterns" title="Permanent link to this heading">&para;</a></h1>
+<p><em>A governance‑aware pattern library for regime‑aligned desert civilizations.</em></p>
+<hr />
+<h2 id="0-purpose"><strong>0. Purpose</strong><a class="toc-permalink" href="#0-purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>This document defines a set of <strong>architectural, civic, and ecological patterns</strong> for designing and governing desert cities that operate in phase with their substrate.<br />
+Each pattern includes:</p>
+<ul>
+<li><strong>Intent</strong>  </li>
+<li><strong>Structure</strong>  </li>
+<li><strong>Regime bindings</strong>  </li>
+<li><strong>Governance notes</strong>  </li>
+</ul>
+<p>These patterns are meant to be modular, composable, and teachable — a foundation for future planners, students, and civic stewards.</p>
+<hr />
+<h2 id="1-pattern-6under1over-stack"><strong>1. Pattern: 6‑Under‑1‑Over Stack</strong><a class="toc-permalink" href="#1-pattern-6under1over-stack" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="intent"><strong>Intent</strong><a class="toc-permalink" href="#intent" title="Permanent link to this heading">&para;</a></h3>
+<p>Create a thermally stable, drift‑resistant vertical city section.</p>
+<h3 id="structure"><strong>Structure</strong><a class="toc-permalink" href="#structure" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Level 0: Surface Interface
+-1, -2: Residential Vaults
+-3: Civic / Commercial
+-4: Industrial / Utility
+-5: Reservoirs / Ballasts
+-6: Deep Infrastructure
+</code></pre></div>
+
+<h3 id="regime-bindings"><strong>Regime Bindings</strong><a class="toc-permalink" href="#regime-bindings" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Negative:</strong> Levels -6 to -3  </li>
+<li><strong>qmroot:</strong> Levels -2 to -1  </li>
+<li><strong>Positive:</strong> Level 0  </li>
+</ul>
+<h3 id="governance-notes"><strong>Governance Notes</strong><a class="toc-permalink" href="#governance-notes" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Movement schedules must align with thermal bands.  </li>
+<li>Level 0 is strictly controlled to prevent ecological drift.</li>
+</ul>
+<hr />
+<h2 id="2-pattern-reverseskyscraper-megalith"><strong>2. Pattern: Reverse‑Skyscraper Megalith</strong><a class="toc-permalink" href="#2-pattern-reverseskyscraper-megalith" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="intent_1"><strong>Intent</strong><a class="toc-permalink" href="#intent_1" title="Permanent link to this heading">&para;</a></h3>
+<p>Use in‑situ sand to form monolithic structural walls.</p>
+<h3 id="structure_1"><strong>Structure</strong><a class="toc-permalink" href="#structure_1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Steel sheet forms  </li>
+<li>Sand fill  </li>
+<li>Binder + polymer + water  </li>
+<li>Curing → stone  </li>
+<li>Excavation of interior voids  </li>
+</ul>
+<h3 id="regime-bindings_1"><strong>Regime Bindings</strong><a class="toc-permalink" href="#regime-bindings_1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Negative:</strong> Sand mass  </li>
+<li><strong>qmroot:</strong> Chemical transformation  </li>
+<li><strong>Positive:</strong> Habitable voids  </li>
+</ul>
+<h3 id="governance-notes_1"><strong>Governance Notes</strong><a class="toc-permalink" href="#governance-notes_1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Material loops must remain local.  </li>
+<li>No external strip mining permitted.</li>
+</ul>
+<hr />
+<h2 id="3-pattern-rttinside-room"><strong>3. Pattern: RTT‑Inside Room</strong><a class="toc-permalink" href="#3-pattern-rttinside-room" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="intent_2"><strong>Intent</strong><a class="toc-permalink" href="#intent_2" title="Permanent link to this heading">&para;</a></h3>
+<p>Create a self‑regulating thermal cell.</p>
+<h3 id="structure_2"><strong>Structure</strong><a class="toc-permalink" href="#structure_2" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>[ Warm Ballast ]
+      ▲
+[ Gradient Chamber ]
+      ▼
+[ Cool Ballast ]
+</code></pre></div>
+
+<h3 id="regime-bindings_2"><strong>Regime Bindings</strong><a class="toc-permalink" href="#regime-bindings_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Negative:</strong> Cool ballast  </li>
+<li><strong>qmroot:</strong> Gradient chamber  </li>
+<li><strong>Positive:</strong> Warm ballast  </li>
+</ul>
+<h3 id="governance-notes_2"><strong>Governance Notes</strong><a class="toc-permalink" href="#governance-notes_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Ballast states must be monitored for drift.  </li>
+<li>Rooms must publish thermal status to civic dashboards.</li>
+</ul>
+<hr />
+<h2 id="4-pattern-dew-farm-array"><strong>4. Pattern: Dew Farm Array</strong><a class="toc-permalink" href="#4-pattern-dew-farm-array" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="intent_3"><strong>Intent</strong><a class="toc-permalink" href="#intent_3" title="Permanent link to this heading">&para;</a></h3>
+<p>Harvest atmospheric water during dawn/dusk transitions.</p>
+<h3 id="structure_3"><strong>Structure</strong><a class="toc-permalink" href="#structure_3" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Retractable condensation mesh  </li>
+<li>Tower for collection  </li>
+<li>Storage reservoir  </li>
+</ul>
+<h3 id="regime-bindings_3"><strong>Regime Bindings</strong><a class="toc-permalink" href="#regime-bindings_3" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Negative:</strong> Night‑cooled air  </li>
+<li><strong>qmroot:</strong> Condensation  </li>
+<li><strong>Positive:</strong> Stored water  </li>
+</ul>
+<h3 id="governance-notes_3"><strong>Governance Notes</strong><a class="toc-permalink" href="#governance-notes_3" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Dew water is restricted to agriculture.  </li>
+<li>Arrays must retract during storms to avoid damage.</li>
+</ul>
+<hr />
+<h2 id="5-pattern-triadic-water-stack"><strong>5. Pattern: Triadic Water Stack</strong><a class="toc-permalink" href="#5-pattern-triadic-water-stack" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="intent_4"><strong>Intent</strong><a class="toc-permalink" href="#intent_4" title="Permanent link to this heading">&para;</a></h3>
+<p>Maintain strict separation of water regimes.</p>
+<h3 id="structure_4"><strong>Structure</strong><a class="toc-permalink" href="#structure_4" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Desal → Humans
+Dew → Farming
+Recycled → Industry
+Aquifers → Untouched
+</code></pre></div>
+
+<h3 id="regime-bindings_4"><strong>Regime Bindings</strong><a class="toc-permalink" href="#regime-bindings_4" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Negative:</strong> Aquifers  </li>
+<li><strong>qmroot:</strong> Dew + filtration  </li>
+<li><strong>Positive:</strong> Human/industrial use  </li>
+</ul>
+<h3 id="governance-notes_4"><strong>Governance Notes</strong><a class="toc-permalink" href="#governance-notes_4" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Any cross‑tier mixing triggers automatic shutdown.  </li>
+<li>Aquifers are protected by constitutional constraint.</li>
+</ul>
+<hr />
+<h2 id="6-pattern-seedcore-city-layout"><strong>6. Pattern: Seed‑Core City Layout</strong><a class="toc-permalink" href="#6-pattern-seedcore-city-layout" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="intent_5"><strong>Intent</strong><a class="toc-permalink" href="#intent_5" title="Permanent link to this heading">&para;</a></h3>
+<p>Enable perimeter experimentation and core consolidation.</p>
+<h3 id="structure_5"><strong>Structure</strong><a class="toc-permalink" href="#structure_5" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>        [ Seed A ]
+            ▲
+            │
+[ Seed B ]──┼──[ Seed C ]
+            ▼
+        [  Core  ]
+</code></pre></div>
+
+<h3 id="regime-bindings_5"><strong>Regime Bindings</strong><a class="toc-permalink" href="#regime-bindings_5" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Negative:</strong> Seeds (stability nodes)  </li>
+<li><strong>qmroot:</strong> Perimeter interactions  </li>
+<li><strong>Positive:</strong> Core (expression node)  </li>
+</ul>
+<h3 id="governance-notes_5"><strong>Governance Notes</strong><a class="toc-permalink" href="#governance-notes_5" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Seeds may diverge in policy; core remains stable.  </li>
+<li>Core activation requires all seeds to reach regime stability.</li>
+</ul>
+<hr />
+<h2 id="7-pattern-subsurface-transit-grid"><strong>7. Pattern: Subsurface Transit Grid</strong><a class="toc-permalink" href="#7-pattern-subsurface-transit-grid" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="intent_6"><strong>Intent</strong><a class="toc-permalink" href="#intent_6" title="Permanent link to this heading">&para;</a></h3>
+<p>Enable safe movement independent of surface heat.</p>
+<h3 id="structure_6"><strong>Structure</strong><a class="toc-permalink" href="#structure_6" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>[ North ]───[ Hub ]───[ South ]
+     │          │          │
+[ West ]────────┘────────[ East ]
+</code></pre></div>
+
+<h3 id="regime-bindings_6"><strong>Regime Bindings</strong><a class="toc-permalink" href="#regime-bindings_6" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Negative:</strong> Tunnel mass  </li>
+<li><strong>qmroot:</strong> Flow scheduling  </li>
+<li><strong>Positive:</strong> Human movement  </li>
+</ul>
+<h3 id="governance-notes_6"><strong>Governance Notes</strong><a class="toc-permalink" href="#governance-notes_6" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Transit windows must align with comfort bands.  </li>
+<li>Emergency cooling nodes required every 500m.</li>
+</ul>
+<hr />
+<h2 id="8-pattern-light-well"><strong>8. Pattern: Light Well</strong><a class="toc-permalink" href="#8-pattern-light-well" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="intent_7"><strong>Intent</strong><a class="toc-permalink" href="#intent_7" title="Permanent link to this heading">&para;</a></h3>
+<p>Bring light down without importing heat.</p>
+<h3 id="structure_7"><strong>Structure</strong><a class="toc-permalink" href="#structure_7" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Tapered shaft  </li>
+<li>Reflective surfaces  </li>
+<li>Diffusion chamber  </li>
+</ul>
+<h3 id="regime-bindings_7"><strong>Regime Bindings</strong><a class="toc-permalink" href="#regime-bindings_7" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Negative:</strong> Shaft walls  </li>
+<li><strong>qmroot:</strong> Light diffusion  </li>
+<li><strong>Positive:</strong> Illuminated vaults  </li>
+</ul>
+<h3 id="governance-notes_7"><strong>Governance Notes</strong><a class="toc-permalink" href="#governance-notes_7" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Light wells must not exceed thermal thresholds.  </li>
+<li>Surface apertures require ecological clearance.</li>
+</ul>
+<hr />
+<h2 id="9-pattern-reservoir-vault"><strong>9. Pattern: Reservoir Vault</strong><a class="toc-permalink" href="#9-pattern-reservoir-vault" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="intent_8"><strong>Intent</strong><a class="toc-permalink" href="#intent_8" title="Permanent link to this heading">&para;</a></h3>
+<p>Provide thermal ballast and water storage.</p>
+<h3 id="structure_8"><strong>Structure</strong><a class="toc-permalink" href="#structure_8" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>┌───────────────────────────┐
+│  Cool Water Reservoir     │
+│  Thermal Ballast Layer    │
+└───────────────────────────┘
+</code></pre></div>
+
+<h3 id="regime-bindings_8"><strong>Regime Bindings</strong><a class="toc-permalink" href="#regime-bindings_8" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Negative:</strong> Water mass  </li>
+<li><strong>qmroot:</strong> Heat exchange  </li>
+<li><strong>Positive:</strong> Supply stability  </li>
+</ul>
+<h3 id="governance-notes_8"><strong>Governance Notes</strong><a class="toc-permalink" href="#governance-notes_8" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Reservoirs must be sealed from civic water loops.  </li>
+<li>Ballast temperature must remain within ±2°C.</li>
+</ul>
+<hr />
+<h2 id="10-pattern-ecological-surface-band"><strong>10. Pattern: Ecological Surface Band</strong><a class="toc-permalink" href="#10-pattern-ecological-surface-band" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="intent_9"><strong>Intent</strong><a class="toc-permalink" href="#intent_9" title="Permanent link to this heading">&para;</a></h3>
+<p>Restore desert ecology while minimizing human footprint.</p>
+<h3 id="structure_9"><strong>Structure</strong><a class="toc-permalink" href="#structure_9" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Native flora  </li>
+<li>Solar arrays  </li>
+<li>Dew farms  </li>
+<li>Access points  </li>
+</ul>
+<h3 id="regime-bindings_9"><strong>Regime Bindings</strong><a class="toc-permalink" href="#regime-bindings_9" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Negative:</strong> Soil substrate  </li>
+<li><strong>qmroot:</strong> Water/light balance  </li>
+<li><strong>Positive:</strong> Visible ecology  </li>
+</ul>
+<h3 id="governance-notes_9"><strong>Governance Notes</strong><a class="toc-permalink" href="#governance-notes_9" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>No permanent structures allowed.  </li>
+<li>Ecological drift triggers restoration protocols.</li>
+</ul>
+<hr />
+<h2 id="11-pattern-regime-boundary"><strong>11. Pattern: Regime Boundary</strong><a class="toc-permalink" href="#11-pattern-regime-boundary" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="intent_10"><strong>Intent</strong><a class="toc-permalink" href="#intent_10" title="Permanent link to this heading">&para;</a></h3>
+<p>Prevent cross‑contamination between regimes.</p>
+<h3 id="structure_10"><strong>Structure</strong><a class="toc-permalink" href="#structure_10" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>───────────────
+  NO CROSSING
+───────────────
+</code></pre></div>
+
+<h3 id="regime-bindings_10"><strong>Regime Bindings</strong><a class="toc-permalink" href="#regime-bindings_10" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Negative:</strong> Hard constraints  </li>
+<li><strong>qmroot:</strong> Detection  </li>
+<li><strong>Positive:</strong> Enforcement  </li>
+</ul>
+<h3 id="governance-notes_10"><strong>Governance Notes</strong><a class="toc-permalink" href="#governance-notes_10" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Violations escalate to Drift Monitors.  </li>
+<li>Boundaries are constitutional, not optional.</li>
+</ul>
+<hr />
+<h2 id="12-pattern-civic-comfort-bands"><strong>12. Pattern: Civic Comfort Bands</strong><a class="toc-permalink" href="#12-pattern-civic-comfort-bands" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="intent_11"><strong>Intent</strong><a class="toc-permalink" href="#intent_11" title="Permanent link to this heading">&para;</a></h3>
+<p>Align human activity with thermal safety.</p>
+<h3 id="structure_11"><strong>Structure</strong><a class="toc-permalink" href="#structure_11" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Dawn/dusk movement  </li>
+<li>Midday rest  </li>
+<li>Night operations (optional)  </li>
+</ul>
+<h3 id="regime-bindings_11"><strong>Regime Bindings</strong><a class="toc-permalink" href="#regime-bindings_11" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Negative:</strong> Thermal envelope  </li>
+<li><strong>qmroot:</strong> Scheduling  </li>
+<li><strong>Positive:</strong> Civic life  </li>
+</ul>
+<h3 id="governance-notes_11"><strong>Governance Notes</strong><a class="toc-permalink" href="#governance-notes_11" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Comfort bands override all civic events.  </li>
+<li>Emergency overrides require multi‑regime approval.</li>
+</ul>
+<hr />
+<h2 id="13-pattern-industrial-closed-loop"><strong>13. Pattern: Industrial Closed Loop</strong><a class="toc-permalink" href="#13-pattern-industrial-closed-loop" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="intent_12"><strong>Intent</strong><a class="toc-permalink" href="#intent_12" title="Permanent link to this heading">&para;</a></h3>
+<p>Ensure industry never touches human water or ecology.</p>
+<h3 id="structure_12"><strong>Structure</strong><a class="toc-permalink" href="#structure_12" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Industry → Recycle → Towers → Industry
+</code></pre></div>
+
+<h3 id="regime-bindings_12"><strong>Regime Bindings</strong><a class="toc-permalink" href="#regime-bindings_12" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Negative:</strong> Infrastructure mass  </li>
+<li><strong>qmroot:</strong> Filtration + pumping  </li>
+<li><strong>Positive:</strong> Industrial output  </li>
+</ul>
+<h3 id="governance-notes_12"><strong>Governance Notes</strong><a class="toc-permalink" href="#governance-notes_12" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Industrial loops must be audited weekly.  </li>
+<li>Any leak triggers automatic shutdown.</li>
+</ul>
+<hr />
+<h2 id="14-pattern-desert-restoration-zone"><strong>14. Pattern: Desert Restoration Zone</strong><a class="toc-permalink" href="#14-pattern-desert-restoration-zone" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="intent_13"><strong>Intent</strong><a class="toc-permalink" href="#intent_13" title="Permanent link to this heading">&para;</a></h3>
+<p>Allow the surface to recover from human impact.</p>
+<h3 id="structure_13"><strong>Structure</strong><a class="toc-permalink" href="#structure_13" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Protected dunes  </li>
+<li>Native species corridors  </li>
+<li>Zero‑impact monitoring  </li>
+</ul>
+<h3 id="regime-bindings_13"><strong>Regime Bindings</strong><a class="toc-permalink" href="#regime-bindings_13" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Negative:</strong> Substrate  </li>
+<li><strong>qmroot:</strong> Ecological feedback  </li>
+<li><strong>Positive:</strong> Restored landscape  </li>
+</ul>
+<h3 id="governance-notes_13"><strong>Governance Notes</strong><a class="toc-permalink" href="#governance-notes_13" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>No human presence except stewards.  </li>
+<li>Restoration metrics published monthly.</li>
+</ul>
+<hr />
+<h2 id="15-summary"><strong>15. Summary</strong><a class="toc-permalink" href="#15-summary" title="Permanent link to this heading">&para;</a></h2>
+<p>These patterns form the <strong>governance‑aware architectural vocabulary</strong> for Future Desert Cities.<br />
+They are:</p>
+<ul>
+<li>modular  </li>
+<li>scalable  </li>
+<li>substrate‑aligned  </li>
+<li>drift‑resistant  </li>
+<li>teachable  </li>
+<li>civic‑safe  </li>
+</ul>
+<p>Together, they provide a stable foundation for building civilizations that live <strong>in phase</strong> with their environment.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/education/polisci/desert-city-patterns.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/education/polisci/desert-city-patterns.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

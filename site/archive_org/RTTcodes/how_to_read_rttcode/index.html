@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>How To Read Rttcode | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/archive_org/RTTcodes/how_to_read_rttcode/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="How To Read Rttcode" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/archive_org/RTTcodes/how_to_read_rttcode/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="How To Read Rttcode" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/archive_org/RTTcodes/how_to_read_rttcode.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "How To Read Rttcode",
+    "headline": "How To Read Rttcode",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/archive_org/RTTcodes/how_to_read_rttcode/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#understanding-rttcode-v1-packets-for-the-internet-archive-gateway">Understanding RTTcode v1 packets for the Internet Archive Gateway</a></li>
+<li><a href="#key-ideas">Key ideas:</a></li>
+<li><a href="#how-to-read-this">How to read this:</a></li>
+<li><a href="#snapshots">Snapshots</a></li>
+<li><a href="#lineage">Lineage</a></li>
+<li><a href="#envelope">Envelope</a></li>
+<li><a href="#substrate">Substrate</a></li>
+<li><a href="#final-answer">Final Answer</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/archive_org/" itemprop="item">
+                <span itemprop="name">Archive Org</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/archive_org/RTTcodes/" itemprop="item">
+                <span itemprop="name">Rttcodes</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">How To Read Rttcode</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">How To Read Rttcode</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="how-to-read-rttcode-student-guide">📘 <strong>How to Read RTTcode (Student Guide)</strong><a class="toc-permalink" href="#how-to-read-rttcode-student-guide" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="understanding-rttcode-v1-packets-for-the-internet-archive-gateway"><em>Understanding RTTcode v1 packets for the Internet Archive Gateway</em><a class="toc-permalink" href="#understanding-rttcode-v1-packets-for-the-internet-archive-gateway" title="Permanent link to this heading">&para;</a></h3>
+<p>RTTcode is a <strong>minimal, structured, machine‑readable format</strong> used across TriadicFrameworks to describe:</p>
+<ul>
+<li>operators  </li>
+<li>workflows  </li>
+<li>continuity  </li>
+<li>drift  </li>
+<li>substrate behavior  </li>
+<li>lineage  </li>
+<li>examples  </li>
+</ul>
+<p>This guide teaches you how to read RTTcode packets, especially the ones used in the <strong>archive_org</strong> module.</p>
+<hr />
+<h1 id="1-what-an-rttcode-packet-is">🧩 1. What an RTTcode Packet <em>Is</em><a class="toc-permalink" href="#1-what-an-rttcode-packet-is" title="Permanent link to this heading">&para;</a></h1>
+<p>An RTTcode packet is:</p>
+<ul>
+<li>a <strong>JSON document</strong>  </li>
+<li>validated by the RTTcode v1 schema  </li>
+<li>containing <strong>strict fields</strong>  </li>
+<li>describing an <strong>operator</strong>, <strong>workflow</strong>, or <strong>example</strong>  </li>
+</ul>
+<p>RTTcode is intentionally:</p>
+<ul>
+<li>minimal  </li>
+<li>explicit  </li>
+<li>drift‑bounded  </li>
+<li>easy for students and AIs to read  </li>
+</ul>
+<hr />
+<h1 id="2-the-basic-structure">🧱 2. The Basic Structure<a class="toc-permalink" href="#2-the-basic-structure" title="Permanent link to this heading">&para;</a></h1>
+<p>Every RTTcode packet has these top‑level fields:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;$schema&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;…/rttcode.v1.json&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;RTT_SOMETHING_v1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;operator | example | workflow&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;…&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;… (if example)&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;operators&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">…</span><span class="w"> </span><span class="p">}</span><span class="w">  </span><span class="c1">// if example</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="key-ideas">Key ideas:<a class="toc-permalink" href="#key-ideas" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong><code>$schema</code></strong> tells tools how to validate the packet.  </li>
+<li><strong><code>id</code></strong> is the canonical name.  </li>
+<li><strong><code>type</code></strong> tells you what kind of RTTcode this is.  </li>
+<li><strong><code>operators</code></strong> appears only in <em>example</em> packets.  </li>
+</ul>
+<hr />
+<h1 id="3-reading-an-operator-packet">🧠 3. Reading an Operator Packet<a class="toc-permalink" href="#3-reading-an-operator-packet" title="Permanent link to this heading">&para;</a></h1>
+<p>Operator packets define:</p>
+<ul>
+<li>what the operator does  </li>
+<li>what it takes in  </li>
+<li>what it outputs  </li>
+<li>what constraints it must obey  </li>
+</ul>
+<p>Example (simplified):</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;operator&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;family&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;T-Ops&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;WAYBACK_OPERATOR&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;inputs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">…</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;outputs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">…</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;constraints&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">…</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="how-to-read-this">How to read this:<a class="toc-permalink" href="#how-to-read-this" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>family</strong> tells you the operator’s “role” in RTT.  </li>
+<li><strong>inputs</strong> tells you what data it needs.  </li>
+<li><strong>outputs</strong> tells you what it produces.  </li>
+<li><strong>constraints</strong> tell you the safety rules.  </li>
+</ul>
+<p>For example:</p>
+<ul>
+<li>T‑Ops = time operators  </li>
+<li>R‑Ops = relation/metadata  </li>
+<li>L‑Ops = lineage  </li>
+<li>E‑Ops = envelope  </li>
+<li>B‑Ops = boundary/substrate  </li>
+<li>C‑Ops = coherence/synthesis  </li>
+</ul>
+<hr />
+<h1 id="4-reading-a-full-example-packet">🔁 4. Reading a Full Example Packet<a class="toc-permalink" href="#4-reading-a-full-example-packet" title="Permanent link to this heading">&para;</a></h1>
+<p>Example packets show <strong>all six operators chained</strong> for a real Internet Archive URL.</p>
+<p>Inside an example packet:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">&quot;operators&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;METADATA_OPERATOR&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">…</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;WAYBACK_OPERATOR&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">…</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;LINEAGE_OPERATOR&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">…</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;COLLECTION_OPERATOR&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">…</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;PRESERVATION_OPERATOR&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">…</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;DRIFTBOUND_RETRIEVAL_OPERATOR&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="err">…</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Each operator block shows:</p>
+<ul>
+<li>what the operator <em>saw</em>  </li>
+<li>what it <em>computed</em>  </li>
+<li>what it <em>warned about</em>  </li>
+<li>what it <em>passed forward</em>  </li>
+</ul>
+<p>This is the <strong>agentic workflow</strong> in action.</p>
+<hr />
+<h1 id="5-how-the-six-operators-fit-together">🧭 5. How the Six Operators Fit Together<a class="toc-permalink" href="#5-how-the-six-operators-fit-together" title="Permanent link to this heading">&para;</a></h1>
+<p>RTT always processes Internet Archive objects in this order:</p>
+<ol>
+<li><strong>METADATA_OPERATOR</strong>  </li>
+<li><strong>WAYBACK_OPERATOR</strong>  </li>
+<li><strong>LINEAGE_OPERATOR</strong>  </li>
+<li><strong>COLLECTION_OPERATOR</strong>  </li>
+<li><strong>PRESERVATION_OPERATOR</strong>  </li>
+<li><strong>DRIFTBOUND_RETRIEVAL_OPERATOR</strong>  </li>
+</ol>
+<p>This ensures:</p>
+<ul>
+<li>drift is measured  </li>
+<li>continuity is explicit  </li>
+<li>substrate is respected  </li>
+<li>lineage is preserved  </li>
+<li>the final answer is safe  </li>
+</ul>
+<p>If an RTTcode example includes all six, it represents a <strong>complete run</strong>.</p>
+<hr />
+<h1 id="6-how-to-interpret-the-outputs">📚 6. How to Interpret the Outputs<a class="toc-permalink" href="#6-how-to-interpret-the-outputs" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="snapshots"><strong>Snapshots</strong><a class="toc-permalink" href="#snapshots" title="Permanent link to this heading">&para;</a></h3>
+<p>From WAYBACK_OPERATOR:</p>
+<ul>
+<li>timestamps  </li>
+<li>URIs  </li>
+<li>drift between versions  </li>
+<li>continuity breaks  </li>
+</ul>
+<h3 id="lineage"><strong>Lineage</strong><a class="toc-permalink" href="#lineage" title="Permanent link to this heading">&para;</a></h3>
+<p>From LINEAGE_OPERATOR:</p>
+<ul>
+<li>how versions relate  </li>
+<li>what changed  </li>
+<li>regime shifts  </li>
+</ul>
+<h3 id="envelope"><strong>Envelope</strong><a class="toc-permalink" href="#envelope" title="Permanent link to this heading">&para;</a></h3>
+<p>From COLLECTION_OPERATOR:</p>
+<ul>
+<li>what collection it belongs to  </li>
+<li>coherence clusters  </li>
+<li>related objects  </li>
+</ul>
+<h3 id="substrate"><strong>Substrate</strong><a class="toc-permalink" href="#substrate" title="Permanent link to this heading">&para;</a></h3>
+<p>From PRESERVATION_OPERATOR:</p>
+<ul>
+<li>format  </li>
+<li>stability  </li>
+<li>drift risk  </li>
+</ul>
+<h3 id="final-answer"><strong>Final Answer</strong><a class="toc-permalink" href="#final-answer" title="Permanent link to this heading">&para;</a></h3>
+<p>From DRIFTBOUND_RETRIEVAL_OPERATOR:</p>
+<ul>
+<li>summary  </li>
+<li>earliest stable version  </li>
+<li>most reliable version  </li>
+<li>key changes  </li>
+<li>warnings  </li>
+</ul>
+<p>This is the <strong>student‑safe output</strong>.</p>
+<hr />
+<h1 id="7-how-to-use-the-example-packets">🧪 7. How to Use the Example Packets<a class="toc-permalink" href="#7-how-to-use-the-example-packets" title="Permanent link to this heading">&para;</a></h1>
+<p>The three example packets in this directory show:</p>
+<ul>
+<li>Government Documents  </li>
+<li>Vintage Software  </li>
+<li>Journals  </li>
+</ul>
+<p>Each one demonstrates:</p>
+<ul>
+<li>how drift is detected  </li>
+<li>how continuity is mapped  </li>
+<li>how substrate affects reliability  </li>
+<li>how the final answer is synthesized  </li>
+</ul>
+<p>Students can:</p>
+<ul>
+<li>compare stable vs unstable collections  </li>
+<li>see how metadata affects reasoning  </li>
+<li>understand why some snapshots drift  </li>
+<li>learn how IA objects evolve over time  </li>
+</ul>
+<hr />
+<h1 id="8-why-rttcode-matters">🎓 8. Why RTTcode Matters<a class="toc-permalink" href="#8-why-rttcode-matters" title="Permanent link to this heading">&para;</a></h1>
+<p>RTTcode gives you:</p>
+<ul>
+<li>a <strong>clear grammar</strong> for complex systems  </li>
+<li>a <strong>safe way</strong> to explore the Internet Archive  </li>
+<li>a <strong>structured method</strong> for understanding drift  </li>
+<li>a <strong>continuity‑first mindset</strong>  </li>
+<li>a <strong>substrate‑aware approach</strong> to digital history  </li>
+</ul>
+<p>It turns the Internet Archive into a <strong>teaching substrate</strong>, not just a search box.</p>
+<hr />
+<h1 id="location">📍 Location<a class="toc-permalink" href="#location" title="Permanent link to this heading">&para;</a></h1>
+<p>This guide belongs at:</p>
+<div class="codehilite"><pre><span></span><code>/docs/archive_org/RTTcodes/README.md
+</code></pre></div>
+
+<p>or</p>
+<div class="codehilite"><pre><span></span><code>/docs/archive_org/RTTcodes/how_to_read_rttcode.md
+</code></pre></div>
+
+<p>Either location is canon‑correct.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/archive_org/RTTcodes/how_to_read_rttcode.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/archive_org/RTTcodes/how_to_read_rttcode.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

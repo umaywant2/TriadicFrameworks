@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Design Governance Charter | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/facilities/design-system/design-governance-charter/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Design Governance Charter" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/facilities/design-system/design-governance-charter/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Design Governance Charter" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/facilities/design-system/design-governance-charter.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Design Governance Charter",
+    "headline": "Design Governance Charter",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/facilities/design-system/design-governance-charter/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#1-scope-of-governance">1. Scope of Governance</a></li>
+<li><a href="#2-design-system-authority">2. Design System Authority</a></li>
+<li><a href="#3-stewardship-model">3. Stewardship Model</a><ul>
+<li><a href="#design-system-steward">Design System Steward</a></li>
+</ul>
+</li>
+<li><a href="#4-decision-principles">4. Decision Principles</a></li>
+<li><a href="#5-component-governance">5. Component Governance</a></li>
+<li><a href="#6-change-management">6. Change Management</a><ul>
+<li><a href="#canonical-changes">Canonical Changes</a></li>
+</ul>
+</li>
+<li><a href="#7-domain-extensions">7. Domain Extensions</a></li>
+<li><a href="#8-accessibility-inclusion">8. Accessibility &amp; Inclusion</a></li>
+<li><a href="#9-review-audit">9. Review &amp; Audit</a></li>
+<li><a href="#10-enforcement-exceptions">10. Enforcement &amp; Exceptions</a></li>
+<li><a href="#11-canonical-status">11. Canonical Status</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/facilities/" itemprop="item">
+                <span itemprop="name">Facilities</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/facilities/design-system/" itemprop="item">
+                <span itemprop="name">Design System</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Design Governance Charter</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Design Governance Charter</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="rtt-facilities-design-governance-charter">🏛️ RTT Facilities — Design Governance Charter<a class="toc-permalink" href="#rtt-facilities-design-governance-charter" title="Permanent link to this heading">&para;</a></h1>
+<p><strong>Authority, Stewardship, and Semantic Integrity</strong></p>
+<p>This charter defines the <strong>governance structure</strong> for the RTT Facilities design system.</p>
+<p>Its purpose is to ensure that design decisions:<br />
+- Preserve semantic clarity<br />
+- Support infrastructure governance<br />
+- Scale across domains and audiences<br />
+- Remain coherent over time  </p>
+<p>Design is treated as a <strong>governance surface</strong>, not a styling layer.</p>
+<hr />
+<h2 id="1-scope-of-governance">1. Scope of Governance<a class="toc-permalink" href="#1-scope-of-governance" title="Permanent link to this heading">&para;</a></h2>
+<p>This charter governs all design artifacts within the RTT Facilities ecosystem, including:</p>
+<ul>
+<li>Dashboards and indices  </li>
+<li>City‑facing materials  </li>
+<li>Internal tools and reports  </li>
+<li>Domain extensions (e.g., RTT‑AGERI)  </li>
+<li>Shared component libraries  </li>
+</ul>
+<p>Any artifact that communicates Facilities meaning is in scope.</p>
+<hr />
+<h2 id="2-design-system-authority">2. Design System Authority<a class="toc-permalink" href="#2-design-system-authority" title="Permanent link to this heading">&para;</a></h2>
+<p>The RTT Facilities design system is <strong>canonical</strong>.</p>
+<ul>
+<li>It defines approved components, patterns, and semantics  </li>
+<li>Local variations must inherit from canonical definitions  </li>
+<li>Ad‑hoc or undocumented components are prohibited  </li>
+</ul>
+<p>Design authority exists to preserve <strong>clarity, trust, and continuity</strong>.</p>
+<hr />
+<h2 id="3-stewardship-model">3. Stewardship Model<a class="toc-permalink" href="#3-stewardship-model" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="design-system-steward">Design System Steward<a class="toc-permalink" href="#design-system-steward" title="Permanent link to this heading">&para;</a></h3>
+<p>A designated <strong>Design System Steward</strong> is responsible for:</p>
+<ul>
+<li>Reviewing component proposals  </li>
+<li>Enforcing naming conventions  </li>
+<li>Preventing duplication and drift  </li>
+<li>Approving canonical changes  </li>
+<li>Maintaining documentation integrity  </li>
+</ul>
+<p>Stewardship is a <strong>curation role</strong>, not a gatekeeping function.</p>
+<hr />
+<h2 id="4-decision-principles">4. Decision Principles<a class="toc-permalink" href="#4-decision-principles" title="Permanent link to this heading">&para;</a></h2>
+<p>All design decisions must satisfy the following principles:</p>
+<ul>
+<li><strong>Semantic First</strong> — meaning precedes appearance  </li>
+<li><strong>Governance Aligned</strong> — supports decision‑making  </li>
+<li><strong>Audience Aware</strong> — complexity is gated appropriately  </li>
+<li><strong>Explainable</strong> — visuals clarify, not obscure  </li>
+<li><strong>Durable</strong> — survives redesigns and tooling changes  </li>
+</ul>
+<p>If a design choice violates these principles, it must be revised.</p>
+<hr />
+<h2 id="5-component-governance">5. Component Governance<a class="toc-permalink" href="#5-component-governance" title="Permanent link to this heading">&para;</a></h2>
+<p>All components must:</p>
+<ul>
+<li>Be proposed via the Component Proposal Form  </li>
+<li>Pass the Component Creation Checklist  </li>
+<li>Follow the Component Naming Convention  </li>
+<li>Map to the Global Index Schema  </li>
+<li>Be reviewed before inclusion  </li>
+</ul>
+<p>Unreviewed components must not ship.</p>
+<hr />
+<h2 id="6-change-management">6. Change Management<a class="toc-permalink" href="#6-change-management" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="canonical-changes">Canonical Changes<a class="toc-permalink" href="#canonical-changes" title="Permanent link to this heading">&para;</a></h3>
+<p>Changes to canonical components or patterns require:</p>
+<ul>
+<li>Documented rationale  </li>
+<li>Steward review  </li>
+<li>Version annotation  </li>
+</ul>
+<p>Breaking changes are treated as <strong>governance events</strong>, not refactors.</p>
+<hr />
+<h2 id="7-domain-extensions">7. Domain Extensions<a class="toc-permalink" href="#7-domain-extensions" title="Permanent link to this heading">&para;</a></h2>
+<p>Domain‑specific design extensions (e.g., AGERI):</p>
+<ul>
+<li>Must inherit core Facilities semantics  </li>
+<li>May add fields or components without redefining meaning  </li>
+<li>Are reviewed for alignment and clarity  </li>
+</ul>
+<p>Extensions expand the system without fragmenting it.</p>
+<hr />
+<h2 id="8-accessibility-inclusion">8. Accessibility &amp; Inclusion<a class="toc-permalink" href="#8-accessibility-inclusion" title="Permanent link to this heading">&para;</a></h2>
+<p>Accessibility is a <strong>non‑negotiable governance requirement</strong>.</p>
+<p>All design artifacts must:<br />
+- Meet contrast and legibility standards<br />
+- Avoid color‑only signaling<br />
+- Support assistive technologies<br />
+- Minimize non‑essential motion  </p>
+<p>Accessibility failures are governance failures.</p>
+<hr />
+<h2 id="9-review-audit">9. Review &amp; Audit<a class="toc-permalink" href="#9-review-audit" title="Permanent link to this heading">&para;</a></h2>
+<p>Design governance includes periodic review:</p>
+<ul>
+<li>Component library audits  </li>
+<li>Naming consistency checks  </li>
+<li>Schema alignment verification  </li>
+<li>Drift detection  </li>
+</ul>
+<p>Design audits preserve institutional memory.</p>
+<hr />
+<h2 id="10-enforcement-exceptions">10. Enforcement &amp; Exceptions<a class="toc-permalink" href="#10-enforcement-exceptions" title="Permanent link to this heading">&para;</a></h2>
+<p>Exceptions to this charter:</p>
+<ul>
+<li>Must be explicitly documented  </li>
+<li>Are time‑bound  </li>
+<li>Require steward approval  </li>
+</ul>
+<p>Silent exceptions are prohibited.</p>
+<hr />
+<h2 id="11-canonical-status">11. Canonical Status<a class="toc-permalink" href="#11-canonical-status" title="Permanent link to this heading">&para;</a></h2>
+<p>This Design Governance Charter is <strong>canonical</strong>.</p>
+<p>All RTT Facilities design work must align with its principles.</p>
+<p>This is exactly how serious systems remain legible, trustworthy, and intact over decades.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/facilities/design-system/design-governance-charter.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/facilities/design-system/design-governance-charter.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

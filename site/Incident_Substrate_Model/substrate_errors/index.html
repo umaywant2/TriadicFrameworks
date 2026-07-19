@@ -1,0 +1,1765 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Substrate Errors | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/Incident_Substrate_Model/substrate_errors/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Substrate Errors" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/Incident_Substrate_Model/substrate_errors/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Substrate Errors" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/Incident_Substrate_Model/substrate_errors.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Substrate Errors",
+    "headline": "Substrate Errors",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/Incident_Substrate_Model/substrate_errors/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#preamble">Preamble</a></li>
+<li><a href="#how-to-read-this-registry">How to Read This Registry</a><ul>
+<li><a href="#severity-tiers">Severity Tiers</a></li>
+<li><a href="#recoverability-tiers">Recoverability Tiers</a></li>
+</ul>
+</li>
+<li><a href="#quick-reference-table">Quick Reference Table</a></li>
+<li><a href="#domain-gen-cross-operator-faults">Domain GEN — Cross-Operator Faults</a><ul>
+<li><a href="#record_not_found">RECORD_NOT_FOUND</a></li>
+<li><a href="#invalid_state_transition">INVALID_STATE_TRANSITION</a></li>
+<li><a href="#plan_not_found">PLAN_NOT_FOUND</a></li>
+<li><a href="#plan_step_mismatch">PLAN_STEP_MISMATCH</a></li>
+<li><a href="#partial_execution">PARTIAL_EXECUTION</a></li>
+<li><a href="#checksum_mismatch">CHECKSUM_MISMATCH</a></li>
+<li><a href="#empty_detail">EMPTY_DETAIL</a></li>
+<li><a href="#access_denied">ACCESS_DENIED</a></li>
+</ul>
+</li>
+<li><a href="#domain-ing-ingestion-faults">Domain ING — Ingestion Faults</a><ul>
+<li><a href="#unauthorized_emitter">UNAUTHORIZED_EMITTER</a></li>
+<li><a href="#payload_too_large">PAYLOAD_TOO_LARGE</a></li>
+<li><a href="#malformed_signal">MALFORMED_SIGNAL</a></li>
+<li><a href="#unsupported_content_type">UNSUPPORTED_CONTENT_TYPE</a></li>
+</ul>
+</li>
+<li><a href="#domain-cls-classification-faults">Domain CLS — Classification Faults</a><ul>
+<li><a href="#invalid_category">INVALID_CATEGORY</a></li>
+<li><a href="#confidence_below_threshold">CONFIDENCE_BELOW_THRESHOLD</a></li>
+</ul>
+</li>
+<li><a href="#domain-srf-surface-mapping-faults">Domain SRF — Surface Mapping Faults</a><ul>
+<li><a href="#empty_surface_list">EMPTY_SURFACE_LIST</a></li>
+<li><a href="#surface_ref_invalid">SURFACE_REF_INVALID</a></li>
+<li><a href="#surface_limit_exceeded">SURFACE_LIMIT_EXCEEDED</a></li>
+<li><a href="#hash_mismatch">HASH_MISMATCH</a></li>
+</ul>
+</li>
+<li><a href="#domain-pln-planning-faults">Domain PLN — Planning Faults</a><ul>
+<li><a href="#surface_map_mismatch">SURFACE_MAP_MISMATCH</a></li>
+<li><a href="#step_index_invalid">STEP_INDEX_INVALID</a></li>
+<li><a href="#unknown_operator_ref">UNKNOWN_OPERATOR_REF</a></li>
+<li><a href="#target_not_in_surface_map">TARGET_NOT_IN_SURFACE_MAP</a></li>
+<li><a href="#plan_step_limit_exceeded">PLAN_STEP_LIMIT_EXCEEDED</a></li>
+<li><a href="#plan_id_mismatch">PLAN_ID_MISMATCH</a></li>
+<li><a href="#unsupported_format">UNSUPPORTED_FORMAT</a></li>
+</ul>
+</li>
+<li><a href="#domain-unc-uncertainty-faults">Domain UNC — Uncertainty Faults</a><ul>
+<li><a href="#unknown_uncertainty_code">UNKNOWN_UNCERTAINTY_CODE</a></li>
+<li><a href="#insufficient_other_detail">INSUFFICIENT_OTHER_DETAIL</a></li>
+</ul>
+</li>
+<li><a href="#domain-apv-approval-flow-faults">Domain APV — Approval Flow Faults</a><ul>
+<li><a href="#empty_approver_set">EMPTY_APPROVER_SET</a></li>
+<li><a href="#unknown_approver">UNKNOWN_APPROVER</a></li>
+<li><a href="#blocking_uncertainty_flags">BLOCKING_UNCERTAINTY_FLAGS</a></li>
+<li><a href="#invalid_approval_policy">INVALID_APPROVAL_POLICY</a></li>
+<li><a href="#unknown_hold_reason">UNKNOWN_HOLD_REASON</a></li>
+<li><a href="#hold_unauthorized">HOLD_UNAUTHORIZED</a></li>
+</ul>
+</li>
+<li><a href="#domain-exe-bounded-execution-faults">Domain EXE — Bounded Execution Faults</a><ul>
+<li><a href="#file_not_in_surface_map">FILE_NOT_IN_SURFACE_MAP</a></li>
+<li><a href="#path_traversal_detected">PATH_TRAVERSAL_DETECTED</a></li>
+<li><a href="#secret_not_in_surface_map">SECRET_NOT_IN_SURFACE_MAP</a></li>
+<li><a href="#rotation_unauthorized">ROTATION_UNAUTHORIZED</a></li>
+<li><a href="#rotation_provider_error">ROTATION_PROVIDER_ERROR</a></li>
+<li><a href="#dependent_notification_failed">DEPENDENT_NOTIFICATION_FAILED</a></li>
+<li><a href="#dependency_not_in_surface_map">DEPENDENCY_NOT_IN_SURFACE_MAP</a></li>
+<li><a href="#version_mismatch">VERSION_MISMATCH</a></li>
+<li><a href="#target_version_invalid">TARGET_VERSION_INVALID</a></li>
+<li><a href="#package_manager_error">PACKAGE_MANAGER_ERROR</a></li>
+<li><a href="#unknown_followup_code">UNKNOWN_FOLLOWUP_CODE</a></li>
+<li><a href="#invalid_priority">INVALID_PRIORITY</a></li>
+<li><a href="#empty_assignee_list">EMPTY_ASSIGNEE_LIST</a></li>
+<li><a href="#unresolvable_assignee">UNRESOLVABLE_ASSIGNEE</a></li>
+<li><a href="#insufficient_risk_detail">INSUFFICIENT_RISK_DETAIL</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Incident_Substrate_Model/" itemprop="item">
+                <span itemprop="name">Incident Substrate Model</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Substrate Errors</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Substrate Errors</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="substrate-error-registry-incident-substrate-model">Substrate Error Registry — Incident Substrate Model<a class="toc-permalink" href="#substrate-error-registry-incident-substrate-model" title="Permanent link to this heading">&para;</a></h1>
+<p><strong>Document:</strong> <code>substrate_errors.md</code><br />
+<strong>Path:</strong> <code>/docs/Incident_Substrate_Model/substrate_errors.md</code><br />
+<strong>Revision:</strong> RTT/1 · Canon Edition<br />
+<strong>Status:</strong> Authoritative<br />
+<strong>Companion:</strong> <code>operator_grammar.md</code><br />
+<strong>Issued:</strong> 2026-05-20</p>
+<hr />
+<h2 id="preamble">Preamble<a class="toc-permalink" href="#preamble" title="Permanent link to this heading">&para;</a></h2>
+<p>This document is the single canonical source of truth for all fault tokens<br />
+emitted by operators in the Incident Substrate Model (ISM). Every <code>FAULTS →</code><br />
+entry in <code>operator_grammar.md</code> resolves to exactly one entry here.</p>
+<p>Implementors MUST:<br />
+- Treat unrecognized fault tokens as <code>GEN-005 PARTIAL_EXECUTION</code> equivalents<br />
+  (i.e., assume worst-case substrate contamination and halt).<br />
+- Never swallow a fault silently. Every fault must produce an <code>ExecutionRecord</code><br />
+  or an <code>IngestionStatus == REJECTED</code> where applicable.<br />
+- Expose the fault code verbatim to the calling substrate layer — do not<br />
+  translate, generalize, or redact fault codes in runtime logs.</p>
+<hr />
+<h2 id="how-to-read-this-registry">How to Read This Registry<a class="toc-permalink" href="#how-to-read-this-registry" title="Permanent link to this heading">&para;</a></h2>
+<p>Each entry follows this structure:</p>
+<div class="codehilite"><pre><span></span><code>### FAULT_TOKEN_NAME
+**Code:**          DOMAIN-NNN
+**Severity:**      FATAL | ERROR | WARNING
+**Recoverability:** RECOVERABLE | OPERATOR_ACTION_REQUIRED | UNRECOVERABLE
+**Emitted by:**    Comma-separated operator list
+**Condition:**     Precise trigger condition
+**State effect:**  What happens to IncidentRecord state on fault
+**Handler MUST:**  Required runtime behavior
+**Notes:**         Implementation guidance; edge cases
+</code></pre></div>
+
+<h3 id="severity-tiers">Severity Tiers<a class="toc-permalink" href="#severity-tiers" title="Permanent link to this heading">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FATAL</code></td>
+<td>Record transitions to <code>FAULTED</code>; substrate execution halts for this record. All queued steps are cancelled.</td>
+</tr>
+<tr>
+<td><code>ERROR</code></td>
+<td>Operator aborts; substrate state is unchanged (as if operator was never called). Caller may retry after correction.</td>
+</tr>
+<tr>
+<td><code>WARNING</code></td>
+<td>Operator completed but with degraded guarantees. An <code>ExecutionRecord</code> is created; the step is marked <code>STEP_EXECUTED</code> with a warning annotation.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="recoverability-tiers">Recoverability Tiers<a class="toc-permalink" href="#recoverability-tiers" title="Permanent link to this heading">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>RECOVERABLE</code></td>
+<td>Caller corrects the input and retries the operator. No human escalation required.</td>
+</tr>
+<tr>
+<td><code>OPERATOR_ACTION_REQUIRED</code></td>
+<td>Human or privileged system intervention is needed before retry (e.g., registry update, authorization grant, manual resolution).</td>
+</tr>
+<tr>
+<td><code>UNRECOVERABLE</code></td>
+<td>The current <code>IncidentRecord</code> cannot be repaired. A new record must be created via <code>incident.ingest</code> if re-processing is needed.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="quick-reference-table">Quick Reference Table<a class="toc-permalink" href="#quick-reference-table" title="Permanent link to this heading">&para;</a></h2>
+<p>48 unique fault tokens across 8 domains.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Token</th>
+<th>Severity</th>
+<th>Recoverability</th>
+<th>Domain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GEN-001</td>
+<td>RECORD_NOT_FOUND</td>
+<td>ERROR</td>
+<td>RECOVERABLE</td>
+<td>Cross-operator</td>
+</tr>
+<tr>
+<td>GEN-002</td>
+<td>INVALID_STATE_TRANSITION</td>
+<td>ERROR</td>
+<td>OPERATOR_ACTION_REQUIRED</td>
+<td>Cross-operator</td>
+</tr>
+<tr>
+<td>GEN-003</td>
+<td>PLAN_NOT_FOUND</td>
+<td>ERROR</td>
+<td>RECOVERABLE</td>
+<td>Cross-operator</td>
+</tr>
+<tr>
+<td>GEN-004</td>
+<td>PLAN_STEP_MISMATCH</td>
+<td>ERROR</td>
+<td>OPERATOR_ACTION_REQUIRED</td>
+<td>Cross-operator</td>
+</tr>
+<tr>
+<td>GEN-005</td>
+<td>PARTIAL_EXECUTION</td>
+<td>FATAL</td>
+<td>UNRECOVERABLE</td>
+<td>Cross-operator</td>
+</tr>
+<tr>
+<td>GEN-006</td>
+<td>CHECKSUM_MISMATCH</td>
+<td>ERROR</td>
+<td>OPERATOR_ACTION_REQUIRED</td>
+<td>Cross-operator</td>
+</tr>
+<tr>
+<td>GEN-007</td>
+<td>EMPTY_DETAIL</td>
+<td>ERROR</td>
+<td>RECOVERABLE</td>
+<td>Cross-operator</td>
+</tr>
+<tr>
+<td>GEN-008</td>
+<td>ACCESS_DENIED</td>
+<td>ERROR</td>
+<td>OPERATOR_ACTION_REQUIRED</td>
+<td>Cross-operator</td>
+</tr>
+<tr>
+<td>ING-001</td>
+<td>UNAUTHORIZED_EMITTER</td>
+<td>ERROR</td>
+<td>OPERATOR_ACTION_REQUIRED</td>
+<td>Ingestion</td>
+</tr>
+<tr>
+<td>ING-002</td>
+<td>PAYLOAD_TOO_LARGE</td>
+<td>ERROR</td>
+<td>RECOVERABLE</td>
+<td>Ingestion</td>
+</tr>
+<tr>
+<td>ING-003</td>
+<td>MALFORMED_SIGNAL</td>
+<td>ERROR</td>
+<td>RECOVERABLE</td>
+<td>Ingestion</td>
+</tr>
+<tr>
+<td>ING-004</td>
+<td>UNSUPPORTED_CONTENT_TYPE</td>
+<td>ERROR</td>
+<td>RECOVERABLE</td>
+<td>Ingestion</td>
+</tr>
+<tr>
+<td>CLS-001</td>
+<td>INVALID_CATEGORY</td>
+<td>ERROR</td>
+<td>RECOVERABLE</td>
+<td>Classification</td>
+</tr>
+<tr>
+<td>CLS-002</td>
+<td>CONFIDENCE_BELOW_THRESHOLD</td>
+<td>ERROR</td>
+<td>RECOVERABLE</td>
+<td>Classification</td>
+</tr>
+<tr>
+<td>SRF-001</td>
+<td>EMPTY_SURFACE_LIST</td>
+<td>ERROR</td>
+<td>RECOVERABLE</td>
+<td>Surface Mapping</td>
+</tr>
+<tr>
+<td>SRF-002</td>
+<td>SURFACE_REF_INVALID</td>
+<td>ERROR</td>
+<td>RECOVERABLE</td>
+<td>Surface Mapping</td>
+</tr>
+<tr>
+<td>SRF-003</td>
+<td>SURFACE_LIMIT_EXCEEDED</td>
+<td>ERROR</td>
+<td>OPERATOR_ACTION_REQUIRED</td>
+<td>Surface Mapping</td>
+</tr>
+<tr>
+<td>SRF-004</td>
+<td>HASH_MISMATCH</td>
+<td>ERROR</td>
+<td>RECOVERABLE</td>
+<td>Surface Mapping</td>
+</tr>
+<tr>
+<td>PLN-001</td>
+<td>SURFACE_MAP_MISMATCH</td>
+<td>ERROR</td>
+<td>OPERATOR_ACTION_REQUIRED</td>
+<td>Planning</td>
+</tr>
+<tr>
+<td>PLN-002</td>
+<td>STEP_INDEX_INVALID</td>
+<td>ERROR</td>
+<td>RECOVERABLE</td>
+<td>Planning</td>
+</tr>
+<tr>
+<td>PLN-003</td>
+<td>UNKNOWN_OPERATOR_REF</td>
+<td>ERROR</td>
+<td>RECOVERABLE</td>
+<td>Planning</td>
+</tr>
+<tr>
+<td>PLN-004</td>
+<td>TARGET_NOT_IN_SURFACE_MAP</td>
+<td>ERROR</td>
+<td>RECOVERABLE</td>
+<td>Planning</td>
+</tr>
+<tr>
+<td>PLN-005</td>
+<td>PLAN_STEP_LIMIT_EXCEEDED</td>
+<td>ERROR</td>
+<td>OPERATOR_ACTION_REQUIRED</td>
+<td>Planning</td>
+</tr>
+<tr>
+<td>PLN-006</td>
+<td>PLAN_ID_MISMATCH</td>
+<td>ERROR</td>
+<td>RECOVERABLE</td>
+<td>Planning</td>
+</tr>
+<tr>
+<td>PLN-007</td>
+<td>UNSUPPORTED_FORMAT</td>
+<td>ERROR</td>
+<td>RECOVERABLE</td>
+<td>Planning</td>
+</tr>
+<tr>
+<td>UNC-001</td>
+<td>UNKNOWN_UNCERTAINTY_CODE</td>
+<td>ERROR</td>
+<td>RECOVERABLE</td>
+<td>Uncertainty</td>
+</tr>
+<tr>
+<td>UNC-002</td>
+<td>INSUFFICIENT_OTHER_DETAIL</td>
+<td>ERROR</td>
+<td>RECOVERABLE</td>
+<td>Uncertainty</td>
+</tr>
+<tr>
+<td>APV-001</td>
+<td>EMPTY_APPROVER_SET</td>
+<td>ERROR</td>
+<td>RECOVERABLE</td>
+<td>Approval Flow</td>
+</tr>
+<tr>
+<td>APV-002</td>
+<td>UNKNOWN_APPROVER</td>
+<td>ERROR</td>
+<td>OPERATOR_ACTION_REQUIRED</td>
+<td>Approval Flow</td>
+</tr>
+<tr>
+<td>APV-003</td>
+<td>BLOCKING_UNCERTAINTY_FLAGS</td>
+<td>ERROR</td>
+<td>OPERATOR_ACTION_REQUIRED</td>
+<td>Approval Flow</td>
+</tr>
+<tr>
+<td>APV-004</td>
+<td>INVALID_APPROVAL_POLICY</td>
+<td>ERROR</td>
+<td>RECOVERABLE</td>
+<td>Approval Flow</td>
+</tr>
+<tr>
+<td>APV-005</td>
+<td>UNKNOWN_HOLD_REASON</td>
+<td>ERROR</td>
+<td>RECOVERABLE</td>
+<td>Approval Flow</td>
+</tr>
+<tr>
+<td>APV-006</td>
+<td>HOLD_UNAUTHORIZED</td>
+<td>ERROR</td>
+<td>OPERATOR_ACTION_REQUIRED</td>
+<td>Approval Flow</td>
+</tr>
+<tr>
+<td>EXE-001</td>
+<td>FILE_NOT_IN_SURFACE_MAP</td>
+<td>ERROR</td>
+<td>OPERATOR_ACTION_REQUIRED</td>
+<td>Bounded Execution</td>
+</tr>
+<tr>
+<td>EXE-002</td>
+<td>PATH_TRAVERSAL_DETECTED</td>
+<td>FATAL</td>
+<td>UNRECOVERABLE</td>
+<td>Bounded Execution</td>
+</tr>
+<tr>
+<td>EXE-003</td>
+<td>SECRET_NOT_IN_SURFACE_MAP</td>
+<td>ERROR</td>
+<td>OPERATOR_ACTION_REQUIRED</td>
+<td>Bounded Execution</td>
+</tr>
+<tr>
+<td>EXE-004</td>
+<td>ROTATION_UNAUTHORIZED</td>
+<td>ERROR</td>
+<td>OPERATOR_ACTION_REQUIRED</td>
+<td>Bounded Execution</td>
+</tr>
+<tr>
+<td>EXE-005</td>
+<td>ROTATION_PROVIDER_ERROR</td>
+<td>ERROR</td>
+<td>RECOVERABLE</td>
+<td>Bounded Execution</td>
+</tr>
+<tr>
+<td>EXE-006</td>
+<td>DEPENDENT_NOTIFICATION_FAILED</td>
+<td>WARNING</td>
+<td>OPERATOR_ACTION_REQUIRED</td>
+<td>Bounded Execution</td>
+</tr>
+<tr>
+<td>EXE-007</td>
+<td>DEPENDENCY_NOT_IN_SURFACE_MAP</td>
+<td>ERROR</td>
+<td>OPERATOR_ACTION_REQUIRED</td>
+<td>Bounded Execution</td>
+</tr>
+<tr>
+<td>EXE-008</td>
+<td>VERSION_MISMATCH</td>
+<td>ERROR</td>
+<td>RECOVERABLE</td>
+<td>Bounded Execution</td>
+</tr>
+<tr>
+<td>EXE-009</td>
+<td>TARGET_VERSION_INVALID</td>
+<td>ERROR</td>
+<td>OPERATOR_ACTION_REQUIRED</td>
+<td>Bounded Execution</td>
+</tr>
+<tr>
+<td>EXE-010</td>
+<td>PACKAGE_MANAGER_ERROR</td>
+<td>ERROR</td>
+<td>RECOVERABLE</td>
+<td>Bounded Execution</td>
+</tr>
+<tr>
+<td>EXE-011</td>
+<td>UNKNOWN_FOLLOWUP_CODE</td>
+<td>ERROR</td>
+<td>RECOVERABLE</td>
+<td>Bounded Execution</td>
+</tr>
+<tr>
+<td>EXE-012</td>
+<td>INVALID_PRIORITY</td>
+<td>ERROR</td>
+<td>RECOVERABLE</td>
+<td>Bounded Execution</td>
+</tr>
+<tr>
+<td>EXE-013</td>
+<td>EMPTY_ASSIGNEE_LIST</td>
+<td>ERROR</td>
+<td>RECOVERABLE</td>
+<td>Bounded Execution</td>
+</tr>
+<tr>
+<td>EXE-014</td>
+<td>UNRESOLVABLE_ASSIGNEE</td>
+<td>ERROR</td>
+<td>OPERATOR_ACTION_REQUIRED</td>
+<td>Bounded Execution</td>
+</tr>
+<tr>
+<td>EXE-015</td>
+<td>INSUFFICIENT_RISK_DETAIL</td>
+<td>ERROR</td>
+<td>RECOVERABLE</td>
+<td>Bounded Execution</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="domain-gen-cross-operator-faults">Domain GEN — Cross-Operator Faults<a class="toc-permalink" href="#domain-gen-cross-operator-faults" title="Permanent link to this heading">&para;</a></h2>
+<p>These faults may be emitted by any operator. Implementations MUST handle them<br />
+at the substrate layer rather than per-operator.</p>
+<hr />
+<h3 id="record_not_found">RECORD_NOT_FOUND<a class="toc-permalink" href="#record_not_found" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> GEN-001<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> RECOVERABLE<br />
+<strong>Emitted by:</strong> <code>incident.classify</code>, <code>incident.map_surface_area</code>,<br />
+<code>incident.derive_rectification_steps</code>, <code>incident.generate_readonly_plan</code>,<br />
+<code>incident.flag_uncertainty</code>, <code>incident.request_operator_approval</code>,<br />
+<code>incident.hold_for_review</code>, <code>incident.execute.remove_file</code>,<br />
+<code>incident.execute.rotate_secret</code>, <code>incident.execute.patch_dependency</code>,<br />
+<code>incident.execute.flag_for_followup</code><br />
+<strong>Condition:</strong> The supplied <code>record_id</code> does not resolve to any<br />
+<code>IncidentRecord</code> in the substrate store.<br />
+<strong>State effect:</strong> None. No state is modified.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator immediately.<br />
+  - Return fault token to caller with the unresolved <code>record_id</code>.<br />
+  - Do not create a new record as a side effect.<br />
+<strong>Notes:</strong> Callers should verify <code>record_id</code> provenance before retry. If<br />
+<code>record_id</code> was obtained from a prior <code>incident.ingest</code> <code>OUT</code>, the ingest<br />
+  may have returned <code>status == REJECTED</code> and no record was created —<br />
+  check <code>IngestionStatus</code> in the ingest result.</p>
+<hr />
+<h3 id="invalid_state_transition">INVALID_STATE_TRANSITION<a class="toc-permalink" href="#invalid_state_transition" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> GEN-002<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> OPERATOR_ACTION_REQUIRED<br />
+<strong>Emitted by:</strong> <code>incident.classify</code>, <code>incident.map_surface_area</code>,<br />
+<code>incident.derive_rectification_steps</code>, <code>incident.request_operator_approval</code>,<br />
+<code>incident.hold_for_review</code><br />
+<strong>Condition:</strong> The current <code>IncidentRecord.state</code> is not a member of the<br />
+  operator&rsquo;s declared <code>PRE[...]</code> legal state set.<br />
+<strong>State effect:</strong> None. Operator aborts before any write.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator immediately.<br />
+  - Log current state and the state set the operator expected.<br />
+  - Expose both values in the fault payload to the caller.<br />
+  - Do not attempt to force-advance or repair the record&rsquo;s state.<br />
+<strong>Notes:</strong> This fault almost always indicates a race condition (concurrent<br />
+  operator invocations on the same record) or a missed preceding operator<br />
+  in the pipeline. Callers MUST use the state machine in <code>operator_grammar.md</code><br />
+  Section 7 to determine the correct remediation path. Never retry without<br />
+  first querying the current record state.</p>
+<hr />
+<h3 id="plan_not_found">PLAN_NOT_FOUND<a class="toc-permalink" href="#plan_not_found" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> GEN-003<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> RECOVERABLE<br />
+<strong>Emitted by:</strong> <code>incident.generate_readonly_plan</code>,<br />
+<code>incident.request_operator_approval</code><br />
+<strong>Condition:</strong> The supplied <code>plan_id</code> does not resolve to any<br />
+<code>RectificationPlan</code> in the substrate store.<br />
+<strong>State effect:</strong> None.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator immediately.<br />
+  - Return the unresolved <code>plan_id</code> in the fault payload.<br />
+<strong>Notes:</strong> Verify the <code>plan_id</code> was emitted by a successful<br />
+<code>incident.derive_rectification_steps</code> call on the same record. A<br />
+<code>PLAN_NOT_FOUND</code> on a record with <code>state == PLAN_DERIVED</code> indicates<br />
+  a substrate store inconsistency — escalate to substrate operations.</p>
+<hr />
+<h3 id="plan_step_mismatch">PLAN_STEP_MISMATCH<a class="toc-permalink" href="#plan_step_mismatch" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> GEN-004<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> OPERATOR_ACTION_REQUIRED<br />
+<strong>Emitted by:</strong> <code>incident.execute.remove_file</code>,<br />
+<code>incident.execute.rotate_secret</code>, <code>incident.execute.patch_dependency</code>,<br />
+<code>incident.execute.flag_for_followup</code><br />
+<strong>Condition:</strong> The <code>operator_ref</code> declared for <code>step_index</code> in the approved<br />
+<code>RectificationPlan</code> does not match the executing operator, OR <code>target_ref</code><br />
+  at that step does not match the input target, OR the step at <code>step_index</code><br />
+  has already been executed.<br />
+<strong>State effect:</strong> None. Execution is refused before any target mutation.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator immediately.<br />
+  - Log the expected <code>operator_ref</code>/<code>target_ref</code> from the plan and the<br />
+    actual values supplied.<br />
+  - Do not advance <code>step_index</code>.<br />
+<strong>Notes:</strong> This is the primary enforcement mechanism for plan scope<br />
+  confinement. A mismatch on <code>operator_ref</code> may indicate plan tampering or<br />
+  incorrect step routing in the execution layer. Treat with the same<br />
+  urgency as a security boundary violation. The fix requires re-examining<br />
+  the plan and correcting the execution invocation — the plan itself is<br />
+  immutable at this stage.</p>
+<hr />
+<h3 id="partial_execution">PARTIAL_EXECUTION<a class="toc-permalink" href="#partial_execution" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> GEN-005<br />
+<strong>Severity:</strong> FATAL<br />
+<strong>Recoverability:</strong> UNRECOVERABLE<br />
+<strong>Emitted by:</strong> <code>incident.execute.remove_file</code>,<br />
+<code>incident.execute.rotate_secret</code>, <code>incident.execute.patch_dependency</code><br />
+<strong>Condition:</strong> The execution operator began mutating the target but did not<br />
+  complete atomically — the target was left in an intermediate state (e.g.,<br />
+  file partially deleted, secret rotation started but not committed, package<br />
+  manifest updated but lock file not regenerated).<br />
+<strong>State effect:</strong> <code>IncidentRecord.state</code> transitions to <code>FAULTED</code>.<br />
+  All remaining queued steps are cancelled.<br />
+<strong>Handler MUST:</strong><br />
+  - Immediately halt all further execution steps on this record.<br />
+  - Emit an <code>ExecutionRecord</code> with status <code>PARTIAL_EXECUTION</code> including the<br />
+    last known target state and the point of failure.<br />
+  - Transition the record to <code>FAULTED</code>.<br />
+  - Alert operators via the substrate notification channel.<br />
+  - Do NOT attempt automatic rollback — rollback is a manual operator action.<br />
+<strong>Notes:</strong> This is the most critical fault in the registry. A <code>PARTIAL_EXECUTION</code><br />
+  means the substrate surface is in an unknown and potentially dangerous state.<br />
+  The <code>FAULTED</code> record MUST be reviewed by a human operator before any new<br />
+<code>incident.ingest</code> signal for the same surfaces is processed. Execution<br />
+  operators MUST use atomic transactions or rollback-capable primitives<br />
+  wherever the target system supports them to minimize exposure to this fault.<br />
+<code>dry_run == true</code> invocations are immune to this fault.</p>
+<hr />
+<h3 id="checksum_mismatch">CHECKSUM_MISMATCH<a class="toc-permalink" href="#checksum_mismatch" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> GEN-006<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> OPERATOR_ACTION_REQUIRED<br />
+<strong>Emitted by:</strong> <code>incident.execute.remove_file</code>,<br />
+<code>incident.execute.patch_dependency</code><br />
+<strong>Condition:</strong> A <code>checksum</code> or <code>verify_checksum</code> was supplied and the computed<br />
+  checksum of the target (pre-removal or post-install) does not match the<br />
+  declared value.<br />
+<strong>State effect:</strong> None. The operator aborts before any mutation is committed<br />
+  when checksum is a pre-condition. For post-install verification failure in<br />
+<code>patch_dependency</code>, the patch is rolled back if possible; if rollback<br />
+  fails, <code>PARTIAL_EXECUTION</code> supersedes this fault.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort without mutating the target.<br />
+  - Log both the expected and computed checksums.<br />
+  - Never proceed with a mismatched checksum, even under operator override<br />
+    at the call site.<br />
+<strong>Notes:</strong> A checksum mismatch on a pre-removal file may indicate the file<br />
+  was modified between surface mapping and execution — this is a security<br />
+  signal. Callers should consider re-running <code>incident.map_surface_area</code><br />
+  and <code>incident.derive_rectification_steps</code> before retrying. A mismatch<br />
+  on <code>patch_dependency</code> post-install indicates a compromised package registry<br />
+  or a supply chain integrity failure — do not retry without investigating.</p>
+<hr />
+<h3 id="empty_detail">EMPTY_DETAIL<a class="toc-permalink" href="#empty_detail" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> GEN-007<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> RECOVERABLE<br />
+<strong>Emitted by:</strong> <code>incident.flag_uncertainty</code>, <code>incident.hold_for_review</code>,<br />
+<code>incident.execute.flag_for_followup</code><br />
+<strong>Condition:</strong> The <code>detail</code> field is present but empty, whitespace-only, or<br />
+  below the minimum required length for the given context.<br />
+<strong>State effect:</strong> None.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator.<br />
+  - Return the minimum length requirement in the fault payload.<br />
+<strong>Notes:</strong> &ldquo;Empty&rdquo; includes strings containing only whitespace, newlines, or<br />
+  null bytes. Implementations MUST trim the <code>detail</code> value before length<br />
+  evaluation. The minimum length for <code>UncertaintyCode.OTHER</code> and<br />
+<code>FollowupCode.RISK_ACCEPTED</code> is governed by substrate constants<br />
+<code>MIN_OTHER_DETAIL_LENGTH</code> and <code>MIN_RISK_ACCEPTANCE_DETAIL_LENGTH</code><br />
+  respectively (see <code>operator_grammar.md</code> Section 9).</p>
+<hr />
+<h3 id="access_denied">ACCESS_DENIED<a class="toc-permalink" href="#access_denied" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> GEN-008<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> OPERATOR_ACTION_REQUIRED<br />
+<strong>Emitted by:</strong> <code>incident.execute.remove_file</code><br />
+<strong>Condition:</strong> The executing agent does not hold the required permission to<br />
+  perform the declared operation on the target resource.<br />
+<strong>State effect:</strong> None. No mutation is attempted.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator immediately.<br />
+  - Log the identity of the executing agent and the target resource.<br />
+  - Do not retry with elevated permissions automatically — permission grants<br />
+    require explicit operator action.<br />
+<strong>Notes:</strong> Implementations MUST NOT cache or re-use permissions across<br />
+  execution steps. Each <code>incident.execute.*</code> invocation MUST re-validate<br />
+  its authorization at execution time. If access was valid during planning<br />
+  but denied at execution, emit <code>incident.flag_uncertainty</code> with code<br />
+<code>AUTHORIZATION_AMBIGUOUS</code> on the record before escalating.</p>
+<hr />
+<h2 id="domain-ing-ingestion-faults">Domain ING — Ingestion Faults<a class="toc-permalink" href="#domain-ing-ingestion-faults" title="Permanent link to this heading">&para;</a></h2>
+<p>Emitted exclusively by <code>incident.ingest</code>. These faults result in<br />
+<code>IngestionStatus == REJECTED</code>; no <code>IncidentRecord</code> is created.</p>
+<hr />
+<h3 id="unauthorized_emitter">UNAUTHORIZED_EMITTER<a class="toc-permalink" href="#unauthorized_emitter" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> ING-001<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> OPERATOR_ACTION_REQUIRED<br />
+<strong>Emitted by:</strong> <code>incident.ingest</code><br />
+<strong>Condition:</strong> The <code>source</code> value is not present in the substrate&rsquo;s<br />
+<code>allowed_emitter_set</code> registry, or the emitter&rsquo;s authorization token<br />
+  is absent, expired, or revoked.<br />
+<strong>State effect:</strong> No record created. <code>IngestionStatus == REJECTED</code>.<br />
+<strong>Handler MUST:</strong><br />
+  - Reject the signal without partial processing.<br />
+  - Log the unauthorized <code>source</code> identifier and the emission timestamp.<br />
+  - Do not expose the contents of <code>allowed_emitter_set</code> in the fault payload.<br />
+  - Rate-limit repeated unauthorized attempts from the same <code>source</code>.<br />
+<strong>Notes:</strong> This fault is also the correct response when an emitter&rsquo;s<br />
+  credentials are valid but its scope does not include the ISM substrate<br />
+  endpoint. Substrate operators must register new emitters via the<br />
+  emitter registry management interface — not by modifying this document.</p>
+<hr />
+<h3 id="payload_too_large">PAYLOAD_TOO_LARGE<a class="toc-permalink" href="#payload_too_large" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> ING-002<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> RECOVERABLE<br />
+<strong>Emitted by:</strong> <code>incident.ingest</code><br />
+<strong>Condition:</strong> <code>raw_payload</code> byte length exceeds <code>MAX_PAYLOAD_BYTES</code><br />
+  (default: 10 MiB; see <code>operator_grammar.md</code> Section 9).<br />
+<strong>State effect:</strong> No record created. <code>IngestionStatus == REJECTED</code>.<br />
+<strong>Handler MUST:</strong><br />
+  - Reject immediately without reading the full payload into memory.<br />
+  - Return <code>MAX_PAYLOAD_BYTES</code> and the actual received size in the fault payload.<br />
+<strong>Notes:</strong> Emitters SHOULD compress or chunk payloads exceeding the limit<br />
+  before re-submission. The substrate does not support streaming ingestion —<br />
+  the entire payload must fit within the declared limit. If the limit is<br />
+  consistently exceeded for legitimate signals, <code>MAX_PAYLOAD_BYTES</code> may be<br />
+  increased via the ISM configuration layer.</p>
+<hr />
+<h3 id="malformed_signal">MALFORMED_SIGNAL<a class="toc-permalink" href="#malformed_signal" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> ING-003<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> RECOVERABLE<br />
+<strong>Emitted by:</strong> <code>incident.ingest</code><br />
+<strong>Condition:</strong> The <code>raw_payload</code> cannot be parsed according to the declared<br />
+<code>content_type</code>, or required top-level fields are absent or of the wrong type,<br />
+  or <code>signal_id</code> is not a syntactically valid RFC 4122 v4 UUID, or<br />
+<code>emitted_at</code> is not a valid ISO-8601 UTC timestamp.<br />
+<strong>State effect:</strong> No record created. <code>IngestionStatus == REJECTED</code>.<br />
+<strong>Handler MUST:</strong><br />
+  - Reject the signal.<br />
+  - Return the specific field or structural issue that caused the fault.<br />
+  - Do not attempt partial parsing or best-effort normalization.<br />
+<strong>Notes:</strong> The substrate MUST NOT attempt to infer or correct malformed<br />
+  field values. Silent correction masks emitter-side bugs and produces<br />
+  unreliable <code>IncidentRecord</code> data downstream. Emitter implementors should<br />
+  run signals through schema validation before submission.</p>
+<hr />
+<h3 id="unsupported_content_type">UNSUPPORTED_CONTENT_TYPE<a class="toc-permalink" href="#unsupported_content_type" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> ING-004<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> RECOVERABLE<br />
+<strong>Emitted by:</strong> <code>incident.ingest</code><br />
+<strong>Condition:</strong> The <code>content_type</code> value is not present in the substrate&rsquo;s<br />
+  list of supported MIME types.<br />
+<strong>State effect:</strong> No record created. <code>IngestionStatus == REJECTED</code>.<br />
+<strong>Handler MUST:</strong><br />
+  - Return the list of supported MIME types in the fault payload.<br />
+  - Do not attempt content-type sniffing or fallback parsing.<br />
+<strong>Notes:</strong> The supported MIME type list is defined in the ISM configuration<br />
+  layer and is substrate-specific. Common supported types are<br />
+<code>application/json</code> and <code>text/plain</code>. Binary formats require explicit<br />
+  registration. Do not add MIME types to this document — update the<br />
+  configuration layer.</p>
+<hr />
+<h2 id="domain-cls-classification-faults">Domain CLS — Classification Faults<a class="toc-permalink" href="#domain-cls-classification-faults" title="Permanent link to this heading">&para;</a></h2>
+<p>Emitted exclusively by <code>incident.classify</code>.</p>
+<hr />
+<h3 id="invalid_category">INVALID_CATEGORY<a class="toc-permalink" href="#invalid_category" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> CLS-001<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> RECOVERABLE<br />
+<strong>Emitted by:</strong> <code>incident.classify</code><br />
+<strong>Condition:</strong> The <code>category</code> value is not a member of the <code>IncidentCategory</code><br />
+  type registry (see <code>operator_grammar.md</code> Section 8).<br />
+<strong>State effect:</strong> None. Record remains in its current state.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort classification.<br />
+  - Return the invalid value and the full <code>IncidentCategory</code> enum in the<br />
+    fault payload.<br />
+<strong>Notes:</strong> Classifiers MUST validate <code>category</code> against the type registry<br />
+  before invoking this operator. If the appropriate category does not exist,<br />
+  use <code>UNKNOWN</code> and document the rationale in <code>subcategory</code>. Do not invent<br />
+  category tokens outside the registry — classification consistency depends<br />
+  on the closed taxonomy.</p>
+<hr />
+<h3 id="confidence_below_threshold">CONFIDENCE_BELOW_THRESHOLD<a class="toc-permalink" href="#confidence_below_threshold" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> CLS-002<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> RECOVERABLE<br />
+<strong>Emitted by:</strong> <code>incident.classify</code><br />
+<strong>Condition:</strong> The <code>confidence</code> value is below <code>MIN_CLASSIFICATION_CONFIDENCE</code><br />
+  (default: 0.70; see <code>operator_grammar.md</code> Section 9).<br />
+<strong>State effect:</strong> None. Record remains in its current state.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort classification.<br />
+  - Return the supplied <code>confidence</code> value and the current threshold in the<br />
+    fault payload.<br />
+<strong>Notes:</strong> Classifiers that cannot reach threshold confidence SHOULD invoke<br />
+<code>incident.flag_uncertainty</code> with code <code>CLASSIFICATION_AMBIGUOUS</code> before<br />
+  surfacing the result for manual review. Do not lower <code>MIN_CLASSIFICATION_CONFIDENCE</code><br />
+  to bypass this fault — doing so degrades all downstream surface mapping<br />
+  and planning accuracy. The threshold may be legitimately adjusted via<br />
+  the ISM configuration layer for specific substrate deployments.</p>
+<hr />
+<h2 id="domain-srf-surface-mapping-faults">Domain SRF — Surface Mapping Faults<a class="toc-permalink" href="#domain-srf-surface-mapping-faults" title="Permanent link to this heading">&para;</a></h2>
+<p>Emitted exclusively by <code>incident.map_surface_area</code>.</p>
+<hr />
+<h3 id="empty_surface_list">EMPTY_SURFACE_LIST<a class="toc-permalink" href="#empty_surface_list" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> SRF-001<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> RECOVERABLE<br />
+<strong>Emitted by:</strong> <code>incident.map_surface_area</code><br />
+<strong>Condition:</strong> The <code>surfaces</code> list is empty (zero entries).<br />
+<strong>State effect:</strong> None.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator.<br />
+  - Return a fault indicating that at least one surface entry is required.<br />
+<strong>Notes:</strong> A zero-surface submission is almost always a scanner bug or a<br />
+  misconfigured scanner scope. If the incident genuinely touches no<br />
+  enumerable surfaces, operators should consider whether the classification<br />
+  was correct. A <code>SURFACE_INCOMPLETE</code> uncertainty flag is more appropriate<br />
+  than submitting zero surfaces.</p>
+<hr />
+<h3 id="surface_ref_invalid">SURFACE_REF_INVALID<a class="toc-permalink" href="#surface_ref_invalid" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> SRF-002<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> RECOVERABLE<br />
+<strong>Emitted by:</strong> <code>incident.map_surface_area</code><br />
+<strong>Condition:</strong> One or more <code>surface_ref</code> values in the <code>surfaces</code> list are<br />
+  syntactically invalid for their declared <code>surface_type</code> (e.g., a <code>FILE</code><br />
+  entry with a relative path, a <code>SECRET</code> entry with a malformed ARN, a<br />
+<code>DEPENDENCY</code> entry missing the <code>package@version</code> format).<br />
+<strong>State effect:</strong> None.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator.<br />
+  - Return all invalid <code>surface_ref</code> values and their <code>surface_type</code> in<br />
+    the fault payload, not just the first one.<br />
+<strong>Notes:</strong> The substrate MUST validate all entries before accepting any.<br />
+  Partial surface maps with some valid and some invalid entries MUST be<br />
+  rejected in full — partial acceptance would produce a surface map that<br />
+  silently omits surfaces, violating scope completeness.</p>
+<hr />
+<h3 id="surface_limit_exceeded">SURFACE_LIMIT_EXCEEDED<a class="toc-permalink" href="#surface_limit_exceeded" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> SRF-003<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> OPERATOR_ACTION_REQUIRED<br />
+<strong>Emitted by:</strong> <code>incident.map_surface_area</code><br />
+<strong>Condition:</strong> The <code>surfaces</code> list contains more entries than<br />
+<code>MAX_SURFACE_ENTRIES</code> (default: 500; see <code>operator_grammar.md</code> Section 9).<br />
+<strong>State effect:</strong> None.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator.<br />
+  - Return <code>MAX_SURFACE_ENTRIES</code> and the actual submitted count in the<br />
+    fault payload.<br />
+<strong>Notes:</strong> Exceeding the surface limit almost always indicates either an<br />
+  overly broad scanner scope or an incident with an unusually large blast<br />
+  radius. Operators SHOULD consider splitting the incident into multiple<br />
+  child records via separate <code>incident.ingest</code> calls scoped to bounded<br />
+  surface clusters. Raising <code>MAX_SURFACE_ENTRIES</code> is a configuration change<br />
+  requiring explicit operator approval — it is not a per-call override.</p>
+<hr />
+<h3 id="hash_mismatch">HASH_MISMATCH<a class="toc-permalink" href="#hash_mismatch" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> SRF-004<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> RECOVERABLE<br />
+<strong>Emitted by:</strong> <code>incident.map_surface_area</code><br />
+<strong>Condition:</strong> The <code>surface_snapshot_hash</code> value does not match the SHA-256<br />
+  hash computed by the substrate over the submitted <code>surfaces</code> list.<br />
+<strong>State effect:</strong> None.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator.<br />
+  - Return the expected hash (computed server-side) and the submitted hash<br />
+    in the fault payload.<br />
+  - Do NOT store the submitted surfaces, even temporarily.<br />
+<strong>Notes:</strong> This fault is the primary defense against in-transit surface list<br />
+  corruption or truncation. Callers MUST recompute the hash client-side<br />
+  immediately before submission using the same serialization order used to<br />
+  build the <code>surfaces</code> list. Hash computation must be over the canonical<br />
+  wire-format representation of the list, not an in-memory object graph.</p>
+<hr />
+<h2 id="domain-pln-planning-faults">Domain PLN — Planning Faults<a class="toc-permalink" href="#domain-pln-planning-faults" title="Permanent link to this heading">&para;</a></h2>
+<p>Emitted by <code>incident.derive_rectification_steps</code> and<br />
+<code>incident.generate_readonly_plan</code>.</p>
+<hr />
+<h3 id="surface_map_mismatch">SURFACE_MAP_MISMATCH<a class="toc-permalink" href="#surface_map_mismatch" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> PLN-001<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> OPERATOR_ACTION_REQUIRED<br />
+<strong>Emitted by:</strong> <code>incident.derive_rectification_steps</code><br />
+<strong>Condition:</strong> The <code>surface_map_id</code> supplied does not match<br />
+<code>IncidentRecord(record_id).surface_map_id</code>, or the referenced surface map<br />
+  has been superseded by a newer mapping on this record.<br />
+<strong>State effect:</strong> None.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort planning.<br />
+  - Return both the supplied <code>surface_map_id</code> and the current<br />
+<code>IncidentRecord.surface_map_id</code> in the fault payload.<br />
+<strong>Notes:</strong> Plans MUST be derived against the current surface map only.<br />
+  Stale <code>surface_map_id</code> values indicate a race where the surface was<br />
+  re-mapped between the planner reading the record and submitting the plan.<br />
+  The planner must re-fetch the record, obtain the current <code>surface_map_id</code>,<br />
+  and re-derive all steps.</p>
+<hr />
+<h3 id="step_index_invalid">STEP_INDEX_INVALID<a class="toc-permalink" href="#step_index_invalid" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> PLN-002<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> RECOVERABLE<br />
+<strong>Emitted by:</strong> <code>incident.derive_rectification_steps</code><br />
+<strong>Condition:</strong> The <code>steps</code> list contains one or more of: a non-zero-based<br />
+  index (first index is not 0), duplicate indices, gaps in the index<br />
+  sequence, or non-integer index values.<br />
+<strong>State effect:</strong> None.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort planning.<br />
+  - Return all invalid indices in the fault payload.<br />
+<strong>Notes:</strong> Steps MUST form a complete, gapless, 0-based integer sequence.<br />
+  The substrate uses <code>step_index</code> for ordered sequential execution — gaps<br />
+  or duplicates would produce ambiguous or skipped execution steps. Planners<br />
+  generating steps programmatically MUST sort and renumber before submission.</p>
+<hr />
+<h3 id="unknown_operator_ref">UNKNOWN_OPERATOR_REF<a class="toc-permalink" href="#unknown_operator_ref" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> PLN-003<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> RECOVERABLE<br />
+<strong>Emitted by:</strong> <code>incident.derive_rectification_steps</code><br />
+<strong>Condition:</strong> One or more <code>operator_ref</code> values in the <code>steps</code> list do not<br />
+  resolve to a known <code>incident.execute.*</code> operator, or reference an operator<br />
+  outside the <code>incident.execute.*</code> namespace.<br />
+<strong>State effect:</strong> None.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort planning.<br />
+  - Return all unresolvable <code>operator_ref</code> values in the fault payload.<br />
+<strong>Notes:</strong> Planners MUST validate <code>operator_ref</code> values against the canonical<br />
+  operator registry before submission. Typos, version-suffixed refs, and<br />
+  references to deprecated operators are all invalid. References to operators<br />
+  outside <code>incident.execute.*</code> (e.g., <code>incident.classify</code>) are explicitly<br />
+  forbidden in plan steps — this is a grammar-level constraint, not a<br />
+  permissions boundary.</p>
+<hr />
+<h3 id="target_not_in_surface_map">TARGET_NOT_IN_SURFACE_MAP<a class="toc-permalink" href="#target_not_in_surface_map" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> PLN-004<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> RECOVERABLE<br />
+<strong>Emitted by:</strong> <code>incident.derive_rectification_steps</code><br />
+<strong>Condition:</strong> One or more <code>target_ref</code> values in the <code>steps</code> list do not<br />
+  match any <code>surface_ref</code> in <code>SurfaceMap(surface_map_id)</code>.<br />
+<strong>State effect:</strong> None.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort planning.<br />
+  - Return all unmatched <code>target_ref</code> values alongside the available<br />
+<code>surface_ref</code> values in the fault payload.<br />
+<strong>Notes:</strong> Plans MUST NOT introduce targets that were not declared in the<br />
+  surface map. This constraint enforces that execution operators cannot<br />
+  exceed the scanned and approved incident surface. If a required target is<br />
+  absent from the surface map, operators must re-run <code>incident.map_surface_area</code><br />
+  with an updated surface list before re-planning.</p>
+<hr />
+<h3 id="plan_step_limit_exceeded">PLAN_STEP_LIMIT_EXCEEDED<a class="toc-permalink" href="#plan_step_limit_exceeded" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> PLN-005<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> OPERATOR_ACTION_REQUIRED<br />
+<strong>Emitted by:</strong> <code>incident.derive_rectification_steps</code><br />
+<strong>Condition:</strong> The <code>steps</code> list contains more entries than <code>MAX_PLAN_STEPS</code><br />
+  (default: 50; see <code>operator_grammar.md</code> Section 9).<br />
+<strong>State effect:</strong> None.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort planning.<br />
+  - Return <code>MAX_PLAN_STEPS</code> and the actual submitted step count in the<br />
+    fault payload.<br />
+<strong>Notes:</strong> Incidents requiring more than 50 rectification steps SHOULD be<br />
+  decomposed into multiple bounded incidents via <code>incident.ingest</code>, each<br />
+  with its own surface map and plan. A single plan with 50+ steps is a<br />
+  strong signal that the incident scope is too broad to remediate safely<br />
+  in one approval cycle.</p>
+<hr />
+<h3 id="plan_id_mismatch">PLAN_ID_MISMATCH<a class="toc-permalink" href="#plan_id_mismatch" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> PLN-006<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> RECOVERABLE<br />
+<strong>Emitted by:</strong> <code>incident.generate_readonly_plan</code><br />
+<strong>Condition:</strong> The supplied <code>plan_id</code> does not match<br />
+<code>IncidentRecord(record_id).plan_id</code>.<br />
+<strong>State effect:</strong> None. This is a <code>READONLY</code> operator; no state is<br />
+  modified regardless.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator.<br />
+  - Return both the supplied <code>plan_id</code> and the current<br />
+<code>IncidentRecord.plan_id</code> in the fault payload.<br />
+<strong>Notes:</strong> This fault typically indicates a caller holding a stale plan<br />
+  reference. Re-fetch the record to obtain the current <code>plan_id</code> before<br />
+  retrying. Unlike <code>SURFACE_MAP_MISMATCH</code>, this fault carries lower urgency<br />
+  since the operator is read-only — but the caller must still correct<br />
+  its reference before calling any downstream operators.</p>
+<hr />
+<h3 id="unsupported_format">UNSUPPORTED_FORMAT<a class="toc-permalink" href="#unsupported_format" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> PLN-007<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> RECOVERABLE<br />
+<strong>Emitted by:</strong> <code>incident.generate_readonly_plan</code><br />
+<strong>Condition:</strong> The <code>format</code> value is not a member of <code>{MARKDOWN, JSON, TEXT}</code>.<br />
+<strong>State effect:</strong> None.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator.<br />
+  - Return the list of supported <code>PlanFormat</code> values in the fault payload.<br />
+<strong>Notes:</strong> Format negotiation should happen at the call site before<br />
+  invoking this operator. Do not default to any format silently — if the<br />
+  requested format is not supported, fault and surface the constraint.</p>
+<hr />
+<h2 id="domain-unc-uncertainty-faults">Domain UNC — Uncertainty Faults<a class="toc-permalink" href="#domain-unc-uncertainty-faults" title="Permanent link to this heading">&para;</a></h2>
+<p>Emitted exclusively by <code>incident.flag_uncertainty</code>.</p>
+<hr />
+<h3 id="unknown_uncertainty_code">UNKNOWN_UNCERTAINTY_CODE<a class="toc-permalink" href="#unknown_uncertainty_code" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> UNC-001<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> RECOVERABLE<br />
+<strong>Emitted by:</strong> <code>incident.flag_uncertainty</code><br />
+<strong>Condition:</strong> The <code>uncertainty_code</code> value is not a member of the<br />
+<code>UncertaintyCode</code> registry.<br />
+<strong>State effect:</strong> None. No uncertainty flag is attached to the record.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator.<br />
+  - Return the full <code>UncertaintyCode</code> registry in the fault payload.<br />
+<strong>Notes:</strong> If no registered code adequately describes the uncertainty, use<br />
+<code>OTHER</code> with a detailed <code>detail</code> field. The <code>UncertaintyCode</code> registry<br />
+  is closed — codes are not added at call time. Extension requests must<br />
+  go through the ISM grammar revision process.</p>
+<hr />
+<h3 id="insufficient_other_detail">INSUFFICIENT_OTHER_DETAIL<a class="toc-permalink" href="#insufficient_other_detail" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> UNC-002<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> RECOVERABLE<br />
+<strong>Emitted by:</strong> <code>incident.flag_uncertainty</code><br />
+<strong>Condition:</strong> <code>uncertainty_code == OTHER</code> and <code>detail.length</code> is below<br />
+<code>MIN_OTHER_DETAIL_LENGTH</code> (default: 80 characters; see<br />
+<code>operator_grammar.md</code> Section 9).<br />
+<strong>State effect:</strong> None.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator.<br />
+  - Return the minimum required length and the actual submitted length<br />
+    in the fault payload.<br />
+<strong>Notes:</strong> The elevated minimum for <code>OTHER</code> exists because <code>OTHER</code> is the<br />
+  catch-all code and provides no structural information by itself. The<br />
+<code>detail</code> field must carry sufficient context for a human reviewer to<br />
+  understand the uncertainty without any other context. Generic strings like<br />
+  &ldquo;unknown error&rdquo; or &ldquo;see logs&rdquo; are structurally valid but semantically<br />
+  insufficient — reviewers SHOULD be instructed to treat minimal <code>OTHER</code><br />
+  flags as low-signal.</p>
+<hr />
+<h2 id="domain-apv-approval-flow-faults">Domain APV — Approval Flow Faults<a class="toc-permalink" href="#domain-apv-approval-flow-faults" title="Permanent link to this heading">&para;</a></h2>
+<p>Emitted by <code>incident.request_operator_approval</code> and<br />
+<code>incident.hold_for_review</code>.</p>
+<hr />
+<h3 id="empty_approver_set">EMPTY_APPROVER_SET<a class="toc-permalink" href="#empty_approver_set" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> APV-001<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> RECOVERABLE<br />
+<strong>Emitted by:</strong> <code>incident.request_operator_approval</code><br />
+<strong>Condition:</strong> The <code>approver_set</code> list is empty (zero entries).<br />
+<strong>State effect:</strong> None. Record remains in <code>PLAN_DERIVED</code>.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator.<br />
+  - Require the caller to supply at least one <code>ApproverRef</code>.<br />
+<strong>Notes:</strong> Approval requests with no approvers would create a <code>PENDING_APPROVAL</code><br />
+  record that can never be resolved — a deadlock state. This fault prevents<br />
+  that condition at the grammar level.</p>
+<hr />
+<h3 id="unknown_approver">UNKNOWN_APPROVER<a class="toc-permalink" href="#unknown_approver" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> APV-002<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> OPERATOR_ACTION_REQUIRED<br />
+<strong>Emitted by:</strong> <code>incident.request_operator_approval</code><br />
+<strong>Condition:</strong> One or more <code>ApproverRef</code> values in <code>approver_set</code> do not<br />
+  resolve in the approver registry.<br />
+<strong>State effect:</strong> None. Record remains in <code>PLAN_DERIVED</code>.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator.<br />
+  - Return all unresolvable <code>ApproverRef</code> values in the fault payload.<br />
+  - Do not notify any approvers in the partial set.<br />
+<strong>Notes:</strong> Partial approval sets are never accepted — either all approvers<br />
+  resolve or none are notified. This prevents phantom approval requests<br />
+  where only some approvers receive notification. Unresolvable approvers<br />
+  must be registered in the approver registry by a substrate administrator<br />
+  before retry.</p>
+<hr />
+<h3 id="blocking_uncertainty_flags">BLOCKING_UNCERTAINTY_FLAGS<a class="toc-permalink" href="#blocking_uncertainty_flags" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> APV-003<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> OPERATOR_ACTION_REQUIRED<br />
+<strong>Emitted by:</strong> <code>incident.request_operator_approval</code><br />
+<strong>Condition:</strong> The record has one or more attached <code>UncertaintyFlag</code> entries<br />
+  with severity <code>BLOCKING</code> that have not been resolved or explicitly<br />
+  acknowledged in <code>context_note</code>.<br />
+<strong>State effect:</strong> None. Record remains in <code>PLAN_DERIVED</code>.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator.<br />
+  - Return all unresolved blocking flag IDs and their <code>uncertainty_code</code><br />
+    values in the fault payload.<br />
+<strong>Notes:</strong> Blocking uncertainty flags exist to prevent approval requests<br />
+  from proceeding when the plan cannot be safely evaluated. Operators must<br />
+  either resolve the underlying uncertainty (by re-running classification<br />
+  or surface mapping) or explicitly acknowledge each flag in <code>context_note</code><br />
+  using the format: <code>"ACKNOWLEDGED: &lt;flag_id&gt; — &lt;rationale&gt;"</code>. Acknowledgment<br />
+  without rationale is not accepted.</p>
+<hr />
+<h3 id="invalid_approval_policy">INVALID_APPROVAL_POLICY<a class="toc-permalink" href="#invalid_approval_policy" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> APV-004<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> RECOVERABLE<br />
+<strong>Emitted by:</strong> <code>incident.request_operator_approval</code><br />
+<strong>Condition:</strong> The <code>approval_policy</code> value is not a member of<br />
+<code>{ANY_ONE, MAJORITY, ALL}</code>.<br />
+<strong>State effect:</strong> None.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator.<br />
+  - Return the valid <code>ApprovalPolicy</code> values in the fault payload.<br />
+<strong>Notes:</strong> <code>MAJORITY</code> requires an odd-numbered <code>approver_set</code> to avoid<br />
+  tie deadlocks. Implementations SHOULD warn (but not fault) when<br />
+<code>approval_policy == MAJORITY</code> and <code>approver_set.count</code> is even. The<br />
+  substrate resolves majority ties in favor of rejection.</p>
+<hr />
+<h3 id="unknown_hold_reason">UNKNOWN_HOLD_REASON<a class="toc-permalink" href="#unknown_hold_reason" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> APV-005<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> RECOVERABLE<br />
+<strong>Emitted by:</strong> <code>incident.hold_for_review</code><br />
+<strong>Condition:</strong> The <code>reason_code</code> value is not a member of the<br />
+<code>HoldReason</code> registry.<br />
+<strong>State effect:</strong> None. Record is NOT placed on hold.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator.<br />
+  - Return the full <code>HoldReason</code> registry in the fault payload.<br />
+<strong>Notes:</strong> A failed hold attempt is particularly dangerous because the caller<br />
+  intended to stop execution but the hold was not placed. The caller MUST<br />
+  treat <code>UNKNOWN_HOLD_REASON</code> as equivalent to a failed safety brake and<br />
+  escalate immediately. Do not fall through to the next operation on the<br />
+  assumption that the hold succeeded.</p>
+<hr />
+<h3 id="hold_unauthorized">HOLD_UNAUTHORIZED<a class="toc-permalink" href="#hold_unauthorized" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> APV-006<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> OPERATOR_ACTION_REQUIRED<br />
+<strong>Emitted by:</strong> <code>incident.hold_for_review</code><br />
+<strong>Condition:</strong> The <code>held_by</code> identity does not hold the required authorization<br />
+  to place a hold on this record. Authorization may be scoped by record<br />
+  classification, surface type, or organizational policy.<br />
+<strong>State effect:</strong> None. Record is NOT placed on hold.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator.<br />
+  - Log the unauthorized <code>held_by</code> identity and the record ID.<br />
+  - Escalate to a substrate administrator immediately if this occurs during<br />
+    an active execution sequence.<br />
+<strong>Notes:</strong> Same urgency note as <code>UNKNOWN_HOLD_REASON</code> — a failed hold during<br />
+  execution means the safety brake did not engage. The caller must not<br />
+  continue with execution steps and must escalate to obtain an authorized<br />
+  hold-placing identity before retrying.</p>
+<hr />
+<h2 id="domain-exe-bounded-execution-faults">Domain EXE — Bounded Execution Faults<a class="toc-permalink" href="#domain-exe-bounded-execution-faults" title="Permanent link to this heading">&para;</a></h2>
+<p>Emitted by <code>incident.execute.*</code> operators. All execution faults produce an<br />
+<code>ExecutionRecord</code> regardless of whether the step succeeded or failed — the<br />
+<code>ExecutionRecord</code> is the permanent audit trail.</p>
+<hr />
+<h3 id="file_not_in_surface_map">FILE_NOT_IN_SURFACE_MAP<a class="toc-permalink" href="#file_not_in_surface_map" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> EXE-001<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> OPERATOR_ACTION_REQUIRED<br />
+<strong>Emitted by:</strong> <code>incident.execute.remove_file</code><br />
+<strong>Condition:</strong> The supplied <code>file_path</code> does not match any <code>FILE</code>-typed<br />
+<code>surface_ref</code> in <code>SurfaceMap(IncidentRecord(record_id).surface_map_id)</code>.<br />
+<strong>State effect:</strong> None. File is not removed.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator.<br />
+  - Return the unmatched <code>file_path</code> and the list of FILE-typed surface<br />
+    entries in the fault payload.<br />
+  - Treat this as a scope boundary violation.<br />
+<strong>Notes:</strong> This fault is the execution-layer enforcement of Grammar Invariant 3<br />
+  (surface scope enforcement). A target absent from the surface map means<br />
+  the removal was not approved as part of the incident. If the file genuinely<br />
+  needs to be removed, re-map the surface, re-derive the plan, and re-seek<br />
+  approval.</p>
+<hr />
+<h3 id="path_traversal_detected">PATH_TRAVERSAL_DETECTED<a class="toc-permalink" href="#path_traversal_detected" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> EXE-002<br />
+<strong>Severity:</strong> FATAL<br />
+<strong>Recoverability:</strong> UNRECOVERABLE<br />
+<strong>Emitted by:</strong> <code>incident.execute.remove_file</code><br />
+<strong>Condition:</strong> The canonical resolution of <code>file_path</code> (after resolving<br />
+  symlinks, <code>..</code> components, and environment variable expansions) exits<br />
+  the declared substrate boundary, or targets a path that was not<br />
+  submitted as a surface entry.<br />
+<strong>State effect:</strong> <code>IncidentRecord.state</code> transitions to <code>FAULTED</code>.<br />
+  All remaining steps are cancelled.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator immediately. Do not access the file at any point.<br />
+  - Transition the record to <code>FAULTED</code>.<br />
+  - Log the submitted path and its resolved canonical form.<br />
+  - Alert substrate security operations immediately — this may indicate<br />
+    an adversarial plan or a compromised planning agent.<br />
+  - Preserve the submitted <code>file_path</code> value as forensic evidence.<br />
+<strong>Notes:</strong> This is a security-critical fault. Path traversal in an<br />
+  automated remediation system is a high-severity attack vector. The record<br />
+  is immediately terminal. A new investigation should be opened — potentially<br />
+  targeting the planning agent that submitted the traversal path — before<br />
+  any new ingestion is processed for related surfaces.</p>
+<hr />
+<h3 id="secret_not_in_surface_map">SECRET_NOT_IN_SURFACE_MAP<a class="toc-permalink" href="#secret_not_in_surface_map" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> EXE-003<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> OPERATOR_ACTION_REQUIRED<br />
+<strong>Emitted by:</strong> <code>incident.execute.rotate_secret</code><br />
+<strong>Condition:</strong> The supplied <code>secret_ref</code> does not match any <code>SECRET</code>-typed<br />
+<code>surface_ref</code> in <code>SurfaceMap(IncidentRecord(record_id).surface_map_id)</code>.<br />
+<strong>State effect:</strong> None. No rotation is initiated.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator.<br />
+  - Return the unmatched <code>secret_ref</code> in the fault payload.<br />
+  - Do not expose the list of known secret refs in the fault payload<br />
+    (enumeration risk).<br />
+<strong>Notes:</strong> Unlike <code>FILE_NOT_IN_SURFACE_MAP</code>, the fault payload MUST NOT<br />
+  enumerate the full set of SECRET-typed surface entries — doing so would<br />
+  leak information about the substrate&rsquo;s secret topology to the caller log.<br />
+  Callers should re-fetch the surface map directly to identify valid targets.</p>
+<hr />
+<h3 id="rotation_unauthorized">ROTATION_UNAUTHORIZED<a class="toc-permalink" href="#rotation_unauthorized" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> EXE-004<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> OPERATOR_ACTION_REQUIRED<br />
+<strong>Emitted by:</strong> <code>incident.execute.rotate_secret</code><br />
+<strong>Condition:</strong> The executing agent does not hold rotation authorization for<br />
+  the target <code>secret_ref</code> in the secret management layer (e.g., AWS Secrets<br />
+  Manager, HashiCorp Vault, GCP Secret Manager).<br />
+<strong>State effect:</strong> None. No rotation is initiated.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator.<br />
+  - Log the executing agent identity and the <code>secret_ref</code> (reference only,<br />
+    never the secret value).<br />
+  - Do not retry with a different agent identity automatically.<br />
+<strong>Notes:</strong> Rotation authorization is granted at the secret management layer,<br />
+  not within ISM. If the executing agent lacks authorization, a substrate<br />
+  administrator must grant the appropriate IAM role, Vault policy, or<br />
+  equivalent before retry. This fault SHOULD trigger an<br />
+<code>incident.flag_uncertainty</code> with code <code>AUTHORIZATION_AMBIGUOUS</code> for<br />
+  human awareness.</p>
+<hr />
+<h3 id="rotation_provider_error">ROTATION_PROVIDER_ERROR<a class="toc-permalink" href="#rotation_provider_error" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> EXE-005<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> RECOVERABLE<br />
+<strong>Emitted by:</strong> <code>incident.execute.rotate_secret</code><br />
+<strong>Condition:</strong> The secret management provider returned an error during the<br />
+  rotation attempt (e.g., provider unavailable, rotation plugin failure,<br />
+  transient API error). The rotation was not completed.<br />
+<strong>State effect:</strong> None. The old secret version remains active.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator. Confirm with the provider that the rotation was not<br />
+    applied before allowing retry.<br />
+  - Log the provider error code and message in the <code>ExecutionRecord</code>.<br />
+  - Apply exponential backoff before retry.<br />
+<strong>Notes:</strong> Implementations MUST verify the rotation state with the provider<br />
+  before retrying — a provider error does not guarantee the rotation was<br />
+  not partially applied. If the provider cannot confirm the rotation state,<br />
+  treat as <code>PARTIAL_EXECUTION</code> (GEN-005) and transition the record to<br />
+<code>FAULTED</code>.</p>
+<hr />
+<h3 id="dependent_notification_failed">DEPENDENT_NOTIFICATION_FAILED<a class="toc-permalink" href="#dependent_notification_failed" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> EXE-006<br />
+<strong>Severity:</strong> WARNING<br />
+<strong>Recoverability:</strong> OPERATOR_ACTION_REQUIRED<br />
+<strong>Emitted by:</strong> <code>incident.execute.rotate_secret</code><br />
+<strong>Condition:</strong> <code>notify_dependents == true</code> and the rotation completed<br />
+  successfully, but one or more registered secret consumers could not be<br />
+  notified of the new secret version.<br />
+<strong>State effect:</strong> None. The rotation itself succeeded; the record step is<br />
+  marked <code>STEP_EXECUTED</code> with a warning annotation. The <code>ExecutionRecord</code><br />
+  is created.<br />
+<strong>Handler MUST:</strong><br />
+  - Complete the step as <code>STEP_EXECUTED</code> (rotation was successful).<br />
+  - Annotate the <code>ExecutionRecord</code> with the list of consumers that<br />
+    failed to receive notification.<br />
+  - Create a follow-up flag automatically via <code>incident.execute.flag_for_followup</code><br />
+    with code <code>MANUAL_REMEDIATION_REQUIRED</code> and assign it to the substrate<br />
+    operations team.<br />
+<strong>Notes:</strong> This is the only <code>WARNING</code>-severity fault in the registry. The<br />
+  rotation is complete and the old secret is invalidated — consumers that<br />
+  were not notified may begin failing. The follow-up flag is non-optional;<br />
+  unnotified consumers represent a live operational risk.</p>
+<hr />
+<h3 id="dependency_not_in_surface_map">DEPENDENCY_NOT_IN_SURFACE_MAP<a class="toc-permalink" href="#dependency_not_in_surface_map" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> EXE-007<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> OPERATOR_ACTION_REQUIRED<br />
+<strong>Emitted by:</strong> <code>incident.execute.patch_dependency</code><br />
+<strong>Condition:</strong> The supplied <code>package_ref</code> does not match any<br />
+<code>DEPENDENCY</code>-typed <code>surface_ref</code> in the approved surface map.<br />
+<strong>State effect:</strong> None. No patch is applied.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator.<br />
+  - Return the unmatched <code>package_ref</code> and the list of DEPENDENCY-typed<br />
+    surface entries in the fault payload.<br />
+<strong>Notes:</strong> See <code>EXE-001</code> (FILE_NOT_IN_SURFACE_MAP) — identical scope<br />
+  enforcement rationale applies. Package refs MUST use the canonical<br />
+  format <code>ecosystem:package@version</code> (e.g., <code>npm:lodash@4.17.20</code>) to<br />
+  enable unambiguous matching against surface entries.</p>
+<hr />
+<h3 id="version_mismatch">VERSION_MISMATCH<a class="toc-permalink" href="#version_mismatch" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> EXE-008<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> RECOVERABLE<br />
+<strong>Emitted by:</strong> <code>incident.execute.patch_dependency</code><br />
+<strong>Condition:</strong> The <code>current_version</code> declared in <code>IN(...)</code> does not match<br />
+  the version of the package actually installed at <code>package_ref</code> in the<br />
+  target environment at execution time.<br />
+<strong>State effect:</strong> None. No patch is applied.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator.<br />
+  - Return <code>current_version</code> as supplied and the actual installed version<br />
+    discovered at execution time in the fault payload.<br />
+<strong>Notes:</strong> Version drift between plan derivation and execution time is<br />
+  the primary cause of this fault. If the installed version is already at<br />
+  or beyond <code>target_version</code>, the operator returns <code>ALREADY_AT_TARGET</code><br />
+  rather than this fault. If the installed version is different from both<br />
+<code>current_version</code> and <code>target_version</code>, the caller must re-derive the<br />
+  plan step with updated version values.</p>
+<hr />
+<h3 id="target_version_invalid">TARGET_VERSION_INVALID<a class="toc-permalink" href="#target_version_invalid" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> EXE-009<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> OPERATOR_ACTION_REQUIRED<br />
+<strong>Emitted by:</strong> <code>incident.execute.patch_dependency</code><br />
+<strong>Condition:</strong> The <code>target_version</code> is marked deprecated, yanked, or<br />
+  retracted in the <code>package_manager</code> registry at execution time, OR<br />
+<code>target_version</code> does not satisfy the semver constraint declared in<br />
+  the target&rsquo;s manifest, OR <code>target_version</code> is not a syntactically<br />
+  valid semver string.<br />
+<strong>State effect:</strong> None. No patch is applied.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator.<br />
+  - Return the reason for invalidity (deprecated, yanked, semver-invalid,<br />
+    manifest-constraint-violation) in the fault payload.<br />
+  - Never install a yanked or deprecated package.<br />
+<strong>Notes:</strong> A yanked <code>target_version</code> at execution time that was valid at<br />
+  plan derivation time indicates a supply chain event that occurred during<br />
+  the incident response window. Treat this as a signal that the plan<br />
+  needs to be re-derived with a new target version. Substrate operators<br />
+  SHOULD verify the new target version&rsquo;s provenance before re-approval.</p>
+<hr />
+<h3 id="package_manager_error">PACKAGE_MANAGER_ERROR<a class="toc-permalink" href="#package_manager_error" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> EXE-010<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> RECOVERABLE<br />
+<strong>Emitted by:</strong> <code>incident.execute.patch_dependency</code><br />
+<strong>Condition:</strong> The package manager returned a non-zero exit code or error<br />
+  response during package installation, resolution, or lock file generation.<br />
+  The patch was not successfully applied.<br />
+<strong>State effect:</strong> The package manager should have rolled back; if it did<br />
+  not, <code>PARTIAL_EXECUTION</code> (GEN-005) supersedes this fault.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator.<br />
+  - Capture and log the full package manager error output in the<br />
+<code>ExecutionRecord</code>.<br />
+  - Verify the package manager performed its own rollback before allowing<br />
+    retry.<br />
+  - Apply backoff before retry if the error is transient (e.g., registry<br />
+    timeout).<br />
+<strong>Notes:</strong> Common transient causes: package registry downtime, DNS failure,<br />
+  rate limiting. Common non-transient causes: dependency conflict,<br />
+  incompatible platform, missing system library. Non-transient errors<br />
+  require plan re-derivation with a compatible target package.</p>
+<hr />
+<h3 id="unknown_followup_code">UNKNOWN_FOLLOWUP_CODE<a class="toc-permalink" href="#unknown_followup_code" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> EXE-011<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> RECOVERABLE<br />
+<strong>Emitted by:</strong> <code>incident.execute.flag_for_followup</code><br />
+<strong>Condition:</strong> The <code>followup_code</code> value is not a member of the<br />
+<code>FollowupCode</code> registry.<br />
+<strong>State effect:</strong> None. No follow-up ticket is created.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator.<br />
+  - Return the full <code>FollowupCode</code> registry in the fault payload.<br />
+<strong>Notes:</strong> The <code>FollowupCode</code> registry is closed. Use <code>MANUAL_REMEDIATION_REQUIRED</code><br />
+  as the general-purpose code when no more specific code applies.</p>
+<hr />
+<h3 id="invalid_priority">INVALID_PRIORITY<a class="toc-permalink" href="#invalid_priority" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> EXE-012<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> RECOVERABLE<br />
+<strong>Emitted by:</strong> <code>incident.execute.flag_for_followup</code><br />
+<strong>Condition:</strong> The <code>priority</code> value is not a member of<br />
+<code>{CRITICAL, HIGH, MEDIUM, LOW}</code>.<br />
+<strong>State effect:</strong> None. No follow-up ticket is created.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator.<br />
+  - Return the valid <code>FollowupPriority</code> values in the fault payload.<br />
+<strong>Notes:</strong> Implementations MUST NOT default to any priority value silently.<br />
+  Priority must be explicitly supplied by the caller for every follow-up flag.</p>
+<hr />
+<h3 id="empty_assignee_list">EMPTY_ASSIGNEE_LIST<a class="toc-permalink" href="#empty_assignee_list" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> EXE-013<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> RECOVERABLE<br />
+<strong>Emitted by:</strong> <code>incident.execute.flag_for_followup</code><br />
+<strong>Condition:</strong> The <code>assigned_to</code> list is empty (zero entries).<br />
+<strong>State effect:</strong> None. No follow-up ticket is created.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator.<br />
+  - Require the caller to supply at least one assignee identifier.<br />
+<strong>Notes:</strong> Unassigned follow-up tickets are operationally dead — they will<br />
+  never be actioned. The substrate requires at least one assignee to ensure<br />
+  accountability. If the correct assignee is unknown, use a team or role<br />
+  identifier from the operator registry.</p>
+<hr />
+<h3 id="unresolvable_assignee">UNRESOLVABLE_ASSIGNEE<a class="toc-permalink" href="#unresolvable_assignee" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> EXE-014<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> OPERATOR_ACTION_REQUIRED<br />
+<strong>Emitted by:</strong> <code>incident.execute.flag_for_followup</code><br />
+<strong>Condition:</strong> One or more identifiers in <code>assigned_to</code> do not resolve in<br />
+  the operator registry.<br />
+<strong>State effect:</strong> None. No follow-up ticket is created.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator.<br />
+  - Return all unresolvable identifiers in the fault payload.<br />
+  - Do not create a partial ticket with only resolved assignees.<br />
+<strong>Notes:</strong> All assignees must be resolvable before the ticket is created.<br />
+  Partial assignment creates accountability gaps. Unresolvable identifiers<br />
+  must be registered in the operator registry by a substrate administrator.</p>
+<hr />
+<h3 id="insufficient_risk_detail">INSUFFICIENT_RISK_DETAIL<a class="toc-permalink" href="#insufficient_risk_detail" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Code:</strong> EXE-015<br />
+<strong>Severity:</strong> ERROR<br />
+<strong>Recoverability:</strong> RECOVERABLE<br />
+<strong>Emitted by:</strong> <code>incident.execute.flag_for_followup</code><br />
+<strong>Condition:</strong> <code>followup_code == RISK_ACCEPTED</code> and <code>detail.length</code> is below<br />
+<code>MIN_RISK_ACCEPTANCE_DETAIL_LENGTH</code> (default: 150 characters; see<br />
+<code>operator_grammar.md</code> Section 9).<br />
+<strong>State effect:</strong> None. No follow-up ticket is created.<br />
+<strong>Handler MUST:</strong><br />
+  - Abort operator.<br />
+  - Return the minimum required length and the actual submitted length<br />
+    in the fault payload.<br />
+<strong>Notes:</strong> Risk acceptance is a formal act with audit implications.<br />
+  The elevated minimum detail length ensures that risk acceptance decisions<br />
+  are substantively documented — not rubber</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Incident_Substrate_Model/substrate_errors.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/Incident_Substrate_Model/substrate_errors.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

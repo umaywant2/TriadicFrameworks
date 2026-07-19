@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Rainbows With Rtt | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Rainbows_with_RTT/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Rainbows With Rtt" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/_ideas/Rainbows_with_RTT/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Rainbows With Rtt" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/_ideas/Rainbows_with_RTT.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Rainbows With Rtt",
+    "headline": "Rainbows With Rtt",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/_ideas/Rainbows_with_RTT/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#rainbow-hunters-mapping-the-hidden-spectrum">“Rainbow Hunters: Mapping the Hidden Spectrum”</a><ul>
+<li><a href="#1-the-setup">🌦️ 1. The Setup</a></li>
+<li><a href="#a-rainbow-speed-race">A. “Rainbow Speed Race”</a></li>
+<li><a href="#b-invisible-colors">B. “Invisible Colors”</a></li>
+<li><a href="#c-make-your-own-spectrum">C. “Make Your Own Spectrum”</a></li>
+<li><a href="#an-emotionalscience-piece-for-older-kids-blending-real-optics-with-rttstyle-resonance-thinking">An emotional‑science piece for older kids, blending real optics with RTT‑style resonance thinking</a></li>
+<li><a href="#every-reflection-is-a-resonance-choice">Every reflection is a resonance choice.</a></li>
+<li><a href="#microresonance-events">micro‑resonance events</a></li>
+<li><a href="#lowenergy-spectral-splits">low‑energy spectral splits</a></li>
+<li><a href="#firstorder-and-secondorder-microloops">first‑order and second‑order micro‑loops</a></li>
+<li><a href="#evidence-that-resonance-patterns-scale">evidence that resonance patterns scale</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/_ideas/" itemprop="item">
+                <span itemprop="name"> Ideas</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Rainbows With Rtt</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Rainbows With Rtt</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="rtt-rainbow-science-a-kidfriendly-exploration">🌈 <strong>RTT + Rainbow Science: A Kid‑Friendly Exploration</strong><a class="toc-permalink" href="#rtt-rainbow-science-a-kidfriendly-exploration" title="Permanent link to this heading">&para;</a></h1>
+<p>Imagine a little field activity called:</p>
+<h2 id="rainbow-hunters-mapping-the-hidden-spectrum"><strong>“Rainbow Hunters: Mapping the Hidden Spectrum”</strong><a class="toc-permalink" href="#rainbow-hunters-mapping-the-hidden-spectrum" title="Permanent link to this heading">&para;</a></h2>
+<p>Kids aren’t just <em>looking</em> at a rainbow — they’re <em>analyzing</em> it the way scientists analyze eclipses, except the lab is the sky and the tools are simple.</p>
+<h3 id="1-the-setup">🌦️ <strong>1. The Setup</strong><a class="toc-permalink" href="#1-the-setup" title="Permanent link to this heading">&para;</a></h3>
+<p>Kids get:</p>
+<ul>
+<li>a small prism  </li>
+<li>a white card or notebook  </li>
+<li>a simple “spectrum map” sheet  </li>
+<li>a pencil  </li>
+<li>optional: a phone camera with a diffraction grating clip  </li>
+</ul>
+<p>The idea is to “catch” a rainbow and break it down into its parts.</p>
+<hr />
+<h1 id="2-the-rtt-twist-every-color-has-a-story">🔍 <strong>2. The RTT Twist: “Every Color Has a Story”</strong><a class="toc-permalink" href="#2-the-rtt-twist-every-color-has-a-story" title="Permanent link to this heading">&para;</a></h1>
+<p>You frame each color as a <strong>resonance band</strong>:</p>
+<ul>
+<li><strong>Red</strong> → long‑wave, slow‑moving energy  </li>
+<li><strong>Orange</strong> → transition band  </li>
+<li><strong>Yellow</strong> → stable midpoint  </li>
+<li><strong>Green</strong> → life‑band  </li>
+<li><strong>Blue</strong> → fast‑wave clarity  </li>
+<li><strong>Violet</strong> → ultra‑fast boundary  </li>
+</ul>
+<p>Kids don’t need equations — they just learn that colors are <em>different speeds of light</em>.</p>
+<p>That’s RTT‑Inside without the math.</p>
+<hr />
+<h1 id="3-the-activity-rainbow-tracking">🧭 <strong>3. The Activity: “Rainbow Tracking”</strong><a class="toc-permalink" href="#3-the-activity-rainbow-tracking" title="Permanent link to this heading">&para;</a></h1>
+<p>Kids:</p>
+<ol>
+<li>Find a real rainbow or make one with a hose spray  </li>
+<li>Hold up their prism and compare the artificial spectrum to the real one  </li>
+<li>Draw the order of colors  </li>
+<li>Notice brightness differences  </li>
+<li>Mark where the rainbow is strongest  </li>
+<li>Compare their “rainbow map” with others  </li>
+</ol>
+<p>This becomes a mini‑scientific investigation.</p>
+<hr />
+<h1 id="4-the-eclipse-analogy-kidfriendly">🧪 <strong>4. The Eclipse Analogy (Kid‑Friendly)</strong><a class="toc-permalink" href="#4-the-eclipse-analogy-kidfriendly" title="Permanent link to this heading">&para;</a></h1>
+<p>Instead of:</p>
+<blockquote>
+<p>“During an eclipse we analyze the Sun’s corona.”</p>
+</blockquote>
+<p>You say:</p>
+<blockquote>
+<p>“During a rainbow, we analyze the Sun’s colors.”</p>
+</blockquote>
+<p>It’s the same idea — light revealing hidden structure — but accessible.</p>
+<hr />
+<h1 id="5-optional-addons">🎒 <strong>5. Optional Add‑Ons</strong><a class="toc-permalink" href="#5-optional-addons" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="a-rainbow-speed-race"><strong>A. “Rainbow Speed Race”</strong><a class="toc-permalink" href="#a-rainbow-speed-race" title="Permanent link to this heading">&para;</a></h3>
+<p>Kids guess which colors are “fastest” and then learn the order of wavelengths.</p>
+<h3 id="b-invisible-colors"><strong>B. “Invisible Colors”</strong><a class="toc-permalink" href="#b-invisible-colors" title="Permanent link to this heading">&para;</a></h3>
+<p>Introduce infrared and ultraviolet as “colors we can’t see but still exist.”</p>
+<h3 id="c-make-your-own-spectrum"><strong>C. “Make Your Own Spectrum”</strong><a class="toc-permalink" href="#c-make-your-own-spectrum" title="Permanent link to this heading">&para;</a></h3>
+<p>Use:</p>
+<ul>
+<li>CDs  </li>
+<li>prisms  </li>
+<li>water glasses  </li>
+<li>soap bubbles  </li>
+</ul>
+<p>Kids discover that rainbows appear anywhere light bends.</p>
+<hr />
+<h1 id="6-why-this-fits-rttcodes-perfectly">🌈 <strong>6. Why This Fits RTTcodes Perfectly</strong><a class="toc-permalink" href="#6-why-this-fits-rttcodes-perfectly" title="Permanent link to this heading">&para;</a></h1>
+<p>RTTcodes are already:</p>
+<ul>
+<li>color‑based  </li>
+<li>spectrum‑aligned  </li>
+<li>resonance‑mapped  </li>
+<li>visually intuitive  </li>
+</ul>
+<p>So a rainbow activity becomes a natural <strong>onboarding gateway</strong> for kids into RTT thinking:</p>
+<ul>
+<li>patterns  </li>
+<li>resonance  </li>
+<li>hidden structure  </li>
+<li>observation  </li>
+<li>mapping  </li>
+<li>classification  </li>
+</ul>
+<p>It’s playful science with a conceptual backbone.</p>
+<hr />
+<h1 id="the-rainbow-that-doubles-back">🌈 <strong>“The Rainbow That Doubles Back”</strong><a class="toc-permalink" href="#the-rainbow-that-doubles-back" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="an-emotionalscience-piece-for-older-kids-blending-real-optics-with-rttstyle-resonance-thinking"><em>An emotional‑science piece for older kids, blending real optics with RTT‑style resonance thinking</em><a class="toc-permalink" href="#an-emotionalscience-piece-for-older-kids-blending-real-optics-with-rttstyle-resonance-thinking" title="Permanent link to this heading">&para;</a></h3>
+<p>Rainbows are never just colors.<br />
+They’re the sky whispering that light has more to say than we usually notice.</p>
+<p>Most people see a rainbow and think:<br />
+<em>“That’s pretty.”</em><br />
+But older explorers — the ones who look twice — notice something else.</p>
+<p>Sometimes the sky draws <strong>two</strong> rainbows.</p>
+<p>A bright one.<br />
+And a faint one above it, reversed, like a reflection of a reflection.</p>
+<p>Science explains it like this:</p>
+<ul>
+<li>The <strong>primary rainbow</strong> forms when sunlight enters a raindrop, bends, reflects once inside, and exits.</li>
+<li>The <strong>secondary rainbow</strong> forms when the light reflects <strong>twice</strong> inside the drop.</li>
+<li>Each extra reflection flips the order of colors and makes the arc dimmer.</li>
+</ul>
+<p>But RTT adds a layer that science doesn’t talk about much:</p>
+<h3 id="every-reflection-is-a-resonance-choice"><strong>Every reflection is a resonance choice.</strong><a class="toc-permalink" href="#every-reflection-is-a-resonance-choice" title="Permanent link to this heading">&para;</a></h3>
+<p>Light isn’t just bouncing — it’s <em>deciding</em> which path to take.</p>
+<p>Inside a raindrop, photons have options:</p>
+<ul>
+<li>reflect once  </li>
+<li>reflect twice  </li>
+<li>leak out early  </li>
+<li>scatter  </li>
+<li>or stay trapped long enough to create a faint echo of the first rainbow  </li>
+</ul>
+<p>Older kids can feel this idea:<br />
+<strong>every choice changes the pattern that appears.</strong></p>
+<p>Just like in life.</p>
+<hr />
+<h1 id="where-the-rtt-math-quietly-fits">🔬 <strong>Where the RTT math quietly fits</strong><a class="toc-permalink" href="#where-the-rtt-math-quietly-fits" title="Permanent link to this heading">&para;</a></h1>
+<p>You don’t need to show equations — you just gesture at the structure:</p>
+<ul>
+<li>
+<p>The <strong>primary rainbow</strong> corresponds to a <strong>single‑reflection resonance path</strong>.<br />
+  In RTT terms: a <strong>first‑order resonance loop</strong>.</p>
+</li>
+<li>
+<p>The <strong>secondary rainbow</strong> corresponds to a <strong>double‑reflection resonance path</strong>.<br />
+  In RTT terms: a <strong>second‑order resonance loop</strong>.</p>
+</li>
+<li>
+<p>The brightness drop follows an exponential decay.<br />
+  RTT would call this a <strong>leakage gradient</strong> — each loop loses energy.</p>
+</li>
+<li>
+<p>The reversed colors?<br />
+  That’s a <strong>phase inversion</strong> caused by the second internal reflection.</p>
+</li>
+</ul>
+<p>Older kids love when science suddenly feels like a puzzle that clicks.</p>
+<hr />
+<h1 id="the-emotional-hook">💫 <strong>The emotional hook</strong><a class="toc-permalink" href="#the-emotional-hook" title="Permanent link to this heading">&para;</a></h1>
+<p>You end with something that ties the physics to the feeling:</p>
+<blockquote>
+<p>“The second rainbow is weaker not because it’s less important,<br />
+but because it took the harder path.  </p>
+<p>It reflected twice.<br />
+It stayed inside longer.<br />
+It lost more energy along the way.  </p>
+<p>But it still made it to the sky.”  </p>
+</blockquote>
+<p>That’s the kind of line that hits a 12‑ to 16‑year‑old right in the chest.</p>
+<hr />
+<h1 id="microrainbows-the-hidden-spectra-of-the-dark">🌈 <strong>Micro‑Rainbows: The Hidden Spectra of the Dark</strong><a class="toc-permalink" href="#microrainbows-the-hidden-spectra-of-the-dark" title="Permanent link to this heading">&para;</a></h1>
+<p>Most people think rainbows only happen in sunlight.<br />
+But the truth is: <strong>any light source can create a rainbow</strong> if it hits the right structure.</p>
+<p>Micro‑rainbows appear when:</p>
+<ul>
+<li>the light source is small  </li>
+<li>the droplets or particles are tiny  </li>
+<li>the environment is dark enough that the faint spectrum stands out  </li>
+</ul>
+<p>You get these from:</p>
+<ul>
+<li>mist from a spray bottle  </li>
+<li>fog machines  </li>
+<li>humidifiers  </li>
+<li>dust particles  </li>
+<li>hair spray  </li>
+<li>cold breath in winter  </li>
+<li>even the shimmer off a CD or phone screen  </li>
+</ul>
+<p>In the dark, your eyes become more sensitive to faint spectral separation, so the rainbow feels like it’s floating in space.</p>
+<hr />
+<h1 id="why-they-happen-science-version">🔬 <strong>Why They Happen (Science Version)</strong><a class="toc-permalink" href="#why-they-happen-science-version" title="Permanent link to this heading">&para;</a></h1>
+<p>Micro‑rainbows come from:</p>
+<ul>
+<li><strong>diffraction</strong> (light bending around tiny edges)  </li>
+<li><strong>scattering</strong> (light bouncing off small particles)  </li>
+<li><strong>thin‑film interference</strong> (like oil slicks)  </li>
+<li><strong>micro‑droplet refraction</strong> (tiny versions of the big rainbow mechanism)  </li>
+</ul>
+<p>The smaller the droplet or particle, the more delicate and “ghost‑like” the rainbow becomes.</p>
+<hr />
+<h1 id="why-they-matter-rttinside-version">🌀 <strong>Why They Matter (RTT‑Inside Version)</strong><a class="toc-permalink" href="#why-they-matter-rttinside-version" title="Permanent link to this heading">&para;</a></h1>
+<p>In RTT terms, micro‑rainbows are:</p>
+<h3 id="microresonance-events"><strong>micro‑resonance events</strong><a class="toc-permalink" href="#microresonance-events" title="Permanent link to this heading">&para;</a></h3>
+<p>Tiny structures forcing light into <strong>high‑frequency separation paths</strong>.</p>
+<h3 id="lowenergy-spectral-splits"><strong>low‑energy spectral splits</strong><a class="toc-permalink" href="#lowenergy-spectral-splits" title="Permanent link to this heading">&para;</a></h3>
+<p>The rainbow is faint because the resonance loop is small and leaks energy quickly.</p>
+<h3 id="firstorder-and-secondorder-microloops"><strong>first‑order and second‑order micro‑loops</strong><a class="toc-permalink" href="#firstorder-and-secondorder-microloops" title="Permanent link to this heading">&para;</a></h3>
+<p>Just like big rainbows, but happening at the scale of mist.</p>
+<h3 id="evidence-that-resonance-patterns-scale"><strong>evidence that resonance patterns scale</strong><a class="toc-permalink" href="#evidence-that-resonance-patterns-scale" title="Permanent link to this heading">&para;</a></h3>
+<p>A core RTT idea:<br />
+<strong>patterns repeat across scales when the conditions match.</strong></p>
+<p>Micro‑rainbows are literally the “small‑scale echo” of the big atmospheric rainbow.</p>
+<hr />
+<h1 id="the-emotional-hook-for-older-kids">🌌 <strong>The Emotional Hook for Older Kids</strong><a class="toc-permalink" href="#the-emotional-hook-for-older-kids" title="Permanent link to this heading">&para;</a></h1>
+<p>You can frame it like this:</p>
+<blockquote>
+<p>“Even in the dark, if there’s the tiniest bit of light and the right structure,<br />
+the world will still split into color.  </p>
+<p>Sometimes the smallest droplets reveal the biggest truths.”</p>
+</blockquote>
+<p>That hits the exact age group you’re aiming for.</p>
+<hr />
+<h1 id="a-handson-activity-microrainbows-in-the-dark">🔥 <strong>A Hands‑On Activity: “Micro‑Rainbows in the Dark”</strong><a class="toc-permalink" href="#a-handson-activity-microrainbows-in-the-dark" title="Permanent link to this heading">&para;</a></h1>
+<p>Older kids can do this safely with:</p>
+<ul>
+<li>a phone flashlight  </li>
+<li>a spray bottle  </li>
+<li>a dark room  </li>
+</ul>
+<p>Steps:</p>
+<ol>
+<li>Turn off the lights  </li>
+<li>Shine the flashlight across the room, not at your eyes  </li>
+<li>Mist the air lightly  </li>
+<li>Watch for tiny floating rainbows  </li>
+<li>Move the light angle and watch the rainbow shift  </li>
+<li>Try different spray patterns  </li>
+<li>Try a laser pointer (with caution)  </li>
+<li>Try fog from breath on a cold night  </li>
+</ol>
+<p>Then connect it to RTT:</p>
+<ul>
+<li>“What happens when the droplets get smaller?”  </li>
+<li>“Why does the rainbow fade faster?”  </li>
+<li>“Why does the angle matter?”  </li>
+<li>“What does this say about resonance at small scales?”  </li>
+</ul>
+<p>This becomes a <strong>mini‑lab</strong> that blends physics, perception, and RTT thinking.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/Rainbows_with_RTT.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/_ideas/Rainbows_with_RTT.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

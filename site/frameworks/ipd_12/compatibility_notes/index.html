@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Compatibility Notes | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/frameworks/ipd_12/compatibility_notes/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Compatibility Notes" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/frameworks/ipd_12/compatibility_notes/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Compatibility Notes" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/frameworks/ipd_12/compatibility_notes.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Compatibility Notes",
+    "headline": "Compatibility Notes",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/frameworks/ipd_12/compatibility_notes/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#1-purpose">1. Purpose</a></li>
+<li><a href="#2-interoperability-principles">2. Interoperability Principles</a><ul>
+<li><a href="#21-no-modification-of-other-frameworks">2.1 No modification of other frameworks</a></li>
+<li><a href="#22-primeindexed-operator-states">2.2 Prime‑indexed operator states</a></li>
+<li><a href="#23-intransitive-cycles-as-paradox-engines">2.3 Intransitive cycles as paradox engines</a></li>
+<li><a href="#24-substrate-first-interpretation">2.4 Substrate-first interpretation</a></li>
+</ul>
+</li>
+<li><a href="#3-rtt-compatibility">3. RTT Compatibility</a><ul>
+<li><a href="#31-operator-family-mapping">3.1 Operator Family Mapping</a></li>
+<li><a href="#32-cycle-interpretation">3.2 Cycle Interpretation</a></li>
+<li><a href="#33-regime-shell-alignment">3.3 Regime Shell Alignment</a></li>
+</ul>
+</li>
+<li><a href="#4-gu-compatibility">4. GU Compatibility</a><ul>
+<li><a href="#41-geometric-operator-mapping">4.1 Geometric Operator Mapping</a></li>
+<li><a href="#42-dimensional-reconciliation">4.2 Dimensional Reconciliation</a></li>
+</ul>
+</li>
+<li><a href="#5-fft-compatibility">5. FFT Compatibility</a><ul>
+<li><a href="#51-regime-stack-integration">5.1 Regime Stack Integration</a></li>
+<li><a href="#52-operator-exposure">5.2 Operator Exposure</a></li>
+<li><a href="#53-boundary-behavior">5.3 Boundary Behavior</a></li>
+</ul>
+</li>
+<li><a href="#6-pantheon-compatibility">6. Pantheon Compatibility</a><ul>
+<li><a href="#61-tier-mapping">6.1 Tier Mapping</a></li>
+<li><a href="#62-mythic-interpretation">6.2 Mythic Interpretation</a></li>
+<li><a href="#63-pantheon-profile-integration">6.3 Pantheon Profile Integration</a></li>
+</ul>
+</li>
+<li><a href="#7-dimensional-logic-compatibility">7. Dimensional Logic Compatibility</a><ul>
+<li><a href="#71-substrate-mapping">7.1 Substrate Mapping</a></li>
+<li><a href="#72-observer-mapping">7.2 Observer Mapping</a></li>
+<li><a href="#73-functional-mapping">7.3 Functional Mapping</a></li>
+</ul>
+</li>
+<li><a href="#8-substrate-engine-compatibility">8. Substrate Engine Compatibility</a></li>
+<li><a href="#9-crossframework-notes">9. Cross‑Framework Notes</a><ul>
+<li><a href="#91-ipd12-is-universal">9.1 IPD‑12 is universal</a></li>
+<li><a href="#92-paradox-stability">9.2 Paradox stability</a></li>
+<li><a href="#93-dimensional-liftcollapse">9.3 Dimensional lift/collapse</a></li>
+<li><a href="#94-observer-integration">9.4 Observer integration</a></li>
+</ul>
+</li>
+<li><a href="#10-summary">10. Summary</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/frameworks/" itemprop="item">
+                <span itemprop="name">Frameworks</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/frameworks/ipd_12/" itemprop="item">
+                <span itemprop="name">Ipd 12</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Compatibility Notes</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Compatibility Notes</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="compatibility_notesmd"><code>compatibility_notes.md</code><a class="toc-permalink" href="#compatibility_notesmd" title="Permanent link to this heading">&para;</a></h1>
+<p><strong>IPD‑12 — Canonical Interoperability Notes</strong><br />
+<strong>Module:</strong> IPD‑12 Framework<br />
+<strong>Version:</strong> 2026‑1.0<br />
+<strong>Role:</strong> Cross‑cutting / Compatibility</p>
+<hr />
+<h2 id="1-purpose">1. Purpose<a class="toc-permalink" href="#1-purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>These notes define the <strong>interoperability layer</strong> between the <strong>IPD‑12 Intransitive Prime Engine</strong> and the rest of the TriadicFrameworks canon:</p>
+<ul>
+<li>RTT (Resonance‑Time Theory)  </li>
+<li>GU (Geometric Unity)  </li>
+<li>FFT (Framework Field Theory)  </li>
+<li>Pantheon Profiles  </li>
+<li>Triadic Logical Dimension Model (−1D | 0D | +1D)  </li>
+<li>Substrate Engine (4×4×4)  </li>
+<li>Observer Model (Triadic + Quad)  </li>
+</ul>
+<p>IPD‑12 is the first <strong>physicalizable operator artifact</strong> in the canon, and these notes ensure it integrates cleanly with all other frameworks.</p>
+<hr />
+<h2 id="2-interoperability-principles">2. Interoperability Principles<a class="toc-permalink" href="#2-interoperability-principles" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="21-no-modification-of-other-frameworks"><strong>2.1 No modification of other frameworks</strong><a class="toc-permalink" href="#21-no-modification-of-other-frameworks" title="Permanent link to this heading">&para;</a></h3>
+<p>IPD‑12 is interpretive and additive.<br />
+It does <strong>not</strong> alter RTT, GU, FFT, Pantheon, or dimensional logic.</p>
+<h3 id="22-primeindexed-operator-states"><strong>2.2 Prime‑indexed operator states</strong><a class="toc-permalink" href="#22-primeindexed-operator-states" title="Permanent link to this heading">&para;</a></h3>
+<p>All interoperability is anchored on the 12 canonical prime states:</p>
+<div class="codehilite"><pre><span></span><code>P2, P3, P5, P7, P11, P13, P17, P19, P23, P29, P31, P37
+</code></pre></div>
+
+<p>These act as universal operator anchors across frameworks.</p>
+<h3 id="23-intransitive-cycles-as-paradox-engines"><strong>2.3 Intransitive cycles as paradox engines</strong><a class="toc-permalink" href="#23-intransitive-cycles-as-paradox-engines" title="Permanent link to this heading">&para;</a></h3>
+<p>IPD‑12’s directed cycles map directly to RTT paradox operators and GU anomaly structures.</p>
+<h3 id="24-substrate-first-interpretation"><strong>2.4 Substrate-first interpretation</strong><a class="toc-permalink" href="#24-substrate-first-interpretation" title="Permanent link to this heading">&para;</a></h3>
+<p>The 4×4×4 substrate engine provides the dimensional foundation for all compatibility mappings.</p>
+<hr />
+<h2 id="3-rtt-compatibility">3. RTT Compatibility<a class="toc-permalink" href="#3-rtt-compatibility" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="31-operator-family-mapping"><strong>3.1 Operator Family Mapping</strong><a class="toc-permalink" href="#31-operator-family-mapping" title="Permanent link to this heading">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>RTT Operator</th>
+<th>IPD‑12 Mapping</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Drift</td>
+<td>P5, P29</td>
+<td>Drift anchors in triad cycles</td>
+</tr>
+<tr>
+<td>Regime</td>
+<td>P7, P17</td>
+<td>Regime-shift and cycle-gate primes</td>
+</tr>
+<tr>
+<td>Coherence</td>
+<td>P11, P31</td>
+<td>Stability and refractive vacuum primes</td>
+</tr>
+<tr>
+<td>Paradox</td>
+<td>P13, P37</td>
+<td>Intransitive apex paradox triggers</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-cycle-interpretation"><strong>3.2 Cycle Interpretation</strong><a class="toc-permalink" href="#32-cycle-interpretation" title="Permanent link to this heading">&para;</a></h3>
+<p>RTT paradox loops correspond to IPD‑12’s:</p>
+<ul>
+<li>4 triads  </li>
+<li>2 hex‑cycles  </li>
+<li>1 full 12‑cycle  </li>
+</ul>
+<h3 id="33-regime-shell-alignment"><strong>3.3 Regime Shell Alignment</strong><a class="toc-permalink" href="#33-regime-shell-alignment" title="Permanent link to this heading">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>RTT Regime</th>
+<th>IPD‑12 Faces</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Regime‑0</td>
+<td>P11, P31</td>
+</tr>
+<tr>
+<td>Regime‑1</td>
+<td>P2, P3, P5</td>
+</tr>
+<tr>
+<td>Regime‑2</td>
+<td>P7, P11, P13, P17, P19</td>
+</tr>
+<tr>
+<td>Regime‑3</td>
+<td>P23, P29, P31, P37</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-gu-compatibility">4. GU Compatibility<a class="toc-permalink" href="#4-gu-compatibility" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="41-geometric-operator-mapping"><strong>4.1 Geometric Operator Mapping</strong><a class="toc-permalink" href="#41-geometric-operator-mapping" title="Permanent link to this heading">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>GU Operator</th>
+<th>IPD‑12 Faces</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Connection</td>
+<td>P2, P3</td>
+<td>Seed and transition geometry</td>
+</tr>
+<tr>
+<td>Curvature</td>
+<td>P7, P11</td>
+<td>Regime-shift curvature and coherence curvature</td>
+</tr>
+<tr>
+<td>Dilaton</td>
+<td>P11, P31</td>
+<td>Stability fields</td>
+</tr>
+<tr>
+<td>Anomaly</td>
+<td>P13, P37</td>
+<td>Paradox and apex anomaly behavior</td>
+</tr>
+<tr>
+<td>Observerse</td>
+<td>P17, P19, P23</td>
+<td>Boundary and dimensional lift</td>
+</tr>
+<tr>
+<td>Refractive Vacuum</td>
+<td>P31</td>
+<td>Stability prime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="42-dimensional-reconciliation"><strong>4.2 Dimensional Reconciliation</strong><a class="toc-permalink" href="#42-dimensional-reconciliation" title="Permanent link to this heading">&para;</a></h3>
+<p>IPD‑12’s substrate engine provides a <strong>triadic dimensional scaffold</strong> compatible with GU’s:</p>
+<ul>
+<li>base manifold  </li>
+<li>fiber structure  </li>
+<li>observer bundle  </li>
+<li>refractive vacuum  </li>
+</ul>
+<hr />
+<h2 id="5-fft-compatibility">5. FFT Compatibility<a class="toc-permalink" href="#5-fft-compatibility" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="51-regime-stack-integration"><strong>5.1 Regime Stack Integration</strong><a class="toc-permalink" href="#51-regime-stack-integration" title="Permanent link to this heading">&para;</a></h3>
+<p>FFT treats IPD‑12 cycles as regime‑transition operators.</p>
+<h3 id="52-operator-exposure"><strong>5.2 Operator Exposure</strong><a class="toc-permalink" href="#52-operator-exposure" title="Permanent link to this heading">&para;</a></h3>
+<p>FFT exposes IPD‑12 primes as:</p>
+<ul>
+<li>cycle nodes  </li>
+<li>paradox triggers  </li>
+<li>coherence stabilizers  </li>
+<li>dimensional lift/collapse operators  </li>
+</ul>
+<h3 id="53-boundary-behavior"><strong>5.3 Boundary Behavior</strong><a class="toc-permalink" href="#53-boundary-behavior" title="Permanent link to this heading">&para;</a></h3>
+<p>IPD‑12 boundary primes (P17, P19) map to FFT boundary operators.</p>
+<hr />
+<h2 id="6-pantheon-compatibility">6. Pantheon Compatibility<a class="toc-permalink" href="#6-pantheon-compatibility" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="61-tier-mapping"><strong>6.1 Tier Mapping</strong><a class="toc-permalink" href="#61-tier-mapping" title="Permanent link to this heading">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Pantheon Tier</th>
+<th>IPD‑12 Faces</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Celestial</td>
+<td>P2, P3, P5, P7</td>
+</tr>
+<tr>
+<td>Civilizational</td>
+<td>P11, P13, P17, P19</td>
+</tr>
+<tr>
+<td>Chthonic</td>
+<td>P23, P29, P31, P37</td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-mythic-interpretation"><strong>6.2 Mythic Interpretation</strong><a class="toc-permalink" href="#62-mythic-interpretation" title="Permanent link to this heading">&para;</a></h3>
+<p>IPD‑12 cycles correspond to:</p>
+<ul>
+<li>Celestial order cycles  </li>
+<li>Civilizational paradox cycles  </li>
+<li>Chthonic dimensional cycles  </li>
+</ul>
+<h3 id="63-pantheon-profile-integration"><strong>6.3 Pantheon Profile Integration</strong><a class="toc-permalink" href="#63-pantheon-profile-integration" title="Permanent link to this heading">&para;</a></h3>
+<p>IPD‑12 primes act as <strong>operator deities</strong> in pantheon profiles.</p>
+<hr />
+<h2 id="7-dimensional-logic-compatibility">7. Dimensional Logic Compatibility<a class="toc-permalink" href="#7-dimensional-logic-compatibility" title="Permanent link to this heading">&para;</a></h2>
+<p>IPD‑12 uses the Triadic Logical Dimension Model:</p>
+<div class="codehilite"><pre><span></span><code>−1D → substrate  
+ 0D → observer  
++1D → functional regime
+</code></pre></div>
+
+<h3 id="71-substrate-mapping"><strong>7.1 Substrate Mapping</strong><a class="toc-permalink" href="#71-substrate-mapping" title="Permanent link to this heading">&para;</a></h3>
+<p>−1D maps to:</p>
+<ul>
+<li>coherence nodes  </li>
+<li>stability primes  </li>
+<li>paradox potential  </li>
+</ul>
+<h3 id="72-observer-mapping"><strong>7.2 Observer Mapping</strong><a class="toc-permalink" href="#72-observer-mapping" title="Permanent link to this heading">&para;</a></h3>
+<p>0D maps to:</p>
+<ul>
+<li>triadic observer modes  </li>
+<li>cycle recognition  </li>
+<li>paradox stance  </li>
+</ul>
+<h3 id="73-functional-mapping"><strong>7.3 Functional Mapping</strong><a class="toc-permalink" href="#73-functional-mapping" title="Permanent link to this heading">&para;</a></h3>
+<p>+1D maps to:</p>
+<ul>
+<li>regime traversal  </li>
+<li>dimensional lift/collapse  </li>
+<li>apex operators  </li>
+</ul>
+<hr />
+<h2 id="8-substrate-engine-compatibility">8. Substrate Engine Compatibility<a class="toc-permalink" href="#8-substrate-engine-compatibility" title="Permanent link to this heading">&para;</a></h2>
+<p>The <strong>4×4×4 substrate engine</strong> integrates with all frameworks:</p>
+<table>
+<thead>
+<tr>
+<th>Quadrant</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Substrate (4)</td>
+<td>dual‑binary pairs</td>
+</tr>
+<tr>
+<td>Observer (4)</td>
+<td>triadic + apex modes</td>
+</tr>
+<tr>
+<td>Regime (4)</td>
+<td>RTT shells</td>
+</tr>
+<tr>
+<td>Prime (12)</td>
+<td>IPD‑12 faces</td>
+</tr>
+</tbody>
+</table>
+<p>This yields:</p>
+<div class="codehilite"><pre><span></span><code>64 substrate primitives
+</code></pre></div>
+
+<p>which act as universal compatibility anchors.</p>
+<hr />
+<h2 id="9-crossframework-notes">9. Cross‑Framework Notes<a class="toc-permalink" href="#9-crossframework-notes" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="91-ipd12-is-universal"><strong>9.1 IPD‑12 is universal</strong><a class="toc-permalink" href="#91-ipd12-is-universal" title="Permanent link to this heading">&para;</a></h3>
+<p>Its prime‑indexed operator states can be embedded into:</p>
+<ul>
+<li>RTT  </li>
+<li>GU  </li>
+<li>FFT  </li>
+<li>Pantheon  </li>
+<li>Dimensional logic  </li>
+<li>Substrate engines  </li>
+</ul>
+<h3 id="92-paradox-stability"><strong>9.2 Paradox stability</strong><a class="toc-permalink" href="#92-paradox-stability" title="Permanent link to this heading">&para;</a></h3>
+<p>IPD‑12’s redundant pair logic ensures paradox loops remain stable across frameworks.</p>
+<h3 id="93-dimensional-liftcollapse"><strong>9.3 Dimensional lift/collapse</strong><a class="toc-permalink" href="#93-dimensional-liftcollapse" title="Permanent link to this heading">&para;</a></h3>
+<p>IPD‑12 apex primes (P23, P29, P37) provide dimensional operators compatible with GU and RTT.</p>
+<h3 id="94-observer-integration"><strong>9.4 Observer integration</strong><a class="toc-permalink" href="#94-observer-integration" title="Permanent link to this heading">&para;</a></h3>
+<p>IPD‑12’s triadic observer model is compatible with GU’s observer bundle and RTT’s observer triad.</p>
+<hr />
+<h2 id="10-summary">10. Summary<a class="toc-permalink" href="#10-summary" title="Permanent link to this heading">&para;</a></h2>
+<p>The IPD‑12 Compatibility Notes define how the <strong>Intransitive Prime Engine</strong> integrates with the entire TriadicFrameworks canon.<br />
+It is now a fully interoperable framework artifact with:</p>
+<ul>
+<li>RTT  </li>
+<li>GU  </li>
+<li>FFT  </li>
+<li>Pantheon  </li>
+<li>Dimensional logic  </li>
+<li>Substrate engines  </li>
+</ul>
+<p>This file is ready to paste into your IPD‑12 module.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/frameworks/ipd_12/compatibility_notes.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/frameworks/ipd_12/compatibility_notes.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

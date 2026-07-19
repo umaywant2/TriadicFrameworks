@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Composite | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/frameworks/ipd_12/domain-packs/composite/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Composite" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/frameworks/ipd_12/domain-packs/composite/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Composite" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/frameworks/ipd_12/domain-packs/composite.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Composite",
+    "headline": "Composite",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/frameworks/ipd_12/domain-packs/composite/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#frameworksipd_12domain-packscompositemd">/frameworks/ipd_12/domain-packs/composite.md</a></li>
+<li><a href="#layer-1-geometric-drift">Layer 1 — Geometric Drift</a></li>
+<li><a href="#layer-2-operational-drift">Layer 2 — Operational Drift</a></li>
+<li><a href="#layer-3-temporal-drift">Layer 3 — Temporal Drift</a></li>
+<li><a href="#layer-4-conceptual-drift">Layer 4 — Conceptual Drift</a></li>
+<li><a href="#layer-5-domain-drift">Layer 5 — Domain Drift</a></li>
+<li><a href="#subject">Subject:</a></li>
+<li><a href="#goal">Goal:</a></li>
+<li><a href="#output">Output:</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/frameworks/" itemprop="item">
+                <span itemprop="name">Frameworks</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/frameworks/ipd_12/" itemprop="item">
+                <span itemprop="name">Ipd 12</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/frameworks/ipd_12/domain-packs/" itemprop="item">
+                <span itemprop="name">Domain Packs</span>
+              </a>
+            <meta itemprop="position" content="4" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Composite</span>
+            <meta itemprop="position" content="5" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Composite</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="ipd12-multidomain-drift-analyzer-composite-pack"><strong>IPD‑12 Multi‑Domain Drift Analyzer (Composite Pack)</strong><a class="toc-permalink" href="#ipd12-multidomain-drift-analyzer-composite-pack" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="frameworksipd_12domain-packscompositemd"><code>/frameworks/ipd_12/domain-packs/composite.md</code><a class="toc-permalink" href="#frameworksipd_12domain-packscompositemd" title="Permanent link to this heading">&para;</a></h3>
+<p>The <strong>IPD‑12 Multi‑Domain Drift Analyzer</strong> is the composite drift‑tensor module for analyzing <strong>drift across multiple domains simultaneously</strong>.<br />
+It merges all IPD‑12 domain drift packs into a single structural engine capable of detecting:</p>
+<ul>
+<li>cross‑domain divergence  </li>
+<li>multi‑layer drift  </li>
+<li>coherence breaks across heterogeneous systems  </li>
+<li>regime shifts between unrelated frameworks  </li>
+<li>structural paradoxes across domains  </li>
+</ul>
+<p>This is the highest‑level drift module in IPD‑12.</p>
+<hr />
+<h1 id="1-purpose"><strong>1. Purpose</strong><a class="toc-permalink" href="#1-purpose" title="Permanent link to this heading">&para;</a></h1>
+<p>Analyze drift across <strong>multiple domains at once</strong>, including:</p>
+<ul>
+<li>Music  </li>
+<li>Physics  </li>
+<li>Mythology  </li>
+<li>Engineering  </li>
+<li>Workflow  </li>
+<li>Theory  </li>
+</ul>
+<p>The composite pack is used when the question is:</p>
+<blockquote>
+<p><strong>“How do these domains drift relative to each other?”</strong></p>
+</blockquote>
+<p>or</p>
+<blockquote>
+<p><strong>“Where do cross‑domain coherence breaks occur?”</strong></p>
+</blockquote>
+<hr />
+<h1 id="2-structural-capture-composite"><strong>2. Structural Capture (Composite)</strong><a class="toc-permalink" href="#2-structural-capture-composite" title="Permanent link to this heading">&para;</a></h1>
+<p>For each domain:</p>
+<ul>
+<li>define purpose  </li>
+<li>define boundaries  </li>
+<li>define structural layers  </li>
+<li>define operational flow  </li>
+<li>define coherence baseline  </li>
+</ul>
+<p>Then capture <strong>cross‑domain structural identity</strong>:</p>
+<ul>
+<li>shared operators  </li>
+<li>shared constraints  </li>
+<li>shared regime boundaries  </li>
+<li>shared coherence anchors  </li>
+</ul>
+<p>This forms the <strong>multi‑domain capture matrix</strong>.</p>
+<hr />
+<h1 id="3-drift-analysis-composite"><strong>3. Drift Analysis (Composite)</strong><a class="toc-permalink" href="#3-drift-analysis-composite" title="Permanent link to this heading">&para;</a></h1>
+<p>The composite drift analyzer evaluates drift across:</p>
+<h3 id="layer-1-geometric-drift"><strong>Layer 1 — Geometric Drift</strong><a class="toc-permalink" href="#layer-1-geometric-drift" title="Permanent link to this heading">&para;</a></h3>
+<p>Structural form differences<br />
+(e.g., violin geometry ↔ mechanical tolerances ↔ mythic symbols)</p>
+<h3 id="layer-2-operational-drift"><strong>Layer 2 — Operational Drift</strong><a class="toc-permalink" href="#layer-2-operational-drift" title="Permanent link to this heading">&para;</a></h3>
+<p>Process flow differences<br />
+(e.g., performance practice ↔ manufacturing workflow ↔ ritual sequence)</p>
+<h3 id="layer-3-temporal-drift"><strong>Layer 3 — Temporal Drift</strong><a class="toc-permalink" href="#layer-3-temporal-drift" title="Permanent link to this heading">&para;</a></h3>
+<p>Historical evolution<br />
+(e.g., classical → modern → digital)</p>
+<h3 id="layer-4-conceptual-drift"><strong>Layer 4 — Conceptual Drift</strong><a class="toc-permalink" href="#layer-4-conceptual-drift" title="Permanent link to this heading">&para;</a></h3>
+<p>Interpretive frameworks<br />
+(e.g., acoustic theory ↔ field theory ↔ symbolic archetypes)</p>
+<h3 id="layer-5-domain-drift"><strong>Layer 5 — Domain Drift</strong><a class="toc-permalink" href="#layer-5-domain-drift" title="Permanent link to this heading">&para;</a></h3>
+<p>Cross‑domain divergence<br />
+(e.g., physics ↔ mythology ↔ engineering)</p>
+<p>Operators used:</p>
+<div class="codehilite"><pre><span></span><code>drift()
+drift_tensor()
+detect_divergence()
+</code></pre></div>
+
+<hr />
+<h1 id="4-coherence-alignment-composite"><strong>4. Coherence Alignment (Composite)</strong><a class="toc-permalink" href="#4-coherence-alignment-composite" title="Permanent link to this heading">&para;</a></h1>
+<p>Align coherence across domains by identifying:</p>
+<ul>
+<li>shared structural anchors  </li>
+<li>shared constraints  </li>
+<li>shared operators  </li>
+<li>shared regime boundaries  </li>
+<li>shared coherence targets  </li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li><strong>Music ↔ Physics:</strong> resonance, frequency, vibration  </li>
+<li><strong>Engineering ↔ Workflow:</strong> process flow, tolerances, constraints  </li>
+<li><strong>Mythology ↔ Theory:</strong> archetypes, interpretive layers  </li>
+</ul>
+<p>Operators used:</p>
+<div class="codehilite"><pre><span></span><code>align_coherence()
+cross_system()
+</code></pre></div>
+
+<hr />
+<h1 id="5-composite-drifttensor-map"><strong>5. Composite Drift‑Tensor Map</strong><a class="toc-permalink" href="#5-composite-drifttensor-map" title="Permanent link to this heading">&para;</a></h1>
+<p>A unified drift‑tensor across all domains:</p>
+<div class="codehilite"><pre><span></span><code>┌──────────────────────────────────────────────┐
+│ IPD‑12 Composite Drift‑Tensor                │
+├──────────────────────────────────────────────┤
+│ Layer 1: Geometric Drift                     │
+│ Layer 2: Operational Drift                   │
+│ Layer 3: Temporal Drift                      │
+│ Layer 4: Conceptual Drift                    │
+│ Layer 5: Domain Drift                        │
+└──────────────────────────────────────────────┘
+</code></pre></div>
+
+<p>Each layer is evaluated across <strong>all six domains</strong>.</p>
+<hr />
+<h1 id="6-crossdomain-synthesis"><strong>6. Cross‑Domain Synthesis</strong><a class="toc-permalink" href="#6-crossdomain-synthesis" title="Permanent link to this heading">&para;</a></h1>
+<p>The composite pack produces:</p>
+<ul>
+<li>cross‑domain drift maps  </li>
+<li>multi‑domain coherence alignment  </li>
+<li>structural paradox detection  </li>
+<li>regime‑aware synthesis  </li>
+<li>drift‑aware recommendations  </li>
+</ul>
+<p>This is the <strong>highest‑resolution drift output</strong> in IPD‑12.</p>
+<hr />
+<h1 id="7-operators-composite"><strong>7. Operators (Composite)</strong><a class="toc-permalink" href="#7-operators-composite" title="Permanent link to this heading">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code>map_process()
+compare_process()
+drift()
+drift_tensor()
+detect_divergence()
+align_coherence()
+cross_system()
+</code></pre></div>
+
+<p>All operators run in <strong>multi‑domain mode</strong>.</p>
+<hr />
+<h1 id="8-example-composite-use-case"><strong>8. Example Composite Use Case</strong><a class="toc-permalink" href="#8-example-composite-use-case" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="subject"><strong>Subject:</strong><a class="toc-permalink" href="#subject" title="Permanent link to this heading">&para;</a></h3>
+<p>Music (violin acoustics)<br />
+Physics (thin‑plate vibration)<br />
+Engineering (CNC manufacturing)<br />
+Workflow (production pipeline)<br />
+Mythology (symbolic meaning of instruments)<br />
+Theory (interpretive frameworks)</p>
+<h3 id="goal"><strong>Goal:</strong><a class="toc-permalink" href="#goal" title="Permanent link to this heading">&para;</a></h3>
+<p>Detect drift across all domains and produce a unified drift‑tensor map.</p>
+<h3 id="output"><strong>Output:</strong><a class="toc-permalink" href="#output" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>structural capture  </li>
+<li>drift analysis  </li>
+<li>coherence alignment  </li>
+<li>cross‑domain synthesis  </li>
+<li>final drift‑aware summary  </li>
+</ul>
+<hr />
+<h1 id="9-module-metadata"><strong>9. Module Metadata</strong><a class="toc-permalink" href="#9-module-metadata" title="Permanent link to this heading">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code>module: IPD‑12 Composite Drift Analyzer
+category: drift
+layer: multi-domain
+role: composite-pack
+operators: drift, drift_tensor, map_process, compare_process,
+           align_coherence, cross_system, detect_divergence
+</code></pre></div>
+
+<hr />
+<h1 id="10-summary"><strong>10. Summary</strong><a class="toc-permalink" href="#10-summary" title="Permanent link to this heading">&para;</a></h1>
+<p>The <strong>IPD‑12 Multi‑Domain Drift Analyzer</strong> is the composite drift engine for TriadicFrameworks.<br />
+It merges all domain drift packs into one unified drift‑tensor capable of analyzing divergence across any number of domains simultaneously.</p>
+<p>This is the <strong>top‑level drift module</strong> in IPD‑12.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/frameworks/ipd_12/domain-packs/composite.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/frameworks/ipd_12/domain-packs/composite.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

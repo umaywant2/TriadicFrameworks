@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Physical Layout | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/frameworks/ipd_12/physical_layout/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Physical Layout" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/frameworks/ipd_12/physical_layout/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Physical Layout" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/frameworks/ipd_12/physical_layout.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Physical Layout",
+    "headline": "Physical Layout",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/frameworks/ipd_12/physical_layout/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#1-purpose">1. Purpose</a></li>
+<li><a href="#2-face-prime-role-mapping">2. Face → Prime → Role Mapping</a></li>
+<li><a href="#3-net-layout-ascii">3. Net Layout (ASCII)</a></li>
+<li><a href="#4-face-marking-conventions">4. Face Marking Conventions</a></li>
+<li><a href="#5-printable-label-set">5. Printable Label Set</a></li>
+<li><a href="#6-summary">6. Summary</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/frameworks/" itemprop="item">
+                <span itemprop="name">Frameworks</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/frameworks/ipd_12/" itemprop="item">
+                <span itemprop="name">Ipd 12</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Physical Layout</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Physical Layout</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="ipd12-physical-dice-layout-printable">IPD‑12 Physical Dice Layout (printable)<a class="toc-permalink" href="#ipd12-physical-dice-layout-printable" title="Permanent link to this heading">&para;</a></h1>
+<p><strong>Module:</strong> IPD‑12 Framework<br />
+<strong>File:</strong> /docs/frameworks/ipd_12/physical_layout.md<br />
+<strong>Version:</strong> 2026‑1.0  </p>
+<hr />
+<h2 id="1-purpose">1. Purpose<a class="toc-permalink" href="#1-purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>This document defines a <strong>printable physical layout</strong> for the IPD‑12 die:</p>
+<ul>
+<li>12 faces mapped to <strong>prime‑indexed operator states</strong></li>
+<li>Net layout for <strong>paper/cardstock construction</strong></li>
+<li>Clear marking of <strong>lift / collapse / neutral / gate</strong> roles</li>
+<li>Canon‑aligned with <code>operators.json</code>, <code>regime_map.md</code>, and <code>dimensional_lift_collapse_map.md</code></li>
+</ul>
+<hr />
+<h2 id="2-face-prime-role-mapping">2. Face → Prime → Role Mapping<a class="toc-permalink" href="#2-face-prime-role-mapping" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Face</th>
+<th>Prime</th>
+<th>Label</th>
+<th>Dimensional Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>P2</td>
+<td>Seed (neutral)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+<td>P3</td>
+<td>Transition lift (+1D)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>5</td>
+<td>P5</td>
+<td>Drift collapse (−1D)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>7</td>
+<td>P7</td>
+<td>Regime lift (+1D)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>11</td>
+<td>P11</td>
+<td>Coherence (0D)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>13</td>
+<td>P13</td>
+<td>Paradox collapse (−1D)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>17</td>
+<td>P17</td>
+<td>Gate (0D)</td>
+</tr>
+<tr>
+<td>8</td>
+<td>19</td>
+<td>P19</td>
+<td>Boundary (0D)</td>
+</tr>
+<tr>
+<td>9</td>
+<td>23</td>
+<td>P23</td>
+<td>Dimensional lift (+1D)</td>
+</tr>
+<tr>
+<td>10</td>
+<td>29</td>
+<td>P29</td>
+<td>Collapse anchor (−1D)</td>
+</tr>
+<tr>
+<td>11</td>
+<td>31</td>
+<td>P31</td>
+<td>Stability collapse (−1D)</td>
+</tr>
+<tr>
+<td>12</td>
+<td>37</td>
+<td>P37</td>
+<td>Apex lift (+1D)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-net-layout-ascii">3. Net Layout (ASCII)<a class="toc-permalink" href="#3-net-layout-ascii" title="Permanent link to this heading">&para;</a></h2>
+<p>Use this as a guide for a printable net (each <code>[ ]</code> is a face):</p>
+<div class="codehilite"><pre><span></span><code>           [  2  ]  (P3, Transition Lift)
+           [  3  ]  (P5, Drift Collapse)
+           [  4  ]  (P7, Regime Lift)
+
+[  7  ] [  1  ] [  5  ] [  8  ]
+(P17)   (P2)    (P11)   (P19)
+ Gate   Seed    Coherence Boundary
+
+           [  6  ]  (P13, Paradox Collapse)
+           [  9  ]  (P23, Dimensional Lift)
+           [ 10  ]  (P29, Collapse Anchor)
+           [ 11  ]  (P31, Stability Collapse)
+           [ 12  ]  (P37, Apex Lift)
+</code></pre></div>
+
+<p><strong>Suggested physical net:</strong></p>
+<ul>
+<li>Central ring: faces <strong>1–5–8–7</strong> (seed, coherence, boundary, gate)</li>
+<li>Top strip: faces <strong>2–3–4</strong> (transition/drift/regime)</li>
+<li>Bottom strip: faces <strong>6–9–10–11–12</strong> (paradox/lift/collapse/stability/apex)</li>
+</ul>
+<p>You can adapt this to a standard 12‑sided net (dodecahedron) by placing:</p>
+<ul>
+<li><strong>P2, P11, P17, P19</strong> around the “equator”</li>
+<li>Lift faces (<strong>P3, P7, P23, P37</strong>) distributed to avoid clustering</li>
+<li>Collapse faces (<strong>P5, P13, P29, P31</strong>) opposite or adjacent to their lift counterparts</li>
+</ul>
+<hr />
+<h2 id="4-face-marking-conventions">4. Face Marking Conventions<a class="toc-permalink" href="#4-face-marking-conventions" title="Permanent link to this heading">&para;</a></h2>
+<p>On each physical face, print:</p>
+<div class="codehilite"><pre><span></span><code>Prime:  Pn
+Role:   Seed / Lift / Collapse / Gate / Boundary / Coherence / Apex
+Dim:    −1D / 0D / +1D
+Cycle:  Triad#, Hex#, Full
+</code></pre></div>
+
+<p>Example for face 9:</p>
+<div class="codehilite"><pre><span></span><code>Prime:  P23
+Role:   Dimensional Lift
+Dim:    +1D
+Cycle:  Triad 3, Hex 2, Full 12-cycle
+</code></pre></div>
+
+<hr />
+<h2 id="5-printable-label-set">5. Printable Label Set<a class="toc-permalink" href="#5-printable-label-set" title="Permanent link to this heading">&para;</a></h2>
+<p>You can generate stickers or labels with:</p>
+<div class="codehilite"><pre><span></span><code>Face 1:  P2  — Seed (0D)
+Face 2:  P3  — Transition Lift (+1D)
+Face 3:  P5  — Drift Collapse (−1D)
+Face 4:  P7  — Regime Lift (+1D)
+Face 5:  P11 — Coherence (0D)
+Face 6:  P13 — Paradox Collapse (−1D)
+Face 7:  P17 — Gate (0D)
+Face 8:  P19 — Boundary (0D)
+Face 9:  P23 — Dimensional Lift (+1D)
+Face 10: P29 — Collapse Anchor (−1D)
+Face 11: P31 — Stability Collapse (−1D)
+Face 12: P37 — Apex Lift (+1D)
+</code></pre></div>
+
+<hr />
+<h2 id="6-summary">6. Summary<a class="toc-permalink" href="#6-summary" title="Permanent link to this heading">&para;</a></h2>
+<p>This layout gives you a <strong>physically buildable IPD‑12 die</strong> whose faces:</p>
+<ul>
+<li>encode prime‑indexed operator states</li>
+<li>preserve lift/collapse/neutral roles</li>
+<li>remain canon‑aligned with the substrate, regime, and dimensional maps.</li>
+</ul>
+<p>You can refine the exact geometric net later; this file is the <strong>canonical face mapping and labeling</strong>.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/frameworks/ipd_12/physical_layout.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/frameworks/ipd_12/physical_layout.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

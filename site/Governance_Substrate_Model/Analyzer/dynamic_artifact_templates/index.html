@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Dynamic Artifact Templates | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/dynamic_artifact_templates/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Dynamic Artifact Templates" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/dynamic_artifact_templates/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Dynamic Artifact Templates" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/Governance_Substrate_Model/Analyzer/dynamic_artifact_templates.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Dynamic Artifact Templates",
+    "headline": "Dynamic Artifact Templates",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/dynamic_artifact_templates/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#structural-vector-template">Structural Vector Template</a></li>
+<li><a href="#invariant-report-template">Invariant Report Template</a></li>
+<li><a href="#physics-forces-template">Physics Forces Template</a></li>
+<li><a href="#basin-classification-template">Basin Classification Template</a></li>
+<li><a href="#drift-event-template">Drift Event Template</a></li>
+<li><a href="#transition-path-template">Transition Path Template</a></li>
+<li><a href="#observer-lens-template">Observer Lens Template</a></li>
+<li><a href="#narrative-template">Narrative Template</a></li>
+<li><a href="#dynamic-card-template-uifacing">Dynamic Card Template (UI‑Facing)</a></li>
+<li><a href="#purpose-of-these-templates">Purpose of These Templates</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Governance_Substrate_Model/" itemprop="item">
+                <span itemprop="name">Governance Substrate Model</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/" itemprop="item">
+                <span itemprop="name">Analyzer</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Dynamic Artifact Templates</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Dynamic Artifact Templates</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="dynamic-artifact-templates">Dynamic Artifact Templates<a class="toc-permalink" href="#dynamic-artifact-templates" title="Permanent link to this heading">&para;</a></h1>
+<p><em>Reusable structural templates for Analyzer, Observer, and Simulator outputs</em></p>
+<p>Dynamic artifacts are structured objects generated by the Analyzer pipeline, the Triadic Observer, and the Transition Simulator. These templates ensure that all outputs—vectors, coherence events, drift traces, basin classifications, and narratives—follow a consistent, predictable schema across the Governance Substrate Model (GSM).</p>
+<p>These templates are intentionally substrate‑agnostic, non‑ideological, and suitable for both machine and human consumption.</p>
+<hr />
+<h2 id="structural-vector-template">Structural Vector Template<a class="toc-permalink" href="#structural-vector-template" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>structural_vector:
+  C: &lt;number&gt;   # centralization
+  M: &lt;number&gt;   # method
+  O: &lt;number&gt;   # oversight
+  A: &lt;number&gt;   # access
+  T: &lt;number&gt;   # timing
+  metadata:
+    source: &lt;string&gt;
+    confidence: &lt;0–1&gt;
+</code></pre></div>
+
+<p>Used by:<br />
+- vectorizer<br />
+- DSL adapter<br />
+- historical profiles<br />
+- drift detection  </p>
+<hr />
+<h2 id="invariant-report-template">Invariant Report Template<a class="toc-permalink" href="#invariant-report-template" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>invariant_report:
+  invariants:
+    - id: &lt;string&gt;
+      status: aligned | tension | violated
+      notes: &lt;string&gt;
+  summary:
+    aligned: &lt;int&gt;
+    tension: &lt;int&gt;
+    violated: &lt;int&gt;
+  metadata:
+    confidence: &lt;0–1&gt;
+</code></pre></div>
+
+<p>Used by:<br />
+- invariant checker<br />
+- coherence scoring<br />
+- observer narratives  </p>
+<hr />
+<h2 id="physics-forces-template">Physics Forces Template<a class="toc-permalink" href="#physics-forces-template" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>physics_forces:
+  active_forces:
+    - axis_pair: &lt;C↔O | M↔A | O↔T&gt;
+      magnitude: &lt;number&gt;
+      direction: positive | negative
+      notes: &lt;string&gt;
+  compensatory_movements:
+    - axis: &lt;C|M|O|A|T&gt;
+      adjustment: &lt;number&gt;
+  metadata:
+    physics_version: &lt;string&gt;
+</code></pre></div>
+
+<p>Used by:<br />
+- physics engine<br />
+- drift detection<br />
+- basin movement analysis  </p>
+<hr />
+<h2 id="basin-classification-template">Basin Classification Template<a class="toc-permalink" href="#basin-classification-template" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>basin_classification:
+  nearest_basin: &lt;CPL | CPF | CTR | PCL | HCL&gt;
+  basin_distance: &lt;number&gt;
+  stability_score: &lt;0–1&gt;
+  movement: approaching | departing | stable
+  metadata:
+    basin_version: &lt;string&gt;
+</code></pre></div>
+
+<p>Used by:<br />
+- basin classifier<br />
+- transition pathway engine<br />
+- observer layer  </p>
+<hr />
+<h2 id="drift-event-template">Drift Event Template<a class="toc-permalink" href="#drift-event-template" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>drift_event:
+  event_id: &lt;string&gt;
+  timestamp: &lt;string&gt;
+  drift_vector: [&lt;dC&gt;, &lt;dM&gt;, &lt;dO&gt;, &lt;dA&gt;, &lt;dT&gt;]
+  drift_magnitude: &lt;number&gt;
+  drift_category: micro | meso | macro | regime_shift
+  active_forces: &lt;list&gt;
+  invariant_tension_score: &lt;number&gt;
+  absorptive_strength: &lt;number&gt;
+  basin_movement_direction: approaching | departing | crossing
+  narrative: &lt;string&gt;
+  metadata:
+    source: drift_detector
+</code></pre></div>
+
+<p>Used by:<br />
+- drift detection<br />
+- coherence event schema<br />
+- observer timelines  </p>
+<hr />
+<h2 id="transition-path-template">Transition Path Template<a class="toc-permalink" href="#transition-path-template" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>transition_path:
+  start_basin: &lt;string&gt;
+  end_basin: &lt;string&gt;
+  steps:
+    - basin: &lt;string&gt;
+      cost: &lt;number&gt;
+      notes: &lt;string&gt;
+  total_cost: &lt;number&gt;
+  metadata:
+    graph_version: &lt;string&gt;
+</code></pre></div>
+
+<p>Used by:<br />
+- transition graph engine<br />
+- simulator<br />
+- educational modules  </p>
+<hr />
+<h2 id="observer-lens-template">Observer Lens Template<a class="toc-permalink" href="#observer-lens-template" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>observer_lens:
+  history:
+    vector: &lt;structural_vector&gt;
+    drift_signals: &lt;list&gt;
+    notes: &lt;string&gt;
+  now:
+    vector: &lt;structural_vector&gt;
+    coherence_score: &lt;number&gt;
+    basin: &lt;string&gt;
+  future:
+    projected_drift: &lt;list&gt;
+    transition_signals: &lt;list&gt;
+    notes: &lt;string&gt;
+  metadata:
+    observer_version: &lt;string&gt;
+</code></pre></div>
+
+<p>Used by:<br />
+- triadic observer<br />
+- dashboards<br />
+- narrative generation  </p>
+<hr />
+<h2 id="narrative-template">Narrative Template<a class="toc-permalink" href="#narrative-template" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>structural_narrative:
+  summary: &lt;string&gt;
+  key_events:
+    - &lt;string&gt;
+  coherence_highlights:
+    - &lt;string&gt;
+  drift_explanation:
+    - &lt;string&gt;
+  basin_context:
+    - &lt;string&gt;
+  metadata:
+    generated_by: analyzer
+</code></pre></div>
+
+<p>Used by:<br />
+- Analyzer output<br />
+- UI cards<br />
+- student worksheets  </p>
+<hr />
+<h2 id="dynamic-card-template-uifacing">Dynamic Card Template (UI‑Facing)<a class="toc-permalink" href="#dynamic-card-template-uifacing" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>dynamic_card:
+  title: &lt;string&gt;
+  vector: &lt;structural_vector&gt;
+  basin: &lt;string&gt;
+  coherence_score: &lt;number&gt;
+  drift_magnitude: &lt;number&gt;
+  key_forces: &lt;list&gt;
+  narrative_snippet: &lt;string&gt;
+  links:
+    - label: &lt;string&gt;
+      target: &lt;string&gt;
+  metadata:
+    card_version: &lt;string&gt;
+</code></pre></div>
+
+<p>Used by:<br />
+- dashboards<br />
+- interactive teaching tools<br />
+- governance comparison views  </p>
+<hr />
+<h2 id="purpose-of-these-templates">Purpose of These Templates<a class="toc-permalink" href="#purpose-of-these-templates" title="Permanent link to this heading">&para;</a></h2>
+<p>These templates ensure:</p>
+<ul>
+<li>consistent structure across all Analyzer outputs  </li>
+<li>predictable schemas for UI and API integration  </li>
+<li>easy extension for new modules  </li>
+<li>compatibility with the triadic observer  </li>
+<li>clarity for students and contributors  </li>
+</ul>
+<p>They form the backbone of the GSM’s artifact ecology.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Governance_Substrate_Model/Analyzer/dynamic_artifact_templates.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/Governance_Substrate_Model/Analyzer/dynamic_artifact_templates.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

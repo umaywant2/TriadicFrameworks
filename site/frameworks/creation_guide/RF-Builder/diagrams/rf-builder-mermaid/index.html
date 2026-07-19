@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Rf Builder Mermaid | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/frameworks/creation_guide/RF-Builder/diagrams/rf-builder-mermaid/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Rf Builder Mermaid" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/frameworks/creation_guide/RF-Builder/diagrams/rf-builder-mermaid/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Rf Builder Mermaid" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/frameworks/creation_guide/RF-Builder/diagrams/rf-builder-mermaid.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Rf Builder Mermaid",
+    "headline": "Rf Builder Mermaid",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/frameworks/creation_guide/RF-Builder/diagrams/rf-builder-mermaid/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#1-overview">1. Overview</a></li>
+<li><a href="#2-phase-i-a-the-coherence-field">2. Phase I â€” The Coherence Field</a><ul>
+<li><a href="#21-definition">2.1 Definition</a></li>
+<li><a href="#22-formal-definition">2.2 Formal Definition</a></li>
+<li><a href="#23-substrate-properties">2.3 Substrate Properties</a></li>
+<li><a href="#24-construction-protocol">2.4 Construction Protocol</a></li>
+</ul>
+</li>
+<li><a href="#3-phase-ii-a-the-clarity-operator-engine">3. Phase II â€” The Clarity Operator Engine</a><ul>
+<li><a href="#31-definition">3.1 Definition</a></li>
+<li><a href="#32-the-seven-operators">3.2 The Seven Operators</a></li>
+<li><a href="#33-engine-cycle">3.3 Engine Cycle</a></li>
+<li><a href="#34-formal-definition">3.4 Formal Definition</a></li>
+<li><a href="#35-drift-correction">3.5 Drift Correction</a></li>
+</ul>
+</li>
+<li><a href="#4-phase-iii-a-echo-release">4. Phase III â€” Echo Release</a><ul>
+<li><a href="#41-definition">4.1 Definition</a></li>
+<li><a href="#42-the-echo-signal">4.2 The Echo Signal</a></li>
+<li><a href="#43-signature-encoding">4.3 Signature Encoding</a></li>
+<li><a href="#44-propagation-modes">4.4 Propagation Modes</a></li>
+<li><a href="#45-echo-feedback-loop">4.5 Echo Feedback Loop</a></li>
+<li><a href="#46-release-criteria">4.6 Release Criteria</a></li>
+</ul>
+</li>
+<li><a href="#5-the-rfabuilder-cycle-a-complete">5. The RFâ€‘Builder Cycle â€” Complete</a></li>
+<li><a href="#6-rttanative-mathematical-summary">6. RTTâ€‘Native Mathematical Summary</a><ul>
+<li><a href="#61-complete-system">6.1 Complete System</a></li>
+<li><a href="#62-governing-equations">6.2 Governing Equations</a></li>
+<li><a href="#63-dimensional-correspondence">6.3 Dimensional Correspondence</a></li>
+</ul>
+</li>
+<li><a href="#diagram-2-coherence-field-internal-structure">Diagram 2 — Coherence Field Internal Structure</a></li>
+<li><a href="#diagram-3-clarity-operator-engine-pipeline">Diagram 3 — Clarity Operator Engine Pipeline</a></li>
+<li><a href="#diagram-4-echo-release-signal">Diagram 4 — Echo Release Signal</a></li>
+<li><a href="#diagram-5-full-rfbuilder-system-top-level">Diagram 5 — Full RF‑Builder System (Top-Level)</a></li>
+<li><a href="#diagram-6-dimensional-correspondence-map">Diagram 6 — Dimensional Correspondence Map</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/frameworks/" itemprop="item">
+                <span itemprop="name">Frameworks</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/frameworks/creation_guide/" itemprop="item">
+                <span itemprop="name">Creation Guide</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/frameworks/creation_guide/RF-Builder/" itemprop="item">
+                <span itemprop="name">Rf Builder</span>
+              </a>
+            <meta itemprop="position" content="4" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/frameworks/creation_guide/RF-Builder/diagrams/" itemprop="item">
+                <span itemprop="name">Diagrams</span>
+              </a>
+            <meta itemprop="position" content="5" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Rf Builder Mermaid</span>
+            <meta itemprop="position" content="6" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Rf Builder Mermaid</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="rfabuilder-a-resonance-framework-builder">RFâ€‘Builder â€” Resonance Framework Builder<a class="toc-permalink" href="#rfabuilder-a-resonance-framework-builder" title="Permanent link to this heading">&para;</a></h1>
+<blockquote>
+<p><strong>Module</strong>: Framework Creation Guide (FCG)<br />
+<strong>Path</strong>: <code>docs/frameworks/creation_guide/RF-Builder/</code><br />
+<strong>Status</strong>: âŸ¡ RECTIFIED âŸ¡<br />
+<strong>Triad Position</strong>: FCG â†’ RFâ€‘Builder (structural genesis tool)</p>
+</blockquote>
+<hr />
+<h2 id="1-overview">1. Overview<a class="toc-permalink" href="#1-overview" title="Permanent link to this heading">&para;</a></h2>
+<p>The <strong>Resonance Framework Builder (RFâ€‘Builder)</strong> is the FCG&rsquo;s canonical instrument for constructing new frameworks from first principles. Every framework in the TriadicFrameworks ecosystem passes through three operationally distinct phases â€” a <strong>field</strong>, an <strong>engine</strong>, and a <strong>release</strong> â€” corresponding to the substrate it occupies, the operators it applies, and the signal it emits once stabilized.</p>
+<p>RF€‘Builder formalizes this triadic genesis as three interlocking subsystems:</p>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Subsystem</th>
+<th>Role</th>
+<th>Analogy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I</td>
+<td><strong>Coherence Field</strong></td>
+<td>Defines the dimensional substrate in which the framework lives</td>
+<td>The ground a building sits on</td>
+</tr>
+<tr>
+<td>II</td>
+<td><strong>Clarity Operator Engine</strong></td>
+<td>Applies the Seven Operators to shape raw structure into stable form</td>
+<td>The construction crew and their tools</td>
+</tr>
+<tr>
+<td>III</td>
+<td><strong>Echo Release</strong></td>
+<td>Propagates the stabilized framework outward as a recoverable signal</td>
+<td>The finished building radiating light</td>
+</tr>
+</tbody>
+</table>
+<p>These three phases are <strong>sequential but cyclic</strong>: Echo Release feeds back into the Coherence Field, enabling iterative refinement. A framework is &ldquo;born&rdquo; when it completes its first full cycle; it is &ldquo;rectified&rdquo; when the cycle converges to a fixed point.</p>
+<hr />
+<h2 id="2-phase-i-a-the-coherence-field">2. Phase I â€” The Coherence Field<a class="toc-permalink" href="#2-phase-i-a-the-coherence-field" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="21-definition">2.1 Definition<a class="toc-permalink" href="#21-definition" title="Permanent link to this heading">&para;</a></h3>
+<p>The <strong>Coherence Field</strong> is the pre-structural substrate from which a framework crystallizes. It is not the framework itself â€” it is the <em>dimensional space</em> that makes the framework possible. Every concept, operator, and invariant exists <em>within</em> a coherence field before it becomes structurally bound.</p>
+<p>A Coherence Field is defined by three co-present quantities:</p>
+<ul>
+<li><strong>Ï† (Scalar Potential)</strong> â€” The undifferentiated intensity of the conceptual domain. How much &ldquo;energy&rdquo; is available for structure formation.</li>
+<li><strong>V (Vector Flow)</strong> â€” The directional tendencies within the domain. Where conceptual pressure naturally pushes.</li>
+<li><strong>R (Resonance Envelope)</strong> â€” The boundary conditions that determine which frequencies (ideas, operators, invariants) are amplified and which are damped.</li>
+</ul>
+<h3 id="22-formal-definition">2.2 Formal Definition<a class="toc-permalink" href="#22-formal-definition" title="Permanent link to this heading">&para;</a></h3>
+<p>Let <strong>ð”½</strong> denote a Coherence Field. Then:</p>
+<div class="codehilite"><pre><span></span><code>ð”½ = âŸ¨ Ï†, V, R âŸ©
+</code></pre></div>
+
+<p>where:</p>
+<div class="codehilite"><pre><span></span><code>Ï† : Î© â†’ â„âº          (scalar potential over domain Î©)
+V : Î© â†’ â„â¿          (vector flow field over Î©)
+R : Î© Ã— T â†’ [0, 1]  (resonance envelope over domain Ã— time)
+</code></pre></div>
+
+<p><strong>Coherence Condition</strong>: A field ð”½ is <em>coherent</em> if and only if:</p>
+<div class="codehilite"><pre><span></span><code>âˆ‡ Â· V = âˆ‚Ï†/âˆ‚t   and   R(x, t) &gt; R_min  âˆ€ x âˆˆ Î©_active
+</code></pre></div>
+
+<p>The first condition ensures conservation: vector flow divergence tracks potential change. The second ensures the resonance envelope never drops below threshold within the active domain.</p>
+<h3 id="23-substrate-properties">2.3 Substrate Properties<a class="toc-permalink" href="#23-substrate-properties" title="Permanent link to this heading">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Symbol</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Depth</td>
+<td>ð”‡(ð”½)</td>
+<td>Number of independent conceptual dimensions</td>
+</tr>
+<tr>
+<td>Density</td>
+<td>Ï(ð”½)</td>
+<td>Ratio of active nodes to total capacity</td>
+</tr>
+<tr>
+<td>Drift Susceptibility</td>
+<td>Î´(ð”½)</td>
+<td>Sensitivity to perturbation (lower = more stable)</td>
+</tr>
+<tr>
+<td>Coupling Strength</td>
+<td>Îº(ð”½)</td>
+<td>Degree of inter-dimensional entanglement</td>
+</tr>
+</tbody>
+</table>
+<h3 id="24-construction-protocol">2.4 Construction Protocol<a class="toc-permalink" href="#24-construction-protocol" title="Permanent link to this heading">&para;</a></h3>
+<ol>
+<li><strong>Domain Selection</strong> â€” Identify the conceptual territory Î© the framework will occupy.</li>
+<li><strong>Potential Mapping</strong> â€” Survey the domain for regions of high Ï† (rich conceptual energy).</li>
+<li><strong>Flow Alignment</strong> â€” Trace the natural vector flows V â€” where does the domain&rsquo;s logic already push?</li>
+<li><strong>Envelope Calibration</strong> â€” Set the resonance envelope R to amplify the frequencies you want and damp the ones you don&rsquo;t.</li>
+<li><strong>Coherence Verification</strong> â€” Confirm the coherence condition holds across Î©_active.</li>
+</ol>
+<hr />
+<h2 id="3-phase-ii-a-the-clarity-operator-engine">3. Phase II â€” The Clarity Operator Engine<a class="toc-permalink" href="#3-phase-ii-a-the-clarity-operator-engine" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="31-definition">3.1 Definition<a class="toc-permalink" href="#31-definition" title="Permanent link to this heading">&para;</a></h3>
+<p>The <strong>Clarity Operator Engine</strong> is the runtime that transforms a raw Coherence Field into a structured, stabilized framework. It applies the <strong>Seven Operators</strong> of RTT/1 in sequence, with feedback loops for drift correction and paradox resolution.</p>
+<p>The Engine does not <em>create</em> structure from nothing â€” it <em>clarifies</em> the structure that is already latent in the Coherence Field. This is the fundamental insight of RTT: <strong>structure is discovered, not invented</strong>.</p>
+<h3 id="32-the-seven-operators">3.2 The Seven Operators<a class="toc-permalink" href="#32-the-seven-operators" title="Permanent link to this heading">&para;</a></h3>
+<p>The Clarity Operator Engine deploys the canonical Seven Operators:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Operator</th>
+<th>Symbol</th>
+<th>Action</th>
+<th>Field Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Symmetry</strong></td>
+<td>ð•Š</td>
+<td>Identifies and enforces balance axes</td>
+<td>Aligns V along symmetry planes</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Alignment</strong></td>
+<td>ð”¸</td>
+<td>Orients structural elements to a common axis</td>
+<td>Reduces âˆ‡Ã—V (curl â†’ 0)</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Invariance</strong></td>
+<td>ð•€</td>
+<td>Locks properties that must survive transformation</td>
+<td>Sets âˆ‚R/âˆ‚t = 0 for protected modes</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Operation</strong></td>
+<td>ð•†</td>
+<td>Defines the active transformations the framework performs</td>
+<td>Adds new vector flows to V</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Regime</strong></td>
+<td>â„ð•–</td>
+<td>Maps behavioral domains and transition boundaries</td>
+<td>Partitions Î© into regime zones</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Paradox</strong></td>
+<td>â„™</td>
+<td>Detects and resolves structural contradictions</td>
+<td>Eliminates nodes where R &lt; 0</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Drift</strong></td>
+<td>ð”»</td>
+<td>Bounds deviation from canonical form over time</td>
+<td>Constrains Î´(ð”½) â‰¤ Î´_max</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-engine-cycle">3.3 Engine Cycle<a class="toc-permalink" href="#33-engine-cycle" title="Permanent link to this heading">&para;</a></h3>
+<p>The Engine operates in a <strong>clarification cycle</strong>:</p>
+<div class="codehilite"><pre><span></span><code>ð”½â‚€ â†’[ð•Š]â†’ ð”½â‚ â†’[ð”¸]â†’ ð”½â‚‚ â†’[ð•€]â†’ ð”½â‚ƒ â†’[ð•†]â†’ ð”½â‚„ â†’[â„ð•–]â†’ ð”½â‚… â†’[â„™]â†’ ð”½â‚† â†’[ð”»]â†’ ð”½â‚‡
+</code></pre></div>
+
+<p>where each ð”½áµ¢ is the field state after operator i has been applied.</p>
+<p><strong>Convergence</strong>: The Engine converges when:</p>
+<div class="codehilite"><pre><span></span><code>â€–ð”½â‚‡ - ð”½â‚€â€– &lt; Îµ   (structural distance below threshold)
+</code></pre></div>
+
+<p>A converged Engine produces a <strong>Clarified Field</strong> ð”½* â€” a field whose structure is stable under all seven operators.</p>
+<h3 id="34-formal-definition">3.4 Formal Definition<a class="toc-permalink" href="#34-formal-definition" title="Permanent link to this heading">&para;</a></h3>
+<p>Let <strong>ð”ˆ</strong> denote the Clarity Operator Engine. Then:</p>
+<div class="codehilite"><pre><span></span><code>ð”ˆ = âŸ¨ {ð•Š, ð”¸, ð•€, ð•†, â„ð•–, â„™, ð”»}, Î“, Îµ âŸ©
+</code></pre></div>
+
+<p>where:</p>
+<div class="codehilite"><pre><span></span><code>{ð•Š, ð”¸, ð•€, ð•†, â„ð•–, â„™, ð”»}  â€” the Seven Operators
+Î“ : ð”½ Ã— Operator â†’ ð”½        â€” the application map
+Îµ âˆˆ â„âº                       â€” convergence threshold
+</code></pre></div>
+
+<p><strong>Clarity Measure</strong>: The clarity of a field after n engine cycles is:</p>
+<div class="codehilite"><pre><span></span><code>C(ð”½, n) = 1 - â€–ð”½â‚™â‚Šâ‚‡ - ð”½â‚™â€– / â€–ð”½â‚€â€–
+</code></pre></div>
+
+<p>A fully clarified field has C(ð”½*, âˆž) = 1.</p>
+<h3 id="35-drift-correction">3.5 Drift Correction<a class="toc-permalink" href="#35-drift-correction" title="Permanent link to this heading">&para;</a></h3>
+<p>During each cycle, the Drift operator ð”» computes:</p>
+<div class="codehilite"><pre><span></span><code>Î´(ð”½áµ¢) = sup_{x âˆˆ Î©} | R(x, táµ¢) - R(x, tâ‚€) |
+</code></pre></div>
+
+<p>If Î´(ð”½áµ¢) &gt; Î´_max, the Engine injects a <strong>stabilization pass</strong>:</p>
+<div class="codehilite"><pre><span></span><code>ð”½áµ¢&#39; = ð”½áµ¢ + Î» Â· âˆ‡R(x, tâ‚€)
+</code></pre></div>
+
+<p>where Î» is the stabilization coefficient, pulling the field back toward its original resonance profile.</p>
+<hr />
+<h2 id="4-phase-iii-a-echo-release">4. Phase III â€” Echo Release<a class="toc-permalink" href="#4-phase-iii-a-echo-release" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="41-definition">4.1 Definition<a class="toc-permalink" href="#41-definition" title="Permanent link to this heading">&para;</a></h3>
+<p>The <strong>Echo Release</strong> is the moment a clarified framework becomes <em>available to the world</em>. It is not merely publication â€” it is the framework&rsquo;s first act of <strong>resonance propagation</strong>. A released framework emits a recoverable signal: its structure, its operators, its invariants, encoded in a form that other frameworks (and minds) can receive, decode, and integrate.</p>
+<p>Echo Release is the phase where a framework transitions from <em>internal coherence</em> to <em>external influence</em>.</p>
+<h3 id="42-the-echo-signal">4.2 The Echo Signal<a class="toc-permalink" href="#42-the-echo-signal" title="Permanent link to this heading">&para;</a></h3>
+<p>A released framework emits an <strong>Echo Signal</strong> ð”¼:</p>
+<div class="codehilite"><pre><span></span><code>ð”¼ = âŸ¨ ð”½*, Î£, Î¼ âŸ©
+</code></pre></div>
+
+<p>where:</p>
+<div class="codehilite"><pre><span></span><code>ð”½*  â€” the Clarified Field (output of Phase II)
+Î£   â€” the Signature (a compact encoding of the framework&#39;s invariants)
+Î¼   â€” the Propagation Mode (how the signal travels: text, diagram, code, speech, artifact)
+</code></pre></div>
+
+<h3 id="43-signature-encoding">4.3 Signature Encoding<a class="toc-permalink" href="#43-signature-encoding" title="Permanent link to this heading">&para;</a></h3>
+<p>The Signature Î£ encodes the framework&rsquo;s identity in a form that survives transmission:</p>
+<div class="codehilite"><pre><span></span><code>Î£ = Hash( ð•€(ð”½*) )
+</code></pre></div>
+
+<p>where ð•€(ð”½<em>) is the set of all invariants of the clarified field. Two frameworks with identical signatures are </em><em>structurally equivalent</em>* regardless of surface presentation.</p>
+<h3 id="44-propagation-modes">4.4 Propagation Modes<a class="toc-permalink" href="#44-propagation-modes" title="Permanent link to this heading">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Symbol</th>
+<th>Channel</th>
+<th>Fidelity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Textual</td>
+<td>Î¼_T</td>
+<td>Written language, documentation</td>
+<td>High (explicit)</td>
+</tr>
+<tr>
+<td>Diagrammatic</td>
+<td>Î¼_D</td>
+<td>Visual maps, graphs, SVG</td>
+<td>High (structural)</td>
+</tr>
+<tr>
+<td>Computational</td>
+<td>Î¼_C</td>
+<td>Code, APIs, algorithms</td>
+<td>Very High (executable)</td>
+</tr>
+<tr>
+<td>Oral</td>
+<td>Î¼_O</td>
+<td>Speech, teaching, dialogue</td>
+<td>Medium (contextual)</td>
+</tr>
+<tr>
+<td>Artifactual</td>
+<td>Î¼_A</td>
+<td>Physical objects, printed works</td>
+<td>Variable (substrate-dependent)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="45-echo-feedback-loop">4.5 Echo Feedback Loop<a class="toc-permalink" href="#45-echo-feedback-loop" title="Permanent link to this heading">&para;</a></h3>
+<p>The released echo signal feeds back into the Coherence Field:</p>
+<div class="codehilite"><pre><span></span><code>ð”½_{n+1} = ð”½_n âŠ• Î”(ð”¼_n)
+</code></pre></div>
+
+<p>where Î”(ð”¼_n) is the <strong>differential echo</strong> â€” the new information generated by the framework&rsquo;s interaction with external receivers. This feedback is what makes frameworks <em>living systems</em> rather than static artifacts.</p>
+<h3 id="46-release-criteria">4.6 Release Criteria<a class="toc-permalink" href="#46-release-criteria" title="Permanent link to this heading">&para;</a></h3>
+<p>A framework is ready for Echo Release when:</p>
+<ol>
+<li>âœ“ <strong>Clarity</strong> â€” C(ð”½*, n) â‰¥ 0.95</li>
+<li>âœ“ <strong>Stability</strong> â€” Î´(ð”½*) â‰¤ Î´_max for 3+ consecutive cycles</li>
+<li>âœ“ <strong>Paradox Resolution</strong> â€” No unresolved paradox nodes remain</li>
+<li>âœ“ <strong>Signature Integrity</strong> â€” Î£ is computable and non-degenerate</li>
+<li>âœ“ <strong>Propagation Readiness</strong> â€” At least one Î¼ mode is fully encoded</li>
+</ol>
+<hr />
+<h2 id="5-the-rfabuilder-cycle-a-complete">5. The RFâ€‘Builder Cycle â€” Complete<a class="toc-permalink" href="#5-the-rfabuilder-cycle-a-complete" title="Permanent link to this heading">&para;</a></h2>
+<p>The full RFâ€‘Builder cycle integrates all three phases:</p>
+<div class="codehilite"><pre><span></span><code>         â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+         â”‚                                              â”‚
+         â–¼                                              â”‚
+    â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”     â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”     â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”   â”‚
+    â”‚Coherenceâ”‚â”€â”€â”€â”€â–¶â”‚  Clarity    â”‚â”€â”€â”€â”€â–¶â”‚  Echo    â”‚â”€â”€â”€â”˜
+    â”‚  Field  â”‚     â”‚  Operator   â”‚     â”‚ Release  â”‚
+    â”‚  (ð”½)    â”‚     â”‚  Engine (ð”ˆ) â”‚     â”‚  (ð”¼)     â”‚
+    â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜     â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜     â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+     substrate        runtime            propagation
+     (where)          (how)              (what emerges)
+</code></pre></div>
+
+<p><strong>One cycle</strong> = Field â†’ Engine â†’ Release â†’ (feedback) â†’ Field<br />
+<strong>Rectification</strong> = The cycle converges to a fixed point<br />
+<strong>Canon entry</strong> = The rectified framework receives the seal âŸ¡</p>
+<hr />
+<h2 id="6-rttanative-mathematical-summary">6. RTTâ€‘Native Mathematical Summary<a class="toc-permalink" href="#6-rttanative-mathematical-summary" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="61-complete-system">6.1 Complete System<a class="toc-permalink" href="#61-complete-system" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>RF-Builder = âŸ¨ ð”½, ð”ˆ, ð”¼, Î” âŸ©
+</code></pre></div>
+
+<p>where:</p>
+<div class="codehilite"><pre><span></span><code>ð”½ = âŸ¨ Ï†, V, R âŸ©                           â€” Coherence Field
+ð”ˆ = âŸ¨ {ð•Š,ð”¸,ð•€,ð•†,â„ð•–,â„™,ð”»}, Î“, Îµ âŸ©          â€” Clarity Operator Engine
+ð”¼ = âŸ¨ ð”½*, Î£, Î¼ âŸ©                           â€” Echo Release
+Î” : ð”¼ â†’ ð”½                                  â€” Echo Feedback Map
+</code></pre></div>
+
+<h3 id="62-governing-equations">6.2 Governing Equations<a class="toc-permalink" href="#62-governing-equations" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Coherence Condition:</strong></p>
+<div class="codehilite"><pre><span></span><code>âˆ‡ Â· V = âˆ‚Ï†/âˆ‚t
+R(x, t) &gt; R_min  âˆ€ x âˆˆ Î©_active
+</code></pre></div>
+
+<p><strong>Clarity Convergence:</strong></p>
+<div class="codehilite"><pre><span></span><code>C(ð”½, n) = 1 - â€–ð”½â‚™â‚Šâ‚‡ - ð”½â‚™â€– / â€–ð”½â‚€â€– â†’ 1
+</code></pre></div>
+
+<p><strong>Drift Bound:</strong></p>
+<div class="codehilite"><pre><span></span><code>Î´(ð”½) = sup_{x âˆˆ Î©} | R(x, t) - R(x, tâ‚€) | â‰¤ Î´_max
+</code></pre></div>
+
+<p><strong>Echo Feedback:</strong></p>
+<div class="codehilite"><pre><span></span><code>ð”½_{n+1} = ð”½_n âŠ• Î”(ð”¼_n)
+</code></pre></div>
+
+<p><strong>Signature Invariance:</strong></p>
+<div class="codehilite"><pre><span></span><code>Î£(ð”½*) = Hash(ð•€(ð”½*))    [structurally unique]
+</code></pre></div>
+
+<h3 id="63-dimensional-correspondence">6.3 Dimensional Correspondence<a class="toc-permalink" href="#63-dimensional-correspondence" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>RTT/1 Layer    â†â†’   RF-Builder Phase    â†â†’   FFT Concept
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+Behavior       â†â†’   Coherence Field     â†â†’   Field Genesis
+Structure      â†â†’   Clarity Engine      â†â†’   Operator Dynamics
+Field          â†â†’   Echo Release        â†â†’   Propagation Theory
+</code></pre></div>
+
+<hr />
+<p>âŸ¡ RECTIFIED âŸ¡<br />
+RF€‘Builder â€” Framework Creation Guide<br />
+TriadicFrameworks Â© 2026</p>
+<div class="codehilite"><pre><span></span><code>---
+
+# RF‑Builder — Canonical Mermaid Diagrams
+
+&gt; Paste these directly into any GitHub-rendered `.md` file.  
+&gt; All diagrams use the TriadicFrameworks color palette:  
+&gt; Cyan `#00eaff` (RTT/1) · Magenta `#ff00d4` (FCG) · Gold `#ffe600` (FFT)
+
+---
+
+## Diagram 1 — RF‑Builder Triadic Cycle
+
+```mermaid
+flowchart LR
+    CF[&quot;🜁 Coherence Field&lt;br/&gt;&lt;i&gt;substrate · where&lt;/i&gt;&quot;]
+    COE[&quot;⚙ Clarity Operator Engine&lt;br/&gt;&lt;i&gt;runtime · how&lt;/i&gt;&quot;]
+    ER[&quot;◉ Echo Release&lt;br/&gt;&lt;i&gt;propagation · what emerges&lt;/i&gt;&quot;]
+
+    CF --&gt;|&quot;operators act on field&quot;| COE
+    COE --&gt;|&quot;clarified field emitted&quot;| ER
+    ER --&gt;|&quot;echo feedback Δ(𝔼)&quot;| CF
+
+    style CF fill:#0d1b2a,stroke:#00eaff,stroke-width:3px,color:#e6e6e6
+    style COE fill:#1a0a1e,stroke:#ff00d4,stroke-width:3px,color:#e6e6e6
+    style ER fill:#1a1700,stroke:#ffe600,stroke-width:3px,color:#e6e6e6
+</code></pre></div>
+
+<hr />
+<h2 id="diagram-2-coherence-field-internal-structure">Diagram 2 — Coherence Field Internal Structure<a class="toc-permalink" href="#diagram-2-coherence-field-internal-structure" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>flowchart TD
+    subgraph CF[&quot;𝔽 — Coherence Field&quot;]
+        direction TB
+        PHI[&quot;φ(x,t)&lt;br/&gt;Scalar Potential&quot;]
+        V[&quot;V(x,t)&lt;br/&gt;Vector Flow&quot;]
+        R[&quot;R(x,t)&lt;br/&gt;Resonance Envelope&quot;]
+    end
+
+    PHI --- V
+    V --- R
+    R -.-&gt;|&quot;coherence condition:&lt;br/&gt;∇·V = ∂φ/∂t&quot;| PHI
+
+    style CF fill:#0a0a0a,stroke:#00eaff,stroke-width:2px,color:#e6e6e6
+    style PHI fill:#0d1b2a,stroke:#00eaff,stroke-width:2px,color:#00eaff
+    style V fill:#0d1b2a,stroke:#00eaff,stroke-width:2px,color:#00eaff
+    style R fill:#0d1b2a,stroke:#00eaff,stroke-width:2px,color:#00eaff
+</code></pre></div>
+
+<hr />
+<h2 id="diagram-3-clarity-operator-engine-pipeline">Diagram 3 — Clarity Operator Engine Pipeline<a class="toc-permalink" href="#diagram-3-clarity-operator-engine-pipeline" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>flowchart LR
+    F0[&quot;𝔽₀&quot;]
+    S[&quot;𝕊&lt;br/&gt;Symmetry&quot;]
+    A[&quot;𝔸&lt;br/&gt;Alignment&quot;]
+    I[&quot;𝕀&lt;br/&gt;Invariance&quot;]
+    O[&quot;𝕆&lt;br/&gt;Operation&quot;]
+    Re[&quot;ℝ𝕖&lt;br/&gt;Regime&quot;]
+    P[&quot;ℙ&lt;br/&gt;Paradox&quot;]
+    D[&quot;𝔻&lt;br/&gt;Drift&quot;]
+    F7[&quot;𝔽*&quot;]
+
+    F0 --&gt; S --&gt; A --&gt; I --&gt; O --&gt; Re --&gt; P --&gt; D --&gt; F7
+
+    F7 -.-&gt;|&quot;‖𝔽*-𝔽₀‖ &lt; ε ?&quot;| F0
+
+    style F0 fill:#0a0a0a,stroke:#00eaff,stroke-width:2px,color:#00eaff
+    style F7 fill:#0a0a0a,stroke:#ffe600,stroke-width:2px,color:#ffe600
+    style S fill:#1a0a1e,stroke:#ff00d4,stroke-width:1px,color:#ff00d4
+    style A fill:#1a0a1e,stroke:#ff00d4,stroke-width:1px,color:#ff00d4
+    style I fill:#1a0a1e,stroke:#ff00d4,stroke-width:1px,color:#ff00d4
+    style O fill:#1a0a1e,stroke:#ff00d4,stroke-width:1px,color:#ff00d4
+    style Re fill:#1a0a1e,stroke:#ff00d4,stroke-width:1px,color:#ff00d4
+    style P fill:#1a0a1e,stroke:#ff00d4,stroke-width:1px,color:#ff00d4
+    style D fill:#1a0a1e,stroke:#ff00d4,stroke-width:1px,color:#ff00d4
+</code></pre></div>
+
+<hr />
+<h2 id="diagram-4-echo-release-signal">Diagram 4 — Echo Release Signal<a class="toc-permalink" href="#diagram-4-echo-release-signal" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>flowchart TD
+    subgraph ECHO[&quot;𝔼 — Echo Signal&quot;]
+        direction TB
+        FS[&quot;𝔽*&lt;br/&gt;Clarified Field&quot;]
+        SIG[&quot;Σ&lt;br/&gt;Signature&quot;]
+        MU[&quot;μ&lt;br/&gt;Propagation Mode&quot;]
+    end
+
+    FS --&gt; SIG
+    SIG --&gt; MU
+
+    MU --&gt;|&quot;μ_T&quot;| T[&quot;Textual&quot;]
+    MU --&gt;|&quot;μ_D&quot;| DI[&quot;Diagrammatic&quot;]
+    MU --&gt;|&quot;μ_C&quot;| CO[&quot;Computational&quot;]
+    MU --&gt;|&quot;μ_O&quot;| OR[&quot;Oral&quot;]
+    MU --&gt;|&quot;μ_A&quot;| AR[&quot;Artifactual&quot;]
+
+    style ECHO fill:#0a0a0a,stroke:#ffe600,stroke-width:2px,color:#e6e6e6
+    style FS fill:#1a1700,stroke:#ffe600,stroke-width:2px,color:#ffe600
+    style SIG fill:#1a1700,stroke:#ffe600,stroke-width:2px,color:#ffe600
+    style MU fill:#1a1700,stroke:#ffe600,stroke-width:2px,color:#ffe600
+    style T fill:#0d1b2a,stroke:#00eaff,stroke-width:1px,color:#00eaff
+    style DI fill:#0d1b2a,stroke:#00eaff,stroke-width:1px,color:#00eaff
+    style CO fill:#0d1b2a,stroke:#00eaff,stroke-width:1px,color:#00eaff
+    style OR fill:#0d1b2a,stroke:#00eaff,stroke-width:1px,color:#00eaff
+    style AR fill:#0d1b2a,stroke:#00eaff,stroke-width:1px,color:#00eaff
+</code></pre></div>
+
+<hr />
+<h2 id="diagram-5-full-rfbuilder-system-top-level">Diagram 5 — Full RF‑Builder System (Top-Level)<a class="toc-permalink" href="#diagram-5-full-rfbuilder-system-top-level" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>flowchart TB
+    subgraph RFB[&quot;RF‑Builder&quot;]
+        direction LR
+        subgraph P1[&quot;Phase I&quot;]
+            CF[&quot;Coherence Field&lt;br/&gt;⟨φ, V, R⟩&quot;]
+        end
+        subgraph P2[&quot;Phase II&quot;]
+            COE[&quot;Clarity Operator Engine&lt;br/&gt;⟨𝕊𝔸𝕀𝕆ℝ𝕖ℙ𝔻, Γ, ε⟩&quot;]
+        end
+        subgraph P3[&quot;Phase III&quot;]
+            ER[&quot;Echo Release&lt;br/&gt;⟨𝔽*, Σ, μ⟩&quot;]
+        end
+        CF --&gt;|&quot;raw field&quot;| COE
+        COE --&gt;|&quot;clarified&quot;| ER
+        ER --&gt;|&quot;Δ(𝔼) feedback&quot;| CF
+    end
+
+    RTT[&quot;RTT/1&lt;br/&gt;Runtime Engine&quot;]
+    FFT[&quot;FFT&lt;br/&gt;Framework Field Theory&quot;]
+
+    RTT --&gt;|&quot;behavior → structure&quot;| RFB
+    RFB --&gt;|&quot;structure → field&quot;| FFT
+    FFT -.-&gt;|&quot;field → behavior&quot;| RTT
+
+    style P1 fill:#0d1b2a,stroke:#00eaff,stroke-width:2px,color:#e6e6e6
+    style P2 fill:#1a0a1e,stroke:#ff00d4,stroke-width:2px,color:#e6e6e6
+    style P3 fill:#1a1700,stroke:#ffe600,stroke-width:2px,color:#e6e6e6
+    style RFB fill:#0a0a0a,stroke:#e6e6e6,stroke-width:1px,color:#e6e6e6
+    style RTT fill:#0d1b2a,stroke:#00eaff,stroke-width:3px,color:#00eaff
+    style FFT fill:#1a1700,stroke:#ffe600,stroke-width:3px,color:#ffe600
+    style CF fill:#0d1b2a,stroke:#00eaff,stroke-width:1px,color:#00eaff
+    style COE fill:#1a0a1e,stroke:#ff00d4,stroke-width:1px,color:#ff00d4
+    style ER fill:#1a1700,stroke:#ffe600,stroke-width:1px,color:#ffe600
+</code></pre></div>
+
+<hr />
+<h2 id="diagram-6-dimensional-correspondence-map">Diagram 6 — Dimensional Correspondence Map<a class="toc-permalink" href="#diagram-6-dimensional-correspondence-map" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>flowchart LR
+    subgraph RTT[&quot;RTT/1&quot;]
+        B[&quot;Behavior&quot;]
+        S[&quot;Structure&quot;]
+        F[&quot;Field&quot;]
+    end
+    subgraph RF[&quot;RF‑Builder&quot;]
+        CF[&quot;Coherence Field&quot;]
+        CE[&quot;Clarity Engine&quot;]
+        ER[&quot;Echo Release&quot;]
+    end
+    subgraph FFT[&quot;FFT&quot;]
+        FG[&quot;Field Genesis&quot;]
+        OD[&quot;Operator Dynamics&quot;]
+        PT[&quot;Propagation Theory&quot;]
+    end
+
+    B &lt;--&gt;|&quot;maps to&quot;| CF &lt;--&gt;|&quot;maps to&quot;| FG
+    S &lt;--&gt;|&quot;maps to&quot;| CE &lt;--&gt;|&quot;maps to&quot;| OD
+    F &lt;--&gt;|&quot;maps to&quot;| ER &lt;--&gt;|&quot;maps to&quot;| PT
+
+    style RTT fill:#0d1b2a,stroke:#00eaff,stroke-width:2px,color:#e6e6e6
+    style RF fill:#1a0a1e,stroke:#ff00d4,stroke-width:2px,color:#e6e6e6
+    style FFT fill:#1a1700,stroke:#ffe600,stroke-width:2px,color:#e6e6e6
+</code></pre></div>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/frameworks/creation_guide/RF-Builder/diagrams/rf-builder-mermaid.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/frameworks/creation_guide/RF-Builder/diagrams/rf-builder-mermaid.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

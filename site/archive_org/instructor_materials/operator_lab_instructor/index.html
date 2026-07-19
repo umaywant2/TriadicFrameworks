@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Operator Lab Instructor | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/archive_org/instructor_materials/operator_lab_instructor/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Operator Lab Instructor" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/archive_org/instructor_materials/operator_lab_instructor/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Operator Lab Instructor" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/archive_org/instructor_materials/operator_lab_instructor.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Operator Lab Instructor",
+    "headline": "Operator Lab Instructor",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/archive_org/instructor_materials/operator_lab_instructor/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#archive_org-module-instructor_materialsoperator_lab_instructormd">archive_org module — instructor_materials/operator_lab_instructor.md</a></li>
+<li><a href="#1-metadata_operator">1. METADATA_OPERATOR</a><ul>
+<li><a href="#expected-student-output">Expected Student Output</a></li>
+<li><a href="#instructor-notes">Instructor Notes</a></li>
+</ul>
+</li>
+<li><a href="#2-wayback_operator">2. WAYBACK_OPERATOR</a><ul>
+<li><a href="#expected-student-output_1">Expected Student Output</a></li>
+<li><a href="#instructor-notes_1">Instructor Notes</a></li>
+</ul>
+</li>
+<li><a href="#3-lineage_operator">3. LINEAGE_OPERATOR</a><ul>
+<li><a href="#expected-student-output_2">Expected Student Output</a></li>
+<li><a href="#instructor-notes_2">Instructor Notes</a></li>
+</ul>
+</li>
+<li><a href="#4-collection_operator">4. COLLECTION_OPERATOR</a><ul>
+<li><a href="#expected-student-output_3">Expected Student Output</a></li>
+<li><a href="#instructor-notes_3">Instructor Notes</a></li>
+</ul>
+</li>
+<li><a href="#5-preservation_operator">5. PRESERVATION_OPERATOR</a><ul>
+<li><a href="#expected-student-output_4">Expected Student Output</a></li>
+<li><a href="#instructor-notes_4">Instructor Notes</a></li>
+</ul>
+</li>
+<li><a href="#6-driftbound_retrieval_operator">6. DRIFTBOUND_RETRIEVAL_OPERATOR</a><ul>
+<li><a href="#expected-student-output_5">Expected Student Output</a></li>
+<li><a href="#instructor-notes_5">Instructor Notes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/archive_org/" itemprop="item">
+                <span itemprop="name">Archive Org</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/archive_org/instructor_materials/" itemprop="item">
+                <span itemprop="name">Instructor Materials</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Operator Lab Instructor</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Operator Lab Instructor</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="rtt-operator-lab-instructor-version"><strong>RTT Operator Lab — Instructor Version</strong><a class="toc-permalink" href="#rtt-operator-lab-instructor-version" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="archive_org-module-instructor_materialsoperator_lab_instructormd"><em>archive_org module — instructor_materials/operator_lab_instructor.md</em><a class="toc-permalink" href="#archive_org-module-instructor_materialsoperator_lab_instructormd" title="Permanent link to this heading">&para;</a></h3>
+<hr />
+<h1 id="purpose-of-this-instructor-guide"><strong>Purpose of This Instructor Guide</strong><a class="toc-permalink" href="#purpose-of-this-instructor-guide" title="Permanent link to this heading">&para;</a></h1>
+<p>This guide provides:</p>
+<ul>
+<li>expected student outputs  </li>
+<li>structural reasoning notes  </li>
+<li>common misconceptions  </li>
+<li>grading guidance  </li>
+<li>operator‑chain alignment  </li>
+</ul>
+<p>It corresponds directly to the <strong>student RTT Operator Lab</strong> in:</p>
+<div class="codehilite"><pre><span></span><code>/docs/archive_org/RTTcodes/operator_lab.md
+</code></pre></div>
+
+<p>All reasoning is <strong>structural</strong>, not content‑based.</p>
+<hr />
+<h1 id="lab-overview"><strong>Lab Overview</strong><a class="toc-permalink" href="#lab-overview" title="Permanent link to this heading">&para;</a></h1>
+<p>Students practice the full RTT operator chain using a synthetic Internet Archive URL.<br />
+They learn to:</p>
+<ul>
+<li>read snapshot timelines  </li>
+<li>classify drift  </li>
+<li>identify continuity kernels  </li>
+<li>detect regime shifts  </li>
+<li>evaluate substrate stability  </li>
+<li>choose the most reliable snapshot  </li>
+</ul>
+<p>This instructor version includes <strong>expected answers</strong> and <strong>diagnostic notes</strong> for each step.</p>
+<hr />
+<h1 id="scenario-used-in-the-lab"><strong>Scenario Used in the Lab</strong><a class="toc-permalink" href="#scenario-used-in-the-lab" title="Permanent link to this heading">&para;</a></h1>
+<p><strong>Target URL:</strong><br />
+<code>https://archive.org/details/sample-training-page</code></p>
+<p><strong>Snapshots:</strong><br />
+2013, 2016, 2019, 2023</p>
+<p><strong>Structural Changes:</strong><br />
+- 2013 → 2016: minor template update<br />
+- 2016 → 2019: navigation restructure<br />
+- 2019 → 2023: minor CSS shift  </p>
+<p><strong>Substrate:</strong> HTML<br />
+<strong>Collection:</strong> govdocs  </p>
+<hr />
+<h1 id="operatorbyoperator-instructor-notes"><strong>Operator‑by‑Operator Instructor Notes</strong><a class="toc-permalink" href="#operatorbyoperator-instructor-notes" title="Permanent link to this heading">&para;</a></h1>
+<hr />
+<h2 id="1-metadata_operator"><strong>1. METADATA_OPERATOR</strong><a class="toc-permalink" href="#1-metadata_operator" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="expected-student-output"><strong>Expected Student Output</strong><a class="toc-permalink" href="#expected-student-output" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Substrate: HTML  </li>
+<li>Regime: institutional  </li>
+<li>Drift sensitivity: low  </li>
+<li>Coherence: high  </li>
+<li>Lineage IDs: synthetic (e.g., “govdocs-root”)  </li>
+</ul>
+<h3 id="instructor-notes"><strong>Instructor Notes</strong><a class="toc-permalink" href="#instructor-notes" title="Permanent link to this heading">&para;</a></h3>
+<p>Students should identify <strong>structural metadata</strong>, not content.<br />
+Common error: describing the <em>topic</em> of the page instead of its <em>structure</em>.</p>
+<hr />
+<h2 id="2-wayback_operator"><strong>2. WAYBACK_OPERATOR</strong><a class="toc-permalink" href="#2-wayback_operator" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="expected-student-output_1"><strong>Expected Student Output</strong><a class="toc-permalink" href="#expected-student-output_1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Snapshots: 2013, 2016, 2019, 2023  </li>
+<li>Drift map:  </li>
+<li>2013→2016: minor  </li>
+<li>2016→2019: moderate  </li>
+<li>2019→2023: minor  </li>
+<li>Continuity breaks: none  </li>
+<li>Time crystal: any value between 0.6–0.9 is acceptable  </li>
+</ul>
+<h3 id="instructor-notes_1"><strong>Instructor Notes</strong><a class="toc-permalink" href="#instructor-notes_1" title="Permanent link to this heading">&para;</a></h3>
+<p>Students often confuse <strong>visual differences</strong> with <strong>structural drift</strong>.<br />
+Remind them: drift is about <strong>layout, navigation, template</strong>, not content.</p>
+<hr />
+<h2 id="3-lineage_operator"><strong>3. LINEAGE_OPERATOR</strong><a class="toc-permalink" href="#3-lineage_operator" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="expected-student-output_2"><strong>Expected Student Output</strong><a class="toc-permalink" href="#expected-student-output_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Lineage graph:  </li>
+<li>template update  </li>
+<li>navigation restructure  </li>
+<li>CSS shift  </li>
+<li>Transformations: list of the above  </li>
+<li>Regime shifts: none  </li>
+<li>Continuity kernel:  </li>
+<li>header  </li>
+<li>footer  </li>
+<li>records index  </li>
+</ul>
+<h3 id="instructor-notes_2"><strong>Instructor Notes</strong><a class="toc-permalink" href="#instructor-notes_2" title="Permanent link to this heading">&para;</a></h3>
+<p>The continuity kernel must be <strong>structural</strong> and <strong>persistent</strong>.<br />
+Students sometimes list content blocks — redirect them to layout elements.</p>
+<hr />
+<h2 id="4-collection_operator"><strong>4. COLLECTION_OPERATOR</strong><a class="toc-permalink" href="#4-collection_operator" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="expected-student-output_3"><strong>Expected Student Output</strong><a class="toc-permalink" href="#expected-student-output_3" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Collection ID: govdocs  </li>
+<li>Coherence clusters:  </li>
+<li>public‑records  </li>
+<li>agency‑index  </li>
+<li>Related objects: synthetic examples  </li>
+<li>Regime profile: institutional  </li>
+</ul>
+<h3 id="instructor-notes_3"><strong>Instructor Notes</strong><a class="toc-permalink" href="#instructor-notes_3" title="Permanent link to this heading">&para;</a></h3>
+<p>Students should not infer meaning from the collection name.<br />
+They should focus on <strong>structural similarity</strong>.</p>
+<hr />
+<h2 id="5-preservation_operator"><strong>5. PRESERVATION_OPERATOR</strong><a class="toc-permalink" href="#5-preservation_operator" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="expected-student-output_4"><strong>Expected Student Output</strong><a class="toc-permalink" href="#expected-student-output_4" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Format: HTML  </li>
+<li>Stability score: ~0.8  </li>
+<li>Drift risk: low  </li>
+<li>Multi‑layer flags: [&ldquo;html&rdquo;]  </li>
+</ul>
+<h3 id="instructor-notes_4"><strong>Instructor Notes</strong><a class="toc-permalink" href="#instructor-notes_4" title="Permanent link to this heading">&para;</a></h3>
+<p>Students must justify stability based on <strong>substrate</strong>, not content.<br />
+HTML is stable but drift‑prone; PDF would be more stable.</p>
+<hr />
+<h2 id="6-driftbound_retrieval_operator"><strong>6. DRIFTBOUND_RETRIEVAL_OPERATOR</strong><a class="toc-permalink" href="#6-driftbound_retrieval_operator" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="expected-student-output_5"><strong>Expected Student Output</strong><a class="toc-permalink" href="#expected-student-output_5" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Earliest stable version: 2013  </li>
+<li>Most reliable version: 2023  </li>
+<li>Key changes:  </li>
+<li>template update  </li>
+<li>navigation restructure  </li>
+<li>CSS shift  </li>
+<li>Warnings: none  </li>
+<li>Final answer: 2023 is most reliable due to stability + continuity  </li>
+</ul>
+<h3 id="instructor-notes_5"><strong>Instructor Notes</strong><a class="toc-permalink" href="#instructor-notes_5" title="Permanent link to this heading">&para;</a></h3>
+<p>Students must combine:</p>
+<ul>
+<li>drift  </li>
+<li>continuity  </li>
+<li>substrate stability  </li>
+<li>absence of breaks  </li>
+</ul>
+<p>The newest snapshot is correct <strong>only because</strong> it is structurally stable.</p>
+<hr />
+<h1 id="grading-guidance"><strong>Grading Guidance</strong><a class="toc-permalink" href="#grading-guidance" title="Permanent link to this heading">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Points</th>
+<th>Criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Drift Classification</td>
+<td>10</td>
+<td>Correct minor/moderate distinctions</td>
+</tr>
+<tr>
+<td>Continuity Kernel</td>
+<td>10</td>
+<td>Identifies persistent structural elements</td>
+</tr>
+<tr>
+<td>Substrate Reasoning</td>
+<td>10</td>
+<td>Correct stability logic</td>
+</tr>
+<tr>
+<td>Regime Shifts</td>
+<td>5</td>
+<td>Correctly identifies none</td>
+</tr>
+<tr>
+<td>Continuity Breaks</td>
+<td>5</td>
+<td>Correctly identifies none</td>
+</tr>
+<tr>
+<td>Final Snapshot Choice</td>
+<td>10</td>
+<td>RTT‑aligned justification</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>50</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Mastery:</strong> 45–50<br />
+<strong>Proficiency:</strong> 38–44<br />
+<strong>Developing:</strong> 30–37<br />
+<strong>Needs Support:</strong> ≤29  </p>
+<hr />
+<h1 id="common-student-misconceptions"><strong>Common Student Misconceptions</strong><a class="toc-permalink" href="#common-student-misconceptions" title="Permanent link to this heading">&para;</a></h1>
+<ul>
+<li>Confusing <strong>content changes</strong> with <strong>structural drift</strong>  </li>
+<li>Treating <strong>visual differences</strong> as drift  </li>
+<li>Misidentifying <strong>substrate stability</strong>  </li>
+<li>Assuming the newest snapshot is always best  </li>
+<li>Listing content blocks as continuity kernel elements  </li>
+</ul>
+<hr />
+<h1 id="instructor-tips"><strong>Instructor Tips</strong><a class="toc-permalink" href="#instructor-tips" title="Permanent link to this heading">&para;</a></h1>
+<ul>
+<li>Emphasize structure over content.  </li>
+<li>Encourage students to sketch snapshot layouts.  </li>
+<li>Reinforce that drift is <strong>structural</strong>, not semantic.  </li>
+<li>Use the continuity kernel as the anchor for reasoning.  </li>
+</ul>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/archive_org/instructor_materials/operator_lab_instructor.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/archive_org/instructor_materials/operator_lab_instructor.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

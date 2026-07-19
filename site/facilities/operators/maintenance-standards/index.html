@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Maintenance Standards | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/facilities/operators/maintenance-standards/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Maintenance Standards" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/facilities/operators/maintenance-standards/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Maintenance Standards" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/facilities/operators/maintenance-standards.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Maintenance Standards",
+    "headline": "Maintenance Standards",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/facilities/operators/maintenance-standards/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#purpose">PURPOSE</a></li>
+<li><a href="#core-principle">CORE PRINCIPLE</a></li>
+<li><a href="#1-scope">1. SCOPE</a></li>
+<li><a href="#2-maintenance-defined">2. MAINTENANCE DEFINED</a></li>
+<li><a href="#3-maintenance-objectives">3. MAINTENANCE OBJECTIVES</a></li>
+<li><a href="#4-drift-awareness">4. DRIFT AWARENESS</a></li>
+<li><a href="#5-maintenance-vs-modernization-boundary">5. MAINTENANCE VS MODERNIZATION BOUNDARY</a></li>
+<li><a href="#6-documentation-requirements">6. DOCUMENTATION REQUIREMENTS</a></li>
+<li><a href="#7-corridor-context">7. CORRIDOR CONTEXT</a></li>
+<li><a href="#8-temporary-measures">8. TEMPORARY MEASURES</a></li>
+<li><a href="#9-safety-overrides">9. SAFETY OVERRIDES</a></li>
+<li><a href="#10-escalation-path">10. ESCALATION PATH</a></li>
+<li><a href="#11-audit-review">11. AUDIT &amp; REVIEW</a></li>
+<li><a href="#12-what-these-standards-prevent">12. WHAT THESE STANDARDS PREVENT</a></li>
+<li><a href="#13-canonical-status">13. CANONICAL STATUS</a></li>
+<li><a href="#closing-statement">CLOSING STATEMENT</a><ul>
+<li><a href="#why-this-document-matters">Why this document matters</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/facilities/" itemprop="item">
+                <span itemprop="name">Facilities</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/facilities/operators/" itemprop="item">
+                <span itemprop="name">Operators</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Maintenance Standards</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Maintenance Standards</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="rtt-facilities-maintenance-standards">🔧 RTT Facilities — Maintenance Standards<a class="toc-permalink" href="#rtt-facilities-maintenance-standards" title="Permanent link to this heading">&para;</a></h1>
+<p><strong>Operational Discipline Without Drift</strong></p>
+<hr />
+<h2 id="purpose">PURPOSE<a class="toc-permalink" href="#purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>These standards define <strong>how maintenance is performed</strong> within RTT Facilities.</p>
+<p>Their purpose is to:<br />
+- Preserve system reliability<br />
+- Detect early signs of drift<br />
+- Prevent maintenance from masking modernization needs<br />
+- Support governance, audit, and capital alignment  </p>
+<p>Maintenance is treated as a <strong>signal‑generating activity</strong>, not just a corrective one.</p>
+<hr />
+<h2 id="core-principle">CORE PRINCIPLE<a class="toc-permalink" href="#core-principle" title="Permanent link to this heading">&para;</a></h2>
+<blockquote>
+<p><strong>Maintenance preserves function.<br />
+Modernization preserves viability.<br />
+Confusing the two creates risk.</strong></p>
+</blockquote>
+<p>These standards exist to keep that boundary clear.</p>
+<hr />
+<h2 id="1-scope">1. SCOPE<a class="toc-permalink" href="#1-scope" title="Permanent link to this heading">&para;</a></h2>
+<p>These standards apply to:<br />
+- Electrical systems<br />
+- Water and wastewater systems<br />
+- Transportation infrastructure<br />
+- Communications systems<br />
+- Public buildings and facilities  </p>
+<p>They apply across <strong>all corridors and asset classes</strong>.</p>
+<hr />
+<h2 id="2-maintenance-defined">2. MAINTENANCE DEFINED<a class="toc-permalink" href="#2-maintenance-defined" title="Permanent link to this heading">&para;</a></h2>
+<p>Maintenance includes:<br />
+- Inspection<br />
+- Cleaning<br />
+- Adjustment<br />
+- Repair<br />
+- Component replacement <em>in‑kind</em>  </p>
+<p>Maintenance <strong>does not</strong> include:<br />
+- Capacity expansion<br />
+- Technology upgrades<br />
+- Structural redesign<br />
+- Life‑extension beyond design intent  </p>
+<p>Those are modernization activities.</p>
+<hr />
+<h2 id="3-maintenance-objectives">3. MAINTENANCE OBJECTIVES<a class="toc-permalink" href="#3-maintenance-objectives" title="Permanent link to this heading">&para;</a></h2>
+<p>All maintenance activities must support:</p>
+<ul>
+<li>Safe operation  </li>
+<li>Predictable performance  </li>
+<li>Early drift detection  </li>
+<li>Accurate condition reporting  </li>
+</ul>
+<p>Maintenance that obscures condition is non‑compliant.</p>
+<hr />
+<h2 id="4-drift-awareness">4. DRIFT AWARENESS<a class="toc-permalink" href="#4-drift-awareness" title="Permanent link to this heading">&para;</a></h2>
+<p>Operators must remain alert to <strong>drift indicators</strong>, including:</p>
+<ul>
+<li>Increasing maintenance frequency  </li>
+<li>Repeated repairs in the same location  </li>
+<li>Temporary fixes becoming permanent  </li>
+<li>Performance degradation without failure  </li>
+</ul>
+<p>Drift observations must be <strong>documented</strong>, not normalized.</p>
+<hr />
+<h2 id="5-maintenance-vs-modernization-boundary">5. MAINTENANCE VS MODERNIZATION BOUNDARY<a class="toc-permalink" href="#5-maintenance-vs-modernization-boundary" title="Permanent link to this heading">&para;</a></h2>
+<p>The following conditions <strong>trigger escalation</strong>:</p>
+<ul>
+<li>Maintenance required more frequently than baseline  </li>
+<li>Repairs no longer restore expected performance  </li>
+<li>Temporary measures exceed defined duration  </li>
+<li>Safety margins are reduced to maintain operation  </li>
+</ul>
+<p>When these occur:<br />
+- Maintenance continues for safety<br />
+- Modernization review is triggered<br />
+- Corridor classification may be updated  </p>
+<hr />
+<h2 id="6-documentation-requirements">6. DOCUMENTATION REQUIREMENTS<a class="toc-permalink" href="#6-documentation-requirements" title="Permanent link to this heading">&para;</a></h2>
+<p>All maintenance activities must record:</p>
+<ul>
+<li>Date and location  </li>
+<li>Asset or corridor reference  </li>
+<li>Nature of work performed  </li>
+<li>Observed condition  </li>
+<li>Deviations from expected state  </li>
+</ul>
+<p>Documentation is a <strong>governance input</strong>, not paperwork.</p>
+<hr />
+<h2 id="7-corridor-context">7. CORRIDOR CONTEXT<a class="toc-permalink" href="#7-corridor-context" title="Permanent link to this heading">&para;</a></h2>
+<p>Maintenance is always interpreted in <strong>corridor context</strong>.</p>
+<p>Operators must note:<br />
+- Environmental exposure<br />
+- Adjacent system interactions<br />
+- Repeated issues along a corridor  </p>
+<p>Single‑asset thinking is insufficient.</p>
+<hr />
+<h2 id="8-temporary-measures">8. TEMPORARY MEASURES<a class="toc-permalink" href="#8-temporary-measures" title="Permanent link to this heading">&para;</a></h2>
+<p>Temporary measures:<br />
+- Must be explicitly labeled as temporary<br />
+- Must have a defined review date<br />
+- Must not be silently extended  </p>
+<p>Temporary fixes without review are treated as <strong>risk accumulation</strong>.</p>
+<hr />
+<h2 id="9-safety-overrides">9. SAFETY OVERRIDES<a class="toc-permalink" href="#9-safety-overrides" title="Permanent link to this heading">&para;</a></h2>
+<p>Safety always takes precedence.</p>
+<p>Operators are authorized to:<br />
+- Perform immediate corrective action<br />
+- Stabilize unsafe conditions<br />
+- Escalate without delay  </p>
+<p>Safety actions are <strong>never penalized</strong>, but must be documented.</p>
+<hr />
+<h2 id="10-escalation-path">10. ESCALATION PATH<a class="toc-permalink" href="#10-escalation-path" title="Permanent link to this heading">&para;</a></h2>
+<p>Operators must escalate when:<br />
+- Drift indicators persist<br />
+- Maintenance no longer restores baseline<br />
+- Conditions exceed defined thresholds  </p>
+<p>Escalation is a <strong>professional responsibility</strong>, not a failure.</p>
+<hr />
+<h2 id="11-audit-review">11. AUDIT &amp; REVIEW<a class="toc-permalink" href="#11-audit-review" title="Permanent link to this heading">&para;</a></h2>
+<p>Maintenance records are reviewed to:<br />
+- Detect drift patterns<br />
+- Validate corridor classifications<br />
+- Inform capital planning<br />
+- Preserve institutional memory  </p>
+<p>Audits are <strong>learning tools</strong>, not fault‑finding exercises.</p>
+<hr />
+<h2 id="12-what-these-standards-prevent">12. WHAT THESE STANDARDS PREVENT<a class="toc-permalink" href="#12-what-these-standards-prevent" title="Permanent link to this heading">&para;</a></h2>
+<p>These standards explicitly prevent:<br />
+- Maintenance masking structural decline<br />
+- Silent life‑extension beyond design intent<br />
+- Deferred modernization without visibility<br />
+- Operator normalization of degraded states  </p>
+<hr />
+<h2 id="13-canonical-status">13. CANONICAL STATUS<a class="toc-permalink" href="#13-canonical-status" title="Permanent link to this heading">&para;</a></h2>
+<p>These Maintenance Standards are <strong>canonical</strong>.</p>
+<p>All RTT Facilities operations must align with them.</p>
+<hr />
+<h2 id="closing-statement">CLOSING STATEMENT<a class="toc-permalink" href="#closing-statement" title="Permanent link to this heading">&para;</a></h2>
+<p>Good maintenance keeps systems running.<br />
+<strong>Disciplined maintenance keeps systems honest.</strong></p>
+<p>These standards exist to ensure that:<br />
+- Operators are supported<br />
+- Risk is surfaced early<br />
+- Decisions remain grounded in reality  </p>
+<hr />
+<h3 id="why-this-document-matters">Why this document matters<a class="toc-permalink" href="#why-this-document-matters" title="Permanent link to this heading">&para;</a></h3>
+<p>This is the <strong>operator trust anchor</strong> of the entire framework.</p>
+<p>It:<br />
+- Protects operators from being blamed for structural issues<br />
+- Gives technicians permission to name drift<br />
+- Feeds governance with real signals<br />
+- Prevents quiet failure through “heroic maintenance”  </p>
+<p>At this point, your Facilities stack is <strong>fully closed‑loop</strong>:<br />
+- Governance → Design → Dashboards → Operations → Feedback  </p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/facilities/operators/maintenance-standards.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/facilities/operators/maintenance-standards.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>M Ecosystem Simulation Models | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/datacenter_reports/appendices/M_Ecosystem_Simulation_Models/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="M Ecosystem Simulation Models" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/datacenter_reports/appendices/M_Ecosystem_Simulation_Models/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="M Ecosystem Simulation Models" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/datacenter_reports/appendices/M_Ecosystem_Simulation_Models.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "M Ecosystem Simulation Models",
+    "headline": "M Ecosystem Simulation Models",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/datacenter_reports/appendices/M_Ecosystem_Simulation_Models/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#1-structural-layer">1. Structural Layer</a></li>
+<li><a href="#2-dimensional-layer">2. Dimensional Layer</a></li>
+<li><a href="#3-interaction-layer">3. Interaction Layer</a></li>
+<li><a href="#4-regime-layer">4. Regime Layer</a></li>
+<li><a href="#5-field-evolution-layer">5. Field Evolution Layer</a></li>
+<li><a href="#structural-variables">Structural Variables</a></li>
+<li><a href="#dimensional-variables">Dimensional Variables</a></li>
+<li><a href="#regime-variables">Regime Variables</a></li>
+<li><a href="#evolution-variables">Evolution Variables</a></li>
+<li><a href="#structural-failures">Structural Failures</a></li>
+<li><a href="#dimensional-failures">Dimensional Failures</a></li>
+<li><a href="#regime-failures">Regime Failures</a></li>
+<li><a href="#evolution-failures">Evolution Failures</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/datacenter_reports/" itemprop="item">
+                <span itemprop="name">Datacenter Reports</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/datacenter_reports/appendices/" itemprop="item">
+                <span itemprop="name">Appendices</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">M Ecosystem Simulation Models</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">M Ecosystem Simulation Models</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="appendix-m-ecosystem-simulation-models">Appendix M — Ecosystem Simulation Models<a class="toc-permalink" href="#appendix-m-ecosystem-simulation-models" title="Permanent link to this heading">&para;</a></h1>
+<p>RTT‑Inside • Simulation Layer • Drift‑Bounded<br />
+Datacenter Reports — Appendix M</p>
+<p>Ecosystem Simulation Models allow researchers to simulate the behavior of entire<br />
+datacenter ecosystems.<br />
+They model:</p>
+<ul>
+<li>structural field interactions  </li>
+<li>dimensional field dynamics  </li>
+<li>operator ecology behavior  </li>
+<li>drift accumulation  </li>
+<li>coherence propagation  </li>
+<li>regime transitions  </li>
+<li>evolution pathways  </li>
+<li>collapse and recovery patterns  </li>
+</ul>
+<p>This appendix defines the canonical simulation models used in Datacenter Reports<br />
+for research, teaching, forecasting, and computational experimentation.</p>
+<hr />
+<h1 id="m1-what-a-datacenter-ecosystem-simulation-is">🧭 M.1 — What a Datacenter Ecosystem Simulation Is<a class="toc-permalink" href="#m1-what-a-datacenter-ecosystem-simulation-is" title="Permanent link to this heading">&para;</a></h1>
+<p>A datacenter ecosystem simulation models:</p>
+<ul>
+<li>multiple structural fields  </li>
+<li>interacting dimensional layers  </li>
+<li>operator ecology forces  </li>
+<li>drift and coherence dynamics  </li>
+<li>regime transitions  </li>
+<li>evolution pathways  </li>
+</ul>
+<p>It is not a metaphor — it is a <strong>computationally tractable system</strong> with<br />
+definable rules and measurable outputs.</p>
+<hr />
+<h1 id="m2-the-five-simulation-layers-rtt-canon">🧱 M.2 — The Five Simulation Layers (RTT Canon)<a class="toc-permalink" href="#m2-the-five-simulation-layers-rtt-canon" title="Permanent link to this heading">&para;</a></h1>
+<p>Every ecosystem simulation contains five layers:</p>
+<h3 id="1-structural-layer"><strong>1. Structural Layer</strong><a class="toc-permalink" href="#1-structural-layer" title="Permanent link to this heading">&para;</a></h3>
+<p>Facilities, governance, culture, standards, human envelope.</p>
+<h3 id="2-dimensional-layer"><strong>2. Dimensional Layer</strong><a class="toc-permalink" href="#2-dimensional-layer" title="Permanent link to this heading">&para;</a></h3>
+<p>Planetary, cultural, governance, economic, compute, infrastructure.</p>
+<h3 id="3-interaction-layer"><strong>3. Interaction Layer</strong><a class="toc-permalink" href="#3-interaction-layer" title="Permanent link to this heading">&para;</a></h3>
+<p>Operator ecology, dimensional tension, structural alignment.</p>
+<h3 id="4-regime-layer"><strong>4. Regime Layer</strong><a class="toc-permalink" href="#4-regime-layer" title="Permanent link to this heading">&para;</a></h3>
+<p>Stable, transitional, emergent, chaotic.</p>
+<h3 id="5-field-evolution-layer"><strong>5. Field Evolution Layer</strong><a class="toc-permalink" href="#5-field-evolution-layer" title="Permanent link to this heading">&para;</a></h3>
+<p>Long‑range evolution, hybridization, collapse, recovery.</p>
+<p>These layers form the <strong>simulation stack</strong>.</p>
+<hr />
+<h1 id="m3-simulation-model-a-structural-interaction-model-sima">🔧 M.3 — Simulation Model A — Structural Interaction Model (SIM‑A)<a class="toc-permalink" href="#m3-simulation-model-a-structural-interaction-model-sima" title="Permanent link to this heading">&para;</a></h1>
+<p>Simulates how structural fields interact under load.</p>
+<div class="codehilite"><pre><span></span><code>Facilities ↔ Governance ↔ Culture ↔ Standards ↔ Human Envelope
+        ↓ interaction rules
+Structural Drift
+Coherence Alignment
+Regime Perturbation
+</code></pre></div>
+
+<p><strong>Key Variables:</strong><br />
+- structural alignment<br />
+- drift vectors<br />
+- coherence thresholds<br />
+- operator influence  </p>
+<p><strong>Use Cases:</strong><br />
+- structural stress‑testing<br />
+- governance alignment analysis<br />
+- cultural substrate modeling  </p>
+<hr />
+<h1 id="m4-simulation-model-b-dimensional-field-model-simb">🌍 M.4 — Simulation Model B — Dimensional Field Model (SIM‑B)<a class="toc-permalink" href="#m4-simulation-model-b-dimensional-field-model-simb" title="Permanent link to this heading">&para;</a></h1>
+<p>Simulates dimensional intensity and divergence.</p>
+<div class="codehilite"><pre><span></span><code>Planetary → Compute → Infrastructure → Economic → Governance → Cultural
+        ↓
+Dimensional Interaction Zone
+</code></pre></div>
+
+<p><strong>Key Variables:</strong><br />
+- dimensional intensity<br />
+- dimensional divergence<br />
+- cross‑dimensional tension<br />
+- envelope stability  </p>
+<p><strong>Use Cases:</strong><br />
+- planetary constraint modeling<br />
+- economic pressure forecasting<br />
+- compute envelope simulation  </p>
+<hr />
+<h1 id="m5-simulation-model-c-regime-cascade-model-simc">🔺 M.5 — Simulation Model C — Regime Cascade Model (SIM‑C)<a class="toc-permalink" href="#m5-simulation-model-c-regime-cascade-model-simc" title="Permanent link to this heading">&para;</a></h1>
+<p>Simulates regime transitions across the ecosystem.</p>
+<div class="codehilite"><pre><span></span><code>Stable → Transitional → Emergent → Chaotic
+   ^                                |
+   |--------------------------------+
+         Recovery / Stabilization
+</code></pre></div>
+
+<p><strong>Key Variables:</strong><br />
+- regime thresholds<br />
+- transition triggers<br />
+- collapse probability<br />
+- recovery pathways  </p>
+<p><strong>Use Cases:</strong><br />
+- incident forecasting<br />
+- collapse cascade modeling<br />
+- stabilization planning  </p>
+<hr />
+<h1 id="m6-simulation-model-d-drift-accumulation-model-simd">🔥 M.6 — Simulation Model D — Drift Accumulation Model (SIM‑D)<a class="toc-permalink" href="#m6-simulation-model-d-drift-accumulation-model-simd" title="Permanent link to this heading">&para;</a></h1>
+<p>Simulates drift accumulation and decay.</p>
+<div class="codehilite"><pre><span></span><code>Drift Source
+    ↓
+Accumulation → Spike → Decay
+</code></pre></div>
+
+<p><strong>Key Variables:</strong><br />
+- drift accumulation rate<br />
+- drift decay rate<br />
+- drift spikes<br />
+- drift saturation  </p>
+<p><strong>Use Cases:</strong><br />
+- drift forecasting<br />
+- operator load modeling<br />
+- governance misalignment detection  </p>
+<hr />
+<h1 id="m7-simulation-model-e-coherence-propagation-model-sime">🧬 M.7 — Simulation Model E — Coherence Propagation Model (SIM‑E)<a class="toc-permalink" href="#m7-simulation-model-e-coherence-propagation-model-sime" title="Permanent link to this heading">&para;</a></h1>
+<p>Simulates how coherence spreads across fields and dimensions.</p>
+<div class="codehilite"><pre><span></span><code>Coherence Anchor
+      ↓
+Coherence Wave
+      ↓
+Field Stabilization
+</code></pre></div>
+
+<p><strong>Key Variables:</strong><br />
+- coherence amplitude<br />
+- coherence decay<br />
+- resonance coherence<br />
+- cross‑field coherence transfer  </p>
+<p><strong>Use Cases:</strong><br />
+- stabilization modeling<br />
+- coherence anchor identification<br />
+- recovery simulation  </p>
+<hr />
+<h1 id="m8-simulation-model-f-evolution-engine-model-simf">🔮 M.8 — Simulation Model F — Evolution Engine Model (SIM‑F)<a class="toc-permalink" href="#m8-simulation-model-f-evolution-engine-model-simf" title="Permanent link to this heading">&para;</a></h1>
+<p>Simulates long‑range evolution of datacenter ecosystems.</p>
+<div class="codehilite"><pre><span></span><code>Structural Fields
+      ↓
+Dimensional Interaction
+      ↓
+Operator Ecology
+      ↓
+Evolution Pathway
+</code></pre></div>
+
+<p><strong>Key Variables:</strong><br />
+- hybrid density<br />
+- coherence gradients<br />
+- dimensional clusters<br />
+- collapse cascades<br />
+- generative engine activation  </p>
+<p><strong>Use Cases:</strong><br />
+- long‑range forecasting<br />
+- datacenter evolution modeling<br />
+- generative engine activation analysis  </p>
+<hr />
+<h1 id="m9-simulation-architecture-diagram">🧩 M.9 — Simulation Architecture (Diagram)<a class="toc-permalink" href="#m9-simulation-architecture-diagram" title="Permanent link to this heading">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code> ┌──────────────────────────────────────────────┐
+ │              ECOSYSTEM SIMULATION STACK      │
+ ├──────────────────────────────────────────────┤
+ │ 1. Structural Layer                           │
+ │ 2. Dimensional Layer                           │
+ │ 3. Interaction Layer                           │
+ │ 4. Regime Layer                                │
+ │ 5. Field Evolution Layer                       │
+ └──────────────────────────────────────────────┘
+</code></pre></div>
+
+<hr />
+<h1 id="m10-simulation-variables-canonical-set">📦 M.10 — Simulation Variables (Canonical Set)<a class="toc-permalink" href="#m10-simulation-variables-canonical-set" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="structural-variables"><strong>Structural Variables</strong><a class="toc-permalink" href="#structural-variables" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>alignment  </li>
+<li>drift  </li>
+<li>coherence  </li>
+<li>operator load  </li>
+</ul>
+<h3 id="dimensional-variables"><strong>Dimensional Variables</strong><a class="toc-permalink" href="#dimensional-variables" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>intensity  </li>
+<li>divergence  </li>
+<li>tension  </li>
+<li>envelope stability  </li>
+</ul>
+<h3 id="regime-variables"><strong>Regime Variables</strong><a class="toc-permalink" href="#regime-variables" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>thresholds  </li>
+<li>transitions  </li>
+<li>collapse probability  </li>
+</ul>
+<h3 id="evolution-variables"><strong>Evolution Variables</strong><a class="toc-permalink" href="#evolution-variables" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>hybrid density  </li>
+<li>coherence gradients  </li>
+<li>dimensional clusters  </li>
+</ul>
+<hr />
+<h1 id="m11-simulation-failure-modes">⚠️ M.11 — Simulation Failure Modes<a class="toc-permalink" href="#m11-simulation-failure-modes" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="structural-failures"><strong>Structural Failures</strong><a class="toc-permalink" href="#structural-failures" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>operator overload  </li>
+<li>governance misalignment  </li>
+<li>cultural substrate fracture  </li>
+</ul>
+<h3 id="dimensional-failures"><strong>Dimensional Failures</strong><a class="toc-permalink" href="#dimensional-failures" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>planetary constraint breach  </li>
+<li>economic collapse  </li>
+<li>compute saturation  </li>
+</ul>
+<h3 id="regime-failures"><strong>Regime Failures</strong><a class="toc-permalink" href="#regime-failures" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>collapse cascades  </li>
+<li>coherence anchor failure  </li>
+<li>chaotic persistence  </li>
+</ul>
+<h3 id="evolution-failures"><strong>Evolution Failures</strong><a class="toc-permalink" href="#evolution-failures" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>hybrid instability  </li>
+<li>dimensional fragmentation  </li>
+<li>generative engine collapse  </li>
+</ul>
+<hr />
+<h1 id="end-of-appendix-m-ecosystem-simulation-models">End of Appendix M — Ecosystem Simulation Models<a class="toc-permalink" href="#end-of-appendix-m-ecosystem-simulation-models" title="Permanent link to this heading">&para;</a></h1>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/datacenter_reports/appendices/M_Ecosystem_Simulation_Models.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/datacenter_reports/appendices/M_Ecosystem_Simulation_Models.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,2678 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>General Relativity | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/corpus/general_relativity/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="General Relativity" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/corpus/general_relativity/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="General Relativity" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/corpus/general_relativity.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "General Relativity",
+    "headline": "General Relativity",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/corpus/general_relativity/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#triadicframeworks-docstheoriesgeneral_relativity">TriadicFrameworks /docs/theories/general_relativity/</a></li>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#module-structure">Module Structure</a></li>
+<li><a href="#regime-placement">Regime Placement</a></li>
+<li><a href="#what-this-module-is-and-is-not">What This Module Is (and Is Not)</a></li>
+<li><a href="#how-to-use-this-module">How to Use This Module</a></li>
+<li><a href="#philosophy">Philosophy</a><ul>
+<li><a href="#triadicframeworks-docstheoriesgeneral_relativitycoherence_mapmd">TriadicFrameworks /docs/theories/general_relativity/coherence_map.md</a></li>
+</ul>
+</li>
+<li><a href="#11-metric-coherence">1.1 Metric Coherence</a></li>
+<li><a href="#12-curvature-coherence">1.2 Curvature Coherence</a></li>
+<li><a href="#13-geodesic-coherence">1.3 Geodesic Coherence</a></li>
+<li><a href="#14-causal-coherence">1.4 Causal Coherence</a></li>
+<li><a href="#15-regime-coherence">1.5 Regime Coherence</a></li>
+<li><a href="#c0-incoherent">C0 — Incoherent</a></li>
+<li><a href="#c1-weak-coherence">C1 — Weak Coherence</a></li>
+<li><a href="#c2-moderate-coherence">C2 — Moderate Coherence</a></li>
+<li><a href="#c3-strong-coherence">C3 — Strong Coherence</a></li>
+<li><a href="#c4-perfect-coherence-ideal">C4 — Perfect Coherence (Ideal)</a></li>
+<li><a href="#g1-metric-degeneracy">G1 — Metric Degeneracy</a></li>
+<li><a href="#g2-curvature-divergence">G2 — Curvature Divergence</a></li>
+<li><a href="#g3-geodesic-incoherence">G3 — Geodesic Incoherence</a></li>
+<li><a href="#g4-causal-structure-failure">G4 — Causal Structure Failure</a></li>
+<li><a href="#r0-pregeometric">R0 — Pre‑Geometric</a></li>
+<li><a href="#r1-metric-stability">R1 — Metric Stability</a></li>
+<li><a href="#r2-curvature-operators">R2 — Curvature Operators</a></li>
+<li><a href="#r3-dimensional-curvature">R3 — Dimensional Curvature</a><ul>
+<li><a href="#triadicframeworks-docstheoriesgeneral_relativitycross_modulemd">TriadicFrameworks /docs/theories/general_relativity/cross_module.md</a></li>
+<li><a href="#triadicframeworks-docstheoriesgeneral_relativityengine_notesmd">TriadicFrameworks /docs/theories/general_relativity/engine_notes.md</a></li>
+<li><a href="#triadicframeworks-docstheoriesgeneral_relativityexamplesmd">TriadicFrameworks /docs/theories/general_relativity/examples.md</a></li>
+<li><a href="#goal">Goal</a></li>
+<li><a href="#input">Input</a></li>
+<li><a href="#operation">Operation</a></li>
+<li><a href="#interpretation">Interpretation</a></li>
+<li><a href="#goal_1">Goal</a></li>
+<li><a href="#input_1">Input</a></li>
+<li><a href="#operation_1">Operation</a></li>
+<li><a href="#interpretation_1">Interpretation</a></li>
+<li><a href="#goal_2">Goal</a></li>
+<li><a href="#input_2">Input</a></li>
+<li><a href="#operation_2">Operation</a></li>
+<li><a href="#interpretation_2">Interpretation</a></li>
+<li><a href="#goal_3">Goal</a></li>
+<li><a href="#input_3">Input</a></li>
+<li><a href="#operation_3">Operation</a></li>
+<li><a href="#interpretation_3">Interpretation</a></li>
+<li><a href="#goal_4">Goal</a></li>
+<li><a href="#input_4">Input</a></li>
+<li><a href="#operation_4">Operation</a></li>
+<li><a href="#interpretation_4">Interpretation</a></li>
+<li><a href="#goal_5">Goal</a></li>
+<li><a href="#input_5">Input</a></li>
+<li><a href="#operation_5">Operation</a></li>
+<li><a href="#interpretation_5">Interpretation</a></li>
+<li><a href="#goal_6">Goal</a></li>
+<li><a href="#input_6">Input</a></li>
+<li><a href="#operation_6">Operation</a></li>
+<li><a href="#interpretation_6">Interpretation</a></li>
+<li><a href="#goal_7">Goal</a></li>
+<li><a href="#input_7">Input</a></li>
+<li><a href="#operation_7">Operation</a></li>
+<li><a href="#interpretation_7">Interpretation</a></li>
+<li><a href="#goal_8">Goal</a></li>
+<li><a href="#input_8">Input</a></li>
+<li><a href="#operation_8">Operation</a></li>
+<li><a href="#interpretation_8">Interpretation</a></li>
+<li><a href="#goal_9">Goal</a></li>
+<li><a href="#input_9">Input</a></li>
+<li><a href="#operation_9">Operation</a></li>
+<li><a href="#possible-outputs">Possible Outputs</a></li>
+<li><a href="#interpretation_9">Interpretation</a></li>
+<li><a href="#triadicframeworks-docstheoriesgeneral_relativityregimesmd">TriadicFrameworks /docs/theories/general_relativity/regimes.md</a></li>
+<li><a href="#no-stable-metric-no-curvature-no-geodesics">(No stable metric, no curvature, no geodesics)</a></li>
+<li><a href="#stable-metric-minimal-curvature">(Stable metric, minimal curvature)</a></li>
+<li><a href="#curvature-as-a-geometric-operator-field">(Curvature as a geometric operator field)</a></li>
+<li><a href="#highdimensional-curvature-operators">(High‑dimensional curvature operators)</a></li>
+<li><a href="#r0-r1">R0 → R1</a></li>
+<li><a href="#r1-r2">R1 → R2</a></li>
+<li><a href="#r2-r3">R2 → R3</a></li>
+<li><a href="#r3-r2">R3 → R2</a></li>
+<li><a href="#r2-r1">R2 → R1</a></li>
+<li><a href="#triadicframeworks-docstheoriesgeneral_relativitysession_contextmd">TriadicFrameworks /docs/theories/general_relativity/session_context.md</a></li>
+</ul>
+</li>
+<li><a href="#canon">Canon</a></li>
+<li><a href="#modules">Modules</a></li>
+<li><a href="#drift">Drift</a></li>
+<li><a href="#coherence">Coherence</a></li>
+<li><a href="#version">Version</a></li>
+<li><a href="#format">Format</a></li>
+<li><a href="#front-door">Front door</a></li>
+<li><a href="#every-page">Every page</a></li>
+<li><a href="#audience">Audience</a></li>
+<li><a href="#summary_4">Summary</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/corpus/" itemprop="item">
+                <span itemprop="name">Corpus</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">General Relativity</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">General Relativity</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<p>general_relativity </p>
+<h1 id="general-relativity-a-regimelevel-geometry-of-gravity">General Relativity — A Regime‑Level Geometry of Gravity<a class="toc-permalink" href="#general-relativity-a-regimelevel-geometry-of-gravity" title="Permanent link to this heading">&para;</a></h1>
+<ul>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/general_relativity/module.json"><code>module.json</code></a> — Agentic module schema role assignments</li>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/general_relativity/module_rtt1.json"><code>module_rtt1.json</code></a> — Agentic module schema role assignments</li>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/general_relativity/module_rtt2.json"><code>module_rtt2.json</code></a> — Agentic module schema role assignments</li>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/general_relativity/module_rtt3.json"><code>module_rtt3.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<h3 id="triadicframeworks-docstheoriesgeneral_relativity">TriadicFrameworks /docs/theories/general_relativity/<a class="toc-permalink" href="#triadicframeworks-docstheoriesgeneral_relativity" title="Permanent link to this heading">&para;</a></h3>
+<p>General Relativity (GR) describes gravity not as a force but as the<br />
+curvature of spacetime produced by mass‑energy. Within TriadicFrameworks,<br />
+GR is treated as a <strong>regime‑level geometric coherence theory</strong>, not a<br />
+substrate‑level ontology.</p>
+<p>This module provides a structured, RTT‑aligned interface to General<br />
+Relativity so students, researchers, and agentic AIs can explore its<br />
+geometry, operators, regimes, and coherence boundaries without absorbing<br />
+historical metaphysics.</p>
+<hr />
+<h2 id="purpose">Purpose<a class="toc-permalink" href="#purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>This module clarifies:</p>
+<ul>
+<li>How curvature encodes gravitational behavior  </li>
+<li>Why GR is a <strong>geometric description</strong>, not a fundamental substrate  </li>
+<li>How geodesics, tensors, and curvature operators function in RTT  </li>
+<li>Where GR sits within the regime structure (R3 → R4 boundary)  </li>
+<li>How GR interacts with quantum mechanics, cosmology, and information theory  </li>
+<li>How to use GR tools without treating spacetime as ontological</li>
+</ul>
+<p>General Relativity is not the root of reality.<br />
+It is a <strong>high‑coherence geometric model</strong> that excels in the macroscopic,<br />
+smooth‑regime limit.</p>
+<hr />
+<h2 id="module-structure">Module Structure<a class="toc-permalink" href="#module-structure" title="Permanent link to this heading">&para;</a></h2>
+<p>This theory includes four canonical files:</p>
+<ol>
+<li>
+<p><strong>module.json</strong><br />
+   Identity, lineage, operators, drift boundaries, coherence markers,<br />
+   and cross‑module references.</p>
+</li>
+<li>
+<p><strong>module_rtt1.json</strong><br />
+   RTT/1 engine: operator grammar, curvature behavior, geodesics, and<br />
+   minimal coherence examples.</p>
+</li>
+<li>
+<p><strong>module_rtt2.json</strong><br />
+   RTT/2 engine: resonance mapping, stabilizers, gravitational coherence,<br />
+   and cross‑module propagation.</p>
+</li>
+<li>
+<p><strong>module_rtt3.json</strong><br />
+   RTT/3 engine: triadic‑substrate integration, multi‑regime simulation<br />
+   hooks, and hybrid‑canon scaffolding.</p>
+</li>
+</ol>
+<p>Together, these files allow construction of a <strong>General Relativity<br />
+RTT‑AI‑Hybrid Canon</strong>, enabling structured reasoning across physics,<br />
+cosmology, and geometry.</p>
+<hr />
+<h2 id="regime-placement">Regime Placement<a class="toc-permalink" href="#regime-placement" title="Permanent link to this heading">&para;</a></h2>
+<p>General Relativity primarily operates in:</p>
+<ul>
+<li><strong>R3 → R4</strong> — Smooth geometric regimes with strong coherence  </li>
+<li><strong>R3</strong> — Classical gravitational behavior  </li>
+<li><strong>R2</strong> — Weak‑field approximations and linearized gravity  </li>
+<li><strong>R1</strong> — GR collapses; curvature loses meaning</li>
+</ul>
+<p>GR is a <strong>macroscopic geometric theory</strong>, not a substrate model.</p>
+<hr />
+<h2 id="what-this-module-is-and-is-not">What This Module Is (and Is Not)<a class="toc-permalink" href="#what-this-module-is-and-is-not" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>This module <em>is</em>:</strong></p>
+<ul>
+<li>A clean, minimal, student‑ready interface  </li>
+<li>A structured view of curvature, geodesics, and gravitational coherence  </li>
+<li>A bridge between classical GR and RTT substrate reasoning  </li>
+<li>A stable environment for agentic‑AI reasoning</li>
+</ul>
+<p><strong>This module is <em>not</em>:</strong></p>
+<ul>
+<li>A metaphysical claim about spacetime as a physical substance  </li>
+<li>A replacement for quantum gravity or substrate‑level models  </li>
+<li>A justification for treating curvature as ontology  </li>
+<li>A distortion of Einstein’s actual mathematical framework</li>
+</ul>
+<hr />
+<h2 id="how-to-use-this-module">How to Use This Module<a class="toc-permalink" href="#how-to-use-this-module" title="Permanent link to this heading">&para;</a></h2>
+<p>Students and researchers can:</p>
+<ul>
+<li>Explore curvature, geodesics, and stress‑energy as <strong>operators</strong>  </li>
+<li>Understand gravity as <strong>geometric coherence</strong>, not force  </li>
+<li>Compare GR with other theories using shared triadic grammar  </li>
+<li>Identify coherence boundaries and drift risks  </li>
+<li>Build a hybrid‑canon instance for simulation and analysis</li>
+</ul>
+<p>Agentic AIs can:</p>
+<ul>
+<li>Load the module.json files as structured metadata  </li>
+<li>Perform regime‑aware reasoning  </li>
+<li>Maintain coherence across physics modules  </li>
+<li>Generate examples, tests, and cross‑theory mappings</li>
+</ul>
+<hr />
+<h2 id="philosophy">Philosophy<a class="toc-permalink" href="#philosophy" title="Permanent link to this heading">&para;</a></h2>
+<p>General Relativity is one of humanity’s most beautiful geometric<br />
+descriptions.<br />
+This module preserves that beauty while placing it in a triadic‑substrate<br />
+context where curvature, resonance, and coherence explain what the<br />
+equations describe.</p>
+<p>Einstein gave us the geometry.<br />
+RTT gives it a place in the substrate.<br />
+# Coherence Map — General Relativity  </p>
+<h3 id="triadicframeworks-docstheoriesgeneral_relativitycoherence_mapmd">TriadicFrameworks /docs/theories/general_relativity/coherence_map.md<a class="toc-permalink" href="#triadicframeworks-docstheoriesgeneral_relativitycoherence_mapmd" title="Permanent link to this heading">&para;</a></h3>
+<p>General Relativity (GR) is a <strong>geometric coherence theory of gravity</strong>.<br />
+Coherence in GR is the stability of:</p>
+<ul>
+<li>the metric  </li>
+<li>curvature  </li>
+<li>geodesics  </li>
+<li>causal structure  </li>
+<li>regime transitions  </li>
+</ul>
+<p>Gravity = <strong>coherent curvature</strong>.<br />
+Geodesics = <strong>coherence trajectories</strong>.<br />
+Spacetime = <strong>a geometric operator field</strong>.</p>
+<p>This file defines the coherence dimensions, coherence levels, collapse<br />
+modes, and regime behavior for GR.</p>
+<hr />
+<h1 id="1-coherence-dimensions">1. Coherence Dimensions<a class="toc-permalink" href="#1-coherence-dimensions" title="Permanent link to this heading">&para;</a></h1>
+<p>GR uses <strong>five geometric coherence dimensions</strong>:</p>
+<h2 id="11-metric-coherence">1.1 Metric Coherence<a class="toc-permalink" href="#11-metric-coherence" title="Permanent link to this heading">&para;</a></h2>
+<p>Stability of the metric as a geometric structure.</p>
+<p>A metric is coherent when:</p>
+<ul>
+<li>it is non‑degenerate  </li>
+<li>causal cones remain valid  </li>
+<li>signature remains stable  </li>
+</ul>
+<hr />
+<h2 id="12-curvature-coherence">1.2 Curvature Coherence<a class="toc-permalink" href="#12-curvature-coherence" title="Permanent link to this heading">&para;</a></h2>
+<p>Stability of curvature as a geometric operator field.</p>
+<p>Curvature is coherent when:</p>
+<ul>
+<li>curvature invariants remain stable  </li>
+<li>curvature does not diverge  </li>
+<li>curvature responds consistently to stress‑energy  </li>
+</ul>
+<hr />
+<h2 id="13-geodesic-coherence">1.3 Geodesic Coherence<a class="toc-permalink" href="#13-geodesic-coherence" title="Permanent link to this heading">&para;</a></h2>
+<p>Stability of geodesics as coherence trajectories.</p>
+<p>Geodesics are coherent when:</p>
+<ul>
+<li>they preserve identity  </li>
+<li>they respond consistently to curvature  </li>
+<li>they maintain causal compatibility  </li>
+</ul>
+<hr />
+<h2 id="14-causal-coherence">1.4 Causal Coherence<a class="toc-permalink" href="#14-causal-coherence" title="Permanent link to this heading">&para;</a></h2>
+<p>Stability of causal structure.</p>
+<p>Causal structure is coherent when:</p>
+<ul>
+<li>light cones remain valid  </li>
+<li>no causal inversion occurs  </li>
+<li>adjacency remains consistent  </li>
+</ul>
+<hr />
+<h2 id="15-regime-coherence">1.5 Regime Coherence<a class="toc-permalink" href="#15-regime-coherence" title="Permanent link to this heading">&para;</a></h2>
+<p>Stability across R1 → R3 transitions.</p>
+<p>Regime coherence holds when:</p>
+<ul>
+<li>transitions preserve geometric identity  </li>
+<li>curvature operators remain valid  </li>
+<li>dimensional profiles remain consistent  </li>
+</ul>
+<hr />
+<h1 id="2-coherence-levels-c0-c4">2. Coherence Levels (C0 → C4)<a class="toc-permalink" href="#2-coherence-levels-c0-c4" title="Permanent link to this heading">&para;</a></h1>
+<p>Coherence is evaluated on a <strong>five‑level geometric scale</strong>:</p>
+<h2 id="c0-incoherent"><strong>C0 — Incoherent</strong><a class="toc-permalink" href="#c0-incoherent" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>metric invalid  </li>
+<li>curvature undefined  </li>
+<li>no geodesic structure  </li>
+</ul>
+<p>System cannot support GR.</p>
+<hr />
+<h2 id="c1-weak-coherence"><strong>C1 — Weak Coherence</strong><a class="toc-permalink" href="#c1-weak-coherence" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>metric barely stable  </li>
+<li>curvature inconsistent  </li>
+<li>geodesics unreliable  </li>
+</ul>
+<p>System supports only primitive geometry.</p>
+<hr />
+<h2 id="c2-moderate-coherence"><strong>C2 — Moderate Coherence</strong><a class="toc-permalink" href="#c2-moderate-coherence" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>metric stable  </li>
+<li>curvature mostly consistent  </li>
+<li>geodesics valid  </li>
+</ul>
+<p>System supports basic GR structure.</p>
+<hr />
+<h2 id="c3-strong-coherence"><strong>C3 — Strong Coherence</strong><a class="toc-permalink" href="#c3-strong-coherence" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>metric stable under deformation  </li>
+<li>curvature consistent  </li>
+<li>geodesics coherent  </li>
+<li>causal structure intact  </li>
+<li>regime transitions stable  </li>
+</ul>
+<p>System supports full GR behavior.</p>
+<hr />
+<h2 id="c4-perfect-coherence-ideal"><strong>C4 — Perfect Coherence (Ideal)</strong><a class="toc-permalink" href="#c4-perfect-coherence-ideal" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>metric perfectly stable  </li>
+<li>curvature fully consistent  </li>
+<li>geodesics perfectly coherent  </li>
+<li>causal structure fully preserved  </li>
+<li>regime transitions lossless  </li>
+</ul>
+<p>C4 is theoretical; real systems approach C3.</p>
+<hr />
+<h1 id="3-collapse-modes-geometric">3. Collapse Modes (Geometric)<a class="toc-permalink" href="#3-collapse-modes-geometric" title="Permanent link to this heading">&para;</a></h1>
+<p>Collapse occurs when geometry fails structurally.</p>
+<h2 id="g1-metric-degeneracy"><strong>G1 — Metric Degeneracy</strong><a class="toc-permalink" href="#g1-metric-degeneracy" title="Permanent link to this heading">&para;</a></h2>
+<p>Metric becomes singular or invalid.</p>
+<h2 id="g2-curvature-divergence"><strong>G2 — Curvature Divergence</strong><a class="toc-permalink" href="#g2-curvature-divergence" title="Permanent link to this heading">&para;</a></h2>
+<p>Curvature becomes unbounded or undefined.</p>
+<h2 id="g3-geodesic-incoherence"><strong>G3 — Geodesic Incoherence</strong><a class="toc-permalink" href="#g3-geodesic-incoherence" title="Permanent link to this heading">&para;</a></h2>
+<p>Geodesics lose identity or causal compatibility.</p>
+<h2 id="g4-causal-structure-failure"><strong>G4 — Causal Structure Failure</strong><a class="toc-permalink" href="#g4-causal-structure-failure" title="Permanent link to this heading">&para;</a></h2>
+<p>Light cones collapse or invert.</p>
+<p>Collapse is geometric, not probabilistic.</p>
+<hr />
+<h1 id="4-regime-behavior-r0-r3">4. Regime Behavior (R0 → R3)<a class="toc-permalink" href="#4-regime-behavior-r0-r3" title="Permanent link to this heading">&para;</a></h1>
+<p>Coherence behaves differently across RTT regimes:</p>
+<h2 id="r0-pregeometric"><strong>R0 — Pre‑Geometric</strong><a class="toc-permalink" href="#r0-pregeometric" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>no metric  </li>
+<li>no curvature  </li>
+<li>no geodesics  </li>
+</ul>
+<p>Coherence undefined.</p>
+<hr />
+<h2 id="r1-metric-stability"><strong>R1 — Metric Stability</strong><a class="toc-permalink" href="#r1-metric-stability" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>metric stable  </li>
+<li>causal structure emerges  </li>
+<li>minimal curvature  </li>
+</ul>
+<p>Coherence dominated by metric stability.</p>
+<hr />
+<h2 id="r2-curvature-operators"><strong>R2 — Curvature Operators</strong><a class="toc-permalink" href="#r2-curvature-operators" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>curvature tensor active  </li>
+<li>stress‑energy deforms geometry  </li>
+<li>geodesics respond coherently  </li>
+</ul>
+<p>Coherence dominated by curvature stability.</p>
+<hr />
+<h2 id="r3-dimensional-curvature"><strong>R3 — Dimensional Curvature</strong><a class="toc-permalink" href="#r3-dimensional-curvature" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>curvature becomes dimensional  </li>
+<li>geodesics become multi‑layer  </li>
+<li>causal structure becomes layered  </li>
+</ul>
+<p>Coherence dominated by dimensional consistency.</p>
+<hr />
+<h1 id="5-coherence-evaluation-procedure">5. Coherence Evaluation Procedure<a class="toc-permalink" href="#5-coherence-evaluation-procedure" title="Permanent link to this heading">&para;</a></h1>
+<p>To evaluate coherence:</p>
+<ol>
+<li>Validate metric stability  </li>
+<li>Validate curvature consistency  </li>
+<li>Validate geodesic coherence  </li>
+<li>Validate causal structure  </li>
+<li>Validate regime compatibility  </li>
+</ol>
+<p>If any step fails → classify collapse mode.</p>
+<hr />
+<h1 id="6-summary">6. Summary<a class="toc-permalink" href="#6-summary" title="Permanent link to this heading">&para;</a></h1>
+<p>GR coherence is:</p>
+<ul>
+<li><strong>geometric</strong>  </li>
+<li><strong>operator‑driven</strong>  </li>
+<li><strong>curvature‑first</strong>  </li>
+<li><strong>regime‑aware</strong>  </li>
+<li><strong>zero drift</strong>  </li>
+</ul>
+<p>Gravity = <strong>coherent curvature</strong>.<br />
+Geodesics = <strong>coherence trajectories</strong>.<br />
+Spacetime = <strong>a geometric operator field</strong>.<br />
+# Cross‑Module Integration — General Relativity  </p>
+<h3 id="triadicframeworks-docstheoriesgeneral_relativitycross_modulemd">TriadicFrameworks /docs/theories/general_relativity/cross_module.md<a class="toc-permalink" href="#triadicframeworks-docstheoriesgeneral_relativitycross_modulemd" title="Permanent link to this heading">&para;</a></h3>
+<p>General Relativity (GR) is a <strong>geometric coherence theory of gravity</strong>.<br />
+It provides the curvature substrate, geodesic structure, and causal<br />
+adjacency used across the TriadicFrameworks canon.</p>
+<p>Gravity = <strong>coherent curvature</strong>.<br />
+Geodesics = <strong>coherence trajectories</strong>.<br />
+Spacetime = <strong>a geometric operator field</strong>.</p>
+<p>This file defines how GR integrates with other modules.</p>
+<hr />
+<h1 id="1-integration-with-lds-lowdimensional-structures">1. Integration with LDS (Low‑Dimensional Structures)<a class="toc-permalink" href="#1-integration-with-lds-lowdimensional-structures" title="Permanent link to this heading">&para;</a></h1>
+<p>LDS defines <strong>dimensional profiles</strong> and <strong>geometric surfaces</strong>.</p>
+<p>GR provides:</p>
+<ul>
+<li>metric structure  </li>
+<li>curvature operators  </li>
+<li>geodesic coherence  </li>
+<li>causal adjacency  </li>
+</ul>
+<p>LDS provides:</p>
+<ul>
+<li>dimensional embeddings  </li>
+<li>curvature surfaces  </li>
+<li>low‑dimensional constraints  </li>
+</ul>
+<p><strong>Integration:</strong><br />
+Curvature inherits <strong>dimensional profiles</strong>, enabling R2 → R3 behavior.</p>
+<hr />
+<h1 id="2-integration-with-nos-nature-of-similarity">2. Integration with NoS (Nature of Similarity)<a class="toc-permalink" href="#2-integration-with-nos-nature-of-similarity" title="Permanent link to this heading">&para;</a></h1>
+<p>NoS defines <strong>similarity as structural overlap</strong>.</p>
+<p>GR provides:</p>
+<ul>
+<li>curvature fields  </li>
+<li>geodesic structure  </li>
+<li>causal adjacency  </li>
+</ul>
+<p>NoS provides:</p>
+<ul>
+<li>similarity geometry  </li>
+<li>overlap metrics  </li>
+<li>structural invariants  </li>
+</ul>
+<p><strong>Integration:</strong><br />
+Geometric similarity = <strong>curvature overlap</strong> under stable operators.</p>
+<hr />
+<h1 id="3-integration-with-information-theory">3. Integration with Information Theory<a class="toc-permalink" href="#3-integration-with-information-theory" title="Permanent link to this heading">&para;</a></h1>
+<p>Information Theory defines <strong>distinctions</strong>, <strong>coherence</strong>, and<br />
+<strong>adjacency</strong>.</p>
+<p>GR provides:</p>
+<ul>
+<li>causal distinctions  </li>
+<li>geometric adjacency  </li>
+<li>curvature‑driven coherence  </li>
+</ul>
+<p>Information Theory provides:</p>
+<ul>
+<li>distinction grammar  </li>
+<li>coherence evaluation  </li>
+<li>adjacency metrics  </li>
+</ul>
+<p><strong>Integration:</strong><br />
+Causal structure becomes <strong>distinction adjacency</strong> in Information Theory.</p>
+<hr />
+<h1 id="4-integration-with-fft-framework-field-theory">4. Integration with FFT (Framework Field Theory)<a class="toc-permalink" href="#4-integration-with-fft-framework-field-theory" title="Permanent link to this heading">&para;</a></h1>
+<p>FFT defines <strong>dimensional operators</strong> and <strong>multi‑layer transforms</strong>.</p>
+<p>GR provides:</p>
+<ul>
+<li>curvature operators  </li>
+<li>geodesic bundles  </li>
+<li>causal structure  </li>
+</ul>
+<p>FFT provides:</p>
+<ul>
+<li>dimensional curvature operators  </li>
+<li>multi‑layer geometric transforms  </li>
+<li>field‑level propagation  </li>
+</ul>
+<p><strong>Integration:</strong><br />
+R3 curvature becomes <strong>dimensional curvature</strong> in FFT.</p>
+<hr />
+<h1 id="5-integration-with-thermodynamics-triadic-version">5. Integration with Thermodynamics (Triadic Version)<a class="toc-permalink" href="#5-integration-with-thermodynamics-triadic-version" title="Permanent link to this heading">&para;</a></h1>
+<p>Thermodynamics defines <strong>regime‑level stability</strong> and <strong>horizon<br />
+behavior</strong>.</p>
+<p>GR provides:</p>
+<ul>
+<li>horizon geometry  </li>
+<li>curvature gradients  </li>
+<li>causal boundaries  </li>
+</ul>
+<p>Thermodynamics provides:</p>
+<ul>
+<li>stability surfaces  </li>
+<li>energy‑regime constraints  </li>
+<li>horizon thermodynamics  </li>
+</ul>
+<p><strong>Integration:</strong><br />
+Horizon geometry becomes a <strong>thermodynamic stability surface</strong>.</p>
+<hr />
+<h1 id="6-integration-with-qft-quantum-field-theory">6. Integration with QFT (Quantum Field Theory)<a class="toc-permalink" href="#6-integration-with-qft-quantum-field-theory" title="Permanent link to this heading">&para;</a></h1>
+<p>QFT defines <strong>fields</strong>, <strong>operators</strong>, and <strong>amplitude structure</strong>.</p>
+<p>GR provides:</p>
+<ul>
+<li>curved backgrounds  </li>
+<li>geodesic structure  </li>
+<li>causal adjacency  </li>
+<li>curvature‑driven propagation  </li>
+</ul>
+<p>QFT provides:</p>
+<ul>
+<li>field operators  </li>
+<li>amplitude dynamics  </li>
+<li>vacuum structure  </li>
+</ul>
+<p><strong>Integration:</strong><br />
+QFT on curved spacetime = <strong>field operators on coherence geometry</strong>.</p>
+<hr />
+<h1 id="7-integration-with-cosmology">7. Integration with Cosmology<a class="toc-permalink" href="#7-integration-with-cosmology" title="Permanent link to this heading">&para;</a></h1>
+<p>Cosmology defines <strong>large‑scale geometric evolution</strong>.</p>
+<p>GR provides:</p>
+<ul>
+<li>curvature evolution  </li>
+<li>geodesic expansion  </li>
+<li>causal horizons  </li>
+</ul>
+<p>Cosmology provides:</p>
+<ul>
+<li>large‑scale regimes  </li>
+<li>expansion profiles  </li>
+<li>structure formation  </li>
+</ul>
+<p><strong>Integration:</strong><br />
+Cosmology is <strong>GR at scale</strong>, with regime‑aware curvature evolution.</p>
+<hr />
+<h1 id="8-integration-with-computation">8. Integration with Computation<a class="toc-permalink" href="#8-integration-with-computation" title="Permanent link to this heading">&para;</a></h1>
+<p>Computation defines <strong>state transitions</strong> and <strong>process structure</strong>.</p>
+<p>GR provides:</p>
+<ul>
+<li>causal adjacency  </li>
+<li>geodesic propagation  </li>
+<li>curvature‑driven constraints  </li>
+</ul>
+<p>Computation provides:</p>
+<ul>
+<li>execution models  </li>
+<li>state machines  </li>
+<li>algorithmic structure  </li>
+</ul>
+<p><strong>Integration:</strong><br />
+Computation becomes <strong>causal‑coherence processes</strong> on geometric<br />
+structure.</p>
+<hr />
+<h1 id="9-integration-with-cognition">9. Integration with Cognition<a class="toc-permalink" href="#9-integration-with-cognition" title="Permanent link to this heading">&para;</a></h1>
+<p>Cognition defines <strong>pattern formation</strong> and <strong>representation</strong>.</p>
+<p>GR provides:</p>
+<ul>
+<li>causal adjacency  </li>
+<li>curvature‑driven structure  </li>
+<li>coherence constraints  </li>
+</ul>
+<p>Cognition provides:</p>
+<ul>
+<li>pattern operators  </li>
+<li>representational dynamics  </li>
+<li>recognition structure  </li>
+</ul>
+<p><strong>Integration:</strong><br />
+Cognitive patterns become <strong>coherent geometric structures</strong>.</p>
+<hr />
+<h1 id="summary">Summary<a class="toc-permalink" href="#summary" title="Permanent link to this heading">&para;</a></h1>
+<p>General Relativity integrates with the canon by providing:</p>
+<ul>
+<li>the <strong>curvature substrate</strong>  </li>
+<li>the <strong>geodesic coherence framework</strong>  </li>
+<li>the <strong>causal adjacency structure</strong>  </li>
+<li>the <strong>regime‑aware geometric behavior</strong>  </li>
+</ul>
+<p>It supports:</p>
+<ul>
+<li>LDS  </li>
+<li>NoS  </li>
+<li>Information Theory  </li>
+<li>FFT  </li>
+<li>Thermodynamics  </li>
+<li>QFT  </li>
+<li>Cosmology  </li>
+<li>Computation  </li>
+<li>Cognition  </li>
+</ul>
+<p>Gravity = <strong>coherent curvature</strong>.<br />
+Geodesics = <strong>coherence trajectories</strong>.<br />
+Spacetime = <strong>a geometric operator field</strong>.<br />
+# Engine Notes — General Relativity  </p>
+<h3 id="triadicframeworks-docstheoriesgeneral_relativityengine_notesmd">TriadicFrameworks /docs/theories/general_relativity/engine_notes.md<a class="toc-permalink" href="#triadicframeworks-docstheoriesgeneral_relativityengine_notesmd" title="Permanent link to this heading">&para;</a></h3>
+<p>These notes define the <strong>internal behavior</strong>, <strong>constraints</strong>, and<br />
+<strong>execution semantics</strong> for the General Relativity (GR) module.<br />
+They are intended for AI agents, compilers, simulation engines, and<br />
+module orchestrators.</p>
+<p>General Relativity is a <strong>geometric coherence theory of gravity</strong>.<br />
+Gravity = coherent curvature.<br />
+Geodesics = coherence trajectories.<br />
+Spacetime = a geometric operator field.</p>
+<hr />
+<h1 id="1-identity-lock">1. Identity Lock<a class="toc-permalink" href="#1-identity-lock" title="Permanent link to this heading">&para;</a></h1>
+<p>The GR module identity must remain:</p>
+<ul>
+<li><strong>curvature‑first</strong>  </li>
+<li><strong>coherence‑based</strong>  </li>
+<li><strong>operator‑driven</strong>  </li>
+<li><strong>regime‑aware (R1 → R3)</strong>  </li>
+<li><strong>tensorial and geometric</strong>  </li>
+<li><strong>zero drift</strong></li>
+</ul>
+<p>The engine must reject any interpretation that:</p>
+<ul>
+<li>treats gravity as a force  </li>
+<li>uses rubber‑sheet analogies  </li>
+<li>introduces Newtonian fallback  </li>
+<li>uses semantic or pop‑science metaphors  </li>
+<li>collapses curvature into visualization  </li>
+<li>treats geodesics as “paths objects follow”</li>
+</ul>
+<p>Identity lock is strict.</p>
+<hr />
+<h1 id="2-geometric-object-semantics">2. Geometric Object Semantics<a class="toc-permalink" href="#2-geometric-object-semantics" title="Permanent link to this heading">&para;</a></h1>
+<p>The engine must treat the following as <strong>first‑class geometric objects</strong>:</p>
+<ul>
+<li>metric (g_{\mu\nu})  </li>
+<li>curvature tensor (R_{\mu\nu\rho\sigma})  </li>
+<li>stress‑energy tensor (T_{\mu\nu})  </li>
+<li>geodesic bundle (γ)  </li>
+<li>causal structure (C)  </li>
+<li>regime state (R0 → R3)</li>
+</ul>
+<p>All geometric objects must be:</p>
+<ul>
+<li>non‑degenerate  </li>
+<li>tensorially valid  </li>
+<li>coherence‑compatible  </li>
+<li>regime‑consistent  </li>
+</ul>
+<p>Invalid objects must trigger collapse classification.</p>
+<hr />
+<h1 id="3-operator-semantics">3. Operator Semantics<a class="toc-permalink" href="#3-operator-semantics" title="Permanent link to this heading">&para;</a></h1>
+<p>The GR operator grammar includes:</p>
+<ul>
+<li><strong>𝓖</strong> — metric operator  </li>
+<li><strong>𝓡</strong> — curvature operator  </li>
+<li><strong>𝓣</strong> — stress‑energy operator  </li>
+<li><strong>𝓓𝓮𝓯</strong> — geometric deformation operator  </li>
+<li><strong>𝓖𝓮𝓸</strong> — geodesic operator  </li>
+<li><strong>𝓒</strong> — coherence operator  </li>
+<li><strong>𝓐</strong> — adjacency operator  </li>
+<li><strong>𝓢</strong> — causal structure operator  </li>
+<li><strong>𝓡𝓮𝓰</strong> — regime transition operator  </li>
+<li><strong>𝓒𝓁</strong> — collapse operator  </li>
+</ul>
+<p>Operators must:</p>
+<ul>
+<li>preserve geometric identity  </li>
+<li>maintain coherence monotonicity  </li>
+<li>respect regime constraints  </li>
+<li>avoid semantic drift  </li>
+<li>avoid force metaphors  </li>
+<li>avoid probabilistic interpretations  </li>
+</ul>
+<p>Operators must be <strong>pure</strong>: no side effects outside the geometric object<br />
+unless explicitly defined.</p>
+<hr />
+<h1 id="4-regime-execution-model">4. Regime Execution Model<a class="toc-permalink" href="#4-regime-execution-model" title="Permanent link to this heading">&para;</a></h1>
+<p>GR uses the RTT regime stack:</p>
+<ul>
+<li><strong>R0:</strong> pre‑geometric (no metric, no curvature)  </li>
+<li><strong>R1:</strong> stable metric  </li>
+<li><strong>R2:</strong> curvature operators active  </li>
+<li><strong>R3:</strong> dimensional curvature operators  </li>
+</ul>
+<p>The engine must:</p>
+<ul>
+<li>enforce regime‑specific constraints  </li>
+<li>preserve coherence across transitions  </li>
+<li>maintain causal structure  </li>
+<li>prevent illegal transitions (e.g., R3 → R0)  </li>
+</ul>
+<p>Regime transitions must be monotonic unless collapse is detected.</p>
+<hr />
+<h1 id="5-coherence-evaluation">5. Coherence Evaluation<a class="toc-permalink" href="#5-coherence-evaluation" title="Permanent link to this heading">&para;</a></h1>
+<p>Coherence = <strong>geometric stability</strong>.</p>
+<p>The engine must evaluate coherence using:</p>
+<ul>
+<li>metric stability  </li>
+<li>curvature consistency  </li>
+<li>geodesic coherence  </li>
+<li>causal structure integrity  </li>
+<li>regime compatibility  </li>
+</ul>
+<p>Coherence must not:</p>
+<ul>
+<li>use entropy  </li>
+<li>use probability  </li>
+<li>use semantic similarity  </li>
+<li>use force‑based heuristics  </li>
+</ul>
+<p>Coherence is purely geometric.</p>
+<hr />
+<h1 id="6-collapse-modes">6. Collapse Modes<a class="toc-permalink" href="#6-collapse-modes" title="Permanent link to this heading">&para;</a></h1>
+<p>The engine must classify geometric failure using:</p>
+<ul>
+<li><strong>G1:</strong> metric degeneracy  </li>
+<li><strong>G2:</strong> curvature divergence  </li>
+<li><strong>G3:</strong> geodesic incoherence  </li>
+<li><strong>G4:</strong> causal structure failure  </li>
+</ul>
+<p>Collapse must:</p>
+<ul>
+<li>halt regime transitions  </li>
+<li>freeze geometric objects  </li>
+<li>return diagnostic metadata  </li>
+<li>prevent reinforcement  </li>
+</ul>
+<p>Collapse is geometric, not probabilistic.</p>
+<hr />
+<h1 id="7-reinforcement-semantics">7. Reinforcement Semantics<a class="toc-permalink" href="#7-reinforcement-semantics" title="Permanent link to this heading">&para;</a></h1>
+<p>Reinforcement increases geometric coherence through repeated stable<br />
+operator action.</p>
+<p>Rules:</p>
+<ul>
+<li>reinforcement must be monotonic  </li>
+<li>reinforcement cannot repair G3 or G4 collapse  </li>
+<li>reinforcement cannot introduce new geometric objects  </li>
+<li>reinforcement must preserve tensorial invariants  </li>
+</ul>
+<p>Reinforcement is geometric, not semantic.</p>
+<hr />
+<h1 id="8-crossmodule-constraints">8. Cross‑Module Constraints<a class="toc-permalink" href="#8-crossmodule-constraints" title="Permanent link to this heading">&para;</a></h1>
+<p>GR integrates with:</p>
+<ul>
+<li><strong>LDS:</strong> dimensional profiles of geometry  </li>
+<li><strong>NoS:</strong> geometric similarity and curvature overlap  </li>
+<li><strong>Information Theory:</strong> causal distinctions  </li>
+<li><strong>FFT:</strong> dimensional curvature operators  </li>
+<li><strong>Thermodynamics:</strong> horizon regimes  </li>
+<li><strong>QFT:</strong> fields on curved backgrounds  </li>
+</ul>
+<p>The engine must:</p>
+<ul>
+<li>preserve cross‑module invariants  </li>
+<li>prevent identity drift  </li>
+<li>maintain operator compatibility  </li>
+<li>enforce dimensional consistency  </li>
+</ul>
+<p>GR is a <strong>central geometric module</strong>.</p>
+<hr />
+<h1 id="9-simulation-hooks">9. Simulation Hooks<a class="toc-permalink" href="#9-simulation-hooks" title="Permanent link to this heading">&para;</a></h1>
+<p>The engine must implement:</p>
+<ul>
+<li>metric initialization  </li>
+<li>curvature computation  </li>
+<li>stress‑energy deformation  </li>
+<li>geodesic evolution  </li>
+<li>causal structure construction  </li>
+<li>coherence evaluation  </li>
+<li>regime transitions  </li>
+<li>collapse detection  </li>
+<li>reinforcement  </li>
+</ul>
+<p>See <code>simulation_hooks.json</code> for full schema.</p>
+<hr />
+<h1 id="10-safety-drift-prevention">10. Safety &amp; Drift Prevention<a class="toc-permalink" href="#10-safety-drift-prevention" title="Permanent link to this heading">&para;</a></h1>
+<p>The engine must reject:</p>
+<ul>
+<li>force metaphors  </li>
+<li>rubber‑sheet analogies  </li>
+<li>Newtonian fallback  </li>
+<li>semantic interpretations  </li>
+<li>probabilistic interpretations  </li>
+<li>visual curvature metaphors  </li>
+</ul>
+<p>The module must remain:</p>
+<ul>
+<li>geometric  </li>
+<li>operator‑driven  </li>
+<li>coherence‑based  </li>
+<li>regime‑aware  </li>
+<li>zero drift  </li>
+</ul>
+<hr />
+<h1 id="summary_1">Summary<a class="toc-permalink" href="#summary_1" title="Permanent link to this heading">&para;</a></h1>
+<p>These engine notes define how GR must run:</p>
+<ul>
+<li>curvature is structural  </li>
+<li>geodesics are coherence trajectories  </li>
+<li>stress‑energy is a source operator  </li>
+<li>causal structure is geometric  </li>
+<li>regimes define behavior  </li>
+<li>collapse is geometric  </li>
+<li>drift is not allowed  </li>
+</ul>
+<p>This file is the <strong>internal execution contract</strong> for the GR module.<br />
+# Examples — General Relativity  </p>
+<h3 id="triadicframeworks-docstheoriesgeneral_relativityexamplesmd">TriadicFrameworks /docs/theories/general_relativity/examples.md<a class="toc-permalink" href="#triadicframeworks-docstheoriesgeneral_relativityexamplesmd" title="Permanent link to this heading">&para;</a></h3>
+<p>These examples illustrate General Relativity as a <strong>geometric coherence<br />
+theory</strong>, not a force model.<br />
+Curvature is a <strong>geometric operator field</strong>.<br />
+Geodesics are <strong>coherence trajectories</strong>.<br />
+Stress‑energy is a <strong>curvature‑source operator</strong>.</p>
+<p>All examples avoid force metaphors, rubber‑sheet analogies, and<br />
+Newtonian drift.</p>
+<hr />
+<h1 id="1-metric-initialization-example-g">1. Metric Initialization Example (𝓖)<a class="toc-permalink" href="#1-metric-initialization-example-g" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="goal">Goal<a class="toc-permalink" href="#goal" title="Permanent link to this heading">&para;</a></h3>
+<p>Construct a stable metric structure.</p>
+<h3 id="input">Input<a class="toc-permalink" href="#input" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>metric_signature = diag(-1, 1, 1, 1)
+</code></pre></div>
+
+<h3 id="operation">Operation<a class="toc-permalink" href="#operation" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>g = 𝓖(metric_signature)
+</code></pre></div>
+
+<h3 id="interpretation">Interpretation<a class="toc-permalink" href="#interpretation" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>metric is non‑degenerate  </li>
+<li>defines causal cones  </li>
+<li>supports curvature computation  </li>
+</ul>
+<hr />
+<h1 id="2-curvature-computation-example-r">2. Curvature Computation Example (𝓡)<a class="toc-permalink" href="#2-curvature-computation-example-r" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="goal_1">Goal<a class="toc-permalink" href="#goal_1" title="Permanent link to this heading">&para;</a></h3>
+<p>Compute curvature from a metric.</p>
+<h3 id="input_1">Input<a class="toc-permalink" href="#input_1" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>g = 𝓖(diag(-1, 1, 1, 1))
+</code></pre></div>
+
+<h3 id="operation_1">Operation<a class="toc-permalink" href="#operation_1" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>R = 𝓡(g)
+</code></pre></div>
+
+<h3 id="interpretation_1">Interpretation<a class="toc-permalink" href="#interpretation_1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>curvature is structural  </li>
+<li>no visual bending  </li>
+<li>determines geodesic deviation  </li>
+</ul>
+<hr />
+<h1 id="3-stressenergy-deformation-example-t">3. Stress‑Energy Deformation Example (𝓣)<a class="toc-permalink" href="#3-stressenergy-deformation-example-t" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="goal_2">Goal<a class="toc-permalink" href="#goal_2" title="Permanent link to this heading">&para;</a></h3>
+<p>Apply stress‑energy as a curvature‑source operator.</p>
+<h3 id="input_2">Input<a class="toc-permalink" href="#input_2" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Tμν = perfect_fluid(ρ, p)
+R = 𝓡(g)
+</code></pre></div>
+
+<h3 id="operation_2">Operation<a class="toc-permalink" href="#operation_2" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>R&#39; = 𝓣(Tμν, g)
+</code></pre></div>
+
+<h3 id="interpretation_2">Interpretation<a class="toc-permalink" href="#interpretation_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>stress‑energy deforms curvature  </li>
+<li>no “mass attracts” metaphor  </li>
+<li>operator must preserve coherence  </li>
+</ul>
+<hr />
+<h1 id="4-geometric-deformation-example-def">4. Geometric Deformation Example (𝓓𝓮𝓯)<a class="toc-permalink" href="#4-geometric-deformation-example-def" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="goal_3">Goal<a class="toc-permalink" href="#goal_3" title="Permanent link to this heading">&para;</a></h3>
+<p>Apply a geometric deformation to the metric.</p>
+<h3 id="input_3">Input<a class="toc-permalink" href="#input_3" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>geometry = g
+deformation_signature = small_perturbation(hμν)
+</code></pre></div>
+
+<h3 id="operation_3">Operation<a class="toc-permalink" href="#operation_3" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>g&#39; = 𝓓𝓮𝓯(geometry, deformation_signature)
+</code></pre></div>
+
+<h3 id="interpretation_3">Interpretation<a class="toc-permalink" href="#interpretation_3" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>deformation must preserve invariants  </li>
+<li>supports gravitational wave modeling  </li>
+<li>no Newtonian fallback  </li>
+</ul>
+<hr />
+<h1 id="5-geodesic-evolution-example-geo">5. Geodesic Evolution Example (𝓖𝓮𝓸)<a class="toc-permalink" href="#5-geodesic-evolution-example-geo" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="goal_4">Goal<a class="toc-permalink" href="#goal_4" title="Permanent link to this heading">&para;</a></h3>
+<p>Generate geodesics as coherence trajectories.</p>
+<h3 id="input_4">Input<a class="toc-permalink" href="#input_4" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>g = Schwarzschild_metric(M)
+initial_conditions = {position, velocity}
+</code></pre></div>
+
+<h3 id="operation_4">Operation<a class="toc-permalink" href="#operation_4" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>γ = 𝓖𝓮𝓸(g, initial_conditions)
+</code></pre></div>
+
+<h3 id="interpretation_4">Interpretation<a class="toc-permalink" href="#interpretation_4" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>geodesics are not force‑driven  </li>
+<li>they preserve coherence under curvature  </li>
+<li>causal structure must remain intact  </li>
+</ul>
+<hr />
+<h1 id="6-coherence-evaluation-example-c">6. Coherence Evaluation Example (𝓒)<a class="toc-permalink" href="#6-coherence-evaluation-example-c" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="goal_5">Goal<a class="toc-permalink" href="#goal_5" title="Permanent link to this heading">&para;</a></h3>
+<p>Evaluate geometric coherence.</p>
+<h3 id="input_5">Input<a class="toc-permalink" href="#input_5" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>geometry = g
+curvature = R
+geodesics = γ
+</code></pre></div>
+
+<h3 id="operation_5">Operation<a class="toc-permalink" href="#operation_5" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>coh = 𝓒(geometry, curvature, geodesics)
+</code></pre></div>
+
+<h3 id="interpretation_5">Interpretation<a class="toc-permalink" href="#interpretation_5" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>coherence = geometric stability  </li>
+<li>no entropy or probabilistic metrics  </li>
+<li>coherence must be structural  </li>
+</ul>
+<hr />
+<h1 id="7-adjacency-example-a">7. Adjacency Example (𝓐)<a class="toc-permalink" href="#7-adjacency-example-a" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="goal_6">Goal<a class="toc-permalink" href="#goal_6" title="Permanent link to this heading">&para;</a></h3>
+<p>Measure geometric adjacency between two events.</p>
+<h3 id="input_6">Input<a class="toc-permalink" href="#input_6" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>p, q = events in spacetime
+g = metric
+</code></pre></div>
+
+<h3 id="operation_6">Operation<a class="toc-permalink" href="#operation_6" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>adj = 𝓐(p, q, g)
+</code></pre></div>
+
+<h3 id="interpretation_6">Interpretation<a class="toc-permalink" href="#interpretation_6" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>adjacency is geometric, not semantic  </li>
+<li>supports causal and metric neighborhoods  </li>
+<li>must be regime‑stable  </li>
+</ul>
+<hr />
+<h1 id="8-causal-structure-example-s">8. Causal Structure Example (𝓢)<a class="toc-permalink" href="#8-causal-structure-example-s" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="goal_7">Goal<a class="toc-permalink" href="#goal_7" title="Permanent link to this heading">&para;</a></h3>
+<p>Construct causal cones.</p>
+<h3 id="input_7">Input<a class="toc-permalink" href="#input_7" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>g = metric
+</code></pre></div>
+
+<h3 id="operation_7">Operation<a class="toc-permalink" href="#operation_7" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>C = 𝓢(g)
+</code></pre></div>
+
+<h3 id="interpretation_7">Interpretation<a class="toc-permalink" href="#interpretation_7" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>causal structure must remain coherent  </li>
+<li>no superluminal drift  </li>
+<li>no semantic interpretations  </li>
+</ul>
+<hr />
+<h1 id="9-regime-transition-example-reg">9. Regime Transition Example (𝓡𝓮𝓰)<a class="toc-permalink" href="#9-regime-transition-example-reg" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="goal_8">Goal<a class="toc-permalink" href="#goal_8" title="Permanent link to this heading">&para;</a></h3>
+<p>Transition geometry from R1 → R2.</p>
+<h3 id="input_8">Input<a class="toc-permalink" href="#input_8" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>geometry = g
+</code></pre></div>
+
+<h3 id="operation_8">Operation<a class="toc-permalink" href="#operation_8" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>g₂ = 𝓡𝓮𝓰(g, R1 → R2)
+</code></pre></div>
+
+<h3 id="interpretation_8">Interpretation<a class="toc-permalink" href="#interpretation_8" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>curvature operators activate in R2  </li>
+<li>transitions must preserve coherence  </li>
+<li>illegal transitions trigger collapse  </li>
+</ul>
+<hr />
+<h1 id="10-collapse-classification-example-cl">10. Collapse Classification Example (𝓒𝓁)<a class="toc-permalink" href="#10-collapse-classification-example-cl" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="goal_9">Goal<a class="toc-permalink" href="#goal_9" title="Permanent link to this heading">&para;</a></h3>
+<p>Classify geometric failure.</p>
+<h3 id="input_9">Input<a class="toc-permalink" href="#input_9" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>geometry = g?
+</code></pre></div>
+
+<h3 id="operation_9">Operation<a class="toc-permalink" href="#operation_9" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>mode = 𝓒𝓁(geometry)
+</code></pre></div>
+
+<h3 id="possible-outputs">Possible Outputs<a class="toc-permalink" href="#possible-outputs" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>G1:</strong> metric degeneracy  </li>
+<li><strong>G2:</strong> curvature divergence  </li>
+<li><strong>G3:</strong> geodesic incoherence  </li>
+<li><strong>G4:</strong> causal structure failure  </li>
+</ul>
+<h3 id="interpretation_9">Interpretation<a class="toc-permalink" href="#interpretation_9" title="Permanent link to this heading">&para;</a></h3>
+<p>Collapse is geometric, not probabilistic.</p>
+<hr />
+<h1 id="summary_2">Summary<a class="toc-permalink" href="#summary_2" title="Permanent link to this heading">&para;</a></h1>
+<p>These examples show GR as:</p>
+<ul>
+<li><strong>curvature‑first</strong>  </li>
+<li><strong>coherence‑based</strong>  </li>
+<li><strong>operator‑driven</strong>  </li>
+<li><strong>regime‑aware</strong>  </li>
+<li><strong>zero drift</strong>  </li>
+</ul>
+<p>Gravity = <strong>coherent curvature</strong>.<br />
+Geodesics = <strong>coherence trajectories</strong>.<br />
+Spacetime = <strong>a geometric operator field</strong>.</p>
+<div class="codehilite"><pre><span></span><code># Explanations — General Relativity  
+### TriadicFrameworks /docs/theories/general_relativity/explanations.md
+
+General Relativity (GR) is presented here as a **geometric coherence
+theory of gravity**.  
+Gravity is not a force.  
+Gravity is not a pull.  
+Gravity is not a rubber‑sheet depression.
+
+Gravity = **coherent curvature**.  
+Geodesics = **coherence trajectories**.  
+Spacetime = **a geometric operator field**.
+
+This file explains GR in a clean, structural, operator‑driven way.
+
+---
+
+# 1. What is curvature?
+
+Curvature is a **geometric operator field** that determines how
+coherence trajectories evolve.
+
+Curvature is:
+
+- tensorial  
+- structural  
+- coordinate‑free  
+- regime‑aware  
+- operator‑ready  
+
+Curvature is **not**:
+
+- a visual bending  
+- a stretched surface  
+- a rubber sheet  
+- a force field  
+
+Curvature is the **primary geometric operator** of GR.
+
+---
+
+# 2. What is the metric?
+
+The metric is the **coherence structure** of spacetime.
+
+It defines:
+
+- distances  
+- intervals  
+- causal cones  
+- geodesic structure  
+- curvature computation  
+
+The metric is not a background stage; it is an **active geometric
+object**.
+
+---
+
+# 3. What is a geodesic?
+
+A **geodesic is a coherence‑preserving trajectory**.
+
+It is not:
+
+- a path an object “wants” to follow  
+- a force‑driven curve  
+- a Newtonian orbit with corrections  
+
+Geodesics arise from:
+
+- the metric  
+- curvature  
+- causal structure  
+
+They are the **natural coherence trajectories** of spacetime.
+
+---
+
+# 4. What is stress‑energy?
+
+Stress‑energy is a **curvature‑source operator**.
+
+It:
+
+- deforms curvature  
+- modifies geodesic structure  
+- shapes causal adjacency  
+- preserves coherence when valid  
+
+Stress‑energy does **not** “pull” or “attract.”  
+It **acts on curvature**, not on objects.
+
+---
+
+# 5. What is spacetime?
+
+Spacetime is a **geometric operator field** with:
+
+- a stable metric  
+- curvature operators  
+- causal structure  
+- regime‑aware behavior  
+- coherence constraints  
+
+Spacetime is not a fabric, surface, or visual sheet.
+
+---
+
+# 6. How does GR behave across RTT regimes?
+
+GR is fully regime‑aware:
+
+## R0 — Pre‑Geometric  
+- no metric  
+- no curvature  
+- no geodesics  
+
+## R1 — Metric Stability  
+- stable metric  
+- causal structure emerges  
+- minimal curvature  
+
+## R2 — Curvature Operators  
+- curvature tensor active  
+- stress‑energy deforms geometry  
+- geodesics respond coherently  
+
+## R3 — Dimensional Curvature  
+- curvature becomes dimensional  
+- geodesics become multi‑layer  
+- causal structure becomes layered  
+
+Regimes describe **how geometry evolves** as structure increases.
+
+---
+
+# 7. What is coherence in GR?
+
+Coherence = **geometric stability**.
+
+A GR system is coherent when:
+
+- the metric is stable  
+- curvature is consistent  
+- geodesics preserve identity  
+- causal structure is intact  
+- regime transitions do not break geometry  
+
+Coherence is **structural**, not probabilistic.
+
+---
+
+# 8. What is geometric collapse?
+
+Collapse occurs when geometry fails structurally:
+
+- **G1:** metric degeneracy  
+- **G2:** curvature divergence  
+- **G3:** geodesic incoherence  
+- **G4:** causal structure failure  
+
+Collapse is geometric, not semantic or probabilistic.
+
+---
+
+# 9. How do I “run” GR as a student?
+
+Use the operators:
+
+- **𝓖** — metric  
+- **𝓡** — curvature  
+- **𝓣** — stress‑energy  
+- **𝓓𝓮𝓯** — geometric deformation  
+- **𝓖𝓮𝓸** — geodesics  
+- **𝓒** — coherence  
+- **𝓐** — adjacency  
+- **𝓢** — causal structure  
+- **𝓡𝓮𝓰** — regime transitions  
+- **𝓒𝓁** — collapse modes  
+
+Workflow:
+
+1. Build geometry  
+2. Compute curvature  
+3. Apply stress‑energy  
+4. Evolve geodesics  
+5. Evaluate coherence  
+6. Check for collapse  
+
+---
+
+# 10. How does GR integrate with other modules?
+
+- **LDS:** dimensional profiles of geometry  
+- **NoS:** geometric similarity and curvature overlap  
+- **Information Theory:** causal distinctions  
+- **FFT:** dimensional curvature operators  
+- **Thermodynamics:** horizon regimes  
+- **QFT:** fields on curved backgrounds  
+
+GR is a **central geometric module** in the canon.
+
+---
+
+# Summary
+
+General Relativity here is:
+
+- curvature‑first  
+- coherence‑based  
+- operator‑driven  
+- regime‑aware  
+- zero drift  
+
+Gravity = **coherent curvature**.  
+Geodesics = **coherence trajectories**.  
+Spacetime = **a geometric operator field**.
+# FAQ — General Relativity  
+### TriadicFrameworks /docs/theories/general_relativity/faq.md
+
+This FAQ answers common questions about General Relativity as a
+**geometric coherence theory of gravity**.
+
+Gravity = **coherent curvature**.  
+Geodesics = **coherence trajectories**.  
+Spacetime = **a geometric operator field**.
+
+No force metaphors.  
+No rubber‑sheet analogies.  
+No Newtonian fallback.  
+Zero drift.
+
+---
+
+## ❓ What is gravity in this module?
+
+Gravity is **coherent curvature**.
+
+Not:
+
+- a force  
+- an attraction  
+- a pull  
+- a rubber‑sheet depression  
+
+Curvature is a **geometric operator field** that shapes coherence
+trajectories (geodesics).
+
+---
+
+## ❓ What is spacetime?
+
+Spacetime is a **geometric operator field** defined by:
+
+- a stable metric  
+- curvature operators  
+- causal structure  
+- regime‑aware geometry  
+
+It is not a “fabric” or a visual surface.
+
+---
+
+## ❓ What is a geodesic?
+
+A **geodesic is a coherence‑preserving trajectory**.
+
+It is not:
+
+- a path an object “wants” to follow  
+- a force‑driven curve  
+- a Newtonian orbit with corrections  
+
+Geodesics arise from the **metric and curvature**, not from forces.
+
+---
+
+## ❓ What does stress‑energy do?
+
+Stress‑energy is a **curvature‑source operator**.
+
+It:
+
+- deforms curvature  
+- modifies geodesic structure  
+- preserves geometric coherence when valid  
+
+It does **not** “pull” or “attract.”
+
+---
+
+## ❓ Why avoid rubber‑sheet analogies?
+
+Rubber‑sheet metaphors introduce:
+
+- force drift  
+- visual distortion  
+- dimensional collapse  
+- Newtonian fallback  
+
+They misrepresent curvature as a **2D surface deformation**, which is
+incorrect.
+
+GR uses **tensorial curvature**, not visual metaphors.
+
+---
+
+## ❓ What are the RTT regimes for GR?
+
+- **R0:** pre‑geometric (no metric, no curvature)  
+- **R1:** stable metric  
+- **R2:** curvature operators active  
+- **R3:** dimensional curvature operators  
+
+Regimes describe how geometry behaves as structure increases.
+
+---
+
+## ❓ What causes geometric collapse?
+
+Collapse occurs when geometry fails structurally:
+
+- **G1:** metric degeneracy  
+- **G2:** curvature divergence  
+- **G3:** geodesic incoherence  
+- **G4:** causal structure failure  
+
+Collapse is geometric, not probabilistic.
+
+---
+
+## ❓ How do I “run” this module as a student?
+
+Use the operators:
+
+- **𝓖** — metric  
+- **𝓡** — curvature  
+- **𝓣** — stress‑energy  
+- **𝓓𝓮𝓯** — geometric deformation  
+- **𝓖𝓮𝓸** — geodesics  
+- **𝓒** — coherence  
+- **𝓐** — adjacency  
+- **𝓢** — causal structure  
+- **𝓡𝓮𝓰** — regime transitions  
+- **𝓒𝓁** — collapse modes  
+
+Build geometry → compute curvature → evolve geodesics → evaluate
+coherence.
+
+---
+
+## ❓ How does GR connect to other modules?
+
+- **LDS:** dimensional profiles of geometry  
+- **NoS:** geometric similarity and curvature overlap  
+- **Information Theory:** causal distinctions  
+- **FFT:** dimensional curvature operators  
+- **Thermodynamics:** horizon regimes  
+- **QFT:** fields on curved backgrounds  
+
+GR is a **central geometric module**.
+
+---
+
+## ❓ Is GR a force theory?
+
+No.
+
+Gravity is **coherent curvature**, not a force.
+
+Force language is drift and is not allowed in this module.
+
+---
+
+## ❓ Is spacetime “bent” by mass?
+
+No.
+
+Mass‑energy **deforms curvature** through the stress‑energy operator.  
+No bending, stretching, or visual metaphors.
+
+---
+
+## Summary
+
+General Relativity here is:
+
+- curvature‑first  
+- coherence‑based  
+- operator‑driven  
+- regime‑aware  
+- zero drift  
+
+Gravity = **coherent curvature**.  
+Geodesics = **coherence trajectories**.  
+Spacetime = **a geometric operator field**.
+# General Relativity — Front Door  
+### TriadicFrameworks /docs/theories/general_relativity/frontdoor.md
+
+General Relativity (GR) in TriadicFrameworks is a **geometric coherence
+theory of gravity**.
+
+- Gravity = **coherent curvature**  
+- Geodesics = **coherence trajectories**  
+- Stress‑energy = **curvature‑source operator**  
+- Spacetime = **a geometric operator field**  
+
+This module avoids all drift:
+
+- no force metaphors  
+- no rubber‑sheet analogies  
+- no Newtonian fallback  
+- no semantic or pop‑science interpretations  
+
+It is **operator‑driven**, **regime‑aware (R1 → R3)**, and fully aligned
+with RTT, LDS, NoS, FFT, and Information Theory.
+
+---
+
+## 1. Start here
+
+If you are new to this module, read in this order:
+
+1. **Session context**  
+   `/docs/theories/general_relativity/session_context.md`  
+   Identity, drift boundaries, audience, and scope.
+
+2. **Regimes**  
+   `/docs/theories/general_relativity/regimes.md`  
+   How geometry behaves across R0 → R3.
+
+3. **Operators**  
+   `/docs/theories/general_relativity/operators.md`  
+   𝓖, 𝓡, 𝓣, 𝓓𝓮𝓯, 𝓖𝓮𝓸, 𝓒, 𝓐, 𝓢, 𝓡𝓮𝓰, 𝓒𝓁.
+
+4. **Operator examples**  
+   `/docs/theories/general_relativity/operator_examples.md`  
+   Concrete, curvature‑first patterns.
+
+---
+
+## 2. What this module is
+
+- **Curvature‑first:**  
+  Curvature is a geometric operator field, not a visual metaphor.
+
+- **Coherence‑based:**  
+  Geometry is coherent when curvature, geodesics, and stress‑energy
+  remain structurally aligned.
+
+- **Operator‑driven:**  
+  GR is expressed through geometric operators, not forces.
+
+- **Regime‑aware:**  
+  R1: stable metric  
+  R2: curvature operators  
+  R3: dimensional curvature  
+
+- **Zero drift:**  
+  No force language, no rubber sheets, no Newtonian fallback.
+
+---
+
+## 3. Structure of the module
+
+Core structural files:
+
+- **`session_context.md`** — identity, drift, audience  
+- **`regimes.md`** — R0 → R3 geometric behavior  
+- **`operators.md`** — operator grammar  
+- **`operator_examples.md`** — worked examples  
+- **`coherence_map.md`** — geometric stability  
+- **`lineage.md`** — historical → geometric → RTT arc  
+- **`cross_module.md`** — integration with QFT, LDS, NoS, Thermodynamics, IT  
+- **`engine_notes.md`** — internal behavior for AI/compilers  
+- **`simulation_hooks.json`** — curvature/geodesic hooks  
+
+---
+
+## 4. How to use this module
+
+For **students**:
+
+- Treat GR as a **curvature engine**, not a force theory.  
+- Use operators to build, deform, and analyze geometry.  
+- Follow geodesics as **coherence trajectories**, not “paths objects
+  follow.”
+
+For **AI agents / tools**:
+
+- Use `session_context.md` as the identity anchor.  
+- Use `engine_notes.md` and `simulation_hooks.json` to run curvature,
+  geodesics, and regime transitions safely.  
+- Preserve **geometric coherence** and **causal structure** across
+  R1 → R3.
+
+---
+
+## 5. Summary
+
+General Relativity here is:
+
+- a **geometric coherence theory**  
+- a **curvature‑operator framework**  
+- a **regime‑aware spacetime model**  
+- a **cross‑module backbone** for cosmology, QFT, and gravitational
+  physics  
+
+It is **not**:
+
+- a force theory  
+- a rubber‑sheet analogy  
+- a Newtonian correction  
+- a semantic or metaphysical model  
+
+Gravity = **coherent curvature**.  
+Geodesics = **coherence trajectories**.  
+Spacetime = **a geometric operator field**.
+# Lineage — General Relativity  
+### TriadicFrameworks /docs/theories/general_relativity/lineage.md
+
+General Relativity (GR) is treated in TriadicFrameworks as a **geometric
+coherence theory**, not a force model.  
+Gravity = **coherent curvature**.  
+Geodesics = **coherence trajectories**.  
+Spacetime = **a geometric operator field**.
+
+This file traces the lineage of GR from early geometric intuition to its
+full RTT‑aligned, cross‑module identity.
+
+---
+
+# 1. Historical Lineage (Pre‑RTT)
+
+## 1.1 Early Geometric Intuitions  
+- Euclidean geometry  
+- Gauss’s intrinsic curvature  
+- Riemann’s manifold structure  
+- Ricci &amp; Levi‑Civita’s tensor calculus  
+
+These developments establish **geometry as structure**, not visualization.
+
+## 1.2 Einstein’s Breakthrough (1915)  
+- gravity = curvature  
+- geodesics = free‑fall trajectories  
+- stress‑energy = curvature source  
+
+Einstein reframes gravity as **geometry**, not force.
+
+## 1.3 Classical GR Era  
+- Schwarzschild solution  
+- Friedmann–Lemaître cosmology  
+- gravitational waves  
+- black hole solutions  
+
+This era solidifies GR as a **curvature‑based theory**.
+
+---
+
+# 2. Conceptual Lineage (Transition Era)
+
+## 2.1 Differential Geometry  
+GR becomes fully tensorial and coordinate‑free.
+
+## 2.2 Causal Structure  
+Light cones define causal adjacency and geodesic behavior.
+
+## 2.3 Energy Conditions  
+Stress‑energy constraints shape geometric deformation.
+
+## 2.4 Limitations of Classical Interpretation  
+- rubber‑sheet metaphors  
+- force‑like language  
+- Newtonian fallback  
+- semantic drift  
+
+TriadicFrameworks removes these limitations.
+
+---
+
+# 3. Structural Lineage (Geometric Coherence Era)
+
+GR becomes a **coherence theory**:
+
+## 3.1 Curvature as Operator  
+Curvature is a **geometric operator field**, not a visual metaphor.
+
+## 3.2 Geodesics as Coherence Trajectories  
+Geodesics preserve geometric coherence under curvature.
+
+## 3.3 Stress‑Energy as Source Operator  
+Stress‑energy deforms curvature structurally.
+
+## 3.4 Causal Structure as Adjacency  
+Causal cones define adjacency in spacetime.
+
+This reframes GR as a **structural, operator‑driven theory**.
+
+---
+
+# 4. RTT Lineage (R0 → R3 Integration)
+
+GR integrates into RTT as follows:
+
+## R0 — Pre‑Geometric  
+- no stable metric  
+- no curvature  
+- no geodesics  
+
+## R1 — Metric Stability  
+- stable metric  
+- causal structure emerges  
+- minimal curvature  
+
+## R2 — Curvature Operators  
+- curvature tensor active  
+- stress‑energy deforms geometry  
+- geodesics respond coherently  
+
+## R3 — Dimensional Curvature  
+- curvature becomes dimensional  
+- geodesics become multi‑layer  
+- causal structure becomes layered  
+
+RTT provides the **regime‑aware behavior** of geometry.
+
+---
+
+# 5. Cross‑Module Lineage (TriadicFrameworks Integration)
+
+GR integrates with:
+
+## 5.1 LDS (Low‑Dimensional Structures)  
+- dimensional profiles of geometry  
+- curvature surfaces  
+
+## 5.2 NoS (Nature of Similarity)  
+- geometric similarity = structural overlap  
+- curvature adjacency  
+
+## 5.3 Information Theory  
+- causal distinctions  
+- coherence evaluation  
+
+## 5.4 FFT (Framework Field Theory)  
+- dimensional curvature operators  
+- multi‑layer geometric transforms  
+
+## 5.5 Thermodynamics  
+- horizon regimes  
+- geometric stability surfaces  
+
+GR becomes a **central geometric module** in the canon.
+
+---
+
+# 6. Modern Lineage (TriadicFrameworks Era)
+
+General Relativity now provides:
+
+- the **curvature substrate** for spacetime modules  
+- the **geodesic coherence framework**  
+- the **causal adjacency structure**  
+- the **regime‑aware geometric behavior**  
+- the **operator grammar** for curvature, stress‑energy, and deformation  
+
+GR is no longer framed as:
+
+- a force  
+- a rubber‑sheet analogy  
+- a Newtonian correction  
+- a semantic or metaphysical model  
+
+It is a **geometric coherence theory**.
+
+---
+
+# Summary
+
+General Relativity’s lineage moves from:
+
+- early geometry →  
+- Einstein’s curvature →  
+- tensorial structure →  
+- coherence‑based geometry →  
+- RTT dimensional regimes →  
+- cross‑module integration  
+
+Gravity = **coherent curvature**.  
+Geodesics = **coherence trajectories**.  
+Spacetime = **a geometric operator field**.
+# Operators — General Relativity  
+### TriadicFrameworks /docs/theories/general_relativity/operators.md
+
+General Relativity (GR) is a **geometric coherence theory**.  
+Its operators act on **spacetime geometry**, **curvature**, **stress‑energy**, and **geodesic structure**.  
+Gravity is not a force; it is **coherent curvature**.  
+Geodesics are not “paths objects follow”; they are **coherence‑preserving trajectories**.
+
+This file defines the canonical operators for GR across R0 → R3.
+
+---
+
+# Operator List
+
+The core operators are:
+
+- **𝓖** — metric operator  
+- **𝓡** — curvature operator  
+- **𝓣** — stress‑energy operator  
+- **𝓓𝓮𝓯** — deformation operator  
+- **𝓖𝓮𝓸** — geodesic operator  
+- **𝓒** — coherence operator  
+- **𝓐** — adjacency operator (causal/metric)  
+- **𝓢** — causal structure operator  
+- **𝓡𝓮𝓰** — regime transition operator  
+- **𝓒𝓁** — collapse operator (geometric failure modes)
+
+Each operator is geometric, structural, and regime‑aware.
+
+---
+
+# 1. Metric Operator (𝓖)
+
+### Purpose  
+Constructs or updates the metric structure of spacetime.
+
+### Form  
+𝓖(metric_signature) → g\_{\mu\nu}
+
+### Notes  
+- metric must be non‑degenerate  
+- metric defines causal structure  
+- no force metaphors allowed  
+
+---
+
+# 2. Curvature Operator (𝓡)
+
+### Purpose  
+Computes curvature as a geometric operator field.
+
+### Form  
+𝓡(g\_{\mu\nu}) → R\_{\mu\nu\rho\sigma}
+
+### Notes  
+- curvature is structural, not visualized as a rubber sheet  
+- curvature determines geodesic deviation  
+- curvature is the core of gravitational behavior  
+
+---
+
+# 3. Stress‑Energy Operator (𝓣)
+
+### Purpose  
+Acts as a **source operator** that deforms curvature.
+
+### Form  
+𝓣(T\_{\mu\nu}, g\_{\mu\nu}) → curvature\_update
+
+### Notes  
+- stress‑energy does not “pull” or “attract”  
+- it modifies curvature structurally  
+- operator must preserve coherence  
+
+---
+
+# 4. Deformation Operator (𝓓𝓮𝓯)
+
+### Purpose  
+Applies geometric deformation to the metric or curvature.
+
+### Form  
+𝓓𝓮𝓯(geometry, deformation\_signature) → updated\_geometry
+
+### Notes  
+- deformation must preserve geometric invariants  
+- no Newtonian fallback  
+- no semantic drift  
+
+---
+
+# 5. Geodesic Operator (𝓖𝓮𝓸)
+
+### Purpose  
+Generates geodesics as **coherence trajectories**.
+
+### Form  
+𝓖𝓮𝓸(g\_{\mu\nu}, initial\_conditions) → geodesic\_bundle
+
+### Notes  
+- geodesics are not force‑driven paths  
+- they preserve coherence under curvature  
+- causal structure must remain intact  
+
+---
+
+# 6. Coherence Operator (𝓒)
+
+### Purpose  
+Evaluates geometric coherence.
+
+### Form  
+𝓒(geometry, curvature, geodesics) → coherence\_score
+
+### Notes  
+- coherence = geometric stability  
+- no entropy or probabilistic metrics  
+- coherence must be structural  
+
+---
+
+# 7. Adjacency Operator (𝓐)
+
+### Purpose  
+Measures geometric adjacency (metric or causal).
+
+### Form  
+𝓐(p, q, g\_{\mu\nu}) → adjacency\_metric
+
+### Notes  
+- adjacency is geometric, not semantic  
+- supports causal and metric neighborhoods  
+- must be regime‑stable  
+
+---
+
+# 8. Causal Structure Operator (𝓢)
+
+### Purpose  
+Constructs and updates causal cones.
+
+### Form  
+𝓢(g\_{\mu\nu}) → causal\_structure
+
+### Notes  
+- causal structure must remain coherent  
+- no superluminal drift  
+- no semantic interpretations  
+
+---
+
+# 9. Regime Transition Operator (𝓡𝓮𝓰)
+
+### Purpose  
+Transitions geometric behavior across RTT regimes.
+
+### Form  
+𝓡𝓮𝓰(geometry, R\_i → R\_j) → transitioned\_geometry
+
+### Notes  
+- transitions must preserve coherence  
+- R3 introduces dimensional curvature operators  
+- illegal transitions trigger collapse  
+
+---
+
+# 10. Collapse Operator (𝓒𝓁)
+
+### Purpose  
+Classifies geometric failure modes.
+
+### Form  
+𝓒𝓁(geometry) → collapse\_mode
+
+### Modes  
+- **G1:** metric degeneracy  
+- **G2:** curvature divergence  
+- **G3:** geodesic incoherence  
+- **G4:** causal structure failure  
+
+### Notes  
+Collapse is geometric, not probabilistic.
+
+---
+
+# Summary
+
+General Relativity operators define:
+
+- metric structure (𝓖)  
+- curvature (𝓡)  
+- stress‑energy deformation (𝓣)  
+- geometric deformation (𝓓𝓮𝓯)  
+- geodesics (𝓖𝓮𝓸)  
+- coherence (𝓒)  
+- adjacency (𝓐)  
+- causal structure (𝓢)  
+- regime transitions (𝓡𝓮𝓰)  
+- collapse modes (𝓒𝓁)
+
+Gravity = **coherent curvature**.  
+Geodesics = **coherence trajectories**.  
+Spacetime = **a geometric operator field**.
+# Operator Examples — General Relativity  
+### TriadicFrameworks /docs/theories/general_relativity/operator_examples.md
+
+These examples illustrate General Relativity as a **geometric coherence
+theory**, not a force model.  
+Curvature is a **geometric operator field**.  
+Geodesics are **coherence‑preserving trajectories**.  
+Stress‑energy is a **curvature‑source operator**.
+
+All examples avoid force metaphors, rubber‑sheet analogies, and
+Newtonian drift.
+
+---
+
+# 1. Metric Operator Example (𝓖)
+
+### Goal  
+Construct a stable metric structure.
+
+### Input  
+</code></pre></div>
+
+<p>metric_signature = diag(-1, 1, 1, 1)</p>
+<div class="codehilite"><pre><span></span><code>### Operation  
+</code></pre></div>
+
+<p>g = 𝓖(metric_signature)</p>
+<div class="codehilite"><pre><span></span><code>### Interpretation  
+- metric is non‑degenerate  
+- defines causal cones  
+- supports curvature computation  
+
+---
+
+# 2. Curvature Operator Example (𝓡)
+
+### Goal  
+Compute curvature from a metric.
+
+### Input  
+</code></pre></div>
+
+<p>g = 𝓖(diag(-1, 1, 1, 1))</p>
+<div class="codehilite"><pre><span></span><code>### Operation  
+</code></pre></div>
+
+<p>R = 𝓡(g)</p>
+<div class="codehilite"><pre><span></span><code>### Interpretation  
+- curvature is structural  
+- no rubber‑sheet visualization  
+- determines geodesic deviation  
+
+---
+
+# 3. Stress‑Energy Operator Example (𝓣)
+
+### Goal  
+Apply stress‑energy as a curvature‑source operator.
+
+### Input  
+</code></pre></div>
+
+<p>Tμν = perfect_fluid(ρ, p)<br />
+R = 𝓡(g)</p>
+<div class="codehilite"><pre><span></span><code>### Operation  
+</code></pre></div>
+
+<p>R&rsquo; = 𝓣(Tμν, g)</p>
+<div class="codehilite"><pre><span></span><code>### Interpretation  
+- stress‑energy deforms curvature  
+- no “mass attracts” metaphor  
+- operator must preserve coherence  
+
+---
+
+# 4. Deformation Operator Example (𝓓𝓮𝓯)
+
+### Goal  
+Apply a geometric deformation to the metric.
+
+### Input  
+</code></pre></div>
+
+<p>geometry = g<br />
+deformation_signature = small_perturbation(hμν)</p>
+<div class="codehilite"><pre><span></span><code>### Operation  
+</code></pre></div>
+
+<p>g&rsquo; = 𝓓𝓮𝓯(geometry, deformation_signature)</p>
+<div class="codehilite"><pre><span></span><code>### Interpretation  
+- deformation must preserve invariants  
+- no Newtonian fallback  
+- supports gravitational wave modeling  
+
+---
+
+# 5. Geodesic Operator Example (𝓖𝓮𝓸)
+
+### Goal  
+Generate geodesics as coherence trajectories.
+
+### Input  
+</code></pre></div>
+
+<p>g = Schwarzschild_metric(M)<br />
+initial_conditions = {position, velocity}</p>
+<div class="codehilite"><pre><span></span><code>### Operation  
+</code></pre></div>
+
+<p>γ = 𝓖𝓮𝓸(g, initial_conditions)</p>
+<div class="codehilite"><pre><span></span><code>### Interpretation  
+- geodesics are not force‑driven  
+- they preserve coherence under curvature  
+- causal structure must remain intact  
+
+---
+
+# 6. Coherence Operator Example (𝓒)
+
+### Goal  
+Evaluate geometric coherence.
+
+### Input  
+</code></pre></div>
+
+<p>geometry = g<br />
+curvature = R<br />
+geodesics = γ</p>
+<div class="codehilite"><pre><span></span><code>### Operation  
+</code></pre></div>
+
+<p>coh = 𝓒(geometry, curvature, geodesics)</p>
+<div class="codehilite"><pre><span></span><code>### Interpretation  
+- coherence = geometric stability  
+- no entropy or probabilistic metrics  
+- coherence must be structural  
+
+---
+
+# 7. Adjacency Operator Example (𝓐)
+
+### Goal  
+Measure geometric adjacency between two events.
+
+### Input  
+</code></pre></div>
+
+<p>p, q = events in spacetime<br />
+g = metric</p>
+<div class="codehilite"><pre><span></span><code>### Operation  
+</code></pre></div>
+
+<p>adj = 𝓐(p, q, g)</p>
+<div class="codehilite"><pre><span></span><code>### Interpretation  
+- adjacency is geometric, not semantic  
+- supports causal and metric neighborhoods  
+- must be regime‑stable  
+
+---
+
+# 8. Causal Structure Operator Example (𝓢)
+
+### Goal  
+Construct causal cones.
+
+### Input  
+</code></pre></div>
+
+<p>g = metric</p>
+<div class="codehilite"><pre><span></span><code>### Operation  
+</code></pre></div>
+
+<p>C = 𝓢(g)</p>
+<div class="codehilite"><pre><span></span><code>### Interpretation  
+- causal structure must remain coherent  
+- no superluminal drift  
+- no semantic interpretations  
+
+---
+
+# 9. Regime Transition Example (𝓡𝓮𝓰)
+
+### Goal  
+Transition geometry from R1 → R2.
+
+### Input  
+</code></pre></div>
+
+<p>geometry = g</p>
+<div class="codehilite"><pre><span></span><code>### Operation  
+</code></pre></div>
+
+<p>g₂ = 𝓡𝓮𝓰(g, R1 → R2)</p>
+<div class="codehilite"><pre><span></span><code>### Interpretation  
+- curvature operators activate in R2  
+- transitions must preserve coherence  
+- illegal transitions trigger collapse  
+
+---
+
+# 10. Collapse Operator Example (𝓒𝓁)
+
+### Goal  
+Classify geometric failure.
+
+### Input  
+</code></pre></div>
+
+<p>geometry = g?</p>
+<div class="codehilite"><pre><span></span><code>### Operation  
+</code></pre></div>
+
+<p>mode = 𝓒𝓁(geometry)</p>
+<div class="codehilite"><pre><span></span><code>### Possible Outputs  
+- **G1:** metric degeneracy  
+- **G2:** curvature divergence  
+- **G3:** geodesic incoherence  
+- **G4:** causal structure failure  
+
+### Interpretation  
+Collapse is geometric, not probabilistic.
+
+---
+
+# Summary
+
+These examples show GR as:
+
+- **curvature‑first**  
+- **coherence‑based**  
+- **operator‑driven**  
+- **regime‑aware**  
+- **zero drift**  
+
+Gravity = **coherent curvature**.  
+Geodesics = **coherence trajectories**.  
+Spacetime = **a geometric operator field**.
+</code></pre></div>
+
+<p># Regimes — General Relativity  </p>
+<h3 id="triadicframeworks-docstheoriesgeneral_relativityregimesmd">TriadicFrameworks /docs/theories/general_relativity/regimes.md<a class="toc-permalink" href="#triadicframeworks-docstheoriesgeneral_relativityregimesmd" title="Permanent link to this heading">&para;</a></h3>
+<p>General Relativity (GR) is a <strong>geometric coherence theory</strong> describing<br />
+how curvature, stress‑energy, and geodesics behave across RTT regimes.<br />
+Gravity is not a force; it is <strong>coherent curvature</strong>.<br />
+Geodesics are not “paths objects follow”; they are <strong>coherence‑preserving<br />
+trajectories</strong>.</p>
+<p>This file defines how GR behaves across R0 → R3.</p>
+<hr />
+<h1 id="r0-pregeometric-regime">R0 — Pre‑Geometric Regime<a class="toc-permalink" href="#r0-pregeometric-regime" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="no-stable-metric-no-curvature-no-geodesics">(No stable metric, no curvature, no geodesics)<a class="toc-permalink" href="#no-stable-metric-no-curvature-no-geodesics" title="Permanent link to this heading">&para;</a></h3>
+<p>R0 is the substrate before geometry stabilizes.</p>
+<p>Characteristics:</p>
+<ul>
+<li>no metric structure  </li>
+<li>no curvature tensor  </li>
+<li>no geodesics  </li>
+<li>no causal structure  </li>
+<li>no stress‑energy coupling  </li>
+</ul>
+<p>GR cannot operate in R0.<br />
+Only primitive geometric distinctions exist.</p>
+<hr />
+<h1 id="r1-metric-stability-regime">R1 — Metric Stability Regime<a class="toc-permalink" href="#r1-metric-stability-regime" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="stable-metric-minimal-curvature">(Stable metric, minimal curvature)<a class="toc-permalink" href="#stable-metric-minimal-curvature" title="Permanent link to this heading">&para;</a></h3>
+<p>R1 is where geometry becomes stable enough to support GR structure.</p>
+<p>Characteristics:</p>
+<ul>
+<li>metric is stable and non‑degenerate  </li>
+<li>curvature may be weak or zero  </li>
+<li>geodesics exist but are simple  </li>
+<li>causal structure is well‑defined  </li>
+<li>stress‑energy acts as a stable source  </li>
+</ul>
+<p>Gravity in R1 is <strong>metric‑defined</strong>, not force‑defined.</p>
+<hr />
+<h1 id="r2-curvature-operator-regime">R2 — Curvature Operator Regime<a class="toc-permalink" href="#r2-curvature-operator-regime" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="curvature-as-a-geometric-operator-field">(Curvature as a geometric operator field)<a class="toc-permalink" href="#curvature-as-a-geometric-operator-field" title="Permanent link to this heading">&para;</a></h3>
+<p>R2 introduces <strong>curvature operators</strong>, enabling full GR behavior.</p>
+<p>Characteristics:</p>
+<ul>
+<li>curvature tensor active  </li>
+<li>stress‑energy deforms curvature  </li>
+<li>geodesics respond to curvature  </li>
+<li>causal cones deform coherently  </li>
+<li>Einstein field equations fully active  </li>
+</ul>
+<p>Gravity in R2 is <strong>coherent curvature</strong>, not attraction.</p>
+<hr />
+<h1 id="r3-dimensional-curvature-regime">R3 — Dimensional Curvature Regime<a class="toc-permalink" href="#r3-dimensional-curvature-regime" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="highdimensional-curvature-operators">(High‑dimensional curvature operators)<a class="toc-permalink" href="#highdimensional-curvature-operators" title="Permanent link to this heading">&para;</a></h3>
+<p>R3 is the highest regime for GR.</p>
+<p>Characteristics:</p>
+<ul>
+<li>curvature becomes dimensional  </li>
+<li>geodesics become multi‑layer coherence trajectories  </li>
+<li>stress‑energy acts as a dimensional operator  </li>
+<li>causal structure becomes multi‑layer  </li>
+<li>geometry can transform across dimensional profiles  </li>
+</ul>
+<p>R3 is where GR integrates with:</p>
+<ul>
+<li>FFT (Framework Field Theory)  </li>
+<li>LDS (Low‑Dimensional Structures)  </li>
+<li>NoS (Nature of Similarity)  </li>
+<li>Information Theory (causal distinctions)  </li>
+</ul>
+<hr />
+<h1 id="regime-transitions">Regime Transitions<a class="toc-permalink" href="#regime-transitions" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="r0-r1">R0 → R1<a class="toc-permalink" href="#r0-r1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>metric stabilizes  </li>
+<li>geometric distinctions become coherent  </li>
+</ul>
+<h3 id="r1-r2">R1 → R2<a class="toc-permalink" href="#r1-r2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>curvature operators activate  </li>
+<li>stress‑energy begins deforming geometry  </li>
+</ul>
+<h3 id="r2-r3">R2 → R3<a class="toc-permalink" href="#r2-r3" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>curvature becomes dimensional  </li>
+<li>geodesics become multi‑layer operators  </li>
+</ul>
+<h3 id="r3-r2">R3 → R2<a class="toc-permalink" href="#r3-r2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>dimensional curvature collapses to surface curvature  </li>
+</ul>
+<h3 id="r2-r1">R2 → R1<a class="toc-permalink" href="#r2-r1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>curvature geometry collapses to stable metric  </li>
+</ul>
+<p>Transitions must preserve:</p>
+<ul>
+<li>geometric identity  </li>
+<li>coherence continuity  </li>
+<li>causal structure integrity  </li>
+</ul>
+<hr />
+<h1 id="summary_3">Summary<a class="toc-permalink" href="#summary_3" title="Permanent link to this heading">&para;</a></h1>
+<p>General Relativity regimes define how geometry behaves across<br />
+dimensional layers:</p>
+<ul>
+<li><strong>R0:</strong> pre‑geometric  </li>
+<li><strong>R1:</strong> stable metric  </li>
+<li><strong>R2:</strong> curvature operators  </li>
+<li><strong>R3:</strong> dimensional curvature  </li>
+</ul>
+<p>Gravity = <strong>coherent curvature</strong>.<br />
+Geodesics = <strong>coherence trajectories</strong>.<br />
+Spacetime = <strong>a geometric operator field</strong>.<br />
+# Session Context — General Relativity  </p>
+<h3 id="triadicframeworks-docstheoriesgeneral_relativitysession_contextmd">TriadicFrameworks /docs/theories/general_relativity/session_context.md<a class="toc-permalink" href="#triadicframeworks-docstheoriesgeneral_relativitysession_contextmd" title="Permanent link to this heading">&para;</a></h3>
+<p>General Relativity (GR) in TriadicFrameworks is treated as a <strong>geometric<br />
+coherence theory of gravity</strong>, not a force model and not a metaphorical<br />
+“rubber sheet” theory. GR describes how <strong>coherent curvature structures</strong><br />
+govern motion, signals, and causal structure across spacetime.</p>
+<p>This session context establishes the identity, drift boundaries, regime<br />
+behavior, and audience alignment for the General Relativity module.</p>
+<hr />
+<h2 id="canon">Canon<a class="toc-permalink" href="#canon" title="Permanent link to this heading">&para;</a></h2>
+<p>General Relativity is framed as a <strong>coherence‑geometry theory</strong> in which:</p>
+<ul>
+<li>curvature is a <strong>structural operator</strong>  </li>
+<li>geodesics are <strong>coherence‑preserving trajectories</strong>  </li>
+<li>stress‑energy is a <strong>source of geometric deformation</strong>  </li>
+<li>gravity is <strong>coherent curvature</strong>, not a force  </li>
+</ul>
+<p>GR is compatible with RTT, NoS, LDS, and FFT.</p>
+<hr />
+<h2 id="modules">Modules<a class="toc-permalink" href="#modules" title="Permanent link to this heading">&para;</a></h2>
+<p>General Relativity participates in the following module lineage:</p>
+<ul>
+<li><strong>Upstream:</strong> Spacetime Geometry, Differential Structure, LDS  </li>
+<li><strong>Lateral:</strong> QFT (curved backgrounds), Thermodynamics (horizon regimes), Information Theory (causal distinctions)  </li>
+<li><strong>Downstream:</strong> Cosmology, Black Hole Physics, Gravitational Waves  </li>
+</ul>
+<p>GR is a <strong>mid‑level geometric module</strong> with strong cross‑module<br />
+propagation.</p>
+<hr />
+<h2 id="drift">Drift<a class="toc-permalink" href="#drift" title="Permanent link to this heading">&para;</a></h2>
+<p>Drift must be strictly avoided:</p>
+<ul>
+<li><strong>No force metaphors</strong> (“gravity pulls things”)  </li>
+<li><strong>No rubber‑sheet analogies</strong>  </li>
+<li><strong>No Newtonian fallback</strong>  </li>
+<li><strong>No semantic drift</strong> (“gravity is a property of mass”)  </li>
+<li><strong>No pop‑science collapse</strong> (“time slows because gravity”)  </li>
+</ul>
+<p>GR = <strong>coherent curvature</strong>, not force, not metaphor.</p>
+<hr />
+<h2 id="coherence">Coherence<a class="toc-permalink" href="#coherence" title="Permanent link to this heading">&para;</a></h2>
+<p>Coherence in GR is:</p>
+<ul>
+<li>curvature stability  </li>
+<li>geodesic consistency  </li>
+<li>causal structure preservation  </li>
+<li>tensorial invariance  </li>
+<li>regime‑compatible geometry  </li>
+</ul>
+<p>A GR system is coherent when curvature, stress‑energy, and geodesics<br />
+remain structurally aligned.</p>
+<hr />
+<h2 id="version">Version<a class="toc-permalink" href="#version" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>1.0 — geometric‑coherence, operator‑ready, regime‑aligned.</strong></p>
+<p>Compatible with RTT/1, RTT/2, RTT/3.</p>
+<hr />
+<h2 id="format">Format<a class="toc-permalink" href="#format" title="Permanent link to this heading">&para;</a></h2>
+<p>This module uses:</p>
+<ul>
+<li>markdown (conceptual clarity)  </li>
+<li>html (front‑door rendering)  </li>
+<li>operator tables  </li>
+<li>curvature maps  </li>
+<li>regime diagrams  </li>
+<li>cross‑module lineage  </li>
+</ul>
+<p>All files are AI‑parsable and student‑ready.</p>
+<hr />
+<h2 id="front-door">Front door<a class="toc-permalink" href="#front-door" title="Permanent link to this heading">&para;</a></h2>
+<p>The front door for this module is:</p>
+<p><code>/docs/theories/general_relativity/frontdoor.md</code></p>
+<p>This session context is the <strong>identity anchor</strong> for all subpages.</p>
+<hr />
+<h2 id="every-page">Every page<a class="toc-permalink" href="#every-page" title="Permanent link to this heading">&para;</a></h2>
+<p>Every page in this module must be:</p>
+<ul>
+<li>standalone  </li>
+<li>curvature‑first  </li>
+<li>coherence‑aligned  </li>
+<li>operator‑aware  </li>
+<li>regime‑compatible  </li>
+<li>zero drift  </li>
+<li>student‑parsable  </li>
+<li>AI‑parsable  </li>
+</ul>
+<p>No page may use force metaphors or rubber‑sheet analogies.</p>
+<hr />
+<h2 id="audience">Audience<a class="toc-permalink" href="#audience" title="Permanent link to this heading">&para;</a></h2>
+<p>This module is written for:</p>
+<ul>
+<li>students  </li>
+<li>researchers  </li>
+<li>theorists  </li>
+<li>engineers  </li>
+<li>AI agents  </li>
+</ul>
+<p>It is designed to be <strong>immediately teachable</strong>, <strong>structurally clear</strong>,<br />
+and <strong>canon‑consistent</strong>.</p>
+<hr />
+<h2 id="summary_4">Summary<a class="toc-permalink" href="#summary_4" title="Permanent link to this heading">&para;</a></h2>
+<p>General Relativity in TriadicFrameworks is:</p>
+<ul>
+<li>a <strong>geometric coherence theory</strong>  </li>
+<li>a <strong>curvature‑operator framework</strong>  </li>
+<li>a <strong>regime‑aware spacetime model</strong> (R0 → R3)  </li>
+<li>a <strong>cross‑module backbone</strong> for cosmology, QFT, and gravitational<br />
+  physics  </li>
+</ul>
+<p>It is <strong>not</strong>:</p>
+<ul>
+<li>a force theory  </li>
+<li>a rubber‑sheet analogy  </li>
+<li>a Newtonian limit with corrections  </li>
+<li>a semantic or metaphysical model  </li>
+</ul>
+<p>Gravity = <strong>coherent curvature</strong>.<br />
+Geodesics = <strong>coherence trajectories</strong>.<br />
+Spacetime = <strong>a geometric operator field</strong>.<br />
+</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/corpus/general_relativity.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/corpus/general_relativity.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+{
+  "generator": "TriadicFrameworks SSG",
+  "version": "1.0.0",
+  "build_timestamp": "2026-07-19T02:03:02Z",
+  "base_url": "https://www.triadicframeworks.org",
+  "total_pages": 6,
+  "pages": [
+    {
+      "url": "https://www.triadicframeworks.org/concepts/triadic-model/",
+      "url_path": "/concepts/triadic-model/",
+      "title": "The Triadic Model",
+      "description": "The canonical three-layer architecture of TriadicFrameworks — SET decomposition, dimensional substrate stack, operator families, and the Observer layer.",
+      "date": "2026-07-13",
+      "modified": "2026-07-13",
+      "source_file": "concepts/triadic-model.md",
+      "rtt_stability": "stable"
+    },
+    {
+      "url": "https://www.triadicframeworks.org/",
+      "url_path": "/",
+      "title": "TriadicFrameworks Documentation",
+      "description": "A structured methodology for building coherent, traceable, and composable systems — spanning governance, economics, physics, AI, and organizational design.",
+      "date": "2026-07-13",
+      "modified": "2026-07-13",
+      "source_file": "index.md",
+      "rtt_stability": "stable"
+    },
+    {
+      "url": "https://www.triadicframeworks.org/introduction/",
+      "url_path": "/introduction/",
+      "title": "Introduction to TriadicFrameworks",
+      "description": "A reader's orientation to TriadicFrameworks — what it is, why it exists, how its parts relate, and where to go next.",
+      "date": "2026-07-13",
+      "modified": "2026-07-13",
+      "source_file": "introduction.md",
+      "rtt_stability": "stable"
+    },
+    {
+      "url": "https://www.triadicframeworks.org/pipeline/ssg_Capture/",
+      "url_path": "/pipeline/ssg_Capture/",
+      "title": "SSG Pipeline Capture",
+      "description": "Documents the static site generator build pipeline for TriadicFrameworks documentation.",
+      "date": "2026-07-14",
+      "modified": "2026-07-14",
+      "source_file": "pipeline/ssg_Capture.md",
+      "rtt_stability": "stable"
+    },
+    {
+      "url": "https://www.triadicframeworks.org/pipeline/ssg_src_capture/",
+      "url_path": "/pipeline/ssg_src_capture/",
+      "title": "SSG Pipeline Capture",
+      "description": "Documents the origin and rationale for the TriadicFrameworks static site generator build pipeline.",
+      "date": "2026-07-14",
+      "modified": "",
+      "source_file": "pipeline/ssg_src_capture.md",
+      "rtt_stability": "stable"
+    },
+    {
+      "url": "https://www.triadicframeworks.org/reference/api/",
+      "url_path": "/reference/api/",
+      "title": "API Reference",
+      "description": "Complete reference for the TriadicFrameworks RTT API — endpoint schemas, request/response formats, client integration patterns, and supporting services.",
+      "date": "2026-07-13",
+      "modified": "",
+      "source_file": "reference/api.md",
+      "rtt_stability": "beta"
+    }
+  ]
+}

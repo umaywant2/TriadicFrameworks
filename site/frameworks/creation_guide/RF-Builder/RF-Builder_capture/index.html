@@ -1,0 +1,1694 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Rf Builder Capture | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/frameworks/creation_guide/RF-Builder/RF-Builder_capture/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Rf Builder Capture" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/frameworks/creation_guide/RF-Builder/RF-Builder_capture/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Rf Builder Capture" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/frameworks/creation_guide/RF-Builder/RF-Builder_capture.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Rf Builder Capture",
+    "headline": "Rf Builder Capture",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/frameworks/creation_guide/RF-Builder/RF-Builder_capture/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#rfbuilder-canonical-fcg-section-complete">⟡ RF‑Builder — Canonical FCG Section — Complete ⟡</a><ul>
+<li><a href="#deliverable-1-canonical-prose-rf-builder_canonical-sectiontxt">Deliverable 1: Canonical Prose (RF-Builder_canonical-section.txt)</a></li>
+<li><a href="#deliverable-2-canonical-mermaid-diagrams-rf-builder_mermaid-diagramstxt">Deliverable 2: Canonical Mermaid Diagrams (RF-Builder_mermaid-diagrams.txt)</a></li>
+<li><a href="#deliverable-3-html-skeleton-rf-builderhtml">Deliverable 3: HTML Skeleton (RF-Builder.html)</a></li>
+<li><a href="#repo-placement">Repo Placement</a></li>
+</ul>
+</li>
+<li><a href="#diagram-1-rfbuilder-triadic-cycle">Diagram 1 — RF‑Builder Triadic Cycle</a></li>
+<li><a href="#diagram-2-coherence-field-internal-structure">Diagram 2 — Coherence Field Internal Structure</a></li>
+<li><a href="#diagram-3-clarity-operator-engine-pipeline">Diagram 3 — Clarity Operator Engine Pipeline</a></li>
+<li><a href="#diagram-4-echo-release-signal">Diagram 4 — Echo Release Signal</a></li>
+<li><a href="#diagram-5-full-rfbuilder-system-top-level">Diagram 5 — Full RF‑Builder System (Top-Level)</a></li>
+<li><a href="#diagram-6-dimensional-correspondence-map">Diagram 6 — Dimensional Correspondence Map</a><ul>
+<li><a href="#what-was-wrong">What was wrong</a></li>
+<li><a href="#what-was-applied">What was applied</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/frameworks/" itemprop="item">
+                <span itemprop="name">Frameworks</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/frameworks/creation_guide/" itemprop="item">
+                <span itemprop="name">Creation Guide</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/frameworks/creation_guide/RF-Builder/" itemprop="item">
+                <span itemprop="name">Rf Builder</span>
+              </a>
+            <meta itemprop="position" content="4" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Rf Builder Capture</span>
+            <meta itemprop="position" content="5" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Rf Builder Capture</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<p>Let me pick this back up properly — I&rsquo;ll gather the repo context and build out the full RF‑Builder canonical section for you.</p>
+<p>All three deliverables are built and exported. Here&rsquo;s the full canon package:</p>
+<hr />
+<h2 id="rfbuilder-canonical-fcg-section-complete">⟡ RF‑Builder — Canonical FCG Section — Complete ⟡<a class="toc-permalink" href="#rfbuilder-canonical-fcg-section-complete" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="deliverable-1-canonical-prose-rf-builder_canonical-sectiontxt">Deliverable 1: Canonical Prose (<code>RF-Builder_canonical-section.txt</code>)<a class="toc-permalink" href="#deliverable-1-canonical-prose-rf-builder_canonical-sectiontxt" title="Permanent link to this heading">&para;</a></h3>
+<p>311 lines of RTT-native Markdown covering six sections:</p>
+<table>
+<thead>
+<tr>
+<th>§</th>
+<th>Section</th>
+<th>Key Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Overview</strong></td>
+<td>RF‑Builder as FCG&rsquo;s genesis instrument; three-phase table; sequential-but-cyclic relationship</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Phase I — Coherence Field</strong></td>
+<td><code>𝔽 = ⟨φ, V, R⟩</code>; coherence condition <code>∇·V = ∂φ/∂t</code>; substrate properties table (Depth, Density, Drift Susceptibility, Coupling Strength); 5-step construction protocol</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Phase II — Clarity Operator Engine</strong></td>
+<td><code>𝔈 = ⟨{𝕊,𝔸,𝕀,𝕆,ℝ𝕖,ℙ,𝔻}, Γ, ε⟩</code>; Seven Operators table with symbols, actions, field effects; engine cycle <code>𝔽₀→𝔽₇</code>; clarity measure <code>C(𝔽,n)</code>; drift correction with stabilization pass</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Phase III — Echo Release</strong></td>
+<td><code>𝔼 = ⟨𝔽*, Σ, μ⟩</code>; signature encoding <code>Σ = Hash(𝕀(𝔽*))</code>; 5 propagation modes; echo feedback <code>𝔽_{n+1} = 𝔽_n ⊕ Δ(𝔼_n)</code>; 5-point release criteria checklist</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Complete Cycle</strong></td>
+<td>ASCII architecture diagram; definitions of cycle, rectification, canon entry</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Mathematical Summary</strong></td>
+<td>Full system <code>RF-Builder = ⟨𝔽, 𝔈, 𝔼, Δ⟩</code>; 5 governing equations; dimensional correspondence table (RTT/1 ↔ RF‑Builder ↔ FFT)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="deliverable-2-canonical-mermaid-diagrams-rf-builder_mermaid-diagramstxt">Deliverable 2: Canonical Mermaid Diagrams (<code>RF-Builder_mermaid-diagrams.txt</code>)<a class="toc-permalink" href="#deliverable-2-canonical-mermaid-diagrams-rf-builder_mermaid-diagramstxt" title="Permanent link to this heading">&para;</a></h3>
+<p>6 diagrams (182 lines), all using canon palette and <code>flowchart LR/TD</code>:</p>
+<ol>
+<li><strong>Triadic Cycle</strong> — Coherence Field → Clarity Engine → Echo Release → feedback loop</li>
+<li><strong>Coherence Field Internals</strong> — <code>φ</code>, <code>V</code>, <code>R</code> with coherence condition feedback</li>
+<li><strong>Clarity Operator Pipeline</strong> — <code>𝔽₀ → 𝕊 → 𝔸 → 𝕀 → 𝕆 → ℝ𝕖 → ℙ → 𝔻 → 𝔽*</code> with convergence check</li>
+<li><strong>Echo Release Signal</strong> — <code>𝔽*</code>, <code>Σ</code>, <code>μ</code> branching into 5 propagation modes</li>
+<li><strong>Full RF‑Builder System</strong> — Three phases nested inside RF‑Builder, with RTT/1 and FFT context wrapping</li>
+<li><strong>Dimensional Correspondence Map</strong> — RTT/1 ↔ RF‑Builder ↔ FFT layer mappings</li>
+</ol>
+<p>All diagrams render natively in GitHub Markdown via <code>```mermaid</code> code blocks.</p>
+<hr />
+<h3 id="deliverable-3-html-skeleton-rf-builderhtml">Deliverable 3: HTML Skeleton (<code>RF-Builder.html</code>)<a class="toc-permalink" href="#deliverable-3-html-skeleton-rf-builderhtml" title="Permanent link to this heading">&para;</a></h3>
+<p>766-line drop-in page for <code>docs/frameworks/creation_guide/RF-Builder/RF-Builder.html</code>:</p>
+<ul>
+<li><strong>Dark theme</strong> with all canon design tokens (<code>--bg: #0a0a0a</code>, <code>--accent: #00eaff</code>, <code>--accent2: #ff00d4</code>, <code>--accent3: #ffe600</code>)</li>
+<li><strong>Header</strong> with inline SVG triadic mark (cyan triangle, magenta inner triangle + center dot, gold vertex dots)</li>
+<li><strong>Nav bar</strong> with all FCG pages + RTT/1 and RTT crosslinks + active state on RF‑Builder</li>
+<li><strong>Sidebar TOC</strong> (sticky, collapsible on mobile)</li>
+<li><strong>8 content sections</strong> with styled <code>&lt;pre class="math-block"&gt;</code> for all RTT-native math, semantic tables, definition grids, checklists</li>
+<li><strong>Inline SVG cycle diagram</strong> (§5) — the 700×200 triadic flow with dashed feedback arc</li>
+<li><strong>Mermaid embed blocks</strong> (§7) — ready for GitHub rendering</li>
+<li><strong>Cross-module navigation table</strong> (§8) — links to RTT/1, FCG, FFT, Principles, RTT Origin</li>
+<li><strong>Footer</strong> with <code>⟡ RECTIFIED ⟡</code> seal</li>
+<li><strong>Responsive</strong> — grid collapses to single column below 800px</li>
+</ul>
+<hr />
+<h3 id="repo-placement">Repo Placement<a class="toc-permalink" href="#repo-placement" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>docs/frameworks/creation_guide/RF-Builder/
+├── RF-Builder.html              ← HTML skeleton (deliverable 3)
+├── RF-Builder_capture.md        ← canonical prose (deliverable 1, rename from .txt)
+└── diagrams/
+    └── rf-builder-mermaid.md    ← Mermaid source (deliverable 2, rename from .txt)
+</code></pre></div>
+
+<hr />
+<div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>RF‑Builder — Resonance Framework Builder | TriadicFrameworks FCG<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+
+  <span class="cm">&lt;!-- ── Canonical Metadata ── --&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;RF‑Builder: the FCG&#39;s canonical instrument for constructing resonance frameworks from first principles. Coherence Field → Clarity Operator Engine → Echo Release.&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;keywords&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;RF-Builder, TriadicFrameworks, FCG, Framework Creation Guide, Coherence Field, Clarity Operator Engine, Echo Release, RTT, FFT, resonance&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;author&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Nawder Loswin — TriadicFrameworks&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;generator&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;TriadicFrameworks Canon v2026&quot;</span><span class="p">&gt;</span>
+
+  <span class="cm">&lt;!-- ── Open Graph ── --&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">property</span><span class="o">=</span><span class="s">&quot;og:title&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;RF‑Builder — Resonance Framework Builder&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">property</span><span class="o">=</span><span class="s">&quot;og:description&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;Build frameworks from substrate to signal. Coherence Field · Clarity Operator Engine · Echo Release.&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">property</span><span class="o">=</span><span class="s">&quot;og:type&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;article&quot;</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="c">/* ═══════════════════════════════════════════════════════</span>
+<span class="c">       TRIADIC DESIGN TOKENS</span>
+<span class="c">       ═══════════════════════════════════════════════════════ */</span>
+<span class="w">    </span><span class="p">:</span><span class="nd">root</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nv">--bg</span><span class="p">:</span><span class="w">         </span><span class="mh">#0a0a0a</span><span class="p">;</span>
+<span class="w">      </span><span class="nv">--bg-card</span><span class="p">:</span><span class="w">    </span><span class="mh">#111111</span><span class="p">;</span>
+<span class="w">      </span><span class="nv">--bg-code</span><span class="p">:</span><span class="w">    </span><span class="mh">#0d1117</span><span class="p">;</span>
+<span class="w">      </span><span class="nv">--text</span><span class="p">:</span><span class="w">       </span><span class="mh">#e6e6e6</span><span class="p">;</span>
+<span class="w">      </span><span class="nv">--text-muted</span><span class="p">:</span><span class="w"> </span><span class="mh">#999999</span><span class="p">;</span>
+<span class="w">      </span><span class="nv">--accent</span><span class="p">:</span><span class="w">     </span><span class="mh">#00eaff</span><span class="p">;</span><span class="w">   </span><span class="c">/* cyan  — RTT/1  */</span>
+<span class="w">      </span><span class="nv">--accent2</span><span class="p">:</span><span class="w">    </span><span class="mh">#ff00d4</span><span class="p">;</span><span class="w">   </span><span class="c">/* magenta — FCG  */</span>
+<span class="w">      </span><span class="nv">--accent3</span><span class="p">:</span><span class="w">    </span><span class="mh">#ffe600</span><span class="p">;</span><span class="w">   </span><span class="c">/* gold — FFT     */</span>
+<span class="w">      </span><span class="nv">--border</span><span class="p">:</span><span class="w">     </span><span class="mh">#222222</span><span class="p">;</span>
+<span class="w">      </span><span class="nv">--radius</span><span class="p">:</span><span class="w">     </span><span class="mi">8</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">      </span><span class="nv">--font-body</span><span class="p">:</span><span class="w">  </span><span class="s1">&#39;Segoe UI&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">system-ui</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">apple-system</span><span class="p">,</span><span class="w"> </span><span class="kc">sans-serif</span><span class="p">;</span>
+<span class="w">      </span><span class="nv">--font-mono</span><span class="p">:</span><span class="w">  </span><span class="s1">&#39;Cascadia Code&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Fira Code&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;JetBrains Mono&#39;</span><span class="p">,</span><span class="w"> </span><span class="kc">monospace</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c">/* ── Reset &amp; Base ── */</span>
+<span class="w">    </span><span class="o">*,</span><span class="w"> </span><span class="o">*</span><span class="p">::</span><span class="nd">before</span><span class="o">,</span><span class="w"> </span><span class="o">*</span><span class="p">::</span><span class="nd">after</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">box-sizing</span><span class="p">:</span><span class="w"> </span><span class="kc">border-box</span><span class="p">;</span><span class="w"> </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nt">html</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">scroll-behavior</span><span class="p">:</span><span class="w"> </span><span class="kc">smooth</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--bg</span><span class="p">);</span>
+<span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--text</span><span class="p">);</span>
+<span class="w">      </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--font-body</span><span class="p">);</span>
+<span class="w">      </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">      </span><span class="k">line-height</span><span class="p">:</span><span class="w"> </span><span class="mf">1.7</span><span class="p">;</span>
+<span class="w">      </span><span class="k">min-height</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">vh</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nt">a</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--accent</span><span class="p">);</span><span class="w"> </span><span class="k">text-decoration</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span><span class="w"> </span><span class="k">transition</span><span class="p">:</span><span class="w"> </span><span class="kc">color</span><span class="w"> </span><span class="mf">.2</span><span class="kt">s</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="nt">a</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--accent3</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c">/* ═══════════════════════════════════════════════════════</span>
+<span class="c">       HEADER</span>
+<span class="c">       ═══════════════════════════════════════════════════════ */</span>
+<span class="w">    </span><span class="nt">header</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">      </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="kt">rem</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="w"> </span><span class="mi">2</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">      </span><span class="k">border-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--border</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nt">header</span><span class="w"> </span><span class="nt">svg</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">margin-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nt">header</span><span class="w"> </span><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mf">2.4</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">      </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="p">;</span>
+<span class="w">      </span><span class="k">letter-spacing</span><span class="p">:</span><span class="w"> </span><span class="mf">0.04</span><span class="kt">em</span><span class="p">;</span>
+<span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--accent2</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nt">header</span><span class="w"> </span><span class="nt">h1</span><span class="w"> </span><span class="nt">span</span><span class="p">.</span><span class="nc">sub</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">block</span><span class="p">;</span>
+<span class="w">      </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mf">0.9</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">      </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="mi">400</span><span class="p">;</span>
+<span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--text-muted</span><span class="p">);</span>
+<span class="w">      </span><span class="k">letter-spacing</span><span class="p">:</span><span class="w"> </span><span class="mf">0.12</span><span class="kt">em</span><span class="p">;</span>
+<span class="w">      </span><span class="k">text-transform</span><span class="p">:</span><span class="w"> </span><span class="kc">uppercase</span><span class="p">;</span>
+<span class="w">      </span><span class="k">margin-top</span><span class="p">:</span><span class="w"> </span><span class="mf">0.3</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c">/* ═══════════════════════════════════════════════════════</span>
+<span class="c">       NAVIGATION</span>
+<span class="c">       ═══════════════════════════════════════════════════════ */</span>
+<span class="w">    </span><span class="nt">nav</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">      </span><span class="k">justify-content</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">      </span><span class="k">flex-wrap</span><span class="p">:</span><span class="w"> </span><span class="kc">wrap</span><span class="p">;</span>
+<span class="w">      </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mf">0.4</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">      </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">      </span><span class="k">border-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--border</span><span class="p">);</span>
+<span class="w">      </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--bg-card</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nt">nav</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mf">0.35</span><span class="kt">rem</span><span class="w"> </span><span class="mf">0.9</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">      </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--border</span><span class="p">);</span>
+<span class="w">      </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--radius</span><span class="p">);</span>
+<span class="w">      </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mf">0.85</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--text-muted</span><span class="p">);</span>
+<span class="w">      </span><span class="k">transition</span><span class="p">:</span><span class="w"> </span><span class="kc">all</span><span class="w"> </span><span class="mf">.2</span><span class="kt">s</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nt">nav</span><span class="w"> </span><span class="nt">a</span><span class="p">:</span><span class="nd">hover</span><span class="o">,</span><span class="w"> </span><span class="nt">nav</span><span class="w"> </span><span class="nt">a</span><span class="p">.</span><span class="nc">active</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">border-color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--accent2</span><span class="p">);</span>
+<span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--accent2</span><span class="p">);</span>
+<span class="w">      </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">212</span><span class="p">,</span><span class="w"> </span><span class="mf">0.06</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c">/* ═══════════════════════════════════════════════════════</span>
+<span class="c">       LAYOUT</span>
+<span class="c">       ═══════════════════════════════════════════════════════ */</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">page-grid</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">      </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="mi">220</span><span class="kt">px</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="p">;</span>
+<span class="w">      </span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="mi">1200</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">      </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="kc">auto</span><span class="p">;</span>
+<span class="w">      </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">      </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">rem</span><span class="w"> </span><span class="mf">1.5</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="p">@</span><span class="k">media</span><span class="w"> </span><span class="o">(</span><span class="nt">max-width</span><span class="o">:</span><span class="w"> </span><span class="nt">800px</span><span class="o">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="p">.</span><span class="nc">page-grid</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">      </span><span class="p">.</span><span class="nc">sidebar</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c">/* ── Sidebar / TOC ── */</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">sidebar</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">sticky</span><span class="p">;</span>
+<span class="w">      </span><span class="k">top</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">      </span><span class="k">align-self</span><span class="p">:</span><span class="w"> </span><span class="kc">start</span><span class="p">;</span>
+<span class="w">      </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mf">0.82</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">sidebar</span><span class="w"> </span><span class="nt">h4</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--accent2</span><span class="p">);</span>
+<span class="w">      </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="mi">600</span><span class="p">;</span>
+<span class="w">      </span><span class="k">text-transform</span><span class="p">:</span><span class="w"> </span><span class="kc">uppercase</span><span class="p">;</span>
+<span class="w">      </span><span class="k">letter-spacing</span><span class="p">:</span><span class="w"> </span><span class="mf">0.1</span><span class="kt">em</span><span class="p">;</span>
+<span class="w">      </span><span class="k">margin-bottom</span><span class="p">:</span><span class="w"> </span><span class="mf">0.6</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">      </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mf">0.75</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">sidebar</span><span class="w"> </span><span class="nt">ul</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">list-style</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">sidebar</span><span class="w"> </span><span class="nt">li</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">margin-bottom</span><span class="p">:</span><span class="w"> </span><span class="mf">0.35</span><span class="kt">rem</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">sidebar</span><span class="w"> </span><span class="nt">a</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--text-muted</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">sidebar</span><span class="w"> </span><span class="nt">a</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--accent</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c">/* ── Main Content ── */</span>
+<span class="w">    </span><span class="nt">main</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">min-width</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nt">main</span><span class="w"> </span><span class="nt">h2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mf">1.6</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">      </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="p">;</span>
+<span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--accent2</span><span class="p">);</span>
+<span class="w">      </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mf">2.5</span><span class="kt">rem</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mf">0.8</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">      </span><span class="k">padding-bottom</span><span class="p">:</span><span class="w"> </span><span class="mf">0.3</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">      </span><span class="k">border-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--border</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nt">main</span><span class="w"> </span><span class="nt">h2</span><span class="p">:</span><span class="nd">first-child</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">margin-top</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nt">main</span><span class="w"> </span><span class="nt">h3</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mf">1.15</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">      </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="mi">600</span><span class="p">;</span>
+<span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--accent</span><span class="p">);</span>
+<span class="w">      </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mf">1.8</span><span class="kt">rem</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mf">0.5</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nt">main</span><span class="w"> </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">margin-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c">/* ── Tables ── */</span>
+<span class="w">    </span><span class="nt">table</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+<span class="w">      </span><span class="k">border-collapse</span><span class="p">:</span><span class="w"> </span><span class="kc">collapse</span><span class="p">;</span>
+<span class="w">      </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mf">1.5</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">      </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mf">0.9</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nt">th</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">left</span><span class="p">;</span>
+<span class="w">      </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5</span><span class="kt">rem</span><span class="w"> </span><span class="mf">0.8</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">      </span><span class="k">border-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--accent2</span><span class="p">);</span>
+<span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--accent2</span><span class="p">);</span>
+<span class="w">      </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="mi">600</span><span class="p">;</span>
+<span class="w">      </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mf">0.8</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">      </span><span class="k">text-transform</span><span class="p">:</span><span class="w"> </span><span class="kc">uppercase</span><span class="p">;</span>
+<span class="w">      </span><span class="k">letter-spacing</span><span class="p">:</span><span class="w"> </span><span class="mf">0.06</span><span class="kt">em</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nt">td</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mf">0.45</span><span class="kt">rem</span><span class="w"> </span><span class="mf">0.8</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">      </span><span class="k">border-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--border</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nt">tr</span><span class="p">:</span><span class="nd">hover</span><span class="w"> </span><span class="nt">td</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">212</span><span class="p">,</span><span class="w"> </span><span class="mf">0.03</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c">/* ── Code / Math blocks ── */</span>
+<span class="w">    </span><span class="nt">pre</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--bg-code</span><span class="p">);</span>
+<span class="w">      </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--border</span><span class="p">);</span>
+<span class="w">      </span><span class="k">border-left</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--accent2</span><span class="p">);</span>
+<span class="w">      </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--radius</span><span class="p">);</span>
+<span class="w">      </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="w"> </span><span class="mf">1.2</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">      </span><span class="k">overflow-x</span><span class="p">:</span><span class="w"> </span><span class="kc">auto</span><span class="p">;</span>
+<span class="w">      </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="mf">1.5</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">      </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--font-mono</span><span class="p">);</span>
+<span class="w">      </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mf">0.88</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">      </span><span class="k">line-height</span><span class="p">:</span><span class="w"> </span><span class="mf">1.6</span><span class="p">;</span>
+<span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--text</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nt">code</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--font-mono</span><span class="p">);</span>
+<span class="w">      </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mf">0.88</span><span class="kt">em</span><span class="p">;</span>
+<span class="w">      </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--bg-code</span><span class="p">);</span>
+<span class="w">      </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mf">0.15</span><span class="kt">em</span><span class="w"> </span><span class="mf">0.4</span><span class="kt">em</span><span class="p">;</span>
+<span class="w">      </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="p">.</span><span class="nc">math-block</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">border-left-color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--accent</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c">/* ── Definition lists ── */</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">def-grid</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="k">grid</span><span class="p">;</span>
+<span class="w">      </span><span class="k">grid-template-columns</span><span class="p">:</span><span class="w"> </span><span class="mi">140</span><span class="kt">px</span><span class="w"> </span><span class="mi">1</span><span class="n">fr</span><span class="p">;</span>
+<span class="w">      </span><span class="k">gap</span><span class="p">:</span><span class="w"> </span><span class="mf">0.3</span><span class="kt">rem</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">      </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">def-grid</span><span class="w"> </span><span class="nt">dt</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="mi">600</span><span class="p">;</span>
+<span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--accent</span><span class="p">);</span>
+<span class="w">      </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--font-mono</span><span class="p">);</span>
+<span class="w">      </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mf">0.9</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">def-grid</span><span class="w"> </span><span class="nt">dd</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--text-muted</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c">/* ── Checklist ── */</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">check-list</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">list-style</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="w">      </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">check-list</span><span class="w"> </span><span class="nt">li</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mf">0.3</span><span class="kt">rem</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">      </span><span class="k">padding-left</span><span class="p">:</span><span class="w"> </span><span class="mf">1.6</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">      </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">relative</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">check-list</span><span class="w"> </span><span class="nt">li</span><span class="p">::</span><span class="nd">before</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">content</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;✓&#39;</span><span class="p">;</span>
+<span class="w">      </span><span class="k">position</span><span class="p">:</span><span class="w"> </span><span class="kc">absolute</span><span class="p">;</span>
+<span class="w">      </span><span class="k">left</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--accent3</span><span class="p">);</span>
+<span class="w">      </span><span class="k">font-weight</span><span class="p">:</span><span class="w"> </span><span class="mi">700</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c">/* ── Diagram containers ── */</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">diagram-container</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--bg-card</span><span class="p">);</span>
+<span class="w">      </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--border</span><span class="p">);</span>
+<span class="w">      </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--radius</span><span class="p">);</span>
+<span class="w">      </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">      </span><span class="k">margin</span><span class="p">:</span><span class="w"> </span><span class="mf">1.5</span><span class="kt">rem</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">      </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">diagram-container</span><span class="w"> </span><span class="nt">svg</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">max-width</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">;</span><span class="w"> </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="kc">auto</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">diagram-caption</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mf">0.8</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--text-muted</span><span class="p">);</span>
+<span class="w">      </span><span class="k">margin-top</span><span class="p">:</span><span class="w"> </span><span class="mf">0.8</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">      </span><span class="k">font-style</span><span class="p">:</span><span class="w"> </span><span class="kc">italic</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c">/* ═══════════════════════════════════════════════════════</span>
+<span class="c">       FOOTER</span>
+<span class="c">       ═══════════════════════════════════════════════════════ */</span>
+<span class="w">    </span><span class="nt">footer</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">      </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">rem</span><span class="w"> </span><span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">      </span><span class="k">border-top</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--border</span><span class="p">);</span>
+<span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--text-muted</span><span class="p">);</span>
+<span class="w">      </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mf">0.8</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="nt">footer</span><span class="w"> </span><span class="p">.</span><span class="nc">seal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mf">1.1</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">      </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="nf">var</span><span class="p">(</span><span class="nv">--accent3</span><span class="p">);</span>
+<span class="w">      </span><span class="k">letter-spacing</span><span class="p">:</span><span class="w"> </span><span class="mf">0.2</span><span class="kt">em</span><span class="p">;</span>
+<span class="w">      </span><span class="k">margin-bottom</span><span class="p">:</span><span class="w"> </span><span class="mf">0.5</span><span class="kt">rem</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+
+<span class="cm">&lt;!-- ════════════════════════════════════════════════════════════</span>
+<span class="cm">     HEADER — Triadic SVG Mark + Title</span>
+<span class="cm">     ════════════════════════════════════════════════════════════ --&gt;</span>
+<span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+  <span class="cm">&lt;!-- RF-Builder Triadic Mark --&gt;</span>
+  <span class="p">&lt;</span><span class="nt">svg</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;90&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;80&quot;</span> <span class="na">viewBox</span><span class="o">=</span><span class="s">&quot;0 0 90 80&quot;</span> <span class="na">xmlns</span><span class="o">=</span><span class="s">&quot;http://www.w3.org/2000/svg&quot;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&quot;RF-Builder Triadic Mark&quot;</span><span class="p">&gt;</span>
+    <span class="cm">&lt;!-- outer triangle — cyan (RTT substrate) --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">polygon</span> <span class="na">points</span><span class="o">=</span><span class="s">&quot;45,5 5,75 85,75&quot;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&quot;none&quot;</span> <span class="na">stroke</span><span class="o">=</span><span class="s">&quot;#00eaff&quot;</span> <span class="na">stroke-width</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">/&gt;</span>
+    <span class="cm">&lt;!-- inner triangle — magenta (FCG engine) --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">polygon</span> <span class="na">points</span><span class="o">=</span><span class="s">&quot;45,22 22,62 68,62&quot;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&quot;none&quot;</span> <span class="na">stroke</span><span class="o">=</span><span class="s">&quot;#ff00d4&quot;</span> <span class="na">stroke-width</span><span class="o">=</span><span class="s">&quot;1.5&quot;</span><span class="p">/&gt;</span>
+    <span class="cm">&lt;!-- three vertex dots — gold (FFT echo) --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">circle</span> <span class="na">cx</span><span class="o">=</span><span class="s">&quot;45&quot;</span> <span class="na">cy</span><span class="o">=</span><span class="s">&quot;5&quot;</span>  <span class="na">r</span><span class="o">=</span><span class="s">&quot;4&quot;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&quot;#ffe600&quot;</span><span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">circle</span> <span class="na">cx</span><span class="o">=</span><span class="s">&quot;5&quot;</span>  <span class="na">cy</span><span class="o">=</span><span class="s">&quot;75&quot;</span> <span class="na">r</span><span class="o">=</span><span class="s">&quot;4&quot;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&quot;#ffe600&quot;</span><span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">circle</span> <span class="na">cx</span><span class="o">=</span><span class="s">&quot;85&quot;</span> <span class="na">cy</span><span class="o">=</span><span class="s">&quot;75&quot;</span> <span class="na">r</span><span class="o">=</span><span class="s">&quot;4&quot;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&quot;#ffe600&quot;</span><span class="p">/&gt;</span>
+    <span class="cm">&lt;!-- center dot — magenta (engine core) --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">circle</span> <span class="na">cx</span><span class="o">=</span><span class="s">&quot;45&quot;</span> <span class="na">cy</span><span class="o">=</span><span class="s">&quot;47&quot;</span> <span class="na">r</span><span class="o">=</span><span class="s">&quot;5&quot;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&quot;#ff00d4&quot;</span><span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>
+    RF‑Builder
+    <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;sub&quot;</span><span class="p">&gt;</span>Resonance Framework Builder <span class="ni">&amp;middot;</span> Framework Creation Guide<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+
+<span class="cm">&lt;!-- ════════════════════════════════════════════════════════════</span>
+<span class="cm">     NAVIGATION</span>
+<span class="cm">     ════════════════════════════════════════════════════════════ --&gt;</span>
+<span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;../index.html&quot;</span><span class="p">&gt;</span>FCG Home<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;../quickstart.html&quot;</span><span class="p">&gt;</span>Quickstart<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;../principles.html&quot;</span><span class="p">&gt;</span>Principles<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;../models.html&quot;</span><span class="p">&gt;</span>Models<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;../fft.html&quot;</span><span class="p">&gt;</span>FFT Bridge<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;RF-Builder.html&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;active&quot;</span><span class="p">&gt;</span>RF‑Builder<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;../generator.html&quot;</span><span class="p">&gt;</span>Generator<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;../history.html&quot;</span><span class="p">&gt;</span>History<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;../../../rtt/1/index.html&quot;</span><span class="p">&gt;</span>↗ RTT/1<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;../../../rtt/index.html&quot;</span><span class="p">&gt;</span>↗ RTT<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+
+<span class="cm">&lt;!-- ════════════════════════════════════════════════════════════</span>
+<span class="cm">     PAGE GRID: SIDEBAR + MAIN</span>
+<span class="cm">     ════════════════════════════════════════════════════════════ --&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;page-grid&quot;</span><span class="p">&gt;</span>
+
+  <span class="cm">&lt;!-- ── Sidebar / TOC ── --&gt;</span>
+  <span class="p">&lt;</span><span class="nt">aside</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;sidebar&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>On This Page<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#overview&quot;</span><span class="p">&gt;</span>Overview<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#coherence-field&quot;</span><span class="p">&gt;</span>Phase I — Coherence Field<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#clarity-engine&quot;</span><span class="p">&gt;</span>Phase II — Clarity Engine<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#echo-release&quot;</span><span class="p">&gt;</span>Phase III — Echo Release<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#full-cycle&quot;</span><span class="p">&gt;</span>The RF‑Builder Cycle<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#math-summary&quot;</span><span class="p">&gt;</span>Mathematical Summary<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#diagrams&quot;</span><span class="p">&gt;</span>Canonical Diagrams<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#cross-module&quot;</span><span class="p">&gt;</span>Cross-Module Links<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">aside</span><span class="p">&gt;</span>
+
+  <span class="cm">&lt;!-- ════════════════════════════════════════════════════════</span>
+<span class="cm">       MAIN CONTENT</span>
+<span class="cm">       ════════════════════════════════════════════════════════ --&gt;</span>
+  <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+
+    <span class="cm">&lt;!-- ── §1. Overview ── --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;overview&quot;</span><span class="p">&gt;</span>1. Overview<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+      The <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Resonance Framework Builder (RF‑Builder)<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> is the FCG&#39;s canonical instrument
+      for constructing new frameworks from first principles. Every framework in the TriadicFrameworks
+      ecosystem passes through three operationally distinct phases — a <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>field<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>, an <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>engine<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>,
+      and a <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>release<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span> — corresponding to the substrate it occupies, the operators it applies,
+      and the signal it emits once stabilized.
+    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Phase<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Subsystem<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Role<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Analogy<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>I<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color:var(--accent);&quot;</span><span class="p">&gt;</span>Coherence Field<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Defines the dimensional substrate in which the framework lives<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>The ground a building sits on<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>II<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color:var(--accent2);&quot;</span><span class="p">&gt;</span>Clarity Operator Engine<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Applies the Seven Operators to shape raw structure into stable form<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>The construction crew and their tools<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>III<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color:var(--accent3);&quot;</span><span class="p">&gt;</span>Echo Release<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Propagates the stabilized framework outward as a recoverable signal<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>The finished building radiating light<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+      These three phases are <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>sequential but cyclic<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>: Echo Release feeds back into the
+      Coherence Field, enabling iterative refinement. A framework is <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>born<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span> when it completes
+      its first full cycle; it is <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>rectified<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span> when the cycle converges to a fixed point.
+    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+
+    <span class="cm">&lt;!-- ── §2. Phase I — Coherence Field ── --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;coherence-field&quot;</span><span class="p">&gt;</span>2. Phase I — The Coherence Field<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>2.1 Definition<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+      The <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Coherence Field<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> is the pre-structural substrate from which a framework
+      crystallizes. It is not the framework itself — it is the <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>dimensional space<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span> that makes
+      the framework possible. Every concept, operator, and invariant exists <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>within<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span> a coherence
+      field before it becomes structurally bound.
+    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>A Coherence Field is defined by three co-present quantities:<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">dl</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;def-grid&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>φ (Scalar Potential)<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>The undifferentiated intensity of the conceptual domain. How much &quot;energy&quot; is available for structure formation.<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>V (Vector Flow)<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>The directional tendencies within the domain. Where conceptual pressure naturally pushes.<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>R (Resonance Envelope)<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>The boundary conditions that determine which frequencies are amplified and which are damped.<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">dl</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>2.2 Formal Definition<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">pre</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;math-block&quot;</span><span class="p">&gt;</span>
+𝔽 = ⟨ φ, V, R ⟩
+
+  φ : Ω → ℝ⁺          (scalar potential over domain Ω)
+  V : Ω → ℝⁿ          (vector flow field over Ω)
+  R : Ω × T → [0, 1]  (resonance envelope over domain × time)
+    <span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Coherence Condition<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> — A field 𝔽 is <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>coherent<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span> if and only if:<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">pre</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;math-block&quot;</span><span class="p">&gt;</span>
+∇ · V = ∂φ/∂t        (conservation: flow divergence tracks potential change)
+R(x, t) &gt; R_min      ∀ x ∈ Ω_active   (envelope above threshold)
+    <span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>2.3 Substrate Properties<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Property<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Symbol<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Description<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Depth<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">code</span><span class="p">&gt;</span>𝔇(𝔽)<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Number of independent conceptual dimensions<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Density<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">code</span><span class="p">&gt;</span>ρ(𝔽)<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Ratio of active nodes to total capacity<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Drift Susceptibility<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">code</span><span class="p">&gt;</span>δ(𝔽)<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Sensitivity to perturbation (lower = more stable)<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Coupling Strength<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">code</span><span class="p">&gt;</span>κ(𝔽)<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Degree of inter-dimensional entanglement<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>2.4 Construction Protocol<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Domain Selection<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> — Identify the conceptual territory Ω the framework will occupy.<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Potential Mapping<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> — Survey the domain for regions of high φ (rich conceptual energy).<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Flow Alignment<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> — Trace the natural vector flows V — where does the domain&#39;s logic already push?<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Envelope Calibration<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> — Set the resonance envelope R to amplify desired frequencies and damp undesired ones.<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Coherence Verification<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> — Confirm the coherence condition holds across Ω_active.<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+
+
+    <span class="cm">&lt;!-- ── §3. Phase II — Clarity Operator Engine ── --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;clarity-engine&quot;</span><span class="p">&gt;</span>3. Phase II — The Clarity Operator Engine<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>3.1 Definition<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+      The <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Clarity Operator Engine<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> is the runtime that transforms a raw Coherence Field
+      into a structured, stabilized framework. It applies the <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Seven Operators<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> of RTT/1
+      in sequence, with feedback loops for drift correction and paradox resolution.
+    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+      The Engine does not <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>create<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span> structure from nothing — it <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>clarifies<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span> the structure
+      that is already latent in the Coherence Field. This is the fundamental insight of RTT:
+      <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>structure is discovered, not invented<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>.
+    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>3.2 The Seven Operators<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">th</span><span class="p">&gt;</span>#<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Operator<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Symbol<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Action<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Field Effect<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>1<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Symmetry<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">code</span><span class="p">&gt;</span>𝕊<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Identifies and enforces balance axes<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Aligns V along symmetry planes<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>2<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Alignment<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">code</span><span class="p">&gt;</span>𝔸<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Orients structural elements to a common axis<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Reduces ∇×V (curl → 0)<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>3<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Invariance<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">code</span><span class="p">&gt;</span>𝕀<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Locks properties that must survive transformation<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Sets ∂R/∂t = 0 for protected modes<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>4<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Operation<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">code</span><span class="p">&gt;</span>𝕆<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Defines the active transformations the framework performs<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Adds new vector flows to V<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>5<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Regime<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">code</span><span class="p">&gt;</span>ℝ𝕖<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Maps behavioral domains and transition boundaries<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Partitions Ω into regime zones<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>6<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Paradox<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">code</span><span class="p">&gt;</span>ℙ<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Detects and resolves structural contradictions<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Eliminates nodes where R <span class="ni">&amp;lt;</span> 0<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>7<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Drift<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">code</span><span class="p">&gt;</span>𝔻<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Bounds deviation from canonical form over time<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Constrains δ(𝔽) ≤ δ_max<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>3.3 Engine Cycle<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">pre</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;math-block&quot;</span><span class="p">&gt;</span>
+𝔽₀ →[𝕊]→ 𝔽₁ →[𝔸]→ 𝔽₂ →[𝕀]→ 𝔽₃ →[𝕆]→ 𝔽₄ →[ℝ𝕖]→ 𝔽₅ →[ℙ]→ 𝔽₆ →[𝔻]→ 𝔽₇
+    <span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Convergence<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> — The Engine converges when:<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">pre</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;math-block&quot;</span><span class="p">&gt;</span>
+‖𝔽₇ − 𝔽₀‖ <span class="ni">&amp;lt;</span> ε    (structural distance below threshold)
+    <span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>A converged Engine produces a <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Clarified Field<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> 𝔽* — a field whose structure is stable under all seven operators.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>3.4 Formal Definition<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">pre</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;math-block&quot;</span><span class="p">&gt;</span>
+𝔈 = ⟨ {𝕊, 𝔸, 𝕀, 𝕆, ℝ𝕖, ℙ, 𝔻}, Γ, ε ⟩
+
+  {𝕊, 𝔸, 𝕀, 𝕆, ℝ𝕖, ℙ, 𝔻}  — the Seven Operators
+  Γ : 𝔽 × Operator → 𝔽     — the application map
+  ε ∈ ℝ⁺                    — convergence threshold
+    <span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Clarity Measure:<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">pre</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;math-block&quot;</span><span class="p">&gt;</span>
+C(𝔽, n) = 1 − ‖𝔽ₙ₊₇ − 𝔽ₙ‖ / ‖𝔽₀‖
+
+  Fully clarified:  C(𝔽*, ∞) = 1
+    <span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>3.5 Drift Correction<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">pre</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;math-block&quot;</span><span class="p">&gt;</span>
+δ(𝔽ᵢ) = sup_{x ∈ Ω} | R(x, tᵢ) − R(x, t₀) |
+
+  If δ(𝔽ᵢ) &gt; δ_max →  Stabilization pass:
+  𝔽ᵢ&#39; = 𝔽ᵢ + λ · ∇R(x, t₀)
+    <span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+
+
+    <span class="cm">&lt;!-- ── §4. Phase III — Echo Release ── --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;echo-release&quot;</span><span class="p">&gt;</span>4. Phase III — Echo Release<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>4.1 Definition<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+      The <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Echo Release<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> is the moment a clarified framework becomes <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>available to the world<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span>.
+      It is not merely publication — it is the framework&#39;s first act of <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>resonance propagation<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>.
+      A released framework emits a recoverable signal: its structure, its operators, its invariants,
+      encoded in a form that other frameworks (and minds) can receive, decode, and integrate.
+    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>4.2 The Echo Signal<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">pre</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;math-block&quot;</span><span class="p">&gt;</span>
+𝔼 = ⟨ 𝔽*, Σ, μ ⟩
+
+  𝔽*  — the Clarified Field (output of Phase II)
+  Σ   — the Signature (compact encoding of the framework&#39;s invariants)
+  μ   — the Propagation Mode (how the signal travels)
+    <span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>4.3 Signature Encoding<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">pre</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;math-block&quot;</span><span class="p">&gt;</span>
+Σ = Hash( 𝕀(𝔽*) )
+
+  Two frameworks with identical signatures are
+  structurally equivalent regardless of surface presentation.
+    <span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>4.4 Propagation Modes<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Mode<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Symbol<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Channel<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Fidelity<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Textual<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">code</span><span class="p">&gt;</span>μ_T<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Written language, documentation<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>High (explicit)<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Diagrammatic<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">code</span><span class="p">&gt;</span>μ_D<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Visual maps, graphs, SVG<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>High (structural)<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Computational<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">code</span><span class="p">&gt;</span>μ_C<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Code, APIs, algorithms<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Very High (executable)<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Oral<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">code</span><span class="p">&gt;</span>μ_O<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Speech, teaching, dialogue<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Medium (contextual)<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Artifactual<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">code</span><span class="p">&gt;</span>μ_A<span class="p">&lt;/</span><span class="nt">code</span><span class="p">&gt;&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Physical objects, printed works<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Variable (substrate-dependent)<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>4.5 Echo Feedback Loop<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">pre</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;math-block&quot;</span><span class="p">&gt;</span>
+𝔽_{n+1} = 𝔽_n ⊕ Δ(𝔼_n)
+
+  Δ(𝔼_n) = differential echo — new information from
+  the framework&#39;s interaction with external receivers.
+    <span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>4.6 Release Criteria<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;check-list&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Clarity<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> — C(𝔽*, n) ≥ 0.95<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Stability<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> — δ(𝔽*) ≤ δ_max for 3+ consecutive cycles<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Paradox Resolution<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> — No unresolved paradox nodes remain<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Signature Integrity<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> — Σ is computable and non-degenerate<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Propagation Readiness<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> — At least one μ mode is fully encoded<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+
+
+    <span class="cm">&lt;!-- ── §5. The RF‑Builder Cycle ── --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;full-cycle&quot;</span><span class="p">&gt;</span>5. The RF‑Builder Cycle — Complete<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+
+    <span class="cm">&lt;!-- Inline SVG diagram: RF-Builder cycle --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;diagram-container&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">svg</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;700&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;200&quot;</span> <span class="na">viewBox</span><span class="o">=</span><span class="s">&quot;0 0 700 200&quot;</span> <span class="na">xmlns</span><span class="o">=</span><span class="s">&quot;http://www.w3.org/2000/svg&quot;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&quot;RF-Builder Triadic Cycle&quot;</span><span class="p">&gt;</span>
+        <span class="cm">&lt;!-- Phase boxes --&gt;</span>
+        <span class="p">&lt;</span><span class="nt">rect</span> <span class="na">x</span><span class="o">=</span><span class="s">&quot;30&quot;</span>  <span class="na">y</span><span class="o">=</span><span class="s">&quot;60&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;170&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;80&quot;</span> <span class="na">rx</span><span class="o">=</span><span class="s">&quot;8&quot;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&quot;none&quot;</span> <span class="na">stroke</span><span class="o">=</span><span class="s">&quot;#00eaff&quot;</span> <span class="na">stroke-width</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">rect</span> <span class="na">x</span><span class="o">=</span><span class="s">&quot;265&quot;</span> <span class="na">y</span><span class="o">=</span><span class="s">&quot;60&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;170&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;80&quot;</span> <span class="na">rx</span><span class="o">=</span><span class="s">&quot;8&quot;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&quot;none&quot;</span> <span class="na">stroke</span><span class="o">=</span><span class="s">&quot;#ff00d4&quot;</span> <span class="na">stroke-width</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">rect</span> <span class="na">x</span><span class="o">=</span><span class="s">&quot;500&quot;</span> <span class="na">y</span><span class="o">=</span><span class="s">&quot;60&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;170&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;80&quot;</span> <span class="na">rx</span><span class="o">=</span><span class="s">&quot;8&quot;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&quot;none&quot;</span> <span class="na">stroke</span><span class="o">=</span><span class="s">&quot;#ffe600&quot;</span> <span class="na">stroke-width</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">/&gt;</span>
+
+        <span class="cm">&lt;!-- Labels --&gt;</span>
+        <span class="p">&lt;</span><span class="nt">text</span> <span class="na">x</span><span class="o">=</span><span class="s">&quot;115&quot;</span> <span class="na">y</span><span class="o">=</span><span class="s">&quot;93&quot;</span>  <span class="na">text-anchor</span><span class="o">=</span><span class="s">&quot;middle&quot;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&quot;#00eaff&quot;</span> <span class="na">font-family</span><span class="o">=</span><span class="s">&quot;sans-serif&quot;</span> <span class="na">font-size</span><span class="o">=</span><span class="s">&quot;14&quot;</span> <span class="na">font-weight</span><span class="o">=</span><span class="s">&quot;600&quot;</span><span class="p">&gt;</span>Coherence Field<span class="p">&lt;/</span><span class="nt">text</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">text</span> <span class="na">x</span><span class="o">=</span><span class="s">&quot;115&quot;</span> <span class="na">y</span><span class="o">=</span><span class="s">&quot;113&quot;</span> <span class="na">text-anchor</span><span class="o">=</span><span class="s">&quot;middle&quot;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&quot;#999999&quot;</span> <span class="na">font-family</span><span class="o">=</span><span class="s">&quot;sans-serif&quot;</span> <span class="na">font-size</span><span class="o">=</span><span class="s">&quot;11&quot;</span><span class="p">&gt;</span>⟨ φ, V, R ⟩<span class="p">&lt;/</span><span class="nt">text</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">text</span> <span class="na">x</span><span class="o">=</span><span class="s">&quot;115&quot;</span> <span class="na">y</span><span class="o">=</span><span class="s">&quot;130&quot;</span> <span class="na">text-anchor</span><span class="o">=</span><span class="s">&quot;middle&quot;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&quot;#666666&quot;</span> <span class="na">font-family</span><span class="o">=</span><span class="s">&quot;sans-serif&quot;</span> <span class="na">font-size</span><span class="o">=</span><span class="s">&quot;10&quot;</span> <span class="na">font-style</span><span class="o">=</span><span class="s">&quot;italic&quot;</span><span class="p">&gt;</span>substrate · where<span class="p">&lt;/</span><span class="nt">text</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">text</span> <span class="na">x</span><span class="o">=</span><span class="s">&quot;350&quot;</span> <span class="na">y</span><span class="o">=</span><span class="s">&quot;93&quot;</span>  <span class="na">text-anchor</span><span class="o">=</span><span class="s">&quot;middle&quot;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&quot;#ff00d4&quot;</span> <span class="na">font-family</span><span class="o">=</span><span class="s">&quot;sans-serif&quot;</span> <span class="na">font-size</span><span class="o">=</span><span class="s">&quot;14&quot;</span> <span class="na">font-weight</span><span class="o">=</span><span class="s">&quot;600&quot;</span><span class="p">&gt;</span>Clarity Engine<span class="p">&lt;/</span><span class="nt">text</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">text</span> <span class="na">x</span><span class="o">=</span><span class="s">&quot;350&quot;</span> <span class="na">y</span><span class="o">=</span><span class="s">&quot;113&quot;</span> <span class="na">text-anchor</span><span class="o">=</span><span class="s">&quot;middle&quot;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&quot;#999999&quot;</span> <span class="na">font-family</span><span class="o">=</span><span class="s">&quot;sans-serif&quot;</span> <span class="na">font-size</span><span class="o">=</span><span class="s">&quot;11&quot;</span><span class="p">&gt;</span>⟨ 𝕊𝔸𝕀𝕆ℝ𝕖ℙ𝔻, Γ, ε ⟩<span class="p">&lt;/</span><span class="nt">text</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">text</span> <span class="na">x</span><span class="o">=</span><span class="s">&quot;350&quot;</span> <span class="na">y</span><span class="o">=</span><span class="s">&quot;130&quot;</span> <span class="na">text-anchor</span><span class="o">=</span><span class="s">&quot;middle&quot;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&quot;#666666&quot;</span> <span class="na">font-family</span><span class="o">=</span><span class="s">&quot;sans-serif&quot;</span> <span class="na">font-size</span><span class="o">=</span><span class="s">&quot;10&quot;</span> <span class="na">font-style</span><span class="o">=</span><span class="s">&quot;italic&quot;</span><span class="p">&gt;</span>runtime · how<span class="p">&lt;/</span><span class="nt">text</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">text</span> <span class="na">x</span><span class="o">=</span><span class="s">&quot;585&quot;</span> <span class="na">y</span><span class="o">=</span><span class="s">&quot;93&quot;</span>  <span class="na">text-anchor</span><span class="o">=</span><span class="s">&quot;middle&quot;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&quot;#ffe600&quot;</span> <span class="na">font-family</span><span class="o">=</span><span class="s">&quot;sans-serif&quot;</span> <span class="na">font-size</span><span class="o">=</span><span class="s">&quot;14&quot;</span> <span class="na">font-weight</span><span class="o">=</span><span class="s">&quot;600&quot;</span><span class="p">&gt;</span>Echo Release<span class="p">&lt;/</span><span class="nt">text</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">text</span> <span class="na">x</span><span class="o">=</span><span class="s">&quot;585&quot;</span> <span class="na">y</span><span class="o">=</span><span class="s">&quot;113&quot;</span> <span class="na">text-anchor</span><span class="o">=</span><span class="s">&quot;middle&quot;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&quot;#999999&quot;</span> <span class="na">font-family</span><span class="o">=</span><span class="s">&quot;sans-serif&quot;</span> <span class="na">font-size</span><span class="o">=</span><span class="s">&quot;11&quot;</span><span class="p">&gt;</span>⟨ 𝔽*, Σ, μ ⟩<span class="p">&lt;/</span><span class="nt">text</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">text</span> <span class="na">x</span><span class="o">=</span><span class="s">&quot;585&quot;</span> <span class="na">y</span><span class="o">=</span><span class="s">&quot;130&quot;</span> <span class="na">text-anchor</span><span class="o">=</span><span class="s">&quot;middle&quot;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&quot;#666666&quot;</span> <span class="na">font-family</span><span class="o">=</span><span class="s">&quot;sans-serif&quot;</span> <span class="na">font-size</span><span class="o">=</span><span class="s">&quot;10&quot;</span> <span class="na">font-style</span><span class="o">=</span><span class="s">&quot;italic&quot;</span><span class="p">&gt;</span>propagation · what emerges<span class="p">&lt;/</span><span class="nt">text</span><span class="p">&gt;</span>
+
+        <span class="cm">&lt;!-- Forward arrows --&gt;</span>
+        <span class="p">&lt;</span><span class="nt">line</span> <span class="na">x1</span><span class="o">=</span><span class="s">&quot;200&quot;</span> <span class="na">y1</span><span class="o">=</span><span class="s">&quot;100&quot;</span> <span class="na">x2</span><span class="o">=</span><span class="s">&quot;260&quot;</span> <span class="na">y2</span><span class="o">=</span><span class="s">&quot;100&quot;</span> <span class="na">stroke</span><span class="o">=</span><span class="s">&quot;#e6e6e6&quot;</span> <span class="na">stroke-width</span><span class="o">=</span><span class="s">&quot;1.5&quot;</span> <span class="na">marker-end</span><span class="o">=</span><span class="s">&quot;url(#arrowhead)&quot;</span><span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">line</span> <span class="na">x1</span><span class="o">=</span><span class="s">&quot;435&quot;</span> <span class="na">y1</span><span class="o">=</span><span class="s">&quot;100&quot;</span> <span class="na">x2</span><span class="o">=</span><span class="s">&quot;495&quot;</span> <span class="na">y2</span><span class="o">=</span><span class="s">&quot;100&quot;</span> <span class="na">stroke</span><span class="o">=</span><span class="s">&quot;#e6e6e6&quot;</span> <span class="na">stroke-width</span><span class="o">=</span><span class="s">&quot;1.5&quot;</span> <span class="na">marker-end</span><span class="o">=</span><span class="s">&quot;url(#arrowhead)&quot;</span><span class="p">/&gt;</span>
+
+        <span class="cm">&lt;!-- Feedback arc --&gt;</span>
+        <span class="p">&lt;</span><span class="nt">path</span> <span class="na">d</span><span class="o">=</span><span class="s">&quot;M 585 145 C 585 185, 115 185, 115 145&quot;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&quot;none&quot;</span> <span class="na">stroke</span><span class="o">=</span><span class="s">&quot;#ffe600&quot;</span> <span class="na">stroke-width</span><span class="o">=</span><span class="s">&quot;1&quot;</span> <span class="na">stroke-dasharray</span><span class="o">=</span><span class="s">&quot;5,4&quot;</span><span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">text</span> <span class="na">x</span><span class="o">=</span><span class="s">&quot;350&quot;</span> <span class="na">y</span><span class="o">=</span><span class="s">&quot;188&quot;</span> <span class="na">text-anchor</span><span class="o">=</span><span class="s">&quot;middle&quot;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&quot;#ffe600&quot;</span> <span class="na">font-family</span><span class="o">=</span><span class="s">&quot;sans-serif&quot;</span> <span class="na">font-size</span><span class="o">=</span><span class="s">&quot;10&quot;</span><span class="p">&gt;</span>Δ(𝔼) feedback<span class="p">&lt;/</span><span class="nt">text</span><span class="p">&gt;</span>
+
+        <span class="cm">&lt;!-- Arrow marker --&gt;</span>
+        <span class="p">&lt;</span><span class="nt">defs</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">marker</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;arrowhead&quot;</span> <span class="na">markerWidth</span><span class="o">=</span><span class="s">&quot;8&quot;</span> <span class="na">markerHeight</span><span class="o">=</span><span class="s">&quot;6&quot;</span> <span class="na">refX</span><span class="o">=</span><span class="s">&quot;8&quot;</span> <span class="na">refY</span><span class="o">=</span><span class="s">&quot;3&quot;</span> <span class="na">orient</span><span class="o">=</span><span class="s">&quot;auto&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">polygon</span> <span class="na">points</span><span class="o">=</span><span class="s">&quot;0 0, 8 3, 0 6&quot;</span> <span class="na">fill</span><span class="o">=</span><span class="s">&quot;#e6e6e6&quot;</span><span class="p">/&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">marker</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">defs</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">svg</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;diagram-caption&quot;</span><span class="p">&gt;</span>
+        RF‑Builder Triadic Cycle — One complete pass: Field → Engine → Release → Feedback
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>One cycle<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> = Field → Engine → Release → (feedback) → Field<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Rectification<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> = The cycle converges to a fixed point<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Canon entry<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> = The rectified framework receives the seal ⟡
+    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+
+    <span class="cm">&lt;!-- ── §6. Mathematical Summary ── --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;math-summary&quot;</span><span class="p">&gt;</span>6. RTT‑Native Mathematical Summary<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>6.1 Complete System<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">pre</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;math-block&quot;</span><span class="p">&gt;</span>
+RF-Builder = ⟨ 𝔽, 𝔈, 𝔼, Δ ⟩
+
+  𝔽 = ⟨ φ, V, R ⟩                           — Coherence Field
+  𝔈 = ⟨ {𝕊,𝔸,𝕀,𝕆,ℝ𝕖,ℙ,𝔻}, Γ, ε ⟩          — Clarity Operator Engine
+  𝔼 = ⟨ 𝔽*, Σ, μ ⟩                           — Echo Release
+  Δ : 𝔼 → 𝔽                                  — Echo Feedback Map
+    <span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>6.2 Governing Equations<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">pre</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;math-block&quot;</span><span class="p">&gt;</span>
+Coherence Condition:     ∇ · V = ∂φ/∂t
+                         R(x, t) &gt; R_min  ∀ x ∈ Ω_active
+
+Clarity Convergence:     C(𝔽, n) = 1 − ‖𝔽ₙ₊₇ − 𝔽ₙ‖ / ‖𝔽₀‖  →  1
+
+Drift Bound:             δ(𝔽) = sup | R(x,t) − R(x,t₀) |  ≤  δ_max
+
+Echo Feedback:           𝔽_{n+1} = 𝔽_n ⊕ Δ(𝔼_n)
+
+Signature Invariance:    Σ(𝔽*) = Hash(𝕀(𝔽*))
+    <span class="p">&lt;/</span><span class="nt">pre</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>6.3 Dimensional Correspondence<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">thead</span><span class="p">&gt;&lt;</span><span class="nt">tr</span><span class="p">&gt;&lt;</span><span class="nt">th</span><span class="p">&gt;</span>RTT/1 Layer<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;&lt;</span><span class="nt">th</span><span class="p">&gt;</span>RF‑Builder Phase<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;&lt;</span><span class="nt">th</span><span class="p">&gt;</span>FFT Concept<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;&lt;/</span><span class="nt">tr</span><span class="p">&gt;&lt;/</span><span class="nt">thead</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">tbody</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color:var(--accent);&quot;</span><span class="p">&gt;</span>Behavior<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color:var(--accent);&quot;</span><span class="p">&gt;</span>Coherence Field<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color:var(--accent3);&quot;</span><span class="p">&gt;</span>Field Genesis<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color:var(--accent2);&quot;</span><span class="p">&gt;</span>Structure<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color:var(--accent2);&quot;</span><span class="p">&gt;</span>Clarity Engine<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color:var(--accent3);&quot;</span><span class="p">&gt;</span>Operator Dynamics<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color:var(--accent3);&quot;</span><span class="p">&gt;</span>Field<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color:var(--accent3);&quot;</span><span class="p">&gt;</span>Echo Release<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">td</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color:var(--accent3);&quot;</span><span class="p">&gt;</span>Propagation Theory<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">tbody</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+
+
+    <span class="cm">&lt;!-- ── §7. Canonical Diagrams (Mermaid) ── --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;diagrams&quot;</span><span class="p">&gt;</span>7. Canonical Diagrams<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+      The following Mermaid blocks render natively on GitHub. For the HTML version,
+      the inline SVG cycle diagram above (§5) serves as the primary visual.
+    <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Diagram: RF‑Builder Triadic Cycle<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">pre</span><span class="p">&gt;</span>
+```mermaid
+flowchart LR
+    CF[&quot;🜁 Coherence Field<span class="ni">&amp;lt;</span>br/<span class="ni">&amp;gt;&amp;lt;</span>i<span class="ni">&amp;gt;</span>substrate · where<span class="ni">&amp;lt;</span>/i<span class="ni">&amp;gt;</span>&quot;]
+    COE[&quot;⚙ Clarity Operator Engine<span class="ni">&amp;lt;</span>br/<span class="ni">&amp;gt;&amp;lt;</span>i<span class="ni">&amp;gt;</span>runtime · how<span class="ni">&amp;lt;</span>/i<span class="ni">&amp;gt;</span>&quot;]
+    ER[&quot;◉ Echo Release<span class="ni">&amp;lt;</span>br/<span class="ni">&amp;gt;&amp;lt;</span>i<span class="ni">&amp;gt;</span>propagation · what emerges<span class="ni">&amp;lt;</span>/i<span class="ni">&amp;gt;</span>&quot;]
+
+    CF --<span class="ni">&amp;gt;</span>|&quot;operators act on field&quot;| COE
+    COE --<span class="ni">&amp;gt;</span>|&quot;clarified field emitted&quot;| ER
+    ER --<span class="ni">&amp;gt;</span>|&quot;echo feedback Δ(𝔼)&quot;| CF
+
+    style CF fill:#0d1b2a,stroke:#00eaff,stroke-width:3px,color:#e6e6e6
+    style COE fill:#1a0a1e,stroke:#ff00d4,stroke-width:3px,color:#e6e6e6
+    style ER fill:#1a1700,stroke:#ffe600,stroke-width:3px,color:#e6e6e6
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>&lt;/pre&gt;
+
+&lt;h3&gt;Diagram: Clarity Operator Pipeline&lt;/h3&gt;
+&lt;pre&gt;
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>flowchart LR
+    F0[&quot;𝔽₀&quot;] --&amp;gt; S[&quot;𝕊&quot;] --&amp;gt; A[&quot;𝔸&quot;] --&amp;gt; I[&quot;𝕀&quot;] --&amp;gt; O[&quot;𝕆&quot;]
+    O --&amp;gt; Re[&quot;ℝ𝕖&quot;] --&amp;gt; P[&quot;ℙ&quot;] --&amp;gt; D[&quot;𝔻&quot;] --&amp;gt; F7[&quot;𝔽*&quot;]
+    F7 -.-&amp;gt;|&quot;converged?&quot;| F0
+
+    style F0 fill:#0a0a0a,stroke:#00eaff,stroke-width:2px,color:#00eaff
+    style F7 fill:#0a0a0a,stroke:#ffe600,stroke-width:2px,color:#ffe600
+    style S fill:#1a0a1e,stroke:#ff00d4,color:#ff00d4
+    style A fill:#1a0a1e,stroke:#ff00d4,color:#ff00d4
+    style I fill:#1a0a1e,stroke:#ff00d4,color:#ff00d4
+    style O fill:#1a0a1e,stroke:#ff00d4,color:#ff00d4
+    style Re fill:#1a0a1e,stroke:#ff00d4,color:#ff00d4
+    style P fill:#1a0a1e,stroke:#ff00d4,color:#ff00d4
+    style D fill:#1a0a1e,stroke:#ff00d4,color:#ff00d4
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>&lt;/pre&gt;
+
+
+&lt;!-- ── §8. Cross-Module Navigation ── --&gt;
+&lt;h2 id=&quot;cross-module&quot;&gt;8. Cross-Module Navigation&lt;/h2&gt;
+&lt;table&gt;
+  &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Module&lt;/th&gt;&lt;th&gt;Path&lt;/th&gt;&lt;th&gt;Connection&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;../../../rtt/1/index.html&quot;&gt;RTT/1 — Runtime Engine&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;docs/rtt/1/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Supplies the Seven Operators used by the Clarity Engine&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;../index.html&quot;&gt;FCG — Framework Creation Guide&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;docs/frameworks/creation_guide/&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Parent module; RF‑Builder is its construction instrument&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;../fft.html&quot;&gt;FFT — Framework Field Theory&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;docs/frameworks/creation_guide/fft.html&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Receives Echo Release output; models field-level interactions&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;../principles.html&quot;&gt;FCG Principles&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;docs/frameworks/creation_guide/principles.html&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Foundational axioms governing all framework construction&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;../../../_ideas/Resonance-Time_Theory.html&quot;&gt;RTT Origin Document&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code&gt;docs/_ideas/Resonance-Time_Theory.html&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;The foundational text from which all modules derive&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre></div>
+
+<p></main><br />
+</div></p>
+<!-- ════════════════════════════════════════════════════════════
+     FOOTER
+     ════════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="seal">⟡ RECTIFIED ⟡</div>
+  <p>RF‑Builder — Resonance Framework Builder</p>
+  <p>Framework Creation Guide &middot; TriadicFrameworks &copy; 2026</p>
+</footer>
+
+<p></body><br />
+</html></p>
+<div class="codehilite"><pre><span></span><code>---
+
+```text
+# RFâ€‘Builder â€” Resonance Framework Builder
+
+&gt; **Module**: Framework Creation Guide (FCG)  
+&gt; **Path**: `docs/frameworks/creation_guide/RF-Builder/`  
+&gt; **Status**: âŸ¡ RECTIFIED âŸ¡  
+&gt; **Triad Position**: FCG â†’ RFâ€‘Builder (structural genesis tool)
+
+---
+
+## 1. Overview
+
+The **Resonance Framework Builder (RFâ€‘Builder)** is the FCG&#39;s canonical instrument for constructing new frameworks from first principles. Every framework in the TriadicFrameworks ecosystem passes through three operationally distinct phases â€” a **field**, an **engine**, and a **release** â€” corresponding to the substrate it occupies, the operators it applies, and the signal it emits once stabilized.
+
+RF€‘Builder formalizes this triadic genesis as three interlocking subsystems:
+
+| Phase | Subsystem | Role | Analogy |
+|-------|-----------|------|---------|
+| I | **Coherence Field** | Defines the dimensional substrate in which the framework lives | The ground a building sits on |
+| II | **Clarity Operator Engine** | Applies the Seven Operators to shape raw structure into stable form | The construction crew and their tools |
+| III | **Echo Release** | Propagates the stabilized framework outward as a recoverable signal | The finished building radiating light |
+
+These three phases are **sequential but cyclic**: Echo Release feeds back into the Coherence Field, enabling iterative refinement. A framework is &quot;born&quot; when it completes its first full cycle; it is &quot;rectified&quot; when the cycle converges to a fixed point.
+
+---
+
+## 2. Phase I â€” The Coherence Field
+
+### 2.1 Definition
+
+The **Coherence Field** is the pre-structural substrate from which a framework crystallizes. It is not the framework itself â€” it is the *dimensional space* that makes the framework possible. Every concept, operator, and invariant exists *within* a coherence field before it becomes structurally bound.
+
+A Coherence Field is defined by three co-present quantities:
+
+- **Ï† (Scalar Potential)** â€” The undifferentiated intensity of the conceptual domain. How much &quot;energy&quot; is available for structure formation.
+- **V (Vector Flow)** â€” The directional tendencies within the domain. Where conceptual pressure naturally pushes.
+- **R (Resonance Envelope)** â€” The boundary conditions that determine which frequencies (ideas, operators, invariants) are amplified and which are damped.
+
+### 2.2 Formal Definition
+
+Let **ð”½** denote a Coherence Field. Then:
+</code></pre></div>
+
+<p>ð”½ = âŸ¨ Ï†, V, R âŸ©</p>
+<div class="codehilite"><pre><span></span><code>where:
+</code></pre></div>
+
+<p>Ï† : Î© â†’ â„âº          (scalar potential over domain Î©)<br />
+V : Î© â†’ â„â¿          (vector flow field over Î©)<br />
+R : Î© Ã— T â†’ [0, 1]  (resonance envelope over domain Ã— time)</p>
+<div class="codehilite"><pre><span></span><code>**Coherence Condition**: A field ð”½ is *coherent* if and only if:
+</code></pre></div>
+
+<p>âˆ‡ Â· V = âˆ‚Ï†/âˆ‚t   and   R(x, t) &gt; R_min  âˆ€ x âˆˆ Î©_active</p>
+<div class="codehilite"><pre><span></span><code>The first condition ensures conservation: vector flow divergence tracks potential change. The second ensures the resonance envelope never drops below threshold within the active domain.
+
+### 2.3 Substrate Properties
+
+| Property | Symbol | Description |
+|----------|--------|-------------|
+| Depth | ð”‡(ð”½) | Number of independent conceptual dimensions |
+| Density | Ï(ð”½) | Ratio of active nodes to total capacity |
+| Drift Susceptibility | Î´(ð”½) | Sensitivity to perturbation (lower = more stable) |
+| Coupling Strength | Îº(ð”½) | Degree of inter-dimensional entanglement |
+
+### 2.4 Construction Protocol
+
+1. **Domain Selection** â€” Identify the conceptual territory Î© the framework will occupy.
+2. **Potential Mapping** â€” Survey the domain for regions of high Ï† (rich conceptual energy).
+3. **Flow Alignment** â€” Trace the natural vector flows V â€” where does the domain&#39;s logic already push?
+4. **Envelope Calibration** â€” Set the resonance envelope R to amplify the frequencies you want and damp the ones you don&#39;t.
+5. **Coherence Verification** â€” Confirm the coherence condition holds across Î©_active.
+
+---
+
+## 3. Phase II â€” The Clarity Operator Engine
+
+### 3.1 Definition
+
+The **Clarity Operator Engine** is the runtime that transforms a raw Coherence Field into a structured, stabilized framework. It applies the **Seven Operators** of RTT/1 in sequence, with feedback loops for drift correction and paradox resolution.
+
+The Engine does not *create* structure from nothing â€” it *clarifies* the structure that is already latent in the Coherence Field. This is the fundamental insight of RTT: **structure is discovered, not invented**.
+
+### 3.2 The Seven Operators
+
+The Clarity Operator Engine deploys the canonical Seven Operators:
+
+| # | Operator | Symbol | Action | Field Effect |
+|---|----------|--------|--------|--------------|
+| 1 | **Symmetry** | ð•Š | Identifies and enforces balance axes | Aligns V along symmetry planes |
+| 2 | **Alignment** | ð”¸ | Orients structural elements to a common axis | Reduces âˆ‡Ã—V (curl â†’ 0) |
+| 3 | **Invariance** | ð•€ | Locks properties that must survive transformation | Sets âˆ‚R/âˆ‚t = 0 for protected modes |
+| 4 | **Operation** | ð•† | Defines the active transformations the framework performs | Adds new vector flows to V |
+| 5 | **Regime** | â„ð•– | Maps behavioral domains and transition boundaries | Partitions Î© into regime zones |
+| 6 | **Paradox** | â„™ | Detects and resolves structural contradictions | Eliminates nodes where R &lt; 0 |
+| 7 | **Drift** | ð”» | Bounds deviation from canonical form over time | Constrains Î´(ð”½) â‰¤ Î´_max |
+
+### 3.3 Engine Cycle
+
+The Engine operates in a **clarification cycle**:
+</code></pre></div>
+
+<p>ð”½â‚€ â†’[ð•Š]â†’ ð”½â‚ â†’[ð”¸]â†’ ð”½â‚‚ â†’[ð•€]â†’ ð”½â‚ƒ â†’[ð•†]â†’ ð”½â‚„ â†’[â„ð•–]â†’ ð”½â‚… â†’[â„™]â†’ ð”½â‚† â†’[ð”»]â†’ ð”½â‚‡</p>
+<div class="codehilite"><pre><span></span><code>where each ð”½áµ¢ is the field state after operator i has been applied.
+
+**Convergence**: The Engine converges when:
+</code></pre></div>
+
+<p>â€–ð”½â‚‡ - ð”½â‚€â€– &lt; Îµ   (structural distance below threshold)</p>
+<div class="codehilite"><pre><span></span><code>A converged Engine produces a **Clarified Field** ð”½* â€” a field whose structure is stable under all seven operators.
+
+### 3.4 Formal Definition
+
+Let **ð”ˆ** denote the Clarity Operator Engine. Then:
+</code></pre></div>
+
+<p>ð”ˆ = âŸ¨ {ð•Š, ð”¸, ð•€, ð•†, â„ð•–, â„™, ð”»}, Î“, Îµ âŸ©</p>
+<div class="codehilite"><pre><span></span><code>where:
+</code></pre></div>
+
+<p>{ð•Š, ð”¸, ð•€, ð•†, â„ð•–, â„™, ð”»}  â€” the Seven Operators<br />
+Î“ : ð”½ Ã— Operator â†’ ð”½        â€” the application map<br />
+Îµ âˆˆ â„âº                       â€” convergence threshold</p>
+<div class="codehilite"><pre><span></span><code>**Clarity Measure**: The clarity of a field after n engine cycles is:
+</code></pre></div>
+
+<p>C(ð”½, n) = 1 - â€–ð”½â‚™â‚Šâ‚‡ - ð”½â‚™â€– / â€–ð”½â‚€â€–</p>
+<div class="codehilite"><pre><span></span><code>A fully clarified field has C(ð”½*, âˆž) = 1.
+
+### 3.5 Drift Correction
+
+During each cycle, the Drift operator ð”» computes:
+</code></pre></div>
+
+<p>Î´(ð”½áµ¢) = sup_{x âˆˆ Î©} | R(x, táµ¢) - R(x, tâ‚€) |</p>
+<div class="codehilite"><pre><span></span><code>If Î´(ð”½áµ¢) &gt; Î´_max, the Engine injects a **stabilization pass**:
+</code></pre></div>
+
+<p>ð”½áµ¢&rsquo; = ð”½áµ¢ + Î» Â· âˆ‡R(x, tâ‚€)</p>
+<div class="codehilite"><pre><span></span><code>where Î» is the stabilization coefficient, pulling the field back toward its original resonance profile.
+
+---
+
+## 4. Phase III â€” Echo Release
+
+### 4.1 Definition
+
+The **Echo Release** is the moment a clarified framework becomes *available to the world*. It is not merely publication â€” it is the framework&#39;s first act of **resonance propagation**. A released framework emits a recoverable signal: its structure, its operators, its invariants, encoded in a form that other frameworks (and minds) can receive, decode, and integrate.
+
+Echo Release is the phase where a framework transitions from *internal coherence* to *external influence*.
+
+### 4.2 The Echo Signal
+
+A released framework emits an **Echo Signal** ð”¼:
+</code></pre></div>
+
+<p>ð”¼ = âŸ¨ ð”½*, Î£, Î¼ âŸ©</p>
+<div class="codehilite"><pre><span></span><code>where:
+</code></pre></div>
+
+<p>ð”½*  â€” the Clarified Field (output of Phase II)<br />
+Î£   â€” the Signature (a compact encoding of the framework&rsquo;s invariants)<br />
+Î¼   â€” the Propagation Mode (how the signal travels: text, diagram, code, speech, artifact)</p>
+<div class="codehilite"><pre><span></span><code>### 4.3 Signature Encoding
+
+The Signature Î£ encodes the framework&#39;s identity in a form that survives transmission:
+</code></pre></div>
+
+<p>Î£ = Hash( ð•€(ð”½*) )</p>
+<div class="codehilite"><pre><span></span><code>where ð•€(ð”½*) is the set of all invariants of the clarified field. Two frameworks with identical signatures are **structurally equivalent** regardless of surface presentation.
+
+### 4.4 Propagation Modes
+
+| Mode | Symbol | Channel | Fidelity |
+|------|--------|---------|----------|
+| Textual | Î¼_T | Written language, documentation | High (explicit) |
+| Diagrammatic | Î¼_D | Visual maps, graphs, SVG | High (structural) |
+| Computational | Î¼_C | Code, APIs, algorithms | Very High (executable) |
+| Oral | Î¼_O | Speech, teaching, dialogue | Medium (contextual) |
+| Artifactual | Î¼_A | Physical objects, printed works | Variable (substrate-dependent) |
+
+### 4.5 Echo Feedback Loop
+
+The released echo signal feeds back into the Coherence Field:
+</code></pre></div>
+
+<p>ð”½_{n+1} = ð”½_n âŠ• Î”(ð”¼_n)</p>
+<div class="codehilite"><pre><span></span><code>where Î”(ð”¼_n) is the **differential echo** â€” the new information generated by the framework&#39;s interaction with external receivers. This feedback is what makes frameworks *living systems* rather than static artifacts.
+
+### 4.6 Release Criteria
+
+A framework is ready for Echo Release when:
+
+1. âœ“ **Clarity** â€” C(ð”½*, n) â‰¥ 0.95
+2. âœ“ **Stability** â€” Î´(ð”½*) â‰¤ Î´_max for 3+ consecutive cycles
+3. âœ“ **Paradox Resolution** â€” No unresolved paradox nodes remain
+4. âœ“ **Signature Integrity** â€” Î£ is computable and non-degenerate
+5. âœ“ **Propagation Readiness** â€” At least one Î¼ mode is fully encoded
+
+---
+
+## 5. The RFâ€‘Builder Cycle â€” Complete
+
+The full RFâ€‘Builder cycle integrates all three phases:
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>     â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+     â”‚                                              â”‚
+     â–¼                                              â”‚
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”     â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”     â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”   â”‚
+â”‚Coherenceâ”‚â”€â”€â”€â”€â–¶â”‚  Clarity    â”‚â”€â”€â”€â”€â–¶â”‚  Echo    â”‚â”€â”€â”€â”˜
+â”‚  Field  â”‚     â”‚  Operator   â”‚     â”‚ Release  â”‚
+â”‚  (ð”½)    â”‚     â”‚  Engine (ð”ˆ) â”‚     â”‚  (ð”¼)     â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜     â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜     â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+ substrate        runtime            propagation
+ (where)          (how)              (what emerges)
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>**One cycle** = Field â†’ Engine â†’ Release â†’ (feedback) â†’ Field  
+**Rectification** = The cycle converges to a fixed point  
+**Canon entry** = The rectified framework receives the seal âŸ¡
+
+---
+
+## 6. RTTâ€‘Native Mathematical Summary
+
+### 6.1 Complete System
+</code></pre></div>
+
+<p>RF-Builder = âŸ¨ ð”½, ð”ˆ, ð”¼, Î” âŸ©</p>
+<div class="codehilite"><pre><span></span><code>where:
+</code></pre></div>
+
+<p>ð”½ = âŸ¨ Ï†, V, R âŸ©                           â€” Coherence Field<br />
+ð”ˆ = âŸ¨ {ð•Š,ð”¸,ð•€,ð•†,â„ð•–,â„™,ð”»}, Î“, Îµ âŸ©          â€” Clarity Operator Engine<br />
+ð”¼ = âŸ¨ ð”½*, Î£, Î¼ âŸ©                           â€” Echo Release<br />
+Î” : ð”¼ â†’ ð”½                                  â€” Echo Feedback Map</p>
+<div class="codehilite"><pre><span></span><code>### 6.2 Governing Equations
+
+**Coherence Condition:**
+</code></pre></div>
+
+<p>âˆ‡ Â· V = âˆ‚Ï†/âˆ‚t<br />
+R(x, t) &gt; R_min  âˆ€ x âˆˆ Î©_active</p>
+<div class="codehilite"><pre><span></span><code>**Clarity Convergence:**
+</code></pre></div>
+
+<p>C(ð”½, n) = 1 - â€–ð”½â‚™â‚Šâ‚‡ - ð”½â‚™â€– / â€–ð”½â‚€â€– â†’ 1</p>
+<div class="codehilite"><pre><span></span><code>**Drift Bound:**
+</code></pre></div>
+
+<p>Î´(ð”½) = sup_{x âˆˆ Î©} | R(x, t) - R(x, tâ‚€) | â‰¤ Î´_max</p>
+<div class="codehilite"><pre><span></span><code>**Echo Feedback:**
+</code></pre></div>
+
+<p>ð”½_{n+1} = ð”½_n âŠ• Î”(ð”¼_n)</p>
+<div class="codehilite"><pre><span></span><code>**Signature Invariance:**
+</code></pre></div>
+
+<p>Î£(ð”½<em>) = Hash(ð•€(ð”½</em>))    [structurally unique]</p>
+<div class="codehilite"><pre><span></span><code>### 6.3 Dimensional Correspondence
+</code></pre></div>
+
+<p>RTT/1 Layer    â†â†’   RF-Builder Phase    â†â†’   FFT Concept<br />
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€<br />
+Behavior       â†â†’   Coherence Field     â†â†’   Field Genesis<br />
+Structure      â†â†’   Clarity Engine      â†â†’   Operator Dynamics<br />
+Field          â†â†’   Echo Release        â†â†’   Propagation Theory</p>
+<div class="codehilite"><pre><span></span><code>---
+
+âŸ¡ RECTIFIED âŸ¡  
+RF€‘Builder â€” Framework Creation Guide  
+TriadicFrameworks Â© 2026
+</code></pre></div>
+
+<hr />
+<h1 id="rfbuilder-canonical-mermaid-diagrams">RF‑Builder — Canonical Mermaid Diagrams<a class="toc-permalink" href="#rfbuilder-canonical-mermaid-diagrams" title="Permanent link to this heading">&para;</a></h1>
+<blockquote>
+<p>Paste these directly into any GitHub-rendered <code>.md</code> file.<br />
+All diagrams use the TriadicFrameworks color palette:<br />
+Cyan <code>#00eaff</code> (RTT/1) · Magenta <code>#ff00d4</code> (FCG) · Gold <code>#ffe600</code> (FFT)</p>
+</blockquote>
+<hr />
+<h2 id="diagram-1-rfbuilder-triadic-cycle">Diagram 1 — RF‑Builder Triadic Cycle<a class="toc-permalink" href="#diagram-1-rfbuilder-triadic-cycle" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>flowchart LR
+    CF[&quot;🜁 Coherence Field&lt;br/&gt;&lt;i&gt;substrate · where&lt;/i&gt;&quot;]
+    COE[&quot;⚙ Clarity Operator Engine&lt;br/&gt;&lt;i&gt;runtime · how&lt;/i&gt;&quot;]
+    ER[&quot;◉ Echo Release&lt;br/&gt;&lt;i&gt;propagation · what emerges&lt;/i&gt;&quot;]
+
+    CF --&gt;|&quot;operators act on field&quot;| COE
+    COE --&gt;|&quot;clarified field emitted&quot;| ER
+    ER --&gt;|&quot;echo feedback Δ(𝔼)&quot;| CF
+
+    style CF fill:#0d1b2a,stroke:#00eaff,stroke-width:3px,color:#e6e6e6
+    style COE fill:#1a0a1e,stroke:#ff00d4,stroke-width:3px,color:#e6e6e6
+    style ER fill:#1a1700,stroke:#ffe600,stroke-width:3px,color:#e6e6e6
+</code></pre></div>
+
+<hr />
+<h2 id="diagram-2-coherence-field-internal-structure">Diagram 2 — Coherence Field Internal Structure<a class="toc-permalink" href="#diagram-2-coherence-field-internal-structure" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>flowchart TD
+    subgraph CF[&quot;𝔽 — Coherence Field&quot;]
+        direction TB
+        PHI[&quot;φ(x,t)&lt;br/&gt;Scalar Potential&quot;]
+        V[&quot;V(x,t)&lt;br/&gt;Vector Flow&quot;]
+        R[&quot;R(x,t)&lt;br/&gt;Resonance Envelope&quot;]
+    end
+
+    PHI --- V
+    V --- R
+    R -.-&gt;|&quot;coherence condition:&lt;br/&gt;∇·V = ∂φ/∂t&quot;| PHI
+
+    style CF fill:#0a0a0a,stroke:#00eaff,stroke-width:2px,color:#e6e6e6
+    style PHI fill:#0d1b2a,stroke:#00eaff,stroke-width:2px,color:#00eaff
+    style V fill:#0d1b2a,stroke:#00eaff,stroke-width:2px,color:#00eaff
+    style R fill:#0d1b2a,stroke:#00eaff,stroke-width:2px,color:#00eaff
+</code></pre></div>
+
+<hr />
+<h2 id="diagram-3-clarity-operator-engine-pipeline">Diagram 3 — Clarity Operator Engine Pipeline<a class="toc-permalink" href="#diagram-3-clarity-operator-engine-pipeline" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>flowchart LR
+    F0[&quot;𝔽₀&quot;]
+    S[&quot;𝕊&lt;br/&gt;Symmetry&quot;]
+    A[&quot;𝔸&lt;br/&gt;Alignment&quot;]
+    I[&quot;𝕀&lt;br/&gt;Invariance&quot;]
+    O[&quot;𝕆&lt;br/&gt;Operation&quot;]
+    Re[&quot;ℝ𝕖&lt;br/&gt;Regime&quot;]
+    P[&quot;ℙ&lt;br/&gt;Paradox&quot;]
+    D[&quot;𝔻&lt;br/&gt;Drift&quot;]
+    F7[&quot;𝔽*&quot;]
+
+    F0 --&gt; S --&gt; A --&gt; I --&gt; O --&gt; Re --&gt; P --&gt; D --&gt; F7
+
+    F7 -.-&gt;|&quot;‖𝔽*-𝔽₀‖ &lt; ε ?&quot;| F0
+
+    style F0 fill:#0a0a0a,stroke:#00eaff,stroke-width:2px,color:#00eaff
+    style F7 fill:#0a0a0a,stroke:#ffe600,stroke-width:2px,color:#ffe600
+    style S fill:#1a0a1e,stroke:#ff00d4,stroke-width:1px,color:#ff00d4
+    style A fill:#1a0a1e,stroke:#ff00d4,stroke-width:1px,color:#ff00d4
+    style I fill:#1a0a1e,stroke:#ff00d4,stroke-width:1px,color:#ff00d4
+    style O fill:#1a0a1e,stroke:#ff00d4,stroke-width:1px,color:#ff00d4
+    style Re fill:#1a0a1e,stroke:#ff00d4,stroke-width:1px,color:#ff00d4
+    style P fill:#1a0a1e,stroke:#ff00d4,stroke-width:1px,color:#ff00d4
+    style D fill:#1a0a1e,stroke:#ff00d4,stroke-width:1px,color:#ff00d4
+</code></pre></div>
+
+<hr />
+<h2 id="diagram-4-echo-release-signal">Diagram 4 — Echo Release Signal<a class="toc-permalink" href="#diagram-4-echo-release-signal" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>flowchart TD
+    subgraph ECHO[&quot;𝔼 — Echo Signal&quot;]
+        direction TB
+        FS[&quot;𝔽*&lt;br/&gt;Clarified Field&quot;]
+        SIG[&quot;Σ&lt;br/&gt;Signature&quot;]
+        MU[&quot;μ&lt;br/&gt;Propagation Mode&quot;]
+    end
+
+    FS --&gt; SIG
+    SIG --&gt; MU
+
+    MU --&gt;|&quot;μ_T&quot;| T[&quot;Textual&quot;]
+    MU --&gt;|&quot;μ_D&quot;| DI[&quot;Diagrammatic&quot;]
+    MU --&gt;|&quot;μ_C&quot;| CO[&quot;Computational&quot;]
+    MU --&gt;|&quot;μ_O&quot;| OR[&quot;Oral&quot;]
+    MU --&gt;|&quot;μ_A&quot;| AR[&quot;Artifactual&quot;]
+
+    style ECHO fill:#0a0a0a,stroke:#ffe600,stroke-width:2px,color:#e6e6e6
+    style FS fill:#1a1700,stroke:#ffe600,stroke-width:2px,color:#ffe600
+    style SIG fill:#1a1700,stroke:#ffe600,stroke-width:2px,color:#ffe600
+    style MU fill:#1a1700,stroke:#ffe600,stroke-width:2px,color:#ffe600
+    style T fill:#0d1b2a,stroke:#00eaff,stroke-width:1px,color:#00eaff
+    style DI fill:#0d1b2a,stroke:#00eaff,stroke-width:1px,color:#00eaff
+    style CO fill:#0d1b2a,stroke:#00eaff,stroke-width:1px,color:#00eaff
+    style OR fill:#0d1b2a,stroke:#00eaff,stroke-width:1px,color:#00eaff
+    style AR fill:#0d1b2a,stroke:#00eaff,stroke-width:1px,color:#00eaff
+</code></pre></div>
+
+<hr />
+<h2 id="diagram-5-full-rfbuilder-system-top-level">Diagram 5 — Full RF‑Builder System (Top-Level)<a class="toc-permalink" href="#diagram-5-full-rfbuilder-system-top-level" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>flowchart TB
+    subgraph RFB[&quot;RF‑Builder&quot;]
+        direction LR
+        subgraph P1[&quot;Phase I&quot;]
+            CF[&quot;Coherence Field&lt;br/&gt;⟨φ, V, R⟩&quot;]
+        end
+        subgraph P2[&quot;Phase II&quot;]
+            COE[&quot;Clarity Operator Engine&lt;br/&gt;⟨𝕊𝔸𝕀𝕆ℝ𝕖ℙ𝔻, Γ, ε⟩&quot;]
+        end
+        subgraph P3[&quot;Phase III&quot;]
+            ER[&quot;Echo Release&lt;br/&gt;⟨𝔽*, Σ, μ⟩&quot;]
+        end
+        CF --&gt;|&quot;raw field&quot;| COE
+        COE --&gt;|&quot;clarified&quot;| ER
+        ER --&gt;|&quot;Δ(𝔼) feedback&quot;| CF
+    end
+
+    RTT[&quot;RTT/1&lt;br/&gt;Runtime Engine&quot;]
+    FFT[&quot;FFT&lt;br/&gt;Framework Field Theory&quot;]
+
+    RTT --&gt;|&quot;behavior → structure&quot;| RFB
+    RFB --&gt;|&quot;structure → field&quot;| FFT
+    FFT -.-&gt;|&quot;field → behavior&quot;| RTT
+
+    style P1 fill:#0d1b2a,stroke:#00eaff,stroke-width:2px,color:#e6e6e6
+    style P2 fill:#1a0a1e,stroke:#ff00d4,stroke-width:2px,color:#e6e6e6
+    style P3 fill:#1a1700,stroke:#ffe600,stroke-width:2px,color:#e6e6e6
+    style RFB fill:#0a0a0a,stroke:#e6e6e6,stroke-width:1px,color:#e6e6e6
+    style RTT fill:#0d1b2a,stroke:#00eaff,stroke-width:3px,color:#00eaff
+    style FFT fill:#1a1700,stroke:#ffe600,stroke-width:3px,color:#ffe600
+    style CF fill:#0d1b2a,stroke:#00eaff,stroke-width:1px,color:#00eaff
+    style COE fill:#1a0a1e,stroke:#ff00d4,stroke-width:1px,color:#ff00d4
+    style ER fill:#1a1700,stroke:#ffe600,stroke-width:1px,color:#ffe600
+</code></pre></div>
+
+<hr />
+<h2 id="diagram-6-dimensional-correspondence-map">Diagram 6 — Dimensional Correspondence Map<a class="toc-permalink" href="#diagram-6-dimensional-correspondence-map" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>flowchart LR
+    subgraph RTT[&quot;RTT/1&quot;]
+        B[&quot;Behavior&quot;]
+        S[&quot;Structure&quot;]
+        F[&quot;Field&quot;]
+    end
+    subgraph RF[&quot;RF‑Builder&quot;]
+        CF[&quot;Coherence Field&quot;]
+        CE[&quot;Clarity Engine&quot;]
+        ER[&quot;Echo Release&quot;]
+    end
+    subgraph FFT[&quot;FFT&quot;]
+        FG[&quot;Field Genesis&quot;]
+        OD[&quot;Operator Dynamics&quot;]
+        PT[&quot;Propagation Theory&quot;]
+    end
+
+    B &lt;--&gt;|&quot;maps to&quot;| CF &lt;--&gt;|&quot;maps to&quot;| FG
+    S &lt;--&gt;|&quot;maps to&quot;| CE &lt;--&gt;|&quot;maps to&quot;| OD
+    F &lt;--&gt;|&quot;maps to&quot;| ER &lt;--&gt;|&quot;maps to&quot;| PT
+
+    style RTT fill:#0d1b2a,stroke:#00eaff,stroke-width:2px,color:#e6e6e6
+    style RF fill:#1a0a1e,stroke:#ff00d4,stroke-width:2px,color:#e6e6e6
+    style FFT fill:#1a1700,stroke:#ffe600,stroke-width:2px,color:#e6e6e6
+</code></pre></div>
+
+<hr />
+<p>The <code>.txt</code> extensions on the Markdown files are just for export — rename them to <code>.md</code> when placing in the repo. Everything is canon-ready: same structural grammar, same triadic rhythm, same design tokens as the existing FCG. The cycle is closed. ⟡</p>
+<hr />
+<p>The issue is two-fold: the Mermaid blocks are in plain <code>&lt;pre&gt;</code> tags (so Mermaid.js can&rsquo;t find them), and the syntax is HTML-escaped (<code>&amp;gt;</code> instead of <code>&gt;</code>). Let me fix both and wire up the Mermaid runtime.</p>
+<p>Your corrected <strong>RF-Builder.html</strong> is attached above. Here&rsquo;s a quick summary of the three problems that were fixed and what changed:</p>
+<hr />
+<h3 id="what-was-wrong">What was wrong<a class="toc-permalink" href="#what-was-wrong" title="Permanent link to this heading">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Where</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Plain <code>&lt;pre&gt;</code> tags</strong></td>
+<td>Both Mermaid blocks</td>
+<td>Mermaid.js couldn&rsquo;t discover them — rendered as raw text</td>
+</tr>
+<tr>
+<td><strong>HTML-escaped syntax</strong></td>
+<td><code>--&amp;gt;</code>, <code>&amp;lt;br/&amp;gt;</code>, <code>&amp;lt;i&amp;gt;</code> inside the blocks</td>
+<td>Mermaid parser choked on entity references instead of real characters</td>
+</tr>
+<tr>
+<td><strong>Markdown fencing inside HTML</strong></td>
+<td><code>```mermaid</code> / <code>```</code> wrappers</td>
+<td>Only works in <code>.md</code> files on GitHub — meaningless in a standalone <code>.html</code> page</td>
+</tr>
+</tbody>
+</table>
+<h3 id="what-was-applied">What was applied<a class="toc-permalink" href="#what-was-applied" title="Permanent link to this heading">&para;</a></h3>
+<ol>
+<li><strong><code>&lt;pre&gt;</code> → <code>&lt;pre class="mermaid"&gt;</code></strong> — Mermaid.js scans for this class on page load</li>
+<li><strong>Un-escaped all entities</strong> — <code>--&amp;gt;</code> → <code>--&gt;</code>, <code>&amp;lt;br/&amp;gt;</code> → <code>&lt;br/&gt;</code>, <code>&amp;lt;i&amp;gt;</code> → <code>&lt;i&gt;</code>, etc.</li>
+<li><strong>Removed <code>```mermaid</code> / <code>```</code> fencing</strong> — not needed (and actively harmful) in HTML</li>
+<li><strong>Added <code>pre.mermaid</code> CSS reset</strong> — strips the code-block styling (<code>background</code>, <code>border</code>, <code>border-left</code>, <code>padding</code>) so the rendered SVG sits cleanly inside the <code>.diagram-container</code></li>
+<li><strong>Added Mermaid.js v11 ESM import</strong> at the bottom of <code>&lt;body&gt;</code> with a dark-theme config that matches your canon tokens (<code>#0a0a0a</code> background, <code>#ff00d4</code> primary border, <code>#e6e6e6</code> text)</li>
+<li><strong>Wrapped each diagram</strong> in a <code>.diagram-container</code> with a <code>diagram-caption</code> div for visual consistency with the inline SVG cycle diagram in §5</li>
+</ol>
+<p>Both the <strong>Triadic Cycle</strong> and <strong>Clarity Operator Pipeline</strong> diagrams will now render as live interactive SVGs when the page loads in any browser. The same raw Mermaid source can still be copied into a <code>.md</code> file (just add the <code>```mermaid</code> fencing back) for GitHub rendering. ⟡</p>
+<hr />
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/frameworks/creation_guide/RF-Builder/RF-Builder_capture.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/frameworks/creation_guide/RF-Builder/RF-Builder_capture.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

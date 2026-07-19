@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Ag Multi‑Scale Numerical Stability Methods | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/AG_Multi‑Scale_Numerical_Stability_Methods/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Ag Multi‑Scale Numerical Stability Methods" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/AG_Multi‑Scale_Numerical_Stability_Methods/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Ag Multi‑Scale Numerical Stability Methods" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/AG_Multi‑Scale_Numerical_Stability_Methods.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Ag Multi\u2011Scale Numerical Stability Methods",
+    "headline": "Ag Multi\u2011Scale Numerical Stability Methods",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/AG_Multi\u2011Scale_Numerical_Stability_Methods/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#ensuring-stable-accurate-and-regimeconsistent-simulations-across-ffts-multiscale-architecture">Ensuring stable, accurate, and regime‑consistent simulations across FFT’s multi‑scale architecture</a></li>
+<li><a href="#21-additive-splitting">2.1 Additive Splitting</a></li>
+<li><a href="#22-triadictime-splitting">2.2 Triadic‑Time Splitting</a></li>
+<li><a href="#triadictime-application">Triadic‑Time Application</a></li>
+<li><a href="#51-kernel-normalization">5.1 Kernel Normalization</a></li>
+<li><a href="#52-truncation">5.2 Truncation</a></li>
+<li><a href="#53-fftbased-convolution">5.3 FFT‑Based Convolution</a></li>
+<li><a href="#71-automatic-scaling">7.1 Automatic Scaling</a></li>
+<li><a href="#72-stabilitydriven-regime-detection">7.2 Stability‑Driven Regime Detection</a></li>
+<li><a href="#81-recommended">8.1 Recommended</a></li>
+<li><a href="#82-avoid">8.2 Avoid</a></li>
+<li><a href="#83-absorbing-layers">8.3 Absorbing Layers</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Framework_Field_Theory/" itemprop="item">
+                <span itemprop="name">Framework Field Theory</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Framework_Field_Theory/Book_Repo_Eval_Edition/" itemprop="item">
+                <span itemprop="name">Book Repo Eval Edition</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/" itemprop="item">
+                <span itemprop="name">Part Xi Appendices</span>
+              </a>
+            <meta itemprop="position" content="4" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Ag Multi‑Scale Numerical Stability Methods</span>
+            <meta itemprop="position" content="5" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Ag Multi‑Scale Numerical Stability Methods</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="appendix-ag-multiscale-numerical-stability-methods"><strong>Appendix AG — Multi‑Scale Numerical Stability Methods</strong><a class="toc-permalink" href="#appendix-ag-multiscale-numerical-stability-methods" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="ensuring-stable-accurate-and-regimeconsistent-simulations-across-ffts-multiscale-architecture"><em>Ensuring stable, accurate, and regime‑consistent simulations across FFT’s multi‑scale architecture</em><a class="toc-permalink" href="#ensuring-stable-accurate-and-regimeconsistent-simulations-across-ffts-multiscale-architecture" title="Permanent link to this heading">&para;</a></h3>
+<p>Framework Field Theory (FFT) is inherently <strong>multi‑scale</strong>:</p>
+<ul>
+<li>three interacting fields (φ, V, R)  </li>
+<li>three temporal modes (t_r, t_d, t_a)  </li>
+<li>five regimes with different operator dominance  </li>
+<li>nonlocal kernels  </li>
+<li>activation–damping competition  </li>
+<li>alignment‑driven transport  </li>
+</ul>
+<p>These features make FFT simulations <strong>powerful</strong>, but also <strong>numerically stiff</strong>.<br />
+This appendix defines the <strong>canonical stability methods</strong> required to ensure reproducible, stable, and regime‑consistent simulations.</p>
+<hr />
+<h1 id="1-sources-of-numerical-instability-in-fft"><strong>1. Sources of Numerical Instability in FFT</strong><a class="toc-permalink" href="#1-sources-of-numerical-instability-in-fft" title="Permanent link to this heading">&para;</a></h1>
+<p>FFT simulations may become unstable due to:</p>
+<ul>
+<li>stiff activation terms (aR − bR³)  </li>
+<li>strong nonlocal coupling  </li>
+<li>rapid resonance oscillations  </li>
+<li>alignment‑driven advection  </li>
+<li>regime transitions  </li>
+<li>triadic‑time scale separation  </li>
+<li>kernel‑induced long‑range influence  </li>
+</ul>
+<p>This appendix provides the stability tools needed to manage these challenges.</p>
+<hr />
+<h1 id="2-stability-method-1-operator-splitting"><strong>2. Stability Method #1 — Operator Splitting</strong><a class="toc-permalink" href="#2-stability-method-1-operator-splitting" title="Permanent link to this heading">&para;</a></h1>
+<p>FFT simulations must use <strong>operator splitting</strong> to separate fast, slow, and structural dynamics.</p>
+<h3 id="21-additive-splitting"><strong>2.1 Additive Splitting</strong><a class="toc-permalink" href="#21-additive-splitting" title="Permanent link to this heading">&para;</a></h3>
+<p>Split updates into:</p>
+<ul>
+<li>activation  </li>
+<li>diffusion  </li>
+<li>alignment  </li>
+<li>coupling  </li>
+<li>stabilization  </li>
+</ul>
+<h3 id="22-triadictime-splitting"><strong>2.2 Triadic‑Time Splitting</strong><a class="toc-permalink" href="#22-triadictime-splitting" title="Permanent link to this heading">&para;</a></h3>
+<p>As defined in Appendix AE:</p>
+<ul>
+<li>inner loop: resonant time  </li>
+<li>middle loop: diffusive time  </li>
+<li>outer loop: alignment time  </li>
+</ul>
+<p>This prevents stiff operators from destabilizing slow dynamics.</p>
+<hr />
+<h1 id="3-stability-method-2-cflconsistent-time-steps"><strong>3. Stability Method #2 — CFL‑Consistent Time Steps</strong><a class="toc-permalink" href="#3-stability-method-2-cflconsistent-time-steps" title="Permanent link to this heading">&para;</a></h1>
+<p>For any advection or diffusion process, the timestep must satisfy:</p>
+<p>$$\Delta t \le \frac{C \Delta x}{\lVert V \rVert}$$</p>
+<p>$$\Delta t \le \frac{C \Delta x^2}{\nu}$$</p>
+<p>where C is a stability constant (typically 0.1–0.5).</p>
+<h3 id="triadictime-application"><strong>Triadic‑Time Application</strong><a class="toc-permalink" href="#triadictime-application" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Δt_r must satisfy CFL for activation + coupling  </li>
+<li>Δt_d must satisfy CFL for diffusion  </li>
+<li>Δt_a must satisfy CFL for alignment  </li>
+</ul>
+<p>This ensures stability across all temporal modes.</p>
+<hr />
+<h1 id="4-stability-method-3-implicit-or-semiimplicit-diffusion"><strong>4. Stability Method #3 — Implicit or Semi‑Implicit Diffusion</strong><a class="toc-permalink" href="#4-stability-method-3-implicit-or-semiimplicit-diffusion" title="Permanent link to this heading">&para;</a></h1>
+<p>Diffusion terms:</p>
+<p>$$D[X] = \nu \nabla^2 X$$</p>
+<p>are stiff for small Δx.</p>
+<p>Use:</p>
+<ul>
+<li><strong>implicit Euler</strong>  </li>
+<li><strong>Crank–Nicolson</strong>  </li>
+<li><strong>ADI (Alternating Direction Implicit)</strong>  </li>
+</ul>
+<p>This allows larger Δt_d without instability.</p>
+<hr />
+<h1 id="5-stability-method-4-kernel-truncation-normalization"><strong>5. Stability Method #4 — Kernel Truncation &amp; Normalization</strong><a class="toc-permalink" href="#5-stability-method-4-kernel-truncation-normalization" title="Permanent link to this heading">&para;</a></h1>
+<p>Nonlocal kernels can destabilize simulations if:</p>
+<ul>
+<li>tails are too heavy  </li>
+<li>kernels are not normalized  </li>
+<li>convolution is computed inaccurately  </li>
+</ul>
+<h3 id="51-kernel-normalization"><strong>5.1 Kernel Normalization</strong><a class="toc-permalink" href="#51-kernel-normalization" title="Permanent link to this heading">&para;</a></h3>
+<p>Ensure:</p>
+<p>$$\int_{\Omega} K(r)\, dr = 1$$</p>
+<h3 id="52-truncation"><strong>5.2 Truncation</strong><a class="toc-permalink" href="#52-truncation" title="Permanent link to this heading">&para;</a></h3>
+<p>For power‑law or exponential kernels:</p>
+<ul>
+<li>truncate at radius R_cut  </li>
+<li>enforce compact support  </li>
+</ul>
+<h3 id="53-fftbased-convolution"><strong>5.3 FFT‑Based Convolution</strong><a class="toc-permalink" href="#53-fftbased-convolution" title="Permanent link to this heading">&para;</a></h3>
+<p>Use FFT convolution for stability and accuracy.</p>
+<hr />
+<h1 id="6-stability-method-5-activation-damping-windows"><strong>6. Stability Method #5 — Activation Damping Windows</strong><a class="toc-permalink" href="#6-stability-method-5-activation-damping-windows" title="Permanent link to this heading">&para;</a></h1>
+<p>Activation term:</p>
+<p>$$\alpha[R] = aR - bR^3$$</p>
+<p>can cause blow‑up if a is large.</p>
+<p>Use:</p>
+<ul>
+<li><strong>soft‑clipping</strong>  </li>
+<li><strong>activation windows</strong>  </li>
+<li><strong>regime‑dependent scaling</strong> (Appendix AF)  </li>
+</ul>
+<p>Example:</p>
+<p>$$R \leftarrow \tanh(R)$$</p>
+<p>This preserves structure while preventing divergence.</p>
+<hr />
+<h1 id="7-stability-method-6-regimeaware-scaling"><strong>7. Stability Method #6 — Regime‑Aware Scaling</strong><a class="toc-permalink" href="#7-stability-method-6-regimeaware-scaling" title="Permanent link to this heading">&para;</a></h1>
+<p>Operators must be scaled according to regime (Appendix AF).</p>
+<h3 id="71-automatic-scaling"><strong>7.1 Automatic Scaling</strong><a class="toc-permalink" href="#71-automatic-scaling" title="Permanent link to this heading">&para;</a></h3>
+<p>When entering:</p>
+<ul>
+<li><strong>Paradox Regime</strong> → shrink Δt_r, Δt_d  </li>
+<li><strong>Interference Regime</strong> → shrink all Δt  </li>
+<li><strong>Coherence Regime</strong> → suppress diffusion  </li>
+</ul>
+<h3 id="72-stabilitydriven-regime-detection"><strong>7.2 Stability‑Driven Regime Detection</strong><a class="toc-permalink" href="#72-stabilitydriven-regime-detection" title="Permanent link to this heading">&para;</a></h3>
+<p>Use:</p>
+<ul>
+<li>coherence index  </li>
+<li>flow index  </li>
+<li>ΔSET variance  </li>
+</ul>
+<p>to detect regime transitions and adjust stability parameters.</p>
+<hr />
+<h1 id="8-stability-method-7-boundary-stabilization"><strong>8. Stability Method #7 — Boundary Stabilization</strong><a class="toc-permalink" href="#8-stability-method-7-boundary-stabilization" title="Permanent link to this heading">&para;</a></h1>
+<p>Boundary conditions strongly affect stability.</p>
+<h3 id="81-recommended"><strong>8.1 Recommended</strong><a class="toc-permalink" href="#81-recommended" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>periodic  </li>
+<li>Neumann (zero‑flux)  </li>
+</ul>
+<h3 id="82-avoid"><strong>8.2 Avoid</strong><a class="toc-permalink" href="#82-avoid" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>hard Dirichlet boundaries (can reflect waves)  </li>
+</ul>
+<h3 id="83-absorbing-layers"><strong>8.3 Absorbing Layers</strong><a class="toc-permalink" href="#83-absorbing-layers" title="Permanent link to this heading">&para;</a></h3>
+<p>Use damping layers to prevent reflection of:</p>
+<ul>
+<li>resonance waves  </li>
+<li>alignment flows  </li>
+<li>kernel‑driven influence  </li>
+</ul>
+<hr />
+<h1 id="9-stability-method-8-energylike-diagnostics"><strong>9. Stability Method #8 — Energy‑Like Diagnostics</strong><a class="toc-permalink" href="#9-stability-method-8-energylike-diagnostics" title="Permanent link to this heading">&para;</a></h1>
+<p>Track stability indicators:</p>
+<ul>
+<li>total “energy” $$E = \int (R^2 + \lVert V \rVert^2 + \phi^2) dx$$  </li>
+<li>ΔSET mean and variance  </li>
+<li>operator norms  </li>
+<li>divergence of V  </li>
+<li>growth rates of R  </li>
+</ul>
+<p>If any indicator diverges, reduce Δt_r or Δt_d.</p>
+<hr />
+<h1 id="10-stability-method-9-adaptive-time-stepping"><strong>10. Stability Method #9 — Adaptive Time Stepping</strong><a class="toc-permalink" href="#10-stability-method-9-adaptive-time-stepping" title="Permanent link to this heading">&para;</a></h1>
+<p>Use adaptive Δt_r, Δt_d, Δt_a based on:</p>
+<ul>
+<li>operator norms  </li>
+<li>regime transitions  </li>
+<li>kernel strength  </li>
+<li>activation magnitude  </li>
+</ul>
+<p>Example rule:</p>
+<p>$$\Delta t_r \leftarrow \frac{\Delta t_r}{1 + \lVert \alpha[R] \rVert}$$</p>
+<p>This prevents resonance blow‑up.</p>
+<hr />
+<h1 id="11-stability-method-10-multiscale-preconditioning"><strong>11. Stability Method #10 — Multi‑Scale Preconditioning</strong><a class="toc-permalink" href="#11-stability-method-10-multiscale-preconditioning" title="Permanent link to this heading">&para;</a></h1>
+<p>For stiff systems, use:</p>
+<ul>
+<li>Jacobi preconditioning  </li>
+<li>ILU (Incomplete LU)  </li>
+<li>multi‑grid solvers  </li>
+</ul>
+<p>Especially important for:</p>
+<ul>
+<li>3D simulations  </li>
+<li>power‑law kernels  </li>
+<li>paradox regime  </li>
+</ul>
+<hr />
+<h1 id="closing-statement"><strong>Closing Statement</strong><a class="toc-permalink" href="#closing-statement" title="Permanent link to this heading">&para;</a></h1>
+<blockquote>
+<p><strong>Appendix AG establishes the canonical numerical stability methods required to simulate FFT’s multi‑scale, tri‑time, nonlocal, regime‑dependent systems. These methods ensure that FFT simulations remain stable, accurate, and structurally faithful across all regimes and operator configurations.</strong></p>
+</blockquote>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/AG_Multi‑Scale_Numerical_Stability_Methods.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/AG_Multi‑Scale_Numerical_Stability_Methods.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

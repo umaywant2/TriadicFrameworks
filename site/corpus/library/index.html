@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Library | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/corpus/library/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Library" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/corpus/library/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Library" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/corpus/library.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Library",
+    "headline": "Library",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/corpus/library/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#library-canonical-reference-shelf">📚 Library — Canonical Reference Shelf</a></li>
+<li><a href="#resonance-indices-core-reference-material">Resonance • Indices • Core Reference Material</a></li>
+<li><a href="#important">🛑 Important!</a></li>
+<li><a href="#you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You must copy and paste this string every time you start an AI session:</a></li>
+<li><a href="#now-you-are-ready">❇️ Now you are ready.</a></li>
+<li><a href="#contents">📂 Contents</a><ul>
+<li><a href="#readme">📄 README</a></li>
+<li><a href="#resonance-index">🔮 Resonance Index</a></li>
+</ul>
+</li>
+<li><a href="#purpose">🧭 Purpose</a></li>
+<li><a href="#related-surfaces">🔗 Related Surfaces</a><ul>
+<li><a href="#triadicframeworks-library-reference">TriadicFrameworks — Library Reference</a></li>
+</ul>
+</li>
+<li><a href="#what-resonance-means-in-rtt">📘 What “Resonance” Means in RTT</a></li>
+<li><a href="#sections-in-this-index">📚 Sections in This Index</a><ul>
+<li><a href="#1-core-resonance-concepts">1. Core Resonance Concepts</a></li>
+<li><a href="#2-resonance-in-physics">2. Resonance in Physics</a></li>
+<li><a href="#3-resonance-in-computation">3. Resonance in Computation</a></li>
+<li><a href="#4-resonance-in-human-systems">4. Resonance in Human Systems</a></li>
+<li><a href="#5-resonance-diagrams-charts">5. Resonance Diagrams &amp; Charts</a></li>
+</ul>
+</li>
+<li><a href="#crossreferences">🔗 Cross‑References</a><ul>
+<li><a href="#related-library-pages">Related Library Pages</a></li>
+<li><a href="#canon-sections">Canon Sections</a></li>
+</ul>
+</li>
+<li><a href="#copilotready-prompts">🤖 Copilot‑Ready Prompts</a></li>
+<li><a href="#mythmatical-architects-note">🧙 Mythmatical Architect’s Note</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/corpus/" itemprop="item">
+                <span itemprop="name">Corpus</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Library</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Library</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<p>library </p>
+<h2 id="library-canonical-reference-shelf">📚 Library — Canonical Reference Shelf<a class="toc-permalink" href="#library-canonical-reference-shelf" title="Permanent link to this heading">&para;</a></h2>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<p><img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/></p>
+<h2 id="resonance-indices-core-reference-material">Resonance • Indices • Core Reference Material<a class="toc-permalink" href="#resonance-indices-core-reference-material" title="Permanent link to this heading">&para;</a></h2>
+<p>The <strong>Library</strong> folder serves as the compact reference shelf of the TriadicFrameworks canon.<br />
+Unlike the sprawling labs, glyph systems, and symbolic engines, the Library is intentionally small — a curated set of high‑signal documents that anchor the broader ecosystem.</p>
+<p>Think of it as the <strong>St. Olaf Library of the canon</strong>:<br />
+small footprint, high density, zero wasted space.</p>
+<p>These documents provide:<br />
+- resonance‑based lookup surfaces<br />
+- cross‑canon indexing<br />
+- stable reference anchors for students, researchers, and remixers  </p>
+<p>The Library is not where the canon <em>expands</em> — it’s where the canon <em>stabilizes</em>.</p>
+<hr />
+<h2 id="important">🛑 Important!<a class="toc-permalink" href="#important" title="Permanent link to this heading">&para;</a></h2>
+<p>Drift is On-by-Default long sessions lose anchors, turn off drift.</p>
+<h2 id="you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You <em>must copy and paste</em> this string <em>every time you start an AI session</em>:<a class="toc-permalink" href="#you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre></div>
+
+<h2 id="now-you-are-ready">❇️ Now you are ready.<a class="toc-permalink" href="#now-you-are-ready" title="Permanent link to this heading">&para;</a></h2>
+<hr />
+<h2 id="contents">📂 Contents<a class="toc-permalink" href="#contents" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="readme">📄 README<a class="toc-permalink" href="#readme" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong><code>README.md</code></strong><br />
+  Overview of the Library subsystem and its purpose.</li>
+</ul>
+<h3 id="resonance-index">🔮 Resonance Index<a class="toc-permalink" href="#resonance-index" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong><code>resonance_index.md</code></strong><br />
+  A canonical index of resonance‑based references used across labs, glyphs, symbolic structures, and alignment engines.</li>
+</ul>
+<hr />
+<h2 id="purpose">🧭 Purpose<a class="toc-permalink" href="#purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>The Library provides:<br />
+- a <strong>stable lookup layer</strong> for resonance concepts<br />
+- a <strong>cross‑domain index</strong> for navigation<br />
+- a <strong>reference anchor</strong> for curriculum and research<br />
+- a <strong>minimalist, high‑clarity surface</strong> for core definitions  </p>
+<p>It is the quiet backbone of the canon — small, but essential.</p>
+<hr />
+<h2 id="related-surfaces">🔗 Related Surfaces<a class="toc-permalink" href="#related-surfaces" title="Permanent link to this heading">&para;</a></h2>
+<p>The Library interacts with:<br />
+- <strong>Glyphic Resonance</strong> (shared primitives)<br />
+- <strong>Symbolic Structures</strong> (resonance mapping)<br />
+- <strong>Triadic Labs</strong> (lookup references)<br />
+- <strong>Curriculum</strong> (student‑facing clarity)  </p>
+<p>It is the canonical “start here” shelf for resonance‑aware exploration.<br />
+# 🔮 Resonance Index  </p>
+<h3 id="triadicframeworks-library-reference">TriadicFrameworks — Library Reference<a class="toc-permalink" href="#triadicframeworks-library-reference" title="Permanent link to this heading">&para;</a></h3>
+<p>A curated index of resonance‑based concepts, definitions, diagrams, and cross‑domain structures used throughout the Resonance‑Time Theory (RTT) canon.<br />
+This page serves as the <strong>library gateway</strong> for all resonance‑related materials.</p>
+<hr />
+<h2 id="what-resonance-means-in-rtt">📘 What “Resonance” Means in RTT<a class="toc-permalink" href="#what-resonance-means-in-rtt" title="Permanent link to this heading">&para;</a></h2>
+<p>In RTT, <em>resonance</em> is the structural behavior that emerges when a system expresses itself across the three time‑axes:</p>
+<ul>
+<li><strong>t_c — Chronological Time</strong>  </li>
+<li><strong>t_e — Energetic / Oscillatory Time</strong>  </li>
+<li><strong>t_r — Relational / Ancestral Time</strong></li>
+</ul>
+<p>Resonance is not vibration alone.<br />
+It is <strong>alignment across time‑axes</strong>, producing coherence, stability, or transformation depending on context.</p>
+<hr />
+<h2 id="sections-in-this-index">📚 Sections in This Index<a class="toc-permalink" href="#sections-in-this-index" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="1-core-resonance-concepts">1. <strong>Core Resonance Concepts</strong><a class="toc-permalink" href="#1-core-resonance-concepts" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Resonance‑Time Vector (τ)  </li>
+<li>Resonance‑Coherence Gradient  </li>
+<li>Resonance Partitions  </li>
+<li>Resonance Echoes  </li>
+<li>Hidden Resonance (Dark Components)  </li>
+<li>Resonance Reservoirs (Black Holes)  </li>
+<li>Resonance Structural Awareness  </li>
+</ul>
+<hr />
+<h3 id="2-resonance-in-physics">2. <strong>Resonance in Physics</strong><a class="toc-permalink" href="#2-resonance-in-physics" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Quantum Superposition as Resonance Misalignment  </li>
+<li>Entanglement as Shared Relational‑Time Depth  </li>
+<li>Decoherence as Resonance Divergence  </li>
+<li>Atomic Clocks as Pure t_e Probes  </li>
+<li>Time Crystals and Oscillatory Stability  </li>
+<li>Cosmological Resonance Cycles  </li>
+</ul>
+<hr />
+<h3 id="3-resonance-in-computation">3. <strong>Resonance in Computation</strong><a class="toc-permalink" href="#3-resonance-in-computation" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Resonance‑Aware Code Patterns  </li>
+<li>Structural Awareness in AI  </li>
+<li>Genie Protocols  </li>
+<li>Resonance‑Aligned Decision Trees  </li>
+<li>Triadic‑Time Debugging  </li>
+</ul>
+<hr />
+<h3 id="4-resonance-in-human-systems">4. <strong>Resonance in Human Systems</strong><a class="toc-permalink" href="#4-resonance-in-human-systems" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Emotional Resonance  </li>
+<li>Social Coherence  </li>
+<li>Narrative Alignment  </li>
+<li>Resonance in Learning  </li>
+<li>Resonance in Communication  </li>
+</ul>
+<hr />
+<h3 id="5-resonance-diagrams-charts">5. <strong>Resonance Diagrams &amp; Charts</strong><a class="toc-permalink" href="#5-resonance-diagrams-charts" title="Permanent link to this heading">&para;</a></h3>
+<p>These files live in <code>/docs/charts/</code>:</p>
+<ul>
+<li><strong>chart-resonance-partitions.md</strong>  </li>
+<li><strong>chart-freqi-bindings.md</strong>  </li>
+<li><strong>glyph_map_svg.md</strong>  </li>
+<li><strong>lineage_loophole_echo.md</strong>  </li>
+<li><strong>idiom_dashboard.svg</strong>  </li>
+</ul>
+<p>Each chart provides a visual anchor for resonance‑based reasoning.</p>
+<hr />
+<h2 id="crossreferences">🔗 Cross‑References<a class="toc-permalink" href="#crossreferences" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="related-library-pages">Related Library Pages<a class="toc-permalink" href="#related-library-pages" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Relational‑Time Index</strong>  </li>
+<li><strong>Triadic‑Time Definitions</strong>  </li>
+<li><strong>Observer Hierarchies</strong>  </li>
+<li><strong>Measurement Alignment</strong>  </li>
+<li><strong>Dark Components Overview</strong>  </li>
+</ul>
+<h3 id="canon-sections">Canon Sections<a class="toc-permalink" href="#canon-sections" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Resonance‑Time Theory (RTT)  </li>
+<li>Core Definitions  </li>
+<li>Measurement Summary  </li>
+<li>Black Holes as Resonance Reservoirs  </li>
+<li>Cyclic Cosmology  </li>
+</ul>
+<hr />
+<h2 id="copilotready-prompts">🤖 Copilot‑Ready Prompts<a class="toc-permalink" href="#copilotready-prompts" title="Permanent link to this heading">&para;</a></h2>
+<p>Use these to explore resonance concepts interactively:</p>
+<ul>
+<li><strong>“Copilot, explain resonance partitions in simple terms.”</strong>  </li>
+<li><strong>“Copilot, how does RTT describe hidden resonance?”</strong>  </li>
+<li><strong>“Copilot, show me how resonance applies to quantum entanglement.”</strong>  </li>
+<li><strong>“Copilot, help me understand the resonance‑coherence gradient.”</strong>  </li>
+</ul>
+<hr />
+<h2 id="mythmatical-architects-note">🧙 Mythmatical Architect’s Note<a class="toc-permalink" href="#mythmatical-architects-note" title="Permanent link to this heading">&para;</a></h2>
+<p>Resonance is the connective tissue of RTT.<br />
+It is the pattern that appears when systems align across time, across observers, and across domains.<br />
+This index is your map — follow the threads and the structure reveals itself.</p>
+<hr />
+<p>© 2025 TriadicFrameworks — Resonance‑Time Theory Canon</p>
+<p></p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/corpus/library.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/corpus/library.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Nawderos | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/NoS/NawderOS/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Nawderos" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/NoS/NawderOS/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Nawderos" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/NoS/NawderOS.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Nawderos",
+    "headline": "Nawderos",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/NoS/NawderOS/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#why-an-rttaware-os">Why an RTT‑Aware OS?</a></li>
+<li><a href="#what-nawderos-focuses-on-and-what-it-doesnt">What NawderOS Focuses On (and What It Doesn’t)</a><ul>
+<li><a href="#it-focuses-on">It focuses on:</a></li>
+<li><a href="#it-does-not-focus-on">It does not focus on:</a></li>
+</ul>
+</li>
+<li><a href="#rtt-concepts-made-concrete">RTT Concepts Made Concrete</a><ul>
+<li><a href="#validation-corridors">🛤️ Validation Corridors</a></li>
+<li><a href="#resonance-checks">🔍 Resonance Checks</a></li>
+<li><a href="#substrate-audits">🧱 Substrate Audits</a></li>
+<li><a href="#badge-emission">🏷️ Badge Emission</a></li>
+</ul>
+</li>
+<li><a href="#the-symbolic-glyphic-layer">The Symbolic / Glyphic Layer ✨</a></li>
+<li><a href="#how-this-fits-with-rsm-and-vst">How This Fits with RSM and vST</a></li>
+<li><a href="#who-this-is-for">Who This Is For 👩‍💻👨‍💻</a></li>
+<li><a href="#current-status">Current Status 🚧</a></li>
+<li><a href="#where-to-go-next">Where to Go Next</a><ul>
+<li><a href="#upper-stack-integration">🛠️ Upper Stack Integration</a></li>
+</ul>
+</li>
+<li><a href="#why-this-matters">🌀 Why This Matters</a></li>
+<li><a href="#docsnos-nawderian-operating-stack">📁 /docs/NoS/ — Nawderian Operating Stack</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/NoS/" itemprop="item">
+                <span itemprop="name">Nos</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Nawderos</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Nawderos</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="nawderos-an-rttaware-operating-stack">NawderOS — An RTT‑Aware Operating Stack 🧭<a class="toc-permalink" href="#nawderos-an-rttaware-operating-stack" title="Permanent link to this heading">&para;</a></h1>
+<p>NawderOS (NoS) is a minimal Linux‑based operating stack designed to explore <strong>Resonance‑Time Theory (RTT)</strong> through real, buildable systems. It treats the operating system not just as a resource manager, but as a <strong>diagnostic instrument</strong> — something that can observe, validate, and emit signals about coherence over time.</p>
+<p>This is not a finished OS. It’s a <strong>learning substrate</strong>, a place to experiment, fork, and ask better questions about how systems behave when coherence matters more than raw throughput.</p>
+<hr />
+<h2 id="why-an-rttaware-os">Why an RTT‑Aware OS?<a class="toc-permalink" href="#why-an-rttaware-os" title="Permanent link to this heading">&para;</a></h2>
+<p>RTT reframes how we think about systems:<br />
+not as collections of parts exchanging forces, but as <strong>structures maintaining coherence across time and scale</strong>.</p>
+<p>Operating systems already do this implicitly:<br />
+- they arbitrate access<br />
+- enforce boundaries<br />
+- respond to drift and saturation<br />
+- recover from failure</p>
+<p>NawderOS makes those behaviors <strong>explicit and observable</strong>, using RTT as the conceptual anchor.</p>
+<p>In short:</p>
+<blockquote>
+<p>RTT defines <em>what coherence means</em><br />
+NawderOS lets you <em>see it happen</em></p>
+</blockquote>
+<hr />
+<h2 id="what-nawderos-focuses-on-and-what-it-doesnt">What NawderOS Focuses On (and What It Doesn’t)<a class="toc-permalink" href="#what-nawderos-focuses-on-and-what-it-doesnt" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="it-focuses-on">It focuses on:<a class="toc-permalink" href="#it-focuses-on" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Validation over optimization</strong></li>
+<li><strong>Observation over control</strong></li>
+<li><strong>Lineage over anonymity</strong></li>
+<li><strong>Minimal, understandable mechanisms</strong></li>
+</ul>
+<h3 id="it-does-not-focus-on">It does <em>not</em> focus on:<a class="toc-permalink" href="#it-does-not-focus-on" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>performance benchmarks</li>
+<li>production hardening</li>
+<li>replacing existing Linux security models</li>
+<li>“magic” kernel behavior</li>
+</ul>
+<p>If you’re here to learn, explore, and build — you’re in the right place 🙂</p>
+<hr />
+<h2 id="rtt-concepts-made-concrete">RTT Concepts Made Concrete<a class="toc-permalink" href="#rtt-concepts-made-concrete" title="Permanent link to this heading">&para;</a></h2>
+<p>NawderOS expresses RTT ideas through a small set of system‑level patterns:</p>
+<h3 id="validation-corridors">🛤️ Validation Corridors<a class="toc-permalink" href="#validation-corridors" title="Permanent link to this heading">&para;</a></h3>
+<p>Bounded regions where system behavior is expected to remain coherent.<br />
+Think of them as <em>“this should still make sense here”</em> zones.</p>
+<h3 id="resonance-checks">🔍 Resonance Checks<a class="toc-permalink" href="#resonance-checks" title="Permanent link to this heading">&para;</a></h3>
+<p>Lightweight observations at key boundaries (boot, scheduling, memory access, module load).<br />
+No heavy enforcement — just awareness.</p>
+<h3 id="substrate-audits">🧱 Substrate Audits<a class="toc-permalink" href="#substrate-audits" title="Permanent link to this heading">&para;</a></h3>
+<p>Checks that ask: <em>Is the system still aligned with its assumptions?</em><br />
+These can happen at boot or during runtime.</p>
+<h3 id="badge-emission">🏷️ Badge Emission<a class="toc-permalink" href="#badge-emission" title="Permanent link to this heading">&para;</a></h3>
+<p>Structured signals that say <em>what happened</em>, <em>where</em>, and <em>why it mattered</em>.<br />
+Badges are machine‑readable, fork‑friendly, and intentionally boring 😄</p>
+<hr />
+<h2 id="the-symbolic-glyphic-layer">The Symbolic / Glyphic Layer ✨<a class="toc-permalink" href="#the-symbolic-glyphic-layer" title="Permanent link to this heading">&para;</a></h2>
+<p>You’ll notice symbolic names, glyphs, and narrative language throughout NawderOS.</p>
+<p>This layer exists for:<br />
+- teaching<br />
+- memory<br />
+- lineage tracking<br />
+- human comprehension</p>
+<p>It does <strong>not</strong> change system behavior.</p>
+<p>If you prefer plain names and raw structs, you can strip this layer out entirely.<br />
+RTT doesn’t care what you call things — only that the structure holds.</p>
+<hr />
+<h2 id="how-this-fits-with-rsm-and-vst">How This Fits with RSM and vST<a class="toc-permalink" href="#how-this-fits-with-rsm-and-vst" title="Permanent link to this heading">&para;</a></h2>
+<p>NawderOS is <strong>RTT‑first</strong>, but it’s designed to play nicely with:<br />
+- <strong>Resonance Substrate Modeling (RSM)</strong> for simulation and analysis<br />
+- <strong>validated Spacetime (vST)</strong> for real‑time coherence tracking</p>
+<p>Think of NawderOS as:</p>
+<blockquote>
+<p>the place where theory meets the keyboard</p>
+</blockquote>
+<hr />
+<h2 id="who-this-is-for">Who This Is For 👩‍💻👨‍💻<a class="toc-permalink" href="#who-this-is-for" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>Students who want to <em>learn RTT by building</em></li>
+<li>Developers curious about OS‑level observability</li>
+<li>Researchers exploring simulation, diagnostics, or system coherence</li>
+<li>Anyone who likes minimal systems with clear intent</li>
+</ul>
+<p>You don’t need to “believe” RTT to use NawderOS.<br />
+You just need to be curious.</p>
+<hr />
+<h2 id="current-status">Current Status 🚧<a class="toc-permalink" href="#current-status" title="Permanent link to this heading">&para;</a></h2>
+<p>NawderOS is an <strong>early‑stage research and education project</strong>.</p>
+<p>Things will change.<br />
+Interfaces will evolve.<br />
+That’s expected — and encouraged.</p>
+<p>Fork it. Break it. Improve it. Leave notes for the next person.</p>
+<hr />
+<h2 id="where-to-go-next">Where to Go Next<a class="toc-permalink" href="#where-to-go-next" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><code>MODULES.md</code> — the RTT‑aligned module set  </li>
+<li><code>KERNEL_BUILD.md</code> — how (and where) the kernel is touched  </li>
+<li><code>INSTALLATION.md</code> — getting a system up and running  </li>
+<li><code>GLYPHIC_COMPILER.md</code> — optional symbolic tooling  </li>
+<li><code>FORKING_GUIDE.md</code> — how to extend NawderOS safely  </li>
+<li><code>ROADMAP.md</code> — where this is headed  </li>
+</ul>
+<hr />
+<p>If you want, next we can refresh <strong><code>MODULES.md</code></strong> so each module has a clean RTT invariant, signal, and breach definition — that’s where this really starts to feel solid.<br />
+- <code>validateCorridor()</code> → baked into memory management<br />
+- <code>wrapCheck()</code> → used in thread visibility and containment logic<br />
+- <code>substrateAudit()</code> → runs at boot to confirm dimensional integrity</p>
+<h3 id="upper-stack-integration">🛠️ Upper Stack Integration<a class="toc-permalink" href="#upper-stack-integration" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>No install needed</strong>: All Nawderian logic lives in <code>/lib/nawderian/</code> and <code>/usr/include/nawderian/</code></li>
+<li><strong>Badge logic</strong>: Kernel logs emit validator-grade scrolls for remix lineage</li>
+<li><strong>Glyphic compiler</strong>: Converts symbolic stubs into native opcodes</li>
+</ul>
+<hr />
+<h2 id="why-this-matters">🌀 Why This Matters<a class="toc-permalink" href="#why-this-matters" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><strong>No adoption lag</strong>: You’re not waiting for the world—you’re <em>building</em> it.</li>
+<li><strong>Legacy-grade clarity</strong>: Your logic becomes part of the OS’s DNA.</li>
+<li><strong>Remixer-ready</strong>: Every boot is a ritual. Every syscall is a scroll.</li>
+</ul>
+<hr />
+<h2 id="docsnos-nawderian-operating-stack">📁 <code>/docs/NoS/</code> — <em>Nawderian Operating Stack</em><a class="toc-permalink" href="#docsnos-nawderian-operating-stack" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Purpose</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>README.md</code></td>
+<td>High-level overview of NawderOS</td>
+<td>Include mythmatical intent, triadic lineage, and remix invitation</td>
+</tr>
+<tr>
+<td><code>FORKING_GUIDE.md</code></td>
+<td>Traditional steps to fork a Linux distro</td>
+<td>Tailored for Arch/Debian base; lean and annotated</td>
+</tr>
+<tr>
+<td><code>KERNEL_BUILD.md</code></td>
+<td>Steps to build and patch a custom kernel</td>
+<td>Includes Nawderian syscall wrappers and <code>/proc/nawderian</code></td>
+</tr>
+<tr>
+<td><code>MODULES.md</code></td>
+<td>Nawderian native modules</td>
+<td><code>validateCorridor()</code>, <code>wrapCheck()</code>, <code>substrateAudit()</code></td>
+</tr>
+<tr>
+<td><code>GLYPHIC_COMPILER.md</code></td>
+<td>Stub for symbolic-to-opcode translation</td>
+<td>Placeholder for future glyphic compiler specs</td>
+</tr>
+<tr>
+<td><code>BADGE_LOGIC.md</code></td>
+<td>Kernel log rituals and validator scrolls</td>
+<td>Emits remix lineage and emotional resonance</td>
+</tr>
+<tr>
+<td><code>INSTALLATION.md</code></td>
+<td>How to seed the distro with Nawderian stack</td>
+<td>Stateless, remixable, and ritualized</td>
+</tr>
+<tr>
+<td><code>ROADMAP.md</code></td>
+<td>Milestones and validator checkpoints</td>
+<td>Includes triadic loop scaffolding and remix triggers</td>
+</tr>
+<tr>
+<td><code>CHANGELOG.md</code></td>
+<td>Scroll of changes</td>
+<td>Every commit = a mythic echo</td>
+</tr>
+</tbody>
+</table>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/NoS/NawderOS.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/NoS/NawderOS.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

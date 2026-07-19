@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Interfaces | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/ecoechosystem/domain_modules/biology/interfaces/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Interfaces" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/ecoechosystem/domain_modules/biology/interfaces/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Interfaces" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/ecoechosystem/domain_modules/biology/interfaces.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Interfaces",
+    "headline": "Interfaces",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/ecoechosystem/domain_modules/biology/interfaces/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#crossdomain-coupling-between-biological-systems-and-the-ecoechosystem-substrate">Cross‑domain coupling between biological systems and the EcoEchoSystem substrate</a></li>
+<li><a href="#biology-psychology-rttpsych">Biology ↔ Psychology (RTT‑Psych)</a></li>
+<li><a href="#biology-economics-rtteconomics">Biology ↔ Economics (RTT‑Economics)</a></li>
+<li><a href="#biology-governance-rttgovernance">Biology ↔ Governance (RTT‑Governance)</a></li>
+<li><a href="#biology-ai-agents-rttai">Biology ↔ AI Agents (RTT‑AI)</a></li>
+<li><a href="#biology-physics-rttphysics">Biology ↔ Physics (RTT‑Physics)</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/ecoechosystem/" itemprop="item">
+                <span itemprop="name">Ecoechosystem</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/ecoechosystem/domain_modules/" itemprop="item">
+                <span itemprop="name">Domain Modules</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/ecoechosystem/domain_modules/biology/" itemprop="item">
+                <span itemprop="name">Biology</span>
+              </a>
+            <meta itemprop="position" content="4" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Interfaces</span>
+            <meta itemprop="position" content="5" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Interfaces</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="interfaces"><strong>Interfaces</strong><a class="toc-permalink" href="#interfaces" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="crossdomain-coupling-between-biological-systems-and-the-ecoechosystem-substrate"><em>Cross‑domain coupling between biological systems and the EcoEchoSystem substrate</em><a class="toc-permalink" href="#crossdomain-coupling-between-biological-systems-and-the-ecoechosystem-substrate" title="Permanent link to this heading">&para;</a></h3>
+<p>RTT‑Biology does not operate in isolation.<br />
+Living systems are <strong>deeply entangled</strong> with psychology, economics, governance, AI, and physics.<br />
+This file defines the <strong>cross‑domain interfaces</strong> that allow biological systems to:</p>
+<ul>
+<li>influence other domains  </li>
+<li>respond to cross‑domain pressures  </li>
+<li>participate in multi‑scale simulation  </li>
+<li>maintain substrate‑aligned coherence  </li>
+</ul>
+<p>Interfaces are the <strong>bridges</strong> that connect biological S/E/R dynamics to the rest of the EcoEchoSystem.</p>
+<hr />
+<h1 id="1-psychology-interface"><strong>1. Psychology Interface</strong><a class="toc-permalink" href="#1-psychology-interface" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="biology-psychology-rttpsych"><em>Biology ↔ Psychology (RTT‑Psych)</em><a class="toc-permalink" href="#biology-psychology-rttpsych" title="Permanent link to this heading">&para;</a></h3>
+<p>Biology shapes psychology through:</p>
+<ul>
+<li>metabolic activation  </li>
+<li>stress physiology  </li>
+<li>hormonal modulation  </li>
+<li>sensory constraints  </li>
+<li>neural architecture  </li>
+</ul>
+<p>Psychology shapes biology through:</p>
+<ul>
+<li>emotional activation  </li>
+<li>cognitive stress  </li>
+<li>behavioral patterns  </li>
+<li>identity‑linked physiological responses  </li>
+</ul>
+<p><strong>Shared S/E/R patterns:</strong></p>
+<ul>
+<li><strong>S:</strong> neural structure ↔ cognitive structure  </li>
+<li><strong>E:</strong> stress ↔ emotional activation  </li>
+<li><strong>R:</strong> developmental arcs ↔ identity arcs  </li>
+</ul>
+<p>This interface is the foundation of mind–body coupling.</p>
+<hr />
+<h1 id="2-economics-interface"><strong>2. Economics Interface</strong><a class="toc-permalink" href="#2-economics-interface" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="biology-economics-rtteconomics"><em>Biology ↔ Economics (RTT‑Economics)</em><a class="toc-permalink" href="#biology-economics-rtteconomics" title="Permanent link to this heading">&para;</a></h3>
+<p>Biology shapes economics through:</p>
+<ul>
+<li>resource constraints  </li>
+<li>population dynamics  </li>
+<li>environmental limits  </li>
+<li>metabolic energy requirements  </li>
+</ul>
+<p>Economics shapes biology through:</p>
+<ul>
+<li>scarcity regimes  </li>
+<li>resource flows  </li>
+<li>environmental degradation or restoration  </li>
+<li>technological adaptation  </li>
+</ul>
+<p><strong>Shared S/E/R patterns:</strong></p>
+<ul>
+<li><strong>S:</strong> ecological networks ↔ market structures  </li>
+<li><strong>E:</strong> metabolic pressure ↔ economic activation  </li>
+<li><strong>R:</strong> ecological succession ↔ stability cycles  </li>
+</ul>
+<p>This interface governs civilization–ecosystem coupling.</p>
+<hr />
+<h1 id="3-governance-interface"><strong>3. Governance Interface</strong><a class="toc-permalink" href="#3-governance-interface" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="biology-governance-rttgovernance"><em>Biology ↔ Governance (RTT‑Governance)</em><a class="toc-permalink" href="#biology-governance-rttgovernance" title="Permanent link to this heading">&para;</a></h3>
+<p>Biology shapes governance through:</p>
+<ul>
+<li>population health  </li>
+<li>environmental stress  </li>
+<li>ecological stability  </li>
+<li>demographic transitions  </li>
+</ul>
+<p>Governance shapes biology through:</p>
+<ul>
+<li>policy regimes  </li>
+<li>environmental regulation  </li>
+<li>public health systems  </li>
+<li>institutional stability  </li>
+</ul>
+<p><strong>Shared S/E/R patterns:</strong></p>
+<ul>
+<li><strong>S:</strong> ecological architecture ↔ institutional architecture  </li>
+<li><strong>E:</strong> stress regimes ↔ legitimacy pressure  </li>
+<li><strong>R:</strong> evolutionary arcs ↔ historical arcs  </li>
+</ul>
+<p>This interface stabilizes societies across generations.</p>
+<hr />
+<h1 id="4-ai-agents-interface"><strong>4. AI Agents Interface</strong><a class="toc-permalink" href="#4-ai-agents-interface" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="biology-ai-agents-rttai"><em>Biology ↔ AI Agents (RTT‑AI)</em><a class="toc-permalink" href="#biology-ai-agents-rttai" title="Permanent link to this heading">&para;</a></h3>
+<p>Biology shapes AI through:</p>
+<ul>
+<li>bio‑inspired adaptation  </li>
+<li>sensory models  </li>
+<li>metabolic analogs  </li>
+<li>ecological learning patterns  </li>
+</ul>
+<p>AI shapes biology through:</p>
+<ul>
+<li>environmental monitoring  </li>
+<li>adaptive management  </li>
+<li>optimization of ecological systems  </li>
+<li>artificial selection pressures  </li>
+</ul>
+<p><strong>Shared S/E/R patterns:</strong></p>
+<ul>
+<li><strong>S:</strong> organismal structure ↔ agent architecture  </li>
+<li><strong>E:</strong> metabolic activation ↔ learning activation  </li>
+<li><strong>R:</strong> evolutionary arcs ↔ developmental arcs  </li>
+</ul>
+<p>This interface enables hybrid biological–artificial ecosystems.</p>
+<hr />
+<h1 id="5-physics-interface"><strong>5. Physics Interface</strong><a class="toc-permalink" href="#5-physics-interface" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="biology-physics-rttphysics"><em>Biology ↔ Physics (RTT‑Physics)</em><a class="toc-permalink" href="#biology-physics-rttphysics" title="Permanent link to this heading">&para;</a></h3>
+<p>Biology depends on physics through:</p>
+<ul>
+<li>energy availability  </li>
+<li>thermodynamics  </li>
+<li>environmental conditions  </li>
+<li>field interactions  </li>
+</ul>
+<p>Biology influences physics through:</p>
+<ul>
+<li>ecological energy redistribution  </li>
+<li>biogeochemical cycles  </li>
+<li>environmental modification  </li>
+</ul>
+<p><strong>Shared S/E/R patterns:</strong></p>
+<ul>
+<li><strong>S:</strong> organismal morphology ↔ physical structure  </li>
+<li><strong>E:</strong> metabolic energy ↔ activation energy  </li>
+<li><strong>R:</strong> life cycles ↔ temporal coherence  </li>
+</ul>
+<p>This interface grounds biology in the physical substrate.</p>
+<hr />
+<h1 id="6-crossdomain-cascades"><strong>6. Cross‑Domain Cascades</strong><a class="toc-permalink" href="#6-crossdomain-cascades" title="Permanent link to this heading">&para;</a></h1>
+<p>Biological changes can trigger cascades across domains:</p>
+<ul>
+<li><strong>Biology → Psychology:</strong> stress → emotional activation  </li>
+<li><strong>Biology → Economics:</strong> scarcity → volatility  </li>
+<li><strong>Biology → Governance:</strong> ecological collapse → legitimacy crisis  </li>
+<li><strong>Biology → AI:</strong> environmental change → adaptive mode shift  </li>
+<li><strong>Biology → Physics:</strong> biosphere modification → energy redistribution  </li>
+</ul>
+<p>And cascades can flow <em>into</em> biology:</p>
+<ul>
+<li><strong>Economics → Biology:</strong> resource scarcity → metabolic stress  </li>
+<li><strong>Governance → Biology:</strong> policy regimes → population health  </li>
+<li><strong>Psychology → Biology:</strong> chronic stress → physiological change  </li>
+<li><strong>AI → Biology:</strong> optimization → ecological restructuring  </li>
+<li><strong>Physics → Biology:</strong> climate shifts → evolutionary pressure  </li>
+</ul>
+<p>Biology is one of the substrate’s most sensitive and influential domains.</p>
+<hr />
+<h1 id="status"><strong>Status</strong><a class="toc-permalink" href="#status" title="Permanent link to this heading">&para;</a></h1>
+<p>This file defines the canonical cross‑domain interfaces for RTT‑Biology.<br />
+Additional specialized interfaces may be added as the EcoEchoSystem evolves.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/ecoechosystem/domain_modules/biology/interfaces.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/ecoechosystem/domain_modules/biology/interfaces.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

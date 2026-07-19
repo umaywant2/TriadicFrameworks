@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Ai Numerical Drift Detection And Correction | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/AI_Numerical_Drift_Detection_and_Correction/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Ai Numerical Drift Detection And Correction" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/AI_Numerical_Drift_Detection_and_Correction/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Ai Numerical Drift Detection And Correction" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/AI_Numerical_Drift_Detection_and_Correction.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Ai Numerical Drift Detection And Correction",
+    "headline": "Ai Numerical Drift Detection And Correction",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/AI_Numerical_Drift_Detection_and_Correction/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#protocols-for-identifying-classifying-and-correcting-numerical-drift-in-fft-simulations">Protocols for identifying, classifying, and correcting numerical drift in FFT simulations</a></li>
+<li><a href="#21-scalar-drift-d">2.1 Scalar Drift (Dφ)</a></li>
+<li><a href="#22-vector-drift-dv">2.2 Vector Drift (DV)</a></li>
+<li><a href="#23-resonance-drift-dr">2.3 Resonance Drift (DR)</a></li>
+<li><a href="#24-kernel-drift-dk">2.4 Kernel Drift (DK)</a></li>
+<li><a href="#25-set-drift-dset">2.5 ΔSET Drift (DΔSET)</a></li>
+<li><a href="#31-field-consistency-error-fce">3.1 Field Consistency Error (FCE)</a></li>
+<li><a href="#32-operator-imbalance-error-oie">3.2 Operator Imbalance Error (OIE)</a></li>
+<li><a href="#33-kernel-consistency-error-kce">3.3 Kernel Consistency Error (KCE)</a></li>
+<li><a href="#34-divergence-error-div">3.4 Divergence Error (DIV)</a></li>
+<li><a href="#35-set-stability-error-se">3.5 ΔSET Stability Error (ΔSE)</a><ul>
+<li><a href="#step-1-compute-drift-metrics">Step 1 — Compute Drift Metrics</a></li>
+<li><a href="#step-2-compare-to-thresholds">Step 2 — Compare to Thresholds</a></li>
+<li><a href="#step-3-classify-drift-type">Step 3 — Classify Drift Type</a></li>
+<li><a href="#step-4-log-drift-event">Step 4 — Log Drift Event</a></li>
+<li><a href="#step-5-trigger-correction-protocol">Step 5 — Trigger Correction Protocol</a></li>
+</ul>
+</li>
+<li><a href="#61-scalar-drift-correction-d">6.1 Scalar Drift Correction (Dφ)</a></li>
+<li><a href="#62-vector-drift-correction-dv">6.2 Vector Drift Correction (DV)</a></li>
+<li><a href="#63-resonance-drift-correction-dr">6.3 Resonance Drift Correction (DR)</a></li>
+<li><a href="#64-kernel-drift-correction-dk">6.4 Kernel Drift Correction (DK)</a></li>
+<li><a href="#65-set-drift-correction-dset">6.5 ΔSET Drift Correction (DΔSET)</a><ul>
+<li><a href="#81-adaptive-time-stepping">8.1 Adaptive Time Stepping</a></li>
+<li><a href="#82-operator-balancing">8.2 Operator Balancing</a></li>
+<li><a href="#83-kernel-normalization">8.3 Kernel Normalization</a></li>
+<li><a href="#84-boundary-stabilization">8.4 Boundary Stabilization</a></li>
+<li><a href="#85-set-smoothing">8.5 ΔSET Smoothing</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Framework_Field_Theory/" itemprop="item">
+                <span itemprop="name">Framework Field Theory</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Framework_Field_Theory/Book_Repo_Eval_Edition/" itemprop="item">
+                <span itemprop="name">Book Repo Eval Edition</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/" itemprop="item">
+                <span itemprop="name">Part Xi Appendices</span>
+              </a>
+            <meta itemprop="position" content="4" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Ai Numerical Drift Detection And Correction</span>
+            <meta itemprop="position" content="5" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Ai Numerical Drift Detection And Correction</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="appendix-ai-numerical-drift-detection-correction"><strong>Appendix AI — Numerical Drift Detection &amp; Correction</strong><a class="toc-permalink" href="#appendix-ai-numerical-drift-detection-correction" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="protocols-for-identifying-classifying-and-correcting-numerical-drift-in-fft-simulations"><em>Protocols for identifying, classifying, and correcting numerical drift in FFT simulations</em><a class="toc-permalink" href="#protocols-for-identifying-classifying-and-correcting-numerical-drift-in-fft-simulations" title="Permanent link to this heading">&para;</a></h3>
+<p>Framework Field Theory (FFT) simulations operate across:</p>
+<ul>
+<li>three interacting fields (φ, V, R)  </li>
+<li>three temporal modes (t_r, t_d, t_a)  </li>
+<li>five regimes with different operator dominance  </li>
+<li>nonlocal kernels  </li>
+<li>activation–damping competition  </li>
+<li>ΔSET‑driven structural changes  </li>
+</ul>
+<p>This multi‑scale architecture makes FFT simulations powerful — but also vulnerable to <strong>numerical drift</strong>.</p>
+<p>Numerical drift is the slow, unintended deviation of a simulation from its mathematically intended trajectory.<br />
+This appendix defines the <strong>canonical methods</strong> for detecting, classifying, and correcting drift in FFT.</p>
+<hr />
+<h1 id="1-what-is-numerical-drift-in-fft"><strong>1. What Is Numerical Drift in FFT?</strong><a class="toc-permalink" href="#1-what-is-numerical-drift-in-fft" title="Permanent link to this heading">&para;</a></h1>
+<p>Numerical drift occurs when:</p>
+<ul>
+<li>discretization errors accumulate  </li>
+<li>operator imbalance grows  </li>
+<li>kernel convolution introduces bias  </li>
+<li>triadic‑time loops desynchronize  </li>
+<li>regime transitions amplify small errors  </li>
+<li>ΔSET contributions diverge  </li>
+<li>boundary reflections distort fields  </li>
+</ul>
+<p>Drift is not noise — it is <strong>systematic deviation</strong>.</p>
+<p>FFT requires explicit drift detection and correction to maintain:</p>
+<ul>
+<li>stability  </li>
+<li>coherence  </li>
+<li>reproducibility  </li>
+<li>regime fidelity  </li>
+</ul>
+<hr />
+<h1 id="2-drift-categories-canonical"><strong>2. Drift Categories (Canonical)</strong><a class="toc-permalink" href="#2-drift-categories-canonical" title="Permanent link to this heading">&para;</a></h1>
+<p>FFT recognizes <strong>five types of numerical drift</strong>, aligned with the field’s operator ecology:</p>
+<h3 id="21-scalar-drift-d"><strong>2.1 Scalar Drift (Dφ)</strong><a class="toc-permalink" href="#21-scalar-drift-d" title="Permanent link to this heading">&para;</a></h3>
+<p>Deviation in φ due to:</p>
+<ul>
+<li>diffusion imbalance  </li>
+<li>kernel bias  </li>
+<li>boundary leakage  </li>
+</ul>
+<h3 id="22-vector-drift-dv"><strong>2.2 Vector Drift (DV)</strong><a class="toc-permalink" href="#22-vector-drift-dv" title="Permanent link to this heading">&para;</a></h3>
+<p>Deviation in V due to:</p>
+<ul>
+<li>advection overshoot  </li>
+<li>divergence accumulation  </li>
+<li>misaligned triadic‑time updates  </li>
+</ul>
+<h3 id="23-resonance-drift-dr"><strong>2.3 Resonance Drift (DR)</strong><a class="toc-permalink" href="#23-resonance-drift-dr" title="Permanent link to this heading">&para;</a></h3>
+<p>Deviation in R due to:</p>
+<ul>
+<li>activation overshoot  </li>
+<li>damping underflow  </li>
+<li>oscillatory instability  </li>
+</ul>
+<h3 id="24-kernel-drift-dk"><strong>2.4 Kernel Drift (DK)</strong><a class="toc-permalink" href="#24-kernel-drift-dk" title="Permanent link to this heading">&para;</a></h3>
+<p>Deviation introduced by:</p>
+<ul>
+<li>non‑normalized kernels  </li>
+<li>truncated tails  </li>
+<li>FFT convolution artifacts  </li>
+</ul>
+<h3 id="25-set-drift-dset"><strong>2.5 ΔSET Drift (DΔSET)</strong><a class="toc-permalink" href="#25-set-drift-dset" title="Permanent link to this heading">&para;</a></h3>
+<p>Deviation in ΔSET due to:</p>
+<ul>
+<li>inconsistent κ scaling  </li>
+<li>regime misclassification  </li>
+<li>accumulated field drift  </li>
+</ul>
+<p>These five drift types form the <strong>FFT Drift Taxonomy</strong>.</p>
+<hr />
+<h1 id="3-drift-detection-metrics"><strong>3. Drift Detection Metrics</strong><a class="toc-permalink" href="#3-drift-detection-metrics" title="Permanent link to this heading">&para;</a></h1>
+<p>FFT uses five canonical drift metrics.</p>
+<hr />
+<h2 id="31-field-consistency-error-fce"><strong>3.1 Field Consistency Error (FCE)</strong><a class="toc-permalink" href="#31-field-consistency-error-fce" title="Permanent link to this heading">&para;</a></h2>
+<p>$$FCE_X = \frac{\lVert X(t+\Delta t) - X(t) \rVert}{\Delta t}$$</p>
+<p>Large FCE indicates instability or drift.</p>
+<hr />
+<h2 id="32-operator-imbalance-error-oie"><strong>3.2 Operator Imbalance Error (OIE)</strong><a class="toc-permalink" href="#32-operator-imbalance-error-oie" title="Permanent link to this heading">&para;</a></h2>
+<p>$$OIE = \frac{\lVert \alpha[R] \rVert}{\lVert S[R] \rVert}$$</p>
+<p>If OIE diverges, resonance drift is occurring.</p>
+<hr />
+<h2 id="33-kernel-consistency-error-kce"><strong>3.3 Kernel Consistency Error (KCE)</strong><a class="toc-permalink" href="#33-kernel-consistency-error-kce" title="Permanent link to this heading">&para;</a></h2>
+<p>$$KCE = \left| 1 - \int_{\Omega} K(r)\, dr \right|$$</p>
+<p>Non‑zero KCE indicates kernel drift.</p>
+<hr />
+<h2 id="34-divergence-error-div"><strong>3.4 Divergence Error (DIV)</strong><a class="toc-permalink" href="#34-divergence-error-div" title="Permanent link to this heading">&para;</a></h2>
+<p>$$DIV = \lVert \nabla \cdot V \rVert$$</p>
+<p>High DIV indicates vector drift.</p>
+<hr />
+<h2 id="35-set-stability-error-se"><strong>3.5 ΔSET Stability Error (ΔSE)</strong><a class="toc-permalink" href="#35-set-stability-error-se" title="Permanent link to this heading">&para;</a></h2>
+<p>$$\Delta SE = \frac{\text{Var}(\Delta SET)}{\text{mean}(\Delta SET)}$$</p>
+<p>Large ΔSE indicates ΔSET drift.</p>
+<hr />
+<h1 id="4-drift-thresholds-regime-sensitivity"><strong>4. Drift Thresholds &amp; Regime Sensitivity</strong><a class="toc-permalink" href="#4-drift-thresholds-regime-sensitivity" title="Permanent link to this heading">&para;</a></h1>
+<p>Each regime has different drift tolerance:</p>
+<table>
+<thead>
+<tr>
+<th>Regime</th>
+<th>Drift Sensitivity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stable</td>
+<td>low</td>
+</tr>
+<tr>
+<td>Transitional</td>
+<td>moderate</td>
+</tr>
+<tr>
+<td>Paradox</td>
+<td>very high</td>
+</tr>
+<tr>
+<td>Interference</td>
+<td>oscillatory</td>
+</tr>
+<tr>
+<td>Coherence</td>
+<td>high</td>
+</tr>
+</tbody>
+</table>
+<p>Paradox and Coherence regimes are the most drift‑sensitive.</p>
+<hr />
+<h1 id="5-drift-detection-protocol"><strong>5. Drift Detection Protocol</strong><a class="toc-permalink" href="#5-drift-detection-protocol" title="Permanent link to this heading">&para;</a></h1>
+<p>At each timestep:</p>
+<h3 id="step-1-compute-drift-metrics"><strong>Step 1 — Compute Drift Metrics</strong><a class="toc-permalink" href="#step-1-compute-drift-metrics" title="Permanent link to this heading">&para;</a></h3>
+<p>Compute FCE, OIE, KCE, DIV, ΔSE.</p>
+<h3 id="step-2-compare-to-thresholds"><strong>Step 2 — Compare to Thresholds</strong><a class="toc-permalink" href="#step-2-compare-to-thresholds" title="Permanent link to this heading">&para;</a></h3>
+<p>Use regime‑dependent thresholds.</p>
+<h3 id="step-3-classify-drift-type"><strong>Step 3 — Classify Drift Type</strong><a class="toc-permalink" href="#step-3-classify-drift-type" title="Permanent link to this heading">&para;</a></h3>
+<p>Identify which drift category is active.</p>
+<h3 id="step-4-log-drift-event"><strong>Step 4 — Log Drift Event</strong><a class="toc-permalink" href="#step-4-log-drift-event" title="Permanent link to this heading">&para;</a></h3>
+<p>Record:</p>
+<ul>
+<li>drift type  </li>
+<li>magnitude  </li>
+<li>location  </li>
+<li>regime  </li>
+<li>operator ratios  </li>
+<li>ΔSET values  </li>
+</ul>
+<h3 id="step-5-trigger-correction-protocol"><strong>Step 5 — Trigger Correction Protocol</strong><a class="toc-permalink" href="#step-5-trigger-correction-protocol" title="Permanent link to this heading">&para;</a></h3>
+<p>Apply correction based on drift type.</p>
+<hr />
+<h1 id="6-drift-correction-methods"><strong>6. Drift Correction Methods</strong><a class="toc-permalink" href="#6-drift-correction-methods" title="Permanent link to this heading">&para;</a></h1>
+<p>FFT defines <strong>five canonical correction methods</strong>, one for each drift type.</p>
+<hr />
+<h2 id="61-scalar-drift-correction-d"><strong>6.1 Scalar Drift Correction (Dφ)</strong><a class="toc-permalink" href="#61-scalar-drift-correction-d" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>apply implicit diffusion  </li>
+<li>enforce boundary consistency  </li>
+<li>re‑normalize φ if required  </li>
+</ul>
+<hr />
+<h2 id="62-vector-drift-correction-dv"><strong>6.2 Vector Drift Correction (DV)</strong><a class="toc-permalink" href="#62-vector-drift-correction-dv" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>apply divergence cleaning  </li>
+<li>project V onto divergence‑free subspace  </li>
+<li>reduce Δt_r or Δt_d  </li>
+</ul>
+<hr />
+<h2 id="63-resonance-drift-correction-dr"><strong>6.3 Resonance Drift Correction (DR)</strong><a class="toc-permalink" href="#63-resonance-drift-correction-dr" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>apply activation damping window  </li>
+<li>reduce α scaling (Appendix AF)  </li>
+<li>shrink Δt_r (Appendix AE)  </li>
+</ul>
+<hr />
+<h2 id="64-kernel-drift-correction-dk"><strong>6.4 Kernel Drift Correction (DK)</strong><a class="toc-permalink" href="#64-kernel-drift-correction-dk" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>re‑normalize kernel  </li>
+<li>re‑compute convolution using FFT  </li>
+<li>enforce compact support  </li>
+</ul>
+<hr />
+<h2 id="65-set-drift-correction-dset"><strong>6.5 ΔSET Drift Correction (DΔSET)</strong><a class="toc-permalink" href="#65-set-drift-correction-dset" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>re‑compute ΔSET from φ, V, R  </li>
+<li>enforce κ scaling consistency  </li>
+<li>smooth ΔSET using Gaussian kernel  </li>
+</ul>
+<hr />
+<h1 id="7-global-drift-correction-loop"><strong>7. Global Drift Correction Loop</strong><a class="toc-permalink" href="#7-global-drift-correction-loop" title="Permanent link to this heading">&para;</a></h1>
+<p>Every N timesteps:</p>
+<div class="codehilite"><pre><span></span><code>compute drift metrics
+if drift detected:
+    classify drift
+    apply correction
+    re-evaluate regime
+    adjust operator scaling
+    adjust triadic-time steps
+</code></pre></div>
+
+<p>This ensures long‑term stability.</p>
+<hr />
+<h1 id="8-drift-prevention-strategies"><strong>8. Drift Prevention Strategies</strong><a class="toc-permalink" href="#8-drift-prevention-strategies" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="81-adaptive-time-stepping"><strong>8.1 Adaptive Time Stepping</strong><a class="toc-permalink" href="#81-adaptive-time-stepping" title="Permanent link to this heading">&para;</a></h3>
+<p>Reduce Δt_r, Δt_d, Δt_a when drift grows.</p>
+<h3 id="82-operator-balancing"><strong>8.2 Operator Balancing</strong><a class="toc-permalink" href="#82-operator-balancing" title="Permanent link to this heading">&para;</a></h3>
+<p>Use regime‑dependent scaling (Appendix AF).</p>
+<h3 id="83-kernel-normalization"><strong>8.3 Kernel Normalization</strong><a class="toc-permalink" href="#83-kernel-normalization" title="Permanent link to this heading">&para;</a></h3>
+<p>Ensure ∫K = 1 at every timestep.</p>
+<h3 id="84-boundary-stabilization"><strong>8.4 Boundary Stabilization</strong><a class="toc-permalink" href="#84-boundary-stabilization" title="Permanent link to this heading">&para;</a></h3>
+<p>Use absorbing layers to prevent reflection‑induced drift.</p>
+<h3 id="85-set-smoothing"><strong>8.5 ΔSET Smoothing</strong><a class="toc-permalink" href="#85-set-smoothing" title="Permanent link to this heading">&para;</a></h3>
+<p>Apply mild smoothing to prevent runaway variance.</p>
+<hr />
+<h1 id="9-drift-visualization-methods"><strong>9. Drift Visualization Methods</strong><a class="toc-permalink" href="#9-drift-visualization-methods" title="Permanent link to this heading">&para;</a></h1>
+<p>Recommended:</p>
+<ul>
+<li>drift heatmaps  </li>
+<li>ΔSET variance maps  </li>
+<li>operator‑imbalance timelines  </li>
+<li>divergence maps  </li>
+<li>regime‑transition overlays  </li>
+</ul>
+<p>These help diagnose drift sources.</p>
+<hr />
+<h1 id="closing-statement"><strong>Closing Statement</strong><a class="toc-permalink" href="#closing-statement" title="Permanent link to this heading">&para;</a></h1>
+<blockquote>
+<p><strong>Appendix AI defines the canonical methods for detecting, classifying, and correcting numerical drift in FFT simulations. Drift management is essential for maintaining coherence, stability, and regime fidelity across FFT’s multi‑scale, tri‑time, nonlocal architecture.</strong></p>
+</blockquote>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/AI_Numerical_Drift_Detection_and_Correction.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/Framework_Field_Theory/Book_Repo_Eval_Edition/PART_XI_Appendices/AI_Numerical_Drift_Detection_and_Correction.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

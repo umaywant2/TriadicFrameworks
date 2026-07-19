@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>D Dimensional Stack | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/datacenter_reports/appendices/D_Dimensional_Stack/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="D Dimensional Stack" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/datacenter_reports/appendices/D_Dimensional_Stack/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="D Dimensional Stack" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/datacenter_reports/appendices/D_Dimensional_Stack.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "D Dimensional Stack",
+    "headline": "D Dimensional Stack",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/datacenter_reports/appendices/D_Dimensional_Stack/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#1-planetary">1. Planetary</a></li>
+<li><a href="#2-cultural">2. Cultural</a></li>
+<li><a href="#3-governance">3. Governance</a></li>
+<li><a href="#4-economic">4. Economic</a></li>
+<li><a href="#5-compute">5. Compute</a></li>
+<li><a href="#6-infrastructure">6. Infrastructure</a></li>
+<li><a href="#zone-1-physical-interaction">Zone 1 — Physical Interaction</a></li>
+<li><a href="#zone-2-human-interaction">Zone 2 — Human Interaction</a></li>
+<li><a href="#zone-3-economic-interaction">Zone 3 — Economic Interaction</a></li>
+<li><a href="#dimensional-field-tensor">Dimensional Field Tensor</a></li>
+<li><a href="#structural-field-tensor">Structural Field Tensor</a></li>
+<li><a href="#qcompute-tensor">qCompute Tensor</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/datacenter_reports/" itemprop="item">
+                <span itemprop="name">Datacenter Reports</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/datacenter_reports/appendices/" itemprop="item">
+                <span itemprop="name">Appendices</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">D Dimensional Stack</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">D Dimensional Stack</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="appendix-d-dimensional-stack">Appendix D — Dimensional Stack<a class="toc-permalink" href="#appendix-d-dimensional-stack" title="Permanent link to this heading">&para;</a></h1>
+<p>RTT‑Inside • Multi‑Layer • Drift‑Bounded<br />
+Datacenter Reports — Appendix D</p>
+<p>The Dimensional Stack is the RTT model for understanding how datacenter behavior<br />
+emerges from the interaction of six core dimensions. These dimensions operate<br />
+simultaneously, forming a multi‑layer field that determines stability, drift,<br />
+coherence, and regime transitions.</p>
+<p>This appendix defines the canonical dimensional layers, their interactions, and<br />
+their role in tensor construction and evaluator behavior.</p>
+<hr />
+<h1 id="d1-the-six-rtt-dimensions">🌍 D.1 — The Six RTT Dimensions<a class="toc-permalink" href="#d1-the-six-rtt-dimensions" title="Permanent link to this heading">&para;</a></h1>
+<p>RTT defines six universal dimensions that apply to all datacenter ecosystems:</p>
+<h3 id="1-planetary"><strong>1. Planetary</strong><a class="toc-permalink" href="#1-planetary" title="Permanent link to this heading">&para;</a></h3>
+<p>Environmental, geographic, and regional constraints:<br />
+- climate<br />
+- water availability<br />
+- grid stability<br />
+- seismic profile<br />
+- regional fiber topology  </p>
+<h3 id="2-cultural"><strong>2. Cultural</strong><a class="toc-permalink" href="#2-cultural" title="Permanent link to this heading">&para;</a></h3>
+<p>Human norms, communication patterns, institutional memory, and operational<br />
+intuition.</p>
+<h3 id="3-governance"><strong>3. Governance</strong><a class="toc-permalink" href="#3-governance" title="Permanent link to this heading">&para;</a></h3>
+<p>Formal and informal decision‑making structures:<br />
+- escalation paths<br />
+- authority boundaries<br />
+- policy enforcement<br />
+- operational rhythm  </p>
+<h3 id="4-economic"><strong>4. Economic</strong><a class="toc-permalink" href="#4-economic" title="Permanent link to this heading">&para;</a></h3>
+<p>Cost envelopes, incentives, resource allocation, budget rhythms, and market<br />
+pressure.</p>
+<h3 id="5-compute"><strong>5. Compute</strong><a class="toc-permalink" href="#5-compute" title="Permanent link to this heading">&para;</a></h3>
+<p>Workload density, performance envelopes, thermal behavior, and scaling patterns.</p>
+<h3 id="6-infrastructure"><strong>6. Infrastructure</strong><a class="toc-permalink" href="#6-infrastructure" title="Permanent link to this heading">&para;</a></h3>
+<p>Power, cooling, fiber, mechanical systems, and physical layout.</p>
+<hr />
+<h1 id="d2-canonical-dimensional-stack-diagram">🧱 D.2 — Canonical Dimensional Stack Diagram<a class="toc-permalink" href="#d2-canonical-dimensional-stack-diagram" title="Permanent link to this heading">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code>+------------------------------------------------------+
+|                    Planetary Layer                   |
+|  Climate • Grid • Geography • Regional Fiber         |
++------------------------------------------------------+
+|                    Cultural Layer                    |
+|  Norms • Communication • Memory • Resonance          |
++------------------------------------------------------+
+|                    Governance Layer                  |
+|  Policies • Authority • Escalation • Alignment       |
++------------------------------------------------------+
+|                    Economic Layer                    |
+|  Costs • Incentives • Allocation • Market Forces     |
++------------------------------------------------------+
+|                    Compute Layer                     |
+|  Density • Thermal • Workloads • Scaling             |
++------------------------------------------------------+
+|                    Infrastructure Layer              |
+|  Power • Cooling • Fiber • Facilities                |
++------------------------------------------------------+
+</code></pre></div>
+
+<p><strong>Interpretation:</strong><br />
+The dimensional stack is not hierarchical — it is <strong>interactive</strong>.<br />
+Each layer influences the others, and drift often emerges from misalignment<br />
+between two or more dimensions.</p>
+<hr />
+<h1 id="d3-dimensional-interaction-zones">🔄 D.3 — Dimensional Interaction Zones<a class="toc-permalink" href="#d3-dimensional-interaction-zones" title="Permanent link to this heading">&para;</a></h1>
+<p>The dimensional stack contains three canonical interaction zones:</p>
+<h3 id="zone-1-physical-interaction"><strong>Zone 1 — Physical Interaction</strong><a class="toc-permalink" href="#zone-1-physical-interaction" title="Permanent link to this heading">&para;</a></h3>
+<p>Infrastructure ↔ Compute ↔ Planetary<br />
+Determines thermal behavior, energy envelope, and physical constraints.</p>
+<h3 id="zone-2-human-interaction"><strong>Zone 2 — Human Interaction</strong><a class="toc-permalink" href="#zone-2-human-interaction" title="Permanent link to this heading">&para;</a></h3>
+<p>Cultural ↔ Governance<br />
+Determines communication density, decision‑making, and operator ecology.</p>
+<h3 id="zone-3-economic-interaction"><strong>Zone 3 — Economic Interaction</strong><a class="toc-permalink" href="#zone-3-economic-interaction" title="Permanent link to this heading">&para;</a></h3>
+<p>Economic ↔ All Other Dimensions<br />
+Determines resource allocation, expansion, and operational feasibility.</p>
+<hr />
+<h1 id="d4-regime-influence-across-dimensions">🔺 D.4 — Regime Influence Across Dimensions<a class="toc-permalink" href="#d4-regime-influence-across-dimensions" title="Permanent link to this heading">&para;</a></h1>
+<p>Each dimension contributes differently to regime transitions:</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Stable Influence</th>
+<th>Transitional Influence</th>
+<th>Emergent Influence</th>
+<th>Chaotic Influence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Planetary</td>
+<td>High</td>
+<td>Medium</td>
+<td>Low</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>Cultural</td>
+<td>Medium</td>
+<td>High</td>
+<td>High</td>
+<td>Very High</td>
+</tr>
+<tr>
+<td>Governance</td>
+<td>High</td>
+<td>High</td>
+<td>Medium</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Economic</td>
+<td>Medium</td>
+<td>Medium</td>
+<td>High</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Compute</td>
+<td>High</td>
+<td>High</td>
+<td>Medium</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Infrastructure</td>
+<td>High</td>
+<td>Medium</td>
+<td>Low</td>
+<td>Medium</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interpretation:</strong><br />
+Cultural and governance dimensions dominate emergent and chaotic regimes.</p>
+<hr />
+<h1 id="d5-dimensional-stack-tensors">📦 D.5 — Dimensional Stack &amp; Tensors<a class="toc-permalink" href="#d5-dimensional-stack-tensors" title="Permanent link to this heading">&para;</a></h1>
+<p>The dimensional stack directly informs:</p>
+<h3 id="dimensional-field-tensor"><strong>Dimensional Field Tensor</strong><a class="toc-permalink" href="#dimensional-field-tensor" title="Permanent link to this heading">&para;</a></h3>
+<p>Rows = dimensions<br />
+Columns = sites<br />
+Values = normalized dimensional intensity</p>
+<h3 id="structural-field-tensor"><strong>Structural Field Tensor</strong><a class="toc-permalink" href="#structural-field-tensor" title="Permanent link to this heading">&para;</a></h3>
+<p>Cultural, governance, and infrastructure fields map directly to dimensional layers.</p>
+<h3 id="qcompute-tensor"><strong>qCompute Tensor</strong><a class="toc-permalink" href="#qcompute-tensor" title="Permanent link to this heading">&para;</a></h3>
+<p>Compute ↔ Infrastructure ↔ Planetary interaction zone.</p>
+<hr />
+<h1 id="d6-drift-coherence-in-the-dimensional-stack">🧭 D.6 — Drift &amp; Coherence in the Dimensional Stack<a class="toc-permalink" href="#d6-drift-coherence-in-the-dimensional-stack" title="Permanent link to this heading">&para;</a></h1>
+<p>Drift emerges when:</p>
+<ul>
+<li>planetary constraints conflict with compute demands  </li>
+<li>cultural norms conflict with governance structures  </li>
+<li>economic incentives conflict with infrastructure reality  </li>
+</ul>
+<p>Coherence emerges when:</p>
+<ul>
+<li>dimensional layers reinforce each other  </li>
+<li>governance aligns with cultural substrate  </li>
+<li>compute behavior matches planetary envelope  </li>
+</ul>
+<hr />
+<h1 id="d7-crossmodule-propagation">🔗 D.7 — Cross‑Module Propagation<a class="toc-permalink" href="#d7-crossmodule-propagation" title="Permanent link to this heading">&para;</a></h1>
+<p>The dimensional stack propagates into:</p>
+<ul>
+<li>Framework Field Theory  </li>
+<li>Low Dimensional Structures  </li>
+<li>Governance Substrate  </li>
+<li>NoS (Network of Substrate)  </li>
+<li>Integrations  </li>
+</ul>
+<p>This ensures dimensional reasoning is consistent across the entire RTT canon.</p>
+<hr />
+<h1 id="end-of-appendix-d">End of Appendix D<a class="toc-permalink" href="#end-of-appendix-d" title="Permanent link to this heading">&para;</a></h1>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/datacenter_reports/appendices/D_Dimensional_Stack.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/datacenter_reports/appendices/D_Dimensional_Stack.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

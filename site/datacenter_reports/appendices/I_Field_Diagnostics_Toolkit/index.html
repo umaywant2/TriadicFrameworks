@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>I Field Diagnostics Toolkit | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/datacenter_reports/appendices/I_Field_Diagnostics_Toolkit/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="I Field Diagnostics Toolkit" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/datacenter_reports/appendices/I_Field_Diagnostics_Toolkit/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="I Field Diagnostics Toolkit" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/datacenter_reports/appendices/I_Field_Diagnostics_Toolkit.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "I Field Diagnostics Toolkit",
+    "headline": "I Field Diagnostics Toolkit",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/datacenter_reports/appendices/I_Field_Diagnostics_Toolkit/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#1-structural-diagnostics">1. Structural Diagnostics</a></li>
+<li><a href="#2-dimensional-diagnostics">2. Dimensional Diagnostics</a></li>
+<li><a href="#3-regime-diagnostics">3. Regime Diagnostics</a></li>
+<li><a href="#4-drift-diagnostics">4. Drift Diagnostics</a></li>
+<li><a href="#5-coherence-diagnostics">5. Coherence Diagnostics</a></li>
+<li><a href="#instrument-s1-structural-alignment-probe">Instrument S1 — Structural Alignment Probe</a></li>
+<li><a href="#instrument-d1-dimensional-intensity-gauge">Instrument D1 — Dimensional Intensity Gauge</a></li>
+<li><a href="#instrument-r1-regime-state-detector">Instrument R1 — Regime State Detector</a></li>
+<li><a href="#instrument-dr1-drift-accumulator">Instrument DR1 — Drift Accumulator</a></li>
+<li><a href="#instrument-c1-coherence-engine-monitor">Instrument C1 — Coherence Engine Monitor</a><ul>
+<li><a href="#1-snapshot-mode">1. Snapshot Mode</a></li>
+<li><a href="#2-continuous-mode">2. Continuous Mode</a></li>
+<li><a href="#3-comparative-mode">3. Comparative Mode</a></li>
+<li><a href="#1-scalar-outputs">1. Scalar Outputs</a></li>
+<li><a href="#2-vector-outputs">2. Vector Outputs</a></li>
+<li><a href="#3-tensor-outputs">3. Tensor Outputs</a></li>
+<li><a href="#4-regime-outputs">4. Regime Outputs</a></li>
+<li><a href="#structural-field-tensor">Structural Field Tensor</a></li>
+<li><a href="#dimensional-field-tensor">Dimensional Field Tensor</a></li>
+<li><a href="#qcompute-tensor">qCompute Tensor</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/datacenter_reports/" itemprop="item">
+                <span itemprop="name">Datacenter Reports</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/datacenter_reports/appendices/" itemprop="item">
+                <span itemprop="name">Appendices</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">I Field Diagnostics Toolkit</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">I Field Diagnostics Toolkit</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="appendix-i-field-diagnostics-toolkit"><strong>Appendix I — Field Diagnostics Toolkit</strong><a class="toc-permalink" href="#appendix-i-field-diagnostics-toolkit" title="Permanent link to this heading">&para;</a></h1>
+<p>RTT‑Inside • Operator‑First • Drift‑Bounded<br />
+Datacenter Reports — Appendix I</p>
+<p>The Field Diagnostics Toolkit provides the canonical RTT diagnostic instruments<br />
+used to evaluate datacenter ecosystems across structural, dimensional, compute,<br />
+and human layers.<br />
+These diagnostics allow operators, evaluators, and AI systems to measure drift,<br />
+coherence, dimensional intensity, and regime transitions with precision.</p>
+<p>This appendix defines the diagnostic families, their usage patterns, their<br />
+tensor mappings, and their cross‑module propagation.</p>
+<hr />
+<h1 id="i1-diagnostic-families-rtt-canon">🧪 <strong>I.1 — Diagnostic Families (RTT Canon)</strong><a class="toc-permalink" href="#i1-diagnostic-families-rtt-canon" title="Permanent link to this heading">&para;</a></h1>
+<p>RTT defines <strong>five</strong> diagnostic families:</p>
+<h3 id="1-structural-diagnostics"><strong>1. Structural Diagnostics</strong><a class="toc-permalink" href="#1-structural-diagnostics" title="Permanent link to this heading">&para;</a></h3>
+<p>Measure alignment across facilities, governance, culture, standards, and human envelope.</p>
+<h3 id="2-dimensional-diagnostics"><strong>2. Dimensional Diagnostics</strong><a class="toc-permalink" href="#2-dimensional-diagnostics" title="Permanent link to this heading">&para;</a></h3>
+<p>Measure intensity across planetary, cultural, governance, economic, compute, and infrastructure dimensions.</p>
+<h3 id="3-regime-diagnostics"><strong>3. Regime Diagnostics</strong><a class="toc-permalink" href="#3-regime-diagnostics" title="Permanent link to this heading">&para;</a></h3>
+<p>Identify regime state (stable, transitional, emergent, chaotic) and transition direction.</p>
+<h3 id="4-drift-diagnostics"><strong>4. Drift Diagnostics</strong><a class="toc-permalink" href="#4-drift-diagnostics" title="Permanent link to this heading">&para;</a></h3>
+<p>Quantify deviation from intended structural alignment.</p>
+<h3 id="5-coherence-diagnostics"><strong>5. Coherence Diagnostics</strong><a class="toc-permalink" href="#5-coherence-diagnostics" title="Permanent link to this heading">&para;</a></h3>
+<p>Measure structural, temporal, and resonance coherence.</p>
+<hr />
+<h1 id="i2-canonical-diagnostic-instruments">🧱 <strong>I.2 — Canonical Diagnostic Instruments</strong><a class="toc-permalink" href="#i2-canonical-diagnostic-instruments" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="instrument-s1-structural-alignment-probe"><strong>Instrument S1 — Structural Alignment Probe</strong><a class="toc-permalink" href="#instrument-s1-structural-alignment-probe" title="Permanent link to this heading">&para;</a></h2>
+<p>Measures structural coherence across the five structural fields.</p>
+<p>Output:<br />
+- alignment score<br />
+- drift vector<br />
+- coherence envelope  </p>
+<hr />
+<h2 id="instrument-d1-dimensional-intensity-gauge"><strong>Instrument D1 — Dimensional Intensity Gauge</strong><a class="toc-permalink" href="#instrument-d1-dimensional-intensity-gauge" title="Permanent link to this heading">&para;</a></h2>
+<p>Measures dimensional pressure across the six RTT dimensions.</p>
+<p>Output:<br />
+- intensity map<br />
+- dimensional divergence<br />
+- cross‑dimensional tension  </p>
+<hr />
+<h2 id="instrument-r1-regime-state-detector"><strong>Instrument R1 — Regime State Detector</strong><a class="toc-permalink" href="#instrument-r1-regime-state-detector" title="Permanent link to this heading">&para;</a></h2>
+<p>Identifies current regime and predicts transition direction.</p>
+<p>Output:<br />
+- regime state<br />
+- transition probability<br />
+- activation threshold  </p>
+<hr />
+<h2 id="instrument-dr1-drift-accumulator"><strong>Instrument DR1 — Drift Accumulator</strong><a class="toc-permalink" href="#instrument-dr1-drift-accumulator" title="Permanent link to this heading">&para;</a></h2>
+<p>Tracks drift over time.</p>
+<p>Output:<br />
+- drift accumulation<br />
+- drift spikes<br />
+- drift decay  </p>
+<hr />
+<h2 id="instrument-c1-coherence-engine-monitor"><strong>Instrument C1 — Coherence Engine Monitor</strong><a class="toc-permalink" href="#instrument-c1-coherence-engine-monitor" title="Permanent link to this heading">&para;</a></h2>
+<p>Measures coherence across structural, temporal, and resonance layers.</p>
+<p>Output:<br />
+- coherence score<br />
+- coherence collapse warning<br />
+- recovery pathway  </p>
+<hr />
+<h1 id="i3-diagnostic-usage-patterns">🔧 <strong>I.3 — Diagnostic Usage Patterns</strong><a class="toc-permalink" href="#i3-diagnostic-usage-patterns" title="Permanent link to this heading">&para;</a></h1>
+<p>Diagnostics follow three canonical usage patterns:</p>
+<h3 id="1-snapshot-mode"><strong>1. Snapshot Mode</strong><a class="toc-permalink" href="#1-snapshot-mode" title="Permanent link to this heading">&para;</a></h3>
+<p>Single measurement at a point in time.</p>
+<h3 id="2-continuous-mode"><strong>2. Continuous Mode</strong><a class="toc-permalink" href="#2-continuous-mode" title="Permanent link to this heading">&para;</a></h3>
+<p>Ongoing measurement for drift, coherence, and regime tracking.</p>
+<h3 id="3-comparative-mode"><strong>3. Comparative Mode</strong><a class="toc-permalink" href="#3-comparative-mode" title="Permanent link to this heading">&para;</a></h3>
+<p>Compare multiple sites, layers, or dimensions.</p>
+<hr />
+<h1 id="i4-diagnostic-output-formats">📊 <strong>I.4 — Diagnostic Output Formats</strong><a class="toc-permalink" href="#i4-diagnostic-output-formats" title="Permanent link to this heading">&para;</a></h1>
+<p>Diagnostics produce:</p>
+<h3 id="1-scalar-outputs"><strong>1. Scalar Outputs</strong><a class="toc-permalink" href="#1-scalar-outputs" title="Permanent link to this heading">&para;</a></h3>
+<p>Single values (drift, coherence, intensity).</p>
+<h3 id="2-vector-outputs"><strong>2. Vector Outputs</strong><a class="toc-permalink" href="#2-vector-outputs" title="Permanent link to this heading">&para;</a></h3>
+<p>Directional values (drift vectors, tension vectors).</p>
+<h3 id="3-tensor-outputs"><strong>3. Tensor Outputs</strong><a class="toc-permalink" href="#3-tensor-outputs" title="Permanent link to this heading">&para;</a></h3>
+<p>Multi‑dimensional values (structural, dimensional, qCompute tensors).</p>
+<h3 id="4-regime-outputs"><strong>4. Regime Outputs</strong><a class="toc-permalink" href="#4-regime-outputs" title="Permanent link to this heading">&para;</a></h3>
+<p>State + transition probability.</p>
+<hr />
+<h1 id="i5-regime-diagnostics-rtt-canon">🔺 <strong>I.5 — Regime Diagnostics (RTT Canon)</strong><a class="toc-permalink" href="#i5-regime-diagnostics-rtt-canon" title="Permanent link to this heading">&para;</a></h1>
+<p>Regime diagnostics identify:</p>
+<ul>
+<li>current regime  </li>
+<li>transition direction  </li>
+<li>activation threshold  </li>
+<li>collapse probability  </li>
+<li>recovery pathway  </li>
+</ul>
+<p>Regime transitions are detected using:</p>
+<ul>
+<li>drift spikes  </li>
+<li>coherence collapse  </li>
+<li>dimensional divergence  </li>
+<li>operator load  </li>
+<li>governance misalignment  </li>
+</ul>
+<hr />
+<h1 id="i6-drift-diagnostics">🧬 <strong>I.6 — Drift Diagnostics</strong><a class="toc-permalink" href="#i6-drift-diagnostics" title="Permanent link to this heading">&para;</a></h1>
+<p>Drift diagnostics measure:</p>
+<ul>
+<li>structural drift  </li>
+<li>dimensional drift  </li>
+<li>temporal drift  </li>
+<li>resonance drift  </li>
+</ul>
+<p>Drift ranges from <strong>0.00</strong> (none) to <strong>1.00</strong> (max).</p>
+<p>Drift spikes indicate:</p>
+<ul>
+<li>transitional → emergent transitions  </li>
+<li>emergent → chaotic transitions  </li>
+</ul>
+<hr />
+<h1 id="i7-coherence-diagnostics">🔁 <strong>I.7 — Coherence Diagnostics</strong><a class="toc-permalink" href="#i7-coherence-diagnostics" title="Permanent link to this heading">&para;</a></h1>
+<p>Coherence diagnostics measure:</p>
+<ul>
+<li>structural coherence  </li>
+<li>temporal coherence  </li>
+<li>resonance coherence  </li>
+</ul>
+<p>Coherence ranges from <strong>0.00</strong> (none) to <strong>1.00</strong> (full).</p>
+<p>Coherence collapse indicates:</p>
+<ul>
+<li>chaotic regime  </li>
+<li>fracture evolution  </li>
+<li>operator overload  </li>
+</ul>
+<hr />
+<h1 id="i8-diagnostics-tensors">📦 <strong>I.8 — Diagnostics &amp; Tensors</strong><a class="toc-permalink" href="#i8-diagnostics-tensors" title="Permanent link to this heading">&para;</a></h1>
+<p>Diagnostics directly influence:</p>
+<h3 id="structural-field-tensor"><strong>Structural Field Tensor</strong><a class="toc-permalink" href="#structural-field-tensor" title="Permanent link to this heading">&para;</a></h3>
+<p>Structural alignment, drift, coherence.</p>
+<h3 id="dimensional-field-tensor"><strong>Dimensional Field Tensor</strong><a class="toc-permalink" href="#dimensional-field-tensor" title="Permanent link to this heading">&para;</a></h3>
+<p>Dimensional intensity, divergence, tension.</p>
+<h3 id="qcompute-tensor"><strong>qCompute Tensor</strong><a class="toc-permalink" href="#qcompute-tensor" title="Permanent link to this heading">&para;</a></h3>
+<p>Thermal, density, and energy envelope diagnostics.</p>
+<p>Diagnostics provide the <strong>measurement context</strong> for tensor interpretation.</p>
+<hr />
+<h1 id="i9-crossmodule-propagation">🔗 <strong>I.9 — Cross‑Module Propagation</strong><a class="toc-permalink" href="#i9-crossmodule-propagation" title="Permanent link to this heading">&para;</a></h1>
+<p>Diagnostics propagate into:</p>
+<ul>
+<li>Framework Field Theory  </li>
+<li>Governance Substrate  </li>
+<li>NoS (Network of Substrate)  </li>
+<li>Low Dimensional Structures  </li>
+<li>Integrations  </li>
+</ul>
+<p>Ensuring diagnostic behavior is consistent across the RTT canon.</p>
+<hr />
+<h1 id="end-of-appendix-i-field-diagnostics-toolkit">End of Appendix I — Field Diagnostics Toolkit<a class="toc-permalink" href="#end-of-appendix-i-field-diagnostics-toolkit" title="Permanent link to this heading">&para;</a></h1>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/datacenter_reports/appendices/I_Field_Diagnostics_Toolkit.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/datacenter_reports/appendices/I_Field_Diagnostics_Toolkit.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

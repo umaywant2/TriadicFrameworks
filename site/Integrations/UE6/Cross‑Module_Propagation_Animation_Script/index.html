@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Cross‑Module Propagation Animation Script | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/Integrations/UE6/Cross‑Module_Propagation_Animation_Script/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Cross‑Module Propagation Animation Script" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/Integrations/UE6/Cross‑Module_Propagation_Animation_Script/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Cross‑Module Propagation Animation Script" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/Integrations/UE6/Cross‑Module_Propagation_Animation_Script.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Cross\u2011Module Propagation Animation Script",
+    "headline": "Cross\u2011Module Propagation Animation Script",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/Integrations/UE6/Cross\u2011Module_Propagation_Animation_Script/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#scene-1-ue6-fields-in-motion">Scene 1 — UE6: Fields in Motion</a></li>
+<li><a href="#scene-2-benchmarks-behavior-emerges">Scene 2 — Benchmarks: Behavior Emerges</a></li>
+<li><a href="#scene-3-transition-from-behavior-to-structure">Scene 3 — Transition: From Behavior to Structure</a></li>
+<li><a href="#scene-4-tel-the-lattice-appears">Scene 4 — TEL: The Lattice Appears</a></li>
+<li><a href="#scene-5-wiring-the-chain">Scene 5 — Wiring the Chain</a></li>
+<li><a href="#scene-6-crossmodule-propagation">Scene 6 — Cross‑Module Propagation</a></li>
+<li><a href="#scene-7-closing-frame">Scene 7 — Closing Frame</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Integrations/" itemprop="item">
+                <span itemprop="name">Integrations</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Integrations/UE6/" itemprop="item">
+                <span itemprop="name">Ue6</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Cross‑Module Propagation Animation Script</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Cross‑Module Propagation Animation Script</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="crossmodule-propagation-animation-script">Cross‑Module Propagation Animation Script<a class="toc-permalink" href="#crossmodule-propagation-animation-script" title="Permanent link to this heading">&para;</a></h1>
+<p><strong>Title:</strong> “From Fields to Lattice”</p>
+<hr />
+<h2 id="scene-1-ue6-fields-in-motion">Scene 1 — UE6: Fields in Motion<a class="toc-permalink" href="#scene-1-ue6-fields-in-motion" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><strong>Visual:</strong>  </li>
+<li>Camera flies over the RTT_Showcase map.  </li>
+<li>Highlight: BP_RTT_Primitives, BP_RTT_ResonanceDemo, BP_RTT_EntropyDemo, BP_RTT_HybridDemo.  </li>
+<li><strong>Narration:</strong><br />
+  “Here, operators live as fields: φ, variance, resonance, entropy, and their hybrid.<br />
+   You see them as colors, shapes, pulses, and collapses.”</li>
+</ul>
+<hr />
+<h2 id="scene-2-benchmarks-behavior-emerges">Scene 2 — Benchmarks: Behavior Emerges<a class="toc-permalink" href="#scene-2-benchmarks-behavior-emerges" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><strong>Visual:</strong>  </li>
+<li>Freeze the UE6 view; overlay simple graphs and labels:  <ul>
+<li>Phi Stability, Emergence Coherence, Resonance Envelope, Entropy Boundary Detection, Hybrid Coherence.  </li>
+</ul>
+</li>
+<li><strong>Narration:</strong><br />
+  “Benchmarks watch these fields over time.<br />
+   They don’t care about every frame—only about how the operator behaves:<br />
+   how stable, how coherent, how close to collapse.”</li>
+</ul>
+<hr />
+<h2 id="scene-3-transition-from-behavior-to-structure">Scene 3 — Transition: From Behavior to Structure<a class="toc-permalink" href="#scene-3-transition-from-behavior-to-structure" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><strong>Visual:</strong>  </li>
+<li>Lines draw from each Benchmark label into a dark background.  </li>
+<li>The UE6 scene fades; only benchmark names remain, then shrink into nodes.  </li>
+<li><strong>Narration:</strong><br />
+  “Once behavior is measured and named, it can leave the scene.<br />
+   What travels forward is not the raw field, but the signature of how it behaves.”</li>
+</ul>
+<hr />
+<h2 id="scene-4-tel-the-lattice-appears">Scene 4 — TEL: The Lattice Appears<a class="toc-permalink" href="#scene-4-tel-the-lattice-appears" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><strong>Visual:</strong>  </li>
+<li>A lattice fades in: layers labeled Ladder, Cycle, Map, Atlas.  </li>
+<li>Nodes appear: TEL.Operator.Phi, TEL.Operator.Variance, TEL.Resonance.Core/Harmonics, TEL.Entropy.Field/Collapse, TEL.Hybrid.Operator.  </li>
+<li><strong>Narration:</strong><br />
+  “TEL is where these signatures become structure.<br />
+   Each node is a place in the lattice where an operator can live, connect, and propagate.”</li>
+</ul>
+<hr />
+<h2 id="scene-5-wiring-the-chain">Scene 5 — Wiring the Chain<a class="toc-permalink" href="#scene-5-wiring-the-chain" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><strong>Visual:</strong>  </li>
+<li>Draw arrows:  <ul>
+<li>Phi Stability → TEL.Operator.Phi  </li>
+<li>Variance Smoothing → TEL.Operator.Variance  </li>
+<li>Resonance Envelope → TEL.Resonance.Core  </li>
+<li>Entropy Boundary Detection → TEL.Entropy.Field  </li>
+<li>Hybrid Coherence → TEL.Hybrid.Operator  </li>
+</ul>
+</li>
+<li><strong>Narration:</strong><br />
+  “Every benchmark has a home in TEL.<br />
+   Once placed, it can connect to other operators, other modules, other regimes.”</li>
+</ul>
+<hr />
+<h2 id="scene-6-crossmodule-propagation">Scene 6 — Cross‑Module Propagation<a class="toc-permalink" href="#scene-6-crossmodule-propagation" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><strong>Visual:</strong>  </li>
+<li>From TEL nodes, lines extend outward to icons for other modules (SARG, Mode, Opacity, Integrations, TEL‑adjacent systems).  </li>
+<li><strong>Narration:</strong><br />
+  “From TEL, operators no longer belong to a single scene or engine.<br />
+   They become part of a shared substrate that other modules can query, reuse, and transform.”</li>
+</ul>
+<hr />
+<h2 id="scene-7-closing-frame">Scene 7 — Closing Frame<a class="toc-permalink" href="#scene-7-closing-frame" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><strong>Visual:</strong>  </li>
+<li>Overlay the full chain as a simple diagram:<br />
+<code>UE6 (fields) → Benchmarks (behavior) → TEL (structure) → Other Modules (propagation)</code>  </li>
+<li><strong>Narration:</strong><br />
+  “You start by seeing fields.<br />
+   You learn to read behavior.<br />
+   You end by thinking in structure.<br />
+   That’s the path from UE6 to TEL.”</li>
+</ul>
+<hr />
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Integrations/UE6/Cross‑Module_Propagation_Animation_Script.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/Integrations/UE6/Cross‑Module_Propagation_Animation_Script.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

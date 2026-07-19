@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Simulation Engine | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/simulation_engine/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Simulation Engine" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/simulation_engine/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Simulation Engine" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/Governance_Substrate_Model/Analyzer/simulation_engine.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Simulation Engine",
+    "headline": "Simulation Engine",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/simulation_engine/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#core-purpose-of-the-simulation-engine">Core purpose of the simulation engine</a></li>
+<li><a href="#simulation-inputs">Simulation inputs</a></li>
+<li><a href="#step-engine">Step engine</a></li>
+<li><a href="#drift-engine-integration">Drift engine integration</a></li>
+<li><a href="#physics-engine-integration">Physics engine integration</a></li>
+<li><a href="#basin-engine-integration">Basin engine integration</a></li>
+<li><a href="#regimemode-integration">Regime‑mode integration</a></li>
+<li><a href="#phase-discipline-integration">Phase discipline integration</a></li>
+<li><a href="#projection-integration">Projection integration</a></li>
+<li><a href="#simulation-outputs">Simulation outputs</a></li>
+<li><a href="#simulation-log-schema">Simulation log schema</a></li>
+<li><a href="#simulation-modes">Simulation modes</a></li>
+<li><a href="#narrative-engine-integration">Narrative engine integration</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Governance_Substrate_Model/" itemprop="item">
+                <span itemprop="name">Governance Substrate Model</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/" itemprop="item">
+                <span itemprop="name">Analyzer</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Simulation Engine</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Simulation Engine</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="simulation-engine">Simulation Engine<a class="toc-permalink" href="#simulation-engine" title="Permanent link to this heading">&para;</a></h1>
+<p><em>A structural simulation framework for the Governance Substrate Model (GSM)</em></p>
+<p>The simulation engine models stepwise structural movement across the GSM manifold. It integrates drift dynamics, cross‑axis physics, invariant tension, absorptive capacity, basin topology, regime modes, and phase discipline to generate plausible structural trajectories. It is not predictive; it explores the structural possibility space.</p>
+<hr />
+<h3 id="core-purpose-of-the-simulation-engine">Core purpose of the simulation engine<a class="toc-permalink" href="#core-purpose-of-the-simulation-engine" title="Permanent link to this heading">&para;</a></h3>
+<p>The engine enables:</p>
+<ul>
+<li>stepwise structural evolution  </li>
+<li>basin approach, departure, and crossing  </li>
+<li>drift amplification and dampening  </li>
+<li>regime‑mode transitions  </li>
+<li>phase‑honest structural sequences  </li>
+<li>scenario exploration for teaching and analysis  </li>
+</ul>
+<p>It provides the backbone for interactive dashboards, Observer timelines, and structural scenario tools.</p>
+<hr />
+<h2 id="simulation-inputs">Simulation inputs<a class="toc-permalink" href="#simulation-inputs" title="Permanent link to this heading">&para;</a></h2>
+<p>The engine requires:</p>
+<ul>
+<li><strong>initial structural vector</strong> <code>[C, M, O, A, T]</code>  </li>
+<li><strong>invariant status</strong> and tension score  </li>
+<li><strong>physics forces</strong> across axis pairs  </li>
+<li><strong>drift vector</strong> and category  </li>
+<li><strong>basin classification</strong> and boundary proximity  </li>
+<li><strong>awareness layers</strong>  </li>
+<li><strong>absorptive strength</strong>  </li>
+<li><strong>regime mode</strong> and <strong>phase state</strong>  </li>
+<li><strong>projection rules</strong> (optional)  </li>
+</ul>
+<p>These inputs define the system’s starting structural conditions.</p>
+<hr />
+<h2 id="step-engine">Step engine<a class="toc-permalink" href="#step-engine" title="Permanent link to this heading">&para;</a></h2>
+<p>Each simulation step consists of:</p>
+<ol>
+<li>
+<p><strong>Evaluate invariants</strong><br />
+   - classify aligned, tension, violated<br />
+   - compute tension score  </p>
+</li>
+<li>
+<p><strong>Apply physics forces</strong><br />
+   - compute compensatory movement<br />
+   - detect destabilizing forces  </p>
+</li>
+<li>
+<p><strong>Compute drift</strong><br />
+   - update drift vector<br />
+   - classify drift category<br />
+   - apply drift amplification or dampening  </p>
+</li>
+<li>
+<p><strong>Update structural vector</strong><br />
+   - apply drift and compensatory deltas<br />
+   - clamp to manifold boundaries  </p>
+</li>
+<li>
+<p><strong>Recompute basin position</strong><br />
+   - nearest basin<br />
+   - basin distance<br />
+   - boundary proximity<br />
+   - stability score  </p>
+</li>
+<li>
+<p><strong>Evaluate regime mode</strong><br />
+   - stable, tension, drift, compensatory, transition, absorptive, fragmentation, reconstruction  </p>
+</li>
+<li>
+<p><strong>Evaluate phase discipline</strong><br />
+   - stable phase<br />
+   - tension phase<br />
+   - drift phase<br />
+   - transition phase<br />
+   - reconstruction phase  </p>
+</li>
+<li>
+<p><strong>Generate step event</strong><br />
+   - alignment, tension, drift, transition, or regime‑shift event  </p>
+</li>
+<li>
+<p><strong>Record step in simulation log</strong>  </p>
+</li>
+</ol>
+<p>Each step produces a new structural state.</p>
+<hr />
+<h2 id="drift-engine-integration">Drift engine integration<a class="toc-permalink" href="#drift-engine-integration" title="Permanent link to this heading">&para;</a></h2>
+<p>The simulation engine uses the drift engine to:</p>
+<ul>
+<li>compute drift magnitude  </li>
+<li>classify drift category  </li>
+<li>detect directional consistency  </li>
+<li>identify regime‑shift drift  </li>
+<li>evaluate absorptive dampening  </li>
+</ul>
+<p>Drift determines whether the system stabilizes, moves, or transitions.</p>
+<hr />
+<h2 id="physics-engine-integration">Physics engine integration<a class="toc-permalink" href="#physics-engine-integration" title="Permanent link to this heading">&para;</a></h2>
+<p>Cross‑axis physics governs:</p>
+<ul>
+<li>compensatory movement  </li>
+<li>tension accumulation  </li>
+<li>drift amplification  </li>
+<li>destabilization thresholds  </li>
+</ul>
+<p>Physics forces determine whether drift is corrected or amplified.</p>
+<hr />
+<h2 id="basin-engine-integration">Basin engine integration<a class="toc-permalink" href="#basin-engine-integration" title="Permanent link to this heading">&para;</a></h2>
+<p>The basin engine provides:</p>
+<ul>
+<li>nearest basin  </li>
+<li>basin distance  </li>
+<li>stability gradients  </li>
+<li>boundary proximity  </li>
+<li>transition thresholds  </li>
+</ul>
+<p>Basin topology determines whether the system stabilizes or transitions.</p>
+<hr />
+<h2 id="regimemode-integration">Regime‑mode integration<a class="toc-permalink" href="#regimemode-integration" title="Permanent link to this heading">&para;</a></h2>
+<p>Regime modes interpret operational behavior:</p>
+<ul>
+<li><strong>stable</strong> — aligned, low drift  </li>
+<li><strong>tension</strong> — rising strain  </li>
+<li><strong>drift</strong> — directional movement  </li>
+<li><strong>compensatory</strong> — physics correction  </li>
+<li><strong>transition</strong> — basin crossing  </li>
+<li><strong>absorptive</strong> — buffering  </li>
+<li><strong>fragmentation</strong> — structural breakdown  </li>
+<li><strong>reconstruction</strong> — re‑anchoring  </li>
+</ul>
+<p>Modes provide behavioral context for each step.</p>
+<hr />
+<h2 id="phase-discipline-integration">Phase discipline integration<a class="toc-permalink" href="#phase-discipline-integration" title="Permanent link to this heading">&para;</a></h2>
+<p>Phase discipline ensures phase‑honest transitions:</p>
+<ul>
+<li>stable → tension → drift → transition → reconstruction  </li>
+<li>no skipping phases unless drift is regime‑shift  </li>
+<li>structural debt accumulates if exit conditions are ignored  </li>
+</ul>
+<p>Phases provide structural coherence across steps.</p>
+<hr />
+<h2 id="projection-integration">Projection integration<a class="toc-permalink" href="#projection-integration" title="Permanent link to this heading">&para;</a></h2>
+<p>The simulation engine can optionally use projection rules to:</p>
+<ul>
+<li>extend drift vectors  </li>
+<li>estimate basin trajectories  </li>
+<li>compute transition likelihood  </li>
+<li>forecast absorptive strength  </li>
+<li>project regime‑mode sequences  </li>
+</ul>
+<p>Projections guide scenario exploration.</p>
+<hr />
+<h2 id="simulation-outputs">Simulation outputs<a class="toc-permalink" href="#simulation-outputs" title="Permanent link to this heading">&para;</a></h2>
+<p>Each simulation run produces:</p>
+<ul>
+<li><strong>stepwise structural states</strong>  </li>
+<li><strong>drift sequences</strong>  </li>
+<li><strong>basin trajectories</strong>  </li>
+<li><strong>regime‑mode sequences</strong>  </li>
+<li><strong>phase sequences</strong>  </li>
+<li><strong>transition events</strong>  </li>
+<li><strong>regime‑shift events</strong>  </li>
+<li><strong>narrative summaries</strong>  </li>
+</ul>
+<p>These outputs feed the Observer and dashboards.</p>
+<hr />
+<h2 id="simulation-log-schema">Simulation log schema<a class="toc-permalink" href="#simulation-log-schema" title="Permanent link to this heading">&para;</a></h2>
+<p>Each step is recorded as:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">step</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">step_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;number&gt;</span>
+<span class="w">  </span><span class="nt">vector</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">C</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">M</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">O</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">A</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">T</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">drift</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">vector</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">dC</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">dM</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">dO</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">dA</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">dT</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">magnitude</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;number&gt;</span>
+<span class="w">    </span><span class="nt">category</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;micro|meso|macro|regime_shift&gt;</span>
+<span class="w">  </span><span class="nt">physics_forces</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">axis_pair</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;C↔O | M↔A | O↔T&gt;</span>
+<span class="w">      </span><span class="nt">magnitude</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;number&gt;</span>
+<span class="w">      </span><span class="nt">direction</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;positive|negative&gt;</span>
+<span class="w">  </span><span class="nt">invariants</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">aligned</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">...</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">tension</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">...</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">violated</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">...</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">tension_score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;number&gt;</span>
+<span class="w">  </span><span class="nt">basin</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">nearest</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;CPL|CPF|CTR|PCL|HCL&gt;</span>
+<span class="w">    </span><span class="nt">distance</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;number&gt;</span>
+<span class="w">    </span><span class="nt">boundary_proximity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;number&gt;</span>
+<span class="w">    </span><span class="nt">stability_score</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;number&gt;</span>
+<span class="w">  </span><span class="nt">regime_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;mode&gt;</span>
+<span class="w">  </span><span class="nt">phase_state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;phase&gt;</span>
+<span class="w">  </span><span class="nt">absorptive_strength</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;number&gt;</span>
+<span class="w">  </span><span class="nt">events</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">...</span><span class="p p-Indicator">]</span>
+</code></pre></div>
+
+<hr />
+<h2 id="simulation-modes">Simulation modes<a class="toc-permalink" href="#simulation-modes" title="Permanent link to this heading">&para;</a></h2>
+<p>The engine supports:</p>
+<ul>
+<li><strong>deterministic mode</strong> — fixed rules, no randomness  </li>
+<li><strong>stochastic mode</strong> — controlled variation in drift and physics  </li>
+<li><strong>scenario mode</strong> — user‑defined interventions  </li>
+<li><strong>counterfactual mode</strong> — alternate structural histories  </li>
+</ul>
+<p>These modes support teaching, analysis, and exploration.</p>
+<hr />
+<h2 id="narrative-engine-integration">Narrative engine integration<a class="toc-permalink" href="#narrative-engine-integration" title="Permanent link to this heading">&para;</a></h2>
+<p>The simulation engine generates:</p>
+<ul>
+<li>structural narratives  </li>
+<li>drift narratives  </li>
+<li>basin narratives  </li>
+<li>transition narratives  </li>
+<li>regime‑shift narratives  </li>
+</ul>
+<p>Narratives make simulations interpretable for humans.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Governance_Substrate_Model/Analyzer/simulation_engine.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/Governance_Substrate_Model/Analyzer/simulation_engine.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

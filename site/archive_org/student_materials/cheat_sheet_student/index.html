@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Cheat Sheet Student | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/archive_org/student_materials/cheat_sheet_student/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Cheat Sheet Student" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/archive_org/student_materials/cheat_sheet_student/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Cheat Sheet Student" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/archive_org/student_materials/cheat_sheet_student.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Cheat Sheet Student",
+    "headline": "Cheat Sheet Student",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/archive_org/student_materials/cheat_sheet_student/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#archive_org-module-student_materialscheat_sheet_studentmd">archive_org module — student_materials/cheat_sheet_student.md</a></li>
+<li><a href="#1-what-this-module-teaches">1. What This Module Teaches</a></li>
+<li><a href="#2-the-six-operators-student-version">2. The Six Operators (Student Version)</a><ul>
+<li><a href="#1-metadata_operator">1. METADATA_OPERATOR</a></li>
+<li><a href="#2-wayback_operator">2. WAYBACK_OPERATOR</a></li>
+<li><a href="#3-lineage_operator">3. LINEAGE_OPERATOR</a></li>
+<li><a href="#4-collection_operator">4. COLLECTION_OPERATOR</a></li>
+<li><a href="#5-preservation_operator">5. PRESERVATION_OPERATOR</a></li>
+<li><a href="#6-driftbound_retrieval_operator">6. DRIFTBOUND_RETRIEVAL_OPERATOR</a></li>
+</ul>
+</li>
+<li><a href="#3-drift-levels-student-guide">3. Drift Levels (Student Guide)</a></li>
+<li><a href="#4-substrate-types-student-guide">4. Substrate Types (Student Guide)</a></li>
+<li><a href="#5-continuity-kernel">5. Continuity Kernel</a></li>
+<li><a href="#6-how-to-compare-two-snapshots">6. How to Compare Two Snapshots</a></li>
+<li><a href="#7-how-to-choose-the-most-reliable-version">7. How to Choose the Most Reliable Version</a></li>
+<li><a href="#8-quick-student-workflow">8. Quick Student Workflow</a></li>
+<li><a href="#9-common-patterns">9. Common Patterns</a></li>
+<li><a href="#10-onesentence-summary">10. One‑Sentence Summary</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/archive_org/" itemprop="item">
+                <span itemprop="name">Archive Org</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/archive_org/student_materials/" itemprop="item">
+                <span itemprop="name">Student Materials</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Cheat Sheet Student</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Cheat Sheet Student</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="rtt-cheat-sheet-internet-archive-student-edition"><strong>RTT Cheat Sheet — Internet Archive (Student Edition)</strong><a class="toc-permalink" href="#rtt-cheat-sheet-internet-archive-student-edition" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="archive_org-module-student_materialscheat_sheet_studentmd"><em>archive_org module — student_materials/cheat_sheet_student.md</em><a class="toc-permalink" href="#archive_org-module-student_materialscheat_sheet_studentmd" title="Permanent link to this heading">&para;</a></h3>
+<hr />
+<h2 id="1-what-this-module-teaches"><strong>1. What This Module Teaches</strong><a class="toc-permalink" href="#1-what-this-module-teaches" title="Permanent link to this heading">&para;</a></h2>
+<p>Use the Internet Archive to understand:</p>
+<ul>
+<li>how webpages change over time  </li>
+<li>which versions are stable  </li>
+<li>how to detect redesigns and migrations  </li>
+<li>how to choose the most reliable snapshot  </li>
+</ul>
+<p>You will use the RTT operator chain to guide your analysis.</p>
+<hr />
+<h2 id="2-the-six-operators-student-version"><strong>2. The Six Operators (Student Version)</strong><a class="toc-permalink" href="#2-the-six-operators-student-version" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="1-metadata_operator"><strong>1. METADATA_OPERATOR</strong><a class="toc-permalink" href="#1-metadata_operator" title="Permanent link to this heading">&para;</a></h3>
+<p>Identifies the webpage’s basic structure:<br />
+- format (HTML, PDF, image, OCR)<br />
+- type of site (institutional, news, scholarly, etc.)<br />
+- expected drift level  </p>
+<h3 id="2-wayback_operator"><strong>2. WAYBACK_OPERATOR</strong><a class="toc-permalink" href="#2-wayback_operator" title="Permanent link to this heading">&para;</a></h3>
+<p>Collects snapshots and shows:<br />
+- timeline of captures<br />
+- drift between years<br />
+- missing years (continuity breaks)  </p>
+<h3 id="3-lineage_operator"><strong>3. LINEAGE_OPERATOR</strong><a class="toc-permalink" href="#3-lineage_operator" title="Permanent link to this heading">&para;</a></h3>
+<p>Shows how the webpage evolved:<br />
+- template changes<br />
+- navigation changes<br />
+- CMS migrations<br />
+- stable elements (continuity kernel)  </p>
+<h3 id="4-collection_operator"><strong>4. COLLECTION_OPERATOR</strong><a class="toc-permalink" href="#4-collection_operator" title="Permanent link to this heading">&para;</a></h3>
+<p>Places the webpage in context:<br />
+- which IA collection it belongs to<br />
+- related pages<br />
+- structural family  </p>
+<h3 id="5-preservation_operator"><strong>5. PRESERVATION_OPERATOR</strong><a class="toc-permalink" href="#5-preservation_operator" title="Permanent link to this heading">&para;</a></h3>
+<p>Checks how stable the snapshots are:<br />
+- substrate stability<br />
+- drift risk<br />
+- mixed layers (HTML + PDF, etc.)  </p>
+<h3 id="6-driftbound_retrieval_operator"><strong>6. DRIFTBOUND_RETRIEVAL_OPERATOR</strong><a class="toc-permalink" href="#6-driftbound_retrieval_operator" title="Permanent link to this heading">&para;</a></h3>
+<p>Finds the <strong>most reliable version</strong> by combining:<br />
+- drift<br />
+- continuity<br />
+- substrate stability<br />
+- collection context  </p>
+<hr />
+<h2 id="3-drift-levels-student-guide"><strong>3. Drift Levels (Student Guide)</strong><a class="toc-permalink" href="#3-drift-levels-student-guide" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><strong>None</strong> — looks the same  </li>
+<li><strong>Minor</strong> — small layout or style changes  </li>
+<li><strong>Moderate</strong> — navigation or template changes  </li>
+<li><strong>High</strong> — redesign, rebuild, CMS migration  </li>
+</ul>
+<hr />
+<h2 id="4-substrate-types-student-guide"><strong>4. Substrate Types (Student Guide)</strong><a class="toc-permalink" href="#4-substrate-types-student-guide" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><strong>PDF</strong> — most stable  </li>
+<li><strong>Image</strong> — stable but incomplete  </li>
+<li><strong>HTML</strong> — drift‑prone  </li>
+<li><strong>OCR</strong> — lossy, high drift  </li>
+<li><strong>Mixed</strong> — requires careful evaluation  </li>
+</ul>
+<hr />
+<h2 id="5-continuity-kernel"><strong>5. Continuity Kernel</strong><a class="toc-permalink" href="#5-continuity-kernel" title="Permanent link to this heading">&para;</a></h2>
+<p>These are the parts of a webpage that stay the same across snapshots.</p>
+<p>Examples:<br />
+- header<br />
+- footer<br />
+- main menu<br />
+- index page<br />
+- sidebar  </p>
+<p>If these stay the same, the site has good continuity.</p>
+<hr />
+<h2 id="6-how-to-compare-two-snapshots"><strong>6. How to Compare Two Snapshots</strong><a class="toc-permalink" href="#6-how-to-compare-two-snapshots" title="Permanent link to this heading">&para;</a></h2>
+<p>Look for structural differences:</p>
+<ul>
+<li>layout  </li>
+<li>navigation  </li>
+<li>template  </li>
+<li>sidebar  </li>
+<li>header/footer  </li>
+<li>presence/absence of PDF layer  </li>
+</ul>
+<p>Avoid content differences — focus on structure only.</p>
+<hr />
+<h2 id="7-how-to-choose-the-most-reliable-version"><strong>7. How to Choose the Most Reliable Version</strong><a class="toc-permalink" href="#7-how-to-choose-the-most-reliable-version" title="Permanent link to this heading">&para;</a></h2>
+<p>Pick the snapshot that has:</p>
+<ol>
+<li><strong>Stable substrate</strong> (PDF &gt; HTML &gt; OCR)  </li>
+<li><strong>Low drift</strong>  </li>
+<li><strong>Strong continuity kernel</strong>  </li>
+<li><strong>Few or no missing years</strong>  </li>
+<li><strong>No major redesigns</strong>  </li>
+</ol>
+<hr />
+<h2 id="8-quick-student-workflow"><strong>8. Quick Student Workflow</strong><a class="toc-permalink" href="#8-quick-student-workflow" title="Permanent link to this heading">&para;</a></h2>
+<ol>
+<li>Pick a webpage  </li>
+<li>List its snapshots  </li>
+<li>Compare two snapshots  </li>
+<li>Identify drift  </li>
+<li>Find continuity kernel  </li>
+<li>Check substrate stability  </li>
+<li>Choose the most reliable version  </li>
+</ol>
+<hr />
+<h2 id="9-common-patterns"><strong>9. Common Patterns</strong><a class="toc-permalink" href="#9-common-patterns" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>Government sites → stable, low drift  </li>
+<li>News sites → high drift, frequent redesigns  </li>
+<li>Journals → mixed substrates, periodic updates  </li>
+<li>Vintage software → very stable, versioned  </li>
+</ul>
+<hr />
+<h2 id="10-onesentence-summary"><strong>10. One‑Sentence Summary</strong><a class="toc-permalink" href="#10-onesentence-summary" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>RTT helps you find the most reliable version of a webpage by analyzing structure, drift, continuity, and substrate stability — not content.</strong></p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/archive_org/student_materials/cheat_sheet_student.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/archive_org/student_materials/cheat_sheet_student.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

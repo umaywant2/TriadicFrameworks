@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Gen1 Vcg Api Spec | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/projects/VCG/gen1_vcg_api_spec/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Gen1 Vcg Api Spec" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/projects/VCG/gen1_vcg_api_spec/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Gen1 Vcg Api Spec" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/projects/VCG/gen1_vcg_api_spec.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Gen1 Vcg Api Spec",
+    "headline": "Gen1 Vcg Api Spec",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/projects/VCG/gen1_vcg_api_spec/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#scope">Scope</a></li>
+<li><a href="#resonant-time-socket-protocol">Resonant time socket protocol</a></li>
+<li><a href="#scheduling-and-tokens">Scheduling and tokens</a></li>
+<li><a href="#messaging-primitives">Messaging primitives</a></li>
+<li><a href="#metrics-schema">Metrics schema</a></li>
+<li><a href="#errors-versioning-and-security">Errors, versioning, and security</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/projects/" itemprop="item">
+                <span itemprop="name">Projects</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/projects/VCG/" itemprop="item">
+                <span itemprop="name">Vcg</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Gen1 Vcg Api Spec</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Gen1 Vcg Api Spec</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="gen1-resonant-time-and-scheduling-api">Gen1 resonant time and scheduling API<a class="toc-permalink" href="#gen1-resonant-time-and-scheduling-api" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="scope">Scope<a class="toc-permalink" href="#scope" title="Permanent link to this heading">&para;</a></h2>
+<p>Define the control plane for resonant time publication, token‑based scheduling, messaging primitives, and metrics emission in Gen1. Transport defaults to Unix domain sockets and shared memory on a single host, with optional TCP for remote clients via a VCG proxy.</p>
+<hr />
+<h2 id="resonant-time-socket-protocol">Resonant time socket protocol<a class="toc-permalink" href="#resonant-time-socket-protocol" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><strong>Socket:</strong> /run/vcg/rt.sock (datagram or framed stream)</li>
+<li><strong>Subscriptions:</strong></li>
+<li>
+<p><strong>SUBSCRIBE</strong></p>
+<ul>
+<li>Fields: {client_id, dimension_id}</li>
+<li>Effect: Client registers for window ticks for dimension_id.</li>
+</ul>
+</li>
+<li>
+<p><strong>UNSUBSCRIBE</strong></p>
+<ul>
+<li>**Fields: {client_id, dimension_id}</li>
+</ul>
+</li>
+<li>
+<p><strong>Window tick message:</strong></p>
+</li>
+<li><strong>WINDOW_TICK</strong><ul>
+<li>Fields: {dimension_id, seq, t_start_ns, t_end_ns, phase_deg, cadence_hz}</li>
+<li>Semantics: Defines the current execution window for gating. Clients should not launch work before t_start_ns.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="scheduling-and-tokens">Scheduling and tokens<a class="toc-permalink" href="#scheduling-and-tokens" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><strong>Token request:</strong></li>
+<li>
+<p><strong>REQUEST_TOKEN</strong></p>
+<ul>
+<li>Fields: {client_id, dimension_id, budget_units, deadline_ns}</li>
+<li>Semantics: Ask for execution credits within the current/next window.</li>
+</ul>
+</li>
+<li>
+<p><strong>Token grant:</strong></p>
+</li>
+<li>
+<p><strong>TOKEN_GRANTED</strong></p>
+<ul>
+<li>Fields: {dimension_id, budget_units, valid_from_ns, expires_ns, priority}</li>
+<li>Semantics: Credits for compute or IO; client should spend within [valid_from_ns, expires_ns].</li>
+</ul>
+</li>
+<li>
+<p><strong>Budget model:</strong></p>
+</li>
+<li><strong>Units:</strong> Abstract “credits” map to CPU slices, GPU kernels, or IO ops via policy.</li>
+<li><strong>QoS amplitude:</strong> Per‑dimension weight scales minted credits each window.</li>
+<li>
+<p><strong>Caps:</strong> Hard per‑window cap; burst borrowing permitted with guardrails (no starvation).</p>
+</li>
+<li>
+<p><strong>Backpressure:</strong></p>
+</li>
+<li><strong>TOKEN_DENIED</strong><ul>
+<li>Fields: {dimension_id, reason, retry_after_ns}</li>
+<li>Reasons: window_exhausted, priority_too_low, dependency_pending.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="messaging-primitives">Messaging primitives<a class="toc-permalink" href="#messaging-primitives" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><strong>Intra‑host low‑latency:</strong></li>
+<li><strong>Unix domain sockets:</strong> Per‑dimension command socket: /run/vcg/dX.sock</li>
+<li>
+<p><strong>Shared memory rings:</strong> Per‑dimension queue for high‑rate signals; VCG arbitrates cross‑dimension transfers.</p>
+</li>
+<li>
+<p><strong>Cross‑dimension calls:</strong></p>
+</li>
+<li>
+<p><strong>VCG_ROUTE</strong></p>
+<ul>
+<li>Fields: {from_d, to_d, corr_id, payload_ref}</li>
+<li>Semantics: VCG enforces phase alignment and applies soft/hard barriers per dependency graph.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optional broker integration:</strong></p>
+</li>
+<li><strong>NATS subjects:</strong> vcg.dX.work, vcg.dX.metrics for observability and decoupling when needed.</li>
+</ul>
+<hr />
+<h2 id="metrics-schema">Metrics schema<a class="toc-permalink" href="#metrics-schema" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><strong>Dimensions:</strong></li>
+<li><strong>window_jitter_ns:</strong> Difference between planned and actual window boundaries.</li>
+<li><strong>miss_rate:</strong> Fraction of clients missing window start.</li>
+<li><strong>phase_skew_deg:</strong> Drift from intended phase.</li>
+<li><strong>queue_depth:</strong> Tasks waiting per dimension.</li>
+<li>
+<p><strong>latency_p50/p95/p99:</strong> End‑to‑end task latency per dimension.</p>
+</li>
+<li>
+<p><strong>Orchestrator:</strong></p>
+</li>
+<li><strong>tokens_minted/consumed/dropped:</strong> Per dimension per window.</li>
+<li><strong>borrow_events:</strong> Count and duration of QoS amplitude borrow.</li>
+<li>
+<p><strong>barrier_wait_ns:</strong> Time spent at soft/hard barriers.</p>
+</li>
+<li>
+<p><strong>Export:</strong></p>
+</li>
+<li><strong>Endpoint:</strong> /metrics (Prometheus text format) on localhost:9109 by default.</li>
+<li><strong>Tags:</strong> dimension_id, client_id (hashed), window_seq.</li>
+</ul>
+<hr />
+<h2 id="errors-versioning-and-security">Errors, versioning, and security<a class="toc-permalink" href="#errors-versioning-and-security" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><strong>Errors:</strong></li>
+<li><strong>Codes:</strong> invalid_request, unauthorized, window_closed, capacity_limited, dependency_blocked.</li>
+<li>
+<p><strong>Retries:</strong> Clients back off using retry_after_ns from TOKEN_DENIED.</p>
+</li>
+<li>
+<p><strong>Versioning:</strong></p>
+</li>
+<li><strong>Header:</strong> X‑VCG‑Version: 0.1 for all control messages.</li>
+<li>
+<p><strong>Compatibility:</strong> Minor versions additive; breaking changes bump major and require feature negotiation.</p>
+</li>
+<li>
+<p><strong>Security:</strong></p>
+</li>
+<li><strong>Local ACL:</strong> Client socket credentials (uid/gid) mapped to per‑dimension ACLs.</li>
+<li><strong>Chroot boundaries:</strong> Only required device nodes bound into each dimension.</li>
+<li><strong>Audit:</strong> Orchestrator logs control messages with rate limits to prevent log storms.</li>
+</ul>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/projects/VCG/gen1_vcg_api_spec.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/projects/VCG/gen1_vcg_api_spec.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

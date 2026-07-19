@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Wireframe | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/prompts/ui/wireframe/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Wireframe" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/prompts/ui/wireframe/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Wireframe" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/prompts/ui/wireframe.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Wireframe",
+    "headline": "Wireframe",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/prompts/ui/wireframe/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#core-wireframe-structure">Core Wireframe Structure</a></li>
+<li><a href="#module-wireframe">Module Wireframe</a></li>
+<li><a href="#template-wireframe">Template Wireframe</a></li>
+<li><a href="#stack-wireframe">Stack Wireframe</a></li>
+<li><a href="#engine-wireframe">Engine Wireframe</a></li>
+<li><a href="#worksheet-wireframe">Worksheet Wireframe</a></li>
+<li><a href="#poster-wireframe">Poster Wireframe</a></li>
+<li><a href="#teaching-bundle-wireframe">Teaching Bundle Wireframe</a></li>
+<li><a href="#crosslinks">Cross‑Links</a></li>
+<li><a href="#manifest">Manifest</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/prompts/" itemprop="item">
+                <span itemprop="name">Prompts</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/prompts/ui/" itemprop="item">
+                <span itemprop="name">Ui</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Wireframe</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Wireframe</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="ui-wireframe-triadicframeworks-prompts">UI Wireframe — TriadicFrameworks Prompts<a class="toc-permalink" href="#ui-wireframe-triadicframeworks-prompts" title="Permanent link to this heading">&para;</a></h1>
+<p>The UI Wireframe defines the canonical visual layout for prompt modules, templates,<br />
+stacks, engines, worksheets, posters, exams, and teaching bundles across the<br />
+TriadicFrameworks Prompts site.<br />
+It ensures that all artifacts share a consistent structural presentation, regardless of<br />
+engine, stack, or domain.</p>
+<p>This page is the front door for all wireframe specifications.</p>
+<hr />
+<h2 id="purpose">Purpose<a class="toc-permalink" href="#purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>The Wireframe governs:</p>
+<ul>
+<li>how modules are visually structured  </li>
+<li>how templates are rendered in the UI  </li>
+<li>how stacks appear in navigation and teaching flows  </li>
+<li>how worksheets and diagnostics are laid out  </li>
+<li>how teaching bundles and posters are visually organized  </li>
+<li>how RTT engines present their multi‑layer structure  </li>
+<li>how UI consistency is maintained across the Prompts site  </li>
+</ul>
+<p>It is the canonical visual blueprint for the Prompts UI.</p>
+<hr />
+<h2 id="core-wireframe-structure">Core Wireframe Structure<a class="toc-permalink" href="#core-wireframe-structure" title="Permanent link to this heading">&para;</a></h2>
+<p>All prompt artifacts follow a shared structural pattern:</p>
+<div class="codehilite"><pre><span></span><code># Title
+
+## Section 1 — Identity
+Block…
+
+## Section 2 — Operators
+Block…
+
+## Section 3 — Drift
+Block…
+
+## Section 4 — Coherence
+Block…
+
+## Section 5 — Regime‑Points
+Block…
+
+## Section 6 — Substrate
+Block…
+
+## Section 7 — Dimensions
+Block…
+
+## Section 8 — Domains
+Block…
+
+## Section 9 — Synthesis
+Block…
+</code></pre></div>
+
+<p>Rules:</p>
+<ul>
+<li>Always 9 sections  </li>
+<li>Always in RTT canonical order  </li>
+<li>Always use <code>##</code> for section headers  </li>
+<li>Blocks may contain text, diagrams, or examples  </li>
+<li>No decorative emojis or icons  </li>
+</ul>
+<hr />
+<h2 id="module-wireframe">Module Wireframe<a class="toc-permalink" href="#module-wireframe" title="Permanent link to this heading">&para;</a></h2>
+<p>Modules follow a specialized version of the core wireframe:</p>
+<div class="codehilite"><pre><span></span><code># Module Title
+
+## Identity
+Block…
+
+## Purpose
+Block…
+
+## Operators
+Block…
+
+## Drift
+Block…
+
+## Coherence
+Block…
+
+## Substrate
+Block…
+
+## Dimensions
+Block…
+
+## Domains
+Block…
+
+## Examples
+Block…
+
+## Manifest
+Block…
+</code></pre></div>
+
+<p>Rules:</p>
+<ul>
+<li>Always include Purpose  </li>
+<li>Always include Examples  </li>
+<li>Always include Manifest  </li>
+<li>Always follow RTT canonical order  </li>
+</ul>
+<hr />
+<h2 id="template-wireframe">Template Wireframe<a class="toc-permalink" href="#template-wireframe" title="Permanent link to this heading">&para;</a></h2>
+<p>Templates follow a simplified wireframe:</p>
+<div class="codehilite"><pre><span></span><code># Template Title
+
+## Purpose
+Block…
+
+## Template Sections
+Prompt blocks…
+</code></pre></div>
+
+<p>Rules:</p>
+<ul>
+<li>Template sections must follow template grammar  </li>
+<li>No diagrams unless part of a teaching bundle  </li>
+<li>Prompt blocks must follow prompt block formatting  </li>
+</ul>
+<hr />
+<h2 id="stack-wireframe">Stack Wireframe<a class="toc-permalink" href="#stack-wireframe" title="Permanent link to this heading">&para;</a></h2>
+<p>Stacks follow a multi‑section layout:</p>
+<div class="codehilite"><pre><span></span><code># Stack Title
+
+## Purpose
+Block…
+
+## Prompt Families
+List…
+
+## Usage
+Block…
+
+## Cross‑Links
+Block…
+
+## Manifest
+Block…
+</code></pre></div>
+
+<p>Rules:</p>
+<ul>
+<li>Prompt families must be grouped by function  </li>
+<li>Usage must reference engines and modules  </li>
+<li>Manifest must reference module.json  </li>
+</ul>
+<hr />
+<h2 id="engine-wireframe">Engine Wireframe<a class="toc-permalink" href="#engine-wireframe" title="Permanent link to this heading">&para;</a></h2>
+<p>RTT engines follow a strict multi‑layer layout:</p>
+<div class="codehilite"><pre><span></span><code># RTT Engine Name
+
+## Overview
+Block…
+
+## Operators
+Block…
+
+## Drift‑Tensor
+Block…
+
+## Coherence Anchors
+Block…
+
+## Regime‑Points
+Block…
+
+## Substrate Behavior
+Block…
+
+## Dimensional Rails
+Block…
+
+## Domain Behavior
+Block…
+
+## Examples
+Block…
+</code></pre></div>
+
+<p>Rules:</p>
+<ul>
+<li>Always 9 sections  </li>
+<li>Always in RTT canonical order  </li>
+<li>Examples must use prompt block formatting  </li>
+</ul>
+<hr />
+<h2 id="worksheet-wireframe">Worksheet Wireframe<a class="toc-permalink" href="#worksheet-wireframe" title="Permanent link to this heading">&para;</a></h2>
+<p>Worksheets follow the canonical worksheet layout:</p>
+<div class="codehilite"><pre><span></span><code># Worksheet Title
+
+## Section 1 — Identity
+Prompt block…
+
+## Section 2 — Operators
+Prompt block…
+
+## Section 3 — Drift
+Prompt block…
+
+## Section 4 — Coherence
+Prompt block…
+
+## Section 5 — Regime‑Points
+Prompt block…
+
+## Section 6 — Substrate
+Prompt block…
+
+## Section 7 — Dimensions
+Prompt block…
+
+## Section 8 — Domains
+Prompt block…
+
+## Section 9 — Synthesis
+Prompt block…
+</code></pre></div>
+
+<p>Rules:</p>
+<ul>
+<li>Always 9 sections  </li>
+<li>Always in RTT canonical order  </li>
+<li>No diagrams unless part of a teaching bundle  </li>
+</ul>
+<hr />
+<h2 id="poster-wireframe">Poster Wireframe<a class="toc-permalink" href="#poster-wireframe" title="Permanent link to this heading">&para;</a></h2>
+<p>Posters follow a large‑format layout:</p>
+<div class="codehilite"><pre><span></span><code># Poster Title
+
+## Identity
+Block…
+
+## Operators
+Block…
+
+## Drift
+Block…
+
+## Coherence
+Block…
+
+## Regime‑Points
+Block…
+
+## Substrate
+Block…
+
+## Dimensions
+Block…
+
+## Domains
+Block…
+
+## Synthesis
+Block…
+</code></pre></div>
+
+<p>Rules:</p>
+<ul>
+<li>Blocks may contain diagrams (SVG) or text  </li>
+<li>No decorative emojis or icons  </li>
+<li>Always 9 sections  </li>
+</ul>
+<hr />
+<h2 id="teaching-bundle-wireframe">Teaching Bundle Wireframe<a class="toc-permalink" href="#teaching-bundle-wireframe" title="Permanent link to this heading">&para;</a></h2>
+<p>Teaching bundles follow a multi‑layer instructional layout:</p>
+<div class="codehilite"><pre><span></span><code># Teaching Bundle Title
+
+## Lesson Overview
+Block…
+
+## Teaching Sequence
+1. Capture
+2. Analyze
+3. Drift
+4. Coherence
+5. Synthesis
+
+## Worksheets
+Blocks or links…
+
+## Posters
+Blocks or links…
+
+## Examples
+Blocks…
+</code></pre></div>
+
+<p>Rules:</p>
+<ul>
+<li>Sequence must follow canonical RTT teaching flow  </li>
+<li>Worksheets and posters must follow their wireframes  </li>
+<li>Examples must use prompt block formatting  </li>
+</ul>
+<hr />
+<h2 id="crosslinks">Cross‑Links<a class="toc-permalink" href="#crosslinks" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><code>index.md</code> — UI front‑door  </li>
+<li><code>unlock-logic.md</code> — unlock rules  </li>
+<li><code>dependency-graph.md</code> — dependency graph  </li>
+<li><code>flows.md</code> — UI flows  </li>
+<li><code>output-format.md</code> — output formatting  </li>
+<li><code>overlays.md</code> — spine overlays  </li>
+</ul>
+<hr />
+<h2 id="manifest">Manifest<a class="toc-permalink" href="#manifest" title="Permanent link to this heading">&para;</a></h2>
+<p>See <code>module.json</code> for the full registry of UI modules, templates, stacks, engines,<br />
+examples, and navigation structure.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/prompts/ui/wireframe.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/prompts/ui/wireframe.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Capture Grammar | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/prompts/engines/rtt_ipd_12/capture_grammar/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Capture Grammar" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/prompts/engines/rtt_ipd_12/capture_grammar/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Capture Grammar" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/prompts/engines/rtt_ipd_12/capture_grammar.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Capture Grammar",
+    "headline": "Capture Grammar",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/prompts/engines/rtt_ipd_12/capture_grammar/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#1-capture-as-the-first-engine-layer">1. Capture as the first engine layer</a></li>
+<li><a href="#2-capture-fields-canonical-set">2. Capture fields (canonical set)</a></li>
+<li><a href="#3-capture-operators-and-their-roles">3. Capture operators and their roles</a><ul>
+<li><a href="#map_process">map_process()</a></li>
+<li><a href="#compare_process">compare_process()</a></li>
+</ul>
+</li>
+<li><a href="#4-capture-layers-and-drifttensor-alignment">4. Capture layers and drift‑tensor alignment</a></li>
+<li><a href="#5-capture-modes-rtt1-vs-research">5. Capture modes (RTT‑1 vs research)</a><ul>
+<li><a href="#rtt1-teaching-mode">RTT‑1 teaching mode</a></li>
+<li><a href="#research-mode-rtt2312">Research mode (RTT‑2/3/12)</a></li>
+</ul>
+</li>
+<li><a href="#6-capture-drift-contract">6. Capture → Drift contract</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/prompts/" itemprop="item">
+                <span itemprop="name">Prompts</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/prompts/engines/" itemprop="item">
+                <span itemprop="name">Engines</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/prompts/engines/rtt_ipd_12/" itemprop="item">
+                <span itemprop="name">Rtt Ipd 12</span>
+              </a>
+            <meta itemprop="position" content="4" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Capture Grammar</span>
+            <meta itemprop="position" content="5" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Capture Grammar</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h2 id="1-capture-as-the-first-engine-layer">1. Capture as the first engine layer<a class="toc-permalink" href="#1-capture-as-the-first-engine-layer" title="Permanent link to this heading">&para;</a></h2>
+<p>In IPD‑12, <strong>capture</strong> is not “just description”—it is a formal structural act:</p>
+<ul>
+<li><strong>Define identity</strong> of each process  </li>
+<li><strong>Expose boundaries</strong> and constraints  </li>
+<li><strong>Lay out layers</strong> (what the process is made of)  </li>
+<li><strong>Trace operational flow</strong> (how it runs)  </li>
+<li><strong>Declare coherence baseline</strong> (what “makes sense” for this process)</li>
+</ul>
+<p>Only once capture is complete can drift, coherence, and paradox be evaluated.</p>
+<hr />
+<h2 id="2-capture-fields-canonical-set">2. Capture fields (canonical set)<a class="toc-permalink" href="#2-capture-fields-canonical-set" title="Permanent link to this heading">&para;</a></h2>
+<p>Every IPD‑12 process must be captured with the following fields:</p>
+<ul>
+<li><strong>Name:</strong> canonical identifier of the process  </li>
+<li><strong>Purpose:</strong> what the process is for  </li>
+<li><strong>Boundaries:</strong> limits, constraints, scope  </li>
+<li><strong>Structural layers:</strong> main components or strata  </li>
+<li><strong>Operational flow:</strong> sequence or topology of operations  </li>
+<li><strong>Coherence baseline:</strong> what counts as “working” or “aligned” for this process  </li>
+<li><strong>Domain:</strong> the domain(s) the process belongs to (music, physics, workflow, etc.)  </li>
+<li><strong>Regime level (RTT):</strong> surface/mid/deep (IPD‑12 stays ≤ deep)  </li>
+</ul>
+<p>This is the <strong>capture schema</strong> that <code>map_process()</code> is expected to fill.</p>
+<hr />
+<h2 id="3-capture-operators-and-their-roles">3. Capture operators and their roles<a class="toc-permalink" href="#3-capture-operators-and-their-roles" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="map_process"><strong>map_process()</strong><a class="toc-permalink" href="#map_process" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Role:</strong> primary capture operator  </li>
+<li><strong>Input:</strong> raw description of a process  </li>
+<li><strong>Output:</strong> structured capture object with all fields above  </li>
+<li><strong>Guarantee:</strong> process is now “visible” to IPD‑12</li>
+</ul>
+<h3 id="compare_process"><strong>compare_process()</strong><a class="toc-permalink" href="#compare_process" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Role:</strong> capture‑adjacent operator  </li>
+<li><strong>Input:</strong> two or more captured processes  </li>
+<li><strong>Output:</strong> shared structure, shared constraints, shared anchors  </li>
+<li><strong>Guarantee:</strong> coherence anchors can be declared across processes</li>
+</ul>
+<p>Capture grammar is therefore:</p>
+<div class="codehilite"><pre><span></span><code>map_process()  →  compare_process()
+</code></pre></div>
+
+<p>before any drift is allowed.</p>
+<hr />
+<h2 id="4-capture-layers-and-drifttensor-alignment">4. Capture layers and drift‑tensor alignment<a class="toc-permalink" href="#4-capture-layers-and-drifttensor-alignment" title="Permanent link to this heading">&para;</a></h2>
+<p>Capture grammar is explicitly aligned with the drift‑tensor:</p>
+<ul>
+<li><strong>Geometric layer:</strong> captured via structural layers and form  </li>
+<li><strong>Operational layer:</strong> captured via operational flow  </li>
+<li><strong>Temporal layer:</strong> captured via time, pacing, evolution notes  </li>
+<li><strong>Conceptual layer:</strong> captured via purpose and coherence baseline  </li>
+<li><strong>Domain layer:</strong> captured via domain field and regime level  </li>
+</ul>
+<p>If capture is incomplete in any of these, the corresponding drift‑tensor layer is <strong>locked</strong>.</p>
+<hr />
+<h2 id="5-capture-modes-rtt1-vs-research">5. Capture modes (RTT‑1 vs research)<a class="toc-permalink" href="#5-capture-modes-rtt1-vs-research" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="rtt1-teaching-mode"><strong>RTT‑1 teaching mode</strong><a class="toc-permalink" href="#rtt1-teaching-mode" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Simple language  </li>
+<li>Minimal fields (purpose, boundaries, layers, flow, coherence)  </li>
+<li>Used in classroom examples and student exercises  </li>
+</ul>
+<h3 id="research-mode-rtt2312"><strong>Research mode (RTT‑2/3/12)</strong><a class="toc-permalink" href="#research-mode-rtt2312" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Full schema  </li>
+<li>Domain‑rich capture  </li>
+<li>Regime‑aware notes  </li>
+<li>Used in multi‑domain drift analyzers and bridge documents  </li>
+</ul>
+<p>IPD‑12’s capture grammar supports both, but <code>p_Capture.md</code> is RTT‑1‑biased.</p>
+<hr />
+<h2 id="6-capture-drift-contract">6. Capture → Drift contract<a class="toc-permalink" href="#6-capture-drift-contract" title="Permanent link to this heading">&para;</a></h2>
+<p>The expansion clarifies a strict contract:</p>
+<ul>
+<li><strong>No drift without capture.</strong>  </li>
+<li><strong>No tensor without layered capture.</strong>  </li>
+<li><strong>No paradox without coherence baseline.</strong></li>
+</ul>
+<p>Formally:</p>
+<div class="codehilite"><pre><span></span><code>map_process()  is a hard prerequisite for:
+    drift(), drift_tensor(), detect_divergence(), align_coherence(), cross_system()
+</code></pre></div>
+
+<p>Capture is the <strong>root operator</strong> of IPD‑12.</p>
+<hr />
+<p>If you want, next step could be a <strong>capture schema snippet</strong> (JSON/YAML) you can embed directly into <code>p_Capture.md</code> for AI tooling and validation.</p>
+<hr />
+<p>Here is your <strong>IPD‑12 Capture Schema Snippet</strong>, formatted in both <strong>JSON</strong> and <strong>YAML</strong>, and fully aligned with the capture grammar visible in your active tab   <a href="https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md">github.com</a>.</p>
+<p>This schema is designed to drop directly into:</p>
+<div class="codehilite"><pre><span></span><code>docs/prompts/p_Capture.md
+</code></pre></div>
+
+<p>or into:</p>
+<div class="codehilite"><pre><span></span><code>frameworks/ipd_12/capture.schema.json
+</code></pre></div>
+
+<p>It matches the composite grammar you’re editing (Capture → Drift → Tensor → Divergence → Coherence → Cross‑System → Paradox).</p>
+<hr />
+<h1 id="ipd12-capture-schema-json"><strong>IPD‑12 Capture Schema (JSON)</strong><a class="toc-permalink" href="#ipd12-capture-schema-json" title="Permanent link to this heading">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;process&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;purpose&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;boundaries&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;string&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;structural_layers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;string&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;operational_flow&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;string&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;coherence_baseline&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;domain&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;regime_level&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;surface | mid | deep&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;capture_metadata&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;engine&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;RTT-IPD-12&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;required_fields&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="s2">&quot;name&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;purpose&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;boundaries&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;structural_layers&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;operational_flow&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;coherence_baseline&quot;</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<hr />
+<h1 id="ipd12-capture-schema-yaml"><strong>IPD‑12 Capture Schema (YAML)</strong><a class="toc-permalink" href="#ipd12-capture-schema-yaml" title="Permanent link to this heading">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code><span class="nt">process</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">  </span><span class="nt">purpose</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">  </span><span class="nt">boundaries</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">  </span><span class="nt">structural_layers</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">  </span><span class="nt">operational_flow</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">  </span><span class="nt">coherence_baseline</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">  </span><span class="nt">domain</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="w">  </span><span class="nt">regime_level</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">surface | mid | deep</span>
+
+<span class="nt">capture_metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1.0&quot;</span>
+<span class="w">  </span><span class="nt">engine</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RTT-IPD-12</span>
+<span class="w">  </span><span class="nt">required_fields</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">name</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">purpose</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">boundaries</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">structural_layers</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">operational_flow</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">coherence_baseline</span>
+</code></pre></div>
+
+<hr />
+<h1 id="schema-notes-aligned-with-your-active-tab"><strong>Schema Notes (aligned with your active tab)</strong><a class="toc-permalink" href="#schema-notes-aligned-with-your-active-tab" title="Permanent link to this heading">&para;</a></h1>
+<p>These fields map directly to the composite grammar you’re editing in <code>p_Capture.md</code>:</p>
+<ul>
+<li><strong>structural_layers</strong> → required for <code>drift_tensor()</code> unlock  </li>
+<li><strong>operational_flow</strong> → required for operational drift layer  </li>
+<li><strong>coherence_baseline</strong> → required for <code>align_coherence()</code>  </li>
+<li><strong>domain</strong> → required for domain drift layer  </li>
+<li><strong>regime_level</strong> → ensures IPD‑12 stays ≤ deep regime  </li>
+</ul>
+<p>This schema ensures <strong>map_process()</strong> always produces a complete capture object, enabling all downstream operators:</p>
+<div class="codehilite"><pre><span></span><code>map_process()
+compare_process()
+drift()
+detect_divergence()
+drift_tensor()
+align_coherence()
+cross_system()
+</code></pre></div>
+
+<p><a href="https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md">github.com</a></p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/prompts/engines/rtt_ipd_12/capture_grammar.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/prompts/engines/rtt_ipd_12/capture_grammar.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

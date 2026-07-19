@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Rtt Planetary Time Regimes A Compiler For Orbit Aligned Clocks | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/education/alignment/RTT_Planetary_Time_Regimes_A_Compiler_for_Orbit-Aligned_Clocks/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Rtt Planetary Time Regimes A Compiler For Orbit Aligned Clocks" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/education/alignment/RTT_Planetary_Time_Regimes_A_Compiler_for_Orbit-Aligned_Clocks/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Rtt Planetary Time Regimes A Compiler For Orbit Aligned Clocks" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/education/alignment/RTT_Planetary_Time_Regimes_A_Compiler_for_Orbit-Aligned_Clocks.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Rtt Planetary Time Regimes A Compiler For Orbit Aligned Clocks",
+    "headline": "Rtt Planetary Time Regimes A Compiler For Orbit Aligned Clocks",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/education/alignment/RTT_Planetary_Time_Regimes_A_Compiler_for_Orbit-Aligned_Clocks/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#rtt-triad-planetary-time-regimes">🜁 RTT Triad: Planetary Time Regimes</a></li>
+<li><a href="#abstract">Abstract</a></li>
+<li><a href="#1-motivation">1. Motivation</a></li>
+<li><a href="#2-structural-inputs">2. Structural Inputs</a></li>
+<li><a href="#3-integer-scaffold-narrative-gauge">3. Integer Scaffold (Narrative Gauge)</a></li>
+<li><a href="#4-solving-the-planetsecond">4. Solving the Planet‑Second</a></li>
+<li><a href="#5-regime-lockin">5. Regime Lock‑In</a></li>
+<li><a href="#6-drift-flux-and-versioning">6. Drift, Flux, and Versioning</a></li>
+<li><a href="#7-earth-as-a-regime">7. Earth as a Regime</a></li>
+<li><a href="#8-example-1328-earthrtt-regime">8. Example: 13×28 Earth‑RTT Regime</a></li>
+<li><a href="#9-applications">9. Applications</a></li>
+<li><a href="#10-conclusion">10. Conclusion</a></li>
+<li><a href="#11-regime-json-schema">11. Regime JSON Schema</a><ul>
+<li><a href="#111-schema-overview">11.1. Schema Overview</a></li>
+<li><a href="#112-json-schema-v1">11.2. JSON Schema (v1)</a></li>
+<li><a href="#113-field-notes">11.3. Field Notes</a></li>
+<li><a href="#114-example-earthrtt-1328-scaffold">11.4. Example: Earth‑RTT (13×28 Scaffold)</a></li>
+<li><a href="#115-implementation-notes">11.5. Implementation Notes</a></li>
+</ul>
+</li>
+<li><a href="#12-regime-translator-specification">12. Regime Translator Specification</a><ul>
+<li><a href="#121-translator-inputs">12.1. Translator Inputs</a></li>
+<li><a href="#122-core-translation-factors">12.2. Core Translation Factors</a></li>
+<li><a href="#123-forward-translation-planet-reference">12.3. Forward Translation (Planet → Reference)</a></li>
+<li><a href="#124-reverse-translation-reference-planet">12.4. Reverse Translation (Reference → Planet)</a></li>
+<li><a href="#125-drift-and-version-handling">12.5. Drift and Version Handling</a></li>
+<li><a href="#126-translator-guarantees">12.6. Translator Guarantees</a></li>
+</ul>
+</li>
+<li><a href="#13-planetary-time-compiler-api-contract">13. Planetary Time Compiler API Contract</a><ul>
+<li><a href="#131-compileregime">13.1. compileRegime()</a></li>
+<li><a href="#132-translatetoreference">13.2. translateToReference()</a></li>
+<li><a href="#133-translatefromreference">13.3. translateFromReference()</a></li>
+<li><a href="#134-convertbetweenregimes">13.4. convertBetweenRegimes()</a></li>
+<li><a href="#135-listregimes">13.5. listRegimes()</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/education/" itemprop="item">
+                <span itemprop="name">Education</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/education/alignment/" itemprop="item">
+                <span itemprop="name">Alignment</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Rtt Planetary Time Regimes A Compiler For Orbit Aligned Clocks</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Rtt Planetary Time Regimes A Compiler For Orbit Aligned Clocks</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h2 id="rtt-triad-planetary-time-regimes">🜁 RTT Triad: Planetary Time Regimes<a class="toc-permalink" href="#rtt-triad-planetary-time-regimes" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Substrate —</strong> Orbital and rotational periods measured in a stable reference frame. These values are treated as invariants: the planet’s structural rhythm, independent of any narrative unit system.</p>
+<p><strong>Gauge —</strong> Integer scaffolds chosen by the operator (days per year, hours per day, minutes per hour, seconds per minute). These define the shape of the calendar and clock without constraining the substrate.</p>
+<p><strong>Translator —</strong> The derived planet‑second and its conversion factors, enabling lossless mapping between the scaffold and the substrate, and between any two planetary regimes.</p>
+<hr />
+<h2 id="abstract">Abstract<a class="toc-permalink" href="#abstract" title="Permanent link to this heading">&para;</a></h2>
+<p>This document introduces the <strong>RTT Planetary Time Compiler</strong>, a regime‑aware system for generating coherent, orbit‑aligned time standards for any planetary body. Instead of forcing inherited Earth‑centric units (seconds, minutes, hours, days, months) onto non‑integer orbital and rotational ratios, the compiler derives a <strong>planet‑specific second</strong> from structural measurements of orbit and rotation. Integer scaffolds—such as days per year or hours per day—become narrative gauges layered atop substrate truth, not constraints imposed upon it. The result is a universal, translation‑safe time regime that preserves structural invariants while enabling clean, canonical calendars for any world encountered.</p>
+<hr />
+<h2 id="1-motivation">1. Motivation<a class="toc-permalink" href="#1-motivation" title="Permanent link to this heading">&para;</a></h2>
+<p>Human timekeeping is a fossil of historical compromises: fixed seconds, uneven months, leap rules, and integer expectations layered over non‑integer orbital mechanics. These conventions work locally but collapse when extended to other planets or interstellar navigation.</p>
+<p>RTT reframes the problem. Time is not a fixed unit but a <strong>regime</strong>: a mapping between structural measurements and narrative scaffolds. The compiler formalizes this mapping, allowing:</p>
+<ul>
+<li>Orbit‑aligned calendars with integer structure.</li>
+<li>Planet‑specific seconds that maintain coherence.</li>
+<li>Translation between regimes without loss of precision.</li>
+<li>Containment of legacy systems (e.g., Gregorian/SI) without disruption.</li>
+</ul>
+<p>This is not a replacement for existing time systems; it is a <strong>parallel, canonical layer</strong> that clarifies structure and enables cross‑planetary consistency.</p>
+<hr />
+<h2 id="2-structural-inputs">2. Structural Inputs<a class="toc-permalink" href="#2-structural-inputs" title="Permanent link to this heading">&para;</a></h2>
+<p>Every planetary time regime begins with two substrate measurements:</p>
+<ul>
+<li><strong>Orbital period</strong> $$T_{\text{orbit}}$$ : the duration of one revolution around the star.</li>
+<li><strong>Rotational period</strong> $$T_{\text{rot}}$$ : the duration of one axial rotation.</li>
+</ul>
+<p>Both are measured in a stable reference time (e.g., ship‑time or SI seconds). These values are treated as <strong>invariants</strong>—the substrate truth from which all narrative gauges derive.</p>
+<hr />
+<h2 id="3-integer-scaffold-narrative-gauge">3. Integer Scaffold (Narrative Gauge)<a class="toc-permalink" href="#3-integer-scaffold-narrative-gauge" title="Permanent link to this heading">&para;</a></h2>
+<p>RTT separates structure from narrative. The compiler allows the operator to choose an integer scaffold:</p>
+<ul>
+<li><strong>Days per year</strong> $$D_y$$  </li>
+<li><strong>Hours per day</strong> $$H_d$$  </li>
+<li><strong>Minutes per hour</strong> $$M_h$$  </li>
+<li><strong>Seconds per minute</strong> $$S_m$$</li>
+</ul>
+<p>These integers define the <em>shape</em> of the calendar and clock. They do <strong>not</strong> constrain the substrate; instead, they determine how the substrate is expressed.</p>
+<p>The total number of “ticks” in the narrative year is:</p>
+<p>$$N_{\text{ticks}} = D_y \cdot H_d \cdot M_h \cdot S_m$$</p>
+<hr />
+<h2 id="4-solving-the-planetsecond">4. Solving the Planet‑Second<a class="toc-permalink" href="#4-solving-the-planetsecond" title="Permanent link to this heading">&para;</a></h2>
+<p>To align the narrative scaffold with the structural orbit, the compiler derives the <strong>planet‑second</strong>:</p>
+<p>$$T_{\text{planet-second}} = \frac{T_{\text{orbit}}}{N_{\text{ticks}}}$$</p>
+<p>This value replaces the inherited SI second within the regime. All higher units follow:</p>
+<ul>
+<li>Planet‑minute: $$S_m \cdot T_{\text{planet-second}}$$</li>
+<li>Planet‑hour: $$M_h \cdot S_m \cdot T_{\text{planet-second}}$$</li>
+<li>Planet‑day: $$H_d \cdot M_h \cdot S_m \cdot T_{\text{planet-second}}$$</li>
+</ul>
+<p>The scaffold remains perfectly integer; the unit absorbs the non‑integer substrate.</p>
+<hr />
+<h2 id="5-regime-lockin">5. Regime Lock‑In<a class="toc-permalink" href="#5-regime-lockin" title="Permanent link to this heading">&para;</a></h2>
+<p>Once computed, the regime is stored as a versioned profile:</p>
+<ul>
+<li>Planet identifier  </li>
+<li>Epoch alignment  </li>
+<li>$$T_{\text{orbit}}$$ , $$T_{\text{rot}}$$  </li>
+<li>Integer scaffold  </li>
+<li>Derived $$T_{\text{planet-second}}$$  </li>
+<li>Translator to/from reference time  </li>
+</ul>
+<p>This enables:</p>
+<ul>
+<li>Cross‑planetary scheduling  </li>
+<li>Calendar rendering  </li>
+<li>Time translation between regimes  </li>
+<li>Containment of legacy systems (e.g., Gregorian/SI)</li>
+</ul>
+<hr />
+<h2 id="6-drift-flux-and-versioning">6. Drift, Flux, and Versioning<a class="toc-permalink" href="#6-drift-flux-and-versioning" title="Permanent link to this heading">&para;</a></h2>
+<p>Planetary rotation and orbit can drift over time due to tidal forces, internal dynamics, or perturbations. RTT handles this through <strong>versioned regimes</strong>:</p>
+<ul>
+<li><strong>v1</strong>: initial scan  </li>
+<li><strong>v2</strong>: updated structural measurements  </li>
+<li><strong>v3</strong>: long‑term drift corrections  </li>
+</ul>
+<p>Each regime is tied to an epoch, and the compiler maintains translation continuity across versions.</p>
+<hr />
+<h2 id="7-earth-as-a-regime">7. Earth as a Regime<a class="toc-permalink" href="#7-earth-as-a-regime" title="Permanent link to this heading">&para;</a></h2>
+<p>Earth’s current SI/Gregorian system is treated as a <strong>legacy gauge</strong>. The compiler can generate an Earth‑RTT regime using any chosen scaffold (e.g., 13×28 months, 24 hours/day). The derived Earth‑RTT second becomes a clean, orbit‑aligned unit, while SI seconds remain available for compatibility.</p>
+<p>This approach preserves all existing human systems while enabling a structurally coherent alternative.</p>
+<hr />
+<h2 id="8-example-1328-earthrtt-regime">8. Example: 13×28 Earth‑RTT Regime<a class="toc-permalink" href="#8-example-1328-earthrtt-regime" title="Permanent link to this heading">&para;</a></h2>
+<p>Given:</p>
+<ul>
+<li>$$D_y = 364$$  </li>
+<li>$$H_d = 24$$  </li>
+<li>$$M_h = 60$$  </li>
+<li>$$S_m = 60$$  </li>
+</ul>
+<p>Total ticks:</p>
+<p>$$N_{\text{ticks}} = 364 \cdot 24 \cdot 60 \cdot 60 = 31{,}449{,}600$$</p>
+<p>Given Earth’s orbital period:</p>
+<p>$$T_{\text{orbit}} \approx 31{,}556{,}925.9747 \text{ SI seconds}$$</p>
+<p>Planet‑second:</p>
+<p>$$T_{\text{planet-second}} \approx 1.003402 \text{ SI seconds}$$</p>
+<p>This yields:</p>
+<ul>
+<li>A perfectly integer 13×28 calendar  </li>
+<li>A coherent orbit‑aligned year  </li>
+<li>A clean translation layer between SI and RTT  </li>
+</ul>
+<hr />
+<h2 id="9-applications">9. Applications<a class="toc-permalink" href="#9-applications" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>Interstellar navigation  </li>
+<li>Planetary colonization  </li>
+<li>Multi‑regime scheduling  </li>
+<li>Scientific measurement  </li>
+<li>Narrative‑free structural analysis  </li>
+<li>Canon‑aligned worldbuilding and simulation  </li>
+</ul>
+<hr />
+<h2 id="10-conclusion">10. Conclusion<a class="toc-permalink" href="#10-conclusion" title="Permanent link to this heading">&para;</a></h2>
+<p>The RTT Planetary Time Compiler replaces inherited constraints with structural clarity. By deriving the unit from the orbit rather than forcing the orbit into the unit, it enables a universal, coherent, and translation‑safe approach to timekeeping across worlds.</p>
+<p>This is not a correction of Earth’s time system; it is a <strong>parallel canonical layer</strong> that reveals structure, preserves narrative, and unlocks new regimes for exploration.</p>
+<hr />
+<h2 id="11-regime-json-schema">11. Regime JSON Schema<a class="toc-permalink" href="#11-regime-json-schema" title="Permanent link to this heading">&para;</a></h2>
+<p>The <strong>RTT Planetary Time Regime</strong> is represented as a structured, machine‑readable object. This schema captures substrate measurements, narrative scaffold choices, derived units, and translation metadata. It enables deterministic conversion between regimes and supports versioned updates as planetary measurements drift.</p>
+<h3 id="111-schema-overview">11.1. Schema Overview<a class="toc-permalink" href="#111-schema-overview" title="Permanent link to this heading">&para;</a></h3>
+<p>A regime object contains three layers:</p>
+<ul>
+<li><strong>substrate</strong> — measured orbital and rotational periods in reference seconds  </li>
+<li><strong>scaffold</strong> — chosen integer structure for the calendar and clock  </li>
+<li><strong>derived</strong> — computed planet‑second and unit expansions  </li>
+<li><strong>metadata</strong> — identifiers, epoch alignment, and versioning</li>
+</ul>
+<h3 id="112-json-schema-v1">11.2. JSON Schema (v1)<a class="toc-permalink" href="#112-json-schema-v1" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;planet_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;regime_version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;epoch_reference&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+
+<span class="w">  </span><span class="nt">&quot;substrate&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;orbit_period_seconds&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;rotation_period_seconds&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;measurement_reference&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+
+<span class="w">  </span><span class="nt">&quot;scaffold&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;days_per_year&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;integer&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;hours_per_day&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;integer&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;minutes_per_hour&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;integer&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;seconds_per_minute&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;integer&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+
+<span class="w">  </span><span class="nt">&quot;derived&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;planet_second_seconds&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;planet_minute_seconds&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;planet_hour_seconds&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;planet_day_seconds&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;ticks_per_year&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;integer&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+
+<span class="w">  </span><span class="nt">&quot;translation&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;to_reference_factor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;from_reference_factor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="113-field-notes">11.3. Field Notes<a class="toc-permalink" href="#113-field-notes" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>planet_id</strong> — canonical identifier (e.g., <code>"earth"</code>, <code>"kepler-442b"</code>).  </li>
+<li><strong>regime_version</strong> — semantic versioning for drift updates (e.g., <code>"1.0.0"</code>).  </li>
+<li><strong>epoch_reference</strong> — timestamp marking when the regime was locked.  </li>
+<li><strong>measurement_reference</strong> — the time standard used during scanning (e.g., <code>"SI"</code>, <code>"ship-time"</code>).  </li>
+<li><strong>ticks_per_year</strong> — computed as  </li>
+</ul>
+<div class="codehilite"><pre><span></span><code>  $$D_y \cdot H_d \cdot M_h \cdot S_m$$
+</code></pre></div>
+
+<ul>
+<li><strong>planet_second_seconds</strong> — the core RTT unit, defined as  </li>
+</ul>
+<div class="codehilite"><pre><span></span><code>  $$\frac{T_{\text{orbit}}}{\text{ticks\_per\_year}}$$
+</code></pre></div>
+
+<ul>
+<li><strong>translation factors</strong> — multipliers for converting between planet‑time and the reference time standard.</li>
+</ul>
+<h3 id="114-example-earthrtt-1328-scaffold">11.4. Example: Earth‑RTT (13×28 Scaffold)<a class="toc-permalink" href="#114-example-earthrtt-1328-scaffold" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;planet_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;earth&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;regime_version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0.0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;epoch_reference&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-01T00:00:00Z&quot;</span><span class="p">,</span>
+
+<span class="w">  </span><span class="nt">&quot;substrate&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;orbit_period_seconds&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">31556925.9747</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;rotation_period_seconds&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">86164.0905</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;measurement_reference&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SI&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+
+<span class="w">  </span><span class="nt">&quot;scaffold&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;days_per_year&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">364</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;hours_per_day&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;minutes_per_hour&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;seconds_per_minute&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span>
+<span class="w">  </span><span class="p">},</span>
+
+<span class="w">  </span><span class="nt">&quot;derived&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;planet_second_seconds&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1.003402</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;planet_minute_seconds&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">60.20412</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;planet_hour_seconds&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">3612.2472</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;planet_day_seconds&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">86693.9328</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;ticks_per_year&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">31449600</span>
+<span class="w">  </span><span class="p">},</span>
+
+<span class="w">  </span><span class="nt">&quot;translation&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;to_reference_factor&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">1.003402</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;from_reference_factor&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.996609</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="115-implementation-notes">11.5. Implementation Notes<a class="toc-permalink" href="#115-implementation-notes" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>The schema is intentionally minimal; additional fields (e.g., drift models, uncertainty bounds, or multi‑star orbital descriptors) can be added in later versions.  </li>
+<li>Regimes are immutable once published; updates require a new <code>regime_version</code>.  </li>
+<li>Translators must always reference the <code>epoch_reference</code> to avoid ambiguity across drift epochs.</li>
+</ul>
+<hr />
+<p>Here is a companion section you can paste directly into your Markdown file. It sits naturally after the JSON Schema and completes the pair: <strong>the regime object</strong> and <strong>the translator that operates on it</strong>. The structure matches your TriadicFrameworks voice and the style of the document you’re editing in your active tab .</p>
+<hr />
+<h2 id="12-regime-translator-specification">12. Regime Translator Specification<a class="toc-permalink" href="#12-regime-translator-specification" title="Permanent link to this heading">&para;</a></h2>
+<p>The <strong>Regime Translator</strong> is the operational layer of the RTT Planetary Time Compiler. It converts timestamps between a planet‑specific regime and a reference time standard (e.g., SI or ship‑time). The translator uses the regime’s derived unit definitions to ensure lossless, deterministic mapping across worlds and epochs.</p>
+<h3 id="121-translator-inputs">12.1. Translator Inputs<a class="toc-permalink" href="#121-translator-inputs" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Reference timestamp</strong> — expressed in the measurement standard used during scanning (e.g., SI seconds since epoch).</li>
+<li><strong>Planetary timestamp</strong> — expressed in the planet’s own scaffold (year, day, hour, minute, second).</li>
+<li><strong>Regime object</strong> — the JSON structure defined in Section 11, containing substrate measurements, scaffold integers, derived units, and translation factors.</li>
+</ul>
+<h3 id="122-core-translation-factors">12.2. Core Translation Factors<a class="toc-permalink" href="#122-core-translation-factors" title="Permanent link to this heading">&para;</a></h3>
+<p>Each regime defines two multipliers:</p>
+<ul>
+<li>
+<p><strong>to_reference_factor</strong><br />
+  Converts one planet‑second into reference seconds.</p>
+</li>
+<li>
+<p><strong>from_reference_factor</strong><br />
+  Converts one reference second into planet‑seconds.</p>
+</li>
+</ul>
+<p>These are exact reciprocals:</p>
+<div class="codehilite"><pre><span></span><code>$$\text{from\_reference\_factor} = \frac{1}{\text{to\_reference\_factor}}$$
+</code></pre></div>
+
+<h3 id="123-forward-translation-planet-reference">12.3. Forward Translation (Planet → Reference)<a class="toc-permalink" href="#123-forward-translation-planet-reference" title="Permanent link to this heading">&para;</a></h3>
+<p>To convert a planetary timestamp into reference seconds:</p>
+<ol>
+<li>Convert the planetary timestamp into <strong>planet‑seconds</strong> using the scaffold:</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>   $$T_{\text{planet}} = (((Y \cdot D_y + d) \cdot H_d + h) \cdot M_h + m) \cdot S_m + s$$
+</code></pre></div>
+
+<ol start="3">
+<li>Convert planet‑seconds into reference seconds:</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>   $$T_{\text{ref}} = T_{\text{planet}} \cdot \text{to\_reference\_factor}$$
+</code></pre></div>
+
+<ol start="5">
+<li>Add the regime’s epoch offset if needed.</li>
+</ol>
+<h3 id="124-reverse-translation-reference-planet">12.4. Reverse Translation (Reference → Planet)<a class="toc-permalink" href="#124-reverse-translation-reference-planet" title="Permanent link to this heading">&para;</a></h3>
+<p>To convert reference seconds into a planetary timestamp:</p>
+<ol>
+<li>Convert reference seconds into planet‑seconds:</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>   $$T_{\text{planet}} = T_{\text{ref}} \cdot \text{from\_reference\_factor}$$
+</code></pre></div>
+
+<ol start="3">
+<li>
+<p>Decompose planet‑seconds into scaffold units:<br />
+   - seconds → minutes<br />
+   - minutes → hours<br />
+   - hours → days<br />
+   - days → years  </p>
+</li>
+<li>
+<p>Apply epoch alignment.</p>
+</li>
+</ol>
+<h3 id="125-drift-and-version-handling">12.5. Drift and Version Handling<a class="toc-permalink" href="#125-drift-and-version-handling" title="Permanent link to this heading">&para;</a></h3>
+<p>When a planet’s orbital or rotational measurements change, a new regime version is created. Translators must:</p>
+<ul>
+<li>Use the <strong>epoch_reference</strong> to determine which regime version applies.</li>
+<li>Convert timestamps across versions by routing through the reference time standard.</li>
+<li>Maintain continuity even when the planet‑second changes between versions.</li>
+</ul>
+<h3 id="126-translator-guarantees">12.6. Translator Guarantees<a class="toc-permalink" href="#126-translator-guarantees" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Deterministic</strong> — identical inputs always yield identical outputs.</li>
+<li><strong>Lossless</strong> — no rounding occurs until the final unit decomposition.</li>
+<li><strong>Composable</strong> — any two regimes can be bridged through the reference standard.</li>
+<li><strong>Version‑safe</strong> — timestamps remain valid across drift epochs.</li>
+</ul>
+<hr />
+<h2 id="13-planetary-time-compiler-api-contract">13. Planetary Time Compiler API Contract<a class="toc-permalink" href="#13-planetary-time-compiler-api-contract" title="Permanent link to this heading">&para;</a></h2>
+<p>The compiler exposes a minimal API for generating and using planetary time regimes. This contract is implementation‑agnostic and suitable for future tooling.</p>
+<h3 id="131-compileregime">13.1. <code>compileRegime()</code><a class="toc-permalink" href="#131-compileregime" title="Permanent link to this heading">&para;</a></h3>
+<p>Generates a new regime object.</p>
+<p><strong>Inputs:</strong></p>
+<ul>
+<li><code>planet_id</code>  </li>
+<li><code>orbit_period_seconds</code>  </li>
+<li><code>rotation_period_seconds</code>  </li>
+<li><code>scaffold</code> (days/year, hours/day, minutes/hour, seconds/minute)  </li>
+<li><code>epoch_reference</code>  </li>
+<li><code>measurement_reference</code></li>
+</ul>
+<p><strong>Output:</strong></p>
+<ul>
+<li>A complete regime object (JSON) conforming to Section 11.</li>
+</ul>
+<h3 id="132-translatetoreference">13.2. <code>translateToReference()</code><a class="toc-permalink" href="#132-translatetoreference" title="Permanent link to this heading">&para;</a></h3>
+<p>Converts a planetary timestamp into reference seconds.</p>
+<p><strong>Inputs:</strong></p>
+<ul>
+<li><code>planet_timestamp</code>  </li>
+<li><code>regime</code>  </li>
+</ul>
+<p><strong>Output:</strong></p>
+<ul>
+<li><code>reference_seconds</code></li>
+</ul>
+<h3 id="133-translatefromreference">13.3. <code>translateFromReference()</code><a class="toc-permalink" href="#133-translatefromreference" title="Permanent link to this heading">&para;</a></h3>
+<p>Converts reference seconds into a planetary timestamp.</p>
+<p><strong>Inputs:</strong></p>
+<ul>
+<li><code>reference_seconds</code>  </li>
+<li><code>regime</code>  </li>
+</ul>
+<p><strong>Output:</strong></p>
+<ul>
+<li><code>planet_timestamp</code></li>
+</ul>
+<h3 id="134-convertbetweenregimes">13.4. <code>convertBetweenRegimes()</code><a class="toc-permalink" href="#134-convertbetweenregimes" title="Permanent link to this heading">&para;</a></h3>
+<p>Converts a timestamp from one planetary regime to another.</p>
+<p><strong>Inputs:</strong></p>
+<ul>
+<li><code>source_timestamp</code>  </li>
+<li><code>source_regime</code>  </li>
+<li><code>target_regime</code>  </li>
+</ul>
+<p><strong>Output:</strong></p>
+<ul>
+<li><code>target_timestamp</code></li>
+</ul>
+<p><strong>Process:</strong></p>
+<ol>
+<li>Convert source timestamp → reference seconds.  </li>
+<li>Convert reference seconds → target timestamp.</li>
+</ol>
+<h3 id="135-listregimes">13.5. <code>listRegimes()</code><a class="toc-permalink" href="#135-listregimes" title="Permanent link to this heading">&para;</a></h3>
+<p>Returns all known regimes for a given planet, including version history.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/education/alignment/RTT_Planetary_Time_Regimes_A_Compiler_for_Orbit-Aligned_Clocks.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/education/alignment/RTT_Planetary_Time_Regimes_A_Compiler_for_Orbit-Aligned_Clocks.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

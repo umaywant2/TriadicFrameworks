@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Architecture Overview | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/ARCHITECTURE_OVERVIEW/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Architecture Overview" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/ARCHITECTURE_OVERVIEW/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Architecture Overview" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/Governance_Substrate_Model/Analyzer/ARCHITECTURE_OVERVIEW.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Architecture Overview",
+    "headline": "Architecture Overview",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/ARCHITECTURE_OVERVIEW/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#core-purpose">Core Purpose</a></li>
+<li><a href="#architectural-layers">Architectural Layers</a><ul>
+<li><a href="#1-input-layer">1. Input Layer</a></li>
+<li><a href="#2-structural-vectorizer">2. Structural Vectorizer</a></li>
+<li><a href="#3-invariant-evaluation-layer">3. Invariant Evaluation Layer</a></li>
+<li><a href="#4-crossaxis-physics-engine">4. Cross‑Axis Physics Engine</a></li>
+<li><a href="#5-basin-transition-layer">5. Basin &amp; Transition Layer</a></li>
+<li><a href="#6-output-narrative-layer">6. Output &amp; Narrative Layer</a></li>
+</ul>
+</li>
+<li><a href="#data-flow-overview">Data Flow Overview</a></li>
+<li><a href="#dependencies">Dependencies</a></li>
+<li><a href="#integration-points">Integration Points</a></li>
+<li><a href="#extensibility">Extensibility</a></li>
+<li><a href="#directory-structure">Directory Structure</a></li>
+<li><a href="#closing-note">Closing Note</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Governance_Substrate_Model/" itemprop="item">
+                <span itemprop="name">Governance Substrate Model</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/" itemprop="item">
+                <span itemprop="name">Analyzer</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Architecture Overview</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Architecture Overview</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="governance-alignment-analyzer-architecture-overview">Governance Alignment Analyzer — Architecture Overview<a class="toc-permalink" href="#governance-alignment-analyzer-architecture-overview" title="Permanent link to this heading">&para;</a></h1>
+<p><em>A structural interpretation engine built on the Governance Substrate Model (GSM)</em></p>
+<p>The Governance Alignment Analyzer is the interpretive layer of the Governance Substrate Model. It transforms natural‑language descriptions, historical profiles, and structural vectors into coherent positions inside the governance manifold, evaluates alignment with GSM invariants, detects drift, and identifies structural transitions.</p>
+<p>This document provides a high‑level architectural map of the Analyzer: its components, data flows, dependencies, and integration points.</p>
+<hr />
+<h2 id="core-purpose">Core Purpose<a class="toc-permalink" href="#core-purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>The Analyzer answers four structural questions:</p>
+<ul>
+<li>
+<p><strong>Where does a system sit in the manifold?</strong><br />
+  It converts descriptions into five‑axis vectors and locates them in structural space.</p>
+</li>
+<li>
+<p><strong>Is the system coherent with GSM invariants?</strong><br />
+  It evaluates alignment with behavioral invariants, awareness layers, and substrate rules.</p>
+</li>
+<li>
+<p><strong>How is the system drifting?</strong><br />
+  It computes drift vectors, identifies active cross‑axis forces, and detects early transitions.</p>
+</li>
+<li>
+<p><strong>Which basin or structural family does it belong to?</strong><br />
+  It determines the nearest equilibrium basin and evaluates transition pathways.</p>
+</li>
+</ul>
+<p>These capabilities make the Analyzer the “structural reasoning engine” of the GSM.</p>
+<hr />
+<h2 id="architectural-layers">Architectural Layers<a class="toc-permalink" href="#architectural-layers" title="Permanent link to this heading">&para;</a></h2>
+<p>The Analyzer is composed of six major layers. Each layer is modular and can be extended independently.</p>
+<h3 id="1-input-layer">1. Input Layer<a class="toc-permalink" href="#1-input-layer" title="Permanent link to this heading">&para;</a></h3>
+<p>Handles all incoming representations:</p>
+<ul>
+<li>natural‑language descriptions  </li>
+<li>structural vectors  </li>
+<li>historical profiles  </li>
+<li>reform proposals  </li>
+<li>simulation scenarios  </li>
+</ul>
+<p>This layer normalizes inputs into a consistent internal format.</p>
+<h3 id="2-structural-vectorizer">2. Structural Vectorizer<a class="toc-permalink" href="#2-structural-vectorizer" title="Permanent link to this heading">&para;</a></h3>
+<p>Maps normalized inputs into the five‑axis structural vector:</p>
+<ul>
+<li><strong>C</strong> — Centralization  </li>
+<li><strong>M</strong> — Method  </li>
+<li><strong>O</strong> — Oversight  </li>
+<li><strong>A</strong> — Access  </li>
+<li><strong>T</strong> — Timing  </li>
+</ul>
+<p>This is the Analyzer’s “coordinate generator.”</p>
+<h3 id="3-invariant-evaluation-layer">3. Invariant Evaluation Layer<a class="toc-permalink" href="#3-invariant-evaluation-layer" title="Permanent link to this heading">&para;</a></h3>
+<p>Checks the vector against GSM invariants:</p>
+<ul>
+<li>behavioral invariants  </li>
+<li>awareness layers  </li>
+<li>absorptive structures  </li>
+<li>regime‑mode constraints  </li>
+<li>phase‑discipline rules  </li>
+</ul>
+<p>Outputs include alignment flags, warnings, and coherence notes.</p>
+<h3 id="4-crossaxis-physics-engine">4. Cross‑Axis Physics Engine<a class="toc-permalink" href="#4-crossaxis-physics-engine" title="Permanent link to this heading">&para;</a></h3>
+<p>Applies structural forces defined in the governance physics module:</p>
+<ul>
+<li>centralization ↔ oversight  </li>
+<li>method ↔ access  </li>
+<li>oversight ↔ timing  </li>
+<li>method ↔ centralization  </li>
+<li>access ↔ oversight  </li>
+</ul>
+<p>This layer determines drift direction, compensatory movement, and structural tension.</p>
+<h3 id="5-basin-transition-layer">5. Basin &amp; Transition Layer<a class="toc-permalink" href="#5-basin-transition-layer" title="Permanent link to this heading">&para;</a></h3>
+<p>Uses the manifold, equilibrium basins, and transition graph to determine:</p>
+<ul>
+<li>nearest basin  </li>
+<li>basin stability  </li>
+<li>transition cost  </li>
+<li>structural coherence of movement  </li>
+<li>intermediate states  </li>
+<li>likely drift pathways  </li>
+</ul>
+<p>This layer is the Analyzer’s “structural geography engine.”</p>
+<h3 id="6-output-narrative-layer">6. Output &amp; Narrative Layer<a class="toc-permalink" href="#6-output-narrative-layer" title="Permanent link to this heading">&para;</a></h3>
+<p>Generates structured outputs:</p>
+<ul>
+<li>normalized vector  </li>
+<li>invariant alignment report  </li>
+<li>coherence score  </li>
+<li>drift vector  </li>
+<li>active forces  </li>
+<li>basin classification  </li>
+<li>transition pathway  </li>
+<li>explanatory narrative  </li>
+</ul>
+<p>These outputs feed into simulators, dashboards, and teaching tools.</p>
+<hr />
+<h2 id="data-flow-overview">Data Flow Overview<a class="toc-permalink" href="#data-flow-overview" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>Input → Vectorizer → Invariant Checker → Physics Engine → Basin Classifier → Drift/Transition Engine → Output
+</code></pre></div>
+
+<p>Each stage enriches the structural understanding of the system.</p>
+<hr />
+<h2 id="dependencies">Dependencies<a class="toc-permalink" href="#dependencies" title="Permanent link to this heading">&para;</a></h2>
+<p>The Analyzer depends on four GSM modules:</p>
+<ul>
+<li>
+<p><strong>governance_manifold.yaml</strong><br />
+  Defines the structural space and coordinate bounds.</p>
+</li>
+<li>
+<p><strong>governance_physics.yaml</strong><br />
+  Defines cross‑axis interaction rules and structural forces.</p>
+</li>
+<li>
+<p><strong>equilibrium_basins.yaml</strong><br />
+  Defines stable structural families and basin conditions.</p>
+</li>
+<li>
+<p><strong>transition_graph.yaml</strong><br />
+  Defines weighted transitions between basins.</p>
+</li>
+</ul>
+<p>These modules act as the Analyzer’s “laws of motion.”</p>
+<hr />
+<h2 id="integration-points">Integration Points<a class="toc-permalink" href="#integration-points" title="Permanent link to this heading">&para;</a></h2>
+<p>The Analyzer integrates with:</p>
+<ul>
+<li>
+<p><strong>Transition Simulator</strong><br />
+  For stepwise drift modeling.</p>
+</li>
+<li>
+<p><strong>Historical Profiles</strong><br />
+  For reconstructing structural evolution across eras.</p>
+</li>
+<li>
+<p><strong>Student Worksheets</strong><br />
+  For teaching structural literacy.</p>
+</li>
+<li>
+<p><strong>Developer Tools</strong><br />
+  For building governance‑aware applications.</p>
+</li>
+<li>
+<p><strong>Triadic Observer Layer</strong><br />
+  For history → now → future coherence.</p>
+</li>
+</ul>
+<hr />
+<h2 id="extensibility">Extensibility<a class="toc-permalink" href="#extensibility" title="Permanent link to this heading">&para;</a></h2>
+<p>The Analyzer is designed for extension:</p>
+<ul>
+<li>new invariants  </li>
+<li>new basin definitions  </li>
+<li>new transition pathways  </li>
+<li>new structural axes (if future GSM versions expand)  </li>
+<li>new adapters for domain‑specific governance systems  </li>
+</ul>
+<p>The architecture supports modular growth without breaking existing tools.</p>
+<hr />
+<h2 id="directory-structure">Directory Structure<a class="toc-permalink" href="#directory-structure" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>Analyzer/
+│
+├── README.md
+├── ARCHITECTURE_OVERVIEW.md   ← this file
+├── alignment_analyzer.md
+├── statement_mapping_rules.yaml
+├── invariant_check_rules.yaml
+├── coherence_scoring.yaml
+├── drift_detection.yaml
+├── regime_shift_detection.yaml
+├── analyzer_pipeline.yaml
+└── dynamic_cards_spec.md
+</code></pre></div>
+
+<hr />
+<h2 id="closing-note">Closing Note<a class="toc-permalink" href="#closing-note" title="Permanent link to this heading">&para;</a></h2>
+<p>This architecture is the backbone of the governance substrate science canon. It gives students, developers, and researchers a coherent, non‑ideological way to understand governance systems as structural objects that drift, stabilize, and interact inside a shared manifold.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Governance_Substrate_Model/Analyzer/ARCHITECTURE_OVERVIEW.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/Governance_Substrate_Model/Analyzer/ARCHITECTURE_OVERVIEW.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

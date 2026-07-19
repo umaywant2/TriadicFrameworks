@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Vectors | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/media_substrate_model/vectors/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Vectors" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/media_substrate_model/vectors/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Vectors" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/media_substrate_model/vectors.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Vectors",
+    "headline": "Vectors",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/media_substrate_model/vectors/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#signal-integrity-s">🛰 Signal Integrity (S)</a></li>
+<li><a href="#distribution-topology-d">🌐 Distribution Topology (D)</a></li>
+<li><a href="#attention-dynamics-a">⚡ Attention Dynamics (A)</a></li>
+<li><a href="#narrative-coherence-n">🧩 Narrative Coherence (N)</a></li>
+<li><a href="#temporal-cadence-t">⏱ Temporal Cadence (T)</a></li>
+<li><a href="#vector-summary">🧱 Vector Summary</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/media_substrate_model/" itemprop="item">
+                <span itemprop="name">Media Substrate Model</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Vectors</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Vectors</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="media-substrate-vectors">📐 Media Substrate Vectors<a class="toc-permalink" href="#media-substrate-vectors" title="Permanent link to this heading">&para;</a></h1>
+<p>Media ecosystems can be represented as a five‑axis structural vector. Each axis captures a fundamental dimension of media physics. Together, they form the substrate on which all media behavior—coherence, drift, cascades, fragmentation, and reconstruction—emerges.</p>
+<p>The Media Substrate Vector is expressed as:</p>
+<div class="codehilite"><pre><span></span><code>[S, D, A, N, T]
+</code></pre></div>
+
+<p>Each value is normalized to the range <strong>0.0–1.0</strong>, where 0 represents the lowest structural expression of that axis and 1 represents the highest.</p>
+<hr />
+<h2 id="signal-integrity-s">🛰 Signal Integrity (S)<a class="toc-permalink" href="#signal-integrity-s" title="Permanent link to this heading">&para;</a></h2>
+<p>Signal Integrity measures the fidelity and reliability of information as it moves through a media ecosystem. It captures:</p>
+<ul>
+<li>Noise and distortion  </li>
+<li>Verification capacity  </li>
+<li>Compression and loss  </li>
+<li>Truth‑preservation  </li>
+<li>Editorial or algorithmic filtering  </li>
+</ul>
+<p>High S supports coherent narratives and stable basins. Low S accelerates drift, fragmentation, and cascade behavior.</p>
+<hr />
+<h2 id="distribution-topology-d">🌐 Distribution Topology (D)<a class="toc-permalink" href="#distribution-topology-d" title="Permanent link to this heading">&para;</a></h2>
+<p>Distribution Topology describes how media flows through the ecosystem. It reflects the structural shape of propagation:</p>
+<ul>
+<li>Centralized → Federated → Networked → Fragmented → Chaotic  </li>
+<li>Bottlenecks and amplification points  </li>
+<li>Connectivity between nodes  </li>
+<li>Degree of siloing or cross‑talk  </li>
+</ul>
+<p>D determines how attention spreads, how narratives propagate, and how quickly drift can accumulate.</p>
+<hr />
+<h2 id="attention-dynamics-a">⚡ Attention Dynamics (A)<a class="toc-permalink" href="#attention-dynamics-a" title="Permanent link to this heading">&para;</a></h2>
+<p>Attention Dynamics represent the energy of the system. This axis captures:</p>
+<ul>
+<li>Scarcity and pooling  </li>
+<li>Volatility and spikes  </li>
+<li>Cascades and pile‑ons  </li>
+<li>Decay and burnout  </li>
+<li>Competition for salience  </li>
+</ul>
+<p>A is the primary driver of high‑energy transitions. When A spikes beyond what S and N can support, cascades become likely.</p>
+<hr />
+<h2 id="narrative-coherence-n">🧩 Narrative Coherence (N)<a class="toc-permalink" href="#narrative-coherence-n" title="Permanent link to this heading">&para;</a></h2>
+<p>Narrative Coherence measures the stability and interpretability of meaning across the ecosystem. It includes:</p>
+<ul>
+<li>Alignment and shared frames  </li>
+<li>Plurality vs. conflict  </li>
+<li>Semantic drift  </li>
+<li>Narrative collapse  </li>
+<li>Cross‑silo legibility  </li>
+</ul>
+<p>High N supports stable basins (Broadcast, Network). Low N is characteristic of Fragment, Cascade, and Stagnation basins.</p>
+<hr />
+<h2 id="temporal-cadence-t">⏱ Temporal Cadence (T)<a class="toc-permalink" href="#temporal-cadence-t" title="Permanent link to this heading">&para;</a></h2>
+<p>Temporal Cadence captures the speed and decay pressure of the media environment:</p>
+<ul>
+<li>Update frequency  </li>
+<li>Half‑life of information  </li>
+<li>Acceleration and compression  </li>
+<li>Refresh pressure  </li>
+<li>Persistence vs. churn  </li>
+</ul>
+<p>High T increases noise, reduces verification capacity, and destabilizes narratives. Low T supports reconstruction and long‑form coherence.</p>
+<hr />
+<h2 id="vector-summary">🧱 Vector Summary<a class="toc-permalink" href="#vector-summary" title="Permanent link to this heading">&para;</a></h2>
+<p>The five axes form a structural fingerprint of any media ecosystem:</p>
+<ul>
+<li><strong>S</strong> — Can the system maintain fidelity?  </li>
+<li><strong>D</strong> — How does information flow?  </li>
+<li><strong>A</strong> — Where is the energy?  </li>
+<li><strong>N</strong> — How stable is meaning?  </li>
+<li><strong>T</strong> — How fast is the environment moving?  </li>
+</ul>
+<p>Together, they allow the MSM to classify basins, detect drift, evaluate invariant strain, and model transitions.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/media_substrate_model/vectors.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/media_substrate_model/vectors.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

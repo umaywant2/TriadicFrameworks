@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Regime Physics Engine | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/education/polisci/regime-physics-engine/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Regime Physics Engine" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/education/polisci/regime-physics-engine/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Regime Physics Engine" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/education/polisci/regime-physics-engine.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Regime Physics Engine",
+    "headline": "Regime Physics Engine",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/education/polisci/regime-physics-engine/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#0-overview">0. Overview</a></li>
+<li><a href="#1-core-abstractions">1. Core Abstractions</a></li>
+<li><a href="#11-substrate">1.1 Substrate</a></li>
+<li><a href="#12-regime">1.2 Regime</a></li>
+<li><a href="#13-observer">1.3 Observer</a></li>
+<li><a href="#2-dimensional-bindings">2. Dimensional Bindings</a><ul>
+<li><a href="#dimensional-interpretation">Dimensional Interpretation</a></li>
+</ul>
+</li>
+<li><a href="#3-engine-loops">3. Engine Loops</a></li>
+<li><a href="#31-thermal-loop">3.1 Thermal Loop</a></li>
+<li><a href="#32-water-loop">3.2 Water Loop</a></li>
+<li><a href="#33-material-loop">3.3 Material Loop</a></li>
+<li><a href="#34-governance-loop">3.4 Governance Loop</a></li>
+<li><a href="#4-subsystem-bindings">4. Subsystem Bindings</a></li>
+<li><a href="#41-sandtostone-megalithics">4.1 Sand‑to‑Stone Megalithics</a></li>
+<li><a href="#42-vaulted-chambers">4.2 Vaulted Chambers</a></li>
+<li><a href="#43-rttinside-thermal-system">4.3 RTT‑Inside Thermal System</a></li>
+<li><a href="#44-water-tier-separation">4.4 Water Tier Separation</a></li>
+<li><a href="#45-airflow-grid">4.5 Airflow Grid</a></li>
+<li><a href="#46-city-geometry">4.6 City Geometry</a></li>
+<li><a href="#5-ascii-atlas-engineering-diagrams">5. ASCII Atlas (Engineering Diagrams)</a></li>
+<li><a href="#51-city-crosssection">5.1 City Cross‑Section</a></li>
+<li><a href="#52-megalith-cell-top-view">5.2 Megalith Cell (Top View)</a></li>
+<li><a href="#53-reverseskyscraper-sequence">5.3 Reverse‑Skyscraper Sequence</a></li>
+<li><a href="#54-vault-load-diagram">5.4 Vault Load Diagram</a></li>
+<li><a href="#55-rttinside-thermal-system">5.5 RTT‑Inside Thermal System</a></li>
+<li><a href="#56-water-tier-separation">5.6 Water Tier Separation</a></li>
+<li><a href="#57-dew-farm-deployed">5.7 Dew Farm (Deployed)</a></li>
+<li><a href="#58-dew-farm-retracted">5.8 Dew Farm (Retracted)</a></li>
+<li><a href="#59-airflow-tower">5.9 Airflow Tower</a></li>
+<li><a href="#510-city-air-grid">5.10 City Air Grid</a></li>
+<li><a href="#511-seedcore-layout">5.11 Seed‑Core Layout</a></li>
+<li><a href="#512-transit-grid">5.12 Transit Grid</a></li>
+<li><a href="#513-light-well-geometry">5.13 Light Well Geometry</a></li>
+<li><a href="#514-subsurface-temperature-curve">5.14 Subsurface Temperature Curve</a></li>
+<li><a href="#515-sand-extraction-loop">5.15 Sand Extraction Loop</a></li>
+<li><a href="#516-reservoir-vault">5.16 Reservoir Vault</a></li>
+<li><a href="#517-industrial-loop">5.17 Industrial Loop</a></li>
+<li><a href="#518-residential-vault-layout">5.18 Residential Vault Layout</a></li>
+<li><a href="#519-civic-vault-layout">5.19 Civic Vault Layout</a></li>
+<li><a href="#520-ecological-surface-zone">5.20 Ecological Surface Zone</a></li>
+<li><a href="#521-regime-boundary-diagram">5.21 Regime Boundary Diagram</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/education/" itemprop="item">
+                <span itemprop="name">Education</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/education/polisci/" itemprop="item">
+                <span itemprop="name">Polisci</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Regime Physics Engine</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Regime Physics Engine</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="triadicframeworks-regime-physics-engine-rpe"><strong>TriadicFrameworks — Regime Physics Engine (RPE)</strong><a class="toc-permalink" href="#triadicframeworks-regime-physics-engine-rpe" title="Permanent link to this heading">&para;</a></h1>
+<p><em>A substrate‑aware engine for modeling constraints, flows, and transitions in Future Desert Cities.</em></p>
+<hr />
+<h2 id="0-overview"><strong>0. Overview</strong><a class="toc-permalink" href="#0-overview" title="Permanent link to this heading">&para;</a></h2>
+<p>The <strong>Regime Physics Engine (RPE)</strong> is a conceptual and structural framework for modeling:</p>
+<ul>
+<li>thermal flows  </li>
+<li>water regimes  </li>
+<li>material transformations  </li>
+<li>spatial/temporal scheduling  </li>
+<li>regime boundaries  </li>
+<li>drift detection  </li>
+</ul>
+<p>It is not a particle simulator.<br />
+It is a <strong>regime simulator</strong> — a system that models how <strong>substrates</strong>, <strong>regimes</strong>, and <strong>observers</strong> interact.</p>
+<p>RPE is built on the TriadicFrameworks dimensional substrate:</p>
+<div class="codehilite"><pre><span></span><code>-1024D → qmroot → +1024D
+</code></pre></div>
+
+<hr />
+<h2 id="1-core-abstractions"><strong>1. Core Abstractions</strong><a class="toc-permalink" href="#1-core-abstractions" title="Permanent link to this heading">&para;</a></h2>
+<h2 id="11-substrate"><strong>1.1 Substrate</strong><a class="toc-permalink" href="#11-substrate" title="Permanent link to this heading">&para;</a></h2>
+<p>Represents the physical layer.</p>
+<p><strong>Fields</strong><br />
+- <code>type</code> (sand, stone, air, water, ecology, civic)<br />
+- <code>depth</code> (m)<br />
+- <code>temperature</code> (°C)<br />
+- <code>capacity</code> (mass/volume/flow)<br />
+- <code>stability</code> (low/med/high)</p>
+<p><strong>Role</strong><br />
+Defines what is <em>physically possible</em>.</p>
+<hr />
+<h2 id="12-regime"><strong>1.2 Regime</strong><a class="toc-permalink" href="#12-regime" title="Permanent link to this heading">&para;</a></h2>
+<p>Represents the rules and boundaries.</p>
+<p><strong>Fields</strong><br />
+- <code>name</code> (thermal, water, material, civic)<br />
+- <code>bounds</code> (min/max thresholds)<br />
+- <code>state</code> (stable, transitional, overloaded)<br />
+- <code>links</code> (connections to other regimes)</p>
+<p><strong>Role</strong><br />
+Defines what is <em>allowed</em>.</p>
+<hr />
+<h2 id="13-observer"><strong>1.3 Observer</strong><a class="toc-permalink" href="#13-observer" title="Permanent link to this heading">&para;</a></h2>
+<p>Represents agents interacting with the system.</p>
+<p><strong>Fields</strong><br />
+- <code>agent_type</code> (human, building, system)<br />
+- <code>schedule</code> (time bands)<br />
+- <code>demands</code> (water, comfort, mobility)<br />
+- <code>permissions</code> (which regimes it can touch)</p>
+<p><strong>Role</strong><br />
+Defines what is <em>requested</em>.</p>
+<hr />
+<h2 id="2-dimensional-bindings"><strong>2. Dimensional Bindings</strong><a class="toc-permalink" href="#2-dimensional-bindings" title="Permanent link to this heading">&para;</a></h2>
+<p>Every subsystem must declare:</p>
+<div class="codehilite"><pre><span></span><code>negative_binding: [...]
+qmroot_binding:   [...]
+positive_binding: [...]
+</code></pre></div>
+
+<h3 id="dimensional-interpretation"><strong>Dimensional Interpretation</strong><a class="toc-permalink" href="#dimensional-interpretation" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>-1024D  = depth, mass, stability
+qmroot  = gradients, transitions, awareness
++1024D  = interface, expression, ecology
+</code></pre></div>
+
+<hr />
+<h2 id="3-engine-loops"><strong>3. Engine Loops</strong><a class="toc-permalink" href="#3-engine-loops" title="Permanent link to this heading">&para;</a></h2>
+<h2 id="31-thermal-loop"><strong>3.1 Thermal Loop</strong><a class="toc-permalink" href="#31-thermal-loop" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Inputs:</strong> external temp curve, depth profile, occupancy<br />
+<strong>Outputs:</strong> ballast states, airflow routes, comfort bands  </p>
+<p><strong>Steps</strong><br />
+1. Compute subsurface baseline.<br />
+2. Propagate heat through mass.<br />
+3. Adjust RTT‑Inside ballasts.<br />
+4. Flag overloads.</p>
+<hr />
+<h2 id="32-water-loop"><strong>3.2 Water Loop</strong><a class="toc-permalink" href="#32-water-loop" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Inputs:</strong> desal capacity, dew yield, industrial demand<br />
+<strong>Outputs:</strong> allocation, pressure, regime flags  </p>
+<p><strong>Steps</strong><br />
+1. Allocate desal → human.<br />
+2. Allocate dew → agriculture.<br />
+3. Allocate recycled → industry.<br />
+4. Enforce <strong>no aquifer use</strong>.</p>
+<hr />
+<h2 id="33-material-loop"><strong>3.3 Material Loop</strong><a class="toc-permalink" href="#33-material-loop" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Inputs:</strong> excavation volume, binder capacity, infrastructure demand<br />
+<strong>Outputs:</strong> megalith formation, road/bridge feedstock  </p>
+<p><strong>Steps</strong><br />
+1. Convert sand → stone in forms.<br />
+2. Track voids → habitable volume.<br />
+3. Route surplus sand → surface infrastructure.</p>
+<hr />
+<h2 id="34-governance-loop"><strong>3.4 Governance Loop</strong><a class="toc-permalink" href="#34-governance-loop" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Inputs:</strong> regime states, drift metrics, civic policies<br />
+<strong>Outputs:</strong> constraints, alerts, schedule adjustments  </p>
+<p><strong>Steps</strong><br />
+1. Monitor regime boundaries.<br />
+2. Detect drift.<br />
+3. Enforce constraints.<br />
+4. Suggest schedule changes.</p>
+<hr />
+<h2 id="4-subsystem-bindings"><strong>4. Subsystem Bindings</strong><a class="toc-permalink" href="#4-subsystem-bindings" title="Permanent link to this heading">&para;</a></h2>
+<h2 id="41-sandtostone-megalithics"><strong>4.1 Sand‑to‑Stone Megalithics</strong><a class="toc-permalink" href="#41-sandtostone-megalithics" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>-1024D: sand mass
+qmroot: binder/polymer/water transformation
++1024D: megalith walls
+</code></pre></div>
+
+<hr />
+<h2 id="42-vaulted-chambers"><strong>4.2 Vaulted Chambers</strong><a class="toc-permalink" href="#42-vaulted-chambers" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>-1024D: load-bearing mass
+qmroot: curvature → force distribution
++1024D: human-scale space
+</code></pre></div>
+
+<hr />
+<h2 id="43-rttinside-thermal-system"><strong>4.3 RTT‑Inside Thermal System</strong><a class="toc-permalink" href="#43-rttinside-thermal-system" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>-1024D: cool ballast
+qmroot: gradient chamber
++1024D: warm ballast
+</code></pre></div>
+
+<hr />
+<h2 id="44-water-tier-separation"><strong>4.4 Water Tier Separation</strong><a class="toc-permalink" href="#44-water-tier-separation" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>-1024D: aquifers (untouched)
+qmroot: dew capture + filtration
++1024D: desalinated water
+</code></pre></div>
+
+<hr />
+<h2 id="45-airflow-grid"><strong>4.5 Airflow Grid</strong><a class="toc-permalink" href="#45-airflow-grid" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>-1024D: intake shafts
+qmroot: vault circulation
++1024D: exhaust towers
+</code></pre></div>
+
+<hr />
+<h2 id="46-city-geometry"><strong>4.6 City Geometry</strong><a class="toc-permalink" href="#46-city-geometry" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>-1024D: levels -6 to -3
+qmroot: levels -2 to -1
++1024D: level 0
+</code></pre></div>
+
+<hr />
+<h2 id="5-ascii-atlas-engineering-diagrams"><strong>5. ASCII Atlas (Engineering Diagrams)</strong><a class="toc-permalink" href="#5-ascii-atlas-engineering-diagrams" title="Permanent link to this heading">&para;</a></h2>
+<h2 id="51-city-crosssection"><strong>5.1 City Cross‑Section</strong><a class="toc-permalink" href="#51-city-crosssection" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>Surface
+──────────────────────────────────────────
+ Level 0: Access / Light Wells
+──────────────────────────────────────────
+ Level -1: Residential Vaults
+ Level -2: Residential Vaults
+ Level -3: Civic / Commercial
+ Level -4: Industrial / Utility
+ Level -5: Reservoirs / Ballasts
+ Level -6: Deep Infrastructure
+──────────────────────────────────────────
+Bedrock
+</code></pre></div>
+
+<hr />
+<h2 id="52-megalith-cell-top-view"><strong>5.2 Megalith Cell (Top View)</strong><a class="toc-permalink" href="#52-megalith-cell-top-view" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>┌───────────────────────────────┐
+│   Steel Sheet Form (Outer)    │
+│ ┌───────────────────────────┐ │
+│ │  Sand → Stone Core        │ │
+│ └───────────────────────────┘ │
+└───────────────────────────────┘
+</code></pre></div>
+
+<hr />
+<h2 id="53-reverseskyscraper-sequence"><strong>5.3 Reverse‑Skyscraper Sequence</strong><a class="toc-permalink" href="#53-reverseskyscraper-sequence" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>[Drive Forms] → [Fill Sand] → [Inject Binder] → [Cure] → [Excavate] → [Repeat Downward]
+</code></pre></div>
+
+<hr />
+<h2 id="54-vault-load-diagram"><strong>5.4 Vault Load Diagram</strong><a class="toc-permalink" href="#54-vault-load-diagram" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>      ↑ Load
+     /‾‾‾‾‾\
+    /       \
+   /         \
+  /           \
+ /_____________\
+→ Thrust →   ← Thrust
+</code></pre></div>
+
+<hr />
+<h2 id="55-rttinside-thermal-system"><strong>5.5 RTT‑Inside Thermal System</strong><a class="toc-permalink" href="#55-rttinside-thermal-system" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>        [ Warm Ballast ]
+               ▲
+               │
+      [ Gradient Chamber ]
+               │
+               ▼
+        [ Cool Ballast ]
+</code></pre></div>
+
+<hr />
+<h2 id="56-water-tier-separation"><strong>5.6 Water Tier Separation</strong><a class="toc-permalink" href="#56-water-tier-separation" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>Ocean → Desal → Humans
+Dew → Farming
+Recycled → Industry
+Aquifers → Untouched
+</code></pre></div>
+
+<hr />
+<h2 id="57-dew-farm-deployed"><strong>5.7 Dew Farm (Deployed)</strong><a class="toc-permalink" href="#57-dew-farm-deployed" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>   \\\\\\\\\\  ← Condensation Mesh
+    \\\\\\\\\
+     \\\\\\\\\
+</code></pre></div>
+
+<hr />
+<h2 id="58-dew-farm-retracted"><strong>5.8 Dew Farm (Retracted)</strong><a class="toc-permalink" href="#58-dew-farm-retracted" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>   ________
+  |        |
+  | Tower  |
+  |________|
+</code></pre></div>
+
+<hr />
+<h2 id="59-airflow-tower"><strong>5.9 Airflow Tower</strong><a class="toc-permalink" href="#59-airflow-tower" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>Hot Air ↑
+───────────────
+   Wind Tower
+───────────────
+Cool Air ↓
+</code></pre></div>
+
+<hr />
+<h2 id="510-city-air-grid"><strong>5.10 City Air Grid</strong><a class="toc-permalink" href="#510-city-air-grid" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>[ Intake ] → [ Vaults ] → [ Exhaust ]
+</code></pre></div>
+
+<hr />
+<h2 id="511-seedcore-layout"><strong>5.11 Seed‑Core Layout</strong><a class="toc-permalink" href="#511-seedcore-layout" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>        [ Seed A ]
+            ▲
+            │
+[ Seed B ]──┼──[ Seed C ]
+            ▼
+        [  Core  ]
+</code></pre></div>
+
+<hr />
+<h2 id="512-transit-grid"><strong>5.12 Transit Grid</strong><a class="toc-permalink" href="#512-transit-grid" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>[ North ]───[ Hub ]───[ South ]
+     │          │          │
+[ West ]────────┘────────[ East ]
+</code></pre></div>
+
+<hr />
+<h2 id="513-light-well-geometry"><strong>5.13 Light Well Geometry</strong><a class="toc-permalink" href="#513-light-well-geometry" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>   /‾‾‾‾‾‾‾‾\
+  /           \
+ |   Light     |
+ |   Shaft     |
+  \           /
+   \_________/
+</code></pre></div>
+
+<hr />
+<h2 id="514-subsurface-temperature-curve"><strong>5.14 Subsurface Temperature Curve</strong><a class="toc-permalink" href="#514-subsurface-temperature-curve" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>Surface: 120°F → 40°F
+10 ft: ~70°F
+50 ft: ~68°F
+100 ft: ~67°F
+</code></pre></div>
+
+<hr />
+<h2 id="515-sand-extraction-loop"><strong>5.15 Sand Extraction Loop</strong><a class="toc-permalink" href="#515-sand-extraction-loop" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>Excavation → Sorting → Roads/Bridges → Zero External Mining
+</code></pre></div>
+
+<hr />
+<h2 id="516-reservoir-vault"><strong>5.16 Reservoir Vault</strong><a class="toc-permalink" href="#516-reservoir-vault" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>┌───────────────────────────┐
+│  Cool Water Reservoir     │
+│  Thermal Ballast Layer    │
+└───────────────────────────┘
+</code></pre></div>
+
+<hr />
+<h2 id="517-industrial-loop"><strong>5.17 Industrial Loop</strong><a class="toc-permalink" href="#517-industrial-loop" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>Industry → Recycle → Towers → Industry
+</code></pre></div>
+
+<hr />
+<h2 id="518-residential-vault-layout"><strong>5.18 Residential Vault Layout</strong><a class="toc-permalink" href="#518-residential-vault-layout" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>┌───────────────┐
+│  Rooms         │
+│  Corridors     │
+│  Ballast Nodes │
+└───────────────┘
+</code></pre></div>
+
+<hr />
+<h2 id="519-civic-vault-layout"><strong>5.19 Civic Vault Layout</strong><a class="toc-permalink" href="#519-civic-vault-layout" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>┌───────────────────────────┐
+│  Markets  |  Clinics      │
+│  Schools  |  Meeting Halls│
+└───────────────────────────┘
+</code></pre></div>
+
+<hr />
+<h2 id="520-ecological-surface-zone"><strong>5.20 Ecological Surface Zone</strong><a class="toc-permalink" href="#520-ecological-surface-zone" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>[ Solar Arrays ]   [ Dew Farms ]
+[ Native Flora ]   [ Access Points ]
+</code></pre></div>
+
+<hr />
+<h2 id="521-regime-boundary-diagram"><strong>5.21 Regime Boundary Diagram</strong><a class="toc-permalink" href="#521-regime-boundary-diagram" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>───────────────
+ NO CROSSING
+───────────────
+</code></pre></div>
+
+<hr />
+<h1 id="6-summary"><strong>6. Summary</strong><a class="toc-permalink" href="#6-summary" title="Permanent link to this heading">&para;</a></h1>
+<p>The Regime Physics Engine provides:</p>
+<ul>
+<li>a unified substrate model  </li>
+<li>triadic regime separation  </li>
+<li>drift‑resistant architecture  </li>
+<li>thermal, water, and material coherence  </li>
+<li>a scalable foundation for Future Desert Cities  </li>
+</ul>
+<p>This file is ready to drop into your repo as‑is.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/education/polisci/regime-physics-engine.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/education/polisci/regime-physics-engine.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

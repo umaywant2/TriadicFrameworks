@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Infrastructure Retrofit Patterns | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/Governance_Substrate_Model/05_Implementation/Infrastructure_Retrofit_Patterns/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Infrastructure Retrofit Patterns" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/Governance_Substrate_Model/05_Implementation/Infrastructure_Retrofit_Patterns/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Infrastructure Retrofit Patterns" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/Governance_Substrate_Model/05_Implementation/Infrastructure_Retrofit_Patterns.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Infrastructure Retrofit Patterns",
+    "headline": "Infrastructure Retrofit Patterns",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/Governance_Substrate_Model/05_Implementation/Infrastructure_Retrofit_Patterns/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#why-retrofit-matters">Why Retrofit Matters</a></li>
+<li><a href="#retrofit-design-principles">Retrofit Design Principles</a></li>
+<li><a href="#core-retrofit-patterns">Core Retrofit Patterns</a><ul>
+<li><a href="#1-interface-wrapping">1. Interface Wrapping</a></li>
+<li><a href="#2-shadow-evaluation">2. Shadow Evaluation</a></li>
+<li><a href="#3-threshold-injection">3. Threshold Injection</a></li>
+<li><a href="#4-feedback-loop-dampening">4. Feedback Loop Dampening</a></li>
+<li><a href="#5-containment-zones">5. Containment Zones</a></li>
+</ul>
+</li>
+<li><a href="#human-retrofit-patterns">Human Retrofit Patterns</a></li>
+<li><a href="#aispecific-retrofit-considerations">AI‑Specific Retrofit Considerations</a></li>
+<li><a href="#failure-mode">Failure Mode</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Governance_Substrate_Model/" itemprop="item">
+                <span itemprop="name">Governance Substrate Model</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Governance_Substrate_Model/05_Implementation/" itemprop="item">
+                <span itemprop="name">05 Implementation</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Infrastructure Retrofit Patterns</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Infrastructure Retrofit Patterns</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="infrastructure-retrofit-patterns">Infrastructure Retrofit Patterns<a class="toc-permalink" href="#infrastructure-retrofit-patterns" title="Permanent link to this heading">&para;</a></h1>
+<p>Infrastructure retrofit patterns define <strong>how alignment, awareness, and governance invariants are introduced into existing systems without requiring replacement, disruption, or centralized control</strong>. Most real systems cannot be rebuilt. They must be <em>inhabited</em> and gently re‑shaped.</p>
+<p>This layer exists to make governance evolution feasible in the real world.</p>
+<hr />
+<h2 id="why-retrofit-matters">Why Retrofit Matters<a class="toc-permalink" href="#why-retrofit-matters" title="Permanent link to this heading">&para;</a></h2>
+<p>Legacy infrastructure dominates:<br />
+- Institutions.<br />
+- Technical systems.<br />
+- Legal frameworks.<br />
+- Organizational workflows.</p>
+<p>Waiting for greenfield redesign guarantees stagnation.<br />
+Retrofit enables <strong>incremental coherence without collapse</strong>.</p>
+<hr />
+<h2 id="retrofit-design-principles">Retrofit Design Principles<a class="toc-permalink" href="#retrofit-design-principles" title="Permanent link to this heading">&para;</a></h2>
+<p>Effective retrofit follows five principles:</p>
+<ul>
+<li><strong>Non‑destructive</strong> — Existing functionality continues to operate.</li>
+<li><strong>Incremental</strong> — Changes are introduced in small, reversible steps.</li>
+<li><strong>Surface‑level first</strong> — Interfaces change before internals.</li>
+<li><strong>Optional at entry</strong> — Adoption begins without coercion.</li>
+<li><strong>Composable</strong> — New structures layer cleanly onto old ones.</li>
+</ul>
+<p>Retrofit succeeds when it feels additive, not corrective.</p>
+<hr />
+<h2 id="core-retrofit-patterns">Core Retrofit Patterns<a class="toc-permalink" href="#core-retrofit-patterns" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="1-interface-wrapping">1. Interface Wrapping<a class="toc-permalink" href="#1-interface-wrapping" title="Permanent link to this heading">&para;</a></h3>
+<p>Add alignment and awareness at system boundaries.</p>
+<p>Examples:<br />
+- Input validation layers.<br />
+- Output framing overlays.<br />
+- Human‑in‑the‑loop checkpoints.<br />
+- Confidence and uncertainty surfacing.</p>
+<p>Wrapping preserves internals while changing behavior.</p>
+<hr />
+<h3 id="2-shadow-evaluation">2. Shadow Evaluation<a class="toc-permalink" href="#2-shadow-evaluation" title="Permanent link to this heading">&para;</a></h3>
+<p>Run governance logic <em>alongside</em> existing decision paths.</p>
+<p>Examples:<br />
+- Parallel RTT evaluation.<br />
+- Non‑binding risk flags.<br />
+- Silent failure mode detection.<br />
+- Advisory interruption signals.</p>
+<p>Shadow systems build trust before authority.</p>
+<hr />
+<h3 id="3-threshold-injection">3. Threshold Injection<a class="toc-permalink" href="#3-threshold-injection" title="Permanent link to this heading">&para;</a></h3>
+<p>Introduce pause points without altering core logic.</p>
+<p>Examples:<br />
+- Rate limits.<br />
+- Escalation gates.<br />
+- Confidence thresholds.<br />
+- Cooling‑off timers.</p>
+<p>Thresholds interrupt runaway dynamics early.</p>
+<hr />
+<h3 id="4-feedback-loop-dampening">4. Feedback Loop Dampening<a class="toc-permalink" href="#4-feedback-loop-dampening" title="Permanent link to this heading">&para;</a></h3>
+<p>Reduce amplification without suppressing signal.</p>
+<p>Examples:<br />
+- Smoothing volatile metrics.<br />
+- Delaying reactive responses.<br />
+- Aggregating signals before action.<br />
+- Introducing decay functions.</p>
+<p>Dampening restores proportionality.</p>
+<hr />
+<h3 id="5-containment-zones">5. Containment Zones<a class="toc-permalink" href="#5-containment-zones" title="Permanent link to this heading">&para;</a></h3>
+<p>Isolate misalignment without system‑wide impact.</p>
+<p>Examples:<br />
+- Sandboxed deployments.<br />
+- Limited‑scope pilots.<br />
+- Reversible policy trials.<br />
+- Quarantine modes for AI behavior.</p>
+<p>Containment preserves learning while limiting harm.</p>
+<hr />
+<h2 id="human-retrofit-patterns">Human Retrofit Patterns<a class="toc-permalink" href="#human-retrofit-patterns" title="Permanent link to this heading">&para;</a></h2>
+<p>Infrastructure includes people.</p>
+<p>Human‑level retrofit includes:<br />
+- Role clarification without hierarchy change.<br />
+- Stewardship framing replacing enforcement language.<br />
+- Education embedded into workflow.<br />
+- Narrative reframing toward learning and correction.</p>
+<p>Cultural retrofit is slower — and essential.</p>
+<hr />
+<h2 id="aispecific-retrofit-considerations">AI‑Specific Retrofit Considerations<a class="toc-permalink" href="#aispecific-retrofit-considerations" title="Permanent link to this heading">&para;</a></h2>
+<p>When retrofitting AI systems:<br />
+- Add alignment surfaces before retraining.<br />
+- Introduce human override before autonomy.<br />
+- Surface uncertainty before optimization.<br />
+- Contain deployment before scaling.</p>
+<p>Retrofitting AI late is harder than designing it aligned early.</p>
+<hr />
+<h2 id="failure-mode">Failure Mode<a class="toc-permalink" href="#failure-mode" title="Permanent link to this heading">&para;</a></h2>
+<p>Retrofit fails when:<br />
+- Changes are framed as correction or blame.<br />
+- Authority is asserted before trust.<br />
+- Internals are modified prematurely.<br />
+- Adoption is forced.</p>
+<p>At that point, resistance replaces learning.</p>
+<hr />
+<p>Infrastructure retrofit patterns are <strong>how governance evolves without rupture</strong>.</p>
+<p>They allow systems to become safer, more legible, and more aligned<br />
+<em>while continuing to function</em>.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Governance_Substrate_Model/05_Implementation/Infrastructure_Retrofit_Patterns.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/Governance_Substrate_Model/05_Implementation/Infrastructure_Retrofit_Patterns.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

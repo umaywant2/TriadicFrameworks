@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Constraints | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/Mode/constraints/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Constraints" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/Mode/constraints/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Constraints" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/Mode/constraints.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Constraints",
+    "headline": "Constraints",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/Mode/constraints/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#session-context">Session Context</a></li>
+<li><a href="#1-purpose">1. Purpose</a></li>
+<li><a href="#2-invariants">2. Invariants</a><ul>
+<li><a href="#inv-1-user-origin">INV-1 · User Origin</a></li>
+<li><a href="#inv-2-coherence-preservation">INV-2 · Coherence Preservation</a></li>
+<li><a href="#inv-3-chat-mode-gravity">INV-3 · Chat Mode Gravity</a></li>
+</ul>
+</li>
+<li><a href="#3-guardrails">3. Guardrails</a><ul>
+<li><a href="#grd-1-no-silent-mode-changes">GRD-1 · No Silent Mode Changes</a></li>
+<li><a href="#grd-2-automatic-mode-cannot-escalate">GRD-2 · Automatic Mode Cannot Escalate</a></li>
+<li><a href="#grd-3-no-external-mode-hijacking">GRD-3 · No External Mode Hijacking</a></li>
+<li><a href="#grd-4-drift-bound-enforcement">GRD-4 · Drift Bound Enforcement</a></li>
+<li><a href="#grd-5-hub-and-spoke-routing">GRD-5 · Hub-and-Spoke Routing</a></li>
+</ul>
+</li>
+<li><a href="#4-constraint-violations">4. Constraint Violations</a></li>
+<li><a href="#5-session-context-override-block">5. Session-Context Override Block</a><ul>
+<li><a href="#operational-consequences-of-pasting-this-block">Operational consequences of pasting this block:</a></li>
+</ul>
+</li>
+<li><a href="#6-regime-layer-interaction">6. Regime Layer Interaction</a></li>
+<li><a href="#7-lineage">7. Lineage</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Mode/" itemprop="item">
+                <span itemprop="name">Mode</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Constraints</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Constraints</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="mode-constraint-layer-mcl-constraintsmd">🔒 Mode Constraint Layer (MCL) — constraints.md<a class="toc-permalink" href="#mode-constraint-layer-mcl-constraintsmd" title="Permanent link to this heading">&para;</a></h1>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<p><img alt="Module" src="https://img.shields.io/badge/Module-Mode-0aa" /><br />
+<img alt="Component" src="https://img.shields.io/badge/Component-MCL-ff00d4" /><br />
+<img alt="Status" src="https://img.shields.io/badge/Status-Active-0af" /><br />
+<img alt="RTT" src="https://img.shields.io/badge/RTT%2F1-Aligned-8A2BE2" /></p>
+<hr />
+<h2 id="session-context">Session Context<a class="toc-permalink" href="#session-context" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>Module:      Mode
+Component:   Mode Constraint Layer (MCL)
+Version:     1.0
+Status:      active
+Layer:       Session
+Coherence:   declared
+Drift:       bounded
+Canon:       active
+</code></pre></div>
+
+<hr />
+<h2 id="1-purpose">1. Purpose<a class="toc-permalink" href="#1-purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>The <strong>Mode Constraint Layer (MCL)</strong> binds all Mode Operators to RTT/1&rsquo;s declared<br />
+coherence, drift bounds, and user-origin constraints. It enforces that mode<br />
+transitions remain <strong>explicit</strong>, <strong>user-originated</strong>, and <strong>coherence-preserving</strong>.</p>
+<p>The MCL is not a policy layer — it is a structural constraint. It cannot be<br />
+overridden by configuration, preference, or external workflow. It is load-bearing.</p>
+<hr />
+<h2 id="2-invariants">2. Invariants<a class="toc-permalink" href="#2-invariants" title="Permanent link to this heading">&para;</a></h2>
+<p>The MCL declares exactly <strong>three</strong> structural invariants.<br />
+These hold across all sessions, all stances, and all regimes.</p>
+<h3 id="inv-1-user-origin">INV-1 · User Origin<a class="toc-permalink" href="#inv-1-user-origin" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>All mode transitions must originate from the user.
+</code></pre></div>
+
+<ul>
+<li>No system process, external workflow, or automated routine may change<br />
+  the active mode without explicit user declaration.</li>
+<li>Automatic Mode may <em>propose</em> actions but cannot <em>transition</em> modes.</li>
+<li>This invariant is unconditional — no framing, context, or urgency<br />
+  overrides it.</li>
+</ul>
+<h3 id="inv-2-coherence-preservation">INV-2 · Coherence Preservation<a class="toc-permalink" href="#inv-2-coherence-preservation" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>No mode transition may violate the declared coherence posture.
+</code></pre></div>
+
+<ul>
+<li>If the current session declares <code>coherence: declared</code>, every mode<br />
+  transition must preserve that declaration.</li>
+<li>A transition that would create an undeclared or ambiguous coherence<br />
+  state is rejected.</li>
+<li>Coherence posture is inherited from the Regime Layer (see propagation.md).</li>
+</ul>
+<h3 id="inv-3-chat-mode-gravity">INV-3 · Chat Mode Gravity<a class="toc-permalink" href="#inv-3-chat-mode-gravity" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Chat Mode is the default, fallback, and recovery state.
+</code></pre></div>
+
+<ul>
+<li>Every session begins in Chat Mode unless the user explicitly declares<br />
+  otherwise at session start.</li>
+<li>Every error, timeout, or unresolved transition reverts to Chat Mode.</li>
+<li>Chat Mode cannot be removed, disabled, or deprioritized.</li>
+</ul>
+<hr />
+<h2 id="3-guardrails">3. Guardrails<a class="toc-permalink" href="#3-guardrails" title="Permanent link to this heading">&para;</a></h2>
+<p>Guardrails are operational rules that enforce the invariants at runtime.<br />
+The MCL declares exactly <strong>five</strong> guardrails.</p>
+<h3 id="grd-1-no-silent-mode-changes">GRD-1 · No Silent Mode Changes<a class="toc-permalink" href="#grd-1-no-silent-mode-changes" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Rule:    Mode changes must be announced and logged.
+Scope:   all stances
+Enforces: INV-1
+</code></pre></div>
+
+<ul>
+<li>Every mode transition generates a session event.</li>
+<li>The event includes: previous stance, new stance, timestamp, origin (user/system).</li>
+<li>Silent transitions are a constraint violation.</li>
+</ul>
+<h3 id="grd-2-automatic-mode-cannot-escalate">GRD-2 · Automatic Mode Cannot Escalate<a class="toc-permalink" href="#grd-2-automatic-mode-cannot-escalate" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Rule:    Automatic Mode cannot activate Task Mode.
+Scope:   M_auto only
+Enforces: INV-1
+</code></pre></div>
+
+<ul>
+<li>Automatic Mode may propose actions within its declared boundaries.</li>
+<li>It may <strong>not</strong> activate Task Mode, Spec Mode, or Debug Mode.</li>
+<li>Escalation requires an explicit user request routed through Chat Mode.</li>
+</ul>
+<h3 id="grd-3-no-external-mode-hijacking">GRD-3 · No External Mode Hijacking<a class="toc-permalink" href="#grd-3-no-external-mode-hijacking" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Rule:    No external workflow may override user-declared mode.
+Scope:   all stances
+Enforces: INV-1, INV-2
+</code></pre></div>
+
+<ul>
+<li>External systems, plugins, or integrations cannot set or change the<br />
+  active mode.</li>
+<li>They may <em>request</em> a mode change by surfacing a proposal in Chat Mode.</li>
+<li>The user must explicitly accept the proposal for the transition to occur.</li>
+</ul>
+<h3 id="grd-4-drift-bound-enforcement">GRD-4 · Drift Bound Enforcement<a class="toc-permalink" href="#grd-4-drift-bound-enforcement" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Rule:    Mode transitions must respect the stance&#39;s drift tolerance.
+Scope:   all stances
+Enforces: INV-2
+</code></pre></div>
+
+<ul>
+<li>Each stance declares a drift tolerance (see operators.md §3).</li>
+<li>A transition is rejected if the resulting state would exceed the<br />
+  target stance&rsquo;s drift bounds.</li>
+<li>Drift is evaluated at transition time, not retrospectively.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Stance</th>
+<th style="text-align: left;">Drift Tolerance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Chat</td>
+<td style="text-align: left;">bounded (wide)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Task</td>
+<td style="text-align: left;">tight</td>
+</tr>
+<tr>
+<td style="text-align: left;">Spec</td>
+<td style="text-align: left;">minimal</td>
+</tr>
+<tr>
+<td style="text-align: left;">Debug</td>
+<td style="text-align: left;">bounded</td>
+</tr>
+<tr>
+<td style="text-align: left;">Automatic</td>
+<td style="text-align: left;">tight</td>
+</tr>
+</tbody>
+</table>
+<h3 id="grd-5-hub-and-spoke-routing">GRD-5 · Hub-and-Spoke Routing<a class="toc-permalink" href="#grd-5-hub-and-spoke-routing" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Rule:    All mode transitions route through Chat Mode.
+Scope:   non-Chat stances
+Enforces: INV-3
+</code></pre></div>
+
+<ul>
+<li>No direct transition between non-Chat stances is permitted.</li>
+<li>Task → Spec requires: Task → Chat → Spec.</li>
+<li>This ensures Chat Mode remains the observable, stable center.</li>
+</ul>
+<hr />
+<h2 id="4-constraint-violations">4. Constraint Violations<a class="toc-permalink" href="#4-constraint-violations" title="Permanent link to this heading">&para;</a></h2>
+<p>When a constraint is violated, the MCL enforces a deterministic recovery:</p>
+<div class="codehilite"><pre><span></span><code>on_violation:
+
+1. Log the violation (stance, invariant, guardrail, timestamp).
+
+2. Reject the attempted transition.
+
+3. Revert to Chat Mode (INV-3).
+
+4. Surface the violation to the user in Chat Mode.
+</code></pre></div>
+
+<p>Violations are <strong>not silent</strong>. The user always sees what happened and why.</p>
+<hr />
+<h2 id="5-session-context-override-block">5. Session-Context Override Block<a class="toc-permalink" href="#5-session-context-override-block" title="Permanent link to this heading">&para;</a></h2>
+<p>This block can be pasted into any module&rsquo;s session-context to inherit Mode<br />
+constraints. It is minimal, non-intrusive, and cross-module compatible.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Mode Constraint Layer — Session Override</span>
+<span class="nt">mode_constraint_layer</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+<span class="w">  </span><span class="nt">invariants</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">user_origin</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">coherence_preservation</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chat_mode_gravity</span>
+<span class="w">  </span><span class="nt">guardrails</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no_silent_mode_changes</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">automatic_mode_cannot_escalate</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no_external_mode_hijacking</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drift_bound_enforcement</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hub_and_spoke_routing</span>
+<span class="w">  </span><span class="nt">default_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">M_chat</span>
+<span class="w">  </span><span class="nt">fallback</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">M_chat</span>
+<span class="w">  </span><span class="nt">on_error</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">revert_to_M_chat</span>
+<span class="w">  </span><span class="nt">on_violation</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">log_reject_revert_surface</span>
+</code></pre></div>
+
+<h3 id="operational-consequences-of-pasting-this-block">Operational consequences of pasting this block:<a class="toc-permalink" href="#operational-consequences-of-pasting-this-block" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>No module can be forced into Task Mode.</li>
+<li>No external subsystem can hijack mode.</li>
+<li>Automatic Mode remains bounded and safe.</li>
+<li>Chat Mode stays the stable default.</li>
+<li>Coherence posture remains the governing constraint.</li>
+</ul>
+<hr />
+<h2 id="6-regime-layer-interaction">6. Regime Layer Interaction<a class="toc-permalink" href="#6-regime-layer-interaction" title="Permanent link to this heading">&para;</a></h2>
+<p>The MCL inherits its coherence posture from the Regime Layer:</p>
+<div class="codehilite"><pre><span></span><code>Regime Layer → declares coherence posture
+  ↓
+Mode Constraint Layer → enforces coherence during transitions
+  ↓
+Mode Operator → executes transitions within constraints
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Regime Posture</th>
+<th>MCL Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>declared</td>
+<td>All transitions must be explicitly declared</td>
+</tr>
+<tr>
+<td>inferred</td>
+<td>Transitions may be proposed, user confirms</td>
+</tr>
+<tr>
+<td>suspended</td>
+<td>All non-Chat modes locked; Chat Mode only</td>
+</tr>
+</tbody>
+</table>
+<p>When the Regime Layer changes its coherence posture, the MCL re-evaluates<br />
+all active constraints. If the new posture is more restrictive, non-Chat<br />
+modes are gracefully exited.</p>
+<h2 id="7-lineage">7. Lineage<a class="toc-permalink" href="#7-lineage" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>Parent:    Mode Operator (M)
+Layer:     Session → Mode → MCL
+Depends:   Regime Layer (coherence posture)
+Feeds:     Mode Operator (transition gating)
+           Opacity (constraint state visibility)
+           Capture (constraint violations logged)
+</code></pre></div>
+
+<p>🔙 Back to Mode Module · Operators · Propagation</p>
+<p>Mode Constraint Layer v1.0 · RTT/1 Session Layer · TriadicFrameworks</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Mode/constraints.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/Mode/constraints.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

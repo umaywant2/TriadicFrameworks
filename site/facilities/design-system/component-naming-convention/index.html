@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Component Naming Convention | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/facilities/design-system/component-naming-convention/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Component Naming Convention" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/facilities/design-system/component-naming-convention/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Component Naming Convention" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/facilities/design-system/component-naming-convention.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Component Naming Convention",
+    "headline": "Component Naming Convention",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/facilities/design-system/component-naming-convention/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#1-naming-philosophy">1. Naming Philosophy</a></li>
+<li><a href="#2-naming-structure">2. Naming Structure</a><ul>
+<li><a href="#example">Example</a></li>
+</ul>
+</li>
+<li><a href="#3-domain-prefix">3. Domain Prefix</a><ul>
+<li><a href="#approved-domains">Approved Domains</a></li>
+</ul>
+</li>
+<li><a href="#4-category-layer">4. Category Layer</a><ul>
+<li><a href="#common-categories">Common Categories</a></li>
+</ul>
+</li>
+<li><a href="#5-function-name">5. Function Name</a><ul>
+<li><a href="#good-examples">Good Examples</a></li>
+<li><a href="#avoid">Avoid</a></li>
+</ul>
+</li>
+<li><a href="#6-variant-suffixes">6. Variant Suffixes</a><ul>
+<li><a href="#variant-format">Variant Format</a></li>
+<li><a href="#examples">Examples</a></li>
+</ul>
+</li>
+<li><a href="#7-state-is-not-a-name">7. State Is Not a Name</a></li>
+<li><a href="#8-audience-gating">8. Audience Gating</a></li>
+<li><a href="#9-alignment-with-global-index-schema">9. Alignment with Global Index Schema</a></li>
+<li><a href="#10-figma-code-compatibility">10. Figma &amp; Code Compatibility</a></li>
+<li><a href="#11-prohibited-naming-patterns">11. Prohibited Naming Patterns</a></li>
+<li><a href="#12-review-enforcement">12. Review &amp; Enforcement</a></li>
+<li><a href="#13-canonical-status">13. Canonical Status</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/facilities/" itemprop="item">
+                <span itemprop="name">Facilities</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/facilities/design-system/" itemprop="item">
+                <span itemprop="name">Design System</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Component Naming Convention</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Component Naming Convention</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="rtt-facilities-component-naming-convention">🏷️ RTT Facilities — Component Naming Convention<a class="toc-permalink" href="#rtt-facilities-component-naming-convention" title="Permanent link to this heading">&para;</a></h1>
+<p><strong>Semantic Clarity &amp; Design System Governance</strong></p>
+<p>This document defines the <strong>canonical naming convention</strong> for all components in the RTT Facilities design system.</p>
+<p>Its purpose is to ensure that component names:<br />
+- Encode <strong>meaning</strong>, not appearance<br />
+- Remain stable across time and domains<br />
+- Are legible to designers, engineers, and governance reviewers<br />
+- Prevent semantic drift as the system scales  </p>
+<hr />
+<h2 id="1-naming-philosophy">1. Naming Philosophy<a class="toc-permalink" href="#1-naming-philosophy" title="Permanent link to this heading">&para;</a></h2>
+<p>Component names must answer three questions:</p>
+<ol>
+<li><strong>What does this component do?</strong>  </li>
+<li><strong>What governance concept does it represent?</strong>  </li>
+<li><strong>Where does it belong in the system?</strong></li>
+</ol>
+<p>Names are <strong>contracts</strong>, not labels.</p>
+<hr />
+<h2 id="2-naming-structure">2. Naming Structure<a class="toc-permalink" href="#2-naming-structure" title="Permanent link to this heading">&para;</a></h2>
+<p>All component names follow this structure:</p>
+<div class="codehilite"><pre><span></span><code>[Domain] / [Category] / [Function] [Variant]
+</code></pre></div>
+
+<h3 id="example">Example<a class="toc-permalink" href="#example" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Facilities / Corridor / RiskIndicator
+Facilities / Score / DriftTrend
+Facilities / Capital / ModernizationBadge
+</code></pre></div>
+
+<hr />
+<h2 id="3-domain-prefix">3. Domain Prefix<a class="toc-permalink" href="#3-domain-prefix" title="Permanent link to this heading">&para;</a></h2>
+<p>The <strong>Domain</strong> identifies the canonical ownership of the component.</p>
+<h3 id="approved-domains">Approved Domains<a class="toc-permalink" href="#approved-domains" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><code>Facilities</code></li>
+<li><code>AGERI</code></li>
+<li><code>Dashboards</code></li>
+<li><code>CityFacing</code></li>
+</ul>
+<p>Domain prefixes are <strong>required</strong>.</p>
+<hr />
+<h2 id="4-category-layer">4. Category Layer<a class="toc-permalink" href="#4-category-layer" title="Permanent link to this heading">&para;</a></h2>
+<p>The <strong>Category</strong> describes the conceptual grouping.</p>
+<h3 id="common-categories">Common Categories<a class="toc-permalink" href="#common-categories" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><code>Corridor</code></li>
+<li><code>Score</code></li>
+<li><code>System</code></li>
+<li><code>Capital</code></li>
+<li><code>Audit</code></li>
+<li><code>Status</code></li>
+<li><code>Navigation</code></li>
+<li><code>Layout</code></li>
+<li><code>Control</code></li>
+</ul>
+<p>Categories reflect <strong>governance concepts</strong>, not UI patterns.</p>
+<hr />
+<h2 id="5-function-name">5. Function Name<a class="toc-permalink" href="#5-function-name" title="Permanent link to this heading">&para;</a></h2>
+<p>The <strong>Function</strong> describes what the component <em>means</em>, not how it looks.</p>
+<h3 id="good-examples">Good Examples<a class="toc-permalink" href="#good-examples" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><code>RiskIndicator</code></li>
+<li><code>TrendArrow</code></li>
+<li><code>ClassificationBadge</code></li>
+<li><code>DependencyGraph</code></li>
+<li><code>InterventionTimeline</code></li>
+</ul>
+<h3 id="avoid">Avoid<a class="toc-permalink" href="#avoid" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><code>RedBox</code></li>
+<li><code>BigCard</code></li>
+<li><code>FancyChart</code></li>
+<li><code>Widget</code></li>
+</ul>
+<p>If the name describes color or shape, it is wrong.</p>
+<hr />
+<h2 id="6-variant-suffixes">6. Variant Suffixes<a class="toc-permalink" href="#6-variant-suffixes" title="Permanent link to this heading">&para;</a></h2>
+<p>Variants are appended <strong>only when necessary</strong>.</p>
+<h3 id="variant-format">Variant Format<a class="toc-permalink" href="#variant-format" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>[Function] — [Variant]
+</code></pre></div>
+
+<h3 id="examples">Examples<a class="toc-permalink" href="#examples" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>RiskIndicator — Compact
+RiskIndicator — Executive
+TrendArrow — Up
+TrendArrow — Down
+</code></pre></div>
+
+<p>Variants must not redefine meaning.</p>
+<hr />
+<h2 id="7-state-is-not-a-name">7. State Is Not a Name<a class="toc-permalink" href="#7-state-is-not-a-name" title="Permanent link to this heading">&para;</a></h2>
+<p>Component <strong>state</strong> is never encoded in the name.</p>
+<p>❌ <code>RiskIndicatorError</code><br />
+❌ <code>ScoreWarningCard</code></p>
+<p>✅ State is handled via properties, not naming.</p>
+<hr />
+<h2 id="8-audience-gating">8. Audience Gating<a class="toc-permalink" href="#8-audience-gating" title="Permanent link to this heading">&para;</a></h2>
+<p>If a component supports multiple audiences, the <strong>variant</strong> reflects this:</p>
+<div class="codehilite"><pre><span></span><code>Facilities / Corridor / RiskIndicator — Operator
+Facilities / Corridor / RiskIndicator — Executive
+Facilities / Corridor / RiskIndicator — Public
+</code></pre></div>
+
+<p>Audience is never implied.</p>
+<hr />
+<h2 id="9-alignment-with-global-index-schema">9. Alignment with Global Index Schema<a class="toc-permalink" href="#9-alignment-with-global-index-schema" title="Permanent link to this heading">&para;</a></h2>
+<p>Every component name must map cleanly to schema concepts.</p>
+<p>Examples:<br />
+- <code>Score / DriftTrend</code> → <code>scores.drift</code><br />
+- <code>Capital / ModernizationBadge</code> → <code>capital.modernization_cycle</code><br />
+- <code>Audit / StatusFlag</code> → <code>audit.follow_up_required</code></p>
+<p>If no schema mapping exists, the component should not exist.</p>
+<hr />
+<h2 id="10-figma-code-compatibility">10. Figma &amp; Code Compatibility<a class="toc-permalink" href="#10-figma-code-compatibility" title="Permanent link to this heading">&para;</a></h2>
+<p>Names must be:<br />
+- Slash‑delimited for Figma organization<br />
+- Stable for code references<br />
+- Free of special characters<br />
+- Singular, not plural  </p>
+<p>Avoid abbreviations unless canonical.</p>
+<hr />
+<h2 id="11-prohibited-naming-patterns">11. Prohibited Naming Patterns<a class="toc-permalink" href="#11-prohibited-naming-patterns" title="Permanent link to this heading">&para;</a></h2>
+<p>Do <strong>not</strong> use:<br />
+- Visual adjectives<br />
+- Temporary language (<code>New</code>, <code>V2</code>, <code>Test</code>)<br />
+- Implementation details<br />
+- Tool‑specific terms  </p>
+<p>Names must survive redesigns.</p>
+<hr />
+<h2 id="12-review-enforcement">12. Review &amp; Enforcement<a class="toc-permalink" href="#12-review-enforcement" title="Permanent link to this heading">&para;</a></h2>
+<p>All component names must be:<br />
+- Reviewed for semantic clarity<br />
+- Approved by the design system steward<br />
+- Frozen once canonical  </p>
+<p>Renaming is treated as a <strong>breaking governance change</strong>.</p>
+<hr />
+<h2 id="13-canonical-status">13. Canonical Status<a class="toc-permalink" href="#13-canonical-status" title="Permanent link to this heading">&para;</a></h2>
+<p>This naming convention is <strong>canonical</strong>.</p>
+<p>All RTT Facilities components must conform to it.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/facilities/design-system/component-naming-convention.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/facilities/design-system/component-naming-convention.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

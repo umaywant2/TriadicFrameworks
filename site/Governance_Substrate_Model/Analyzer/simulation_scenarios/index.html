@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Simulation Scenarios | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/simulation_scenarios/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Simulation Scenarios" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/simulation_scenarios/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Simulation Scenarios" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/Governance_Substrate_Model/Analyzer/simulation_scenarios.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Simulation Scenarios",
+    "headline": "Simulation Scenarios",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/simulation_scenarios/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#scenario-structure">Scenario structure</a></li>
+<li><a href="#core-scenario-types">Core scenario types</a><ul>
+<li><a href="#1-stable-basin-scenario">1. Stable Basin Scenario</a></li>
+<li><a href="#2-rising-tension-scenario">2. Rising Tension Scenario</a></li>
+<li><a href="#3-drift-escalation-scenario">3. Drift Escalation Scenario</a></li>
+<li><a href="#4-basin-transition-scenario">4. Basin Transition Scenario</a></li>
+<li><a href="#5-regimeshift-scenario">5. Regime‑Shift Scenario</a></li>
+<li><a href="#6-absorptive-recovery-scenario">6. Absorptive Recovery Scenario</a></li>
+<li><a href="#7-fragmentation-scenario">7. Fragmentation Scenario</a></li>
+<li><a href="#8-counterfactual-scenario">8. Counterfactual Scenario</a></li>
+</ul>
+</li>
+<li><a href="#scenario-definition-template">Scenario definition template</a></li>
+<li><a href="#how-scenarios-integrate-with-the-analyzer">How scenarios integrate with the Analyzer</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Governance_Substrate_Model/" itemprop="item">
+                <span itemprop="name">Governance Substrate Model</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/" itemprop="item">
+                <span itemprop="name">Analyzer</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Simulation Scenarios</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Simulation Scenarios</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="simulation-scenarios">Simulation Scenarios<a class="toc-permalink" href="#simulation-scenarios" title="Permanent link to this heading">&para;</a></h1>
+<p><em>A catalog of structural scenarios for the GSM Simulation Engine</em></p>
+<p>Simulation scenarios define <strong>starting conditions</strong>, <strong>structural constraints</strong>, and <strong>exploration goals</strong> for running simulations in the Governance Substrate Model (GSM). They allow analysts, students, and contributors to explore how systems evolve under different tensions, drift pressures, basin positions, and awareness configurations.</p>
+<p>Scenarios are not predictions—they are structured explorations of the possibility space.</p>
+<hr />
+<h2 id="scenario-structure">Scenario structure<a class="toc-permalink" href="#scenario-structure" title="Permanent link to this heading">&para;</a></h2>
+<p>Each scenario includes:</p>
+<ul>
+<li><strong>scenario_id</strong> — unique identifier  </li>
+<li><strong>title</strong> — human‑readable name  </li>
+<li><strong>description</strong> — purpose and context  </li>
+<li><strong>initial_vector</strong> — starting [C, M, O, A, T]  </li>
+<li><strong>initial_conditions</strong> — invariants, drift, physics, awareness, absorptive strength  </li>
+<li><strong>constraints</strong> — fixed or variable parameters  </li>
+<li><strong>goals</strong> — what the scenario is meant to explore  </li>
+<li><strong>expected_patterns</strong> — typical structural behaviors  </li>
+<li><strong>termination_conditions</strong> — when the simulation stops  </li>
+</ul>
+<p>This structure ensures consistency across teaching, analysis, and research.</p>
+<hr />
+<h2 id="core-scenario-types">Core scenario types<a class="toc-permalink" href="#core-scenario-types" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="1-stable-basin-scenario">1. Stable Basin Scenario<a class="toc-permalink" href="#1-stable-basin-scenario" title="Permanent link to this heading">&para;</a></h3>
+<p>Explores how a system behaves when starting deep inside a basin with low tension.</p>
+<ul>
+<li><strong>Purpose</strong> — demonstrate stability, micro‑drift, and compensatory physics  </li>
+<li><strong>Initial vector</strong> — near basin centroid  </li>
+<li><strong>Expected patterns</strong> — low drift, high coherence, stable regime mode  </li>
+<li><strong>Termination</strong> — fixed number of steps or stability plateau  </li>
+</ul>
+<hr />
+<h3 id="2-rising-tension-scenario">2. Rising Tension Scenario<a class="toc-permalink" href="#2-rising-tension-scenario" title="Permanent link to this heading">&para;</a></h3>
+<p>Models invariant strain and cross‑axis imbalance.</p>
+<ul>
+<li><strong>Purpose</strong> — show how tension accumulates and triggers drift  </li>
+<li><strong>Initial vector</strong> — near basin edge with rising tension  </li>
+<li><strong>Expected patterns</strong> — tension → drift → compensatory mode  </li>
+<li><strong>Termination</strong> — drift category reaches <em>meso</em>  </li>
+</ul>
+<hr />
+<h3 id="3-drift-escalation-scenario">3. Drift Escalation Scenario<a class="toc-permalink" href="#3-drift-escalation-scenario" title="Permanent link to this heading">&para;</a></h3>
+<p>Focuses on directional movement driven by physics forces.</p>
+<ul>
+<li><strong>Purpose</strong> — illustrate drift amplification and directional consistency  </li>
+<li><strong>Initial vector</strong> — moderate imbalance across C↔O or M↔A  </li>
+<li><strong>Expected patterns</strong> — meso drift, possible transition approach  </li>
+<li><strong>Termination</strong> — boundary proximity &gt; 0.7  </li>
+</ul>
+<hr />
+<h3 id="4-basin-transition-scenario">4. Basin Transition Scenario<a class="toc-permalink" href="#4-basin-transition-scenario" title="Permanent link to this heading">&para;</a></h3>
+<p>Simulates crossing from one basin to another.</p>
+<ul>
+<li><strong>Purpose</strong> — teach basin topology and transition thresholds  </li>
+<li><strong>Initial vector</strong> — near boundary with high drift pressure  </li>
+<li><strong>Expected patterns</strong> — drift → transition → reconstruction  </li>
+<li><strong>Termination</strong> — new basin stability_score &gt; 0.5  </li>
+</ul>
+<hr />
+<h3 id="5-regimeshift-scenario">5. Regime‑Shift Scenario<a class="toc-permalink" href="#5-regimeshift-scenario" title="Permanent link to this heading">&para;</a></h3>
+<p>Models rare, high‑energy structural reconfiguration.</p>
+<ul>
+<li><strong>Purpose</strong> — demonstrate regime‑shift detection and nonlinear movement  </li>
+<li><strong>Initial vector</strong> — high tension, macro drift, weak absorptive strength  </li>
+<li><strong>Expected patterns</strong> — destabilization → basin crossing → re‑anchoring  </li>
+<li><strong>Termination</strong> — regime_shift_detected == true  </li>
+</ul>
+<hr />
+<h3 id="6-absorptive-recovery-scenario">6. Absorptive Recovery Scenario<a class="toc-permalink" href="#6-absorptive-recovery-scenario" title="Permanent link to this heading">&para;</a></h3>
+<p>Explores how systems stabilize after tension or drift.</p>
+<ul>
+<li><strong>Purpose</strong> — show absorptive dampening and return to stability  </li>
+<li><strong>Initial vector</strong> — moderate tension, strong absorptive structures  </li>
+<li><strong>Expected patterns</strong> — drift dampening → tension reduction → stable mode  </li>
+<li><strong>Termination</strong> — coherence_score &gt; 70  </li>
+</ul>
+<hr />
+<h3 id="7-fragmentation-scenario">7. Fragmentation Scenario<a class="toc-permalink" href="#7-fragmentation-scenario" title="Permanent link to this heading">&para;</a></h3>
+<p>Models structural breakdown and loss of coherence.</p>
+<ul>
+<li><strong>Purpose</strong> — illustrate invariant violations and physics destabilization  </li>
+<li><strong>Initial vector</strong> — multiple invariant violations, low oversight/timing coherence  </li>
+<li><strong>Expected patterns</strong> — fragmentation → reconstruction or collapse  </li>
+<li><strong>Termination</strong> — reconstruction_phase_entered  </li>
+</ul>
+<hr />
+<h3 id="8-counterfactual-scenario">8. Counterfactual Scenario<a class="toc-permalink" href="#8-counterfactual-scenario" title="Permanent link to this heading">&para;</a></h3>
+<p>Allows analysts to explore “what if” structural histories.</p>
+<ul>
+<li><strong>Purpose</strong> — compare alternate structural paths  </li>
+<li><strong>Initial vector</strong> — user‑defined  </li>
+<li><strong>Constraints</strong> — fixed or variable depending on the counterfactual  </li>
+<li><strong>Termination</strong> — user‑defined  </li>
+</ul>
+<hr />
+<h2 id="scenario-definition-template">Scenario definition template<a class="toc-permalink" href="#scenario-definition-template" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="nt">scenario</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">scenario_id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;unique_id&gt;&quot;</span>
+<span class="w">  </span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;scenario_name&gt;&quot;</span>
+<span class="w">  </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;purpose_and_context&gt;&quot;</span>
+<span class="w">  </span><span class="nt">initial_vector</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">C</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;number&gt;</span>
+<span class="w">    </span><span class="nt">M</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;number&gt;</span>
+<span class="w">    </span><span class="nt">O</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;number&gt;</span>
+<span class="w">    </span><span class="nt">A</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;number&gt;</span>
+<span class="w">    </span><span class="nt">T</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;number&gt;</span>
+<span class="w">  </span><span class="nt">initial_conditions</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">invariants</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">aligned</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">...</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">tension</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">...</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">violated</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">...</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">drift</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">vector</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">...</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">magnitude</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;number&gt;</span>
+<span class="w">      </span><span class="nt">category</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;micro|meso|macro|regime_shift&gt;&quot;</span>
+<span class="w">    </span><span class="nt">physics_forces</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">axis_pair</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;C↔O</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">M↔A</span><span class="nv"> </span><span class="s">|</span><span class="nv"> </span><span class="s">O↔T&gt;&quot;</span>
+<span class="w">        </span><span class="nt">magnitude</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;number&gt;</span>
+<span class="w">        </span><span class="nt">direction</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;positive|negative&gt;&quot;</span>
+<span class="w">    </span><span class="nt">awareness_layers</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">structural</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;0–10&gt;</span>
+<span class="w">      </span><span class="nt">procedural</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;0–10&gt;</span>
+<span class="w">      </span><span class="nt">historical</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;0–10&gt;</span>
+<span class="w">      </span><span class="nt">anticipatory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;0–10&gt;</span>
+<span class="w">      </span><span class="nt">relational</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;0–10&gt;</span>
+<span class="w">    </span><span class="nt">absorptive_strength</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;0–1&gt;</span>
+<span class="w">    </span><span class="nt">regime_mode</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;mode&gt;&quot;</span>
+<span class="w">    </span><span class="nt">phase_state</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;&lt;phase&gt;&quot;</span>
+<span class="w">  </span><span class="nt">constraints</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">fixed_parameters</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">...</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">variable_parameters</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">...</span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">goals</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;&lt;goal_1&gt;&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;&lt;goal_2&gt;&quot;</span>
+<span class="w">  </span><span class="nt">expected_patterns</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;&lt;pattern_1&gt;&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;&lt;pattern_2&gt;&quot;</span>
+<span class="w">  </span><span class="nt">termination_conditions</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;&lt;condition_1&gt;&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;&lt;condition_2&gt;&quot;</span>
+</code></pre></div>
+
+<hr />
+<h2 id="how-scenarios-integrate-with-the-analyzer">How scenarios integrate with the Analyzer<a class="toc-permalink" href="#how-scenarios-integrate-with-the-analyzer" title="Permanent link to this heading">&para;</a></h2>
+<p>Scenarios plug directly into:</p>
+<ul>
+<li><strong>Simulation Engine</strong> — stepwise structural evolution  </li>
+<li><strong>Projection Rules</strong> — drift and basin trajectory forecasting  </li>
+<li><strong>Regime Modes</strong> — operational behavior classification  </li>
+<li><strong>Phase Discipline</strong> — phase‑honest transitions  </li>
+<li><strong>Observer Layer</strong> — history/now/future interpretation  </li>
+<li><strong>Dashboards</strong> — scenario visualization  </li>
+</ul>
+<p>This ensures every scenario is structurally coherent and analytically meaningful.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Governance_Substrate_Model/Analyzer/simulation_scenarios.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/Governance_Substrate_Model/Analyzer/simulation_scenarios.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

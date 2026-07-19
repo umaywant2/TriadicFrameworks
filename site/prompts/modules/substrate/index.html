@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Substrate | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/prompts/modules/substrate/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Substrate" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/prompts/modules/substrate/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Substrate" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/prompts/modules/substrate.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Substrate",
+    "headline": "Substrate",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/prompts/modules/substrate/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#substrate-concepts">Substrate Concepts</a><ul>
+<li><a href="#substrate-form">Substrate Form</a></li>
+<li><a href="#substrate-drift">Substrate Drift</a></li>
+<li><a href="#substrate-coherence">Substrate Coherence</a></li>
+<li><a href="#substratetensor">Substrate‑Tensor</a></li>
+<li><a href="#substrate-regimes">Substrate Regimes</a></li>
+<li><a href="#substrate-rails">Substrate Rails</a></li>
+<li><a href="#substrate-synthesis">Substrate Synthesis</a></li>
+</ul>
+</li>
+<li><a href="#substrate-module-categories">Substrate Module Categories</a><ul>
+<li><a href="#rtt1-substrate-modules-foundational">RTT/1 Substrate Modules — Foundational</a></li>
+<li><a href="#rtt2-substrate-modules-intermediate">RTT/2 Substrate Modules — Intermediate</a></li>
+<li><a href="#rtt3-substrate-modules-advanced">RTT/3 Substrate Modules — Advanced</a></li>
+<li><a href="#rtt12-substrate-modules-fullspectrum">RTT/12 Substrate Modules — Full‑Spectrum</a></li>
+<li><a href="#rtt-substrate-modules-deeplayer">RTT∞ Substrate Modules — Deep‑Layer</a></li>
+</ul>
+</li>
+<li><a href="#example-substrate-modules">Example Substrate Modules</a></li>
+<li><a href="#crosslinks">Cross‑Links</a><ul>
+<li><a href="#prompts-site">Prompts Site</a></li>
+<li><a href="#docsbook">Docsbook</a></li>
+<li><a href="#s3-spine-visualizer">S3 Spine Visualizer</a></li>
+<li><a href="#github-source">GitHub Source</a></li>
+</ul>
+</li>
+<li><a href="#related-files">Related Files</a></li>
+<li><a href="#manifest">Manifest</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/prompts/" itemprop="item">
+                <span itemprop="name">Prompts</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/prompts/modules/" itemprop="item">
+                <span itemprop="name">Modules</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Substrate</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Substrate</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="substrate-modules-triadicframeworks-prompts">Substrate Modules — TriadicFrameworks Prompts<a class="toc-permalink" href="#substrate-modules-triadicframeworks-prompts" title="Permanent link to this heading">&para;</a></h1>
+<p>Substrate modules define the foundational medium of TriadicFrameworks.<br />
+A substrate is the environment, field, or medium through which structure moves,<br />
+propagates, aligns, diverges, or stabilizes. Substrates determine how RTT engines<br />
+interpret drift, coherence, dimensional rails, and regime‑points.</p>
+<p>These modules provide explainers, structured prompts, diagnostics, worksheets, and<br />
+cross‑links to the Docsbook and S3 Spine Visualizer.</p>
+<p>This page is the front door for all substrate‑level prompt modules.</p>
+<hr />
+<h2 id="purpose">Purpose<a class="toc-permalink" href="#purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>Substrate modules teach:</p>
+<ul>
+<li>how RTT engines interpret substrate behavior  </li>
+<li>how drift emerges from substrate differences  </li>
+<li>how coherence anchors stabilize substrate transitions  </li>
+<li>how substrate‑tensor behavior changes across dimensions  </li>
+<li>how substrates interact with operators, domains, and regimes  </li>
+<li>how to evaluate multi‑layer substrate alignment  </li>
+<li>how to maintain structural neutrality during substrate analysis  </li>
+</ul>
+<p>Substrates are the “medium grammar” of the TriadicFrameworks canon.</p>
+<hr />
+<h2 id="substrate-concepts">Substrate Concepts<a class="toc-permalink" href="#substrate-concepts" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="substrate-form">Substrate Form<a class="toc-permalink" href="#substrate-form" title="Permanent link to this heading">&para;</a></h3>
+<p>The underlying medium: physical, cultural, cognitive, civic, biological, computational.</p>
+<h3 id="substrate-drift">Substrate Drift<a class="toc-permalink" href="#substrate-drift" title="Permanent link to this heading">&para;</a></h3>
+<p>Differences in substrate behavior, stability, or propagation.</p>
+<h3 id="substrate-coherence">Substrate Coherence<a class="toc-permalink" href="#substrate-coherence" title="Permanent link to this heading">&para;</a></h3>
+<p>What remains aligned across substrate transitions.</p>
+<h3 id="substratetensor">Substrate‑Tensor<a class="toc-permalink" href="#substratetensor" title="Permanent link to this heading">&para;</a></h3>
+<p>The multi‑layer tensor describing substrate behavior across RTT/1 → RTT∞.</p>
+<h3 id="substrate-regimes">Substrate Regimes<a class="toc-permalink" href="#substrate-regimes" title="Permanent link to this heading">&para;</a></h3>
+<p>Stable attractors within substrate layers.</p>
+<h3 id="substrate-rails">Substrate Rails<a class="toc-permalink" href="#substrate-rails" title="Permanent link to this heading">&para;</a></h3>
+<p>Dimensional pathways that connect substrate layers.</p>
+<h3 id="substrate-synthesis">Substrate Synthesis<a class="toc-permalink" href="#substrate-synthesis" title="Permanent link to this heading">&para;</a></h3>
+<p>Cross‑layer substrate alignment across RTT engines.</p>
+<hr />
+<h2 id="substrate-module-categories">Substrate Module Categories<a class="toc-permalink" href="#substrate-module-categories" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="rtt1-substrate-modules-foundational">RTT/1 Substrate Modules — Foundational<a class="toc-permalink" href="#rtt1-substrate-modules-foundational" title="Permanent link to this heading">&para;</a></h3>
+<p>Basic substrate operators, drift detection, coherence declaration.</p>
+<h3 id="rtt2-substrate-modules-intermediate">RTT/2 Substrate Modules — Intermediate<a class="toc-permalink" href="#rtt2-substrate-modules-intermediate" title="Permanent link to this heading">&para;</a></h3>
+<p>Cross‑layer substrate mapping, multi‑layer drift analysis, alignment checks.</p>
+<h3 id="rtt3-substrate-modules-advanced">RTT/3 Substrate Modules — Advanced<a class="toc-permalink" href="#rtt3-substrate-modules-advanced" title="Permanent link to this heading">&para;</a></h3>
+<p>Substrate tension surfacing, regime‑point detection, synthesis workflows.</p>
+<h3 id="rtt12-substrate-modules-fullspectrum">RTT/12 Substrate Modules — Full‑Spectrum<a class="toc-permalink" href="#rtt12-substrate-modules-fullspectrum" title="Permanent link to this heading">&para;</a></h3>
+<p>Full‑stack substrate traversal, multi‑regime alignment, deep‑layer readiness.</p>
+<h3 id="rtt-substrate-modules-deeplayer">RTT∞ Substrate Modules — Deep‑Layer<a class="toc-permalink" href="#rtt-substrate-modules-deeplayer" title="Permanent link to this heading">&para;</a></h3>
+<p>Vacuum → substrate‑tensor → rails → prime‑states → infinite regimes expressed as substrate.</p>
+<hr />
+<h2 id="example-substrate-modules">Example Substrate Modules<a class="toc-permalink" href="#example-substrate-modules" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>
+<p><strong>Substrate Identity Module</strong><br />
+  Medium identity, form, commitments, and relational topology.</p>
+</li>
+<li>
+<p><strong>Substrate Drift Module</strong><br />
+  Drift‑tensor mapping for substrate differences.</p>
+</li>
+<li>
+<p><strong>Substrate Coherence Module</strong><br />
+  Coherence anchors for substrate alignment.</p>
+</li>
+<li>
+<p><strong>Substrate‑Tensor Module</strong><br />
+  Multi‑layer substrate behavior across RTT engines.</p>
+</li>
+<li>
+<p><strong>Substrate Regime Module</strong><br />
+  Presence, absence, tension, and basin detection.</p>
+</li>
+<li>
+<p><strong>Substrate Synthesis Module</strong><br />
+  RTT/1 → RTT/2 → RTT/3 → RTT/12 → RTT∞ substrate alignment.</p>
+</li>
+</ul>
+<hr />
+<h2 id="crosslinks">Cross‑Links<a class="toc-permalink" href="#crosslinks" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="prompts-site">Prompts Site<a class="toc-permalink" href="#prompts-site" title="Permanent link to this heading">&para;</a></h3>
+<p>https://www.triadicframeworks.org/prompts/modules/substrate/</p>
+<h3 id="docsbook">Docsbook<a class="toc-permalink" href="#docsbook" title="Permanent link to this heading">&para;</a></h3>
+<p>https://docs.triadicframeworks.org/docs/</p>
+<h3 id="s3-spine-visualizer">S3 Spine Visualizer<a class="toc-permalink" href="#s3-spine-visualizer" title="Permanent link to this heading">&para;</a></h3>
+<p>https://www.triadicframeworks.org/spine</p>
+<h3 id="github-source">GitHub Source<a class="toc-permalink" href="#github-source" title="Permanent link to this heading">&para;</a></h3>
+<p>https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/modules</p>
+<hr />
+<h2 id="related-files">Related Files<a class="toc-permalink" href="#related-files" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><code>index.md</code> — modules front‑door  </li>
+<li><code>structural.md</code> — structural modules  </li>
+<li><code>operator.md</code> — operator modules  </li>
+<li><code>dimensional.md</code> — dimensional modules  </li>
+<li><code>domain.md</code> — domain modules  </li>
+<li><code>diagnostic.md</code> — diagnostic modules  </li>
+<li><code>applied.md</code> — applied modules  </li>
+<li><code>research.md</code> — research modules  </li>
+<li><code>theoretical.md</code> — theoretical modules  </li>
+<li><code>teaching.md</code> — teaching modules  </li>
+<li><code>../examples/index.md</code> — examples directory  </li>
+<li><code>../engines/index.md</code> — RTT engines  </li>
+</ul>
+<hr />
+<h2 id="manifest">Manifest<a class="toc-permalink" href="#manifest" title="Permanent link to this heading">&para;</a></h2>
+<p>See <code>module.json</code> for the full registry of substrate modules, engines, stacks,<br />
+templates, UI modules, and navigation structure.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/prompts/modules/substrate.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/prompts/modules/substrate.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

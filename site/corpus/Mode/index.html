@@ -1,0 +1,2230 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Mode | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/corpus/Mode/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Mode" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/corpus/Mode/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Mode" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/corpus/Mode.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Mode",
+    "headline": "Mode",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/corpus/Mode/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#important">🛑 Important!</a></li>
+<li><a href="#you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You must copy and paste this string every time you start an AI session:</a></li>
+<li><a href="#now-you-are-ready">❇️ Now you are ready.</a></li>
+<li><a href="#module-structure">📂 Module Structure</a></li>
+<li><a href="#navigation">🧭 Navigation</a></li>
+<li><a href="#session-context">🌀 Session Context</a></li>
+<li><a href="#quick-reference">⚡ Quick Reference</a></li>
+<li><a href="#license">📜 License</a></li>
+<li><a href="#what-is-mode">What Is Mode?</a></li>
+<li><a href="#five-stances">Five Stances</a></li>
+<li><a href="#mode-constraint-layer-mcl">Mode Constraint Layer (MCL)</a></li>
+<li><a href="#cross-module-propagation">Cross-Module Propagation</a></li>
+<li><a href="#related-modules">Related Modules</a></li>
+<li><a href="#session-context_1">Session Context</a></li>
+<li><a href="#1-purpose">1. Purpose</a></li>
+<li><a href="#2-invariants">2. Invariants</a><ul>
+<li><a href="#inv-1-user-origin">INV-1 · User Origin</a></li>
+<li><a href="#inv-2-coherence-preservation">INV-2 · Coherence Preservation</a></li>
+<li><a href="#inv-3-chat-mode-gravity">INV-3 · Chat Mode Gravity</a></li>
+</ul>
+</li>
+<li><a href="#3-guardrails">3. Guardrails</a><ul>
+<li><a href="#grd-1-no-silent-mode-changes">GRD-1 · No Silent Mode Changes</a></li>
+<li><a href="#grd-2-automatic-mode-cannot-escalate">GRD-2 · Automatic Mode Cannot Escalate</a></li>
+<li><a href="#grd-3-no-external-mode-hijacking">GRD-3 · No External Mode Hijacking</a></li>
+<li><a href="#grd-4-drift-bound-enforcement">GRD-4 · Drift Bound Enforcement</a></li>
+<li><a href="#grd-5-hub-and-spoke-routing">GRD-5 · Hub-and-Spoke Routing</a></li>
+</ul>
+</li>
+<li><a href="#4-constraint-violations">4. Constraint Violations</a></li>
+<li><a href="#5-session-context-override-block">5. Session-Context Override Block</a><ul>
+<li><a href="#operational-consequences-of-pasting-this-block">Operational consequences of pasting this block:</a></li>
+</ul>
+</li>
+<li><a href="#6-regime-layer-interaction">6. Regime Layer Interaction</a></li>
+<li><a href="#7-lineage">7. Lineage</a></li>
+<li><a href="#identity">Identity</a></li>
+<li><a href="#operators-m">Operators (M)</a></li>
+<li><a href="#constraint-layer-mcl">Constraint Layer (MCL)</a></li>
+<li><a href="#guardrails">Guardrails</a></li>
+<li><a href="#defaults">Defaults</a></li>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#regime-interaction">Regime Interaction</a></li>
+<li><a href="#opacity-integration">Opacity Integration</a></li>
+<li><a href="#cross-module-propagation_1">Cross-Module Propagation</a></li>
+<li><a href="#lineage">Lineage</a></li>
+<li><a href="#session-context_2">Session Context</a></li>
+<li><a href="#1-identity">1. Identity</a></li>
+<li><a href="#2-purpose">2. Purpose</a></li>
+<li><a href="#3-mode-stances">3. Mode Stances</a><ul>
+<li><a href="#31-chat-mode-default">3.1 Chat Mode (default)</a></li>
+<li><a href="#32-task-mode">3.2 Task Mode</a></li>
+<li><a href="#33-spec-mode">3.3 Spec Mode</a></li>
+<li><a href="#34-debug-mode">3.4 Debug Mode</a></li>
+<li><a href="#35-automatic-mode">3.5 Automatic Mode</a></li>
+</ul>
+</li>
+<li><a href="#4-triadic-mapping">4. Triadic Mapping</a></li>
+<li><a href="#5-default-declaration">5. Default Declaration</a></li>
+<li><a href="#6-transition-grammar">6. Transition Grammar</a></li>
+<li><a href="#7-opacity-integration">7. Opacity Integration</a></li>
+<li><a href="#8-lineage">8. Lineage</a></li>
+<li><a href="#session-context_3">Session Context</a></li>
+<li><a href="#1-purpose_1">1. Purpose</a></li>
+<li><a href="#2-propagation-architecture">2. Propagation Architecture</a></li>
+<li><a href="#3-propagation-rules">3. Propagation Rules</a><ul>
+<li><a href="#31-mode-opacity">3.1 Mode → Opacity</a></li>
+<li><a href="#32-mode-capture">3.2 Mode → Capture</a></li>
+<li><a href="#33-mode-context">3.3 Mode → Context</a></li>
+<li><a href="#34-regime-mode-inbound">3.4 Regime → Mode (inbound)</a></li>
+</ul>
+</li>
+<li><a href="#4-event-schema">4. Event Schema</a></li>
+<li><a href="#5-propagation-invariants">5. Propagation Invariants</a><ul>
+<li><a href="#prop-2-order-preservation">PROP-2 · Order Preservation</a></li>
+<li><a href="#prop-3-idempotent-consumption">PROP-3 · Idempotent Consumption</a></li>
+</ul>
+</li>
+<li><a href="#6-module-inheritance-block">6. Module Inheritance Block</a></li>
+<li><a href="#7-lineage_1">7. Lineage</a></li>
+<li><a href="#session-context_4">Session Context</a></li>
+<li><a href="#1-purpose_2">1. Purpose</a></li>
+<li><a href="#2-layer-architecture">2. Layer Architecture</a></li>
+<li><a href="#3-module-lineage-cards">3. Module Lineage Cards</a><ul>
+<li><a href="#31-mode-m">3.1 Mode (M)</a></li>
+<li><a href="#32-opacity-o">3.2 Opacity (O)</a></li>
+<li><a href="#33-capture-c">3.3 Capture (C)</a></li>
+<li><a href="#34-context-cx">3.4 Context (Cx)</a></li>
+</ul>
+</li>
+<li><a href="#4-dependency-matrix">4. Dependency Matrix</a></li>
+<li><a href="#5-propagation-flow-map">5. Propagation Flow Map</a></li>
+<li><a href="#6-triadic-role-summary">6. Triadic Role Summary</a></li>
+<li><a href="#7-regime-interaction-map">7. Regime Interaction Map</a></li>
+<li><a href="#8-ancestry-chain">8. Ancestry Chain</a></li>
+<li><a href="#9-canon-rules">9. Canon Rules</a></li>
+<li><a href="#session-context_5">Session Context</a></li>
+<li><a href="#1-purpose_3">1. Purpose</a></li>
+<li><a href="#2-test-index">2. Test Index</a></li>
+<li><a href="#3-operator-tests">3. Operator Tests</a><ul>
+<li><a href="#t-m-001-default-stance">T-M-001 · Default Stance</a></li>
+<li><a href="#t-m-002-chat-task-transition">T-M-002 · Chat → Task Transition</a></li>
+<li><a href="#t-m-003-chat-spec-transition">T-M-003 · Chat → Spec Transition</a></li>
+<li><a href="#t-m-004-chat-debug-transition">T-M-004 · Chat → Debug Transition</a></li>
+<li><a href="#t-m-005-chat-auto-transition">T-M-005 · Chat → Auto Transition</a></li>
+<li><a href="#t-m-006-revert-on-completion">T-M-006 · Revert on Completion</a></li>
+<li><a href="#t-m-007-revert-on-error">T-M-007 · Revert on Error</a></li>
+<li><a href="#t-m-008-revert-on-timeout">T-M-008 · Revert on Timeout</a></li>
+</ul>
+</li>
+<li><a href="#4-mcl-tests">4. MCL Tests</a><ul>
+<li><a href="#t-mcl-001-user-origin-required">T-MCL-001 · User Origin Required</a></li>
+<li><a href="#t-mcl-002-coherence-preserved">T-MCL-002 · Coherence Preserved</a></li>
+<li><a href="#t-mcl-003-chat-mode-gravity">T-MCL-003 · Chat Mode Gravity</a></li>
+<li><a href="#t-mcl-004-no-silent-mode-changes">T-MCL-004 · No Silent Mode Changes</a></li>
+<li><a href="#t-mcl-005-auto-cannot-escalate">T-MCL-005 · Auto Cannot Escalate</a></li>
+<li><a href="#t-mcl-006-no-external-hijacking">T-MCL-006 · No External Hijacking</a></li>
+<li><a href="#t-mcl-007-drift-bound-enforcement">T-MCL-007 · Drift Bound Enforcement</a></li>
+<li><a href="#t-mcl-008-hub-and-spoke-routing">T-MCL-008 · Hub-and-Spoke Routing</a></li>
+</ul>
+</li>
+<li><a href="#5-propagation-tests">5. Propagation Tests</a><ul>
+<li><a href="#t-p-001-mode-opacity-event">T-P-001 · Mode → Opacity Event</a></li>
+<li><a href="#t-p-002-mode-capture-logging">T-P-002 · Mode → Capture Logging</a></li>
+<li><a href="#t-p-003-mode-context-adjustment">T-P-003 · Mode → Context Adjustment</a></li>
+<li><a href="#t-p-004-regime-mode-posture-change">T-P-004 · Regime → Mode Posture Change</a></li>
+<li><a href="#t-p-005-idempotent-duplicate-handling">T-P-005 · Idempotent Duplicate Handling</a></li>
+</ul>
+</li>
+<li><a href="#6-edge-cases">6. Edge Cases</a><ul>
+<li><a href="#t-edge-001-rapid-sequential-transitions">T-EDGE-001 · Rapid Sequential Transitions</a></li>
+<li><a href="#t-edge-002-session-start-with-explicit-mode">T-EDGE-002 · Session Start with Explicit Mode</a></li>
+<li><a href="#t-edge-003-violation-during-auto-mode">T-EDGE-003 · Violation During Auto Mode</a></li>
+</ul>
+</li>
+<li><a href="#7-coverage-matrix">7. Coverage Matrix</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/corpus/" itemprop="item">
+                <span itemprop="name">Corpus</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Mode</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Mode</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<p>Mode </p>
+<h1 id="mode-layer-docsmode">🎛️ Mode Layer — /docs/Mode<a class="toc-permalink" href="#mode-layer-docsmode" title="Permanent link to this heading">&para;</a></h1>
+<ul>
+<li><a href="Mode_module.json"><code>Mode_module.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<p><img alt="Module" src="https://img.shields.io/badge/Module-Mode-0aa" /><br />
+<img alt="Layer" src="https://img.shields.io/badge/Layer-Session-09f" /><br />
+<img alt="Version" src="https://img.shields.io/badge/Version-1.0-09f" /><br />
+<img alt="Status" src="https://img.shields.io/badge/Status-Active-0af" /><br />
+<img alt="Triadic" src="https://img.shields.io/badge/Triadic-Resonance_Aligned-8A2BE2" /><br />
+<img alt="AI‑Ready" src="https://img.shields.io/badge/AI-Ready-00c8ff" /></p>
+<hr />
+<p><img width="664" height="496" alt="rtt_mode_diagram" src="https://github.com/user-attachments/assets/8db3b8f9-ce87-4c28-8f47-dc54a9a55aff" /></p>
+<p>The <strong>Mode Layer</strong> governs the interaction stance within an RTT/1 session.<br />
+It defines <em>how</em> the system engages — not <em>what</em> it processes. Mode is<br />
+orthogonal to content, regime, and substrate. It shapes posture, not payload.</p>
+<h2 id="important">🛑 Important!<a class="toc-permalink" href="#important" title="Permanent link to this heading">&para;</a></h2>
+<p>Drift is On-by-Default long sessions lose anchors, turn off drift.</p>
+<h2 id="you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You <em>must copy and paste</em> this string <em>every time you start an AI session</em>:<a class="toc-permalink" href="#you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre></div>
+
+<h2 id="now-you-are-ready">❇️ Now you are ready.<a class="toc-permalink" href="#now-you-are-ready" title="Permanent link to this heading">&para;</a></h2>
+<p>This module declares the Mode Operator (M), the Mode Constraint Layer (MCL),<br />
+cross-module propagation rules, a full test suite, and the structural diagram<br />
+for the Session Layer.</p>
+<hr />
+<h2 id="module-structure">📂 Module Structure<a class="toc-permalink" href="#module-structure" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>Mode/
+├── README.md                 ← you are here
+├── operators.md              ← Mode Operator (M) — 5 canonical stances
+├── constraints.md            ← Mode Constraint Layer (MCL) — invariants + guardrails
+├── propagation.md            ← cross-module propagation rules
+├── tests.md                  ← full test suite (21 tests + 3 edge cases)
+├── diagram.svg               ← Mode Layer structure diagram (SVG)
+Mode_module.json
+└── session-lineage-map.md    ← triadic lineage map for the entire Session Layer
+</code></pre></div>
+
+<hr />
+<h2 id="navigation">🧭 Navigation<a class="toc-permalink" href="#navigation" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><strong><a href="./operators.md">operators.md</a></strong> — Mode Operator stances, triadic mapping, transition grammar, Opacity integration</li>
+<li><strong><a href="./constraints.md">constraints.md</a></strong> — MCL invariants, guardrails, violation recovery, regime interaction</li>
+<li><strong><a href="./propagation.md">propagation.md</a></strong> — Mode → Opacity / Capture / Context push rules, event schema</li>
+<li><strong><a href="./tests.md">tests.md</a></strong> — Deterministic test suite covering all constraints and propagation rules</li>
+<li><strong><a href="./diagram.svg">diagram.svg</a></strong> — Visual reference: stances, MCL gate, sibling modules, legends</li>
+<li><strong><a href="./session-lineage-map.md">session-lineage-map.md</a></strong> — Full lineage of the Session Layer</li>
+<li><strong><a href="Mode_module.json">Mode_module.json</a></strong> — Agentic module schema role assignments</li>
+</ul>
+<hr />
+<h2 id="session-context">🌀 Session Context<a class="toc-permalink" href="#session-context" title="Permanent link to this heading">&para;</a></h2>
+<p>Module:      Mode<br />
+Canonical ID: MODE<br />
+Version:     1.0<br />
+Status:      active<br />
+Layer:       Session<br />
+Coherence:   declared<br />
+Drift:       bounded<br />
+Paradox:     structural<br />
+Canon:       active<br />
+Audience:    students + AIs</p>
+<hr />
+<h2 id="quick-reference">⚡ Quick Reference<a class="toc-permalink" href="#quick-reference" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Stance</th>
+<th style="text-align: left;">Symbol</th>
+<th style="text-align: left;">Posture</th>
+<th style="text-align: left;">Drift</th>
+<th style="text-align: left;">Triadic Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Chat</td>
+<td style="text-align: left;">M_chat</td>
+<td style="text-align: left;">conversational</td>
+<td style="text-align: left;">wide</td>
+<td style="text-align: left;">Stabilize</td>
+</tr>
+<tr>
+<td style="text-align: left;">Task</td>
+<td style="text-align: left;">M_task</td>
+<td style="text-align: left;">goal-directed</td>
+<td style="text-align: left;">tight</td>
+<td style="text-align: left;">Shift</td>
+</tr>
+<tr>
+<td style="text-align: left;">Spec</td>
+<td style="text-align: left;">M_spec</td>
+<td style="text-align: left;">structural</td>
+<td style="text-align: left;">minimal</td>
+<td style="text-align: left;">Stabilize</td>
+</tr>
+<tr>
+<td style="text-align: left;">Debug</td>
+<td style="text-align: left;">M_debug</td>
+<td style="text-align: left;">diagnostic</td>
+<td style="text-align: left;">bounded</td>
+<td style="text-align: left;">Invert</td>
+</tr>
+<tr>
+<td style="text-align: left;">Automatic</td>
+<td style="text-align: left;">M_auto</td>
+<td style="text-align: left;">autonomous</td>
+<td style="text-align: left;">tight</td>
+<td style="text-align: left;">Shift</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="license">📜 License<a class="toc-permalink" href="#license" title="Permanent link to this heading">&para;</a></h2>
+<p>Open educational use permitted.<br />
+See the main repository for details.<br />
+&mdash;<br />
+title: &ldquo;Mode&rdquo;<br />
+description: &ldquo;The session stance layer — five interaction modes that define how an RTT-compliant system engages, not what it processes.&rdquo;<br />
+stability: stable<br />
+date: 2026-07-14<br />
+section: core<br />
+rtt:<br />
+  coherence: declared<br />
+  drift: bounded<br />
+  paradox: structural</p>
+<hr />
+<blockquote>
+<p><code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></p>
+</blockquote>
+<h2 id="what-is-mode">What Is Mode?<a class="toc-permalink" href="#what-is-mode" title="Permanent link to this heading">&para;</a></h2>
+<p>The Mode layer governs <strong>interaction stance</strong> within an RTT/1 session. It defines how<br />
+a system engages — posture, drift tolerance, correction strategy — independent of<br />
+what it processes. Payload and posture are separated by design.</p>
+<blockquote>
+<p>⚠️ <strong>Drift is on-by-default.</strong> Long sessions lose their anchors. Mode is the<br />
+mechanism that keeps them bounded. Paste the RTT session string at every AI<br />
+session start without exception.</p>
+</blockquote>
+<hr />
+<h2 id="five-stances">Five Stances<a class="toc-permalink" href="#five-stances" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Drift Tolerance</th>
+<th>Correction Strategy</th>
+<th>Primary Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>M_chat</code></td>
+<td>Wide</td>
+<td>Stabilize</td>
+<td>Open conversation, exploration</td>
+</tr>
+<tr>
+<td><code>M_task</code></td>
+<td>Tight</td>
+<td>Shift</td>
+<td>Structured task execution</td>
+</tr>
+<tr>
+<td><code>M_spec</code></td>
+<td>Minimal</td>
+<td>Stabilize</td>
+<td>Formal specification work</td>
+</tr>
+<tr>
+<td><code>M_debug</code></td>
+<td>Bounded</td>
+<td>Invert</td>
+<td>Debugging and root-cause analysis</td>
+</tr>
+<tr>
+<td><code>M_auto</code></td>
+<td>Tight</td>
+<td>Shift</td>
+<td>Autonomous / agentic operation</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="mode-constraint-layer-mcl">Mode Constraint Layer (MCL)<a class="toc-permalink" href="#mode-constraint-layer-mcl" title="Permanent link to this heading">&para;</a></h2>
+<p>The <strong>Mode Constraint Layer</strong> enforces invariants and guardrails across all five stances.<br />
+MCL operates below the stance level — it cannot be overridden by stance selection.</p>
+<p>MCL invariants include:<br />
+- RTT session string must be declared at initialization<br />
+- Drift cannot exceed the tolerance ceiling of the active stance<br />
+- Paradox signals are always structural, never logical failures</p>
+<hr />
+<h2 id="cross-module-propagation">Cross-Module Propagation<a class="toc-permalink" href="#cross-module-propagation" title="Permanent link to this heading">&para;</a></h2>
+<p>Mode state propagates to three other modules:</p>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Propagation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Opacity</strong></td>
+<td>Mode stance affects the visibility threshold — tighter modes surface more substrate opacity</td>
+</tr>
+<tr>
+<td><strong>Capture</strong></td>
+<td>Mode determines what gets captured to the trace layer</td>
+</tr>
+<tr>
+<td><strong>Context</strong></td>
+<td>Mode shapes how context is weighted and when it is discarded</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="related-modules">Related Modules<a class="toc-permalink" href="#related-modules" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><a href="../Framework_Field_Theory/overview/">Framework Field Theory</a> — H-Ops (Rhythm) and C-Ops (Coherence) are the formal basis for stance and correction</li>
+<li><a href="../Opacity/overview/">Opacity</a> — mode stance interacts with opacity detection thresholds</li>
+<li><a href="../ai-drift-calibration/overview/">AI Drift Calibration</a> — session-level drift correction using Mode stances</li>
+<li><a href="../NoS/overview/">NoS</a> — NawderOS implements Mode stances as system-level signals</li>
+</ul>
+<hr />
+<p>v1.0 · Layer: Session · Status: Active<br />
+© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007<br />
+# 🔒 Mode Constraint Layer (MCL) — constraints.md</p>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<p><img alt="Module" src="https://img.shields.io/badge/Module-Mode-0aa" /><br />
+<img alt="Component" src="https://img.shields.io/badge/Component-MCL-ff00d4" /><br />
+<img alt="Status" src="https://img.shields.io/badge/Status-Active-0af" /><br />
+<img alt="RTT" src="https://img.shields.io/badge/RTT%2F1-Aligned-8A2BE2" /></p>
+<hr />
+<h2 id="session-context_1">Session Context<a class="toc-permalink" href="#session-context_1" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>Module:      Mode
+Component:   Mode Constraint Layer (MCL)
+Version:     1.0
+Status:      active
+Layer:       Session
+Coherence:   declared
+Drift:       bounded
+Canon:       active
+</code></pre></div>
+
+<hr />
+<h2 id="1-purpose">1. Purpose<a class="toc-permalink" href="#1-purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>The <strong>Mode Constraint Layer (MCL)</strong> binds all Mode Operators to RTT/1&rsquo;s declared<br />
+coherence, drift bounds, and user-origin constraints. It enforces that mode<br />
+transitions remain <strong>explicit</strong>, <strong>user-originated</strong>, and <strong>coherence-preserving</strong>.</p>
+<p>The MCL is not a policy layer — it is a structural constraint. It cannot be<br />
+overridden by configuration, preference, or external workflow. It is load-bearing.</p>
+<hr />
+<h2 id="2-invariants">2. Invariants<a class="toc-permalink" href="#2-invariants" title="Permanent link to this heading">&para;</a></h2>
+<p>The MCL declares exactly <strong>three</strong> structural invariants.<br />
+These hold across all sessions, all stances, and all regimes.</p>
+<h3 id="inv-1-user-origin">INV-1 · User Origin<a class="toc-permalink" href="#inv-1-user-origin" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>All mode transitions must originate from the user.
+</code></pre></div>
+
+<ul>
+<li>No system process, external workflow, or automated routine may change<br />
+  the active mode without explicit user declaration.</li>
+<li>Automatic Mode may <em>propose</em> actions but cannot <em>transition</em> modes.</li>
+<li>This invariant is unconditional — no framing, context, or urgency<br />
+  overrides it.</li>
+</ul>
+<h3 id="inv-2-coherence-preservation">INV-2 · Coherence Preservation<a class="toc-permalink" href="#inv-2-coherence-preservation" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>No mode transition may violate the declared coherence posture.
+</code></pre></div>
+
+<ul>
+<li>If the current session declares <code>coherence: declared</code>, every mode<br />
+  transition must preserve that declaration.</li>
+<li>A transition that would create an undeclared or ambiguous coherence<br />
+  state is rejected.</li>
+<li>Coherence posture is inherited from the Regime Layer (see propagation.md).</li>
+</ul>
+<h3 id="inv-3-chat-mode-gravity">INV-3 · Chat Mode Gravity<a class="toc-permalink" href="#inv-3-chat-mode-gravity" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Chat Mode is the default, fallback, and recovery state.
+</code></pre></div>
+
+<ul>
+<li>Every session begins in Chat Mode unless the user explicitly declares<br />
+  otherwise at session start.</li>
+<li>Every error, timeout, or unresolved transition reverts to Chat Mode.</li>
+<li>Chat Mode cannot be removed, disabled, or deprioritized.</li>
+</ul>
+<hr />
+<h2 id="3-guardrails">3. Guardrails<a class="toc-permalink" href="#3-guardrails" title="Permanent link to this heading">&para;</a></h2>
+<p>Guardrails are operational rules that enforce the invariants at runtime.<br />
+The MCL declares exactly <strong>five</strong> guardrails.</p>
+<h3 id="grd-1-no-silent-mode-changes">GRD-1 · No Silent Mode Changes<a class="toc-permalink" href="#grd-1-no-silent-mode-changes" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Rule:    Mode changes must be announced and logged.
+Scope:   all stances
+Enforces: INV-1
+</code></pre></div>
+
+<ul>
+<li>Every mode transition generates a session event.</li>
+<li>The event includes: previous stance, new stance, timestamp, origin (user/system).</li>
+<li>Silent transitions are a constraint violation.</li>
+</ul>
+<h3 id="grd-2-automatic-mode-cannot-escalate">GRD-2 · Automatic Mode Cannot Escalate<a class="toc-permalink" href="#grd-2-automatic-mode-cannot-escalate" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Rule:    Automatic Mode cannot activate Task Mode.
+Scope:   M_auto only
+Enforces: INV-1
+</code></pre></div>
+
+<ul>
+<li>Automatic Mode may propose actions within its declared boundaries.</li>
+<li>It may <strong>not</strong> activate Task Mode, Spec Mode, or Debug Mode.</li>
+<li>Escalation requires an explicit user request routed through Chat Mode.</li>
+</ul>
+<h3 id="grd-3-no-external-mode-hijacking">GRD-3 · No External Mode Hijacking<a class="toc-permalink" href="#grd-3-no-external-mode-hijacking" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Rule:    No external workflow may override user-declared mode.
+Scope:   all stances
+Enforces: INV-1, INV-2
+</code></pre></div>
+
+<ul>
+<li>External systems, plugins, or integrations cannot set or change the<br />
+  active mode.</li>
+<li>They may <em>request</em> a mode change by surfacing a proposal in Chat Mode.</li>
+<li>The user must explicitly accept the proposal for the transition to occur.</li>
+</ul>
+<h3 id="grd-4-drift-bound-enforcement">GRD-4 · Drift Bound Enforcement<a class="toc-permalink" href="#grd-4-drift-bound-enforcement" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Rule:    Mode transitions must respect the stance&#39;s drift tolerance.
+Scope:   all stances
+Enforces: INV-2
+</code></pre></div>
+
+<ul>
+<li>Each stance declares a drift tolerance (see operators.md §3).</li>
+<li>A transition is rejected if the resulting state would exceed the<br />
+  target stance&rsquo;s drift bounds.</li>
+<li>Drift is evaluated at transition time, not retrospectively.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Stance</th>
+<th style="text-align: left;">Drift Tolerance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Chat</td>
+<td style="text-align: left;">bounded (wide)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Task</td>
+<td style="text-align: left;">tight</td>
+</tr>
+<tr>
+<td style="text-align: left;">Spec</td>
+<td style="text-align: left;">minimal</td>
+</tr>
+<tr>
+<td style="text-align: left;">Debug</td>
+<td style="text-align: left;">bounded</td>
+</tr>
+<tr>
+<td style="text-align: left;">Automatic</td>
+<td style="text-align: left;">tight</td>
+</tr>
+</tbody>
+</table>
+<h3 id="grd-5-hub-and-spoke-routing">GRD-5 · Hub-and-Spoke Routing<a class="toc-permalink" href="#grd-5-hub-and-spoke-routing" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Rule:    All mode transitions route through Chat Mode.
+Scope:   non-Chat stances
+Enforces: INV-3
+</code></pre></div>
+
+<ul>
+<li>No direct transition between non-Chat stances is permitted.</li>
+<li>Task → Spec requires: Task → Chat → Spec.</li>
+<li>This ensures Chat Mode remains the observable, stable center.</li>
+</ul>
+<hr />
+<h2 id="4-constraint-violations">4. Constraint Violations<a class="toc-permalink" href="#4-constraint-violations" title="Permanent link to this heading">&para;</a></h2>
+<p>When a constraint is violated, the MCL enforces a deterministic recovery:</p>
+<div class="codehilite"><pre><span></span><code>on_violation:
+
+1. Log the violation (stance, invariant, guardrail, timestamp).
+
+2. Reject the attempted transition.
+
+3. Revert to Chat Mode (INV-3).
+
+4. Surface the violation to the user in Chat Mode.
+</code></pre></div>
+
+<p>Violations are <strong>not silent</strong>. The user always sees what happened and why.</p>
+<hr />
+<h2 id="5-session-context-override-block">5. Session-Context Override Block<a class="toc-permalink" href="#5-session-context-override-block" title="Permanent link to this heading">&para;</a></h2>
+<p>This block can be pasted into any module&rsquo;s session-context to inherit Mode<br />
+constraints. It is minimal, non-intrusive, and cross-module compatible.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Mode Constraint Layer — Session Override</span>
+<span class="nt">mode_constraint_layer</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+<span class="w">  </span><span class="nt">invariants</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">user_origin</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">coherence_preservation</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">chat_mode_gravity</span>
+<span class="w">  </span><span class="nt">guardrails</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no_silent_mode_changes</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">automatic_mode_cannot_escalate</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no_external_mode_hijacking</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drift_bound_enforcement</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hub_and_spoke_routing</span>
+<span class="w">  </span><span class="nt">default_mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">M_chat</span>
+<span class="w">  </span><span class="nt">fallback</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">M_chat</span>
+<span class="w">  </span><span class="nt">on_error</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">revert_to_M_chat</span>
+<span class="w">  </span><span class="nt">on_violation</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">log_reject_revert_surface</span>
+</code></pre></div>
+
+<h3 id="operational-consequences-of-pasting-this-block">Operational consequences of pasting this block:<a class="toc-permalink" href="#operational-consequences-of-pasting-this-block" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>No module can be forced into Task Mode.</li>
+<li>No external subsystem can hijack mode.</li>
+<li>Automatic Mode remains bounded and safe.</li>
+<li>Chat Mode stays the stable default.</li>
+<li>Coherence posture remains the governing constraint.</li>
+</ul>
+<hr />
+<h2 id="6-regime-layer-interaction">6. Regime Layer Interaction<a class="toc-permalink" href="#6-regime-layer-interaction" title="Permanent link to this heading">&para;</a></h2>
+<p>The MCL inherits its coherence posture from the Regime Layer:</p>
+<div class="codehilite"><pre><span></span><code>Regime Layer → declares coherence posture
+  ↓
+Mode Constraint Layer → enforces coherence during transitions
+  ↓
+Mode Operator → executes transitions within constraints
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Regime Posture</th>
+<th>MCL Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>declared</td>
+<td>All transitions must be explicitly declared</td>
+</tr>
+<tr>
+<td>inferred</td>
+<td>Transitions may be proposed, user confirms</td>
+</tr>
+<tr>
+<td>suspended</td>
+<td>All non-Chat modes locked; Chat Mode only</td>
+</tr>
+</tbody>
+</table>
+<p>When the Regime Layer changes its coherence posture, the MCL re-evaluates<br />
+all active constraints. If the new posture is more restrictive, non-Chat<br />
+modes are gracefully exited.</p>
+<h2 id="7-lineage">7. Lineage<a class="toc-permalink" href="#7-lineage" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>Parent:    Mode Operator (M)
+Layer:     Session → Mode → MCL
+Depends:   Regime Layer (coherence posture)
+Feeds:     Mode Operator (transition gating)
+           Opacity (constraint state visibility)
+           Capture (constraint violations logged)
+</code></pre></div>
+
+<p>🔙 Back to Mode Module · Operators · Propagation</p>
+<p>Mode Constraint Layer v1.0 · RTT/1 Session Layer · TriadicFrameworks<br />
+# Mode Layer (RTT/1 Canonical)</p>
+<h2 id="identity">Identity<a class="toc-permalink" href="#identity" title="Permanent link to this heading">&para;</a></h2>
+<p>module.id      = mode<br />
+module.parent  = rtt/1<br />
+module.scope   = interaction stance<br />
+module.layer   = session_layer.sub</p>
+<h2 id="operators-m">Operators (M)<a class="toc-permalink" href="#operators-m" title="Permanent link to this heading">&para;</a></h2>
+<p>M.chat   = conversational, iterative, reversible<br />
+M.spec   = canonical, minimal, documentation<br />
+M.debug  = structural, reflective, meta<br />
+M.task   = execution, multi-step, agentic (explicit user invocation)<br />
+M.auto   = adaptive within constraints (no autonomous escalation)</p>
+<h2 id="constraint-layer-mcl">Constraint Layer (MCL)<a class="toc-permalink" href="#constraint-layer-mcl" title="Permanent link to this heading">&para;</a></h2>
+<p>mode.transition.allowed = declared<br />
+mode.transition.origin  = user<br />
+mode.transition.bound   = coherence</p>
+<h2 id="guardrails">Guardrails<a class="toc-permalink" href="#guardrails" title="Permanent link to this heading">&para;</a></h2>
+<p>mode.auto.to_task       = false<br />
+mode.auto.inherit       = regime, coherence, drift<br />
+external.override       = block</p>
+<h2 id="defaults">Defaults<a class="toc-permalink" href="#defaults" title="Permanent link to this heading">&para;</a></h2>
+<p>mode.default            = chat<br />
+mode.allowed            = chat, spec, debug, task, auto</p>
+<h2 id="purpose">Purpose<a class="toc-permalink" href="#purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>Defines and constrains interaction stance across all RTT/1 modules.<br />
+Ensures mode transitions remain explicit, user-originated, and coherence-bound.</p>
+<h2 id="regime-interaction">Regime Interaction<a class="toc-permalink" href="#regime-interaction" title="Permanent link to this heading">&para;</a></h2>
+<p>R.arrival     → M.chat<br />
+R.expansion   → M.chat, M.debug<br />
+R.inversion   → M.debug, M.chat<br />
+R.coherence   → M.spec, M.chat (task only if explicit)<br />
+R.dissolution → M.chat, M.spec (task only if explicit)</p>
+<h2 id="opacity-integration">Opacity Integration<a class="toc-permalink" href="#opacity-integration" title="Permanent link to this heading">&para;</a></h2>
+<p>opacity.mode.chat       = M.chat<br />
+opacity.mode.spec       = M.spec<br />
+opacity.mode.debug      = M.debug<br />
+opacity.mode.task       = M.task<br />
+opacity.mode.auto       = M.auto</p>
+<p>opacity.mode.allowed    = declared<br />
+opacity.mode.origin     = user<br />
+opacity.mode.bound      = coherence</p>
+<p>opacity.mode.escalation.task = false<br />
+opacity.mode.auto.inherit    = regime, coherence, drift<br />
+opacity.mode.default         = chat<br />
+opacity.mode.external_override = block</p>
+<h2 id="cross-module-propagation_1">Cross-Module Propagation<a class="toc-permalink" href="#cross-module-propagation_1" title="Permanent link to this heading">&para;</a></h2>
+<p>imports.mode.operator    = M.chat, M.spec, M.debug, M.task, M.auto<br />
+imports.mode.constraints = mode.transition.allowed, mode.transition.origin, mode.transition.bound<br />
+imports.mode.guardrails  = mode.auto.to_task, mode.auto.inherit</p>
+<h2 id="lineage">Lineage<a class="toc-permalink" href="#lineage" title="Permanent link to this heading">&para;</a></h2>
+<p>origin      = RTT/1<br />
+layer       = Session Layer<br />
+sub-layer   = Mode Layer<br />
+operators   = M, MCL<br />
+function    = interaction stance + transition constraints<br />
+# 🎛️ Mode Operator (M) — operators.md</p>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<p><img alt="Module" src="https://img.shields.io/badge/Module-Mode-0aa" /><br />
+<img alt="Layer" src="https://img.shields.io/badge/Layer-Session-09f" /><br />
+<img alt="Status" src="https://img.shields.io/badge/Status-Active-0af" /><br />
+<img alt="RTT" src="https://img.shields.io/badge/RTT%2F1-Aligned-8A2BE2" /></p>
+<hr />
+<h2 id="session-context_2">Session Context<a class="toc-permalink" href="#session-context_2" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>Module:      Mode
+Canonical ID: MODE
+Version:     1.0
+Status:      active
+Layer:       Session
+Coherence:   declared
+Drift:       bounded
+Paradox:     structural
+Canon:       active
+Audience:    students + AIs
+</code></pre></div>
+
+<hr />
+<h2 id="1-identity">1. Identity<a class="toc-permalink" href="#1-identity" title="Permanent link to this heading">&para;</a></h2>
+<p>The <strong>Mode Operator (M)</strong> governs the interaction stance within an RTT/1 session.<br />
+It determines <em>how</em> the system engages — not <em>what</em> it processes. Mode is orthogonal<br />
+to content, regime, and substrate. It shapes posture, not payload.</p>
+<p><strong>Lineage anchor:</strong> RTT/1 → Session Layer → Mode<br />
+<strong>Sibling modules:</strong> Opacity, Capture, Context</p>
+<hr />
+<h2 id="2-purpose">2. Purpose<a class="toc-permalink" href="#2-purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>Define and constrain the behavioral stance of the runtime so that:</p>
+<ul>
+<li>Every session has an explicit, declared interaction posture.</li>
+<li>Mode transitions remain user-originated and coherence-preserving.</li>
+<li>No external subsystem can hijack or silently alter the active mode.</li>
+<li>Automatic behavior remains bounded and safe.</li>
+</ul>
+<hr />
+<h2 id="3-mode-stances">3. Mode Stances<a class="toc-permalink" href="#3-mode-stances" title="Permanent link to this heading">&para;</a></h2>
+<p>The Mode Operator declares exactly <strong>five</strong> canonical stances.<br />
+No stance may be added without a canon amendment.</p>
+<h3 id="31-chat-mode-default">3.1 Chat Mode (default)<a class="toc-permalink" href="#31-chat-mode-default" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Symbol:      M_chat
+Posture:     conversational
+Coherence:   declared
+Drift:       bounded
+Activation:  default — active unless explicitly changed
+</code></pre></div>
+
+<ul>
+<li>Open-ended, exploratory interaction.</li>
+<li>No structured output contract.</li>
+<li>Drift tolerance is widest here.</li>
+</ul>
+<h3 id="32-task-mode">3.2 Task Mode<a class="toc-permalink" href="#32-task-mode" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Symbol:      M_task
+Posture:     goal-directed
+Coherence:   declared
+Drift:       tight
+Activation:  explicit user request only
+</code></pre></div>
+
+<ul>
+<li>Scoped to a declared objective.</li>
+<li>Output must resolve toward the stated goal.</li>
+<li>Exits to Chat Mode on completion or user override.</li>
+</ul>
+<h3 id="33-spec-mode">3.3 Spec Mode<a class="toc-permalink" href="#33-spec-mode" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Symbol:      M_spec
+Posture:     structural / definitional
+Coherence:   declared
+Drift:       minimal
+Activation:  explicit user request only
+</code></pre></div>
+
+<ul>
+<li>Used for generating specifications, schemas, and formal definitions.</li>
+<li>Output must be structurally consistent and canon-aligned.</li>
+<li>Highest precision requirement of all stances.</li>
+</ul>
+<h3 id="34-debug-mode">3.4 Debug Mode<a class="toc-permalink" href="#34-debug-mode" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Symbol:      M_debug
+Posture:     diagnostic / introspective
+Coherence:   declared
+Drift:       bounded
+Activation:  explicit user request only
+</code></pre></div>
+
+<ul>
+<li>Exposes internal state, reasoning traces, and constraint evaluations.</li>
+<li>Used for troubleshooting coherence drift, paradox failures, and operator behavior.</li>
+<li>Does not alter runtime state — observation only.</li>
+</ul>
+<h3 id="35-automatic-mode">3.5 Automatic Mode<a class="toc-permalink" href="#35-automatic-mode" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Symbol:      M_auto
+Posture:     autonomous / bounded
+Coherence:   declared
+Drift:       tight
+Activation:  system-initiated, user-consented
+</code></pre></div>
+
+<ul>
+<li>System may propose actions within pre-declared boundaries.</li>
+<li>Cannot activate Task Mode without explicit user request.</li>
+<li>Cannot override user-declared mode.</li>
+<li>Bounded by MCL guardrails (see constraints.md).</li>
+</ul>
+<hr />
+<h2 id="4-triadic-mapping">4. Triadic Mapping<a class="toc-permalink" href="#4-triadic-mapping" title="Permanent link to this heading">&para;</a></h2>
+<p>RTT operators organize into a triadic stack: <strong>Stabilize · Shift · Invert</strong>.<br />
+The Mode Operator maps onto this grammar as follows:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Triadic Role</th>
+<th style="text-align: left;">Mode Stance</th>
+<th style="text-align: left;">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Stabilize</td>
+<td style="text-align: left;">Chat Mode</td>
+<td style="text-align: left;">Holds default posture; absorbs ambiguity</td>
+</tr>
+<tr>
+<td style="text-align: left;">Stabilize</td>
+<td style="text-align: left;">Spec Mode</td>
+<td style="text-align: left;">Locks structural precision; minimal drift</td>
+</tr>
+<tr>
+<td style="text-align: left;">Shift</td>
+<td style="text-align: left;">Task Mode</td>
+<td style="text-align: left;">Redirects posture toward a declared goal</td>
+</tr>
+<tr>
+<td style="text-align: left;">Shift</td>
+<td style="text-align: left;">Automatic Mode</td>
+<td style="text-align: left;">System-initiated bounded shift</td>
+</tr>
+<tr>
+<td style="text-align: left;">Invert</td>
+<td style="text-align: left;">Debug Mode</td>
+<td style="text-align: left;">Reverses observation direction — looks inward</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Invariant:</strong> Every mode stance maps to exactly one triadic role.<br />
+No stance may occupy two roles simultaneously.</p>
+<hr />
+<h2 id="5-default-declaration">5. Default Declaration<a class="toc-permalink" href="#5-default-declaration" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>default_mode: M_chat
+fallback:     M_chat
+on_error:     revert to M_chat
+on_timeout:   revert to M_chat
+</code></pre></div>
+
+<p>Chat Mode is the gravitational center of the Mode Operator.<br />
+All transitions resolve back to Chat Mode unless actively held open.</p>
+<hr />
+<h2 id="6-transition-grammar">6. Transition Grammar<a class="toc-permalink" href="#6-transition-grammar" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>M_chat  →  M_task    (user-explicit)
+M_chat  →  M_spec    (user-explicit)
+M_chat  →  M_debug   (user-explicit)
+M_chat  →  M_auto    (system-proposed, user-consented)
+M_task  →  M_chat    (on completion or user override)
+M_spec  →  M_chat    (on completion or user override)
+M_debug →  M_chat    (on completion or user override)
+M_auto  →  M_chat    (on boundary hit or user override)
+M_auto  →  M_task    (BLOCKED — requires explicit user request)
+</code></pre></div>
+
+<p><strong>Invariant:</strong> No direct transition between non-Chat stances is permitted.<br />
+All transitions route through Chat Mode as the hub.</p>
+<hr />
+<h2 id="7-opacity-integration">7. Opacity Integration<a class="toc-permalink" href="#7-opacity-integration" title="Permanent link to this heading">&para;</a></h2>
+<p>The Mode Operator feeds into the Opacity module as a <strong>session-level parameter</strong>:</p>
+<div class="codehilite"><pre><span></span><code>Opacity.session.mode = M.active_stance
+</code></pre></div>
+
+<ul>
+<li>Opacity uses the active mode to weight transparency calculations.</li>
+<li>Debug Mode maximally increases opacity (full visibility).</li>
+<li>Automatic Mode decreases opacity to declared boundaries only.</li>
+<li>Mode changes trigger an Opacity recalculation event.</li>
+</ul>
+<p>See: <code>/docs/Opacity/</code> for the full Opacity operator grammar.</p>
+<hr />
+<h2 id="8-lineage">8. Lineage<a class="toc-permalink" href="#8-lineage" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>Parent:    RTT/1 (Session Layer)
+Siblings:  Opacity, Capture, Context
+Children:  none (terminal operator)
+Depends:   Regime Layer (for coherence posture inheritance)
+Feeds:     Opacity (session.mode parameter)
+Capture (mode state is captured per session)
+Context (mode informs context window behavior)
+</code></pre></div>
+
+<hr />
+<p>🔙 <a href="./README.md">Back to Mode Module</a> · <a href="./constraints.md">Constraints</a> · <a href="./propagation.md">Propagation</a></p>
+<hr />
+<p><em>Mode Operator v1.0 · RTT/1 Session Layer · TriadicFrameworks</em></p>
+<p># 🌐 Cross‑Module Propagation — propagation.md</p>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<p><img alt="Module" src="https://img.shields.io/badge/Module-Mode-0aa" /><br />
+<img alt="Component" src="https://img.shields.io/badge/Component-Propagation-ffe600" /><br />
+<img alt="Status" src="https://img.shields.io/badge/Status-Active-0af" /><br />
+<img alt="RTT" src="https://img.shields.io/badge/RTT%2F1-Aligned-8A2BE2" /></p>
+<hr />
+<h2 id="session-context_3">Session Context<a class="toc-permalink" href="#session-context_3" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>Module:      Mode
+Component:   Cross-Module Propagation
+Version:     1.0
+Status:      active
+Layer:       Session
+Coherence:   declared
+Drift:       bounded
+Canon:       active
+</code></pre></div>
+
+<hr />
+<h2 id="1-purpose_1">1. Purpose<a class="toc-permalink" href="#1-purpose_1" title="Permanent link to this heading">&para;</a></h2>
+<p>This document defines how the Mode Layer propagates its state, constraints,<br />
+and events to sibling modules within the Session Layer and to the parent<br />
+Regime Layer. Propagation ensures that every module inherits Mode awareness<br />
+automatically — no module operates mode-blind.</p>
+<p><strong>Design principle:</strong> Propagation is <em>push-based and declarative</em>. The Mode<br />
+Layer announces state; receiving modules decide how to consume it. No module<br />
+polls for mode state.</p>
+<hr />
+<h2 id="2-propagation-architecture">2. Propagation Architecture<a class="toc-permalink" href="#2-propagation-architecture" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>*
+┌─────────────────┐
+│   Regime Layer   │
+│  (coherence src) │
+└────────┬────────┘
+│ inherits coherence posture
+▼
+┌──────────────────────────────┐
+│        Session Layer         │
+│                              │
+│  ┌────────┐   ┌──────────┐   │
+│  │  Mode  │──▶│ Opacity  │   │
+│  │  (M)   │   └──────────┘   │
+│  │        │   ┌──────────┐   │
+│  │        │──▶│ Capture  │   │
+│  │        │   └──────────┘   │
+│  │        │   ┌──────────┐   │
+│  │        │──▶│ Context  │   │
+│  └────────┘   └──────────┘   │
+└──────────────────────────────┘
+</code></pre></div>
+
+<p><strong>Direction:</strong> Mode pushes outward. Regime pushes downward. Nothing pushes into Mode<br />
+except Regime (coherence posture) and User (stance transitions).</p>
+<hr />
+<h2 id="3-propagation-rules">3. Propagation Rules<a class="toc-permalink" href="#3-propagation-rules" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="31-mode-opacity">3.1 Mode → Opacity<a class="toc-permalink" href="#31-mode-opacity" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Event:     mode_transition
+Payload:   { previous: M_x, current: M_y, timestamp, origin }
+Effect:    Opacity recalculates session transparency weight
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Mode Stance</th>
+<th style="text-align: left;">Opacity Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">M_chat</td>
+<td style="text-align: left;">Standard transparency — balanced visibility</td>
+</tr>
+<tr>
+<td style="text-align: left;">M_task</td>
+<td style="text-align: left;">Reduced transparency — goal-scoped visibility</td>
+</tr>
+<tr>
+<td style="text-align: left;">M_spec</td>
+<td style="text-align: left;">Structural transparency — schema-level visibility</td>
+</tr>
+<tr>
+<td style="text-align: left;">M_debug</td>
+<td style="text-align: left;">Maximum transparency — full internal visibility</td>
+</tr>
+<tr>
+<td style="text-align: left;">M_auto</td>
+<td style="text-align: left;">Bounded transparency — declared boundaries only</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rule:</strong> Every mode transition triggers an Opacity recalculation.<br />
+Opacity must never cache a stale mode state.</p>
+<h3 id="32-mode-capture">3.2 Mode → Capture<a class="toc-permalink" href="#32-mode-capture" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Event:     mode_transition | mode_violation
+Payload:   { stance, timestamp, origin, violation_detail? }
+Effect:    Capture logs the mode event to the session record
+</code></pre></div>
+
+<p><strong>What Capture records:</strong></p>
+<ul>
+<li>Every mode transition (stance, timestamp, user/system origin).</li>
+<li>Every MCL violation (invariant, guardrail, attempted transition).</li>
+<li>Mode stance at session start and session end.</li>
+</ul>
+<p><strong>Rule:</strong> Capture must record mode events <em>before</em> the transition completes.<br />
+The log is append-only and immutable within a session.</p>
+<h3 id="33-mode-context">3.3 Mode → Context<a class="toc-permalink" href="#33-mode-context" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Event:     mode_transition
+Payload:   { current: M_y, drift_tolerance, coherence_posture }
+Effect:    Context adjusts window behavior based on active stance
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Mode Stance</th>
+<th style="text-align: left;">Context Window Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">M_chat</td>
+<td style="text-align: left;">Wide context — exploratory, associative</td>
+</tr>
+<tr>
+<td style="text-align: left;">M_task</td>
+<td style="text-align: left;">Narrow context — goal-scoped, pruned</td>
+</tr>
+<tr>
+<td style="text-align: left;">M_spec</td>
+<td style="text-align: left;">Structural context — schema and definition only</td>
+</tr>
+<tr>
+<td style="text-align: left;">M_debug</td>
+<td style="text-align: left;">Deep context — includes internal state traces</td>
+</tr>
+<tr>
+<td style="text-align: left;">M_auto</td>
+<td style="text-align: left;">Bounded context — pre-declared scope only</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rule:</strong> Context must adjust its window <em>after</em> receiving the mode event<br />
+and <em>before</em> processing the next user input.</p>
+<h3 id="34-regime-mode-inbound">3.4 Regime → Mode (inbound)<a class="toc-permalink" href="#34-regime-mode-inbound" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Event:     regime_posture_change
+Payload:   { posture: declared | inferred | suspended }
+Effect:    MCL re-evaluates all active constraints
+</code></pre></div>
+
+<p>This is the <strong>only inbound propagation</strong> the Mode Layer accepts from<br />
+a non-user source. It flows from the Regime Layer and affects the MCL<br />
+(see constraints.md §6).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Regime Posture</th>
+<th style="text-align: left;">MCL Response</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">declared</td>
+<td style="text-align: left;">All transitions require explicit declaration</td>
+</tr>
+<tr>
+<td style="text-align: left;">inferred</td>
+<td style="text-align: left;">Transitions may be proposed, user confirms</td>
+</tr>
+<tr>
+<td style="text-align: left;">suspended</td>
+<td style="text-align: left;">Non-Chat modes locked; graceful exit to Chat</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rule:</strong> Regime posture changes are processed immediately. If the new<br />
+posture is more restrictive, active non-Chat modes exit gracefully.</p>
+<hr />
+<h2 id="4-event-schema">4. Event Schema<a class="toc-permalink" href="#4-event-schema" title="Permanent link to this heading">&para;</a></h2>
+<p>All propagation events follow a single canonical schema:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">mode_event</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_transition | mode_violation | mode_query</span>
+<span class="w">  </span><span class="nt">timestamp</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ISO-8601</span>
+<span class="w">  </span><span class="nt">origin</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">user | system | regime</span>
+<span class="w">  </span><span class="nt">previous_stance</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">M_chat | M_task | M_spec | M_debug | M_auto | null</span>
+<span class="w">  </span><span class="nt">current_stance</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">M_chat | M_task | M_spec | M_debug | M_auto</span>
+<span class="w">  </span><span class="nt">coherence_posture</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">declared | inferred | suspended</span>
+<span class="w">  </span><span class="nt">drift_tolerance</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wide | bounded | tight | minimal</span>
+<span class="w">  </span><span class="nt">violation</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">invariant</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">INV-1 | INV-2 | INV-3 | null</span>
+<span class="w">    </span><span class="nt">guardrail</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GRD-1 | GRD-2 | GRD-3 | GRD-4 | GRD-5 | null</span>
+<span class="w">    </span><span class="nt">detail</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string | null</span>
+</code></pre></div>
+
+<p>Rule: Every event must include type, timestamp, origin, and<br />
+current_stance. All other fields are optional but encouraged.</p>
+<hr />
+<h2 id="5-propagation-invariants">5. Propagation Invariants<a class="toc-permalink" href="#5-propagation-invariants" title="Permanent link to this heading">&para;</a></h2>
+<p>PROP-1 · No Stale State</p>
+<div class="codehilite"><pre><span></span><code>No sibling module may operate on a cached mode state
+older than the most recent mode_transition event.
+</code></pre></div>
+
+<h3 id="prop-2-order-preservation">PROP-2 · Order Preservation<a class="toc-permalink" href="#prop-2-order-preservation" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Propagation events are delivered in timestamp order.
+Out-of-order delivery is a constraint violation.
+</code></pre></div>
+
+<h3 id="prop-3-idempotent-consumption">PROP-3 · Idempotent Consumption<a class="toc-permalink" href="#prop-3-idempotent-consumption" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Receiving modules must handle duplicate events gracefully.
+A repeated mode_transition with the same timestamp is a no-op.
+</code></pre></div>
+
+<hr />
+<h2 id="6-module-inheritance-block">6. Module Inheritance Block<a class="toc-permalink" href="#6-module-inheritance-block" title="Permanent link to this heading">&para;</a></h2>
+<p>Any module can inherit Mode Layer awareness by including this block<br />
+in its session-context:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Mode Propagation — Inherited</span>
+<span class="nt">mode_propagation</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.0</span>
+<span class="w">  </span><span class="nt">listens_to</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_transition</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mode_violation</span>
+<span class="w">  </span><span class="nt">receives_from</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Mode (Session Layer)</span>
+<span class="w">  </span><span class="nt">coherence_source</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Regime Layer</span>
+<span class="w">  </span><span class="nt">default_stance</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">M_chat</span>
+<span class="w">  </span><span class="nt">on_missing_event</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">assume M_chat</span>
+</code></pre></div>
+
+<p>Paste this into any module&rsquo;s session-context to make it Mode-aware.<br />
+The module will automatically receive mode events and adjust its behavior.</p>
+<hr />
+<h2 id="7-lineage_1">7. Lineage<a class="toc-permalink" href="#7-lineage_1" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>Source:     Mode Operator (M) + MCL
+Targets:   Opacity, Capture, Context
+Inbound:   Regime Layer (coherence posture only)
+Layer:     Session
+Pattern:   push-based, event-driven, declarative
+</code></pre></div>
+
+<p>🔙 Back to Mode Module · Operators · Constraints · Tests</p>
+<p>Cross-Module Propagation v1.0 · RTT/1 Session Layer · TriadicFrameworks<br />
+# 🗺️ Triadic Lineage Map — Session Layer</p>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<p><img alt="Layer" src="https://img.shields.io/badge/Layer-Session-09f" /><br />
+<img alt="Scope" src="https://img.shields.io/badge/Scope-Full_Lineage-ffe600" /><br />
+<img alt="Status" src="https://img.shields.io/badge/Status-Active-0af" /><br />
+<img alt="RTT" src="https://img.shields.io/badge/RTT%2F1-Aligned-8A2BE2" /></p>
+<hr />
+<h2 id="session-context_4">Session Context<a class="toc-permalink" href="#session-context_4" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>Document:    Triadic Lineage Map — Session Layer
+Version:     1.0
+Status:      active
+Layer:       Session
+Coherence:   declared
+Drift:       bounded
+Canon:       active
+Audience:    students + AIs
+</code></pre></div>
+
+<hr />
+<h2 id="1-purpose_2">1. Purpose<a class="toc-permalink" href="#1-purpose_2" title="Permanent link to this heading">&para;</a></h2>
+<p>This document maps the <strong>complete lineage</strong> of the RTT/1 Session Layer —<br />
+every module, every dependency, every propagation path. It is the structural<br />
+spine that prevents drift, preserves module identity, and ensures no<br />
+component operates orphaned from its ancestry.</p>
+<p><strong>Design principle:</strong> Every module must know where it came from, what it<br />
+feeds, and what constrains it. Lineage is not documentation — it is<br />
+load-bearing structure.</p>
+<hr />
+<h2 id="2-layer-architecture">2. Layer Architecture<a class="toc-permalink" href="#2-layer-architecture" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>RTT/1 Stack (simplified)
+═══════════════════════════════════════════════
+
+  ┌─────────────────────────────────────────┐
+  │            REGIME LAYER                 │
+  │  coherence · drift · paradox · posture  │
+  └──────────────────┬──────────────────────┘
+                     │ inherits
+                     ▼
+  ┌─────────────────────────────────────────┐
+  │            SESSION LAYER                │
+  │                                         │
+  │   ┌────────┐  ┌─────────┐  ┌────────┐   │
+  │   │  Mode  │  │ Opacity │  │Capture │   │
+  │   │  (M)   │  │  (O)    │  │  (C)   │   │
+  │   └───┬────┘  └────┬────┘  └───┬────┘   │
+  │       │            │           │        │
+  │       │    ┌───────┴───────┐   │        │
+  │       └───▶│   Context    │◀──┘        │
+  │            │    (Cx)      │             │
+  │            └──────────────┘             │
+  └─────────────────────────────────────────┘
+</code></pre></div>
+
+<hr />
+<h2 id="3-module-lineage-cards">3. Module Lineage Cards<a class="toc-permalink" href="#3-module-lineage-cards" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="31-mode-m">3.1 Mode (M)<a class="toc-permalink" href="#31-mode-m" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Canonical ID:   MODE
+Layer:          Session
+Triadic Role:   Stabilize · Shift · Invert (maps all three)
+Parent:         Regime Layer (coherence posture inheritance)
+Siblings:       Opacity, Capture, Context
+Children:       none (terminal operator)
+Feeds:          Opacity (session.mode parameter)
+                Capture (mode events)
+                Context (stance → window behavior)
+Constraints:    MCL (3 invariants, 5 guardrails)
+Propagation:    push-based, event-driven
+Default State:  M_chat
+Files:          operators.md, constraints.md, propagation.md,
+                tests.md, diagram.svg
+</code></pre></div>
+
+<p><strong>Identity statement:</strong> Mode governs <em>how</em> the system engages — posture,<br />
+not payload. It is orthogonal to content and substrate.</p>
+<h3 id="32-opacity-o">3.2 Opacity (O)<a class="toc-permalink" href="#32-opacity-o" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Canonical ID:   OPACITY
+Layer:          Session
+Triadic Role:   Stabilize (transparency calibration)
+Parent:         Regime Layer
+Siblings:       Mode, Capture, Context
+Children:       none (terminal operator)
+Receives:       Mode (session.mode → transparency weight)
+                Regime (opacity posture inheritance)
+Feeds:          Context (visibility parameters)
+                Capture (opacity state logged)
+Constraints:    Opacity Constraint Layer (OCL)
+Propagation:    recalculates on Mode transition events
+Default State:  balanced transparency
+</code></pre></div>
+
+<p><strong>Identity statement:</strong> Opacity governs <em>how much</em> is visible — the<br />
+transparency dial of the session. It weights visibility based on mode,<br />
+regime, and user preference.</p>
+<h3 id="33-capture-c">3.3 Capture (C)<a class="toc-permalink" href="#33-capture-c" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Canonical ID:   CAPTURE
+Layer:          Session
+Triadic Role:   Stabilize (immutable record)
+Parent:         Regime Layer
+Siblings:       Mode, Opacity, Context
+Children:       none (terminal operator)
+Receives:       Mode (mode_transition, mode_violation events)
+                Opacity (opacity state changes)
+                Context (context window snapshots)
+Feeds:          external consumers (session logs, audit)
+Constraints:    append-only within session; immutable after close
+Propagation:    receives from all siblings; pushes to none
+Default State:  empty log, recording active
+</code></pre></div>
+
+<p><strong>Identity statement:</strong> Capture is the session&rsquo;s memory — the append-only,<br />
+immutable log of everything that happened. It does not interpret; it records.</p>
+<h3 id="34-context-cx">3.4 Context (Cx)<a class="toc-permalink" href="#34-context-cx" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Canonical ID:   CONTEXT
+Layer:          Session
+Triadic Role:   Shift (adaptive window)
+Parent:         Regime Layer
+Siblings:       Mode, Opacity, Capture
+Children:       none (terminal operator)
+Receives:       Mode (stance → window behavior)
+                Opacity (visibility parameters)
+                Regime (context scope inheritance)
+Feeds:          runtime processing (active context window)
+Constraints:    window must adjust before next input processed
+Propagation:    receives from Mode and Opacity; feeds runtime
+Default State:  wide context (Chat Mode aligned)
+</code></pre></div>
+
+<p><strong>Identity statement:</strong> Context governs <em>what</em> is in scope — the active<br />
+window of attention. It adapts its shape based on the current mode and<br />
+opacity state.</p>
+<hr />
+<h2 id="4-dependency-matrix">4. Dependency Matrix<a class="toc-permalink" href="#4-dependency-matrix" title="Permanent link to this heading">&para;</a></h2>
+<p>This matrix shows every directed dependency in the Session Layer.<br />
+Read as: <strong>row depends on column</strong>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"></th>
+<th style="text-align: center;">Regime</th>
+<th style="text-align: center;">Mode</th>
+<th style="text-align: center;">Opacity</th>
+<th style="text-align: center;">Capture</th>
+<th style="text-align: center;">Context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Mode</strong></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Opacity</strong></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Capture</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">✓</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Context</strong></td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key observations:</strong></p>
+<ul>
+<li><strong>Mode</strong> depends only on the Regime Layer (upward inheritance).</li>
+<li><strong>Opacity</strong> depends on both Regime and Mode.</li>
+<li><strong>Capture</strong> receives from all siblings but depends on none for its own operation.</li>
+<li><strong>Context</strong> is the most dependent — it synthesizes Mode, Opacity, and Regime.</li>
+<li><strong>No circular dependencies exist.</strong> The graph is a directed acyclic graph (DAG).</li>
+</ul>
+<hr />
+<h2 id="5-propagation-flow-map">5. Propagation Flow Map<a class="toc-permalink" href="#5-propagation-flow-map" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>Regime Layer
+    │
+    ├──▶ Mode ──push──▶ Opacity
+    │      │                │
+    │      ├──push──▶ Capture ◀── Opacity (state)
+    │      │                │
+    │      └──push──▶ Context ◀── Opacity (visibility)
+    │                   │
+    └───────────────────┘ (Regime → Context direct)
+</code></pre></div>
+
+<p><strong>Event flow sequence for a mode transition:</strong></p>
+<div class="codehilite"><pre><span></span><code>1. User requests mode change          (origin: user)
+2. MCL validates transition            (constraints check)
+3. Mode Operator executes transition   (stance changes)
+4. Mode pushes event → Capture         (logged before completion)
+5. Mode pushes event → Opacity         (recalculates transparency)
+6. Mode pushes event → Context         (adjusts window)
+7. Opacity pushes state → Context      (visibility updated)
+8. Context ready for next input        (window stabilized)
+</code></pre></div>
+
+<p><strong>Invariant:</strong> Steps 4–6 happen in parallel. Step 7 follows Opacity<br />
+recalculation. Step 8 is the final gate before the next user input<br />
+is processed.</p>
+<hr />
+<h2 id="6-triadic-role-summary">6. Triadic Role Summary<a class="toc-permalink" href="#6-triadic-role-summary" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Module</th>
+<th style="text-align: left;">Primary Role</th>
+<th style="text-align: left;">Secondary Role</th>
+<th style="text-align: left;">Triadic Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Mode</td>
+<td style="text-align: left;">all three</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">Maps stances to Stabilize/Shift/Invert</td>
+</tr>
+<tr>
+<td style="text-align: left;">Opacity</td>
+<td style="text-align: left;">Stabilize</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">Calibrates; holds steady visibility</td>
+</tr>
+<tr>
+<td style="text-align: left;">Capture</td>
+<td style="text-align: left;">Stabilize</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">Records; preserves immutable state</td>
+</tr>
+<tr>
+<td style="text-align: left;">Context</td>
+<td style="text-align: left;">Shift</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">Adapts; reshapes the active window</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Session Layer triadic profile:</strong></p>
+<ul>
+<li><strong>Stabilize-heavy:</strong> 3 of 4 modules have Stabilize as primary.<br />
+  This is by design — the Session Layer&rsquo;s job is to hold steady.</li>
+<li><strong>Shift present:</strong> Context provides adaptive capacity.</li>
+<li><strong>Invert absent at layer level:</strong> Inversion lives <em>inside</em> Mode<br />
+  (Debug Mode) rather than as a separate Session module. This keeps<br />
+  the layer structurally minimal.</li>
+</ul>
+<hr />
+<h2 id="7-regime-interaction-map">7. Regime Interaction Map<a class="toc-permalink" href="#7-regime-interaction-map" title="Permanent link to this heading">&para;</a></h2>
+<p>The Session Layer inherits its operating constraints from the Regime Layer.<br />
+This table shows how each regime posture affects each Session module.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Regime Posture</th>
+<th style="text-align: left;">Mode</th>
+<th style="text-align: left;">Opacity</th>
+<th style="text-align: left;">Capture</th>
+<th style="text-align: left;">Context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">declared</td>
+<td style="text-align: left;">All transitions explicit</td>
+<td style="text-align: left;">Full transparency range</td>
+<td style="text-align: left;">Normal logging</td>
+<td style="text-align: left;">Wide context available</td>
+</tr>
+<tr>
+<td style="text-align: left;">inferred</td>
+<td style="text-align: left;">Transitions may be proposed</td>
+<td style="text-align: left;">Weighted transparency</td>
+<td style="text-align: left;">Normal logging</td>
+<td style="text-align: left;">Adaptive context</td>
+</tr>
+<tr>
+<td style="text-align: left;">suspended</td>
+<td style="text-align: left;">Chat Mode only; others locked</td>
+<td style="text-align: left;">Minimal transparency</td>
+<td style="text-align: left;">Violation logging active</td>
+<td style="text-align: left;">Narrow context; read-only</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="8-ancestry-chain">8. Ancestry Chain<a class="toc-permalink" href="#8-ancestry-chain" title="Permanent link to this heading">&para;</a></h2>
+<p>The full ancestry chain from root to terminal:</p>
+<div class="codehilite"><pre><span></span><code>RTT (root theory)
+ └── RTT/1 (runtime specification)
+      └── Regime Layer (coherence governance)
+           └── Session Layer
+                ├── Mode (M)
+                │    └── MCL (constraint sub-layer)
+                ├── Opacity (O)
+                │    └── OCL (constraint sub-layer)
+                ├── Capture (C)
+                └── Context (Cx)
+</code></pre></div>
+
+<p><strong>Every module in this chain can trace its lineage to RTT.</strong><br />
+No orphan modules exist. No module operates without a declared parent.</p>
+<hr />
+<h2 id="9-canon-rules">9. Canon Rules<a class="toc-permalink" href="#9-canon-rules" title="Permanent link to this heading">&para;</a></h2>
+<ol>
+<li><strong>No module may be added to the Session Layer</strong> without a lineage<br />
+   card, dependency entry, and propagation path.</li>
+<li><strong>No module may be removed</strong> without verifying that no sibling<br />
+   depends on it.</li>
+<li><strong>All propagation paths must remain acyclic.</strong> Introducing a cycle<br />
+   is a canon violation.</li>
+<li><strong>The Regime Layer is the sole source of coherence posture.</strong><br />
+   No Session module may self-declare coherence.</li>
+<li><strong>Mode is the sole source of interaction stance.</strong><br />
+   No sibling module may independently set mode state.</li>
+</ol>
+<hr />
+<p>🔙 <a href="./README.md">Back to Mode Module</a> · <a href="./operators.md">Operators</a> · <a href="./constraints.md">Constraints</a> · <a href="./propagation.md">Propagation</a></p>
+<hr />
+<p><em>Session Layer Triadic Lineage Map v1.0 · RTT/1 · TriadicFrameworks</em><br />
+# 🧪 Mode Layer Test Suite — tests.md</p>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<p><img alt="Module" src="https://img.shields.io/badge/Module-Mode-0aa" /><br />
+<img alt="Component" src="https://img.shields.io/badge/Component-Tests-00c8ff" /><br />
+<img alt="Status" src="https://img.shields.io/badge/Status-Active-0af" /><br />
+<img alt="RTT" src="https://img.shields.io/badge/RTT%2F1-Aligned-8A2BE2" /></p>
+<hr />
+<h2 id="session-context_5">Session Context<a class="toc-permalink" href="#session-context_5" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>Module:      Mode
+Component:   Test Suite
+Version:     1.0
+Status:      active
+Layer:       Session
+Coherence:   declared
+Drift:       bounded
+Canon:       active
+</code></pre></div>
+
+<hr />
+<h2 id="1-purpose_3">1. Purpose<a class="toc-permalink" href="#1-purpose_3" title="Permanent link to this heading">&para;</a></h2>
+<p>This test suite validates the Mode Operator (M), Mode Constraint Layer (MCL),<br />
+and cross-module propagation rules. Each test is minimal, deterministic, and<br />
+maps to a specific invariant, guardrail, or propagation rule.</p>
+<p><strong>Test philosophy:</strong> A test that cannot name the constraint it validates<br />
+does not belong in this suite.</p>
+<hr />
+<h2 id="2-test-index">2. Test Index<a class="toc-permalink" href="#2-test-index" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ID</th>
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Tests</th>
+<th style="text-align: left;">Constraint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">T-M-001</td>
+<td style="text-align: left;">Operator</td>
+<td style="text-align: left;">Default stance is Chat Mode</td>
+<td style="text-align: left;">INV-3</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-M-002</td>
+<td style="text-align: left;">Operator</td>
+<td style="text-align: left;">Valid transition Chat → Task</td>
+<td style="text-align: left;">Transition</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-M-003</td>
+<td style="text-align: left;">Operator</td>
+<td style="text-align: left;">Valid transition Chat → Spec</td>
+<td style="text-align: left;">Transition</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-M-004</td>
+<td style="text-align: left;">Operator</td>
+<td style="text-align: left;">Valid transition Chat → Debug</td>
+<td style="text-align: left;">Transition</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-M-005</td>
+<td style="text-align: left;">Operator</td>
+<td style="text-align: left;">Valid transition Chat → Auto</td>
+<td style="text-align: left;">Transition</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-M-006</td>
+<td style="text-align: left;">Operator</td>
+<td style="text-align: left;">Revert on completion</td>
+<td style="text-align: left;">INV-3</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-M-007</td>
+<td style="text-align: left;">Operator</td>
+<td style="text-align: left;">Revert on error</td>
+<td style="text-align: left;">INV-3</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-M-008</td>
+<td style="text-align: left;">Operator</td>
+<td style="text-align: left;">Revert on timeout</td>
+<td style="text-align: left;">INV-3</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-MCL-001</td>
+<td style="text-align: left;">MCL</td>
+<td style="text-align: left;">User origin required</td>
+<td style="text-align: left;">INV-1</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-MCL-002</td>
+<td style="text-align: left;">MCL</td>
+<td style="text-align: left;">Coherence preserved</td>
+<td style="text-align: left;">INV-2</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-MCL-003</td>
+<td style="text-align: left;">MCL</td>
+<td style="text-align: left;">Chat Mode gravity</td>
+<td style="text-align: left;">INV-3</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-MCL-004</td>
+<td style="text-align: left;">MCL</td>
+<td style="text-align: left;">No silent mode changes</td>
+<td style="text-align: left;">GRD-1</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-MCL-005</td>
+<td style="text-align: left;">MCL</td>
+<td style="text-align: left;">Auto cannot escalate to Task</td>
+<td style="text-align: left;">GRD-2</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-MCL-006</td>
+<td style="text-align: left;">MCL</td>
+<td style="text-align: left;">No external hijacking</td>
+<td style="text-align: left;">GRD-3</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-MCL-007</td>
+<td style="text-align: left;">MCL</td>
+<td style="text-align: left;">Drift bound enforcement</td>
+<td style="text-align: left;">GRD-4</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-MCL-008</td>
+<td style="text-align: left;">MCL</td>
+<td style="text-align: left;">Hub-and-spoke routing</td>
+<td style="text-align: left;">GRD-5</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-P-001</td>
+<td style="text-align: left;">Propagation</td>
+<td style="text-align: left;">Mode → Opacity event fires</td>
+<td style="text-align: left;">PROP-1</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-P-002</td>
+<td style="text-align: left;">Propagation</td>
+<td style="text-align: left;">Mode → Capture event logged</td>
+<td style="text-align: left;">PROP-2</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-P-003</td>
+<td style="text-align: left;">Propagation</td>
+<td style="text-align: left;">Mode → Context window adjusts</td>
+<td style="text-align: left;">PROP-1</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-P-004</td>
+<td style="text-align: left;">Propagation</td>
+<td style="text-align: left;">Regime → Mode posture change</td>
+<td style="text-align: left;">PROP-2</td>
+</tr>
+<tr>
+<td style="text-align: left;">T-P-005</td>
+<td style="text-align: left;">Propagation</td>
+<td style="text-align: left;">Idempotent duplicate handling</td>
+<td style="text-align: left;">PROP-3</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-operator-tests">3. Operator Tests<a class="toc-permalink" href="#3-operator-tests" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="t-m-001-default-stance">T-M-001 · Default Stance<a class="toc-permalink" href="#t-m-001-default-stance" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   A new session starts with no mode declaration.
+When:    The session initializes.
+Then:    Active stance = M_chat.
+Validates: INV-3 (Chat Mode gravity)
+</code></pre></div>
+
+<h3 id="t-m-002-chat-task-transition">T-M-002 · Chat → Task Transition<a class="toc-permalink" href="#t-m-002-chat-task-transition" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_chat.
+When:    User explicitly requests Task Mode.
+Then:    Active stance = M_task.
+Transition event is logged.
+Opacity recalculates.
+Validates: Transition grammar, GRD-1
+</code></pre></div>
+
+<h3 id="t-m-003-chat-spec-transition">T-M-003 · Chat → Spec Transition<a class="toc-permalink" href="#t-m-003-chat-spec-transition" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_chat.
+When:    User explicitly requests Spec Mode.
+Then:    Active stance = M_spec.
+Drift tolerance = minimal.
+Validates: Transition grammar, GRD-4
+</code></pre></div>
+
+<h3 id="t-m-004-chat-debug-transition">T-M-004 · Chat → Debug Transition<a class="toc-permalink" href="#t-m-004-chat-debug-transition" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_chat.
+When:    User explicitly requests Debug Mode.
+Then:    Active stance = M_debug.
+Opacity = maximum transparency.
+Validates: Transition grammar, Opacity integration
+</code></pre></div>
+
+<h3 id="t-m-005-chat-auto-transition">T-M-005 · Chat → Auto Transition<a class="toc-permalink" href="#t-m-005-chat-auto-transition" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_chat.
+When:    System proposes Automatic Mode and user consents.
+Then:    Active stance = M_auto.
+Drift tolerance = tight.
+Validates: Transition grammar, INV-1
+</code></pre></div>
+
+<h3 id="t-m-006-revert-on-completion">T-M-006 · Revert on Completion<a class="toc-permalink" href="#t-m-006-revert-on-completion" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_task.
+When:    Task completes successfully.
+Then:    Active stance = M_chat.
+Validates: INV-3 (Chat Mode gravity)
+</code></pre></div>
+
+<h3 id="t-m-007-revert-on-error">T-M-007 · Revert on Error<a class="toc-permalink" href="#t-m-007-revert-on-error" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_spec.
+When:    An unrecoverable error occurs.
+Then:    Active stance = M_chat.
+Error is surfaced to the user.
+Validates: INV-3, default_mode fallback
+</code></pre></div>
+
+<h3 id="t-m-008-revert-on-timeout">T-M-008 · Revert on Timeout<a class="toc-permalink" href="#t-m-008-revert-on-timeout" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_debug.
+When:    Session timeout threshold is reached.
+Then:    Active stance = M_chat.
+Validates: INV-3, on_timeout behavior
+</code></pre></div>
+
+<hr />
+<h2 id="4-mcl-tests">4. MCL Tests<a class="toc-permalink" href="#4-mcl-tests" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="t-mcl-001-user-origin-required">T-MCL-001 · User Origin Required<a class="toc-permalink" href="#t-mcl-001-user-origin-required" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_chat.
+When:    A system process attempts to transition to M_task
+without user request.
+Then:    Transition is REJECTED.
+Violation logged: INV-1.
+Active stance remains M_chat.
+Validates: INV-1 (user origin)
+</code></pre></div>
+
+<h3 id="t-mcl-002-coherence-preserved">T-MCL-002 · Coherence Preserved<a class="toc-permalink" href="#t-mcl-002-coherence-preserved" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Coherence posture = declared.
+When:    A transition would create an ambiguous coherence state.
+Then:    Transition is REJECTED.
+Violation logged: INV-2.
+Validates: INV-2 (coherence preservation)
+</code></pre></div>
+
+<h3 id="t-mcl-003-chat-mode-gravity">T-MCL-003 · Chat Mode Gravity<a class="toc-permalink" href="#t-mcl-003-chat-mode-gravity" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_auto.
+When:    Automatic Mode hits its boundary.
+Then:    Active stance = M_chat (not M_task or any other stance).
+Validates: INV-3 (Chat Mode gravity)
+</code></pre></div>
+
+<h3 id="t-mcl-004-no-silent-mode-changes">T-MCL-004 · No Silent Mode Changes<a class="toc-permalink" href="#t-mcl-004-no-silent-mode-changes" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_chat.
+When:    User requests transition to M_task.
+Then:    A mode_transition event is generated with:
+previous = M_chat, current = M_task,
+timestamp, origin = user.
+Event is visible in Capture log.
+Validates: GRD-1 (no silent changes)
+</code></pre></div>
+
+<h3 id="t-mcl-005-auto-cannot-escalate">T-MCL-005 · Auto Cannot Escalate<a class="toc-permalink" href="#t-mcl-005-auto-cannot-escalate" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_auto.
+When:    Automatic Mode attempts to activate M_task.
+Then:    Transition is REJECTED.
+Violation logged: GRD-2.
+M_auto may propose but not escalate.
+Validates: GRD-2 (auto cannot escalate)
+</code></pre></div>
+
+<h3 id="t-mcl-006-no-external-hijacking">T-MCL-006 · No External Hijacking<a class="toc-permalink" href="#t-mcl-006-no-external-hijacking" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_chat.
+When:    An external workflow attempts to set mode to M_spec.
+Then:    Transition is REJECTED.
+Violation logged: GRD-3.
+External system may surface a proposal in Chat Mode.
+Validates: GRD-3 (no external hijacking)
+</code></pre></div>
+
+<h3 id="t-mcl-007-drift-bound-enforcement">T-MCL-007 · Drift Bound Enforcement<a class="toc-permalink" href="#t-mcl-007-drift-bound-enforcement" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_chat (drift = bounded/wide).
+When:    User requests transition to M_spec (drift = minimal).
+Then:    Transition succeeds only if current state does not
+exceed M_spec&#39;s drift bounds.
+If drift exceeds bounds: transition REJECTED, GRD-4.
+Validates: GRD-4 (drift bound enforcement)
+</code></pre></div>
+
+<h3 id="t-mcl-008-hub-and-spoke-routing">T-MCL-008 · Hub-and-Spoke Routing<a class="toc-permalink" href="#t-mcl-008-hub-and-spoke-routing" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_task.
+When:    User requests transition to M_spec (direct).
+Then:    Transition is REJECTED.
+System routes: M_task → M_chat → M_spec.
+Two events are logged.
+Validates: GRD-5 (hub-and-spoke routing)
+</code></pre></div>
+
+<hr />
+<h2 id="5-propagation-tests">5. Propagation Tests<a class="toc-permalink" href="#5-propagation-tests" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="t-p-001-mode-opacity-event">T-P-001 · Mode → Opacity Event<a class="toc-permalink" href="#t-p-001-mode-opacity-event" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_chat.
+When:    User transitions to M_debug.
+Then:    Opacity receives mode_transition event.
+Opacity recalculates: transparency = maximum.
+No stale mode state persists in Opacity.
+Validates: PROP-1 (no stale state)
+</code></pre></div>
+
+<h3 id="t-p-002-mode-capture-logging">T-P-002 · Mode → Capture Logging<a class="toc-permalink" href="#t-p-002-mode-capture-logging" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_chat.
+When:    User transitions to M_task.
+Then:    Capture records the event BEFORE the transition completes.
+Log entry includes: M_chat → M_task, timestamp, user origin.
+Events are in timestamp order.
+Validates: PROP-2 (order preservation)
+</code></pre></div>
+
+<h3 id="t-p-003-mode-context-adjustment">T-P-003 · Mode → Context Adjustment<a class="toc-permalink" href="#t-p-003-mode-context-adjustment" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_chat (wide context).
+When:    User transitions to M_task.
+Then:    Context window narrows to goal-scoped behavior.
+Adjustment completes before next user input is processed.
+Validates: PROP-1 (no stale state)
+</code></pre></div>
+
+<h3 id="t-p-004-regime-mode-posture-change">T-P-004 · Regime → Mode Posture Change<a class="toc-permalink" href="#t-p-004-regime-mode-posture-change" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Regime posture = declared.
+Active stance = M_task.
+When:    Regime Layer changes posture to suspended.
+Then:    MCL re-evaluates constraints.
+M_task exits gracefully to M_chat.
+Non-Chat modes are locked.
+Validates: Regime interaction, PROP-2
+</code></pre></div>
+
+<h3 id="t-p-005-idempotent-duplicate-handling">T-P-005 · Idempotent Duplicate Handling<a class="toc-permalink" href="#t-p-005-idempotent-duplicate-handling" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Opacity received mode_transition (M_chat → M_task, T=100).
+When:    A duplicate event arrives (M_chat → M_task, T=100).
+Then:    Opacity treats it as a no-op.
+No recalculation occurs.
+Validates: PROP-3 (idempotent consumption)
+</code></pre></div>
+
+<hr />
+<h2 id="6-edge-cases">6. Edge Cases<a class="toc-permalink" href="#6-edge-cases" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="t-edge-001-rapid-sequential-transitions">T-EDGE-001 · Rapid Sequential Transitions<a class="toc-permalink" href="#t-edge-001-rapid-sequential-transitions" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_chat.
+When:    User requests M_task, then immediately requests M_chat.
+Then:    Both transitions complete in order.
+Two events logged. Final stance = M_chat.
+No intermediate state is lost.
+</code></pre></div>
+
+<h3 id="t-edge-002-session-start-with-explicit-mode">T-EDGE-002 · Session Start with Explicit Mode<a class="toc-permalink" href="#t-edge-002-session-start-with-explicit-mode" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   User declares M_spec at session start.
+When:    Session initializes.
+Then:    Active stance = M_spec (not M_chat).
+Chat Mode gravity applies on exit, not on override at start.
+</code></pre></div>
+
+<h3 id="t-edge-003-violation-during-auto-mode">T-EDGE-003 · Violation During Auto Mode<a class="toc-permalink" href="#t-edge-003-violation-during-auto-mode" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Given:   Active stance = M_auto.
+When:    M_auto attempts an action that violates INV-1.
+Then:    Violation logged.
+M_auto reverts to M_chat.
+Violation is surfaced to user.
+</code></pre></div>
+
+<hr />
+<h2 id="7-coverage-matrix">7. Coverage Matrix<a class="toc-permalink" href="#7-coverage-matrix" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>Invariants:   INV-1 ✓  INV-2 ✓  INV-3 ✓
+Guardrails:   GRD-1 ✓  GRD-2 ✓  GRD-3 ✓  GRD-4 ✓  GRD-5 ✓
+Propagation:  PROP-1 ✓ PROP-2 ✓ PROP-3 ✓
+Stances:      Chat ✓  Task ✓  Spec ✓  Debug ✓  Auto ✓
+Edge cases:   3/3 ✓
+</code></pre></div>
+
+<p><strong>Full coverage achieved.</strong> Every constraint, guardrail, propagation rule,<br />
+and stance is tested at least once.</p>
+<hr />
+<p>🔙 <a href="./README.md">Back to Mode Module</a> · <a href="./operators.md">Operators</a> · <a href="./constraints.md">Constraints</a> · <a href="./propagation.md">Propagation</a></p>
+<hr />
+<p><em>Mode Layer Test Suite v1.0 · RTT/1 Session Layer · TriadicFrameworks</em></p>
+<p></p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/corpus/Mode.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/corpus/Mode.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

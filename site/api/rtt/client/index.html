@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Client | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/api/rtt/client/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Client" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/api/rtt/client/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Client" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/api/rtt/client.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Client",
+    "headline": "Client",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/api/rtt/client/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#send-a-beacon-event">Send a Beacon Event</a></li>
+<li><a href="#get-a-site-profile">Get a Site Profile</a></li>
+<li><a href="#set-a-site-profile">Set a Site Profile</a></li>
+<li><a href="#call-a-diagnostics-endpoint-reserved">Call a Diagnostics Endpoint (Reserved)</a></li>
+<li><a href="#sending-a-beacon-event-manually">Sending a Beacon Event Manually</a></li>
+<li><a href="#using-the-rttjs-global-api">Using the rtt.js Global API</a></li>
+<li><a href="#sending-a-beacon-event">Sending a Beacon Event</a></li>
+<li><a href="#setting-a-profile-from-a-backend">Setting a Profile from a Backend</a></li>
+<li><a href="#calling-diagnostics-futureready">Calling Diagnostics (Future‑Ready)</a></li>
+<li><a href="#a-browser-extensions">A. Browser Extensions</a></li>
+<li><a href="#b-web-services">B. Web Services</a></li>
+<li><a href="#c-datacenters-research-labs">C. Datacenters / Research Labs</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/api/" itemprop="item">
+                <span itemprop="name">Api</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/api/rtt/" itemprop="item">
+                <span itemprop="name">Rtt</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Client</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Client</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="clientmd-interacting-with-the-rtt-api-router"><strong>client.md — Interacting with the RTT API Router</strong><a class="toc-permalink" href="#clientmd-interacting-with-the-rtt-api-router" title="Permanent link to this heading">&para;</a></h1>
+<p>This document describes how clients, services, and tools can interact with the RTT API.<br />
+It provides examples for:</p>
+<ul>
+<li>command‑line usage (<code>curl</code>)  </li>
+<li>browser‑side JavaScript  </li>
+<li>Node/server‑to‑server integrations  </li>
+</ul>
+<p>All examples target the canonical RTT API surface:</p>
+<div class="codehilite"><pre><span></span><code>/api/rtt/beacon
+/api/rtt/profile/{site}
+/api/rtt/validate
+/api/rtt/corridor
+/api/rtt/topology
+</code></pre></div>
+
+<p>The diagnostics endpoints are placeholders but included for completeness.</p>
+<hr />
+<h1 id="1-using-curl">1. Using <code>curl</code><a class="toc-permalink" href="#1-using-curl" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="send-a-beacon-event">Send a Beacon Event<a class="toc-permalink" href="#send-a-beacon-event" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://www.triadicframeworks.org/api/rtt/beacon<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">        &quot;site&quot;: &quot;example.com&quot;,</span>
+<span class="s1">        &quot;session&quot;: &quot;rtt-abc123&quot;,</span>
+<span class="s1">        &quot;event&quot;: &quot;page_load&quot;,</span>
+<span class="s1">        &quot;ts&quot;: &quot;2026-01-19T14:22:00Z&quot;,</span>
+<span class="s1">        &quot;structure&quot;: {</span>
+<span class="s1">          &quot;url&quot;: &quot;https://example.com&quot;,</span>
+<span class="s1">          &quot;title&quot;: &quot;Home&quot;,</span>
+<span class="s1">          &quot;nav_count&quot;: 1,</span>
+<span class="s1">          &quot;main_count&quot;: 1,</span>
+<span class="s1">          &quot;form_count&quot;: 0,</span>
+<span class="s1">          &quot;button_count&quot;: 3,</span>
+<span class="s1">          &quot;dom_nodes&quot;: 142</span>
+<span class="s1">        }</span>
+<span class="s1">      }&#39;</span>
+</code></pre></div>
+
+<hr />
+<h2 id="get-a-site-profile">Get a Site Profile<a class="toc-permalink" href="#get-a-site-profile" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>https://www.triadicframeworks.org/api/rtt/profile/example.com
+</code></pre></div>
+
+<hr />
+<h2 id="set-a-site-profile">Set a Site Profile<a class="toc-permalink" href="#set-a-site-profile" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://www.triadicframeworks.org/api/rtt/profile/example.com<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">        &quot;rtt_version&quot;: &quot;1.0&quot;,</span>
+<span class="s1">        &quot;supports&quot;: [&quot;coherence&quot;],</span>
+<span class="s1">        &quot;contact&quot;: &quot;ops@example.com&quot;</span>
+<span class="s1">      }&#39;</span>
+</code></pre></div>
+
+<hr />
+<h2 id="call-a-diagnostics-endpoint-reserved">Call a Diagnostics Endpoint (Reserved)<a class="toc-permalink" href="#call-a-diagnostics-endpoint-reserved" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span>https://www.triadicframeworks.org/api/rtt/validate<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{&quot;system_map&quot;: {}, &quot;flows&quot;: [], &quot;constraints&quot;: []}&#39;</span>
+</code></pre></div>
+
+<hr />
+<h1 id="2-javascript-browser">2. JavaScript (Browser)<a class="toc-permalink" href="#2-javascript-browser" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="sending-a-beacon-event-manually">Sending a Beacon Event Manually<a class="toc-permalink" href="#sending-a-beacon-event-manually" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;https://www.triadicframeworks.org/api/rtt/beacon&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;Content-Type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;application/json&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
+<span class="w">    </span><span class="nx">site</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;example.com&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">session</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;rtt-&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">().</span><span class="nx">toString</span><span class="p">(</span><span class="mf">36</span><span class="p">).</span><span class="nx">slice</span><span class="p">(</span><span class="mf">2</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">event</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;manual_ping&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">ts</span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">().</span><span class="nx">toISOString</span><span class="p">(),</span>
+<span class="w">    </span><span class="nx">structure</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">title</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">nav_count</span><span class="o">:</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span><span class="s2">&quot;nav&quot;</span><span class="p">).</span><span class="nx">length</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">dom_nodes</span><span class="o">:</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">).</span><span class="nx">length</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">})</span>
+<span class="p">});</span>
+</code></pre></div>
+
+<hr />
+<h2 id="using-the-rttjs-global-api">Using the <code>rtt.js</code> Global API<a class="toc-permalink" href="#using-the-rttjs-global-api" title="Permanent link to this heading">&para;</a></h2>
+<p>If the site includes:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.triadicframeworks.org/rtt.js&quot;</span> <span class="na">data-site</span><span class="o">=</span><span class="s">&quot;example.com&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p>Then:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">// Send a manual ping</span>
+<span class="nx">RTT</span><span class="p">.</span><span class="nx">ping</span><span class="p">(</span><span class="s2">&quot;user_action&quot;</span><span class="p">);</span>
+
+<span class="c1">// Get a structural snapshot</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">snapshot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">RTT</span><span class="p">.</span><span class="nx">getStructureSnapshot</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">snapshot</span><span class="p">);</span>
+</code></pre></div>
+
+<hr />
+<h1 id="3-javascript-node-servertoserver">3. JavaScript (Node / Server‑to‑Server)<a class="toc-permalink" href="#3-javascript-node-servertoserver" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="sending-a-beacon-event">Sending a Beacon Event<a class="toc-permalink" href="#sending-a-beacon-event" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="nx">fetch</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;node-fetch&quot;</span><span class="p">;</span>
+
+<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">sendBeacon</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">payload</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">site</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;backend-service&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">session</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;srv-&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">(),</span>
+<span class="w">    </span><span class="nx">event</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;heartbeat&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">ts</span><span class="o">:</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">().</span><span class="nx">toISOString</span><span class="p">(),</span>
+<span class="w">    </span><span class="nx">structure</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;internal://service&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Service Node&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">dom_nodes</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">};</span>
+
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;https://www.triadicframeworks.org/api/rtt/beacon&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;Content-Type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;application/json&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">payload</span><span class="p">)</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">}</span>
+
+<span class="nx">sendBeacon</span><span class="p">();</span>
+</code></pre></div>
+
+<hr />
+<h2 id="setting-a-profile-from-a-backend">Setting a Profile from a Backend<a class="toc-permalink" href="#setting-a-profile-from-a-backend" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="nx">fetch</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;node-fetch&quot;</span><span class="p">;</span>
+
+<span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;https://www.triadicframeworks.org/api/rtt/profile/myservice&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;Content-Type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;application/json&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
+<span class="w">    </span><span class="nx">rtt_version</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;1.0&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">supports</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;coherence&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;drift&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nx">contact</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;infra@example.com&quot;</span>
+<span class="w">  </span><span class="p">})</span>
+<span class="p">});</span>
+</code></pre></div>
+
+<hr />
+<h2 id="calling-diagnostics-futureready">Calling Diagnostics (Future‑Ready)<a class="toc-permalink" href="#calling-diagnostics-futureready" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="nx">fetch</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;node-fetch&quot;</span><span class="p">;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="s2">&quot;https://www.triadicframeworks.org/api/rtt/validate&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;POST&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;Content-Type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;application/json&quot;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
+<span class="w">    </span><span class="nx">system_map</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">services</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;auth&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;api&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;db&quot;</span><span class="p">]</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">flows</span><span class="o">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">    </span><span class="nx">constraints</span><span class="o">:</span><span class="w"> </span><span class="p">[]</span>
+<span class="w">  </span><span class="p">})</span>
+<span class="p">});</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+</code></pre></div>
+
+<hr />
+<h1 id="4-integration-patterns">4. Integration Patterns<a class="toc-permalink" href="#4-integration-patterns" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="a-browser-extensions">A. Browser Extensions<a class="toc-permalink" href="#a-browser-extensions" title="Permanent link to this heading">&para;</a></h2>
+<p>Extensions can:</p>
+<ul>
+<li>listen for navigation events  </li>
+<li>collect structural snapshots  </li>
+<li>send periodic beacons  </li>
+<li>annotate pages with RTT clarity indicators  </li>
+</ul>
+<p>They use the same <code>/beacon</code> endpoint.</p>
+<hr />
+<h2 id="b-web-services">B. Web Services<a class="toc-permalink" href="#b-web-services" title="Permanent link to this heading">&para;</a></h2>
+<p>Services can:</p>
+<ul>
+<li>declare RTT‑Inside support via <code>/profile/{site}</code>  </li>
+<li>send periodic structural heartbeats  </li>
+<li>prepare for vST‑beta diagnostics  </li>
+</ul>
+<hr />
+<h2 id="c-datacenters-research-labs">C. Datacenters / Research Labs<a class="toc-permalink" href="#c-datacenters-research-labs" title="Permanent link to this heading">&para;</a></h2>
+<p>These clients will eventually use:</p>
+<ul>
+<li><code>/validate</code> for coherence  </li>
+<li><code>/corridor</code> for flow alignment  </li>
+<li><code>/topology</code> for triadic decomposition  </li>
+</ul>
+<p>The API surface is stable even if the internals are not yet active.</p>
+<hr />
+<h1 id="5-summary">5. Summary<a class="toc-permalink" href="#5-summary" title="Permanent link to this heading">&para;</a></h1>
+<p>This document provides:</p>
+<ul>
+<li><code>curl</code> examples  </li>
+<li>browser JavaScript examples  </li>
+<li>Node/server‑to‑server examples  </li>
+<li>integration patterns for extensions, services, and datacenters  </li>
+</ul>
+<p>The RTT API is intentionally minimal and stable, allowing early adopters to integrate now while the vST substrate continues to evolve.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/api/rtt/client.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/api/rtt/client.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

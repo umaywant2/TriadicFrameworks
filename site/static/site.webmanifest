@@ -1,0 +1,21 @@
+{
+  "name": "TriadicFrameworks",
+  "short_name": "TF",
+  "description": "A structural analysis framework for systems operating under conditional constraint.",
+  "start_url": "/TriadicFrameworks/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0d3b6e",
+  "icons": [
+    {
+      "src": "/TriadicFrameworks/static/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/TriadicFrameworks/static/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

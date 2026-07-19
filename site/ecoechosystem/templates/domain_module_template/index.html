@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Domain Module Template | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/ecoechosystem/templates/domain_module_template/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Domain Module Template" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/ecoechosystem/templates/domain_module_template/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Domain Module Template" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/ecoechosystem/templates/domain_module_template.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Domain Module Template",
+    "headline": "Domain Module Template",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/ecoechosystem/templates/domain_module_template/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#canonical-scaffold-for-substratealigned-domain-modules">Canonical scaffold for substrate‑aligned domain modules</a></li>
+<li><a href="#module-identity">Module Identity</a></li>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#substrate-framing-ser">Substrate Framing (S/E/R)</a><ul>
+<li><a href="#structure-s">Structure (S)</a></li>
+<li><a href="#activation-e">Activation (E)</a></li>
+<li><a href="#relational-time-r">Relational Time (R)</a></li>
+</ul>
+</li>
+<li><a href="#core-regimes">Core Regimes</a></li>
+<li><a href="#dynamics">Dynamics</a></li>
+<li><a href="#stability-cycles">Stability Cycles</a></li>
+<li><a href="#feedback-loops">Feedback Loops</a></li>
+<li><a href="#networks">Networks</a></li>
+<li><a href="#crossdomain-interfaces">Cross‑Domain Interfaces</a></li>
+<li><a href="#crossdomain-mappings">Cross‑Domain Mappings</a></li>
+<li><a href="#multiscale-behavior">Multi‑Scale Behavior</a></li>
+<li><a href="#simulation-hooks">Simulation Hooks</a></li>
+<li><a href="#failure-modes">Failure Modes</a></li>
+<li><a href="#integration-notes">Integration Notes</a></li>
+<li><a href="#status">Status</a></li>
+<li><a href="#usage-guidance">Usage Guidance</a><ul>
+<li><a href="#template-usage-rule">Template Usage Rule</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/ecoechosystem/" itemprop="item">
+                <span itemprop="name">Ecoechosystem</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/ecoechosystem/templates/" itemprop="item">
+                <span itemprop="name">Templates</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Domain Module Template</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Domain Module Template</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="domain-module-template"><strong>Domain Module Template</strong><a class="toc-permalink" href="#domain-module-template" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="canonical-scaffold-for-substratealigned-domain-modules"><em>Canonical scaffold for substrate‑aligned domain modules</em><a class="toc-permalink" href="#canonical-scaffold-for-substratealigned-domain-modules" title="Permanent link to this heading">&para;</a></h3>
+<p>This template defines the <strong>standard structure</strong> for all EcoEchoSystem domain modules.<br />
+Every domain — scientific, social, technical, or conceptual — must express itself through the shared <strong>Structure / Activation / Relational Time (S/E/R)</strong> substrate.</p>
+<p>This ensures:<br />
+- cross‑domain coherence<br />
+- regime compatibility<br />
+- simulation readiness<br />
+- long‑arc stability  </p>
+<hr />
+<h2 id="module-identity"><strong>Module Identity</strong><a class="toc-permalink" href="#module-identity" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Domain Name:</strong><br />
+<strong>Module Path:</strong> <code>ecoechosystem/domain_modules/&lt;domain_name&gt;/</code><br />
+<strong>Primary Scale(s):</strong> micro / meso / macro / meta<br />
+<strong>Cross‑Domain Touchpoints:</strong> psychology, biology, physics, economics, governance, AI  </p>
+<hr />
+<h2 id="purpose"><strong>Purpose</strong><a class="toc-permalink" href="#purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>Describe what this domain models and why it exists within the EcoEchoSystem.</p>
+<p>Include:<br />
+- the phenomena this domain captures<br />
+- why it cannot be reduced to another domain<br />
+- how it contributes to civilization‑scale understanding  </p>
+<hr />
+<h2 id="substrate-framing-ser"><strong>Substrate Framing (S/E/R)</strong><a class="toc-permalink" href="#substrate-framing-ser" title="Permanent link to this heading">&para;</a></h2>
+<p>Every domain must explicitly define how it expresses the shared substrate.</p>
+<hr />
+<h3 id="structure-s"><strong>Structure (S)</strong><a class="toc-permalink" href="#structure-s" title="Permanent link to this heading">&para;</a></h3>
+<p>Describe the domain’s structural elements.</p>
+<p>Examples:<br />
+- architectures<br />
+- networks<br />
+- identities<br />
+- boundaries<br />
+- hierarchies  </p>
+<p>Clarify:<br />
+- what persists<br />
+- what constrains behavior<br />
+- what defines coherence  </p>
+<hr />
+<h3 id="activation-e"><strong>Activation (E)</strong><a class="toc-permalink" href="#activation-e" title="Permanent link to this heading">&para;</a></h3>
+<p>Describe how intensity, energy, or pressure manifests.</p>
+<p>Examples:<br />
+- stress<br />
+- volatility<br />
+- metabolic load<br />
+- cognitive effort<br />
+- resource flow  </p>
+<p>Clarify:<br />
+- what drives change<br />
+- what amplifies instability<br />
+- what requires regulation  </p>
+<hr />
+<h3 id="relational-time-r"><strong>Relational Time (R)</strong><a class="toc-permalink" href="#relational-time-r" title="Permanent link to this heading">&para;</a></h3>
+<p>Describe how time operates in this domain.</p>
+<p>Examples:<br />
+- cycles<br />
+- development<br />
+- succession<br />
+- learning<br />
+- long‑arc evolution  </p>
+<p>Clarify:<br />
+- recovery rhythms<br />
+- horizon compression/expansion<br />
+- memory and inertia  </p>
+<hr />
+<h2 id="core-regimes"><strong>Core Regimes</strong><a class="toc-permalink" href="#core-regimes" title="Permanent link to this heading">&para;</a></h2>
+<p>Define the canonical regimes of this domain.</p>
+<p>Each regime should specify:<br />
+- S configuration<br />
+- E intensity<br />
+- R behavior  </p>
+<p>Examples:<br />
+- stable regime<br />
+- high‑activation regime<br />
+- scarcity regime<br />
+- collapse regime<br />
+- integrative regime  </p>
+<p>Regimes must be compatible with the <strong>Regime Coupling Engine</strong>.</p>
+<hr />
+<h2 id="dynamics"><strong>Dynamics</strong><a class="toc-permalink" href="#dynamics" title="Permanent link to this heading">&para;</a></h2>
+<p>Describe how the domain behaves over time.</p>
+<p>Include:<br />
+- typical transitions between regimes<br />
+- drivers of change<br />
+- internal feedback patterns  </p>
+<p>This section explains <strong>motion</strong>, not structure.</p>
+<hr />
+<h2 id="stability-cycles"><strong>Stability Cycles</strong><a class="toc-permalink" href="#stability-cycles" title="Permanent link to this heading">&para;</a></h2>
+<p>Define the recurring cycles that preserve coherence.</p>
+<p>Examples:<br />
+- homeostasis cycles<br />
+- stress–recovery cycles<br />
+- scarcity–adaptation cycles<br />
+- collapse–renewal cycles  </p>
+<p>Clarify:<br />
+- what stabilizes the domain<br />
+- what destabilizes it<br />
+- how recovery occurs  </p>
+<hr />
+<h2 id="feedback-loops"><strong>Feedback Loops</strong><a class="toc-permalink" href="#feedback-loops" title="Permanent link to this heading">&para;</a></h2>
+<p>Describe how actions feed back into the system.</p>
+<p>Include:<br />
+- negative (stabilizing) loops<br />
+- positive (amplifying) loops<br />
+- adaptive (learning) loops<br />
+- runaway (collapse) loops  </p>
+<p>Specify:<br />
+- gain sensitivity<br />
+- delay effects<br />
+- failure modes  </p>
+<hr />
+<h2 id="networks"><strong>Networks</strong><a class="toc-permalink" href="#networks" title="Permanent link to this heading">&para;</a></h2>
+<p>Describe the structural topology of the domain.</p>
+<p>Examples:<br />
+- interaction networks<br />
+- resource networks<br />
+- information networks<br />
+- activation pathways  </p>
+<p>Clarify:<br />
+- hubs<br />
+- bottlenecks<br />
+- redundancy<br />
+- fragility points  </p>
+<hr />
+<h2 id="crossdomain-interfaces"><strong>Cross‑Domain Interfaces</strong><a class="toc-permalink" href="#crossdomain-interfaces" title="Permanent link to this heading">&para;</a></h2>
+<p>Describe how this domain connects to others.</p>
+<p>Reference:<br />
+- interface types<br />
+- coupling strength<br />
+- translation mechanisms  </p>
+<p>Explicitly note:<br />
+- what flows out<br />
+- what flows in<br />
+- what is buffered  </p>
+<hr />
+<h2 id="crossdomain-mappings"><strong>Cross‑Domain Mappings</strong><a class="toc-permalink" href="#crossdomain-mappings" title="Permanent link to this heading">&para;</a></h2>
+<p>Map this domain’s S/E/R expressions to others.</p>
+<p>Examples:<br />
+- biological ↔ economic<br />
+- psychological ↔ governance<br />
+- physical ↔ ecological  </p>
+<p>This ensures <strong>semantic compatibility</strong>.</p>
+<hr />
+<h2 id="multiscale-behavior"><strong>Multi‑Scale Behavior</strong><a class="toc-permalink" href="#multiscale-behavior" title="Permanent link to this heading">&para;</a></h2>
+<p>Describe how the domain behaves across scale.</p>
+<p>Include:<br />
+- micro‑level dynamics<br />
+- meso‑level aggregation<br />
+- macro‑level regimes<br />
+- long‑arc evolution  </p>
+<p>Clarify:<br />
+- bottom‑up emergence<br />
+- top‑down constraint  </p>
+<hr />
+<h2 id="simulation-hooks"><strong>Simulation Hooks</strong><a class="toc-permalink" href="#simulation-hooks" title="Permanent link to this heading">&para;</a></h2>
+<p>Define how this domain can be simulated.</p>
+<p>Include:<br />
+- state variables<br />
+- regime indicators<br />
+- transition triggers<br />
+- control levers<br />
+- observability signals  </p>
+<p>This section enables <strong>executable modeling</strong>.</p>
+<hr />
+<h2 id="failure-modes"><strong>Failure Modes</strong><a class="toc-permalink" href="#failure-modes" title="Permanent link to this heading">&para;</a></h2>
+<p>Describe how the domain breaks.</p>
+<p>Include:<br />
+- fragmentation<br />
+- runaway activation<br />
+- temporal collapse<br />
+- interface failure  </p>
+<p>Failure modes are critical for resilience modeling.</p>
+<hr />
+<h2 id="integration-notes"><strong>Integration Notes</strong><a class="toc-permalink" href="#integration-notes" title="Permanent link to this heading">&para;</a></h2>
+<p>Summarize how this domain fits into the EcoEchoSystem.</p>
+<p>Include:<br />
+- key dependencies<br />
+- stabilization roles<br />
+- amplification risks<br />
+- renewal potential  </p>
+<hr />
+<h2 id="status"><strong>Status</strong><a class="toc-permalink" href="#status" title="Permanent link to this heading">&para;</a></h2>
+<p>Indicate maturity level:<br />
+- draft<br />
+- stable<br />
+- evolving<br />
+- deprecated  </p>
+<hr />
+<h2 id="usage-guidance"><strong>Usage Guidance</strong><a class="toc-permalink" href="#usage-guidance" title="Permanent link to this heading">&para;</a></h2>
+<p>Optional notes for contributors and AI agents.</p>
+<p>Include:<br />
+- extension guidelines<br />
+- known limitations<br />
+- future expansion paths  </p>
+<hr />
+<h3 id="template-usage-rule"><strong>Template Usage Rule</strong><a class="toc-permalink" href="#template-usage-rule" title="Permanent link to this heading">&para;</a></h3>
+<p>This template must be followed unless deviation is explicitly justified.<br />
+Creativity is encouraged — <strong>substrate incoherence is not</strong>.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/ecoechosystem/templates/domain_module_template.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/ecoechosystem/templates/domain_module_template.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

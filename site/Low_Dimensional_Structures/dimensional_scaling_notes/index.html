@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Dimensional Scaling Notes | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/Low_Dimensional_Structures/dimensional_scaling_notes/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Dimensional Scaling Notes" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/Low_Dimensional_Structures/dimensional_scaling_notes/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Dimensional Scaling Notes" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/Low_Dimensional_Structures/dimensional_scaling_notes.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Dimensional Scaling Notes",
+    "headline": "Dimensional Scaling Notes",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/Low_Dimensional_Structures/dimensional_scaling_notes/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#substrate-and-observation">Substrate and Observation</a></li>
+<li><a href="#dimensional-indexing">Dimensional Indexing</a></li>
+<li><a href="#projection-and-compression">Projection and Compression</a></li>
+<li><a href="#on-embedding-and-reconstruction">On Embedding and Reconstruction</a></li>
+<li><a href="#geometry-and-ontology">Geometry and Ontology</a></li>
+<li><a href="#scale-invariance">Scale Invariance</a></li>
+<li><a href="#scope">Scope</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Low_Dimensional_Structures/" itemprop="item">
+                <span itemprop="name">Low Dimensional Structures</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Dimensional Scaling Notes</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Dimensional Scaling Notes</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="dimensional-scaling-notes">Dimensional Scaling Notes<a class="toc-permalink" href="#dimensional-scaling-notes" title="Permanent link to this heading">&para;</a></h1>
+<p>This document outlines how dimensionality is treated within the RTT/vST framework when describing low‑dimensional structures. Dimensionality is handled as a scale‑relative, observer‑dependent property rather than as an intrinsic feature of physical systems.</p>
+<p>No dimensional index is privileged.</p>
+<hr />
+<h2 id="substrate-and-observation">Substrate and Observation<a class="toc-permalink" href="#substrate-and-observation" title="Permanent link to this heading">&para;</a></h2>
+<p>The substrate is assumed to be continuous and locally isotropic at sufficient scale. Observed structure arises from interaction between the substrate and an observing system with finite resolution, bandwidth, and coupling strength.</p>
+<p>Dimensionality therefore reflects the <em>effective degrees of freedom resolved by observation</em>, not the total degrees of freedom present in the substrate.</p>
+<hr />
+<h2 id="dimensional-indexing">Dimensional Indexing<a class="toc-permalink" href="#dimensional-indexing" title="Permanent link to this heading">&para;</a></h2>
+<p>Dimensionality is represented by an integer index (D \in \mathbb{Z}), mapped along a normalized scale:</p>
+<div class="codehilite"><pre><span></span><code>−1024D … −1D | 0D | +1D … +1024D
+</code></pre></div>
+
+<ul>
+<li><strong>0D</strong> corresponds to point‑like, memoryless events.</li>
+<li><strong>±D</strong> corresponds to structured manifolds with increasing effective degrees of freedom.</li>
+<li>The sign of $$D$$ indicates projection orientation, not physical direction.</li>
+</ul>
+<p>Indices are comparative and contextual. They do not imply physical axes or hidden spatial dimensions.</p>
+<hr />
+<h2 id="projection-and-compression">Projection and Compression<a class="toc-permalink" href="#projection-and-compression" title="Permanent link to this heading">&para;</a></h2>
+<p>Low‑dimensional structures arise when higher‑dimensional dynamics project onto a reduced set of dominant modes under constrained observation.</p>
+<p>This projection is a form of compression:<br />
+- information is preserved in dominant resonance modes,<br />
+- higher‑order structure is suppressed or aliased,<br />
+- apparent complexity may increase as resolution decreases.</p>
+<p>Dimensional reduction is therefore not a discovery of simplicity, but a consequence of scale and coupling.</p>
+<hr />
+<h2 id="on-embedding-and-reconstruction">On Embedding and Reconstruction<a class="toc-permalink" href="#on-embedding-and-reconstruction" title="Permanent link to this heading">&para;</a></h2>
+<p>Embedding techniques and dimensional reconstruction methods are treated as <em>representational tools</em>, not as evidence of intrinsic system dimensionality.</p>
+<p>Reconstructed manifolds describe how structure appears under a given observational regime. They do not imply that the substrate itself is low‑dimensional.</p>
+<hr />
+<h2 id="geometry-and-ontology">Geometry and Ontology<a class="toc-permalink" href="#geometry-and-ontology" title="Permanent link to this heading">&para;</a></h2>
+<p>Higher‑dimensional geometry is acknowledged as a valid internal language for describing relational structure and performing computation.</p>
+<p>It is not treated as ontologically physical.</p>
+<p>The experiential substrate remains locally three‑dimensional. Additional dimensions exist as descriptive constructs used to encode relationships across scale, not as physical extensions of space.</p>
+<hr />
+<h2 id="scale-invariance">Scale Invariance<a class="toc-permalink" href="#scale-invariance" title="Permanent link to this heading">&para;</a></h2>
+<p>Structural primitives are defined to remain meaningful across dimensional indices when properly normalized.</p>
+<p>A structure observed at one dimensional index may be embedded, projected, or compared to structures at other indices without loss of lineage or identity.</p>
+<p>Dimensional scaling preserves resonance relationships, not geometric form.</p>
+<hr />
+<h2 id="scope">Scope<a class="toc-permalink" href="#scope" title="Permanent link to this heading">&para;</a></h2>
+<p>These notes define dimensional scaling semantics for low‑dimensional structures within RTT/vST. They intentionally avoid domain‑specific interpretations and historical assumptions regarding chaos, attractors, or intrinsic complexity.</p>
+<p>Dimensionality is a lens, not a law.</p>
+<hr />
+<p>This file does something subtle and powerful:</p>
+<ul>
+<li>It <strong>de‑ontologizes dimension</strong></li>
+<li>It <strong>reframes embedding as compression</strong></li>
+<li>It <strong>keeps geometry useful but contained</strong></li>
+<li>It aligns perfectly with your earlier stance on higher geometry being <em>creative, not natural</em></li>
+</ul>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Low_Dimensional_Structures/dimensional_scaling_notes.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/Low_Dimensional_Structures/dimensional_scaling_notes.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

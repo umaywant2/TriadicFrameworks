@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Cycle Diagrams | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/frameworks/ipd_12/cycle_diagrams/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Cycle Diagrams" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/frameworks/ipd_12/cycle_diagrams/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Cycle Diagrams" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/frameworks/ipd_12/cycle_diagrams.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Cycle Diagrams",
+    "headline": "Cycle Diagrams",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/frameworks/ipd_12/cycle_diagrams/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#1-purpose">1. Purpose</a></li>
+<li><a href="#triad-1-transition-cycle">Triad 1 — Transition Cycle</a></li>
+<li><a href="#triad-2-paradox-cycle">Triad 2 — Paradox Cycle</a></li>
+<li><a href="#triad-3-boundary-cycle">Triad 3 — Boundary Cycle</a></li>
+<li><a href="#triad-4-apex-cycle">Triad 4 — Apex Cycle</a></li>
+<li><a href="#hex-cycle-1-regime1-regime2-shell">Hex Cycle 1 — Regime‑1 → Regime‑2 Shell</a></li>
+<li><a href="#hex-cycle-2-regime2-regime3-shell">Hex Cycle 2 — Regime‑2 → Regime‑3 Shell</a><ul>
+<li><a href="#interpretation">Interpretation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/frameworks/" itemprop="item">
+                <span itemprop="name">Frameworks</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/frameworks/ipd_12/" itemprop="item">
+                <span itemprop="name">Ipd 12</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Cycle Diagrams</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Cycle Diagrams</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="cycle_diagramsmd"><code>cycle_diagrams.md</code><a class="toc-permalink" href="#cycle_diagramsmd" title="Permanent link to this heading">&para;</a></h1>
+<p><strong>IPD‑12 Cycle Diagrams</strong><br />
+<strong>Triads • Hexes • Full 12‑Cycle Paradox Loop</strong><br />
+<strong>Module:</strong> IPD‑12 Framework<br />
+<strong>Version:</strong> 2026‑1.0<br />
+<strong>Role:</strong> Cycle / Paradox / Regime Visualization</p>
+<hr />
+<h2 id="1-purpose">1. Purpose<a class="toc-permalink" href="#1-purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>This document visualizes the <strong>intransitive cycle structure</strong> of the IPD‑12 engine:</p>
+<ul>
+<li>4 <strong>triad cycles</strong>  </li>
+<li>2 <strong>hex cycles</strong>  </li>
+<li>1 <strong>full 12‑cycle paradox loop</strong>  </li>
+</ul>
+<p>These cycles define the paradox‑stable behavior of the prime‑indexed operator system.</p>
+<hr />
+<h1 id="2-triad-cycles-4">2. Triad Cycles (4)<a class="toc-permalink" href="#2-triad-cycles-4" title="Permanent link to this heading">&para;</a></h1>
+<p>Each triad is a <strong>3‑node intransitive loop</strong>:</p>
+<div class="codehilite"><pre><span></span><code>A → B → C → A
+</code></pre></div>
+
+<hr />
+<h2 id="triad-1-transition-cycle"><strong>Triad 1 — Transition Cycle</strong><a class="toc-permalink" href="#triad-1-transition-cycle" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>P2 → P3 → P5 → P2</strong></p>
+<div class="codehilite"><pre><span></span><code>   P2
+    ↓
+   P3
+    ↓
+   P5
+    ↓
+   P2
+</code></pre></div>
+
+<p><strong>Meaning:</strong> seed → transition → drift → seed<br />
+<strong>RTT:</strong> drift/transition loop<br />
+<strong>GU:</strong> connection geometry<br />
+<strong>Pantheon:</strong> celestial order cycle  </p>
+<hr />
+<h2 id="triad-2-paradox-cycle"><strong>Triad 2 — Paradox Cycle</strong><a class="toc-permalink" href="#triad-2-paradox-cycle" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>P7 → P11 → P13 → P7</strong></p>
+<div class="codehilite"><pre><span></span><code>   P7
+    ↓
+   P11
+    ↓
+   P13
+    ↓
+   P7
+</code></pre></div>
+
+<p><strong>Meaning:</strong> regime shift → coherence → paradox → regime shift<br />
+<strong>RTT:</strong> paradox trigger loop<br />
+<strong>GU:</strong> curvature ↔ anomaly<br />
+<strong>Pantheon:</strong> civilizational paradox cycle  </p>
+<hr />
+<h2 id="triad-3-boundary-cycle"><strong>Triad 3 — Boundary Cycle</strong><a class="toc-permalink" href="#triad-3-boundary-cycle" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>P17 → P19 → P23 → P17</strong></p>
+<div class="codehilite"><pre><span></span><code>   P17
+     ↓
+   P19
+     ↓
+   P23
+     ↓
+   P17
+</code></pre></div>
+
+<p><strong>Meaning:</strong> gate → boundary → dimensional lift → gate<br />
+<strong>RTT:</strong> boundary regime cycle<br />
+<strong>GU:</strong> observerse geometry<br />
+<strong>Pantheon:</strong> civilizational ↔ chthonic boundary  </p>
+<hr />
+<h2 id="triad-4-apex-cycle"><strong>Triad 4 — Apex Cycle</strong><a class="toc-permalink" href="#triad-4-apex-cycle" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>P29 → P31 → P37 → P29</strong></p>
+<div class="codehilite"><pre><span></span><code>   P29
+     ↓
+   P31
+     ↓
+   P37
+     ↓
+   P29
+</code></pre></div>
+
+<p><strong>Meaning:</strong> collapse → stability → apex → collapse<br />
+<strong>RTT:</strong> dimensional regime cycle<br />
+<strong>GU:</strong> collapse ↔ refractive vacuum ↔ anomaly apex<br />
+<strong>Pantheon:</strong> chthonic apex cycle  </p>
+<hr />
+<h1 id="3-hex-cycles-2">3. Hex Cycles (2)<a class="toc-permalink" href="#3-hex-cycles-2" title="Permanent link to this heading">&para;</a></h1>
+<p>Each hex cycle is a <strong>6‑node shell</strong>, combining two triads.</p>
+<hr />
+<h2 id="hex-cycle-1-regime1-regime2-shell"><strong>Hex Cycle 1 — Regime‑1 → Regime‑2 Shell</strong><a class="toc-permalink" href="#hex-cycle-1-regime1-regime2-shell" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>P2 → P3 → P5 → P7 → P11 → P13 → P2</strong></p>
+<div class="codehilite"><pre><span></span><code>P2 → P3 → P5 → P7 → P11 → P13 → P2
+</code></pre></div>
+
+<p><strong>Meaning:</strong> transition → drift → regime shift → coherence → paradox → transition<br />
+<strong>RTT:</strong> Regime‑1/2 shell<br />
+<strong>GU:</strong> connection → curvature → anomaly<br />
+<strong>Pantheon:</strong> celestial → civilizational  </p>
+<hr />
+<h2 id="hex-cycle-2-regime2-regime3-shell"><strong>Hex Cycle 2 — Regime‑2 → Regime‑3 Shell</strong><a class="toc-permalink" href="#hex-cycle-2-regime2-regime3-shell" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>P17 → P19 → P23 → P29 → P31 → P37 → P17</strong></p>
+<div class="codehilite"><pre><span></span><code>P17 → P19 → P23 → P29 → P31 → P37 → P17
+</code></pre></div>
+
+<p><strong>Meaning:</strong> gate → boundary → lift → collapse → stability → apex → gate<br />
+<strong>RTT:</strong> Regime‑2/3 shell<br />
+<strong>GU:</strong> observerse → collapse → refractive vacuum → anomaly<br />
+<strong>Pantheon:</strong> civilizational → chthonic  </p>
+<hr />
+<h1 id="4-full-12cycle-paradox-loop">4. Full 12‑Cycle Paradox Loop<a class="toc-permalink" href="#4-full-12cycle-paradox-loop" title="Permanent link to this heading">&para;</a></h1>
+<p>This is the <strong>complete IPD‑12 paradox engine</strong>, spanning all regimes:</p>
+<div class="codehilite"><pre><span></span><code>P2 → P3 → P5 → P7 → P11 → P13 →
+P17 → P19 → P23 → P29 → P31 → P37 → P2
+</code></pre></div>
+
+<p>ASCII diagram:</p>
+<div class="codehilite"><pre><span></span><code>        P37 → P2 → P3
+       ↑             ↓
+     P31             P5
+       ↑             ↓
+     P29             P7
+       ↑             ↓
+     P23 ← P19 ← P17 ← P13 ← P11
+</code></pre></div>
+
+<h3 id="interpretation"><strong>Interpretation</strong><a class="toc-permalink" href="#interpretation" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>RTT:</strong><br />
+- full paradox loop<br />
+- regime traversal (0 → 1 → 2 → 3 → 0)</p>
+<p><strong>GU:</strong><br />
+- connection → curvature → anomaly → observerse → collapse → refractive vacuum → anomaly apex</p>
+<p><strong>Pantheon:</strong><br />
+- celestial → civilizational → chthonic → apex  </p>
+<hr />
+<h1 id="5-cycle-regime-mapping">5. Cycle → Regime Mapping<a class="toc-permalink" href="#5-cycle-regime-mapping" title="Permanent link to this heading">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Cycle</th>
+<th>Regime Layer</th>
+<th>Faces</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Triad 1</td>
+<td>Regime‑1</td>
+<td>P2, P3, P5</td>
+</tr>
+<tr>
+<td>Triad 2</td>
+<td>Regime‑2</td>
+<td>P7, P11, P13</td>
+</tr>
+<tr>
+<td>Triad 3</td>
+<td>Regime‑2/3</td>
+<td>P17, P19, P23</td>
+</tr>
+<tr>
+<td>Triad 4</td>
+<td>Regime‑3</td>
+<td>P29, P31, P37</td>
+</tr>
+<tr>
+<td>Hex 1</td>
+<td>Regime‑1 → Regime‑2</td>
+<td>P2–P13</td>
+</tr>
+<tr>
+<td>Hex 2</td>
+<td>Regime‑2 → Regime‑3</td>
+<td>P17–P37</td>
+</tr>
+<tr>
+<td>Full 12‑Cycle</td>
+<td>All Regimes</td>
+<td>P2–P37</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="6-cycle-substrate-mapping">6. Cycle → Substrate Mapping<a class="toc-permalink" href="#6-cycle-substrate-mapping" title="Permanent link to this heading">&para;</a></h1>
+<p>Cycles traverse the <strong>4×4×4 substrate engine</strong>:</p>
+<ul>
+<li>Triads: 3‑step substrate traversal  </li>
+<li>Hexes: 6‑step shell traversal  </li>
+<li>Full cycle: 12‑step dimensional traversal  </li>
+</ul>
+<p>Each step corresponds to a substrate primitive:</p>
+<div class="codehilite"><pre><span></span><code>(Si, Oj, Rk)
+</code></pre></div>
+
+<hr />
+<h1 id="7-summary">7. Summary<a class="toc-permalink" href="#7-summary" title="Permanent link to this heading">&para;</a></h1>
+<p>This document provides the <strong>complete cycle visualization</strong> for the IPD‑12 framework:</p>
+<ul>
+<li>4 triads  </li>
+<li>2 hex shells  </li>
+<li>1 full paradox loop  </li>
+</ul>
+<p>These cycles define the paradox‑stable, prime‑indexed behavior of the IPD‑12 engine and integrate with RTT, GU, Pantheon, and the substrate cube.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/frameworks/ipd_12/cycle_diagrams.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/frameworks/ipd_12/cycle_diagrams.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

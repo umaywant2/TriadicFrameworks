@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Seed City Spec | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/education/polisci/seed-city-spec/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Seed City Spec" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/education/polisci/seed-city-spec/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Seed City Spec" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/education/polisci/seed-city-spec.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Seed City Spec",
+    "headline": "Seed City Spec",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/education/polisci/seed-city-spec/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#0-purpose">0. Purpose</a></li>
+<li><a href="#1-population-scale">1. Population &amp; Scale</a><ul>
+<li><a href="#11-population-target">1.1 Population Target</a></li>
+<li><a href="#12-spatial-footprint">1.2 Spatial Footprint</a></li>
+</ul>
+</li>
+<li><a href="#2-vertical-architecture-6under1over">2. Vertical Architecture (6‑Under‑1‑Over)</a></li>
+<li><a href="#3-horizontal-geometry">3. Horizontal Geometry</a></li>
+<li><a href="#4-material-systems">4. Material Systems</a><ul>
+<li><a href="#41-reverseskyscraper-megalithics">4.1 Reverse‑Skyscraper Megalithics</a></li>
+<li><a href="#42-material-loop">4.2 Material Loop</a></li>
+</ul>
+</li>
+<li><a href="#5-thermal-systems">5. Thermal Systems</a><ul>
+<li><a href="#51-rttinside-thermal-cells">5.1 RTT‑Inside Thermal Cells</a></li>
+<li><a href="#52-cityscale-thermal-envelope">5.2 City‑Scale Thermal Envelope</a></li>
+</ul>
+</li>
+<li><a href="#6-water-systems">6. Water Systems</a><ul>
+<li><a href="#61-triadic-water-stack">6.1 Triadic Water Stack</a></li>
+<li><a href="#62-dew-farms">6.2 Dew Farms</a></li>
+</ul>
+</li>
+<li><a href="#7-airflow-systems">7. Airflow Systems</a><ul>
+<li><a href="#71-pressuredriven-ventilation">7.1 Pressure‑Driven Ventilation</a></li>
+<li><a href="#72-wind-towers">7.2 Wind Towers</a></li>
+</ul>
+</li>
+<li><a href="#8-transit-systems">8. Transit Systems</a><ul>
+<li><a href="#81-subsurface-transit-grid">8.1 Subsurface Transit Grid</a></li>
+<li><a href="#82-movement-scheduling">8.2 Movement Scheduling</a></li>
+</ul>
+</li>
+<li><a href="#9-civic-systems">9. Civic Systems</a><ul>
+<li><a href="#91-comfortband-scheduling">9.1 Comfort‑Band Scheduling</a></li>
+<li><a href="#92-civic-vaults">9.2 Civic Vaults</a></li>
+</ul>
+</li>
+<li><a href="#10-ecological-systems">10. Ecological Systems</a><ul>
+<li><a href="#101-surface-ecology-band">10.1 Surface Ecology Band</a></li>
+<li><a href="#102-restoration-zones">10.2 Restoration Zones</a></li>
+</ul>
+</li>
+<li><a href="#11-governance-structure">11. Governance Structure</a><ul>
+<li><a href="#111-actors">11.1 Actors</a></li>
+<li><a href="#112-governance-flow">11.2 Governance Flow</a></li>
+<li><a href="#113-hard-boundaries">11.3 Hard Boundaries</a></li>
+</ul>
+</li>
+<li><a href="#12-stability-requirements">12. Stability Requirements</a></li>
+<li><a href="#13-summary">13. Summary</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/education/" itemprop="item">
+                <span itemprop="name">Education</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/education/polisci/" itemprop="item">
+                <span itemprop="name">Polisci</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Seed City Spec</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Seed City Spec</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="triadicframeworks-seed-city-specification"><strong>TriadicFrameworks — Seed City Specification</strong><a class="toc-permalink" href="#triadicframeworks-seed-city-specification" title="Permanent link to this heading">&para;</a></h1>
+<p><em>A structural, civic, and regime‑aligned blueprint for 9‑million‑person desert seed cities.</em></p>
+<hr />
+<h2 id="0-purpose"><strong>0. Purpose</strong><a class="toc-permalink" href="#0-purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>Seed Cities are the <strong>first‑phase, perimeter nodes</strong> in the TriadicFrameworks desert‑civilization model.<br />
+They serve as:</p>
+<ul>
+<li>experimental governance zones  </li>
+<li>architectural testbeds  </li>
+<li>population stabilizers  </li>
+<li>material‑loop initiators  </li>
+<li>thermal and water regime prototypes  </li>
+<li>civic rhythm calibrators  </li>
+</ul>
+<p>Three Seed Cities must reach <strong>regime stability</strong> before the Core City can activate.</p>
+<p>This document defines the <strong>technical, civic, and governance specifications</strong> for each Seed City.</p>
+<hr />
+<h2 id="1-population-scale"><strong>1. Population &amp; Scale</strong><a class="toc-permalink" href="#1-population-scale" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="11-population-target"><strong>1.1 Population Target</strong><a class="toc-permalink" href="#11-population-target" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>9 million residents</strong> per Seed City  </li>
+<li>Designed for <strong>stable, long‑term habitation</strong>  </li>
+<li>Scalable to ±10% without regime drift  </li>
+</ul>
+<h3 id="12-spatial-footprint"><strong>1.2 Spatial Footprint</strong><a class="toc-permalink" href="#12-spatial-footprint" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>90% subsurface</strong>  </li>
+<li><strong>10% surface interface</strong>  </li>
+<li>Minimal ecological disturbance  </li>
+</ul>
+<hr />
+<h2 id="2-vertical-architecture-6under1over"><strong>2. Vertical Architecture (6‑Under‑1‑Over)</strong><a class="toc-permalink" href="#2-vertical-architecture-6under1over" title="Permanent link to this heading">&para;</a></h2>
+<p>Seed Cities use the standard TriadicFrameworks vertical stack:</p>
+<div class="codehilite"><pre><span></span><code>Surface (Level 0)
+──────────────────────────────────────────
+ Level -1: Residential Vaults
+ Level -2: Residential Vaults
+ Level -3: Civic / Commercial
+ Level -4: Industrial / Utility
+ Level -5: Reservoirs / Ballasts
+ Level -6: Deep Infrastructure / Bedrock Anchor
+──────────────────────────────────────────
+Bedrock
+</code></pre></div>
+
+<h4 id="regime-bindings"><strong>Regime Bindings</strong><a class="toc-permalink" href="#regime-bindings" title="Permanent link to this heading">&para;</a></h4>
+<ul>
+<li><strong>Negative:</strong> Levels -6 to -3  </li>
+<li><strong>qmroot:</strong> Levels -2 to -1  </li>
+<li><strong>Positive:</strong> Level 0  </li>
+</ul>
+<h4 id="governance-notes"><strong>Governance Notes</strong><a class="toc-permalink" href="#governance-notes" title="Permanent link to this heading">&para;</a></h4>
+<ul>
+<li>Level 0 is strictly controlled.  </li>
+<li>All thermal and water systems must be regime‑separated.  </li>
+</ul>
+<hr />
+<h2 id="3-horizontal-geometry"><strong>3. Horizontal Geometry</strong><a class="toc-permalink" href="#3-horizontal-geometry" title="Permanent link to this heading">&para;</a></h2>
+<p>Seed Cities follow a <strong>tri‑ring pattern</strong>:</p>
+<div class="codehilite"><pre><span></span><code>[ Outer Ring ] → ecological buffer + dew farms
+[ Middle Ring ] → residential + civic vaults
+[ Inner Ring ] → industrial + reservoir vaults
+</code></pre></div>
+
+<h4 id="purpose"><strong>Purpose</strong><a class="toc-permalink" href="#purpose" title="Permanent link to this heading">&para;</a></h4>
+<ul>
+<li>Outer ring protects ecology  </li>
+<li>Middle ring stabilizes civic life  </li>
+<li>Inner ring anchors infrastructure  </li>
+</ul>
+<hr />
+<h2 id="4-material-systems"><strong>4. Material Systems</strong><a class="toc-permalink" href="#4-material-systems" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="41-reverseskyscraper-megalithics"><strong>4.1 Reverse‑Skyscraper Megalithics</strong><a class="toc-permalink" href="#41-reverseskyscraper-megalithics" title="Permanent link to this heading">&para;</a></h3>
+<p>Seed Cities are constructed using:</p>
+<ul>
+<li>steel sheet forms  </li>
+<li>in‑situ sand  </li>
+<li>binder + polymer + water  </li>
+<li>staged curing  </li>
+</ul>
+<h4 id="output"><strong>Output</strong><a class="toc-permalink" href="#output" title="Permanent link to this heading">&para;</a></h4>
+<ul>
+<li>monolithic stone walls  </li>
+<li>stable vaults  </li>
+<li>zero external mining  </li>
+</ul>
+<h3 id="42-material-loop"><strong>4.2 Material Loop</strong><a class="toc-permalink" href="#42-material-loop" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Excavation → Megalith Formation → Habitable Volume → Surplus Sand → Roads/Bridges
+</code></pre></div>
+
+<h4 id="governance"><strong>Governance</strong><a class="toc-permalink" href="#governance" title="Permanent link to this heading">&para;</a></h4>
+<ul>
+<li>All material loops must remain local.  </li>
+<li>External import/export is prohibited.  </li>
+</ul>
+<hr />
+<h2 id="5-thermal-systems"><strong>5. Thermal Systems</strong><a class="toc-permalink" href="#5-thermal-systems" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="51-rttinside-thermal-cells"><strong>5.1 RTT‑Inside Thermal Cells</strong><a class="toc-permalink" href="#51-rttinside-thermal-cells" title="Permanent link to this heading">&para;</a></h3>
+<p>Each room contains:</p>
+<div class="codehilite"><pre><span></span><code>[ Warm Ballast ]
+      ▲
+[ Gradient Chamber ]
+      ▼
+[ Cool Ballast ]
+</code></pre></div>
+
+<h3 id="52-cityscale-thermal-envelope"><strong>5.2 City‑Scale Thermal Envelope</strong><a class="toc-permalink" href="#52-cityscale-thermal-envelope" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Subsurface mass provides baseline cooling  </li>
+<li>Airflow grid distributes pressure‑driven ventilation  </li>
+<li>Ballasts regulate micro‑climates  </li>
+</ul>
+<h4 id="governance_1"><strong>Governance</strong><a class="toc-permalink" href="#governance_1" title="Permanent link to this heading">&para;</a></h4>
+<ul>
+<li>Comfort bands determine civic schedules  </li>
+<li>Thermal drift triggers automatic correction  </li>
+</ul>
+<hr />
+<h2 id="6-water-systems"><strong>6. Water Systems</strong><a class="toc-permalink" href="#6-water-systems" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="61-triadic-water-stack"><strong>6.1 Triadic Water Stack</strong><a class="toc-permalink" href="#61-triadic-water-stack" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Desal → Humans
+Dew → Farming
+Recycled → Industry
+Aquifers → Untouched
+</code></pre></div>
+
+<h3 id="62-dew-farms"><strong>6.2 Dew Farms</strong><a class="toc-permalink" href="#62-dew-farms" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Deployed at dawn/dusk  </li>
+<li>Retracted during storms  </li>
+<li>Feed agricultural vaults  </li>
+</ul>
+<h4 id="governance_2"><strong>Governance</strong><a class="toc-permalink" href="#governance_2" title="Permanent link to this heading">&para;</a></h4>
+<ul>
+<li>Aquifers are constitutionally protected  </li>
+<li>Water tier mixing is prohibited  </li>
+</ul>
+<hr />
+<h2 id="7-airflow-systems"><strong>7. Airflow Systems</strong><a class="toc-permalink" href="#7-airflow-systems" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="71-pressuredriven-ventilation"><strong>7.1 Pressure‑Driven Ventilation</strong><a class="toc-permalink" href="#71-pressuredriven-ventilation" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>[ Intake Shafts ] → [ Vault Circulation ] → [ Exhaust Towers ]
+</code></pre></div>
+
+<h3 id="72-wind-towers"><strong>7.2 Wind Towers</strong><a class="toc-permalink" href="#72-wind-towers" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Capture cool air  </li>
+<li>Vent warm air  </li>
+<li>Operate without mechanical load  </li>
+</ul>
+<h4 id="governance_3"><strong>Governance</strong><a class="toc-permalink" href="#governance_3" title="Permanent link to this heading">&para;</a></h4>
+<ul>
+<li>Airflow must remain within safe pressure thresholds  </li>
+</ul>
+<hr />
+<h2 id="8-transit-systems"><strong>8. Transit Systems</strong><a class="toc-permalink" href="#8-transit-systems" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="81-subsurface-transit-grid"><strong>8.1 Subsurface Transit Grid</strong><a class="toc-permalink" href="#81-subsurface-transit-grid" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>[ North ]───[ Hub ]───[ South ]
+     │          │          │
+[ West ]────────┘────────[ East ]
+</code></pre></div>
+
+<h3 id="82-movement-scheduling"><strong>8.2 Movement Scheduling</strong><a class="toc-permalink" href="#82-movement-scheduling" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Movement aligned with thermal comfort bands  </li>
+<li>Emergency cooling nodes every 500m  </li>
+</ul>
+<hr />
+<h2 id="9-civic-systems"><strong>9. Civic Systems</strong><a class="toc-permalink" href="#9-civic-systems" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="91-comfortband-scheduling"><strong>9.1 Comfort‑Band Scheduling</strong><a class="toc-permalink" href="#91-comfortband-scheduling" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Dawn/dusk → high mobility  </li>
+<li>Midday → rest/indoor activity  </li>
+<li>Night → optional operations  </li>
+</ul>
+<h3 id="92-civic-vaults"><strong>9.2 Civic Vaults</strong><a class="toc-permalink" href="#92-civic-vaults" title="Permanent link to this heading">&para;</a></h3>
+<p>Contain:</p>
+<ul>
+<li>markets  </li>
+<li>clinics  </li>
+<li>schools  </li>
+<li>meeting halls  </li>
+<li>cultural spaces  </li>
+</ul>
+<hr />
+<h2 id="10-ecological-systems"><strong>10. Ecological Systems</strong><a class="toc-permalink" href="#10-ecological-systems" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="101-surface-ecology-band"><strong>10.1 Surface Ecology Band</strong><a class="toc-permalink" href="#101-surface-ecology-band" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Native flora  </li>
+<li>Solar arrays  </li>
+<li>Dew farms  </li>
+<li>Access points  </li>
+</ul>
+<h3 id="102-restoration-zones"><strong>10.2 Restoration Zones</strong><a class="toc-permalink" href="#102-restoration-zones" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>No permanent structures  </li>
+<li>Steward‑only access  </li>
+</ul>
+<hr />
+<h2 id="11-governance-structure"><strong>11. Governance Structure</strong><a class="toc-permalink" href="#11-governance-structure" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="111-actors"><strong>11.1 Actors</strong><a class="toc-permalink" href="#111-actors" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Substrate Stewards</strong>  </li>
+<li><strong>Regime Operators</strong>  </li>
+<li><strong>Civic Coordinators</strong>  </li>
+<li><strong>Drift Monitors</strong>  </li>
+</ul>
+<h3 id="112-governance-flow"><strong>11.2 Governance Flow</strong><a class="toc-permalink" href="#112-governance-flow" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Substrate → Regime → Civic → Feedback → Correction
+</code></pre></div>
+
+<h3 id="113-hard-boundaries"><strong>11.3 Hard Boundaries</strong><a class="toc-permalink" href="#113-hard-boundaries" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>───────────────
+  NO CROSSING
+───────────────
+</code></pre></div>
+
+<p>Includes:</p>
+<ul>
+<li>aquifer extraction  </li>
+<li>water tier mixing  </li>
+<li>ecological encroachment  </li>
+<li>thermal overload  </li>
+</ul>
+<hr />
+<h2 id="12-stability-requirements"><strong>12. Stability Requirements</strong><a class="toc-permalink" href="#12-stability-requirements" title="Permanent link to this heading">&para;</a></h2>
+<p>A Seed City is considered <strong>regime‑stable</strong> when:</p>
+<ul>
+<li>thermal drift &lt; 2%  </li>
+<li>water tier purity = 100%  </li>
+<li>material loops fully closed  </li>
+<li>ecological footprint &lt; 10% of surface zone  </li>
+<li>civic schedules aligned with comfort bands  </li>
+<li>no boundary violations for 12 months  </li>
+</ul>
+<p>All three Seed Cities must reach stability before Core City activation.</p>
+<hr />
+<h2 id="13-summary"><strong>13. Summary</strong><a class="toc-permalink" href="#13-summary" title="Permanent link to this heading">&para;</a></h2>
+<p>Seed Cities are:</p>
+<ul>
+<li>substrate‑aligned  </li>
+<li>thermally stable  </li>
+<li>water‑secure  </li>
+<li>materially closed‑loop  </li>
+<li>ecologically restorative  </li>
+<li>governance‑transparent  </li>
+<li>drift‑resistant  </li>
+</ul>
+<p>They form the <strong>perimeter foundation</strong> for the future desert civilization envisioned by TriadicFrameworks.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/education/polisci/seed-city-spec.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/education/polisci/seed-city-spec.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

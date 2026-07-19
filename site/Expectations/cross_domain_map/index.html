@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Cross Domain Map | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/Expectations/cross_domain_map/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Cross Domain Map" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/Expectations/cross_domain_map/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Cross Domain Map" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/Expectations/cross_domain_map.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Cross Domain Map",
+    "headline": "Cross Domain Map",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/Expectations/cross_domain_map/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#purpose">Purpose</a><ul>
+<li><a href="#what-expectations-provides-to-fft">What Expectations provides to FFT</a></li>
+<li><a href="#what-fft-provides-back-to-expectations">What FFT provides back to Expectations</a></li>
+<li><a href="#mapping">Mapping</a></li>
+<li><a href="#what-expectations-provides-to-fcg">What Expectations provides to FCG</a></li>
+<li><a href="#what-fcg-provides-back-to-expectations">What FCG provides back to Expectations</a></li>
+<li><a href="#mapping_1">Mapping</a></li>
+<li><a href="#what-expectations-provides-to-rfbuilder">What Expectations provides to RF‑Builder</a></li>
+<li><a href="#what-rfbuilder-provides-back-to-expectations">What RF‑Builder provides back to Expectations</a></li>
+<li><a href="#mapping_2">Mapping</a></li>
+<li><a href="#highlevel-map">High‑level map</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Expectations/" itemprop="item">
+                <span itemprop="name">Expectations</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Cross Domain Map</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Cross Domain Map</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="crossdomain-map-expectations-fft-fcg-rfbuilder"><strong>Cross‑Domain Map — Expectations → FFT / FCG / RF‑Builder</strong><a class="toc-permalink" href="#crossdomain-map-expectations-fft-fcg-rfbuilder" title="Permanent link to this heading">&para;</a></h1>
+<p><strong>TriadicFrameworks Canon</strong><br />
+<strong>Version:</strong> 2026‑1.0<br />
+<strong>Location:</strong> <code>/docs/Expectations/</code></p>
+<hr />
+<h2 id="purpose"><strong>Purpose</strong><a class="toc-permalink" href="#purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>This map explains how the <strong>Expectations Module</strong> connects to the three core “builder engines” of TriadicFrameworks:</p>
+<ul>
+<li><strong>FFT — Framework Field Theory</strong>  </li>
+<li><strong>FCG — Framework Creation Guide</strong>  </li>
+<li><strong>RF‑Builder — Regime‑Field Builder</strong></li>
+</ul>
+<p>Expectations is the <strong>root‑level orientation layer</strong>, and these three modules are the <strong>construction layer</strong>.<br />
+This document shows how they interlock.</p>
+<hr />
+<h1 id="1-expectations-fft-framework-field-theory"><strong>1. Expectations → FFT (Framework Field Theory)</strong><a class="toc-permalink" href="#1-expectations-fft-framework-field-theory" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="what-expectations-provides-to-fft"><strong>What Expectations provides to FFT</strong><a class="toc-permalink" href="#what-expectations-provides-to-fft" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>A clear definition of what a “framework” is expected to contain  </li>
+<li>Requirements for structure, regime traversal, observer behavior  </li>
+<li>Canon rules for dimensional rails, substrate feeds, and headers  </li>
+<li>Cross‑domain expectations (physics, medicine, computation, mythology)  </li>
+<li>Contributor expectations (zero drift, triadic lens, module.json metadata)</li>
+</ul>
+<h3 id="what-fft-provides-back-to-expectations"><strong>What FFT provides back to Expectations</strong><a class="toc-permalink" href="#what-fft-provides-back-to-expectations" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>The mathematical and conceptual backbone for building frameworks  </li>
+<li>Field‑level operators that Expectations can reference  </li>
+<li>A consistent grammar for students learning the canon  </li>
+<li>A stable foundation for AI agents to reason canon‑aligned</li>
+</ul>
+<h3 id="mapping"><strong>Mapping</strong><a class="toc-permalink" href="#mapping" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Expectations → defines what a framework must be
+FFT → defines how a framework is built
+</code></pre></div>
+
+<p>Expectations is the <strong>front door</strong>, FFT is the <strong>first workshop</strong>.</p>
+<hr />
+<h1 id="2-expectations-fcg-framework-creation-guide"><strong>2. Expectations → FCG (Framework Creation Guide)</strong><a class="toc-permalink" href="#2-expectations-fcg-framework-creation-guide" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="what-expectations-provides-to-fcg"><strong>What Expectations provides to FCG</strong><a class="toc-permalink" href="#what-expectations-provides-to-fcg" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>The rules for module identity, purpose, structure, and audience  </li>
+<li>Requirements for intake manifolds, headers, and observer loops  </li>
+<li>Contributor guidelines for building new frameworks  </li>
+<li>Roadmap alignment (what is stable vs experimental)  </li>
+<li>Sample files for intake/header/engine patterns</li>
+</ul>
+<h3 id="what-fcg-provides-back-to-expectations"><strong>What FCG provides back to Expectations</strong><a class="toc-permalink" href="#what-fcg-provides-back-to-expectations" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>The step‑by‑step process for creating new frameworks  </li>
+<li>Templates for module creation  </li>
+<li>Operator grammar for framework construction  </li>
+<li>Examples that Expectations can reference for students</li>
+</ul>
+<h3 id="mapping_1"><strong>Mapping</strong><a class="toc-permalink" href="#mapping_1" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Expectations → tells you what you must deliver
+FCG → tells you how to deliver it
+</code></pre></div>
+
+<p>Expectations is the <strong>requirements stack</strong>, FCG is the <strong>construction manual</strong>.</p>
+<hr />
+<h1 id="3-expectations-rfbuilder-regimefield-builder"><strong>3. Expectations → RF‑Builder (Regime‑Field Builder)</strong><a class="toc-permalink" href="#3-expectations-rfbuilder-regimefield-builder" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="what-expectations-provides-to-rfbuilder"><strong>What Expectations provides to RF‑Builder</strong><a class="toc-permalink" href="#what-expectations-provides-to-rfbuilder" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>The rules for regime traversal (R1–R4)  </li>
+<li>Observer expectations (O1–O4)  </li>
+<li>Substrate expectations (S1–S4)  </li>
+<li>Dimensional expectations (L/C/N rails)  </li>
+<li>Cross‑domain expectations for regime alignment (HPC, QC, Medicine, Physics)</li>
+</ul>
+<h3 id="what-rfbuilder-provides-back-to-expectations"><strong>What RF‑Builder provides back to Expectations</strong><a class="toc-permalink" href="#what-rfbuilder-provides-back-to-expectations" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>The machinery for building regime‑fields  </li>
+<li>The logic for multi‑regime transitions  </li>
+<li>The field‑level structures that Expectations can reference  </li>
+<li>The examples used in cross‑domain teaching</li>
+</ul>
+<h3 id="mapping_2"><strong>Mapping</strong><a class="toc-permalink" href="#mapping_2" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Expectations → defines regime/observer/substrate requirements
+RF‑Builder → constructs regime-fields that satisfy those requirements
+</code></pre></div>
+
+<p>Expectations is the <strong>regime rulebook</strong>, RF‑Builder is the <strong>regime engine</strong>.</p>
+<hr />
+<h1 id="4-combined-crossdomain-flow"><strong>4. Combined Cross‑Domain Flow</strong><a class="toc-permalink" href="#4-combined-crossdomain-flow" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="highlevel-map"><strong>High‑level map</strong><a class="toc-permalink" href="#highlevel-map" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Expectations
+   ↓
+FFT — defines framework fields
+   ↓
+FCG — constructs frameworks using FFT rules
+   ↓
+RF‑Builder — builds regime-fields inside those frameworks
+   ↓
+IPD‑12 — runs them as engines
+</code></pre></div>
+
+<p>Expectations is the <strong>root</strong>, FFT/FCG/RF‑Builder are the <strong>trunk</strong>, IPD‑12 is the <strong>engine block</strong>, and RTT/GU/FFT/Pantheon/Med are the <strong>headers</strong>.</p>
+<hr />
+<h1 id="5-visual-summary-textmode"><strong>5. Visual Summary (text‑mode)</strong><a class="toc-permalink" href="#5-visual-summary-textmode" title="Permanent link to this heading">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code>[ Expectations ]
+     |
+     |  (requirements, orientation, contributor rules)
+     |
++---------------------------+
+| FFT | FCG | RF‑Builder   |
++---------------------------+
+     |        |        |
+     |        |        |
+     +--------+--------+
+              |
+           [ IPD‑12 ]
+              |
+           [ Headers ]
+</code></pre></div>
+
+<hr />
+<h1 id="6-notes"><strong>6. Notes</strong><a class="toc-permalink" href="#6-notes" title="Permanent link to this heading">&para;</a></h1>
+<ul>
+<li>This map is referenced by <code>README.md</code>, <code>Expectations.md</code>, and <code>module_index.md</code>.  </li>
+<li>It is intended for students, researchers, and AI agents.  </li>
+<li>It is part of the <strong>root‑level onboarding</strong> for TriadicFrameworks.  </li>
+<li>It is canon‑aligned and stable.</li>
+</ul>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Expectations/cross_domain_map.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/Expectations/cross_domain_map.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

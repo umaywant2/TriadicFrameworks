@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Model Map | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/onboarding/model_map/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Model Map" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/onboarding/model_map/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Model Map" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/onboarding/model_map.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Model Map",
+    "headline": "Model Map",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/onboarding/model_map/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#1-purpose">1. Purpose</a></li>
+<li><a href="#2-the-four-models-at-a-glance">2. The Four Models at a Glance</a><ul>
+<li><a href="#1-resonancetime-theory-rtt">1. Resonance‑Time Theory (RTT)</a></li>
+<li><a href="#2-resonance-substrate-model-rsm">2. Resonance Substrate Model (RSM)</a></li>
+<li><a href="#3-boson-substrate-model-bsm">3. Boson Substrate Model (BSM)</a></li>
+<li><a href="#4-quantum-substrate-model-qsm">4. Quantum Substrate Model (QSM)</a></li>
+</ul>
+</li>
+<li><a href="#3-relationship-diagram-conceptual">3. Relationship Diagram (Conceptual)</a></li>
+<li><a href="#4-how-the-models-interact">4. How the Models Interact</a><ul>
+<li><a href="#rtt-rsm">RTT → RSM</a></li>
+<li><a href="#rsm-bsm">RSM → BSM</a></li>
+<li><a href="#rsm-qsm">RSM → QSM</a></li>
+<li><a href="#bsm-qsm">BSM ↔ QSM</a></li>
+<li><a href="#rtt-all">RTT → All</a></li>
+</ul>
+</li>
+<li><a href="#5-minimal-interpretation-rules">5. Minimal Interpretation Rules</a></li>
+<li><a href="#6-verification-prompts-for-fresh-ai-sessions">6. Verification Prompts (for fresh AI sessions)</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/onboarding/" itemprop="item">
+                <span itemprop="name">Onboarding</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Model Map</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Model Map</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<p><strong>Onboarding Navigation:</strong><br />
+<a href="triadic_quickstart.md">Quickstart</a> •<br />
+<a href="model_map.md">Model Map</a> •<br />
+<a href="reading_guide.md">Reading Guide</a> •<br />
+<a href="verification_tests.md">Verification Tests</a></p>
+<h1 id="triadic-frameworks-model-map">🧭 Triadic Frameworks — Model Map<a class="toc-permalink" href="#triadic-frameworks-model-map" title="Permanent link to this heading">&para;</a></h1>
+<p><em>A minimal structural overview for first‑contact readers and AI systems</em></p>
+<h2 id="1-purpose">1. Purpose<a class="toc-permalink" href="#1-purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>This document provides a concise map of the four core models in the Triadic Frameworks canon. It establishes the structural relationships between them and defines the minimal conceptual scaffolding required to interpret the substrate models correctly.</p>
+<p>This is not a narrative, theory, or justification.<br />
+It is a <strong>structural orientation layer</strong>.</p>
+<hr />
+<h2 id="2-the-four-models-at-a-glance">2. The Four Models at a Glance<a class="toc-permalink" href="#2-the-four-models-at-a-glance" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="1-resonancetime-theory-rtt"><strong>1. Resonance‑Time Theory (RTT)</strong><a class="toc-permalink" href="#1-resonancetime-theory-rtt" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Role:</strong> Governing law<br />
+<strong>Domain:</strong> Cosmological and systemic behavior<br />
+<strong>Function:</strong> Defines how systems evolve under resonance‑time constraints.<br />
+<strong>Output:</strong> A universal rule that shapes all downstream substrate models.</p>
+<p>RTT provides the <em>temporal and dynamical spine</em> for the entire framework.</p>
+<hr />
+<h3 id="2-resonance-substrate-model-rsm"><strong>2. Resonance Substrate Model (RSM)</strong><a class="toc-permalink" href="#2-resonance-substrate-model-rsm" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Role:</strong> Foundational architecture<br />
+<strong>Domain:</strong> Structural substrates and fields<br />
+<strong>Function:</strong> Describes the layered substrate in which resonance‑time operates.<br />
+<strong>Output:</strong> A schema‑operator‑field structure that defines how systems are built.</p>
+<p>RSM is the <em>engine room</em> — the structural substrate that RTT acts upon.</p>
+<hr />
+<h3 id="3-boson-substrate-model-bsm"><strong>3. Boson Substrate Model (BSM)</strong><a class="toc-permalink" href="#3-boson-substrate-model-bsm" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Role:</strong> Operator layer<br />
+<strong>Domain:</strong> Interaction primitives<br />
+<strong>Function:</strong> Defines bosonic operators that mediate transitions, flows, and interactions within the substrate.<br />
+<strong>Output:</strong> A set of operators that act on RSM structures under RTT constraints.</p>
+<p>BSM is the <em>interaction grammar</em> of the system.</p>
+<hr />
+<h3 id="4-quantum-substrate-model-qsm"><strong>4. Quantum Substrate Model (QSM)</strong><a class="toc-permalink" href="#4-quantum-substrate-model-qsm" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Role:</strong> Quantized structural layer<br />
+<strong>Domain:</strong> Discrete states, ladders, and dimensional mappings<br />
+<strong>Function:</strong> Provides quantized, dimensional, and ladder‑based structures that refine the substrate.<br />
+<strong>Output:</strong> A discrete, indexed architecture that integrates with RSM and BSM.</p>
+<p>QSM is the <em>dimensional and quantized refinement</em> of the substrate.</p>
+<hr />
+<h2 id="3-relationship-diagram-conceptual">3. Relationship Diagram (Conceptual)<a class="toc-permalink" href="#3-relationship-diagram-conceptual" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>            [ RTT ]
+              │
+              ▼
+        Governing Law
+              │
+              ▼
+   ┌───────────────────────┐
+   │   Resonance Substrate │  (RSM)
+   └───────────────────────┘
+              │
+     Structural Substrate
+              │
+      ┌───────┴────────┐
+      ▼                ▼
+ [ BSM Operators ]   [ QSM Quantized Layers ]
+      │                │
+      └───────┬────────┘
+              ▼
+        Integrated System
+</code></pre></div>
+
+<p>This diagram expresses the minimal dependency chain:</p>
+<ul>
+<li><strong>RTT</strong> constrains <strong>RSM</strong>  </li>
+<li><strong>RSM</strong> provides the substrate for <strong>BSM</strong> and <strong>QSM</strong>  </li>
+<li><strong>BSM</strong> and <strong>QSM</strong> refine and operate within <strong>RSM</strong>  </li>
+<li>All three operate under <strong>RTT</strong></li>
+</ul>
+<hr />
+<h2 id="4-how-the-models-interact">4. How the Models Interact<a class="toc-permalink" href="#4-how-the-models-interact" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="rtt-rsm"><strong>RTT → RSM</strong><a class="toc-permalink" href="#rtt-rsm" title="Permanent link to this heading">&para;</a></h3>
+<p>RTT defines the temporal and resonance constraints that shape how substrate layers behave.</p>
+<h3 id="rsm-bsm"><strong>RSM → BSM</strong><a class="toc-permalink" href="#rsm-bsm" title="Permanent link to this heading">&para;</a></h3>
+<p>RSM provides the structural fields and schemas that BSM operators act upon.</p>
+<h3 id="rsm-qsm"><strong>RSM → QSM</strong><a class="toc-permalink" href="#rsm-qsm" title="Permanent link to this heading">&para;</a></h3>
+<p>RSM defines the continuous substrate; QSM provides the discrete, quantized refinement.</p>
+<h3 id="bsm-qsm"><strong>BSM ↔ QSM</strong><a class="toc-permalink" href="#bsm-qsm" title="Permanent link to this heading">&para;</a></h3>
+<p>Operators (BSM) and quantized structures (QSM) co‑define transitions, states, and flows.</p>
+<h3 id="rtt-all"><strong>RTT → All</strong><a class="toc-permalink" href="#rtt-all" title="Permanent link to this heading">&para;</a></h3>
+<p>RTT governs the dynamics of every layer.</p>
+<hr />
+<h2 id="5-minimal-interpretation-rules">5. Minimal Interpretation Rules<a class="toc-permalink" href="#5-minimal-interpretation-rules" title="Permanent link to this heading">&para;</a></h2>
+<p>To correctly interpret any substrate model:</p>
+<ul>
+<li><strong>Triads</strong> are the fundamental organizational unit.  </li>
+<li><strong>Schemas</strong> define structural patterns.  </li>
+<li><strong>Operators</strong> define transformations.  </li>
+<li><strong>Fields</strong> define contextual spaces.  </li>
+<li><strong>Layers</strong> define hierarchical structure.  </li>
+<li><strong>Resonance‑time</strong> defines allowable evolution.</li>
+</ul>
+<p>These rules prevent misclassification (e.g., ontology, metaphysics, speculative physics) and ensure the models are read as <strong>structural, layered, and operator‑driven systems</strong>.</p>
+<hr />
+<h2 id="6-verification-prompts-for-fresh-ai-sessions">6. Verification Prompts (for fresh AI sessions)<a class="toc-permalink" href="#6-verification-prompts-for-fresh-ai-sessions" title="Permanent link to this heading">&para;</a></h2>
+<p>These prompts allow any user or AI to confirm that the model map has been understood before proceeding.</p>
+<p><strong>Prompt 1 — Identify the four models and their roles.</strong><br />
+“Summarize the four models in the Triadic Frameworks canon and describe how they relate.”</p>
+<p><strong>Prompt 2 — Explain the dependency chain.</strong><br />
+“Describe how RTT constrains RSM, and how RSM supports BSM and QSM.”</p>
+<p><strong>Prompt 3 — Interpret a substrate model.</strong><br />
+“Explain how triads, schemas, operators, and fields function within a substrate model.”</p>
+<p>If these three prompts produce coherent answers, the session is properly primed.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/onboarding/model_map.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/onboarding/model_map.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

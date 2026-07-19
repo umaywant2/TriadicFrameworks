@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Badge Logic | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/NoS/BADGE_LOGIC/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Badge Logic" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/NoS/BADGE_LOGIC/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Badge Logic" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/NoS/BADGE_LOGIC.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Badge Logic",
+    "headline": "Badge Logic",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/NoS/BADGE_LOGIC/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#why-badges-exist">Why Badges Exist</a></li>
+<li><a href="#what-a-badge-is-and-isnt">What a Badge Is (and Isn’t)</a><ul>
+<li><a href="#a-badge-is">A badge is:</a></li>
+<li><a href="#a-badge-is-not">A badge is not:</a></li>
+</ul>
+</li>
+<li><a href="#core-badge-structure">Core Badge Structure 📐</a></li>
+<li><a href="#badge-fields-explained">Badge Fields Explained</a><ul>
+<li><a href="#badge_type">badge_type</a></li>
+<li><a href="#timestamp">timestamp</a></li>
+<li><a href="#module">module</a></li>
+<li><a href="#context">context</a></li>
+<li><a href="#severity">severity</a></li>
+</ul>
+</li>
+<li><a href="#common-badge-types">Common Badge Types 🧩</a><ul>
+<li><a href="#substrate_baseline">SUBSTRATE_BASELINE</a></li>
+<li><a href="#substrate_drift">SUBSTRATE_DRIFT</a></li>
+<li><a href="#corridor_breach">CORRIDOR_BREACH</a></li>
+<li><a href="#wrap_drift">WRAP_DRIFT</a></li>
+</ul>
+</li>
+<li><a href="#badge-emission-rules">Badge Emission Rules 📜</a></li>
+<li><a href="#badge-consumers">Badge Consumers 🔍</a></li>
+<li><a href="#forking-and-badges">Forking and Badges 🍴</a></li>
+<li><a href="#why-this-matters">Why This Matters</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/NoS/" itemprop="item">
+                <span itemprop="name">Nos</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Badge Logic</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Badge Logic</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="badge-logic">Badge Logic 🏷️<a class="toc-permalink" href="#badge-logic" title="Permanent link to this heading">&para;</a></h1>
+<p><em>(RTT‑Aligned System Signaling)</em></p>
+<p>Badges are the <strong>primary output</strong> of NawderOS.</p>
+<p>They are not alerts.<br />
+They are not errors.<br />
+They are not commands.</p>
+<p>Badges are <strong>signals</strong> — structured observations about system coherence over time.</p>
+<hr />
+<h2 id="why-badges-exist">Why Badges Exist<a class="toc-permalink" href="#why-badges-exist" title="Permanent link to this heading">&para;</a></h2>
+<p>RTT emphasizes:<br />
+- observation over enforcement<br />
+- coherence over control<br />
+- lineage over anonymity</p>
+<p>Badges exist to make those principles <strong>machine‑visible</strong>.</p>
+<p>If something matters, it should emit a badge.<br />
+If it doesn’t emit a badge, it didn’t happen (as far as RTT is concerned).</p>
+<hr />
+<h2 id="what-a-badge-is-and-isnt">What a Badge Is (and Isn’t)<a class="toc-permalink" href="#what-a-badge-is-and-isnt" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="a-badge-is">A badge <strong>is</strong>:<a class="toc-permalink" href="#a-badge-is" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>append‑only</li>
+<li>machine‑readable</li>
+<li>context‑rich</li>
+<li>boring 😄</li>
+</ul>
+<h3 id="a-badge-is-not">A badge <strong>is not</strong>:<a class="toc-permalink" href="#a-badge-is-not" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>a policy decision</li>
+<li>a remediation trigger</li>
+<li>a panic signal</li>
+<li>a judgment</li>
+</ul>
+<p>Badges describe <em>what happened</em>, not <em>what to do</em>.</p>
+<hr />
+<h2 id="core-badge-structure">Core Badge Structure 📐<a class="toc-permalink" href="#core-badge-structure" title="Permanent link to this heading">&para;</a></h2>
+<p>Every badge follows the same basic structure:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;badge_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;STRING&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ISO-8601&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;module&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;STRING&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;context&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;severity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;INFO | NOTICE | DRIFT&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>This structure is intentionally simple and stable.</p>
+<hr />
+<h2 id="badge-fields-explained">Badge Fields Explained<a class="toc-permalink" href="#badge-fields-explained" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="badge_type"><code>badge_type</code><a class="toc-permalink" href="#badge_type" title="Permanent link to this heading">&para;</a></h3>
+<p>A short, stable identifier.</p>
+<p>Examples:<br />
+- <code>CORRIDOR_BREACH</code><br />
+- <code>WRAP_DRIFT</code><br />
+- <code>SUBSTRATE_BASELINE</code><br />
+- <code>SUBSTRATE_DRIFT</code></p>
+<p>Badge types should be:<br />
+- descriptive<br />
+- consistent<br />
+- boring</p>
+<hr />
+<h3 id="timestamp"><code>timestamp</code><a class="toc-permalink" href="#timestamp" title="Permanent link to this heading">&para;</a></h3>
+<p>When the observation occurred.</p>
+<p>Badges care about <strong>time</strong> — RTT is literally about time 😄</p>
+<hr />
+<h3 id="module"><code>module</code><a class="toc-permalink" href="#module" title="Permanent link to this heading">&para;</a></h3>
+<p>Which module emitted the badge.</p>
+<p>This preserves lineage and makes debugging sane.</p>
+<hr />
+<h3 id="context"><code>context</code><a class="toc-permalink" href="#context" title="Permanent link to this heading">&para;</a></h3>
+<p>A free‑form object containing relevant metadata.</p>
+<p>Examples:<br />
+- PID<br />
+- memory region<br />
+- kernel version<br />
+- module name</p>
+<p>Context should explain <em>why</em> the badge exists without interpretation.</p>
+<hr />
+<h3 id="severity"><code>severity</code><a class="toc-permalink" href="#severity" title="Permanent link to this heading">&para;</a></h3>
+<p>A coarse indicator of coherence state.</p>
+<p>Allowed values:<br />
+- <code>INFO</code> — expected observation<br />
+- <code>NOTICE</code> — unusual but non‑critical<br />
+- <code>DRIFT</code> — coherence deviation detected</p>
+<p>Severity is <strong>not</strong> urgency.</p>
+<hr />
+<h2 id="common-badge-types">Common Badge Types 🧩<a class="toc-permalink" href="#common-badge-types" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="substrate_baseline"><code>SUBSTRATE_BASELINE</code><a class="toc-permalink" href="#substrate_baseline" title="Permanent link to this heading">&para;</a></h3>
+<p>Emitted at boot.</p>
+<p>Purpose:<br />
+- record what the system believes it is<br />
+- establish a reference point</p>
+<hr />
+<h3 id="substrate_drift"><code>SUBSTRATE_DRIFT</code><a class="toc-permalink" href="#substrate_drift" title="Permanent link to this heading">&para;</a></h3>
+<p>Emitted when foundational assumptions change.</p>
+<p>Purpose:<br />
+- detect silent system evolution<br />
+- preserve lineage</p>
+<hr />
+<h3 id="corridor_breach"><code>CORRIDOR_BREACH</code><a class="toc-permalink" href="#corridor_breach" title="Permanent link to this heading">&para;</a></h3>
+<p>Emitted when behavior exits a declared corridor.</p>
+<p>Purpose:<br />
+- highlight coherence boundary crossings<br />
+- enable later analysis</p>
+<hr />
+<h3 id="wrap_drift"><code>WRAP_DRIFT</code><a class="toc-permalink" href="#wrap_drift" title="Permanent link to this heading">&para;</a></h3>
+<p>Emitted during unexpected boundary transitions.</p>
+<p>Purpose:<br />
+- observe context loss or mismatch<br />
+- flag risky transitions</p>
+<hr />
+<h2 id="badge-emission-rules">Badge Emission Rules 📜<a class="toc-permalink" href="#badge-emission-rules" title="Permanent link to this heading">&para;</a></h2>
+<p>To keep badges trustworthy:</p>
+<ul>
+<li>Never block system execution</li>
+<li>Never trigger enforcement</li>
+<li>Never modify system state</li>
+<li>Never hide or suppress badges</li>
+</ul>
+<p>If emitting a badge would cause harm, <strong>don’t emit it</strong>.</p>
+<hr />
+<h2 id="badge-consumers">Badge Consumers 🔍<a class="toc-permalink" href="#badge-consumers" title="Permanent link to this heading">&para;</a></h2>
+<p>Badges are meant to be consumed by:<br />
+- humans<br />
+- logs<br />
+- simulations<br />
+- visualization tools<br />
+- educational tooling</p>
+<p>They are <strong>not</strong> meant to be acted on automatically.</p>
+<p>Interpretation belongs outside the kernel.</p>
+<hr />
+<h2 id="forking-and-badges">Forking and Badges 🍴<a class="toc-permalink" href="#forking-and-badges" title="Permanent link to this heading">&para;</a></h2>
+<p>Forks may:<br />
+- add new badge types<br />
+- extend context fields<br />
+- redefine severity semantics</p>
+<p>Forks should <strong>not</strong>:<br />
+- overload existing badge meanings<br />
+- silently change badge behavior<br />
+- remove lineage information</p>
+<p>If you change badge semantics, document it.</p>
+<hr />
+<h2 id="why-this-matters">Why This Matters<a class="toc-permalink" href="#why-this-matters" title="Permanent link to this heading">&para;</a></h2>
+<p>Badges are how RTT stays honest.</p>
+<p>They:<br />
+- make assumptions visible<br />
+- preserve history<br />
+- prevent silent drift<br />
+- enable learning</p>
+<p>They don’t solve problems.<br />
+They make problems <em>legible</em>.</p>
+<p>And legibility is power 🙂</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/NoS/BADGE_LOGIC.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/NoS/BADGE_LOGIC.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

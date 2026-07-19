@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Cross Package Interaction Map | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/packages/tft-3pack/Cross-Package_Interaction_Map/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Cross Package Interaction Map" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/packages/tft-3pack/Cross-Package_Interaction_Map/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Cross Package Interaction Map" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/packages/tft-3pack/Cross-Package_Interaction_Map.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Cross Package Interaction Map",
+    "headline": "Cross Package Interaction Map",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/packages/tft-3pack/Cross-Package_Interaction_Map/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#how-tft3pack-wrsadc-the-engine-and-the-overlays-interact">How tft‑3pack, WRSADC, the Engine, and the Overlays Interact</a></li>
+<li><a href="#1-overlays-wrsadc-shell">1. Overlays → WRSADC Shell</a></li>
+<li><a href="#2-wrsadc-shell-wrsadc-integration">2. WRSADC Shell → WRSADC Integration</a></li>
+<li><a href="#3-wrsadc-integration-tft3pack">3. WRSADC Integration → tft‑3pack</a></li>
+<li><a href="#4-tft3pack-engine">4. tft‑3pack → Engine</a><ul>
+<li><a href="#overlays">Overlays</a></li>
+<li><a href="#wrsadc-shell">WRSADC Shell</a></li>
+<li><a href="#wrsadc-integration">WRSADC Integration</a></li>
+<li><a href="#tft3pack">tft‑3pack</a></li>
+<li><a href="#engine">Engine</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/packages/" itemprop="item">
+                <span itemprop="name">Packages</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/packages/tft-3pack/" itemprop="item">
+                <span itemprop="name">Tft 3Pack</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Cross Package Interaction Map</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Cross Package Interaction Map</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="triadicframeworks-crosspackage-interaction-map">🌐 <strong>TriadicFrameworks Cross‑Package Interaction Map</strong><a class="toc-permalink" href="#triadicframeworks-crosspackage-interaction-map" title="Permanent link to this heading">&para;</a></h1>
+<h6 id="by-nawder-loswin-142026-wwwtriadicframeworksorg">By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org<a class="toc-permalink" href="#by-nawder-loswin-142026-wwwtriadicframeworksorg" title="Permanent link to this heading">&para;</a></h6>
+<h3 id="how-tft3pack-wrsadc-the-engine-and-the-overlays-interact"><em>How tft‑3pack, WRSADC, the Engine, and the Overlays Interact</em><a class="toc-permalink" href="#how-tft3pack-wrsadc-the-engine-and-the-overlays-interact" title="Permanent link to this heading">&para;</a></h3>
+<p>Below is a structured, mythmatical, developer‑friendly map showing how the major subsystems relate to one another.</p>
+<hr />
+<h1 id="highlevel-map">🗺️ <strong>High‑Level Map</strong><a class="toc-permalink" href="#highlevel-map" title="Permanent link to this heading">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code>                   ┌──────────────────────────┐
+                   │        Overlays          │
+                   │ (Telescopes, Mirrors,…)  │
+                   └──────────────┬───────────┘
+                                  │
+                                  ▼
+        ┌───────────────────────────────────────────────────┐
+        │                    WRSADC Shell                   │
+        │  (safe boundary, alignment, structural awareness) │
+        └──────────────┬────────────────────────────────────┘
+                       │
+                       ▼
+        ┌───────────────────────────────────────────────────┐
+        │                WRSADC Integration                 │
+        │ (Python core, dispatch, interpretation, lineage)  │
+        └──────────────┬────────────────────────────────────┘
+                       │
+                       ▼
+        ┌───────────────────────────────────────────────────┐
+        │                    tft‑3pack                      │
+        │   (Primitive 1 → Primitive 2 → Primitive 3 cycle) │
+        └──────────────┬────────────────────────────────────┘
+                       │
+                       ▼
+        ┌───────────────────────────────────────────────────┐
+        │                     Engine                        │
+        │ (RTT‑Inside logic, resonance models, operators)   │
+        └───────────────────────────────────────────────────┘
+</code></pre></div>
+
+<hr />
+<h1 id="detailed-interaction-breakdown">🔍 <strong>Detailed Interaction Breakdown</strong><a class="toc-permalink" href="#detailed-interaction-breakdown" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="1-overlays-wrsadc-shell"><strong>1. Overlays → WRSADC Shell</strong><a class="toc-permalink" href="#1-overlays-wrsadc-shell" title="Permanent link to this heading">&para;</a></h2>
+<p>Overlays (Telescopes, Mirrors, Anchors, Lenses) provide:</p>
+<ul>
+<li>zooming  </li>
+<li>reframing  </li>
+<li>alignment rules  </li>
+<li>observer‑safe transformations  </li>
+</ul>
+<p>These overlays <strong>do not execute actions directly</strong> — instead, they rely on the <strong>WRSADC Shell</strong> to enforce:</p>
+<ul>
+<li>boundary safety  </li>
+<li>structural‑awareness injection  </li>
+<li>resonance‑aligned interpretation  </li>
+</ul>
+<p><strong>Overlays describe the “how.”<br />
+WRSADC Shell enforces the “safe way.”</strong></p>
+<hr />
+<h2 id="2-wrsadc-shell-wrsadc-integration"><strong>2. WRSADC Shell → WRSADC Integration</strong><a class="toc-permalink" href="#2-wrsadc-shell-wrsadc-integration" title="Permanent link to this heading">&para;</a></h2>
+<p>The Shell is the <em>outer membrane</em>.<br />
+The Integration layer is the <em>inner interpreter</em>.</p>
+<p>The Shell provides:</p>
+<ul>
+<li>environment setup  </li>
+<li>state tracking  </li>
+<li>logging  </li>
+<li>boundary markers  </li>
+</ul>
+<p>The Integration layer provides:</p>
+<ul>
+<li>Python‑native WRSADCCore  </li>
+<li>alignment checks  </li>
+<li>safe dispatch  </li>
+<li>lineage tracking  </li>
+<li>structural‑awareness metadata  </li>
+</ul>
+<p><strong>Shell = environment<br />
+Integration = runtime behavior</strong></p>
+<hr />
+<h2 id="3-wrsadc-integration-tft3pack"><strong>3. WRSADC Integration → tft‑3pack</strong><a class="toc-permalink" href="#3-wrsadc-integration-tft3pack" title="Permanent link to this heading">&para;</a></h2>
+<p>This is where the triadic rhythm enters the picture.</p>
+<p>The Integration layer uses the 3‑Pack to structure actions:</p>
+<ul>
+<li><strong>Primitive 1</strong> — begin  </li>
+<li><strong>Primitive 2</strong> — transform  </li>
+<li><strong>Primitive 3</strong> — close  </li>
+</ul>
+<p>The 3‑Pack gives WRSADC a <strong>repeatable, predictable action cycle</strong>.</p>
+<p>WRSADC uses the 3‑Pack to:</p>
+<ul>
+<li>wrap operations  </li>
+<li>structure dispatch  </li>
+<li>maintain relational‑time lineage  </li>
+<li>ensure every action has a beginning, middle, and end  </li>
+</ul>
+<p><strong>WRSADC provides safety.<br />
+3‑Pack provides rhythm.</strong></p>
+<hr />
+<h2 id="4-tft3pack-engine"><strong>4. tft‑3pack → Engine</strong><a class="toc-permalink" href="#4-tft3pack-engine" title="Permanent link to this heading">&para;</a></h2>
+<p>The Engine is where RTT‑Inside logic lives.</p>
+<p>The 3‑Pack provides the Engine with:</p>
+<ul>
+<li>clean entry points  </li>
+<li>predictable triadic cycles  </li>
+<li>resonance‑aligned transitions  </li>
+<li>structural clarity  </li>
+</ul>
+<p>The Engine then performs:</p>
+<ul>
+<li>resonance‑time calculations  </li>
+<li>coherence modeling  </li>
+<li>operator execution  </li>
+<li>simulation logic  </li>
+<li>structural‑awareness propagation  </li>
+</ul>
+<p><strong>3‑Pack = the cadence<br />
+Engine = the computation</strong></p>
+<hr />
+<h1 id="crosspackage-flow-summary">🔗 <strong>Cross‑Package Flow Summary</strong><a class="toc-permalink" href="#crosspackage-flow-summary" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="overlays"><strong>Overlays</strong><a class="toc-permalink" href="#overlays" title="Permanent link to this heading">&para;</a></h3>
+<p>→ define <em>how to see</em> structure<br />
+→ feed into <strong>WRSADC Shell</strong></p>
+<h3 id="wrsadc-shell"><strong>WRSADC Shell</strong><a class="toc-permalink" href="#wrsadc-shell" title="Permanent link to this heading">&para;</a></h3>
+<p>→ defines <em>safe boundaries</em><br />
+→ feeds into <strong>WRSADC Integration</strong></p>
+<h3 id="wrsadc-integration"><strong>WRSADC Integration</strong><a class="toc-permalink" href="#wrsadc-integration" title="Permanent link to this heading">&para;</a></h3>
+<p>→ defines <em>safe execution</em><br />
+→ uses <strong>tft‑3pack</strong> to structure actions</p>
+<h3 id="tft3pack"><strong>tft‑3pack</strong><a class="toc-permalink" href="#tft3pack" title="Permanent link to this heading">&para;</a></h3>
+<p>→ defines <em>triadic action cycles</em><br />
+→ drives the <strong>Engine</strong></p>
+<h3 id="engine"><strong>Engine</strong><a class="toc-permalink" href="#engine" title="Permanent link to this heading">&para;</a></h3>
+<p>→ performs <em>RTT‑Inside computation</em><br />
+→ results can be re‑interpreted by Overlays<br />
+→ cycle repeats</p>
+<hr />
+<h1 id="mythmatical-architects-note">🧙 Mythmatical Architect’s Note<a class="toc-permalink" href="#mythmatical-architects-note" title="Permanent link to this heading">&para;</a></h1>
+<p>Think of the system like a living organism:</p>
+<ul>
+<li><strong>Overlays</strong> are the <em>senses</em>  </li>
+<li><strong>WRSADC Shell</strong> is the <em>skin</em>  </li>
+<li><strong>WRSADC Integration</strong> is the <em>nervous system</em>  </li>
+<li><strong>tft‑3pack</strong> is the <em>heartbeat</em>  </li>
+<li><strong>The Engine</strong> is the <em>mind</em>  </li>
+</ul>
+<p>Each part is simple on its own.<br />
+Together, they create coherence.</p>
+<hr />
+<p>If you want, I can also craft a <strong>visual SVG diagram</strong> (conceptual, not an image file) or a <strong>developer onboarding map</strong> that walks new contributors through the entire flow.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/Cross-Package_Interaction_Map.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/packages/tft-3pack/Cross-Package_Interaction_Map.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

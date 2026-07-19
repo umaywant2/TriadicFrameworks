@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Grammar | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/Grammar/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Grammar" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/Grammar/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Grammar" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/Grammar.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Grammar",
+    "headline": "Grammar",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/Grammar/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#1-rtt-grammar-how-you-structure-what-you-see">1. RTT grammar = how you structure what you see</a><ul>
+<li><a href="#awareness-grammar">Awareness grammar</a></li>
+<li><a href="#regime-grammar">Regime grammar</a></li>
+<li><a href="#alignment-grammar">Alignment grammar</a></li>
+</ul>
+</li>
+<li><a href="#2-how-to-use-grammar-with-rtt-modules-in-practice">2. How to “use grammar” with RTT modules in practice</a><ul>
+<li><a href="#step-1-pick-the-module">Step 1 — Pick the module</a></li>
+<li><a href="#step-2-apply-the-modules-grammar">Step 2 — Apply the module’s grammar</a></li>
+<li><a href="#step-3-keep-the-grammar-consistent">Step 3 — Keep the grammar consistent</a></li>
+</ul>
+</li>
+<li><a href="#3-example-using-rtt-grammar-on-something-simple">3. Example: Using RTT grammar on something simple</a><ul>
+<li><a href="#using-awareness-grammar">Using Awareness grammar</a></li>
+<li><a href="#using-regime-grammar">Using Regime grammar</a></li>
+<li><a href="#using-alignment-grammar">Using Alignment grammar</a></li>
+</ul>
+</li>
+<li><a href="#4-the-key-insight">4. The key insight</a></li>
+<li><a href="#5-quick-cheat-sheet-how-to-use-grammar-with-rtt-modules">5. Quick cheat sheet: “How to use grammar with RTT modules”</a><ul>
+<li><a href="#awareness-module-grammar">Awareness module grammar</a></li>
+<li><a href="#regime-module-grammar">Regime module grammar</a></li>
+<li><a href="#alignment-module-grammar">Alignment module grammar</a></li>
+<li><a href="#time-module-grammar">Time module grammar</a></li>
+<li><a href="#flow-module-grammar">Flow module grammar</a></li>
+<li><a href="#resonance-module-grammar">Resonance module grammar</a></li>
+<li><a href="#a-awarenessmodule-sentences">A. Awareness‑module sentences</a></li>
+<li><a href="#b-regimemodule-sentences">B. Regime‑module sentences</a></li>
+<li><a href="#c-alignmentmodule-sentences">C. Alignment‑module sentences</a></li>
+</ul>
+</li>
+<li><a href="#step-1-choose-the-module">Step 1 — Choose the module</a></li>
+<li><a href="#step-2-apply-the-grammar-directly">Step 2 — Apply the grammar directly</a><ul>
+<li><a href="#regime-analysis-of-my-current-work-situation">Regime analysis of “my current work situation”</a></li>
+</ul>
+</li>
+<li><a href="#step-3-write-the-rttstyle-summary">Step 3 — Write the RTT‑style summary</a><ul>
+<li><a href="#stacking-ok">Stacking = OK</a></li>
+<li><a href="#blending-not-ok">Blending = NOT OK</a></li>
+<li><a href="#correct-stacking-example">Correct stacking example</a></li>
+<li><a href="#a-awareness-module">A. Awareness module</a></li>
+<li><a href="#b-regime-module">B. Regime module</a></li>
+<li><a href="#c-alignment-module">C. Alignment module</a></li>
+</ul>
+</li>
+<li><a href="#1-awareness-grammar">1. Awareness Grammar</a></li>
+<li><a href="#2-regime-grammar">2. Regime Grammar</a></li>
+<li><a href="#3-alignment-grammar">3. Alignment Grammar</a></li>
+<li><a href="#4-time-grammar">4. Time Grammar</a></li>
+<li><a href="#5-flow-grammar">5. Flow Grammar</a></li>
+<li><a href="#6-resonance-grammar">6. Resonance Grammar</a></li>
+<li><a href="#a-awareness-module-worksheet">A. Awareness Module Worksheet</a></li>
+<li><a href="#b-regime-module-worksheet">B. Regime Module Worksheet</a></li>
+<li><a href="#c-alignment-module-worksheet">C. Alignment Module Worksheet</a></li>
+<li><a href="#d-time-module-worksheet">D. Time Module Worksheet</a></li>
+<li><a href="#e-flow-module-worksheet">E. Flow Module Worksheet</a></li>
+<li><a href="#f-resonance-module-worksheet">F. Resonance Module Worksheet</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Grammar</span>
+            <meta itemprop="position" content="2" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Grammar</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="grammar-for-dimensional-cross-domain-agentic-ai-modules">Grammar for dimensional cross-domain agentic AI modules<a class="toc-permalink" href="#grammar-for-dimensional-cross-domain-agentic-ai-modules" title="Permanent link to this heading">&para;</a></h1>
+<ul>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Grammar_module.json"><code>Grammar_module.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🔤 Grammar Module • TriadicFrameworks
+  </span>
+</div>
+
+<p><img 
+  src="https://img.shields.io/badge/🔤Grammar%20Module-Operator%20Substrate%20Active-6a4c93?style=for-the-badge" 
+  alt="🔤 Grammar Module | Operator Substrate Active"
+/></p>
+<p>You can think of <strong>RTT grammar</strong> the same way you think of grammar in a language: it’s not about <em>rules for sentences</em>, it’s about <em>rules for how awareness is structured</em>. When TriadicFrameworks talks about “RTT modules,” each module has its own grammar—its own way of organizing perception, time, flows, and regimes.</p>
+<p>Here’s the simplest way to understand and <em>use</em> grammar with RTT modules.</p>
+<hr />
+<h2 id="1-rtt-grammar-how-you-structure-what-you-see">1. RTT grammar = how you <strong>structure what you see</strong><a class="toc-permalink" href="#1-rtt-grammar-how-you-structure-what-you-see" title="Permanent link to this heading">&para;</a></h2>
+<p>Each RTT module (Awareness, Regimes, Alignment, Flows, Time, Resonance, etc.) has a grammar—patterns for how to describe a system.</p>
+<p>For example:</p>
+<h3 id="awareness-grammar"><strong>Awareness grammar</strong><a class="toc-permalink" href="#awareness-grammar" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>What is the <em>observer</em>?</li>
+<li>What is the <em>object</em>?</li>
+<li>What is the <em>boundary</em> between them?</li>
+<li>What is the <em>signal</em> and what is the <em>noise</em>?</li>
+</ul>
+<h3 id="regime-grammar"><strong>Regime grammar</strong><a class="toc-permalink" href="#regime-grammar" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>What is the <strong>core</strong>?</li>
+<li>What is the <strong>wrap</strong>?</li>
+<li>What are the <strong>flows</strong>?</li>
+<li>What are the <strong>feedback loops</strong>?</li>
+<li>What is <strong>coherent</strong> vs <strong>drifting</strong>?</li>
+</ul>
+<h3 id="alignment-grammar"><strong>Alignment grammar</strong><a class="toc-permalink" href="#alignment-grammar" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>What is the system <em>trying</em> to do?</li>
+<li>What is the environment <em>requiring</em>?</li>
+<li>Where do these resonate or conflict?</li>
+</ul>
+<p>Using RTT means speaking in these structures.</p>
+<hr />
+<h2 id="2-how-to-use-grammar-with-rtt-modules-in-practice">2. How to “use grammar” with RTT modules in practice<a class="toc-permalink" href="#2-how-to-use-grammar-with-rtt-modules-in-practice" title="Permanent link to this heading">&para;</a></h2>
+<p>Here’s the practical workflow:</p>
+<h3 id="step-1-pick-the-module"><strong>Step 1 — Pick the module</strong><a class="toc-permalink" href="#step-1-pick-the-module" title="Permanent link to this heading">&para;</a></h3>
+<p>Example: Awareness, Regime, Alignment, Time, Resonance.</p>
+<h3 id="step-2-apply-the-modules-grammar"><strong>Step 2 — Apply the module’s grammar</strong><a class="toc-permalink" href="#step-2-apply-the-modules-grammar" title="Permanent link to this heading">&para;</a></h3>
+<p>You literally <em>speak in its structure</em>.</p>
+<p>Example using <strong>Regime grammar</strong>:</p>
+<ul>
+<li><strong>Core:</strong> What is the stable pattern?</li>
+<li><strong>Wrap:</strong> What stabilizes or destabilizes it?</li>
+<li><strong>Flows:</strong> What moves through it?</li>
+<li><strong>Time:</strong> What time‑regimes shape it?</li>
+<li><strong>Coherence:</strong> What holds it together?</li>
+<li><strong>Drift:</strong> What erodes it?</li>
+</ul>
+<h3 id="step-3-keep-the-grammar-consistent"><strong>Step 3 — Keep the grammar consistent</strong><a class="toc-permalink" href="#step-3-keep-the-grammar-consistent" title="Permanent link to this heading">&para;</a></h3>
+<p>RTT is strict about not mixing grammars mid‑analysis.</p>
+<p>If you’re using <strong>Awareness grammar</strong>, you stay in:<br />
+- observer<br />
+- object<br />
+- boundary<br />
+- signal/noise<br />
+- resonance  </p>
+<p>If you’re using <strong>Alignment grammar</strong>, you stay in:<br />
+- intent<br />
+- constraints<br />
+- resonance<br />
+- misalignment<br />
+- required shift  </p>
+<p>This is what “using grammar” means:<br />
+<strong>you choose the module, then you speak in its structure.</strong></p>
+<hr />
+<h2 id="3-example-using-rtt-grammar-on-something-simple">3. Example: Using RTT grammar on something simple<a class="toc-permalink" href="#3-example-using-rtt-grammar-on-something-simple" title="Permanent link to this heading">&para;</a></h2>
+<p>Let’s say you want to analyze “a classroom” using RTT grammar.</p>
+<h3 id="using-awareness-grammar">Using <strong>Awareness grammar</strong><a class="toc-permalink" href="#using-awareness-grammar" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Observer:</strong> the teacher  </li>
+<li><strong>Object:</strong> the class dynamic  </li>
+<li><strong>Boundary:</strong> teacher–student role expectations  </li>
+<li><strong>Signal:</strong> engagement, questions, attention  </li>
+<li><strong>Noise:</strong> distraction, confusion  </li>
+<li><strong>Resonance:</strong> when teaching style matches student needs  </li>
+</ul>
+<h3 id="using-regime-grammar">Using <strong>Regime grammar</strong><a class="toc-permalink" href="#using-regime-grammar" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Core:</strong> learning as a stable pattern  </li>
+<li><strong>Wrap:</strong> school rules, grading, culture  </li>
+<li><strong>Flows:</strong> information, attention, authority  </li>
+<li><strong>Coherence:</strong> clear expectations, trust  </li>
+<li><strong>Drift:</strong> burnout, unclear rules  </li>
+</ul>
+<h3 id="using-alignment-grammar">Using <strong>Alignment grammar</strong><a class="toc-permalink" href="#using-alignment-grammar" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Intent:</strong> learning + safety  </li>
+<li><strong>Constraints:</strong> time, curriculum, student needs  </li>
+<li><strong>Alignment:</strong> when teaching methods match constraints  </li>
+<li><strong>Misalignment:</strong> when expectations exceed capacity  </li>
+</ul>
+<p>Same classroom, different grammars.</p>
+<hr />
+<h2 id="4-the-key-insight">4. The key insight<a class="toc-permalink" href="#4-the-key-insight" title="Permanent link to this heading">&para;</a></h2>
+<p>RTT grammar isn’t about <em>writing sentences correctly</em>.<br />
+It’s about <em>thinking in the structure of the module you’re using</em>.</p>
+<p>If you mix grammars, the analysis becomes muddy.<br />
+If you stay inside one grammar, the system becomes clear.</p>
+<hr />
+<h2 id="5-quick-cheat-sheet-how-to-use-grammar-with-rtt-modules">5. Quick cheat sheet: “How to use grammar with RTT modules”<a class="toc-permalink" href="#5-quick-cheat-sheet-how-to-use-grammar-with-rtt-modules" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="awareness-module-grammar"><strong>Awareness module grammar</strong><a class="toc-permalink" href="#awareness-module-grammar" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>observer  </li>
+<li>object  </li>
+<li>boundary  </li>
+<li>signal  </li>
+<li>noise  </li>
+<li>resonance  </li>
+</ul>
+<h3 id="regime-module-grammar"><strong>Regime module grammar</strong><a class="toc-permalink" href="#regime-module-grammar" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>core  </li>
+<li>wrap  </li>
+<li>flows  </li>
+<li>time  </li>
+<li>coherence  </li>
+<li>drift  </li>
+</ul>
+<h3 id="alignment-module-grammar"><strong>Alignment module grammar</strong><a class="toc-permalink" href="#alignment-module-grammar" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>intent  </li>
+<li>constraints  </li>
+<li>resonance  </li>
+<li>misalignment  </li>
+<li>required shift  </li>
+</ul>
+<h3 id="time-module-grammar"><strong>Time module grammar</strong><a class="toc-permalink" href="#time-module-grammar" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>crisis time  </li>
+<li>negotiation time  </li>
+<li>deep time  </li>
+<li>drift time  </li>
+<li>memory  </li>
+</ul>
+<h3 id="flow-module-grammar"><strong>Flow module grammar</strong><a class="toc-permalink" href="#flow-module-grammar" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>material flows  </li>
+<li>information flows  </li>
+<li>trust flows  </li>
+<li>energy flows  </li>
+<li>capital flows  </li>
+</ul>
+<h3 id="resonance-module-grammar"><strong>Resonance module grammar</strong><a class="toc-permalink" href="#resonance-module-grammar" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>pattern  </li>
+<li>substrate  </li>
+<li>match  </li>
+<li>mismatch  </li>
+<li>amplification  </li>
+<li>damping  </li>
+</ul>
+<p>Using RTT = choosing the grammar and staying inside it.</p>
+<hr />
+<p>Let’s go deep and make this practical.<br />
+I asked for three things:</p>
+<ol>
+<li><strong>How to write RTT‑style sentences</strong>  </li>
+<li><strong>How to analyze your own situation using RTT grammar</strong>  </li>
+<li><strong>How to combine modules without breaking grammar</strong></li>
+</ol>
+<p>I’ll give you clear patterns, examples, and a way to practice so you can <em>think</em> in RTT, not just talk about it.</p>
+<hr />
+<h1 id="1-how-to-write-rttstyle-sentences">1. How to write RTT‑style sentences<a class="toc-permalink" href="#1-how-to-write-rttstyle-sentences" title="Permanent link to this heading">&para;</a></h1>
+<p>RTT sentences follow a simple rule:</p>
+<blockquote>
+<p><strong>Pick a module → use only that module’s grammar → describe the system through that lens.</strong></p>
+</blockquote>
+<p>Below are examples for each major module.</p>
+<hr />
+<h3 id="a-awarenessmodule-sentences"><strong>A. Awareness‑module sentences</strong><a class="toc-permalink" href="#a-awarenessmodule-sentences" title="Permanent link to this heading">&para;</a></h3>
+<p>Grammar: <em>observer, object, boundary, signal, noise, resonance</em></p>
+<p>RTT‑style examples:</p>
+<ul>
+<li>“The observer is treating the conflict as an object rather than a boundary phenomenon.”  </li>
+<li>“Most of the signal is emotional, but the observer is filtering it as noise.”  </li>
+<li>“Resonance increases when the boundary between roles becomes explicit.”</li>
+</ul>
+<p>These sentences always describe <strong>perception</strong>, not the system itself.</p>
+<hr />
+<h3 id="b-regimemodule-sentences"><strong>B. Regime‑module sentences</strong><a class="toc-permalink" href="#b-regimemodule-sentences" title="Permanent link to this heading">&para;</a></h3>
+<p>Grammar: <em>core, wrap, flows, feedbacks, coherence, drift</em></p>
+<p>RTT‑style examples:</p>
+<ul>
+<li>“The core is stable, but the wrap is drifting due to inconsistent incentives.”  </li>
+<li>“Information flows are coherent, but trust flows are leaking.”  </li>
+<li>“The regime is self‑stabilizing because the feedback loops reinforce the core.”</li>
+</ul>
+<p>These sentences describe <strong>patterns</strong>, not events.</p>
+<hr />
+<h3 id="c-alignmentmodule-sentences"><strong>C. Alignment‑module sentences</strong><a class="toc-permalink" href="#c-alignmentmodule-sentences" title="Permanent link to this heading">&para;</a></h3>
+<p>Grammar: <em>intent, constraints, resonance, misalignment, required shift</em></p>
+<p>RTT‑style examples:</p>
+<ul>
+<li>“The intent is long‑term stability, but the constraints reward short‑term escalation.”  </li>
+<li>“Misalignment appears where the narrative substrate cannot carry the required memory.”  </li>
+<li>“The required shift is from speed to coherence.”</li>
+</ul>
+<p>These sentences describe <strong>fit</strong> between system and environment.</p>
+<hr />
+<h1 id="2-how-to-analyze-your-own-situation-using-rtt-grammar">2. How to analyze <em>your own situation</em> using RTT grammar<a class="toc-permalink" href="#2-how-to-analyze-your-own-situation-using-rtt-grammar" title="Permanent link to this heading">&para;</a></h1>
+<p>Here’s a simple 3‑step method.</p>
+<hr />
+<h2 id="step-1-choose-the-module"><strong>Step 1 — Choose the module</strong><a class="toc-permalink" href="#step-1-choose-the-module" title="Permanent link to this heading">&para;</a></h2>
+<p>Let’s say you want to analyze your work situation using <strong>Regime grammar</strong>.</p>
+<hr />
+<h2 id="step-2-apply-the-grammar-directly"><strong>Step 2 — Apply the grammar directly</strong><a class="toc-permalink" href="#step-2-apply-the-grammar-directly" title="Permanent link to this heading">&para;</a></h2>
+<p>You fill in the RTT slots like a template.</p>
+<h3 id="regime-analysis-of-my-current-work-situation"><strong>Regime analysis of “my current work situation”</strong><a class="toc-permalink" href="#regime-analysis-of-my-current-work-situation" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Core:</strong> What is the stable pattern?<br />
+  “Delivering value through creative problem‑solving.”</p>
+</li>
+<li>
+<p><strong>Wrap:</strong> What stabilizes or destabilizes it?<br />
+  “Supportive colleagues stabilize it; unclear priorities destabilize it.”</p>
+</li>
+<li>
+<p><strong>Flows:</strong> What moves through the system?<br />
+  “Information flows are fast; decision flows are slow.”</p>
+</li>
+<li>
+<p><strong>Feedbacks:</strong> What reinforces or erodes the core?<br />
+  “Positive feedback from clients reinforces; shifting deadlines erode.”</p>
+</li>
+<li>
+<p><strong>Coherence:</strong> Where does the system align?<br />
+  “Coherence appears when expectations are explicit.”</p>
+</li>
+<li>
+<p><strong>Drift:</strong> Where does the system lose structure?<br />
+  “Drift appears when leadership changes direction mid‑stream.”</p>
+</li>
+</ul>
+<hr />
+<h2 id="step-3-write-the-rttstyle-summary"><strong>Step 3 — Write the RTT‑style summary</strong><a class="toc-permalink" href="#step-3-write-the-rttstyle-summary" title="Permanent link to this heading">&para;</a></h2>
+<p>Now you convert the template into RTT sentences:</p>
+<blockquote>
+<p>“The core of my work regime is stable, but the wrap is drifting due to inconsistent priorities. Information flows are coherent, but decision flows lag, creating a feedback mismatch. Coherence appears when expectations are explicit; drift appears when leadership shifts direction without re‑anchoring the core.”</p>
+</blockquote>
+<p>That’s a clean RTT analysis.</p>
+<hr />
+<h1 id="3-how-to-combine-modules-without-breaking-grammar">3. How to combine modules <em>without breaking grammar</em><a class="toc-permalink" href="#3-how-to-combine-modules-without-breaking-grammar" title="Permanent link to this heading">&para;</a></h1>
+<p>This is where most people slip.</p>
+<p>RTT allows <strong>module stacking</strong>, but not <strong>module blending</strong>.</p>
+<h3 id="stacking-ok"><strong>Stacking = OK</strong><a class="toc-permalink" href="#stacking-ok" title="Permanent link to this heading">&para;</a></h3>
+<p>You analyze the same system with multiple modules, one at a time.</p>
+<p>Example:</p>
+<ol>
+<li>Awareness analysis  </li>
+<li>Then Regime analysis  </li>
+<li>Then Alignment analysis  </li>
+</ol>
+<p>Each section uses its own grammar.</p>
+<hr />
+<h3 id="blending-not-ok"><strong>Blending = NOT OK</strong><a class="toc-permalink" href="#blending-not-ok" title="Permanent link to this heading">&para;</a></h3>
+<p>You cannot mix grammar inside a single sentence.</p>
+<p>❌ Wrong:  </p>
+<blockquote>
+<p>“The observer’s core is misaligned with the flows.”</p>
+</blockquote>
+<p>This mixes Awareness (“observer”) and Regime (“core, flows”).</p>
+<hr />
+<h3 id="correct-stacking-example"><strong>Correct stacking example</strong><a class="toc-permalink" href="#correct-stacking-example" title="Permanent link to this heading">&para;</a></h3>
+<p>Let’s analyze “my motivation lately” using three modules.</p>
+<hr />
+<h3 id="a-awareness-module"><strong>A. Awareness module</strong><a class="toc-permalink" href="#a-awareness-module" title="Permanent link to this heading">&para;</a></h3>
+<blockquote>
+<p>“The observer is interpreting fatigue as noise rather than signal, creating a boundary mismatch.”</p>
+</blockquote>
+<h3 id="b-regime-module"><strong>B. Regime module</strong><a class="toc-permalink" href="#b-regime-module" title="Permanent link to this heading">&para;</a></h3>
+<blockquote>
+<p>“The core motivation regime is stable, but energy flows are drifting due to inconsistent recovery.”</p>
+</blockquote>
+<h3 id="c-alignment-module"><strong>C. Alignment module</strong><a class="toc-permalink" href="#c-alignment-module" title="Permanent link to this heading">&para;</a></h3>
+<blockquote>
+<p>“The intent is sustained creativity, but the constraints require more rest than the current pattern allows.”</p>
+</blockquote>
+<p>Each module stays clean.<br />
+Together, they give a 3‑D view.</p>
+<hr />
+<h1 id="a-simple-practice-exercise">A simple practice exercise<a class="toc-permalink" href="#a-simple-practice-exercise" title="Permanent link to this heading">&para;</a></h1>
+<p>Pick any topic—your job, a relationship, a project, a habit—and try this:</p>
+<ol>
+<li><strong>Awareness sentence</strong>  </li>
+<li><strong>Regime sentence</strong>  </li>
+<li><strong>Alignment sentence</strong></li>
+</ol>
+<hr />
+<h1 id="rtt-grammar-cheatsheet">🧩 RTT GRAMMAR CHEAT‑SHEET<a class="toc-permalink" href="#rtt-grammar-cheatsheet" title="Permanent link to this heading">&para;</a></h1>
+<p><em>A compact reference for writing and thinking in RTT.</em></p>
+<hr />
+<h2 id="1-awareness-grammar"><strong>1. Awareness Grammar</strong><a class="toc-permalink" href="#1-awareness-grammar" title="Permanent link to this heading">&para;</a></h2>
+<p>Use when analyzing <strong>perception</strong>, <strong>boundaries</strong>, and <strong>signal/noise</strong>.</p>
+<p><strong>Keywords:</strong><br />
+observer • object • boundary • signal • noise • resonance • filter • stance</p>
+<p><strong>Sentence patterns:</strong><br />
+- “The observer is treating ___ as signal and ___ as noise.”<br />
+- “The boundary between ___ and ___ is implicit, causing drift.”<br />
+- “Resonance increases when the observer shifts stance from ___ to ___.”</p>
+<p><strong>What it’s for:</strong><br />
+Understanding <em>how</em> you are seeing, not <em>what</em> you are seeing.</p>
+<hr />
+<h2 id="2-regime-grammar"><strong>2. Regime Grammar</strong><a class="toc-permalink" href="#2-regime-grammar" title="Permanent link to this heading">&para;</a></h2>
+<p>Use when analyzing <strong>patterns</strong>, <strong>flows</strong>, and <strong>stability</strong>.</p>
+<p><strong>Keywords:</strong><br />
+core • wrap • flows • feedback • coherence • drift • substrate • stabilizers</p>
+<p><strong>Sentence patterns:</strong><br />
+- “The core is stable, but the wrap is drifting due to ___.”<br />
+- “Information flows are coherent; trust flows are leaking.”<br />
+- “Feedback loops reinforce the core when ___ happens.”</p>
+<p><strong>What it’s for:</strong><br />
+Understanding systems as <strong>living patterns</strong>, not events.</p>
+<hr />
+<h2 id="3-alignment-grammar"><strong>3. Alignment Grammar</strong><a class="toc-permalink" href="#3-alignment-grammar" title="Permanent link to this heading">&para;</a></h2>
+<p>Use when analyzing <strong>fit</strong>, <strong>intent</strong>, and <strong>constraints</strong>.</p>
+<p><strong>Keywords:</strong><br />
+intent • constraints • resonance • misalignment • required shift • substrate</p>
+<p><strong>Sentence patterns:</strong><br />
+- “The intent is <strong><em>, but the constraints reward </em></strong>.”<br />
+- “Misalignment appears where the substrate cannot carry the required memory.”<br />
+- “The required shift is from ___ to ___.”</p>
+<p><strong>What it’s for:</strong><br />
+Understanding whether a system is <em>doing what it’s trying to do</em>.</p>
+<hr />
+<h2 id="4-time-grammar"><strong>4. Time Grammar</strong><a class="toc-permalink" href="#4-time-grammar" title="Permanent link to this heading">&para;</a></h2>
+<p>Use when analyzing <strong>temporal structure</strong>.</p>
+<p><strong>Keywords:</strong><br />
+crisis time • negotiation time • deep time • drift time • memory • horizon</p>
+<p><strong>Sentence patterns:</strong><br />
+- “Crisis time dominates, compressing the horizon.”<br />
+- “Deep time memory is missing, causing repeated drift.”<br />
+- “The system is running a long‑arc pattern on a short‑arc clock.”</p>
+<p><strong>What it’s for:</strong><br />
+Understanding how time‑regimes shape behavior.</p>
+<hr />
+<h2 id="5-flow-grammar"><strong>5. Flow Grammar</strong><a class="toc-permalink" href="#5-flow-grammar" title="Permanent link to this heading">&para;</a></h2>
+<p>Use when analyzing <strong>movement</strong> of anything: energy, trust, money, attention.</p>
+<p><strong>Keywords:</strong><br />
+material flows • information flows • trust flows • capital flows • leakage</p>
+<p><strong>Sentence patterns:</strong><br />
+- “Attention flows are captured by urgency rather than importance.”<br />
+- “Trust flows are blocked at the boundary between ___ and ___.”<br />
+- “Capital flows amplify drift when ___ occurs.”</p>
+<p><strong>What it’s for:</strong><br />
+Understanding what moves, where it moves, and what that movement does.</p>
+<hr />
+<h2 id="6-resonance-grammar"><strong>6. Resonance Grammar</strong><a class="toc-permalink" href="#6-resonance-grammar" title="Permanent link to this heading">&para;</a></h2>
+<p>Use when analyzing <strong>pattern–substrate fit</strong>.</p>
+<p><strong>Keywords:</strong><br />
+pattern • substrate • match • mismatch • amplification • damping</p>
+<p><strong>Sentence patterns:</strong><br />
+- “The pattern cannot land because the substrate is too noisy.”<br />
+- “Amplification occurs when ___ aligns with ___.”<br />
+- “Mismatch appears when the substrate lacks the required stability.”</p>
+<p><strong>What it’s for:</strong><br />
+Understanding why some patterns “take” and others don’t.</p>
+<hr />
+<h1 id="rtt-fillintheblank-worksheet">📝 RTT FILL‑IN‑THE‑BLANK WORKSHEET<a class="toc-permalink" href="#rtt-fillintheblank-worksheet" title="Permanent link to this heading">&para;</a></h1>
+<p><em>A guided template you can use for any situation.</em></p>
+<hr />
+<h2 id="a-awareness-module-worksheet"><strong>A. Awareness Module Worksheet</strong><a class="toc-permalink" href="#a-awareness-module-worksheet" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Observer:</strong><br />
+→ “The observer is ___.”</p>
+<p><strong>Object:</strong><br />
+→ “The object being perceived is ___.”</p>
+<p><strong>Boundary:</strong><br />
+→ “The boundary between observer and object is ___.”</p>
+<p><strong>Signal:</strong><br />
+→ “The signal appears to be ___.”</p>
+<p><strong>Noise:</strong><br />
+→ “The noise appears to be ___.”</p>
+<p><strong>Resonance:</strong><br />
+→ “Resonance increases when ___.”</p>
+<hr />
+<h2 id="b-regime-module-worksheet"><strong>B. Regime Module Worksheet</strong><a class="toc-permalink" href="#b-regime-module-worksheet" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Core:</strong><br />
+→ “The core pattern is ___.”</p>
+<p><strong>Wrap:</strong><br />
+→ “The wrap stabilizing/destabilizing the core is ___.”</p>
+<p><strong>Flows:</strong><br />
+→ “The key flows are ___.”</p>
+<p><strong>Feedbacks:</strong><br />
+→ “Feedback loops reinforce the core when ___.”</p>
+<p><strong>Coherence:</strong><br />
+→ “Coherence appears when ___.”</p>
+<p><strong>Drift:</strong><br />
+→ “Drift appears when ___.”</p>
+<hr />
+<h2 id="c-alignment-module-worksheet"><strong>C. Alignment Module Worksheet</strong><a class="toc-permalink" href="#c-alignment-module-worksheet" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Intent:</strong><br />
+→ “The intent of the system is ___.”</p>
+<p><strong>Constraints:</strong><br />
+→ “The constraints shaping behavior are ___.”</p>
+<p><strong>Resonance:</strong><br />
+→ “Alignment appears when ___.”</p>
+<p><strong>Misalignment:</strong><br />
+→ “Misalignment appears when ___.”</p>
+<p><strong>Required Shift:</strong><br />
+→ “The required shift is from ___ to ___.”</p>
+<hr />
+<h2 id="d-time-module-worksheet"><strong>D. Time Module Worksheet</strong><a class="toc-permalink" href="#d-time-module-worksheet" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Crisis Time:</strong><br />
+→ “Crisis time shows up as ___.”</p>
+<p><strong>Negotiation Time:</strong><br />
+→ “Negotiation time appears when ___.”</p>
+<p><strong>Deep Time:</strong><br />
+→ “Deep time memory is ___.”</p>
+<p><strong>Drift Time:</strong><br />
+→ “Drift time emerges when ___.”</p>
+<p><strong>Time Mismatch:</strong><br />
+→ “The system is running a <strong><em>‑arc pattern on a </em></strong>‑arc clock.”</p>
+<hr />
+<h2 id="e-flow-module-worksheet"><strong>E. Flow Module Worksheet</strong><a class="toc-permalink" href="#e-flow-module-worksheet" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Material Flows:</strong><br />
+→ “Material flows move through ___.”</p>
+<p><strong>Information Flows:</strong><br />
+→ “Information flows move through ___.”</p>
+<p><strong>Trust Flows:</strong><br />
+→ “Trust flows are strongest/weakest at ___.”</p>
+<p><strong>Leakage:</strong><br />
+→ “Leakage occurs when ___.”</p>
+<hr />
+<h2 id="f-resonance-module-worksheet"><strong>F. Resonance Module Worksheet</strong><a class="toc-permalink" href="#f-resonance-module-worksheet" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Pattern:</strong><br />
+→ “The pattern trying to land is ___.”</p>
+<p><strong>Substrate:</strong><br />
+→ “The substrate available is ___.”</p>
+<p><strong>Match:</strong><br />
+→ “Match appears when ___.”</p>
+<p><strong>Mismatch:</strong><br />
+→ “Mismatch appears when ___.”</p>
+<p><strong>Amplification:</strong><br />
+→ “Amplification occurs when ___.”</p>
+<p><strong>Damping:</strong><br />
+→ “Damping occurs when ___.”</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Grammar.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/Grammar.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

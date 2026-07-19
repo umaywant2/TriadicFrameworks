@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Inheritance Rtt Awareness As Css | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/education/awareness/Inheritance_RTT_Awareness_as_CSS/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Inheritance Rtt Awareness As Css" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/education/awareness/Inheritance_RTT_Awareness_as_CSS/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Inheritance Rtt Awareness As Css" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/education/awareness/Inheritance_RTT_Awareness_as_CSS.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Inheritance Rtt Awareness As Css",
+    "headline": "Inheritance Rtt Awareness As Css",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/education/awareness/Inheritance_RTT_Awareness_as_CSS/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#inheritance-rtt-awareness-as-css">Inheritance: “RTT awareness as CSS”</a></li>
+<li><a href="#core-principles-now-fixed">Core Principles (Now Fixed)</a></li>
+<li><a href="#1-canonical-carrier-wellknown-file">1) Canonical Carrier (Well‑Known File)</a><ul>
+<li><a href="#well-knownrtt-awareness-v0">/.well-known/rtt-awareness (v0)</a></li>
+<li><a href="#semantics-nonnegotiable">Semantics (Non‑Negotiable)</a></li>
+</ul>
+</li>
+<li><a href="#2-inheritance-model-csslike-predictable">2) Inheritance Model (CSS‑Like, Predictable)</a></li>
+<li><a href="#3-browser-extension-observer-resolver">3) Browser Extension (Observer + Resolver)</a><ul>
+<li><a href="#what-the-extension-does">What the extension does</a></li>
+<li><a href="#what-it-does-not-do">What it does not do</a></li>
+</ul>
+</li>
+<li><a href="#4-selfupdating-safe-by-construction">4) Self‑Updating (Safe by Construction)</a><ul>
+<li><a href="#update-behavior">Update behavior</a></li>
+<li><a href="#version-handling">Version handling</a></li>
+</ul>
+</li>
+<li><a href="#5-local-substrate-simulation-what-v0-already-enables">5) Local Substrate Simulation (What v0 Already Enables)</a></li>
+<li><a href="#6-why-this-will-hold">6) Why This Will Hold</a></li>
+<li><a href="#7-what-to-commit-next-concrete">7) What to Commit Next (Concrete)</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/education/" itemprop="item">
+                <span itemprop="name">Education</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/education/awareness/" itemprop="item">
+                <span itemprop="name">Awareness</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Inheritance Rtt Awareness As Css</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Inheritance Rtt Awareness As Css</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h2 id="inheritance-rtt-awareness-as-css">Inheritance: “RTT awareness as CSS”<a class="toc-permalink" href="#inheritance-rtt-awareness-as-css" title="Permanent link to this heading">&para;</a></h2>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<p><img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/></p>
+<p>With our chosen carrier, inheritance is explicit and auditable:</p>
+<ul>
+<li><strong>Upstream canon</strong> via <code>import: …</code></li>
+<li><strong>Local site override</strong> via <code>declaration: …</code></li>
+<li><strong>Path-level override</strong> via <code>scope /x/: …</code></li>
+<li>Later (optional): <strong>page-level override</strong> via <code>&lt;meta name="rtt" content="…"&gt;</code></li>
+</ul>
+<p>This makes awareness portable and fork-safe: forks can keep import + overrides without copying the whole canon.</p>
+<hr />
+<h1 id="tiny-local-resolver-what-the-extension-simulates">Tiny local resolver: what the extension simulates<a class="toc-permalink" href="#tiny-local-resolver-what-the-extension-simulates" title="Permanent link to this heading">&para;</a></h1>
+<p>With this setup, the extension becomes our “local substrate simulator” by providing:</p>
+<ul>
+<li><strong>Discovery:</strong> “does this site declare RTT awareness?”</li>
+<li><strong>Resolution:</strong> “what is the effective declaration here?”</li>
+<li><strong>Provenance:</strong> “which manifests contributed to this outcome?”</li>
+<li><strong>Stability:</strong> “if upstream changes, what changes locally (and when)?”</li>
+</ul>
+<p>We can then add a second layer (still local-only) that interprets declarations into checks—e.g., drift bounds as allowed rewrite classes, coherence gates as required fields, paradox tags as tolerated contradictions—without ever changing the public site.</p>
+<hr />
+<h1 id="rtt-awareness-v0-locked-design">RTT Awareness v0 — Locked Design<a class="toc-permalink" href="#rtt-awareness-v0-locked-design" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="core-principles-now-fixed">Core Principles (Now Fixed)<a class="toc-permalink" href="#core-principles-now-fixed" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><strong>Carrier:</strong> <code>/.well-known/rtt-awareness</code></li>
+<li><strong>Observer:</strong> Browser extension (local, opt‑in)</li>
+<li><strong>Inheritance:</strong> Enabled by default</li>
+<li><strong>Scoping rules:</strong> Enabled in v0</li>
+<li><strong>Update model:</strong> Pull‑based, conservative, cache‑first</li>
+<li><strong>Failure mode:</strong> Silent + last‑known‑good</li>
+</ul>
+<p>This is intentionally boring infrastructure. That’s why it will survive.</p>
+<hr />
+<h2 id="1-canonical-carrier-wellknown-file">1) Canonical Carrier (Well‑Known File)<a class="toc-permalink" href="#1-canonical-carrier-wellknown-file" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="well-knownrtt-awareness-v0"><code>/.well-known/rtt-awareness</code> (v0)<a class="toc-permalink" href="#well-knownrtt-awareness-v0" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>schema: rtt-awareness
+version: 0.1.0
+channel: stable
+updated: 2026-02-06
+
+declaration: rtt=1 | coherence=declared | drift=bounded | paradox=structural
+
+# Optional inheritance (enabled by default)
+import: https://www.triadicframeworks.org/.well-known/rtt-awareness
+
+# Optional scoped overrides (longest prefix wins)
+scope /docs/: rtt=1 | coherence=declared | drift=bounded | paradox=structural
+scope /labs/: rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre></div>
+
+<h3 id="semantics-nonnegotiable">Semantics (Non‑Negotiable)<a class="toc-permalink" href="#semantics-nonnegotiable" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Imports are resolved first</strong>, then local overrides.</li>
+<li><strong>Scopes override site root</strong>, but never upstream unless explicitly declared.</li>
+<li><strong>No negation</strong>, no conditionals, no execution.</li>
+<li>Absence means <em>unspecified</em>, not false.</li>
+</ul>
+<p>This keeps the grammar declarative and audit‑friendly.</p>
+<hr />
+<h2 id="2-inheritance-model-csslike-predictable">2) Inheritance Model (CSS‑Like, Predictable)<a class="toc-permalink" href="#2-inheritance-model-csslike-predictable" title="Permanent link to this heading">&para;</a></h2>
+<p>Resolution order:</p>
+<ol>
+<li>Imported upstream manifests (depth‑limited)</li>
+<li>Site root declaration</li>
+<li>Best‑matching scoped declaration</li>
+<li>(Future) Page‑level meta/frontmatter</li>
+</ol>
+<p>This allows:<br />
+- forks to inherit canon safely<br />
+- institutions to override locally<br />
+- documents to remain portable</p>
+<p>No magic. No hidden precedence.</p>
+<hr />
+<h2 id="3-browser-extension-observer-resolver">3) Browser Extension (Observer + Resolver)<a class="toc-permalink" href="#3-browser-extension-observer-resolver" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="what-the-extension-does">What the extension does<a class="toc-permalink" href="#what-the-extension-does" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Discovers <code>/.well-known/rtt-awareness</code></li>
+<li>Resolves imports</li>
+<li>Applies scope rules</li>
+<li>Computes <strong>effective declaration</strong></li>
+<li>Exposes it locally (popup / API / optional indicator)</li>
+</ul>
+<h3 id="what-it-does-not-do">What it does <em>not</em> do<a class="toc-permalink" href="#what-it-does-not-do" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>No injection by default</li>
+<li>No network modification</li>
+<li>No tracking</li>
+<li>No persuasion</li>
+<li>No auto‑updates of semantics</li>
+</ul>
+<p>It observes. That’s it.</p>
+<hr />
+<h2 id="4-selfupdating-safe-by-construction">4) Self‑Updating (Safe by Construction)<a class="toc-permalink" href="#4-selfupdating-safe-by-construction" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="update-behavior">Update behavior<a class="toc-permalink" href="#update-behavior" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Conditional fetch (ETag / Last‑Modified)</li>
+<li>Cache TTL (e.g., 6 hours)</li>
+<li>If fetch fails → keep last‑known‑good</li>
+<li>If import fails → mark stale, continue</li>
+</ul>
+<h3 id="version-handling">Version handling<a class="toc-permalink" href="#version-handling" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><code>version:</code> is informational, not executable</li>
+<li>Extension does <strong>not</strong> reinterpret semantics automatically</li>
+<li>Users opt into extension updates, not manifest behavior changes</li>
+</ul>
+<p>This avoids the “remote control” trap entirely.</p>
+<hr />
+<h2 id="5-local-substrate-simulation-what-v0-already-enables">5) Local Substrate Simulation (What v0 Already Enables)<a class="toc-permalink" href="#5-local-substrate-simulation-what-v0-already-enables" title="Permanent link to this heading">&para;</a></h2>
+<p>Even in v0, the extension effectively simulates the full substrate by providing:</p>
+<ul>
+<li><strong>Discovery:</strong> Is RTT awareness present?</li>
+<li><strong>Resolution:</strong> What declaration applies <em>here</em>?</li>
+<li><strong>Provenance:</strong> Which manifests contributed?</li>
+<li><strong>Stability:</strong> What changed, and when?</li>
+</ul>
+<p>That’s enough to:<br />
+- test inheritance chains<br />
+- validate scope behavior<br />
+- experiment with alignment without touching production systems</p>
+<p>Later layers can interpret declarations into checks, but v0 stops at resolution.</p>
+<hr />
+<h2 id="6-why-this-will-hold">6) Why This Will Hold<a class="toc-permalink" href="#6-why-this-will-hold" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>Uses <strong>existing web primitives</strong></li>
+<li>Requires <strong>no platform buy‑in</strong></li>
+<li>Survives moderation and stripping</li>
+<li>Is legible to humans <em>and</em> synthesis engines</li>
+<li>Leaves no footprint unless inspected</li>
+</ul>
+<p>It behaves like DNS, robots.txt, or security.txt — quiet, structural, and durable.</p>
+<hr />
+<h2 id="7-what-to-commit-next-concrete">7) What to Commit Next (Concrete)<a class="toc-permalink" href="#7-what-to-commit-next-concrete" title="Permanent link to this heading">&para;</a></h2>
+<p>I recommend committing three things, in this order:</p>
+<ol>
+<li>
+<p><strong><code>docs/rtt-awareness/README.md</code></strong><br />
+   One page describing the grammar, carrier, and resolution rules.</p>
+</li>
+<li>
+<p><strong><code>/.well-known/rtt-awareness</code></strong> (in TriadicFrameworks root)<br />
+   This becomes the canonical upstream import.</p>
+</li>
+<li>
+<p><strong><code>tools/rtt-awareness-extension/</code></strong><br />
+   With the MV3 skeleton we outlined, clearly marked as v0 observer.</p>
+</li>
+</ol>
+<p>No marketing. No announcement. Just structure.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/education/awareness/Inheritance_RTT_Awareness_as_CSS.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/education/awareness/Inheritance_RTT_Awareness_as_CSS.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

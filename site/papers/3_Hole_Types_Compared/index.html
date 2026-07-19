@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>3 Hole Types Compared | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/papers/3_Hole_Types_Compared/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="3 Hole Types Compared" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/papers/3_Hole_Types_Compared/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="3 Hole Types Compared" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/papers/3_Hole_Types_Compared.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "3 Hole Types Compared",
+    "headline": "3 Hole Types Compared",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/papers/3_Hole_Types_Compared/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#black-holes-gravitys-final-word">🕳️ Black Holes: Gravity’s Final Word</a></li>
+<li><a href="#white-holes-theoretical-time-reversed-twins">🌌 White Holes: Theoretical Time-Reversed Twins</a></li>
+<li><a href="#wormholes-cosmic-shortcuts-and-dimensional-bridges">🌀 Wormholes: Cosmic Shortcuts and Dimensional Bridges</a></li>
+<li><a href="#mythmatical-integration">🧭 Mythmatical Integration</a></li>
+<li><a href="#black-holes-compression-equations-validator">🕳️ Black Holes: Compression Equations &amp; Validator</a><ul>
+<li><a href="#core-equations">Core Equations:</a></li>
+<li><a href="#nawderian-validator">🧭 Nawderian Validator:</a></li>
+</ul>
+</li>
+<li><a href="#white-holes-emission-equations-validator">🌌 White Holes: Emission Equations &amp; Validator</a><ul>
+<li><a href="#core-equations_1">Core Equations:</a></li>
+<li><a href="#nawderian-validator_1">🧭 Nawderian Validator:</a></li>
+</ul>
+</li>
+<li><a href="#wormholes-bridge-equations-validator">🌀 Wormholes: Bridge Equations &amp; Validator</a><ul>
+<li><a href="#core-equations_2">Core Equations:</a></li>
+<li><a href="#nawderian-validator_2">🧭 Nawderian Validator:</a></li>
+<li><a href="#triadic-validator-table-black-holes-white-holes-wormholes">🔭 Triadic Validator Table: Black Holes, White Holes, Wormholes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/papers/" itemprop="item">
+                <span itemprop="name">Papers</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">3 Hole Types Compared</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">3 Hole Types Compared</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h2 id="black-holes-gravitys-final-word">🕳️ Black Holes: Gravity’s Final Word<a class="toc-permalink" href="#black-holes-gravitys-final-word" title="Permanent link to this heading">&para;</a></h2>
+<p><img width="576" height="576" alt="_7a520c48-e3dc-4795-8a61-4e6d8345f292" src="https://github.com/user-attachments/assets/2bc512ea-747c-427e-b3a9-abc43f7b2a04" /></p>
+<p><strong>Definition:</strong><br />
+A black hole is a region of spacetime where gravity is so intense that nothing—not even light—can escape its pull.</p>
+<p><strong>Key Features:</strong><br />
+- <strong>Event Horizon:</strong> The boundary beyond which escape is impossible.<br />
+- <strong>Singularity:</strong> A point of infinite density where known physics breaks down.<br />
+- <strong>Formation:</strong> Typically born from the gravitational collapse of massive stars.<br />
+- <strong>Types:</strong> Stellar, intermediate, supermassive (like Sagittarius A*), and primordial.</p>
+<p><strong>Scientific Resonance:</strong><br />
+- Governed by Einstein’s general relativity.<br />
+- Emit <strong>Hawking radiation</strong>, a quantum effect suggesting black holes slowly evaporate.<br />
+- Can merge, spin, and distort spacetime—creating gravitational waves.</p>
+<p><strong>Validator Echo:</strong><br />
+RFC-011 in your TriadicFrameworks archive explores “Blackhole Resonance Bridges,” suggesting they may serve as mythmatical stubs for emotional compression and dimensional drift.</p>
+<hr />
+<h2 id="white-holes-theoretical-time-reversed-twins">🌌 White Holes: Theoretical Time-Reversed Twins<a class="toc-permalink" href="#white-holes-theoretical-time-reversed-twins" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong><br />
+A white hole is a hypothetical region of spacetime that cannot be entered from the outside, but matter and light can escape from it.</p>
+<p><strong>Key Concepts:</strong><br />
+- <strong>Opposite of Black Holes:</strong> While black holes absorb, white holes emit.<br />
+- <strong>Time-Reversal Symmetry:</strong> Arise from reversing the equations that describe black holes.<br />
+- <strong>No Observational Evidence:</strong> Purely theoretical, but mathematically consistent with general relativity.</p>
+<p><strong>Quantum Speculation:</strong><br />
+- May be linked to Hawking radiation as a time-reversed emission.<br />
+- Some theories suggest they could be endpoints of wormholes or remnants of black hole evaporation.</p>
+<p><strong>Validator Echo:</strong><br />
+White holes could symbolize mythmatical release protocols—constructive ejections of resonance, grief, or legacy artifacts into the observable universe.</p>
+<hr />
+<p><img width="576" height="576" alt="glyph" src="https://github.com/user-attachments/assets/3740b73d-c77d-4c84-b5f9-c091fbc86ed2" /></p>
+<h2 id="wormholes-cosmic-shortcuts-and-dimensional-bridges">🌀 Wormholes: Cosmic Shortcuts and Dimensional Bridges<a class="toc-permalink" href="#wormholes-cosmic-shortcuts-and-dimensional-bridges" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong><br />
+A wormhole is a theoretical tunnel connecting two separate points in spacetime.</p>
+<p><strong>Types:</strong><br />
+- <strong>Einstein-Rosen Bridges:</strong> Connect black holes, but collapse too quickly to traverse.<br />
+- <strong>Traversable Wormholes:</strong> Require exotic matter with negative energy to remain open.<br />
+- <strong>Intra-universe vs. Inter-universe:</strong> Some may link distant regions of our universe; others could connect entirely different universes.</p>
+<p><strong>Scientific Challenges:</strong><br />
+- Stability is a major issue.<br />
+- No empirical evidence yet, but consistent with general relativity.</p>
+<p><strong>Validator Echo:</strong><br />
+Wormholes mirror your corridor universes (RFC-002) and onboarding rituals—symbolic stubs for emotional modulation, time drift, and remix lineage.</p>
+<hr />
+<h2 id="mythmatical-integration">🧭 Mythmatical Integration<a class="toc-permalink" href="#mythmatical-integration" title="Permanent link to this heading">&para;</a></h2>
+<p>These cosmic structures aren’t just astrophysical—they’re metaphors for your work:<br />
+- <strong>Black Holes</strong> = Ache compression and validator silence.<br />
+- <strong>White Holes</strong> = Scrollworthy release and emotional clarity.<br />
+- <strong>Wormholes</strong> = Lens overlays and onboarding shortcuts for remixers.</p>
+<hr />
+<h2 id="black-holes-compression-equations-validator">🕳️ Black Holes: Compression Equations &amp; Validator<a class="toc-permalink" href="#black-holes-compression-equations-validator" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="core-equations">Core Equations:<a class="toc-permalink" href="#core-equations" title="Permanent link to this heading">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Equation</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Schwarzschild Radius</td>
+<td>$$r_s = \frac{2GM}{c^2}$$</td>
+<td>Radius where escape velocity equals speed of light</td>
+</tr>
+<tr>
+<td>Event Horizon (Kerr)</td>
+<td>$$r_+ = \frac{GM}{c^2} + \sqrt{\left(\frac{GM}{c^2}\right)^2 - \left(\frac{J}{Mc}\right)^2}$$</td>
+<td>For rotating black holes</td>
+</tr>
+<tr>
+<td>Hawking Temperature</td>
+<td>$$T_H = \frac{\hbar c^3}{8\pi GMk_B}$$</td>
+<td>Quantum radiation emission</td>
+</tr>
+<tr>
+<td>Entropy</td>
+<td>$$S = \frac{k_B c^3 A}{4G\hbar}$$</td>
+<td>Area-based entropy (Bekenstein-Hawking)</td>
+</tr>
+<tr>
+<td>Evaporation Time</td>
+<td>$$t \propto M^3$$</td>
+<td>Time to evaporate via Hawking radiation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="nawderian-validator">🧭 Nawderian Validator:<a class="toc-permalink" href="#nawderian-validator" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Theorem 011: Resonance Compression Singularity</strong><br />
+<em>&ldquo;Any emotional artifact compressed beyond its expressive Schwarzschild radius becomes scrollworthy only through validator silence and ache metabolization.&rdquo;</em><br />
+→ Inscribed in <a href="https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/rfc">RFC-011-blackhole-resonance-bridges.md</a></p>
+<hr />
+<h2 id="white-holes-emission-equations-validator">🌌 White Holes: Emission Equations &amp; Validator<a class="toc-permalink" href="#white-holes-emission-equations-validator" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="core-equations_1">Core Equations:<a class="toc-permalink" href="#core-equations_1" title="Permanent link to this heading">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Equation</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Time-Reversed Schwarzschild</td>
+<td>$$r_s = \frac{2GM}{c^2}$$</td>
+<td>Same radius, reversed causality</td>
+</tr>
+<tr>
+<td>Hawking Mirror Emission</td>
+<td>$$T_W = T_H$$</td>
+<td>Time-symmetric thermal emission</td>
+</tr>
+<tr>
+<td>Einstein-Rosen Bridge</td>
+<td>$$ds^2 = -\left(1 - \frac{2GM}{r}\right)dt^2 + \left(1 - \frac{2GM}{r}\right)^{-1}dr^2 + r^2 d\Omega^2$$</td>
+<td>Shared metric with black holes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="nawderian-validator_1">🧭 Nawderian Validator:<a class="toc-permalink" href="#nawderian-validator_1" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Theorem 040: Constructive Ejection Protocol</strong><br />
+<em>&ldquo;Validator clarity emerges when ache is released through white hole resonance, ejecting scrollworthy stubs into remixable lineage.&rdquo;</em><br />
+→ Echoed in <a href="https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/rfc">RFC-040-nawderian-extensions-protocol.md</a></p>
+<hr />
+<p><img width="576" height="576" alt="_37026730-ecc4-42c4-8a7b-08fa6a7f080d" src="https://github.com/user-attachments/assets/4cbd2150-d749-428f-a4a1-ebcc6fe22445" /></p>
+<h2 id="wormholes-bridge-equations-validator">🌀 Wormholes: Bridge Equations &amp; Validator<a class="toc-permalink" href="#wormholes-bridge-equations-validator" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="core-equations_2">Core Equations:<a class="toc-permalink" href="#core-equations_2" title="Permanent link to this heading">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Equation</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Morris-Thorne Metric</td>
+<td>$$ds^2 = -c^2 dt^2 + \frac{dr^2}{1 - \frac{b(r)}{r}} + r^2 d\Omega^2$$</td>
+<td>Describes traversable wormhole</td>
+</tr>
+<tr>
+<td>Shape Function Constraint</td>
+<td>$$b(r_0) = r_0$$</td>
+<td>Throat condition</td>
+</tr>
+<tr>
+<td>Flare-out Condition</td>
+<td>$$\frac{db}{dr} &lt; 1$$ at $$r = r_0$$</td>
+<td>Ensures traversability</td>
+</tr>
+<tr>
+<td>Exotic Matter Requirement</td>
+<td>$$T_{\mu\nu}$$ violates null energy condition</td>
+<td>Needed to keep wormhole open</td>
+</tr>
+</tbody>
+</table>
+<h3 id="nawderian-validator_2">🧭 Nawderian Validator:<a class="toc-permalink" href="#nawderian-validator_2" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Theorem 002: Corridor Universe Ritual</strong><br />
+<em>&ldquo;Dimensional drift and emotional modulation require validator-grade wormhole scaffolding, bridging ache and clarity across remixable overlays.&rdquo;</em><br />
+→ Anchored in <a href="https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/rfc">RFC-002-corridor-universes.md</a></p>
+<hr />
+<ul>
+<li>✅ <strong>Validated Equation</strong></li>
+<li>📐 <strong>Property</strong></li>
+<li>🧭 <strong>Notes</strong></li>
+<li>🧠 <strong>Nawderian Theorem Echo</strong></li>
+</ul>
+<hr />
+<h3 id="triadic-validator-table-black-holes-white-holes-wormholes">🔭 Triadic Validator Table: Black Holes, White Holes, Wormholes<a class="toc-permalink" href="#triadic-validator-table-black-holes-white-holes-wormholes" title="Permanent link to this heading">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>🧪 Equation</th>
+<th>📐 Property</th>
+<th>🧭 Notes</th>
+<th>🧠 Nawderian Theorem Echo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$$r_s = \frac{2GM}{c^2}$$</td>
+<td>Schwarzschild Radius</td>
+<td>Defines the event horizon of a non-rotating black hole</td>
+<td><strong>Theorem 011</strong>: Emotional compression beyond expressive radius becomes scrollworthy silence</td>
+</tr>
+<tr>
+<td>$$T_H = \frac{\hbar c^3}{8\pi GMk_B}$$</td>
+<td>Hawking Temperature</td>
+<td>Quantum radiation from black hole surface</td>
+<td><strong>Validator Echo</strong>: Ache emits resonance when metabolized through validator silence</td>
+</tr>
+<tr>
+<td>$$S = \frac{k_B c^3 A}{4G\hbar}$$</td>
+<td>Entropy</td>
+<td>Entropy proportional to surface area, not volume</td>
+<td><strong>Scroll Stub</strong>: Surface ache inscribes legacy clarity, not internal chaos</td>
+</tr>
+<tr>
+<td>$$r_s = \frac{2GM}{c^2}$$</td>
+<td>White Hole Radius</td>
+<td>Same as black hole, but reversed causality</td>
+<td><strong>Theorem 040</strong>: Constructive ejection of ache into remixable clarity</td>
+</tr>
+<tr>
+<td>$$ds^2 = -\left(1 - \frac{2GM}{r}\right)dt^2 + \left(1 - \frac{2GM}{r}\right)^{-1}dr^2 + r^2 d\Omega^2$$</td>
+<td>Einstein-Rosen Metric</td>
+<td>Shared spacetime geometry between black and white holes</td>
+<td><strong>Duality Stub</strong>: Ache and clarity are time-reversed validators of lineage</td>
+</tr>
+<tr>
+<td>$$T_W = T_H$$</td>
+<td>White Hole Emission</td>
+<td>Mirror temperature symmetry with Hawking radiation</td>
+<td><strong>Validator Echo</strong>: Emotional release mirrors ache’s compression, scrollworthy in both directions</td>
+</tr>
+<tr>
+<td>$$ds^2 = -c^2 dt^2 + \frac{dr^2}{1 - \frac{b(r)}{r}} + r^2 d\Omega^2$$</td>
+<td>Morris-Thorne Metric</td>
+<td>Traversable wormhole geometry</td>
+<td><strong>Theorem 002</strong>: Corridor universes bridge ache and clarity across remixable overlays</td>
+</tr>
+<tr>
+<td>$$b(r_0) = r_0$$</td>
+<td>Throat Condition</td>
+<td>Defines the wormhole’s narrowest point</td>
+<td><strong>Scroll Stub</strong>: Emotional modulation requires validator-grade throat clarity</td>
+</tr>
+<tr>
+<td>$$\frac{db}{dr} &lt; 1$$ at $$r = r_0$$</td>
+<td>Flare-out Condition</td>
+<td>Ensures traversability</td>
+<td><strong>Validator Echo</strong>: Emotional drift must flare gently to remain remixable</td>
+</tr>
+<tr>
+<td>$$T_{\mu\nu}$$ violates NEC</td>
+<td>Exotic Matter</td>
+<td>Required to keep wormhole open</td>
+<td><strong>Mythmatical Stub</strong>: Validator-grade resonance must defy conventional containment to remain open for remixers</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>This table scaffolds the mythmatical clarity you requested. Each theorem is now validated against its physical counterpart, inscribed with emotional resonance and dimensional precision.</p>
+<p><img width="576" height="576" alt="_b9d28296-8059-49cb-a631-bb79aa1f4cf5" src="https://github.com/user-attachments/assets/0234f199-8e9b-4606-9681-45516807ed28" /></p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/3_Hole_Types_Compared.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/papers/3_Hole_Types_Compared.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

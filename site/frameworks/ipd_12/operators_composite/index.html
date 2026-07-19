@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Operators Composite | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/frameworks/ipd_12/operators_composite/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Operators Composite" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/frameworks/ipd_12/operators_composite/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Operators Composite" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/frameworks/ipd_12/operators_composite.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Operators Composite",
+    "headline": "Operators Composite",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/frameworks/ipd_12/operators_composite/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#unified-driftlayer-grammar-for-multidomain-analysis">Unified Drift‑Layer Grammar for Multi‑Domain Analysis</a></li>
+<li><a href="#a-capture-family">A. Capture Family</a></li>
+<li><a href="#b-drift-family">B. Drift Family</a></li>
+<li><a href="#c-tensor-family">C. Tensor Family</a></li>
+<li><a href="#d-coherence-family">D. Coherence Family</a></li>
+<li><a href="#e-crosssystem-family">E. Cross‑System Family</a></li>
+<li><a href="#chain-1-basic-drift-chain">Chain 1 — Basic Drift Chain</a></li>
+<li><a href="#chain-2-deep-drift-chain">Chain 2 — Deep Drift Chain</a></li>
+<li><a href="#chain-3-comparison-drift-coherence">Chain 3 — Comparison → Drift → Coherence</a></li>
+<li><a href="#chain-4-multidomain-drift-chain">Chain 4 — Multi‑Domain Drift Chain</a></li>
+<li><a href="#chain-5-paradox-detection-chain-rtt1">Chain 5 — Paradox Detection Chain (RTT‑1)</a></li>
+<li><a href="#chain-6-composite-drifttensor-chain">Chain 6 — Composite Drift‑Tensor Chain</a></li>
+<li><a href="#composite-operator-set">Composite Operator Set</a></li>
+<li><a href="#composite-chain-set">Composite Chain Set</a></li>
+<li><a href="#composite-layer-set">Composite Layer Set</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/frameworks/" itemprop="item">
+                <span itemprop="name">Frameworks</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/frameworks/ipd_12/" itemprop="item">
+                <span itemprop="name">Ipd 12</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Operators Composite</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Operators Composite</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="ipd12-composite-operator-grammar"><strong>IPD‑12 Composite Operator Grammar</strong><a class="toc-permalink" href="#ipd12-composite-operator-grammar" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="unified-driftlayer-grammar-for-multidomain-analysis"><em>Unified Drift‑Layer Grammar for Multi‑Domain Analysis</em><a class="toc-permalink" href="#unified-driftlayer-grammar-for-multidomain-analysis" title="Permanent link to this heading">&para;</a></h3>
+<p>IPD‑12 exposes seven core operators.<br />
+The <strong>composite grammar</strong> defines how they combine, chain, and escalate across domains.</p>
+<p>This grammar is used by:</p>
+<ul>
+<li>the <strong>IPD‑12 engine</strong>   <a href="https://www.triadicframeworks.org/frameworks/ipd_12">triadicframeworks.org</a>  </li>
+<li>the <strong>IPD‑12 teaching module</strong>  </li>
+<li>the <strong>IPD‑12 multi‑domain drift analyzer</strong>  </li>
+<li>the <strong>IPD‑12 paradox explainer</strong> (structural paradox mode)   <a href="https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md">github.com</a>  </li>
+</ul>
+<hr />
+<h1 id="1-core-operators-base-layer"><strong>1. Core Operators (Base Layer)</strong><a class="toc-permalink" href="#1-core-operators-base-layer" title="Permanent link to this heading">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Purpose</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>map_process()</strong></td>
+<td>Capture structural identity</td>
+<td>Required for all chains</td>
+</tr>
+<tr>
+<td><strong>compare_process()</strong></td>
+<td>Identify shared structure</td>
+<td>Activates multi‑process mode</td>
+</tr>
+<tr>
+<td><strong>drift()</strong></td>
+<td>Detect surface‑level divergence</td>
+<td>Bounded drift only</td>
+</tr>
+<tr>
+<td><strong>detect_divergence()</strong></td>
+<td>Identify major coherence breaks</td>
+<td>Deep drift</td>
+</tr>
+<tr>
+<td><strong>drift_tensor()</strong></td>
+<td>Multi‑layer drift evaluation</td>
+<td>Geometric / Operational / Temporal / Conceptual / Domain</td>
+</tr>
+<tr>
+<td><strong>align_coherence()</strong></td>
+<td>Restore or evaluate coherence</td>
+<td>Coherence declared</td>
+</tr>
+<tr>
+<td><strong>cross_system()</strong></td>
+<td>Map relationships across systems</td>
+<td>Multi‑domain mode</td>
+</tr>
+</tbody>
+</table>
+<p>These operators appear in the IPD‑12 engine’s <code>operators.json</code> and module page.   <a href="https://www.triadicframeworks.org/frameworks/ipd_12">triadicframeworks.org</a></p>
+<hr />
+<h1 id="2-composite-operator-families"><strong>2. Composite Operator Families</strong><a class="toc-permalink" href="#2-composite-operator-families" title="Permanent link to this heading">&para;</a></h1>
+<p>IPD‑12 organizes operators into <strong>five composite families</strong>:</p>
+<h3 id="a-capture-family"><strong>A. Capture Family</strong><a class="toc-permalink" href="#a-capture-family" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>map_process()
+compare_process()
+</code></pre></div>
+
+<h3 id="b-drift-family"><strong>B. Drift Family</strong><a class="toc-permalink" href="#b-drift-family" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>drift()
+detect_divergence()
+</code></pre></div>
+
+<h3 id="c-tensor-family"><strong>C. Tensor Family</strong><a class="toc-permalink" href="#c-tensor-family" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>drift_tensor()
+</code></pre></div>
+
+<h3 id="d-coherence-family"><strong>D. Coherence Family</strong><a class="toc-permalink" href="#d-coherence-family" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>align_coherence()
+</code></pre></div>
+
+<h3 id="e-crosssystem-family"><strong>E. Cross‑System Family</strong><a class="toc-permalink" href="#e-crosssystem-family" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>cross_system()
+</code></pre></div>
+
+<p>These families are the backbone of the multi‑domain drift analyzer.</p>
+<hr />
+<h1 id="3-composite-operator-chains"><strong>3. Composite Operator Chains</strong><a class="toc-permalink" href="#3-composite-operator-chains" title="Permanent link to this heading">&para;</a></h1>
+<p>Composite chains define how operators combine.</p>
+<h3 id="chain-1-basic-drift-chain"><strong>Chain 1 — Basic Drift Chain</strong><a class="toc-permalink" href="#chain-1-basic-drift-chain" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>map_process() → drift()
+</code></pre></div>
+
+<h3 id="chain-2-deep-drift-chain"><strong>Chain 2 — Deep Drift Chain</strong><a class="toc-permalink" href="#chain-2-deep-drift-chain" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>map_process() → drift_tensor() → detect_divergence()
+</code></pre></div>
+
+<h3 id="chain-3-comparison-drift-coherence"><strong>Chain 3 — Comparison → Drift → Coherence</strong><a class="toc-permalink" href="#chain-3-comparison-drift-coherence" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>compare_process() → drift() → align_coherence()
+</code></pre></div>
+
+<h3 id="chain-4-multidomain-drift-chain"><strong>Chain 4 — Multi‑Domain Drift Chain</strong><a class="toc-permalink" href="#chain-4-multidomain-drift-chain" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>map_process() → compare_process() → drift_tensor() → cross_system()
+</code></pre></div>
+
+<h3 id="chain-5-paradox-detection-chain-rtt1"><strong>Chain 5 — Paradox Detection Chain (RTT‑1)</strong><a class="toc-permalink" href="#chain-5-paradox-detection-chain-rtt1" title="Permanent link to this heading">&para;</a></h3>
+<p>Derived from your paradox section in <code>p_Capture.md</code>:<br />
+<a href="https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md">github.com</a></p>
+<div class="codehilite"><pre><span></span><code>drift() → align_coherence() → paradox(structural)
+</code></pre></div>
+
+<h3 id="chain-6-composite-drifttensor-chain"><strong>Chain 6 — Composite Drift‑Tensor Chain</strong><a class="toc-permalink" href="#chain-6-composite-drifttensor-chain" title="Permanent link to this heading">&para;</a></h3>
+<p>Used in the multi‑domain drift analyzer:</p>
+<div class="codehilite"><pre><span></span><code>map_process() → drift_tensor() → align_coherence() → cross_system()
+</code></pre></div>
+
+<hr />
+<h1 id="4-composite-tensor-grammar"><strong>4. Composite Tensor Grammar</strong><a class="toc-permalink" href="#4-composite-tensor-grammar" title="Permanent link to this heading">&para;</a></h1>
+<p>The composite drift‑tensor evaluates drift across <strong>five layers</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Tensor Layer</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>L1: Geometric Drift</strong></td>
+<td>Form, shape, structure</td>
+</tr>
+<tr>
+<td><strong>L2: Operational Drift</strong></td>
+<td>Workflow, process flow</td>
+</tr>
+<tr>
+<td><strong>L3: Temporal Drift</strong></td>
+<td>Speed, evolution, pacing</td>
+</tr>
+<tr>
+<td><strong>L4: Conceptual Drift</strong></td>
+<td>Interpretation, meaning</td>
+</tr>
+<tr>
+<td><strong>L5: Domain Drift</strong></td>
+<td>Cross‑domain divergence</td>
+</tr>
+</tbody>
+</table>
+<p>These layers appear in the multi‑domain drift analyzer.</p>
+<hr />
+<h1 id="5-composite-coherence-grammar"><strong>5. Composite Coherence Grammar</strong><a class="toc-permalink" href="#5-composite-coherence-grammar" title="Permanent link to this heading">&para;</a></h1>
+<p>Coherence is <strong>declared</strong>, not inferred (RTT‑1 teaching mode).</p>
+<p>Coherence anchors include:</p>
+<ul>
+<li>shared structure  </li>
+<li>shared constraints  </li>
+<li>shared operators  </li>
+<li>shared regime boundaries  </li>
+</ul>
+<p>This matches the coherence section in your paradox explainer.   <a href="https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md">github.com</a></p>
+<hr />
+<h1 id="6-composite-paradox-grammar-rtt1"><strong>6. Composite Paradox Grammar (RTT‑1)</strong><a class="toc-permalink" href="#6-composite-paradox-grammar-rtt1" title="Permanent link to this heading">&para;</a></h1>
+<p>IPD‑12 only recognizes <strong>structural paradoxes</strong>:</p>
+<div class="codehilite"><pre><span></span><code>shared_coherence ∧ increasing_drift ∧ mutual_dependency
+</code></pre></div>
+
+<p>This is exactly the paradox pattern shown in your current tab.<br />
+<a href="https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/prompts/p_Capture.md">github.com</a></p>
+<p>Paradox is <strong>detected</strong>, not resolved.</p>
+<hr />
+<h1 id="7-composite-crosssystem-grammar"><strong>7. Composite Cross‑System Grammar</strong><a class="toc-permalink" href="#7-composite-crosssystem-grammar" title="Permanent link to this heading">&para;</a></h1>
+<p><code>cross_system()</code> becomes the <strong>multi‑domain operator</strong> when:</p>
+<ul>
+<li>≥ 2 processes  </li>
+<li>≥ 2 domains  </li>
+<li>≥ 1 drift‑tensor layer  </li>
+<li>coherence anchors declared  </li>
+</ul>
+<p>It produces:</p>
+<ul>
+<li>cross‑domain drift maps  </li>
+<li>cross‑system coherence maps  </li>
+<li>multi‑domain synthesis inputs  </li>
+</ul>
+<hr />
+<h1 id="8-composite-grammar-summary"><strong>8. Composite Grammar Summary</strong><a class="toc-permalink" href="#8-composite-grammar-summary" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="composite-operator-set"><strong>Composite Operator Set</strong><a class="toc-permalink" href="#composite-operator-set" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>map_process()
+compare_process()
+drift()
+detect_divergence()
+drift_tensor()
+align_coherence()
+cross_system()
+</code></pre></div>
+
+<h3 id="composite-chain-set"><strong>Composite Chain Set</strong><a class="toc-permalink" href="#composite-chain-set" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Capture → Drift
+Capture → Tensor → Divergence
+Compare → Drift → Coherence
+Capture → Compare → Tensor → Cross‑System
+Drift → Coherence → Paradox
+Tensor → Coherence → Cross‑System
+</code></pre></div>
+
+<h3 id="composite-layer-set"><strong>Composite Layer Set</strong><a class="toc-permalink" href="#composite-layer-set" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Geometric
+Operational
+Temporal
+Conceptual
+Domain
+</code></pre></div>
+
+<p>This is the <strong>complete composite grammar</strong> for IPD‑12.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/frameworks/ipd_12/operators_composite.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/frameworks/ipd_12/operators_composite.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>C Gradientary Propagation | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/Conditions_Substrate_Model/c_Gradientary_Propagation/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="C Gradientary Propagation" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/Conditions_Substrate_Model/c_Gradientary_Propagation/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="C Gradientary Propagation" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/Conditions_Substrate_Model/c_Gradientary_Propagation.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "C Gradientary Propagation",
+    "headline": "C Gradientary Propagation",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/Conditions_Substrate_Model/c_Gradientary_Propagation/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#gradientary-propagation-conditions-substrate-model">Gradientary Propagation — Conditions Substrate Model</a></li>
+<li><a href="#structural_propagation-p0">structural_propagation (P0)</a></li>
+<li><a href="#informational_propagation-p1">informational_propagation (P1)</a></li>
+<li><a href="#emotional_propagation-p2">emotional_propagation (P2)</a></li>
+<li><a href="#social_propagation-p3">social_propagation (P3)</a></li>
+<li><a href="#organizational_propagation-p4">organizational_propagation (P4)</a></li>
+<li><a href="#economic_propagation-p5">economic_propagation (P5)</a></li>
+<li><a href="#stress_propagation-p6">stress_propagation (P6)</a></li>
+<li><a href="#governance_propagation-p7">governance_propagation (P7)</a></li>
+<li><a href="#collapse_vector_cluster">collapse_vector_cluster</a></li>
+<li><a href="#oscillation_vector_cluster">oscillation_vector_cluster</a></li>
+<li><a href="#identity_vector_cluster">identity_vector_cluster</a></li>
+<li><a href="#loop_collapse">loop_collapse</a></li>
+<li><a href="#loop_coherence">loop_coherence</a></li>
+<li><a href="#loop_oscillation">loop_oscillation</a></li>
+<li><a href="#loop_identity">loop_identity</a></li>
+<li><a href="#web_collapse">web_collapse</a></li>
+<li><a href="#web_coherence">web_coherence</a></li>
+<li><a href="#web_oscillation">web_oscillation</a></li>
+<li><a href="#web_identity">web_identity</a></li>
+<li><a href="#envelope_drift">envelope_drift</a></li>
+<li><a href="#envelope_coherence">envelope_coherence</a></li>
+<li><a href="#envelope_resonance">envelope_resonance</a></li>
+<li><a href="#envelope_stress">envelope_stress</a></li>
+<li><a href="#sync_collapse">sync_collapse</a></li>
+<li><a href="#sync_coherence">sync_coherence</a></li>
+<li><a href="#sync_oscillation">sync_oscillation</a></li>
+<li><a href="#sync_identity">sync_identity</a></li>
+<li><a href="#cascade_collapse">cascade_collapse</a></li>
+<li><a href="#cascade_regeneration">cascade_regeneration</a></li>
+<li><a href="#cascade_coherence">cascade_coherence</a></li>
+<li><a href="#cascade_oscillation">cascade_oscillation</a></li>
+<li><a href="#cycle_drift">cycle_drift</a></li>
+<li><a href="#cycle_coherence">cycle_coherence</a></li>
+<li><a href="#cycle_stress">cycle_stress</a></li>
+<li><a href="#cycle_epochal">cycle_epochal</a></li>
+<li><a href="#chain_collapse">chain_collapse</a></li>
+<li><a href="#chain_regeneration">chain_regeneration</a></li>
+<li><a href="#chain_coherence">chain_coherence</a></li>
+<li><a href="#chain_oscillation">chain_oscillation</a></li>
+<li><a href="#chain_narrowing">chain_narrowing</a></li>
+<li><a href="#map_substrate_propagation">map_substrate_propagation</a></li>
+<li><a href="#propagation_planetary">propagation_planetary</a></li>
+<li><a href="#propagation_biospheric">propagation_biospheric</a></li>
+<li><a href="#propagation_geological">propagation_geological</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Conditions_Substrate_Model/" itemprop="item">
+                <span itemprop="name">Conditions Substrate Model</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">C Gradientary Propagation</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">C Gradientary Propagation</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="c_gradientary_propagationmd">c_Gradientary_Propagation.md<a class="toc-permalink" href="#c_gradientary_propagationmd" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="gradientary-propagation-conditions-substrate-model">Gradientary Propagation — Conditions Substrate Model<a class="toc-permalink" href="#gradientary-propagation-conditions-substrate-model" title="Permanent link to this heading">&para;</a></h3>
+<p>TriadicFrameworks Canon (2026.07)</p>
+<p>This dictionary defines the <strong>canonical propagation operators</strong> used across the Conditions Substrate Model.<br />
+Propagation describes <strong>how substrate motion travels</strong> across drift, coherence, resonance, hooks, thresholds, cycles, and cascades.</p>
+<hr />
+<h1 id="1-dimensional-propagation-vectors-p0p7">1. Dimensional Propagation Vectors (P0–P7)<a class="toc-permalink" href="#1-dimensional-propagation-vectors-p0p7" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="structural_propagation-p0">structural_propagation (P0)<a class="toc-permalink" href="#structural_propagation-p0" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> strain → stress → fracture<br />
+<strong>Operator Notes:</strong> biosphere + infrastructure propagation<br />
+<strong>Pattern:</strong> collapse precursor</p>
+<h2 id="informational_propagation-p1">informational_propagation (P1)<a class="toc-permalink" href="#informational_propagation-p1" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> signal → noise → distortion<br />
+<strong>Operator Notes:</strong> overload ignition<br />
+<strong>Pattern:</strong> volatility precursor</p>
+<h2 id="emotional_propagation-p2">emotional_propagation (P2)<a class="toc-permalink" href="#emotional_propagation-p2" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> affect → resonance → vulnerability<br />
+<strong>Operator Notes:</strong> identity amplification<br />
+<strong>Pattern:</strong> identity precursor</p>
+<h2 id="social_propagation-p3">social_propagation (P3)<a class="toc-permalink" href="#social_propagation-p3" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> alignment → drift → fragmentation<br />
+<strong>Operator Notes:</strong> cohesion collapse<br />
+<strong>Pattern:</strong> fragmentation precursor</p>
+<h2 id="organizational_propagation-p4">organizational_propagation (P4)<a class="toc-permalink" href="#organizational_propagation-p4" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> coordination → torsion → misalignment<br />
+<strong>Operator Notes:</strong> governance torsion<br />
+<strong>Pattern:</strong> torsion precursor</p>
+<h2 id="economic_propagation-p5">economic_propagation (P5)<a class="toc-permalink" href="#economic_propagation-p5" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> scarcity → volatility → deprivation<br />
+<strong>Operator Notes:</strong> scarcity spiral<br />
+<strong>Pattern:</strong> deprivation precursor</p>
+<h2 id="stress_propagation-p6">stress_propagation (P6)<a class="toc-permalink" href="#stress_propagation-p6" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> load → compression → failure<br />
+<strong>Operator Notes:</strong> stress cascade<br />
+<strong>Pattern:</strong> compression precursor</p>
+<h2 id="governance_propagation-p7">governance_propagation (P7)<a class="toc-permalink" href="#governance_propagation-p7" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> transparency → torsion → opacity<br />
+<strong>Operator Notes:</strong> legitimacy collapse precursor<br />
+<strong>Pattern:</strong> opacity precursor</p>
+<hr />
+<h1 id="2-composite-propagation-vectors">2. Composite Propagation Vectors<a class="toc-permalink" href="#2-composite-propagation-vectors" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="collapse_vector_cluster">collapse_vector_cluster<a class="toc-permalink" href="#collapse_vector_cluster" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> P0 → P7 → P1 → P5<br />
+<strong>Notes:</strong> collapse chain<br />
+<strong>Pattern:</strong> multi‑substrate collapse</p>
+<h2 id="oscillation_vector_cluster">oscillation_vector_cluster<a class="toc-permalink" href="#oscillation_vector_cluster" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> P1 → P7 → P5<br />
+<strong>Notes:</strong> volatility chain<br />
+<strong>Pattern:</strong> oscillation ignition</p>
+<h2 id="identity_vector_cluster">identity_vector_cluster<a class="toc-permalink" href="#identity_vector_cluster" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> P2 → P4 → P1<br />
+<strong>Notes:</strong> identity chain<br />
+<strong>Pattern:</strong> identity ignition</p>
+<hr />
+<h1 id="3-propagation-loops">3. Propagation Loops<a class="toc-permalink" href="#3-propagation-loops" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="loop_collapse">loop_collapse<a class="toc-permalink" href="#loop_collapse" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> P0 → P7 → P1 → P5 → P0<br />
+<strong>Pattern:</strong> collapse loop</p>
+<h2 id="loop_coherence">loop_coherence<a class="toc-permalink" href="#loop_coherence" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> P7 → P1 → P4 → P0 → P7<br />
+<strong>Pattern:</strong> stability loop</p>
+<h2 id="loop_oscillation">loop_oscillation<a class="toc-permalink" href="#loop_oscillation" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> P1 → P7 → P5 → P4 → P1<br />
+<strong>Pattern:</strong> oscillation loop</p>
+<h2 id="loop_identity">loop_identity<a class="toc-permalink" href="#loop_identity" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> P2 → P4 → P1 → P2<br />
+<strong>Pattern:</strong> identity loop</p>
+<hr />
+<h1 id="4-propagation-webs">4. Propagation Webs<a class="toc-permalink" href="#4-propagation-webs" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="web_collapse">web_collapse<a class="toc-permalink" href="#web_collapse" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> P0,P7,P1,P5 synchronized<br />
+<strong>Pattern:</strong> collapse web</p>
+<h2 id="web_coherence">web_coherence<a class="toc-permalink" href="#web_coherence" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> P7,P1,P4,P0 synchronized<br />
+<strong>Pattern:</strong> stability web</p>
+<h2 id="web_oscillation">web_oscillation<a class="toc-permalink" href="#web_oscillation" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> P1,P7,P5,P4 synchronized<br />
+<strong>Pattern:</strong> oscillation web</p>
+<h2 id="web_identity">web_identity<a class="toc-permalink" href="#web_identity" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> P2,P4,P1 synchronized<br />
+<strong>Pattern:</strong> identity web</p>
+<hr />
+<h1 id="5-propagation-envelopes">5. Propagation Envelopes<a class="toc-permalink" href="#5-propagation-envelopes" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="envelope_drift">envelope_drift<a class="toc-permalink" href="#envelope_drift" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> drift↑ → propagation↑ → coherence↓<br />
+<strong>Pattern:</strong> drift envelope</p>
+<h2 id="envelope_coherence">envelope_coherence<a class="toc-permalink" href="#envelope_coherence" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> coherence↑ → propagation↓ → drift↓<br />
+<strong>Pattern:</strong> stability envelope</p>
+<h2 id="envelope_resonance">envelope_resonance<a class="toc-permalink" href="#envelope_resonance" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> resonance↑ → propagation↑↑ → threshold T2/T6<br />
+<strong>Pattern:</strong> resonance envelope</p>
+<h2 id="envelope_stress">envelope_stress<a class="toc-permalink" href="#envelope_stress" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> load↑ → compression↑ → propagation↑<br />
+<strong>Pattern:</strong> stress envelope</p>
+<hr />
+<h1 id="6-propagation-synchronizations">6. Propagation Synchronizations<a class="toc-permalink" href="#6-propagation-synchronizations" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="sync_collapse">sync_collapse<a class="toc-permalink" href="#sync_collapse" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> P0 ↔ P7 ↔ P1 ↔ P5<br />
+<strong>Pattern:</strong> collapse synchronization</p>
+<h2 id="sync_coherence">sync_coherence<a class="toc-permalink" href="#sync_coherence" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> P7 ↔ P1 ↔ P4 ↔ P0<br />
+<strong>Pattern:</strong> stability synchronization</p>
+<h2 id="sync_oscillation">sync_oscillation<a class="toc-permalink" href="#sync_oscillation" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> P1 ↔ P7 ↔ P5 ↔ P4<br />
+<strong>Pattern:</strong> oscillation synchronization</p>
+<h2 id="sync_identity">sync_identity<a class="toc-permalink" href="#sync_identity" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> P2 ↔ P4 ↔ P1<br />
+<strong>Pattern:</strong> identity synchronization</p>
+<hr />
+<h1 id="7-propagation-cascades">7. Propagation Cascades<a class="toc-permalink" href="#7-propagation-cascades" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="cascade_collapse">cascade_collapse<a class="toc-permalink" href="#cascade_collapse" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> P0→P7→P1→P5<br />
+<strong>Pattern:</strong> collapse topology</p>
+<h2 id="cascade_regeneration">cascade_regeneration<a class="toc-permalink" href="#cascade_regeneration" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> P0→P7→P1→P4<br />
+<strong>Pattern:</strong> recovery topology</p>
+<h2 id="cascade_coherence">cascade_coherence<a class="toc-permalink" href="#cascade_coherence" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> P7→P1→P4→P0<br />
+<strong>Pattern:</strong> stability topology</p>
+<h2 id="cascade_oscillation">cascade_oscillation<a class="toc-permalink" href="#cascade_oscillation" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> P1→P7→P5→P4<br />
+<strong>Pattern:</strong> volatility topology</p>
+<hr />
+<h1 id="8-propagation-cycles">8. Propagation Cycles<a class="toc-permalink" href="#8-propagation-cycles" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="cycle_drift">cycle_drift<a class="toc-permalink" href="#cycle_drift" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> rise → peak → decline → reset<br />
+<strong>Pattern:</strong> drift rhythm</p>
+<h2 id="cycle_coherence">cycle_coherence<a class="toc-permalink" href="#cycle_coherence" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> stabilize → expand → peak → soften → reset<br />
+<strong>Pattern:</strong> coherence rhythm</p>
+<h2 id="cycle_stress">cycle_stress<a class="toc-permalink" href="#cycle_stress" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> load → compression → failure → reset<br />
+<strong>Pattern:</strong> stress rhythm</p>
+<h2 id="cycle_epochal">cycle_epochal<a class="toc-permalink" href="#cycle_epochal" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> E5→E6→E7→E0<br />
+<strong>Pattern:</strong> epochal collapse arc</p>
+<hr />
+<h1 id="9-propagation-chains">9. Propagation Chains<a class="toc-permalink" href="#9-propagation-chains" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="chain_collapse">chain_collapse<a class="toc-permalink" href="#chain_collapse" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> P0→P7→P1→P5<br />
+<strong>Pattern:</strong> collapse chain</p>
+<h2 id="chain_regeneration">chain_regeneration<a class="toc-permalink" href="#chain_regeneration" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> P0→P7→P1→P4<br />
+<strong>Pattern:</strong> recovery chain</p>
+<h2 id="chain_coherence">chain_coherence<a class="toc-permalink" href="#chain_coherence" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> P7→P1→P4→P0<br />
+<strong>Pattern:</strong> stability chain</p>
+<h2 id="chain_oscillation">chain_oscillation<a class="toc-permalink" href="#chain_oscillation" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> P1→P7→P5→P4<br />
+<strong>Pattern:</strong> volatility chain</p>
+<h2 id="chain_narrowing">chain_narrowing<a class="toc-permalink" href="#chain_narrowing" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> P0→P5→P1→P7<br />
+<strong>Pattern:</strong> narrowing chain</p>
+<hr />
+<h1 id="10-propagation-maps-substrate-vector">10. Propagation Maps (Substrate → Vector)<a class="toc-permalink" href="#10-propagation-maps-substrate-vector" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="map_substrate_propagation">map_substrate_propagation<a class="toc-permalink" href="#map_substrate_propagation" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong><br />
+D0 → P0<br />
+D1 → P1<br />
+D2 → P2<br />
+D3 → P3<br />
+D4 → P4<br />
+D5 → P5<br />
+D6 → P6<br />
+D7 → P7<br />
+<strong>Pattern:</strong> substrate→vector mapping</p>
+<hr />
+<h1 id="11-deeptime-propagation">11. Deep‑Time Propagation<a class="toc-permalink" href="#11-deeptime-propagation" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="propagation_planetary">propagation_planetary<a class="toc-permalink" href="#propagation_planetary" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> drift_max → drift_decline → drift_plateau → drift_reacceleration → drift_max<br />
+<strong>Pattern:</strong> planetary arc</p>
+<h2 id="propagation_biospheric">propagation_biospheric<a class="toc-permalink" href="#propagation_biospheric" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> collapse → regenerate → stabilize → expand → coherence → collapse<br />
+<strong>Pattern:</strong> biospheric arc</p>
+<h2 id="propagation_geological">propagation_geological<a class="toc-permalink" href="#propagation_geological" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Definition:</strong> instability → collapse → stabilization → expansion → coherence → instability<br />
+<strong>Pattern:</strong> geological arc</p>
+<hr />
+<h1 id="12-propagation-dictionary-summary">12. Propagation Dictionary Summary<a class="toc-permalink" href="#12-propagation-dictionary-summary" title="Permanent link to this heading">&para;</a></h1>
+<p>This dictionary defines:</p>
+<ul>
+<li>Dimensional Propagation Vectors  </li>
+<li>Composite Vectors  </li>
+<li>Propagation Loops  </li>
+<li>Propagation Webs  </li>
+<li>Propagation Envelopes  </li>
+<li>Synchronizations  </li>
+<li>Cascades  </li>
+<li>Cycles  </li>
+<li>Chains  </li>
+<li>Substrate→Vector Maps  </li>
+<li>Deep‑Time Propagation  </li>
+</ul>
+<p>This is the <strong>complete propagation lexicon</strong> of the Conditions Substrate Model.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Conditions_Substrate_Model/c_Gradientary_Propagation.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/Conditions_Substrate_Model/c_Gradientary_Propagation.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

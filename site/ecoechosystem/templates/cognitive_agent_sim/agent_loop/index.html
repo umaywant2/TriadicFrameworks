@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Agent Loop | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/ecoechosystem/templates/cognitive_agent_sim/agent_loop/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Agent Loop" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/ecoechosystem/templates/cognitive_agent_sim/agent_loop/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Agent Loop" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/ecoechosystem/templates/cognitive_agent_sim/agent_loop.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Agent Loop",
+    "headline": "Agent Loop",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/ecoechosystem/templates/cognitive_agent_sim/agent_loop/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#the-canonical-cognition-cycle-for-ecoechosystem-agents">The canonical cognition cycle for EcoEchoSystem agents</a></li>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#canonical-agent-loop-overview">Canonical Agent Loop Overview</a></li>
+<li><a href="#1-perception">1. Perception</a></li>
+<li><a href="#2-interpretation">2. Interpretation</a></li>
+<li><a href="#3-evaluation">3. Evaluation</a></li>
+<li><a href="#4-decision">4. Decision</a></li>
+<li><a href="#5-action">5. Action</a></li>
+<li><a href="#6-learning">6. Learning</a></li>
+<li><a href="#7-identity-update">7. Identity Update</a></li>
+<li><a href="#8-social-state-update">8. Social State Update</a></li>
+<li><a href="#temporal-dynamics">Temporal Dynamics</a></li>
+<li><a href="#agent-types-and-loop-variants">Agent Types and Loop Variants</a></li>
+<li><a href="#failure-modes">Failure Modes</a></li>
+<li><a href="#integration-notes">Integration Notes</a></li>
+<li><a href="#status">Status</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/ecoechosystem/" itemprop="item">
+                <span itemprop="name">Ecoechosystem</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/ecoechosystem/templates/" itemprop="item">
+                <span itemprop="name">Templates</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/ecoechosystem/templates/cognitive_agent_sim/" itemprop="item">
+                <span itemprop="name">Cognitive Agent Sim</span>
+              </a>
+            <meta itemprop="position" content="4" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Agent Loop</span>
+            <meta itemprop="position" content="5" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Agent Loop</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="agent-loop"><strong>Agent Loop</strong><a class="toc-permalink" href="#agent-loop" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="the-canonical-cognition-cycle-for-ecoechosystem-agents"><em>The canonical cognition cycle for EcoEchoSystem agents</em><a class="toc-permalink" href="#the-canonical-cognition-cycle-for-ecoechosystem-agents" title="Permanent link to this heading">&para;</a></h3>
+<p>The agent loop defines how an agent <strong>experiences the world, updates itself, and acts back upon the system</strong>.<br />
+It is not a decision tree. It is a <strong>bounded, recursive process</strong> shaped by identity, learning, and social context.</p>
+<p>Agents do not optimize outcomes.<br />
+They <strong>navigate constraints over time</strong>.</p>
+<hr />
+<h2 id="purpose"><strong>Purpose</strong><a class="toc-permalink" href="#purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>This module exists to:</p>
+<ul>
+<li>define a reusable cognition cycle for all agent types  </li>
+<li>integrate perception, identity, learning, and interaction  </li>
+<li>enforce bounded rationality and temporal limits  </li>
+<li>enable feedback between agents and simulation layers  </li>
+<li>prevent scripted or omniscient behavior  </li>
+</ul>
+<p>The agent loop is the <strong>engine of emergence</strong>.</p>
+<hr />
+<h2 id="canonical-agent-loop-overview"><strong>Canonical Agent Loop Overview</strong><a class="toc-permalink" href="#canonical-agent-loop-overview" title="Permanent link to this heading">&para;</a></h2>
+<p>Each agent executes the following loop at every simulation step:</p>
+<ol>
+<li><strong>Perceive</strong></li>
+<li><strong>Interpret</strong></li>
+<li><strong>Evaluate</strong></li>
+<li><strong>Decide</strong></li>
+<li><strong>Act</strong></li>
+<li><strong>Learn</strong></li>
+<li><strong>Update Identity</strong></li>
+<li><strong>Update Social State</strong></li>
+</ol>
+<p>The loop is <strong>recursive and lossy</strong> — information degrades, bias accumulates, and timing matters.</p>
+<hr />
+<h2 id="1-perception"><strong>1. Perception</strong><a class="toc-permalink" href="#1-perception" title="Permanent link to this heading">&para;</a></h2>
+<p>Agents receive signals from:<br />
+- environment (resources, threats, opportunities)<br />
+- institutions (rules, enforcement, legitimacy cues)<br />
+- other agents (signals, behavior, reputation)</p>
+<p>Perception is filtered by:<br />
+- attention limits<br />
+- salience bias<br />
+- identity relevance  </p>
+<p>Agents never perceive the full state.</p>
+<hr />
+<h2 id="2-interpretation"><strong>2. Interpretation</strong><a class="toc-permalink" href="#2-interpretation" title="Permanent link to this heading">&para;</a></h2>
+<p>Perceived signals are interpreted through:<br />
+- existing beliefs<br />
+- narrative identity<br />
+- group affiliation<br />
+- recent memory  </p>
+<p>Interpretation answers:</p>
+<blockquote>
+<p><em>What does this mean for someone like me?</em></p>
+</blockquote>
+<p>Meaning precedes accuracy.</p>
+<hr />
+<h2 id="3-evaluation"><strong>3. Evaluation</strong><a class="toc-permalink" href="#3-evaluation" title="Permanent link to this heading">&para;</a></h2>
+<p>Agents evaluate options using:<br />
+- bounded utility proxies (safety, status, belonging, purpose)<br />
+- risk tolerance shaped by stress<br />
+- learned heuristics<br />
+- social expectations</p>
+<p>Evaluation is <strong>comparative</strong>, not absolute.</p>
+<hr />
+<h2 id="4-decision"><strong>4. Decision</strong><a class="toc-permalink" href="#4-decision" title="Permanent link to this heading">&para;</a></h2>
+<p>Agents select an action based on:<br />
+- perceived best‑fit option<br />
+- identity consistency<br />
+- coordination expectations<br />
+- time pressure</p>
+<p>Decisions may be:<br />
+- habitual<br />
+- reactive<br />
+- exploratory<br />
+- defensive  </p>
+<p>Perfect rationality is impossible by design.</p>
+<hr />
+<h2 id="5-action"><strong>5. Action</strong><a class="toc-permalink" href="#5-action" title="Permanent link to this heading">&para;</a></h2>
+<p>Actions may include:<br />
+- resource use<br />
+- communication<br />
+- cooperation or conflict<br />
+- institutional compliance or defiance  </p>
+<p>Actions modify:<br />
+- local environment<br />
+- social networks<br />
+- institutional state  </p>
+<p>Every action feeds back into the system.</p>
+<hr />
+<h2 id="6-learning"><strong>6. Learning</strong><a class="toc-permalink" href="#6-learning" title="Permanent link to this heading">&para;</a></h2>
+<p>Agents update internal models based on:<br />
+- outcome feedback<br />
+- social reinforcement<br />
+- stress response  </p>
+<p>Learning follows the <strong>learning curves</strong> module:<br />
+- uneven<br />
+- delayed<br />
+- identity‑constrained  </p>
+<p>Failure to learn is common.</p>
+<hr />
+<h2 id="7-identity-update"><strong>7. Identity Update</strong><a class="toc-permalink" href="#7-identity-update" title="Permanent link to this heading">&para;</a></h2>
+<p>Identity is updated when:<br />
+- actions conflict with self‑model<br />
+- narratives fail<br />
+- stress exceeds tolerance  </p>
+<p>Identity change may be:<br />
+- gradual<br />
+- defensive<br />
+- fragmentary<br />
+- crisis‑driven  </p>
+<p>Most loops reinforce identity rather than change it.</p>
+<hr />
+<h2 id="8-social-state-update"><strong>8. Social State Update</strong><a class="toc-permalink" href="#8-social-state-update" title="Permanent link to this heading">&para;</a></h2>
+<p>Agents update:<br />
+- trust levels<br />
+- reputation assessments<br />
+- group alignment<br />
+- coordination readiness  </p>
+<p>Social state shapes the next perception cycle.</p>
+<hr />
+<h2 id="temporal-dynamics"><strong>Temporal Dynamics</strong><a class="toc-permalink" href="#temporal-dynamics" title="Permanent link to this heading">&para;</a></h2>
+<p>The agent loop operates across multiple time scales:<br />
+- micro‑steps (attention, reaction)<br />
+- meso‑steps (learning, trust)<br />
+- macro‑steps (identity, institutional alignment)</p>
+<p>Not all updates occur every tick.</p>
+<hr />
+<h2 id="agent-types-and-loop-variants"><strong>Agent Types and Loop Variants</strong><a class="toc-permalink" href="#agent-types-and-loop-variants" title="Permanent link to this heading">&para;</a></h2>
+<p>The same loop applies to:<br />
+- individuals<br />
+- groups<br />
+- institutions  </p>
+<p>Differences arise from:<br />
+- memory depth<br />
+- learning rate<br />
+- identity inertia<br />
+- action scope  </p>
+<p>Institutions loop slower but act wider.</p>
+<hr />
+<h2 id="failure-modes"><strong>Failure Modes</strong><a class="toc-permalink" href="#failure-modes" title="Permanent link to this heading">&para;</a></h2>
+<p>Agent loop modeling fails when:<br />
+- agents see everything<br />
+- decisions ignore identity<br />
+- learning is instantaneous<br />
+- actions lack consequence  </p>
+<p>If outcomes feel scripted, the loop is broken.</p>
+<hr />
+<h2 id="integration-notes"><strong>Integration Notes</strong><a class="toc-permalink" href="#integration-notes" title="Permanent link to this heading">&para;</a></h2>
+<p>The agent loop:<br />
+- consumes identity, learning, and social modules<br />
+- feeds city and civilization simulations<br />
+- enables AI‑guided exploration<br />
+- preserves substrate coherence  </p>
+<p>This loop is the <strong>heartbeat</strong> of EcoEchoSystem cognition.</p>
+<hr />
+<h2 id="status"><strong>Status</strong><a class="toc-permalink" href="#status" title="Permanent link to this heading">&para;</a></h2>
+<p>Canonical agent loop for cognitive agent simulation.<br />
+Designed for extensibility, realism, and emergent behavior.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/ecoechosystem/templates/cognitive_agent_sim/agent_loop.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/ecoechosystem/templates/cognitive_agent_sim/agent_loop.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

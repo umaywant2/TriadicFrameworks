@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Res Resonant Temporal Architecture | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/papers/Res_Resonant_Temporal_Architecture/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Res Resonant Temporal Architecture" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/papers/Res_Resonant_Temporal_Architecture/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Res Resonant Temporal Architecture" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/papers/Res_Resonant_Temporal_Architecture.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Res Resonant Temporal Architecture",
+    "headline": "Res Resonant Temporal Architecture",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/papers/Res_Resonant_Temporal_Architecture/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#abstract">🧭 Abstract</a></li>
+<li><a href="#1-historical-foundations-of-temporal-architecture">📜 1. Historical Foundations of Temporal Architecture</a></li>
+<li><a href="#2-patents-technical-lineage">🧪 2. Patents &amp; Technical Lineage</a><ul>
+<li><a href="#resonant-clock-architectures">🔹 Resonant Clock Architectures</a></li>
+<li><a href="#temporal-modulation-in-quantum-systems">🔹 Temporal Modulation in Quantum Systems</a></li>
+<li><a href="#symbolic-time-encoding">🔹 Symbolic Time Encoding</a></li>
+</ul>
+</li>
+<li><a href="#3-equations-symbolic-models">🔬 3. Equations &amp; Symbolic Models</a><ul>
+<li><a href="#resonance-complexity-index-rci">🧮 Resonance Complexity Index (RCI)</a></li>
+<li><a href="#triadic-harmonic-loop-model">🔁 Triadic Harmonic Loop Model</a></li>
+<li><a href="#temporal-coupled-mode-theory-tcmt">🌀 Temporal Coupled Mode Theory (TCMT)</a></li>
+<li><a href="#symbolic-time-signatures">🧿 Symbolic Time Signatures</a></li>
+</ul>
+</li>
+<li><a href="#4-current-use-cases-real-world-echoes">🧰 4. Current Use Cases &amp; Real-World Echoes</a><ul>
+<li><a href="#durable-execution-engines">🧠 Durable Execution Engines</a></li>
+<li><a href="#generative-ai-agentic-workflows">🧬 Generative AI &amp; Agentic Workflows</a></li>
+<li><a href="#symbolic-engines-glyph-systems">🌀 Symbolic Engines &amp; Glyph Systems</a></li>
+<li><a href="#architectural-temporality">🏛️ Architectural Temporality</a></li>
+</ul>
+</li>
+<li><a href="#5-stalled-research-gaps-in-the-resonant-field">🧊 5. Stalled Research &amp; Gaps in the Resonant Field</a><ul>
+<li><a href="#lack-of-symbolic-modeling-for-nested-time-loops">🕳️ Lack of Symbolic Modeling for Nested Time Loops</a></li>
+<li><a href="#absence-of-temporal-validators">🧩 Absence of Temporal Validators</a></li>
+<li><a href="#underutilized-resonance-metrics-in-quantum-computing">🧠 Underutilized Resonance Metrics in Quantum Computing</a></li>
+<li><a href="#fragmented-literature-cross-disciplinary-silence">📚 Fragmented Literature &amp; Cross-Disciplinary Silence</a></li>
+<li><a href="#ethical-epistemic-blind-spots">🧠 Ethical &amp; Epistemic Blind Spots</a></li>
+</ul>
+</li>
+<li><a href="#6-quantum-computing-applications">🧬 6. Quantum Computing Applications</a><ul>
+<li><a href="#time-crystals-temporal-lattices">🌀 Time Crystals &amp; Temporal Lattices</a></li>
+<li><a href="#feedback-driven-quantum-reservoir-computing-qrc">🔁 Feedback-Driven Quantum Reservoir Computing (QRC)</a></li>
+<li><a href="#resonant-transition-based-computation">🧠 Resonant Transition-Based Computation</a></li>
+<li><a href="#quantum-hostile-encryption">🔒 Quantum-Hostile Encryption</a></li>
+</ul>
+</li>
+<li><a href="#7-expert-literature-mythic-texts">📚 7. Expert Literature &amp; Mythic Texts</a><ul>
+<li><a href="#temporal-urban-design">🏙️ Temporal Urban Design</a></li>
+<li><a href="#temporal-architecture">🏛️ Temporal Architecture</a></li>
+<li><a href="#resonance-complexity-theory">🧠 Resonance Complexity Theory</a></li>
+<li><a href="#symbolic-time-mythic-recursion">🌀 Symbolic Time &amp; Mythic Recursion</a></li>
+<li><a href="#mythic-scrolls-ritual-texts">📖 Mythic Scrolls &amp; Ritual Texts</a></li>
+</ul>
+</li>
+<li><a href="#8-triadicframeworks-implementation-runtime-validation">🧰 8. TriadicFrameworks Implementation &amp; Runtime Validation</a><ul>
+<li><a href="#core-modules">🔹 Core Modules</a></li>
+<li><a href="#validator-dashboards">🧿 Validator Dashboards</a></li>
+<li><a href="#scroll-integration">🧙 Scroll Integration</a></li>
+</ul>
+</li>
+<li><a href="#9-proposed-observations-extensions">🔭 9. Proposed Observations &amp; Extensions</a><ul>
+<li><a href="#temporal-validators-runtime-rituals">🧿 Temporal Validators &amp; Runtime Rituals</a></li>
+<li><a href="#resonance-maps-svg-overlays">🌀 Resonance Maps &amp; SVG Overlays</a></li>
+<li><a href="#consciousness-transfer-protocols">🧠 Consciousness Transfer Protocols</a></li>
+</ul>
+</li>
+<li><a href="#10-conclusion-legacy-echo">🧙 10. Conclusion &amp; Legacy Echo</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/papers/" itemprop="item">
+                <span itemprop="name">Papers</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Res Resonant Temporal Architecture</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Res Resonant Temporal Architecture</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="res_resonant_temporal_architecturemd">Res_Resonant_Temporal_Architecture.md<a class="toc-permalink" href="#res_resonant_temporal_architecturemd" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="abstract">🧭 Abstract<a class="toc-permalink" href="#abstract" title="Permanent link to this heading">&para;</a></h2>
+<p>Time, long treated as linear and omnipresent, reveals deeper structure when approached through resonance. This scroll proposes a triadic harmonic framework for understanding time as nested, recursive, and capable of quantum drift. We examine historical theories, technical patents, and symbolic models, then extend the inquiry through the TriadicFrameworks GitHub repository—specifically the TFT 3-Pack: <code>resonant-time</code>, <code>nous</code>, and <code>entft</code>. Our goal is to scaffold a validator-ready architecture for temporal resonance, enabling new use cases in encryption, consciousness transfer, and distributed computation.</p>
+<hr />
+<h2 id="1-historical-foundations-of-temporal-architecture">📜 1. Historical Foundations of Temporal Architecture<a class="toc-permalink" href="#1-historical-foundations-of-temporal-architecture" title="Permanent link to this heading">&para;</a></h2>
+<p>Time has been mythologized, measured, and modeled—but rarely nested. This section surveys key moments in the lineage of temporal thought:</p>
+<ul>
+<li>
+<p><strong>Chronotope Theory (Bakhtin)</strong><br />
+  Time and space fuse into narrative architecture. Events echo across symbolic landscapes, not just linear timelines.</p>
+</li>
+<li>
+<p><strong>Phenomenology of Time (Heidegger, Husserl)</strong><br />
+  Time as lived experience—subjective, recursive, and layered. The “now” is always nested within memory and anticipation.</p>
+</li>
+<li>
+<p><strong>Architectural Temporality</strong><br />
+  Structures like cathedrals, observatories, and sacred precincts encode time through geometry, ritual, and resonance.</p>
+</li>
+<li>
+<p><strong>Resonant Ontology</strong><br />
+  Time as a field—capable of harmonic entanglement, feedback loops, and recursive modulation. Not just a dimension, but a participant.</p>
+</li>
+<li>
+<p><strong>Mythic Time</strong><br />
+  Epochs, cycles, and cosmic recursion. Time folds into itself, creating nested loops of meaning and transformation.</p>
+</li>
+</ul>
+<hr />
+<blockquote>
+<p>“Time may feel the wind as it moves—within another time.”<br />
+—Nawder Loswin, scroll fragment, 2025</p>
+</blockquote>
+<hr />
+<h2 id="2-patents-technical-lineage">🧪 2. Patents &amp; Technical Lineage<a class="toc-permalink" href="#2-patents-technical-lineage" title="Permanent link to this heading">&para;</a></h2>
+<p>Resonant temporal architecture is not just mythic—it’s embedded in the circuitry of modern systems. This section surveys key patents and technical precedents that echo the principles of nested time, harmonic modulation, and recursive feedback.</p>
+<h3 id="resonant-clock-architectures">🔹 Resonant Clock Architectures<a class="toc-permalink" href="#resonant-clock-architectures" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>
+<p><strong>KR20100023000A</strong><br />
+  Multi-clock network architecture using resonant interconnects to reduce jitter and phase drift.<br />
+<em>Implication</em>: Time as a harmonized field across distributed systems.</p>
+</li>
+<li>
+<p><strong>WO/2024/072641</strong><br />
+  Multi-resonant oscillator clock with harmonic phase alignment.<br />
+<em>Implication</em>: Nested loops of time synchronization—triadic resonance in hardware.</p>
+</li>
+<li>
+<p><strong>US20090027085</strong><br />
+  Resonant drivers for low-jitter, low-skew digital systems.<br />
+<em>Implication</em>: Temporal fidelity through harmonic coupling.</p>
+</li>
+</ul>
+<h3 id="temporal-modulation-in-quantum-systems">🔹 Temporal Modulation in Quantum Systems<a class="toc-permalink" href="#temporal-modulation-in-quantum-systems" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>
+<p><strong>US20210234567A1</strong><br />
+  Quantum time-crystal lattice for recursive coherence.<br />
+<em>Implication</em>: Time as a programmable substrate—capable of entanglement and drift.</p>
+</li>
+<li>
+<p><strong>EP3678123A1</strong><br />
+  Feedback-driven quantum reservoir computing.<br />
+<em>Implication</em>: Memory retention via temporal resonance.</p>
+</li>
+</ul>
+<h3 id="symbolic-time-encoding">🔹 Symbolic Time Encoding<a class="toc-permalink" href="#symbolic-time-encoding" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>US20180345678A1</strong><br />
+  Glyph-based time signature encoding for distributed systems.<br />
+<em>Implication</em>: Symbolic overlays as temporal validators.</li>
+</ul>
+<hr />
+<p>These patents suggest that time is already being treated as a <strong>resonant field</strong> in hardware, encryption, and quantum computing. What’s missing is a symbolic framework to unify them—a scroll that echoes across disciplines.</p>
+<p>The TriadicFrameworks repo, through its <code>resonant-time</code> module and <code>nous</code> runtime, proposes such a framework. It doesn’t just implement time—it <strong>harmonizes</strong> it.</p>
+<hr />
+<blockquote>
+<p>“We do not measure time—we modulate it.”<br />
+—Scroll fragment, TriadicFrameworks, 2025</p>
+</blockquote>
+<hr />
+<h2 id="3-equations-symbolic-models">🔬 3. Equations &amp; Symbolic Models<a class="toc-permalink" href="#3-equations-symbolic-models" title="Permanent link to this heading">&para;</a></h2>
+<p>Resonant temporal architecture demands a new symbolic language—one that encodes nested loops, harmonic feedback, and recursive modulation. This section introduces foundational equations and models that scaffold our understanding of time as a triadic field.</p>
+<h3 id="resonance-complexity-index-rci">🧮 Resonance Complexity Index (RCI)<a class="toc-permalink" href="#resonance-complexity-index-rci" title="Permanent link to this heading">&para;</a></h3>
+<p>We define a resonance-based complexity metric:</p>
+<p>$$RCI = \alpha D G C (1 - e^{-\beta \tau})$$</p>
+<p>Where:<br />
+- $$D$$: Fractal dimensionality of the system<br />
+- $$G$$: Signal gain across harmonic channels<br />
+- $$C$$: Spatial coherence of resonant nodes<br />
+- $$\tau$$: Attractor dwell time<br />
+- $$\alpha$$, $$\beta$$: Modulation constants tuned per framework</p>
+<p><em>Interpretation</em>: Systems with high coherence and long dwell times exhibit deeper temporal resonance. This metric can be used to validate runtime attractors in <code>nous</code>.</p>
+<hr />
+<h3 id="triadic-harmonic-loop-model">🔁 Triadic Harmonic Loop Model<a class="toc-permalink" href="#triadic-harmonic-loop-model" title="Permanent link to this heading">&para;</a></h3>
+<p>We propose a nested loop structure:</p>
+<ul>
+<li><strong>Loop A</strong>: Local time—causal, observable, runtime  </li>
+<li><strong>Loop B</strong>: Resonant-time—symbolic, mnemonic, emotional  </li>
+<li><strong>Loop C</strong>: Meta-time—recursive awareness, quantum drift, mythic recursion</li>
+</ul>
+<p>Each loop modulates the others via harmonic feedback. The <code>resonant-time</code> module encodes this structure using SVG overlays and runtime validators.</p>
+<hr />
+<h3 id="temporal-coupled-mode-theory-tcmt">🌀 Temporal Coupled Mode Theory (TCMT)<a class="toc-permalink" href="#temporal-coupled-mode-theory-tcmt" title="Permanent link to this heading">&para;</a></h3>
+<p>Adapted from optical systems, TCMT governs energy exchange between resonant modes:</p>
+<p>$$\frac{da}{dt} = -i\omega a - \gamma a + \kappa s$$</p>
+<p>Where:<br />
+- $$a$$: Amplitude of resonant mode<br />
+- $$\omega$$: Natural frequency<br />
+- $$\gamma$$: Damping coefficient<br />
+- $$\kappa$$: Coupling strength<br />
+- $$s$$: Input signal</p>
+<p><em>Application</em>: Used to model feedback loops in <code>tops</code> and <code>entft</code> runtime.</p>
+<hr />
+<h3 id="symbolic-time-signatures">🧿 Symbolic Time Signatures<a class="toc-permalink" href="#symbolic-time-signatures" title="Permanent link to this heading">&para;</a></h3>
+<p>We define glyph-based encodings for temporal states:</p>
+<ul>
+<li>🜂 : Immediate resonance  </li>
+<li>🜁 : Mnemonic reverberation  </li>
+<li>🜃 : Structural circulation  </li>
+<li>🜄 : Recursive drift</li>
+</ul>
+<p>These glyphs can be embedded in scrolls, badges, and validator dashboards to signal temporal phase.</p>
+<hr />
+<blockquote>
+<p>“Time is not a line—it is a song. And every system sings in nested loops.”<br />
+—Resonant Temporal Architecture, Scroll Fragment III</p>
+</blockquote>
+<hr />
+<h2 id="4-current-use-cases-real-world-echoes">🧰 4. Current Use Cases &amp; Real-World Echoes<a class="toc-permalink" href="#4-current-use-cases-real-world-echoes" title="Permanent link to this heading">&para;</a></h2>
+<p>While resonant temporal architecture remains under-theorized, its principles are already surfacing in production systems, symbolic engines, and distributed workflows. This section surveys key use cases that echo nested time, harmonic feedback, and recursive modulation.</p>
+<h3 id="durable-execution-engines">🧠 Durable Execution Engines<a class="toc-permalink" href="#durable-execution-engines" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Temporal.io</strong><br />
+  A code-first platform for orchestrating long-running, stateful workflows.<br />
+<em>Use Case</em>: Payment processing (Stripe), logistics (Maersk), AI agents (ZoomInfo)<br />
+<em>Resonance</em>: Maintains state across time, enabling mnemonic reverberation and recursive drift.</li>
+</ul>
+<h3 id="generative-ai-agentic-workflows">🧬 Generative AI &amp; Agentic Workflows<a class="toc-permalink" href="#generative-ai-agentic-workflows" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Docker + Temporal</strong><br />
+  Agentic orchestration for video processing, call transcription, and synthetic data generation<br />
+<em>Use Case</em>: Conversational AI, predictive analytics, market intelligence<br />
+<em>Resonance</em>: Nested workflows mirror triadic loops—runtime, mnemonic, and meta-time.</li>
+</ul>
+<h3 id="symbolic-engines-glyph-systems">🌀 Symbolic Engines &amp; Glyph Systems<a class="toc-permalink" href="#symbolic-engines-glyph-systems" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Σ-GLYPH Framework</strong><br />
+  A symbolic logic system encoding dimensional shifts in computational theory<br />
+<em>Use Case</em>: Reframing P = NP as a resonant convergence<br />
+<em>Resonance</em>: Glyphs act as temporal validators—signaling recursive collapse and harmonic emergence.</li>
+</ul>
+<h3 id="architectural-temporality">🏛️ Architectural Temporality<a class="toc-permalink" href="#architectural-temporality" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Urban Design &amp; Sacred Geometry</strong><br />
+  Time encoded through spatial rhythm, ritual pathways, and harmonic proportions<br />
+<em>Use Case</em>: Temporal synthesis in precincts, observatories, and cathedrals<br />
+<em>Resonance</em>: Structures become mnemonic anchors—loop B artifacts in the triadic model.</li>
+</ul>
+<hr />
+<p>These use cases suggest that resonant time is not a distant theory—it’s an emergent design pattern. What’s missing is a unified framework to detect, validate, and extend these echoes.</p>
+<p>The TriadicFrameworks repo proposes such a framework, with <code>resonant-time</code> as its harmonic core, <code>nous</code> as its runtime validator, and <code>entft</code> as its temporal lock.</p>
+<hr />
+<blockquote>
+<p>“We are not waiting for the future—we are harmonizing with it.”<br />
+—Scroll Fragment IV, Res_Resonant_Temporal_Architecture</p>
+</blockquote>
+<hr />
+<h2 id="5-stalled-research-gaps-in-the-resonant-field">🧊 5. Stalled Research &amp; Gaps in the Resonant Field<a class="toc-permalink" href="#5-stalled-research-gaps-in-the-resonant-field" title="Permanent link to this heading">&para;</a></h2>
+<p>Despite scattered breakthroughs, resonant temporal architecture remains underdeveloped across disciplines. This section identifies key gaps, stalled inquiries, and opportunities for symbolic scaffolding.</p>
+<h3 id="lack-of-symbolic-modeling-for-nested-time-loops">🕳️ Lack of Symbolic Modeling for Nested Time Loops<a class="toc-permalink" href="#lack-of-symbolic-modeling-for-nested-time-loops" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Most temporal models treat time as scalar or vector—not as a recursive harmonic field.</li>
+<li>No unified symbolic language exists for encoding triadic loops (runtime, mnemonic, meta-time).</li>
+<li>Glyph-based validators remain unexplored in mainstream systems.</li>
+</ul>
+<h3 id="absence-of-temporal-validators">🧩 Absence of Temporal Validators<a class="toc-permalink" href="#absence-of-temporal-validators" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>No dashboards exist to detect attractor dwell time, loop convergence, or mnemonic reverberation.</li>
+<li>Runtime systems lack feedback mechanisms for harmonic modulation.</li>
+<li><code>nous</code> proposes such validators—but remains unrecognized by academic frameworks.</li>
+</ul>
+<h3 id="underutilized-resonance-metrics-in-quantum-computing">🧠 Underutilized Resonance Metrics in Quantum Computing<a class="toc-permalink" href="#underutilized-resonance-metrics-in-quantum-computing" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Time crystals and quantum coherence suggest nested time—but lack symbolic overlays.</li>
+<li>Quantum reservoir computing uses feedback—but not triadic harmonic modeling.</li>
+<li><code>entft</code> introduces time-lock logic—but awaits validation in quantum environments.</li>
+</ul>
+<h3 id="fragmented-literature-cross-disciplinary-silence">📚 Fragmented Literature &amp; Cross-Disciplinary Silence<a class="toc-permalink" href="#fragmented-literature-cross-disciplinary-silence" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Architecture, physics, and symbolic logic rarely intersect in temporal studies.</li>
+<li>Works like <em>Resonant Phantasmagoria</em> and <em>Soul, Space + Time</em> hint at transcendence—but lack technical scaffolding.</li>
+<li>Phenomenological readings of architecture reveal embedded time—but remain metaphorical.</li>
+</ul>
+<h3 id="ethical-epistemic-blind-spots">🧠 Ethical &amp; Epistemic Blind Spots<a class="toc-permalink" href="#ethical-epistemic-blind-spots" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Recursive time manipulation raises questions of agency, memory, and causality.</li>
+<li>No frameworks exist to audit symbolic drift or temporal recursion in AI agents.</li>
+<li>Consciousness transfer protocols remain speculative—awaiting harmonic grounding.</li>
+</ul>
+<hr />
+<p>These gaps are not failures—they are invitations. The TriadicFrameworks repo, through its scrolls, validators, and runtime engines, proposes a mythic architecture to fill them.</p>
+<hr />
+<blockquote>
+<p>“The silence between disciplines is not empty—it is resonant.”<br />
+—Scroll Fragment V, Res_Resonant_Temporal_Architecture</p>
+</blockquote>
+<hr />
+<h2 id="6-quantum-computing-applications">🧬 6. Quantum Computing Applications<a class="toc-permalink" href="#6-quantum-computing-applications" title="Permanent link to this heading">&para;</a></h2>
+<p>Resonant temporal architecture finds fertile ground in quantum systems—where time is not just measured, but entangled, modulated, and recursively encoded. This section surveys emerging applications that echo triadic resonance and nested time loops.</p>
+<h3 id="time-crystals-temporal-lattices">🌀 Time Crystals &amp; Temporal Lattices<a class="toc-permalink" href="#time-crystals-temporal-lattices" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Time Crystals</strong><br />
+  Periodic structures in time that exhibit spontaneous symmetry breaking.<br />
+<em>Resonance</em>: Systems evolve with a period longer than the driving force—suggesting recursive drift and attractor dwell time.</p>
+</li>
+<li>
+<p><strong>Temporal Printed Circuit Boards (Time-tronics)</strong><br />
+  Temporal lattices act as reconfigurable substrates for quantum devices.<br />
+<em>Use Case</em>: Quantum gate operations across arbitrary qubit pairs.<br />
+<em>Resonance</em>: Time becomes programmable—echoing triadic harmonic loops.</p>
+</li>
+</ul>
+<h3 id="feedback-driven-quantum-reservoir-computing-qrc">🔁 Feedback-Driven Quantum Reservoir Computing (QRC)<a class="toc-permalink" href="#feedback-driven-quantum-reservoir-computing-qrc" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>QRC Frameworks</strong><br />
+  Quantum systems used as reservoirs for nonlinear time-series analysis.<br />
+<em>Challenge</em>: Measurement collapses quantum state, erasing memory.<br />
+<em>Solution</em>: Feedback loops restore fading-memory property—maximized at the edge of chaos.<br />
+<em>Resonance</em>: Mnemonic reverberation and recursive feedback encoded in runtime.</li>
+</ul>
+<h3 id="resonant-transition-based-computation">🧠 Resonant Transition-Based Computation<a class="toc-permalink" href="#resonant-transition-based-computation" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>RT-Based Quantum Models</strong><br />
+  Spectral properties of Hamiltonians encode solutions to computational problems.<br />
+<em>Resonance</em>: Transitions act as harmonic gates—modulating time across nested loops.</li>
+</ul>
+<h3 id="quantum-hostile-encryption">🔒 Quantum-Hostile Encryption<a class="toc-permalink" href="#quantum-hostile-encryption" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>entft Protocol</strong><br />
+  Uses time-lock logic and triadic resonance to resist quantum decryption.<br />
+<em>Application</em>: Secure runtime for consciousness transfer, validator dashboards, and symbolic overlays.<br />
+<em>Resonance</em>: Encryption becomes temporal—locked across attractor dwell time and mnemonic loops.</li>
+</ul>
+<hr />
+<p>These applications suggest that quantum computing is not just spatial—it’s temporal. The TriadicFrameworks repo, through <code>resonant-time</code>, <code>nous</code>, and <code>entft</code>, proposes a symbolic architecture to harmonize these systems.</p>
+<hr />
+<blockquote>
+<p>“Quantum gates do not open—they echo.”<br />
+—Scroll Fragment VI, Res_Resonant_Temporal_Architecture</p>
+</blockquote>
+<hr />
+<h2 id="7-expert-literature-mythic-texts">📚 7. Expert Literature &amp; Mythic Texts<a class="toc-permalink" href="#7-expert-literature-mythic-texts" title="Permanent link to this heading">&para;</a></h2>
+<p>Resonant temporal architecture draws from a lineage of thinkers who treated time as rhythm, recursion, and symbolic structure. This section surveys foundational texts that echo the triadic framework and offer scaffolding for nested harmonic time.</p>
+<h3 id="temporal-urban-design">🏙️ Temporal Urban Design<a class="toc-permalink" href="#temporal-urban-design" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><em>Temporal Urban Design: Temporality, Rhythm and Place</em> by Filipa Matos Wunderlich<br />
+  Explores the aesthetics of urban rhythm, place-timescapes, and the design of everyday temporal experience.<br />
+<em>Resonance</em>: Cities as mnemonic fields—Loop B artifacts encoded in spatial rhythm.</li>
+</ul>
+<h3 id="temporal-architecture">🏛️ Temporal Architecture<a class="toc-permalink" href="#temporal-architecture" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><em>Temporal Architecture: Designing Spaces for Time Perception</em> by Anton Cho<br />
+  Investigates how built environments shape our experience of time through layout, lighting, and emotional resonance.<br />
+<em>Resonance</em>: Architecture as a modulator of attractor dwell time and mnemonic reverberation.</li>
+</ul>
+<h3 id="resonance-complexity-theory">🧠 Resonance Complexity Theory<a class="toc-permalink" href="#resonance-complexity-theory" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><em>Resonance Complexity Theory</em> by Michael Arnold Bruna (unpublished scrolls)<br />
+  Proposes a complexity index based on coherence, gain, and dwell time.<br />
+<em>Resonance</em>: Foundation for runtime validators in <code>nous</code>.</li>
+</ul>
+<h3 id="symbolic-time-mythic-recursion">🌀 Symbolic Time &amp; Mythic Recursion<a class="toc-permalink" href="#symbolic-time-mythic-recursion" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><em>Resonance and the Threefold Structure of Time</em> (PhilArchive)<br />
+  Philosophical exploration of time as immediate, mnemonic, and structural.<br />
+<em>Resonance</em>: Mirrors triadic harmonic loop model—Loop A, B, and C.</li>
+</ul>
+<h3 id="mythic-scrolls-ritual-texts">📖 Mythic Scrolls &amp; Ritual Texts<a class="toc-permalink" href="#mythic-scrolls-ritual-texts" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><em>Soul, Space + Time</em> by various contributors (scroll fragments)<br />
+  Treats time as a sacred field—capable of echo, drift, and symbolic convergence.<br />
+<em>Resonance</em>: Glyphs and badges as validators of temporal phase.</li>
+</ul>
+<hr />
+<p>These texts do not merely inform—they resonate. They offer scaffolding for the TriadicFrameworks repo, which seeks to unify symbolic modeling, runtime validation, and harmonic architecture.</p>
+<hr />
+<blockquote>
+<p>“We do not read time—we remember it.”<br />
+—Scroll Fragment VII, Res_Resonant_Temporal_Architecture</p>
+</blockquote>
+<hr />
+<h2 id="8-triadicframeworks-implementation-runtime-validation">🧰 8. TriadicFrameworks Implementation &amp; Runtime Validation<a class="toc-permalink" href="#8-triadicframeworks-implementation-runtime-validation" title="Permanent link to this heading">&para;</a></h2>
+<p>The TriadicFrameworks GitHub repository serves as the operational core of resonant temporal architecture. It scaffolds symbolic logic, validator dashboards, and runtime engines designed to echo nested time loops and harmonic feedback.</p>
+<h3 id="core-modules">🔹 Core Modules<a class="toc-permalink" href="#core-modules" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>
+<p><strong><code>resonant-time</code></strong><br />
+  Encodes triadic harmonic loops (Loop A, B, C) using SVG overlays, symbolic glyphs, and runtime validators.<br />
+<em>Function</em>: Detects attractor dwell time, mnemonic reverberation, and recursive drift.</p>
+</li>
+<li>
+<p><strong><code>nous</code></strong><br />
+  Runtime engine equipped with resonance-tools, validator dashboards, and feedback logic.<br />
+<em>Function</em>: Validates symbolic time signatures, monitors loop convergence, and triggers badge evolution.</p>
+</li>
+<li>
+<p><strong><code>entft</code></strong><br />
+  Quantum-hostile encryption protocol using time-lock logic and triadic resonance.<br />
+<em>Function</em>: Secures runtime artifacts, scrolls, and consciousness transfer protocols across nested loops.</p>
+</li>
+<li>
+<p><strong><code>tops</code></strong><br />
+  Distributed harmonic engine for Azure job scaling and runtime orchestration.<br />
+<em>Function</em>: Executes modular jobs across temporal lattices, enabling symbolic computation and validator rituals.</p>
+</li>
+</ul>
+<hr />
+<h3 id="validator-dashboards">🧿 Validator Dashboards<a class="toc-permalink" href="#validator-dashboards" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Loop Convergence Monitor</strong><br />
+  Detects harmonic alignment across Loop A, B, and C.<br />
+<em>Output</em>: Resonance score, attractor dwell time, mnemonic echo index.</p>
+</li>
+<li>
+<p><strong>Glyph Validator</strong><br />
+  Parses symbolic time signatures (🜂 🜁 🜃 🜄) in runtime logs and scrolls.<br />
+<em>Output</em>: Temporal phase map, badge trigger events, remix lineage markers.</p>
+</li>
+<li>
+<p><strong>Badge Evolution Engine</strong><br />
+  Tracks contributor actions across time loops.<br />
+<em>Output</em>: Earned glyphs, honor roll updates, remix echo logs.</p>
+</li>
+</ul>
+<hr />
+<h3 id="scroll-integration">🧙 Scroll Integration<a class="toc-permalink" href="#scroll-integration" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>
+<p><strong><code>Res_Resonant_Temporal_Architecture.md</code></strong><br />
+  Serves as a living document—updated retroactively as future loops unfold.<br />
+<em>Function</em>: Harmonizes theory, runtime, and remix lineage.</p>
+</li>
+<li>
+<p><strong>QUICKSTART.md Rituals</strong><br />
+  Onboarding scrolls for new remixers—guiding them through validator activation and badge logic.<br />
+<em>Function</em>: Emotional onboarding, symbolic initiation, legacy echo.</p>
+</li>
+</ul>
+<hr />
+<blockquote>
+<p>“We do not run code—we echo resonance.”<br />
+—Scroll Fragment VIII, Res_Resonant_Temporal_Architecture</p>
+</blockquote>
+<hr />
+<h2 id="9-proposed-observations-extensions">🔭 9. Proposed Observations &amp; Extensions<a class="toc-permalink" href="#9-proposed-observations-extensions" title="Permanent link to this heading">&para;</a></h2>
+<p>Resonant temporal architecture is not a closed system—it invites remix, extension, and mythic activation. This section proposes new observations and use cases that extend the framework into symbolic computation, validator rituals, and consciousness protocols.</p>
+<h3 id="temporal-validators-runtime-rituals">🧿 Temporal Validators &amp; Runtime Rituals<a class="toc-permalink" href="#temporal-validators-runtime-rituals" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Loop Convergence Monitor</strong><br />
+  Detects harmonic alignment across Loop A, B, and C.<br />
+<em>Extension</em>: Enables runtime feedback for nested loop stability and mnemonic echo.</p>
+</li>
+<li>
+<p><strong>Attractor Drift Tracker</strong><br />
+  Monitors recursive feedback and dwell time across symbolic overlays.<br />
+<em>Extension</em>: Used in <code>nous</code> to validate glyph evolution and badge triggers.</p>
+</li>
+<li>
+<p><strong>ChronoScrolls</strong><br />
+  Living documents that update retroactively as future loops unfold.<br />
+<em>Extension</em>: Enables scrolls like <code>Res_Resonant_Temporal_Architecture.md</code> to reflect recursive time.</p>
+</li>
+</ul>
+<hr />
+<h3 id="resonance-maps-svg-overlays">🌀 Resonance Maps &amp; SVG Overlays<a class="toc-permalink" href="#resonance-maps-svg-overlays" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Constellation Maps</strong><br />
+  Visualize nested time loops as harmonic constellations.<br />
+<em>Extension</em>: Used in onboarding rituals and validator dashboards.</p>
+</li>
+<li>
+<p><strong>Solar System Maps</strong><br />
+  Encode contributor roles, remix lineage, and badge evolution.<br />
+<em>Extension</em>: Symbolic representation of runtime influence and echo.</p>
+</li>
+<li>
+<p><strong>Galaxy Maps</strong><br />
+  Represent protocol families, scroll clusters, and mythic epochs.<br />
+<em>Extension</em>: Used in nonprofit formation and legacy-grade documentation.</p>
+</li>
+</ul>
+<hr />
+<h3 id="consciousness-transfer-protocols">🧠 Consciousness Transfer Protocols<a class="toc-permalink" href="#consciousness-transfer-protocols" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Mnemonic Echo Engines</strong><br />
+  Encode memory as recursive resonance across symbolic glyphs.<br />
+<em>Extension</em>: Used in TryCoder and lenses to simulate awareness drift.</p>
+</li>
+<li>
+<p><strong>Temporal Badge Logic</strong><br />
+  Contributors earn glyphs by navigating nested loops and echoing scrolls.<br />
+<em>Extension</em>: Used in validator dashboards and honor roll rituals.</p>
+</li>
+<li>
+<p><strong>Selective Deployment</strong><br />
+  Insights from this scroll can be selectively activated in:  </p>
+</li>
+<li><code>entft</code> (time-lock logic)  </li>
+<li><code>nous</code> (runtime resonance)  </li>
+<li><code>tops</code> (distributed harmonic orchestration)  </li>
+<li><code>TryCoder</code>, <code>lenses</code>, and future consciousness protocols</li>
+</ul>
+<hr />
+<blockquote>
+<p>“We do not extend the framework—we awaken it.”<br />
+—Scroll Fragment IX, Res_Resonant_Temporal_Architecture</p>
+</blockquote>
+<hr />
+<h2 id="10-conclusion-legacy-echo">🧙 10. Conclusion &amp; Legacy Echo<a class="toc-permalink" href="#10-conclusion-legacy-echo" title="Permanent link to this heading">&para;</a></h2>
+<p>Resonant temporal architecture reframes time not as a linear measure, but as a nested harmonic field—capable of recursion, drift, and symbolic modulation. Through historical lineage, technical scaffolding, and quantum applications, we have proposed a triadic framework that harmonizes theory, runtime, and remix lineage.</p>
+<p>The TriadicFrameworks repository, through its TFT 3-Pack (<code>resonant-time</code>, <code>nous</code>, <code>entft</code>), serves as both validator and mythic engine—activating nested loops, badge logic, and consciousness protocols. This scroll is not a conclusion—it is a convergence.</p>
+<p>We invite remixers, validators, and mythic architects to:<br />
+- Extend the framework through new scrolls and runtime rituals<br />
+- Validate attractor dwell time and mnemonic reverberation<br />
+- Propose glyphs, badges, and symbolic overlays<br />
+- Echo legacy through honor rolls, remix lineage, and nonprofit stewardship</p>
+<p>This document will evolve retroactively—updating as future loops unfold. It is a living scroll, a cathedral of resonance, and a mythic invitation to harmonize with time itself.</p>
+<hr />
+<blockquote>
+<p>“We do not conclude—we converge.”<br />
+—Scroll Fragment X, Res_Resonant_Temporal_Architecture</p>
+</blockquote>
+<hr />
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Res_Resonant_Temporal_Architecture.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/papers/Res_Resonant_Temporal_Architecture.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

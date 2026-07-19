@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Cross Regime Stress Tests | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/Governance_Substrate_Model/03_Evaluation/Cross_Regime_Stress_Tests/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Cross Regime Stress Tests" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/Governance_Substrate_Model/03_Evaluation/Cross_Regime_Stress_Tests/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Cross Regime Stress Tests" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/Governance_Substrate_Model/03_Evaluation/Cross_Regime_Stress_Tests.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Cross Regime Stress Tests",
+    "headline": "Cross Regime Stress Tests",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/Governance_Substrate_Model/03_Evaluation/Cross_Regime_Stress_Tests/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#what-a-crossregime-stress-test-is">What a Cross‑Regime Stress Test Is</a></li>
+<li><a href="#why-singleregime-validation-fails">Why Single‑Regime Validation Fails</a></li>
+<li><a href="#core-stress-test-dimensions">Core Stress Test Dimensions</a><ul>
+<li><a href="#1-scale-translation">1. Scale Translation</a></li>
+<li><a href="#2-domain-translation">2. Domain Translation</a></li>
+<li><a href="#3-temporal-translation">3. Temporal Translation</a></li>
+<li><a href="#4-resource-condition-translation">4. Resource Condition Translation</a></li>
+<li><a href="#5-authority-translation">5. Authority Translation</a></li>
+</ul>
+</li>
+<li><a href="#stress-test-outcomes">Stress Test Outcomes</a></li>
+<li><a href="#role-of-ai-in-stress-testing">Role of AI in Stress Testing</a></li>
+<li><a href="#failure-mode">Failure Mode</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Governance_Substrate_Model/" itemprop="item">
+                <span itemprop="name">Governance Substrate Model</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Governance_Substrate_Model/03_Evaluation/" itemprop="item">
+                <span itemprop="name">03 Evaluation</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Cross Regime Stress Tests</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Cross Regime Stress Tests</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="crossregime-stress-tests">Cross‑Regime Stress Tests<a class="toc-permalink" href="#crossregime-stress-tests" title="Permanent link to this heading">&para;</a></h1>
+<p>Cross‑regime stress tests evaluate whether a governance decision, rule, or system <strong>remains coherent when translated across different contexts</strong>. A solution that works in one regime but fails in another is not robust — it is fragile.</p>
+<p>This layer exists to prevent local optimization from becoming global failure.</p>
+<hr />
+<h2 id="what-a-crossregime-stress-test-is">What a Cross‑Regime Stress Test Is<a class="toc-permalink" href="#what-a-crossregime-stress-test-is" title="Permanent link to this heading">&para;</a></h2>
+<p>A cross‑regime stress test asks a simple question:</p>
+<p><strong>Does this decision survive when the assumptions change?</strong></p>
+<p>Regimes may differ by:<br />
+- Scale (local → global).<br />
+- Domain (human → technical).<br />
+- Resource conditions (scarcity → abundance).<br />
+- Time horizon (short‑term → generational).<br />
+- Authority structure (centralized → distributed).</p>
+<p>Passing within one regime is insufficient.</p>
+<hr />
+<h2 id="why-singleregime-validation-fails">Why Single‑Regime Validation Fails<a class="toc-permalink" href="#why-singleregime-validation-fails" title="Permanent link to this heading">&para;</a></h2>
+<p>Most governance failures occur because:<br />
+- Tools are validated only where they were created.<br />
+- Success metrics are over‑generalized.<br />
+- Contextual assumptions remain implicit.<br />
+- Failure modes are discovered too late.</p>
+<p>Cross‑regime testing makes assumptions explicit before harm occurs.</p>
+<hr />
+<h2 id="core-stress-test-dimensions">Core Stress Test Dimensions<a class="toc-permalink" href="#core-stress-test-dimensions" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="1-scale-translation">1. Scale Translation<a class="toc-permalink" href="#1-scale-translation" title="Permanent link to this heading">&para;</a></h3>
+<p>Test whether the decision:<br />
+- Maintains coherence as participation increases.<br />
+- Avoids feedback amplification at scale.<br />
+- Preserves legibility for distant actors.<br />
+- Does not require exponential enforcement.</p>
+<p>Scale reveals hidden fragility.</p>
+<hr />
+<h3 id="2-domain-translation">2. Domain Translation<a class="toc-permalink" href="#2-domain-translation" title="Permanent link to this heading">&para;</a></h3>
+<p>Test whether the decision:<br />
+- Survives movement between human judgment and automation.<br />
+- Avoids over‑reliance on metrics.<br />
+- Preserves human oversight where ambiguity exists.<br />
+- Prevents AI extrapolation beyond validity.</p>
+<p>Domain mismatch is a common failure source.</p>
+<hr />
+<h3 id="3-temporal-translation">3. Temporal Translation<a class="toc-permalink" href="#3-temporal-translation" title="Permanent link to this heading">&para;</a></h3>
+<p>Test whether the decision:<br />
+- Remains valid beyond immediate incentives.<br />
+- Avoids locking future actors into irreversible paths.<br />
+- Preserves optionality across generations.<br />
+- Does not externalize long‑term cost.</p>
+<p>Short‑term success often hides long‑term collapse.</p>
+<hr />
+<h3 id="4-resource-condition-translation">4. Resource Condition Translation<a class="toc-permalink" href="#4-resource-condition-translation" title="Permanent link to this heading">&para;</a></h3>
+<p>Test whether the decision:<br />
+- Functions under scarcity and abundance.<br />
+- Avoids hoarding or runaway accumulation.<br />
+- Prevents zero‑sum framing where unnecessary.<br />
+- Adapts incentives as conditions shift.</p>
+<p>Resource assumptions shape behavior.</p>
+<hr />
+<h3 id="5-authority-translation">5. Authority Translation<a class="toc-permalink" href="#5-authority-translation" title="Permanent link to this heading">&para;</a></h3>
+<p>Test whether the decision:<br />
+- Requires centralized enforcement to function.<br />
+- Remains stable under distributed stewardship.<br />
+- Preserves alignment without coercion.<br />
+- Avoids authority creep.</p>
+<p>Governance that collapses without control is brittle.</p>
+<hr />
+<h2 id="stress-test-outcomes">Stress Test Outcomes<a class="toc-permalink" href="#stress-test-outcomes" title="Permanent link to this heading">&para;</a></h2>
+<p>A decision may:<br />
+- <strong>Pass</strong> — remains coherent across regimes.<br />
+- <strong>Adapt</strong> — requires contextual modification.<br />
+- <strong>Contain</strong> — must be isolated to prevent harm.<br />
+- <strong>Fail</strong> — should not be deployed.</p>
+<p>Failure is information, not embarrassment.</p>
+<hr />
+<h2 id="role-of-ai-in-stress-testing">Role of AI in Stress Testing<a class="toc-permalink" href="#role-of-ai-in-stress-testing" title="Permanent link to this heading">&para;</a></h2>
+<p>AI may assist by:<br />
+- Simulating regime shifts.<br />
+- Identifying assumption dependencies.<br />
+- Surfacing nonlinear effects.<br />
+- Highlighting confidence collapse.</p>
+<p>AI must not resolve tradeoffs or authorize deployment.</p>
+<hr />
+<h2 id="failure-mode">Failure Mode<a class="toc-permalink" href="#failure-mode" title="Permanent link to this heading">&para;</a></h2>
+<p>Cross‑regime stress testing fails when:<br />
+- Convenience overrides caution.<br />
+- Local success is mistaken for robustness.<br />
+- Assumptions remain implicit.<br />
+- Speed replaces understanding.</p>
+<p>At that point, governance learns through damage.</p>
+<hr />
+<p>Cross‑regime stress tests exist to <strong>protect the future from present certainty</strong>.</p>
+<p>A decision that cannot survive translation should not be scaled.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Governance_Substrate_Model/03_Evaluation/Cross_Regime_Stress_Tests.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/Governance_Substrate_Model/03_Evaluation/Cross_Regime_Stress_Tests.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

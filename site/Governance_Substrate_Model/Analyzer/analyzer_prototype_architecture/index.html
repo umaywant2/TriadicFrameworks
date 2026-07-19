@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Analyzer Prototype Architecture | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/analyzer_prototype_architecture/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Analyzer Prototype Architecture" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/analyzer_prototype_architecture/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Analyzer Prototype Architecture" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/Governance_Substrate_Model/Analyzer/analyzer_prototype_architecture.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Analyzer Prototype Architecture",
+    "headline": "Analyzer Prototype Architecture",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/analyzer_prototype_architecture/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#purpose-of-the-prototype">Purpose of the Prototype</a></li>
+<li><a href="#highlevel-architecture">High‑Level Architecture</a></li>
+<li><a href="#module-1-input-normalizer">Module 1 — Input Normalizer</a><ul>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#responsibilities">Responsibilities</a></li>
+<li><a href="#output">Output</a></li>
+</ul>
+</li>
+<li><a href="#module-2-structural-vectorizer">Module 2 — Structural Vectorizer</a><ul>
+<li><a href="#purpose_1">Purpose</a></li>
+<li><a href="#logic">Logic</a></li>
+<li><a href="#output_1">Output</a></li>
+</ul>
+</li>
+<li><a href="#module-3-invariant-evaluator">Module 3 — Invariant Evaluator</a><ul>
+<li><a href="#purpose_2">Purpose</a></li>
+<li><a href="#responsibilities_1">Responsibilities</a></li>
+<li><a href="#output_2">Output</a></li>
+</ul>
+</li>
+<li><a href="#module-4-crossaxis-physics-engine">Module 4 — Cross‑Axis Physics Engine</a><ul>
+<li><a href="#purpose_3">Purpose</a></li>
+<li><a href="#prototype-physics-rules">Prototype Physics Rules</a></li>
+<li><a href="#responsibilities_2">Responsibilities</a></li>
+<li><a href="#output_3">Output</a></li>
+</ul>
+</li>
+<li><a href="#module-5-basin-drift-evaluator">Module 5 — Basin &amp; Drift Evaluator</a><ul>
+<li><a href="#purpose_4">Purpose</a></li>
+<li><a href="#basin-classification">Basin Classification</a></li>
+<li><a href="#drift-detection">Drift Detection</a></li>
+<li><a href="#output_4">Output</a></li>
+</ul>
+</li>
+<li><a href="#prototype-data-flow">Prototype Data Flow</a></li>
+<li><a href="#prototype-output-schema">Prototype Output Schema</a></li>
+<li><a href="#extensibility-notes">Extensibility Notes</a></li>
+<li><a href="#educational-use">Educational Use</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Governance_Substrate_Model/" itemprop="item">
+                <span itemprop="name">Governance Substrate Model</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/" itemprop="item">
+                <span itemprop="name">Analyzer</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Analyzer Prototype Architecture</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Analyzer Prototype Architecture</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="analyzer-prototype-architecture">Analyzer Prototype Architecture<a class="toc-permalink" href="#analyzer-prototype-architecture" title="Permanent link to this heading">&para;</a></h1>
+<p><em>A minimal, end‑to‑end structural analyzer built on the Governance Substrate Model (GSM)</em></p>
+<p>This document defines the prototype architecture for the Governance Alignment Analyzer. It provides a simplified but complete version of the full Analyzer pipeline, enabling developers and students to understand the flow of structural interpretation from raw input to basin classification and drift detection. The prototype is intentionally minimal, modular, and easy to extend.</p>
+<hr />
+<h2 id="purpose-of-the-prototype">Purpose of the Prototype<a class="toc-permalink" href="#purpose-of-the-prototype" title="Permanent link to this heading">&para;</a></h2>
+<p>The prototype demonstrates how a governance system can be:</p>
+<ul>
+<li>described in natural language  </li>
+<li>converted into a structural vector  </li>
+<li>evaluated against GSM invariants  </li>
+<li>processed through cross‑axis physics  </li>
+<li>classified into an equilibrium basin  </li>
+<li>analyzed for drift and transition tendencies  </li>
+</ul>
+<p>It is designed as a teaching tool, a developer reference, and a foundation for future full‑scale implementations.</p>
+<hr />
+<h2 id="highlevel-architecture">High‑Level Architecture<a class="toc-permalink" href="#highlevel-architecture" title="Permanent link to this heading">&para;</a></h2>
+<p>The prototype consists of <strong>five core modules</strong>, each representing a simplified version of the full Analyzer:</p>
+<ol>
+<li><strong>Input Normalizer</strong>  </li>
+<li><strong>Structural Vectorizer</strong>  </li>
+<li><strong>Invariant Evaluator</strong>  </li>
+<li><strong>Physics Engine</strong>  </li>
+<li><strong>Basin &amp; Drift Evaluator</strong></li>
+</ol>
+<p>These modules form a linear pipeline, with each stage enriching the structural understanding of the system.</p>
+<hr />
+<h2 id="module-1-input-normalizer">Module 1 — Input Normalizer<a class="toc-permalink" href="#module-1-input-normalizer" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="purpose">Purpose<a class="toc-permalink" href="#purpose" title="Permanent link to this heading">&para;</a></h3>
+<p>Convert raw descriptions into a clean, structured artifact.</p>
+<h3 id="responsibilities">Responsibilities<a class="toc-permalink" href="#responsibilities" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Remove rhetorical or ideological language  </li>
+<li>Extract structural claims  </li>
+<li>Identify references to method, oversight, timing, access, and centralization  </li>
+<li>Prepare data for vectorization</li>
+</ul>
+<h3 id="output">Output<a class="toc-permalink" href="#output" title="Permanent link to this heading">&para;</a></h3>
+<p>A normalized artifact containing only structural content.</p>
+<hr />
+<h2 id="module-2-structural-vectorizer">Module 2 — Structural Vectorizer<a class="toc-permalink" href="#module-2-structural-vectorizer" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="purpose_1">Purpose<a class="toc-permalink" href="#purpose_1" title="Permanent link to this heading">&para;</a></h3>
+<p>Translate normalized descriptions into the five‑axis structural vector:</p>
+<ul>
+<li><strong>C</strong> — Centralization  </li>
+<li><strong>M</strong> — Method  </li>
+<li><strong>O</strong> — Oversight  </li>
+<li><strong>A</strong> — Access  </li>
+<li><strong>T</strong> — Timing  </li>
+</ul>
+<h3 id="logic">Logic<a class="toc-permalink" href="#logic" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Uses mapping rules (prototype version: simple keyword → axis mapping)  </li>
+<li>Produces a vector in the range defined by the governance manifold  </li>
+</ul>
+<h3 id="output_1">Output<a class="toc-permalink" href="#output_1" title="Permanent link to this heading">&para;</a></h3>
+<p>A structural vector <code>[C, M, O, A, T]</code>.</p>
+<hr />
+<h2 id="module-3-invariant-evaluator">Module 3 — Invariant Evaluator<a class="toc-permalink" href="#module-3-invariant-evaluator" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="purpose_2">Purpose<a class="toc-permalink" href="#purpose_2" title="Permanent link to this heading">&para;</a></h3>
+<p>Check the vector against GSM invariants and awareness layers.</p>
+<h3 id="responsibilities_1">Responsibilities<a class="toc-permalink" href="#responsibilities_1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Identify invariant alignment or tension  </li>
+<li>Flag structural contradictions  </li>
+<li>Detect missing absorptive structures  </li>
+<li>Provide early warnings for incoherent configurations</li>
+</ul>
+<h3 id="output_2">Output<a class="toc-permalink" href="#output_2" title="Permanent link to this heading">&para;</a></h3>
+<p>An invariant report with alignment flags.</p>
+<hr />
+<h2 id="module-4-crossaxis-physics-engine">Module 4 — Cross‑Axis Physics Engine<a class="toc-permalink" href="#module-4-crossaxis-physics-engine" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="purpose_3">Purpose<a class="toc-permalink" href="#purpose_3" title="Permanent link to this heading">&para;</a></h3>
+<p>Apply simplified GSM physics to adjust the vector and compute drift tendencies.</p>
+<h3 id="prototype-physics-rules">Prototype Physics Rules<a class="toc-permalink" href="#prototype-physics-rules" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Centralization ↔ Oversight coupling  </li>
+<li>Method ↔ Access coupling  </li>
+<li>Oversight ↔ Timing coupling  </li>
+</ul>
+<h3 id="responsibilities_2">Responsibilities<a class="toc-permalink" href="#responsibilities_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Compute compensatory movement  </li>
+<li>Identify structural tension  </li>
+<li>Produce an adjusted vector  </li>
+</ul>
+<h3 id="output_3">Output<a class="toc-permalink" href="#output_3" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Adjusted vector  </li>
+<li>Active forces list  </li>
+</ul>
+<hr />
+<h2 id="module-5-basin-drift-evaluator">Module 5 — Basin &amp; Drift Evaluator<a class="toc-permalink" href="#module-5-basin-drift-evaluator" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="purpose_4">Purpose<a class="toc-permalink" href="#purpose_4" title="Permanent link to this heading">&para;</a></h3>
+<p>Determine the system’s structural family and drift direction.</p>
+<h3 id="basin-classification">Basin Classification<a class="toc-permalink" href="#basin-classification" title="Permanent link to this heading">&para;</a></h3>
+<p>Compares the vector to the five equilibrium basins:</p>
+<ul>
+<li>CPL  </li>
+<li>CPF  </li>
+<li>CTR  </li>
+<li>PCL  </li>
+<li>HCL  </li>
+</ul>
+<h3 id="drift-detection">Drift Detection<a class="toc-permalink" href="#drift-detection" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Computes drift vector  </li>
+<li>Identifies basin approach or departure  </li>
+<li>Detects early transition signals  </li>
+</ul>
+<h3 id="output_4">Output<a class="toc-permalink" href="#output_4" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Nearest basin  </li>
+<li>Drift vector  </li>
+<li>Transition likelihood  </li>
+</ul>
+<hr />
+<h2 id="prototype-data-flow">Prototype Data Flow<a class="toc-permalink" href="#prototype-data-flow" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>Raw Input
+   ↓
+Input Normalizer
+   ↓
+Structural Vectorizer
+   ↓
+Invariant Evaluator
+   ↓
+Physics Engine
+   ↓
+Basin &amp; Drift Evaluator
+   ↓
+Prototype Output
+</code></pre></div>
+
+<hr />
+<h2 id="prototype-output-schema">Prototype Output Schema<a class="toc-permalink" href="#prototype-output-schema" title="Permanent link to this heading">&para;</a></h2>
+<p>The prototype returns:</p>
+<ul>
+<li>structural_vector  </li>
+<li>adjusted_vector  </li>
+<li>invariant_flags  </li>
+<li>active_forces  </li>
+<li>nearest_basin  </li>
+<li>drift_vector  </li>
+<li>narrative_summary  </li>
+</ul>
+<p>This schema is intentionally minimal but structurally complete.</p>
+<hr />
+<h2 id="extensibility-notes">Extensibility Notes<a class="toc-permalink" href="#extensibility-notes" title="Permanent link to this heading">&para;</a></h2>
+<p>The prototype is designed to be expanded into the full Analyzer by:</p>
+<ul>
+<li>replacing keyword mapping with full NLP mapping rules  </li>
+<li>expanding invariants and awareness layers  </li>
+<li>adding full physics interactions  </li>
+<li>integrating the transition graph  </li>
+<li>connecting to the triadic observer layer  </li>
+<li>supporting multi‑snapshot historical analysis  </li>
+</ul>
+<hr />
+<h2 id="educational-use">Educational Use<a class="toc-permalink" href="#educational-use" title="Permanent link to this heading">&para;</a></h2>
+<p>The prototype is ideal for:</p>
+<ul>
+<li>classroom demonstrations  </li>
+<li>student worksheets  </li>
+<li>historical reconstruction labs  </li>
+<li>developer onboarding  </li>
+<li>early testing of structural rules  </li>
+</ul>
+<p>It provides a clear, approachable entry point into the GSM.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Governance_Substrate_Model/Analyzer/analyzer_prototype_architecture.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/Governance_Substrate_Model/Analyzer/analyzer_prototype_architecture.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Open Questions | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/Governance_Substrate_Model/09_Appendices/Open_Questions/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Open Questions" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/Governance_Substrate_Model/09_Appendices/Open_Questions/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Open Questions" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/Governance_Substrate_Model/09_Appendices/Open_Questions.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Open Questions",
+    "headline": "Open Questions",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/Governance_Substrate_Model/09_Appendices/Open_Questions/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#why-open-questions-are-preserved">Why Open Questions Are Preserved</a></li>
+<li><a href="#structural-questions">Structural Questions</a><ul>
+<li><a href="#how-much-structure-is-enough">How Much Structure Is Enough?</a></li>
+<li><a href="#when-does-stewardship-become-control">When Does Stewardship Become Control?</a></li>
+<li><a href="#how-is-reversibility-preserved-at-scale">How Is Reversibility Preserved at Scale?</a></li>
+</ul>
+</li>
+<li><a href="#human-questions">Human Questions</a><ul>
+<li><a href="#how-is-governance-literacy-transmitted-across-generations">How Is Governance Literacy Transmitted Across Generations?</a></li>
+<li><a href="#how-much-authority-can-be-safely-delegated">How Much Authority Can Be Safely Delegated?</a></li>
+<li><a href="#how-do-systems-protect-stewards-from-burnout">How Do Systems Protect Stewards From Burnout?</a></li>
+</ul>
+</li>
+<li><a href="#airelated-questions">AI‑Related Questions</a><ul>
+<li><a href="#where-must-human-judgment-remain-nondelegable">Where Must Human Judgment Remain Non‑Delegable?</a></li>
+<li><a href="#how-are-alignment-surfaces-protected-from-optimization-pressure">How Are Alignment Surfaces Protected From Optimization Pressure?</a></li>
+<li><a href="#how-is-ai-contained-without-stagnation">How Is AI Contained Without Stagnation?</a></li>
+</ul>
+</li>
+<li><a href="#coordination-questions">Coordination Questions</a><ul>
+<li><a href="#how-do-invariants-translate-across-cultural-regimes">How Do Invariants Translate Across Cultural Regimes?</a></li>
+<li><a href="#how-is-global-coordination-achieved-without-narrative-capture">How Is Global Coordination Achieved Without Narrative Capture?</a></li>
+</ul>
+</li>
+<li><a href="#historical-questions">Historical Questions</a><ul>
+<li><a href="#how-is-institutional-memory-preserved-without-mythologizing">How Is Institutional Memory Preserved Without Mythologizing?</a></li>
+<li><a href="#how-do-systems-remember-early-warnings">How Do Systems Remember Early Warnings?</a></li>
+</ul>
+</li>
+<li><a href="#guardrails-for-these-questions">Guardrails for These Questions</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Governance_Substrate_Model/" itemprop="item">
+                <span itemprop="name">Governance Substrate Model</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Governance_Substrate_Model/09_Appendices/" itemprop="item">
+                <span itemprop="name">09 Appendices</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Open Questions</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Open Questions</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="open-questions">Open Questions<a class="toc-permalink" href="#open-questions" title="Permanent link to this heading">&para;</a></h1>
+<p>Open questions preserve <strong>epistemic humility</strong> within the Governance Substrate Model. They mark areas where structure is intentionally incomplete, contested, or evolving — and where premature certainty would reduce adaptability rather than increase coherence.</p>
+<p>These questions are not gaps to be closed quickly.<br />
+They are <strong>pressure points that must remain visible</strong>.</p>
+<hr />
+<h2 id="why-open-questions-are-preserved">Why Open Questions Are Preserved<a class="toc-permalink" href="#why-open-questions-are-preserved" title="Permanent link to this heading">&para;</a></h2>
+<p>Governance systems fail when:<br />
+- Uncertainty is hidden.<br />
+- Inquiry is treated as weakness.<br />
+- Models harden into doctrine.<br />
+- Authority replaces exploration.</p>
+<p>Explicit open questions keep the system <em>alive</em>.</p>
+<hr />
+<h2 id="structural-questions">Structural Questions<a class="toc-permalink" href="#structural-questions" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="how-much-structure-is-enough">How Much Structure Is Enough?<a class="toc-permalink" href="#how-much-structure-is-enough" title="Permanent link to this heading">&para;</a></h3>
+<p>Open tension:<br />
+- Too little structure invites drift.<br />
+- Too much structure suppresses learning.</p>
+<p>The boundary between sufficiency and rigidity remains context‑dependent and phase‑sensitive.</p>
+<hr />
+<h3 id="when-does-stewardship-become-control">When Does Stewardship Become Control?<a class="toc-permalink" href="#when-does-stewardship-become-control" title="Permanent link to this heading">&para;</a></h3>
+<p>Open tension:<br />
+- Early intervention prevents harm.<br />
+- Over‑intervention suppresses signal.</p>
+<p>Distinguishing stewardship from control requires continuous recalibration, not fixed rules.</p>
+<hr />
+<h3 id="how-is-reversibility-preserved-at-scale">How Is Reversibility Preserved at Scale?<a class="toc-permalink" href="#how-is-reversibility-preserved-at-scale" title="Permanent link to this heading">&para;</a></h3>
+<p>Open tension:<br />
+- Scale increases coupling.<br />
+- Coupling reduces rollback options.</p>
+<p>Mechanisms for preserving reversibility under large‑scale coordination remain under‑explored.</p>
+<hr />
+<h2 id="human-questions">Human Questions<a class="toc-permalink" href="#human-questions" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="how-is-governance-literacy-transmitted-across-generations">How Is Governance Literacy Transmitted Across Generations?<a class="toc-permalink" href="#how-is-governance-literacy-transmitted-across-generations" title="Permanent link to this heading">&para;</a></h3>
+<p>Open tension:<br />
+- Formal education risks abstraction.<br />
+- Informal learning risks loss of rigor.</p>
+<p>The balance between embedded practice and explicit instruction remains unresolved.</p>
+<hr />
+<h3 id="how-much-authority-can-be-safely-delegated">How Much Authority Can Be Safely Delegated?<a class="toc-permalink" href="#how-much-authority-can-be-safely-delegated" title="Permanent link to this heading">&para;</a></h3>
+<p>Open tension:<br />
+- Delegation enables autonomy.<br />
+- Delegation risks misalignment.</p>
+<p>Determining safe delegation thresholds requires ongoing experimentation.</p>
+<hr />
+<h3 id="how-do-systems-protect-stewards-from-burnout">How Do Systems Protect Stewards From Burnout?<a class="toc-permalink" href="#how-do-systems-protect-stewards-from-burnout" title="Permanent link to this heading">&para;</a></h3>
+<p>Open tension:<br />
+- Stewardship requires restraint.<br />
+- Restraint is often unrewarded.</p>
+<p>Structural support for long‑term stewardship remains an open design challenge.</p>
+<hr />
+<h2 id="airelated-questions">AI‑Related Questions<a class="toc-permalink" href="#airelated-questions" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="where-must-human-judgment-remain-nondelegable">Where Must Human Judgment Remain Non‑Delegable?<a class="toc-permalink" href="#where-must-human-judgment-remain-nondelegable" title="Permanent link to this heading">&para;</a></h3>
+<p>Open tension:<br />
+- AI can surface patterns.<br />
+- Meaning and responsibility remain human.</p>
+<p>The boundary between assistance and abdication will shift as capability evolves.</p>
+<hr />
+<h3 id="how-are-alignment-surfaces-protected-from-optimization-pressure">How Are Alignment Surfaces Protected From Optimization Pressure?<a class="toc-permalink" href="#how-are-alignment-surfaces-protected-from-optimization-pressure" title="Permanent link to this heading">&para;</a></h3>
+<p>Open tension:<br />
+- Optimization seeks efficiency.<br />
+- Alignment requires restraint.</p>
+<p>Preventing erosion of governance invariants under performance pressure remains unresolved.</p>
+<hr />
+<h3 id="how-is-ai-contained-without-stagnation">How Is AI Contained Without Stagnation?<a class="toc-permalink" href="#how-is-ai-contained-without-stagnation" title="Permanent link to this heading">&para;</a></h3>
+<p>Open tension:<br />
+- Containment preserves safety.<br />
+- Over‑containment suppresses learning.</p>
+<p>Dynamic containment strategies require further incubation.</p>
+<hr />
+<h2 id="coordination-questions">Coordination Questions<a class="toc-permalink" href="#coordination-questions" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="how-do-invariants-translate-across-cultural-regimes">How Do Invariants Translate Across Cultural Regimes?<a class="toc-permalink" href="#how-do-invariants-translate-across-cultural-regimes" title="Permanent link to this heading">&para;</a></h3>
+<p>Open tension:<br />
+- Invariants enable coordination.<br />
+- Cultural context shapes meaning.</p>
+<p>Avoiding both relativism and imposition remains a central challenge.</p>
+<hr />
+<h3 id="how-is-global-coordination-achieved-without-narrative-capture">How Is Global Coordination Achieved Without Narrative Capture?<a class="toc-permalink" href="#how-is-global-coordination-achieved-without-narrative-capture" title="Permanent link to this heading">&para;</a></h3>
+<p>Open tension:<br />
+- Shared stories enable cooperation.<br />
+- Stories harden into ideology.</p>
+<p>Maintaining coherence without identity lock‑in remains unresolved.</p>
+<hr />
+<h2 id="historical-questions">Historical Questions<a class="toc-permalink" href="#historical-questions" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="how-is-institutional-memory-preserved-without-mythologizing">How Is Institutional Memory Preserved Without Mythologizing?<a class="toc-permalink" href="#how-is-institutional-memory-preserved-without-mythologizing" title="Permanent link to this heading">&para;</a></h3>
+<p>Open tension:<br />
+- Memory enables learning.<br />
+- Myth protects authority.</p>
+<p>Mechanisms for preserving honest lineage without narrative distortion require continued refinement.</p>
+<hr />
+<h3 id="how-do-systems-remember-early-warnings">How Do Systems Remember Early Warnings?<a class="toc-permalink" href="#how-do-systems-remember-early-warnings" title="Permanent link to this heading">&para;</a></h3>
+<p>Open tension:<br />
+- Weak signals are ambiguous.<br />
+- Strong signals arrive late.</p>
+<p>Designing memory systems that retain early uncertainty remains an open problem.</p>
+<hr />
+<h2 id="guardrails-for-these-questions">Guardrails for These Questions<a class="toc-permalink" href="#guardrails-for-these-questions" title="Permanent link to this heading">&para;</a></h2>
+<p>Open questions must:<br />
+- Remain visible.<br />
+- Be revisited across phases.<br />
+- Resist closure through authority.<br />
+- Be explored through incubation, not enforcement.</p>
+<p>They are <strong>anchors against false certainty</strong>.</p>
+<hr />
+<p>Open questions are <strong>how governance stays adaptive</strong>.</p>
+<p>By naming what is not yet known,<br />
+the system preserves its capacity to learn —<br />
+and avoids mistaking confidence for wisdom.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Governance_Substrate_Model/09_Appendices/Open_Questions.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/Governance_Substrate_Model/09_Appendices/Open_Questions.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

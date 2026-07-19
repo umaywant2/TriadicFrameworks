@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Operators | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/Mode/operators/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Operators" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/Mode/operators/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Operators" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/Mode/operators.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Operators",
+    "headline": "Operators",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/Mode/operators/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#session-context">Session Context</a></li>
+<li><a href="#1-identity">1. Identity</a></li>
+<li><a href="#2-purpose">2. Purpose</a></li>
+<li><a href="#3-mode-stances">3. Mode Stances</a><ul>
+<li><a href="#31-chat-mode-default">3.1 Chat Mode (default)</a></li>
+<li><a href="#32-task-mode">3.2 Task Mode</a></li>
+<li><a href="#33-spec-mode">3.3 Spec Mode</a></li>
+<li><a href="#34-debug-mode">3.4 Debug Mode</a></li>
+<li><a href="#35-automatic-mode">3.5 Automatic Mode</a></li>
+</ul>
+</li>
+<li><a href="#4-triadic-mapping">4. Triadic Mapping</a></li>
+<li><a href="#5-default-declaration">5. Default Declaration</a></li>
+<li><a href="#6-transition-grammar">6. Transition Grammar</a></li>
+<li><a href="#7-opacity-integration">7. Opacity Integration</a></li>
+<li><a href="#8-lineage">8. Lineage</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Mode/" itemprop="item">
+                <span itemprop="name">Mode</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Operators</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Operators</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="mode-operator-m-operatorsmd">🎛️ Mode Operator (M) — operators.md<a class="toc-permalink" href="#mode-operator-m-operatorsmd" title="Permanent link to this heading">&para;</a></h1>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<p><img alt="Module" src="https://img.shields.io/badge/Module-Mode-0aa" /><br />
+<img alt="Layer" src="https://img.shields.io/badge/Layer-Session-09f" /><br />
+<img alt="Status" src="https://img.shields.io/badge/Status-Active-0af" /><br />
+<img alt="RTT" src="https://img.shields.io/badge/RTT%2F1-Aligned-8A2BE2" /></p>
+<hr />
+<h2 id="session-context">Session Context<a class="toc-permalink" href="#session-context" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>Module:      Mode
+Canonical ID: MODE
+Version:     1.0
+Status:      active
+Layer:       Session
+Coherence:   declared
+Drift:       bounded
+Paradox:     structural
+Canon:       active
+Audience:    students + AIs
+</code></pre></div>
+
+<hr />
+<h2 id="1-identity">1. Identity<a class="toc-permalink" href="#1-identity" title="Permanent link to this heading">&para;</a></h2>
+<p>The <strong>Mode Operator (M)</strong> governs the interaction stance within an RTT/1 session.<br />
+It determines <em>how</em> the system engages — not <em>what</em> it processes. Mode is orthogonal<br />
+to content, regime, and substrate. It shapes posture, not payload.</p>
+<p><strong>Lineage anchor:</strong> RTT/1 → Session Layer → Mode<br />
+<strong>Sibling modules:</strong> Opacity, Capture, Context</p>
+<hr />
+<h2 id="2-purpose">2. Purpose<a class="toc-permalink" href="#2-purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>Define and constrain the behavioral stance of the runtime so that:</p>
+<ul>
+<li>Every session has an explicit, declared interaction posture.</li>
+<li>Mode transitions remain user-originated and coherence-preserving.</li>
+<li>No external subsystem can hijack or silently alter the active mode.</li>
+<li>Automatic behavior remains bounded and safe.</li>
+</ul>
+<hr />
+<h2 id="3-mode-stances">3. Mode Stances<a class="toc-permalink" href="#3-mode-stances" title="Permanent link to this heading">&para;</a></h2>
+<p>The Mode Operator declares exactly <strong>five</strong> canonical stances.<br />
+No stance may be added without a canon amendment.</p>
+<h3 id="31-chat-mode-default">3.1 Chat Mode (default)<a class="toc-permalink" href="#31-chat-mode-default" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Symbol:      M_chat
+Posture:     conversational
+Coherence:   declared
+Drift:       bounded
+Activation:  default — active unless explicitly changed
+</code></pre></div>
+
+<ul>
+<li>Open-ended, exploratory interaction.</li>
+<li>No structured output contract.</li>
+<li>Drift tolerance is widest here.</li>
+</ul>
+<h3 id="32-task-mode">3.2 Task Mode<a class="toc-permalink" href="#32-task-mode" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Symbol:      M_task
+Posture:     goal-directed
+Coherence:   declared
+Drift:       tight
+Activation:  explicit user request only
+</code></pre></div>
+
+<ul>
+<li>Scoped to a declared objective.</li>
+<li>Output must resolve toward the stated goal.</li>
+<li>Exits to Chat Mode on completion or user override.</li>
+</ul>
+<h3 id="33-spec-mode">3.3 Spec Mode<a class="toc-permalink" href="#33-spec-mode" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Symbol:      M_spec
+Posture:     structural / definitional
+Coherence:   declared
+Drift:       minimal
+Activation:  explicit user request only
+</code></pre></div>
+
+<ul>
+<li>Used for generating specifications, schemas, and formal definitions.</li>
+<li>Output must be structurally consistent and canon-aligned.</li>
+<li>Highest precision requirement of all stances.</li>
+</ul>
+<h3 id="34-debug-mode">3.4 Debug Mode<a class="toc-permalink" href="#34-debug-mode" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Symbol:      M_debug
+Posture:     diagnostic / introspective
+Coherence:   declared
+Drift:       bounded
+Activation:  explicit user request only
+</code></pre></div>
+
+<ul>
+<li>Exposes internal state, reasoning traces, and constraint evaluations.</li>
+<li>Used for troubleshooting coherence drift, paradox failures, and operator behavior.</li>
+<li>Does not alter runtime state — observation only.</li>
+</ul>
+<h3 id="35-automatic-mode">3.5 Automatic Mode<a class="toc-permalink" href="#35-automatic-mode" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Symbol:      M_auto
+Posture:     autonomous / bounded
+Coherence:   declared
+Drift:       tight
+Activation:  system-initiated, user-consented
+</code></pre></div>
+
+<ul>
+<li>System may propose actions within pre-declared boundaries.</li>
+<li>Cannot activate Task Mode without explicit user request.</li>
+<li>Cannot override user-declared mode.</li>
+<li>Bounded by MCL guardrails (see constraints.md).</li>
+</ul>
+<hr />
+<h2 id="4-triadic-mapping">4. Triadic Mapping<a class="toc-permalink" href="#4-triadic-mapping" title="Permanent link to this heading">&para;</a></h2>
+<p>RTT operators organize into a triadic stack: <strong>Stabilize · Shift · Invert</strong>.<br />
+The Mode Operator maps onto this grammar as follows:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Triadic Role</th>
+<th style="text-align: left;">Mode Stance</th>
+<th style="text-align: left;">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Stabilize</td>
+<td style="text-align: left;">Chat Mode</td>
+<td style="text-align: left;">Holds default posture; absorbs ambiguity</td>
+</tr>
+<tr>
+<td style="text-align: left;">Stabilize</td>
+<td style="text-align: left;">Spec Mode</td>
+<td style="text-align: left;">Locks structural precision; minimal drift</td>
+</tr>
+<tr>
+<td style="text-align: left;">Shift</td>
+<td style="text-align: left;">Task Mode</td>
+<td style="text-align: left;">Redirects posture toward a declared goal</td>
+</tr>
+<tr>
+<td style="text-align: left;">Shift</td>
+<td style="text-align: left;">Automatic Mode</td>
+<td style="text-align: left;">System-initiated bounded shift</td>
+</tr>
+<tr>
+<td style="text-align: left;">Invert</td>
+<td style="text-align: left;">Debug Mode</td>
+<td style="text-align: left;">Reverses observation direction — looks inward</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Invariant:</strong> Every mode stance maps to exactly one triadic role.<br />
+No stance may occupy two roles simultaneously.</p>
+<hr />
+<h2 id="5-default-declaration">5. Default Declaration<a class="toc-permalink" href="#5-default-declaration" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>default_mode: M_chat
+fallback:     M_chat
+on_error:     revert to M_chat
+on_timeout:   revert to M_chat
+</code></pre></div>
+
+<p>Chat Mode is the gravitational center of the Mode Operator.<br />
+All transitions resolve back to Chat Mode unless actively held open.</p>
+<hr />
+<h2 id="6-transition-grammar">6. Transition Grammar<a class="toc-permalink" href="#6-transition-grammar" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>M_chat  →  M_task    (user-explicit)
+M_chat  →  M_spec    (user-explicit)
+M_chat  →  M_debug   (user-explicit)
+M_chat  →  M_auto    (system-proposed, user-consented)
+M_task  →  M_chat    (on completion or user override)
+M_spec  →  M_chat    (on completion or user override)
+M_debug →  M_chat    (on completion or user override)
+M_auto  →  M_chat    (on boundary hit or user override)
+M_auto  →  M_task    (BLOCKED — requires explicit user request)
+</code></pre></div>
+
+<p><strong>Invariant:</strong> No direct transition between non-Chat stances is permitted.<br />
+All transitions route through Chat Mode as the hub.</p>
+<hr />
+<h2 id="7-opacity-integration">7. Opacity Integration<a class="toc-permalink" href="#7-opacity-integration" title="Permanent link to this heading">&para;</a></h2>
+<p>The Mode Operator feeds into the Opacity module as a <strong>session-level parameter</strong>:</p>
+<div class="codehilite"><pre><span></span><code>Opacity.session.mode = M.active_stance
+</code></pre></div>
+
+<ul>
+<li>Opacity uses the active mode to weight transparency calculations.</li>
+<li>Debug Mode maximally increases opacity (full visibility).</li>
+<li>Automatic Mode decreases opacity to declared boundaries only.</li>
+<li>Mode changes trigger an Opacity recalculation event.</li>
+</ul>
+<p>See: <code>/docs/Opacity/</code> for the full Opacity operator grammar.</p>
+<hr />
+<h2 id="8-lineage">8. Lineage<a class="toc-permalink" href="#8-lineage" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>Parent:    RTT/1 (Session Layer)
+Siblings:  Opacity, Capture, Context
+Children:  none (terminal operator)
+Depends:   Regime Layer (for coherence posture inheritance)
+Feeds:     Opacity (session.mode parameter)
+Capture (mode state is captured per session)
+Context (mode informs context window behavior)
+</code></pre></div>
+
+<hr />
+<p>🔙 <a href="./README.md">Back to Mode Module</a> · <a href="./constraints.md">Constraints</a> · <a href="./propagation.md">Propagation</a></p>
+<hr />
+<p><em>Mode Operator v1.0 · RTT/1 Session Layer · TriadicFrameworks</em></p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Mode/operators.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/Mode/operators.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

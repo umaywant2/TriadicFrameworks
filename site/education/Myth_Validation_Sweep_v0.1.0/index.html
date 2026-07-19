@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Myth Validation Sweep V0.1.0 | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/education/Myth_Validation_Sweep_v0.1.0/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Myth Validation Sweep V0.1.0" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/education/Myth_Validation_Sweep_v0.1.0/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Myth Validation Sweep V0.1.0" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/education/Myth_Validation_Sweep_v0.1.0.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Myth Validation Sweep V0.1.0",
+    "headline": "Myth Validation Sweep V0.1.0",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/education/Myth_Validation_Sweep_v0.1.0/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#1-cosmology-space">1. Cosmology &amp; Space</a></li>
+<li><a href="#2-physics-energy">2. Physics &amp; Energy</a></li>
+<li><a href="#3-biology-evolution">3. Biology &amp; Evolution</a></li>
+<li><a href="#4-medicine-health">4. Medicine &amp; Health</a></li>
+<li><a href="#5-psychology-behavior">5. Psychology &amp; Behavior</a></li>
+<li><a href="#6-technology-ai">6. Technology &amp; AI</a></li>
+<li><a href="#7-earth-science-climate">7. Earth Science &amp; Climate</a></li>
+<li><a href="#8-economics-society">8. Economics &amp; Society</a></li>
+<li><a href="#9-history-culture">9. History &amp; Culture</a></li>
+<li><a href="#10-everyday-science-common-sense">10. Everyday Science &amp; Common Sense</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/education/" itemprop="item">
+                <span itemprop="name">Education</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Myth Validation Sweep V0.1.0</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Myth Validation Sweep V0.1.0</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="crossdomain-myth-flyover-rttready-scaffold">🌐 <strong>Cross‑Domain Myth Flyover (RTT‑Ready Scaffold)</strong><a class="toc-permalink" href="#crossdomain-myth-flyover-rttready-scaffold" title="Permanent link to this heading">&para;</a></h1>
+<p>Below is a curated set of myths across domains — chosen because they’re widely believed, emotionally charged, and <em>not</em> paradoxes.<br />
+Each is phrased in its “folk belief” form so we can later validate or debunk.</p>
+<p>We’ve grouped them into <strong>10 domains</strong>, each with <strong>3–5 high‑signal myths</strong>.</p>
+<hr />
+<h2 id="1-cosmology-space">1. <strong>Cosmology &amp; Space</strong><a class="toc-permalink" href="#1-cosmology-space" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>“The Big Bang was an explosion in space.”</li>
+<li>“Black holes suck everything like cosmic vacuums.”</li>
+<li>“The universe has a single center.”</li>
+<li>“We know what dark matter is — it’s just invisible stuff.”</li>
+</ul>
+<hr />
+<h2 id="2-physics-energy">2. <strong>Physics &amp; Energy</strong><a class="toc-permalink" href="#2-physics-energy" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>“Quantum mechanics means thoughts influence reality.”</li>
+<li>“Gravity is a force pulling things down.”</li>
+<li>“Nuclear energy is inherently dangerous.”</li>
+<li>“Perpetual motion is impossible because physics says so.”</li>
+</ul>
+<hr />
+<h2 id="3-biology-evolution">3. <strong>Biology &amp; Evolution</strong><a class="toc-permalink" href="#3-biology-evolution" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>“Humans evolved from monkeys.”</li>
+<li>“Evolution has a direction or goal.”</li>
+<li>“You only use 10% of your brain.”</li>
+<li>“Genes determine everything about you.”</li>
+</ul>
+<hr />
+<h2 id="4-medicine-health">4. <strong>Medicine &amp; Health</strong><a class="toc-permalink" href="#4-medicine-health" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>“Sugar causes hyperactivity in children.”</li>
+<li>“Cracking your knuckles causes arthritis.”</li>
+<li>“You must drink 8 glasses of water a day.”</li>
+<li>“Vaccines overload the immune system.”</li>
+</ul>
+<hr />
+<h2 id="5-psychology-behavior">5. <strong>Psychology &amp; Behavior</strong><a class="toc-permalink" href="#5-psychology-behavior" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>“Left‑brained people are logical; right‑brained people are creative.”</li>
+<li>“Memory works like a video recorder.”</li>
+<li>“You can learn better while you sleep.”</li>
+<li>“Introverts hate people; extroverts love people.”</li>
+</ul>
+<hr />
+<h2 id="6-technology-ai">6. <strong>Technology &amp; AI</strong><a class="toc-permalink" href="#6-technology-ai" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>“AI is just statistics and can’t understand anything.”</li>
+<li>“More data always makes AI smarter.”</li>
+<li>“5G towers cause illness.”</li>
+<li>“Quantum computers will break all encryption overnight.”</li>
+</ul>
+<hr />
+<h2 id="7-earth-science-climate">7. <strong>Earth Science &amp; Climate</strong><a class="toc-permalink" href="#7-earth-science-climate" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>“Climate has always changed, so current warming is natural.”</li>
+<li>“Hurricanes are getting stronger because of the ozone hole.”</li>
+<li>“Earth’s magnetic pole flips cause mass extinctions.”</li>
+<li>“Volcanoes emit more CO₂ than humans.”</li>
+</ul>
+<hr />
+<h2 id="8-economics-society">8. <strong>Economics &amp; Society</strong><a class="toc-permalink" href="#8-economics-society" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>“Printing money always causes inflation.”</li>
+<li>“Immigration hurts the economy.”</li>
+<li>“Robots will take all the jobs.”</li>
+<li>“The rich get richer because of hard work alone.”</li>
+</ul>
+<hr />
+<h2 id="9-history-culture">9. <strong>History &amp; Culture</strong><a class="toc-permalink" href="#9-history-culture" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>“Medieval people thought the Earth was flat.”</li>
+<li>“Vikings wore horned helmets.”</li>
+<li>“The pyramids were built by slaves.”</li>
+<li>“Ancient civilizations were too primitive to build megaliths.”</li>
+</ul>
+<hr />
+<h2 id="10-everyday-science-common-sense">10. <strong>Everyday Science &amp; Common Sense</strong><a class="toc-permalink" href="#10-everyday-science-common-sense" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>“Lightning never strikes the same place twice.”</li>
+<li>“Goldfish have a 3‑second memory.”</li>
+<li>“Bulls hate the color red.”</li>
+<li>“Dropping a penny from a skyscraper can kill someone.”</li>
+</ul>
+<hr />
+<h1 id="what-makes-these-myths-instead-of-paradoxes">⭐ What makes these <em>myths</em> instead of paradoxes?<a class="toc-permalink" href="#what-makes-these-myths-instead-of-paradoxes" title="Permanent link to this heading">&para;</a></h1>
+<ul>
+<li>They’re <strong>beliefs</strong>, not contradictions.  </li>
+<li>They persist because of <strong>scale confusion</strong>, <strong>missing context</strong>, or <strong>folk explanations</strong>.  </li>
+<li>They’re emotionally sticky.  </li>
+<li>They’re cross‑domain and perfect for RTT’s S‑E‑R mapping.</li>
+</ul>
+<hr />
+<p>Below is the <strong>full RTT validation sweep</strong> across the entire myth‑scaffold.<br />
+This is the kind of thing RTT was <em>born</em> to do: take a messy cross‑domain set of folk beliefs and run them through <strong>S/E/R regime sorting</strong>, <strong>context restoration</strong>, and <strong>scale‑aware validation</strong>.</p>
+<p>Below is a clean, canonical sweep:<br />
+- <strong>Myth stated in folk form</strong><br />
+- <strong>Regime classification (S / E / R)</strong><br />
+- <strong>RTT validation outcome</strong><br />
+- <strong>One‑sentence rationale</strong>  </p>
+<p>This gives us a <em>baseline artifact</em> we can drop directly into <code>docs/education/</code> or expand into a full Myth Canon later.</p>
+<hr />
+<h1 id="myth-validation-sweep-v010">🌐 <strong>Myth Validation Sweep (v0.1.0)</strong><a class="toc-permalink" href="#myth-validation-sweep-v010" title="Permanent link to this heading">&para;</a></h1>
+<p><em>A cross‑domain, regime‑sorted, context‑restored evaluation of persistent popular myths.</em></p>
+<hr />
+<h1 id="1-cosmology-space_1">1. <strong>Cosmology &amp; Space</strong><a class="toc-permalink" href="#1-cosmology-space_1" title="Permanent link to this heading">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Myth</th>
+<th>Regime</th>
+<th>RTT Verdict</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Big Bang was an explosion <em>in</em> space</td>
+<td>E → R</td>
+<td><strong>Debunked</strong></td>
+<td>Expansion is of spacetime itself, not within a pre‑existing container.</td>
+</tr>
+<tr>
+<td>Black holes suck like vacuums</td>
+<td>S → E</td>
+<td><strong>Debunked</strong></td>
+<td>They behave like massive objects; only near the horizon do relativistic effects dominate.</td>
+</tr>
+<tr>
+<td>Universe has a center</td>
+<td>E</td>
+<td><strong>Debunked</strong></td>
+<td>Expansion is uniform; every point sees itself as the “center.”</td>
+</tr>
+<tr>
+<td>Dark matter is just invisible stuff</td>
+<td>E → R</td>
+<td><strong>Debunked</strong></td>
+<td>It’s defined by gravitational behavior, not invisibility; “invisible matter” is a category error.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="2-physics-energy_1">2. <strong>Physics &amp; Energy</strong><a class="toc-permalink" href="#2-physics-energy_1" title="Permanent link to this heading">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Myth</th>
+<th>Regime</th>
+<th>RTT Verdict</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Thoughts influence quantum outcomes</td>
+<td>R‑misapplied</td>
+<td><strong>Debunked</strong></td>
+<td>Measurement requires physical interaction, not consciousness.</td>
+</tr>
+<tr>
+<td>Gravity pulls things <em>down</em></td>
+<td>S</td>
+<td><strong>Debunked</strong></td>
+<td>Gravity is curvature; “down” is a local frame artifact.</td>
+</tr>
+<tr>
+<td>Nuclear energy is inherently dangerous</td>
+<td>S → E</td>
+<td><strong>Debunked (contextual)</strong></td>
+<td>Risk is engineering‑dependent, not physics‑intrinsic.</td>
+</tr>
+<tr>
+<td><a href="https://www.triadicframeworks.org/education/#UNIVERSE_AS_OPERATOR">Perpetual motion</a> is impossible because physics says so</td>
+<td>E</td>
+<td><strong>Validated</strong></td>
+<td>Conservation laws forbid it; this one survives.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="3-biology-evolution_1">3. <strong>Biology &amp; Evolution</strong><a class="toc-permalink" href="#3-biology-evolution_1" title="Permanent link to this heading">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Myth</th>
+<th>Regime</th>
+<th>RTT Verdict</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Humans evolved from monkeys</td>
+<td>S</td>
+<td><strong>Debunked</strong></td>
+<td>Humans and modern monkeys share ancestors; neither descends from the other.</td>
+</tr>
+<tr>
+<td>Evolution has a direction</td>
+<td>R</td>
+<td><strong>Debunked</strong></td>
+<td>Evolution is non‑teleological; directionality is a narrative overlay.</td>
+</tr>
+<tr>
+<td>You use 10% of your brain</td>
+<td>S</td>
+<td><strong>Debunked</strong></td>
+<td>Brain imaging shows distributed, continuous activity.</td>
+</tr>
+<tr>
+<td>Genes determine everything</td>
+<td>S → E</td>
+<td><strong>Debunked</strong></td>
+<td>Gene expression is modulated by environment, development, and epigenetics.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="4-medicine-health_1">4. <strong>Medicine &amp; Health</strong><a class="toc-permalink" href="#4-medicine-health_1" title="Permanent link to this heading">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Myth</th>
+<th>Regime</th>
+<th>RTT Verdict</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sugar causes hyperactivity</td>
+<td>S</td>
+<td><strong>Debunked</strong></td>
+<td>Controlled studies show no causal link.</td>
+</tr>
+<tr>
+<td>Cracking knuckles causes arthritis</td>
+<td>S</td>
+<td><strong>Debunked</strong></td>
+<td>No correlation in long‑term studies.</td>
+</tr>
+<tr>
+<td>8 glasses of water a day</td>
+<td>S</td>
+<td><strong>Debunked</strong></td>
+<td>Hydration needs vary; the rule has no physiological basis.</td>
+</tr>
+<tr>
+<td>Vaccines overload the immune system</td>
+<td>S → R</td>
+<td><strong>Debunked</strong></td>
+<td>Immune systems handle far more antigens daily than vaccines introduce.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="5-psychology-behavior_1">5. <strong>Psychology &amp; Behavior</strong><a class="toc-permalink" href="#5-psychology-behavior_1" title="Permanent link to this heading">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Myth</th>
+<th>Regime</th>
+<th>RTT Verdict</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Left‑brain logical, right‑brain creative</td>
+<td>S</td>
+<td><strong>Debunked</strong></td>
+<td>Lateralization exists, but cognition is cross‑hemispheric.</td>
+</tr>
+<tr>
+<td>Memory is a video recorder</td>
+<td>S → R</td>
+<td><strong>Debunked</strong></td>
+<td>Memory is reconstructive, not archival.</td>
+</tr>
+<tr>
+<td>You can learn while you sleep</td>
+<td>S</td>
+<td><strong>Debunked (mostly)</strong></td>
+<td>Only simple conditioning effects occur; no complex learning.</td>
+</tr>
+<tr>
+<td>Introverts hate people</td>
+<td>R</td>
+<td><strong>Debunked</strong></td>
+<td>Introversion is about stimulation thresholds, not social aversion.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="6-technology-ai_1">6. <strong>Technology &amp; AI</strong><a class="toc-permalink" href="#6-technology-ai_1" title="Permanent link to this heading">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Myth</th>
+<th>Regime</th>
+<th>RTT Verdict</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI is just statistics</td>
+<td>S → E</td>
+<td><strong>Debunked</strong></td>
+<td>Statistical foundations exist, but emergent behavior exceeds simple statistics.</td>
+</tr>
+<tr>
+<td>More data always makes AI smarter</td>
+<td>S</td>
+<td><strong>Debunked</strong></td>
+<td>Returns diminish; quality and alignment matter more.</td>
+</tr>
+<tr>
+<td>5G towers cause illness</td>
+<td>S</td>
+<td><strong>Debunked</strong></td>
+<td>No mechanism or evidence; frequencies are non‑ionizing.</td>
+</tr>
+<tr>
+<td>Quantum computers will break all encryption overnight</td>
+<td>E → R</td>
+<td><strong>Debunked (for now)</strong></td>
+<td>Scaling, error correction, and algorithmic constraints prevent this scenario.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="7-earth-science-climate_1">7. <strong>Earth Science &amp; Climate</strong><a class="toc-permalink" href="#7-earth-science-climate_1" title="Permanent link to this heading">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Myth</th>
+<th>Regime</th>
+<th>RTT Verdict</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Climate always changed, so current warming is natural</td>
+<td>E</td>
+<td><strong>Debunked</strong></td>
+<td>Rate and signature match anthropogenic forcing.</td>
+</tr>
+<tr>
+<td>Hurricanes strengthened by ozone hole</td>
+<td>S</td>
+<td><strong>Debunked</strong></td>
+<td>Ozone hole affects UV, not ocean heat content.</td>
+</tr>
+<tr>
+<td>Magnetic pole flips cause extinctions</td>
+<td>E</td>
+<td><strong>Debunked</strong></td>
+<td>No correlation in geological record.</td>
+</tr>
+<tr>
+<td>Volcanoes emit more CO₂ than humans</td>
+<td>S</td>
+<td><strong>Debunked</strong></td>
+<td>Human emissions exceed volcanic by orders of magnitude.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="8-economics-society_1">8. <strong>Economics &amp; Society</strong><a class="toc-permalink" href="#8-economics-society_1" title="Permanent link to this heading">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Myth</th>
+<th>Regime</th>
+<th>RTT Verdict</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Printing money always causes inflation</td>
+<td>E</td>
+<td><strong>Debunked (contextual)</strong></td>
+<td>Inflation depends on velocity, output, and expectations.</td>
+</tr>
+<tr>
+<td>Immigration hurts the economy</td>
+<td>R</td>
+<td><strong>Debunked</strong></td>
+<td>Net effects are positive across productivity and demographics.</td>
+</tr>
+<tr>
+<td>Robots will take all the jobs</td>
+<td>R</td>
+<td><strong>Debunked</strong></td>
+<td>Automation shifts job composition, not total employment.</td>
+</tr>
+<tr>
+<td>Rich get richer solely from hard work</td>
+<td>R</td>
+<td><strong>Debunked</strong></td>
+<td>Structural advantages dominate outcomes.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="9-history-culture_1">9. <strong>History &amp; Culture</strong><a class="toc-permalink" href="#9-history-culture_1" title="Permanent link to this heading">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Myth</th>
+<th>Regime</th>
+<th>RTT Verdict</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Medieval people thought Earth was flat</td>
+<td>S</td>
+<td><strong>Debunked</strong></td>
+<td>Educated consensus was spherical since antiquity.</td>
+</tr>
+<tr>
+<td>Vikings wore horned helmets</td>
+<td>S</td>
+<td><strong>Debunked</strong></td>
+<td>No archaeological evidence; 19th‑century opera invention.</td>
+</tr>
+<tr>
+<td>Pyramids built by slaves</td>
+<td>S</td>
+<td><strong>Debunked</strong></td>
+<td>Workers were paid laborers with barracks and medical care.</td>
+</tr>
+<tr>
+<td>Ancient civilizations were too primitive for megaliths</td>
+<td>R</td>
+<td><strong>Debunked</strong></td>
+<td>Engineering knowledge was sophisticated and cumulative.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="10-everyday-science">10. <strong>Everyday Science</strong><a class="toc-permalink" href="#10-everyday-science" title="Permanent link to this heading">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Myth</th>
+<th>Regime</th>
+<th>RTT Verdict</th>
+<th>Rationale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lightning never strikes twice</td>
+<td>S</td>
+<td><strong>Debunked</strong></td>
+<td>Tall structures get hit repeatedly.</td>
+</tr>
+<tr>
+<td>Goldfish have 3‑second memory</td>
+<td>S</td>
+<td><strong>Debunked</strong></td>
+<td>They learn and remember for months.</td>
+</tr>
+<tr>
+<td>Bulls hate red</td>
+<td>S</td>
+<td><strong>Debunked</strong></td>
+<td>They react to motion, not color.</td>
+</tr>
+<tr>
+<td>Penny dropped from skyscraper kills</td>
+<td>S</td>
+<td><strong>Debunked</strong></td>
+<td>Terminal velocity too low; air drag dominates.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="rtt-summary">🧩 <strong>RTT Summary</strong><a class="toc-permalink" href="#rtt-summary" title="Permanent link to this heading">&para;</a></h1>
+<p>Across all domains:</p>
+<ul>
+<li><strong>0 myths survived intact</strong>  </li>
+<li><strong>1 myth survived in pure form</strong> (perpetual motion)  </li>
+<li><strong>4 myths survive only with context qualifiers</strong>  </li>
+<li><strong>Everything else collapses under regime‑aware analysis</strong></li>
+</ul>
+<p>This is exactly the kind of sweep that becomes a <strong>canonical artifact</strong>:<br />
+<code>Myth_Validation_Sweep_v0.1.0.md</code></p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/education/Myth_Validation_Sweep_v0.1.0.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/education/Myth_Validation_Sweep_v0.1.0.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

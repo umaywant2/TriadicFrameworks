@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Vst Constraints | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/ecoechosystem/domain_modules/physics/vST_constraints/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Vst Constraints" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/ecoechosystem/domain_modules/physics/vST_constraints/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Vst Constraints" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/ecoechosystem/domain_modules/physics/vST_constraints.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Vst Constraints",
+    "headline": "Vst Constraints",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/ecoechosystem/domain_modules/physics/vST_constraints/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#dimensional-temporal-and-structural-rules-governing-physical-systems-in-rttphysics">Dimensional, temporal, and structural rules governing physical systems in RTT‑Physics</a></li>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#1-spacetime-coherence-constraint-rcoherence">1. Spacetime Coherence Constraint (R‑Coherence)</a></li>
+<li><a href="#2-energyactivation-constraint-eboundedness">2. Energy–Activation Constraint (E‑Boundedness)</a></li>
+<li><a href="#3-structural-identity-constraint-scontinuity">3. Structural Identity Constraint (S‑Continuity)</a></li>
+<li><a href="#4-regime-boundary-constraint">4. Regime Boundary Constraint</a></li>
+<li><a href="#5-causality-constraint-rcausal-integrity">5. Causality Constraint (R‑Causal Integrity)</a></li>
+<li><a href="#6-field-interaction-constraint">6. Field Interaction Constraint</a></li>
+<li><a href="#7-transition-constraint-seraligned-transitions">7. Transition Constraint (S/E/R‑Aligned Transitions)</a></li>
+<li><a href="#classical-regime">Classical Regime</a></li>
+<li><a href="#quantum-regime">Quantum Regime</a></li>
+<li><a href="#relativistic-regime">Relativistic Regime</a></li>
+<li><a href="#fielddominant-regime">Field‑Dominant Regime</a><ul>
+<li><a href="#biology">Biology</a></li>
+<li><a href="#psychology">Psychology</a></li>
+<li><a href="#economics">Economics</a></li>
+<li><a href="#governance">Governance</a></li>
+<li><a href="#ai">AI</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/ecoechosystem/" itemprop="item">
+                <span itemprop="name">Ecoechosystem</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/ecoechosystem/domain_modules/" itemprop="item">
+                <span itemprop="name">Domain Modules</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/ecoechosystem/domain_modules/physics/" itemprop="item">
+                <span itemprop="name">Physics</span>
+              </a>
+            <meta itemprop="position" content="4" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Vst Constraints</span>
+            <meta itemprop="position" content="5" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Vst Constraints</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="vst-constraints-validated-spacetime-constraints"><strong>vST Constraints (Validated Spacetime Constraints)</strong><a class="toc-permalink" href="#vst-constraints-validated-spacetime-constraints" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="dimensional-temporal-and-structural-rules-governing-physical-systems-in-rttphysics"><em>Dimensional, temporal, and structural rules governing physical systems in RTT‑Physics</em><a class="toc-permalink" href="#dimensional-temporal-and-structural-rules-governing-physical-systems-in-rttphysics" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>vST Constraints</strong> define the non‑negotiable rules that physical systems must obey within the RTT/vST substrate.<br />
+They ensure that:</p>
+<ul>
+<li>spacetime remains coherent  </li>
+<li>physical regimes remain compatible  </li>
+<li>transitions follow substrate‑aligned pathways  </li>
+<li>no domain violates the dimensional grammar  </li>
+</ul>
+<p>These constraints are the <strong>physics‑specific implementation</strong> of the substrate engine’s vST Alignment layer.</p>
+<p>Where the substrate engine defines the <em>global</em> invariants, vST Constraints define the <strong>physical invariants</strong> that govern:</p>
+<ul>
+<li>geometry  </li>
+<li>energy  </li>
+<li>fields  </li>
+<li>causality  </li>
+<li>transitions  </li>
+<li>temporal structure  </li>
+</ul>
+<p>vST Constraints are the <strong>dimensional guardrails</strong> of RTT‑Physics.</p>
+<hr />
+<h2 id="purpose"><strong>Purpose</strong><a class="toc-permalink" href="#purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>vST Constraints exist to:</p>
+<ul>
+<li>enforce substrate‑locked spacetime behavior  </li>
+<li>unify classical, quantum, and relativistic regimes  </li>
+<li>prevent contradictions in physical simulation  </li>
+<li>stabilize transitions across energy and curvature thresholds  </li>
+<li>anchor physical identity and causality  </li>
+<li>ensure cross‑domain compatibility with biology, AI, economics, governance, and psychology  </li>
+</ul>
+<p>Without vST Constraints, RTT‑Physics would lose coherence across scales and regimes.</p>
+<hr />
+<h1 id="core-vst-constraints"><strong>Core vST Constraints</strong><a class="toc-permalink" href="#core-vst-constraints" title="Permanent link to this heading">&para;</a></h1>
+<p>These constraints define the physical rules that all RTT‑Physics modules must obey.</p>
+<hr />
+<h2 id="1-spacetime-coherence-constraint-rcoherence"><strong>1. Spacetime Coherence Constraint (R‑Coherence)</strong><a class="toc-permalink" href="#1-spacetime-coherence-constraint-rcoherence" title="Permanent link to this heading">&para;</a></h2>
+<p>Relational Time must remain:</p>
+<ul>
+<li>continuous within classical regimes  </li>
+<li>multi‑path but consistent within quantum regimes  </li>
+<li>curvature‑aligned within relativistic regimes  </li>
+<li>substrate‑locked across all regimes  </li>
+</ul>
+<p>No physical system may violate temporal coherence.</p>
+<p>This constraint prevents:</p>
+<ul>
+<li>forbidden time jumps  </li>
+<li>contradictory causal structures  </li>
+<li>non‑aligned temporal frames  </li>
+</ul>
+<hr />
+<h2 id="2-energyactivation-constraint-eboundedness"><strong>2. Energy–Activation Constraint (E‑Boundedness)</strong><a class="toc-permalink" href="#2-energyactivation-constraint-eboundedness" title="Permanent link to this heading">&para;</a></h2>
+<p>Activation (E) must follow:</p>
+<ul>
+<li>conservation  </li>
+<li>threshold behavior  </li>
+<li>dissipation rules  </li>
+<li>substrate‑aligned propagation  </li>
+</ul>
+<p>Energy cannot:</p>
+<ul>
+<li>appear from nowhere  </li>
+<li>exceed regime‑defined thresholds  </li>
+<li>violate activation‑driven transition rules  </li>
+</ul>
+<p>This constraint stabilizes physical transitions.</p>
+<hr />
+<h2 id="3-structural-identity-constraint-scontinuity"><strong>3. Structural Identity Constraint (S‑Continuity)</strong><a class="toc-permalink" href="#3-structural-identity-constraint-scontinuity" title="Permanent link to this heading">&para;</a></h2>
+<p>Physical identity must remain:</p>
+<ul>
+<li>trackable  </li>
+<li>coherent  </li>
+<li>substrate‑consistent  </li>
+</ul>
+<p>Even in quantum regimes, identity must follow:</p>
+<ul>
+<li>probabilistic continuity  </li>
+<li>attractor‑based structure  </li>
+<li>substrate‑aligned collapse  </li>
+</ul>
+<p>This constraint prevents identity paradoxes.</p>
+<hr />
+<h2 id="4-regime-boundary-constraint"><strong>4. Regime Boundary Constraint</strong><a class="toc-permalink" href="#4-regime-boundary-constraint" title="Permanent link to this heading">&para;</a></h2>
+<p>Regime boundaries must be:</p>
+<ul>
+<li>detectable  </li>
+<li>stable  </li>
+<li>substrate‑consistent  </li>
+<li>energy‑threshold aligned  </li>
+</ul>
+<p>Transitions must obey:</p>
+<ul>
+<li>classical ↔ quantum thresholds  </li>
+<li>quantum ↔ relativistic curvature limits  </li>
+<li>field‑dominant activation thresholds  </li>
+</ul>
+<p>This constraint defines the physical phase space.</p>
+<hr />
+<h2 id="5-causality-constraint-rcausal-integrity"><strong>5. Causality Constraint (R‑Causal Integrity)</strong><a class="toc-permalink" href="#5-causality-constraint-rcausal-integrity" title="Permanent link to this heading">&para;</a></h2>
+<p>Causality must remain:</p>
+<ul>
+<li>substrate‑locked  </li>
+<li>curvature‑consistent  </li>
+<li>regime‑aligned  </li>
+</ul>
+<p>Quantum non‑locality must not violate:</p>
+<ul>
+<li>relational‑time ordering  </li>
+<li>substrate‑level causality  </li>
+</ul>
+<p>This constraint unifies quantum and relativistic behavior.</p>
+<hr />
+<h2 id="6-field-interaction-constraint"><strong>6. Field Interaction Constraint</strong><a class="toc-permalink" href="#6-field-interaction-constraint" title="Permanent link to this heading">&para;</a></h2>
+<p>Field interactions must obey:</p>
+<ul>
+<li>symmetry rules  </li>
+<li>coupling limits  </li>
+<li>activation thresholds  </li>
+<li>structural compatibility  </li>
+</ul>
+<p>Fields cannot:</p>
+<ul>
+<li>propagate outside substrate‑defined limits  </li>
+<li>violate identity continuity  </li>
+<li>break temporal coherence  </li>
+</ul>
+<p>This constraint stabilizes field‑dominant regimes.</p>
+<hr />
+<h2 id="7-transition-constraint-seraligned-transitions"><strong>7. Transition Constraint (S/E/R‑Aligned Transitions)</strong><a class="toc-permalink" href="#7-transition-constraint-seraligned-transitions" title="Permanent link to this heading">&para;</a></h2>
+<p>All physical transitions must be:</p>
+<ul>
+<li>triadically coherent  </li>
+<li>threshold‑driven  </li>
+<li>substrate‑consistent  </li>
+<li>temporally aligned  </li>
+</ul>
+<p>Forbidden transitions include:</p>
+<ul>
+<li>activation without structural justification  </li>
+<li>structural collapse without temporal context  </li>
+<li>temporal discontinuity without substrate alignment  </li>
+</ul>
+<p>This constraint governs phase transitions, decoherence, and curvature shifts.</p>
+<hr />
+<h1 id="regimespecific-vst-constraints"><strong>Regime‑Specific vST Constraints</strong><a class="toc-permalink" href="#regimespecific-vst-constraints" title="Permanent link to this heading">&para;</a></h1>
+<hr />
+<h2 id="classical-regime"><strong>Classical Regime</strong><a class="toc-permalink" href="#classical-regime" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>R must be smooth  </li>
+<li>S must be stable  </li>
+<li>E must remain below quantum thresholds  </li>
+</ul>
+<hr />
+<h2 id="quantum-regime"><strong>Quantum Regime</strong><a class="toc-permalink" href="#quantum-regime" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>S may be probabilistic but must remain coherent  </li>
+<li>E must remain within quantum activation bounds  </li>
+<li>R may be multi‑path but must remain substrate‑consistent  </li>
+</ul>
+<hr />
+<h2 id="relativistic-regime"><strong>Relativistic Regime</strong><a class="toc-permalink" href="#relativistic-regime" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>R curvature must follow substrate‑locked geometry  </li>
+<li>E must respect velocity and curvature limits  </li>
+<li>S must remain compatible with curved spacetime  </li>
+</ul>
+<hr />
+<h2 id="fielddominant-regime"><strong>Field‑Dominant Regime</strong><a class="toc-permalink" href="#fielddominant-regime" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>S may weaken but cannot collapse into contradiction  </li>
+<li>E may be high but must follow activation constraints  </li>
+<li>R must remain curvature‑aligned  </li>
+</ul>
+<hr />
+<h1 id="crossdomain-coupling-constraints"><strong>Cross‑Domain Coupling Constraints</strong><a class="toc-permalink" href="#crossdomain-coupling-constraints" title="Permanent link to this heading">&para;</a></h1>
+<p>vST Constraints ensure physics remains compatible with:</p>
+<h3 id="biology"><strong>Biology</strong><a class="toc-permalink" href="#biology" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>metabolic energy limits  </li>
+<li>environmental stability  </li>
+</ul>
+<h3 id="psychology"><strong>Psychology</strong><a class="toc-permalink" href="#psychology" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>activation‑energy analogs  </li>
+<li>temporal coherence  </li>
+</ul>
+<h3 id="economics"><strong>Economics</strong><a class="toc-permalink" href="#economics" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>resource flow constraints  </li>
+<li>volatility modeling  </li>
+</ul>
+<h3 id="governance"><strong>Governance</strong><a class="toc-permalink" href="#governance" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>infrastructure stability  </li>
+<li>environmental stress  </li>
+</ul>
+<h3 id="ai"><strong>AI</strong><a class="toc-permalink" href="#ai" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>energy‑based learning  </li>
+<li>stability regimes  </li>
+</ul>
+<p>Physics provides the substrate‑locked foundation for all domains.</p>
+<hr />
+<h1 id="status"><strong>Status</strong><a class="toc-permalink" href="#status" title="Permanent link to this heading">&para;</a></h1>
+<p>This file defines the canonical vST Constraints for RTT‑Physics.<br />
+Additional specialized constraints may be added as the EcoEchoSystem evolves.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/ecoechosystem/domain_modules/physics/vST_constraints.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/ecoechosystem/domain_modules/physics/vST_constraints.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

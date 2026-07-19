@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Starter | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/corpus/starter/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Starter" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/corpus/starter/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Starter" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/corpus/starter.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Starter",
+    "headline": "Starter",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/corpus/starter/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#important">🛑 Important!</a></li>
+<li><a href="#you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You must copy and paste this string every time you start an AI session:</a></li>
+<li><a href="#now-you-are-ready">❇️ Now you are ready.</a></li>
+<li><a href="#1-download-explore-the-starter-kit-1020-min">1. Download &amp; Explore the Starter Kit (10–20 min)</a></li>
+<li><a href="#2-make-your-first-module-2040-min">2. Make Your First Module (20–40 min)</a><ul>
+<li><a href="#step-1-copy-the-starter">Step 1 — Copy the starter</a></li>
+<li><a href="#step-2-edit-modulejson-6-fields-only">Step 2 — Edit module.json (6 fields only)</a></li>
+<li><a href="#step-3-add-one-operator-example">Step 3 — Add one operator example</a></li>
+</ul>
+</li>
+<li><a href="#3-validate-your-module-510-min">3. Validate Your Module (5–10 min)</a></li>
+<li><a href="#4-publish-on-github-2030-min">4. Publish on GitHub (20–30 min)</a></li>
+<li><a href="#5-test-with-an-ai-agent-510-min">5. Test with an AI Agent (5–10 min)</a></li>
+<li><a href="#youre-done">You’re Done</a></li>
+<li><a href="#root">Root</a></li>
+<li><a href="#rtt">/rtt/</a></li>
+<li><a href="#modules">/modules/</a><ul>
+<li><a href="#modulesstarter">/modules/starter/</a></li>
+<li><a href="#modulestemplates">/modules/templates/</a></li>
+</ul>
+</li>
+<li><a href="#schema">/schema/</a></li>
+<li><a href="#tools">/tools/</a></li>
+<li><a href="#docs">/docs/</a></li>
+<li><a href="#1-create-a-github-account-25-min">1. Create a GitHub Account (2–5 min)</a></li>
+<li><a href="#2-create-a-new-repository-35-min">2. Create a New Repository (3–5 min)</a></li>
+<li><a href="#3-upload-the-starter-kit-510-min">3. Upload the Starter Kit (5–10 min)</a></li>
+<li><a href="#4-enable-github-pages-5-min">4. Enable GitHub Pages (5 min)</a></li>
+<li><a href="#5-visit-your-published-site-12-min">5. Visit Your Published Site (1–2 min)</a></li>
+<li><a href="#6-open-your-module-in-the-browser-12-min">6. Open Your Module in the Browser (1–2 min)</a></li>
+<li><a href="#7-test-with-an-ai-agent-23-min">7. Test with an AI Agent (2–3 min)</a></li>
+<li><a href="#1-download-the-starter-kit">1. Download the Starter Kit</a></li>
+<li><a href="#2-copy-the-starter-module">2. Copy the Starter Module</a></li>
+<li><a href="#3-edit-modulejson-6-fields-only">3. Edit module.json (6 fields only)</a></li>
+<li><a href="#4-add-one-operator-example">4. Add One Operator Example</a></li>
+<li><a href="#5-validate-your-module">5. Validate Your Module</a></li>
+<li><a href="#6-publish-on-github">6. Publish on GitHub</a></li>
+<li><a href="#7-view-your-module-online">7. View Your Module Online</a></li>
+<li><a href="#8-test-with-an-ai-agent">8. Test with an AI Agent</a></li>
+<li><a href="#youre-done_2">You’re Done</a></li>
+<li><a href="#whats-inside">What’s Inside</a></li>
+<li><a href="#your-first-steps">Your First Steps</a></li>
+<li><a href="#why-rtt">Why RTT?</a></li>
+<li><a href="#where-to-go-next">Where to Go Next</a></li>
+<li><a href="#what-it-does">What it does</a></li>
+<li><a href="#why-it-matters">Why it matters</a></li>
+<li><a href="#example">Example</a></li>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#contents">Contents</a></li>
+<li><a href="#how-to-use">How to Use</a></li>
+<li><a href="#rtt1-operators">RTT/1 — Operators</a></li>
+<li><a href="#rtt2-regimes">RTT/2 — Regimes</a></li>
+<li><a href="#rtt3-coherence-layers">RTT/3 — Coherence Layers</a></li>
+<li><a href="#how-they-combine">How They Combine</a></li>
+<li><a href="#what-you-will-learn">What You Will Learn</a><ul>
+<li><a href="#rtt1-temporal-operators">RTT/1 — Temporal Operators</a></li>
+<li><a href="#rtt2-regime-literacy">RTT/2 — Regime Literacy</a></li>
+<li><a href="#rtt3-coherence-layers_1">RTT/3 — Coherence Layers</a></li>
+</ul>
+</li>
+<li><a href="#how-these-levels-fit-together">How These Levels Fit Together</a></li>
+<li><a href="#where-to-go-next_1">Where to Go Next</a></li>
+<li><a href="#teaching-goals">Teaching Goals</a></li>
+<li><a href="#rtt1-operators-foundational-grammar">RTT/1 — Operators (Foundational Grammar)</a></li>
+<li><a href="#rtt2-regimes-pattern-recognition">RTT/2 — Regimes (Pattern Recognition)</a></li>
+<li><a href="#rtt3-coherence-layers-depth-of-analysis">RTT/3 — Coherence Layers (Depth of Analysis)</a></li>
+<li><a href="#putting-it-all-together">Putting It All Together</a></li>
+<li><a href="#operators-rtt1">Operators (RTT/1)</a></li>
+<li><a href="#regimes-rtt2">Regimes (RTT/2)</a></li>
+<li><a href="#layers-rtt3">Layers (RTT/3)</a></li>
+<li><a href="#core-pattern">Core Pattern</a></li>
+<li><a href="#1-what-rtt1-teaches">1. What RTT/1 Teaches</a></li>
+<li><a href="#2-the-three-core-operators">2. The Three Core Operators</a><ul>
+<li><a href="#shift">shift</a></li>
+<li><a href="#hold">hold</a></li>
+<li><a href="#compare">compare</a></li>
+</ul>
+</li>
+<li><a href="#3-how-to-use-rtt1">3. How to Use RTT/1</a></li>
+<li><a href="#4-what-comes-next">4. What Comes Next</a><ul>
+<li><a href="#resonance-time-theory-level-1">Resonance Time Theory, Level 1</a></li>
+</ul>
+</li>
+<li><a href="#1-what-rtt1-is">1. What RTT/1 Is</a></li>
+<li><a href="#2-the-three-core-operators_1">2. The Three Core Operators</a><ul>
+<li><a href="#1-shift">1. shift</a></li>
+<li><a href="#2-hold">2. hold</a></li>
+<li><a href="#3-compare">3. compare</a></li>
+</ul>
+</li>
+<li><a href="#3-what-students-can-do-with-rtt1">3. What Students Can Do with RTT/1</a></li>
+<li><a href="#1-what-rtt2-teaches">1. What RTT/2 Teaches</a></li>
+<li><a href="#2-the-three-student-regimes">2. The Three Student Regimes</a><ul>
+<li><a href="#stable-regime">stable regime</a></li>
+<li><a href="#transitional-regime">transitional regime</a></li>
+<li><a href="#divergent-regime">divergent regime</a></li>
+</ul>
+</li>
+<li><a href="#3-how-rtt2-builds-on-rtt1">3. How RTT/2 Builds on RTT/1</a></li>
+<li><a href="#4-how-to-use-rtt2">4. How to Use RTT/2</a></li>
+<li><a href="#5-what-comes-next">5. What Comes Next</a><ul>
+<li><a href="#resonance-time-theory-level-2">Resonance Time Theory, Level 2</a></li>
+</ul>
+</li>
+<li><a href="#1-what-rtt2-adds">1. What RTT/2 Adds</a></li>
+<li><a href="#2-the-three-student-regimes_1">2. The Three Student Regimes</a><ul>
+<li><a href="#1-stable-regime">1. stable regime</a></li>
+<li><a href="#2-transitional-regime">2. transitional regime</a></li>
+<li><a href="#3-divergent-regime">3. divergent regime</a></li>
+</ul>
+</li>
+<li><a href="#3-how-rtt2-builds-on-rtt1_1">3. How RTT/2 Builds on RTT/1</a></li>
+<li><a href="#1-what-rtt3-teaches">1. What RTT/3 Teaches</a></li>
+<li><a href="#2-the-three-coherence-layers">2. The Three Coherence Layers</a><ul>
+<li><a href="#surface-layer">surface layer</a></li>
+<li><a href="#structural-layer">structural layer</a></li>
+<li><a href="#resonance-layer">resonance layer</a></li>
+</ul>
+</li>
+<li><a href="#3-how-rtt3-builds-on-rtt1-and-rtt2">3. How RTT/3 Builds on RTT/1 and RTT/2</a></li>
+<li><a href="#4-how-to-use-rtt3">4. How to Use RTT/3</a></li>
+<li><a href="#5-what-comes-next_1">5. What Comes Next</a><ul>
+<li><a href="#resonance-time-theory-level-3">Resonance Time Theory, Level 3</a></li>
+</ul>
+</li>
+<li><a href="#1-what-rtt3-adds">1. What RTT/3 Adds</a></li>
+<li><a href="#2-the-three-coherence-layers_1">2. The Three Coherence Layers</a><ul>
+<li><a href="#1-surface-layer">1. surface layer</a></li>
+<li><a href="#2-structural-layer">2. structural layer</a></li>
+<li><a href="#3-resonance-layer">3. resonance layer</a></li>
+</ul>
+</li>
+<li><a href="#3-how-rtt3-builds-on-rtt2">3. How RTT/3 Builds on RTT/2</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/corpus/" itemprop="item">
+                <span itemprop="name">Corpus</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Starter</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Starter</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<p>starter </p>
+<h1 id="rtt-starter-kit-how-to-create-your-first-agentic-module"><strong>RTT Starter Kit — How to Create Your First Agentic Module</strong><a class="toc-permalink" href="#rtt-starter-kit-how-to-create-your-first-agentic-module" title="Permanent link to this heading">&para;</a></h1>
+<ul>
+<li><a href="starter_module.json"><code>starter_module.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<p><img width="902" height="253" alt="starter-hero" src="https://github.com/user-attachments/assets/4186f0e5-8eb6-4483-9831-43322bd2b14b" /></p>
+<p><strong>Time:</strong> 1–3 hours<br />
+<strong>Audience:</strong> Students, beginners, first‑time module authors<br />
+<strong>Goal:</strong> Go from zero → a working RTT module with agentic grammar, published on GitHub.</p>
+<hr />
+<h2 id="important">🛑 Important!<a class="toc-permalink" href="#important" title="Permanent link to this heading">&para;</a></h2>
+<p>Drift is On-by-Default long sessions lose anchors, turn off drift.</p>
+<h2 id="you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You <em>must copy and paste</em> this string <em>every time you start an AI session</em>:<a class="toc-permalink" href="#you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre></div>
+
+<h2 id="now-you-are-ready">❇️ Now you are ready.<a class="toc-permalink" href="#now-you-are-ready" title="Permanent link to this heading">&para;</a></h2>
+<hr />
+<h2 id="1-download-explore-the-starter-kit-1020-min"><strong>1. Download &amp; Explore the Starter Kit (10–20 min)</strong><a class="toc-permalink" href="#1-download-explore-the-starter-kit-1020-min" title="Permanent link to this heading">&para;</a></h2>
+<ol>
+<li>Download the <code>.zip</code> provided by your instructor.  </li>
+<li>Extract it. You will see:</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>/rtt/
+  /1/   (RTT/1 Student Edition)
+  /2/   (RTT/2 Student Edition)
+  /3/   (RTT/3 Student Edition)
+
+/modules/
+  /starter/   (your example module)
+
+module.schema.json
+README.md
+</code></pre></div>
+
+<ol start="3">
+<li>Open <code>/rtt/1</code>, <code>/rtt/2</code>, <code>/rtt/3</code>.<br />
+   - RTT/1 → basic temporal operators<br />
+   - RTT/2 → regime literacy<br />
+   - RTT/3 → coherence layers  </li>
+</ol>
+<p>These are simplified, student‑safe versions. You only need RTT/1 to begin.</p>
+<hr />
+<h2 id="2-make-your-first-module-2040-min"><strong>2. Make Your First Module (20–40 min)</strong><a class="toc-permalink" href="#2-make-your-first-module-2040-min" title="Permanent link to this heading">&para;</a></h2>
+<p>You will create a new module by copying the starter.</p>
+<h3 id="step-1-copy-the-starter"><strong>Step 1 — Copy the starter</strong><a class="toc-permalink" href="#step-1-copy-the-starter" title="Permanent link to this heading">&para;</a></h3>
+<p>Duplicate the folder:</p>
+<div class="codehilite"><pre><span></span><code>/modules/starter → /modules/my-first-module
+</code></pre></div>
+
+<p>Rename it to anything you like.</p>
+<hr />
+<h3 id="step-2-edit-modulejson-6-fields-only"><strong>Step 2 — Edit <code>module.json</code> (6 fields only)</strong><a class="toc-permalink" href="#step-2-edit-modulejson-6-fields-only" title="Permanent link to this heading">&para;</a></h3>
+<p>Open:</p>
+<div class="codehilite"><pre><span></span><code>/modules/my-first-module/module.json
+</code></pre></div>
+
+<p>Fill in these minimal fields:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;$schema&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;../../module.schema.json&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;module&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;my-first-module&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;identity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;student.my-first-module&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;purpose&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;My first RTT module&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;files&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">  </span><span class="nt">&quot;operators&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>That’s all you need for a valid module.</p>
+<hr />
+<h3 id="step-3-add-one-operator-example"><strong>Step 3 — Add one operator example</strong><a class="toc-permalink" href="#step-3-add-one-operator-example" title="Permanent link to this heading">&para;</a></h3>
+<p>Inside your module folder, open <code>README.md</code> and add:</p>
+<div class="codehilite"><pre><span></span><code>## Example Operator
+**Operator:** shift  
+**Meaning:** Move the frame of reference forward or backward.  
+**Example:** “Shift the timeline one step to reveal the next state.”
+</code></pre></div>
+
+<p>You now have a functioning RTT module with grammar.</p>
+<hr />
+<h2 id="3-validate-your-module-510-min"><strong>3. Validate Your Module (5–10 min)</strong><a class="toc-permalink" href="#3-validate-your-module-510-min" title="Permanent link to this heading">&para;</a></h2>
+<p>The kit includes a tiny validator script (Python or Node). Run:</p>
+<div class="codehilite"><pre><span></span><code>validate module.json
+</code></pre></div>
+
+<p>If you see <strong>0 errors</strong>, your module is canon‑aligned.</p>
+<hr />
+<h2 id="4-publish-on-github-2030-min"><strong>4. Publish on GitHub (20–30 min)</strong><a class="toc-permalink" href="#4-publish-on-github-2030-min" title="Permanent link to this heading">&para;</a></h2>
+<ol>
+<li>Create a GitHub account (if you don’t have one).  </li>
+<li>Create a new repository.  </li>
+<li>Upload the entire starter kit (or your modified version).  </li>
+<li>Enable GitHub Pages:<br />
+   - Go to <strong>Settings → Pages</strong><br />
+   - Source: <strong>main</strong><br />
+   - Folder: <strong>root</strong> or <strong>/docs</strong>  </li>
+<li>Wait 30–60 seconds.  </li>
+<li>Visit your site:</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>https://your-username.github.io/your-repo/modules/my-first-module/
+</code></pre></div>
+
+<p>If the page loads, your module is now public and agent‑readable.</p>
+<hr />
+<h2 id="5-test-with-an-ai-agent-510-min"><strong>5. Test with an AI Agent (5–10 min)</strong><a class="toc-permalink" href="#5-test-with-an-ai-agent-510-min" title="Permanent link to this heading">&para;</a></h2>
+<p>Ask any agent:</p>
+<blockquote>
+<p>“Load my RTT module from:<br />
+<code>https://your-username.github.io/your-repo/modules/my-first-module/</code> <a href="https://www.bing.com/search?q=" title="https%3A%2F%2Fyour-username.github.io%2Fyour-repo%2Fmodules%2Fmy-first-module%2F">(your-username.github.io in Bing)</a><br />
+and summarize its operators.”</p>
+</blockquote>
+<p>If it responds correctly, your module is live and functional.</p>
+<hr />
+<h2 id="youre-done"><strong>You’re Done</strong><a class="toc-permalink" href="#youre-done" title="Permanent link to this heading">&para;</a></h2>
+<p>You now have:<br />
+- your own RTT instance<br />
+- your own module.json<br />
+- your own operator grammar<br />
+- your own published agentic module  </p>
+<p>From here, you can expand your module, add operators, or create new ones.<br />
+# <strong>RTT Starter Kit — Full .zip Manifest</strong></p>
+<ul>
+<li><a href="RTT_Starter_Full.zip"><code>RTT_Starter_Full.zip</code></a>— Agentic RTT Starter Kit</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>rtt-starter-kit/
+│
+├── README.md
+├── Full_Zip_Manifest.md
+│
+├── rtt/
+│   ├── cheat-sheet.md
+│   ├── index.md
+│   ├── instructor-overview.md
+│   ├── quick-reference.md
+│   ├── _sidebar.md
+│   │
+│   ├── 1/
+│   │   ├── README.md
+│   │   └── rtt1.md
+│   ├── 2/
+│   │   ├── README.md
+│   │   └── rtt2.md
+│   └── 3/
+│       ├── README.md
+│       └── rtt3.md
+│
+├── modules/
+│   ├── starter/
+│   │   ├── README.md
+│   │   ├── module.json
+│   │   └── example-operator.md
+│   │
+│   └── templates/
+│       ├── module.blank.json
+│       ├── module.example.json
+│       └── module.rtt-ready.json
+│
+├── schema/
+│   └── module.schema.json
+│
+├── tools/
+│   ├── validate.py
+│   ├── validate.js
+│   └── README.md
+│
+└── docs/
+    ├── index.md
+    ├── HOWTO.md
+    ├── We_Didnt_Start_RTT__remix.md
+    ├── Cold_as_Ice__RTT_parody.md
+    ├── THE_FRAMEBREAKER—RTT_Metal_Parody_Original.md
+    └── github-setup.md
+</code></pre></div>
+
+<hr />
+<h1 id="sectionbysection-breakdown"><strong>Section‑by‑Section Breakdown</strong><a class="toc-permalink" href="#sectionbysection-breakdown" title="Permanent link to this heading">&para;</a></h1>
+<h2 id="root"><strong>Root</strong><a class="toc-permalink" href="#root" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><code>README.md</code> — overview of the Starter Kit</li>
+</ul>
+<hr />
+<h2 id="rtt"><strong>/rtt/</strong><a class="toc-permalink" href="#rtt" title="Permanent link to this heading">&para;</a></h2>
+<p>Student editions of RTT/1, RTT/2, RTT/3.</p>
+<p>Each folder contains:<br />
+- <code>README.md</code> — short intro<br />
+- <code>rttX.md</code> — the student‑edition content  </p>
+<hr />
+<h2 id="modules"><strong>/modules/</strong><a class="toc-permalink" href="#modules" title="Permanent link to this heading">&para;</a></h2>
+<p>Where students build their modules.</p>
+<h3 id="modulesstarter"><strong>/modules/starter/</strong><a class="toc-permalink" href="#modulesstarter" title="Permanent link to this heading">&para;</a></h3>
+<p>A fully working example module:<br />
+- <code>README.md</code><br />
+- <code>module.json</code><br />
+- <code>example-operator.md</code>  </p>
+<h3 id="modulestemplates"><strong>/modules/templates/</strong><a class="toc-permalink" href="#modulestemplates" title="Permanent link to this heading">&para;</a></h3>
+<p>Three canonical templates:<br />
+- <code>module.blank.json</code><br />
+- <code>module.example.json</code><br />
+- <code>module.rtt-ready.json</code>  </p>
+<hr />
+<h2 id="schema"><strong>/schema/</strong><a class="toc-permalink" href="#schema" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><code>module.schema.json</code> — the canonical schema</li>
+</ul>
+<hr />
+<h2 id="tools"><strong>/tools/</strong><a class="toc-permalink" href="#tools" title="Permanent link to this heading">&para;</a></h2>
+<p>Validator scripts + instructions:<br />
+- <code>validate.py</code><br />
+- <code>validate.js</code><br />
+- <code>README.md</code>  </p>
+<hr />
+<h2 id="docs"><strong>/docs/</strong><a class="toc-permalink" href="#docs" title="Permanent link to this heading">&para;</a></h2>
+<p>Student‑facing documentation:<br />
+- <code>index.md</code> — landing page<br />
+- <code>HOWTO.md</code> — 1‑page module creation guide<br />
+- <code>github-setup.md</code> — publishing instructions  </p>
+<hr />
+<h1 id="packaging-notes"><strong>Packaging Notes</strong><a class="toc-permalink" href="#packaging-notes" title="Permanent link to this heading">&para;</a></h1>
+<p>The <code>.zip</code> should contain <strong>exactly</strong> the structure above — no hidden files, no OS metadata, no editor folders.</p>
+<p>Ideal packaging command (conceptually):</p>
+<div class="codehilite"><pre><span></span><code>zip -r rtt-starter-kit.zip rtt-starter-kit/
+</code></pre></div>
+
+<p>This ensures deterministic structure for students and agents.<br />
+# <strong>❄️ “Cold as Ice (RTT Parody)” — Original, Canon‑Aligned, No Copyrighted Lines</strong></p>
+<p><strong>Verse 1</strong><br />
+You turn away from change,<br />
+Pretend the world is staying still.<br />
+You shut the window tight,<br />
+Ignore the shift against your will.<br />
+We show the signs, the layers move,<br />
+But you refuse to see the proof.<br />
+You chase the glitter, miss the gold,<br />
+You trade tomorrow for the old.</p>
+<p><strong>Chorus</strong><br />
+<strong>Cold as ice —<br />
+You freeze the frame and call it truth.<br />
+Cold as ice —<br />
+You lock the door and guard your youth.<br />
+Cold as ice —<br />
+You think the world will never bend,<br />
+But every regime turns in the end.</strong></p>
+<p><strong>Verse 2</strong><br />
+You want a paradise<br />
+Where nothing breaks and nothing grows.<br />
+You want the surface clean,<br />
+No deeper currents to expose.<br />
+But systems shift, they always do,<br />
+And someday it’ll break through you.<br />
+You bury resonance so deep,<br />
+But it’s the one thing you can’t keep.</p>
+<p><strong>Chorus</strong><br />
+<strong>Cold as ice —<br />
+You hold the moment far too tight.<br />
+Cold as ice —<br />
+You fear the dark behind the light.<br />
+Cold as ice —<br />
+You think the layers never blend,<br />
+But every pattern meets its end.</strong></p>
+<p><strong>Bridge</strong><br />
+You never take the warning signs,<br />
+You never trace the structural lines.<br />
+You never see the resonance,<br />
+The long arc pulling through events.<br />
+You think that naming change is wrong,<br />
+But change has been here all along.<br />
+RTT just shows the map —<br />
+You’re the one refusing that.</p>
+<p><strong>Final Chorus</strong><br />
+<strong>Cold as ice —<br />
+You can’t outrun the shifting tide.<br />
+Cold as ice —<br />
+You close the door and stay inside.<br />
+Cold as ice —<br />
+But when the world begins to bend,<br />
+You’ll see the truth you tried to end.</strong></p>
+<hr />
+<h1 id="why-this-one-hits-differently"><strong>Why this one hits differently</strong><a class="toc-permalink" href="#why-this-one-hits-differently" title="Permanent link to this heading">&para;</a></h1>
+<p>Because this isn’t a message of blame.<br />
+It’s a message of <strong>clarity</strong>.</p>
+<p>RTT didn’t make the world dynamic.<br />
+RTT didn’t create regimes, layers, or operators.<br />
+RTT didn’t invent change.</p>
+<p>RTT just <strong>names what’s already happening</strong>.</p>
+<p>And the people who refuse to see it?<br />
+They’re not evil.<br />
+They’re not villains.</p>
+<p>They’re just <strong>cold to the idea that the world moves</strong>.</p>
+<p>But the world moves anyway.<br />
+# <strong>GitHub Setup — Publish Your RTT Module</strong><br />
+<strong>Time:</strong> 20–30 minutes<br />
+<strong>Goal:</strong> Put your RTT module online so AI agents (and other students) can load it.</p>
+<hr />
+<h2 id="1-create-a-github-account-25-min"><strong>1. Create a GitHub Account (2–5 min)</strong><a class="toc-permalink" href="#1-create-a-github-account-25-min" title="Permanent link to this heading">&para;</a></h2>
+<p>If you don’t already have one:</p>
+<ul>
+<li>Go to <strong><a href="https://github.com">https://github.com</a></strong>  </li>
+<li>Create an account  </li>
+<li>Verify your email  </li>
+</ul>
+<p>That’s all you need.</p>
+<hr />
+<h2 id="2-create-a-new-repository-35-min"><strong>2. Create a New Repository (3–5 min)</strong><a class="toc-permalink" href="#2-create-a-new-repository-35-min" title="Permanent link to this heading">&para;</a></h2>
+<ol>
+<li>Click <strong>New Repository</strong>  </li>
+<li>Name it anything you like (example: <code>rtt-starter</code>)  </li>
+<li>Set it to <strong>Public</strong>  </li>
+<li>Click <strong>Create Repository</strong></li>
+</ol>
+<p>You now have a place to upload your Starter Kit.</p>
+<hr />
+<h2 id="3-upload-the-starter-kit-510-min"><strong>3. Upload the Starter Kit (5–10 min)</strong><a class="toc-permalink" href="#3-upload-the-starter-kit-510-min" title="Permanent link to this heading">&para;</a></h2>
+<ol>
+<li>Open your new repository  </li>
+<li>Click <strong>Add file → Upload files</strong>  </li>
+<li>Drag the entire contents of the Starter Kit folder into the upload window  </li>
+<li>Click <strong>Commit changes</strong></li>
+</ol>
+<p>Your RTT files are now stored on GitHub.</p>
+<hr />
+<h2 id="4-enable-github-pages-5-min"><strong>4. Enable GitHub Pages (5 min)</strong><a class="toc-permalink" href="#4-enable-github-pages-5-min" title="Permanent link to this heading">&para;</a></h2>
+<p>This step makes your modules available on the web.</p>
+<ol>
+<li>Go to <strong>Settings</strong>  </li>
+<li>Scroll to <strong>Pages</strong>  </li>
+<li>Under <strong>Source</strong>, choose:<br />
+   - <strong>Branch:</strong> <code>main</code><br />
+   - <strong>Folder:</strong> <code>/root</code> (or <code>/docs</code> if you prefer)  </li>
+<li>Click <strong>Save</strong></li>
+</ol>
+<p>GitHub will build your site.<br />
+This usually takes <strong>30–60 seconds</strong>.</p>
+<hr />
+<h2 id="5-visit-your-published-site-12-min"><strong>5. Visit Your Published Site (1–2 min)</strong><a class="toc-permalink" href="#5-visit-your-published-site-12-min" title="Permanent link to this heading">&para;</a></h2>
+<p>Your site will be available at:</p>
+<div class="codehilite"><pre><span></span><code>https://your-username.github.io/your-repo/
+</code></pre></div>
+
+<p>Example:</p>
+<div class="codehilite"><pre><span></span><code>https://student123.github.io/rtt-starter/
+</code></pre></div>
+
+<p>If it loads, your site is live.</p>
+<hr />
+<h2 id="6-open-your-module-in-the-browser-12-min"><strong>6. Open Your Module in the Browser (1–2 min)</strong><a class="toc-permalink" href="#6-open-your-module-in-the-browser-12-min" title="Permanent link to this heading">&para;</a></h2>
+<p>Navigate to your module folder:</p>
+<div class="codehilite"><pre><span></span><code>https://your-username.github.io/your-repo/modules/my-first-module/
+</code></pre></div>
+
+<p>If you see your README, your module is now public and agent‑readable.</p>
+<hr />
+<h2 id="7-test-with-an-ai-agent-23-min"><strong>7. Test with an AI Agent (2–3 min)</strong><a class="toc-permalink" href="#7-test-with-an-ai-agent-23-min" title="Permanent link to this heading">&para;</a></h2>
+<p>Ask any agent:</p>
+<blockquote>
+<p>“Load my RTT module from:<br />
+<code>https://your-username.github.io/your-repo/modules/my-first-module/</code><br />
+and summarize its operators.”</p>
+</blockquote>
+<p>If it responds correctly, your module is fully operational.</p>
+<hr />
+<h1 id="youre-done_1"><strong>You’re Done</strong><a class="toc-permalink" href="#youre-done_1" title="Permanent link to this heading">&para;</a></h1>
+<p>You now have:<br />
+- a GitHub repository<br />
+- a published RTT site<br />
+- your first agentic module<br />
+- a working module.json<br />
+- a URL that any AI can load  </p>
+<p>You are officially part of the TriadicFrameworks ecosystem.<br />
+# <strong>HOWTO: Create Your First RTT Module</strong><br />
+<strong>Time:</strong> 1–3 hours<br />
+<strong>Audience:</strong> Students and beginners<br />
+<strong>Goal:</strong> Go from zero → a working RTT module published on GitHub Pages.</p>
+<hr />
+<h2 id="1-download-the-starter-kit"><strong>1. Download the Starter Kit</strong><a class="toc-permalink" href="#1-download-the-starter-kit" title="Permanent link to this heading">&para;</a></h2>
+<ol>
+<li>Get the <code>.zip</code> from your instructor.  </li>
+<li>Extract it.  </li>
+<li>You will see:</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>rtt/
+modules/
+schema/
+tools/
+docs/
+README.md
+</code></pre></div>
+
+<p>You only need <strong>RTT/1</strong> and the <strong>starter module</strong> to begin.</p>
+<hr />
+<h2 id="2-copy-the-starter-module"><strong>2. Copy the Starter Module</strong><a class="toc-permalink" href="#2-copy-the-starter-module" title="Permanent link to this heading">&para;</a></h2>
+<p>Navigate to:</p>
+<div class="codehilite"><pre><span></span><code>/modules/starter/
+</code></pre></div>
+
+<p>Copy the entire folder and rename it:</p>
+<div class="codehilite"><pre><span></span><code>/modules/my-first-module/
+</code></pre></div>
+
+<p>This is now <em>your</em> module.</p>
+<hr />
+<h2 id="3-edit-modulejson-6-fields-only"><strong>3. Edit <code>module.json</code> (6 fields only)</strong><a class="toc-permalink" href="#3-edit-modulejson-6-fields-only" title="Permanent link to this heading">&para;</a></h2>
+<p>Open:</p>
+<div class="codehilite"><pre><span></span><code>/modules/my-first-module/module.json
+</code></pre></div>
+
+<p>Fill in:</p>
+<ul>
+<li><code>module</code>  </li>
+<li><code>identity</code>  </li>
+<li><code>purpose</code>  </li>
+<li><code>files</code>  </li>
+<li><code>operators</code>  </li>
+</ul>
+<p>Example:</p>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;$schema&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;../../schema/module.schema.json&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;module&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;my-first-module&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;identity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;student.my-first-module&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;purpose&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;My first RTT module.&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;files&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">  </span><span class="nt">&quot;operators&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>This is a valid, schema‑aligned module.</p>
+<hr />
+<h2 id="4-add-one-operator-example"><strong>4. Add One Operator Example</strong><a class="toc-permalink" href="#4-add-one-operator-example" title="Permanent link to this heading">&para;</a></h2>
+<p>Open:</p>
+<div class="codehilite"><pre><span></span><code>example-operator.md
+</code></pre></div>
+
+<p>Or create your own file.</p>
+<p>Add something like:</p>
+<div class="codehilite"><pre><span></span><code>## Operator: shift
+Moves the frame of reference forward or backward.
+Example: “Shift one step forward to reveal the next state.”
+</code></pre></div>
+
+<p>Your module now contains real RTT content.</p>
+<hr />
+<h2 id="5-validate-your-module"><strong>5. Validate Your Module</strong><a class="toc-permalink" href="#5-validate-your-module" title="Permanent link to this heading">&para;</a></h2>
+<p>From the <code>/tools/</code> folder:</p>
+<p>Python:</p>
+<div class="codehilite"><pre><span></span><code>pip install jsonschema
+python validate.py ../modules/my-first-module/module.json
+</code></pre></div>
+
+<p>Node:</p>
+<div class="codehilite"><pre><span></span><code>npm install ajv
+node validate.js ../modules/my-first-module/module.json
+</code></pre></div>
+
+<p>If you see:</p>
+<div class="codehilite"><pre><span></span><code>✔ module.json is valid and canon‑aligned.
+</code></pre></div>
+
+<p>You’re good.</p>
+<hr />
+<h2 id="6-publish-on-github"><strong>6. Publish on GitHub</strong><a class="toc-permalink" href="#6-publish-on-github" title="Permanent link to this heading">&para;</a></h2>
+<ol>
+<li>Create a GitHub repo.  </li>
+<li>Upload the entire Starter Kit (or your modified version).  </li>
+<li>Go to <strong>Settings → Pages</strong>.  </li>
+<li>Set:<br />
+   - <strong>Branch:</strong> <code>main</code><br />
+   - <strong>Folder:</strong> <code>/root</code> or <code>/docs</code>  </li>
+<li>Save.</li>
+</ol>
+<p>Your site will appear at:</p>
+<div class="codehilite"><pre><span></span><code>https://your-username.github.io/your-repo/
+</code></pre></div>
+
+<hr />
+<h2 id="7-view-your-module-online"><strong>7. View Your Module Online</strong><a class="toc-permalink" href="#7-view-your-module-online" title="Permanent link to this heading">&para;</a></h2>
+<p>Visit:</p>
+<div class="codehilite"><pre><span></span><code>https://your-username.github.io/your-repo/modules/my-first-module/
+</code></pre></div>
+
+<p>If the page loads, your module is now public and agent‑readable.</p>
+<hr />
+<h2 id="8-test-with-an-ai-agent"><strong>8. Test with an AI Agent</strong><a class="toc-permalink" href="#8-test-with-an-ai-agent" title="Permanent link to this heading">&para;</a></h2>
+<p>Ask any agent:</p>
+<blockquote>
+<p>“Load my RTT module from<br />
+<code>https://your-username.github.io/your-repo/modules/my-first-module/</code><br />
+and summarize its operators.”</p>
+</blockquote>
+<p>If it responds correctly, your module is fully operational.</p>
+<hr />
+<h2 id="youre-done_2"><strong>You’re Done</strong><a class="toc-permalink" href="#youre-done_2" title="Permanent link to this heading">&para;</a></h2>
+<p>You now have:</p>
+<ul>
+<li>a working RTT module  </li>
+<li>a valid <code>module.json</code>  </li>
+<li>a published GitHub Pages site  </li>
+<li>a URL that any AI agent can load  </li>
+</ul>
+<p>You are officially part of the TriadicFrameworks ecosystem.<br />
+# <strong>RTT Starter Kit</strong><br />
+Welcome. This Starter Kit gives you everything you need to create your first <strong>agentic module</strong> using <strong>Resonance Time Theory (RTT)</strong>.</p>
+<p>You can complete the entire process in <strong>1–3 hours</strong>, even with no prior experience.</p>
+<hr />
+<h2 id="whats-inside"><strong>What’s Inside</strong><a class="toc-permalink" href="#whats-inside" title="Permanent link to this heading">&para;</a></h2>
+<p>This kit includes:</p>
+<ul>
+<li>
+<p><strong>RTT/1, RTT/2, RTT/3 (Student Editions)</strong><br />
+  Clean, minimal explanations of operators, regimes, and layers.</p>
+</li>
+<li>
+<p><strong>Starter Module</strong><br />
+  A tiny working example you can copy and modify.</p>
+</li>
+<li>
+<p><strong>module.json Templates</strong><br />
+  Blank, example, and RTT‑ready versions.</p>
+</li>
+<li>
+<p><strong>Schema</strong><br />
+  The canonical <code>module.schema.json</code> used by all modules.</p>
+</li>
+<li>
+<p><strong>Validator Tools</strong><br />
+  Simple Python/Node scripts to check your module for correctness.</p>
+</li>
+<li>
+<p><strong>Guides</strong>  </p>
+</li>
+<li><em>How to Create Your First Module</em>  </li>
+<li><em>GitHub Setup</em>  </li>
+<li>This landing page</li>
+</ul>
+<p>Everything is designed to be <strong>simple</strong>, <strong>minimal</strong>, and <strong>canon‑aligned</strong>.</p>
+<hr />
+<h2 id="your-first-steps"><strong>Your First Steps</strong><a class="toc-permalink" href="#your-first-steps" title="Permanent link to this heading">&para;</a></h2>
+<ol>
+<li>Read the <strong>How‑To</strong> guide.  </li>
+<li>Copy the <strong>starter module</strong>.  </li>
+<li>Edit <code>module.json</code>.  </li>
+<li>Add one operator example.  </li>
+<li>Validate your module.  </li>
+<li>Publish it on GitHub Pages.</li>
+</ol>
+<p>When you finish, you will have a <strong>public RTT module</strong> that any AI agent can load.</p>
+<hr />
+<h2 id="why-rtt"><strong>Why RTT?</strong><a class="toc-permalink" href="#why-rtt" title="Permanent link to this heading">&para;</a></h2>
+<p>RTT gives you a structured way to describe:</p>
+<ul>
+<li>how things change  </li>
+<li>how systems shift between regimes  </li>
+<li>how multiple layers interact over time  </li>
+</ul>
+<p>You don’t need math.<br />
+You don’t need physics.<br />
+You only need the operators.</p>
+<hr />
+<h2 id="where-to-go-next"><strong>Where to Go Next</strong><a class="toc-permalink" href="#where-to-go-next" title="Permanent link to this heading">&para;</a></h2>
+<p>After your first module, you can:</p>
+<ul>
+<li>create more operators  </li>
+<li>add regimes and layers  </li>
+<li>build multi‑module systems  </li>
+<li>explore the full TriadicFrameworks canon  </li>
+</ul>
+<p>This kit is your starting point.<br />
+# <strong>🔥 “We Didn’t Start RTT” — TriadicFrameworks Remix (Original Parody)</strong><br />
+<em>(All original lines — no copyrighted text. This is our version.)</em></p>
+<p><strong>Verse 1</strong><br />
+Old regimes, shifting frames,<br />
+Humans mapping time and change.<br />
+Patterns breaking, layers showing,<br />
+Systems moving, always flowing.<br />
+Every age, every mind,<br />
+Trying hard to track the signs.<br />
+Operators everywhere,<br />
+Long before we made them clear.</p>
+<p><strong>Chorus</strong><br />
+<strong>We didn’t start RTT —<br />
+The world was shifting,<br />
+Patterns always drifting.<br />
+We didn’t start RTT —<br />
+We just named the fire<br />
+Burning underneath the wire.</strong></p>
+<p><strong>Verse 2</strong><br />
+Ancient scribes, mystic schools,<br />
+Scientists rewriting rules.<br />
+Historians tracking arcs,<br />
+Poets lighting hidden sparks.<br />
+Every field, every trade,<br />
+Used the grammar we conveyed.<br />
+Shift and hold and compare —<br />
+They were always waiting there.</p>
+<p><strong>Chorus</strong><br />
+<strong>We didn’t start RTT —<br />
+The change was turning,<br />
+Human insight burning.<br />
+We didn’t start RTT —<br />
+We just built the map<br />
+For what was always on the lap.</strong></p>
+<p><strong>Bridge</strong><br />
+People say we made it up,<br />
+But the world was full enough:<br />
+Stable modes and breaking lines,<br />
+Deep coherence through the times.<br />
+We just caught the resonance,<br />
+Gave the structure elegance,<br />
+Turned the chaos into form,<br />
+Named the layers in the storm.</p>
+<p><strong>Final Chorus</strong><br />
+<strong>We didn’t start RTT —<br />
+The world was learning,<br />
+Every mind discerning.<br />
+We didn’t start RTT —<br />
+But now that it’s shown,<br />
+It’ll burn long after we’re gone.</strong></p>
+<hr />
+<h1 id="why-this-hits-so-well"><strong>Why this hits so well</strong><a class="toc-permalink" href="#why-this-hits-so-well" title="Permanent link to this heading">&para;</a></h1>
+<p>Because RTT <em>isn’t</em> an invention — it’s a <strong>recognition</strong>.</p>
+<p>We didn’t create the fire.<br />
+We just <strong>named the operators</strong>, <strong>mapped the regimes</strong>, <strong>stacked the layers</strong>, and <strong>built the substrate</strong> so others could finally see what was always there.</p>
+<p>RTT is the grammar of change that humanity has been using unconsciously for millennia.</p>
+<p>We just turned the unconscious into a <strong>canon</strong>.<br />
+# Example Operator: shift</p>
+<h2 id="what-it-does">What it does<a class="toc-permalink" href="#what-it-does" title="Permanent link to this heading">&para;</a></h2>
+<p>Moves the frame of reference forward or backward in time.</p>
+<h2 id="why-it-matters">Why it matters<a class="toc-permalink" href="#why-it-matters" title="Permanent link to this heading">&para;</a></h2>
+<p>It lets you examine how a system changes from one moment to the next.</p>
+<h2 id="example">Example<a class="toc-permalink" href="#example" title="Permanent link to this heading">&para;</a></h2>
+<p>“Shift one step forward to reveal the next state.”<br />
+# Starter Module<br />
+This is a minimal example RTT module. Students copy this folder to create their own module.</p>
+<h2 id="purpose">Purpose<a class="toc-permalink" href="#purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>Show the smallest possible working module using RTT/1 operators.</p>
+<h2 id="contents">Contents<a class="toc-permalink" href="#contents" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>module.json — the module definition</li>
+<li>example-operator.md — one operator demonstration</li>
+</ul>
+<h2 id="how-to-use">How to Use<a class="toc-permalink" href="#how-to-use" title="Permanent link to this heading">&para;</a></h2>
+<ol>
+<li>Copy this folder.</li>
+<li>Rename it (example: <code>my-first-module</code>).</li>
+<li>Edit <code>module.json</code> to set your module name, identity, and purpose.</li>
+<li>Add your own operators and examples.<br />
+# RTT/1–3 Cheat Sheet</li>
+</ol>
+<p>A quick reference for all three student RTT levels.</p>
+<hr />
+<h2 id="rtt1-operators">RTT/1 — Operators<a class="toc-permalink" href="#rtt1-operators" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>shift</strong><br />
+Move the frame of reference forward or backward.<br />
+Example: “Shift one step forward.”</p>
+<p><strong>hold</strong><br />
+Stabilize the current moment for inspection.<br />
+Example: “Hold this state.”</p>
+<p><strong>compare</strong><br />
+Contrast two states to reveal change.<br />
+Example: “Compare before/after.”</p>
+<hr />
+<h2 id="rtt2-regimes">RTT/2 — Regimes<a class="toc-permalink" href="#rtt2-regimes" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>stable</strong><br />
+The system behaves predictably.</p>
+<p><strong>transitional</strong><br />
+The system is shifting between patterns.</p>
+<p><strong>divergent</strong><br />
+The system breaks from its previous pattern.</p>
+<hr />
+<h2 id="rtt3-coherence-layers">RTT/3 — Coherence Layers<a class="toc-permalink" href="#rtt3-coherence-layers" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>surface layer</strong><br />
+Visible behavior; what you can observe directly.</p>
+<p><strong>structural layer</strong><br />
+Underlying rules shaping the surface.</p>
+<p><strong>resonance layer</strong><br />
+Deep tendencies that persist across changes.</p>
+<hr />
+<h2 id="how-they-combine">How They Combine<a class="toc-permalink" href="#how-they-combine" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>“Hold the surface layer in the transitional regime.”  </li>
+<li>“Shift from stable → divergent.”  </li>
+<li>“Compare structural vs. surface behavior.”  </li>
+</ul>
+<p>Operators (RTT/1)<br />
++ Regimes (RTT/2)<br />
++ Layers (RTT/3)<br />
+= Full student RTT analysis.<br />
+# <strong>RTT Starter — Levels 1, 2, and 3</strong><br />
+Welcome to the <strong>RTT Starter Track</strong>.<br />
+This section introduces the three student‑edition levels of <strong>Resonance Time Theory (RTT)</strong>:</p>
+<ul>
+<li><strong>RTT/1 — Operators</strong>  </li>
+<li><strong>RTT/2 — Regimes</strong>  </li>
+<li><strong>RTT/3 — Coherence Layers</strong></li>
+</ul>
+<p>These levels give you the complete foundation needed to create your own RTT modules.</p>
+<hr />
+<h2 id="what-you-will-learn"><strong>What You Will Learn</strong><a class="toc-permalink" href="#what-you-will-learn" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="rtt1-temporal-operators"><strong>RTT/1 — Temporal Operators</strong><a class="toc-permalink" href="#rtt1-temporal-operators" title="Permanent link to this heading">&para;</a></h3>
+<p>You learn the basic grammar of RTT:<br />
+- <strong>shift</strong> — move between moments<br />
+- <strong>hold</strong> — stabilize a moment<br />
+- <strong>compare</strong> — reveal change  </p>
+<p>This level teaches you how to describe <em>how things change over time</em>.</p>
+<hr />
+<h3 id="rtt2-regime-literacy"><strong>RTT/2 — Regime Literacy</strong><a class="toc-permalink" href="#rtt2-regime-literacy" title="Permanent link to this heading">&para;</a></h3>
+<p>You learn that systems behave differently in different modes:<br />
+- <strong>stable</strong><br />
+- <strong>transitional</strong><br />
+- <strong>divergent</strong>  </p>
+<p>This level teaches you how to identify <em>what mode the system is in</em>.</p>
+<hr />
+<h3 id="rtt3-coherence-layers_1"><strong>RTT/3 — Coherence Layers</strong><a class="toc-permalink" href="#rtt3-coherence-layers_1" title="Permanent link to this heading">&para;</a></h3>
+<p>You learn to see systems across three layers:<br />
+- <strong>surface</strong> — visible behavior<br />
+- <strong>structural</strong> — underlying rules<br />
+- <strong>resonance</strong> — deep tendencies  </p>
+<p>This level teaches you how to analyze <em>multiple layers of behavior at once</em>.</p>
+<hr />
+<h2 id="how-these-levels-fit-together"><strong>How These Levels Fit Together</strong><a class="toc-permalink" href="#how-these-levels-fit-together" title="Permanent link to this heading">&para;</a></h2>
+<p>RTT/1 → gives you operators<br />
+RTT/2 → adds regimes<br />
+RTT/3 → adds layers  </p>
+<p>Together, they form the complete student foundation for building <strong>agentic RTT modules</strong>.</p>
+<hr />
+<h2 id="where-to-go-next_1"><strong>Where to Go Next</strong><a class="toc-permalink" href="#where-to-go-next_1" title="Permanent link to this heading">&para;</a></h2>
+<p>After reviewing RTT/1–3, you can:</p>
+<ul>
+<li>Create your first module  </li>
+<li>Add operators, regimes, and layers  </li>
+<li>Validate your module  </li>
+<li>Publish it on GitHub Pages  </li>
+<li>Load it into an AI agent  </li>
+</ul>
+<p>You now have everything you need to begin building with RTT.<br />
+# RTT Instructor Overview<br />
+This document provides a high‑level teaching guide for RTT/1–3.<br />
+It explains the instructional purpose of each level and how they build<br />
+toward student‑created RTT modules.</p>
+<hr />
+<h2 id="teaching-goals">Teaching Goals<a class="toc-permalink" href="#teaching-goals" title="Permanent link to this heading">&para;</a></h2>
+<p>RTT is designed to give students a structured way to describe change,<br />
+pattern, and multi‑layer behavior without requiring mathematics or<br />
+physics. The three levels introduce complexity gradually.</p>
+<hr />
+<h2 id="rtt1-operators-foundational-grammar">RTT/1 — Operators (Foundational Grammar)<a class="toc-permalink" href="#rtt1-operators-foundational-grammar" title="Permanent link to this heading">&para;</a></h2>
+<p>Teaching focus:<br />
+- Students learn the basic temporal actions: shift, hold, compare.<br />
+- Emphasize clarity and sequence.<br />
+- Encourage students to narrate changes in simple systems.</p>
+<p>Instructor notes:<br />
+- RTT/1 is about <em>movement between states</em>.<br />
+- Students should practice describing transitions in stories,<br />
+  processes, or simple systems.</p>
+<hr />
+<h2 id="rtt2-regimes-pattern-recognition">RTT/2 — Regimes (Pattern Recognition)<a class="toc-permalink" href="#rtt2-regimes-pattern-recognition" title="Permanent link to this heading">&para;</a></h2>
+<p>Teaching focus:<br />
+- Students learn to classify system behavior into stable,<br />
+  transitional, and divergent regimes.<br />
+- Emphasize pattern recognition and mode shifts.</p>
+<p>Instructor notes:<br />
+- RTT/2 is about <em>how behavior changes</em>, not just when.<br />
+- Encourage students to identify regime boundaries and justify them.</p>
+<hr />
+<h2 id="rtt3-coherence-layers-depth-of-analysis">RTT/3 — Coherence Layers (Depth of Analysis)<a class="toc-permalink" href="#rtt3-coherence-layers-depth-of-analysis" title="Permanent link to this heading">&para;</a></h2>
+<p>Teaching focus:<br />
+- Students learn to separate surface behavior, structural rules,<br />
+  and resonance tendencies.<br />
+- Emphasize multi‑layer reasoning.</p>
+<p>Instructor notes:<br />
+- RTT/3 is about <em>depth</em>, not complexity.<br />
+- Students should practice mapping how layers influence each other.</p>
+<hr />
+<h2 id="putting-it-all-together">Putting It All Together<a class="toc-permalink" href="#putting-it-all-together" title="Permanent link to this heading">&para;</a></h2>
+<p>By the end of RTT/3, students can:<br />
+- describe temporal change (RTT/1)<br />
+- classify behavior modes (RTT/2)<br />
+- analyze multi‑layer interactions (RTT/3)<br />
+- build agent‑readable modules using module.json</p>
+<p>This completes the student foundation for TriadicFrameworks.<br />
+# RTT Quick Reference Card</p>
+<p>A one‑page summary of the core RTT concepts.</p>
+<hr />
+<h2 id="operators-rtt1">Operators (RTT/1)<a class="toc-permalink" href="#operators-rtt1" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><strong>shift</strong> — move between moments  </li>
+<li><strong>hold</strong> — stabilize a moment  </li>
+<li><strong>compare</strong> — reveal change  </li>
+</ul>
+<hr />
+<h2 id="regimes-rtt2">Regimes (RTT/2)<a class="toc-permalink" href="#regimes-rtt2" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><strong>stable</strong> — predictable behavior  </li>
+<li><strong>transitional</strong> — shifting behavior  </li>
+<li><strong>divergent</strong> — new behavior emerges  </li>
+</ul>
+<hr />
+<h2 id="layers-rtt3">Layers (RTT/3)<a class="toc-permalink" href="#layers-rtt3" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><strong>surface</strong> — visible pattern  </li>
+<li><strong>structural</strong> — underlying rules  </li>
+<li><strong>resonance</strong> — deep tendencies  </li>
+</ul>
+<hr />
+<h2 id="core-pattern">Core Pattern<a class="toc-permalink" href="#core-pattern" title="Permanent link to this heading">&para;</a></h2>
+<ol>
+<li><strong>Hold</strong> the current state  </li>
+<li><strong>Shift</strong> to the next  </li>
+<li>Identify the <strong>regime</strong>  </li>
+<li>Check the <strong>layer</strong>  </li>
+<li><strong>Compare</strong> across states  </li>
+</ol>
+<p>This is the basic RTT workflow.<br />
+## RTT Starter Navigation</p>
+<ul>
+<li><strong>Overview</strong></li>
+<li>
+<p><a href="./index.md">RTT Starter Index</a></p>
+</li>
+<li>
+<p><strong>RTT Levels</strong></p>
+</li>
+<li><strong>RTT/1 — Operators</strong><ul>
+<li><a href="./1/README.md">RTT/1 README</a></li>
+</ul>
+</li>
+<li><strong>RTT/2 — Regimes</strong><ul>
+<li><a href="./2/README.md">RTT/2 README</a></li>
+</ul>
+</li>
+<li>
+<p><strong>RTT/3 — Coherence Layers</strong></p>
+<ul>
+<li><a href="./3/README.md">RTT/3 README</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Reference</strong></p>
+</li>
+<li><a href="./cheat-sheet.md">Cheat Sheet</a></li>
+<li><a href="./quick-reference.md">Quick Reference</a></li>
+<li>
+<p><a href="./poster.txt">Printable Poster</a></p>
+</li>
+<li>
+<p><strong>Guides</strong></p>
+</li>
+<li><a href="../docs/HOWTO.md">HOWTO: Create Your First Module</a></li>
+<li><a href="../docs/github-setup.md">GitHub Setup</a><br />
+# <strong>RTT/1 — Student Edition</strong><br />
+<strong>Resonance Time Theory, Level 1</strong><br />
+<strong>Purpose:</strong> Learn the basic operators used to describe how systems change over time.</li>
+</ul>
+<p>RTT/1 gives you a simple temporal grammar.<br />
+You will use three operators — <strong>shift</strong>, <strong>hold</strong>, and <strong>compare</strong> — to describe changes, transitions, and differences between states.</p>
+<p>This is the foundation for all higher RTT levels.</p>
+<hr />
+<h2 id="1-what-rtt1-teaches"><strong>1. What RTT/1 Teaches</strong><a class="toc-permalink" href="#1-what-rtt1-teaches" title="Permanent link to this heading">&para;</a></h2>
+<p>RTT/1 answers a single question:</p>
+<p><strong>“How does something change from one moment to the next?”</strong></p>
+<p>You learn to:<br />
+- move between moments<br />
+- stabilize a moment<br />
+- compare two states  </p>
+<p>These skills are enough to build your first RTT module.</p>
+<hr />
+<h2 id="2-the-three-core-operators"><strong>2. The Three Core Operators</strong><a class="toc-permalink" href="#2-the-three-core-operators" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="shift"><strong>shift</strong><a class="toc-permalink" href="#shift" title="Permanent link to this heading">&para;</a></h3>
+<p>Moves the frame of reference forward or backward.<br />
+Examples:<br />
+- “Shift one step forward.”<br />
+- “Shift to the earlier state.”</p>
+<h3 id="hold"><strong>hold</strong><a class="toc-permalink" href="#hold" title="Permanent link to this heading">&para;</a></h3>
+<p>Stabilizes the current moment so you can examine it.<br />
+Examples:<br />
+- “Hold this moment.”<br />
+- “Hold the transition.”</p>
+<h3 id="compare"><strong>compare</strong><a class="toc-permalink" href="#compare" title="Permanent link to this heading">&para;</a></h3>
+<p>Contrasts two states to reveal change.<br />
+Examples:<br />
+- “Compare the current state to the previous one.”<br />
+- “Compare before/after.”</p>
+<p>These operators form the basic RTT grammar.</p>
+<hr />
+<h2 id="3-how-to-use-rtt1"><strong>3. How to Use RTT/1</strong><a class="toc-permalink" href="#3-how-to-use-rtt1" title="Permanent link to this heading">&para;</a></h2>
+<p>You can apply RTT/1 to:<br />
+- stories<br />
+- processes<br />
+- systems<br />
+- events<br />
+- anything that changes over time  </p>
+<p>Example:<br />
+1. <strong>Hold</strong> the current state.<br />
+2. <strong>Shift</strong> to the next state.<br />
+3. <strong>Compare</strong> the two states.  </p>
+<p>This simple pattern is the core of RTT analysis.</p>
+<hr />
+<h2 id="4-what-comes-next"><strong>4. What Comes Next</strong><a class="toc-permalink" href="#4-what-comes-next" title="Permanent link to this heading">&para;</a></h2>
+<p>After RTT/1, you can explore:<br />
+- <strong>RTT/2</strong> — regimes (stable, transitional, divergent)<br />
+- <strong>RTT/3</strong> — coherence layers (surface, structural, resonance)  </p>
+<p>But RTT/1 is all you need to create your first agentic module.<br />
+# <strong>RTT/1 — Student Edition</strong>  </p>
+<h3 id="resonance-time-theory-level-1"><strong>Resonance Time Theory, Level 1</strong><a class="toc-permalink" href="#resonance-time-theory-level-1" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Purpose:</strong> Give students a usable temporal grammar they can apply immediately.</p>
+<hr />
+<h2 id="1-what-rtt1-is"><strong>1. What RTT/1 Is</strong><a class="toc-permalink" href="#1-what-rtt1-is" title="Permanent link to this heading">&para;</a></h2>
+<p>RTT/1 introduces the <em>basic operators of temporal reasoning</em>.<br />
+It teaches how to move, compare, and stabilize states across time without equations or physics.</p>
+<p>Think of RTT/1 as:<br />
+<strong>“How to talk about time in a structured way.”</strong></p>
+<hr />
+<h2 id="2-the-three-core-operators_1"><strong>2. The Three Core Operators</strong><a class="toc-permalink" href="#2-the-three-core-operators_1" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="1-shift"><strong>1. shift</strong><a class="toc-permalink" href="#1-shift" title="Permanent link to this heading">&para;</a></h3>
+<p>Move the frame of reference forward or backward.<br />
+- “Shift one step forward.”<br />
+- “Shift to the earlier state.”</p>
+<h3 id="2-hold"><strong>2. hold</strong><a class="toc-permalink" href="#2-hold" title="Permanent link to this heading">&para;</a></h3>
+<p>Stabilize the current frame so it can be examined.<br />
+- “Hold this moment.”<br />
+- “Hold the transition.”</p>
+<h3 id="3-compare"><strong>3. compare</strong><a class="toc-permalink" href="#3-compare" title="Permanent link to this heading">&para;</a></h3>
+<p>Contrast two states to reveal change.<br />
+- “Compare the current state to the previous one.”<br />
+- “Compare before/after.”</p>
+<p>These three operators form the foundation of RTT.</p>
+<hr />
+<h2 id="3-what-students-can-do-with-rtt1"><strong>3. What Students Can Do with RTT/1</strong><a class="toc-permalink" href="#3-what-students-can-do-with-rtt1" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>Describe how something changes over time  </li>
+<li>Identify transitions  </li>
+<li>Stabilize a moment for analysis  </li>
+<li>Build simple temporal explanations  </li>
+</ul>
+<p>This is enough to create a valid RTT module.<br />
+# <strong>RTT/2 — Student Edition</strong><br />
+<strong>Resonance Time Theory, Level 2</strong><br />
+<strong>Purpose:</strong> Learn how systems behave differently in different <strong>regimes</strong>.</p>
+<p>RTT/2 builds on RTT/1 by introducing <strong>regime literacy</strong> — the ability to recognize when a system is stable, shifting, or breaking into new behavior.</p>
+<p>This level teaches you to see <em>patterns of behavior</em> rather than just individual moments.</p>
+<hr />
+<h2 id="1-what-rtt2-teaches"><strong>1. What RTT/2 Teaches</strong><a class="toc-permalink" href="#1-what-rtt2-teaches" title="Permanent link to this heading">&para;</a></h2>
+<p>RTT/2 answers the question:</p>
+<p><strong>“What mode is the system in right now?”</strong></p>
+<p>A system does not behave the same way all the time.<br />
+It moves through <strong>regimes</strong> — each with its own rules.</p>
+<p>Understanding regimes helps you:<br />
+- identify when patterns hold<br />
+- detect when change is happening<br />
+- recognize when new behavior emerges  </p>
+<hr />
+<h2 id="2-the-three-student-regimes"><strong>2. The Three Student Regimes</strong><a class="toc-permalink" href="#2-the-three-student-regimes" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="stable-regime"><strong>stable regime</strong><a class="toc-permalink" href="#stable-regime" title="Permanent link to this heading">&para;</a></h3>
+<p>The system behaves predictably.<br />
+- Patterns repeat<br />
+- No major changes occur<br />
+- Behavior is consistent  </p>
+<h3 id="transitional-regime"><strong>transitional regime</strong><a class="toc-permalink" href="#transitional-regime" title="Permanent link to this heading">&para;</a></h3>
+<p>The system is shifting between patterns.<br />
+- Edges blur<br />
+- Rules loosen<br />
+- Movement between states becomes visible  </p>
+<h3 id="divergent-regime"><strong>divergent regime</strong><a class="toc-permalink" href="#divergent-regime" title="Permanent link to this heading">&para;</a></h3>
+<p>The system breaks from its previous pattern.<br />
+- New behavior appears<br />
+- Old rules stop working<br />
+- The system moves into unexplored territory  </p>
+<p>These three regimes are enough to analyze most beginner‑level systems.</p>
+<hr />
+<h2 id="3-how-rtt2-builds-on-rtt1"><strong>3. How RTT/2 Builds on RTT/1</strong><a class="toc-permalink" href="#3-how-rtt2-builds-on-rtt1" title="Permanent link to this heading">&para;</a></h2>
+<p>RTT/1 gave you operators:</p>
+<ul>
+<li><strong>shift</strong>  </li>
+<li><strong>hold</strong>  </li>
+<li><strong>compare</strong></li>
+</ul>
+<p>RTT/2 lets you combine them with regimes:</p>
+<ul>
+<li>“Shift into the transitional regime.”  </li>
+<li>“Hold the stable regime for comparison.”  </li>
+<li>“Compare stable → divergent.”  </li>
+</ul>
+<p>This is where RTT becomes a real analytical tool.</p>
+<hr />
+<h2 id="4-how-to-use-rtt2"><strong>4. How to Use RTT/2</strong><a class="toc-permalink" href="#4-how-to-use-rtt2" title="Permanent link to this heading">&para;</a></h2>
+<p>You can apply regimes to:<br />
+- stories<br />
+- processes<br />
+- systems<br />
+- behaviors<br />
+- any sequence that changes over time  </p>
+<p>Example pattern:<br />
+1. Identify the <strong>current regime</strong><br />
+2. <strong>Shift</strong> to the next moment<br />
+3. Check if the regime <strong>changes</strong><br />
+4. <strong>Compare</strong> the two regimes  </p>
+<p>This reveals how the system evolves.</p>
+<hr />
+<h2 id="5-what-comes-next"><strong>5. What Comes Next</strong><a class="toc-permalink" href="#5-what-comes-next" title="Permanent link to this heading">&para;</a></h2>
+<p>After RTT/2, you can explore:</p>
+<ul>
+<li><strong>RTT/3</strong> — coherence layers (surface, structural, resonance)  </li>
+<li><strong>Module building</strong> — adding regimes to your module.json  </li>
+<li><strong>Multi‑layer analysis</strong> — combining operators + regimes + layers  </li>
+</ul>
+<p>RTT/2 is the bridge between simple temporal reasoning and full RTT analysis.<br />
+# <strong>RTT/2 — Student Edition</strong>  </p>
+<h3 id="resonance-time-theory-level-2"><strong>Resonance Time Theory, Level 2</strong><a class="toc-permalink" href="#resonance-time-theory-level-2" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Purpose:</strong> Introduce <em>regimes</em> — the idea that systems behave differently in different conditions.</p>
+<hr />
+<h2 id="1-what-rtt2-adds"><strong>1. What RTT/2 Adds</strong><a class="toc-permalink" href="#1-what-rtt2-adds" title="Permanent link to this heading">&para;</a></h2>
+<p>RTT/2 teaches students to see that time isn’t uniform.<br />
+Systems operate in <strong>regimes</strong> — stable patterns with their own rules.</p>
+<p>RTT/2 answers:<br />
+<strong>“What mode is the system in right now?”</strong></p>
+<hr />
+<h2 id="2-the-three-student-regimes_1"><strong>2. The Three Student Regimes</strong><a class="toc-permalink" href="#2-the-three-student-regimes_1" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="1-stable-regime"><strong>1. stable regime</strong><a class="toc-permalink" href="#1-stable-regime" title="Permanent link to this heading">&para;</a></h3>
+<p>The system behaves predictably.<br />
+- “The pattern repeats.”<br />
+- “No major changes occur.”</p>
+<h3 id="2-transitional-regime"><strong>2. transitional regime</strong><a class="toc-permalink" href="#2-transitional-regime" title="Permanent link to this heading">&para;</a></h3>
+<p>The system is shifting between patterns.<br />
+- “The structure is changing.”<br />
+- “Edges blur.”</p>
+<h3 id="3-divergent-regime"><strong>3. divergent regime</strong><a class="toc-permalink" href="#3-divergent-regime" title="Permanent link to this heading">&para;</a></h3>
+<p>The system breaks from its previous pattern.<br />
+- “New behavior emerges.”<br />
+- “The old rules no longer apply.”</p>
+<hr />
+<h2 id="3-how-rtt2-builds-on-rtt1_1"><strong>3. How RTT/2 Builds on RTT/1</strong><a class="toc-permalink" href="#3-how-rtt2-builds-on-rtt1_1" title="Permanent link to this heading">&para;</a></h2>
+<p>Students combine operators with regimes:</p>
+<ul>
+<li>“Shift into the transitional regime.”  </li>
+<li>“Hold the stable regime for comparison.”  </li>
+<li>“Compare stable → divergent.”</li>
+</ul>
+<p>This is the first moment where students begin to <em>map</em> behavior.<br />
+# <strong>RTT/3 — Student Edition</strong><br />
+<strong>Resonance Time Theory, Level 3</strong><br />
+<strong>Purpose:</strong> Learn how multiple temporal patterns interact across <strong>coherence layers</strong>.</p>
+<p>RTT/3 expands your view of systems.<br />
+Instead of looking at a single timeline, you learn to see <strong>three layers</strong> operating at once:</p>
+<ul>
+<li>the <strong>surface</strong> (what you can observe)  </li>
+<li>the <strong>structural</strong> (the rules shaping the surface)  </li>
+<li>the <strong>resonance</strong> (deep tendencies that persist across changes)</li>
+</ul>
+<p>This level teaches you to analyze systems with depth, not just sequence.</p>
+<hr />
+<h2 id="1-what-rtt3-teaches"><strong>1. What RTT/3 Teaches</strong><a class="toc-permalink" href="#1-what-rtt3-teaches" title="Permanent link to this heading">&para;</a></h2>
+<p>RTT/3 answers the question:</p>
+<p><strong>“How do different layers of a system interact over time?”</strong></p>
+<p>You learn to:<br />
+- separate visible behavior from underlying structure<br />
+- identify long‑term tendencies<br />
+- track how layers influence each other  </p>
+<p>This is the foundation of multi‑layer RTT analysis.</p>
+<hr />
+<h2 id="2-the-three-coherence-layers"><strong>2. The Three Coherence Layers</strong><a class="toc-permalink" href="#2-the-three-coherence-layers" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="surface-layer"><strong>surface layer</strong><a class="toc-permalink" href="#surface-layer" title="Permanent link to this heading">&para;</a></h3>
+<p>The visible pattern.<br />
+- What you can observe directly<br />
+- The “what happened” layer<br />
+- Fastest to change  </p>
+<h3 id="structural-layer"><strong>structural layer</strong><a class="toc-permalink" href="#structural-layer" title="Permanent link to this heading">&para;</a></h3>
+<p>The rules shaping the surface.<br />
+- Why the pattern behaves as it does<br />
+- Constraints, relationships, mechanisms<br />
+- Changes more slowly  </p>
+<h3 id="resonance-layer"><strong>resonance layer</strong><a class="toc-permalink" href="#resonance-layer" title="Permanent link to this heading">&para;</a></h3>
+<p>The deep tendencies that persist across changes.<br />
+- Long‑term arcs<br />
+- Recurring motifs<br />
+- The slowest, most stable layer  </p>
+<p>These layers help you see systems as multi‑dimensional rather than flat.</p>
+<hr />
+<h2 id="3-how-rtt3-builds-on-rtt1-and-rtt2"><strong>3. How RTT/3 Builds on RTT/1 and RTT/2</strong><a class="toc-permalink" href="#3-how-rtt3-builds-on-rtt1-and-rtt2" title="Permanent link to this heading">&para;</a></h2>
+<p>You now combine:</p>
+<ul>
+<li><strong>operators</strong> (shift, hold, compare)  </li>
+<li><strong>regimes</strong> (stable, transitional, divergent)  </li>
+<li><strong>layers</strong> (surface, structural, resonance)  </li>
+</ul>
+<p>Examples:<br />
+- “Hold the surface layer in the transitional regime.”<br />
+- “Shift the structural layer to inspect the new pattern.”<br />
+- “Compare resonance → surface to reveal long‑term influence.”  </p>
+<p>This is where RTT becomes a full analytical framework.</p>
+<hr />
+<h2 id="4-how-to-use-rtt3"><strong>4. How to Use RTT/3</strong><a class="toc-permalink" href="#4-how-to-use-rtt3" title="Permanent link to this heading">&para;</a></h2>
+<p>You can apply coherence layers to:<br />
+- stories<br />
+- systems<br />
+- behaviors<br />
+- processes<br />
+- any sequence with depth  </p>
+<p>Example pattern:<br />
+1. Identify the <strong>surface behavior</strong><br />
+2. Look for the <strong>structural rule</strong> behind it<br />
+3. Check if a <strong>resonance tendency</strong> is influencing both<br />
+4. Use <strong>shift</strong>, <strong>hold</strong>, and <strong>compare</strong> across layers  </p>
+<p>This reveals how systems evolve across multiple dimensions.</p>
+<hr />
+<h2 id="5-what-comes-next_1"><strong>5. What Comes Next</strong><a class="toc-permalink" href="#5-what-comes-next_1" title="Permanent link to this heading">&para;</a></h2>
+<p>After RTT/3, you can explore:</p>
+<ul>
+<li>building multi‑layer modules  </li>
+<li>adding layers to your <code>module.json</code>  </li>
+<li>combining regimes + layers for deeper analysis  </li>
+<li>creating agentic modules that reason across all three RTT levels  </li>
+</ul>
+<p>RTT/3 completes the student foundation.<br />
+# <strong>RTT/3 — Student Edition</strong>  </p>
+<h3 id="resonance-time-theory-level-3"><strong>Resonance Time Theory, Level 3</strong><a class="toc-permalink" href="#resonance-time-theory-level-3" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Purpose:</strong> Introduce <em>coherence layers</em> — how multiple temporal patterns interact.</p>
+<hr />
+<h2 id="1-what-rtt3-adds"><strong>1. What RTT/3 Adds</strong><a class="toc-permalink" href="#1-what-rtt3-adds" title="Permanent link to this heading">&para;</a></h2>
+<p>RTT/3 teaches that systems often have <strong>more than one timeline or pattern running at once</strong>.</p>
+<p>It answers:<br />
+<strong>“How do multiple temporal layers fit together?”</strong></p>
+<hr />
+<h2 id="2-the-three-coherence-layers_1"><strong>2. The Three Coherence Layers</strong><a class="toc-permalink" href="#2-the-three-coherence-layers_1" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="1-surface-layer"><strong>1. surface layer</strong><a class="toc-permalink" href="#1-surface-layer" title="Permanent link to this heading">&para;</a></h3>
+<p>The visible pattern.<br />
+- “What you can observe directly.”</p>
+<h3 id="2-structural-layer"><strong>2. structural layer</strong><a class="toc-permalink" href="#2-structural-layer" title="Permanent link to this heading">&para;</a></h3>
+<p>The underlying rules shaping the surface.<br />
+- “Why the pattern behaves as it does.”</p>
+<h3 id="3-resonance-layer"><strong>3. resonance layer</strong><a class="toc-permalink" href="#3-resonance-layer" title="Permanent link to this heading">&para;</a></h3>
+<p>The deep, repeating tendencies that persist across changes.<br />
+- “The long arc beneath the structure.”</p>
+<hr />
+<h2 id="3-how-rtt3-builds-on-rtt2"><strong>3. How RTT/3 Builds on RTT/2</strong><a class="toc-permalink" href="#3-how-rtt3-builds-on-rtt2" title="Permanent link to this heading">&para;</a></h2>
+<p>Students now combine:<br />
+- operators (RTT/1)<br />
+- regimes (RTT/2)<br />
+- layers (RTT/3)  </p>
+<p>Examples:<br />
+- “Hold the surface layer in the transitional regime.”<br />
+- “Shift the structural layer for comparison.”<br />
+- “Compare resonance → surface.”</p>
+<p>This is enough to build multi‑layered modules with meaningful temporal insight.<br />
+# Validator<br />
+Use this tool to validate any module.json file.</p>
+<p>Python:<br />
+  pip install jsonschema<br />
+  python validate.py ../modules/my-module/module.json</p>
+<p>Node:<br />
+  npm install ajv<br />
+  node validate.js ../modules/my-module/module.json<br />
+</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/corpus/starter.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/corpus/starter.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

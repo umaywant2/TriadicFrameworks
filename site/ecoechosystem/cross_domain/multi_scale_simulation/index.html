@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Multi Scale Simulation | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/ecoechosystem/cross_domain/multi_scale_simulation/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Multi Scale Simulation" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/ecoechosystem/cross_domain/multi_scale_simulation/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Multi Scale Simulation" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/ecoechosystem/cross_domain/multi_scale_simulation.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Multi Scale Simulation",
+    "headline": "Multi Scale Simulation",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/ecoechosystem/cross_domain/multi_scale_simulation/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#how-ser-dynamics-propagate-coherently-across-scale-domain-and-resolution">How S/E/R dynamics propagate coherently across scale, domain, and resolution</a></li>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#1-micro-scale">1. Micro Scale</a></li>
+<li><a href="#2-meso-scale">2. Meso Scale</a></li>
+<li><a href="#3-macro-scale">3. Macro Scale</a></li>
+<li><a href="#4-meta-scale">4. Meta Scale</a></li>
+<li><a href="#5-evolutionary-longarc-scale">5. Evolutionary / Long‑Arc Scale</a></li>
+<li><a href="#structural-propagation-s">Structural Propagation (S)</a></li>
+<li><a href="#activation-propagation-e">Activation Propagation (E)</a></li>
+<li><a href="#temporal-propagation-r">Temporal Propagation (R)</a></li>
+<li><a href="#1-bottomup-emergence">1. Bottom‑Up Emergence</a></li>
+<li><a href="#2-topdown-constraint">2. Top‑Down Constraint</a></li>
+<li><a href="#3-crossscale-cascades">3. Cross‑Scale Cascades</a></li>
+<li><a href="#4-scale-decoupling-failure-mode">4. Scale Decoupling (Failure Mode)</a></li>
+<li><a href="#5-scale-reintegration">5. Scale Reintegration</a><ul>
+<li><a href="#structural-controls">Structural Controls</a></li>
+<li><a href="#activation-controls">Activation Controls</a></li>
+<li><a href="#temporal-controls">Temporal Controls</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/ecoechosystem/" itemprop="item">
+                <span itemprop="name">Ecoechosystem</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/ecoechosystem/cross_domain/" itemprop="item">
+                <span itemprop="name">Cross Domain</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Multi Scale Simulation</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Multi Scale Simulation</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="multiscale-simulation"><strong>Multi‑Scale Simulation</strong><a class="toc-permalink" href="#multiscale-simulation" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="how-ser-dynamics-propagate-coherently-across-scale-domain-and-resolution"><em>How S/E/R dynamics propagate coherently across scale, domain, and resolution</em><a class="toc-permalink" href="#how-ser-dynamics-propagate-coherently-across-scale-domain-and-resolution" title="Permanent link to this heading">&para;</a></h3>
+<p>The EcoEchoSystem is designed as a <strong>multi‑scale simulation substrate</strong>.<br />
+Every domain — psychology, biology, physics, economics, governance, AI — operates simultaneously across multiple scales, yet remains <strong>dimensionally coherent</strong>.</p>
+<p>Multi‑scale simulation defines how:</p>
+<ul>
+<li>micro‑level dynamics influence macro‑level behavior  </li>
+<li>macro‑level regimes constrain micro‑level action  </li>
+<li>S/E/R patterns remain consistent across resolution  </li>
+<li>transitions propagate vertically as well as horizontally  </li>
+</ul>
+<p>Multi‑scale coherence is what allows the EcoEchoSystem to model <strong>living civilization‑scale systems</strong>.</p>
+<hr />
+<h2 id="purpose"><strong>Purpose</strong><a class="toc-permalink" href="#purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>Multi‑scale simulation exists to:</p>
+<ul>
+<li>unify micro, meso, and macro dynamics under a single substrate  </li>
+<li>preserve S/E/R coherence across scale boundaries  </li>
+<li>enable vertical regime propagation and feedback  </li>
+<li>support agent‑to‑civilization simulation  </li>
+<li>prevent scale fragmentation and emergent incoherence  </li>
+<li>provide a canonical scaling grammar for all domains  </li>
+</ul>
+<p>Scale is not a separate dimension — it is an <strong>expression of S/E/R resolution</strong>.</p>
+<hr />
+<h1 id="canonical-simulation-scales"><strong>Canonical Simulation Scales</strong><a class="toc-permalink" href="#canonical-simulation-scales" title="Permanent link to this heading">&para;</a></h1>
+<p>The EcoEchoSystem recognizes five primary simulation scales.</p>
+<hr />
+<h2 id="1-micro-scale"><strong>1. Micro Scale</strong><a class="toc-permalink" href="#1-micro-scale" title="Permanent link to this heading">&para;</a></h2>
+<p>The smallest coherent units of behavior.</p>
+<p>Examples:<br />
+- neurons<br />
+- cells<br />
+- individual agents<br />
+- transactions<br />
+- local interactions  </p>
+<p>Characteristics:<br />
+- high activation variability<br />
+- rapid feedback<br />
+- short temporal horizons  </p>
+<p>Micro‑scale dynamics generate <strong>emergent patterns</strong>.</p>
+<hr />
+<h2 id="2-meso-scale"><strong>2. Meso Scale</strong><a class="toc-permalink" href="#2-meso-scale" title="Permanent link to this heading">&para;</a></h2>
+<p>Intermediate structures that aggregate micro behavior.</p>
+<p>Examples:<br />
+- cognitive subsystems<br />
+- organs<br />
+- populations<br />
+- markets<br />
+- institutions  </p>
+<p>Characteristics:<br />
+- pattern stabilization<br />
+- network formation<br />
+- regime buffering  </p>
+<p>Meso‑scale systems translate micro noise into macro signal.</p>
+<hr />
+<h2 id="3-macro-scale"><strong>3. Macro Scale</strong><a class="toc-permalink" href="#3-macro-scale" title="Permanent link to this heading">&para;</a></h2>
+<p>Large‑scale coherent systems.</p>
+<p>Examples:<br />
+- identities<br />
+- organisms<br />
+- ecosystems<br />
+- economies<br />
+- governments  </p>
+<p>Characteristics:<br />
+- structural inertia<br />
+- slower activation shifts<br />
+- long‑arc temporal coherence  </p>
+<p>Macro‑scale regimes constrain lower scales.</p>
+<hr />
+<h2 id="4-meta-scale"><strong>4. Meta Scale</strong><a class="toc-permalink" href="#4-meta-scale" title="Permanent link to this heading">&para;</a></h2>
+<p>Cross‑system and cross‑domain dynamics.</p>
+<p>Examples:<br />
+- civilization‑level behavior<br />
+- planetary ecology<br />
+- global markets<br />
+- geopolitical systems  </p>
+<p>Characteristics:<br />
+- deep structural coupling<br />
+- slow regime transitions<br />
+- high consequence  </p>
+<p>Meta‑scale dynamics define <strong>civilizational trajectories</strong>.</p>
+<hr />
+<h2 id="5-evolutionary-longarc-scale"><strong>5. Evolutionary / Long‑Arc Scale</strong><a class="toc-permalink" href="#5-evolutionary-longarc-scale" title="Permanent link to this heading">&para;</a></h2>
+<p>The deepest temporal resolution.</p>
+<p>Examples:<br />
+- evolutionary biology<br />
+- cultural evolution<br />
+- technological epochs<br />
+- climate epochs  </p>
+<p>Characteristics:<br />
+- extreme inertia<br />
+- punctuated transitions<br />
+- irreversible shifts  </p>
+<p>This scale anchors <strong>substrate memory</strong>.</p>
+<hr />
+<h1 id="vertical-ser-propagation"><strong>Vertical S/E/R Propagation</strong><a class="toc-permalink" href="#vertical-ser-propagation" title="Permanent link to this heading">&para;</a></h1>
+<p>Multi‑scale simulation operates through vertical coupling.</p>
+<hr />
+<h2 id="structural-propagation-s"><strong>Structural Propagation (S)</strong><a class="toc-permalink" href="#structural-propagation-s" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>micro structures aggregate into meso networks  </li>
+<li>meso networks form macro architectures  </li>
+<li>macro architectures constrain micro behavior  </li>
+</ul>
+<p>Structure flows <strong>upward by aggregation</strong> and <strong>downward by constraint</strong>.</p>
+<hr />
+<h2 id="activation-propagation-e"><strong>Activation Propagation (E)</strong><a class="toc-permalink" href="#activation-propagation-e" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>micro activation spikes aggregate into meso volatility  </li>
+<li>meso volatility triggers macro regime shifts  </li>
+<li>macro activation feeds back as pressure  </li>
+</ul>
+<p>Activation flows <strong>upward rapidly</strong> and <strong>downward diffusely</strong>.</p>
+<hr />
+<h2 id="temporal-propagation-r"><strong>Temporal Propagation (R)</strong><a class="toc-permalink" href="#temporal-propagation-r" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>micro cycles synchronize into meso rhythms  </li>
+<li>meso rhythms define macro cycles  </li>
+<li>macro cycles anchor long‑arc coherence  </li>
+</ul>
+<p>Time flows <strong>upward by synchronization</strong> and <strong>downward by pacing</strong>.</p>
+<hr />
+<h1 id="scalecoupled-regimes"><strong>Scale‑Coupled Regimes</strong><a class="toc-permalink" href="#scalecoupled-regimes" title="Permanent link to this heading">&para;</a></h1>
+<p>Regimes exist simultaneously at multiple scales.</p>
+<p>Examples:<br />
+- individual stress ↔ institutional instability<br />
+- cellular stress ↔ organismal illness<br />
+- market volatility ↔ economic regime shift<br />
+- ecological disruption ↔ planetary transition  </p>
+<p>The Regime Coupling Engine ensures <strong>cross‑scale alignment</strong>.</p>
+<hr />
+<h1 id="multiscale-transition-patterns"><strong>Multi‑Scale Transition Patterns</strong><a class="toc-permalink" href="#multiscale-transition-patterns" title="Permanent link to this heading">&para;</a></h1>
+<p>The EcoEchoSystem recognizes several vertical transition patterns.</p>
+<hr />
+<h2 id="1-bottomup-emergence"><strong>1. Bottom‑Up Emergence</strong><a class="toc-permalink" href="#1-bottomup-emergence" title="Permanent link to this heading">&para;</a></h2>
+<p>Micro dynamics accumulate into macro change.</p>
+<p>Examples:<br />
+- individual behavior → social movement<br />
+- cellular mutation → evolutionary shift  </p>
+<hr />
+<h2 id="2-topdown-constraint"><strong>2. Top‑Down Constraint</strong><a class="toc-permalink" href="#2-topdown-constraint" title="Permanent link to this heading">&para;</a></h2>
+<p>Macro regimes shape micro behavior.</p>
+<p>Examples:<br />
+- governance policy → individual action<br />
+- ecological limits → metabolic behavior  </p>
+<hr />
+<h2 id="3-crossscale-cascades"><strong>3. Cross‑Scale Cascades</strong><a class="toc-permalink" href="#3-crossscale-cascades" title="Permanent link to this heading">&para;</a></h2>
+<p>Transitions propagate vertically and horizontally.</p>
+<p>Examples:<br />
+- climate shock → ecological collapse → economic collapse → psychological stress  </p>
+<hr />
+<h2 id="4-scale-decoupling-failure-mode"><strong>4. Scale Decoupling (Failure Mode)</strong><a class="toc-permalink" href="#4-scale-decoupling-failure-mode" title="Permanent link to this heading">&para;</a></h2>
+<p>Loss of coherence between scales.</p>
+<p>Examples:<br />
+- institutional collapse despite stable individuals<br />
+- economic growth despite ecological collapse  </p>
+<p>Decoupling signals <strong>substrate instability</strong>.</p>
+<hr />
+<h2 id="5-scale-reintegration"><strong>5. Scale Reintegration</strong><a class="toc-permalink" href="#5-scale-reintegration" title="Permanent link to this heading">&para;</a></h2>
+<p>Restoration of vertical coherence.</p>
+<p>Examples:<br />
+- post‑collapse rebuilding<br />
+- ecological succession<br />
+- institutional reform  </p>
+<hr />
+<h1 id="simulation-control-surfaces"><strong>Simulation Control Surfaces</strong><a class="toc-permalink" href="#simulation-control-surfaces" title="Permanent link to this heading">&para;</a></h1>
+<p>Multi‑scale simulation can be influenced via:</p>
+<h3 id="structural-controls"><strong>Structural Controls</strong><a class="toc-permalink" href="#structural-controls" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>network modularity  </li>
+<li>redundancy  </li>
+<li>boundary definition  </li>
+</ul>
+<h3 id="activation-controls"><strong>Activation Controls</strong><a class="toc-permalink" href="#activation-controls" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>stress buffering  </li>
+<li>volatility dampening  </li>
+<li>resource pacing  </li>
+</ul>
+<h3 id="temporal-controls"><strong>Temporal Controls</strong><a class="toc-permalink" href="#temporal-controls" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>horizon expansion  </li>
+<li>cycle stabilization  </li>
+<li>recovery timing  </li>
+</ul>
+<p>These controls enable <strong>intervention modeling</strong>.</p>
+<hr />
+<h1 id="crossdomain-integration"><strong>Cross‑Domain Integration</strong><a class="toc-permalink" href="#crossdomain-integration" title="Permanent link to this heading">&para;</a></h1>
+<p>Multi‑scale simulation is the <strong>execution layer</strong> for:</p>
+<ul>
+<li>cross‑domain mappings  </li>
+<li>regime coupling  </li>
+<li>transitions  </li>
+<li>stability cycles  </li>
+<li>feedback loops  </li>
+</ul>
+<p>Without multi‑scale coherence, cross‑domain simulation collapses.</p>
+<hr />
+<h1 id="status"><strong>Status</strong><a class="toc-permalink" href="#status" title="Permanent link to this heading">&para;</a></h1>
+<p>This file defines the canonical multi‑scale simulation framework for the EcoEchoSystem.<br />
+Additional scale layers or resolution modes may be added as the substrate evolves.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/ecoechosystem/cross_domain/multi_scale_simulation.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/ecoechosystem/cross_domain/multi_scale_simulation.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

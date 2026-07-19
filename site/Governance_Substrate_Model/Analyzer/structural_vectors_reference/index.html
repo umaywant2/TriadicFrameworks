@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Structural Vectors Reference | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/structural_vectors_reference/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Structural Vectors Reference" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/structural_vectors_reference/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Structural Vectors Reference" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/Governance_Substrate_Model/Analyzer/structural_vectors_reference.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T02:12:04Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Structural Vectors Reference",
+    "headline": "Structural Vectors Reference",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/structural_vectors_reference/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#the-fiveaxis-manifold">The five‑axis manifold</a></li>
+<li><a href="#vector-format">Vector format</a></li>
+<li><a href="#vector-metadata">Vector metadata</a></li>
+<li><a href="#how-vectors-are-generated">How vectors are generated</a></li>
+<li><a href="#normalization-rules">Normalization rules</a></li>
+<li><a href="#vector-deltas">Vector deltas</a></li>
+<li><a href="#vector-interpretation-lenses">Vector interpretation lenses</a></li>
+<li><a href="#vector-usage-across-the-analyzer">Vector usage across the Analyzer</a></li>
+<li><a href="#canonical-examples">Canonical examples</a><ul>
+<li><a href="#stable-system-example">Stable system example</a></li>
+<li><a href="#tensiondriven-drift-example">Tension‑driven drift example</a></li>
+<li><a href="#regimeshift-vector-example">Regime‑shift vector example</a></li>
+</ul>
+</li>
+<li><a href="#purpose-of-this-reference">Purpose of this reference</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Governance_Substrate_Model/" itemprop="item">
+                <span itemprop="name">Governance Substrate Model</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/" itemprop="item">
+                <span itemprop="name">Analyzer</span>
+              </a>
+            <meta itemprop="position" content="3" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Structural Vectors Reference</span>
+            <meta itemprop="position" content="4" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Structural Vectors Reference</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<h1 id="structural-vectors-reference">Structural Vectors Reference<a class="toc-permalink" href="#structural-vectors-reference" title="Permanent link to this heading">&para;</a></h1>
+<p><em>A canonical guide to structural vectors in the Governance Substrate Model (GSM)</em></p>
+<p>Structural vectors are the foundational representation of governance systems within the GSM. Every Analyzer component—drift, physics, invariants, basins, regime modes, projections, and simulations—operates on these vectors. This reference defines their structure, meaning, normalization, and usage.</p>
+<hr />
+<h2 id="the-fiveaxis-manifold">The five‑axis manifold<a class="toc-permalink" href="#the-fiveaxis-manifold" title="Permanent link to this heading">&para;</a></h2>
+<p>All structural vectors live in a five‑dimensional space:</p>
+<ul>
+<li>
+<p><strong>C — Centralization</strong><br />
+  Degree of concentrated authority and decision power.</p>
+</li>
+<li>
+<p><strong>M — Methods</strong><br />
+  Competitive, procedural, or collaborative mechanisms used to act.</p>
+</li>
+<li>
+<p><strong>O — Oversight</strong><br />
+  Monitoring, review, transparency, and constraint structures.</p>
+</li>
+<li>
+<p><strong>A — Access</strong><br />
+  Who can participate, contribute, or influence.</p>
+</li>
+<li>
+<p><strong>T — Timing</strong><br />
+  Cadence, responsiveness, and temporal structure.</p>
+</li>
+</ul>
+<p>Each axis ranges from <strong>0.0 to 1.0</strong> after normalization.</p>
+<hr />
+<h2 id="vector-format">Vector format<a class="toc-permalink" href="#vector-format" title="Permanent link to this heading">&para;</a></h2>
+<p>A structural vector is always represented as:</p>
+<div class="codehilite"><pre><span></span><code>[C, M, O, A, T]
+</code></pre></div>
+
+<p>Example:</p>
+<div class="codehilite"><pre><span></span><code>[0.62, 0.48, 0.71, 0.33, 0.55]
+</code></pre></div>
+
+<hr />
+<h2 id="vector-metadata">Vector metadata<a class="toc-permalink" href="#vector-metadata" title="Permanent link to this heading">&para;</a></h2>
+<p>Every vector includes metadata used by the Analyzer:</p>
+<ul>
+<li><strong>confidence</strong> — how reliable the vector is  </li>
+<li><strong>source</strong> — DSL, mapping rules, historical record, simulation step, etc.  </li>
+<li><strong>notes</strong> — optional contextual information  </li>
+</ul>
+<p>Example:</p>
+<div class="codehilite"><pre><span></span><code><span class="nt">vector</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">C</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.62</span>
+<span class="w">  </span><span class="nt">M</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.48</span>
+<span class="w">  </span><span class="nt">O</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.71</span>
+<span class="w">  </span><span class="nt">A</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.33</span>
+<span class="w">  </span><span class="nt">T</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.55</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">confidence</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.92</span>
+<span class="w">  </span><span class="nt">source</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;statement_mapping&quot;</span>
+<span class="w">  </span><span class="nt">notes</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Derived</span><span class="nv"> </span><span class="s">from</span><span class="nv"> </span><span class="s">policy</span><span class="nv"> </span><span class="s">declaration&quot;</span>
+</code></pre></div>
+
+<hr />
+<h2 id="how-vectors-are-generated">How vectors are generated<a class="toc-permalink" href="#how-vectors-are-generated" title="Permanent link to this heading">&para;</a></h2>
+<p>Vectors may originate from:</p>
+<ul>
+<li><strong>statement mapping rules</strong>  </li>
+<li><strong>DSL substrate adapter</strong>  </li>
+<li><strong>historical profile encoding</strong>  </li>
+<li><strong>simulation engine steps</strong>  </li>
+<li><strong>projection rules</strong>  </li>
+<li><strong>manual analyst input</strong></li>
+</ul>
+<p>All sources must pass through the same normalization pipeline.</p>
+<hr />
+<h2 id="normalization-rules">Normalization rules<a class="toc-permalink" href="#normalization-rules" title="Permanent link to this heading">&para;</a></h2>
+<p>Normalization ensures vectors remain within manifold bounds:</p>
+<ul>
+<li>clamp each axis to <strong>[0.0, 1.0]</strong>  </li>
+<li>apply min‑max scaling when raw values exceed expected ranges  </li>
+<li>apply coupling adjustments when physics rules require balance  </li>
+<li>preserve relative deltas for drift computation  </li>
+</ul>
+<p>Normalization is mandatory before any Analyzer component consumes a vector.</p>
+<hr />
+<h2 id="vector-deltas">Vector deltas<a class="toc-permalink" href="#vector-deltas" title="Permanent link to this heading">&para;</a></h2>
+<p>Vector deltas represent structural movement:</p>
+<div class="codehilite"><pre><span></span><code>Δ = [dC, dM, dO, dA, dT]
+</code></pre></div>
+
+<p>They are used by:</p>
+<ul>
+<li>drift engine  </li>
+<li>physics engine  </li>
+<li>regime‑shift detection  </li>
+<li>simulation engine  </li>
+<li>observer history/now/future lenses  </li>
+</ul>
+<p>Magnitude is computed as:</p>
+<p>[<br />
+\text{magnitude} = \sqrt{dC^2 + dM^2 + dO^2 + dA^2 + dT^2}<br />
+]</p>
+<hr />
+<h2 id="vector-interpretation-lenses">Vector interpretation lenses<a class="toc-permalink" href="#vector-interpretation-lenses" title="Permanent link to this heading">&para;</a></h2>
+<p>Vectors are interpreted through multiple lenses:</p>
+<ul>
+<li><strong>Axis lens</strong> — isolates each axis  </li>
+<li><strong>Coupling lens</strong> — evaluates C↔O, M↔A, O↔T  </li>
+<li><strong>Invariant lens</strong> — checks alignment, tension, violation  </li>
+<li><strong>Basin lens</strong> — identifies nearest basin and distance  </li>
+<li><strong>Drift lens</strong> — interprets movement and category  </li>
+<li><strong>Narrative lens</strong> — produces human‑readable summaries  </li>
+</ul>
+<p>These lenses do not modify vectors—they interpret them.</p>
+<hr />
+<h2 id="vector-usage-across-the-analyzer">Vector usage across the Analyzer<a class="toc-permalink" href="#vector-usage-across-the-analyzer" title="Permanent link to this heading">&para;</a></h2>
+<p>Structural vectors feed into:</p>
+<ul>
+<li><strong>Invariant checker</strong> — determines strain and violations  </li>
+<li><strong>Physics engine</strong> — computes forces and compensatory movement  </li>
+<li><strong>Drift detector</strong> — classifies micro/meso/macro/regime‑shift drift  </li>
+<li><strong>Basin classifier</strong> — determines basin identity and boundary proximity  </li>
+<li><strong>Regime modes</strong> — identifies operational mode  </li>
+<li><strong>Phase discipline</strong> — determines phase state  </li>
+<li><strong>Projection rules</strong> — generates plausible futures  </li>
+<li><strong>Simulation engine</strong> — evolves vectors stepwise  </li>
+<li><strong>Observer layer</strong> — encodes history, now, and future states  </li>
+</ul>
+<p>Vectors are the universal substrate for all structural analysis.</p>
+<hr />
+<h2 id="canonical-examples">Canonical examples<a class="toc-permalink" href="#canonical-examples" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="stable-system-example">Stable system example<a class="toc-permalink" href="#stable-system-example" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>[0.45, 0.52, 0.47, 0.50, 0.48]
+</code></pre></div>
+
+<ul>
+<li>low deltas  </li>
+<li>high coherence  </li>
+<li>stable regime mode  </li>
+<li>deep inside basin  </li>
+</ul>
+<h3 id="tensiondriven-drift-example">Tension‑driven drift example<a class="toc-permalink" href="#tensiondriven-drift-example" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>[0.82, 0.40, 0.33, 0.28, 0.71]
+</code></pre></div>
+
+<ul>
+<li>C↔O imbalance  </li>
+<li>high timing volatility  </li>
+<li>drift category: meso  </li>
+<li>approaching basin boundary  </li>
+</ul>
+<h3 id="regimeshift-vector-example">Regime‑shift vector example<a class="toc-permalink" href="#regimeshift-vector-example" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>[0.91, 0.15, 0.22, 0.11, 0.88]
+</code></pre></div>
+
+<ul>
+<li>multiple invariant violations  </li>
+<li>macro drift  </li>
+<li>absorptive failure  </li>
+<li>crossing into new basin  </li>
+</ul>
+<hr />
+<h2 id="purpose-of-this-reference">Purpose of this reference<a class="toc-permalink" href="#purpose-of-this-reference" title="Permanent link to this heading">&para;</a></h2>
+<p>This file provides:</p>
+<ul>
+<li>a canonical definition of structural vectors  </li>
+<li>a shared vocabulary for contributors  </li>
+<li>a stable anchor for all Analyzer components  </li>
+<li>a teaching‑friendly reference for students  </li>
+<li>a foundation for simulation, projection, and observer layers  </li>
+</ul>
+<p>It ensures structural vectors remain coherent, interpretable, and substrate‑aligned across the entire GSM.</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Governance_Substrate_Model/Analyzer/structural_vectors_reference.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/Governance_Substrate_Model/Analyzer/structural_vectors_reference.md</code></span>
+        <span>Built: <time datetime="2026-07-19T02:12:04Z">2026-07-19T02:12:04Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
