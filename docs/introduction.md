@@ -182,7 +182,7 @@ The TriadicFrameworks corpus is organized in three tiers:
 **Tier 1 — Foundation**
 The documents that define the grammar everything else uses. Read these before attempting any applied module.
 - [Framework Field Theory](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Framework_Field_Theory) — The full field architecture
-- [NoS — Nature of Structures](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/NoS) — The ontology of structural types
+- [NoS — Nawder operating Stack](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/NoS) — The ontology of structural types
 - [LINEAGE](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/LINEAGE) — The canonical lineage protocol
 
 **Tier 2 — Substrate Models**
