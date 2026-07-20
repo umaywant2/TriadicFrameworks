@@ -14,8 +14,6 @@ rtt_last_reviewed: "2026-07-13"
 rtt_tags: [index, home, navigation, overview]
 ---
 
-# TriadicFrameworks Documentation
-
 TriadicFrameworks is a structured methodology for building coherent, traceable, and composable systems. It spans governance design, economic modeling, AI alignment, organizational substrate theory, and foundational physics — united by a single traceability discipline: the **Round-Trip Traceability (RTT)** protocol.
 
 Every module in this repository is an independent unit of theory or tooling. Each is authored to be self-contained, linkable, and reviewable without requiring the reader to hold the full corpus in memory.
