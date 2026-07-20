@@ -1,0 +1,144 @@
+analyzer_pipeline:
+
+  description: >
+    End-to-end structural pipeline for interpreting governance systems,
+    statements, and historical profiles using the Governance Substrate Model (GSM).
+    The pipeline converts raw inputs into structural vectors, evaluates invariants,
+    applies cross-axis physics, determines basin alignment, detects drift, and
+    produces narrative outputs suitable for dashboards, simulators, and observer layers.
+
+  version: "1.0"
+
+  stages:
+
+    - id: normalize_input
+      name: "Normalize Input"
+      purpose: >
+        Convert raw inputs (statements, profiles, vectors, reforms) into a unified
+        internal representation. Ensures consistent formatting for downstream stages.
+      inputs:
+        - natural_language
+        - structural_vector
+        - historical_profile
+        - reform_proposal
+      outputs:
+        - normalized_artifact
+      rules:
+        - "Strip rhetorical content; retain structural meaning."
+        - "Preserve metadata for observer layers (history, now, future)."
+
+    - id: vectorize
+      name: "Structural Vectorizer"
+      purpose: >
+        Map normalized artifacts into the five-axis structural vector [C, M, O, A, T].
+      dependencies:
+        - statement_mapping_rules.yaml
+      outputs:
+        - structural_vector
+      notes: "Vectorization is substrate-agnostic and non-ideological."
+
+    - id: invariant_check
+      name: "Invariant Checker"
+      purpose: >
+        Evaluate the structural vector against GSM invariants, awareness layers,
+        absorptive structures, and regime-mode constraints.
+      dependencies:
+        - behavioral_invariants.yaml
+        - awareness_layers.yaml
+        - absorptive_structures.yaml
+      outputs:
+        - invariant_report
+        - invariant_flags
+      notes: "Flags do not judge correctness; they reflect structural alignment."
+
+    - id: apply_physics
+      name: "Cross-Axis Physics Engine"
+      purpose: >
+        Apply GSM physics rules to adjust vectors, detect compensatory movement,
+        and compute structural tension across axes.
+      dependencies:
+        - governance_physics.yaml
+      outputs:
+        - adjusted_vector
+        - active_forces
+      notes: "Physics determines drift direction and magnitude."
+
+    - id: classify_basin
+      name: "Basin Classifier"
+      purpose: >
+        Determine the nearest equilibrium basin and evaluate basin stability.
+      dependencies:
+        - equilibrium_basins.yaml
+      outputs:
+        - nearest_basin
+        - basin_distance
+        - basin_stability_score
+      notes: "Basins represent structural families, not normative categories."
+
+    - id: detect_drift
+      name: "Drift Detector"
+      purpose: >
+        Compute drift vectors, detect regime shifts, and identify structural
+        movement over time or across statements.
+      dependencies:
+        - drift_detection.yaml
+        - regime_shift_detection.yaml
+      outputs:
+        - drift_vector
+        - drift_magnitude
+        - drift_forces
+        - regime_shift_events
+      notes: "Drift is structural movement, not political change."
+
+    - id: evaluate_transitions
+      name: "Transition Pathway Engine"
+      purpose: >
+        Use the transition graph to determine lowest-cost structural transitions,
+        intermediate states, and coherence of movement.
+      dependencies:
+        - transition_graph.yaml
+      outputs:
+        - transition_path
+        - transition_cost
+        - intermediate_states
+      notes: "Transitions follow structural physics, not predictions."
+
+    - id: observer_integration
+      name: "Triadic Observer Integration"
+      purpose: >
+        Attach history, present, and future context to the analysis using the
+        triadic observer schema. Enables multi-lens interpretation.
+      dependencies:
+        - triadic_observer.yaml
+      outputs:
+        - observer_context
+        - lens_variations
+      notes: "Observer layer ensures time-coherent interpretation."
+
+    - id: generate_output
+      name: "Narrative & Structural Output"
+      purpose: >
+        Produce structured outputs for dashboards, simulators, and teaching tools.
+      outputs:
+        - structural_summary
+        - coherence_score
+        - alignment_events
+        - narrative_explanation
+      notes: "Narratives are descriptive, not prescriptive."
+
+  output_schema:
+    structural_vector: "[C, M, O, A, T]"
+    invariant_report: "List of invariant alignments and tensions."
+    active_forces: "Cross-axis forces shaping drift."
+    nearest_basin: "CPL | CPF | CTR | PCL | HCL"
+    drift_vector: "Direction and magnitude of structural movement."
+    transition_path: "Sequence of basin transitions."
+    observer_context: "History–now–future lens integration."
+    narrative_explanation: "Readable structural interpretation."
+
+  metadata:
+    maintainer: "TriadicFrameworks"
+    last_updated: "2026-03-04"
+    notes: >
+      This pipeline is substrate-agnostic and suitable for governance systems,
+      institutional analysis, historical reconstruction, and educational use.

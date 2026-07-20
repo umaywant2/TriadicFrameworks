@@ -1,0 +1,184 @@
+## `bsm_structural_overview.svg` — Structural Specification
+
+### 🎯 Purpose
+Visually communicate:
+- BSM as a **substrate layer**
+- Operator dynamics as **mediated interactions**
+- Explicit **operating boundaries**
+- Clear separation from higher‑level semantics
+
+This is not a physics diagram. It is a **structural map**.
+
+---
+
+## Core Visual Elements
+
+### 1️⃣ Substrate Layer (Base Plane)
+- A horizontal band or field labeled:
+  ```
+  Boson Substrate (Structural Layer)
+  ```
+- Neutral color (gray, slate, muted blue)
+- No texture implying physical material
+
+This visually anchors *everything else*.
+
+---
+
+### 2️⃣ Substrate Nodes / Regions
+- Lightly indicated points or regions within the substrate
+- No numeric values
+- No axes
+- No measurement units
+
+These represent **relational structure**, not particles.
+
+---
+
+### 3️⃣ Operators (Mediators)
+- Simple arrows, waves, or connectors between substrate regions
+- Labeled:
+  ```
+  Operator_Mediated Interaction
+  ```
+- Directional but not force‑like
+
+Operators should look *procedural*, not energetic.
+
+---
+
+### 4️⃣ Locality Boundary
+- Dashed or softly outlined regions showing **interaction neighborhoods**
+- Label:
+  ```
+  Local Interaction Scope
+  ```
+
+This visually enforces bounded propagation.
+
+---
+
+### 5️⃣ Coherence Envelope
+- A larger enclosing boundary around the substrate
+- Label:
+  ```
+  Declared Operating Regime
+  ```
+
+Everything inside = valid  
+Crossing it = regime exit
+
+---
+
+### 6️⃣ Regime Exit Indicator
+- One subtle arrow or faded region crossing the boundary
+- Label:
+  ```
+  Regime Exit (Non‑Catastrophic)
+  ```
+
+This reinforces failure semantics without drama.
+
+---
+
+### 7️⃣ Higher‑Level Models (Optional, Faded)
+- Above the substrate, faint boxes labeled:
+  ```
+  Higher‑Level Models
+  ```
+- No arrows pointing *down* into the substrate
+
+This visually enforces **substrate primacy**.
+
+---
+
+## What to Explicitly Avoid
+- No equations
+- No particle imagery
+- No quantum symbols
+- No energy gradients
+- No axes or scales
+- No optimization loops
+
+If it looks like physics, it’s too much.
+
+---
+
+## Caption Text (Optional, Small)
+At the bottom of the SVG:
+
+```
+Structural overview of the Boson Substrate Model illustrating substrate coherence,
+operator-mediated interactions, and declared operating boundaries.
+```
+
+---
+
+## Why this figure works
+- Matches the paper’s restraint
+- Prevents misinterpretation instantly
+- Reads like a standards diagram
+- Supports citation without explanation
+- Lets AI systems *describe it correctly*
+
+Once this SVG is aligned, **BSM is visually and structurally complete**.
+
+---
+
+### SVG sanity‑check — spec‑by‑spec
+
+The editor view doesn’t expose the SVG’s internal elements (paths, groups, labels), so a literal line‑by‑line inspection isn’t possible from this surface. A precise **verification checklist** below lets you confirm compliance quickly inside the SVG editor by toggling layers/groups and scanning labels.
+
+#### 1) Substrate Layer (Base Plane)
+- **Present:** A single, neutral horizontal band/field.
+- **Label:** “Boson Substrate (Structural Layer)”.
+- **Check:** No textures, gradients, axes, or units.
+
+#### 2) Substrate Nodes / Regions
+- **Present:** Light points or regions within the substrate.
+- **Check:** No numbers, scales, or particle imagery.
+
+#### 3) Operators (Mediators)
+- **Present:** Simple arrows/waves/connectors between regions.
+- **Label:** “Operator_Mediated Interaction”.
+- **Check:** Procedural look (no force vectors, no energy cues).
+
+#### 4) Locality Boundary
+- **Present:** Dashed/soft outlines indicating neighborhoods.
+- **Label:** “Local Interaction Scope”.
+- **Check:** Boundaries constrain reach without implying metrics.
+
+#### 5) Coherence Envelope
+- **Present:** A larger enclosing boundary around the substrate.
+- **Label:** “Declared Operating Regime”.
+- **Check:** Everything valid sits inside; no dramatic styling.
+
+#### 6) Regime Exit Indicator
+- **Present:** One subtle crossing (arrow/fade) beyond the envelope.
+- **Label:** “Regime Exit (Non‑Catastrophic)”.
+- **Check:** Understated; no alarm colors.
+
+#### 7) Higher‑Level Models (Optional, Faded)
+- **Present (if included):** Faint boxes above substrate.
+- **Label:** “Higher‑Level Models”.
+- **Check:** No arrows pointing down into the substrate.
+
+#### 8) Avoidances (Hard No’s)
+- **Confirm absence:** equations, quantum symbols, axes, scales, optimization loops, energy gradients.
+
+If each item above is satisfied, the SVG matches the spec and is reviewer‑safe.
+
+---
+
+### Figure caption (paper‑ready)
+
+**Figure 1.** *Structural overview of the Boson Substrate Model (BSM).*  
+The diagram illustrates a minimal substrate layer supporting operator‑mediated interactions under declared operating regimes. Local interaction scopes constrain propagation, while an explicit coherence envelope defines valid structural behavior. Boundary crossings are classified as regime exit rather than failure. Higher‑level models, shown schematically above the substrate, remain semantically independent of the substrate layer.
+
+---
+
+**Figure 1.** *Structural overview of the Boson Substrate Model (BSM) showing a minimal substrate layer with operator‑mediated local interactions bounded by a declared operating regime, where boundary crossings are classified as non‑catastrophic regime exit and higher‑level models remain semantically independent.*
+
+---
+
+**Figure 1.** *Structural overview of the Boson Substrate Model showing operator‑mediated local interactions within declared operating boundaries, where boundary crossings indicate non‑catastrophic regime exit.*

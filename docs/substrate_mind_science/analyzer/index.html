@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="creator" content="TriadicFrameworks">
+<meta name="author" content="Nawder Loswin (pen name)">
+<meta name="publisher" content="TriadicFrameworks, created by Nawder Loswin">
+<meta name="description" content="TriadicFrameworks — a structural grammar for students and AIs, teaching gradients, triads, coherence, and system behavior across domains.">
+<meta name="keywords" content="TriadicFrameworks, systems thinking, RTT, resonance, gradients, coherence, AI education, complexity">
+<link rel="canonical" href="https://www.triadicframeworks.org/">
+     
+     <title>Substrate Mind Science Analyzer | TriadicFrameworks</title>
+
+  <!-- Favicon (Triadic Static Mark) -->
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
+<meta property="og:title" content="Workflows | TFT | TriadicFrameworks | RTT" />
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1080" />
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav class="nav-band">
+  
+<h2>🧠 Substrate Mind Science — Analyzer</h2>
+     <a href="#README">🔰 README — Overview of the SMS Analyzer</a>
+     <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
+     <a href="#STUDENT_DISCLAIMER">⚠️ Student Disclaimer — Scope, safety, and boundaries</a>
+     <a href="#WORKFLOW_OVERVIEW">🧭 Workflow Overview — How students use the Analyzer</a>
+     <a href="https://www.triadicframeworks.org/Governance_Substrate_Model/">🗽 Governance Substrate Model</a>
+     <a href="https://www.triadicframeworks.org/media_substrate_model/">📡 Media Substrate Model</a>
+     <a href="https://www.triadicframeworks.org/education/">💡 RTT Learning Resources</a>
+  <h3>🧩 Adapters</h3>
+     <a href="#AI_AUGMENTATION_CONTEXT">🤖 AI Augmentation Context — Structural observation of AI‑assisted reasoning</a>
+     <a href="#AI_DRIFT_CALIBRATION_EXAMPLE">📐 AI Drift Calibration — Alignment and drift example</a>
+     <a href="#RESONANCE_SEED_NOTES">🌱 Resonance Seed Notes — Structural continuity and alignment</a>
+  <h3>📘 Student Examples</h3>
+     <a href="#CHRONIC_LOAD_ADAPTATION">🧠 Chronic Load Adaptation — Stability under sustained demand</a>
+     <a href="#ENVIRONMENTAL_AUDIO_CONTEXT">🔊 Environmental Audio Context — Ruling out physical contributors</a>
+     <a href="#SENSORY_TRIGGERED_MEMORY">🧠 Sensory‑Triggered Memory — Cross‑sensory activation example</a>
+     <a href="#SANDBOX_EXCERCISES">🌉 Sandbox Exercises</a>
+  <h3>📐 Schemas</h3>
+     <a href="#SESSION_SCHEMA_MINIMAL">📄 Minimal Session Schema — Canonical session structure</a>
+     <a href="#REGIME_CONTEXT_BLOCK">🧭 Regime Context Block — Interpretive framing layer</a>
+     <a href="#TRIADIC_INTEGRATION_EXAMPLE">🔺 Triadic Integration — Multi‑model whole‑mind view</a>
+     <a href="../">🔙</a> 
+   <!-- RTT Canonical Signature -->
+   <span style="display:none;">
+   rtt=1 | coherence=declared | drift=bounded | paradox=structural
+   </span>
+   
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+  README: 'README.md',
+  ABOUT: '../../ABOUT.md', 
+  STUDENT_DISCLAIMER: 'student_disclaimer.md',
+  WORKFLOW_OVERVIEW: 'workflow_overview.md',
+  // ADAPTERS
+  AI_AUGMENTATION_CONTEXT: 'adapters/ai_augmentation_context.md',
+  AI_DRIFT_CALIBRATION_EXAMPLE: 'adapters/ai_drift_calibration_example.json.md',
+  RESONANCE_SEED_NOTES: 'adapters/resonance_seed_notes.md',
+  // EXAMPLES
+  CHRONIC_LOAD_ADAPTATION: 'examples/chronic_load_adaptation_example.md',
+  ENVIRONMENTAL_AUDIO_CONTEXT: 'examples/environmental_audio_context_example.md',
+  SENSORY_TRIGGERED_MEMORY: 'examples/sensory_triggered_memory_example.md',
+  SANDBOX_EXCERCISES: 'examples/sandbox_exercises.md',
+  // SCHEMAS
+  REGIME_CONTEXT_BLOCK: 'schemas/regime_context_block.json.md',
+  SESSION_SCHEMA_MINIMAL: 'schemas/session_schema_minimal.json.md',
+  TRIADIC_INTEGRATION_EXAMPLE: 'schemas/triadic_integration_example.json.md'
+};
+  
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+</body>
+</html>

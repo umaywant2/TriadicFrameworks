@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+title: "Global Energy Regime Awareness"
+message: "If you use this work, please cite it as below."
+doi: "10.5281/zenodo.18266407"
+authors:
+  - family-names: Loswin
+    given-names: Nawder
+abstract: >
+  Global Energy Regime Awareness is a descriptive framework for expressing
+  operating regimes, validity assumptions, and boundary semantics within
+  large-scale energy systems. The work demonstrates how structural context
+  can be declared using existing operational surfaces without altering
+  grid control, dispatch, or regulatory mechanisms.
+keywords:
+  - energy systems
+  - grid operations
+  - regime modeling
+  - infrastructure resilience
+  - operational clarity
+license: CC-BY-4.0
+repository-code: https://github.com/umaywant2/TriadicFrameworks

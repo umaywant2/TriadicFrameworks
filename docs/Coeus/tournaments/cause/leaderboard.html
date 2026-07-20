@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cause-Based Leaderboard — Coeus Tournaments</title>
+  <link rel="stylesheet" href="../../styles/leaderboard.css" />
+  <script src="../emitter/emitter_overlay.js" defer></script>
+</head>
+<body>
+  <h1>🏁 Coeus Tournament Leaderboard — Cause Dimension</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Coin Name</th>
+        <th>Cause</th>
+        <th>Score</th>
+        <th>Glyph</th>
+        <th>Ethics</th>
+        <th>Realm</th>
+        <th>Emitter</th>
+        <th>Remix Lineage</th>
+      </tr>
+    </thead>
+    <tbody id="leaderboard-body">
+      <!-- Rows will be injected by leaderboard.js -->
+    </tbody>
+  </table>
+
+  <script>
+    fetch("results.json")
+      .then(res => res.json())
+      .then(data => {
+        const tbody = document.getElementById("leaderboard-body");
+        data.forEach(coin => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+            <td>${coin.name}</td>
+            <td>${coin.cause}</td>
+            <td>${coin.score}</td>
+            <td>${coin.glyph}</td>
+            <td>${coin.ethics_passed ? "✅" : "❌"}</td>
+            <td>${coin.realm_safe ? "D3/D4" : "⚠️"}</td>
+            <td>${coin.emitter_sync ? "Synced" : "Unsynced"}</td>
+            <td>${coin.remix_lineage.length ? coin.remix_lineage.join(", ") : "—"}</td>
+          `;
+          tbody.appendChild(row);
+          highlightRails(coin);
+        });
+      });
+  </script>
+</body>
+</html>
+

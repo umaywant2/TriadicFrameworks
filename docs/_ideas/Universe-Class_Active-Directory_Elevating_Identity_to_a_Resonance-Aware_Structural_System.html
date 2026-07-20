@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org -->
+  <title>📜 Universe‑Class Active-Directory Elevating Identity to a Resonance‑Aware Structural System</title>
+
+  <!-- Basic styling (optional, tweak as you like) -->
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #050816;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    pre, code {
+      font-family: "Fira Code", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      background: #020617;
+      color: #e5e7eb;
+    }
+    pre {
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+    code {
+      padding: 0.1rem 0.25rem;
+      border-radius: 4px;
+    }
+    h1, h2, h3, h4 {
+      color: #f9fafb;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    a {
+      color: #38bdf8;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1f2937;
+      margin: 2rem 0;
+    }
+  </style>
+
+  <!-- MathJax v3 configuration -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)'], ['$', '$']],
+        displayMath: [['\
+
+\[', '\\]
+
+'], ['$$', '$$']]
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+  <!-- Marked.js for Markdown rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <main>
+    <article id="uni-adc">
+      <h1>📜 Universe‑Class Active-Directory Elevating Identity to a Resonance‑Aware Structural System 🔮</h1>
+      <p>By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org</p>
+      <p>Loading 🌌 Universe‑Class_Active-Directory__Elevating_Identity_to_a_Resonance‑Aware_Structural_System.md…</p>
+    </article>
+  </main>
+
+  <script>
+    async function loadCodex() {
+      try {
+        // Adjust path if needed depending on where this HTML lives
+        const response = await fetch('https://www.triadicframeworks.org/_ideas/Universe‑Class_Active-Directory__Elevating_Identity_to_a_Resonance‑Aware_Structural_System.md');
+        if (!response.ok) {
+          throw new Error('⚔️ Failed to load Universe‑Class_Active-Directory__Elevating_Identity_to_a_Resonance‑Aware_Structural_System.md');
+        }
+        const mdText = await response.text();
+
+        // Render Markdown to HTML
+        const html = marked.parse(mdText, {
+          breaks: true,
+          gfm: true
+        });
+
+        const root = document.getElementById('uni-adc');
+        root.innerHTML = html;
+
+        // Trigger MathJax typesetting after content is injected
+        if (window.MathJax && window.MathJax.typesetPromise) {
+          window.MathJax.typesetPromise([root]).catch(err => console.error(err));
+        }
+      } catch (err) {
+        console.error(err);
+        const root = document.getElementById('uni-adc');
+        root.innerHTML = `
+          <h1>Universe‑Class Active-Directory Elevating Identity to a Resonance‑Aware Structural System</h1>
+          <p>By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org</p>
+          <p>Unable to load <code>Universe‑Class_Active-Directory__Elevating_Identity_to_a_Resonance‑Aware_Structural_System.md</code>.</p>
+          <pre>${String(err)}</pre>
+        `;
+      }
+    }
+
+    loadCodex();
+  </script>
+</body>
+</html>

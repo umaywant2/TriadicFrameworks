@@ -1,0 +1,124 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Fields Schema",
+  "description": "Defines scalar, vector/spin, and resonance-envelope fields for the Resonance Substrate Model (RSM). Includes field values, gradients, coherence, and cross-field coupling parameters.",
+
+  "type": "object",
+
+  "properties": {
+    "scalar_field": {
+      "type": "object",
+      "description": "The scalar field φ representing baseline substrate potential.",
+      "properties": {
+        "value": {
+          "type": "number",
+          "description": "Scalar field magnitude at a given point."
+        },
+        "gradient": {
+          "type": "array",
+          "description": "Spatial gradient of the scalar field.",
+          "items": { "type": "number" }
+        },
+        "units": {
+          "type": "string",
+          "description": "Optional unit system for the scalar field."
+        }
+      },
+      "required": ["value"]
+    },
+
+    "vector_field": {
+      "type": "object",
+      "description": "The vector/spin field V⃗ representing directional or spin-based substrate behavior.",
+      "properties": {
+        "components": {
+          "type": "array",
+          "description": "Vector components of the field.",
+          "items": { "type": "number" },
+          "minItems": 1
+        },
+        "magnitude": {
+          "type": "number",
+          "description": "Computed or provided magnitude of the vector field."
+        },
+        "spin_state": {
+          "type": "string",
+          "description": "Optional spin or orientation label."
+        }
+      },
+      "required": ["components"]
+    },
+
+    "resonance_envelope": {
+      "type": "object",
+      "description": "The resonance envelope R describing coherence, amplitude, and phase alignment.",
+      "properties": {
+        "amplitude": {
+          "type": "number",
+          "description": "Resonance amplitude at a given point."
+        },
+        "phase": {
+          "type": "number",
+          "description": "Phase of the resonance envelope."
+        },
+        "coherence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Degree of resonance coherence (0–1)."
+        }
+      },
+      "required": ["amplitude", "coherence"]
+    },
+
+    "coupling": {
+      "type": "object",
+      "description": "Cross-field coupling strengths between scalar, vector, and resonance fields.",
+      "properties": {
+        "scalar_to_vector": {
+          "type": "number",
+          "description": "Coupling strength from scalar to vector field."
+        },
+        "vector_to_resonance": {
+          "type": "number",
+          "description": "Coupling strength from vector field to resonance envelope."
+        },
+        "scalar_to_resonance": {
+          "type": "number",
+          "description": "Coupling strength from scalar field to resonance envelope."
+        }
+      }
+    },
+
+  {
+    "id": "scalar_field",
+    "type": "object",
+    "description": "Schema for scalar field definitions.",
+    "properties": {
+      "initial_value": { "type": "number" },
+      "diffusion_rate": { "type": "number" },
+      "metadata": { "type": "object" }
+    },
+    "required": ["initial_value"]
+  }
+    
+    "metadata": {
+      "type": "object",
+      "description": "Optional metadata for documentation, provenance, or schema evolution.",
+      "version": "1.0.0",
+      "notes": "Initial seed release",
+      "properties": {
+        "version": {
+          "type": "string",
+          "description": "Schema version identifier."
+        },
+        "notes": {
+          "type": "string",
+          "description": "Freeform notes or comments."
+        }
+      }
+    }
+  },
+
+  "required": ["scalar_field", "vector_field", "resonance_envelope"]
+}

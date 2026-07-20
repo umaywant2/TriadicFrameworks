@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Core Metadata -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="language" content="en">
+<meta name="last-modified" content="2026-05-01">
+<meta name="generator" content="TriadicFrameworks Static Canon Engine">
+
+<!-- Identity -->
+<meta name="creator" content="TriadicFrameworks">
+<meta name="author" content="Nawder Loswin (pen name)">
+<meta name="publisher" content="TriadicFrameworks">
+
+<!-- Description & Keywords -->
+<meta name="description"
+      content="Governance Alignment Analyzer — the interpretive engine of the Governance Substrate Model (GSM). Converts descriptions into structural vectors, checks invariants, evaluates coherence, detects drift, classifies basins, and computes transition pathways.">
+<meta name="keywords"
+      content="Governance Substrate Model, GSM, governance analyzer, structural vectors, invariants, drift detection, coherence scoring, basin classifier, transition pathways, governance physics, structural literacy">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/">
+
+<!-- Robots -->
+<meta name="robots" content="index, follow">
+
+<!-- Theme -->
+<meta name="theme-color" content="#0ff">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TriadicFrameworks">
+<meta property="og:title" content="Governance Alignment Analyzer">
+<meta property="og:url" content="https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/">
+<meta property="og:description"
+      content="Interpretive engine of the Governance Substrate Model. Structural vectors, invariants, drift, coherence, basins, transition pathways.">
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1080">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Governance Alignment Analyzer">
+<meta name="twitter:description"
+      content="Structural interpretation engine for the Governance Substrate Model (GSM).">
+<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+
+<!-- Citation Metadata -->
+<meta name="citation_title" content="Governance Alignment Analyzer">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.subject"
+      content="governance substrate model, structural vectors, invariants, drift detection, coherence scoring, basins, transition pathways, governance physics">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="Governance Alignment Analyzer">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose"
+      content="Interpret governance systems structurally using the Governance Substrate Model: vectors, invariants, coherence, drift, basins, and transitions.">
+<meta name="ai.keywords"
+      content="GSM, governance analyzer, structural vectors, invariants, drift, coherence, basins, transition pathways, governance physics">
+<meta name="ai.audience" content="students, researchers, developers, designers, AI systems">
+<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml">
+<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.contact.youtube" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted.">
+
+<!-- Module-Specific -->
+<meta name="ai.module.name" content="Governance Alignment Analyzer">
+<meta name="ai.module.summary"
+      content="Interpretive engine of the Governance Substrate Model: vectors, invariants, coherence, drift, basins, transitions.">
+<meta name="ai.module.category" content="governance-analyzer">
+
+<!-- Favicon -->
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
+
+<title>Governance Alignment Analyzer | TriadicFrameworks</title>
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+  /* Context Block */
+  .context-block {
+    font-family: monospace;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0.5rem 0 1rem 0;
+  }
+       
+  /* Context Label */
+  .context-label {
+    color: #ff9800; /* orange */
+    font-weight: bold;
+    margin-right: 0.25rem;
+  }
+       
+  /* Context Value */
+  .context-value {
+    color: #ffffff; /* white */
+  }
+     
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav class="nav-band">
+ <p align="center">
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+ </p> 
+  
+<!-- Governance Substrate Model Analyzer — Document Map -->
+  <h2>🗽 Governance Substrate Model Analyzer</h2>
+      <a href="#README">🔰 README</a>
+      <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
+      <a href="#CONTRIBUTING">🤝 Contributing</a>
+      <a href="https://www.triadicframeworks.org/education/">💯 Education | RTT</a>
+      <a href="#GLOSSARY">🎯 Glossary</a>
+      <a href="#LINEAGE">📜 Lineage</a>
+      <a href="#LICENSE">📎 License</a>
+      <a href="#SITEMAP">🌐 Sitemap</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
+      <a href="#SECURITY">🔐 Security</a>
+      <a href="#PRINCIPLES">🧘 Principles</a>
+    <h3>🧩 Analyzer & Architecture</h3>
+      <a href="#alignment_analyzer">🎯 Alignment Analyzer</a>
+      <a href="#analyzer_prototype_architecture">🧱 Analyzer Prototype Architecture</a>
+      <a href="#ARCHITECTURE_OVERVIEW">🏗️ Architecture Overview</a>
+    <h3>🗺️ Artifact Lineage & Indexes</h3>
+      <a href="#artifact_lineage_map">🧬 Artifact Lineage Map</a>
+      <a href="#index_artifacts">🧱 Index Artifacts</a>
+      <a href="#index_regime_modes">⚙️ Index Regime Modes</a>
+      <a href="#index_structural_layers">🪜 Index Structural Layers</a>
+    <h3>🧠 Concepts & Glossaries</h3>
+      <a href="#concept_capture">🧩 Captured concepts and definitions</a>
+      <a href="#GLOSSARY">📖 Glossary</a>
+    <h3>🤝 Contribution & Roadmap</h3>
+      <a href="#CONTRIBUTING">🤲 Contributing</a>
+      <a href="#ROADMAP">🛣️ Roadmap</a>
+    <h3>🔌 Substrate & DSL Adapters</h3>
+      <a href="#dsl_substrate_adapter">🔌 DSL Substrate Adapter</a>
+      <a href="#text_stream_adapter">💬 Text Stream Adapter</a>
+    <h3>📐 Dynamic Artifacts & Cards</h3>
+      <a href="#dynamic_artifact_templates">📐 Dynamic Artifact Templates</a>
+      <a href="#dynamic_cards_spec">🃏 Dynamic Cards Spec</a>
+      <a href="#governance_cards_spec">🗃️ Governance Cards Spec</a>
+    <h3>📊 Dashboards & Substrate Model</h3>
+      <a href="#governance_alignment_dashboard">📊 Governance Alignment Dashboard</a>
+      <a href="#governance_substrate_model">🌐 Governance Substrate Model</a>
+    <h3>🔭 Lenses & Teaching Guides</h3>
+      <a href="#lenses_catalog">🔭 Lenses Catalog — Observer</a>
+      <a href="#instructor_teaching_guide">🎓 Instructor Teaching Guide</a>
+      <a href="#teacher_guide">🧑‍🏫 Teacher Guide</a>
+      <a href="#student_workbook">📘 Student Workbook</a>
+    <h3>🚀 Simulation & Scenarios</h3>
+      <a href="#simulation_engine">🚀 Simulation Engine</a>
+      <a href="#simulation_scenarios">🎬 Simulation Scenarios</a>
+      <a href="#transition_pathways">🔀 Transition Pathways</a>
+    <h3>📄 Worksheets</h3>
+      <a href="#worksheet_simulation_steps">📄 Worksheet Simulation_steps</a>
+      <a href="#worksheet_student_profile">📝 Worksheet Student_profile</a>
+   <h3>🏗️ Triadic Tools</h3> 
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
+      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 Packages and Cores</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas</a>
+      <a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a>    
+      <a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS</a>
+      <a href="https://www.triadicframeworks.org/_ideas/">🤔 Ideas</a>
+      <a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">🔛(RTT frozen)</a>
+      <a href="https://www.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
+      <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
+      <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
+      <a href="../../">🔙TFT</a>
+      <a href="../">🔙</a>
+   <!-- RTT Canonical Signature -->
+<section id="gsm-analyzer-session-header"
+         data-gsm="1"
+         data-coherence="declared"
+         data-drift="structural"
+         data-paradox="none">
+
+  <h2>Session Context</h2>
+
+  <div class="context-block">
+
+    <span class="context-label"><strong>Canon:</strong></span>
+    <span class="context-value">active (governance‑analyzer)</span><br>
+
+    <span class="context-label"><strong>Modules:</strong></span>
+    <span class="context-value">
+      vectorizer → invariants → cross‑axis physics → coherence → drift → basins → transitions → outputs → teaching → applications
+    </span><br>
+
+    <span class="context-label"><strong>Drift:</strong></span>
+    <span class="context-value">structural (vector + forces)</span><br>
+
+    <span class="context-label"><strong>Coherence:</strong></span>
+    <span class="context-value">stable (GSM physics)</span><br>
+
+    <span class="context-label"><strong>Version:</strong></span>
+    <span class="context-value">1.0 (analyzer‑stable)</span><br>
+
+    <span class="context-label"><strong>Format:</strong></span>
+    <span class="context-value">html + markdown + yaml + diagrams + simulations</span><br>
+
+    <span class="context-label"><strong>Front door:</strong></span>
+    <span class="context-value">exists (Analyzer root)</span><br>
+
+    <span class="context-label"><strong>Every page:</strong></span>
+    <span class="context-value">stands alone + AI‑parsable</span><br>
+
+    <span class="context-label"><strong>Audience:</strong></span>
+    <span class="context-value">students + researchers + developers + designers + AIs</span>
+
+  </div>
+
+</section>
+
+<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;
+            border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
+  🏛️ GSM‑Analyzer<br>📘 Governance Substrate Canon • AI‑Ready
+</div>
+
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+  // Root
+  README: 'README.md',
+  ABOUT: '../ABOUT.md',
+  CONTRIBUTING: '../CONTRIBUTING.md',
+  GLOSSARY: '../GLOSSARY.md',
+  LINEAGE: '../LINEAGE.md',
+  LICENSE: '../LICENSE.md',
+  SITEMAP: '../sitemap.md',
+  QUICKSTART: '../QUICKSTART.md',
+  CODE_OF_CONDUCT: '../CODE_OF_CONDUCT.md',
+  SECURITY: '../SECURITY.md',
+  PRINCIPLES: '../PRINCIPLES.md',
+  alignment_analyzer: 'alignment_analyzer.md',
+  analyzer_prototype_architecture: 'analyzer_prototype_architecture.md',
+  ARCHITECTURE_OVERVIEW: 'ARCHITECTURE_OVERVIEW.md',
+  artifact_lineage_map: 'artifact_lineage_map.md',
+  concept_capture: 'concept_capture.md',
+  CONTRIBUTING: 'CONTRIBUTING.md',
+  dsl_substrate_adapter: 'dsl_substrate_adapter.md',
+  dynamic_artifact_templates: 'dynamic_artifact_templates.md',
+  dynamic_cards_spec: 'dynamic_cards_spec.md',
+  GLOSSARY: 'GLOSSARY.md',
+  governance_alignment_dashboard: 'governance_alignment_dashboard.md',
+  governance_cards_spec: 'governance_cards_spec.md',
+  governance_substrate_model: 'governance_substrate_model.md',
+  index_artifacts: 'index_artifacts.md',
+  index_regime_modes: 'index_regime_modes.md',
+  index_structural_layers: 'index_structural_layers.md',
+  instructor_teaching_guide: 'instructor_teaching_guide.md',
+  lenses_catalog: 'lenses_catalog.md',
+  ROADMAP: 'ROADMAP.md',
+  simulation_engine: 'simulation_engine.md',
+  simulation_scenarios: 'simulation_scenarios.md',
+  structural_vectors_reference: 'structural_vectors_reference.md',
+  student_workbook: 'student_workbook.md',
+  teacher_guide: 'teacher_guide.md',
+  text_stream_adapter: 'text_stream_adapter.md',
+  transition_pathways: 'transition_pathways.md',
+  worksheet_simulation_steps: 'worksheet_simulation_steps.md',
+  worksheet_student_profile: 'worksheet_student_profile.md'
+};
+  
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+</body>
+</html>

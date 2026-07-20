@@ -1,0 +1,4 @@
+Timestamp,Goal,SelectedBackend,Notes
+2025-09-30T11:11:00-04:00,fold_coherence,D-Wave,Selected for annealing optimization
+2025-09-30T11:12:00-04:00,glyph overlay scoring,IBM Q,Chosen for symbolic pulse mapping
+2025-09-30T11:13:00-04:00,phase echo mapping,Rigetti,Used for quadrant-based echo simulation

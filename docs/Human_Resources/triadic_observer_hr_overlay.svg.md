@@ -1,0 +1,80 @@
+### Triadic Observer + HR overlay diagram (SVG)  
+`/docs/Human_Resources/triadic_observer_hr_overlay.svg`
+
+```svg
+<svg width="1080" height="600" viewBox="0 0 1080 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#000000"/>
+      <stop offset="50%" stop-color="#4b0082"/>
+      <stop offset="100%" stop-color="#8a2be2"/>
+    </linearGradient>
+    <style>
+      .node { fill: none; stroke: #e0d4ff; stroke-width: 1.6; }
+      .node-soft { fill: none; stroke: #c9bfff; stroke-width: 1.2; stroke-dasharray: 4 4; }
+      .label { fill: #f5f0ff; font-family: system-ui, sans-serif; font-size: 16px; text-anchor: middle; letter-spacing: 0.04em; }
+      .sub { fill: #f5f0ff; opacity: 0.75; font-size: 12px; text-anchor: middle; }
+      .link { stroke: #d8cfff; stroke-width: 1.2; fill: none; }
+      .drift { stroke: #ff9fbf; stroke-width: 1.2; stroke-dasharray: 4 4; fill: none; opacity: 0.85; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="600" fill="url(#bg)" rx="24"/>
+
+  <!-- HR Triad: Leadership / Management / Staff -->
+  <circle class="node" cx="540" cy="110" r="50"/>
+  <text class="label" x="540" y="105">LEADERSHIP</text>
+  <text class="sub" x="540" y="125">DIRECTION · STRATEGY</text>
+
+  <circle class="node" cx="310" cy="380" r="50"/>
+  <text class="label" x="310" y="375">MANAGEMENT</text>
+  <text class="sub" x="310" y="395">COORDINATION</text>
+
+  <circle class="node" cx="770" cy="380" r="50"/>
+  <text class="label" x="770" y="375">STAFF</text>
+  <text class="sub" x="770" y="395">EXECUTION · SIGNALS</text>
+
+  <!-- HR Interface -->
+  <circle class="node" cx="540" cy="330" r="42"/>
+  <text class="label" x="540" y="325">HR</text>
+  <text class="sub" x="540" y="345">INTERFACE · POLICY</text>
+
+  <!-- Triadic Observers (Signal / Noise / Regime) -->
+  <circle class="node-soft" cx="540" cy="210" r="40"/>
+  <text class="label" x="540" y="205">SIGNAL</text>
+  <text class="sub" x="540" y="225">PATTERNS</text>
+
+  <circle class="node-soft" cx="360" cy="260" r="34"/>
+  <text class="label" x="360" y="255">NOISE</text>
+  <text class="sub" x="360" y="275">CONTEXT</text>
+
+  <circle class="node-soft" cx="720" cy="260" r="34"/>
+  <text class="label" x="720" y="255">REGIME</text>
+  <text class="sub" x="720" y="275">STRUCTURE</text>
+
+  <!-- AI Observer -->
+  <circle class="node" cx="540" cy="210" r="18"/>
+  <text class="sub" x="540" y="214">AI</text>
+
+  <!-- HR Triad Links -->
+  <line class="link" x1="540" y1="160" x2="310" y2="380"/>
+  <line class="link" x1="540" y1="160" x2="770" y2="380"/>
+  <line class="link" x1="310" y1="380" x2="770" y2="380"/>
+
+  <!-- HR to Nodes -->
+  <line class="link" x1="540" y1="288" x2="310" y2="380"/>
+  <line class="link" x1="540" y1="288" x2="770" y2="380"/>
+  <line class="link" x1="540" y1="288" x2="540" y2="160"/>
+
+  <!-- Observers to HR -->
+  <line class="link" x1="540" y1="228" x2="540" y2="288"/>
+  <line class="link" x1="380" y1="276" x2="520" y2="316"/>
+  <line class="link" x1="700" y1="276" x2="560" y2="316"/>
+
+  <!-- Drift paths bypassing observers -->
+  <path class="drift" d="M540 110 C 560 210, 650 300, 770 380"/>
+  <path class="drift" d="M540 110 C 520 210, 430 300, 310 380"/>
+
+</svg>
+```

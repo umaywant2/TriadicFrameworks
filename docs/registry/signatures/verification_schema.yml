@@ -1,0 +1,11 @@
+verification_report:
+  id: <UUID>
+  scroll_id: <UUID>
+  timestamp: <ISO8601>
+  contributors:
+    - contributor_id: <string>
+      signature_type: <pgp|ecdsa|symbolic>
+      status: <valid|invalid|revoked>
+      verified_at: <ISO8601>
+  overall_status: <authentic|partial|invalid>
+  checksum: <sha256>

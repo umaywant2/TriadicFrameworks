@@ -1,0 +1,137 @@
+statement_mapping_rules:
+
+  description: >
+    Defines how natural-language statements, DSL constructs, and structured
+    claims are mapped into the Governance Substrate Model (GSM). Mapping rules
+    translate statements into axis-level contributions across [C, M, O, A, T],
+    enabling consistent vectorization for analysis, simulation, and observer
+    interpretation.
+
+  version: "1.0"
+
+  axes:
+    C: "Centralization"
+    M: "Methods"
+    O: "Oversight"
+    A: "Access"
+    T: "Timing"
+
+  mapping_pipeline:
+    - "Parse statement"
+    - "Identify structural claims"
+    - "Apply axis-level mapping rules"
+    - "Apply coupling rules (C↔O, M↔A, O↔T)"
+    - "Normalize contributions"
+    - "Generate structural vector"
+    - "Emit mapping metadata"
+
+  statement_types:
+
+    authority_claim:
+      description: "Statements about decision power, hierarchy, or central control."
+      axis_contributions:
+        C: +1.0
+        O: +0.5
+      modifiers:
+        strong_language: +0.5
+        distributed_language: -1.0
+      examples:
+        - "Authority should be centralized."
+        - "Decision-making must be unified."
+
+    oversight_claim:
+      description: "Statements about monitoring, checks, transparency, or review."
+      axis_contributions:
+        O: +1.0
+      modifiers:
+        transparency: +0.3
+        secrecy: -0.5
+      examples:
+        - "Oversight must be strengthened."
+        - "We need more transparency."
+
+    method_claim:
+      description: "Statements about competitive, collaborative, or procedural methods."
+      axis_contributions:
+        M: +1.0
+      modifiers:
+        procedural: +0.3
+        adversarial: +0.5
+        cooperative: -0.3
+      examples:
+        - "Use competitive methods."
+        - "Adopt a procedural approach."
+
+    access_claim:
+      description: "Statements about who can participate, contribute, or influence."
+      axis_contributions:
+        A: +1.0
+      modifiers:
+        restricted: -0.5
+        open: +0.5
+      examples:
+        - "Access should be broad."
+        - "Participation must be limited."
+
+    timing_claim:
+      description: "Statements about cadence, responsiveness, or temporal structure."
+      axis_contributions:
+        T: +1.0
+      modifiers:
+        rapid: +0.5
+        slow: -0.5
+      examples:
+        - "Decisions must be made quickly."
+        - "We should slow the process down."
+
+  coupling_rules:
+
+    C_O_coupling:
+      description: "Centralization and oversight must scale together."
+      rule: >
+        If C increases without O, add tension metadata.
+      tension_trigger: "delta(C) - delta(O) > 0.8"
+
+    M_A_coupling:
+      description: "Methods and access must be coherent."
+      rule: >
+        Competitive methods with broad access increase tension.
+      tension_trigger: "M > 0.7 and A > 0.7"
+
+    O_T_coupling:
+      description: "Oversight and timing must be compatible."
+      rule: >
+        High oversight with volatile timing increases tension.
+      tension_trigger: "O > 0.7 and T_volatility > 0.6"
+
+  normalization:
+    method: "min-max"
+    clamp_range: [0, 1]
+    notes: "Ensures axis contributions remain within manifold bounds."
+
+  output_schema:
+    vector:
+      C: <number>
+      M: <number>
+      O: <number>
+      A: <number>
+      T: <number>
+    metadata:
+      statement_type: "<type>"
+      axis_contributions: "<raw_values>"
+      modifiers_applied: "<list>"
+      coupling_tension: "<list>"
+      confidence: <0–1>
+
+  integration_with_analyzer:
+    dsl_substrate_adapter: "Uses these rules to map DSL constructs"
+    invariant_checker: "Receives mapped vectors for evaluation"
+    physics_engine: "Uses axis deltas for force computation"
+    drift_detector: "Uses mapped vectors for drift comparison"
+    basin_classifier: "Determines basin identity from mapped vectors"
+    observer_layer: "Uses mapped vectors for history/now/future lenses"
+
+  metadata:
+    maintainer: "TriadicFrameworks"
+    last_updated: "2026-03-04"
+    notes: "Defines structural mapping rules for GSM statement interpretation."

@@ -1,0 +1,54 @@
+<svg width="620" height="320" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { font: 14px sans-serif; font-weight: bold; }
+    .box { fill: #020617; stroke: #4b5563; stroke-width: 1.2; rx: 8; ry: 8; }
+    .label { font: 12px sans-serif; }
+    .arrow { stroke: #9ca3af; stroke-width: 1.6; marker-end: url(#arrowhead); }
+    .mode { font: 11px sans-serif; }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#9ca3af" />
+    </marker>
+  </defs>
+
+  <text class="title" x="20" y="30">Collapse→Recovery Engine (CRE)</text>
+
+  <!-- Collapse input -->
+  <rect class="box" x="20" y="80" width="140" height="80" />
+  <text class="label" x="30" y="100">Collapse Input</text>
+  <text class="label" x="30" y="120">Amplitude</text>
+  <text class="label" x="30" y="136">Curvature</text>
+  <text class="label" x="30" y="152">Torsion</text>
+
+  <!-- CAV -->
+  <rect class="box" x="200" y="70" width="90" height="40" />
+  <text class="label" x="210" y="95">CAV</text>
+
+  <!-- CSV -->
+  <rect class="box" x="320" y="70" width="90" height="40" />
+  <text class="label" x="330" y="95">CSV</text>
+
+  <!-- REV -->
+  <rect class="box" x="440" y="70" width="90" height="40" />
+  <text class="label" x="450" y="95">REV</text>
+
+  <!-- Recovery output -->
+  <rect class="box" x="540" y="80" width="60" height="80" />
+  <text class="label" x="545" y="110">Recovery</text>
+  <text class="label" x="545" y="128">+ Continuity</text>
+
+  <!-- Flow arrows -->
+  <line class="arrow" x1="160" y1="120" x2="200" y2="90" />
+  <line class="arrow" x1="290" y1="90" x2="320" y2="90" />
+  <line class="arrow" x1="410" y1="90" x2="440" y2="90" />
+  <line class="arrow" x1="530" y1="90" x2="540" y2="120" />
+
+  <!-- Tensor formula -->
+  <text class="label" x="20" y="230">T₍CR₎ = α·CAV + β·REV + γ·CSV + δ·R</text>
+
+  <!-- Modes -->
+  <text class="mode" x="20" y="260">Modes: Formal, Emergent, Hybrid, Chaotic, Inversion</text>
+  <text class="mode" x="20" y="278">Zones: U, S, M, D, X</text>
+</svg>

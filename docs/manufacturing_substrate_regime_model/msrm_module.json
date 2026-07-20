@@ -1,0 +1,153 @@
+{
+  "module": "Manufacturing Substrate Regime Model",
+  "version": "1.0",
+  "category": "substrate-core",
+  "summary": "Structural, regime‑aware framework for extreme manufacturing systems — calibration layers, boundary semantics, drift detection, operating envelopes, non‑catastrophic exit, operator‑mediated transitions, mediation patterns, manufacturing context (lithography, yield, extreme constraints), related works (BSM, QSM, RSM), and deployment discussion.",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "calibration/calibration_as_structure.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "calibration/drift_detection.md",
+      "role": "diagnostic",
+      "analyzer_layer": "drift"
+    },
+    {
+      "path": "calibration/non_catastrophic_exit.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "calibration/regime_aware_calibration.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "discussion/deployment_considerations.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "discussion/future_extensions.md",
+      "role": "extension",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "discussion/implications_for_manufacturing.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "figures/boundary_and_exit_semantics.svg",
+      "role": "map",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "figures/msrm_structural_overview.svg",
+      "role": "map",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "figures/regime_calibration_flow.svg",
+      "role": "map",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "manufacturing_context/extreme_regime_constraints.md",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "manufacturing_context/lithography_systems.md",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "manufacturing_context/yield_and_variability.md",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "operators/inter_regime_mediation.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "operators/mediation_patterns.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "operators/operator_roles.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "overview/abstract.md",
+      "role": "profile",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "overview/limitations.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "overview/scope_and_assumptions.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "overview/terminology.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "related_works/relationship_to_bsm.md",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "related_works/relationship_to_qsm.md",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "related_works/relationship_to_rsm.md",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "substrate/boundary_semantics.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "substrate/operating_envelopes.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "substrate/regime_declaration.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "substrate/substrate_definition.md",
+      "role": "engine",
+      "analyzer_layer": "cross-cutting"
+    }
+  ]
+}

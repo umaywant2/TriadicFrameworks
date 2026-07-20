@@ -1,0 +1,82 @@
+observer_now_schema:
+
+  description: >
+    Defines the structure of the Now Lens within the Triadic Observer.
+    The Now Lens captures the system’s current structural vector, coherence,
+    invariant alignment, drift pressure, basin identity, and regime mode.
+    It acts as the anchor point between historical lineage and projected futures.
+
+  version: "1.0"
+
+  now_state:
+
+    state_id: "<unique_id>"
+    timestamp: "<YYYY-MM-DD>"
+
+    structural_vector:
+      C: <number>
+      M: <number>
+      O: <number>
+      A: <number>
+      T: <number>
+      metadata:
+        confidence: <0–1>
+        notes: "<optional>"
+
+    basin_classification:
+      nearest_basin: <CPL | CPF | CTR | PCL | HCL>
+      basin_distance: <number>
+      stability_score: <0–1>
+      boundary_proximity: <0–1>
+      movement_trend: "approaching | departing | stable"
+
+    invariants:
+      aligned: [<list_of_invariants>]
+      tension: [<list_of_invariants>]
+      violated: [<list_of_invariants>]
+      tension_score: <0–10>
+
+    awareness_layers:
+      structural: <0–10>
+      procedural: <0–10>
+      historical: <0–10>
+      anticipatory: <0–10>
+      relational: <0–10>
+
+    drift_pressure:
+      projected_vector: [<dC>, <dM>, <dO>, <dA>, <dT>]
+      magnitude: <number>
+      category: "micro | meso | macro | regime_shift"
+      active_forces:
+        - axis_pair: "<C↔O | M↔A | O↔T>"
+          magnitude: <number>
+          direction: "positive | negative"
+      absorptive_strength: <0–1>
+
+    coherence:
+      score: <0–100>
+      stability: "high | medium | low"
+      notes: "<optional>"
+
+    regime_mode:
+      mode: "stable | tension | drift | compensatory | transition | absorptive | fragmentation | reconstruction"
+      notes: "<optional>"
+
+    narrative:
+      summary: "<short structural interpretation>"
+      key_signals:
+        - "<signal_1>"
+        - "<signal_2>"
+      structural_highlights:
+        - "<highlight_1>"
+        - "<highlight_2>"
+      drift_context:
+        - "<why drift pressure exists>"
+      basin_context:
+        - "<how the system relates to its basin>"
+
+    metadata:
+      generated_by: "triadic_observer"
+      created: "<YYYY-MM-DD>"
+      last_updated: "<YYYY-MM-DD>"
+      notes: "<optional>"

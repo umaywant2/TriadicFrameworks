@@ -1,0 +1,7 @@
+badge:
+  id: harmonic-hunter
+  label: Harmonic Hunter
+  criteria:
+    - Added new harmonic pattern entry
+    - Pattern includes tft_signature and array_mode
+  echo: "Tracked and logged a new harmonic resonance signature."

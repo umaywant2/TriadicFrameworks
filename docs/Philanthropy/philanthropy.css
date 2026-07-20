@@ -1,0 +1,136 @@
+/* ---------------------------------------------------------
+   Philanthropy Module — Canonical Stylesheet (RTT/1)
+   TriadicFrameworks Visual Identity: Violet Theme
+   --------------------------------------------------------- */
+
+/* Root Theme Variables */
+:root {
+  --phil-purple: #6a4df5;
+  --phil-purple-light: #8c6fff;
+  --phil-purple-dark: #4b2fd1;
+  --phil-bg: #faf9ff;
+  --phil-text: #1a1a1a;
+  --phil-border: #d8d2ff;
+}
+
+/* Page Base */
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--phil-bg);
+  color: var(--phil-text);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  color: var(--phil-purple-dark);
+  font-weight: 600;
+  margin-top: 1.4em;
+}
+
+/* Links */
+a {
+  color: var(--phil-purple);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Code Blocks */
+code, pre {
+  background: #f3f0ff;
+  border: 1px solid var(--phil-border);
+  border-radius: 6px;
+  padding: 4px 6px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9em;
+}
+
+/* Session Context Block */
+.session-context {
+  border: 2px solid var(--phil-purple);
+  border-radius: 10px;
+  padding: 16px;
+  background: #ffffff;
+  margin: 20px 0;
+}
+
+.session-context .context-label {
+  font-weight: 700;
+  color: var(--phil-purple-dark);
+  margin-top: 8px;
+}
+
+.session-context .context-value {
+  margin-left: 6px;
+  color: var(--phil-text);
+}
+
+/* Module Badge */
+.module-badge {
+  display: inline-flex;
+  align-items: center;
+  background: var(--phil-purple);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin: 12px 0;
+}
+.module-badge img {
+  height: 20px;
+  width: 20px;
+  margin-right: 8px;
+}
+
+/* Glyph Display */
+.philanthropy-glyph {
+  display: block;
+  margin: 20px auto;
+  width: 120px;
+  height: 120px;
+}
+
+/* Diagram Styling */
+svg {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+/* Operator Highlighting */
+.operator {
+  color: var(--phil-purple-dark);
+  font-weight: 600;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+table th {
+  background: var(--phil-purple-light);
+  color: white;
+  padding: 8px;
+  text-align: left;
+}
+table td {
+  border: 1px solid var(--phil-border);
+  padding: 8px;
+}
+
+/* Mobile Optimization */
+@media (max-width: 600px) {
+  body {
+    padding: 12px;
+  }
+  .session-context {
+    padding: 12px;
+  }
+}
+

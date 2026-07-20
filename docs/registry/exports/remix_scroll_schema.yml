@@ -1,0 +1,19 @@
+remix_scroll:
+  id: <UUID>
+  timestamp: <ISO8601>
+  parent_scrolls: <list>
+  corridors: <list>          # filtered corridor IDs
+  glyph_distribution: <dict>
+  rci_band_counts: <dict>
+  tags: <list>
+  remix_lineage:
+    diff_summary: <string>
+    ancestry_links: <list>
+  dignity_layer:
+    narratives: <list>
+    symbolic_overlays: <list>
+    cultural_notes: <string>
+  validation:
+    checksum: <sha256>
+    signature: <pgp|ecdsa>
+    tests: <list>

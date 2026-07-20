@@ -1,0 +1,6 @@
+Frequency,ObserverAngle,Glyph,PhaseEcho,RemixTrigger
+144,270,glyph_protein_echo_02.svg,Remix lineage pulse detected,Yes
+72,90,bridge_glyph_overlay_01.svg,Residual harmonic,No
+33,180,validator_space_overlay_01.svg,Badge trigger echo,Yes
+108,45,badge_chamber_overlay_01.svg,Initiation pulse,Yes
+21,315,glyph_protein_echo_01.svg,Shadow glyph detected,No

@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+title: "Dimensional Substrate Regime Scanning Protocol (dsrsp/0.1)"
+message: "If you use this work, please cite it using the metadata below."
+type: software
+version: "0.1.0"
+doi: "10.5281/zenodo.18331997"
+authors:
+  - family-names: "Loswin"
+    given-names: "Nawder"
+    affiliation: "TriadicFrameworks"
+    orcid: "https://orcid.org/0009-0002-2282-5460"
+repository-code: "https://github.com/umaywant2/TriadicFrameworks"
+abstract: >
+  The Dimensional Substrate Regime Scanning Protocol (dsrsp/0.1) defines a minimal,
+  substrate‑agnostic wire format for adding regime awareness to any sensor stack.
+  It integrates directly with the Resonance Substrate Model (RSM) and Validation‑Space‑Time
+  (vST) engines, enabling modern instruments—ROVs, drones, planetary probes, and
+  hypothetical starship scanners—to classify structural, sensory, and environmental
+  regimes using a unified grammar. The protocol includes optional intelligent‑life
+  probability (ILP) analysis and provides a clean alignment layer for RSM and vST
+  engines of varying complexity.
+keywords:
+  - dsrsp
+  - regime scanning
+  - substrate protocols
+  - vST
+  - RSM
+  - structural regimes
+  - sensor fusion
+  - intelligent life probability
+license: "MIT"

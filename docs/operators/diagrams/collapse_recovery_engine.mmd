@@ -1,0 +1,23 @@
+flowchart LR
+  subgraph Collapse[Collapse Input]
+    AMP[Amplitude]
+    CURV[Curvature]
+    TORS[Torsion]
+  end
+
+  subgraph CRE[Collapse→Recovery Engine]
+    CAV[CAV — Collapse Absorption]
+    CSV[CSV — Continuity Stabilization]
+    REV[REV — Recovery Emission]
+  end
+
+  subgraph Output[Recovery Output]
+    REC[Recovery + Restored Continuity]
+  end
+
+  AMP --> CAV
+  CURV --> CAV
+  TORS --> CAV
+
+  CAV --> CSV --> REV --> REC
+

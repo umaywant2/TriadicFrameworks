@@ -1,0 +1,61 @@
+/* -----------------------------------------------------------
+   Electromagnetism — Module‑Specific Overrides
+   Layered on top of theory.css
+   Identity: field‑coherence, operator symmetry, geometry‑compatibility
+----------------------------------------------------------- */
+
+body.tf-module--electromagnetism {
+  /* smooth field‑gradient curvature */
+  background: radial-gradient(
+    circle at 28% 22%,
+    #020617 0,
+    #030712 48%,
+    #000000 100%
+  );
+  position: relative;
+}
+
+/* structured interference noise (field coherence) */
+body.tf-module--electromagnetism::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.045;
+  background: repeating-linear-gradient(
+    135deg,
+    rgba(255,255,255,0.03) 0px,
+    rgba(255,255,255,0.03) 1px,
+    transparent 1px,
+    transparent 4px
+  );
+}
+
+/* accent color: field‑line blue */
+:root {
+  --accent: #3b82f6;
+  --accent-soft: rgba(59,130,246,0.18);
+}
+
+/* hero title color */
+.tf-hero__content h1 {
+  color: var(--accent);
+}
+
+/* symmetric operator rings (no chaos rotation) */
+.hero-glyph::after,
+.brand-mark::after {
+  transform: rotate(0deg);
+}
+
+/* section headers use EM accent */
+.tf-section h2 {
+  color: var(--accent);
+}
+
+/* optional: emphasize operator lists */
+.tf-list code {
+  background: rgba(59,130,246,0.12);
+  border: 1px solid rgba(59,130,246,0.25);
+  color: #dbeafe;
+}

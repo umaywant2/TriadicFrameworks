@@ -1,0 +1,75 @@
+```
+
+===========================================================
+        INVERTED ECONOMICS ⭐ STRUCTURAL WORKFLOW
+===========================================================
+
+                    ┌──────────────────────┐
+                    │   1. SELECT INPUT    │
+                    │  (Cycle / Budget /   │
+                    │        Event)        │
+                    └──────────┬───────────┘
+                               │
+                               ▼
+                    ┌──────────────────────┐
+                    │  2. DEFINE BOUNDARY  │
+                    │   Time window, data  │
+                    │   sources, domains   │
+                    └──────────┬───────────┘
+                               │
+                               ▼
+                    ┌──────────────────────┐
+                    │  3. REGIME MAPPING   │
+                    │  R1 / R2 / R3 check  │
+                    │  Missing regimes     │
+                    │  Overweighted zones  │
+                    └──────────┬───────────┘
+                               │
+                               ▼
+                    ┌──────────────────────┐
+                    │  4. DRIFT ANALYSIS   │
+                    │  Origin, propagation │
+                    │  amplifiers, signals │
+                    └──────────┬───────────┘
+                               │
+                               ▼
+                    ┌──────────────────────┐
+                    │   5. PARADOX ZONES   │
+                    │  Declared vs actual  │
+                    │  Incentive mismatch  │
+                    │  Substrate conflict  │
+                    └──────────┬───────────┘
+                               │
+                               ▼
+                    ┌──────────────────────┐
+                    │ 6. BRUTE-FORCE CHECK │
+                    │  Patches, emergency  │
+                    │  actions, hidden     │
+                    │  structural costs    │
+                    └──────────┬───────────┘
+                               │
+                               ▼
+                    ┌──────────────────────┐
+                    │   7. COHERENCE MAP   │
+                    │  Aligned / drifting  │
+                    │  paradox / collapse  │
+                    └──────────┬───────────┘
+                               │
+                               ▼
+                    ┌──────────────────────┐
+                    │ 8. STRUCTURAL LESSON │
+                    │  Drift prevention    │
+                    │  Regime rebalance    │
+                    │  Substrate alignment │
+                    └──────────┬───────────┘
+                               │
+                               ▼
+                    ┌──────────────────────┐
+                    │ 9. FORWARD FEEDBACK  │
+                    │  Insights feed into  │
+                    │  planning, modeling, │
+                    │  and future cycles   │
+                    └──────────────────────┘
+
+===========================================================
+```

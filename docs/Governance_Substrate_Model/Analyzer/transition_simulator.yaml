@@ -1,0 +1,123 @@
+transition_simulator:
+
+  description: >
+    Defines the simulation logic for evaluating and executing transitions
+    between regime modes and phase states. The simulator uses the transition
+    graph, drift engine, invariants, physics forces, and basin topology to
+    determine valid, likely, and forced transitions at each step.
+
+  version: "1.0"
+
+  inputs:
+    structural_vector: [<C>, <M>, <O>, <A>, <T>]
+    drift:
+      vector: [<dC>, <dM>, <dO>, <dA>, <dT>]
+      magnitude: <number>
+      category: "<micro|meso|macro|regime_shift>"
+    invariants:
+      aligned: [...]
+      tension: [...]
+      violated: [...]
+      tension_score: <number>
+    physics_forces:
+      - axis_pair: "<C↔O | M↔A | O↔T>"
+        magnitude: <number>
+        direction: "<positive|negative>"
+    basin:
+      nearest_basin: "<CPL|CPF|CTR|PCL|HCL>"
+      basin_distance: <number>
+      boundary_proximity: <number>
+      stability_score: <number>
+    regime_mode: "<mode>"
+    phase_state: "<phase>"
+    absorptive_strength: <0–1>
+    structural_debt: <number>
+
+  evaluation_pipeline:
+    - "Evaluate invariant tension and violations"
+    - "Evaluate drift magnitude and category"
+    - "Evaluate physics destabilization"
+    - "Evaluate basin boundary proximity"
+    - "Evaluate absorptive strength"
+    - "Check transition_graph for valid transitions"
+    - "Classify transitions as valid, likely, or forced"
+    - "Execute transition or remain in current state"
+    - "Emit transition event"
+
+  transition_classification:
+
+    valid_transition:
+      description: "Conditions match a transition_graph rule exactly."
+      criteria:
+        - "All required conditions satisfied"
+        - "No contradictions with phase discipline"
+
+    likely_transition:
+      description: "Conditions partially satisfied; drift or tension trending toward threshold."
+      criteria:
+        - "At least 50% of conditions satisfied"
+        - "Directional trend supports transition"
+
+    forced_transition:
+      description: "High-energy structural pressure overrides normal phase discipline."
+      criteria:
+        - "drift_category == regime_shift"
+        - "absorptive_strength < 0.3"
+        - "invariant_violations >= 2"
+        - "stability_score < 0.4"
+
+  transition_execution:
+
+    regime_mode_update:
+      rule: >
+        If forced_transition: jump to transition or fragmentation.
+        Else if valid_transition: move to target mode.
+        Else if likely_transition: remain but mark as 'approaching_transition'.
+
+    phase_state_update:
+      rule: >
+        Follow monotonic phase progression unless forced_transition.
+        Allowed skip only when drift_category == regime_shift.
+
+    structural_debt_update:
+      rules:
+        - "Increase if exit conditions ignored"
+        - "Decrease during reconstruction"
+        - "Reset when stable_phase reached with coherence_score > 70"
+
+  output_schema:
+    transition_event:
+      event_id: "<unique_id>"
+      previous_mode: "<mode>"
+      new_mode: "<mode>"
+      previous_phase: "<phase>"
+      new_phase: "<phase>"
+      classification: "<valid|likely|forced>"
+      drivers:
+        - "drift"
+        - "invariants"
+        - "physics"
+        - "basin"
+        - "absorptive_failure"
+      metadata:
+        timestamp: "<YYYY-MM-DD>"
+        notes: "<optional>"
+
+  integration:
+    transition_graph: "transition_graph.yaml"
+    drift_engine: "drift_detection.yaml"
+    invariants: "behavioral_invariants.yaml"
+    physics_engine: "governance_physics.yaml"
+    basin_classifier: "equilibrium_basins.yaml"
+    regime_modes: "regime_modes.yaml"
+    phase_discipline: "phase_discipline.yaml"
+    observer_layer:
+      history: "observer_history_schema.yaml"
+      now: "observer_now_schema.yaml"
+      future: "observer_future_schema.yaml"
+    simulation_engine: "simulation_engine.md"
+
+  metadata:
+    maintainer: "TriadicFrameworks"
+    last_updated: "2026-03-04"
+    notes: "Executes structural transitions using GSM transition graph and Analyzer components."

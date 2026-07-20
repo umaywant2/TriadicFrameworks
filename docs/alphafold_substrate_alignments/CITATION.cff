@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+title: "AlphaFold Substrate Alignments: A Resonance Substrate Model Framework"
+message: "If you use this artifact, please cite it using the metadata below."
+type: software
+authors:
+  - family-names: Loswin
+    given-names: Nawder
+    affiliation: TriadicFrameworks
+version: "1.0.0"
+date-released: 2026-01-20
+doi: 10.5281/zenodo.18320863
+url: https://github.com/umaywant2/TriadicFrameworks
+abstract: >
+  A substrate-level framework for interpreting AlphaFold-class inference systems,
+  including dimensional cores, alignment principles, folding regimes, validation
+  layers, and drift detection. Designed for reproducibility and cross-model
+  comparison within the Resonance Substrate Model.
+keywords:
+  - Resonance Substrate Model
+  - AlphaFold
+  - Dimensional Cores
+  - Inference Alignment
+  - vST Validation
+  - Drift Detection
+license: MIT

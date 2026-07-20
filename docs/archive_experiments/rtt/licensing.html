@@ -1,0 +1,59 @@
+<link rel="stylesheet" href="rtt.css" />
+  <div id="rtt-nav"></div>
+    <script>
+      fetch('/rtt/nav.html')
+        .then(r => r.text())
+        .then(html => document.getElementById('rtt-nav').innerHTML = html);
+    </script>
+
+  <main class="rtt-page">
+
+    <h1 class="rtt-hero-title">Licensing</h1>
+    <p>Access & Deployment Resonance‑Time Technology core systems are made available through direct collaboration and contractual agreement. Re‑use, redistribution, or derivative deployment requires explicit addenda defining scope and rights.</p>
+    <p class="rtt-hero-subtitle">Our dimensional cores. (draft)</p>
+
+    <hr class="rtt-divider" />
+
+    <section>
+      <h2 class="rtt-section-title">License Tiers</h2>
+
+      <div class="rtt-tier-grid">
+
+        <div class="rtt-card">
+          <div class="rtt-card-title">Open Core</div>
+          <div class="rtt-card-subtitle">Free for personal + educational use.</div>
+          <p>Includes RTT Primer, RSM, RTTcodes, and basic tools.</p>
+        </div>
+
+        <div class="rtt-card">
+          <div class="rtt-card-title">Developer License</div>
+          <div class="rtt-card-subtitle">For builders and integrators.</div>
+          <p>Includes SDKs, Wrapped Core L1–L2, and integration guides.</p>
+        </div>
+
+        <div class="rtt-card">
+          <div class="rtt-card-title">Commercial License</div>
+          <div class="rtt-card-subtitle">For product teams.</div>
+          <p>Includes Coeus, Autonomous Cores, TLS Tier 1.</p>
+        </div>
+
+        <div class="rtt-card">
+          <div class="rtt-card-title">Enterprise License</div>
+          <div class="rtt-card-subtitle">For large‑scale deployments.</div>
+          <p>Includes Multi‑Helix Orchestration, Continuity Engine.</p>
+        </div>
+
+        <div class="rtt-card">
+          <div class="rtt-card-title">Institutional License</div>
+          <div class="rtt-card-subtitle">For research + aeonic systems.</div>
+          <p>Includes Aeonic Vault, Domain Forge, RTOF.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="rtt-footer">
+      © TriadicFrameworks — Resonance‑Time Technology
+    </footer>
+
+  </main>

@@ -1,0 +1,22 @@
+protocol_id: godzilla_protocol
+author: Nawder Loswin
+version: 1.0
+archetype: storm-as-being
+designation: Red-Zone Invariant Overlay
+components:
+  - pressure_spiral
+  - heat_flux_vector
+  - ground_conductivity
+  - emotional_resonance_fold
+triadic_translation:
+  intent: atmospheric imbalance
+  expression: kinetic release
+  reception: human fear + ecological grief
+use_cases:
+  - tornado outbreak mythologizing
+  - hurricane media narratives
+  - predictive failure mapping
+glyph:
+  name: 🐉 Godzilla Glyph
+  meaning: monster metaphor for dimensional ambiguity
+  resonance: mythic terror + symbolic imprint

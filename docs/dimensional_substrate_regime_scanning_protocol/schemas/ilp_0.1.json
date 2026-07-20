@@ -1,0 +1,12 @@
+{
+  "title": "ilp/0.1 intelligent life probability",
+  "type": "object",
+  "properties": {
+    "ilp_probability": { "type": "number" },
+    "set": { "type": "number" },
+    "snr": { "type": "number" },
+    "ser": { "type": "number" },
+    "fff": { "type": "number" }
+  },
+  "required": ["ilp_probability"]
+}

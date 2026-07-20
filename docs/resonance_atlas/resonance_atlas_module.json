@@ -1,0 +1,73 @@
+{
+  "module": "Resonance Atlas",
+  "version": "1.0",
+  "category": "rtt-core",
+  "summary": "Canonical RTT resonance registry — phases, corridors, glyphs, schema, starter dataset, validation operators, 2 mapping examples (Great Unconformity, Meta Context), 1 narrative (Sunbeam), 2 case studies (Stuxnet, Radiation), 1 question set (Core RTT), and 5 technical files (glyph assignment logic, harvesting script outline, NIST ingestion format, phase mapping rules, loophole overlay).",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "RTT_Mapping_Example_The_Great_Unconformity.md",
+      "role": "example",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "Meta_Context_Example.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Sunbeam_Through_a_Barn_Loft.md",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "RTT_Atlas_Case_Study_Stuxnet.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "RTT_Atlas_Case_Study_Radiation.md",
+      "role": "example",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "The_Core_RTT_Question_Set.md",
+      "role": "diagnostic",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "glyph‑assignment_logic.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "harvesting_script_outline.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "nist_ingestion_format.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "phase_mapping_rules.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "loophole_overlay.md",
+      "role": "map",
+      "analyzer_layer": "coherence"
+    }
+  ]
+}

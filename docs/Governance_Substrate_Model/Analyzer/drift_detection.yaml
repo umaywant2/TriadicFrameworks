@@ -1,0 +1,160 @@
+drift_detection:
+
+  description: >
+    Drift detection identifies structural movement within a governance system
+    across the five-axis vector [C, M, O, A, T]. Drift is not ideological or
+    normative; it is the measurable change in structural configuration over
+    time, across statements, or between proposed and declared principles.
+    Drift magnitude, direction, and force composition are used to evaluate
+    coherence, basin stability, and transition likelihood.
+
+  version: "1.0"
+
+  drift_components:
+
+    vector_delta:
+      description: >
+        The difference between two structural vectors. This is the core
+        mathematical representation of drift.
+      formula: "delta = vector_current - vector_previous"
+      outputs:
+        - delta_vector
+        - delta_magnitude
+
+    physics_forces:
+      description: >
+        Cross-axis forces that amplify or dampen drift. Derived from the
+        governance_physics module.
+      forces:
+        - "centralization ↔ oversight"
+        - "method ↔ access"
+        - "oversight ↔ timing"
+      outputs:
+        - active_forces
+        - force_intensity
+        - compensatory_movements
+
+    invariant_tension:
+      description: >
+        Drift that results from or produces invariant misalignment. Invariant
+        tension increases drift magnitude and transition likelihood.
+      outputs:
+        - invariant_tension_score
+        - violated_invariants
+        - tension_axes
+
+    absorptive_capacity:
+      description: >
+        The ability of absorptive structures to buffer drift. Weak absorptive
+        capacity increases drift velocity and reduces stability.
+      outputs:
+        - absorptive_strength
+        - absorptive_failure_signals
+
+    basin_distance_change:
+      description: >
+        Drift measured in relation to equilibrium basins. Indicates whether the
+        system is approaching, departing, or crossing basin boundaries.
+      outputs:
+        - basin_distance_delta
+        - basin_movement_direction
+        - basin_stability_shift
+
+  drift_classification:
+
+    categories:
+      - id: "micro_drift"
+        description: "Small, low-impact movement within basin boundaries."
+        threshold: "delta_magnitude < 0.5"
+
+      - id: "meso_drift"
+        description: "Moderate movement that may affect stability."
+        threshold: "0.5 ≤ delta_magnitude < 1.5"
+
+      - id: "macro_drift"
+        description: "Large movement indicating structural tension."
+        threshold: "1.5 ≤ delta_magnitude < 3.0"
+
+      - id: "regime_shift_drift"
+        description: "Movement crossing regime boundaries or basin walls."
+        threshold: "delta_magnitude ≥ 3.0"
+
+  detection_pipeline:
+
+    - id: compute_delta
+      name: "Compute Vector Delta"
+      inputs:
+        - previous_vector
+        - current_vector
+      outputs:
+        - delta_vector
+        - delta_magnitude
+
+    - id: apply_physics
+      name: "Apply Cross-Axis Physics"
+      dependencies:
+        - governance_physics.yaml
+      outputs:
+        - active_forces
+        - force_intensity
+        - compensatory_movements
+
+    - id: evaluate_invariants
+      name: "Evaluate Invariant Tension"
+      dependencies:
+        - behavioral_invariants.yaml
+      outputs:
+        - invariant_tension_score
+        - violated_invariants
+
+    - id: evaluate_absorptive_capacity
+      name: "Assess Absorptive Structures"
+      dependencies:
+        - absorptive_structures.yaml
+      outputs:
+        - absorptive_strength
+        - absorptive_failure_signals
+
+    - id: evaluate_basin_movement
+      name: "Evaluate Basin Distance Change"
+      dependencies:
+        - equilibrium_basins.yaml
+      outputs:
+        - basin_distance_delta
+        - basin_movement_direction
+        - basin_stability_shift
+
+    - id: classify_drift
+      name: "Classify Drift Type"
+      outputs:
+        - drift_category
+
+    - id: generate_drift_event
+      name: "Generate Drift Event"
+      dependencies:
+        - coherence_event_schema.yaml
+      outputs:
+        - drift_event
+
+  output_schema:
+    drift_vector: "Delta across [C, M, O, A, T]"
+    drift_magnitude: "Scalar magnitude of structural movement"
+    active_forces: "Cross-axis forces influencing drift"
+    invariant_tension_score: "0–10 measure of invariant strain"
+    absorptive_strength: "0–10 measure of buffering capacity"
+    basin_movement_direction: "approaching | departing | crossing"
+    drift_category: "micro | meso | macro | regime_shift"
+    drift_event: "Structured event for observer and dashboards"
+
+  integration_with_analyzer:
+    vectorizer: "Provides previous and current vectors"
+    physics_engine: "Supplies cross-axis force calculations"
+    invariant_checker: "Supplies invariant tension signals"
+    basin_classifier: "Supplies basin distance and stability"
+    coherence_scoring: "Uses drift magnitude and tension"
+    observer_layer: "Attaches history/now/future context"
+
+  metadata:
+    maintainer: "TriadicFrameworks"
+    last_updated: "2026-03-04"
+    notes: "Defines drift detection logic for GSM-based structural analysis."

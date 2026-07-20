@@ -1,0 +1,61 @@
+## 📘 HR → Governance Substrate Diagram (SVG)
+`HR_Governance_Substrate_diagram.svg`
+
+```
+svg
+<svg width="1080" height="600" viewBox="0 0 1080 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#000000"/>
+      <stop offset="50%" stop-color="#4b0082"/>
+      <stop offset="100%" stop-color="#8a2be2"/>
+    </linearGradient>
+    <style>
+      .node { fill: none; stroke: #e0d4ff; stroke-width: 1.6; }
+      .label { fill: #f5f0ff; font-family: system-ui, sans-serif; font-size: 16px; text-anchor: middle; }
+      .sub { fill: #f5f0ff; opacity: 0.75; font-size: 12px; text-anchor: middle; }
+      .link { stroke: #d8cfff; stroke-width: 1.2; fill: none; }
+      .drift { stroke: #ff9fbf; stroke-width: 1.2; stroke-dasharray: 4 4; fill: none; opacity: 0.85; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="600" fill="url(#bg)" rx="24"/>
+
+  <!-- Leadership Node -->
+  <circle class="node" cx="540" cy="110" r="55"/>
+  <text class="label" x="540" y="105">LEADERSHIP</text>
+  <text class="sub" x="540" y="128">GOVERNANCE INPUT</text>
+
+  <!-- HR Node -->
+  <circle class="node" cx="540" cy="260" r="50"/>
+  <text class="label" x="540" y="255">HR</text>
+  <text class="sub" x="540" y="278">INTERFACE LAYER</text>
+
+  <!-- Management Node -->
+  <circle class="node" cx="320" cy="420" r="50"/>
+  <text class="label" x="320" y="415">MANAGEMENT</text>
+  <text class="sub" x="320" y="438">GOVERNANCE OUTPUT</text>
+
+  <!-- Staff Node -->
+  <circle class="node" cx="760" cy="420" r="50"/>
+  <text class="label" x="760" y="415">STAFF</text>
+  <text class="sub" x="760" y="438">REALITY SIGNALS</text>
+
+  <!-- AI Observer -->
+  <circle class="node" cx="540" cy="360" r="35"/>
+  <text class="label" x="540" y="355">AI</text>
+  <text class="sub" x="540" y="375">SYNTHESIS</text>
+
+  <!-- Coherence Links -->
+  <line class="link" x1="540" y1="165" x2="540" y2="210"/>
+  <line class="link" x1="540" y1="310" x2="320" y2="420"/>
+  <line class="link" x1="540" y1="310" x2="760" y2="420"/>
+  <line class="link" x1="320" y1="420" x2="760" y2="420"/>
+
+  <!-- Drift Paths -->
+  <path class="drift" d="M540 110 C 580 200, 650 300, 760 420"/>
+  <path class="drift" d="M540 110 C 500 200, 430 300, 320 420"/>
+
+</svg>
+```

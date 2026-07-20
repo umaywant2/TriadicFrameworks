@@ -1,0 +1,26 @@
+{
+  "title": "Inverted Star Ontology: A vST-Aligned Regime Inversion Model",
+  "upload_type": "publication",
+  "publication_type": "article",
+  "description": "The Inverted Star Ontology (ISO) introduces a structural interpretation of compact astrophysical objects using Resonance-Transition Theory (RTT) and Validation-Space-Time (vST). Instead of treating black holes as singularities or endpoints, ISO models them as regime-inverted stars: coherent, lattice-phase structures formed through a resonance-to-lattice transition. This minimal artifact defines the inversion mechanism, the lattice-phase regime, the vST boundary, and the associated Structural Life-Regime Profile (SLRP).",
+  "doi": "10.5281/zenodo.18334261",
+  "creators": [
+    {
+      "name": "Loswin, Nawder",
+      "affiliation": "TriadicFrameworks Research Initiative",
+      "orcid": "0009-0002-2282-5460"
+    }
+  ],
+  "keywords": [
+    "regime inversion",
+    "RTT",
+    "vST",
+    "lattice phase",
+    "inverted stars",
+    "structural life-regimes",
+    "TriadicFrameworks"
+  ],
+  "license": "CC-BY-4.0",
+  "version": "1.0.0",
+  "language": "en"
+}

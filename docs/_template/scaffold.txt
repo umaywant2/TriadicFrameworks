@@ -1,0 +1,4 @@
+MMR v1.1 initialized for {{PROJECT_NAME}}.
+Glyphs seeded from /assets/glyphs/
+Badge logic scaffolded in /badges/
+Contributor rituals echoed in /honor_roll/

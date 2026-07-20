@@ -1,0 +1,82 @@
+absorptive_structures:
+
+  description: >
+    Absorptive structures are the stabilizing mechanisms that allow a governance
+    system to absorb shocks, correct drift, and maintain coherence without
+    undergoing a regime‑mode transition. They operate beneath ideology and
+    policy, functioning as structural buffers that preserve system integrity.
+
+  categories:
+
+    institutional_buffers:
+      description: "Formal structures that absorb stress and prevent rapid drift."
+      examples:
+        - name: "Independent oversight bodies"
+          effect: "Stabilize timing and access; reduce volatility in oversight axis."
+        - name: "Judicial review mechanisms"
+          effect: "Constrain extreme centralization or method drift."
+        - name: "Constitutional amendment thresholds"
+          effect: "Slow structural transitions; enforce phase discipline."
+        - name: "Federal or devolved arrangements"
+          effect: "Distribute authority; reduce centralization shocks."
+
+    procedural_dampers:
+      description: "Rules and routines that slow or smooth structural movement."
+      examples:
+        - name: "Fixed or semi-fixed election cycles"
+          effect: "Reduce timing volatility; stabilize competitive basins."
+        - name: "Runoff or majority thresholds"
+          effect: "Absorb fragmentation; stabilize method axis."
+        - name: "Party nomination procedures"
+          effect: "Regulate access; prevent abrupt access drift."
+        - name: "Administrative cadence"
+          effect: "Stabilizes timing in hierarchical systems."
+
+    cultural_reservoirs:
+      description: "Shared norms and expectations that reinforce structural patterns."
+      examples:
+        - name: "Electoral legitimacy norms"
+          effect: "Stabilize oversight and method axes."
+        - name: "Peaceful transfer expectations"
+          effect: "Reduce drift during transitions."
+        - name: "Civic participation traditions"
+          effect: "Anchor broad access configurations."
+        - name: "Coalition-building culture"
+          effect: "Stabilize proportional-coalition basins."
+
+    redundancy_layers:
+      description: "Parallel or overlapping structures that provide fallback stability."
+      examples:
+        - name: "Dual oversight (independent + administrative)"
+          effect: "Buffers oversight drift; increases resilience."
+        - name: "Mixed electoral systems (MMP, hybrid)"
+          effect: "Absorb shocks on method axis; maintain proportionality."
+        - name: "Multi-level governance"
+          effect: "Distributes centralization load across layers."
+        - name: "Bicameralism"
+          effect: "Adds structural friction; slows rapid drift."
+
+  drift_interactions:
+
+    stabilizing_effects:
+      - "Absorptive structures reduce drift magnitude by dampening cross-axis forces."
+      - "They increase basin stability by reinforcing equilibrium conditions."
+      - "They slow or prevent incoherent transitions between basins."
+      - "They provide structural inertia that preserves regime-mode continuity."
+
+    failure_modes:
+      - "If absorptive structures weaken, drift accelerates across linked axes."
+      - "Loss of buffers can trigger regime-mode transitions."
+      - "Over-centralization can collapse redundancy layers."
+      - "Weak oversight can destabilize timing and access simultaneously."
+
+  integration_with_analyzer:
+    vector_adjustments: "Absorptive strength modifies drift vectors before basin evaluation."
+    coherence_scoring: "Systems with strong absorptive structures receive higher stability scores."
+    transition_detection: "Weakening absorptive structures increases transition likelihood."
+    narrative_output: "Analyzer includes absorptive structure notes in its explanations."
+
+  metadata:
+    version: "1.0"
+    generated: "2026-03-04"
+    notes: "Defines structural buffers that stabilize governance systems within the GSM."

@@ -1,0 +1,96 @@
+# vST Micro-Agent — Interpreter Pseudocode (v2.0.0)
+
+# ---------------------------------------------------------
+# 1. Load Inputs
+# ---------------------------------------------------------
+
+signal = load(signal_file)
+query  = load(query_envelope)
+
+stream = signal[query.input_binding.stream_key]
+
+# ---------------------------------------------------------
+# 2. Normalize Stream
+# ---------------------------------------------------------
+
+norm_stream = normalize(stream)
+
+# ---------------------------------------------------------
+# 3. Initialize Structural Operators
+# ---------------------------------------------------------
+
+ops = query.select
+
+patterns     = []
+periodicity  = []
+symmetry     = []
+
+# ---------------------------------------------------------
+# 4. Pattern Extraction
+# ---------------------------------------------------------
+
+if "pattern" in ops:
+    for window_size in candidate_window_sizes(norm_stream):
+        motifs = find_repeating_motifs(norm_stream, window_size)
+        motifs = filter_by_similarity(motifs, query.where.min_similarity)
+        motifs = filter_by_repetition(motifs, query.where.min_repetition)
+        patterns.extend(motifs)
+
+# ---------------------------------------------------------
+# 5. Periodicity Detection
+# ---------------------------------------------------------
+
+if "periodicity" in ops:
+    periodicity = detect_periodicity(norm_stream)
+
+# ---------------------------------------------------------
+# 6. Local Symmetry Detection
+# ---------------------------------------------------------
+
+if "local_symmetry" in ops:
+    symmetry = detect_local_symmetry(norm_stream)
+
+# ---------------------------------------------------------
+# 7. Consolidate Structural Results
+# ---------------------------------------------------------
+
+results = consolidate(patterns, periodicity, symmetry)
+
+# ---------------------------------------------------------
+# 8. Produce Interpretation Output
+# ---------------------------------------------------------
+
+output = {
+    "patterns": results.patterns,
+    "periodicity": results.periodicity,
+    "symmetry": results.symmetry,
+    "notes": "Structural interpretation only; no semantic inference."
+}
+
+save(output, "example_interpretation_output.md")
+
+---
+
+# vST Micro-Agent — Interpreter Pseudocode (v1.0.0)
+
+function interpret(raw_query):
+
+    envelope = {}
+
+    envelope.intent        = ask("What is the intended outcome?")
+    envelope.regime        = ask("What regime applies?")
+    envelope.scale         = ask("What scale is relevant?")
+    envelope.transition    = ask("What transition type is present?")
+    envelope.boundary      = ask("What boundary condition applies?")
+    envelope.invariants    = ask_list("What invariants must hold?")
+    envelope.modifiers     = ask_list("What modifiers influence the system?")
+    envelope.substrate     = ask("What substrate is involved?")
+    envelope.lineage       = ask_list("What upstream dependencies exist?")
+    envelope.failure_mode  = ask("What is the failure mode?")
+    envelope.time_regime   = ask("What is the time-regime?")
+    envelope.symmetry      = ask("What symmetry or asymmetry exists?")
+    envelope.raw_query     = raw_query
+
+    return envelope
+
+

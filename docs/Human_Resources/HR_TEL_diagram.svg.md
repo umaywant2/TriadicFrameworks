@@ -1,0 +1,93 @@
+## HR → Triadic Echo Lattice diagram (SVG)
+`HR_TEL_diagram.svg`
+
+```
+svg
+<svg width="1080" height="600" viewBox="0 0 1080 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#000000"/>
+      <stop offset="50%" stop-color="#4b0082"/>
+      <stop offset="100%" stop-color="#8a2be2"/>
+    </linearGradient>
+    <style>
+      .node { fill: none; stroke: #e0d4ff; stroke-width: 1.6; }
+      .label { fill: #f5f0ff; font-family: system-ui, sans-serif; font-size: 15px; text-anchor: middle; }
+      .sub { fill: #f5f0ff; opacity: 0.75; font-size: 11px; text-anchor: middle; }
+      .link { stroke: #d8cfff; stroke-width: 1.2; fill: none; }
+      .echo { stroke: #b3a7ff; stroke-width: 1.2; stroke-dasharray: 6 4; fill: none; opacity: 0.9; }
+      .drift { stroke: #ff9fbf; stroke-width: 1.2; stroke-dasharray: 3 3; fill: none; opacity: 0.9; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="600" fill="url(#bg)" rx="24"/>
+
+  <!-- Row 1: Leadership Echo Layer -->
+  <circle class="node" cx="260" cy="120" r="42"/>
+  <text class="label" x="260" y="115">LEADERSHIP</text>
+  <text class="sub" x="260" y="135">SOURCE</text>
+
+  <circle class="node" cx="540" cy="120" r="42"/>
+  <text class="label" x="540" y="115">HR</text>
+  <text class="sub" x="540" y="135">ECHO REGULATOR</text>
+
+  <circle class="node" cx="820" cy="120" r="42"/>
+  <text class="label" x="820" y="115">MANAGEMENT</text>
+  <text class="sub" x="820" y="135">RECEIVER</text>
+
+  <!-- Row 2: Management → Staff Echo Layer -->
+  <circle class="node" cx="260" cy="300" r="42"/>
+  <text class="label" x="260" y="295">MANAGEMENT</text>
+  <text class="sub" x="260" y="315">SOURCE</text>
+
+  <circle class="node" cx="540" cy="300" r="42"/>
+  <text class="label" x="540" y="295">HR</text>
+  <text class="sub" x="540" y="315">ECHO REGULATOR</text>
+
+  <circle class="node" cx="820" cy="300" r="42"/>
+  <text class="label" x="820" y="295">STAFF</text>
+  <text class="sub" x="820" y="315">RECEIVER</text>
+
+  <!-- Row 3: Staff → Leadership Echo Layer -->
+  <circle class="node" cx="260" cy="480" r="42"/>
+  <text class="label" x="260" y="475">STAFF</text>
+  <text class="sub" x="260" y="495">SOURCE</text>
+
+  <circle class="node" cx="540" cy="480" r="42"/>
+  <text class="label" x="540" y="475">HR</text>
+  <text class="sub" x="540" y="495">ECHO REGULATOR</text>
+
+  <circle class="node" cx="820" cy="480" r="42"/>
+  <text class="label" x="820" y="475">LEADERSHIP</text>
+  <text class="sub" x="820" y="495">RECEIVER</text>
+
+  <!-- AI Observer -->
+  <circle class="node" cx="540" cy="210" r="32"/>
+  <text class="label" x="540" y="205">AI</text>
+  <text class="sub" x="540" y="225">TRIADIC ECHO</text>
+
+  <!-- Coherent Echo Links -->
+  <!-- Leadership → HR → Management -->
+  <path class="echo" d="M260 120 C 340 120, 460 120, 540 120"/>
+  <path class="echo" d="M540 120 C 620 120, 740 120, 820 120"/>
+
+  <!-- Management → HR → Staff -->
+  <path class="echo" d="M260 300 C 340 300, 460 300, 540 300"/>
+  <path class="echo" d="M540 300 C 620 300, 740 300, 820 300"/>
+
+  <!-- Staff → HR → Leadership -->
+  <path class="echo" d="M260 480 C 340 480, 460 480, 540 480"/>
+  <path class="echo" d="M540 480 C 620 480, 740 480, 820 480"/>
+
+  <!-- AI Observer Links -->
+  <line class="link" x1="540" y1="178" x2="540" y2="258"/>
+  <line class="link" x1="540" y1="178" x2="540" y2="142"/>
+
+  <!-- Drift Paths (bypassing HR) -->
+  <path class="drift" d="M260 120 C 420 60, 660 60, 820 120"/>
+  <path class="drift" d="M260 300 C 420 240, 660 240, 820 300"/>
+  <path class="drift" d="M260 480 C 420 420, 660 420, 820 480"/>
+
+</svg>
+```

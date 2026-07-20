@@ -1,0 +1,32 @@
+# **docs/inverted_star_ontology/figures/iso_regime_diagram.png**
+
+### **Purpose**  
+This figure illustrates the **regime inversion pathway** from a radiant stellar regime to a lattice‑phase inverted stellar regime. It’s the conceptual backbone of the entire ontology.
+
+### **Recommended Structure**  
+A minimal, clean, three‑panel diagram:
+
+1. **Left Panel — Radiant Stellar Regime (RSR)**  
+   - outward flux arrows  
+   - resonance field lines  
+   - shallow curvature  
+   - labeled: *Full‑Resonance Outward‑Flux Regime*
+
+2. **Center Panel — Regime Inversion Transition**  
+   - resonance collapse arrows  
+   - curvature intensification  
+   - mode‑shift indicators  
+   - labeled: *Resonance Collapse → Lattice Emergence*
+
+3. **Right Panel — Inverted Stellar Regime (ISR)**  
+   - geometric lattice interior  
+   - inward curvature arrows  
+   - suppressed outward flux  
+   - labeled: *Lattice‑Phase Inverted Regime*
+
+### **Conceptual Notes**  
+- No singularities  
+- No discontinuities  
+- Pure regime continuity  
+- RTT + vST alignment  
+- Should visually echo your dsrsp/0.1 minimal style

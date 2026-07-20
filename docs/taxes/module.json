@@ -1,0 +1,142 @@
+{
+  "$schema": "https://triadicframeworks.org/schemas/module.schema.json",
+  "module": {
+    "name": "Taxes",
+    "category": "Fiscal Stack",
+    "summary": "Incentive‑regime substrate defining incentive baselines, depreciation envelopes, jurisdictional propagation, drift accumulation, and incentive half‑life (IHL).",
+    "purpose": "Model incentive structures across jurisdictions, track drift and half‑life behavior, and align incentives with continuity (RRR), cycles (IE), and governance coherence (GSM).",
+    "version": "2026-06",
+    "audience": "students · researchers · agentic systems"
+  },
+
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "operator",
+      "description": "Module overview: purpose, operators, regimes, examples, integration, maps."
+    },
+    {
+      "path": "operators.md",
+      "role": "engine",
+      "analyzer_layer": "operator",
+      "description": "Primary, drift, alignment, and cross‑module operators for incentive regimes."
+    },
+
+    /* --- Regimes --- */
+    {
+      "path": "regimes/us_federal.md",
+      "role": "profile",
+      "analyzer_layer": "regime",
+      "description": "U.S. federal incentive regime: baseline, depreciation, propagation, drift, half‑life."
+    },
+    {
+      "path": "regimes/us_state/texas.md",
+      "role": "profile",
+      "analyzer_layer": "regime",
+      "description": "Texas incentive regime."
+    },
+    {
+      "path": "regimes/us_state/california.md",
+      "role": "profile",
+      "analyzer_layer": "regime",
+      "description": "California incentive regime."
+    },
+    {
+      "path": "regimes/us_state/new_york.md",
+      "role": "profile",
+      "analyzer_layer": "regime",
+      "description": "New York incentive regime."
+    },
+    {
+      "path": "regimes/international/eu.md",
+      "role": "profile",
+      "analyzer_layer": "regime",
+      "description": "EU incentive regime."
+    },
+    {
+      "path": "regimes/international/apac.md",
+      "role": "profile",
+      "analyzer_layer": "regime",
+      "description": "APAC incentive regime."
+    },
+    {
+      "path": "regimes/international/latam.md",
+      "role": "profile",
+      "analyzer_layer": "regime",
+      "description": "LATAM incentive regime."
+    },
+    {
+      "path": "regimes/international/mena.md",
+      "role": "profile",
+      "analyzer_layer": "regime",
+      "description": "MENA incentive regime."
+    },
+    {
+      "path": "regimes/crypto.md",
+      "role": "profile",
+      "analyzer_layer": "regime",
+      "description": "Crypto‑asset incentive regime."
+    },
+
+    /* --- Examples --- */
+    {
+      "path": "examples/datacenter_tax_profile.md",
+      "role": "example",
+      "analyzer_layer": "cross-cutting",
+      "description": "Datacenter tax profile example: incentive propagation and drift behavior."
+    },
+    {
+      "path": "examples/cross_domain_tax_propagation.md",
+      "role": "example",
+      "analyzer_layer": "cross-cutting",
+      "description": "Cross‑domain incentive propagation example."
+    },
+    {
+      "path": "examples/rtt_taxes_applied_to_infrastructure.md",
+      "role": "example",
+      "analyzer_layer": "cross-cutting",
+      "description": "RTT Taxes applied to infrastructure incentives."
+    },
+
+    /* --- Integration --- */
+    {
+      "path": "integration/external_regime_integration.md",
+      "role": "integration",
+      "analyzer_layer": "cross-cutting",
+      "description": "Integration of external incentive regimes."
+    },
+    {
+      "path": "integration/taxes_ie_gsm_cross_module_map.md",
+      "role": "map",
+      "analyzer_layer": "cross-cutting",
+      "description": "Cross‑module alignment map: Taxes ↔ IE ↔ GSM."
+    },
+    {
+      "path": "integration/taxes_rrr_alignment.md",
+      "role": "map",
+      "analyzer_layer": "cross-cutting",
+      "description": "Alignment map: Taxes ↔ RRR continuity."
+    },
+
+    /* --- Maps --- */
+    {
+      "path": "maps/cross_domain_propagation_map.md",
+      "role": "map",
+      "analyzer_layer": "dimensional",
+      "description": "Cross‑domain incentive propagation map."
+    },
+    {
+      "path": "maps/temporal_resonance_map.md",
+      "role": "map",
+      "analyzer_layer": "dimensional",
+      "description": "Temporal resonance map for incentive half‑lives."
+    },
+    {
+      "path": "maps/incentive_regime_map.md",
+      "role": "map",
+      "analyzer_layer": "dimensional",
+      "description": "Structural map of incentive regimes."
+    }
+  ]
+}

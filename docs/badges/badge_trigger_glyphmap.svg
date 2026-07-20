@@ -1,0 +1,59 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .glyph { font: bold 24px serif; }
+    .theme { font: 14px sans-serif; fill: #333; }
+    .halo { stroke-width: 6; stroke-opacity: 0.5; }
+    .validated { stroke: #4CAF50; }
+    .partial { stroke: #FFC107; }
+    .unvalidated { stroke: #F44336; }
+  </style>
+
+  <!-- Glyphs with halos -->
+  <g transform="translate(100,60)">
+    <text x="0" y="0" class="glyph">🜁</text>
+    <circle cx="10" cy="-10" r="25" class="halo validated"/>
+    <text x="40" y="0" class="theme">Elemental & Spectrum</text>
+  </g>
+
+  <g transform="translate(100,110)">
+    <text x="0" y="0" class="glyph">🧠</text>
+    <circle cx="10" cy="-10" r="25" class="halo validated"/>
+    <text x="40" y="0" class="theme">Cognitive & Symbolic</text>
+  </g>
+
+  <g transform="translate(100,160)">
+    <text x="0" y="0" class="glyph">🎶</text>
+    <circle cx="10" cy="-10" r="25" class="halo validated"/>
+    <text x="40" y="0" class="theme">Music & Symbolic Extensions</text>
+  </g>
+
+  <g transform="translate(100,210)">
+    <text x="0" y="0" class="glyph">⚛️</text>
+    <circle cx="10" cy="-10" r="25" class="halo partial"/>
+    <text x="40" y="0" class="theme">Quantum & Particle Vision</text>
+  </g>
+
+  <g transform="translate(100,260)">
+    <text x="0" y="0" class="glyph">🪐</text>
+    <circle cx="10" cy="-10" r="25" class="halo partial"/>
+    <text x="40" y="0" class="theme">Planetary & Temporal Mapping</text>
+  </g>
+
+  <g transform="translate(100,310)">
+    <text x="0" y="0" class="glyph">🩺</text>
+    <circle cx="10" cy="-10" r="25" class="halo partial"/>
+    <text x="40" y="0" class="theme">Health & Ultrasound</text>
+  </g>
+
+  <g transform="translate(100,360)">
+    <text x="0" y="0" class="glyph">🔧</text>
+    <circle cx="10" cy="-10" r="25" class="halo partial"/>
+    <text x="40" y="0" class="theme">Engineering & Firmware</text>
+  </g>
+
+  <g transform="translate(100,410)">
+    <text x="0" y="0" class="glyph">⚡</text>
+    <circle cx="10" cy="-10" r="25" class="halo partial"/>
+    <text x="40" y="0" class="theme">Energy & Wireless Power</text>
+  </g>
+</svg>

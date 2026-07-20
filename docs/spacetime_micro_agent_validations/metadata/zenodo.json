@@ -1,0 +1,28 @@
+{
+  "title": "vST Micro-Agent: Spacetime Structural Query Wrapper",
+  "upload_type": "software",
+  "description": "Version 2.0.0 introduces a minimal, fully documented example of structural query detection using the vST Structural Query Language (vST-SQL). This release strengthens the micro-agent's role as a substrate-agnostic wrapper for analyzing unknown or heterogeneous signals from distributed sensor networks, communication channels, or archival datasets. The new example demonstrates how the micro-agent identifies repeatable, traceable, and transfer-addressable structural motifs within an unfamiliar input stream, without assuming semantic meaning or domain context. Documentation and metadata have been expanded to clarify the micro-agent’s purpose, interpreter logic, and applicability to unknown-signal environments.",
+  "doi": "10.5281/zenodo.18519110",
+  "creators": [
+    {
+      "name": "Loswin, Nawder",
+      "orcid": "0009-0002-2282-5460"
+    }
+  ],
+  "keywords": [
+    "vST",
+    "TriadicFrameworks",
+    "structural detection",
+    "substrate-agnostic analysis",
+    "micro-agent",
+    "query envelope",
+    "unknown-signal environments",
+    "structural query language",
+    "vST-SQL"
+  ],
+  "license": "MIT",
+  "version": "2.0.0",
+  "related_identifiers": [
+  ],
+  "notes": "Part of the TriadicFrameworks canon. Includes new minimal structural detection example for vST-SQL."
+}

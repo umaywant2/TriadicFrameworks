@@ -1,0 +1,13 @@
+id: experiment_002
+title: Overlay Comparison – AI Remix vs Glycine Baseline
+fold_reference: fold_001_glycine
+remix_reference: sim_foldit_ai_001
+glyph_overlay: glyph_protein_echo_01.svg
+pulse_equation: "P = sin(π * R)"
+baseline_score: 0.91
+remix_score: 0.95
+expected_result: >
+  Remix overlay should show increased pulse amplitude and tighter triadic ring alignment.
+  Glyph animation will reflect enhanced coherence across FFF dimensions.
+notes: >
+  This experiment validates AI-assisted fold remixes as resonance amplifiers.

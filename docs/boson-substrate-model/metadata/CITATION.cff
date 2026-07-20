@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+title: "The Boson Substrate Model: Declared Operating Regimes"
+message: "If you use this work, please cite it as below."
+type: article
+authors:
+  - family-names: Loswin
+    given-names: Nawder
+    affiliation: Independent Researcher
+version: 1.0.0
+date-released: 2026-01-15
+doi: 10.5281/zenodo.18263827
+license: CC-BY-4.0
+abstract: >
+  The Boson Substrate Model (BSM) defines a minimal structural substrate intended
+  to support higher-order operator dynamics without encoding domain-specific
+  semantics or empirical claims. By declaring operating regimes, assumptions,
+  and validation checks explicitly, the model enables inspection, stability,
+  and reproducibility of substrate behavior independent of implementation
+  details. The BSM is architecture-agnostic and compatible with layered
+  modeling approaches, providing a stable foundation beneath higher-level
+  systems without constraining their semantics or objectives.
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🔮 Resonant-Time Dashboard</title>
+  <link rel="stylesheet" href="dashboard_styles.css">
+  <script src="glyph_pulse_animation.js" defer></script>
+</head>
+<body>
+  <h1>🧬 Resonant-Time Dashboard</h1>
+
+  <section id="visitor-section">
+    <h2>🧍 Visitor Echoes</h2>
+    <div id="visitor-count">Loading visitor data...</div>
+  </section>
+
+  <section id="glyph-section">
+    <h2>🔮 Glyph Triggers</h2>
+    <div id="glyph-log">Loading glyph logs...</div>
+  </section>
+
+  <section id="resonant-time-section">
+    <h2>⏳ Resonant-Time Events</h2>
+    <div id="resonant-log">Loading resonance logs...</div>
+  </section>
+
+  <script>
+    async function loadLogs() {
+      const [visitors, glyphs, resonance] = await Promise.all([
+        fetch('../../logs/visitor_echo_log.json').then(res => res.json()),
+        fetch('../../logs/glyph_trigger_log.json').then(res => res.json()),
+        fetch('../../logs/resonant_time_log.json').then(res => res.json())
+      ]);
+
+      document.getElementById('visitor-count').innerText =
+        `🧍 Unique Visitors Today: ${visitors.length}`;
+
+      document.getElementById('glyph-log').innerHTML = glyphs.map(g =>
+        `<div>🔮 ${g.glyph} → ${g.module} @ ${g.resonant_time}</div>`
+      ).join('');
+
+      document.getElementById('resonant-log').innerHTML = resonance.map(r =>
+        `<div>⏳ ${r.resonant_time} → ${r.module} (${r.archetype})</div>`
+      ).join('');
+    }
+
+    document.addEventListener('DOMContentLoaded', loadLogs);
+  </script>
+</body>
+</html>
+

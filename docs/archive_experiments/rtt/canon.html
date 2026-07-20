@@ -1,0 +1,69 @@
+  <link rel="stylesheet" href="rtt.css" />
+
+<body>
+  <header class="rtt-header">
+    <div id="rtt-nav"></div>
+    <script>
+      fetch('/rtt/nav.html')
+        .then(r => r.text())
+        .then(html => document.getElementById('rtt-nav').innerHTML = html);
+    </script>
+
+  </header>
+
+  <main class="rtt-page">
+
+    <h1 class="rtt-hero-title">RTT Canon Library</h1>
+    <p class="rtt-hero-subtitle">Mythmatical, philosophical, and structural works of the RTT universe.</p>
+
+    <hr class="rtt-divider" />
+
+    <section>
+      <h2 class="rtt-section-title">Core Canon</h2>
+
+      <div class="rtt-tier-grid">
+        <div class="rtt-card">
+          <div class="rtt-card-title">Resonance Substrate Model (RSM)</div>
+          <div class="rtt-card-subtitle">The foundational substrate of RTT.</div>
+        </div>
+
+        <div class="rtt-card">
+          <div class="rtt-card-title">Turn Doctrine</div>
+          <div class="rtt-card-subtitle">The Ten Turns of dimensional progression.</div>
+        </div>
+
+        <div class="rtt-card">
+          <div class="rtt-card-title">Resonance Creation Myth</div>
+          <div class="rtt-card-subtitle">Mythmatical origin narrative.</div>
+        </div>
+
+        <div class="rtt-card">
+          <div class="rtt-card-title">Keeper Codex</div>
+          <div class="rtt-card-subtitle">Rites, roles, and responsibilities.</div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rtt-divider" />
+
+    <section>
+      <h2 class="rtt-section-title">Supplemental Works</h2>
+
+      <div class="rtt-tier-grid">
+        <div class="rtt-card">
+          <div class="rtt-card-title">Mythmatical Essays</div>
+          <div class="rtt-card-subtitle">Explorations of resonance, identity, and form.</div>
+        </div>
+
+        <div class="rtt-card">
+          <div class="rtt-card-title">Historical Notes</div>
+          <div class="rtt-card-subtitle">Evolution of the RTT canon.</div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="rtt-footer">
+      © TriadicFrameworks — Resonance‑Time Technology
+    </footer>
+
+  </main>

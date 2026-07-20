@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+title: "Enterprise Structural Awareness"
+message: "If you use this work, please cite it as below."
+authors:
+  - family-names: Loswin
+    given-names: Nawder
+abstract: >
+  Enterprise Structural Awareness is a descriptive framework for introducing
+  regime context, validity assumptions, and boundary semantics into existing
+  enterprise IT systems using standards-based, non-intrusive approaches.
+  The work focuses on interpretability, coherence, and long-term operational
+  clarity without altering system behavior or control logic.
+keywords:
+  - enterprise systems
+  - structural awareness
+  - regime modeling
+  - configuration management
+  - operational clarity
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2026-01-15
+doi: 10.5281/zenodo.18265872
+repository-code: https://github.com/umaywant2/TriadicFrameworks

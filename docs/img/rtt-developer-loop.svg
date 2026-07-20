@@ -1,0 +1,48 @@
+<svg width="720" height="260" viewBox="0 0 720 260" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .box { fill:#1e1e2f; stroke:#8a7fff; stroke-width:2; rx:8; ry:8; }
+    .label { fill:#ffffff; font-family:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size:14px; }
+    .title { fill:#ffd86b; font-weight:bold; font-size:16px; }
+    .arrow { stroke:#ffffff; stroke-width:2; marker-end:url(#arrowhead); }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ffffff" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="360" y="30" text-anchor="middle" class="title">
+    RTT Developer Loop · RTT-Inside
+  </text>
+
+  <!-- Game / Engine box -->
+  <rect x="40" y="80" width="180" height="120" class="box" />
+  <text x="130" y="110" text-anchor="middle" class="label">Game / Engine</text>
+  <text x="130" y="135" text-anchor="middle" class="label">Capture State</text>
+  <text x="130" y="155" text-anchor="middle" class="label">Build RTTcode Packet</text>
+  <text x="130" y="175" text-anchor="middle" class="label">Apply RTT Response</text>
+
+  <!-- RTT Core box -->
+  <rect x="270" y="80" width="180" height="120" class="box" />
+  <text x="360" y="110" text-anchor="middle" class="label">RTT Core</text>
+  <text x="360" y="135" text-anchor="middle" class="label">Resonance-Time</text>
+  <text x="360" y="155" text-anchor="middle" class="label">State Transition Oracle</text>
+
+  <!-- World / Simulation box -->
+  <rect x="500" y="80" width="180" height="120" class="box" />
+  <text x="590" y="110" text-anchor="middle" class="label">World / Simulation</text>
+  <text x="590" y="135" text-anchor="middle" class="label">Entities · Fields</text>
+  <text x="590" y="155" text-anchor="middle" class="label">Resonance Fields</text>
+
+  <!-- Arrows -->
+  <line x1="220" y1="140" x2="270" y2="140" class="arrow" />
+  <text x="245" y="130" text-anchor="middle" class="label">RTTcode</text>
+
+  <line x1="450" y1="140" x2="500" y2="140" class="arrow" />
+  <text x="475" y="130" text-anchor="middle" class="label">Updated State</text>
+
+  <line x1="590" y1="200" x2="130" y2="200" class="arrow" />
+  <text x="360" y="215" text-anchor="middle" class="label">Next Frame / Tick</text>
+</svg>

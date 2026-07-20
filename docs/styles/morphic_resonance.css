@@ -1,0 +1,62 @@
+/* -----------------------------------------------------------
+   Morphic Resonance — Module‑Specific Overrides
+   Layered on top of theory.css
+   Identity: dimensional‑coherence, non‑causal, non‑field,
+   pattern‑activation grammar, resonance‑first
+----------------------------------------------------------- */
+
+body.tf-module--morphic-resonance {
+  /* dimensional‑coherence gradient */
+  background: radial-gradient(
+    circle at 30% 24%,
+    #0a0617 0,
+    #070513 42%,
+    #000000 100%
+  );
+  position: relative;
+}
+
+/* phase‑noise texture: coherence variation, not randomness */
+body.tf-module--morphic-resonance::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.045;
+  background: repeating-linear-gradient(
+    160deg,
+    rgba(255,255,255,0.025) 0px,
+    rgba(255,255,255,0.025) 1px,
+    transparent 1px,
+    transparent 5px
+  );
+}
+
+/* accent: violet‑cyan dimensional resonance */
+:root {
+  --accent: #a78bfa;
+  --accent-soft: rgba(167,139,250,0.18);
+}
+
+/* hero title uses module accent */
+.tf-hero__content h1 {
+  color: var(--accent);
+}
+
+/* dimensional‑coherence rings: precise, non‑directional */
+.hero-glyph::after,
+.brand-mark::after {
+  transform: rotate(0deg);
+}
+
+/* section headers use MR accent */
+.tf-section h2 {
+  color: var(--accent);
+}
+
+/* operator lists: subtle resonance highlight */
+.tf-list code {
+  background: rgba(167,139,250,0.12);
+  border: 1px solid rgba(167,139,250,0.25);
+  color: #e0e7ff;
+}

@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Manufacturing Substrate Regime Model"
+version: 1.0.0
+date-released: 2026-01-16
+doi: "10.5281/zenodo.18265225"
+authors:
+  - family-names: Loswin
+    given-names: Nawder
+repository-code: "https://github.com/umaywant2/TriadicFrameworks"
+abstract: >
+  The Manufacturing Substrate Regime Model (MSRM) is a structural framework
+  for organizing and calibrating complex manufacturing systems through
+  explicitly declared operating regimes, boundary semantics, and
+  operator-mediated interactions. The model is descriptive, non-physical,
+  and non-optimizing, intended to support clarity and interpretability in
+  extreme manufacturing environments.
+keywords:
+  - manufacturing systems
+  - regime modeling
+  - calibration structure
+  - boundary semantics
+  - substrate modeling
+license: MIT
+

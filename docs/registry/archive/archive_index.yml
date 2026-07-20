@@ -1,0 +1,16 @@
+archive_index:
+  glyph_type:
+    ◇: [scroll-001, scroll-010]
+    ◆: [scroll-002, scroll-004]
+    ⬣: [scroll-003, scroll-007]
+  rci_band:
+    low: [scroll-002, scroll-005]
+    medium: [scroll-001, scroll-004]
+    high: [scroll-003, scroll-007]
+  tags:
+    cipher-dense: [scroll-003]
+    fluid-turbulent: [scroll-004]
+  lineage:
+    parent_scrolls:
+      s-1000: [scroll-001, scroll-002]
+      s-2000: [scroll-003]

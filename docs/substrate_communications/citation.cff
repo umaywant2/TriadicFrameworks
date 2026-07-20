@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: "Substrate Communications"
+authors:
+  - family-names: "Loswin"
+    given-names: "Nawder"
+version: "1.0.0"
+date-released: "2026-01-29"
+doi: 10.5281/zenodo.18415488
+license: "CC-BY-4.0"

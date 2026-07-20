@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/schemas/primitives/charge_field.schema.json",
+  "title": "ChargeField",
+  "description": "A 2D scalar charge field defined on a uniform grid.",
+  "type": "object",
+  "properties": {
+    "grid": {
+      "$ref": "grid_coordinates.schema.json",
+      "description": "Grid spacing and origin metadata."
+    },
+    "nx": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Number of grid points in the x-direction."
+    },
+    "ny": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Number of grid points in the y-direction."
+    },
+    "values": {
+      "type": "array",
+      "description": "Row-major 2D array of charge values.",
+      "items": {
+        "type": "array",
+        "items": { "type": "number" }
+      }
+    }
+  },
+  "required": ["grid", "nx", "ny", "values"]
+}
+

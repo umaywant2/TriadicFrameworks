@@ -1,0 +1,278 @@
+{
+  "module": {
+    "name": "Facilities",
+    "path": "docs/facilities",
+    "canon_tag": "facilities-core",
+    "version": "2026.1",
+    "layer": "Applied Domain Models",
+    "status": "Active, Canonical",
+    "purpose": "Defines the RTT Facilities domain — physical, operational, and communicative infrastructure governed across asset classes, lifecycle phases, audiences, and capital-timed modernization cycles.",
+    "parent": "docs-hub",
+    "url": "https://www.triadicframeworks.org/facilities"
+  },
+  "session_context": {
+    "canon": "active (facilities-core)",
+    "modules_linked": [
+      "facilities-electrical",
+      "facilities-water",
+      "facilities-wastewater",
+      "facilities-transportation",
+      "facilities-communications",
+      "facilities-public-buildings",
+      "facilities-governance",
+      "facilities-lifecycle",
+      "facilities-ageri",
+      "facilities-scoring",
+      "facilities-propagation",
+      "facilities-city-facing",
+      "facilities-resident-facing"
+    ],
+    "drift": "bounded (modernization-locked)",
+    "coherence": "declared (cross-domain facilities grammar)",
+    "version": "1.0 (facilities-stable)",
+    "format": "html + markdown + playbooks + governance + scoring + diagrams",
+    "front_door": "exists (Facilities root)",
+    "every_page": "stands alone + audience-segmented + modernization-aware",
+    "audience": [
+      "city leadership",
+      "operators",
+      "engineers",
+      "contractors",
+      "residents",
+      "GHQ",
+      "AIs"
+    ]
+  },
+  "structural_grammar": {
+    "dimensional_envelope": "D0-D7",
+    "regime_envelope": "R0-R3",
+    "coherence_envelope": "C0-C4",
+    "drift_sensitivity": "high",
+    "regime_sensitivity": "high"
+  },
+  "cross_module_propagation": {
+    "imports": [
+      "docs-hub",
+      "docs-glossary",
+      "docs-principles"
+    ],
+    "exports": [
+      "asset-class-taxonomy",
+      "lifecycle-framework",
+      "drift-scoring-system",
+      "harmonics-scoring-system",
+      "cross-system-propagation-model",
+      "corridor-classification",
+      "capital-timing-cycles",
+      "governance-constitution",
+      "failure-mode-catalog",
+      "intervention-playbook",
+      "audience-segmentation-model",
+      "modernization-cycle-matrix"
+    ]
+  },
+  "submodules": [
+    {
+      "name": "Asset Classes",
+      "path": "asset-classes",
+      "canon_tag": "facilities-asset-classes",
+      "purpose": "Defines per-asset-class documentation for electrical, water, wastewater, transportation, communications, and public buildings."
+    },
+    {
+      "name": "City-Facing",
+      "path": "city-facing",
+      "canon_tag": "facilities-city-facing",
+      "purpose": "Communication and briefing materials for city leadership and operational teams during modernization cycles."
+    },
+    {
+      "name": "Communications",
+      "path": "communications",
+      "canon_tag": "facilities-communications",
+      "purpose": "Messaging guides, bibliographies, and RTT-AGERI communication artifacts for public and institutional audiences."
+    },
+    {
+      "name": "Dashboards",
+      "path": "dashboards",
+      "canon_tag": "facilities-dashboards",
+      "purpose": "Dashboard mockups and visual index schemas for scoring, audit, and modernization tracking."
+    },
+    {
+      "name": "Design System",
+      "path": "design-system",
+      "canon_tag": "facilities-design-system",
+      "purpose": "Governance, naming conventions, component standards, and style guides for all Facilities visual and structural artifacts."
+    },
+    {
+      "name": "Governance",
+      "path": "governance",
+      "canon_tag": "facilities-governance",
+      "purpose": "Global governance constitutions, charters, escalation pathways, and accountability structures for GHQ-grade facilities oversight."
+    },
+    {
+      "name": "Operators",
+      "path": "operators",
+      "canon_tag": "facilities-operators",
+      "purpose": "Orientation, maintenance standards, and modernization handoff protocols for operators and contractors."
+    },
+    {
+      "name": "Research",
+      "path": "research",
+      "canon_tag": "facilities-research",
+      "purpose": "RTT-AGERI bibliography, research references, and validation resources grounding the Facilities domain."
+    },
+    {
+      "name": "Residents",
+      "path": "residents",
+      "canon_tag": "facilities-residents",
+      "purpose": "Public-facing education, storm-season safety, FAQ materials, and RTT-AGERI explainers for residents."
+    },
+    {
+      "name": "Strategy",
+      "path": "strategy",
+      "canon_tag": "facilities-strategy",
+      "purpose": "Long-horizon planning — global modernization timelines, 2050 strategy, and visual storyboards for capital-timed facilities evolution."
+    }
+  ],
+  "files": [
+    {
+      "filename": "README.md",
+      "path": "README.md",
+      "purpose": "Navigation anchor for the Facilities domain — scopes asset classes, lifecycle phases, folder map, audience segmentation, and contribution guidelines.",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "AGERI_README.md",
+      "path": "AGERI_README.md",
+      "purpose": "Domain-initiative operator entry point for RTT-AGERI — Above-Ground Electrical Resilience Initiative using drift scoring, harmonics, propagation, and corridor classification.",
+      "role": "profile",
+      "analyzer_layer": "operator"
+    },
+    {
+      "filename": "spec.md",
+      "path": "spec.md",
+      "purpose": "Canonical substrate definition — authoritative reference for Facilities domain scope, lifecycle, governance, asset classes, capital timing, and domain extensions.",
+      "role": "signature",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "glossary.md",
+      "path": "glossary.md",
+      "purpose": "Shared terminology reference defining domain-specific terms used across all Facilities modules and audience segments.",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "facilities-domain-map.md",
+      "path": "facilities-domain-map.md",
+      "purpose": "Structural map of the Facilities domain — asset classes, lifecycle phases, audiences, governance layers, and cross-system integration points.",
+      "role": "map",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "facilities-lifecycle-framework.md",
+      "path": "facilities-lifecycle-framework.md",
+      "purpose": "Engine defining the full lifecycle framework — design, construction, operation, maintenance, modernization, decommissioning — with scoring and audit integration at each phase.",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "filename": "GHQ-governance-charter.md",
+      "path": "GHQ-governance-charter.md",
+      "purpose": "Governance signature establishing GHQ-grade oversight — global standards, scoring systems, audits, escalation pathways, and accountability structures.",
+      "role": "signature",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "filename": "capital-and-audit-integration.md",
+      "path": "capital-and-audit-integration.md",
+      "purpose": "Engine aligning capital deployment with audit results — regime-timed investment decisions across 10-year, 20-year, and 50-year modernization cycles.",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "filename": "corridor-classification-standard.md",
+      "path": "corridor-classification-standard.md",
+      "purpose": "Reference standard for corridor classification — dimensional mapping of transportation, electrical, and utility corridors by risk, capacity, and modernization priority.",
+      "role": "reference",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "filename": "cross-system-propagation.md",
+      "path": "cross-system-propagation.md",
+      "purpose": "Engine modeling cross-system propagation — cascading failure paths (electrical → water → emergency response) governed at the Facilities level.",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "filename": "drift-scoring-rubric.md",
+      "path": "drift-scoring-rubric.md",
+      "purpose": "Diagnostic rubric for scoring asset degradation, environmental stressors, and operational drift across all Facilities asset classes.",
+      "role": "diagnostic",
+      "analyzer_layer": "drift"
+    },
+    {
+      "filename": "harmonics-scoring-rubric.md",
+      "path": "harmonics-scoring-rubric.md",
+      "purpose": "Diagnostic rubric for scoring harmonic alignment — coherence metrics across asset-class interactions, lifecycle phases, and governance layers.",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "filename": "failure-mode-catalog.md",
+      "path": "failure-mode-catalog.md",
+      "purpose": "Diagnostic catalog of failure modes — regime-level classification of degradation, cascading failures, human factors, and environmental stressors.",
+      "role": "diagnostic",
+      "analyzer_layer": "regime"
+    },
+    {
+      "filename": "intervention-playbook.md",
+      "path": "intervention-playbook.md",
+      "purpose": "Operator-facing engine defining active intervention protocols — triggered responses to scoring thresholds, failure modes, and escalation conditions.",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "filename": "propagation-model.md",
+      "path": "propagation-model.md",
+      "purpose": "Engine modeling propagation dynamics — how failures, modernization effects, and capital decisions propagate across asset classes and lifecycle phases.",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "filename": "modernization-cycle-matrix.md",
+      "path": "modernization-cycle-matrix.md",
+      "purpose": "Reference matrix mapping modernization cycles — 10-year tactical, 20-year strategic, 50-year generational — against asset classes and capital timing.",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "filename": "global-modernization-timeline.md",
+      "path": "global-modernization-timeline.md",
+      "purpose": "Reference timeline charting global modernization cycles and capital deployment milestones across all Facilities domains.",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "filename": "rtt-global-facilities-strategy-2050.md",
+      "path": "rtt-global-facilities-strategy-2050.md",
+      "purpose": "Long-range strategy signature defining the 2050 Facilities vision — generational modernization, climate resilience, and cross-domain governance alignment.",
+      "role": "signature",
+      "analyzer_layer": "regime"
+    },
+    {
+      "filename": "timeline-visual-storyboard.md",
+      "path": "timeline-visual-storyboard.md",
+      "purpose": "Visual narrative map of modernization phases — storyboard connecting capital timing, lifecycle transitions, and audience communication milestones.",
+      "role": "map",
+      "analyzer_layer": "regime"
+    },
+    {
+      "filename": "folder_tree.md",
+      "path": "folder_tree.md",
+      "purpose": "Structural map of the Facilities repository layout — folder hierarchy, submodule boundaries, and file-level navigation reference.",
+      "role": "map",
+      "analyzer_layer": "cross-cutting"
+    }
+  ]
+}

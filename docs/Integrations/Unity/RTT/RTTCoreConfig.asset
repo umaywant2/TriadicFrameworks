@@ -1,0 +1,13 @@
+using UnityEngine;
+
+[CreateAssetMenu(fileName = "RTTCoreConfig", menuName = "RTT/RTT Core Config")]
+public class RTTCoreConfig : ScriptableObject
+{
+    [Header("RTT Endpoint")]
+    public string endpointUrl = "http://localhost:5000/rtt/step";
+
+    [Header("Options")]
+    public bool logPackets = true;
+    public bool logResponses = true;
+}
+

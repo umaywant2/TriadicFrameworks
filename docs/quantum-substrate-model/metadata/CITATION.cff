@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: "Quantum Substrate Model: Regime Structure and Dimensional Organization"
+message: "If you use this work, please cite it as below."
+authors:
+  - family-names: Loswin
+    given-names: Nawder
+    affiliation: Independent Researcher
+version: 1.0.0
+date-released: 2026-01-15
+10.5281/zenodo.18264063
+license: CC-BY-4.0
+abstract: >
+  The Quantum Substrate Model (QSM) defines a structural framework for organizing
+  multiple substrate regimes under explicitly declared boundaries, dimensional
+  descriptors, and operator-mediated interactions. The model extends minimal
+  substrate modeling principles without embedding empirical claims, physical
+  interpretation, or domain-specific semantics.
+
+

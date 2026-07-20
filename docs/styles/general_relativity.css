@@ -1,0 +1,57 @@
+/* -----------------------------------------------------------
+   General Relativity — Module‑Specific Overrides
+   Layered on top of theory.css
+   Identity: multi‑scale adaptive resonance, non‑teleological,
+   variation–selection–inheritance operators, lineage coherence
+----------------------------------------------------------- */
+
+body.tf-module--general-relativity {
+  /* multi‑scale radial layering (ecosystem + lineage depth) */
+  background: radial-gradient(
+    circle at 26% 22%,
+    #02120c 0,
+    #020b0a 40%,
+    #000000 100%
+  );
+  position: relative;
+}
+
+/* organic micro‑variation noise (variation operator) */
+body.tf-module--general-relativity::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiIvPjwvc3ZnPg==");
+}
+
+/* accent: organic green‑cyan resonance */
+:root {
+  --accent: #4ade80;
+  --accent-soft: rgba(74,222,128,0.18);
+}
+
+/* hero title uses module accent */
+.tf-hero__content h1 {
+  color: var(--accent);
+}
+
+/* non‑directional rings (no teleology, no progress ladder) */
+.hero-glyph::after,
+.brand-mark::after {
+  transform: rotate(0deg);
+}
+
+/* section headers use EB accent */
+.tf-section h2 {
+  color: var(--accent);
+}
+
+/* operator lists: subtle green‑cyan highlight */
+.tf-list code {
+  background: rgba(74,222,128,0.12);
+  border: 1px solid rgba(74,222,128,0.25);
+  color: #d1fae5;
+}
+

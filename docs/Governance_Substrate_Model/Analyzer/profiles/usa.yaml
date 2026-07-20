@@ -1,0 +1,33 @@
+system_id: "USA_Contemporary"
+label: "United States — Federal Presidential System (Contemporary)"
+period:
+  start: "1945"
+  end: "Present"
+
+regime_signature:
+  centralization: 1.0        # Medium federal structure
+  method: 0.0                # Plurality for most offices (Electoral College for presidency)
+  oversight: 0.5             # Mixed oversight (state-level + federal components)
+  access: 0.0                # Broad access with party primaries and ballot rules
+  timing: 0.0                # Fixed timing (federal elections)
+
+snapshots:
+  - year: 1950
+    vector: [1.0, 0.0, 0.5, 0.0, 0.0]
+  - year: 2000
+    vector: [1.0, 0.0, 0.5, 0.0, 0.0]
+  - year: 2024
+    vector: [1.0, 0.0, 0.5, 0.0, 0.0]
+
+annotations:
+  notes:
+    - "Plurality voting for Congress; Electoral College for presidency."
+    - "Mixed oversight: state election authorities + federal legal frameworks."
+    - "Broad access with party primaries and ballot access rules."
+    - "Fixed federal election timing."
+    - "Federal structure with significant state autonomy."
+
+simulation:
+  scenario_id: "USA_basin_alignment"
+  description: "Analyze structural stability within competitive-plurality basin."
+  target_basin_hint: "CPL"

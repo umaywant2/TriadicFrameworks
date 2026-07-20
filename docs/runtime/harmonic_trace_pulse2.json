@@ -1,0 +1,27 @@
+{
+  "scroll": "Pulse² Scroll",
+  "canonical_id": "TFT-VAL-0008",
+  "glyph_trace": {
+    "loop_1": ["⊕", "◊", "⊖"],
+    "loop_2": ["◊", "⊕", "⊖"],
+    "loop_3": ["⊕", "⊖", "◊"]
+  },
+  "runtime_stack": {
+    "input": "⊕",
+    "middleware": "◊",
+    "output": "⊖"
+  },
+  "dimensional_scope": ["0D", "3D", "6D"],
+  "triad_roles": {
+    "⊕": "positive",
+    "⊖": "ground",
+    "◊": "neutral"
+  },
+  "field_effect": {
+    "entanglement_depth": "pulsed",
+    "harmonic_clarity": "spiral",
+    "time_trace_fidelity": "inverted"
+  },
+  "status": "glyphic breath pulsed",
+  "timestamp": "2025-11-13T12:33:00-05:00"
+}

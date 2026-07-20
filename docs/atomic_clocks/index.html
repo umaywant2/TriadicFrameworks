@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/atomic_clocks/index.html — <head> metadata block     -->
+<!-- Module: Atomic Clocks (science-core)                        -->
+<!-- Last updated: 2026-05-02                                    -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="language" content="en">
+<meta name="last-modified" content="2026-05-02">
+<meta name="generator" content="TriadicFrameworks Static Canon Engine">
+
+<meta name="creator" content="TriadicFrameworks">
+<meta name="author" content="Nawder Loswin (pen name)">
+<meta name="publisher" content="TriadicFrameworks">
+
+<meta name="description"
+      content="Atomic Clocks — triadic decomposition of time, vST definition of the second, drift detection invariants, adoption roadmap, whitepaper (single‑file and modular), and interactive notebook demo.">
+<meta name="keywords"
+      content="atomic clocks, vST, triadic decomposition, drift detection, invariants, adoption roadmap, time, second, whitepaper, notebook, triadic frameworks">
+
+<link rel="canonical" href="https://www.triadicframeworks.org/atomic_clocks/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0ff">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TriadicFrameworks">
+<meta property="og:title" content="Atomic Clocks — Triadic Time Decomposition">
+<meta property="og:url" content="https://www.triadicframeworks.org/atomic_clocks/">
+<meta property="og:description"
+      content="Triadic decomposition of time, vST definition of the second, drift detection invariants, adoption roadmap, whitepaper, and notebook demo.">
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1080">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Atomic Clocks — Triadic Time Decomposition">
+<meta name="twitter:description"
+      content="Triadic time decomposition → vST second → drift invariants → adoption roadmap → whitepaper → notebook demo.">
+<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+
+<meta name="citation_title" content="Atomic Clocks — Triadic Time Decomposition">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2026">
+<meta name="DC.subject"
+      content="atomic clocks, vST, triadic decomposition, drift detection, invariants, adoption roadmap, time, second definition">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<meta name="ai.module" content="Atomic Clocks">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose"
+      content="Apply triadic decomposition to atomic time: triadic time structure, vST definition of the second, drift detection invariants, adoption roadmap, whitepaper (single‑file and 7 modular sections), and interactive vST‑Lite notebook demo.">
+<meta name="ai.keywords"
+      content="atomic clocks, vST, triadic decomposition, drift detection, invariants, adoption roadmap, time, second, AC-Decompose, AC-DefineSecond, AC-DetectDrift, AC-ValidateInvariant, AC-Roadmap, AC-Demonstrate">
+<meta name="ai.audience" content="researchers, metrologists, developers, AI systems">
+<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml">
+<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.contact.youtube" content="@TriadicFrameworks">
+<meta name="ai.license" content="MIT">
+
+<meta name="ai.module.name" content="Atomic Clocks">
+<meta name="ai.module.summary"
+      content="Science‑core module: whitepaper (single‑file + 7 modular sections: abstract, introduction, triadic decomposition, vST definition of the second, drift detection model, roadmap for adoption, references), core concepts (triadic decomposition, vST definition), drift detection invariants, adoption roadmap, and vST‑Lite atomic clock notebook demo.">
+<meta name="ai.module.category" content="science-core">
+
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
+
+<title>Atomic Clocks — TriadicFrameworks</title>
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+  /* Context Block */
+  .context-block {
+    font-family: monospace;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0.5rem 0 1rem 0;
+  }
+       
+  /* Context Label */
+  .context-label {
+    color: #ff9800; /* orange */
+    font-weight: bold;
+    margin-right: 0.25rem;
+  }
+       
+  /* Context Value */
+  .context-value {
+    color: #ffffff; /* white */
+  }
+
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav class="nav-band">
+ <p align="center">
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+ </p> 
+  
+  <h2>⏱️ Atomic Clocks | RTT/1</h2>
+      <a href="#README">🔰 README</a>
+      <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
+      <a href="#CONTRIBUTING">🤝 Contributing</a>
+      <a href="https://www.triadicframeworks.org/education/">💯 Education | RTT</a>
+      <a href="#GLOSSARY">🎯 Glossary</a>
+      <a href="#LINEAGE">📜 Lineage</a>
+      <a href="#LICENSE">📎 License</a>
+      <a href="#SITEMAP">🌐 Sitemap</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
+      <a href="#SECURITY">🔐 Security</a>
+      <a href="#PRINCIPLES">🧘 Principles</a>
+    <h3>🚁 High‑Level Overview</h3>
+      <a href="#WHITEPAPER_SINGLE_FILE">📄 Whitepaper (Single File)</a>
+    <h3>🏝️ Whitepaper (Modular Sections)</h3>
+      <a href="#WHITEPAPER_ABSTRACT">🧾 Abstract — Summary</a>
+      <a href="#WHITEPAPER_INTRODUCTION">📖 Introduction</a>
+      <a href="#WHITEPAPER_TRIADIC_DECOMPOSITION">🔺 Triadic Decomposition</a>
+      <a href="#WHITEPAPER_VST_DEFINITION_OF_SECOND">⏱️ vST Definition of the Second</a>
+      <a href="#WHITEPAPER_DRIFT_DETECTION_MODEL">📉 Drift Detection Model</a>
+      <a href="#WHITEPAPER_ROADMAP_FOR_ADOPTION">🛣️ Roadmap for Adoption</a>
+      <a href="#WHITEPAPER_REFERENCES">📚 References</a>
+    <h3>🍎 Core Concepts</h3>
+      <a href="#TRIADIC_DECOMPOSITION">🧩 Triadic Decomposition</a>
+      <a href="#VST_DEFINITION_OF_SECOND">⏲️ Definition of the Second</a>
+    <h3>🧭 Drift Detection</h3>
+      <a href="#DRIFT_DETECTION_INVARIANTS">🧪 Drift Detection Invariants</a>
+    <h3>🛣️ Roadmap</h3>
+      <a href="#ROADMAP_ADOPTION">🚀 Adoption Roadmap</a>
+    <h3>📽️ Demonstrations</h3>
+      <a href="#NOTEBOOK_VST_LITE_ATOMIC_CLOCK_DEMO">📓 vST‑Lite Atomic Clock Demo</a>
+   <h3>🏗️ Triadic Tools</h3> 
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
+      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 Packages and Cores</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas</a>
+      <a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a>    
+      <a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS</a>
+      <a href="https://www.triadicframeworks.org/_ideas/">🤔 Ideas</a>
+      <a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">🔛(RTT frozen)</a>
+      <a href="https://www.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
+      <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
+      <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
+      <a href="../">🔙TFT</a>
+   <!-- RTT Session Header (canonical stub) -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/atomic_clocks — Session Context block                -->
+<!-- Replace the existing session context section in index.html  -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<section id="ac-session-header"
+         data-rtt="atomic-clocks"
+         data-coherence="stable"
+         data-drift="bounded"
+         data-regime="structural">
+
+  <h2>Session Context</h2>
+
+  <div class="context-block">
+
+    <span class="context-label"><strong>Canon:</strong></span>
+    <span class="context-value">active (science‑core)</span><br>
+
+    <span class="context-label"><strong>Modules:</strong></span>
+    <span class="context-value">
+      decomposition → vST second → drift invariants → roadmap → whitepaper → notebooks
+    </span><br>
+
+    <span class="context-label"><strong>Drift:</strong></span>
+    <span class="context-value">bounded (invariant‑locked)</span><br>
+
+    <span class="context-label"><strong>Coherence:</strong></span>
+    <span class="context-value">stable (science grammar)</span><br>
+
+    <span class="context-label"><strong>Version:</strong></span>
+    <span class="context-value">1.0 (ac‑stable)</span><br>
+
+    <span class="context-label"><strong>Format:</strong></span>
+    <span class="context-value">html + markdown + notebooks + whitepaper</span><br>
+
+    <span class="context-label"><strong>Front door:</strong></span>
+    <span class="context-value">exists (AC root)</span><br>
+
+    <span class="context-label"><strong>Every page:</strong></span>
+    <span class="context-value">AI‑parsable + citation‑ready</span><br>
+
+    <span class="context-label"><strong>Audience:</strong></span>
+    <span class="context-value">researchers + metrologists + developers + AIs</span>
+
+  </div>
+
+</section>
+
+<div style="display:inline-block;padding:6px 12px;background:#000;color:#fff;
+            border-radius:6px;font-size:13px;">
+  🟦 Atomic Clocks<br>📘 Science‑Core Module • AI‑Ready
+</div>
+
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+      README: 'README.md',
+      ABOUT: '../ABOUT.md',
+      CONTRIBUTING: '../CONTRIBUTING.md',
+      GLOSSARY: '../GLOSSARY.md',
+      LINEAGE: '../LINEAGE.md',
+      LICENSE: '../LICENSE.md',
+      SITEMAP: '../sitemap.md',
+      QUICKSTART: '../QUICKSTART.md',
+      CODE_OF_CONDUCT: '../CODE_OF_CONDUCT.md',
+      SECURITY: '../SECURITY.md',
+      PRINCIPLES: '../PRINCIPLES.md',
+  // High‑Level Overview
+  WHITEPAPER_SINGLE_FILE: 'whitepaper.md',
+  // Whitepaper (Modular Sections)
+  WHITEPAPER_ABSTRACT: 'whitepaper/00-abstract.md',
+  WHITEPAPER_INTRODUCTION: 'whitepaper/01-introduction.md',
+  WHITEPAPER_TRIADIC_DECOMPOSITION: 'whitepaper/02-triadic_decomposition.md',
+  WHITEPAPER_VST_DEFINITION_OF_SECOND: 'whitepaper/03-vst_definition_of_second.md',
+  WHITEPAPER_DRIFT_DETECTION_MODEL: 'whitepaper/04-drift_detection_model.md',
+  WHITEPAPER_ROADMAP_FOR_ADOPTION: 'whitepaper/05-roadmap_for_adoption.md',
+  WHITEPAPER_REFERENCES: 'whitepaper/06-references.md',
+  // Core Concepts
+  TRIADIC_DECOMPOSITION: 'triadic_decomposition/triad.md',
+  VST_DEFINITION_OF_SECOND: 'vst_definition/second.md',
+  // Drift Detection
+  DRIFT_DETECTION_INVARIANTS: 'drift_detection/invariants.md',
+  // Roadmap
+  ROADMAP_ADOPTION: 'roadmap/adoption.md',
+  // Demonstrations
+  NOTEBOOK_VST_LITE_ATOMIC_CLOCK_DEMO: 'notebooks/vst_lite_atomic_clock_demo.ipynb',
+};
+  
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+</body>
+</html>

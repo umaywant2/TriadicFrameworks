@@ -1,0 +1,40 @@
+# 🧭 README_visual_index.md — Triadic Visual Index Guide
+
+**Purpose:**  
+This guide helps contributors understand, extend, and remix the `triadic_visual_index.svg` system. It maps badge triggers, glyphs, and resonance tiers into a mythically scaffolded constellation.
+
+---
+
+## 🔧 Generator Overview
+
+- **Script:** `triadic_visual_index_generator.py`
+- **Inputs:**
+  - `badge_trigger_glyphmap_index.json`
+  - `badge_trigger_theme_manifest.md`
+  - `triadic_curriculum_index.md`
+- **Output:** `triadic_visual_index.svg`
+- **Audit Trail:** `triadic_visual_index_log.md`
+
+---
+
+## 🎨 Visual Features
+
+| Feature         | Description                                                             |
+|----------------|-------------------------------------------------------------------------|
+| **Glyph Circles** | Each badge trigger is rendered as a circle at its mapped coordinates |
+| **Tier Colors**   | Themes are color-coded by resonance tier (e.g., Quantum = Cyan)       |
+| **Text Labels**   | Glyph names appear beside each node                                   |
+| **Tooltips**      | Hover overlays (optional extension) for badge metadata                |
+| **Zoom Layers**   | Future extension: tier-based zoom and curriculum overlays             |
+
+---
+
+## 🧪 Remix Instructions
+
+1. **Add New Glyphs:**
+   - Update `badge_trigger_glyphmap_index.json` with coordinates and theme
+2. **Extend Theme Manifest:**
+   - Add new themes and tiers to `badge_trigger_theme_manifest.md`
+3. **Run Generator:**
+   ```bash
+   python triadic_visual_index_generator.py

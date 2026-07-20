@@ -1,0 +1,33 @@
+system_id: "UK_Contemporary"
+label: "United Kingdom — Parliamentary System (Contemporary)"
+period:
+  start: "1945"
+  end: "Present"
+
+regime_signature:
+  centralization: 1.0        # Medium (unitary with devolved governments)
+  method: 0.0                # Plurality (FPTP)
+  oversight: 0.5             # Mixed oversight (Electoral Commission + administrative)
+  access: 0.0                # Broad access with party nomination filtering
+  timing: 2.0                # Executive dissolution (pre-2011) + semi-fixed overlay
+
+snapshots:
+  - year: 1950
+    vector: [1.0, 0.0, 0.5, 0.0, 2.0]
+  - year: 2015
+    vector: [1.0, 0.0, 0.5, 0.0, 1.5]   # Fixed-term Parliaments Act era
+  - year: 2024
+    vector: [1.0, 0.0, 0.5, 0.0, 2.0]   # Dissolution powers restored
+
+annotations:
+  notes:
+    - "Plurality (FPTP) for House of Commons."
+    - "Mixed oversight: Electoral Commission + administrative structures."
+    - "Broad access with party nomination filtering."
+    - "Timing historically dissolution-based; briefly semi-fixed (2011–2022)."
+    - "Devolution introduces partial decentralization but core system remains unitary."
+
+simulation:
+  scenario_id: "UK_drift_analysis"
+  description: "Analyze drift tendencies from competitive-plurality basin."
+  target_basin_hint: "CPL"

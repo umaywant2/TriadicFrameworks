@@ -1,0 +1,4 @@
+frequency:
+  Fr1: { a: 0.05, f: 0.02, b: 0.02, s_rest: 1.50, m_theta_freq: 0.95 }
+  Fr2: { a: 0.10, f: 0.05, b: 0.03, s_rest: 1.00, m_theta_freq: 1.00 }
+  Fr3: { a: 0.20, f: 0.20, b: 0.06, s_rest: 0.50, m_theta_freq: 1.10 }

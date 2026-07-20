@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+title: "Resonance Substrate Model (RSM)"
+version: "1.0.0"
+date-released: "2025-01-12"
+doi: "10.5281/zenodo.18227748"   # Replace with actual DOI after Zenodo upload
+message: >
+  If you use the Resonance Substrate Model (RSM) in your research, software, or
+  experiments, please cite this release.
+
+authors:
+  - family-names: "Loswin"
+    given-names: "Nawder"
+    affiliation: "TriadicFrameworks Research Initiative"
+    email: "Nawder@TriadicFrameworks.org"
+    orcid: "https://orcid.org/0009-0002-2282-5460"   # Replace with your actual ORCID
+
+keywords:
+  - resonance
+  - coherence
+  - triadic fields
+  - multi-layer systems
+  - RTT-Inside
+  - schema-driven modeling
+  - nonlinear dynamics
+  - complex systems
+
+license: "Apache-2.0"
+
+repository-code: "https://github.com/umaywant2/TriadicFrameworks"
+url: "https://www.triadicframeworks.org"
+
+abstract: >
+  The Resonance Substrate Model (RSM) is a unified triadic field framework for
+  describing coherence, alignment, and multi-layer dynamics across classical,
+  quantum, semantic, and distributed systems. The model introduces scalar,
+  vector/spin, and resonance-envelope fields governed by a minimal operator
+  system, supported by a schema-driven ontology, simulation framework, and
+  experimental validation suite. This release represents the canonical v1.0.0
+  baseline for theoretical, computational, and experimental extensions.

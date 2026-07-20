@@ -1,0 +1,7 @@
+badge:
+  id: coherence-pioneer
+  label: Coherence Pioneer
+  criteria:
+    - Coherence ≥ 0.7 in sustained run
+    - Visual indicator matches sync state
+  echo: "Achieved sustained co-conscious lock."

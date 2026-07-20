@@ -1,0 +1,11 @@
+[
+  {
+    "phase": "I",
+    "symbol": "⚛️",
+    "substrate": "molecular vibration",
+    "frequency_range_hz": "4e13–1e14",
+    "source": "NIST",
+    "glyph": "Blue Atom",
+    "notes": "Starter entry for RTT-aligned Resonance Atlas"
+  }
+]
