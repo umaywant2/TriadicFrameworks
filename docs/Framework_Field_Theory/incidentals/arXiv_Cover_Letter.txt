@@ -1,0 +1,19 @@
+Dear arXiv Moderation Team,
+
+I am submitting the manuscript titled 
+“A Unified Framework Field Theory for Drift, Coherence, and Regime Dynamics in Large Language Models”
+for posting in the cs.AI category.
+
+The paper introduces Framework Field Theory (FFT), a structural model that explains 
+drift branching, coherence waves, regime dynamics, and framework collisions in modern 
+large language models. The manuscript includes falsifiable predictions, reproducible 
+simulations, and minimal engineering artifacts demonstrating practical utility.
+
+This work is original, has not been published elsewhere, and is not under review at 
+another venue. All co-authorship and attribution requirements are satisfied.
+
+Thank you for your consideration.
+
+Sincerely,
+Nawder Loswin
+TriadicFrameworks.org

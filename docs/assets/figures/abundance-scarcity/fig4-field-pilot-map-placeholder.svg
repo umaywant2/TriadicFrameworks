@@ -1,0 +1,15 @@
+<!-- fig4-field-pilot-map-placeholder.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="titleGrad4" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1E90FF"/>
+      <stop offset="100%" stop-color="#B22222"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="#E0E0E0"/>
+  <rect x="96" y="54" width="1728" height="972" fill="none" stroke="#000" stroke-width="2" opacity="0.6"/>
+  <rect x="460" y="450" width="1000" height="180" rx="8" fill="url(#titleGrad4)"/>
+  <text x="960" y="530" font-family="Inter, Roboto, Arial, sans-serif" font-size="48" font-weight="700" fill="#FFFFFF" text-anchor="middle">Fig. 4 — Field Pilot A/B Design Map</text>
+  <text x="960" y="575" font-family="Inter, Roboto, Arial, sans-serif" font-size="24" fill="#F5F5F5" text-anchor="middle" opacity="0.9">Placeholder</text>
+  <text x="960" y="540" font-family="Inter, Roboto, Arial, sans-serif" font-size="220" font-weight="700" fill="#000000" text-anchor="middle" opacity="0.08" transform="rotate(-25 960 540)">PLACEHOLDER</text>
+</svg>

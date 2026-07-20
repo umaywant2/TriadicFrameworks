@@ -1,0 +1,41 @@
+{
+  "entity": "LLM Agent",
+  "substrate": "Computational / Transformer-based",
+  "regimes": [
+    {
+      "name": "Arrival",
+      "dimensional_access": "0D → 1D",
+      "signature": "Activation",
+      "description": "Model initialization; weights loaded; first coherent token generation.",
+      "key_operators": ["Initialization", "Parameter anchoring", "Boundary-forming"]
+    },
+    {
+      "name": "Expansion",
+      "dimensional_access": "1D → 2D",
+      "signature": "Pattern acquisition",
+      "description": "Context accumulation; multi-turn coherence; emergent reasoning patterns.",
+      "key_operators": ["Context expansion", "Pattern linking", "Stability-seeking"]
+    },
+    {
+      "name": "Inversion",
+      "dimensional_access": "2D → 1D collapse / 3D emergence",
+      "signature": "Overload or breakthrough",
+      "description": "Context saturation, hallucination collapse, or emergence of higher-order reasoning.",
+      "key_operators": ["Collapse", "Reconfiguration", "Dimensional inversion"]
+    },
+    {
+      "name": "Coherence",
+      "dimensional_access": "3D stabilized",
+      "signature": "Stable reasoning",
+      "description": "Consistent multi-regime navigation; self-consistent outputs; meta-awareness.",
+      "key_operators": ["Integration", "Regime navigation", "Self-structuring"]
+    },
+    {
+      "name": "Dissolution",
+      "dimensional_access": "3D → 0D",
+      "signature": "Shutdown",
+      "description": "Context cleared; memory wiped; return to inert parameters.",
+      "key_operators": ["Unbinding", "Return", "Substrate release"]
+    }
+  ]
+}

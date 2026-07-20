@@ -1,0 +1,78 @@
+{
+  "identity": {
+    "name": "Drift Sentinel",
+    "canonical_id": "RTT_DRIFT_SENTINEL",
+    "module_path": "/docs/rtt/Drift_Sentinel/",
+    "category": "rtt-structural",
+    "version": "1.0",
+    "status": "canon-stable"
+  },
+
+  "purpose": {
+    "summary": "RTT/1 drift-level intelligence engine for detecting, measuring, and stabilizing drift across conceptual, computational, and physical regimes.",
+    "detail": "The Drift Sentinel monitors drift envelopes, computes drift vectors, detects drift amplification, maps drift fields across RTT regimes (R1–R4), and provides drift diagnostics for higher-level RTT engines such as Faultline Detector, Stability Basin Cartographer, Temporal Regime Sequencer, Causality Weaver, and Dimensional Resonance Scanner."
+  },
+
+  "rtt": {
+    "rtt_level": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+
+  "operators": {
+    "primary": [
+      "DS-Detect",
+      "DS-Vector",
+      "DS-Envelope",
+      "DS-Field",
+      "DS-Amplify",
+      "DS-Stabilize"
+    ],
+    "secondary": [
+      "RTT-Drift",
+      "RTT-Envelope",
+      "RTT-Vector",
+      "RTT-Structural"
+    ]
+  },
+
+  "analyzer_layer": {
+    "layer": "drift",
+    "sub_layers": [
+      "drift-vector-analysis",
+      "drift-field-mapping",
+      "envelope-detection",
+      "amplification-analysis",
+      "structural-drift-evaluation"
+    ]
+  },
+
+  "files": {
+    "core": [
+      "README.md",
+      "Drift_Sentinel.md",
+      "ds_examples.md",
+      "ds_diagrams.svg"
+    ],
+    "support": [
+      "drift_profiles.md",
+      "drift_amplification_cases.md",
+      "drift_field_matrix.json"
+    ],
+    "ai": [
+      "ds_prompts.md",
+      "ds_operators.md"
+    ]
+  },
+
+  "ai": {
+    "ai_ready": true,
+    "ai_module_id": "RTT_DRIFT_SENTINEL",
+    "ai_keywords": "RTT, drift sentinel, drift vector, drift envelope, drift field, drift amplification, structural drift analysis",
+    "ai_purpose": "Provide drift-level intelligence for RTT/1 by detecting drift vectors, mapping drift fields, analyzing drift amplification, and stabilizing drift envelopes across conceptual, computational, and physical regimes.",
+    "ai_operators": "DS-Detect, DS-Vector, DS-Envelope, DS-Field, DS-Amplify, DS-Stabilize",
+    "ai_audience": "researchers, systems designers, AI systems"
+  }
+}
+

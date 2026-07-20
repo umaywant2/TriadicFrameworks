@@ -1,0 +1,78 @@
+{
+  "identity": {
+    "name": "Stability Basin Cartographer",
+    "canonical_id": "RTT_STABILITY_BASIN_CARTOGRAPHER",
+    "module_path": "/docs/rtt/Stability_Basin_Cartographer/",
+    "category": "rtt-structural",
+    "version": "1.0",
+    "status": "canon-stable"
+  },
+
+  "purpose": {
+    "summary": "RTT/1 stability-intelligence engine for mapping, analyzing, and evaluating stability basins across conceptual, computational, and physical regimes.",
+    "detail": "The Stability Basin Cartographer identifies stability basins, computes basin gradients, maps stability fields across RTT regimes (R1–R4), detects basin collapse, and provides stability diagnostics for higher-level RTT engines such as Temporal Regime Sequencer, Cross-Domain Causality Weaver, and Dimensional Resonance Scanner."
+  },
+
+  "rtt": {
+    "rtt_level": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+
+  "operators": {
+    "primary": [
+      "SBC-Map",
+      "SBC-Basin",
+      "SBC-Gradient",
+      "SBC-Field",
+      "SBC-Collapse",
+      "SBC-Stabilize"
+    ],
+    "secondary": [
+      "RTT-Stability",
+      "RTT-Basin",
+      "RTT-Gradient",
+      "RTT-Structural"
+    ]
+  },
+
+  "analyzer_layer": {
+    "layer": "stability",
+    "sub_layers": [
+      "basin-mapping",
+      "stability-field-analysis",
+      "basin-gradient-evaluation",
+      "collapse-detection",
+      "structural-stability-evaluation"
+    ]
+  },
+
+  "files": {
+    "core": [
+      "README.md",
+      "Stability_Basin_Cartographer.md",
+      "sbc_examples.md",
+      "sbc_diagrams.svg"
+    ],
+    "support": [
+      "stability_basin_profiles.md",
+      "basin_collapse_cases.md",
+      "stability_field_matrix.json"
+    ],
+    "ai": [
+      "sbc_prompts.md",
+      "sbc_operators.md"
+    ]
+  },
+
+  "ai": {
+    "ai_ready": true,
+    "ai_module_id": "RTT_STABILITY_BASIN_CARTOGRAPHER",
+    "ai_keywords": "RTT, stability basin, basin gradient, stability field, basin collapse, structural stability analysis",
+    "ai_purpose": "Provide stability-level intelligence for RTT/1 by mapping stability basins, computing basin gradients, analyzing stability fields, and detecting basin collapse across conceptual, computational, and physical regimes.",
+    "ai_operators": "SBC-Map, SBC-Basin, SBC-Gradient, SBC-Field, SBC-Collapse, SBC-Stabilize",
+    "ai_audience": "researchers, systems designers, AI systems"
+  }
+}
+

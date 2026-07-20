@@ -1,0 +1,105 @@
+WRSADC(7)                    TriadicFrameworks Manual                    WRSADC(7)
+================================================================================
+NAME
+       wrsadc - boundary layer for resonance-safe dispatch and structural
+                awareness in TriadicFrameworks
+
+SYNOPSIS
+       wrsadc_shell.sh
+       wrsadc_core.py
+
+DESCRIPTION
+       WRSADC (Wave-Resonance Structural-Awareness Dispatch Core) is the
+       boundary layer that mediates between external actions and RTT-Inside
+       computation. It ensures that all operations entering the Engine are:
+
+           • boundary-safe
+           • resonance-aligned
+           • lineage-tracked
+           • structurally aware
+
+       WRSADC does not perform domain logic. It enforces the rules that make
+       domain logic safe to execute.
+
+COMPONENTS
+       wrsadc_shell.sh
+              Outer membrane. Initializes environment, state, and logging.
+              Provides safe entry points for shell-level operations.
+
+       wrsadc_core.py
+              Inner interpreter. Performs structural-awareness checks,
+              lineage updates, and safe dispatch of user-defined functions.
+
+       3pack integration
+              WRSADC uses the 3-Pack primitives (P1, P2, P3) to structure
+              every action into a begin → transform → close cycle.
+
+FEATURES
+       Boundary Safety
+              Ensures that all incoming operations conform to RTT-aligned
+              structural constraints.
+
+       Structural Awareness
+              Injects metadata describing context, lineage, and resonance
+              state into each dispatch.
+
+       Safe Dispatch
+              Executes user-defined functions through a controlled interface
+              that prevents unsafe transitions.
+
+       Lineage Tracking
+              Records the triadic history of operations for reproducibility
+              and interpretability.
+
+USAGE
+       Shell entry:
+              ./wrsadc_shell.sh
+
+       Python entry:
+              from wrsadc_core import WRSADCCore
+              core = WRSADCCore()
+              core.dispatch(fn)
+
+       Combined with 3-Pack:
+              primitive1.sh
+              core.dispatch(step)
+              primitive3.sh
+
+WORKFLOW
+       1. Shell initializes WRSADC environment.
+       2. User invokes an operation (shell or Python).
+       3. WRSADC applies structural-awareness checks.
+       4. WRSADC wraps the operation in a triadic cycle.
+       5. WRSADC dispatches the operation safely.
+       6. Lineage and state are updated.
+
+WHEN TO USE WRSADC
+       • When executing any operation that crosses a boundary.
+       • When structural-awareness metadata is required.
+       • When dispatch must be safe, reversible, or lineage-tracked.
+       • When integrating with the 3-Pack or RTT-Inside Engine.
+
+FILES
+       wrsadc_shell.sh
+              Shell interface and environment setup.
+
+       wrsadc_core.py
+              Python interpreter and dispatch engine.
+
+       3pak-shell/
+              Provides triadic primitives and state/logging infrastructure.
+
+NOTES
+       WRSADC is not a business-logic engine. It is a membrane. All domain
+       logic lives inside the Engine. WRSADC ensures that only safe, aligned,
+       triad-structured actions reach it.
+
+AUTHOR
+       TriadicFrameworks — Resonance-Time Theory Canon
+
+SEE ALSO
+       3pack(1), 3pack-patterns(7), triadic-pattern-api(7),
+       triadic-pattern-cookbook(7), triadic-pattern-glossary(7)
+
+================================================================================
+TriadicFrameworks                     2025                              WRSADC(7)

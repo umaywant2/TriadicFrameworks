@@ -1,0 +1,103 @@
+{
+  "source": {
+    "site": "NHS.uk",
+    "region": "United Kingdom",
+    "regime": "public_health_regime",
+    "notes": "Extremely stable, clarity-first public health substrate with standardized escalation rules and minimal drift."
+  },
+
+  "metadata": {
+    "substrate_type": "html",
+    "substrate_stability": "very_high",
+    "substrate_noise": "low",
+    "layer_interference": "layer_interference_absent",
+    "accessibility_stability": "very_high",
+    "drift_sensitivity": "low",
+    "translation_stability": "translation_stable",
+    "commercial_overlay": "commercial_overlay_absent",
+    "ai_augmentation": "ai_generated_content_absent"
+  },
+
+  "drift_profile": {
+    "template_drift": "very_low",
+    "semantic_drift": "low",
+    "translation_drift": "none",
+    "ai_drift": "none",
+    "commercial_drift": "none",
+    "regime_drift": "low",
+    "drift_score": 0.95,
+    "drift_flags": []
+  },
+
+  "regime_profile": {
+    "regime": "public_health_regime",
+    "regime_coherence": "very_high",
+    "regime_shift": "none",
+    "regime_signals": [
+      "public_health_escalation_rules",
+      "clarity_first_structure",
+      "population_level_risk_framing",
+      "standardized_action_paths"
+    ],
+    "regime_score": 0.96
+  },
+
+  "continuity_kernel": {
+    "stable_symptoms": [
+      "persistent discomfort",
+      "pain that worsens with activity",
+      "shortness of breath",
+      "fever or systemic symptoms"
+    ],
+    "stable_risk_factors": [
+      "age",
+      "chronic illness",
+      "recent infection",
+      "environmental exposure"
+    ],
+    "stable_red_flags": [
+      "severe or sudden onset symptoms",
+      "difficulty breathing",
+      "loss of consciousness",
+      "chest pain with radiation"
+    ],
+    "stable_actions": [
+      "call emergency services if red flags present",
+      "contact GP for persistent or unclear symptoms",
+      "use NHS 111 for triage guidance"
+    ],
+    "stable_differentials": [
+      "infection",
+      "cardiac",
+      "respiratory",
+      "musculoskeletal"
+    ],
+    "continuity_score": 0.94
+  },
+
+  "synthesis_preview": {
+    "stable_elements": [
+      "clear symptom → action pathways",
+      "standardized escalation thresholds",
+      "consistent public-health framing"
+    ],
+    "regime_specific_elements": {
+      "clinical": [],
+      "ai_augmented": [],
+      "public_health": [
+        "population-level risk framing",
+        "emphasis on when to seek urgent care",
+        "use of NHS 111 triage guidance"
+      ]
+    },
+    "drift_sensitive_elements": [],
+    "substrate_risks": [],
+    "uncertainty_flags": [],
+    "escalation_indicators": [
+      "presence of red-flag symptoms",
+      "rapid deterioration",
+      "systemic symptoms"
+    ],
+    "synthesis_score": 0.92
+  }
+}

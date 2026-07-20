@@ -1,0 +1,26 @@
+<svg width="900" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="450" y="40" font-size="24" text-anchor="middle" fill="#222">TFTincryption Glyph Degree Map</text>
+
+  <!-- Glyph Nodes -->
+  <g>
+    <circle cx="150" cy="150" r="40" fill="#cceccf" stroke="#333" stroke-width="2"/>
+    <text x="150" y="155" font-size="16" text-anchor="middle" fill="#000">🍂</text>
+    <text x="150" y="180" font-size="12" text-anchor="middle" fill="#555">Codex, Curriculum</text>
+
+    <circle cx="350" cy="150" r="40" fill="#d0ffd0" stroke="#333" stroke-width="2"/>
+    <text x="350" y="155" font-size="16" text-anchor="middle" fill="#000">🌼</text>
+    <text x="350" y="180" font-size="12" text-anchor="middle" fill="#555">Curriculum, Validator</text>
+
+    <circle cx="550" cy="150" r="40" fill="#e0f0cc" stroke="#333" stroke-width="2"/>
+    <text x="550" y="155" font-size="16" text-anchor="middle" fill="#000">🌴</text>
+    <text x="550" y="180" font-size="12" text-anchor="middle" fill="#555">Validator, Fusion</text>
+
+    <circle cx="750" cy="150" r="40" fill="#f9f9a0" stroke="#333" stroke-width="2"/>
+    <text x="750" y="155" font-size="16" text-anchor="middle" fill="#000">🍁</text>
+    <text x="750" y="180" font-size="12" text-anchor="middle" fill="#555">Fusion, Guild</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="450" y="550" font-size="14" text-anchor="middle" fill="#555">Glyphs echo across modules. Degree marks legacy. Registry seals clarity.</text>
+</svg>

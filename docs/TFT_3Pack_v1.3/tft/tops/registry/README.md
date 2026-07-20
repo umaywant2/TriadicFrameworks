@@ -1,0 +1,18 @@
+# tops Registry
+
+The **registry** directory contains tops‑specific registries for orchestration.  
+It indexes agents, overlays, and resonance mappings.
+
+## Structure
+- Agent registry → maps tops agents to roles
+- Overlay registry → indexes dashboards
+- Resonance registry → maps folds to orchestration contexts
+
+## Purpose
+The registry is the **index layer** of tops.  
+It ensures every agent, overlay, and fold is discoverable and orchestrated.
+
+## Cross‑links
+- [agents](../agents/) → registry maps agents
+- [overlays](../overlays/) → registry indexes dashboards
+- [folds](../folds/) → resonance registry references fold data

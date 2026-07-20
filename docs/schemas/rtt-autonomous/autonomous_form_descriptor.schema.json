@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "$id": "https://triadicframeworks.org/schemas/rtt-autonomous/v1/autonomous_form_descriptor.schema.json",
+  "title": "autonomous_form_descriptor",
+  "type": "object",
+  "required": [
+    "form_id",
+    "domain",
+    "morphology",
+    "capabilities"
+  ],
+  "properties": {
+    "form_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique identifier for the autonomous form."
+    },
+
+    "domain": {
+      "type": "string",
+      "enum": ["air", "water", "land", "hybrid"],
+      "description": "Primary operating domain."
+    },
+
+    "morphology": {
+      "type": "string",
+      "description": "High-level body plan (e.g., fish, quadcopter, rover, walker)."
+    },
+
+    "capabilities": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "List of functional capabilities (e.g., sonar, lidar, fin-actuation)."
+    },
+
+    "extensions": {
+      "type": "object",
+      "additionalProperties": true,
+      "description": "Domain-specific extension fields."
+    }
+  }
+}
+

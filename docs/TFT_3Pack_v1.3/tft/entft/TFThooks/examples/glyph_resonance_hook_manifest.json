@@ -1,0 +1,15 @@
+{
+  "artifact": "TFThooks/examples/glyph_resonance_hook.py",
+  "type": "hook",
+  "version": "v1.3",
+  "baseLens": "decimal",
+  "validator": "BadgeLogic",
+  "scrollLinks": [
+    "fff_spec.md",
+    "TriadicTestSuite.md",
+    "outputs_spec.md"
+  ],
+  "symbolicTags": ["Glyph Resonance", "Badge Trigger", "Validator Echo"],
+  "cliTrigger": "python glyph_resonance_hook.py",
+  "timestamp": "2025-10-20T10:04:00Z"
+}

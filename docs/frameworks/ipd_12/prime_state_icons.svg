@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360">
+
+  <!-- Row 1 -->
+  <g transform="translate(0,0)">
+    <!-- P2 -->
+    <g transform="translate(0,0)">
+      <circle cx="40" cy="40" r="30" fill="none" stroke="black" stroke-width="3"/>
+      <text x="40" y="45" font-size="20" text-anchor="middle">P2</text>
+    </g>
+
+    <!-- P3 -->
+    <g transform="translate(120,0)">
+      <polygon points="40,10 10,70 70,70" fill="none" stroke="black" stroke-width="3"/>
+      <text x="40" y="45" font-size="20" text-anchor="middle">P3</text>
+    </g>
+
+    <!-- P5 -->
+    <g transform="translate(240,0)">
+      <polygon points="10,10 70,10 40,70" fill="none" stroke="black" stroke-width="3"/>
+      <text x="40" y="45" font-size="20" text-anchor="middle">P5</text>
+    </g>
+
+    <!-- P7 -->
+    <g transform="translate(360,0)">
+      <polygon points="40,5 5,75 75,75" fill="none" stroke="black" stroke-width="3"/>
+      <text x="40" y="45" font-size="20" text-anchor="middle">P7</text>
+    </g>
+  </g>
+
+  <!-- Row 2 -->
+  <g transform="translate(0,120)">
+    <!-- P11 -->
+    <g transform="translate(0,0)">
+      <circle cx="40" cy="40" r="30" fill="none" stroke="black" stroke-width="3"/>
+      <circle cx="40" cy="40" r="15" fill="none" stroke="black" stroke-width="3"/>
+      <text x="40" y="45" font-size="20" text-anchor="middle">P11</text>
+    </g>
+
+    <!-- P13 -->
+    <g transform="translate(120,0)">
+      <polygon points="10,10 70,10 40,70" fill="none" stroke="black" stroke-width="3"/>
+      <line x1="10" y1="10" x2="70" y2="10" stroke="black" stroke-width="3"/>
+      <text x="40" y="45" font-size="20" text-anchor="middle">P13</text>
+    </g>
+
+    <!-- P17 -->
+    <g transform="translate(240,0)">
+      <rect x="10" y="10" width="60" height="60" fill="none" stroke="black" stroke-width="3"/>
+      <line x1="30" y1="10" x2="30" y2="70" stroke="black" stroke-width="3"/>
+      <text x="40" y="45" font-size="20" text-anchor="middle">P17</text>
+    </g>
+
+    <!-- P19 -->
+    <g transform="translate(360,0)">
+      <rect x="10" y="10" width="60" height="60" fill="none" stroke="black" stroke-width="3"/>
+      <line x1="10" y1="40" x2="70" y2="40" stroke="black" stroke-width="3"/>
+      <text x="40" y="45" font-size="20" text-anchor="middle">P19</text>
+    </g>
+  </g>
+
+  <!-- Row 3 -->
+  <g transform="translate(0,240)">
+    <!-- P23 -->
+    <g transform="translate(0,0)">
+      <polygon points="40,5 5,75 75,75" fill="none" stroke="black" stroke-width="3"/>
+      <circle cx="40" cy="25" r="10" fill="none" stroke="black" stroke-width="3"/>
+      <text x="40" y="45" font-size="20" text-anchor="middle">P23</text>
+    </g>
+
+    <!-- P29 -->
+    <g transform="translate(120,0)">
+      <polygon points="10,10 70,10 40,70" fill="none" stroke="black" stroke-width="3"/>
+      <circle cx="40" cy="55" r="10" fill="none" stroke="black" stroke-width="3"/>
+      <text x="40" y="45" font-size="20" text-anchor="middle">P29</text>
+    </g>
+
+    <!-- P31 -->
+    <g transform="translate(240,0)">
+      <rect x="10" y="10" width="60" height="60" fill="none" stroke="black" stroke-width="3"/>
+      <circle cx="40" cy="40" r="15" fill="none" stroke="black" stroke-width="3"/>
+      <text x="40" y="45" font-size="20" text-anchor="middle">P31</text>
+    </g>
+
+    <!-- P37 -->
+    <g transform="translate(360,0)">
+      <polygon points="40,5 5,40 40,75 75,40" fill="none" stroke="black" stroke-width="3"/>
+      <text x="40" y="45" font-size="20" text-anchor="middle">P37</text>
+    </g>
+  </g>
+
+</svg>

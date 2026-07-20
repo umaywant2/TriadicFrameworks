@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "Dimensional Operator",
+  "type": "object",
+  "properties": {
+    "operator_id": { "type": "string" },
+    "dimension": { "type": "string" },
+    "function": { "type": "string" },
+    "triadic_requirements": { "type": "object" }
+  }
+}

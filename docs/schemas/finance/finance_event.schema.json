@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "Finance Event Log Entry",
+  "type": "object",
+  "properties": {
+    "event_id": { "type": "string" },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "event_type": { "type": "string" },
+    "instrument_id": { "type": "string" },
+    "portfolio_id": { "type": "string" },
+    "details": { "type": "object" },
+    "triadic_snapshot": { "type": "object" }
+  }
+}

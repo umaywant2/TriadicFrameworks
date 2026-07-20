@@ -1,0 +1,6 @@
+sdr_model: HackRF One (example)
+sample_rate: 20e6
+gain: 30 dB
+antenna: loop coil
+interface: USB3
+driver: SoapySDR

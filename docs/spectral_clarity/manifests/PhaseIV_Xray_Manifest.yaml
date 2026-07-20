@@ -1,0 +1,16 @@
+session_id: UUID_PLACEHOLDER
+timestamp: YYYY-MM-DD HH:MM:SS
+hardware_stack: HP Z440 + MX Linux + synchrotron access
+strobes:
+  - band: X-ray
+    source: synchrotron beamline
+    frequency: f_xray
+    phase: φ_xray
+    pulse_width: 100 ps
+sensors:
+  - type: X-ray imager
+    mode: gated
+  - type: scintillator + CCD
+    mode: gated
+notes: >
+  Phase IV manifest for X-ray stroboscopy runs.

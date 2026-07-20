@@ -1,0 +1,97 @@
+```json
+{
+  "module": "RTT_Emotions_Part_E",
+  "version": "1.0.0",
+  "parent": "emotions_module.json",
+  "category": "rtt-emotional-dynamics.part-e",
+  "summary": "Drift emotions (set E): 10 destabilizing emotional operators.",
+  "description": "Part E of the RTT Emotions Module. Contains 10 drift emotions with RTT equations, alignment triads, drift effects, and transition conditions. These emotions increase drift and reduce coherence.",
+
+  "emotions": {
+
+    "anger": {
+      "equation": "A_ngr = k_ang * σ * (D + ΔO - R)",
+      "regime": "drift",
+      "alignment_triad": { "self": -1, "other": -1, "world": 0 },
+      "drift_effect": "increases",
+      "transition": "A_ngr > threshold → drift escalation"
+    },
+
+    "fear": {
+      "equation": "F_ear = k_fear * σ * (D_threat + ΔO_unknown)",
+      "regime": "drift",
+      "alignment_triad": { "self": -1, "other": 0, "world": -1 },
+      "drift_effect": "increases",
+      "transition": "F_ear > threshold → drift"
+    },
+
+    "shame": {
+      "equation": "Sh = k_sh * σ * (A_s_negative + ΔO_social)",
+      "regime": "drift",
+      "alignment_triad": { "self": -1, "other": -1, "world": 0 },
+      "drift_effect": "increases",
+      "transition": "Sh > threshold → collapse of self-alignment"
+    },
+
+    "guilt": {
+      "equation": "G_lt = k_glt * σ * (A_o - A_s_negative)",
+      "regime": "drift",
+      "alignment_triad": { "self": -1, "other": 1, "world": 0 },
+      "drift_effect": "increases",
+      "transition": "G_lt > threshold → drift unless repaired"
+    },
+
+    "despair": {
+      "equation": "D_sp = k_dsp * σ * (D + |R - C|)",
+      "regime": "drift",
+      "alignment_triad": { "self": -1, "other": 0, "world": -1 },
+      "drift_effect": "increases",
+      "transition": "D_sp > threshold → deep drift"
+    },
+
+    "jealousy": {
+      "equation": "J_ls = k_jls * σ * (A_o - A_s + ΔO)",
+      "regime": "drift",
+      "alignment_triad": { "self": -1, "other": -1, "world": 0 },
+      "drift_effect": "increases",
+      "transition": "J_ls > threshold → drift escalation"
+    },
+
+    "envy": {
+      "equation": "E_nvy = k_envy * σ * (A_o - A_s)",
+      "regime": "drift",
+      "alignment_triad": { "self": -1, "other": -1, "world": 0 },
+      "drift_effect": "increases",
+      "transition": "E_nvy > threshold → drift"
+    },
+
+    "resentment": {
+      "equation": "R_sent = k_rsent * σ * (D + A_o_negative)",
+      "regime": "drift",
+      "alignment_triad": { "self": -1, "other": -1, "world": 0 },
+      "drift_effect": "increases",
+      "transition": "R_sent > threshold → drift"
+    },
+
+    "disgust": {
+      "equation": "D_sg = k_dsg * σ * (ΔO_repulsion + D)",
+      "regime": "drift",
+      "alignment_triad": { "self": -1, "other": -1, "world": -1 },
+      "drift_effect": "increases",
+      "transition": "D_sg > threshold → drift"
+    },
+
+    "contempt": {
+      "equation": "C_tmp = k_ctmp * σ * (A_s - A_o_negative)",
+      "regime": "drift",
+      "alignment_triad": { "self": 1, "other": -1, "world": 0 },
+      "drift_effect": "increases",
+      "transition": "C_tmp > threshold → drift"
+    }
+
+  },
+
+  "status": "complete",
+  "license": "Open educational use permitted"
+}
+```

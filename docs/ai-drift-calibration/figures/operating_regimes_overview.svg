@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-label="Operating regimes overview schematic">
+  <defs>
+    <style>
+      .box { fill: #ffffff; stroke: #111827; stroke-width: 4; }
+      .inner { fill: #f9fafb; stroke: #111827; stroke-width: 3; }
+      .title { font: 700 34px system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill: #111827; letter-spacing: 0.5px; }
+      .h2 { font: 700 26px system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill: #111827; }
+      .txt { font: 500 24px system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill: #111827; }
+      .muted { fill: #374151; }
+      .label { font: 600 22px system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; fill: #111827; }
+      .arrow { stroke: #111827; stroke-width: 4; fill: none; marker-end: url(#arrowhead); }
+      .accent { stroke: #2563eb; }
+      .accentText { fill: #1d4ed8; }
+    </style>
+
+    <marker id="arrowhead" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto">
+      <polygon points="0,0 12,4 0,8" fill="#111827"/>
+    </marker>
+  </defs>
+
+  <!-- Outer container -->
+  <rect x="60" y="60" width="1080" height="580" rx="18" class="box"/>
+
+  <!-- Title -->
+  <text x="600" y="120" text-anchor="middle" class="title">DECLARED OPERATING REGIME</text>
+
+  <!-- Inner coherence envelope -->
+  <rect x="170" y="170" width="860" height="360" rx="16" class="inner"/>
+  <text x="600" y="220" text-anchor="middle" class="h2">Coherence envelope</text>
+
+  <!-- Drift block -->
+  <text x="240" y="305" class="txt">Drift</text>
+  <text x="320" y="305" class="txt muted">(bounded exploration)</text>
+
+  <!-- Loop arrow (bounded drift) -->
+  <path d="M 315 340 C 260 365, 260 425, 315 450" class="arrow accent"/>
+  <path d="M 315 450 C 370 425, 370 365, 315 340" class="arrow accent"/>
+  <text x="395" y="405" class="label accentText">↺</text>
+
+  <!-- Paradox to re-alignment -->
+  <text x="240" y="420" class="txt">Paradox</text>
+  <path d="M 355 412 L 520 412" class="arrow"/>
+  <text x="545" y="420" class="txt">Structural re-alignment</text>
+
+  <!-- Small note inside envelope -->
+  <text x="240" y="495" class="label muted">Declared assumptions constrain interpretation, not creativity.</text>
+
+  <!-- Regime exit -->
+  <path d="M 600 530 L 600 590" class="arrow"/>
+  <text x="600" y="628" text-anchor="middle" class="txt">Regime exit → classified failure (not error)</text>
+</svg>

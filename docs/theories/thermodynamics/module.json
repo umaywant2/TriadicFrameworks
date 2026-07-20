@@ -1,0 +1,103 @@
+{
+  "ai.module": "thermodynamics",
+  "ai.version": "1.0",
+  "ai.purpose": "Provide a regime-aware, substrate-level interface to Thermodynamics as the grammar of temperature, entropy, free energy, and coherence.",
+  "ai.keywords": [
+    "thermodynamics",
+    "temperature",
+    "entropy",
+    "free energy",
+    "equilibrium",
+    "substrate force",
+    "regime transitions",
+    "triadic frameworks"
+  ],
+
+  "identity": {
+    "name": "Thermodynamics",
+    "category": "Scientific Theory",
+    "summary": "A substrate-level grammar describing how temperature, entropy, and free energy shape coherence, flow, and regime behavior.",
+    "regime": ["R2→R4", "R2", "R3", "R4"],
+    "status": "canon-ready"
+  },
+
+  "lineage": {
+    "originators": [
+      "Sadi Carnot",
+      "Rudolf Clausius",
+      "Ludwig Boltzmann",
+      "Josiah Willard Gibbs"
+    ],
+    "historical_period": "19th–20th Century",
+    "source_domain": "Physics, Statistical Mechanics",
+    "related_theories": [
+      "statistical_mechanics",
+      "information_theory",
+      "quantum_mechanics",
+      "cosmology"
+    ],
+    "notes": "Thermodynamics is reinterpreted as a substrate grammar: temperature as a force, entropy as a boundary, free energy as a coherence driver."
+  },
+
+  "operators": {
+    "primary": [
+      "temperature_operator",
+      "entropy_operator",
+      "free_energy_operator",
+      "equilibrium_operator",
+      "heat_flow_operator"
+    ],
+    "secondary": [
+      "partition_function",
+      "state_space_volume",
+      "gradient_operator",
+      "dissipation_operator"
+    ],
+    "description": "Operators describe how temperature, entropy, and free energy govern coherence, flow, and regime transitions."
+  },
+
+  "drift": {
+    "risks": [
+      "treating entropy as disorder",
+      "interpreting temperature as particle motion only",
+      "assuming equilibrium is universal",
+      "overextending thermodynamics into R1"
+    ],
+    "boundaries": [
+      "temperature is a substrate force",
+      "entropy defines regime boundaries",
+      "free energy governs coherence vs. dispersion",
+      "thermodynamics collapses in R1"
+    ]
+  },
+
+  "coherence": {
+    "invariants": [
+      "energy conservation",
+      "monotonic entropy behavior",
+      "free energy minimization",
+      "predictable equilibrium structure"
+    ],
+    "failure_modes": [
+      "runaway dissipation",
+      "entropy collapse",
+      "non-equilibrium instability",
+      "regime transition breakdown"
+    ]
+  },
+
+  "cross_module": {
+    "supports": [
+      "chemistry",
+      "biology",
+      "cosmology",
+      "information_theory"
+    ],
+    "supported_by": [
+      "statistical_mechanics",
+      "quantum_mechanics",
+      "regime_awareness"
+    ],
+    "integration_notes": "Thermodynamics integrates with RTT engines as a substrate grammar operating in R2→R4, governing coherence, flow, and constraint across scales."
+  }
+}

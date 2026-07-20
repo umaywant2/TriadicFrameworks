@@ -1,0 +1,81 @@
+## ✅ **drift_map.svg (v1.0)**  
+### *Canonical SVG Drift Map — D1 → D2 → D3 → D4*
+
+<img width="598" height="245" alt="drift_map_svg" src="https://github.com/user-attachments/assets/e639d0e2-fa70-43f9-a755-33a7a35284c7" />
+
+```svg
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="880" height="360" viewBox="0 0 880 360"
+     xmlns="http://www.w3.org/2000/svg"
+     font-family="Arial, sans-serif">
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="440" y="40" text-anchor="middle"
+        font-size="26" font-weight="bold">
+    Drift Map — D1 → D2 → D3 → D4
+  </text>
+
+  <!-- Substrate Nodes -->
+  <g font-size="20" font-weight="bold">
+    <text x="100"  y="150">S</text>
+    <text x="260"  y="150">C</text>
+    <text x="420"  y="150">H</text>
+    <text x="580"  y="150">So</text>
+    <text x="740"  y="150">A</text>
+  </g>
+
+  <!-- Drift Arrows -->
+  <!-- D1 -->
+  <line x1="120" y1="145" x2="240" y2="145"
+        stroke="#000" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="180" y="180" text-anchor="middle" font-size="16">D1</text>
+
+  <!-- D2 -->
+  <line x1="280" y1="145" x2="400" y2="145"
+        stroke="#000" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="340" y="180" text-anchor="middle" font-size="16">D2</text>
+
+  <!-- D3 -->
+  <line x1="440" y1="145" x2="560" y2="145"
+        stroke="#000" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="500" y="180" text-anchor="middle" font-size="16">D3</text>
+
+  <!-- D4 -->
+  <line x1="600" y1="145" x2="720" y2="145"
+        stroke="#000" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="660" y="180" text-anchor="middle" font-size="16">D4</text>
+
+  <!-- Arrowhead Definition -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10"
+            refX="10" refY="3" orient="auto" fill="#000">
+      <path d="M0,0 L10,3 L0,6 Z"/>
+    </marker>
+  </defs>
+
+  <!-- Labels -->
+  <g font-size="14">
+    <text x="100" y="210" text-anchor="middle">Symbolic</text>
+    <text x="260" y="210" text-anchor="middle">Cognitive</text>
+    <text x="420" y="210" text-anchor="middle">Harmonic</text>
+    <text x="580" y="210" text-anchor="middle">Social</text>
+    <text x="740" y="210" text-anchor="middle">Atlas</text>
+  </g>
+
+</svg>
+```
+
+---
+
+## What this SVG gives you
+- **Valid XML** (GitHub will render it)  
+- **Clear drift arrows** S → C → H → So → A  
+- **Labeled drift types** D1, D2, D3, D4  
+- **Substrate labels** (Symbolic, Cognitive, Harmonic, Social, Atlas)  
+- **Matches all drift logic** defined across the HSP suite  
+- **Zero drift, zero recursion, zero echo‑pressure** in the diagram itself  
+
+This is the canonical drift map for v1.0.

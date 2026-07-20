@@ -1,0 +1,29 @@
+{
+  "rttcode_id": "RTT_STRUCTURAL_DETECTION_v1",
+  "operator": "STRUCTURAL_DETECTION_OPERATOR",
+  "purpose": "Detect structural motifs, boundaries, invariants, anomalies, and regime hints.",
+  "inputs": {
+    "accepted_formats": ["text", "code", "json", "logs", "schemas", "symbolic_sequences"],
+    "noise_tolerance": "high",
+    "incomplete_data": true
+  },
+  "outputs": {
+    "motifs_detected": "array",
+    "operator_signatures": "array",
+    "invariants": "array",
+    "anomalies": "array",
+    "regime_hints": "array",
+    "confidence": "number",
+    "notes": "string"
+  },
+  "guarantees": [
+    "no semantic interpretation",
+    "no domain assumptions",
+    "structure-only detection"
+  ],
+  "failure_modes": [
+    "noise overwhelms structure",
+    "motifs incomplete",
+    "conflicting signals"
+  ]
+}

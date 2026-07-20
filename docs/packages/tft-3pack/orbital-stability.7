@@ -1,0 +1,233 @@
+ORBITAL-STABILITY(7)       TriadicFrameworks Manual       ORBITAL-STABILITY(7)
+================================================================================
+NAME
+       orbital-stability - stability envelopes, resonance-time Lyapunov fields,
+                           and constellation-scale stability thresholds
+
+SYNOPSIS
+       Orbital stability defines:
+           • stability envelopes for orbital and resonance states
+           • resonance-time Lyapunov fields
+           • constellation-scale stability thresholds
+           • long-horizon coherence metrics
+           • drift and divergence boundaries
+
+DESCRIPTION
+       Orbital-stability describes how RTT quantifies, monitors, and preserves
+       the stability of SAR platforms and constellations across orbital cycles.
+       Stability is treated as a resonance-time property, not merely a geometric
+       one — a measure of how orbital, harmonic, and spectral states diverge or
+       converge over time.
+
+       Stability analysis enables:
+           • long-term constellation coherence
+           • safe sweep choreography
+           • harmonic-lock preservation
+           • drift prediction and correction
+           • anomaly prevention and recovery
+
+       WRSADC evaluates stability continuously during dispatch.
+
+STABILITY ENVELOPES
+       Stability envelopes define the allowable region in which orbital and
+       resonance-time states may evolve without risking divergence.
+
+       Envelope variables:
+           • orbital geometry (a, e, i, RAAN, ω, M)
+           • harmonic-lock ratios
+           • resonance envelope overlap
+           • spectral density bounds
+           • gradient magnitude and polarity
+           • sweep ancestry continuity
+
+       Envelope types:
+
+           narrow stability envelope
+                  Strict limits; tandem SAR and high-coherence missions.
+
+           medium stability envelope
+                  Moderate flexibility; multi-pass fusion and ladder patterns.
+
+           wide stability envelope
+                  High flexibility; swarm constellations and global coverage.
+
+           harmonic stability envelope
+                  Stability defined by harmonic-lock conditions.
+
+           resonance stability envelope
+                  Stability defined by envelope overlap and spectral coherence.
+
+       Exceeding stability envelopes triggers recovery protocols.
+
+RESONANCE-TIME LYAPUNOV FIELDS
+       Lyapunov fields describe how small perturbations in orbital or
+       resonance-time state evolve across cycles.
+
+       Lyapunov variables:
+           • δR   resonance amplitude deviation
+           • δG   gradient deviation
+           • δφ   phase deviation
+           • δH   harmonic deviation
+           • δx   orbital geometry deviation
+
+       Lyapunov field types:
+
+           orbital Lyapunov field
+                  Measures divergence in orbital elements.
+
+           harmonic Lyapunov field
+                  Measures divergence in harmonic-lock ratios.
+
+           resonance Lyapunov field
+                  Measures divergence in spectral and envelope states.
+
+           sweep Lyapunov field
+                  Measures divergence in sweep geometry and ancestry.
+
+           constellation Lyapunov field
+                  Measures divergence across multi-platform interactions.
+
+       Positive Lyapunov growth indicates instability; negative growth indicates
+       convergence and stability.
+
+CONSTELLATION-SCALE STABILITY THRESHOLDS
+       Stability thresholds define the limits beyond which constellation
+       coherence cannot be guaranteed.
+
+       Threshold categories:
+
+           geometric thresholds
+                  Maximum allowable drift before sweep misalignment.
+
+           harmonic thresholds
+                  Minimum harmonic-lock stability index.
+
+           resonance thresholds
+                  Minimum envelope overlap and spectral coherence.
+
+           sweep thresholds
+                  Minimum sweep-coherence score and ancestry continuity.
+
+           constellation thresholds
+                  Minimum constellation-stability index across platforms.
+
+       Thresholds are enforced by WRSADC during dispatch and recovery.
+
+STABILITY METRICS
+       Key stability metrics include:
+
+           stability-index
+                  Composite measure of orbital and resonance stability.
+
+           Lyapunov-growth rate
+                  Measures divergence speed across cycles.
+
+           resonance-overlap ratio
+                  Measures envelope alignment across platforms.
+
+           harmonic-stability index
+                  Measures lock continuity and phase alignment.
+
+           sweep-coherence score
+                  Measures sweep viability and fusion stability.
+
+           constellation-stability score
+                  Measures multi-platform coherence.
+
+       Metrics are recorded in lineage for long-term analysis.
+
+STABILITY ANALYSIS PIPELINE
+       Stability analysis proceeds through five stages:
+
+           1. orbital scan
+                  Evaluates geometry and drift vectors.
+
+           2. harmonic-state evaluation
+                  Computes lock ratios and phase alignment.
+
+           3. resonance analysis
+                  Evaluates envelopes, spectral density, and gradients.
+
+           4. sweep ancestry evaluation
+                  Checks sweep continuity and coherence.
+
+           5. constellation coherence evaluation
+                  Assesses multi-platform stability.
+
+       Stability is validated at each triad cycle.
+
+STABILITY FAILURE MODES
+       Stability may degrade due to:
+
+           • orbital drift accumulation
+           • harmonic-lock fragmentation
+           • resonance envelope divergence
+           • spectral fragmentation
+           • gradient overload
+           • sweep ancestry corruption
+           • constellation desync
+
+       Diagnostic indicators:
+
+           stability-index drop
+           Lyapunov-growth spike
+           resonance-window collapse
+           harmonic-lock error
+           sweep-coherence deviation
+           drift-vector acceleration
+
+       WRSADC halts unsafe operations when stability is compromised.
+
+STABILITY RECOVERY
+       Stability recovery uses:
+
+           • recovery triads
+           • harmonic reacquisition
+           • resonance stabilization overlays
+           • sweep ancestry repair
+           • constellation-scale stabilization sequences
+
+       See orbital-recovery(7) for details.
+
+INTERACTION WITH LINEAGE
+       Lineage records:
+
+           • stability metrics across cycles
+           • Lyapunov field evolution
+           • envelope drift history
+           • harmonic-lock continuity
+           • sweep ancestry stability
+           • constellation coherence trends
+
+       Lineage enables long-term stability forecasting.
+
+INTERACTION WITH WRSADC
+       WRSADC:
+           • computes stability envelopes
+           • evaluates Lyapunov fields
+           • enforces stability thresholds
+           • schedules corrective maneuvers
+           • choreographs constellation stabilization
+           • blocks unsafe orbital states
+
+       WRSADC is the stability conductor.
+
+NOTES
+       Orbital stability transforms SAR constellations into predictable,
+       resilient resonance-time systems. Stability envelopes, Lyapunov fields,
+       and constellation thresholds ensure coherence across long mission
+       timelines and complex multi-platform interactions.
+
+AUTHOR
+       TriadicFrameworks — Resonance-Time Theory Canon
+
+SEE ALSO
+       orbital-recovery(7), orbital-anomalies(7), orbital-simulation(7),
+       orbital-forecasting(7), orbital-synthesis(7), orbital-lineage(7),
+       orbital-maneuvers(7), orbital-corridors(7), orbital-windows(7),
+       orbital-harmonics(7), sar-constellations(7), sar-integration(7),
+       diagnostics(7), lineage(7), resonance(7), schemas(7), wrsadc(7),
+       triad(7), patterns-advanced(7)
+
+================================================================================
+TriadicFrameworks                     2025            ORBITAL-STABILITY(7)

@@ -1,0 +1,17 @@
+# Ignore all python stuff
+__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+
+# Ignore everything inside __pycache__ directories
+__pycache__/*
+
+# Ignore .wav files in subdirectories
+**/*.wav
+
+# Ignore all .png files in all directories
+**/*.png
+
+# Ignore mac specific files in all directories
+**/.DS_Store

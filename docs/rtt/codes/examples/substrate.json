@@ -1,0 +1,12 @@
+{
+  "domain": "substrate",
+  "artifact_type": "README",
+  "version": "v1.0.0",
+  "triad": {
+    "f_R": "0.83",
+    "tau_R": "118ms",
+    "Q_R": "0.91"
+  },
+  "url": "https://www.triadicframeworks.org/docs/resonance-substrate-model/",
+  "checksum": "A4F19C7E9B32D1A0"
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "AI Correction Layer",
+  "type": "object",
+  "properties": {
+    "layer_id": { "type": "string" },
+    "model_id": { "type": "string" },
+    "method": { "type": "string" },
+    "triadic_rebalancing": { "type": "object" },
+    "applied_at": { "type": "string", "format": "date-time" }
+  }
+}

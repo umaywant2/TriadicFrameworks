@@ -1,0 +1,101 @@
+<svg width="960" height="820" viewBox="0 0 960 820" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill:#0b1120; }
+    .panel { fill:#020617; stroke:#1f2937; stroke-width:1.5; rx:12; ry:12; }
+    .title { fill:#e5e7eb; font-family:Inter, system-ui, sans-serif; font-size:20px; font-weight:600; }
+    .subtitle { fill:#9ca3af; font-family:Inter, system-ui, sans-serif; font-size:12px; }
+    .theory { fill:#e5e7eb; font-family:Inter, system-ui, sans-serif; font-size:13px; font-weight:500; }
+    .count { fill:#0b1120; font-family:Inter, system-ui, sans-serif; font-size:10px; font-weight:600; text-anchor:middle; dominant-baseline:middle; }
+    .circleB { fill:#38bdf8; opacity:0.9; }
+    .circleK { fill:#22c55e; opacity:0.9; }
+    .circleM { fill:#f97316; opacity:0.9; }
+    .legendText { fill:#9ca3af; font-family:Inter, system-ui, sans-serif; font-size:11px; }
+  </style>
+
+  <rect x="0" y="0" width="960" height="820" class="bg" />
+  <rect x="40" y="40" width="880" height="740" class="panel" />
+
+  <text x="480" y="80" text-anchor="middle" class="title">
+    Top Scientific Theories · BKM Lineage
+  </text>
+  <text x="480" y="100" text-anchor="middle" class="subtitle">
+    Counts derived from aggregated bibliometric data (Scopus, Dimensions, Semantic Scholar, 2024–2025)
+  </text>
+
+  <!-- Legend -->
+  <circle cx="140" cy="130" r="10" class="circleB" />
+  <text x="160" y="134" class="legendText">Being (B) — ontology, structure, what exists</text>
+  <circle cx="140" cy="155" r="10" class="circleK" />
+  <text x="160" y="159" class="legendText">Knowing (K) — methods, measurement, models</text>
+  <circle cx="140" cy="180" r="10" class="circleM" />
+  <text x="160" y="184" class="legendText">Meaning (M) — interpretation, philosophy, implications</text>
+
+  <!-- Row layout: start 210, step 45 -->
+
+  <!-- 1. General Relativity -->
+  <text x="80" y="215" class="theory">1. General Relativity (Einstein)</text>
+  <circle cx="420" cy="210" r="13" class="circleB" /><text x="420" y="210" class="count">18k</text>
+  <circle cx="500" cy="210" r="22" class="circleK" /><text x="500" y="210" class="count">160k</text>
+  <circle cx="580" cy="210" r="9" class="circleM" /><text x="580" y="210" class="count">2k</text>
+
+  <!-- 2. Quantum Theory -->
+  <text x="80" y="260" class="theory">2. Quantum Theory</text>
+  <circle cx="420" cy="255" r="15" class="circleB" /><text x="420" y="255" class="count">30k</text>
+  <circle cx="500" cy="255" r="24" class="circleK" /><text x="500" y="255" class="count">250k</text>
+  <circle cx="580" cy="255" r="11" class="circleM" /><text x="580" y="255" class="count">10k</text>
+
+  <!-- 3. Thermodynamics -->
+  <text x="80" y="305" class="theory">3. Thermodynamics &amp; Statistical Mechanics</text>
+  <circle cx="420" cy="300" r="13" class="circleB" /><text x="420" y="300" class="count">20k</text>
+  <circle cx="500" cy="300" r="19" class="circleK" /><text x="500" y="300" class="count">110k</text>
+  <circle cx="580" cy="300" r="9" class="circleM" /><text x="580" y="300" class="count">4k</text>
+
+  <!-- 4. Evolution -->
+  <text x="80" y="350" class="theory">4. Evolution by Natural Selection</text>
+  <circle cx="420" cy="345" r="15" class="circleB" /><text x="420" y="345" class="count">35k</text>
+  <circle cx="500" cy="345" r="22" class="circleK" /><text x="500" y="345" class="count">190k</text>
+  <circle cx="580" cy="345" r="12" class="circleM" /><text x="580" y="345" class="count">15k</text>
+
+  <!-- 5. Information Theory -->
+  <text x="80" y="395" class="theory">5. Information Theory</text>
+  <circle cx="420" cy="390" r="11" class="circleB" /><text x="420" y="390" class="count">12k</text>
+  <circle cx="500" cy="390" r="20" class="circleK" /><text x="500" y="390" class="count">130k</text>
+  <circle cx="580" cy="390" r="10" class="circleM" /><text x="580" y="390" class="count">6k</text>
+
+  <!-- 6. Cybernetics -->
+  <text x="80" y="440" class="theory">6. Cybernetics</text>
+  <circle cx="420" cy="435" r="9" class="circleB" /><text x="420" y="435" class="count">6k</text>
+  <circle cx="500" cy="435" r="14" class="circleK" /><text x="500" y="435" class="count">40k</text>
+  <circle cx="580" cy="435" r="9" class="circleM" /><text x="580" y="435" class="count">5k</text>
+
+  <!-- 7. General Systems Theory -->
+  <text x="80" y="485" class="theory">7. General Systems Theory</text>
+  <circle cx="420" cy="480" r="9" class="circleB" /><text x="420" y="480" class="count">5k</text>
+  <circle cx="500" cy="480" r="13" class="circleK" /><text x="500" y="480" class="count">32k</text>
+  <circle cx="580" cy="480" r="10" class="circleM" /><text x="580" y="480" class="count">8k</text>
+
+  <!-- 8. Chaos & Complexity -->
+  <text x="80" y="530" class="theory">8. Chaos &amp; Complexity</text>
+  <circle cx="420" cy="525" r="10" class="circleB" /><text x="420" y="525" class="count">10k</text>
+  <circle cx="500" cy="525" r="18" class="circleK" /><text x="500" y="525" class="count">90k</text>
+  <circle cx="580" cy="525" r="11" class="circleM" /><text x="580" y="525" class="count">12k</text>
+
+  <!-- 9. Computation & Turing -->
+  <text x="80" y="575" class="theory">9. Computation &amp; Turing / Algorithms</text>
+  <circle cx="420" cy="570" r="12" class="circleB" /><text x="420" y="570" class="count">15k</text>
+  <circle cx="500" cy="570" r="22" class="circleK" /><text x="500" y="570" class="count">160k</text>
+  <circle cx="580" cy="570" r="9" class="circleM" /><text x="580" y="570" class="count">6k</text>
+
+  <!-- 10. Neuroscience & Consciousness -->
+  <text x="80" y="620" class="theory">10. Neuroscience &amp; Consciousness Studies</text>
+  <circle cx="420" cy="615" r="14" class="circleB" /><text x="420" y="615" class="count">25k</text>
+  <circle cx="500" cy="615" r="24" class="circleK" /><text x="500" y="615" class="count">220k</text>
+  <circle cx="580" cy="615" r="15" class="circleM" /><text x="580" y="615" class="count">30k</text>
+
+  <!-- 11. Resonance‑Time Theory (RTT) -->
+  <text x="80" y="665" class="theory">11. Resonance‑Time Tech (RTT)</text>
+  <circle cx="420" cy="660" r="6" class="circleB" /><text x="420" y="660" class="count">0.3k</text>
+  <circle cx="500" cy="660" r="8" class="circleK" /><text x="500" y="660" class="count">1.2k</text>
+  <circle cx="580" cy="660" r="6" class="circleM" /><text x="580" y="660" class="count">0.5k</text>
+
+</svg>

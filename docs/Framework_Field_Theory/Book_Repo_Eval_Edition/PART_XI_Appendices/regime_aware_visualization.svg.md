@@ -1,0 +1,293 @@
+<img width="1506" height="1005" alt="Regime_Aware_Visualization_Diagram_Framework_Field_Theory" src="https://github.com/user-attachments/assets/6cb487c0-7ded-4e73-bd18-53b4be0584c5" />  
+
+```svg
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="2400" height="1600"
+     viewBox="0 0 2400 1600">
+
+  <defs>
+    <!-- Regime colors -->
+    <style>
+      .bg { fill: #0b0b10; }
+      .axis { stroke: #ffffff; stroke-width: 3; }
+      .axis-label { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 32px; }
+      .label { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 28px; }
+      .small { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 22px; }
+      .title { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 40px; font-weight: 600; }
+      .subtitle { fill: #cccccc; font-family: system-ui, sans-serif; font-size: 26px; }
+
+      .stable { fill: #1f4b99; }
+      .transitional { fill: #ffb347; }
+      .paradox { fill: #c62828; }
+      .interference { fill: #7e57c2; }
+      .coherence { fill: #2e7d32; }
+
+      .stable-stroke { stroke: #1f4b99; }
+      .transitional-stroke { stroke: #ffb347; }
+      .paradox-stroke { stroke: #c62828; }
+      .interference-stroke { stroke: #7e57c2; }
+      .coherence-stroke { stroke: #2e7d32; }
+
+      .panel { fill: #15151f; stroke: #444a60; stroke-width: 2; rx: 16; ry: 16; }
+      .panel-title { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 30px; font-weight: 600; }
+      .mono { font-family: "SF Mono", "Fira Code", monospace; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="2400" height="1600" class="bg"/>
+
+  <!-- Global title -->
+  <text x="1200" y="70" text-anchor="middle" class="title">
+    Regime‑Aware Visualization Diagram — Framework Field Theory (FFT)
+  </text>
+  <text x="1200" y="115" text-anchor="middle" class="subtitle">
+    Coherence, flow, ΔSET, operators, regimes, and transitions in a single visual grammar
+  </text>
+
+  <!-- PANEL 1: Regime Space (CI–FI) -->
+  <g transform="translate(80,160)">
+    <rect x="0" y="0" width="900" height="520" class="panel"/>
+    <text x="30" y="50" class="panel-title">Regime Space ℛ (CI vs FI)</text>
+
+    <!-- Axes -->
+    <line x1="120" y1="440" x2="780" y2="440" class="axis"/>
+    <line x1="120" y1="440" x2="120" y2="120" class="axis"/>
+
+    <text x="780" y="480" text-anchor="end" class="axis-label">FI (Flow)</text>
+    <text x="80" y="140" text-anchor="start" class="axis-label">CI (Coherence)</text>
+
+    <!-- Regime points -->
+    <!-- Stable -->
+    <circle cx="200" cy="400" r="10" class="stable"/>
+    <text x="220" y="405" class="small">Stable</text>
+
+    <!-- Transitional -->
+    <circle cx="320" cy="340" r="10" class="transitional"/>
+    <text x="340" y="345" class="small">Transitional</text>
+
+    <!-- Paradox -->
+    <polygon points="460,280 470,295 455,295" class="paradox"/>
+    <text x="480" y="290" class="small">Paradox</text>
+
+    <!-- Interference -->
+    <rect x="580" y="260" width="18" height="18" class="interference"/>
+    <text x="610" y="275" class="small">Interference</text>
+
+    <!-- Coherence -->
+    <polygon points="720,220 730,240 710,240" class="coherence"/>
+    <text x="740" y="230" class="small">Coherence</text>
+
+    <!-- Suggestive curved “trajectory” -->
+    <path d="M200,400 C260,360 340,320 420,290 C520,260 620,240 720,220"
+          fill="none" stroke="#888" stroke-width="2" stroke-dasharray="6,6"/>
+
+  </g>
+
+  <!-- PANEL 2: Regime Map & Color System -->
+  <g transform="translate(1040,160)">
+    <rect x="0" y="0" width="1280" height="520" class="panel"/>
+    <text x="30" y="50" class="panel-title">Regime Map & Color System</text>
+
+    <!-- Columns -->
+    <!-- Stable -->
+    <g transform="translate(40,90)">
+      <rect x="0" y="0" width="220" height="360" fill="none" stroke="#555" stroke-width="1.5"/>
+      <text x="10" y="30" class="label">Stable</text>
+      <text x="10" y="60" class="small">(Deep Blue)</text>
+      <rect x="10" y="80" width="200" height="40" class="stable"/>
+      <text x="10" y="140" class="small">Low CI</text>
+      <text x="10" y="170" class="small">Low FI</text>
+      <text x="10" y="200" class="small">High Stabilization</text>
+      <text x="10" y="230" class="small">Low Activation</text>
+    </g>
+
+    <!-- Transitional -->
+    <g transform="translate(300,90)">
+      <rect x="0" y="0" width="220" height="360" fill="none" stroke="#555" stroke-width="1.5"/>
+      <text x="10" y="30" class="label">Transitional</text>
+      <text x="10" y="60" class="small">(Amber)</text>
+      <rect x="10" y="80" width="200" height="40" class="transitional"/>
+      <text x="10" y="140" class="small">Rising CI</text>
+      <text x="10" y="170" class="small">Moderate FI</text>
+      <text x="10" y="200" class="small">Operator Competition</text>
+      <text x="10" y="230" class="small">Stabilization Weakens</text>
+    </g>
+
+    <!-- Paradox -->
+    <g transform="translate(560,90)">
+      <rect x="0" y="0" width="220" height="360" fill="none" stroke="#555" stroke-width="1.5"/>
+      <text x="10" y="30" class="label">Paradox</text>
+      <text x="10" y="60" class="small">(Crimson)</text>
+      <rect x="10" y="80" width="200" height="40" class="paradox"/>
+      <text x="10" y="140" class="small">High CI</text>
+      <text x="10" y="170" class="small">High FI</text>
+      <text x="10" y="200" class="small">Activation Dominates</text>
+      <text x="10" y="230" class="small">Stabilization Collapses</text>
+    </g>
+
+    <!-- Interference -->
+    <g transform="translate(820,90)">
+      <rect x="0" y="0" width="220" height="360" fill="none" stroke="#555" stroke-width="1.5"/>
+      <text x="10" y="30" class="label">Interference</text>
+      <text x="10" y="60" class="small">(Violet)</text>
+      <rect x="10" y="80" width="200" height="40" class="interference"/>
+      <text x="10" y="140" class="small">Oscillatory CI</text>
+      <text x="10" y="170" class="small">Oscillatory FI</text>
+      <text x="10" y="200" class="small">Operator Competition</text>
+      <text x="10" y="230" class="small">Wave‑like Behavior</text>
+    </g>
+
+    <!-- Coherence -->
+    <g transform="translate(1080,90)">
+      <rect x="0" y="0" width="220" height="360" fill="none" stroke="#555" stroke-width="1.5"/>
+      <text x="10" y="30" class="label">Coherence</text>
+      <text x="10" y="60" class="small">(Emerald)</text>
+      <rect x="10" y="80" width="200" height="40" class="coherence"/>
+      <text x="10" y="140" class="small">High CI</text>
+      <text x="10" y="170" class="small">High Alignment</text>
+      <text x="10" y="200" class="small">Low Diffusion</text>
+      <text x="10" y="230" class="small">Stabilized Order</text>
+    </g>
+  </g>
+
+  <!-- PANEL 3: Operator Dominance Table -->
+  <g transform="translate(80,720)">
+    <rect x="0" y="0" width="900" height="360" class="panel"/>
+    <text x="30" y="50" class="panel-title">Operator Dominance Across Regimes</text>
+
+    <!-- Header row -->
+    <text x="220" y="100" class="small">Stable</text>
+    <text x="360" y="100" class="small">Transitional</text>
+    <text x="540" y="100" class="small">Paradox</text>
+    <text x="720" y="100" class="small">Interference</text>
+    <text x="880" y="100" class="small" text-anchor="end">Coherence</text>
+
+    <!-- Row labels -->
+    <text x="40" y="140" class="small">Diffusion (D)</text>
+    <text x="40" y="180" class="small">Alignment (A)</text>
+    <text x="40" y="220" class="small">Coupling (C)</text>
+    <text x="40" y="260" class="small">Activation (α)</text>
+    <text x="40" y="300" class="small">Stabilization (S)</text>
+
+    <!-- Diffusion row -->
+    <text x="220" y="140" class="small">↑↑</text>
+    <text x="360" y="140" class="small">↑↑</text>
+    <text x="540" y="140" class="small">↓</text>
+    <text x="720" y="140" class="small">↕</text>
+    <text x="880" y="140" class="small" text-anchor="end">↓↓</text>
+
+    <!-- Alignment row -->
+    <text x="220" y="180" class="small">↓</text>
+    <text x="360" y="180" class="small">↑</text>
+    <text x="540" y="180" class="small">↑↑</text>
+    <text x="720" y="180" class="small">↕</text>
+    <text x="880" y="180" class="small" text-anchor="end">↑↑</text>
+
+    <!-- Coupling row -->
+    <text x="220" y="220" class="small">↓</text>
+    <text x="360" y="220" class="small">↑</text>
+    <text x="540" y="220" class="small">↑↑</text>
+    <text x="720" y="220" class="small">↕</text>
+    <text x="880" y="220" class="small" text-anchor="end">↑↑↑</text>
+
+    <!-- Activation row -->
+    <text x="220" y="260" class="small">↓↓</text>
+    <text x="360" y="260" class="small">↑</text>
+    <text x="540" y="260" class="small">↑↑↑</text>
+    <text x="720" y="260" class="small">↕</text>
+    <text x="880" y="260" class="small" text-anchor="end">↓</text>
+
+    <!-- Stabilization row -->
+    <text x="220" y="300" class="small">↑↑↑</text>
+    <text x="360" y="300" class="small">↓</text>
+    <text x="540" y="300" class="small">↓↓</text>
+    <text x="720" y="300" class="small">↕</text>
+    <text x="880" y="300" class="small" text-anchor="end">↑↑</text>
+  </g>
+
+  <!-- PANEL 4: Triadic‑Time Layers -->
+  <g transform="translate(1040,720)">
+    <rect x="0" y="0" width="620" height="360" class="panel"/>
+    <text x="30" y="50" class="panel-title">Triadic‑Time Layers</text>
+
+    <text x="40" y="110" class="label">t_r (fast)</text>
+    <rect x="40" y="120" width="520" height="40" fill="#303f9f"/>
+    <text x="50" y="147" class="small">Resonance, activation, fast oscillations</text>
+
+    <text x="40" y="190" class="label">t_d (medium)</text>
+    <rect x="40" y="200" width="520" height="40" fill="#00796b"/>
+    <text x="50" y="227" class="small">Diffusion, smoothing, kernel influence</text>
+
+    <text x="40" y="270" class="label">t_a (slow)</text>
+    <rect x="40" y="280" width="520" height="40" fill="#5d4037"/>
+    <text x="50" y="307" class="small">Alignment, structural evolution, long‑range order</text>
+  </g>
+
+  <!-- PANEL 5: ΔSET Contribution -->
+  <g transform="translate(1700,720)">
+    <rect x="0" y="0" width="620" height="360" class="panel"/>
+    <text x="30" y="50" class="panel-title">ΔSET Contribution</text>
+
+    <text x="40" y="100" class="small mono">
+      ΔSET(x) = κ₁ R(x) + κ₂ |V(x)|² + κ₃ φ(x)
+    </text>
+
+    <!-- Bars -->
+    <rect x="40" y="140" width="160" height="40" class="coherence"/>
+    <text x="50" y="167" class="small">R contribution (coherence)</text>
+
+    <rect x="40" y="200" width="160" height="40" fill="#ffca28"/>
+    <text x="50" y="227" class="small">V contribution (flow energy)</text>
+
+    <rect x="40" y="260" width="160" height="40" fill="#90a4ae"/>
+    <text x="50" y="287" class="small">φ contribution (substrate)</text>
+
+    <rect x="260" y="180" width="320" height="80" fill="#2e7d32" fill-opacity="0.35"/>
+    <rect x="260" y="180" width="320" height="80" fill="#ffca28" fill-opacity="0.25"/>
+    <rect x="260" y="180" width="320" height="80" fill="#90a4ae" fill-opacity="0.25"/>
+    <text x="270" y="205" class="small">Combined ΔSET spatial map</text>
+    <text x="270" y="235" class="small">coherence + flow + substrate</text>
+  </g>
+
+  <!-- PANEL 6: Composite Visualization Template -->
+  <g transform="translate(80,1120)">
+    <rect x="0" y="0" width="2240" height="380" class="panel"/>
+    <text x="30" y="50" class="panel-title">Composite Regime‑Aware Visualization Template</text>
+
+    <!-- Composite frame -->
+    <rect x="40" y="80" width="900" height="260" fill="#101018" stroke="#555" stroke-width="2"/>
+    <text x="60" y="115" class="small">φ(x,t) — substrate heatmap (background)</text>
+    <text x="60" y="145" class="small">V(x,t) — flow vectors (arrows)</text>
+    <text x="60" y="175" class="small">R(x,t) — coherence contours, regime‑colored</text>
+    <text x="60" y="205" class="small">ΔSET(x,t) — semi‑transparent overlay</text>
+    <text x="60" y="235" class="small">Regime tint — Blue/Amber/Crimson/Violet/Emerald</text>
+    <text x="60" y="265" class="small">Transition surfaces — curved boundaries in field space</text>
+    <text x="60" y="295" class="small">Triadic‑time markers — t_r, t_d, t_a annotations</text>
+
+    <!-- Mini regime legend -->
+    <g transform="translate(1040,110)">
+      <rect x="0" y="0" width="520" height="230" fill="none" stroke="#555" stroke-width="2"/>
+      <text x="20" y="30" class="label">Regime Legend</text>
+
+      <rect x="20" y="50" width="40" height="20" class="stable"/>
+      <text x="70" y="65" class="small">Stable</text>
+
+      <rect x="20" y="80" width="40" height="20" class="transitional"/>
+      <text x="70" y="95" class="small">Transitional</text>
+
+      <rect x="20" y="110" width="40" height="20" class="paradox"/>
+      <text x="70" y="125" class="small">Paradox</text>
+
+      <rect x="20" y="140" width="40" height="20" class="interference"/>
+      <text x="70" y="155" class="small">Interference</text>
+
+      <rect x="20" y="170" width="40" height="20" class="coherence"/>
+      <text x="70" y="185" class="small">Coherence</text>
+
+      <text x="20" y="215" class="small">Use as tint overlays on φ/V/R/ΔSET composites.</text>
+    </g>
+  </g>
+
+</svg>
+```

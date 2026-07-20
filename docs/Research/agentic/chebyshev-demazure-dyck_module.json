@@ -1,0 +1,121 @@
+{
+  "ai.module": "chebyshev_demazure_dyck_rtt",
+  "ai.version": "1.0",
+  "ai.purpose": "RTT structural map of the paper 'Chebyshev quotients, Demazure multiplicities, and Dyck-path models'.",
+  "ai.source.pdf": "https://arxiv.org/pdf/2604.25246",
+  "ai.keywords": [
+    "Chebyshev quotients",
+    "Demazure multiplicities",
+    "fusion products",
+    "sl2[t]",
+    "Dyck paths",
+    "matchings",
+    "strip walks",
+    "eventual positivity",
+    "orthogonal polynomials",
+    "AxiomProver",
+    "Lean formalization"
+  ],
+
+  "ai.module.summary": "This module exposes the regime structure behind the Chebyshev-quotient formula for numerical Demazure multiplicities, the eventual-positivity dichotomy, and the signed/unsigned combinatorial models involving matchings, strip walks, and bounded Dyck paths.",
+
+  "ai.regimes": {
+    "fusion_product_regime": {
+      "description": "Demazure flags for sl2[t] fusion products produce graded multiplicity polynomials.",
+      "evidence": "Definition of V(ξ) and Demazure flag structure. "
+    },
+    "chebyshev_quotient_regime": {
+      "description": "Numerical multiplicities are coefficients of rational functions built from Chebyshev-type polynomials.",
+      "evidence": "Proposition 1 expresses Vξ→m_μ(1) as a coefficient of pm−μ0−1 pξ / pm^(μ1+1). "
+    },
+    "eventual_positivity_regime": {
+      "description": "Coefficient sequences of Chebyshev quotients either terminate or become strictly positive.",
+      "evidence": "Theorem 1.1: polynomial vs eventually positive dichotomy. "
+    },
+    "matching_walk_regime": {
+      "description": "Coefficients admit a signed combinatorial model using matchings and bounded strip walks.",
+      "evidence": "Theorem 1.2: signed matching + strip-walk formula. "
+    },
+    "dyck_path_factorization_regime": {
+      "description": "Certain families factor into Dyck-path-compatible pieces, yielding unsigned models.",
+      "evidence": "Theorem 1.3: Dyck-path factorization and positivity. "
+    },
+    "formalization_regime": {
+      "description": "AxiomProver autoformalizes the main theorems in Lean.",
+      "evidence": "Appendix: autonomous Lean proofs for Theorems 1.1–1.3. "
+    }
+  },
+
+  "ai.tensions": {
+    "representation_vs_polynomial": {
+      "description": "Representation-theoretic multiplicities vs Chebyshev-quotient analytic structure.",
+      "paper_alignment": "Proposition 1 bridges Demazure flags and Chebyshev quotients."
+    },
+    "signed_vs_unsigned": {
+      "description": "Signed matching/walk model vs unsigned Dyck-path models.",
+      "paper_alignment": "Theorem 1.2 vs Theorem 1.3."
+    },
+    "root_behavior_vs_combinatorics": {
+      "description": "Root structure of pm controls positivity; combinatorics explains coefficients.",
+      "paper_alignment": "Section 2 (roots) vs Sections 3–5 (combinatorics)."
+    },
+    "formal_vs_informal": {
+      "description": "Human narrative vs Lean autoformalization.",
+      "paper_alignment": "Appendix on AxiomProver."
+    }
+  },
+
+  "ai.transitions": {
+    "demazure_to_chebyshev_transition": {
+      "description": "Translate graded multiplicities into Chebyshev-quotient coefficient extraction.",
+      "paper_alignment": "Proposition 1."
+    },
+    "quotient_to_positivity_transition": {
+      "description": "Analyze roots of pm to determine eventual positivity.",
+      "paper_alignment": "Theorem 1.1."
+    },
+    "positivity_to_signed_model_transition": {
+      "description": "Expand numerator via matchings and denominator via strip walks.",
+      "paper_alignment": "Theorem 1.2."
+    },
+    "signed_to_unsigned_transition": {
+      "description": "Identify factorization patterns yielding Dyck-path models.",
+      "paper_alignment": "Theorem 1.3."
+    },
+    "informal_to_lean_transition": {
+      "description": "AxiomProver converts natural-language theorems into Lean proofs.",
+      "paper_alignment": "Appendix."
+    }
+  },
+
+  "ai.operators": {
+    "chebyshev_coefficient_operator": {
+      "type": "operator",
+      "role": "Extracts coefficients from Chebyshev quotients representing multiplicities."
+    },
+    "root_analysis_operator": {
+      "type": "operator",
+      "role": "Determines eventual positivity via smallest root of pm."
+    },
+    "matching_operator": {
+      "type": "operator",
+      "role": "Expands pr(x) as matching polynomials of path graphs."
+    },
+    "strip_walk_operator": {
+      "type": "operator",
+      "role": "Expands 1/pm(x) via bounded strip walks."
+    },
+    "dyck_factor_operator": {
+      "type": "operator",
+      "role": "Identifies Dyck-path-compatible factorizations."
+    },
+    "formalization_operator": {
+      "type": "operator",
+      "role": "Maps informal statements to Lean-verifiable structures."
+    }
+  },
+
+  "ai.audience": "Researchers in representation theory, algebraic combinatorics, orthogonal polynomials, and formal verification.",
+  "ai.contact.github": "https://github.com/TriadicFrameworks",
+  "ai.license": "Open educational use permitted"
+}

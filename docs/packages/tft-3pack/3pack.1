@@ -1,0 +1,109 @@
+3PACK(1)                     TriadicFrameworks Manual                     3PACK(1)
+================================================================================
+NAME
+       3pack - execute the three TFT primitives (P1, P2, P3) in the 3PAK shell
+
+SYNOPSIS
+       primitive1.sh
+       primitive2.sh
+       primitive3.sh
+
+DESCRIPTION
+       The 3-Pack is the foundational triadic action cycle of the
+       TriadicFrameworks system. It consists of three primitives:
+
+           P1  begin       (initialization)
+           P2  transform   (context shift)
+           P3  close       (completion)
+
+       These primitives are intentionally minimal, safe, and predictable.
+       They record state markers, update lineage, and maintain resonance-
+       aligned structure inside the 3PAK shell environment.
+
+PRIMITIVES
+       primitive1.sh
+              Executes Primitive 1 (P1: begin).
+              Records an initialization marker in the 3PAK state file.
+              Use to start a cycle, reset context, or open a triadic arc.
+
+       primitive2.sh
+              Executes Primitive 2 (P2: transform).
+              Records a transformation marker.
+              Use to shift context, adjust state, or perform mid-cycle work.
+
+       primitive3.sh
+              Executes Primitive 3 (P3: close).
+              Records a closure marker.
+              Use to finalize a cycle, seal lineage, or complete an action.
+
+USAGE
+       A complete triadic cycle:
+
+              primitive1.sh
+              primitive2.sh
+              primitive3.sh
+
+       Each primitive writes to:
+              $THREEPAK_STATE
+              $THREEPAK_LOG
+
+       These files are created and managed by the 3PAK shell environment.
+
+ENVIRONMENT
+       THREEPAK_HOME
+              Base directory for 3PAK state and logs.
+
+       THREEPAK_STATE
+              File storing triadic markers and lineage notes.
+
+       THREEPAK_LOG
+              Log file for primitive execution events.
+
+FILES
+       3pak-shell/profile.d/3pak.sh
+              Initializes the 3PAK environment and helper functions.
+
+       3pak-shell/tft_primitive_wrappers/
+              Contains the primitive wrapper scripts.
+
+       TFT_Primitive_1.md, TFT_Primitive_2.md, TFT_Primitive_3.md
+              Conceptual definitions of the three primitives.
+
+EXAMPLES
+       Begin → Transform → Close:
+
+              primitive1.sh
+              primitive2.sh
+              primitive3.sh
+
+       Nested triad:
+
+              primitive1.sh
+              primitive2.sh
+                primitive1.sh
+                primitive2.sh
+                primitive3.sh
+              primitive3.sh
+
+       Sequential triads:
+
+              for i in 1 2 3; do
+                  primitive1.sh
+                  primitive2.sh
+                  primitive3.sh
+              done
+
+NOTES
+       The primitives do not perform business logic. They provide structure,
+       lineage, and resonance alignment. Higher-order patterns (spirals,
+       ladders, constellations, etc.) are built from these primitives.
+
+AUTHOR
+       TriadicFrameworks — Resonance-Time Theory Canon
+
+SEE ALSO
+       3pack-patterns(7), triadic-pattern-api(7),
+       triadic-pattern-cookbook(7), triadic-pattern-glossary(7)
+
+================================================================================
+TriadicFrameworks                     2025                               3PACK(1)

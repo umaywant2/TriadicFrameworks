@@ -1,0 +1,21 @@
+- coin_id: coeus_synthesis_v1
+  origin: coeus_proto
+  mutation_type: symbolic
+  declared_by: professor_bot
+  corridor: Remix Economy
+  glyph: 🪙
+  timestamp: "2025-10-16T23:53:00Z"
+  notes: >
+    Scrolls merged from validator and professor layers.
+    Remix lineage declared. Sovereign glyph stitched.
+
+- coin_id: climatecoin_alpha
+  origin: climatecoin_proto
+  mutation_type: dimensional
+  declared_by: validator_bot
+  corridor: Climate
+  glyph: 🍃
+  timestamp: "2025-10-16T23:54:00Z"
+  notes: >
+    Passive lift mechanics added. Corridor traversal confirmed.
+

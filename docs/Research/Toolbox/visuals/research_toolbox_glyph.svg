@@ -1,0 +1,70 @@
+<svg width="240" height="240" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="glyph-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050509"/>
+      <stop offset="50%" stop-color="#11112A"/>
+      <stop offset="100%" stop-color="#1B1235"/>
+    </linearGradient>
+
+    <linearGradient id="glyph-ring" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7C4DFF"/>
+      <stop offset="50%" stop-color="#40C4FF"/>
+      <stop offset="100%" stop-color="#B388FF"/>
+    </linearGradient>
+
+    <style>
+      .glyph-bg { fill: url(#glyph-bg); }
+      .glyph-ring { fill: none; stroke: url(#glyph-ring); stroke-width: 3; }
+      .glyph-orbit { fill: none; stroke: #2E2E5E; stroke-width: 1.2; stroke-dasharray: 4 4; }
+      .glyph-node { fill: #141424; stroke: #7C4DFF; stroke-width: 1.4; }
+      .glyph-line { stroke: #40C4FF; stroke-width: 1.4; stroke-linecap: round; }
+      .glyph-label { font-family: system-ui, sans-serif; font-size: 9px; fill: #C8C8E8; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="240" height="240" class="glyph-bg"/>
+
+  <!-- Outer triadic ring -->
+  <circle cx="120" cy="120" r="90" class="glyph-ring"/>
+
+  <!-- Three orbits (substrate layers) -->
+  <circle cx="120" cy="120" r="60" class="glyph-orbit"/>
+  <circle cx="120" cy="120" r="40" class="glyph-orbit"/>
+  <circle cx="120" cy="120" r="22" class="glyph-orbit"/>
+
+  <!-- Triadic nodes: RTT/1, RTT/2, RTT/3 -->
+  <!-- Top node (RTT/1) -->
+  <g transform="translate(120,40)">
+    <circle r="10" class="glyph-node"/>
+    <text y="-14" text-anchor="middle" class="glyph-label">RTT/1</text>
+  </g>
+
+  <!-- Bottom-left node (RTT/2) -->
+  <g transform="translate(60,170)">
+    <circle r="10" class="glyph-node"/>
+    <text y="22" text-anchor="middle" class="glyph-label">RTT/2</text>
+  </g>
+
+  <!-- Bottom-right node (RTT/3) -->
+  <g transform="translate(180,170)">
+    <circle r="10" class="glyph-node"/>
+    <text y="22" text-anchor="middle" class="glyph-label">RTT/3</text>
+  </g>
+
+  <!-- Connecting lines (triadic engine) -->
+  <line x1="120" y1="40" x2="60" y2="170" class="glyph-line"/>
+  <line x1="120" y1="40" x2="180" y2="170" class="glyph-line"/>
+  <line x1="60" y1="170" x2="180" y2="170" class="glyph-line"/>
+
+  <!-- Central substrate node -->
+  <g transform="translate(120,120)">
+    <circle r="14" class="glyph-node"/>
+    <text y="3" text-anchor="middle" class="glyph-label">S1–S4</text>
+  </g>
+
+  <!-- Small labels for substrate + coherence -->
+  <text x="120" y="104" text-anchor="middle" class="glyph-label">substrate</text>
+  <text x="120" y="210" text-anchor="middle" class="glyph-label">research toolbox</text>
+</svg>
+

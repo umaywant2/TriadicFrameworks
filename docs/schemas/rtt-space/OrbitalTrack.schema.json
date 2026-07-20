@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "$id": "https://triadicframeworks.org/schemas/rtt-space/v1/OrbitalTrack.schema.json",
+  "title": "OrbitalTrack",
+  "type": "object",
+  "required": ["object_id", "timestamp", "position_km", "velocity_km_s"],
+  "properties": {
+    "object_id": { "type": "string" }, // NORAD ID → RTT objectId
+    "timestamp": { "type": "string", "format": "date-time" },
+
+    "position_km": {
+      "type": "object",
+      "properties": {
+        "x": { "type": "number" },
+        "y": { "type": "number" },
+        "z": { "type": "number" }
+      }
+    },
+
+    "velocity_km_s": {
+      "type": "object",
+      "properties": {
+        "vx": { "type": "number" },
+        "vy": { "type": "number" },
+        "vz": { "type": "number" }
+      }
+    },
+
+    "covariance": {
+      "type": "array",
+      "items": { "type": "number" }
+      // 6×6 flattened covariance matrix
+    },
+
+    "extensions": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}
+

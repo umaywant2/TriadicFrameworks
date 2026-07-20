@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "$id": "https://triadicframeworks.org/schemas/rsadi-gd-advanced/v1/TemporalEcho.schema.json",
+  "title": "TemporalEcho",
+  "type": "object",
+  "required": ["echo_type", "timestamp"],
+  "properties": {
+    "echo_type": {
+      "type": "string",
+      "enum": ["past", "future", "shadow", "loop"],
+      "description": "Type of temporal echo."
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Reference time for the echo."
+    },
+    "strength": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 255,
+      "description": "Echo intensity (RTT resonance analogue)."
+    },
+    "phase_offset": {
+      "type": "number",
+      "description": "Temporal phase shift relative to world time."
+    },
+    "extensions": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}
+

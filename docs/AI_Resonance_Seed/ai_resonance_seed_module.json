@@ -1,0 +1,78 @@
+{
+  "module": "AI Resonance Seed",
+  "version": "1.0",
+  "category": "ai-seed",
+  "summary": "Root ontology seed: minimal substrate, invariants, resonance-time primitives, schemas, emitters, lineage, validator, dashboards.",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "profile",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "primer.md",
+      "role": "profile",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "how_to_read.md",
+      "role": "profile",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "minimal_substrate.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "invariants.yaml",
+      "role": "signature",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "resonance_time_primitives.yaml",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "schemas/",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "emitters/",
+      "role": "extension",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "validator.md",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "lineage.md",
+      "role": "map",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "dashboards/",
+      "role": "map",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "migration.md",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "legacy_preservation.md",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "operator"
+    }
+  ]
+}

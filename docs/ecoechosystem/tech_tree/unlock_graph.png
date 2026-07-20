@@ -1,0 +1,275 @@
+# **EcoEchoSystem Unlock Graph — Conceptual Blueprint**
+
+This graph is the **visual backbone** of the entire tech tree. It shows how Tier 0 → Tier 1 → Tier 2 → Tier 3 → Tier 4 connect, and how each unlock depends on the substrate.
+
+A good unlock graph should be:
+
+- hierarchical  
+- directional  
+- dependency‑aware  
+- cross‑domain  
+- readable at a glance  
+- visually echoing the triadic structure  
+
+Below is the recommended layout.
+
+---
+
+## **Top‑Level Structure (Vertical Flow)**
+
+```
+Tier 4 — Civilization Unlocks
+        ↑
+Tier 3 — Cross‑Domain Unlocks
+        ↑
+Tier 2 — Domain Unlocks
+        ↑
+Tier 1 — Substrate Unlocks
+        ↑
+Tier 0 — Pre‑Existing Tools
+```
+
+Each tier feeds the one above it.
+
+---
+
+## **Tier 0 (Bottom Layer)**
+A wide base of fragmented tools:
+
+- Differential Equations  
+- Information Theory  
+- Cognitive Models  
+- Neuroscience Maps  
+- Relativity / Quantum  
+- Systems Theory  
+- Category Theory  
+- AI/Simulation Frameworks  
+
+**Visual:** A wide horizontal row of boxes, loosely connected.
+
+---
+
+## **Tier 1 (Substrate Layer)**
+Five core unlocks:
+
+- Triadic Substrate  
+- Regime Awareness  
+- Regime Transition Mechanics  
+- vST Alignment  
+- Substrate Event Bus  
+
+**Visual:**  
+A tight cluster of five nodes, all interconnected, forming the “substrate core.”
+
+This is the **keystone layer**.
+
+---
+
+## **Tier 2 (Domain Layer)**
+Six major domains:
+
+- Unified Psychology  
+- Substrate‑Aligned Physics  
+- Economics as Regime System  
+- Governance as Substrate Domain  
+- Multi‑Regime AI  
+- Biology as Regime System  
+
+**Visual:**  
+Six nodes arranged in a ring or arc above Tier 1, each with arrows pointing down to the substrate unlocks they depend on.
+
+---
+
+## **Tier 3 (Cross‑Domain Layer)**
+Six cross‑domain systems:
+
+- Regime Coupling Engine  
+- Multi‑Scale Simulation  
+- Cross‑Domain Tech Tree  
+- Predictive Modeling  
+- Social Dynamics  
+- Stability Modeling  
+
+**Visual:**  
+A web of nodes above Tier 2, with many‑to‑many arrows showing cross‑domain dependencies.
+
+This layer should look like a **mesh**.
+
+---
+
+## **Tier 4 (Civilization Layer)**
+Five civilization‑level unlocks:
+
+- Living Atlas of Everything  
+- Substrate‑Aligned Governance  
+- Civilization‑Scale Tech Tree  
+- Dimensional Medicine  
+- Planetary Stability Modeling  
+- Inter‑Regime Science  
+
+**Visual:**  
+A small cluster at the top, representing the “late game.”
+
+---
+
+## **Graph Style Recommendations**
+To make the PNG visually resonate with the EcoEchoSystem identity:
+
+- Use **triadic color coding**  
+  - Structure = blue  
+  - Activation = red/orange  
+  - Relational Time = green  
+
+- Use **layer shading** to distinguish tiers  
+- Use **curved arrows** for cross‑domain dependencies  
+- Use **solid arrows** for substrate dependencies  
+- Use **dashed arrows** for emergent unlocks  
+- Use **node halos** for Tier 1 (substrate) to emphasize importance  
+
+---
+
+## **Optional Enhancements**
+If you want the graph to feel like a Civilization tech tree:
+
+- Add “unlock icons”  
+- Add small glyphs for each domain  
+- Add regime‑transition markers  
+- Add a legend explaining arrow types  
+
+---
+
+## **What You Have Now**
+You have the **schema** — the conceptual structure of the unlock graph.
+
+---
+
+# **EcoEchoSystem Unlock Graph (ASCII Prototype)**
+
+```
+                          ┌────────────────────────────────────────┐
+                          │      TIER 4 — CIVILIZATION LEVEL       │
+                          └────────────────────────────────────────┘
+                                   /       |        |        \
+                                  /        |        |         \
+                                 v         v        v          v
+                 ┌────────────────────────────────────────────────────────────┐
+                 │  Living Atlas   Substrate Gov.   Civ Tech Tree             │
+                 │  Dimensional Med.   Planetary Stability   Inter‑Regime Sci │
+                 └────────────────────────────────────────────────────────────┘
+                                          ↑
+                                          │
+                         ┌──────────────────────────────────────────┐
+                         │     TIER 3 — CROSS‑DOMAIN UNLOCKS        │
+                         └──────────────────────────────────────────┘
+                               /     |        |        |       \
+                              /      |        |        |        \
+                             v       v        v        v         v
+                ┌──────────────────────────────────────────────────────────┐
+                │  Regime Coupling | Multi‑Scale Sim | Cross‑Domain Tree   │
+                │  Predictive Modeling | Social Dynamics | Stability Sys   │
+                └──────────────────────────────────────────────────────────┘
+                                          ↑
+                                          │
+                      ┌──────────────────────────────────────────────┐
+                      │          TIER 2 — DOMAIN UNLOCKS             │
+                      └──────────────────────────────────────────────┘
+                     /        |         |         |         |         \
+                    /         |         |         |         |          \
+                   v          v         v         v         v           v
+      ┌──────────────────────────────────────────────────────────────────────────┐
+      │  Psychology | Physics | Economics | Governance | AI/Agents | Biology     │
+      └──────────────────────────────────────────────────────────────────────────┘
+                                          ↑
+                                          │
+                   ┌──────────────────────────────────────────┐
+                   │     TIER 1 — SUBSTRATE UNLOCKS           │
+                   └──────────────────────────────────────────┘
+                     /        |         |         |         \
+                    /         |         |         |          \
+                   v          v         v         v           v
+     ┌──────────────────────────────────────────────────────────────────────────┐
+     │  Triadic Substrate | Regime Awareness | Regime Transitions | vST Align   │
+     │                        Substrate Event Bus (SEB)                         │
+     └──────────────────────────────────────────────────────────────────────────┘
+                                          ↑
+                                          │
+        ┌────────────────────────────────────────────────────────────────┐
+        │                   TIER 0 — PRE‑EXISTING TOOLS                  │
+        └────────────────────────────────────────────────────────────────┘
+       /     |       |        |        |        |        |        |       \
+      v      v       v        v        v        v        v        v        v
+ ┌──────────────────────────────────────────────────────────────────────────────┐
+ │   DiffEq | Info Theory | Cog Models | Neuroscience | Relativity | Quantum    │
+ │   Systems Theory | Category Theory | AI/Sim Frameworks                       │
+ └──────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+# **How to Read This Graph**
+- **Vertical flow = dependency chain**  
+  Tier 0 → Tier 1 → Tier 2 → Tier 3 → Tier 4  
+- **Horizontal clusters = parallel unlocks**  
+- **Arrows = substrate dependencies**  
+- **Spacing = conceptual distance**  
+- **Box width = conceptual weight**  
+
+This ASCII version is intentionally clean and symmetrical so you can translate it into a PNG later without losing structure.
+
+---
+
+──────────────────────────────────────────────────────────────
+ TRIADIC SUBSTRATE COLOR LEGEND
+──────────────────────────────────────────────────────────────
+
+   ■  BLUE  —  STRUCTURE  (S)
+        • Form, architecture, identity
+        • Stable configurations
+        • Domain boundaries
+        • Structural invariants
+
+   ■  RED / ORANGE  —  ACTIVATION  (E)
+        • Energy, affect, arousal, motivation
+        • Signal strength and flow
+        • Instability, volatility, transitions
+        • Activation spikes and cascades
+
+   ■  GREEN  —  RELATIONAL TIME  (R)
+        • Development, memory, temporal context
+        • Regime transitions
+        • Long‑arc trajectories
+        • Identity evolution
+
+──────────────────────────────────────────────────────────────
+ TIER COLOR CODING
+──────────────────────────────────────────────────────────────
+
+   ■  GRAY (light)     — Tier 0: Pre‑Existing Tools
+   ■  BLUE‑GREEN       — Tier 1: Substrate Unlocks
+   ■  GOLD             — Tier 2: Domain Unlocks
+   ■  PURPLE           — Tier 3: Cross‑Domain Unlocks
+   ■  WHITE / SILVER   — Tier 4: Civilization Unlocks
+
+──────────────────────────────────────────────────────────────
+ ARROW / EDGE LEGEND
+──────────────────────────────────────────────────────────────
+
+   →  Solid Arrow
+        Substrate dependency (required unlock)
+
+   ⇢  Curved Arrow
+        Cross‑domain influence or coupling
+
+   ⇣  Dashed Arrow
+        Emergent unlock (appears only when multiple
+        prerequisites are satisfied)
+
+──────────────────────────────────────────────────────────────
+ NODE HALOS
+──────────────────────────────────────────────────────────────
+
+   ◉  Haloed Node
+        Indicates a substrate‑critical unlock
+        (all Tier 1 nodes should have halos)
+
+──────────────────────────────────────────────────────────────

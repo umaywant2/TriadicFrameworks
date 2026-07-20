@@ -1,0 +1,43 @@
+{
+  "module": "Low Dimensional Structures",
+  "version": "1.0",
+  "category": "low-dimensional",
+  "summary": "Substrate‑first primitives for representing low‑dimensional structure within RTT/vST — DOI‑minimal statement, resonance primitives, dimensional scaling semantics, historical context (absorbing chaos), and controls and validation requirements.",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "doi_minimal_low_dimensional_structures.md",
+      "role": "profile",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "resonance_primitives.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "dimensional_scaling_notes.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "historical_context__absorbing_chaos.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "controls_and_validation.md",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence"
+    }
+  ]
+}

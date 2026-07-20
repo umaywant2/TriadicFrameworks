@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/schemas/universal_resonance_substrate.schema.json",
+  "title": "Universal Resonance Substrate (URS)",
+  "description": "A schema for capturing universal invariant forms across symbolic, natural, and geometric domains.",
+  "type": "object",
+
+  "properties": {
+    "substrate_name": {
+      "type": "string",
+      "description": "Name of the domain being analyzed (e.g., 'Latin Alphabet', 'Spiral Forms', 'Basalt Columns', 'Cave Art Dots')."
+    },
+
+    "substrate_type": {
+      "type": "string",
+      "enum": [
+        "linguistic",
+        "symbolic",
+        "natural",
+        "geometric",
+        "artifact",
+        "decay_arc",
+        "cosmological",
+        "other"
+      ],
+      "description": "High-level category of the substrate."
+    },
+
+    "epoch": {
+      "type": "string",
+      "description": "Time period or cultural era (optional)."
+    },
+
+    "invariant_triads": {
+      "type": "object",
+      "description": "Triadic mirror-axis invariants extracted using the Visual Resonance Echo Lens (VREL).",
+      "properties": {
+        "vertical_mirror_invariants": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Forms unchanged under vertical-axis reflection."
+        },
+        "horizontal_mirror_invariants": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Forms unchanged under horizontal-axis reflection."
+        },
+        "dual_axis_invariants": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Forms invariant under both vertical and horizontal reflection."
+        }
+      },
+      "required": [
+        "vertical_mirror_invariants",
+        "horizontal_mirror_invariants",
+        "dual_axis_invariants"
+      ]
+    },
+
+    "universal_invariant_mapping": {
+      "type": "array",
+      "description": "Mapping of discovered invariants to the universal resonance anchors (● ○ × |).",
+      "items": {
+        "type": "object",
+        "properties": {
+          "form": { "type": "string" },
+          "mapped_to": {
+            "type": "string",
+            "enum": ["dot", "circle", "cross", "line", "none"]
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        },
+        "required": ["form", "mapped_to"]
+      }
+    },
+
+    "notes": {
+      "type": "string",
+      "description": "Optional commentary, resonance observations, decay-arc notes, or structural insights."
+    }
+  },
+
+  "required": [
+    "substrate_name",
+    "substrate_type",
+    "invariant_triads"
+  ]
+}

@@ -1,8 +1,8 @@
 ---
 title: "TriadicFrameworks Documentation"
 description: "A structured methodology for building coherent, traceable, and composable systems — spanning governance, economics, physics, AI, and organizational design."
-date: "2026-07-18"
-modified: "2026-07-18"
+date: "2026-07-13"
+modified: "2026-07-13"
 keywords: "triadic frameworks, RTT, substrate model, governance, framework field theory, traceability"
 rtt_stability: stable
 rtt_content_type: documentation
@@ -10,7 +10,7 @@ rtt_audience: public
 rtt_doc_id: DOC-000
 rtt_owner: core-team
 rtt_review_cycle: monthly
-rtt_last_reviewed: "2026-07-18"
+rtt_last_reviewed: "2026-07-13"
 rtt_tags: [index, home, navigation, overview]
 ---
 
@@ -28,7 +28,7 @@ Every module in this repository is an independent unit of theory or tooling. Eac
 |---|---|
 | Understand the core three-layer architecture | [Triadic Model](/concepts/triadic-model/) |
 | Read the foundational theory document | [Framework Field Theory](#framework-field-theory) |
-| Understand what RTT metadata means | [README → RTT Metadata](https://www.triadicframeworks.org#rtt-metadata) |
+| Understand what RTT metadata means | [README → RTT Metadata](https://github.com/umaywant2/TriadicFrameworks#rtt-metadata) |
 | Browse all modules | The sections below |
 
 ---
@@ -39,51 +39,51 @@ These modules define the primary intellectual architecture of TriadicFrameworks.
 
 ### Framework Field Theory
 The unifying theory document. Defines the field conditions under which triadic structures emerge, stabilize, and compose.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/Framework_Field_Theory)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Framework_Field_Theory)
 
 ### Conditions Substrate Model
 Models the substrate conditions required for a framework to be instantiated in a given environment. Covers preconditions, threshold states, and activation criteria.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/Conditions_Substrate_Model)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Conditions_Substrate_Model)
 
 ### Governance Substrate Model
 Defines the governance layer of the triadic architecture — alignment structures, authority flows, and accountability surfaces.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/Governance_Substrate_Model)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Governance_Substrate_Model)
 
 ### Incident Substrate Model
 Covers how anomalies, failures, and phase transitions are captured and traced within the triadic structure.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/Incident_Substrate_Model)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Incident_Substrate_Model)
 
 ### Inverted Economics
 An economic model that inverts conventional value-flow assumptions. Explores how triadic structures behave under reversed incentive gradients.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/Inverted_Economics)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Inverted_Economics)
 
 ### Law
 The legal and normative substrate layer. Defines how triadic frameworks interact with codified rule systems, jurisdictional constraints, and normative enforcement.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/Law)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Law)
 
 ### LINEAGE
 Canonical lineage tracking for triadic structures. Documents the origin, derivation, and inheritance chains of framework components.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/LINEAGE)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/LINEAGE)
 
 ### Mode
 Mode theory within the triadic model — defines how a system transitions between operational states while preserving structural integrity.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/Mode)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Mode)
 
 ### NoS (Nawderian operating Stack)
 Foundational ontology of structural types recognized by TriadicFrameworks. Classifies emergent, imposed, and latent structures.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/NoS)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/NoS)
 
 ### Opacity
 Examines information asymmetry, visibility gradients, and deliberate concealment as structural forces within triadic systems.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/Opacity)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Opacity)
 
 ### Structural Detection
 Methods and heuristics for identifying triadic patterns in real-world systems — including organizational charts, codebases, and economic flows.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/Structural_Detection)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Structural_Detection)
 
 ### Low Dimensional Structures
 Examines how triadic frameworks collapse or compress into lower-dimensional representations, and what is lost or preserved in that compression.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/Low_Dimensional_Structures)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Low_Dimensional_Structures)
 
 ---
 
@@ -93,55 +93,55 @@ Modules that apply the core framework to specific domains.
 
 ### AI Resonance Seed
 The seed document for AI alignment within triadic systems. Defines resonance conditions between AI behavior and triadic structural norms.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/AI_Resonance_Seed)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/AI_Resonance_Seed)
 
 ### Coeus
 Named for the Titan of intellect. An AI reasoning module built on triadic principles — covers structured inquiry, knowledge traceability, and epistemic accountability.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/Coeus)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Coeus)
 
 ### Expectations
 Models how expectations form, propagate, and collapse within triadic structures. Covers unmet expectation as a structural failure mode.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/Expectations)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Expectations)
 
 ### Human Resources
 Applies triadic substrate modeling to human capital, role definition, and organizational behavior.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/Human_Resources)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Human_Resources)
 
 ### Integrations
 Defines how external systems connect to triadic frameworks without violating substrate integrity. Covers API patterns, handshake protocols, and boundary conditions.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/Integrations)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Integrations)
 
 ### Paradoxes Canon
 A catalogued set of structural paradoxes that emerge within triadic systems — with resolution strategies for each.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/Paradoxes_canon)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Paradoxes_canon)
 
 ### Philanthropy
 Models philanthropic action as a triadic structure — examining donor, recipient, and mediating substrate as distinct layers with independent trace requirements.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/Philanthropy)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Philanthropy)
 
 ### Research
 Active research notes and working hypotheses within the TriadicFrameworks corpus. Content here is exploratory and subject to revision.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/Research)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Research)
 
 ### Resilience Checker
 A diagnostic tool for evaluating the resilience of a system against triadic framework criteria. Outputs a structured assessment report.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/Resilience_Checker)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Resilience_Checker)
 
 ### SARG
 Structured Argument Graph. A toolset for building traceable argument chains that satisfy triadic coherence requirements.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/SARG)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/SARG)
 
 ### Space Agency Intelligence Module
 Applies triadic substrate modeling to space agency operations — mission planning, resource allocation, and cross-agency governance.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/Space_Agency_Intelligence_Module)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Space_Agency_Intelligence_Module)
 
 ### TFT 3-Pack v1.3
 A packaged set of three foundational TriadicFrameworks tools for rapid deployment. Versioned release artifact.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/TFT_3Pack_v1.3)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3)
 
 ### TEL / LINEAGE
 Temporal Event Lineage. Extends the LINEAGE module with time-ordered event capture and causal chain mapping.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/TEL/LINEAGE)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TEL/LINEAGE)
 
 ---
 
@@ -151,23 +151,23 @@ Substrate models apply triadic principles to specific physical, biological, or c
 
 ### AlphaFold Substrate Alignments
 Maps protein folding prediction outputs onto triadic substrate alignment structures. Explores structural biology as a triadic domain.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/alphafold_substrate_alignments)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/alphafold_substrate_alignments)
 
 ### Arrival Substrate Model
 Models the conditions and transition dynamics when a new entity arrives into an existing triadic structure.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/arrival_substrate_model)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/arrival_substrate_model)
 
 ### Atomic Clocks
 Applies triadic substrate theory to precision timekeeping — synchronization, drift, and reference frame selection as structural problems.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/atomic_clocks)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/atomic_clocks)
 
 ### Boson Substrate Model
 Maps boson field behavior onto the triadic layer architecture. Explores how force-carrying particles embody the structure/behaviour/trace separation.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/boson-substrate-model)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/boson-substrate-model)
 
 ### Consciousness Substrate Model
 Applies triadic substrate theory to models of consciousness — examining awareness, agency, and trace as three independent structural layers.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/consciousness_substrate_model)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/consciousness_substrate_model)
 
 ---
 
@@ -175,22 +175,22 @@ Applies triadic substrate theory to models of consciousness — examining awaren
 
 ### AI Drift Calibration
 Instructions and calibration documents for AI sessions operating within the TriadicFrameworks context. Covers drift detection, session initialization, and epistemic reset procedures.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/ai-drift-calibration)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/ai-drift-calibration)
 
 ### AI Working Directory
 Active AI session documents, prompts, and working outputs scoped to this repository.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/ai)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/ai)
 
 ---
 
 ## Reference
 
 ### Concepts
-- [Triadic Model](/concepts/triadic-model/) — The three-layer architecture: Structure, Behavior, Trace
+- [Triadic Model](/concepts/triadic-model/) — The three-layer architecture: Structure, Behaviour, Trace
 
 ### API Reference
 RTT API schema, endpoint definitions, and integration patterns.
-→ [View on GitHub](https://www.triadicframeworks.org/corpus/api)
+→ [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/api)
 
 ---
 
@@ -199,7 +199,7 @@ RTT API schema, endpoint definitions, and integration patterns.
 This documentation site is built with the **TriadicFrameworks SSG** — a static site generator that converts Markdown files in this repository into HTML pages with RTT metadata, canonical URLs, and structured navigation.
 
 **Site:** `https://umaywant2.github.io/TriadicFrameworks`
-**Source:** `https://www.triadicframeworks.org/corpus`
+**Source:** `https://github.com/umaywant2/TriadicFrameworks`
 **Built with:** Python · Markdown · Jinja2 · GitHub Actions
 
 Most modules currently link to their GitHub source directory because their primary content lives in `README.md` files, which are intentionally excluded from the SSG build. As dedicated `.md` content files are added inside each module directory, those pages will appear here as rendered HTML automatically.

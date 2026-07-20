@@ -1,0 +1,126 @@
+{
+  "ai.module": "morphic_resonance.rtt2",
+  "ai.version": "1.0",
+  "ai.purpose": "RTT/2 engine layer for Morphic Resonance: resonance mapping, stabilizers, cross-temporal propagation, and cross-module coupling.",
+  "ai.keywords": [
+    "morphic resonance",
+    "pattern recurrence",
+    "dimensional coherence",
+    "activation",
+    "cross-temporal resonance",
+    "rtt2"
+  ],
+
+  "engine": {
+    "layer": "RTT/2",
+    "description": "Integrates Morphic Resonance into the RTT substrate, exposing resonance patterns, stabilizers, and cross-temporal coherence flows."
+  },
+
+  "resonance": {
+    "patterns": [
+      {
+        "name": "pattern_resonance",
+        "description": "Patterns resonate across time or systems when their operator structures align."
+      },
+      {
+        "name": "activation_resonance",
+        "description": "Activation occurs when resonance strength exceeds the threshold defined by operator similarity."
+      },
+      {
+        "name": "lineage_resonance",
+        "description": "Lineages maintain coherence through stable recurrence of operator signatures."
+      }
+    ],
+    "failure_modes": [
+      "pattern_drift",
+      "operator_desynchronization",
+      "insufficient_resonance",
+      "lineage_breakdown"
+    ]
+  },
+
+  "stabilizers": {
+    "primary": [
+      {
+        "name": "dimensional_anchor",
+        "description": "Anchors patterns to stable dimensional configurations, enabling recurrence."
+      },
+      {
+        "name": "operator_similarity",
+        "description": "Stabilizes resonance by aligning structural components across instances."
+      },
+      {
+        "name": "resonance_threshold",
+        "description": "Defines the minimum coherence required for activation or recurrence."
+      }
+    ],
+    "secondary": [
+      {
+        "name": "environmental_constraints",
+        "description": "External conditions that support or inhibit resonance propagation."
+      },
+      {
+        "name": "lineage_trace",
+        "description": "Tracks recurrence across time, reinforcing stability."
+      }
+    ]
+  },
+
+  "recurrence_propagation": {
+    "mechanisms": [
+      "operator_alignment",
+      "pattern_similarity",
+      "dimensional_anchoring"
+    ],
+    "signals": [
+      "coherence_strength",
+      "activation_events",
+      "cross_temporal_alignment"
+    ],
+    "notes": "Recurrence propagation is treated as resonance flow shaped by operator structure and dimensional stability."
+  },
+
+  "cross_module": {
+    "interactions": [
+      {
+        "module": "information_theory.rtt2",
+        "interaction": "Patterns encode distinguishable structures; recurrence depends on informational similarity."
+      },
+      {
+        "module": "evolutionary_biology.rtt2",
+        "interaction": "Lineage-level recurrence shapes biological form and developmental stability."
+      },
+      {
+        "module": "cognition.rtt2",
+        "interaction": "Cognitive patterns recur through resonance of learned operator structures."
+      },
+      {
+        "module": "complex_systems.rtt2",
+        "interaction": "System-level patterns stabilize through cross-temporal resonance."
+      }
+    ],
+    "notes": "MR resonance propagates across biological, cognitive, informational, and systemic modules."
+  },
+
+  "dimensional_behavior": {
+    "R1": "Weak recurrence; unstable coherence; primitive resonance.",
+    "R2": "Stable operator structure; predictable recurrence; strong resonance.",
+    "R3": "Cross-temporal resonance; lineage-level stability; high coherence.",
+    "R0": "No pattern substrate; recurrence undefined."
+  },
+
+  "coherence": {
+    "markers": [
+      "stable pattern signatures",
+      "predictable recurrence intervals",
+      "operator similarity across instances",
+      "cross-temporal coherence"
+    ],
+    "instability_signals": [
+      "pattern drift",
+      "operator mismatch",
+      "insufficient resonance",
+      "lineage discontinuity"
+    ]
+  }
+}

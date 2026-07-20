@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "$id": "https://triadicframeworks.org/schemas/rtt-autonomous-drone/v1/drone_mission_profile_extension.schema.json",
+  "title": "drone_mission_profile_extension",
+  "type": "object",
+  "properties": {
+    "flight_altitude_constraints_m": {
+      "type": "object",
+      "properties": {
+        "min": { "type": "number" },
+        "max": { "type": "number" }
+      }
+    },
+
+    "geofence_zones": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Restricted or required flight zones."
+    },
+
+    "payload_type": {
+      "type": "string",
+      "description": "Payload carried (camera, sensor pod, package, etc.)."
+    },
+
+    "payload_mass_kg": {
+      "type": "number",
+      "description": "Mass of payload in kilograms."
+    },
+
+    "landing_behavior": {
+      "type": "string",
+      "enum": ["precision", "manual", "auto_land", "rtl"],
+      "description": "Landing mode preference."
+    }
+  }
+}
+

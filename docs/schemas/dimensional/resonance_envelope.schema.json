@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "Resonance Envelope",
+  "type": "object",
+  "properties": {
+    "envelope_id": { "type": "string" },
+    "core_id": { "type": "string" },
+    "spin_band": { "type": "number" },
+    "charge_band": { "type": "number" },
+    "temperature_band": { "type": "number" },
+    "stability_index": { "type": "number" }
+  }
+}

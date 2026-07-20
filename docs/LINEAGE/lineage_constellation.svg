@@ -1,0 +1,84 @@
+<svg width="1080" height="600" viewBox="0 0 1080 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg_const" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050509"/>
+      <stop offset="50%" stop-color="#11112A"/>
+      <stop offset="100%" stop-color="#1B1235"/>
+    </linearGradient>
+    <style>
+      .bg { fill: url(#bg_const); }
+      .title { font-family: system-ui, sans-serif; font-size: 20px; fill: #FFFFFF; font-weight: 600; }
+      .subtitle { font-family: system-ui, sans-serif; font-size: 12px; fill: #C8C8E8; }
+      .node { fill: #141424; stroke: #4B4B7A; stroke-width: 1.2; rx: 12; ry: 12; }
+      .node-core { fill: #1E1E3A; stroke: #8E7CFF; stroke-width: 1.4; rx: 14; ry: 14; }
+      .node-text { font-family: system-ui, sans-serif; font-size: 12px; fill: #FFFFFF; font-weight: 600; }
+      .node-sub { font-family: system-ui, sans-serif; font-size: 11px; fill: #C8C8E8; }
+      .edge { stroke: #7777B8; stroke-width: 1.6; stroke-linecap: round; }
+    </style>
+  </defs>
+
+  <rect width="1080" height="600" class="bg"/>
+
+  <text x="540" y="40" text-anchor="middle" class="title">TriadicFrameworks — Global LINEAGE Constellation</text>
+  <text x="540" y="60" text-anchor="middle" class="subtitle">Toolbox • IE • MSM • GSM • TEL • SARG</text>
+
+  <!-- Core: Forecast vs Actuals -->
+  <g transform="translate(440,220)">
+    <rect x="0" y="0" width="200" height="80" class="node-core"/>
+    <text x="100" y="30" text-anchor="middle" class="node-text">Forecast vs Actuals</text>
+    <text x="100" y="52" text-anchor="middle" class="node-sub">Research Toolbox • RTT/1–2–3</text>
+  </g>
+
+  <!-- TEL -->
+  <g transform="translate(120,120)">
+    <rect x="0" y="0" width="200" height="70" class="node"/>
+    <text x="100" y="28" text-anchor="middle" class="node-text">TEL</text>
+    <text x="100" y="48" text-anchor="middle" class="node-sub">Forecast Echo Family</text>
+  </g>
+
+  <!-- SARG -->
+  <g transform="translate(760,120)">
+    <rect x="0" y="0" width="200" height="70" class="node"/>
+    <text x="100" y="28" text-anchor="middle" class="node-text">SARG</text>
+    <text x="100" y="48" text-anchor="middle" class="node-sub">Collapse Argument Family</text>
+  </g>
+
+  <!-- IE -->
+  <g transform="translate(120,360)">
+    <rect x="0" y="0" width="200" height="70" class="node"/>
+    <text x="100" y="28" text-anchor="middle" class="node-text">Inverted Economics</text>
+    <text x="100" y="48" text-anchor="middle" class="node-sub">Proto‑Fund Lineage</text>
+  </g>
+
+  <!-- MSM -->
+  <g transform="translate(440,420)">
+    <rect x="0" y="0" width="200" height="70" class="node"/>
+    <text x="100" y="28" text-anchor="middle" class="node-text">Media Substrate Model</text>
+    <text x="100" y="48" text-anchor="middle" class="node-sub">Instability Echo</text>
+  </g>
+
+  <!-- GSM -->
+  <g transform="translate(760,360)">
+    <rect x="0" y="0" width="200" height="70" class="node"/>
+    <text x="100" y="28" text-anchor="middle" class="node-text">Governance Substrate Model</text>
+    <text x="100" y="48" text-anchor="middle" class="node-sub">Benefit Divergence</text>
+  </g>
+
+  <!-- Edges from core -->
+  <!-- to TEL -->
+  <line x1="440" y1="260" x2="320" y2="190" class="edge"/>
+  <!-- to SARG -->
+  <line x1="640" y1="260" x2="760" y2="190" class="edge"/>
+  <!-- to IE -->
+  <line x1="440" y1="260" x2="320" y2="395" class="edge"/>
+  <!-- to MSM -->
+  <line x1="540" y1="300" x2="540" y2="420" class="edge"/>
+  <!-- to GSM -->
+  <line x1="640" y1="260" x2="760" y2="395" class="edge"/>
+
+  <!-- Cross edges (TEL → MSM, IE → GSM, TEL → IE, SARG → GSM) -->
+  <line x1="220" y1="190" x2="220" y2="360" class="edge"/>
+  <line x1="220" y1="395" x2="760" y2="395" class="edge"/>
+  <line x1="220" y1="190" x2="440" y2="455" class="edge"/>
+  <line x1="860" y1="190" x2="860" y2="360" class="edge"/>
+</svg>

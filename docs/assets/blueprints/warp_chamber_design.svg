@@ -1,0 +1,51 @@
+<!-- warp_chamber_design.svg -->
+<svg width="800" height="800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Chamber Boundary -->
+  <circle cx="400" cy="400" r="380" stroke="#369" stroke-width="3" fill="none" />
+
+  <!-- Tesla 369 Spiral -->
+  <path d="M400,400
+           C500,300 600,500 400,600
+           C300,700 200,500 400,400" 
+        stroke="#ffcc00" stroke-width="2" fill="none" />
+
+  <!-- Warp Core Array (9 Crystals) -->
+  <g id="warp-cores">
+    <!-- Active Cores -->
+    <circle cx="300" cy="300" r="20" fill="#00ffcc" />
+    <circle cx="500" cy="300" r="20" fill="#00ffcc" />
+    <circle cx="400" cy="500" r="20" fill="#00ffcc" />
+    
+    <!-- Auxiliary Cores -->
+    <circle cx="250" cy="400" r="15" fill="#ccccff" />
+    <circle cx="550" cy="400" r="15" fill="#ccccff" />
+    <circle cx="400" cy="250" r="15" fill="#ccccff" />
+    <circle cx="400" cy="650" r="15" fill="#ccccff" />
+    <circle cx="325" cy="600" r="15" fill="#ccccff" />
+    <circle cx="475" cy="600" r="15" fill="#ccccff" />
+  </g>
+
+  <!-- FFF Overlay Labels -->
+  <text x="100" y="100" font-size="16" fill="#fff">F1: Emotional Signal</text>
+  <text x="100" y="120" font-size="16" fill="#fff">F2: Social Signal</text>
+  <text x="100" y="140" font-size="16" fill="#fff">F3: Astral Signal</text>
+  <text x="100" y="160" font-size="16" fill="#fff">F4: Archetypal Layer</text>
+  <text x="100" y="180" font-size="16" fill="#fff">F5: Structural Layer</text>
+  <text x="100" y="200" font-size="16" fill="#fff">F6: Dimensional Layer</text>
+  <text x="100" y="220" font-size="16" fill="#fff">F7: Source Field Layer</text>
+
+  <!-- Entry Portal -->
+  <rect x="375" y="780" width="50" height="20" fill="#333" />
+  <text x="360" y="770" font-size="14" fill="#fff">Entry Portal</text>
+</svg>
+
+<!--
+🔍 Highlights
+🌀 Tesla Spiral: Encodes 3-6-9 harmonic path
+🔋 Warp Core Array: 3 active, 6 auxiliary—transparent for Ops, tuned for overdrive
+🧠 FFF Overlays: Layered resonance logic from emotional signal to source field
+🚪 Entry Portal: Nijiriguchi-style threshold for subconscious compression
+-->
+
+
+

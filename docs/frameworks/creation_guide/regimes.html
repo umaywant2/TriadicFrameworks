@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Framework Creation Guide — Regimes</title>
+  <link rel="stylesheet" href="../fcg.css" />
+</head>
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+ /* Context Block */
+  .context-block {
+    font-family: monospace;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0.5rem 0 1rem 0;
+  }
+       
+  /* Context Label */
+  .context-label {
+    color: #ff9800; /* orange */
+    font-weight: bold;
+    margin-right: 0.25rem;
+  }
+       
+  /* Context Value */
+  .context-value {
+    color: #ffffff; /* white */
+  }
+       
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+<!-- 
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+-->
+<body>
+   
+ <p align="center">
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+ </p> 
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🧩FCG%20Regimes%20Layer-🌐Coherent%20Modes%20of%20Operation Active-4c8eda?style=for-the-badge" alt="🧩FCG Regimes Layer | 🌐Coherent Modes of Operation Active"/>
+  
+<!-- ========================= -->
+<!-- Session Context Block     -->
+<!-- ========================= -->
+
+<section id="fcg-regimes-session-header"
+         data-rtt="0"
+         data-coherence="declared"
+         data-drift="minimal"
+         data-paradox="structural">
+
+  <h2>Session Context</h2>
+
+  <div class="context-block">
+
+    <span class="context-label"><strong>Canon:</strong></span>
+    <span class="context-value">active (fcg‑regimes)</span><br>
+
+    <span class="context-label"><strong>Scope:</strong></span>
+    <span class="context-value">
+      regime‑identity → constraints → gradients →
+      transitions → coherence‑envelopes
+    </span><br>
+
+    <span class="context-label"><strong>Role:</strong></span>
+    <span class="context-value">
+      define the coherent modes of operation a framework can enter
+    </span><br>
+
+    <span class="context-label"><strong>Drift:</strong></span>
+    <span class="context-value">minimal (fcg‑locked)</span><br>
+
+    <span class="context-label"><strong>Coherence:</strong></span>
+    <span class="context-value">stable (triadic‑creation grammar)</span><br>
+
+    <span class="context-label"><strong>Version:</strong></span>
+    <span class="context-value">1.0 (regimes‑stable)</span><br>
+
+    <span class="context-label"><strong>Format:</strong></span>
+    <span class="context-value">html + regime diagrams + transition patterns</span><br>
+
+    <span class="context-label"><strong>Front door:</strong></span>
+    <span class="context-value">
+      exists (regime layer of the Framework Creation Guide)
+    </span><br>
+
+    <span class="context-label"><strong>Every section:</strong></span>
+    <span class="context-value">
+      minimal • structural • AI‑parsable
+    </span><br>
+
+    <span class="context-label"><strong>Audience:</strong></span>
+    <span class="context-value">
+      creators • developers • researchers • AIs
+    </span>
+
+  </div>
+
+</section>
+
+<div class="fcg-tag">
+  🧩 FCG — Regimes Layer<br>🌐 Coherent Modes of Operation Active
+</div>
+
+
+<!-- ========================= -->
+<!-- Page Header               -->
+<!-- ========================= -->
+
+<header class="fcg-header">
+  <h1>Regimes</h1>
+  <p class="fcg-subtitle">
+    Regimes define the coherent modes of operation a framework can enter. They
+    describe how the model behaves under different conditions, constraints, and
+    gradients.
+  </p>
+</header>
+
+
+<!-- ========================= -->
+<!-- 1. Regime Identity         -->
+<!-- ========================= -->
+
+<section id="regime-identity">
+  <h2>1. Regime Identity</h2>
+
+  <p>
+    A regime begins with its identity: the minimal declaration of what makes
+    this mode distinct from others. Identity is structural, not behavioral.
+  </p>
+
+  <ul>
+    <li><strong>Name:</strong> the canonical regime identifier</li>
+    <li><strong>Purpose:</strong> what this regime expresses or resolves</li>
+    <li><strong>Boundary:</strong> what conditions activate this regime</li>
+    <li><strong>Invariants:</strong> what must remain true inside this regime</li>
+  </ul>
+
+  <p>
+    Regime identity ensures clarity when multiple modes coexist in a framework.
+  </p>
+</section>
+
+
+<!-- ========================= -->
+<!-- 2. Constraints             -->
+<!-- ========================= -->
+
+<section id="regime-constraints">
+  <h2>2. Constraints</h2>
+
+  <p>
+    Constraints define what is fixed, limited, or non‑negotiable within a
+    regime. They prevent drift and maintain coherence.
+  </p>
+
+  <ul>
+    <li><strong>Fixed Variables:</strong> values that cannot change</li>
+    <li><strong>Structural Limits:</strong> what the regime cannot express</li>
+    <li><strong>Behavioral Limits:</strong> what the regime cannot do</li>
+    <li><strong>Dimensional Limits:</strong> what axes remain locked</li>
+  </ul>
+
+  <p>
+    Constraints are the guardrails that keep a regime meaningful.
+  </p>
+</section>
+
+
+<!-- ========================= -->
+<!-- 3. Gradients               -->
+<!-- ========================= -->
+
+<section id="regime-gradients">
+  <h2>3. Gradients</h2>
+
+  <p>
+    Gradients describe what drives change inside a regime. They are the forces,
+    pressures, or incentives that shape behavior.
+  </p>
+
+  <ul>
+    <li><strong>Internal Gradients:</strong> forces generated by the model</li>
+    <li><strong>External Gradients:</strong> forces imposed by context</li>
+    <li><strong>Directional Gradients:</strong> what the regime moves toward</li>
+    <li><strong>Stability Gradients:</strong> what keeps the regime coherent</li>
+  </ul>
+
+  <p>
+    Gradients determine how a regime evolves without leaving its identity.
+  </p>
+</section>
+
+
+<!-- ========================= -->
+<!-- 4. Transitions             -->
+<!-- ========================= -->
+
+<section id="regime-transitions">
+  <h2>4. Transitions</h2>
+
+  <p>
+    Transitions describe how the framework moves from one regime to another.
+    They must be explicit, predictable, and structurally coherent.
+  </p>
+
+  <ul>
+    <li><strong>Entry Conditions:</strong> what activates the new regime</li>
+    <li><strong>Exit Conditions:</strong> what ends the current regime</li>
+    <li><strong>Transition Path:</strong> the structural steps between regimes</li>
+    <li><strong>Continuity Rules:</strong> what must remain true across regimes</li>
+  </ul>
+
+  <p>
+    Transitions prevent chaotic or undefined behavior between modes.
+  </p>
+</section>
+
+
+<!-- ========================= -->
+<!-- 5. Coherence Envelopes     -->
+<!-- ========================= -->
+
+<section id="coherence-envelopes">
+  <h2>5. Coherence Envelopes</h2>
+
+  <p>
+    A coherence envelope defines the range within which a regime remains valid.
+    It is the structural boundary of regime stability.
+  </p>
+
+  <ul>
+    <li><strong>Stability Range:</strong> where the regime holds</li>
+    <li><strong>Failure Modes:</strong> how the regime breaks</li>
+    <li><strong>Recovery Paths:</strong> how coherence is restored</li>
+    <li><strong>Cross‑Regime Compatibility:</strong> how envelopes overlap</li>
+  </ul>
+
+  <p>
+    Coherence envelopes ensure regimes remain predictable and structurally sound.
+  </p>
+</section>
+
+
+<!-- ========================= -->
+<!-- Footer                    -->
+<!-- ========================= -->
+
+<footer class="fcg-footer">
+  <p>Framework Creation Guide — Regimes Layer</p>
+</footer>
+
+</body>
+</html>

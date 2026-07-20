@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "Triadic Hologram Reconstruction",
+  "type": "object",
+  "properties": {
+    "reconstruction_id": { "type": "string" },
+    "input_sources": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "algorithm": { "type": "string" },
+    "triadic_constraints": { "type": "object" },
+    "output_resolution": { "type": "string" }
+  }
+}

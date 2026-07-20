@@ -1,0 +1,161 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "schemas.schema.json",
+  "description": "Canonical RTT schema-of-schemas for the TriadicFrameworks /docs/schemas directory. Defines the structural, dimensional, and operator-level metadata for every schema file.",
+  "type": "object",
+
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for this schema within the TriadicFrameworks canon."
+    },
+
+    "version": {
+      "type": "string",
+      "pattern": "^v?[0-9]+(\\.[0-9]+)*$",
+      "description": "Semantic version of the schema."
+    },
+
+    "title": {
+      "type": "string",
+      "description": "Human-readable title of the schema."
+    },
+
+    "description": {
+      "type": "string",
+      "description": "High-level description of the schema's purpose."
+    },
+
+    "category": {
+      "type": "string",
+      "enum": [
+        "ai",
+        "canon",
+        "coeus",
+        "dimensional",
+        "dpu",
+        "energy",
+        "entity",
+        "environment",
+        "experiment",
+        "finance",
+        "identity",
+        "infrastructure",
+        "lab",
+        "language",
+        "life_regime_profile",
+        "networking",
+        "nimms",
+        "quantum",
+        "rsadi-gd",
+        "rsadi-gd-advanced",
+        "rtt-atc",
+        "rtt-autonomous",
+        "rtt-autonomous-drone",
+        "rtt-autonomous-fish",
+        "rtt-coal",
+        "rtt-core",
+        "rtt-deepsea",
+        "rtt-micro-core",
+        "rtt-space",
+        "sensing",
+        "template",
+        "universe-core",
+        "universal",
+        "visual",
+        "other"
+      ],
+      "description": "Top-level directory classification matching the /docs/schemas folder structure."
+    },
+
+    "role": {
+      "type": "string",
+      "enum": [
+        "engine",
+        "profile",
+        "signature",
+        "diagnostic",
+        "map",
+        "example",
+        "extension",
+        "index",
+        "reference",
+        "template"
+      ],
+      "description": "Structural role of the schema within the TriadicFrameworks canon."
+    },
+
+    "analyzer_layer": {
+      "type": "string",
+      "enum": [
+        "operator",
+        "dimensional",
+        "regime",
+        "drift",
+        "coherence",
+        "cross-cutting"
+      ],
+      "description": "Which analyzer layer this schema participates in."
+    },
+
+    "rtt": {
+      "type": "object",
+      "description": "RTT substrate metadata for regime-aware schemas.",
+      "properties": {
+        "regime": {
+          "type": "string",
+          "enum": ["R0", "R1", "R2", "R3"],
+          "description": "Regime classification: R0=operator root, R1=vector, R2=surface, R3=field."
+        },
+        "transition": {
+          "type": "string",
+          "enum": ["T01", "T12", "T23", "T30"],
+          "description": "Transition classification between regimes."
+        },
+        "timescale": {
+          "type": "string",
+          "enum": ["tau_local", "tau_epoch", "tau_root"],
+          "description": "Timescale of the schema's operational domain."
+        }
+      }
+    },
+
+    "file": {
+      "type": "object",
+      "description": "File-level metadata for the schema.",
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "Relative path from /docs/schemas."
+        },
+        "format": {
+          "type": "string",
+          "enum": ["json", "yaml", "md"],
+          "description": "File format."
+        },
+        "canonical": {
+          "type": "boolean",
+          "description": "Whether this file is considered canonical within its category."
+        }
+      }
+    },
+
+    "dependencies": {
+      "type": "array",
+      "description": "Other schemas this schema depends on.",
+      "items": {
+        "type": "string"
+      }
+    },
+
+    "examples": {
+      "type": "array",
+      "description": "Example instances demonstrating valid usage.",
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+
+  "required": ["id", "version", "title", "category", "role"]
+}

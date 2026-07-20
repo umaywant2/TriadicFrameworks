@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RTT/Inside Substrate Coherence Envelope Schema",
+  "description": "Defines coherence envelope metadata for RTT/Inside enterprise identity substrates.",
+
+  "type": "object",
+
+  "properties": {
+    "coherence_envelope": {
+      "type": "string",
+      "enum": [
+        "local",
+        "session",
+        "domain",
+        "forest",
+        "network",
+        "cloud",
+        "zero_trust"
+      ],
+      "description": "The boundary within which identity and service metadata remain coherent and stable."
+    },
+
+    "coherence_origin": {
+      "type": "string",
+      "enum": [
+        "local",
+        "active_directory",
+        "ldap",
+        "dns_srv",
+        "kerberos",
+        "service_discovery",
+        "modern_identity",
+        "cloud_directory",
+        "zero_trust"
+      ],
+      "description": "Identity substrate layer that asserted or inferred the coherence envelope."
+    },
+
+    "coherence_strength": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "description": "Strength of coherence within the envelope, representing stability and predictability of identity metadata."
+    },
+
+    "coherence_timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp indicating when the coherence envelope was generated or last updated."
+    }
+  },
+
+  "required": [
+    "coherence_envelope"
+  ]
+}

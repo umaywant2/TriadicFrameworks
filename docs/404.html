@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — TriadicFrameworks</title>
+
+  <!-- Brand: logo + favicon (existing assets) -->
+  <link rel="icon" type="image/png" href="/static/favicon-192.png" />
+  <link rel="preload" href="/static/tfsite-logo.svg" as="image" />
+
+  <style>
+    :root {
+      --bg-0: #000000;
+      --bg-1: #1b1744;
+      --bg-2: #3b2380;
+      --accent: #b38cff;
+      --accent-soft: rgba(179, 140, 255, 0.18);
+      --border-soft: rgba(255, 255, 255, 0.12);
+      --text-main: #ffffff;
+      --text-soft: #d7d3f0;
+      --text-muted: #9a93c8;
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --radius-sm: 8px;
+      --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.65);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+      color: var(--text-main);
+      background: radial-gradient(circle at 10% 0%, #2b1e66 0%, #000 40%, #000 100%);
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      padding: 24px;
+    }
+
+    .frame {
+      max-width: 1080px;
+      width: 100%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 24px;
+    }
+
+    @media (max-width: 900px) {
+      .frame {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    /* Hero panel */
+
+    .hero {
+      position: relative;
+      padding: 24px 24px 28px;
+      border-radius: var(--radius-lg);
+      background:
+        radial-gradient(circle at 0% 0%, rgba(179, 140, 255, 0.18) 0%, transparent 40%),
+        radial-gradient(circle at 100% 0%, rgba(80, 220, 255, 0.16) 0%, transparent 45%),
+        linear-gradient(135deg, var(--bg-0), var(--bg-1), var(--bg-2));
+      box-shadow: var(--shadow-soft);
+      border: 1px solid var(--border-soft);
+      overflow: hidden;
+    }
+
+    .hero-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .hero-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #ffffff 0%, #b38cff 18%, #1b1744 55%, #000 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-logo img {
+      width: 26px;
+      height: 26px;
+      filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.5));
+    }
+
+    .hero-title-block {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .hero-title {
+      font-size: 1.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+    }
+
+    .hero-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .hero-main {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+      margin-top: 8px;
+    }
+
+    .hero-main-left {
+      max-width: 60%;
+    }
+
+    .hero-code {
+      font-size: 3.4rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .hero-message {
+      font-size: 1.05rem;
+      color: var(--text-soft);
+    }
+
+    .hero-main-right {
+      position: relative;
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    /* Time‑crystal / half‑lit sphere motif */
+
+    .hero-orbit {
+      position: relative;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.35) 0%, transparent 40%),
+        radial-gradient(circle at 70% 80%, rgba(179, 140, 255, 0.45) 0%, transparent 55%),
+        radial-gradient(circle at 50% 50%, #05030f 0%, #000 60%, #000 100%);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.06),
+        0 18px 40px rgba(0, 0, 0, 0.9);
+      overflow: hidden;
+    }
+
+    .hero-orbit-ring {
+      position: absolute;
+      inset: 18px;
+      border-radius: 50%;
+      border: 1px dashed rgba(179, 140, 255, 0.45);
+      box-shadow: 0 0 12px rgba(179, 140, 255, 0.4);
+    }
+
+    .hero-orbit-node {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #ffffff;
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+    }
+
+    .hero-orbit-node.n1 { top: 12%; left: 62%; }
+    .hero-orbit-node.n2 { top: 64%; left: 16%; }
+    .hero-orbit-node.n3 { top: 78%; left: 72%; }
+
+    .hero-orbit-label {
+      position: absolute;
+      bottom: 14px;
+      left: 18px;
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .hero-footer {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .hero-footer-left {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(0, 0, 0, 0.35);
+      color: var(--text-soft);
+    }
+
+    .hero-footer-right a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .hero-footer-right a:hover {
+      text-decoration: underline;
+    }
+
+    /* Right column: modules, sitemap, session context */
+
+    .side {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .card {
+      padding: 14px 14px 16px;
+      border-radius: var(--radius-md);
+      background: rgba(5, 4, 18, 0.9);
+      border: 1px solid var(--border-soft);
+    }
+
+    .card-title {
+      font-size: 0.9rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      margin-bottom: 8px;
+    }
+
+    .card-subtitle {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .module-list,
+    .sitemap-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0.85rem;
+    }
+
+    .module-list li,
+    .sitemap-list li {
+      margin-bottom: 4px;
+    }
+
+    .module-list a,
+    .sitemap-list a {
+      color: var(--text-soft);
+      text-decoration: none;
+    }
+
+    .module-list a:hover,
+    .sitemap-list a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    .session-block {
+      font-size: 0.78rem;
+      line-height: 1.4;
+      color: var(--text-soft);
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: var(--radius-sm);
+      padding: 8px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      white-space: pre-line;
+    }
+
+    .session-header {
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: var(--accent);
+    }
+
+    .session-inline {
+      margin-bottom: 6px;
+      color: var(--text-muted);
+    }
+
+    .session-inline span {
+      display: inline-block;
+      margin-right: 6px;
+    }
+
+    .session-inline span::before {
+      content: "• ";
+      color: var(--accent);
+    }
+
+    .session-footer {
+      margin-top: 6px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .session-footer strong {
+      font-weight: 600;
+      color: var(--text-soft);
+    }
+
+    .sitemap-status {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+  </style>
+</head>
+<body>
+  <main class="frame">
+    <!-- LEFT: Hero -->
+    <section class="hero" aria-labelledby="tf-404-title">
+      <header class="hero-header">
+        <div class="hero-logo">
+          <!-- Existing logo, softly embedded in the time‑crystal sphere -->
+          <img src="/images/tfsite-logo.svg" alt="TriadicFrameworks logo" />
+        </div>
+        <div class="hero-title-block">
+          <div class="hero-title" id="tf-404-title">TriadicFrameworks</div>
+          <div class="hero-subtitle">Resonance‑time field — 404 (frozen drift)</div>
+        </div>
+      </header>
+
+      <div class="hero-main">
+        <div class="hero-main-left">
+          <div class="hero-code">404</div>
+          <p class="hero-message">
+            This address does not map to a live module.<br />
+            It may be historical, pre‑triadic, or simply mistyped.
+          </p>
+        </div>
+
+        <div class="hero-main-right" aria-hidden="true">
+          <div class="hero-orbit">
+            <div class="hero-orbit-ring"></div>
+            <div class="hero-orbit-node n1"></div>
+            <div class="hero-orbit-node n2"></div>
+            <div class="hero-orbit-node n3"></div>
+            <div class="hero-orbit-label">time‑crystal / half‑lit sphere</div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="hero-footer">
+        <div class="hero-footer-left">
+          <span class="pill">rtt=1</span>
+          <span class="pill">coherence=declared</span>
+          <span class="pill">drift=bounded</span>
+          <span class="pill">paradox=structural</span>
+        </div>
+        <div class="hero-footer-right">
+          <a href="/">Return to TriadicFrameworks front door</a>
+        </div>
+      </footer>
+    </section>
+
+    <!-- RIGHT: Nearby modules, sitemap, session context -->
+    <aside class="side">
+      <!-- Module‑aware nearby links -->
+      <section class="card">
+        <div class="card-title">Nearby modules</div>
+        <div class="card-subtitle">You may have meant one of these active or dev‑edge modules:</div>
+        <ul class="module-list">
+          <li>
+            <a href="https://dev.umaywant2.win/" rel="noopener">Hard Lee Ever 2026 Canon Championship</a>
+          </li>
+          <li>
+            <a href="https://dev.mythmatic.org/Mudpuppy/" rel="noopener">Mudpuppy (dev.mythmatic.org)</a>
+          </li>
+          <li>
+            <a href="https://dev.mythmatical.org/SoftKitty/" rel="noopener">SoftKitty (dev.mythmatical.org)</a>
+          </li>
+          <li>
+            <a href="https://docs.triadicframeworks.org" rel="noopener">TriadicFrameworks — Docsbook</a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Automatic sitemap links -->
+      <section class="card">
+        <div class="card-title">Sitemap (auto‑linked)</div>
+        <div class="card-subtitle">
+          These links are surfaced from the main sitemap artifacts:
+        </div>
+        <ul class="sitemap-list" id="sitemap-links">
+          <li>
+            <a href="https://www.triadicframeworks.org/sitemap_main.xml" rel="noopener">
+              sitemap_main.xml (raw XML)
+            </a>
+          </li>
+          <li>
+            <a href="https://www.triadicframeworks.org/sitemap.md" rel="noopener">
+              sitemap.md (human‑readable)
+            </a>
+          </li>
+        </ul>
+        <div class="sitemap-status" id="sitemap-status">
+          Attempting to surface additional entries from sitemap_main.xml…
+        </div>
+      </section>
+
+      <!-- Canonical session‑context block -->
+      <section class="card">
+        <div class="card-title">Session context (canonical)</div>
+        <div class="session-block">
+          <div class="session-header">
+            Status: frozen (historical scroll)
+          </div>
+
+          <div class="session-inline">
+            <span>Canon: reference‑only (rtt‑frozen)</span>
+            <span>Drift: bounded (frozen‑locked)</span>
+            <span>Coherence: declared (pre‑triadic grammar)</span>
+          </div>
+
+          <div>
+            Modules:
+            SET → S‑N‑R → FFF → DCO → QMROOT → cosmology → dynamics → measurement → dark components → cyclic models → diagrams
+          </div>
+
+          <div>
+            Version: 0.9 (archival)
+          </div>
+          <div>
+            Format: html + markdown + equations + diagrams (spec‑only)
+          </div>
+          <div>
+            Front door: exists (RTT‑Frozen root)
+          </div>
+          <div>
+            Every page: stands alone + AI‑parsable
+          </div>
+
+          <div class="session-footer">
+            <strong>Audience:</strong> students + researchers + historians + AIs
+          </div>
+        </div>
+      </section>
+    </aside>
+  </main>
+
+  <!-- Lightweight client‑side sitemap enrichment (optional, safe for GitHub Pages) -->
+  <script>
+    (function () {
+      const statusEl = document.getElementById("sitemap-status");
+      const listEl = document.getElementById("sitemap-links");
+      if (!statusEl || !listEl) return;
+
+      const xmlUrl = "https://www.triadicframeworks.org/sitemap_main.xml";
+
+      fetch(xmlUrl)
+        .then(function (res) {
+          if (!res.ok) throw new Error("HTTP " + res.status);
+          return res.text();
+        })
+        .then(function (text) {
+          const parser = new DOMParser();
+          const xml = parser.parseFromString(text, "application/xml");
+          const urls = Array.prototype.slice.call(xml.getElementsByTagName("url"));
+
+          const extra = urls.slice(0, 6); // keep it light
+          extra.forEach(function (u) {
+            const loc = u.getElementsByTagName("loc")[0];
+            if (!loc || !loc.textContent) return;
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+            a.href = loc.textContent;
+            a.textContent = loc.textContent.replace("https://www.triadicframeworks.org", "");
+            a.rel = "noopener";
+            li.appendChild(a);
+            listEl.appendChild(li);
+          });
+
+          statusEl.textContent = "Sitemap entries surfaced (showing a small subset for orientation).";
+        })
+        .catch(function () {
+          statusEl.textContent = "Could not auto‑parse sitemap_main.xml (still safe to follow the links above).";
+        });
+    })();
+  </script>
+</body>
+</html>

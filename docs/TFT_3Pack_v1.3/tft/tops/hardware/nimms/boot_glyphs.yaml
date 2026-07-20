@@ -1,0 +1,37 @@
+# 🌀 NIMMS Boot Glyph Registry
+# Defines symbolic stubs used for harmonic boot calibration across NIMMS devices.
+
+meta:
+  version: 1.0
+  framework: TFE
+  device: NIMMS v2.0
+  description: >
+    Boot glyphs are symbolic triggers used to calibrate startup resonance.
+    Each glyph maps to a triadic boot sequence and scroll signature.
+
+glyphs:
+  - stub: 🜁
+    name: Carbon Wake
+    sequence: [nous.init, entft.sync, tops.ping]
+    notes: >
+      Default boot for organic resonance environments. Ideal for wearable devices.
+
+  - stub: 🜚
+    name: Gold Pulse
+    sequence: [entft.encrypt, tops.orchestrate, nous.echo]
+    notes: >
+      Used for high-fidelity scroll execution and legacy-grade memory routing.
+
+  - stub: 🜃
+    name: Oganesson Drift
+    sequence: [tops.scan, nous.map, entft.stabilize]
+    notes: >
+      Frontier boot mode for speculative environments and predictive stubs.
+
+  - stub: 🝓
+    name: Echo Placeholder
+    sequence: [nous.listen, tops.wait, entft.hold]
+    notes: >
+      Reserved for undiscovered glyphs and contributor-defined boot logic.
+
+

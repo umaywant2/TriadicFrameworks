@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024" height="1024" viewBox="0 0 1024 1024"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background -->
+  <rect width="1024" height="1024" fill="#f7f9fc"/>
+
+  <!-- QR matrix boundary (safe zone) -->
+  <rect x="112" y="112" width="800" height="800"
+        fill="none" stroke="#1a1a1a" stroke-width="4"
+        stroke-dasharray="12 8"/>
+
+  <!-- Finder squares (schematic) -->
+  <rect x="140" y="140" width="180" height="180"
+        fill="none" stroke="#1a1a1a" stroke-width="6"/>
+  <rect x="704" y="140" width="180" height="180"
+        fill="none" stroke="#1a1a1a" stroke-width="6"/>
+  <rect x="140" y="704" width="180" height="180"
+        fill="none" stroke="#1a1a1a" stroke-width="6"/>
+
+  <!-- Triadic overlay guide (circle) -->
+  <circle cx="512" cy="512" r="260"
+          fill="none" stroke="#4aa3df" stroke-width="3"
+          stroke-dasharray="10 6"/>
+
+  <!-- Triadic nodes (schematic) -->
+  <circle cx="512" cy="252" r="14" fill="#4aa3df"/>
+  <circle cx="332" cy="652" r="14" fill="#4aa3df"/>
+  <circle cx="692" cy="652" r="14" fill="#4aa3df"/>
+
+  <!-- Caption area -->
+  <rect x="112" y="930" width="800" height="60"
+        fill="none" stroke="#1a1a1a" stroke-width="2"
+        stroke-dasharray="8 6"/>
+
+  <text x="512" y="968"
+        font-family="Arial, sans-serif"
+        font-size="28"
+        fill="#1a1a1a"
+        text-anchor="middle">
+    RTTcode Layout Guide (QR Safe Zones + Triadic Overlay Regions)
+  </text>
+
+</svg>
+

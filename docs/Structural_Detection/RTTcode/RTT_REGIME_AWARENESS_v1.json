@@ -1,0 +1,28 @@
+{
+  "rttcode_id": "RTT_REGIME_AWARENESS_v1",
+  "operator": "REGIME_AWARENESS_OPERATOR",
+  "purpose": "Identify the structural regime of a sample using non-semantic signals.",
+  "inputs": {
+    "accepted_formats": ["structural_packets", "raw_samples"],
+    "noise_tolerance": "medium",
+    "mixed_regime_support": true
+  },
+  "outputs": {
+    "regime": "string",
+    "regime_signals": "array",
+    "boundary_signals": "array",
+    "drift_alignment": "string",
+    "coherence_level": "string",
+    "confidence": "number",
+    "notes": "string"
+  },
+  "guarantees": [
+    "no content interpretation",
+    "regime classification based solely on structure"
+  ],
+  "failure_modes": [
+    "conflicting regime signals",
+    "drift overwhelms structure",
+    "unstable boundaries"
+  ]
+}

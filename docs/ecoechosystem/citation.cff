@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+title: "EcoEchoSystem: A Substrate-Aligned Simulation Framework for Cognitive, Ecological, and Civilizational Dynamics"
+message: "If you use this work, please cite it using the metadata below."
+type: software
+version: 1.0.0
+doi: 10.5281/zenodo.18462694
+date-released: 2026-02-02
+authors:
+  - family-names: Loswin
+    given-names: Nawder
+    affiliation: TriadicFrameworks
+    orcid: "https://orcid.org/0009-0002-2282-5460"
+license: CC-BY-4.0
+repository-code: https://github.com/umaywant2/TriadicFrameworks
+abstract: >
+  EcoEchoSystem is a substrate-aligned simulation framework integrating cognitive,
+  ecological, and civilizational dynamics under regime-aware constraints. It is
+  designed for research, education, and long-arc systems inquiry rather than
+  optimization or policy prescription.
+keywords:
+  - complex systems
+  - regime dynamics
+  - ecological modeling
+  - cognitive agents
+  - civilization dynamics
+  - simulation framework

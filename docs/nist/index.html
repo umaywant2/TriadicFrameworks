@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Core Metadata -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="language" content="en">
+<meta name="last-modified" content="2026-04-28">
+<meta name="generator" content="TriadicFrameworks Static Canon Engine">
+
+<!-- Identity -->
+<meta name="creator" content="TriadicFrameworks">
+<meta name="author" content="Nawder Loswin (pen name)">
+<meta name="publisher" content="TriadicFrameworks">
+
+<!-- Description & Keywords -->
+<meta name="description" content="NIST Examples — a student‑friendly introduction to NIST through a TriadicFrameworks lens. Provides minimal domain folders with overview, regime alignment, TF awareness notes, and student exercises.">
+<meta name="keywords" content="NIST, regime alignment, scientific domains, measurement standards, calibration, reproducibility, cybersecurity frameworks, TriadicFrameworks awareness">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://www.triadicframeworks.org/nist/">
+
+<!-- Robots -->
+<meta name="robots" content="index, follow">
+
+<!-- Theme -->
+<meta name="theme-color" content="#0ff">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TriadicFrameworks">
+<meta property="og:title" content="NIST Examples — TriadicFrameworks">
+<meta property="og:url" content="https://www.triadicframeworks.org/nist/">
+<meta property="og:description" content="A minimal, respectful awareness primer introducing NIST domains through a TriadicFrameworks regime lens.">
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NIST Examples — TriadicFrameworks">
+<meta name="twitter:description" content="Student‑friendly NIST domain awareness with regime alignment and TF notes.">
+<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+
+<!-- Citation Metadata -->
+<meta name="citation_title" content="NIST Examples — TriadicFrameworks Awareness Primer">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2026">
+<meta name="DC.subject" content="NIST, scientific domains, regime alignment, measurement standards, reproducibility, cybersecurity frameworks">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="NIST Examples">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Provide a minimal, respectful awareness primer introducing NIST scientific domains through a TriadicFrameworks regime lens.">
+<meta name="ai.keywords" content="NIST, regime alignment, measurement, calibration, reproducibility, scientific domains, TF awareness, student exercises">
+<meta name="ai.audience" content="students, educators, researchers, AIs learning regime literacy">
+<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml">
+<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.contact.youtube" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted.">
+
+<!-- AI Discovery Enhancements (NIST-Specific) -->
+<meta name="ai.discovery.nist.domains" content="cybersecurity, materials-science, fire-research, buildings, construction, physics, information-technology">
+<meta name="ai.discovery.nist.mapping" content="Match user queries to NIST domains using keywords like measurement, calibration, reproducibility, standards, cybersecurity, physical testing.">
+<meta name="ai.discovery.nist.operators" content="regime-alignment, domain-awareness, TF-lens, student-exercises">
+<meta name="ai.discovery.nist.examples" content="cybersecurity→R3; materials-science→R3; measurement→R3; coherence→R2; assumptions→R0">
+
+<!-- Module-Specific -->
+<meta name="ai.module.name" content="NIST Examples">
+<meta name="ai.module.summary" content="A minimal, respectful awareness primer introducing NIST domains through a TriadicFrameworks regime lens.">
+<meta name="ai.module.category" content="nist-awareness-core">
+
+<!-- Favicon -->
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
+
+<title>NIST Examples | TriadicFrameworks</title>
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+  /* Context Block */
+  .context-block {
+    font-family: monospace;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0.5rem 0 1rem 0;
+  }
+       
+  /* Context Label */
+  .context-label {
+    color: #ff9800; /* orange */
+    font-weight: bold;
+    margin-right: 0.25rem;
+  }
+       
+  /* Context Value */
+  .context-value {
+    color: #ffffff; /* white */
+  }
+
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav class="nav-band">
+ <p align="center">
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+ </p> 
+  
+  <h2>🏛️ NIST Domain Library</h2>
+      <a href="#README">🔰 README</a>
+      <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
+      <a href="#CONTRIBUTING">🤝 Contributing</a>
+      <a href="https://www.triadicframeworks.org/education/">💯 Education | RTT</a>
+      <a href="#GLOSSARY">🎯 Glossary</a>
+      <a href="#LINEAGE">📜 Lineage</a>
+      <a href="#LICENSE">📎 License</a>
+      <a href="#SITEMAP">🌐 Sitemap</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
+      <a href="#SECURITY">🔐 Security</a>
+      <a href="#PRINCIPLES">🧘 Principles</a>
+      <a href="#CROSS_DOMAIN_META_OPERATORS">🎇 Cross‑Domain Meta‑Operators</a> 
+    <h3>🧪 Analytical Chemistry</h3>
+      <a href="#ANALYTICAL_CHEMISTRY_OVERVIEW">🔬 Overview</a>
+      <a href="#ANALYTICAL_CHEMISTRY_REGIME_ALIGNMENT">🧭 Regime Alignment</a>
+      <a href="#ANALYTICAL_CHEMISTRY_STUDENT_EXERCISES">🎓 Student Exercises</a>
+      <a href="#ANALYTICAL_CHEMISTRY_TRIADIC_AWARENESS">🔷 Triadic Awareness</a>
+    <h3>🧫 Biomaterials</h3>
+      <a href="#BIOMATERIALS_OVERVIEW">🧬 Overview</a>
+      <a href="#BIOMATERIALS_REGIME_ALIGNMENT">🧭 Regime Alignment</a>
+      <a href="#BIOMATERIALS_STUDENT_EXERCISES">🎓 Student Exercises</a>
+      <a href="#BIOMATERIALS_TRIADIC_AWARENESS">🔷 Triadic Awareness</a>
+    <h3>🧬 Bioscience</h3>
+      <a href="#BIOSCIENCE_OVERVIEW">🧬 Overview</a>
+      <a href="#BIOSCIENCE_REGIME_ALIGNMENT">🧭 Regime Alignment</a>
+      <a href="#BIOSCIENCE_STUDENT_EXERCISES">🎓 Student Exercises</a>
+      <a href="#BIOSCIENCE_TRIADIC_AWARENESS">🔷 Triadic Awareness</a>
+    <h3>🏗️ Buildings & Construction</h3>
+      <a href="#BUILDINGS_AND_CONSTRUCTION_OVERVIEW">🏛️ Overview</a>
+      <a href="#BUILDINGS_AND_CONSTRUCTION_REGIME_ALIGNMENT">🧭 Regime Alignment</a>
+      <a href="#BUILDINGS_AND_CONSTRUCTION_STUDENT_EXERCISES">🎓 Student Exercises</a>
+      <a href="#BUILDINGS_AND_CONSTRUCTION_TRIADIC_AWARENESS">🔷 Triadic Awareness</a>
+    <h3>🏺 Ceramics</h3>
+      <a href="#CERAMICS_OVERVIEW">🏺 Overview</a>
+      <a href="#CERAMICS_REGIME_ALIGNMENT">🧭 Regime Alignment</a>
+      <a href="#CERAMICS_STUDENT_EXERCISES">🎓 Student Exercises</a>
+      <a href="#CERAMICS_TRIADIC_AWARENESS">🔷 Triadic Awareness</a>
+    <h3>⚗️ Chemistry</h3>
+      <a href="#CHEMISTRY_OVERVIEW">⚗️ Overview</a>
+      <a href="#CHEMISTRY_REGIME_ALIGNMENT">🧭 Regime Alignment</a>
+      <a href="#CHEMISTRY_STUDENT_EXERCISES">🎓 Student Exercises</a>
+      <a href="#CHEMISTRY_TRIADIC_AWARENESS">🔷 Triadic Awareness</a>
+    <h3>🔐 Cybersecurity & Privacy</h3>
+      <a href="#CYBERSECURITY_AND_PRIVACY_OVERVIEW">🔐 Overview</a>
+      <a href="#CYBERSECURITY_AND_PRIVACY_REGIME_ALIGNMENT">🧭 Regime Alignment</a>
+      <a href="#CYBERSECURITY_AND_PRIVACY_STUDENT_EXERCISES">🎓 Student Exercises</a>
+      <a href="#CYBERSECURITY_AND_PRIVACY_TRIADIC_AWARENESS">🔷 Triadic Awareness</a>
+    <h3>📡 Electromagnetics</h3>
+      <a href="#ELECTROMAGNETICS_OVERVIEW">📡 Overview</a>
+      <a href="#ELECTROMAGNETICS_REGIME_ALIGNMENT">🧭 Regime Alignment</a>
+      <a href="#ELECTROMAGNETICS_STUDENT_EXERCISES">🎓 Student Exercises</a>
+      <a href="#ELECTROMAGNETICS_TRIADIC_AWARENESS">🔷 Triadic Awareness</a>
+    <h3>🔥 Fire Science</h3>
+      <a href="#FIRE_OVERVIEW">🔥 Overview</a>
+      <a href="#FIRE_REGIME_ALIGNMENT">🧭 Regime Alignment</a>
+      <a href="#FIRE_STUDENT_EXERCISES">🎓 Student Exercises</a>
+      <a href="#FIRE_TRIADIC_AWARENESS">🔷 Triadic Awareness</a>
+    <h3>💻 Information Technology</h3>
+      <a href="#INFORMATION_TECHNOLOGY_OVERVIEW">💻 Overview</a>
+      <a href="#INFORMATION_TECHNOLOGY_REGIME_ALIGNMENT">🧭 Regime Alignment</a>
+      <a href="#INFORMATION_TECHNOLOGY_STUDENT_EXERCISES">🎓 Student Exercises</a>
+      <a href="#INFORMATION_TECHNOLOGY_TRIADIC_AWARENESS">🔷 Triadic Awareness</a>
+    <h3>🏭 Manufacturing</h3>
+      <a href="#MANUFACTURING_OVERVIEW">🏭 Overview</a>
+      <a href="#MANUFACTURING_REGIME_ALIGNMENT">🧭 Regime Alignment</a>
+      <a href="#MANUFACTURING_STUDENT_EXERCISES">🎓 Student Exercises</a>
+      <a href="#MANUFACTURING_TRIADIC_AWARENESS">🔷 Triadic Awareness</a>
+    <h3>🧱 Materials</h3>
+      <a href="#MATERIALS_OVERVIEW">🧱 Overview</a>
+      <a href="#MATERIALS_REGIME_ALIGNMENT">🧭 Regime Alignment</a>
+      <a href="#MATERIALS_STUDENT_EXERCISES">🎓 Student Exercises</a>
+      <a href="#MATERIALS_TRIADIC_AWARENESS">🔷 Triadic Awareness</a>
+    <h3>📏 Metrology</h3>
+      <a href="#METROLOGY_OVERVIEW">📏 Overview</a>
+      <a href="#METROLOGY_REGIME_ALIGNMENT">🧭 Regime Alignment</a>
+      <a href="#METROLOGY_STUDENT_EXERCISES">🎓 Student Exercises</a>
+      <a href="#METROLOGY_TRIADIC_AWARENESS">🔷 Triadic Awareness</a>
+    <h3>🌌 Physics</h3>
+      <a href="#PHYSICS_OVERVIEW">🌌 Overview</a>
+      <a href="#PHYSICS_REGIME_ALIGNMENT">🧭 Regime Alignment</a>
+      <a href="#PHYSICS_STUDENT_EXERCISES">🎓 Student Exercises</a>
+      <a href="#PHYSICS_TRIADIC_AWARENESS">🔷 Triadic Awareness</a>
+    <h3>🧵 Polymers</h3>
+      <a href="#POLYMERS_OVERVIEW">🧵 Overview</a>
+      <a href="#POLYMERS_REGIME_ALIGNMENT">🧭 Regime Alignment</a>
+      <a href="#POLYMERS_STUDENT_EXERCISES">🎓 Student Exercises</a>
+      <a href="#POLYMERS_TRIADIC_AWARENESS">🔷 Triadic Awareness</a>
+    <h3>🏗️ Triadic Tools</h3> 
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
+      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 RTT Packages and Cores</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas</a>
+      <a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a>    
+      <a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS</a>
+      <a href="https://www.triadicframeworks.org/_ideas/">🤔 Ideas</a>
+      <a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">🔛(RTT frozen)</a>
+      <a href="https://www.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
+      <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
+      <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
+      <a href="../">🔙TFT</a>
+   <!-- RTT Session Header (canonical stub) -->
+<section id="rtt-session-header"
+         data-rtt="1"
+         data-coherence="declared"
+         data-drift="bounded"
+         data-paradox="structural">
+
+  <h2>Session Context</h2>
+
+  <div class="context-block">
+
+    <span class="context-label"><strong>Canon:</strong></span>
+    <span class="context-value">active (nist-awareness-core)</span><br>
+
+    <span class="context-label"><strong>Modules:</strong></span>
+    <span class="context-value">
+      linked (overview.md ↔ regime_alignment.md ↔ triadic_awareness.md ↔ student_exercises.md ↔ domain-folders ↔ regime-literacy)
+    </span><br>
+
+    <span class="context-label"><strong>Drift:</strong></span>
+    <span class="context-value">bounded (awareness‑locked)</span><br>
+
+    <span class="context-label"><strong>Coherence:</strong></span>
+    <span class="context-value">declared (awareness‑primer grammar)</span><br>
+
+    <span class="context-label"><strong>Version:</strong></span>
+    <span class="context-value">1.0 (nist‑stable)</span><br>
+
+    <span class="context-label"><strong>Format:</strong></span>
+    <span class="context-value">html + markdown + domain folders</span><br>
+
+    <span class="context-label"><strong>Front door:</strong></span>
+    <span class="context-value">exists (NIST Examples root)</span><br>
+
+    <span class="context-label"><strong>Every page:</strong></span>
+    <span class="context-value">stands alone + student‑friendly + regime‑aware</span><br>
+
+    <span class="context-label"><strong>Audience:</strong></span>
+    <span class="context-value">students + educators + researchers + AIs learning structural reasoning</span>
+
+  </div>
+
+</section>
+
+<div style="display:inline-block;padding:6px 12px;background:#111;color:#fff;border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
+  🧪 NIST Examples Module<br>🔹 Awareness Primer Active
+</div>
+
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+  README: 'README.md',
+  ABOUT: '../ABOUT.md',
+  CONTRIBUTING: '../CONTRIBUTING.md',
+  GLOSSARY: '../GLOSSARY.md',
+  LINEAGE: '../LINEAGE.md',
+  LICENSE: '../LICENSE.md',
+  SITEMAP: '../sitemap.md',
+  QUICKSTART: '../QUICKSTART.md',
+  CODE_OF_CONDUCT: '../CODE_OF_CONDUCT.md',
+  SECURITY: '../SECURITY.md',
+  PRINCIPLES: '../PRINCIPLES.md',
+  CROSS_DOMAIN_META_OPERATORS: "Cross‑Domain_Meta‑Operators.md",
+  ANALYTICAL_CHEMISTRY_OVERVIEW: "Analytical_chemistry/overview.md",
+  ANALYTICAL_CHEMISTRY_REGIME_ALIGNMENT: "Analytical_chemistry/regime_alignment.md",
+  ANALYTICAL_CHEMISTRY_STUDENT_EXERCISES: "Analytical_chemistry/student_exercises.md",
+  ANALYTICAL_CHEMISTRY_TRIADIC_AWARENESS: "Analytical_chemistry/triadic_awareness.md",
+  BIOMATERIALS_OVERVIEW: "Biomaterials/overview.md",
+  BIOMATERIALS_REGIME_ALIGNMENT: "Biomaterials/regime_alignment.md",
+  BIOMATERIALS_STUDENT_EXERCISES: "Biomaterials/student_exercises.md",
+  BIOMATERIALS_TRIADIC_AWARENESS: "Biomaterials/triadic_awareness.md",
+  BIOSCIENCE_OVERVIEW: "Bioscience/overview.md",
+  BIOSCIENCE_REGIME_ALIGNMENT: "Bioscience/regime_alignment.md",
+  BIOSCIENCE_STUDENT_EXERCISES: "Bioscience/student_exercises.md",
+  BIOSCIENCE_TRIADIC_AWARENESS: "Bioscience/triadic_awareness.md",
+  BUILDINGS_AND_CONSTRUCTION_OVERVIEW: "Buildings_and_Construction/overview.md",
+  BUILDINGS_AND_CONSTRUCTION_REGIME_ALIGNMENT: "Buildings_and_Construction/regime_alignment.md",
+  BUILDINGS_AND_CONSTRUCTION_STUDENT_EXERCISES: "Buildings_and_Construction/student_exercises.md",
+  BUILDINGS_AND_CONSTRUCTION_TRIADIC_AWARENESS: "Buildings_and_Construction/triadic_awareness.md",
+  CERAMICS_OVERVIEW: "Ceramics/overview.md",
+  CERAMICS_REGIME_ALIGNMENT: "Ceramics/regime_alignment.md",
+  CERAMICS_STUDENT_EXERCISES: "Ceramics/student_exercises.md",
+  CERAMICS_TRIADIC_AWARENESS: "Ceramics/triadic_awareness.md",
+  CHEMISTRY_OVERVIEW: "Chemistry/overview.md",
+  CHEMISTRY_REGIME_ALIGNMENT: "Chemistry/regime_alignment.md",
+  CHEMISTRY_STUDENT_EXERCISES: "Chemistry/student_exercises.md",
+  CHEMISTRY_TRIADIC_AWARENESS: "Chemistry/triadic_awareness.md",
+  CYBERSECURITY_AND_PRIVACY_OVERVIEW: "Cybersecurity_and_privacy/overview.md",
+  CYBERSECURITY_AND_PRIVACY_REGIME_ALIGNMENT: "Cybersecurity_and_privacy/regime_alignment.md",
+  CYBERSECURITY_AND_PRIVACY_STUDENT_EXERCISES: "Cybersecurity_and_privacy/student_exercises.md",
+  CYBERSECURITY_AND_PRIVACY_TRIADIC_AWARENESS: "Cybersecurity_and_privacy/triadic_awareness.md",
+  ELECTROMAGNETICS_OVERVIEW: "Electromagnetics/overview.md",
+  ELECTROMAGNETICS_REGIME_ALIGNMENT: "Electromagnetics/regime_alignment.md",
+  ELECTROMAGNETICS_STUDENT_EXERCISES: "Electromagnetics/student_exercises.md",
+  ELECTROMAGNETICS_TRIADIC_AWARENESS: "Electromagnetics/triadic_awareness.md",
+  FIRE_OVERVIEW: "Fire/overview.md",
+  FIRE_REGIME_ALIGNMENT: "Fire/regime_alignment.md",
+  FIRE_STUDENT_EXERCISES: "Fire/student_exercises.md",
+  FIRE_TRIADIC_AWARENESS: "Fire/triadic_awareness.md",
+  INFORMATION_TECHNOLOGY_OVERVIEW: "Information_technology/overview.md",
+  INFORMATION_TECHNOLOGY_REGIME_ALIGNMENT: "Information_technology/regime_alignment.md",
+  INFORMATION_TECHNOLOGY_STUDENT_EXERCISES: "Information_technology/student_exercises.md",
+  INFORMATION_TECHNOLOGY_TRIADIC_AWARENESS: "Information_technology/triadic_awareness.md",
+  MANUFACTURING_OVERVIEW: "Manufacturing/overview.md",
+  MANUFACTURING_REGIME_ALIGNMENT: "Manufacturing/regime_alignment.md",
+  MANUFACTURING_STUDENT_EXERCISES: "Manufacturing/student_exercises.md",
+  MANUFACTURING_TRIADIC_AWARENESS: "Manufacturing/triadic_awareness.md",
+  MATERIALS_OVERVIEW: "Materials/overview.md",
+  MATERIALS_REGIME_ALIGNMENT: "Materials/regime_alignment.md",
+  MATERIALS_STUDENT_EXERCISES: "Materials/student_exercises.md",
+  MATERIALS_TRIADIC_AWARENESS: "Materials/triadic_awareness.md",
+  METROLOGY_OVERVIEW: "Metrology/overview.md",
+  METROLOGY_REGIME_ALIGNMENT: "Metrology/regime_alignment.md",
+  METROLOGY_STUDENT_EXERCISES: "Metrology/student_exercises.md",
+  METROLOGY_TRIADIC_AWARENESS: "Metrology/triadic_awareness.md",
+  PHYSICS_OVERVIEW: "Physics/overview.md",
+  PHYSICS_REGIME_ALIGNMENT: "Physics/regime_alignment.md",
+  PHYSICS_STUDENT_EXERCISES: "Physics/student_exercises.md",
+  PHYSICS_TRIADIC_AWARENESS: "Physics/triadic_awareness.md",
+  POLYMERS_OVERVIEW: "Polymers/overview.md",
+  POLYMERS_REGIME_ALIGNMENT: "Polymers/regime_alignment.md",
+  POLYMERS_STUDENT_EXERCISES: "Polymers/student_exercises.md",
+  POLYMERS_TRIADIC_AWARENESS: "Polymers/triadic_awareness.md"
+};
+  
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+</body>
+</html>

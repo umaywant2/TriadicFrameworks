@@ -1,0 +1,115 @@
+{
+  "module": "Morphic Resonance",
+  "canon": "RTT",
+  "version": "1.0",
+  "status": "active",
+
+  "identity": {
+    "name": "Morphic Resonance",
+    "slug": "morphic-resonance",
+    "category": "rtt-core",
+    "summary": "Dimensional reinterpretation of morphic resonance as coherence propagation across time.",
+    "author": "Nawder Loswin",
+    "year": 2026
+  },
+
+  "purpose": {
+    "description": "Provide a dimensional, non-mystical reinterpretation of morphic resonance using RTT's coherence, attractor, and cross-temporal geometry.",
+    "goals": [
+      "Define cross-temporal coherence propagation",
+      "Model attractor formation and deepening",
+      "Explain rediscovery and pattern inheritance",
+      "Integrate drift-aware reasoning",
+      "Provide operator grammar for MR phenomena"
+    ]
+  },
+
+  "lineage": {
+    "ancestors": [
+      "Sheldrake (1981)",
+      "Complexity Theory",
+      "Predictive Processing",
+      "RTT Dimensional Compute"
+    ],
+    "descendants": [
+      "Dimensional Inheritance",
+      "Species-Level Learning",
+      "Cultural Attractors",
+      "Cross-Temporal Simulation"
+    ]
+  },
+
+  "files": [
+    "M_Capture.md",
+    "MR_Theory.md",
+    "MR_History.md",
+    "MR_Equations.md",
+    "MR_Operators.md",
+    "MR_Examples.md",
+    "MR_Comparisons.md",
+    "MR_Standards.md",
+    "MR_Glossary.md",
+    "MR_Session_Context.md",
+    "README.md",
+    "index.md"
+  ],
+
+  "roles": {
+    "engine": [
+      "MR_Theory.md",
+      "MR_Equations.md",
+      "MR_Operators.md"
+    ],
+    "profile": [
+      "README.md",
+      "index.md",
+      "MR_Session_Context.md"
+    ],
+    "signature": [
+      "MR_Standards.md",
+      "MR_Glossary.md"
+    ],
+    "diagnostic": [
+      "MR_Comparisons.md"
+    ],
+    "map": [
+      "MR_Examples.md",
+      "MR_History.md"
+    ],
+    "reference": [
+      "M_Capture.md"
+    ]
+  },
+
+  "imports": {
+    "rtt-core": [
+      "Dimensional Compute",
+      "Coherence Regime",
+      "Drift Regime",
+      "RTT/2",
+      "RTT/3"
+    ]
+  },
+
+  "exports": {
+    "concepts": [
+      "Cross-Temporal Coherence",
+      "Dimensional Inheritance",
+      "Mass Activation Coherence Surge",
+      "Attractor Re-Entry",
+      "Species-Level Learning"
+    ],
+    "operators": [
+      "MR_PROPAGATE",
+      "MR_STABILIZE",
+      "MR_REINFORCE",
+      "MR_REENTER",
+      "MR_DECAY",
+      "MR_AMPLIFY",
+      "MR_ALIGN",
+      "MR_DIFFERENTIATE",
+      "MR_SUPPRESS",
+      "MR_TRACE"
+    ]
+  }
+}

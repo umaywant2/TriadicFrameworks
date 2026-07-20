@@ -1,0 +1,20 @@
+id: glyph_manifest_001
+source: fff_alignment_predictor.py
+folds:
+  - frequency: 144
+    forci: 0.88
+    flui: 0.91
+    freqi: 0.94
+    glyph: glyph_protein_echo_02.svg
+    pulse_strength: 0.753
+    color: "#6c00ff"
+  - frequency: 72
+    forci: 0.72
+    flui: 0.65
+    freqi: 0.91
+    glyph: bridge_glyph_overlay_01.svg
+    pulse_strength: 0.427
+    color: "#999999"
+notes: >
+  Glyphs selected based on triadic resonance alignment.
+  Pulse strength calculated via FFF product. Color reflects harmonic clarity.

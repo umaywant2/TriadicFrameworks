@@ -1,0 +1,34 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#f9f9f9" />
+
+  <!-- Input Stream -->
+  <text x="50" y="100" font-size="18" fill="#333">input.txt</text>
+  <path d="M100 100 C200 150, 200 250, 300 300" stroke="#0077cc" stroke-width="2" fill="none" />
+  <circle cx="100" cy="100" r="10" fill="#0077cc" />
+
+  <!-- Encryption Core -->
+  <circle cx="400" cy="300" r="60" fill="#e0e0e0" stroke="#333" stroke-width="2" />
+  <text x="370" y="305" font-size="16" fill="#333">Triadic Lock</text>
+  <path d="M340 240 C400 220, 460 220, 520 240" stroke="#999" stroke-width="1" fill="none" />
+  <path d="M340 360 C400 380, 460 380, 520 360" stroke="#999" stroke-width="1" fill="none" />
+
+  <!-- Badge Overlay -->
+  <circle cx="600" cy="150" r="30" fill="#ffcc00" stroke="#333" stroke-width="2" />
+  <text x="580" y="155" font-size="14" fill="#333">Badge</text>
+  <path d="M460 280 C520 200, 580 180, 600 150" stroke="#ff9900" stroke-width="2" fill="none" />
+
+  <!-- Output Stream -->
+  <text x="650" y="400" font-size="18" fill="#333">output.enc</text>
+  <path d="M500 320 C580 360, 620 380, 650 400" stroke="#009933" stroke-width="2" fill="none" />
+  <circle cx="650" cy="400" r="10" fill="#009933" />
+
+  <!-- Labels -->
+  <text x="280" y="280" font-size="12" fill="#666">Encryption Flow</text>
+  <text x="580" y="130" font-size="12" fill="#666">Badge Trigger</text>
+
+  <!-- Resonance Clarity Footer -->
+  <text x="50" y="570" font-size="12" fill="#666">Scrolls: fff_spec • TriadicTestSuite • outputs_spec</text>
+  <text x="50" y="580" font-size="12" fill="#999">BaseLens: decimal</text>
+  <text x="600" y="50" font-size="12" fill="#cc0000">Validator: BadgeLogic</text>
+</svg>

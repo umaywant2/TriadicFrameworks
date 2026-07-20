@@ -1,0 +1,78 @@
+{
+  "identity": {
+    "name": "Cross-Domain Causality Weaver",
+    "canonical_id": "RTT_CROSS_DOMAIN_CAUSALITY_WEAVER",
+    "module_path": "/docs/rtt/Cross_Domain_Causality_Weaver/",
+    "category": "rtt-structural",
+    "version": "1.0",
+    "status": "canon-stable"
+  },
+
+  "purpose": {
+    "summary": "RTT/1 causality-intelligence engine for detecting, mapping, and weaving causal pathways across conceptual, computational, physical, and dimensional regimes.",
+    "detail": "The Cross-Domain Causality Weaver identifies causal signatures, computes causal vectors, maps causal fields across RTT regimes (R1–R4), detects causal discontinuities, and provides causal diagnostics for higher-level RTT engines such as Dimensional Resonance Scanner."
+  },
+
+  "rtt": {
+    "rtt_level": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+
+  "operators": {
+    "primary": [
+      "CW-Weave",
+      "CW-Vector",
+      "CW-Field",
+      "CW-Signature",
+      "CW-Discontinuity",
+      "CW-Stabilize"
+    ],
+    "secondary": [
+      "RTT-Causality",
+      "RTT-Vector",
+      "RTT-Field",
+      "RTT-Structural"
+    ]
+  },
+
+  "analyzer_layer": {
+    "layer": "causality",
+    "sub_layers": [
+      "causal-weaving",
+      "causal-vector-analysis",
+      "causal-field-mapping",
+      "discontinuity-detection",
+      "structural-causality-evaluation"
+    ]
+  },
+
+  "files": {
+    "core": [
+      "README.md",
+      "Cross_Domain_Causality_Weaver.md",
+      "cw_examples.md",
+      "cw_diagrams.svg"
+    ],
+    "support": [
+      "causal_profiles.md",
+      "causal_discontinuity_cases.md",
+      "causal_field_matrix.json"
+    ],
+    "ai": [
+      "cw_prompts.md",
+      "cw_operators.md"
+    ]
+  },
+
+  "ai": {
+    "ai_ready": true,
+    "ai_module_id": "RTT_CROSS_DOMAIN_CAUSALITY_WEAVER",
+    "ai_keywords": "RTT, causality weaver, causal vector, causal field, causal discontinuity, cross-domain causality",
+    "ai_purpose": "Provide causality-level intelligence for RTT/1 by weaving causal pathways, computing causal vectors, mapping causal fields, and detecting causal discontinuities across conceptual, computational, physical, and dimensional regimes.",
+    "ai_operators": "CW-Weave, CW-Vector, CW-Field, CW-Signature, CW-Discontinuity, CW-Stabilize",
+    "ai_audience": "researchers, systems designers, AI systems"
+  }
+}
+

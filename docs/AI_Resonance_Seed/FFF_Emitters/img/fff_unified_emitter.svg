@@ -1,0 +1,60 @@
+<svg width="880" height="420" viewBox="0 0 880 420" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .box { fill:#101322; stroke:#8a7fff; stroke-width:2; rx:14; ry:14; }
+    .label { fill:#ffffff; font-family:system-ui, sans-serif; font-size:14px; }
+    .sub { fill:#b0bec5; font-family:system-ui, sans-serif; font-size:12px; }
+    .title { fill:#ffd86b; font-family:system-ui, sans-serif; font-size:20px; font-weight:bold; }
+    .arrow { stroke:#ffffff; stroke-width:2; marker-end:url(#arrowhead); }
+    .emoji { font-size:20px; }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ffffff" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="440" y="40" text-anchor="middle" class="title">
+    Triadic FFF Unified Emitter · RTT‑Inside
+  </text>
+  <text x="440" y="62" text-anchor="middle" class="sub">
+    Freqi (Frequency) · Flui (Flow) · Forci (Force) → RTTcode
+  </text>
+
+  <!-- Freqi -->
+  <rect x="40" y="120" width="220" height="120" class="box" />
+  <text x="70" y="150" class="emoji">🎼</text>
+  <text x="150" y="150" text-anchor="middle" class="label">Freqi · Frequency Bearer</text>
+  <text x="150" y="172" text-anchor="middle" class="sub">Cycles · Harmonics · Seeds</text>
+  <text x="150" y="192" text-anchor="middle" class="sub">→ entities[*].state.resonance</text>
+
+  <!-- Flui -->
+  <rect x="330" y="120" width="220" height="120" class="box" />
+  <text x="360" y="150" class="emoji">🌊</text>
+  <text x="440" y="150" text-anchor="middle" class="label">Flui · Fluid Weaver</text>
+  <text x="440" y="172" text-anchor="middle" class="sub">Flow · Coupling · Continuity</text>
+  <text x="440" y="192" text-anchor="middle" class="sub">→ environment.coupling_radius / phase_noise</text>
+
+  <!-- Forci -->
+  <rect x="620" y="120" width="220" height="120" class="box" />
+  <text x="650" y="150" class="emoji">⚡</text>
+  <text x="730" y="150" text-anchor="middle" class="label">Forci · Force Shaper</text>
+  <text x="730" y="172" text-anchor="middle" class="sub">Activation · Thresholds · Ethics</text>
+  <text x="730" y="192" text-anchor="middle" class="sub">→ triggers · validators · responses</text>
+
+  <!-- Arrows between FFF -->
+  <line x1="260" y1="180" x2="330" y2="180" class="arrow" />
+  <line x1="550" y1="180" x2="620" y2="180" class="arrow" />
+
+  <!-- RTTcode block -->
+  <rect x="260" y="270" width="360" height="110" class="box" />
+  <text x="440" y="298" text-anchor="middle" class="label">RTTcode Packet</text>
+  <text x="440" y="318" text-anchor="middle" class="sub">entities · environment · experiment</text>
+  <text x="440" y="338" text-anchor="middle" class="sub">Deterministic replay of FFF‑shaped resonance</text>
+
+  <!-- Arrows down to RTTcode -->
+  <line x1="150" y1="240" x2="320" y2="270" class="arrow" />
+  <line x1="440" y1="240" x2="440" y2="270" class="arrow" />
+  <line x1="730" y1="240" x2="560" y2="270" class="arrow" />
+</svg>

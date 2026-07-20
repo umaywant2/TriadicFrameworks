@@ -1,0 +1,89 @@
+{
+  "ai.module": "reciprocals_partition_polynomials_rtt",
+  "ai.version": "1.0",
+  "ai.purpose": "RTT structural map of the paper 'Reciprocals of Partition Polynomials'.",
+  "ai.source.pdf": "https://arxiv.org/pdf/2605.21718",
+  "ai.keywords": [
+    "partition polynomials",
+    "reciprocal polynomials",
+    "zeros",
+    "asymptotics",
+    "q-series",
+    "generating functions",
+    "analytic number theory"
+  ],
+
+  "ai.module.summary": "This module exposes the regime structure behind the study of reciprocals of partition polynomials, connecting generating-function identities, zero distributions, and asymptotic behavior. It preserves the authors' results while adding RTT operators for agentic reasoning.",
+
+  "ai.regimes": {
+    "partition_polynomial_regime": {
+      "description": "Partition polynomials encode restricted partition functions via finite generating functions.",
+      "evidence": "Paper defines partition polynomials P_n(q) from truncated partition generating series."
+    },
+    "reciprocal_regime": {
+      "description": "Reciprocals 1/P_n(q) are studied as analytic objects with controlled singularities.",
+      "evidence": "Main focus is on analytic and combinatorial properties of 1/P_n(q)."
+    },
+    "zero_distribution_regime": {
+      "description": "Zeros of P_n(q) and poles of 1/P_n(q) exhibit structured patterns in the complex plane.",
+      "evidence": "Authors analyze location and clustering of zeros/poles."
+    },
+    "asymptotic_regime": {
+      "description": "As n grows, partition polynomials and their reciprocals obey asymptotic laws.",
+      "evidence": "Paper derives asymptotic estimates for coefficients and values."
+    }
+  },
+
+  "ai.tensions": {
+    "finite_vs_infinite_generating": {
+      "description": "Finite partition polynomials vs infinite partition generating functions.",
+      "paper_alignment": "Reciprocals interpolate between finite truncations and full q-series."
+    },
+    "combinatorial_vs_analytic": {
+      "description": "Discrete partition counts vs analytic behavior of polynomials and their reciprocals.",
+      "paper_alignment": "Proofs move between coefficient identities and complex analysis."
+    },
+    "zeros_vs_coefficients": {
+      "description": "Zero locations vs coefficient growth and sign patterns.",
+      "paper_alignment": "Zero distribution is linked to asymptotic coefficient behavior."
+    }
+  },
+
+  "ai.transitions": {
+    "truncation_to_polynomial_transition": {
+      "description": "Pass from truncated partition series to partition polynomials P_n(q).",
+      "paper_alignment": "Definition of P_n(q) via finite products/sums."
+    },
+    "polynomial_to_reciprocal_transition": {
+      "description": "Study 1/P_n(q) as a new generating object with poles at zeros of P_n.",
+      "paper_alignment": "Main analytic setup of the paper."
+    },
+    "zeros_to_asymptotics_transition": {
+      "description": "Use zero distribution to derive asymptotic information on coefficients/values.",
+      "paper_alignment": "Asymptotic theorems based on analytic structure."
+    }
+  },
+
+  "ai.operators": {
+    "partition_polynomial_operator": {
+      "type": "operator",
+      "role": "Constructs P_n(q) from partition data or truncated q-series."
+    },
+    "reciprocal_operator": {
+      "type": "operator",
+      "role": "Forms 1/P_n(q) and tracks its poles and analytic behavior."
+    },
+    "zero_distribution_operator": {
+      "type": "operator",
+      "role": "Analyzes zeros of P_n(q) and poles of 1/P_n(q)."
+    },
+    "asymptotic_operator": {
+      "type": "operator",
+      "role": "Derives asymptotic estimates from analytic data."
+    }
+  },
+
+  "ai.audience": "Researchers in analytic number theory, partition theory, and q-series.",
+  "ai.contact.github": "https://github.com/TriadicFrameworks",
+  "ai.license": "Open educational use permitted"
+}

@@ -1,0 +1,96 @@
+{
+  "ai.module": "chaos_theory.rtt1",
+  "ai.version": "1.0",
+  "ai.purpose": "RTT/1 engine layer for Chaos Theory: operator grammar, dimensional mapping, divergence indicators, and minimal coherence examples.",
+  "ai.keywords": [
+    "chaos",
+    "nonlinear dynamics",
+    "divergence",
+    "sensitivity",
+    "attractors",
+    "operator grammar",
+    "rtt1"
+  ],
+
+  "engine": {
+    "layer": "RTT/1",
+    "description": "Defines the operator grammar and dimensional behavior of chaotic systems within the RTT substrate."
+  },
+
+  "operators": {
+    "core": {
+      "divergence": {
+        "type": "behavior",
+        "description": "Rate at which nearby trajectories separate under finite precision.",
+        "signals": ["exponential_separation", "loss_of_predictive_power"]
+      },
+      "sensitivity": {
+        "type": "behavior",
+        "description": "Amplification of small differences in initial conditions.",
+        "signals": ["trajectory_instability", "precision_dependence"]
+      },
+      "attractor": {
+        "type": "structure",
+        "description": "Stable recurrence pattern in state space.",
+        "signals": ["bounded_recurrence", "pattern_convergence"]
+      },
+      "recurrence": {
+        "type": "behavior",
+        "description": "Return of system states to neighborhoods of prior states.",
+        "signals": ["quasi_periodicity", "pattern_return"]
+      }
+    },
+
+    "supporting": {
+      "finite_precision": {
+        "type": "constraint",
+        "description": "Resolution limits that amplify divergence and mask underlying structure."
+      },
+      "projection_loss": {
+        "type": "constraint",
+        "description": "Dimensional compression that produces apparent randomness."
+      }
+    }
+  },
+
+  "dimensional_mapping": {
+    "R1": "High sensitivity due to minimal lineage tracking.",
+    "R2": "Projection-induced divergence; chaos emerges from compression.",
+    "R3": "Nonlinear behavior fully expressed; attractors and recurrence visible."
+  },
+
+  "coherence": {
+    "markers": [
+      "bounded divergence within system constraints",
+      "stable attractor geometry",
+      "recurrence detectable under sufficient resolution"
+    ],
+    "instability_signals": [
+      "unbounded divergence",
+      "loss of attractor structure",
+      "noise dominating recurrence patterns"
+    ]
+  },
+
+  "examples": {
+    "minimal": [
+      {
+        "name": "Lorenz System",
+        "demonstrates": ["divergence", "attractor", "recurrence"]
+      },
+      {
+        "name": "Logistic Map (r > 3.57)",
+        "demonstrates": ["sensitivity", "finite_precision"]
+      }
+    ]
+  },
+
+  "integration": {
+    "cross_module": [
+      "information_theory.rtt1",
+      "thermodynamics.rtt1",
+      "quantum_mechanics.rtt1"
+    ],
+    "notes": "RTT/1 treats chaos as a behavioral diagnostic; substrate-level causes are resolved in RTT/2 and RTT/3."
+  }
+}

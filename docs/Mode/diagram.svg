@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Mode Layer Structure Diagram — diagram.svg
+  RTT/1 Session Layer · TriadicFrameworks
+  v1.0
+
+  Shows: Mode Operator stances, MCL constraint gating,
+  Session Layer siblings, and Regime Layer inheritance.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" font-family="system-ui, Arial, sans-serif">
+
+  <!-- Background -->
+  <rect width="960" height="720" fill="#0a0a0a"/>
+
+  <!-- ════════════════════════════════════════════════
+       REGIME LAYER (top)
+       ════════════════════════════════════════════════ -->
+  <rect x="300" y="20" width="360" height="60" rx="10" fill="none" stroke="#8A2BE2" stroke-width="2"/>
+  <text x="480" y="48" text-anchor="middle" fill="#8A2BE2" font-size="13" font-weight="bold">REGIME LAYER</text>
+  <text x="480" y="66" text-anchor="middle" fill="#9b7dd4" font-size="11">coherence · drift · paradox</text>
+
+  <!-- Arrow: Regime → Session -->
+  <line x1="480" y1="80" x2="480" y2="120" stroke="#8A2BE2" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <polygon points="474,116 480,126 486,116" fill="#8A2BE2"/>
+  <text x="500" y="108" fill="#9b7dd4" font-size="9" font-style="italic">inherits posture</text>
+
+  <!-- ════════════════════════════════════════════════
+       SESSION LAYER (main container)
+       ════════════════════════════════════════════════ -->
+  <rect x="40" y="130" width="880" height="540" rx="14" fill="none" stroke="#00eaff" stroke-width="2" opacity="0.6"/>
+  <text x="60" y="156" fill="#00eaff" font-size="14" font-weight="bold">SESSION LAYER</text>
+
+  <!-- ────────────────────────────────────────────────
+       MODE OPERATOR (M) — center block
+       ──────────────────────────────────────────────── -->
+  <rect x="280" y="170" width="400" height="280" rx="12" fill="#0d1117" stroke="#00eaff" stroke-width="2"/>
+  <text x="480" y="198" text-anchor="middle" fill="#00eaff" font-size="15" font-weight="bold">🎛️ MODE OPERATOR (M)</text>
+
+  <!-- Chat Mode (default / center) -->
+  <rect x="370" y="280" width="120" height="44" rx="8" fill="#112233" stroke="#ffe600" stroke-width="2"/>
+  <text x="430" y="300" text-anchor="middle" fill="#ffe600" font-size="11" font-weight="bold">M_chat</text>
+  <text x="430" y="316" text-anchor="middle" fill="#ccc" font-size="9">DEFAULT · Stabilize</text>
+
+  <!-- Task Mode (left) -->
+  <rect x="300" y="218" width="110" height="40" rx="8" fill="#112233" stroke="#ff00d4" stroke-width="1.5"/>
+  <text x="355" y="236" text-anchor="middle" fill="#ff00d4" font-size="11" font-weight="bold">M_task</text>
+  <text x="355" y="250" text-anchor="middle" fill="#ccc" font-size="9">Shift</text>
+
+  <!-- Spec Mode (right) -->
+  <rect x="470" y="218" width="110" height="40" rx="8" fill="#112233" stroke="#ff00d4" stroke-width="1.5"/>
+  <text x="525" y="236" text-anchor="middle" fill="#ff00d4" font-size="11" font-weight="bold">M_spec</text>
+  <text x="525" y="250" text-anchor="middle" fill="#ccc" font-size="9">Stabilize</text>
+
+  <!-- Debug Mode (bottom-left) -->
+  <rect x="300" y="340" width="110" height="40" rx="8" fill="#112233" stroke="#ff00d4" stroke-width="1.5"/>
+  <text x="355" y="358" text-anchor="middle" fill="#ff00d4" font-size="11" font-weight="bold">M_debug</text>
+  <text x="355" y="372" text-anchor="middle" fill="#ccc" font-size="9">Invert</text>
+
+  <!-- Automatic Mode (bottom-right) -->
+  <rect x="470" y="340" width="110" height="40" rx="8" fill="#112233" stroke="#ff00d4" stroke-width="1.5"/>
+  <text x="525" y="358" text-anchor="middle" fill="#ff00d4" font-size="11" font-weight="bold">M_auto</text>
+  <text x="525" y="372" text-anchor="middle" fill="#ccc" font-size="9">Shift · bounded</text>
+
+  <!-- Hub-and-spoke arrows from Chat to each stance -->
+  <line x1="390" y1="280" x2="365" y2="258" stroke="#ffe600" stroke-width="1" stroke-dasharray="4,2"/>
+  <line x1="470" y1="280" x2="515" y2="258" stroke="#ffe600" stroke-width="1" stroke-dasharray="4,2"/>
+  <line x1="390" y1="324" x2="365" y2="340" stroke="#ffe600" stroke-width="1" stroke-dasharray="4,2"/>
+  <line x1="470" y1="324" x2="515" y2="340" stroke="#ffe600" stroke-width="1" stroke-dasharray="4,2"/>
+
+  <!-- Hub label -->
+  <text x="430" y="270" text-anchor="middle" fill="#ffe600" font-size="8" opacity="0.7">hub-and-spoke</text>
+
+  <!-- Auto → Task BLOCKED marker -->
+  <line x1="470" y1="355" x2="410" y2="243" stroke="#ff3333" stroke-width="1.5" stroke-dasharray="3,3" opacity="0.5"/>
+  <text x="434" y="296" text-anchor="middle" fill="#ff3333" font-size="8" font-weight="bold" transform="rotate(-50, 434, 296)">BLOCKED</text>
+
+  <!-- ────────────────────────────────────────────────
+       MCL CONSTRAINT GATE
+       ──────────────────────────────────────────────── -->
+  <rect x="310" y="395" width="340" height="36" rx="6" fill="#1a0a20" stroke="#8A2BE2" stroke-width="1.5"/>
+  <text x="480" y="418" text-anchor="middle" fill="#c9a0ff" font-size="11" font-weight="bold">🔒 MCL — 3 Invariants · 5 Guardrails</text>
+
+  <!-- ════════════════════════════════════════════════
+       SIBLING MODULES
+       ════════════════════════════════════════════════ -->
+
+  <!-- Opacity -->
+  <rect x="70" y="200" width="160" height="70" rx="10" fill="#0d1117" stroke="#00eaff" stroke-width="1.5"/>
+  <text x="150" y="228" text-anchor="middle" fill="#00eaff" font-size="12" font-weight="bold">🌗 Opacity</text>
+  <text x="150" y="248" text-anchor="middle" fill="#88ccdd" font-size="9">transparency weight</text>
+  <text x="150" y="260" text-anchor="middle" fill="#88ccdd" font-size="9">recalc on M change</text>
+
+  <!-- Capture -->
+  <rect x="70" y="310" width="160" height="70" rx="10" fill="#0d1117" stroke="#00eaff" stroke-width="1.5"/>
+  <text x="150" y="338" text-anchor="middle" fill="#00eaff" font-size="12" font-weight="bold">📸 Capture</text>
+  <text x="150" y="358" text-anchor="middle" fill="#88ccdd" font-size="9">logs mode events</text>
+  <text x="150" y="370" text-anchor="middle" fill="#88ccdd" font-size="9">append-only record</text>
+
+  <!-- Context -->
+  <rect x="730" y="250" width="160" height="70" rx="10" fill="#0d1117" stroke="#00eaff" stroke-width="1.5"/>
+  <text x="810" y="278" text-anchor="middle" fill="#00eaff" font-size="12" font-weight="bold">🪟 Context</text>
+  <text x="810" y="298" text-anchor="middle" fill="#88ccdd" font-size="9">window behavior</text>
+  <text x="810" y="310" text-anchor="middle" fill="#88ccdd" font-size="9">adjusts per stance</text>
+
+  <!-- Propagation arrows: Mode → siblings -->
+  <line x1="280" y1="240" x2="230" y2="240" stroke="#ffe600" stroke-width="1.5"/>
+  <polygon points="234,236 224,240 234,244" fill="#ffe600"/>
+  <text x="256" y="234" text-anchor="middle" fill="#ffe600" font-size="8">push</text>
+
+  <line x1="280" y1="350" x2="230" y2="350" stroke="#ffe600" stroke-width="1.5"/>
+  <polygon points="234,346 224,350 234,354" fill="#ffe600"/>
+  <text x="256" y="344" text-anchor="middle" fill="#ffe600" font-size="8">push</text>
+
+  <line x1="680" y1="290" x2="730" y2="290" stroke="#ffe600" stroke-width="1.5"/>
+  <polygon points="726,286 736,290 726,294" fill="#ffe600"/>
+  <text x="706" y="284" text-anchor="middle" fill="#ffe600" font-size="8">push</text>
+
+  <!-- ════════════════════════════════════════════════
+       TRIADIC ROLE LEGEND
+       ════════════════════════════════════════════════ -->
+  <rect x="70" y="460" width="260" height="100" rx="8" fill="#0d1117" stroke="#444" stroke-width="1"/>
+  <text x="90" y="484" fill="#aaa" font-size="11" font-weight="bold">Triadic Roles</text>
+  <circle cx="90" cy="502" r="6" fill="#ffe600"/>
+  <text x="105" y="506" fill="#ccc" font-size="10">Stabilize — Chat, Spec</text>
+  <circle cx="90" cy="522" r="6" fill="#ff00d4"/>
+  <text x="105" y="526" fill="#ccc" font-size="10">Shift — Task, Automatic</text>
+  <circle cx="90" cy="542" r="6" fill="#00eaff"/>
+  <text x="105" y="546" fill="#ccc" font-size="10">Invert — Debug</text>
+
+  <!-- ════════════════════════════════════════════════
+       PROPAGATION LEGEND
+       ════════════════════════════════════════════════ -->
+  <rect x="370" y="460" width="260" height="100" rx="8" fill="#0d1117" stroke="#444" stroke-width="1"/>
+  <text x="390" y="484" fill="#aaa" font-size="11" font-weight="bold">Propagation</text>
+  <line x1="390" y1="500" x2="430" y2="500" stroke="#ffe600" stroke-width="1.5"/>
+  <polygon points="426,496 436,500 426,504" fill="#ffe600"/>
+  <text x="445" y="504" fill="#ccc" font-size="10">Push (Mode → sibling)</text>
+  <line x1="390" y1="520" x2="430" y2="520" stroke="#8A2BE2" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="445" y="524" fill="#ccc" font-size="10">Inherit (Regime → Mode)</text>
+  <line x1="390" y1="540" x2="430" y2="540" stroke="#ff3333" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <text x="445" y="544" fill="#ff3333" font-size="10">Blocked transition</text>
+
+  <!-- ════════════════════════════════════════════════
+       CONSTRAINT SUMMARY LEGEND
+       ════════════════════════════════════════════════ -->
+  <rect x="670" y="460" width="250" height="100" rx="8" fill="#0d1117" stroke="#444" stroke-width="1"/>
+  <text x="690" y="484" fill="#aaa" font-size="11" font-weight="bold">MCL Constraints</text>
+  <text x="690" y="504" fill="#c9a0ff" font-size="10">INV-1 User Origin</text>
+  <text x="690" y="520" fill="#c9a0ff" font-size="10">INV-2 Coherence Preservation</text>
+  <text x="690" y="536" fill="#c9a0ff" font-size="10">INV-3 Chat Mode Gravity</text>
+  <text x="690" y="552" fill="#666" font-size="9">+ 5 Guardrails (see constraints.md)</text>
+
+  <!-- ════════════════════════════════════════════════
+       FOOTER
+       ════════════════════════════════════════════════ -->
+  <text x="480" y="610" text-anchor="middle" fill="#444" font-size="10">Mode Layer Structure · RTT/1 Session Layer · TriadicFrameworks v1.0</text>
+  <text x="480" y="626" text-anchor="middle" fill="#333" font-size="9">diagram.svg · canonical reference</text>
+
+</svg>
+

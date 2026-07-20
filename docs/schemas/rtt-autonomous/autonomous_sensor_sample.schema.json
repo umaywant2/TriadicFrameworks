@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "$id": "https://triadicframeworks.org/schemas/rtt-autonomous/v1/autonomous_sensor_sample.schema.json",
+  "title": "autonomous_sensor_sample",
+  "type": "object",
+  "required": [
+    "sample_id",
+    "form_id",
+    "timestamp",
+    "position_m",
+    "velocity_m_s"
+  ],
+  "properties": {
+    "sample_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+
+    "form_id": {
+      "type": "string",
+      "format": "uuid"
+    },
+
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+
+    "position_m": {
+      "type": "object",
+      "required": ["x", "y", "z"],
+      "properties": {
+        "x": { "type": "number" },
+        "y": { "type": "number" },
+        "z": { "type": "number" }
+      }
+    },
+
+    "velocity_m_s": {
+      "type": "object",
+      "required": ["vx", "vy", "vz"],
+      "properties": {
+        "vx": { "type": "number" },
+        "vy": { "type": "number" },
+        "vz": { "type": "number" }
+      }
+    },
+
+    "imu": {
+      "type": "object",
+      "properties": {
+        "ax": { "type": "number" },
+        "ay": { "type": "number" },
+        "az": { "type": "number" },
+        "gx": { "type": "number" },
+        "gy": { "type": "number" },
+        "gz": { "type": "number" }
+      }
+    },
+
+    "environment": {
+      "type": "object",
+      "properties": {
+        "temperature_c": { "type": "number" },
+        "pressure_pa": { "type": "number" },
+        "salinity_psu": { "type": "number" }
+      }
+    },
+
+    "rtt": {
+      "type": "object",
+      "properties": {
+        "clarity_score": { "type": "integer", "minimum": 0, "maximum": 255 },
+        "drift_vector": {
+          "type": "object",
+          "properties": {
+            "dx": { "type": "number" },
+            "dy": { "type": "number" },
+            "dz": { "type": "number" }
+          }
+        }
+      }
+    },
+
+    "extensions": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}
+

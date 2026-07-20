@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "$id": "https://triadicframeworks.org/schemas/TEMPLATE/v1/TemplateAlertExtension.schema.json",
+  "title": "TemplateAlertExtension",
+  "type": "object",
+  "properties": {
+    "example_alert_metadata": {
+      "type": "string",
+      "description": "Replace with domain-specific alert metadata."
+    }
+  }
+}
+

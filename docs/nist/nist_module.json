@@ -1,0 +1,160 @@
+{
+  "module": {
+    "name": "NIST Examples",
+    "path": "docs/nist",
+    "canon_tag": "nist-awareness-core",
+    "version": "2026.1",
+    "layer": "Education & Teaching",
+    "status": "Active, Canonical",
+    "purpose": "Student-friendly awareness primer introducing NIST scientific domains through a TriadicFrameworks lens — mapping regime structure (R0–R3) across 15 research domains with per-domain overview, regime alignment, triadic awareness, and student exercises.",
+    "parent": "docs-hub",
+    "url": "https://www.triadicframeworks.org/nist"
+  },
+  "session_context": {
+    "canon": "active (nist-awareness-core)",
+    "modules_linked": [
+      "overview.md",
+      "regime_alignment.md",
+      "triadic_awareness.md",
+      "student_exercises.md",
+      "domain-folders",
+      "regime-literacy"
+    ],
+    "drift": "bounded (awareness-locked)",
+    "coherence": "declared (awareness-primer grammar)",
+    "version": "1.0 (nist-stable)",
+    "format": "html + markdown + domain folders",
+    "front_door": "exists (NIST Examples root)",
+    "every_page": "stands alone + student-friendly + regime-aware",
+    "audience": [
+      "students",
+      "educators",
+      "researchers",
+      "AIs learning structural reasoning"
+    ]
+  },
+  "structural_grammar": {
+    "dimensional_envelope": "D0-D5",
+    "regime_envelope": "R0-R3",
+    "coherence_envelope": "C0-C3",
+    "drift_sensitivity": "medium",
+    "regime_sensitivity": "high"
+  },
+  "cross_module_propagation": {
+    "imports": [
+      "docs-hub",
+      "docs-glossary",
+      "docs-principles"
+    ],
+    "exports": [
+      "regime-literacy-exercises",
+      "nist-domain-taxonomy",
+      "R0-R3-mapping-examples",
+      "cross-domain-meta-operators",
+      "awareness-primer-pedagogy"
+    ]
+  },
+  "submodules": [
+    {
+      "name": "Analytical Chemistry",
+      "path": "Analytical_chemistry",
+      "canon_tag": "nist-analytical-chemistry",
+      "purpose": "Regime awareness primer for NIST analytical chemistry — overview, R0–R3 alignment, triadic awareness, and student exercises."
+    },
+    {
+      "name": "Biomaterials",
+      "path": "Biomaterials",
+      "canon_tag": "nist-biomaterials",
+      "purpose": "Regime awareness primer for NIST biomaterials — overview, R0–R3 alignment, triadic awareness, and student exercises."
+    },
+    {
+      "name": "Bioscience",
+      "path": "Bioscience",
+      "canon_tag": "nist-bioscience",
+      "purpose": "Regime awareness primer for NIST bioscience — overview, R0–R3 alignment, triadic awareness, and student exercises."
+    },
+    {
+      "name": "Buildings and Construction",
+      "path": "Buildings_and_Construction",
+      "canon_tag": "nist-buildings-construction",
+      "purpose": "Regime awareness primer for NIST buildings and construction — overview, R0–R3 alignment, triadic awareness, and student exercises."
+    },
+    {
+      "name": "Ceramics",
+      "path": "Ceramics",
+      "canon_tag": "nist-ceramics",
+      "purpose": "Regime awareness primer for NIST ceramics — overview, R0–R3 alignment, triadic awareness, and student exercises."
+    },
+    {
+      "name": "Chemistry",
+      "path": "Chemistry",
+      "canon_tag": "nist-chemistry",
+      "purpose": "Regime awareness primer for NIST chemistry — overview, R0–R3 alignment, triadic awareness, and student exercises."
+    },
+    {
+      "name": "Cybersecurity and Privacy",
+      "path": "Cybersecurity_and_privacy",
+      "canon_tag": "nist-cybersecurity-privacy",
+      "purpose": "Regime awareness primer for NIST cybersecurity and privacy — overview, R0–R3 alignment, triadic awareness, and student exercises."
+    },
+    {
+      "name": "Electromagnetics",
+      "path": "Electromagnetics",
+      "canon_tag": "nist-electromagnetics",
+      "purpose": "Regime awareness primer for NIST electromagnetics — overview, R0–R3 alignment, triadic awareness, and student exercises."
+    },
+    {
+      "name": "Fire",
+      "path": "Fire",
+      "canon_tag": "nist-fire",
+      "purpose": "Regime awareness primer for NIST fire research — overview, R0–R3 alignment, triadic awareness, and student exercises."
+    },
+    {
+      "name": "Information Technology",
+      "path": "Information_technology",
+      "canon_tag": "nist-information-technology",
+      "purpose": "Regime awareness primer for NIST information technology — overview, R0–R3 alignment, triadic awareness, and student exercises."
+    },
+    {
+      "name": "Manufacturing",
+      "path": "Manufacturing",
+      "canon_tag": "nist-manufacturing",
+      "purpose": "Regime awareness primer for NIST manufacturing — overview, R0–R3 alignment, triadic awareness, and student exercises."
+    },
+    {
+      "name": "Materials",
+      "path": "Materials",
+      "canon_tag": "nist-materials",
+      "purpose": "Regime awareness primer for NIST materials metrology — overview, R0–R3 alignment, triadic awareness, and student exercises."
+    },
+    {
+      "name": "Metrology",
+      "path": "Metrology",
+      "canon_tag": "nist-metrology",
+      "purpose": "Regime awareness primer for NIST metrology — overview, R0–R3 alignment, triadic awareness, and student exercises."
+    },
+    {
+      "name": "Physics",
+      "path": "Physics",
+      "canon_tag": "nist-physics",
+      "purpose": "Regime awareness primer for NIST physics — overview, R0–R3 alignment, triadic awareness, and student exercises."
+    },
+    {
+      "name": "Polymers",
+      "path": "Polymers",
+      "canon_tag": "nist-polymers",
+      "purpose": "Regime awareness primer for NIST polymers — overview, R0–R3 alignment, triadic awareness, and student exercises."
+    }
+  ],
+  "files": [
+    {
+      "filename": "README.md",
+      "path": "README.md",
+      "purpose": "Navigation index for the NIST awareness module — introduces the primer purpose, domain folder structure, regime alignment rationale, and student exercise format.",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "Cross-Domain_Meta-Operators.md",
+      "path": "Cross-Domain_Meta-Operators.md",
+      "purpose": "Operator-facing meta-operator

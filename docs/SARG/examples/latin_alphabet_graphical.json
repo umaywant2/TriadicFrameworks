@@ -1,0 +1,49 @@
+{
+  "sarg_version": "1.0.0",
+  "id": "latin_alphabet_graphical",
+  "description": "Latin alphabet with stroke-based graphical invariants.",
+  "substrate": {
+    "type": "symbolic",
+    "domain": "alphabetic",
+    "name": "Latin Alphabet",
+    "elements": ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+  },
+  "lens": {
+    "primary": "graphical",
+    "secondary": ["structural"],
+    "notes": "Graphical invariants based on stroke geometry and symmetry."
+  },
+  "invariants": {
+    "strokes": {
+      "single_stroke_forms": ["C","I","J","L","O","S","U","V"],
+      "multi_stroke_forms": ["A","B","D","E","F","G","H","K","M","N","P","Q","R","T","W","X","Y","Z"]
+    },
+    "geometry": {
+      "curved": ["B","C","D","G","J","O","P","Q","R","S","U"],
+      "angular": ["A","E","F","H","I","K","L","M","N","T","V","W","X","Y","Z"],
+      "mixed": ["R","G"]
+    },
+    "symmetry": {
+      "vertical": ["A","H","I","M","O","T","U","V","W","X","Y"],
+      "horizontal": ["B","C","D","E","H","I","K","O","X"],
+      "rotational": ["H","I","N","O","S","X","Z"]
+    }
+  },
+  "resonance": {
+    "anchors": {
+      "clusters": [
+        { "name": "curved_forms", "members": ["B","C","D","G","J","O","P","Q","R","S","U"], "signature": "GR-C" },
+        { "name": "angular_forms", "members": ["A","E","F","H","I","K","L","M","N","T","V","W","X","Y","Z"], "signature": "GR-A" }
+      ]
+    }
+  },
+  "examples": {
+    "extraction_walkthrough": [
+      {
+        "letter": "O",
+        "identified_invariants": ["curved", "rotational_symmetry"],
+        "resonance_anchor": "GR-C"
+      }
+    ]
+  }
+}

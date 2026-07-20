@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "$id": "https://triadicframeworks.org/schemas/rsadi-gd-advanced/v1/ParadoxPuzzleDefinition.schema.json",
+  "title": "ParadoxPuzzleDefinition",
+  "type": "object",
+  "required": ["puzzle_id", "conditions", "inversion_rules"],
+  "properties": {
+    "puzzle_id": { "type": "string" },
+
+    "conditions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Observation conditions required to trigger paradox state."
+    },
+
+    "inversion_rules": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Rules describing how state flips under paradox."
+    },
+
+    "resolution_states": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Valid end states after paradox resolution."
+    },
+
+    "temporal_dependencies": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Time-based constraints (RTT temporal drift analogue)."
+    },
+
+    "extensions": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}
+

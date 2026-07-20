@@ -1,0 +1,15 @@
+# Resonance-Labs .fff (Triadic Framework File)
+# Mode: reflection_inversion
+# Observer: nous-layer
+# BaseLens: phi
+# Timestamp: 2025-10-10T18:20Z
+# Notes: Sample file for QUICKSTART ritual
+
+[Direct]
++0- +0- +0+
+
+[Reflect]
+0++ --0 ++-
+
+[Invert]
+-+- 0++ +0-

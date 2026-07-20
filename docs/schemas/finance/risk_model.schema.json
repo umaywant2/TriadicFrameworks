@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "Risk Model",
+  "type": "object",
+  "properties": {
+    "model_id": { "type": "string" },
+    "parameters": { "type": "object" },
+    "triadic_risk_vector": {
+      "type": "object",
+      "properties": {
+        "spin_risk": { "type": "number" },
+        "charge_risk": { "type": "number" },
+        "temperature_risk": { "type": "number" }
+      }
+    }
+  }
+}

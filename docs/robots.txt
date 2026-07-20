@@ -1,0 +1,46 @@
+# TriadicFrameworks robots.txt
+# Purpose: Fully permissive for search engines + AI crawlers (educational/open content)
+
+User-agent: *
+Allow: /
+
+# Protected internal areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /cgi-bin/
+
+# Sitemap
+Sitemap: https://www.triadicframeworks.org/sitemap.xml
+
+# === Explicit AI Crawlers (training + retrieval allowed) ===
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Traditional search engines (redundant but explicit)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /

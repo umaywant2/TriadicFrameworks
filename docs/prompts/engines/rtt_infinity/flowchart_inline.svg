@@ -1,0 +1,67 @@
+<svg width="480" height="760" viewBox="0 0 480 760" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- VACUUM -->
+  <g id="vacuum-layer">
+    <rect x="40" y="40" width="400" height="80" rx="10" fill="#f2f2f2" stroke="#333" stroke-width="2"/>
+    <text x="240" y="90" font-size="22" text-anchor="middle" fill="#000">
+      VACUUM (zero‑state)
+    </text>
+  </g>
+
+  <!-- ARROW: vacuum → substrate -->
+  <g id="arrow-vacuum-substrate">
+    <line x1="240" y1="120" x2="240" y2="160" stroke="#333" stroke-width="3"/>
+    <polygon points="240,160 232,148 248,148" fill="#333"/>
+  </g>
+
+  <!-- SUBSTRATE -->
+  <g id="substrate-layer">
+    <rect x="40" y="160" width="400" height="100" rx="10" fill="#e6f7ff" stroke="#333" stroke-width="2"/>
+    <text x="240" y="210" font-size="22" text-anchor="middle" fill="#000">
+      SUBSTRATE (bounded tensor)
+    </text>
+  </g>
+
+  <!-- ARROW: substrate → rails -->
+  <g id="arrow-substrate-rails">
+    <line x1="240" y1="260" x2="240" y2="300" stroke="#333" stroke-width="3"/>
+    <polygon points="240,300 232,288 248,288" fill="#333"/>
+  </g>
+
+  <!-- DIMENSIONAL RAILS -->
+  <g id="rails-layer">
+    <rect x="40" y="300" width="400" height="100" rx="10" fill="#fff7e6" stroke="#333" stroke-width="2"/>
+    <text x="240" y="350" font-size="22" text-anchor="middle" fill="#000">
+      DIMENSIONAL RAILS (transport)
+    </text>
+  </g>
+
+  <!-- ARROW: rails → prime-states -->
+  <g id="arrow-rails-prime">
+    <line x1="240" y1="400" x2="240" y2="440" stroke="#333" stroke-width="3"/>
+    <polygon points="240,440 232,428 248,428" fill="#333"/>
+  </g>
+
+  <!-- PRIME-STATES -->
+  <g id="prime-layer">
+    <rect x="40" y="440" width="400" height="100" rx="10" fill="#f9e6ff" stroke="#333" stroke-width="2"/>
+    <text x="240" y="490" font-size="22" text-anchor="middle" fill="#000">
+      PRIME‑STATES (anchors)
+    </text>
+  </g>
+
+  <!-- ARROW: prime-states → infinite regimes -->
+  <g id="arrow-prime-infinite">
+    <line x1="240" y1="540" x2="240" y2="580" stroke="#333" stroke-width="3"/>
+    <polygon points="240,580 232,568 248,568" fill="#333"/>
+  </g>
+
+  <!-- INFINITE REGIMES -->
+  <g id="infinite-layer">
+    <rect x="40" y="580" width="400" height="120" rx="10" fill="#e6ffe6" stroke="#333" stroke-width="2"/>
+    <text x="240" y="640" font-size="22" text-anchor="middle" fill="#000">
+      INFINITE REGIMES (unbounded)
+    </text>
+  </g>
+
+</svg>

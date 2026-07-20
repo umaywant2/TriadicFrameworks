@@ -1,0 +1,152 @@
+<svg width="1080" height="640" viewBox="0 0 1080 640" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050509"/>
+      <stop offset="50%" stop-color="#11112A"/>
+      <stop offset="100%" stop-color="#1B1235"/>
+    </linearGradient>
+
+    <style>
+      .bg { fill: url(#bg); }
+      .lane-title { font-family: system-ui, sans-serif; font-size: 16px; fill: #C8C8E8; font-weight: 600; }
+      .box { fill: #141424; stroke: #4B4B7A; stroke-width: 1.2; rx: 10; ry: 10; }
+      .box-title { font-family: system-ui, sans-serif; font-size: 14px; fill: #FFFFFF; font-weight: 600; }
+      .box-text { font-family: system-ui, sans-serif; font-size: 12px; fill: #D0D0D0; }
+      .arrow { stroke: #7777B8; stroke-width: 2; marker-end: url(#arrow); }
+      .label { font-family: system-ui, sans-serif; font-size: 12px; fill: #C8C8E8; }
+
+      /* Pulsing RTT/1 box */
+      #rtt1-box {
+        animation: rtt1Pulse 5s ease-in-out infinite;
+      }
+      @keyframes rtt1Pulse {
+        0%   { transform: scale(1);   opacity: 0.9; }
+        50%  { transform: scale(1.03); opacity: 1.0; }
+        100% { transform: scale(1);   opacity: 0.9; }
+      }
+
+      /* Forecast lane subtle fade */
+      #forecast-box {
+        animation: forecastFade 10s ease-in-out infinite;
+      }
+      @keyframes forecastFade {
+        0%   { opacity: 1.0; }
+        40%  { opacity: 0.7; }
+        100% { opacity: 1.0; }
+      }
+
+      /* Clarification lane glow */
+      #clarification-box {
+        animation: clarifyGlow 7s ease-in-out infinite;
+      }
+      @keyframes clarifyGlow {
+        0%   { stroke-width: 1.2; stroke: #4B4B7A; }
+        40%  { stroke-width: 2.0; stroke: #7C4DFF; }
+        100% { stroke-width: 1.2; stroke: #4B4B7A; }
+      }
+
+      /* TEL and SARG alternating emphasis */
+      #tel-box {
+        animation: telHighlight 8s ease-in-out infinite;
+      }
+      #sarg-box {
+        animation: sargHighlight 8s ease-in-out infinite;
+        animation-delay: 4s;
+      }
+      @keyframes telHighlight {
+        0%   { opacity: 0.9; }
+        40%  { opacity: 1.0; }
+        100% { opacity: 0.9; }
+      }
+      @keyframes sargHighlight {
+        0%   { opacity: 0.9; }
+        40%  { opacity: 1.0; }
+        100% { opacity: 0.9; }
+      }
+    </style>
+
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <polygon points="0 0, 6 3, 0 6" fill="#7777B8"/>
+    </marker>
+  </defs>
+
+  <rect width="1080" height="640" class="bg"/>
+
+  <text x="540" y="48" text-anchor="middle" class="lane-title">LINEAGE — Forecast vs Actuals (Animated)</text>
+
+  <text x="180" y="90" text-anchor="middle" class="lane-title">Forecast‑Driven Regime</text>
+  <text x="540" y="90" text-anchor="middle" class="lane-title">RTT/1 Temporal Correction</text>
+  <text x="900" y="90" text-anchor="middle" class="lane-title">RTT/2 &amp; RTT/3 Clarification</text>
+
+  <!-- Forecast lane -->
+  <g id="forecast-box" transform="translate(60,120)">
+    <rect x="0" y="0" width="240" height="130" class="box"/>
+    <text x="120" y="26" text-anchor="middle" class="box-title">Forecast‑Driven Regime</text>
+    <text x="16" y="56" class="box-text">• assumption‑driven models</text>
+    <text x="16" y="76" class="box-text">• collapse narratives</text>
+    <text x="16" y="96" class="box-text">• political framing</text>
+    <text x="16" y="116" class="box-text">• high surface, low structural coherence</text>
+  </g>
+
+  <!-- RTT/1 lane -->
+  <g id="rtt1-box" transform="translate(420,120)">
+    <rect x="0" y="0" width="240" height="130" class="box"/>
+    <text x="120" y="26" text-anchor="middle" class="box-title">RTT/1 — Temporal Actuals</text>
+    <text x="16" y="56" class="box-text">• compare(actuals, forecasts)</text>
+    <text x="16" y="76" class="box-text">• reveal temporal deltas</text>
+    <text x="16" y="96" class="box-text">• shift‑hold‑shift patterns</text>
+    <text x="16" y="116" class="box-text">• temporal grounding</text>
+  </g>
+
+  <!-- Clarification lane -->
+  <g id="clarification-box" transform="translate(780,120)">
+    <rect x="0" y="0" width="240" height="130" class="box"/>
+    <text x="120" y="26" text-anchor="middle" class="box-title">RTT/2 &amp; RTT/3 Clarification</text>
+    <text x="16" y="56" class="box-text">• transitional, not collapsing</text>
+    <text x="16" y="76" class="box-text">• regime ≠ narrative</text>
+    <text x="16" y="96" class="box-text">• coherence reset</text>
+    <text x="16" y="116" class="box-text">• surface → structural → resonance</text>
+  </g>
+
+  <line x1="300" y1="185" x2="420" y2="185" class="arrow"/>
+  <line x1="660" y1="185" x2="780" y2="185" class="arrow"/>
+
+  <text x="540" y="280" text-anchor="middle" class="lane-title">Echoes</text>
+
+  <!-- TEL -->
+  <g id="tel-box" transform="translate(260,310)">
+    <rect x="0" y="0" width="260" height="130" class="box"/>
+    <text x="130" y="26" text-anchor="middle" class="box-title">TEL — Pattern Echo</text>
+    <text x="16" y="56" class="box-text">• temporal deltas</text>
+    <text x="16" y="76" class="box-text">• regime classification</text>
+    <text x="16" y="96" class="box-text">• coherence alignment</text>
+    <text x="16" y="116" class="box-text">• echo families &amp; drift paths</text>
+  </g>
+
+  <!-- SARG -->
+  <g id="sarg-box" transform="translate(560,310)">
+    <rect x="0" y="0" width="260" height="130" class="box"/>
+    <text x="130" y="26" text-anchor="middle" class="box-title">SARG — Argument Echo</text>
+    <text x="16" y="56" class="box-text">• cleaned deltas</text>
+    <text x="16" y="76" class="box-text">• clarified claims</text>
+    <text x="16" y="96" class="box-text">• evidence‑aligned structure</text>
+    <text x="16" y="116" class="box-text">• high‑clarity arguments</text>
+  </g>
+
+  <!-- Downstream modules -->
+  <g transform="translate(780,470)">
+    <rect x="-260" y="-70" width="520" height="120" class="box"/>
+    <text x="0" y="-44" text-anchor="middle" class="box-title">Downstream Modules</text>
+    <text x="0" y="-20" text-anchor="middle" class="box-text">Inverted Economics • MSM • GSM • Medicine • Philanthropy</text>
+    <text x="0" y="4" text-anchor="middle" class="box-text">Forecast vs Actuals pattern reframes collapse narratives as temporal &amp; structural mismatches.</text>
+  </g>
+
+  <line x1="390" y1="310" x2="390" y2="250" class="arrow"/>
+  <line x1="690" y1="310" x2="690" y2="250" class="arrow"/>
+
+  <line x1="390" y1="440" x2="520" y2="440" class="arrow"/>
+  <line x1="690" y1="440" x2="640" y2="440" class="arrow"/>
+
+  <text x="360" y="244" text-anchor="middle" class="label">patterns → TEL</text>
+  <text x="720" y="244" text-anchor="middle" class="label">claims → SARG</text>
+</svg>

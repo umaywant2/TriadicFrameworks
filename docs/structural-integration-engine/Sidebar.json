@@ -1,0 +1,12 @@
+{
+  "title": "Structural Integration Engine (RTT/3)",
+  "root": "/docs/structural-integration-engine/",
+  "items": [
+    { "label": "README", "href": "#README" },
+    { "label": "Index", "href": "#INDEX" },
+    { "label": "Operator Grammar (Minimal)", "href": "#OPERATOR_GRAMMAR_STUB_MINIMAL" },
+    { "label": "Propagation", "href": "#PROPAGATION" },
+    { "label": "Session Context", "href": "#SESSION_CONTEXT" },
+    { "label": "Student Cheat Sheet", "href": "#STUDENT_CHEAT_SHEET" }
+  ]
+}

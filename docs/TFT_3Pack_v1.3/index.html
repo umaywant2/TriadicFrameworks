@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Core Metadata -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="language" content="en">
+<meta name="last-modified" content="2026-04-25">
+<meta name="generator" content="TriadicFrameworks Static Canon Engine">
+
+<!-- Identity -->
+<meta name="creator" content="TriadicFrameworks">
+<meta name="author" content="Nawder Loswin (pen name)">
+<meta name="publisher" content="TriadicFrameworks">
+
+<!-- Description & Keywords -->
+<meta name="description" content="TFT_3Pack v1.3 — the proto‑substrate of TriadicFrameworks. A 12‑domain structural language featuring resonance‑aware dimensional cores, triadic operators, .fff format, validator overlays, and cross‑domain examples.">
+<meta name="keywords" content="TFT 3Pack, TriadicFrameworks, resonance-time, RTT substrate, triadic operators, D3 D6 D9, .fff format, validator overlays, nous, entft, tops, resonance-labs, cross-domain modeling">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">
+
+<!-- Robots -->
+<meta name="robots" content="index, follow">
+
+<!-- Theme -->
+<meta name="theme-color" content="#0ff">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TriadicFrameworks">
+<meta property="og:title" content="TFT_3Pack v1.3 — TriadicFrameworks">
+<meta property="og:url" content="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">
+<meta property="og:description" content="The v1.3 Resonance Clarity Edition of the TFT 3Pack — a compact, example‑driven toolkit spanning 12 academic domains with resonance‑aware dimensional cores and the unified .fff format.">
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1080">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TFT_3Pack v1.3 — TriadicFrameworks">
+<meta name="twitter:description" content="A resonance‑aware, cross‑domain structural toolkit featuring triadic operators, .fff format, and validator overlays.">
+<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+
+<!-- Citation Metadata -->
+<meta name="citation_title" content="TriadicFrameworks TFT_3Pack v1.3">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.subject" content="structural reasoning, resonance-time, triadic operators, cross-domain modeling, AI learning systems">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="TriadicFrameworks TFT_3Pack v1.3">
+<meta name="ai.version" content="1.3">
+<meta name="ai.purpose" content="Provide a resonance‑aware, cross‑domain structural language with triadic operators, dimensional cores, and unified .fff workflows.">
+<meta name="ai.keywords" content="triadic operators, D3 D6 D9, .fff format, resonance-time, validator overlays, nous, entft, tops, resonance-labs, cross-domain examples">
+<meta name="ai.audience" content="students, educators, developers, researchers, AI systems">
+<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml">
+<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.contact.youtube" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted.">
+
+<!-- Module-Specific -->
+<meta name="ai.module.name" content="TFT_3Pack v1.3">
+<meta name="ai.module.summary" content="A 12‑domain resonance‑aware structural toolkit featuring triadic operators, .fff format, validator overlays, and cross‑domain examples.">
+<meta name="ai.module.category" content="proto-substrate">
+
+<!-- Favicon -->
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
+
+<title>TFT_3Pack v1.3 | TriadicFrameworks</title>
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+  /* Context Block */
+  .context-block {
+    font-family: monospace;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0.5rem 0 1rem 0;
+  }
+       
+  /* Context Label */
+  .context-label {
+    color: #ff9800; /* orange */
+    font-weight: bold;
+    margin-right: 0.25rem;
+  }
+       
+  /* Context Value */
+  .context-value {
+    color: #ffffff; /* white */
+  }
+        
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav class="nav-band">
+ <p align="center">
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+ </p> 
+     
+  <h2>🔱 TFT_3Pack v1.3 — RTT</h2>
+      <a href="#README">🔰 README</a>
+      <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
+      <a href="#CONTRIBUTING">🤝 Contributing</a>
+      <a href="https://www.triadicframeworks.org/education/">💯 Education | RTT</a>
+      <a href="#GLOSSARY">🎯 Glossary</a>
+      <a href="#LINEAGE">📜 Lineage</a>
+      <a href="#LICENSE">📎 License</a>
+      <a href="#SITEMAP">🌐 Sitemap</a>
+    <h3>♨️ Resonance Substrate Tools</h3>
+      <a href="#TFT">♨️ tft</a>
+      <a href="#NOUS">💭 nous</a>
+      <a href="#ENTFT">🔐 entft Protocol</a>
+      <a href="#TOPS">🧿 Tops</a>
+      <a href="#RESONANCE_LABS">👌 Resonance-Labs</a>
+      <a href="#DOCS">📜 Docs — TFT 3Pack</a>
+    <!-- Examples -->
+    <h3>🏠 Examples</h3>
+      <a href="#EXAMPLES_INDEX">📁 Examples Overview</a>
+      <a href="#EXAMPLES_ART">🎨 Art</a>
+      <a href="#EXAMPLES_BIOLOGY">🧬 Biology</a>
+      <a href="#EXAMPLES_CHEMISTRY">⚗️ Chemistry</a>
+      <a href="#EXAMPLES_COMPUTER_SCIENCE">💻 Computer Science</a>
+      <a href="#EXAMPLES_ECONOMICS">📈 Economics</a>
+      <a href="#EXAMPLES_ENGINEERING">🛠️ Engineering</a>
+      <a href="#EXAMPLES_LAW">⚖️ Law</a>
+      <a href="#EXAMPLES_MATH">➗ Math</a>
+      <a href="#EXAMPLES_MEDICINE">🩺 Medicine</a>
+      <a href="#EXAMPLES_MUSIC">🎵 Music</a>
+      <a href="#EXAMPLES_PHILOSOPHY">📚 Philosophy</a>
+      <a href="#EXAMPLES_PHYSICS">🔭 Physics</a>
+      <a href="#COMPARED_CONTRIBUTORS">🚀 Compared Contributors</a>
+    <!-- Formats -->
+    <h3>📦 Formats</h3>
+      <a href="#FORMATS_INDEX">🗂️ Formats Index</a>
+    <!-- Scripts -->
+    <h3>⚙️ Scripts</h3>
+      <a href="#SCRIPTS_INDEX">📜 Scripts Index</a>
+      <a href="https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/TFT_3Pack_v1.3/">🖥️ Repo Folder</a>
+    <h3>🏗️ Triadic Tools</h3> 
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
+      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 Packages and Cores</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas</a>
+      <a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a>    
+      <a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS</a>
+      <a href="https://www.triadicframeworks.org/_ideas/">🤔 Ideas</a>
+      <a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">🔛(RTT frozen)</a>
+      <a href="https://www.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
+      <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
+      <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
+      <a href="../">🔙TFT</a>
+   <!-- RTT Canonical Signature -->
+<section id="rtt-session-header"
+         data-rtt="1"
+         data-coherence="declared"
+         data-drift="bounded"
+         data-paradox="structural">
+
+  <h2>Session Context</h2>
+
+  <div class="context-block">
+
+    <span class="context-label"><strong>Canon:</strong></span>
+    <span class="context-value">active</span><br>
+
+    <span class="context-label"><strong>Modules:</strong></span>
+    <span class="context-value">linked (12-domain substrate)</span><br>
+
+    <span class="context-label"><strong>Drift:</strong></span>
+    <span class="context-value">minimal</span><br>
+
+    <span class="context-label"><strong>Coherence:</strong></span>
+    <span class="context-value">stable</span><br>
+
+    <span class="context-label"><strong>Version:</strong></span>
+    <span class="context-value">1.3 (Resonance Clarity Edition)</span><br>
+
+    <span class="context-label"><strong>Format:</strong></span>
+    <span class="context-value">html + markdown + .fff</span><br>
+
+    <span class="context-label"><strong>Front door:</strong></span>
+    <span class="context-value">exists</span><br>
+
+    <span class="context-label"><strong>Every page:</strong></span>
+    <span class="context-value">stands alone</span><br>
+
+    <span class="context-label"><strong>Audience:</strong></span>
+    <span class="context-value">students + educators + developers + AIs</span>
+
+  </div>
+
+</section>
+
+<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
+  🔱 Resonance‑Ready<br>📦 12 Domains Linked<br>
+</div>
+
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+  README: 'README.md',
+  ABOUT: '../ABOUT.md',
+  CONTRIBUTING: '../CONTRIBUTING.md',
+  GLOSSARY: '../GLOSSARY.md',
+  LINEAGE: '../LINEAGE.md',
+  LICENSE: '../LICENSE.md',
+  SITEMAP: '../sitemap.md',
+  // Examples (Main + 12 Majors)
+  TFT: 'tft/README.md',
+  NOUS: 'tft/nous/README.md',
+  ENTFT: 'tft/entft/README.md',
+  TOPS: 'tft/tops/README.md',
+  RESONANCE_LABS: 'tft/resonance-labs/README.md',
+  DOCS: 'docs/README.md',
+  EXAMPLES_INDEX: 'examples/index.html',
+  EXAMPLES_ART: 'examples/Art/index.html',
+  EXAMPLES_BIOLOGY: 'examples/Biology/index.html',
+  EXAMPLES_CHEMISTRY: 'examples/Chemistry/index.html',
+  EXAMPLES_COMPUTER_SCIENCE: 'examples/Computer_Science/index.html',
+  EXAMPLES_ECONOMICS: 'examples/Economics/index.html',
+  EXAMPLES_ENGINEERING: 'examples/Engineering/index.html',
+  EXAMPLES_LAW: 'examples/Law/index.html',
+  EXAMPLES_MATH: 'examples/Math/index.html',
+  EXAMPLES_MEDICINE: 'examples/Medicine/index.html',
+  EXAMPLES_MUSIC: 'examples/Music/index.html',
+  EXAMPLES_PHILOSOPHY: 'examples/Philosophy/index.html',
+  EXAMPLES_PHYSICS: 'examples/Physics/index.html',
+  COMPARED_CONTRIBUTORS: 'RTT_Compared_with_Closest_Contributors.md',
+  // Formats
+  FORMATS_INDEX: 'formats/index.html',
+  // Scripts
+  SCRIPTS_INDEX: 'scripts/index.html',
+};
+  
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+</body>
+</html>

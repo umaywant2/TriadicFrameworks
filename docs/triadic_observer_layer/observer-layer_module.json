@@ -1,0 +1,78 @@
+{
+  "module": "Triadic Observer Layer",
+  "version": "1.0",
+  "category": "observer-layer",
+  "summary": "Domain‑agnostic observation grammar — observer principles, triadic axes, minimal observer API, anomaly taxonomy, adoption and integration guide, glossary, and 6 worked domain exemplars (elections, supply chain, science, infrastructure, AI systems, cross‑domain synthesis).",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "observer_principles.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "triadic_axes.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "minimal_api.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "anomaly_taxonomy.md",
+      "role": "diagnostic",
+      "analyzer_layer": "drift"
+    },
+    {
+      "path": "adoption_and_integration_note.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "glossary.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "domains/elections.md",
+      "role": "example",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "domains/supply_chain.md",
+      "role": "example",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "domains/science.md",
+      "role": "example",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "domains/infrastructure.md",
+      "role": "example",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "domains/AI_systems.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "domains/cross_domain_synthesis.md",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    }
+  ]
+}

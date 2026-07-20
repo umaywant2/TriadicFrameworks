@@ -1,0 +1,19 @@
+All AI artifacts in this directory are:
+
+• regime‑declared
+• lineage‑tracked
+• retrieval‑bounded
+• substrate‑agnostic
+• non‑privileged
+
+Models are components.
+Behavior is instrumented.
+Memory is retrieval scope.
+
+This mirrors our LDS `.lineage` file exactly in spirit:
+- no claims
+- no promises
+- no marketing
+- just constraints
+
+Anyone who opens it knows immediately what kind of system this is.

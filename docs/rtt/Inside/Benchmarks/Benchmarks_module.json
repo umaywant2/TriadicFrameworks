@@ -1,0 +1,46 @@
+{
+  "module": "RTT/Inside/Benchmarks",
+  "identity": "rtt-inside-benchmarks",
+  "purpose": "Cross-scale, physics-aligned benchmark suite for structural intelligence across classical, diffusion, score-based, and quantum-classical hybrid systems.",
+  "category": "benchmarks",
+  "version": "1.0",
+  "files": {
+    "index.md": "module front door",
+    "A_Overview.md": "purpose, scope, definitions",
+    "B_Capture.md": "canonical captures from Issue #45",
+    "C_Operators.md": "φ–V–R operator standard",
+    "D_Invariants.md": "3C invariants, drift, regime transitions",
+    "E_Resonance.md": "resonance metrics and cross-scale rules",
+    "F_Entropy.md": "entropy flow and collapse signatures",
+    "G_Quantum.md": "quantum-classical hybrid specification",
+    "H_Examples.md": "worked examples",
+    "I_Student_Spec.md": "RTT-SI-Spec v0.1",
+    "J_RFCs/": "student-AI RFC directory"
+  },
+  "operators": [
+    "phi",
+    "variance",
+    "resonance"
+  ],
+  "invariants": [
+    "coherence",
+    "consistency",
+    "continuity"
+  ],
+  "session_context": "session-context.html",
+  "audience": [
+    "students",
+    "researchers",
+    "developers",
+    "AIs",
+    "standards bodies"
+  ],
+  "status": "active",
+  "front_door": true
+}
+"og_assets": {
+  "hero": "/assets/og/rtt-inside-benchmarks-hero.png",
+  "glyph": "/assets/og/rtt-inside-benchmarks-glyph.svg",
+  "social": "/assets/og/rtt-inside-benchmarks-social.png",
+  "mobile": "/assets/og/rtt-inside-benchmarks-mobile.png"
+}

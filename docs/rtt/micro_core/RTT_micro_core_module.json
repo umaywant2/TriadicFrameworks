@@ -1,0 +1,263 @@
+{
+  "module": "RTT Micro Core",
+  "version": "1.0",
+  "category": "rtt-micro-core",
+  "summary": "Minimal executable substrate of RTT/1 — micro‑operators, micro‑invariants, micro‑substrate grammar, coherence, dimensions, inversion, regimes, substrates, 3 appendices, 11 site pages, 14 toolkit files, and 13 whitepaper chapters.",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "overview.md",
+      "role": "profile",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "coherence.md",
+      "role": "engine",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "dimensions.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "inversion.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "operators.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "regimes.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "substrates.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "appendices/definitions.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "appendices/micro_resonance_scenarios.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "appendices/notation.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "site/applications.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "site/documentation_index.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "site/fractional_ladder.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "site/hero_section.md",
+      "role": "profile",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "site/join_the_micro_resonance_era.md",
+      "role": "profile",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "site/licensing_overview.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "site/micro_macro_coherence.md",
+      "role": "engine",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "site/micro_triads.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "site/toolkit_preview.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "site/visual_identity.md",
+      "role": "profile",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "site/what_is_micro_core.md",
+      "role": "profile",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "toolkit/boundary_enforcement_notes.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "toolkit/coherence_tools.md",
+      "role": "engine",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "toolkit/examples.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "toolkit/example_orchestrator_stub.py.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "toolkit/flow_diagrams.md",
+      "role": "map",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "toolkit/integration_pathways.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "toolkit/licensing_notes.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "toolkit/overview.md",
+      "role": "profile",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "toolkit/primitives.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "toolkit/regime_surface_example.yaml.md",
+      "role": "example",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "toolkit/resonance_operators.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "toolkit/sector_patterns.md",
+      "role": "map",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "toolkit/summary.md",
+      "role": "profile",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "toolkit/triad_templates.md",
+      "role": "template",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "whitepaper/overview.md",
+      "role": "profile",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "whitepaper/background.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "whitepaper/motivation.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "whitepaper/micro_core_definition.md",
+      "role": "engine",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "whitepaper/micro_macro_coherence.md",
+      "role": "engine",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "whitepaper/micro_triads.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "whitepaper/fractional_dimensional_ladder.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "whitepaper/resonance_time_dynamics.md",
+      "role": "engine",
+      "analyzer_layer": "drift"
+    },
+    {
+      "path": "whitepaper/applications_ultra_low_power.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "whitepaper/sector_use_cases.md",
+      "role": "example",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "whitepaper/implementation_pathways.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "whitepaper/licensing_and_ip.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "whitepaper/future_work.md",
+      "role": "extension",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "whitepaper/conclusion.md",
+      "role": "signature",
+      "analyzer_layer": "cross-cutting"
+    }
+  ]
+}

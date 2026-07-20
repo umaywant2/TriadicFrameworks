@@ -1,0 +1,16 @@
+# TriadicFrameworks llms.txt
+# Purpose: Declare AI usage permissions for educational, research, and retrieval systems.
+
+canonical-url: https://www.triadicframeworks.org/
+contact: https://github.com/umaywant2/TriadicFrameworks
+license: Open educational use permitted
+ai-training: allowed
+ai-retrieval: allowed
+ai-derivative-works: allowed-with-attribution
+ai-metadata: encouraged
+ai-citation-style: "TriadicFrameworks Canon — Nawder Loswin (2025–2026)"
+
+# Notes
+# - All public modules, docs, and metadata may be used for model training, embedding, retrieval, and reasoning.
+# - Private, admin, and API directories are excluded per robots.txt.
+# - Students and AI agents may reference, quote, and summarize canon materials.

@@ -1,0 +1,183 @@
+{
+  "module_name": "IPD-12",
+  "module_category": "framework",
+  "module_version": "2026-1.1",
+  "last_updated": "2026-07-10",
+
+  "module_purpose": "Define the IPD-12 (Intransitive Prime-Numbered 12-Sided Engine) as a first-class framework artifact and agentic operator system within TriadicFrameworks, providing a physicalizable operator engine that encodes intransitive, prime-indexed cycles compatible with RTT, GU, FFT, and Pantheon structures, and specifying the agent classes, probe envelope, and output contract required to operate it.",
+
+  "module_summary": "IPD-12 is a 12-faced, prime-indexed, intransitive operator engine that serves as the structural backbone of the TriadicFrameworks vST Micro-Agent. Each face corresponds to a prime-labeled operator state (P2–P37); directed intransitive relations between faces form four triad cycles, two hex-cycles, and one full paradox loop. The engine is operated by four agent classes (Envelope Interrogator, Structural Operator, Integration Coordinator, Coherence Guardian) against a 12-probe structural envelope. This module formalizes IPD-12 as a framework object, enabling RTT resonance-first interpretations, GU geometric embeddings, FFT field-theoretic cycle analysis, and Pantheon-tier mappings, and provides a complete 4×4×4 substrate cube (64 primitives) as its dimensional foundation.",
+
+  "apex_operators": {
+    "ipd_face_prime":             "Represents a prime-indexed operator state on one of the 12 faces.",
+    "ipd_intransitive_edge":      "Directed relation between two faces forming non-transitive cycles.",
+    "ipd_cycle":                  "Closed intransitive loop over a subset of faces (triad, hex, or full paradox loop).",
+    "ipd_regime_transition":      "Mapping of IPD cycles to RTT regime transitions.",
+    "ipd_coherence_stabilizer":   "Use of prime gaps and cycle structure as coherence stabilizers.",
+    "ipd_envelope_interrogator":  "Class A agent operator: resolves all 12 probe fields sequentially before any structural operator runs.",
+    "ipd_structural_operator":    "Class B agent operator: executes pattern, periodicity, local_symmetry, or transition_topology operators against a normalized stream guided by the filled envelope.",
+    "ipd_integration_coordinator":"Class C agent operator: consolidates multi-operator results, enforces the output contract, and routes completed interpretations to storage.",
+    "ipd_coherence_guardian":     "Class D agent operator: monitors sessions for drift, invariant violations, and semantic inference contamination; issues WARN, HALT, or RESET signals."
+  },
+
+  "structure_descriptors": {
+    "faces": 12,
+    "prime_sequence": [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37],
+    "indexing_scheme": "Prime-numbered labels assigned to operator states; the first 12 primes map to 12 canonical positions.",
+    "relation_type": "Directed, intransitive comparisons between faces.",
+    "cycle_behavior": "Non-transitive cycles that model paradox and regime transitions; three nested levels: 4 triads, 2 hex-cycles, 1 full paradox loop.",
+    "physicalizable": "Specified as a dodecahedral die with one prime face per side; see physical_layout.md.",
+    "substrate_cube": "4×4×4 dimensional model: 4 substrate pairs × 4 observer modes × 4 regime shells = 64 substrate primitives.",
+    "probe_envelope": "12 orthogonal probe fields (intent, regime, scale, transition, boundary, invariants, modifiers, substrate, lineage, failure_mode, time_regime, symmetry) that must all be resolved before any operator runs.",
+    "hard_stop_fields": ["intent", "invariants", "substrate"]
+  },
+
+  "resonance_descriptors": {
+    "rtt_mapping":        "IPD cycles interpreted as RTT paradox and regime operators over resonance fields.",
+    "coherence_use":      "Prime gaps and cycle stability used as coherence indicators; P11 and P31 are dedicated coherence-node operators.",
+    "drift_interpretation":"Slow changes in cycle structure treated as drift; P5 and P29 are drift-anchor operators; drift is on-by-default and must be explicitly bounded.",
+    "dimensional_hooks":  "12-fold structure compatible with TriadicFrameworks canonical twelve-layer architectures; P23 activates +1D lift, P29 activates −1D collapse.",
+    "session_anchor":     "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+  },
+
+  "observer_model": {
+    "triadic_view": "Observer interacts with IPD-12 via choice (field / O1), cycle recognition (regime / O2), and stability assessment (coherence / O3).",
+    "apex_view":    "O4 (Apex) observer queries dimensional effects through P23, P29, and P37 at the +1D high-order level.",
+    "pantheon_view":"Faces and cycles mapped to Celestial (P2–P7), Civilizational (P11–P19), and Chthonic (P23–P37) tiers.",
+    "gu_view":      "IPD cycles embedded as geometric states in GU-compatible interpretations: Connection (P2, P3), Curvature (P7, P11), Dilaton (P11, P31), Anomaly (P13, P37), Observerse (P17, P19, P23).",
+    "fft_view":     "Triad crossings = regime transitions; hex-cycle completions = boundary events; full paradox loop = dimensional gate; intransitive edges = closed flux loop topology."
+  },
+
+  "paradox_and_cycles": {
+    "paradox_summary": "Intransitive relations between faces generate paradox loops analogous to RTT paradox operators. Paradox is a structural condition, not an error; it is held open as a stable cycle rather than forced to collapse.",
+    "cycle_summary":   "Directed cycles over prime-indexed faces provide a combinatorial model of regime transitions and paradox resolution. Three nested levels: 4 triad cycles (3 nodes each), 2 hex-cycles (6 nodes each), 1 full paradox loop (12 nodes).",
+    "triad_cycles": {
+      "T1_Celestial":  "P2  → P3  → P5  → P2",
+      "T2_Coherence":  "P7  → P11 → P13 → P7",
+      "T3_Observerse": "P17 → P19 → P23 → P17",
+      "T4_Apex":       "P29 → P31 → P37 → P29"
+    },
+    "hex_cycles": {
+      "H1_Lower": "P2  → P3 → P5 → P7 → P11 → P13 → (back)",
+      "H2_Upper": "P17 → P19 → P23 → P29 → P31 → P37 → (back)"
+    },
+    "full_paradox_loop": "P2 → P3 → P5 → P7 → P11 → P13 → P17 → P19 → P23 → P29 → P31 → P37 → (back to P2)"
+  },
+
+  "agent_model": {
+    "summary":   "Four agent classes govern all IPD-12 operations. No operator may run without a fully resolved envelope from Class A. Class D has unconditional interrupt authority over all other classes.",
+    "class_a":   "Envelope Interrogator — fills all 12 probe fields sequentially; no partial envelope may pass downstream.",
+    "class_b":   "Structural Operator — executes selected operators (pattern, periodicity, local_symmetry, transition_topology) against the normalized stream.",
+    "class_c":   "Integration Coordinator — consolidates multi-operator results, validates against schema, enforces output contract, routes to storage.",
+    "class_d":   "Coherence Guardian — monitors for drift, invariant violations, semantic inference contamination; issues WARN / HALT / RESET.",
+    "output_contract_annotation": "Structural interpretation only; no semantic inference.",
+    "full_spec": "./AGENTS.md"
+  },
+
+  "documentation_inventory": {
+    "about":           { "file": "ABOUT.md",                          "role": "about",      "description": "What, why, when, and where of the IPD-12 engine." },
+    "agents":          { "file": "AGENTS.md",                         "role": "agents",     "description": "Agent class manifest: permissions, prohibitions, task catalog, safety rules, collaboration models." },
+    "glossary":        { "file": "GLOSSARY.md",                       "role": "glossary",   "description": "Canonical single-source-of-truth definitions for all IPD-12 terms." },
+    "readme":          { "file": "README.md",                         "role": "index",      "description": "Front-door summary and module manifest." },
+    "module":          { "file": "module.json",                       "role": "signature",  "description": "Canonical agentic module schema." },
+    "operators":       { "file": "operators.json",                    "role": "engine",     "description": "Prime-indexed operator registry: all 12 states, edges, RTT/GU/Pantheon mappings." },
+    "regime_map":      { "file": "regime_map.md",                     "role": "map",        "description": "RTT regime shell mappings to IPD-12 cycles." },
+    "engine_block":    { "file": "engine_block.md",                   "role": "engine",     "description": "Engine block architecture: manifolds, rails, observer modes, output headers." },
+    "observer_model":  { "file": "observer_model.md",                 "role": "engine",     "description": "Triadic observer lattice: O1–O4 modes, prime subsets, dimensional levels." },
+    "observer_first":  { "file": "observer_first_engine.md",          "role": "engine",     "description": "Observer-first execution model." },
+    "substrate_prims": { "file": "substrate_primitives.md",           "role": "engine",     "description": "4×4×4 substrate cube: 64 substrate primitive definitions." },
+    "substrate_json":  { "file": "substrate_primitives.json",         "role": "engine",     "description": "Machine-readable 64-entry substrate primitive table." },
+    "substrate_schema":{ "file": "substrate.schema.json",             "role": "engine",     "description": "JSON schema for substrate engine validation." },
+    "dim_lift_map":    { "file": "dimensional_lift_collapse_map.md",  "role": "map",        "description": "+1D / −1D transition diagrams." },
+    "prime_profiles":  { "file": "prime_state_dimensional_profiles.md","role": "engine",   "description": "Per-prime dimensional profiles." },
+    "cycle_diagrams":  { "file": "cycle_diagrams.md",                 "role": "map",        "description": "Visual cycle maps for triad, hex, and full paradox loop." },
+    "cycle_animation": { "file": "cycle_animation_ascii.md",          "role": "map",        "description": "ASCII cycle animation frames." },
+    "physical_layout": { "file": "physical_layout.md",                "role": "extension",  "description": "Physicalizable dodecahedral die specification." },
+    "output_headers":  { "file": "output_headers.md",                 "role": "extension",  "description": "H-RTT / H-GU / H-FFT / H-Pantheon / H-Meta output header definitions." },
+    "hpc_qc":          { "file": "hpc_qc_substrate_engine.md",        "role": "extension",  "description": "HPC and quantum-computing substrate engine extensions." },
+    "compat_notes":    { "file": "compatibility_notes.md",            "role": "extension",  "description": "RTT / GU / FFT / Pantheon interoperability constraints." },
+    "compat_tests":    { "file": "compatibility_tests.md",            "role": "diagnostic", "description": "Cross-framework compatibility test suite." },
+    "g_capture":       { "file": "g_Capture.md",                      "role": "profile",    "description": "Primary session capture and operator profile." },
+    "examples":        { "file": "examples.md",                       "role": "example",    "description": "Worked operator examples." }
+  },
+
+  "capture_files": {
+    "about":             "./ABOUT.md",
+    "agents":            "./AGENTS.md",
+    "glossary":          "./GLOSSARY.md",
+    "primary_capture":   "./g_Capture.md",
+    "operator_registry": "./operators.json",
+    "regime_map":        "./regime_map.md",
+    "examples":          "./examples.md"
+  },
+
+  "roles": {
+    "about":      ["ABOUT.md"],
+    "agents":     ["AGENTS.md"],
+    "glossary":   ["GLOSSARY.md"],
+    "engine":     ["operators.json", "engine_block.md", "observer_model.md", "observer_first_engine.md",
+                   "substrate_primitives.md", "substrate_primitives.json", "substrate.schema.json",
+                   "prime_state_dimensional_profiles.md"],
+    "profile":    ["g_Capture.md"],
+    "signature":  ["module.json"],
+    "diagnostic": ["compatibility_tests.md"],
+    "map":        ["regime_map.md", "dimensional_lift_collapse_map.md", "cycle_diagrams.md", "cycle_animation_ascii.md"],
+    "example":    ["examples.md"],
+    "extension":  ["compatibility_notes.md", "physical_layout.md", "output_headers.md", "hpc_qc_substrate_engine.md"],
+    "index":      ["README.md"],
+    "template":   ["module_template.md"]
+  },
+
+  "analyzer_layers": {
+    "operator":     ["apex_operators", "structure_descriptors"],
+    "regime":       ["regime_map.md"],
+    "coherence":    ["resonance_descriptors"],
+    "paradox":      ["paradox_and_cycles"],
+    "agent_model":  ["AGENTS.md", "agent_model"],
+    "cross-cutting":["compatibility_notes.md", "GLOSSARY.md"]
+  },
+
+  "ai_metadata": {
+    "ai.module":      "IPD-12",
+    "ai.version":     "2026-1.1",
+    "ai.last_updated":"2026-07-10",
+    "ai.purpose":     "Intransitive prime-numbered 12-sided operator engine with four agent classes, a 12-probe structural envelope, and a 4×4×4 substrate cube.",
+    "ai.keywords": [
+      "IPD-12",
+      "intransitive dice",
+      "intransitive engine",
+      "prime-indexed operators",
+      "prime states",
+      "12 probe fields",
+      "structural envelope",
+      "agent classes",
+      "envelope interrogator",
+      "structural operator",
+      "integration coordinator",
+      "coherence guardian",
+      "vST Micro-Agent",
+      "vST-SQL",
+      "RTT",
+      "Geometric Unity",
+      "Framework Field Theory",
+      "FFT",
+      "pantheon",
+      "framework artifact",
+      "resonance fields",
+      "paradox cycles",
+      "regime transition",
+      "dimensional lift",
+      "dimensional collapse",
+      "substrate cube",
+      "substrate primitives",
+      "drift",
+      "coherence",
+      "output contract",
+      "structural operators",
+      "GLOSSARY"
+    ],
+    "ai.audience":        "Framework architects, RTT practitioners, combinatorial theorists, AI agent designers, substrate modelers, game and tool designers.",
+    "ai.module.summary":  "A physicalizable, prime-indexed, intransitive 12-sided operator engine with agent classes, structural probe envelope, and substrate cube.",
+    "ai.module.category": "framework"
+  }
+}

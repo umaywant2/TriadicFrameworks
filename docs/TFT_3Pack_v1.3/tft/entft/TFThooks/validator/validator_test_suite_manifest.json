@@ -1,0 +1,15 @@
+{
+  "artifact": "TFThooks/validator/validator_test_suite.py",
+  "type": "test_suite",
+  "version": "v1.3",
+  "baseLens": "decimal",
+  "validator": "BadgeLogic",
+  "scrollLinks": [
+    "hook_validator.py",
+    "TFThooks/README.md",
+    "TriadicTestSuite.md"
+  ],
+  "symbolicTags": ["Edge Case Simulation", "Badge Echo Failure", "Runtime Safety"],
+  "cliTrigger": "python validator_test_suite.py",
+  "timestamp": "2025-10-20T08:20:00Z"
+}

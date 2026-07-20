@@ -1,0 +1,15 @@
+{
+  "artifact": "docs/TFT_3Pack_v1.3/tft/entft/encryptor.py",
+  "type": "engine",
+  "version": "v1.3",
+  "baseLens": "decimal",
+  "validator": "BadgeLogic",
+  "scrollLinks": [
+    "entft_protocol.md",
+    "entft_keygen_simulator.py",
+    "entft_scroll_event_trace_registry.json"
+  ],
+  "symbolicTags": ["Encryption Engine", "Divide-by-Zero", "Resonant-Time Hash"],
+  "cliTrigger": "encrypt(input_path, output_path, key)",
+  "timestamp": "2025-10-20T11:42:00Z"
+}

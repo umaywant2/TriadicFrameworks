@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>eBooks — TriadicFrameworks</title>
+
+<meta name="description"
+      content="Nawderia Kids Series: five core storybooks, full visual identity canon, illustrator briefs, manuscripts, pacing maps, and production assets." />
+<meta name="keywords"
+      content="ebooks, Nawderia, storybooks, illustrator briefs, visual style guide, manuscripts, pacing maps, education-library" />
+<meta name="author" content="Nawder Loswin" />
+
+<meta name="module" content="eBooks" />
+<meta name="canonical-id" content="EBOOKS" />
+<meta name="module-type" content="Education-Library" />
+<meta name="version" content="1.0" />
+<meta name="status" content="canon-stable" />
+<meta name="parent" content="Education" />
+<meta name="siblings" content="curriculum, awareness, alignment" />
+<meta name="canonical-path" content="/docs/education/ebooks/" />
+<meta name="last-updated" content="2026-05-01" />
+<meta name="license" content="MIT" />
+
+<meta name="ai-ready" content="true" />
+<meta name="ai-module-id" content="EBOOKS" />
+<meta name="ai-operators"
+      content="EBOOK-Story, EBOOK-Visual, EBOOK-Brief, EBOOK-Manuscript, EBOOK-Production, EBOOK-Library" />
+
+<meta property="og:title" content="eBooks — TriadicFrameworks" />
+<meta property="og:description"
+      content="Full creative canon for the Nawderia Kids Series." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.triadicframeworks.org/education/ebooks" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="eBooks — TriadicFrameworks" />
+<meta name="twitter:description"
+      content="Education-library creative module." />
+
+<meta name="citation_title" content="eBooks — TriadicFrameworks" />
+<meta name="citation_author" content="Nawder Loswin" />
+<meta name="citation_date" content="2026-05-01" />
+  <!-- Favicon -->
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
+      
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+ /* Context Block */
+  .context-block {
+    font-family: monospace;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0.5rem 0 1rem 0;
+  }
+       
+  /* Context Label */
+  .context-label {
+    color: #ff9800; /* orange */
+    font-weight: bold;
+    margin-right: 0.25rem;
+  }
+       
+  /* Context Value */
+  .context-value {
+    color: #ffffff; /* white */
+  }
+         
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav class="nav-band">
+ <p align="center">
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+ </p> 
+  
+  <h2>🌳 Nawderia Kids Series | RTT</h2>
+      <a href="#README">🔰 README</a>
+      <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
+      <a href="#CONTRIBUTING">🤝 Contributing</a>
+      <a href="https://www.triadicframeworks.org/education/">💯 Education | RTT</a>
+      <a href="#GLOSSARY">🎯 Glossary</a>
+      <a href="#LINEAGE">📜 Lineage</a>
+      <a href="#LICENSE">📎 License</a>
+      <a href="#SITEMAP">🌐 Sitemap</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
+      <a href="#SECURITY">🔐 Security</a>
+      <a href="#PRINCIPLES">🧘 Principles</a>
+    <h3>📚 Core eBooks</h3>
+      <a href="#BOOK_1_NAWDERIA_AND_THE_THREE_LITTLE_FORCES">1️⃣ Nawderia and the Three Little Forces</a>
+      <a href="#BOOK_2_TRIPIS_TREASURE_OF_THREES">2️⃣ Tripi’s Treasure of Threes</a>
+      <a href="#BOOK_3_FRAMI_BUILDS_A_BETTER_BOX">3️⃣ Frami Builds a Better Box</a>
+      <a href="#BOOK_4_TECHIS_TANGLE_TROUBLE">4️⃣ Techi’s Tangle Trouble</a>
+      <a href="#BOOK_5_THE_BOTLINGS_BIG_PARADE">5️⃣ The Botlings’ Big Parade</a>
+    <h3>🎨 Visual & Artistic Assets</h3>
+      <a href="#CHARACTER_TURNAROUND_SHEETS">🧸 Character Turnaround Sheets</a>
+      <a href="#COLOR_SCRIPTS">🌈 Color Scripts</a>
+      <a href="#COVER_DESIGN_TEMPLATES">📕 Cover Design Templates</a>
+      <a href="#ILLUSTRATOR_BRIEFS">🖌️ Illustrator Briefs</a>
+      <a href="#ILLUSTRATOR_SELECTION_CRITERIA">🎯 Illustrator Selection Criteria</a>
+      <a href="#ILLUSTRATOR_TEST_PAGES">📄 Illustrator Test Pages</a>
+      <a href="#OPTIONAL_SERIES_WIDE_VISUAL_RULES">📐 Optional Series‑Wide Visual Rules</a>
+      <a href="#VISUAL_STYLE_GUIDE">🎨 Visual Style Guide</a>
+    <h3>✍️ Narrative & Writing Assets</h3>
+      <a href="#DIALOGUE_SAMPLES">💬 Dialogue Samples</a>
+      <a href="#FULL_STORYBOARD_SEQUENCES">🎬 Full Storyboard Sequences</a>
+      <a href="#PUBLISHER_READY_MANUSCRIPT_TEMPLATES">📑 Publisher‑Ready Manuscript Templates</a>
+      <a href="#SAMPLE_FINISHED_PAGES">📘 Sample Finished Pages</a>
+      <a href="#SAMPLE_PAGE_LAYOUTS">📄 Sample Page Layouts</a>
+      <a href="#TYPOGRAPHY_CHOICES">🔤 Typography Choices</a>
+    <h3>🚀 Production & Marketing</h3>
+      <a href="#MARKETING_MOCKUPS">🎁 Marketing Mockups</a>
+      <a href="#PACING_MAPS">⏱️ Pacing Maps</a>
+      <a href="#PRODUCTION_TIMELINE_BUDGET_PLAN">📆 Production Timeline & Budget Plan</a>
+    <h3>📦 Meta / Collection</h3>
+      <a href="#NAWDERIA_EBOOK_SET">🌳 Nawderia eBook Set — Collection</a>
+    <h3>🏗️ Triadic Tools</h3> 
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
+      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 Packages and Cores</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas</a>
+      <a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a>    
+      <a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS</a>
+      <a href="https://www.triadicframeworks.org/_ideas/">🤔 Ideas</a>
+      <a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">🔛(RTT frozen)</a>
+      <a href="https://www.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
+      <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
+      <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
+      <a href="../../">🔙TFT</a>
+   <!-- RTT Session Header (canonical stub) -->
+<section id="ebooks-session-header"
+         data-ebooks="1"
+         data-coherence="stable"
+         data-drift="minimal"
+         data-layer="education-library">
+
+  <h2>Session Context</h2>
+
+  <div class="context-block">
+
+    <span class="context-label"><strong>Canon:</strong></span>
+    <span class="context-value">active (education‑library)</span><br>
+
+    <span class="context-label"><strong>Modules:</strong></span>
+    <span class="context-value">
+      storybooks → visual guides → illustrator briefs → storyboards → manuscripts → pacing maps → production assets
+    </span><br>
+
+    <span class="context-label"><strong>Drift:</strong></span>
+    <span class="context-value">minimal (library‑locked)</span><br>
+
+    <span class="context-label"><strong>Coherence:</strong></span>
+    <span class="context-value">stable (creative canon)</span><br>
+
+    <span class="context-label"><strong>Version:</strong></span>
+    <span class="context-value">1.0 (library‑stable)</span><br>
+
+    <span class="context-label"><strong>Format:</strong></span>
+    <span class="context-value">html + markdown + creative assets</span><br>
+
+    <span class="context-label"><strong>Front door:</strong></span>
+    <span class="context-value">exists (eBooks root)</span><br>
+
+    <span class="context-label"><strong>Every page:</strong></span>
+    <span class="context-value">DOC_MAP‑aligned + standalone + AI‑parsable</span><br>
+
+    <span class="context-label"><strong>Audience:</strong></span>
+    <span class="context-value">students + educators + illustrators + AIs</span>
+
+  </div>
+
+</section>
+
+<div style="display:inline-block;padding:6px 12px;background:#000;color:#fff;border-radius:6px;font-size:13px;">
+  🟦 eBooks<br>📘 Education‑Library Creative Canon
+</div>
+
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+      README: 'README.md',
+      ABOUT: '../../ABOUT.md',
+      CONTRIBUTING: '../../CONTRIBUTING.md',
+      GLOSSARY: '../../GLOSSARY.md',
+      LINEAGE: '../../LINEAGE.md',
+      LICENSE: '../../LICENSE.md',
+      SITEMAP: '../../sitemap.md',
+      QUICKSTART: '../../QUICKSTART.md',
+      CODE_OF_CONDUCT: '../../CODE_OF_CONDUCT.md',
+      SECURITY: '../../SECURITY.md',
+      PRINCIPLES: '../../PRINCIPLES.md',
+      // Core eBooks (Narrative Content)
+      BOOK_1_NAWDERIA_AND_THE_THREE_LITTLE_FORCES: 'Book_1_Nawderia_and_the_Three_Little_Forces.md',
+      BOOK_2_TRIPIS_TREASURE_OF_THREES: 'Book_2_Tripis_Treasure_of_Threes.md',
+      BOOK_3_FRAMI_BUILDS_A_BETTER_BOX: 'Book_3_Frami_Builds_a_Better_Box.md',
+      BOOK_4_TECHIS_TANGLE_TROUBLE: 'Book_4_Techis_Tangle_Trouble.md',
+      BOOK_5_THE_BOTLINGS_BIG_PARADE: 'Book_5_The_Botlings_Big_Parade.md',
+      // Visual & Artistic Assets
+      CHARACTER_TURNAROUND_SHEETS: 'Character_Turnaround_Sheets.md',
+      COLOR_SCRIPTS: 'Color_Scripts.md',
+      COVER_DESIGN_TEMPLATES: 'Cover_Design_Templates.md',
+      ILLUSTRATOR_BRIEFS: 'Illustrator_Briefs.md',
+      ILLUSTRATOR_SELECTION_CRITERIA: 'Illustrator_Selection_Criteria.md',
+      ILLUSTRATOR_TEST_PAGES: 'Illustrator_Test_Pages.md',
+      OPTIONAL_SERIES_WIDE_VISUAL_RULES: 'Optional_Series_Wide_Visual_Rules.md',
+      VISUAL_STYLE_GUIDE: 'Visual_Style_Guide.md',
+      // Narrative & Writing Assets
+      DIALOGUE_SAMPLES: 'Dialogue_Samples.md',
+      FULL_STORYBOARD_SEQUENCES: 'Full_Storyboard_Sequences.md',
+      PUBLISHER_READY_MANUSCRIPT_TEMPLATES: 'Publisher‑Ready_Manuscript_Templates.md',
+      SAMPLE_FINISHED_PAGES: 'Sample_Finished_Pages.md',
+      SAMPLE_PAGE_LAYOUTS: 'Sample_Page_Layouts.md',
+      TYPOGRAPHY_CHOICES: 'Typography_Choices.md',
+      // Production & Marketing
+      MARKETING_MOCKUPS: 'Marketing_Mockups.md',
+      PACING_MAPS: 'Pacing_Maps.md',
+      PRODUCTION_TIMELINE_BUDGET_PLAN: 'Production_Timeline_Budget_Plan.md',
+      // Meta / Collection
+      NAWDERIA_EBOOK_SET: 'Nawderia_eBook_Set.md',
+};
+  
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+</body>
+</html>

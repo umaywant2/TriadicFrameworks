@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "GPR Sensor",
+  "type": "object",
+  "properties": {
+    "sensor_id": { "type": "string" },
+    "frequency_mhz": { "type": "number" },
+    "depth_range_m": { "type": "number" },
+    "resolution_cm": { "type": "number" },
+    "triadic_profile": {
+      "type": "object",
+      "properties": {
+        "spin_field": { "type": "number" },
+        "charge_field": { "type": "number" },
+        "temperature_field": { "type": "number" }
+      }
+    }
+  }
+}

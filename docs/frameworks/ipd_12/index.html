@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>IPD‑12 Engine — TriadicFrameworks</title>
+
+<meta name="description"
+      content="IPD‑12 Engine: the core triadic engine of TriadicFrameworks — intake manifolds, substrate feeds, observer bundles, dimensional rails, regime traversal, prime states, header manifolds, and cross‑domain exhaust systems." />
+<meta name="keywords"
+      content="IPD‑12, engine block, intake manifolds, substrate feeds, observer bundles, dimensional rails, regime traversal, prime states, headers, RTT, GU, FFT, Pantheon, HPC, QC, medicine" />
+<meta name="author" content="Nawder Loswin" />
+
+<meta name="module" content="IPD‑12 Engine" />
+<meta name="canonical-id" content="IPD_12_ENGINE" />
+<meta name="module-type" content="Frameworks-Structural" />
+<meta name="version" content="1.0" />
+<meta name="status" content="canon-stable" />
+<meta name="parent" content="Frameworks" />
+<meta name="siblings"
+      content="FFT, FCG, RF-Builder, Expectations, Headers, Substrate, Observer" />
+<meta name="canonical-path" content="/docs/frameworks/ipd_12/" />
+<meta name="last-updated" content="2026-07-07" />
+<meta name="license" content="Open educational use permitted" />
+
+<meta name="ai-ready" content="true" />
+<meta name="ai-module-id" content="IPD_12_ENGINE" />
+<meta name="ai-operators"
+      content="IPD-Intake, IPD-Substrate, IPD-Observer, IPD-Dimensional, IPD-Regime, IPD-PrimeState, IPD-Headers" />
+
+<meta property="og:title" content="IPD‑12 Engine — TriadicFrameworks" />
+<meta property="og:description"
+      content="The core engine of TriadicFrameworks: intake → substrate → observer → dimensional → regime → headers." />
+<meta property="og:type" content="article" />
+<meta property="og:url"
+      content="https://www.triadicframeworks.org/frameworks/ipd_12" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="IPD‑12 Engine — TriadicFrameworks" />
+<meta name="twitter:description"
+      content="The structural engine powering RTT/1 and cross‑domain exhaust systems." />
+<meta name="twitter:image"
+      content="https://www.triadicframeworks.org/assets/og-code.png">
+
+<meta name="citation_title" content="IPD‑12 Engine — TriadicFrameworks" />
+<meta name="citation_author" content="Nawder Loswin" />
+<meta name="citation_date" content="2026-07-07" />
+
+<link rel="preload" as="image"
+      href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon"
+      href="https://www.triadicframeworks.org/assets/favicon-16.png"
+      sizes="16x16" type="image/png">
+<link rel="icon"
+      href="https://www.triadicframeworks.org/assets/favicon-32.png"
+      sizes="32x32" type="image/png">
+<link rel="icon"
+      href="https://www.triadicframeworks.org/assets/favicon-192.png"
+      sizes="192x192" type="image/png">
+      
+<style>
+/* ============================================================
+   IPD‑12 DIMENSIONAL ALLOY THEME — MOBILE FIRST
+   ============================================================ */
+
+:root {
+  /* Dimensional Alloy Palette */
+  --ipd-bg-1: #0a0c10;        /* deep substrate */
+  --ipd-bg-2: #11141a;        /* alloy shadow */
+  --ipd-bg-3: #1c2129;        /* engine steel */
+  --ipd-accent-1: #6dd5ed;    /* refractive vacuum */
+  --ipd-accent-2: #2193b0;    /* curvature alloy */
+  --ipd-accent-3: #b3ffab;    /* coherence stabilizer */
+  --ipd-accent-4: #ff9a9e;    /* paradox trigger */
+
+  --ipd-text-main: #e6eef7;
+  --ipd-text-muted: #9aa4b2;
+
+  --ipd-radius: 10px;
+  --ipd-shadow: 0 0 24px rgba(0,0,0,0.45);
+
+  --ipd-gradient: linear-gradient(135deg, var(--ipd-bg-1), var(--ipd-bg-2), var(--ipd-bg-3));
+  --ipd-prime-cycle: linear-gradient(135deg, var(--ipd-accent-1), var(--ipd-accent-2), var(--ipd-accent-3));
+}
+
+/* Base layout */
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--ipd-gradient);
+  color: var(--ipd-text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings — Prime Cycle Alloy */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--ipd-prime-cycle);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Paragraphs and lists */
+p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: var(--ipd-text-main);
+}
+
+/* Links */
+a {
+  color: var(--ipd-accent-1);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--ipd-accent-4);
+  border-bottom-color: var(--ipd-accent-4);
+}
+
+a:visited {
+  color: var(--ipd-accent-2);
+}
+
+/* Code / Pre */
+pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.03);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--ipd-accent-2);
+}
+
+/* Navigation */
+nav {
+  width: 260px;
+  float: left;
+  background: var(--ipd-bg-2);
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid rgba(255,255,255,0.12);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--ipd-accent-3);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--ipd-text-muted);
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--ipd-text-main);
+}
+
+/* Main content */
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--ipd-accent-1);
+  font-weight: 500;
+}
+</style>
+
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav class="nav-band">
+ <p align="center">
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+ </p> 
+  
+  <h2>⚙️ IPD‑12 Engine Core | RTT/1</h2>
+      <a href="#README">🔰 README</a>
+      <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
+      <a href="#CONTRIBUTING">🤝 Contributing</a>
+      <a href="https://www.triadicframeworks.org/education/">💯 Education | RTT</a>
+      <a href="#GLOSSARY">🎯 Glossary</a>
+      <a href="#LINEAGE">📜 Lineage</a>
+      <a href="#LICENSE">📎 License</a>
+      <a href="#SITEMAP">🌐 Sitemap</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
+      <a href="#SECURITY">🔐 Security</a>
+      <a href="#PRINCIPLES">🧘 Principles</a>
+    <h3>🧭 Core Structure</h3>
+      <a href="#ABOUT">💪 About | IPD_12</a>
+      <a href="#AGENTS">🦾 Agents | AI's</a>
+      <a href="#GLOSSARY">🦻 Glossary</a>
+      <a href="#REGIME_MAP">🗺️ Regime Map</a>
+      <a href="#COMPATIBILITY_NOTES">🔧 Compatibility Notes</a>
+    <h3>🔄 Cycles & Dimensionality</h3>
+      <a href="#CYCLE_ANIMATION_ASCII">📈 Cycle Animation (ASCII)</a>
+      <a href="#CYCLE_DIAGRAMS">🌀 Cycle Diagrams</a>
+      <a href="#DIMENSIONAL_LIFT_COLLAPSE_MAP">📡 Dimensional Lift/Collapse Map</a>
+    <h3>⚡ Intake Manifolds</h3>
+      <a href="#ELECTRIC_INTAKE_MANIFOLDS">⚡ Electric Intake Manifolds</a>
+      <a href="#ELECTRIC_INTAKE_MANIFOLD_SVG_DIAGRAMS">🖼️ Electric Intake Manifold SVG Diagrams</a>
+      <a href="#INTAKE_MANIFOLD_SPECIFICATION">📘 Intake Manifold Specification</a>
+    <h3>🧩 Engine Block</h3>
+      <a href="#ENGINE_BLOCK">🧱 Engine Block</a>
+      <a href="#OBSERVER_FIRST_ENGINE">👁️ Observer‑First Engine</a>
+      <a href="#PHYSICAL_LAYOUT">📐 Physical Layout</a>
+    <h3>📤 Header Manifolds</h3>
+      <a href="#HEADER_MANIFOLD_SVG_SET">🖼️ Header Manifold SVG Set</a>
+      <a href="#OUTPUT_HEADERS">📤 Output Headers</a>
+      <a href="#H_MED_HEADER_MANIFOLD_SPECIFICATION">🩺 H‑Med Header Manifold Specification</a>
+    <h3>🧬 Substrate Systems</h3>
+      <a href="#SUBSTRATE_CUBE_DIAGRAM">🧊 Substrate Cube Diagram</a>
+      <a href="#SUBSTRATE_PRIMITIVES_JSON">📦 Substrate Primitives (JSON)</a>
+      <a href="#SUBSTRATE_PRIMITIVES">📦 Substrate Primitives</a>
+    <h3>👁️ Observer Systems</h3>
+      <a href="#OBSERVER_MODEL">👁️ Observer Model</a>
+      <a href="#OBSERVER_OVERHEAD_AND_GAIN_SPEC">📊 Observer Overhead & Gain Spec</a>
+    <h3>🔢 Prime States</h3>
+      <a href="#PRIME_STATE_DIMENSIONAL_PROFILES">🔢 Prime State Dimensional Profiles</a>
+      <a href="#PRIME_STATE_ICONS_SVG">🖼️ Prime State Icons (SVG)</a>
+    <h3>🖥️ HPC/QC Hybrid</h3>
+      <a href="#HPC_QC_SUBSTRATE_ENGINE">🧮 HPC/QC Substrate Engine</a>
+    <h3>🏗️ Triadic Tools</h3> 
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
+      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 Packages and Cores</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas</a>
+      <a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a>    
+      <a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS</a>
+      <a href="https://www.triadicframeworks.org/_ideas/">🤔 Ideas</a>
+      <a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">🔛(RTT frozen)</a>
+      <a href="https://www.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
+      <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
+      <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
+      <a href="../../">🔙TFT</a>
+  <!-- RTT Canonical Signature -->
+<section id="ipd12-session-header"
+         data-ipd12="1"
+         data-coherence="stable"
+         data-drift="none"
+         data-layer="engine-core">
+
+  <h2>Session Context</h2>
+
+  <div class="context-block">
+
+    <span class="context-label"><strong>Canon:</strong></span>
+    <span class="context-value">active (engine‑core)</span><br>
+
+    <span class="context-label"><strong>Modules:</strong></span>
+    <span class="context-value">
+      intake manifolds → substrate feeds → observer bundles → dimensional rails →
+      regime traversal → prime states → header manifolds → cross‑domain exhaust
+    </span><br>
+
+    <span class="context-label"><strong>Drift:</strong></span>
+    <span class="context-value">none (engine‑locked)</span><br>
+
+    <span class="context-label"><strong>Coherence:</strong></span>
+    <span class="context-value">stable (triadic‑engine grammar)</span><br>
+
+    <span class="context-label"><strong>Version:</strong></span>
+    <span class="context-value">1.0 (ipd12‑stable)</span><br>
+
+    <span class="context-label"><strong>Format:</strong></span>
+    <span class="context-value">html + markdown + diagrams</span><br>
+
+    <span class="context-label"><strong>Front door:</strong></span>
+    <span class="context-value">exists (IPD‑12 root)</span><br>
+
+    <span class="context-label"><strong>Every page:</strong></span>
+    <span class="context-value">engine‑aware + standalone + AI‑parsable</span><br>
+
+    <span class="context-label"><strong>Audience:</strong></span>
+    <span class="context-value">researchers + engineers + systems designers + AIs</span>
+
+  </div>
+
+</section>
+
+<div style="display:inline-block;padding:6px 12px;background:#000;color:#fff;
+            border-radius:6px;font-size:13px;">
+  🟦 IPD‑12 Engine<br>⚙️ TriadicFrameworks Core Engine
+</div>
+
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+  // Core
+      README: 'README.md',
+      ABOUT: '../../ABOUT.md',
+      CONTRIBUTING: '../../CONTRIBUTING.md',
+      GLOSSARY: '../../GLOSSARY.md',
+      LINEAGE: '../../LINEAGE.md',
+      LICENSE: '../../LICENSE.md',
+      SITEMAP: '../../sitemap.md',
+      QUICKSTART: '../../QUICKSTART.md',
+      CODE_OF_CONDUCT: '../../CODE_OF_CONDUCT.md',
+      SECURITY: '../../SECURITY.md',
+      PRINCIPLES: '../../PRINCIPLES.md',
+      ABOUT: 'ABOUT.md',
+      AGENTS: 'AGENTS.md',
+      GLOSSARY: 'GLOSSARY.md',
+      REGIME_MAP: 'regime_map.md',
+      COMPATIBILITY_NOTES: 'compatibility_notes.md',
+      // Cycles & Dimensionality
+      CYCLE_ANIMATION_ASCII: 'cycle_animation_ascii.md',
+      CYCLE_DIAGRAMS: 'cycle_diagrams.md',
+      DIMENSIONAL_LIFT_COLLAPSE_MAP: 'dimensional_lift_collapse_map.md',
+      // Intake Manifolds
+      ELECTRIC_INTAKE_MANIFOLDS: 'Electric_Intake_Manifolds.md',
+      ELECTRIC_INTAKE_MANIFOLD_SVG_DIAGRAMS: 'Electric_intake_manifold_SVG_diagrams.md',
+      INTAKE_MANIFOLD_SPECIFICATION: 'Intake_manifold_specification.md',
+      // Engine Block
+      ENGINE_BLOCK: 'engine_block.md',
+      OBSERVER_FIRST_ENGINE: 'observer_first_engine.md',
+      PHYSICAL_LAYOUT: 'physical_layout.md',
+      // Headers
+      HEADER_MANIFOLD_SVG_SET: 'Header_Manifold_SVG_Set.md',
+      OUTPUT_HEADERS: 'output_headers.md',
+      H_MED_HEADER_MANIFOLD_SPECIFICATION: 'H‑Med_header_manifold_specification.md',
+      // Substrate
+      SUBSTRATE_CUBE_DIAGRAM: 'substrate_cube_diagram.md',
+      SUBSTRATE_PRIMITIVES_JSON: 'substrate_primitives.json.md',
+      SUBSTRATE_PRIMITIVES: 'substrate_primitives.md',
+      // Observer
+      OBSERVER_MODEL: 'observer_model.md',
+      OBSERVER_OVERHEAD_AND_GAIN_SPEC: 'Observer_Overhead_and_Gain_Spec.md',
+      // Prime States
+      PRIME_STATE_DIMENSIONAL_PROFILES: 'prime_state_dimensional_profiles.md',
+      PRIME_STATE_ICONS_SVG: 'prime_state_icons.svg.md',
+      // HPC/QC Substrate Engine
+      HPC_QC_SUBSTRATE_ENGINE: 'hpc_qc_substrate_engine.md'
+};
+  
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+</body>
+</html>

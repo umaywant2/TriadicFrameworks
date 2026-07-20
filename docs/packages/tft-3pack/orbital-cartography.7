@@ -1,0 +1,238 @@
+ORBITAL-CARTOGRAPHY(7)     TriadicFrameworks Manual     ORBITAL-CARTOGRAPHY(7)
+================================================================================
+NAME
+       orbital-cartography - map projections, resonance-terrain contours, and
+                             multi-agent cartographic overlays for SAR fleets
+
+SYNOPSIS
+       Orbital cartography defines:
+           • resonance-time map projections
+           • resonance-terrain contouring
+           • harmonic-phase and sweep-ancestry overlays
+           • multi-agent cartographic fusion
+           • constellation-scale temporal terrain modeling
+
+DESCRIPTION
+       orbital-cartography describes how RTT transforms orbital timing,
+       resonance envelopes, harmonic cycles, and sweep ancestry into navigable
+       temporal terrains. These terrains behave like topographic maps: they
+       have ridges, basins, gradients, and contours that guide sweep placement,
+       Δv scheduling, and constellation-scale choreography.
+
+       Cartography enables:
+           • multi-resolution temporal visualization
+           • resonance-aware navigation
+           • harmonic-phase alignment
+           • constellation-scale map overlays
+           • predictive terrain evolution across cycles
+
+       WRSADC uses cartographic maps to guide planning and anomaly recovery.
+
+MAP PROJECTIONS
+       Map projections convert resonance-time data into 2D or 3D coordinate
+       systems for analysis and planning.
+
+       Projection types:
+
+           linear projection
+                  Maps time directly to a horizontal axis.
+                  → simplest for sweep scheduling.
+
+           polar-phase projection
+                  Maps harmonic phase φ_harm to angular coordinates.
+                  → ideal for harmonic-lock visualization.
+
+           resonance-height projection
+                  Maps envelope amplitude R(t) to vertical height.
+                  → creates a “resonance terrain.”
+
+           spectral-density projection
+                  Maps S(f,t) to color or intensity.
+                  → highlights spectral fragmentation.
+
+           hybrid projection
+                  Combines resonance height + harmonic angle + timing grids.
+                  → full RTT terrain.
+
+       Projection selection depends on mission goals.
+
+EXAMPLE: RESONANCE-TERRAIN PROJECTION
+       Envelope amplitude R(t) over one orbital period T:
+
+           Peaks at: 12, 54, 78
+           Valleys at: 30, 90
+
+       Projection:
+           • peaks become “mountain ridges”
+           • valleys become “basins”
+           • sweep windows placed on ridge crests
+           • Δv triads placed in basins
+
+       Result:
+           • intuitive terrain for sweep planning
+           • stable resonance-aware navigation
+
+RESONANCE-TERRAIN CONTOURS
+       Contours represent lines of equal resonance amplitude, spectral density,
+       or harmonic-phase alignment.
+
+       Contour types:
+
+           amplitude contours
+                  Lines of constant R(t).
+                  → identify resonance plateaus.
+
+           spectral contours
+                  Lines of constant S(f,t).
+                  → identify spectral stability zones.
+
+           gradient contours
+                  Lines of constant gradient polarity G(t).
+                  → identify polarity transitions.
+
+           harmonic-phase contours
+                  Lines of constant φ_harm.
+                  → identify harmonic-lock corridors.
+
+       Contours reveal the “shape” of resonance-time terrain.
+
+EXAMPLE: CONTOUR MAP
+       Over one orbital period T:
+
+           R(t) = high at 10–20, 50–60
+           R(t) = medium at 20–40
+           R(t) = low at 0–10, 40–50, 60–T
+
+       Contours:
+           • high-density ridge: 10–20, 50–60
+           • medium plateau: 20–40
+           • low basins: 0–10, 40–50, 60–96
+
+       Sweep placement:
+           • sweeps at 15 and 55
+           • Δv triads at 30 and 80
+
+MULTI-AGENT CARTOGRAPHIC OVERLAYS
+       Overlays combine maps from multiple platforms into a unified
+       constellation terrain.
+
+       Overlay types:
+
+           synchronous overlay
+                  All platforms share identical contours.
+
+           harmonic overlay
+                  Maps aligned via harmonic ratios.
+
+           resonance overlay
+                  Maps aligned via envelope peaks.
+
+           ancestry overlay
+                  Maps aligned via sweep lineage.
+
+           mesh overlay
+                  Distributed overlay across constellation nodes.
+
+       Overlays reveal multi-agent resonance corridors.
+
+EXAMPLE: MULTI-AGENT OVERLAY
+       Platforms A, B, C:
+
+           A resonance peaks: 12, 54
+           B resonance peaks: 20, 60
+           C resonance peaks: 15, 50
+
+       Overlay terrain:
+           • shared ridge at ~15
+           • shared ridge at ~55
+           • shared basin at ~30
+
+       Result:
+           • sweeps at 15 and 55
+           • Δv triads at 30
+           • constellation sync at 0 and 45
+
+CARTOGRAPHIC FUSION
+       Cartographic fusion merges projections, contours, and overlays into a
+       unified resonance-time terrain.
+
+       Fusion layers:
+
+           1. timing-grid projection
+           2. resonance-terrain projection
+           3. harmonic-phase overlay
+           4. ancestry contouring
+           5. constellation overlay
+
+       Fusion output:
+
+           • sweep corridors
+           • Δv corridors
+           • resonance ridges
+           • harmonic valleys
+           • sync plateaus
+
+       Fusion is recomputed each triad cycle.
+
+CARTOGRAPHIC FAILURE MODES
+       Cartography may degrade due to:
+
+           • projection distortion
+           • contour collapse
+           • overlay misalignment
+           • resonance-terrain fragmentation
+           • constellation map mismatch
+
+       Diagnostic indicators:
+
+           cartography-integrity score
+           projection error
+           contour deviation
+           overlay drift
+           sweep-terrain mismatch
+
+       WRSADC halts unsafe cartographic states.
+
+INTERACTION WITH LINEAGE
+       Lineage records:
+
+           • map projections
+           • contour evolution
+           • overlay history
+           • fused terrain maps
+           • constellation cartography evolution
+
+       Lineage enables long-term terrain forecasting.
+
+INTERACTION WITH WRSADC
+       WRSADC:
+           • generates map projections
+           • computes resonance contours
+           • overlays multi-agent maps
+           • fuses constellation terrains
+           • schedules sweeps and maneuvers
+           • blocks unsafe terrain states
+
+       WRSADC is the cartography conductor.
+
+NOTES
+       Orbital cartography transforms SAR constellations into navigable
+       resonance-time terrains. Projections, contours, and multi-agent overlays
+       ensure that sweep choreography, harmonic-lock, and constellation-scale
+       synchronization remain stable across long mission timelines.
+
+AUTHOR
+       TriadicFrameworks — Resonance-Time Theory Canon
+
+SEE ALSO
+       orbital-mapping(7), orbital-tiling(7), orbital-grids(7),
+       orbital-timing(7), orbital-choreography(7), orbital-synchronization(7),
+       orbital-coherence(7), orbital-stability(7), orbital-recovery(7),
+       orbital-anomalies(7), orbital-simulation(7), orbital-forecasting(7),
+       orbital-synthesis(7), orbital-lineage(7), orbital-maneuvers(7),
+       orbital-corridors(7), orbital-windows(7), orbital-harmonics(7),
+       sar-constellations(7), sar-integration(7), diagnostics(7),
+       lineage(7), resonance(7), schemas(7), wrsadc(7), triad(7)
+
+================================================================================
+TriadicFrameworks                     2025         ORBITAL-CARTOGRAPHY(7)

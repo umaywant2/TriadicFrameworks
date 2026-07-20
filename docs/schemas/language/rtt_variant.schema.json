@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "RTT Variant",
+  "type": "object",
+  "properties": {
+    "variant_id": { "type": "string" },
+    "name": { "type": "string" },
+    "domain": { "type": "string" },
+    "version": { "type": "string" },
+    "triadic_capabilities": {
+      "type": "object",
+      "properties": {
+        "spin": { "type": "boolean" },
+        "charge": { "type": "boolean" },
+        "temperature": { "type": "boolean" }
+      }
+    },
+    "supported_operators": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "compatibility_matrix": { "type": "object" }
+  },
+  "required": ["variant_id", "name", "domain"]
+}

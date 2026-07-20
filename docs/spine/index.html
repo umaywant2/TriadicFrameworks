@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <title>TriadicFrameworks S3 Spine Visualizer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              base: { 900: '#0a0a12', 800: '#0f0f1a', 700: '#151522', 600: '#1a1a2e', 500: '#22223a' },
+              cyan: { 400: '#00f5ff', 500: '#00d4dd', 600: '#00b3bb' },
+              violet: { 400: '#7c3aed', 500: '#6d28d9', 600: '#5b21b6' },
+              panel: { bg: '#0e0e18', border: '#1e1e30', hover: '#1a1a2e' }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace']
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      :root {
+        --bg: #0a0a12;
+        --cyan: #00f5ff;
+        --violet: #7c3aed;
+        --panel-bg: #0e0e18;
+        --panel-border: #1e1e30;
+        --text-primary: #e8e8f0;
+        --text-secondary: #9090a8;
+        --text-dim: #5a5a72;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { background: var(--bg); color: var(--text-primary); font-family: 'Inter', sans-serif; overflow: hidden; height: 100vh; }
+      
+      @keyframes pulse-glow {
+        0%, 100% { filter: drop-shadow(0 0 6px rgba(0,245,255,0.3)); }
+        50% { filter: drop-shadow(0 0 14px rgba(0,245,255,0.7)); }
+      }
+      @keyframes rotate-ring {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes node-enter {
+        from { transform: scale(0); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+      }
+      @keyframes flash-highlight {
+        0% { filter: brightness(1); }
+        50% { filter: brightness(2.5); }
+        100% { filter: brightness(1); }
+      }
+      @keyframes spin-icon {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      .webroot-pulse { animation: pulse-glow 3s ease-in-out infinite; }
+      .selected-ring { animation: rotate-ring 4s linear infinite; }
+      .node-flash { animation: flash-highlight 0.6s ease-out; }
+      .spin-refresh { animation: spin-icon 0.8s ease-in-out; }
+      
+      .graph-tooltip {
+        position: absolute; pointer-events: none; background: #1a1a2eee;
+        border: 1px solid #2a2a44; border-radius: 8px; padding: 8px 12px;
+        font-size: 12px; z-index: 100; backdrop-filter: blur(8px);
+        box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        transition: opacity 0.15s;
+      }
+      .graph-tooltip .tt-name { color: #e8e8f0; font-weight: 600; font-size: 13px; }
+      .graph-tooltip .tt-layer { color: #9090a8; font-size: 11px; margin-top: 2px; }
+
+      #search-input-s3v::placeholder { color: #5a5a72; }
+      #search-input-s3v:focus { outline: none; box-shadow: 0 0 0 2px rgba(0,245,255,0.3); }
+      
+      .pill-btn { transition: all 0.2s; cursor: pointer; user-select: none; }
+      .pill-btn:hover { background: rgba(0,245,255,0.15); color: #00f5ff; }
+      .pill-btn.active { background: rgba(0,245,255,0.2); color: #00f5ff; border-color: rgba(0,245,255,0.4); }
+      
+      .stat-card { background: rgba(255,255,255,0.03); border: 1px solid #1e1e30; border-radius: 10px; padding: 10px 14px; text-align: center; }
+      .stat-card .stat-val { font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 600; color: #e8e8f0; }
+      .stat-card .stat-label { font-size: 10px; color: #9090a8; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 2px; }
+
+      .module-card { background: rgba(255,255,255,0.03); border: 1px solid #1e1e30; border-radius: 14px; padding: 20px; }
+      
+      .legend-item { display: flex; align-items: center; gap: 8px; padding: 5px 8px; border-radius: 8px; cursor: pointer; transition: background 0.15s; font-size: 12px; }
+      .legend-item:hover { background: rgba(255,255,255,0.05); }
+      .legend-item .dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+      .legend-item .count { color: #5a5a72; font-family: 'JetBrains Mono', monospace; font-size: 11px; margin-left: auto; }
+
+      .connected-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+      
+      #right-panel-s3v::-webkit-scrollbar { width: 5px; }
+      #right-panel-s3v::-webkit-scrollbar-track { background: transparent; }
+      #right-panel-s3v::-webkit-scrollbar-thumb { background: #2a2a44; border-radius: 4px; }
+      
+      .open-btn { background: linear-gradient(135deg, rgba(0,245,255,0.15), rgba(124,58,237,0.15)); border: 1px solid rgba(0,245,255,0.3); color: #00f5ff; border-radius: 10px; padding: 8px 16px; font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px; }
+      .open-btn:hover { background: linear-gradient(135deg, rgba(0,245,255,0.25), rgba(124,58,237,0.25)); border-color: rgba(0,245,255,0.5); }
+      .open-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+      .open-btn:disabled:hover { background: linear-gradient(135deg, rgba(0,245,255,0.15), rgba(124,58,237,0.15)); border-color: rgba(0,245,255,0.3); }
+
+      .badge { display: inline-flex; align-items: center; padding: 3px 10px; border-radius: 6px; font-size: 11px; font-weight: 500; }
+
+      .source-badge-live {
+        background: rgba(34,197,94,0.15);
+        border: 1px solid rgba(34,197,94,0.4);
+        color: #22c55e;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 11px;
+        padding: 3px 10px;
+        border-radius: 6px;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+      }
+      .source-badge-embedded {
+        background: rgba(245,158,11,0.15);
+        border: 1px solid rgba(245,158,11,0.4);
+        color: #f59e0b;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 11px;
+        padding: 3px 10px;
+        border-radius: 6px;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+      }
+      .refresh-btn {
+        background: transparent;
+        border: 1px solid #2a2a44;
+        color: #9090a8;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 11px;
+        padding: 3px 10px;
+        border-radius: 6px;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        transition: all 0.2s;
+      }
+      .refresh-btn:hover {
+        border-color: rgba(0,245,255,0.4);
+        color: #00f5ff;
+        box-shadow: 0 0 8px rgba(0,245,255,0.15);
+      }
+      
+      svg text { user-select: none; }
+
+      #loading-overlay-s3v {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(10,10,18,0.85);
+        z-index: 50;
+        backdrop-filter: blur(4px);
+        transition: opacity 0.3s;
+      }
+      #loading-overlay-s3v .loading-text {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 14px;
+        color: #00f5ff;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      #loading-overlay-s3v .loading-spinner {
+        width: 18px;
+        height: 18px;
+        border: 2px solid rgba(0,245,255,0.2);
+        border-top-color: #00f5ff;
+        border-radius: 50%;
+        animation: spin-icon 0.8s linear infinite;
+      }
+
+      @media (max-width: 768px) {
+        #app-layout-s3v { flex-direction: column !important; }
+        #graph-container-s3v { width: 100% !important; height: 55vh !important; }
+        #right-panel-s3v { width: 100% !important; height: 45vh !important; border-left: none !important; border-top: 1px solid #1e1e30 !important; }
+        #toolbar-s3v { flex-wrap: wrap; gap: 6px; }
+        #filter-bar-s3v { flex-wrap: wrap; }
+      }
+    </style>
+</head>
+<body data-id="0">
+    <app-icon data-id="1" hidden data-icon="hexagon" data-palette="Dark"></app-icon>
+
+    <!-- TOOLBAR -->
+    <div data-id="2" id="toolbar-s3v" class="flex items-center justify-between px-4 py-2 border-b" style="background:#0c0c16; border-color:#1e1e30; min-height:48px;">
+      <div data-id="3" class="flex items-center gap-2">
+        <span data-id="4" style="color:#00f5ff; font-size:18px;">⬡</span>
+        <span data-id="5" class="font-mono text-sm font-semibold" style="color:#00f5ff;">S3 Spine Visualizer</span>
+        <span data-id="6" id="data-source-badge-s3v" class="source-badge-embedded ml-2" style="display:none;"></span>
+        <button data-id="7" id="refresh-btn-s3v" class="refresh-btn ml-1" title="Refresh data">
+          <span data-id="8" id="refresh-icon-s3v" style="font-size:13px; display:inline-block;">↺</span>
+          <span data-id="9" class="hidden sm:inline">Refresh</span>
+        </button>
+      </div>
+      <div data-id="10" class="flex-1 max-w-xs mx-4">
+        <input data-id="11" id="search-input-s3v" type="text" placeholder="Search modules..." class="w-full px-3 py-1.5 rounded-lg text-sm font-mono" style="background:#151522; border:1px solid #1e1e30; color:#e8e8f0;" />
+      </div>
+      <div data-id="12" class="hidden md:flex items-center gap-3 text-xs font-mono" id="header-stats-s3v" style="color:#9090a8;">
+        <span data-id="13" class="px-2 py-1 rounded" style="background:rgba(0,245,255,0.08); color:#00f5ff;" id="stat-modules-header">166 modules</span>
+        <span data-id="14" class="px-2 py-1 rounded" style="background:rgba(124,58,237,0.1); color:#a78bfa;" id="stat-edges-header">95 edges</span>
+        <span data-id="15" class="px-2 py-1 rounded" style="background:rgba(20,184,166,0.1); color:#2dd4bf;" id="stat-layers-header">21 layers</span>
+        <span data-id="16" class="px-2 py-1 rounded" style="background:rgba(236,72,153,0.1); color:#ec4899;" id="stat-r2-header">R2 ✦</span>
+      </div>
+    </div>
+
+    <!-- FILTER BAR -->
+    <div data-id="17" id="filter-bar-s3v" class="flex items-center gap-2 px-4 py-2 text-xs font-mono overflow-x-auto" style="background:#0b0b14; border-bottom:1px solid #1a1a28;">
+      <span data-id="18" style="color:#5a5a72; margin-right:4px;">Edges:</span>
+      <button data-id="19" class="pill-btn active px-2.5 py-1 rounded-md border" style="border-color:#2a2a44;" data-edge-filter="all">All</button>
+      <button data-id="20" class="pill-btn px-2.5 py-1 rounded-md border" style="border-color:#2a2a44;" data-edge-filter="hierarchy">Hierarchy</button>
+      <button data-id="21" class="pill-btn px-2.5 py-1 rounded-md border" style="border-color:#2a2a44;" data-edge-filter="import">Import</button>
+      <button data-id="22" class="pill-btn px-2.5 py-1 rounded-md border" style="border-color:#2a2a44;" data-edge-filter="circular">Circular</button>
+      <button data-id="23" class="pill-btn px-2.5 py-1 rounded-md border" style="border-color:#2a2a44;" data-edge-filter="related">Related</button>
+      <button data-id="24" class="pill-btn px-2.5 py-1 rounded-md border" style="border-color:#2a2a44;" data-edge-filter="directed">Directed</button>
+      <span data-id="25" style="color:#2a2a44; margin:0 4px;">|</span>
+      <span data-id="26" style="color:#5a5a72; margin-right:4px;">Depth:</span>
+      <button data-id="27" class="pill-btn active px-2.5 py-1 rounded-md border" style="border-color:#2a2a44;" data-depth-filter="all">All</button>
+      <button data-id="28" class="pill-btn px-2.5 py-1 rounded-md border" style="border-color:#2a2a44;" data-depth-filter="0">0</button>
+      <button data-id="29" class="pill-btn px-2.5 py-1 rounded-md border" style="border-color:#2a2a44;" data-depth-filter="1">1</button>
+      <button data-id="30" class="pill-btn px-2.5 py-1 rounded-md border" style="border-color:#2a2a44;" data-depth-filter="2">2</button>
+      <button data-id="31" class="pill-btn px-2.5 py-1 rounded-md border" style="border-color:#2a2a44;" data-depth-filter="3">3</button>
+    </div>
+
+    <!-- MAIN LAYOUT -->
+    <div data-id="32" id="app-layout-s3v" class="flex" style="height:calc(100vh - 90px);">
+      <!-- GRAPH -->
+      <div data-id="33" id="graph-container-s3v" class="relative" style="width:70%; height:100%; overflow:hidden;">
+        <svg data-id="34" id="graph-svg-s3v" width="100%" height="100%"></svg>
+        <div data-id="35" id="tooltip-s3v" class="graph-tooltip" style="opacity:0;"></div>
+        <!-- Loading overlay -->
+        <div data-id="36" id="loading-overlay-s3v">
+          <div data-id="37" class="loading-text">
+            <div data-id="38" class="loading-spinner"></div>
+            Loading spine data...
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT PANEL -->
+      <div data-id="39" id="right-panel-s3v" class="flex flex-col" style="width:30%; height:100%; background:#0e0e18; border-left:1px solid #1e1e30; overflow-y:auto;">
+        
+        <!-- Stats -->
+        <div data-id="40" class="p-4 border-b" style="border-color:#1e1e30;">
+          <div data-id="41" class="grid grid-cols-3 gap-2 mb-2">
+            <div data-id="42" class="stat-card"><div data-id="43" class="stat-val" id="stat-modules-panel">55</div><div data-id="44" class="stat-label">Modules</div></div>
+            <div data-id="45" class="stat-card"><div data-id="46" class="stat-val" style="color:#00f5ff;" id="stat-files-panel">1,461</div><div data-id="47" class="stat-label">Files</div></div>
+            <div data-id="48" class="stat-card"><div data-id="49" class="stat-val" style="color:#a78bfa;" id="stat-r2-panel">20</div><div data-id="50" class="stat-label">R2 ✦</div></div>
+          </div>
+          <div data-id="51" class="grid grid-cols-2 gap-2">
+            <div data-id="52" class="stat-card"><div data-id="53" class="stat-val text-base" id="stat-hierarchy-panel">54</div><div data-id="54" class="stat-label">Hierarchy</div></div>
+            <div data-id="55" class="stat-card"><div data-id="56" class="stat-val text-base" id="stat-directed-panel">41</div><div data-id="57" class="stat-label">Directed</div></div>
+          </div>
+        </div>
+
+        <!-- Module Card -->
+        <div data-id="58" id="module-card-s3v" class="p-4 border-b" style="border-color:#1e1e30;">
+          <div data-id="59" id="module-empty-s3v" class="text-center py-8">
+            <div data-id="60" style="color:#5a5a72; font-size:40px; margin-bottom:8px;">⬡</div>
+            <p data-id="61" class="text-sm" style="color:#5a5a72;">Click a node to inspect</p>
+            <p data-id="62" class="text-xs mt-1" style="color:#3a3a52;">Double-click to open module URL</p>
+          </div>
+          <div data-id="63" id="module-detail-s3v" style="display:none;">
+            <div data-id="64" class="flex items-center gap-3 mb-3">
+              <div data-id="65" id="mod-circle-s3v" class="rounded-full flex-shrink-0" style="width:36px; height:36px;"></div>
+              <div data-id="66">
+                <div data-id="67" id="mod-name-s3v" class="font-semibold text-sm" style="color:#e8e8f0;"></div>
+                <div data-id="68" id="mod-id-s3v" class="font-mono text-xs" style="color:#5a5a72;"></div>
+              </div>
+            </div>
+            <div data-id="69" id="mod-badges-s3v" class="flex flex-wrap gap-1.5 mb-3"></div>
+            <div data-id="70" id="mod-purpose-s3v" class="text-xs leading-relaxed mb-3" style="color:#9090a8; max-height:100px; overflow-y:auto;"></div>
+            <div data-id="71" id="mod-meta-s3v" class="grid grid-cols-2 gap-x-4 gap-y-2 text-xs mb-3" style="color:#9090a8;"></div>
+            <div data-id="72" id="mod-open-s3v" class="mb-3"></div>
+            <div data-id="73" id="mod-connections-s3v">
+              <div data-id="74" class="text-xs font-medium mb-2" style="color:#5a5a72; text-transform:uppercase; letter-spacing:0.06em;">Connected Modules</div>
+              <div data-id="75" id="mod-conn-list-s3v" class="flex flex-col gap-1"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Legend -->
+        <div data-id="76" class="p-4 flex-1">
+          <div data-id="77" class="flex items-center justify-between mb-2">
+            <span data-id="78" class="text-xs font-medium" style="color:#5a5a72; text-transform:uppercase; letter-spacing:0.06em;">Layer Legend</span>
+            <button data-id="79" id="legend-reset-s3v" class="text-xs font-mono px-2 py-0.5 rounded" style="color:#00f5ff; background:rgba(0,245,255,0.08); cursor:pointer;">All layers</button>
+          </div>
+          <div data-id="80" id="legend-list-s3v" class="flex flex-col gap-0.5"></div>
+        </div>
+
+        <!-- Footer -->
+        <div data-id="81" class="p-4 border-t text-center" style="border-color:#1e1e30;">
+          <p data-id="82" id="footer-data-line-s3v" class="text-xs font-mono leading-relaxed" style="color:#3a3a52;">TriadicFrameworks S3 Spine — R2 Enriched · N6 A3 modules · rtt=1 | coherence=declared | drift=bounded</p>
+          <p data-id="83" id="footer-source-line-s3v" class="text-xs font-mono mt-1" style="color:#3a3a52;">Data: EMBEDDED R4 · 166 modules · 1,461 files</p>
+          <p data-id="84" class="text-xs mt-2" style="color:#3a3a52;">Made by Copilot</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    // ===== EMBEDDED FALLBACK DATA (kept as constant) =====
+    const GRAPH_DATA = {"nodes":[{"id":"webroot","name":"TriadicFrameworks Web Root","layer":"Meta & Governance","depth":0,"url":"https://www.triadicframeworks.org/","file_count":13,"parent":null,"status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"tft-3pack","name":"TFT 3Pack","layer":"Tools & Infrastructure","depth":1,"url":"https://www.triadicframeworks.org/TFT_3Pack_v1.3/","file_count":34,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"gsm","name":"Governance Substrate Model","layer":"Meta & Governance","depth":1,"url":"https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Governance_Substrate_Model","file_count":116,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"rtt-root","name":"RTT-Tech Root","layer":"RTT Technology Layer","depth":1,"url":"https://www.triadicframeworks.org/rtt/","file_count":49,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"fcg","name":"Framework Creation Guide","layer":"Framework-Structural","depth":1,"url":"https://www.triadicframeworks.org/frameworks/creation_guide/","file_count":22,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"research","name":"Research","layer":"Research-Canonical","depth":1,"url":"https://www.triadicframeworks.org/Research/","file_count":48,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"physics","name":"Physics Cluster","layer":"Theories","depth":1,"url":"","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"biology","name":"Biology Cluster","layer":"Theories","depth":1,"url":"","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"dynamical_systems","name":"Dynamical Systems Cluster","layer":"Theories","depth":1,"url":"","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"information_systems","name":"Information Systems Cluster","layer":"Theories","depth":1,"url":"","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"OPERATORS","name":"Operators","layer":"Operator Layer","depth":1,"url":"https://www.triadicframeworks.org/rtt/1/","file_count":16,"parent":"webroot","status":"Active, Canonical","enriched_r2":true,"enriched_r3":false,"enriched_r4":false},{"id":"STRUCTURAL_DETECTION_ENGINE","name":"Echo Classifier","layer":"Operator Layer","depth":1,"url":"https://www.triadicframeworks.org/rtt/Echo_Classifier/","file_count":6,"parent":"webroot","status":"Active, Canonical","enriched_r2":true,"enriched_r3":false,"enriched_r4":false},{"id":"STRUCTURAL_INTEGRATION_ENGINE","name":"Triadic Echo Lattice","layer":"Operator Layer","depth":1,"url":"https://www.triadicframeworks.org/rtt/Triadic_Echo_Lattice/","file_count":6,"parent":"webroot","status":"Active, Canonical","enriched_r2":true,"enriched_r3":false,"enriched_r4":false},{"id":"RTT_2","name":"RTT/2","layer":"RTT Technology Layer","depth":1,"url":"https://www.triadicframeworks.org/rtt/2/","file_count":2,"parent":"webroot","status":"Active, Canonical","enriched_r2":true,"enriched_r3":false,"enriched_r4":false},{"id":"RTT_3","name":"RTT/3","layer":"RTT Technology Layer","depth":1,"url":"https://www.triadicframeworks.org/rtt/3/","file_count":3,"parent":"webroot","status":"Active, Canonical","enriched_r2":true,"enriched_r3":false,"enriched_r4":false},{"id":"C.O.D.E.","name":"Compassion Operator Dignity Ethics","layer":"Ethics & Care","depth":1,"url":"https://www.triadicframeworks.org/rtt/codes/","file_count":14,"parent":"webroot","status":"Active, Canonical","enriched_r2":true,"enriched_r3":false,"enriched_r4":false},{"id":"RSGM","name":"Religious Substrate Grammar Model","layer":"Substrate Grammar","depth":1,"url":"https://www.triadicframeworks.org/Governance_Substrate_Model/","file_count":49,"parent":"webroot","status":"Active, Canonical","enriched_r2":true,"enriched_r3":false,"enriched_r4":false},{"id":"incident_substrate_model","name":"Incident Substrate Model","layer":"Safety & Operations","depth":1,"url":"https://www.triadicframeworks.org/Incident_Substrate_Model/","file_count":6,"parent":"webroot","status":"Active, Canonical","enriched_r2":true,"enriched_r3":false,"enriched_r4":false},{"id":"wrsadc","name":"WRSADC","layer":"Core Frameworks — Structural Spine","depth":2,"url":"https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/WRSADC","file_count":10,"parent":"tft-3pack","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"tft-core","name":"TFT Core","layer":"Core Frameworks — Structural Spine","depth":2,"url":"https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/tft","file_count":11,"parent":"tft-3pack","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"examples","name":"Examples","layer":"Education & Teaching","depth":2,"url":"https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/examples","file_count":94,"parent":"tft-3pack","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"formats","name":"Formats","layer":"Tools & Infrastructure","depth":2,"url":"https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/formats","file_count":6,"parent":"tft-3pack","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"melodic-table","name":"Melodic Table of Elements","layer":"Applied Domain Models","depth":2,"url":"https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/melodic-table-of-elements","file_count":130,"parent":"tft-3pack","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"mve","name":"Molecular Vibration Explorer","layer":"Applied Domain Models","depth":2,"url":"https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/molecular-vibration-explorer","file_count":21,"parent":"tft-3pack","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"scripts","name":"Scripts","layer":"Tools & Infrastructure","depth":2,"url":"https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/scripts","file_count":9,"parent":"tft-3pack","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"docs","name":"Docs","layer":"Meta & Governance","depth":2,"url":"https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/docs","file_count":48,"parent":"tft-3pack","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"d369","name":"D369 Chip Spec","layer":"RTT Hardware Layer","depth":2,"url":"https://www.triadicframeworks.org/rtt/D369_Chip_Spec/","file_count":20,"parent":"rtt-root","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"rtt-codes","name":"RTT/codes","layer":"RTT Analytics — Metadata Layer","depth":2,"url":"https://www.triadicframeworks.org/rtt/codes/","file_count":14,"parent":"rtt-root","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"rtt-inside","name":"RTT Inside","layer":"RTT Deployment Layer","depth":2,"url":"https://www.triadicframeworks.org/rtt/Inside/","file_count":122,"parent":"rtt-root","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"RTT_MORPHIC_RESONANCE","name":"RTT Morphic Resonance","layer":"RTT Dimensional","depth":2,"url":"https://www.triadicframeworks.org/rtt/Morphic_Resonance/","file_count":12,"parent":"rtt-root","status":"Active, Canonical","enriched_r2":true,"enriched_r3":false,"enriched_r4":false},{"id":"rtt-emotions","name":"RTT Emotions","layer":"RTT Dimensional","depth":2,"url":"https://www.triadicframeworks.org/rtt/emotions/","file_count":30,"parent":"rtt-root","status":"Active, Canonical","enriched_r2":true,"enriched_r3":false,"enriched_r4":false},{"id":"rtt-paradoxes","name":"RTT Paradoxes","layer":"RTT Dimensional","depth":2,"url":"https://www.triadicframeworks.org/Paradoxes_canon/","file_count":2,"parent":"rtt-root","status":"Active, Canonical","enriched_r2":true,"enriched_r3":false,"enriched_r4":false},{"id":"rtt-lowdim","name":"RTT Low-Dimensional","layer":"RTT Dimensional","depth":2,"url":"https://www.triadicframeworks.org/Low_Dimensional_Structures/","file_count":7,"parent":"rtt-root","status":"Active, Canonical","enriched_r2":true,"enriched_r3":false,"enriched_r4":false},{"id":"rtt-integrations","name":"RTT Integrations","layer":"Integration & Deployment","depth":2,"url":"https://www.triadicframeworks.org/Integrations/","file_count":9,"parent":"rtt-root","status":"Active, Canonical","enriched_r2":true,"enriched_r3":false,"enriched_r4":false},{"id":"electromagnetism","name":"Electromagnetism","layer":"Theory","depth":2,"url":"","file_count":0,"parent":"physics","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"general_relativity","name":"General Relativity","layer":"Theory","depth":2,"url":"","file_count":0,"parent":"physics","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"quantum_mechanics","name":"Quantum Mechanics","layer":"Theory","depth":2,"url":"","file_count":0,"parent":"physics","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"quantum_field_theory","name":"Quantum Field Theory","layer":"Theory","depth":2,"url":"","file_count":0,"parent":"physics","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"standard_model","name":"Standard Model","layer":"Theory","depth":2,"url":"","file_count":0,"parent":"physics","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"thermodynamics","name":"Thermodynamics","layer":"Theory","depth":2,"url":"","file_count":0,"parent":"physics","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"evolutionary_biology","name":"Evolutionary Biology","layer":"Theory","depth":2,"url":"","file_count":0,"parent":"biology","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"morphic_resonance","name":"Morphic Resonance","layer":"Theory","depth":2,"url":"","file_count":0,"parent":"biology","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"chaos_theory","name":"Chaos Theory","layer":"Theory","depth":2,"url":"","file_count":0,"parent":"dynamical_systems","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"information_theory","name":"Information Theory","layer":"Theory","depth":2,"url":"","file_count":0,"parent":"information_systems","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"OPERATORS_TEACHING_BUNDLE","name":"Operators Teaching Bundle","layer":"Operator Layer","depth":2,"url":"https://www.triadicframeworks.org/rtt/academy/","file_count":2,"parent":"OPERATORS","status":"Active, Canonical","enriched_r2":true,"enriched_r3":false,"enriched_r4":false},{"id":"structural_detection","name":"Echo Classifier (Structural Detection)","layer":"Operator Layer","depth":2,"url":"https://www.triadicframeworks.org/rtt/Echo_Classifier/","file_count":6,"parent":"OPERATORS","status":"Active, Canonical","enriched_r2":true,"enriched_r3":false,"enriched_r4":false},{"id":"UE6-INTEGRATIONS","name":"UE6 Integrations","layer":"Integration & Deployment","depth":2,"url":"https://www.triadicframeworks.org/Integrations/UE6/","file_count":16,"parent":"rtt-inside","status":"Active, Canonical","enriched_r2":true,"enriched_r3":false,"enriched_r4":false},{"id":"tops","name":"TOPS","layer":"Core Frameworks — Structural Spine","depth":3,"url":"https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/tft/tops","file_count":85,"parent":"tft-core","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"entft","name":"ENTFT","layer":"Core Frameworks — Structural Spine","depth":3,"url":"https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/tft/entft","file_count":213,"parent":"tft-core","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"nous","name":"Nous","layer":"Core Frameworks — Structural Spine","depth":3,"url":"https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/tft/nous","file_count":157,"parent":"tft-core","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"resonance-labs","name":"Resonance Labs","layer":"Research & Validation","depth":3,"url":"https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/tft/resonance-labs","file_count":20,"parent":"tft-core","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":false},{"id":"rtt-inside-benchmarks","name":"RTT Inside Benchmarks","layer":"RTT Deployment Layer","depth":3,"url":"https://www.triadicframeworks.org/rtt/Inside/Benchmarks/","file_count":11,"parent":"rtt-inside","status":"Active, Canonical","enriched_r2":true,"enriched_r3":false,"enriched_r4":false},{"id":"rtt-tel","name":"Triadic Echo Lattice (TEL)","layer":"RTT Deployment Layer","depth":3,"url":"https://www.triadicframeworks.org/rtt/Triadic_Echo_Lattice/","file_count":6,"parent":"rtt-inside","status":"Active, Canonical","enriched_r2":true,"enriched_r3":false,"enriched_r4":false},{"id":"Mudpuppy","name":"Mudpuppy","layer":"Spacetime","depth":3,"url":"https://github.com/Triadic-Resonance-Wizards/mythmatic/tree/main/Mudpuppy","file_count":8,"parent":"rtt-inside","status":"Active, Canonical","enriched_r2":true,"enriched_r3":false,"enriched_r4":false},{"id":"SoftKitty","name":"SoftKitty","layer":"Spacetime","depth":3,"url":"https://github.com/Triadic-Resonance-Wizards/mythmatical/tree/main/SoftKitty","file_count":8,"parent":"rtt-inside","status":"Active, Canonical","enriched_r2":true,"enriched_r3":false,"enriched_r4":false},{"id":"docs-about","name":"About","layer":"Meta & Governance","depth":1,"url":"https://www.triadicframeworks.org/docs_about/","file_count":1,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"docs-code-of-conduct","name":"Code of Conduct","layer":"Meta & Governance","depth":1,"url":"https://www.triadicframeworks.org/docs_code_of_conduct/","file_count":1,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"docs-contributing","name":"Contributing","layer":"Meta & Governance","depth":1,"url":"https://www.triadicframeworks.org/docs_contributing/","file_count":1,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"docs-ethics-privacy","name":"Ethics & Privacy","layer":"Meta & Governance","depth":1,"url":"https://www.triadicframeworks.org/docs_ethics_privacy/","file_count":1,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"docs-lineage","name":"Lineage","layer":"Meta & Governance","depth":1,"url":"https://www.triadicframeworks.org/docs_lineage/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"docs-principles","name":"Principles","layer":"Core Frameworks — Structural Spine","depth":1,"url":"https://www.triadicframeworks.org/docs_principles/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"docs-quickstart","name":"Quickstart","layer":"Education & Teaching","depth":1,"url":"https://www.triadicframeworks.org/docs_quickstart/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"docs-glossary","name":"Glossary","layer":"Core Frameworks — Structural Spine","depth":1,"url":"https://www.triadicframeworks.org/docs_glossary/","file_count":1,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"grammar","name":"Grammar","layer":"Core Frameworks — Structural Spine","depth":1,"url":"https://www.triadicframeworks.org/grammar/","file_count":1,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"ai-core","name":"AI Instrument Architecture","layer":"Applied Domain Models","depth":1,"url":"https://www.triadicframeworks.org/ai_core/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"ai-consciousness","name":"AI Session Structural Consciousness","layer":"Applied Domain Models","depth":2,"url":"https://www.triadicframeworks.org/ai_consciousness/","file_count":11,"parent":"ai-core","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"ai-drift-calibration","name":"AI Drift Calibration","layer":"Applied Domain Models","depth":2,"url":"https://www.triadicframeworks.org/ai_drift_calibration/","file_count":0,"parent":"ai-core","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"ai-resonance-seed","name":"AI Resonance Seed","layer":"Applied Domain Models","depth":1,"url":"https://www.triadicframeworks.org/ai_resonance_seed/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"alphafold","name":"AlphaFold Substrate Alignments","layer":"Theory","depth":2,"url":"https://www.triadicframeworks.org/alphafold/","file_count":0,"parent":"research","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"atomic-clocks","name":"Atomic Clocks","layer":"Theory","depth":2,"url":"https://www.triadicframeworks.org/atomic_clocks/","file_count":0,"parent":"research","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"bsm","name":"Boson Substrate Model","layer":"Theory","depth":2,"url":"https://www.triadicframeworks.org/bsm/","file_count":12,"parent":"research","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"cosmology","name":"Cosmology","layer":"Theory","depth":2,"url":"https://www.triadicframeworks.org/cosmology/","file_count":0,"parent":"research","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"dark-matter","name":"Dark Matter","layer":"Theory","depth":2,"url":"https://www.triadicframeworks.org/dark_matter/","file_count":0,"parent":"research","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"quantum-coherence","name":"Quantum Coherence","layer":"Theory","depth":2,"url":"https://www.triadicframeworks.org/quantum_coherence/","file_count":0,"parent":"research","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"time-crystals","name":"Time Crystals","layer":"Theory","depth":2,"url":"https://www.triadicframeworks.org/time_crystals/","file_count":0,"parent":"research","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"fibonacci-phi","name":"Fibonacci & PHI","layer":"Theory","depth":2,"url":"https://www.triadicframeworks.org/fibonacci_phi/","file_count":0,"parent":"research","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"rtt-12","name":"RTT/12","layer":"RTT Technology Layer","depth":2,"url":"https://www.triadicframeworks.org/rtt_12/","file_count":0,"parent":"rtt-root","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"hsp","name":"Harmonic Stability Profile","layer":"RTT Technology Layer","depth":2,"url":"https://www.triadicframeworks.org/hsp/","file_count":0,"parent":"rtt-root","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"substrate-flow","name":"Substrate Flow","layer":"RTT Technology Layer","depth":2,"url":"https://www.triadicframeworks.org/substrate_flow/","file_count":0,"parent":"rtt-root","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"tis","name":"The Inverted Star","layer":"RTT Technology Layer","depth":2,"url":"https://www.triadicframeworks.org/tis/","file_count":0,"parent":"rtt-root","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"rtt-core","name":"RTT Core","layer":"RTT Technology Layer","depth":2,"url":"https://www.triadicframeworks.org/rtt_core/","file_count":0,"parent":"rtt-root","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"rtt-micro-core","name":"RTT Micro-Core","layer":"RTT Technology Layer","depth":2,"url":"https://www.triadicframeworks.org/rtt_micro_core/","file_count":0,"parent":"rtt-root","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"rtt-sort","name":"RTT Sort","layer":"RTT Technology Layer","depth":2,"url":"https://www.triadicframeworks.org/rtt_sort/","file_count":0,"parent":"rtt-root","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"rtt-extension","name":"RTT Extension","layer":"RTT Technology Layer","depth":2,"url":"https://www.triadicframeworks.org/rtt_extension/","file_count":0,"parent":"rtt-root","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"rtt-guild","name":"RTT Guild","layer":"RTT Technology Layer","depth":2,"url":"https://www.triadicframeworks.org/rtt_guild/","file_count":0,"parent":"rtt-root","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"rtt-store","name":"RTT Store","layer":"RTT Technology Layer","depth":2,"url":"https://www.triadicframeworks.org/rtt_store/","file_count":0,"parent":"rtt-root","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"rtt-sdk","name":"RTT SDK","layer":"RTT Technology Layer","depth":2,"url":"https://www.triadicframeworks.org/rtt_sdk/","file_count":0,"parent":"rtt-root","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"rtt-api","name":"RTT API","layer":"RTT Technology Layer","depth":2,"url":"https://www.triadicframeworks.org/rtt_api/","file_count":0,"parent":"rtt-root","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"asm","name":"Arrival Substrate Model","layer":"Substrate Grammar","depth":1,"url":"https://www.triadicframeworks.org/asm/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"csm","name":"Conditions Substrate Model","layer":"Substrate Grammar","depth":1,"url":"https://www.triadicframeworks.org/csm/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"mode","name":"Mode","layer":"Core Frameworks — Structural Spine","depth":1,"url":"https://www.triadicframeworks.org/mode/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"opacity","name":"Opacity","layer":"Core Frameworks — Structural Spine","depth":1,"url":"https://www.triadicframeworks.org/opacity/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"coeus","name":"Coeus","layer":"Core Frameworks — Structural Spine","depth":1,"url":"https://www.triadicframeworks.org/coeus/","file_count":13,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"resilience-checker","name":"Resilience Checker","layer":"Tools & Infrastructure","depth":1,"url":"https://www.triadicframeworks.org/resilience_checker/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"culture","name":"Culture","layer":"Applied Domain Models","depth":1,"url":"https://www.triadicframeworks.org/culture/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"economics","name":"Economics","layer":"Applied Domain Models","depth":1,"url":"https://www.triadicframeworks.org/economics/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"education","name":"Education","layer":"Education & Teaching","depth":1,"url":"https://www.triadicframeworks.org/education/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"human-resources","name":"Human Resources","layer":"Applied Domain Models","depth":1,"url":"https://www.triadicframeworks.org/human_resources/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"inverted-economics","name":"Inverted Economics","layer":"Applied Domain Models","depth":1,"url":"https://www.triadicframeworks.org/inverted_economics/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"justice","name":"Justice","layer":"Applied Domain Models","depth":1,"url":"https://www.triadicframeworks.org/justice/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"language","name":"Language","layer":"Applied Domain Models","depth":1,"url":"https://www.triadicframeworks.org/language/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"law","name":"Law","layer":"Applied Domain Models","depth":1,"url":"https://www.triadicframeworks.org/law/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"medicine","name":"Medicine","layer":"Applied Domain Models","depth":1,"url":"https://www.triadicframeworks.org/medicine/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"music","name":"Music","layer":"Applied Domain Models","depth":1,"url":"https://www.triadicframeworks.org/music/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"neuroscience","name":"Neuroscience","layer":"Theory","depth":2,"url":"https://www.triadicframeworks.org/neuroscience/","file_count":0,"parent":"research","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"philosophy","name":"Philosophy","layer":"Applied Domain Models","depth":1,"url":"https://www.triadicframeworks.org/philosophy/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"psychology","name":"Psychology","layer":"Applied Domain Models","depth":1,"url":"https://www.triadicframeworks.org/psychology/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"sociology","name":"Sociology","layer":"Applied Domain Models","depth":1,"url":"https://www.triadicframeworks.org/sociology/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"taxes","name":"Taxes","layer":"Applied Domain Models","depth":1,"url":"https://www.triadicframeworks.org/taxes/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"technology","name":"Technology","layer":"Applied Domain Models","depth":1,"url":"https://www.triadicframeworks.org/technology/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"audio","name":"Audio Industry Reviewed","layer":"Applied Domain Models","depth":1,"url":"https://www.triadicframeworks.org/audio/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"dsp","name":"Digital Signal Processing","layer":"Applied Domain Models","depth":1,"url":"https://www.triadicframeworks.org/dsp/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":true,"enriched_r4":false},{"id":"bridges","name":"Bridges","layer":"Integration & Deployment","depth":1,"url":"https://www.triadicframeworks.org/bridges/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"charts","name":"Charts","layer":"Tools & Infrastructure","depth":1,"url":"https://www.triadicframeworks.org/charts/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"clients","name":"Clients","layer":"Tools & Infrastructure","depth":1,"url":"https://www.triadicframeworks.org/clients/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"code","name":"Code","layer":"Tools & Infrastructure","depth":1,"url":"https://www.triadicframeworks.org/code/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"corpus","name":"Corpus","layer":"Research & Validation","depth":1,"url":"https://www.triadicframeworks.org/corpus/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"consciousness-substrate-model","name":"Consciousness Substrate Model","layer":"Substrate Grammar","depth":1,"url":"https://www.triadicframeworks.org/consciousness-substrate-model/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"curriculum","name":"Curriculum","layer":"Education & Teaching","depth":1,"url":"https://www.triadicframeworks.org/curriculum/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"data","name":"Data","layer":"Tools & Infrastructure","depth":1,"url":"https://www.triadicframeworks.org/data/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"datacenter-reports","name":"Datacenter Reports","layer":"Research & Validation","depth":1,"url":"https://www.triadicframeworks.org/datacenter-reports/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"diagnosing-media-therapy","name":"Diagnosing Media Therapy","layer":"Applied Domain Models","depth":1,"url":"https://www.triadicframeworks.org/diagnosing-media-therapy/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"DSRSP","name":"Dimensional Substrate Regime Scanning Protocol","layer":"RTT Dimensional","depth":1,"url":"https://www.triadicframeworks.org/DSRSP/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"DSS","name":"Dimensional Substrate Structures","layer":"RTT Dimensional","depth":1,"url":"https://www.triadicframeworks.org/DSS/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"discovery","name":"Discovery","layer":"Research & Validation","depth":1,"url":"https://www.triadicframeworks.org/discovery/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"domain-tool-primers","name":"Domain Tool Primers","layer":"Education & Teaching","depth":1,"url":"https://www.triadicframeworks.org/domain-tool-primers/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"ecoechosystem","name":"Ecoechosystem","layer":"Applied Domain Models","depth":1,"url":"https://www.triadicframeworks.org/ecoechosystem/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"energy","name":"Energy","layer":"Theories","depth":1,"url":"https://www.triadicframeworks.org/energy/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"fft","name":"Framework Field Theory","layer":"Core Frameworks — Structural Spine","depth":1,"url":"https://www.triadicframeworks.org/fft/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"NoS","name":"Nature of Substrate","layer":"Substrate Grammar","depth":1,"url":"https://www.triadicframeworks.org/NoS/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"rtt-app","name":"RTT App","layer":"RTT Deployment Layer","depth":2,"url":"https://www.triadicframeworks.org/rtt-app/","file_count":0,"parent":"rtt-root","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"rtt-c64host","name":"RTT C64 Host","layer":"RTT Hardware Layer","depth":2,"url":"https://www.triadicframeworks.org/rtt-c64host/","file_count":0,"parent":"rtt-root","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"rtt-codex","name":"RTT Codex","layer":"RTT Technology Layer","depth":2,"url":"https://www.triadicframeworks.org/rtt-codex/","file_count":0,"parent":"rtt-root","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"rtt-maps","name":"RTT Maps","layer":"RTT Technology Layer","depth":2,"url":"https://www.triadicframeworks.org/rtt-maps/","file_count":0,"parent":"rtt-root","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"rtt-cisco","name":"RTT Inside — Cisco","layer":"RTT Deployment Layer","depth":3,"url":"https://www.triadicframeworks.org/rtt-cisco/","file_count":0,"parent":"rtt-inside","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"rtt-enterprise","name":"RTT Inside — Enterprise","layer":"RTT Deployment Layer","depth":3,"url":"https://www.triadicframeworks.org/rtt-enterprise/","file_count":0,"parent":"rtt-inside","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"rtt-internet2","name":"RTT Inside — Internet2","layer":"RTT Deployment Layer","depth":3,"url":"https://www.triadicframeworks.org/rtt-internet2/","file_count":0,"parent":"rtt-inside","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"rtt-python","name":"RTT Inside — Python","layer":"RTT Deployment Layer","depth":3,"url":"https://www.triadicframeworks.org/rtt-python/","file_count":0,"parent":"rtt-inside","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"rtt-qcompute","name":"RTT Inside — qCompute","layer":"RTT Hardware Layer","depth":3,"url":"https://www.triadicframeworks.org/rtt-qcompute/","file_count":0,"parent":"rtt-inside","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"NIST","name":"NIST","layer":"Research & Validation","depth":1,"url":"https://www.triadicframeworks.org/NIST/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"pantheon-egyptian","name":"Egyptian Pantheon","layer":"Applied Domain Models","depth":1,"url":"https://www.triadicframeworks.org/pantheon-egyptian/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"pantheon-yoruba","name":"Yoruba Pantheon","layer":"Applied Domain Models","depth":1,"url":"https://www.triadicframeworks.org/pantheon-yoruba/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"philanthropy","name":"Philanthropy","layer":"Applied Domain Models","depth":1,"url":"https://www.triadicframeworks.org/philanthropy/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"research-bing","name":"Research — Bing","layer":"Research & Validation","depth":2,"url":"https://www.triadicframeworks.org/research-bing/","file_count":0,"parent":"research","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"research-duckduckgo","name":"Research — DuckDuckGo","layer":"Research & Validation","depth":2,"url":"https://www.triadicframeworks.org/research-duckduckgo/","file_count":0,"parent":"research","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"LACTOS","name":"LACTOS","layer":"Research & Validation","depth":2,"url":"https://www.triadicframeworks.org/LACTOS/","file_count":0,"parent":"research","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"RCD","name":"RCD","layer":"Research & Validation","depth":2,"url":"https://www.triadicframeworks.org/RCD/","file_count":0,"parent":"research","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"research-wikipedia","name":"Research — Wikipedia","layer":"Research & Validation","depth":2,"url":"https://www.triadicframeworks.org/research-wikipedia/","file_count":0,"parent":"research","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"SLRP","name":"Structural Life Regime Profiles","layer":"Substrate Grammar","depth":1,"url":"https://www.triadicframeworks.org/SLRP/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"substrate","name":"Substrate","layer":"Substrate Grammar","depth":1,"url":"https://www.triadicframeworks.org/substrate/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"SubComm","name":"Substrate Communications","layer":"Substrate Grammar","depth":1,"url":"https://www.triadicframeworks.org/SubComm/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"SEA","name":"Substrate Exposure Assay","layer":"Substrate Grammar","depth":1,"url":"https://www.triadicframeworks.org/SEA/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"SMS","name":"Substrate Mind Science","layer":"Substrate Grammar","depth":1,"url":"https://www.triadicframeworks.org/SMS/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"TOL","name":"Triadic Observer Layer","layer":"RTT Dimensional","depth":1,"url":"https://www.triadicframeworks.org/TOL/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"unified-resonance","name":"Unified Resonance","layer":"RTT Technology Layer","depth":1,"url":"https://www.triadicframeworks.org/unified-resonance/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"validation","name":"Validation","layer":"Research & Validation","depth":1,"url":"https://www.triadicframeworks.org/validation/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"voice","name":"Voice","layer":"Tools & Infrastructure","depth":1,"url":"https://www.triadicframeworks.org/voice/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"vst-embedding-stores","name":"VST — Embedding Stores & Vector DBs","layer":"Integration & Deployment","depth":1,"url":"https://www.triadicframeworks.org/vst-embedding-stores/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"vst-generative-models","name":"VST — Generative Models","layer":"Integration & Deployment","depth":1,"url":"https://www.triadicframeworks.org/vst-generative-models/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"vst-llm","name":"VST — Large Language Models","layer":"Integration & Deployment","depth":1,"url":"https://www.triadicframeworks.org/vst-llm/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"vst-multi-model","name":"VST — Multi-Model Alignment","layer":"Integration & Deployment","depth":1,"url":"https://www.triadicframeworks.org/vst-multi-model/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"vst-protein-lm","name":"VST — Protein Language Models","layer":"Integration & Deployment","depth":1,"url":"https://www.triadicframeworks.org/vst-protein-lm/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"vst-robotics","name":"VST — Robotics & Control","layer":"Integration & Deployment","depth":1,"url":"https://www.triadicframeworks.org/vst-robotics/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"vst-scientific-sim","name":"VST — Scientific Simulators","layer":"Integration & Deployment","depth":1,"url":"https://www.triadicframeworks.org/vst-scientific-sim/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"wiki-scrolls","name":"Wiki Scrolls","layer":"Tools & Infrastructure","depth":1,"url":"https://www.triadicframeworks.org/wiki-scrolls/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true},{"id":"wikipedia","name":"Wikipedia","layer":"Research & Validation","depth":1,"url":"https://www.triadicframeworks.org/wikipedia/","file_count":0,"parent":"webroot","status":"Active, Canonical","enriched_r2":false,"enriched_r3":false,"enriched_r4":true}],"links":[{"source":"webroot","target":"tft-3pack","type":"hierarchy"},{"source":"webroot","target":"gsm","type":"hierarchy"},{"source":"webroot","target":"rtt-root","type":"hierarchy"},{"source":"webroot","target":"fcg","type":"hierarchy"},{"source":"webroot","target":"research","type":"hierarchy"},{"source":"webroot","target":"physics","type":"hierarchy"},{"source":"webroot","target":"biology","type":"hierarchy"},{"source":"webroot","target":"dynamical_systems","type":"hierarchy"},{"source":"webroot","target":"information_systems","type":"hierarchy"},{"source":"webroot","target":"OPERATORS","type":"hierarchy"},{"source":"webroot","target":"STRUCTURAL_DETECTION_ENGINE","type":"hierarchy"},{"source":"webroot","target":"STRUCTURAL_INTEGRATION_ENGINE","type":"hierarchy"},{"source":"webroot","target":"RTT_2","type":"hierarchy"},{"source":"webroot","target":"RTT_3","type":"hierarchy"},{"source":"webroot","target":"C.O.D.E.","type":"hierarchy"},{"source":"webroot","target":"RSGM","type":"hierarchy"},{"source":"webroot","target":"incident_substrate_model","type":"hierarchy"},{"source":"tft-3pack","target":"wrsadc","type":"hierarchy"},{"source":"tft-3pack","target":"tft-core","type":"hierarchy"},{"source":"tft-3pack","target":"examples","type":"hierarchy"},{"source":"tft-3pack","target":"formats","type":"hierarchy"},{"source":"tft-3pack","target":"melodic-table","type":"hierarchy"},{"source":"tft-3pack","target":"mve","type":"hierarchy"},{"source":"tft-3pack","target":"scripts","type":"hierarchy"},{"source":"tft-3pack","target":"docs","type":"hierarchy"},{"source":"rtt-root","target":"d369","type":"hierarchy"},{"source":"rtt-root","target":"rtt-codes","type":"hierarchy"},{"source":"rtt-root","target":"rtt-inside","type":"hierarchy"},{"source":"rtt-root","target":"RTT_MORPHIC_RESONANCE","type":"hierarchy"},{"source":"rtt-root","target":"rtt-emotions","type":"hierarchy"},{"source":"rtt-root","target":"rtt-paradoxes","type":"hierarchy"},{"source":"rtt-root","target":"rtt-lowdim","type":"hierarchy"},{"source":"rtt-root","target":"rtt-integrations","type":"hierarchy"},{"source":"physics","target":"electromagnetism","type":"hierarchy"},{"source":"physics","target":"general_relativity","type":"hierarchy"},{"source":"physics","target":"quantum_mechanics","type":"hierarchy"},{"source":"physics","target":"quantum_field_theory","type":"hierarchy"},{"source":"physics","target":"standard_model","type":"hierarchy"},{"source":"physics","target":"thermodynamics","type":"hierarchy"},{"source":"biology","target":"evolutionary_biology","type":"hierarchy"},{"source":"biology","target":"morphic_resonance","type":"hierarchy"},{"source":"dynamical_systems","target":"chaos_theory","type":"hierarchy"},{"source":"information_systems","target":"information_theory","type":"hierarchy"},{"source":"OPERATORS","target":"OPERATORS_TEACHING_BUNDLE","type":"hierarchy"},{"source":"OPERATORS","target":"structural_detection","type":"hierarchy"},{"source":"rtt-inside","target":"UE6-INTEGRATIONS","type":"hierarchy"},{"source":"tft-core","target":"tops","type":"hierarchy"},{"source":"tft-core","target":"entft","type":"hierarchy"},{"source":"tft-core","target":"nous","type":"hierarchy"},{"source":"tft-core","target":"resonance-labs","type":"hierarchy"},{"source":"rtt-inside","target":"rtt-inside-benchmarks","type":"hierarchy"},{"source":"rtt-inside","target":"rtt-tel","type":"hierarchy"},{"source":"rtt-inside","target":"Mudpuppy","type":"hierarchy"},{"source":"rtt-inside","target":"SoftKitty","type":"hierarchy"},{"source":"webroot","target":"docs-about","type":"hierarchy"},{"source":"webroot","target":"docs-code-of-conduct","type":"hierarchy"},{"source":"webroot","target":"docs-contributing","type":"hierarchy"},{"source":"webroot","target":"docs-ethics-privacy","type":"hierarchy"},{"source":"webroot","target":"docs-lineage","type":"hierarchy"},{"source":"webroot","target":"docs-principles","type":"hierarchy"},{"source":"webroot","target":"docs-quickstart","type":"hierarchy"},{"source":"webroot","target":"docs-glossary","type":"hierarchy"},{"source":"webroot","target":"grammar","type":"hierarchy"},{"source":"webroot","target":"ai-core","type":"hierarchy"},{"source":"ai-core","target":"ai-consciousness","type":"hierarchy"},{"source":"ai-core","target":"ai-drift-calibration","type":"hierarchy"},{"source":"webroot","target":"ai-resonance-seed","type":"hierarchy"},{"source":"research","target":"alphafold","type":"hierarchy"},{"source":"research","target":"atomic-clocks","type":"hierarchy"},{"source":"research","target":"bsm","type":"hierarchy"},{"source":"research","target":"cosmology","type":"hierarchy"},{"source":"research","target":"dark-matter","type":"hierarchy"},{"source":"research","target":"quantum-coherence","type":"hierarchy"},{"source":"research","target":"time-crystals","type":"hierarchy"},{"source":"research","target":"fibonacci-phi","type":"hierarchy"},{"source":"rtt-root","target":"rtt-12","type":"hierarchy"},{"source":"rtt-root","target":"hsp","type":"hierarchy"},{"source":"rtt-root","target":"substrate-flow","type":"hierarchy"},{"source":"rtt-root","target":"tis","type":"hierarchy"},{"source":"rtt-root","target":"rtt-core","type":"hierarchy"},{"source":"rtt-root","target":"rtt-micro-core","type":"hierarchy"},{"source":"rtt-root","target":"rtt-sort","type":"hierarchy"},{"source":"rtt-root","target":"rtt-extension","type":"hierarchy"},{"source":"rtt-root","target":"rtt-guild","type":"hierarchy"},{"source":"rtt-root","target":"rtt-store","type":"hierarchy"},{"source":"rtt-root","target":"rtt-sdk","type":"hierarchy"},{"source":"rtt-root","target":"rtt-api","type":"hierarchy"},{"source":"webroot","target":"asm","type":"hierarchy"},{"source":"webroot","target":"csm","type":"hierarchy"},{"source":"webroot","target":"mode","type":"hierarchy"},{"source":"webroot","target":"opacity","type":"hierarchy"},{"source":"webroot","target":"coeus","type":"hierarchy"},{"source":"webroot","target":"resilience-checker","type":"hierarchy"},{"source":"webroot","target":"culture","type":"hierarchy"},{"source":"webroot","target":"economics","type":"hierarchy"},{"source":"webroot","target":"education","type":"hierarchy"},{"source":"webroot","target":"human-resources","type":"hierarchy"},{"source":"webroot","target":"inverted-economics","type":"hierarchy"},{"source":"webroot","target":"justice","type":"hierarchy"},{"source":"webroot","target":"language","type":"hierarchy"},{"source":"webroot","target":"law","type":"hierarchy"},{"source":"webroot","target":"medicine","type":"hierarchy"},{"source":"webroot","target":"music","type":"hierarchy"},{"source":"research","target":"neuroscience","type":"hierarchy"},{"source":"webroot","target":"philosophy","type":"hierarchy"},{"source":"webroot","target":"psychology","type":"hierarchy"},{"source":"webroot","target":"sociology","type":"hierarchy"},{"source":"webroot","target":"taxes","type":"hierarchy"},{"source":"webroot","target":"technology","type":"hierarchy"},{"source":"webroot","target":"audio","type":"hierarchy"},{"source":"webroot","target":"dsp","type":"hierarchy"},{"source":"webroot","target":"bridges","type":"hierarchy"},{"source":"webroot","target":"charts","type":"hierarchy"},{"source":"webroot","target":"clients","type":"hierarchy"},{"source":"webroot","target":"code","type":"hierarchy"},{"source":"webroot","target":"corpus","type":"hierarchy"},{"source":"webroot","target":"consciousness-substrate-model","type":"hierarchy"},{"source":"webroot","target":"curriculum","type":"hierarchy"},{"source":"webroot","target":"data","type":"hierarchy"},{"source":"webroot","target":"datacenter-reports","type":"hierarchy"},{"source":"webroot","target":"diagnosing-media-therapy","type":"hierarchy"},{"source":"webroot","target":"DSRSP","type":"hierarchy"},{"source":"webroot","target":"DSS","type":"hierarchy"},{"source":"webroot","target":"discovery","type":"hierarchy"},{"source":"webroot","target":"domain-tool-primers","type":"hierarchy"},{"source":"webroot","target":"ecoechosystem","type":"hierarchy"},{"source":"webroot","target":"energy","type":"hierarchy"},{"source":"webroot","target":"fft","type":"hierarchy"},{"source":"webroot","target":"NoS","type":"hierarchy"},{"source":"rtt-root","target":"rtt-app","type":"hierarchy"},{"source":"rtt-root","target":"rtt-c64host","type":"hierarchy"},{"source":"rtt-root","target":"rtt-codex","type":"hierarchy"},{"source":"rtt-root","target":"rtt-maps","type":"hierarchy"},{"source":"rtt-inside","target":"rtt-cisco","type":"hierarchy"},{"source":"rtt-inside","target":"rtt-enterprise","type":"hierarchy"},{"source":"rtt-inside","target":"rtt-internet2","type":"hierarchy"},{"source":"rtt-inside","target":"rtt-python","type":"hierarchy"},{"source":"rtt-inside","target":"rtt-qcompute","type":"hierarchy"},{"source":"webroot","target":"NIST","type":"hierarchy"},{"source":"webroot","target":"pantheon-egyptian","type":"hierarchy"},{"source":"webroot","target":"pantheon-yoruba","type":"hierarchy"},{"source":"webroot","target":"philanthropy","type":"hierarchy"},{"source":"research","target":"research-bing","type":"hierarchy"},{"source":"research","target":"research-duckduckgo","type":"hierarchy"},{"source":"research","target":"LACTOS","type":"hierarchy"},{"source":"research","target":"RCD","type":"hierarchy"},{"source":"research","target":"research-wikipedia","type":"hierarchy"},{"source":"webroot","target":"SLRP","type":"hierarchy"},{"source":"webroot","target":"substrate","type":"hierarchy"},{"source":"webroot","target":"SubComm","type":"hierarchy"},{"source":"webroot","target":"SEA","type":"hierarchy"},{"source":"webroot","target":"SMS","type":"hierarchy"},{"source":"webroot","target":"TOL","type":"hierarchy"},{"source":"webroot","target":"unified-resonance","type":"hierarchy"},{"source":"webroot","target":"validation","type":"hierarchy"},{"source":"webroot","target":"voice","type":"hierarchy"},{"source":"webroot","target":"vst-embedding-stores","type":"hierarchy"},{"source":"webroot","target":"vst-generative-models","type":"hierarchy"},{"source":"webroot","target":"vst-llm","type":"hierarchy"},{"source":"webroot","target":"vst-multi-model","type":"hierarchy"},{"source":"webroot","target":"vst-protein-lm","type":"hierarchy"},{"source":"webroot","target":"vst-robotics","type":"hierarchy"},{"source":"webroot","target":"vst-scientific-sim","type":"hierarchy"},{"source":"webroot","target":"wiki-scrolls","type":"hierarchy"},{"source":"webroot","target":"wikipedia","type":"hierarchy"},{"source":"scripts","target":"formats","type":"import","label":".fff files consumed as input by all core pipeline scripts"},{"source":"scripts","target":"entft","type":"import","label":"logic_core.sh <-> triadic logic; encryption.sh <-> encryptor"},{"source":"scripts","target":"tops","type":"import","label":"grid_ops.sh <-> grid_ops.py"},{"source":"docs","target":"entft","type":"import","label":"glyph lifecycle registries, scroll system, protocol-core eng"},{"source":"docs","target":"formats","type":"import","label":".fff format spec mirrored in fff_spec.md"},{"source":"rtt-inside","target":"rtt-root","type":"import","label":"RTT core substrates, operators, and diagrams"},{"source":"rtt-codes","target":"rtt-root","type":"import","label":"QR payload schema references canonical sub-schemas"},{"source":"research","target":"rtt-root","type":"import","label":"RTT/1 operators and core substrates for domain research"},{"source":"fcg","target":"rtt-root","type":"import","label":"RTT/1 operators for framework structural grammar"},{"source":"entft","target":"tops","type":"circular","label":"Mutual: entft encrypts tops grid results; tops simulates ent"},{"source":"entft","target":"nous","type":"circular","label":"Mutual: entft corridor traversal uses nous symbolic logic; n"},{"source":"incident_substrate_model","target":"gsm","type":"informs","label":"Incident model informs governance substrate alignment"},{"source":"rtt-inside-benchmarks","target":"rtt-tel","type":"export","label":"Benchmark results exported to Temporal Event Log"},{"source":"rtt-tel","target":"rtt-inside-benchmarks","type":"import","label":"TEL imports benchmark session records"},{"source":"rtt-inside-benchmarks","target":"rtt-paradoxes","type":"shares-regime-grammar","label":"Shared regime grammar"},{"source":"rtt-inside-benchmarks","target":"rtt-lowdim","type":"shares-operator-grammar","label":"Shared operator grammar"},{"source":"rtt-inside-benchmarks","target":"rtt-integrations","type":"provides-standards","label":"Benchmark standards for integrations"},{"source":"UE6-INTEGRATIONS","target":"rtt-inside-benchmarks","type":"propagates-to","label":"UE6 sessions propagate to benchmarks"},{"source":"UE6-INTEGRATIONS","target":"rtt-tel","type":"propagates-to","label":"UE6 events logged to TEL"},{"source":"RTT_MORPHIC_RESONANCE","target":"RTT_2","type":"parallel-to","label":"Parallel resonance-time layer"},{"source":"RTT_MORPHIC_RESONANCE","target":"RTT_3","type":"parallel-to","label":"Parallel resonance-time layer"},{"source":"OPERATORS","target":"RTT_2","type":"related","label":"Operator grammar feeds RTT/2"},{"source":"OPERATORS","target":"RTT_3","type":"related","label":"Operator grammar feeds RTT/3"},{"source":"STRUCTURAL_DETECTION_ENGINE","target":"OPERATORS","type":"related","label":"Detection engine is an operator"},{"source":"STRUCTURAL_INTEGRATION_ENGINE","target":"OPERATORS","type":"related","label":"Integration engine is an operator"},{"source":"STRUCTURAL_DETECTION_ENGINE","target":"RTT_2","type":"related","label":""},{"source":"STRUCTURAL_INTEGRATION_ENGINE","target":"RTT_3","type":"related","label":""},{"source":"Mudpuppy","target":"rtt-paradoxes","type":"import","label":"Paradoxes Canon imported"},{"source":"SoftKitty","target":"rtt-paradoxes","type":"import","label":"Paradoxes Canon imported"},{"source":"gsm","target":"rtt-root","type":"import","label":"Resonance-aware structural grammar"},{"source":"webroot","target":"rtt-root","type":"import","label":"RTT core substrates and dimensional grammar"},{"source":"STRUCTURAL_DETECTION_ENGINE","target":"STRUCTURAL_INTEGRATION_ENGINE","type":"upstream","label":"Echo Classifier feeds Triadic Echo Lattice"},{"source":"STRUCTURAL_INTEGRATION_ENGINE","target":"rtt-inside-benchmarks","type":"downstream","label":"TEL feeds Substrate Flow → Benchmarks"},{"source":"rtt-inside-benchmarks","target":"rtt-tel","type":"provides-data","label":"Benchmark results logged to TEL"},{"source":"rtt-integrations","target":"UE6-INTEGRATIONS","type":"contains","label":"UE6 integration lives under rtt-integrations container"},{"source":"RTT_MORPHIC_RESONANCE","target":"rtt-lowdim","type":"uses","label":"Morphic resonance primitives built on low-dimensional substr"},{"source":"Mudpuppy","target":"rtt-paradoxes","type":"references","label":"Paradoxes Canon referenced in spacetime transitions"},{"source":"SoftKitty","target":"rtt-paradoxes","type":"references","label":"Paradoxes Canon referenced in continuity mapping"},{"source":"rtt-emotions","target":"RTT_MORPHIC_RESONANCE","type":"related","label":"Emotional operators interact with morphic resonance field"},{"source":"OPERATORS","target":"OPERATORS_TEACHING_BUNDLE","type":"contains","label":"Teaching bundle is the pedagogical surface of RTT/1 operator"},{"source":"rtt-tel","target":"STRUCTURAL_INTEGRATION_ENGINE","type":"alias","label":"rtt-tel and STRUCTURAL_INTEGRATION_ENGINE both map to Triadi"},{"source":"ai-core","target":"OPERATORS","type":"imports","label":"AI architecture imports RTT operator primitives"},{"source":"ai-consciousness","target":"ai-core","type":"extends","label":"Session consciousness extends AI core"},{"source":"grammar","target":"OPERATORS","type":"imports","label":"Grammar imports canonical operator definitions"},{"source":"coeus","target":"OPERATORS","type":"imports","label":"Coeus imports RTT operator primitives"},{"source":"rtt-sdk","target":"rtt-root","type":"exports","label":"RTT SDK provides integration surface"},{"source":"rtt-api","target":"rtt-root","type":"exports","label":"RTT API exposes machine-readable interface"},{"source":"bsm","target":"standard_model","type":"relationship","label":"BSM relates to Standard Model"},{"source":"quantum-coherence","target":"quantum_mechanics","type":"relationship","label":"Quantum coherence extends QM substrate"},{"source":"time-crystals","target":"thermodynamics","type":"relationship","label":"Time crystals from symmetry-breaking"},{"source":"neuroscience","target":"biology","type":"relationship","label":"Neuroscience extends biological domain"},{"source":"resilience-checker","target":"rtt-paradoxes","type":"imports","label":"Validates 108 paradox stress tests"},{"source":"STRUCTURAL_DETECTION_ENGINE","target":"STRUCTURAL_INTEGRATION_ENGINE","type":"upstream","label":"Echo Classifier feeds TEL"},{"source":"substrate-flow","target":"STRUCTURAL_INTEGRATION_ENGINE","type":"relationship","label":"Substrate flow downstream of TEL"},{"source":"hsp","target":"STRUCTURAL_DETECTION_ENGINE","type":"relationship","label":"HSP feeds Echo Classifier"},{"source":"vst-llm","target":"OPERATORS","type":"imports","label":"VST LLM aligns with RTT operator layer"},{"source":"corpus","target":"research","type":"imports","label":"Corpus provides canonical research materials"},{"source":"fft","target":"OPERATORS","type":"imports","label":"Framework Field Theory built on operator primitives"},{"source":"NoS","target":"rtt-core","type":"imports","label":"Nature of Substrate grounded in RTT core"},{"source":"bridges","target":"rtt-integrations","type":"extends","label":"Bridges extends integration layer"}]};
+
+    // ===== LAYER COLORS =====
+    const LAYER_COLORS = {
+      "Meta & Governance": "#00f5ff",
+      "RTT Technology Layer": "#7c3aed",
+      "Core Frameworks — Structural Spine": "#f59e0b",
+      "Operator Layer": "#10b981",
+      "RTT Dimensional": "#ec4899",
+      "RTT Deployment Layer": "#3b82f6",
+      "Tools & Infrastructure": "#6b7280",
+      "Theories": "#14b8a6",
+      "Theory": "#0d9488",
+      "Education & Teaching": "#84cc16",
+      "Applied Domain Models": "#f97316",
+      "Research-Canonical": "#a78bfa",
+      "Research & Validation": "#c084fc",
+      "Framework-Structural": "#fb923c",
+      "Integration & Deployment": "#38bdf8",
+      "Ethics & Care": "#f43f5e",
+      "Substrate Grammar": "#d97706",
+      "Safety & Operations": "#ef4444",
+      "Spacetime": "#818cf8",
+      "RTT Analytics — Metadata Layer": "#2dd4bf",
+      "RTT Hardware Layer": "#64748b"
+    };
+
+    const EDGE_COLORS = {
+      "hierarchy": { color: "#334155", opacity: 0.4, dash: false },
+      "import": { color: "#00f5ff", opacity: 0.6, dash: false },
+      "circular": { color: "#f97316", opacity: 0.9, dash: true },
+      "informs": { color: "#a78bfa", opacity: 0.7, dash: false },
+      "related": { color: "#7c3aed", opacity: 0.5, dash: false },
+      "upstream": { color: "#10b981", opacity: 0.7, dash: false },
+      "downstream": { color: "#10b981", opacity: 0.7, dash: false },
+      "parallel-to": { color: "#ec4899", opacity: 0.6, dash: false },
+      "export": { color: "#3b82f6", opacity: 0.6, dash: false },
+      "provides-data": { color: "#3b82f6", opacity: 0.6, dash: false },
+      "provides-standards": { color: "#3b82f6", opacity: 0.6, dash: false },
+      "references": { color: "#14b8a6", opacity: 0.5, dash: false },
+      "alias": { color: "#64748b", opacity: 0.4, dash: true },
+      "shares-regime-grammar": { color: "#7c3aed", opacity: 0.5, dash: false },
+      "shares-operator-grammar": { color: "#7c3aed", opacity: 0.5, dash: false },
+      "propagates-to": { color: "#10b981", opacity: 0.7, dash: false },
+      "uses": { color: "#7c3aed", opacity: 0.5, dash: false },
+      "contains": { color: "#334155", opacity: 0.4, dash: false }
+    };
+    const DEFAULT_EDGE_STYLE = { color: "#475569", opacity: 0.4, dash: false };
+
+    const DIRECTED_TYPES = new Set(["import","circular","informs","related","upstream","downstream","parallel-to","export","provides-data","provides-standards","references","alias","shares-regime-grammar","shares-operator-grammar","propagates-to","uses"]);
+
+    // ===== STATE =====
+    let selectedNode = null;
+    let activeEdgeFilter = "all";
+    let activeDepthFilter = "all";
+    let activeLayerFilter = null;
+    let searchQuery = "";
+    let dataSource = "embedded";
+    let dataMetadata = { generated: null, version: null, round: null };
+    let currentSimulation = null;
+    let nodeMap = {};
+
+    // Declare graph-level variables for reuse
+    let currentNodes = [];
+    let currentEdges = [];
+    let linkElements = null;
+    let nodeElements = null;
+    let g = null;
+    let zoom = null;
+
+    // ===== INIT =====
+    if (typeof lucide !== "undefined" && typeof lucide.createIcons === "function") {
+      lucide.createIcons();
+    }
+
+    // ===== D3 GRAPH SETUP (svg, defs, zoom — created once) =====
+    const container = document.getElementById("graph-container-s3v");
+    const svg = d3.select("#graph-svg-s3v");
+
+    const defs = svg.append("defs");
+
+    // Glow filter for webroot
+    const glowFilter = defs.append("filter").attr("id", "glow-webroot");
+    glowFilter.append("feGaussianBlur").attr("stdDeviation", "4").attr("result", "blur");
+    glowFilter.append("feMerge").selectAll("feMergeNode").data(["blur", "SourceGraphic"]).enter().append("feMergeNode").attr("in", d => d);
+
+    // Selection glow
+    const selGlow = defs.append("filter").attr("id", "glow-selected");
+    selGlow.append("feGaussianBlur").attr("stdDeviation", "3").attr("result", "blur");
+    selGlow.append("feMerge").selectAll("feMergeNode").data(["blur", "SourceGraphic"]).enter().append("feMergeNode").attr("in", d => d);
+
+    g = svg.append("g");
+
+    zoom = d3.zoom()
+      .scaleExtent([0.15, 5])
+      .on("zoom", (event) => {
+        g.attr("transform", event.transform);
+      });
+    svg.call(zoom);
+
+    // Click background → deselect
+    svg.on("click", function() {
+      deselectNode();
+    });
+
+    // ===== HELPER FUNCTIONS =====
+    function nodeRadius(d) {
+      const r = 8 + Math.sqrt(d.file_count) * 0.9;
+      if (d.id === "webroot") return 22;
+      return Math.min(Math.max(r, 8), 25);
+    }
+
+    function getConnectedEdges(nodeId) {
+      return currentEdges.filter(e => {
+        const sId = typeof e.source === "object" ? e.source.id : e.source;
+        const tId = typeof e.target === "object" ? e.target.id : e.target;
+        return sId === nodeId || tId === nodeId;
+      });
+    }
+    function getNeighborIds(nodeId) {
+      const ids = new Set();
+      getConnectedEdges(nodeId).forEach(e => {
+        const sId = typeof e.source === "object" ? e.source.id : e.source;
+        const tId = typeof e.target === "object" ? e.target.id : e.target;
+        if (sId !== nodeId) ids.add(sId);
+        if (tId !== nodeId) ids.add(tId);
+      });
+      return ids;
+    }
+
+    function selectNode(d) {
+      selectedNode = d;
+      const neighborIds = getNeighborIds(d.id);
+      neighborIds.add(d.id);
+
+      nodeElements.each(function(nd) {
+        const inSet = neighborIds.has(nd.id);
+        d3.select(this).style("opacity", inSet ? 1 : 0.12);
+        d3.select(this).select(".sel-ring")
+          .attr("stroke-opacity", nd.id === d.id ? 0.8 : 0);
+        if (nd.id === d.id) {
+          d3.select(this).select(".sel-ring").classed("selected-ring", true);
+        } else {
+          d3.select(this).select(".sel-ring").classed("selected-ring", false);
+        }
+      });
+
+      linkElements.each(function(e) {
+        const sId = typeof e.source === "object" ? e.source.id : e.source;
+        const tId = typeof e.target === "object" ? e.target.id : e.target;
+        const connected = sId === d.id || tId === d.id;
+        d3.select(this).attr("stroke-opacity", connected ? (EDGE_COLORS[e.type] || DEFAULT_EDGE_STYLE).opacity : 0.04);
+      });
+
+      showModuleCard(d, neighborIds);
+    }
+
+    function deselectNode() {
+      selectedNode = null;
+      if (nodeElements) {
+        nodeElements.style("opacity", 1);
+        nodeElements.selectAll(".sel-ring").attr("stroke-opacity", 0).classed("selected-ring", false);
+      }
+      if (linkElements) {
+        linkElements.each(function(e) {
+          d3.select(this).attr("stroke-opacity", (EDGE_COLORS[e.type] || DEFAULT_EDGE_STYLE).opacity);
+        });
+      }
+      document.getElementById("module-empty-s3v").style.display = "";
+      document.getElementById("module-detail-s3v").style.display = "none";
+      applyFilters();
+    }
+
+    function showModuleCard(d, neighborIds) {
+      document.getElementById("module-empty-s3v").style.display = "none";
+      const detail = document.getElementById("module-detail-s3v");
+      detail.style.display = "";
+
+      const color = LAYER_COLORS[d.layer] || "#475569";
+      document.getElementById("mod-circle-s3v").style.background = color;
+      document.getElementById("mod-name-s3v").textContent = d.name;
+      document.getElementById("mod-id-s3v").textContent = d.id;
+
+      const badgesEl = document.getElementById("mod-badges-s3v");
+      badgesEl.innerHTML = "";
+      const addBadge = (text, bg, fg) => {
+        const b = document.createElement("span");
+        b.className = "badge";
+        b.style.background = bg;
+        b.style.color = fg;
+        b.textContent = text;
+        badgesEl.appendChild(b);
+      };
+      addBadge(`Depth ${d.depth}`, "rgba(255,255,255,0.06)", "#c0c0d0");
+      addBadge(d.layer, color + "22", color);
+      addBadge(`v${d.version}`, "rgba(124,58,237,0.12)", "#a78bfa");
+      if (d.enriched_r2) addBadge("R2 ✦", "rgba(236,72,153,0.12)", "#ec4899");
+
+      document.getElementById("mod-purpose-s3v").textContent = d.purpose;
+
+      const metaEl = document.getElementById("mod-meta-s3v");
+      metaEl.innerHTML = "";
+      const addMeta = (label, val) => {
+        metaEl.innerHTML += `<div><span style="color:#5a5a72;">${label}:</span></div><div style="color:#c0c0d0; font-family:'JetBrains Mono',monospace; font-size:11px; word-break:break-all;">${val}</div>`;
+      };
+      addMeta("Path", d.path);
+      addMeta("Files", d.file_count.toLocaleString());
+      addMeta("Status", d.status);
+      addMeta("Parent", d.parent || "—");
+
+      const openEl = document.getElementById("mod-open-s3v");
+      openEl.innerHTML = "";
+      const btn = document.createElement("button");
+      btn.className = "open-btn";
+      btn.innerHTML = "Open Module →";
+      if (!d.url) btn.disabled = true;
+      openEl.appendChild(btn);
+      if (d.url) {
+        btn.addEventListener("click", () => window.open(d.url, "_blank"));
+      }
+
+      const connList = document.getElementById("mod-conn-list-s3v");
+      connList.innerHTML = "";
+      const nIds = [...neighborIds].filter(id => id !== d.id).slice(0, 5);
+      nIds.forEach(id => {
+        const n = nodeMap[id];
+        if (!n) return;
+        const nColor = LAYER_COLORS[n.layer] || "#475569";
+        const row = document.createElement("div");
+        row.className = "flex items-center gap-2 text-xs py-1";
+        row.innerHTML = `<span class="connected-dot" style="background:${nColor};"></span><span style="color:#c0c0d0;">${n.name.length > 28 ? n.name.slice(0, 26) + '…' : n.name}</span>`;
+        connList.appendChild(row);
+      });
+      if (neighborIds.size - 1 > 5) {
+        const more = document.createElement("div");
+        more.className = "text-xs mt-1";
+        more.style.color = "#5a5a72";
+        more.textContent = `+${neighborIds.size - 1 - 5} more`;
+        connList.appendChild(more);
+      }
+    }
+
+    // ===== FILTERS =====
+    function applyFilters() {
+      if (selectedNode) return;
+      if (!nodeElements || !linkElements) return;
+
+      nodeElements.each(function(d) {
+        let visible = true;
+        if (activeDepthFilter !== "all" && d.depth !== parseInt(activeDepthFilter)) visible = false;
+        if (activeLayerFilter && d.layer !== activeLayerFilter) visible = false;
+        if (searchQuery) {
+          const q = searchQuery.toLowerCase();
+          const match = d.name.toLowerCase().includes(q) || d.id.toLowerCase().includes(q) || d.layer.toLowerCase().includes(q);
+          if (!match) visible = false;
+        }
+        d3.select(this).style("opacity", visible ? 1 : (searchQuery ? 0.06 : 0.08));
+        if (visible && searchQuery) {
+          d3.select(this).select(".main-circle").classed("node-flash", true);
+          setTimeout(() => d3.select(this).select(".main-circle").classed("node-flash", false), 600);
+        }
+      });
+
+      linkElements.each(function(e) {
+        const s = EDGE_COLORS[e.type] || DEFAULT_EDGE_STYLE;
+        let show = true;
+        if (activeEdgeFilter !== "all") {
+          if (activeEdgeFilter === "directed") {
+            show = DIRECTED_TYPES.has(e.type);
+          } else {
+            show = e.type === activeEdgeFilter;
+          }
+        }
+        d3.select(this).attr("stroke-opacity", show ? s.opacity : 0.02);
+      });
+    }
+
+    // ===== UPDATE UI BADGES AND STATS =====
+    function updateDataSourceUI(nodes, edges) {
+      const badge = document.getElementById("data-source-badge-s3v");
+      const totalFiles = nodes.reduce((sum, n) => sum + (n.file_count || 0), 0);
+      const totalModules = nodes.length;
+      const totalEdges = edges.length;
+      const uniqueLayers = new Set(nodes.map(n => n.layer)).size;
+      const r2Count = nodes.filter(n => n.enriched_r2).length;
+      const hierarchyCount = edges.filter(e => e.type === "hierarchy" || e.type === "contains").length;
+      const directedCount = edges.filter(e => DIRECTED_TYPES.has(e.type)).length;
+
+      if (dataSource === "live") {
+        const dateStr = dataMetadata.generated ? dataMetadata.generated.substring(0, 10) : "unknown";
+        const roundStr = dataMetadata.round || "R4";
+        badge.className = "source-badge-live ml-2";
+        badge.textContent = `🟢 LIVE · ${roundStr} · ${dateStr}`;
+      } else {
+        badge.className = "source-badge-embedded ml-2";
+        badge.textContent = `📦 EMBEDDED · R2 · ${totalFiles.toLocaleString()} files`;
+      }
+      badge.style.display = "inline-flex";
+
+      // Header stats
+      document.getElementById("stat-modules-header").textContent = `${totalModules} modules`;
+      document.getElementById("stat-edges-header").textContent = `${totalEdges} edges`;
+      document.getElementById("stat-layers-header").textContent = `${uniqueLayers} layers`;
+
+      // Panel stats
+      document.getElementById("stat-modules-panel").textContent = totalModules;
+      document.getElementById("stat-files-panel").textContent = totalFiles.toLocaleString();
+      document.getElementById("stat-r2-panel").textContent = r2Count;
+      document.getElementById("stat-hierarchy-panel").textContent = hierarchyCount;
+      document.getElementById("stat-directed-panel").textContent = directedCount;
+
+      // Footer data line
+      const footerMain = document.getElementById("footer-data-line-s3v");
+      footerMain.textContent = `TriadicFrameworks S3 Spine — R2 Enriched · ${totalModules} A3 modules · rtt=1 | coherence=declared | drift=bounded`;
+
+      const footerSource = document.getElementById("footer-source-line-s3v");
+      if (dataSource === "live") {
+        const dateStr = dataMetadata.generated ? dataMetadata.generated.substring(0, 10) : "unknown";
+        footerSource.textContent = `Data: LIVE from /spine/module_graph.json · ${dateStr} · ${totalModules} modules · ${totalFiles.toLocaleString()} files`;
+      } else {
+        footerSource.textContent = `Data: EMBEDDED R2 · ${totalModules} modules · ${totalFiles.toLocaleString()} files`;
+      }
+    }
+
+    // ===== BUILD LEGEND =====
+    function buildLegend(nodes) {
+      const layerCounts = {};
+      nodes.forEach(n => {
+        layerCounts[n.layer] = (layerCounts[n.layer] || 0) + 1;
+      });
+      const legendList = document.getElementById("legend-list-s3v");
+      legendList.innerHTML = "";
+      Object.keys(LAYER_COLORS).forEach(layer => {
+        if (!layerCounts[layer]) return;
+        const item = document.createElement("div");
+        item.className = "legend-item";
+        item.dataset.layer = layer;
+        item.innerHTML = `<span class="dot" style="background:${LAYER_COLORS[layer]};"></span><span style="color:#c0c0d0;">${layer}</span><span class="count">${layerCounts[layer]}</span>`;
+        legendList.appendChild(item);
+        item.addEventListener("click", function() {
+          activeLayerFilter = this.dataset.layer;
+          if (selectedNode) deselectNode();
+          document.querySelectorAll("#legend-list-s3v .legend-item").forEach(i => i.style.background = "");
+          this.style.background = "rgba(255,255,255,0.05)";
+          applyFilters();
+        });
+      });
+    }
+
+    // ===== INIT GRAPH (accepts nodes, edges) =====
+    function initGraph(rawNodes, rawEdges) {
+      // Stop previous simulation
+      if (currentSimulation) {
+        currentSimulation.stop();
+        currentSimulation = null;
+      }
+
+      // Clear previous graph elements
+      g.selectAll("*").remove();
+
+      // Remove old arrow markers (keep glow filters)
+      defs.selectAll("marker").remove();
+
+      // Reset state
+      selectedNode = null;
+      activeLayerFilter = null;
+      document.getElementById("module-empty-s3v").style.display = "";
+      document.getElementById("module-detail-s3v").style.display = "none";
+
+      // Copy data
+      const nodes = rawNodes.map(d => ({ ...d }));
+      const edges = rawEdges.map(d => ({ ...d }));
+      currentNodes = nodes;
+      currentEdges = edges;
+      nodeMap = {};
+      nodes.forEach(n => { nodeMap[n.id] = n; });
+
+      const width = container.clientWidth;
+      const height = container.clientHeight;
+
+      // Build legend
+      buildLegend(nodes);
+
+      // Update UI
+      updateDataSourceUI(nodes, edges);
+
+      // Arrowhead markers
+      const arrowColors = new Set();
+      edges.forEach(e => {
+        const s = EDGE_COLORS[e.type] || DEFAULT_EDGE_STYLE;
+        arrowColors.add(s.color);
+      });
+      arrowColors.forEach(c => {
+        const id = "arrow-" + c.replace("#", "");
+        defs.append("marker")
+          .attr("id", id)
+          .attr("viewBox", "0 -5 10 10")
+          .attr("refX", 20)
+          .attr("refY", 0)
+          .attr("markerWidth", 6)
+          .attr("markerHeight", 6)
+          .attr("orient", "auto")
+          .append("path")
+          .attr("d", "M0,-4L10,0L0,4")
+          .attr("fill", c);
+      });
+
+      // Simulation
+      const simulation = d3.forceSimulation(nodes)
+        .force("link", d3.forceLink(edges).id(d => d.id).distance(d => d.type === "hierarchy" ? 80 : 150).strength(d => d.type === "hierarchy" ? 0.8 : 0.3))
+        .force("charge", d3.forceManyBody().strength(-300))
+        .force("center", d3.forceCenter(width / 2, height / 2))
+        .force("collide", d3.forceCollide().radius(d => nodeRadius(d) + 8))
+        .alphaDecay(0.02);
+      currentSimulation = simulation;
+
+      // Edges
+      const linkGroup = g.append("g").attr("class", "links");
+      linkElements = linkGroup.selectAll("line")
+        .data(edges)
+        .enter().append("line")
+        .each(function(d) {
+          const s = EDGE_COLORS[d.type] || DEFAULT_EDGE_STYLE;
+          const el = d3.select(this);
+          el.attr("stroke", s.color)
+            .attr("stroke-opacity", s.opacity)
+            .attr("stroke-width", d.type === "hierarchy" ? 1 : 1.5)
+            .attr("marker-end", `url(#arrow-${s.color.replace("#", "")})`)
+            .attr("data-edge-type", d.type);
+          if (s.dash) {
+            el.attr("stroke-dasharray", "5,4");
+          }
+        });
+
+      // Node groups
+      const nodeGroup = g.append("g").attr("class", "nodes");
+      nodeElements = nodeGroup.selectAll("g")
+        .data(nodes)
+        .enter().append("g")
+        .attr("class", "node-g")
+        .style("cursor", "pointer");
+
+      // Background glow for webroot
+      nodeElements.filter(d => d.id === "webroot")
+        .append("circle")
+        .attr("r", d => nodeRadius(d) + 6)
+        .attr("fill", "none")
+        .attr("stroke", "#00f5ff")
+        .attr("stroke-width", 2)
+        .attr("stroke-opacity", 0.3)
+        .attr("filter", "url(#glow-webroot)")
+        .classed("webroot-pulse", true);
+
+      // Selected ring (hidden initially)
+      nodeElements.append("circle")
+        .attr("class", "sel-ring")
+        .attr("r", d => nodeRadius(d) + 5)
+        .attr("fill", "none")
+        .attr("stroke", "#fff")
+        .attr("stroke-width", 2)
+        .attr("stroke-dasharray", "4,3")
+        .attr("stroke-opacity", 0)
+        .attr("filter", "url(#glow-selected)");
+
+      // Main circle
+      nodeElements.append("circle")
+        .attr("class", "main-circle")
+        .attr("r", d => nodeRadius(d))
+        .attr("fill", d => LAYER_COLORS[d.layer] || "#475569")
+        .attr("fill-opacity", d => d.depth === 3 ? 0.85 : 1)
+        .attr("stroke", "#ffffff")
+        .attr("stroke-width", 1.5)
+        .attr("stroke-opacity", 0.6);
+
+      // R2 enriched marker
+      nodeElements.filter(d => d.enriched_r2)
+        .append("text")
+        .attr("text-anchor", "middle")
+        .attr("dy", "0.35em")
+        .attr("font-size", d => Math.max(8, nodeRadius(d) * 0.55))
+        .attr("fill", "#fff")
+        .attr("pointer-events", "none")
+        .text("✦");
+
+      // Labels
+      nodeElements.append("text")
+        .attr("text-anchor", "middle")
+        .attr("dy", d => nodeRadius(d) + 14)
+        .attr("font-size", "9px")
+        .attr("font-family", "'JetBrains Mono', monospace")
+        .attr("fill", "#7a7a92")
+        .attr("pointer-events", "none")
+        .text(d => d.id.length > 14 ? d.id.slice(0, 12) + "…" : d.id);
+
+      // Node entry animation
+      nodeElements.each(function(d, i) {
+        const el = d3.select(this);
+        el.style("opacity", 0)
+          .transition()
+          .delay(d.depth * 150 + i * 15)
+          .duration(500)
+          .style("opacity", 1);
+      });
+
+      // Drag
+      const drag = d3.drag()
+        .on("start", (event, d) => {
+          if (!event.active) simulation.alphaTarget(0.3).restart();
+          d.fx = d.x; d.fy = d.y;
+        })
+        .on("drag", (event, d) => {
+          d.fx = event.x; d.fy = event.y;
+        })
+        .on("end", (event, d) => {
+          if (!event.active) simulation.alphaTarget(0);
+          d.fx = null; d.fy = null;
+        });
+      nodeElements.call(drag);
+
+      // Tooltip
+      const tooltip = document.getElementById("tooltip-s3v");
+      nodeElements.on("mouseenter", function(event, d) {
+        const layerColor = LAYER_COLORS[d.layer] || "#475569";
+        tooltip.innerHTML = `<div class="tt-name">${d.name}</div><div class="tt-layer" style="color:${layerColor};">${d.layer}</div>`;
+        tooltip.style.opacity = "1";
+        d3.select(this).select(".main-circle")
+          .attr("stroke-width", 3)
+          .attr("stroke-opacity", 1)
+          .attr("stroke", "#fff");
+      });
+      nodeElements.on("mousemove", function(event) {
+        const rect = container.getBoundingClientRect();
+        const x = event.clientX - rect.left + 14;
+        const y = event.clientY - rect.top - 10;
+        tooltip.style.left = Math.min(x, rect.width - 200) + "px";
+        tooltip.style.top = y + "px";
+      });
+      nodeElements.on("mouseleave", function(event, d) {
+        tooltip.style.opacity = "0";
+        const isSelected = selectedNode && selectedNode.id === d.id;
+        d3.select(this).select(".main-circle")
+          .attr("stroke-width", isSelected ? 3 : 1.5)
+          .attr("stroke-opacity", isSelected ? 1 : 0.6)
+          .attr("stroke", "#fff");
+      });
+
+      // Click node
+      nodeElements.on("click", function(event, d) {
+        event.stopPropagation();
+        selectNode(d);
+      });
+
+      // Double-click → open URL
+      nodeElements.on("dblclick", function(event, d) {
+        event.stopPropagation();
+        if (d.url) window.open(d.url, "_blank");
+      });
+
+      // Tick
+      simulation.on("tick", () => {
+        linkElements
+          .attr("x1", d => d.source.x)
+          .attr("y1", d => d.source.y)
+          .attr("x2", d => d.target.x)
+          .attr("y2", d => d.target.y);
+        nodeElements.attr("transform", d => `translate(${d.x},${d.y})`);
+      });
+
+      // Auto-fit after simulation settles
+      simulation.on("end", () => {
+        const bounds = g.node().getBBox();
+        if (bounds.width > 0 && bounds.height > 0) {
+          const w = container.clientWidth;
+          const h = container.clientHeight;
+          const scale = Math.min(w / (bounds.width + 100), h / (bounds.height + 100), 1.2);
+          const tx = w / 2 - (bounds.x + bounds.width / 2) * scale;
+          const ty = h / 2 - (bounds.y + bounds.height / 2) * scale;
+          svg.transition().duration(800)
+            .call(zoom.transform, d3.zoomIdentity.translate(tx, ty).scale(scale));
+        }
+      });
+
+      // Hide loading overlay
+      const overlay = document.getElementById("loading-overlay-s3v");
+      if (overlay) {
+        overlay.style.opacity = "0";
+        setTimeout(() => { overlay.style.display = "none"; }, 300);
+      }
+    }
+
+    // ===== DATA LOADING =====
+    async function loadGraphData() {
+      // Show loading overlay
+      const overlay = document.getElementById("loading-overlay-s3v");
+      if (overlay) {
+        overlay.style.display = "flex";
+        overlay.style.opacity = "1";
+      }
+
+      let fetchedData = null;
+
+      try {
+        const response = await fetch("/spine/module_graph.json", { cache: "no-cache" });
+        if (response.ok) {
+          const data = await response.json();
+
+          // Transform fetched format to GRAPH_DATA format
+          const nodes = Object.entries(data.nodes).map(([id, m]) => ({
+            id,
+            name: m.name,
+            layer: m.layer,
+            depth: m.depth || 0,
+            file_count: m.stats?.file_count ?? m.file_count ?? 0,
+            parent: m.parent,
+            url: m.url,
+            purpose: m.purpose || '',
+            version: m.version || '1.0',
+            status: m.status || 'Active, Canonical',
+            enriched_r2: m.enriched_r2 || false,
+            path: m.path || ''
+          }));
+
+          // Build node ID set for edge validation
+          const nodeIdSet = new Set(nodes.map(n => n.id));
+
+          const hierarchyEdges = (data.hierarchy?.edges || []).map(e => ({
+            source: e.parent,
+            target: e.child,
+            type: 'hierarchy',
+            label: 'contains'
+          }));
+
+          const otherEdges = (data.edges || []).map(e => ({
+            source: e.from || e.source,
+            target: e.to || e.target,
+            type: e.type || 'import',
+            label: (e.label || '').substring(0, 80)
+          }));
+
+          const edges = [...hierarchyEdges, ...otherEdges].filter(e => e.source && e.target && nodeIdSet.has(e.source) && nodeIdSet.has(e.target));
+
+          // Store metadata
+          dataMetadata.generated = data.$generated || null;
+          dataMetadata.version = data.$version || null;
+          dataMetadata.round = data.$round || null;
+          dataSource = "live";
+
+          fetchedData = { nodes, edges };
+        }
+      } catch (err) {
+        // Fetch failed (CORS, network, sandbox) — fall through to embedded
+      }
+
+      if (fetchedData) {
+        initGraph(fetchedData.nodes, fetchedData.edges);
+      } else {
+        // Fallback to embedded GRAPH_DATA
+        dataSource = "embedded";
+        dataMetadata = { generated: null, version: null, round: null };
+        initGraph(GRAPH_DATA.nodes, GRAPH_DATA.edges);
+      }
+    }
+
+    // ===== EVENT BINDINGS =====
+
+    // Edge filter buttons
+    document.querySelectorAll("[data-edge-filter]").forEach(btn => {
+      btn.addEventListener("click", function() {
+        document.querySelectorAll("[data-edge-filter]").forEach(b => b.classList.remove("active"));
+        this.classList.add("active");
+        activeEdgeFilter = this.dataset.edgeFilter;
+        if (selectedNode) deselectNode();
+        applyFilters();
+      });
+    });
+
+    // Depth filter buttons
+    document.querySelectorAll("[data-depth-filter]").forEach(btn => {
+      btn.addEventListener("click", function() {
+        document.querySelectorAll("[data-depth-filter]").forEach(b => b.classList.remove("active"));
+        this.classList.add("active");
+        activeDepthFilter = this.dataset.depthFilter;
+        if (selectedNode) deselectNode();
+        applyFilters();
+      });
+    });
+
+    // Search
+    document.getElementById("search-input-s3v").addEventListener("input", function() {
+      searchQuery = this.value.trim();
+      if (selectedNode) deselectNode();
+      applyFilters();
+    });
+
+    // Legend reset
+    document.getElementById("legend-reset-s3v").addEventListener("click", function() {
+      activeLayerFilter = null;
+      document.querySelectorAll("#legend-list-s3v .legend-item").forEach(i => i.style.background = "");
+      if (selectedNode) deselectNode();
+      applyFilters();
+    });
+
+    // Refresh button
+    document.getElementById("refresh-btn-s3v").addEventListener("click", function() {
+      const icon = document.getElementById("refresh-icon-s3v");
+      icon.classList.add("spin-refresh");
+      setTimeout(() => icon.classList.remove("spin-refresh"), 800);
+      loadGraphData();
+    });
+
+    // Resize
+    window.addEventListener("resize", () => {
+      if (currentSimulation) {
+        const w = container.clientWidth;
+        const h = container.clientHeight;
+        currentSimulation.force("center", d3.forceCenter(w / 2, h / 2));
+        currentSimulation.alpha(0.3).restart();
+      }
+    });
+
+    // ===== INITIAL LOAD =====
+    loadGraphData();
+    </script>
+</body>
+</html>

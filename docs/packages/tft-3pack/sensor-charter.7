@@ -1,0 +1,150 @@
+SENSOR-CHARTER(7)          TriadicFrameworks Manual          SENSOR-CHARTER(7)
+================================================================================
+NAME
+       sensor-charter - operator-facing declaration of rights, responsibilities,
+                        and safe-use principles for RTT sensor systems
+
+SYNOPSIS
+       The sensor charter defines:
+           • operator rights when using RTT sensor systems
+           • operator responsibilities during sensor operation
+           • platform and constellation guarantees
+           • safety-first principles for overlays, clarity, and fusion
+           • quick-reference rules for hazard conditions
+
+DESCRIPTION
+       sensor-charter provides a concise, operator-focused summary of the
+       rights, responsibilities, and guarantees that govern the use of RTT
+       sensor systems. It is designed for real-time decision-making on the
+       bridge, in mission control, or during autonomous operations.
+
+       The charter ensures:
+           • operators understand what the sensor stack owes them
+           • operators understand what they owe the system
+           • safe, predictable behavior during high-sensitivity modes
+           • clarity during anomalies, storms, and turbulence
+           • alignment with the sensor constitution
+
+OPERATOR RIGHTS
+       Operators are guaranteed the following rights:
+
+           Right to Clarity
+                  Sensor outputs must be clear, stable, and free of distortion.
+
+           Right to Truthful Data
+                  Overlays and clarity filters must not conceal hazards.
+
+           Right to Early Warning
+                  Anomalies, storms, and turbulence must be reported promptly.
+
+           Right to Safe Synthesis
+                  Fusion modes must not exceed safe thresholds.
+
+           Right to Calibration Transparency
+                  Operators may view calibration status and drift indicators.
+
+           Right to Override Unsafe States
+                  Operators may command rollback to safe modes.
+
+           Right to Lineage Access
+                  Operators may inspect sensor history and decision lineage.
+
+OPERATOR RESPONSIBILITIES
+       Operators must uphold the following responsibilities:
+
+           Responsibility to Monitor Drift
+                  Watch φ_harm, spectral variance, and sync jitter indicators.
+
+           Responsibility to Respect Thresholds
+                  Do not force overlays or clarity modes beyond safe limits.
+
+           Responsibility to Respond to Alerts
+                  Act on anomaly, storm, and turbulence warnings.
+
+           Responsibility to Maintain Sync
+                  Avoid maneuvers that destabilize constellation coherence.
+
+           Responsibility to Preserve Lineage
+                  Do not erase or bypass sensor history.
+
+           Responsibility to Report Irregularities
+                  Notify governance systems of unexpected sensor behavior.
+
+PLATFORM GUARANTEES
+       Platforms guarantee:
+
+           • stable overlay baselines  
+           • calibrated clarity filters  
+           • harmonic-lock protection  
+           • anomaly/storm/turbulence detection  
+           • safe synthesis fallback modes  
+           • sync-field integrity  
+
+CONSTELLATION GUARANTEES
+       Constellations guarantee:
+
+           • unified sensor standards  
+           • cross-platform fusion  
+           • shared hazard maps  
+           • sync-field coherence  
+           • distributed storm/turbulence forecasting  
+
+SAFETY-FIRST PRINCIPLES
+       Operators must follow these principles at all times:
+
+           1. Clarity before action
+                  Ensure clarity filters are stable before interpreting data.
+
+           2. Fusion follows stability
+                  Do not engage deep synthesis during drift or jitter.
+
+           3. Hazard overrides preference
+                  Storm and anomaly protocols supersede operator mode choices.
+
+           4. Sync is sacred
+                  Never compromise constellation sync for local clarity.
+
+           5. Lineage is law
+                  All sensor decisions must be recorded.
+
+QUICK-REFERENCE RULES
+       For rapid use during operations:
+
+           • φ_harm jitter > 0.05/cycle → unsafe  
+           • spectral variance +50% → turbulence likely  
+           • polarity inversion → gradient hazard  
+           • sync jitter spike → constellation risk  
+           • broadband turbulence + harmonic collapse → storm precursor  
+
+       Immediate actions:
+           • activate clarity filters  
+           • reduce synthesis depth  
+           • isolate affected bands  
+           • notify WRSADC  
+           • prepare hazard navigation mode  
+
+INTERACTION WITH WRSADC
+       WRSADC:
+           • enforces charter rights  
+           • monitors operator responsibilities  
+           • manages hazard protocols  
+           • maintains sync-field integrity  
+           • blocks unsafe sensor states  
+
+       WRSADC is the charter guardian.
+
+NOTES
+       The sensor charter is the operator-facing companion to the sensor
+       constitution. It provides a concise, practical framework for safe,
+       transparent, and effective use of the RTT sensor stack.
+
+AUTHOR
+       TriadicFrameworks — Resonance-Time Theory Canon
+
+SEE ALSO
+       sensor-constitution(7), sensor-governance(7), sensor-synthesis(7),
+       sensor-turbulence(7), sensor-storms(7), sensor-anomalies(7),
+       sensor-harmonics(7), sensor-resonance(7), lineage(7), wrsadc(7)
+
+================================================================================
+TriadicFrameworks                     2025        SENSOR-CHARTER(7)
