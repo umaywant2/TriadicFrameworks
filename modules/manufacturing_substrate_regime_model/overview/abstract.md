@@ -1,5 +1,0 @@
-The Manufacturing Substrate Regime Model (MSRM) presents a structural framework for organizing and calibrating complex manufacturing systems through explicitly declared operating regimes, boundary semantics, and operator‑mediated interactions. The model addresses environments in which traditional calibration approaches become fragile due to extreme precision requirements, long‑term drift, and tightly constrained process windows.
-
-Rather than introducing new fabrication methods or physical interpretations, MSRM formalizes calibration as a substrate‑level concern, enabling regime‑aware reasoning about system validity, stability, and transition. Regimes are treated as declared structural contexts with defined operating envelopes, within which calibration assumptions remain valid.
-
-MSRM is architecture‑agnostic and non‑optimizing. It is intended to support clarity, interpretability, and reproducibility in manufacturing systems operating near physical or operational limits, without embedding domain‑specific semantics or empirical claims.

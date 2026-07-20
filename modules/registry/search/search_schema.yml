@@ -1,9 +1,0 @@
-search_query:
-  id: <UUID>
-  glyph: <◇|◆|⬣|custom|null>
-  tags: <list|null>
-  rci_band: <low|medium|high|null>
-  lineage:
-    parent_scroll: <UUID|null>
-    child_scroll: <UUID|null>
-  timestamp: <ISO8601>

@@ -1,3 +1,0 @@
-"""
-Earth overlay schema definitions.
-"""

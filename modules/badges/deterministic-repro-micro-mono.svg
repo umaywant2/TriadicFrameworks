@@ -1,6 +1,0 @@
-<!-- docs/badges/deterministic-repro-micro-mono.svg -->
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="24" viewBox="0 0 120 24" role="img" aria-label="Deterministic Repro">
-  <title>Deterministic Repro (Micro Monochrome)</title>
-  <rect width="120" height="24" rx="4" fill="#000"/>
-  <text x="60" y="14" text-anchor="middle" font-size="12" font-family="monospace" fill="#fff">DETERMINISTIC REPRO</text>
-</svg>

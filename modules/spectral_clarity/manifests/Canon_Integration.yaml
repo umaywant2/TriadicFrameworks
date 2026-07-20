@@ -1,7 +1,0 @@
-canon:
-  scrolls: [PhaseI, PhaseII, PhaseIII, PhaseIV, PhaseV, PhaseVI]
-  compression: symbolic + narrative
-  glyphs: validator-grade glyph set
-integration:
-  fusion_runtime: resonance_fusion_runtime.py
-  publication: communal remix archive

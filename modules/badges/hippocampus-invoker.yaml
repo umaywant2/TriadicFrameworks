@@ -1,9 +1,0 @@
-badge:
-  id: hippocampus-invoker
-  label: Memory Ritualist
-  criteria:
-    - Commands reflect symbolic memory phases
-    - Snapshot logic is readable and remixable
-    - Observatory toggle is manually invokable
-  awarded_by: hippocampus-validator
-  echo: "Contributor ritualized memory toggles and observatory rendering."

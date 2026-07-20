@@ -1,7 +1,0 @@
-#!/bin/sh
-set -e
-
-# Run installer logic
-/usr/share/3pak-shell/install.sh || true
-
-exit 0

@@ -1,4 +1,0 @@
-forces:
-  F1: { m_beta: 0.90, m_gamma: 0.95, m_theta: 0.90 }
-  F2: { m_beta: 1.00, m_gamma: 1.00, m_theta: 1.00 }
-  F3: { m_beta: 1.30, m_gamma: 1.20, m_theta: 1.20 }

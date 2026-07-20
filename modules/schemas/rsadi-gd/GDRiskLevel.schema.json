@@ -1,7 +1,0 @@
-{
-  "$schema": "https://json-schema.org/draft/2020-12/schema#",
-  "$id": "https://triadicframeworks.org/schemas/rsadi/gd/v1/GDRiskLevel.schema.json",
-  "title": "GDRiskLevel",
-  "type": "string",
-  "enum": ["low", "medium", "high", "critical"]
-}

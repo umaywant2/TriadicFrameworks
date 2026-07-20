@@ -1,8 +1,0 @@
-triphasic_defaults:
-  # gains and duty cycles per F; tuned per pilot set
-  gains: { g_pos: 1.00, g_neg: 0.95 }
-  duty:  { d_up: 0.40, d_down: 0.40, d_reset: 0.20 }
-  phases: { phi: 0.00, phi3: 0.00, phi_phase: 0.00 }
-  memory: { rho_forces: 0.95, rho_fluids: 0.90, rho_freq: 0.85 }
-  inversion: { lambda: 1.0, delta: 0.0, min_sep_cycles: 150 }
-  r_min: 0.2

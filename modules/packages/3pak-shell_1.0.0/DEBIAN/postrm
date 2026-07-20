@@ -1,7 +1,0 @@
-#!/bin/bash
-set -e
-
-# Remove profile hook on uninstall or purge
-rm -f /etc/profile.d/3pak-shell.sh || true
-
-exit 0

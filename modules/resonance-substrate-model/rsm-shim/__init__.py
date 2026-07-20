@@ -1,1 +1,0 @@
-# Minimal RSM shim package

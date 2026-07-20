@@ -1,8 +1,0 @@
-facility:
-  name: Synchrotron Lab Placeholder
-  access_protocols: badge + scheduling
-  beamline: BL-XX
-  safety: radiation shielding, dosimetry, interlocks
-integration:
-  sync_clock: GPS-disciplined oscillator
-  data_pipeline: secure VPN + HDF5 export

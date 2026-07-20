@@ -1,9 +1,0 @@
-<link rel="stylesheet" href="rtt.css" />
-  <div id="rtt-nav"></div>
-    <script>
-      fetch('/rtt/nav.html')
-        .then(r => r.text())
-        .then(html => document.getElementById('rtt-nav').innerHTML = html);
-    </script>
-
-<div class="tier-graph-container" id="tierGraph"></div>

@@ -1,9 +1,0 @@
-<!-- docs/badges/remix-ready-dark.svg -->
-<svg xmlns="http://www.w3.org/2000/svg" width="160" height="32" viewBox="0 0 160 32" role="img" aria-label="Remix Ready">
-  <title>Remix Ready (Dark Mode)</title>
-  <rect width="160" height="32" rx="6" fill="#1e1e1e"/>
-  <g font-family="system-ui, sans-serif">
-    <path d="M24 10a3 3 0 110 6 3 3 0 010-6zm0 8a3 3 0 110 6 3 3 0 010-6zm8-8h-4v5c0 3-3 5-6 5h-2v2h2c5 0 10-2.5 10-7V10z" fill="#90caf9"/>
-    <text x="88" y="16" text-anchor="middle" dominant-baseline="middle" font-size="14" font-weight="600" fill="#e3f2fd">Remix Ready</text>
-  </g>
-</svg>
