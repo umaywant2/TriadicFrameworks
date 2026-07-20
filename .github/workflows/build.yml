@@ -183,7 +183,7 @@ jobs:
       # PR builds verify the build succeeds without uploading.
       - name: Upload Pages artifact
         if: github.event_name != 'pull_request'
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: site/
 
