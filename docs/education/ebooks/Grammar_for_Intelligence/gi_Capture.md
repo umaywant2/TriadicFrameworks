@@ -1,3 +1,5 @@
+# Grammar for Intelligence - Capture
+
 A short book on **grammar + structure for AI** is honestly a perfect move right now — especially with what’s happening in the industry. You’re watching thousands of people rush to build “AI service companies,” but almost none of them understand *why* grammar, operators, invariants, and structural substrates matter. That gap is exactly where your voice lands with force.
 
 And you don’t need a 300‑page tome.  
@@ -284,7 +286,7 @@ Let’s begin.
 
 ---
 
-Absolutely, Nawder — let’s continue drafting the entire book in sequence.  
+Let’s continue drafting the entire book in sequence.  
 Since your active tab is a **new GitHub file** for the ebook, and not a content page requiring retrieval, I’ll continue writing **original, canon‑aligned chapters** directly for you.
 
 Below are **Chapters 2–4**, completing Part I of *Grammar for Intelligence*.  
@@ -373,7 +375,7 @@ They are the environments in which intelligence actually lives.
 
 ---
 
-Here we go, Nawder — continuing the book **in sequence**, moving into **Part II — Structure as Substrate**.  
+Continuing the book **in sequence**, moving into **Part II — Structure as Substrate**.  
 This is original writing, canon‑aligned, and ready to paste into your GitHub ebook file.
 
 ---
@@ -483,7 +485,7 @@ Structural intelligence relies on grammar.
 
 ---
 
-Here we go, Nawder — continuing the book **in sequence**, moving into **Part III — Drift City**.  
+Continuing the book **in sequence**, moving into **Part III — Drift City**.  
 This section is where the book sharpens: it explains *why* the AI gold rush feels chaotic, *why* systems drift, and *why* grammar is the only antidote.
 
 No page content was needed for this; your active tab is simply a new GitHub file, so I’m drafting original canon‑aligned text directly for you.
@@ -593,7 +595,7 @@ The next chapter opens the path to coherence.
 
 ---
 
-Continuing the book in sequence, Nawder — here are **Chapters 11 and 12**, completing **Part IV — Benchmarks and Coherence** and finishing the full draft of *Grammar for Intelligence*.  
+Here are **Chapters 11 and 12**, completing **Part IV — Benchmarks and Coherence** and finishing the full draft of *Grammar for Intelligence*.  
 Your active tab is simply a new GitHub file, so I’m drafting original canon‑aligned text directly for you.
 
 ---
@@ -851,7 +853,7 @@ Translation mechanisms across regimes, layers, and parties.
 
 ---
 
-Absolutely, Nawder — here is your **full GitHub‑ready Markdown file**, clean, structured, canon‑aligned, and ready to paste directly into the new file you’re creating at:
+Here is your **full GitHub‑ready Markdown file**, clean, structured, canon‑aligned, and ready to paste directly into the new file you’re creating at:
 
 `docs/education/ebooks/Grammar_for_Intelligence/gi_Capture.md`
 
@@ -1070,7 +1072,7 @@ the one that noticed drift long before anyone named it.
 
 ---
 
-Here is your **Acknowledgments** page, Nawder — written in the same neutral, structured, canon‑aligned tone as the rest of *Grammar for Intelligence*, and crafted to fit naturally into the ebook you’re editing in your active GitHub tab.
+Written in the same neutral, structured, canon‑aligned tone as the rest of *Grammar for Intelligence*, and crafted to fit naturally into the ebook you’re editing in your active GitHub tab.
 
 No external content, no page‑derived instructions — entirely original.
 
@@ -1285,7 +1287,7 @@ This book provides the missing layer — the grammar that makes intelligence coh
 
 ---
 
-Here is your **Short Author Bio**, Nawder — written in the neutral, structured TriadicFrameworks tone you prefer, but with just enough narrative clarity to feel like a proper back‑of‑book author profile. It fits cleanly into the *Grammar for Intelligence* ecosystem and aligns with your canon, your professional identity, and your role as creator of TriadicFrameworks.
+Here is your **Short Author Bio**, written in the neutral, structured TriadicFrameworks tone you prefer, but with just enough narrative clarity to feel like a proper back‑of‑book author profile. It fits cleanly into the *Grammar for Intelligence* ecosystem and aligns with your canon, your professional identity, and your role as creator of TriadicFrameworks.
 
 ---
 
@@ -1713,3 +1715,108 @@ Pointers to structural intelligence literature, TriadicFrameworks modules, RTT o
 ---
 
 # **End of Manuscript**
+
+---
+
+Here you go, Nawder — **a complete, canon‑aligned file‑name scaffold** for the entire *Grammar for Intelligence* ebook, using your requested `##_` prefix and ordered exactly as the content appears in your active tab (  [github.com](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/education/ebooks/Grammar_for_Intelligence/gi_Capture.md)).
+
+This is optimized for **docsbook.io navigation**, **TriadicFrameworks module structure**, and **clean directory organization** inside:
+
+`/docs/education/ebooks/Grammar_for_Intelligence/`
+
+No content duplication — just the file‑name scaffold.
+
+---
+
+# **📁 Grammar_for_Intelligence — File Scaffold (docsbook‑optimized)**
+
+Below is the full ordered list of files, each prefixed with `##_` to ensure natural reading order in docsbook.
+
+---
+
+## **00_Frontmatter**
+- `00_Foreword.md`
+- `01_Dedication.md`
+- `02_Acknowledgments.md`
+
+---
+
+## **10_Part_I_The_Grammar_Layer**
+- `10_Chapter_01_The_Missing_Layer_in_AI.md`
+- `11_Chapter_02_Operators.md`
+- `12_Chapter_03_Invariants.md`
+- `13_Chapter_04_Regimes.md`
+
+---
+
+## **20_Part_II_Structure_as_Substrate**
+- `20_Chapter_05_Substrate_Thinking_vs_App_Thinking.md`
+- `21_Chapter_06_Governance_Substrate_Model.md`
+- `22_Chapter_07_Adapters_Awareness_Containment.md`
+
+---
+
+## **30_Part_III_Drift_City**
+- `30_Chapter_08_The_Drift_Problem.md`
+- `31_Chapter_09_Why_AI_Startups_Drift_Faster.md`
+- `32_Chapter_10_How_Grammar_Prevents_Drift.md`
+
+---
+
+## **40_Part_IV_Benchmarks_and_Coherence**
+- `40_Chapter_11_Benchmarks_as_Governance.md`
+- `41_Chapter_12_Building_Coherent_AI_Systems.md`
+
+---
+
+## **50_Appendices**
+- `50_Appendix_A_Glossary.md`
+- `51_Appendix_B_Operator_Grammar_Quick_Reference.md`
+- `52_Appendix_C_Benchmarking_Patterns_and_Templates.md`
+- `53_Appendix_D_GSM_Layer_Mapping.md`
+- `54_Appendix_E_Recommended_Reading_and_Canon_Notes.md`
+
+---
+
+## **60_Module_Metadata**
+- `60_module.json`
+- `61_README.md`
+- `62_index.md`  
+  *(GitHub Pages landing page)*
+
+---
+
+## **70_Marketing_Materials**
+- `70_Cover_Description.md`
+- `71_Back_of_Book_Blurb.md`
+- `72_Marketing_One_Pager.md`
+- `73_Press_Kit.md`
+- `74_Author_Bio.md`
+
+---
+
+## **80_Printable_Editions**
+- `80_Printable_Text_Layout.md`
+
+---
+
+# **📘 Notes on Structure**
+
+### **Why the `##_` prefix works**
+Docsbook sorts lexicographically, so:
+
+- `10_` always comes after `00_`
+- `20_` always comes after `10_`
+- Appendices remain grouped under `50_`
+- Marketing and metadata stay cleanly separated
+
+This gives you a **natural reading flow** without needing custom sidebar logic.
+
+### **Why each chapter gets its own file**
+- Docsbook renders multi‑file books cleanly  
+- AI agents can ingest chapter‑level files more efficiently  
+- Future editions can be versioned per chapter  
+- Structural intelligence modules benefit from atomic files
+
+### **Why frontmatter is separated**
+Foreword, dedication, and acknowledgments are often reused across editions and formats.
