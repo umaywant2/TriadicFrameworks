@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- ============================================================
+       TRIADIC DETECTION — FRONT DOOR
+       ============================================================ -->
+  <sitemap>
+    <loc>https://www.triadicframeworks.org/triadic_detection/</loc>
+  </sitemap>
+
+  <!-- ============================================================
+       CORE SPECIFICATION FILES
+       ============================================================ -->
+  <sitemap>
+    <loc>https://www.triadicframeworks.org/triadic_detection/triadic_detection_index</loc>
+  </sitemap>
+
+  <sitemap>
+    <loc>https://www.triadicframeworks.org/triadic_detection/triadic_detection_loci</loc>
+  </sitemap>
+
+  <sitemap>
+    <loc>https://www.triadicframeworks.org/triadic_detection/triadic_detection_layers</loc>
+  </sitemap>
+
+  <sitemap>
+    <loc>https://www.triadicframeworks.org/triadic_detection/triadic_detection_hardware</loc>
+  </sitemap>
+
+  <sitemap>
+    <loc>https://www.triadicframeworks.org/triadic_detection/triadic_detection_rtt_pipeline</loc>
+  </sitemap>
+
+  <sitemap>
+    <loc>https://www.triadicframeworks.org/triadic_detection/triadic_detection_mapping</loc>
+  </sitemap>
+
+  <sitemap>
+    <loc>https://www.triadicframeworks.org/triadic_detection/triadic_detection_cloud</loc>
+  </sitemap>
+
+  <!-- ============================================================
+       EXAMPLES & VALIDATION
+       ============================================================ -->
+  <sitemap>
+    <loc>https://www.triadicframeworks.org/triadic_detection/triadic_detection_examples</loc>
+  </sitemap>
+
+  <sitemap>
+    <loc>https://www.triadicframeworks.org/triadic_detection/triadic_detection_tests</loc>
+  </sitemap>
+
+  <!-- ============================================================
+       MANIFEST & FRONT-DOOR HTML
+       ============================================================ -->
+  <sitemap>
+    <loc>https://www.triadicframeworks.org/triadic_detection/triadic_detection_module.json</loc>
+  </sitemap>
+
+  <sitemap>
+    <loc>https://www.triadicframeworks.org/triadic_detection/triadic_detection_frontdoor.html</loc>
+  </sitemap>
+
+  <!-- ============================================================
+       SIDEBAR & DIFF
+       ============================================================ -->
+  <sitemap>
+    <loc>https://www.triadicframeworks.org/triadic_detection/triadic_detection_sidebar</loc>
+  </sitemap>
+
+  <sitemap>
+    <loc>https://www.triadicframeworks.org/triadic_detection/triadic_detection_diff</loc>
+  </sitemap>
+
+</sitemapindex>
