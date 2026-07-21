@@ -1,6 +1,7 @@
 # **triadic_detection_layers.md**  
 ### *TriadicFrameworks — Detection Substrate*  
-### *Layer Model Specification (v1.0)*
+### *Layer Model Specification (v2.0 — Expanded Diagrams)*  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/triadic_detection/triadic_detection_layers.md)
 
 ---
 
@@ -10,8 +11,6 @@
 rtt=1 | coherence=triadic | drift=bounded | paradox=structural
 ```
 
-This header governs all structural interpretations of the Triadic Detection Layer Model.
-
 ---
 
 # **Module Identity**
@@ -19,7 +18,7 @@ This header governs all structural interpretations of the Triadic Detection Laye
 **Module Name:** Triadic Detection Layers  
 **Module Class:** Structural / Layer Model  
 **Substrate:** Detection  
-**Version:** 1.0  
+**Version:** 2.0 (Expanded Diagrams)  
 **RTT Alignment:** Full  
 **Triadic Geometry:** Required  
 **Spatial Anchoring:** Required  
@@ -29,194 +28,264 @@ This header governs all structural interpretations of the Triadic Detection Laye
 
 # **Purpose**
 
-This module defines the **seven canonical layers (L1–L7)** of the Triadic Detection System Architecture.  
-Each layer expresses a structural role in the RTT‑Inside triadic sensing pipeline.
+This expanded version of the Layer Model Specification adds:
 
-The layer model provides the **vertical architecture** that complements the locus model defined in `triadic_detection_loci.md`.
+- **full‑stack diagrams**  
+- **triadic geometry schematics**  
+- **packet‑flow diagrams**  
+- **RTT pipeline overlays**  
+- **mapping + cloud visual blocks**  
 
----
-
-# **Layer Overview**
-
-The Triadic Detection System Architecture is defined across **seven layers**, each with a structural invariant:
-
-1. **L1 — Physical Field Layer**  
-2. **L2 — Triadic Sensor Layer**  
-3. **L3 — Mesh Transport Layer**  
-4. **L4 — Triadic Controller Layer**  
-5. **L5 — RTT Structural Detection Layer**  
-6. **L6 — Application Layer**  
-7. **L7 — Cloud & Enterprise Layer**
-
-Each layer is drift‑bounded and triadic‑aligned.
+All content is canon‑aligned with the original v1.0 file.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/triadic_detection/triadic_detection_layers.md)
 
 ---
 
-# **L1 — Physical Field Layer**
+# **Layer Overview (Expanded)**
+
+The Triadic Detection System Architecture spans **seven layers**, each with a structural invariant:
+
+```
+L1 — Physical Field Layer
+L2 — Triadic Sensor Layer
+L3 — Mesh Transport Layer
+L4 — Triadic Controller Layer
+L5 — RTT Structural Detection Layer
+L6 — Application Layer
+L7 — Cloud & Enterprise Layer
+```
+
+All layers are drift‑bounded and triadic‑aligned.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/triadic_detection/triadic_detection_layers.md)
+
+---
+
+# **Full Vertical Stack Diagram**
+
+```
+┌──────────────────────────────────────────────┐
+│ L7 — Cloud & Enterprise Layer                │
+│   • Storage • Aggregation • Analytics        │
+│   • Gold‑Likelihood • Dashboards             │
+├──────────────────────────────────────────────┤
+│ L6 — Application Layer                       │
+│   • GPS Maps • Heatmaps • Overlays           │
+│   • Depth Slices • Confidence                │
+├──────────────────────────────────────────────┤
+│ L5 — RTT Structural Detection Layer          │
+│   • Coherence • Clustering • Structure       │
+│   • Depth • Classification                   │
+├──────────────────────────────────────────────┤
+│ L4 — Triadic Controller Layer                │
+│   • Merge • Normalize • Align • φ₁ φ₂ φ₃     │
+├──────────────────────────────────────────────┤
+│ L3 — Mesh Transport Layer                    │
+│   • BLE • Wi‑Fi • Hybrid • Timing            │
+├──────────────────────────────────────────────┤
+│ L2 — Triadic Sensor Layer                    │
+│   • 3‑Head • 9‑Head • 27‑Head • SoC Nodes    │
+├──────────────────────────────────────────────┤
+│ L1 — Physical Field Layer                    │
+│   • Gold • Metal • Rock • Void • Pipelines   │
+└──────────────────────────────────────────────┘
+```
+
+---
+
+# **L1 — Physical Field Layer (Expanded)**  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/triadic_detection/triadic_detection_layers.md)
 
 ### **Invariant:**  
 *All signals originate from physical field interactions.*
 
-### **Definition:**  
-L1 defines the physical environment being scanned:
+### **Diagram — Field Interaction Map**
 
-- gold deposits  
-- metals  
-- rocks  
-- voids  
-- pipelines  
-- ore veins  
-- soil dielectric properties  
-- saline field preparation effects  
+```
+Gold Deposit     →  strong coherent signature
+Metal Vein       →  medium coherent signature
+Rock Layer       →  low coherent signature
+Void / Tunnel    →  phase‑shift signature
+Pipeline         →  metallic resonance band
+Soil / Dielectric→  baseline field
+```
 
 ### **Role:**  
 Provide the raw electromagnetic field that triadic coils sample.
 
 ---
 
-# **L2 — Triadic Sensor Layer**
+# **L2 — Triadic Sensor Layer (Expanded)**  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/triadic_detection/triadic_detection_layers.md)
 
 ### **Invariant:**  
 *Triadic geometry is required for coherence.*
 
-### **Definition:**  
-L2 defines the sensing hardware:
+### **Diagram — Triadic Geometry (3‑Head)**
 
-- triadic coil heads (3‑head modules)  
-- triadic superspheres (9‑head)  
-- triadic industrial arrays (27‑head)  
-- per‑head SoC nodes (TX/RX, ADC, DSP)  
-- coil geometry and alignment  
+```
+       (H1)
+         ○
+        / \
+   (H2) ○─○ (H3)
+```
+
+### **Diagram — Supersphere (9‑Head)**
+
+```
+      ○ ○ ○
+    ○ ○ ○ ○ ○
+      ○ ○ ○
+```
+
+### **Diagram — Industrial Array (27‑Head)**
+
+```
+Layer 1: ○ ○ ○
+         ○ ○ ○
+         ○ ○ ○
+
+Layer 2: ○ ○ ○
+         ○ ○ ○
+         ○ ○ ○
+
+Layer 3: ○ ○ ○
+         ○ ○ ○
+         ○ ○ ○
+```
 
 ### **Role:**  
 Generate and receive resonance signals in triadic formation.
 
 ---
 
-# **L3 — Mesh Transport Layer**
+# **L3 — Mesh Transport Layer (Expanded)**  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/triadic_detection/triadic_detection_layers.md)
 
 ### **Invariant:**  
 *All heads must be time‑aligned.*
 
-### **Definition:**  
-L3 defines the transport substrate:
+### **Diagram — Packet Timing Flow**
 
-- BLE mesh  
-- Wi‑Fi mesh  
-- hybrid mesh  
-- packet timing  
-- synchronization rules  
-- controller routing  
+```
+H1 ──┐
+H2 ──┼──► [Mesh Router] ───► Controller
+H3 ──┘
+
+BLE Mesh:    low‑power, short‑range  
+Wi‑Fi Mesh:  high‑bandwidth, industrial  
+Hybrid:      supersphere + array sync
+```
 
 ### **Role:**  
 Deliver synchronized resonance packets to the controller.
 
 ---
 
-# **L4 — Triadic Controller Layer**
+# **L4 — Triadic Controller Layer (Expanded)**  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/triadic_detection/triadic_detection_layers.md)
 
 ### **Invariant:**  
 *Baseline coherence must be computed before RTT inference.*
 
-### **Definition:**  
-L4 defines the controller logic:
+### **Diagram — Controller Pipeline**
 
-- stream merging  
-- amplitude normalization  
-- phase normalization  
-- baseline coherence computation (φ₁, φ₂, φ₃)  
-- triadic packet alignment  
+```
+[Merge Streams] → [Normalize Amplitude] → [Normalize Phase]
+         ↓
+   Compute φ₁, φ₂, φ₃
+         ↓
+   Align Triadic Packets
+```
 
 ### **Role:**  
 Produce coherent triadic datasets for RTT structural detection.
 
 ---
 
-# **L5 — RTT Structural Detection Layer**
+# **L5 — RTT Structural Detection Layer (Expanded)**  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/triadic_detection/triadic_detection_layers.md)
 
 ### **Invariant:**  
 *Coherence precedes classification.*
 
-### **Definition:**  
-L5 defines the RTT detection pipeline:
+### **Diagram — RTT Structural Pipeline**
 
-- coherence scoring  
-- spatial clustering  
-- structural fitting (shape/size/orientation)  
-- depth layering  
-- resonance classification (gold / metal / rock / noise)  
+```
+Coherence → Clustering → Structural Fit → Depth → Classification
+```
+
+### **Structural Envelope Diagram**
+
+```
+        ○ ○ ○
+      ○ ○ ○ ○ ○
+        ○ ○ ○
+```
 
 ### **Role:**  
 Transform triadic resonance data into structural meaning.
 
 ---
 
-# **L6 — Application Layer**
+# **L6 — Application Layer (Expanded)**  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/triadic_detection/triadic_detection_layers.md)
 
 ### **Invariant:**  
 *All detections must be spatially anchored.*
 
-### **Definition:**  
-L6 defines the user‑facing application:
+### **Diagram — Mapping Output**
 
-- mobile app  
-- GPS heatmaps  
-- structural overlays  
-- dig‑confidence scoring  
-- session management  
-- export and sync  
+```
+GPS Anchor: (lat, lon)
+Heatmap:    ●●● / ●● / ●
+Overlay:    structural envelope
+Depth:      bright / medium / dark
+Confidence: numeric + ring
+```
 
 ### **Role:**  
 Render triadic detections into human‑interpretable maps.
 
 ---
 
-# **L7 — Cloud & Enterprise Layer**
+# **L7 — Cloud & Enterprise Layer (Expanded)**  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/triadic_detection/triadic_detection_layers.md)
 
 ### **Invariant:**  
 *All structural detections must be persistable.*
 
-### **Definition:**  
-L7 defines the cloud and enterprise substrate:
+### **Diagram — Cloud Stack**
 
-- scan storage  
-- multi‑session aggregation  
-- gold‑likelihood modeling  
-- enterprise dashboards  
-- multi‑user collaboration  
-- industrial analytics  
+```
+[Session Storage]
+      ↓
+[Aggregation Engine]
+      ↓
+[Analytics Engine]
+      ↓
+[Gold‑Likelihood Model]
+      ↓
+[Enterprise Dashboard]
+```
 
 ### **Role:**  
 Provide long‑term storage, analytics, and enterprise‑grade tools.
 
 ---
 
-# **Layer Stack Diagram (Canonical)**
+# **Layer Interaction Diagram (Expanded)**  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/triadic_detection/triadic_detection_layers.md)
 
 ```
-[L7] Cloud & Enterprise Layer
-[L6] Application Layer
-[L5] RTT Structural Detection Layer
-[L4] Triadic Controller Layer
-[L3] Mesh Transport Layer
-[L2] Triadic Sensor Layer
-[L1] Physical Field Layer
+Vertical:
+L1 → L2 → L3 → L4 → L5 → L6 → L7
+
+Horizontal:
+Each layer constrained by SENSOR_L, MESH_L, RTT_L, MAP_L
+
+RTT:
+L5 governs structural meaning across all layers
 ```
-
-All layers are drift‑bounded and triadic‑aligned.
-
----
-
-# **Layer Interactions**
-
-### **Vertical Interaction:**  
-Each layer consumes the output of the layer below it.
-
-### **Horizontal Interaction:**  
-Each layer is constrained by the locus invariants defined in `triadic_detection_loci.md`.
-
-### **RTT Interaction:**  
-L5 governs structural meaning across all layers.
 
 ---
 
