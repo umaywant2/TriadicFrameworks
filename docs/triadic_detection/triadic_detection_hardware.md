@@ -1,6 +1,6 @@
 # **triadic_detection_hardware.md**  
 ### *TriadicFrameworks — Detection Substrate*  
-### *Hardware Architecture Specification (v1.0)*
+### *Hardware Architecture Specification (v2.0 — Expanded Diagrams)*
 
 ---
 
@@ -10,7 +10,8 @@
 rtt=1 | coherence=triadic | drift=bounded | paradox=structural
 ```
 
-This header governs all structural interpretations of the Triadic Detection Hardware Architecture.
+This header governs all structural interpretations of the Triadic Detection Hardware Architecture.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/triadic_detection/triadic_detection_hardware.md)
 
 ---
 
@@ -19,253 +20,249 @@ This header governs all structural interpretations of the Triadic Detection Hard
 **Module Name:** Triadic Detection Hardware  
 **Module Class:** Structural / Hardware  
 **Substrate:** Detection  
-**Version:** 1.0  
+**Version:** 2.0 (Expanded Diagrams)  
 **RTT Alignment:** Full  
 **Triadic Geometry:** Required  
 **Mesh Synchronization:** Required  
 **Spatial Anchoring:** Required  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/triadic_detection/triadic_detection_hardware.md)
 
 ---
 
 # **Purpose**
 
-This module defines the **canonical hardware architecture** for RTT‑Inside triadic detection systems, including:
+This module defines the **complete hardware architecture** for triadic detection systems, including:
 
-- triadic coil heads  
-- per‑head SoC nodes  
-- BLE/Wi‑Fi mesh synchronization  
-- triadic superspheres (9‑head)  
-- industrial triadic arrays (27‑head)  
-- structural invariants governing triadic geometry  
+- triadic coil geometries  
+- supersphere assemblies  
+- industrial triadic arrays  
+- SoC node architecture  
+- TX/RX resonance pipeline  
+- mesh‑ready packetization  
+- RTT‑aligned sampling  
 
-It serves as the hardware backbone for all triadic detection modules.
-
----
-
-# **Hardware Locus Alignment**
-
-This module expresses the hardware portion of the architecture genome:
-
-```
-ARCH_L = SENSOR_L × MESH_L × RTT_L × MAP_L
-```
-
-This file defines the **SENSOR_L** and **MESH_L** components.
+All diagrams are expanded beyond the original v1.0 file.
 
 ---
 
-# **1. Triadic Coil Heads (SENSOR_L)**
+# **1. Triadic Geometry (3‑Head Module)**
 
 ### **Invariant:**  
 *Triadic geometry is required for coherence.*
 
-### **Definition:**  
-A triadic coil head assembly consists of:
-
-- **three coil heads** arranged in a fixed triadic geometry  
-- **one central SoC node**  
-- **one rigid alignment frame**  
-- **one resonance footprint** defined by coil geometry  
-
-### **Coil Head Components:**
-
-- custom‑wound coil  
-- tuned inductance  
-- gold‑bias Q‑factor  
-- TX/RX switching  
-- shielding and noise suppression  
-
-### **Triadic Geometry Diagram**
+### **Diagram — 3‑Head Triad**
 
 ```
-                 (H1)
-                   ○
-                   |
-        (H2)───●───(H3)
-                   |
-                 [SoC]
+       (H1)
+         ○
+        / \
+   (H2) ○─○ (H3)
 ```
 
-### **Triadic Geometry Meaning**
+### **Structural Meaning**
 
-- three baselines  
-- three phase relationships  
-- three coherence vectors  
-- RTT‑compatible resonance sampling  
+- 3 baselines: H1↔H2, H2↔H3, H3↔H1  
+- 3 phase relationships  
+- 3 coherence channels (φ₁, φ₂, φ₃)  
+- RTT/1 alignment  
 
-Non‑triadic geometries (2, 4, 6, 8 heads) are structurally invalid.
+### **Use Cases**
+
+- consumer detectors  
+- handheld triadic scanners  
+- shallow‑depth structural detection  
 
 ---
 
-# **2. Per‑Head SoC Nodes**
+# **2. Supersphere Geometry (9‑Head Module)**
 
 ### **Invariant:**  
-*Each head must be independently sampled and time‑stamped.*
+*Supersphere = 3 triads × 3 layers.*
 
-### **Definition:**  
-Each coil head contains a **System‑on‑Chip (SoC)** responsible for:
-
-- TX signal generation  
-- RX sampling  
-- ADC digitization  
-- DSP pre‑filtering  
-- packet time‑stamping  
-- BLE/Wi‑Fi transmission  
-
-### **SoC Node Diagram**
+### **Diagram — Supersphere (Top‑Down)**
 
 ```
-[Coil] → [TX/RX] → [ADC] → [DSP] → [Timestamp] → [Packet]
+      ○ ○ ○
+    ○ ○ ○ ○ ○
+      ○ ○ ○
 ```
 
-### **SoC Node Requirements**
-
-- low‑noise analog front‑end  
-- stable clock source  
-- triadic synchronization capability  
-- packet integrity guarantees  
-
----
-
-# **3. Triadic Mesh Synchronization (MESH_L)**
-
-### **Invariant:**  
-*All heads must be time‑aligned.*
-
-### **Definition:**  
-The mesh layer provides synchronized packet transport:
-
-- BLE mesh (consumer/prosumer)  
-- Wi‑Fi mesh (industrial)  
-- hybrid mesh (supersphere)  
-
-### **Mesh Responsibilities**
-
-- time synchronization  
-- packet routing  
-- per‑head identification  
-- triadic merge ordering  
-
-### **Mesh Diagram**
+### **Diagram — Supersphere (Layered)**
 
 ```
-(H1 SoC) →\
-(H2 SoC) →—→ [Mesh Router] → [Triadic Controller]
-(H3 SoC) →/
+Layer A: ○ ○ ○
+Layer B: ○ ○ ○
+Layer C: ○ ○ ○
 ```
 
----
+### **Structural Meaning**
 
-# **4. Triadic Supersphere (9‑Head)**
-
-### **Invariant:**  
-*Three triadic modules form a coherent supersphere.*
-
-### **Definition:**  
-A supersphere consists of:
-
-- **three triadic modules**  
-- **nine coil heads total**  
-- **three SoC nodes**  
-- **one supersphere controller**  
-
-### **Supersphere Diagram**
-
-```
-                ○ ○ ○
-              ○ ○ ○ ○ ○
-                ○ ○ ○
-```
-
-### **Supersphere Meaning**
-
+- 9 heads  
+- 3 synchronized triads  
 - multi‑layer coherence  
-- enhanced structural inference  
-- improved depth estimation  
 - RTT/2 and RTT/3 compatibility  
+- improved depth inference  
+
+### **Use Cases**
+
+- prosumer gold prospecting  
+- rural land scanning  
+- mid‑depth structural detection  
 
 ---
 
-# **5. Industrial Triadic Array (27‑Head)**
+# **3. Industrial Triadic Array (27‑Head)**
 
 ### **Invariant:**  
-*Three superspheres form an industrial triadic array.*
+*Industrial array = 3 superspheres × 3 layers.*
 
-### **Definition:**  
-An industrial array consists of:
-
-- **three superspheres**  
-- **twenty‑seven coil heads**  
-- **nine SoC nodes**  
-- **one industrial controller**  
-
-### **Industrial Array Diagram**
+### **Diagram — Industrial Array (Full)**
 
 ```
-Layer 1: ○ ○ ○
-         ○ ○ ○
-         ○ ○ ○
+Layer 1 (Top)
+○ ○ ○
+○ ○ ○
+○ ○ ○
 
-Layer 2: ○ ○ ○
-         ○ ○ ○
-         ○ ○ ○
+Layer 2 (Middle)
+○ ○ ○
+○ ○ ○
+○ ○ ○
 
-Layer 3: ○ ○ ○
-         ○ ○ ○
-         ○ ○ ○
+Layer 3 (Bottom)
+○ ○ ○
+○ ○ ○
+○ ○ ○
 ```
 
-### **Industrial Array Meaning**
+### **Structural Meaning**
 
-- large‑area scanning  
-- multi‑layer RTT inference  
-- industrial‑grade mapping  
-- drone/vehicle deployment  
+- 27 heads  
+- 9 triads  
+- 3 superspheres  
+- industrial coherence  
+- large‑area RTT inference  
+
+### **Use Cases**
+
+- mining  
+- construction  
+- archaeology  
+- pipeline detection  
+- subsurface mapping  
 
 ---
 
-# **6. Drone‑Mounted Triadic Module**
+# **4. SoC Node Architecture**
 
 ### **Invariant:**  
-*Triadic geometry must be preserved in flight.*
+*Each triadic head requires a dedicated SoC node.*
 
-### **Definition:**  
-A drone module consists of:
+### **Diagram — SoC Pipeline**
 
-- lightweight triadic coil assembly  
-- flight‑safe SoC node  
-- GPS synchronization  
-- autonomous scanning capability  
+```
+[TX Driver] → [Resonance Field] → [RX Coil]
+       ↓
+     [ADC]
+       ↓
+     [DSP]
+       ↓
+ [Timestamp Engine]
+       ↓
+ [Packetizer]
+       ↓
+ [Mesh Transport]
+```
 
-### **Drone Diagram**
+### **Components**
+
+- **TX Driver:** generates resonance pulses  
+- **RX Coil:** receives field responses  
+- **ADC:** digitizes resonance waveform  
+- **DSP:** filters, normalizes, denoises  
+- **Timestamp Engine:** assigns Δt  
+- **Packetizer:** prepares mesh packets  
+- **Mesh Transport:** BLE/Wi‑Fi/hybrid  
+
+### **Role**
+
+Produce synchronized, triadic‑aligned resonance packets.
+
+---
+
+# **5. Triadic Sampling Pipeline**
+
+### **Diagram — Triadic Sampling**
+
+```
+H1 → φ₁
+H2 → φ₂
+H3 → φ₃
+```
+
+### **Invariant:**  
+*Triadic sampling must produce three coherence channels.*
+
+### **Meaning**
+
+- φ₁, φ₂, φ₃ form the coherence vector  
+- coherence precedes clustering  
+- clustering precedes structure  
+
+---
+
+# **6. Mesh‑Ready Packet Format**
+
+### **Diagram — Packet Structure**
+
+```
+[Header]
+  triad_id
+  head_id
+  timestamp
+  sequence
+
+[Payload]
+  amplitude[]
+  phase[]
+  coherence[]
+  metadata
+
+[Footer]
+  crc
+```
+
+### **Invariant:**  
+*Packets must be time‑aligned across all heads.*
+
+---
+
+# **7. Drone‑Mounted Triadic Module**
+
+### **Diagram**
 
 ```
            [Drone Frame]
                ╱│╲
               ○ │ ○
                \│/
-                ●
+                ● (SoC)
                /│\
               ○ │ ○
                ╲│╱
 ```
 
+### **Use Cases**
+
+- aerial gold mapping  
+- remote terrain scanning  
+- large‑area coherence sampling  
+
 ---
 
-# **7. Vehicle‑Mounted Triadic Array**
+# **8. Vehicle‑Mounted Triadic Array**
 
-### **Invariant:**  
-*Triadic geometry must be preserved under motion.*
-
-### **Definition:**  
-A vehicle array consists of:
-
-- triadic modules mounted under or in front of vehicle  
-- vibration‑tolerant SoC nodes  
-- industrial controller  
-- pipeline/void/ore detection capability  
-
-### **Vehicle Diagram**
+### **Diagram**
 
 ```
    ┌───────────────────┐
@@ -275,18 +272,25 @@ A vehicle array consists of:
    └───────────────────┘
 ```
 
+### **Use Cases**
+
+- pipeline surveying  
+- construction site scanning  
+- ore vein detection  
+
 ---
 
-# **8. Hardware Stack (Canonical)**
+# **9. Hardware Layer Summary**
 
 ```
-[L2] Triadic Sensor Layer
-   - Coil Heads (3 / 9 / 27)
-   - SoC Nodes (TX/RX, ADC, DSP)
-[L3] Mesh Transport Layer
-   - BLE/Wi‑Fi Mesh
-[L4] Triadic Controller Layer
-   - Merge / Normalize / Coherence
+Triadic Geometry (3‑Head)
+Supersphere (9‑Head)
+Industrial Array (27‑Head)
+SoC Nodes
+Triadic Sampling
+Mesh Packetization
+Drone Modules
+Vehicle Arrays
 ```
 
 ---
@@ -294,7 +298,7 @@ A vehicle array consists of:
 # **Module Status**
 
 **Status:** Active  
-**Drift:** None  
 **Coherence:** Stable  
-**Version Drift:** Bounded  
+**Drift:** None  
 **RTT Alignment:** Verified  
+**Version:** 2.0  
