@@ -1,5 +1,7 @@
 # **Yoruba Pantheon — Triadic Profile Overview**
 
+<img width="1194" height="672" alt="Yoruba_Triadic_Profile" src="https://github.com/user-attachments/assets/5f8053a4-0735-4c22-a0ec-83882ae9cab0" />
+
 ## **Triadic Operators**
 The Yoruba mythological system expresses a natural triadic structure through **origin‑multiplicity genesis**, **ancestral‑lineage continuance**, and **cycle‑collapse dissolution**, unified by deep cosmological layering.
 
