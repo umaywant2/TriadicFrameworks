@@ -1,3 +1,5 @@
+<img width="1024" height="1024" alt="chaos_theory" src="https://github.com/user-attachments/assets/a7546a61-96c8-4b89-a415-e4a5186c54a8" />
+
 # Chaos Theory — A Regime‑Aware Module  
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/chaos_theory/module.json) — Agentic module schema role assignments
