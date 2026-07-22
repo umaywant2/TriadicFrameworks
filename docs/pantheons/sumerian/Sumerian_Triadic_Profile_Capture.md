@@ -1,13 +1,3 @@
-Perfect — now that I can see your **Sumerian_Triadic_Profile_Capture.md** tab (  [github.com](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/pantheons/sumerian/Sumerian_Triadic_Profile_Capture.md)), we can begin the *next major phase* of your pantheon work:
-
-> **Extract every named Sumerian character, deity, demi‑deity, cosmic agent, monster, hybrid, realm‑being, and mythic operator.**
-
-To keep this **canon‑aligned**, **operator‑first**, and **ready for triadic placement**, I’ll generate a **complete Sumerian Named‑Entity Master List** — the foundation for your supersphere, hex‑map, inverted‑star, and lostational geometry.
-
-This list is **fully curated**, **triadic‑aware**, and **structured for immediate use** in your capture file.
-
----
-
 # ⭐ **Sumerian Named Characters & Godly Figures (Master List)**  
 *(Triadic‑ready · canonical · complete)*
 
@@ -1381,13 +1371,16 @@ FLOW ----+   EMERGENT FIELD
                * Written Knowledge
                * Underworld Order
 ```
-| Enlil       | Decree projection    | ALL fields via storm        | STORM-DECREE / AN-BROADCAST     |
-| Enki        | Wisdom projection    | Void . Shadow . Liminal     | ABZU-WAVE / CRAFT-EMIT          |
-| Inanna      | War/love projection  | Flow . Liminal . Shadow     | DUAL-FORCE / LOVE-WAR-EMIT      |
-| Ninurta     | Warrior projection   | Dimensional . Flow          | HERO-STRIKE / AG-FORCE          |
-| Utu/Shamash | Solar projection     | Clarity . Dimensional       | SOLAR-BEAM / JUSTICE-RAY        |
-| An/Anu      | Sovereign projection | ALL fields apex broadcast   | APEX-RADIANCE / SOVEREIGN-FIELD |
-| Enki's Mes  | Cultural projection  | Flow . Emergent             | MES-BROADCAST / CULTURE-EMIT    |
+
+| Operator    | Role                 | Clarity Function            | Substrate                       | 
+|-------------|----------------------|-----------------------------|---------------------------------|  
+| Enlil       | Decree projection    | ALL fields via storm        | STORM-DECREE / AN-BROADCAST     |  
+| Enki        | Wisdom projection    | Void . Shadow . Liminal     | ABZU-WAVE / CRAFT-EMIT          |  
+| Inanna      | War/love projection  | Flow . Liminal . Shadow     | DUAL-FORCE / LOVE-WAR-EMIT      |  
+| Ninurta     | Warrior projection   | Dimensional . Flow          | HERO-STRIKE / AG-FORCE          |  
+| Utu/Shamash | Solar projection     | Clarity . Dimensional       | SOLAR-BEAM / JUSTICE-RAY        |  
+| An/Anu      | Sovereign projection | ALL fields apex broadcast   | APEX-RADIANCE / SOVEREIGN-FIELD |  
+| Enki's Mes  | Cultural projection  | Flow . Emergent             | MES-BROADCAST / CULTURE-EMIT    |  
 
 ### Projection Vector Diagram
 
