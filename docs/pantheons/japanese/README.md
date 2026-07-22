@@ -1,5 +1,7 @@
 # **Japanese Pantheon — Triadic Profile Overview**
 
+<img width="1194" height="672" alt="Japanese_Triadic_Profile" src="https://github.com/user-attachments/assets/789139ab-72ef-42ee-a361-98145aee3ac0" />
+
 ## **Triadic Operators**
 The Japanese (Shinto) mythological system expresses a natural triadic structure through **cosmic emergence**, **ritual continuance**, and **impurity‑driven dissolution**.
 
