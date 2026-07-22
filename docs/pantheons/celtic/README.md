@@ -1,5 +1,7 @@
 # **Celtic Pantheon — Triadic Profile Overview**
 
+<img width="1194" height="672" alt="Celtic_Triadic_Profile" src="https://github.com/user-attachments/assets/879ce685-4750-468f-b139-deafb7953872" />
+
 ## **Triadic Operators**
 The Celtic mythological system expresses a natural triadic structure through **tribal emergence**, **ecological continuance**, and **fate‑driven dissolution**.
 
