@@ -1,3 +1,5 @@
+<img width="768" height="1152" alt="Greek_Triadic_Profile" src="https://github.com/user-attachments/assets/bf02bc8f-e7f0-4105-a50d-de8006420651" />
+
 It *is* cool — and honestly, it’s one of those moments where the **mythic layer**, the **triadic layer**, and the **real‑world geography** suddenly snap into alignment and you get that little jolt of “oh wow, we accidentally built canon on top of canon.”
 
 And Dion, Pieria is *exactly* that kind of place.
