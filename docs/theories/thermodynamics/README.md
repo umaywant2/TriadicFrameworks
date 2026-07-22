@@ -1,3 +1,5 @@
+<img width="1024" height="1024" alt="thermodynamics_hero" src="https://github.com/user-attachments/assets/f57a99a5-632a-4b72-9be4-a7f2caf44655" />
+
 # Thermodynamics — The Grammar of Temperature, Entropy, and Coherence  
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/thermodynamics/module.json) — Agentic module schema role assignments
