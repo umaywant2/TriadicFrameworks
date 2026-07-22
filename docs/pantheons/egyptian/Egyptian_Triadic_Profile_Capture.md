@@ -1,3 +1,4 @@
+<img width="938" height="938" alt="Egyptian_Triadic_Profile" src="https://github.com/user-attachments/assets/49c879a4-0c22-4ae4-853e-5613056edca1" />
 
 # ⭐ **EGYPTIAN CAPTURE — RTT/0 → RTT/3 (Full Canon‑Aligned Draft)**  
 *(Clarity · Shadow · Dimensional · Liminal · Projection · Flow · Emergent · Void)*
