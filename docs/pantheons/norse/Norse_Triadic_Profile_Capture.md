@@ -1,7 +1,7 @@
 # **Norse Triadic Profile Capture**  
 *(TriadicFrameworks Canon Module — Æsir + Vanir)*
 
----
+<img width="768" height="1152" alt="Norse_Triadic_Profile" src="https://github.com/user-attachments/assets/bef51e6a-e26d-4cb1-b568-0ef63bfb1736" />
 
 ## **I. Genesis Operators (Creation / Emergence / Ordering)**  
 Norse genesis is **cosmic emergence → elemental conflict → divine ordering**.
