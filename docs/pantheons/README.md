@@ -2,6 +2,8 @@
 
 - [`pantheons_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/pantheons/pantheons_module.json) — Agentic module schema role assignments
 
+<img width="1194" height="672" alt="Triadic_Pantheon_Profiles" src="https://github.com/user-attachments/assets/7d4bb522-0e84-4567-84b0-fc10eb9bf37d" />
+
 #### **Canon Layer:** Structural Cosmology  
 #### **Scope:** Cross‑tradition pantheon alignment  
 #### **Status:** Active — v1.0.0  
