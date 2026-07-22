@@ -1,5 +1,7 @@
 # **Celtic Pantheon — Triadic Profile Overview**
 
+- [`celtic_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/pantheons/celtic/celtic_module.json) — Agentic module schema role assignments
+
 <img width="1194" height="672" alt="Celtic_Triadic_Profile" src="https://github.com/user-attachments/assets/879ce685-4750-468f-b139-deafb7953872" />
 
 ## **Triadic Operators**
