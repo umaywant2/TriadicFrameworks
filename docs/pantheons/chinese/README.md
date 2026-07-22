@@ -1,5 +1,7 @@
 # **Chinese Pantheon — Triadic Profile Overview**
 
+- [`chinese_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/pantheons/chinese/chinese_module.json) — Agentic module schema role assignments
+
 <img width="1194" height="672" alt="Chinese_Triadic_Profile" src="https://github.com/user-attachments/assets/d7e234e0-9938-4d1d-b44b-93124cf1a068" />
 
 ## **Triadic Operators**
