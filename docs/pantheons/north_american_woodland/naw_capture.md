@@ -1,6 +1,9 @@
 # **North American Woodland Pantheon — Canonical Capture (RTT/1 Format)**  
 *(TriadicFrameworks Pantheon Series)*
 
+<img width="1194" height="672" alt="naw_triadic_profile" src="https://github.com/user-attachments/assets/dbc6b090-33c8-4dde-b48e-43fed81afa22" />
+
+
 ## **Identity**  
 The **North American Woodland Pantheon** models the triadic operator systems expressed across Adena, Hopewell, Fort Ancient, and Late Woodland cultural complexes.  
 It captures the shared cosmological grammar of **Bird / Serpent / Underworld**, earthwork geometry, burial‑complex operators, agricultural resonance cycles, and interaction‑sphere trade networks.
