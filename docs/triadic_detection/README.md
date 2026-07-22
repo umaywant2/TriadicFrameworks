@@ -2,6 +2,8 @@
 
 - [`triadic_detection_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/triadic_detection/triadic_detection_module.json) — Agentic module schema role assignments
 
+<img width="1194" height="672" alt="Triadic_Detection_logo" src="https://github.com/user-attachments/assets/884d4e99-8b27-4b48-9a6b-b06b08a53edf" />
+
 ### *TriadicFrameworks — Detection Substrate*  
 ### *Front‑Door Page (v1.0)*
 
