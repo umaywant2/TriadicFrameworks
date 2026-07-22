@@ -1,3 +1,5 @@
+<img width="1024" height="1024" alt="quantum_field_theory" src="https://github.com/user-attachments/assets/055c74f4-7700-4a32-81d6-363ee9e41472" />
+
 # Quantum Field Theory — A Coherence Grammar of Excitations  
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/quantum_field_theory/module.json) — Agentic module schema role assignments
