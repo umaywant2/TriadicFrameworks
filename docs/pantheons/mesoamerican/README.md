@@ -1,5 +1,7 @@
 # **📘 Mesoamerican Pantheon — README.md (TriadicFrameworks)**
 
+- [`mesoamerican_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/pantheons/mesoamerican/mesoamerican_module.json) — Agentic module schema role assignments
+
 <img width="1194" height="672" alt="mesoamerican_pantheon" src="https://github.com/user-attachments/assets/1803bb09-bc39-4d67-9203-43b709ee0a1e" />
 
 ## **Overview**  
