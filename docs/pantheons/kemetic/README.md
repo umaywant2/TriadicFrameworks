@@ -1,5 +1,7 @@
 # **Kemetic Pantheon — Triadic Profile Overview**
 
+- [`kemetic_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/pantheons/kemetic/kemetic_module.json) — Agentic module schema role assignments
+
 <img width="1194" height="672" alt="Kemetic_Triadic_Profile" src="https://github.com/user-attachments/assets/78574a4e-e428-43bf-a552-a453bb4b56a9" />
 
 ## **Triadic Operators**
