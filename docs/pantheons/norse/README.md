@@ -1,5 +1,7 @@
 # **Norse Pantheon — Triadic Profile Overview**
 
+<img width="768" height="1194" alt="Norse_Triadic_Profile" src="https://github.com/user-attachments/assets/15c6b4b2-924b-451b-abb5-6bbe4e3d6667" />
+
 ## **Triadic Operators**
 The Norse mythological system expresses a natural triadic structure through **sacrificial genesis**, **protective continuance**, and **fated dissolution** culminating in Ragnarök.
 
