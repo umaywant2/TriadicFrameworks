@@ -1,9 +1,11 @@
 # **Triadic Pantheon Canon — Suite Overview**
 
-## **Canon Layer:** Structural Cosmology  
-## **Scope:** Cross‑tradition pantheon alignment  
-## **Status:** Active — v1.0.0  
-## **Maintainer:** Nawder Loswin / TriadicFrameworks
+- [`pantheons_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/pantheons/pantheons_module.json) — Agentic module schema role assignments
+
+#### **Canon Layer:** Structural Cosmology  
+#### **Scope:** Cross‑tradition pantheon alignment  
+#### **Status:** Active — v1.0.0  
+###### **Maintainer:** Nawder Loswin / TriadicFrameworks
 
 ---
 
