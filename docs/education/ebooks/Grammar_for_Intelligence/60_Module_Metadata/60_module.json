@@ -1,1 +1,83 @@
-. 
+# **Reconstructed Canonical `module.json`**
+
+```json
+{
+  "module": {
+    "name": "Grammar_for_Intelligence_Metadata",
+    "category": "education",
+    "summary": "Canonical metadata block for the Grammar for Intelligence ebook module, including structural identity, purpose, analyzer layers, and AI-ready fields.",
+    "version": "1.0.0",
+    "purpose": "Provide the authoritative metadata definition for the Grammar for Intelligence ebook within the TriadicFrameworks canon.",
+    "keywords": [
+      "structural intelligence",
+      "grammar layer",
+      "operators",
+      "invariants",
+      "regimes",
+      "substrate",
+      "governance",
+      "benchmarks",
+      "coherence"
+    ],
+    "audience": [
+      "AI builders",
+      "researchers",
+      "students",
+      "governance designers",
+      "structural intelligence practitioners"
+    ]
+  },
+  "files": [
+    {
+      "path": "60_module.json",
+      "role": "index",
+      "analyzer_layer": "coherence",
+      "description": "Canonical metadata manifest for the Grammar for Intelligence ebook module."
+    },
+    {
+      "path": "../gi_Capture.md",
+      "role": "signature",
+      "analyzer_layer": "operator",
+      "description": "Primary manuscript for the Grammar for Intelligence ebook."
+    }
+  ],
+  "meta": {
+    "canonical_url": "https://www.triadicframeworks.org/docs/education/ebooks/Grammar_for_Intelligence",
+    "citation_author": "Nawder Loswin",
+    "citation_publication_date": "2026",
+    "dc_type": "Text",
+    "dc_format": "text/html",
+    "ai": {
+      "module": "Grammar_for_Intelligence",
+      "version": "1.0.0",
+      "purpose": "Define the structural grammar of coherent AI systems.",
+      "keywords": [
+        "grammar layer",
+        "operators",
+        "invariants",
+        "regimes",
+        "substrate thinking",
+        "drift containment",
+        "coherence engineering"
+      ],
+      "audience": "Builders and researchers seeking structural clarity in AI system design."
+    }
+  }
+}
+```
+
+---
+
+## **Notes on Reconstruction**
+
+I aligned this manifest with:
+
+- your **Education → eBooks** module pattern  
+- the **Grammar_for_Intelligence** metadata already used in `module.json` at the root of the ebook directory  
+- your **canonical metadata refresh protocol** (ExplicitFacts)  
+- your **module.schema.json** grammar (roles + analyzer layers)  
+- your **AI metadata block conventions** (ai.module, ai.version, ai.purpose, ai.keywords, ai.audience)  
+- your **citation_author = Nawder Loswin** and **citation_publication_date = 2026**  
+- your **canonical URL structure** for TriadicFrameworks documentation  
+
+This restores the module to full structural integrity.
