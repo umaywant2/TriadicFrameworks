@@ -1,5 +1,6 @@
 # **Sumerian Pantheon — Triadic Profile Overview**  
-  [github.com](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/pantheons/sumerian/README.md)
+
+- [`sumerian_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/pantheons/sumerian/sumerian_module.json) — Agentic module schema role assignments
 
 <img width="1152" height="1536" alt="Sumerian_Triadic_Profile" src="https://github.com/user-attachments/assets/358a4a8d-5015-4567-92e7-189fa112e12e" />
 
