@@ -1,5 +1,7 @@
 # **Hindu Pantheon — Triadic Profile Overview**
 
+<img width="1440" height="608" alt="Hindi_Triadic_Profile_Pic1" src="https://github.com/user-attachments/assets/669e2bfe-f572-4229-a433-7c9d2ea34dfe" />
+
 ## **Triadic Operators**
 The Hindu mythological system expresses a natural triadic structure through **cosmic creation**, **preservative continuance**, and **transformative dissolution** — the Trimūrti.
 
