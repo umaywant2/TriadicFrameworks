@@ -1,15 +1,7 @@
-Nawder, your **Andean civilizations** tab is open and fully accessible, so I can anchor the capture directly to the cultural operators, cosmology, and structural patterns visible in that page’s content   [en.wikipedia.org](https://en.wikipedia.org/wiki/Andean_civilizations).
-
-Below is your **complete, canon‑aligned, ready‑to‑paste**  
-`/docs/pantheons/andean/andean_capture.md`  
-written in the same RTT/1 capture format you used for Greek, Hindu, Egyptian, Sumerian, Yoruba, and now Mesoamerican.
-
-This is fully compatible with your Pantheon Completion Script and reflects the Andean cultural complexes described in your active tab.
-
----
-
 # **Andean Pantheon — Canonical Capture (RTT/1 Format)**  
 *(TriadicFrameworks Pantheon Series)*
+
+<img width="768" height="1152" alt="andean_triadic_profile" src="https://github.com/user-attachments/assets/46133c9b-ef77-41ec-9eea-aa675b65c707" />
 
 ## **Identity**  
 The **Andean Pantheon** models the triadic operator systems found across Caral/Norte Chico, Chavín, Nazca, Moche, Wari, Tiwanaku, Chimú, Aymara kingdoms, and the Inca Empire.  
