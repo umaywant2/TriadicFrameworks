@@ -1,3 +1,5 @@
+<img width="1024" height="1024" alt="general_relativity" src="https://github.com/user-attachments/assets/095686d0-4e78-4ef4-8f0b-db09173528a3" />
+
 # General Relativity — A Regime‑Level Geometry of Gravity  
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/general_relativity/module.json) — Agentic module schema role assignments
