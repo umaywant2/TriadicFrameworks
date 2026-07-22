@@ -1,5 +1,7 @@
 # **Egyptian Pantheon — Triadic Profile Overview**
 
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/pantheons/egyptian/module.json) — Agentic module schema role assignments
+
 <img width="938" height="938" alt="Egyptian_Triadic_Profile" src="https://github.com/user-attachments/assets/93a9f818-8bf7-419c-a740-414a80e4015f" />
 
 ## **Triadic Operators**
