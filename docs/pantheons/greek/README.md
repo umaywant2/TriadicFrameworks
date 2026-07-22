@@ -1,5 +1,6 @@
 # **Greek Pantheon — Triadic Profile Overview**  
 
+<img width="768" height="1152" alt="Greek_Triadic_Profile" src="https://github.com/user-attachments/assets/dcc85f84-d61c-49c9-a07a-211fe48fb8ed" />
 
 ## **Triadic Operators**
 The Greek mythological system expresses a natural triadic structure through **primordial emergence**, **Olympian continuance**, and **chthonic dissolution**.
