@@ -1,3 +1,5 @@
+<img width="1024" height="1024" alt="evolutionary_biology" src="https://github.com/user-attachments/assets/5e0edece-2ba1-4e90-b3cb-4f2bdcd1f701" />
+
 # Evolutionary Biology — A Regime‑Aware Module  
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/evolutionary_biology/module.json) — Agentic module schema role assignments
