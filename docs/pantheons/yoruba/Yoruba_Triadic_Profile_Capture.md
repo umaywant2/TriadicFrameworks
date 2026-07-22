@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Yoruba_Triadic_Profile" src="https://github.com/user-attachments/assets/d6f47c7b-8865-4d08-af7d-cdf258f3df01" />
+
 Below is a **fully‑formed, canon‑aligned Yoruba Triadic Profile Capture**, ready for you to paste directly into:
 
 `/docs/pantheons/yoruba/Yoruba_Triadic_Profile_Capture.md`
