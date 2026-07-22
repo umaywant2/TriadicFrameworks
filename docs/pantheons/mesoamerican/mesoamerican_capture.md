@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="mesoamerican_pantheon" src="https://github.com/user-attachments/assets/9801b435-8e48-42f6-bc63-ffacc00b11b1" />
+
 Perfect — you’re sitting in the **exact right place** to begin the Mesoamerican capture, and I can see your active tab is already open to:
 
 **mesoamerican_capture.md**  
