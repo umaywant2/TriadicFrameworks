@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Kemetic_Triadic_Profile" src="https://github.com/user-attachments/assets/24543fcd-523b-4b8d-a9bc-97e1530e45f0" />
+
 Triadic Profile Capture for the Kemetic pantheon.
 
 Kemetic ≠ Egyptian.  
