@@ -1,5 +1,7 @@
 # **📘 Mesoamerican Pantheon — README.md (TriadicFrameworks)**
 
+<img width="1194" height="672" alt="mesoamerican_pantheon" src="https://github.com/user-attachments/assets/1803bb09-bc39-4d67-9203-43b709ee0a1e" />
+
 ## **Overview**  
 The **Mesoamerican Pantheon** models the shared triadic operator systems found across Maya, Mexica/Aztec, Olmec, Zapotec, and Mixtec cultural complexes.  
 It provides a unified RTT‑aligned structure for cosmological layers, animal‑spirit stabilizers, calendar harmonics, ritual cycles, and supersphere fusion.
