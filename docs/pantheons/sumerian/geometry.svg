@@ -1,0 +1,25 @@
+<svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Heaven–Earth–Underworld axis -->
+  <line x1="400" y1="100" x2="400" y2="700" stroke="#2a7" stroke-width="4"/>
+  <text x="420" y="120">Heaven–Earth–Underworld Axis</text>
+
+  <!-- City-state nodes -->
+  <circle cx="260" cy="300" r="35" fill="none" stroke="#000" stroke-width="2"/>
+  <text x="260" y="295" text-anchor="middle" font-size="10">Uruk</text>
+
+  <circle cx="540" cy="300" r="35" fill="none" stroke="#000" stroke-width="2"/>
+  <text x="540" y="295" text-anchor="middle" font-size="10">Ur</text>
+
+  <circle cx="260" cy="460" r="35" fill="none" stroke="#000" stroke-width="2"/>
+  <text x="260" y="455" text-anchor="middle" font-size="10">Nippur</text>
+
+  <circle cx="540" cy="460" r="35" fill="none" stroke="#000" stroke-width="2"/>
+  <text x="540" y="455" text-anchor="middle" font-size="10">Eridu</text>
+
+  <!-- Me tablets band -->
+  <rect x="180" y="580" width="440" height="70" fill="none" stroke="#c33" stroke-width="3"/>
+  <text x="400" y="620" text-anchor="middle">Me Tablets / Decrees of Civilization</text>
+
+  <!-- Title -->
+  <text x="400" y="80" text-anchor="middle">Sumerian Cult-Center & Axis Geometry</text>
+</svg>
