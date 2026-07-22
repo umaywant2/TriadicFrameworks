@@ -1,3 +1,5 @@
+<img width="1440" height="608" alt="Hindu_Triadic_Profile_Pic1" src="https://github.com/user-attachments/assets/33818577-955e-404e-a467-81e418e2e108" />
+
 Here’s the clean, canon‑aligned foundation you asked for:  
 **When did the Hindu pantheon “start,” and what does its tree look like?**  
 This gives you everything you need to begin capturing **all characters first**, *before* we generate the module bits.
