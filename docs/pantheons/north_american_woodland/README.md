@@ -2,6 +2,8 @@
 
 - [`naw_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/pantheons/north_american_woodland/naw_module.json) — Agentic module schema role assignments
 
+<img width="1194" height="672" alt="naw_triadic_profile" src="https://github.com/user-attachments/assets/b5908ee2-7ab9-47f9-9c27-9b5ca94ccfa8" />
+
 ## **Overview**  
 The **North American Woodland Pantheon** models the triadic operator systems expressed across Adena, Hopewell, Fort Ancient, and Late Woodland cultural complexes.  
 It captures the cosmological grammar of **Bird / Serpent / Underworld**, earthwork geometry, burial‑complex operators, agricultural resonance cycles, and interaction‑sphere trade networks.
