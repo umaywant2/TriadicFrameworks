@@ -1,0 +1,15 @@
+<svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Heaven–Earth–Underworld axis -->
+  <line x1="400" y1="100" x2="400" y2="700" stroke="#2a7" stroke-width="4"/>
+  <text x="420" y="120">Heaven–Earth–Underworld Axis</text>
+
+  <!-- Torii gate -->
+  <rect x="250" y="300" width="300" height="40" fill="none" stroke="#000" stroke-width="3"/>
+  <line x1="250" y1="300" x2="250" y2="340" stroke="#000" stroke-width="3"/>
+  <line x1="550" y1="300" x2="550" y2="340" stroke="#000" stroke-width="3"/>
+  <text x="400" y="370" text-anchor="middle">Torii Boundary (Purity Threshold)</text>
+
+  <!-- Purification stream -->
+  <path d="M200 500 C300 480 500 520 600 500" fill="none" stroke="#36c" stroke-width="3"/>
+  <text x="400" y="540" text-anchor="middle">Misogi Stream (Purification Flow)</text>
+</svg>
