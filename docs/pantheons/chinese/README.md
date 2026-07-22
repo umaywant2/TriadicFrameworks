@@ -1,5 +1,7 @@
 # **Chinese Pantheon — Triadic Profile Overview**
 
+<img width="1194" height="672" alt="Chinese_Triadic_Profile" src="https://github.com/user-attachments/assets/d7e234e0-9938-4d1d-b44b-93124cf1a068" />
+
 ## **Triadic Operators**
 The Chinese mythological system expresses a natural triadic structure through **cosmic separation**, **civilizational continuance**, and **moral/cosmic dissolution**.
 
