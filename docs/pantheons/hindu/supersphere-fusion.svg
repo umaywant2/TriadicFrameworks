@@ -1,0 +1,28 @@
+<svg viewBox="0 0 900 900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Superspheres -->
+  <circle cx="350" cy="400" r="200" fill="none" stroke="#36c" stroke-width="3"/>
+  <text x="350" y="190" text-anchor="middle">Brahma</text>
+
+  <circle cx="550" cy="400" r="200" fill="none" stroke="#c33" stroke-width="3"/>
+  <text x="550" y="190" text-anchor="middle">Vishnu</text>
+
+  <circle cx="450" cy="550" r="200" fill="none" stroke="#2a7" stroke-width="3"/>
+  <text x="450" y="770" text-anchor="middle">Shiva</text>
+
+  <!-- Shakti overlay -->
+  <circle cx="450" cy="450" r="100" fill="none" stroke="#f0a" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="450" y="450" text-anchor="middle" font-size="12">Shakti (Supreme Goddess)</text>
+
+  <!-- Intersection labels -->
+  <text x="450" y="400" text-anchor="middle" font-size="12">
+    Creation–Preservation–Destruction Triads
+  </text>
+  <text x="450" y="450" text-anchor="middle" font-size="12">
+    Avatars & Cosmic Cycles
+  </text>
+
+  <!-- Title -->
+  <text x="450" y="80" text-anchor="middle">
+    Hindu Supersphere Fusion (Pantheon-Level)
+  </text>
+</svg>
