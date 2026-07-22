@@ -1,0 +1,22 @@
+<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Axes: Life/Death vs Order/Chaos -->
+  <line x1="100" y1="300" x2="800" y2="300" stroke="#000" />
+  <line x1="450" y1="80" x2="450" y2="520" stroke="#000" />
+
+  <text x="820" y="305">Order →</text>
+  <text x="80" y="305">← Chaos</text>
+  <text x="455" y="90">Life</text>
+  <text x="455" y="520">Death</text>
+
+  <!-- Life-through-sacrifice paradox -->
+  <circle cx="650" cy="420" r="30" fill="#fff" stroke="#c33" />
+  <text x="650" y="425" text-anchor="middle" font-size="10">Life via Sacrifice</text>
+
+  <!-- Duality-through-conflict (Hero Twins) -->
+  <circle cx="250" cy="220" r="30" fill="#fff" stroke="#36c" />
+  <text x="250" y="225" text-anchor="middle" font-size="10">Duality via Conflict</text>
+
+  <!-- Order-through-chaos (calendar resets) -->
+  <circle cx="650" cy="220" r="30" fill="#fff" stroke="#000" />
+  <text x="650" y="225" text-anchor="middle" font-size="10">Order via Reset</text>
+</svg>
