@@ -1,6 +1,3 @@
-# **Reconstructed Canonical `module.json`**
-
-```json
 {
   "module": {
     "name": "Grammar_for_Intelligence_Metadata",
@@ -64,20 +61,3 @@
     }
   }
 }
-```
-
----
-
-## **Notes on Reconstruction**
-
-I aligned this manifest with:
-
-- your **Education → eBooks** module pattern  
-- the **Grammar_for_Intelligence** metadata already used in `module.json` at the root of the ebook directory  
-- your **canonical metadata refresh protocol** (ExplicitFacts)  
-- your **module.schema.json** grammar (roles + analyzer layers)  
-- your **AI metadata block conventions** (ai.module, ai.version, ai.purpose, ai.keywords, ai.audience)  
-- your **citation_author = Nawder Loswin** and **citation_publication_date = 2026**  
-- your **canonical URL structure** for TriadicFrameworks documentation  
-
-This restores the module to full structural integrity.
