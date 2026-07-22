@@ -1,0 +1,22 @@
+<svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Celtic knot / triskele geometry -->
+  <!-- Triskele -->
+  <circle cx="400" cy="400" r="160" fill="none" stroke="#000" stroke-width="2"/>
+  <path d="M400 240
+           C460 260 480 320 450 360
+           C420 400 360 420 340 380
+           C320 340 340 280 400 240"
+        fill="none" stroke="#2a7" stroke-width="3"/>
+  <path d="M400 560
+           C340 540 320 480 350 440
+           C380 400 440 380 460 420
+           C480 460 460 520 400 560"
+        fill="none" stroke="#2a7" stroke-width="3"/>
+  <path d="M260 400
+           C280 340 340 320 380 350
+           C420 380 440 440 400 460
+           C360 480 300 460 260 400"
+        fill="none" stroke="#2a7" stroke-width="3"/>
+
+  <text x="400" y="120" text-anchor="middle">Triskele / Knot Geometry</text>
+</svg>
