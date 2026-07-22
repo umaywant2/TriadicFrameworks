@@ -1,5 +1,7 @@
 # **Yoruba Pantheon — Triadic Profile Overview**
 
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/pantheons/yoruba/module.json) — Agentic module schema role assignments
+
 <img width="1194" height="672" alt="Yoruba_Triadic_Profile" src="https://github.com/user-attachments/assets/5f8053a4-0735-4c22-a0ec-83882ae9cab0" />
 
 ## **Triadic Operators**
