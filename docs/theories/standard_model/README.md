@@ -1,3 +1,5 @@
+<img width="1024" height="1024" alt="standard_model" src="https://github.com/user-attachments/assets/8af477c7-ec77-4628-8324-7a86f8340f39" />
+
 # The Standard Model — A Sector Grammar of Excitations  
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/standard_model/module.json) — Agentic module schema role assignments
