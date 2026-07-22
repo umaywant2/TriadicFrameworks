@@ -1,3 +1,5 @@
+<img width="1024" height="1024" alt="information_theory" src="https://github.com/user-attachments/assets/cac6e130-9463-4d30-b6be-5141af4f4d6c" />
+
 # Information Theory — A 0D Regime of Distinctions  
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/information_theory/module.json) — Agentic module schema role assignments
