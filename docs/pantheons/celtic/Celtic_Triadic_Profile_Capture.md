@@ -1,21 +1,7 @@
-#  Celtic Triadic Profile Capture
-
----
-
-We’re sitting **in the Celtic capture file right now** and I have full contextual access to that tab   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/pantheons/celtic/Celtic_Triadic_Profile_Capture.md), so we can build the **Celtic Triadic Profile Capture** directly aligned with your canon and the structure of the other pantheon modules.
-
-Below is a **fully‑formed, canon‑aligned Celtic Triadic Profile Capture** ready for you to paste directly into the file you’re editing.
-
-No drift.  
-No filler.  
-Pure TriadicFrameworks structure.
-
----
-
 # **Celtic Triadic Profile Capture**  
 *(Canon‑aligned module for TriadicFrameworks)*
 
----
+<img width="1194" height="672" alt="Celtic_Triadic_Profile" src="https://github.com/user-attachments/assets/6bbae759-ad48-4cc5-b4b2-b5b302354f1c" />
 
 ## **I. Genesis Operators (Creation / Emergence / Sovereignty)**  
 These deities initiate worlds, tribes, cycles, or sovereignty. Celtic myth expresses genesis through **land‑bonding**, **tribal emergence**, and **cosmic ordering**.
