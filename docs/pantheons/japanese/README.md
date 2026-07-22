@@ -1,5 +1,7 @@
 # **Japanese Pantheon — Triadic Profile Overview**
 
+- [`japanese_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/pantheons/japanese/japanese_module.json) — Agentic module schema role assignments
+
 <img width="1194" height="672" alt="Japanese_Triadic_Profile" src="https://github.com/user-attachments/assets/789139ab-72ef-42ee-a361-98145aee3ac0" />
 
 ## **Triadic Operators**
