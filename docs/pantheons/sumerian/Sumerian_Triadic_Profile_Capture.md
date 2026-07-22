@@ -1,3 +1,5 @@
+<img width="768" height="1152" alt="Sumerian_Triadic_Profile" src="https://github.com/user-attachments/assets/818a89b3-ea51-4a75-93f5-11a0ce2c45ac" />
+
 # ⭐ **Sumerian Named Characters & Godly Figures (Master List)**  
 *(Triadic‑ready · canonical · complete)*
 
