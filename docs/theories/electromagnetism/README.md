@@ -1,3 +1,5 @@
+<img width="1024" height="1024" alt="electromagnetism" src="https://github.com/user-attachments/assets/f58ce0d9-b941-458a-afea-99b8cd3d71e3" />
+
 # Electromagnetism — A Regime‑Aware Module  
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/electromagnetism/module.json) — Agentic module schema role assignments
