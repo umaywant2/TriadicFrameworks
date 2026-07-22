@@ -1,3 +1,5 @@
+<img width="1024" height="1024" alt="quantum_mechanics" src="https://github.com/user-attachments/assets/bc40ca57-ec7a-4925-9746-92600bbd9deb" />
+
 # Quantum Mechanics — A Coherence Grammar of Amplitudes  
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/quantum_mechanics/module.json) — Agentic module schema role assignments
