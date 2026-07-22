@@ -1,5 +1,7 @@
 # **📘 Andean Pantheon — README.md (TriadicFrameworks)**
 
+- [`andean_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/pantheons/andean/andean_module.json) — Agentic module schema role assignments
+
 ## **Overview**  
 The **Andean Pantheon** models the triadic operator systems found across Caral/Norte Chico, Chavín, Nazca, Moche, Wari, Tiwanaku, Chimú, Aymara kingdoms, and the Inca Empire.  
 It expresses the high‑altitude cosmology of **Hanan Pacha / Kay Pacha / Ukhu Pacha**, mountain‑spirit stabilizers, agricultural resonance cycles, and vertical‑archipelago resource geometry.
