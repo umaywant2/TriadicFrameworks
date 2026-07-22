@@ -1,0 +1,25 @@
+<svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Columns -->
+  <text x="200" y="80" text-anchor="middle">Aesir</text>
+  <text x="400" y="80" text-anchor="middle">Vanir</text>
+  <text x="600" y="80" text-anchor="middle">Jötnar</text>
+
+  <!-- Rows -->
+  <text x="80" y="200">Sky / Order</text>
+  <text x="80" y="400">Earth / Fertility</text>
+  <text x="80" y="600">Periphery / Chaos</text>
+
+  <!-- Example operator nodes -->
+  <circle cx="200" cy="200" r="30" fill="#fff" stroke="#000"/>
+  <text x="200" y="205" text-anchor="middle" font-size="10">Odin</text>
+
+  <circle cx="400" cy="400" r="30" fill="#fff" stroke="#000"/>
+  <text x="400" y="405" text-anchor="middle" font-size="10">Freyja / Freyr</text>
+
+  <circle cx="600" cy="600" r="30" fill="#fff" stroke="#000"/>
+  <text x="600" y="605" text-anchor="middle" font-size="10">Jörmungandr</text>
+
+  <!-- Liminal band -->
+  <rect x="100" y="650" width="600" height="80" fill="none" stroke="#555"/>
+  <text x="400" y="680" text-anchor="middle">Loki · Heimdall · Hel</text>
+</svg>
