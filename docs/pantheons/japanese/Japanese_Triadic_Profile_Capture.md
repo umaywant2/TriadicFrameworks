@@ -1,6 +1,8 @@
 # **Japanese Triadic Profile Capture**  
 *(TriadicFrameworks Canon Module — Shinto Pantheon)*
 
+<img width="1194" height="768" alt="Japanese_Triadic_Profile" src="https://github.com/user-attachments/assets/1b60c1b9-7c36-44dc-87eb-e9c589a37dfe" />
+
 ---
 
 ## **I. Genesis Operators (Creation / Emergence / Ordering)**  
