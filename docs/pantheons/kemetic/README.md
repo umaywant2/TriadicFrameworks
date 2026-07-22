@@ -1,5 +1,7 @@
 # **Kemetic Pantheon — Triadic Profile Overview**
 
+<img width="1194" height="672" alt="Kemetic_Triadic_Profile" src="https://github.com/user-attachments/assets/78574a4e-e428-43bf-a552-a453bb4b56a9" />
+
 ## **Triadic Operators**
 The Kemetic (pre‑dynastic + early dynastic Upper/Lower Egypt) mythological system expresses a natural triadic structure through **regional creation centers**, **dual‑sovereignty continuance**, and **entropy‑driven dissolution**.
 
