@@ -1,3 +1,5 @@
+<img width="1024" height="1024" alt="morphic_resonance" src="https://github.com/user-attachments/assets/1055dc48-b057-4664-aa99-18481d5173b9" />
+
 # Morphic Resonance — A Dimensional Coherence Model of Pattern Recurrence  
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/morphic_resonance/module.json) — Agentic module schema role assignments
