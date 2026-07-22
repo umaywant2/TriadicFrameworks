@@ -1,5 +1,7 @@
 # **Norse Pantheon — Triadic Profile Overview**
 
+- [`norse_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/pantheons/norse/norse_module.json) — Agentic module schema role assignments
+
 <img width="768" height="1194" alt="Norse_Triadic_Profile" src="https://github.com/user-attachments/assets/15c6b4b2-924b-451b-abb5-6bbe4e3d6667" />
 
 ## **Triadic Operators**
