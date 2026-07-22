@@ -1,7 +1,7 @@
 # **Chinese Triadic Profile Capture**  
 *(TriadicFrameworks Canon Module — Chinese Mythological System)*
 
----
+<img width="1194" height="672" alt="Chinese_Triadic_Profile" src="https://github.com/user-attachments/assets/ad82a02b-63f1-402f-9773-0249ef080825" />
 
 ## **I. Genesis Operators (Creation / Emergence / Ordering)**  
 Chinese genesis emphasizes **cosmic separation**, **primordial beings**, and **ordering of Heaven and Earth**.
