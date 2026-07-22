@@ -1,5 +1,7 @@
 # **Greek Pantheon — Triadic Profile Overview**  
 
+- [`greek_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/pantheons/greek/greek_module.json) — Agentic module schema role assignments
+
 <img width="768" height="1152" alt="Greek_Triadic_Profile" src="https://github.com/user-attachments/assets/dcc85f84-d61c-49c9-a07a-211fe48fb8ed" />
 
 ## **Triadic Operators**
