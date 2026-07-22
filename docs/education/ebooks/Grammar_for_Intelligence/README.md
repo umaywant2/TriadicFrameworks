@@ -1,5 +1,7 @@
 # **Grammar for Intelligence — Module README**
 
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/education/ebooks/Grammar_for_Intelligence/module.json) — Agentic module schema role assignments
+
 Welcome to the **Grammar for Intelligence** ebook module.  
 This directory contains the full manuscript, metadata, and structural documentation for the book. It is part of the **TriadicFrameworks Education Library**, and provides a clear, accessible introduction to structural intelligence, grammar, operators, invariants, regimes, substrates, drift, and coherence.
 
