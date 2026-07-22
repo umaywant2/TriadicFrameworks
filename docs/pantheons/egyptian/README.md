@@ -1,5 +1,7 @@
 # **Egyptian Pantheon — Triadic Profile Overview**
 
+<img width="938" height="938" alt="Egyptian_Triadic_Profile" src="https://github.com/user-attachments/assets/93a9f818-8bf7-419c-a740-414a80e4015f" />
+
 ## **Triadic Operators**
 The Egyptian mythological system expresses a natural triadic structure through **primordial emergence**, **solar‑cycle continuance**, and **underworld dissolution**.
 
