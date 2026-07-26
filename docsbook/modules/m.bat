@@ -1,187 +1,187 @@
 @echo off
-echo Creating ...
+echjo Creating ...
 
-md docs
-md ai
-md ai-drift-calibration
-md AI_Resonance_Seed
-md alphafold_substrate_alignments
-md apirtt
-md archive_org
-md arrival_substrate_model
-md assets
-md atomic_clocks
-md audio_industry_reviewed
-md badges
-md boson-substrate-model
-md bridges
-md charts
-md clients
-md code
-md Coeus
-md Conditions_Substrate_Model
-md configs
-md consciousness_substrate_model
-md contributors
-md corpus
-md curriculum
-md data
-md datacenter_reports
-md dimensional_substrate_regime_scanning_protocol
-md dimensional_substrate_structures
-md ecoechosystem
-md education
-md alignment
-md animals
-md astrology
-md awareness
-md BRA
-md CivRegimeStack
-md ebooks
-md Grammar_for_Intelligence
-md equations
-md peira
-md polisci
-md QnA_Atlas
-md subjects
-md education-Toolbox
-md translations
-md energy
-md enterprise_structural_awareness
-md Expectations
-md facilities
-md feedback
-md creation_guide
-md ipd_12
-md Framework_Field_Theory
-md Framework_Field_Theory-Analyzer
-md gallery
-md global_energy_regime_awareness
-md glyphic_resonance
-md Governance_Substrate_Model
-md Governance_Substrate_Model-Analyzer
-md Human_Resources
-md Incident_Substrate_Model
-md Integrations
-md Integrations-UE6
-md Inverted_Economics
-md inverted_star_ontology
-md lactos
-md Law
-md Low_Dimensional_Structures
-md manufacturing_substrate_regime_model
-md medicine
-md metadata
-md Mode
-md nist
-md NoS
-md Opacity
-md operators
-md operators-teaching_bundle
-md pantheons
-md andean
-md celtic
-md chinese
-md egyptian
-md greek
-md hindu
-md japanese
-md kemetic
-md mesoamerican
-md norse
-md north_american_woodland
-md sumerian
-md yoruba
-md Paradoxes_canon
-md Philanthropy
-md projects
-md nasa_hposs_tminus10.md
-md prompts
-md rtt_infinity
-md regime_blindness_checklist
-md registry
-md religious_substrate_grammar_model
-md Research
-md Research-agentic
-md Research-Toolbox
-md Resilience_Checker
-md resonance-substrate-model
-md resonance_atlas
-md rtt
-md rtt-1
-md rtt-12
-md rtt-2
-md rtt-3
-md rtt-app
-md rtt-c64host
-md rtt-codes
-md rtt-codex
-md rtt-Coherence_Tensor_Engine
-md rtt-Cross_Domain_Causality_Weaver
-md rtt-D369_Chip_Spec
-md rtt-Dimensional_Resonance_Scanner
-md rtt-Drift_Sentinel
-md rtt-Echo_Classifier
-md rtt-emotions
-md rtt-extension
-md rtt-Harmonic_Stability_Profile
-md rtt-Inside
-md rtt-InsideBenchmarks
-md rtt-InsideCiscomanifest
-md rtt-InsideEnterprise
-md rtt-InsideInternet2
-md rtt-InsidePython
-md rtt-InsideqCompute
-md rtt-micro_core
-md rtt-Morphic_Resonance
-md rtt-Paradox_Gradient_Analyzer
-md rtt-Regime_Interlock_Mapper
-md rtt-sdk
-md rtt-Stability_Basin_Cartographer
-md rtt-store
-md rtt-Structural_Faultline_Detector
-md rtt-Substrate_Flow
-md rtt-Temporal_Regime_Sequencer
-md rtt-The_Inverted_Star
-md rtt-Triadic_Echo_Lattice
-md rtt-Triadic_Regime_Synthesizer
-md SARG
-md schemas
-md scientific_instrument_review
-md spectral_clarity
-md starter
-md structural-detection-engine
-md structural-integration-engine
-md Structural_Detection
-md structural_life_regime_profiles
-md substrate
-md substrate_communications
-md substrate_exposure_assay
-md substrate_mind_science
-md taxes
-md TFT_3Pack_v1.3
-md tft-entft
-md tft-nous
-md tft-resonance-labs
-md tft-tops
-md WRSADC
-md theories
-md chaos_theory
-md electromagnetism
-md evolutionary_biology
-md general_relativity
-md geometric_unity
-md information_theory
-md morphic_resonance
-md quantum_field_theory
-md quantum_mechanics
-md standard_model
-md thermodynamics
-md triadic
-md triadic_detection
-md triadic_observer_layer
-md unified_resonance
-md validation
-md wikipedia
-md _ideas
-md _template
+echo . > module.json
+echo . > ai/module.json
+echo . > ai-drift-calibration/module.json
+echo . > AI_Resonance_Seed/module.json
+echo . > alphafold_substrate_alignments/module.json
+echo . > api/module.jsonrtt/module.json
+echo . > archive_org/module.json
+echo . > arrival_substrate_model/module.json
+echo . > assets/module.json
+echo . > atomic_clocks/module.json
+echo . > audio_industry_reviewed/module.json
+echo . > badges/module.json
+echo . > boson-substrate-model/module.json
+echo . > bridges/module.json
+echo . > charts/module.json
+echo . > clients/module.json
+echo . > code/module.json
+echo . > Coeus/module.json
+echo . > Conditions_Substrate_Model/module.json
+echo . > configs/module.json
+echo . > consciousness_substrate_model/module.json
+echo . > contributors/module.json
+echo . > corpus/module.json
+echo . > curriculum/module.json
+echo . > data/module.json
+echo . > datacenter_reports/module.json
+echo . > dimensional_substrate_regime_scanning_protocol/module.json
+echo . > dimensional_substrate_structures/module.json
+echo . > ecoechosystem/module.json
+echo . > education/module.json
+echo . > alignment/module.json
+echo . > animals/module.json
+echo . > astrology/module.json
+echo . > awareness/module.json
+echo . > BRA/module.json
+echo . > CivRegimeStack/module.json
+echo . > ebooks/module.json
+echo . > Grammar_for_Intelligence/module.json
+echo . > equations/module.json
+echo . > peira/module.json
+echo . > polisci/module.json
+echo . > QnA_Atlas/module.json
+echo . > subjects/module.json
+echo . > education-Toolbox/module.json
+echo . > translations/module.json
+echo . > energy/module.json
+echo . > enterprise_structural_awareness/module.json
+echo . > Expectations/module.json
+echo . > facilities/module.json
+echo . > feedback/module.json
+echo . > creation_guide/module.json
+echo . > ipd_12/module.json
+echo . > Framework_Field_Theory/module.json
+echo . > Framework_Field_Theory-Analyzer/module.json
+echo . > gallery/module.json
+echo . > global_energy_regime_awareness/module.json
+echo . > glyphic_resonance/module.json
+echo . > Governance_Substrate_Model/module.json
+echo . > Governance_Substrate_Model-Analyzer/module.json
+echo . > Human_Resources/module.json
+echo . > Incident_Substrate_Model/module.json
+echo . > Integrations/module.json
+echo . > Integrations-UE6/module.json
+echo . > Inverted_Economics/module.json
+echo . > inverted_star_ontology/module.json
+echo . > lactos/module.json
+echo . > Law/module.json
+echo . > Low_Dimensional_Structures/module.json
+echo . > manufacturing_substrate_regime_model/module.json
+echo . > medicine/module.json
+echo . > metadata/module.json
+echo . > Mode/module.json
+echo . > nist/module.json
+echo . > NoS/module.json
+echo . > Opacity/module.json
+echo . > operators/module.json
+echo . > operators-teaching_bundle/module.json
+echo . > pantheons/module.json
+echo . > andean/module.json
+echo . > celtic/module.json
+echo . > chinese/module.json
+echo . > egyptian/module.json
+echo . > greek/module.json
+echo . > hindu/module.json
+echo . > japanese/module.json
+echo . > kemetic/module.json
+echo . > mesoamerican/module.json
+echo . > norse/module.json
+echo . > north_american_woodland/module.json
+echo . > sumerian/module.json
+echo . > yoruba/module.json
+echo . > Paradoxes_canon/module.json
+echo . > Philanthropy/module.json
+echo . > projects/module.json
+echo . > nasa_hposs_tminus10.md/module.json
+echo . > prompts/module.json
+echo . > rtt_infinity/module.json
+echo . > regime_blindness_checklist/module.json
+echo . > registry/module.json
+echo . > religious_substrate_grammar_model/module.json
+echo . > Research/module.json
+echo . > Research-agentic/module.json
+echo . > Research-Toolbox/module.json
+echo . > Resilience_Checker/module.json
+echo . > resonance-substrate-model/module.json
+echo . > resonance_atlas/module.json
+echo . > rtt/module.json
+echo . > rtt-1/module.json
+echo . > rtt-12/module.json
+echo . > rtt-2/module.json
+echo . > rtt-3/module.json
+echo . > rtt-app/module.json
+echo . > rtt-c64host/module.json
+echo . > rtt-codes/module.json
+echo . > rtt-codex/module.json
+echo . > rtt-Coherence_Tensor_Engine/module.json
+echo . > rtt-Cross_Domain_Causality_Weaver/module.json
+echo . > rtt-D369_Chip_Spec/module.json
+echo . > rtt-Dimensional_Resonance_Scanner/module.json
+echo . > rtt-Drift_Sentinel/module.json
+echo . > rtt-Echo_Classifier/module.json
+echo . > rtt-emotions/module.json
+echo . > rtt-extension/module.json
+echo . > rtt-Harmonic_Stability_Profile/module.json
+echo . > rtt-Inside/module.json
+echo . > rtt-Inside-Benchmarks/module.json
+echo . > rtt-Inside-Cisco/module.json
+echo . > rtt-Inside-Enterprise/module.json
+echo . > rtt-Inside-Internet2/module.json
+echo . > rtt-Inside-Python/module.json
+echo . > rtt-Inside-qCompute/module.json
+echo . > rtt-micro_core/module.json
+echo . > rtt-Morphic_Resonance/module.json
+echo . > rtt-Paradox_Gradient_Analyzer/module.json
+echo . > rtt-Regime_Interlock_Mapper/module.json
+echo . > rtt-sdk/module.json
+echo . > rtt-Stability_Basin_Cartographer/module.json
+echo . > rtt-store/module.json
+echo . > rtt-Structural_Faultline_Detector/module.json
+echo . > rtt-Substrate_Flow/module.json
+echo . > rtt-Temporal_Regime_Sequencer/module.json
+echo . > rtt-The_Inverted_Star/module.json
+echo . > rtt-Triadic_Echo_Lattice/module.json
+echo . > rtt-Triadic_Regime_Synthesizer/module.json
+echo . > SARG/module.json
+echo . > schemas/module.json
+echo . > scientific_instrument_review/module.json
+echo . > spectral_clarity/module.json
+echo . > starter/module.json
+echo . > structural-detection-engine/module.json
+echo . > structural-integration-engine/module.json
+echo . > Structural_Detection/module.json
+echo . > structural_life_regime_profiles/module.json
+echo . > substrate/module.json
+echo . > substrate_communications/module.json
+echo . > substrate_exposure_assay/module.json
+echo . > substrate_mind_science/module.json
+echo . > taxes/module.json
+echo . > TFT_3Pack_v1.3/module.json
+echo . > tft-entft/module.json
+echo . > tft-nous/module.json
+echo . > tft-resonance-labs/module.json
+echo . > tft-tops/module.json
+echo . > WRSADC/module.json
+echo . > theories/module.json
+echo . > chaos_theory/module.json
+echo . > electromagnetism/module.json
+echo . > evolutionary_biology/module.json
+echo . > general_relativity/module.json
+echo . > geometric_unity/module.json
+echo . > information_theory/module.json
+echo . > morphic_resonance/module.json
+echo . > quantum_field_theory/module.json
+echo . > quantum_mechanics/module.json
+echo . > standard_model/module.json
+echo . > thermodynamics/module.json
+echo . > triadic/module.json
+echo . > triadic_detection/module.json
+echo . > triadic_observer_layer/module.json
+echo . > unified_resonance/module.json
+echo . > validation/module.json
+echo . > wikipedia/module.json
+echo . > _ideas/module.json
+echo . > _template/module.json
