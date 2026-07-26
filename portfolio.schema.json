@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "Portfolio",
+  "type": "object",
+  "properties": {
+    "portfolio_id": { "type": "string" },
+    "owner": { "type": "string" },
+    "holdings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "instrument_id": { "type": "string" },
+          "quantity": { "type": "number" }
+        }
+      }
+    },
+    "triadic_signature": { "type": "object" }
+  }
+}

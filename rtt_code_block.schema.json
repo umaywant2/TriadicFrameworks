@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "RTT Code Block",
+  "type": "object",
+  "properties": {
+    "block_id": { "type": "string" },
+    "language": { "type": "string" },
+    "source": { "type": "string" },
+    "triadic_annotations": {
+      "type": "object",
+      "properties": {
+        "spin": { "type": "number" },
+        "charge": { "type": "number" },
+        "temperature": { "type": "number" }
+      }
+    }
+  }
+}

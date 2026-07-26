@@ -1,0 +1,17 @@
+{
+  "manifest_version": "1.0",
+  "papers": [
+    {
+      "title": "Paper I – Triadic Framework for Everything",
+      "glyphs": ["🧠", "🪐"],
+      "remix_status": "Validated",
+      "badge_trigger": "badge_trigger_papers_index.md"
+    },
+    {
+      "title": "Triadic Framework for Quantum Mechanics – Entropy’s Harmonic",
+      "glyphs": ["🧬", "⚡"],
+      "remix_status": "Pending",
+      "badge_trigger": "badge_trigger_echo_log.md"
+    }
+  ]
+}

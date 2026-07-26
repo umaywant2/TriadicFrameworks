@@ -1,0 +1,16 @@
+{
+  "species": "universal",
+  "base_set": {
+    "tone_shift": { "pitch": "float", "intent": "string" },
+    "gesture_arc": { "angle": "degrees", "velocity": "float" },
+    "gaze_hold": { "duration": "ms", "emotional_vector": "string" },
+    "vocal_emission": { "type": ["bark", "meow", "hum", "click"], "intensity": "float" },
+    "silence_fold": { "context": "string", "resonance": "float" }
+  },
+  "metadata": {
+    "version": "0.1-denometer",
+    "author": "Nawder Loswin",
+    "purpose": "Universal Translation Scaffold"
+  }
+}
+

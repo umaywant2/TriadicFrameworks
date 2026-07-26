@@ -1,0 +1,141 @@
+{
+  "module": {
+    "name": "Mesoamerican Pantheon",
+    "slug": "mesoamerican",
+    "category": "pantheon",
+    "summary": "Triadic operator system for Maya, Mexica/Aztec, Olmec, Zapotec, and Mixtec cosmologies.",
+    "version": "2026.07",
+    "purpose": "Unified triadic operator mapping for Mesoamerican cosmology, enabling cross-pantheon comparison, supersphere fusion, and resonance-cycle analysis.",
+    "audience": "Comparative mythology, cultural analysis, RTT operator research, TriadicFrameworks canon development.",
+    "keywords": [
+      "mesoamerican",
+      "maya",
+      "aztec",
+      "olmec",
+      "zapotec",
+      "mixtec",
+      "jaguar",
+      "serpent",
+      "bird",
+      "world-tree",
+      "calendar-cycle",
+      "triadic-operators"
+    ]
+  },
+
+  "ai": {
+    "module": "mesoamerican",
+    "version": "2026.07",
+    "purpose": "Triadic operator mapping for Mesoamerican cosmology.",
+    "keywords": "maya, aztec, olmec, jaguar, serpent, bird, world-tree, calendar harmonics",
+    "audience": "TriadicFrameworks researchers and RTT operator analysts",
+    "module.name": "Mesoamerican Pantheon",
+    "module.summary": "Triadic cosmological layering, animal-spirit stabilizers, calendar harmonics, ritual cycles.",
+    "module.category": "pantheon"
+  },
+
+  "identity": {
+    "citation_author": "Nawder Loswin",
+    "citation_publication_date": "2025",
+    "citation_title": "Mesoamerican Pantheon — TriadicFrameworks",
+    "DC.type": "Text",
+    "DC.format": "text/html",
+    "DC.subject": "Mesoamerican cosmology, triadic operators, cultural resonance cycles"
+  },
+
+  "files": {
+    "capture": "mesoamerican_capture.md",
+    "readme": "README.md",
+    "profile_image": "Mesoamerican_Triadic_Profile.jpg",
+    "svg": {
+      "cycle": "cycle-diagram.svg",
+      "operators": "operators.svg",
+      "geometry": "geometry.svg",
+      "paradox": "paradox-map.svg",
+      "supersphere": "supersphere-fusion.svg"
+    },
+    "metadata": "mesoamerican_module.json"
+  },
+
+  "roles": {
+    "engine": [
+      "operator-grammar",
+      "cycle-engine",
+      "supersphere-fusion"
+    ],
+    "profile": [
+      "pantheon-profile",
+      "triadic-layering"
+    ],
+    "signature": [
+      "operator-signature",
+      "cycle-signature"
+    ],
+    "diagnostic": [
+      "resonance-diagnostics"
+    ],
+    "map": [
+      "geometry-map",
+      "paradox-map"
+    ],
+    "example": [
+      "operator-examples",
+      "cycle-examples"
+    ],
+    "extension": [
+      "cross-pantheon-extension"
+    ],
+    "index": [
+      "pantheon-index"
+    ],
+    "reference": [
+      "mythology-reference"
+    ],
+    "template": [
+      "svg-template",
+      "profile-template"
+    ]
+  },
+
+  "analyzer_layer": {
+    "operator": [
+      "sky",
+      "earth",
+      "underworld",
+      "jaguar",
+      "serpent",
+      "bird"
+    ],
+    "dimensional": [
+      "vertical-axis",
+      "animal-axis",
+      "cycle-axis"
+    ],
+    "regime": [
+      "calendar-harmonics",
+      "ritual-regime",
+      "agricultural-regime"
+    ],
+    "drift": [
+      "mythic-variant-drift",
+      "regional-drift"
+    ],
+    "coherence": [
+      "triadic-coherence",
+      "cycle-coherence"
+    ],
+    "cross-cutting": [
+      "supersphere-fusion",
+      "pantheon-resonance"
+    ]
+  },
+
+  "cross_pantheon_links": {
+    "andean": "../andean/andean_module.json",
+    "north_american_woodland": "../north_american_woodland/naw_module.json",
+    "egyptian": "../egyptian/egyptian_module.json",
+    "yoruba": "../yoruba/yoruba_module.json",
+    "sumerian": "../sumerian/sumerian_module.json"
+  }
+}
+

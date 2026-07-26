@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "$id": "https://triadicframeworks.org/schemas/rtt-coal/v1/CoalAlertExtension.schema.json",
+  "title": "CoalAlertExtension",
+  "type": "object",
+  "properties": {
+    "collapse_vector": {
+      "type": "object",
+      "properties": {
+        "dx": { "type": "number" },
+        "dy": { "type": "number" },
+        "dz": { "type": "number" }
+      },
+      "description": "Predicted direction of structural failure."
+    },
+    "ignition_risk": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "critical"],
+      "description": "Risk of methane or coal dust ignition."
+    },
+    "belt_fire_risk": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "critical"],
+      "description": "Risk of conveyor belt fire."
+    }
+  }
+}

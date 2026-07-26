@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "$id": "https://triadicframeworks.org/schemas/rtt-coal/v1/CoalZoneExtension.schema.json",
+  "title": "CoalZoneExtension",
+  "type": "object",
+  "properties": {
+    "roof_strata_type": {
+      "type": "string",
+      "description": "Primary geological layer above the working section (e.g., shale, sandstone)."
+    },
+    "floor_strata_type": {
+      "type": "string",
+      "description": "Primary geological layer below the working section."
+    },
+    "pillar_load_kpa": {
+      "type": "number",
+      "description": "Estimated load on coal pillars in kilopascals."
+    },
+    "seam_height_m": {
+      "type": "number",
+      "description": "Coal seam height in meters."
+    },
+    "ventilation_rating": {
+      "type": "string",
+      "enum": ["good", "restricted", "poor"],
+      "description": "Ventilation quality for the zone."
+    },
+    "equipment_present": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "List of equipment operating in this zone."
+    }
+  }
+}

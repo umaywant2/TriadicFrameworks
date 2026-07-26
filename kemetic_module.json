@@ -1,0 +1,153 @@
+{
+  "module": {
+    "name": "Kemetic Pantheon",
+    "slug": "kemetic",
+    "category": "pantheon",
+    "summary": "Triadic operator system for ancient Egyptian cosmology across Genesis, Continuance, Dissolution, and Liminal traditions.",
+    "version": "2026.07",
+    "purpose": "Unified triadic operator mapping for Kemetic cosmology, enabling cross-pantheon comparison, supersphere fusion, and resonance-cycle analysis.",
+    "audience": "Comparative mythology, cultural analysis, RTT operator research, TriadicFrameworks canon development.",
+    "keywords": [
+      "kemetic",
+      "egyptian",
+      "genesis",
+      "continuance",
+      "dissolution",
+      "liminal",
+      "maat",
+      "anubis",
+      "thoth",
+      "duat",
+      "nile cycle",
+      "solar cycle",
+      "upper egypt",
+      "lower egypt",
+      "triadic-operators"
+    ]
+  },
+
+  "ai": {
+    "module": "kemetic",
+    "version": "2026.07",
+    "purpose": "Triadic operator mapping for Kemetic cosmology.",
+    "keywords": "genesis, continuance, dissolution, liminal, maat, anubis, thoth, duat, nile cycle, solar cycle",
+    "audience": "TriadicFrameworks researchers and RTT operator analysts",
+    "module.name": "Kemetic Pantheon",
+    "module.summary": "Genesis–Continuance–Dissolution triad, Liminal operators, Nile and solar cycles, Duat mediation.",
+    "module.category": "pantheon"
+  },
+
+  "identity": {
+    "citation_author": "Nawder Loswin",
+    "citation_publication_date": "2025",
+    "citation_title": "Kemetic Pantheon — TriadicFrameworks",
+    "DC.type": "Text",
+    "DC.format": "text/html",
+    "DC.subject": "Kemetic cosmology, triadic operators, cultural resonance cycles"
+  },
+
+  "files": {
+    "capture": "Kemetic_Triadic_Profile_Capture.md",
+    "readme": "README.md",
+    "profile_image": "Kemetic_Triadic_Profile.jpg",
+    "svg": {
+      "cycle": "cycle-diagram.svg",
+      "operators": "operators.svg",
+      "geometry": "geometry.svg",
+      "paradox": "paradox-map.svg",
+      "supersphere": "supersphere-fusion.svg"
+    },
+    "metadata": "kemetic_module.json"
+  },
+
+  "roles": {
+    "engine": [
+      "operator-grammar",
+      "cycle-engine",
+      "supersphere-fusion"
+    ],
+    "profile": [
+      "pantheon-profile",
+      "triadic-layering"
+    ],
+    "signature": [
+      "operator-signature",
+      "cycle-signature"
+    ],
+    "diagnostic": [
+      "resonance-diagnostics"
+    ],
+    "map": [
+      "geometry-map",
+      "paradox-map"
+    ],
+    "example": [
+      "operator-examples",
+      "cycle-examples"
+    ],
+    "extension": [
+      "cross-pantheon-extension"
+    ],
+    "index": [
+      "pantheon-index"
+    ],
+    "reference": [
+      "mythology-reference"
+    ],
+    "template": [
+      "svg-template",
+      "profile-template"
+    ]
+  },
+
+  "analyzer_layer": {
+    "operator": [
+      "genesis",
+      "continuance",
+      "dissolution",
+      "liminal",
+      "upper-egypt",
+      "lower-egypt",
+      "duat",
+      "nile-cycle",
+      "solar-cycle"
+    ],
+    "dimensional": [
+      "nile-axis",
+      "solar-axis",
+      "desert-boundary-axis",
+      "duat-axis"
+    ],
+    "regime": [
+      "nile-regime",
+      "solar-regime",
+      "ritual-regime",
+      "liminal-regime"
+    ],
+    "drift": [
+      "mythic-variant-drift",
+      "regional-drift"
+    ],
+    "coherence": [
+      "triadic-coherence",
+      "cycle-coherence"
+    ],
+    "cross-cutting": [
+      "supersphere-fusion",
+      "pantheon-resonance"
+    ]
+  },
+
+  "cross_pantheon_links": {
+    "japanese": "../japanese/japanese_module.json",
+    "hindu": "../hindu/hindu_module.json",
+    "greek": "../greek/greek_module.json",
+    "chinese": "../chinese/chinese_module.json",
+    "celtic": "../celtic/celtic_module.json",
+    "mesoamerican": "../mesoamerican/mesoamerican_module.json",
+    "andean": "../andean/andean_module.json",
+    "north_american_woodland": "../north_american_woodland/naw_module.json",
+    "yoruba": "../yoruba/yoruba_module.json",
+    "sumerian": "../sumerian/sumerian_module.json"
+  }
+}

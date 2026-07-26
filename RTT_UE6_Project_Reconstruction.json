@@ -1,0 +1,71 @@
+{
+  "script_name": "RTT_UE6_Project_Reconstruction",
+  "version": "1.0",
+  "description": "Stepwise reconstruction script for rebuilding the RTT × UE6 integration from manifests.",
+  "steps": [
+    {
+      "id": "load_project_manifest",
+      "action": "load_json",
+      "input": "ue6_project.json",
+      "output": "project_manifest"
+    },
+    {
+      "id": "validate_project_manifest",
+      "action": "validate_json",
+      "schema": "ue6_project.schema.json",
+      "input": "project_manifest"
+    },
+    {
+      "id": "create_folder_structure",
+      "action": "create_folders",
+      "root": "${project_manifest.structure.root}",
+      "folders": "${project_manifest.structure.folders}"
+    },
+    {
+      "id": "rebuild_blueprints",
+      "action": "rebuild_assets",
+      "asset_type": "BlueprintClass",
+      "manifests": "${project_manifest.blueprints}",
+      "schema": "schemas/ue6_blueprint.schema.json"
+    },
+    {
+      "id": "rebuild_materials",
+      "action": "rebuild_assets",
+      "asset_type": "Material",
+      "manifests": "${project_manifest.materials}"
+    },
+    {
+      "id": "rebuild_widgets",
+      "action": "rebuild_assets",
+      "asset_type": "UserWidget",
+      "manifests": "${project_manifest.widgets}"
+    },
+    {
+      "id": "install_editor_tools",
+      "action": "install_scripts",
+      "scripts": "${project_manifest.editor_tools}"
+    },
+    {
+      "id": "rebuild_maps",
+      "action": "rebuild_assets",
+      "asset_type": "UE6Level",
+      "manifests": "${project_manifest.maps}"
+    },
+    {
+      "id": "apply_operator_alignment",
+      "action": "link_operators",
+      "alignment": "${project_manifest.operator_alignment}"
+    },
+    {
+      "id": "load_cross_module_propagation",
+      "action": "load_json",
+      "input": "${project_manifest.cross_module_propagation}",
+      "output": "propagation_map"
+    },
+    {
+      "id": "verify_cross_module_links",
+      "action": "verify_links",
+      "input": "propagation_map"
+    }
+  ]
+}

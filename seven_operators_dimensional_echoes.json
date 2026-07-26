@@ -1,0 +1,62 @@
+{
+  "$schema": "https://triadicframeworks.org/rtt/schema/v1",
+  "title": "Seven Operators of Dimensional Echoes",
+  "description": "Canonical RTT schema defining the seven universal operators and their expressions across the 3D–9D dimensional ladder.",
+  "type": "object",
+  "properties": {
+    "dimension": {
+      "type": "string",
+      "enum": ["3D","4D","5D","6D","7D","8D","9D"],
+      "description": "Dimensional rung within the resonance-time ladder."
+    },
+    "operator": {
+      "type": "string",
+      "enum": ["Relation-Op","Boundary-Op","Rhythm-Op","Transition-Op","Lineage-Op","Envelope-Op","Coherence-Op"],
+      "description": "Universal operator active within this dimensional echo."
+    },
+    "echoTheme": {
+      "type": "string",
+      "description": "The thematic resonance of the dimension (Container, Cycles, Harmonics, Coupling, Regimes, Lineage, Supsphere)."
+    },
+    "rttEquation": {
+      "type": "string",
+      "description": "Canonical RTT symbolic expression for the operator at this dimension."
+    },
+    "expressionMode": {
+      "type": "string",
+      "description": "How the operator manifests (generate, shape, animate, transform, persist, contain, align)."
+    },
+    "coherenceField": {
+      "type": "string",
+      "description": "The coherence domain or envelope governing the operator’s stability."
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Other operators or dimensions this operator interacts with."
+    }
+  },
+  "required": ["dimension","operator","rttEquation","expressionMode"],
+  "examples": [
+    {
+      "dimension": "5D",
+      "operator": "Rhythm-Op",
+      "echoTheme": "Harmonics",
+      "rttEquation": "fₙ = n·f₁",
+      "expressionMode": "Animate",
+      "coherenceField": "Ω₅D",
+      "relations": ["Boundary-Op","Coherence-Op"]
+    },
+    {
+      "dimension": "9D",
+      "operator": "Coherence-Op",
+      "echoTheme": "Supsphere",
+      "rttEquation": "C = universal(Ω₉D)",
+      "expressionMode": "Align",
+      "coherenceField": "Ω₉D",
+      "relations": ["Envelope-Op","Lineage-Op"]
+    }
+  ]
+}

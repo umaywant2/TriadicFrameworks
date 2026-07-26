@@ -1,0 +1,139 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Simulations Schema",
+  "description": "Defines simulation configuration, time evolution, modules, and coupling for the Resonance Substrate Model (RSM). Supports multi-layer substrate evolution, distributed agents, quantum triads, sensing, and operator-driven dynamics.",
+
+  "type": "object",
+
+  "properties": {
+    "time": {
+      "type": "object",
+      "description": "Controls temporal evolution of the simulation.",
+      "properties": {
+        "timestep": {
+          "type": "number",
+          "description": "Duration of a single simulation step."
+        },
+        "duration": {
+          "type": "number",
+          "description": "Total simulation duration."
+        },
+        "mode": {
+          "type": "string",
+          "enum": ["fixed", "adaptive", "event_driven"],
+          "description": "Time-stepping strategy."
+        }
+      },
+      "required": ["timestep"]
+    },
+
+    "modules": {
+      "type": "array",
+      "description": "List of simulation modules to activate (fields, operators, quantum, distributed, sensing, etc.).",
+      "items": { "type": "string" }
+    },
+
+    "initial_conditions": {
+      "type": "object",
+      "description": "Initial state of fields, agents, and substrate layers.",
+      "additionalProperties": {
+        "type": ["string", "number", "boolean", "object", "array"]
+      }
+    },
+
+    "operators": {
+      "type": "object",
+      "description": "Operator configuration controlling field evolution.",
+      "properties": {
+        "diffusion": { "type": "object" },
+        "alignment": { "type": "object" },
+        "coupling": { "type": "object" },
+        "activation": { "type": "object" },
+        "stabilization": { "type": "object" }
+      }
+    },
+
+    "spatial": {
+      "type": "object",
+      "description": "Spatial configuration for the simulation domain.",
+      "properties": {
+        "grid": { "type": "object" },
+        "coordinate_system": { "type": "object" },
+        "layers": { "type": "array" }
+      }
+    },
+
+    "quantum": {
+      "type": "object",
+      "description": "Quantum Triad Model configuration (0D point-states, 1D spin-lines, 2D coherence sheets).",
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "parameters": {
+          "type": "object",
+          "additionalProperties": {
+            "type": ["string", "number", "boolean"]
+          }
+        }
+      }
+    },
+
+    "distributed": {
+      "type": "object",
+      "description": "Distributed agent configuration for multi-agent substrate interaction.",
+      "properties": {
+        "agents": { "type": "array" },
+        "network": { "type": "object" },
+        "communication": { "type": "object" }
+      }
+    },
+
+    "sensing": {
+      "type": "array",
+      "description": "List of sensing modules active during the simulation.",
+      "items": { "type": "object" }
+    },
+
+    "infrastructure": {
+      "type": "object",
+      "description": "Compute, storage, and orchestration configuration.",
+      "properties": {
+        "compute": { "type": "object" },
+        "storage": { "type": "object" },
+        "networking": { "type": "object" }
+      }
+    },
+
+    "output": {
+      "type": "object",
+      "description": "Controls what data is recorded during the simulation.",
+      "properties": {
+        "frequency": {
+          "type": "number",
+          "description": "How often to record simulation state."
+        },
+        "fields": {
+          "type": "array",
+          "description": "Which fields or modules to record.",
+          "items": { "type": "string" }
+        },
+        "format": {
+          "type": "string",
+          "enum": ["json", "csv", "binary", "custom"]
+        }
+      }
+    },
+
+    "metadata": {
+      "type": "object",
+      "description": "Optional metadata for documentation, provenance, or schema evolution.",
+      "version": "1.0.0",
+      "notes": "Initial seed release",
+      "properties": {
+        "version": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    }
+  },
+
+  "required": ["time"]
+}

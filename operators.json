@@ -1,0 +1,96 @@
+{
+  "operator_registry": "IPD-12",
+  "version": "2026-1.0",
+  "description": "Prime-indexed intransitive operator cycles for the IPD-12 framework. Defines 12 operator states, directed intransitive relations, paradox loops, RTT/GU mappings, and Pantheon-tier correspondences.",
+
+  "states": [
+    { "face": 1, "prime": 2,  "label": "P2",  "role": "seed-state" },
+    { "face": 2, "prime": 3,  "label": "P3",  "role": "transition" },
+    { "face": 3, "prime": 5,  "label": "P5",  "role": "drift-anchor" },
+    { "face": 4, "prime": 7,  "label": "P7",  "role": "regime-shift" },
+    { "face": 5, "prime": 11, "label": "P11", "role": "coherence-node" },
+    { "face": 6, "prime": 13, "label": "P13", "role": "paradox-trigger" },
+    { "face": 7, "prime": 17, "label": "P17", "role": "cycle-gate" },
+    { "face": 8, "prime": 19, "label": "P19", "role": "boundary-node" },
+    { "face": 9, "prime": 23, "label": "P23", "role": "dimensional-lift" },
+    { "face": 10, "prime": 29, "label": "P29", "role": "collapse-anchor" },
+    { "face": 11, "prime": 31, "label": "P31", "role": "stability-node" },
+    { "face": 12, "prime": 37, "label": "P37", "role": "apex-state" }
+  ],
+
+  "intransitive_edges": [
+    { "from": "P2",  "to": "P3" },
+    { "from": "P3",  "to": "P5" },
+    { "from": "P5",  "to": "P2" },
+
+    { "from": "P7",  "to": "P11" },
+    { "from": "P11", "to": "P13" },
+    { "from": "P13", "to": "P7" },
+
+    { "from": "P17", "to": "P19" },
+    { "from": "P19", "to": "P23" },
+    { "from": "P23", "to": "P17" },
+
+    { "from": "P29", "to": "P31" },
+    { "from": "P31", "to": "P37" },
+    { "from": "P37", "to": "P29" }
+  ],
+
+  "cycles": {
+    "triads": [
+      ["P2", "P3", "P5"],
+      ["P7", "P11", "P13"],
+      ["P17", "P19", "P23"],
+      ["P29", "P31", "P37"]
+    ],
+    "hex_cycles": [
+      ["P2", "P3", "P5", "P7", "P11", "P13"],
+      ["P17", "P19", "P23", "P29", "P31", "P37"]
+    ],
+    "full_cycle": [
+      "P2","P3","P5","P7","P11","P13",
+      "P17","P19","P23","P29","P31","P37"
+    ]
+  },
+
+  "rtt_mappings": {
+    "drift": ["P5", "P29"],
+    "regime": ["P7", "P17"],
+    "coherence": ["P11", "P31"],
+    "paradox": ["P13", "P37"],
+    "boundary": ["P19"],
+    "collapse": ["P29"],
+    "lift": ["P23"]
+  },
+
+  "gu_mappings": {
+    "connection": ["P2", "P3"],
+    "curvature": ["P7", "P11"],
+    "dilaton": ["P11", "P31"],
+    "anomaly": ["P13", "P37"],
+    "observerse": ["P17", "P19", "P23"],
+    "refractive_vacuum": ["P31"]
+  },
+
+  "pantheon_correspondence": {
+    "celestial": ["P2", "P3", "P5", "P7"],
+    "civilizational": ["P11", "P13", "P17", "P19"],
+    "chthonic": ["P23", "P29", "P31", "P37"]
+  },
+
+  "analyzer_layers": {
+    "operator": ["states", "intransitive_edges"],
+    "regime": ["cycles"],
+    "coherence": ["rtt_mappings"],
+    "paradox": ["cycles.full_cycle"],
+    "cross-cutting": ["gu_mappings", "pantheon_correspondence"]
+  },
+
+  "metadata": {
+    "created_by": "Nawder Loswin",
+    "ai_assist": "Copilot",
+    "canonical": true,
+    "notes": "IPD-12 is the first physicalizable operator artifact in TriadicFrameworks."
+  }
+}
+

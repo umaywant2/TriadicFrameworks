@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "RTT Runtime Metadata",
+  "type": "object",
+  "properties": {
+    "runtime_id": { "type": "string" },
+    "language": { "type": "string" },
+    "version": { "type": "string" },
+    "triadic_runtime_state": {
+      "type": "object",
+      "properties": {
+        "spin_load": { "type": "number" },
+        "charge_load": { "type": "number" },
+        "temperature_load": { "type": "number" }
+      }
+    }
+  }
+}

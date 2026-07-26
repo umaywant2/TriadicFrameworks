@@ -1,0 +1,33 @@
+{
+  "rttcode_id": "RTT_SYNTHESIS_TRIANGULATION_v1",
+  "operator": "SYNTHESIS_TRIANGULATION_OPERATOR",
+  "purpose": "Triangulate structural signals into a stable, drift-bounded synthesis.",
+  "inputs": {
+    "accepted_formats": [
+      "STRUCTURAL_DETECTION_PACKET",
+      "DRIFT_PACKET",
+      "REGIME_PACKET",
+      "CONTINUITY_PACKET"
+    ],
+    "conflict_resolution": true
+  },
+  "outputs": {
+    "structural_summary": "string",
+    "triangulated_motifs": "array",
+    "drift_profile": "string",
+    "regime_alignment": "string",
+    "continuity_map": "array",
+    "anomaly_profile": "array",
+    "confidence": "number",
+    "notes": "string"
+  },
+  "guarantees": [
+    "no semantic synthesis",
+    "structure-only triangulation"
+  ],
+  "failure_modes": [
+    "conflicting operator signals",
+    "insufficient continuity",
+    "unstable boundaries"
+  ]
+}

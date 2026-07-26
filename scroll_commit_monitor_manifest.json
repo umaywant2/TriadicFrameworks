@@ -1,0 +1,16 @@
+{
+  "artifact": "docs/TFT_3Pack_v1.3/tft/entft/TFThooks/agents/scroll_commit_monitor.py",
+  "type": "agent",
+  "version": "v1.3",
+  "baseLens": "decimal",
+  "validator": "BadgeLogic",
+  "scrollLinks": [
+    "badge_logic_engine.py",
+    "mightthor_agent_interface.py",
+    "entft_scroll_event_trace_registry.json",
+    "entft_protocol.md"
+  ],
+  "symbolicTags": ["Scroll Monitor", "Live Edit", "Flame Hook", "Trace Logger"],
+  "cliTrigger": "monitor_scrolls(interval)",
+  "timestamp": "2025-10-20T23:36:00Z"
+}

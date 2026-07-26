@@ -1,0 +1,41 @@
+{
+  "🜁 Elemental & Spectrum": [
+    { "title": "Triadic Framework Technology for the Elements", "validated": true },
+    { "title": "Triadic Framework Technology for 10 Rarest Elements on Earth", "validated": true },
+    { "title": "Triadic Framework for Spectrum Technologies – Light and Dark", "validated": true },
+    { "title": "Spectral Flux and Divisional Resonance Is Born", "validated": false }
+  ],
+  "🧠 Cognitive & Symbolic": [
+    { "title": "Resonance Operator @() — Formalization", "validated": true },
+    { "title": "Triadic Systems and Resonance-Based Dimensional Nested Loops", "validated": true },
+    { "title": "Improving ISO Standards with Triadic Frameworks", "validated": false }
+  ],
+  "🎶 Music & Symbolic Extensions": [
+    { "title": "Triadic Framework for Music – With Quadratic Extensions", "validated": true },
+    { "title": "Liner to Triadic Frameworks – Prescription Lenses for the Universe", "validated": true }
+  ],
+  "⚛️ Quantum & Particle Vision": [
+    { "title": "Ghost Particle & Triadic Resonance Vision", "validated": true },
+    { "title": "Triadic Framework Technology for Quantum Computers", "validated": false },
+    { "title": "Triadic Framework for Quantum Mechanics – Entropy’s Harmonic", "validated": false }
+  ],
+  "🪐 Planetary & Temporal Mapping": [
+    { "title": "Resonant Time – Operationalizing Zhang’s Triadic Ontology", "validated": true },
+    { "title": "Triadic Framework for Time and Anti-Time", "validated": true },
+    { "title": "New Insights for Planetary Science", "validated": false }
+  ],
+  "🩺 Health & Ultrasound": [
+    { "title": "Triadic Framework Technology for Health Care", "validated": true },
+    { "title": "Triadic Ultrasound Enhancement", "validated": false }
+  ],
+  "🔧 Engineering & Firmware": [
+    { "title": "TFT-NTP Firmware Spec (Draft v0.1)", "validated": true },
+    { "title": "Triadic Framework for ARM and x86 Processors", "validated": true },
+    { "title": "Triadic Framework Technology for BMS Improvements", "validated": false }
+  ],
+  "⚡ Energy & Wireless Power": [
+    { "title": "Using TFT for the Energy Industries", "validated": true },
+    { "title": "Zero Point, Cold Fusion, and Wireless Energy", "validated": true },
+    { "title": "WiFi_Energy_Protocols", "validated": false }
+  ]
+}

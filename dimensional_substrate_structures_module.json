@@ -1,0 +1,83 @@
+{
+  "module": "Dimensional Substrate Structures",
+  "version": "1.0",
+  "category": "rtt-dimensional",
+  "summary": "D‑layer structural envelope for RTT dimensional substrates — substrate definition, invariants, dimensional primitives, triadic dimensional cores, scaling law (3D → 1024D), high‑dimensional regimes, validation layers (vST), computational implications, 3 worked examples, and 2 appendices. Sibling: DSRSP.",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "substrate_definition.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "substrate_invariants.md",
+      "role": "engine",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "dimensional_primitives.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "triadic_dimensional_cores.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "scaling_law_3d_to_1024d.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "high_dimensional_regimes.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "validation_layers_vst.md",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "computational_implications.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "examples/example_3d_9d_transition.md",
+      "role": "example",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "examples/example_64d_projection.md",
+      "role": "example",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "examples/example_1024d_research_case.md",
+      "role": "example",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "appendix/terminology.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "appendix/references.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    }
+  ]
+}

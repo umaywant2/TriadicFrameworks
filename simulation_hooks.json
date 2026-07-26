@@ -1,0 +1,83 @@
+{
+  "module": "thermodynamics",
+  "version": "1.0",
+  "purpose": "Constraint-first substrate grammar for temperature, entropy, free energy, flows, and equilibrium.",
+  "rtt_regime": "R1",
+
+  "hooks": {
+    "state_initialization": {
+      "description": "Initialize thermodynamic state variables without mechanical interpretation.",
+      "variables": ["T", "S", "F", "U", "V", "P"],
+      "constraints": ["S >= 0", "T >= 0", "F = U - T*S"]
+    },
+
+    "constraint_surface": {
+      "description": "Defines allowable configurations via entropy and free energy surfaces.",
+      "inputs": ["S", "F", "T"],
+      "outputs": ["allowed_region"],
+      "rules": [
+        "dS >= 0",
+        "F minimized at equilibrium",
+        "flows follow gradients of potentials"
+      ]
+    },
+
+    "gradient_flow": {
+      "description": "Generates flows from gradients of temperature or free energy.",
+      "inputs": ["T(x)", "F(x)"],
+      "outputs": ["Q_dot", "flow_field"],
+      "equations": [
+        "Q_dot = -k * grad(T)",
+        "flow = -grad(F)"
+      ]
+    },
+
+    "equilibrium_detection": {
+      "description": "Detects fixed-point structures where gradients vanish.",
+      "inputs": ["F(x)", "S(x)"],
+      "outputs": ["equilibrium_state"],
+      "conditions": [
+        "grad(F) = 0",
+        "dS/dt = 0"
+      ]
+    },
+
+    "entropy_production": {
+      "description": "Computes irreversibility and monotonic structure.",
+      "inputs": ["S(t)"],
+      "outputs": ["I"],
+      "equations": [
+        "I = dS/dt",
+        "I >= 0"
+      ]
+    },
+
+    "ensemble_selection": {
+      "description": "Selects macrostate constraints for simulation.",
+      "ensembles": {
+        "microcanonical": ["U fixed", "V fixed", "N fixed"],
+        "canonical": ["T fixed", "V fixed", "N fixed"],
+        "grand_canonical": ["T fixed", "V fixed", "mu fixed"]
+      }
+    },
+
+    "partition_function_extension": {
+      "description": "Optional R2 statistical mechanics extension.",
+      "inputs": ["energy_levels", "T"],
+      "outputs": ["Z"],
+      "equations": [
+        "Z = sum(exp(-E_i / T))"
+      ]
+    },
+
+    "open_system_evolution": {
+      "description": "Handles environment coupling and decoherence-like entropy flow.",
+      "inputs": ["system_state", "environment_state"],
+      "outputs": ["updated_state"],
+      "rules": [
+        "S_total >= S_system + S_environment",
+        "flows exchange via gradients"
+      ]
+    }
+  }
+}

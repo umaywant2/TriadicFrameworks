@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "$id": "https://triadicframeworks.org/schemas/rtt-deepsea/v1/DeepSeaFieldSampleExtension.schema.json",
+  "title": "DeepSeaFieldSampleExtension",
+  "type": "object",
+  "properties": {
+    "pressure_kpa": {
+      "type": "number",
+      "description": "Ambient water pressure in kilopascals (RTT stress input)."
+    },
+    "salinity_psu": {
+      "type": "number",
+      "description": "Practical salinity units (affects resonance propagation)."
+    },
+    "temperature_c": {
+      "type": "number",
+      "description": "Local water temperature in Celsius."
+    },
+    "acoustic_clarity": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 255,
+      "description": "RTT clarity mapped to acoustic propagation quality."
+    },
+    "current_vector": {
+      "type": "object",
+      "properties": {
+        "dx": { "type": "number" },
+        "dy": { "type": "number" },
+        "dz": { "type": "number" }
+      },
+      "description": "Water current drift vector (RTT drift equivalent)."
+    },
+    "hull_stress_kpa": {
+      "type": "number",
+      "description": "Measured or inferred hull stress on submersibles."
+    }
+  }
+}
+

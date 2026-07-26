@@ -1,0 +1,83 @@
+{
+  "$schema": "https://www.triadicframeworks.org/schemas/rttcode.schema.json",
+  "operator": "METADATA_OPERATOR",
+  "version": "1.0",
+  "module": "archive_org",
+  "family": "R-Ops",
+
+  "purpose": "Normalize Internet Archive metadata into RTT grammar to determine substrate, regime, drift sensitivity, coherence, and lineage identifiers.",
+
+  "inputs": {
+    "target": {
+      "type": "url",
+      "required": true
+    }
+  },
+
+  "outputs": {
+    "substrate_type": {
+      "type": "string",
+      "description": "Structural substrate (html, pdf, image, ocr, mixed)."
+    },
+    "regime": {
+      "type": "string",
+      "description": "Operational regime (institutional, media, scholarly, cultural, technical)."
+    },
+    "drift_sensitivity": {
+      "type": "string",
+      "description": "Expected drift level based on substrate and regime."
+    },
+    "coherence": {
+      "type": "string",
+      "description": "Internal structural consistency of the object."
+    },
+    "lineage_ids": {
+      "type": "list",
+      "description": "Identifiers linking the object to collections, clusters, or prior versions."
+    }
+  },
+
+  "substrate_types": {
+    "html": "Drift-prone, layout-dependent.",
+    "pdf": "Stable, low drift.",
+    "image": "Stable but incomplete.",
+    "ocr": "Lossy, high drift.",
+    "mixed": "Requires PRESERVATION_OPERATOR to resolve."
+  },
+
+  "regime_types": {
+    "institutional": "Government, agency, or official records.",
+    "media": "News, blogs, high-update environments.",
+    "scholarly": "Academic, research, journals.",
+    "cultural": "Museums, exhibits, archives.",
+    "technical": "Software, documentation, versioned systems."
+  },
+
+  "drift_sensitivity_levels": {
+    "low": "Expected stability (PDF, institutional).",
+    "medium": "Occasional structural change.",
+    "high": "Frequent redesigns, CMS migrations."
+  },
+
+  "coherence_levels": {
+    "high": "Strong structural consistency.",
+    "medium": "Some inconsistencies.",
+    "low": "Fragmented or unstable structure."
+  },
+
+  "procedure": [
+    "Retrieve IA metadata for target.",
+    "Normalize fields into RTT grammar: substrate, regime, drift_sensitivity, coherence, lineage_ids.",
+    "Validate substrate classification.",
+    "Predict drift sensitivity based on substrate and regime.",
+    "Emit normalized metadata for WAYBACK_OPERATOR and LINEAGE_OPERATOR."
+  ],
+
+  "guarantees": [
+    "No content-based inference.",
+    "Metadata treated as structural hints, not ground truth.",
+    "Drift sensitivity is predictive, not retrospective.",
+    "Regime classification is structural, not semantic.",
+    "Output deterministic given same IA metadata."
+  ]
+}

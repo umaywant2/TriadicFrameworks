@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "$id": "https://triadicframeworks.org/schemas/rtt-coal/v1/CoalFieldSampleExtension.schema.json",
+  "title": "CoalFieldSampleExtension",
+  "type": "object",
+  "properties": {
+    "methane_ppm": {
+      "type": "number",
+      "description": "Methane concentration in parts per million."
+    },
+    "co_ppm": {
+      "type": "number",
+      "description": "Carbon monoxide concentration in parts per million."
+    },
+    "dust_density_mg_m3": {
+      "type": "number",
+      "description": "Airborne coal dust density."
+    },
+    "roof_convergence_mm": {
+      "type": "number",
+      "description": "Roof movement measured in millimeters."
+    },
+    "equipment_vibration_signature": {
+      "type": "object",
+      "properties": {
+        "equipment_id": { "type": "string" },
+        "dominant_freq_hz": { "type": "number" },
+        "amplitude": { "type": "number" }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "Identity Substrate",
+  "type": "object",
+  "properties": {
+    "identity_id": { "type": "string" },
+    "display_name": { "type": "string" },
+    "canonical_name": { "type": "string" },
+    "triadic_signature": {
+      "type": "object",
+      "properties": {
+        "spin": { "type": "number" },
+        "charge": { "type": "number" },
+        "temperature": { "type": "number" }
+      }
+    },
+    "attributes": { "type": "object" },
+    "roles": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "required": ["identity_id", "canonical_name"]
+}

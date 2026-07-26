@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "Codex Chapter",
+  "type": "object",
+  "properties": {
+    "chapter_id": { "type": "string" },
+    "title": { "type": "string" },
+    "theme": { "type": "string" },
+    "content_summary": { "type": "string" },
+    "triadic_context": { "type": "object" },
+    "related_dimensions": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

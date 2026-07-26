@@ -1,0 +1,148 @@
+{
+  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
+  "module": {
+    "name": "Scripts",
+    "path": "docs/TFT_3Pack_v1.3/scripts",
+    "canon_tag": "scripts",
+    "version": "1.3",
+    "layer": "Tools & Infrastructure",
+    "status": "Active, Canonical",
+    "purpose": "Executable shell script toolkit for running, validating, converting, and batch-processing .fff resonance files. Includes overlay scripts for triadic logic, encryption, and grid operations. Intentionally lightweight and transparent so students can inspect how resonance-time, triadic operators, and TFT constants are processed.",
+    "parent": "tft-3pack",
+    "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/scripts"
+  },
+  "session_context": {
+    "canon": "active (scripts ⊂ tft-3pack)",
+    "modules_linked": [
+      "run_tft.sh ↔ formats/example_*.fff — execution engine ↔ .fff input files",
+      "validate_tft.sh ↔ formats/specification.md — structural checker ↔ format spec",
+      "convert_tft.sh → screen/file output — .fff to human-readable summaries",
+      "batch_process.sh → run_tft.sh — bulk orchestration → per-file execution",
+      "logic_core.sh ↔ tft/entft/ — triadic logic triggers ↔ encryption layer",
+      "encryption.sh ↔ tft/entft/encryptor.py — shell encryption overlay ↔ Python engine",
+      "grid_ops.sh ↔ tft/tops/grid_ops.py — shell grid overlay ↔ Python grid engine"
+    ],
+    "drift": "minimal (stable script API — input .fff, output text)",
+    "coherence": "stable (POSIX-compatible shell scripts with consistent argument conventions)",
+    "format": "shell scripts + html + markdown",
+    "front_door": "exists (scripts/README.md + scripts/index.html)",
+    "every_page": "stands alone + student-ready + operator-aware",
+    "audience": [
+      "students",
+      "educators",
+      "developers",
+      "researchers",
+      "AIs"
+    ]
+  },
+  "structural_grammar": {
+    "dimensional_envelope": "D3–D9 (scripts operate across full dimensional range via .fff input)",
+    "regime_envelope": "R1 (single-context execution)",
+    "coherence_envelope": "C1 (strict input/output contract: .fff in → text out)",
+    "drift_sensitivity": "low",
+    "regime_sensitivity": "low",
+    "script_taxonomy": {
+      "core_pipeline": {
+        "run": "run_tft.sh — execute .fff, print τ_r, D3, D6, D9, T_f, ΛΘ, F3, X",
+        "validate": "validate_tft.sh — check .fff structural correctness",
+        "convert": "convert_tft.sh — .fff to human-readable summary",
+        "batch": "batch_process.sh — sequential multi-file execution"
+      },
+      "overlay_scripts": {
+        "logic": "logic_core.sh — triadic logic trigger for validator overlays",
+        "encryption": "encryption.sh — encryption overlay with base-lens awareness",
+        "grid": "grid_ops.sh — grid overlay and validator logic with dimensional alignment"
+      }
+    },
+    "execution_contract": {
+      "shell": "POSIX-compatible (bash, zsh, sh)",
+      "input": ".fff files from ../formats/",
+      "output": "terminal text (redirect for file output)"
+    }
+  },
+  "cross_module_propagation": {
+    "imports": [
+      "tft-3pack (parent module — dimensional envelope, audience, canon context)",
+      "formats (.fff files consumed as input by all core pipeline scripts)"
+    ],
+    "exports": [
+      "run_tft.sh (resonance file execution engine)",
+      "validate_tft.sh (structural format checker)",
+      "convert_tft.sh (.fff to human-readable converter)",
+      "batch_process.sh (multi-file orchestrator)",
+      "logic_core.sh (triadic logic trigger overlay)",
+      "encryption.sh (encryption overlay with base-lens awareness)",
+      "grid_ops.sh (grid overlay with dimensional alignment)"
+    ]
+  },
+  "submodules": [],
+  "files": [
+    {
+      "filename": "README.md",
+      "path": "README.md",
+      "purpose": "Scripts overview — describes all 7 shell scripts, usage patterns, POSIX prerequisites, and .fff file assumptions.",
+      "role": "index"
+    },
+    {
+      "filename": "index.html",
+      "path": "index.html",
+      "purpose": "Web-facing index for the scripts section with descriptions and direct links to each script.",
+      "role": "index"
+    },
+    {
+      "filename": "run_tft.sh",
+      "path": "run_tft.sh",
+      "purpose": "Core execution engine — reads a .fff resonance file and prints computed values (τ_r, D3, D6, D9, T_f, ΛΘ, F3, X).",
+      "role": "engine",
+      "analyzer_layer": "operator",
+      "depends_on": [
+        "../formats/example_basic.fff"
+      ]
+    },
+    {
+      "filename": "validate_tft.sh",
+      "path": "validate_tft.sh",
+      "purpose": "Structural format checker — validates .fff file structure, checks required fields, enforces format coherence against specification.",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "filename": "convert_tft.sh",
+      "path": "convert_tft.sh",
+      "purpose": "Format converter — transforms .fff files into human-readable summaries, translating dimensional data for review and teaching.",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "filename": "batch_process.sh",
+      "path": "batch_process.sh",
+      "purpose": "Bulk orchestrator — runs multiple .fff files in sequence for batch resonance computation across datasets.",
+      "role": "engine",
+      "analyzer_layer": "operator",
+      "depends_on": [
+        "run_tft.sh"
+      ]
+    },
+    {
+      "filename": "logic_core.sh",
+      "path": "logic_core.sh",
+      "purpose": "Triadic Logic Trigger — activates core logical operator checks and validator overlays for structural fidelity verification.",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "filename": "encryption.sh",
+      "path": "encryption.sh",
+      "purpose": "Encryption overlay — triggers encryption operations with base-lens awareness, enforcing regime-level data boundaries.",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "filename": "grid_ops.sh",
+      "path": "grid_ops.sh",
+      "purpose": "Grid overlay — activates grid operations and validator logic with base-lens fidelity for dimensional alignment checks.",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "Structural Awareness Profile",
+  "type": "object",
+  "properties": {
+    "profile_id": { "type": "string" },
+    "dimension": { "type": "string" },
+    "awareness_level": { "type": "string" },
+    "triadic_alignment": { "type": "object" },
+    "operators_enabled": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

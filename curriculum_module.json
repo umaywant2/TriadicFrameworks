@@ -1,0 +1,78 @@
+{
+  "module": "Curriculum",
+  "version": "1.0",
+  "category": "education-structural",
+  "summary": "Structured learning arc for regime‑aware thinking, substrate literacy, dimensional logic, governance, engineering, and applied systems — badge triggers, contributor honor roll, paper crosswalk, remix gallery/protocol/validator dashboard, submission templates, triadic curriculum index, manifesto, remix guide, translation, and WiFi energy protocols.",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "curriculum_badge_trigger_index.md",
+      "role": "map",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "curriculum_contributor_honor_roll.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "curriculum_paper_crosswalk.md",
+      "role": "map",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "curriculum_remix_gallery.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "curriculum_remix_protocol.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "curriculum_remix_validator_dashboard.md",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "remix_submission_templates.md",
+      "role": "template",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "triadic_curriculum_index.md",
+      "role": "map",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "triadic_manifesto.md",
+      "role": "profile",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "triadic_remix_guide.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "triadic_translation.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "WiFi_Energy_Protocols.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    }
+  ]
+}

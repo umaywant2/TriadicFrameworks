@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "RTT Radio Channel",
+  "type": "object",
+  "properties": {
+    "channel_id": { "type": "string" },
+    "frequency_mhz": { "type": "number" },
+    "band": { "type": "string" },
+    "triadic_signature": {
+      "type": "object",
+      "properties": {
+        "spin_modulation": { "type": "number" },
+        "charge_modulation": { "type": "number" },
+        "temperature_modulation": { "type": "number" }
+      }
+    }
+  }
+}

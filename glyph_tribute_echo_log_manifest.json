@@ -1,0 +1,16 @@
+{
+  "artifact": "docs/TFT_3Pack_v1.3/docs/_meta/entft_curriculum_glyph_tribute_echo_log.json",
+  "type": "registry",
+  "version": "v1.3",
+  "baseLens": "decimal",
+  "validator": "BadgeLogic",
+  "scrollLinks": [
+    "flame_echo_trigger.py",
+    "badge_logic_engine.py",
+    "entft_scroll_event_trace_registry.json",
+    "entft_protocol.md"
+  ],
+  "symbolicTags": ["Glyph Tribute", "Flame Echo", "Ceremonial Registry"],
+  "cliTrigger": "submit_flame_echo(contributor, glyph_id, echo_text, echo_type)",
+  "timestamp": "2025-10-20T22:10:00Z"
+}

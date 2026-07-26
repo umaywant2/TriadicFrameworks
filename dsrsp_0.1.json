@@ -1,0 +1,19 @@
+{
+  "title": "dsrsp/0.1 regime profile",
+  "type": "object",
+  "properties": {
+    "scan_id": { "type": "string" },
+    "regime_profile": { "type": "object" },
+    "rsm_structural_envelope": { "type": "object" },
+    "vst_validation_block": { "type": "object" },
+    "engine_compatibility": {
+      "type": "object",
+      "properties": {
+        "rsm": { "type": "boolean" },
+        "vst": { "type": "boolean" },
+        "vst_version": { "type": "string" }
+      }
+    }
+  },
+  "required": ["scan_id", "regime_profile"]
+}

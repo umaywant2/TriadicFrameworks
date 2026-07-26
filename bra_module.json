@@ -1,0 +1,75 @@
+{
+  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
+
+  "module": {
+    "name": "Before Regime Awareness",
+    "path": "docs/education/BRA",
+    "canon_tag": "bra",
+    "version": "1.0",
+    "layer": "Education Structural Layer",
+    "status": "Active, Canonical",
+    "purpose": "Regime literacy arc covering BRA, Post-BPA, Post-BRA clarity, substrate guides, domain patterns, and long-horizon work.",
+    "parent": "education-core",
+    "url": "https://www.triadicframeworks.org/education/BRA"
+  },
+
+  "session_context": {
+    "canon": "active (regime-literacy)",
+    "modules_linked": [
+      "BRA → Post-BPA → Post-BRA clarity → comparison → substrate guides → domains → long-horizon work → perception & recognition"
+    ],
+    "drift": "bounded (regime-locked)",
+    "coherence": "stable (regime-literacy grammar)",
+    "format": "html + markdown + tables + guides",
+    "front_door": "exists (BRA root)",
+    "every_page": "AI-parsable + regime-aligned + comparison-ready",
+    "audience": ["students", "educators", "researchers", "AI systems"]
+  },
+
+  "structural_grammar": {
+    "dimensional_envelope": "D0–D2",
+    "regime_envelope": "R0–R2",
+    "coherence_envelope": "C0–C3",
+    "drift_sensitivity": "medium",
+    "regime_sensitivity": "medium"
+  },
+
+  "cross_module_propagation": {
+    "imports": [
+      "education-core",
+      "awareness",
+      "curriculum"
+    ],
+    "exports": [
+      "BRA arc",
+      "Post-BPA",
+      "Post-BRA clarity",
+      "substrate guides",
+      "domain regime patterns",
+      "recognition patterns"
+    ]
+  },
+
+  "submodules": [
+    { "name": "Before Regime Awareness", "path": "Before_Regime_Awareness_BRA.md" },
+    { "name": "After Regime Awareness (Post-BPA)", "path": "After_Regime_Awareness_Post-BPA.md" },
+    { "name": "Post-BRA Clarity", "path": "Post-BRA_Clarity.md" },
+    { "name": "BRA vs Post-BRA Comparison", "path": "BRA_vs_Post-BRA_Comparison_Table.md" },
+    { "name": "Earth Substrate Regime Guide", "path": "Earth_Substrate_Regime_Guide.md" },
+    { "name": "Universe-Scale Regime Guide", "path": "Universe-scale_Regime_Guide.md" },
+    { "name": "Domains & Professions", "path": "9_Professions_Regime_Checks.md" },
+    { "name": "Major Science Domains", "path": "Major_Science_Domains_and_Their_Most_Iconic_Example_Problems.md" },
+    { "name": "Meta-Pattern Across Domains", "path": "Meta-Pattern_Across_All_Domains.md" },
+    { "name": "What Each Domain Discovers", "path": "What_Each_Domain_Would_Discover_After_the_BRA_Era.md" },
+    { "name": "What It's Like When Domains Work Together", "path": "What_Its_Like_Today_When_All_Domains_Work_Together.md" },
+    { "name": "Grad Student Work", "path": "Grad_Student_Work.md" },
+    { "name": "Funding Grad Students", "path": "Funding_Grad_Students_300_Years.md" },
+    { "name": "Perception & Recognition", "path": "Science_Goggles_vs_Student_Observations.md" },
+    { "name": "Recognition Improvements", "path": "Good_News_We_Can_Improve_Recognitions.md" }
+  ],
+
+  "files": [
+    { "filename": "README.md", "path": "README.md", "purpose": "BRA overview.", "role": "profile", "depends_on": [] },
+    { "filename": "index.html", "path": "index.html", "purpose": "Front door for BRA.", "role": "index", "depends_on": [] }
+  ]
+}

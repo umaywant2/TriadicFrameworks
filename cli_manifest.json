@@ -1,0 +1,19 @@
+{
+  "artifact": "cli.py",
+  "type": "entrypoint",
+  "version": "v1.3",
+  "baseLens": {
+    "nous": "phi",
+    "entft": "decimal",
+    "tops": "negabinary"
+  },
+  "validator": "ScrollFork",
+  "scrollLinks": [
+    "fff_quickstart.md",
+    "TriadicTestSuite.md",
+    "outputs_spec.md"
+  ],
+  "symbolicTags": ["Unified Shell", "Validator Trigger", "BaseLens Routing"],
+  "cliTrigger": "tft --help",
+  "timestamp": "2025-10-20T07:01:00Z"
+}

@@ -1,0 +1,34 @@
+{
+  "badge_map": {
+    "🧬 Remix Echo": {
+      "scroll_types": ["tutorial", "manifesto", "overlay"],
+      "trigger": "forked protocol + pull request",
+      "flora": "Sunflower, Lotus, Vine"
+    },
+    "📜 Scroll Scribe": {
+      "scroll_types": ["ritual", "registry", "echoes"],
+      "trigger": "authored markdown or SVG scroll",
+      "flora": "Fern, Moss, Wildflower"
+    },
+    "🔐 Quantum Hostile": {
+      "scroll_types": ["overlay", "benchmark"],
+      "trigger": "validated block map + hash",
+      "flora": "Vine, Oak"
+    },
+    "🌀 Triadic Weaver": {
+      "scroll_types": ["badge_logic", "overlay"],
+      "trigger": "used full 3-6-9 modulation",
+      "flora": "Ivy, Vine"
+    },
+    "🧠 Mythic Architect": {
+      "scroll_types": ["benchmark", "manifesto"],
+      "trigger": "entropy > 1e50 steps",
+      "flora": "Oak, Lotus"
+    },
+    "🛡️ Legacy Builder": {
+      "scroll_types": ["roll", "tree", "garden"],
+      "trigger": "contributed overlays, scrolls, or validator logic",
+      "flora": "Redwood, Grove"
+    }
+  }
+}

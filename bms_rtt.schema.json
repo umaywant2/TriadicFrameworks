@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "RTT Battery Management System",
+  "type": "object",
+  "properties": {
+    "bms_id": { "type": "string" },
+    "cells": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "state_of_charge": { "type": "number" },
+    "state_of_health": { "type": "number" },
+    "triadic_balance": { "type": "object" },
+    "thermal_profile": { "type": "object" }
+  }
+}

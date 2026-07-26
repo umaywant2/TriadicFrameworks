@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "Coeus Contract",
+  "type": "object",
+  "properties": {
+    "contract_id": { "type": "string" },
+    "version": { "type": "string" },
+    "issuer": { "type": "string" },
+    "timestamp_issued": { "type": "string", "format": "date-time" },
+    "state_model": { "type": "string" },
+    "operators": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "constraints": {
+      "type": "object",
+      "properties": {
+        "triadic": { "type": "string" },
+        "time_window": { "type": "string" }
+      }
+    },
+    "signatures": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "payload": { "type": "object" }
+  },
+  "required": ["contract_id", "version", "issuer", "state_model"]
+}

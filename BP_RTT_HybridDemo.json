@@ -1,0 +1,64 @@
+{
+  "asset_name": "BP_RTT_HybridDemo",
+  "asset_type": "BlueprintClass",
+  "parent_class": "Actor",
+  "path": "/RTT/Examples/BP_RTT_HybridDemo",
+
+  "components": [
+    { "name": "DefaultSceneRoot", "type": "SceneComponent", "role": "root" },
+    { "name": "RTTComponent", "type": "URTTComponent", "role": "operator_binding", "attached_to": "DefaultSceneRoot" },
+    { "name": "ParticleSystem", "type": "NiagaraComponent", "role": "hybrid_visual", "attached_to": "DefaultSceneRoot" },
+    { "name": "HybridMesh", "type": "StaticMeshComponent", "role": "optional_visual", "attached_to": "DefaultSceneRoot" }
+  ],
+
+  "variables": [
+    { "name": "HybridCoherenceThreshold", "type": "float", "default": 0.5, "category": "RTT" },
+    { "name": "HybridIntensity", "type": "float", "default": 1.0, "category": "RTT" }
+  ],
+
+  "event_graph": {
+    "Tick": [
+      {
+        "call": "RTT_ProbeResonance",
+        "target": "RTTComponent",
+        "store_as": "ResonanceFrame"
+      },
+      {
+        "call": "RTT_TraceEntropy",
+        "target": "RTTComponent",
+        "store_as": "EntropySignature"
+      },
+      {
+        "compute": {
+          "store_as": "HybridValue",
+          "expression": "(ResonanceFrame.Amplitude * (1 - EntropySignature.Intensity)) * HybridIntensity"
+        }
+      },
+      {
+        "set_particle_params": {
+          "component": "ParticleSystem",
+          "params": {
+            "HybridStrength": "HybridValue"
+          }
+        }
+      },
+      {
+        "conditional": {
+          "if": "HybridValue > HybridCoherenceThreshold",
+          "then": [
+            { "action": "SetMaterialVariant", "target": "HybridMesh", "variant": "CoherenceState" }
+          ]
+        }
+      }
+    ]
+  },
+
+  "rtt_alignment": {
+    "resonance": "RTT_ProbeResonance",
+    "entropy": "RTT_TraceEntropy",
+    "hybrid": "HybridValue"
+  },
+
+  "purpose": "Demonstrates hybrid operator behavior by combining resonance and entropy to drive dynamic effects.",
+  "status": "active"
+}

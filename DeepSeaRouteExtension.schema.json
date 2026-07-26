@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "$id": "https://triadicframeworks.org/schemas/rtt-deepsea/v1/DeepSeaRouteExtension.schema.json",
+  "title": "DeepSeaRouteExtension",
+  "type": "object",
+  "properties": {
+    "pressure_safe_path": {
+      "type": "boolean",
+      "description": "Indicates if the route avoids high-pressure zones."
+    },
+    "acoustic_navigation_quality": {
+      "type": "string",
+      "enum": ["good", "moderate", "poor"],
+      "description": "Sonar clarity along the route (RTT clarity gradient)."
+    },
+    "hazard_avoidance_zones": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Zones avoided due to low clarity or high drift."
+    }
+  }
+}
+

@@ -1,0 +1,263 @@
+{
+  "module": "Governance Substrate Model",
+  "version": "1.0",
+  "category": "governance-substrate",
+  "summary": "Structurally aligned reference substrate for designing, evaluating, and stewarding governance systems across regimes, cultures, and time horizons. 10 numbered directories (01 Invariants, 02 Awareness, 03 Evaluation, 04 Validation, 05 Implementation, 06 Leadership, 07 Incubation, 08 History, 09 Appendices, 10 Adapters) with 49 content files. GSM Analyzer tool available. Parallel to MSM.",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "01_Invariants/Alignment_Over_Enforcement.md",
+      "role": "engine",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "01_Invariants/Invariant_Principles.md",
+      "role": "engine",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "01_Invariants/Minimal_Moral_Denominator.md",
+      "role": "engine",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "01_Invariants/Regime_Awareness_As_Duty.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "02_Awareness/AI_Assisted_Sensing.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "02_Awareness/Early_Warning_Signals.md",
+      "role": "diagnostic",
+      "analyzer_layer": "drift"
+    },
+    {
+      "path": "02_Awareness/Escalation_Patterns.md",
+      "role": "diagnostic",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "02_Awareness/Immigrant_Awareness.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "02_Awareness/Interruption_Without_Domination.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "03_Evaluation/Cross_Regime_Stress_Tests.md",
+      "role": "diagnostic",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "03_Evaluation/Failure_Mode_Mapping.md",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "03_Evaluation/Minimal_Sufficiency_Checks.md",
+      "role": "diagnostic",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "03_Evaluation/RTT_Evaluation_Framework.md",
+      "role": "engine",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "04_Validation/DOI_Canon_Interface.md",
+      "role": "engine",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "04_Validation/Human_Curated_AI_Sift.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "04_Validation/Minimal_Theme_Submissions.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "04_Validation/Validated_Science_Criteria.md",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "05_Implementation/AI_Alignment_Surfaces.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "05_Implementation/Core_System_Design.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "05_Implementation/Education_Embedding.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "05_Implementation/Infrastructure_Retrofit_Patterns.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "06_Leadership/Maintaining_Legibility.md",
+      "role": "engine",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "06_Leadership/Phase_Management.md",
+      "role": "engine",
+      "analyzer_layer": "drift"
+    },
+    {
+      "path": "06_Leadership/Stewardship_Not_Control.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "06_Leadership/When_Not_To_Act.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "07_Incubation/Global_Coordination.md",
+      "role": "engine",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "07_Incubation/RTT_Incubator_Triad_Model.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "07_Incubation/Student_Led_Governance.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "07_Incubation/Untethered_Venture_Growth.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "08_History/Late_Correction_Costs.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "08_History/Lessons_From_Failure.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "08_History/Resource_Misallocation.md",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "08_History/Why_Governance_Failed_Before.md",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "09_Appendices/Case_Studies.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "09_Appendices/Simulations.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "09_Appendices/Future_Work.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "09_Appendices/Glossary.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "09_Appendices/Open_Questions.md",
+      "role": "diagnostic",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "10_Adapters/Adapter_Principles.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "10_Adapters/Containment_When_Translation_Fails.md",
+      "role": "engine",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "10_Adapters/Legacy_System_Mapping.md",
+      "role": "map",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "10_Adapters/Partial_Alignment_Strategies.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "10_Adapters/Education_System_Adapter.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "10_Adapters/Civic_Infrastructure_Adapter.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "10_Adapters/Industry_Adapter.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "10_Adapters/Medicine_Infrastructure_Adapter.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "10_Adapters/Punishment_Rehabilitative_Adapter.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "10_Adapters/Inverted_Economics_Adapter.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "10_Adapters/Local_Leadership_Roles_Adapter.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    }
+  ]
+}

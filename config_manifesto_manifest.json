@@ -1,0 +1,17 @@
+{
+  "artifact": "docs/TFT_3Pack_v1.3/tft/entft/contributors/configs/config_manifesto.md",
+  "type": "declaration_scroll",
+  "version": "v1.3",
+  "baseLens": "decimal",
+  "validator": "BadgeLogic",
+  "scrollLinks": [
+    "sync_profile.json",
+    "validator_keys.cfg",
+    "remix_rights.md",
+    "sandbox_trace.log",
+    "contributors/configs/README.md"
+  ],
+  "symbolicTags": ["Config Manifesto", "Corridor Trust", "Remix Responsibility", "Signature Layer"],
+  "cliTrigger": "cd configs → view declarations and remix rights",
+  "timestamp": "2025-10-21T00:03:00Z"
+}

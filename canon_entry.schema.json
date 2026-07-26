@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "RTT Canon Entry",
+  "type": "object",
+  "properties": {
+    "entry_id": { "type": "string" },
+    "title": { "type": "string" },
+    "author": { "type": "string" },
+    "category": { "type": "string" },
+    "summary": { "type": "string" },
+    "triadic_alignment": {
+      "type": "object",
+      "properties": {
+        "spin": { "type": "number" },
+        "charge": { "type": "number" },
+        "temperature": { "type": "number" }
+      }
+    },
+    "lineage": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "status": { "type": "string" }
+  },
+  "required": ["entry_id", "title", "author"]
+}

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "Creator Goal",
+  "type": "object",
+  "properties": {
+    "goal_id": { "type": "string" },
+    "creator": { "type": "string" },
+    "description": { "type": "string" },
+    "category": { "type": "string" },
+    "triadic_alignment": { "type": "object" },
+    "priority": { "type": "string" },
+    "target_date": { "type": "string", "format": "date" }
+  },
+  "required": ["goal_id", "creator", "description"]
+}

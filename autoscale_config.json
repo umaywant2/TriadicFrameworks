@@ -1,0 +1,8 @@
+{
+  "targetCPUUtilizationPercentage": 69,
+  "minReplicas": 1,
+  "maxReplicas": 99,
+  "scaleUpCooldown": 30,
+  "scaleDownCooldown": 60
+}
+

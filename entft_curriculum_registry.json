@@ -1,0 +1,42 @@
+```json
+{
+  "curriculum_registry": [
+    {
+      "fork_id": "curriculum-001",
+      "title": "enTFT Codex Curriculum",
+      "glyph": "🍂 Cascade",
+      "grade": "🟣 Universe",
+      "contributors": ["Nawder Loswin", "Copilot"],
+      "scrolls": [
+        "scroll_codex.md",
+        "scroll_curriculum_manifesto.md",
+        "scroll_codex_fork_guide.md"
+      ],
+      "echo": "Remixable curriculum seeded for educators and standard publishers"
+    },
+    {
+      "fork_id": "curriculum-002",
+      "title": "Mythic Onboarding Curriculum",
+      "glyph": "🌺 Bloom",
+      "grade": "🟢 Local",
+      "contributors": ["Mira Thorne"],
+      "scrolls": [
+        "scroll_remixer_manifest.md",
+        "scroll_manifest_registry.json"
+      ],
+      "echo": "Badge logic and onboarding scrolls remixed for student clarity"
+    },
+    {
+      "fork_id": "curriculum-003",
+      "title": "Validator Logic Curriculum",
+      "glyph": "🌴 Grove Bloom",
+      "grade": "🔵 Planetary",
+      "contributors": ["Aria Vex"],
+      "scrolls": [
+        "scroll_glyph_reawakening.md",
+        "scroll_echoes.md"
+      ],
+      "echo": "Validator overlays and badge triggers remixed for protocol education"
+    }
+  ]
+}

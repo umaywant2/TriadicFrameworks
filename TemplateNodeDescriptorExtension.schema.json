@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "$id": "https://triadicframeworks.org/schemas/TEMPLATE/v1/TemplateFieldSampleExtension.schema.json",
+  "title": "TemplateFieldSampleExtension",
+  "type": "object",
+  "properties": {
+    "example_sensor_value": {
+      "type": "number",
+      "description": "Replace with a domain-specific sensor reading."
+    }
+  }
+}
+

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "$id": "https://triadicframeworks.org/schemas/rsadi-gd-advanced/v1/LensState.schema.json",
+  "title": "LensState",
+  "type": "object",
+  "required": ["active_lens"],
+  "properties": {
+    "active_lens": {
+      "type": "string",
+      "enum": ["structural", "resonant", "temporal", "paradox"],
+      "description": "Which lens the player currently perceives through."
+    },
+    "intensity": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 255,
+      "description": "Strength of lens effect (RTT clarity modulation)."
+    },
+    "cooldown_ms": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Cooldown before lens can be switched again."
+    },
+    "extensions": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}
+

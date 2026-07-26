@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
+  "title": "Quantum Substrate",
+  "type": "object",
+  "properties": {
+    "substrate_id": { "type": "string" },
+    "architecture": { "type": "string" },
+    "qubit_type": { "type": "string" },
+    "triadic_fields": {
+      "type": "object",
+      "properties": {
+        "spin_field": { "type": "number" },
+        "charge_field": { "type": "number" },
+        "temperature_field": { "type": "number" }
+      }
+    },
+    "coherence_profile": { "type": "object" },
+    "error_surface": { "type": "object" }
+  },
+  "required": ["substrate_id", "architecture"]
+}

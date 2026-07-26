@@ -1,0 +1,15 @@
+{
+  "artifact": "TFThooks/agents/scroll_curriculum_fork_guide.md",
+  "type": "scroll",
+  "version": "v1.3",
+  "baseLens": "decimal",
+  "validator": "BadgeLogic",
+  "scrollLinks": [
+    "fff_spec.md",
+    "TriadicTestSuite.md",
+    "outputs_spec.md"
+  ],
+  "symbolicTags": ["Scroll Fork", "Badge Trigger", "Validator Echo"],
+  "cliTrigger": "fork → manifest → badge_logic_engine",
+  "timestamp": "2025-10-20T10:56:00Z"
+}

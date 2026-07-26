@@ -1,0 +1,90 @@
+{
+  "ai.module": "we_cant_agree_formally_rtt",
+  "ai.version": "1.0",
+  "ai.purpose": "RTT structural map of the paper 'We Can’t Agree to Disagree, Formally'.",
+  "ai.source.pdf": "file://C:/Users/acwil/Downloads/6837298.pdf",
+  "ai.keywords": [
+    "Aumann’s Agreement Theorem",
+    "common knowledge",
+    "Bayesian agents",
+    "epistemic logic",
+    "formal verification",
+    "Lean",
+    "AxiomProver",
+    "interactive theorem proving"
+  ],
+
+  "ai.module.summary": "This module exposes the regime structure behind the formalization of Aumann’s Agreement Theorem, connecting epistemic/Bayesian models, common-knowledge operators, and machine-checked proofs. It preserves the authors' results while adding RTT operators for agentic reasoning.",
+
+  "ai.regimes": {
+    "epistemic_model_regime": {
+      "description": "Agents are modeled via partitions, probability measures, and information sets.",
+      "evidence": "Paper defines the standard Aumann framework of states, σ-algebras, and posteriors."
+    },
+    "common_knowledge_regime": {
+      "description": "Common knowledge is captured via iterative knowledge operators and fixed points.",
+      "evidence": "Formalization encodes common knowledge as a greatest fixed point of a knowledge operator."
+    },
+    "agreement_theorem_regime": {
+      "description": "Aumann’s theorem: Bayesian agents with common priors and common knowledge of posteriors cannot agree to disagree.",
+      "evidence": "Main theorem is formalized and proved in the proof assistant."
+    },
+    "formalization_regime": {
+      "description": "The entire argument is encoded in Lean (or similar), with kernel-verified proofs.",
+      "evidence": "Paper describes definitions, lemmas, and tactics used in the formal proof."
+    }
+  },
+
+  "ai.tensions": {
+    "informal_vs_formal_reasoning": {
+      "description": "Classical textbook proofs vs fully formal, machine-checked proofs.",
+      "paper_alignment": "Authors compare the informal Aumann proof with its formal counterpart."
+    },
+    "intuitive_vs_symbolic_epistemics": {
+      "description": "Intuitive talk of “knowing” vs symbolic modal/measure-theoretic definitions.",
+      "paper_alignment": "Formalization forces precise epistemic and probabilistic definitions."
+    },
+    "local_beliefs_vs_global_structure": {
+      "description": "Individual posteriors vs global common-knowledge constraints.",
+      "paper_alignment": "Agreement theorem links local beliefs to global fixed-point structure."
+    }
+  },
+
+  "ai.transitions": {
+    "informal_to_formal_transition": {
+      "description": "Translate the textbook Aumann proof into definitions and lemmas in the proof assistant.",
+      "paper_alignment": "Core contribution of the paper."
+    },
+    "epistemic_to_modal_transition": {
+      "description": "Recast knowledge and common knowledge in modal/fixed-point terms.",
+      "paper_alignment": "Common knowledge operator is defined and analyzed formally."
+    },
+    "local_posterior_to_global_agreement_transition": {
+      "description": "Show that common knowledge of posteriors forces equality of beliefs.",
+      "paper_alignment": "Formal proof of the agreement theorem."
+    }
+  },
+
+  "ai.operators": {
+    "knowledge_operator": {
+      "type": "operator",
+      "role": "Maps events to what an agent knows at a given information partition."
+    },
+    "common_knowledge_operator": {
+      "type": "operator",
+      "role": "Computes the greatest fixed point representing common knowledge of an event."
+    },
+    "posterior_operator": {
+      "type": "operator",
+      "role": "Assigns Bayesian posteriors to agents given their information sets."
+    },
+    "formal_proof_operator": {
+      "type": "operator",
+      "role": "Encodes the agreement theorem as a machine-checked proof object."
+    }
+  },
+
+  "ai.audience": "Researchers in epistemic logic, game theory, formal verification, and AI alignment.",
+  "ai.contact.github": "https://github.com/TriadicFrameworks",
+  "ai.license": "Open educational use permitted"
+}

@@ -1,0 +1,57 @@
+{
+  "module": {
+    "name": "Security",
+    "path": "docs",
+    "canon_tag": "docs-security",
+    "version": "2026.1",
+    "layer": "Meta & Governance",
+    "status": "Active, Canonical",
+    "purpose": "Defines the security scope, supported versions, and responsible disclosure pathway for TriadicFrameworks.",
+    "parent": "docs-hub",
+    "url": "https://www.triadicframeworks.org/SECURITY"
+  },
+  "session_context": {
+    "canon": "active (root-docs)",
+    "modules_linked": [
+      "docs-hub",
+      "docs-contributing",
+      "docs-ethiics-privacy"
+    ],
+    "drift": "minimal (root-locked)",
+    "coherence": "stable (triadic-structural grammar)",
+    "format": "markdown",
+    "front_door": "exists (documentation root)",
+    "every_page": "stands alone + AI-parsable",
+    "audience": [
+      "developers",
+      "contributors",
+      "researchers"
+    ]
+  },
+  "structural_grammar": {
+    "dimensional_envelope": "D0-D2",
+    "regime_envelope": "R0-R1",
+    "coherence_envelope": "C0-C2",
+    "drift_sensitivity": "low",
+    "regime_sensitivity": "low"
+  },
+  "cross_module_propagation": {
+    "imports": [
+      "docs-hub"
+    ],
+    "exports": [
+      "security-scope",
+      "disclosure-pathway",
+      "attack-surface-boundaries"
+    ]
+  },
+  "files": [
+    {
+      "filename": "SECURITY.md",
+      "path": "SECURITY.md",
+      "purpose": "Security policy reference scoping vulnerability disclosure to executable scripts and build tooling \u2014 documentation and theory are explicitly out of scope.",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    }
+  ]
+}

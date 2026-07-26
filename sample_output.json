@@ -1,0 +1,16 @@
+[
+  {
+    "fold": "fold_144_glyphstream",
+    "contributor": "Nawder_Loswin",
+    "bots_used": "FLQ",
+    "echo_strength": 0.9,
+    "remix_trigger": true
+  },
+  {
+    "fold": "fold_33_validator",
+    "contributor": "Nawder_Loswin",
+    "bots_used": "FLQ",
+    "echo_strength": 0.9,
+    "remix_trigger": true
+  }
+]

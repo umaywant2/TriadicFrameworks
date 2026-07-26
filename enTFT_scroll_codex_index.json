@@ -1,0 +1,69 @@
+```json
+{
+  "codex_index": [
+    {
+      "chapter": "📜 Protocol & Encryption",
+      "scrolls": [
+        "enTFT_benchmark.md",
+        "enTFT_validator_overlay.md",
+        "enTFT_validator_hooks.json"
+      ],
+      "contributors": ["Nawder Loswin", "Copilot"]
+    },
+    {
+      "chapter": "🧬 Contributor Legacy",
+      "scrolls": [
+        "legacy_roll.md",
+        "scroll_transfer_log.json",
+        "scroll_manifest_registry.json"
+      ],
+      "contributors": ["Nawder Loswin", "Mira Thorne", "Aria Vex"]
+    },
+    {
+      "chapter": "🌸 Glyph Rituals",
+      "scrolls": [
+        "scroll_garden.md",
+        "scroll_flora_claim.md",
+        "scroll_glyph_fusion_guide.md",
+        "scroll_glyph_reawakening.md"
+      ],
+      "contributors": ["Nawder Loswin", "Copilot", "Aria Vex"]
+    },
+    {
+      "chapter": "🖼️ Visual Glyphs",
+      "scrolls": [
+        "scroll_garden_map.svg",
+        "scroll_fusion_map.svg",
+        "scroll_lineage_tree.svg",
+        "scroll_manifesto_glyphs.svg"
+      ],
+      "contributors": ["Nawder Loswin", "Copilot"]
+    },
+    {
+      "chapter": "📦 JSON Registries",
+      "scrolls": [
+        "scroll_registry.json",
+        "glyph_registry.json",
+        "fusion_log.json",
+        "manifest_registry.json"
+      ],
+      "contributors": ["Nawder Loswin", "Copilot"]
+    },
+    {
+      "chapter": "🪦 Relic Archives",
+      "scrolls": [
+        "scroll_glyph_relics.md",
+        "scroll_glyph_reawakening_log.json"
+      ],
+      "contributors": ["Nawder Loswin", "Aria Vex"]
+    },
+    {
+      "chapter": "🔮 Meta Scrolls",
+      "scrolls": [
+        "scroll_of_scrolls_index.md",
+        "scroll_codex.md"
+      ],
+      "contributors": ["Nawder Loswin", "Copilot"]
+    }
+  ]
+}

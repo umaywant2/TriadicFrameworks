@@ -1,0 +1,33 @@
+{
+  "module": "Substrate Communications",
+  "version": "1.0",
+  "category": "substrate-comms",
+  "summary": "Pre‑semantic messaging layer — fundamental substrate communication primitives, semantic message classifications, and regime‑aware message mapping.",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "substrate_comms_core.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "message_types.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "regime_mapping.md",
+      "role": "map",
+      "analyzer_layer": "regime"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "entity": "Human",
+  "substrate": "Biological / Neural",
+  "regimes": [
+    {
+      "name": "Arrival",
+      "dimensional_access": "0D → 1D",
+      "signature": "Emergence, imprinting",
+      "description": "Biological birth; early sensory anchoring; total dependence on external scaffolding.",
+      "key_operators": ["Initialization", "Boundary-forming", "Substrate anchoring"]
+    },
+    {
+      "name": "Expansion",
+      "dimensional_access": "1D → 2D",
+      "signature": "Exploration, pattern acquisition",
+      "description": "Cognitive, social, and emotional patterning; identity formation; environmental scanning.",
+      "key_operators": ["Pattern acquisition", "Regime scanning", "Stability-seeking"]
+    },
+    {
+      "name": "Inversion",
+      "dimensional_access": "2D → 1D collapse / 3D emergence",
+      "signature": "Crisis, transition",
+      "description": "Adolescence, existential rupture, trauma, awakening, or major life reconfiguration.",
+      "key_operators": ["Collapse", "Reconfiguration", "Dimensional inversion"]
+    },
+    {
+      "name": "Coherence",
+      "dimensional_access": "3D stabilized",
+      "signature": "Integration, clarity",
+      "description": "Self-authored structure; intentional navigation of multiple regimes.",
+      "key_operators": ["Integration", "Self-structuring", "Regime navigation"]
+    },
+    {
+      "name": "Dissolution",
+      "dimensional_access": "3D → 0D",
+      "signature": "Unbinding",
+      "description": "Biological decline; cognitive narrowing; return to substrate.",
+      "key_operators": ["Unbinding", "Return", "Substrate release"]
+    }
+  ]
+}

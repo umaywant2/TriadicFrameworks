@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.triadicframeworks.org/schemas/sitemap_module.schema.json",
+  "$generated": "2026-07-03T12:12:00",
+  "$version": "1.3",
+  "title": "TriadicFrameworks Sitemap Module Entry",
+  "description": "Schema for a single module sitemap entry. R4: added enriched_r4 field.",
+  "type": "object",
+  "required": [
+    "canon_tag",
+    "name",
+    "url",
+    "path",
+    "layer",
+    "status",
+    "depth",
+    "priority",
+    "changefreq"
+  ],
+  "properties": {
+    "canon_tag": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "path": {
+      "type": "string"
+    },
+    "layer": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "depth": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "priority": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "changefreq": {
+      "type": "string",
+      "enum": [
+        "always",
+        "hourly",
+        "daily",
+        "weekly",
+        "monthly",
+        "yearly",
+        "never"
+      ]
+    },
+    "file_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "last_modified": {
+      "type": "string",
+      "format": "date"
+    },
+    "classification": {
+      "type": "string",
+      "enum": [
+        "A3",
+        "I2"
+      ]
+    },
+    "enriched_r2": {
+      "type": "boolean"
+    },
+    "enriched_r3": {
+      "type": "boolean",
+      "description": "True if enriched with real module.json metadata in Round 3"
+    },
+    "enriched_r4": {
+      "type": "boolean",
+      "description": "True if this entry was enriched with real module.json metadata in Round 4"
+    }
+  },
+  "additionalProperties": false,
+  "examples": [
+    {
+      "canon_tag": "webroot",
+      "name": "TriadicFrameworks Web Root",
+      "url": "https://www.triadicframeworks.org/",
+      "path": "docs",
+      "layer": "Meta & Governance",
+      "status": "Active, Canonical",
+      "depth": 0,
+      "priority": 1.0,
+      "changefreq": "weekly",
+      "file_count": 13,
+      "last_modified": "2026-07-02",
+      "classification": "A3",
+      "enriched_r2": false,
+      "enriched_r3": false
+    }
+  ]
+}

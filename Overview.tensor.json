@@ -1,0 +1,179 @@
+{
+  "module": "Datacenter Reports",
+  "view": "Overview",
+  "version": "1.0.0",
+  "indices": {
+    "FAC": "Facilities Layer index (0–3)",
+    "GOV": "Governance Layer index (0–3)",
+    "CUL": "Cultural Substrate index (0–3)",
+    "STD": "Standards & Compliance index (0–3)",
+    "HUM": "Human Envelope index (0–3)",
+    "PLA": "Planetary Layer index (0–3)",
+    "INF": "Compute & Infrastructure index (0–3)",
+    "TAX": "Tax/Revenue Regime index (0–3)"
+  },
+  "triadic_alignment": {
+    "encoding": {
+      "❌": 0,
+      "🟨": 1,
+      "✅": 2
+    },
+    "field": "TRI"
+  },
+  "datacenters": [
+    {
+      "name": "Vantage Lighthouse (WI)",
+      "region": "US-Midwest",
+      "FAC": 2, "GOV": 2, "CUL": 1, "STD": 2, "HUM": 2,
+      "PLA": 1, "INF": 3, "TAX": 2,
+      "TRI": 1, "RES": 1
+    },
+    {
+      "name": "Vantage Shackelford (TX)",
+      "region": "US-South",
+      "FAC": 2, "GOV": 1, "CUL": 1, "STD": 2, "HUM": 2,
+      "PLA": 1, "INF": 3, "TAX": 2,
+      "TRI": 1, "RES": 1
+    },
+    {
+      "name": "Microsoft Lighthouse (WI)",
+      "region": "US-Midwest",
+      "FAC": 3, "GOV": 2, "CUL": 1, "STD": 3, "HUM": 2,
+      "PLA": 1, "INF": 3, "TAX": 2,
+      "TRI": 1, "RES": 1
+    },
+    {
+      "name": "AWS us-east-1",
+      "region": "US-East",
+      "FAC": 3, "GOV": 3, "CUL": 1, "STD": 3, "HUM": 2,
+      "PLA": 1, "INF": 3, "TAX": 2,
+      "TRI": 1, "RES": 1
+    },
+    {
+      "name": "Google Columbus Cluster",
+      "region": "US-Midwest",
+      "FAC": 3, "GOV": 2, "CUL": 1, "STD": 3, "HUM": 2,
+      "PLA": 1, "INF": 3, "TAX": 2,
+      "TRI": 1, "RES": 1
+    },
+    {
+      "name": "Google Omaha Cluster",
+      "region": "US-Midwest",
+      "FAC": 3, "GOV": 2, "CUL": 1, "STD": 3, "HUM": 2,
+      "PLA": 1, "INF": 3, "TAX": 2,
+      "TRI": 1, "RES": 1
+    },
+    {
+      "name": "Meta Prometheus Campus",
+      "region": "US-West",
+      "FAC": 3, "GOV": 2, "CUL": 1, "STD": 3, "HUM": 2,
+      "PLA": 1, "INF": 3, "TAX": 2,
+      "TRI": 1, "RES": 1
+    },
+    {
+      "name": "Meta Hyperion Campus",
+      "region": "US-West",
+      "FAC": 3, "GOV": 2, "CUL": 1, "STD": 3, "HUM": 2,
+      "PLA": 1, "INF": 3, "TAX": 2,
+      "TRI": 1, "RES": 1
+    },
+    {
+      "name": "Meta Monroe Campus",
+      "region": "US-South",
+      "FAC": 3, "GOV": 2, "CUL": 1, "STD": 3, "HUM": 2,
+      "PLA": 1, "INF": 3, "TAX": 2,
+      "TRI": 1, "RES": 1
+    },
+    {
+      "name": "xAI Colossus (Memphis)",
+      "region": "US-South",
+      "FAC": 2, "GOV": 1, "CUL": 1, "STD": 2, "HUM": 2,
+      "PLA": 1, "INF": 3, "TAX": 2,
+      "TRI": 1, "RES": 1
+    },
+    {
+      "name": "OpenAI Stargate (Abilene)",
+      "region": "US-South",
+      "FAC": 2, "GOV": 1, "CUL": 1, "STD": 2, "HUM": 2,
+      "PLA": 1, "INF": 3, "TAX": 2,
+      "TRI": 1, "RES": 1
+    },
+    {
+      "name": "Oracle Project Jupiter",
+      "region": "US-West",
+      "FAC": 2, "GOV": 2, "CUL": 1, "STD": 2, "HUM": 2,
+      "PLA": 1, "INF": 3, "TAX": 2,
+      "TRI": 1, "RES": 1
+    },
+    {
+      "name": "START Campus (Portugal)",
+      "region": "EU",
+      "FAC": 2, "GOV": 2, "CUL": 1, "STD": 2, "HUM": 2,
+      "PLA": 1, "INF": 3, "TAX": 2,
+      "TRI": 1, "RES": 1
+    },
+    {
+      "name": "The Heptagon (Saudi Arabia)",
+      "region": "MENA",
+      "FAC": 2, "GOV": 2, "CUL": 1, "STD": 2, "HUM": 2,
+      "PLA": 1, "INF": 3, "TAX": 2,
+      "TRI": 1, "RES": 1
+    },
+    {
+      "name": "Yondr Toronto",
+      "region": "CA",
+      "FAC": 2, "GOV": 2, "CUL": 1, "STD": 2, "HUM": 2,
+      "PLA": 1, "INF": 3, "TAX": 2,
+      "TRI": 1, "RES": 1
+    },
+    {
+      "name": "Yondr Northern Virginia",
+      "region": "US-East",
+      "FAC": 2, "GOV": 2, "CUL": 1, "STD": 2, "HUM": 2,
+      "PLA": 1, "INF": 3, "TAX": 2,
+      "TRI": 1, "RES": 1
+    },
+    {
+      "name": "Digital Realty (Global)",
+      "region": "Global",
+      "FAC": 3, "GOV": 3, "CUL": 2, "STD": 3, "HUM": 2,
+      "PLA": 1, "INF": 3, "TAX": 2,
+      "TRI": 1, "RES": 1
+    },
+    {
+      "name": "Equinix (Global)",
+      "region": "Global",
+      "FAC": 3, "GOV": 3, "CUL": 2, "STD": 3, "HUM": 2,
+      "PLA": 1, "INF": 3, "TAX": 2,
+      "TRI": 1, "RES": 1
+    },
+    {
+      "name": "Apple (US/EU)",
+      "region": "US-EU",
+      "FAC": 3, "GOV": 3, "CUL": 2, "STD": 3, "HUM": 2,
+      "PLA": 1, "INF": 3, "TAX": 2,
+      "TRI": 1, "RES": 1
+    },
+    {
+      "name": "Alibaba Zhangbei",
+      "region": "CN",
+      "FAC": 2, "GOV": 2, "CUL": 1, "STD": 2, "HUM": 2,
+      "PLA": 1, "INF": 3, "TAX": 2,
+      "TRI": 1, "RES": 1
+    },
+    {
+      "name": "China Telecom Hohhot",
+      "region": "CN",
+      "FAC": 2, "GOV": 2, "CUL": 1, "STD": 2, "HUM": 2,
+      "PLA": 1, "INF": 3, "TAX": 2,
+      "TRI": 1, "RES": 1
+    },
+    {
+      "name": "Harbin Data Center",
+      "region": "CN",
+      "FAC": 2, "GOV": 2, "CUL": 1, "STD": 2, "HUM": 2,
+      "PLA": 1, "INF": 3, "TAX": 2,
+      "TRI": 1, "RES": 1
+    }
+  ]
+}

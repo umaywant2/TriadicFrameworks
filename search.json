@@ -1,0 +1,92 @@
+{
+  "module": {
+    "name": "Structural Detection",
+    "id": "structural_detection",
+    "version": "1.0",
+    "category": "analysis",
+    "canonical_url": "https://www.triadicframeworks.org/docs/Structural_Detection/",
+    "description": "Structural Detection teaches students and AIs how to detect motifs, boundaries, invariants, anomalies, drift, regimes, and continuity using a five-operator RTT/1 pipeline.",
+    "keywords": [
+      "structural detection",
+      "pattern detection",
+      "motif detection",
+      "drift analysis",
+      "regime classification",
+      "continuity mapping",
+      "coherence analysis",
+      "RTT",
+      "RTT/1",
+      "triadic frameworks",
+      "structural analysis",
+      "operator pipeline"
+    ]
+  },
+
+  "search": {
+    "priority": "high",
+    "indexing": {
+      "allow": true,
+      "follow": true,
+      "archive": true
+    },
+    "structured_data": {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Structural Detection — RTT/1 Operator Pipeline",
+      "description": "Detect motifs, drift, regimes, invariants, anomalies, and coherence using the Structural Detection operator family.",
+      "author": {
+        "@type": "Person",
+        "name": "Nawder Loswin"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "TriadicFrameworks"
+      },
+      "inLanguage": "en",
+      "keywords": "structural detection, drift sense, regime awareness, continuity compass, synthesis triangulation, RTT/1"
+    },
+    "ai_search": {
+      "semantic_group": "rtt_structural_analysis",
+      "embedding_weight": 0.92,
+      "search_vectors": [
+        "motif-boundary-invariant-anomaly",
+        "drift-intensity-direction-deformation",
+        "regime-formal-emergent-chaotic",
+        "continuity-invariants-stable-motifs",
+        "synthesis-triangulation-structural-summary"
+      ],
+      "query_examples": [
+        "how to detect structural motifs",
+        "what is drift in RTT",
+        "how to classify structural regimes",
+        "how to find invariants across samples",
+        "how to triangulate structural signals"
+      ]
+    }
+  },
+
+  "crosslinks": {
+    "related_modules": [
+      "drift_sense",
+      "regime_awareness",
+      "continuity_compass",
+      "synthesis_triangulation",
+      "opacity",
+      "fft_analyzer",
+      "tel"
+    ],
+    "recommended_paths": [
+      "/docs/Structural_Detection/student_materials/student_primer.md",
+      "/docs/Structural_Detection/operators/STRUCTURAL_DETECTION_OPERATOR.md",
+      "/docs/Structural_Detection/student_materials/cheat_sheet.md",
+      "/docs/Structural_Detection/student_materials/scenario_gauntlet.md"
+    ]
+  },
+
+  "technical": {
+    "sitemap": "/sitemap_main.xml",
+    "robots": "index, follow",
+    "last_updated": "2026-05-08",
+    "schema_version": "1.0"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "bands": ["visible", "IR", "RF", "UV", "THz", "X-ray"],
+  "calibration": {
+    "reference_clock": "GPS-disciplined oscillator",
+    "cross_band_offsets": "calibration_offsets.npy",
+    "uncertainty_masks": "calibration_uncertainty.npy"
+  },
+  "legend": {
+    "offsets": "phase alignment corrections",
+    "confidence": "cross-band calibration confidence"
+  }
+}

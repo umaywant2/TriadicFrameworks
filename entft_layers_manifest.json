@@ -1,0 +1,15 @@
+{
+  "artifact": "entft_layers.svg",
+  "type": "illustration",
+  "version": "v1.3",
+  "baseLens": "decimal",
+  "validator": "BadgeLogic",
+  "scrollLinks": [
+    "fff_spec.md",
+    "TriadicTestSuite.md",
+    "outputs_spec.md"
+  ],
+  "symbolicTags": ["Triadic Lock", "Badge Trigger", "Encryption Flow"],
+  "cliTrigger": "encryptor.py --input input.txt --basetype decimal",
+  "timestamp": "2025-10-20T06:51:00Z"
+}

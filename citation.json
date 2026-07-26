@@ -1,0 +1,37 @@
+{
+  "citation": {
+    "title": "Structural Detection Module",
+    "module_id": "structural_detection",
+    "version": "1.0.0",
+    "authors": [
+      {
+        "name": "Nawder Loswin",
+        "orcid": null,
+        "affiliation": "TriadicFrameworks"
+      }
+    ],
+    "date_released": "2026-05-08",
+    "doi": null,
+    "url": "https://www.triadicframeworks.org/docs/Structural_Detection/",
+    "repository": "https://github.com/umaywant2/TriadicFrameworks",
+    "license": "MIT",
+    "keywords": [
+      "RTT",
+      "RTT/1",
+      "structural detection",
+      "motifs",
+      "boundaries",
+      "invariants",
+      "anomalies",
+      "drift",
+      "regime",
+      "continuity",
+      "coherence",
+      "operator pipeline",
+      "triadic frameworks"
+    ],
+    "description": "The Structural Detection module provides the RTT/1 operator pipeline for detecting motifs, boundaries, invariants, anomalies, drift, regimes, and continuity across structural samples.",
+    "recommended_citation": "Loswin, N. (2026). Structural Detection Module (v1.0.0). TriadicFrameworks. https://www.triadicframeworks.org/docs/Structural_Detection/",
+    "schema_version": "1.0"
+  }
+}

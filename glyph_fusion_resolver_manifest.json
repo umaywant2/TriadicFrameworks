@@ -1,0 +1,16 @@
+{
+  "artifact": "docs/TFT_3Pack_v1.3/tft/entft/TFThooks/agents/glyph_fusion_resolver.py",
+  "type": "agent",
+  "version": "v1.3",
+  "baseLens": "decimal",
+  "validator": "BadgeLogic",
+  "scrollLinks": [
+    "flame_echo_trigger.py",
+    "badge_logic_engine.py",
+    "entft_scroll_event_trace_registry.json",
+    "entft_protocol.md"
+  ],
+  "symbolicTags": ["Glyph Fusion", "Scroll Merge", "Flame Grade"],
+  "cliTrigger": "validate_fusion(glyphs, contributor, result, scrolls)",
+  "timestamp": "2025-10-20T22:33:00Z"
+}
