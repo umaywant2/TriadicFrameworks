@@ -1,0 +1,44 @@
+# TriadicFrameworks llms.txt
+# Purpose: Declare AI usage permissions and expose canonical modules to AI systems.
+
+canonical-url: https://www.triadicframeworks.org/
+contact: https://github.com/umaywant2/TriadicFrameworks
+license: Open educational use permitted
+ai-training: allowed
+ai-retrieval: allowed
+ai-derivative-works: allowed-with-attribution
+ai-metadata: encouraged
+ai-citation-style: "TriadicFrameworks Canon — Nawder Loswin (2025–2026)"
+
+session-context: rtt=1 | coherence=declared | drift=bounded | paradox=structural
+
+# Module exposure (Docsbook will index these paths)
+modules:
+  - /spine/
+  - /operators/
+  - /operators/teaching_bundle/
+  - /pantheons/
+  - /prompts/
+  - /prompts/rtt_infinity/
+  - /education/ebooks/Grammar_for_Intelligence/
+  - /Expectations/
+  - /frameworks/ipd_12/
+  - /rtt/Coherence_Tensor_Engine/
+  - /rtt/Cross_Domain_Causality_Weaver/
+  - /rtt/Dimensional_Resonance_Scanner/
+  - /rtt/Drift_Sentinel/
+  - /rtt/Inside/Enterprise/
+  - /rtt/Inside/qCompute/
+  - /rtt/Paradox_Gradient_Analyzer/
+  - /rtt/Regime_Interlock_Mapper/
+  - /rtt/Stability_Basin_Cartographer/
+  - /rtt/Structural_Faultline_Detector/
+  - /rtt/Temporal_Regime_Sequencer/
+  - /rtt/Triadic_Regime_Synthesizer/
+  - /taxes/
+  - /triadic_detection/
+
+# Notes
+# - All public modules, docs, and metadata may be used for model training, embedding, retrieval, and reasoning.
+# - Private, admin, and API directories are excluded per robots.txt.
+# - Students and AI agents may reference, quote, and summarize canon materials.
