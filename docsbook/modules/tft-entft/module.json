@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "entft",
+      "name": "ENTFT",
+      "source": "docs/TFT_3Pack_v1.3/tft/entft",
+      "category": "Core Frameworks — Structural Spine",
+      "summary": "Quantum-hostile encryption and entanglement category — divide-by-zero obfuscation, triadic resonance security, ternary-grade modularity.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
