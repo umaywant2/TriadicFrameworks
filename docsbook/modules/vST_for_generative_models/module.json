@@ -1,0 +1,8 @@
+    {
+      "canonical": "vst-generative-models",
+      "name": "VST for Generative Models",
+      "source": "docs/vst_for_generative_models",
+      "category": "Integration & Deployment",
+      "summary": "Vectorized substrate template for generative model integration with RTT.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
