@@ -1,8 +1,8 @@
     {
       "canonical": "human-resources",
       "name": "Human Resources",
-      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
       "category": "Applied Domain Models",
       "summary": "Human capital substrate modeling — role operators, organizational coherence, and workforce-regime analysis.",
       "source": "docs/human-resources",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
     }
