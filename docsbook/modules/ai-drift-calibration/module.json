@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "ai-drift-calibration",
+      "name": "AI Drift Calibration",
+      "category": "Applied Domain Models",
+      "summary": "Calibration substrate for detecting and correcting AI summarying drift within RTT operator fields.",
+      "source": "docs/ai-drift-calibration",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
