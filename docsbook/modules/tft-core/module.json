@@ -1,0 +1,8 @@
+    {
+      "canonical": "tft-core",
+      "name": "TFT Core",
+      "source": "docs/TFT_3Pack_v1.3/tft",
+      "category": "Core Frameworks — Structural Spine",
+      "summary": "Core lattice of the 3Pack — CLI entrypoint, output management, and orchestration hub binding four child modules into a unified triadic runtime.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
