@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "rtt-tel",
+      "name": "RTT TEL",
+      "source": "docs/rtt/Inside/TEL",
+      "category": "RTT Deployment category",
+      "summary": "RTT Temporal Event Log — structured event capture for deployment session tracking and replay.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
