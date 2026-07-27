@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "information_theory",
+      "name": "Information Theory",
+      "source": "docs/theories/information_systems/information_theory",
+      "category": "Theory",
+      "summary": "RTT-aligned information theory module.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
