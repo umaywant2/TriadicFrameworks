@@ -1,1 +1,8 @@
-. 
+{
+  "canonical": "low-dimensional",
+  "name": "Low Dimensional Structures",
+  "category": "DOI",
+  "summary": "Substrate‑first primitives for representing low‑dimensional structure within RTT/vST — DOI‑minimal statement, resonance primitives, dimensional scaling semantics, historical context (absorbing chaos), and controls and validation requirements.",
+  "source": "docs/Low_Dimensional_Structures",
+  "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural" 
+}
