@@ -1,0 +1,8 @@
+    {
+      "canonical": "Mudpuppy",
+      "name": "Mudpuppy",
+      "source": "https://dev.mythmatic.org/Mudpuppy/mudpuppy_time_model.json",
+      "category": "Spacetime",
+      "summary": "Spacetime substrate module — triadic time, framework field theory, and paradox canon integration.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
