@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "tft-3pack",
+      "name": "TFT 3Pack",
+      "source": "docs/TFT_3Pack_v1.3",
+      "category": "Tools & Infrastructure",
+      "summary": "Compact, example-driven toolkit demonstrating the TriadicFrameworks model across 12 academic domains via shell scripts, .fff resonance files, and dark-themed documentation system.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
