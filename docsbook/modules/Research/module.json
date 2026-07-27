@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "research",
+      "name": "Research",
+      "source": "docs/Research",
+      "category": "Research-Canonical",
+      "summary": "22 original RTT research articles; operator-level and foundational research; continuity proofs; cross-domain validation; clarity equations.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
