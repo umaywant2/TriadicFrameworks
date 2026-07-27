@@ -1,0 +1,8 @@
+    {
+      "canonical": "domain-tool-primers",
+      "name": "Domain Tool Primers",
+      "source": "docs/domain_tool_primers",
+      "category": "Education & Teaching",
+      "summary": "Introductory primers for domain-specific tools and RTT substrate applications.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
