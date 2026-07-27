@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "coeus",
+      "name": "Coeus",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+      "category": "Core Frameworks — Structural Spine",
+      "summary": "Mythic-rational operator module: structural intuition, symbolic operators, triadic recursion, multi-agent sandbox, coin protocol, lineage-locked cognition.",
+      "source": "docs/Coeus",
+    }
