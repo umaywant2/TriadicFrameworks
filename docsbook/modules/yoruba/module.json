@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "pantheon-yoruba",
+      "name": "Yoruba Pantheon",
+      "source": "docs/pantheons/yoruba",
+      "category": "Applied Domain Models",
+      "summary": "RTT substrate mapping of Yoruba Orisha system and resonance archetypes.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
