@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "OPERATORS",
+      "name": "Operators",
+      "source": "docs/rtt/operators",
+      "category": "Operator category",
+      "summary": "Canonical RTT operator library — structural detection, integration, and teaching bundles.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
