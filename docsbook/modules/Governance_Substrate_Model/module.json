@@ -1,1 +1,7 @@
-. 
+    {
+      "canonical": "gsm",
+      "name": "Governance Substrate Model",
+      "source": "docs/Governance_Substrate_Model",
+      "category": "Meta & Governance",
+      "summary": "Structurally aligned reference framework for designing, evaluating, and stewarding governance systems across cultures, regimes, and time horizons.",
+    }
