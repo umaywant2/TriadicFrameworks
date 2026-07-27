@@ -1,0 +1,8 @@
+    {
+      "canonical": "research-bing",
+      "name": "Research — Bing",
+      "source": "docs/Research/bing",
+      "category": "Research & Validation",
+      "summary": "Bing search engine substrate integration for RTT research and discovery.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
