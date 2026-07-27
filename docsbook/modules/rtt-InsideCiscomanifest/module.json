@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "rtt-cisco",
+      "name": "RTT Inside — Cisco",
+      "source": "docs/rtt/Inside/Cisco",
+      "category": "RTT Deployment category",
+      "summary": "RTT substrate integration for Cisco network infrastructure.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
