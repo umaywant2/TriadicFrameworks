@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "substrate",
+      "name": "Substrate",
+      "source": "docs/substrate",
+      "category": "Substrate Grammar",
+      "summary": "Root substrate module — foundational definitions, schemas, and canonical substrate grammar.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
