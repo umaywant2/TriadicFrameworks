@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "assets",
+      "name": "Assets",
+      "category": "Infrastructure",
+      "source": "docs/assets/assets_module.json",
+      "summary": "Static site assets — build infrastructure",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
