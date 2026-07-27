@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "RSGM",
+      "name": "Religious Substrate Grammar Model",
+      "source": "docs/substrate/RSGM",
+      "category": "Substrate Grammar",
+      "summary": "Substrate grammar model for religious and spiritual structural patterns within the RTT framework.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
