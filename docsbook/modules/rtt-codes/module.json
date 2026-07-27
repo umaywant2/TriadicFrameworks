@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "rtt-codes",
+      "name": "RTT/codes",
+      "source": "docs/rtt/codes",
+      "category": "RTT Analytics — Metadata category",
+      "summary": "QR-compatible metadata category: schema, validators, generators, style system, and domain examples.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
