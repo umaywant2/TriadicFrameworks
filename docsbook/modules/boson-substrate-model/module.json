@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "bsm",
+      "name": "Boson Substrate Model",
+      "category": "Theory",
+      "summary": "Minimal structural substrate for operator-mediated interactions under declared operating regimes. Architecture-agnostic sibling to QSM and RSM.",
+      "source": "docs/boson-substrate-model",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
