@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "philanthropy",
+      "name": "Philanthropy",
+      "source": "docs/philanthropy",
+      "category": "Applied Domain Models",
+      "summary": "Philanthropic substrate model — ethical resource distribution through RTT lens.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
