@@ -1,0 +1,8 @@
+    {
+      "canonical": "vst-protein-lm",
+      "name": "VST for Protein Language Models",
+      "source": "docs/vst_for_protein_language_models",
+      "category": "Integration & Deployment",
+      "summary": "Vectorized substrate template for protein language model substrate alignment.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
