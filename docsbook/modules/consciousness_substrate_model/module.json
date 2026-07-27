@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "consciousness-substrate-model",
+      "name": "Consciousness Substrate Model",
+      "source": "docs/consciousness_substrate_model",
+      "category": "Substrate Grammar",
+      "summary": "Substrate model for mapping consciousness patterns within RTT dimensional frameworks.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
