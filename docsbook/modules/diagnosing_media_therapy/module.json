@@ -1,0 +1,8 @@
+    {
+      "canonical": "diagnosing-media-therapy",
+      "name": "Diagnosing Media Therapy",
+      "source": "docs/diagnosing_media_therapy",
+      "category": "Applied Domain Models",
+      "summary": "Applied domain module for media diagnosis and therapeutic substrate pattern analysis.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
