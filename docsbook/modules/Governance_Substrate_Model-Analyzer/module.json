@@ -1,1 +1,8 @@
-. 
+{
+  "canonical": "gsm_analyzer",
+  "name": "Governance Alignment Analyzer",
+  "category": "governance-analyzer",
+  "source": "docs/Governance_Substrate_Model/Analyzer",
+  "summary": "Interpretive engine of the Governance Substrate Model: vectors, invariants, coherence, drift, basins, transitions.",
+  "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+}
