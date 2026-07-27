@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "NoS",
+      "name": "Nature of Substrate",
+      "source": "docs/NoS",
+      "category": "Substrate Grammar",
+      "summary": "Canonical treatise on the nature of substrate in Resonance-Time Theory. Resurrected from R3 404.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
