@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "incident_substrate_model",
+      "name": "Incident Substrate Model",
+      "source": "docs/Incident_Substrate_Model",
+      "category": "Safety & Operations",
+      "summary": "Structural substrate for incident classification, response, opacity, and governance alignment.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
