@@ -1,8 +1,8 @@
     {
       "canonical": "ai-core",
       "name": "AI Instrument Architecture",
-      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
       "category": "Applied Domain Models",
       "summary": "Minimal constitutional AI instrument architecture — NoS AI, Regime Header, Lineage Ledger, Minimal AI Stack.",
       "source": "docs/ai",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
     }
