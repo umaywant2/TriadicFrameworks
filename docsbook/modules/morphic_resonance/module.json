@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "morphic_resonance",
+      "name": "Morphic Resonance",
+      "source": "docs/theories/biology/morphic_resonance",
+      "category": "Theory",
+      "summary": "RTT-aligned morphic resonance theory module.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
