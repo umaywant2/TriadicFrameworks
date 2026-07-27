@@ -1,0 +1,8 @@
+    {
+      "canonical": "rtt-guild",
+      "name": "RTT Guild",
+      "category": "RTT Technology category",
+      "summary": "RTT guild substrate — collaborative operator communities, role definitions, and coherence contracts.",
+      "source": "docs/rtt/guild",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
