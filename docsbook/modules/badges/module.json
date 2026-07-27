@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "badges",
+      "name": "Badges",
+      "category": "Infrastructure",
+      "source": "docs/badges/badges_module.json",
+      "summary": "Repo status badges — CI/meta infrastructure",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
