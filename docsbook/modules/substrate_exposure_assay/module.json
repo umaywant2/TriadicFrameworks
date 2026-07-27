@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "SEA",
+      "name": "Substrate Exposure Assay",
+      "source": "docs/substrate_exposure_assay",
+      "category": "Substrate Grammar",
+      "summary": "Substrate exposure assay — measurement and classification of substrate exposure patterns.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
