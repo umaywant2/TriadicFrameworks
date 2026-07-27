@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "unified-resonance",
+      "name": "Unified Resonance",
+      "source": "docs/unified_resonance",
+      "category": "RTT Technology category",
+      "summary": "Unified resonance model — convergent substrate field theory for all RTT operators.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
