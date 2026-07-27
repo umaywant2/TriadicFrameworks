@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "energy",
+      "name": "Energy",
+      "source": "docs/energy",
+      "category": "Theories",
+      "summary": "Energy substrate model — resonance-time analysis of energy systems and field dynamics.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
