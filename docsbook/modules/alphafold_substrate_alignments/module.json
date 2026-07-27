@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "alphafold",
+      "name": "AlphaFold Substrate Alignments",
+      "category": "Theory",
+      "summary": "AlphaFold protein-folding substrate alignments mapped to RTT dimensional regime operators.",
+      "source": "docs/alphafold_substrate_alignments",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
