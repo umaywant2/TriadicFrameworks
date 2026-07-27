@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "STRUCTURAL_DETECTION_ENGINE",
+      "name": "Structural Detection Engine",
+      "source": "docs/rtt/structural_detection",
+      "category": "Operator category",
+      "summary": "Engine for detecting structural states, drift envelopes, collapse modes, and regime shifts.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
