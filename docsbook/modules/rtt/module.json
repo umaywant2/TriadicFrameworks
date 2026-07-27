@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "rtt-root",
+      "name": "RTT-Tech Root",
+      "source": "docs/rtt",
+      "category": "RTT Technology category",
+      "summary": "Root navigation surface and core specification for all RTT technology modules: 10 core substrates and engines, 8 paired SVG diagrams, 9 domain examples, 8 cross-scale maps.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
