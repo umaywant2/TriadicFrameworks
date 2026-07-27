@@ -1,0 +1,8 @@
+    {
+      "canonical": "vst-multi-model",
+      "name": "VST for Multi-Model Alignment",
+      "source": "docs/vst_for_multi_model_alignment",
+      "category": "Integration & Deployment",
+      "summary": "Vectorized substrate template for multi-model alignment and cross-architecture substrate coherence.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
