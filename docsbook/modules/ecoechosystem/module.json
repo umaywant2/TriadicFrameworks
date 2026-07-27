@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "ecoechosystem",
+      "name": "Ecoechosystem",
+      "source": "docs/ecoechosystem",
+      "category": "Applied Domain Models",
+      "summary": "Ecological echo system model — substrate patterns in environmental and biological systems.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
