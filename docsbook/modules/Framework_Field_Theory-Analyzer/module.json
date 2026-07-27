@@ -1,1 +1,8 @@
-. 
+{
+    "name": "FFT Analyzer Suite",
+    "source": "docs/Framework_Field_Theory/Analyzer",
+    "canonical": "fft-analyzer",
+    "category": "Core Frameworks — Structural Spine",
+    "summary": "Diagnostic engine of Framework Field Theory — decomposes any framework into operators, dimensional structure, regime alignment, drift behavior, and coherence profile.",
+    "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+},
