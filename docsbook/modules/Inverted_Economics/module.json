@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "inverted-economics",
+      "name": "Inverted Economics",
+      "category": "Applied Domain Models",
+      "summary": "Inverted economic substrate — structural analysis of non-standard economic regimes, scarcity inversion, and anti-market operators.",
+      "source": "docs/Inverted_Economics",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
