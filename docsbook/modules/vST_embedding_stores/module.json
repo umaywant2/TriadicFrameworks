@@ -1,0 +1,8 @@
+    {
+      "canonical": "vst-embedding-stores",
+      "name": "VST for Embedding Stores & Vector Databases",
+      "source": "docs/vst_for_embedding_stores_vector_databases",
+      "category": "Integration & Deployment",
+      "summary": "Vectorized substrate template for embedding stores and vector database alignment.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
