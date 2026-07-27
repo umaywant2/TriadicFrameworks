@@ -1,1 +1,7 @@
-. 
+    {
+      "canonical": "fcg",
+      "name": "Framework Creation Guide",
+      "source": "docs/frameworks/creation_guide",
+      "category": "Framework-Structural",
+      "summary": "Structural grammar for designing coherent, minimal, regime-aware frameworks — 7 core categorys (history, principles, models, structure, operators, regimes, generator) + RF-Builder.",
+    }
