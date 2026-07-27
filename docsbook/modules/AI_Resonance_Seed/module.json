@@ -1,8 +1,8 @@
     {
       "canonical": "ai-resonance-seed",
       "name": "AI Resonance Seed",
-      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
       "category": "Applied Domain Models",
       "summary": "Seed substrate for AI resonance initialization — coherence priming for AI agents operating within RTT.",
       "source": "docs/AI_Resonance_Seed",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
     }
