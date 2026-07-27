@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "NIST",
+      "name": "NIST",
+      "source": "docs/NIST",
+      "category": "Research & Validation",
+      "summary": "NIST standards integration — canonical reference category for measurement and protocol alignment.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
