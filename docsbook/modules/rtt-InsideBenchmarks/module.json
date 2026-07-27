@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "rtt-inside-benchmarks",
+      "name": "RTT Inside Benchmarks",
+      "source": "docs/rtt/Inside/Benchmarks",
+      "category": "RTT Deployment category",
+      "summary": "Benchmark suite for RTT Inside deployment profiles — performance baselines, TEL exports, and regime comparison standards.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
