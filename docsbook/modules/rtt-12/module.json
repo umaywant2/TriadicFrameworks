@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "rtt-12",
+      "name": "RTT/12",
+      "category": "RTT Technology category",
+      "summary": "Twelfth-order RTT resonance-time technology category — advanced operator grammar and high-range coherence substrate.",
+      "source": "docs/rtt/12",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
