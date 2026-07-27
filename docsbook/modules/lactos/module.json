@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "LACTOS",
+      "name": "LACTOS",
+      "source": "docs/Research/lactos",
+      "category": "Research & Validation",
+      "summary": "LACTOS research substrate — canonical research substrate oscillation model (RTT).",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
