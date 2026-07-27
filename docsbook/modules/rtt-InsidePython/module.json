@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "rtt-python",
+      "name": "RTT Inside — Python",
+      "source": "docs/rtt/Inside/Python",
+      "category": "RTT Deployment category",
+      "summary": "Python binding category for RTT substrate operators and dimensional engine.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
