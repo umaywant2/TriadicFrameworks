@@ -1,0 +1,8 @@
+    {
+      "canonical": "rtt-core",
+      "name": "RTT Core",
+      "category": "RTT Technology category",
+      "summary": "Core RTT substrate definitions — canonical operator primitives, regime axioms, and coherence invariants.",
+      "source": "docs/rtt/core",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
