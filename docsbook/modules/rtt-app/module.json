@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "rtt-app",
+      "name": "RTT App",
+      "source": "docs/rtt/app",
+      "category": "RTT Deployment category",
+      "summary": "RTT application category — canonical app deployment framework for RTT-powered interfaces.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
