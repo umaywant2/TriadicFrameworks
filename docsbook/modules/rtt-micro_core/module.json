@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "rtt-micro-core",
+      "name": "RTT Micro-Core",
+      "category": "RTT Technology category",
+      "summary": "Minimal RTT micro-core — the smallest self-consistent set of RTT operator primitives for embedded/constrained contexts.",
+      "source": "docs/rtt/micro_core",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
