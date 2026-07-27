@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "rtt-codex",
+      "name": "RTT Codex",
+      "source": "docs/rtt/codex",
+      "category": "RTT Technology category",
+      "summary": "Canonical RTT codex — master reference index of operators, codes, and substrate definitions.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
