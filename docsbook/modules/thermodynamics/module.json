@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "thermodynamics",
+      "name": "Thermodynamics",
+      "source": "docs/theories/physics/thermodynamics",
+      "category": "Theory",
+      "summary": "RTT-aligned thermodynamics theory module.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
