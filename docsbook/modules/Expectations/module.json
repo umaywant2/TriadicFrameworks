@@ -1,1 +1,9 @@
-. 
+{
+    "module": "Expectations",
+    "canonical_name": "TriadicFrameworks Expectations Module",
+    "version": "2026-1.0",
+    "status": "stable",
+    "category": "orientation",
+    "summary": "Root-level expectations framework for students, researchers, and AI agents entering TriadicFrameworks.",
+    "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+}
