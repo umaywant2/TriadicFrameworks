@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "quantum_field_theory",
+      "name": "Quantum Field Theory",
+      "source": "docs/theories/physics/quantum_field_theory",
+      "category": "Theory",
+      "summary": "RTT-aligned quantum field theory module.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
