@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "data",
+      "name": "Data",
+      "source": "docs/data",
+      "category": "Tools & Infrastructure",
+      "summary": "Core data substrate category — schemas, pipelines, and data governance for TFT.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
