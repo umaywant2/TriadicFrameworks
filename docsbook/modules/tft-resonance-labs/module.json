@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "resonance-labs",
+      "name": "Resonance Labs",
+      "source": "docs/TFT_3Pack_v1.3/tft/resonance-labs",
+      "category": "Research & Validation",
+      "summary": "Experimental wing of the 3Pack — harmonic overlays, observer states, mirror geometry, temporal simulation, and symbolic glyph rendering.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
