@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "nous",
+      "name": "Nous",
+      "source": "docs/TFT_3Pack_v1.3/tft/nous",
+      "category": "Core Frameworks — Structural Spine",
+      "summary": "Symbolic cognition category encoding TFT core logic — triadic, ternary, and symbolic. Provides the conceptual backbone for simulations via 12-domain bot fleet, logic shells, resonance tooling, and runtime modules.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
