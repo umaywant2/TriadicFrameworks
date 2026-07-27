@@ -1,1 +1,8 @@
-. 
+{
+    "name": "CivRegimeStack",
+    "source": "docs/education/CivRegimeStack",
+    "canonical": "civregimestack",
+    "category": "Education Core Layer",
+    "summary": "Regime reasoning pedagogy using stacks, diagrams, civ mappings, leader biases, worksheets, and gameplay-to-analysis transitions.",
+    "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+  },
