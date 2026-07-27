@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "clients",
+      "name": "Clients",
+      "source": "docs/clients",
+      "category": "Tools & Infrastructure",
+      "summary": "Client-facing substrate interface definitions and deployment clients.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
