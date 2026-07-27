@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "SubComm",
+      "name": "Substrate Communications",
+      "source": "docs/substrate_communications",
+      "category": "Substrate Grammar",
+      "summary": "Substrate communications category — protocols for inter-substrate messaging and signal propagation.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
