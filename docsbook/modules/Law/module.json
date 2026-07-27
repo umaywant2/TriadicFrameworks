@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "law",
+      "name": "Law",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+      "category": "Applied Domain Models",
+      "summary": "Legal substrate modeling using RTT — normative operators, jurisdiction-regime mapping, and rule-coherence analysis.",
+      "source": "docs/Law",
+    }
