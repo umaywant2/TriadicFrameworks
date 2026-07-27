@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "opacity",
+      "name": "Opacity",
+      "category": "Core Frameworks — Structural Spine",
+      "summary": "Opacity substrate — structural analysis of visibility, occlusion, and partial-coherence operators within RTT.",
+      "source": "docs/Opacity",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
