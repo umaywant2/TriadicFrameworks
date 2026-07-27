@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "bridges",
+      "name": "Bridges",
+      "source": "docs/bridges",
+      "category": "Integration & Deployment",
+      "summary": "Cross-domain bridging category for TriadicFrameworks module interoperability and substrate connections.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
