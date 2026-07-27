@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "datacenter-reports",
+      "name": "Datacenter Reports",
+      "source": "docs/datacenter_reports",
+      "category": "Research & Validation",
+      "summary": "Datacenter infrastructure reports and substrate analysis in RTT dimensional context.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
