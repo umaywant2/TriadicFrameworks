@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "atomic-clocks",
+      "name": "Atomic Clocks",
+      "category": "Theory",
+      "summary": "Atomic clock precision timekeeping substrate mapped to RTT temporal operators and coherence fields.",
+      "source": "docs/atomic_clocks",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
