@@ -1,0 +1,8 @@
+    {
+      "canonical": "vst-scientific-sim",
+      "name": "VST for Scientific Simulators",
+      "source": "docs/vst_for_scientific_simulators",
+      "category": "Integration & Deployment",
+      "summary": "Vectorized substrate template for scientific simulation alignment with RTT dimensional models.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
