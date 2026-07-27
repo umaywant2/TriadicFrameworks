@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "rtt-store",
+      "name": "RTT Store",
+      "category": "RTT Technology category",
+      "summary": "RTT operator and substrate store — canonical distribution category for versioned RTT components.",
+      "source": "docs/rtt/store",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
