@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "DSS",
+      "name": "Dimensional Substrate Structures",
+      "source": "docs/dimensional_substrate_structures",
+      "category": "RTT Dimensional",
+      "summary": "Structural definitions for dimensional substrate configurations in RTT.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
