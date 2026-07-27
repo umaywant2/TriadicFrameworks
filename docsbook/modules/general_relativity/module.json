@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "general_relativity",
+      "name": "General Relativity",
+      "source": "docs/theories/physics/general_relativity",
+      "category": "Theory",
+      "summary": "RTT-aligned general relativity theory module.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
