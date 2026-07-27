@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "rtt-inside",
+      "name": "RTT Inside",
+      "source": "docs/rtt/Inside",
+      "category": "RTT Deployment category",
+      "summary": "Introspective deployment engine — capture templates, autonomous forms, deployment profiles (Coal, Finance, Earth Sims, Electron Microscopes, Robofish), corridor studio, drift diagnostics, API surface, and global scenarios (ATC, HAM, Space Force).",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
