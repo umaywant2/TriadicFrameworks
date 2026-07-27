@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "hsp",
+      "name": "Harmonic Stability Profile",
+      "category": "RTT Technology category",
+      "summary": "Harmonic stability profiling substrate for RTT operator fields — regime-resonance calibration and drift detection.",
+      "source": "docs/rtt/Harmonic_Stability_Profile",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
