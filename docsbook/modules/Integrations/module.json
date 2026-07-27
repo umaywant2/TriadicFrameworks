@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "rtt-integrations",
+      "name": "RTT Integrations",
+      "source": "docs/rtt/integrations",
+      "category": "Integration & Deployment",
+      "summary": "RTT integration container for external system connectors, UE6, and cross-platform deployment.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
