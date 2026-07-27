@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "tis",
+      "name": "The Inverted Star",
+      "category": "RTT Technology category",
+      "summary": "Inverted-star operator topology — reverse-resonance substrate mapping for structural inversion detection.",
+      "source": "docs/rtt/The_Inverted_Star",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
