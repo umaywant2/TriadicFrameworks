@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "RTT_2",
+      "name": "RTT/2",
+      "source": "docs/rtt/RTT_2",
+      "category": "RTT Technology category",
+      "summary": "Second-order RTT resonance-time technology category — extended operator grammar and mid-range coherence.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
