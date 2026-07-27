@@ -1,8 +1,8 @@
     {
       "canonical": "asm",
       "name": "Arrival Substrate Model",
-      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
       "category": "Substrate Grammar",
       "summary": "Minimal structural substrate for arrival and reception operators under declared regimes.",
       "source": "docs/arrival_substrate_model",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
     }
