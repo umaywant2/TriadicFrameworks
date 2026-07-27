@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "resilience-checker",
+      "name": "Resilience Checker",
+      "category": "Tools & Infrastructure",
+      "summary": "Structural resilience validation tool — checks operator coherence, substrate stability, and regime drift across 108 paradox stress tests.",
+      "source": "docs/resilience-checker",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
