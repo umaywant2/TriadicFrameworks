@@ -1,0 +1,8 @@
+    {
+      "canonical": "research-duckduckgo",
+      "name": "Research — DuckDuckGo",
+      "source": "docs/Research/duckduckgo",
+      "category": "Research & Validation",
+      "summary": "DuckDuckGo search substrate integration for privacy-respecting RTT research.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
