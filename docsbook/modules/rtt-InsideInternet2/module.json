@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "rtt-internet2",
+      "name": "RTT Inside — Internet2",
+      "source": "docs/rtt/Inside/Internet2",
+      "category": "RTT Deployment category",
+      "summary": "RTT substrate integration for Internet2 high-performance academic network infrastructure.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
