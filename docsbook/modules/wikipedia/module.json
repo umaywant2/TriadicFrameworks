@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "wikipedia",
+      "name": "Wikipedia",
+      "source": "docs/wikipedia",
+      "category": "Research & Validation",
+      "summary": "Wikipedia canonical integration — top-level substrate reference category for TFT encyclopedia content.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
