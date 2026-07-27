@@ -1,1 +1,8 @@
-. 
+  {
+    "canonical": "C.O.D.E.",
+      "name": "Compassion Operator Dignity Ethics",
+      "source": "docs/ethics/CODE",
+      "category": "Ethics & Care",
+      "summary": "Ethical substrate grammar encoding compassion, operator dignity, and ethics across RTT modules.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
