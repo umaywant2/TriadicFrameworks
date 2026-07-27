@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "taxes",
+      "name": "Taxes",
+      "category": "Applied Domain Models",
+      "summary": "Tax-system substrate modeling in RTT — fiscal operators, policy-regime mapping, and redistribution-coherence analysis.",
+      "source": "docs/taxes",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
