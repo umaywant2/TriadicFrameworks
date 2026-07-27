@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "rtt-emotions",
+      "name": "RTT Emotions",
+      "source": "docs/rtt/emotions",
+      "category": "RTT Dimensional",
+      "summary": "Structural emotional mathematics: 60 emotional operators across coherence, corridor, drift, meta, and structural regimes with equations, alignment triads, regime transitions, and examples.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
