@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "SLRP",
+      "name": "Structural Life Regime Profiles",
+      "source": "docs/structural_life_regime_profiles",
+      "category": "Substrate Grammar",
+      "summary": "Canonical profiles of structural life regimes — substrate classification across biological, social, and technological domains.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
