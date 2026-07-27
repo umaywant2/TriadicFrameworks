@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "fft",
+      "name": "Framework Field Theory",
+      "source": "docs/Framework_Field_Theory",
+      "category": "Core Frameworks — Structural Spine",
+      "summary": "Framework Field Theory — unified field theory of TriadicFrameworks substrate interactions. Resurrected from R3 404.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
