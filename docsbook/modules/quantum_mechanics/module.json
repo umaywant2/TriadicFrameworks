@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "quantum_mechanics",
+      "name": "Quantum Mechanics",
+      "source": "docs/theories/physics/quantum_mechanics",
+      "category": "Theory",
+      "summary": "RTT-aligned quantum mechanics theory module.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
