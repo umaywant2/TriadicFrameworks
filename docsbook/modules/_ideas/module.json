@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "ideas-sandbox",
+      "name": "Ideas Sandbox",
+      "category": "Ideation category",
+      "source": "docs/_ideas",
+      "summary": "Non-Canonical status — ideation sandbox, not yet promoted to functional canon.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
