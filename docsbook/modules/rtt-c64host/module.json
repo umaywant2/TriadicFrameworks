@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "rtt-c64host",
+      "name": "RTT C64 Host",
+      "source": "docs/rtt/c64host",
+      "category": "RTT Hardware category",
+      "summary": "RTT substrate engine hosted on Commodore 64 architecture — vintage hardware integration.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
