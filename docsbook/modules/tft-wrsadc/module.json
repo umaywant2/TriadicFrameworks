@@ -1,0 +1,8 @@
+    {
+      "canonical": "wrsadc",
+      "name": "WRSADC",
+      "source": "docs/TFT_3Pack_v1.3/WRSADC",
+      "category": "Core Frameworks — Structural Spine",
+      "summary": "Lightweight resonance-aware dimensional engine providing state tracking, entity observation, structural snapshots, and triadic introspection for TFT_3Pack tools.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
