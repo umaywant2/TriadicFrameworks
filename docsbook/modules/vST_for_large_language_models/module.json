@@ -1,0 +1,8 @@
+    {
+      "canonical": "vst-llm",
+      "name": "VST for Large Language Models",
+      "source": "docs/vst_for_large_language_models",
+      "category": "Integration & Deployment",
+      "summary": "Vectorized substrate template for LLM alignment with Resonance-Time Theory.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
