@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "evolutionary_biology",
+      "name": "Evolutionary Biology",
+      "source": "docs/theories/biology/evolutionary_biology",
+      "category": "Theory",
+      "summary": "RTT-aligned evolutionary biology theory module.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
