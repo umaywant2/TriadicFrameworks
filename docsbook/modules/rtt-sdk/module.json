@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "rtt-sdk",
+      "name": "RTT SDK",
+      "category": "RTT Technology category",
+      "summary": "Software Development Kit for RTT integration — API bindings, operator scaffolding, and substrate helpers.",
+      "source": "docs/rtt/sdk",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
