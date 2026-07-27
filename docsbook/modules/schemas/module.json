@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "schemas",
+      "name": "Schemas",
+      "category": "Infrastructure",
+      "source": "docs/schemas",
+      "summary": "Pure infrastructure — JSON schema directory only. No functional canonical content.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
