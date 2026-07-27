@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "rtt-enterprise",
+      "name": "RTT Inside — Enterprise",
+      "source": "docs/rtt/Inside/Enterprise",
+      "category": "RTT Deployment category",
+      "summary": "Enterprise substrate extension category for RTT — clarity, coherence, regime, and triad-role schemas.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
