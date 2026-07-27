@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "corpus",
+      "name": "Corpus",
+      "source": "docs/corpus",
+      "category": "Research & Validation",
+      "summary": "Canonical corpus of TriadicFrameworks texts, documents, and reference materials.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
