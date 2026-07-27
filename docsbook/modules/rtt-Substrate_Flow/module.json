@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "substrate-flow",
+      "name": "Substrate Flow",
+      "category": "RTT Technology category",
+      "summary": "Directed substrate flow modeling within RTT — operator propagation sources, regime transitions, and coherence routing.",
+      "source": "docs/rtt/Substrate_Flow",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
