@@ -1,8 +1,8 @@
     {
       "canonical": "audio",
       "name": "Audio Industry Reviewed",
-      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
       "category": "Applied Domain Models",
       "summary": "Audio-industry-reviewed substrate — acoustic operator validation, sound-regime alignment, and professional audio coherence.",
       "source": "docs/audio_industry_reviewed",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
     }
