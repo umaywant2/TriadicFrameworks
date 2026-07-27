@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "validation",
+      "name": "Validation",
+      "source": "docs/validation",
+      "category": "Research & Validation",
+      "summary": "Canonical validation protocols and substrate verification tools for TFT modules.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
