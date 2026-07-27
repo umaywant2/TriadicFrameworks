@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "mode",
+      "name": "Mode",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+      "category": "Core Frameworks — Structural Spine",
+      "summary": "Modal operator substrate — canonical mode-switching, regime-mode mapping, and coherence-mode interactions.",
+      "source": "docs/Mode",
+    }
