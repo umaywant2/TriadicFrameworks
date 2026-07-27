@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "rtt-qcompute",
+      "name": "RTT Inside — qCompute",
+      "source": "docs/rtt/Inside/qCompute",
+      "category": "RTT Hardware category",
+      "summary": "Quantum compute substrate integration — RTT operators mapped to quantum circuit models.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
