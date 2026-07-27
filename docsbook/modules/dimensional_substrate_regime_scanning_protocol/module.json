@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "DSRSP",
+      "name": "Dimensional Substrate Regime Scanning Protocol",
+      "source": "docs/dimensional_substrate_regime_scanning_protocol",
+      "category": "RTT Dimensional",
+      "summary": "Protocol for scanning and classifying dimensional substrate regimes using RTT operators.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
