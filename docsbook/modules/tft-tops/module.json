@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "tops",
+      "name": "TOPS",
+      "source": "docs/TFT_3Pack_v1.3/tft/tops",
+      "category": "Core Frameworks — Structural Spine",
+      "summary": "Triconceptual simulation engine exploring perception through direct, reflective, and inversion modes with resonance clarity.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
