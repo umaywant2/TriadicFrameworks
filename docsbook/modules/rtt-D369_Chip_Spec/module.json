@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "d369",
+      "name": "D369 Chip Spec",
+      "source": "docs/rtt/D369_Chip_Spec",
+      "category": "RTT Hardware category",
+      "summary": "Structural observability silicon module — canonical chip specification with documentation, schematics, and validation.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
