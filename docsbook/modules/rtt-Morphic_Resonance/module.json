@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "RTT_MORPHIC_RESONANCE",
+      "name": "RTT Morphic Resonance",
+      "source": "docs/rtt/Morphic_Resonance",
+      "category": "RTT Dimensional",
+      "summary": "RTT dimensional module for morphic resonance field mapping and species-level learning interactions.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
