@@ -1,1 +1,8 @@
-. 
+{
+    "canonical": "gi",
+    "name": "Grammar_for_Intelligence",
+    "source": "docs/education/ebooks/Grammar_for_Intelligence",
+    "category": "education",
+    "summary": "A structural guide to grammar, operators, invariants, regimes, substrates, drift, and coherence in AI systems.",
+    "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"  
+  }
