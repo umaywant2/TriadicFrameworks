@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "UE6-INTEGRATIONS",
+      "name": "UE6 Integrations",
+      "source": "docs/rtt/Inside/UE6",
+      "category": "Integration & Deployment",
+      "summary": "Unreal Engine 6 integration — RTT structural observability bridge for real-time 3D environments.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
