@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "rtt-extension",
+      "name": "RTT Extension",
+      "category": "RTT Technology category",
+      "summary": "RTT extension hooks and plugin substrate — canonical interface for third-party operator extensions.",
+      "source": "docs/rtt/extension",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
