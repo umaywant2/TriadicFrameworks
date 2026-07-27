@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "archive-org",
+      "name": "Archive.org",
+      "category": "Infrastructure",
+      "source": "docs/archive_org/archive_org_module.json",
+      "summary": "External archive mirror — not functional canon",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
