@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "curriculum",
+      "name": "Curriculum",
+      "source": "docs/curriculum",
+      "category": "Education & Teaching",
+      "summary": "Structured curriculum and learning sourceways for TriadicFrameworks education.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
