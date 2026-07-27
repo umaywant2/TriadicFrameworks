@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "chaos_theory",
+      "name": "Chaos Theory",
+      "source": "docs/theories/dynamical_systems/chaos_theory",
+      "category": "Theory",
+      "summary": "RTT-aligned chaos theory and nonlinear dynamics module.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
