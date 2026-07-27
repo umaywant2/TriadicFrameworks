@@ -1,8 +1,8 @@
     {
       "canonical": "medicine",
       "name": "Medicine",
-      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
       "category": "Applied Domain Models",
       "summary": "Medical substrate in RTT — clinical operators, diagnosis-regime mapping, and biological-resonance coherence.",
       "source": "docs/medicine",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
     }
