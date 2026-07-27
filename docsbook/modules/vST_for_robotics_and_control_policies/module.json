@@ -1,0 +1,8 @@
+    {
+      "canonical": "vst-robotics",
+      "name": "VST for Robotics & Control Policies",
+      "source": "docs/vst_for_robotics_and_control_policies",
+      "category": "Integration & Deployment",
+      "summary": "Vectorized substrate template for robotics substrate integration and control policy alignment.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
