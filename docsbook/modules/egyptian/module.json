@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "pantheon-egyptian",
+      "name": "Egyptian Pantheon",
+      "source": "docs/pantheons/egyptian",
+      "category": "Applied Domain Models",
+      "summary": "RTT substrate mapping of Egyptian mythological structures and resonance archetypes.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
