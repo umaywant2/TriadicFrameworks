@@ -1,0 +1,8 @@
+    {
+      "canonical": "rtt-api",
+      "name": "RTT API",
+      "category": "RTT Technology category",
+      "summary": "RTT REST/JSON API specification — canonical machine-readable interface for RTT operator invocation.",
+      "source": "docs/api/rtt",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
