@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "standard_model",
+      "name": "Standard Model",
+      "source": "docs/theories/physics/standard_model",
+      "category": "Theory",
+      "summary": "RTT-aligned Standard Model of particle physics.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
