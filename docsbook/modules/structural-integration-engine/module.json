@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "STRUCTURAL_INTEGRATION_ENGINE",
+      "name": "Structural Integration Engine",
+      "source": "docs/rtt/structural_integration",
+      "category": "Operator category",
+      "summary": "Engine for integrating structural states and operator outputs across modules and regimes.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
