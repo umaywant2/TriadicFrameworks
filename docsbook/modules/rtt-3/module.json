@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "RTT_3",
+      "name": "RTT/3",
+      "source": "docs/rtt/RTT_3",
+      "category": "RTT Technology category",
+      "summary": "Third-order RTT resonance-time technology category — full structural integration and high-coherence regime.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
