@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "education",
+      "name": "Education",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+      "category": "Education & Teaching",
+      "summary": "Educational substrate design using RTT — learning operators, coherence-progression mapping, and pedagogical regime structures.",
+      "source": "docs/education",
+    }
