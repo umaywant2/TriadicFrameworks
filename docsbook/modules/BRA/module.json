@@ -1,1 +1,8 @@
-. 
+{
+    "name": "Before Regime Awareness",
+    "source": "docs/education/BRA",
+    "canonical": "bra",
+    "category": "Education Structural Layer",
+    "summary": "Regime literacy arc covering BRA, Post-BPA, Post-BRA clarity, substrate guides, domain patterns, and long-horizon work.",
+    "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+}
