@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "TOL",
+      "name": "Triadic Observer category",
+      "source": "docs/triadic_observer_category",
+      "category": "RTT Dimensional",
+      "summary": "Triadic observer category — canonical framework for dimensional observation in RTT.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
