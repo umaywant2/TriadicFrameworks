@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "charts",
+      "name": "Charts",
+      "source": "docs/charts",
+      "category": "Tools & Infrastructure",
+      "summary": "Canonical charting and data visualization module for the TFT ecosystem.",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    }
