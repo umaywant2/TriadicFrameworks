@@ -1,1 +1,8 @@
-. 
+    {
+      "canonical": "csm",
+      "name": "Conditions Substrate Model",
+      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+      "category": "Substrate Grammar",
+      "summary": "Structural substrate for condition-state operators — environmental and contextual regime modeling.",
+      "source": "docs/Conditions_Substrate_Model",
+    }
