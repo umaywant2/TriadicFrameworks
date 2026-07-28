@@ -2,8 +2,6 @@
 
 <div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/6Z0AklQbP8U?list=PLacFsbReLJPw&pp=sAgC&autoplay=1&mute=1&loop=1" title="TriadicFrameworks Books Playlist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
-<img src="https://img.shields.io/badge/✧Inversion%20Operator-RTT%201%20Canon%20Module-4c8eda?style=for-the-badge" alt="✧Inversion Operator | RTT/1 Canon Module"/>
-
 # ⭐ The Inverted Star - [Book 2](https://www.triadicframeworks.org/rtt/The_Inverted_Star/Review_Book2_TIS.md)
 
 ### RTT Structural Operator • Cycle Geometry • Inversion Engine (v1.0)
@@ -151,6 +149,8 @@ It is one of the **core structural engines** of RTT.
 - `/docs/rtt/RTT-Inside/` — Student‑First Learning Layer  
 
 ---
+
+<img src="https://img.shields.io/badge/✧Inversion%20Operator-RTT%201%20Canon%20Module-4c8eda?style=for-the-badge" alt="✧Inversion Operator | RTT/1 Canon Module"/>
 
 ## 🌀 Summary
 
