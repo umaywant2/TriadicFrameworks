@@ -1,28 +1,12 @@
-# ⭐ The Inverted Star  
-
 - [`The_Inverted_Star_module.json`](The_Inverted_Star_module.json) — Agentic module schema role assignments
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
+<div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/6Z0AklQbP8U?list=PLacFsbReLJPw&pp=sAgC&autoplay=1&mute=1&loop=1" title="TriadicFrameworks Books Playlist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 <img src="https://img.shields.io/badge/✧Inversion%20Operator-RTT%201%20Canon%20Module-4c8eda?style=for-the-badge" alt="✧Inversion Operator | RTT/1 Canon Module"/>
 
+# ⭐ The Inverted Star  
+
 ### RTT Structural Operator • Cycle Geometry • Inversion Engine (v1.0)
-
-###### Book 3 [online](https://www.triadicframeworks.org/Structural_Detection/) / planned
-
-<img width="853" height="480" alt="Central_Singularity_Core" src="https://github.com/user-attachments/assets/86cf0a24-0142-44fd-90a7-428459f24d62" />
 
 The **Inverted Star** is a structural operator inside the RTT substrate.  
 It describes the **full cycle** of a coherent manifold as it moves through:
