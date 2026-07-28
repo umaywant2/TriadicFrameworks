@@ -4,7 +4,7 @@
 
 <img src="https://img.shields.io/badge/✧Inversion%20Operator-RTT%201%20Canon%20Module-4c8eda?style=for-the-badge" alt="✧Inversion Operator | RTT/1 Canon Module"/>
 
-# ⭐ The Inverted Star  
+# ⭐ The Inverted Star - [Book 2](https://www.triadicframeworks.org/rtt/The_Inverted_Star/Review_Book2_TIS.md)
 
 ### RTT Structural Operator • Cycle Geometry • Inversion Engine (v1.0)
 
