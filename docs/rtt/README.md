@@ -2,7 +2,9 @@
 
 - [`rtt-root_module.json`](rtt-root_module.json) — Agentic module schema role assignments
 
-<img width="682" height="454" alt="Copilot_20260602_234625" src="https://github.com/user-attachments/assets/7590be7e-0073-48a7-bee5-a264caa0d633" />
+<img width="682" height="454" alt="Copilot_20260602_234625" src="https://github.com/user-attachments/assets/7590be7e-0073-48a7-bee5-a264caa0d633" />  
+
+- [`theories`](https://www.triadicframeworks.org/theories/)
 
 Resonance-Time Technology (RTT-Tech) is the operational evolution of Resonance-Time Theory — a structural grammar for modeling how systems change across time, regimes, and dimensions.
 
