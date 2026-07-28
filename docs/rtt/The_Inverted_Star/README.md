@@ -20,6 +20,8 @@
 
 ### RTT Structural Operator • Cycle Geometry • Inversion Engine (v1.0)
 
+###### Book 3 [online](https://www.triadicframeworks.org/Structural_Detection/) / planned
+
 <img width="853" height="480" alt="Central_Singularity_Core" src="https://github.com/user-attachments/assets/86cf0a24-0142-44fd-90a7-428459f24d62" />
 
 The **Inverted Star** is a structural operator inside the RTT substrate.  
