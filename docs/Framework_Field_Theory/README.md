@@ -13,8 +13,8 @@
 # **📘 Framework Field Theory — Repo Eval Edition**  
 - [`FFT_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/FFT_module.json) — Agentic module schema role assignments
 
-###### Book 2 planned
-<img width="1536" height="1024" alt="Inverted_Star_Ontology" src="https://github.com/user-attachments/assets/aa4d497d-400f-4846-a551-92fd18a9e245" />
+###### Book 2 [online](https://www.triadicframeworks.org/rtt/The_Inverted_Star/) / planned
+<img width="682" height="455" alt="Inverted_Star_Ontology" src="https://github.com/user-attachments/assets/aa4d497d-400f-4846-a551-92fd18a9e245" />
 
 ```markdown
 ────────────────────────────────────────────
