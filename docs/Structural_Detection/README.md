@@ -1,6 +1,6 @@
-# ✅ **README.md (Final, Canonical)**  
-
 - [`structural_detection_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Structural_Detection/structural_detection_module.json)
+
+<div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/6Z0AklQbP8U?list=PLMg9loX_9yB4&pp=sAgC&autoplay=1&mute=1&loop=1" title="TriadicFrameworks Books Playlist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 ### *Structural Detection Module — TriadicFrameworks*  
 ### *“Learn to see structure without being told what to see.”*
