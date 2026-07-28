@@ -4,7 +4,7 @@
 - [`module_rtt2.schema.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/module_rtt2.schema.json) — Agentic module schema role assignments
 - [`module_rtt3.schema.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/module_rtt3.schema.json) — Agentic module schema role assignments
 
-<img width="2474" height="995" alt="Ten-in-1_Icons" src="https://github.com/user-attachments/assets/184c810d-a655-4738-81d1-c21cabd123c1" />
+<img width="824" height="331" alt="Ten-in-1_Icons" src="https://github.com/user-attachments/assets/184c810d-a655-4738-81d1-c21cabd123c1" />
 
 ### TriadicFrameworks /docs/theories/
 
