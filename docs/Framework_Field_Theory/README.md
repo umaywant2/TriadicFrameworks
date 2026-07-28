@@ -2,6 +2,8 @@
 
 <div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/6Z0AklQbP8U?list=PLacFsbReLJPw&pp=sAgC&autoplay=1&mute=1&loop=1" title="TriadicFrameworks Books Playlist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
+# Framework Field Theory - [Book 1](https://www.triadicframeworks.org/Framework_Field_Theory/Review_Book1_FFT.md)
+
 ```
  ███████╗███████╗████████╗     ███████╗██╗██╗     ██████╗ 
   ██╔════╝██╔════╝╚══██╔══╝     ██╔════╝██║██║     ██╔══██╗
