@@ -2,7 +2,7 @@
 
 <div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/6Z0AklQbP8U?list=PLacFsbReLJPw&pp=sAgC&autoplay=1&mute=1&loop=1" title="TriadicFrameworks Books Playlist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
-# Structural Detection Module  
+# Structural Detection - [Book 3](https://www.triadicframeworks.org/Structural_Detection/Review_Book3_SD.md)
 ### *“Learn to see structure without being told what to see.”*
 ### TriadicFrameworks • RTT/1  
 ### Purpose: Teach students and AI agents how to detect structure, drift, regimes, invariants, and coherence without interpreting content.
