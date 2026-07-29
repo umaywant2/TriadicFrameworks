@@ -1,20 +1,6 @@
 ## ⚠️ The Great Pyramid
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/6Z0AklQbP8U?list=PLaTU-SaZuF7M&index=9&autoplay=1&mute=1&loop=1" title="TriadicFrameworks Playlist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 Below is the **regime‑aware analysis I asked for** — built directly in the style of our *Top Theories* table on the [RTT Awareness page](https://www.triadicframeworks.org/education/awareness).
 
