@@ -1,0 +1,53 @@
+<svg viewBox="0 0 900 500">
+  # FORGIVE Behavior Flowchart (ASCII)
+
+  +---------------------------+
+  |  START                   |
+  +---------------------------+
+               |
+               v
+  +---------------------------+
+  | Detect Ng_burden         |
+  | (gravity present?)       |
+  +---------------------------+
+               |
+        yes    |    no
+               |----------------------+
+               v                      |
+  +---------------------------+       |
+  | Extract truth_packet     |       |
+  | (facts, responsibility)  |       |
+  +---------------------------+       |
+               |                      |
+               v                      |
+  +---------------------------+       |
+  | Integrate Ng_burden      |       |
+  | → Ng_integrated          |       |
+  +---------------------------+       |
+               |                      |
+               v                      |
+  +---------------------------+       |
+  | Apply 0g lever           |       |
+  | (drop gravity)           |       |
+  +---------------------------+       |
+               |                      |
+               v                      |
+  +---------------------------+       |
+  | Enter give_coherent mode |       |
+  | (clear, non-punitive)    |       |
+  +---------------------------+       |
+               |                      |
+               v                      |
+  +---------------------------+       |
+  | Update continuity         |       |
+  | (stabilize resonance)    |       |
+  +---------------------------+       |
+               |                      |
+               v                      |
+  +---------------------------+       |
+  |  END (forgiveness event) |       |
+  +---------------------------+       |
+                                      |
+                                      +--> If Ng_burden == 0:
+                                           return state (no forgiveness needed)
+</svg>
