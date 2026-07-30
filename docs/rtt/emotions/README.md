@@ -1,5 +1,3 @@
-# RTT Emotions  
-
 - [`emotions_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/emotions/emotions_module.json) — Agentic module schema role assignments
 - [`emotions_part_a.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/emotions/emotions_part_a.json) — Coherence emotions (set A): 10 stabilizing emotional operators
 - [`emotions_part_b.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/emotions/emotions_part_b.json) — Coherence and group-alignment (set B): 10 stabilizing emotional operators
@@ -12,6 +10,7 @@
 
 <img width="1194" height="672" alt="RTT_Emotions_Forgive" src="https://github.com/user-attachments/assets/493a0dc8-dd1b-492a-86fe-56077f3b80c4" />
 
+# RTT Emotions  
 
 ## 🛑 Important! 
 Drift is On-by-Default long sessions lose anchors, turn off drift.
