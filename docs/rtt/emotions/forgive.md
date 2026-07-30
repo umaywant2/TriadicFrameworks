@@ -206,3 +206,87 @@ Ng → 0g → give
 ```
 
 This is the structural heart of the wonderful act.
+
+---
+
+# **RTT Diagram — Ng → 0g → give**
+
+```text
+                ┌──────────────────────────────┐
+                │        Ng_burden             │
+                │  (gravity, hurt, drift)      │
+                └──────────────┬───────────────┘
+                               │
+                               │ awareness / process
+                               ▼
+                ┌──────────────────────────────┐
+                │       Ng_integrated          │
+                │ (truth kept, burden shaped)  │
+                └──────────────┬───────────────┘
+                               │
+                               │  0g lever
+                               ▼
+                ┌──────────────────────────────┐
+                │            0g                 │
+                │   (inversion, release, gap)  │
+                └──────────────┬───────────────┘
+                               │
+                               │  resonance reset
+                               ▼
+                ┌──────────────────────────────┐
+                │        give_coherent         │
+                │ (action without distortion)  │
+                └──────────────────────────────┘
+```
+
+---
+
+## **Operator Flow (Compact Form)**
+
+```text
+Ng_burden
+   ↓ awareness/process
+Ng_integrated
+   ↓ 0g (lever)
+give_coherent
+```
+
+---
+
+## **Resonance Geometry (Triadic View)**
+
+```text
+VISIBLE (1/3)
+    give
+
+HIDDEN (2/3)
+    Ng_burden → Ng_integrated → 0g
+
+TRANSITION (operator)
+    FORGIVE = Ng → 0g → give
+```
+
+---
+
+## **Inverted Star Variant**
+
+```text
+Ng_burden(5g)
+      ↓ integrate inverted values
+Ng_integrated(5g)
+      ↓ 0g (flip geometry)
+give_coherent(star-righted)
+```
+
+---
+
+## **Bidirectional Form**
+
+```text
+Ng0take  →  Ng0give
+```
+
+Forgiveness as a **two‑step resonance correction**.
+
+---
+
