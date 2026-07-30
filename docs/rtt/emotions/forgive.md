@@ -292,7 +292,7 @@ Forgiveness as a **two‑step resonance correction**.
 
 Here’s a more **SVG‑style ASCII diagram**.
 
-```text
+```svg
 <svg viewBox="0 0 800 400">
   <!-- Ng_burden -->
   [Ng_burden]
@@ -320,7 +320,7 @@ Here’s a more **SVG‑style ASCII diagram**.
 
 If you want a slightly more “diagrammatic” variant:
 
-```text
+```svg
 <svg viewBox="0 0 800 400">
   [Ng_burden] ----(process)----> [Ng_integrated] ----(0g)----> [give_coherent]
 </svg>
