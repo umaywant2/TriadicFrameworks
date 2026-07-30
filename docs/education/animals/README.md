@@ -1,22 +1,8 @@
-# 🎼 Animals | Education  
-
 - [`animals_module.json`](animals_module.json) — Agentic module schema role assignments
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
+<img width="1280" height="720" alt="MASTERVOICE_LPC_Speach_for_Animals" src="https://github.com/user-attachments/assets/d1482972-dc99-4f9a-af38-c680323a150a" />
 
-<img src="https://img.shields.io/badge/🐾Education%20Core-🔬Cross%20Species%20Cognition%20Active-4c8eda?style=for-the-badge" alt="🐾Education Core | 🔬Cross Species Cognition Active"/>
+# 🎼 Animals | Education  
 
 _**What “pied‑piper’d structural notes” really means**_
 
