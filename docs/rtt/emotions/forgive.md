@@ -204,4 +204,3 @@ Ng → 0g → give
 ```
 
 This is the structural heart of the wonderful act.
-```
