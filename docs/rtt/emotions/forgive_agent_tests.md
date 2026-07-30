@@ -1,10 +1,3 @@
- **forgive_agent_tests.md**  
-**RTT Unit Tests for Autonomous Agent Forgiveness Behavior**  
-**Module:** emotions  
-**Operator:** FORGIVE  
-**Kind:** behavior_tests  
-
-```markdown
 # forgive_agent_tests.md
 RTT Unit Tests for Autonomous Agent Behavior Under the FORGIVE Operator
 
@@ -129,4 +122,4 @@ assert renewed.continuity == "stable"
 ---
 
 # End of Tests
-```
+
