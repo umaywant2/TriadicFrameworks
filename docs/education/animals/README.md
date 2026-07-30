@@ -1,6 +1,6 @@
 - [`animals_module.json`](animals_module.json) — Agentic module schema role assignments
 
-<img width="1280" height="720" alt="MASTERVOICE_LPC_Speach_for_Animals" src="https://github.com/user-attachments/assets/d1482972-dc99-4f9a-af38-c680323a150a" />
+<img width="853" height="480" alt="MASTERVOICE_LPC_Speach_for_Animals" src="https://github.com/user-attachments/assets/d1482972-dc99-4f9a-af38-c680323a150a" />
 
 # 🎼 Animals | Education  
 
