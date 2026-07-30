@@ -1,0 +1,164 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "FORGIVE Operator Schema",
+  "description": "Schema for RTT forgiveness resonance operator definitions.",
+  "type": "object",
+  "required": [
+    "operator",
+    "kind",
+    "module",
+    "version",
+    "summary",
+    "signature",
+    "invariants",
+    "geometry",
+    "components",
+    "ng_ladder",
+    "forms",
+    "seven_phases",
+    "domain_maps",
+    "ai_interpretation",
+    "cross_module"
+  ],
+  "properties": {
+    "operator": {
+      "type": "string",
+      "enum": ["FORGIVE"]
+    },
+    "kind": {
+      "type": "string",
+      "enum": ["resonance_operator"]
+    },
+    "module": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "object",
+      "required": ["input", "transition", "output"],
+      "properties": {
+        "input": { "type": "string" },
+        "transition": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "output": { "type": "string" }
+      }
+    },
+    "invariants": {
+      "type": "object",
+      "properties": {
+        "truth_preserved": { "type": "boolean" },
+        "drift_reduced": { "type": "boolean" },
+        "coherence_restored": { "type": "boolean" },
+        "continuity_enabled": { "type": "boolean" }
+      },
+      "required": [
+        "truth_preserved",
+        "drift_reduced",
+        "coherence_restored",
+        "continuity_enabled"
+      ]
+    },
+    "geometry": {
+      "type": "object",
+      "required": ["visible_1_3", "hidden_2_3", "triadic_form"],
+      "properties": {
+        "visible_1_3": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "hidden_2_3": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        },
+        "triadic_form": { "type": "string" }
+      }
+    },
+    "components": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "required": ["type", "description"],
+        "properties": {
+          "type": { "type": "string" },
+          "range": { "type": "string" },
+          "fields": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "ng_ladder": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "type": "string" }
+    },
+    "forms": {
+      "type": "object",
+      "required": ["positive", "negative", "balanced"],
+      "properties": {
+        "positive": { "type": "string" },
+        "negative": { "type": "string" },
+        "balanced": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 1
+        }
+      }
+    },
+    "seven_phases": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "type": "string" }
+    },
+    "domain_maps": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "required": ["equation", "description"],
+        "properties": {
+          "equation": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "ai_interpretation": {
+      "type": "object",
+      "required": ["primitive", "description"],
+      "properties": {
+        "primitive": { "type": "string" },
+        "description": { "type": "string" },
+        "pseudocode_hooks": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        }
+      }
+    },
+    "cross_module": {
+      "type": "object",
+      "required": ["related", "category"],
+      "properties": {
+        "related": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "category": { "type": "string" }
+      }
+    }
+  },
+  "additionalProperties": false
+}
