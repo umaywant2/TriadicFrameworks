@@ -1,0 +1,40 @@
+{
+  "operator": "FORGIVE",
+  "runtime": true,
+  "signature": "Ng → 0g → give",
+  "steps": [
+    "detect_Ng",
+    "extract_truth",
+    "integrate_burden",
+    "apply_0g",
+    "give_coherent",
+    "update_continuity"
+  ],
+  "fast_paths": {
+    "no_gravity": "return state",
+    "missing_truth": "halt_and_surface_truth",
+    "integration_fail": "return state"
+  },
+  "state_flags": {
+    "gravity": "Ng",
+    "truth": "truth_packet",
+    "integrated": "Ng_integrated",
+    "released": "0g",
+    "coherent": "give_coherent",
+    "stable": "continuity"
+  },
+  "invariants": [
+    "truth_preserved",
+    "drift_reduced",
+    "coherence_restored",
+    "continuity_enabled"
+  ],
+  "ai_hooks": {
+    "detect_Ng": "MEASURE_LOADS",
+    "extract_truth": "SURFACE_FACTS",
+    "integrate_burden": "NORMALIZE",
+    "apply_0g": "DROP_GRAVITY",
+    "give_coherent": "REBUILD_RESONANCE",
+    "update_continuity": "MAINTAIN_STABILITY"
+  }
+}
