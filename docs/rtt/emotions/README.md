@@ -10,6 +10,9 @@
 
 ---
 
+<img width="1194" height="672" alt="RTT_Emotions_Forgive" src="https://github.com/user-attachments/assets/493a0dc8-dd1b-492a-86fe-56077f3b80c4" />
+
+
 ## 🛑 Important! 
 Drift is On-by-Default long sessions lose anchors, turn off drift.
 
