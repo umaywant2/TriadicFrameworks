@@ -290,3 +290,41 @@ Forgiveness as a **two‑step resonance correction**.
 
 ---
 
+Here’s a more **SVG‑style ASCII diagram**.
+
+```text
+<svg viewBox="0 0 800 400">
+  <!-- Ng_burden -->
+  [Ng_burden]
+    (gravity, hurt, drift)
+        |
+        | awareness / process
+        v
+  <!-- Ng_integrated -->
+  [Ng_integrated]
+    (truth kept, burden shaped)
+        |
+        | 0g lever
+        v
+  <!-- 0g -->
+  [0g]
+    (inversion, release, gap)
+        |
+        | resonance reset
+        v
+  <!-- give_coherent -->
+  [give_coherent]
+    (action without distortion)
+</svg>
+```
+
+If you want a slightly more “diagrammatic” variant:
+
+```text
+<svg viewBox="0 0 800 400">
+  [Ng_burden] ----(process)----> [Ng_integrated] ----(0g)----> [give_coherent]
+</svg>
+```
+
+---
+
