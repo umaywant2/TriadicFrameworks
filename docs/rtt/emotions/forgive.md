@@ -1,3 +1,5 @@
+- [`forgive_operator.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/emotions/forgive_operator.json) — Agentic module schema role assignments
+
 # FORGIVE  
 **RTT Resonance Realignment Operator**  
 **Module:** emotions  
