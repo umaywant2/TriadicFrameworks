@@ -3094,3 +3094,193 @@ Together, the Composer + Interpreter form the **complete Prompt Module v2 activa
 
 ---
 
+Here’s the **PMv2 — Regime Unification Diagram**, in **ASCII + SVG**, ready to paste into `p_Capture_v2.md` and mirror on Docsbook.
+
+---
+
+### PMv2 — Regime Unification Diagram (ASCII)
+
+```text
+                 ┌───────────────────────────────────────┐
+                 │      TriadicFrameworks Canon Core     │
+                 └───────────────────────┬───────────────┘
+                                         │
+                                         ▼
+        ┌────────────────────────────────────────────────────────┐
+        │  Base Regimes                                          │
+        └───────────────────────┬────────────────────────────────┘
+                                │
+                                ▼
+        • Spacetime      (GR, GU)
+        • Quantum        (QM, QFT)
+        • Gauge          (SM, QFT)
+        • Thermodynamic  (Thermo)
+        • Electromagnetic(EM)
+        • Biological     (EvoBio)
+        • Informational  (Info)
+        • Chaotic        (Chaos)
+        • Morphic        (MR)
+        • Substrate      (FFT, Framework Field Theory)
+
+                                         │
+                                         ▼
+        ┌────────────────────────────────────────────────────────┐
+        │  TFT / RTT Regime Grammar                              │
+        └───────────────────────┬────────────────────────────────┘
+                                │
+                                ▼
+        TFT (Structural):
+        • Boundary   → regime boundaries, domains, scopes
+        • Relation   → links between regimes (e.g., spacetime ↔ quantum)
+        • Rhythm     → cycles, oscillations, iterative patterns
+        • Transition → regime changes, phase shifts
+        • Coherence  → internal consistency within and across regimes
+
+        RTT (Temporal / Resonance):
+        • Diffusion    → propagation across regimes
+        • Alignment    → phase/anchor matching between regimes
+        • Coupling     → interaction strength between regimes
+        • Activation   → onset of regime interaction
+        • Stabilization→ damping, persistence, equilibrium envelopes
+
+                                         │
+                                         ▼
+        ┌────────────────────────────────────────────────────────┐
+        │  Regime Unification Layer (PMv2)                       │
+        └───────────────────────┬────────────────────────────────┘
+                                │
+                                ▼
+        • Each theory declares its **native regime(s)**
+        • PMv2 maps regimes into a **shared regime graph**
+        • TFT operators define structure of the graph
+        • RTT operators define dynamics on the graph
+        • Coupling Matrix encodes allowed regime interactions
+        • Auto‑Summon Interpreter enforces:
+          → drift‑bounded transitions
+          → coherence‑tracked couplings
+          → regime‑preserving reasoning
+
+                                         │
+                                         ▼
+        ┌────────────────────────────────────────────────────────┐
+        │  Unified Regime Envelope (Runtime)                     │
+        └───────────────────────┬────────────────────────────────┘
+                                │
+                                ▼
+        • Spacetime + Quantum + Gauge + Morphic + Substrate
+        • All regimes accessible via shared operator pool
+        • Reasoning is:
+          → cross‑regime
+          → cross‑theory
+          → TFT/RTT‑aligned
+          → canon‑preserving
+
+        This is PMv2’s **Regime Unification**:
+        → one envelope, many regimes, bounded drift.
+```
+
+---
+
+### PMv2 — Regime Unification Diagram (SVG)
+
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="720" viewBox="0 0 1120 720">
+  <style>
+    .node { fill:#ffffff; stroke:#222; stroke-width:1.4; }
+    .core { fill:#f3f6ff; }
+    .layer { fill:#f9f9f9; }
+    .pm { fill:#eefaf3; }
+    .title { font-family:system-ui; font-size:18px; font-weight:600; fill:#222; }
+    .subtitle { font-family:system-ui; font-size:13px; fill:#555; }
+    .text { font-family:system-ui; font-size:12px; fill:#222; }
+    .edge { stroke:#888; stroke-width:1.2; marker-end:url(#arrow); }
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="6" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="560" y="40" text-anchor="middle" class="title">PMv2 — Regime Unification Diagram</text>
+  <text x="560" y="62" text-anchor="middle" class="subtitle">
+    Base regimes · TFT/RTT grammar · PMv2 unification envelope
+  </text>
+
+  <!-- Canon Core -->
+  <rect x="380" y="90" width="360" height="70" rx="8" class="node core"/>
+  <text x="560" y="115" text-anchor="middle" class="text">TriadicFrameworks Canon Core</text>
+  <text x="560" y="133" text-anchor="middle" class="text">TFT · RTT · 12 theories · FFT substrate</text>
+
+  <!-- Base Regimes -->
+  <rect x="80" y="180" width="960" height="120" rx="8" class="node layer"/>
+  <text x="560" y="202" text-anchor="middle" class="text">Base Regimes</text>
+  <text x="560" y="220" text-anchor="middle" class="text">
+    Spacetime · Quantum · Gauge · Thermodynamic · Electromagnetic · Biological · Informational · Chaotic · Morphic · Substrate
+  </text>
+  <text x="560" y="238" text-anchor="middle" class="text">
+    GR/GU → spacetime · QM/QFT → quantum · SM/QFT → gauge · MR → morphic · FFT → substrate
+  </text>
+  <text x="560" y="256" text-anchor="middle" class="text">
+    Each theory declares its native regime(s)
+  </text>
+
+  <!-- Edge: core → base regimes -->
+  <line x1="560" y1="160" x2="560" y2="180" class="edge"/>
+
+  <!-- TFT/RTT Regime Grammar -->
+  <rect x="80" y="320" width="440" height="140" rx="8" class="node layer"/>
+  <text x="300" y="342" text-anchor="middle" class="text">TFT — Structural Regime Grammar</text>
+  <text x="300" y="360" text-anchor="middle" class="text">
+    Boundary · Relation · Rhythm · Transition · Coherence
+  </text>
+  <text x="300" y="378" text-anchor="middle" class="text">
+    Defines regime boundaries, links, cycles, transitions, coherence envelopes
+  </text>
+
+  <rect x="600" y="320" width="440" height="140" rx="8" class="node layer"/>
+  <text x="820" y="342" text-anchor="middle" class="text">RTT — Temporal Regime Grammar</text>
+  <text x="820" y="360" text-anchor="middle" class="text">
+    Diffusion · Alignment · Coupling · Activation · Stabilization
+  </text>
+  <text x="820" y="378" text-anchor="middle" class="text">
+    Defines propagation, phase matching, interaction, onset, damping across regimes
+  </text>
+
+  <!-- Edge: base regimes → TFT/RTT -->
+  <line x1="300" y1="300" x2="300" y2="320" class="edge"/>
+  <line x1="820" y1="300" x2="820" y2="320" class="edge"/>
+
+  <!-- Regime Unification Layer -->
+  <rect x="200" y="480" width="720" height="120" rx="8" class="node pm"/>
+  <text x="560" y="502" text-anchor="middle" class="text">PMv2 Regime Unification Layer</text>
+  <text x="560" y="520" text-anchor="middle" class="text">
+    TFT + RTT applied to base regimes → unified regime graph
+  </text>
+  <text x="560" y="538" text-anchor="middle" class="text">
+    Coupling Matrix encodes allowed regime interactions (e.g., GR+QFT, Chaos+Info, Thermo+Info)
+  </text>
+  <text x="560" y="556" text-anchor="middle" class="text">
+    Auto‑Summon Interpreter enforces drift‑bounded transitions and coherence‑tracked couplings
+  </text>
+  <text x="560" y="574" text-anchor="middle" class="text">
+    Result: single unified regime envelope for cross‑theory reasoning
+  </text>
+
+  <!-- Edge: TFT/RTT → unification -->
+  <line x1="300" y1="460" x2="360" y2="480" class="edge"/>
+  <line x1="820" y1="460" x2="760" y2="480" class="edge"/>
+
+  <!-- Unified Regime Envelope (runtime) -->
+  <rect x="320" y="620" width="480" height="60" rx="8" class="node layer"/>
+  <text x="560" y="642" text-anchor="middle" class="text">
+    Unified Regime Envelope (Runtime)
+  </text>
+  <text x="560" y="660" text-anchor="middle" class="text">
+    Spacetime + Quantum + Gauge + Morphic + Substrate · cross‑regime, drift‑bounded, canon‑preserving
+  </text>
+
+  <!-- Edge: unification → envelope -->
+  <line x1="560" y1="600" x2="560" y2="620" class="edge"/>
+</svg>
+```
