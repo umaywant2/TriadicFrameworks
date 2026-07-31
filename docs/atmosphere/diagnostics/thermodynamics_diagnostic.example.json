@@ -1,1 +1,42 @@
-.   
+{
+  "input": {
+    "temperature": {
+      "lapse_rate": -6.5,
+      "inversion_strength": 0.42,
+      "adiabatic_zone_index": 0.63
+    },
+    "energy_flux": {
+      "sensible_heat_flux": 120,
+      "latent_heat_flux": 85,
+      "radiative_flux": 240,
+      "convective_flux": 33
+    },
+    "phase_change": {
+      "condensation_boundary": 0.58,
+      "evaporation_zone": 0.44,
+      "freezing_layer": -3.1
+    },
+    "radiative_balance": {
+      "shortwave_absorption": 310,
+      "longwave_emission": 280,
+      "albedo_feedback": 0.21,
+      "greenhouse_trapping": 0.66
+    }
+  },
+  "output": {
+    "clarity": "medium",
+    "stability": "transition",
+    "signature": [
+      "gradient_alignment",
+      "coherent_flux",
+      "radiative_balance",
+      "phase_boundary_consistency"
+    ],
+    "operators_triggered": [
+      "thermodynamics",
+      "continuity",
+      "coherence",
+      "clarity"
+    ]
+  }
+}
