@@ -1,1 +1,138 @@
+{
+  "extension": {
+    "name": "AtmosphereOceanCoupling",
+    "category": "CrossDomainExtension",
+    "version": "1.0",
+    "summary": "Canonical extension describing how atmospheric structure couples with oceanic structure across gradients, fluxes, resonance fields, and teleconnection pathways.",
+    "purpose": "Provide a unified structural map of atmosphere ↔ ocean coupling using RTT operators, dimensional agents, hydrospheric fields, and multi-scale alignment."
+  },
+
+  "substrates": {
+    "hydrospheric": {
+      "ocean_components": ["sst", "currents", "upwelling"],
+      "atmospheric_interaction": ["moisture_flux", "convection", "stability"]
+    },
+    "physical": {
+      "ocean_components": ["surface_winds", "pressure_fields"],
+      "atmospheric_interaction": ["mixing", "wave_generation"]
+    },
+    "thermodynamic": {
+      "ocean_components": ["heat_content", "stratification"],
+      "atmospheric_interaction": ["lapse_rate_modulation", "convection"]
+    },
+    "resonance": {
+      "ocean_components": ["enso", "mjo", "kelvin_waves"],
+      "atmospheric_interaction": ["planetary_waves", "teleconnections"]
+    },
+    "dimensional": {
+      "ocean_components": ["flux_maps"],
+      "atmospheric_interaction": ["cross_domain_fields"]
+    }
+  },
+
+  "agents": {
+    "primary": ["hydro_agent", "dimensional_agent", "resonance_agent"],
+    "secondary": ["fluid_agent", "thermo_agent", "clarity_agent"]
+  },
+
+  "operators": {
+    "dimensional_coupling": {
+      "agents": ["dimensional_agent", "hydro_agent"],
+      "scales": ["meso", "macro", "mega"],
+      "outputs": ["coupling_maps", "feedback_loops", "cross_domain_fields"]
+    },
+    "resonance": {
+      "agents": ["resonance_agent", "dimensional_agent"],
+      "scales": ["macro", "mega"],
+      "outputs": ["teleconnection_fields", "oscillation_alignment"]
+    },
+    "coherence": {
+      "agents": ["coherence_agent", "hydro_agent"],
+      "scales": ["macro", "mega"],
+      "outputs": ["stability_fields", "alignment_maps"]
+    },
+    "drift": {
+      "agents": ["drift_agent", "fluid_agent"],
+      "scales": ["meso", "macro"],
+      "outputs": ["instability_fields", "cross_domain_drift"]
+    },
+    "clarity": {
+      "agents": ["clarity_agent"],
+      "scales": ["micro", "meso", "macro"],
+      "outputs": ["clarity_pulses", "truth_maps"]
+    }
+  },
+
+  "fields": {
+    "sst_to_atmosphere": [
+      "sst_gradient",
+      "moisture_flux",
+      "convection",
+      "atmospheric_response"
+    ],
+    "wind_to_ocean": [
+      "surface_wind",
+      "mixing",
+      "upwelling",
+      "sst_change"
+    ],
+    "current_to_wave": [
+      "current_alignment",
+      "kelvin_wave",
+      "rossby_wave",
+      "jet_modulation"
+    ],
+    "enso_mjo": [
+      "enso_phase",
+      "mjo_state",
+      "planetary_wave_response",
+      "global_alignment"
+    ]
+  },
+
+  "cascades": {
+    "ocean_driven": [
+      "sst_anomaly",
+      "moisture_flux_increase",
+      "convection_increase",
+      "drift_increase",
+      "transition"
+    ],
+    "wind_driven": [
+      "surface_wind_increase",
+      "mixing_increase",
+      "sst_change",
+      "convection_shift"
+    ],
+    "teleconnection": [
+      "enso_phase_shift",
+      "planetary_wave_response",
+      "global_coherence_increase"
+    ]
+  },
+
+  "diagnostics": {
+    "maps": [
+      "sst_gradient_maps",
+      "moisture_flux_stability",
+      "convection_sst_coupling",
+      "teleconnection_overlays",
+      "cross_domain_drift_fields",
+      "planetary_wave_coupling_maps"
+    ]
+  },
+
+  "outputs": {
+    "primary": [
+      "coupling_maps",
+      "cross_domain_fields",
+      "teleconnection_fields"
+    ],
+    "secondary": [
+      "drift_fields",
+      "stability_maps",
+      "clarity_overlays"
+    ]
+  }
+}
 
