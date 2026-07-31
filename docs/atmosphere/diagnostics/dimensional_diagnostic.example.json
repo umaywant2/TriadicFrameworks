@@ -1,1 +1,115 @@
-. 
+{
+  "diagnostic": {
+    "name": "dimensional_diagnostic",
+    "category": "Atmosphere",
+    "version": "1.0",
+    "summary": "Example diagnostic illustrating dimensional shifts, regime transitions, coherence breaks, structural transitions, and cross-domain dimensional behavior.",
+    "purpose": "Provide a sample dimensional diagnostic for schema validation and module integration."
+  },
+
+  "context": {
+    "dimensional_definition": "Dimensional shift field linking regime transitions, coherence breaks, structural transitions, and cross-domain dimensional alignment.",
+    "global_role": "Dimensionality is the structural transition engine inside the Seven-Phase atmospheric model."
+  },
+
+  "agents": {
+    "primary": [
+      "dimensional_agent",
+      "clarity_agent",
+      "coherence_agent"
+    ],
+    "secondary": [
+      "fluid_agent",
+      "thermo_agent",
+      "hydro_agent"
+    ]
+  },
+
+  "fields": {
+    "dimensional_shift_field": [
+      "dimensional_shift",
+      "transition_ready",
+      "structural_change"
+    ],
+    "regime_transition_field": [
+      "regime_boundary",
+      "transition_shell",
+      "coherence_break"
+    ],
+    "coherence_break_field": [
+      "coherence_loss",
+      "instability",
+      "dimensional_shift"
+    ],
+    "cross_domain_dimensional_field": [
+      "cross_domain_alignment",
+      "structural_transition",
+      "global_dimensionality"
+    ]
+  },
+
+  "metrics": {
+    "dimensional_index": "dimensional_shift + regime_transition + coherence_break",
+    "transition_metric": "regime_boundary × transition_shell",
+    "coherence_metric": "coherence_loss × instability",
+    "cross_domain_metric": "cross_domain_alignment − structural_transition"
+  },
+
+  "scales": {
+    "micro": "micro-dimensional instability",
+    "meso": "terrain-driven dimensional transition",
+    "macro": "synoptic dimensional boundaries",
+    "mega": "planetary dimensional teleconnections"
+  },
+
+  "failure_modes": {
+    "alignment_break": "loss of dimensional alignment",
+    "coherence_collapse": "coherence-driven structural failure",
+    "transition_failure": "dimensional shift unable to complete transition",
+    "cross_domain_failure": "cross-domain alignment collapse"
+  },
+
+  "cascades": {
+    "dimensional_shift_cascade": [
+      "shift_increase",
+      "transition_ready",
+      "structural_change"
+    ],
+    "regime_transition_cascade": [
+      "boundary_shift",
+      "transition_shell",
+      "coherence_break"
+    ],
+    "coherence_break_cascade": [
+      "coherence_loss",
+      "instability",
+      "dimensional_shift"
+    ],
+    "cross_domain_cascade": [
+      "alignment_shift",
+      "structural_transition",
+      "global_dimensionality"
+    ]
+  },
+
+  "diagnostics": {
+    "maps": [
+      "dimensional_shift_maps",
+      "transition_shell_maps",
+      "coherence_break_overlays",
+      "cross_domain_dimensional_maps"
+    ]
+  },
+
+  "summary": {
+    "core_capabilities": [
+      "multi-scale dimensional detection",
+      "regime transition interpretation",
+      "coherence break mapping",
+      "cross-domain dimensional overlays",
+      "structural transition fields",
+      "full dimensional-agent integration"
+    ],
+    "role": "Example dimensional diagnostic for Atmosphere Module validation."
+  }
+}
