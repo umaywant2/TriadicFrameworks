@@ -1,1 +1,81 @@
-.   
+{
+  "module": "atmosphere",
+  "diagnostic": "nudge",
+  "category": "trace",
+  "version": "1.0",
+  "events": {
+    "micro_nudge": [
+      "pressure_microshift_event",
+      "temperature_microgradient_event",
+      "moisture_microflux_event"
+    ],
+    "boundary_nudge": [
+      "shear_boundary_nudge_event",
+      "vorticity_boundary_nudge_event",
+      "wave_boundary_nudge_event"
+    ],
+    "coherence_nudge": [
+      "coherence_alignment_shift_event",
+      "coherence_drift_trigger_event",
+      "coherence_regime_precursor_event"
+    ],
+    "regime_precursor": [
+      "transition_precursor_event",
+      "instability_precursor_event",
+      "resonance_precursor_event"
+    ]
+  },
+  "operators": {
+    "nudge": [
+      "micro_nudge_analysis",
+      "boundary_nudge_alignment",
+      "coherence_nudge_detection",
+      "regime_precursor_evaluation"
+    ],
+    "continuity": [
+      "nudge_continuity",
+      "gradient_continuity"
+    ],
+    "coherence": [
+      "stable_nudge_regime",
+      "coherent_nudge_behavior"
+    ],
+    "clarity": [
+      "nudge_signal_clarity",
+      "noise_reduction"
+    ],
+    "dimensional": [
+      "micro_to_meso_nudge_scaling",
+      "meso_to_macro_nudge_propagation"
+    ],
+    "drift": [
+      "nudge_instability_propagation",
+      "nudge_drift_detection"
+    ],
+    "paradox": [
+      "conflicting_nudge_signals",
+      "inversion_paradox"
+    ],
+    "resonance": [
+      "nudge_driven_oscillations",
+      "harmonic_nudge_alignment"
+    ]
+  },
+  "regimes": {
+    "stable": [
+      "coherent_nudge_behavior",
+      "predictable_micro_nudge_cycles",
+      "stable_precursor_alignment"
+    ],
+    "transition": [
+      "partial_nudge_breakdown",
+      "mixed_mode_nudge_interference",
+      "precursor_driven_instability"
+    ],
+    "unstable": [
+      "nudge_collapse",
+      "rapid_nudge_reversal",
+      "global_regime_disruption"
+    ]
+  }
+}
