@@ -1,1 +1,86 @@
-.   
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Teleconnection Diagnostic Schema",
+  "type": "object",
+  "required": ["module", "diagnostic", "version", "fields", "thresholds", "operators", "regimes", "output"],
+  "properties": {
+    "module": { "type": "string", "const": "atmosphere" },
+    "diagnostic": { "type": "string", "const": "teleconnection" },
+    "version": { "type": "string" },
+
+    "fields": {
+      "type": "object",
+      "properties": {
+        "pacific": { "type": "array", "items": { "type": "string" } },
+        "atlantic": { "type": "array", "items": { "type": "string" } },
+        "indian_ocean": { "type": "array", "items": { "type": "string" } },
+        "polar": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["pacific", "atlantic", "indian_ocean", "polar"]
+    },
+
+    "thresholds": {
+      "type": "object",
+      "properties": {
+        "teleconnection_clarity_min": { "type": "number" },
+        "teleconnection_stability_min": { "type": "number" },
+        "teleconnection_noise_max": { "type": "number" }
+      },
+      "required": [
+        "teleconnection_clarity_min",
+        "teleconnection_stability_min",
+        "teleconnection_noise_max"
+      ]
+    },
+
+    "operators": {
+      "type": "object",
+      "properties": {
+        "teleconnection": { "type": "array", "items": { "type": "string" } },
+        "continuity": { "type": "array", "items": { "type": "string" } },
+        "coherence": { "type": "array", "items": { "type": "string" } },
+        "clarity": { "type": "array", "items": { "type": "string" } },
+        "dimensional": { "type": "array", "items": { "type": "string" } },
+        "drift": { "type": "array", "items": { "type": "string" } },
+        "paradox": { "type": "array", "items": { "type": "string" } },
+        "resonance": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": [
+        "teleconnection",
+        "continuity",
+        "coherence",
+        "clarity",
+        "dimensional",
+        "drift",
+        "paradox",
+        "resonance"
+      ]
+    },
+
+    "regimes": {
+      "type": "object",
+      "properties": {
+        "stable": { "type": "array", "items": { "type": "string" } },
+        "transition": { "type": "array", "items": { "type": "string" } },
+        "unstable": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["stable", "transition", "unstable"]
+    },
+
+    "output": {
+      "type": "object",
+      "properties": {
+        "clarity": { "type": "array", "items": { "type": "string" } },
+        "stability": { "type": "array", "items": { "type": "string" } },
+        "signature": { "type": "array", "items": { "type": "string" } },
+        "operators_triggered": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": [
+        "clarity",
+        "stability",
+        "signature",
+        "operators_triggered"
+      ]
+    }
+  }
+}
