@@ -1,1 +1,91 @@
-.   
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Nudge Diagnostic Schema",
+  "type": "object",
+  "required": ["module", "diagnostic", "version", "fields", "thresholds", "operators", "regimes", "output"],
+  "properties": {
+    "module": { "type": "string", "const": "atmosphere" },
+    "diagnostic": { "type": "string", "const": "nudge" },
+    "version": { "type": "string" },
+
+    "fields": {
+      "type": "object",
+      "properties": {
+        "micro_nudge": { "type": "array", "items": { "type": "string" } },
+        "boundary_nudge": { "type": "array", "items": { "type": "string" } },
+        "coherence_nudge": { "type": "array", "items": { "type": "string" } },
+        "regime_precursor": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": [
+        "micro_nudge",
+        "boundary_nudge",
+        "coherence_nudge",
+        "regime_precursor"
+      ]
+    },
+
+    "thresholds": {
+      "type": "object",
+      "properties": {
+        "nudge_clarity_min": { "type": "number" },
+        "nudge_stability_min": { "type": "number" },
+        "nudge_noise_max": { "type": "number" }
+      },
+      "required": [
+        "nudge_clarity_min",
+        "nudge_stability_min",
+        "nudge_noise_max"
+      ]
+    },
+
+    "operators": {
+      "type": "object",
+      "properties": {
+        "nudge": { "type": "array", "items": { "type": "string" } },
+        "continuity": { "type": "array", "items": { "type": "string" } },
+        "coherence": { "type": "array", "items": { "type": "string" } },
+        "clarity": { "type": "array", "items": { "type": "string" } },
+        "dimensional": { "type": "array", "items": { "type": "string" } },
+        "drift": { "type": "array", "items": { "type": "string" } },
+        "paradox": { "type": "array", "items": { "type": "string" } },
+        "resonance": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": [
+        "nudge",
+        "continuity",
+        "coherence",
+        "clarity",
+        "dimensional",
+        "drift",
+        "paradox",
+        "resonance"
+      ]
+    },
+
+    "regimes": {
+      "type": "object",
+      "properties": {
+        "stable": { "type": "array", "items": { "type": "string" } },
+        "transition": { "type": "array", "items": { "type": "string" } },
+        "unstable": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["stable", "transition", "unstable"]
+    },
+
+    "output": {
+      "type": "object",
+      "properties": {
+        "clarity": { "type": "array", "items": { "type": "string" } },
+        "stability": { "type": "array", "items": { "type": "string" } },
+        "signature": { "type": "array", "items": { "type": "string" } },
+        "operators_triggered": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": [
+        "clarity",
+        "stability",
+        "signature",
+        "operators_triggered"
+      ]
+    }
+  }
+}
