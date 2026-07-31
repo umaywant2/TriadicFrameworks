@@ -1,1 +1,138 @@
-. 
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dimensional Map Schema (Atmosphere Module)",
+  "description": "Schema for validating dimensional_map.json — dimensional zones, regime transitions, structural shifts, coherence breaks, and multi-scale dimensional overlays.",
+  "type": "object",
+
+  "properties": {
+    "map": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "category": { "type": "string" },
+        "version": { "type": "string" },
+        "summary": { "type": "string" },
+        "purpose": { "type": "string" }
+      },
+      "required": ["name", "category", "version", "summary", "purpose"]
+    },
+
+    "sources": {
+      "type": "object",
+      "properties": {
+        "composition": { "type": "string" },
+        "forcing": { "type": "string" },
+        "dynamics": { "type": "string" },
+        "thermodynamics": { "type": "string" },
+        "hydrospheric_coupling": { "type": "string" },
+        "regime_transitions": { "type": "string" },
+        "dimensional_coherence": { "type": "string" }
+      },
+      "required": [
+        "composition",
+        "forcing",
+        "dynamics",
+        "thermodynamics",
+        "hydrospheric_coupling",
+        "regime_transitions",
+        "dimensional_coherence"
+      ]
+    },
+
+    "signatures": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "agents": {
+      "type": "object",
+      "properties": {
+        "primary": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "secondary": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["primary", "secondary"]
+    },
+
+    "fields": {
+      "type": "object",
+      "properties": {
+        "dimensional_shift_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "regime_transition_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "coherence_break_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "cross_domain_dimensional_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": [
+        "dimensional_shift_field",
+        "regime_transition_field",
+        "coherence_break_field",
+        "cross_domain_dimensional_field"
+      ]
+    },
+
+    "scales": {
+      "type": "object",
+      "properties": {
+        "micro": { "type": "string" },
+        "meso": { "type": "string" },
+        "macro": { "type": "string" },
+        "mega": { "type": "string" }
+      },
+      "required": ["micro", "meso", "macro", "mega"]
+    },
+
+    "cascades": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    },
+
+    "overlays": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "summary": {
+      "type": "object",
+      "properties": {
+        "core_capabilities": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "role": { "type": "string" }
+      },
+      "required": ["core_capabilities", "role"]
+    }
+  },
+
+  "required": [
+    "map",
+    "sources",
+    "signatures",
+    "agents",
+    "fields",
+    "scales",
+    "cascades",
+    "overlays",
+    "summary"
+  ]
+}
