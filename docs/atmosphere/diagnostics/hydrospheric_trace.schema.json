@@ -1,1 +1,64 @@
-.   
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Hydrospheric Trace Schema",
+  "type": "object",
+  "required": ["module", "diagnostic", "category", "version", "events", "operators", "regimes"],
+  "properties": {
+    "module": { "type": "string", "const": "atmosphere" },
+    "diagnostic": { "type": "string", "const": "hydrospheric" },
+    "category": { "type": "string", "const": "trace" },
+    "version": { "type": "string" },
+
+    "events": {
+      "type": "object",
+      "properties": {
+        "moisture_flux": { "type": "array", "items": { "type": "string" } },
+        "evaporation": { "type": "array", "items": { "type": "string" } },
+        "condensation": { "type": "array", "items": { "type": "string" } },
+        "hydrological_gradients": { "type": "array", "items": { "type": "string" } },
+        "ocean_atmosphere_coupling": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": [
+        "moisture_flux",
+        "evaporation",
+        "condensation",
+        "hydrological_gradients",
+        "ocean_atmosphere_coupling"
+      ]
+    },
+
+    "operators": {
+      "type": "object",
+      "properties": {
+        "hydrospheric": { "type": "array", "items": { "type": "string" } },
+        "continuity": { "type": "array", "items": { "type": "string" } },
+        "coherence": { "type": "array", "items": { "type": "string" } },
+        "clarity": { "type": "array", "items": { "type": "string" } },
+        "dimensional": { "type": "array", "items": { "type": "string" } },
+        "drift": { "type": "array", "items": { "type": "string" } },
+        "paradox": { "type": "array", "items": { "type": "string" } },
+        "resonance": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": [
+        "hydrospheric",
+        "continuity",
+        "coherence",
+        "clarity",
+        "dimensional",
+        "drift",
+        "paradox",
+        "resonance"
+      ]
+    },
+
+    "regimes": {
+      "type": "object",
+      "properties": {
+        "stable": { "type": "array", "items": { "type": "string" } },
+        "transition": { "type": "array", "items": { "type": "string" } },
+        "unstable": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["stable", "transition", "unstable"]
+    }
+  }
+}
