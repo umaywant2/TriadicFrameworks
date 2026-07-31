@@ -1,1 +1,135 @@
+{
+  "diagnostic": {
+    "name": "paradox_diagnostic",
+    "category": "Atmosphere",
+    "version": "1.0",
+    "summary": "Diagnostic for detecting, quantifying, and mapping atmospheric paradox — boundary conflict, mixed-regime coexistence, shear tension, thermal instability, and transition-ready structures.",
+    "purpose": "Identify paradox corridors, conflict zones, tension fields, and incompatibility signatures using RTT operators and agentic synthesis."
+  },
+
+  "context": {
+    "paradox_definition": "Conflict field linking incompatible regimes, sharp gradients, shear tension, thermal instability, mixed-phase coexistence, and transition-ready structures.",
+    "global_role": "Paradox is the structural friction inside the Seven-Phase atmospheric model."
+  },
+
+  "agents": {
+    "primary": [
+      "paradox_agent",
+      "fluid_agent",
+      "drift_agent"
+    ],
+    "secondary": [
+      "thermo_agent",
+      "dimensional_agent",
+      "clarity_agent"
+    ]
+  },
+
+  "indicators": {
+    "sharp_gradients": "strong spatial discontinuities",
+    "mixed_regime_coexistence": "incompatible atmospheric regimes",
+    "high_shear": "strong directional conflict",
+    "boundary_tension": "unstable frontal boundaries",
+    "thermal_instability": "lapse-rate conflict",
+    "transition_potential": "pre-storm paradox spike",
+    "cross_domain_conflict": "ocean/land/ice-atmosphere incompatibility"
+  },
+
+  "fields": {
+    "primary_paradox_field": [
+      "forcing_gradient",
+      "shear",
+      "instability",
+      "paradox_increase"
+    ],
+    "frontal_paradox_field": [
+      "thermal_gradient",
+      "boundary_tension",
+      "paradox_increase"
+    ],
+    "cross_domain_paradox_field": [
+      "sst_discontinuity",
+      "moisture_flux_conflict",
+      "convection_paradox"
+    ],
+    "oscillation_paradox_field": [
+      "phase_misalignment",
+      "wave_break",
+      "coherence_decay",
+      "paradox_increase"
+    ]
+  },
+
+  "metrics": {
+    "paradox_index": "sharp_gradients + shear + boundary_tension",
+    "conflict_load_metric": "mixed_regime_coexistence × thermal_instability",
+    "tension_pressure_metric": "shear × gradient_intensity",
+    "transition_readiness_metric": "paradox_spike + drift_pressure"
+  },
+
+  "scales": {
+    "micro": "vapor/aerosol incompatibility",
+    "meso": "fronts, shear zones",
+    "macro": "jet breaks, synoptic conflict",
+    "mega": "oscillation misalignment"
+  },
+
+  "failure_modes": {
+    "boundary_fracture": "frontal collapse",
+    "thermal_conflict": "unstable lapse rate",
+    "shear_break": "directional instability",
+    "mixed_regime_failure": "incompatible regimes",
+    "oscillation_conflict": "harmonic instability"
+  },
+
+  "cascades": {
+    "storm_trigger_cascade": [
+      "shear_increase",
+      "turbulence_increase",
+      "paradox_increase",
+      "transition"
+    ],
+    "thermal_cascade": [
+      "unstable_lapse_rate",
+      "thermal_conflict",
+      "paradox_increase"
+    ],
+    "coupling_cascade": [
+      "sst_discontinuity",
+      "moisture_flux_conflict",
+      "convection_paradox"
+    ],
+    "oscillation_cascade": [
+      "phase_misalignment",
+      "wave_break",
+      "paradox_increase"
+    ]
+  },
+
+  "diagnostics": {
+    "outputs": [
+      "paradox_corridors",
+      "conflict_maps",
+      "tension_zones",
+      "shear_conflict_diagnostics",
+      "thermal_paradox_overlays",
+      "cross_domain_conflict_maps",
+      "oscillation_conflict_diagnostics",
+      "transition_potential_maps"
+    ]
+  },
+
+  "summary": {
+    "core_capabilities": [
+      "multi-scale conflict analysis",
+      "Seven-Phase paradox alignment",
+      "RTT operator-level interpretation",
+      "agentic synthesis of paradox indicators",
+      "storm-trigger conflict mapping",
+      "cross-domain conflict diagnostics",
+      "oscillation conflict evaluation"
+    ],
+    "role": "Paradox diagnostic backbone of the Atmosphere Module."
+  }
+}
 
