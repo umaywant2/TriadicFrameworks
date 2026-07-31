@@ -1,1 +1,33 @@
-.   
+{
+  "module": "atmosphere",
+  "diagnostic": "composition",
+  "version": "1.0",
+  "input": {
+    "particulates": 12,
+    "gas_mix": {
+      "nitrogen": 0.78,
+      "oxygen": 0.21,
+      "argon": 0.009,
+      "co2": 0.00042
+    },
+    "humidity": 0.45,
+    "trace_gases": [
+      "ozone",
+      "methane"
+    ]
+  },
+  "output": {
+    "composition_clarity": "high",
+    "composition_stability": "stable",
+    "composition_signature": [
+      "gas_mix_alignment",
+      "low_particulate_noise",
+      "trace_gas_consistency"
+    ],
+    "operators_triggered": [
+      "composition",
+      "continuity",
+      "coherence"
+    ]
+  }
+}
