@@ -1,1 +1,108 @@
-.   
+{
+  "module": "atmosphere",
+  "diagnostic": "hydrospheric",
+  "category": "map",
+  "version": "1.0",
+  "layers": {
+    "moisture_flux": [
+      "horizontal_transport",
+      "vertical_ascent",
+      "boundary_layer_gradients"
+    ],
+    "evaporation": [
+      "evaporation_zones",
+      "surface_moisture_release",
+      "latent_heat_extraction"
+    ],
+    "condensation": [
+      "condensation_boundaries",
+      "cloud_formation_zones",
+      "latent_heat_release"
+    ],
+    "hydrological_gradients": [
+      "humidity_gradients",
+      "dew_point_transitions",
+      "saturation_zones"
+    ],
+    "ocean_atmosphere_coupling": [
+      "sst_moisture_flux",
+      "current_wave_modulation",
+      "upwelling_instability"
+    ]
+  },
+  "operators": {
+    "hydrospheric": [
+      "moisture_flux_alignment",
+      "evaporation_boundary_detection",
+      "condensation_boundary_detection",
+      "hydrological_gradient_analysis"
+    ],
+    "continuity": [
+      "moisture_continuity",
+      "gradient_continuity"
+    ],
+    "coherence": [
+      "stable_hydrospheric_regime",
+      "coherent_moisture_flux"
+    ],
+    "clarity": [
+      "noise_reduction",
+      "hydrospheric_signal_clarity"
+    ],
+    "dimensional": [
+      "micro_to_meso_moisture_scaling",
+      "meso_to_macro_hydrospheric_alignment"
+    ],
+    "drift": [
+      "hydrospheric_instability_propagation",
+      "moisture_drift_detection"
+    ],
+    "paradox": [
+      "conflicting_moisture_signals",
+      "saturation_paradox"
+    ],
+    "resonance": [
+      "moisture_driven_oscillations",
+      "harmonic_hydrospheric_alignment"
+    ]
+  },
+  "regimes": {
+    "stable": [
+      "coherent_moisture_flux",
+      "predictable_evaporation_condensation_cycles",
+      "stable_sst_coupling"
+    ],
+    "transition": [
+      "moisture_gradient_breakdown",
+      "condensation_boundary_shifts",
+      "sst_anomaly_propagation"
+    ],
+    "unstable": [
+      "convective_moisture_bursts",
+      "humidity_gradient_collapse",
+      "hydrospheric_wave_disruption"
+    ]
+  },
+  "coupling": {
+    "ocean": [
+      "sst_moisture_flux",
+      "current_wave_modulation"
+    ],
+    "cryosphere": [
+      "albedo_condensation_feedback",
+      "melt_evaporation_forcing"
+    ],
+    "land": [
+      "soil_moisture_evaporation_feedback",
+      "terrain_moisture_flux_modulation"
+    ],
+    "biosphere": [
+      "evapotranspiration_moisture_flux",
+      "vegetation_condensation_modulation"
+    ],
+    "magnetosphere": [
+      "solar_wind_upper_atmosphere_moisture_effects",
+      "geomagnetic_storm_hydrospheric_perturbation"
+    ]
+  }
+}
