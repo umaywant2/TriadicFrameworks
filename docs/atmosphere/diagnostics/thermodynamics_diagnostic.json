@@ -1,1 +1,105 @@
-.   
+{
+  "module": "atmosphere",
+  "diagnostic": "thermodynamics",
+  "version": "1.0",
+  "fields": {
+    "temperature": [
+      "lapse_rate",
+      "inversion_layers",
+      "adiabatic_zones",
+      "radiative_cooling_layers"
+    ],
+    "energy_flux": [
+      "sensible_heat_flux",
+      "latent_heat_flux",
+      "radiative_flux",
+      "convective_flux"
+    ],
+    "phase_change": [
+      "condensation_boundaries",
+      "evaporation_zones",
+      "freezing_layers",
+      "sublimation_regions"
+    ],
+    "radiative_balance": [
+      "shortwave_absorption",
+      "longwave_emission",
+      "albedo_feedback",
+      "greenhouse_trapping"
+    ]
+  },
+  "thresholds": {
+    "gradient_clarity_min": 0.7,
+    "flux_stability_min": 0.6,
+    "radiative_balance_tolerance": 0.15
+  },
+  "operators": {
+    "thermodynamics": [
+      "gradient_interpretation",
+      "flux_alignment",
+      "radiative_balance_check",
+      "phase_boundary_detection"
+    ],
+    "continuity": [
+      "energy_conservation",
+      "flux_continuity"
+    ],
+    "coherence": [
+      "stable_thermodynamic_regime",
+      "coherent_flux_behavior"
+    ],
+    "clarity": [
+      "noise_free_gradient",
+      "radiative_signal_clarity"
+    ],
+    "dimensional": [
+      "micro_to_meso_scaling",
+      "meso_to_macro_flux_alignment"
+    ],
+    "drift": [
+      "instability_propagation",
+      "thermodynamic_drift_detection"
+    ],
+    "paradox": [
+      "conflicting_flux_signals",
+      "inversion_paradox"
+    ],
+    "resonance": [
+      "thermodynamic_oscillations",
+      "harmonic_flux_alignment"
+    ]
+  },
+  "regimes": {
+    "stable": [
+      "monotonic_gradients",
+      "coherent_energy_flux",
+      "predictable_radiative_balance"
+    ],
+    "transition": [
+      "inversion_formation",
+      "boundary_layer_breakdown",
+      "moisture_driven_instability"
+    ],
+    "unstable": [
+      "convective_bursts",
+      "rapid_lapse_rate_shifts",
+      "radiative_imbalance"
+    ]
+  },
+  "output": {
+    "clarity": ["high", "medium", "low"],
+    "stability": ["stable", "transition", "unstable"],
+    "signature": [
+      "gradient_alignment",
+      "coherent_flux",
+      "radiative_balance",
+      "phase_boundary_consistency"
+    ],
+    "operators_triggered": [
+      "thermodynamics",
+      "continuity",
+      "coherence",
+      "clarity"
+    ]
+  }
+}
