@@ -1,1 +1,93 @@
-.   
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dynamics Diagnostic Schema",
+  "type": "object",
+  "required": ["module", "diagnostic", "version", "fields", "thresholds", "operators", "regimes", "output"],
+  "properties": {
+    "module": { "type": "string", "const": "atmosphere" },
+    "diagnostic": { "type": "string", "const": "dynamics" },
+    "version": { "type": "string" },
+
+    "fields": {
+      "type": "object",
+      "properties": {
+        "momentum_flux": { "type": "object" },
+        "vorticity": { "type": "object" },
+        "wave_propagation": { "type": "object" },
+        "shear_transitions": { "type": "object" },
+        "instability_development": { "type": "object" }
+      },
+      "required": [
+        "momentum_flux",
+        "vorticity",
+        "wave_propagation",
+        "shear_transitions",
+        "instability_development"
+      ]
+    },
+
+    "thresholds": {
+      "type": "object",
+      "properties": {
+        "dynamics_clarity_min": { "type": "number" },
+        "dynamics_stability_min": { "type": "number" },
+        "dynamics_noise_max": { "type": "number" }
+      },
+      "required": [
+        "dynamics_clarity_min",
+        "dynamics_stability_min",
+        "dynamics_noise_max"
+      ]
+    },
+
+    "operators": {
+      "type": "object",
+      "properties": {
+        "dynamics": { "type": "array", "items": { "type": "string" } },
+        "continuity": { "type": "array", "items": { "type": "string" } },
+        "coherence": { "type": "array", "items": { "type": "string" } },
+        "clarity": { "type": "array", "items": { "type": "string" } },
+        "dimensional": { "type": "array", "items": { "type": "string" } },
+        "drift": { "type": "array", "items": { "type": "string" } },
+        "paradox": { "type": "array", "items": { "type": "string" } },
+        "resonance": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": [
+        "dynamics",
+        "continuity",
+        "coherence",
+        "clarity",
+        "dimensional",
+        "drift",
+        "paradox",
+        "resonance"
+      ]
+    },
+
+    "regimes": {
+      "type": "object",
+      "properties": {
+        "stable": { "type": "array", "items": { "type": "string" } },
+        "transition": { "type": "array", "items": { "type": "string" } },
+        "unstable": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["stable", "transition", "unstable"]
+    },
+
+    "output": {
+      "type": "object",
+      "properties": {
+        "clarity": { "type": "array", "items": { "type": "string" } },
+        "stability": { "type": "array", "items": { "type": "string" } },
+        "signature": { "type": "array", "items": { "type": "string" } },
+        "operators_triggered": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": [
+        "clarity",
+        "stability",
+        "signature",
+        "operators_triggered"
+      ]
+    }
+  }
+}
