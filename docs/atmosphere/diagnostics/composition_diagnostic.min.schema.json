@@ -1,1 +1,105 @@
-.   
+{
+  "title": "composition_diagnostic.min",
+  "type": "object",
+  "properties": {
+    "module": { "type": "string" },
+    "diagnostic": { "type": "string" },
+    "version": { "type": "string" },
+
+    "fields": {
+      "type": "object",
+      "properties": {
+        "gas_mix": {
+          "type": "object",
+          "properties": {
+            "nitrogen": { "type": "number" },
+            "oxygen": { "type": "number" },
+            "argon": { "type": "number" },
+            "co2": { "type": "number" }
+          },
+          "required": ["nitrogen", "oxygen", "argon", "co2"]
+        },
+        "humidity": { "type": "number" },
+        "particulates": { "type": "number" },
+        "trace_gases": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["gas_mix", "humidity", "particulates", "trace_gases"]
+    },
+
+    "operators": {
+      "type": "object",
+      "properties": {
+        "composition": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "continuity": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "coherence": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    "thresholds": {
+      "type": "object",
+      "properties": {
+        "clarity_min": { "type": "number" },
+        "stability_min": { "type": "number" },
+        "particulate_max": { "type": "number" }
+      },
+      "required": ["clarity_min", "stability_min", "particulate_max"]
+    },
+
+    "regimes": {
+      "type": "object",
+      "properties": {
+        "stable": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "transition": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "unstable": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    "output": {
+      "type": "object",
+      "properties": {
+        "composition_clarity": { "type": "string" },
+        "composition_stability": { "type": "string" },
+        "composition_signature": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "operators_triggered": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  },
+
+  "required": [
+    "module",
+    "diagnostic",
+    "version",
+    "fields",
+    "operators",
+    "thresholds",
+    "regimes",
+    "output"
+  ]
+}
