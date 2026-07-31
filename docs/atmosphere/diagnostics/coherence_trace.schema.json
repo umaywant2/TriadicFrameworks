@@ -1,1 +1,145 @@
-. 
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Coherence Trace Schema (Atmosphere Module)",
+  "description": "Schema for validating coherence_trace.json — coherence signatures, harmonic alignment traces, instability paths, drift reversal traces, and multi-scale coherence indicators.",
+  "type": "object",
+
+  "properties": {
+    "trace": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "category": { "type": "string" },
+        "version": { "type": "string" },
+        "summary": { "type": "string" },
+        "purpose": { "type": "string" }
+      },
+      "required": ["name", "category", "version", "summary", "purpose"]
+    },
+
+    "context": {
+      "type": "object",
+      "properties": {
+        "coherence_definition": { "type": "string" },
+        "global_role": { "type": "string" }
+      },
+      "required": ["coherence_definition", "global_role"]
+    },
+
+    "signatures": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "agents": {
+      "type": "object",
+      "properties": {
+        "primary": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "secondary": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["primary", "secondary"]
+    },
+
+    "fields": {
+      "type": "object",
+      "properties": {
+        "harmonic_alignment_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "instability_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "drift_reversal_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "resonance_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "teleconnection_coherence_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": [
+        "harmonic_alignment_field",
+        "instability_field",
+        "drift_reversal_field",
+        "resonance_field",
+        "teleconnection_coherence_field"
+      ]
+    },
+
+    "paths": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    },
+
+    "scales": {
+      "type": "object",
+      "properties": {
+        "micro": { "type": "string" },
+        "meso": { "type": "string" },
+        "macro": { "type": "string" },
+        "mega": { "type": "string" }
+      },
+      "required": ["micro", "meso", "macro", "mega"]
+    },
+
+    "cascades": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    },
+
+    "outputs": {
+      "type": "object",
+      "properties": {
+        "traces": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["traces"]
+    },
+
+    "summary": {
+      "type": "object",
+      "properties": {
+        "core_capabilities": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "role": { "type": "string" }
+      },
+      "required": ["core_capabilities", "role"]
+    }
+  },
+
+  "required": [
+    "trace",
+    "context",
+    "signatures",
+    "agents",
+    "fields",
+    "paths",
+    "scales",
+    "cascades",
+    "outputs",
+    "summary"
+  ]
+}
