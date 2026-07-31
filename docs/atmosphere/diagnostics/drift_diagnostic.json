@@ -1,1 +1,138 @@
+{
+  "diagnostic": {
+    "name": "drift_diagnostic",
+    "category": "Atmosphere",
+    "version": "1.0",
+    "summary": "Diagnostic for detecting, quantifying, and mapping atmospheric drift — instability accumulation, coherence decay, gradient intensification, boundary tension, and storm-precursor fields.",
+    "purpose": "Identify drift vectors, instability hotspots, gradient tension zones, and storm-precursor signatures using RTT operators and agentic synthesis."
+  },
+
+  "context": {
+    "drift_definition": "Instability field linking energy accumulation, coherence decay, gradient intensification, boundary tension, mixed-regime conflict, and oscillation instability.",
+    "global_role": "Drift is the counter-coherence pressure inside the Seven-Phase atmospheric model."
+  },
+
+  "agents": {
+    "primary": [
+      "drift_agent",
+      "thermo_agent",
+      "fluid_agent"
+    ],
+    "secondary": [
+      "paradox_agent",
+      "radiative_agent",
+      "dimensional_agent"
+    ]
+  },
+
+  "indicators": {
+    "gradient_build_up": "intensifying gradients",
+    "energy_accumulation": "thermal and radiative energy rise",
+    "coherence_decay": "loss of structural stability",
+    "boundary_tension": "frontal instability",
+    "mixed_regime_conflict": "incompatible regime interactions",
+    "storm_precursor_signature": "pre-transition drift spike",
+    "oscillation_instability": "harmonic misalignment"
+  },
+
+  "fields": {
+    "primary_drift_field": [
+      "forcing",
+      "dynamics",
+      "thermodynamics",
+      "transitions"
+    ],
+    "storm_precursor_drift_field": [
+      "shear",
+      "turbulence",
+      "latent_heat",
+      "frontal_tension"
+    ],
+    "cross_domain_drift_field": [
+      "sst_gradient",
+      "moisture_flux",
+      "convection",
+      "instability"
+    ],
+    "oscillation_drift_field": [
+      "enso_phase_shift",
+      "planetary_wave_misalignment",
+      "coherence_decay"
+    ]
+  },
+
+  "metrics": {
+    "drift_index": "gradient_build_up + energy_accumulation + boundary_tension",
+    "instability_load_metric": "shear + turbulence + latent_heat_drift",
+    "decay_pressure_metric": "coherence_decay × gradient_build_up",
+    "transition_potential_metric": "drift_spike + paradox_tension"
+  },
+
+  "scales": {
+    "micro": "aerosol imbalance, micro-turbulence",
+    "meso": "convection, shear, storm precursors",
+    "macro": "jet stream instability, synoptic drift",
+    "mega": "ENSO/MJO/NAO oscillation instability"
+  },
+
+  "failure_modes": {
+    "instability_surge": "rapid drift spike",
+    "coherence_collapse": "stability breakdown",
+    "boundary_fracture": "frontal instability",
+    "thermal_overload": "latent-heat surge",
+    "oscillation_break": "harmonic instability"
+  },
+
+  "cascades": {
+    "storm_cascade": [
+      "forcing",
+      "convection",
+      "shear",
+      "drift_increase",
+      "transition"
+    ],
+    "heat_driven_cascade": [
+      "latent_heat_increase",
+      "instability_increase",
+      "drift_increase",
+      "storm_potential_increase"
+    ],
+    "coupling_cascade": [
+      "sst_gradient_increase",
+      "moisture_flux_increase",
+      "convection_increase",
+      "drift_increase"
+    ],
+    "oscillation_cascade": [
+      "enso_phase_shift",
+      "planetary_wave_response",
+      "drift_increase"
+    ]
+  },
+
+  "diagnostics": {
+    "outputs": [
+      "drift_vector_fields",
+      "instability_hotspots",
+      "gradient_tension_maps",
+      "storm_precursor_diagnostics",
+      "cross_domain_drift_overlays",
+      "oscillation_instability_diagnostics",
+      "transition_potential_maps"
+    ]
+  },
+
+  "summary": {
+    "core_capabilities": [
+      "multi-scale instability analysis",
+      "Seven-Phase drift alignment",
+      "RTT operator-level interpretation",
+      "agentic synthesis of drift indicators",
+      "storm-precursor drift mapping",
+      "cross-domain instability diagnostics",
+      "oscillation instability evaluation"
+    ],
+    "role": "Drift diagnostic backbone of the Atmosphere Module."
+  }
+}
 
