@@ -1,1 +1,188 @@
+{
+  "module": {
+    "name": "Atmosphere",
+    "category": "ResonanceSystems",
+    "version": "1.0",
+    "summary": "Structural overlay for Earth's atmosphere enabling multi-scale, multi-phase, multi-agentic interpretation of weather and climate systems.",
+    "purpose": "Augment physics-based models with RTT operator-level structural detection and cross-domain resonance mapping.",
+    "axes": {
+      "scale": ["micro", "meso", "macro", "mega"],
+      "phases": [
+        "composition",
+        "forcing",
+        "dynamics",
+        "thermodynamics",
+        "hydrospheric_coupling",
+        "regime_transitions",
+        "resonance_coherence"
+      ],
+      "operators": [
+        "coherence",
+        "drift",
+        "paradox",
+        "continuity",
+        "clarity",
+        "resonance",
+        "dimensional_coupling"
+      ]
+    },
+    "roles": [
+      "engine",
+      "profile",
+      "signature",
+      "diagnostic",
+      "map",
+      "example",
+      "extension",
+      "index",
+      "reference",
+      "template"
+    ],
+    "analyzer_layers": [
+      "operator",
+      "dimensional",
+      "regime",
+      "drift",
+      "coherence",
+      "cross_cutting"
+    ],
+    "agents": {
+      "physical": [
+        "fluid_agent",
+        "thermo_agent",
+        "chem_agent",
+        "hydro_agent",
+        "radiative_agent"
+      ],
+      "structural": [
+        "coherence_agent",
+        "drift_agent",
+        "paradox_agent",
+        "resonance_agent",
+        "dimensional_agent",
+        "clarity_agent"
+      ]
+    },
+    "path": {
+      "phases": [
+        {
+          "id": 1,
+          "name": "observation",
+          "substrate": "material",
+          "operators": [],
+          "output": ["raw_fields", "gridded_data", "profiles"]
+        },
+        {
+          "id": 2,
+          "name": "prediction",
+          "substrate": "physics",
+          "operators": [],
+          "output": ["forecast_fields", "ensembles", "scenario_runs"]
+        },
+        {
+          "id": 3,
+          "name": "understanding",
+          "substrate": "structural",
+          "operators": [
+            "coherence",
+            "drift",
+            "paradox",
+            "continuity",
+            "clarity",
+            "resonance",
+            "dimensional_coupling"
+          ],
+          "output": [
+            "coherence_map",
+            "drift_map",
+            "paradox_map",
+            "resonance_signature",
+            "dimensional_overlay",
+            "agentic_synthesis"
+          ]
+        },
+        {
+          "id": 4,
+          "name": "continuity",
+          "substrate": "temporal",
+          "operators": [
+            "continuity",
+            "coherence",
+            "drift",
+            "resonance",
+            "dimensional_coupling"
+          ],
+          "output": [
+            "continuity_trace",
+            "regime_evolution",
+            "oscillation_cycle",
+            "drift_accumulation",
+            "stability_projection"
+          ]
+        },
+        {
+          "id": 5,
+          "name": "control",
+          "substrate": "influence",
+          "operators": [
+            "coherence",
+            "drift",
+            "paradox",
+            "resonance",
+            "dimensional_coupling"
+          ],
+          "output": [
+            "structural_nudge_map",
+            "intervention_candidates",
+            "drift_reduction",
+            "coherence_stabilization",
+            "resonance_alignment"
+          ]
+        }
+      ]
+    },
+    "registry": {
+      "seven_phases": "/docs/atmosphere/registry/seven_phases.json",
+      "operators": "/docs/atmosphere/registry/operators.json",
+      "agents": "/docs/atmosphere/registry/agents.json",
+      "scales": "/docs/atmosphere/registry/scales.json"
+    },
+    "extensions": {
+      "ocean_coupling": "/docs/atmosphere/extensions/ocean_coupling.json"
+    },
+    "prompts": {
+      "version": "2.0",
+      "formats": [
+        "overlay",
+        "review",
+        "capture",
+        "compare",
+        "synthesis",
+        "diagnostic",
+        "map",
+        "trace"
+      ]
+    },
+    "metadata": {
+      "session_context": "/docs/atmosphere/index.md",
+      "badge": "/docs/atmosphere/a_Badge.html",
+      "sidebar_audit": "/docs/atmosphere/a_Sidebar_Audit.html",
+      "readme": "/docs/atmosphere/README.md",
+      "diff_table": "/docs/atmosphere/a_Diff_Table.md",
+      "hero_image": "/docs/atmosphere/a_Hero_Image.png"
+    },
+    "audience": [
+      "atmospheric scientists",
+      "climate researchers",
+      "AI agents",
+      "students",
+      "structural theorists",
+      "multi-domain modelers"
+    ],
+    "front_door": "/docs/atmosphere/",
+    "status": "active",
+    "coherence": "stable",
+    "drift": "bounded"
+  }
+}
 
