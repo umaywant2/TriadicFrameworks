@@ -1,1 +1,186 @@
-. 
+{
+  "module": {
+    "name": "Atmosphere",
+    "category": "Environmental",
+    "version": "1.0",
+    "summary": "TriadicFrameworks Atmosphere Module — multi-scale atmospheric diagnostics, envelopes, maps, traces, and operator-aligned structural analysis.",
+    "purpose": "Provide the atmospheric structural substrate for RTT, GU, and TriadicFrameworks, including continuity, coherence, clarity, dimensional, drift, paradox, resonance, composition, dynamics, forcing, hydrospheric, nudge, teleconnection, and thermodynamic diagnostics."
+  },
+
+  "roles": {
+    "engine": [
+      "diagnostics/*",
+      "extensions/*",
+      "future/*",
+      "maps/*",
+      "registry/*",
+      "session/*"
+    ],
+    "profile": [
+      "README.md",
+      "index.md",
+      "a_Badge.html",
+      "a_Sidebar_Audit.html"
+    ],
+    "signature": [
+      "a_Capture.md",
+      "a_Diff_Table.md"
+    ],
+    "diagnostic": [
+      "diagnostics/*"
+    ],
+    "map": [
+      "maps/*"
+    ],
+    "trace": [
+      "diagnostics/*trace*"
+    ],
+    "envelope": [
+      "diagnostics/*envelope*"
+    ],
+    "extension": [
+      "extensions/*"
+    ],
+    "future": [
+      "future/*"
+    ],
+    "index": [
+      "index.md"
+    ],
+    "reference": [
+      "registry/*"
+    ],
+    "template": [
+      "prompts/templates.md"
+    ]
+  },
+
+  "analyzer_layers": {
+    "operator": [
+      "continuity",
+      "coherence",
+      "clarity",
+      "dimensional",
+      "drift",
+      "paradox",
+      "resonance",
+      "composition",
+      "dynamics",
+      "forcing",
+      "hydrospheric",
+      "nudge",
+      "teleconnection",
+      "thermodynamics"
+    ],
+    "dimensional": [
+      "micro",
+      "meso",
+      "macro",
+      "mega"
+    ],
+    "regime": [
+      "stable",
+      "transition",
+      "unstable"
+    ],
+    "drift": [
+      "positive",
+      "neutral",
+      "negative"
+    ],
+    "coherence": [
+      "aligned",
+      "partial",
+      "broken"
+    ],
+    "cross_cutting": [
+      "session",
+      "registry",
+      "extensions",
+      "future"
+    ]
+  },
+
+  "files": {
+    "top_level": [
+      "README.md",
+      "index.md",
+      "module.json",
+      "a_Badge.html",
+      "a_Capture.md",
+      "a_Diff_Table.md",
+      "a_Hero_Image.png",
+      "a_Sidebar_Audit.html"
+    ],
+    "diagnostics": [
+      "continuity_*",
+      "coherence_*",
+      "clarity_*",
+      "dimensional_*",
+      "drift_*",
+      "paradox_*",
+      "resonance_*",
+      "composition_*",
+      "dynamics_*",
+      "forcing_*",
+      "hydrospheric_*",
+      "nudge_*",
+      "teleconnection_*",
+      "thermodynamics_*"
+    ],
+    "extensions": [
+      "cryosphere_coupling.*",
+      "ocean_coupling.*"
+    ],
+    "future": [
+      "biosphere_feedback.md",
+      "land_coupling.md",
+      "magnetosphere_coupling.md"
+    ],
+    "maps": [
+      "maps/*"
+    ],
+    "registry": [
+      "registry/*"
+    ],
+    "session": [
+      "session/*"
+    ],
+    "prompts": [
+      "prompts/examples.md",
+      "prompts/module.md",
+      "prompts/module.json",
+      "prompts/templates.md"
+    ]
+  },
+
+  "ai": {
+    "module": "Atmosphere",
+    "version": "1.0",
+    "purpose": "Provide atmospheric structural diagnostics, envelopes, maps, and traces for TriadicFrameworks.",
+    "keywords": [
+      "atmosphere",
+      "continuity",
+      "coherence",
+      "clarity",
+      "dimensional",
+      "drift",
+      "paradox",
+      "resonance",
+      "composition",
+      "dynamics",
+      "forcing",
+      "hydrospheric",
+      "nudge",
+      "teleconnection",
+      "thermodynamics",
+      "diagnostics",
+      "envelopes",
+      "maps",
+      "traces",
+      "RTT",
+      "TriadicFrameworks"
+    ],
+    "audience": "Researchers, engineers, analysts, and AI agents working with TriadicFrameworks environmental modules."
+  }
+}
