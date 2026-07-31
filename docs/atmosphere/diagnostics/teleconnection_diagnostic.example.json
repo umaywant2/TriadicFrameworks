@@ -1,1 +1,40 @@
-.   
+{
+  "input": {
+    "pacific": {
+      "enso_state": 0.63,
+      "pdo_phase": 0.41,
+      "pacific_wave_train": 0.55
+    },
+    "atlantic": {
+      "nao_phase": 0.52,
+      "amo_state": 0.61,
+      "atlantic_ridge_signal": 0.44
+    },
+    "indian_ocean": {
+      "iod_state": 0.48,
+      "monsoon_coupling": 0.66,
+      "equatorial_wave_alignment": 0.39
+    },
+    "polar": {
+      "ao_phase": 0.52,
+      "polar_vortex_strength": 0.71,
+      "stratospheric_warming_precursor": 0.29
+    }
+  },
+  "output": {
+    "clarity": "medium",
+    "stability": "transition",
+    "signature": [
+      "enso_signature",
+      "nao_signature",
+      "iod_signature",
+      "ao_signature"
+    ],
+    "operators_triggered": [
+      "teleconnection_alignment",
+      "basin_coupling_detection",
+      "wave_train_analysis",
+      "regime_shift_precursor_evaluation"
+    ]
+  }
+}
