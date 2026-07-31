@@ -1,1 +1,126 @@
-. 
+{
+  "diagnostic": {
+    "name": "clarity_diagnostic",
+    "category": "Atmosphere",
+    "version": "1.0",
+    "summary": "Example diagnostic illustrating atmospheric clarity — truth extraction, noise reduction, pattern convergence, consensus alignment, and cross-domain clarity.",
+    "purpose": "Provide a sample clarity diagnostic for schema validation and module integration."
+  },
+
+  "context": {
+    "clarity_definition": "Clarity field linking truth extraction, noise reduction, pattern convergence, consensus alignment, and cross-domain clarity.",
+    "global_role": "Clarity is the structural truth backbone inside the Seven-Phase atmospheric model."
+  },
+
+  "agents": {
+    "primary": [
+      "clarity_agent",
+      "coherence_agent",
+      "continuity_agent"
+    ],
+    "secondary": [
+      "fluid_agent",
+      "thermo_agent",
+      "hydro_agent"
+    ]
+  },
+
+  "fields": {
+    "truth_extraction_field": [
+      "truth",
+      "signal",
+      "clarity"
+    ],
+    "noise_reduction_field": [
+      "noise",
+      "filtering",
+      "stability"
+    ],
+    "pattern_convergence_field": [
+      "pattern",
+      "convergence",
+      "alignment"
+    ],
+    "consensus_alignment_field": [
+      "consensus",
+      "agreement",
+      "clarity"
+    ],
+    "cross_domain_clarity_field": [
+      "domain",
+      "translation",
+      "clarity"
+    ]
+  },
+
+  "metrics": {
+    "clarity_index": "truth + signal + clarity",
+    "noise_reduction_metric": "noise × filtering",
+    "pattern_convergence_metric": "pattern × convergence",
+    "consensus_alignment_metric": "consensus × agreement",
+    "cross_domain_clarity_metric": "translation × clarity"
+  },
+
+  "scales": {
+    "micro": "micro-clarity instability",
+    "meso": "terrain-driven clarity transition",
+    "macro": "synoptic clarity boundaries",
+    "mega": "planetary clarity teleconnections"
+  },
+
+  "failure_modes": {
+    "truth_loss": "truth extraction collapse",
+    "noise_surge": "noise instability",
+    "pattern_divergence": "pattern convergence failure",
+    "consensus_break": "consensus instability"
+  },
+
+  "cascades": {
+    "clarity_shift_cascade": [
+      "shift",
+      "truth",
+      "stability"
+    ],
+    "truth_extraction_cascade": [
+      "truth",
+      "signal",
+      "clarity"
+    ],
+    "noise_reduction_cascade": [
+      "noise",
+      "filtering",
+      "stability"
+    ],
+    "pattern_convergence_cascade": [
+      "pattern",
+      "convergence",
+      "alignment"
+    ],
+    "consensus_alignment_cascade": [
+      "consensus",
+      "agreement",
+      "clarity"
+    ]
+  },
+
+  "diagnostics": {
+    "outputs": [
+      "clarity_traces",
+      "truth_extraction_maps",
+      "noise_reduction_maps",
+      "pattern_convergence_maps",
+      "consensus_alignment_maps"
+    ]
+  },
+
+  "summary": {
+    "core_capabilities": [
+      "multi-scale clarity detection",
+      "truth extraction interpretation",
+      "noise reduction diagnostics",
+      "pattern convergence analysis",
+      "consensus alignment mapping"
+    ],
+    "role": "Example clarity diagnostic for Atmosphere Module validation."
+  }
+}
