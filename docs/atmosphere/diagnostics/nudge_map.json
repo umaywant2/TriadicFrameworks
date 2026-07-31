@@ -1,1 +1,103 @@
-.   
+{
+  "module": "atmosphere",
+  "diagnostic": "nudge",
+  "category": "map",
+  "version": "1.0",
+  "layers": {
+    "micro_nudge": [
+      "pressure_microshift",
+      "temperature_microgradient",
+      "moisture_microflux"
+    ],
+    "boundary_nudge": [
+      "shear_boundary_nudge",
+      "vorticity_boundary_nudge",
+      "wave_boundary_nudge"
+    ],
+    "coherence_nudge": [
+      "coherence_alignment_shift",
+      "coherence_drift_trigger",
+      "coherence_regime_precursor"
+    ],
+    "regime_precursor": [
+      "transition_precursor",
+      "instability_precursor",
+      "resonance_precursor"
+    ]
+  },
+  "operators": {
+    "nudge": [
+      "micro_nudge_analysis",
+      "boundary_nudge_alignment",
+      "coherence_nudge_detection",
+      "regime_precursor_evaluation"
+    ],
+    "continuity": [
+      "nudge_continuity",
+      "gradient_continuity"
+    ],
+    "coherence": [
+      "stable_nudge_regime",
+      "coherent_nudge_behavior"
+    ],
+    "clarity": [
+      "nudge_signal_clarity",
+      "noise_reduction"
+    ],
+    "dimensional": [
+      "micro_to_meso_nudge_scaling",
+      "meso_to_macro_nudge_propagation"
+    ],
+    "drift": [
+      "nudge_instability_propagation",
+      "nudge_drift_detection"
+    ],
+    "paradox": [
+      "conflicting_nudge_signals",
+      "inversion_paradox"
+    ],
+    "resonance": [
+      "nudge_driven_oscillations",
+      "harmonic_nudge_alignment"
+    ]
+  },
+  "regimes": {
+    "stable": [
+      "coherent_nudge_behavior",
+      "predictable_micro_nudge_cycles",
+      "stable_precursor_alignment"
+    ],
+    "transition": [
+      "partial_nudge_breakdown",
+      "mixed_mode_nudge_interference",
+      "precursor_driven_instability"
+    ],
+    "unstable": [
+      "nudge_collapse",
+      "rapid_nudge_reversal",
+      "global_regime_disruption"
+    ]
+  },
+  "coupling": {
+    "ocean": [
+      "sst_micro_nudge_modulation",
+      "current_boundary_nudge_feedback"
+    ],
+    "cryosphere": [
+      "albedo_micro_nudge_feedback",
+      "melt_boundary_nudge_trigger"
+    ],
+    "land": [
+      "terrain_micro_nudge_modulation",
+      "soil_moisture_nudge_feedback"
+    ],
+    "biosphere": [
+      "evapotranspiration_micro_nudge",
+      "vegetation_boundary_nudge_modulation"
+    ],
+    "magnetosphere": [
+      "solar_wind_micro_nudge_effects",
+      "geomagnetic_nudge_perturbation"
+    ]
+  }
+}
