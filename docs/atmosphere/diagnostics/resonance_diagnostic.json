@@ -1,1 +1,105 @@
+{
+  "diagnostic": {
+    "name": "resonance_diagnostic",
+    "category": "Atmosphere",
+    "version": "1.0",
+    "summary": "Diagnostic for detecting, mapping, and interpreting atmospheric resonance across oscillation fields, harmonic coupling, phase alignment, and teleconnection structure.",
+    "purpose": "Identify resonance signatures, oscillation coherence, harmonic reinforcement, and cross-scale teleconnection alignment across atmospheric micro → meso → macro → mega scales."
+  },
+
+  "context": {
+    "resonance_definition": "Oscillation field linking periodic behavior, harmonic coupling, phase alignment, cross-scale coherence, and teleconnection structure.",
+    "global_role": "Resonance is the global rhythm inside the Seven-Phase atmospheric model."
+  },
+
+  "agents": {
+    "primary": [
+      "resonance_agent",
+      "coherence_agent",
+      "dimensional_agent"
+    ],
+    "secondary": [
+      "fluid_agent",
+      "radiative_agent",
+      "clarity_agent"
+    ]
+  },
+
+  "fields": {
+    "oscillation_field": [
+      "forcing_periodicity",
+      "oscillation_response",
+      "harmonic_alignment"
+    ],
+    "planetary_wave_field": [
+      "rossby_wave_alignment",
+      "jet_stream_harmonics",
+      "coherence_increase"
+    ],
+    "thermal_oscillation_field": [
+      "radiative_cycle",
+      "thermal_oscillation",
+      "harmonic_reinforcement"
+    ],
+    "teleconnection_field": [
+      "mjo_phase",
+      "nao_state",
+      "global_wave_alignment",
+      "coherence_increase"
+    ]
+  },
+
+  "scales": {
+    "micro": "vapor micro-oscillations",
+    "meso": "convective oscillation patterns",
+    "macro": "planetary waves and jet oscillations",
+    "mega": "ENSO, MJO, NAO, QBO, global teleconnections"
+  },
+
+  "cascades": {
+    "planetary_wave_cascade": [
+      "forcing_periodicity",
+      "rossby_wave_alignment",
+      "oscillation_stability_increase"
+    ],
+    "ocean_driven_cascade": [
+      "sst_anomaly",
+      "enso_phase",
+      "atmospheric_resonance_increase"
+    ],
+    "teleconnection_cascade": [
+      "mjo_phase_shift",
+      "planetary_wave_response",
+      "global_resonance_increase"
+    ],
+    "thermal_cascade": [
+      "radiative_cycle",
+      "thermal_oscillation",
+      "harmonic_reinforcement"
+    ]
+  },
+
+  "diagnostics": {
+    "maps": [
+      "oscillation_maps",
+      "harmonic_coupling_maps",
+      "teleconnection_overlays",
+      "cross_domain_resonance_fields",
+      "continuity_traces",
+      "coherence_envelopes"
+    ]
+  },
+
+  "summary": {
+    "core_capabilities": [
+      "multi-scale oscillation detection",
+      "harmonic coupling interpretation",
+      "teleconnection resonance mapping",
+      "cross-domain oscillation overlays",
+      "coherence stability fields",
+      "full resonance-agent integration"
+    ],
+    "role": "Resonance diagnostic backbone of the Atmosphere Module."
+  }
+}
 
