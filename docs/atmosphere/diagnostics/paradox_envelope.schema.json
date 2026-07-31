@@ -1,1 +1,153 @@
-. 
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Paradox Envelope Schema (Atmosphere Module)",
+  "description": "Schema for validating paradox_envelope.json — boundary conflict limits, tension shells, mixed-regime instability envelopes, and transition-ready paradox structures.",
+  "type": "object",
+
+  "properties": {
+    "envelope": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "category": { "type": "string" },
+        "version": { "type": "string" },
+        "summary": { "type": "string" },
+        "purpose": { "type": "string" }
+      },
+      "required": ["name", "category", "version", "summary", "purpose"]
+    },
+
+    "components": {
+      "type": "object",
+      "properties": {
+        "boundary_layer": { "type": "string" },
+        "tension_shell": { "type": "string" },
+        "paradox_potential": { "type": "string" }
+      },
+      "required": [
+        "boundary_layer",
+        "tension_shell",
+        "paradox_potential"
+      ]
+    },
+
+    "sources": {
+      "type": "object",
+      "properties": {
+        "composition": { "type": "string" },
+        "forcing": { "type": "string" },
+        "dynamics": { "type": "string" },
+        "thermodynamics": { "type": "string" },
+        "hydrospheric_coupling": { "type": "string" },
+        "regime_transitions": { "type": "string" },
+        "paradox_coherence": { "type": "string" }
+      },
+      "required": [
+        "composition",
+        "forcing",
+        "dynamics",
+        "thermodynamics",
+        "hydrospheric_coupling",
+        "regime_transitions",
+        "paradox_coherence"
+      ]
+    },
+
+    "signatures": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "agents": {
+      "type": "object",
+      "properties": {
+        "primary": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "secondary": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["primary", "secondary"]
+    },
+
+    "fields": {
+      "type": "object",
+      "properties": {
+        "primary_paradox_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "frontal_paradox_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "cross_domain_paradox_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "oscillation_paradox_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": [
+        "primary_paradox_field",
+        "frontal_paradox_field",
+        "cross_domain_paradox_field",
+        "oscillation_paradox_field"
+      ]
+    },
+
+    "scales": {
+      "type": "object",
+      "properties": {
+        "micro": { "type": "string" },
+        "meso": { "type": "string" },
+        "macro": { "type": "string" },
+        "mega": { "type": "string" }
+      },
+      "required": ["micro", "meso", "macro", "mega"]
+    },
+
+    "cascades": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    },
+
+    "overlays": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "summary": {
+      "type": "object",
+      "properties": {
+        "core_capabilities": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "role": { "type": "string" }
+      },
+      "required": ["core_capabilities", "role"]
+    }
+  },
+
+  "required": [
+    "envelope",
+    "components",
+    "sources",
+    "signatures",
+    "agents",
+    "fields",
+    "scales",
+    "cascades",
+    "overlays",
+    "summary"
+  ]
+}
