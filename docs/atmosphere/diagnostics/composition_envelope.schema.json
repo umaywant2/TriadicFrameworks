@@ -1,1 +1,103 @@
-.   
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "composition_envelope",
+  "type": "object",
+
+  "properties": {
+    "module": { "type": "string" },
+    "diagnostic": { "type": "string" },
+    "category": { "type": "string" },
+    "version": { "type": "string" },
+
+    "fields": {
+      "type": "object",
+      "properties": {
+        "gas_mix_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "humidity_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "particulate_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "clarity_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": [
+        "gas_mix_field",
+        "humidity_field",
+        "particulate_field",
+        "clarity_field"
+      ]
+    },
+
+    "thresholds": {
+      "type": "object",
+      "properties": {
+        "clarity_min": { "type": "number" },
+        "stability_min": { "type": "number" },
+        "particulate_max": { "type": "number" }
+      },
+      "required": ["clarity_min", "stability_min", "particulate_max"]
+    },
+
+    "regimes": {
+      "type": "object",
+      "properties": {
+        "stable": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "transition": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "unstable": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["stable", "transition", "unstable"]
+    },
+
+    "operators": {
+      "type": "object",
+      "properties": {
+        "composition": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "continuity": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "coherence": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "clarity": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["composition", "continuity", "coherence", "clarity"]
+    }
+  },
+
+  "required": [
+    "module",
+    "diagnostic",
+    "category",
+    "version",
+    "fields",
+    "thresholds",
+    "regimes",
+    "operators"
+  ]
+}
