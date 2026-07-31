@@ -1,1 +1,83 @@
-.   
+{
+  "module": "atmosphere",
+  "diagnostic": "composition",
+  "category": "map",
+  "version": "1.0",
+
+  "map": {
+    "layers": {
+      "gas_layer": [
+        "nitrogen_distribution",
+        "oxygen_distribution",
+        "argon_distribution",
+        "co2_distribution",
+        "trace_gas_distribution"
+      ],
+      "particulate_layer": [
+        "particulate_concentration",
+        "aerosol_noise",
+        "pollution_gradient"
+      ],
+      "moisture_layer": [
+        "humidity_distribution",
+        "cloud_microphysics",
+        "mixed_phase_zones"
+      ],
+      "chemical_layer": [
+        "reactive_species",
+        "oxidation_pathways",
+        "photochemical_layers"
+      ],
+      "regime_layer": {
+        "stable": [
+          "coherent_gas_mix",
+          "low_particulate_noise",
+          "consistent_humidity"
+        ],
+        "transition": [
+          "partial_mix_shift",
+          "humidity_gradient_change",
+          "trace_gas_variability"
+        ],
+        "unstable": [
+          "gas_mix_breakdown",
+          "high_particulate_noise",
+          "humidity_collapse"
+        ]
+      },
+      "operator_layer": [
+        "composition",
+        "continuity",
+        "coherence",
+        "clarity",
+        "dimensional",
+        "drift",
+        "paradox",
+        "resonance"
+      ]
+    },
+
+    "coupling": {
+      "ocean": [
+        "sst_humidity_coupling",
+        "ocean_emission_aerosols"
+      ],
+      "cryosphere": [
+        "albedo_photochemistry",
+        "meltwater_humidity_coupling"
+      ],
+      "land": [
+        "soil_emissions",
+        "terrain_aerosol_modulation"
+      ],
+      "biosphere": [
+        "evapotranspiration_humidity",
+        "vegetation_chemical_flux"
+      ],
+      "magnetosphere": [
+        "solar_wind_chemical_perturbation",
+        "geomagnetic_ozone_modulation"
+      ]
+    }
+  }
+}
