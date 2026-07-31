@@ -1,1 +1,94 @@
-.   
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "composition_map",
+  "type": "object",
+
+  "properties": {
+    "module": { "type": "string" },
+    "diagnostic": { "type": "string" },
+    "category": { "type": "string" },
+    "version": { "type": "string" },
+
+    "map": {
+      "type": "object",
+      "properties": {
+        "layers": {
+          "type": "object",
+          "properties": {
+            "gas_layer": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "particulate_layer": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "moisture_layer": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "chemical_layer": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "regime_layer": {
+              "type": "object",
+              "properties": {
+                "stable": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                },
+                "transition": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                },
+                "unstable": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                }
+              }
+            },
+            "operator_layer": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        },
+
+        "coupling": {
+          "type": "object",
+          "properties": {
+            "ocean": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "cryosphere": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "land": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "biosphere": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "magnetosphere": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "required": [
+    "module",
+    "diagnostic",
+    "category",
+    "version",
+    "map"
+  ]
+}
