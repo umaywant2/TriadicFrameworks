@@ -1,1 +1,135 @@
+{
+  "diagnostic": {
+    "name": "continuity_diagnostic",
+    "category": "Atmosphere",
+    "version": "1.0",
+    "summary": "Diagnostic for detecting, quantifying, and mapping atmospheric continuity — temporal coherence, regime memory, oscillation periodicity, drift accumulation, and long-range stability.",
+    "purpose": "Identify continuity traces, oscillation cycles, drift accumulation timelines, and teleconnection continuity using RTT operators and agentic synthesis."
+  },
+
+  "context": {
+    "continuity_definition": "Time-axis stability field linking temporal coherence, regime memory, oscillation periodicity, long-range stability, drift accumulation, and teleconnection continuity.",
+    "global_role": "Continuity is the temporal backbone inside the Seven-Phase atmospheric model."
+  },
+
+  "agents": {
+    "primary": [
+      "continuity_agent",
+      "resonance_agent",
+      "coherence_agent",
+      "drift_agent"
+    ],
+    "secondary": [
+      "fluid_agent",
+      "thermo_agent",
+      "hydro_agent"
+    ]
+  },
+
+  "indicators": {
+    "temporal_coherence": "stability across time",
+    "regime_memory": "persistence of structural states",
+    "oscillation_periodicity": "repeating harmonic cycles",
+    "drift_accumulation": "long-term instability",
+    "phase_alignment": "oscillation coherence",
+    "teleconnection_continuity": "global oscillation stability",
+    "cross_domain_temporal_alignment": "multi-domain continuity"
+  },
+
+  "fields": {
+    "primary_continuity_field": [
+      "forcing_cycle",
+      "wave_response",
+      "regime_memory",
+      "continuity_increase"
+    ],
+    "thermal_continuity_field": [
+      "radiative_cycle",
+      "thermal_periodicity",
+      "stability_increase"
+    ],
+    "ocean_atmosphere_continuity_field": [
+      "enso_cycle",
+      "sst_phase",
+      "atmospheric_response",
+      "continuity_increase"
+    ],
+    "teleconnection_continuity_field": [
+      "mjo_phase",
+      "nao_state",
+      "global_wave_alignment",
+      "continuity_increase"
+    ]
+  },
+
+  "metrics": {
+    "continuity_index": "temporal_coherence + regime_memory + phase_alignment",
+    "oscillation_memory_metric": "periodicity × harmonic_alignment",
+    "drift_accumulation_metric": "drift_accumulation × coherence_decay",
+    "teleconnection_continuity_metric": "global_phase_alignment − oscillation_instability"
+  },
+
+  "scales": {
+    "micro": "vapor persistence",
+    "meso": "convective cycle continuity",
+    "macro": "synoptic regime evolution",
+    "mega": "ENSO/MJO/NAO/QBO continuity"
+  },
+
+  "failure_modes": {
+    "memory_loss": "regime memory collapse",
+    "phase_break": "oscillation instability",
+    "continuity_decay": "long-range stability loss",
+    "teleconnection_failure": "global oscillation misalignment",
+    "drift_overload": "accumulated instability"
+  },
+
+  "cascades": {
+    "planetary_wave_cascade": [
+      "forcing_periodicity",
+      "wave_alignment",
+      "regime_memory_increase"
+    ],
+    "ocean_driven_cascade": [
+      "sst_cycle",
+      "enso_phase",
+      "atmospheric_continuity_increase"
+    ],
+    "teleconnection_cascade": [
+      "mjo_phase_shift",
+      "planetary_wave_response",
+      "continuity_increase"
+    ],
+    "thermal_cascade": [
+      "radiative_cycle",
+      "thermal_continuity",
+      "stability_increase"
+    ]
+  },
+
+  "diagnostics": {
+    "outputs": [
+      "continuity_traces",
+      "regime_evolution_maps",
+      "oscillation_cycle_diagnostics",
+      "drift_accumulation_timelines",
+      "teleconnection_continuity_overlays",
+      "cross_domain_continuity_fields",
+      "long_range_stability_diagnostics"
+    ]
+  },
+
+  "summary": {
+    "core_capabilities": [
+      "multi-scale temporal coherence analysis",
+      "Seven-Phase continuity alignment",
+      "RTT operator-level interpretation",
+      "agentic synthesis of continuity indicators",
+      "teleconnection continuity mapping",
+      "cross-domain temporal diagnostics",
+      "oscillation memory evaluation"
+    ],
+    "role": "Continuity diagnostic backbone of the Atmosphere Module."
+  }
+}
 
