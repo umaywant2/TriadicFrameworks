@@ -1,1 +1,46 @@
-.   
+{
+  "input": {
+    "moisture_flux": {
+      "horizontal_transport": 0.78,
+      "vertical_ascent": 0.41,
+      "boundary_layer_gradients": 0.63
+    },
+    "evaporation": {
+      "evaporation_zones": 0.55,
+      "surface_moisture_release": 0.22,
+      "latent_heat_extraction": 0.71
+    },
+    "condensation": {
+      "condensation_boundaries": 0.48,
+      "cloud_formation_zones": 0.66,
+      "latent_heat_release": 0.39
+    },
+    "hydrological_gradients": {
+      "humidity_gradients": 0.52,
+      "dew_point_transitions": 0.61,
+      "saturation_zones": 0.44
+    },
+    "ocean_atmosphere_coupling": {
+      "sst_moisture_flux": 0.63,
+      "current_wave_modulation": 0.29,
+      "upwelling_instability": 0.71
+    }
+  },
+  "output": {
+    "clarity": "medium",
+    "stability": "transition",
+    "signature": [
+      "moisture_flux_signature",
+      "evaporation_signature",
+      "condensation_signature",
+      "hydrological_gradient_signature",
+      "ocean_atmosphere_coupling_signature"
+    ],
+    "operators_triggered": [
+      "moisture_flux_alignment",
+      "evaporation_boundary_detection",
+      "condensation_boundary_detection",
+      "hydrological_gradient_analysis"
+    ]
+  }
+}
