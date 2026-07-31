@@ -1,1 +1,138 @@
-. 
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Resonance Map Schema (Atmosphere Module)",
+  "description": "Schema for validating resonance_map.json — oscillation alignment, harmonic fields, wave persistence, teleconnection resonance.",
+  "type": "object",
+
+  "properties": {
+    "map": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "category": { "type": "string" },
+        "version": { "type": "string" },
+        "summary": { "type": "string" },
+        "purpose": { "type": "string" }
+      },
+      "required": ["name", "category", "version", "summary", "purpose"]
+    },
+
+    "sources": {
+      "type": "object",
+      "properties": {
+        "composition": { "type": "string" },
+        "forcing": { "type": "string" },
+        "dynamics": { "type": "string" },
+        "thermodynamics": { "type": "string" },
+        "hydrospheric_coupling": { "type": "string" },
+        "regime_transitions": { "type": "string" },
+        "resonance_coherence": { "type": "string" }
+      },
+      "required": [
+        "composition",
+        "forcing",
+        "dynamics",
+        "thermodynamics",
+        "hydrospheric_coupling",
+        "regime_transitions",
+        "resonance_coherence"
+      ]
+    },
+
+    "signatures": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "agents": {
+      "type": "object",
+      "properties": {
+        "primary": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "secondary": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["primary", "secondary"]
+    },
+
+    "fields": {
+      "type": "object",
+      "properties": {
+        "primary_resonance_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "wave_alignment_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "teleconnection_resonance_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "coherence_envelope_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": [
+        "primary_resonance_field",
+        "wave_alignment_field",
+        "teleconnection_resonance_field",
+        "coherence_envelope_field"
+      ]
+    },
+
+    "scales": {
+      "type": "object",
+      "properties": {
+        "micro": { "type": "string" },
+        "meso": { "type": "string" },
+        "macro": { "type": "string" },
+        "mega": { "type": "string" }
+      },
+      "required": ["micro", "meso", "macro", "mega"]
+    },
+
+    "cascades": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    },
+
+    "overlays": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "summary": {
+      "type": "object",
+      "properties": {
+        "core_capabilities": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "role": { "type": "string" }
+      },
+      "required": ["core_capabilities", "role"]
+    }
+  },
+
+  "required": [
+    "map",
+    "sources",
+    "signatures",
+    "agents",
+    "fields",
+    "scales",
+    "cascades",
+    "overlays",
+    "summary"
+  ]
+}
