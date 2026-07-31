@@ -1,1 +1,86 @@
-.   
+{
+  "module": "atmosphere",
+  "diagnostic": "teleconnection",
+  "category": "envelope",
+  "version": "1.0",
+  "fields": {
+    "pacific": [
+      "enso_state",
+      "pdo_phase",
+      "pacific_wave_train"
+    ],
+    "atlantic": [
+      "nao_phase",
+      "amo_state",
+      "atlantic_ridge_signal"
+    ],
+    "indian_ocean": [
+      "iod_state",
+      "monsoon_coupling",
+      "equatorial_wave_alignment"
+    ],
+    "polar": [
+      "ao_phase",
+      "polar_vortex_strength",
+      "stratospheric_warming_precursor"
+    ]
+  },
+  "thresholds": {
+    "teleconnection_clarity_min": 0.7,
+    "teleconnection_stability_min": 0.6,
+    "teleconnection_noise_max": 50
+  },
+  "operators": {
+    "teleconnection": [
+      "teleconnection_alignment",
+      "basin_coupling_detection",
+      "wave_train_analysis",
+      "regime_shift_precursor_evaluation"
+    ],
+    "continuity": [
+      "basin_continuity",
+      "wave_train_continuity"
+    ],
+    "coherence": [
+      "stable_basin_coupling",
+      "coherent_wave_train_behavior"
+    ],
+    "clarity": [
+      "teleconnection_signal_clarity",
+      "noise_reduction"
+    ],
+    "dimensional": [
+      "cross_basin_scaling",
+      "global_wave_train_propagation"
+    ],
+    "drift": [
+      "teleconnection_instability_propagation",
+      "basin_drift_detection"
+    ],
+    "paradox": [
+      "conflicting_basin_signals",
+      "inversion_paradox"
+    ],
+    "resonance": [
+      "basin_resonance_alignment",
+      "global_wave_resonance"
+    ]
+  },
+  "regimes": {
+    "stable": [
+      "coherent_basin_coupling",
+      "predictable_wave_train_cycles",
+      "stable_regime_alignment"
+    ],
+    "transition": [
+      "partial_basin_breakdown",
+      "mixed_mode_wave_interference",
+      "precursor_driven_regime_shift"
+    ],
+    "unstable": [
+      "teleconnection_collapse",
+      "rapid_basin_reversal",
+      "global_regime_disruption"
+    ]
+  }
+}
