@@ -1,1 +1,86 @@
-.   
+{
+  "module": "atmosphere",
+  "diagnostic": "hydrospheric",
+  "category": "trace",
+  "version": "1.0",
+  "events": {
+    "moisture_flux": [
+      "horizontal_moisture_transport",
+      "vertical_moisture_ascent",
+      "boundary_layer_moisture_gradients"
+    ],
+    "evaporation": [
+      "evaporation_zone_shift",
+      "surface_moisture_release_event",
+      "latent_heat_extraction_spike"
+    ],
+    "condensation": [
+      "condensation_boundary_shift",
+      "cloud_formation_event",
+      "latent_heat_release_event"
+    ],
+    "hydrological_gradients": [
+      "humidity_gradient_breakdown",
+      "dew_point_transition_event",
+      "saturation_zone_expansion"
+    ],
+    "ocean_atmosphere_coupling": [
+      "sst_moisture_flux_anomaly",
+      "current_wave_modulation_event",
+      "upwelling_instability_trigger"
+    ]
+  },
+  "operators": {
+    "hydrospheric": [
+      "moisture_flux_alignment",
+      "evaporation_boundary_detection",
+      "condensation_boundary_detection",
+      "hydrological_gradient_analysis"
+    ],
+    "continuity": [
+      "moisture_continuity",
+      "gradient_continuity"
+    ],
+    "coherence": [
+      "stable_hydrospheric_regime",
+      "coherent_moisture_flux"
+    ],
+    "clarity": [
+      "noise_reduction",
+      "hydrospheric_signal_clarity"
+    ],
+    "dimensional": [
+      "micro_to_meso_moisture_scaling",
+      "meso_to_macro_hydrospheric_alignment"
+    ],
+    "drift": [
+      "hydrospheric_instability_propagation",
+      "moisture_drift_detection"
+    ],
+    "paradox": [
+      "conflicting_moisture_signals",
+      "saturation_paradox"
+    ],
+    "resonance": [
+      "moisture_driven_oscillations",
+      "harmonic_hydrospheric_alignment"
+    ]
+  },
+  "regimes": {
+    "stable": [
+      "coherent_moisture_flux",
+      "predictable_evaporation_condensation_cycles",
+      "stable_sst_coupling"
+    ],
+    "transition": [
+      "moisture_gradient_breakdown",
+      "condensation_boundary_shift",
+      "sst_anomaly_propagation"
+    ],
+    "unstable": [
+      "convective_moisture_bursts",
+      "humidity_gradient_collapse",
+      "hydrospheric_wave_disruption"
+    ]
+  }
+}
