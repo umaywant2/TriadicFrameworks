@@ -1,1 +1,87 @@
-.   
+{
+  "module": "atmosphere",
+  "diagnostic": "dynamics",
+  "category": "trace",
+  "version": "1.0",
+  "events": {
+    "momentum_flux": [
+      "horizontal_momentum_transport",
+      "vertical_momentum_ascent",
+      "boundary_layer_momentum_gradients"
+    ],
+    "vorticity_evolution": [
+      "cyclonic_vorticity_increase",
+      "anticyclonic_vorticity_decay",
+      "shear_driven_vorticity_generation"
+    ],
+    "wave_propagation": [
+      "rossby_wave_propagation",
+      "gravity_wave_ascent",
+      "mixed_mode_wave_interference"
+    ],
+    "shear_transitions": [
+      "shear_driven_instability",
+      "jet_stream_shear_modulation",
+      "boundary_layer_shear_breakdown"
+    ],
+    "instability_development": [
+      "baroclinic_instability",
+      "barotropic_instability",
+      "convective_dynamical_bursts"
+    ]
+  },
+  "operators": {
+    "dynamics": [
+      "momentum_flux_analysis",
+      "vorticity_alignment",
+      "wave_propagation_detection",
+      "shear_transition_analysis",
+      "instability_development_evaluation"
+    ],
+    "continuity": [
+      "momentum_continuity",
+      "vorticity_continuity"
+    ],
+    "coherence": [
+      "stable_dynamical_regime",
+      "coherent_wave_behavior"
+    ],
+    "clarity": [
+      "noise_reduction",
+      "dynamical_signal_clarity"
+    ],
+    "dimensional": [
+      "micro_to_meso_momentum_scaling",
+      "meso_to_macro_dynamical_propagation"
+    ],
+    "drift": [
+      "dynamical_instability_propagation",
+      "momentum_drift_detection"
+    ],
+    "paradox": [
+      "conflicting_dynamical_signals",
+      "inversion_paradox"
+    ],
+    "resonance": [
+      "dynamical_oscillation_amplification",
+      "harmonic_wave_alignment"
+    ]
+  },
+  "regimes": {
+    "stable": [
+      "coherent_momentum_flux",
+      "predictable_vorticity_cycles",
+      "stable_wave_propagation"
+    ],
+    "transition": [
+      "partial_momentum_breakdown",
+      "shear_driven_instability_onset",
+      "mixed_mode_wave_interference"
+    ],
+    "unstable": [
+      "vorticity_collapse",
+      "convective_dynamic_bursts",
+      "wave_driven_regime_disruption"
+    ]
+  }
+}
