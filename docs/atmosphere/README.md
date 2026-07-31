@@ -1,4 +1,9 @@
+<img width="682" height="682" alt="Atmosphere_module" src="https://github.com/user-attachments/assets/b61d4449-2a65-41db-9ee2-327e0899ea0d" />
+
 # 🌐 **Atmosphere Module v1 — README**  
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/atmosphere/module.json) — Agentic module schema role assignments
+
 ### *TriadicFrameworks Canon — Multi‑Scale Atmospheric Structural Overlay*
 
 ---
