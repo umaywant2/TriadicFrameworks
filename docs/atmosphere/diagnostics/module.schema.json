@@ -1,1 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Atmosphere Module Schema",
+  "type": "object",
+  "required": [
+    "module",
+    "version",
+    "envelope",
+    "map",
+    "trace",
+    "operators",
+    "examples"
+  ],
+  "properties": {
+    "module": { "type": "string", "const": "atmosphere" },
+    "version": { "type": "string" },
+
+    "envelope": {
+      "type": "object",
+      "description": "Top-level field-space definition for the Atmosphere module."
+    },
+
+    "map": {
+      "type": "object",
+      "description": "Top-level spatial and structural map for the Atmosphere module."
+    },
+
+    "trace": {
+      "type": "object",
+      "description": "Top-level event ledger for the Atmosphere module."
+    },
+
+    "operators": {
+      "type": "object",
+      "description": "Module-level operator grammar."
+    },
+
+    "examples": {
+      "type": "array",
+      "items": { "type": "object" },
+      "description": "Module-level example inputs and outputs."
+    }
+  }
+}
 
