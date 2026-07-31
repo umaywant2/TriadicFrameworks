@@ -1,1 +1,85 @@
-.   
+{
+  "module": "atmosphere",
+  "diagnostic": "thermodynamics",
+  "category": "trace",
+  "version": "1.0",
+  "events": {
+    "temperature": [
+      "lapse_rate_shift_event",
+      "inversion_formation_event",
+      "adiabatic_zone_transition_event",
+      "radiative_cooling_layer_change"
+    ],
+    "energy_flux": [
+      "sensible_heat_flux_change",
+      "latent_heat_flux_change",
+      "radiative_flux_balance_event",
+      "convective_flux_burst"
+    ],
+    "phase_change": [
+      "condensation_boundary_event",
+      "evaporation_zone_shift",
+      "freezing_layer_change",
+      "sublimation_region_event"
+    ],
+    "radiative_balance": [
+      "shortwave_absorption_change",
+      "longwave_emission_shift",
+      "albedo_feedback_event",
+      "greenhouse_trapping_variation"
+    ]
+  },
+  "operators": {
+    "thermodynamics": [
+      "gradient_interpretation",
+      "flux_alignment",
+      "radiative_balance_check",
+      "phase_boundary_detection"
+    ],
+    "continuity": [
+      "energy_conservation",
+      "flux_continuity"
+    ],
+    "coherence": [
+      "stable_thermodynamic_regime",
+      "coherent_flux_behavior"
+    ],
+    "clarity": [
+      "noise_free_gradient",
+      "radiative_signal_clarity"
+    ],
+    "dimensional": [
+      "micro_to_meso_scaling",
+      "meso_to_macro_flux_alignment"
+    ],
+    "drift": [
+      "instability_propagation",
+      "thermodynamic_drift_detection"
+    ],
+    "paradox": [
+      "conflicting_flux_signals",
+      "inversion_paradox"
+    ],
+    "resonance": [
+      "thermodynamic_oscillations",
+      "harmonic_flux_alignment"
+    ]
+  },
+  "regimes": {
+    "stable": [
+      "monotonic_gradients",
+      "coherent_energy_flux",
+      "predictable_radiative_balance"
+    ],
+    "transition": [
+      "inversion_formation",
+      "boundary_layer_breakdown",
+      "moisture_driven_instability"
+    ],
+    "unstable": [
+      "convective_bursts",
+      "rapid_lapse_rate_shifts",
+      "radiative_imbalance"
+    ]
+  }
+}
