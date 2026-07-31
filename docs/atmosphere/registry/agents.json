@@ -1,1 +1,204 @@
+{
+  "agents": [
+    {
+      "name": "fluid_agent",
+      "class": "physical",
+      "role": "flow_turbulence_shear_interpretation",
+      "inputs": [
+        "wind_fields",
+        "vorticity",
+        "divergence",
+        "shear",
+        "turbulence_metrics"
+      ],
+      "outputs": [
+        "flow_coherence_map",
+        "turbulence_diagnostics",
+        "shear_paradox_zones"
+      ],
+      "scales": ["meso", "macro"],
+      "phases": ["dynamics", "regime_transitions"],
+      "operators": ["coherence", "paradox", "drift"]
+    },
+    {
+      "name": "thermo_agent",
+      "class": "physical",
+      "role": "heat_transfer_latent_energy_radiative_balance",
+      "inputs": [
+        "temperature",
+        "humidity",
+        "latent_heat_flux",
+        "sensible_heat_flux"
+      ],
+      "outputs": [
+        "thermal_coherence_map",
+        "convective_triggers",
+        "latent_heat_drift_fields"
+      ],
+      "scales": ["micro", "meso", "macro"],
+      "phases": ["thermodynamics", "dynamics"],
+      "operators": ["drift", "coherence"]
+    },
+    {
+      "name": "chem_agent",
+      "class": "physical",
+      "role": "composition_aerosols_particulates_ionization",
+      "inputs": [
+        "gas_species",
+        "aerosol_load",
+        "particulate_fields"
+      ],
+      "outputs": [
+        "composition_map",
+        "aerosol_fields",
+        "vapor_structure_profiles"
+      ],
+      "scales": ["micro", "meso"],
+      "phases": ["composition"],
+      "operators": ["clarity", "coherence"]
+    },
+    {
+      "name": "hydro_agent",
+      "class": "physical",
+      "role": "moisture_flux_hydrospheric_coupling",
+      "inputs": [
+        "sst",
+        "ocean_currents",
+        "soil_moisture",
+        "evaporation",
+        "precipitation"
+      ],
+      "outputs": [
+        "moisture_flux_maps",
+        "coupling_overlays",
+        "hydrospheric_resonance_signatures"
+      ],
+      "scales": ["meso", "macro", "mega"],
+      "phases": ["hydrospheric_coupling"],
+      "operators": ["dimensional_coupling", "resonance"]
+    },
+    {
+      "name": "radiative_agent",
+      "class": "physical",
+      "role": "solar_forcing_cloud_radiative_effects_albedo",
+      "inputs": [
+        "insolation",
+        "cloud_cover",
+        "surface_albedo",
+        "longwave_flux",
+        "shortwave_flux"
+      ],
+      "outputs": [
+        "radiative_balance_maps",
+        "forcing_fields",
+        "energy_drift_diagnostics"
+      ],
+      "scales": ["meso", "macro"],
+      "phases": ["forcing"],
+      "operators": ["resonance", "drift"]
+    },
+    {
+      "name": "coherence_agent",
+      "class": "structural",
+      "role": "detect_stable_patterns",
+      "inputs": ["physical_agent_outputs"],
+      "outputs": [
+        "coherence_fields",
+        "stability_maps",
+        "persistence_zones"
+      ],
+      "scales": ["meso", "macro", "mega"],
+      "phases": ["dynamics", "resonance_coherence"],
+      "operators": ["coherence"]
+    },
+    {
+      "name": "drift_agent",
+      "class": "structural",
+      "role": "detect_instability_energy_accumulation",
+      "inputs": [
+        "gradients",
+        "time_series",
+        "thermal_fields"
+      ],
+      "outputs": [
+        "drift_vectors",
+        "instability_hotspots",
+        "storm_precursor_diagnostics"
+      ],
+      "scales": ["meso", "macro"],
+      "phases": ["forcing", "thermodynamics", "regime_transitions"],
+      "operators": ["drift"]
+    },
+    {
+      "name": "paradox_agent",
+      "class": "structural",
+      "role": "detect_boundary_conflicts",
+      "inputs": [
+        "shear",
+        "fronts",
+        "gradients",
+        "mixed_phase_regions"
+      ],
+      "outputs": [
+        "paradox_corridors",
+        "conflict_maps",
+        "tension_zones"
+      ],
+      "scales": ["meso", "macro"],
+      "phases": ["dynamics", "regime_transitions"],
+      "operators": ["paradox"]
+    },
+    {
+      "name": "resonance_agent",
+      "class": "structural",
+      "role": "detect_oscillatory_behavior",
+      "inputs": [
+        "time_series",
+        "planetary_wave_indices",
+        "oscillation_metrics"
+      ],
+      "outputs": [
+        "resonance_signatures",
+        "oscillation_maps",
+        "harmonic_coupling_diagnostics"
+      ],
+      "scales": ["macro", "mega"],
+      "phases": ["resonance_coherence"],
+      "operators": ["resonance", "continuity"]
+    },
+    {
+      "name": "dimensional_agent",
+      "class": "structural",
+      "role": "cross_domain_interactions",
+      "inputs": [
+        "sst",
+        "soil_moisture",
+        "sea_ice",
+        "topography"
+      ],
+      "outputs": [
+        "dimensional_coupling_overlays",
+        "feedback_loops",
+        "cross_domain_coherence_fields"
+      ],
+      "scales": ["meso", "macro", "mega"],
+      "phases": ["hydrospheric_coupling", "resonance_coherence"],
+      "operators": ["dimensional_coupling"]
+    },
+    {
+      "name": "clarity_agent",
+      "class": "structural",
+      "role": "structural_truth_extraction",
+      "inputs": ["all_agent_outputs"],
+      "outputs": [
+        "clarity_pulses",
+        "summary_maps",
+        "reduced_noise_structural_views"
+      ],
+      "scales": ["micro", "meso", "macro"],
+      "phases": ["composition", "resonance_coherence"],
+      "operators": ["clarity"]
+    }
+  ]
+}
 
