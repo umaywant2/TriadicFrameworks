@@ -1,1 +1,112 @@
-.   
+{
+  "module": "atmosphere",
+  "diagnostic": "forcing",
+  "version": "1.0",
+  "fields": {
+    "radiative": [
+      "shortwave_solar_input",
+      "longwave_terrestrial_emission",
+      "greenhouse_trapping",
+      "albedo_feedback"
+    ],
+    "mechanical": [
+      "wind_shear",
+      "terrain_forcing",
+      "frictional_forcing",
+      "wave_driven_forcing"
+    ],
+    "thermodynamic": [
+      "latent_heat_release",
+      "sensible_heat_flux",
+      "radiative_imbalance",
+      "convective_forcing"
+    ],
+    "mass": [
+      "pressure_gradients",
+      "density_transitions",
+      "moisture_loading"
+    ],
+    "cross_domain": [
+      "ocean_radiative_forcing",
+      "cryosphere_albedo_forcing",
+      "land_mechanical_forcing",
+      "biosphere_latent_forcing",
+      "magnetosphere_upper_atmosphere_forcing"
+    ]
+  },
+  "thresholds": {
+    "forcing_clarity_min": 0.7,
+    "forcing_stability_min": 0.6,
+    "forcing_noise_max": 50
+  },
+  "operators": {
+    "forcing": [
+      "radiative_forcing_analysis",
+      "mechanical_forcing_alignment",
+      "thermodynamic_forcing_detection",
+      "mass_forcing_evaluation"
+    ],
+    "continuity": [
+      "forcing_continuity",
+      "gradient_continuity"
+    ],
+    "coherence": [
+      "stable_forcing_regime",
+      "coherent_forcing_behavior"
+    ],
+    "clarity": [
+      "forcing_signal_clarity",
+      "noise_reduction"
+    ],
+    "dimensional": [
+      "micro_to_meso_forcing_scaling",
+      "meso_to_macro_forcing_propagation"
+    ],
+    "drift": [
+      "forcing_instability_propagation",
+      "forcing_drift_detection"
+    ],
+    "paradox": [
+      "conflicting_forcing_signals",
+      "inversion_paradox"
+    ],
+    "resonance": [
+      "forcing_driven_oscillations",
+      "harmonic_forcing_alignment"
+    ]
+  },
+  "regimes": {
+    "stable": [
+      "balanced_radiative_forcing",
+      "coherent_mechanical_forcing",
+      "predictable_thermodynamic_forcing"
+    ],
+    "transition": [
+      "radiative_imbalance",
+      "shear_driven_instability",
+      "latent_heat_release_bursts"
+    ],
+    "unstable": [
+      "convective_forcing_surges",
+      "pressure_gradient_collapse",
+      "forcing_driven_regime_disruption"
+    ]
+  },
+  "output": {
+    "clarity": ["high", "medium", "low"],
+    "stability": ["stable", "transition", "unstable"],
+    "signature": [
+      "radiative_signature",
+      "mechanical_signature",
+      "thermodynamic_signature",
+      "mass_signature",
+      "cross_domain_signature"
+    ],
+    "operators_triggered": [
+      "forcing",
+      "continuity",
+      "coherence",
+      "clarity"
+    ]
+  }
+}
