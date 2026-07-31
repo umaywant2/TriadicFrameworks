@@ -1,1 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Atmosphere Map Schema",
+  "type": "object",
+  "required": ["module", "category", "version", "layers", "coupling"],
+  "properties": {
+    "module": { "type": "string", "const": "atmosphere" },
+    "category": { "type": "string", "const": "map" },
+    "version": { "type": "string" },
+
+    "layers": {
+      "type": "object",
+      "properties": {
+        "dynamics": { "type": "array", "items": { "type": "string" } },
+        "thermodynamics": { "type": "array", "items": { "type": "string" } },
+        "hydrospheric": { "type": "array", "items": { "type": "string" } },
+        "forcing": { "type": "array", "items": { "type": "string" } },
+        "teleconnection": { "type": "array", "items": { "type": "string" } },
+        "resonance": { "type": "array", "items": { "type": "string" } },
+        "paradox": { "type": "array", "items": { "type": "string" } },
+        "drift": { "type": "array", "items": { "type": "string" } },
+        "dimensional": { "type": "array", "items": { "type": "string" } },
+        "continuity": { "type": "array", "items": { "type": "string" } },
+        "coherence": { "type": "array", "items": { "type": "string" } },
+        "clarity": { "type": "array", "items": { "type": "string" } },
+        "composition": { "type": "array", "items": { "type": "string" } },
+        "regime": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": [
+        "dynamics",
+        "thermodynamics",
+        "hydrospheric",
+        "forcing",
+        "teleconnection",
+        "resonance",
+        "paradox",
+        "drift",
+        "dimensional",
+        "continuity",
+        "coherence",
+        "clarity",
+        "composition",
+        "regime"
+      ]
+    },
+
+    "coupling": {
+      "type": "object",
+      "properties": {
+        "ocean": { "type": "array", "items": { "type": "string" } },
+        "cryosphere": { "type": "array", "items": { "type": "string" } },
+        "land": { "type": "array", "items": { "type": "string" } },
+        "biosphere": { "type": "array", "items": { "type": "string" } },
+        "magnetosphere": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["ocean", "cryosphere", "land", "biosphere", "magnetosphere"]
+    }
+  }
+}
 
