@@ -1,1 +1,101 @@
-
+{
+  "module": "atmosphere",
+  "category": "operators",
+  "version": "1.0",
+  "operators": {
+    "dynamics": [
+      "atmosphere_dynamics_alignment",
+      "atmosphere_wave_propagation",
+      "atmosphere_instability_detection",
+      "momentum_flux_alignment",
+      "vorticity_analysis",
+      "wave_train_analysis"
+    ],
+    "thermodynamics": [
+      "atmosphere_thermodynamic_balance",
+      "atmosphere_gradient_interpretation",
+      "atmosphere_flux_coherence",
+      "gradient_interpretation",
+      "flux_alignment",
+      "radiative_balance_check"
+    ],
+    "hydrospheric": [
+      "atmosphere_moisture_alignment",
+      "atmosphere_hydrospheric_consistency",
+      "moisture_flux_alignment",
+      "hydrological_gradient_analysis",
+      "condensation_boundary_detection"
+    ],
+    "forcing": [
+      "atmosphere_forcing_balance",
+      "atmosphere_cross_domain_forcing",
+      "radiative_forcing_analysis",
+      "mechanical_forcing_alignment",
+      "thermodynamic_forcing_detection"
+    ],
+    "teleconnection": [
+      "atmosphere_basin_alignment",
+      "atmosphere_global_wave_train",
+      "teleconnection_alignment",
+      "basin_coupling_detection",
+      "wave_train_analysis"
+    ],
+    "resonance": [
+      "atmosphere_resonance_state",
+      "atmosphere_harmonic_alignment",
+      "resonance_alignment",
+      "harmonic_alignment"
+    ],
+    "paradox": [
+      "atmosphere_paradox_resolution",
+      "atmosphere_conflict_detection",
+      "paradox_detection",
+      "conflicting_signal_analysis",
+      "inversion_paradox_analysis"
+    ],
+    "drift": [
+      "atmosphere_drift_state",
+      "atmosphere_drift_alignment",
+      "drift_detection",
+      "drift_instability_propagation"
+    ],
+    "dimensional": [
+      "atmosphere_dimensional_scaling",
+      "atmosphere_dimensional_alignment",
+      "micro_to_meso_scaling",
+      "meso_to_macro_propagation"
+    ],
+    "continuity": [
+      "atmosphere_continuity",
+      "atmosphere_flux_continuity",
+      "mass_continuity",
+      "momentum_continuity",
+      "flux_continuity"
+    ],
+    "coherence": [
+      "atmosphere_coherence",
+      "atmosphere_regime_alignment",
+      "coherent_flux_behavior",
+      "stable_regime_alignment"
+    ],
+    "clarity": [
+      "atmosphere_clarity",
+      "atmosphere_noise_reduction",
+      "signal_clarity",
+      "gradient_clarity"
+    ],
+    "composition": [
+      "atmosphere_composition_balance",
+      "atmosphere_mixture_alignment",
+      "gas_mixture_analysis",
+      "aerosol_content_analysis"
+    ],
+    "regime": [
+      "atmosphere_regime_state",
+      "atmosphere_regime_transition",
+      "stable_regime",
+      "transition_regime",
+      "unstable_regime"
+    ]
+  }
+}
