@@ -1,1 +1,75 @@
-.   
+{
+  "module": "atmosphere",
+  "diagnostic": "composition",
+  "category": "envelope",
+  "version": "1.0",
+
+  "envelope": {
+    "fields": {
+      "gas_mix_field": [
+        "nitrogen",
+        "oxygen",
+        "argon",
+        "co2",
+        "trace_gases"
+      ],
+      "humidity_field": [
+        "relative_humidity",
+        "moisture_balance"
+      ],
+      "particulate_field": [
+        "particulate_concentration",
+        "aerosol_noise"
+      ],
+      "clarity_field": [
+        "clarity_threshold",
+        "noise_reduction"
+      ]
+    },
+
+    "thresholds": {
+      "clarity_min": 0.7,
+      "stability_min": 0.6,
+      "particulate_max": 50
+    },
+
+    "regimes": {
+      "stable": [
+        "coherent_gas_mix",
+        "low_particulate_noise",
+        "consistent_humidity"
+      ],
+      "transition": [
+        "partial_mix_shift",
+        "humidity_gradient_change",
+        "trace_gas_variability"
+      ],
+      "unstable": [
+        "gas_mix_breakdown",
+        "high_particulate_noise",
+        "humidity_collapse"
+      ]
+    },
+
+    "operators": {
+      "composition": [
+        "gas_mix_alignment",
+        "humidity_consistency",
+        "particulate_balance",
+        "trace_gas_stability"
+      ],
+      "continuity": [
+        "composition_continuity",
+        "gradient_continuity"
+      ],
+      "coherence": [
+        "composition_coherence",
+        "low_noise_signature"
+      ],
+      "clarity": [
+        "clarity_threshold",
+        "noise_reduction"
+      ]
+    }
+  }
+}
