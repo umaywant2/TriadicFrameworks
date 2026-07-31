@@ -1,1 +1,72 @@
-.   
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Forcing Envelope Schema",
+  "type": "object",
+  "required": ["module", "diagnostic", "category", "version", "fields", "thresholds", "operators", "regimes"],
+  "properties": {
+    "module": { "type": "string", "const": "atmosphere" },
+    "diagnostic": { "type": "string", "const": "forcing" },
+    "category": { "type": "string", "const": "envelope" },
+    "version": { "type": "string" },
+
+    "fields": {
+      "type": "object",
+      "properties": {
+        "radiative": { "type": "array", "items": { "type": "string" } },
+        "mechanical": { "type": "array", "items": { "type": "string" } },
+        "thermodynamic": { "type": "array", "items": { "type": "string" } },
+        "mass": { "type": "array", "items": { "type": "string" } },
+        "cross_domain": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["radiative", "mechanical", "thermodynamic", "mass", "cross_domain"]
+    },
+
+    "thresholds": {
+      "type": "object",
+      "properties": {
+        "forcing_clarity_min": { "type": "number" },
+        "forcing_stability_min": { "type": "number" },
+        "forcing_noise_max": { "type": "number" }
+      },
+      "required": [
+        "forcing_clarity_min",
+        "forcing_stability_min",
+        "forcing_noise_max"
+      ]
+    },
+
+    "operators": {
+      "type": "object",
+      "properties": {
+        "forcing": { "type": "array", "items": { "type": "string" } },
+        "continuity": { "type": "array", "items": { "type": "string" } },
+        "coherence": { "type": "array", "items": { "type": "string" } },
+        "clarity": { "type": "array", "items": { "type": "string" } },
+        "dimensional": { "type": "array", "items": { "type": "string" } },
+        "drift": { "type": "array", "items": { "type": "string" } },
+        "paradox": { "type": "array", "items": { "type": "string" } },
+        "resonance": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": [
+        "forcing",
+        "continuity",
+        "coherence",
+        "clarity",
+        "dimensional",
+        "drift",
+        "paradox",
+        "resonance"
+      ]
+    },
+
+    "regimes": {
+      "type": "object",
+      "properties": {
+        "stable": { "type": "array", "items": { "type": "string" } },
+        "transition": { "type": "array", "items": { "type": "string" } },
+        "unstable": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["stable", "transition", "unstable"]
+    }
+  }
+}
