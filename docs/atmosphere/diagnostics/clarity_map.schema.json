@@ -1,1 +1,102 @@
-. 
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Clarity Map Schema (Atmosphere Module)",
+  "description": "Schema for validating clarity_map.json — clarity fields, truth extraction maps, noise reduction overlays, pattern convergence maps, and multi-agent consensus structures.",
+  "type": "object",
+
+  "properties": {
+    "map": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "category": { "type": "string" },
+        "version": { "type": "string" },
+        "summary": { "type": "string" },
+        "purpose": { "type": "string" }
+      },
+      "required": ["name", "category", "version", "summary", "purpose"]
+    },
+
+    "context": {
+      "type": "object",
+      "properties": {
+        "clarity_definition": { "type": "string" },
+        "global_role": { "type": "string" }
+      },
+      "required": ["clarity_definition", "global_role"]
+    },
+
+    "fields": {
+      "type": "object",
+      "properties": {
+        "truth_extraction_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "noise_reduction_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "pattern_convergence_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "consensus_alignment_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "cross_domain_clarity_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": [
+        "truth_extraction_field",
+        "noise_reduction_field",
+        "pattern_convergence_field",
+        "consensus_alignment_field",
+        "cross_domain_clarity_field"
+      ]
+    },
+
+    "maps": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    },
+
+    "scales": {
+      "type": "object",
+      "properties": {
+        "micro": { "type": "string" },
+        "meso": { "type": "string" },
+        "macro": { "type": "string" },
+        "mega": { "type": "string" }
+      },
+      "required": ["micro", "meso", "macro", "mega"]
+    },
+
+    "summary": {
+      "type": "object",
+      "properties": {
+        "core_capabilities": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "role": { "type": "string" }
+      },
+      "required": ["core_capabilities", "role"]
+    }
+  },
+
+  "required": [
+    "map",
+    "context",
+    "fields",
+    "maps",
+    "scales",
+    "summary"
+  ]
+}
