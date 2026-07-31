@@ -1,1 +1,132 @@
+{
+  "diagnostic": {
+    "name": "coherence_diagnostic",
+    "category": "Atmosphere",
+    "version": "1.0",
+    "summary": "Diagnostic for detecting, quantifying, and mapping atmospheric coherence — structural alignment, stability fields, phase agreement, and multi-agent consistency.",
+    "purpose": "Identify coherence pulses, stability envelopes, and alignment fields using RTT operators and agentic synthesis."
+  },
+
+  "context": {
+    "coherence_definition": "Alignment field linking structural stability, phase agreement, multi-agent alignment, cross-domain consistency, and oscillation stability.",
+    "global_role": "Coherence is the structural backbone inside the Seven-Phase atmospheric model."
+  },
+
+  "agents": {
+    "primary": [
+      "coherence_agent",
+      "clarity_agent",
+      "dimensional_agent",
+      "continuity_agent"
+    ],
+    "secondary": [
+      "fluid_agent",
+      "thermo_agent",
+      "hydro_agent"
+    ]
+  },
+
+  "indicators": {
+    "alignment": "structural agreement across agents",
+    "phase_agreement": "oscillation phase stability",
+    "stability_field": "persistent coherence envelope",
+    "domain_consistency": "cross-domain alignment",
+    "oscillation_stability": "harmonic stability",
+    "coherence_envelope": "macro and mega-scale stability"
+  },
+
+  "fields": {
+    "primary_coherence_field": [
+      "multi_agent_inputs",
+      "alignment",
+      "stability_field",
+      "coherence_increase"
+    ],
+    "thermal_coherence_field": [
+      "heat_flux_stability",
+      "thermal_alignment",
+      "coherence_increase"
+    ],
+    "ocean_atmosphere_coherence_field": [
+      "sst_alignment",
+      "moisture_flux_stability",
+      "atmospheric_coherence_increase"
+    ],
+    "oscillation_coherence_field": [
+      "phase_alignment",
+      "harmonic_stability",
+      "coherence_increase"
+    ]
+  },
+
+  "metrics": {
+    "coherence_index": "alignment + stability_field + phase_agreement",
+    "stability_metric": "coherence_persistence × alignment_strength",
+    "domain_consistency_metric": "cross_domain_alignment × stability_persistence",
+    "oscillation_stability_metric": "phase_alignment × harmonic_stability"
+  },
+
+  "scales": {
+    "micro": "vapor alignment, particulate stability",
+    "meso": "convection coherence",
+    "macro": "jet stream coherence",
+    "mega": "teleconnection coherence"
+  },
+
+  "failure_modes": {
+    "alignment_loss": "agent disagreement",
+    "phase_divergence": "oscillation instability",
+    "stability_collapse": "coherence envelope failure",
+    "domain_inconsistency": "cross-domain instability",
+    "harmonic_instability": "oscillation coherence loss"
+  },
+
+  "cascades": {
+    "alignment_cascade": [
+      "alignment",
+      "stability",
+      "coherence_increase"
+    ],
+    "thermal_cascade": [
+      "heat_flux_stability",
+      "thermal_coherence",
+      "stability_increase"
+    ],
+    "coupling_cascade": [
+      "sst_alignment",
+      "moisture_flux_stability",
+      "atmospheric_coherence_increase"
+    ],
+    "oscillation_cascade": [
+      "phase_alignment",
+      "harmonic_stability",
+      "coherence_increase"
+    ]
+  },
+
+  "diagnostics": {
+    "outputs": [
+      "coherence_pulses",
+      "stability_fields",
+      "alignment_overlays",
+      "oscillation_coherence_diagnostics",
+      "cross_domain_coherence_overlays",
+      "harmonic_stability_maps",
+      "multi_agent_coherence_envelopes"
+    ]
+  },
+
+  "summary": {
+    "core_capabilities": [
+      "multi-scale structural alignment",
+      "Seven-Phase coherence alignment",
+      "RTT operator-level interpretation",
+      "agentic synthesis of coherence indicators",
+      "teleconnection coherence mapping",
+      "cross-domain stability diagnostics",
+      "oscillation coherence evaluation"
+    ],
+    "role": "Coherence diagnostic backbone of the Atmosphere Module."
+  }
+}
 
