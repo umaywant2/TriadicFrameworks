@@ -1,1 +1,133 @@
+{
+  "diagnostic": {
+    "name": "clarity_diagnostic",
+    "category": "Atmosphere",
+    "version": "1.0",
+    "summary": "Diagnostic for detecting, quantifying, and mapping atmospheric clarity — structural truth extraction, noise reduction, pattern convergence, and multi-agent consensus.",
+    "purpose": "Identify clarity pulses, simplified structural fields, and consensus overlays using RTT operators and agentic synthesis."
+  },
+
+  "context": {
+    "clarity_definition": "Truth-extraction field linking noise reduction, structural simplification, pattern convergence, multi-agent consensus, and cross-domain truth alignment.",
+    "global_role": "Clarity is the structural truth engine inside the Seven-Phase atmospheric model."
+  },
+
+  "agents": {
+    "primary": [
+      "clarity_agent",
+      "coherence_agent",
+      "drift_agent",
+      "dimensional_agent"
+    ],
+    "secondary": [
+      "fluid_agent",
+      "thermo_agent",
+      "hydro_agent"
+    ]
+  },
+
+  "indicators": {
+    "signal_to_noise_ratio": "clarity of structural fields",
+    "pattern_convergence": "multi-agent agreement",
+    "noise_reduction": "removal of chaotic components",
+    "consensus_alignment": "cross-agent structural agreement",
+    "truth_extraction": "distilled structural meaning",
+    "domain_alignment": "multi-domain clarity",
+    "oscillation_clarity": "harmonic truth extraction"
+  },
+
+  "fields": {
+    "primary_clarity_field": [
+      "multi_agent_inputs",
+      "noise_reduction",
+      "truth_extraction",
+      "clarity_increase"
+    ],
+    "thermal_clarity_field": [
+      "heat_flux_alignment",
+      "thermal_noise_reduction",
+      "clarity_increase"
+    ],
+    "ocean_atmosphere_clarity_field": [
+      "sst_alignment",
+      "moisture_flux_clarity",
+      "atmospheric_truth_increase"
+    ],
+    "oscillation_clarity_field": [
+      "phase_alignment",
+      "harmonic_truth",
+      "resonance_clarity_increase"
+    ]
+  },
+
+  "metrics": {
+    "clarity_index": "signal_to_noise + pattern_convergence + consensus_alignment",
+    "truth_extraction_metric": "clarity_pulse_strength × noise_reduction",
+    "consensus_metric": "agent_alignment_score − paradox_noise",
+    "domain_clarity_metric": "cross_domain_alignment × clarity_persistence"
+  },
+
+  "scales": {
+    "micro": "vapor clarity, particulate truth",
+    "meso": "convection clarity",
+    "macro": "jet stream clarity",
+    "mega": "teleconnection clarity"
+  },
+
+  "failure_modes": {
+    "noise_surge": "chaotic field increase",
+    "pattern_divergence": "agent disagreement",
+    "truth_loss": "clarity collapse",
+    "domain_noise": "cross-domain instability",
+    "oscillation_blur": "harmonic instability"
+  },
+
+  "cascades": {
+    "truth_cascade": [
+      "noise_reduction",
+      "pattern_convergence",
+      "clarity_increase"
+    ],
+    "thermal_cascade": [
+      "heat_flux_alignment",
+      "thermal_clarity",
+      "stability_increase"
+    ],
+    "coupling_cascade": [
+      "sst_alignment",
+      "moisture_flux_clarity",
+      "atmospheric_truth_increase"
+    ],
+    "oscillation_cascade": [
+      "phase_alignment",
+      "harmonic_truth",
+      "clarity_increase"
+    ]
+  },
+
+  "diagnostics": {
+    "outputs": [
+      "clarity_pulses",
+      "simplified_structural_maps",
+      "consensus_overlays",
+      "noise_reduced_fields",
+      "oscillation_clarity_diagnostics",
+      "cross_domain_clarity_overlays",
+      "truth_extraction_maps"
+    ]
+  },
+
+  "summary": {
+    "core_capabilities": [
+      "multi-scale truth extraction",
+      "Seven-Phase clarity alignment",
+      "RTT operator-level interpretation",
+      "agentic synthesis of clarity indicators",
+      "teleconnection clarity mapping",
+      "cross-domain truth diagnostics",
+      "oscillation clarity evaluation"
+    ],
+    "role": "Clarity diagnostic backbone of the Atmosphere Module."
+  }
+}
 
