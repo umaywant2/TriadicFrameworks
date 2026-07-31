@@ -1,1 +1,109 @@
-.   
+{
+  "module": "atmosphere",
+  "diagnostic": "dynamics",
+  "version": "1.0",
+  "fields": {
+    "momentum_flux": {
+      "horizontal_transport": null,
+      "vertical_ascent": null,
+      "boundary_layer_gradients": null
+    },
+    "vorticity": {
+      "cyclonic_increase": null,
+      "anticyclonic_decay": null,
+      "shear_generation": null
+    },
+    "wave_propagation": {
+      "rossby_waves": null,
+      "gravity_waves": null,
+      "kelvin_waves": null,
+      "mixed_mode_interference": null
+    },
+    "shear_transitions": {
+      "instability_onset": null,
+      "jet_stream_modulation": null,
+      "boundary_layer_breakdown": null
+    },
+    "instability_development": {
+      "baroclinic_instability": null,
+      "barotropic_instability": null,
+      "convective_bursts": null
+    }
+  },
+  "thresholds": {
+    "dynamics_clarity_min": 0.7,
+    "dynamics_stability_min": 0.6,
+    "dynamics_noise_max": 50
+  },
+  "operators": {
+    "dynamics": [
+      "momentum_flux_analysis",
+      "vorticity_alignment",
+      "wave_propagation_detection",
+      "shear_transition_analysis",
+      "instability_development_evaluation"
+    ],
+    "continuity": [
+      "momentum_continuity",
+      "vorticity_continuity"
+    ],
+    "coherence": [
+      "stable_dynamical_regime",
+      "coherent_wave_behavior"
+    ],
+    "clarity": [
+      "noise_reduction",
+      "dynamical_signal_clarity"
+    ],
+    "dimensional": [
+      "micro_to_meso_momentum_scaling",
+      "meso_to_macro_dynamical_propagation"
+    ],
+    "drift": [
+      "dynamical_instability_propagation",
+      "momentum_drift_detection"
+    ],
+    "paradox": [
+      "conflicting_dynamical_signals",
+      "inversion_paradox"
+    ],
+    "resonance": [
+      "dynamical_oscillation_amplification",
+      "harmonic_wave_alignment"
+    ]
+  },
+  "regimes": {
+    "stable": [
+      "coherent_momentum_flux",
+      "predictable_vorticity_cycles",
+      "stable_wave_propagation"
+    ],
+    "transition": [
+      "partial_momentum_breakdown",
+      "shear_driven_instability_onset",
+      "mixed_mode_wave_interference"
+    ],
+    "unstable": [
+      "vorticity_collapse",
+      "convective_dynamic_bursts",
+      "wave_driven_regime_disruption"
+    ]
+  },
+  "output": {
+    "clarity": ["high", "medium", "low"],
+    "stability": ["stable", "transition", "unstable"],
+    "signature": [
+      "momentum_flux_signature",
+      "vorticity_signature",
+      "wave_propagation_signature",
+      "shear_transition_signature",
+      "instability_signature"
+    ],
+    "operators_triggered": [
+      "dynamics",
+      "continuity",
+      "coherence",
+      "clarity"
+    ]
+  }
+}
