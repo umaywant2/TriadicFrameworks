@@ -1,1 +1,140 @@
+{
+  "extension": {
+    "name": "AtmosphereCryosphereCoupling",
+    "category": "CrossDomainExtension",
+    "version": "1.0",
+    "summary": "Canonical extension describing how atmospheric structure couples with cryospheric structure across albedo fields, melt-drift dynamics, radiative balance, and cold-domain stability.",
+    "purpose": "Provide a unified structural map of atmosphere ↔ cryosphere coupling using RTT operators, dimensional agents, cryospheric fields, and multi-scale alignment."
+  },
 
+  "substrates": {
+    "cryospheric": {
+      "cryosphere_components": ["ice_sheets", "sea_ice", "snow_cover"],
+      "atmospheric_interaction": ["albedo", "radiative_balance", "cold_coupling"]
+    },
+    "physical": {
+      "cryosphere_components": ["katabatic_winds", "surface_roughness"],
+      "atmospheric_interaction": ["boundary_layer_modulation"]
+    },
+    "thermodynamic": {
+      "cryosphere_components": ["melt_rate", "freeze_rate"],
+      "atmospheric_interaction": ["thermal_instability", "convection_shift"]
+    },
+    "resonance": {
+      "cryosphere_components": ["polar_oscillations", "ao"],
+      "atmospheric_interaction": ["planetary_wave_alignment"]
+    },
+    "dimensional": {
+      "cryosphere_components": ["flux_maps"],
+      "atmospheric_interaction": ["cross_domain_fields"]
+    }
+  },
+
+  "agents": {
+    "primary": ["cryosphere_agent", "dimensional_agent", "thermo_agent"],
+    "secondary": ["fluid_agent", "resonance_agent", "clarity_agent"]
+  },
+
+  "operators": {
+    "dimensional_coupling": {
+      "agents": ["dimensional_agent", "cryosphere_agent"],
+      "scales": ["meso", "macro", "mega"],
+      "outputs": ["coupling_maps", "cold_domain_fields", "cross_domain_fields"]
+    },
+    "coherence": {
+      "agents": ["coherence_agent", "cryosphere_agent"],
+      "scales": ["macro", "mega"],
+      "outputs": ["stability_fields", "alignment_maps"]
+    },
+    "drift": {
+      "agents": ["drift_agent", "thermo_agent"],
+      "scales": ["meso", "macro"],
+      "outputs": ["melt_drift_fields", "instability_fields"]
+    },
+    "resonance": {
+      "agents": ["resonance_agent", "dimensional_agent"],
+      "scales": ["macro", "mega"],
+      "outputs": ["polar_oscillation_fields", "wave_alignment"]
+    },
+    "clarity": {
+      "agents": ["clarity_agent"],
+      "scales": ["micro", "meso", "macro"],
+      "outputs": ["clarity_pulses", "truth_maps"]
+    }
+  },
+
+  "fields": {
+    "albedo_to_atmosphere": [
+      "albedo_gradient",
+      "radiative_balance",
+      "thermal_response",
+      "stability_shift"
+    ],
+    "melt_drift_to_atmosphere": [
+      "melt_rate",
+      "cold_pool_loss",
+      "convection_increase",
+      "drift_increase"
+    ],
+    "katabatic_to_boundary": [
+      "katabatic_flow",
+      "boundary_layer_modulation",
+      "stability_change"
+    ],
+    "polar_oscillation": [
+      "ao_phase",
+      "polar_vortex_state",
+      "planetary_wave_response",
+      "global_alignment"
+    ]
+  },
+
+  "cascades": {
+    "albedo_driven": [
+      "albedo_drop",
+      "radiative_gain",
+      "thermal_instability",
+      "drift_increase"
+    ],
+    "melt_driven": [
+      "melt_rate_increase",
+      "cold_pool_loss",
+      "convection_increase",
+      "instability_increase"
+    ],
+    "katabatic": [
+      "katabatic_flow_increase",
+      "boundary_layer_shift",
+      "stability_change"
+    ],
+    "polar_oscillation": [
+      "ao_phase_shift",
+      "planetary_wave_response",
+      "global_coherence_increase"
+    ]
+  },
+
+  "diagnostics": {
+    "maps": [
+      "albedo_gradient_maps",
+      "melt_drift_instability_fields",
+      "radiative_balance_diagnostics",
+      "katabatic_wind_overlays",
+      "polar_oscillation_coupling_maps",
+      "cross_domain_drift_fields"
+    ]
+  },
+
+  "outputs": {
+    "primary": [
+      "coupling_maps",
+      "cold_domain_fields",
+      "polar_oscillation_fields"
+    ],
+    "secondary": [
+      "drift_fields",
+      "stability_maps",
+      "clarity_overlays"
+    ]
+  }
+}
