@@ -1,1 +1,40 @@
-.   
+{
+  "input": {
+    "micro_nudge": {
+      "pressure_microshift": 0.41,
+      "temperature_microgradient": 0.55,
+      "moisture_microflux": 0.63
+    },
+    "boundary_nudge": {
+      "shear_boundary_nudge": 0.52,
+      "vorticity_boundary_nudge": 0.61,
+      "wave_boundary_nudge": 0.44
+    },
+    "coherence_nudge": {
+      "coherence_alignment_shift": 0.48,
+      "coherence_drift_trigger": 0.66,
+      "coherence_regime_precursor": 0.39
+    },
+    "regime_precursor": {
+      "transition_precursor": 0.52,
+      "instability_precursor": 0.71,
+      "resonance_precursor": 0.29
+    }
+  },
+  "output": {
+    "clarity": "medium",
+    "stability": "transition",
+    "signature": [
+      "micro_nudge_signature",
+      "boundary_nudge_signature",
+      "coherence_nudge_signature",
+      "regime_precursor_signature"
+    ],
+    "operators_triggered": [
+      "micro_nudge_analysis",
+      "boundary_nudge_alignment",
+      "coherence_nudge_detection",
+      "regime_precursor_evaluation"
+    ]
+  }
+}
