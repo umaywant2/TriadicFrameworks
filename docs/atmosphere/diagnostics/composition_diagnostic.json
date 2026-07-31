@@ -1,1 +1,60 @@
-.   
+{
+  "module": "atmosphere",
+  "diagnostic": "composition",
+  "version": "1.0",
+  "fields": {
+    "gas_mix": {
+      "nitrogen": { "type": "number" },
+      "oxygen": { "type": "number" },
+      "argon": { "type": "number" },
+      "co2": { "type": "number" }
+    },
+    "humidity": { "type": "number" },
+    "particulates": { "type": "number" },
+    "trace_gases": { "type": "array", "items": { "type": "string" } }
+  },
+  "operators": {
+    "composition": [
+      "gas_mix_alignment",
+      "humidity_consistency",
+      "particulate_balance",
+      "trace_gas_stability"
+    ],
+    "continuity": [
+      "composition_continuity",
+      "gradient_continuity"
+    ],
+    "coherence": [
+      "composition_coherence",
+      "low_noise_signature"
+    ]
+  },
+  "thresholds": {
+    "clarity_min": 0.7,
+    "stability_min": 0.6,
+    "particulate_max": 50
+  },
+  "regimes": {
+    "stable": [
+      "coherent_gas_mix",
+      "low_particulate_noise",
+      "consistent_humidity"
+    ],
+    "transition": [
+      "partial_mix_shift",
+      "humidity_gradient_change",
+      "trace_gas_variability"
+    ],
+    "unstable": [
+      "gas_mix_breakdown",
+      "high_particulate_noise",
+      "humidity_collapse"
+    ]
+  },
+  "output": {
+    "composition_clarity": { "type": "string" },
+    "composition_stability": { "type": "string" },
+    "composition_signature": { "type": "array", "items": { "type": "string" } },
+    "operators_triggered": { "type": "array", "items": { "type": "string" } }
+  }
+}
