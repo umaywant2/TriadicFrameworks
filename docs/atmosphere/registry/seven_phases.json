@@ -1,1 +1,75 @@
+{
+  "seven_phases": [
+    {
+      "id": 1,
+      "name": "composition",
+      "substrate": "material",
+      "description": "Gases, aerosols, particulates, ions, and water vapor forming the material foundation of the atmosphere.",
+      "scales": ["micro", "meso"],
+      "operators": ["clarity", "coherence"],
+      "agents": ["chem_agent", "clarity_agent"],
+      "outputs": ["composition_map", "aerosol_fields", "vapor_structure_profiles"]
+    },
+    {
+      "id": 2,
+      "name": "forcing",
+      "substrate": "energy",
+      "description": "Solar radiation, lunar tides, planetary rotation, orbital geometry, and seasonal drivers injecting energy into the system.",
+      "scales": ["meso", "macro"],
+      "operators": ["resonance", "drift"],
+      "agents": ["radiative_agent", "fluid_agent"],
+      "outputs": ["forcing_fields", "radiative_balance_maps", "energy_drift_diagnostics"]
+    },
+    {
+      "id": 3,
+      "name": "dynamics",
+      "substrate": "motion",
+      "description": "Flow, turbulence, convection, shear, and boundary layer behavior governing atmospheric motion.",
+      "scales": ["meso", "macro"],
+      "operators": ["coherence", "paradox", "drift"],
+      "agents": ["fluid_agent", "thermo_agent"],
+      "outputs": ["flow_coherence_map", "turbulence_diagnostics", "shear_paradox_corridors"]
+    },
+    {
+      "id": 4,
+      "name": "thermodynamics",
+      "substrate": "temperature",
+      "description": "Heat transfer, latent heat, condensation, evaporation, and radiative balance governing energy exchange.",
+      "scales": ["micro", "meso", "macro"],
+      "operators": ["drift", "coherence"],
+      "agents": ["thermo_agent", "chem_agent"],
+      "outputs": ["thermal_coherence_map", "convective_triggers", "latent_heat_drift_fields"]
+    },
+    {
+      "id": 5,
+      "name": "hydrospheric_coupling",
+      "substrate": "fluid_resonance",
+      "description": "Atmosphere interactions with oceans, lakes, rivers, soil moisture, and ice sheets forming the surface resonance system.",
+      "scales": ["meso", "macro", "mega"],
+      "operators": ["dimensional_coupling", "resonance"],
+      "agents": ["hydro_agent", "dimensional_agent"],
+      "outputs": ["coupling_overlays", "moisture_flux_maps", "ocean_atmosphere_resonance_signatures"]
+    },
+    {
+      "id": 6,
+      "name": "regime_transitions",
+      "substrate": "structural",
+      "description": "Storm formation, dissipation, frontal boundaries, cyclogenesis, and atmospheric rivers governing regime changes.",
+      "scales": ["meso", "macro"],
+      "operators": ["paradox", "drift", "coherence"],
+      "agents": ["drift_agent", "paradox_agent"],
+      "outputs": ["transition_diagnostics", "regime_tension_maps", "storm_precursor_fields"]
+    },
+    {
+      "id": 7,
+      "name": "resonance_coherence",
+      "substrate": "dimensional",
+      "description": "Planetary waves, global oscillations, teleconnections, and long‑range coherence patterns.",
+      "scales": ["macro", "mega"],
+      "operators": ["resonance", "continuity", "coherence"],
+      "agents": ["resonance_agent", "dimensional_agent", "clarity_agent"],
+      "outputs": ["resonance_signatures", "continuity_traces", "teleconnection_maps"]
+    }
+  ]
+}
 
