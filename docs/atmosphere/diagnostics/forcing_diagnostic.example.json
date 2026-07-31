@@ -1,1 +1,51 @@
-.   
+{
+  "input": {
+    "radiative_forcing": {
+      "shortwave_input": 0.72,
+      "longwave_emission": 0.41,
+      "greenhouse_trapping": 0.63,
+      "albedo_feedback": 0.55
+    },
+    "mechanical_forcing": {
+      "wind_shear": 0.61,
+      "terrain_forcing": 0.44,
+      "frictional_forcing": 0.57,
+      "wave_driven_forcing": 0.52
+    },
+    "thermodynamic_forcing": {
+      "latent_heat_release": 0.63,
+      "sensible_heat_flux": 0.29,
+      "radiative_imbalance": 0.71,
+      "convective_forcing": 0.48
+    },
+    "mass_forcing": {
+      "pressure_gradients": 0.66,
+      "density_transitions": 0.39,
+      "moisture_loading": 0.52
+    },
+    "cross_domain_forcing": {
+      "ocean_radiative": 0.48,
+      "cryosphere_albedo": 0.66,
+      "land_mechanical": 0.39,
+      "biosphere_latent": 0.52,
+      "magnetosphere_upper_atmosphere": 0.61
+    }
+  },
+  "output": {
+    "clarity": "medium",
+    "stability": "transition",
+    "signature": [
+      "radiative_signature",
+      "mechanical_signature",
+      "thermodynamic_signature",
+      "mass_signature",
+      "cross_domain_signature"
+    ],
+    "operators_triggered": [
+      "radiative_forcing_analysis",
+      "mechanical_forcing_alignment",
+      "thermodynamic_forcing_detection",
+      "mass_forcing_evaluation"
+    ]
+  }
+}
