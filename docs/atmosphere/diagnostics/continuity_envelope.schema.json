@@ -1,1 +1,158 @@
-. 
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Continuity Envelope Schema (Atmosphere Module)",
+  "description": "Schema for validating continuity_envelope.json — continuity boundaries, temporal coherence envelopes, drift accumulation limits, and regime memory shells.",
+  "type": "object",
+
+  "properties": {
+    "envelope": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "category": { "type": "string" },
+        "version": { "type": "string" },
+        "summary": { "type": "string" },
+        "purpose": { "type": "string" }
+      },
+      "required": ["name", "category", "version", "summary", "purpose"]
+    },
+
+    "components": {
+      "type": "object",
+      "properties": {
+        "continuity_layer": { "type": "string" },
+        "memory_shell": { "type": "string" },
+        "coherence_boundary": { "type": "string" }
+      },
+      "required": [
+        "continuity_layer",
+        "memory_shell",
+        "coherence_boundary"
+      ]
+    },
+
+    "sources": {
+      "type": "object",
+      "properties": {
+        "composition": { "type": "string" },
+        "forcing": { "type": "string" },
+        "dynamics": { "type": "string" },
+        "thermodynamics": { "type": "string" },
+        "hydrospheric_coupling": { "type": "string" },
+        "regime_transitions": { "type": "string" },
+        "continuity_coherence": { "type": "string" }
+      },
+      "required": [
+        "composition",
+        "forcing",
+        "dynamics",
+        "thermodynamics",
+        "hydrospheric_coupling",
+        "regime_transitions",
+        "continuity_coherence"
+      ]
+    },
+
+    "signatures": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "agents": {
+      "type": "object",
+      "properties": {
+        "primary": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "secondary": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["primary", "secondary"]
+    },
+
+    "fields": {
+      "type": "object",
+      "properties": {
+        "temporal_coherence_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "regime_memory_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "oscillation_periodicity_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "drift_accumulation_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "teleconnection_continuity_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": [
+        "temporal_coherence_field",
+        "regime_memory_field",
+        "oscillation_periodicity_field",
+        "drift_accumulation_field",
+        "teleconnection_continuity_field"
+      ]
+    },
+
+    "scales": {
+      "type": "object",
+      "properties": {
+        "micro": { "type": "string" },
+        "meso": { "type": "string" },
+        "macro": { "type": "string" },
+        "mega": { "type": "string" }
+      },
+      "required": ["micro", "meso", "macro", "mega"]
+    },
+
+    "cascades": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    },
+
+    "overlays": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "summary": {
+      "type": "object",
+      "properties": {
+        "core_capabilities": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "role": { "type": "string" }
+      },
+      "required": ["core_capabilities", "role"]
+    }
+  },
+
+  "required": [
+    "envelope",
+    "components",
+    "sources",
+    "signatures",
+    "agents",
+    "fields",
+    "scales",
+    "cascades",
+    "overlays",
+    "summary"
+  ]
+}
