@@ -1,1 +1,37 @@
-.   
+{
+  "module": "atmosphere",
+  "diagnostic": "composition",
+  "category": "trace",
+  "version": "1.0",
+
+  "trace": [
+    {
+      "event": "gas_mix_evaluated",
+      "details": "nitrogen_oxygen_balance"
+    },
+    {
+      "event": "particulate_noise_detected",
+      "details": "aerosol_concentration_12"
+    },
+    {
+      "event": "humidity_consistency_checked",
+      "details": "relative_humidity_45"
+    },
+    {
+      "event": "trace_gas_analysis",
+      "details": "ozone_methane_detected"
+    },
+    {
+      "event": "operator_activation",
+      "details": [
+        "composition",
+        "continuity",
+        "coherence"
+      ]
+    },
+    {
+      "event": "regime_classification",
+      "details": "stable"
+    }
+  ]
+}
