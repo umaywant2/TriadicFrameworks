@@ -1,1 +1,110 @@
+{
+  "module": "atmosphere",
+  "category": "map",
+  "version": "1.0",
+  "layers": {
+    "dynamics": [
+      "momentum_flux",
+      "vorticity_evolution",
+      "wave_propagation",
+      "shear_transitions",
+      "instability_development"
+    ],
+    "thermodynamics": [
+      "temperature_gradients",
+      "energy_flux",
+      "phase_change",
+      "radiative_balance"
+    ],
+    "hydrospheric": [
+      "moisture_flux",
+      "evaporation",
+      "condensation",
+      "hydrological_gradients",
+      "ocean_atmosphere_coupling"
+    ],
+    "forcing": [
+      "radiative_forcing",
+      "mechanical_forcing",
+      "thermodynamic_forcing",
+      "mass_forcing",
+      "cross_domain_forcing"
+    ],
+    "teleconnection": [
+      "pacific",
+      "atlantic",
+      "indian_ocean",
+      "polar"
+    ],
+    "resonance": [
+      "oscillation_modes",
+      "harmonic_alignment",
+      "resonance_amplification"
+    ],
+    "paradox": [
+      "conflicting_gradients",
+      "inversion_conflicts",
+      "flux_paradox",
+      "coherence_paradox"
+    ],
+    "drift": [
+      "gradient_drift",
+      "flux_drift",
+      "boundary_drift",
+      "coherence_drift"
+    ],
+    "dimensional": [
+      "micro_scale",
+      "meso_scale",
+      "macro_scale"
+    ],
+    "continuity": [
+      "mass_continuity",
+      "momentum_continuity",
+      "flux_continuity"
+    ],
+    "coherence": [
+      "coherent_flux",
+      "coherent_gradients",
+      "coherent_regime_alignment"
+    ],
+    "clarity": [
+      "signal_clarity",
+      "noise_reduction",
+      "gradient_clarity"
+    ],
+    "composition": [
+      "gas_mixture",
+      "aerosol_content",
+      "particulate_distribution"
+    ],
+    "regime": [
+      "stable",
+      "transition",
+      "unstable"
+    ]
+  },
+  "coupling": {
+    "ocean": [
+      "sst_radiative_feedback",
+      "moisture_flux_modulation"
+    ],
+    "cryosphere": [
+      "albedo_phase_feedback",
+      "freeze_thaw_flux_modulation"
+    ],
+    "land": [
+      "terrain_flux_modulation",
+      "soil_moisture_energy_feedback"
+    ],
+    "biosphere": [
+      "evapotranspiration_flux",
+      "vegetation_radiative_modulation"
+    ],
+    "magnetosphere": [
+      "solar_wind_radiative_effects",
+      "geomagnetic_flux_perturbation"
+    ]
+  }
+}
 
