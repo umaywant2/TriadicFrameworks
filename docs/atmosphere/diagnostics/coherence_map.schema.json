@@ -1,1 +1,102 @@
-. 
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Coherence Map Schema (Atmosphere Module)",
+  "description": "Schema for validating coherence_map.json — coherence fields, harmonic alignment maps, instability overlays, drift reversal maps, and teleconnection coherence structures.",
+  "type": "object",
+
+  "properties": {
+    "map": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "category": { "type": "string" },
+        "version": { "type": "string" },
+        "summary": { "type": "string" },
+        "purpose": { "type": "string" }
+      },
+      "required": ["name", "category", "version", "summary", "purpose"]
+    },
+
+    "context": {
+      "type": "object",
+      "properties": {
+        "coherence_definition": { "type": "string" },
+        "global_role": { "type": "string" }
+      },
+      "required": ["coherence_definition", "global_role"]
+    },
+
+    "fields": {
+      "type": "object",
+      "properties": {
+        "harmonic_alignment_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "instability_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "drift_reversal_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "resonance_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "teleconnection_coherence_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": [
+        "harmonic_alignment_field",
+        "instability_field",
+        "drift_reversal_field",
+        "resonance_field",
+        "teleconnection_coherence_field"
+      ]
+    },
+
+    "maps": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    },
+
+    "scales": {
+      "type": "object",
+      "properties": {
+        "micro": { "type": "string" },
+        "meso": { "type": "string" },
+        "macro": { "type": "string" },
+        "mega": { "type": "string" }
+      },
+      "required": ["micro", "meso", "macro", "mega"]
+    },
+
+    "summary": {
+      "type": "object",
+      "properties": {
+        "core_capabilities": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "role": { "type": "string" }
+      },
+      "required": ["core_capabilities", "role"]
+    }
+  },
+
+  "required": [
+    "map",
+    "context",
+    "fields",
+    "maps",
+    "scales",
+    "summary"
+  ]
+}
