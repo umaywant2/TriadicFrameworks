@@ -1,1 +1,55 @@
+/* Atmosphere Module — Session Context Block (canonical styling)
+ * TriadicFrameworks Canon — Neutral, Structured, Readable
+ */
+
+.session-context {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #1f2933;
+  background-color: #f7fafc;
+  border: 1px solid #d2d6dc;
+  border-radius: 6px;
+  padding: 12px 14px;
+  max-width: 720px;
+}
+
+/* Layout */
+
+.session-context .context-item {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin-bottom: 4px;
+}
+
+.session-context .context-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Labels & Values */
+
+.session-context .context-label {
+  font-weight: 600;
+  color: #111827;
+  min-width: 140px;
+  margin-right: 8px;
+}
+
+.session-context .context-value {
+  color: #374151;
+}
+
+/* Inline separators for multi-value fields */
+
+.session-context .context-value {
+  word-break: break-word;
+}
+
+/* Optional: subtle hover to indicate “context block” without being interactive */
+
+.session-context:hover {
+  border-color: #cbd2d9;
+  background-color: #edf2f7;
+}
 
