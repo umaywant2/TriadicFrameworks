@@ -1,1 +1,158 @@
-. 
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Coherence Envelope Schema (Atmosphere Module)",
+  "description": "Schema for validating coherence_envelope.json — coherence boundaries, harmonic alignment envelopes, instability limits, drift reversal shells, and teleconnection coherence envelopes.",
+  "type": "object",
+
+  "properties": {
+    "envelope": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "category": { "type": "string" },
+        "version": { "type": "string" },
+        "summary": { "type": "string" },
+        "purpose": { "type": "string" }
+      },
+      "required": ["name", "category", "version", "summary", "purpose"]
+    },
+
+    "components": {
+      "type": "object",
+      "properties": {
+        "coherence_layer": { "type": "string" },
+        "alignment_shell": { "type": "string" },
+        "instability_boundary": { "type": "string" }
+      },
+      "required": [
+        "coherence_layer",
+        "alignment_shell",
+        "instability_boundary"
+      ]
+    },
+
+    "sources": {
+      "type": "object",
+      "properties": {
+        "composition": { "type": "string" },
+        "forcing": { "type": "string" },
+        "dynamics": { "type": "string" },
+        "thermodynamics": { "type": "string" },
+        "hydrospheric_coupling": { "type": "string" },
+        "regime_transitions": { "type": "string" },
+        "coherence_resonance": { "type": "string" }
+      },
+      "required": [
+        "composition",
+        "forcing",
+        "dynamics",
+        "thermodynamics",
+        "hydrospheric_coupling",
+        "regime_transitions",
+        "coherence_resonance"
+      ]
+    },
+
+    "signatures": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "agents": {
+      "type": "object",
+      "properties": {
+        "primary": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "secondary": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["primary", "secondary"]
+    },
+
+    "fields": {
+      "type": "object",
+      "properties": {
+        "harmonic_alignment_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "instability_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "drift_reversal_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "resonance_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "teleconnection_coherence_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": [
+        "harmonic_alignment_field",
+        "instability_field",
+        "drift_reversal_field",
+        "resonance_field",
+        "teleconnection_coherence_field"
+      ]
+    },
+
+    "scales": {
+      "type": "object",
+      "properties": {
+        "micro": { "type": "string" },
+        "meso": { "type": "string" },
+        "macro": { "type": "string" },
+        "mega": { "type": "string" }
+      },
+      "required": ["micro", "meso", "macro", "mega"]
+    },
+
+    "cascades": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    },
+
+    "overlays": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "summary": {
+      "type": "object",
+      "properties": {
+        "core_capabilities": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "role": { "type": "string" }
+      },
+      "required": ["core_capabilities", "role"]
+    }
+  },
+
+  "required": [
+    "envelope",
+    "components",
+    "sources",
+    "signatures",
+    "agents",
+    "fields",
+    "scales",
+    "cascades",
+    "overlays",
+    "summary"
+  ]
+}
