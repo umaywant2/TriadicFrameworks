@@ -1,1 +1,72 @@
-.   
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dynamics Envelope Schema",
+  "type": "object",
+  "required": ["module", "diagnostic", "category", "version", "fields", "thresholds", "operators", "regimes"],
+  "properties": {
+    "module": { "type": "string", "const": "atmosphere" },
+    "diagnostic": { "type": "string", "const": "dynamics" },
+    "category": { "type": "string", "const": "envelope" },
+    "version": { "type": "string" },
+
+    "fields": {
+      "type": "object",
+      "properties": {
+        "flow": { "type": "array", "items": { "type": "string" } },
+        "circulation": { "type": "array", "items": { "type": "string" } },
+        "motion": { "type": "array", "items": { "type": "string" } },
+        "wave": { "type": "array", "items": { "type": "string" } },
+        "instability": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["flow", "circulation", "motion", "wave", "instability"]
+    },
+
+    "thresholds": {
+      "type": "object",
+      "properties": {
+        "dynamics_clarity_min": { "type": "number" },
+        "dynamics_stability_min": { "type": "number" },
+        "dynamics_noise_max": { "type": "number" }
+      },
+      "required": [
+        "dynamics_clarity_min",
+        "dynamics_stability_min",
+        "dynamics_noise_max"
+      ]
+    },
+
+    "operators": {
+      "type": "object",
+      "properties": {
+        "dynamics": { "type": "array", "items": { "type": "string" } },
+        "continuity": { "type": "array", "items": { "type": "string" } },
+        "coherence": { "type": "array", "items": { "type": "string" } },
+        "clarity": { "type": "array", "items": { "type": "string" } },
+        "dimensional": { "type": "array", "items": { "type": "string" } },
+        "drift": { "type": "array", "items": { "type": "string" } },
+        "paradox": { "type": "array", "items": { "type": "string" } },
+        "resonance": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": [
+        "dynamics",
+        "continuity",
+        "coherence",
+        "clarity",
+        "dimensional",
+        "drift",
+        "paradox",
+        "resonance"
+      ]
+    },
+
+    "regimes": {
+      "type": "object",
+      "properties": {
+        "stable": { "type": "array", "items": { "type": "string" } },
+        "transition": { "type": "array", "items": { "type": "string" } },
+        "unstable": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["stable", "transition", "unstable"]
+    }
+  }
+}
