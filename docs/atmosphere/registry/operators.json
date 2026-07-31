@@ -1,1 +1,131 @@
+{
+  "operators": [
+    {
+      "name": "coherence",
+      "meaning": "Stable, persistent, self-maintaining atmospheric patterns.",
+      "signatures": [
+        "low_entropy",
+        "pattern_persistence",
+        "feedback_loops",
+        "minimal_drift"
+      ],
+      "outputs": [
+        "coherence_fields",
+        "stability_maps",
+        "persistence_zones"
+      ],
+      "agents": ["coherence_agent", "fluid_agent"],
+      "scales": ["meso", "macro", "mega"],
+      "phases": ["dynamics", "thermodynamics", "resonance_coherence"]
+    },
+    {
+      "name": "drift",
+      "meaning": "Instability accumulation, coherence decay, and structural tension.",
+      "signatures": [
+        "gradient_build_up",
+        "energy_accumulation",
+        "coherence_decay",
+        "pre_transition_tension"
+      ],
+      "outputs": [
+        "drift_vectors",
+        "instability_hotspots",
+        "storm_precursor_diagnostics"
+      ],
+      "agents": ["drift_agent", "thermo_agent"],
+      "scales": ["meso", "macro"],
+      "phases": ["forcing", "dynamics", "thermodynamics", "regime_transitions"]
+    },
+    {
+      "name": "paradox",
+      "meaning": "Boundary conflicts between incompatible atmospheric regimes.",
+      "signatures": [
+        "sharp_gradients",
+        "mixed_regime_coexistence",
+        "high_shear",
+        "rapid_transition_potential"
+      ],
+      "outputs": [
+        "paradox_corridors",
+        "conflict_maps",
+        "tension_zones"
+      ],
+      "agents": ["paradox_agent", "fluid_agent"],
+      "scales": ["meso", "macro"],
+      "phases": ["dynamics", "regime_transitions"]
+    },
+    {
+      "name": "continuity",
+      "meaning": "Long-term regime evolution, oscillation cycles, and structural trajectory.",
+      "signatures": [
+        "temporal_coherence",
+        "regime_memory",
+        "oscillation_periodicity",
+        "drift_accumulation_over_time"
+      ],
+      "outputs": [
+        "continuity_traces",
+        "regime_evolution_maps",
+        "oscillation_diagnostics"
+      ],
+      "agents": ["resonance_agent", "clarity_agent"],
+      "scales": ["macro", "mega"],
+      "phases": ["resonance_coherence"]
+    },
+    {
+      "name": "clarity",
+      "meaning": "Structural truth extraction — removing noise and revealing hidden patterns.",
+      "signatures": [
+        "reduced_complexity",
+        "high_signal_to_noise",
+        "pattern_convergence",
+        "multi_agent_consensus"
+      ],
+      "outputs": [
+        "clarity_pulses",
+        "simplified_structural_maps",
+        "consensus_overlays"
+      ],
+      "agents": ["clarity_agent"],
+      "scales": ["micro", "meso", "macro"],
+      "phases": ["composition", "resonance_coherence"]
+    },
+    {
+      "name": "resonance",
+      "meaning": "Oscillatory, repeating, self-reinforcing atmospheric patterns.",
+      "signatures": [
+        "periodicity",
+        "harmonic_coupling",
+        "phase_alignment",
+        "cross_scale_coherence"
+      ],
+      "outputs": [
+        "resonance_signatures",
+        "oscillation_maps",
+        "harmonic_coupling_diagnostics"
+      ],
+      "agents": ["resonance_agent"],
+      "scales": ["macro", "mega"],
+      "phases": ["forcing", "resonance_coherence"]
+    },
+    {
+      "name": "dimensional_coupling",
+      "meaning": "Cross-domain structural interactions (atmosphere ↔ ocean ↔ land ↔ cryosphere).",
+      "signatures": [
+        "multi_domain_coherence",
+        "feedback_loops",
+        "cross_domain_drift",
+        "coupled_regime_transitions"
+      ],
+      "outputs": [
+        "coupling_maps",
+        "feedback_diagnostics",
+        "cross_domain_coherence_fields"
+      ],
+      "agents": ["dimensional_agent", "hydro_agent"],
+      "scales": ["meso", "macro", "mega"],
+      "phases": ["hydrospheric_coupling", "resonance_coherence"]
+    }
+  ]
+}
 
