@@ -1,1 +1,49 @@
-.   
+{
+  "input": {
+    "momentum_flux": {
+      "horizontal_transport": 0.82,
+      "vertical_ascent": 0.41,
+      "boundary_layer_gradients": 0.63
+    },
+    "vorticity": {
+      "cyclonic_increase": 0.55,
+      "anticyclonic_decay": 0.22,
+      "shear_generation": 0.71
+    },
+    "wave_propagation": {
+      "rossby_waves": 0.48,
+      "gravity_waves": 0.66,
+      "kelvin_waves": 0.39,
+      "mixed_mode_interference": 0.52
+    },
+    "shear_transitions": {
+      "instability_onset": 0.61,
+      "jet_stream_modulation": 0.44,
+      "boundary_layer_breakdown": 0.57
+    },
+    "instability_development": {
+      "baroclinic_instability": 0.63,
+      "barotropic_instability": 0.29,
+      "convective_bursts": 0.71
+    }
+  },
+
+  "output": {
+    "clarity": "medium",
+    "stability": "transition",
+    "signature": [
+      "momentum_flux_signature",
+      "vorticity_signature",
+      "wave_propagation_signature",
+      "shear_transition_signature",
+      "instability_signature"
+    ],
+    "operators_triggered": [
+      "momentum_flux_analysis",
+      "vorticity_alignment",
+      "wave_propagation_detection",
+      "shear_transition_analysis",
+      "instability_development_evaluation"
+    ]
+  }
+}
