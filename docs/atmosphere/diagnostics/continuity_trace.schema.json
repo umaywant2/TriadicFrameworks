@@ -1,1 +1,145 @@
-. 
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Continuity Trace Schema (Atmosphere Module)",
+  "description": "Schema for validating continuity_trace.json — continuity signatures, temporal coherence traces, oscillation memory, drift accumulation paths, and long-range stability indicators.",
+  "type": "object",
+
+  "properties": {
+    "trace": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "category": { "type": "string" },
+        "version": { "type": "string" },
+        "summary": { "type": "string" },
+        "purpose": { "type": "string" }
+      },
+      "required": ["name", "category", "version", "summary", "purpose"]
+    },
+
+    "context": {
+      "type": "object",
+      "properties": {
+        "continuity_definition": { "type": "string" },
+        "global_role": { "type": "string" }
+      },
+      "required": ["continuity_definition", "global_role"]
+    },
+
+    "signatures": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "agents": {
+      "type": "object",
+      "properties": {
+        "primary": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "secondary": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["primary", "secondary"]
+    },
+
+    "fields": {
+      "type": "object",
+      "properties": {
+        "temporal_coherence_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "regime_memory_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "oscillation_periodicity_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "drift_accumulation_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "teleconnection_continuity_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": [
+        "temporal_coherence_field",
+        "regime_memory_field",
+        "oscillation_periodicity_field",
+        "drift_accumulation_field",
+        "teleconnection_continuity_field"
+      ]
+    },
+
+    "paths": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    },
+
+    "scales": {
+      "type": "object",
+      "properties": {
+        "micro": { "type": "string" },
+        "meso": { "type": "string" },
+        "macro": { "type": "string" },
+        "mega": { "type": "string" }
+      },
+      "required": ["micro", "meso", "macro", "mega"]
+    },
+
+    "cascades": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    },
+
+    "outputs": {
+      "type": "object",
+      "properties": {
+        "traces": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["traces"]
+    },
+
+    "summary": {
+      "type": "object",
+      "properties": {
+        "core_capabilities": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "role": { "type": "string" }
+      },
+      "required": ["core_capabilities", "role"]
+    }
+  },
+
+  "required": [
+    "trace",
+    "context",
+    "signatures",
+    "agents",
+    "fields",
+    "paths",
+    "scales",
+    "cascades",
+    "outputs",
+    "summary"
+  ]
+}
