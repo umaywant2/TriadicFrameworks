@@ -1,1 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Atmosphere Example Schema",
+  "type": "object",
+  "required": ["module", "category", "version", "input", "operators_triggered", "signature", "regime"],
+  "properties": {
+    "module": { "type": "string", "const": "atmosphere" },
+    "category": { "type": "string", "const": "example" },
+    "version": { "type": "string" },
+
+    "input": {
+      "type": "object",
+      "properties": {
+        "dynamics": { "type": "object" },
+        "thermodynamics": { "type": "object" },
+        "hydrospheric": { "type": "object" },
+        "forcing": { "type": "object" },
+        "teleconnection": { "type": "object" },
+        "resonance": { "type": "object" },
+        "paradox": { "type": "object" },
+        "drift": { "type": "object" },
+        "dimensional": { "type": "object" },
+        "continuity": { "type": "object" },
+        "coherence": { "type": "object" },
+        "clarity": { "type": "object" },
+        "composition": { "type": "object" }
+      },
+      "required": [
+        "dynamics",
+        "thermodynamics",
+        "hydrospheric",
+        "forcing",
+        "teleconnection",
+        "resonance",
+        "paradox",
+        "drift",
+        "dimensional",
+        "continuity",
+        "coherence",
+        "clarity",
+        "composition"
+      ]
+    },
+
+    "operators_triggered": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "signature": {
+      "type": "object"
+    },
+
+    "regime": {
+      "type": "string",
+      "enum": ["stable", "transition", "unstable"]
+    }
+  }
+}
 
