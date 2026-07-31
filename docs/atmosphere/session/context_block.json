@@ -1,1 +1,67 @@
+{
+  "context_block": {
+    "module": "Atmosphere",
+    "category": "SessionContextBlock",
+    "version": "1.0",
+    "canon": "TriadicFrameworks",
+
+    "operators": [
+      "coherence",
+      "drift",
+      "paradox",
+      "resonance",
+      "continuity",
+      "clarity",
+      "dimensional_coupling"
+    ],
+
+    "agents": [
+      "fluid_agent",
+      "thermo_agent",
+      "hydro_agent",
+      "resonance_agent",
+      "clarity_agent",
+      "dimensional_agent"
+    ],
+
+    "scales": [
+      "micro",
+      "meso",
+      "macro",
+      "mega"
+    ],
+
+    "phases": [
+      "composition",
+      "forcing",
+      "dynamics",
+      "thermodynamics",
+      "hydrospheric_coupling",
+      "regime_transitions",
+      "resonance_coherence"
+    ],
+
+    "session_focus": [
+      "prompt_system",
+      "diagnostics",
+      "extensions",
+      "cross_domain_coupling",
+      "future_domain_integration"
+    ],
+
+    "extensions": [
+      "ocean",
+      "cryosphere",
+      "land",
+      "magnetosphere",
+      "biosphere"
+    ],
+
+    "future_domains": [
+      "computational",
+      "heliosphere",
+      "exosphere"
+    ]
+  }
+}
 
