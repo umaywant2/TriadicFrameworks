@@ -1,1 +1,91 @@
+{
+  "module": {
+    "name": "AtmosphereModulePrompt",
+    "category": "PromptModule",
+    "version": "1.0",
+    "summary": "Canonical prompt specification for the Atmosphere Module, defining operator grammar, agent invocation patterns, scale selection, and multi-phase structural reasoning.",
+    "purpose": "Provide unified prompt grammar and templates for all Atmosphere Module tasks — maps, diagnostics, overlays, traces, and structural analyses."
+  },
+
+  "operators": {
+    "coherence": {
+      "agents": ["coherence_agent", "fluid_agent", "thermo_agent"],
+      "scales": ["meso", "macro", "mega"],
+      "phases": ["dynamics", "thermodynamics", "resonance_coherence"],
+      "outputs": ["coherence_fields", "stability_maps", "persistence_zones"]
+    },
+    "drift": {
+      "agents": ["drift_agent", "fluid_agent", "thermo_agent"],
+      "scales": ["meso", "macro"],
+      "phases": ["forcing", "dynamics", "thermodynamics", "regime_transitions"],
+      "outputs": ["drift_vectors", "instability_hotspots", "tension_zones"]
+    },
+    "paradox": {
+      "agents": ["paradox_agent", "fluid_agent"],
+      "scales": ["meso", "macro"],
+      "phases": ["dynamics", "regime_transitions"],
+      "outputs": ["paradox_corridors", "conflict_maps", "tension_fields"]
+    },
+    "resonance": {
+      "agents": ["resonance_agent", "dimensional_agent"],
+      "scales": ["macro", "mega"],
+      "phases": ["resonance_coherence"],
+      "outputs": ["resonance_signatures", "oscillation_maps", "harmonic_fields"]
+    },
+    "continuity": {
+      "agents": ["resonance_agent", "clarity_agent"],
+      "scales": ["macro", "mega"],
+      "phases": ["resonance_coherence"],
+      "outputs": ["continuity_traces", "evolution_maps", "oscillation_cycles"]
+    },
+    "clarity": {
+      "agents": ["clarity_agent"],
+      "scales": ["micro", "meso", "macro", "mega"],
+      "phases": ["composition", "dynamics", "thermodynamics", "resonance_coherence"],
+      "outputs": ["clarity_pulses", "truth_maps", "noise_reduction_fields"]
+    },
+    "dimensional_coupling": {
+      "agents": ["dimensional_agent", "hydro_agent"],
+      "scales": ["meso", "macro", "mega"],
+      "phases": ["hydrospheric_coupling", "resonance_coherence"],
+      "outputs": ["coupling_maps", "feedback_loops", "cross_domain_fields"]
+    }
+  },
+
+  "templates": {
+    "map": {
+      "coherence": "templates/coherence_map.md",
+      "drift": "templates/drift_map.md",
+      "paradox": "templates/paradox_map.md",
+      "resonance": "templates/resonance_map.md",
+      "dimensional_overlay": "templates/dimensional_overlay.md",
+      "continuity_trace": "templates/continuity_trace.md",
+      "nudge": "templates/nudge_map.md"
+    },
+    "diagnostic": {
+      "coherence": "diagnostics/coherence_diagnostic.md",
+      "drift": "diagnostics/drift_diagnostic.md",
+      "paradox": "diagnostics/paradox_diagnostic.md",
+      "resonance": "diagnostics/resonance_diagnostic.md",
+      "dimensional": "diagnostics/dimensional_diagnostic.md",
+      "continuity": "diagnostics/continuity_diagnostic.md",
+      "clarity": "diagnostics/clarity_diagnostic.md"
+    },
+    "examples": "prompts/examples.md"
+  },
+
+  "grammar": {
+    "structure": "<operator> → <agent> → <scale> → <phase> → <output>",
+    "scales": ["micro", "meso", "macro", "mega"],
+    "phases": [
+      "composition",
+      "forcing",
+      "dynamics",
+      "thermodynamics",
+      "hydrospheric_coupling",
+      "regime_transitions",
+      "resonance_coherence"
+    ]
+  }
+}
 
