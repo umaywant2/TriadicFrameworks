@@ -1,1 +1,91 @@
-.   
+{
+  "module": "atmosphere",
+  "diagnostic": "forcing",
+  "category": "trace",
+  "version": "1.0",
+  "events": {
+    "radiative": [
+      "shortwave_forcing_anomaly",
+      "longwave_forcing_imbalance",
+      "albedo_forcing_shift",
+      "greenhouse_forcing_amplification"
+    ],
+    "mechanical": [
+      "pressure_gradient_forcing",
+      "vorticity_driven_forcing",
+      "jet_stream_impulse_forcing",
+      "wave_driven_forcing"
+    ],
+    "thermodynamic": [
+      "lapse_rate_forcing",
+      "inversion_driven_forcing",
+      "latent_heat_forcing",
+      "radiative_cooling_forcing"
+    ],
+    "mass": [
+      "pressure_gradient_collapse",
+      "density_transition_forcing",
+      "moisture_loading_forcing"
+    ],
+    "cross_domain": [
+      "ocean_radiative_forcing",
+      "cryosphere_albedo_forcing",
+      "land_mechanical_forcing",
+      "biosphere_latent_forcing",
+      "magnetosphere_upper_atmosphere_forcing"
+    ]
+  },
+  "operators": {
+    "forcing": [
+      "radiative_forcing_analysis",
+      "mechanical_forcing_alignment",
+      "thermodynamic_forcing_detection",
+      "mass_forcing_evaluation"
+    ],
+    "continuity": [
+      "forcing_continuity",
+      "gradient_continuity"
+    ],
+    "coherence": [
+      "stable_forcing_regime",
+      "coherent_forcing_behavior"
+    ],
+    "clarity": [
+      "forcing_signal_clarity",
+      "noise_reduction"
+    ],
+    "dimensional": [
+      "micro_to_meso_forcing_scaling",
+      "meso_to_macro_forcing_propagation"
+    ],
+    "drift": [
+      "forcing_instability_propagation",
+      "forcing_drift_detection"
+    ],
+    "paradox": [
+      "conflicting_forcing_signals",
+      "inversion_paradox"
+    ],
+    "resonance": [
+      "forcing_driven_oscillations",
+      "harmonic_forcing_alignment"
+    ]
+  },
+  "regimes": {
+    "stable": [
+      "coherent_forcing_behavior",
+      "predictable_radiative_cycles",
+      "stable_cross_domain_coupling"
+    ],
+    "transition": [
+      "partial_forcing_breakdown",
+      "mixed_mode_forcing_interference",
+      "forcing_driven_instability"
+    ],
+    "unstable": [
+      "forcing_collapse",
+      "rapid_forcing_reversal",
+      "global_regime_disruption"
+    ]
+  }
+}
