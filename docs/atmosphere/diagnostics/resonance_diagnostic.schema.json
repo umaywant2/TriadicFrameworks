@@ -1,1 +1,137 @@
-. 
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Resonance Diagnostic Schema (Atmosphere Module)",
+  "description": "Schema for validating resonance_diagnostic.json — oscillation fields, harmonic coupling, phase alignment, teleconnection resonance, coherence envelopes.",
+  "type": "object",
+
+  "properties": {
+    "diagnostic": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "category": { "type": "string" },
+        "version": { "type": "string" },
+        "summary": { "type": "string" },
+        "purpose": { "type": "string" }
+      },
+      "required": ["name", "category", "version", "summary", "purpose"]
+    },
+
+    "context": {
+      "type": "object",
+      "properties": {
+        "resonance_definition": { "type": "string" },
+        "global_role": { "type": "string" }
+      },
+      "required": ["resonance_definition", "global_role"]
+    },
+
+    "agents": {
+      "type": "object",
+      "properties": {
+        "primary": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "secondary": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["primary", "secondary"]
+    },
+
+    "fields": {
+      "type": "object",
+      "properties": {
+        "oscillation_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "planetary_wave_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "thermal_oscillation_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "teleconnection_field": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": [
+        "oscillation_field",
+        "planetary_wave_field",
+        "thermal_oscillation_field",
+        "teleconnection_field"
+      ]
+    },
+
+    "metrics": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+
+    "scales": {
+      "type": "object",
+      "properties": {
+        "micro": { "type": "string" },
+        "meso": { "type": "string" },
+        "macro": { "type": "string" },
+        "mega": { "type": "string" }
+      },
+      "required": ["micro", "meso", "macro", "mega"]
+    },
+
+    "failure_modes": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+
+    "cascades": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    },
+
+    "diagnostics": {
+      "type": "object",
+      "properties": {
+        "maps": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["maps"]
+    },
+
+    "summary": {
+      "type": "object",
+      "properties": {
+        "core_capabilities": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "role": { "type": "string" }
+      },
+      "required": ["core_capabilities", "role"]
+    }
+  },
+
+  "required": [
+    "diagnostic",
+    "context",
+    "agents",
+    "fields",
+    "metrics",
+    "scales",
+    "failure_modes",
+    "cascades",
+    "diagnostics",
+    "summary"
+  ]
+}
