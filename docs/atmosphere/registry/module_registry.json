@@ -1,1 +1,98 @@
-.   
+{
+  "module": {
+    "name": "Atmosphere",
+    "category": "Environmental",
+    "version": "1.0",
+    "summary": "TriadicFrameworks Atmosphere Module — multi-scale atmospheric diagnostics, envelopes, maps, traces, and operator-aligned structural analysis.",
+    "purpose": "Provide atmospheric structural diagnostics and cross-domain coupling for RTT, GU, and TriadicFrameworks."
+  },
+
+  "operators": [
+    "continuity",
+    "coherence",
+    "clarity",
+    "dimensional",
+    "drift",
+    "paradox",
+    "resonance",
+    "composition",
+    "dynamics",
+    "forcing",
+    "hydrospheric",
+    "nudge",
+    "teleconnection",
+    "thermodynamics"
+  ],
+
+  "diagnostics": {
+    "completed": [
+      "continuity",
+      "coherence",
+      "clarity"
+    ],
+    "partial": [
+      "dimensional",
+      "drift",
+      "paradox",
+      "resonance"
+    ],
+    "scaffolded": [
+      "composition",
+      "dynamics",
+      "forcing",
+      "hydrospheric",
+      "nudge",
+      "teleconnection",
+      "thermodynamics"
+    ]
+  },
+
+  "scales": {
+    "micro": "turbulence, instability, boundary-layer transitions",
+    "meso": "terrain-driven flows, regional regimes",
+    "macro": "synoptic systems, continental patterns",
+    "mega": "planetary waves, teleconnections, global oscillations"
+  },
+
+  "seven_phases": [
+    "composition",
+    "forcing",
+    "dynamics",
+    "thermodynamics",
+    "hydrospheric_coupling",
+    "regime_transitions",
+    "resonance_coherence"
+  ],
+
+  "coupling": {
+    "cryosphere": [
+      "albedo_to_radiative_balance",
+      "melt_to_convection"
+    ],
+    "ocean": [
+      "sst_to_moisture_flux",
+      "currents_to_planetary_waves"
+    ],
+    "land": [
+      "terrain_to_flow_modulation",
+      "soil_moisture_to_heat_flux"
+    ],
+    "biosphere": [
+      "evapotranspiration_to_humidity",
+      "carbon_flux_to_radiative_balance"
+    ],
+    "magnetosphere": [
+      "solar_wind_to_geomagnetic_disturbance",
+      "magnetospheric_oscillations_to_wave_response"
+    ]
+  },
+
+  "registry": {
+    "agents": "agents.json",
+    "operators": "operators.json",
+    "scales": "scales.json",
+    "seven_phases": "seven_phases.json",
+    "module_registry": "module_registry.json",
+    "index": "index.md"
+  }
+}
