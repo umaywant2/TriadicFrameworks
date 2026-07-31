@@ -1,1 +1,64 @@
-.   
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dynamics Trace Schema",
+  "type": "object",
+  "required": ["module", "diagnostic", "category", "version", "events", "operators", "regimes"],
+  "properties": {
+    "module": { "type": "string", "const": "atmosphere" },
+    "diagnostic": { "type": "string", "const": "dynamics" },
+    "category": { "type": "string", "const": "trace" },
+    "version": { "type": "string" },
+
+    "events": {
+      "type": "object",
+      "properties": {
+        "momentum_flux": { "type": "array", "items": { "type": "string" } },
+        "vorticity_evolution": { "type": "array", "items": { "type": "string" } },
+        "wave_propagation": { "type": "array", "items": { "type": "string" } },
+        "shear_transitions": { "type": "array", "items": { "type": "string" } },
+        "instability_development": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": [
+        "momentum_flux",
+        "vorticity_evolution",
+        "wave_propagation",
+        "shear_transitions",
+        "instability_development"
+      ]
+    },
+
+    "operators": {
+      "type": "object",
+      "properties": {
+        "dynamics": { "type": "array", "items": { "type": "string" } },
+        "continuity": { "type": "array", "items": { "type": "string" } },
+        "coherence": { "type": "array", "items": { "type": "string" } },
+        "clarity": { "type": "array", "items": { "type": "string" } },
+        "dimensional": { "type": "array", "items": { "type": "string" } },
+        "drift": { "type": "array", "items": { "type": "string" } },
+        "paradox": { "type": "array", "items": { "type": "string" } },
+        "resonance": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": [
+        "dynamics",
+        "continuity",
+        "coherence",
+        "clarity",
+        "dimensional",
+        "drift",
+        "paradox",
+        "resonance"
+      ]
+    },
+
+    "regimes": {
+      "type": "object",
+      "properties": {
+        "stable": { "type": "array", "items": { "type": "string" } },
+        "transition": { "type": "array", "items": { "type": "string" } },
+        "unstable": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["stable", "transition", "unstable"]
+    }
+  }
+}
