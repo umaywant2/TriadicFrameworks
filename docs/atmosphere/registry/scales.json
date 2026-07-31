@@ -1,1 +1,45 @@
+{
+  "scales": [
+    {
+      "id": 1,
+      "name": "micro",
+      "range": "millimeters_to_meters",
+      "description": "Small-scale atmospheric processes: aerosols, particulates, microphysics, condensation nuclei, droplet formation, and micro-turbulence.",
+      "domains": ["composition", "thermodynamics"],
+      "operators": ["clarity", "coherence"],
+      "agents": ["chem_agent", "thermo_agent", "clarity_agent"],
+      "phases": ["composition", "thermodynamics"]
+    },
+    {
+      "id": 2,
+      "name": "meso",
+      "range": "kilometers_to_hundreds_of_kilometers",
+      "description": "Cloud systems, convection, thunderstorms, mesoscale complexes, sea breezes, fronts, and regional circulation.",
+      "domains": ["dynamics", "forcing", "regime_transitions"],
+      "operators": ["coherence", "drift", "paradox"],
+      "agents": ["fluid_agent", "thermo_agent", "drift_agent", "paradox_agent"],
+      "phases": ["dynamics", "forcing", "regime_transitions"]
+    },
+    {
+      "id": 3,
+      "name": "macro",
+      "range": "continental_to_hemispheric",
+      "description": "Jet streams, storm tracks, synoptic systems, Rossby waves, large-scale pressure fields, and planetary circulation cells.",
+      "domains": ["dynamics", "thermodynamics", "resonance"],
+      "operators": ["coherence", "drift", "resonance", "continuity"],
+      "agents": ["fluid_agent", "radiative_agent", "resonance_agent"],
+      "phases": ["dynamics", "thermodynamics", "resonance_coherence"]
+    },
+    {
+      "id": 4,
+      "name": "mega",
+      "range": "planetary_to_global",
+      "description": "Planetary waves, global oscillations (ENSO, MJO, NAO, QBO), teleconnections, AMOC interactions, and long-term climate coherence.",
+      "domains": ["resonance", "dimensional_coupling"],
+      "operators": ["resonance", "continuity", "dimensional_coupling"],
+      "agents": ["resonance_agent", "dimensional_agent", "clarity_agent"],
+      "phases": ["resonance_coherence", "hydrospheric_coupling"]
+    }
+  ]
+}
 
