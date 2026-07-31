@@ -1,1 +1,81 @@
-.   
+{
+  "module": "atmosphere",
+  "diagnostic": "teleconnection",
+  "category": "trace",
+  "version": "1.0",
+  "events": {
+    "pacific": [
+      "enso_shift_event",
+      "pdo_phase_flip",
+      "pacific_wave_train_disruption"
+    ],
+    "atlantic": [
+      "nao_phase_reversal",
+      "amo_state_shift",
+      "atlantic_ridge_event"
+    ],
+    "indian_ocean": [
+      "iod_state_transition",
+      "monsoon_coupling_event",
+      "equatorial_wave_alignment_shift"
+    ],
+    "polar": [
+      "ao_phase_breakdown",
+      "polar_vortex_weakening",
+      "stratospheric_warming_trigger"
+    ]
+  },
+  "operators": {
+    "teleconnection": [
+      "teleconnection_alignment",
+      "basin_coupling_detection",
+      "wave_train_analysis",
+      "regime_shift_precursor_evaluation"
+    ],
+    "continuity": [
+      "basin_continuity",
+      "wave_train_continuity"
+    ],
+    "coherence": [
+      "stable_basin_coupling",
+      "coherent_wave_train_behavior"
+    ],
+    "clarity": [
+      "teleconnection_signal_clarity",
+      "noise_reduction"
+    ],
+    "dimensional": [
+      "cross_basin_scaling",
+      "global_wave_train_propagation"
+    ],
+    "drift": [
+      "teleconnection_instability_propagation",
+      "basin_drift_detection"
+    ],
+    "paradox": [
+      "conflicting_basin_signals",
+      "inversion_paradox"
+    ],
+    "resonance": [
+      "basin_resonance_alignment",
+      "global_wave_resonance"
+    ]
+  },
+  "regimes": {
+    "stable": [
+      "coherent_basin_coupling",
+      "predictable_wave_train_cycles",
+      "stable_regime_alignment"
+    ],
+    "transition": [
+      "partial_basin_breakdown",
+      "mixed_mode_wave_interference",
+      "precursor_driven_regime_shift"
+    ],
+    "unstable": [
+      "teleconnection_collapse",
+      "rapid_basin_reversal",
+      "global_regime_disruption"
+    ]
+  }
+}
