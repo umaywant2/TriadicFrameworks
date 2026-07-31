@@ -1,1 +1,154 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Atmosphere Session Context Block Schema",
+  "description": "Validation schema for TriadicFrameworks Atmosphere Module session context block.",
+  "type": "object",
+
+  "properties": {
+    "module": {
+      "type": "string",
+      "const": "Atmosphere"
+    },
+
+    "category": {
+      "type": "string",
+      "const": "SessionContextBlock"
+    },
+
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+$"
+    },
+
+    "canon": {
+      "type": "string",
+      "const": "TriadicFrameworks"
+    },
+
+    "operators": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "coherence",
+          "drift",
+          "paradox",
+          "resonance",
+          "continuity",
+          "clarity",
+          "dimensional_coupling"
+        ]
+      },
+      "minItems": 7,
+      "maxItems": 7
+    },
+
+    "agents": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "fluid_agent",
+          "thermo_agent",
+          "hydro_agent",
+          "resonance_agent",
+          "clarity_agent",
+          "dimensional_agent"
+        ]
+      },
+      "minItems": 6,
+      "maxItems": 6
+    },
+
+    "scales": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["micro", "meso", "macro", "mega"]
+      },
+      "minItems": 4,
+      "maxItems": 4
+    },
+
+    "phases": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "composition",
+          "forcing",
+          "dynamics",
+          "thermodynamics",
+          "hydrospheric_coupling",
+          "regime_transitions",
+          "resonance_coherence"
+        ]
+      },
+      "minItems": 7,
+      "maxItems": 7
+    },
+
+    "session_focus": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "prompt_system",
+          "diagnostics",
+          "extensions",
+          "cross_domain_coupling",
+          "future_domain_integration"
+        ]
+      },
+      "minItems": 5,
+      "maxItems": 5
+    },
+
+    "extensions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "ocean",
+          "cryosphere",
+          "land",
+          "magnetosphere",
+          "biosphere"
+        ]
+      },
+      "minItems": 5,
+      "maxItems": 5
+    },
+
+    "future_domains": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "computational",
+          "heliosphere",
+          "exosphere"
+        ]
+      },
+      "minItems": 3,
+      "maxItems": 3
+    }
+  },
+
+  "required": [
+    "module",
+    "category",
+    "version",
+    "canon",
+    "operators",
+    "agents",
+    "scales",
+    "phases",
+    "session_focus",
+    "extensions",
+    "future_domains"
+  ],
+
+  "additionalProperties": false
+}
 
