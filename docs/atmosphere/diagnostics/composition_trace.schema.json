@@ -1,1 +1,40 @@
-.   
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "composition_trace",
+  "type": "object",
+
+  "properties": {
+    "module": { "type": "string" },
+    "diagnostic": { "type": "string" },
+    "category": { "type": "string" },
+    "version": { "type": "string" },
+
+    "trace": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "event": { "type": "string" },
+          "details": {
+            "oneOf": [
+              { "type": "string" },
+              {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            ]
+          }
+        },
+        "required": ["event", "details"]
+      }
+    }
+  },
+
+  "required": [
+    "module",
+    "diagnostic",
+    "category",
+    "version",
+    "trace"
+  ]
+}
