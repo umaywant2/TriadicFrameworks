@@ -1,1 +1,69 @@
-.   
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Thermodynamics Map Schema",
+  "type": "object",
+  "required": ["module", "diagnostic", "category", "version", "layers", "operators", "regimes", "coupling"],
+  "properties": {
+    "module": { "type": "string", "const": "atmosphere" },
+    "diagnostic": { "type": "string", "const": "thermodynamics" },
+    "category": { "type": "string", "const": "map" },
+    "version": { "type": "string" },
+
+    "layers": {
+      "type": "object",
+      "properties": {
+        "temperature": { "type": "array", "items": { "type": "string" } },
+        "energy_flux": { "type": "array", "items": { "type": "string" } },
+        "phase_change": { "type": "array", "items": { "type": "string" } },
+        "radiative_balance": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["temperature", "energy_flux", "phase_change", "radiative_balance"]
+    },
+
+    "operators": {
+      "type": "object",
+      "properties": {
+        "thermodynamics": { "type": "array", "items": { "type": "string" } },
+        "continuity": { "type": "array", "items": { "type": "string" } },
+        "coherence": { "type": "array", "items": { "type": "string" } },
+        "clarity": { "type": "array", "items": { "type": "string" } },
+        "dimensional": { "type": "array", "items": { "type": "string" } },
+        "drift": { "type": "array", "items": { "type": "string" } },
+        "paradox": { "type": "array", "items": { "type": "string" } },
+        "resonance": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": [
+        "thermodynamics",
+        "continuity",
+        "coherence",
+        "clarity",
+        "dimensional",
+        "drift",
+        "paradox",
+        "resonance"
+      ]
+    },
+
+    "regimes": {
+      "type": "object",
+      "properties": {
+        "stable": { "type": "array", "items": { "type": "string" } },
+        "transition": { "type": "array", "items": { "type": "string" } },
+        "unstable": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["stable", "transition", "unstable"]
+    },
+
+    "coupling": {
+      "type": "object",
+      "properties": {
+        "ocean": { "type": "array", "items": { "type": "string" } },
+        "cryosphere": { "type": "array", "items": { "type": "string" } },
+        "land": { "type": "array", "items": { "type": "string" } },
+        "biosphere": { "type": "array", "items": { "type": "string" } },
+        "magnetosphere": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": ["ocean", "cryosphere", "land", "biosphere", "magnetosphere"]
+    }
+  }
+}
