@@ -1,1 +1,23 @@
+{
+  "module": "atmosphere",
+  "category": "example",
+  "version": "1.0",
+  "scenario": "pre_convective_burst",
+  "input": {
+    "dynamics": { "momentum_flux": 0.78, "vorticity_evolution": 0.81, "instability_development": 0.74 },
+    "thermodynamics": { "temperature_gradients": -9.2, "energy_flux": 188, "radiative_balance": 0.42 },
+    "hydrospheric": { "moisture_flux": 0.88, "evaporation": 0.71, "condensation": 0.92 },
+    "forcing": { "radiative": 355, "mechanical": 0.63 },
+    "teleconnection": { "pacific": 0.44, "polar": 0.52 },
+    "resonance": { "oscillation_modes": 0.71 },
+    "paradox": { "conflicting_gradients": 0.52 },
+    "drift": { "gradient_drift": 0.63 },
+    "dimensional": { "meso_scale": 0.71 },
+    "continuity": { "mass_continuity": 0.41 },
+    "coherence": { "coherent_flux": 0.33 },
+    "clarity": { "signal_clarity": 0.41 },
+    "composition": { "aerosol_content": 0.63 }
+  },
+  "regime": "unstable"
+}
 
