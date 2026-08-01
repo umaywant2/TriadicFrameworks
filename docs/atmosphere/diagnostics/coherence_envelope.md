@@ -1,5 +1,4 @@
-# 🌐 **/docs/atmosphere/diagnostics/coherence_envelope.md**  
-### *Atmosphere Module — Coherence Envelope (Full Canon)*
+# 🌐 **Atmosphere Module — Coherence Envelope (Full Canon)**
 
 ## Envelope Identity
 - **envelope.name:** CoherenceEnvelopeAtmosphere  
