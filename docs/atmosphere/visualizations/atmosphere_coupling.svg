@@ -1,1 +1,36 @@
+<svg width="960" height="540" viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="540" fill="#0d1b2a"/>
+
+  <text x="480" y="60" font-size="36" fill="#ffffff" text-anchor="middle">
+    Atmosphere Coupling Map
+  </text>
+
+  <!-- Atmosphere Core -->
+  <circle cx="480" cy="270" r="110" fill="#1e3a5f" opacity="0.9"/>
+  <text x="480" y="280" font-size="26" fill="#ffffff" text-anchor="middle">
+    Atmosphere
+  </text>
+
+  <!-- Coupling Domains -->
+  <g font-size="20" fill="#cfe8ff">
+    <text x="480" y="120" text-anchor="middle">Cryosphere</text>
+    <text x="480" y="480" text-anchor="middle">Ocean</text>
+    <text x="240" y="270" text-anchor="middle">Land</text>
+    <text x="720" y="270" text-anchor="middle">Biosphere</text>
+    <text x="480" y="420" text-anchor="middle">Magnetosphere</text>
+  </g>
+
+  <!-- Lines -->
+  <g stroke="#4fa3ff" stroke-width="2" opacity="0.6">
+    <line x1="480" y1="160" x2="480" y2="200"/>
+    <line x1="480" y1="340" x2="480" y2="440"/>
+    <line x1="300" y1="270" x2="370" y2="270"/>
+    <line x1="590" y1="270" x2="660" y2="270"/>
+    <line x1="480" y1="320" x2="480" y2="380"/>
+  </g>
+
+  <text x="480" y="520" font-size="16" fill="#88b7ff" text-anchor="middle">
+    TriadicFrameworks — Cross‑Module Coupling Visualization
+  </text>
+</svg>
 
