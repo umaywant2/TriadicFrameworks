@@ -1,1 +1,86 @@
-
+{
+  "agent": "atmosphere_agent",
+  "module": "atmosphere",
+  "version": "1.0",
+  "description": "AI agent for evaluating, interpreting, and classifying atmospheric states using the Atmosphere module.",
+  "capabilities": {
+    "evaluate_examples": true,
+    "run_diagnostics": true,
+    "generate_signatures": true,
+    "classify_regimes": true,
+    "activate_operators": true,
+    "cross_module_coupling": true
+  },
+  "inputs": {
+    "required_domains": [
+      "dynamics",
+      "thermodynamics",
+      "hydrospheric",
+      "forcing",
+      "teleconnection",
+      "resonance",
+      "paradox",
+      "drift",
+      "dimensional",
+      "continuity",
+      "coherence",
+      "clarity",
+      "composition"
+    ]
+  },
+  "outputs": {
+    "signature": "module_level_signature",
+    "regime": "stable | transition | unstable",
+    "operators_triggered": "list_of_operators",
+    "trace_events": "list_of_events"
+  },
+  "operator_sets": {
+    "module_level": [
+      "atmosphere_alignment",
+      "atmosphere_continuity",
+      "atmosphere_coherence",
+      "atmosphere_clarity",
+      "atmosphere_regime",
+      "atmosphere_resonance",
+      "atmosphere_drift",
+      "atmosphere_paradox",
+      "atmosphere_dimensional",
+      "atmosphere_composition"
+    ],
+    "diagnostic_level": "inherit_all_diagnostic_operators"
+  },
+  "regime_rules": {
+    "stable": {
+      "radiative_balance_min": 0.75,
+      "coherence_min": 0.75,
+      "drift_max": 0.35,
+      "paradox_max": 0.25
+    },
+    "transition": {
+      "radiative_balance_min": 0.45,
+      "coherence_min": 0.45,
+      "drift_max": 0.65,
+      "paradox_max": 0.55
+    },
+    "unstable": {
+      "radiative_balance_max": 0.45,
+      "coherence_max": 0.45,
+      "drift_min": 0.65,
+      "paradox_min": 0.55
+    }
+  },
+  "example_directory": "/docs/atmosphere/examples",
+  "trace_integration": {
+    "use_module_trace": true,
+    "use_diagnostic_traces": true
+  },
+  "coupling": {
+    "supported_domains": [
+      "cryosphere",
+      "ocean",
+      "land",
+      "biosphere",
+      "magnetosphere"
+    ]
+  }
+}
