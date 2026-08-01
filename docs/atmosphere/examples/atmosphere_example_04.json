@@ -1,1 +1,29 @@
+{
+  "module": "atmosphere",
+  "category": "example",
+  "version": "1.0",
+  "scenario": "cryosphere_coupling_event",
+  "input": {
+    "dynamics": { "momentum_flux": 0.41, "wave_propagation": 0.52 },
+    "thermodynamics": { "radiative_balance": 0.44, "temperature_gradients": -3.8 },
+    "hydrospheric": { "moisture_flux": 0.33 },
+    "forcing": { "radiative": 275 },
+    "teleconnection": { "polar": 0.81 },
+    "resonance": { "harmonic_alignment": 0.52 },
+    "paradox": { "inversion_conflicts": 0.22 },
+    "drift": { "boundary_drift": 0.33 },
+    "dimensional": { "macro_scale": 0.52 },
+    "continuity": { "mass_continuity": 0.63 },
+    "coherence": { "coherent_flux": 0.52 },
+    "clarity": { "signal_clarity": 0.71 },
+    "composition": { "aerosol_content": 0.22 }
+  },
+  "coupling": {
+    "cryosphere": {
+      "freeze_thaw_flux_modulation": 0.81,
+      "albedo_phase_feedback": 0.63
+    }
+  },
+  "regime": "transition"
+}
 
