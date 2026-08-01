@@ -1,1 +1,39 @@
+<svg width="960" height="540" viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="540" fill="#101820"/>
+
+  <text x="480" y="60" font-size="36" fill="#ffffff" text-anchor="middle">
+    Atmosphere Regimes
+  </text>
+
+  <!-- Stable -->
+  <circle cx="240" cy="300" r="120" fill="#2e8b57" opacity="0.85"/>
+  <text x="240" y="310" font-size="28" fill="#ffffff" text-anchor="middle">
+    Stable
+  </text>
+  <text x="240" y="350" font-size="16" fill="#d8ffd8" text-anchor="middle">
+    High coherence • Low drift • Balanced radiative flux
+  </text>
+
+  <!-- Transition -->
+  <circle cx="480" cy="300" r="120" fill="#daa520" opacity="0.85"/>
+  <text x="480" y="310" font-size="28" fill="#ffffff" text-anchor="middle">
+    Transition
+  </text>
+  <text x="480" y="350" font-size="16" fill="#fff4d0" text-anchor="middle">
+    Moderate coherence • Moderate drift • Shifting gradients
+  </text>
+
+  <!-- Unstable -->
+  <circle cx="720" cy="300" r="120" fill="#8b0000" opacity="0.85"/>
+  <text x="720" y="310" font-size="28" fill="#ffffff" text-anchor="middle">
+    Unstable
+  </text>
+  <text x="720" y="350" font-size="16" fill="#ffd0d0" text-anchor="middle">
+    Low coherence • High drift • Paradox cascades
+  </text>
+
+  <text x="480" y="520" font-size="16" fill="#88b7ff" text-anchor="middle">
+    TriadicFrameworks — Regime Classification Visualization
+  </text>
+</svg>
 
