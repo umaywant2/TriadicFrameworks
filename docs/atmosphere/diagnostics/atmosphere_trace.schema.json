@@ -1,1 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Atmosphere Trace Schema",
+  "type": "object",
+  "required": ["module", "category", "version", "events", "operators_triggered", "regime_transitions"],
+  "properties": {
+    "module": { "type": "string", "const": "atmosphere" },
+    "category": { "type": "string", "const": "trace" },
+    "version": { "type": "string" },
 
+    "events": {
+      "type": "object",
+      "properties": {
+        "dynamics": { "type": "array", "items": { "type": "string" } },
+        "thermodynamics": { "type": "array", "items": { "type": "string" } },
+        "hydrospheric": { "type": "array", "items": { "type": "string" } },
+        "forcing": { "type": "array", "items": { "type": "string" } },
+        "teleconnection": { "type": "array", "items": { "type": "string" } },
+        "resonance": { "type": "array", "items": { "type": "string" } },
+        "paradox": { "type": "array", "items": { "type": "string" } },
+        "drift": { "type": "array", "items": { "type": "string" } },
+        "dimensional": { "type": "array", "items": { "type": "string" } },
+        "continuity": { "type": "array", "items": { "type": "string" } },
+        "coherence": { "type": "array", "items": { "type": "string" } },
+        "clarity": { "type": "array", "items": { "type": "string" } },
+        "composition": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": [
+        "dynamics",
+        "thermodynamics",
+        "hydrospheric",
+        "forcing",
+        "teleconnection",
+        "resonance",
+        "paradox",
+        "drift",
+        "dimensional",
+        "continuity",
+        "coherence",
+        "clarity",
+        "composition"
+      ]
+    },
+
+    "operators_triggered": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "regime_transitions": {
+      "type": "object",
+      "properties": {
+        "stable_to_transition": { "type": "array", "items": { "type": "string" } },
+        "transition_to_unstable": { "type": "array", "items": { "type": "string" } },
+        "unstable_to_stable": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": [
+        "stable_to_transition",
+        "transition_to_unstable",
+        "unstable_to_stable"
+      ]
+    }
+  }
+}
