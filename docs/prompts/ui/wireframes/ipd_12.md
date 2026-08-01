@@ -1,9 +1,10 @@
 # **TOP‑LEVEL LAYOUT**
 
 ```
+-
 ┌──────────────────────────────────────────────────────────────┐
-│ Prompt Composer — IPD‑12 Mode                                 │
-│ Engine: RTT‑IPD‑12  |  Regime: Mid → Deep                     │
+│ Prompt Composer — IPD‑12 Mode                                │
+│ Engine: RTT‑IPD‑12  |  Regime: Mid → Deep                    │
 │ Drift Mode: ACTIVE                                           │
 └──────────────────────────────────────────────────────────────┘
 ```
@@ -13,24 +14,25 @@
 # **SECTION 1 — Process Capture Panel**
 
 ```
+-
 ┌──────────────────────────────────────────────────────────────┐
-│ PROCESS CAPTURE                                               │
+│ PROCESS CAPTURE                                              │
 │                                                              │
-│ [Process A]  (required)                                       │
-│   • Purpose                                                   │
-│   • Boundaries                                                │
-│   • Structural Layers                                         │
-│   • Operational Flow                                          │
-│   • Coherence Baseline                                        │
+│ [Process A]  (required)                                      │
+│   • Purpose                                                  │
+│   • Boundaries                                               │
+│   • Structural Layers                                        │
+│   • Operational Flow                                         │
+│   • Coherence Baseline                                       │
 │                                                              │
-│ [Process B]  (required)                                       │
-│   • Purpose                                                   │
-│   • Boundaries                                                │
-│   • Structural Layers                                         │
-│   • Operational Flow                                          │
-│   • Coherence Baseline                                        │
+│ [Process B]  (required)                                      │
+│   • Purpose                                                  │
+│   • Boundaries                                               │
+│   • Structural Layers                                        │
+│   • Operational Flow                                         │
+│   • Coherence Baseline                                       │
 │                                                              │
-│ [+ Add Process] (optional)                                    │
+│ [+ Add Process] (optional)                                   │
 └──────────────────────────────────────────────────────────────┘
 ```
 
@@ -44,9 +46,10 @@
 # **SECTION 2 — Operator Grammar Panel**
 
 ```
-┌──────────────────────────────────────────────────────────────┐
+-
+┌───────────────────────────────────────────────────────────────┐
 │ OPERATORS (IPD‑12)                                            │
-│                                                              │
+│                                                               │
 │  [map_process()]        active when ≥1 process                │
 │  [compare_process()]    active when ≥2 processes              │
 │  [drift()]              active when capture complete          │
@@ -54,11 +57,11 @@
 │  [detect_divergence()]  active when drift baseline exists     │
 │  [align_coherence()]    active when coherence baseline exists │
 │  [cross_system()]       active when relationships defined     │
-│                                                              │
+│                                                               │
 │ Disabled Operators:                                           │
 │  substrate(), invert(), composite_regime()                    │
 │  (tooltip: “Requires RTT‑∞ or RTT/12 composite engine.”)      │
-└──────────────────────────────────────────────────────────────┘
+└───────────────────────────────────────────────────────────────┘
 ```
 
 ---
@@ -66,24 +69,25 @@
 # **SECTION 3 — Drift Analysis Panel**
 
 ```
+-
 ┌──────────────────────────────────────────────────────────────┐
-│ DRIFT ANALYSIS                                                │
+│ DRIFT ANALYSIS                                               │
 │                                                              │
-│ Divergence Points:                                            │
-│   [list auto‑generated from drift()]                          │
+│ Divergence Points:                                           │
+│   [list auto‑generated from drift()]                         │
 │                                                              │
-│ Drift‑Tensor Visualization:                                   │
-│   ┌──────────────────────────────┐                            │
-│   │  Layer 1: geometric drift     │                            │
-│   │  Layer 2: operational drift   │                            │
-│   │  Layer 3: temporal drift      │                            │
-│   │  Layer 4: conceptual drift    │                            │
-│   └──────────────────────────────┘                            │
+│ Drift‑Tensor Visualization:                                  │
+│   ┌──────────────────────────────┐                           │
+│   │  Layer 1: geometric drift     │                          │
+│   │  Layer 2: operational drift   │                          │
+│   │  Layer 3: temporal drift      │                          │
+│   │  Layer 4: conceptual drift    │                          │
+│   └──────────────────────────────┘                           │
 │                                                              │
-│ Regime Shift Indicators:                                      │
-│   • craft → digital                                            │
-│   • manual → automated                                         │
-│   • interpretive → structural                                  │
+│ Regime Shift Indicators:                                     │
+│   • craft → digital                                          │
+│   • manual → automated                                       │
+│   • interpretive → structural                                │
 └──────────────────────────────────────────────────────────────┘
 ```
 
@@ -95,26 +99,27 @@
 # **SECTION 4 — Coherence Alignment Panel**
 
 ```
+-
 ┌──────────────────────────────────────────────────────────────┐
-│ COHERENCE ALIGNMENT                                           │
+│ COHERENCE ALIGNMENT                                          │
 │                                                              │
-│ Coherence Anchors:                                            │
-│   • shared structure                                           │
-│   • shared constraints                                         │
-│   • shared operators                                           │
-│   • shared regime boundaries                                   │
+│ Coherence Anchors:                                           │
+│   • shared structure                                         │
+│   • shared constraints                                       │
+│   • shared operators                                         │
+│   • shared regime boundaries                                 │
 │                                                              │
-│ Restoration Points:                                           │
-│   • hybrid workflows                                           │
-│   • cross‑system tuning                                        │
-│   • alignment anchors                                          │
+│ Restoration Points:                                          │
+│   • hybrid workflows                                         │
+│   • cross‑system tuning                                      │
+│   • alignment anchors                                        │
 │                                                              │
-│ Compatibility Map:                                            │
-│   ┌──────────────────────────────┐                            │
-│   │ Process A ↔ Process B         │                            │
-│   │   aligned: X                  │                            │
-│   │   misaligned: Y               │                            │
-│   └──────────────────────────────┘                            │
+│ Compatibility Map:                                           │
+│   ┌──────────────────────────────┐                           │
+│   │ Process A ↔ Process B         │                          │
+│   │   aligned: X                  │                          │
+│   │   misaligned: Y               │                          │
+│   └──────────────────────────────┘                           │
 └──────────────────────────────────────────────────────────────┘
 ```
 
@@ -127,23 +132,24 @@
 # **SECTION 5 — Cross‑System Mapping Canvas**
 
 ```
+-
 ┌──────────────────────────────────────────────────────────────┐
-│ CROSS‑SYSTEM MAPPING                                          │
+│ CROSS‑SYSTEM MAPPING                                         │
 │                                                              │
-│ Graph View:                                                   │
-│   ┌──────────────────────────────────────────────┐            │
-│   │ Process A ───── shared operators ───── Process B │        │
-│   │      │                     │                     │        │
-│   │  constraints           boundaries             layers       │
-│   └──────────────────────────────────────────────┘            │
+│ Graph View:                                                  │
+│   ┌──────────────────────────────────────────────────────┐   │
+│   │ Process A ───── shared operators ───── Process B     │   │
+│   │      │                     │               │         |   │
+│   │  constraints           boundaries        layers      |   │
+│   └──────────────────────────────────────────────────────┘   │
 │                                                              │
-│ Relationship Types:                                           │
-│   • structural                                                 │
-│   • operational                                                │
-│   • temporal                                                   │
-│   • conceptual                                                 │
+│ Relationship Types:                                          │
+│   • structural                                               │
+│   • operational                                              │
+│   • temporal                                                 │
+│   • conceptual                                               │
 │                                                              │
-│ [cross_system()] operator drives this canvas.                 │
+│ [cross_system()] operator drives this canvas.                │
 └──────────────────────────────────────────────────────────────┘
 ```
 
@@ -152,24 +158,25 @@
 # **SECTION 6 — Stack Builder (IPD‑12)**
 
 ```
+-
 ┌──────────────────────────────────────────────────────────────┐
-│ STACK BUILDER                                                 │
+│ STACK BUILDER                                                │
 │                                                              │
-│ Required Modules:                                             │
-│   [✓] Drift Detection                                         │
-│   [✓] Process Mapping                                         │
-│   [✓] Coherence Alignment                                     │
+│ Required Modules:                                            │
+│   [✓] Drift Detection                                        │
+│   [✓] Process Mapping                                        │
+│   [✓] Coherence Alignment                                   │
 │                                                              │
-│ Recommended Modules:                                          │
-│   [ ] Drift‑Tensor                                            │
-│   [ ] Cross‑System Pack                                       │
-│   [ ] Deep Diagnostics                                        │
+│ Recommended Modules:                                         │
+│   [ ] Drift‑Tensor                                           │
+│   [ ] Cross‑System Pack                                      │
+│   [ ] Deep Diagnostics                                       │
 │                                                              │
-│ Disabled Modules:                                             │
-│   substrate modules                                            │
-│   inversion modules                                            │
-│   composite multi‑regime modules                              │
-│   (tooltip: “Not compatible with IPD‑12 engine.”)             │
+│ Disabled Modules:                                            │
+│   substrate modules                                          │
+│   inversion modules                                          │
+│   composite multi‑regime modules                             │
+│   (tooltip: “Not compatible with IPD‑12 engine.”)            │
 └──────────────────────────────────────────────────────────────┘
 ```
 
@@ -178,23 +185,24 @@
 # **SECTION 7 — Prompt Output Panel**
 
 ```
+-
 ┌──────────────────────────────────────────────────────────────┐
-│ GENERATED PROMPT (IPD‑12)                                     │
+│ GENERATED PROMPT (IPD‑12)                                    │
 │                                                              │
-│ Includes:                                                     │
-│   • Session Context                                           │
-│   • Engine Block (RTT‑IPD‑12)                                 │
-│   • Module Stack                                              │
-│   • Operator Grammar                                          │
-│   • Capture → Analyze → Drift → Coherence → Synthesis         │
-│   • Output Format                                             │
+│ Includes:                                                    │
+│   • Session Context                                          │
+│   • Engine Block (RTT‑IPD‑12)                                │
+│   • Module Stack                                             │
+│   • Operator Grammar                                         │
+│   • Capture → Analyze → Drift → Coherence → Synthesis        │
+│   • Output Format                                            │
 │                                                              │
-│ [Generate Prompt]                                             │
+│ [Generate Prompt]                                            │
 │                                                              │
-│ Error Conditions:                                             │
-│   “IPD‑12 requires ≥2 processes.”                             │
-│   “Structural layers required for drift‑tensor.”              │
-│   “Coherence baseline required for alignment.”                │
+│ Error Conditions:                                            │
+│   “IPD‑12 requires ≥2 processes.”                            │
+│   “Structural layers required for drift‑tensor.”             │
+│   “Coherence baseline required for alignment.”               │
 └──────────────────────────────────────────────────────────────┘
 ```
 
@@ -203,20 +211,21 @@
 # **SECTION 8 — Engine Boundary Panel**
 
 ```
+-
 ┌──────────────────────────────────────────────────────────────┐
-│ ENGINE BOUNDARIES                                             │
+│ ENGINE BOUNDARIES                                            │
 │                                                              │
-│ IPD‑12 DOES NOT SUPPORT:                                      │
-│   • substrate grammar                                         │
-│   • inversion operators                                       │
-│   • composite multi‑regime blending                           │
-│   • substrate mapping                                         │
+│ IPD‑12 DOES NOT SUPPORT:                                     │
+│   • substrate grammar                                        │
+│   • inversion operators                                      │
+│   • composite multi‑regime blending                          │
+│   • substrate mapping                                        │
 │                                                              │
-│ IPD‑12 IS OPTIMIZED FOR:                                      │
-│   • drift mechanics                                           │
-│   • multi‑process analysis                                    │
-│   • coherence alignment                                       │
-│   • cross‑system mapping                                      │
+│ IPD‑12 IS OPTIMIZED FOR:                                     │
+│   • drift mechanics                                          │
+│   • multi‑process analysis                                   │
+│   • coherence alignment                                      │
+│   • cross‑system mapping                                     │
 └──────────────────────────────────────────────────────────────┘
 ```
 
@@ -234,15 +243,16 @@ Because you declared:
 The UI includes a teaching toggle:
 
 ```
-┌──────────────────────────────────────────────────────────────┐
+-
+┌───────────────────────────────────────────────────────────────┐
 │ TEACHING MODE                                                 │
-│                                                              │
+│                                                               │
 │ [RTT‑1 Teaching Mode]  (surface regime, simplified operators) │
-│                                                              │
+│                                                               │
 │ When active:                                                  │
 │   • operators simplified                                      │
 │   • drift bounded                                             │
 │   • coherence declared                                        │
 │   • paradox shown as tension only                             │
-└──────────────────────────────────────────────────────────────┘
+└───────────────────────────────────────────────────────────────┘
 ```
