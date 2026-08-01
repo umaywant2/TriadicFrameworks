@@ -1,1 +1,29 @@
+{
+  "module": "atmosphere",
+  "category": "example",
+  "version": "1.0",
+  "scenario": "biosphere_feedback_loop",
+  "input": {
+    "dynamics": { "wave_propagation": 0.63 },
+    "thermodynamics": { "radiative_balance": 0.81 },
+    "hydrospheric": { "moisture_flux": 0.71, "condensation": 0.52 },
+    "forcing": { "radiative": 292 },
+    "teleconnection": { "pacific": 0.63 },
+    "resonance": { "harmonic_alignment": 0.71 },
+    "paradox": { "conflicting_gradients": 0.12 },
+    "drift": { "coherence_drift": 0.22 },
+    "dimensional": { "macro_scale": 0.71 },
+    "continuity": { "mass_continuity": 0.81 },
+    "coherence": { "coherent_flux": 0.81 },
+    "clarity": { "signal_clarity": 0.88 },
+    "composition": { "gas_mixture": 0.81 }
+  },
+  "coupling": {
+    "biosphere": {
+      "evapotranspiration_flux": 0.92,
+      "vegetation_radiative_modulation": 0.81
+    }
+  },
+  "regime": "stable"
+}
 
