@@ -1,10 +1,4 @@
-# 🌐 **docs/atmosphere/diagnostics/composition_diagnostic.md**  
-### *Atmosphere Module — Composition Diagnostic (Canon)*  
-  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/atmosphere/diagnostics/composition_diagnostic.md)
-
----
-
-# **Composition Diagnostic — Atmosphere Module**  
+# 🌐 **Composition Diagnostic — Atmosphere Module**  
 TriadicFrameworks Canon
 
 The Composition Diagnostic evaluates atmospheric mixture structure across micro → meso → macro → mega scales. It interprets gas mixture balance, particulate noise, humidity consistency, and trace‑gas stability. It is the human‑readable companion to:
