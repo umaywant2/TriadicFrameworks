@@ -1,1 +1,23 @@
+{
+  "module": "atmosphere",
+  "category": "example",
+  "version": "1.0",
+  "scenario": "teleconnection_collapse",
+  "input": {
+    "dynamics": { "vorticity_evolution": 0.81 },
+    "thermodynamics": { "radiative_balance": 0.33 },
+    "hydrospheric": { "moisture_flux": 0.71 },
+    "forcing": { "cross_domain": 0.63 },
+    "teleconnection": { "pacific": 0.22, "atlantic": 0.33, "polar": 0.29 },
+    "resonance": { "resonance_amplification": 0.81 },
+    "paradox": { "inversion_conflicts": 0.63 },
+    "drift": { "coherence_drift": 0.71 },
+    "dimensional": { "meso_scale": 0.52 },
+    "continuity": { "momentum_continuity": 0.33 },
+    "coherence": { "coherent_flux": 0.22 },
+    "clarity": { "signal_clarity": 0.33 },
+    "composition": { "particulate_distribution": 0.52 }
+  },
+  "regime": "unstable"
+}
 
