@@ -1,1 +1,23 @@
+{
+  "module": "atmosphere",
+  "category": "example",
+  "version": "1.0",
+  "scenario": "multi_domain_resonance_alignment",
+  "input": {
+    "dynamics": { "wave_propagation": 0.81 },
+    "thermodynamics": { "radiative_balance": 0.92 },
+    "hydrospheric": { "ocean_atmosphere_coupling": 0.88 },
+    "forcing": { "radiative": 288 },
+    "teleconnection": { "pacific": 0.81, "polar": 0.88 },
+    "resonance": { "harmonic_alignment": 0.92 },
+    "paradox": { "conflicting_gradients": 0.12 },
+    "drift": { "gradient_drift": 0.22 },
+    "dimensional": { "macro_scale": 0.81 },
+    "continuity": { "mass_continuity": 0.92 },
+    "coherence": { "coherent_flux": 0.88 },
+    "clarity": { "signal_clarity": 0.92 },
+    "composition": { "gas_mixture": 0.81 }
+  },
+  "regime": "stable"
+}
 
