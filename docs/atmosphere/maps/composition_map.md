@@ -1,10 +1,4 @@
-# 🌐 **docs/atmosphere/maps/composition_map.md**  
-### *Atmosphere Module — Composition Map (Canon)*  
-  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/atmosphere/maps/composition_map.md)
-
----
-
-# **Composition Map — Atmosphere Module**  
+# 🌐 **Composition Map — Atmosphere Module**  
 TriadicFrameworks Canon
 
 The Composition Map visualizes how atmospheric components combine, blend, transition, and structurally interact across micro → meso → macro → mega scales. It defines compositional gradients, mixture regimes, structural transitions, and operator‑aligned composition behavior.
