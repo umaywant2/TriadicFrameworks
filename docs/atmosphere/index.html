@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- /docs/atmosphere/index.html — <head> (Canonical Refresh 2026-07-31) -->
+<!-- Module: Atmosphere (Environmental Domain + Multi‑Scale Diagnostics) -->
+<!-- Status: canon-stable | RTT/1-aligned -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="language" content="en" />
+<meta name="last-modified" content="2026-07-31" />
+<meta name="generator" content="TriadicFrameworks Static Canon Engine" />
+<meta name="creator" content="TriadicFrameworks" />
+<meta name="author" content="Nawder Loswin" />
+<meta name="publisher" content="TriadicFrameworks" />
+
+<title>Atmosphere | TriadicFrameworks</title>
+
+<!-- ═══ Description & Keywords (RTT/1 environmental canon) ═══ -->
+<meta name="description"
+      content="Atmosphere module — multi‑scale environmental diagnostics including dynamics, thermodynamics, hydrospheric coupling, forcing, teleconnections, resonance, paradox, drift, dimensional scaling, continuity, coherence, clarity, and composition. Includes full envelope, map, trace, operators, examples, agent profile, coupling lattice, and visualizations." />
+
+<meta name="keywords"
+      content="RTT, Triadic Frameworks, atmosphere, environmental diagnostics, teleconnection, resonance, drift, paradox, hydrospheric coupling, cryosphere coupling, biosphere feedback, magnetosphere perturbation, coherence, clarity, dimensional scaling" />
+
+<!-- ═══ Module Identity (RTT/1 standard) ═══ -->
+<meta name="module" content="Atmosphere" />
+<meta name="canonical-id" content="ATMOSPHERE" />
+<meta name="module-type" content="Environmental-Domain" />
+<meta name="version" content="1.0" />
+<meta name="status" content="canon-stable" />
+<meta name="parent" content="TriadicFrameworks" />
+<meta name="canonical-path" content="/docs/atmosphere/" />
+<meta name="license" content="Open educational use permitted" />
+
+<!-- ═══ AI Discovery (RTT/1 operator-aligned) ═══ -->
+<meta name="ai-ready" content="true" />
+<meta name="ai-module-id" content="ATMOSPHERE" />
+<meta name="ai.module" content="Atmosphere" />
+<meta name="ai.version" content="1.0" />
+
+<meta name="ai.purpose"
+      content="Provide multi‑scale atmospheric diagnostics, cross‑domain coupling, operator‑aligned regime classification, and structural environmental analysis across continuity, coherence, clarity, dimensional, drift, paradox, resonance, dynamics, forcing, hydrospheric, teleconnection, and thermodynamic fields." />
+
+<meta name="ai.keywords"
+      content="atmosphere diagnostics, teleconnection collapse, resonance alignment, paradox cascade, drift amplification, hydrospheric coupling, cryosphere coupling, biosphere feedback, magnetosphere perturbation, environmental operators" />
+
+<meta name="ai.audience"
+      content="researchers, educators, engineers, environmental analysts, AI systems, students" />
+
+<meta name="ai.navigation"
+      content="https://www.triadicframeworks.org/sitemap_main.xml" />
+
+<meta name="ai.discussions"
+      content="https://github.com/umaywant2/TriadicFrameworks/discussions" />
+
+<meta name="ai.contact.x" content="@TriadicFrameworks" />
+<meta name="ai.contact.youtube" content="@TriadicFrameworks" />
+<meta name="ai.license" content="Open educational use permitted" />
+
+<!-- ═══ Module Summary (RTT/1 environmental canon) ═══ -->
+<meta name="ai.module.name" content="Atmosphere" />
+<meta name="ai.module.summary"
+      content="Atmosphere module: full environmental diagnostic suite (dynamics, thermodynamics, hydrospheric, forcing, teleconnection, resonance, paradox, drift, dimensional, continuity, coherence, clarity, composition), complete envelope/map/trace, operator grammar, example suite, agent profile, cross‑domain coupling, and visualizations." />
+
+<meta name="ai.module.category" content="environmental-domain" />
+
+<!-- ═══ Canonical / SEO ═══ -->
+<link rel="canonical" href="https://www.triadicframeworks.org/atmosphere" />
+<meta name="robots" content="index, follow" />
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+ /* Context Block */
+  .context-block {
+    font-family: monospace;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0.5rem 0 1rem 0;
+  }
+       
+  /* Context Label */
+  .context-label {
+    color: #ff9800; /* orange */
+    font-weight: bold;
+    margin-right: 0.25rem;
+  }
+       
+  /* Context Value */
+  .context-value {
+    color: #ffffff; /* white */
+  }
+       
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav class="nav-band">
+ <p align="center">
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+ </p> 
+  
+  <h2>🌬️ Atmosphere Module | RTT/1</h2>
+      <a href="#README">🔰 README</a>
+      <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
+      <a href="#CONTRIBUTING">🤝 Contributing</a>
+      <a href="https://www.triadicframeworks.org/education/">💯 Education | RTT</a>
+      <a href="#GLOSSARY">🎯 Glossary</a>
+      <a href="#LINEAGE">📜 Lineage</a>
+      <a href="#LICENSE">📎 License</a>
+      <a href="#SITEMAP">🌐 Sitemap</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
+      <a href="#SECURITY">🔐 Security</a>
+      <a href="#PRINCIPLES">🧘 Principles</a>
+    <h3>🌀 Core Module Files</h3>
+      <a href="#INDEX">📘 Index</a>
+      <a href="#MODULE_INDEX">🧭 Module Index</a>
+      <a href="#A_CAPTURE">📥 Capture Notes</a>
+      <a href="#A_DIFF_TABLE">📊 Diff Table</a>
+      <a href="#ATMOSPHERE_AGENT">🤖 Atmosphere Agent</a>
+    <h3>🌡️ Module-Level Diagnostics</h3>
+      <a href="#ATMOSPHERE_ENVELOPE">🧩 Envelope</a>
+      <a href="#ATMOSPHERE_EXAMPLE">🧪 Example</a>
+      <a href="#ATMOSPHERE_MAP">🗺️ Map</a>
+      <a href="#ATMOSPHERE_TRACE">📈 Trace</a>
+      <a href="#OPERATORS_ATMOSPHERE">⚙️ Operators</a>
+    <h3>🔍 Clarity Diagnostics</h3>
+      <a href="#CLARITY_DIAGNOSTIC">✨ Diagnostic</a>
+      <a href="#CLARITY_DIAGNOSTIC_MAP">🗺️ Map</a>
+      <a href="#CLARITY_DIAGNOSTIC_TRACE">📈 Trace</a>
+      <a href="#CLARITY_ENVELOPE">📦 Envelope</a>
+    <h3>🔗 Coherence Diagnostics</h3>
+      <a href="#COHERENCE_DIAGNOSTIC">🔗 Diagnostic</a>
+      <a href="#COHERENCE_ENVELOPE">📦 Envelope</a>
+      <a href="#COHERENCE_MAP">🗺️ Map</a>
+      <a href="#COHERENCE_TRACE">📈 Trace</a>
+    <h3>🧬 Composition Diagnostics</h3>
+      <a href="#COMPOSITION_DIAGNOSTIC">🧬 Diagnostic</a>
+      <a href="#COMPOSITION_ENVELOPE">📦 Envelope</a>
+      <a href="#COMPOSITION_MAP">🗺️ Map</a>
+      <a href="#COMPOSITION_TRACE">📈 Trace</a>
+    <h3>🔁 Continuity Diagnostics</h3>
+      <a href="#CONTINUITY_DIAGNOSTIC">🔁 Diagnostic</a>
+      <a href="#CONTINUITY_ENVELOPE">📦 Envelope</a>
+      <a href="#CONTINUITY_MAP">🗺️ Map</a>
+      <a href="#CONTINUITY_TRACE">📈 Trace</a>
+    <h3>📐 Dimensional Diagnostics</h3>
+      <a href="#DIMENSIONAL_DIAGNOSTIC">📐 Diagnostic</a>
+      <a href="#DIMENSIONAL_DIAGNOSTIC_TRACE">📈 Diagnostic Trace</a>
+      <a href="#DIMENSIONAL_ENVELOPE">📦 Envelope</a>
+      <a href="#DIMENSIONAL_ENVELOPE_MIN">📦 Envelope (Min)</a>
+      <a href="#DIMENSIONAL_MAP">🗺️ Map</a>
+      <a href="#DIMENSIONAL_TRACE">📈 Trace</a>
+    <h3>🌫️ Drift Diagnostics</h3>
+      <a href="#DRIFT_DIAGNOSTIC">🌫️ Diagnostic</a>
+      <a href="#DRIFT_DIAGNOSTIC_TRACE">📈 Diagnostic Trace</a>
+      <a href="#DRIFT_ENVELOPE">📦 Envelope</a>
+      <a href="#DRIFT_ENVELOPE_MIN">📦 Envelope (Min)</a>
+      <a href="#DRIFT_MAP">🗺️ Map</a>
+      <a href="#DRIFT_TRACE">📈 Trace</a>
+    <h3>🌪️ Dynamics Diagnostics</h3>
+      <a href="#DYNAMICS_DIAGNOSTIC">🌪️ Diagnostic</a>
+      <a href="#DYNAMICS_ENVELOPE">📦 Envelope</a>
+      <a href="#DYNAMICS_MAP">🗺️ Map</a>
+      <a href="#DYNAMICS_TRACE">📈 Trace</a>
+    <h3>🔥 Forcing Diagnostics</h3>
+      <a href="#FORCING_DIAGNOSTIC">🔥 Diagnostic</a>
+      <a href="#FORCING_ENVELOPE">📦 Envelope</a>
+      <a href="#FORCING_MAP">🗺️ Map</a>
+      <a href="#FORCING_TRACE">📈 Trace</a>
+    <h3>💧 Hydrospheric Diagnostics</h3>
+      <a href="#HYDROSPHERIC_DIAGNOSTIC">💧 Diagnostic</a>
+      <a href="#HYDROSPHERIC_ENVELOPE">📦 Envelope</a>
+      <a href="#HYDROSPHERIC_MAP">🗺️ Map</a>
+      <a href="#HYDROSPHERIC_TRACE">📈 Trace</a>
+    <h3>🎯 Nudge Diagnostics</h3>
+      <a href="#NUDGE_DIAGNOSTIC">🎯 Diagnostic</a>
+      <a href="#NUDGE_ENVELOPE">📦 Envelope</a>
+      <a href="#NUDGE_MAP">🗺️ Map</a>
+      <a href="#NUDGE_TRACE">📈 Trace</a>
+    <h3>🌀 Paradox Diagnostics</h3>
+      <a href="#PARADOX_DIAGNOSTIC">🌀 Diagnostic</a>
+      <a href="#PARADOX_DIAGNOSTIC_TRACE">📈 Diagnostic Trace</a>
+      <a href="#PARADOX_ENVELOPE">📦 Envelope</a>
+      <a href="#PARADOX_ENVELOPE_MIN">📦 Envelope (Min)</a>
+      <a href="#PARADOX_MAP">🗺️ Map</a>
+      <a href="#PARADOX_TRACE">📈 Trace</a>
+    <h3>🎵 Resonance Diagnostics</h3>
+      <a href="#RESONANCE_DIAGNOSTIC">🎵 Diagnostic</a>
+      <a href="#RESONANCE_DIAGNOSTIC_TRACE">📈 Diagnostic Trace</a>
+      <a href="#RESONANCE_ENVELOPE">📦 Envelope</a>
+      <a href="#RESONANCE_ENVELOPE_MIN">📦 Envelope (Min)</a>
+      <a href="#RESONANCE_MAP">🗺️ Map</a>
+      <a href="#RESONANCE_TRACE">📈 Trace</a>
+    <h3>🌍 Teleconnection Diagnostics</h3>
+      <a href="#TELECONNECTION_DIAGNOSTIC">🌍 Diagnostic</a>
+      <a href="#TELECONNECTION_ENVELOPE">📦 Envelope</a>
+      <a href="#TELECONNECTION_MAP">🗺️ Map</a>
+      <a href="#TELECONNECTION_TRACE">📈 Trace</a>
+    <h3>🔥 Thermodynamics Diagnostics</h3>
+      <a href="#THERMODYNAMICS_DIAGNOSTIC">🔥 Diagnostic</a>
+      <a href="#THERMODYNAMICS_ENVELOPE">📦 Envelope</a>
+      <a href="#THERMODYNAMICS_MAP">🗺️ Map</a>
+      <a href="#THERMODYNAMICS_TRACE">📈 Trace</a>
+    <h3>📚 Examples</h3>
+      <a href="#EXAMPLE_BASELINE">📘 Baseline Example</a>
+      <a href="#EXAMPLE_ADVANCED">🚀 Advanced Example</a>
+    <h3>❄️ Extensions</h3>
+      <a href="#CRYOSPHERE_COUPLING">❄️ Cryosphere Coupling</a>
+      <a href="#OCEAN_COUPLING">🌊 Ocean Coupling</a>
+    <h3>🔮 Future</h3>
+      <a href="#BIOSPHERE_FEEDBACK">🌱 Biosphere Feedback</a>
+      <a href="#LAND_COUPLING">🌍 Land Coupling</a>
+      <a href="#MAGNETOSPHERE_COUPLING">🧲 Magnetosphere Coupling</a>
+    <h3>🗺️ Maps</h3>
+      <a href="#MAP_CLARITY">✨ Clarity Map</a>
+      <a href="#MAP_COHERENCE">🔗 Coherence Map</a>
+      <a href="#MAP_COMPOSITION">🧬 Composition Map</a>
+      <a href="#MAP_CONTINUITY_TRACE">🔁 Continuity Trace</a>
+      <a href="#MAP_DIMENSIONAL_OVERLAY">📐 Dimensional Overlay</a>
+      <a href="#MAP_DRIFT">🌫️ Drift Map</a>
+      <a href="#MAP_DYNAMICS">🌪️ Dynamics Map</a>
+      <a href="#MAP_FORCING">🔥 Forcing Map</a>
+      <a href="#MAP_HYDROSPHERIC">💧 Hydrospheric Map</a>
+      <a href="#MAP_NUDGE">🎯 Nudge Map</a>
+      <a href="#MAP_PARADOX">🌀 Paradox Map</a>
+      <a href="#MAP_RESONANCE">🎵 Resonance Map</a>
+      <a href="#MAP_TELECONNECTION">🌍 Teleconnection Map</a>
+      <a href="#MAP_THERMODYNAMICS">🔥 Thermodynamics Map</a>
+    <h3>🧰 Prompts</h3>
+      <a href="#PROMPTS_EXAMPLES">📘 Example Prompts</a>
+      <a href="#PROMPTS_MODULE">🧭 Module Prompts</a>
+      <a href="#PROMPTS_TEMPLATES">📐 Templates</a>
+    <h3>📜 Registry</h3>
+      <a href="#REGISTRY_AGENTS">🤖 Agents</a>
+      <a href="#REGISTRY_INDEX">📘 Registry Index</a>
+      <a href="#REGISTRY_MODULE">🧭 Module Registry</a>
+      <a href="#REGISTRY_OPERATORS">⚙️ Operators</a>
+      <a href="#REGISTRY_SCALES">📏 Scales</a>
+      <a href="#REGISTRY_SEVEN_PHASES">7️⃣ Seven Phases</a>
+    <h3>🧪 Session</h3>
+      <a href="#SESSION_AUDIT_LOG">📋 Audit Log</a>
+      <a href="#SESSION_CAPTURE_NOTES">📝 Capture Notes</a>
+      <a href="#SESSION_CONTEXT">📦 Session Context</a>
+      <a href="#SESSION_INDEX">🧭 Session Index</a>
+      <a href="#SESSION_TRACE">📈 Session Trace</a>
+    <h3>🏗️ Triadic Tools</h3> 
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
+      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 Packages and Cores</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas</a>
+      <a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a>    
+      <a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS</a>
+      <a href="https://www.triadicframeworks.org/_ideas/">🤔 Ideas</a>
+      <a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">🔛(RTT frozen)</a>
+      <a href="https://www.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
+      <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
+      <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
+      <a href="../">🔙TFT</a>
+   <!-- RTT Session Header (canonical stub) -->
+<section id="atmosphere-session-header"
+         data-rtt="atmosphere"
+         data-coherence="stable"
+         data-drift="bounded"
+         data-regime="environmental">
+
+  <h2>Session Context</h2>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- Session Context — Atmosphere Module (RTT/1 Environmental Domain) -->
+<!-- Defines module identity, operator alignment, drift bounds, and purpose -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+
+<section class="session-context">
+
+  <div class="context-label">Module</div>
+  <div class="context-value">Atmosphere</div>
+
+  <div class="context-label">Tier</div>
+  <div class="context-value">
+    Environmental Domain — Multi‑Scale Diagnostics + Cross‑Domain Coupling
+  </div>
+
+  <div class="context-label">Continuity</div>
+  <div class="context-value">
+    RTT/1‑aligned — continuity, coherence, clarity, and dimensional stability
+  </div>
+
+  <div class="context-label">Operators</div>
+  <div class="context-value">
+    Dynamics, Thermodynamics, Hydrospheric, Forcing, Teleconnection, Resonance,
+    Paradox, Drift, Dimensional, Continuity, Coherence, Clarity, Composition
+  </div>
+
+  <div class="context-label">Drift</div>
+  <div class="context-value">
+    bounded (environmental variability; operator grammar remains fixed)
+  </div>
+
+  <div class="context-label">Audience</div>
+  <div class="context-value">
+    Researchers, environmental analysts, educators, engineers, AI systems, students
+  </div>
+
+  <div class="context-label">Purpose</div>
+  <div class="context-value">
+    Provide structural atmospheric analysis, regime classification, operator‑aligned
+    diagnostics, and cross‑domain coupling across hydrosphere, cryosphere, biosphere,
+    land, and magnetosphere.
+  </div>
+
+</section>
+
+</section>
+
+<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;
+            border-radius:6px;font-size:13px;">
+  🌬️ Atmosphere<br>📘 Environmental Diagnostics · v1.0
+</div>
+
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+      README: 'README.md',
+      ABOUT: '../ABOUT.md',
+      CONTRIBUTING: '../CONTRIBUTING.md',
+      GLOSSARY: '../GLOSSARY.md',
+      LINEAGE: '../LINEAGE.md',
+      LICENSE: '../LICENSE.md',
+      SITEMAP: '../sitemap.md',
+      QUICKSTART: '../QUICKSTART.md',
+      CODE_OF_CONDUCT: '../CODE_OF_CONDUCT.md',
+      SECURITY: '../SECURITY.md',
+      PRINCIPLES: '../PRINCIPLES.md',
+      // Agentic AI examples
+      INDEX: 'index.md',
+      MODULE_INDEX: 'module_index.md',
+      A_CAPTURE: 'a_Capture.md',
+      A_DIFF_TABLE: 'a_Diff_Table.md',
+      // Agents
+      ATMOSPHERE_AGENT: 'agents/atmosphere_agent.md',
+      // Atmosphere (module-level)
+      ATMOSPHERE_ENVELOPE: 'diagnostics/atmosphere_envelope.md',
+      ATMOSPHERE_EXAMPLE: 'diagnostics/atmosphere_example.md',
+      ATMOSPHERE_MAP: 'diagnostics/atmosphere_map.md',
+      ATMOSPHERE_TRACE: 'diagnostics/atmosphere_trace.md',
+      OPERATORS_ATMOSPHERE: 'diagnostics/operators_atmosphere.md',
+      // Clarity
+      CLARITY_DIAGNOSTIC: 'diagnostics/clarity_diagnostic.md',
+      CLARITY_DIAGNOSTIC_MAP: 'diagnostics/clarity_diagnostic_map.md',
+      CLARITY_DIAGNOSTIC_TRACE: 'diagnostics/clarity_diagnostic_trace.md',
+      CLARITY_ENVELOPE: 'diagnostics/clarity_envelope.md',
+      // Coherence
+      COHERENCE_DIAGNOSTIC: 'diagnostics/coherence_diagnostic.md',
+      COHERENCE_ENVELOPE: 'diagnostics/coherence_envelope.md',
+      COHERENCE_MAP: 'diagnostics/coherence_map.md',
+      COHERENCE_TRACE: 'diagnostics/coherence_trace.md',
+      // Composition
+      COMPOSITION_DIAGNOSTIC: 'diagnostics/composition_diagnostic.md',
+      COMPOSITION_ENVELOPE: 'diagnostics/composition_envelope.md',
+      COMPOSITION_MAP: 'diagnostics/composition_map.md',
+      COMPOSITION_TRACE: 'diagnostics/composition_trace.md',
+      // Continuity
+      CONTINUITY_DIAGNOSTIC: 'diagnostics/continuity_diagnostic.md',
+      CONTINUITY_ENVELOPE: 'diagnostics/continuity_envelope.md',
+      CONTINUITY_MAP: 'diagnostics/continuity_map.md',
+      CONTINUITY_TRACE: 'diagnostics/continuity_trace.md',
+      // Dimensional
+      DIMENSIONAL_DIAGNOSTIC: 'diagnostics/dimensional_diagnostic.md',
+      DIMENSIONAL_DIAGNOSTIC_TRACE: 'diagnostics/dimensional_diagnostic_trace.md',
+      DIMENSIONAL_ENVELOPE: 'diagnostics/dimensional_envelope.md',
+      DIMENSIONAL_ENVELOPE_MIN: 'diagnostics/dimensional_envelope.min.md',
+      DIMENSIONAL_MAP: 'diagnostics/dimensional_map.md',
+      DIMENSIONAL_TRACE: 'diagnostics/dimensional_trace.md',
+      // Drift
+      DRIFT_DIAGNOSTIC: 'diagnostics/drift_diagnostic.md',
+      DRIFT_DIAGNOSTIC_TRACE: 'diagnostics/drift_diagnostic_trace.md',
+      DRIFT_ENVELOPE: 'diagnostics/drift_envelope.md',
+      DRIFT_ENVELOPE_MIN: 'diagnostics/drift_envelope.min.md',
+      DRIFT_MAP: 'diagnostics/drift_map.md',
+      DRIFT_TRACE: 'diagnostics/drift_trace.md',
+      // Dynamics
+      DYNAMICS_DIAGNOSTIC: 'diagnostics/dynamics_diagnostic.md',
+      DYNAMICS_ENVELOPE: 'diagnostics/dynamics_envelope.md',
+      DYNAMICS_MAP: 'diagnostics/dynamics_map.md',
+      DYNAMICS_TRACE: 'diagnostics/dynamics_trace.md',
+      // Forcing
+      FORCING_DIAGNOSTIC: 'diagnostics/forcing_diagnostic.md',
+      FORCING_ENVELOPE: 'diagnostics/forcing_envelope.md',
+      FORCING_MAP: 'diagnostics/forcing_map.md',
+      FORCING_TRACE: 'diagnostics/forcing_trace.md',
+      // Hydrospheric
+      HYDROSPHERIC_DIAGNOSTIC: 'diagnostics/hydrospheric_diagnostic.md',
+      HYDROSPHERIC_ENVELOPE: 'diagnostics/hydrospheric_envelope.md',
+      HYDROSPHERIC_MAP: 'diagnostics/hydrospheric_map.md',
+      HYDROSPHERIC_TRACE: 'diagnostics/hydrospheric_trace.md',
+      // Nudge
+      NUDGE_DIAGNOSTIC: 'diagnostics/nudge_diagnostic.md',
+      NUDGE_ENVELOPE: 'diagnostics/nudge_envelope.md',
+      NUDGE_MAP: 'diagnostics/nudge_map.md',
+      NUDGE_TRACE: 'diagnostics/nudge_trace.md',
+      // Paradox
+      PARADOX_DIAGNOSTIC: 'diagnostics/paradox_diagnostic.md',
+      PARADOX_DIAGNOSTIC_TRACE: 'diagnostics/paradox_diagnostic_trace.md',
+      PARADOX_ENVELOPE: 'diagnostics/paradox_envelope.md',
+      PARADOX_ENVELOPE_MIN: 'diagnostics/paradox_envelope.min.md',
+      PARADOX_MAP: 'diagnostics/paradox_map.md',
+      PARADOX_TRACE: 'diagnostics/paradox_trace.md',
+      // Resonance
+      RESONANCE_DIAGNOSTIC: 'diagnostics/resonance_diagnostic.md',
+      RESONANCE_DIAGNOSTIC_TRACE: 'diagnostics/resonance_diagnostic_trace.md',
+      RESONANCE_ENVELOPE: 'diagnostics/resonance_envelope.md',
+      RESONANCE_ENVELOPE_MIN: 'diagnostics/resonance_envelope.min.md',
+      RESONANCE_MAP: 'diagnostics/resonance_map.md',
+      RESONANCE_TRACE: 'diagnostics/resonance_trace.md',
+      // Teleconnection
+      TELECONNECTION_DIAGNOSTIC: 'diagnostics/teleconnection_diagnostic.md',
+      TELECONNECTION_ENVELOPE: 'diagnostics/teleconnection_envelope.md',
+      TELECONNECTION_MAP: 'diagnostics/teleconnection_map.md',
+      TELECONNECTION_TRACE: 'diagnostics/teleconnection_trace.md',
+      // Thermodynamics
+      THERMODYNAMICS_DIAGNOSTIC: 'diagnostics/thermodynamics_diagnostic.md',
+      THERMODYNAMICS_ENVELOPE: 'diagnostics/thermodynamics_envelope.md',
+      THERMODYNAMICS_MAP: 'diagnostics/thermodynamics_map.md',
+      THERMODYNAMICS_TRACE: 'diagnostics/thermodynamics_trace.md',
+      // Examples
+      EXAMPLE_BASELINE: 'examples/atmosphere_example.md',
+      EXAMPLE_ADVANCED: 'examples/atmosphere_example_advanced.md',
+      // Extensions
+      CRYOSPHERE_COUPLING: 'extensions/cryosphere_coupling.md',
+      OCEAN_COUPLING: 'extensions/ocean_coupling.md',
+      // Future
+      BIOSPHERE_FEEDBACK: 'future/biosphere_feedback.md',
+      LAND_COUPLING: 'future/land_coupling.md',
+      MAGNETOSPHERE_COUPLING: 'future/magnetosphere_coupling.md',
+      // Maps
+      MAP_CLARITY: 'maps/clarity_map.md',
+      MAP_COHERENCE: 'maps/coherence_map.md',
+      MAP_COMPOSITION: 'maps/composition_map.md',
+      MAP_CONTINUITY_TRACE: 'maps/continuity_trace.md',
+      MAP_DIMENSIONAL_OVERLAY: 'maps/dimensional_overlay.md',
+      MAP_DRIFT: 'maps/drift_map.md',
+      MAP_DYNAMICS: 'maps/dynamics_map.md',
+      MAP_FORCING: 'maps/forcing_map.md',
+      MAP_HYDROSPHERIC: 'maps/hydrospheric_map.md',
+      MAP_NUDGE: 'maps/nudge_map.md',
+      MAP_PARADOX: 'maps/paradox_map.md',
+      MAP_RESONANCE: 'maps/resonance_map.md',
+      MAP_TELECONNECTION: 'maps/teleconnection_map.md',
+      MAP_THERMODYNAMICS: 'maps/thermodynamics_map.md',
+      // Prompts
+      PROMPTS_EXAMPLES: 'prompts/examples.md',
+      PROMPTS_MODULE: 'prompts/module.md',
+      PROMPTS_TEMPLATES: 'prompts/templates.md',
+      // Registry
+      REGISTRY_AGENTS: 'registry/agents.md',
+      REGISTRY_INDEX: 'registry/index.md',
+      REGISTRY_MODULE: 'registry/module_registry.md',
+      REGISTRY_OPERATORS: 'registry/operators.md',
+      REGISTRY_SCALES: 'registry/scales.md',
+      REGISTRY_SEVEN_PHASES: 'registry/seven_phases.md',
+      // Session
+      SESSION_AUDIT_LOG: 'session/audit_log.md',
+      SESSION_CAPTURE_NOTES: 'session/capture_notes.md',
+      SESSION_CONTEXT: 'session/session_context.md',
+      SESSION_INDEX: 'session/session_index.md',
+      SESSION_TRACE: 'session/session_trace.md'
+};
+  
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+</body>
+</html>
