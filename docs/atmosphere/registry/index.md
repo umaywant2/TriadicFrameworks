@@ -1,10 +1,4 @@
-# 🌐 **docs/atmosphere/registry/index.md**  
-### *Atmosphere Module — Canon Registry Index*  
-*(Source: turn0browsertab1)*
-
----
-
-# **Registry Index — Atmosphere Module**  
+# 🌐 **Registry Index — Atmosphere Module**  
 TriadicFrameworks Canon
 
 The Atmosphere Registry defines the operator grammar, agent roles, scale definitions, and Seven‑Phase alignment for the module. It provides the structural metadata required for diagnostics, envelopes, maps, traces, and session‑level reasoning.
