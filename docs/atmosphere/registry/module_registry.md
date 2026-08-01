@@ -1,10 +1,4 @@
-# 🌐 **docs/atmosphere/registry/module_registry.md**  
-### *Atmosphere Module — Canon Module Registry*  
-*(Source: turn0browsertab1)*
-
----
-
-# **Module Registry — Atmosphere Module**  
+# 🌐 **Module Registry — Atmosphere Module**  
 TriadicFrameworks Canon
 
 The Atmosphere Module Registry defines how the module is registered within the global TriadicFrameworks ecosystem. It establishes module identity, operator grammar, diagnostic families, scale alignment, Seven‑Phase mapping, and cross‑domain coupling metadata.
