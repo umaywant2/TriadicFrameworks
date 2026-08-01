@@ -1,4 +1,8 @@
-# TriadicFrameworks — Prompts Site
+<img width="369" height="369" alt="Prompts_Image" src="https://github.com/user-attachments/assets/ad5d6e47-dc98-4986-a1e6-6e070440fc06" />
+
+# Prompts Site
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/prompts/module.json) — Agentic module schema role assignments
 
 The TriadicFrameworks Prompts site provides structured, engine‑aligned prompt modules for
 all RTT engines, IPD‑12, stacks, templates, UI logic, and teaching examples.  
