@@ -1,1 +1,32 @@
+{
+  "coupling": "atmosphere_to_hydrosphere",
+  "version": "1.0",
+  "description": "Coupling map between atmospheric fields and hydrospheric fields.",
+  "atmosphere_fields": [
+    "moisture_flux",
+    "condensation",
+    "evaporation",
+    "radiative_balance",
+    "temperature_gradients"
+  ],
+  "hydrosphere_fields": [
+    "sst",
+    "ocean_currents",
+    "surface_evaporation",
+    "latent_heat_flux",
+    "hydrological_gradients"
+  ],
+  "coupling_relations": {
+    "moisture_flux → surface_evaporation": "positive",
+    "temperature_gradients → sst": "inverse",
+    "radiative_balance → latent_heat_flux": "direct",
+    "condensation → hydrological_gradients": "direct",
+    "evaporation → ocean_currents": "indirect"
+  },
+  "signature_effects": {
+    "coherence": "increases with aligned sst gradients",
+    "drift": "increases with sst anomalies",
+    "resonance": "activated during ENSO-like oscillations"
+  }
+}
 
