@@ -1,10 +1,4 @@
-# 🌐 **docs/atmosphere/maps/teleconnection_map.md**  
-### *Atmosphere Module — Teleconnection Map (Canon)*  
-*(Source: turn0browsertab1)*
-
----
-
-# **Teleconnection Map — Atmosphere Module**  
+# 🌐 **Teleconnection Map — Atmosphere Module**  
 TriadicFrameworks Canon
 
 The Teleconnection Map visualizes long‑range atmospheric coupling across planetary scales. It defines oscillation regimes, wave pathways, coherence corridors, and operator‑aligned teleconnection behavior across micro → meso → macro → mega scales.
