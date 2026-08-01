@@ -1,10 +1,4 @@
-# 🌐 **docs/atmosphere/session/session_trace.md**  
-### *Atmosphere Module — Canon Session Trace*  
-*(Source: turn0browsertab1)*
-
----
-
-# **Session Trace — Atmosphere Module**  
+# 🌐 **Session Trace — Atmosphere Module**  
 TriadicFrameworks Canon
 
 This document provides the human‑readable session trace for the Atmosphere Module. It mirrors the machine‑readable `session_trace.json` and records the chronological sequence of operator events, structural updates, and cross‑domain integrations.
