@@ -1,4 +1,4 @@
-<img width="369" height="369" alt="Prompts_Image" src="https://github.com/user-attachments/assets/ad5d6e47-dc98-4986-a1e6-6e070440fc06" />
+<img width="963" height="963" alt="Prompts_Image" src="https://github.com/user-attachments/assets/ad5d6e47-dc98-4986-a1e6-6e070440fc06" />
 
 # Prompts Site
 
