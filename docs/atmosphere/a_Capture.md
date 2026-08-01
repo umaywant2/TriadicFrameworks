@@ -1,10 +1,4 @@
-# 🌐 **docs/atmosphere/a_Capture.md**  
-### *Atmosphere Module — Canon Capture File*  
-*(Source: turn0browsertab1)*
-
----
-
-# **Atmosphere Module — Capture File**  
+# 🌐 **Atmosphere Module — Capture File**  
 **TriadicFrameworks Canon**
 
 The **Capture File** records the purpose, scope, and structural intent of the Atmosphere Module. It defines what the module *captures*, how it captures it, and how those captures integrate with the diagnostic, envelope, map, and trace layers.
