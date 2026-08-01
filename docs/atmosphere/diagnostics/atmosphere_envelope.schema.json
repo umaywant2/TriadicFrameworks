@@ -1,1 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Atmosphere Envelope Schema",
+  "type": "object",
+  "required": ["module", "category", "version", "fields", "thresholds", "operators", "regimes"],
+  "properties": {
+    "module": { "type": "string", "const": "atmosphere" },
+    "category": { "type": "string", "const": "envelope" },
+    "version": { "type": "string" },
+
+    "fields": {
+      "type": "object",
+      "properties": {
+        "dynamics": { "type": "array", "items": { "type": "string" } },
+        "thermodynamics": { "type": "array", "items": { "type": "string" } },
+        "hydrospheric": { "type": "array", "items": { "type": "string" } },
+        "forcing": { "type": "array", "items": { "type": "string" } },
+        "teleconnection": { "type": "array", "items": { "type": "string" } },
+        "resonance": { "type": "array", "items": { "type": "string" } },
+        "paradox": { "type": "array", "items": { "type": "string" } },
+        "drift": { "type": "array", "items": { "type": "string" } },
+        "dimensional": { "type": "array", "items": { "type": "string" } },
+        "continuity": { "type": "array", "items": { "type": "string" } },
+        "coherence": { "type": "array", "items": { "type": "string" } },
+        "clarity": { "type": "array", "items": { "type": "string" } },
+        "composition": { "type": "array", "items": { "type": "string" } }
+      },
+      "required": [
+        "dynamics",
+        "thermodynamics",
+        "hydrospheric",
+        "forcing",
+        "teleconnection",
+        "resonance",
+        "paradox",
+        "drift",
+        "dimensional",
+        "continuity",
+        "coherence",
+        "clarity",
+        "composition"
+      ]
+    },
+
+    "thresholds": {
+      "type": "object",
+      "properties": {
+        "atmosphere_clarity_min": { "type": "number" },
+        "atmosphere_stability_min": { "type": "number" },
+        "atmosphere_noise_max": { "type": "number" },
+        "radiative_balance_tolerance": { "type": "number" },
+        "gradient_alignment_tolerance": { "type": "number" },
+        "flux_coherence_tolerance": { "type": "number" }
+      },
+      "required": [
+        "atmosphere_clarity_min",
+        "atmosphere_stability_min",
+        "atmosphere_noise_max",
+        "radiative_balance_tolerance",
+        "gradient_alignment_tolerance",
+        "flux_coherence_tolerance"
+      ]
+    },
+
+    "operators": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+
+    "regimes": {
+      "type": "array",
+      "items": { "type": "string" },
+      "enum": ["stable", "transition", "unstable"]
+    }
+  }
+}
 
