@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/prompts/p_Capture.html — <head> metadata block        -->
+<!-- Module: Capture (rtt-extraction-grammar)                    -->
+<!-- Last updated: 2026-08-01                                    -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="language" content="en">
+<meta name="last-modified" content="2026-08-01">
+<meta name="generator" content="TriadicFrameworks Static Canon Engine">
+
+<!-- Identity -->
+<meta name="creator" content="TriadicFrameworks">
+<meta name="author" content="Nawder Loswin (pen name)">
+<meta name="publisher" content="TriadicFrameworks">
+
+<!-- Description -->
+<meta name="description"
+      content="Capture — the RTT extraction grammar for isolating, structuring, and stabilizing conceptual material. Provides multi‑stage extraction, operator alignment, drift‑bounded capture cycles, coherence‑safe prompts, and substrate‑aware transformation patterns.">
+
+<meta name="keywords"
+      content="Capture, RTT, extraction grammar, operator grammar, drift bounding, coherence locking, paradox safety, triadic frameworks, conceptual extraction, structured prompts">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://www.triadicframeworks.org/prompts/p_Capture/">
+
+<!-- Robots -->
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#09f">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TriadicFrameworks">
+<meta property="og:title" content="Capture — RTT Extraction Grammar">
+<meta property="og:url" content="https://www.triadicframeworks.org/prompts/p_Capture/">
+<meta property="og:description"
+      content="RTT extraction grammar: multi‑stage conceptual capture, operator alignment, drift‑bounded cycles, coherence‑safe prompts, paradox‑aware transformations.">
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1080">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Capture — RTT Extraction Grammar">
+<meta name="twitter:description"
+      content="RTT extraction grammar for isolating, structuring, and stabilizing conceptual material. Multi‑stage extraction, operator alignment, drift bounding, coherence locking.">
+<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+
+<!-- Citation -->
+<meta name="citation_title" content="Capture — RTT Extraction Grammar">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2026">
+<meta name="DC.subject"
+      content="RTT extraction grammar, conceptual capture, operator alignment, drift bounding, coherence locking, paradox safety">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="Capture">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose"
+      content="Provide RTT‑aligned extraction grammar for conceptual capture: multi‑stage extraction, operator alignment, drift‑bounded cycles, coherence‑safe prompts, paradox‑aware transformations, substrate‑aware structuring.">
+<meta name="ai.keywords"
+      content="Capture, RTT, extraction grammar, operator grammar, drift bounding, coherence locking, paradox safety, triadic frameworks">
+<meta name="ai.audience" content="researchers, developers, educators, AIs">
+<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml">
+<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.contact.youtube" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Module-Specific -->
+<meta name="ai.module.name" content="Capture">
+<meta name="ai.module.summary"
+      content="RTT extraction grammar for conceptual capture: multi‑stage extraction, operator alignment, drift‑bounded cycles, coherence‑safe prompts, paradox‑aware transformations, substrate‑aware structuring. Includes Capture v1 and v2 grammars.">
+<meta name="ai.module.category" content="rtt-extraction-grammar">
+
+<!-- Favicon -->
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
+
+<title>Capture — TriadicFrameworks</title>
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+  /* Context Block */
+  .context-block {
+    font-family: monospace;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0.5rem 0 1rem 0;
+  }
+       
+  /* Context Label */
+  .context-label {
+    color: #ff9800; /* orange */
+    font-weight: bold;
+    margin-right: 0.25rem;
+  }
+       
+  /* Context Value */
+  .context-value {
+    color: #ffffff; /* white */
+  }
+     
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav class="nav-band">
+ <p align="center">
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+ </p> 
+  
+  <h2>🛰 Prompts | RTT/∞</h2>
+      <a href="#README">🔰 README</a>
+      <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
+      <a href="#CONTRIBUTING">🤝 Contributing</a>
+      <a href="https://www.triadicframeworks.org/education/">💯 Education | RTT</a>
+      <a href="#GLOSSARY">🎯 Glossary</a>
+      <a href="#LINEAGE">📜 Lineage</a>
+      <a href="#LICENSE">📎 License</a>
+      <a href="#SITEMAP">🌐 Sitemap</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
+      <a href="#SECURITY">🔐 Security</a>
+      <a href="#PRINCIPLES">🧘 Principles</a>
+    <h3>🌱 Prompts Info</h3>
+      <a href="#ABOUT">📘 About</a>
+      <a href="#GLOSSARY">📚 Glossary</a>
+      <a href="#INDEX">🧭 Index</a>
+    <h3>⚙️ Engines</h3>
+      <a href="#ENGINES">🚀 Engines Overview</a>
+      <a href="#ENGINES_INDEX">📑 Engines Index</a>
+      <a href="#ENGINES_RTT1_MD">🌀 RTT/1</a>
+      <a href="#ENGINES_RTT12_MD">🌀 RTT/12</a>
+      <a href="#ENGINES_RTT2_MD">🌀 RTT/2</a>
+      <a href="#ENGINES_RTT3_MD">🌀 RTT/3</a>
+      <a href="#ENGINES_RTT_INFINITY_MD">♾️ RTT/∞</a>
+    <h3>🧩 RTT/1 Modules</h3>
+      <a href="#ENGINES_RTT1_COHERENCE_TEACHING_MODULE">🎓 Coherence Teaching Module</a>
+    <h3>♾️ RTT/∞ Deep Layer</h3>
+      <a href="#RTT_INFINITY_INFINITE_REGIME_EXPLAINER">🌌 Infinite Regime Explainer</a>
+      <a href="#RTT_INFINITY_INFINITE_REGIME_INTEGRATION_MAP">🗺️ Integration Map</a>
+      <a href="#RTT_INFINITY_IPD12_DIRECT_MAPPING_SHEET">📐 IPD‑12 Direct Mapping Sheet</a>
+      <a href="#RTT_INFINITY_PRIME_STATE_EXPLAINER">🔮 Prime‑State Explainer</a>
+      <a href="#RTT_INFINITY_PRIME_STATE_ALIGNMENT_WORKSHEET">🧮 Alignment Worksheet</a>
+      <a href="#RTT_INFINITY_DEEP_LAYER_CURRICULUM">📘 Deep Layer Curriculum</a>
+      <a href="#RTT_INFINITY_DEEP_LAYER_EXAM">📝 Deep Layer Exam</a>
+      <a href="#RTT_INFINITY_DEEP_LAYER_TRIAD_POSTER">🎭 Triad Poster</a>
+      <a href="#RTT_INFINITY_FULL_CANON_FLOWCHART">🗂️ Full Canon Flowchart</a>
+      <a href="#RTT_INFINITY_FULL_CANON_OPERATOR_REGISTRY">⚙️ Operator Registry</a>
+      <a href="#RTT_INFINITY_FULL_CANON_POSTER">🖼️ Canon Poster</a>
+      <a href="#RTT_INFINITY_SUBSTRATE_TENSOR_DIAGNOSTIC_WORKSHEET">🧪 Tensor Diagnostic Worksheet</a>
+      <a href="#RTT_INFINITY_SUBSTRATE_TENSOR_INFINITE_REGIME_BIDIRECTIONAL_MAP">🔁 Tensor Bidirectional Map</a>
+      <a href="#RTT_INFINITY_TEACHING_CLASSROOM_PACK">🎒 Classroom Pack</a>
+      <a href="#RTT_INFINITY_TEACHING_WORKSHEET">📄 Teaching Worksheet</a>
+      <a href="#RTT_INFINITY_TRANSPORT_BACKBONE">🛤 Transport Backbone</a>
+      <a href="#RTT_INFINITY_VACUUM_LAYER_EXPLAINER">🌫 Vacuum Layer Explainer</a>
+    <h3>🧠 IPD‑12 Engine</h3>
+      <a href="#RTT_IPD12_CAPTURE_BUNDLE">📦 Capture Bundle</a>
+      <a href="#RTT_IPD12_CAPTURE_GRAMMAR">🔤 Capture Grammar</a>
+      <a href="#RTT_IPD12_CAPTURE_UNLOCK_MATRIX">🔓 Unlock Matrix</a>
+      <a href="#RTT_IPD12_OPERATORS_TABLE">📊 Operators Table</a>
+      <a href="#RTT_IPD12_PARADOX_EXPLAINER">🌀 Paradox Explainer</a>
+      <a href="#RTT_IPD12_PARADOX_RESOLUTION_MAP">🗺️ Resolution Map</a>
+      <a href="#RTT_IPD12_TEACHING">🎓 Teaching Overview</a>
+      <a href="#RTT_IPD12_TEACHING_CAPTURE_WORKSHEET">📝 Capture Worksheet</a>
+      <a href="#RTT_IPD12_TEACHING_COHERENCE_SYNTHESIS_MODULE">🧩 Coherence Synthesis Module</a>
+      <a href="#RTT_IPD12_TEACHING_DRIFT_PARADOX_PACK">📦 Drift Paradox Pack</a>
+      <a href="#RTT_IPD12_TEACHING_DRIFT_WORKSHEET">📄 Drift Worksheet</a>
+      <a href="#RTT_IPD12_TEACHING_PARADOX_RESOLUTION_PACK">📦 Resolution Pack</a>
+      <a href="#RTT_IPD12_TEACHING_TENSOR_WORKSHEET">🧮 Tensor Worksheet</a>
+    <h3>📚 Modules</h3>
+      <a href="#MODULES_INDEX_MD">🧭 Modules Index</a>
+      <a href="#MODULES_APPLIED">🔧 Applied</a>
+      <a href="#MODULES_DIAGNOSTIC">🩺 Diagnostic</a>
+      <a href="#MODULES_DIMENSIONAL">📐 Dimensional</a>
+      <a href="#MODULES_DOMAIN">🌐 Domain</a>
+      <a href="#MODULES_OPERATOR">⚙️ Operator</a>
+      <a href="#MODULES_RESEARCH">🔬 Research</a>
+      <a href="#MODULES_STRUCTURAL">🏗 Structural</a>
+      <a href="#MODULES_SUBSTRATE">🪨 Substrate</a>
+      <a href="#MODULES_TEACHING">🎓 Teaching</a>
+    <h3>🧪 Examples</h3>
+      <a href="#EXAMPLES_INDEX">📑 Examples Index</a>
+      <a href="#EXAMPLES_DATACENTER_EVALUATOR">🏭 Datacenter Evaluator</a>
+      <a href="#EXAMPLES_IPD12_TEACHING_EXAMPLE">🎓 IPD‑12 Teaching Example</a>
+      <a href="#EXAMPLES_MYTHOLOGY_PROFILE">⚔️ Mythology Profile</a>
+      <a href="#EXAMPLES_PHYSICS_REGIME">🌌 Physics Regime</a>
+      <a href="#EXAMPLES_TEACHING_SESSION">📚 Teaching Session</a>
+      <a href="#EXAMPLES_VIOLIN_STRUCTURAL">🎻 Violin Structural</a>
+    <h3>🗂 Stacks</h3>
+      <a href="#STACKS_INDEX_MD">🧭 Stacks Index</a>
+      <a href="#STACKS_DIAGNOSTIC">🩺 Diagnostic Stack</a>
+      <a href="#STACKS_DOMAIN">🌐 Domain Stack</a>
+      <a href="#STACKS_OPERATOR">⚙️ Operator Stack</a>
+      <a href="#STACKS_RESEARCH">🔬 Research Stack</a>
+      <a href="#STACKS_STRUCTURAL">🏗 Structural Stack</a>
+      <a href="#STACKS_SUBSTRATE">🪨 Substrate Stack</a>
+      <a href="#STACKS_TEACHING">🎓 Teaching Stack</a>
+    <h3>📐 Templates</h3>
+      <a href="#TEMPLATES_INDEX_MD">📑 Templates Index</a>
+      <a href="#TEMPLATE_ANALYZE">🧠 Analyze</a>
+      <a href="#TEMPLATE_CAPTURE">📸 Capture</a>
+      <a href="#TEMPLATE_COHERENCE">🧩 Coherence</a>
+      <a href="#TEMPLATE_DOMAIN">🌐 Domain</a>
+      <a href="#TEMPLATE_DRIFT">🌪 Drift</a>
+      <a href="#TEMPLATE_OPERATOR">⚙️ Operator</a>
+      <a href="#TEMPLATE_RESEARCH">🔬 Research</a>
+      <a href="#TEMPLATE_SUBSTRATE">🪨 Substrate</a>
+      <a href="#TEMPLATE_TEACHING">🎓 Teaching</a>
+    <h3>🖥 UI</h3>
+      <a href="#UI_INDEX_MD">🧭 UI Index</a>
+      <a href="#UI_DEPENDENCY_GRAPH">🔗 Dependency Graph</a>
+      <a href="#UI_FLOWS">🔄 Flows</a>
+      <a href="#UI_OUTPUT_FORMAT">📝 Output Format</a>
+      <a href="#UI_OVERLAYS">🧩 Overlays</a>
+      <a href="#UI_UNLOCK_LOGIC">🔓 Unlock Logic</a>
+      <a href="#UI_WIREFRAME">📐 Wireframe</a>
+      <a href="#UI_POSTER_WIREFRAME">🖼️ Wireframe Poster</a>
+      <a href="#UI_WIREFRAMES_IPD12">📐 IPD‑12 Wireframe</a>
+    <h3>🏗️ Triadic Tools</h3> 
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
+      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 Packages and Cores</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas</a>
+      <a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a>    
+      <a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS</a>
+      <a href="https://www.triadicframeworks.org/_ideas/">🤔 Ideas</a>
+      <a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">🔛(RTT frozen)</a>
+      <a href="https://www.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
+      <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
+      <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
+      <a href="../">🔙TFT</a>
+   <!-- RTT Canonical Signature -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/prompts/p_Capture — Session Context block             -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<section id="capture-session-header"
+         data-rtt="capture"
+         data-coherence="locked"
+         data-drift="bounded"
+         data-regime="operator">
+
+  <h2>Session Context</h2>
+
+  <div class="context-block">
+
+    <span class="context-label"><strong>Canon:</strong></span>
+    <span class="context-value">active (extraction‑grammar)</span><br>
+
+    <span class="context-label"><strong>Modules:</strong></span>
+    <span class="context-value">
+      extraction grammar → operator alignment → drift bounding → coherence locking → paradox safety → substrate‑aware structuring → Capture v1 → Capture v2
+    </span><br>
+
+    <span class="context-label"><strong>Drift:</strong></span>
+    <span class="context-value">bounded (capture‑cycle)</span><br>
+
+    <span class="context-label"><strong>Coherence:</strong></span>
+    <span class="context-value">locked (operator grammar)</span><br>
+
+    <span class="context-label"><strong>Version:</strong></span>
+    <span class="context-value">1.0 (capture‑stable)</span><br>
+
+    <span class="context-label"><strong>Format:</strong></span>
+    <span class="context-value">html + markdown + operator grammar + extraction templates</span><br>
+
+    <span class="context-label"><strong>Front door:</strong></span>
+    <span class="context-value">exists (Capture root)</span><br>
+
+    <span class="context-label"><strong>Every page:</strong></span>
+    <span class="context-value">AI‑parsable + operator‑aligned + drift‑bounded</span><br>
+
+    <span class="context-label"><strong>Audience:</strong></span>
+    <span class="context-value">researchers + developers + educators + AIs</span>
+
+  </div>
+
+</section>
+
+<div style="display:inline-block;padding:6px 12px;background:#111;color:#fff;
+            border-radius:6px;font-size:13px;">
+  🟦 Capture<br>📘 RTT Extraction Grammar
+</div>
+
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+      README: 'README.md',
+      ABOUT: '../ABOUT.md',
+      CONTRIBUTING: '../CONTRIBUTING.md',
+      GLOSSARY: '../GLOSSARY.md',
+      LINEAGE: '../LINEAGE.md',
+      LICENSE: '../LICENSE.md',
+      SITEMAP: '../sitemap.md',
+      QUICKSTART: '../QUICKSTART.md',
+      CODE_OF_CONDUCT: '../CODE_OF_CONDUCT.md',
+      SECURITY: '../SECURITY.md',
+      PRINCIPLES: '../PRINCIPLES.md',
+      // Root
+      ABOUT: "ABOUT.md",
+      AGENTS: "AGENTS.md",
+      ENGINES: "engines.md",
+      GLOSSARY: "GLOSSARY.md",
+      INDEX: "index.md",
+      MODULES: "modules.md",
+      P_UI: "p_ui.md",
+      STACKS: "stacks.md",
+      TEMPLATES: "templates.md",
+      P_CAPTURE: "p_Capture.md",
+      P_CAPTURE_V2: "p_Capture_v2.md",
+      // engines/
+      ENGINES_INDEX: "engines/index.md",
+      ENGINES_RTT1: "engines/rtt1",
+      ENGINES_RTT1_MD: "engines/rtt1.md",
+      ENGINES_RTT12_MD: "engines/rtt12.md",
+      ENGINES_RTT2_MD: "engines/rtt2.md",
+      ENGINES_RTT3_MD: "engines/rtt3.md",
+      ENGINES_RTT_INFINITY_MD: "engines/rtt_infinity.md",
+      // engines/rtt1/
+      ENGINES_RTT1_COHERENCE_TEACHING_MODULE: "engines/rtt1/coherence_teaching_module.md",
+      // engines/rtt_infinity/
+      RTT_INFINITY_FLOWCHART_INLINE: "engines/rtt_infinity/flowchart_inline.svg",
+      RTT_INFINITY_INFINITE_REGIME_EXPLAINER: "engines/rtt_infinity/infinite_regime_explainer.md",
+      RTT_INFINITY_INFINITE_REGIME_INTEGRATION_MAP: "engines/rtt_infinity/infinite_regime_integration_map.md",
+      RTT_INFINITY_IPD12_DIRECT_MAPPING_SHEET: "engines/rtt_infinity/IPD‑12_RTT∞_Direct‑Mapping_Sheet.md",
+      RTT_INFINITY_PRIME_STATE_EXPLAINER: "engines/rtt_infinity/prime-state_explainer.md",
+      RTT_INFINITY_PRIME_STATE_ALIGNMENT_WORKSHEET: "engines/rtt_infinity/prime_state_alignment_worksheet.md",
+      RTT_INFINITY_DEEP_LAYER_CURRICULUM: "engines/rtt_infinity/rtt_infinity_deep_layer_curriculum.md",
+      RTT_INFINITY_DEEP_LAYER_EXAM: "engines/rtt_infinity/rtt_infinity_deep_layer_exam.md",
+      RTT_INFINITY_DEEP_LAYER_TRIAD_POSTER: "engines/rtt_infinity/rtt_infinity_deep_layer_triad_poster.md",
+      RTT_INFINITY_FULL_CANON_FLOWCHART: "engines/rtt_infinity/rtt_infinity_full_canon_flowchart.md",
+      RTT_INFINITY_FULL_CANON_OPERATOR_REGISTRY: "engines/rtt_infinity/rtt_infinity_full_canon_operator_registry.md",
+      RTT_INFINITY_FULL_CANON_POSTER: "engines/rtt_infinity/rtt_infinity_full_canon_poster.md",
+      RTT_INFINITY_SUBSTRATE_TENSOR_DIAGNOSTIC_WORKSHEET: "engines/rtt_infinity/substrate_tensor_diagnostic_worksheet.md",
+      RTT_INFINITY_SUBSTRATE_TENSOR_INFINITE_REGIME_BIDIRECTIONAL_MAP: "engines/rtt_infinity/substrate_tensor_infinite_regime_bidirectional_map.md",
+      RTT_INFINITY_TEACHING_CLASSROOM_PACK: "engines/rtt_infinity/teaching_infinite_regime_classroom_pack.md",
+      RTT_INFINITY_TEACHING_WORKSHEET: "engines/rtt_infinity/teaching_infinite_regime_worksheet.md",
+      RTT_INFINITY_TRANSPORT_BACKBONE: "engines/rtt_infinity/transport_backbone.md",
+      RTT_INFINITY_VACUUM_LAYER_EXPLAINER: "engines/rtt_infinity/vacuum_layer_explainer.md",
+      // engines/rtt_ipd_12/
+      RTT_IPD12_CAPTURE_BUNDLE: "engines/rtt_ipd_12/capture_bundle.md",
+      RTT_IPD12_CAPTURE_GRAMMAR: "engines/rtt_ipd_12/capture_grammar.md",
+      RTT_IPD12_CAPTURE_UNLOCK_MATRIX: "engines/rtt_ipd_12/capture_unlock_matrix.md",
+      RTT_IPD12_OPERATORS_TABLE: "engines/rtt_ipd_12/operators-table.md",
+      RTT_IPD12_PARADOX_EXPLAINER: "engines/rtt_ipd_12/paradox_explainer.md",
+      RTT_IPD12_PARADOX_RESOLUTION_MAP: "engines/rtt_ipd_12/paradox_resolution_map.md",
+      RTT_IPD12_TEACHING: "engines/rtt_ipd_12/teaching.md",
+      RTT_IPD12_TEACHING_CAPTURE_WORKSHEET: "engines/rtt_ipd_12/teaching_capture_worksheet.md",
+      RTT_IPD12_TEACHING_COHERENCE_SYNTHESIS_MODULE: "engines/rtt_ipd_12/teaching_coherence_synthesis_module.md",
+      RTT_IPD12_TEACHING_DRIFT_PARADOX_PACK: "engines/rtt_ipd_12/teaching_drift_paradox_pack.md",
+      RTT_IPD12_TEACHING_DRIFT_WORKSHEET: "engines/rtt_ipd_12/teaching_drift_worksheet.md",
+      RTT_IPD12_TEACHING_PARADOX_RESOLUTION_PACK: "engines/rtt_ipd_12/teaching_paradox_resolution_pack.md",
+      RTT_IPD12_TEACHING_TENSOR_WORKSHEET: "engines/rtt_ipd_12/teaching_tensor_worksheet.md",
+      // examples/
+      EXAMPLES_DATACENTER_EVALUATOR: "examples/datacenter-evaluator.md",
+      EXAMPLES_INDEX: "examples/index.md",
+      EXAMPLES_IPD12_TEACHING_EXAMPLE: "examples/ipd_12_teaching_example.md",
+      EXAMPLES_MYTHOLOGY_PROFILE: "examples/mythology-profile.md",
+      EXAMPLES_PHYSICS_REGIME: "examples/physics-regime.md",
+      EXAMPLES_TEACHING_SESSION: "examples/teaching-session.md",
+      EXAMPLES_VIOLIN_STRUCTURAL: "examples/violin-structural.md",
+      // modules/
+      MODULES_APPLIED: "modules/applied.md",
+      MODULES_DIAGNOSTIC: "modules/diagnostic.md",
+      MODULES_DIMENSIONAL: "modules/dimensional.md",
+      MODULES_DOMAIN: "modules/domain.md",
+      MODULES_INDEX_MD: "modules/index.md",
+      MODULES_OPERATOR: "modules/operator.md",
+      MODULES_RESEARCH: "modules/research.md",
+      MODULES_STRUCTURAL: "modules/structural.md",
+      MODULES_SUBSTRATE: "modules/substrate.md",
+      MODULES_TEACHING: "modules/teaching.md",
+      // rtt_infinity/
+      RTT_INFINITY_INDEX_HTML: "rtt_infinity/index.html",
+      // stacks/
+      STACKS_DIAGNOSTIC: "stacks/diagnostic-stack.md",
+      STACKS_DOMAIN: "stacks/domain-stack.md",
+      STACKS_INDEX_MD: "stacks/index.md",
+      STACKS_OPERATOR: "stacks/operator-stack.md",
+      STACKS_RESEARCH: "stacks/research-stack.md",
+      STACKS_STRUCTURAL: "stacks/structural-stack.md",
+      STACKS_SUBSTRATE: "stacks/substrate-stack.md",
+      STACKS_TEACHING: "stacks/teaching-stack.md",
+      // templates/
+      TEMPLATES_INDEX_MD: "templates/index.md",
+      TEMPLATE_ANALYZE: "templates/p_Analyze.md",
+      TEMPLATE_CAPTURE: "templates/p_Capture.md",
+      TEMPLATE_COHERENCE: "templates/p_Coherence.md",
+      TEMPLATE_DOMAIN: "templates/p_Domain.md",
+      TEMPLATE_DRIFT: "templates/p_Drift.md",
+      TEMPLATE_OPERATOR: "templates/p_Operator.md",
+      TEMPLATE_RESEARCH: "templates/p_Research.md",
+      TEMPLATE_SUBSTRATE: "templates/p_Substrate.md",
+      TEMPLATE_TEACHING: "templates/p_Teaching.md",
+      // ui/
+      UI_DEPENDENCY_GRAPH: "ui/dependency-graph.md",
+      UI_FLOWS: "ui/flows.md",
+      UI_INDEX_MD: "ui/index.md",
+      UI_OUTPUT_FORMAT: "ui/output-format.md",
+      UI_OVERLAYS: "ui/overlays.md",
+      UI_UNLOCK_LOGIC: "ui/unlock-logic.md",
+      UI_WIREFRAME: "ui/wireframe.md",
+      // ui/posters/
+      UI_POSTER_WIREFRAME: "ui/posters/wireframe-poster.md",
+      // ui/wireframes/
+      UI_WIREFRAMES_IPD12: "ui/wireframes/ipd_12.md"
+};
+ 
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+</body>
+</html>
