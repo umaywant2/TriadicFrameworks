@@ -1,1 +1,81 @@
+{
+  "matrix": "triadic_coupling",
+  "version": "1.0",
+  "description": "Global cross-domain coupling lattice for TriadicFrameworks environmental modules.",
+  "domains": [
+    "atmosphere",
+    "hydrosphere",
+    "cryosphere",
+    "biosphere",
+    "land",
+    "magnetosphere"
+  ],
+  "couplings": {
+    "atmosphere": {
+      "hydrosphere": {
+        "strength": 0.9,
+        "primary_channels": [
+          "moisture_flux",
+          "latent_heat_flux",
+          "sst_gradients"
+        ]
+      },
+      "cryosphere": {
+        "strength": 0.8,
+        "primary_channels": [
+          "radiative_balance",
+          "albedo_feedback",
+          "polar_teleconnection"
+        ]
+      },
+      "biosphere": {
+        "strength": 0.85,
+        "primary_channels": [
+          "evapotranspiration",
+          "vegetation_radiative_modulation",
+          "carbon_flux"
+        ]
+      },
+      "land": {
+        "strength": 0.8,
+        "primary_channels": [
+          "boundary_layer_flux",
+          "soil_moisture",
+          "surface_heat_flux"
+        ]
+      },
+      "magnetosphere": {
+        "strength": 0.7,
+        "primary_channels": [
+          "solar_wind_radiative_effects",
+          "geomagnetic_flux_perturbation",
+          "ionospheric_resonance"
+        ]
+      }
+    },
+    "hydrosphere": {
+      "cryosphere": { "strength": 0.75 },
+      "biosphere": { "strength": 0.8 },
+      "land": { "strength": 0.7 },
+      "magnetosphere": { "strength": 0.6 }
+    },
+    "cryosphere": {
+      "biosphere": { "strength": 0.65 },
+      "land": { "strength": 0.7 },
+      "magnetosphere": { "strength": 0.7 }
+    },
+    "biosphere": {
+      "land": { "strength": 0.85 },
+      "magnetosphere": { "strength": 0.6 }
+    },
+    "land": {
+      "magnetosphere": { "strength": 0.55 }
+    }
+  },
+  "notes": {
+    "scale": "0.0–1.0 (relative coupling strength)",
+    "interpretation": "Higher strength indicates stronger cross-domain resonance and feedback potential.",
+    "primary_focus": "Atmosphere-centered triadic coupling for current module set."
+  }
+}
 
