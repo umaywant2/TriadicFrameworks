@@ -1,1 +1,23 @@
+{
+  "module": "atmosphere",
+  "category": "example",
+  "version": "1.0",
+  "scenario": "moisture_gradient_shift",
+  "input": {
+    "dynamics": { "momentum_flux": 0.44, "wave_propagation": 0.52 },
+    "thermodynamics": { "temperature_gradients": -4.8, "energy_flux": 102 },
+    "hydrospheric": { "moisture_flux": 0.92, "evaporation": 0.81, "condensation": 0.44 },
+    "forcing": { "radiative": 298 },
+    "teleconnection": { "indian_ocean": 0.52 },
+    "resonance": { "harmonic_alignment": 0.33 },
+    "paradox": { "flux_paradox": 0.22 },
+    "drift": { "boundary_drift": 0.52 },
+    "dimensional": { "macro_scale": 0.63 },
+    "continuity": { "flux_continuity": 0.52 },
+    "coherence": { "coherent_gradients": 0.48 },
+    "clarity": { "noise_reduction": 0.52 },
+    "composition": { "gas_mixture": 0.48 }
+  },
+  "regime": "transition"
+}
 
