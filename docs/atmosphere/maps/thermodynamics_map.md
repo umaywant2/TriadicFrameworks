@@ -1,10 +1,4 @@
-# 🌐 **docs/atmosphere/maps/thermodynamics_map.md**  
-### *Atmosphere Module — Thermodynamics Map (Canon)*  
-*(Source: turn0browsertab1)*
-
----
-
-# **Thermodynamics Map — Atmosphere Module**  
+# 🌐 **Thermodynamics Map — Atmosphere Module**  
 TriadicFrameworks Canon
 
 The Thermodynamics Map visualizes the structural thermodynamic fields of the Atmosphere Module. It defines gradients, transitions, stability zones, and operator‑aligned thermodynamic behavior across micro → meso → macro → mega scales.
