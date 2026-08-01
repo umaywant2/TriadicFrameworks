@@ -1,10 +1,4 @@
-# 🌐 **docs/atmosphere/maps/forcing_map.md**  
-### *Atmosphere Module — Forcing Map (Canon)*  
-*(Source: turn0browsertab1)*
-
----
-
-# **Forcing Map — Atmosphere Module**  
+# 🌐 **Forcing Map — Atmosphere Module**  
 TriadicFrameworks Canon
 
 The Forcing Map visualizes external and internal energy inputs that perturb atmospheric structure across micro → meso → macro → mega scales. It defines forcing gradients, stability impacts, transition triggers, and operator‑aligned forcing behavior.
