@@ -1,1 +1,60 @@
+<svg width="960" height="540" viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="960" height="540" fill="#0b1e2d"/>
+
+  <!-- Title -->
+  <text x="480" y="60" font-size="32" fill="#ffffff" text-anchor="middle">
+    Atmosphere Operator Flow
+  </text>
+
+  <!-- Stages -->
+  <g font-size="18" fill="#cfe8ff">
+    <text x="160" y="160" text-anchor="middle">Inputs</text>
+    <text x="360" y="160" text-anchor="middle">Diagnostics</text>
+    <text x="560" y="160" text-anchor="middle">Module Operators</text>
+    <text x="760" y="160" text-anchor="middle">Outputs</text>
+  </g>
+
+  <!-- Stage Boxes -->
+  <g stroke="#4fa3ff" stroke-width="2" fill="none">
+    <rect x="100" y="180" width="120" height="80" rx="10" ry="10"/>
+    <rect x="300" y="180" width="120" height="80" rx="10" ry="10"/>
+    <rect x="500" y="180" width="120" height="80" rx="10" ry="10"/>
+    <rect x="700" y="180" width="120" height="80" rx="10" ry="10"/>
+  </g>
+
+  <!-- Stage Labels -->
+  <g font-size="14" fill="#a8d4ff">
+    <text x="160" y="210" text-anchor="middle">Envelope</text>
+    <text x="160" y="230" text-anchor="middle">Examples</text>
+
+    <text x="360" y="210" text-anchor="middle">Diagnostics</text>
+    <text x="360" y="230" text-anchor="middle">Traces</text>
+
+    <text x="560" y="210" text-anchor="middle">Regime</text>
+    <text x="560" y="230" text-anchor="middle">Alignment</text>
+
+    <text x="760" y="210" text-anchor="middle">Signature</text>
+    <text x="760" y="230" text-anchor="middle">Coupling</text>
+  </g>
+
+  <!-- Flow Arrows -->
+  <g stroke="#4fa3ff" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <line x1="220" y1="220" x2="300" y2="220"/>
+    <line x1="420" y1="220" x2="500" y2="220"/>
+    <line x1="620" y1="220" x2="700" y2="220"/>
+  </g>
+
+  <!-- Arrow Marker -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#4fa3ff"/>
+    </marker>
+  </defs>
+
+  <!-- Bottom Caption -->
+  <text x="480" y="520" font-size="14" fill="#88b7ff" text-anchor="middle">
+    TriadicFrameworks — Atmosphere Operator Flow (Inputs → Diagnostics → Operators → Outputs)
+  </text>
+</svg>
 
