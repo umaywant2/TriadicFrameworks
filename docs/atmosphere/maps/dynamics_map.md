@@ -1,10 +1,4 @@
-# 🌐 **docs/atmosphere/maps/dynamics_map.md**  
-### *Atmosphere Module — Dynamics Map (Canon)*  
-*(Source: turn0browsertab1)*
-
----
-
-# **Dynamics Map — Atmosphere Module**  
+# 🌐 **Dynamics Map — Atmosphere Module**  
 TriadicFrameworks Canon
 
 The Dynamics Map visualizes atmospheric motion, circulation, flow regimes, and operator‑aligned dynamic behavior across micro → meso → macro → mega scales. It defines dynamic gradients, flow transitions, stability zones, and dynamic regime behavior.
