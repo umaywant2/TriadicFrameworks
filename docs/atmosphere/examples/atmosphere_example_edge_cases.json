@@ -1,1 +1,23 @@
+{
+  "module": "atmosphere",
+  "category": "example",
+  "version": "1.0",
+  "scenario": "paradox_drift_cascade",
+  "input": {
+    "dynamics": { "instability_development": 0.92 },
+    "thermodynamics": { "temperature_gradients": -12.2 },
+    "hydrospheric": { "moisture_flux": 0.98 },
+    "forcing": { "mechanical": 0.81 },
+    "teleconnection": { "polar": 0.12 },
+    "resonance": { "resonance_amplification": 0.92 },
+    "paradox": { "coherence_paradox": 0.88 },
+    "drift": { "coherence_drift": 0.92 },
+    "dimensional": { "micro_scale": 0.92 },
+    "continuity": { "flux_continuity": 0.22 },
+    "coherence": { "coherent_gradients": 0.12 },
+    "clarity": { "noise_reduction": 0.12 },
+    "composition": { "aerosol_content": 0.81 }
+  },
+  "regime": "unstable"
+}
 
