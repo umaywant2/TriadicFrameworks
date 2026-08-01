@@ -1,1 +1,29 @@
+{
+  "module": "atmosphere",
+  "category": "example",
+  "version": "1.0",
+  "scenario": "magnetosphere_perturbation",
+  "input": {
+    "dynamics": { "vorticity_evolution": 0.52 },
+    "thermodynamics": { "radiative_balance": 0.33 },
+    "hydrospheric": { "moisture_flux": 0.41 },
+    "forcing": { "radiative": 365, "mechanical": 0.52 },
+    "teleconnection": { "polar": 0.71 },
+    "resonance": { "oscillation_modes": 0.63 },
+    "paradox": { "flux_paradox": 0.33 },
+    "drift": { "gradient_drift": 0.52 },
+    "dimensional": { "meso_scale": 0.63 },
+    "continuity": { "flux_continuity": 0.41 },
+    "coherence": { "coherent_gradients": 0.33 },
+    "clarity": { "noise_reduction": 0.41 },
+    "composition": { "gas_mixture": 0.52 }
+  },
+  "coupling": {
+    "magnetosphere": {
+      "solar_wind_radiative_effects": 0.92,
+      "geomagnetic_flux_perturbation": 0.81
+    }
+  },
+  "regime": "unstable"
+}
 
