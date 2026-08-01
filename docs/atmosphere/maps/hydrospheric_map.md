@@ -1,10 +1,4 @@
-# 🌐 **docs/atmosphere/maps/hydrospheric_map.md**  
-### *Atmosphere Module — Hydrospheric Map (Canon)*  
-*(Source: turn0browsertab1)*
-
----
-
-# **Hydrospheric Map — Atmosphere Module**  
+# 🌐 **Hydrospheric Map — Atmosphere Module**  
 TriadicFrameworks Canon
 
 The Hydrospheric Map visualizes moisture flux, ocean–atmosphere coupling, hydrological gradients, and operator‑aligned hydrospheric behavior across micro → meso → macro → mega scales.
