@@ -1,5 +1,4 @@
-# 🌐 **docs/atmosphere/session/session_context.md**  
-### *Atmosphere Module — Canon Session Context Block*  
+# 🌐 **Atmosphere Module — Canon Session Context Block*  
 *(Source: turn0browsertab1)*
 
 ```html
