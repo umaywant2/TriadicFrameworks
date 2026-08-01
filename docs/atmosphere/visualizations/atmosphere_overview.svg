@@ -1,1 +1,38 @@
+<svg width="960" height="540" viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="540" fill="#0b1e2d"/>
+  <text x="480" y="60" font-size="36" fill="#ffffff" text-anchor="middle">
+    Atmosphere Module — Overview Map
+  </text>
+
+  <!-- Domains -->
+  <g font-size="20" fill="#cfe8ff">
+    <text x="120" y="140">Dynamics</text>
+    <text x="120" y="200">Thermodynamics</text>
+    <text x="120" y="260">Hydrospheric</text>
+    <text x="120" y="320">Forcing</text>
+    <text x="120" y="380">Teleconnection</text>
+    <text x="120" y="440">Resonance</text>
+
+    <text x="480" y="140">Paradox</text>
+    <text x="480" y="200">Drift</text>
+    <text x="480" y="260">Dimensional</text>
+    <text x="480" y="320">Continuity</text>
+    <text x="480" y="380">Coherence</text>
+    <text x="480" y="440">Clarity</text>
+    <text x="480" y="500">Composition</text>
+  </g>
+
+  <!-- Connecting lines -->
+  <g stroke="#4fa3ff" stroke-width="2" opacity="0.5">
+    <line x1="200" y1="140" x2="400" y2="200"/>
+    <line x1="200" y1="200" x2="400" y2="260"/>
+    <line x1="200" y1="260" x2="400" y2="320"/>
+    <line x1="200" y1="320" x2="400" y2="380"/>
+    <line x1="200" y1="380" x2="400" y2="440"/>
+  </g>
+
+  <text x="480" y="520" font-size="16" fill="#88b7ff" text-anchor="middle">
+    TriadicFrameworks — Atmosphere Module Overview
+  </text>
+</svg>
 
