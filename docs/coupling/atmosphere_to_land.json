@@ -1,1 +1,32 @@
+{
+  "coupling": "atmosphere_to_land",
+  "version": "1.0",
+  "description": "Coupling map between atmospheric fields and land-surface fields.",
+  "atmosphere_fields": [
+    "temperature_gradients",
+    "radiative_balance",
+    "boundary_layer_flux",
+    "moisture_flux",
+    "coherent_gradients"
+  ],
+  "land_fields": [
+    "soil_moisture",
+    "terrain_flux_modulation",
+    "surface_heat_flux",
+    "vegetation_cover",
+    "land_albedo"
+  ],
+  "coupling_relations": {
+    "temperature_gradients → surface_heat_flux": "direct",
+    "radiative_balance → land_albedo": "inverse",
+    "boundary_layer_flux → terrain_flux_modulation": "direct",
+    "moisture_flux → soil_moisture": "direct",
+    "coherent_gradients → vegetation_cover": "direct"
+  },
+  "signature_effects": {
+    "continuity": "increases with stable terrain flux",
+    "drift": "increases with soil moisture anomalies",
+    "clarity": "increases with aligned land-albedo feedback"
+  }
+}
 
