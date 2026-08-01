@@ -1,10 +1,4 @@
-# 🌐 **docs/atmosphere/session/session_index.md**  
-### *Atmosphere Module — Canon Session Index*  
-*(Source: turn0browsertab1)*
-
----
-
-# **Session Index — Atmosphere Module**  
+# 🌐 **Session Index — Atmosphere Module**  
 TriadicFrameworks Canon
 
 The Atmosphere Session Layer provides structured, operator‑aligned session artifacts that support diagnostics, reasoning, metadata refresh, and module‑level analysis. This index lists all session files and describes their purpose within the module.
