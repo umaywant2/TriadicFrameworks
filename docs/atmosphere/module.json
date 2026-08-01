@@ -1,186 +1,73 @@
 {
-  "module": {
-    "name": "Atmosphere",
-    "category": "Environmental",
-    "version": "1.0",
-    "summary": "TriadicFrameworks Atmosphere Module — multi-scale atmospheric diagnostics, envelopes, maps, traces, and operator-aligned structural analysis.",
-    "purpose": "Provide the atmospheric structural substrate for RTT, GU, and TriadicFrameworks, including continuity, coherence, clarity, dimensional, drift, paradox, resonance, composition, dynamics, forcing, hydrospheric, nudge, teleconnection, and thermodynamic diagnostics."
+  "module": "atmosphere",
+  "version": "1.0",
+  "category": "domain",
+  "description": "The Atmosphere module models atmospheric dynamics, thermodynamics, hydrospheric interactions, forcing, teleconnections, resonance, paradox, drift, dimensional scaling, continuity, coherence, clarity, and composition. It provides a complete diagnostic, mapping, tracing, example, agent, and coupling framework.",
+  "directories": {
+    "diagnostics": "/docs/atmosphere/diagnostics",
+    "examples": "/docs/atmosphere/examples",
+    "agents": "/docs/atmosphere/agents",
+    "maps": "/docs/atmosphere/maps",
+    "extensions": "/docs/atmosphere/extensions",
+    "future": "/docs/atmosphere/future",
+    "registry": "/docs/atmosphere/registry",
+    "session": "/docs/atmosphere/session",
+    "visualizations": "/docs/atmosphere/visualizations",
+    "coupling": "/docs/coupling"
   },
-
-  "roles": {
-    "engine": [
-      "diagnostics/*",
-      "extensions/*",
-      "future/*",
-      "maps/*",
-      "registry/*",
-      "session/*"
-    ],
-    "profile": [
-      "README.md",
-      "index.md",
-      "a_Badge.html",
-      "a_Sidebar_Audit.html"
-    ],
-    "signature": [
-      "a_Capture.md",
-      "a_Diff_Table.md"
-    ],
-    "diagnostic": [
-      "diagnostics/*"
-    ],
-    "map": [
-      "maps/*"
-    ],
-    "trace": [
-      "diagnostics/*trace*"
-    ],
-    "envelope": [
-      "diagnostics/*envelope*"
-    ],
-    "extension": [
-      "extensions/*"
-    ],
-    "future": [
-      "future/*"
-    ],
-    "index": [
-      "index.md"
-    ],
-    "reference": [
-      "registry/*"
-    ],
-    "template": [
-      "prompts/templates.md"
-    ]
+  "primary_files": {
+    "envelope": "diagnostics/atmosphere_envelope.json",
+    "map": "diagnostics/atmosphere_map.json",
+    "trace": "diagnostics/atmosphere_trace.json",
+    "operators": "diagnostics/operators_atmosphere.json",
+    "example": "diagnostics/atmosphere_example.json",
+    "schema": "diagnostics/module.schema.json",
+    "agent": "agents/atmosphere_agent.json"
   },
-
-  "analyzer_layers": {
-    "operator": [
-      "continuity",
-      "coherence",
-      "clarity",
-      "dimensional",
-      "drift",
-      "paradox",
-      "resonance",
-      "composition",
-      "dynamics",
-      "forcing",
-      "hydrospheric",
-      "nudge",
-      "teleconnection",
-      "thermodynamics"
-    ],
-    "dimensional": [
-      "micro",
-      "meso",
-      "macro",
-      "mega"
-    ],
-    "regime": [
-      "stable",
-      "transition",
-      "unstable"
-    ],
-    "drift": [
-      "positive",
-      "neutral",
-      "negative"
-    ],
-    "coherence": [
-      "aligned",
-      "partial",
-      "broken"
-    ],
-    "cross_cutting": [
-      "session",
-      "registry",
-      "extensions",
-      "future"
-    ]
+  "diagnostic_families": [
+    "dynamics",
+    "thermodynamics",
+    "hydrospheric",
+    "forcing",
+    "teleconnection",
+    "resonance",
+    "paradox",
+    "drift",
+    "dimensional",
+    "continuity",
+    "coherence",
+    "clarity",
+    "composition",
+    "nudge"
+  ],
+  "example_scenarios": [
+    "baseline",
+    "pre_convective_burst",
+    "moisture_gradient_shift",
+    "teleconnection_collapse",
+    "cryosphere_coupling_event",
+    "magnetosphere_perturbation",
+    "biosphere_feedback_loop",
+    "advanced_resonance_alignment",
+    "edge_case_paradox_drift_cascade"
+  ],
+  "coupling_maps": {
+    "hydrosphere": "/docs/coupling/atmosphere_to_hydrosphere.json",
+    "cryosphere": "/docs/coupling/atmosphere_to_cryosphere.json",
+    "biosphere": "/docs/coupling/atmosphere_to_biosphere.json",
+    "land": "/docs/coupling/atmosphere_to_land.json",
+    "magnetosphere": "/docs/coupling/atmosphere_to_magnetosphere.json"
   },
-
-  "files": {
-    "top_level": [
-      "README.md",
-      "index.md",
-      "module.json",
-      "a_Badge.html",
-      "a_Capture.md",
-      "a_Diff_Table.md",
-      "a_Hero_Image.png",
-      "a_Sidebar_Audit.html"
-    ],
-    "diagnostics": [
-      "continuity_*",
-      "coherence_*",
-      "clarity_*",
-      "dimensional_*",
-      "drift_*",
-      "paradox_*",
-      "resonance_*",
-      "composition_*",
-      "dynamics_*",
-      "forcing_*",
-      "hydrospheric_*",
-      "nudge_*",
-      "teleconnection_*",
-      "thermodynamics_*"
-    ],
-    "extensions": [
-      "cryosphere_coupling.*",
-      "ocean_coupling.*"
-    ],
-    "future": [
-      "biosphere_feedback.md",
-      "land_coupling.md",
-      "magnetosphere_coupling.md"
-    ],
-    "maps": [
-      "maps/*"
-    ],
-    "registry": [
-      "registry/*"
-    ],
-    "session": [
-      "session/*"
-    ],
-    "prompts": [
-      "prompts/examples.md",
-      "prompts/module.md",
-      "prompts/module.json",
-      "prompts/templates.md"
-    ]
+  "visualizations": {
+    "overview": "visualizations/atmosphere_overview.svg",
+    "regimes": "visualizations/atmosphere_regimes.svg",
+    "coupling": "visualizations/atmosphere_coupling.svg"
   },
-
-  "ai": {
-    "module": "Atmosphere",
-    "version": "1.0",
-    "purpose": "Provide atmospheric structural diagnostics, envelopes, maps, and traces for TriadicFrameworks.",
-    "keywords": [
-      "atmosphere",
-      "continuity",
-      "coherence",
-      "clarity",
-      "dimensional",
-      "drift",
-      "paradox",
-      "resonance",
-      "composition",
-      "dynamics",
-      "forcing",
-      "hydrospheric",
-      "nudge",
-      "teleconnection",
-      "thermodynamics",
-      "diagnostics",
-      "envelopes",
-      "maps",
-      "traces",
-      "RTT",
-      "TriadicFrameworks"
-    ],
-    "audience": "Researchers, engineers, analysts, and AI agents working with TriadicFrameworks environmental modules."
+  "metadata": {
+    "author": "Nawder Loswin",
+    "publication_year": "2026",
+    "license": "Open educational use permitted",
+    "ai_ready": true,
+    "canonical": true
   }
 }
