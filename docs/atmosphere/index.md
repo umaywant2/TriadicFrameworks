@@ -1,10 +1,4 @@
-# 🌐 **docs/atmosphere/index.md**  
-### *Atmosphere Module — Canon Index*  
-*(Source: turn0browsertab1)*
-
----
-
-# **Atmosphere Module — Index**  
+# 🌐 **Atmosphere Module — Index**  
 TriadicFrameworks Canon
 
 The Atmosphere Module models the structural, diagnostic, and coherence behavior of Earth’s atmosphere across all scales and operator families. This index provides a complete navigational map of the module.
