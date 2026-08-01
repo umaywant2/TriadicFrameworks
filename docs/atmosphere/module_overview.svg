@@ -1,1 +1,55 @@
+<svg width="960" height="540" viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="960" height="540" fill="#0b1e2d"/>
+
+  <!-- Title -->
+  <text x="480" y="60" font-size="32" fill="#ffffff" text-anchor="middle">
+    Atmosphere Module — Overview
+  </text>
+
+  <!-- Core Atmosphere Node -->
+  <circle cx="480" cy="270" r="90" fill="#1e3a5f" opacity="0.9"/>
+  <text x="480" y="270" font-size="22" fill="#ffffff" text-anchor="middle">
+    Atmosphere
+  </text>
+
+  <!-- Diagnostic Ring -->
+  <g font-size="16" fill="#cfe8ff">
+    <text x="480" y="140" text-anchor="middle">Diagnostics</text>
+    <text x="260" y="220" text-anchor="middle">Envelope</text>
+    <text x="700" y="220" text-anchor="middle">Map</text>
+    <text x="260" y="340" text-anchor="middle">Trace</text>
+    <text x="700" y="340" text-anchor="middle">Operators</text>
+  </g>
+
+  <!-- Diagnostic Lines -->
+  <g stroke="#4fa3ff" stroke-width="2" opacity="0.7">
+    <line x1="480" y1="210" x2="480" y2="160"/>
+    <line x1="420" y1="250" x2="300" y2="220"/>
+    <line x1="540" y1="250" x2="660" y2="220"/>
+    <line x1="420" y1="290" x2="300" y2="340"/>
+    <line x1="540" y1="290" x2="660" y2="340"/>
+  </g>
+
+  <!-- Outer Layer Labels -->
+  <g font-size="14" fill="#a8d4ff">
+    <text x="140" y="160">Examples</text>
+    <text x="820" y="160" text-anchor="end">Agents</text>
+    <text x="140" y="420">Visualizations</text>
+    <text x="820" y="420" text-anchor="end">Coupling</text>
+  </g>
+
+  <!-- Outer Layer Lines -->
+  <g stroke="#4fa3ff" stroke-width="1.5" opacity="0.5">
+    <line x1="300" y1="220" x2="160" y2="170"/>
+    <line x1="660" y1="220" x2="800" y2="170"/>
+    <line x1="300" y1="340" x2="160" y2="410"/>
+    <line x1="660" y1="340" x2="800" y2="410"/>
+  </g>
+
+  <!-- Bottom Caption -->
+  <text x="480" y="520" font-size="14" fill="#88b7ff" text-anchor="middle">
+    TriadicFrameworks — Atmosphere Module Overview (Diagnostics • Examples • Agents • Visualizations • Coupling)
+  </text>
+</svg>
 
