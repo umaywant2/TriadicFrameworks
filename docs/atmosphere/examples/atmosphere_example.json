@@ -1,1 +1,23 @@
+{
+  "module": "atmosphere",
+  "category": "example",
+  "version": "1.0",
+  "scenario": "baseline_atmospheric_state",
+  "input": {
+    "dynamics": { "momentum_flux": 0.52, "vorticity_evolution": 0.44, "wave_propagation": 0.55 },
+    "thermodynamics": { "temperature_gradients": -6.1, "energy_flux": 128, "radiative_balance": 0.71 },
+    "hydrospheric": { "moisture_flux": 0.63, "condensation": 0.58 },
+    "forcing": { "radiative": 310, "mechanical": 0.41 },
+    "teleconnection": { "pacific": 0.63, "polar": 0.71 },
+    "resonance": { "oscillation_modes": 0.44 },
+    "paradox": { "conflicting_gradients": 0.33 },
+    "drift": { "gradient_drift": 0.52 },
+    "dimensional": { "meso_scale": 0.48 },
+    "continuity": { "mass_continuity": 0.52 },
+    "coherence": { "coherent_flux": 0.52 },
+    "clarity": { "signal_clarity": 0.63 },
+    "composition": { "gas_mixture": 0.52 }
+  },
+  "regime": "transition"
+}
 
