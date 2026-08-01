@@ -1,5 +1,4 @@
-# 🌐 **/docs/atmosphere/diagnostics/clarity_envelope.md**  
-### *Atmosphere Module — Clarity Envelope (Full Canon)*
+# 🌐 **Atmosphere Module — Clarity Envelope (Full Canon)**
 
 ## Envelope Identity
 - **envelope.name:** ClarityEnvelopeAtmosphere  
