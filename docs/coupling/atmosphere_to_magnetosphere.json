@@ -1,1 +1,32 @@
+{
+  "coupling": "atmosphere_to_magnetosphere",
+  "version": "1.0",
+  "description": "Coupling map between atmospheric fields and magnetospheric fields.",
+  "atmosphere_fields": [
+    "radiative_balance",
+    "polar_teleconnection",
+    "resonance_modes",
+    "wave_propagation",
+    "coherence_state"
+  ],
+  "magnetosphere_fields": [
+    "solar_wind_flux",
+    "geomagnetic_flux_perturbation",
+    "ionospheric_resonance",
+    "magnetic_field_alignment",
+    "polar_cap_energy"
+  ],
+  "coupling_relations": {
+    "radiative_balance → solar_wind_flux": "indirect",
+    "polar_teleconnection → polar_cap_energy": "direct",
+    "resonance_modes → ionospheric_resonance": "direct",
+    "wave_propagation → geomagnetic_flux_perturbation": "direct",
+    "coherence_state → magnetic_field_alignment": "direct"
+  },
+  "signature_effects": {
+    "resonance": "increases with aligned ionospheric modes",
+    "drift": "increases with geomagnetic perturbations",
+    "regime": "can destabilize during solar wind spikes"
+  }
+}
 
