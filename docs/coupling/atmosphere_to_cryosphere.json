@@ -1,1 +1,32 @@
+{
+  "coupling": "atmosphere_to_cryosphere",
+  "version": "1.0",
+  "description": "Coupling map between atmospheric fields and cryospheric fields.",
+  "atmosphere_fields": [
+    "radiative_balance",
+    "temperature_gradients",
+    "moisture_flux",
+    "polar_teleconnection",
+    "resonance_modes"
+  ],
+  "cryosphere_fields": [
+    "albedo",
+    "freeze_thaw_cycles",
+    "ice_mass_balance",
+    "snowpack_flux",
+    "polar_vorticity"
+  ],
+  "coupling_relations": {
+    "radiative_balance → albedo": "inverse",
+    "temperature_gradients → freeze_thaw_cycles": "direct",
+    "moisture_flux → snowpack_flux": "direct",
+    "polar_teleconnection → polar_vorticity": "direct",
+    "resonance_modes → ice_mass_balance": "indirect"
+  },
+  "signature_effects": {
+    "coherence": "increases with stable albedo",
+    "drift": "increases with rapid freeze-thaw cycles",
+    "paradox": "activated during inversion-driven melt events"
+  }
+}
 
