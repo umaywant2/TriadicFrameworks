@@ -1,1 +1,32 @@
+{
+  "coupling": "atmosphere_to_biosphere",
+  "version": "1.0",
+  "description": "Coupling map between atmospheric fields and biospheric fields.",
+  "atmosphere_fields": [
+    "moisture_flux",
+    "radiative_balance",
+    "temperature_gradients",
+    "coherent_flux",
+    "resonance_modes"
+  ],
+  "biosphere_fields": [
+    "evapotranspiration",
+    "vegetation_radiative_modulation",
+    "carbon_flux",
+    "soil_moisture",
+    "ecosystem_resonance"
+  ],
+  "coupling_relations": {
+    "moisture_flux → evapotranspiration": "direct",
+    "radiative_balance → vegetation_radiative_modulation": "direct",
+    "temperature_gradients → soil_moisture": "inverse",
+    "coherent_flux → carbon_flux": "direct",
+    "resonance_modes → ecosystem_resonance": "direct"
+  },
+  "signature_effects": {
+    "coherence": "increases with vegetation alignment",
+    "clarity": "increases with stable evapotranspiration",
+    "regime": "stabilizes under strong biospheric feedback"
+  }
+}
 
