@@ -1,10 +1,4 @@
-# 🌐 **docs/atmosphere/maps/clarity_map.md**  
-### *Atmosphere Module — Clarity Map (Canon)*  
-*(Source: turn0browsertab1)*
-
----
-
-# **Clarity Map — Atmosphere Module**  
+# 🌐 **Clarity Map — Atmosphere Module**  
 TriadicFrameworks Canon
 
 The Clarity Map visualizes structural truth extraction, noise reduction, pattern convergence, and multi‑agent consensus across micro → meso → macro → mega atmospheric scales. It is the cartographic companion to the clarity diagnostic, envelope, and trace.
