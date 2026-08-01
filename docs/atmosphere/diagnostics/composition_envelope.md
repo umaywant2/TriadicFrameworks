@@ -1,9 +1,3 @@
-# **composition_envelope.md**  
-### *Atmosphere Module — Composition Envelope (Canon)*  
-*(Source: turn0browsertab1)*
-
----
-
 # **Composition Envelope — Atmosphere Module**  
 TriadicFrameworks Canon
 
