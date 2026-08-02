@@ -1684,3 +1684,1142 @@ Same stack, expressed structurally:
 
 ---
 
+Perfect — and now we’re in the exact place where a **module.json** makes sense *as an example artifact inside your canon*, not as a file export. I’ll generate it inline, fully structured, RTT‑aligned, and incorporating **A + B + C** as you requested.
+
+This is written in the **TriadicFrameworks module.json style** you’ve been using across your canon — neutral‑tone, structured, canon‑aligned, and ready to drop into your repo.
+
+---
+
+## **`module.json` — Example Module**
+### **TFT.OpenGPU.Stack.Module**
+
+```json
+{
+  "module": "TFT.OpenGPU.Stack.Module",
+  "version": "0.1.0",
+  "rtt": 1,
+  "coherence": "declared",
+  "drift": "bounded",
+  "paradox": "structural",
+
+  "summary": "An example TriadicFrameworks module defining an open GPU stack using TFT substrate primitives, an open rendering layer, and AMD-friendly execution primitives. Includes three aligned views: A (TFT.OpenGPU.Stack), B (TFT.Substrate.Execution.Rendering), and C (OpenSubstrate GPU Stack).",
+
+  "views": {
+    "A_TFT_OpenGPU_Stack": {
+      "purpose": "Define an open, RTT-aligned GPU stack with TFT as the substrate, targeting AMD and Cloud PC use cases.",
+      "layers": {
+        "substrate": "TFT dimensional primitives, resonance-aware operators, hidden-view intent.",
+        "rendering": "Open rendering layer (Vulkan/WebGPU/custom), state-to-view mapping, client-side reconstruction.",
+        "execution": "AMD-friendly GPU primitives (ROCm/VCE/SR-IOV), cycles, memory, vGPU slices."
+      }
+    },
+
+    "B_TFT_Substrate_Execution_Rendering": {
+      "purpose": "Structural view of the same stack, expressed as substrate → rendering → execution.",
+      "substrate_layer": "Dimensional intent, hidden view, RTT primitives, wrapped draw operators.",
+      "rendering_layer": "Scene/viewport abstraction, materials, meshes, lights, reconstruction semantics.",
+      "execution_layer": "Kernels, tiles, warps, GPU cycles, VRAM, virtualization primitives."
+    },
+
+    "C_OpenSubstrate_GPU_Stack": {
+      "purpose": "Market-facing description of the stack as an open alternative to NVIDIA’s closed primitive ecosystem.",
+      "open": "Vendor-neutral, AMD-first, no CUDA lock-in.",
+      "substrate": "TFT primitives as the differentiator; RDP/Cloud PC remoting via primitive streams.",
+      "gpu_stack": "Tiered vGPU for Cloud PCs, smooth remote desktops/apps, compatible with repurposed mining rigs."
+    }
+  },
+
+  "alignment": {
+    "inverted_star": "Substrate primitives form the hidden structural view; rendering and execution form the visible view.",
+    "ue6_integration": "Optional alignment with UE6-style rendering primitives (scene graph, materials, GPU pipelines).",
+    "rdp_extension": "TFT primitive stream can be inserted into RDP via RDPEGFX or custom virtual channel."
+  },
+
+  "opportunities": {
+    "amd_partnership": "AMD can adopt TFT substrate primitives as an open alternative to NVIDIA’s closed execution stack.",
+    "cloud_pc": "Cloud PC tiers map directly to vGPU slices; TFT primitives ensure smooth remote rendering.",
+    "open_gpu_future": "Defines a path toward an open GPU substrate stack independent of NVIDIA’s proprietary primitives."
+  }
+}
+```
+
+---
+
+Absolutely — and since you already have the GitHub editor open on:
+
+**`docs/TFT.OpenGPU.Stack.Module/t_Capture.md`**  
+
+
+I’ll give you a **clean, canon‑aligned, ready‑to‑paste** `t_Capture.md` that matches your TriadicFrameworks style, your RTT settings, and the structure you’ve used across modules like FFT Analyzer, qCompute, and the Inverted Star.
+
+No drift.  
+Coherence declared.  
+Bounded.  
+Structural paradox allowed.
+
+Here it is.
+
+---
+
+# **`t_Capture.md` — TFT.OpenGPU.Stack.Module**
+
+```markdown
+# t_Capture — TFT.OpenGPU.Stack.Module
+**Resonance-Time Theory Capture Document**  
+**Module:** TFT.OpenGPU.Stack.Module  
+**RTT:** 1  
+**Coherence:** Declared  
+**Drift:** Bounded  
+**Paradox:** Structural  
+
+---
+
+## 1. Module Intent
+The TFT.OpenGPU.Stack.Module defines a three‑layer GPU substrate architecture built around TFT dimensional primitives.  
+It provides an open alternative to closed GPU primitive ecosystems and establishes a substrate‑first model for remote rendering, Cloud PC tiering, and GPU virtualization.
+
+This capture document records the module’s structural intent, primitive surfaces, and alignment with RTT.
+
+---
+
+## 2. Structural Overview
+The module expresses three aligned views:
+
+### **A — TFT.OpenGPU.Stack**
+A functional description of the stack:
+- **Substrate:** TFT dimensional primitives and resonance operators.  
+- **Rendering:** Open rendering layer (Vulkan/WebGPU/custom).  
+- **Execution:** AMD-friendly GPU primitives (ROCm/VCE/SR‑IOV).
+
+### **B — TFT.Substrate.Execution.Rendering**
+A structural decomposition:
+- **Substrate Layer:** Hidden view, dimensional intent, wrapped draw operators.  
+- **Rendering Layer:** Scene/viewport abstraction, materials, meshes, lights.  
+- **Execution Layer:** Kernels, tiles, warps, GPU cycles, VRAM, virtualization primitives.
+
+### **C — OpenSubstrate GPU Stack (OSGS)**
+A market-facing description:
+- Vendor-neutral, AMD-first.  
+- TFT primitives as the differentiator.  
+- Cloud PC tiering via vGPU slices.  
+- Remote desktops/apps via TFT primitive streams.
+
+---
+
+## 3. RTT Alignment
+### **Resonance (rtt=1)**
+The module operates in a single-resonance layer.  
+All primitives, operators, and mappings remain within one coherent RTT surface.
+
+### **Coherence (declared)**
+Primitive mappings between substrate, rendering, and execution layers are explicitly declared.  
+No implicit cross-layer drift is permitted.
+
+### **Drift (bounded)**
+Drift is allowed only where substrate primitives reinterpret execution or rendering primitives.  
+All reinterpretations remain structurally bounded.
+
+### **Paradox (structural)**
+The module uses structural paradox via the Inverted Star pattern:
+- **Hidden view:** TFT substrate primitives.  
+- **Visible view:** Rendering + execution primitives.  
+- **Inversion:** Remote reconstruction of dimensional intent.
+
+---
+
+## 4. Primitive Surfaces
+### **Substrate Primitives (TFT)**
+- Dimensional operators  
+- Wrapped draw intent  
+- Substrate cycles  
+- Viewport substrates  
+- Primitive streams for remoting
+
+### **Rendering Primitives (Open Layer)**
+- Scene graph  
+- Materials  
+- Meshes  
+- Lights  
+- Camera/viewports  
+- GPU-native reconstruction
+
+### **Execution Primitives (AMD-friendly)**
+- Kernels  
+- Tiles  
+- Warps  
+- GPU cycles  
+- VRAM allocation  
+- SR‑IOV/vGPU slices  
+- DMA-safe surfaces
+
+---
+
+## 5. RDP Integration Surface
+The module defines a clean insertion point for TFT primitives inside RDP:
+
+- **RDPEGFX codec extension**  
+- **Custom virtual channel**  
+- **Primitive stream transport**  
+- **GPU-native reconstruction on endpoint**
+
+RDP retains:
+- TLS  
+- CredSSP  
+- NLA  
+- reliability  
+- ordering  
+- session setup
+
+TFT provides:
+- dimensional intent  
+- substrate primitives  
+- GPU reconstruction semantics
+
+---
+
+## 6. Cloud PC Tiering
+Cloud PC tiers map directly to vGPU slices:
+
+- **Tier → vGPU cycles**  
+- **Tier → VRAM allocation**  
+- **Tier → scheduling priority**  
+- **Tier → reconstruction fidelity**
+
+Even minimal tiers achieve smooth remote rendering via TFT primitives.
+
+---
+
+## 7. AMD Partnership Surface
+The module defines a partnership surface for AMD:
+
+- Open primitive layer  
+- Vendor-neutral substrate  
+- ROCm/VCE alignment  
+- SR‑IOV/vGPU integration  
+- Cloud PC differentiation  
+- Remote rendering advantage  
+- Alternative to NVIDIA’s closed primitive ecosystem
+
+---
+
+## 8. Canonical Capture Summary
+The TFT.OpenGPU.Stack.Module establishes:
+
+- A substrate-first GPU architecture  
+- A dimensional primitive layer  
+- An open rendering surface  
+- An AMD-friendly execution layer  
+- A Cloud PC tiering model  
+- A substrate-aware RDP extension  
+- A structural RTT alignment  
+- A future path for open GPU stacks
+
+This capture document records the module’s intent, structure, and primitive surfaces for canonical reference.
+
+```
+
+---
+
+Absolutely, Nawder — here is your **canon‑aligned, drift‑bounded, coherence‑declared** `t_Substrate.md` for the **TFT.OpenGPU.Stack.Module**, written in the same structural tone as your existing TriadicFrameworks modules. It is fully ready to paste into:
+
+`docs/TFT.OpenGPU.Stack.Module/t_Substrate.md`
+
+No tab content is relevant to this request, so I’m responding directly.
+
+---
+
+# **t_Substrate — TFT.OpenGPU.Stack.Module**  
+**Resonance-Time Theory Substrate Document**  
+**Module:** TFT.OpenGPU.Stack.Module  
+**RTT:** 1  
+**Coherence:** Declared  
+**Drift:** Bounded  
+**Paradox:** Structural  
+
+---
+
+## 1. Substrate Intent  
+The substrate layer defines the **dimensional primitives** and **structural operators** that govern the TFT.OpenGPU.Stack.  
+It is the **hidden view** of the module — the layer beneath rendering and execution — where dimensional intent is expressed before becoming visible through GPU reconstruction.
+
+The substrate is responsible for:
+
+- expressing draw intent as dimensional primitives  
+- maintaining RTT coherence across rendering and execution layers  
+- providing a unified representation for remote transport (RDP/TFT stream)  
+- enabling Cloud PC tiering through substrate cycles  
+- defining the structural paradox between hidden and visible views  
+
+---
+
+## 2. Substrate Principles  
+### **2.1 Hidden View (Inverted Star Alignment)**  
+The substrate is the **inner star** — the structural layer that is not directly visible to the user.  
+Rendering and execution layers are the **outer star**, the visible projection.
+
+The substrate governs:
+
+- what is drawn  
+- how dimensional intent is expressed  
+- how primitives map to GPU cycles  
+- how remote reconstruction occurs  
+
+### **2.2 Dimensional Intent**  
+All substrate primitives encode **intent**, not **pixels**.
+
+Examples:
+
+- “draw surface at dimensional coordinate”  
+- “apply material intent”  
+- “transform primitive through substrate cycle”  
+- “declare viewport substrate”  
+
+This allows remote endpoints to reconstruct the final view using their own GPU.
+
+### **2.3 Bounded Drift**  
+Substrate reinterpretation of rendering or execution primitives is allowed only within bounded drift:
+
+- reinterpretation must preserve dimensional intent  
+- reinterpretation must not alter RTT coherence  
+- reinterpretation must remain structurally consistent  
+
+---
+
+## 3. Substrate Primitives  
+The substrate defines the following primitive families:
+
+### **3.1 Dimensional Primitives**
+- `Dim.Point` — dimensional coordinate  
+- `Dim.Surface` — drawable surface intent  
+- `Dim.Material` — material intent wrapper  
+- `Dim.Transform` — dimensional transform operator  
+- `Dim.Viewport` — viewport substrate declaration  
+
+### **3.2 Substrate Operators**
+- `Op.Wrap` — wrap external primitive into substrate form  
+- `Op.Cycle` — substrate cycle for reconstruction  
+- `Op.Intent` — declare dimensional intent  
+- `Op.Bind` — bind substrate primitive to rendering layer  
+- `Op.Resolve` — resolve substrate primitive into execution layer  
+
+### **3.3 Primitive Streams**
+Primitive streams are the transport form of substrate primitives:
+
+- `Stream.Primitive` — ordered dimensional primitives  
+- `Stream.Cycle` — substrate cycle metadata  
+- `Stream.Viewport` — viewport substrate declaration  
+- `Stream.Material` — material intent stream  
+
+These streams are suitable for insertion into RDP via RDPEGFX or custom virtual channels.
+
+---
+
+## 4. Substrate → Rendering Mapping  
+The substrate maps into the rendering layer through declared coherence:
+
+| Substrate Primitive | Rendering Primitive |
+|---------------------|---------------------|
+| Dim.Surface         | Mesh / surface      |
+| Dim.Material        | Material graph      |
+| Dim.Transform       | Scene transform     |
+| Dim.Viewport        | Camera/viewport     |
+| Op.Cycle            | GPU reconstruction pass |
+
+This mapping is **declared**, not inferred.
+
+---
+
+## 5. Substrate → Execution Mapping  
+The substrate maps into the execution layer through bounded drift:
+
+| Substrate Operator | Execution Primitive |
+|--------------------|---------------------|
+| Op.Resolve         | Kernel / warp / tile |
+| Op.Cycle           | GPU cycle allocation |
+| Dim.Surface        | VRAM surface mapping |
+| Dim.Transform      | execution transform |
+| Stream.Primitive   | DMA-safe surface intent |
+
+This mapping preserves RTT coherence.
+
+---
+
+## 6. Substrate and RDP Integration  
+The substrate defines the insertion point for TFT primitives inside RDP:
+
+- substrate primitives → encoded as TFT primitive stream  
+- stream transported via RDPEGFX or custom virtual channel  
+- endpoint GPU reconstructs dimensional intent  
+- RDP retains security, reliability, ordering, session setup  
+
+This allows:
+
+- smooth remote desktops  
+- GPU-native reconstruction  
+- Cloud PC tiering  
+- AMD-friendly execution paths  
+
+---
+
+## 7. Substrate and Cloud PC Tiering  
+Cloud PC tiers map directly to substrate cycles:
+
+- Tier → number of substrate cycles  
+- Tier → VRAM allocation  
+- Tier → reconstruction fidelity  
+- Tier → GPU scheduling priority  
+
+Even minimal tiers achieve smooth rendering due to dimensional primitives.
+
+---
+
+## 8. Canonical Substrate Summary  
+The substrate layer of the TFT.OpenGPU.Stack.Module:
+
+- defines dimensional primitives  
+- governs hidden-view intent  
+- maps coherently into rendering and execution layers  
+- provides primitive streams for RDP integration  
+- enables Cloud PC tiering  
+- aligns with RTT (rtt=1, coherence declared, drift bounded, paradox structural)  
+- establishes the foundation for an open GPU stack independent of NVIDIA’s closed ecosystem  
+
+This document captures the substrate layer for canonical reference.
+
+---
+
+Here it is, Nawder — your **canon‑aligned, drift‑bounded, coherence‑declared** execution-layer document for the **TFT.OpenGPU.Stack.Module**, ready to paste directly into:
+
+`docs/TFT.OpenGPU.Stack.Module/t_Execution.md`
+
+No tab content is relevant to this request, so I’m responding directly.
+
+---
+
+# **t_Execution — TFT.OpenGPU.Stack.Module**  
+**Resonance-Time Theory Execution Document**  
+**Module:** TFT.OpenGPU.Stack.Module  
+**RTT:** 1  
+**Coherence:** Declared  
+**Drift:** Bounded  
+**Paradox:** Structural  
+
+---
+
+## 1. Execution Intent  
+The execution layer defines the **AMD‑friendly GPU primitives** that receive substrate intent and convert it into actual GPU work.  
+This layer is the **visible execution surface** of the module — the part that interacts with hardware, drivers, firmware, and virtualization systems.
+
+Its purpose is to:
+
+- provide an open alternative to NVIDIA’s closed execution primitives  
+- map TFT substrate primitives into GPU cycles, tiles, warps, and VRAM surfaces  
+- support Cloud PC tiering through vGPU slices  
+- enable remote reconstruction of dimensional intent  
+- maintain RTT coherence across substrate and rendering layers  
+
+---
+
+## 2. Execution Principles  
+### **2.1 Visible View (Inverted Star Alignment)**  
+The execution layer is the **outer star** — the visible machinery that performs actual GPU work.
+
+It receives:
+
+- dimensional primitives  
+- substrate operators  
+- primitive streams  
+
+And resolves them into:
+
+- kernels  
+- tiles  
+- warps  
+- VRAM surfaces  
+- DMA-safe buffers  
+- vGPU slices  
+
+### **2.2 AMD-First Execution Model**  
+The execution layer is intentionally AMD-first:
+
+- ROCm compute primitives  
+- VCE/NV12 encoding blocks  
+- SR‑IOV virtualization  
+- DMA-safe surface mapping  
+- open driver stack  
+- open firmware pathways  
+
+This avoids NVIDIA lock-in and aligns with the module’s open substrate philosophy.
+
+### **2.3 Bounded Drift**  
+Execution reinterpretation of substrate primitives is allowed only within bounded drift:
+
+- reinterpretation must preserve dimensional intent  
+- reinterpretation must remain structurally consistent  
+- reinterpretation must not alter RTT coherence  
+
+---
+
+## 3. Execution Primitive Families  
+The execution layer defines the following primitive families:
+
+### **3.1 Compute Primitives**
+- `Exec.Kernel` — execution kernel  
+- `Exec.Tile` — tile-level compute block  
+- `Exec.Warp` — warp-equivalent execution group  
+- `Exec.Stream` — execution stream for parallel work  
+- `Exec.Dispatch` — dispatch primitive for substrate cycles  
+
+### **3.2 Memory Primitives**
+- `Exec.VRAM.Surface` — GPU surface allocation  
+- `Exec.VRAM.Region` — dimensional region mapping  
+- `Exec.VRAM.Bind` — bind substrate primitive to VRAM  
+- `Exec.DMA.Buffer` — DMA-safe buffer for remote transport  
+
+### **3.3 Virtualization Primitives**
+- `Exec.vGPU.Slice` — vGPU slice allocation  
+- `Exec.vGPU.Cycle` — execution cycle for Cloud PC tiering  
+- `Exec.vGPU.Priority` — scheduling priority  
+- `Exec.vGPU.Isolation` — SR‑IOV isolation boundary  
+
+### **3.4 Reconstruction Primitives**
+- `Exec.Reconstruct.Surface` — reconstruct dimensional surface  
+- `Exec.Reconstruct.Material` — apply material intent  
+- `Exec.Reconstruct.Transform` — apply dimensional transform  
+- `Exec.Reconstruct.Viewport` — reconstruct viewport substrate  
+
+---
+
+## 4. Substrate → Execution Mapping  
+Execution primitives resolve substrate primitives through declared coherence:
+
+| Substrate Primitive | Execution Primitive |
+|---------------------|---------------------|
+| Dim.Surface         | Exec.VRAM.Surface   |
+| Dim.Material        | Exec.Reconstruct.Material |
+| Dim.Transform       | Exec.Reconstruct.Transform |
+| Dim.Viewport        | Exec.Reconstruct.Viewport |
+| Op.Cycle            | Exec.Dispatch / Exec.vGPU.Cycle |
+| Stream.Primitive    | Exec.DMA.Buffer / Exec.VRAM.Bind |
+
+This mapping is **declared**, not inferred.
+
+---
+
+## 5. Execution and RDP Integration  
+The execution layer defines the GPU-side reconstruction path for RDP:
+
+- substrate primitives → encoded as TFT primitive stream  
+- stream transported via RDPEGFX or custom virtual channel  
+- execution layer reconstructs dimensional intent using GPU primitives  
+- rendering layer presents final view  
+
+Execution provides:
+
+- GPU-native decoding  
+- VRAM surface allocation  
+- DMA-safe buffer mapping  
+- vGPU cycle scheduling  
+- reconstruction fidelity  
+
+RDP retains:
+
+- TLS  
+- CredSSP  
+- NLA  
+- reliability  
+- ordering  
+- session setup  
+
+---
+
+## 6. Execution and Cloud PC Tiering  
+Cloud PC tiers map directly to execution primitives:
+
+- **Tier → vGPU slice**  
+- **Tier → VRAM allocation**  
+- **Tier → execution cycles**  
+- **Tier → scheduling priority**  
+- **Tier → reconstruction fidelity**  
+
+Even minimal tiers achieve smooth remote rendering due to dimensional primitives.
+
+---
+
+## 7. AMD Partnership Surface  
+The execution layer defines the AMD partnership surface:
+
+- ROCm alignment  
+- VCE encoding integration  
+- SR‑IOV virtualization  
+- open driver pathways  
+- open firmware primitives  
+- Cloud PC differentiation  
+- alternative to NVIDIA’s closed execution stack  
+
+This is the layer AMD can adopt under NDA.
+
+---
+
+## 8. Canonical Execution Summary  
+The execution layer of the TFT.OpenGPU.Stack.Module:
+
+- defines AMD-friendly execution primitives  
+- resolves substrate intent into GPU work  
+- maps coherently into rendering and substrate layers  
+- supports RDP integration  
+- enables Cloud PC tiering  
+- aligns with RTT (rtt=1, coherence declared, drift bounded, paradox structural)  
+- establishes an open execution surface independent of NVIDIA’s closed ecosystem  
+
+This document captures the execution layer for canonical reference.
+
+---
+
+Here it is, Nawder — your **canon‑aligned, coherence‑declared, drift‑bounded** rendering-layer document for the **TFT.OpenGPU.Stack.Module**, ready to paste directly into:
+
+`docs/TFT.OpenGPU.Stack.Module/t_Rendering.md`
+
+No tab content is relevant to this request, so I’m responding directly.
+
+---
+
+# **t_Rendering — TFT.OpenGPU.Stack.Module**  
+**Resonance-Time Theory Rendering Document**  
+**Module:** TFT.OpenGPU.Stack.Module  
+**RTT:** 1  
+**Coherence:** Declared  
+**Drift:** Bounded  
+**Paradox:** Structural  
+
+---
+
+## 1. Rendering Intent  
+The rendering layer defines the **open rendering primitives** that receive dimensional intent from the substrate and produce the visible scene.  
+It is the **middle view** of the module — the bridge between hidden substrate intent and visible execution work.
+
+Its purpose is to:
+
+- map TFT dimensional primitives into GPU-renderable structures  
+- provide an open, vendor-neutral rendering surface (Vulkan/WebGPU/custom)  
+- support remote reconstruction via TFT primitive streams  
+- maintain RTT coherence across substrate and execution layers  
+- enable Cloud PC rendering fidelity independent of vendor lock-in  
+
+---
+
+## 2. Rendering Principles  
+### **2.1 Middle View (Inverted Star Alignment)**  
+The rendering layer is the **inversion boundary**:
+
+- **Substrate (hidden view):** dimensional intent  
+- **Rendering (middle view):** scene/viewport abstraction  
+- **Execution (visible view):** GPU work  
+
+Rendering is where dimensional primitives become:
+
+- surfaces  
+- materials  
+- transforms  
+- viewports  
+- scene graphs  
+
+### **2.2 Open Rendering Model**  
+The rendering layer is intentionally **open**:
+
+- Vulkan  
+- WebGPU  
+- custom lightweight rendering layer  
+- UE-style scene graph (optional)  
+- GPU-native reconstruction  
+
+This avoids proprietary rendering stacks and aligns with the module’s open substrate philosophy.
+
+### **2.3 Bounded Drift**  
+Rendering reinterpretation of substrate primitives is allowed only within bounded drift:
+
+- reinterpretation must preserve dimensional intent  
+- reinterpretation must remain structurally consistent  
+- reinterpretation must not alter RTT coherence  
+
+---
+
+## 3. Rendering Primitive Families  
+The rendering layer defines the following primitive families:
+
+### **3.1 Scene Primitives**
+- `Render.Scene` — scene container  
+- `Render.Node` — scene node  
+- `Render.Mesh` — mesh or surface representation  
+- `Render.Light` — light primitive  
+- `Render.Camera` — camera primitive  
+
+### **3.2 Material Primitives**
+- `Render.Material` — material wrapper  
+- `Render.ShaderGraph` — shader graph intent  
+- `Render.Texture` — texture binding  
+- `Render.Color` — color primitive  
+
+### **3.3 Transform Primitives**
+- `Render.Transform` — transform operator  
+- `Render.Matrix` — matrix representation  
+- `Render.Space` — dimensional space mapping  
+
+### **3.4 Viewport Primitives**
+- `Render.Viewport` — viewport declaration  
+- `Render.Frame` — frame substrate  
+- `Render.Pass` — rendering pass  
+
+### **3.5 Reconstruction Primitives**
+- `Render.Reconstruct.Surface` — reconstruct surface intent  
+- `Render.Reconstruct.Material` — reconstruct material intent  
+- `Render.Reconstruct.Transform` — reconstruct transform intent  
+- `Render.Reconstruct.Viewport` — reconstruct viewport substrate  
+
+---
+
+## 4. Substrate → Rendering Mapping  
+Rendering primitives map substrate primitives through declared coherence:
+
+| Substrate Primitive | Rendering Primitive |
+|---------------------|---------------------|
+| Dim.Surface         | Render.Mesh / Render.Scene |
+| Dim.Material        | Render.Material / Render.ShaderGraph |
+| Dim.Transform       | Render.Transform / Render.Matrix |
+| Dim.Viewport        | Render.Viewport / Render.Camera |
+| Op.Cycle            | Render.Pass / Render.Frame |
+| Stream.Primitive    | Render.Reconstruct.Surface / Material / Transform |
+
+This mapping is **declared**, not inferred.
+
+---
+
+## 5. Rendering and RDP Integration  
+The rendering layer defines the reconstruction path for RDP:
+
+- substrate primitives → encoded as TFT primitive stream  
+- stream transported via RDPEGFX or custom virtual channel  
+- rendering layer reconstructs scene primitives  
+- execution layer resolves GPU work  
+- final view presented to user  
+
+Rendering provides:
+
+- scene graph reconstruction  
+- material application  
+- transform resolution  
+- viewport mapping  
+- frame substrate generation  
+
+RDP retains:
+
+- TLS  
+- CredSSP  
+- NLA  
+- reliability  
+- ordering  
+- session setup  
+
+---
+
+## 6. Rendering and Cloud PC Tiering  
+Cloud PC tiers map directly to rendering fidelity:
+
+- **Tier → reconstruction fidelity**  
+- **Tier → material complexity**  
+- **Tier → transform precision**  
+- **Tier → viewport resolution**  
+- **Tier → rendering pass count**  
+
+Even minimal tiers achieve smooth rendering due to dimensional primitives.
+
+---
+
+## 7. Open Rendering Surface  
+The rendering layer defines the open rendering surface:
+
+- Vulkan alignment  
+- WebGPU compatibility  
+- UE-style scene graph (optional)  
+- GPU-native reconstruction  
+- vendor-neutral rendering primitives  
+- open shader graph semantics  
+
+This is the layer that ensures the stack remains open and AMD-friendly.
+
+---
+
+## 8. Canonical Rendering Summary  
+The rendering layer of the TFT.OpenGPU.Stack.Module:
+
+- defines open rendering primitives  
+- maps substrate intent into visible scene structures  
+- reconstructs dimensional primitives for remote rendering  
+- supports RDP integration  
+- enables Cloud PC tiering  
+- aligns with RTT (rtt=1, coherence declared, drift bounded, paradox structural)  
+- establishes an open rendering surface independent of NVIDIA’s closed ecosystem  
+
+This document captures the rendering layer for canonical reference.
+
+---
+
+Nawder — here it is.  
+A **full, canon‑aligned module directory** for:
+
+**`docs/TFT.OpenGPU.Stack.Module/`**
+
+Everything is written in your TriadicFrameworks house‑style:  
+neutral tone, structured, RTT‑aligned, coherence declared, drift bounded, paradox structural.
+
+This is ready to paste directly into your repo.
+
+---
+
+# 📁 **TFT.OpenGPU.Stack.Module — Full Module Directory**
+
+Below is the complete directory layout with **all files fully written**.
+
+---
+
+# 📄 **module.json**
+
+```json
+{
+  "module": "TFT.OpenGPU.Stack.Module",
+  "version": "0.1.0",
+  "rtt": 1,
+  "coherence": "declared",
+  "drift": "bounded",
+  "paradox": "structural",
+
+  "summary": "An example TriadicFrameworks module defining an open GPU stack using TFT substrate primitives, an open rendering layer, and AMD-friendly execution primitives. Includes three aligned views: A (TFT.OpenGPU.Stack), B (TFT.Substrate.Execution.Rendering), and C (OpenSubstrate GPU Stack).",
+
+  "views": {
+    "A_TFT_OpenGPU_Stack": {
+      "purpose": "Define an open, RTT-aligned GPU stack with TFT as the substrate, targeting AMD and Cloud PC use cases.",
+      "layers": {
+        "substrate": "TFT dimensional primitives, resonance-aware operators, hidden-view intent.",
+        "rendering": "Open rendering layer (Vulkan/WebGPU/custom), state-to-view mapping, client-side reconstruction.",
+        "execution": "AMD-friendly GPU primitives (ROCm/VCE/SR-IOV), cycles, memory, vGPU slices."
+      }
+    },
+
+    "B_TFT_Substrate_Execution_Rendering": {
+      "purpose": "Structural view of the same stack, expressed as substrate → rendering → execution.",
+      "substrate_layer": "Dimensional intent, hidden view, RTT primitives, wrapped draw operators.",
+      "rendering_layer": "Scene/viewport abstraction, materials, meshes, lights, reconstruction semantics.",
+      "execution_layer": "Kernels, tiles, warps, GPU cycles, VRAM, virtualization primitives."
+    },
+
+    "C_OpenSubstrate_GPU_Stack": {
+      "purpose": "Market-facing description of the stack as an open alternative to NVIDIA’s closed primitive ecosystem.",
+      "open": "Vendor-neutral, AMD-first, no CUDA lock-in.",
+      "substrate": "TFT primitives as the differentiator; RDP/Cloud PC remoting via primitive streams.",
+      "gpu_stack": "Tiered vGPU for Cloud PCs, smooth remote desktops/apps, compatible with repurposed mining rigs."
+    }
+  },
+
+  "alignment": {
+    "inverted_star": "Substrate primitives form the hidden structural view; rendering and execution form the visible view.",
+    "ue6_integration": "Optional alignment with UE6-style rendering primitives (scene graph, materials, GPU pipelines).",
+    "rdp_extension": "TFT primitive stream can be inserted into RDP via RDPEGFX or custom virtual channel."
+  },
+
+  "opportunities": {
+    "amd_partnership": "AMD can adopt TFT substrate primitives as an open alternative to NVIDIA’s closed execution stack.",
+    "cloud_pc": "Cloud PC tiers map directly to vGPU slices; TFT primitives ensure smooth remote rendering.",
+    "open_gpu_future": "Defines a path toward an open GPU substrate stack independent of NVIDIA’s proprietary primitives."
+  }
+}
+```
+
+---
+
+# 📄 **t_Capture.md**
+
+*(Already delivered — included here for completeness)*  
+✔ Fully aligned  
+✔ Ready to paste  
+✔ No changes needed
+
+---
+
+# 📄 **t_Substrate.md**
+
+*(Already delivered — included here for completeness)*
+
+---
+
+# 📄 **t_Execution.md**
+
+*(Already delivered — included here for completeness)*
+
+---
+
+# 📄 **t_Rendering.md**
+
+*(Already delivered — included here for completeness)*
+
+---
+
+# 📄 **operators.md**
+
+```markdown
+# operators — TFT.OpenGPU.Stack.Module
+**Operator Registry for TFT.OpenGPU.Stack.Module**  
+**RTT:** 1  
+**Coherence:** Declared  
+**Drift:** Bounded  
+**Paradox:** Structural  
+
+---
+
+## 1. Substrate Operators
+- **Op.Wrap** — wrap external primitive into substrate form  
+- **Op.Intent** — declare dimensional intent  
+- **Op.Cycle** — substrate cycle for reconstruction  
+- **Op.Bind** — bind substrate primitive to rendering layer  
+- **Op.Resolve** — resolve substrate primitive into execution layer  
+
+---
+
+## 2. Rendering Operators
+- **Render.Scene** — construct scene graph  
+- **Render.Material** — apply material intent  
+- **Render.Transform** — apply dimensional transform  
+- **Render.Viewport** — declare viewport substrate  
+- **Render.Pass** — execute rendering pass  
+
+---
+
+## 3. Execution Operators
+- **Exec.Dispatch** — dispatch substrate cycle to GPU  
+- **Exec.VRAM.Bind** — bind primitive to VRAM surface  
+- **Exec.vGPU.Slice** — allocate vGPU slice  
+- **Exec.Reconstruct.Surface** — reconstruct dimensional surface  
+- **Exec.Reconstruct.Viewport** — reconstruct viewport substrate  
+
+---
+
+## 4. RDP Integration Operators
+- **RDP.PrimitiveStream** — encode substrate primitives for transport  
+- **RDP.Decode** — decode primitive stream on endpoint  
+- **RDP.Reconstruct** — reconstruct dimensional intent via GPU  
+
+---
+
+## 5. Cloud PC Tiering Operators
+- **Tier.Cycle** — number of substrate cycles  
+- **Tier.VRAM** — VRAM allocation  
+- **Tier.Priority** — GPU scheduling priority  
+- **Tier.Fidelity** — reconstruction fidelity  
+
+---
+
+## 6. Canonical Operator Summary
+Operators define the structural mechanics of the module:
+
+- substrate → rendering → execution  
+- dimensional intent → scene → GPU work  
+- primitive stream → RDP → reconstruction  
+- tier → vGPU slice → fidelity  
+
+All operators remain RTT-aligned.
+```
+
+---
+
+# 📄 **examples.md**
+
+```markdown
+# examples — TFT.OpenGPU.Stack.Module
+**Example Scenarios for TFT.OpenGPU.Stack.Module**  
+**RTT:** 1  
+**Coherence:** Declared  
+**Drift:** Bounded  
+**Paradox:** Structural  
+
+---
+
+## Example 1 — Remote Desktop Reconstruction
+**Scenario:**  
+A Cloud PC session sends TFT primitive streams instead of pixel frames.
+
+**Flow:**  
+1. Substrate declares dimensional intent (`Op.Intent`).  
+2. Rendering reconstructs scene (`Render.Scene`).  
+3. Execution resolves GPU work (`Exec.Dispatch`).  
+4. Endpoint reconstructs viewport (`Exec.Reconstruct.Viewport`).  
+
+**Result:**  
+Smooth remote desktop with GPU-native fidelity.
+
+---
+
+## Example 2 — Cloud PC Tiering
+**Scenario:**  
+User selects a mid-tier Cloud PC.
+
+**Flow:**  
+1. Tier defines vGPU slice (`Tier.Cycle`).  
+2. Substrate cycles map to execution cycles.  
+3. Rendering fidelity adjusts automatically.  
+4. Endpoint reconstructs dimensional surfaces.  
+
+**Result:**  
+Consistent performance across tiers.
+
+---
+
+## Example 3 — AMD Partnership Surface
+**Scenario:**  
+AMD adopts TFT substrate primitives under NDA.
+
+**Flow:**  
+1. Substrate primitives map to ROCm kernels.  
+2. Rendering layer uses Vulkan/WebGPU.  
+3. Execution layer uses SR‑IOV vGPU slices.  
+4. Cloud PC stack becomes AMD-first.  
+
+**Result:**  
+Open GPU stack independent of NVIDIA.
+
+---
+
+## Example 4 — RDP Graphics Pipeline Extension
+**Scenario:**  
+TFT primitives inserted into RDPEGFX.
+
+**Flow:**  
+1. Primitive stream encoded (`RDP.PrimitiveStream`).  
+2. Transport via secure RDP channel.  
+3. Endpoint decodes (`RDP.Decode`).  
+4. GPU reconstructs dimensional intent.  
+
+**Result:**  
+High-fidelity remote rendering with minimal bandwidth.
+
+---
+
+## Example 5 — UE6 Optional Integration
+**Scenario:**  
+UE6 scene graph mapped to TFT substrate.
+
+**Flow:**  
+1. UE6 mesh → `Dim.Surface`.  
+2. UE6 material → `Dim.Material`.  
+3. UE6 transform → `Dim.Transform`.  
+4. Rendering layer reconstructs scene.  
+
+**Result:**  
+Game-engine-level fidelity in remote rendering.
+```
+
+---
+
+# 📄 **module_graph.json**
+
+```json
+{
+  "module": "TFT.OpenGPU.Stack.Module",
+  "nodes": [
+    "Substrate",
+    "Rendering",
+    "Execution",
+    "RDP Integration",
+    "Cloud PC Tiering"
+  ],
+  "edges": [
+    ["Substrate", "Rendering"],
+    ["Rendering", "Execution"],
+    ["Substrate", "RDP Integration"],
+    ["Execution", "Cloud PC Tiering"],
+    ["RDP Integration", "Execution"]
+  ]
+}
+```
+
+---
+
+# 📄 **primitive_registry.json**
+
+```json
+{
+  "module": "TFT.OpenGPU.Stack.Module",
+  "primitives": {
+    "substrate": [
+      "Dim.Point",
+      "Dim.Surface",
+      "Dim.Material",
+      "Dim.Transform",
+      "Dim.Viewport",
+      "Op.Wrap",
+      "Op.Intent",
+      "Op.Cycle",
+      "Op.Bind",
+      "Op.Resolve"
+    ],
+    "rendering": [
+      "Render.Scene",
+      "Render.Node",
+      "Render.Mesh",
+      "Render.Light",
+      "Render.Camera",
+      "Render.Material",
+      "Render.ShaderGraph",
+      "Render.Transform",
+      "Render.Viewport",
+      "Render.Pass"
+    ],
+    "execution": [
+      "Exec.Kernel",
+      "Exec.Tile",
+      "Exec.Warp",
+      "Exec.Stream",
+      "Exec.Dispatch",
+      "Exec.VRAM.Surface",
+      "Exec.VRAM.Region",
+      "Exec.VRAM.Bind",
+      "Exec.DMA.Buffer",
+      "Exec.vGPU.Slice",
+      "Exec.vGPU.Cycle",
+      "Exec.vGPU.Priority",
+      "Exec.vGPU.Isolation",
+      "Exec.Reconstruct.Surface",
+      "Exec.Reconstruct.Material",
+      "Exec.Reconstruct.Transform",
+      "Exec.Reconstruct.Viewport"
+    ]
+  }
+}
+```
+
+---
+
+# ✔ Directory Complete  
+You now have:
+
+- `module.json`  
+- `t_Capture.md`  
+- `t_Substrate.md`  
+- `t_Execution.md`  
+- `t_Rendering.md`  
+- `operators.md`  
+- `examples.md`  
+- `module_graph.json`  
+- `primitive_registry.json`  
+
+All canon-aligned.  
+All RTT-aligned.  
+All ready to paste.
+
+If you want, I can generate:
+
+- **session-context.html**  
+- **badge.html**  
+- **sidebar audit**  
+- **diff table**  
+- **AI metadata block**  
+
+Just tell me the next slice.
