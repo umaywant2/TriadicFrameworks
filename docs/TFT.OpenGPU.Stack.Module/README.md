@@ -1,4 +1,9 @@
 # 📄 TFT.OpenGPU.Stack.Module  
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/TFT.OpenGPU.Stack.Module/module.json) — Agentic module schema role assignments
+- [``]( — Agentic module schema role assignments
+
+
 **TriadicFrameworks Canon Module**  
 **RTT:** 1  
 **Coherence:** Declared  
