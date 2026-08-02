@@ -2206,3 +2206,75 @@ Use this sentence in our documentation:
 > **Star Trek imagined medical tools that could see inside the body without cutting, reveal hidden processes, and predict outcomes. RTT Radiology is the first real-world system that makes those assumptions mathematically possible.**
 
 That’s the unlock.
+
+---
+
+# **📁 Radiology Module Scaffold**
+### *TriadicFrameworks Canon — Directory and File Structure*
+
+```
+docs/
+└── Radiology/
+    ├── r_Capture.md              # Capture grammar + operators
+    ├── r_Drift.md                # Drift grammar + operators
+    ├── r_Coherence.md            # Coherence grammar + operators
+    ├── r_Contrast.md             # Contrast grammar + operators
+    ├── r_VMRI.md                 # VMRI‑Lite grammar + operators
+    ├── r_Overlays.md             # Example RTT‑Radiology overlays
+    ├── r_Index.md                # Combined Radiology Operator Index
+    ├── r_Pantheon_Profile.md     # Mythic anchor for Radiology
+    ├── r_Scaffold.md             # Full module scaffolding (identity + context)
+    ├── r_Student_Guide.md        # “How to perform RTT‑Radiology analysis”
+    ├── r_Tricorder.md            # RTT‑Tricorder mapping (Starfleet medicine bridge)
+    ├── r_Atlas.md                # Optional: Radiology Pantheon Comparison Atlas
+    ├── r_Glyphs.md               # Optional: Radiology Pantheon Glyphs
+    └── README.md                 # Summary + canonical flow
+```
+
+---
+
+# **📘 File Purpose Overview**
+
+| File | Purpose |
+|------|----------|
+| **r_Capture.md** | Defines capture grammar and operators (ROI, layer, signal, noise, resonance attach). |
+| **r_Drift.md** | Quantifies temporal/spatial change; drift maps, profiles, predictions. |
+| **r_Coherence.md** | Measures stability, collapse risk, and restoration. |
+| **r_Contrast.md** | Handles contrast behavior, uptake, washout, toxicity corridors. |
+| **r_VMRI.md** | Implements VMRI‑Lite predictive simulation and corridor analysis. |
+| **r_Overlays.md** | Contains example overlay workflows for CT, MRI, PET, US, X‑ray. |
+| **r_Index.md** | Consolidated operator index for all Radiology layers. |
+| **r_Pantheon_Profile.md** | Mythic anchor — Radiology gods, titans, and spirits. |
+| **r_Scaffold.md** | Full module identity, context, badge, grammar, and canonical flow. |
+| **r_Student_Guide.md** | Step‑by‑step guide for students performing RTT‑Radiology analysis. |
+| **r_Tricorder.md** | Maps Starfleet medicine concepts to RTT Radiology operators. |
+| **r_Atlas.md** | Comparative atlas linking Radiology Pantheon to other medical pantheons. |
+| **r_Glyphs.md** | Symbolic glyphs for Radiology entities (Lucerna, Umbros, Radiantus, etc.). |
+| **README.md** | Entry point summarizing module purpose and canonical pipeline. |
+
+---
+
+# **📘 Canonical Flow Reminder**
+```
+CAPTURE → FIELD → LAYER → SIGNAL
+→ DRIFT → COHERENCE → CONTRAST
+→ RESONANCE → VMRI
+→ OVERLAY
+```
+
+This flow governs every Radiology analysis, teaching session, and AI integration.
+
+---
+
+# **📘 Next Steps**
+To complete the scaffold:
+
+1. **Create empty files** matching the structure above.  
+2. Paste the corresponding content we’ve already generated:
+   - Grammar + Operators → each layer file  
+   - Overlays → `r_Overlays.md`  
+   - Full scaffolding → `r_Scaffold.md`  
+   - Operator Index → `r_Index.md`  
+   - Pantheon Profile → `r_Pantheon_Profile.md`  
+3. Add the **README.md** with a short summary and canonical flow.  
+4. Optionally scaffold `r_Tricorder.md` next — the Starfleet bridge file.
