@@ -1,1 +1,178 @@
+{
+  "module": {
+    "name": "Radiology",
+    "category": "Applied Medicine",
+    "version": "1.0",
+    "summary": "RTT‑Radiology capture, drift, coherence, contrast, resonance, and VMRI‑Lite analysis.",
+    "purpose": "Provide radiologists, students, and AI systems with RTT‑style imaging analysis tools.",
+    "audience": [
+      "Radiology students",
+      "Medical imaging specialists",
+      "AI diagnostic systems",
+      "Researchers using RTT or TriadicFrameworks"
+    ]
+  },
+
+  "grammar": {
+    "capture": [
+      "CAPTURE",
+      "FIELD",
+      "LAYER",
+      "SIGNAL",
+      "NOISE",
+      "DRIFT-SIGNAL",
+      "COHERENCE-SIGNAL"
+    ],
+    "drift": [
+      "DRIFT",
+      "DRIFT-VELOCITY",
+      "DRIFT-VECTOR",
+      "DRIFT-ZONE",
+      "DRIFT-BURST",
+      "DRIFT-DECAY",
+      "DRIFT-NOISE"
+    ],
+    "coherence": [
+      "COHERENCE",
+      "COHERENCE-FIELD",
+      "COHERENCE-BREAK",
+      "COHERENCE-RESTORE",
+      "COHERENCE-MAP"
+    ],
+    "contrast": [
+      "UPTAKE",
+      "WASHOUT",
+      "ENHANCEMENT-ZONE",
+      "FALSE-UPTAKE",
+      "FALSE-WASHOUT",
+      "TOXICITY-CORRIDOR"
+    ],
+    "vmri": [
+      "SIM-START",
+      "SIM-VARIANT",
+      "SIM-CORRIDOR",
+      "SIM-PASS",
+      "SIM-FAIL",
+      "SIM-OPTIMAL"
+    ]
+  },
+
+  "operators": {
+    "r_Capture": [
+      "op_field",
+      "op_layer",
+      "op_signal",
+      "op_noise",
+      "op_drift_signal",
+      "op_stability",
+      "op_enhancement",
+      "op_resonance_attach",
+      "op_resonance_predict",
+      "op_vmri_lite",
+      "op_overlay"
+    ],
+    "r_Drift": [
+      "op_drift",
+      "op_drift_velocity",
+      "op_drift_vector",
+      "op_drift_zone",
+      "op_drift_burst",
+      "op_drift_decay",
+      "op_drift_noise",
+      "op_drift_map",
+      "op_drift_profile",
+      "op_drift_predict",
+      "op_drift_overlay"
+    ],
+    "r_Coherence": [
+      "op_coherence",
+      "op_coherence_field",
+      "op_coherence_break",
+      "op_coherence_restore",
+      "op_coherence_map",
+      "op_coherence_profile",
+      "op_coherence_predict",
+      "op_coherence_collapse",
+      "op_coherence_overlay"
+    ],
+    "r_Contrast": [
+      "op_uptake",
+      "op_washout",
+      "op_enhancement_zone",
+      "op_false_uptake",
+      "op_false_washout",
+      "op_toxicity_corridor",
+      "op_contrast_profile",
+      "op_contrast_predict",
+      "op_contrast_map",
+      "op_contrast_overlay"
+    ],
+    "r_VMRI": [
+      "op_vmri_start",
+      "op_vmri_variant",
+      "op_vmri_batch",
+      "op_vmri_corridor",
+      "op_vmri_pass",
+      "op_vmri_fail",
+      "op_vmri_optimal",
+      "op_vmri_contrast_predict",
+      "op_vmri_tissue_predict",
+      "op_vmri_profile",
+      "op_vmri_overlay"
+    ]
+  },
+
+  "files": {
+    "capture": "r_Capture.md",
+    "drift": "r_Drift.md",
+    "coherence": "r_Coherence.md",
+    "contrast": "r_Contrast.md",
+    "vmri": "r_VMRI.md",
+    "overlays": "r_Overlays.md",
+    "index": "r_Index.md",
+    "pantheon": "r_Pantheon_Profile.md",
+    "scaffold": "r_Scaffold.md",
+    "student_guide": "r_Student_Guide.md",
+    "tricorder": "r_Tricorder.md",
+    "atlas": "r_Atlas.md",
+    "glyphs": "r_Glyphs.md",
+    "readme": "README.md"
+  },
+
+  "canonical_flow": [
+    "CAPTURE",
+    "FIELD",
+    "LAYER",
+    "SIGNAL",
+    "DRIFT",
+    "COHERENCE",
+    "CONTRAST",
+    "RESONANCE",
+    "VMRI",
+    "OVERLAY"
+  ],
+
+  "pantheon": {
+    "clarity": ["Lucerna", "Radiantus", "Harmona"],
+    "shadow": ["Umbros", "Vespera", "Fractura"],
+    "void": ["Aetherium", "Nullis", "Quietus"],
+    "titans": ["Tomographos", "Magneta", "Sonara", "Fluorion"],
+    "liminal": ["Iodina", "Gadolina", "Bariuma", "Fluorix", "Statera", "Vectora", "Corridora"]
+  },
+
+  "ai_metadata": {
+    "module_type": "radiology",
+    "ai_ready": true,
+    "ai_keywords": [
+      "radiology",
+      "drift analysis",
+      "coherence analysis",
+      "contrast behavior",
+      "vmri-lite",
+      "rtt overlay",
+      "resonance profile"
+    ],
+    "ai_version": "1.0"
+  }
+}
 
