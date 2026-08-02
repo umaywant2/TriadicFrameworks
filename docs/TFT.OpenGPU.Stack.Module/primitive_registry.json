@@ -1,1 +1,56 @@
+{
+  "module": "TFT.OpenGPU.Stack.Module",
+  "rtt": 1,
+  "coherence": "declared",
+  "drift": "bounded",
+  "paradox": "structural",
+
+  "primitives": {
+    "substrate": [
+      "Dim.Point",
+      "Dim.Surface",
+      "Dim.Material",
+      "Dim.Transform",
+      "Dim.Viewport",
+      "Op.Wrap",
+      "Op.Intent",
+      "Op.Cycle",
+      "Op.Bind",
+      "Op.Resolve"
+    ],
+
+    "rendering": [
+      "Render.Scene",
+      "Render.Node",
+      "Render.Mesh",
+      "Render.Light",
+      "Render.Camera",
+      "Render.Material",
+      "Render.ShaderGraph",
+      "Render.Transform",
+      "Render.Viewport",
+      "Render.Pass"
+    ],
+
+    "execution": [
+      "Exec.Kernel",
+      "Exec.Tile",
+      "Exec.Warp",
+      "Exec.Stream",
+      "Exec.Dispatch",
+      "Exec.VRAM.Surface",
+      "Exec.VRAM.Region",
+      "Exec.VRAM.Bind",
+      "Exec.DMA.Buffer",
+      "Exec.vGPU.Slice",
+      "Exec.vGPU.Cycle",
+      "Exec.vGPU.Priority",
+      "Exec.vGPU.Isolation",
+      "Exec.Reconstruct.Surface",
+      "Exec.Reconstruct.Material",
+      "Exec.Reconstruct.Transform",
+      "Exec.Reconstruct.Viewport"
+    ]
+  }
+}
 
