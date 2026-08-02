@@ -1,1 +1,44 @@
+{
+  "module": "TFT.OpenGPU.Stack.Module",
+  "graph": {
+    "nodes": [
+      "Substrate",
+      "Rendering",
+      "Execution",
+      "RDP Integration",
+      "Cloud PC Tiering"
+    ],
+    "edges": [
+      {
+        "from": "Substrate",
+        "to": "Rendering",
+        "description": "Dimensional intent maps to scene/viewport primitives."
+      },
+      {
+        "from": "Rendering",
+        "to": "Execution",
+        "description": "Scene primitives resolve into GPU work."
+      },
+      {
+        "from": "Substrate",
+        "to": "RDP Integration",
+        "description": "Primitive streams encode substrate intent for transport."
+      },
+      {
+        "from": "RDP Integration",
+        "to": "Execution",
+        "description": "Endpoint GPU reconstructs dimensional intent."
+      },
+      {
+        "from": "Execution",
+        "to": "Cloud PC Tiering",
+        "description": "vGPU slices and cycles define tier fidelity."
+      }
+    ]
+  },
+  "rtt": 1,
+  "coherence": "declared",
+  "drift": "bounded",
+  "paradox": "structural"
+}
 
