@@ -1,3 +1,4 @@
+```text
 CRYSTAL–MYCELIAL ENGINE (CME)
 FULL TEACHING HANDOUT
 TriadicFrameworks / RTT / CMH / MSRM
@@ -161,3 +162,4 @@ captured, aligned, and locked into mineral lattice logic using
 operator grammar, envelope control, and resonance fields.
 
 END OF HANDOUT
+```
