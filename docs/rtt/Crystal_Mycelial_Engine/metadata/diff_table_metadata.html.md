@@ -1,3 +1,4 @@
+```html
 <table class="diff-table">
 
   <thead>
@@ -127,3 +128,4 @@
   </tbody>
 
 </table>
+```
