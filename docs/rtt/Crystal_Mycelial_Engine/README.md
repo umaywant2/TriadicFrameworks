@@ -1,4 +1,7 @@
 # **Crystal–Mycelial Engine**  
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Crystal_Mycelial_Engine/module.json) — Agentic module schema role assignments
+
 ### *RTT / CMH Substrate Engine*  
 Prepared by **Nawder Loswin**
 
