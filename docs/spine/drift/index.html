@@ -1,1 +1,152 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>TriadicFrameworks · Drift Overlay · Overlay 2/6</title>
+<meta name="description" content="S3 Spine Overlay 2 of 6: Drift Overlay. Monitor velocity. Catch collapse early. Version 2.0, Round R5.">
+<meta name="version" content="2.0"><meta name="round" content="R5">
+<meta name="canon" content="active · s3-spine · overlay-2 · r5">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#0a0a0f;color:#e0e0e0;font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh;}
+.top-bar{background:rgba(10,10,20,0.97);border-bottom:1px solid #222;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+.top-bar .site{font-size:13px;color:#f39c12;font-weight:700;text-decoration:none;}
+.top-bar .breadcrumb{font-size:11px;color:#555;}
+.top-bar .breadcrumb a{color:#888;text-decoration:none;}
+.hero{background:linear-gradient(135deg,#0a0a0f 0%,#f39c1218 100%);border-bottom:1px solid #f39c1233;padding:48px 32px 36px;}
+.hero .overlay-num{font-size:11px;color:#f39c12;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px;}
+.hero h1{font-size:32px;font-weight:800;color:#fff;margin-bottom:8px;}
+.hero .tagline{font-size:15px;color:#aaa;margin-bottom:20px;}
+.hero .badges{display:flex;gap:8px;flex-wrap:wrap;}
+.badge{background:#111;border:1px solid #333;border-radius:4px;padding:3px 10px;font-size:10px;color:#888;}
+.badge.active{border-color:#f39c1288;color:#f39c12;}
+.signal-chain{background:#0c0c16;border-bottom:1px solid #1a1a2e;padding:14px 32px;display:flex;align-items:center;overflow-x:auto;}
+.chain-node{padding:6px 12px;border:1px solid #333;border-radius:4px;font-size:10px;color:#888;text-decoration:none;white-space:nowrap;transition:border-color .2s;}
+.chain-node:hover{border-color:#666;color:#ccc;}
+.chain-node.active{color:#fff;font-weight:700;}
+.chain-arrow{color:#444;padding:0 6px;font-size:12px;}
+.layout{display:grid;grid-template-columns:260px 1fr;gap:0;min-height:calc(100vh - 200px);}
+.sidebar{background:rgba(10,10,20,0.92);border-right:1px solid #1a1a2e;padding:24px 16px;}
+.sidebar h3{font-size:10px;color:#555;text-transform:uppercase;letter-spacing:.1em;margin:16px 0 8px;}
+.sidebar ul{list-style:none;}
+.sidebar ul li{font-size:11px;color:#aaa;padding:3px 0;border-left:2px solid #222;padding-left:8px;margin-bottom:4px;line-height:1.4;}
+.engine-tag{font-size:10px;color:#f39c12;border:1px solid #f39c1244;border-radius:3px;padding:3px 7px;display:block;margin-bottom:5px;cursor:pointer;line-height:1.4;}
+.engine-tag:hover{border-color:#f39c1288;}
+.metric-item{font-size:11px;color:#aaa;padding:2px 0;}
+.metric-item span{color:#f39c12;font-weight:600;}
+.main{padding:28px 32px;}
+.section{margin-bottom:32px;}
+.section-title{font-size:14px;color:#fff;font-weight:700;margin-bottom:12px;padding-bottom:6px;border-bottom:1px solid #1a1a2e;display:flex;align-items:center;gap:8px;}
+.section-title::before{content:'';display:inline-block;width:3px;height:14px;background:#f39c12;border-radius:2px;}
+.desc-text{font-size:13px;color:#bbb;line-height:1.7;}
+.data-table{width:100%;border-collapse:collapse;font-size:11px;}
+.data-table th{background:#0f0f1a;color:#666;font-weight:600;text-transform:uppercase;letter-spacing:.06em;padding:8px 10px;text-align:left;border-bottom:1px solid #1a1a2e;}
+.data-table td{padding:8px 10px;border-bottom:1px solid #111;vertical-align:top;}
+.data-table tr:hover td{background:#0f0f1a;}
+.io-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.io-box{background:#0c0c16;border:1px solid #1a1a2e;border-radius:6px;padding:14px;}
+.io-box h4{font-size:10px;color:#555;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;}
+.io-box ul{list-style:none;}
+.io-box ul li{font-size:11px;color:#aaa;padding:3px 0;padding-left:12px;position:relative;line-height:1.4;}
+.io-box ul li::before{content:'›';position:absolute;left:0;color:#f39c12;}
+.nav-footer{display:flex;justify-content:space-between;align-items:center;padding:20px 32px;border-top:1px solid #1a1a2e;margin-top:16px;}
+.nav-btn{padding:8px 18px;border:1px solid #333;border-radius:5px;color:#aaa;text-decoration:none;font-size:11px;transition:border-color .2s,color .2s;}
+.nav-btn:hover{border-color:#f39c12;color:#f39c12;}
+.nav-btn.next{background:#f39c1222;border-color:#f39c1266;color:#f39c12;}
+.canon-footer{background:#060608;border-top:1px solid #111;padding:14px 32px;font-size:10px;color:#444;display:flex;gap:24px;flex-wrap:wrap;}
+.canon-footer span{color:#666;}
+@media(max-width:768px){.layout{grid-template-columns:1fr;}.sidebar{display:none;}.io-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="top-bar">
+  <a href="https://www.triadicframeworks.org" class="site">TriadicFrameworks</a>
+  <div class="breadcrumb"><a href="https://www.triadicframeworks.org/spine/">S3 Spine</a> › Drift Overlay</div>
+  <div class="badge active">Overlay 2/6</div>
+</div>
+<div class="hero">
+  <div class="overlay-num">S3 Spine · Overlay 2 of 6 · Version 2.0 · R5</div>
+  <h1>Drift Overlay</h1>
+  <div class="tagline">Monitor velocity. Catch collapse early.</div>
+  <div class="badges">
+    <span class="badge active">Active Canonical</span>
+    <span class="badge">ai-ready</span>
+    <span class="badge">rtt=1</span>
+    <span class="badge">coherence=declared</span>
+    <span class="badge">drift=bounded</span>
+    <span class="badge">paradox=structural</span>
+    <span class="badge">R5 · S3-Spine-Overlay-Pack-v2.0</span>
+  </div>
+</div>
+<div class="signal-chain"><a href="https://www.triadicframeworks.org/spine/structural/" class="chain-node" style="border-color:#e74c3c;">1. Structural</a><span class="chain-arrow">→</span><a href="https://www.triadicframeworks.org/spine/drift/" class="chain-node active" style="border-color:#f39c12;background:#f39c1222;">2. Drift</a><span class="chain-arrow">→</span><a href="https://www.triadicframeworks.org/spine/coherence/" class="chain-node" style="border-color:#1abc9c;">3. Coherence</a><span class="chain-arrow">→</span><a href="https://www.triadicframeworks.org/spine/substrate/" class="chain-node" style="border-color:#9b59b6;">4. Substrate</a><span class="chain-arrow">→</span><a href="https://www.triadicframeworks.org/spine/dimensional/" class="chain-node" style="border-color:#3498db;">5. Dimensional</a><span class="chain-arrow">→</span><a href="https://www.triadicframeworks.org/spine/domain/" class="chain-node" style="border-color:#2ecc71;">6. Domain</a></div>
+<div class="layout">
+  <div class="sidebar">
+    <h3>Primary Engine</h3>
+    <div class="engine-tag" onclick="window.open('https://www.triadicframeworks.org/rtt/DRIFT_SENTINEL/')">DRIFT_SENTINEL</div>
+    <h3>All Engines (4)</h3>
+<div class="engine-tag" style="margin-bottom:3px;" onclick="window.open('https://www.triadicframeworks.org/rtt/DRIFT_SENTINEL/')">DRIFT_SENTINEL<br><span style="color:#666;font-size:9px;">Primary</span></div>
+<div class="engine-tag" style="margin-bottom:3px;" onclick="window.open('https://www.triadicframeworks.org/rtt/TEMPORAL_REGIME_SEQUENCER/')">TEMPORAL_REGIME_SEQUENCER<br><span style="color:#666;font-size:9px;">Secondary</span></div>
+<div class="engine-tag" style="margin-bottom:3px;" onclick="window.open('https://www.triadicframeworks.org/rtt/PARADOX_GRADIENT_ANALYZER/')">PARADOX_GRADIENT_ANALYZER<br><span style="color:#666;font-size:9px;">Tertiary</span></div>
+<div class="engine-tag" style="margin-bottom:3px;" onclick="window.open('https://www.triadicframeworks.org/rtt/STABILITY_BASIN_CARTOGRAPHER/')">STABILITY_BASIN_CARTOGRAPHER<br><span style="color:#666;font-size:9px;">Validator</span></div>
+    <h3>Key Metrics</h3>
+<div class="metric-item"><span>ΔM</span> — Drift magnitude</div>
+<div class="metric-item"><span>ΔD</span> — Drift direction (degrees)</div>
+<div class="metric-item"><span>ΔV</span> — Drift velocity (units/cycle)</div>
+<div class="metric-item"><span>Precursor alerts</span> — Collapse-precursor flags</div>
+    <h3>Links</h3>
+    <ul>
+      <li><a href="https://www.triadicframeworks.org/spine/" style="color:#888;">← Spine Pack</a></li>
+      <li><a href="https://www.triadicframeworks.org/spine/drift/module.json" style="color:#888;">module.json</a></li>
+      <li><a href="https://github.com/umaywant2/TriadicFrameworks" style="color:#888;">GitHub</a></li>
+    </ul>
+  </div>
+  <div class="main">
+    <div class="section">
+      <div class="section-title">Overview</div>
+      <p class="desc-text">The Drift Overlay monitors how fast and in what direction the registered regimes are migrating across the Structural Frame. Three vectors — ΔM (magnitude), ΔD (direction), ΔV (velocity) — are computed continuously. When any vector exceeds its configured threshold, a collapse-precursor alert is emitted. All readings are time-stamped for the Temporal Regime Sequencer and passed to the Coherence Overlay.</p>
+    </div>
+    <div class="section">
+      <div class="section-title">RTT Engines</div>
+      <table class="data-table">
+        <thead><tr><th>Engine</th><th>Role</th><th>Function</th><th>Version</th></tr></thead>
+        <tbody><tr><td><a href="https://www.triadicframeworks.org/rtt/DRIFT_SENTINEL/" target="_blank" style="color:#f39c12;text-decoration:none;">DRIFT_SENTINEL</a></td><td style="color:#f1c40f;">Primary</td><td style="color:#aaa;">Continuously monitors ΔM, ΔD, ΔV drift vectors</td><td style="color:#888;">RTT/2</td></tr>
+<tr><td><a href="https://www.triadicframeworks.org/rtt/TEMPORAL_REGIME_SEQUENCER/" target="_blank" style="color:#f39c12;text-decoration:none;">TEMPORAL_REGIME_SEQUENCER</a></td><td style="color:#f1c40f;">Secondary</td><td style="color:#aaa;">Time-stamps all readings; projects depletion timelines</td><td style="color:#888;">RTT/2</td></tr>
+<tr><td><a href="https://www.triadicframeworks.org/rtt/PARADOX_GRADIENT_ANALYZER/" target="_blank" style="color:#f39c12;text-decoration:none;">PARADOX_GRADIENT_ANALYZER</a></td><td style="color:#f1c40f;">Tertiary</td><td style="color:#aaa;">Resolves contradictory drift signals</td><td style="color:#888;">RTT/2</td></tr>
+<tr><td><a href="https://www.triadicframeworks.org/rtt/STABILITY_BASIN_CARTOGRAPHER/" target="_blank" style="color:#f39c12;text-decoration:none;">STABILITY_BASIN_CARTOGRAPHER</a></td><td style="color:#f1c40f;">Validator</td><td style="color:#aaa;">Validates drift rates against substrate runway</td><td style="color:#888;">RTT/2</td></tr>
+</tbody>
+      </table>
+    </div>
+    <div class="section">
+      <div class="section-title">Inputs &amp; Outputs</div>
+      <div class="io-grid">
+        <div class="io-box"><h4>Imports</h4><ul><li>Structural Frame (from Structural Overlay)</li><li>Regime interlock geometry</li><li>Expectations module — trajectory envelopes</li><li>Atmosphere module — environmental pressure</li></ul></div>
+        <div class="io-box"><h4>Exports</h4><ul><li>Drift Report (vectors + timeline)</li><li>ΔM drift vector (magnitude)</li><li>ΔD drift vector (direction)</li><li>ΔV drift vector (velocity)</li><li>Collapse-precursor alert flags</li><li>Temporal stamps → Coherence Overlay</li></ul></div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">Metrics Produced</div>
+      <table class="data-table">
+        <thead><tr><th>Metric</th><th>Description</th><th>Range / Format</th><th>Consumed By</th></tr></thead>
+        <tbody><tr><td style="color:#f39c12;font-weight:600;">ΔM</td><td style="color:#ccc;">Drift magnitude</td><td style="color:#aaa;">Float</td><td style="color:#888;">Coherence Overlay</td></tr>
+<tr><td style="color:#f39c12;font-weight:600;">ΔD</td><td style="color:#ccc;">Drift direction (degrees)</td><td style="color:#aaa;">Float</td><td style="color:#888;">Coherence Overlay</td></tr>
+<tr><td style="color:#f39c12;font-weight:600;">ΔV</td><td style="color:#ccc;">Drift velocity (units/cycle)</td><td style="color:#aaa;">Float</td><td style="color:#888;">Substrate Overlay</td></tr>
+<tr><td style="color:#f39c12;font-weight:600;">Precursor alerts</td><td style="color:#ccc;">Collapse-precursor flags</td><td style="color:#aaa;">Boolean</td><td style="color:#888;">DDR</td></tr>
+</tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="nav-footer">
+  <a href="https://www.triadicframeworks.org/spine/structural/" class="nav-btn prev">① Structural Overlay</a>
+  <span style="font-size:10px;color:#444;">S3 Spine · Overlay 2/6 · v2.0 · R5</span>
+  <a href="https://www.triadicframeworks.org/spine/coherence/" class="nav-btn next">Coherence Overlay ③</a>
+</div>
+<div class="canon-footer">
+  <span>canon: <span>active · s3-spine · overlay-2 · r5</span></span>
+  <span>version: <span>2.0</span></span>
+  <span>generated: <span>2026-08-03</span></span>
+  <span>source: <span>S3-Spine-Overlay-Pack-v2.0</span></span>
+</div>
+</body>
+</html>
