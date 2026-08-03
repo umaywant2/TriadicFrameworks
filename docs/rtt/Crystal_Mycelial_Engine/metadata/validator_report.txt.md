@@ -1,3 +1,4 @@
+```text
 VALIDATOR REPORT — Crystal_Mycelial_Engine
 TriadicFrameworks / RTT / CMH / MSRM
 2026-08-02
@@ -92,3 +93,4 @@ FINAL STATUS
 ----------------------------------------
 Crystal_Mycelial_Engine module passes all validator checks.
 Module is canonical, internally consistent, and ready for publication.
+```
