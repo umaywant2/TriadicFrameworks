@@ -1,3 +1,4 @@
+```json
 {
   "module": "Crystal_Mycelial_Engine",
   "frontdoor": "/docs/rtt/Crystal_Mycelial_Engine/frontdoor/index.html",
@@ -35,3 +36,4 @@
     }
   }
 }
+```
