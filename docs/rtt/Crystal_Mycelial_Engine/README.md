@@ -1,3 +1,5 @@
+<img width="963" height="963" alt="Crystal_Mycelial_Engine" src="https://github.com/user-attachments/assets/35bc6533-bb7a-4dc2-8bf1-a483aa9558e4" />
+
 # **Crystal–Mycelial Engine**  
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Crystal_Mycelial_Engine/module.json) — Agentic module schema role assignments
