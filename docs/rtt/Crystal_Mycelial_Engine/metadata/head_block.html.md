@@ -1,3 +1,4 @@
+```html
 <head>
 
   <!-- Canonical HTML Metadata -->
@@ -61,3 +62,4 @@
   <link rel="manifest" href="/assets/favicon/site.webmanifest">
 
 </head>
+```
