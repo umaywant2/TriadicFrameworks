@@ -1,78 +1,104 @@
 {
+  "$schema": "https://www.triadicframeworks.org/schemas/rtt_engine_module.schema.json",
+  "$generated": "2026-08-03T09:53:00",
+  "$version": "1.4",
+  "$round": "R5",
   "identity": {
     "name": "Drift Sentinel",
-    "canonical_id": "RTT_DRIFT_SENTINEL",
-    "module_path": "/docs/rtt/Drift_Sentinel/",
-    "category": "rtt-structural",
-    "version": "1.0",
-    "status": "canon-stable"
+    "canonical_id": "DRIFT_SENTINEL",
+    "module_path": "docs/rtt/Drift_Sentinel",
+    "category": "RTT Engine",
+    "version": "RTT/2",
+    "status": "Active Canonical"
   },
-
   "purpose": {
-    "summary": "RTT/1 drift-level intelligence engine for detecting, measuring, and stabilizing drift across conceptual, computational, and physical regimes.",
-    "detail": "The Drift Sentinel monitors drift envelopes, computes drift vectors, detects drift amplification, maps drift fields across RTT regimes (R1–R4), and provides drift diagnostics for higher-level RTT engines such as Faultline Detector, Stability Basin Cartographer, Temporal Regime Sequencer, Causality Weaver, and Dimensional Resonance Scanner."
+    "summary": "Continuously monitors drift vectors (ΔM, ΔD, ΔV) across the registered structural frame; primary collapse-precursor early-warning engine.",
+    "detail": "The Drift Sentinel continuously samples regime state across the registered Structural Frame, computing three drift vectors at each cycle: ΔM (magnitude — total displacement from nominal), ΔD (direction — angular deviation of migration trajectory), and ΔV (velocity — rate of displacement). When any vector exceeds its configured threshold, the Sentinel emits a collapse-precursor alert to the S3 Spine bus. All readings are time-stamped for the TEMPORAL_REGIME_SEQUENCER. The Drift Sentinel is also the primary consumer of the Expectations module's nominal trajectory envelopes and the Atmosphere module's environmental pressure signals."
   },
-
   "rtt": {
     "rtt_level": 1,
     "coherence": "declared",
     "drift": "bounded",
     "paradox": "structural"
   },
-
+  "spine_assignments": {
+    "primary_overlay": "spine-drift",
+    "cross_overlay_appearances": [
+      "spine-structural",
+      "spine-coherence"
+    ],
+    "pack": "spine-overlay-pack"
+  },
   "operators": {
     "primary": [
-      "DS-Detect",
-      "DS-Vector",
-      "DS-Envelope",
-      "DS-Field",
-      "DS-Amplify",
-      "DS-Stabilize"
+      "DS-Monitor",
+      "DS-DeltaM",
+      "DS-DeltaD",
+      "DS-DeltaV",
+      "DS-Alert",
+      "DS-Timestamp"
     ],
     "secondary": [
-      "RTT-Drift",
-      "RTT-Envelope",
-      "RTT-Vector",
-      "RTT-Structural"
+      "DS-Precursor",
+      "DS-Calibrate",
+      "DS-Baseline"
     ]
   },
-
   "analyzer_layer": {
-    "layer": "drift",
+    "layer": "RTT Technology Layer",
     "sub_layers": [
-      "drift-vector-analysis",
-      "drift-field-mapping",
-      "envelope-detection",
-      "amplification-analysis",
-      "structural-drift-evaluation"
+      "RTT/2 Core",
+      "RTT/2 Detection"
     ]
   },
-
   "files": {
     "core": [
-      "README.md",
       "Drift_Sentinel.md",
-      "ds_examples.md",
-      "ds_diagrams.svg"
+      "Drift_Sentinel_spec.md"
     ],
     "support": [
-      "drift_profiles.md",
-      "drift_amplification_cases.md",
-      "drift_field_matrix.json"
+      "operators.md",
+      "signal_flow.md",
+      "metrics.md"
     ],
     "ai": [
-      "ds_prompts.md",
-      "ds_operators.md"
+      "module.json"
     ]
   },
-
   "ai": {
     "ai_ready": true,
-    "ai_module_id": "RTT_DRIFT_SENTINEL",
-    "ai_keywords": "RTT, drift sentinel, drift vector, drift envelope, drift field, drift amplification, structural drift analysis",
-    "ai_purpose": "Provide drift-level intelligence for RTT/1 by detecting drift vectors, mapping drift fields, analyzing drift amplification, and stabilizing drift envelopes across conceptual, computational, and physical regimes.",
-    "ai_operators": "DS-Detect, DS-Vector, DS-Envelope, DS-Field, DS-Amplify, DS-Stabilize",
-    "ai_audience": "researchers, systems designers, AI systems"
+    "ai_module_id": "DRIFT_SENTINEL",
+    "ai_keywords": [
+      "drift vectors",
+      "ΔM",
+      "ΔD",
+      "ΔV",
+      "collapse precursor",
+      "regime migration",
+      "drift velocity",
+      "early warning",
+      "RTT engine",
+      "S3 Spine",
+      "TriadicFrameworks",
+      "RTT/2"
+    ],
+    "ai_purpose": "Continuously monitors drift vectors (ΔM, ΔD, ΔV) across the registered structural frame; primary collapse-precursor early-warning engine.",
+    "ai_operators": [
+      "DS-Monitor",
+      "DS-DeltaM",
+      "DS-DeltaD",
+      "DS-DeltaV",
+      "DS-Alert",
+      "DS-Timestamp",
+      "DS-Precursor",
+      "DS-Calibrate",
+      "DS-Baseline"
+    ],
+    "ai_audience": [
+      "developers",
+      "researchers",
+      "AIs",
+      "analysts"
+    ]
   }
 }
-

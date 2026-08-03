@@ -1,94 +1,88 @@
 {
-  "module": "TFT.OpenGPU.Stack.Module",
-  "version": "1.0.0",
-  "rtt": 1,
-  "coherence": "declared",
-  "drift": "bounded",
-  "paradox": "structural",
-
-  "summary": "Defines an open GPU substrate stack using TFT dimensional primitives, an open rendering layer, and AMD-friendly execution primitives. Provides three aligned views: functional (TFT.OpenGPU.Stack), structural (TFT.Substrate.Execution.Rendering), and market-facing (OpenSubstrate GPU Stack).",
-
-  "views": {
-    "A_TFT_OpenGPU_Stack": {
-      "purpose": "Functional description of an open, RTT-aligned GPU stack with TFT as the substrate.",
-      "layers": {
-        "substrate": "TFT dimensional primitives, resonance-aware operators, hidden-view intent.",
-        "rendering": "Open rendering layer (Vulkan/WebGPU/custom), state-to-view mapping, client-side reconstruction.",
-        "execution": "AMD-friendly GPU primitives (ROCm/VCE/SR-IOV), cycles, memory, vGPU slices."
-      }
-    },
-
-    "B_TFT_Substrate_Execution_Rendering": {
-      "purpose": "Structural decomposition of the stack expressed as substrate → rendering → execution.",
-      "substrate_layer": "Dimensional intent, hidden view, RTT primitives, wrapped draw operators.",
-      "rendering_layer": "Scene/viewport abstraction, materials, meshes, lights, reconstruction semantics.",
-      "execution_layer": "Kernels, tiles, warps, GPU cycles, VRAM, virtualization primitives."
-    },
-
-    "C_OpenSubstrate_GPU_Stack": {
-      "purpose": "Market-facing description of the stack as an open alternative to NVIDIA’s closed primitive ecosystem.",
-      "open": "Vendor-neutral, AMD-first, no CUDA lock-in.",
-      "substrate": "TFT primitives as the differentiator; RDP/Cloud PC remoting via primitive streams.",
-      "gpu_stack": "Tiered vGPU for Cloud PCs, smooth remote desktops/apps, compatible with repurposed mining rigs."
-    }
+  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
+  "$generated": "2026-08-03T09:53:00",
+  "$version": "1.4",
+  "$round": "R5",
+  "identity": {
+    "module": "tft-opengpu",
+    "canonical_name": "TFT OpenGPU Stack Module",
+    "module_path": "docs/TFT.OpenGPU.Stack.Module",
+    "version": "1.0",
+    "status": "Active Canonical",
+    "category": "Tools & Infrastructure",
+    "summary": "GPU-accelerated structural tensor computation: powers dimensional resonance scanning, substrate basin mapping, and domain overlay generation at scale"
   },
-
-  "alignment": {
-    "inverted_star": "Substrate primitives form the hidden structural view; rendering and execution form the visible view.",
-    "ue6_integration": "Optional alignment with UE6-style rendering primitives (scene graph, materials, GPU pipelines).",
-    "rdp_extension": "TFT primitive stream can be inserted into RDP via RDPEGFX or custom virtual channel."
-  },
-
-  "primitives": {
-    "substrate": [
-      "Dim.Point",
-      "Dim.Surface",
-      "Dim.Material",
-      "Dim.Transform",
-      "Dim.Viewport",
-      "Op.Wrap",
-      "Op.Intent",
-      "Op.Cycle",
-      "Op.Bind",
-      "Op.Resolve"
-    ],
-    "rendering": [
-      "Render.Scene",
-      "Render.Node",
-      "Render.Mesh",
-      "Render.Light",
-      "Render.Camera",
-      "Render.Material",
-      "Render.ShaderGraph",
-      "Render.Transform",
-      "Render.Viewport",
-      "Render.Pass"
-    ],
-    "execution": [
-      "Exec.Kernel",
-      "Exec.Tile",
-      "Exec.Warp",
-      "Exec.Stream",
-      "Exec.Dispatch",
-      "Exec.VRAM.Surface",
-      "Exec.VRAM.Region",
-      "Exec.VRAM.Bind",
-      "Exec.DMA.Buffer",
-      "Exec.vGPU.Slice",
-      "Exec.vGPU.Cycle",
-      "Exec.vGPU.Priority",
-      "Exec.vGPU.Isolation",
-      "Exec.Reconstruct.Surface",
-      "Exec.Reconstruct.Material",
-      "Exec.Reconstruct.Transform",
-      "Exec.Reconstruct.Viewport"
+  "purpose": {
+    "role": "GPU-accelerated structural tensor computation: powers dimensional resonance scanning, substrate basin mapping, and domain overlay generation at scale",
+    "description": "The TFT OpenGPU Stack Module provides the hardware-accelerated compute layer for TriadicFrameworks' most intensive structural tensor operations. It wraps GPU-optimised implementations of the Dimensional Resonance Scanner's 66-pair coefficient computation, the Coherence Tensor Engine's N×N tensor decomposition, the Stability Basin Cartographer's basin scoring, and the Triadic Regime Synthesizer's domain translation passes. At scale (large regime graphs, multi-domain runs, continuous monitoring), OpenGPU reduces DRM generation time from O(N²) CPU time to near-real-time.",
+    "spine_role": "GPU compute backbone for all tensor-heavy S3 Spine engines",
+    "audience": [
+      "engineers",
+      "developers",
+      "AIs",
+      "infrastructure teams"
     ]
   },
-
-  "opportunities": {
-    "amd_partnership": "AMD can adopt TFT substrate primitives as an open alternative to NVIDIA’s closed execution stack.",
-    "cloud_pc": "Cloud PC tiers map directly to vGPU slices; TFT primitives ensure smooth remote rendering.",
-    "open_gpu_future": "Defines a path toward an open GPU substrate stack independent of NVIDIA’s proprietary primitives."
+  "structure": {
+    "module_type": "Compute Accelerator",
+    "triadic_lens": "opengpu-as-spine-compute",
+    "analyzer_layer": [
+      "Tools & Infrastructure",
+      "Core Frameworks — Structural Spine"
+    ]
+  },
+  "files": {
+    "core": [
+      "TFT.OpenGPU.Stack.Module.md",
+      "index.md"
+    ],
+    "support": [
+      "module.json",
+      "README.md"
+    ],
+    "ai": [
+      "module.json"
+    ]
+  },
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural",
+    "format": "module.json",
+    "round": "R5"
+  },
+  "ai_metadata": {
+    "navigation": {
+      "url": "https://www.triadicframeworks.org/TFT.OpenGPU.Stack.Module/",
+      "path": "docs/TFT.OpenGPU.Stack.Module"
+    },
+    "ai_ready": true,
+    "ai_module_id": "tft-opengpu",
+    "ai_keywords": [
+      "OpenGPU",
+      "GPU acceleration",
+      "tensor computation",
+      "DRM",
+      "dimensional resonance",
+      "basin scoring",
+      "real-time spine",
+      "TriadicFrameworks",
+      "S3 Spine",
+      "R5"
+    ],
+    "ai_purpose": "GPU-accelerated structural tensor computation: powers dimensional resonance scanning, substrate basin mapping, and domain overlay generation at scale",
+    "ai_audience": [
+      "engineers",
+      "developers",
+      "AIs",
+      "infrastructure teams"
+    ],
+    "license": "See docs/LICENSE_module.json",
+    "module": {
+      "module_id": "tft-opengpu",
+      "canonical_name": "TFT OpenGPU Stack Module",
+      "version": "1.0"
+    }
   }
 }
-

@@ -1,88 +1,88 @@
 {
+  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
+  "$generated": "2026-08-03T09:53:00",
+  "$version": "1.4",
+  "$round": "R5",
   "identity": {
-    "module": "Expectations",
-    "canonical_name": "TriadicFrameworks Expectations Module",
-    "version": "2026-1.0",
-    "status": "stable",
-    "category": "orientation",
-    "summary": "Root-level expectations framework for students, researchers, and AI agents entering TriadicFrameworks."
+    "module": "expectations",
+    "canonical_name": "Expectations",
+    "module_path": "docs/Expectations",
+    "version": "1.0",
+    "status": "Active Canonical",
+    "category": "Applied Domain Models",
+    "summary": "Provides nominal trajectory envelopes for Drift Overlay baseline acquisition and DDR contextualisation"
   },
-
   "purpose": {
-    "role": "canon-root",
-    "description": "Provides a unified expectations framework, requirements stack, and cross-domain orientation for TriadicFrameworks. Serves as a booster for FFT, FCG, RF-Builder, IPD-12, and all research engines.",
+    "role": "Provides nominal trajectory envelopes for Drift Overlay baseline acquisition and DDR contextualisation",
+    "description": "Expectations models the anticipated state trajectory of a system under analysis — the 'expected path' against which the Drift Sentinel measures actual regime migration. It supplies nominal trajectory envelopes (upper bound, lower bound, central tendency) calibrated from historical patterns, domain-specific baselines, and declared targets. These envelopes are consumed by the Drift Overlay to establish baseline deviation thresholds (ΔM floor) and to contextualise Drift Report readings within the DDR.",
+    "spine_role": "Drift Overlay baseline envelope provider",
     "audience": [
-      "students",
-      "researchers",
-      "ai_agents",
-      "contributors"
+      "analysts",
+      "domain architects",
+      "AIs",
+      "operators"
     ]
   },
-
   "structure": {
-    "module_type": "orientation",
-    "triadic_lens": {
-      "structure": "Root-level onboarding and expectations",
-      "regime": "Cross-domain alignment and contributor guidance",
-      "operator": "Expectation-setting, validation, and module propagation"
-    },
+    "module_type": "Baseline Provider",
+    "triadic_lens": "expectations-as-drift-anchor",
     "analyzer_layer": [
-      "operator",
-      "regime",
-      "coherence",
-      "cross-cutting"
+      "Applied Domain Models",
+      "Core Frameworks — Structural Spine"
     ]
   },
-
   "files": {
-    "capture": "e_Capture.md",
-    "overview": "Expectations.md",
-    "samples": [
-      "samples/intake_manifolds/",
-      "samples/header_manifolds/",
-      "samples/engine_block/",
-      "samples/prime_states/",
-      "samples/hpc_qc_substrate/",
-      "samples/observer_overhead/"
+    "core": [
+      "Expectations.md",
+      "index.md"
     ],
-    "metadata": "module.json"
+    "support": [
+      "module.json",
+      "README.md"
+    ],
+    "ai": [
+      "module.json"
+    ]
   },
-
   "session_context": {
-    "canon": "TriadicFrameworks",
-    "modules": "Expectations",
-    "drift": "None",
-    "coherence": "High",
-    "version": "2026",
-    "format": "Markdown",
-    "front_door": "Yes",
-    "audience": "Students, Researchers, AI Agents"
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural",
+    "format": "module.json",
+    "round": "R5"
   },
-
   "ai_metadata": {
-    "navigation": "sitemap_main.xml",
-    "discussions": "https://github.com/umaywant2/TriadicFrameworks/discussions",
-    "contact": {
-      "x": "@TriadicFrameworks",
-      "youtube": "@TriadicFrameworks"
+    "navigation": {
+      "url": "https://www.triadicframeworks.org/Expectations/",
+      "path": "docs/Expectations"
     },
-    "license": "Open educational use permitted",
+    "ai_ready": true,
+    "ai_module_id": "expectations",
+    "ai_keywords": [
+      "trajectory envelope",
+      "drift baseline",
+      "nominal path",
+      "ΔM floor",
+      "DDR context",
+      "baseline acquisition",
+      "regime expectation",
+      "TriadicFrameworks",
+      "S3 Spine",
+      "R5"
+    ],
+    "ai_purpose": "Provides nominal trajectory envelopes for Drift Overlay baseline acquisition and DDR contextualisation",
+    "ai_audience": [
+      "analysts",
+      "domain architects",
+      "AIs",
+      "operators"
+    ],
+    "license": "See docs/LICENSE_module.json",
     "module": {
-      "name": "Expectations",
-      "summary": "Defines what newcomers should expect from TriadicFrameworks and how to evaluate or contribute to the canon.",
-      "category": "orientation",
-      "keywords": [
-        "expectations",
-        "orientation",
-        "requirements",
-        "triadicframeworks",
-        "canon",
-        "observer",
-        "substrate",
-        "cross-domain"
-      ],
-      "audience": "students, researchers, ai_agents"
+      "module_id": "expectations",
+      "canonical_name": "Expectations",
+      "version": "1.0"
     }
   }
 }
-

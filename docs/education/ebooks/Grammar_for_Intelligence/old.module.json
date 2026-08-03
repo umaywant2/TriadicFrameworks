@@ -1,0 +1,63 @@
+{
+  "module": {
+    "name": "Grammar_for_Intelligence",
+    "category": "education",
+    "summary": "A structural guide to grammar, operators, invariants, regimes, substrates, drift, and coherence in AI systems.",
+    "version": "1.0.0",
+    "purpose": "Provide a clear, accessible introduction to structural intelligence and substrate thinking for builders, students, and researchers.",
+    "keywords": [
+      "structural intelligence",
+      "grammar",
+      "operators",
+      "invariants",
+      "regimes",
+      "substrate",
+      "governance",
+      "drift",
+      "coherence",
+      "benchmarks"
+    ],
+    "audience": [
+      "AI builders",
+      "students",
+      "researchers",
+      "engineers",
+      "governance designers",
+      "structural intelligence practitioners"
+    ]
+  },
+  "files": [
+    {
+      "path": "gi_Capture.md",
+      "role": "signature",
+      "analyzer_layer": "operator",
+      "description": "Primary manuscript for the Grammar for Intelligence ebook, defining the structural grammar of AI systems."
+    },
+    {
+      "path": "module.json",
+      "role": "index",
+      "analyzer_layer": "coherence",
+      "description": "Canonical manifest describing the Grammar for Intelligence ebook module."
+    }
+  ],
+  "meta": {
+    "canonical_url": "https://www.triadicframeworks.org/docs/education/ebooks/Grammar_for_Intelligence",
+    "citation_author": "Nawder Loswin",
+    "citation_publication_date": "2026",
+    "dc_type": "Text",
+    "dc_format": "text/html",
+    "ai": {
+      "module": "Grammar_for_Intelligence",
+      "version": "1.0.0",
+      "purpose": "Introduce grammar and structural intelligence concepts to AI builders.",
+      "keywords": [
+        "grammar layer",
+        "structural intelligence",
+        "substrate thinking",
+        "drift containment",
+        "coherence engineering"
+      ],
+      "audience": "Builders and researchers seeking structural clarity in AI system design."
+    }
+  }
+}

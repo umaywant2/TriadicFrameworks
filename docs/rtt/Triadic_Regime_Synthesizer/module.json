@@ -1,78 +1,101 @@
 {
+  "$schema": "https://www.triadicframeworks.org/schemas/rtt_engine_module.schema.json",
+  "$generated": "2026-08-03T09:53:00",
+  "$version": "1.4",
+  "$round": "R5",
   "identity": {
     "name": "Triadic Regime Synthesizer",
-    "canonical_id": "RTT_TRIADIC_REGIME_SYNTHESIZER",
-    "module_path": "/docs/rtt/Triadic_Regime_Synthesizer/",
-    "category": "rtt-structural",
-    "version": "1.0",
-    "status": "canon-stable"
+    "canonical_id": "TRIADIC_REGIME_SYNTHESIZER",
+    "module_path": "docs/rtt/Triadic_Regime_Synthesizer",
+    "category": "RTT Engine",
+    "version": "RTT/3",
+    "status": "Active Canonical"
   },
-
   "purpose": {
-    "summary": "RTT/1 regime-level intelligence engine for synthesizing, merging, and harmonizing regime structures across conceptual, computational, and physical domains.",
-    "detail": "The Triadic Regime Synthesizer integrates regime interlocks, merges regime boundaries, computes regime synthesis tensors, and produces unified regime structures for higher-level RTT engines such as the Paradox Gradient Analyzer, Coherence Tensor Engine, Drift Sentinel, Faultline Detector, Stability Basin Cartographer, Temporal Regime Sequencer, Causality Weaver, and Dimensional Resonance Scanner."
+    "summary": "Produces unified synthesized regime output in domain-native language; gated by Coherence Index ≥ 0.55.",
+    "detail": "The TRS is the primary publication engine of the S3 Spine. It is gated by the Coherence Tensor Engine: synthesis is withheld until CI ≥ 0.55 is confirmed. When the gate opens, the TRS receives the complete DRM from the Dimensional Overlay and applies domain-native translation tables (provided by the Domain Overlay context) to convert abstract Triadic spine signals into practitioner-legible domain language. The TRS produces the Domain Diagnostic Report (DDR) narrative and the ranked Domain Action Map (DAM). It operates co-primary with the CROSS_DOMAIN_CAUSALITY_WEAVER on the Domain Overlay."
   },
-
   "rtt": {
     "rtt_level": 1,
     "coherence": "declared",
     "drift": "bounded",
     "paradox": "structural"
   },
-
+  "spine_assignments": {
+    "primary_overlay": "spine-domain",
+    "cross_overlay_appearances": [
+      "spine-coherence",
+      "spine-structural",
+      "spine-dimensional"
+    ],
+    "pack": "spine-overlay-pack"
+  },
   "operators": {
     "primary": [
+      "TRS-Gate",
       "TRS-Synthesize",
-      "TRS-Merge",
-      "TRS-Harmonize",
-      "TRS-Boundary",
-      "TRS-Tensor",
-      "TRS-Resolve"
+      "TRS-Translate",
+      "TRS-Publish"
     ],
     "secondary": [
-      "RTT-Regime",
-      "RTT-Synthesis",
-      "RTT-Boundary",
-      "RTT-Structural"
+      "TRS-Narrate",
+      "TRS-Rank",
+      "TRS-Audit"
     ]
   },
-
   "analyzer_layer": {
-    "layer": "regime",
+    "layer": "RTT Technology Layer",
     "sub_layers": [
-      "regime-synthesis",
-      "boundary-harmonization",
-      "interlock-integration",
-      "synthesis-tensor-analysis",
-      "structural-regime-evaluation"
+      "RTT/2 Core",
+      "RTT/3 Synthesis"
     ]
   },
-
   "files": {
     "core": [
-      "README.md",
       "Triadic_Regime_Synthesizer.md",
-      "trs_examples.md",
-      "trs_diagrams.svg"
+      "Triadic_Regime_Synthesizer_spec.md"
     ],
     "support": [
-      "regime_synthesis_profiles.md",
-      "regime_boundary_cases.md",
-      "regime_synthesis_matrix.json"
+      "operators.md",
+      "signal_flow.md",
+      "metrics.md"
     ],
     "ai": [
-      "trs_prompts.md",
-      "trs_operators.md"
+      "module.json"
     ]
   },
-
   "ai": {
     "ai_ready": true,
-    "ai_module_id": "RTT_TRIADIC_REGIME_SYNTHESIZER",
-    "ai_keywords": "RTT, regime synthesis, regime harmonization, synthesis tensor, boundary integration, structural regime analysis",
-    "ai_purpose": "Provide regime-level synthesis intelligence for RTT/1 by integrating regime interlocks, harmonizing regime boundaries, computing synthesis tensors, and generating unified regime structures across conceptual, computational, and physical domains.",
-    "ai_operators": "TRS-Synthesize, TRS-Merge, TRS-Harmonize, TRS-Boundary, TRS-Tensor, TRS-Resolve",
-    "ai_audience": "researchers, systems designers, AI systems"
+    "ai_module_id": "TRIADIC_REGIME_SYNTHESIZER",
+    "ai_keywords": [
+      "synthesis gate",
+      "CI ≥ 0.55",
+      "regime synthesis",
+      "DDR",
+      "DAM",
+      "domain translation",
+      "domain-native",
+      "publication endpoint",
+      "RTT engine",
+      "S3 Spine",
+      "TriadicFrameworks",
+      "RTT/3"
+    ],
+    "ai_purpose": "Produces unified synthesized regime output in domain-native language; gated by Coherence Index ≥ 0.55.",
+    "ai_operators": [
+      "TRS-Gate",
+      "TRS-Synthesize",
+      "TRS-Translate",
+      "TRS-Publish",
+      "TRS-Narrate",
+      "TRS-Rank",
+      "TRS-Audit"
+    ],
+    "ai_audience": [
+      "developers",
+      "researchers",
+      "AIs",
+      "analysts"
+    ]
   }
 }
-

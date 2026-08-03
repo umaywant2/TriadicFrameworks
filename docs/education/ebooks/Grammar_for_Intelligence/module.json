@@ -1,63 +1,89 @@
 {
-  "module": {
-    "name": "Grammar_for_Intelligence",
-    "category": "education",
-    "summary": "A structural guide to grammar, operators, invariants, regimes, substrates, drift, and coherence in AI systems.",
-    "version": "1.0.0",
-    "purpose": "Provide a clear, accessible introduction to structural intelligence and substrate thinking for builders, students, and researchers.",
-    "keywords": [
-      "structural intelligence",
-      "grammar",
-      "operators",
-      "invariants",
-      "regimes",
-      "substrate",
-      "governance",
-      "drift",
-      "coherence",
-      "benchmarks"
-    ],
+  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
+  "$generated": "2026-08-03T09:53:00",
+  "$version": "1.4",
+  "$round": "R5",
+  "identity": {
+    "module": "grammar-for-intelligence",
+    "canonical_name": "Grammar for Intelligence",
+    "module_path": "docs/education/ebooks/Grammar_for_Intelligence",
+    "version": "1.0",
+    "status": "Active Canonical",
+    "category": "Education & Teaching",
+    "summary": "Linguistic and structural grammar for AI-parsable signal narration; coherence-aware framing vocabulary for Triadic diagnostic outputs"
+  },
+  "purpose": {
+    "role": "Linguistic and structural grammar for AI-parsable signal narration; coherence-aware framing vocabulary for Triadic diagnostic outputs",
+    "description": "Grammar for Intelligence defines the canonical linguistic and structural grammar used to narrate Triadic diagnostic outputs — DDRs, DAMs, and CDCSs — in a form that is both human-legible and AI-parsable. It specifies vocabulary for coherence-aware framing (signal declarations, state assertions, causal linking), structural grammar rules for DDR narrative sections, and coherence tone markers (coherent, fragmented, drifting, synthesized). It is the narration grammar consumed by the TRIADIC_REGIME_SYNTHESIZER when generating DDR prose.",
+    "spine_role": "Narration grammar for Triadic Regime Synthesizer DDR prose generation",
     "audience": [
-      "AI builders",
-      "students",
+      "writers",
+      "AI operators",
       "researchers",
-      "engineers",
-      "governance designers",
-      "structural intelligence practitioners"
+      "AIs"
     ]
   },
-  "files": [
-    {
-      "path": "gi_Capture.md",
-      "role": "signature",
-      "analyzer_layer": "operator",
-      "description": "Primary manuscript for the Grammar for Intelligence ebook, defining the structural grammar of AI systems."
+  "structure": {
+    "module_type": "Narration Grammar",
+    "triadic_lens": "grammar-as-synthesis-vocabulary",
+    "analyzer_layer": [
+      "Education & Teaching",
+      "Core Frameworks — Structural Spine"
+    ]
+  },
+  "files": {
+    "core": [
+      "Grammar_for_Intelligence.md",
+      "index.md"
+    ],
+    "support": [
+      "module.json",
+      "README.md"
+    ],
+    "ai": [
+      "module.json"
+    ]
+  },
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural",
+    "format": "module.json",
+    "round": "R5"
+  },
+  "ai_metadata": {
+    "navigation": {
+      "url": "https://www.triadicframeworks.org/education/ebooks/Grammar_for_Intelligence/",
+      "path": "docs/education/ebooks/Grammar_for_Intelligence"
     },
-    {
-      "path": "module.json",
-      "role": "index",
-      "analyzer_layer": "coherence",
-      "description": "Canonical manifest describing the Grammar for Intelligence ebook module."
-    }
-  ],
-  "meta": {
-    "canonical_url": "https://www.triadicframeworks.org/docs/education/ebooks/Grammar_for_Intelligence",
-    "citation_author": "Nawder Loswin",
-    "citation_publication_date": "2026",
-    "dc_type": "Text",
-    "dc_format": "text/html",
-    "ai": {
-      "module": "Grammar_for_Intelligence",
-      "version": "1.0.0",
-      "purpose": "Introduce grammar and structural intelligence concepts to AI builders.",
-      "keywords": [
-        "grammar layer",
-        "structural intelligence",
-        "substrate thinking",
-        "drift containment",
-        "coherence engineering"
-      ],
-      "audience": "Builders and researchers seeking structural clarity in AI system design."
+    "ai_ready": true,
+    "ai_module_id": "grammar-for-intelligence",
+    "ai_keywords": [
+      "grammar",
+      "AI grammar",
+      "narration",
+      "DDR prose",
+      "synthesis vocabulary",
+      "coherence framing",
+      "AI-parsable",
+      "signal narration",
+      "TriadicFrameworks",
+      "S3 Spine",
+      "R5"
+    ],
+    "ai_purpose": "Linguistic and structural grammar for AI-parsable signal narration; coherence-aware framing vocabulary for Triadic diagnostic outputs",
+    "ai_audience": [
+      "writers",
+      "AI operators",
+      "researchers",
+      "AIs"
+    ],
+    "license": "See docs/LICENSE_module.json",
+    "module": {
+      "module_id": "grammar-for-intelligence",
+      "canonical_name": "Grammar for Intelligence",
+      "version": "1.0"
     }
   }
 }

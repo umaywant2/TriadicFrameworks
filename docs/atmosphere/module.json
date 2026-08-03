@@ -1,73 +1,88 @@
 {
-  "module": "atmosphere",
-  "version": "1.0",
-  "category": "domain",
-  "description": "The Atmosphere module models atmospheric dynamics, thermodynamics, hydrospheric interactions, forcing, teleconnections, resonance, paradox, drift, dimensional scaling, continuity, coherence, clarity, and composition. It provides a complete diagnostic, mapping, tracing, example, agent, and coupling framework.",
-  "directories": {
-    "diagnostics": "/docs/atmosphere/diagnostics",
-    "examples": "/docs/atmosphere/examples",
-    "agents": "/docs/atmosphere/agents",
-    "maps": "/docs/atmosphere/maps",
-    "extensions": "/docs/atmosphere/extensions",
-    "future": "/docs/atmosphere/future",
-    "registry": "/docs/atmosphere/registry",
-    "session": "/docs/atmosphere/session",
-    "visualizations": "/docs/atmosphere/visualizations",
-    "coupling": "/docs/coupling"
+  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
+  "$generated": "2026-08-03T09:53:00",
+  "$version": "1.4",
+  "$round": "R5",
+  "identity": {
+    "module": "atmosphere",
+    "canonical_name": "Atmosphere",
+    "module_path": "docs/atmosphere",
+    "version": "1.0",
+    "status": "Active Canonical",
+    "category": "Applied Domain Models",
+    "summary": "Atmospheric and environmental domain: pressure analogs and ecological substrate signals feeding Drift and Substrate overlays"
   },
-  "primary_files": {
-    "envelope": "diagnostics/atmosphere_envelope.json",
-    "map": "diagnostics/atmosphere_map.json",
-    "trace": "diagnostics/atmosphere_trace.json",
-    "operators": "diagnostics/operators_atmosphere.json",
-    "example": "diagnostics/atmosphere_example.json",
-    "schema": "diagnostics/module.schema.json",
-    "agent": "agents/atmosphere_agent.json"
+  "purpose": {
+    "role": "Atmospheric and environmental domain: pressure analogs and ecological substrate signals feeding Drift and Substrate overlays",
+    "description": "Atmosphere provides environmental domain signals — atmospheric pressure analogs, thermal gradients, ecological substrate stress indicators, and seasonal cycle markers — that feed directly into the Drift Overlay (as environmental envelope signals) and the Substrate Overlay (as baseline basin pressure readings). In atmospheric and ecological diagnostics, Atmosphere serves as the primary domain module. In cross-domain runs, it provides environmental context that modulates drift velocity thresholds and substrate depletion rates.",
+    "spine_role": "Drift Overlay environmental signal provider; Substrate Overlay basin pressure source",
+    "audience": [
+      "environmental analysts",
+      "researchers",
+      "AIs",
+      "domain architects"
+    ]
   },
-  "diagnostic_families": [
-    "dynamics",
-    "thermodynamics",
-    "hydrospheric",
-    "forcing",
-    "teleconnection",
-    "resonance",
-    "paradox",
-    "drift",
-    "dimensional",
-    "continuity",
-    "coherence",
-    "clarity",
-    "composition",
-    "nudge"
-  ],
-  "example_scenarios": [
-    "baseline",
-    "pre_convective_burst",
-    "moisture_gradient_shift",
-    "teleconnection_collapse",
-    "cryosphere_coupling_event",
-    "magnetosphere_perturbation",
-    "biosphere_feedback_loop",
-    "advanced_resonance_alignment",
-    "edge_case_paradox_drift_cascade"
-  ],
-  "coupling_maps": {
-    "hydrosphere": "/docs/coupling/atmosphere_to_hydrosphere.json",
-    "cryosphere": "/docs/coupling/atmosphere_to_cryosphere.json",
-    "biosphere": "/docs/coupling/atmosphere_to_biosphere.json",
-    "land": "/docs/coupling/atmosphere_to_land.json",
-    "magnetosphere": "/docs/coupling/atmosphere_to_magnetosphere.json"
+  "structure": {
+    "module_type": "Environmental Domain",
+    "triadic_lens": "atmosphere-as-substrate-pressure",
+    "analyzer_layer": [
+      "Applied Domain Models",
+      "Core Frameworks — Structural Spine"
+    ]
   },
-  "visualizations": {
-    "overview": "visualizations/atmosphere_overview.svg",
-    "regimes": "visualizations/atmosphere_regimes.svg",
-    "coupling": "visualizations/atmosphere_coupling.svg"
+  "files": {
+    "core": [
+      "atmosphere.md",
+      "index.md"
+    ],
+    "support": [
+      "module.json",
+      "README.md"
+    ],
+    "ai": [
+      "module.json"
+    ]
   },
-  "metadata": {
-    "author": "Nawder Loswin",
-    "publication_year": "2026",
-    "license": "Open educational use permitted",
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural",
+    "format": "module.json",
+    "round": "R5"
+  },
+  "ai_metadata": {
+    "navigation": {
+      "url": "https://www.triadicframeworks.org/atmosphere/",
+      "path": "docs/atmosphere"
+    },
     "ai_ready": true,
-    "canonical": true
+    "ai_module_id": "atmosphere",
+    "ai_keywords": [
+      "atmosphere",
+      "environmental pressure",
+      "ecological substrate",
+      "thermal gradient",
+      "drift envelope",
+      "seasonal cycle",
+      "atmospheric domain",
+      "TriadicFrameworks",
+      "S3 Spine",
+      "R5"
+    ],
+    "ai_purpose": "Atmospheric and environmental domain: pressure analogs and ecological substrate signals feeding Drift and Substrate overlays",
+    "ai_audience": [
+      "environmental analysts",
+      "researchers",
+      "AIs",
+      "domain architects"
+    ],
+    "license": "See docs/LICENSE_module.json",
+    "module": {
+      "module_id": "atmosphere",
+      "canonical_name": "Atmosphere",
+      "version": "1.0"
+    }
   }
 }
