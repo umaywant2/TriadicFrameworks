@@ -1,0 +1,153 @@
+{
+  "$schema": "https://triadicframeworks.org/schemas/module.schema.json",
+  "$generated": "2026-08-03T08:04:00",
+  "$version": "1.4",
+  "$round": "R5",
+  "module_name": "S3 Spine Overlay Pack",
+  "file": "docs/spine/spine_overlay_pack_module.json",
+  "version": "2.0",
+  "description": "The canonical six-overlay diagnostic layer system for TriadicFrameworks. Applies six overlays sequentially — Structural → Drift → Coherence → Substrate → Dimensional → Domain — to any system under Triadic analysis. Produces the Domain Diagnostic Report (DDR), Domain Action Map (DAM), and Cross-Domain Causality Summary (CDCS). Coordinates all 11 RTT engines, 16 modules, and 27 UI overlay panels.",
+  "role": "Pack coordinator — orchestrates the six-overlay diagnostic sequence; canonical entry point for all S3 Spine runs",
+  "analyzer_layer": "Core Frameworks — Structural Spine",
+  "purpose": "Six-overlay canonical diagnostic layer system: Structural → Drift → Coherence → Substrate → Dimensional → Domain; produces DDR, DAM, CDCS; coordinates all RTT engines and UI overlays",
+  "status": "Active Canonical",
+  "canonical": true,
+  "ai_ready": true,
+  "url": "https://www.triadicframeworks.org/spine/",
+  "path": "docs/spine/",
+  "exports": [
+    "Domain Diagnostic Report (DDR)",
+    "Domain Action Map (DAM)",
+    "Cross-Domain Causality Summary (CDCS)",
+    "Structural Frame",
+    "Drift Report (ΔM/ΔD/ΔV vectors)",
+    "Coherence Report + CI",
+    "Substrate Report + SI",
+    "Dimensional Resonance Map (DRM)"
+  ],
+  "imports": [
+    "System input (any domain)",
+    "IPD-12 dimensional axes (ipd-12 module)",
+    "RTT engine outputs (rtt-root)",
+    "Module registry entries"
+  ],
+  "structure": {
+    "sections": [
+      {
+        "id": "session-context",
+        "title": "Session Context",
+        "summary": "Canon status, version, drift/coherence state, format, audience, and front-door flags for the pack."
+      },
+      {
+        "id": "pack-overview",
+        "title": "Pack Overview",
+        "summary": "Description of the S3 Spine Overlay Pack as the canonical diagnostic layer system: six sequential overlays, AI-parsable, single-run and continuous-monitoring deployments."
+      },
+      {
+        "id": "overlay-sequence",
+        "title": "Overlay Sequence",
+        "summary": "The six-overlay pipeline with signal inheritance: Structural → Drift → Coherence → Substrate → Dimensional → Domain, ending at the publication endpoint."
+      },
+      {
+        "id": "overlays-at-a-glance",
+        "title": "Six Overlays at a Glance",
+        "summary": "Summary table: overlay number, name, primary RTT engine, key output, and canonical link for each of the six overlays."
+      },
+      {
+        "id": "rtt-engine-registry",
+        "title": "Complete RTT Engine Registry",
+        "summary": "All 11 RTT engines referenced across the six overlays with primary overlay assignment, cross-overlay appearances, and canonical links."
+      },
+      {
+        "id": "module-registry",
+        "title": "Complete Module Registry",
+        "summary": "All 16 modules used across the pack, with type, spine role, and canonical link."
+      },
+      {
+        "id": "ui-panel-registry",
+        "title": "UI Panel Registry",
+        "summary": "All 27 UI overlay panels registered to the pack, with panel type, primary overlay, and display coordinates."
+      },
+      {
+        "id": "alert-escalation-ladder",
+        "title": "Alert Escalation Ladder",
+        "summary": "Severity tiers for diagnostic signals: observation → caution → warning → critical → terminal; thresholds and escalation rules."
+      },
+      {
+        "id": "cross-links",
+        "title": "Cross-Links",
+        "summary": "Links to all six overlay documents, all 11 RTT engine pages, UI overlay panels, and GitHub repository."
+      },
+      {
+        "id": "publication-notes",
+        "title": "Publication Notes",
+        "summary": "Publication status v2.0, triadicframeworks.org/spine URL, AI-parsability declaration, and GitHub location."
+      }
+    ]
+  },
+  "lineage": {
+    "parent": "webroot",
+    "siblings": [
+      "prompts",
+      "triadic-detection",
+      "ipd-12",
+      "tft-opengpu",
+      "expectations",
+      "pantheons",
+      "atmosphere",
+      "radiology"
+    ],
+    "children": [
+      "spine-structural",
+      "spine-drift",
+      "spine-coherence",
+      "spine-substrate",
+      "spine-dimensional",
+      "spine-domain"
+    ]
+  },
+  "rtt_engines": {
+    "all_11": [
+      "STRUCTURAL_FAULTLINE_DETECTOR",
+      "REGIME_INTERLOCK_MAPPER",
+      "DRIFT_SENTINEL",
+      "TEMPORAL_REGIME_SEQUENCER",
+      "PARADOX_GRADIENT_ANALYZER",
+      "COHERENCE_TENSOR_ENGINE",
+      "CROSS_DOMAIN_CAUSALITY_WEAVER",
+      "STABILITY_BASIN_CARTOGRAPHER",
+      "CRYSTAL_MYCELIAL_ENGINE",
+      "DIMENSIONAL_RESONANCE_SCANNER",
+      "TRIADIC_REGIME_SYNTHESIZER"
+    ]
+  },
+  "ai_metadata": {
+    "ai.module": "spine-overlay-pack",
+    "ai.version": "2.0",
+    "ai.purpose": "Canonical six-overlay diagnostic layer system; orchestrates all S3 Spine runs; coordinates RTT engines; produces DDR, DAM, CDCS",
+    "ai.keywords": [
+      "S3 Spine",
+      "Spine Overlay Pack",
+      "Structural Overlay",
+      "Drift Overlay",
+      "Coherence Overlay",
+      "Substrate Overlay",
+      "Dimensional Overlay",
+      "Domain Overlay",
+      "DDR",
+      "DAM",
+      "CDCS",
+      "RTT engines",
+      "TriadicFrameworks",
+      "diagnostic layer system",
+      "IPD-12"
+    ],
+    "ai.audience": [
+      "developers",
+      "analysts",
+      "researchers",
+      "practitioners",
+      "AIs"
+    ]
+  }
+}

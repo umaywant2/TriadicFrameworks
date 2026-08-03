@@ -1,0 +1,159 @@
+{
+  "$schema": "https://triadicframeworks.org/schemas/module.schema.json",
+  "$generated": "2026-08-03T08:04:00",
+  "$version": "1.4",
+  "$round": "R5",
+  "module_name": "Domain Overlay",
+  "file": "docs/spine/domain_overlay_module.json",
+  "version": "2.0",
+  "description": "Overlay 6 of 6 in the S3 Spine sequence — the terminal overlay. Takes the complete Dimensional Resonance Map (DRM) from all five prior overlays and applies it to a specific domain (Enterprise, Quantum Compute, Radiology, Fiscal/Tax, Education, Atmosphere, Pantheons, and others). Produces the Domain Diagnostic Report (DDR), Domain Action Map (DAM), and Cross-Domain Causality Summary (CDCS) — the primary publishable outputs of a complete S3 Spine diagnostic run.",
+  "role": "Terminal overlay — translates abstract Triadic spine signals into domain-specific DDR, DAM, and CDCS; the publication endpoint of every S3 Spine run",
+  "analyzer_layer": "Core Frameworks — Structural Spine",
+  "purpose": "Overlay 6/6: terminal overlay; translates DRM into domain-specific DDR, DAM, CDCS; applies spine diagnostics to Enterprise, qCompute, Radiology, Fiscal, Education, Atmosphere, and other registered domains",
+  "status": "Active Canonical",
+  "canonical": true,
+  "ai_ready": true,
+  "url": "https://www.triadicframeworks.org/spine/domain/",
+  "path": "docs/spine/domain_overlay.md",
+  "exports": [
+    "Domain Diagnostic Report (DDR)",
+    "Domain Action Map (DAM)",
+    "Cross-Domain Causality Summary (CDCS)",
+    "Domain translation table",
+    "Ranked intervention list (by feasibility + urgency + impact)"
+  ],
+  "imports": [
+    "Structural Frame (from Structural Overlay)",
+    "Drift Report — ΔM/ΔD/ΔV (from Drift Overlay)",
+    "Coherence Report + CI (from Coherence Overlay)",
+    "Substrate Report + SI (from Substrate Overlay)",
+    "Dimensional Resonance Map (DRM) (from Dimensional Overlay)"
+  ],
+  "structure": {
+    "sections": [
+      {
+        "id": "session-context",
+        "title": "Session Context",
+        "summary": "Canon status, version, drift/coherence state, format, audience, and front-door flags for the terminal Domain Overlay."
+      },
+      {
+        "id": "overlay-identity",
+        "title": "Overlay Identity",
+        "summary": "Purpose as terminal overlay, position as 6th in S3 Spine sequence, and canonical role as translation layer, action synthesizer, and publication endpoint."
+      },
+      {
+        "id": "rtt-engines",
+        "title": "Primary RTT Engines",
+        "summary": "RTT engine table: Cross-Domain Causality Weaver (co-primary), Triadic Regime Synthesizer (co-primary), Dimensional Resonance Scanner (secondary), plus all 11 RTT engines in advisory roles."
+      },
+      {
+        "id": "module-registry",
+        "title": "Module Registry",
+        "summary": "All domain modules referenced: Enterprise, qCompute, Radiology, Fiscal/Tax, Education, Atmosphere, Pantheons, Expectations, and supporting framework modules."
+      },
+      {
+        "id": "detection-pipeline",
+        "title": "Detection Pipeline",
+        "summary": "Domain Overlay sequence: DRM ingestion → domain assignment → domain translation → DDR generation → DAM ranking → CDCS synthesis → publication."
+      },
+      {
+        "id": "signal-flow",
+        "title": "Signal Flow",
+        "summary": "Signal handoff from Dimensional Overlay DRM through domain translation tables to DDR, DAM, and CDCS outputs; cross-domain causality chain trace."
+      },
+      {
+        "id": "state-machine",
+        "title": "State Machine",
+        "summary": "State transitions from DRM-ready through domain-active, report-generating, action-map-ranked, and publication-ready states."
+      },
+      {
+        "id": "metrics-table",
+        "title": "Metrics Table",
+        "summary": "DDR quality score, DAM intervention count, CDCS cross-domain chain depth, domain coverage ratio, and synthesis confidence score."
+      },
+      {
+        "id": "domain-translation-tables",
+        "title": "Domain Translation Tables",
+        "summary": "Per-domain translation keys mapping abstract Triadic spine signals to domain-native terminology for Enterprise, qCompute, Radiology, Fiscal, Education, and Atmosphere."
+      },
+      {
+        "id": "cross-links",
+        "title": "Cross-Links",
+        "summary": "Links to all five preceding overlays, all co-primary RTT engine pages, domain module pages, and UI overlay panels."
+      },
+      {
+        "id": "signal-vocabulary",
+        "title": "Signal Vocabulary",
+        "summary": "Domain Overlay signal terms: DDR, DAM, CDCS, domain translation, domain coverage, cross-domain causality chain, and synthesis confidence index."
+      },
+      {
+        "id": "mermaid-map",
+        "title": "Mermaid Integration Map",
+        "summary": "Mermaid diagram of Domain Overlay as terminal synthesis node: receives all five overlay outputs, emits DDR, DAM, CDCS."
+      },
+      {
+        "id": "publication-notes",
+        "title": "Publication Notes",
+        "summary": "Publication status v2.0, triadicframeworks.org/spine/domain URL, AI-parsability declaration, and GitHub location."
+      }
+    ]
+  },
+  "lineage": {
+    "parent": "spine-overlay-pack",
+    "siblings": [
+      "spine-structural",
+      "spine-drift",
+      "spine-coherence",
+      "spine-substrate",
+      "spine-dimensional"
+    ],
+    "children": []
+  },
+  "rtt_engines": {
+    "primary": "CROSS_DOMAIN_CAUSALITY_WEAVER",
+    "co_primary": "TRIADIC_REGIME_SYNTHESIZER",
+    "secondary": "DIMENSIONAL_RESONANCE_SCANNER",
+    "supporting": [
+      "COHERENCE_TENSOR_ENGINE",
+      "STABILITY_BASIN_CARTOGRAPHER",
+      "PARADOX_GRADIENT_ANALYZER",
+      "STRUCTURAL_FAULTLINE_DETECTOR",
+      "DRIFT_SENTINEL",
+      "TEMPORAL_REGIME_SEQUENCER",
+      "REGIME_INTERLOCK_MAPPER",
+      "CRYSTAL_MYCELIAL_ENGINE"
+    ]
+  },
+  "ai_metadata": {
+    "ai.module": "spine-domain",
+    "ai.version": "2.0",
+    "ai.purpose": "Translate complete S3 Spine DRM into domain-specific DDR, DAM, CDCS; apply spine diagnostics to Enterprise, qCompute, Radiology, Fiscal, Education, Atmosphere, and other domains",
+    "ai.keywords": [
+      "Domain Overlay",
+      "DDR",
+      "DAM",
+      "CDCS",
+      "domain translation",
+      "Cross-Domain Causality Weaver",
+      "Triadic Regime Synthesizer",
+      "domain diagnostic",
+      "domain action map",
+      "cross-domain causality",
+      "Enterprise",
+      "qCompute",
+      "Radiology",
+      "Fiscal",
+      "Education",
+      "Atmosphere",
+      "terminal overlay",
+      "triadic spine",
+      "publication endpoint"
+    ],
+    "ai.audience": [
+      "practitioners",
+      "domain experts",
+      "researchers",
+      "AIs"
+    ]
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "$schema": "https://triadicframeworks.org/schemas/module.schema.json",
+  "$generated": "2026-08-03T08:04:00",
+  "$version": "1.4",
+  "$round": "R5",
+  "module_name": "Coherence Overlay",
+  "file": "docs/spine/coherence_overlay_module.json",
+  "version": "2.0",
+  "description": "Overlay 3 of 6 in the S3 Spine sequence. Evaluates integration quality across the components, regimes, and signals of a Triadic system via the Coherence Index (CI) tensor. Gates the Triadic Regime Synthesizer — synthesis is only valid when CI ≥ 0.55. Detects fragmentation zones before structural faultlines fully activate. Coordinates with the Cross-Domain Causality Weaver to trace coherence loss across domain boundaries.",
+  "role": "Integration quality assessor and synthesis gatekeeper — scores CI tensor and gates Triadic Regime Synthesizer at CI ≥ 0.55",
+  "analyzer_layer": "Core Frameworks — Structural Spine",
+  "purpose": "Overlay 3/6: evaluates integration quality via CI tensor; synthesis gate (CI ≥ 0.55); detects fragmentation zones; traces cross-boundary coherence loss with Cross-Domain Causality Weaver",
+  "status": "Active Canonical",
+  "canonical": true,
+  "ai_ready": true,
+  "url": "https://www.triadicframeworks.org/spine/coherence/",
+  "path": "docs/spine/coherence_overlay.md",
+  "exports": [
+    "Coherence Report",
+    "Coherence Index (CI)",
+    "Synthesis gate decision (CI ≥ 0.55 → pass/fail)",
+    "Fragmentation zone map",
+    "Cross-domain coherence loss trace (to Substrate Overlay)"
+  ],
+  "imports": [
+    "Structural Frame (from Structural Overlay)",
+    "Drift Report — ΔM/ΔD/ΔV (from Drift Overlay)"
+  ],
+  "structure": {
+    "sections": [
+      {
+        "id": "session-context",
+        "title": "Session Context",
+        "summary": "Canon status, version, drift/coherence state, format, audience, and front-door flags for this overlay."
+      },
+      {
+        "id": "overlay-identity",
+        "title": "Overlay Identity",
+        "summary": "Purpose statement, position in the S3 Spine sequence, and canonical role definition."
+      },
+      {
+        "id": "rtt-engines",
+        "title": "Primary RTT Engines",
+        "summary": "Table of all RTT engines assigned to this overlay: primary, secondary, tertiary, and validator roles with spine functions and links."
+      },
+      {
+        "id": "module-registry",
+        "title": "Module Registry",
+        "summary": "All modules referenced by this overlay, their types, spine roles, and canonical links."
+      },
+      {
+        "id": "detection-pipeline",
+        "title": "Detection Pipeline",
+        "summary": "Ordered diagnostic steps executed by this overlay, from input ingestion through signal emission."
+      },
+      {
+        "id": "signal-flow",
+        "title": "Signal Flow",
+        "summary": "Signal paths between this overlay's engines and downstream overlays, with data types and handoff conditions."
+      },
+      {
+        "id": "state-machine",
+        "title": "State Machine",
+        "summary": "Overlay state transitions: initialization, active monitoring, alert escalation, and completion states with guard conditions."
+      },
+      {
+        "id": "metrics-table",
+        "title": "Metrics Table",
+        "summary": "Canonical metrics produced by this overlay: name, formula or source, threshold, and consuming overlay."
+      },
+      {
+        "id": "cross-links",
+        "title": "Cross-Links",
+        "summary": "Indexed references to related UI overlays, RTT engine pages, and module documentation."
+      },
+      {
+        "id": "signal-vocabulary",
+        "title": "Signal Vocabulary",
+        "summary": "Glossary of overlay-specific signal terms, abbreviations, and canonical definitions."
+      },
+      {
+        "id": "mermaid-map",
+        "title": "Mermaid Integration Map",
+        "summary": "Mermaid diagram showing this overlay's position in the S3 Spine signal chain and RTT engine interactions."
+      },
+      {
+        "id": "publication-notes",
+        "title": "Publication Notes",
+        "summary": "Publication status, version history, triadicframeworks.org URL, and AI-parsability declaration."
+      }
+    ]
+  },
+  "lineage": {
+    "parent": "spine-overlay-pack",
+    "siblings": [
+      "spine-structural",
+      "spine-drift",
+      "spine-substrate",
+      "spine-dimensional",
+      "spine-domain"
+    ],
+    "children": []
+  },
+  "rtt_engines": {
+    "primary": "COHERENCE_TENSOR_ENGINE",
+    "secondary": "CROSS_DOMAIN_CAUSALITY_WEAVER",
+    "gatekeeper": "TRIADIC_REGIME_SYNTHESIZER",
+    "tertiary": "PARADOX_GRADIENT_ANALYZER"
+  },
+  "ai_metadata": {
+    "ai.module": "spine-coherence",
+    "ai.version": "2.0",
+    "ai.purpose": "Evaluate integration quality via Coherence Index tensor; gate Triadic Regime Synthesizer at CI ≥ 0.55; detect fragmentation zones before faultline activation",
+    "ai.keywords": [
+      "Coherence Overlay",
+      "Coherence Index",
+      "CI tensor",
+      "synthesis gate",
+      "CI ≥ 0.55",
+      "fragmentation detection",
+      "Coherence Tensor Engine",
+      "Cross-Domain Causality Weaver",
+      "Triadic Regime Synthesizer",
+      "integration quality",
+      "triadic spine"
+    ],
+    "ai.audience": [
+      "analysts",
+      "researchers",
+      "AIs",
+      "synthesizers"
+    ]
+  }
+}

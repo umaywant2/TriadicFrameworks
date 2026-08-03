@@ -1,0 +1,136 @@
+{
+  "$schema": "https://triadicframeworks.org/schemas/module.schema.json",
+  "$generated": "2026-08-03T08:04:00",
+  "$version": "1.4",
+  "$round": "R5",
+  "module_name": "Structural Overlay",
+  "file": "docs/spine/structural_overlay_module.json",
+  "version": "2.0",
+  "description": "Overlay 1 of 6 in the S3 Spine sequence. Maps the load-bearing architecture of any system under Triadic analysis, identifies faultlines (SCS — latent fracture planes), and exposes the interlock geometry between co-active regimes via IPD-12 decomposition. All downstream overlays inherit their coordinate space from the Structural Frame registered here.",
+  "role": "Registration layer — maps faultlines (SCS), regime interlock geometry, and structural frame; foundational input for all downstream overlays",
+  "analyzer_layer": "Core Frameworks — Structural Spine",
+  "purpose": "Overlay 1/6: maps faultlines (SCS) and regime interlock geometry via IPD-12 decomposition; registers structural frame; primary detector of hidden load-bearing elements and their failure modes",
+  "status": "Active Canonical",
+  "canonical": true,
+  "ai_ready": true,
+  "url": "https://www.triadicframeworks.org/spine/structural/",
+  "path": "docs/spine/structural_overlay.md",
+  "exports": [
+    "Structural Frame (registered)",
+    "Faultline Registry (SCS scores per component)",
+    "Regime Interlock Geometry",
+    "Structural boundary conditions (to Drift Overlay)",
+    "Synthesis gate: structural frame validation flag"
+  ],
+  "imports": [
+    "System input (raw — any domain)",
+    "IPD-12 dimensional axes (ipd-12 module)",
+    "Triadic Regime Synthesizer validation pass"
+  ],
+  "structure": {
+    "sections": [
+      {
+        "id": "session-context",
+        "title": "Session Context",
+        "summary": "Canon status, version, drift/coherence state, format, audience, and front-door flags for this overlay."
+      },
+      {
+        "id": "overlay-identity",
+        "title": "Overlay Identity",
+        "summary": "Purpose statement, position in the S3 Spine sequence, and canonical role definition."
+      },
+      {
+        "id": "rtt-engines",
+        "title": "Primary RTT Engines",
+        "summary": "Table of all RTT engines assigned to this overlay: primary, secondary, tertiary, and validator roles with spine functions and links."
+      },
+      {
+        "id": "module-registry",
+        "title": "Module Registry",
+        "summary": "All modules referenced by this overlay, their types, spine roles, and canonical links."
+      },
+      {
+        "id": "detection-pipeline",
+        "title": "Detection Pipeline",
+        "summary": "Ordered diagnostic steps executed by this overlay, from input ingestion through signal emission."
+      },
+      {
+        "id": "signal-flow",
+        "title": "Signal Flow",
+        "summary": "Signal paths between this overlay's engines and downstream overlays, with data types and handoff conditions."
+      },
+      {
+        "id": "state-machine",
+        "title": "State Machine",
+        "summary": "Overlay state transitions: initialization, active monitoring, alert escalation, and completion states with guard conditions."
+      },
+      {
+        "id": "metrics-table",
+        "title": "Metrics Table",
+        "summary": "Canonical metrics produced by this overlay: name, formula or source, threshold, and consuming overlay."
+      },
+      {
+        "id": "cross-links",
+        "title": "Cross-Links",
+        "summary": "Indexed references to related UI overlays, RTT engine pages, and module documentation."
+      },
+      {
+        "id": "signal-vocabulary",
+        "title": "Signal Vocabulary",
+        "summary": "Glossary of overlay-specific signal terms, abbreviations, and canonical definitions."
+      },
+      {
+        "id": "mermaid-map",
+        "title": "Mermaid Integration Map",
+        "summary": "Mermaid diagram showing this overlay's position in the S3 Spine signal chain and RTT engine interactions."
+      },
+      {
+        "id": "publication-notes",
+        "title": "Publication Notes",
+        "summary": "Publication status, version history, triadicframeworks.org URL, and AI-parsability declaration."
+      }
+    ]
+  },
+  "lineage": {
+    "parent": "spine-overlay-pack",
+    "siblings": [
+      "spine-drift",
+      "spine-coherence",
+      "spine-substrate",
+      "spine-dimensional",
+      "spine-domain"
+    ],
+    "children": []
+  },
+  "rtt_engines": {
+    "primary": "STRUCTURAL_FAULTLINE_DETECTOR",
+    "secondary": "REGIME_INTERLOCK_MAPPER",
+    "synthesizer": "TRIADIC_REGIME_SYNTHESIZER",
+    "validator": "STABILITY_BASIN_CARTOGRAPHER"
+  },
+  "ai_metadata": {
+    "ai.module": "spine-structural",
+    "ai.version": "2.0",
+    "ai.purpose": "Map faultlines and regime interlock geometry; register structural frame as coordinate anchor for all downstream S3 Spine overlays",
+    "ai.keywords": [
+      "Structural Overlay",
+      "faultlines",
+      "SCS",
+      "regime interlock",
+      "structural frame",
+      "Structural Faultline Detector",
+      "Regime Interlock Mapper",
+      "IPD-12",
+      "load-bearing architecture",
+      "collapse precursors",
+      "boundary conditions",
+      "triadic spine"
+    ],
+    "ai.audience": [
+      "developers",
+      "researchers",
+      "AIs",
+      "architects"
+    ]
+  }
+}
