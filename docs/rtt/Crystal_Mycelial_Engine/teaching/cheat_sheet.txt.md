@@ -1,3 +1,5 @@
+```text
+-
 ┌──────────────────────────────────────────────────────────────┐
 │        CRYSTAL–MYCELIAL ENGINE (CME) — TEACHING CHEAT SHEET  │
 └──────────────────────────────────────────────────────────────┘
@@ -74,3 +76,4 @@ Bio → Hybrid → Mineral
 
 
 END OF CHEAT SHEET
+```
