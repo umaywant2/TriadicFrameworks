@@ -1,3 +1,4 @@
+```text
 -
 ┌──────────────────────────────────────────────────────────────┐
 │        CRYSTAL–MYCELIAL ENGINE — SUBSTRATE LAYERS DIAGRAM    │
@@ -61,3 +62,4 @@ Mineral: supersaturation ≥ 0.85
 
 
 END OF SUBSTRATE LAYERS DIAGRAM
+```
