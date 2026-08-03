@@ -1,3 +1,4 @@
+```html
 <section id="session-context">
 
   <h2>Session Context — Crystal–Mycelial Engine</h2>
@@ -48,3 +49,4 @@
   </div>
 
 </section>
+```
