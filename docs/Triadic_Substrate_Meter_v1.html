@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Triadic Substrate Meter</title>
+<style>
+    body {
+        background: #0f0f15;
+        font-family: Arial, sans-serif;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .meter-container {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Awareness + Alignment Meters */
+    .meter {
+        width: 30px;
+        height: 300px;
+        border-radius: 20px;
+        background: linear-gradient(to top, #1e3c72, #2a5298);
+        box-shadow: 0 0 15px rgba(30, 60, 114, 0.7);
+        transition: box-shadow 0.4s ease, filter 0.4s ease;
+    }
+
+    .meter.alignment {
+        background: linear-gradient(to top, #0f9b0f, #00ff95);
+        box-shadow: 0 0 15px rgba(0, 255, 149, 0.7);
+        transition: box-shadow 0.4s ease, filter 0.4s ease;
+    }
+
+    /* Triadic Windows */
+    .triadic-window {
+        width: 160px;
+        height: 160px;
+        background: #1a1a22;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 20px rgba(255,255,255,0.1);
+        transition: box-shadow 0.4s ease, filter 0.4s ease;
+    }
+
+    .triadic-title {
+        font-size: 18px;
+        margin-bottom: 10px;
+        opacity: 0.8;
+    }
+
+    /* CSS Star Shape */
+    .star {
+        width: 0;
+        height: 0;
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        border-bottom: 70px solid #ffd700;
+        position: relative;
+        filter: drop-shadow(0 0 10px #ffd700);
+        transition: filter 0.4s ease;
+    }
+
+    .star:after {
+        content: "";
+        position: absolute;
+        top: 22px;
+        left: -40px;
+        width: 0;
+        height: 0;
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        border-top: 70px solid #ffd700;
+    }
+
+    /* Color Variants */
+    .coherence .star { border-bottom-color: #4da6ff; filter: drop-shadow(0 0 10px #4da6ff); }
+    .coherence .star:after { border-top-color: #4da6ff; }
+
+    .clarity .star { border-bottom-color: #ffd700; filter: drop-shadow(0 0 10px #ffd700); }
+    .clarity .star:after { border-top-color: #ffd700; }
+
+    .continuity .star { border-bottom-color: #ff4d4d; filter: drop-shadow(0 0 10px #ff4d4d); }
+    .continuity .star:after { border-top-color: #ff4d4d; }
+
+    /* Triadic Health Brightening */
+    .triadic-bright {
+        box-shadow: 0 0 30px rgba(255,255,255,0.25);
+        filter: brightness(1.25);
+    }
+
+    .meter-bright {
+        box-shadow: 0 0 25px rgba(255,255,255,0.25);
+        filter: brightness(1.25);
+    }
+</style>
+</head>
+<body>
+
+<div class="meter-container">
+
+    <!-- Awareness Meter -->
+    <div class="meter meter-bright"></div>
+
+    <!-- Triadic Windows -->
+    <div class="triadic-window coherence triadic-bright">
+        <div class="triadic-title">Coherence</div>
+        <div class="star"></div>
+    </div>
+
+    <div class="triadic-window clarity triadic-bright">
+        <div class="triadic-title">Clarity</div>
+        <div class="star"></div>
+    </div>
+
+    <div class="triadic-window continuity triadic-bright">
+        <div class="triadic-title">Continuity</div>
+        <div class="star"></div>
+    </div>
+
+    <!-- Alignment Meter -->
+    <div class="meter alignment meter-bright"></div>
+
+</div>
+
+</body>
+</html>
