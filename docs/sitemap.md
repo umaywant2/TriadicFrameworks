@@ -22,7 +22,7 @@
 
 ---
 
-_Alternate Site_ 🥈 [docsbook.io](https://docs.triadicframeworks.org/docs/rtt/)
+_Alternate Site_ 🥈 [docsbook.io](https://docs.triadicframeworks.org/docs/corpus/)
 
 ## 🔟 Ten‑in‑1 Theory Menu
 
