@@ -1,3 +1,5 @@
+<img width="1120" height="928" alt="image" src="https://github.com/user-attachments/assets/524095e9-6a8e-4afa-b73e-fec7b49248e7" />
+
 # 🔥🤬 **Triadic Speech — Sam Kinison Cadence (Explosive, Righteous, Hilarious)**
 
 **Landing 1 — THE FOUNDATION (THE SCREAM BEGINS)**  
