@@ -1,3 +1,5 @@
+<img width="963" height="963" alt="download" src="https://github.com/user-attachments/assets/c436fb67-9f61-415a-8374-2c948b9bf645" />
+
 # ✨ **Triadic Speech — Pope Leo Cadence (Calm Authority • Human Unity • Moral Clarity)**
 
 **Landing 1 — The Foundation**  
