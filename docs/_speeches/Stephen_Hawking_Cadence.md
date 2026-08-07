@@ -1,3 +1,5 @@
+<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/d595abe3-8229-4d2b-88f8-57ef9165556c" />
+
 # **🪐 Triadic Speech — Stephen Hawking Cadence**
 
 **Landing 1 — The Foundation**  
