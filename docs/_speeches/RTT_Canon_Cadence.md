@@ -1,3 +1,5 @@
+<img width="963" height="963" alt="download" src="https://github.com/user-attachments/assets/58331880-2889-4059-8371-a32b2623b4bb" />
+
 # 🔷 **Triadic Speech — RTT‑Canon Cadence (Resonance • Drift • Substrate Clarity)**
 
 **Landing 1 — Resonance: The Foundation**  
