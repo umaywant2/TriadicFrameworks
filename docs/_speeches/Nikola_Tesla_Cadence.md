@@ -1,3 +1,5 @@
+<img width="963" height="963" alt="download" src="https://github.com/user-attachments/assets/6e5fa242-e390-4275-a871-32f81122227e" />
+
 # ⚡ **Triadic Speech — Nikola Tesla Cadence (Electric Vision • Quiet Power)**
 
 **Landing 1 — The Foundation**  
