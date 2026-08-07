@@ -1,3 +1,5 @@
+<img width="963" height="963" alt="download" src="https://github.com/user-attachments/assets/fb375f00-4496-4528-a2f8-2d38a0f1f6bb" />
+
 # ✨ **Triadic Speech — MLK Cadence (Rhythmic Moral Arc)**
 
 **Landing 1 — The Foundation**  
