@@ -1,3 +1,5 @@
+<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/8d574877-ae7c-4145-9d51-88f211ad18be" />
+
 # 🖤 **Triadic Speech — Steve Jobs Cadence (Minimalist Punch)**
 
 **Landing 1 — The Foundation**  
