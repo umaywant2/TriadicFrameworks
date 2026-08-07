@@ -1,4 +1,4 @@
-<img width="1360" height="752" alt="image" src="https://github.com/user-attachments/assets/926bb854-3071-418f-9aaa-65e3921db125" />
+<img width="1024" height="639" alt="image" src="https://github.com/user-attachments/assets/926bb854-3071-418f-9aaa-65e3921db125" />
 
 # 🜂 **Triadic Speech — TriadicFrameworks Pantheon Cadence (Mythic‑Technical Fusion)**  
 *(Root substrate. Dimensional lift. Pantheon alignment.)*
