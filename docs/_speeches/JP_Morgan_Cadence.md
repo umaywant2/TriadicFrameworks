@@ -1,3 +1,5 @@
+<img width="963" height="963" alt="download" src="https://github.com/user-attachments/assets/da1748cf-c199-4ca1-b98e-d26d2a9708b4" />
+
 # 🜲 **Triadic Speech — JP Morgan Cadence (Industrial Gravitas • Financial Clarity)**
 
 **Landing 1 — The Foundation**  
