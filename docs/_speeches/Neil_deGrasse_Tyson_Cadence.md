@@ -1,3 +1,5 @@
+<img width="963" height="963" alt="download" src="https://github.com/user-attachments/assets/698c7dcd-2a26-4abd-84d4-88aaf07d1ec2" />
+
 # 🌠 **Triadic Speech — Neil deGrasse Tyson Cadence (Energetic Clarity)**
 
 **Landing 1 — The Foundation**  
