@@ -1,1 +1,110 @@
+{
+  "module": {
+    "name": "Cadence Library",
+    "id": "tf.cadence.library",
+    "category": "tf-cadence",
+    "version": "1.0",
+    "summary": "Unified TriadicFrameworks cadence module containing scientific, comedic, leadership, mythic, and RTT-canon speech cadences with DOC_MAP registry and cross-cadence alignment.",
+    "purpose": "Provide substrate-aligned cadence architecture, DOC_MAP registry, navigation, and cross-cadence coherence for all TriadicFrameworks speech cadences.",
+    "front_door": "CadenceLibrary.html",
+    "status": "stable"
+  },
+
+  "roles": {
+    "README.md": "index",
+    "Capture.md": "capture",
+
+    "Carl_Sagan_Cadence.md": "profile",
+    "Neil_deGrasse_Tyson_Cadence.md": "profile",
+    "Stephen_Hawking_Cadence.md": "profile",
+    "Nikola_Tesla_Cadence.md": "profile",
+
+    "Robin_Williams_Cadence.md": "profile",
+    "George_Carlin_Cadence.md": "profile",
+    "Richard_Pryor_Cadence.md": "profile",
+    "Sam_Kinison_Cadence.md": "profile",
+    "Dave_Chappele_Cadence.md": "profile",
+
+    "JP_Morgan_Cadence.md": "profile",
+    "Steve_Jobs_Cadence.md": "profile",
+    "MLK_Cadence.md": "profile",
+    "Pope_Leo_Cadence.md": "profile",
+    "Morgan_Freeman_Cadence.md": "profile",
+
+    "RTT_Canon_Cadence.md": "profile",
+    "TriadicFrameworks_Pantheon_Cadence.md": "profile"
+  },
+
+  "analyzer_layers": {
+    "README.md": "index",
+    "Capture.md": "reference",
+
+    "Carl_Sagan_Cadence.md": "dimensional",
+    "Neil_deGrasse_Tyson_Cadence.md": "dimensional",
+    "Stephen_Hawking_Cadence.md": "dimensional",
+    "Nikola_Tesla_Cadence.md": "dimensional",
+
+    "Robin_Williams_Cadence.md": "drift",
+    "George_Carlin_Cadence.md": "drift",
+    "Richard_Pryor_Cadence.md": "drift",
+    "Sam_Kinison_Cadence.md": "drift",
+    "Dave_Chappele_Cadence.md": "drift",
+
+    "JP_Morgan_Cadence.md": "structural",
+    "Steve_Jobs_Cadence.md": "structural",
+    "MLK_Cadence.md": "structural",
+    "Pope_Leo_Cadence.md": "structural",
+    "Morgan_Freeman_Cadence.md": "structural",
+
+    "RTT_Canon_Cadence.md": "operator",
+    "TriadicFrameworks_Pantheon_Cadence.md": "coherence"
+  },
+
+  "files": [
+    "README.md",
+    "Capture.md",
+
+    "Carl_Sagan_Cadence.md",
+    "Neil_deGrasse_Tyson_Cadence.md",
+    "Stephen_Hawking_Cadence.md",
+    "Nikola_Tesla_Cadence.md",
+
+    "Robin_Williams_Cadence.md",
+    "George_Carlin_Cadence.md",
+    "Richard_Pryor_Cadence.md",
+    "Sam_Kinison_Cadence.md",
+    "Dave_Chappele_Cadence.md",
+
+    "JP_Morgan_Cadence.md",
+    "Steve_Jobs_Cadence.md",
+    "MLK_Cadence.md",
+    "Pope_Leo_Cadence.md",
+    "Morgan_Freeman_Cadence.md",
+
+    "RTT_Canon_Cadence.md",
+    "TriadicFrameworks_Pantheon_Cadence.md"
+  ],
+
+  "doc_map": {
+    "README": "README.md",
+    "CAPTURE": "Capture.md",
+
+    "CARL_SAGAN": "Carl_Sagan_Cadence.md",
+    "DAVE_CHAPPELLE": "Dave_Chappele_Cadence.md",
+    "GEORGE_CARLIN": "George_Carlin_Cadence.md",
+    "JP_MORGAN": "JP_Morgan_Cadence.md",
+    "MLK": "MLK_Cadence.md",
+    "MORGAN_FREEMAN": "Morgan_Freeman_Cadence.md",
+    "NEIL_DEGRASSE_TYSON": "Neil_deGrasse_Tyson_Cadence.md",
+    "NIKOLA_TESLA": "Nikola_Tesla_Cadence.md",
+    "POPE_LEO": "Pope_Leo_Cadence.md",
+    "RICHARD_PRYOR": "Richard_Pryor_Cadence.md",
+    "ROBIN_WILLIAMS": "Robin_Williams_Cadence.md",
+    "RTT_CANON": "RTT_Canon_Cadence.md",
+    "SAM_KINISON": "Sam_Kinison_Cadence.md",
+    "STEPHEN_HAWKING": "Stephen_Hawking_Cadence.md",
+    "STEVE_JOBS": "Steve_Jobs_Cadence.md",
+    "TRIADICFRAMEWORKS_PANTHEON": "TriadicFrameworks_Pantheon_Cadence.md"
+  }
+}
 
