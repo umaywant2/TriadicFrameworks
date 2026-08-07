@@ -1,3 +1,5 @@
+<img width="963" height="963" alt="download" src="https://github.com/user-attachments/assets/e15fcf13-8a3d-423f-a87c-94bcd6a16719" />
+
 # 🔥 **Triadic Speech — Richard Pryor Cadence (Raw Brilliance)**
 
 **Landing 1 — The Foundation**  
