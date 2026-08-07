@@ -1,3 +1,5 @@
+<img width="963" height="963" alt="download" src="https://github.com/user-attachments/assets/47db3a87-15ab-4bda-9c90-7b9697f2ffbe" />
+
 # 🌌 **Triadic Speech — Carl Sagan Cadence (Cosmic Wonder)**
 
 **Landing 1 — The Foundation**  
