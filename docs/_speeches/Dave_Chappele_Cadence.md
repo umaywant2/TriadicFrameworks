@@ -1,3 +1,5 @@
+<img width="963" height="963" alt="download" src="https://github.com/user-attachments/assets/f78fa405-ab0c-4155-92aa-2d7410cbac43" />
+
 # 🎤 **Triadic Speech — Dave Chappelle Cadence (Precision + Cultural Punch)**
 
 **Landing 1 — The Foundation**  
