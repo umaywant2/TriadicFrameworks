@@ -1,3 +1,5 @@
+<img width="963" height="963" alt="download" src="https://github.com/user-attachments/assets/361a9e5d-3704-4d75-9018-d140e27e72af" />
+
 # 🎤 **Triadic Speech — George Carlin Cadence (Sharp, Cynical, Brilliant)**
 
 **Landing 1 — The Foundation**  
