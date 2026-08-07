@@ -1,8 +1,0 @@
-    {
-      "canonical": "electromagnetism",
-      "name": "Electromagnetism",
-      "source": "docs/electromagnetism",
-      "category": "Theory",
-      "summary": "RTT-aligned electromagnetic theory module.",
-      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
-    }

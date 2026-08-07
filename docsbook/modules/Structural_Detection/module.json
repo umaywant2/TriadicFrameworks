@@ -1,8 +1,0 @@
-    {
-      "canonical": "structural_detection",
-      "name": "Structural Detection",
-      "source": "docs/Structural_Detection",
-      "category": "Operator category",
-      "summary": "RTT/1 operator for detecting structural states, drift envelopes, regime shifts, and coherence fields.",
-      "session-context": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
-    }

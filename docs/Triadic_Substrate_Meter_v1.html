@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Triadic Substrate Meter</title>
+<style>
+    body {
+        background: #0f0f15;
+        font-family: Arial, sans-serif;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .meter-container {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Awareness + Alignment Meters */
+    .meter {
+        width: 30px;
+        height: 300px;
+        border-radius: 20px;
+        background: linear-gradient(to top, #1e3c72, #2a5298);
+        box-shadow: 0 0 15px rgba(30, 60, 114, 0.7);
+        transition: box-shadow 0.4s ease, filter 0.4s ease;
+    }
+
+    .meter.alignment {
+        background: linear-gradient(to top, #0f9b0f, #00ff95);
+        box-shadow: 0 0 15px rgba(0, 255, 149, 0.7);
+    }
+
+    /* Triadic Windows */
+    .triadic-window {
+        width: 160px;
+        height: 160px;
+        background: #1a1a22;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 20px rgba(255,255,255,0.1);
+        transition: box-shadow 0.4s ease, filter 0.4s ease;
+    }
+
+    .triadic-title {
+        font-size: 18px;
+        margin-bottom: 10px;
+        opacity: 0.8;
+    }
+
+    /* CSS Star Shape */
+    .star {
+        width: 0;
+        height: 0;
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        border-bottom: 70px solid #ffd700;
+        position: relative;
+        filter: drop-shadow(0 0 10px #ffd700);
+        transition: filter 0.4s ease;
+    }
+
+    .star:after {
+        content: "";
+        position: absolute;
+        top: 22px;
+        left: -40px;
+        width: 0;
+        height: 0;
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        border-top: 70px solid #ffd700;
+    }
+
+    /* Color Variants */
+    .coherence .star { border-bottom-color: #4da6ff; filter: drop-shadow(0 0 10px #4da6ff); }
+    .coherence .star:after { border-top-color: #4da6ff; }
+
+    .clarity .star { border-bottom-color: #ffd700; filter: drop-shadow(0 0 10px #ffd700); }
+    .clarity .star:after { border-top-color: #ffd700; }
+
+    .continuity .star { border-bottom-color: #ff4d4d; filter: drop-shadow(0 0 10px #ff4d4d); }
+    .continuity .star:after { border-top-color: #ff4d4d; }
+
+    /* Triadic Health Brightening */
+    .triadic-bright {
+        box-shadow: 0 0 30px rgba(255,255,255,0.25);
+        filter: brightness(1.25);
+    }
+
+    .meter-bright {
+        box-shadow: 0 0 25px rgba(255,255,255,0.25);
+        filter: brightness(1.25);
+    }
+    /* Pulsing gradient animation */
+@keyframes pulseGradient {
+    0% {
+        filter: drop-shadow(0 0 10px var(--pulse-color));
+        transform: scale(1);
+    }
+    50% {
+        filter: drop-shadow(0 0 20px var(--pulse-color));
+        transform: scale(1.05);
+    }
+    100% {
+        filter: drop-shadow(0 0 10px var(--pulse-color));
+        transform: scale(1);
+    }
+}
+
+/* Class applied when substrate is stable */
+.star-pulse {
+    animation: pulseGradient 2.5s ease-in-out infinite;
+}
+
+.triadic-value {
+    margin-top: 12px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+    opacity: 0.9;
+    text-shadow: 0 0 8px rgba(255,255,255,0.3);
+    transition: color 0.4s ease, text-shadow 0.4s ease;
+}
+
+</style>
+</head>
+<body>
+
+<div class="meter-container">
+
+    <!-- Awareness Meter -->
+    <div id="awarenessMeter" class="meter"></div>
+
+    <!-- Triadic Windows -->
+<div id="coherenceWindow" class="triadic-window coherence">
+    <div class="triadic-title">Coherence</div>
+    <div class="star"></div>
+    <div id="coherenceValueDisplay" class="triadic-value">0.00</div>
+</div>
+
+<div id="clarityWindow" class="triadic-window clarity">
+    <div class="triadic-title">Clarity</div>
+    <div class="star"></div>
+    <div id="clarityValueDisplay" class="triadic-value">0.00</div>
+</div>
+
+<div id="continuityWindow" class="triadic-window continuity">
+    <div class="triadic-title">Continuity</div>
+    <div class="star"></div>
+    <div id="continuityValueDisplay" class="triadic-value">0.00</div>
+</div>
+
+    <!-- Alignment Meter -->
+    <div id="alignmentMeter" class="meter alignment"></div>
+
+</div>
+
+<script>
+/* ---------------------------------------------------------
+   RTT/TFT Dynamic Hooks
+   Replace these values with your real RTT outputs later.
+--------------------------------------------------------- */
+
+let awarenessValue = 0.8;   // Example RTT value
+let alignmentValue = 0.8;   // Example RTT value
+
+let coherenceValue = 0.7;
+let clarityValue = 0.7;
+let continuityValue = 0.7;
+
+/* ---------------------------------------------------------
+   Triadic Brightening Logic
+--------------------------------------------------------- */
+
+/* Coherence + Clarity + Continuity Brightening + Pulsing */
+const triadicMatch =
+    Math.abs(coherenceValue - clarityValue) < 0.05 &&
+    Math.abs(clarityValue - continuityValue) < 0.05;
+
+const stars = document.querySelectorAll(".triadic-window .star");
+
+if (triadicMatch) {
+    coherence.classList.add("triadic-bright");
+    clarity.classList.add("triadic-bright");
+    continuity.classList.add("triadic-bright");
+
+    /* Set pulse color based on each window’s theme */
+    coherence.querySelector(".star").style.setProperty("--pulse-color", "#4da6ff");
+    clarity.querySelector(".star").style.setProperty("--pulse-color", "#ffd700");
+    continuity.querySelector(".star").style.setProperty("--pulse-color", "#ff4d4d");
+
+    stars.forEach(star => star.classList.add("star-pulse"));
+
+} else {
+    coherence.classList.remove("triadic-bright");
+    clarity.classList.remove("triadic-bright");
+    continuity.classList.remove("triadic-bright");
+
+    stars.forEach(star => star.classList.remove("star-pulse"));
+}
+
+    /* Coherence + Clarity + Continuity Brightening */
+    const triadicMatch =
+        Math.abs(coherenceValue - clarityValue) < 0.05 &&
+        Math.abs(clarityValue - continuityValue) < 0.05;
+
+if (triadicMatch) {
+    document.getElementById("coherenceValueDisplay").style.color = "#bcdfff";
+    document.getElementById("clarityValueDisplay").style.color = "#fff3a0";
+    document.getElementById("continuityValueDisplay").style.color = "#ffb3b3";
+
+    document.getElementById("coherenceValueDisplay").style.textShadow =
+        "0 0 12px rgba(255,255,255,0.5)";
+    document.getElementById("clarityValueDisplay").style.textShadow =
+        "0 0 12px rgba(255,255,255,0.5)";
+    document.getElementById("continuityValueDisplay").style.textShadow =
+        "0 0 12px rgba(255,255,255,0.5)";
+} else {
+    document.getElementById("coherenceValueDisplay").style.color = "#ffffff";
+    document.getElementById("clarityValueDisplay").style.color = "#ffffff";
+    document.getElementById("continuityValueDisplay").style.color = "#ffffff";
+
+    document.getElementById("coherenceValueDisplay").style.textShadow =
+        "0 0 8px rgba(255,255,255,0.3)";
+    document.getElementById("clarityValueDisplay").style.textShadow =
+        "0 0 8px rgba(255,255,255,0.3)";
+    document.getElementById("continuityValueDisplay").style.textShadow =
+        "0 0 8px rgba(255,255,255,0.3)";
+}
+}
+
+/* Run once on load */
+updateTriadicHealth();
+/* Update numeric displays */
+document.getElementById("coherenceValueDisplay").textContent =
+    coherenceValue.toFixed(2);
+
+document.getElementById("clarityValueDisplay").textContent =
+    clarityValue.toFixed(2);
+
+document.getElementById("continuityValueDisplay").textContent =
+    continuityValue.toFixed(2);
+
+/* Optional: update every second (simulated RTT feed) */
+setInterval(() => {
+    // Simulate slight drift
+    awarenessValue += (Math.random() - 0.5) * 0.02;
+    alignmentValue += (Math.random() - 0.5) * 0.02;
+
+    coherenceValue += (Math.random() - 0.5) * 0.02;
+    clarityValue += (Math.random() - 0.5) * 0.02;
+    continuityValue += (Math.random() - 0.5) * 0.02;
+
+    updateTriadicHealth();
+}, 1000);
+
+</script>
+
+</body>
+</html>
