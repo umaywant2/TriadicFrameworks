@@ -1,3 +1,5 @@
+<img width="963" height="963" alt="download" src="https://github.com/user-attachments/assets/e072f8b4-b5aa-4f98-b9e8-ccd8d63cb1eb" />
+
 # 🤹‍♂️ **Triadic Speech — Robin Williams Cadence (Chaotic Genius Mode)**
 
 **Landing 1 — The Foundation**  
