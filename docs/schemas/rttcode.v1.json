@@ -35,8 +35,8 @@
       "version": "1.1",
       "date":    "2026-05-06",
       "note":    "Metadata and session context refresh. Module home migrated to /docs/rtt/codes/. Added _meta, _session_context, _domains, _related_schemas, _version_history. All $ref paths and $id unchanged."
-    }
-  ],
+    },
+  
 
   "_domains": {
     "description": "Recognized RTTcode domain values. Each domain maps to a color palette and artifact classification.",
