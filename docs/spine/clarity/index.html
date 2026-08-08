@@ -1,570 +1,1237 @@
 <!DOCTYPE html>
-<!-- saved from url=(0053)edge://copilot-ntp/index.html?PC=EDGEDSE&form=EDGSNTP -->
-<html dir="ltr" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
-  <title>Draft Clarity Equations v2</title>
-  <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
-  <script src="edge://copilot-ntp/strings.m.js" type="module"></script>
-  <style>
-  @font-face {
-    font-family: Ginto;
-    src: url("edge://resources/fonts/ginto-copilot-upright-variable.woff2") format("woff2"),
-  }
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="description" content="RTT::Clarity C-N-R Triad Analyzer — live instrumented clarity scorer for the S3 Spine. Measures Hᵥ, Wᵥ, Iᵣ, Ξ across six epistemic regimes." />
+    <meta name="keywords" content="Clarity Overlay, C-N-R Triad, RTT, TriadicFrameworks, Compression, Nuance, Resonance, Clarity Score, Validator Entropy, Regime Map, S3 Spine" />
+    <meta name="author" content="TriadicFrameworks" />
+    <!-- Spine overlay identity -->
+    <meta name="tf:module"    content="spine-clarity" />
+    <meta name="tf:namespace" content="RTT::Clarity" />
+    <meta name="tf:version"   content="2.0" />
+    <meta name="tf:round"     content="R5" />
+    <meta name="tf:status"    content="Active Canonical" />
+    <meta name="tf:layer"     content="Core Frameworks · Clarity &amp; Transmission" />
+    <meta name="tf:overlay"   content="../clarity_overlay_module.json" />
+    <title>Clarity Overlay · RTT::Clarity v2 · S3 Spine</title>
+<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <title>Clarity Overlay · RTT::Clarity v2 · S3 Spine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bg: { DEFAULT: '#080c14', card: '#0d1525', deep: '#050912' },
+                        border: { DEFAULT: '#1a2540', light: '#243356' },
+                        accent: { cyan: '#00d4ff', violet: '#7c3aed', emerald: '#10b981', amber: '#f59e0b', red: '#ef4444' },
+                        txt: { primary: '#e2e8f0', muted: '#64748b' }
+                    }
+                }
+            }
+        };
+    </script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <style>
+        :root {
+            --bg: #080c14;
+            --card: #0d1525;
+            --deep: #050912;
+            --border: #1a2540;
+            --border-light: #243356;
+            --cyan: #00d4ff;
+            --violet: #7c3aed;
+            --emerald: #10b981;
+            --amber: #f59e0b;
+            --red: #ef4444;
+            --txt: #e2e8f0;
+            --muted: #64748b;
+        }
 
-  :root {
-    --color-stone-100: #fefcfb;
-    --color-stone-200: #f4efed;
-    --color-stone-300: #ccc4c0;
-    --color-stone-400: #968f8c;
-    --color-stone-450: #7b7572;
-    --color-stone-750: #33302e;
-    --color-stone-800: #282523;
-    --color-stone-850: #1d1b1a;
-    --color-stone-900: #131110;
-    --color-saddle-150: #fff9f4;
-    --color-saddle-250: #f2ddcc;
-    --color-saddle-300: #e3cbbc;
-    --color-saddle-350: #bba5a0;
-    --color-saddle-600: #604d4f;
-    --color-saddle-650: #524144;
-    --color-saddle-700: #463739;
-    --color-saddle-750: #392d2e;
-    --color-saddle-900: #150f10;
-    --color-midnight-650: #2c3a63;
-    --color-midnight-900: #0c101c;
-    --color-neutral-900: #111111;
-    --color-slate-100: #f3f5f7;
-    --color-slate-150: #f0f1f5;
-    --color-slate-200: #e4e6f1;
-    --color-slate-250: #cfd8ec;
-    --color-acrylic-default-fallback-light: #fefbf8;
-    --color-acrylic-default-fallback-dark: #1b2336;
-    --colorLayerBackgroundApp: #f8f4f2;
-    --Static-Color-Green-400: #4BA849;
-    --Static-Color-Neutral-White: #ffffff;
-    --Static-Color-Overlay-White-20: #ffffff33;
-    --Static-Color-Background-White-70: #ffffffb3;
-    --Static-Color-Background-White-60: #ffffff99;
-    --Static-Color-Background-White-18: #ffffff2e;
-    --Static-Color-Background-White-5: #ffffff0d;
-    --Static-Color-Background-Slate-750-65: #1f2330a6;
-    --Static-Color-Background-Slate-700-65: #282f42a6;
-    --Static-Color-Background-Slate-650-65: #313a52a6;
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(--txt); }
+        body { font-family: system-ui, -apple-system, sans-serif; }
 
-    --Theme-Color-Foreground-Primary-900: var(--color-stone-900);
-    --Theme-Color-Foreground-Primary-750: var(--color-stone-750);
-    --Theme-Color-Foreground-Secondary-350: #b1aaa6;
-    --Theme-Color-Background-100: var(--color-stone-100);
-    --Theme-Color-Background-Black-5: #ffffff0d;
-    --Theme-Color-Background-White-40: #ffffff66;
-    --Theme-Color-Overlay-Black-20: #00000033;
-    --Theme-Color-Overlay-Black-12: #0000001f;
-    --Theme-Color-Overlay-Black-60: #00000099;
-    --Theme-Color-Overlay-Screen: #635e5a40;
-    --Theme-Color-Background-Modal-Fallback: var(--color-saddle-150);
-    --Theme-Color-Background-Acrylic-Default-Fallback: var(--color-acrylic-default-fallback-light);
-    --Theme-Color-Effect-Shadow-Small: 0px 0.5px 3px 0px rgba(0, 0, 0, 0.2), 0px 0.5px 0.5px 0.5px rgba(255, 255, 255, 1) inset;
-    --Theme-Color-Effect-Shadow-Medium: 0px 6px 12px 0px rgba(0, 0, 0, 0.08);
-    --Theme-Color-Component-Button-Strong-Background-Rest: var(--color-stone-850);
-    --Theme-Color-Component-Button-Strong-Background-Hover: var(--color-neutral-900);
-    --Theme-Color-Component-Button-Strong-Background-Pressed: var(--color-stone-800);
-    --Theme-Color-Component-Button-Strong-Background-Disabled: var(--Theme-Color-Background-Black-5);
-    --Theme-Color-Component-Button-Strong-Foreground-Rest: var(--color-stone-200);
-    --Theme-Color-Component-Button-Strong-Foreground-Hover: var(--color-stone-200);
-    --Theme-Color-Component-Button-Strong-Foreground-Pressed: var(--color-stone-300);
-    --Theme-Color-Component-Button-Strong-Foreground-Disabled: var(--color-stone-400);
-    --Theme-Color-Component-Button-Default-Background-Rest: var(--Static-Color-Background-White-70);
-    --Theme-Color-Component-Button-Default-Background-Hover: var(--Static-Color-Neutral-White);
-    --Theme-Color-Component-Button-Default-Background-Pressed: var(--Static-Color-Background-White-60);
-    --Theme-Color-Component-Button-Default-Background-Disabled: var(--Theme-Color-Background-Black-5);
-    --Theme-Color-Component-Button-Default-Foreground-Rest: var(--color-stone-750);
-    --Theme-Color-Component-Button-Default-Foreground-Hover: var(--color-stone-750);
-    --Theme-Color-Component-Button-Default-Foreground-Pressed: var(--color-stone-450);
-    --Theme-Color-Component-Button-Default-Foreground-Disabled: var(--color-stone-400);
-    --Theme-Background-Splash: linear-gradient(180deg, #f8f4f2 0%, #fdedde 100%);
-    --color-foreground-600: #57514f;
-    --color-foreground-800: var(--color-stone-800);
-    --color-stroke-900: var(--color-saddle-900);
-    --button-background-color: var(--Static-Color-Background-White-70);
-    --button-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.2) 0px 1px 3px 0px, rgb(255, 255, 255) 0px 0.5px 0.5px 0.5px inset;
-    --button-background-color-hover: var(--Static-Color-Neutral-White);
-    --button-background-color-active: var(--Static-Color-Background-White-60);
-  }
+        .font-mono { font-family: 'Courier New', monospace !important; }
 
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --colorLayerBackgroundApp: #0c101c;
-      --Theme-Color-Foreground-Primary-900: var(--color-saddle-150);
-      --Theme-Color-Foreground-Primary-750: var(--color-saddle-300);
-      --Theme-Color-Foreground-Secondary-350: #505b7b;
-      --Theme-Color-Background-100: var(--color-midnight-900);
-      --Theme-Color-Background-Black-5: #ffffff0d;
-      --Theme-Color-Background-White-40: #00000066;
-      --Theme-Color-Overlay-Black-20: #ffffff33;
-      --Theme-Color-Overlay-Black-60: #ffffff99;
-      --Theme-Color-Background-Modal-Fallback: var(--color-midnight-650);
-      --Theme-Color-Background-Acrylic-Default-Fallback: var(--color-acrylic-default-fallback-dark);
-      --Theme-Color-Effect-Shadow-Small: 0px 0.5px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 0.5px 0px rgba(255, 255, 255, 0.12) inset;
-      --Theme-Color-Effect-Shadow-Medium: 0px 6px 12px 0px rgba(0, 0, 0, 0.18);
-      --Theme-Color-Component-Button-Strong-Background-Rest: var(--color-slate-200);
-      --Theme-Color-Component-Button-Strong-Background-Hover: var(--color-slate-150);
-      --Theme-Color-Component-Button-Strong-Background-Pressed: var(--color-slate-250);
-      --Theme-Color-Component-Button-Strong-Background-Disabled: var(--Theme-Color-Background-Black-5);
-      --Theme-Color-Component-Button-Strong-Foreground-Rest: var(--color-saddle-750);
-      --Theme-Color-Component-Button-Strong-Foreground-Hover: var(--color-saddle-750);
-      --Theme-Color-Component-Button-Strong-Foreground-Pressed: var(--color-saddle-650);
-      --Theme-Color-Component-Button-Strong-Foreground-Disabled: var(--color-saddle-600);
-      --Theme-Color-Component-Button-Default-Background-Rest: var(--Static-Color-Background-Slate-700-65);
-      --Theme-Color-Component-Button-Default-Background-Hover: var(--Static-Color-Background-Slate-650-65);
-      --Theme-Color-Component-Button-Default-Background-Pressed: var(--Static-Color-Background-Slate-750-65);
-      --Theme-Color-Component-Button-Default-Background-Disabled: var(--Static-Color-Background-White-5);
-      --Theme-Color-Component-Button-Default-Foreground-Rest: var(--color-saddle-250);
-      --Theme-Color-Component-Button-Default-Foreground-Hover: var(--color-saddle-250);
-      --Theme-Color-Component-Button-Default-Foreground-Pressed: var(--color-saddle-350);
-      --Theme-Color-Component-Button-Default-Foreground-Disabled: var(--color-saddle-250);
-      --Theme-Background-Splash: linear-gradient(180deg, #0c101c 0%, #171e32 50%, #242f50 100%);
-      --color-foreground-600: #867073;
-      --color-foreground-800: var(--color-saddle-250);
-      --color-stroke-900: var(--color-slate-100);
-      --button-background-color: #6b75974d;
-      --button-box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.4) 0px 1px 3px 0px, rgba(255, 255, 255, 0.12) 0px 0.5px 0.5px 0px inset;
-      --button-background-color-hover: rgba(100, 116, 139, 0.4);
-      --button-background-color-active: rgba(100, 116, 139, 0.2);
+        /* Custom slider styling */
+        input[type="range"] {
+            -webkit-appearance: none; appearance: none;
+            background: transparent; width: 100%; cursor: pointer;
+        }
+        input[type="range"]::-webkit-slider-runnable-track {
+            height: 6px; border-radius: 3px; background: var(--border);
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none; appearance: none;
+            width: 18px; height: 18px; border-radius: 50%;
+            margin-top: -6px; border: 2px solid var(--card);
+            box-shadow: 0 0 8px currentColor;
+        }
+        input[type="range"]::-moz-range-track {
+            height: 6px; border-radius: 3px; background: var(--border);
+        }
+        input[type="range"]::-moz-range-thumb {
+            width: 18px; height: 18px; border-radius: 50%;
+            border: 2px solid var(--card);
+            box-shadow: 0 0 8px currentColor;
+        }
+        .slider-c::-webkit-slider-thumb { background: var(--cyan); color: var(--cyan); }
+        .slider-c::-moz-range-thumb { background: var(--cyan); color: var(--cyan); }
+        .slider-n::-webkit-slider-thumb { background: var(--violet); color: var(--violet); }
+        .slider-n::-moz-range-thumb { background: var(--violet); color: var(--violet); }
+        .slider-r::-webkit-slider-thumb { background: var(--emerald); color: var(--emerald); }
+        .slider-r::-moz-range-thumb { background: var(--emerald); color: var(--emerald); }
+        .slider-tau::-webkit-slider-thumb { background: var(--amber); color: var(--amber); }
+        .slider-tau::-moz-range-thumb { background: var(--amber); color: var(--amber); }
+        .slider-tau.danger::-webkit-slider-thumb { background: var(--red); color: var(--red); }
+        .slider-tau.danger::-moz-range-thumb { background: var(--red); color: var(--red); }
+        .slider-recv::-webkit-slider-thumb { background: #94a3b8; color: #94a3b8; width: 14px; height: 14px; margin-top: -5px; }
+        .slider-recv::-moz-range-thumb { background: #94a3b8; color: #94a3b8; width: 14px; height: 14px; }
+        .slider-recv::-webkit-slider-runnable-track { height: 4px; }
+        .slider-recv::-moz-range-track { height: 4px; }
 
+        .preset-pill {
+            transition: all 0.2s ease;
+            border: 1px solid var(--border);
+            background: var(--deep);
+        }
+        .preset-pill.active {
+            border-color: var(--cyan);
+            box-shadow: 0 0 12px rgba(0,212,255,0.25);
+        }
 
-    }
-  }
+        .metric-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 10px 12px;
+        }
 
-  body {
-    margin: 0;
-    overflow: hidden;
-    background-color: var(--colorLayerBackgroundApp);
-    font-family: Ginto, ui-sans-serif, system-ui, sans-serif;
-  }
+        @keyframes pulse-glow { 0%,100% { opacity: 0.7; } 50% { opacity: 1; } }
+        .pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
 
-  iframe {
-    overflow: hidden;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-  }
-  .overlay {
-    /* hidden by default - display updated when dialog shown */
-    display: none;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    background-color: var(--Theme-Color-Overlay-Screen);
-    z-index: 999;
-  }
-  .dialog {
-    /* hidden by default - display updated when needed */
-    display: none;
-    position: absolute;
-    visibility: visible;
-    bottom: 16px;
-    left: 8px;
-    right: 8px;
-    z-index: 1000;
-    border-radius: 28px;
-    background-color: var(--Theme-Color-Background-Modal-Fallback);
-    overflow: overlay;
-    box-shadow:
-      0px 0px 8px 0px rgba(0, 0, 0, 0.04),
-      0px 32px 64px 0px rgba(0, 0, 0, 0.12),
-  }
-  .dialog-container {
-    padding-top: 32px;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-bottom: 16px;
-    row-gap: 28px;
-    display: flex;
-    flex-direction: column;
-    @media (forced-colors: active) {
-      border-radius: 28px;
-      border: 1px solid ButtonText;
-      color: CanvasText;
-    }
-  }
-  .upper-container {
-    display: flex;
-    flex-direction: column;
-    row-gap: 12px;
-  }
-  .header-container {
-    display: flex;
-    flex-direction: column;
-    row-gap: 12px;
-    padding-inline-start: 20px;
-    padding-inline-end: 20px;
-  }
-  .icons-container {
-    display: grid;
-    justify-content: center;
-  }
-  .icon {
-    grid-column: 1;
-    grid-row: 1;
-    border-radius: 50%;
-    border: 2px solid var(--Theme-Color-Overlay-Black-12);
-    background-color: var(--Static-Color-Neutral-White);
-    display: flex;
-    justify-content: center;
-  }
-  .profile-icon {
-    transform: translateX(-32%);
-    z-index: 1001;
-  }
-  .copilot-icon {
-    transform: translateX(32%);
-    z-index: 1002;
-  }
-  .copilot-svg {
-    margin-top: 6px;
-    margin-left: 6px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-  }
-  h2 {
-    font-size: 24px;
-    font-weight: 440;
-    text-align: center;
-    line-height: 31px;
-    margin: 0;
-    color: var(--Theme-Color-Foreground-Primary-900);
-  }
-  .description {
-    font-size: 17px;
-    font-weight: 410;
-    text-align: center;
-    line-height: 26px;
-    color: var(--Theme-Color-Foreground-Primary-750);
-  }
-  .lower-container {
-    display: flex;
-    flex-direction: column;
-    row-gap: 12px;
-  }
-  .base-button {
-    display: block;
-    border: none;
-    cursor: pointer;
-    border-radius: 24px;
-    height: 48px;
-    width: 100%;
-    box-shadow: var(--Theme-Color-Effect-Shadow-Small);
-    font-size: 17px;
-    font-weight: 410;
-    font-family: Ginto, ui-sans-serif, system-ui, sans-serif;
-    @media (forced-colors: active) {
-      box-shadow: none;
-    }
-  }
-  .primary-button {
-    background-color: var(--Theme-Color-Component-Button-Strong-Background-Rest);
-    color: var(--Theme-Color-Component-Button-Strong-Foreground-Rest);
-    @media (forced-colors: active) {
-      background-color: Highlight;
-      color: HighlightText;
-      forced-color-adjust: none;
-    }
-  }
-  .primary-button:hover {
-    background-color: var(--Theme-Color-Component-Button-Strong-Background-Hover);
-    color: var(--Theme-Color-Component-Button-Strong-Foreground-Hover);
-    @media (forced-colors: active) {
-      border: 1px solid Highlight;
-      background-color: HighlightText;
-      color: Highlight;
-    }
-  }
-  .primary-button:active {
-    background-color: var(--Theme-Color-Component-Button-Strong-Background-Pressed);
-    color: var(--Theme-Color-Component-Button-Strong-Foreground-Pressed);
-    @media (forced-colors: active) {
-      border: 1px solid Highlight;
-      background-color: Canvas;
-      color: ButtonText;
-    }
-  }
-  .primary-button:focus-visible {
-    outline: 2px solid var(--Theme-Color-Foreground-Primary-750);
-    outline-offset: 1px;
-    @media (forced-colors: active) {
-      outline-color: Highlight;
-    }
-  }
-  .primary-button:disabled {
-    background-color: var(--Theme-Color-Component-Button-Strong-Background-Disabled);
-    color: var(--Theme-Color-Component-Button-Strong-Foreground-Disabled);
-    cursor: default;
-    @media (forced-colors: active) {
-      color: GrayText !important;
-      border: 1px solid GrayText !important;
-      background-color: Canvas;
-    }
-  }
-  .secondary-button {
-    background-color: var(--Theme-Color-Component-Button-Default-Background-Rest);
-    color: var(--Theme-Color-Component-Button-Default-Foreground-Rest);
-    @media (forced-colors: active) {
-      border: 1px solid ButtonText;
-      background-color: ButtonFace;
-      color: ButtonText;
-      forced-color-adjust: none;
-    }
-  }
-  .secondary-button:hover {
-    background-color: var(--Theme-Color-Component-Button-Default-Background-Hover);
-    color: var(--Theme-Color-Component-Button-Default-Foreground-Hover);
-    @media (forced-colors: active) {
-      border: 1px solid Highlight;
-      background-color: HighlightText;
-      color: Highlight;
-    }
-  }
-  .secondary-button:active {
-    background-color: var(--Theme-Color-Component-Button-Default-Background-Pressed);
-    color: var(--Theme-Color-Component-Button-Default-Foreground-Pressed);
-    @media (forced-colors: active) {
-      border-color: Highlight;
-      color: ButtonText;
-    }
-  }
-  .secondary-button:focus-visible {
-    outline: 2px solid var(--Theme-Color-Foreground-Primary-750);
-    outline-offset: 1px;
-  }
-  .secondary-button:disabled {
-    background-color: var(--Theme-Color-Component-Button-Default-Background-Disabled);
-    color: var(--Theme-Color-Component-Button-Default-Foreground-Disabled);
-    cursor: default;
-    @media (forced-colors: active) {
-      border: 1px solid GrayText;
-    }
-  }
-  .disclaimer-text {
-    color: var(--Theme-Color-Overlay-Black-60);
-    font-size: 12px;
-    font-weight: 450;
-    line-height: 16px;
-    padding: 4px 20px;
-    margin: unset;
-    text-align: center;
-  }
-  .links-row {
-    display: flex;
-    justify-content: center;
-    column-gap: 20px;
-    padding-bottom: 16px;
-  }
-  .link {
-    color: var(--Theme-Color-Overlay-Black-60);
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 450;
-    line-height: 16px;
-    @media (forced-colors: active) {
-      color: LinkText;
-    }
-  }
-  .link:hover {
-    text-decoration-line: underline;
-  }
-  .inline-link {
-    color: var(--Theme-Color-Foreground-Primary-750);
-    @media (forced-colors: active) {
-      color: LinkText;
-    }
-  }
+        @keyframes torsion-border {
+            0%,100% { box-shadow: inset 0 0 0 2px transparent; }
+            50% { box-shadow: inset 0 0 20px 2px rgba(239,68,68,0.35); }
+        }
+        .torsion-alert { animation: torsion-border 1.5s ease-in-out infinite; }
 
-  #underside-iframe-container {
-    background-color: transparent;
-  }
-  #try-again-button {
-    display: none;
-  }
-  .underside-splash-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    background-image: var(--Theme-Background-Splash);
+        @keyframes confetti-burst {
+            0% { transform: scale(0); opacity: 1; }
+            100% { transform: scale(1); opacity: 0; }
+        }
+        .confetti-dot {
+            position: absolute; width: 6px; height: 6px; border-radius: 50%;
+            animation: confetti-burst 0.8s ease-out forwards;
+            pointer-events: none;
+        }
 
-    z-index: 9999;
-    &.hidden {
-      display: none;
-    }
-    section {
-      position:relative;
-      margin:auto;
-      display: flex;
-      width: 100%;
-      max-width: 384px;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      padding-inline: 20px;
-    }
-    h1{
-      font-size:38px;
-      line-height: 40px;
-      letter-spacing: -0.02em;
-      font-variation-settings: 'opsz' 40, 'wght' 480;
-      color: var(--color-foreground-800);
-    }
-    h2 {
-      color: var(--color-foreground-600);
-      font-size: 17px;
-    }
-    button {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--color-foreground-800);
-      fill: var(--color-foreground-800);
-      background-color: var(--button-background-color);
-      font-size: 16px;
-      min-height: 56px;
-      min-width: 56px;
-      padding: 14px 16px;
-      gap: 12px;
-      border-radius: 32px;
-      margin-top: 24px;
-      width: 100%;
+        .regime-badge { transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease; }
 
-      border: none;
-      box-shadow: var(--button-box-shadow);
+        .tab-btn-cf { transition: all 0.15s; border-bottom: 2px solid transparent; }
+        .tab-btn-cf.active { border-bottom-color: var(--cyan); color: var(--cyan); }
 
-      &:hover {
-        background-color: var(--button-background-color-hover);
+        #operator-log-a4c2 { scrollbar-width: thin; scrollbar-color: var(--border) var(--deep); }
+        #operator-log-a4c2::-webkit-scrollbar { width: 4px; }
+        #operator-log-a4c2::-webkit-scrollbar-track { background: var(--deep); }
+        #operator-log-a4c2::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+        .modal-overlay { transition: opacity 0.2s; }
+        .modal-box { transition: transform 0.2s; }
+
+        #main-container-x8k1 { overflow-x: auto; min-width: 1200px; }
+    </style>
+
+    <!-- SPINE CHROME CSS -->
+    <style>
+      /* ── Spine top-bar ─────────────────────────────────────────────── */
+      #spine-topbar {
+        display: flex; align-items: center; justify-content: space-between;
+        height: 36px; min-height: 36px; flex-shrink: 0;
+        background: #050912;
+        border-bottom: 1px solid #1a2540;
+        padding: 0 14px;
+        font-family: 'Courier New', monospace;
+        font-size: 10px;
+        letter-spacing: 0.04em;
+        z-index: 50;
       }
-
-      &:active {
-        color: var(--color-foreground-600);
-        fill: var(--color-foreground-600);
-        background-color: var(--button-background-color-active);
+      #spine-topbar a { text-decoration: none; }
+      .spine-back {
+        display: flex; align-items: center; gap: 6px;
+        color: #64748b; transition: color 0.15s;
       }
-      &:focus-visible {
-        z-index: 1;
-        outline: 2px solid var(--color-stroke-900);
+      .spine-back:hover { color: #00d4ff; }
+      .spine-back svg { width: 12px; height: 12px; flex-shrink: 0; }
+      .spine-breadcrumb {
+        display: flex; align-items: center; gap: 6px; color: #64748b;
       }
-    }
-    svg {
-      width: 24px;
-      height: 24px;
-      fill: var(--color-foreground-800);
-    }
-  }
-  body.floating-view {
-    background-color: transparent;
-  }
+      .spine-breadcrumb .crumb { color: #64748b; }
+      .spine-breadcrumb .sep   { color: #1a2540; }
+      .spine-breadcrumb .crumb.active { color: #00d4ff; }
+      .spine-badges { display: flex; align-items: center; gap: 6px; }
+      .spine-badge {
+        font-family: 'Courier New', monospace; font-size: 9px;
+        padding: 2px 7px; border-radius: 99px; letter-spacing: 0.05em;
+      }
+      .spine-badge.canon   { background: rgba(16,185,129,0.12); color: #10b981; border: 1px solid rgba(16,185,129,0.25); }
+      .spine-badge.version { background: rgba(0,212,255,0.10);  color: #00d4ff; border: 1px solid rgba(0,212,255,0.20); }
+      .spine-badge.round   { background: rgba(124,58,237,0.12); color: #7c3aed; border: 1px solid rgba(124,58,237,0.25); }
+      .spine-badge.live    { background: rgba(16,185,129,0.12); color: #10b981; border: 1px solid rgba(16,185,129,0.25); }
 
-  </style>
+      /* ── Signal-chain strip ─────────────────────────────────────────── */
+      #spine-signal-chain {
+        display: flex; align-items: center; justify-content: center; gap: 0;
+        height: 30px; min-height: 30px; flex-shrink: 0;
+        background: #0a0f1a;
+        border-bottom: 1px solid #1a2540;
+        padding: 0 14px;
+        font-family: 'Courier New', monospace;
+        font-size: 9px;
+        overflow-x: auto; overflow-y: hidden;
+        white-space: nowrap;
+      }
+      .sc-node {
+        display: inline-flex; align-items: center; gap: 4px;
+        padding: 2px 8px; border-radius: 4px;
+        border: 1px solid;
+        font-size: 9px; letter-spacing: 0.03em;
+      }
+      .sc-node.input    { color: #64748b;  border-color: #1a2540;          background: transparent; }
+      .sc-node.scanner  { color: #7c3aed;  border-color: rgba(124,58,237,0.35); background: rgba(124,58,237,0.06); }
+      .sc-node.engine   { color: #00d4ff;  border-color: rgba(0,212,255,0.35);  background: rgba(0,212,255,0.06); }
+      .sc-node.classify { color: #f59e0b;  border-color: rgba(245,158,11,0.35); background: rgba(245,158,11,0.06); }
+      .sc-node.gate     { color: #10b981;  border-color: rgba(16,185,129,0.35); background: rgba(16,185,129,0.06); }
+      .sc-arrow { color: #1a2540; padding: 0 4px; font-size: 11px; }
+
+      /* ── Canon footer ───────────────────────────────────────────────── */
+      #spine-canon-footer {
+        display: flex; align-items: center; justify-content: space-between;
+        height: 26px; min-height: 26px; flex-shrink: 0;
+        background: #050912;
+        border-top: 1px solid #1a2540;
+        padding: 0 14px;
+        font-family: 'Courier New', monospace;
+        font-size: 9px; color: #3a4d6b;
+        letter-spacing: 0.04em;
+      }
+      #spine-canon-footer a { color: #3a4d6b; text-decoration: none; }
+      #spine-canon-footer a:hover { color: #64748b; }
+      .canon-dot { width: 6px; height: 6px; border-radius: 50%; background: #10b981;
+                   display: inline-block; margin-right: 5px;
+                   box-shadow: 0 0 6px #10b981; animation: canon-pulse 3s ease-in-out infinite; }
+      @keyframes canon-pulse { 0%,100%{opacity:0.6;} 50%{opacity:1;} }
+    </style>
 </head>
+<body class="flex flex-col h-screen">
 
-<body>
-  <div class="underside-splash-container" style="display: none;">
-    <section>
-      <h1 class="splash-title" id="splash-title"></h1>
-      <h2 class="splash-subtitle" id="splash-subtitle"></h2>
-      <button class="edge-copilot-refresh-button button" id="try-again-button" aria-label="Refresh" style="display: none;">
-        <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="size-6"><path d="M12 4.5C7.85786 4.5 4.5 7.85786 4.5 12C4.5 16.1421 7.85786 19.5 12 19.5C16.1421 19.5 19.5 16.1421 19.5 12C19.5 11.6236 19.4723 11.2538 19.4188 10.8923C19.3515 10.4382 19.6839 10 20.1429 10C20.5138 10 20.839 10.2562 20.8953 10.6228C20.9642 11.0718 21 11.5317 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C14.3051 3 16.4077 3.86656 18 5.29168V4.25C18 3.83579 18.3358 3.5 18.75 3.5C19.1642 3.5 19.5 3.83579 19.5 4.25V7.25C19.5 7.66421 19.1642 8 18.75 8H15.75C15.3358 8 15 7.66421 15 7.25C15 6.83579 15.3358 6.5 15.75 6.5H17.0991C15.7609 5.25883 13.9691 4.5 12 4.5Z" fill="currentColor"></path></svg>
-      </button>
-    </section>
-  </div>
-
-  <iframe id="underside-iframe-container" name="underside-iframe-container" frameborder="0" csp="base-uri &#39;self&#39;; require-trusted-types-for &#39;script&#39;; trusted-types default dompurify copilotPolicy copilotStreamingPolicy @centro/hvc-loader fast-html base-html-policy sprig-sdk; script-src &#39;strict-dynamic&#39; &#39;nonce-required&#39;; worker-src &#39;self&#39; blob:;" allow="clipboard-write;microphone;camera;clipboard-read;" src="./index_files/saved_resource.html">
-  </iframe>
-  <textarea id="outerframe-text-capture" aria-hidden="true" autocomplete="off" style="opacity:0;pointer-events:none;position:absolute;" autofocus=""></textarea>
-  <div class="overlay" id="overlay"></div>
-  <div class="dialog" id="consent-dialog">
-    <div class="dialog-container">
-      <div class="upper-container">
-        <div class="icons-container">
-          <img class="icon profile-icon" src="data:image/png;base64,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" alt="Chat Icon" width="40" height="40">
-          <div class="icon copilot-icon">
-            <svg class="copilot-svg" xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
-              <path d="M20.4937 3.97258C20.152 2.81253 19.087 2.01611 17.8777 2.01611L17.0761 2.01611C15.7541 2.01611 14.6225 2.96419 14.391 4.26571L13.0454 11.8299L13.4175 10.5354C13.7534 9.36664 14.8225 8.56149 16.0386 8.56149H20.6185L22.565 9.5355L24.4413 8.56149H23.8854C22.6761 8.56149 21.6111 7.76507 21.2693 6.60502L20.4937 3.97258Z" fill="url(#paint0_radial_3936_49027)"></path>
-              <path d="M8.78723 24.0481C9.12527 25.2137 10.1929 26.0157 11.4065 26.0157H13.099C14.5861 26.0157 15.7991 24.8244 15.8258 23.3375L15.9545 16.1841L15.5824 17.4906C15.2486 18.6625 14.1779 19.4708 12.9594 19.4708H8.33893L6.67053 18.3499L4.86426 19.4708H5.41111C6.62476 19.4708 7.69239 20.2728 8.03043 21.4385L8.78723 24.0481Z" fill="url(#paint1_radial_3936_49027)"></path>
-              <path d="M17.7508 2.01611H8.2723C5.56417 2.01611 3.93928 5.6759 2.85603 9.33568C1.57266 13.6716 -0.106661 19.4705 4.75172 19.4705H8.83856C10.0636 19.4705 11.1376 18.6566 11.4673 17.4768C12.1772 14.9372 13.4314 10.4708 14.4155 7.07456C14.9132 5.35668 15.3279 3.88132 15.9642 2.96256C16.321 2.44747 16.9156 2.01611 17.7508 2.01611Z" fill="url(#paint2_linear_3936_49027)"></path>
-              <path d="M17.7508 2.01611H8.2723C5.56417 2.01611 3.93928 5.6759 2.85603 9.33568C1.57266 13.6716 -0.106661 19.4705 4.75172 19.4705H8.83856C10.0636 19.4705 11.1376 18.6566 11.4673 17.4768C12.1772 14.9372 13.4314 10.4708 14.4155 7.07456C14.9132 5.35668 15.3279 3.88132 15.9642 2.96256C16.321 2.44747 16.9156 2.01611 17.7508 2.01611Z" fill="url(#paint3_linear_3936_49027)"></path>
-              <path d="M11.2493 26.0191H20.7277C23.4359 26.0191 25.0607 22.3587 26.144 18.6982C27.4274 14.3615 29.1067 8.56152 24.2483 8.56152H20.1616C18.9365 8.56152 17.8625 9.3755 17.5327 10.5554C16.8229 13.0954 15.5687 17.5628 14.5846 20.9597C14.0868 22.6779 13.6721 24.1536 13.0358 25.0725C12.679 25.5877 12.0844 26.0191 11.2493 26.0191Z" fill="url(#paint4_radial_3936_49027)"></path>
-              <path d="M11.2493 26.0191H20.7277C23.4359 26.0191 25.0607 22.3587 26.144 18.6982C27.4274 14.3615 29.1067 8.56152 24.2483 8.56152H20.1616C18.9365 8.56152 17.8625 9.3755 17.5327 10.5554C16.8229 13.0954 15.5687 17.5628 14.5846 20.9597C14.0868 22.6779 13.6721 24.1536 13.0358 25.0725C12.679 25.5877 12.0844 26.0191 11.2493 26.0191Z" fill="url(#paint5_linear_3936_49027)"></path>
-              <defs>
-              <radialgradient id="paint0_radial_3936_49027" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(22.7819 11.8941) rotate(-128.882) scale(10.2881 9.64442)">
-              <stop offset="0.0955758" stop-color="#00AEFF"></stop>
-              <stop offset="0.773185" stop-color="#2253CE"></stop>
-              <stop offset="1" stop-color="#0736C4"></stop>
-              </radialgradient>
-              <radialgradient id="paint1_radial_3936_49027" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(6.87626 19.4214) rotate(51.971) scale(9.41278 9.12039)">
-              <stop stop-color="#FFB657"></stop>
-              <stop offset="0.633728" stop-color="#FF5F3D"></stop>
-              <stop offset="0.923392" stop-color="#C02B3C"></stop>
-              </radialgradient>
-              <lineargradient id="paint2_linear_3936_49027" x1="7.70499" y1="4.13104" x2="9.1185" y2="20.1236" gradientUnits="userSpaceOnUse">
-              <stop offset="0.156162" stop-color="#0D91E1"></stop>
-              <stop offset="0.487484" stop-color="#52B471"></stop>
-              <stop offset="0.652394" stop-color="#98BD42"></stop>
-              <stop offset="0.937361" stop-color="#FFC800"></stop>
-              </lineargradient>
-              <lineargradient id="paint3_linear_3936_49027" x1="8.8869" y1="2.01611" x2="9.65896" y2="19.469" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#3DCBFF"></stop>
-              <stop offset="0.246674" stop-color="#0588F7" stop-opacity="0"></stop>
-              </lineargradient>
-              <radialgradient id="paint4_radial_3936_49027" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(24.7352 6.8523) rotate(108.88) scale(23.1413 27.2407)">
-              <stop offset="0.0661714" stop-color="#8C48FF"></stop>
-              <stop offset="0.5" stop-color="#F2598A"></stop>
-              <stop offset="0.895833" stop-color="#FFB152"></stop>
-              </radialgradient>
-              <lineargradient id="paint5_linear_3936_49027" x1="25.484" y1="7.4957" x2="25.4739" y2="12.2505" gradientUnits="userSpaceOnUse">
-              <stop offset="0.0581535" stop-color="#F8ADFA"></stop>
-              <stop offset="0.708063" stop-color="#A86EDD" stop-opacity="0"></stop>
-              </lineargradient>
-              </defs>
-              </svg>
-          </div>
-        </div>
-        <div class="header-container">
-          <h2>Can I browse the web and complete actions for you?</h2>
-          <div class="description">
-            I’ll use your Edge profile info.
-          </div>
-        </div>
+    <!-- ═══ SPINE TOP-BAR ═══ -->
+    <div id="spine-topbar">
+      <div class="spine-breadcrumb">
+        <a href="https://www.triadicframeworks.org/spine/" class="spine-back" title="Back to S3 Spine">
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M8 2L4 6l4 4"/>
+          </svg>
+          S3 Spine
+        </a>
+        <span class="sep">›</span>
+        <span class="crumb active">Clarity Overlay</span>
       </div>
-      <div class="lower-container">
-        <button id="save-button" class="primary-button base-button" aria-label="Yes, start action">Yes, start action</button>
-        <button id="cancel-button" class="secondary-button base-button" aria-label="No, cancel action">No, cancel action</button>
-        <p class="disclaimer-text">Copilot saves screenshots, so don’t share anything you don’t want it to see or use. It may make mistakes.</p>
-        <div class="links-row">
-          <a class="link" title="i18n{terms_of_use_link}" href="https://www.bing.com/new/termsofuse" target="_blank" rel="noopener noreferrer">Terms of use</a>
-          <a class="link" title="i18n{learn_more_link}" href="https://go.microsoft.com/fwlink/?LinkId=521839" target="_blank" rel="noopener noreferrer">Microsoft Privacy Statement</a>
-        </div>
+      <div class="spine-badges">
+        <span class="spine-badge canon">Active Canonical</span>
+        <span class="spine-badge version">v2.0</span>
+        <span class="spine-badge round">R5</span>
+        <span class="spine-badge live">● Live Tool</span>
       </div>
     </div>
-  </div>
-  <script src="edge://copilot-ntp/base-error-reporting.js"></script>
-  <script type="module" src="edge://copilot-ntp/index.js"></script>
-  
+
+    <!-- ═══ SIGNAL-CHAIN STRIP ═══ -->
+    <div id="spine-signal-chain">
+      <span class="sc-node input">φ payload</span>
+      <span class="sc-arrow">→</span>
+      <span class="sc-node scanner">V̂ VALIDATOR_ENTROPY_SCANNER</span>
+      <span class="sc-arrow">→</span>
+      <span class="sc-node engine">CLARITY_FIELD_ENGINE · Hᵥ · Wᵥ · Iᵣ · Ξ</span>
+      <span class="sc-arrow">→</span>
+      <span class="sc-node classify">REGIME_CLASSIFIER</span>
+      <span class="sc-arrow">→</span>
+      <span class="sc-node gate">Ξ ≥ 0.70 → PASS</span>
+    </div>
 
 
+<app-icon data-id="1" hidden data-icon="gauge" data-palette="Dark"></app-icon>
 
-</body></html>
+    <!-- HEADER -->
+    <header data-id="2" id="header-r9f2" class="flex items-center justify-between px-4 py-2 border-b border-border bg-bg flex-shrink-0" style="min-height:44px;">
+        <div data-id="3" class="flex items-center gap-3">
+            <div data-id="4" class="w-8 h-8 rounded border border-accent-cyan flex items-center justify-center">
+                <span data-id="5" class="font-mono text-accent-cyan text-xs font-bold">Ξ</span>
+            </div>
+            <h1 data-id="6" class="font-mono text-sm text-txt-primary tracking-wider">RTT::Clarity v2 · C‑N‑R Triad</h1>
+        </div>
+        <div data-id="7" class="flex items-center gap-3">
+            <div data-id="8" id="regime-header-badge-k3m1" class="regime-badge font-mono text-xs px-3 py-1 rounded-full border border-border">—</div>
+            <button data-id="9" id="help-btn-q9w3" class="p-1.5 rounded hover:bg-border-light transition-colors" title="Help">
+                <i data-id="10" data-lucide="help-circle" class="w-4 h-4 text-txt-muted"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <div data-id="11" id="main-container-x8k1" class="flex-1 flex flex-col overflow-hidden">
+        <div data-id="12" class="flex-1 flex min-h-0">
+            <!-- LEFT PANEL -->
+            <aside data-id="13" id="left-panel-v7b4" class="flex-shrink-0 flex flex-col gap-3 p-3 border-r border-border overflow-y-auto" style="width:280px;">
+                <!-- C Slider -->
+                <div data-id="14">
+                    <div data-id="15" class="flex items-center justify-between mb-1">
+                        <label data-id="16" class="font-mono text-xs text-accent-cyan tracking-wide">C (Compression)</label>
+                        <span data-id="17" id="c-val-d8k2" class="font-mono text-lg text-accent-cyan">0.50</span>
+                    </div>
+                    <input data-id="18" id="slider-c-m4n7" type="range" min="0" max="1" step="0.01" value="0.50" class="slider-c w-full" />
+                </div>
+                <!-- N Slider -->
+                <div data-id="19">
+                    <div data-id="20" class="flex items-center justify-between mb-1">
+                        <label data-id="21" class="font-mono text-xs text-accent-violet tracking-wide">N (Nuance)</label>
+                        <span data-id="22" id="n-val-j3p5" class="font-mono text-lg text-accent-violet">0.50</span>
+                    </div>
+                    <input data-id="23" id="slider-n-x2q8" type="range" min="0" max="1" step="0.01" value="0.50" class="slider-n w-full" />
+                </div>
+                <!-- R Slider -->
+                <div data-id="24">
+                    <div data-id="25" class="flex items-center justify-between mb-1">
+                        <label data-id="26" class="font-mono text-xs text-accent-emerald tracking-wide">R (Resonance)</label>
+                        <span data-id="27" id="r-val-f6t1" class="font-mono text-lg text-accent-emerald">0.50</span>
+                    </div>
+                    <input data-id="28" id="slider-r-w9s3" type="range" min="0" max="1" step="0.01" value="0.50" class="slider-r w-full" />
+                </div>
+                <!-- Torsion Slider -->
+                <div data-id="29" class="pt-1 border-t border-border">
+                    <div data-id="30" class="flex items-center justify-between mb-1">
+                        <label data-id="31" class="font-mono text-xs text-accent-amber tracking-wide">τ (Torsion)</label>
+                        <span data-id="32" id="tau-val-h5u9" class="font-mono text-lg text-accent-amber">0.30</span>
+                    </div>
+                    <div data-id="33" class="relative">
+                        <input data-id="34" id="slider-tau-b1c6" type="range" min="0" max="1" step="0.01" value="0.30" class="slider-tau w-full" />
+                        <div data-id="35" class="absolute top-full mt-0.5 font-mono text-[9px] text-accent-amber opacity-60" style="left:70%;">τ_max=0.70</div>
+                    </div>
+                </div>
+                <!-- Domain Presets -->
+                <div data-id="36" class="pt-2 border-t border-border">
+                    <div data-id="37" class="font-mono text-[10px] text-txt-muted mb-2 tracking-widest uppercase">Domain Weights</div>
+                    <div data-id="38" id="presets-grid-p4r1" class="grid grid-cols-2 gap-1.5">
+                        <button data-id="39" data-preset="legal" class="preset-pill font-mono text-[10px] text-txt-primary px-2 py-1.5 rounded text-center">Legal</button>
+                        <button data-id="40" data-preset="executive" class="preset-pill font-mono text-[10px] text-txt-primary px-2 py-1.5 rounded text-center">Executive</button>
+                        <button data-id="41" data-preset="scientific" class="preset-pill font-mono text-[10px] text-txt-primary px-2 py-1.5 rounded text-center">Scientific</button>
+                        <button data-id="42" data-preset="educational" class="preset-pill font-mono text-[10px] text-txt-primary px-2 py-1.5 rounded text-center active">Educational</button>
+                        <button data-id="43" data-preset="philosophical" class="preset-pill font-mono text-[10px] text-txt-primary px-2 py-1.5 rounded text-center">Philosophical</button>
+                        <button data-id="44" data-preset="aiprompt" class="preset-pill font-mono text-[10px] text-txt-primary px-2 py-1.5 rounded text-center">AI Prompt</button>
+                    </div>
+                    <div data-id="45" id="weights-display-g7l3" class="font-mono text-[9px] text-txt-muted mt-1.5 text-center">[wc=0.30 wn=0.25 wr=0.45]</div>
+                </div>
+                <!-- Receiver Profiles -->
+                <div data-id="46" class="pt-2 border-t border-border">
+                    <div data-id="47" class="font-mono text-[10px] text-txt-muted mb-1.5 tracking-widest uppercase">Receiver Profiles (Iᵣ)</div>
+                    <div data-id="48" class="flex flex-col gap-1">
+                        <div data-id="49" class="flex items-center gap-2">
+                            <span data-id="50" class="font-mono text-[9px] text-txt-muted w-12">G1 Nov</span>
+                            <input data-id="51" id="recv-g1-a3b7" type="range" min="0" max="1" step="0.01" value="0.50" class="slider-recv flex-1" />
+                            <span data-id="52" id="recv-g1-val" class="font-mono text-[9px] text-txt-muted w-6 text-right">0.50</span>
+                        </div>
+                        <div data-id="53" class="flex items-center gap-2">
+                            <span data-id="54" class="font-mono text-[9px] text-txt-muted w-12">G2 Beg</span>
+                            <input data-id="55" id="recv-g2-c5d9" type="range" min="0" max="1" step="0.01" value="0.65" class="slider-recv flex-1" />
+                            <span data-id="56" id="recv-g2-val" class="font-mono text-[9px] text-txt-muted w-6 text-right">0.65</span>
+                        </div>
+                        <div data-id="57" class="flex items-center gap-2">
+                            <span data-id="58" class="font-mono text-[9px] text-txt-muted w-12">G3 Int</span>
+                            <input data-id="59" id="recv-g3-e7f1" type="range" min="0" max="1" step="0.01" value="0.70" class="slider-recv flex-1" />
+                            <span data-id="60" id="recv-g3-val" class="font-mono text-[9px] text-txt-muted w-6 text-right">0.70</span>
+                        </div>
+                        <div data-id="61" class="flex items-center gap-2">
+                            <span data-id="62" class="font-mono text-[9px] text-txt-muted w-12">G4 Adv</span>
+                            <input data-id="63" id="recv-g4-g9h3" type="range" min="0" max="1" step="0.01" value="0.55" class="slider-recv flex-1" />
+                            <span data-id="64" id="recv-g4-val" class="font-mono text-[9px] text-txt-muted w-6 text-right">0.55</span>
+                        </div>
+                        <div data-id="65" class="flex items-center gap-2">
+                            <span data-id="66" class="font-mono text-[9px] text-txt-muted w-12">G5 Exp</span>
+                            <input data-id="67" id="recv-g5-i1j5" type="range" min="0" max="1" step="0.01" value="0.60" class="slider-recv flex-1" />
+                            <span data-id="68" id="recv-g5-val" class="font-mono text-[9px] text-txt-muted w-6 text-right">0.60</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- CENTER PANEL -->
+            <div data-id="69" id="center-panel-z2y6" class="flex-1 flex flex-col items-center justify-center p-3 min-w-[380px]">
+                <div data-id="70" class="flex items-center gap-2 mb-2">
+                    <span data-id="71" class="font-mono text-[10px] text-txt-muted tracking-widest uppercase">C-N-R Triad Visualizer</span>
+                    <button data-id="72" id="view-toggle-r8s4" class="font-mono text-[9px] px-2 py-0.5 rounded border border-border text-accent-cyan hover:bg-border-light transition-colors">Cube</button>
+                </div>
+                <canvas data-id="73" id="triad-canvas-k7l2" width="400" height="400" class="rounded-lg border border-border" style="background:#0a0f1a;"></canvas>
+                <div data-id="74" id="delta-q-display-m3n8" class="font-mono text-[10px] text-txt-muted mt-1.5">Δq = —</div>
+            </div>
+
+            <!-- RIGHT PANEL -->
+            <aside data-id="75" id="right-panel-u4v8" class="flex-shrink-0 flex flex-col gap-2 p-3 border-l border-border overflow-y-auto" style="width:310px;">
+                <!-- Hv Card -->
+                <div data-id="76" class="metric-card">
+                    <div data-id="77" class="flex items-center justify-between mb-1">
+                        <span data-id="78" class="font-mono text-[10px] text-txt-muted">Hᵥ (Validator Entropy)</span>
+                        <span data-id="79" id="hv-badge-c3d7" class="font-mono text-[9px] px-1.5 py-0.5 rounded bg-border text-txt-primary">—</span>
+                    </div>
+                    <div data-id="80" class="font-mono text-[8px] text-txt-muted mb-1 opacity-60">Hᵥ = −Σ p(∂φᵢ)·log₂(p(∂φᵢ))</div>
+                    <div data-id="81" class="flex items-center gap-2">
+                        <span data-id="82" id="hv-val-e5f9" class="font-mono text-base text-txt-primary">—</span>
+                        <div data-id="83" class="flex-1 h-1.5 rounded-full bg-border overflow-hidden">
+                            <div data-id="84" id="hv-bar-g7h1" class="h-full rounded-full transition-all duration-300" style="width:0; background:var(--cyan);"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Wv Card -->
+                <div data-id="85" class="metric-card">
+                    <div data-id="86" class="flex items-center justify-between mb-1">
+                        <span data-id="87" class="font-mono text-[10px] text-txt-muted">Wᵥ (Validator Width)</span>
+                        <span data-id="88" id="wv-badge-i9j3" class="font-mono text-[9px] px-1.5 py-0.5 rounded bg-border text-txt-primary">—</span>
+                    </div>
+                    <div data-id="89" class="font-mono text-[8px] text-txt-muted mb-1 opacity-60">Wᵥ(φ,δ) = |{∂φᵢ : d(φ,∂φᵢ) ≤ δ}|</div>
+                    <div data-id="90" class="flex items-center gap-2">
+                        <span data-id="91" id="wv-val-k1l5" class="font-mono text-base text-txt-primary">—</span>
+                        <span data-id="92" class="font-mono text-[9px] text-txt-muted">Bφ =</span>
+                        <span data-id="93" id="bphi-val-m3n7" class="font-mono text-sm text-txt-primary">—</span>
+                    </div>
+                </div>
+                <!-- Ir Card -->
+                <div data-id="94" class="metric-card">
+                    <div data-id="95" class="flex items-center justify-between mb-1">
+                        <span data-id="96" class="font-mono text-[10px] text-txt-muted">Iᵣ (Resonance-Integration)</span>
+                        <span data-id="97" id="ir-badge-o5p9" class="font-mono text-[9px] px-1.5 py-0.5 rounded bg-border text-txt-primary">—</span>
+                    </div>
+                    <div data-id="98" class="font-mono text-[8px] text-txt-muted mb-1 opacity-60">Iᵣ = 1 − σ(ρ)/μ(ρ)</div>
+                    <div data-id="99" class="flex items-center gap-2">
+                        <span data-id="100" id="ir-val-q7r1" class="font-mono text-base text-txt-primary">—</span>
+                        <div data-id="101" class="flex-1 h-1.5 rounded-full bg-border overflow-hidden">
+                            <div data-id="102" id="ir-bar-s3t5" class="h-full rounded-full transition-all duration-300" style="width:0; background:var(--emerald);"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Xi Card (MAIN SCORE) -->
+                <div data-id="103" id="xi-card-u7v1" class="metric-card relative overflow-hidden" style="border-color:var(--emerald);">
+                    <div data-id="104" class="font-mono text-[10px] text-txt-muted mb-1">Composite Ξ (Clarity Score)</div>
+                    <div data-id="105" class="font-mono text-[8px] text-txt-muted mb-2 opacity-60">Ξ = wc·(1−ĥᵥ) + wn·(1−Bφ/8) + wr·Iᵣ</div>
+                    <div data-id="106" class="flex items-center gap-3">
+                        <!-- SVG Gauge -->
+                        <div data-id="107" class="relative flex-shrink-0" style="width:80px;height:80px;">
+                            <svg data-id="108" viewBox="0 0 100 100" class="w-full h-full">
+                                <circle data-id="109" cx="50" cy="50" r="42" fill="none" stroke="#1a2540" stroke-width="6" stroke-dasharray="264" stroke-dashoffset="66" transform="rotate(135 50 50)" stroke-linecap="round"/>
+                                <circle data-id="110" id="xi-arc-w9x3" cx="50" cy="50" r="42" fill="none" stroke="var(--emerald)" stroke-width="6" stroke-dasharray="264" stroke-dashoffset="264" transform="rotate(135 50 50)" stroke-linecap="round" style="transition: stroke-dashoffset 0.5s ease, stroke 0.4s ease;"/>
+                                <!-- Ship threshold notch at 0.70 -->
+                                <circle data-id="111" cx="50" cy="50" r="42" fill="none" stroke="var(--txt)" stroke-width="2" stroke-dasharray="1 263" stroke-dashoffset="126.8" transform="rotate(135 50 50)" opacity="0.4"/>
+                            </svg>
+                            <div data-id="112" class="absolute inset-0 flex flex-col items-center justify-center">
+                                <span data-id="113" id="xi-val-y1z5" class="font-mono text-2xl font-bold text-txt-primary" style="font-size:28px;">—</span>
+                            </div>
+                        </div>
+                        <div data-id="114" class="flex-1">
+                            <div data-id="115" id="xi-label-a2b6" class="font-mono text-sm text-txt-primary mb-1">—</div>
+                            <div data-id="116" id="xi-ship-badge-c4d8" class="font-mono text-[10px] px-2 py-1 rounded inline-block">—</div>
+                        </div>
+                    </div>
+                    <div data-id="117" id="confetti-container-e6f0" class="absolute inset-0 pointer-events-none"></div>
+                </div>
+                <!-- False Precision Warning -->
+                <div data-id="118" id="false-precision-g8h2" class="hidden metric-card pulse-glow" style="border-color:var(--amber); background: rgba(245,158,11,0.08);">
+                    <span data-id="119" class="font-mono text-[10px] text-accent-amber">⚠ FALSE PRECISION DETECTED — Bφ collapsed by Ĉ</span>
+                </div>
+                <!-- Regime Card -->
+                <div data-id="120" class="metric-card">
+                    <div data-id="121" class="font-mono text-[10px] text-txt-muted mb-1 tracking-widest uppercase">Current Regime</div>
+                    <div data-id="122" id="regime-display-i0j4" class="font-mono text-lg text-txt-primary mb-0.5">—</div>
+                    <div data-id="123" id="regime-cond-k2l6" class="font-mono text-[9px] text-txt-muted">—</div>
+                    <div data-id="124" id="regime-desc-m4n8" class="text-[10px] text-txt-muted mt-0.5 italic">—</div>
+                </div>
+                <!-- Repair Path -->
+                <div data-id="125" class="metric-card">
+                    <div data-id="126" class="font-mono text-[10px] text-txt-muted mb-1.5 tracking-widest uppercase">Repair Path</div>
+                    <div data-id="127" id="repair-path-o6p0" class="flex flex-wrap items-center gap-1 font-mono text-xs">—</div>
+                    <div data-id="128" id="torsion-warn-q8r2" class="hidden mt-1.5 p-1.5 rounded text-[10px] font-mono text-accent-red bg-red-950 border border-accent-red">
+                        ⚡ Resolve torsion first: Ô₁ ∘ M̂ ∘ Ô₂
+                    </div>
+                </div>
+                <!-- Operator Log -->
+                <div data-id="129" class="metric-card flex flex-col" style="background:var(--deep);">
+                    <div data-id="130" class="font-mono text-[10px] text-txt-muted mb-1.5 tracking-widest uppercase">Operator Log</div>
+                    <div data-id="131" class="flex gap-1 mb-1.5 flex-wrap">
+                        <button data-id="132" id="op-c-s0t4" class="font-mono text-[9px] px-2 py-1 rounded border border-accent-cyan text-accent-cyan hover:bg-cyan-950 transition-colors">Apply Ĉ</button>
+                        <button data-id="133" id="op-n-u6v0" class="font-mono text-[9px] px-2 py-1 rounded border border-accent-violet text-accent-violet hover:bg-violet-950 transition-colors">Apply N̂</button>
+                        <button data-id="134" id="op-r-w2x6" class="font-mono text-[9px] px-2 py-1 rounded border border-accent-emerald text-accent-emerald hover:bg-emerald-950 transition-colors">Apply R̂</button>
+                        <button data-id="135" id="op-reset-y8z2" class="font-mono text-[9px] px-2 py-1 rounded border border-border text-txt-muted hover:bg-border transition-colors">Reset φ</button>
+                    </div>
+                    <div data-id="136" id="operator-log-a4c2" class="font-mono text-[9px] text-txt-muted leading-relaxed overflow-y-auto" style="max-height:70px;">
+                        <div data-id="137" class="opacity-40">— awaiting operator —</div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- BOTTOM PANEL -->
+        <div data-id="138" id="bottom-panel-b6d0" class="flex-shrink-0 border-t border-border" style="height:180px;">
+            <div data-id="139" class="flex items-center gap-1 px-3 pt-1.5 border-b border-border">
+                <button data-id="140" data-cftab="plain" class="tab-btn-cf font-mono text-[10px] px-3 py-1.5 text-txt-muted active">Plain Language</button>
+                <button data-id="141" data-cftab="grice" class="tab-btn-cf font-mono text-[10px] px-3 py-1.5 text-txt-muted">Grice</button>
+                <button data-id="142" data-cftab="shannon" class="tab-btn-cf font-mono text-[10px] px-3 py-1.5 text-txt-muted">Shannon</button>
+                <button data-id="143" data-cftab="clt" class="tab-btn-cf font-mono text-[10px] px-3 py-1.5 text-txt-muted">CLT</button>
+                <button data-id="144" data-cftab="doublecrux" class="tab-btn-cf font-mono text-[10px] px-3 py-1.5 text-txt-muted">Double-Crux</button>
+            </div>
+            <div data-id="145" id="cf-content-e8f2" class="px-3 py-2 overflow-auto" style="height:calc(100% - 38px);"></div>
+        </div>
+    </div>
+
+    
+
+    <!-- HELP MODAL -->
+    <div data-id="149" id="help-modal-i2j6" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center bg-black/60 hidden" style="opacity:0;">
+        <div data-id="150" class="modal-box bg-bg-card border border-border rounded-xl p-6 max-w-md mx-4" style="transform:scale(0.95);">
+            <div data-id="151" class="flex items-center justify-between mb-3">
+                <h2 data-id="152" class="font-mono text-sm text-accent-cyan">C‑N‑R Triad — Quick Reference</h2>
+                <button data-id="153" id="help-close-k4l8" class="p-1 hover:bg-border rounded transition-colors">
+                    <i data-id="154" data-lucide="x" class="w-4 h-4 text-txt-muted"></i>
+                </button>
+            </div>
+            <p data-id="155" class="text-sm text-txt-primary leading-relaxed mb-2">The <strong data-id="156">C‑N‑R Triad</strong> models every communicative payload φ along three orthogonal axes: <span data-id="157" class="text-accent-cyan font-mono text-xs">Compression (C)</span> measures how tightly meaning is packed, <span data-id="158" class="text-accent-violet font-mono text-xs">Nuance (N)</span> captures the granularity of distinctions preserved, and <span data-id="159" class="text-accent-emerald font-mono text-xs">Resonance (R)</span> gauges how well the message integrates across diverse receivers.</p>
+            <p data-id="160" class="text-sm text-txt-primary leading-relaxed mb-2">The composite score <span data-id="161" class="font-mono text-xs">Ξ</span> (Xi) blends these three metrics with domain-specific weights to produce a single clarity readiness number — payloads scoring <span data-id="162" class="font-mono text-xs">Ξ ≥ 0.70</span> are considered <em data-id="163">ship-ready</em>.</p>
+            <p data-id="164" class="text-sm text-txt-primary leading-relaxed">Torsion <span data-id="165" class="font-mono text-xs">τ</span> represents internal contradictions that can override the regime classification — resolve torsion with the mediation operator <span data-id="166" class="font-mono text-xs">M̂</span> before applying corrective operators.</p>
+        </div>
+    </div>
+
+    <script>
+    // ==================== STATE ====================
+    const state = {
+        c: 0.50, n: 0.50, r: 0.50, tau: 0.30,
+        weights: { wc: 0.30, wn: 0.25, wr: 0.45 },
+        activePreset: 'educational',
+        receivers: [0.50, 0.65, 0.70, 0.55, 0.60],
+        viewMode: 'cube', // 'cube' or 'triangle'
+        cubeAngle: 0,
+        rotating: true,
+        logs: [],
+        activeTab: 'plain',
+        prevXi: 0.5,
+        animXi: 0.5
+    };
+
+    const PRESETS = {
+        legal:        { wc: 0.20, wn: 0.55, wr: 0.25 },
+        executive:    { wc: 0.45, wn: 0.20, wr: 0.35 },
+        scientific:   { wc: 0.30, wn: 0.50, wr: 0.20 },
+        educational:  { wc: 0.30, wn: 0.25, wr: 0.45 },
+        philosophical:{ wc: 0.15, wn: 0.65, wr: 0.20 },
+        aiprompt:     { wc: 0.40, wn: 0.35, wr: 0.25 }
+    };
+
+    // ==================== METRICS ENGINE ====================
+    function computeMetrics(c, n, r, tau, weights, receivers) {
+        // Hv (Validator Entropy) - simulated
+        const hv_hat = (1 - c) * 0.8 + (1 - n) * 0.2;
+        const hvClamped = Math.max(0, Math.min(1, hv_hat));
+
+        // Hv status
+        let hvStatus;
+        if (hvClamped < 0.10) hvStatus = 'Singular';
+        else if (hvClamped < 0.30) hvStatus = 'Sharp';
+        else if (hvClamped < 0.55) hvStatus = 'Diffuse';
+        else if (hvClamped < 0.75) hvStatus = 'Cloudy';
+        else hvStatus = 'Entropic';
+
+        // Wv (Validator Width) - simulated
+        let wv = Math.round(8 * (1 - c) * (1 - n) * 1.5 + 1);
+        wv = Math.max(1, Math.min(8, wv));
+
+        let wvStatus;
+        if (wv <= 2) wvStatus = 'Narrow';
+        else if (wv <= 5) wvStatus = 'Moderate';
+        else wvStatus = 'Wide';
+
+        // Bphi
+        const bphi = wv * hvClamped;
+
+        // Ir (Resonance-Integration) from receiver profiles
+        const rhos = receivers.map(ri => ri * r);
+        const mean = rhos.reduce((a, b) => a + b, 0) / rhos.length;
+        const variance = rhos.reduce((a, b) => a + (b - mean) ** 2, 0) / rhos.length;
+        const sigma = Math.sqrt(variance);
+        let ir = mean > 0.001 ? 1 - (sigma / mean) : 0;
+        ir = Math.max(0, Math.min(1, ir));
+
+        let irStatus;
+        if (ir >= 0.90) irStatus = 'Universal';
+        else if (ir >= 0.75) irStatus = 'Robust';
+        else if (ir >= 0.55) irStatus = 'Context-Dependent';
+        else if (ir >= 0.35) irStatus = 'Fragile';
+        else irStatus = 'Non-Integrating';
+
+        // Xi (Composite Score)
+        const xi = weights.wc * (1 - hvClamped) + weights.wn * (1 - bphi / 8) + weights.wr * ir;
+        const xiClamped = Math.max(0, Math.min(1, xi));
+
+        let xiLabel;
+        if (xiClamped >= 0.85) xiLabel = 'Crystal';
+        else if (xiClamped >= 0.70) xiLabel = 'Clear';
+        else if (xiClamped >= 0.55) xiLabel = 'Hazy';
+        else if (xiClamped >= 0.40) xiLabel = 'Murky';
+        else xiLabel = 'Opaque';
+
+        // Regime detection
+        let regime, regimeCond, regimeDesc, regimeSymbol, regimeColor;
+        if (tau >= 0.70) {
+            regime = 'TORSION'; regimeSymbol = '⚡'; regimeColor = '#ef4444';
+            regimeCond = 'τ ≥ 0.70';
+            regimeDesc = 'Internal contradiction overrides structural classification.';
+        } else if (c >= 0.8 && n >= 0.8 && r >= 0.8) {
+            regime = 'CRYSTAL'; regimeSymbol = '✦'; regimeColor = '#10b981';
+            regimeCond = 'c ≥ 0.8, n ≥ 0.8, r ≥ 0.8';
+            regimeDesc = 'Maximum clarity — compressed, nuanced, resonant.';
+        } else if (c >= 0.8 && n < 0.5 && r >= 0.6) {
+            regime = 'BLADE'; regimeSymbol = '⚔'; regimeColor = '#00d4ff';
+            regimeCond = 'c ≥ 0.8, n < 0.5, r ≥ 0.6';
+            regimeDesc = 'Sharp and resonant, but nuance sacrificed.';
+        } else if (c < 0.5 && n >= 0.8 && r < 0.6) {
+            regime = 'FOG'; regimeSymbol = '◎'; regimeColor = '#7c3aed';
+            regimeCond = 'c < 0.5, n ≥ 0.8, r < 0.6';
+            regimeDesc = 'Rich in nuance but diffuse — fails to land.';
+        } else if (c < 0.5 && n < 0.5 && r >= 0.8) {
+            regime = 'ECHO'; regimeSymbol = '◈'; regimeColor = '#f59e0b';
+            regimeCond = 'c < 0.5, n < 0.5, r ≥ 0.8';
+            regimeDesc = 'Emotionally resonant but lacks structure and depth.';
+        } else if (c < 0.4 && n < 0.4 && r < 0.4) {
+            regime = 'VOID'; regimeSymbol = '✕'; regimeColor = '#ef4444';
+            regimeCond = 'c < 0.4, n < 0.4, r < 0.4';
+            regimeDesc = 'No clarity signal — payload is noise.';
+        } else {
+            // Intermediate: classify nearest
+            const dists = {
+                CRYSTAL: Math.sqrt((1-c)**2+(1-n)**2+(1-r)**2),
+                BLADE: Math.sqrt((1-c)**2+(n-0)**2+(1-r)**2)*1.1,
+                FOG: Math.sqrt((c-0)**2+(1-n)**2+(r-0)**2)*1.1,
+                ECHO: Math.sqrt((c-0)**2+(n-0)**2+(1-r)**2)*1.1,
+                VOID: Math.sqrt(c**2+n**2+r**2)*1.1
+            };
+            const nearest = Object.entries(dists).sort((a,b)=>a[1]-b[1])[0][0];
+            const symMap = {CRYSTAL:'✦',BLADE:'⚔',FOG:'◎',ECHO:'◈',VOID:'✕'};
+            const colMap = {CRYSTAL:'#10b981',BLADE:'#00d4ff',FOG:'#7c3aed',ECHO:'#f59e0b',VOID:'#ef4444'};
+            regime = nearest;
+            regimeSymbol = symMap[nearest];
+            regimeColor = colMap[nearest];
+            regimeCond = 'intermediate — nearest: ' + nearest;
+            regimeDesc = 'Between regimes. Operator intervention recommended.';
+        }
+
+        // Repair path
+        let repairPath = [];
+        if (tau >= 0.70) {
+            repairPath = [{label:'TORSION',color:'#ef4444'},{label:'→',color:null},{label:'M̂',color:'#f59e0b',chip:true},{label:'→',color:null},{label:'resolve',color:'#64748b'}];
+        } else if (regime === 'VOID') {
+            repairPath = [{label:'VOID',color:'#ef4444'},{label:'→',color:null},{label:'N̂',color:'#7c3aed',chip:true},{label:'→',color:null},{label:'FOG',color:'#7c3aed'},{label:'→',color:null},{label:'Ĉ',color:'#00d4ff',chip:true},{label:'→',color:null},{label:'CRYSTAL',color:'#10b981'}];
+        } else if (regime === 'BLADE') {
+            repairPath = [{label:'BLADE',color:'#00d4ff'},{label:'→',color:null},{label:'N̂',color:'#7c3aed',chip:true},{label:'→',color:null},{label:'CRYSTAL',color:'#10b981'}];
+        } else if (regime === 'FOG') {
+            repairPath = [{label:'FOG',color:'#7c3aed'},{label:'→',color:null},{label:'Ĉ',color:'#00d4ff',chip:true},{label:'→',color:null},{label:'CRYSTAL',color:'#10b981'}];
+        } else if (regime === 'ECHO') {
+            repairPath = [{label:'ECHO',color:'#f59e0b'},{label:'→',color:null},{label:'N̂',color:'#7c3aed',chip:true},{label:'→',color:null},{label:'CRYSTAL',color:'#10b981'}];
+        } else if (regime === 'CRYSTAL') {
+            repairPath = [{label:'CRYSTAL ✦',color:'#10b981'}];
+        } else {
+            repairPath = [{label:regime,color:regimeColor},{label:'→',color:null},{label:'Ĉ',color:'#00d4ff',chip:true},{label:'+',color:null},{label:'N̂',color:'#7c3aed',chip:true},{label:'→',color:null},{label:'CRYSTAL',color:'#10b981'}];
+        }
+
+        // False precision
+        const falsePrecision = hvClamped < 0.2 && c > 0.7 && n < 0.5;
+
+        // Delta q (distance to CRYSTAL)
+        const deltaQ = Math.sqrt((1-c)**2 + (1-n)**2 + (1-r)**2);
+
+        return { hv_hat: hvClamped, hvStatus, wv, wvStatus, bphi, ir, irStatus, xi: xiClamped, xiLabel, regime, regimeSymbol, regimeColor, regimeCond, regimeDesc, repairPath, falsePrecision, deltaQ };
+    }
+
+    // ==================== DOM REFERENCES ====================
+    const sliderC = document.getElementById('slider-c-m4n7');
+    const sliderN = document.getElementById('slider-n-x2q8');
+    const sliderR = document.getElementById('slider-r-w9s3');
+    const sliderTau = document.getElementById('slider-tau-b1c6');
+    const cVal = document.getElementById('c-val-d8k2');
+    const nVal = document.getElementById('n-val-j3p5');
+    const rVal = document.getElementById('r-val-f6t1');
+    const tauVal = document.getElementById('tau-val-h5u9');
+    const weightsDisplay = document.getElementById('weights-display-g7l3');
+    const canvas = document.getElementById('triad-canvas-k7l2');
+    const ctx = canvas.getContext('2d');
+    const viewToggle = document.getElementById('view-toggle-r8s4');
+    const deltaQDisplay = document.getElementById('delta-q-display-m3n8');
+
+    const hvBadge = document.getElementById('hv-badge-c3d7');
+    const hvVal = document.getElementById('hv-val-e5f9');
+    const hvBar = document.getElementById('hv-bar-g7h1');
+    const wvBadge = document.getElementById('wv-badge-i9j3');
+    const wvVal = document.getElementById('wv-val-k1l5');
+    const bphiVal = document.getElementById('bphi-val-m3n7');
+    const irBadge = document.getElementById('ir-badge-o5p9');
+    const irVal = document.getElementById('ir-val-q7r1');
+    const irBar = document.getElementById('ir-bar-s3t5');
+    const xiArc = document.getElementById('xi-arc-w9x3');
+    const xiVal = document.getElementById('xi-val-y1z5');
+    const xiLabel = document.getElementById('xi-label-a2b6');
+    const xiShipBadge = document.getElementById('xi-ship-badge-c4d8');
+    const xiCard = document.getElementById('xi-card-u7v1');
+    const confettiContainer = document.getElementById('confetti-container-e6f0');
+    const falsePrecisionEl = document.getElementById('false-precision-g8h2');
+    const regimeDisplay = document.getElementById('regime-display-i0j4');
+    const regimeCond = document.getElementById('regime-cond-k2l6');
+    const regimeDesc = document.getElementById('regime-desc-m4n8');
+    const regimeHeaderBadge = document.getElementById('regime-header-badge-k3m1');
+    const repairPathEl = document.getElementById('repair-path-o6p0');
+    const torsionWarn = document.getElementById('torsion-warn-q8r2');
+    const operatorLog = document.getElementById('operator-log-a4c2');
+    const cfContent = document.getElementById('cf-content-e8f2');
+    const mainContainer = document.getElementById('main-container-x8k1');
+
+    const recvSliders = [
+        document.getElementById('recv-g1-a3b7'),
+        document.getElementById('recv-g2-c5d9'),
+        document.getElementById('recv-g3-e7f1'),
+        document.getElementById('recv-g4-g9h3'),
+        document.getElementById('recv-g5-i1j5')
+    ];
+    const recvVals = [
+        document.getElementById('recv-g1-val'),
+        document.getElementById('recv-g2-val'),
+        document.getElementById('recv-g3-val'),
+        document.getElementById('recv-g4-val'),
+        document.getElementById('recv-g5-val')
+    ];
+
+    // ==================== CANVAS DRAWING ====================
+    function project3D(x, y, z, angle) {
+        const ca = Math.cos(angle), sa = Math.sin(angle);
+        const rx = x * ca - z * sa;
+        const rz = x * sa + z * ca;
+        const scale = 140;
+        const px = 200 + rx * scale - y * scale * 0.15;
+        const py = 320 - y * scale * 0.85 - rz * scale * 0.5;
+        return [px, py];
+    }
+
+    function drawCube(metrics) {
+        const angle = state.cubeAngle;
+        ctx.clearRect(0, 0, 400, 400);
+
+        // Cube vertices
+        const verts = [
+            [0,0,0],[1,0,0],[1,1,0],[0,1,0],
+            [0,0,1],[1,0,1],[1,1,1],[0,1,1]
+        ];
+        const projected = verts.map(v => project3D(v[0], v[1], v[2], angle));
+        const edges = [[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]];
+
+        // Regime zone overlays (simplified: highlight a face region)
+        const zoneAlpha = 0.06;
+        // CRYSTAL zone near (1,1,1)
+        const crystalPts = [project3D(0.7,0.7,0.7,angle), project3D(1,0.7,0.7,angle), project3D(1,1,0.7,angle), project3D(0.7,1,0.7,angle)];
+        ctx.fillStyle = 'rgba(16,185,129,' + 0.12 + ')';
+        ctx.beginPath();
+        ctx.moveTo(crystalPts[0][0], crystalPts[0][1]);
+        crystalPts.slice(1).forEach(p => ctx.lineTo(p[0], p[1]));
+        ctx.closePath(); ctx.fill();
+
+        // VOID zone near (0,0,0)
+        const voidPts = [project3D(0,0,0,angle), project3D(0.35,0,0,angle), project3D(0.35,0.35,0,angle), project3D(0,0.35,0,angle)];
+        ctx.fillStyle = 'rgba(239,68,68,' + 0.1 + ')';
+        ctx.beginPath();
+        ctx.moveTo(voidPts[0][0], voidPts[0][1]);
+        voidPts.slice(1).forEach(p => ctx.lineTo(p[0], p[1]));
+        ctx.closePath(); ctx.fill();
+
+        // Draw edges
+        ctx.strokeStyle = '#1a2540';
+        ctx.lineWidth = 1;
+        edges.forEach(([a, b]) => {
+            ctx.beginPath();
+            ctx.moveTo(projected[a][0], projected[a][1]);
+            ctx.lineTo(projected[b][0], projected[b][1]);
+            ctx.stroke();
+        });
+
+        // Axis arrows beyond cube
+        const axLen = 1.2;
+        // C axis (x) - cyan
+        const cEnd = project3D(axLen, 0, 0, angle);
+        const cStart = project3D(-0.1, 0, 0, angle);
+        ctx.strokeStyle = '#00d4ff'; ctx.lineWidth = 1.5;
+        ctx.beginPath(); ctx.moveTo(cStart[0], cStart[1]); ctx.lineTo(cEnd[0], cEnd[1]); ctx.stroke();
+        ctx.fillStyle = '#00d4ff'; ctx.font = '12px "Courier New", monospace';
+        ctx.fillText('C', cEnd[0]+4, cEnd[1]+4);
+
+        // N axis (y) - violet
+        const nEnd = project3D(0, axLen, 0, angle);
+        const nStart = project3D(0, -0.1, 0, angle);
+        ctx.strokeStyle = '#7c3aed'; ctx.lineWidth = 1.5;
+        ctx.beginPath(); ctx.moveTo(nStart[0], nStart[1]); ctx.lineTo(nEnd[0], nEnd[1]); ctx.stroke();
+        ctx.fillStyle = '#7c3aed';
+        ctx.fillText('N', nEnd[0]+4, nEnd[1]-4);
+
+        // R axis (z) - emerald
+        const rEnd = project3D(0, 0, axLen, angle);
+        const rStart = project3D(0, 0, -0.1, angle);
+        ctx.strokeStyle = '#10b981'; ctx.lineWidth = 1.5;
+        ctx.beginPath(); ctx.moveTo(rStart[0], rStart[1]); ctx.lineTo(rEnd[0], rEnd[1]); ctx.stroke();
+        ctx.fillStyle = '#10b981';
+        ctx.fillText('R', rEnd[0]-14, rEnd[1]-2);
+
+        // Corner labels
+        const origin = project3D(0, 0, 0, angle);
+        const crystal = project3D(1, 1, 1, angle);
+        ctx.fillStyle = '#ef4444'; ctx.font = '9px "Courier New", monospace';
+        ctx.fillText('VOID', origin[0]-24, origin[1]+14);
+        ctx.fillStyle = '#10b981';
+        ctx.fillText('CRYSTAL★', crystal[0]-10, crystal[1]-8);
+
+        // Projection lines from point to axes (dashed)
+        const pt = project3D(state.c, state.n, state.r, angle);
+        const ptX = project3D(state.c, 0, 0, angle);
+        const ptY = project3D(0, state.n, 0, angle);
+        const ptZ = project3D(0, 0, state.r, angle);
+        ctx.setLineDash([3, 4]);
+        ctx.strokeStyle = 'rgba(226,232,240,0.15)'; ctx.lineWidth = 1;
+        [ptX, ptY, ptZ].forEach(target => {
+            ctx.beginPath(); ctx.moveTo(pt[0], pt[1]); ctx.lineTo(target[0], target[1]); ctx.stroke();
+        });
+        ctx.setLineDash([]);
+
+        // Clarity Defect arc (line from point toward CRYSTAL corner)
+        ctx.strokeStyle = 'rgba(226,232,240,0.2)'; ctx.lineWidth = 1;
+        ctx.setLineDash([2, 3]);
+        ctx.beginPath(); ctx.moveTo(pt[0], pt[1]); ctx.lineTo(crystal[0], crystal[1]); ctx.stroke();
+        ctx.setLineDash([]);
+        const midArc = [(pt[0]+crystal[0])/2, (pt[1]+crystal[1])/2];
+        ctx.fillStyle = '#64748b'; ctx.font = '9px "Courier New", monospace';
+        ctx.fillText('Δq='+metrics.deltaQ.toFixed(2), midArc[0]+5, midArc[1]-3);
+
+        // Torsion pulsing overlay
+        if (state.tau >= 0.70) {
+            const pulseAlpha = 0.05 + 0.05 * Math.sin(Date.now() / 300);
+            ctx.fillStyle = 'rgba(239,68,68,' + pulseAlpha + ')';
+            ctx.fillRect(0, 0, 400, 400);
+        }
+
+        // Live point — glowing dot
+        const glowPhase = 0.6 + 0.4 * Math.sin(Date.now() / 500);
+        const ptColor = metrics.regimeColor;
+        ctx.beginPath();
+        ctx.arc(pt[0], pt[1], 10, 0, Math.PI * 2);
+        const grad = ctx.createRadialGradient(pt[0], pt[1], 0, pt[0], pt[1], 10);
+        grad.addColorStop(0, ptColor);
+        grad.addColorStop(1, 'transparent');
+        ctx.fillStyle = grad;
+        ctx.globalAlpha = glowPhase;
+        ctx.fill();
+        ctx.globalAlpha = 1;
+        ctx.beginPath();
+        ctx.arc(pt[0], pt[1], 4, 0, Math.PI * 2);
+        ctx.fillStyle = ptColor;
+        ctx.fill();
+        ctx.strokeStyle = 'rgba(255,255,255,0.5)'; ctx.lineWidth = 1;
+        ctx.stroke();
+    }
+
+    function drawTriangle(metrics) {
+        ctx.clearRect(0, 0, 400, 400);
+        const cx = 200, cy = 210, rad = 150;
+        // Equilateral triangle vertices: C (bottom-left), N (top), R (bottom-right)
+        const vC = [cx - rad * Math.cos(Math.PI/6), cy + rad * Math.sin(Math.PI/6)];
+        const vN = [cx, cy - rad];
+        const vR = [cx + rad * Math.cos(Math.PI/6), cy + rad * Math.sin(Math.PI/6)];
+
+        // Triangle fill
+        ctx.beginPath();
+        ctx.moveTo(vC[0], vC[1]); ctx.lineTo(vN[0], vN[1]); ctx.lineTo(vR[0], vR[1]); ctx.closePath();
+        ctx.fillStyle = 'rgba(26,37,64,0.3)'; ctx.fill();
+        ctx.strokeStyle = '#1a2540'; ctx.lineWidth = 1.5; ctx.stroke();
+
+        // Vertex labels
+        ctx.font = '13px "Courier New", monospace';
+        ctx.fillStyle = '#00d4ff'; ctx.fillText('C', vC[0]-18, vC[1]+16);
+        ctx.fillStyle = '#7c3aed'; ctx.fillText('N', vN[0]-4, vN[1]-10);
+        ctx.fillStyle = '#10b981'; ctx.fillText('R', vR[0]+8, vR[1]+16);
+
+        // Barycentric coords
+        const total = state.c + state.n + state.r || 1;
+        const bc = state.c / total, bn = state.n / total, br = state.r / total;
+        const px = bc * vC[0] + bn * vN[0] + br * vR[0];
+        const py = bc * vC[1] + bn * vN[1] + br * vR[1];
+
+        // Grid lines inside triangle
+        ctx.strokeStyle = 'rgba(26,37,64,0.5)'; ctx.lineWidth = 0.5;
+        for (let i = 1; i < 4; i++) {
+            const t = i / 4;
+            const a1 = [vC[0]+(vN[0]-vC[0])*t, vC[1]+(vN[1]-vC[1])*t];
+            const a2 = [vR[0]+(vN[0]-vR[0])*t, vR[1]+(vN[1]-vR[1])*t];
+            ctx.beginPath(); ctx.moveTo(a1[0],a1[1]); ctx.lineTo(a2[0],a2[1]); ctx.stroke();
+            const b1 = [vC[0]+(vR[0]-vC[0])*t, vC[1]+(vR[1]-vC[1])*t];
+            const b2 = [vN[0]+(vR[0]-vN[0])*t, vN[1]+(vR[1]-vN[1])*t];
+            ctx.beginPath(); ctx.moveTo(b1[0],b1[1]); ctx.lineTo(b2[0],b2[1]); ctx.stroke();
+            const c1 = [vC[0]+(vN[0]-vC[0])*t, vC[1]+(vN[1]-vC[1])*t];
+            const c2 = [vC[0]+(vR[0]-vC[0])*t, vC[1]+(vR[1]-vC[1])*t];
+            ctx.beginPath(); ctx.moveTo(c1[0],c1[1]); ctx.lineTo(c2[0],c2[1]); ctx.stroke();
+        }
+
+        // Point
+        const glowPhase = 0.6 + 0.4 * Math.sin(Date.now() / 500);
+        const ptColor = metrics.regimeColor;
+        ctx.beginPath(); ctx.arc(px, py, 12, 0, Math.PI * 2);
+        const grad = ctx.createRadialGradient(px, py, 0, px, py, 12);
+        grad.addColorStop(0, ptColor); grad.addColorStop(1, 'transparent');
+        ctx.fillStyle = grad; ctx.globalAlpha = glowPhase; ctx.fill(); ctx.globalAlpha = 1;
+        ctx.beginPath(); ctx.arc(px, py, 5, 0, Math.PI * 2);
+        ctx.fillStyle = ptColor; ctx.fill();
+        ctx.strokeStyle = 'rgba(255,255,255,0.5)'; ctx.lineWidth = 1; ctx.stroke();
+
+        // Value labels near point
+        ctx.fillStyle = '#64748b'; ctx.font = '9px "Courier New", monospace';
+        ctx.fillText(`(${state.c.toFixed(2)}, ${state.n.toFixed(2)}, ${state.r.toFixed(2)})`, px+10, py-8);
+    }
+
+    // ==================== CROSS-FRAMEWORK TABLES ====================
+    function renderCFTab(tab, m) {
+        const c = state.c, n = state.n, r = state.r, tau = state.tau;
+        const tableStyle = 'w-full text-left';
+        const thStyle = 'font-mono text-[9px] text-txt-muted py-1 px-2 border-b border-border';
+        const tdStyle = 'font-mono text-[10px] text-txt-primary py-1 px-2 border-b border-border';
+        const tdM = 'font-mono text-[10px] text-txt-muted py-1 px-2 border-b border-border';
+        const check = '<span style="color:#10b981;">✓ SATISFIED</span>';
+        const warn = '<span style="color:#f59e0b;">⚠ VIOLATED</span>';
+        const checkIf = (cond) => cond ? check : warn;
+
+        let html = '';
+        if (tab === 'plain') {
+            const fk = Math.round(206.835 - 170 * m.hv_hat - 50 * (1-r));
+            html = `<table class="${tableStyle}"><thead><tr><th class="${thStyle}">Framework Construct</th><th class="${thStyle}">RTT Equivalent</th><th class="${thStyle}">Current Value</th></tr></thead><tbody>
+                <tr><td class="${tdM}">Readability</td><td class="${tdStyle}">Ĉ</td><td class="${tdStyle}">${c.toFixed(2)}</td></tr>
+                <tr><td class="${tdM}">Grade match</td><td class="${tdStyle}">r̂_lexical</td><td class="${tdStyle}">${r.toFixed(2)}</td></tr>
+                <tr><td class="${tdM}">FK equivalent</td><td class="${tdStyle}">computed</td><td class="${tdStyle}">${fk}</td></tr>
+            </tbody></table>`;
+        } else if (tab === 'grice') {
+            html = `<table class="${tableStyle}"><thead><tr><th class="${thStyle}">Maxim</th><th class="${thStyle}">RTT Guard</th><th class="${thStyle}">Status</th></tr></thead><tbody>
+                <tr><td class="${tdM}">Quantity</td><td class="${tdStyle}">Ĉ+Hᵥ guard</td><td class="${tdStyle}">${checkIf(m.hv_hat < 0.3 && m.hv_hat > 0.0)}</td></tr>
+                <tr><td class="${tdM}">Quality</td><td class="${tdStyle}">Bφ &lt; 3.0</td><td class="${tdStyle}">${checkIf(m.bphi < 3)}</td></tr>
+                <tr><td class="${tdM}">Relation</td><td class="${tdStyle}">r ≥ 0.5</td><td class="${tdStyle}">${checkIf(r >= 0.5)}</td></tr>
+                <tr><td class="${tdM}">Manner</td><td class="${tdStyle}">τ &lt; 0.4</td><td class="${tdStyle}">${checkIf(tau < 0.4)}</td></tr>
+            </tbody></table>`;
+        } else if (tab === 'shannon') {
+            html = `<table class="${tableStyle}"><thead><tr><th class="${thStyle}">Shannon Concept</th><th class="${thStyle}">RTT Mapping</th><th class="${thStyle}">Value</th></tr></thead><tbody>
+                <tr><td class="${tdM}">H(X)</td><td class="${tdStyle}">Hᵥ</td><td class="${tdStyle}">${m.hv_hat.toFixed(3)}</td></tr>
+                <tr><td class="${tdM}">I(X;Y)</td><td class="${tdStyle}">Iᵣ</td><td class="${tdStyle}">${m.ir.toFixed(3)}</td></tr>
+                <tr><td class="${tdM}">Noise</td><td class="${tdStyle}">τ</td><td class="${tdStyle}">${tau.toFixed(2)}</td></tr>
+                <tr><td class="${tdM}">Reliable Tx</td><td class="${tdStyle}">Ξ ≥ 0.70</td><td class="${tdStyle}">${m.xi >= 0.70 ? '<span style="color:#10b981;">YES</span>' : '<span style="color:#ef4444;">NO</span>'}</td></tr>
+            </tbody></table>`;
+        } else if (tab === 'clt') {
+            html = `<table class="${tableStyle}"><thead><tr><th class="${thStyle}">CLT Factor</th><th class="${thStyle}">RTT Mapping</th><th class="${thStyle}">Value</th></tr></thead><tbody>
+                <tr><td class="${tdM}">Intrinsic Load (IL)</td><td class="${tdStyle}">N</td><td class="${tdStyle}">${n.toFixed(2)}</td></tr>
+                <tr><td class="${tdM}">Extraneous Load (EL)</td><td class="${tdStyle}">τ</td><td class="${tdStyle}">${tau.toFixed(2)}</td></tr>
+                <tr><td class="${tdM}">Germane Load (GL)</td><td class="${tdStyle}">R</td><td class="${tdStyle}">${r.toFixed(2)}</td></tr>
+                <tr><td class="${tdM}">WM Limit</td><td class="${tdStyle}">Wᵥ ≤ 5</td><td class="${tdStyle}">${checkIf(m.wv <= 5)}</td></tr>
+            </tbody></table>`;
+        } else if (tab === 'doublecrux') {
+            // Ir across G1,G2
+            const rhos12 = [state.receivers[0]*r, state.receivers[1]*r];
+            const mean12 = (rhos12[0]+rhos12[1])/2;
+            const resolveStatus = m.ir >= 0.8 ? '<span style="color:#10b981;">RESOLVED</span>' : m.ir >= 0.5 ? '<span style="color:#f59e0b;">IN PROGRESS</span>' : '<span style="color:#ef4444;">REQUIRES N̂</span>';
+            html = `<table class="${tableStyle}"><thead><tr><th class="${thStyle}">Double-Crux Element</th><th class="${thStyle}">RTT Mapping</th><th class="${thStyle}">Status</th></tr></thead><tbody>
+                <tr><td class="${tdM}">Crux located</td><td class="${tdStyle}">V̂ applied</td><td class="${tdStyle}">${m.hv_hat > 0.5 ? 'High-entropy crux found' : 'Low-entropy — no dominant crux'}</td></tr>
+                <tr><td class="${tdM}">Iᵣ across {G1,G2}</td><td class="${tdStyle}">subset Iᵣ</td><td class="${tdStyle}">${mean12.toFixed(3)}</td></tr>
+                <tr><td class="${tdM}">Resolution</td><td class="${tdStyle}">convergence</td><td class="${tdStyle}">${resolveStatus}</td></tr>
+            </tbody></table>`;
+        }
+        cfContent.innerHTML = html;
+    }
+
+    // ==================== CONFETTI EFFECT ====================
+    let lastCrystalTime = 0;
+    function emitConfetti() {
+        const now = Date.now();
+        if (now - lastCrystalTime < 3000) return;
+        lastCrystalTime = now;
+        const colors = ['#00d4ff','#7c3aed','#10b981','#f59e0b','#e2e8f0','#00d4ff','#10b981','#7c3aed'];
+        for (let i = 0; i < 8; i++) {
+            const dot = document.createElement('div');
+            dot.className = 'confetti-dot';
+            dot.style.background = colors[i];
+            dot.style.left = '50%';
+            dot.style.top = '50%';
+            const angle = (i / 8) * Math.PI * 2;
+            const dist = 40 + Math.random() * 20;
+            dot.style.setProperty('--tx', Math.cos(angle) * dist + 'px');
+            dot.style.setProperty('--ty', Math.sin(angle) * dist + 'px');
+            dot.style.animation = `confetti-burst 0.7s ease-out forwards`;
+            dot.style.transform = `translate(${Math.cos(angle)*dist}px, ${Math.sin(angle)*dist}px)`;
+            confettiContainer.appendChild(dot);
+            setTimeout(() => dot.remove(), 800);
+        }
+    }
+
+    // ==================== UPDATE EVERYTHING ====================
+    function update() {
+        const m = computeMetrics(state.c, state.n, state.r, state.tau, state.weights, state.receivers);
+
+        // Slider displays
+        cVal.textContent = state.c.toFixed(2);
+        nVal.textContent = state.n.toFixed(2);
+        rVal.textContent = state.r.toFixed(2);
+        tauVal.textContent = state.tau.toFixed(2);
+        tauVal.style.color = state.tau >= 0.70 ? 'var(--red)' : 'var(--amber)';
+        sliderTau.className = state.tau >= 0.70 ? 'slider-tau danger w-full' : 'slider-tau w-full';
+
+        // Receiver displays
+        state.receivers.forEach((v, i) => { recvVals[i].textContent = v.toFixed(2); });
+
+        // Hv
+        hvVal.textContent = 'ĥᵥ = ' + m.hv_hat.toFixed(3);
+        hvBadge.textContent = m.hvStatus;
+        hvBar.style.width = (m.hv_hat * 100) + '%';
+
+        // Wv
+        wvVal.textContent = 'Wᵥ = ' + m.wv;
+        wvBadge.textContent = m.wvStatus;
+        bphiVal.textContent = m.bphi.toFixed(2);
+
+        // Ir
+        irVal.textContent = 'Iᵣ = ' + m.ir.toFixed(3);
+        irBadge.textContent = m.irStatus;
+        irBar.style.width = (m.ir * 100) + '%';
+
+        // Xi gauge
+        state.animXi += (m.xi - state.animXi) * 0.15;
+        const arcTotal = 198; // 75% of 264
+        const arcOffset = 264 - (state.animXi * arcTotal);
+        xiArc.setAttribute('stroke-dashoffset', arcOffset);
+        let xiColor;
+        if (m.xi >= 0.85) xiColor = '#10b981';
+        else if (m.xi >= 0.70) xiColor = '#22c55e';
+        else if (m.xi >= 0.55) xiColor = '#f59e0b';
+        else if (m.xi >= 0.40) xiColor = '#f97316';
+        else xiColor = '#ef4444';
+        xiArc.setAttribute('stroke', xiColor);
+
+        xiVal.textContent = m.xi.toFixed(2);
+        xiVal.style.color = xiColor;
+        xiLabel.textContent = m.xiLabel;
+        xiLabel.style.color = xiColor;
+        xiCard.style.borderColor = xiColor;
+
+        if (m.xi >= 0.70) {
+            xiShipBadge.textContent = '✓ READY TO SHIP';
+            xiShipBadge.style.background = 'rgba(16,185,129,0.15)';
+            xiShipBadge.style.color = '#10b981';
+            xiShipBadge.style.border = '1px solid rgba(16,185,129,0.3)';
+        } else {
+            xiShipBadge.textContent = '✕ REPAIR NEEDED';
+            xiShipBadge.style.background = 'rgba(239,68,68,0.15)';
+            xiShipBadge.style.color = '#ef4444';
+            xiShipBadge.style.border = '1px solid rgba(239,68,68,0.3)';
+        }
+
+        // Crystal celebration
+        if (m.xi >= 0.85 && state.prevXi < 0.85) {
+            emitConfetti();
+        }
+        state.prevXi = m.xi;
+
+        // False precision
+        falsePrecisionEl.classList.toggle('hidden', !m.falsePrecision);
+
+        // Regime
+        regimeDisplay.textContent = m.regime + ' ' + m.regimeSymbol;
+        regimeDisplay.style.color = m.regimeColor;
+        regimeCond.textContent = m.regimeCond;
+        regimeDesc.textContent = m.regimeDesc;
+        regimeHeaderBadge.textContent = m.regime + ' ' + m.regimeSymbol;
+        regimeHeaderBadge.style.color = m.regimeColor;
+        regimeHeaderBadge.style.borderColor = m.regimeColor;
+        regimeHeaderBadge.style.boxShadow = '0 0 8px ' + m.regimeColor + '40';
+
+        // Repair path
+        repairPathEl.innerHTML = '';
+        m.repairPath.forEach(item => {
+            const span = document.createElement('span');
+            if (item.chip) {
+                span.className = 'font-mono text-[10px] px-1.5 py-0.5 rounded border';
+                span.style.color = item.color;
+                span.style.borderColor = item.color;
+                span.style.background = item.color + '15';
+            } else if (item.color) {
+                span.className = 'font-mono text-[10px]';
+                span.style.color = item.color;
+            } else {
+                span.className = 'font-mono text-[10px] text-txt-muted';
+            }
+            span.textContent = item.label;
+            repairPathEl.appendChild(span);
+        });
+
+        // Torsion warnings
+        torsionWarn.classList.toggle('hidden', state.tau < 0.70);
+        mainContainer.classList.toggle('torsion-alert', state.tau >= 0.70);
+
+        // Delta Q
+        deltaQDisplay.textContent = 'Δq = ' + m.deltaQ.toFixed(3);
+
+        // Cross-framework tab
+        renderCFTab(state.activeTab, m);
+
+        // Canvas
+        if (state.viewMode === 'cube') drawCube(m);
+        else drawTriangle(m);
+    }
+
+    // ==================== ANIMATION LOOP ====================
+    function animLoop() {
+        if (state.rotating && state.viewMode === 'cube') {
+            state.cubeAngle += 0.003;
+        }
+        update();
+        requestAnimationFrame(animLoop);
+    }
+
+    // ==================== EVENT BINDING ====================
+
+    // Icons — progressive enhancement
+    if (typeof lucide !== "undefined" && typeof lucide.createIcons === "function") {
+        lucide.createIcons();
+    }
+
+    // Sliders
+    sliderC.addEventListener('input', function() { state.c = parseFloat(this.value); });
+    sliderN.addEventListener('input', function() { state.n = parseFloat(this.value); });
+    sliderR.addEventListener('input', function() { state.r = parseFloat(this.value); });
+    sliderTau.addEventListener('input', function() { state.tau = parseFloat(this.value); });
+
+    // Receiver sliders
+    recvSliders.forEach((sl, i) => {
+        sl.addEventListener('input', function() { state.receivers[i] = parseFloat(this.value); });
+    });
+
+    // Presets
+    document.querySelectorAll('[data-preset]').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const key = this.dataset.preset;
+            const preset = PRESETS[key];
+            if (!preset) return;
+            state.weights = { ...preset };
+            state.activePreset = key;
+            document.querySelectorAll('[data-preset]').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            weightsDisplay.textContent = `[wc=${preset.wc.toFixed(2)} wn=${preset.wn.toFixed(2)} wr=${preset.wr.toFixed(2)}]`;
+        });
+    });
+
+    // View toggle
+    viewToggle.addEventListener('click', function() {
+        state.viewMode = state.viewMode === 'cube' ? 'triangle' : 'cube';
+        this.textContent = state.viewMode === 'cube' ? 'Cube' : 'Triangle';
+    });
+
+    // Operator buttons
+    function addLog(msg) {
+        const now = new Date();
+        const ts = now.toTimeString().slice(0, 8);
+        state.logs.push(ts + ' · ' + msg);
+        if (state.logs.length > 5) state.logs.shift();
+        operatorLog.innerHTML = state.logs.map(l => '<div>' + l + '</div>').join('');
+        operatorLog.scrollTop = operatorLog.scrollHeight;
+    }
+
+    function clamp01(v) { return Math.max(0, Math.min(1, v)); }
+
+    document.getElementById('op-c-s0t4').addEventListener('click', function() {
+        state.c = clamp01(state.c + 0.10);
+        state.n = clamp01(state.n - 0.05);
+        sliderC.value = state.c;
+        sliderN.value = state.n;
+        addLog(`Ĉ ∘ φ → c=${state.c.toFixed(2)} n=${state.n.toFixed(2)} r=${state.r.toFixed(2)}`);
+    });
+
+    document.getElementById('op-n-u6v0').addEventListener('click', function() {
+        state.n = clamp01(state.n + 0.10);
+        state.c = clamp01(state.c - 0.05);
+        sliderN.value = state.n;
+        sliderC.value = state.c;
+        addLog(`N̂ ∘ φ → c=${state.c.toFixed(2)} n=${state.n.toFixed(2)} r=${state.r.toFixed(2)}`);
+    });
+
+    document.getElementById('op-r-w2x6').addEventListener('click', function() {
+        state.r = clamp01(state.r + 0.08);
+        sliderR.value = state.r;
+        addLog(`R̂ ∘ φ → c=${state.c.toFixed(2)} n=${state.n.toFixed(2)} r=${state.r.toFixed(2)}`);
+    });
+
+    document.getElementById('op-reset-y8z2').addEventListener('click', function() {
+        state.c = 0.50; state.n = 0.50; state.r = 0.50; state.tau = 0.30;
+        sliderC.value = 0.50; sliderN.value = 0.50; sliderR.value = 0.50; sliderTau.value = 0.30;
+        state.receivers = [0.50, 0.65, 0.70, 0.55, 0.60];
+        recvSliders.forEach((sl, i) => { sl.value = state.receivers[i]; });
+        addLog('φ RESET → default (0.50, 0.50, 0.50)');
+    });
+
+    // Cross-framework tabs
+    document.querySelectorAll('[data-cftab]').forEach(btn => {
+        btn.addEventListener('click', function() {
+            state.activeTab = this.dataset.cftab;
+            document.querySelectorAll('[data-cftab]').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+
+    // Help modal
+    const helpModal = document.getElementById('help-modal-i2j6');
+    const helpBox = helpModal.querySelector('.modal-box');
+    document.getElementById('help-btn-q9w3').addEventListener('click', function() {
+        helpModal.classList.remove('hidden');
+        requestAnimationFrame(() => {
+            helpModal.style.opacity = '1';
+            helpBox.style.transform = 'scale(1)';
+        });
+    });
+    document.getElementById('help-close-k4l8').addEventListener('click', closeHelp);
+    helpModal.addEventListener('click', function(e) {
+        if (e.target === helpModal) closeHelp();
+    });
+    function closeHelp() {
+        helpModal.style.opacity = '0';
+        helpBox.style.transform = 'scale(0.95)';
+        setTimeout(() => helpModal.classList.add('hidden'), 200);
+    }
+
+    // Start animation loop
+    animLoop();
+    </script>
+
+    <!-- ═══ SPINE CANON FOOTER ═══ -->
+    <div id="spine-canon-footer">
+      <span><span class="canon-dot"></span>RTT::Clarity · S3 Spine Overlay Pack v2.0 · R5 · 2026-08-08</span>
+      <span>
+        <a href="https://www.triadicframeworks.org/spine/">S3 Spine</a>
+        &nbsp;·&nbsp;
+        <a href="https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/spine">GitHub</a>
+        &nbsp;·&nbsp;
+        <a href="../clarity_overlay_module.json">overlay.json</a>
+        &nbsp;·&nbsp;
+        <a href="../clarity_overlay.md">overlay.md</a>
+      </span>
+    </div>
+
+</body>
+</html>
