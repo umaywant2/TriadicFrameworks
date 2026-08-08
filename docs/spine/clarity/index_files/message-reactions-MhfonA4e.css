@@ -1,0 +1,1 @@
+@keyframes ra-rotate{to{transform:rotate(1turn)}}@keyframes ra-dash{0%{stroke-dasharray:1,150;stroke-dashoffset:0}50%{stroke-dasharray:90,150;stroke-dashoffset:-35}to{stroke-dasharray:90,150;stroke-dashoffset:-124}}.ra-spinner circle{animation:ra-dash 1.4s ease-in-out infinite}

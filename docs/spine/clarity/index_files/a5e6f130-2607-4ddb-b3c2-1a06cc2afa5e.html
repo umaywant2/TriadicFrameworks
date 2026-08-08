@@ -1,0 +1,1909 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)blob:https://copilot.fun/a5e6f130-2607-4ddb-b3c2-1a06cc2afa5e -->
+<html lang="en" data-theme="dark"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="referrer" content="strict-origin-when-cross-origin"><meta http-equiv="Content-Security-Policy" content="default-src &#39;self&#39;; script-src &#39;nonce-required&#39; &#39;strict-dynamic&#39; https://cdn.jsdelivr.net/npm/ https://cdn.tailwindcss.com https://unpkg.com/lucide; connect-src &#39;self&#39; https://fonts.googleapis.com https://fonts.gstatic.com https://cdn.jsdelivr.net/npm/ https://copilot.microsoft.com; worker-src &#39;self&#39; blob:; style-src &#39;unsafe-inline&#39; &#39;self&#39; https://fonts.googleapis.com/css2 https://cdn.jsdelivr.net/npm/; img-src &#39;self&#39; data: blob: *.mm.bing.net th.bing.com cdn.tailwindcss.com copilot.microsoft.com *.tile.openstreetmap.org https://cdn.jsdelivr.net/npm/; font-src &#39;self&#39; data: https://fonts.gstatic.com https://cdn.jsdelivr.net; media-src &#39;self&#39; blob: data:; object-src &#39;none&#39;; base-uri &#39;self&#39;; form-action &#39;self&#39;; frame-src &#39;none&#39;; upgrade-insecure-requests"><style>
+._nav-link-tooltip {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  max-width: min(80%, 600px);
+  padding: 4px 8px;
+  background: rgba(32, 33, 36, 0.88);
+  color: #e8eaed;
+  font: 12px/16px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-top-right-radius: 4px;
+  z-index: 2147483647;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease-in-out;
+  box-sizing: border-box;
+}
+._nav-link-tooltip._visible {
+  opacity: 1;
+}
+@media (prefers-color-scheme: light) {
+  ._nav-link-tooltip {
+    background: rgba(241, 243, 244, 0.92);
+    color: #202124;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+  }
+}
+</style>
+<script nonce="">
+(function() {
+  // Helper: check if a raw href is an external URL (http/https)
+  // Hash links (#section), relative paths (/page), mailto:, tel:, etc. are NOT external
+  function _isExternalHref(rawHref) {
+    if (!rawHref) return false;
+    var h = rawHref.trim().toLowerCase();
+    // onejs-sdl-disable-next-line no-insecure-url -- detects and upgrades user-provided HTTP links
+    return h.startsWith('http://') || h.startsWith('https://') || h.startsWith('//');
+  }
+
+  // --- Link hover URL preview tooltip ---
+  var _tooltip = document.createElement('div');
+  _tooltip.className = '_nav-link-tooltip';
+  function _ensureTooltipMounted() {
+    if (!_tooltip.parentNode) {
+      (document.body || document.documentElement).appendChild(_tooltip);
+    }
+  }
+
+  document.addEventListener('mouseover', function(event) {
+    var el = event.target;
+    while (el && el.tagName !== 'A') {
+      el = el.parentElement;
+    }
+    if (!el) return;
+    var rawHref = el.getAttribute('href');
+    if (!rawHref || rawHref.startsWith('javascript:')) return;
+    _ensureTooltipMounted();
+    // Show raw href for clean display (avoids blob: URL noise)
+    _tooltip.textContent = rawHref;
+    _tooltip.classList.add('_visible');
+  }, true);
+
+  document.addEventListener('mouseout', function(event) {
+    var el = event.target;
+    while (el && el.tagName !== 'A') {
+      el = el.parentElement;
+    }
+    if (!el) return;
+    _tooltip.classList.remove('_visible');
+  }, true);
+
+  // --- Intercept anchor tag clicks ---
+  document.addEventListener('click', function(event) {
+    var target = event.target;
+    while (target && target.tagName !== 'A') {
+      target = target.parentElement;
+    }
+    if (!target) return;
+
+    var rawHref = target.getAttribute('href');
+    if (!rawHref || rawHref.startsWith('javascript:')) return;
+
+    // Hash links: Ctrl/Cmd+click to scroll to target, plain click places cursor
+    if (rawHref.startsWith('#')) {
+      if (event.ctrlKey || event.metaKey) {
+        var targetId = rawHref.substring(1);
+        if (targetId) {
+          var targetEl = document.getElementById(targetId) || document.getElementsByName(targetId)[0];
+          if (targetEl) {
+            event.preventDefault();
+            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      }
+      return;
+    }
+
+    // Only intercept external links (http/https)
+    if (!_isExternalHref(rawHref)) return;
+
+    // Allow download links to proceed natively instead of intercepting them.
+    // The 'download' attribute signals the browser to save the file rather than navigate.
+    if (target.hasAttribute('download')) return;
+
+    event.preventDefault();
+    event.stopPropagation();
+
+    window.parent.postMessage({
+      type: 'navigate-link',
+      payload: {
+        url: target.href || rawHref,
+        target: target.target || undefined
+      },
+      timestamp: Date.now()
+    }, '*');
+  }, true);
+
+  // --- Intercept window.open calls ---
+  var _origOpen = window.open;
+  window.open = function(url, target, features) {
+    if (!url) return null;
+    var urlStr = String(url);
+
+    // Only intercept external URLs (http/https)
+    if (!_isExternalHref(urlStr)) {
+      return _origOpen.call(window, url, target, features);
+    }
+
+    var resolvedUrl;
+    try {
+      resolvedUrl = new URL(urlStr, window.location.href).href;
+    } catch (e) {
+      resolvedUrl = urlStr;
+    }
+
+    window.parent.postMessage({
+      type: 'navigate-link',
+      payload: {
+        url: resolvedUrl,
+        target: target || '_blank'
+      },
+      timestamp: Date.now()
+    }, '*');
+    return null;
+  };
+})();
+</script>
+      <script nonce="">
+        (function() {
+          if (typeof window !== 'undefined' && window.trustedTypes && window.trustedTypes.createPolicy) {
+            try {
+              window.trustedTypes.createPolicy('default', {
+                createHTML: function(input) { return input; },
+                createScript: function(input) { return input; },
+                createScriptURL: function(input) { return input; }
+              });
+            } catch (e) {
+              // Policy may already exist — ignore
+            }
+          }
+        })();
+      </script>
+      <script nonce="">
+        (function() {
+          const _0x1a2b = {
+            log: console.log,
+            info: console.info,
+            warn: console.warn,
+            error: console.error,
+            debug: console.debug
+          };
+
+          function _0x3c4d(e, t, n) {
+            try {
+              const o = {
+                type: 'iframe-console-log',
+                payload: {
+                  level: e,
+                  message: String(t),
+                  args: n.map(e => {
+                    try {
+                      return typeof e === 'object' ? JSON.stringify(e, null, 2) : String(e);
+                    } catch (e) {
+                      return '[Circular or Non-serializable]';
+                    }
+                  }),
+                  timestamp: Date.now(),
+                  stackTrace: e === 'error' ? new Error().stack : undefined
+                }
+              };
+
+              window.parent.postMessage(o, '*');
+            } catch (e) {
+              _0x1a2b[e].apply(console, [t, ...n]);
+            }
+          }
+
+          console.log = function(...args) {
+            _0x1a2b.log.apply(console, args);
+            _0x3c4d('log', args[0] || '', args.slice(1));
+          };
+
+          console.info = function(...args) {
+            _0x1a2b.info.apply(console, args);
+            _0x3c4d('info', args[0] || '', args.slice(1));
+          };
+
+          console.warn = function(...args) {
+            _0x1a2b.warn.apply(console, args);
+            _0x3c4d('warn', args[0] || '', args.slice(1));
+          };
+
+          console.error = function(...args) {
+            _0x1a2b.error.apply(console, args);
+            _0x3c4d('error', args[0] || '', args.slice(1));
+          };
+
+          console.debug = function(...args) {
+            _0x1a2b.debug.apply(console, args);
+            _0x3c4d('debug', args[0] || '', args.slice(1));
+          };
+
+          window.addEventListener('error', function(event) {
+            _0x3c4d('error', event.message, [
+              'Error in ' + event.filename + ':' + event.lineno + ':' + event.colno,
+              event.error ? event.error.stack : ''
+            ]);
+          });
+
+          window.addEventListener('unhandledrejection', function(event) {
+            _0x3c4d('error', 'Unhandled Promise Rejection', [
+              event.reason ? String(event.reason) : 'Unknown reason'
+            ]);
+          });
+
+          window.addEventListener('securitypolicyviolation', function(event) {
+            _0x3c4d('error', 'CSP Violation: ' + event.effectiveDirective, [
+              'blockedURI: ' + event.blockedURI,
+              'violatedDirective: ' + event.violatedDirective,
+              'originalPolicy: ' + event.originalPolicy,
+              'disposition: ' + event.disposition,
+              'documentURI: ' + event.documentURI
+            ]);
+          });
+
+          var _llmRequestHandlers = {};
+
+          window._useLLM = function(name, params) {
+            const requestId = Math.random().toString(36).slice(2);
+            const p = new Promise((resolve) => {
+              _llmRequestHandlers[requestId] = resolve;
+            });
+
+            const llmMsg = {
+              type: "use-llm",
+              requestId: requestId,
+              timestamp: Date.now(),
+              payload: {
+                name: name,
+                params: params,
+              },
+            };
+            window.parent.postMessage(llmMsg, '*');
+
+            return p;
+          };
+
+          window.addEventListener('message', function(event) {
+            if (event.data && event.data.type === 'update-theme') {
+              const theme = event.data.payload?.theme;
+              if (theme === 'dark' || theme === 'light') {
+                const html = document.documentElement || document.querySelector('html');
+                if (html) {
+                  html.setAttribute('data-theme', theme);
+                }
+              }
+            }
+
+            if (event.source === window.parent && event.data.type === 'llmReply') {
+              const requestId = event.data.requestId;
+              const handler = _llmRequestHandlers[requestId];
+              if (handler !== undefined) {
+                handler(event.data.payload);
+                delete _llmRequestHandlers[requestId];
+              }
+            }
+          });
+
+          
+        })();
+      </script>
+    
+      <script nonce="">
+        (function() {
+          var _appDataCfg = { apiBase: "https://copilot.microsoft.com/c/api", appId: "MxghcGnGimzNRnRk2Bzke" };
+
+          var _reqCounter = 0;
+          var _pendingRequests = {};
+
+          function _appDataRequest(method, path, body) {
+            if (!_appDataCfg) {
+              return Promise.reject(new Error('AppSDK: not configured for this artifact type.'));
+            }
+            var requestId = 'adr-' + (++_reqCounter);
+            var fullPath = _appDataCfg.appId + '/' + path;
+
+            return new Promise(function(resolve, reject) {
+              var timeoutId = setTimeout(function() {
+                delete _pendingRequests[requestId];
+                reject(new Error('AppSDK: request timed out'));
+              }, 30000);
+
+              _pendingRequests[requestId] = { resolve: resolve, reject: reject, timeoutId: timeoutId };
+
+              var requestMsg = {
+                type: 'app-data:request',
+                timestamp: Date.now(),
+                payload: { method: method, path: fullPath, body: body, requestId: requestId }
+              };
+              window.parent.postMessage(requestMsg, '*');
+            });
+          }
+
+          window.addEventListener('message', function(event) {
+            if (event.data && event.data.type === 'app-data:response') {
+              var payload = event.data.payload;
+              var pending = _pendingRequests[payload.requestId];
+              if (pending) {
+                clearTimeout(pending.timeoutId);
+                delete _pendingRequests[payload.requestId];
+                if (payload.ok) {
+                  pending.resolve(payload.data !== undefined ? payload.data : null);
+                } else {
+                  pending.reject(new Error(payload.error || 'Request failed'));
+                }
+              }
+            }
+          });
+
+          window.AppSDK = {
+            upsert: function(entityId, entityType, data) {
+              return _appDataRequest('PUT', entityId + '/' + entityType, { data: data });
+            },
+            get: function(entityId, entityType) {
+              return _appDataRequest('GET', entityId + '/' + entityType);
+            },
+            list: function(entityId) {
+              return _appDataRequest('GET', entityId);
+            },
+            delete: function(entityId, entityType) {
+              return _appDataRequest('DELETE', entityId + '/' + entityType);
+            },
+            deleteAll: function() {
+              return _appDataRequest('DELETE', '');
+            }
+          };
+        })();
+      </script>
+      
+      <script nonce="">
+        (function() {
+          var _aiReqCounter = 0;
+          var _aiPendingRequests = {};
+
+          // Per-method timeouts (ms). Image generation can take longer than chat/TTS.
+          var _aiTimeouts = { chat: 30000, generateImage: 60000, speak: 30000 };
+
+          function _appAiRequest(method, fields) {
+            var requestId = 'aai-' + (++_aiReqCounter);
+            var timeoutMs = _aiTimeouts[method] || 30000;
+
+            return new Promise(function(resolve, reject) {
+              var timeoutId = setTimeout(function() {
+                delete _aiPendingRequests[requestId];
+                reject(new Error('AppSDK.ai: request timed out'));
+              }, timeoutMs);
+
+              _aiPendingRequests[requestId] = { method: method, resolve: resolve, reject: reject, timeoutId: timeoutId };
+
+              var payload = { requestId: requestId, method: method };
+              for (var key in fields) {
+                if (Object.prototype.hasOwnProperty.call(fields, key)) {
+                  payload[key] = fields[key];
+                }
+              }
+
+              var requestMsg = {
+                type: 'app-ai:request',
+                timestamp: Date.now(),
+                payload: payload
+              };
+              window.parent.postMessage(requestMsg, '*');
+            });
+          }
+
+          window.addEventListener('message', function(event) {
+            if (event.data && event.data.type === 'app-ai:response') {
+              var payload = event.data.payload;
+              var pending = _aiPendingRequests[payload.requestId];
+              if (pending) {
+                clearTimeout(pending.timeoutId);
+                delete _aiPendingRequests[payload.requestId];
+                if (payload.ok) {
+                  if (pending.method === 'generateImage') {
+                    pending.resolve({ image: payload.image, format: payload.format });
+                  } else if (pending.method === 'speak') {
+                    pending.resolve({ audio: payload.audio, format: payload.format });
+                  } else {
+                    pending.resolve({ content: payload.content });
+                  }
+                } else {
+                  pending.reject(new Error(payload.error || 'AI request failed'));
+                }
+              }
+            }
+          });
+
+          // Attach to existing AppSDK or create it
+          window.AppSDK = window.AppSDK || {};
+          window.AppSDK.ai = {
+            chat: function(request) {
+              if (!request || !Array.isArray(request.messages) || request.messages.length === 0) {
+                return Promise.reject(new Error('AppSDK.ai: messages array is required'));
+              }
+              return _appAiRequest('chat', { messages: request.messages });
+            },
+            generateImage: function(request) {
+              if (!request || typeof request.prompt !== 'string' || request.prompt.length === 0) {
+                return Promise.reject(new Error('AppSDK.ai: prompt is required'));
+              }
+              var fields = { prompt: request.prompt };
+              if (request.aspectRatio) fields.aspectRatio = request.aspectRatio;
+              if (request.quality) fields.quality = request.quality;
+              return _appAiRequest('generateImage', fields);
+            },
+            speak: function(request) {
+              if (!request || typeof request.text !== 'string' || request.text.length === 0) {
+                return Promise.reject(new Error('AppSDK.ai: text is required'));
+              }
+              var fields = { text: request.text };
+              if (request.voice) fields.voice = request.voice;
+              if (request.audioFormat) fields.audioFormat = request.audioFormat;
+              return _appAiRequest('speak', fields);
+            }
+          };
+        })();
+      </script>
+      
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="dark">
+    <title>Clarity Equations v2 — C‑N‑R Triad</title>
+    <script nonce="" src="https://cdn.tailwindcss.com/"></script>
+    <script nonce="">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bg: { DEFAULT: '#080c14', card: '#0d1525', deep: '#050912' },
+                        border: { DEFAULT: '#1a2540', light: '#243356' },
+                        accent: { cyan: '#00d4ff', violet: '#7c3aed', emerald: '#10b981', amber: '#f59e0b', red: '#ef4444' },
+                        txt: { primary: '#e2e8f0', muted: '#64748b' }
+                    }
+                }
+            }
+        };
+    </script>
+    <script nonce="" src="https://unpkg.com/lucide@latest" defer=""></script>
+    <style>
+        :root {
+            --bg: #080c14;
+            --card: #0d1525;
+            --deep: #050912;
+            --border: #1a2540;
+            --border-light: #243356;
+            --cyan: #00d4ff;
+            --violet: #7c3aed;
+            --emerald: #10b981;
+            --amber: #f59e0b;
+            --red: #ef4444;
+            --txt: #e2e8f0;
+            --muted: #64748b;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(--txt); }
+        body { font-family: system-ui, -apple-system, sans-serif; }
+
+        .font-mono { font-family: 'Courier New', monospace !important; }
+
+        /* Custom slider styling */
+        input[type="range"] {
+            -webkit-appearance: none; appearance: none;
+            background: transparent; width: 100%; cursor: pointer;
+        }
+        input[type="range"]::-webkit-slider-runnable-track {
+            height: 6px; border-radius: 3px; background: var(--border);
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none; appearance: none;
+            width: 18px; height: 18px; border-radius: 50%;
+            margin-top: -6px; border: 2px solid var(--card);
+            box-shadow: 0 0 8px currentColor;
+        }
+        input[type="range"]::-moz-range-track {
+            height: 6px; border-radius: 3px; background: var(--border);
+        }
+        input[type="range"]::-moz-range-thumb {
+            width: 18px; height: 18px; border-radius: 50%;
+            border: 2px solid var(--card);
+            box-shadow: 0 0 8px currentColor;
+        }
+        .slider-c::-webkit-slider-thumb { background: var(--cyan); color: var(--cyan); }
+        .slider-c::-moz-range-thumb { background: var(--cyan); color: var(--cyan); }
+        .slider-n::-webkit-slider-thumb { background: var(--violet); color: var(--violet); }
+        .slider-n::-moz-range-thumb { background: var(--violet); color: var(--violet); }
+        .slider-r::-webkit-slider-thumb { background: var(--emerald); color: var(--emerald); }
+        .slider-r::-moz-range-thumb { background: var(--emerald); color: var(--emerald); }
+        .slider-tau::-webkit-slider-thumb { background: var(--amber); color: var(--amber); }
+        .slider-tau::-moz-range-thumb { background: var(--amber); color: var(--amber); }
+        .slider-tau.danger::-webkit-slider-thumb { background: var(--red); color: var(--red); }
+        .slider-tau.danger::-moz-range-thumb { background: var(--red); color: var(--red); }
+        .slider-recv::-webkit-slider-thumb { background: #94a3b8; color: #94a3b8; width: 14px; height: 14px; margin-top: -5px; }
+        .slider-recv::-moz-range-thumb { background: #94a3b8; color: #94a3b8; width: 14px; height: 14px; }
+        .slider-recv::-webkit-slider-runnable-track { height: 4px; }
+        .slider-recv::-moz-range-track { height: 4px; }
+
+        .preset-pill {
+            transition: all 0.2s ease;
+            border: 1px solid var(--border);
+            background: var(--deep);
+        }
+        .preset-pill.active {
+            border-color: var(--cyan);
+            box-shadow: 0 0 12px rgba(0,212,255,0.25);
+        }
+
+        .metric-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 10px 12px;
+        }
+
+        @keyframes pulse-glow { 0%,100% { opacity: 0.7; } 50% { opacity: 1; } }
+        .pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+
+        @keyframes torsion-border {
+            0%,100% { box-shadow: inset 0 0 0 2px transparent; }
+            50% { box-shadow: inset 0 0 20px 2px rgba(239,68,68,0.35); }
+        }
+        .torsion-alert { animation: torsion-border 1.5s ease-in-out infinite; }
+
+        @keyframes confetti-burst {
+            0% { transform: scale(0); opacity: 1; }
+            100% { transform: scale(1); opacity: 0; }
+        }
+        .confetti-dot {
+            position: absolute; width: 6px; height: 6px; border-radius: 50%;
+            animation: confetti-burst 0.8s ease-out forwards;
+            pointer-events: none;
+        }
+
+        .regime-badge { transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease; }
+
+        .tab-btn-cf { transition: all 0.15s; border-bottom: 2px solid transparent; }
+        .tab-btn-cf.active { border-bottom-color: var(--cyan); color: var(--cyan); }
+
+        #operator-log-a4c2 { scrollbar-width: thin; scrollbar-color: var(--border) var(--deep); }
+        #operator-log-a4c2::-webkit-scrollbar { width: 4px; }
+        #operator-log-a4c2::-webkit-scrollbar-track { background: var(--deep); }
+        #operator-log-a4c2::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+        .modal-overlay { transition: opacity 0.2s; }
+        .modal-box { transition: transform 0.2s; }
+
+        #main-container-x8k1 { overflow-x: auto; min-width: 1200px; }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.top-full{top:100%}.z-50{z-index:50}.mx-4{margin-left:1rem;margin-right:1rem}.mb-0\.5{margin-bottom:0.125rem}.mb-1{margin-bottom:0.25rem}.mb-1\.5{margin-bottom:0.375rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mt-0\.5{margin-top:0.125rem}.mt-1\.5{margin-top:0.375rem}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-1\.5{height:0.375rem}.h-4{height:1rem}.h-8{height:2rem}.h-full{height:100%}.h-screen{height:100vh}.min-h-0{min-height:0px}.w-12{width:3rem}.w-4{width:1rem}.w-6{width:1.5rem}.w-8{width:2rem}.w-full{width:100%}.min-w-\[380px\]{min-width:380px}.max-w-md{max-width:28rem}.flex-1{flex:1 1 0%}.flex-shrink-0{flex-shrink:0}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.overflow-auto{overflow:auto}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.rounded{border-radius:0.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-l{border-left-width:1px}.border-r{border-right-width:1px}.border-t{border-top-width:1px}.border-accent-cyan{--tw-border-opacity:1;border-color:rgb(0 212 255 / var(--tw-border-opacity, 1))}.border-accent-emerald{--tw-border-opacity:1;border-color:rgb(16 185 129 / var(--tw-border-opacity, 1))}.border-accent-red{--tw-border-opacity:1;border-color:rgb(239 68 68 / var(--tw-border-opacity, 1))}.border-accent-violet{--tw-border-opacity:1;border-color:rgb(124 58 237 / var(--tw-border-opacity, 1))}.border-border{--tw-border-opacity:1;border-color:rgb(26 37 64 / var(--tw-border-opacity, 1))}.bg-bg{--tw-bg-opacity:1;background-color:rgb(8 12 20 / var(--tw-bg-opacity, 1))}.bg-bg-card{--tw-bg-opacity:1;background-color:rgb(13 21 37 / var(--tw-bg-opacity, 1))}.bg-black\/60{background-color:rgb(0 0 0 / 0.6)}.bg-border{--tw-bg-opacity:1;background-color:rgb(26 37 64 / var(--tw-bg-opacity, 1))}.bg-red-950{--tw-bg-opacity:1;background-color:rgb(69 10 10 / var(--tw-bg-opacity, 1))}.p-1{padding:0.25rem}.p-1\.5{padding:0.375rem}.p-3{padding:0.75rem}.p-6{padding:1.5rem}.px-1\.5{padding-left:0.375rem;padding-right:0.375rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.pt-1{padding-top:0.25rem}.pt-1\.5{padding-top:0.375rem}.pt-2{padding-top:0.5rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-\[10px\]{font-size:10px}.text-\[8px\]{font-size:8px}.text-\[9px\]{font-size:9px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.tracking-wide{letter-spacing:0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-accent-amber{--tw-text-opacity:1;color:rgb(245 158 11 / var(--tw-text-opacity, 1))}.text-accent-cyan{--tw-text-opacity:1;color:rgb(0 212 255 / var(--tw-text-opacity, 1))}.text-accent-emerald{--tw-text-opacity:1;color:rgb(16 185 129 / var(--tw-text-opacity, 1))}.text-accent-red{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.text-accent-violet{--tw-text-opacity:1;color:rgb(124 58 237 / var(--tw-text-opacity, 1))}.text-txt-muted{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-txt-primary{--tw-text-opacity:1;color:rgb(226 232 240 / var(--tw-text-opacity, 1))}.opacity-40{opacity:0.4}.opacity-60{opacity:0.6}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:bg-border:hover{--tw-bg-opacity:1;background-color:rgb(26 37 64 / var(--tw-bg-opacity, 1))}.hover\:bg-border-light:hover{--tw-bg-opacity:1;background-color:rgb(36 51 86 / var(--tw-bg-opacity, 1))}.hover\:bg-cyan-950:hover{--tw-bg-opacity:1;background-color:rgb(8 51 68 / var(--tw-bg-opacity, 1))}.hover\:bg-emerald-950:hover{--tw-bg-opacity:1;background-color:rgb(2 44 34 / var(--tw-bg-opacity, 1))}.hover\:bg-violet-950:hover{--tw-bg-opacity:1;background-color:rgb(46 16 101 / var(--tw-bg-opacity, 1))}</style></head>
+<body data-id="0" class="flex flex-col h-screen">
+    <app-icon data-id="1" hidden="" data-icon="gauge" data-palette="Dark" data-selection-initialized="true"></app-icon>
+
+    <!-- HEADER -->
+    <header data-id="2" id="header-r9f2" class="flex items-center justify-between px-4 py-2 border-b border-border bg-bg flex-shrink-0" style="min-height:44px;" data-selection-initialized="true">
+        <div data-id="3" class="flex items-center gap-3" data-selection-initialized="true">
+            <div data-id="4" class="w-8 h-8 rounded border border-accent-cyan flex items-center justify-center" data-selection-initialized="true">
+                <span data-id="5" class="font-mono text-accent-cyan text-xs font-bold" data-selection-initialized="true">Ξ</span>
+            </div>
+            <h1 data-id="6" class="font-mono text-sm text-txt-primary tracking-wider" data-selection-initialized="true">RTT::Clarity v2 · C‑N‑R Triad</h1>
+        </div>
+        <div data-id="7" class="flex items-center gap-3" data-selection-initialized="true">
+            <div data-id="8" id="regime-header-badge-k3m1" class="regime-badge font-mono text-xs px-3 py-1 rounded-full border border-border" style="color: rgb(16, 185, 129); border-color: rgb(16, 185, 129); box-shadow: rgba(16, 185, 129, 0.25) 0px 0px 8px;" data-selection-initialized="true">CRYSTAL ✦</div>
+            <button data-id="9" id="help-btn-q9w3" class="p-1.5 rounded hover:bg-border-light transition-colors" title="Help" data-selection-initialized="true">
+                <i data-id="10" data-lucide="help-circle" class="w-4 h-4 text-txt-muted" data-selection-initialized="true"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <div data-id="11" id="main-container-x8k1" class="flex-1 flex flex-col overflow-hidden" data-selection-initialized="true">
+        <div data-id="12" class="flex-1 flex min-h-0" data-selection-initialized="true">
+            <!-- LEFT PANEL -->
+            <aside data-id="13" id="left-panel-v7b4" class="flex-shrink-0 flex flex-col gap-3 p-3 border-r border-border overflow-y-auto" style="width:280px;" data-selection-initialized="true">
+                <!-- C Slider -->
+                <div data-id="14" data-selection-initialized="true">
+                    <div data-id="15" class="flex items-center justify-between mb-1" data-selection-initialized="true">
+                        <label data-id="16" class="font-mono text-xs text-accent-cyan tracking-wide" data-selection-initialized="true">C (Compression)</label>
+                        <span data-id="17" id="c-val-d8k2" class="font-mono text-lg text-accent-cyan" data-selection-initialized="true">0.50</span>
+                    </div>
+                    <input data-id="18" id="slider-c-m4n7" type="range" min="0" max="1" step="0.01" value="0.50" class="slider-c w-full" data-selection-initialized="true">
+                </div>
+                <!-- N Slider -->
+                <div data-id="19" data-selection-initialized="true">
+                    <div data-id="20" class="flex items-center justify-between mb-1" data-selection-initialized="true">
+                        <label data-id="21" class="font-mono text-xs text-accent-violet tracking-wide" data-selection-initialized="true">N (Nuance)</label>
+                        <span data-id="22" id="n-val-j3p5" class="font-mono text-lg text-accent-violet" data-selection-initialized="true">0.50</span>
+                    </div>
+                    <input data-id="23" id="slider-n-x2q8" type="range" min="0" max="1" step="0.01" value="0.50" class="slider-n w-full" data-selection-initialized="true">
+                </div>
+                <!-- R Slider -->
+                <div data-id="24" data-selection-initialized="true">
+                    <div data-id="25" class="flex items-center justify-between mb-1" data-selection-initialized="true">
+                        <label data-id="26" class="font-mono text-xs text-accent-emerald tracking-wide" data-selection-initialized="true">R (Resonance)</label>
+                        <span data-id="27" id="r-val-f6t1" class="font-mono text-lg text-accent-emerald" data-selection-initialized="true">0.50</span>
+                    </div>
+                    <input data-id="28" id="slider-r-w9s3" type="range" min="0" max="1" step="0.01" value="0.50" class="slider-r w-full" data-selection-initialized="true">
+                </div>
+                <!-- Torsion Slider -->
+                <div data-id="29" class="pt-1 border-t border-border" data-selection-initialized="true">
+                    <div data-id="30" class="flex items-center justify-between mb-1" data-selection-initialized="true">
+                        <label data-id="31" class="font-mono text-xs text-accent-amber tracking-wide" data-selection-initialized="true">τ (Torsion)</label>
+                        <span data-id="32" id="tau-val-h5u9" class="font-mono text-lg text-accent-amber" style="color: var(--amber);" data-selection-initialized="true">0.30</span>
+                    </div>
+                    <div data-id="33" class="relative" data-selection-initialized="true">
+                        <input data-id="34" id="slider-tau-b1c6" type="range" min="0" max="1" step="0.01" value="0.30" class="slider-tau w-full" data-selection-initialized="true">
+                        <div data-id="35" class="absolute top-full mt-0.5 font-mono text-[9px] text-accent-amber opacity-60" style="left:70%;" data-selection-initialized="true">τ_max=0.70</div>
+                    </div>
+                </div>
+                <!-- Domain Presets -->
+                <div data-id="36" class="pt-2 border-t border-border" data-selection-initialized="true">
+                    <div data-id="37" class="font-mono text-[10px] text-txt-muted mb-2 tracking-widest uppercase" data-selection-initialized="true">Domain Weights</div>
+                    <div data-id="38" id="presets-grid-p4r1" class="grid grid-cols-2 gap-1.5" data-selection-initialized="true">
+                        <button data-id="39" data-preset="legal" class="preset-pill font-mono text-[10px] text-txt-primary px-2 py-1.5 rounded text-center" data-selection-initialized="true">Legal</button>
+                        <button data-id="40" data-preset="executive" class="preset-pill font-mono text-[10px] text-txt-primary px-2 py-1.5 rounded text-center" data-selection-initialized="true">Executive</button>
+                        <button data-id="41" data-preset="scientific" class="preset-pill font-mono text-[10px] text-txt-primary px-2 py-1.5 rounded text-center" data-selection-initialized="true">Scientific</button>
+                        <button data-id="42" data-preset="educational" class="preset-pill font-mono text-[10px] text-txt-primary px-2 py-1.5 rounded text-center active" data-selection-initialized="true">Educational</button>
+                        <button data-id="43" data-preset="philosophical" class="preset-pill font-mono text-[10px] text-txt-primary px-2 py-1.5 rounded text-center" data-selection-initialized="true">Philosophical</button>
+                        <button data-id="44" data-preset="aiprompt" class="preset-pill font-mono text-[10px] text-txt-primary px-2 py-1.5 rounded text-center" data-selection-initialized="true">AI Prompt</button>
+                    </div>
+                    <div data-id="45" id="weights-display-g7l3" class="font-mono text-[9px] text-txt-muted mt-1.5 text-center" data-selection-initialized="true">[wc=0.30 wn=0.25 wr=0.45]</div>
+                </div>
+                <!-- Receiver Profiles -->
+                <div data-id="46" class="pt-2 border-t border-border" data-selection-initialized="true">
+                    <div data-id="47" class="font-mono text-[10px] text-txt-muted mb-1.5 tracking-widest uppercase" data-selection-initialized="true">Receiver Profiles (Iᵣ)</div>
+                    <div data-id="48" class="flex flex-col gap-1" data-selection-initialized="true">
+                        <div data-id="49" class="flex items-center gap-2" data-selection-initialized="true">
+                            <span data-id="50" class="font-mono text-[9px] text-txt-muted w-12" data-selection-initialized="true">G1 Nov</span>
+                            <input data-id="51" id="recv-g1-a3b7" type="range" min="0" max="1" step="0.01" value="0.50" class="slider-recv flex-1" data-selection-initialized="true">
+                            <span data-id="52" id="recv-g1-val" class="font-mono text-[9px] text-txt-muted w-6 text-right" data-selection-initialized="true">0.50</span>
+                        </div>
+                        <div data-id="53" class="flex items-center gap-2" data-selection-initialized="true">
+                            <span data-id="54" class="font-mono text-[9px] text-txt-muted w-12" data-selection-initialized="true">G2 Beg</span>
+                            <input data-id="55" id="recv-g2-c5d9" type="range" min="0" max="1" step="0.01" value="0.65" class="slider-recv flex-1" data-selection-initialized="true">
+                            <span data-id="56" id="recv-g2-val" class="font-mono text-[9px] text-txt-muted w-6 text-right" data-selection-initialized="true">0.65</span>
+                        </div>
+                        <div data-id="57" class="flex items-center gap-2" data-selection-initialized="true">
+                            <span data-id="58" class="font-mono text-[9px] text-txt-muted w-12" data-selection-initialized="true">G3 Int</span>
+                            <input data-id="59" id="recv-g3-e7f1" type="range" min="0" max="1" step="0.01" value="0.70" class="slider-recv flex-1" data-selection-initialized="true">
+                            <span data-id="60" id="recv-g3-val" class="font-mono text-[9px] text-txt-muted w-6 text-right" data-selection-initialized="true">0.70</span>
+                        </div>
+                        <div data-id="61" class="flex items-center gap-2" data-selection-initialized="true">
+                            <span data-id="62" class="font-mono text-[9px] text-txt-muted w-12" data-selection-initialized="true">G4 Adv</span>
+                            <input data-id="63" id="recv-g4-g9h3" type="range" min="0" max="1" step="0.01" value="0.55" class="slider-recv flex-1" data-selection-initialized="true">
+                            <span data-id="64" id="recv-g4-val" class="font-mono text-[9px] text-txt-muted w-6 text-right" data-selection-initialized="true">0.55</span>
+                        </div>
+                        <div data-id="65" class="flex items-center gap-2" data-selection-initialized="true">
+                            <span data-id="66" class="font-mono text-[9px] text-txt-muted w-12" data-selection-initialized="true">G5 Exp</span>
+                            <input data-id="67" id="recv-g5-i1j5" type="range" min="0" max="1" step="0.01" value="0.60" class="slider-recv flex-1" data-selection-initialized="true">
+                            <span data-id="68" id="recv-g5-val" class="font-mono text-[9px] text-txt-muted w-6 text-right" data-selection-initialized="true">0.60</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- CENTER PANEL -->
+            <div data-id="69" id="center-panel-z2y6" class="flex-1 flex flex-col items-center justify-center p-3 min-w-[380px]" data-selection-initialized="true">
+                <div data-id="70" class="flex items-center gap-2 mb-2" data-selection-initialized="true">
+                    <span data-id="71" class="font-mono text-[10px] text-txt-muted tracking-widest uppercase" data-selection-initialized="true">C-N-R Triad Visualizer</span>
+                    <button data-id="72" id="view-toggle-r8s4" class="font-mono text-[9px] px-2 py-0.5 rounded border border-border text-accent-cyan hover:bg-border-light transition-colors" data-selection-initialized="true">Cube</button>
+                </div>
+                <canvas data-id="73" id="triad-canvas-k7l2" width="400" height="400" class="rounded-lg border border-border" style="background:#0a0f1a;"></canvas>
+                <div data-id="74" id="delta-q-display-m3n8" class="font-mono text-[10px] text-txt-muted mt-1.5" data-selection-initialized="true">Δq = 0.866</div>
+            </div>
+
+            <!-- RIGHT PANEL -->
+            <aside data-id="75" id="right-panel-u4v8" class="flex-shrink-0 flex flex-col gap-2 p-3 border-l border-border overflow-y-auto" style="width:310px;" data-selection-initialized="true">
+                <!-- Hv Card -->
+                <div data-id="76" class="metric-card" data-selection-initialized="true">
+                    <div data-id="77" class="flex items-center justify-between mb-1" data-selection-initialized="true">
+                        <span data-id="78" class="font-mono text-[10px] text-txt-muted" data-selection-initialized="true">Hᵥ (Validator Entropy)</span>
+                        <span data-id="79" id="hv-badge-c3d7" class="font-mono text-[9px] px-1.5 py-0.5 rounded bg-border text-txt-primary" data-selection-initialized="true">Diffuse</span>
+                    </div>
+                    <div data-id="80" class="font-mono text-[8px] text-txt-muted mb-1 opacity-60" data-selection-initialized="true">Hᵥ = −Σ p(∂φᵢ)·log₂(p(∂φᵢ))</div>
+                    <div data-id="81" class="flex items-center gap-2" data-selection-initialized="true">
+                        <span data-id="82" id="hv-val-e5f9" class="font-mono text-base text-txt-primary" data-selection-initialized="true">ĥᵥ = 0.500</span>
+                        <div data-id="83" class="flex-1 h-1.5 rounded-full bg-border overflow-hidden" data-selection-initialized="true">
+                            <div data-id="84" id="hv-bar-g7h1" class="h-full rounded-full transition-all duration-300" style="width: 50%; background: var(--cyan);" data-selection-initialized="true"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Wv Card -->
+                <div data-id="85" class="metric-card" data-selection-initialized="true">
+                    <div data-id="86" class="flex items-center justify-between mb-1" data-selection-initialized="true">
+                        <span data-id="87" class="font-mono text-[10px] text-txt-muted" data-selection-initialized="true">Wᵥ (Validator Width)</span>
+                        <span data-id="88" id="wv-badge-i9j3" class="font-mono text-[9px] px-1.5 py-0.5 rounded bg-border text-txt-primary" data-selection-initialized="true">Moderate</span>
+                    </div>
+                    <div data-id="89" class="font-mono text-[8px] text-txt-muted mb-1 opacity-60" data-selection-initialized="true">Wᵥ(φ,δ) = |{∂φᵢ : d(φ,∂φᵢ) ≤ δ}|</div>
+                    <div data-id="90" class="flex items-center gap-2" data-selection-initialized="true">
+                        <span data-id="91" id="wv-val-k1l5" class="font-mono text-base text-txt-primary" data-selection-initialized="true">Wᵥ = 4</span>
+                        <span data-id="92" class="font-mono text-[9px] text-txt-muted" data-selection-initialized="true">Bφ =</span>
+                        <span data-id="93" id="bphi-val-m3n7" class="font-mono text-sm text-txt-primary" data-selection-initialized="true">2.00</span>
+                    </div>
+                </div>
+                <!-- Ir Card -->
+                <div data-id="94" class="metric-card" data-selection-initialized="true">
+                    <div data-id="95" class="flex items-center justify-between mb-1" data-selection-initialized="true">
+                        <span data-id="96" class="font-mono text-[10px] text-txt-muted" data-selection-initialized="true">Iᵣ (Resonance-Integration)</span>
+                        <span data-id="97" id="ir-badge-o5p9" class="font-mono text-[9px] px-1.5 py-0.5 rounded bg-border text-txt-primary" data-selection-initialized="true">Robust</span>
+                    </div>
+                    <div data-id="98" class="font-mono text-[8px] text-txt-muted mb-1 opacity-60" data-selection-initialized="true">Iᵣ = 1 − σ(ρ)/μ(ρ)</div>
+                    <div data-id="99" class="flex items-center gap-2" data-selection-initialized="true">
+                        <span data-id="100" id="ir-val-q7r1" class="font-mono text-base text-txt-primary" data-selection-initialized="true">Iᵣ = 0.882</span>
+                        <div data-id="101" class="flex-1 h-1.5 rounded-full bg-border overflow-hidden" data-selection-initialized="true">
+                            <div data-id="102" id="ir-bar-s3t5" class="h-full rounded-full transition-all duration-300" style="width: 88.2149%; background: var(--emerald);" data-selection-initialized="true"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Xi Card (MAIN SCORE) -->
+                <div data-id="103" id="xi-card-u7v1" class="metric-card relative overflow-hidden" style="border-color: rgb(34, 197, 94);" data-selection-initialized="true">
+                    <div data-id="104" class="font-mono text-[10px] text-txt-muted mb-1" data-selection-initialized="true">Composite Ξ (Clarity Score)</div>
+                    <div data-id="105" class="font-mono text-[8px] text-txt-muted mb-2 opacity-60" data-selection-initialized="true">Ξ = wc·(1−ĥᵥ) + wn·(1−Bφ/8) + wr·Iᵣ</div>
+                    <div data-id="106" class="flex items-center gap-3" data-selection-initialized="true">
+                        <!-- SVG Gauge -->
+                        <div data-id="107" class="relative flex-shrink-0" style="width:80px;height:80px;" data-selection-initialized="true">
+                            <svg data-id="108" viewBox="0 0 100 100" class="w-full h-full" data-selection-initialized="true">
+                                <circle data-id="109" cx="50" cy="50" r="42" fill="none" stroke="#1a2540" stroke-width="6" stroke-dasharray="264" stroke-dashoffset="66" transform="rotate(135 50 50)" stroke-linecap="round"></circle>
+                                <circle data-id="110" id="xi-arc-w9x3" cx="50" cy="50" r="42" fill="none" stroke="#22c55e" stroke-width="6" stroke-dasharray="264" stroke-dashoffset="118.57553570062029" transform="rotate(135 50 50)" stroke-linecap="round" style="transition: stroke-dashoffset 0.5s ease, stroke 0.4s ease;"></circle>
+                                <!-- Ship threshold notch at 0.70 -->
+                                <circle data-id="111" cx="50" cy="50" r="42" fill="none" stroke="var(--txt)" stroke-width="2" stroke-dasharray="1 263" stroke-dashoffset="126.8" transform="rotate(135 50 50)" opacity="0.4"></circle>
+                            </svg>
+                            <div data-id="112" class="absolute inset-0 flex flex-col items-center justify-center" data-selection-initialized="true">
+                                <span data-id="113" id="xi-val-y1z5" class="font-mono text-2xl font-bold text-txt-primary" style="font-size: 28px; color: rgb(34, 197, 94);" data-selection-initialized="true">0.73</span>
+                            </div>
+                        </div>
+                        <div data-id="114" class="flex-1" data-selection-initialized="true">
+                            <div data-id="115" id="xi-label-a2b6" class="font-mono text-sm text-txt-primary mb-1" style="color: rgb(34, 197, 94);" data-selection-initialized="true">Clear</div>
+                            <div data-id="116" id="xi-ship-badge-c4d8" class="font-mono text-[10px] px-2 py-1 rounded inline-block" style="background: rgba(16, 185, 129, 0.15); color: rgb(16, 185, 129); border: 1px solid rgba(16, 185, 129, 0.3);" data-selection-initialized="true">✓ READY TO SHIP</div>
+                        </div>
+                    </div>
+                    <div data-id="117" id="confetti-container-e6f0" class="absolute inset-0 pointer-events-none" data-selection-initialized="true"></div>
+                </div>
+                <!-- False Precision Warning -->
+                <div data-id="118" id="false-precision-g8h2" class="hidden metric-card pulse-glow" style="border-color:var(--amber); background: rgba(245,158,11,0.08);" data-selection-initialized="true">
+                    <span data-id="119" class="font-mono text-[10px] text-accent-amber" data-selection-initialized="true">⚠ FALSE PRECISION DETECTED — Bφ collapsed by Ĉ</span>
+                </div>
+                <!-- Regime Card -->
+                <div data-id="120" class="metric-card" data-selection-initialized="true">
+                    <div data-id="121" class="font-mono text-[10px] text-txt-muted mb-1 tracking-widest uppercase" data-selection-initialized="true">Current Regime</div>
+                    <div data-id="122" id="regime-display-i0j4" class="font-mono text-lg text-txt-primary mb-0.5" style="color: rgb(16, 185, 129);" data-selection-initialized="true">CRYSTAL ✦</div>
+                    <div data-id="123" id="regime-cond-k2l6" class="font-mono text-[9px] text-txt-muted" data-selection-initialized="true">intermediate — nearest: CRYSTAL</div>
+                    <div data-id="124" id="regime-desc-m4n8" class="text-[10px] text-txt-muted mt-0.5 italic" data-selection-initialized="true">Between regimes. Operator intervention recommended.</div>
+                </div>
+                <!-- Repair Path -->
+                <div data-id="125" class="metric-card" data-selection-initialized="true">
+                    <div data-id="126" class="font-mono text-[10px] text-txt-muted mb-1.5 tracking-widest uppercase" data-selection-initialized="true">Repair Path</div>
+                    <div data-id="127" id="repair-path-o6p0" class="flex flex-wrap items-center gap-1 font-mono text-xs" data-selection-initialized="true"><span class="font-mono text-[10px]" style="color: rgb(16, 185, 129);">CRYSTAL ✦</span></div>
+                    <div data-id="128" id="torsion-warn-q8r2" class="hidden mt-1.5 p-1.5 rounded text-[10px] font-mono text-accent-red bg-red-950 border border-accent-red" data-selection-initialized="true">
+                        ⚡ Resolve torsion first: Ô₁ ∘ M̂ ∘ Ô₂
+                    </div>
+                </div>
+                <!-- Operator Log -->
+                <div data-id="129" class="metric-card flex flex-col" style="background:var(--deep);" data-selection-initialized="true">
+                    <div data-id="130" class="font-mono text-[10px] text-txt-muted mb-1.5 tracking-widest uppercase" data-selection-initialized="true">Operator Log</div>
+                    <div data-id="131" class="flex gap-1 mb-1.5 flex-wrap" data-selection-initialized="true">
+                        <button data-id="132" id="op-c-s0t4" class="font-mono text-[9px] px-2 py-1 rounded border border-accent-cyan text-accent-cyan hover:bg-cyan-950 transition-colors" data-selection-initialized="true">Apply Ĉ</button>
+                        <button data-id="133" id="op-n-u6v0" class="font-mono text-[9px] px-2 py-1 rounded border border-accent-violet text-accent-violet hover:bg-violet-950 transition-colors" data-selection-initialized="true">Apply N̂</button>
+                        <button data-id="134" id="op-r-w2x6" class="font-mono text-[9px] px-2 py-1 rounded border border-accent-emerald text-accent-emerald hover:bg-emerald-950 transition-colors" data-selection-initialized="true">Apply R̂</button>
+                        <button data-id="135" id="op-reset-y8z2" class="font-mono text-[9px] px-2 py-1 rounded border border-border text-txt-muted hover:bg-border transition-colors" data-selection-initialized="true">Reset φ</button>
+                    </div>
+                    <div data-id="136" id="operator-log-a4c2" class="font-mono text-[9px] text-txt-muted leading-relaxed overflow-y-auto" style="max-height:70px;" data-selection-initialized="true">
+                        <div data-id="137" class="opacity-40" data-selection-initialized="true">— awaiting operator —</div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- BOTTOM PANEL -->
+        <div data-id="138" id="bottom-panel-b6d0" class="flex-shrink-0 border-t border-border" style="height:180px;" data-selection-initialized="true">
+            <div data-id="139" class="flex items-center gap-1 px-3 pt-1.5 border-b border-border" data-selection-initialized="true">
+                <button data-id="140" data-cftab="plain" class="tab-btn-cf font-mono text-[10px] px-3 py-1.5 text-txt-muted active" data-selection-initialized="true">Plain Language</button>
+                <button data-id="141" data-cftab="grice" class="tab-btn-cf font-mono text-[10px] px-3 py-1.5 text-txt-muted" data-selection-initialized="true">Grice</button>
+                <button data-id="142" data-cftab="shannon" class="tab-btn-cf font-mono text-[10px] px-3 py-1.5 text-txt-muted" data-selection-initialized="true">Shannon</button>
+                <button data-id="143" data-cftab="clt" class="tab-btn-cf font-mono text-[10px] px-3 py-1.5 text-txt-muted" data-selection-initialized="true">CLT</button>
+                <button data-id="144" data-cftab="doublecrux" class="tab-btn-cf font-mono text-[10px] px-3 py-1.5 text-txt-muted" data-selection-initialized="true">Double-Crux</button>
+            </div>
+            <div data-id="145" id="cf-content-e8f2" class="px-3 py-2 overflow-auto" style="height:calc(100% - 38px);" data-selection-initialized="true"><table class="w-full text-left"><thead><tr><th class="font-mono text-[9px] text-txt-muted py-1 px-2 border-b border-border">Framework Construct</th><th class="font-mono text-[9px] text-txt-muted py-1 px-2 border-b border-border">RTT Equivalent</th><th class="font-mono text-[9px] text-txt-muted py-1 px-2 border-b border-border">Current Value</th></tr></thead><tbody>
+                <tr><td class="font-mono text-[10px] text-txt-muted py-1 px-2 border-b border-border">Readability</td><td class="font-mono text-[10px] text-txt-primary py-1 px-2 border-b border-border">Ĉ</td><td class="font-mono text-[10px] text-txt-primary py-1 px-2 border-b border-border">0.50</td></tr>
+                <tr><td class="font-mono text-[10px] text-txt-muted py-1 px-2 border-b border-border">Grade match</td><td class="font-mono text-[10px] text-txt-primary py-1 px-2 border-b border-border">r̂_lexical</td><td class="font-mono text-[10px] text-txt-primary py-1 px-2 border-b border-border">0.50</td></tr>
+                <tr><td class="font-mono text-[10px] text-txt-muted py-1 px-2 border-b border-border">FK equivalent</td><td class="font-mono text-[10px] text-txt-primary py-1 px-2 border-b border-border">computed</td><td class="font-mono text-[10px] text-txt-primary py-1 px-2 border-b border-border">97</td></tr>
+            </tbody></table></div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer data-id="146" id="footer-g0h4" class="flex-shrink-0 flex items-center justify-between px-4 py-1.5 border-t border-border bg-bg" data-selection-initialized="true">
+        <span data-id="147" class="font-mono text-[9px] text-txt-muted" data-selection-initialized="true">RTT::Clarity v2.0.0 · TriadicFrameworks · 2026</span>
+        <span data-id="148" class="text-[9px] text-txt-muted" data-selection-initialized="true">Made by Copilot</span>
+    </footer>
+
+    <!-- HELP MODAL -->
+    <div data-id="149" id="help-modal-i2j6" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center bg-black/60 hidden" style="opacity:0;" data-selection-initialized="true">
+        <div data-id="150" class="modal-box bg-bg-card border border-border rounded-xl p-6 max-w-md mx-4" style="transform:scale(0.95);" data-selection-initialized="true">
+            <div data-id="151" class="flex items-center justify-between mb-3" data-selection-initialized="true">
+                <h2 data-id="152" class="font-mono text-sm text-accent-cyan" data-selection-initialized="true">C‑N‑R Triad — Quick Reference</h2>
+                <button data-id="153" id="help-close-k4l8" class="p-1 hover:bg-border rounded transition-colors" data-selection-initialized="true">
+                    <i data-id="154" data-lucide="x" class="w-4 h-4 text-txt-muted" data-selection-initialized="true"></i>
+                </button>
+            </div>
+            <p data-id="155" class="text-sm text-txt-primary leading-relaxed mb-2" data-selection-initialized="true">The <strong data-id="156" data-selection-initialized="true">C‑N‑R Triad</strong> models every communicative payload φ along three orthogonal axes: <span data-id="157" class="text-accent-cyan font-mono text-xs" data-selection-initialized="true">Compression (C)</span> measures how tightly meaning is packed, <span data-id="158" class="text-accent-violet font-mono text-xs" data-selection-initialized="true">Nuance (N)</span> captures the granularity of distinctions preserved, and <span data-id="159" class="text-accent-emerald font-mono text-xs" data-selection-initialized="true">Resonance (R)</span> gauges how well the message integrates across diverse receivers.</p>
+            <p data-id="160" class="text-sm text-txt-primary leading-relaxed mb-2" data-selection-initialized="true">The composite score <span data-id="161" class="font-mono text-xs" data-selection-initialized="true">Ξ</span> (Xi) blends these three metrics with domain-specific weights to produce a single clarity readiness number — payloads scoring <span data-id="162" class="font-mono text-xs" data-selection-initialized="true">Ξ ≥ 0.70</span> are considered <em data-id="163" data-selection-initialized="true">ship-ready</em>.</p>
+            <p data-id="164" class="text-sm text-txt-primary leading-relaxed" data-selection-initialized="true">Torsion <span data-id="165" class="font-mono text-xs" data-selection-initialized="true">τ</span> represents internal contradictions that can override the regime classification — resolve torsion with the mediation operator <span data-id="166" class="font-mono text-xs" data-selection-initialized="true">M̂</span> before applying corrective operators.</p>
+        </div>
+    </div>
+
+    <script nonce="">
+    // ==================== STATE ====================
+    const state = {
+        c: 0.50, n: 0.50, r: 0.50, tau: 0.30,
+        weights: { wc: 0.30, wn: 0.25, wr: 0.45 },
+        activePreset: 'educational',
+        receivers: [0.50, 0.65, 0.70, 0.55, 0.60],
+        viewMode: 'cube', // 'cube' or 'triangle'
+        cubeAngle: 0,
+        rotating: true,
+        logs: [],
+        activeTab: 'plain',
+        prevXi: 0.5,
+        animXi: 0.5
+    };
+
+    const PRESETS = {
+        legal:        { wc: 0.20, wn: 0.55, wr: 0.25 },
+        executive:    { wc: 0.45, wn: 0.20, wr: 0.35 },
+        scientific:   { wc: 0.30, wn: 0.50, wr: 0.20 },
+        educational:  { wc: 0.30, wn: 0.25, wr: 0.45 },
+        philosophical:{ wc: 0.15, wn: 0.65, wr: 0.20 },
+        aiprompt:     { wc: 0.40, wn: 0.35, wr: 0.25 }
+    };
+
+    // ==================== METRICS ENGINE ====================
+    function computeMetrics(c, n, r, tau, weights, receivers) {
+        // Hv (Validator Entropy) - simulated
+        const hv_hat = (1 - c) * 0.8 + (1 - n) * 0.2;
+        const hvClamped = Math.max(0, Math.min(1, hv_hat));
+
+        // Hv status
+        let hvStatus;
+        if (hvClamped < 0.10) hvStatus = 'Singular';
+        else if (hvClamped < 0.30) hvStatus = 'Sharp';
+        else if (hvClamped < 0.55) hvStatus = 'Diffuse';
+        else if (hvClamped < 0.75) hvStatus = 'Cloudy';
+        else hvStatus = 'Entropic';
+
+        // Wv (Validator Width) - simulated
+        let wv = Math.round(8 * (1 - c) * (1 - n) * 1.5 + 1);
+        wv = Math.max(1, Math.min(8, wv));
+
+        let wvStatus;
+        if (wv <= 2) wvStatus = 'Narrow';
+        else if (wv <= 5) wvStatus = 'Moderate';
+        else wvStatus = 'Wide';
+
+        // Bphi
+        const bphi = wv * hvClamped;
+
+        // Ir (Resonance-Integration) from receiver profiles
+        const rhos = receivers.map(ri => ri * r);
+        const mean = rhos.reduce((a, b) => a + b, 0) / rhos.length;
+        const variance = rhos.reduce((a, b) => a + (b - mean) ** 2, 0) / rhos.length;
+        const sigma = Math.sqrt(variance);
+        let ir = mean > 0.001 ? 1 - (sigma / mean) : 0;
+        ir = Math.max(0, Math.min(1, ir));
+
+        let irStatus;
+        if (ir >= 0.90) irStatus = 'Universal';
+        else if (ir >= 0.75) irStatus = 'Robust';
+        else if (ir >= 0.55) irStatus = 'Context-Dependent';
+        else if (ir >= 0.35) irStatus = 'Fragile';
+        else irStatus = 'Non-Integrating';
+
+        // Xi (Composite Score)
+        const xi = weights.wc * (1 - hvClamped) + weights.wn * (1 - bphi / 8) + weights.wr * ir;
+        const xiClamped = Math.max(0, Math.min(1, xi));
+
+        let xiLabel;
+        if (xiClamped >= 0.85) xiLabel = 'Crystal';
+        else if (xiClamped >= 0.70) xiLabel = 'Clear';
+        else if (xiClamped >= 0.55) xiLabel = 'Hazy';
+        else if (xiClamped >= 0.40) xiLabel = 'Murky';
+        else xiLabel = 'Opaque';
+
+        // Regime detection
+        let regime, regimeCond, regimeDesc, regimeSymbol, regimeColor;
+        if (tau >= 0.70) {
+            regime = 'TORSION'; regimeSymbol = '⚡'; regimeColor = '#ef4444';
+            regimeCond = 'τ ≥ 0.70';
+            regimeDesc = 'Internal contradiction overrides structural classification.';
+        } else if (c >= 0.8 && n >= 0.8 && r >= 0.8) {
+            regime = 'CRYSTAL'; regimeSymbol = '✦'; regimeColor = '#10b981';
+            regimeCond = 'c ≥ 0.8, n ≥ 0.8, r ≥ 0.8';
+            regimeDesc = 'Maximum clarity — compressed, nuanced, resonant.';
+        } else if (c >= 0.8 && n < 0.5 && r >= 0.6) {
+            regime = 'BLADE'; regimeSymbol = '⚔'; regimeColor = '#00d4ff';
+            regimeCond = 'c ≥ 0.8, n < 0.5, r ≥ 0.6';
+            regimeDesc = 'Sharp and resonant, but nuance sacrificed.';
+        } else if (c < 0.5 && n >= 0.8 && r < 0.6) {
+            regime = 'FOG'; regimeSymbol = '◎'; regimeColor = '#7c3aed';
+            regimeCond = 'c < 0.5, n ≥ 0.8, r < 0.6';
+            regimeDesc = 'Rich in nuance but diffuse — fails to land.';
+        } else if (c < 0.5 && n < 0.5 && r >= 0.8) {
+            regime = 'ECHO'; regimeSymbol = '◈'; regimeColor = '#f59e0b';
+            regimeCond = 'c < 0.5, n < 0.5, r ≥ 0.8';
+            regimeDesc = 'Emotionally resonant but lacks structure and depth.';
+        } else if (c < 0.4 && n < 0.4 && r < 0.4) {
+            regime = 'VOID'; regimeSymbol = '✕'; regimeColor = '#ef4444';
+            regimeCond = 'c < 0.4, n < 0.4, r < 0.4';
+            regimeDesc = 'No clarity signal — payload is noise.';
+        } else {
+            // Intermediate: classify nearest
+            const dists = {
+                CRYSTAL: Math.sqrt((1-c)**2+(1-n)**2+(1-r)**2),
+                BLADE: Math.sqrt((1-c)**2+(n-0)**2+(1-r)**2)*1.1,
+                FOG: Math.sqrt((c-0)**2+(1-n)**2+(r-0)**2)*1.1,
+                ECHO: Math.sqrt((c-0)**2+(n-0)**2+(1-r)**2)*1.1,
+                VOID: Math.sqrt(c**2+n**2+r**2)*1.1
+            };
+            const nearest = Object.entries(dists).sort((a,b)=>a[1]-b[1])[0][0];
+            const symMap = {CRYSTAL:'✦',BLADE:'⚔',FOG:'◎',ECHO:'◈',VOID:'✕'};
+            const colMap = {CRYSTAL:'#10b981',BLADE:'#00d4ff',FOG:'#7c3aed',ECHO:'#f59e0b',VOID:'#ef4444'};
+            regime = nearest;
+            regimeSymbol = symMap[nearest];
+            regimeColor = colMap[nearest];
+            regimeCond = 'intermediate — nearest: ' + nearest;
+            regimeDesc = 'Between regimes. Operator intervention recommended.';
+        }
+
+        // Repair path
+        let repairPath = [];
+        if (tau >= 0.70) {
+            repairPath = [{label:'TORSION',color:'#ef4444'},{label:'→',color:null},{label:'M̂',color:'#f59e0b',chip:true},{label:'→',color:null},{label:'resolve',color:'#64748b'}];
+        } else if (regime === 'VOID') {
+            repairPath = [{label:'VOID',color:'#ef4444'},{label:'→',color:null},{label:'N̂',color:'#7c3aed',chip:true},{label:'→',color:null},{label:'FOG',color:'#7c3aed'},{label:'→',color:null},{label:'Ĉ',color:'#00d4ff',chip:true},{label:'→',color:null},{label:'CRYSTAL',color:'#10b981'}];
+        } else if (regime === 'BLADE') {
+            repairPath = [{label:'BLADE',color:'#00d4ff'},{label:'→',color:null},{label:'N̂',color:'#7c3aed',chip:true},{label:'→',color:null},{label:'CRYSTAL',color:'#10b981'}];
+        } else if (regime === 'FOG') {
+            repairPath = [{label:'FOG',color:'#7c3aed'},{label:'→',color:null},{label:'Ĉ',color:'#00d4ff',chip:true},{label:'→',color:null},{label:'CRYSTAL',color:'#10b981'}];
+        } else if (regime === 'ECHO') {
+            repairPath = [{label:'ECHO',color:'#f59e0b'},{label:'→',color:null},{label:'N̂',color:'#7c3aed',chip:true},{label:'→',color:null},{label:'CRYSTAL',color:'#10b981'}];
+        } else if (regime === 'CRYSTAL') {
+            repairPath = [{label:'CRYSTAL ✦',color:'#10b981'}];
+        } else {
+            repairPath = [{label:regime,color:regimeColor},{label:'→',color:null},{label:'Ĉ',color:'#00d4ff',chip:true},{label:'+',color:null},{label:'N̂',color:'#7c3aed',chip:true},{label:'→',color:null},{label:'CRYSTAL',color:'#10b981'}];
+        }
+
+        // False precision
+        const falsePrecision = hvClamped < 0.2 && c > 0.7 && n < 0.5;
+
+        // Delta q (distance to CRYSTAL)
+        const deltaQ = Math.sqrt((1-c)**2 + (1-n)**2 + (1-r)**2);
+
+        return { hv_hat: hvClamped, hvStatus, wv, wvStatus, bphi, ir, irStatus, xi: xiClamped, xiLabel, regime, regimeSymbol, regimeColor, regimeCond, regimeDesc, repairPath, falsePrecision, deltaQ };
+    }
+
+    // ==================== DOM REFERENCES ====================
+    const sliderC = document.getElementById('slider-c-m4n7');
+    const sliderN = document.getElementById('slider-n-x2q8');
+    const sliderR = document.getElementById('slider-r-w9s3');
+    const sliderTau = document.getElementById('slider-tau-b1c6');
+    const cVal = document.getElementById('c-val-d8k2');
+    const nVal = document.getElementById('n-val-j3p5');
+    const rVal = document.getElementById('r-val-f6t1');
+    const tauVal = document.getElementById('tau-val-h5u9');
+    const weightsDisplay = document.getElementById('weights-display-g7l3');
+    const canvas = document.getElementById('triad-canvas-k7l2');
+    const ctx = canvas.getContext('2d');
+    const viewToggle = document.getElementById('view-toggle-r8s4');
+    const deltaQDisplay = document.getElementById('delta-q-display-m3n8');
+
+    const hvBadge = document.getElementById('hv-badge-c3d7');
+    const hvVal = document.getElementById('hv-val-e5f9');
+    const hvBar = document.getElementById('hv-bar-g7h1');
+    const wvBadge = document.getElementById('wv-badge-i9j3');
+    const wvVal = document.getElementById('wv-val-k1l5');
+    const bphiVal = document.getElementById('bphi-val-m3n7');
+    const irBadge = document.getElementById('ir-badge-o5p9');
+    const irVal = document.getElementById('ir-val-q7r1');
+    const irBar = document.getElementById('ir-bar-s3t5');
+    const xiArc = document.getElementById('xi-arc-w9x3');
+    const xiVal = document.getElementById('xi-val-y1z5');
+    const xiLabel = document.getElementById('xi-label-a2b6');
+    const xiShipBadge = document.getElementById('xi-ship-badge-c4d8');
+    const xiCard = document.getElementById('xi-card-u7v1');
+    const confettiContainer = document.getElementById('confetti-container-e6f0');
+    const falsePrecisionEl = document.getElementById('false-precision-g8h2');
+    const regimeDisplay = document.getElementById('regime-display-i0j4');
+    const regimeCond = document.getElementById('regime-cond-k2l6');
+    const regimeDesc = document.getElementById('regime-desc-m4n8');
+    const regimeHeaderBadge = document.getElementById('regime-header-badge-k3m1');
+    const repairPathEl = document.getElementById('repair-path-o6p0');
+    const torsionWarn = document.getElementById('torsion-warn-q8r2');
+    const operatorLog = document.getElementById('operator-log-a4c2');
+    const cfContent = document.getElementById('cf-content-e8f2');
+    const mainContainer = document.getElementById('main-container-x8k1');
+
+    const recvSliders = [
+        document.getElementById('recv-g1-a3b7'),
+        document.getElementById('recv-g2-c5d9'),
+        document.getElementById('recv-g3-e7f1'),
+        document.getElementById('recv-g4-g9h3'),
+        document.getElementById('recv-g5-i1j5')
+    ];
+    const recvVals = [
+        document.getElementById('recv-g1-val'),
+        document.getElementById('recv-g2-val'),
+        document.getElementById('recv-g3-val'),
+        document.getElementById('recv-g4-val'),
+        document.getElementById('recv-g5-val')
+    ];
+
+    // ==================== CANVAS DRAWING ====================
+    function project3D(x, y, z, angle) {
+        const ca = Math.cos(angle), sa = Math.sin(angle);
+        const rx = x * ca - z * sa;
+        const rz = x * sa + z * ca;
+        const scale = 140;
+        const px = 200 + rx * scale - y * scale * 0.15;
+        const py = 320 - y * scale * 0.85 - rz * scale * 0.5;
+        return [px, py];
+    }
+
+    function drawCube(metrics) {
+        const angle = state.cubeAngle;
+        ctx.clearRect(0, 0, 400, 400);
+
+        // Cube vertices
+        const verts = [
+            [0,0,0],[1,0,0],[1,1,0],[0,1,0],
+            [0,0,1],[1,0,1],[1,1,1],[0,1,1]
+        ];
+        const projected = verts.map(v => project3D(v[0], v[1], v[2], angle));
+        const edges = [[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]];
+
+        // Regime zone overlays (simplified: highlight a face region)
+        const zoneAlpha = 0.06;
+        // CRYSTAL zone near (1,1,1)
+        const crystalPts = [project3D(0.7,0.7,0.7,angle), project3D(1,0.7,0.7,angle), project3D(1,1,0.7,angle), project3D(0.7,1,0.7,angle)];
+        ctx.fillStyle = 'rgba(16,185,129,' + 0.12 + ')';
+        ctx.beginPath();
+        ctx.moveTo(crystalPts[0][0], crystalPts[0][1]);
+        crystalPts.slice(1).forEach(p => ctx.lineTo(p[0], p[1]));
+        ctx.closePath(); ctx.fill();
+
+        // VOID zone near (0,0,0)
+        const voidPts = [project3D(0,0,0,angle), project3D(0.35,0,0,angle), project3D(0.35,0.35,0,angle), project3D(0,0.35,0,angle)];
+        ctx.fillStyle = 'rgba(239,68,68,' + 0.1 + ')';
+        ctx.beginPath();
+        ctx.moveTo(voidPts[0][0], voidPts[0][1]);
+        voidPts.slice(1).forEach(p => ctx.lineTo(p[0], p[1]));
+        ctx.closePath(); ctx.fill();
+
+        // Draw edges
+        ctx.strokeStyle = '#1a2540';
+        ctx.lineWidth = 1;
+        edges.forEach(([a, b]) => {
+            ctx.beginPath();
+            ctx.moveTo(projected[a][0], projected[a][1]);
+            ctx.lineTo(projected[b][0], projected[b][1]);
+            ctx.stroke();
+        });
+
+        // Axis arrows beyond cube
+        const axLen = 1.2;
+        // C axis (x) - cyan
+        const cEnd = project3D(axLen, 0, 0, angle);
+        const cStart = project3D(-0.1, 0, 0, angle);
+        ctx.strokeStyle = '#00d4ff'; ctx.lineWidth = 1.5;
+        ctx.beginPath(); ctx.moveTo(cStart[0], cStart[1]); ctx.lineTo(cEnd[0], cEnd[1]); ctx.stroke();
+        ctx.fillStyle = '#00d4ff'; ctx.font = '12px "Courier New", monospace';
+        ctx.fillText('C', cEnd[0]+4, cEnd[1]+4);
+
+        // N axis (y) - violet
+        const nEnd = project3D(0, axLen, 0, angle);
+        const nStart = project3D(0, -0.1, 0, angle);
+        ctx.strokeStyle = '#7c3aed'; ctx.lineWidth = 1.5;
+        ctx.beginPath(); ctx.moveTo(nStart[0], nStart[1]); ctx.lineTo(nEnd[0], nEnd[1]); ctx.stroke();
+        ctx.fillStyle = '#7c3aed';
+        ctx.fillText('N', nEnd[0]+4, nEnd[1]-4);
+
+        // R axis (z) - emerald
+        const rEnd = project3D(0, 0, axLen, angle);
+        const rStart = project3D(0, 0, -0.1, angle);
+        ctx.strokeStyle = '#10b981'; ctx.lineWidth = 1.5;
+        ctx.beginPath(); ctx.moveTo(rStart[0], rStart[1]); ctx.lineTo(rEnd[0], rEnd[1]); ctx.stroke();
+        ctx.fillStyle = '#10b981';
+        ctx.fillText('R', rEnd[0]-14, rEnd[1]-2);
+
+        // Corner labels
+        const origin = project3D(0, 0, 0, angle);
+        const crystal = project3D(1, 1, 1, angle);
+        ctx.fillStyle = '#ef4444'; ctx.font = '9px "Courier New", monospace';
+        ctx.fillText('VOID', origin[0]-24, origin[1]+14);
+        ctx.fillStyle = '#10b981';
+        ctx.fillText('CRYSTAL★', crystal[0]-10, crystal[1]-8);
+
+        // Projection lines from point to axes (dashed)
+        const pt = project3D(state.c, state.n, state.r, angle);
+        const ptX = project3D(state.c, 0, 0, angle);
+        const ptY = project3D(0, state.n, 0, angle);
+        const ptZ = project3D(0, 0, state.r, angle);
+        ctx.setLineDash([3, 4]);
+        ctx.strokeStyle = 'rgba(226,232,240,0.15)'; ctx.lineWidth = 1;
+        [ptX, ptY, ptZ].forEach(target => {
+            ctx.beginPath(); ctx.moveTo(pt[0], pt[1]); ctx.lineTo(target[0], target[1]); ctx.stroke();
+        });
+        ctx.setLineDash([]);
+
+        // Clarity Defect arc (line from point toward CRYSTAL corner)
+        ctx.strokeStyle = 'rgba(226,232,240,0.2)'; ctx.lineWidth = 1;
+        ctx.setLineDash([2, 3]);
+        ctx.beginPath(); ctx.moveTo(pt[0], pt[1]); ctx.lineTo(crystal[0], crystal[1]); ctx.stroke();
+        ctx.setLineDash([]);
+        const midArc = [(pt[0]+crystal[0])/2, (pt[1]+crystal[1])/2];
+        ctx.fillStyle = '#64748b'; ctx.font = '9px "Courier New", monospace';
+        ctx.fillText('Δq='+metrics.deltaQ.toFixed(2), midArc[0]+5, midArc[1]-3);
+
+        // Torsion pulsing overlay
+        if (state.tau >= 0.70) {
+            const pulseAlpha = 0.05 + 0.05 * Math.sin(Date.now() / 300);
+            ctx.fillStyle = 'rgba(239,68,68,' + pulseAlpha + ')';
+            ctx.fillRect(0, 0, 400, 400);
+        }
+
+        // Live point — glowing dot
+        const glowPhase = 0.6 + 0.4 * Math.sin(Date.now() / 500);
+        const ptColor = metrics.regimeColor;
+        ctx.beginPath();
+        ctx.arc(pt[0], pt[1], 10, 0, Math.PI * 2);
+        const grad = ctx.createRadialGradient(pt[0], pt[1], 0, pt[0], pt[1], 10);
+        grad.addColorStop(0, ptColor);
+        grad.addColorStop(1, 'transparent');
+        ctx.fillStyle = grad;
+        ctx.globalAlpha = glowPhase;
+        ctx.fill();
+        ctx.globalAlpha = 1;
+        ctx.beginPath();
+        ctx.arc(pt[0], pt[1], 4, 0, Math.PI * 2);
+        ctx.fillStyle = ptColor;
+        ctx.fill();
+        ctx.strokeStyle = 'rgba(255,255,255,0.5)'; ctx.lineWidth = 1;
+        ctx.stroke();
+    }
+
+    function drawTriangle(metrics) {
+        ctx.clearRect(0, 0, 400, 400);
+        const cx = 200, cy = 210, rad = 150;
+        // Equilateral triangle vertices: C (bottom-left), N (top), R (bottom-right)
+        const vC = [cx - rad * Math.cos(Math.PI/6), cy + rad * Math.sin(Math.PI/6)];
+        const vN = [cx, cy - rad];
+        const vR = [cx + rad * Math.cos(Math.PI/6), cy + rad * Math.sin(Math.PI/6)];
+
+        // Triangle fill
+        ctx.beginPath();
+        ctx.moveTo(vC[0], vC[1]); ctx.lineTo(vN[0], vN[1]); ctx.lineTo(vR[0], vR[1]); ctx.closePath();
+        ctx.fillStyle = 'rgba(26,37,64,0.3)'; ctx.fill();
+        ctx.strokeStyle = '#1a2540'; ctx.lineWidth = 1.5; ctx.stroke();
+
+        // Vertex labels
+        ctx.font = '13px "Courier New", monospace';
+        ctx.fillStyle = '#00d4ff'; ctx.fillText('C', vC[0]-18, vC[1]+16);
+        ctx.fillStyle = '#7c3aed'; ctx.fillText('N', vN[0]-4, vN[1]-10);
+        ctx.fillStyle = '#10b981'; ctx.fillText('R', vR[0]+8, vR[1]+16);
+
+        // Barycentric coords
+        const total = state.c + state.n + state.r || 1;
+        const bc = state.c / total, bn = state.n / total, br = state.r / total;
+        const px = bc * vC[0] + bn * vN[0] + br * vR[0];
+        const py = bc * vC[1] + bn * vN[1] + br * vR[1];
+
+        // Grid lines inside triangle
+        ctx.strokeStyle = 'rgba(26,37,64,0.5)'; ctx.lineWidth = 0.5;
+        for (let i = 1; i < 4; i++) {
+            const t = i / 4;
+            const a1 = [vC[0]+(vN[0]-vC[0])*t, vC[1]+(vN[1]-vC[1])*t];
+            const a2 = [vR[0]+(vN[0]-vR[0])*t, vR[1]+(vN[1]-vR[1])*t];
+            ctx.beginPath(); ctx.moveTo(a1[0],a1[1]); ctx.lineTo(a2[0],a2[1]); ctx.stroke();
+            const b1 = [vC[0]+(vR[0]-vC[0])*t, vC[1]+(vR[1]-vC[1])*t];
+            const b2 = [vN[0]+(vR[0]-vN[0])*t, vN[1]+(vR[1]-vN[1])*t];
+            ctx.beginPath(); ctx.moveTo(b1[0],b1[1]); ctx.lineTo(b2[0],b2[1]); ctx.stroke();
+            const c1 = [vC[0]+(vN[0]-vC[0])*t, vC[1]+(vN[1]-vC[1])*t];
+            const c2 = [vC[0]+(vR[0]-vC[0])*t, vC[1]+(vR[1]-vC[1])*t];
+            ctx.beginPath(); ctx.moveTo(c1[0],c1[1]); ctx.lineTo(c2[0],c2[1]); ctx.stroke();
+        }
+
+        // Point
+        const glowPhase = 0.6 + 0.4 * Math.sin(Date.now() / 500);
+        const ptColor = metrics.regimeColor;
+        ctx.beginPath(); ctx.arc(px, py, 12, 0, Math.PI * 2);
+        const grad = ctx.createRadialGradient(px, py, 0, px, py, 12);
+        grad.addColorStop(0, ptColor); grad.addColorStop(1, 'transparent');
+        ctx.fillStyle = grad; ctx.globalAlpha = glowPhase; ctx.fill(); ctx.globalAlpha = 1;
+        ctx.beginPath(); ctx.arc(px, py, 5, 0, Math.PI * 2);
+        ctx.fillStyle = ptColor; ctx.fill();
+        ctx.strokeStyle = 'rgba(255,255,255,0.5)'; ctx.lineWidth = 1; ctx.stroke();
+
+        // Value labels near point
+        ctx.fillStyle = '#64748b'; ctx.font = '9px "Courier New", monospace';
+        ctx.fillText(`(${state.c.toFixed(2)}, ${state.n.toFixed(2)}, ${state.r.toFixed(2)})`, px+10, py-8);
+    }
+
+    // ==================== CROSS-FRAMEWORK TABLES ====================
+    function renderCFTab(tab, m) {
+        const c = state.c, n = state.n, r = state.r, tau = state.tau;
+        const tableStyle = 'w-full text-left';
+        const thStyle = 'font-mono text-[9px] text-txt-muted py-1 px-2 border-b border-border';
+        const tdStyle = 'font-mono text-[10px] text-txt-primary py-1 px-2 border-b border-border';
+        const tdM = 'font-mono text-[10px] text-txt-muted py-1 px-2 border-b border-border';
+        const check = '<span style="color:#10b981;">✓ SATISFIED</span>';
+        const warn = '<span style="color:#f59e0b;">⚠ VIOLATED</span>';
+        const checkIf = (cond) => cond ? check : warn;
+
+        let html = '';
+        if (tab === 'plain') {
+            const fk = Math.round(206.835 - 170 * m.hv_hat - 50 * (1-r));
+            html = `<table class="${tableStyle}"><thead><tr><th class="${thStyle}">Framework Construct</th><th class="${thStyle}">RTT Equivalent</th><th class="${thStyle}">Current Value</th></tr></thead><tbody>
+                <tr><td class="${tdM}">Readability</td><td class="${tdStyle}">Ĉ</td><td class="${tdStyle}">${c.toFixed(2)}</td></tr>
+                <tr><td class="${tdM}">Grade match</td><td class="${tdStyle}">r̂_lexical</td><td class="${tdStyle}">${r.toFixed(2)}</td></tr>
+                <tr><td class="${tdM}">FK equivalent</td><td class="${tdStyle}">computed</td><td class="${tdStyle}">${fk}</td></tr>
+            </tbody></table>`;
+        } else if (tab === 'grice') {
+            html = `<table class="${tableStyle}"><thead><tr><th class="${thStyle}">Maxim</th><th class="${thStyle}">RTT Guard</th><th class="${thStyle}">Status</th></tr></thead><tbody>
+                <tr><td class="${tdM}">Quantity</td><td class="${tdStyle}">Ĉ+Hᵥ guard</td><td class="${tdStyle}">${checkIf(m.hv_hat < 0.3 && m.hv_hat > 0.0)}</td></tr>
+                <tr><td class="${tdM}">Quality</td><td class="${tdStyle}">Bφ &lt; 3.0</td><td class="${tdStyle}">${checkIf(m.bphi < 3)}</td></tr>
+                <tr><td class="${tdM}">Relation</td><td class="${tdStyle}">r ≥ 0.5</td><td class="${tdStyle}">${checkIf(r >= 0.5)}</td></tr>
+                <tr><td class="${tdM}">Manner</td><td class="${tdStyle}">τ &lt; 0.4</td><td class="${tdStyle}">${checkIf(tau < 0.4)}</td></tr>
+            </tbody></table>`;
+        } else if (tab === 'shannon') {
+            html = `<table class="${tableStyle}"><thead><tr><th class="${thStyle}">Shannon Concept</th><th class="${thStyle}">RTT Mapping</th><th class="${thStyle}">Value</th></tr></thead><tbody>
+                <tr><td class="${tdM}">H(X)</td><td class="${tdStyle}">Hᵥ</td><td class="${tdStyle}">${m.hv_hat.toFixed(3)}</td></tr>
+                <tr><td class="${tdM}">I(X;Y)</td><td class="${tdStyle}">Iᵣ</td><td class="${tdStyle}">${m.ir.toFixed(3)}</td></tr>
+                <tr><td class="${tdM}">Noise</td><td class="${tdStyle}">τ</td><td class="${tdStyle}">${tau.toFixed(2)}</td></tr>
+                <tr><td class="${tdM}">Reliable Tx</td><td class="${tdStyle}">Ξ ≥ 0.70</td><td class="${tdStyle}">${m.xi >= 0.70 ? '<span style="color:#10b981;">YES</span>' : '<span style="color:#ef4444;">NO</span>'}</td></tr>
+            </tbody></table>`;
+        } else if (tab === 'clt') {
+            html = `<table class="${tableStyle}"><thead><tr><th class="${thStyle}">CLT Factor</th><th class="${thStyle}">RTT Mapping</th><th class="${thStyle}">Value</th></tr></thead><tbody>
+                <tr><td class="${tdM}">Intrinsic Load (IL)</td><td class="${tdStyle}">N</td><td class="${tdStyle}">${n.toFixed(2)}</td></tr>
+                <tr><td class="${tdM}">Extraneous Load (EL)</td><td class="${tdStyle}">τ</td><td class="${tdStyle}">${tau.toFixed(2)}</td></tr>
+                <tr><td class="${tdM}">Germane Load (GL)</td><td class="${tdStyle}">R</td><td class="${tdStyle}">${r.toFixed(2)}</td></tr>
+                <tr><td class="${tdM}">WM Limit</td><td class="${tdStyle}">Wᵥ ≤ 5</td><td class="${tdStyle}">${checkIf(m.wv <= 5)}</td></tr>
+            </tbody></table>`;
+        } else if (tab === 'doublecrux') {
+            // Ir across G1,G2
+            const rhos12 = [state.receivers[0]*r, state.receivers[1]*r];
+            const mean12 = (rhos12[0]+rhos12[1])/2;
+            const resolveStatus = m.ir >= 0.8 ? '<span style="color:#10b981;">RESOLVED</span>' : m.ir >= 0.5 ? '<span style="color:#f59e0b;">IN PROGRESS</span>' : '<span style="color:#ef4444;">REQUIRES N̂</span>';
+            html = `<table class="${tableStyle}"><thead><tr><th class="${thStyle}">Double-Crux Element</th><th class="${thStyle}">RTT Mapping</th><th class="${thStyle}">Status</th></tr></thead><tbody>
+                <tr><td class="${tdM}">Crux located</td><td class="${tdStyle}">V̂ applied</td><td class="${tdStyle}">${m.hv_hat > 0.5 ? 'High-entropy crux found' : 'Low-entropy — no dominant crux'}</td></tr>
+                <tr><td class="${tdM}">Iᵣ across {G1,G2}</td><td class="${tdStyle}">subset Iᵣ</td><td class="${tdStyle}">${mean12.toFixed(3)}</td></tr>
+                <tr><td class="${tdM}">Resolution</td><td class="${tdStyle}">convergence</td><td class="${tdStyle}">${resolveStatus}</td></tr>
+            </tbody></table>`;
+        }
+        cfContent.innerHTML = html;
+    }
+
+    // ==================== CONFETTI EFFECT ====================
+    let lastCrystalTime = 0;
+    function emitConfetti() {
+        const now = Date.now();
+        if (now - lastCrystalTime < 3000) return;
+        lastCrystalTime = now;
+        const colors = ['#00d4ff','#7c3aed','#10b981','#f59e0b','#e2e8f0','#00d4ff','#10b981','#7c3aed'];
+        for (let i = 0; i < 8; i++) {
+            const dot = document.createElement('div');
+            dot.className = 'confetti-dot';
+            dot.style.background = colors[i];
+            dot.style.left = '50%';
+            dot.style.top = '50%';
+            const angle = (i / 8) * Math.PI * 2;
+            const dist = 40 + Math.random() * 20;
+            dot.style.setProperty('--tx', Math.cos(angle) * dist + 'px');
+            dot.style.setProperty('--ty', Math.sin(angle) * dist + 'px');
+            dot.style.animation = `confetti-burst 0.7s ease-out forwards`;
+            dot.style.transform = `translate(${Math.cos(angle)*dist}px, ${Math.sin(angle)*dist}px)`;
+            confettiContainer.appendChild(dot);
+            setTimeout(() => dot.remove(), 800);
+        }
+    }
+
+    // ==================== UPDATE EVERYTHING ====================
+    function update() {
+        const m = computeMetrics(state.c, state.n, state.r, state.tau, state.weights, state.receivers);
+
+        // Slider displays
+        cVal.textContent = state.c.toFixed(2);
+        nVal.textContent = state.n.toFixed(2);
+        rVal.textContent = state.r.toFixed(2);
+        tauVal.textContent = state.tau.toFixed(2);
+        tauVal.style.color = state.tau >= 0.70 ? 'var(--red)' : 'var(--amber)';
+        sliderTau.className = state.tau >= 0.70 ? 'slider-tau danger w-full' : 'slider-tau w-full';
+
+        // Receiver displays
+        state.receivers.forEach((v, i) => { recvVals[i].textContent = v.toFixed(2); });
+
+        // Hv
+        hvVal.textContent = 'ĥᵥ = ' + m.hv_hat.toFixed(3);
+        hvBadge.textContent = m.hvStatus;
+        hvBar.style.width = (m.hv_hat * 100) + '%';
+
+        // Wv
+        wvVal.textContent = 'Wᵥ = ' + m.wv;
+        wvBadge.textContent = m.wvStatus;
+        bphiVal.textContent = m.bphi.toFixed(2);
+
+        // Ir
+        irVal.textContent = 'Iᵣ = ' + m.ir.toFixed(3);
+        irBadge.textContent = m.irStatus;
+        irBar.style.width = (m.ir * 100) + '%';
+
+        // Xi gauge
+        state.animXi += (m.xi - state.animXi) * 0.15;
+        const arcTotal = 198; // 75% of 264
+        const arcOffset = 264 - (state.animXi * arcTotal);
+        xiArc.setAttribute('stroke-dashoffset', arcOffset);
+        let xiColor;
+        if (m.xi >= 0.85) xiColor = '#10b981';
+        else if (m.xi >= 0.70) xiColor = '#22c55e';
+        else if (m.xi >= 0.55) xiColor = '#f59e0b';
+        else if (m.xi >= 0.40) xiColor = '#f97316';
+        else xiColor = '#ef4444';
+        xiArc.setAttribute('stroke', xiColor);
+
+        xiVal.textContent = m.xi.toFixed(2);
+        xiVal.style.color = xiColor;
+        xiLabel.textContent = m.xiLabel;
+        xiLabel.style.color = xiColor;
+        xiCard.style.borderColor = xiColor;
+
+        if (m.xi >= 0.70) {
+            xiShipBadge.textContent = '✓ READY TO SHIP';
+            xiShipBadge.style.background = 'rgba(16,185,129,0.15)';
+            xiShipBadge.style.color = '#10b981';
+            xiShipBadge.style.border = '1px solid rgba(16,185,129,0.3)';
+        } else {
+            xiShipBadge.textContent = '✕ REPAIR NEEDED';
+            xiShipBadge.style.background = 'rgba(239,68,68,0.15)';
+            xiShipBadge.style.color = '#ef4444';
+            xiShipBadge.style.border = '1px solid rgba(239,68,68,0.3)';
+        }
+
+        // Crystal celebration
+        if (m.xi >= 0.85 && state.prevXi < 0.85) {
+            emitConfetti();
+        }
+        state.prevXi = m.xi;
+
+        // False precision
+        falsePrecisionEl.classList.toggle('hidden', !m.falsePrecision);
+
+        // Regime
+        regimeDisplay.textContent = m.regime + ' ' + m.regimeSymbol;
+        regimeDisplay.style.color = m.regimeColor;
+        regimeCond.textContent = m.regimeCond;
+        regimeDesc.textContent = m.regimeDesc;
+        regimeHeaderBadge.textContent = m.regime + ' ' + m.regimeSymbol;
+        regimeHeaderBadge.style.color = m.regimeColor;
+        regimeHeaderBadge.style.borderColor = m.regimeColor;
+        regimeHeaderBadge.style.boxShadow = '0 0 8px ' + m.regimeColor + '40';
+
+        // Repair path
+        repairPathEl.innerHTML = '';
+        m.repairPath.forEach(item => {
+            const span = document.createElement('span');
+            if (item.chip) {
+                span.className = 'font-mono text-[10px] px-1.5 py-0.5 rounded border';
+                span.style.color = item.color;
+                span.style.borderColor = item.color;
+                span.style.background = item.color + '15';
+            } else if (item.color) {
+                span.className = 'font-mono text-[10px]';
+                span.style.color = item.color;
+            } else {
+                span.className = 'font-mono text-[10px] text-txt-muted';
+            }
+            span.textContent = item.label;
+            repairPathEl.appendChild(span);
+        });
+
+        // Torsion warnings
+        torsionWarn.classList.toggle('hidden', state.tau < 0.70);
+        mainContainer.classList.toggle('torsion-alert', state.tau >= 0.70);
+
+        // Delta Q
+        deltaQDisplay.textContent = 'Δq = ' + m.deltaQ.toFixed(3);
+
+        // Cross-framework tab
+        renderCFTab(state.activeTab, m);
+
+        // Canvas
+        if (state.viewMode === 'cube') drawCube(m);
+        else drawTriangle(m);
+    }
+
+    // ==================== ANIMATION LOOP ====================
+    function animLoop() {
+        if (state.rotating && state.viewMode === 'cube') {
+            state.cubeAngle += 0.003;
+        }
+        update();
+        requestAnimationFrame(animLoop);
+    }
+
+    // ==================== EVENT BINDING ====================
+
+    // Icons — progressive enhancement
+    if (typeof lucide !== "undefined" && typeof lucide.createIcons === "function") {
+        lucide.createIcons();
+    }
+
+    // Sliders
+    sliderC.addEventListener('input', function() { state.c = parseFloat(this.value); });
+    sliderN.addEventListener('input', function() { state.n = parseFloat(this.value); });
+    sliderR.addEventListener('input', function() { state.r = parseFloat(this.value); });
+    sliderTau.addEventListener('input', function() { state.tau = parseFloat(this.value); });
+
+    // Receiver sliders
+    recvSliders.forEach((sl, i) => {
+        sl.addEventListener('input', function() { state.receivers[i] = parseFloat(this.value); });
+    });
+
+    // Presets
+    document.querySelectorAll('[data-preset]').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const key = this.dataset.preset;
+            const preset = PRESETS[key];
+            if (!preset) return;
+            state.weights = { ...preset };
+            state.activePreset = key;
+            document.querySelectorAll('[data-preset]').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            weightsDisplay.textContent = `[wc=${preset.wc.toFixed(2)} wn=${preset.wn.toFixed(2)} wr=${preset.wr.toFixed(2)}]`;
+        });
+    });
+
+    // View toggle
+    viewToggle.addEventListener('click', function() {
+        state.viewMode = state.viewMode === 'cube' ? 'triangle' : 'cube';
+        this.textContent = state.viewMode === 'cube' ? 'Cube' : 'Triangle';
+    });
+
+    // Operator buttons
+    function addLog(msg) {
+        const now = new Date();
+        const ts = now.toTimeString().slice(0, 8);
+        state.logs.push(ts + ' · ' + msg);
+        if (state.logs.length > 5) state.logs.shift();
+        operatorLog.innerHTML = state.logs.map(l => '<div>' + l + '</div>').join('');
+        operatorLog.scrollTop = operatorLog.scrollHeight;
+    }
+
+    function clamp01(v) { return Math.max(0, Math.min(1, v)); }
+
+    document.getElementById('op-c-s0t4').addEventListener('click', function() {
+        state.c = clamp01(state.c + 0.10);
+        state.n = clamp01(state.n - 0.05);
+        sliderC.value = state.c;
+        sliderN.value = state.n;
+        addLog(`Ĉ ∘ φ → c=${state.c.toFixed(2)} n=${state.n.toFixed(2)} r=${state.r.toFixed(2)}`);
+    });
+
+    document.getElementById('op-n-u6v0').addEventListener('click', function() {
+        state.n = clamp01(state.n + 0.10);
+        state.c = clamp01(state.c - 0.05);
+        sliderN.value = state.n;
+        sliderC.value = state.c;
+        addLog(`N̂ ∘ φ → c=${state.c.toFixed(2)} n=${state.n.toFixed(2)} r=${state.r.toFixed(2)}`);
+    });
+
+    document.getElementById('op-r-w2x6').addEventListener('click', function() {
+        state.r = clamp01(state.r + 0.08);
+        sliderR.value = state.r;
+        addLog(`R̂ ∘ φ → c=${state.c.toFixed(2)} n=${state.n.toFixed(2)} r=${state.r.toFixed(2)}`);
+    });
+
+    document.getElementById('op-reset-y8z2').addEventListener('click', function() {
+        state.c = 0.50; state.n = 0.50; state.r = 0.50; state.tau = 0.30;
+        sliderC.value = 0.50; sliderN.value = 0.50; sliderR.value = 0.50; sliderTau.value = 0.30;
+        state.receivers = [0.50, 0.65, 0.70, 0.55, 0.60];
+        recvSliders.forEach((sl, i) => { sl.value = state.receivers[i]; });
+        addLog('φ RESET → default (0.50, 0.50, 0.50)');
+    });
+
+    // Cross-framework tabs
+    document.querySelectorAll('[data-cftab]').forEach(btn => {
+        btn.addEventListener('click', function() {
+            state.activeTab = this.dataset.cftab;
+            document.querySelectorAll('[data-cftab]').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+
+    // Help modal
+    const helpModal = document.getElementById('help-modal-i2j6');
+    const helpBox = helpModal.querySelector('.modal-box');
+    document.getElementById('help-btn-q9w3').addEventListener('click', function() {
+        helpModal.classList.remove('hidden');
+        requestAnimationFrame(() => {
+            helpModal.style.opacity = '1';
+            helpBox.style.transform = 'scale(1)';
+        });
+    });
+    document.getElementById('help-close-k4l8').addEventListener('click', closeHelp);
+    helpModal.addEventListener('click', function(e) {
+        if (e.target === helpModal) closeHelp();
+    });
+    function closeHelp() {
+        helpModal.style.opacity = '0';
+        helpBox.style.transform = 'scale(0.95)';
+        setTimeout(() => helpModal.classList.add('hidden'), 200);
+    }
+
+    // Start animation loop
+    animLoop();
+    </script>
+<script nonce="">
+  var activeElement = null;
+  var selectionEnabled = false;
+  var selectableElements = [];
+  var SELECTABLE_SELECTOR = '[data-id]';
+  var SKIP_TAGS = {'HTML':1,'HEAD':1,'BODY':1,'SCRIPT':1,'STYLE':1,'LINK':1,'META':1,'PATH':1,'CIRCLE':1,'RECT':1,'POLYGON':1,'POLYLINE':1,'LINE':1,'ELLIPSE':1,'G':1,'DEFS':1,'CLIPPATH':1,'USE':1,'SYMBOL':1,'IFRAME':1,'CANVAS':1};
+  var INTERACTIVE_TAGS = {'INPUT':1,'TEXTAREA':1,'SELECT':1,'BUTTON':1,'A':1,'VIDEO':1,'AUDIO':1,'DETAILS':1,'SUMMARY':1};
+
+
+  function getSlotId(el) {
+    return el.getAttribute('data-id') || '';
+  }
+
+  function isImageElement(el) {
+    var tag = el.tagName.toUpperCase();
+    if (tag === 'IMG' || tag === 'SVG') return true;
+    var children = el.children;
+    for (var i = 0; i < children.length; i++) {
+      var childTag = children[i].tagName.toUpperCase();
+      if (childTag === 'IMG' || childTag === 'SVG') return true;
+    }
+    return false;
+  }
+
+  function isInteractiveElement(el) {
+    return INTERACTIVE_TAGS[el.tagName.toUpperCase()] === 1;
+  }
+
+  function hasInteractiveChild(el) {
+    var children = el.children;
+    for (var i = 0; i < children.length; i++) {
+      if (INTERACTIVE_TAGS[children[i].tagName.toUpperCase()] === 1) return true;
+    }
+    return false;
+  }
+
+  function isSelectableElement(el) {
+    var tag = el.tagName.toUpperCase();
+    if (SKIP_TAGS[tag]) return false;
+    // The backend curates which elements receive data-id, so any
+    // non-skipped element with that attribute is considered meaningful
+    // and should be selectable (text, images, interactive, or visual).
+    return true;
+  }
+
+  function deactivateElement() {
+    if (activeElement) {
+      activeElement.style.removeProperty('outline');
+      activeElement.style.removeProperty('outline-offset');
+      activeElement.style.removeProperty('border-radius');
+    }
+  }
+
+  function activateElement(el) {
+    activeElement = el;
+    el.style.setProperty('outline', '2.5px solid #987AEE', 'important');
+    el.style.setProperty('outline-offset', '2px', 'important');
+    el.style.setProperty('border-radius', '6px', 'important');
+  }
+
+  function getWrappingHtml(el) {
+    var current = el;
+    while (current && current !== document.body) {
+      var parent = current.parentElement;
+      if (parent && parent.hasAttribute('data-id') && parent !== el) {
+        return parent.outerHTML;
+      }
+      current = parent;
+    }
+    return el.outerHTML;
+  }
+
+  function getInteractiveValue(el) {
+    var tag = el.tagName.toUpperCase();
+    if (tag === 'INPUT' || tag === 'TEXTAREA') return el.value || el.placeholder || '';
+    if (tag === 'SELECT') return el.options && el.selectedIndex >= 0 ? el.options[el.selectedIndex].text : '';
+    if (tag === 'A') return (el.textContent || '') + (el.href ? ' (' + el.href + ')' : '');
+    if (tag === 'VIDEO' || tag === 'AUDIO') return el.src || '';
+    return el.textContent || '';
+  }
+
+  function getElementType(el) {
+    if (isImageElement(el)) return 'image';
+    if (isInteractiveElement(el) || hasInteractiveChild(el)) return 'interactive';
+    return 'text';
+  }
+
+  function getElementValue(el) {
+    var elType = getElementType(el);
+    if (elType === 'image') return '';
+    if (isInteractiveElement(el)) return getInteractiveValue(el);
+    if (hasInteractiveChild(el)) {
+      var children = el.children;
+      for (var i = 0; i < children.length; i++) {
+        if (INTERACTIVE_TAGS[children[i].tagName.toUpperCase()] === 1) {
+          return getInteractiveValue(children[i]);
+        }
+      }
+    }
+    return el.textContent || '';
+  }
+
+  function getElementDescription(el) {
+    var text = (el.textContent || '').trim();
+    if (text) return text.length > 100 ? text.substring(0, 100) : text;
+    var img = el.tagName.toUpperCase() === 'IMG' ? el : el.querySelector('img');
+    if (img) {
+      var alt = img.getAttribute('alt');
+      if (alt && alt.trim()) return alt.trim();
+    }
+    var ariaLabel = el.getAttribute('aria-label');
+    if (ariaLabel && ariaLabel.trim()) return ariaLabel.trim();
+    var title = el.getAttribute('title');
+    if (title && title.trim()) return title.trim();
+    if (el.placeholder && el.placeholder.trim()) return el.placeholder.trim();
+    return '';
+  }
+
+  function notifyElementSelected(el, action) {
+    var rect = el.getBoundingClientRect();
+    var elementType = getElementType(el);
+    var value = getElementValue(el);
+    var description = getElementDescription(el);
+    var selectionHtml = getWrappingHtml(el);
+    var msg = {
+      type: 'element_selected',
+      slotId: getSlotId(el),
+      elementType: elementType,
+      value: value,
+      description: description,
+      selectionHtml: selectionHtml,
+      bounds: { top: rect.top, left: rect.left, width: rect.width, height: rect.height }
+    };
+    if (action) msg.action = action;
+    window.parent.postMessage(msg, '*');
+  }
+
+
+  function setupElement(el) {
+    if (el.dataset.selectionInitialized) return;
+    el.dataset.selectionInitialized = 'true';
+    if (selectionEnabled) el.style.cursor = 'pointer';
+
+    el.addEventListener('click', function(e) {
+      if (!selectionEnabled) return;
+      e.stopPropagation();
+      if (activeElement !== el) {
+        deactivateElement();
+        activateElement(el);
+      }
+      notifyElementSelected(el);
+    });
+
+    el.addEventListener('mouseenter', function() {
+      if (!selectionEnabled) return;
+      if (el !== activeElement) {
+        el.style.setProperty('outline', '1.5px solid rgba(59, 130, 246, 0.5)', 'important');
+        el.style.setProperty('outline-offset', '2px', 'important');
+        el.style.setProperty('border-radius', '6px', 'important');
+      }
+    });
+
+    el.addEventListener('mouseleave', function() {
+      if (!selectionEnabled) return;
+      if (el !== activeElement) {
+        el.style.removeProperty('outline');
+        el.style.removeProperty('outline-offset');
+        el.style.removeProperty('border-radius');
+      }
+    });
+  }
+
+  function initializeElements() {
+    var allElements = document.querySelectorAll(SELECTABLE_SELECTOR);
+    for (var i = 0; i < allElements.length; i++) {
+      if (isSelectableElement(allElements[i])) {
+        setupElement(allElements[i]);
+      }
+    }
+    rebuildSelectableList();
+  }
+
+  // Rebuild the cached list of keyboard-navigable elements.
+  // Called by initializeElements (at init + on DOM mutations).
+  function rebuildSelectableList() {
+    var all = document.querySelectorAll('[data-selection-initialized]');
+    var result = [];
+    for (var i = 0; i < all.length; i++) {
+      var el = all[i];
+      var rect = el.getBoundingClientRect();
+      if (rect.width === 0 || rect.height === 0) continue;
+      var style = window.getComputedStyle(el);
+      if (style.display === 'none' || style.visibility === 'hidden' || style.opacity === '0') continue;
+      result.push(el);
+    }
+    selectableElements = result;
+  }
+
+
+  function setupBodyListeners() {
+    if (!document.body) return;
+
+    // Capture-phase handler: block all native interactions (links, buttons, forms)
+    // when selection is enabled. Our element click handlers still fire normally.
+    document.addEventListener('click', function(e) {
+      if (selectionEnabled) {
+        e.preventDefault();
+      }
+    }, true);
+
+    document.body.addEventListener('click', function(e) {
+      if (!selectionEnabled) return;
+      var closestInitialized = e.target.closest('[data-selection-initialized]');
+      if (closestInitialized) return;
+
+      deactivateElement();
+      activeElement = null;
+      window.parent.postMessage({ type: 'element_deselected' }, '*');
+    });
+  }
+
+
+  window.addEventListener('message', function(e) {
+    var data = e.data;
+    if (data && data.type === 'slideCommand' && data.payload) {
+      data = { type: data.payload.command, ...data.payload.data };
+    }
+
+    if (data.type === 'clear_selection') {
+      deactivateElement();
+      activeElement = null;
+      window.parent.postMessage({ type: 'element_deselected' }, '*');
+      return;
+    }
+
+    if (data.type === 'enable_selection') {
+      selectionEnabled = true;
+      var allEls = document.querySelectorAll('[data-selection-initialized]');
+      for (var i = 0; i < allEls.length; i++) {
+        allEls[i].style.cursor = 'pointer';
+      }
+      return;
+    }
+
+    if (data.type === 'disable_selection') {
+      selectionEnabled = false;
+      deactivateElement();
+      activeElement = null;
+      var allEls2 = document.querySelectorAll('[data-selection-initialized]');
+      for (var j = 0; j < allEls2.length; j++) {
+        allEls2[j].style.cursor = '';
+      }
+      window.parent.postMessage({ type: 'element_deselected' }, '*');
+      return;
+    }
+  });
+
+
+  var isMouseDown = false;
+  document.addEventListener('mousedown', function() { isMouseDown = true; });
+  document.addEventListener('mouseup', function() { isMouseDown = false; });
+
+  // Auto-activate the first selectable element when iframe gains keyboard focus
+  // (skip if the focus came from a mouse click).
+  window.addEventListener('focus', function() {
+    if (isMouseDown) return;
+    if (!selectionEnabled) return;
+    if (!activeElement) {
+      if (selectableElements.length > 0) {
+        activateElement(selectableElements[0]);
+        notifyElementSelected(selectableElements[0]);
+      }
+    }
+  });
+
+  // Keyboard navigation: Tab cycles elements, Enter triggers Ask Copilot,
+  // Escape deselects.
+  document.addEventListener('keydown', function(e) {
+    if (!selectionEnabled) return;
+
+    if (e.key === 'Escape') {
+      if (activeElement) {
+        e.preventDefault();
+        deactivateElement();
+        activeElement = null;
+        window.parent.postMessage({ type: 'element_deselected' }, '*');
+      }
+      return;
+    }
+
+    if (e.key === 'Enter') {
+      if (activeElement) {
+        e.preventDefault();
+        // Re-send element_selected with action so the parent triggers Ask Copilot
+        notifyElementSelected(activeElement, 'ask_copilot');
+      }
+      return;
+    }
+
+    if (e.key !== 'Tab') return;
+    e.preventDefault();
+
+    if (selectableElements.length === 0) return;
+
+    var currentIndex = activeElement ? selectableElements.indexOf(activeElement) : -1;
+    var nextIndex;
+    var atBoundary = false;
+
+    if (e.shiftKey) {
+      if (currentIndex <= 0) {
+        atBoundary = true;
+      } else {
+        nextIndex = currentIndex - 1;
+      }
+    } else {
+      if (currentIndex >= selectableElements.length - 1) {
+        atBoundary = true;
+      } else {
+        nextIndex = currentIndex + 1;
+      }
+    }
+
+    // At boundary: tell parent to move focus outside the iframe.
+    if (atBoundary) {
+      deactivateElement();
+      activeElement = null;
+      window.parent.postMessage({
+        type: 'tab_exit',
+        direction: e.shiftKey ? 'backward' : 'forward'
+      }, '*');
+      return;
+    }
+
+    deactivateElement();
+    activateElement(selectableElements[nextIndex]);
+    notifyElementSelected(selectableElements[nextIndex]);
+    selectableElements[nextIndex].scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  });
+
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      initializeElements();
+      setupBodyListeners();
+    });
+  } else {
+    initializeElements();
+    setupBodyListeners();
+  }
+
+  var mutationTimer = null;
+  var observer = new MutationObserver(function() {
+    if (mutationTimer) return;
+    mutationTimer = setTimeout(function() {
+      mutationTimer = null;
+      initializeElements();
+    }, 200);
+  });
+  observer.observe(document.documentElement, { childList: true, subtree: true });
+</script>
+</body></html>
