@@ -1,24 +1,8 @@
+<img width="1194" height="672" alt="education_module" src="https://github.com/user-attachments/assets/b07bddaa-b4ca-4ec2-9c0e-9c373866a28c" />
+
 # Education  
 
 - [`education-core_module.json`](education-core_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🎓Education%20Core-🧭Navigation%20First%20Pedagogy-4c8eda?style=for-the-badge" alt="🎓Education Core | 🧭Navigation First Pedagogy"/>
-
-# Education — TriadicFrameworks
 
 ## AI‑Ready Summary
 The Education module is the front door for students, teachers, and AI agents exploring the TriadicFrameworks canon. It provides structured learning pathways, domain‑specific submodules, and reference documents that map scientific, philosophical, and cultural knowledge into triadic, operator‑first, resonance‑aware formats. This index links every child module and every parent‑level reference document to support clear navigation and cross‑module learning.
@@ -104,3 +88,19 @@ Use this page as the central hub for all educational content. Each submodule inc
 
 ## Why This Index Matters
 The Education module is where students and AIs begin building fluency in triadic thinking. By organizing the canon into clear submodules and reference documents, this index ensures that learning pathways remain coherent, discoverable, and aligned with the broader structure of TriadicFrameworks. Every linked page is designed to be minimal, operator‑first, and resonance‑aware, supporting both human learners and AI agents.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🎓Education%20Core-🧭Navigation%20First%20Pedagogy-4c8eda?style=for-the-badge" alt="🎓Education Core | 🧭Navigation First Pedagogy"/>
