@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="post-ASML_era_image" src="https://github.com/user-attachments/assets/63c199d1-fec6-48b7-89d7-d88586947ed8" />
+
 # post-ASML_era
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/post-ASML_era/module.json) — Agentic module schema role assignments
