@@ -27,7 +27,6 @@
   .link.implements{stroke:#c0392b;}
   .link.uses{stroke:#95a5a6;stroke-dasharray:3,5;}
   .link.contains-ref{stroke:#555;stroke-dasharray:2,4;}
-  .link.gates{stroke:#10b981;stroke-width:2;stroke-dasharray:4,3;}
   .node circle{stroke:#0a0a0f;stroke-width:1.5;cursor:pointer;transition:opacity 0.2s;}
   .node circle:hover{stroke:#fff;stroke-width:2.5;opacity:1!important;}
   .node text{font-size:9px;fill:#ccc;pointer-events:none;text-anchor:middle;}
@@ -72,26 +71,25 @@
   <div class="sub">S3 Spine · Functional Canon Graph · R5 · v6.0</div>
   <input id="search-box" placeholder="Search modules…" type="text">
   <div class="stat-grid">
-    <div class="stat"><div class="val">197</div><div class="lbl">A3 Modules</div></div>
-    <div class="stat"><div class="val">1,454</div><div class="lbl">Files</div></div>
-    <div class="stat"><div class="val">196</div><div class="lbl">Hierarchy Edges</div></div>
-    <div class="stat"><div class="val">72</div><div class="lbl">Directed Edges</div></div>
-    <div class="stat"><div class="val">31</div><div class="lbl">R5 New</div></div>
+    <div class="stat"><div class="val">196</div><div class="lbl">A3 Modules</div></div>
+    <div class="stat"><div class="val">1,450</div><div class="lbl">Files</div></div>
+    <div class="stat"><div class="val">195</div><div class="lbl">Hierarchy Edges</div></div>
+    <div class="stat"><div class="val">65</div><div class="lbl">Directed Edges</div></div>
+    <div class="stat"><div class="val">30</div><div class="lbl">R5 New</div></div>
     <div class="stat"><div class="val">11</div><div class="lbl">I2 Excluded</div></div>
   </div>
   <table class="ctx-grid">
     <tr><td>Canon</td><td>active · s3-spine · r5</td></tr>
-    <tr><td>Version</td><td>6.1 (R5-clarity)</td></tr>
-    <tr><td>Coherence</td><td>stable · seven-overlay</td></tr>
+    <tr><td>Version</td><td>6.0 (R5-stable)</td></tr>
+    <tr><td>Coherence</td><td>stable · six-overlay</td></tr>
     <tr><td>Drift</td><td>bounded · pack-locked</td></tr>
-    <tr><td>Generated</td><td>2026-08-08</td></tr>
+    <tr><td>Generated</td><td>2026-08-03</td></tr>
     <tr><td>Source</td><td>S3-Spine-Overlay-Pack-v2.0</td></tr>
   </table>
   <div class="section-head">Spine Overlay Pack <span class="spine-badge">NEW R5</span></div>
   <div style="font-size:10px;color:#aaa;line-height:1.6;">
     <div>① Structural · ② Drift · ③ Coherence</div>
     <div>④ Substrate · ⑤ Dimensional · ⑥ Domain</div>
-    <div style="color:#00d4ff;">⑦ Clarity <span style="font-size:9px;opacity:.7;">· RTT::Clarity v2 · R5</span></div>
     <div style="color:#1abc9c;margin-top:4px;"><a href="https://www.triadicframeworks.org/spine/" style="color:#1abc9c;text-decoration:none;">→ triadicframeworks.org/spine/</a></div>
   </div>
   <div id="legend">
@@ -2776,14 +2774,6 @@ const GRAPH_DATA = {
       "type": "narration-grammar",
       "label": "Grammar \u2192 Spine Pack"
     }
-  ,
-    {"source":"spine-structural","target":"spine-clarity","type":"feeds"},
-    {"source":"spine-drift","target":"spine-clarity","type":"feeds"},
-    {"source":"spine-coherence","target":"spine-clarity","type":"feeds"},
-    {"source":"spine-substrate","target":"spine-clarity","type":"feeds"},
-    {"source":"spine-dimensional","target":"spine-clarity","type":"feeds"},
-    {"source":"spine-domain","target":"spine-clarity","type":"feeds"},
-    {"source":"spine-clarity","target":"spine-coherence","type":"gates"}
   ]
 };
 
