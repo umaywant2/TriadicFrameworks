@@ -1,5 +1,7 @@
 # post-ASML_era
 
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/post-ASML_era/module.json) — Agentic module schema role assignments
+
 **Module:** `docs/post-ASML_era`
 **Status:** Active · Revision 1.0.0
 **Updated:** 2026-08-08
