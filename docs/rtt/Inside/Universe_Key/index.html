@@ -1,1 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <title>Universe Key — Live-Agent Module</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        spaceblack: '#02040a',
+                        deepblue: '#050f1e',
+                        panelbg: 'rgba(5,15,30,0.92)',
+                        cyan: { 400: '#00f5ff', 500: '#00d4dd', 600: '#00a8b0', 900: '#002a2e' },
+                        magenta: { 400: '#ff00cc', 500: '#cc00a3', 600: '#99007a', 900: '#2e0025' },
+                        gold: { 400: '#ffd700', 500: '#ccac00', 600: '#998100', 900: '#2e2700' },
+                        panel: { 100: 'rgba(5,15,30,0.92)', 200: 'rgba(8,22,44,0.95)', 300: 'rgba(12,30,55,0.9)' },
+                    },
+                    fontFamily: {
+                        mono: ['"Share Tech Mono"', 'monospace'],
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        :root {
+            --cyan: #00f5ff;
+            --magenta: #ff00cc;
+            --gold: #ffd700;
+            --space-black: #02040a;
+            --panel-bg: rgba(5,15,30,0.92);
+            --panel-border: rgba(0,245,255,0.25);
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Share Tech Mono', monospace;
+            background: var(--space-black);
+            color: #c8d6e5;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        #starfield { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+        .app-content { position: relative; z-index: 1; }
+        .panel {
+            background: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            border-radius: 8px;
+            backdrop-filter: blur(8px);
+        }
+        .panel-cyan { border-color: rgba(0,245,255,0.3); box-shadow: 0 0 15px rgba(0,245,255,0.07), inset 0 0 20px rgba(0,245,255,0.03); }
+        .panel-magenta { border-color: rgba(255,0,204,0.3); box-shadow: 0 0 15px rgba(255,0,204,0.07), inset 0 0 20px rgba(255,0,204,0.03); }
+        .panel-gold { border-color: rgba(255,215,0,0.3); box-shadow: 0 0 15px rgba(255,215,0,0.07), inset 0 0 20px rgba(255,215,0,0.03); }
+        .glow-text-cyan { color: var(--cyan); text-shadow: 0 0 20px rgba(0,245,255,0.5), 0 0 40px rgba(0,245,255,0.2); }
+        .glow-text-magenta { color: var(--magenta); text-shadow: 0 0 20px rgba(255,0,204,0.5), 0 0 40px rgba(255,0,204,0.2); }
+        .glow-text-gold { color: var(--gold); text-shadow: 0 0 20px rgba(255,215,0,0.5), 0 0 40px rgba(255,215,0,0.2); }
+        .glow-title {
+            color: var(--cyan);
+            text-shadow: 0 0 30px rgba(0,245,255,0.6), 0 0 60px rgba(0,245,255,0.3), 0 0 100px rgba(0,245,255,0.15);
+        }
+        .status-dot {
+            width: 8px; height: 8px; border-radius: 50%; display: inline-block;
+            animation: pulse-dot 2s ease-in-out infinite;
+        }
+        .status-live { background: #00ff88; box-shadow: 0 0 6px #00ff88; }
+        .status-stale { background: #ffaa00; box-shadow: 0 0 6px #ffaa00; }
+        .status-error { background: #ff3344; box-shadow: 0 0 6px #ff3344; }
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.8); }
+        }
+        .scanline-header {
+            position: relative; overflow: hidden;
+        }
+        .scanline-header::after {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(0,245,255,0.03) 2px,
+                rgba(0,245,255,0.03) 4px
+            );
+            animation: scanline-scroll 4s linear infinite;
+            pointer-events: none;
+        }
+        @keyframes scanline-scroll {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(20px); }
+        }
+        .hdi-gauge-track {
+            height: 10px; border-radius: 5px;
+            background: linear-gradient(90deg, #00ff88 0%, #ffaa00 33%, #ff8800 66%, #ff3344 100%);
+            opacity: 0.3;
+        }
+        .hdi-gauge-fill {
+            height: 10px; border-radius: 5px;
+            background: linear-gradient(90deg, #00ff88 0%, #ffaa00 33%, #ff8800 66%, #ff3344 100%);
+            transition: width 0.8s ease;
+        }
+        .ring-progress {
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+        .ring-track { stroke: rgba(255,255,255,0.08); }
+        .ring-value { transition: stroke-dashoffset 0.8s ease; }
+        .alert-banner {
+            border-radius: 6px; padding: 10px 16px;
+            font-size: 0.8rem; margin-bottom: 8px;
+            animation: alert-pulse 2s ease-in-out infinite;
+        }
+        .alert-red {
+            background: rgba(255,51,68,0.12); border: 1px solid rgba(255,51,68,0.5);
+            color: #ff6677;
+        }
+        .alert-amber {
+            background: rgba(255,170,0,0.12); border: 1px solid rgba(255,170,0,0.5);
+            color: #ffcc44;
+        }
+        .alert-magenta {
+            background: rgba(255,0,204,0.15); border: 1px solid rgba(255,0,204,0.6);
+            color: #ff66dd;
+        }
+        @keyframes alert-pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        @keyframes glitch {
+            0%, 90%, 100% { transform: translate(0); opacity: 1; }
+            92% { transform: translate(-2px, 1px); opacity: 0.8; }
+            94% { transform: translate(2px, -1px); opacity: 0.9; }
+            96% { transform: translate(-1px, -1px); opacity: 0.7; }
+            98% { transform: translate(1px, 1px); opacity: 0.85; }
+        }
+        .glitch-text { animation: glitch 3s ease-in-out infinite; }
+        .event-log-scroll {
+            max-height: 240px; overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(0,245,255,0.3) transparent;
+        }
+        .event-log-scroll::-webkit-scrollbar { width: 4px; }
+        .event-log-scroll::-webkit-scrollbar-track { background: transparent; }
+        .event-log-scroll::-webkit-scrollbar-thumb { background: rgba(0,245,255,0.3); border-radius: 2px; }
+        .kp-bar-segment {
+            height: 18px; flex: 1; border-radius: 2px; margin: 0 1px; opacity: 0.25;
+            transition: opacity 0.5s ease;
+        }
+        .kp-bar-segment.active { opacity: 1; }
+        .drift-bar-container {
+            height: 14px; border-radius: 7px; background: rgba(255,255,255,0.06);
+            position: relative; overflow: hidden;
+        }
+        .drift-bar-indicator {
+            position: absolute; top: 0; height: 100%;
+            background: var(--cyan); border-radius: 7px;
+            transition: left 0.8s ease, width 0.8s ease;
+        }
+        .drift-bar-center {
+            position: absolute; top: 0; bottom: 0; left: 50%;
+            width: 2px; background: rgba(255,255,255,0.3);
+            transform: translateX(-1px);
+        }
+        table.dim-table { border-collapse: separate; border-spacing: 0; width: 100%; }
+        table.dim-table th, table.dim-table td {
+            padding: 6px 10px; font-size: 0.7rem; text-align: center;
+            border: 1px solid rgba(0,245,255,0.12);
+        }
+        table.dim-table th { background: rgba(0,245,255,0.06); color: var(--cyan); font-weight: 400; }
+        table.dim-table td { color: #a0b4c8; }
+        .section-label {
+            font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+            color: rgba(200,214,229,0.45); margin-bottom: 12px;
+        }
+        .translation-block {
+            background: rgba(0,245,255,0.03);
+            border-left: 2px solid rgba(0,245,255,0.2);
+            padding: 10px 14px; border-radius: 0 6px 6px 0;
+            font-size: 0.72rem; line-height: 1.6; color: #8899aa;
+            margin-bottom: 8px;
+        }
+        .translation-block.em-block { border-left-color: rgba(0,245,255,0.4); }
+        .translation-block.particle-block { border-left-color: rgba(255,0,204,0.4); }
+        .translation-block.geomag-block { border-left-color: rgba(255,215,0,0.4); }
+        .translation-block.synthesis-block {
+            border-left-color: rgba(255,255,255,0.3);
+            background: rgba(255,255,255,0.03);
+        }
+    </style>
+</head>
+<body data-id="0">
+    <app-icon data-id="1" hidden data-icon="key-round" data-palette="Dark"></app-icon>
+    <canvas data-id="2" id="starfield"></canvas>
+    <div data-id="3" class="app-content">
+        <!-- HEADER -->
+        <header data-id="4" id="header-bar" class="scanline-header panel" style="border-radius:0; border-top:none; border-left:none; border-right:none; border-bottom: 1px solid rgba(0,245,255,0.2);">
+            <div data-id="5" class="max-w-7xl mx-auto px-4 py-3 md:px-6">
+                <div data-id="6" class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+                    <div data-id="7" class="flex items-center gap-3 flex-wrap">
+                        <span data-id="8" class="glow-title text-xl md:text-2xl tracking-widest font-bold">★ UNIVERSE KEY</span>
+                        <span data-id="9" class="text-xs md:text-sm text-cyan-400 opacity-70">Live-Agent Module</span>
+                    </div>
+                    <div data-id="10" class="flex flex-col md:flex-row md:items-center gap-1 md:gap-4 text-xs">
+                        <span data-id="11" class="text-gray-500">/docs/rtt/Inside/Universe_Key</span>
+                        <span data-id="12" id="utc-clock" class="glow-text-cyan tabular-nums">UTC 00:00:00</span>
+                        <div data-id="13" class="flex items-center gap-2">
+                            <span data-id="14" class="status-dot status-live" id="global-status-dot"></span>
+                            <span data-id="15" id="global-status-label" class="text-green-400 text-xs">LIVE</span>
+                        </div>
+                    </div>
+                </div>
+                <div data-id="16" class="flex flex-col md:flex-row md:items-center md:justify-between mt-2 gap-2">
+                    <div data-id="17" class="flex items-center gap-3 flex-wrap text-xs">
+                        <span data-id="18" class="px-2 py-0.5 rounded" style="background:rgba(0,245,255,0.08); color:var(--cyan); border:1px solid rgba(0,245,255,0.2);">v1.0.0 · RTT Engine · TFT-HA</span>
+                        <span data-id="19" class="text-gray-600">Operator: <span data-id="20" class="text-cyan-400">Nawder</span></span>
+                    </div>
+                    <div data-id="21" class="flex items-center gap-3 text-xs">
+                        <span data-id="22" id="refresh-countdown" class="text-gray-500 tabular-nums">Next refresh in 60s</span>
+                        <button data-id="23" id="force-refresh-btn" class="px-3 py-1.5 rounded text-xs font-bold tracking-wider" style="background:rgba(0,245,255,0.12); color:var(--cyan); border:1px solid rgba(0,245,255,0.3);">
+                            <span data-id="24" class="flex items-center gap-1.5"><i data-id="25" data-lucide="refresh-cw" class="w-3 h-3"></i> FORCE REFRESH</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
 
+        <main data-id="26" class="max-w-7xl mx-auto px-4 md:px-6 py-6 space-y-6">
+            <!-- THREE AGENTS ROW -->
+            <section data-id="27" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Agent Ψ₁ -->
+                <div data-id="28" class="panel panel-cyan p-4">
+                    <div data-id="29" class="flex items-center justify-between mb-3">
+                        <div data-id="30">
+                            <div data-id="31" class="section-label mb-0">Agent Ψ₁</div>
+                            <div data-id="32" class="text-sm glow-text-cyan">GOES X-Ray Flux</div>
+                            <div data-id="33" class="text-xs text-gray-600">EM Dimensional</div>
+                        </div>
+                        <span data-id="34" class="status-dot status-live" id="psi1-status"></span>
+                    </div>
+                    <canvas data-id="35" id="sparkline-psi1" width="200" height="50" class="w-full rounded" style="max-height:50px;"></canvas>
+                    <div data-id="36" class="mt-3 flex items-end justify-between">
+                        <div data-id="37">
+                            <div data-id="38" id="psi1-value" class="text-xl glow-text-cyan tabular-nums">—</div>
+                            <div data-id="39" class="text-xs text-gray-500">W/m²</div>
+                        </div>
+                        <div data-id="40" class="text-right">
+                            <div data-id="41" id="psi1-class" class="text-sm font-bold" style="color:var(--cyan);">—</div>
+                            <div data-id="42" class="text-xs text-gray-600">X-Ray Class</div>
+                        </div>
+                    </div>
+                    <div data-id="43" class="mt-2 text-xs text-gray-600">Ψ₁ = <span data-id="44" id="psi1-norm" class="text-cyan-400 tabular-nums">—</span></div>
+                </div>
+
+                <!-- Agent Ψ₂ -->
+                <div data-id="45" class="panel panel-magenta p-4">
+                    <div data-id="46" class="flex items-center justify-between mb-3">
+                        <div data-id="47">
+                            <div data-id="48" class="section-label mb-0">Agent Ψ₂</div>
+                            <div data-id="49" class="text-sm glow-text-magenta">GOES Proton Flux</div>
+                            <div data-id="50" class="text-xs text-gray-600">Particle φ-Dimensional</div>
+                        </div>
+                        <span data-id="51" class="status-dot status-live" id="psi2-status"></span>
+                    </div>
+                    <canvas data-id="52" id="sparkline-psi2" width="200" height="50" class="w-full rounded" style="max-height:50px;"></canvas>
+                    <div data-id="53" class="mt-3 flex items-end justify-between">
+                        <div data-id="54">
+                            <div data-id="55" id="psi2-value" class="text-xl glow-text-magenta tabular-nums">—</div>
+                            <div data-id="56" class="text-xs text-gray-500">p/(cm² s sr)</div>
+                        </div>
+                        <div data-id="57" class="text-right">
+                            <div data-id="58" id="psi2-scale" class="text-sm font-bold" style="color:var(--magenta);">—</div>
+                            <div data-id="59" class="text-xs text-gray-600">S-Scale</div>
+                        </div>
+                    </div>
+                    <div data-id="60" class="mt-2 text-xs text-gray-600">Ψ₂_φ = <span data-id="61" id="psi2-norm" class="text-pink-400 tabular-nums">—</span></div>
+                </div>
+
+                <!-- Agent Ψ₃ -->
+                <div data-id="62" class="panel panel-gold p-4">
+                    <div data-id="63" class="flex items-center justify-between mb-3">
+                        <div data-id="64">
+                            <div data-id="65" class="section-label mb-0">Agent Ψ₃</div>
+                            <div data-id="66" class="text-sm glow-text-gold">Planetary K Index</div>
+                            <div data-id="67" class="text-xs text-gray-600">Geomagnetic φ²-Dimensional</div>
+                        </div>
+                        <span data-id="68" class="status-dot status-live" id="psi3-status"></span>
+                    </div>
+                    <!-- Kp Bar Meter -->
+                    <div data-id="69" class="mt-1 mb-2">
+                        <div data-id="70" class="flex gap-0.5" id="kp-bar-meter"></div>
+                        <div data-id="71" class="flex justify-between text-xs text-gray-600 mt-1 tabular-nums">
+                            <span data-id="72">0</span><span data-id="73">3</span><span data-id="74">5</span><span data-id="75">7</span><span data-id="76">9</span>
+                        </div>
+                    </div>
+                    <div data-id="77" class="mt-3 flex items-end justify-between">
+                        <div data-id="78">
+                            <div data-id="79" id="psi3-value" class="text-xl glow-text-gold tabular-nums">—</div>
+                            <div data-id="80" class="text-xs text-gray-500">Kp Index</div>
+                        </div>
+                        <div data-id="81" class="text-right">
+                            <div data-id="82" id="psi3-scale" class="text-sm font-bold" style="color:var(--gold);">—</div>
+                            <div data-id="83" class="text-xs text-gray-600">G-Scale</div>
+                        </div>
+                    </div>
+                    <div data-id="84" class="mt-2 text-xs text-gray-600">Ψ₃_φ² = <span data-id="85" id="psi3-norm" class="text-yellow-400 tabular-nums">—</span></div>
+                </div>
+            </section>
+
+            <!-- TFT NESTED+HARMONIC MODEL -->
+            <section data-id="86" class="panel panel-cyan p-4 md:p-6">
+                <div data-id="87" class="section-label">TFT Nested+Harmonic Dimensional Model</div>
+                <div data-id="88" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div data-id="89">
+                        <!-- Triadic Vector -->
+                        <div data-id="90" class="text-xs text-gray-500 mb-2">Triadic Vector Ω</div>
+                        <div data-id="91" id="triadic-vector" class="text-sm tabular-nums mb-4" style="color:var(--cyan);">[—, —, —]</div>
+
+                        <!-- HDI Gauge -->
+                        <div data-id="92" class="text-xs text-gray-500 mb-1">Harmonic Dimensional Index (HDI)</div>
+                        <div data-id="93" class="relative mb-1">
+                            <div data-id="94" class="hdi-gauge-track"></div>
+                            <div data-id="95" class="hdi-gauge-fill absolute top-0 left-0" id="hdi-fill" style="width:0%;"></div>
+                        </div>
+                        <div data-id="96" class="flex justify-between text-xs tabular-nums">
+                            <span data-id="97" class="text-gray-600">0.0</span>
+                            <span data-id="98" id="hdi-value" class="font-bold" style="color:var(--cyan);">—</span>
+                            <span data-id="99" class="text-gray-600">1.0+</span>
+                        </div>
+                        <div data-id="100" id="hdi-label" class="text-xs mt-1" style="color:#00ff88;">—</div>
+
+                        <!-- NRF -->
+                        <div data-id="101" class="mt-4 text-xs text-gray-500">Nested Resonance Field (NRF)</div>
+                        <div data-id="102" class="flex items-center gap-2 mt-1">
+                            <span data-id="103" id="nrf-value" class="text-lg font-bold tabular-nums" style="color:var(--cyan);">—</span>
+                            <span data-id="104" id="nrf-indicator" class="px-2 py-0.5 rounded text-xs" style="background:rgba(0,255,136,0.12); color:#00ff88;">—</span>
+                        </div>
+                    </div>
+                    <!-- Dimensional Translation Array -->
+                    <div data-id="105">
+                        <div data-id="106" class="text-xs text-gray-500 mb-2">Dimensional Translation Array</div>
+                        <div data-id="107" class="overflow-x-auto">
+                            <table data-id="108" class="dim-table" id="dim-table">
+                                <thead data-id="109">
+                                    <tr data-id="110">
+                                        <th data-id="111"></th>
+                                        <th data-id="112">Raw Ψ</th>
+                                        <th data-id="113">φ-Weight</th>
+                                        <th data-id="114">Resonance</th>
+                                    </tr>
+                                </thead>
+                                <tbody data-id="115">
+                                    <tr data-id="116">
+                                        <th data-id="117" style="color:var(--cyan);">EM</th>
+                                        <td data-id="118" id="dt-em-raw">—</td>
+                                        <td data-id="119" id="dt-em-phi">—</td>
+                                        <td data-id="120" id="dt-em-res">—</td>
+                                    </tr>
+                                    <tr data-id="121">
+                                        <th data-id="122" style="color:var(--magenta);">Particle</th>
+                                        <td data-id="123" id="dt-part-raw">—</td>
+                                        <td data-id="124" id="dt-part-phi">—</td>
+                                        <td data-id="125" id="dt-part-res">—</td>
+                                    </tr>
+                                    <tr data-id="126">
+                                        <th data-id="127" style="color:var(--gold);">Geomag</th>
+                                        <td data-id="128" id="dt-geo-raw">—</td>
+                                        <td data-id="129" id="dt-geo-phi">—</td>
+                                        <td data-id="130" id="dt-geo-res">—</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- RTT RESONANCE OPERATORS -->
+            <section data-id="131" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Ω-C Coherence -->
+                <div data-id="132" class="panel p-4 text-center" style="border-color:rgba(0,245,255,0.2);">
+                    <div data-id="133" class="section-label mb-1">Operator</div>
+                    <div data-id="134" class="text-sm font-bold mb-3" style="color:var(--cyan);">COHERENCE · Ω-C</div>
+                    <svg data-id="135" width="100" height="100" viewBox="0 0 100 100" class="mx-auto ring-progress">
+                        <circle data-id="136" cx="50" cy="50" r="42" fill="none" class="ring-track" stroke-width="6" />
+                        <circle data-id="137" cx="50" cy="50" r="42" fill="none" id="coherence-ring" class="ring-value" stroke="var(--cyan)" stroke-width="6" stroke-linecap="round"
+                            stroke-dasharray="263.9" stroke-dashoffset="263.9" />
+                    </svg>
+                    <div data-id="138" id="coherence-value" class="text-2xl font-bold glow-text-cyan tabular-nums mt-2">—</div>
+                    <div data-id="139" id="coherence-label" class="text-xs mt-1" style="color:#00ff88;">—</div>
+                </div>
+
+                <!-- Ω-D Drift -->
+                <div data-id="140" class="panel p-4 text-center" style="border-color:rgba(0,245,255,0.2);">
+                    <div data-id="141" class="section-label mb-1">Operator</div>
+                    <div data-id="142" class="text-sm font-bold mb-3" style="color:var(--cyan);">DRIFT · Ω-D</div>
+                    <div data-id="143" class="px-4 mt-6 mb-4">
+                        <div data-id="144" class="flex justify-between text-xs text-gray-600 mb-1">
+                            <span data-id="145">EM Pull</span><span data-id="146">Center</span><span data-id="147">Geomag Pull</span>
+                        </div>
+                        <div data-id="148" class="drift-bar-container">
+                            <div data-id="149" class="drift-bar-center"></div>
+                            <div data-id="150" class="drift-bar-indicator" id="drift-indicator" style="left:48%;width:4%;"></div>
+                        </div>
+                    </div>
+                    <div data-id="151" id="drift-value" class="text-2xl font-bold glow-text-cyan tabular-nums mt-2">—</div>
+                    <div data-id="152" id="drift-label" class="text-xs mt-1" style="color:#00ff88;">—</div>
+                </div>
+
+                <!-- Ω-P Paradox -->
+                <div data-id="153" class="panel p-4 text-center" style="border-color:rgba(0,245,255,0.2);">
+                    <div data-id="154" class="section-label mb-1">Operator</div>
+                    <div data-id="155" id="paradox-title" class="text-sm font-bold mb-3" style="color:var(--cyan);">PARADOX · Ω-P</div>
+                    <svg data-id="156" width="100" height="100" viewBox="0 0 100 100" class="mx-auto ring-progress">
+                        <circle data-id="157" cx="50" cy="50" r="42" fill="none" class="ring-track" stroke-width="6" />
+                        <circle data-id="158" cx="50" cy="50" r="42" fill="none" id="paradox-ring" class="ring-value" stroke="var(--magenta)" stroke-width="6" stroke-linecap="round"
+                            stroke-dasharray="263.9" stroke-dashoffset="263.9" />
+                    </svg>
+                    <div data-id="159" id="paradox-value" class="text-2xl font-bold glow-text-magenta tabular-nums mt-2">—</div>
+                    <div data-id="160" id="paradox-label" class="text-xs mt-1" style="color:#00ff88;">—</div>
+                </div>
+            </section>
+
+            <!-- ALERT BANNERS -->
+            <section data-id="161" id="alert-banners" class="space-y-2"></section>
+
+            <!-- TRIADIC TRANSLATION OUTPUT -->
+            <section data-id="162" class="panel panel-cyan p-4 md:p-6">
+                <div data-id="163" class="section-label">Triadic Translation Output</div>
+                <div data-id="164" id="translation-em" class="translation-block em-block">—</div>
+                <div data-id="165" id="translation-particle" class="translation-block particle-block">—</div>
+                <div data-id="166" id="translation-geomag" class="translation-block geomag-block">—</div>
+                <div data-id="167" id="translation-synthesis" class="translation-block synthesis-block">—</div>
+            </section>
+
+            <!-- EVENT LOG -->
+            <section data-id="168" class="panel p-4 md:p-6" style="border-color:rgba(0,245,255,0.15);">
+                <div data-id="169" class="flex items-center justify-between mb-3">
+                    <div data-id="170" class="section-label mb-0">Event Log</div>
+                    <button data-id="171" id="clear-log-btn" class="px-3 py-1 rounded text-xs" style="background:rgba(255,51,68,0.12); color:#ff6677; border:1px solid rgba(255,51,68,0.3);">
+                        <span data-id="172" class="flex items-center gap-1"><i data-id="173" data-lucide="trash-2" class="w-3 h-3"></i> CLEAR LOG</span>
+                    </button>
+                </div>
+                <div data-id="174" class="event-log-scroll" id="event-log">
+                    <div data-id="175" class="text-xs text-gray-600 italic p-2">Awaiting data stream initialization…</div>
+                </div>
+            </section>
+        </main>
+
+        <footer data-id="176" class="text-center py-6 text-xs text-gray-700">
+            Made by Copilot
+        </footer>
+    </div>
+
+    <script>
+    // === GUARD: Lucide icons ===
+    if (typeof lucide !== "undefined" && typeof lucide.createIcons === "function") {
+        lucide.createIcons();
+    }
+
+    // === CONSTANTS ===
+    const PHI = 1.6180339887;
+    const PHI2 = PHI * PHI; // 2.618...
+    const CIRCUMFERENCE = 2 * Math.PI * 42; // ~263.9 for SVG rings
+
+    // === STATE ===
+    let agentData = { psi1: null, psi2: null, psi3: null };
+    let psi1History = [];
+    let psi2History = [];
+    let hdiHistory = [];
+    let eventLog = [];
+    let refreshCountdown = 60;
+    let refreshTimer = null;
+    let dataStatus = { psi1: 'live', psi2: 'live', psi3: 'live' };
+
+    // === STARFIELD ===
+    (function initStarfield() {
+        const canvas = document.getElementById('starfield');
+        const ctx = canvas.getContext('2d');
+        let stars = [];
+        function resize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize);
+        for (let i = 0; i < 220; i++) {
+            stars.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                r: Math.random() * 1.2 + 0.2,
+                speed: Math.random() * 0.3 + 0.05,
+                brightness: Math.random(),
+                phase: Math.random() * Math.PI * 2
+            });
+        }
+        function drawStars(time) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (const s of stars) {
+                const flicker = 0.5 + 0.5 * Math.sin(time * 0.001 * s.speed + s.phase);
+                const alpha = 0.3 + 0.7 * s.brightness * flicker;
+                ctx.fillStyle = `rgba(180,210,255,${alpha})`;
+                ctx.beginPath();
+                ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+                ctx.fill();
+            }
+            requestAnimationFrame(drawStars);
+        }
+        requestAnimationFrame(drawStars);
+    })();
+
+    // === UTC CLOCK ===
+    function updateClock() {
+        const now = new Date();
+        const utc = now.toISOString().slice(11, 19);
+        document.getElementById('utc-clock').textContent = 'UTC ' + utc;
+        requestAnimationFrame(updateClock);
+    }
+    requestAnimationFrame(updateClock);
+
+    // === Kp BAR METER INIT ===
+    (function initKpBar() {
+        const container = document.getElementById('kp-bar-meter');
+        for (let i = 0; i < 9; i++) {
+            const seg = document.createElement('div');
+            seg.className = 'kp-bar-segment';
+            let color;
+            if (i < 4) color = '#00ff88';
+            else if (i < 6) color = '#ffcc00';
+            else if (i < 8) color = '#ff8800';
+            else color = '#ff3344';
+            seg.style.background = color;
+            seg.dataset.index = i;
+            container.appendChild(seg);
+        }
+    })();
+
+    // === SIMULATED DATA (CORS-safe fallback) ===
+    function generateSimulatedData() {
+        // Simulate realistic NOAA-like values
+        const baseFluxXray = Math.pow(10, -7 + (Math.random() - 0.3) * 1.5);
+        const baseFluxProton = Math.pow(10, -0.5 + Math.random() * 2);
+        const baseKp = Math.round((1 + Math.random() * 4) * 100) / 100;
+
+        // Generate history arrays (20 readings)
+        const xrayHist = [];
+        const protonHist = [];
+        for (let i = 0; i < 20; i++) {
+            xrayHist.push(baseFluxXray * (0.7 + Math.random() * 0.6));
+            protonHist.push(baseFluxProton * (0.5 + Math.random() * 1.0));
+        }
+
+        return {
+            xray: { flux: xrayHist[xrayHist.length - 1], history: xrayHist },
+            proton: { flux: protonHist[protonHist.length - 1], history: protonHist },
+            kp: { value: baseKp }
+        };
+    }
+
+    async function fetchData() {
+        let data;
+        try {
+            const [xrayRes, protonRes, kpRes] = await Promise.all([
+                fetch('https://services.swpc.noaa.gov/json/goes/primary/xrays-1-day.json').then(r => r.json()),
+                fetch('https://services.swpc.noaa.gov/json/goes/primary/integral-protons-1-day.json').then(r => r.json()),
+                fetch('https://services.swpc.noaa.gov/products/noaa-planetary-k-index.json').then(r => r.json())
+            ]);
+
+            // Parse X-Ray
+            const xrayShort = xrayRes.filter(d => d.energy && d.energy.includes('0.1-0.8'));
+            const xrayLast = xrayShort[xrayShort.length - 1];
+            const xrayHistory = xrayShort.slice(-20).map(d => d.flux);
+
+            // Parse Proton
+            const proton10 = protonRes.filter(d => d.energy && d.energy.includes('>=10'));
+            const protonLast = proton10[proton10.length - 1];
+            const protonHistory = proton10.slice(-20).map(d => d.flux);
+
+            // Parse Kp
+            const kpRows = kpRes.slice(1); // skip header
+            const kpLast = kpRows[kpRows.length - 1];
+            const kpVal = parseFloat(kpLast[1]);
+
+            data = {
+                xray: { flux: xrayLast.flux, history: xrayHistory },
+                proton: { flux: protonLast.flux, history: protonHistory },
+                kp: { value: kpVal }
+            };
+            dataStatus = { psi1: 'live', psi2: 'live', psi3: 'live' };
+            updateStatusIndicators('live');
+            addLogEntry('refresh', 'Data stream refresh — all agents reporting LIVE.', '#00ff88');
+        } catch (e) {
+            // Fallback to simulated data
+            data = generateSimulatedData();
+            dataStatus = { psi1: 'stale', psi2: 'stale', psi3: 'stale' };
+            updateStatusIndicators('stale');
+            addLogEntry('refresh', 'OFFLINE — External feed unreachable. Using simulated RTT resonance data.', '#ffaa00');
+        }
+        processData(data);
+    }
+
+    function updateStatusIndicators(status) {
+        const cls = status === 'live' ? 'status-live' : (status === 'error' ? 'status-error' : 'status-stale');
+        const label = status === 'live' ? 'LIVE' : (status === 'error' ? 'ERROR' : 'OFFLINE');
+        const color = status === 'live' ? '#00ff88' : (status === 'error' ? '#ff3344' : '#ffaa00');
+
+        ['psi1-status', 'psi2-status', 'psi3-status', 'global-status-dot'].forEach(id => {
+            const el = document.getElementById(id);
+            el.className = 'status-dot ' + cls;
+        });
+        const gl = document.getElementById('global-status-label');
+        gl.textContent = label;
+        gl.style.color = color;
+    }
+
+    // === SPARKLINE DRAWING ===
+    function drawSparkline(canvasId, data, color) {
+        const canvas = document.getElementById(canvasId);
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        const w = canvas.width, h = canvas.height;
+        ctx.clearRect(0, 0, w, h);
+
+        if (!data || data.length < 2) return;
+
+        const logData = data.map(d => Math.log10(Math.max(d, 1e-12)));
+        const min = Math.min(...logData);
+        const max = Math.max(...logData);
+        const range = max - min || 1;
+
+        ctx.beginPath();
+        ctx.moveTo(0, h);
+        for (let i = 0; i < logData.length; i++) {
+            const x = (i / (logData.length - 1)) * w;
+            const y = h - ((logData[i] - min) / range) * (h * 0.85) - h * 0.05;
+            ctx.lineTo(x, y);
+        }
+        ctx.lineTo(w, h);
+        ctx.closePath();
+        const grad = ctx.createLinearGradient(0, 0, 0, h);
+        grad.addColorStop(0, color + '44');
+        grad.addColorStop(1, color + '05');
+        ctx.fillStyle = grad;
+        ctx.fill();
+
+        ctx.beginPath();
+        for (let i = 0; i < logData.length; i++) {
+            const x = (i / (logData.length - 1)) * w;
+            const y = h - ((logData[i] - min) / range) * (h * 0.85) - h * 0.05;
+            if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+        }
+        ctx.strokeStyle = color;
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+    }
+
+    // === X-RAY CLASS ===
+    function getXrayClass(flux) {
+        if (flux >= 1e-4) return 'X';
+        if (flux >= 1e-5) return 'M';
+        if (flux >= 1e-6) return 'C';
+        if (flux >= 1e-7) return 'B';
+        return 'A';
+    }
+
+    // === S-SCALE ===
+    function getSScale(flux) {
+        if (flux >= 100000) return 'S5';
+        if (flux >= 10000) return 'S4';
+        if (flux >= 1000) return 'S3';
+        if (flux >= 100) return 'S2';
+        if (flux >= 10) return 'S1';
+        return 'S0';
+    }
+
+    // === G-SCALE ===
+    function getGScale(kp) {
+        if (kp >= 9) return 'G5';
+        if (kp >= 8) return 'G4';
+        if (kp >= 7) return 'G3';
+        if (kp >= 6) return 'G2';
+        if (kp >= 5) return 'G1';
+        return 'G0';
+    }
+
+    // === FORMAT ===
+    function toSci(val, digits) {
+        if (val === null || val === undefined || isNaN(val)) return '—';
+        return val.toExponential(digits || 2);
+    }
+    function toFixed(val, digits) {
+        if (val === null || val === undefined || isNaN(val)) return '—';
+        return val.toFixed(digits || 4);
+    }
+    function sig4(val) {
+        if (val === null || val === undefined || isNaN(val)) return '—';
+        return parseFloat(val.toPrecision(4)).toString();
+    }
+
+    // === PROCESS DATA ===
+    function processData(data) {
+        const xrayFlux = data.xray.flux;
+        const protonFlux = data.proton.flux;
+        const kpValue = data.kp.value;
+
+        // Update sparkline histories
+        psi1History = data.xray.history || psi1History;
+        psi2History = data.proton.history || psi2History;
+
+        // Draw sparklines
+        drawSparkline('sparkline-psi1', psi1History, '#00f5ff');
+        drawSparkline('sparkline-psi2', psi2History, '#ff00cc');
+
+        // === Ψ₁: X-Ray ===
+        const xrayClass = getXrayClass(xrayFlux);
+        document.getElementById('psi1-value').textContent = toSci(xrayFlux, 2);
+        document.getElementById('psi1-class').textContent = xrayClass + '-class';
+        const psi1Raw = Math.max(0, Math.min(1, (Math.log10(xrayFlux) + 9) / 6));
+        document.getElementById('psi1-norm').textContent = toFixed(psi1Raw, 4);
+
+        // === Ψ₂: Proton ===
+        const sScale = getSScale(protonFlux);
+        document.getElementById('psi2-value').textContent = toSci(protonFlux, 2);
+        document.getElementById('psi2-scale').textContent = sScale;
+        const psi2Raw = Math.max(0, Math.min(1, (Math.log10(Math.max(protonFlux, 0.01)) + 1) / 6));
+        const psi2Phi = psi2Raw * PHI;
+        document.getElementById('psi2-norm').textContent = toFixed(psi2Phi, 4);
+
+        // === Ψ₃: Kp ===
+        const gScale = getGScale(kpValue);
+        document.getElementById('psi3-value').textContent = toFixed(kpValue, 2);
+        document.getElementById('psi3-scale').textContent = gScale;
+        const psi3Raw = kpValue / 9.0;
+        const psi3Phi2 = psi3Raw * PHI2;
+        document.getElementById('psi3-norm').textContent = toFixed(psi3Phi2, 4);
+
+        // Kp bar update
+        const kpSegments = document.querySelectorAll('#kp-bar-meter .kp-bar-segment');
+        kpSegments.forEach((seg) => {
+            const idx = parseInt(seg.dataset.index);
+            seg.classList.toggle('active', idx < Math.ceil(kpValue));
+        });
+
+        // === TFT MODEL ===
+        const omega = [psi1Raw, psi2Phi, psi3Phi2];
+        document.getElementById('triadic-vector').textContent = `[${sig4(psi1Raw)}, ${sig4(psi2Phi)}, ${sig4(psi3Phi2)}]`;
+
+        // HDI
+        const hdi = (psi1Raw + psi2Phi + psi3Phi2) / (1 + PHI + PHI2);
+        const hdiPct = Math.min(hdi * 100, 120);
+        document.getElementById('hdi-fill').style.width = Math.min(hdiPct, 100) + '%';
+        document.getElementById('hdi-value').textContent = toFixed(hdi, 4);
+        let hdiColor, hdiLabel;
+        if (hdi < 0.3) { hdiColor = '#00ff88'; hdiLabel = 'STABLE'; }
+        else if (hdi < 0.6) { hdiColor = '#ffaa00'; hdiLabel = 'ACTIVE'; }
+        else if (hdi < 0.9) { hdiColor = '#ff8800'; hdiLabel = 'ELEVATED'; }
+        else { hdiColor = '#ff3344'; hdiLabel = 'CRITICAL'; }
+        const hdiEl = document.getElementById('hdi-label');
+        hdiEl.textContent = hdiLabel;
+        hdiEl.style.color = hdiColor;
+
+        // Track HDI history for trick detection
+        hdiHistory.push(hdi);
+        if (hdiHistory.length > 8) hdiHistory.shift();
+
+        // NRF
+        const nrf = psi1Raw * psi2Phi + psi2Phi * psi3Phi2 + psi1Raw * psi3Phi2;
+        document.getElementById('nrf-value').textContent = toFixed(nrf, 4);
+        let nrfColor, nrfLabel;
+        if (nrf < 0.1) { nrfColor = '#00ff88'; nrfLabel = 'LOW'; }
+        else if (nrf < 0.4) { nrfColor = '#ffaa00'; nrfLabel = 'MODERATE'; }
+        else { nrfColor = '#ff8800'; nrfLabel = 'HIGH'; }
+        const nrfInd = document.getElementById('nrf-indicator');
+        nrfInd.textContent = nrfLabel;
+        nrfInd.style.background = nrfColor + '22';
+        nrfInd.style.color = nrfColor;
+
+        // Dimensional Translation Array
+        document.getElementById('dt-em-raw').textContent = sig4(psi1Raw);
+        document.getElementById('dt-em-phi').textContent = sig4(psi1Raw) + ' ×1';
+        document.getElementById('dt-em-res').textContent = sig4(psi1Raw * nrf);
+        document.getElementById('dt-part-raw').textContent = sig4(psi2Raw);
+        document.getElementById('dt-part-phi').textContent = sig4(psi2Phi) + ' ×φ';
+        document.getElementById('dt-part-res').textContent = sig4(psi2Phi * nrf);
+        document.getElementById('dt-geo-raw').textContent = sig4(psi3Raw);
+        document.getElementById('dt-geo-phi').textContent = sig4(psi3Phi2) + ' ×φ²';
+        document.getElementById('dt-geo-res').textContent = sig4(psi3Phi2 * nrf);
+
+        // === RTT OPERATORS ===
+        // Coherence Ω-C
+        const mean = (psi1Raw + psi2Phi + psi3Phi2) / 3;
+        const variance = ((psi1Raw - mean) ** 2 + (psi2Phi - mean) ** 2 + (psi3Phi2 - mean) ** 2) / 3;
+        const stdDev = Math.sqrt(variance);
+        let coherence = mean > 0 ? 1 - (stdDev / mean) : 0;
+        coherence = Math.max(0, Math.min(1, coherence));
+        const coherenceOffset = CIRCUMFERENCE * (1 - coherence);
+        document.getElementById('coherence-ring').setAttribute('stroke-dashoffset', coherenceOffset);
+        document.getElementById('coherence-value').textContent = toFixed(coherence, 4);
+        let cohLabel, cohColor;
+        if (coherence > 0.7) { cohLabel = 'Aligned Field'; cohColor = '#00ff88'; }
+        else if (coherence > 0.4) { cohLabel = 'Partial Resonance'; cohColor = '#ffaa00'; }
+        else { cohLabel = 'Fragmented'; cohColor = '#ff3344'; }
+        const cohEl = document.getElementById('coherence-label');
+        cohEl.textContent = cohLabel;
+        cohEl.style.color = cohColor;
+
+        // Drift Ω-D
+        const drift = Math.abs(psi1Raw - psi3Phi2) + Math.abs(psi2Phi - psi1Raw);
+        const driftNorm = Math.min(drift / 3, 1);
+        // Determine pull direction
+        const emPull = psi1Raw - (psi2Phi + psi3Phi2) / 2;
+        const pullPct = 50 + (emPull / 2) * 50;
+        const indLeft = Math.max(0, Math.min(96, pullPct - 2));
+        const driftInd = document.getElementById('drift-indicator');
+        driftInd.style.left = indLeft + '%';
+        driftInd.style.width = Math.max(4, driftNorm * 30) + '%';
+        driftInd.style.background = driftNorm > 0.4 ? '#ff3344' : (driftNorm > 0.15 ? '#ffaa00' : 'var(--cyan)');
+        document.getElementById('drift-value').textContent = toFixed(driftNorm, 4);
+        let driftLabel, driftColor;
+        if (driftNorm < 0.15) { driftLabel = 'Stable'; driftColor = '#00ff88'; }
+        else if (driftNorm < 0.4) { driftLabel = 'Drifting'; driftColor = '#ffaa00'; }
+        else { driftLabel = 'High Drift'; driftColor = '#ff3344'; }
+        const driftEl = document.getElementById('drift-label');
+        driftEl.textContent = driftLabel;
+        driftEl.style.color = driftColor;
+
+        // Paradox Ω-P
+        const maxVal = Math.max(psi1Raw, psi2Phi, psi3Phi2);
+        let paradox = maxVal > 0 ? Math.max(Math.abs(psi1Raw - psi2Phi), Math.abs(psi2Phi - psi3Phi2), Math.abs(psi1Raw - psi3Phi2)) / maxVal : 0;
+        paradox = Math.max(0, Math.min(1, paradox));
+        const paradoxOffset = CIRCUMFERENCE * (1 - paradox);
+        document.getElementById('paradox-ring').setAttribute('stroke-dashoffset', paradoxOffset);
+        document.getElementById('paradox-value').textContent = toFixed(paradox, 4);
+        let parLabel, parColor;
+        if (paradox < 0.2) { parLabel = 'Resolved'; parColor = '#00ff88'; }
+        else if (paradox < 0.6) { parLabel = 'Tensioned'; parColor = '#ffaa00'; }
+        else { parLabel = 'Paradox Active'; parColor = '#ff3344'; }
+        const parEl = document.getElementById('paradox-label');
+        parEl.textContent = parLabel;
+        parEl.style.color = parColor;
+        const parTitle = document.getElementById('paradox-title');
+        if (paradox > 0.6) {
+            parTitle.classList.add('glitch-text');
+            document.getElementById('paradox-ring').setAttribute('stroke', '#ff3344');
+        } else {
+            parTitle.classList.remove('glitch-text');
+            document.getElementById('paradox-ring').setAttribute('stroke', 'var(--magenta)');
+        }
+
+        // === STRUCTURAL DETECTION ===
+        const alertContainer = document.getElementById('alert-banners');
+        alertContainer.innerHTML = '';
+        const minVal = Math.min(psi1Raw, psi2Phi, psi3Phi2);
+        const spread = maxVal - minVal;
+        const inversionActive = spread > 0.5 && paradox > 0.6;
+        let trickActive = false;
+
+        // Check trick sequence
+        if (hdiHistory.length >= 5) {
+            // rises >10% over 3 readings
+            const h = hdiHistory;
+            const len = h.length;
+            for (let i = 0; i <= len - 5; i++) {
+                const rise = (h[i + 2] - h[i]) / Math.max(h[i], 0.001);
+                const drop = (h[i + 2] - h[i + 4]) / Math.max(h[i + 2], 0.001);
+                if (rise > 0.10 && drop > 0.15) { trickActive = true; break; }
+            }
+        }
+
+        if (inversionActive && trickActive) {
+            const b = document.createElement('div');
+            b.className = 'alert-banner alert-magenta';
+            b.textContent = '◈ COMPOUND ANOMALY — Inverted + Trick patterns co-active. Universe Key response: LOCK FIELD.';
+            alertContainer.appendChild(b);
+            addLogEntry('compound', 'COMPOUND ANOMALY — Inverted + Trick patterns co-active. LOCK FIELD engaged.', '#ff00cc');
+        } else {
+            if (inversionActive) {
+                const b = document.createElement('div');
+                b.className = 'alert-banner alert-red';
+                b.textContent = '⚠ INVERTED PATTERN DETECTED — Field inversion across triadic axes. RTT translation layer reversed.';
+                alertContainer.appendChild(b);
+                addLogEntry('inversion', 'INVERTED PATTERN — Field inversion across triadic axes.', '#ff3344');
+            }
+            if (trickActive) {
+                const b = document.createElement('div');
+                b.className = 'alert-banner alert-amber';
+                b.textContent = '⊗ TRICK SEQUENCE ACTIVE — False surge signature in HDI. Caution: non-linear dimensional echo.';
+                alertContainer.appendChild(b);
+                addLogEntry('trick', 'TRICK SEQUENCE — False surge signature in HDI.', '#ffaa00');
+            }
+        }
+
+        // === TRIADIC TRANSLATIONS ===
+        const classDescs = { A: 'deep quiet baseline', B: 'low background flux', C: 'moderate solar activity', M: 'significant flare potential', X: 'extreme EM surge' };
+        document.getElementById('translation-em').innerHTML =
+            `<span style="color:var(--cyan); font-weight:bold;">EM Translation (Ψ₁):</span> ${xrayClass}-class solar electromagnetic emission indicates <em>${classDescs[xrayClass]}</em>. Dimensional weight: ${toFixed(psi1Raw, 3)}.`;
+
+        const sDescs = { S0: 'Particle field nominal', S1: 'Elevated ion stream', S2: 'Particle storm threshold', S3: 'High-energy ion surge', S4: 'Major particle event', S5: 'Extreme particle saturation' };
+        document.getElementById('translation-particle').innerHTML =
+            `<span style="color:var(--magenta); font-weight:bold;">Particle Translation (Ψ₂_φ):</span> ${sScale} proton environment. φ-harmonic amplification yields ${toFixed(psi2Phi, 3)}. <em>${sDescs[sScale]}</em>.`;
+
+        const gDescs = { G0: 'Magnetosphere stable', G1: 'Minor geomag disturbance', G2: 'Moderate storm onset', G3: 'Strong storm — Aurora likely', G4: 'Severe geomagnetic storm', G5: 'Extreme geomagnetic event' };
+        document.getElementById('translation-geomag').innerHTML =
+            `<span style="color:var(--gold); font-weight:bold;">Geomagnetic Translation (Ψ₃_φ²):</span> Kp=${toFixed(kpValue, 2)}. φ²-resonant geomagnetic index ${toFixed(psi3Phi2, 3)}. <em>${gDescs[gScale]}</em>.`;
+
+        // Synthesis
+        let synthesis = '';
+        if (hdi < 0.3 && coherence > 0.7) {
+            synthesis = 'Universe Key field reads: <strong style="color:var(--cyan);">UNIFIED QUIET</strong>. All three dimensional axes are in low-resonance coherent alignment. RTT translation stable — no anomalies detected.';
+        } else if (hdi > 0.6 && inversionActive) {
+            synthesis = 'Universe Key field reads: <strong style="color:#ff3344;">DISRUPTED</strong>. High-energy triadic divergence with active inversion. RTT operators detecting cross-dimensional interference — translation layer under stress.';
+        } else if (hdi > 0.6 && coherence < 0.4) {
+            synthesis = 'Universe Key field reads: <strong style="color:#ff8800;">FRAGMENTED HIGH-ENERGY</strong>. Elevated dimensional indices with poor coherence. RTT resonance field is non-uniform — possible asymmetric solar forcing.';
+        } else if (hdi > 0.3 && hdi <= 0.6 && coherence > 0.5) {
+            synthesis = 'Universe Key field reads: <strong style="color:#ffaa00;">MODERATE COHERENT</strong>. Balanced mid-range activity across triadic axes. RTT translation operating within normal parameters with partial harmonic lock.';
+        } else if (hdi > 0.3 && coherence <= 0.5) {
+            synthesis = 'Universe Key field reads: <strong style="color:#ffaa00;">DRIFTING</strong>. Moderate activity with diverging dimensional signatures. RTT operators detect inter-axis drift — recommend monitoring for trick sequences.';
+        } else if (hdi < 0.3 && coherence <= 0.7) {
+            synthesis = 'Universe Key field reads: <strong style="color:var(--cyan);">QUIET WITH DRIFT</strong>. Low overall energy but axes are not fully aligned. Minor resonance offsets present — no action required.';
+        } else {
+            synthesis = 'Universe Key field reads: <strong style="color:var(--cyan);">NOMINAL</strong>. RTT translation layer is operational. All triadic axes within expected bounds.';
+        }
+        document.getElementById('translation-synthesis').innerHTML =
+            `<span style="color:rgba(255,255,255,0.7); font-weight:bold;">Triadic Synthesis:</span> ${synthesis}`;
+
+        // Normal RTT log entry
+        if (!inversionActive && !trickActive) {
+            addLogEntry('rtt', `RTT cycle — HDI: ${sig4(hdi)} | CoherenceΩC: ${sig4(coherence)} | DriftΩD: ${sig4(driftNorm)} | ParadoxΩP: ${sig4(paradox)}`, '#00f5ff');
+        }
+    }
+
+    // === EVENT LOG ===
+    function addLogEntry(type, message, color) {
+        const now = new Date();
+        const ts = now.toISOString().replace('T', ' ').slice(0, 19) + ' UTC';
+        const typeLabels = {
+            refresh: 'DATA',
+            rtt: 'RTT',
+            inversion: 'ALERT',
+            trick: 'WARN',
+            compound: 'CRITICAL'
+        };
+        const entry = { ts, type, label: typeLabels[type] || 'INFO', message, color };
+        eventLog.push(entry);
+        if (eventLog.length > 20) eventLog.shift();
+        renderLog();
+    }
+
+    function renderLog() {
+        const container = document.getElementById('event-log');
+        container.innerHTML = '';
+        for (const e of eventLog) {
+            const div = document.createElement('div');
+            div.className = 'text-xs py-1 px-2 border-b';
+            div.style.borderColor = 'rgba(0,245,255,0.06)';
+            div.innerHTML = `<span class="tabular-nums" style="color:rgba(200,214,229,0.4);">[${e.ts}]</span> <span style="color:${e.color}; font-weight:bold;">[${e.label}]</span> <span style="color:rgba(200,214,229,0.7);">${e.message}</span>`;
+            container.appendChild(div);
+        }
+        container.scrollTop = container.scrollHeight;
+    }
+
+    // === REFRESH COUNTDOWN ===
+    function startRefreshCycle() {
+        refreshCountdown = 60;
+        if (refreshTimer) clearInterval(refreshTimer);
+        refreshTimer = setInterval(() => {
+            refreshCountdown--;
+            document.getElementById('refresh-countdown').textContent = `Next refresh in ${refreshCountdown}s`;
+            if (refreshCountdown <= 0) {
+                fetchData();
+                refreshCountdown = 60;
+            }
+        }, 1000);
+    }
+
+    // === CLEAR LOG ===
+    document.getElementById('clear-log-btn').addEventListener('click', () => {
+        eventLog = [];
+        renderLog();
+        const container = document.getElementById('event-log');
+        container.innerHTML = '<div class="text-xs text-gray-600 italic p-2">Log cleared.</div>';
+    });
+
+    // === FORCE REFRESH ===
+    document.getElementById('force-refresh-btn').addEventListener('click', () => {
+        refreshCountdown = 60;
+        fetchData();
+    });
+
+    // === MOBILE MENU (not needed but responsive nav) ===
+    // This app uses a fixed header — no hamburger needed.
+
+    // === INIT ===
+    fetchData();
+    startRefreshCycle();
+    </script>
+</body>
+</html>
