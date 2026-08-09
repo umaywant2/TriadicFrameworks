@@ -1,22 +1,8 @@
+<img width="1194" height="672" alt="Triadicframeworks_Corpus_module" src="https://github.com/user-attachments/assets/53ce328a-0727-454b-9747-448024d79231" />
+
 # 📚 TriadicFrameworks Corpus  
 
 - [`corpus_module.json`](corpus_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🟣Corpus-📘Canon%20Index%20and%20Knowledge%20Substrate-4c8eda?style=for-the-badge" alt="Corpus | Canon Index Knowledge Substrate"/>
 
 A unified, living knowledge base for Resonance Time Theory (RTT), substrate‑aligned modeling, dimensional structures, cognitive frameworks, and cross‑domain resonance tools.
 
@@ -195,3 +181,18 @@ Every substrate is an invitation to build.
 
 Welcome to the work.
 
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🟣Corpus-📘Canon%20Index%20and%20Knowledge%20Substrate-4c8eda?style=for-the-badge" alt="Corpus | Canon Index Knowledge Substrate"/>
