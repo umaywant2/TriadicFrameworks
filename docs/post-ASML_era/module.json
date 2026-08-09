@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "id": "post-ASML_era",
   "version": "1.0.0",
@@ -282,3 +283,6 @@
   "requirement_id_prefix": "R-",
   "pdk_version_format": "{process_node}_{fab_id}_{scr_zone_config}_{major}.{minor}.{patch}[P]"
 }
+=======
+
+>>>>>>> 9a1a3c67f299508e4180f38b5aa14a6cbf5b0e0a
