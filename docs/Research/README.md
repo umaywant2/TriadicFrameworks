@@ -1,24 +1,10 @@
+<img width="1194" height="672" alt="Research_module" src="https://github.com/user-attachments/assets/296ead2a-5ff1-4030-ac96-c03d7a82c1e7" />
+
 # 🔬 Research — RTT/1 Research Module  
-### *Research Module — Core Operators + Foundational Research*
 
 - [`research_module.json`](research_module.json) — Agentic module schema role assignments
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-<span style="
-  display:inline-block;
-  padding:3px 8px;
-  border-radius:999px;
-  background:#1a1a1a;
-  color:#fff;
-  font-family:Arial, sans-serif;
-  font-size:11px;
-">
-🤖 AI‑Ready Module • TriadicFrameworks
-</span>
-</div>
-
-<img src="https://img.shields.io/badge/🔬Research%20Articles-🔺Triadic%20Grammar%20Active-4c8eda?style=for-the-badge" alt="🔬Research Articles | 🔺Triadic Grammar Active"/>
-
+### *Research Module — Core Operators + Foundational Research*
 **TriadicFrameworks • Continuity‑Aligned Operator Canon + Foundational Research Archive**
 
 ## 🛑 Important! 
@@ -163,3 +149,19 @@ Humans can use this README for conceptual orientation.
 
 License: Apache‑2.0  
 Archival: zenodo.org/communities/vst
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+<span style="
+  display:inline-block;
+  padding:3px 8px;
+  border-radius:999px;
+  background:#1a1a1a;
+  color:#fff;
+  font-family:Arial, sans-serif;
+  font-size:11px;
+">
+🤖 AI‑Ready Module • TriadicFrameworks
+</span>
+</div>
+
+<img src="https://img.shields.io/badge/🔬Research%20Articles-🔺Triadic%20Grammar%20Active-4c8eda?style=for-the-badge" alt="🔬Research Articles | 🔺Triadic Grammar Active"/>
