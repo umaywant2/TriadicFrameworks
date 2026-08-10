@@ -1,22 +1,8 @@
+<img width="1194" height="672" alt="Inverted_Economics_module" src="https://github.com/user-attachments/assets/6e0aa1d8-208b-4226-a959-11548c90b21a" />
+
 ## ⭐ Inverted Economics 
 
 - [`inverted-economics_module.json`](inverted-economics_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/📉Inverted%20Economics-🧩Structural%20Audit%20Canon%20Active-4c8eda?style=for-the-badge" alt="📉Inverted Economics | 🧩Structural Audit Canon Active"/>
 
 _A structural, RTT‑aligned approach to understanding past economic cycles._
 
@@ -108,3 +94,19 @@ Inverted Economics democratizes a capability once limited to large consultancies
 
 By making these tools open and accessible, we give the next generation  
 a way to see the world’s systems clearly — and build better ones.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/📉Inverted%20Economics-🧩Structural%20Audit%20Canon%20Active-4c8eda?style=for-the-badge" alt="📉Inverted Economics | 🧩Structural Audit Canon Active"/>
