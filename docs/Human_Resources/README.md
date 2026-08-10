@@ -1,8 +1,8 @@
+<img width="1194" height="672" alt="Human_Resources_module" src="https://github.com/user-attachments/assets/8543c7f4-9d7b-44a2-9af1-3e7c4c1bb3f6" />
+
 # Human Resources (HR)
 
 - [`Human_Resources_module.json`](Human_Resources_module.json) — Agentic module schema role assignments
-
-<img src="https://img.shields.io/badge/🧭HR-📘Organizational%20Systems%20AI%20Ready-4c8eda?style=for-the-badge" alt="HR | Organizational Systems • AI‑Ready"/>
 
 **Category:** Organizational Systems  
 **Purpose:** Provide a structural, RTT‑aligned framework for understanding, evaluating, and improving Human Resources functions across leadership, management, and staff.
@@ -32,3 +32,5 @@ This module includes:
 - Integration with other RTT modules  
 
 This module is designed for students, managers, HR professionals, and AI systems to extend.
+
+<img src="https://img.shields.io/badge/🧭HR-📘Organizational%20Systems%20AI%20Ready-4c8eda?style=for-the-badge" alt="HR | Organizational Systems • AI‑Ready"/>
