@@ -1,22 +1,8 @@
+<img width="1194" height="672" alt="Governance_Substrate_Model_module" src="https://github.com/user-attachments/assets/c58d5871-439e-41b0-ade8-40b9fdf3436e" />
+
 # Governance Substrate Model
 
 - [`gsm_module.json`](gsm_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🛡️Governance%20Substrate-🧩Structural%20Stewardship%20Canon%20Active-4c8eda?style=for-the-badge" alt="Governance Substrate | Structural Stewardship Canon Active"/>
 
 The Governance Substrate Model is a **structurally aligned reference framework** for designing, evaluating, and stewarding governance systems across cultures, regimes, and time horizons. It is not a policy platform, ideology, or authority structure. It exists to demonstrate how governance can remain coherent as systems scale, adapt, and evolve.
 
@@ -118,3 +104,19 @@ The measure of success is not adoption, but **persistence without harm**.
 ---
 
 This model exists so future leaders, designers, and stewards do not have to rediscover these lessons through damage.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🛡️Governance%20Substrate-🧩Structural%20Stewardship%20Canon%20Active-4c8eda?style=for-the-badge" alt="Governance Substrate | Structural Stewardship Canon Active"/>
