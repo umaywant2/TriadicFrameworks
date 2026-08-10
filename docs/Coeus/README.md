@@ -1,22 +1,8 @@
+<img width="1194" height="672" alt="Coeus_module" src="https://github.com/user-attachments/assets/f0ab6362-c388-43e7-b950-467c9fd1b961" />
+
 # 🧠 Coeus Protocol  
 
 - [`coeus_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Coeus/coeus_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🪙Coeus%20Sandbox-🧩Multi%20Agent%20Research%20Canon%20Active-4c8eda?style=for-the-badge" alt="🪙Coeus Sandbox | 🧩Multi Agent Research Canon Active"/>
 
 **Multi-AI Research Sandbox & Coin Exchange Framework**  
 *A triadic system for recursive cognition, remixable research, and observer-grade ethics*
@@ -133,3 +119,19 @@ Coeus/
 Coeus is a forge. A remix engine. A legacy protocol. Fork it, run it, mint your coins—and let the sandbox echo.
 
 ---
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🪙Coeus%20Sandbox-🧩Multi%20Agent%20Research%20Canon%20Active-4c8eda?style=for-the-badge" alt="🪙Coeus Sandbox | 🧩Multi Agent Research Canon Active"/>
