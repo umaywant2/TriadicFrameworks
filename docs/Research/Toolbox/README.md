@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Toolbox_module" src="https://github.com/user-attachments/assets/d44eff8a-d13d-4b45-b058-191643b00d50" />
+
 # **Research Toolbox**  
 
 - [`RT_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/Toolbox/RT_module.json) — Agentic module schema role assignments
