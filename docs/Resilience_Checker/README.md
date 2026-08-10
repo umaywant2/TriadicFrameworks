@@ -1,22 +1,8 @@
+<img width="1194" height="672" alt="Resilience_Checker_module" src="https://github.com/user-attachments/assets/15bd4404-becc-4892-b915-d327af1284c6" />
+
 ## 🧭 Resilience Checker  
 
 - [`Resilience_Checker_module.json`](Resilience_Checker_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/♻️Resilience%20Core-🧩Paradox%20Structural%20Canon%20Active-4c8eda?style=for-the-badge" alt="♻️Resilience Core | 🧩Paradox Structural Canon Active"/>
 
 The **Resilience Checker** is a curated collection of foundational paradoxes spanning logic, physics, computation, cosmology, and philosophy.
 
@@ -105,3 +91,19 @@ Future additions, if any, will preserve the existing numbering and conceptual ar
 ---
 
 *This folder is part of the broader TriadicFrameworks project and reflects its emphasis on clarity, scale‑awareness, and cognitive resilience.*
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/♻️Resilience%20Core-🧩Paradox%20Structural%20Canon%20Active-4c8eda?style=for-the-badge" alt="♻️Resilience Core | 🧩Paradox Structural Canon Active"/>
