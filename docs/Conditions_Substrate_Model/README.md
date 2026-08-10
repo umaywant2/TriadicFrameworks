@@ -1,4 +1,9 @@
+<img width="1194" height="672" alt="Conditions_Substrate_Model_module" src="https://github.com/user-attachments/assets/5c9599b3-4a13-45b5-bdcf-4ae57971d904" />
+
 # Conditions Substrate Model  
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Conditions_Substrate_Model/module.json) — Agentic module schema role assignments
+
 ### Canonical Module — TriadicFrameworks
 
 The **Conditions Substrate Model** describes how drift, coherence, resonance, hooks, signatures, thresholds, propagation, cycles, and cascades interact across all substrates (D0–D7).  
