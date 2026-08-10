@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="FFT_Analyzer_module" src="https://github.com/user-attachments/assets/8a5da174-e14f-4dcb-b68a-de20944431c3" />
+
 # Analyzer
 
 - [`FFT_analyzer-module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/Analyzer/FFT_analyzer-module.json) — Agentic module schema role assignments
@@ -178,3 +180,5 @@ Operators ──► Dimensional ──► Regime ──► Coherence
 ---
 
 *Part of [TriadicFrameworks](../../../README.md) · Framework Field Theory*
+
+<img width="1194" height="672" alt="FFT_Analyzer_module_notext" src="https://github.com/user-attachments/assets/438d037f-15ba-40d6-b4c4-9577201af60f" />
