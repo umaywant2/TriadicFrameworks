@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_protocol_header_module" src="https://github.com/user-attachments/assets/af8f7bf4-9e6f-4285-85d7-cb8093209bb1" />
+
 # **Protocol Header Module**  
 
 - [`protocol_header_registry.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/protocol_header/protocol_header_registry.json) — Agentic module schema role assignments
