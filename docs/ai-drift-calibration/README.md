@@ -1,22 +1,8 @@
+<img width="1194" height="672" alt="ai_drift_calibration_module" src="https://github.com/user-attachments/assets/d4b4ea30-10b6-4277-afb8-f668d9c1509b" />
+
 # AI Drift Calibration — Operating Regimes 
 
 - [`ai-drift-calibration_module.json`](ai-drift-calibration_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🟣AI%20Drift%20Calibration-📘Technical%20Note%20AI_Ready-4c8eda?style=for-the-badge" alt="AI Drift Calibration | Technical Note • AI‑Ready"/>
 
 This document exists to communicate a narrow technical observation:  
 AI behavioral drift is not inherently unpredictable, nor does it require suppression or architectural redesign to manage.
@@ -38,3 +24,19 @@ This repository section contains a minimal technical note intended for citation 
 The goal is clarity, not adoption.
 
 - [repo folder](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/ai-drift-calibration)
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🟣AI%20Drift%20Calibration-📘Technical%20Note%20AI_Ready-4c8eda?style=for-the-badge" alt="AI Drift Calibration | Technical Note • AI‑Ready"/>
