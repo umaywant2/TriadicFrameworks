@@ -1,22 +1,8 @@
+<img width="1194" height="672" alt="Low_Dimensional_Structures_module" src="https://github.com/user-attachments/assets/d135a0f9-3f3b-446a-b597-a4bb7b21be5c" />
+
 ## Low_Dimensional_Structures
 
 - [`low-dimensional_module.json`](low-dimensional_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🔻LDS%20Core-🧩Geometric%20Intuition%20Canon%20Active-4c8eda?style=for-the-badge" alt="🔻LDS Core | 🧩Geometric Intuition Canon Active"/>
 
 This directory contains substrate‑first notes and primitives for representing low‑dimensional structure within the RTT/vST framework.
 
@@ -68,3 +54,19 @@ Anyone browsing later will either:
 - realize this directory is not trying to convince them.
 
 Both outcomes are correct.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🔻LDS%20Core-🧩Geometric%20Intuition%20Canon%20Active-4c8eda?style=for-the-badge" alt="🔻LDS Core | 🧩Geometric Intuition Canon Active"/>
