@@ -1,4 +1,4 @@
-<img width="1194" height="672" alt="Governance_Substrate_Model_Analyzer_module" src="https://github.com/user-attachments/assets/0a829812-e756-452b-b1b4-2610a22a829e" />
+<img width="1194" height="672" alt="GSM_Analyzer_module" src="https://github.com/user-attachments/assets/80dc61d1-445d-4c77-ba07-f9cbdc7850e0" />
 
 ## Governance Alignment Analyzer  
 
