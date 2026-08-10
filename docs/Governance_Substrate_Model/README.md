@@ -120,3 +120,5 @@ This model exists so future leaders, designers, and stewards do not have to redi
 </div>
 
 <img src="https://img.shields.io/badge/🛡️Governance%20Substrate-🧩Structural%20Stewardship%20Canon%20Active-4c8eda?style=for-the-badge" alt="Governance Substrate | Structural Stewardship Canon Active"/>
+
+<img width="1194" height="672" alt="Governance_Substrate_Model_Analyzer_module" src="https://github.com/user-attachments/assets/0a829812-e756-452b-b1b4-2610a22a829e" />
