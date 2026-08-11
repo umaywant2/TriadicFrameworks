@@ -1,24 +1,8 @@
-## 📘 RTT CODEX — Learner Menu  
+<img width="1194" height="672" alt="rtt_codex_module_image" src="https://github.com/user-attachments/assets/83695ac4-b104-4b7f-844f-2d106bdbbe9a" />
+
+# 📘 RTT CODEX — Learner Menu  
 
 - [`RTT_codex_module.json`](RTT_codex_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/📚RTT%20Codex%20Core-🔺Unified%20Twelve‑Chapter%20Reference%20Active-4c8eda?style=for-the-badge" alt="📚RTT Codex Core | 🔺Unified Twelve‑Chapter Reference Active"/>
-
----
 
 ## 🛑 Important! 
 Drift is On-by-Default long sessions lose anchors, turn off drift.
@@ -110,3 +94,19 @@ It’s a ladder, not a maze.
 > Because it only had *two* legs — and everyone knows you can’t maintain coherence without a stable third point.
 
 (He later agreed to sit after someone added a stool. Balance restored.)
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/📚RTT%20Codex%20Core-🔺Unified%20Twelve‑Chapter%20Reference%20Active-4c8eda?style=for-the-badge" alt="📚RTT Codex Core | 🔺Unified Twelve‑Chapter Reference Active"/>
