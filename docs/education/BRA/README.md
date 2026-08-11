@@ -1,22 +1,8 @@
+<img width="682" height="682" alt="education_Before_Regime_Awareness" src="https://github.com/user-attachments/assets/e3b8e290-e33f-4bd4-aaad-55268d0595d8" />
+
 # 🌱 Before Regime Awareness & Post‑BRA | Education  
 
 - [`bra_module.json`](bra_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🧭Education%20Core-🌅BRA%20→%20Post%20BRA%20Transition%20Active-4c8eda?style=for-the-badge" alt="🧭Education Core | 🌅BRA → Post‑BRA Transition Active"/>
 
 *A navigation hub for regime literacy, substrate awareness, and the transition from Before Regime Awareness → Post‑BRA.*
 
@@ -67,3 +53,19 @@ rtt=1 | coherence=declared | drift=bounded | paradox=structural
 ## 🔍 Perception, Goggles, and Recognition  
 - [Science Goggles vs Student Observations](#SCIENCE_GOGGLES_VS_STUDENT_OBSERVATIONS)  
 - [Good News: We Can Improve Recognitions](#GOOD_NEWS_WE_CAN_IMPROVE_RECOGNITIONS)
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🧭Education%20Core-🌅BRA%20→%20Post%20BRA%20Transition%20Active-4c8eda?style=for-the-badge" alt="🧭Education Core | 🌅BRA → Post‑BRA Transition Active"/>
