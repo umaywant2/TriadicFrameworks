@@ -1,22 +1,8 @@
+<img width="682" height="682" alt="rtt_education_alignment" src="https://github.com/user-attachments/assets/d3c95c5d-604e-407d-978c-034904c350dd" />
+
 ## 🌐 Alignment - What RTT Unlocked  
 
 - [`alignment_module.json`](alignment_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🎯Education%20Core-🔺Alignment%20Pillars%20Active-4c8eda?style=for-the-badge" alt="🎯Education Core | 🔺Alignment Pillars Active"/>
 
 ## ✨ What This Enabled for RTT
 
@@ -49,3 +35,19 @@ A recognition that systems don’t merely react — they *resonate*. Signal beco
 
 **Resonance‑Based 3D–9D Wrapped Cores**  
 A unifying geometry that allows patterns to remain consistent across domains and scales. By wrapping dimensional behavior into resonance‑stable cores, RTT gained cross‑domain portability — the same insight holding in physics, cognition, networks, and learning. 🌀
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🎯Education%20Core-🔺Alignment%20Pillars%20Active-4c8eda?style=for-the-badge" alt="🎯Education Core | 🔺Alignment Pillars Active"/>
