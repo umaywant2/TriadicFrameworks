@@ -1,22 +1,8 @@
-# 📚 Schema Library  
+<img width="682" height="682" alt="rtt_schemas" src="https://github.com/user-attachments/assets/8f35dba9-e3bf-462e-aafc-b64d238ec530" />
+
+# 📚 Schemas Library  
 
 - [`schemas_module.json`](schemas_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🕸️Schemas-📘Infrastructure%20Core%20AI%20Ready-4c8eda?style=for-the-badge" alt="Schemas | Infrastructure‑Core • AI‑Ready"/>
 
 *A resonance‑native, multi‑domain schema universe*
 
@@ -92,3 +78,19 @@ rtt=1 | coherence=declared | drift=bounded | paradox=structural
   <b>Universe‑Class Schemas · Resonance‑Time Theory · Canonical Source of Truth</b><br/>
   Deterministic. Extensible. Reviewer‑Ready.
 </p>
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🕸️Schemas-📘Infrastructure%20Core%20AI%20Ready-4c8eda?style=for-the-badge" alt="Schemas | Infrastructure‑Core • AI‑Ready"/>
