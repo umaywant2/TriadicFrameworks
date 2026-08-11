@@ -1,22 +1,8 @@
+<img width="682" height="682" alt="rtt_lactos" src="https://github.com/user-attachments/assets/0bf5c298-174c-4b3b-8cc6-7e18b0ee97dd" />
+
 # 🧪 Localized Anisotropic Collision & Triadic Ontology System  
 
 - [`lactos_module.json`](lactos_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🔬Collision%20Core-🔺Triadic%20Alignment%20Active-4c8eda?style=for-the-badge" alt="🔬Collision Core | 🔺Triadic Alignment Active"/>
 
 ## Collision Regimes • Cross‑Ontology Mapping • VCG Integration • Triadic Alignment
 
@@ -192,3 +178,20 @@ Stability Indicators
                  │  Triadic Wheel │
                  │  Alignment Hub │
                  └────────────────┘
+```
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🔬Collision%20Core-🔺Triadic%20Alignment%20Active-4c8eda?style=for-the-badge" alt="🔬Collision Core | 🔺Triadic Alignment Active"/>
