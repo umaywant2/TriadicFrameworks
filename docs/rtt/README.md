@@ -68,10 +68,10 @@ RTT‑Tech is built for:
 
 | Class | Service Type | Host Names | Description |
 | --- | --- | --- | --- |
-| **Lumen** | (RTT‑1) | `lumen.rtt1.online` | Primary resonance engine; illumination, activation, first‑order RTT/1 core |
-| **Hephaestus** | (RTT‑2) | `hephaestus.rtt2.online` | Structural detection; forge‑layer analysis, RTT/2 pattern extraction |
-| **Aurion** | (RTT‑3) | `aurion.rtt3.online` | Integration & emission; RTT/3 cross‑domain synthesis and output |
-| **Harmonia** | (RTT‑12) | `harmonia.rtt12.online` | First harmonic ladder; 12‑step resonance ascent and harmonic ordering |
+| **Lumen** | (RTT‑1) | [`lumen.rtt1.online`](https://lumen.rtt1.online) | Primary resonance engine; illumination, activation, first‑order RTT/1 core |
+| **Hephaestus** | (RTT‑2) | [`hephaestus.rtt2.online`](https://hephaestus.rtt2.online) | Structural detection; forge‑layer analysis, RTT/2 pattern extraction |
+| **Aurion** | (RTT‑3) | [`aurion.rtt3.online`](https://aurion.rtt3.online) | Integration & emission; RTT/3 cross‑domain synthesis and output |
+| **Harmonia** | (RTT‑12) | [`harmonia.rtt12.online`](https://harmonia.rtt12.online) | First harmonic ladder; 12‑step resonance ascent and harmonic ordering |
 | **Diatonia** | (RTT‑24) | `*planned` | Dual harmonic arcs; paired‑ladder resonance and 24‑mode progression |
 | **Triasona** | (RTT‑36) | `*planned` | Tri‑harmonic systems; triple‑ladder coherence and 36‑mode triadic fusion |
 | **Harmonicon** | (RTT‑144) | `*planned` | 12×12 harmonic grid; lattice‑level resonance mapping and field coherence |
