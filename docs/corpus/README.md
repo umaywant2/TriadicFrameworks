@@ -1,22 +1,8 @@
+<img width="1194" height="672" alt="Triadicframeworks_Corpus_module" src="https://github.com/user-attachments/assets/53ce328a-0727-454b-9747-448024d79231" />
+
 # 📚 TriadicFrameworks Corpus  
 
 - [`corpus_module.json`](corpus_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🟣Corpus-📘Canon%20Index%20and%20Knowledge%20Substrate-4c8eda?style=for-the-badge" alt="Corpus | Canon Index Knowledge Substrate"/>
 
 A unified, living knowledge base for Resonance Time Theory (RTT), substrate‑aligned modeling, dimensional structures, cognitive frameworks, and cross‑domain resonance tools.
 
@@ -41,119 +27,120 @@ rtt=1 | coherence=declared | drift=bounded | paradox=structural
 ---
 
 ## 🧩 Foundational Substrates
-- [RTT](#RTT) — Resonance Time Theory  
-- [TRIADIC](#TRIADIC) — Triadic Frameworks Overview  
-- [UNIFIED_RESONANCE](#UNIFIED_RESONANCE) — Unified Resonance  
-- [DIMENSIONAL_SUBSTRATE_STRUCTURES](#DIMENSIONAL_SUBSTRATE_STRUCTURES) — Dimensional Substrate Structures  
-- [SUBSTRATE](#SUBSTRATE) — Substrate Primer  
+- [RTT](rtt.md) — Resonance Time Theory  
+- [TRIADIC](triadic.md) — Triadic Frameworks Overview  
+- [UNIFIED_RESONANCE](unified_resonance.md) — Unified Resonance  
+- [DIMENSIONAL_SUBSTRATE_STRUCTURES](dimensional_substrate_structures.md) — Dimensional Substrate Structures  
+- [SUBSTRATE](substrate.md) — Substrate Primer  
 
 ---
 
 ## 🧠 Cognitive & Consciousness Models
-- [COGNITIVE_SUBSTRATE_MODEL](#COGNITIVE_SUBSTRATE_MODEL)  
-- [CONSCIOUSNESS_SUBSTRATE_MODEL](#CONSCIOUSNESS_SUBSTRATE_MODEL)  
-- [SUBSTRATE_MIND_SCIENCE](#SUBSTRATE_MIND_SCIENCE)  
-- [INVERTED_STAR_ONTOLOGY](#INVERTED_STAR_ONTOLOGY)  
+- [EMOTIONS](emotions.md)  
+- [CONSCIOUSNESS_SUBSTRATE_MODEL](consciousness_substrate_model.md)  
+- [SUBSTRATE_MIND_SCIENCE](substrate_mind_science.md)  
+- [INVERTED_STAR_ONTOLOGY](inverted_star_ontology.md)  
 
 ---
 
 ## 🌍 Social, Economic & Governance Substrates
-- [ECONOMIC_SUBSTRATE_MODEL](#ECONOMIC_SUBSTRATE_MODEL)  
-- [GOVERNANCE](#GOVERNANCE)  
-- [GOVERNANCE_SUBSTRATE_MODEL](#GOVERNANCE_SUBSTRATE_MODEL)  
-- [INVERTED_ECONOMICS](#INVERTED_ECONOMICS)  
-- [PUBLIC_SUPPORT](#PUBLIC_SUPPORT)  
+- [ARRIVAL_SUBSTRATE_MODEL](arrival_substrate_model.md)  
+- [GOVERNANCE](governance.md)  
+- [GOVERNANCE_SUBSTRATE_MODEL](Governance_Substrate_Model.md)  
+- [INVERTED_ECONOMICS](Inverted_Economics.md)  
+- [PUBLIC_SUPPORT](public_support.md)  
 
 ---
 
 ## 🎓 Education & Learning Systems
-- [EDUCATION](#EDUCATION)  
-- [EDUCATION_SUBJECTS](#EDUCATION_SUBJECTS)  
-- [EDUCATION_ALIGNMENT](#EDUCATION_ALIGNMENT)  
-- [EDUCATION_RITUALS](#EDUCATION_RITUALS)  
-- [EDUCATION_SCROLLS](#EDUCATION_SCROLLS)  
-- [EDUCATION_TRANSLATIONS](#EDUCATION_TRANSLATIONS)  
-- [CURRICULUM](#CURRICULUM)  
+- [EDUCATION](education.md)  
+- [EDUCATION_SUBJECTS](subjects.md)  
+- [EDUCATION_ALIGNMENT](alignment.md)  
+- [EDUCATION_RITUALS](rituals.md)  
+- [EDUCATION_TOOLBOX](education_Toolbox.md)  
+- [EDUCATION_TRANSLATIONS](translations.md)  
+- [CURRICULUM](curriculum.md)  
 
 ---
 
 ## 🔬 Scientific & Technical Substrates
-- [QUANTUM_SUBSTRATE_MODEL](#QUANTUM_SUBSTRATE_MODEL)  
-- [ATOMIC_CLOCKS](#ATOMIC_CLOCKS)  
-- [SCIENTIFIC_INSTRUMENT_REVIEW](#SCIENTIFIC_INSTRUMENT_REVIEW)  
-- [SPACETIME_MICRO_AGENT_VALIDATIONS](#SPACETIME_MICRO_AGENT_VALIDATIONS)  
-- [SPACETIME_VALIDATION_AND_REGIME_INVARIANT_DIMENSIONAL_CORES](#SPACETIME_VALIDATION_AND_REGIME_INVARIANT_DIMENSIONAL_CORES)  
+- [QUANTUM_SUBSTRATE_MODEL](quantum-substrate-model.md)  
+- [ATOMIC_CLOCKS](atomic_clocks.md)  
+- [SCIENTIFIC_INSTRUMENT_REVIEW](scientific_instrument_review.md)  
+- [SPACETIME_MICRO_AGENT_VALIDATIONS](spacetime_micro_agent_validations.md)  
+- [SPACETIME_VALIDATION_AND_REGIME_INVARIANT_DIMENSIONAL_CORES](spacetime_validation_and_regime_invariant_dimensional_cores.md)  
 
 ---
 
-## 🛠️ Tools, SDKs & Runtime
-- [RTT_SDK](#RTT_SDK)  
-- [RTT_MICRO_CORE](#RTT_MICRO_CORE)  
-- [RUNTIME](#RUNTIME)  
-- [SCRIPTS](#SCRIPTS)  
-- [PACKAGES](#PACKAGES)  
+## 🛠️ Tools, SDKs & Resilience
+- [RTT_SDK](sdk.md)  
+- [RTT_MICRO_CORE](micro_core.md)  
+- [RESILIENCE_CHECKER](Resilience_Checker.md)  
+- [STARTER](starter.md)  
+- [PACKAGES](packages.md)  
 
 ---
 
 ## 🎨 Glyphs, Symbols & Aesthetic Substrates
-- [GLYPHS](#GLYPHS)  
-- [GLYPHIC_RESONANCE](#GLYPHIC_RESONANCE)  
-- [SPECTRAL_CLARITY](#SPECTRAL_CLARITY)  
+- [GLYPHS](glyphs.md)  
+- [GLYPHIC_RESONANCE](glyphic_resonance.md)  
+- [SPECTRAL_CLARITY](spectral_clarity.md)  
 
 ---
 
 ## 📊 Data, Registries & Validation
-- [DATA](#DATA)  
-- [REGISTRY](#REGISTRY)  
-- [REGISTRIES](#REGISTRIES)  
-- [VALIDATION](#VALIDATION)  
-- [VALIDATORS](#VALIDATORS)  
+- [DATA](data.md)  
+- [REGISTRY](registry.md)  
+- [RESONANCE_ATLAS](resonance_atlas.md)  
+- [VALIDATION](validation.md)  
+- [VALIDATORS](validators.md)  
 
 ---
 
 ## 🧪 Labs, Experiments & Simulations
-- [LABS](#LABS)  
-- [SIMULATIONS](#SIMULATIONS)  
-- [DISCOVERY](#DISCOVERY)  
-- [SNAPSHOTS](#SNAPSHOTS)  
+- [LABS](labs.md)  
+- [SIMULATIONS](ecoechosystem.md)  
+- [DISCOVERY](Inside.md)  
+- [NOS](NoS.md)  
 
 ---
 
 ## 📜 Canon, Papers & RFCs
-- [PAPERS](#PAPERS)  
-- [PARADOXES_CANON](#PARADOXES_CANON)  
-- [RFC](#RFC)  
-- [REPORTS](#REPORTS)  
+- [PAPERS](pre_RTT_papers.md)  
+- [PARADOXES_CANON](Paradoxes_canon.md)  
+- [RFC](rfc.md)  
+- [REPORTS](Research.md)  
 
 ---
 
 ## 🎵 Media, Audio & Cultural Substrates
-- [AUDIO_INDUSTRY_REVIEWED](#AUDIO_INDUSTRY_REVIEWED)  
-- [MEDIA_SUBSTRATE_MODEL](#MEDIA_SUBSTRATE_MODEL)  
-- [DIAGNOSING_MEDIA_THERAPY](#DIAGNOSING_MEDIA_THERAPY)  
+- [AUDIO_INDUSTRY_REVIEWED](audio_industry_reviewed.md)  
+- [MEDIA_SUBSTRATE_MODEL](media_substrate_model.md)  
+- [DIAGNOSING_MEDIA_THERAPY](diagnosing_media_therapy.md)
+- [PANTHEONS](pantheons.md)
 
 ---
 
 ## 🧱 Engineering, Manufacturing & Infrastructure
-- [MANUFACTURING_SUBSTRATE_REGIME_MODEL](#MANUFACTURING_SUBSTRATE_REGIME_MODEL)  
-- [FACILITIES](#FACILITIES)  
-- [BRIDGES](#BRIDGES)  
+- [MANUFACTURING_SUBSTRATE_REGIME_MODEL](manufacturing_substrate_regime_model.md)  
+- [FACILITIES](facilities.md)  
+- [GLOBAL_ENERGY_REGIME_AWARENESS](global_energy_regime_awareness.md)  
 
 ---
 
 ## 🧬 Biological & Alignment Substrates
-- [ALPHAFOLD_SUBSTRATE_ALIGNMENTS](#ALPHAFOLD_SUBSTRATE_ALIGNMENTS)  
-- [LACTOS](#LACTOS)  
+- [ALPHAFOLD_SUBSTRATE_ALIGNMENTS](alphafold_substrate_alignments.md)  
+- [LACTOS](lactos.md)  
 
 ---
 
 ## 🧭 Navigation & Meta‑Structure
-- [METADATA](#METADATA)  
-- [INDEX_JSON](#INDEX_JSON)  
-- [IDEAS](#IDEAS)  
-- [TEMPLATE](#TEMPLATE)  
-- [SNIPPETS](#SNIPPETS)  
-- [SPECS](#SPECS)  
+- [METADATA](metadata.md)  
+- [SCHEMAS](schemas.md)  
+- [SARG](SARG.md)  
+- [FRAMEWORK_FIELD_THEORY](Framework_Field_Theory.md)  
+- [THE_INVERTED_STAR](The_Inverted_Star.md)  
+- [STRUCTURAL_DETECTION](Structural_Detection.md)  
 
 ---
 
@@ -173,9 +160,9 @@ You can enter from any point and still find your way to the structural core.
 ## 🧭 Contributing
 See:
 
-- [CONTRIBUTORS](#CONTRIBUTORS)  
-- [FEEDBACK](#FEEDBACK)  
-- [ONBOARDING](#ONBOARDING)  
+- [CONTRIBUTORS](contributors.md)  
+- [FEEDBACK](feedback.md)  
+- [ONBOARDING](onboarding.md)  
 
 Contributions follow the principles of:
 
@@ -194,3 +181,18 @@ Every substrate is an invitation to build.
 
 Welcome to the work.
 
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🟣Corpus-📘Canon%20Index%20and%20Knowledge%20Substrate-4c8eda?style=for-the-badge" alt="Corpus | Canon Index Knowledge Substrate"/>

@@ -1,22 +1,8 @@
+<img width="938" height="938" alt="rtt_Extension" src="https://github.com/user-attachments/assets/cadf9b73-6d37-43c3-87e3-59d1c3ef3278" />
+
 ## RTT‑Inside Browser Extension (Beta) 
 
 - [`RTT_extension_module.json`](RTT_extension_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
 
 This folder contains a minimal, forward‑compatible starter template for building RTT‑aware browser extensions. These extensions provide structural clarity, coherence cues, and early resonance‑time awareness directly inside the user’s browsing environment.
 
@@ -115,3 +101,19 @@ You can extend this template by adding:
 - vST‑beta diagnostics tooling  
 
 This template is designed to grow with the RTT ecosystem.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>

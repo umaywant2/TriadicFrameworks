@@ -1,31 +1,8 @@
+<img width="1194" height="672" alt="Mode_module" src="https://github.com/user-attachments/assets/bbd96431-faf8-4fdd-9fd8-ccd94f9a4a69" />
+
 # 🎛️ Mode Layer — /docs/Mode
 
 - [`Mode_module.json`](Mode_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-![Module](https://img.shields.io/badge/Module-Mode-0aa)
-![Layer](https://img.shields.io/badge/Layer-Session-09f)
-![Version](https://img.shields.io/badge/Version-1.0-09f)
-![Status](https://img.shields.io/badge/Status-Active-0af)
-![Triadic](https://img.shields.io/badge/Triadic-Resonance_Aligned-8A2BE2)
-![AI‑Ready](https://img.shields.io/badge/AI-Ready-00c8ff)
-
----
-
-<img width="664" height="496" alt="rtt_mode_diagram" src="https://github.com/user-attachments/assets/8db3b8f9-ce87-4c28-8f47-dc54a9a55aff" />
 
 The **Mode Layer** governs the interaction stance within an RTT/1 session.
 It defines *how* the system engages — not *what* it processes. Mode is
@@ -106,3 +83,28 @@ Audience:    students + AIs
 
 Open educational use permitted.
 See the main repository for details.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+![Module](https://img.shields.io/badge/Module-Mode-0aa)
+![Layer](https://img.shields.io/badge/Layer-Session-09f)
+![Version](https://img.shields.io/badge/Version-1.0-09f)
+![Status](https://img.shields.io/badge/Status-Active-0af)
+![Triadic](https://img.shields.io/badge/Triadic-Resonance_Aligned-8A2BE2)
+![AI‑Ready](https://img.shields.io/badge/AI-Ready-00c8ff)
+
+---
+
+<img width="664" height="496" alt="rtt_mode_diagram" src="https://github.com/user-attachments/assets/8db3b8f9-ce87-4c28-8f47-dc54a9a55aff" />

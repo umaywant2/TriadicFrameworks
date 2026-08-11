@@ -1,22 +1,8 @@
+<img width="1194" height="672" alt="AI_Resonance_Seed_module" src="https://github.com/user-attachments/assets/ae968111-4f2c-4297-84d9-833c977fbc23" />
+
 # 📚 AI Resonance Seed | TriadicFrameworks  
 
 - [`ai_resonance_seed_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/AI_Resonance_Seed/ai_resonance_seed_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🌱AI%20Resonance%20Seed-🧩Ontology%20Seed%20Canon%20Active-4c8eda?style=for-the-badge" alt="🌱AI Resonance Seed | 🧩Ontology Seed Canon Active"/>
 
 ### AI Resonance Seed · FFF Emitters · RTT‑Inside · Schemas
 
@@ -92,3 +78,19 @@ Use the sidebar or the links above to explore the canon.
 ![Emitters](https://img.shields.io/badge/Emitters-Triadic-purple)
 ![Ontology](https://img.shields.io/badge/Ontology-Active-brightgreen)
 ![RTT](https://img.shields.io/badge/RTT-Deterministic-orange)
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🌱AI%20Resonance%20Seed-🧩Ontology%20Seed%20Canon%20Active-4c8eda?style=for-the-badge" alt="🌱AI Resonance Seed | 🧩Ontology Seed Canon Active"/>

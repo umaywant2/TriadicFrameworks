@@ -1,27 +1,8 @@
-# 🌊 Substrate Flow — /docs/rtt/Substrate_Flow  
+<img width="1194" height="672" alt="rtt_Substrate_Flow" src="https://github.com/user-attachments/assets/6edfd785-921c-4772-a1c9-beb11c7a1c40" />
+
+# 🌊 Substrate Flow
 
 - [`Substrate_Flow_module.json`](Substrate_Flow_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-![Module](https://img.shields.io/badge/Module-Substrate_Flow-333)
-![Tier](https://img.shields.io/badge/Tier-RTT_Analytics-0aa)
-![Version](https://img.shields.io/badge/Version-1.0-09f)
-![Status](https://img.shields.io/badge/Status-Canon_Stable-0af)
-![HSP](https://img.shields.io/badge/HSP-08-8A2BE2)
-![AI‑Ready](https://img.shields.io/badge/AI-Ready-00c8ff)
 
 ---
 
@@ -135,3 +116,24 @@ Audience:     students + researchers + AIs
 
 Open educational use permitted.
 See the main repository for details.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+![Module](https://img.shields.io/badge/Module-Substrate_Flow-333)
+![Tier](https://img.shields.io/badge/Tier-RTT_Analytics-0aa)
+![Version](https://img.shields.io/badge/Version-1.0-09f)
+![Status](https://img.shields.io/badge/Status-Canon_Stable-0af)
+![HSP](https://img.shields.io/badge/HSP-08-8A2BE2)
+![AI‑Ready](https://img.shields.io/badge/AI-Ready-00c8ff)

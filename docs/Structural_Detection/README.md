@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Structural_Detection_module" src="https://github.com/user-attachments/assets/8ed4981c-b855-4733-a797-9eac0b07d7e0" />
+
 - [`structural_detection_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Structural_Detection/structural_detection_module.json)
 
 <div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/6Z0AklQbP8U?list=PLacFsbReLJPw&pp=sAgC&autoplay=1&mute=1&loop=1" title="TriadicFrameworks Books Playlist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>

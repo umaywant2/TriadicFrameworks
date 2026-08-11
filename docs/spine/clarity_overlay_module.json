@@ -1,0 +1,272 @@
+{
+  "$schema": "https://triadicframeworks.org/schemas/overlay-module.schema.json",
+  "$generated": "2026-08-08T11:13:00",
+  "$version": "2.0",
+  "$round": "R5",
+
+  "module_id": "spine-clarity",
+  "module_name": "Clarity Overlay",
+  "file": "docs/spine/clarity_overlay_module.json",
+  "version": "2.0",
+  "status": "Active Canonical",
+  "canonical": true,
+  "ai_ready": true,
+  "interactive": true,
+
+  "namespace": "RTT::Clarity",
+  "layer": "Core Frameworks",
+  "sublayer": "Clarity & Transmission",
+  "role": "Cross-cutting clarity diagnostic and transmission gatekeeper",
+
+  "url": "https://www.triadicframeworks.org/spine/clarity/",
+  "path": "docs/spine/clarity_overlay.md",
+  "tool_path": "docs/spine/clarity/index.html",
+
+  "description": "The Clarity Overlay measures, scores, and repairs the epistemic clarity of any conceptual payload φ transmitted through the S3 Spine. Defines the C-N-R (Compression–Nuance–Resonance) triad — a three-axis epistemic model yielding three scalar metrics (Validator Entropy Hᵥ, Validator-Width Wᵥ, Resonance-Integration Iᵣ) and a composite Clarity Score Ξ. Gates payload transmission at Ξ ≥ 0.70. Maps six named epistemic regimes (Crystal, Blade, Fog, Echo, Void, Torsion) across the C×N×R unit cube. Provides a formal operator grammar (Ĉ, N̂, R̂, V̂, T̂, Π, M̂) with composition, inversion, and commutativity rules. Includes bijective cross-framework mappings to Plain Language/FK, Grice's Maxims, Shannon Information Theory, Cognitive Load Theory, and Double-Crux. Ships with a live interactive C-N-R Triad Analyzer at docs/spine/clarity/index.html.",
+
+  "exports": [
+    "Clarity Report (ĥᵥ, Wᵥ, Bφ, Iᵣ, Ξ, regime, repair path)",
+    "Composite Clarity Score Ξ ∈ [0,1]",
+    "Transmission gate decision — Ξ ≥ 0.70 → PASS / HOLD",
+    "Regime classification — Crystal | Blade | Fog | Echo | Void | Torsion",
+    "Operator repair path — ordered Ĉ / N̂ / R̂ / M̂ sequence",
+    "False precision flag — when ĥᵥ < 0.2 from over-compression",
+    "Clarity Defect Δq — Euclidean distance from (c,n,r) to (1,1,1)"
+  ],
+
+  "imports": [
+    "Raw payload φ from any S3 Spine overlay",
+    "Receiver profile set G₁…Gₘ (m=5 default)",
+    "Domain weight preset (wc, wn, wr)",
+    "Operator sequence log (for torsion τ computation)"
+  ],
+
+  "engines": {
+    "primary":    { "id": "CLARITY_FIELD_ENGINE",       "version": "RTT/3", "role": "Computes Hᵥ, Wᵥ, Iᵣ, Ξ; gates at Ξ ≥ 0.70" },
+    "secondary":  { "id": "VALIDATOR_ENTROPY_SCANNER",  "version": "RTT/3", "role": "Runs V̂; samples ∂φ; returns p(∂φᵢ) for k=8 neighbors" },
+    "gatekeeper": { "id": "REGIME_CLASSIFIER",          "version": "RTT/3", "role": "Maps (c,n,r,τ) to one of six regimes; emits repair path" },
+    "tertiary":   { "id": "TORSION_RESOLVER",           "version": "RTT/2", "role": "Detects τ > 0.70; inserts M̂; retries until τ < τ_max" }
+  },
+
+  "protocol_defaults": {
+    "k":        8,
+    "delta":    0.25,
+    "tau_max":  0.70,
+    "m":        5,
+    "xi_ship":  0.70
+  },
+
+  "metrics": {
+    "hv_hat": {
+      "name": "Validator Entropy (normalized)",
+      "formula": "Hᵥ / log₂(k)",
+      "range": "[0, 1]",
+      "thresholds": { "Singular": 0.00, "Sharp": 0.33, "Diffuse": 0.67, "Cloudy": 0.90, "Entropic": 1.00 }
+    },
+    "wv": {
+      "name": "Validator Width",
+      "formula": "|{ ∂φᵢ : d(φ,∂φᵢ) ≤ δ }|",
+      "range": "[1, k]",
+      "thresholds": { "Narrow": 2, "Moderate": 5, "Wide": 8 }
+    },
+    "bphi": {
+      "name": "Boundary Chaos",
+      "formula": "Wᵥ · ĥᵥ",
+      "range": "[0, k]",
+      "ship_threshold": 3.0
+    },
+    "ir": {
+      "name": "Resonance-Integration",
+      "formula": "1 − σ(ρ₁…ρₘ) / μ(ρ₁…ρₘ)",
+      "range": "[0, 1]",
+      "thresholds": { "Universal": 0.90, "Robust": 0.70, "Context-Dependent": 0.50, "Fragile": 0.30, "Non-Integrating": 0.00 }
+    },
+    "xi": {
+      "name": "Composite Clarity Score",
+      "formula": "wc·(1−ĥᵥ) + wn·(1−Bφ/k) + wr·Iᵣ",
+      "range": "[0, 1]",
+      "ship_threshold": 0.70,
+      "classifications": { "Crystal": 0.85, "Clear": 0.70, "Hazy": 0.55, "Murky": 0.40, "Opaque": 0.00 }
+    },
+    "tau": {
+      "name": "Torsion",
+      "formula": "T̂(φ, Ô₁, Ô₂)",
+      "range": "[0, ∞)",
+      "max_threshold": 0.70
+    },
+    "delta_q": {
+      "name": "Clarity Defect",
+      "formula": "√[(1−c)² + (1−n)² + (1−r)²]",
+      "range": "[0, 1.732]"
+    }
+  },
+
+  "regime_map": {
+    "Crystal": {
+      "symbol": "Ξ-I",
+      "icon": "✦",
+      "conditions": { "c": "≥0.8", "n": "≥0.8", "r": "≥0.8", "tau": "any" },
+      "characteristic": "All axes healthy — ideal transmission state",
+      "color": "#10b981",
+      "repair": "none"
+    },
+    "Blade": {
+      "symbol": "Ξ-II",
+      "icon": "⚔",
+      "conditions": { "c": "≥0.8", "n": "<0.5", "r": "≥0.6", "tau": "any" },
+      "characteristic": "Sharp but brittle — nuance sacrificed",
+      "color": "#00d4ff",
+      "repair": "N̂ → Crystal"
+    },
+    "Fog": {
+      "symbol": "Ξ-III",
+      "icon": "◎",
+      "conditions": { "c": "<0.5", "n": "≥0.8", "r": "<0.6", "tau": "any" },
+      "characteristic": "Rich but non-transmissible — coupling fails",
+      "color": "#7c3aed",
+      "repair": "Ĉ → Crystal"
+    },
+    "Echo": {
+      "symbol": "Ξ-IV",
+      "icon": "◈",
+      "conditions": { "c": "<0.5", "n": "<0.5", "r": "≥0.8", "tau": "any" },
+      "characteristic": "High social traction, thin epistemic content",
+      "color": "#f59e0b",
+      "repair": "N̂ → Crystal"
+    },
+    "Void": {
+      "symbol": "Ξ-V",
+      "icon": "✕",
+      "conditions": { "c": "<0.4", "n": "<0.4", "r": "<0.4", "tau": "any" },
+      "characteristic": "All axes suppressed — payload is noise",
+      "color": "#ef4444",
+      "repair": "N̂ → Fog → Ĉ → Crystal"
+    },
+    "Torsion": {
+      "symbol": "Ξ-VI",
+      "icon": "⚡",
+      "conditions": { "c": "any", "n": "any", "r": "any", "tau": "≥0.70" },
+      "characteristic": "Operator conflict dominates — resolve M̂ first",
+      "color": "#f97316",
+      "repair": "M̂ → re-classify"
+    }
+  },
+
+  "domain_weight_presets": {
+    "Legal":         { "wc": 0.20, "wn": 0.55, "wr": 0.25, "note": "Nuance load-bearing; false precision catastrophic" },
+    "Executive":     { "wc": 0.45, "wn": 0.20, "wr": 0.35, "note": "Speed and resonance dominate" },
+    "Scientific":    { "wc": 0.30, "wn": 0.50, "wr": 0.20, "note": "Precision/nuance priority; expert audience" },
+    "Educational":   { "wc": 0.30, "wn": 0.25, "wr": 0.45, "note": "Germane load is primary objective" },
+    "Philosophical": { "wc": 0.15, "wn": 0.65, "wr": 0.20, "note": "Nuance is the value proposition" },
+    "AI Prompt":     { "wc": 0.40, "wn": 0.35, "wr": 0.25, "note": "Compression reduces hallucination surface" }
+  },
+
+  "operator_grammar": {
+    "Ĉ": { "name": "Compression", "action": "Reduces surface complexity; strips redundant signifiers", "signature": "φ → φ′ where |φ′| ≤ |φ|" },
+    "N̂": { "name": "Nuance",      "action": "Expands discriminative resolution; adds valid distinctions", "signature": "φ → φ″ where dim(φ″) ≥ dim(φ)" },
+    "R̂": { "name": "Resonance",   "action": "Projects φ onto receiver's generative field G", "signature": "φ × G → ρ ∈ [0,1]" },
+    "V̂": { "name": "Validator",   "action": "Samples conceptual boundary ∂φ", "signature": "φ → Δ(∂φ)" },
+    "T̂": { "name": "Torsion",     "action": "Measures rotational stress between incompatible operators", "signature": "(φ, Ô₁, Ô₂) → τ ∈ ℝ₀⁺" },
+    "Π": { "name": "Projection",  "action": "Projects φ into a target register", "signature": "φ × ℛ → φ_ℛ" },
+    "M̂": { "name": "Mediation",   "action": "Resolves torsion between incompatible operator pair", "signature": "identity on output register of Ô₂" }
+  },
+
+  "cross_framework_mappings": {
+    "Plain Language": {
+      "compression": "Sentence/syllable length reduction",
+      "nuance": "Not modeled — defaults to n=0.5",
+      "resonance": "Grade-level match (FK score)",
+      "noise": "Not modeled",
+      "metric": "Flesch-Kincaid score",
+      "rtt_gap": "Cannot represent Hᵥ or Wᵥ; single-register compression projection only"
+    },
+    "Grice": {
+      "compression": "Quantity maxim — Ĉ with Hᵥ guard",
+      "nuance": "Manner (partial) — Ĉ ∘ Π_discourse + τ < 0.4",
+      "resonance": "Relation maxim — R̂ with Gᵣₑₗₑᵥₐₙ꜀ₑ field",
+      "noise": "Maxim violation",
+      "metric": "Qualitative",
+      "rtt_gap": "Non-scalar, non-compositional; RTT adds thresholds and trade-off detection"
+    },
+    "Shannon": {
+      "compression": "Source coding",
+      "nuance": "Source entropy H(X) ↔ Hᵥ",
+      "resonance": "Mutual information I(X;Y) ↔ Iᵣ",
+      "noise": "Channel noise ↔ τ",
+      "metric": "H, C, I(X;Y)",
+      "rtt_gap": "Memoryless channels; RTT adds operator-path dependency and non-commutativity"
+    },
+    "CLT": {
+      "compression": "Extraneous load (EL) reduction ↔ τ minimization",
+      "nuance": "Intrinsic load (IL) ↔ n",
+      "resonance": "Germane load (GL) ↔ r",
+      "noise": "Extraneous load ↔ τ",
+      "metric": "IL + EL + GL",
+      "rtt_gap": "No scalar transmission gate; Wᵥ ≤ 5 formalizes Miller's Law"
+    },
+    "Double-Crux": {
+      "compression": "Crux isolation — Ĉ applied to max-Hᵥ boundary",
+      "nuance": "Crux resolution — N̂ adds distinguishing distinctions",
+      "resonance": "Mutual update — Iᵣ across {G₁, G₂}",
+      "noise": "Missing crux — high Hᵥ unresolved",
+      "metric": "Binary crux agreement",
+      "rtt_gap": "Binary; RTT provides scalar Iᵣ convergence and formal protocol"
+    }
+  },
+
+  "graph_node": {
+    "id": "spine-clarity",
+    "label": "Clarity Overlay",
+    "layer": "Core Frameworks",
+    "sublayer": "Clarity & Transmission",
+    "color": "#00d4ff",
+    "size": 18,
+    "interactive": true,
+    "url": "https://www.triadicframeworks.org/spine/clarity/"
+  },
+
+  "graph_edges": [
+    { "source": "spine-structural",  "target": "spine-clarity", "type": "feeds",  "label": "φ payload",      "style": "solid" },
+    { "source": "spine-drift",       "target": "spine-clarity", "type": "feeds",  "label": "φ payload",      "style": "solid" },
+    { "source": "spine-coherence",   "target": "spine-clarity", "type": "feeds",  "label": "φ payload",      "style": "solid" },
+    { "source": "spine-substrate",   "target": "spine-clarity", "type": "feeds",  "label": "φ payload",      "style": "solid" },
+    { "source": "spine-dimensional", "target": "spine-clarity", "type": "feeds",  "label": "φ payload",      "style": "solid" },
+    { "source": "spine-domain",      "target": "spine-clarity", "type": "feeds",  "label": "φ payload",      "style": "solid" },
+    { "source": "spine-clarity",     "target": "spine-coherence", "type": "gates", "label": "Ξ ≥ 0.70 → PASS", "style": "dashed" }
+  ],
+
+  "lineage": {
+    "parent": "spine-overlay-pack",
+    "siblings": ["spine-structural","spine-drift","spine-coherence","spine-substrate","spine-dimensional","spine-domain"],
+    "children": ["clarity-equations-v2","clarity-equations-v2-examples","cnr-triad-analyzer"]
+  },
+
+  "ai_metadata": {
+    "module": "spine-clarity",
+    "version": "2.0",
+    "purpose": "Measure and gate epistemic clarity of any φ via C-N-R triad. Score Hᵥ, Wᵥ, Iᵣ, Ξ. Classify regime. Emit repair path. Gate at Ξ ≥ 0.70.",
+    "repair_priority": [
+      "1. Resolve torsion (τ → 0) — contaminates all three axes",
+      "2. Reduce Bφ (Wᵥ · ĥᵥ) — boundary chaos degrades c and n",
+      "3. Boost Iᵣ — ensure receiver sample is representative",
+      "4. Rebalance (c,n) per domain weight preset"
+    ],
+    "keywords": [
+      "Clarity Overlay","C-N-R Triad","Compression","Nuance","Resonance",
+      "Validator Entropy","Hv","Validator Width","Wv","Resonance-Integration","Ir",
+      "Composite Clarity Score","Xi","regime classification",
+      "Crystal","Blade","Fog","Echo","Void","Torsion",
+      "operator grammar","torsion resolver","payload gating",
+      "RTT clarity","triadic frameworks","spine overlay"
+    ]
+  },
+
+  "publication": {
+    "status": "Active Canonical",
+    "version": "2.0",
+    "round": "R5",
+    "published": "2026-08-08",
+    "source_pack": "S3-Spine-Overlay-Pack-v2.0",
+    "ai_parsability": "Declared — all metrics, thresholds, formulas, and operator grammars are machine-readable"
+  }
+}

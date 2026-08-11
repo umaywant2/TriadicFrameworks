@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Internet2" src="https://github.com/user-attachments/assets/374fe1cb-cff1-4d4f-80f7-a1b402bc7635" />
+
 # RTT‑Inside / Internet2 
 
 - [`Inbternet2_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Inside/Internet2/manifest/Inbternet2_module.json)

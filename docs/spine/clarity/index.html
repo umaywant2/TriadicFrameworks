@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="description" content="RTT::Clarity C-N-R Triad Analyzer — live instrumented clarity scorer for the S3 Spine. Measures Hᵥ, Wᵥ, Iᵣ, Ξ across six epistemic regimes." />
+    <meta name="keywords" content="Clarity Overlay, C-N-R Triad, RTT, TriadicFrameworks, Compression, Nuance, Resonance, Clarity Score, Validator Entropy, Regime Map, S3 Spine" />
+    <meta name="author" content="TriadicFrameworks" />
+    <!-- Spine overlay identity -->
+    <meta name="tf:module"    content="spine-clarity" />
+    <meta name="tf:namespace" content="RTT::Clarity" />
+    <meta name="tf:version"   content="2.0" />
+    <meta name="tf:round"     content="R5" />
+    <meta name="tf:status"    content="Active Canonical" />
+    <meta name="tf:layer"     content="Core Frameworks · Clarity &amp; Transmission" />
+    <meta name="tf:overlay"   content="../clarity_overlay_module.json" />
+    <title>Clarity Overlay · RTT::Clarity v2 · S3 Spine</title>
+<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <title>Clarity Overlay · RTT::Clarity v2 · S3 Spine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bg: { DEFAULT: '#080c14', card: '#0d1525', deep: '#050912' },
+                        border: { DEFAULT: '#1a2540', light: '#243356' },
+                        accent: { cyan: '#00d4ff', violet: '#7c3aed', emerald: '#10b981', amber: '#f59e0b', red: '#ef4444' },
+                        txt: { primary: '#e2e8f0', muted: '#64748b' }
+                    }
+                }
+            }
+        };
+    </script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <style>
+        :root {
+            --bg: #080c14;
+            --card: #0d1525;
+            --deep: #050912;
+            --border: #1a2540;
+            --border-light: #243356;
+            --cyan: #00d4ff;
+            --violet: #7c3aed;
+            --emerald: #10b981;
+            --amber: #f59e0b;
+            --red: #ef4444;
+            --txt: #e2e8f0;
+            --muted: #64748b;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body { height: 100%; overflow: hidden; background: var(--bg); color: var(--txt); }
+        body { font-family: system-ui, -apple-system, sans-serif; }
+
+        .font-mono { font-family: 'Courier New', monospace !important; }
+
+        /* Custom slider styling */
+        input[type="range"] {
+            -webkit-appearance: none; appearance: none;
+            background: transparent; width: 100%; cursor: pointer;
+        }
+        input[type="range"]::-webkit-slider-runnable-track {
+            height: 6px; border-radius: 3px; background: var(--border);
+        }
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none; appearance: none;
+            width: 18px; height: 18px; border-radius: 50%;
+            margin-top: -6px; border: 2px solid var(--card);
+            box-shadow: 0 0 8px currentColor;
+        }
+        input[type="range"]::-moz-range-track {
+            height: 6px; border-radius: 3px; background: var(--border);
+        }
+        input[type="range"]::-moz-range-thumb {
+            width: 18px; height: 18px; border-radius: 50%;
+            border: 2px solid var(--card);
+            box-shadow: 0 0 8px currentColor;
+        }
+        .slider-c::-webkit-slider-thumb { background: var(--cyan); color: var(--cyan); }
+        .slider-c::-moz-range-thumb { background: var(--cyan); color: var(--cyan); }
+        .slider-n::-webkit-slider-thumb { background: var(--violet); color: var(--violet); }
+        .slider-n::-moz-range-thumb { background: var(--violet); color: var(--violet); }
+        .slider-r::-webkit-slider-thumb { background: var(--emerald); color: var(--emerald); }
+        .slider-r::-moz-range-thumb { background: var(--emerald); color: var(--emerald); }
+        .slider-tau::-webkit-slider-thumb { background: var(--amber); color: var(--amber); }
+        .slider-tau::-moz-range-thumb { background: var(--amber); color: var(--amber); }
+        .slider-tau.danger::-webkit-slider-thumb { background: var(--red); color: var(--red); }
+        .slider-tau.danger::-moz-range-thumb { background: var(--red); color: var(--red); }
+        .slider-recv::-webkit-slider-thumb { background: #94a3b8; color: #94a3b8; width: 14px; height: 14px; margin-top: -5px; }
+        .slider-recv::-moz-range-thumb { background: #94a3b8; color: #94a3b8; width: 14px; height: 14px; }
+        .slider-recv::-webkit-slider-runnable-track { height: 4px; }
+        .slider-recv::-moz-range-track { height: 4px; }
+
+        .preset-pill {
+            transition: all 0.2s ease;
+            border: 1px solid var(--border);
+            background: var(--deep);
+        }
+        .preset-pill.active {
+            border-color: var(--cyan);
+            box-shadow: 0 0 12px rgba(0,212,255,0.25);
+        }
+
+        .metric-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 10px 12px;
+        }
+
+        @keyframes pulse-glow { 0%,100% { opacity: 0.7; } 50% { opacity: 1; } }
+        .pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+
+        @keyframes torsion-border {
+            0%,100% { box-shadow: inset 0 0 0 2px transparent; }
+            50% { box-shadow: inset 0 0 20px 2px rgba(239,68,68,0.35); }
+        }
+        .torsion-alert { animation: torsion-border 1.5s ease-in-out infinite; }
+
+        @keyframes confetti-burst {
+            0% { transform: scale(0); opacity: 1; }
+            100% { transform: scale(1); opacity: 0; }
+        }
+        .confetti-dot {
+            position: absolute; width: 6px; height: 6px; border-radius: 50%;
+            animation: confetti-burst 0.8s ease-out forwards;
+            pointer-events: none;
+        }
+
+        .regime-badge { transition: background-color 0.4s ease, color 0.4s ease, box-shadow 0.4s ease; }
+
+        .tab-btn-cf { transition: all 0.15s; border-bottom: 2px solid transparent; }
+        .tab-btn-cf.active { border-bottom-color: var(--cyan); color: var(--cyan); }
+
+        #operator-log-a4c2 { scrollbar-width: thin; scrollbar-color: var(--border) var(--deep); }
+        #operator-log-a4c2::-webkit-scrollbar { width: 4px; }
+        #operator-log-a4c2::-webkit-scrollbar-track { background: var(--deep); }
+        #operator-log-a4c2::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+        .modal-overlay { transition: opacity 0.2s; }
+        .modal-box { transition: transform 0.2s; }
+
+        #main-container-x8k1 { overflow-x: auto; min-width: 1200px; }
+    </style>
+
+    <!-- SPINE CHROME CSS -->
+    <style>
+      /* ── Spine top-bar ─────────────────────────────────────────────── */
+      #spine-topbar {
+        display: flex; align-items: center; justify-content: space-between;
+        height: 36px; min-height: 36px; flex-shrink: 0;
+        background: #050912;
+        border-bottom: 1px solid #1a2540;
+        padding: 0 14px;
+        font-family: 'Courier New', monospace;
+        font-size: 10px;
+        letter-spacing: 0.04em;
+        z-index: 50;
+      }
+      #spine-topbar a { text-decoration: none; }
+      .spine-back {
+        display: flex; align-items: center; gap: 6px;
+        color: #64748b; transition: color 0.15s;
+      }
+      .spine-back:hover { color: #00d4ff; }
+      .spine-back svg { width: 12px; height: 12px; flex-shrink: 0; }
+      .spine-breadcrumb {
+        display: flex; align-items: center; gap: 6px; color: #64748b;
+      }
+      .spine-breadcrumb .crumb { color: #64748b; }
+      .spine-breadcrumb .sep   { color: #1a2540; }
+      .spine-breadcrumb .crumb.active { color: #00d4ff; }
+      .spine-badges { display: flex; align-items: center; gap: 6px; }
+      .spine-badge {
+        font-family: 'Courier New', monospace; font-size: 9px;
+        padding: 2px 7px; border-radius: 99px; letter-spacing: 0.05em;
+      }
+      .spine-badge.canon   { background: rgba(16,185,129,0.12); color: #10b981; border: 1px solid rgba(16,185,129,0.25); }
+      .spine-badge.version { background: rgba(0,212,255,0.10);  color: #00d4ff; border: 1px solid rgba(0,212,255,0.20); }
+      .spine-badge.round   { background: rgba(124,58,237,0.12); color: #7c3aed; border: 1px solid rgba(124,58,237,0.25); }
+      .spine-badge.live    { background: rgba(16,185,129,0.12); color: #10b981; border: 1px solid rgba(16,185,129,0.25); }
+
+      /* ── Signal-chain strip ─────────────────────────────────────────── */
+      #spine-signal-chain {
+        display: flex; align-items: center; justify-content: center; gap: 0;
+        height: 30px; min-height: 30px; flex-shrink: 0;
+        background: #0a0f1a;
+        border-bottom: 1px solid #1a2540;
+        padding: 0 14px;
+        font-family: 'Courier New', monospace;
+        font-size: 9px;
+        overflow-x: auto; overflow-y: hidden;
+        white-space: nowrap;
+      }
+      .sc-node {
+        display: inline-flex; align-items: center; gap: 4px;
+        padding: 2px 8px; border-radius: 4px;
+        border: 1px solid;
+        font-size: 9px; letter-spacing: 0.03em;
+      }
+      .sc-node.input    { color: #64748b;  border-color: #1a2540;          background: transparent; }
+      .sc-node.scanner  { color: #7c3aed;  border-color: rgba(124,58,237,0.35); background: rgba(124,58,237,0.06); }
+      .sc-node.engine   { color: #00d4ff;  border-color: rgba(0,212,255,0.35);  background: rgba(0,212,255,0.06); }
+      .sc-node.classify { color: #f59e0b;  border-color: rgba(245,158,11,0.35); background: rgba(245,158,11,0.06); }
+      .sc-node.gate     { color: #10b981;  border-color: rgba(16,185,129,0.35); background: rgba(16,185,129,0.06); }
+      .sc-arrow { color: #1a2540; padding: 0 4px; font-size: 11px; }
+
+      /* ── Canon footer ───────────────────────────────────────────────── */
+      #spine-canon-footer {
+        display: flex; align-items: center; justify-content: space-between;
+        height: 26px; min-height: 26px; flex-shrink: 0;
+        background: #050912;
+        border-top: 1px solid #1a2540;
+        padding: 0 14px;
+        font-family: 'Courier New', monospace;
+        font-size: 9px; color: #3a4d6b;
+        letter-spacing: 0.04em;
+      }
+      #spine-canon-footer a { color: #3a4d6b; text-decoration: none; }
+      #spine-canon-footer a:hover { color: #64748b; }
+      .canon-dot { width: 6px; height: 6px; border-radius: 50%; background: #10b981;
+                   display: inline-block; margin-right: 5px;
+                   box-shadow: 0 0 6px #10b981; animation: canon-pulse 3s ease-in-out infinite; }
+      @keyframes canon-pulse { 0%,100%{opacity:0.6;} 50%{opacity:1;} }
+    </style>
+</head>
+<body class="flex flex-col h-screen">
+
+    <!-- ═══ SPINE TOP-BAR ═══ -->
+    <div id="spine-topbar">
+      <div class="spine-breadcrumb">
+        <a href="https://www.triadicframeworks.org/spine/" class="spine-back" title="Back to S3 Spine">
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M8 2L4 6l4 4"/>
+          </svg>
+          S3 Spine
+        </a>
+        <span class="sep">›</span>
+        <span class="crumb active">Clarity Overlay</span>
+      </div>
+      <div class="spine-badges">
+        <span class="spine-badge canon">Active Canonical</span>
+        <span class="spine-badge version">v2.0</span>
+        <span class="spine-badge round">R5</span>
+        <span class="spine-badge live">● Live Tool</span>
+      </div>
+    </div>
+
+    <!-- ═══ SIGNAL-CHAIN STRIP ═══ -->
+    <div id="spine-signal-chain">
+      <span class="sc-node input">φ payload</span>
+      <span class="sc-arrow">→</span>
+      <span class="sc-node scanner">V̂ VALIDATOR_ENTROPY_SCANNER</span>
+      <span class="sc-arrow">→</span>
+      <span class="sc-node engine">CLARITY_FIELD_ENGINE · Hᵥ · Wᵥ · Iᵣ · Ξ</span>
+      <span class="sc-arrow">→</span>
+      <span class="sc-node classify">REGIME_CLASSIFIER</span>
+      <span class="sc-arrow">→</span>
+      <span class="sc-node gate">Ξ ≥ 0.70 → PASS</span>
+    </div>
+
+
+<app-icon data-id="1" hidden data-icon="gauge" data-palette="Dark"></app-icon>
+
+    <!-- HEADER -->
+    <header data-id="2" id="header-r9f2" class="flex items-center justify-between px-4 py-2 border-b border-border bg-bg flex-shrink-0" style="min-height:44px;">
+        <div data-id="3" class="flex items-center gap-3">
+            <div data-id="4" class="w-8 h-8 rounded border border-accent-cyan flex items-center justify-center">
+                <span data-id="5" class="font-mono text-accent-cyan text-xs font-bold">Ξ</span>
+            </div>
+            <h1 data-id="6" class="font-mono text-sm text-txt-primary tracking-wider">RTT::Clarity v2 · C‑N‑R Triad</h1>
+        </div>
+        <div data-id="7" class="flex items-center gap-3">
+            <div data-id="8" id="regime-header-badge-k3m1" class="regime-badge font-mono text-xs px-3 py-1 rounded-full border border-border">—</div>
+            <button data-id="9" id="help-btn-q9w3" class="p-1.5 rounded hover:bg-border-light transition-colors" title="Help">
+                <i data-id="10" data-lucide="help-circle" class="w-4 h-4 text-txt-muted"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <div data-id="11" id="main-container-x8k1" class="flex-1 flex flex-col overflow-hidden">
+        <div data-id="12" class="flex-1 flex min-h-0">
+            <!-- LEFT PANEL -->
+            <aside data-id="13" id="left-panel-v7b4" class="flex-shrink-0 flex flex-col gap-3 p-3 border-r border-border overflow-y-auto" style="width:280px;">
+                <!-- C Slider -->
+                <div data-id="14">
+                    <div data-id="15" class="flex items-center justify-between mb-1">
+                        <label data-id="16" class="font-mono text-xs text-accent-cyan tracking-wide">C (Compression)</label>
+                        <span data-id="17" id="c-val-d8k2" class="font-mono text-lg text-accent-cyan">0.50</span>
+                    </div>
+                    <input data-id="18" id="slider-c-m4n7" type="range" min="0" max="1" step="0.01" value="0.50" class="slider-c w-full" />
+                </div>
+                <!-- N Slider -->
+                <div data-id="19">
+                    <div data-id="20" class="flex items-center justify-between mb-1">
+                        <label data-id="21" class="font-mono text-xs text-accent-violet tracking-wide">N (Nuance)</label>
+                        <span data-id="22" id="n-val-j3p5" class="font-mono text-lg text-accent-violet">0.50</span>
+                    </div>
+                    <input data-id="23" id="slider-n-x2q8" type="range" min="0" max="1" step="0.01" value="0.50" class="slider-n w-full" />
+                </div>
+                <!-- R Slider -->
+                <div data-id="24">
+                    <div data-id="25" class="flex items-center justify-between mb-1">
+                        <label data-id="26" class="font-mono text-xs text-accent-emerald tracking-wide">R (Resonance)</label>
+                        <span data-id="27" id="r-val-f6t1" class="font-mono text-lg text-accent-emerald">0.50</span>
+                    </div>
+                    <input data-id="28" id="slider-r-w9s3" type="range" min="0" max="1" step="0.01" value="0.50" class="slider-r w-full" />
+                </div>
+                <!-- Torsion Slider -->
+                <div data-id="29" class="pt-1 border-t border-border">
+                    <div data-id="30" class="flex items-center justify-between mb-1">
+                        <label data-id="31" class="font-mono text-xs text-accent-amber tracking-wide">τ (Torsion)</label>
+                        <span data-id="32" id="tau-val-h5u9" class="font-mono text-lg text-accent-amber">0.30</span>
+                    </div>
+                    <div data-id="33" class="relative">
+                        <input data-id="34" id="slider-tau-b1c6" type="range" min="0" max="1" step="0.01" value="0.30" class="slider-tau w-full" />
+                        <div data-id="35" class="absolute top-full mt-0.5 font-mono text-[9px] text-accent-amber opacity-60" style="left:70%;">τ_max=0.70</div>
+                    </div>
+                </div>
+                <!-- Domain Presets -->
+                <div data-id="36" class="pt-2 border-t border-border">
+                    <div data-id="37" class="font-mono text-[10px] text-txt-muted mb-2 tracking-widest uppercase">Domain Weights</div>
+                    <div data-id="38" id="presets-grid-p4r1" class="grid grid-cols-2 gap-1.5">
+                        <button data-id="39" data-preset="legal" class="preset-pill font-mono text-[10px] text-txt-primary px-2 py-1.5 rounded text-center">Legal</button>
+                        <button data-id="40" data-preset="executive" class="preset-pill font-mono text-[10px] text-txt-primary px-2 py-1.5 rounded text-center">Executive</button>
+                        <button data-id="41" data-preset="scientific" class="preset-pill font-mono text-[10px] text-txt-primary px-2 py-1.5 rounded text-center">Scientific</button>
+                        <button data-id="42" data-preset="educational" class="preset-pill font-mono text-[10px] text-txt-primary px-2 py-1.5 rounded text-center active">Educational</button>
+                        <button data-id="43" data-preset="philosophical" class="preset-pill font-mono text-[10px] text-txt-primary px-2 py-1.5 rounded text-center">Philosophical</button>
+                        <button data-id="44" data-preset="aiprompt" class="preset-pill font-mono text-[10px] text-txt-primary px-2 py-1.5 rounded text-center">AI Prompt</button>
+                    </div>
+                    <div data-id="45" id="weights-display-g7l3" class="font-mono text-[9px] text-txt-muted mt-1.5 text-center">[wc=0.30 wn=0.25 wr=0.45]</div>
+                </div>
+                <!-- Receiver Profiles -->
+                <div data-id="46" class="pt-2 border-t border-border">
+                    <div data-id="47" class="font-mono text-[10px] text-txt-muted mb-1.5 tracking-widest uppercase">Receiver Profiles (Iᵣ)</div>
+                    <div data-id="48" class="flex flex-col gap-1">
+                        <div data-id="49" class="flex items-center gap-2">
+                            <span data-id="50" class="font-mono text-[9px] text-txt-muted w-12">G1 Nov</span>
+                            <input data-id="51" id="recv-g1-a3b7" type="range" min="0" max="1" step="0.01" value="0.50" class="slider-recv flex-1" />
+                            <span data-id="52" id="recv-g1-val" class="font-mono text-[9px] text-txt-muted w-6 text-right">0.50</span>
+                        </div>
+                        <div data-id="53" class="flex items-center gap-2">
+                            <span data-id="54" class="font-mono text-[9px] text-txt-muted w-12">G2 Beg</span>
+                            <input data-id="55" id="recv-g2-c5d9" type="range" min="0" max="1" step="0.01" value="0.65" class="slider-recv flex-1" />
+                            <span data-id="56" id="recv-g2-val" class="font-mono text-[9px] text-txt-muted w-6 text-right">0.65</span>
+                        </div>
+                        <div data-id="57" class="flex items-center gap-2">
+                            <span data-id="58" class="font-mono text-[9px] text-txt-muted w-12">G3 Int</span>
+                            <input data-id="59" id="recv-g3-e7f1" type="range" min="0" max="1" step="0.01" value="0.70" class="slider-recv flex-1" />
+                            <span data-id="60" id="recv-g3-val" class="font-mono text-[9px] text-txt-muted w-6 text-right">0.70</span>
+                        </div>
+                        <div data-id="61" class="flex items-center gap-2">
+                            <span data-id="62" class="font-mono text-[9px] text-txt-muted w-12">G4 Adv</span>
+                            <input data-id="63" id="recv-g4-g9h3" type="range" min="0" max="1" step="0.01" value="0.55" class="slider-recv flex-1" />
+                            <span data-id="64" id="recv-g4-val" class="font-mono text-[9px] text-txt-muted w-6 text-right">0.55</span>
+                        </div>
+                        <div data-id="65" class="flex items-center gap-2">
+                            <span data-id="66" class="font-mono text-[9px] text-txt-muted w-12">G5 Exp</span>
+                            <input data-id="67" id="recv-g5-i1j5" type="range" min="0" max="1" step="0.01" value="0.60" class="slider-recv flex-1" />
+                            <span data-id="68" id="recv-g5-val" class="font-mono text-[9px] text-txt-muted w-6 text-right">0.60</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- CENTER PANEL -->
+            <div data-id="69" id="center-panel-z2y6" class="flex-1 flex flex-col items-center justify-center p-3 min-w-[380px]">
+                <div data-id="70" class="flex items-center gap-2 mb-2">
+                    <span data-id="71" class="font-mono text-[10px] text-txt-muted tracking-widest uppercase">C-N-R Triad Visualizer</span>
+                    <button data-id="72" id="view-toggle-r8s4" class="font-mono text-[9px] px-2 py-0.5 rounded border border-border text-accent-cyan hover:bg-border-light transition-colors">Cube</button>
+                </div>
+                <canvas data-id="73" id="triad-canvas-k7l2" width="400" height="400" class="rounded-lg border border-border" style="background:#0a0f1a;"></canvas>
+                <div data-id="74" id="delta-q-display-m3n8" class="font-mono text-[10px] text-txt-muted mt-1.5">Δq = —</div>
+            </div>
+
+            <!-- RIGHT PANEL -->
+            <aside data-id="75" id="right-panel-u4v8" class="flex-shrink-0 flex flex-col gap-2 p-3 border-l border-border overflow-y-auto" style="width:310px;">
+                <!-- Hv Card -->
+                <div data-id="76" class="metric-card">
+                    <div data-id="77" class="flex items-center justify-between mb-1">
+                        <span data-id="78" class="font-mono text-[10px] text-txt-muted">Hᵥ (Validator Entropy)</span>
+                        <span data-id="79" id="hv-badge-c3d7" class="font-mono text-[9px] px-1.5 py-0.5 rounded bg-border text-txt-primary">—</span>
+                    </div>
+                    <div data-id="80" class="font-mono text-[8px] text-txt-muted mb-1 opacity-60">Hᵥ = −Σ p(∂φᵢ)·log₂(p(∂φᵢ))</div>
+                    <div data-id="81" class="flex items-center gap-2">
+                        <span data-id="82" id="hv-val-e5f9" class="font-mono text-base text-txt-primary">—</span>
+                        <div data-id="83" class="flex-1 h-1.5 rounded-full bg-border overflow-hidden">
+                            <div data-id="84" id="hv-bar-g7h1" class="h-full rounded-full transition-all duration-300" style="width:0; background:var(--cyan);"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Wv Card -->
+                <div data-id="85" class="metric-card">
+                    <div data-id="86" class="flex items-center justify-between mb-1">
+                        <span data-id="87" class="font-mono text-[10px] text-txt-muted">Wᵥ (Validator Width)</span>
+                        <span data-id="88" id="wv-badge-i9j3" class="font-mono text-[9px] px-1.5 py-0.5 rounded bg-border text-txt-primary">—</span>
+                    </div>
+                    <div data-id="89" class="font-mono text-[8px] text-txt-muted mb-1 opacity-60">Wᵥ(φ,δ) = |{∂φᵢ : d(φ,∂φᵢ) ≤ δ}|</div>
+                    <div data-id="90" class="flex items-center gap-2">
+                        <span data-id="91" id="wv-val-k1l5" class="font-mono text-base text-txt-primary">—</span>
+                        <span data-id="92" class="font-mono text-[9px] text-txt-muted">Bφ =</span>
+                        <span data-id="93" id="bphi-val-m3n7" class="font-mono text-sm text-txt-primary">—</span>
+                    </div>
+                </div>
+                <!-- Ir Card -->
+                <div data-id="94" class="metric-card">
+                    <div data-id="95" class="flex items-center justify-between mb-1">
+                        <span data-id="96" class="font-mono text-[10px] text-txt-muted">Iᵣ (Resonance-Integration)</span>
+                        <span data-id="97" id="ir-badge-o5p9" class="font-mono text-[9px] px-1.5 py-0.5 rounded bg-border text-txt-primary">—</span>
+                    </div>
+                    <div data-id="98" class="font-mono text-[8px] text-txt-muted mb-1 opacity-60">Iᵣ = 1 − σ(ρ)/μ(ρ)</div>
+                    <div data-id="99" class="flex items-center gap-2">
+                        <span data-id="100" id="ir-val-q7r1" class="font-mono text-base text-txt-primary">—</span>
+                        <div data-id="101" class="flex-1 h-1.5 rounded-full bg-border overflow-hidden">
+                            <div data-id="102" id="ir-bar-s3t5" class="h-full rounded-full transition-all duration-300" style="width:0; background:var(--emerald);"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Xi Card (MAIN SCORE) -->
+                <div data-id="103" id="xi-card-u7v1" class="metric-card relative overflow-hidden" style="border-color:var(--emerald);">
+                    <div data-id="104" class="font-mono text-[10px] text-txt-muted mb-1">Composite Ξ (Clarity Score)</div>
+                    <div data-id="105" class="font-mono text-[8px] text-txt-muted mb-2 opacity-60">Ξ = wc·(1−ĥᵥ) + wn·(1−Bφ/8) + wr·Iᵣ</div>
+                    <div data-id="106" class="flex items-center gap-3">
+                        <!-- SVG Gauge -->
+                        <div data-id="107" class="relative flex-shrink-0" style="width:80px;height:80px;">
+                            <svg data-id="108" viewBox="0 0 100 100" class="w-full h-full">
+                                <circle data-id="109" cx="50" cy="50" r="42" fill="none" stroke="#1a2540" stroke-width="6" stroke-dasharray="264" stroke-dashoffset="66" transform="rotate(135 50 50)" stroke-linecap="round"/>
+                                <circle data-id="110" id="xi-arc-w9x3" cx="50" cy="50" r="42" fill="none" stroke="var(--emerald)" stroke-width="6" stroke-dasharray="264" stroke-dashoffset="264" transform="rotate(135 50 50)" stroke-linecap="round" style="transition: stroke-dashoffset 0.5s ease, stroke 0.4s ease;"/>
+                                <!-- Ship threshold notch at 0.70 -->
+                                <circle data-id="111" cx="50" cy="50" r="42" fill="none" stroke="var(--txt)" stroke-width="2" stroke-dasharray="1 263" stroke-dashoffset="126.8" transform="rotate(135 50 50)" opacity="0.4"/>
+                            </svg>
+                            <div data-id="112" class="absolute inset-0 flex flex-col items-center justify-center">
+                                <span data-id="113" id="xi-val-y1z5" class="font-mono text-2xl font-bold text-txt-primary" style="font-size:28px;">—</span>
+                            </div>
+                        </div>
+                        <div data-id="114" class="flex-1">
+                            <div data-id="115" id="xi-label-a2b6" class="font-mono text-sm text-txt-primary mb-1">—</div>
+                            <div data-id="116" id="xi-ship-badge-c4d8" class="font-mono text-[10px] px-2 py-1 rounded inline-block">—</div>
+                        </div>
+                    </div>
+                    <div data-id="117" id="confetti-container-e6f0" class="absolute inset-0 pointer-events-none"></div>
+                </div>
+                <!-- False Precision Warning -->
+                <div data-id="118" id="false-precision-g8h2" class="hidden metric-card pulse-glow" style="border-color:var(--amber); background: rgba(245,158,11,0.08);">
+                    <span data-id="119" class="font-mono text-[10px] text-accent-amber">⚠ FALSE PRECISION DETECTED — Bφ collapsed by Ĉ</span>
+                </div>
+                <!-- Regime Card -->
+                <div data-id="120" class="metric-card">
+                    <div data-id="121" class="font-mono text-[10px] text-txt-muted mb-1 tracking-widest uppercase">Current Regime</div>
+                    <div data-id="122" id="regime-display-i0j4" class="font-mono text-lg text-txt-primary mb-0.5">—</div>
+                    <div data-id="123" id="regime-cond-k2l6" class="font-mono text-[9px] text-txt-muted">—</div>
+                    <div data-id="124" id="regime-desc-m4n8" class="text-[10px] text-txt-muted mt-0.5 italic">—</div>
+                </div>
+                <!-- Repair Path -->
+                <div data-id="125" class="metric-card">
+                    <div data-id="126" class="font-mono text-[10px] text-txt-muted mb-1.5 tracking-widest uppercase">Repair Path</div>
+                    <div data-id="127" id="repair-path-o6p0" class="flex flex-wrap items-center gap-1 font-mono text-xs">—</div>
+                    <div data-id="128" id="torsion-warn-q8r2" class="hidden mt-1.5 p-1.5 rounded text-[10px] font-mono text-accent-red bg-red-950 border border-accent-red">
+                        ⚡ Resolve torsion first: Ô₁ ∘ M̂ ∘ Ô₂
+                    </div>
+                </div>
+                <!-- Operator Log -->
+                <div data-id="129" class="metric-card flex flex-col" style="background:var(--deep);">
+                    <div data-id="130" class="font-mono text-[10px] text-txt-muted mb-1.5 tracking-widest uppercase">Operator Log</div>
+                    <div data-id="131" class="flex gap-1 mb-1.5 flex-wrap">
+                        <button data-id="132" id="op-c-s0t4" class="font-mono text-[9px] px-2 py-1 rounded border border-accent-cyan text-accent-cyan hover:bg-cyan-950 transition-colors">Apply Ĉ</button>
+                        <button data-id="133" id="op-n-u6v0" class="font-mono text-[9px] px-2 py-1 rounded border border-accent-violet text-accent-violet hover:bg-violet-950 transition-colors">Apply N̂</button>
+                        <button data-id="134" id="op-r-w2x6" class="font-mono text-[9px] px-2 py-1 rounded border border-accent-emerald text-accent-emerald hover:bg-emerald-950 transition-colors">Apply R̂</button>
+                        <button data-id="135" id="op-reset-y8z2" class="font-mono text-[9px] px-2 py-1 rounded border border-border text-txt-muted hover:bg-border transition-colors">Reset φ</button>
+                    </div>
+                    <div data-id="136" id="operator-log-a4c2" class="font-mono text-[9px] text-txt-muted leading-relaxed overflow-y-auto" style="max-height:70px;">
+                        <div data-id="137" class="opacity-40">— awaiting operator —</div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- BOTTOM PANEL -->
+        <div data-id="138" id="bottom-panel-b6d0" class="flex-shrink-0 border-t border-border" style="height:180px;">
+            <div data-id="139" class="flex items-center gap-1 px-3 pt-1.5 border-b border-border">
+                <button data-id="140" data-cftab="plain" class="tab-btn-cf font-mono text-[10px] px-3 py-1.5 text-txt-muted active">Plain Language</button>
+                <button data-id="141" data-cftab="grice" class="tab-btn-cf font-mono text-[10px] px-3 py-1.5 text-txt-muted">Grice</button>
+                <button data-id="142" data-cftab="shannon" class="tab-btn-cf font-mono text-[10px] px-3 py-1.5 text-txt-muted">Shannon</button>
+                <button data-id="143" data-cftab="clt" class="tab-btn-cf font-mono text-[10px] px-3 py-1.5 text-txt-muted">CLT</button>
+                <button data-id="144" data-cftab="doublecrux" class="tab-btn-cf font-mono text-[10px] px-3 py-1.5 text-txt-muted">Double-Crux</button>
+            </div>
+            <div data-id="145" id="cf-content-e8f2" class="px-3 py-2 overflow-auto" style="height:calc(100% - 38px);"></div>
+        </div>
+    </div>
+
+    
+
+    <!-- HELP MODAL -->
+    <div data-id="149" id="help-modal-i2j6" class="modal-overlay fixed inset-0 z-50 flex items-center justify-center bg-black/60 hidden" style="opacity:0;">
+        <div data-id="150" class="modal-box bg-bg-card border border-border rounded-xl p-6 max-w-md mx-4" style="transform:scale(0.95);">
+            <div data-id="151" class="flex items-center justify-between mb-3">
+                <h2 data-id="152" class="font-mono text-sm text-accent-cyan">C‑N‑R Triad — Quick Reference</h2>
+                <button data-id="153" id="help-close-k4l8" class="p-1 hover:bg-border rounded transition-colors">
+                    <i data-id="154" data-lucide="x" class="w-4 h-4 text-txt-muted"></i>
+                </button>
+            </div>
+            <p data-id="155" class="text-sm text-txt-primary leading-relaxed mb-2">The <strong data-id="156">C‑N‑R Triad</strong> models every communicative payload φ along three orthogonal axes: <span data-id="157" class="text-accent-cyan font-mono text-xs">Compression (C)</span> measures how tightly meaning is packed, <span data-id="158" class="text-accent-violet font-mono text-xs">Nuance (N)</span> captures the granularity of distinctions preserved, and <span data-id="159" class="text-accent-emerald font-mono text-xs">Resonance (R)</span> gauges how well the message integrates across diverse receivers.</p>
+            <p data-id="160" class="text-sm text-txt-primary leading-relaxed mb-2">The composite score <span data-id="161" class="font-mono text-xs">Ξ</span> (Xi) blends these three metrics with domain-specific weights to produce a single clarity readiness number — payloads scoring <span data-id="162" class="font-mono text-xs">Ξ ≥ 0.70</span> are considered <em data-id="163">ship-ready</em>.</p>
+            <p data-id="164" class="text-sm text-txt-primary leading-relaxed">Torsion <span data-id="165" class="font-mono text-xs">τ</span> represents internal contradictions that can override the regime classification — resolve torsion with the mediation operator <span data-id="166" class="font-mono text-xs">M̂</span> before applying corrective operators.</p>
+        </div>
+    </div>
+
+    <script>
+    // ==================== STATE ====================
+    const state = {
+        c: 0.50, n: 0.50, r: 0.50, tau: 0.30,
+        weights: { wc: 0.30, wn: 0.25, wr: 0.45 },
+        activePreset: 'educational',
+        receivers: [0.50, 0.65, 0.70, 0.55, 0.60],
+        viewMode: 'cube', // 'cube' or 'triangle'
+        cubeAngle: 0,
+        rotating: true,
+        logs: [],
+        activeTab: 'plain',
+        prevXi: 0.5,
+        animXi: 0.5
+    };
+
+    const PRESETS = {
+        legal:        { wc: 0.20, wn: 0.55, wr: 0.25 },
+        executive:    { wc: 0.45, wn: 0.20, wr: 0.35 },
+        scientific:   { wc: 0.30, wn: 0.50, wr: 0.20 },
+        educational:  { wc: 0.30, wn: 0.25, wr: 0.45 },
+        philosophical:{ wc: 0.15, wn: 0.65, wr: 0.20 },
+        aiprompt:     { wc: 0.40, wn: 0.35, wr: 0.25 }
+    };
+
+    // ==================== METRICS ENGINE ====================
+    function computeMetrics(c, n, r, tau, weights, receivers) {
+        // Hv (Validator Entropy) - simulated
+        const hv_hat = (1 - c) * 0.8 + (1 - n) * 0.2;
+        const hvClamped = Math.max(0, Math.min(1, hv_hat));
+
+        // Hv status
+        let hvStatus;
+        if (hvClamped < 0.10) hvStatus = 'Singular';
+        else if (hvClamped < 0.30) hvStatus = 'Sharp';
+        else if (hvClamped < 0.55) hvStatus = 'Diffuse';
+        else if (hvClamped < 0.75) hvStatus = 'Cloudy';
+        else hvStatus = 'Entropic';
+
+        // Wv (Validator Width) - simulated
+        let wv = Math.round(8 * (1 - c) * (1 - n) * 1.5 + 1);
+        wv = Math.max(1, Math.min(8, wv));
+
+        let wvStatus;
+        if (wv <= 2) wvStatus = 'Narrow';
+        else if (wv <= 5) wvStatus = 'Moderate';
+        else wvStatus = 'Wide';
+
+        // Bphi
+        const bphi = wv * hvClamped;
+
+        // Ir (Resonance-Integration) from receiver profiles
+        const rhos = receivers.map(ri => ri * r);
+        const mean = rhos.reduce((a, b) => a + b, 0) / rhos.length;
+        const variance = rhos.reduce((a, b) => a + (b - mean) ** 2, 0) / rhos.length;
+        const sigma = Math.sqrt(variance);
+        let ir = mean > 0.001 ? 1 - (sigma / mean) : 0;
+        ir = Math.max(0, Math.min(1, ir));
+
+        let irStatus;
+        if (ir >= 0.90) irStatus = 'Universal';
+        else if (ir >= 0.75) irStatus = 'Robust';
+        else if (ir >= 0.55) irStatus = 'Context-Dependent';
+        else if (ir >= 0.35) irStatus = 'Fragile';
+        else irStatus = 'Non-Integrating';
+
+        // Xi (Composite Score)
+        const xi = weights.wc * (1 - hvClamped) + weights.wn * (1 - bphi / 8) + weights.wr * ir;
+        const xiClamped = Math.max(0, Math.min(1, xi));
+
+        let xiLabel;
+        if (xiClamped >= 0.85) xiLabel = 'Crystal';
+        else if (xiClamped >= 0.70) xiLabel = 'Clear';
+        else if (xiClamped >= 0.55) xiLabel = 'Hazy';
+        else if (xiClamped >= 0.40) xiLabel = 'Murky';
+        else xiLabel = 'Opaque';
+
+        // Regime detection
+        let regime, regimeCond, regimeDesc, regimeSymbol, regimeColor;
+        if (tau >= 0.70) {
+            regime = 'TORSION'; regimeSymbol = '⚡'; regimeColor = '#ef4444';
+            regimeCond = 'τ ≥ 0.70';
+            regimeDesc = 'Internal contradiction overrides structural classification.';
+        } else if (c >= 0.8 && n >= 0.8 && r >= 0.8) {
+            regime = 'CRYSTAL'; regimeSymbol = '✦'; regimeColor = '#10b981';
+            regimeCond = 'c ≥ 0.8, n ≥ 0.8, r ≥ 0.8';
+            regimeDesc = 'Maximum clarity — compressed, nuanced, resonant.';
+        } else if (c >= 0.8 && n < 0.5 && r >= 0.6) {
+            regime = 'BLADE'; regimeSymbol = '⚔'; regimeColor = '#00d4ff';
+            regimeCond = 'c ≥ 0.8, n < 0.5, r ≥ 0.6';
+            regimeDesc = 'Sharp and resonant, but nuance sacrificed.';
+        } else if (c < 0.5 && n >= 0.8 && r < 0.6) {
+            regime = 'FOG'; regimeSymbol = '◎'; regimeColor = '#7c3aed';
+            regimeCond = 'c < 0.5, n ≥ 0.8, r < 0.6';
+            regimeDesc = 'Rich in nuance but diffuse — fails to land.';
+        } else if (c < 0.5 && n < 0.5 && r >= 0.8) {
+            regime = 'ECHO'; regimeSymbol = '◈'; regimeColor = '#f59e0b';
+            regimeCond = 'c < 0.5, n < 0.5, r ≥ 0.8';
+            regimeDesc = 'Emotionally resonant but lacks structure and depth.';
+        } else if (c < 0.4 && n < 0.4 && r < 0.4) {
+            regime = 'VOID'; regimeSymbol = '✕'; regimeColor = '#ef4444';
+            regimeCond = 'c < 0.4, n < 0.4, r < 0.4';
+            regimeDesc = 'No clarity signal — payload is noise.';
+        } else {
+            // Intermediate: classify nearest
+            const dists = {
+                CRYSTAL: Math.sqrt((1-c)**2+(1-n)**2+(1-r)**2),
+                BLADE: Math.sqrt((1-c)**2+(n-0)**2+(1-r)**2)*1.1,
+                FOG: Math.sqrt((c-0)**2+(1-n)**2+(r-0)**2)*1.1,
+                ECHO: Math.sqrt((c-0)**2+(n-0)**2+(1-r)**2)*1.1,
+                VOID: Math.sqrt(c**2+n**2+r**2)*1.1
+            };
+            const nearest = Object.entries(dists).sort((a,b)=>a[1]-b[1])[0][0];
+            const symMap = {CRYSTAL:'✦',BLADE:'⚔',FOG:'◎',ECHO:'◈',VOID:'✕'};
+            const colMap = {CRYSTAL:'#10b981',BLADE:'#00d4ff',FOG:'#7c3aed',ECHO:'#f59e0b',VOID:'#ef4444'};
+            regime = nearest;
+            regimeSymbol = symMap[nearest];
+            regimeColor = colMap[nearest];
+            regimeCond = 'intermediate — nearest: ' + nearest;
+            regimeDesc = 'Between regimes. Operator intervention recommended.';
+        }
+
+        // Repair path
+        let repairPath = [];
+        if (tau >= 0.70) {
+            repairPath = [{label:'TORSION',color:'#ef4444'},{label:'→',color:null},{label:'M̂',color:'#f59e0b',chip:true},{label:'→',color:null},{label:'resolve',color:'#64748b'}];
+        } else if (regime === 'VOID') {
+            repairPath = [{label:'VOID',color:'#ef4444'},{label:'→',color:null},{label:'N̂',color:'#7c3aed',chip:true},{label:'→',color:null},{label:'FOG',color:'#7c3aed'},{label:'→',color:null},{label:'Ĉ',color:'#00d4ff',chip:true},{label:'→',color:null},{label:'CRYSTAL',color:'#10b981'}];
+        } else if (regime === 'BLADE') {
+            repairPath = [{label:'BLADE',color:'#00d4ff'},{label:'→',color:null},{label:'N̂',color:'#7c3aed',chip:true},{label:'→',color:null},{label:'CRYSTAL',color:'#10b981'}];
+        } else if (regime === 'FOG') {
+            repairPath = [{label:'FOG',color:'#7c3aed'},{label:'→',color:null},{label:'Ĉ',color:'#00d4ff',chip:true},{label:'→',color:null},{label:'CRYSTAL',color:'#10b981'}];
+        } else if (regime === 'ECHO') {
+            repairPath = [{label:'ECHO',color:'#f59e0b'},{label:'→',color:null},{label:'N̂',color:'#7c3aed',chip:true},{label:'→',color:null},{label:'CRYSTAL',color:'#10b981'}];
+        } else if (regime === 'CRYSTAL') {
+            repairPath = [{label:'CRYSTAL ✦',color:'#10b981'}];
+        } else {
+            repairPath = [{label:regime,color:regimeColor},{label:'→',color:null},{label:'Ĉ',color:'#00d4ff',chip:true},{label:'+',color:null},{label:'N̂',color:'#7c3aed',chip:true},{label:'→',color:null},{label:'CRYSTAL',color:'#10b981'}];
+        }
+
+        // False precision
+        const falsePrecision = hvClamped < 0.2 && c > 0.7 && n < 0.5;
+
+        // Delta q (distance to CRYSTAL)
+        const deltaQ = Math.sqrt((1-c)**2 + (1-n)**2 + (1-r)**2);
+
+        return { hv_hat: hvClamped, hvStatus, wv, wvStatus, bphi, ir, irStatus, xi: xiClamped, xiLabel, regime, regimeSymbol, regimeColor, regimeCond, regimeDesc, repairPath, falsePrecision, deltaQ };
+    }
+
+    // ==================== DOM REFERENCES ====================
+    const sliderC = document.getElementById('slider-c-m4n7');
+    const sliderN = document.getElementById('slider-n-x2q8');
+    const sliderR = document.getElementById('slider-r-w9s3');
+    const sliderTau = document.getElementById('slider-tau-b1c6');
+    const cVal = document.getElementById('c-val-d8k2');
+    const nVal = document.getElementById('n-val-j3p5');
+    const rVal = document.getElementById('r-val-f6t1');
+    const tauVal = document.getElementById('tau-val-h5u9');
+    const weightsDisplay = document.getElementById('weights-display-g7l3');
+    const canvas = document.getElementById('triad-canvas-k7l2');
+    const ctx = canvas.getContext('2d');
+    const viewToggle = document.getElementById('view-toggle-r8s4');
+    const deltaQDisplay = document.getElementById('delta-q-display-m3n8');
+
+    const hvBadge = document.getElementById('hv-badge-c3d7');
+    const hvVal = document.getElementById('hv-val-e5f9');
+    const hvBar = document.getElementById('hv-bar-g7h1');
+    const wvBadge = document.getElementById('wv-badge-i9j3');
+    const wvVal = document.getElementById('wv-val-k1l5');
+    const bphiVal = document.getElementById('bphi-val-m3n7');
+    const irBadge = document.getElementById('ir-badge-o5p9');
+    const irVal = document.getElementById('ir-val-q7r1');
+    const irBar = document.getElementById('ir-bar-s3t5');
+    const xiArc = document.getElementById('xi-arc-w9x3');
+    const xiVal = document.getElementById('xi-val-y1z5');
+    const xiLabel = document.getElementById('xi-label-a2b6');
+    const xiShipBadge = document.getElementById('xi-ship-badge-c4d8');
+    const xiCard = document.getElementById('xi-card-u7v1');
+    const confettiContainer = document.getElementById('confetti-container-e6f0');
+    const falsePrecisionEl = document.getElementById('false-precision-g8h2');
+    const regimeDisplay = document.getElementById('regime-display-i0j4');
+    const regimeCond = document.getElementById('regime-cond-k2l6');
+    const regimeDesc = document.getElementById('regime-desc-m4n8');
+    const regimeHeaderBadge = document.getElementById('regime-header-badge-k3m1');
+    const repairPathEl = document.getElementById('repair-path-o6p0');
+    const torsionWarn = document.getElementById('torsion-warn-q8r2');
+    const operatorLog = document.getElementById('operator-log-a4c2');
+    const cfContent = document.getElementById('cf-content-e8f2');
+    const mainContainer = document.getElementById('main-container-x8k1');
+
+    const recvSliders = [
+        document.getElementById('recv-g1-a3b7'),
+        document.getElementById('recv-g2-c5d9'),
+        document.getElementById('recv-g3-e7f1'),
+        document.getElementById('recv-g4-g9h3'),
+        document.getElementById('recv-g5-i1j5')
+    ];
+    const recvVals = [
+        document.getElementById('recv-g1-val'),
+        document.getElementById('recv-g2-val'),
+        document.getElementById('recv-g3-val'),
+        document.getElementById('recv-g4-val'),
+        document.getElementById('recv-g5-val')
+    ];
+
+    // ==================== CANVAS DRAWING ====================
+    function project3D(x, y, z, angle) {
+        const ca = Math.cos(angle), sa = Math.sin(angle);
+        const rx = x * ca - z * sa;
+        const rz = x * sa + z * ca;
+        const scale = 140;
+        const px = 200 + rx * scale - y * scale * 0.15;
+        const py = 320 - y * scale * 0.85 - rz * scale * 0.5;
+        return [px, py];
+    }
+
+    function drawCube(metrics) {
+        const angle = state.cubeAngle;
+        ctx.clearRect(0, 0, 400, 400);
+
+        // Cube vertices
+        const verts = [
+            [0,0,0],[1,0,0],[1,1,0],[0,1,0],
+            [0,0,1],[1,0,1],[1,1,1],[0,1,1]
+        ];
+        const projected = verts.map(v => project3D(v[0], v[1], v[2], angle));
+        const edges = [[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]];
+
+        // Regime zone overlays (simplified: highlight a face region)
+        const zoneAlpha = 0.06;
+        // CRYSTAL zone near (1,1,1)
+        const crystalPts = [project3D(0.7,0.7,0.7,angle), project3D(1,0.7,0.7,angle), project3D(1,1,0.7,angle), project3D(0.7,1,0.7,angle)];
+        ctx.fillStyle = 'rgba(16,185,129,' + 0.12 + ')';
+        ctx.beginPath();
+        ctx.moveTo(crystalPts[0][0], crystalPts[0][1]);
+        crystalPts.slice(1).forEach(p => ctx.lineTo(p[0], p[1]));
+        ctx.closePath(); ctx.fill();
+
+        // VOID zone near (0,0,0)
+        const voidPts = [project3D(0,0,0,angle), project3D(0.35,0,0,angle), project3D(0.35,0.35,0,angle), project3D(0,0.35,0,angle)];
+        ctx.fillStyle = 'rgba(239,68,68,' + 0.1 + ')';
+        ctx.beginPath();
+        ctx.moveTo(voidPts[0][0], voidPts[0][1]);
+        voidPts.slice(1).forEach(p => ctx.lineTo(p[0], p[1]));
+        ctx.closePath(); ctx.fill();
+
+        // Draw edges
+        ctx.strokeStyle = '#1a2540';
+        ctx.lineWidth = 1;
+        edges.forEach(([a, b]) => {
+            ctx.beginPath();
+            ctx.moveTo(projected[a][0], projected[a][1]);
+            ctx.lineTo(projected[b][0], projected[b][1]);
+            ctx.stroke();
+        });
+
+        // Axis arrows beyond cube
+        const axLen = 1.2;
+        // C axis (x) - cyan
+        const cEnd = project3D(axLen, 0, 0, angle);
+        const cStart = project3D(-0.1, 0, 0, angle);
+        ctx.strokeStyle = '#00d4ff'; ctx.lineWidth = 1.5;
+        ctx.beginPath(); ctx.moveTo(cStart[0], cStart[1]); ctx.lineTo(cEnd[0], cEnd[1]); ctx.stroke();
+        ctx.fillStyle = '#00d4ff'; ctx.font = '12px "Courier New", monospace';
+        ctx.fillText('C', cEnd[0]+4, cEnd[1]+4);
+
+        // N axis (y) - violet
+        const nEnd = project3D(0, axLen, 0, angle);
+        const nStart = project3D(0, -0.1, 0, angle);
+        ctx.strokeStyle = '#7c3aed'; ctx.lineWidth = 1.5;
+        ctx.beginPath(); ctx.moveTo(nStart[0], nStart[1]); ctx.lineTo(nEnd[0], nEnd[1]); ctx.stroke();
+        ctx.fillStyle = '#7c3aed';
+        ctx.fillText('N', nEnd[0]+4, nEnd[1]-4);
+
+        // R axis (z) - emerald
+        const rEnd = project3D(0, 0, axLen, angle);
+        const rStart = project3D(0, 0, -0.1, angle);
+        ctx.strokeStyle = '#10b981'; ctx.lineWidth = 1.5;
+        ctx.beginPath(); ctx.moveTo(rStart[0], rStart[1]); ctx.lineTo(rEnd[0], rEnd[1]); ctx.stroke();
+        ctx.fillStyle = '#10b981';
+        ctx.fillText('R', rEnd[0]-14, rEnd[1]-2);
+
+        // Corner labels
+        const origin = project3D(0, 0, 0, angle);
+        const crystal = project3D(1, 1, 1, angle);
+        ctx.fillStyle = '#ef4444'; ctx.font = '9px "Courier New", monospace';
+        ctx.fillText('VOID', origin[0]-24, origin[1]+14);
+        ctx.fillStyle = '#10b981';
+        ctx.fillText('CRYSTAL★', crystal[0]-10, crystal[1]-8);
+
+        // Projection lines from point to axes (dashed)
+        const pt = project3D(state.c, state.n, state.r, angle);
+        const ptX = project3D(state.c, 0, 0, angle);
+        const ptY = project3D(0, state.n, 0, angle);
+        const ptZ = project3D(0, 0, state.r, angle);
+        ctx.setLineDash([3, 4]);
+        ctx.strokeStyle = 'rgba(226,232,240,0.15)'; ctx.lineWidth = 1;
+        [ptX, ptY, ptZ].forEach(target => {
+            ctx.beginPath(); ctx.moveTo(pt[0], pt[1]); ctx.lineTo(target[0], target[1]); ctx.stroke();
+        });
+        ctx.setLineDash([]);
+
+        // Clarity Defect arc (line from point toward CRYSTAL corner)
+        ctx.strokeStyle = 'rgba(226,232,240,0.2)'; ctx.lineWidth = 1;
+        ctx.setLineDash([2, 3]);
+        ctx.beginPath(); ctx.moveTo(pt[0], pt[1]); ctx.lineTo(crystal[0], crystal[1]); ctx.stroke();
+        ctx.setLineDash([]);
+        const midArc = [(pt[0]+crystal[0])/2, (pt[1]+crystal[1])/2];
+        ctx.fillStyle = '#64748b'; ctx.font = '9px "Courier New", monospace';
+        ctx.fillText('Δq='+metrics.deltaQ.toFixed(2), midArc[0]+5, midArc[1]-3);
+
+        // Torsion pulsing overlay
+        if (state.tau >= 0.70) {
+            const pulseAlpha = 0.05 + 0.05 * Math.sin(Date.now() / 300);
+            ctx.fillStyle = 'rgba(239,68,68,' + pulseAlpha + ')';
+            ctx.fillRect(0, 0, 400, 400);
+        }
+
+        // Live point — glowing dot
+        const glowPhase = 0.6 + 0.4 * Math.sin(Date.now() / 500);
+        const ptColor = metrics.regimeColor;
+        ctx.beginPath();
+        ctx.arc(pt[0], pt[1], 10, 0, Math.PI * 2);
+        const grad = ctx.createRadialGradient(pt[0], pt[1], 0, pt[0], pt[1], 10);
+        grad.addColorStop(0, ptColor);
+        grad.addColorStop(1, 'transparent');
+        ctx.fillStyle = grad;
+        ctx.globalAlpha = glowPhase;
+        ctx.fill();
+        ctx.globalAlpha = 1;
+        ctx.beginPath();
+        ctx.arc(pt[0], pt[1], 4, 0, Math.PI * 2);
+        ctx.fillStyle = ptColor;
+        ctx.fill();
+        ctx.strokeStyle = 'rgba(255,255,255,0.5)'; ctx.lineWidth = 1;
+        ctx.stroke();
+    }
+
+    function drawTriangle(metrics) {
+        ctx.clearRect(0, 0, 400, 400);
+        const cx = 200, cy = 210, rad = 150;
+        // Equilateral triangle vertices: C (bottom-left), N (top), R (bottom-right)
+        const vC = [cx - rad * Math.cos(Math.PI/6), cy + rad * Math.sin(Math.PI/6)];
+        const vN = [cx, cy - rad];
+        const vR = [cx + rad * Math.cos(Math.PI/6), cy + rad * Math.sin(Math.PI/6)];
+
+        // Triangle fill
+        ctx.beginPath();
+        ctx.moveTo(vC[0], vC[1]); ctx.lineTo(vN[0], vN[1]); ctx.lineTo(vR[0], vR[1]); ctx.closePath();
+        ctx.fillStyle = 'rgba(26,37,64,0.3)'; ctx.fill();
+        ctx.strokeStyle = '#1a2540'; ctx.lineWidth = 1.5; ctx.stroke();
+
+        // Vertex labels
+        ctx.font = '13px "Courier New", monospace';
+        ctx.fillStyle = '#00d4ff'; ctx.fillText('C', vC[0]-18, vC[1]+16);
+        ctx.fillStyle = '#7c3aed'; ctx.fillText('N', vN[0]-4, vN[1]-10);
+        ctx.fillStyle = '#10b981'; ctx.fillText('R', vR[0]+8, vR[1]+16);
+
+        // Barycentric coords
+        const total = state.c + state.n + state.r || 1;
+        const bc = state.c / total, bn = state.n / total, br = state.r / total;
+        const px = bc * vC[0] + bn * vN[0] + br * vR[0];
+        const py = bc * vC[1] + bn * vN[1] + br * vR[1];
+
+        // Grid lines inside triangle
+        ctx.strokeStyle = 'rgba(26,37,64,0.5)'; ctx.lineWidth = 0.5;
+        for (let i = 1; i < 4; i++) {
+            const t = i / 4;
+            const a1 = [vC[0]+(vN[0]-vC[0])*t, vC[1]+(vN[1]-vC[1])*t];
+            const a2 = [vR[0]+(vN[0]-vR[0])*t, vR[1]+(vN[1]-vR[1])*t];
+            ctx.beginPath(); ctx.moveTo(a1[0],a1[1]); ctx.lineTo(a2[0],a2[1]); ctx.stroke();
+            const b1 = [vC[0]+(vR[0]-vC[0])*t, vC[1]+(vR[1]-vC[1])*t];
+            const b2 = [vN[0]+(vR[0]-vN[0])*t, vN[1]+(vR[1]-vN[1])*t];
+            ctx.beginPath(); ctx.moveTo(b1[0],b1[1]); ctx.lineTo(b2[0],b2[1]); ctx.stroke();
+            const c1 = [vC[0]+(vN[0]-vC[0])*t, vC[1]+(vN[1]-vC[1])*t];
+            const c2 = [vC[0]+(vR[0]-vC[0])*t, vC[1]+(vR[1]-vC[1])*t];
+            ctx.beginPath(); ctx.moveTo(c1[0],c1[1]); ctx.lineTo(c2[0],c2[1]); ctx.stroke();
+        }
+
+        // Point
+        const glowPhase = 0.6 + 0.4 * Math.sin(Date.now() / 500);
+        const ptColor = metrics.regimeColor;
+        ctx.beginPath(); ctx.arc(px, py, 12, 0, Math.PI * 2);
+        const grad = ctx.createRadialGradient(px, py, 0, px, py, 12);
+        grad.addColorStop(0, ptColor); grad.addColorStop(1, 'transparent');
+        ctx.fillStyle = grad; ctx.globalAlpha = glowPhase; ctx.fill(); ctx.globalAlpha = 1;
+        ctx.beginPath(); ctx.arc(px, py, 5, 0, Math.PI * 2);
+        ctx.fillStyle = ptColor; ctx.fill();
+        ctx.strokeStyle = 'rgba(255,255,255,0.5)'; ctx.lineWidth = 1; ctx.stroke();
+
+        // Value labels near point
+        ctx.fillStyle = '#64748b'; ctx.font = '9px "Courier New", monospace';
+        ctx.fillText(`(${state.c.toFixed(2)}, ${state.n.toFixed(2)}, ${state.r.toFixed(2)})`, px+10, py-8);
+    }
+
+    // ==================== CROSS-FRAMEWORK TABLES ====================
+    function renderCFTab(tab, m) {
+        const c = state.c, n = state.n, r = state.r, tau = state.tau;
+        const tableStyle = 'w-full text-left';
+        const thStyle = 'font-mono text-[9px] text-txt-muted py-1 px-2 border-b border-border';
+        const tdStyle = 'font-mono text-[10px] text-txt-primary py-1 px-2 border-b border-border';
+        const tdM = 'font-mono text-[10px] text-txt-muted py-1 px-2 border-b border-border';
+        const check = '<span style="color:#10b981;">✓ SATISFIED</span>';
+        const warn = '<span style="color:#f59e0b;">⚠ VIOLATED</span>';
+        const checkIf = (cond) => cond ? check : warn;
+
+        let html = '';
+        if (tab === 'plain') {
+            const fk = Math.round(206.835 - 170 * m.hv_hat - 50 * (1-r));
+            html = `<table class="${tableStyle}"><thead><tr><th class="${thStyle}">Framework Construct</th><th class="${thStyle}">RTT Equivalent</th><th class="${thStyle}">Current Value</th></tr></thead><tbody>
+                <tr><td class="${tdM}">Readability</td><td class="${tdStyle}">Ĉ</td><td class="${tdStyle}">${c.toFixed(2)}</td></tr>
+                <tr><td class="${tdM}">Grade match</td><td class="${tdStyle}">r̂_lexical</td><td class="${tdStyle}">${r.toFixed(2)}</td></tr>
+                <tr><td class="${tdM}">FK equivalent</td><td class="${tdStyle}">computed</td><td class="${tdStyle}">${fk}</td></tr>
+            </tbody></table>`;
+        } else if (tab === 'grice') {
+            html = `<table class="${tableStyle}"><thead><tr><th class="${thStyle}">Maxim</th><th class="${thStyle}">RTT Guard</th><th class="${thStyle}">Status</th></tr></thead><tbody>
+                <tr><td class="${tdM}">Quantity</td><td class="${tdStyle}">Ĉ+Hᵥ guard</td><td class="${tdStyle}">${checkIf(m.hv_hat < 0.3 && m.hv_hat > 0.0)}</td></tr>
+                <tr><td class="${tdM}">Quality</td><td class="${tdStyle}">Bφ &lt; 3.0</td><td class="${tdStyle}">${checkIf(m.bphi < 3)}</td></tr>
+                <tr><td class="${tdM}">Relation</td><td class="${tdStyle}">r ≥ 0.5</td><td class="${tdStyle}">${checkIf(r >= 0.5)}</td></tr>
+                <tr><td class="${tdM}">Manner</td><td class="${tdStyle}">τ &lt; 0.4</td><td class="${tdStyle}">${checkIf(tau < 0.4)}</td></tr>
+            </tbody></table>`;
+        } else if (tab === 'shannon') {
+            html = `<table class="${tableStyle}"><thead><tr><th class="${thStyle}">Shannon Concept</th><th class="${thStyle}">RTT Mapping</th><th class="${thStyle}">Value</th></tr></thead><tbody>
+                <tr><td class="${tdM}">H(X)</td><td class="${tdStyle}">Hᵥ</td><td class="${tdStyle}">${m.hv_hat.toFixed(3)}</td></tr>
+                <tr><td class="${tdM}">I(X;Y)</td><td class="${tdStyle}">Iᵣ</td><td class="${tdStyle}">${m.ir.toFixed(3)}</td></tr>
+                <tr><td class="${tdM}">Noise</td><td class="${tdStyle}">τ</td><td class="${tdStyle}">${tau.toFixed(2)}</td></tr>
+                <tr><td class="${tdM}">Reliable Tx</td><td class="${tdStyle}">Ξ ≥ 0.70</td><td class="${tdStyle}">${m.xi >= 0.70 ? '<span style="color:#10b981;">YES</span>' : '<span style="color:#ef4444;">NO</span>'}</td></tr>
+            </tbody></table>`;
+        } else if (tab === 'clt') {
+            html = `<table class="${tableStyle}"><thead><tr><th class="${thStyle}">CLT Factor</th><th class="${thStyle}">RTT Mapping</th><th class="${thStyle}">Value</th></tr></thead><tbody>
+                <tr><td class="${tdM}">Intrinsic Load (IL)</td><td class="${tdStyle}">N</td><td class="${tdStyle}">${n.toFixed(2)}</td></tr>
+                <tr><td class="${tdM}">Extraneous Load (EL)</td><td class="${tdStyle}">τ</td><td class="${tdStyle}">${tau.toFixed(2)}</td></tr>
+                <tr><td class="${tdM}">Germane Load (GL)</td><td class="${tdStyle}">R</td><td class="${tdStyle}">${r.toFixed(2)}</td></tr>
+                <tr><td class="${tdM}">WM Limit</td><td class="${tdStyle}">Wᵥ ≤ 5</td><td class="${tdStyle}">${checkIf(m.wv <= 5)}</td></tr>
+            </tbody></table>`;
+        } else if (tab === 'doublecrux') {
+            // Ir across G1,G2
+            const rhos12 = [state.receivers[0]*r, state.receivers[1]*r];
+            const mean12 = (rhos12[0]+rhos12[1])/2;
+            const resolveStatus = m.ir >= 0.8 ? '<span style="color:#10b981;">RESOLVED</span>' : m.ir >= 0.5 ? '<span style="color:#f59e0b;">IN PROGRESS</span>' : '<span style="color:#ef4444;">REQUIRES N̂</span>';
+            html = `<table class="${tableStyle}"><thead><tr><th class="${thStyle}">Double-Crux Element</th><th class="${thStyle}">RTT Mapping</th><th class="${thStyle}">Status</th></tr></thead><tbody>
+                <tr><td class="${tdM}">Crux located</td><td class="${tdStyle}">V̂ applied</td><td class="${tdStyle}">${m.hv_hat > 0.5 ? 'High-entropy crux found' : 'Low-entropy — no dominant crux'}</td></tr>
+                <tr><td class="${tdM}">Iᵣ across {G1,G2}</td><td class="${tdStyle}">subset Iᵣ</td><td class="${tdStyle}">${mean12.toFixed(3)}</td></tr>
+                <tr><td class="${tdM}">Resolution</td><td class="${tdStyle}">convergence</td><td class="${tdStyle}">${resolveStatus}</td></tr>
+            </tbody></table>`;
+        }
+        cfContent.innerHTML = html;
+    }
+
+    // ==================== CONFETTI EFFECT ====================
+    let lastCrystalTime = 0;
+    function emitConfetti() {
+        const now = Date.now();
+        if (now - lastCrystalTime < 3000) return;
+        lastCrystalTime = now;
+        const colors = ['#00d4ff','#7c3aed','#10b981','#f59e0b','#e2e8f0','#00d4ff','#10b981','#7c3aed'];
+        for (let i = 0; i < 8; i++) {
+            const dot = document.createElement('div');
+            dot.className = 'confetti-dot';
+            dot.style.background = colors[i];
+            dot.style.left = '50%';
+            dot.style.top = '50%';
+            const angle = (i / 8) * Math.PI * 2;
+            const dist = 40 + Math.random() * 20;
+            dot.style.setProperty('--tx', Math.cos(angle) * dist + 'px');
+            dot.style.setProperty('--ty', Math.sin(angle) * dist + 'px');
+            dot.style.animation = `confetti-burst 0.7s ease-out forwards`;
+            dot.style.transform = `translate(${Math.cos(angle)*dist}px, ${Math.sin(angle)*dist}px)`;
+            confettiContainer.appendChild(dot);
+            setTimeout(() => dot.remove(), 800);
+        }
+    }
+
+    // ==================== UPDATE EVERYTHING ====================
+    function update() {
+        const m = computeMetrics(state.c, state.n, state.r, state.tau, state.weights, state.receivers);
+
+        // Slider displays
+        cVal.textContent = state.c.toFixed(2);
+        nVal.textContent = state.n.toFixed(2);
+        rVal.textContent = state.r.toFixed(2);
+        tauVal.textContent = state.tau.toFixed(2);
+        tauVal.style.color = state.tau >= 0.70 ? 'var(--red)' : 'var(--amber)';
+        sliderTau.className = state.tau >= 0.70 ? 'slider-tau danger w-full' : 'slider-tau w-full';
+
+        // Receiver displays
+        state.receivers.forEach((v, i) => { recvVals[i].textContent = v.toFixed(2); });
+
+        // Hv
+        hvVal.textContent = 'ĥᵥ = ' + m.hv_hat.toFixed(3);
+        hvBadge.textContent = m.hvStatus;
+        hvBar.style.width = (m.hv_hat * 100) + '%';
+
+        // Wv
+        wvVal.textContent = 'Wᵥ = ' + m.wv;
+        wvBadge.textContent = m.wvStatus;
+        bphiVal.textContent = m.bphi.toFixed(2);
+
+        // Ir
+        irVal.textContent = 'Iᵣ = ' + m.ir.toFixed(3);
+        irBadge.textContent = m.irStatus;
+        irBar.style.width = (m.ir * 100) + '%';
+
+        // Xi gauge
+        state.animXi += (m.xi - state.animXi) * 0.15;
+        const arcTotal = 198; // 75% of 264
+        const arcOffset = 264 - (state.animXi * arcTotal);
+        xiArc.setAttribute('stroke-dashoffset', arcOffset);
+        let xiColor;
+        if (m.xi >= 0.85) xiColor = '#10b981';
+        else if (m.xi >= 0.70) xiColor = '#22c55e';
+        else if (m.xi >= 0.55) xiColor = '#f59e0b';
+        else if (m.xi >= 0.40) xiColor = '#f97316';
+        else xiColor = '#ef4444';
+        xiArc.setAttribute('stroke', xiColor);
+
+        xiVal.textContent = m.xi.toFixed(2);
+        xiVal.style.color = xiColor;
+        xiLabel.textContent = m.xiLabel;
+        xiLabel.style.color = xiColor;
+        xiCard.style.borderColor = xiColor;
+
+        if (m.xi >= 0.70) {
+            xiShipBadge.textContent = '✓ READY TO SHIP';
+            xiShipBadge.style.background = 'rgba(16,185,129,0.15)';
+            xiShipBadge.style.color = '#10b981';
+            xiShipBadge.style.border = '1px solid rgba(16,185,129,0.3)';
+        } else {
+            xiShipBadge.textContent = '✕ REPAIR NEEDED';
+            xiShipBadge.style.background = 'rgba(239,68,68,0.15)';
+            xiShipBadge.style.color = '#ef4444';
+            xiShipBadge.style.border = '1px solid rgba(239,68,68,0.3)';
+        }
+
+        // Crystal celebration
+        if (m.xi >= 0.85 && state.prevXi < 0.85) {
+            emitConfetti();
+        }
+        state.prevXi = m.xi;
+
+        // False precision
+        falsePrecisionEl.classList.toggle('hidden', !m.falsePrecision);
+
+        // Regime
+        regimeDisplay.textContent = m.regime + ' ' + m.regimeSymbol;
+        regimeDisplay.style.color = m.regimeColor;
+        regimeCond.textContent = m.regimeCond;
+        regimeDesc.textContent = m.regimeDesc;
+        regimeHeaderBadge.textContent = m.regime + ' ' + m.regimeSymbol;
+        regimeHeaderBadge.style.color = m.regimeColor;
+        regimeHeaderBadge.style.borderColor = m.regimeColor;
+        regimeHeaderBadge.style.boxShadow = '0 0 8px ' + m.regimeColor + '40';
+
+        // Repair path
+        repairPathEl.innerHTML = '';
+        m.repairPath.forEach(item => {
+            const span = document.createElement('span');
+            if (item.chip) {
+                span.className = 'font-mono text-[10px] px-1.5 py-0.5 rounded border';
+                span.style.color = item.color;
+                span.style.borderColor = item.color;
+                span.style.background = item.color + '15';
+            } else if (item.color) {
+                span.className = 'font-mono text-[10px]';
+                span.style.color = item.color;
+            } else {
+                span.className = 'font-mono text-[10px] text-txt-muted';
+            }
+            span.textContent = item.label;
+            repairPathEl.appendChild(span);
+        });
+
+        // Torsion warnings
+        torsionWarn.classList.toggle('hidden', state.tau < 0.70);
+        mainContainer.classList.toggle('torsion-alert', state.tau >= 0.70);
+
+        // Delta Q
+        deltaQDisplay.textContent = 'Δq = ' + m.deltaQ.toFixed(3);
+
+        // Cross-framework tab
+        renderCFTab(state.activeTab, m);
+
+        // Canvas
+        if (state.viewMode === 'cube') drawCube(m);
+        else drawTriangle(m);
+    }
+
+    // ==================== ANIMATION LOOP ====================
+    function animLoop() {
+        if (state.rotating && state.viewMode === 'cube') {
+            state.cubeAngle += 0.003;
+        }
+        update();
+        requestAnimationFrame(animLoop);
+    }
+
+    // ==================== EVENT BINDING ====================
+
+    // Icons — progressive enhancement
+    if (typeof lucide !== "undefined" && typeof lucide.createIcons === "function") {
+        lucide.createIcons();
+    }
+
+    // Sliders
+    sliderC.addEventListener('input', function() { state.c = parseFloat(this.value); });
+    sliderN.addEventListener('input', function() { state.n = parseFloat(this.value); });
+    sliderR.addEventListener('input', function() { state.r = parseFloat(this.value); });
+    sliderTau.addEventListener('input', function() { state.tau = parseFloat(this.value); });
+
+    // Receiver sliders
+    recvSliders.forEach((sl, i) => {
+        sl.addEventListener('input', function() { state.receivers[i] = parseFloat(this.value); });
+    });
+
+    // Presets
+    document.querySelectorAll('[data-preset]').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const key = this.dataset.preset;
+            const preset = PRESETS[key];
+            if (!preset) return;
+            state.weights = { ...preset };
+            state.activePreset = key;
+            document.querySelectorAll('[data-preset]').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            weightsDisplay.textContent = `[wc=${preset.wc.toFixed(2)} wn=${preset.wn.toFixed(2)} wr=${preset.wr.toFixed(2)}]`;
+        });
+    });
+
+    // View toggle
+    viewToggle.addEventListener('click', function() {
+        state.viewMode = state.viewMode === 'cube' ? 'triangle' : 'cube';
+        this.textContent = state.viewMode === 'cube' ? 'Cube' : 'Triangle';
+    });
+
+    // Operator buttons
+    function addLog(msg) {
+        const now = new Date();
+        const ts = now.toTimeString().slice(0, 8);
+        state.logs.push(ts + ' · ' + msg);
+        if (state.logs.length > 5) state.logs.shift();
+        operatorLog.innerHTML = state.logs.map(l => '<div>' + l + '</div>').join('');
+        operatorLog.scrollTop = operatorLog.scrollHeight;
+    }
+
+    function clamp01(v) { return Math.max(0, Math.min(1, v)); }
+
+    document.getElementById('op-c-s0t4').addEventListener('click', function() {
+        state.c = clamp01(state.c + 0.10);
+        state.n = clamp01(state.n - 0.05);
+        sliderC.value = state.c;
+        sliderN.value = state.n;
+        addLog(`Ĉ ∘ φ → c=${state.c.toFixed(2)} n=${state.n.toFixed(2)} r=${state.r.toFixed(2)}`);
+    });
+
+    document.getElementById('op-n-u6v0').addEventListener('click', function() {
+        state.n = clamp01(state.n + 0.10);
+        state.c = clamp01(state.c - 0.05);
+        sliderN.value = state.n;
+        sliderC.value = state.c;
+        addLog(`N̂ ∘ φ → c=${state.c.toFixed(2)} n=${state.n.toFixed(2)} r=${state.r.toFixed(2)}`);
+    });
+
+    document.getElementById('op-r-w2x6').addEventListener('click', function() {
+        state.r = clamp01(state.r + 0.08);
+        sliderR.value = state.r;
+        addLog(`R̂ ∘ φ → c=${state.c.toFixed(2)} n=${state.n.toFixed(2)} r=${state.r.toFixed(2)}`);
+    });
+
+    document.getElementById('op-reset-y8z2').addEventListener('click', function() {
+        state.c = 0.50; state.n = 0.50; state.r = 0.50; state.tau = 0.30;
+        sliderC.value = 0.50; sliderN.value = 0.50; sliderR.value = 0.50; sliderTau.value = 0.30;
+        state.receivers = [0.50, 0.65, 0.70, 0.55, 0.60];
+        recvSliders.forEach((sl, i) => { sl.value = state.receivers[i]; });
+        addLog('φ RESET → default (0.50, 0.50, 0.50)');
+    });
+
+    // Cross-framework tabs
+    document.querySelectorAll('[data-cftab]').forEach(btn => {
+        btn.addEventListener('click', function() {
+            state.activeTab = this.dataset.cftab;
+            document.querySelectorAll('[data-cftab]').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+
+    // Help modal
+    const helpModal = document.getElementById('help-modal-i2j6');
+    const helpBox = helpModal.querySelector('.modal-box');
+    document.getElementById('help-btn-q9w3').addEventListener('click', function() {
+        helpModal.classList.remove('hidden');
+        requestAnimationFrame(() => {
+            helpModal.style.opacity = '1';
+            helpBox.style.transform = 'scale(1)';
+        });
+    });
+    document.getElementById('help-close-k4l8').addEventListener('click', closeHelp);
+    helpModal.addEventListener('click', function(e) {
+        if (e.target === helpModal) closeHelp();
+    });
+    function closeHelp() {
+        helpModal.style.opacity = '0';
+        helpBox.style.transform = 'scale(0.95)';
+        setTimeout(() => helpModal.classList.add('hidden'), 200);
+    }
+
+    // Start animation loop
+    animLoop();
+    </script>
+
+    <!-- ═══ SPINE CANON FOOTER ═══ -->
+    <div id="spine-canon-footer">
+      <span><span class="canon-dot"></span>RTT::Clarity · S3 Spine Overlay Pack v2.0 · R5 · 2026-08-08</span>
+      <span>
+        <a href="https://www.triadicframeworks.org/spine/">S3 Spine</a>
+        &nbsp;·&nbsp;
+        <a href="https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/spine">GitHub</a>
+        &nbsp;·&nbsp;
+        <a href="../clarity_overlay_module.json">overlay.json</a>
+        &nbsp;·&nbsp;
+        <a href="../clarity_overlay.md">overlay.md</a>
+      </span>
+    </div>
+
+</body>
+</html>

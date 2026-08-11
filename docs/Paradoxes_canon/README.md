@@ -1,22 +1,8 @@
+<img width="1194" height="672" alt="Paradoxes_Canon_module" src="https://github.com/user-attachments/assets/912fc384-fed9-442f-a48c-bcb7f7823961" />
+
 ## 🧭 Resonance‑Time Theory: Paradox Resilience 
 
 - [`paradoxes-canon_module.json`](paradoxes-canon_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🔺Paradoxes%20Canon-🧩Structural%20Paradox%20Layer%20Active-4c8eda?style=for-the-badge" alt="🔺Paradoxes Canon | 🧩Structural Paradox Layer Active"/>
 
 Santa’s chief elf technologist is testing reality itself — and RTT is the tool.  
 This page explains how Resonance‑Time Theory stays stable even when paradoxes appear,  
@@ -68,3 +54,20 @@ git clone https://github.com/umaywant2/TriadicFrameworks.git
 cd TriadicFrameworks
 npm install
 npm run validate
+```
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🔺Paradoxes%20Canon-🧩Structural%20Paradox%20Layer%20Active-4c8eda?style=for-the-badge" alt="🔺Paradoxes Canon | 🧩Structural Paradox Layer Active"/>

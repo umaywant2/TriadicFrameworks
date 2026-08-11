@@ -1,3 +1,5 @@
+<img width="672" height="1194" alt="rtt_D369_Chip_Spec" src="https://github.com/user-attachments/assets/ec9ce061-f71c-42a6-b1e5-0042a16dc420" />
+
 # D369 Chip Spec
 
 - [`D369_Chip_Spec_module.json`](D369_Chip_Spec_module.json) — Agentic module schema role assignments

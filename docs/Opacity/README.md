@@ -1,31 +1,8 @@
+<img width="936" height="936" alt="Opacity_module" src="https://github.com/user-attachments/assets/c4841537-0c49-48c1-a62c-1441c2be004d" />
+
 # 🌑 Opacity — /docs/Opacity
 
 - [`Opacity_module.json`](Opacity_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-![Module](https://img.shields.io/badge/Module-Opacity-333)
-![Tier](https://img.shields.io/badge/Tier-Core-0aa)
-![Version](https://img.shields.io/badge/Version-1.0-09f)
-![Status](https://img.shields.io/badge/Status-Active-0af)
-![Triadic](https://img.shields.io/badge/Triadic-Substrate_Aligned-8A2BE2)
-![AI‑Ready](https://img.shields.io/badge/AI-Ready-00c8ff)
-
----
-
-<img alt="opacity_half_lit_sphere" src="./diagram.svg" />
 
 **Opacity** defines the universal failure mode of regime perception. It is the
 substrate‑level condition where a regime, flow, or structure becomes partially
@@ -135,3 +112,25 @@ Replaces:     regime_blindness (fully)
 Open educational use permitted.
 See the main repository for details.
 
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+![Module](https://img.shields.io/badge/Module-Opacity-333)
+![Tier](https://img.shields.io/badge/Tier-Core-0aa)
+![Version](https://img.shields.io/badge/Version-1.0-09f)
+![Status](https://img.shields.io/badge/Status-Active-0af)
+![Triadic](https://img.shields.io/badge/Triadic-Substrate_Aligned-8A2BE2)
+![AI‑Ready](https://img.shields.io/badge/AI-Ready-00c8ff)
+
+<img alt="opacity_half_lit_sphere" src="./diagram.svg" />

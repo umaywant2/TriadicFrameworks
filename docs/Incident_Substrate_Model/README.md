@@ -1,8 +1,8 @@
+<img width="1194" height="672" alt="Incident_Substrate_Model_module" src="https://github.com/user-attachments/assets/b34c0b11-7057-4cd9-bacc-29eb2ef727a1" />
+
 # ⚠️ Incident Substrate Model  
 
 - [`incident.module.json`](incident.module.json) — Agentic module schema role assignments
-
-`/docs/Incident_Substrate_Model/README.md`
 
 A calm, structured, grammar‑driven substrate for **incident ingestion, analysis, rectification planning, and operator‑approved remediation**.  
 Designed for any GitHub repository — open or private — to adopt by adding a single JSON module file.

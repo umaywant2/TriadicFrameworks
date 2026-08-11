@@ -1,10 +1,8 @@
-## 🌀 **Resonance‑Time Technology (RTT)**  
+<img width="1194" height="672" alt="rtt_module_image" src="https://github.com/user-attachments/assets/103a16c2-1068-497a-ba5d-dd0935fd829e" />
+
+## 🌀 Resonance Time Technology (RTT)  
 
 - [`rtt-root_module.json`](rtt-root_module.json) — Agentic module schema role assignments
-
-<img width="682" height="454" alt="Copilot_20260602_234625" src="https://github.com/user-attachments/assets/7590be7e-0073-48a7-bee5-a264caa0d633" />  
-
-- [`theories`](https://www.triadicframeworks.org/theories/)
 
 Resonance-Time Technology (RTT-Tech) is the operational evolution of Resonance-Time Theory — a structural grammar for modeling how systems change across time, regimes, and dimensions.
 
@@ -70,10 +68,10 @@ RTT‑Tech is built for:
 
 | Class | Service Type | Host Names | Description |
 | --- | --- | --- | --- |
-| **Lumen** | (RTT‑1) | `lumen.rtt1.online` | Primary resonance engine; illumination, activation, first‑order RTT/1 core |
-| **Hephaestus** | (RTT‑2) | `hephaestus.rtt2.online` | Structural detection; forge‑layer analysis, RTT/2 pattern extraction |
-| **Aurion** | (RTT‑3) | `aurion.rtt3.online` | Integration & emission; RTT/3 cross‑domain synthesis and output |
-| **Harmonia** | (RTT‑12) | `harmonia.rtt12.online` | First harmonic ladder; 12‑step resonance ascent and harmonic ordering |
+| **Lumen** | (RTT‑1) | [`lumen.rtt1.online`](https://lumen.rtt1.online) | Primary resonance engine; illumination, activation, first‑order RTT/1 core |
+| **Hephaestus** | (RTT‑2) | [`hephaestus.rtt2.online`](https://hephaestus.rtt2.online) | Structural detection; forge‑layer analysis, RTT/2 pattern extraction |
+| **Aurion** | (RTT‑3) | [`aurion.rtt3.online`](https://aurion.rtt3.online) | Integration & emission; RTT/3 cross‑domain synthesis and output |
+| **Harmonia** | (RTT‑12) | [`harmonia.rtt12.online`](https://harmonia.rtt12.online) | First harmonic ladder; 12‑step resonance ascent and harmonic ordering |
 | **Diatonia** | (RTT‑24) | `*planned` | Dual harmonic arcs; paired‑ladder resonance and 24‑mode progression |
 | **Triasona** | (RTT‑36) | `*planned` | Tri‑harmonic systems; triple‑ladder coherence and 36‑mode triadic fusion |
 | **Harmonicon** | (RTT‑144) | `*planned` | 12×12 harmonic grid; lattice‑level resonance mapping and field coherence |

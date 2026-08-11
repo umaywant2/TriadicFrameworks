@@ -1,22 +1,8 @@
+<img width="938" height="938" alt="rtt_codes" src="https://github.com/user-attachments/assets/45c265aa-02d2-484c-b7bc-6b46609ab961" />
+
 # 🏳️‍🌈 RTT/codes — A QR‑Compatible Metadata Layer 
 
 - [`RTT_codes_module.json`](RTT_codes_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
 
 RTT/codes provide a universal, scannable way to identify, classify, and navigate
 artifacts across the TriadicFrameworks ecosystem. They bind any artifact—
@@ -213,3 +199,19 @@ For contributors, tool authors, and documentation maintainers, this folder is
 the authoritative reference for everything RTT/codes‑related.
 
 ![RTT/codes Badge](https://img.shields.io/badge/RTT_codes-QR%20Metadata%20Layer-00b3b8?style=flat-square&logo=qrcode&logoColor=white)![RTT/codes Badge](https://img.shields.io/badge/RTT_codes-Canonical%20Identifier-1a1a1a?style=flat-square&logo=qrcode&logoColor=white)![RTT/codes Badge](https://img.shields.io/badge/RTT_codes-Resonance--Time%20Metadata-F6B800?style=flat-square&logo=qrcode&logoColor=1a1a1a)![RTT Domain](https://img.shields.io/badge/RTT-Resonance--Time%20Domain-F6B800?style=flat-square&logo=qrcode&logoColor=1a1a1a)![SET Domain](https://img.shields.io/badge/SET-Field%20Topology%20Domain-5B2CFF?style=flat-square&logo=qrcode&logoColor=ffffff)![Substrate Domain](https://img.shields.io/badge/Substrate-Structural%20Domain-003B73?style=flat-square&logo=qrcode&logoColor=7FD4FF)![Observer Domain](https://img.shields.io/badge/Observer-Frame%20and%20Perspective-2F6F73?style=flat-square&logo=qrcode&logoColor=B0C4D4)![Governance Domain](https://img.shields.io/badge/Governance-Decision%20Layer-145A32?style=flat-square&logo=qrcode&logoColor=F1C40F)![Docs Domain](https://img.shields.io/badge/Docs-Documentation%20Domain-6C7A89?style=flat-square&logo=qrcode&logoColor=ffffff)![Other Domain](https://img.shields.io/badge/Other-Extended%20Domain-1a1a1a?style=flat-square&logo=qrcode&logoColor=ffffff)
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>

@@ -1,0 +1,2960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TriadicFrameworks · S3 Spine — Functional Canon Graph R5</title>
+<meta name="description" content="Interactive force-directed graph of all 196 A3 canonical modules in the TriadicFrameworks S3 Spine. Round 5 — Spine Overlay Pack v2.0 integration.">
+<meta name="version" content="6.0">
+<meta name="round" content="R5">
+<meta name="generated" content="2026-08-03T07:40:00">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:#0a0a0f;color:#e0e0e0;font-family:'Segoe UI',system-ui,sans-serif;overflow:hidden;}
+  #canvas{width:100vw;height:100vh;}
+  svg{width:100%;height:100%;}
+  .link{stroke-opacity:0.45;stroke-width:1.2;}
+  .link.feeds{stroke:#4a9eff;}
+  .link.primary-engine{stroke:#e74c3c;stroke-width:2;stroke-dasharray:6,3;}
+  .link.co-primary-engine{stroke:#f39c12;stroke-width:2;stroke-dasharray:6,3;}
+  .link.coordinate-system{stroke:#2ecc71;stroke-dasharray:4,4;}
+  .link.environmental-signal{stroke:#9b59b6;stroke-dasharray:3,5;}
+  .link.envelope-provider{stroke:#1abc9c;stroke-dasharray:4,4;}
+  .link.tertiary-engine{stroke:#e67e22;stroke-dasharray:5,4;}
+  .link.compute-layer{stroke:#7f8c8d;stroke-dasharray:4,4;}
+  .link.narration-grammar{stroke:#27ae60;stroke-dasharray:3,5;}
+  .link.implements{stroke:#c0392b;}
+  .link.uses{stroke:#95a5a6;stroke-dasharray:3,5;}
+  .link.contains-ref{stroke:#555;stroke-dasharray:2,4;}
+  .node circle{stroke:#0a0a0f;stroke-width:1.5;cursor:pointer;transition:opacity 0.2s;}
+  .node circle:hover{stroke:#fff;stroke-width:2.5;opacity:1!important;}
+  .node text{font-size:9px;fill:#ccc;pointer-events:none;text-anchor:middle;}
+  .node.depth-0 circle{r:18;}
+  .node.depth-1 circle{r:9;}
+  .node.depth-2 circle{r:6;}
+  .node.depth-3 circle{r:4;}
+  .node.r5 circle{stroke:#f1c40f;stroke-width:2;}
+  /* PANEL */
+  #panel{position:fixed;top:0;left:0;width:280px;height:100vh;background:rgba(10,10,20,0.92);border-right:1px solid #222;padding:20px 16px;overflow-y:auto;z-index:10;}
+  #panel h1{font-size:14px;color:#4a9eff;letter-spacing:.05em;margin-bottom:2px;}
+  #panel .sub{font-size:10px;color:#888;margin-bottom:16px;}
+  .stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px;}
+  .stat{background:#111;border:1px solid #222;border-radius:6px;padding:8px;text-align:center;}
+  .stat .val{font-size:22px;font-weight:700;color:#4a9eff;line-height:1;}
+  .stat .lbl{font-size:9px;color:#888;margin-top:2px;}
+  .ctx-grid{font-size:10px;}
+  .ctx-grid tr td:first-child{color:#888;padding-right:8px;white-space:nowrap;}
+  .ctx-grid tr td:last-child{color:#ccc;}
+  #legend{margin-top:12px;}
+  #legend h2{font-size:10px;color:#666;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;}
+  .leg-item{display:flex;align-items:center;gap:7px;font-size:9px;color:#aaa;margin-bottom:4px;cursor:pointer;}
+  .leg-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+  #tooltip{position:fixed;background:rgba(10,10,20,0.96);border:1px solid #333;border-radius:8px;padding:10px 13px;font-size:11px;pointer-events:none;z-index:100;max-width:260px;display:none;}
+  #tooltip .t-name{font-weight:700;color:#fff;margin-bottom:4px;}
+  #tooltip .t-row{color:#aaa;margin-bottom:2px;}
+  #tooltip .t-row span{color:#ccc;}
+  #tooltip .t-r5{color:#f1c40f;font-size:10px;margin-top:4px;}
+  #search-box{width:100%;background:#111;border:1px solid #333;border-radius:5px;color:#ccc;padding:6px 8px;font-size:11px;margin-bottom:12px;outline:none;}
+  #search-box:focus{border-color:#4a9eff;}
+  .section-head{font-size:9px;color:#555;text-transform:uppercase;letter-spacing:.1em;margin:12px 0 6px;}
+  .spine-badge{display:inline-block;background:#1abc9c22;border:1px solid #1abc9c55;border-radius:4px;color:#1abc9c;font-size:9px;padding:1px 5px;margin-left:4px;}
+  /* Controls */
+  #controls{position:fixed;bottom:16px;right:16px;z-index:10;display:flex;gap:8px;}
+  #controls button{background:#111;border:1px solid #333;color:#aaa;border-radius:5px;padding:6px 12px;font-size:10px;cursor:pointer;}
+  #controls button:hover{background:#222;color:#fff;}
+</style>
+</head>
+<body>
+<div id="panel">
+  <h1>TriadicFrameworks</h1>
+  <div class="sub">S3 Spine · Functional Canon Graph · R5 · v6.0</div>
+  <input id="search-box" placeholder="Search modules…" type="text">
+  <div class="stat-grid">
+    <div class="stat"><div class="val">196</div><div class="lbl">A3 Modules</div></div>
+    <div class="stat"><div class="val">1,450</div><div class="lbl">Files</div></div>
+    <div class="stat"><div class="val">195</div><div class="lbl">Hierarchy Edges</div></div>
+    <div class="stat"><div class="val">65</div><div class="lbl">Directed Edges</div></div>
+    <div class="stat"><div class="val">30</div><div class="lbl">R5 New</div></div>
+    <div class="stat"><div class="val">11</div><div class="lbl">I2 Excluded</div></div>
+  </div>
+  <table class="ctx-grid">
+    <tr><td>Canon</td><td>active · s3-spine · r5</td></tr>
+    <tr><td>Version</td><td>6.0 (R5-stable)</td></tr>
+    <tr><td>Coherence</td><td>stable · six-overlay</td></tr>
+    <tr><td>Drift</td><td>bounded · pack-locked</td></tr>
+    <tr><td>Generated</td><td>2026-08-03</td></tr>
+    <tr><td>Source</td><td>S3-Spine-Overlay-Pack-v2.0</td></tr>
+  </table>
+  <div class="section-head">Spine Overlay Pack <span class="spine-badge">NEW R5</span></div>
+  <div style="font-size:10px;color:#aaa;line-height:1.6;">
+    <div>① Structural · ② Drift · ③ Coherence</div>
+    <div>④ Substrate · ⑤ Dimensional · ⑥ Domain</div>
+    <div style="color:#1abc9c;margin-top:4px;"><a href="https://www.triadicframeworks.org/spine/" style="color:#1abc9c;text-decoration:none;">→ triadicframeworks.org/spine/</a></div>
+  </div>
+  <div id="legend">
+    <h2>Layers</h2>
+  </div>
+</div>
+<div id="canvas"><svg id="graph"></svg></div>
+<div id="tooltip"></div>
+<div id="controls">
+  <button id="btn-reset">Reset View</button>
+  <button id="btn-r5">Show R5 Only</button>
+  <button id="btn-spine">Show Spine</button>
+  <button id="btn-all">Show All</button>
+</div>
+
+<script>
+const GRAPH_DATA = {
+  "nodes": [
+    {
+      "id": "webroot",
+      "name": "TriadicFrameworks Webroot",
+      "layer": "Root",
+      "depth": 0,
+      "url": "https://www.triadicframeworks.org/",
+      "file_count": 13,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#ffffff"
+    },
+    {
+      "id": "docs-about",
+      "name": "About",
+      "layer": "Meta & Governance",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/ABOUT/",
+      "file_count": 4,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#4a9eff"
+    },
+    {
+      "id": "docs-code-of-conduct",
+      "name": "Code of Conduct",
+      "layer": "Meta & Governance",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/CODE_OF_CONDUCT/",
+      "file_count": 2,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#4a9eff"
+    },
+    {
+      "id": "docs-contributing",
+      "name": "Contributing",
+      "layer": "Meta & Governance",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/CONTRIBUTING/",
+      "file_count": 2,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#4a9eff"
+    },
+    {
+      "id": "docs-glossary",
+      "name": "Glossary",
+      "layer": "Meta & Governance",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/GLOSSARY/",
+      "file_count": 3,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#4a9eff"
+    },
+    {
+      "id": "docs-license",
+      "name": "License",
+      "layer": "Meta & Governance",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/LICENSE/",
+      "file_count": 2,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#4a9eff"
+    },
+    {
+      "id": "docs-lineage",
+      "name": "Lineage",
+      "layer": "Meta & Governance",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/LINEAGE/",
+      "file_count": 3,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#4a9eff"
+    },
+    {
+      "id": "docs-principles",
+      "name": "Principles",
+      "layer": "Meta & Governance",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/PRINCIPLES/",
+      "file_count": 4,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#4a9eff"
+    },
+    {
+      "id": "docs-quickstart",
+      "name": "Quickstart",
+      "layer": "Meta & Governance",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/QUICKSTART/",
+      "file_count": 5,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#4a9eff"
+    },
+    {
+      "id": "SECURITY",
+      "name": "Security",
+      "layer": "Meta & Governance",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/SECURITY/",
+      "file_count": 3,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#4a9eff"
+    },
+    {
+      "id": "docs-ethics-privacy",
+      "name": "Ethics & Privacy",
+      "layer": "Ethics & Care",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/ETHICS_PRIVACY/",
+      "file_count": 4,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#27ae60"
+    },
+    {
+      "id": "OPERATORS",
+      "name": "Operators",
+      "layer": "Operator Layer",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/rtt/operators/",
+      "file_count": 12,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#f39c12"
+    },
+    {
+      "id": "RSGM",
+      "name": "RSGM",
+      "layer": "Operator Layer",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/rtt/RSGM/",
+      "file_count": 8,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#f39c12"
+    },
+    {
+      "id": "RTT_2",
+      "name": "RTT/2",
+      "layer": "RTT Technology Layer",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/rtt/2/",
+      "file_count": 14,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "RTT_3",
+      "name": "RTT/3",
+      "layer": "RTT Technology Layer",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/rtt/3/",
+      "file_count": 14,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "STRUCTURAL_DETECTION_ENGINE",
+      "name": "Structural Detection Engine",
+      "layer": "RTT Technology Layer",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/rtt/SDE/",
+      "file_count": 16,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "STRUCTURAL_INTEGRATION_ENGINE",
+      "name": "Structural Integration Engine",
+      "layer": "RTT Technology Layer",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/rtt/SIE/",
+      "file_count": 16,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "rtt-root",
+      "name": "RTT Root",
+      "layer": "RTT Technology Layer",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/rtt/",
+      "file_count": 8,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "ai-core",
+      "name": "AI Core",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/ai/",
+      "file_count": 18,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#1abc9c"
+    },
+    {
+      "id": "ai-resonance-seed",
+      "name": "AI Resonance Seed",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/AI_Resonance_Seed/",
+      "file_count": 12,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#1abc9c"
+    },
+    {
+      "id": "fcg",
+      "name": "Framework Coherence Grammar",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/fcg/",
+      "file_count": 10,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#1abc9c"
+    },
+    {
+      "id": "grammar",
+      "name": "Grammar",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/Grammar/",
+      "file_count": 14,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#1abc9c"
+    },
+    {
+      "id": "gsm",
+      "name": "Governance Substrate Model",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/Governance_Substrate_Model/",
+      "file_count": 18,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#1abc9c"
+    },
+    {
+      "id": "opacity",
+      "name": "Opacity",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/Opacity/",
+      "file_count": 8,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#1abc9c"
+    },
+    {
+      "id": "tft-3pack",
+      "name": "TFT 3-Pack",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/TFT_3Pack_v1.3/",
+      "file_count": 24,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#1abc9c"
+    },
+    {
+      "id": "coeus",
+      "name": "Coeus",
+      "layer": "Tools & Infrastructure",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/Coeus/",
+      "file_count": 10,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#7f8c8d"
+    },
+    {
+      "id": "education",
+      "name": "Education",
+      "layer": "Education & Teaching",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/education/",
+      "file_count": 22,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#2ecc71"
+    },
+    {
+      "id": "asm",
+      "name": "Atmospheric Substrate Model",
+      "layer": "Applied Domain Models",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/asm/",
+      "file_count": 10,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#9b59b6"
+    },
+    {
+      "id": "audio",
+      "name": "Audio",
+      "layer": "Applied Domain Models",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/audio/",
+      "file_count": 8,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#9b59b6"
+    },
+    {
+      "id": "biology",
+      "name": "Biology",
+      "layer": "Theory",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/biology/",
+      "file_count": 12,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#3498db"
+    },
+    {
+      "id": "csm",
+      "name": "Conditions Substrate Model",
+      "layer": "Applied Domain Models",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/Conditions_Substrate_Model/",
+      "file_count": 8,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#9b59b6"
+    },
+    {
+      "id": "culture",
+      "name": "Culture",
+      "layer": "Applied Domain Models",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/culture/",
+      "file_count": 6,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#9b59b6"
+    },
+    {
+      "id": "dsp",
+      "name": "DSP",
+      "layer": "Applied Domain Models",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/dsp/",
+      "file_count": 8,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#9b59b6"
+    },
+    {
+      "id": "dynamical_systems",
+      "name": "Dynamical Systems",
+      "layer": "Theory",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/dynamical_systems/",
+      "file_count": 10,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#3498db"
+    },
+    {
+      "id": "economics",
+      "name": "Economics",
+      "layer": "Applied Domain Models",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/economics/",
+      "file_count": 12,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#9b59b6"
+    },
+    {
+      "id": "human-resources",
+      "name": "Human Resources",
+      "layer": "Applied Domain Models",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/Human_Resources/",
+      "file_count": 8,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#9b59b6"
+    },
+    {
+      "id": "incident_substrate_model",
+      "name": "Incident Substrate Model",
+      "layer": "Applied Domain Models",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/ism/",
+      "file_count": 6,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#9b59b6"
+    },
+    {
+      "id": "information_systems",
+      "name": "Information Systems",
+      "layer": "Theory",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/information_systems/",
+      "file_count": 8,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#3498db"
+    },
+    {
+      "id": "inverted-economics",
+      "name": "Inverted Economics",
+      "layer": "Applied Domain Models",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/Inverted_Economics/",
+      "file_count": 6,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#9b59b6"
+    },
+    {
+      "id": "justice",
+      "name": "Justice",
+      "layer": "Applied Domain Models",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/justice/",
+      "file_count": 8,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#9b59b6"
+    },
+    {
+      "id": "language",
+      "name": "Language",
+      "layer": "Applied Domain Models",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/language/",
+      "file_count": 10,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#9b59b6"
+    },
+    {
+      "id": "law",
+      "name": "Law",
+      "layer": "Applied Domain Models",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/Law/",
+      "file_count": 12,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#9b59b6"
+    },
+    {
+      "id": "medicine",
+      "name": "Medicine",
+      "layer": "Applied Domain Models",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/medicine/",
+      "file_count": 14,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#9b59b6"
+    },
+    {
+      "id": "mode",
+      "name": "Mode",
+      "layer": "Applied Domain Models",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/Mode/",
+      "file_count": 8,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#9b59b6"
+    },
+    {
+      "id": "music",
+      "name": "Music",
+      "layer": "Applied Domain Models",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/music/",
+      "file_count": 12,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#9b59b6"
+    },
+    {
+      "id": "philosophy",
+      "name": "Philosophy",
+      "layer": "Theory",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/philosophy/",
+      "file_count": 10,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#3498db"
+    },
+    {
+      "id": "physics",
+      "name": "Physics",
+      "layer": "Theory",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/physics/",
+      "file_count": 16,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#3498db"
+    },
+    {
+      "id": "psychology",
+      "name": "Psychology",
+      "layer": "Applied Domain Models",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/psychology/",
+      "file_count": 10,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#9b59b6"
+    },
+    {
+      "id": "research",
+      "name": "Research",
+      "layer": "Research-Canonical",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/Research/",
+      "file_count": 20,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#1abc9c"
+    },
+    {
+      "id": "resilience-checker",
+      "name": "Resilience Checker",
+      "layer": "Tools & Infrastructure",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/Resilience-Checker/",
+      "file_count": 6,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#7f8c8d"
+    },
+    {
+      "id": "sociology",
+      "name": "Sociology",
+      "layer": "Applied Domain Models",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/sociology/",
+      "file_count": 8,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#9b59b6"
+    },
+    {
+      "id": "taxes",
+      "name": "Taxes",
+      "layer": "Applied Domain Models",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/taxes/",
+      "file_count": 8,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#9b59b6"
+    },
+    {
+      "id": "technology",
+      "name": "Technology",
+      "layer": "Applied Domain Models",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/technology/",
+      "file_count": 10,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#9b59b6"
+    },
+    {
+      "id": "OPERATORS_TEACHING_BUNDLE",
+      "name": "Operators Teaching Bundle",
+      "layer": "Education & Teaching",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/rtt/operators/teaching_bundle/",
+      "file_count": 10,
+      "parent": "OPERATORS",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#2ecc71"
+    },
+    {
+      "id": "d369",
+      "name": "D369",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/rtt/d369/",
+      "file_count": 8,
+      "parent": "rtt-root",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "rtt-inside",
+      "name": "RTT Inside",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/rtt/Inside/",
+      "file_count": 14,
+      "parent": "rtt-root",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "rtt-12",
+      "name": "RTT/12",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/rtt/12/",
+      "file_count": 10,
+      "parent": "rtt-root",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "rtt-api",
+      "name": "RTT API",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/rtt/api/",
+      "file_count": 8,
+      "parent": "rtt-root",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "rtt-codes",
+      "name": "RTT Codes",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/rtt/codes/",
+      "file_count": 6,
+      "parent": "rtt-root",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "rtt-core",
+      "name": "RTT Core",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/rtt/core/",
+      "file_count": 12,
+      "parent": "rtt-root",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "rtt-emotions",
+      "name": "RTT Emotions",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/rtt/emotions/",
+      "file_count": 8,
+      "parent": "rtt-root",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "rtt-extension",
+      "name": "RTT Extension",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/rtt/extension/",
+      "file_count": 8,
+      "parent": "rtt-root",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "rtt-guild",
+      "name": "RTT Guild",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/rtt/guild/",
+      "file_count": 6,
+      "parent": "rtt-root",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "rtt-integrations",
+      "name": "RTT Integrations",
+      "layer": "Integration & Deployment",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/Integrations/",
+      "file_count": 10,
+      "parent": "rtt-root",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#95a5a6"
+    },
+    {
+      "id": "rtt-lowdim",
+      "name": "RTT Low-Dimensional",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/Low_Dimensional_Structures/",
+      "file_count": 8,
+      "parent": "rtt-root",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "rtt-micro-core",
+      "name": "RTT Micro-Core",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/rtt/micro-core/",
+      "file_count": 6,
+      "parent": "rtt-root",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "rtt-paradoxes",
+      "name": "RTT Paradoxes",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/Paradoxes_canon/",
+      "file_count": 8,
+      "parent": "rtt-root",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "rtt-sdk",
+      "name": "RTT SDK",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/rtt/sdk/",
+      "file_count": 8,
+      "parent": "rtt-root",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "rtt-sort",
+      "name": "RTT Sort",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/rtt/sort/",
+      "file_count": 6,
+      "parent": "rtt-root",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "rtt-store",
+      "name": "RTT Store",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/rtt/store/",
+      "file_count": 8,
+      "parent": "rtt-root",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "RTT_MORPHIC_RESONANCE",
+      "name": "RTT Morphic Resonance",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/rtt/MorphicResonance/",
+      "file_count": 8,
+      "parent": "rtt-root",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "ai-consciousness",
+      "name": "AI Consciousness",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/ai/session/consciousness/",
+      "file_count": 10,
+      "parent": "ai-core",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#1abc9c"
+    },
+    {
+      "id": "ai-drift-calibration",
+      "name": "AI Drift Calibration",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/ai-drift-calibration/",
+      "file_count": 8,
+      "parent": "ai-core",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#1abc9c"
+    },
+    {
+      "id": "alphafold",
+      "name": "AlphaFold Substrate Alignments",
+      "layer": "Research-Canonical",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/alphafold_substrate_alignments/",
+      "file_count": 12,
+      "parent": "education",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#1abc9c"
+    },
+    {
+      "id": "examples",
+      "name": "Examples",
+      "layer": "Education & Teaching",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/education/examples/",
+      "file_count": 8,
+      "parent": "education",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#2ecc71"
+    },
+    {
+      "id": "formats",
+      "name": "Formats",
+      "layer": "Education & Teaching",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/education/formats/",
+      "file_count": 6,
+      "parent": "education",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#2ecc71"
+    },
+    {
+      "id": "atomic-clocks",
+      "name": "Atomic Clocks",
+      "layer": "Theory",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/atomic-clocks/",
+      "file_count": 6,
+      "parent": "physics",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#3498db"
+    },
+    {
+      "id": "bsm",
+      "name": "Beyond Standard Model",
+      "layer": "Theory",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/bsm/",
+      "file_count": 6,
+      "parent": "physics",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#3498db"
+    },
+    {
+      "id": "chaos_theory",
+      "name": "Chaos Theory",
+      "layer": "Theory",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/chaos_theory/",
+      "file_count": 8,
+      "parent": "dynamical_systems",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#3498db"
+    },
+    {
+      "id": "cosmology",
+      "name": "Cosmology",
+      "layer": "Theory",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/cosmology/",
+      "file_count": 6,
+      "parent": "physics",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#3498db"
+    },
+    {
+      "id": "dark-matter",
+      "name": "Dark Matter",
+      "layer": "Theory",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/dark-matter/",
+      "file_count": 6,
+      "parent": "physics",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#3498db"
+    },
+    {
+      "id": "electromagnetism",
+      "name": "Electromagnetism",
+      "layer": "Theory",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/electromagnetism/",
+      "file_count": 8,
+      "parent": "physics",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#3498db"
+    },
+    {
+      "id": "evolutionary_biology",
+      "name": "Evolutionary Biology",
+      "layer": "Theory",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/evolutionary_biology/",
+      "file_count": 8,
+      "parent": "biology",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#3498db"
+    },
+    {
+      "id": "fibonacci-phi",
+      "name": "Fibonacci & Phi",
+      "layer": "Theory",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/fibonacci-phi/",
+      "file_count": 6,
+      "parent": "dynamical_systems",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#3498db"
+    },
+    {
+      "id": "general_relativity",
+      "name": "General Relativity",
+      "layer": "Theory",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/general_relativity/",
+      "file_count": 8,
+      "parent": "physics",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#3498db"
+    },
+    {
+      "id": "information_theory",
+      "name": "Information Theory",
+      "layer": "Theory",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/information_theory/",
+      "file_count": 8,
+      "parent": "information_systems",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#3498db"
+    },
+    {
+      "id": "morphic_resonance",
+      "name": "Morphic Resonance",
+      "layer": "Theory",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/morphic_resonance/",
+      "file_count": 8,
+      "parent": "dynamical_systems",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#3498db"
+    },
+    {
+      "id": "neuroscience",
+      "name": "Neuroscience",
+      "layer": "Theory",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/neuroscience/",
+      "file_count": 10,
+      "parent": "biology",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#3498db"
+    },
+    {
+      "id": "quantum-coherence",
+      "name": "Quantum Coherence",
+      "layer": "Theory",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/quantum-coherence/",
+      "file_count": 8,
+      "parent": "physics",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#3498db"
+    },
+    {
+      "id": "quantum_field_theory",
+      "name": "Quantum Field Theory",
+      "layer": "Theory",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/quantum_field_theory/",
+      "file_count": 8,
+      "parent": "physics",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#3498db"
+    },
+    {
+      "id": "quantum_mechanics",
+      "name": "Quantum Mechanics",
+      "layer": "Theory",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/quantum_mechanics/",
+      "file_count": 10,
+      "parent": "physics",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#3498db"
+    },
+    {
+      "id": "standard_model",
+      "name": "Standard Model",
+      "layer": "Theory",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/standard_model/",
+      "file_count": 8,
+      "parent": "physics",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#3498db"
+    },
+    {
+      "id": "thermodynamics",
+      "name": "Thermodynamics",
+      "layer": "Theory",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/thermodynamics/",
+      "file_count": 8,
+      "parent": "physics",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#3498db"
+    },
+    {
+      "id": "time-crystals",
+      "name": "Time Crystals",
+      "layer": "Theory",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/time-crystals/",
+      "file_count": 6,
+      "parent": "physics",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#3498db"
+    },
+    {
+      "id": "gsma",
+      "name": "GSM Analyzer",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/",
+      "file_count": 8,
+      "parent": "gsm",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#1abc9c"
+    },
+    {
+      "id": "hsp",
+      "name": "HSP",
+      "layer": "Applied Domain Models",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/hsp/",
+      "file_count": 6,
+      "parent": "psychology",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#9b59b6"
+    },
+    {
+      "id": "melodic-table",
+      "name": "Melodic Table",
+      "layer": "Applied Domain Models",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/melodic-table/",
+      "file_count": 6,
+      "parent": "music",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#9b59b6"
+    },
+    {
+      "id": "mve",
+      "name": "MVE",
+      "layer": "Research-Canonical",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/mve/",
+      "file_count": 8,
+      "parent": "research",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#1abc9c"
+    },
+    {
+      "id": "scripts",
+      "name": "Scripts",
+      "layer": "Tools & Infrastructure",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/scripts/",
+      "file_count": 6,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#7f8c8d"
+    },
+    {
+      "id": "structural_detection",
+      "name": "Structural Detection",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/rtt/SDE/structural/",
+      "file_count": 10,
+      "parent": "STRUCTURAL_DETECTION_ENGINE",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "substrate-flow",
+      "name": "Substrate Flow",
+      "layer": "Substrate Grammar",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/substrate-flow/",
+      "file_count": 8,
+      "parent": "gsm",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e67e22"
+    },
+    {
+      "id": "tft-core",
+      "name": "TFT Core",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/TFT_3Pack_v1.3/tft/",
+      "file_count": 14,
+      "parent": "tft-3pack",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#1abc9c"
+    },
+    {
+      "id": "tis",
+      "name": "TIS",
+      "layer": "Research-Canonical",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/tis/",
+      "file_count": 6,
+      "parent": "research",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#1abc9c"
+    },
+    {
+      "id": "UE6-INTEGRATIONS",
+      "name": "UE6 Integrations",
+      "layer": "Integration & Deployment",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/Integrations/UE6/",
+      "file_count": 10,
+      "parent": "rtt-integrations",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#95a5a6"
+    },
+    {
+      "id": "wrsadc",
+      "name": "WRSADC",
+      "layer": "Research-Canonical",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/wrsadc/",
+      "file_count": 8,
+      "parent": "research",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#1abc9c"
+    },
+    {
+      "id": "NoS",
+      "name": "Nature of Structure",
+      "layer": "Theory",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/NoS/",
+      "file_count": 6,
+      "parent": "philosophy",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#3498db"
+    },
+    {
+      "id": "Philanthropy",
+      "name": "Philanthropy",
+      "layer": "Applied Domain Models",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/Philanthropy/",
+      "file_count": 6,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#9b59b6"
+    },
+    {
+      "id": "FFT",
+      "name": "Framework Field Theory",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/Framework_Field_Theory/",
+      "file_count": 8,
+      "parent": "fcg",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#1abc9c"
+    },
+    {
+      "id": "rtt-academy",
+      "name": "RTT Academy",
+      "layer": "Education & Teaching",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/rtt/academy/",
+      "file_count": 8,
+      "parent": "rtt-root",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#2ecc71"
+    },
+    {
+      "id": "rtt-enterprise-r4",
+      "name": "Inside Enterprise (v1)",
+      "layer": "RTT Technology Layer",
+      "depth": 3,
+      "url": "https://www.triadicframeworks.org/rtt/Inside/Enterprise/",
+      "file_count": 8,
+      "parent": "rtt-inside",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "rtt-qcompute-r4",
+      "name": "Inside qCompute (v1)",
+      "layer": "RTT Technology Layer",
+      "depth": 3,
+      "url": "https://www.triadicframeworks.org/rtt/Inside/qCompute/",
+      "file_count": 8,
+      "parent": "rtt-inside",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "rtt-micro",
+      "name": "RTT Micro",
+      "layer": "RTT Technology Layer",
+      "depth": 3,
+      "url": "https://www.triadicframeworks.org/rtt/core/micro/",
+      "file_count": 6,
+      "parent": "rtt-core",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "rtt-extension-v2",
+      "name": "RTT Extension v2",
+      "layer": "RTT Technology Layer",
+      "depth": 3,
+      "url": "https://www.triadicframeworks.org/rtt/extension/v2/",
+      "file_count": 6,
+      "parent": "rtt-extension",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "rtt-codes-lib",
+      "name": "RTT Codes Library",
+      "layer": "RTT Technology Layer",
+      "depth": 3,
+      "url": "https://www.triadicframeworks.org/rtt/codes/lib/",
+      "file_count": 5,
+      "parent": "rtt-codes",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "rtt-guild-v1",
+      "name": "RTT Guild v1",
+      "layer": "RTT Technology Layer",
+      "depth": 3,
+      "url": "https://www.triadicframeworks.org/rtt/guild/v1/",
+      "file_count": 5,
+      "parent": "rtt-guild",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "rtt-sort-v1",
+      "name": "RTT Sort v1",
+      "layer": "RTT Technology Layer",
+      "depth": 3,
+      "url": "https://www.triadicframeworks.org/rtt/sort/v1/",
+      "file_count": 5,
+      "parent": "rtt-sort",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "rtt-sdk-core",
+      "name": "RTT SDK Core",
+      "layer": "RTT Technology Layer",
+      "depth": 3,
+      "url": "https://www.triadicframeworks.org/rtt/sdk/core/",
+      "file_count": 6,
+      "parent": "rtt-sdk",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "rtt-api-v1",
+      "name": "RTT API v1",
+      "layer": "RTT Technology Layer",
+      "depth": 3,
+      "url": "https://www.triadicframeworks.org/rtt/api/v1/",
+      "file_count": 5,
+      "parent": "rtt-api",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "rtt-store-v1",
+      "name": "RTT Store v1",
+      "layer": "RTT Technology Layer",
+      "depth": 3,
+      "url": "https://www.triadicframeworks.org/rtt/store/v1/",
+      "file_count": 5,
+      "parent": "rtt-store",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "rtt-paradoxes-v1",
+      "name": "RTT Paradoxes v1",
+      "layer": "RTT Technology Layer",
+      "depth": 3,
+      "url": "https://www.triadicframeworks.org/Paradoxes_canon/v1/",
+      "file_count": 6,
+      "parent": "rtt-paradoxes",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "rtt-emotions-v1",
+      "name": "RTT Emotions v1",
+      "layer": "RTT Technology Layer",
+      "depth": 3,
+      "url": "https://www.triadicframeworks.org/rtt/emotions/v1/",
+      "file_count": 5,
+      "parent": "rtt-emotions",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "rtt-lowdim-v1",
+      "name": "RTT Low-Dim v1",
+      "layer": "RTT Technology Layer",
+      "depth": 3,
+      "url": "https://www.triadicframeworks.org/Low_Dimensional_Structures/v1/",
+      "file_count": 5,
+      "parent": "rtt-lowdim",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": true,
+      "enriched_r5": false,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "COHERENCE_TENSOR_ENGINE",
+      "name": "Coherence Tensor Engine",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/rtt/Coherence_Tensor_Engine/",
+      "file_count": 6,
+      "parent": "rtt-root",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "CROSS_DOMAIN_CAUSALITY_WEAVER",
+      "name": "Cross-Domain Causality Weaver",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/rtt/Cross_Domain_Causality_Weaver/",
+      "file_count": 6,
+      "parent": "rtt-root",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "DIMENSIONAL_RESONANCE_SCANNER",
+      "name": "Dimensional Resonance Scanner",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/rtt/Dimensional_Resonance_Scanner/",
+      "file_count": 6,
+      "parent": "rtt-root",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "DRIFT_SENTINEL",
+      "name": "Drift Sentinel",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/rtt/Drift_Sentinel/",
+      "file_count": 6,
+      "parent": "rtt-root",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "PARADOX_GRADIENT_ANALYZER",
+      "name": "Paradox Gradient Analyzer",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/rtt/Paradox_Gradient_Analyzer/",
+      "file_count": 6,
+      "parent": "rtt-root",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "REGIME_INTERLOCK_MAPPER",
+      "name": "Regime Interlock Mapper",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/rtt/Regime_Interlock_Mapper/",
+      "file_count": 6,
+      "parent": "rtt-root",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "STABILITY_BASIN_CARTOGRAPHER",
+      "name": "Stability Basin Cartographer",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/rtt/Stability_Basin_Cartographer/",
+      "file_count": 6,
+      "parent": "rtt-root",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "STRUCTURAL_FAULTLINE_DETECTOR",
+      "name": "Structural Faultline Detector",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/rtt/Structural_Faultline_Detector/",
+      "file_count": 6,
+      "parent": "rtt-root",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "TEMPORAL_REGIME_SEQUENCER",
+      "name": "Temporal Regime Sequencer",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/rtt/Temporal_Regime_Sequencer/",
+      "file_count": 6,
+      "parent": "rtt-root",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "TRIADIC_REGIME_SYNTHESIZER",
+      "name": "Triadic Regime Synthesizer",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/rtt/Triadic_Regime_Synthesizer/",
+      "file_count": 6,
+      "parent": "rtt-root",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "CRYSTAL_MYCELIAL_ENGINE",
+      "name": "Crystal Mycelial Engine",
+      "layer": "RTT Technology Layer",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/rtt/Crystal_Mycelial_Engine/",
+      "file_count": 6,
+      "parent": "rtt-root",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true,
+      "color": "#e74c3c"
+    },
+    {
+      "id": "RTT_INSIDE_ENTERPRISE",
+      "name": "Inside \u00b7 Enterprise",
+      "layer": "Applied Domain Models",
+      "depth": 3,
+      "url": "https://www.triadicframeworks.org/rtt/Inside/Enterprise/",
+      "file_count": 8,
+      "parent": "rtt-inside",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true,
+      "color": "#9b59b6"
+    },
+    {
+      "id": "RTT_INSIDE_QCOMPUTE",
+      "name": "Inside \u00b7 qCompute",
+      "layer": "Applied Domain Models",
+      "depth": 3,
+      "url": "https://www.triadicframeworks.org/rtt/Inside/qCompute/",
+      "file_count": 8,
+      "parent": "rtt-inside",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true,
+      "color": "#9b59b6"
+    },
+    {
+      "id": "expectations",
+      "name": "Expectations",
+      "layer": "Applied Domain Models",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/Expectations/",
+      "file_count": 5,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true,
+      "color": "#9b59b6"
+    },
+    {
+      "id": "pantheons",
+      "name": "Pantheons",
+      "layer": "Applied Domain Models",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/pantheons/",
+      "file_count": 5,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true,
+      "color": "#9b59b6"
+    },
+    {
+      "id": "atmosphere",
+      "name": "Atmosphere",
+      "layer": "Applied Domain Models",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/atmosphere/",
+      "file_count": 6,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true,
+      "color": "#9b59b6"
+    },
+    {
+      "id": "radiology",
+      "name": "Radiology",
+      "layer": "Applied Domain Models",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/Radiology/",
+      "file_count": 6,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true,
+      "color": "#9b59b6"
+    },
+    {
+      "id": "prompts",
+      "name": "Prompts",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/prompts/",
+      "file_count": 8,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true,
+      "color": "#1abc9c"
+    },
+    {
+      "id": "rtt-infinity-prompts",
+      "name": "RTT Infinity Prompts",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/prompts/rtt_infinity/",
+      "file_count": 5,
+      "parent": "prompts",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true,
+      "color": "#1abc9c"
+    },
+    {
+      "id": "triadic-detection",
+      "name": "Triadic Detection",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/triadic_detection/",
+      "file_count": 7,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true,
+      "color": "#1abc9c"
+    },
+    {
+      "id": "ipd-12",
+      "name": "IPD-12 Framework",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/frameworks/ipd_12/",
+      "file_count": 8,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true,
+      "color": "#1abc9c"
+    },
+    {
+      "id": "tft-opengpu",
+      "name": "TFT OpenGPU Stack Module",
+      "layer": "Tools & Infrastructure",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/TFT.OpenGPU.Stack.Module/",
+      "file_count": 7,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true,
+      "color": "#7f8c8d"
+    },
+    {
+      "id": "grammar-for-intelligence",
+      "name": "Grammar for Intelligence",
+      "layer": "Education & Teaching",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/education/ebooks/Grammar_for_Intelligence/",
+      "file_count": 12,
+      "parent": "education",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true,
+      "color": "#2ecc71"
+    },
+    {
+      "id": "spine-overlay-pack",
+      "name": "S3 Spine Overlay Pack",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 1,
+      "url": "https://www.triadicframeworks.org/spine/",
+      "file_count": 7,
+      "parent": "webroot",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true,
+      "color": "#1abc9c"
+    },
+    {
+      "id": "spine-structural",
+      "name": "Structural Overlay",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/spine/structural/",
+      "file_count": 1,
+      "parent": "spine-overlay-pack",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true,
+      "color": "#1abc9c"
+    },
+    {
+      "id": "spine-drift",
+      "name": "Drift Overlay",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/spine/drift/",
+      "file_count": 1,
+      "parent": "spine-overlay-pack",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true,
+      "color": "#1abc9c"
+    },
+    {
+      "id": "spine-coherence",
+      "name": "Coherence Overlay",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/spine/coherence/",
+      "file_count": 1,
+      "parent": "spine-overlay-pack",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true,
+      "color": "#1abc9c"
+    },
+    {
+      "id": "spine-substrate",
+      "name": "Substrate Overlay",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/spine/substrate/",
+      "file_count": 1,
+      "parent": "spine-overlay-pack",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true,
+      "color": "#1abc9c"
+    },
+    {
+      "id": "spine-dimensional",
+      "name": "Dimensional Overlay",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/spine/dimensional/",
+      "file_count": 1,
+      "parent": "spine-overlay-pack",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true,
+      "color": "#1abc9c"
+    },
+    {
+      "id": "spine-domain",
+      "name": "Domain Overlay",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 2,
+      "url": "https://www.triadicframeworks.org/spine/domain/",
+      "file_count": 1,
+      "parent": "spine-overlay-pack",
+      "status": "Active Canonical",
+      "enriched_r2": false,
+      "enriched_r3": false,
+      "enriched_r4": false,
+      "enriched_r5": true,
+      "color": "#1abc9c"
+    }
+  ],
+  "edges": [
+    {
+      "source": "RTT_2",
+      "target": "RTT_3",
+      "type": "feeds",
+      "label": "RTT/2 \u2192 RTT/3"
+    },
+    {
+      "source": "STRUCTURAL_DETECTION_ENGINE",
+      "target": "STRUCTURAL_INTEGRATION_ENGINE",
+      "type": "feeds",
+      "label": "SDE \u2192 SIE"
+    },
+    {
+      "source": "RTT_3",
+      "target": "tft-3pack",
+      "type": "feeds",
+      "label": "RTT/3 \u2192 TFT 3-Pack"
+    },
+    {
+      "source": "rtt-root",
+      "target": "RTT_2",
+      "type": "contains-ref",
+      "label": "RTT Root \u2192 RTT/2"
+    },
+    {
+      "source": "rtt-root",
+      "target": "RTT_3",
+      "type": "contains-ref",
+      "label": "RTT Root \u2192 RTT/3"
+    },
+    {
+      "source": "rtt-inside",
+      "target": "rtt-enterprise-r4",
+      "type": "contains-ref",
+      "label": "Inside \u2192 Enterprise"
+    },
+    {
+      "source": "rtt-inside",
+      "target": "rtt-qcompute-r4",
+      "type": "contains-ref",
+      "label": "Inside \u2192 qCompute"
+    },
+    {
+      "source": "ai-resonance-seed",
+      "target": "ai-core",
+      "type": "feeds",
+      "label": "Resonance Seed \u2192 AI Core"
+    },
+    {
+      "source": "ai-drift-calibration",
+      "target": "ai-core",
+      "type": "feeds",
+      "label": "Drift Cal \u2192 AI Core"
+    },
+    {
+      "source": "ai-consciousness",
+      "target": "ai-core",
+      "type": "feeds",
+      "label": "Consciousness \u2192 AI Core"
+    },
+    {
+      "source": "grammar",
+      "target": "fcg",
+      "type": "feeds",
+      "label": "Grammar \u2192 FCG"
+    },
+    {
+      "source": "fcg",
+      "target": "gsm",
+      "type": "feeds",
+      "label": "FCG \u2192 GSM"
+    },
+    {
+      "source": "gsm",
+      "target": "substrate-flow",
+      "type": "feeds",
+      "label": "GSM \u2192 Substrate Flow"
+    },
+    {
+      "source": "gsm",
+      "target": "gsma",
+      "type": "contains-ref",
+      "label": "GSM \u2192 GSMA"
+    },
+    {
+      "source": "physics",
+      "target": "dynamical_systems",
+      "type": "feeds",
+      "label": "Physics \u2192 Dynamics"
+    },
+    {
+      "source": "dynamical_systems",
+      "target": "chaos_theory",
+      "type": "feeds",
+      "label": "Dynamics \u2192 Chaos"
+    },
+    {
+      "source": "dynamical_systems",
+      "target": "morphic_resonance",
+      "type": "feeds",
+      "label": "Dynamics \u2192 Morphic"
+    },
+    {
+      "source": "physics",
+      "target": "quantum_mechanics",
+      "type": "feeds",
+      "label": "Physics \u2192 QM"
+    },
+    {
+      "source": "quantum_mechanics",
+      "target": "quantum_field_theory",
+      "type": "feeds",
+      "label": "QM \u2192 QFT"
+    },
+    {
+      "source": "quantum_field_theory",
+      "target": "standard_model",
+      "type": "feeds",
+      "label": "QFT \u2192 Standard Model"
+    },
+    {
+      "source": "physics",
+      "target": "general_relativity",
+      "type": "feeds",
+      "label": "Physics \u2192 GR"
+    },
+    {
+      "source": "physics",
+      "target": "thermodynamics",
+      "type": "feeds",
+      "label": "Physics \u2192 Thermo"
+    },
+    {
+      "source": "physics",
+      "target": "electromagnetism",
+      "type": "feeds",
+      "label": "Physics \u2192 EM"
+    },
+    {
+      "source": "biology",
+      "target": "evolutionary_biology",
+      "type": "feeds",
+      "label": "Biology \u2192 Evo Bio"
+    },
+    {
+      "source": "biology",
+      "target": "neuroscience",
+      "type": "feeds",
+      "label": "Biology \u2192 Neuro"
+    },
+    {
+      "source": "information_systems",
+      "target": "information_theory",
+      "type": "feeds",
+      "label": "Info Systems \u2192 Info Theory"
+    },
+    {
+      "source": "research",
+      "target": "alphafold",
+      "type": "uses",
+      "label": "Research \u2192 AlphaFold"
+    },
+    {
+      "source": "research",
+      "target": "mve",
+      "type": "uses",
+      "label": "Research \u2192 MVE"
+    },
+    {
+      "source": "economics",
+      "target": "inverted-economics",
+      "type": "feeds",
+      "label": "Economics \u2192 Inverted Econ"
+    },
+    {
+      "source": "medicine",
+      "target": "alphafold",
+      "type": "uses",
+      "label": "Medicine \u2192 AlphaFold"
+    },
+    {
+      "source": "psychology",
+      "target": "hsp",
+      "type": "contains-ref",
+      "label": "Psychology \u2192 HSP"
+    },
+    {
+      "source": "music",
+      "target": "melodic-table",
+      "type": "contains-ref",
+      "label": "Music \u2192 Melodic Table"
+    },
+    {
+      "source": "law",
+      "target": "justice",
+      "type": "feeds",
+      "label": "Law \u2192 Justice"
+    },
+    {
+      "source": "gsm",
+      "target": "incident_substrate_model",
+      "type": "feeds",
+      "label": "GSM \u2192 ISM"
+    },
+    {
+      "source": "OPERATORS",
+      "target": "RTT_2",
+      "type": "implements",
+      "label": "Operators \u2192 RTT/2"
+    },
+    {
+      "source": "OPERATORS",
+      "target": "RTT_3",
+      "type": "implements",
+      "label": "Operators \u2192 RTT/3"
+    },
+    {
+      "source": "RSGM",
+      "target": "gsm",
+      "type": "feeds",
+      "label": "RSGM \u2192 GSM"
+    },
+    {
+      "source": "education",
+      "target": "OPERATORS_TEACHING_BUNDLE",
+      "type": "contains-ref",
+      "label": "Education \u2192 Ops Bundle"
+    },
+    {
+      "source": "tft-core",
+      "target": "tft-3pack",
+      "type": "contains-ref",
+      "label": "TFT Core \u2192 3-Pack"
+    },
+    {
+      "source": "coeus",
+      "target": "rtt-root",
+      "type": "uses",
+      "label": "Coeus \u2192 RTT Root"
+    },
+    {
+      "source": "resilience-checker",
+      "target": "gsm",
+      "type": "uses",
+      "label": "Resilience \u2192 GSM"
+    },
+    {
+      "source": "RTT_MORPHIC_RESONANCE",
+      "target": "morphic_resonance",
+      "type": "implements",
+      "label": "RTT Morphic \u2192 Morphic Res"
+    },
+    {
+      "source": "d369",
+      "target": "dynamical_systems",
+      "type": "feeds",
+      "label": "D369 \u2192 Dynamics"
+    },
+    {
+      "source": "rtt-paradoxes",
+      "target": "rtt-12",
+      "type": "uses",
+      "label": "Paradoxes \u2192 RTT/12"
+    },
+    {
+      "source": "UE6-INTEGRATIONS",
+      "target": "rtt-integrations",
+      "type": "feeds",
+      "label": "UE6 \u2192 Integrations"
+    },
+    {
+      "source": "spine-structural",
+      "target": "spine-drift",
+      "type": "feeds",
+      "label": "Structural \u2192 Drift"
+    },
+    {
+      "source": "spine-drift",
+      "target": "spine-coherence",
+      "type": "feeds",
+      "label": "Drift \u2192 Coherence"
+    },
+    {
+      "source": "spine-coherence",
+      "target": "spine-substrate",
+      "type": "feeds",
+      "label": "Coherence \u2192 Substrate"
+    },
+    {
+      "source": "spine-substrate",
+      "target": "spine-dimensional",
+      "type": "feeds",
+      "label": "Substrate \u2192 Dimensional"
+    },
+    {
+      "source": "spine-dimensional",
+      "target": "spine-domain",
+      "type": "feeds",
+      "label": "Dimensional \u2192 Domain"
+    },
+    {
+      "source": "STRUCTURAL_FAULTLINE_DETECTOR",
+      "target": "spine-structural",
+      "type": "primary-engine",
+      "label": "SFD \u2192 Structural"
+    },
+    {
+      "source": "DRIFT_SENTINEL",
+      "target": "spine-drift",
+      "type": "primary-engine",
+      "label": "Drift Sentinel \u2192 Drift"
+    },
+    {
+      "source": "COHERENCE_TENSOR_ENGINE",
+      "target": "spine-coherence",
+      "type": "primary-engine",
+      "label": "CTE \u2192 Coherence"
+    },
+    {
+      "source": "STABILITY_BASIN_CARTOGRAPHER",
+      "target": "spine-substrate",
+      "type": "primary-engine",
+      "label": "SBC \u2192 Substrate"
+    },
+    {
+      "source": "DIMENSIONAL_RESONANCE_SCANNER",
+      "target": "spine-dimensional",
+      "type": "primary-engine",
+      "label": "DRS \u2192 Dimensional"
+    },
+    {
+      "source": "TRIADIC_REGIME_SYNTHESIZER",
+      "target": "spine-domain",
+      "type": "co-primary-engine",
+      "label": "TRS \u2192 Domain"
+    },
+    {
+      "source": "CROSS_DOMAIN_CAUSALITY_WEAVER",
+      "target": "spine-domain",
+      "type": "co-primary-engine",
+      "label": "CDCW \u2192 Domain"
+    },
+    {
+      "source": "ipd-12",
+      "target": "spine-structural",
+      "type": "coordinate-system",
+      "label": "IPD-12 \u2192 Structural"
+    },
+    {
+      "source": "ipd-12",
+      "target": "spine-dimensional",
+      "type": "coordinate-system",
+      "label": "IPD-12 \u2192 Dimensional"
+    },
+    {
+      "source": "atmosphere",
+      "target": "spine-drift",
+      "type": "environmental-signal",
+      "label": "Atmosphere \u2192 Drift"
+    },
+    {
+      "source": "expectations",
+      "target": "spine-drift",
+      "type": "envelope-provider",
+      "label": "Expectations \u2192 Drift"
+    },
+    {
+      "source": "CRYSTAL_MYCELIAL_ENGINE",
+      "target": "spine-substrate",
+      "type": "tertiary-engine",
+      "label": "CME \u2192 Substrate"
+    },
+    {
+      "source": "tft-opengpu",
+      "target": "spine-overlay-pack",
+      "type": "compute-layer",
+      "label": "OpenGPU \u2192 Spine Pack"
+    },
+    {
+      "source": "grammar-for-intelligence",
+      "target": "spine-overlay-pack",
+      "type": "narration-grammar",
+      "label": "Grammar \u2192 Spine Pack"
+    }
+  ]
+};
+
+const LAYER_COLORS = {
+  "Meta & Governance":"#4a9eff",
+  "Operator Layer":"#f39c12",
+  "RTT Technology Layer":"#e74c3c",
+  "Education & Teaching":"#2ecc71",
+  "Applied Domain Models":"#9b59b6",
+  "Core Frameworks — Structural Spine":"#1abc9c",
+  "Theory":"#3498db",
+  "Substrate Grammar":"#e67e22",
+  "Research-Canonical":"#1abc9c",
+  "Integration & Deployment":"#95a5a6",
+  "Safety & Operations":"#e74c3c",
+  "Tools & Infrastructure":"#7f8c8d",
+  "Ethics & Care":"#27ae60",
+  "Framework-Structural":"#c0392b",
+  "RTT Deployment Layer":"#8e44ad",
+  "Root":"#ffffff",
+};
+
+// Build legend
+const legendEl = document.getElementById('legend');
+const seenLayers = new Set();
+GRAPH_DATA.nodes.forEach(n => seenLayers.add(n.layer));
+[...seenLayers].sort().forEach(layer => {
+  const c = LAYER_COLORS[layer] || '#95a5a6';
+  const div = document.createElement('div');
+  div.className = 'leg-item';
+  div.innerHTML = `<div class="leg-dot" style="background:${c}"></div><span>${layer}</span>`;
+  div.onclick = () => filterByLayer(layer);
+  legendEl.appendChild(div);
+});
+
+// ── D3 Setup ──────────────────────────────────────────────────────────────────
+const svg = d3.select('#graph');
+const W = window.innerWidth, H = window.innerHeight;
+const g = svg.append('g');
+
+const zoom = d3.zoom().scaleExtent([0.05, 4]).on('zoom', e => g.attr('transform', e.transform));
+svg.call(zoom);
+
+let activeNodes = GRAPH_DATA.nodes;
+let activeEdges = GRAPH_DATA.edges;
+
+function buildNodeMap(nodes) {
+  const m = {};
+  nodes.forEach(n => m[n.id] = n);
+  return m;
+}
+
+function render(nodes, edges) {
+  g.selectAll('*').remove();
+
+  const nodeMap = buildNodeMap(nodes);
+  const validEdges = edges.filter(e => nodeMap[e.source] && nodeMap[e.target]);
+
+  const sim = d3.forceSimulation(nodes)
+    .force('link', d3.forceLink(validEdges).id(d => d.id).distance(d => {
+      const sd = nodeMap[d.source]?.depth ?? 1;
+      const td = nodeMap[d.target]?.depth ?? 1;
+      return 60 + (sd + td) * 15;
+    }).strength(0.4))
+    .force('charge', d3.forceManyBody().strength(d => d.depth === 0 ? -800 : d.depth === 1 ? -200 : -80))
+    .force('center', d3.forceCenter(W / 2, H / 2))
+    .force('collision', d3.forceCollide().radius(d => [18,12,8,6][d.depth] || 6))
+    .alphaDecay(0.02);
+
+  // Links
+  const link = g.append('g').selectAll('line')
+    .data(validEdges).join('line')
+    .attr('class', d => `link ${d.type || 'feeds'}`)
+    .attr('marker-end', 'none');
+
+  // Nodes
+  const node = g.append('g').selectAll('.node')
+    .data(nodes).join('g')
+    .attr('class', d => `node depth-${d.depth}${d.enriched_r5 ? ' r5' : ''}`)
+    .call(d3.drag()
+      .on('start', (e,d) => { if(!e.active) sim.alphaTarget(0.3).restart(); d.fx=d.x; d.fy=d.y; })
+      .on('drag',  (e,d) => { d.fx=e.x; d.fy=e.y; })
+      .on('end',   (e,d) => { if(!e.active) sim.alphaTarget(0); d.fx=null; d.fy=null; }));
+
+  node.append('circle')
+    .attr('fill', d => d.color || LAYER_COLORS[d.layer] || '#95a5a6')
+    .on('click', (e,d) => { if(d.url) window.open(d.url,'_blank'); })
+    .on('mouseover', (e,d) => showTooltip(e,d))
+    .on('mousemove', (e) => moveTooltip(e))
+    .on('mouseout',  () => hideTooltip());
+
+  node.filter(d => d.depth <= 2).append('text')
+    .attr('dy', d => ([18,12,8,6][d.depth]||6) + 11)
+    .text(d => d.name.length > 18 ? d.name.slice(0,17)+'…' : d.name);
+
+  sim.on('tick', () => {
+    link.attr('x1',d=>d.source.x).attr('y1',d=>d.source.y)
+        .attr('x2',d=>d.target.x).attr('y2',d=>d.target.y);
+    node.attr('transform',d=>`translate(${d.x},${d.y})`);
+  });
+}
+
+// ── Tooltip ───────────────────────────────────────────────────────────────────
+const tip = document.getElementById('tooltip');
+function showTooltip(e,d) {
+  tip.innerHTML = `
+    <div class="t-name">${d.name}</div>
+    <div class="t-row">ID: <span>${d.id}</span></div>
+    <div class="t-row">Layer: <span>${d.layer}</span></div>
+    <div class="t-row">Depth: <span>${d.depth}</span></div>
+    <div class="t-row">Files: <span>${d.file_count}</span></div>
+    <div class="t-row">Parent: <span>${d.parent}</span></div>
+    <div class="t-row">Status: <span>${d.status}</span></div>
+    ${d.enriched_r5 ? '<div class="t-r5">★ New in R5 — Spine Overlay Pack v2.0</div>' : ''}
+    <div class="t-row" style="margin-top:4px;font-size:9px;color:#4a9eff;">Click to open ↗</div>
+  `;
+  tip.style.display = 'block';
+  moveTooltip(e);
+}
+function moveTooltip(e) {
+  const x = e.clientX + 14, y = e.clientY - 10;
+  tip.style.left = (x + 270 > W ? x - 280 : x) + 'px';
+  tip.style.top  = (y + 200 > H ? y - 210 : y) + 'px';
+}
+function hideTooltip() { tip.style.display = 'none'; }
+
+// ── Search ────────────────────────────────────────────────────────────────────
+document.getElementById('search-box').addEventListener('input', function() {
+  const q = this.value.toLowerCase();
+  if (!q) { render(GRAPH_DATA.nodes, GRAPH_DATA.edges); return; }
+  const match = new Set(GRAPH_DATA.nodes.filter(n =>
+    n.name.toLowerCase().includes(q) || n.id.toLowerCase().includes(q) || n.layer.toLowerCase().includes(q)
+  ).map(n => n.id));
+  // Include parents up to root
+  GRAPH_DATA.nodes.forEach(n => { if(match.has(n.id) && n.parent) match.add(n.parent); });
+  const nodes = GRAPH_DATA.nodes.filter(n => match.has(n.id));
+  const edges = GRAPH_DATA.edges.filter(e => match.has(e.source) && match.has(e.target));
+  render(nodes, edges);
+});
+
+// ── Filter buttons ────────────────────────────────────────────────────────────
+function filterByLayer(layer) {
+  const nodes = GRAPH_DATA.nodes.filter(n => n.layer === layer || n.depth === 0);
+  const ids = new Set(nodes.map(n=>n.id));
+  const edges = GRAPH_DATA.edges.filter(e => ids.has(e.source) && ids.has(e.target));
+  render(nodes, edges);
+}
+
+document.getElementById('btn-reset').onclick = () => {
+  render(GRAPH_DATA.nodes, GRAPH_DATA.edges);
+  svg.transition().duration(400).call(zoom.transform, d3.zoomIdentity.translate(0,0).scale(1));
+};
+document.getElementById('btn-all').onclick   = () => render(GRAPH_DATA.nodes, GRAPH_DATA.edges);
+document.getElementById('btn-r5').onclick    = () => {
+  const nodes = GRAPH_DATA.nodes.filter(n => n.enriched_r5 || n.depth === 0);
+  const ids = new Set(nodes.map(n=>n.id));
+  const edges = GRAPH_DATA.edges.filter(e => ids.has(e.source) && ids.has(e.target));
+  render(nodes, edges);
+};
+document.getElementById('btn-spine').onclick = () => {
+  const spineIds = new Set(['webroot','spine-overlay-pack','spine-structural','spine-drift',
+    'spine-coherence','spine-substrate','spine-dimensional','spine-domain',
+    'STRUCTURAL_FAULTLINE_DETECTOR','DRIFT_SENTINEL','COHERENCE_TENSOR_ENGINE',
+    'STABILITY_BASIN_CARTOGRAPHER','DIMENSIONAL_RESONANCE_SCANNER',
+    'TRIADIC_REGIME_SYNTHESIZER','CROSS_DOMAIN_CAUSALITY_WEAVER',
+    'CRYSTAL_MYCELIAL_ENGINE','PARADOX_GRADIENT_ANALYZER',
+    'REGIME_INTERLOCK_MAPPER','TEMPORAL_REGIME_SEQUENCER',
+    'STABILITY_BASIN_CARTOGRAPHER','ipd-12','tft-opengpu',
+    'atmosphere','expectations','grammar-for-intelligence',
+    'RTT_INSIDE_ENTERPRISE','RTT_INSIDE_QCOMPUTE',
+    'rtt-inside','rtt-root','education','prompts','rtt-infinity-prompts']);
+  const nodes = GRAPH_DATA.nodes.filter(n => spineIds.has(n.id));
+  const ids = new Set(nodes.map(n=>n.id));
+  const edges = GRAPH_DATA.edges.filter(e => ids.has(e.source) && ids.has(e.target));
+  render(nodes, edges);
+};
+
+window.addEventListener('resize', () => render(GRAPH_DATA.nodes, GRAPH_DATA.edges));
+
+// Initial render
+render(GRAPH_DATA.nodes, GRAPH_DATA.edges);
+</script>
+</body>
+</html>

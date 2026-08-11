@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Morphic_Resonance" src="https://github.com/user-attachments/assets/98a86a2e-1b4d-48bd-a768-f6f5da922b7e" />
+
 # Morphic Resonance  
 
 - [`MR_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Morphic_Resonance/MR_module.json) — Agentic module schema role assignments

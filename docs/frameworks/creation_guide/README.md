@@ -1,24 +1,10 @@
-## ⭐ **THE FRAMEWORK CREATION GUIDE (FCG)**  
+<img width="1194" height="672" alt="Framework_Creation_Guide_module" src="https://github.com/user-attachments/assets/fbdef2dc-f8f3-4b7f-89df-bcb59e57348c" />
+
+# ⭐ FRAMEWORK CREATION GUIDE (FCG)
 
 - [`FCG_module.json`](FCG_module.json) — Agentic module schema role assignments
 
 *A new top‑level module in the TriadicFrameworks canon*
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🧩FCG%20Models%20Layer-📐Structural%20Model%20Definition%20Active-4c8eda?style=for-the-badge" alt="🧩FCG Models Layer | 📐Structural Model Definition Active"/>
 
 ## Purpose
 The Framework Creation Guide teaches creators how to design frameworks that are coherent, minimal, structurally sound, and regime‑aware.
@@ -86,3 +72,19 @@ Use the links below to explore each module:
 [Operators](operators.md)  
 [Regimes](regimes.md)  
 [Generator](generator.md)
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🧩FCG%20Models%20Layer-📐Structural%20Model%20Definition%20Active-4c8eda?style=for-the-badge" alt="🧩FCG Models Layer | 📐Structural Model Definition Active"/>

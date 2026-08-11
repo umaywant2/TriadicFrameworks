@@ -1,22 +1,8 @@
+<img width="1194" height="672" alt="NoS_module" src="https://github.com/user-attachments/assets/96afa219-49aa-418c-8ce5-7ef2a66488c3" />
+
 ## NoS | the Nawderian operating *Stack*
 
 - [`NoS_module.json`](NoS_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🖥️NoS%20Stack-🧩OS%20Layer%20Canon%20Active-4c8eda?style=for-the-badge" alt="🖥️NoS Stack | 🧩OS Layer Canon Active"/>
 
 **NawderOS (NoS)** is a minimal, forkable Linux‑based operating stack designed to operationalize **Resonance‑Time Theory ([RTT](../_ideas/Resonance-Time_Theory.html))** at the system level. It provides an RTT‑aware baseline for students, researchers, and developers who want to explore how validated spacetime, resonance, and structural coherence can be expressed in real software systems.
 
@@ -166,3 +152,19 @@ See the following documents for details:
 - Mythic language is preserved but bounded  
 - AI and human reviewers can classify it correctly  
 - Students know exactly what they’re stepping into  
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🖥️NoS%20Stack-🧩OS%20Layer%20Canon%20Active-4c8eda?style=for-the-badge" alt="🖥️NoS Stack | 🧩OS Layer Canon Active"/>

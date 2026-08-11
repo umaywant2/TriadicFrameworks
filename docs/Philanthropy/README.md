@@ -1,8 +1,8 @@
+<img width="1194" height="672" alt="Philanthropy_module" src="https://github.com/user-attachments/assets/68bb7822-0f8d-46ec-828f-d31bd1ea6d62" />
+
 # Philanthropy & Funding Transparency  
 
 - [`Philanthropy_module.json`](Philanthropy_module.json) — Agentic module schema role assignments
-
-<img src="https://img.shields.io/badge/🟣Philanthropy-🌁Funding%20Transparency%20AI%20Ready-4c8eda?style=for-the-badge" alt="🟣 Philanthropy | Funding Transparency Model • AI‑Ready"/>
 
 ## Structural Clarity for Multi‑Layer Funding Systems
 
@@ -74,3 +74,5 @@ Full file map:
 ## Purpose
 
 To make philanthropic systems **structurally visible**, **aligned**, and **accountable**, enabling donors, communities, and AI agents to operate with clarity and integrity.
+
+<img src="https://img.shields.io/badge/🟣Philanthropy-🌁Funding%20Transparency%20AI%20Ready-4c8eda?style=for-the-badge" alt="🟣 Philanthropy | Funding Transparency Model • AI‑Ready"/>

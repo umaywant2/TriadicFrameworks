@@ -1,20 +1,6 @@
+<img width="1194" height="672" alt="TFT_3Pack_v1 3_module" src="https://github.com/user-attachments/assets/4dc7e498-a892-45fc-a4a9-f21b9c893e23" />
+
 ## 🔱 TFT 3Pack v1.3
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🔱Resonance%20Ready-📦12%20Domains%20Linked-4c8eda?style=for-the-badge" alt="🔱Resonance Ready | 📦12 Domains Linked"/>
 
 ### TriadicFrameworks • Nawderian Theorem • Resonant-Time Engine
 
@@ -208,3 +194,34 @@ Updated: *Latest revision*
 If you’d like to extend the pack, add subjects, or integrate new scripts, contributions are welcome.
 
 ---
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🔱Resonance%20Ready-📦12%20Domains%20Linked-4c8eda?style=for-the-badge" alt="🔱Resonance Ready | 📦12 Domains Linked"/>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🔱Resonance%20Ready-📦12%20Domains%20Linked-4c8eda?style=for-the-badge" alt="🔱Resonance Ready | 📦12 Domains Linked"/>

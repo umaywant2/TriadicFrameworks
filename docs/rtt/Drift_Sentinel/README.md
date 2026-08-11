@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Drift_Sentinel" src="https://github.com/user-attachments/assets/0e713254-67ae-42b9-89aa-720d4a81cc2c" />
+
 # **Drift Sentinel — RTT/1**  
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Drift_Sentinel/module.json) — Agentic module schema role assignments

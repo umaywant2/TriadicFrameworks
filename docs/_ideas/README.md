@@ -1,22 +1,8 @@
+<img width="1194" height="672" alt="_ideas_Detroit_Salt_Mines" src="https://github.com/user-attachments/assets/855df851-bdbb-452d-8bb0-4fd0087079af" />
+
 ## 💡 _ideas — our 'Michigan Manifestations' Vault  
 
 - [`_ideas_module.json`](_ideas_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🜂Myth%20Lab%20Active-🧪Pre%20Framework%20Zone-4c8eda?style=for-the-badge" alt="🜂Myth‑Lab Active | 🧪Pre‑Framework Zone"/>
 
 ### 🌌 The Gold Vault / Salt Mine of TriadicFrameworks
 
@@ -127,3 +113,19 @@ This is the **ancestral layer** of the framework — the mythic substrate beneat
 
 ## _ideas/ Folder Level
 - [_ideas](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/_ideas/) - Folder Level
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🜂Myth%20Lab%20Active-🧪Pre%20Framework%20Zone-4c8eda?style=for-the-badge" alt="🜂Myth‑Lab Active | 🧪Pre‑Framework Zone"/>

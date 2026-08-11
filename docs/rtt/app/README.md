@@ -1,22 +1,8 @@
+<img width="938" height="938" alt="rtt_app_module_image" src="https://github.com/user-attachments/assets/c4720335-25e2-4267-be8d-e2b885bef51c" />
+
 ## RTT/App 
 
 - [`RTT_App_module.json`](RTT_App_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
 
 The RTT/App brings RTT Awareness to mobile devices in a permissionless, lightweight form. It provides a simple, ambient indicator of clarity using only signals that are safe, stable, and available on all modern platforms. The app acts as the mobile entry point into the RTT ecosystem and establishes the foundation for future RTT/Inside capabilities.
 
@@ -100,3 +86,19 @@ This ensures a safe, reviewer‑friendly footprint for both app stores.
 - **v1** — Permissionless Awareness, indicator UI, RTT portal.
 - **v2** — Optional RTT/Inside features for users who opt in to deeper sensing.
 - **v3** — Expanded signal models, richer state transitions, and cross‑device continuity.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>

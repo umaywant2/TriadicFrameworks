@@ -1,15 +1,15 @@
 {
   "$schema": "https://triadicframeworks.org/schemas/module.schema.json",
-  "$generated": "2026-08-03T08:04:00",
-  "$version": "1.4",
+  "$generated": "2026-08-08T12:38:00",
+  "$version": "1.5",
   "$round": "R5",
   "module_name": "S3 Spine Overlay Pack",
   "file": "docs/spine/spine_overlay_pack_module.json",
-  "version": "2.0",
-  "description": "The canonical six-overlay diagnostic layer system for TriadicFrameworks. Applies six overlays sequentially — Structural → Drift → Coherence → Substrate → Dimensional → Domain — to any system under Triadic analysis. Produces the Domain Diagnostic Report (DDR), Domain Action Map (DAM), and Cross-Domain Causality Summary (CDCS). Coordinates all 11 RTT engines, 16 modules, and 27 UI overlay panels.",
-  "role": "Pack coordinator — orchestrates the six-overlay diagnostic sequence; canonical entry point for all S3 Spine runs",
+  "version": "2.1",
+  "description": "The canonical seven-overlay diagnostic and transmission layer system for TriadicFrameworks. Applies six diagnostic overlays sequentially — Structural → Drift → Coherence → Substrate → Dimensional → Domain — then passes every emitted payload through the cross-cutting Clarity Overlay (⑦) before final transmission. Produces the Domain Diagnostic Report (DDR), Domain Action Map (DAM), and Cross-Domain Causality Summary (CDCS). Coordinates all 15 RTT engines, 17 modules, and 27 UI overlay panels. Clarity Overlay gates transmission at Ξ ≥ 0.70.",
+  "role": "Pack coordinator — orchestrates the six-overlay diagnostic sequence plus Clarity transmission gate; canonical entry point for all S3 Spine runs",
   "analyzer_layer": "Core Frameworks — Structural Spine",
-  "purpose": "Six-overlay canonical diagnostic layer system: Structural → Drift → Coherence → Substrate → Dimensional → Domain; produces DDR, DAM, CDCS; coordinates all RTT engines and UI overlays",
+  "purpose": "Seven-overlay canonical diagnostic and clarity layer system: Structural → Drift → Coherence → Substrate → Dimensional → Domain → [Clarity gate Ξ ≥ 0.70]; produces DDR, DAM, CDCS; coordinates all RTT engines and UI overlays",
   "status": "Active Canonical",
   "canonical": true,
   "ai_ready": true,
@@ -23,13 +23,15 @@
     "Drift Report (ΔM/ΔD/ΔV vectors)",
     "Coherence Report + CI",
     "Substrate Report + SI",
-    "Dimensional Resonance Map (DRM)"
+    "Dimensional Resonance Map (DRM)",
+    "Clarity Report (Ξ, regime, repair path) — gated at Ξ ≥ 0.70"
   ],
   "imports": [
     "System input (any domain)",
     "IPD-12 dimensional axes (ipd-12 module)",
     "RTT engine outputs (rtt-root)",
-    "Module registry entries"
+    "Module registry entries",
+    "Receiver profile set G₁…G₅ (for Clarity Overlay)"
   ],
   "structure": {
     "sections": [
@@ -41,27 +43,27 @@
       {
         "id": "pack-overview",
         "title": "Pack Overview",
-        "summary": "Description of the S3 Spine Overlay Pack as the canonical diagnostic layer system: six sequential overlays, AI-parsable, single-run and continuous-monitoring deployments."
+        "summary": "Description of the S3 Spine Overlay Pack as the canonical diagnostic and clarity layer system: seven overlays (six diagnostic + one cross-cutting clarity gate), AI-parsable, single-run and continuous-monitoring deployments."
       },
       {
         "id": "overlay-sequence",
         "title": "Overlay Sequence",
-        "summary": "The six-overlay pipeline with signal inheritance: Structural → Drift → Coherence → Substrate → Dimensional → Domain, ending at the publication endpoint."
+        "summary": "The six diagnostic overlays plus clarity gate: Structural → Drift → Coherence → Substrate → Dimensional → Domain → Clarity (Ξ ≥ 0.70 → PASS), ending at the publication endpoint."
       },
       {
         "id": "overlays-at-a-glance",
-        "title": "Six Overlays at a Glance",
-        "summary": "Summary table: overlay number, name, primary RTT engine, key output, and canonical link for each of the six overlays."
+        "title": "Seven Overlays at a Glance",
+        "summary": "Summary table: overlay number, name, primary RTT engine, key output, and canonical link for each of the seven overlays."
       },
       {
         "id": "rtt-engine-registry",
         "title": "Complete RTT Engine Registry",
-        "summary": "All 11 RTT engines referenced across the six overlays with primary overlay assignment, cross-overlay appearances, and canonical links."
+        "summary": "All 15 RTT engines referenced across the seven overlays with primary overlay assignment, cross-overlay appearances, and canonical links."
       },
       {
         "id": "module-registry",
         "title": "Complete Module Registry",
-        "summary": "All 16 modules used across the pack, with type, spine role, and canonical link."
+        "summary": "All 17 modules used across the pack, with type, spine role, and canonical link."
       },
       {
         "id": "ui-panel-registry",
@@ -76,12 +78,12 @@
       {
         "id": "cross-links",
         "title": "Cross-Links",
-        "summary": "Links to all six overlay documents, all 11 RTT engine pages, UI overlay panels, and GitHub repository."
+        "summary": "Links to all seven overlay documents, all 15 RTT engine pages, UI overlay panels, and GitHub repository."
       },
       {
         "id": "publication-notes",
         "title": "Publication Notes",
-        "summary": "Publication status v2.0, triadicframeworks.org/spine URL, AI-parsability declaration, and GitHub location."
+        "summary": "Publication status v2.1, triadicframeworks.org/spine URL, AI-parsability declaration, and GitHub location."
       }
     ]
   },
@@ -103,11 +105,89 @@
       "spine-coherence",
       "spine-substrate",
       "spine-dimensional",
-      "spine-domain"
+      "spine-domain",
+      "spine-clarity"
+    ]
+  },
+  "overlay_registry": {
+    "count": 7,
+    "overlays": [
+      {
+        "number": 1,
+        "id": "spine-structural",
+        "name": "Structural Overlay",
+        "symbol": "①",
+        "primary_engine": "STRUCTURAL_FAULTLINE_DETECTOR",
+        "key_output": "Structural Frame — load-bearing vs. decorative node classification",
+        "url": "https://www.triadicframeworks.org/spine/structural/"
+      },
+      {
+        "number": 2,
+        "id": "spine-drift",
+        "name": "Drift Overlay",
+        "symbol": "②",
+        "primary_engine": "DRIFT_SENTINEL",
+        "key_output": "Drift Report — ΔM, ΔD, ΔV vectors",
+        "url": "https://www.triadicframeworks.org/spine/drift/"
+      },
+      {
+        "number": 3,
+        "id": "spine-coherence",
+        "name": "Coherence Overlay",
+        "symbol": "③",
+        "primary_engine": "COHERENCE_TENSOR_ENGINE",
+        "key_output": "Coherence Report + Coherence Index (CI)",
+        "url": "https://www.triadicframeworks.org/spine/coherence/"
+      },
+      {
+        "number": 4,
+        "id": "spine-substrate",
+        "name": "Substrate Overlay",
+        "symbol": "④",
+        "primary_engine": "STABILITY_BASIN_CARTOGRAPHER",
+        "key_output": "Substrate Report + Substrate Index (SI)",
+        "url": "https://www.triadicframeworks.org/spine/substrate/"
+      },
+      {
+        "number": 5,
+        "id": "spine-dimensional",
+        "name": "Dimensional Overlay",
+        "symbol": "⑤",
+        "primary_engine": "DIMENSIONAL_RESONANCE_SCANNER",
+        "key_output": "Dimensional Resonance Map (DRM)",
+        "url": "https://www.triadicframeworks.org/spine/dimensional/"
+      },
+      {
+        "number": 6,
+        "id": "spine-domain",
+        "name": "Domain Overlay",
+        "symbol": "⑥",
+        "primary_engine": "TRIADIC_REGIME_SYNTHESIZER",
+        "key_output": "DDR + DAM + CDCS",
+        "url": "https://www.triadicframeworks.org/spine/domain/"
+      },
+      {
+        "number": 7,
+        "id": "spine-clarity",
+        "name": "Clarity Overlay",
+        "symbol": "⑦",
+        "role": "cross-cutting — transmission gate",
+        "primary_engine": "CLARITY_FIELD_ENGINE",
+        "key_output": "Clarity Report (Ξ, regime, repair path) — gates at Ξ ≥ 0.70",
+        "url": "https://www.triadicframeworks.org/spine/clarity/",
+        "interactive_tool": "https://www.triadicframeworks.org/spine/clarity/",
+        "module_file": "docs/spine/clarity_overlay_module.json",
+        "overlay_file": "docs/spine/clarity_overlay.md",
+        "namespace": "RTT::Clarity",
+        "version": "2.0",
+        "status": "Active Canonical",
+        "color": "#00d4ff",
+        "note": "Cross-cutting overlay — receives feeds from all six diagnostic overlays; gates final payload transmission"
+      }
     ]
   },
   "rtt_engines": {
-    "all_11": [
+    "all_11_diagnostic": [
       "STRUCTURAL_FAULTLINE_DETECTOR",
       "REGIME_INTERLOCK_MAPPER",
       "DRIFT_SENTINEL",
@@ -119,12 +199,55 @@
       "CRYSTAL_MYCELIAL_ENGINE",
       "DIMENSIONAL_RESONANCE_SCANNER",
       "TRIADIC_REGIME_SYNTHESIZER"
+    ],
+    "clarity_engines_4": [
+      "CLARITY_FIELD_ENGINE",
+      "VALIDATOR_ENTROPY_SCANNER",
+      "REGIME_CLASSIFIER",
+      "TORSION_RESOLVER"
+    ],
+    "all_15": [
+      "STRUCTURAL_FAULTLINE_DETECTOR",
+      "REGIME_INTERLOCK_MAPPER",
+      "DRIFT_SENTINEL",
+      "TEMPORAL_REGIME_SEQUENCER",
+      "PARADOX_GRADIENT_ANALYZER",
+      "COHERENCE_TENSOR_ENGINE",
+      "CROSS_DOMAIN_CAUSALITY_WEAVER",
+      "STABILITY_BASIN_CARTOGRAPHER",
+      "CRYSTAL_MYCELIAL_ENGINE",
+      "DIMENSIONAL_RESONANCE_SCANNER",
+      "TRIADIC_REGIME_SYNTHESIZER",
+      "CLARITY_FIELD_ENGINE",
+      "VALIDATOR_ENTROPY_SCANNER",
+      "REGIME_CLASSIFIER",
+      "TORSION_RESOLVER"
     ]
+  },
+  "clarity_overlay": {
+    "module_id": "spine-clarity",
+    "namespace": "RTT::Clarity",
+    "version": "2.0",
+    "status": "Active Canonical",
+    "color": "#00d4ff",
+    "metrics": ["Hᵥ", "Wᵥ", "Iᵣ", "Ξ"],
+    "gate_threshold": "Ξ ≥ 0.70",
+    "regimes": ["Crystal", "Blade", "Fog", "Echo", "Void", "Torsion"],
+    "operators": ["Ĉ", "N̂", "R̂", "V̂", "T̂", "Π", "M̂"],
+    "feeds_from": [
+      "spine-structural",
+      "spine-drift",
+      "spine-coherence",
+      "spine-substrate",
+      "spine-dimensional",
+      "spine-domain"
+    ],
+    "gates": "spine-coherence"
   },
   "ai_metadata": {
     "ai.module": "spine-overlay-pack",
-    "ai.version": "2.0",
-    "ai.purpose": "Canonical six-overlay diagnostic layer system; orchestrates all S3 Spine runs; coordinates RTT engines; produces DDR, DAM, CDCS",
+    "ai.version": "2.1",
+    "ai.purpose": "Canonical seven-overlay diagnostic and clarity layer system; orchestrates all S3 Spine runs; coordinates RTT engines; produces DDR, DAM, CDCS; Clarity Overlay gates transmission at Ξ ≥ 0.70",
     "ai.keywords": [
       "S3 Spine",
       "Spine Overlay Pack",
@@ -134,6 +257,9 @@
       "Substrate Overlay",
       "Dimensional Overlay",
       "Domain Overlay",
+      "Clarity Overlay",
+      "C-N-R Triad",
+      "Clarity Score",
       "DDR",
       "DAM",
       "CDCS",

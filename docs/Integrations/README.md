@@ -1,8 +1,8 @@
+<img width="1194" height="672" alt="Integrations_module" src="https://github.com/user-attachments/assets/3bfcbd91-ab0e-4ddf-bbb1-84b2e8f3cdc4" />
+
 # Integrations — TriadicFrameworks
 
 - [`integrations_module.json`](integrations_module.json) — Agentic module schema role assignments
-
-<img src="https://img.shields.io/badge/🎮Integrations%20Core-🧩Engine%20Application%20Canon%20Active-4c8eda?style=for-the-badge" alt="Integrations Core | Engine Application Canon Active"/>
 
 The Integrations module provides clean, minimal entry points for applying
 TriadicFrameworks concepts inside **Unity** and **Unreal Engine**.  
@@ -92,3 +92,5 @@ This module is open for translation and localization.
 
 ## 🎓 Status
 **Waiting for students…**
+
+<img src="https://img.shields.io/badge/🎮Integrations%20Core-🧩Engine%20Application%20Canon%20Active-4c8eda?style=for-the-badge" alt="Integrations Core | Engine Application Canon Active"/>
