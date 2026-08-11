@@ -1,22 +1,9 @@
+<img width="682" height="682" alt="rtt_triadic_observer_layer_module" src="https://github.com/user-attachments/assets/d12ae203-a390-4067-ad1c-249eb8441658" />
+
 ## Triadic Observer Layer  
 
 - [`observer-layer_module.json`](observer-layer_module.json) — Agentic module schema role assignments
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/👁️Observer%20Core-🔺S–N–R%20Stack%20Active-4c8eda?style=for-the-badge" alt="👁️Observer Core | 🔺S–N–R Stack Active"/>
 
 The Triadic Observer Layer (TOL) is a **read‑only observability substrate** designed to restore clarity, trust, and coherence in complex systems operating under scale, uncertainty, and phase transition.
 
@@ -203,3 +190,19 @@ That is how coherence survives scale.
 This repository documents the observer layer itself, followed by domain‑specific exemplars that demonstrate how the same triadic substrate applies across contexts.
 
 This README establishes the layer as **foundational, neutral, and reusable**, without anchoring it too tightly to elections while still making that first use‑case obvious.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/👁️Observer%20Core-🔺S–N–R%20Stack%20Active-4c8eda?style=for-the-badge" alt="👁️Observer Core | 🔺S–N–R Stack Active"/>
