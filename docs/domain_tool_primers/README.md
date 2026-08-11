@@ -1,22 +1,8 @@
+<img width="682" height="682" alt="rtt_domain_tool_primers" src="https://github.com/user-attachments/assets/85568d64-16b1-49cf-bc26-bd5a8f1f9ea7" />
+
 # **vST Domain Tool Primers**  
 
 - [`primers_model.json`](primers_model.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🧪vST%20Starter%20Kit-🔧Domain%20Respectful-4c8eda?style=for-the-badge" alt="🧪vST Starter Kit | 🔧Domain Respectful"/>
 
 *A lightweight starter kit for cross‑domain validation of the Validation‑Space Theory (vST)*
 
@@ -112,3 +98,19 @@ This keeps the barrier to entry low while preserving the structural clarity of t
 If you use these primers in research, teaching, or tooling, please cite the accompanying vST Zenodo entry and the RSM–vST submission.
 
 - [repo folder](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/domain_tool_primers/)
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🧪vST%20Starter%20Kit-🔧Domain%20Respectful-4c8eda?style=for-the-badge" alt="🧪vST Starter Kit | 🔧Domain Respectful"/>
