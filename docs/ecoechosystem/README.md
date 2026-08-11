@@ -1,22 +1,8 @@
-# **EcoEchoSystem**  
+<img width="682" height="682" alt="rtt_ecoechosystem_module" src="https://github.com/user-attachments/assets/7540b0ad-5dba-400a-baca-2f496fca0bd0" />
+
+# EcoEchoSystem
 
 - [`eco_module.json`](eco_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🌍Simulation%20Core-🔄Cross%20Domain%20Regimes%20Active-4c8eda?style=for-the-badge" alt="🌍Simulation Core | 🔄Cross Domain Regimes Active"/>
 
 ## *A Cross‑Domain, Substrate‑Aligned Simulation Environment*
 
@@ -146,3 +132,19 @@ Contributions are welcome in the form of:
 
 ## **License**
 Open‑source, aligned with the TriadicFrameworks philosophy of accessible, transparent scientific tools.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🌍Simulation%20Core-🔄Cross%20Domain%20Regimes%20Active-4c8eda?style=for-the-badge" alt="🌍Simulation Core | 🔄Cross Domain Regimes Active"/>
