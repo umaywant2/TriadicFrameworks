@@ -1,20 +1,6 @@
+<img width="682" height="682" alt="rtt_packages" src="https://github.com/user-attachments/assets/1b994179-a018-4e3a-8d6f-43e755869e8c" />
+
 # 📦 Packages
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/📦Workflow%20Hub-🎓Ready%20for%20Students-4c8eda?style=for-the-badge" alt="📦Workflow Hub | 🎓Ready for Students"/>
 
 This directory contains installable, modular components of the TriadicFrameworks ecosystem. Each package here is designed to be small, composable, and distribution‑friendly, enabling early adoption without exposing deeper theoretical layers.
 
@@ -214,3 +200,19 @@ Nobody has built a shell with:
 - structural awareness baked in
 
 This is new territory.  🧙🦄👨‍🔬
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/📦Workflow%20Hub-🎓Ready%20for%20Students-4c8eda?style=for-the-badge" alt="📦Workflow Hub | 🎓Ready for Students"/>
