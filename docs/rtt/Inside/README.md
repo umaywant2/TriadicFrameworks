@@ -1,22 +1,8 @@
+<img width="938" height="938" alt="rtt_Inside" src="https://github.com/user-attachments/assets/32813e9c-7353-424a-91fa-29afe75d6b3a" />
+
 ## RTT/Inside Awareness | RTT 
 
 - [`RTT_Inside_module.json`](RTT_Inside_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🌀RTT%20Inside%20Core-📚Cross%20Domain%20Learning%20Layer%20Active-4c8eda?style=for-the-badge" alt="🌀RTT Inside Core | 📚Cross‑Domain Learning Layer Active"/>
 
 **Quick answer:** *I mapped a concise RTT/Inside lens across 10 broad societal domains, flagged the most common misalignments, and gave short, actionable alignment steps you can capture and expand in your document* ✨.
 
@@ -80,3 +66,19 @@ Below I examine **major societal domains** as coherent systems of *Being*, *Know
 - **Data privacy and legal constraints** differ by domain and region; alignment must respect them.  
 - **Implementation cost** and cultural resistance are real — start with high‑impact, low‑friction pilots.  
 (These are general system risks; domain specifics will vary and should be captured in your document.)
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🌀RTT%20Inside%20Core-📚Cross%20Domain%20Learning%20Layer%20Active-4c8eda?style=for-the-badge" alt="🌀RTT Inside Core | 📚Cross‑Domain Learning Layer Active"/>
