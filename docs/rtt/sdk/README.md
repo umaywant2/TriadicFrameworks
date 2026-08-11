@@ -1,22 +1,8 @@
+<img width="938" height="938" alt="rtt_sdk" src="https://github.com/user-attachments/assets/0352130f-2b5d-4fa9-b8f1-936944acb7cd" />
+
 ## RTT/SDK (Beta)  
 
 - [`RTT_sdk_module.json`](RTT_sdk_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
 
 The RTT/SDK provides a minimal, stable, and forward‑compatible interface for interacting with the API/RTT. It supports early RTT‑Inside integrations across browsers, services, and research environments while the full vST substrate remains in development.
 
@@ -203,3 +189,19 @@ The SDK follows semantic versioning:
 **Beta.**  
 The SDK is stable for integration and experimentation.  
 Internal substrate logic will activate as vST research becomes public.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
