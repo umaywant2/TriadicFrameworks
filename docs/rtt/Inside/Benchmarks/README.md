@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Structural_intelligence_benchmark" src="https://github.com/user-attachments/assets/485f84f7-bf6b-4a42-9ba3-c4b9237388b8" />
+
 # RTT / Inside / Benchmarks  
 
 - [`Benchmarks_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Inside/Benchmarks/Benchmarks_module.json) — Agentic module schema role assignments
