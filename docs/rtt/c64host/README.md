@@ -1,22 +1,8 @@
-## 🕹️ The C‑64 as an RTT Host  
+<img width="1194" height="672" alt="rtt_c64host_module_image" src="https://github.com/user-attachments/assets/8fc58ba3-499d-4977-8f42-acbeef79acca" />
+
+# 🕹️ The C‑64 as an RTT Host  
 
 - [`RTT_C64Host_module.json`](RTT_C64Host_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🕹️RTT%20Retro%20Core-💾C‑64%20Host%20Environment%20Active-4c8eda?style=for-the-badge" alt="🕹️RTT Retro Core | 💾C‑64 Host Environment Active"/>
 
 ## The Commodore 64 is a strange little miracle:
 
@@ -146,3 +132,19 @@ It would be a **demonstration of universality**:
 > because resonance is architecture‑agnostic.
 
 That’s the poetry of it.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🕹️RTT%20Retro%20Core-💾C‑64%20Host%20Environment%20Active-4c8eda?style=for-the-badge" alt="🕹️RTT Retro Core | 💾C‑64 Host Environment Active"/>
