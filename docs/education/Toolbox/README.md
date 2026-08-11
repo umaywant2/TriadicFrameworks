@@ -1,22 +1,8 @@
+<img width="682" height="682" alt="rtt_education_toolbox" src="https://github.com/user-attachments/assets/1090a884-75e0-4c60-aad1-f7479794b7e1" />
+
 # Education Toolbox - RTT/1
 
 - [`edu-toolbox_module.json`](edu-toolbox_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🧰Education%20Toolbox-📘A%20Guide%20for%20Science%20RTT/1%20AI‑Ready-4c8eda?style=for-the-badge" alt="🧰Education Toolbox | 📘A Guide for Science • RTT/1 • AI‑Ready"/>
 
 **A Guide for Science — Built on Resonance-Time Tech (RTT/1)**
 
@@ -75,3 +61,19 @@ This directory contains ready-to-deploy modules for immediate use:
 [Main Site](https://www.triadicframeworks.org) | [GitHub Repo](https://github.com/TriadicFrameworks)
 
 *Last updated: May 2026*
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🧰Education%20Toolbox-📘A%20Guide%20for%20Science%20RTT/1%20AI‑Ready-4c8eda?style=for-the-badge" alt="🧰Education Toolbox | 📘A Guide for Science • RTT/1 • AI‑Ready"/>
