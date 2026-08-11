@@ -1,26 +1,10 @@
-## 🎼 **Harmonic Stability Profile (HSP)**  
+<img width="938" height="938" alt="rtt_Harmonic_Stability_Profile" src="https://github.com/user-attachments/assets/f32f852e-f776-48e3-bdb7-acc36df09739" />
+
+## 🎼 Harmonic Stability Profile (HSP)  
 
 - [`HSP_module.json`](HSP_module.json) — Agentic module schema role assignments
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🎼RTT%20Analytics%20Core-📊Harmonic%20Stability%20Engine%20Active-4c8eda?style=for-the-badge" alt="🎼RTT Analytics Core | 📊Harmonic Stability Engine Active"/>
-
 ### *RTT‑Native Analytics Suite — Overview & Navigation*
-
-<img width="768" height="512" alt="Harmonic_Stability_Profile" src="https://github.com/user-attachments/assets/9a8680b6-617f-4862-82ae-cfa43b0f1ce0" />
 
 The **Harmonic Stability Profile** is the RTT‑native analytics suite used to:
 
@@ -154,3 +138,21 @@ _assets/
 - **Stability:** Canon‑Stable  
 - **Sweep:** Ready for v1.0 module population  
 - **Source:** RTT‑native_analytics_suite_Capture.md  
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🎼RTT%20Analytics%20Core-📊Harmonic%20Stability%20Engine%20Active-4c8eda?style=for-the-badge" alt="🎼RTT Analytics Core | 📊Harmonic Stability Engine Active"/>
+
+<img width="768" height="512" alt="Harmonic_Stability_Profile" src="https://github.com/user-attachments/assets/9a8680b6-617f-4862-82ae-cfa43b0f1ce0" />
