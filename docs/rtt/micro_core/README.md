@@ -1,22 +1,8 @@
+<img width="938" height="938" alt="rtt_Micro_Core" src="https://github.com/user-attachments/assets/17566e58-9b1a-434e-827f-f5bc21d32fed" />
+
 ## 🔬 RTT Micro Core  
 
 - [`RTT_micro_core_module.json`](RTT_micro_core_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🧬RTT%20Micro%20Core-🔹Smallest%20Stable%20Unit%20Active-4c8eda?style=for-the-badge" alt="🧬RTT Micro Core | 🔹Smallest Stable Unit Active"/>
 
 A compact, substrate‑level specification of micro‑scale resonance, coherence, and triadic structure.  
 This folder contains the full whitepaper, appendices, Micro‑Resonance Toolkit (MRT), and site‑ready presentation files.
@@ -119,3 +105,19 @@ Structure is canonical and drift‑free.
 - All files in this directory map directly to sections in the packaged Micro Core document.  
 - No duplication: each concept appears once, in its canonical location.  
 - These files are intended for students, researchers, and implementers working with micro‑scale RTT behavior.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🧬RTT%20Micro%20Core-🔹Smallest%20Stable%20Unit%20Active-4c8eda?style=for-the-badge" alt="🧬RTT Micro Core | 🔹Smallest Stable Unit Active"/>
