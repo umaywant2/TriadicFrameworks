@@ -1,22 +1,8 @@
+<img width="682" height="682" alt="rtt_education_awareness" src="https://github.com/user-attachments/assets/eb36e7e3-ffe3-469e-bd9e-0e261161a8e6" />
+
 # RTT Awareness  
 
 - [`awareness_module.json`](awareness_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🧭Education%20Core-🌱Recognition%20First%20Awareness%20Active-4c8eda?style=for-the-badge" alt="🧭Education Core | 🌱Recognition First Awareness Active"/>
 
 RTT Awareness is a **passive, non‑enforcing introduction** to Resonance‑Time Theory (RTT) and the triadic substrate that underlies TriadicFrameworks.
 <!--
@@ -111,3 +97,19 @@ None of these are required to understand Awareness.
 RTT Awareness reflects the **current, canonical framing** of RTT.
 
 Earlier exploratory documents and pre‑RTT concepts have been preserved in the archive to maintain lineage, but they are not required reading and are not part of the active Awareness surface.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🧭Education%20Core-🌱Recognition%20First%20Awareness%20Active-4c8eda?style=for-the-badge" alt="🧭Education Core | 🌱Recognition First Awareness Active"/>
