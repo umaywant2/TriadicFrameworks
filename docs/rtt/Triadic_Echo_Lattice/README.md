@@ -1,29 +1,8 @@
-# 🕸️ Triadic Echo Lattice — /docs/rtt/Triadic_Echo_Lattice 
+<img width="1194" height="672" alt="rtt_Triadic_Echo_Lattice" src="https://github.com/user-attachments/assets/94dd0614-3753-46c5-919e-7afc8ae9f31b" />
+
+# 🕸️ Triadic Echo Lattice
 
 - [`Triadic_Echo_Lattice_module.json`](Triadic_Echo_Lattice_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-![Module](https://img.shields.io/badge/Module-Triadic_Echo_Lattice-333)
-![Tier](https://img.shields.io/badge/Tier-RTT_Analytics-0aa)
-![Version](https://img.shields.io/badge/Version-1.0-09f)
-![Status](https://img.shields.io/badge/Status-Canon_Stable-0af)
-![HSP](https://img.shields.io/badge/HSP-07-8A2BE2)
-![AI‑Ready](https://img.shields.io/badge/AI-Ready-00c8ff)
-
----
 
 **Triadic Echo Lattice** is the spatial architecture of the HSP analytics
 suite. It places classified echoes into a four‑layer lattice — Ladder,
@@ -130,3 +109,24 @@ Audience:     students + researchers + AIs
 
 Open educational use permitted.
 See the main repository for details.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+![Module](https://img.shields.io/badge/Module-Triadic_Echo_Lattice-333)
+![Tier](https://img.shields.io/badge/Tier-RTT_Analytics-0aa)
+![Version](https://img.shields.io/badge/Version-1.0-09f)
+![Status](https://img.shields.io/badge/Status-Canon_Stable-0af)
+![HSP](https://img.shields.io/badge/HSP-07-8A2BE2)
+![AI‑Ready](https://img.shields.io/badge/AI-Ready-00c8ff)
