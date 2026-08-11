@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Temporal_Regime_Sequencer" src="https://github.com/user-attachments/assets/fa1155a8-8d67-4dc7-9761-4d2231eda56a" />
+
 # **Temporal Regime Sequencer — RTT/1**  
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Temporal_Regime_Sequencer/module.json) — Agentic module schema role assignments
