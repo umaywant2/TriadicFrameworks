@@ -1,4 +1,4 @@
-<img width="682" height="682" alt="TFT_OpenGPU_module" src="https://github.com/user-attachments/assets/14827458-49a8-481d-8270-a946155d7b64" />
+<img width="1194" height="672" alt="TFT_OpenGPU_module_image" src="https://github.com/user-attachments/assets/2eb0a3b4-55be-41f4-839c-58114befcdb1" />
 
 # 📄 TFT.OpenGPU.Stack.Module  
 
