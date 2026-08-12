@@ -1,10 +1,10 @@
 <img width="1194" height="672" alt="AI_Resonance_Seed_module" src="https://github.com/user-attachments/assets/ae968111-4f2c-4297-84d9-833c977fbc23" />
 
-# 📚 AI Resonance Seed | TriadicFrameworks  
+# 📚 AI Resonance Seed 
 
 - [`ai_resonance_seed_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/AI_Resonance_Seed/ai_resonance_seed_module.json) — Agentic module schema role assignments
 
-### AI Resonance Seed · FFF Emitters · RTT‑Inside · Schemas
+### FFF Emitters · RTT‑Inside · Schemas
 
 Welcome to the **TriadicFrameworks documentation hub**.  
 This space provides a complete, structured path through the conceptual, mythmatical, and technical layers of the project.
