@@ -1,3 +1,5 @@
+<img width="682" height="484" alt="tft_nous_resonance-tools_image" src="https://github.com/user-attachments/assets/b624ce5d-a541-4226-b8e4-3eb3010f7811" />
+
 # Resonance Tools
 
 The **resonance‑tools** are utilities bundled with agent‑shell.  
