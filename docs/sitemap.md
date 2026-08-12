@@ -1,26 +1,10 @@
+<img width="682" height="682" alt="tft_sitemap" src="https://github.com/user-attachments/assets/f04aa600-c223-4528-9e25-5d971e859f92" />
+
 ## 🌐 Site‑Map | TriadicFrameworks  
 
 - [`sitemap_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/sitemap_module.json) — Agentic module schema role assignments
 
 *Structural, harmonic, and substrate‑aligned overview*
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🗺️Sitemap%20Module-🧩Structural%20Atlas%20Active-4c8eda?style=for-the-badge" alt="🗺️Sitemap Module | 🧩Structural Atlas Active"/>
-
----
 
 _Alternate Site_ 🥈 [docsbook.io](https://docs.triadicframeworks.org/docs/corpus/)
 
@@ -488,3 +472,21 @@ https://zenodo.org/communities/vst/curation-policy
 <a href="https://doi.org/10.5281/zenodo.18440491"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18440491.svg" alt="DOI"></a>
 <a href="https://doi.org/10.5281/zenodo.18452819"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18452819.svg" alt="DOI"></a>
 <a href="https://doi.org/10.5281/zenodo.18462694"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18462694.svg" alt="DOI"></a>
+
+---
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🗺️Sitemap%20Module-🧩Structural%20Atlas%20Active-4c8eda?style=for-the-badge" alt="🗺️Sitemap Module | 🧩Structural Atlas Active"/>
