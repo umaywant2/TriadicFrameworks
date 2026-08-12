@@ -1,3 +1,5 @@
+<img width="682" height="682" alt="tft_nous_bots_image" src="https://github.com/user-attachments/assets/de951540-3c57-4775-a18e-d810630ba34a" />
+
 # Bots
 
 The **bots** directory contains lightweight agents that extend the **nous** environment.  
