@@ -1,24 +1,8 @@
+<img width="682" height="682" alt="tft_security" src="https://github.com/user-attachments/assets/8edab501-f84c-4394-9d00-bf7f3e2b1d7e" />
+
 ## 🛡️ Security Policy  
 
 - [`SECURITY_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/SECURITY_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🔐Security%20Module-🧩Responsible%20Disclosure%20Active-4c8eda?style=for-the-badge" alt="🔐Security Module | 🧩Responsible Disclosure Active"/>
-
----
 
 TriadicFrameworks is a documentation‑first, scroll‑centric framework.
 Most content in this repository is **non‑executable** and poses no
@@ -82,3 +66,19 @@ Security in TriadicFrameworks prioritizes:
 - Human‑readable systems
 
 If something feels unclear or unsafe, that feedback is welcome.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🔐Security%20Module-🧩Responsible%20Disclosure%20Active-4c8eda?style=for-the-badge" alt="🔐Security Module | 🧩Responsible Disclosure Active"/>
