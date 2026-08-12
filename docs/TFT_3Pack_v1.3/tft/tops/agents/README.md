@@ -1,3 +1,5 @@
+<img width="682" height="682" alt="tft_tops_agent_image" src="https://github.com/user-attachments/assets/3cc3d63b-0f09-4f0f-b2da-20f6ba9ba454" />
+
 # ⛎ tops Agents
 
 The **agents** directory contains Thor-specific agents that orchestrate resonance, overlays, and integrations.  
