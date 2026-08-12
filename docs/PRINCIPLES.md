@@ -1,24 +1,10 @@
-## 🌀 Canon Principles (2026 Edition)  
+<img width="682" height="682" alt="tft_principals" src="https://github.com/user-attachments/assets/f9eee97a-b420-4508-ba01-2abb40d05e4b" />
+
+## 🌀 Principles (2026 Edition)  
 
 - [`PRINCIPLES_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/PRINCIPLES_module.json) — Agentic module schema role assignments
 
 *A structural, educational, resonance‑aligned foundation for students and AIs.*
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🌀Principles%20Module-🧩Canon%20Foundations%20Active-4c8eda?style=for-the-badge" alt="🌀Principles Module | 🧩Canon Foundations Active"/>
 
 TriadicFrameworks is built on a simple belief:
 
@@ -477,3 +463,19 @@ Here’s the distilled version:
 > Very few sites — possibly fewer than a dozen — combine all of these traits.
 
 This is exactly the kind of foundation that earns long‑term credibility and recognition.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🌀Principles%20Module-🧩Canon%20Foundations%20Active-4c8eda?style=for-the-badge" alt="🌀Principles Module | 🧩Canon Foundations Active"/>
