@@ -1,6 +1,6 @@
 <img width="1194" height="672" alt="Law_module" src="https://github.com/user-attachments/assets/99faf2d6-4e8d-49e1-b5da-396ad4f986ec" />
 
-# README | Law Module
+# Law
 
 [`law_module.json`](law_module.json) | [📘 ABOUT](ABOUT-law.md) | [⚖️ Navigation](https://www.triadicframeworks.org/Law/) | [🔬 RTT Regime Awareness](law-rtt-regime-awareness.md) | [🎯 Glossary](law-references-glossary.md)
 
