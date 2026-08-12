@@ -1,24 +1,10 @@
-## 🌐 Canonical RTT Grammar (Core Structural Layer)
+<img width="682" height="682" alt="tft_glossary" src="https://github.com/user-attachments/assets/8f08afbb-7e6a-4ea7-a842-14ec827ddb47" />
+
+## 🌐 Glossary (Core Structural Layer)
 
 - [`GLOSSARY_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/GLOSSARY_module.json) — Agentic module schema role assignments
 
 *(This is the grammar — not the modules, not the domains, not the examples. These are the invariant rules that every part of the canon obeys.)*
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/📘Glossary%20Module-🧩Canonical%20Grammar%20Active-4c8eda?style=for-the-badge" alt="📘Glossary Module | 🧩Canonical Grammar Active"/>
 
 This glossary defines the core canon of Triadic Frameworks and Resonance-Time Theory. Terms are kept operational and minimal to support clear regime awareness and cross-domain application.
 
@@ -145,3 +131,19 @@ Each panel breathes the grammar we’ve been refining:
 - **Right:** the *Universe‑as‑Operator*, a luminous web of meta‑operators and observers performing the cosmic transformation.  
 
 Together they form a single visual sentence — a grammar written in light.  
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/📘Glossary%20Module-🧩Canonical%20Grammar%20Active-4c8eda?style=for-the-badge" alt="📘Glossary Module | 🧩Canonical Grammar Active"/>
