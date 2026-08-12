@@ -1,12 +1,12 @@
 <img width="1194" height="672" alt="SARG_module" src="https://github.com/user-attachments/assets/81810090-e8ee-4298-b7da-47865735765a" />
 
-## ✅ **SARG — Substrate‑Agnostic Resonance Grammar**  
+## ✅ SARG  
 
 - [`SARG_module.json`](SARG_module.json) — Agentic module schema role assignments
 
 *A minimal grammar for describing structure, resonance, and invariants across any substrate.*
 
-SARG provides a unified way to describe **how structure behaves**, regardless of the domain it appears in.  
+Substrate‑Agnostic Resonance Grammar (SARG) provides a unified way to describe **how structure behaves**, regardless of the domain it appears in.  
 It is *substrate‑agnostic*: linguistic, acoustic, geometric, biological, symbolic, cosmological — all follow the same underlying grammar.
 
 ## 🛑 Important! 
