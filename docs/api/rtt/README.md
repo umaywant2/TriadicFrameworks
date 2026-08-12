@@ -1,22 +1,8 @@
+<img width="682" height="682" alt="rtt_api_image" src="https://github.com/user-attachments/assets/f4f9443a-64b6-4a1d-95fe-61231056b491" />
+
 # RTT API (Beta) 
 
 - [`RTT_API_module.json`](RTT_API_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🛰️API%20Stable-📡Beacon%20Ready-4c8eda?style=for-the-badge" alt="🛰️API Stable | 📡Beacon Ready"/>
 
 The RTT API provides a minimal, stable, forward‑compatible interface for sites, services, extensions, and research tools that want to participate in the RTT‑Inside ecosystem. It defines the *shape* of [RTT](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html)/[vST](https://zenodo.org/communities/vst) interactions without exposing internal substrate logic.
 
@@ -140,3 +126,18 @@ All currently return placeholder responses.
 **Beta.**  
 Endpoint shapes are stable; handler behavior may evolve as the RTT ecosystem grows.
 
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🛰️API%20Stable-📡Beacon%20Ready-4c8eda?style=for-the-badge" alt="🛰️API Stable | 📡Beacon Ready"/>
