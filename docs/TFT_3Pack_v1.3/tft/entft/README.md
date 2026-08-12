@@ -1,3 +1,5 @@
+<img width="682" height="682" alt="tft_entft_image" src="https://github.com/user-attachments/assets/40a21b89-92df-4e34-bd3c-9c203eeace2b" />
+
 ## 🔐 `entft` Protocol — Quantum-Hostile Encryption & Entanglement Layer (v1.3)
 
 The `entft` folder explores encryption, entanglement, and triadic security protocols.  
