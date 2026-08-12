@@ -1,6 +1,6 @@
 <img width="1194" height="672" alt="Mode_module" src="https://github.com/user-attachments/assets/bbd96431-faf8-4fdd-9fd8-ccd94f9a4a69" />
 
-# 🎛️ Mode Layer — /docs/Mode
+## 🎛️ Mode
 
 - [`Mode_module.json`](Mode_module.json) — Agentic module schema role assignments
 
