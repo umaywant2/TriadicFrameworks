@@ -1,14 +1,12 @@
 <img width="1194" height="672" alt="Expectations_module" src="https://github.com/user-attachments/assets/04c042fd-fe05-4719-b25f-e93c1d19c47d" />
 
-# **TriadicFrameworks — Expectations Module**  
+# Expectations
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Expectations/module.json) — Agentic module schema role assignments
 
 **Location:** `/docs/Expectations/`  
 **Role:** Root‑level orientation & requirements stack  
 **Audience:** Students • Researchers • AI Agents
-
----
 
 ## **Purpose**
 
