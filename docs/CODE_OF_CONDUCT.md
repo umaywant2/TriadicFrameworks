@@ -1,24 +1,8 @@
-## 🌿 Triadic Frameworks Code of Conduct  
+<img width="682" height="682" alt="tft_code_of_conduct" src="https://github.com/user-attachments/assets/44b6ebdf-276a-4db3-975c-d04ea07c62e8" />
+
+## 🌿 Code of Conduct  
 
 - [`CODE_OF_CONDUCT_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/CODE_OF_CONDUCT_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🌿Code%20of%20Conduct-🧩Community%20Norms%20Active-4c8eda?style=for-the-badge" alt="🌿Code of Conduct | 🧩Community Norms Active"/>
-
----
 
 The Triadic Frameworks community brings together contributors, explorers, educators, researchers, and curious thinkers from all over the world. Some are professionals, some are volunteers, and all of us participate in building, teaching, and stewarding the canon.
 
@@ -66,3 +50,19 @@ Technical and social disagreements happen. They are part of the work. Focus on u
 If you have questions about this Code of Conduct or need clarification, please use our [Discussions](https://github.com/umaywant2/TriadicFrameworks/discussions) area or reach out at **Nawder@TriadicFrameworks.org**.
 
 Original inspiration courtesy of the [Speak Up! project](http://web.archive.org/web/20141109123859/http://speakup.io/coc.html).
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🌿Code%20of%20Conduct-🧩Community%20Norms%20Active-4c8eda?style=for-the-badge" alt="🌿Code of Conduct | 🧩Community Norms Active"/>
