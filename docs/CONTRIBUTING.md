@@ -1,24 +1,8 @@
+<img width="682" height="682" alt="tft_contributing_module" src="https://github.com/user-attachments/assets/1e8a8a49-1ed5-42b7-95b0-5e3e23853125" />
+
 ## 💞 Contributing to TriadicFrameworks  
 
 - [`CONTRIBUTING_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/CONTRIBUTING_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🛠️Contributing%20Module-🧩Workflow%20Lineage%20Active-4c8eda?style=for-the-badge" alt="🛠️Contributing Module | 🧩Workflow & Lineage Active"/>
-
----
 
 Thank you for your interest in contributing to the TriadicFrameworks ecosystem.
 
@@ -96,3 +80,19 @@ Your contribution strengthens the broader field of coherence and long‑arc stew
 ---
 
 🔺 *Support the Triad*
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🛠️Contributing%20Module-🧩Workflow%20Lineage%20Active-4c8eda?style=for-the-badge" alt="🛠️Contributing Module | 🧩Workflow & Lineage Active"/>
