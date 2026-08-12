@@ -1,3 +1,5 @@
+<img width="682" height="682" alt="tft_nous_module_image" src="https://github.com/user-attachments/assets/b8532bd5-956e-45dd-aaf7-ba1c4714ff7b" />
+
 # 💭 Nous — Symbolic Cognition Layer
 
 The `nous` folder encodes the **TFT core logic**: triadic, ternary, and symbolic.  
