@@ -1,24 +1,8 @@
+<img width="682" height="682" alt="tft_license" src="https://github.com/user-attachments/assets/b9a2b4d3-28ea-4fc0-922b-c3c54663195e" />
+
 ## 👮 License | Open 
 
 - [`LICENSE_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/LICENSE_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/⚖️License%20Module-🧩MIT%20Boundary%20Active-4c8eda?style=for-the-badge" alt="⚖️License Module | 🧩MIT Boundary Active"/>
-
----
 
 This framework is released under the MIT License.
 
@@ -49,3 +33,19 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/⚖️License%20Module-🧩MIT%20Boundary%20Active-4c8eda?style=for-the-badge" alt="⚖️License Module | 🧩MIT Boundary Active"/>
