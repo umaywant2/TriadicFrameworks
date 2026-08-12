@@ -1,3 +1,5 @@
+<img width="682" height="682" alt="tft_module_image" src="https://github.com/user-attachments/assets/859127b1-af49-4b6d-badd-d9ec91233df7" />
+
 ## ♨️ `tft` — Core Framework (v1.3 Resonance Clarity Edition)
 
 The `tft` folder holds the **living code** of the Triadic Frameworks 3Pack.  
