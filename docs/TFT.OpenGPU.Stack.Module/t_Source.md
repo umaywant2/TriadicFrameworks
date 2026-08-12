@@ -1,3 +1,5 @@
+<img width="682" height="682" alt="TFT_OpenGPU_module" src="https://github.com/user-attachments/assets/14827458-49a8-481d-8270-a946155d7b64" />
+
 # t_Capture.md
 - raw source
 
