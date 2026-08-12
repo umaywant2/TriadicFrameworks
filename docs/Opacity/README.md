@@ -1,6 +1,6 @@
 <img width="936" height="936" alt="Opacity_module" src="https://github.com/user-attachments/assets/c4841537-0c49-48c1-a62c-1441c2be004d" />
 
-# 🌑 Opacity — /docs/Opacity
+# 🌑 Opacity
 
 - [`Opacity_module.json`](Opacity_module.json) — Agentic module schema role assignments
 
