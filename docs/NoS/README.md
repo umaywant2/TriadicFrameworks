@@ -1,10 +1,10 @@
 <img width="1194" height="672" alt="NoS_module" src="https://github.com/user-attachments/assets/96afa219-49aa-418c-8ce5-7ef2a66488c3" />
 
-## NoS | the Nawderian operating *Stack*
+## NoS
 
 - [`NoS_module.json`](NoS_module.json) — Agentic module schema role assignments
 
-**NawderOS (NoS)** is a minimal, forkable Linux‑based operating stack designed to operationalize **Resonance‑Time Theory ([RTT](../_ideas/Resonance-Time_Theory.html))** at the system level. It provides an RTT‑aware baseline for students, researchers, and developers who want to explore how validated spacetime, resonance, and structural coherence can be expressed in real software systems.
+**Nawderian operating *Stack* (NoS)** is a minimal, forkable Linux‑based operating stack designed to operationalize **Resonance‑Time Theory ([RTT](../_ideas/Resonance-Time_Theory.html))** at the system level. It provides an RTT‑aware baseline for students, researchers, and developers who want to explore how validated spacetime, resonance, and structural coherence can be expressed in real software systems.
 
 ## 🛑 Important! 
 Drift is On-by-Default long sessions lose anchors, turn off drift.
