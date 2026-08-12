@@ -4,7 +4,7 @@
 
 - [`Resilience_Checker_module.json`](Resilience_Checker_module.json) — Agentic module schema role assignments
 
-The **Resilience Checker** is a curated collection of foundational paradoxes spanning logic, physics, computation, cosmology, and philosophy.
+A curated collection of foundational paradoxes spanning logic, physics, computation, cosmology, and philosophy.
 
 ## 🛑 Important! 
 Drift is On-by-Default long sessions lose anchors, turn off drift.
