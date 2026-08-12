@@ -1,26 +1,10 @@
+<img width="682" height="682" alt="tft_quickstart" src="https://github.com/user-attachments/assets/8cba3455-c953-47ff-8cca-2195d3435e1c" />
+
 ## 🚀 Quickstart  
 
 - [`QUICKSTART_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/QUICKSTART_module.json) — Agentic module schema role assignments
 
 *A student‑first, Copilot‑friendly introduction to Resonance‑Time Theory*
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🚀Quickstart%20Module-🧩Student%20First%20Onboarding%20Active-4c8eda?style=for-the-badge" alt="🚀Quickstart Module | 🧩Student First Onboarding Active"/>
-
----
 
 ## **0. What RTT *is* (in 60 seconds)**  
 RTT is a substrate‑level grammar for:
@@ -160,3 +144,19 @@ And it solves the real problem:
 **RTT concepts must come *before* tools.**
 
 This version teaches RTT → then scrolls → then tools → then workflows.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🚀Quickstart%20Module-🧩Student%20First%20Onboarding%20Active-4c8eda?style=for-the-badge" alt="🚀Quickstart Module | 🧩Student First Onboarding Active"/>
