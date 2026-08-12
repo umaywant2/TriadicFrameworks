@@ -1,25 +1,10 @@
+<img width="682" height="682" alt="tft_ethics_privacy" src="https://github.com/user-attachments/assets/9fc1e164-2853-477c-9664-f8eb7c4b374b" />
+
 ## 😇 Ethics & Privacy  
 
 - [`ETHICS_PRIVACY_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/ETHICS_PRIVACY_module.json) — Agentic module schema role assignments
 
 *(public‑facing, minimal, canonical)*
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🛡️ Ethics & Privacy • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🛡️Ethics%20%26%20Privacy-🌿No%20Ads%20%7C%20No%20Tracking%20%7C%20No%20Accounts-4c8eda?style=for-the-badge" 
-     alt="🛡️ Ethics & Privacy | 🌿 No Ads • No Tracking • No Accounts"/>
 
 ## **Ethics & Privacy**  
 TriadicFrameworks is built on a simple principle:  
@@ -207,3 +192,20 @@ Approach:
 
 Outcome:  
 TriadicFrameworks becomes a **reference model** for ethical, structured, AI‑ready knowledge publishing.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🛡️ Ethics & Privacy • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🛡️Ethics%20%26%20Privacy-🌿No%20Ads%20%7C%20No%20Tracking%20%7C%20No%20Accounts-4c8eda?style=for-the-badge" 
+     alt="🛡️ Ethics & Privacy | 🌿 No Ads • No Tracking • No Accounts"/>
