@@ -1,25 +1,8 @@
+<img width="682" height="682" alt="tft_grammar" src="https://github.com/user-attachments/assets/261a2eb4-ecd3-49f9-ade5-bb1d4d60038e" />
+
 # Grammar for dimensional cross-domain agentic AI modules
 
 - [`Grammar_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Grammar_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🔤 Grammar Module • TriadicFrameworks
-  </span>
-</div>
-
-<img 
-  src="https://img.shields.io/badge/🔤Grammar%20Module-Operator%20Substrate%20Active-6a4c93?style=for-the-badge" 
-  alt="🔤 Grammar Module | Operator Substrate Active"
-/>
 
 You can think of **RTT grammar** the same way you think of grammar in a language: it’s not about *rules for sentences*, it’s about *rules for how awareness is structured*. When TriadicFrameworks talks about “RTT modules,” each module has its own grammar—its own way of organizing perception, time, flows, and regimes.
 
@@ -559,3 +542,22 @@ Understanding why some patterns “take” and others don’t.
 
 **Damping:**  
 → “Damping occurs when ___.”
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🔤 Grammar Module • TriadicFrameworks
+  </span>
+</div>
+
+<img 
+  src="https://img.shields.io/badge/🔤Grammar%20Module-Operator%20Substrate%20Active-6a4c93?style=for-the-badge" 
+  alt="🔤 Grammar Module | Operator Substrate Active"
+/>
