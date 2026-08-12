@@ -1,22 +1,8 @@
+<img width="682" height="682" alt="rtt_alphafold_image" src="https://github.com/user-attachments/assets/dc1edd57-4351-4b4e-a59f-1b760e55c2be" />
+
 # *AlphaFold Substrate Alignments*  
 
 - [`AlphaFold_Substrate_Alignments_module.json`](AlphaFold_Substrate_Alignments_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🧬Substrate%20Aligned-🧪Validation%20Ready-4c8eda?style=for-the-badge" alt="🧬Substrate Aligned | 🧪Validation Ready"/>
 
 ## *Resonance Substrate Model (RSM) applied to protein‑folding inference systems*
 
@@ -93,3 +79,19 @@ The framework is designed to be reproducible, domain‑agnostic, and compatible 
 A Zenodo DOI will be assigned upon release. Cite as:
 
 **Loswin, N.** *AlphaFold Substrate Alignments: A Resonance‑Substrate Interpretation of Protein‑Folding Inference Systems.* TriadicFrameworks (2026).
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🧬Substrate%20Aligned-🧪Validation%20Ready-4c8eda?style=for-the-badge" alt="🧬Substrate Aligned | 🧪Validation Ready"/>
