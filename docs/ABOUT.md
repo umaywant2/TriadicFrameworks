@@ -1,22 +1,8 @@
+<img width="682" height="682" alt="tft_about" src="https://github.com/user-attachments/assets/23c5d115-e3b7-4de7-9d5d-1da26d76c8c8" />
+
 ## About | TriadicFrameworks  
 
 - [`ABOUT_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/ABOUT_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/ℹ️About%20Module-🧩Origin%20Intent%20Active-4c8eda?style=for-the-badge" alt="ℹ️About Module | 🧩Origin & Intent Active"/>
 
 ## 🔍 AI Metadata (Global)
 
@@ -235,4 +221,20 @@ Follow ongoing research notes, resonance experiments, and small‑scale insights
 
 ### **🎥 YouTube — Visual Walkthroughs & Teaching Sessions**  
 Video explanations, diagrams, and future student‑friendly modules will appear here.  
-**[@TriadicFrameworks](https://www.youtube.com/@TriadicFrameworks)**
+**[@NawderLoswin](https://www.youtube.com/@NawderLoswin)**
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/ℹ️About%20Module-🧩Origin%20Intent%20Active-4c8eda?style=for-the-badge" alt="ℹ️About Module | 🧩Origin & Intent Active"/>
