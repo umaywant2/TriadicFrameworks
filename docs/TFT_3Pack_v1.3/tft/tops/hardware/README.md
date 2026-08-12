@@ -1,3 +1,5 @@
+<img width="682" height="682" alt="tft_tops_hardware_image" src="https://github.com/user-attachments/assets/67ad3d20-731a-44dd-89b3-b66b4cd34f65" />
+
 # tops Hardware
 
 The **hardware** directory contains design notes, DPU scaffolding, and integration specs.  
