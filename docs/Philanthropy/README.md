@@ -4,7 +4,11 @@
 
 - [`Philanthropy_module.json`](Philanthropy_module.json) — Agentic module schema role assignments
 
-## Structural Clarity for Multi‑Layer Funding Systems
+## Purpose
+
+To make philanthropic systems **structurally visible**, **aligned**, and **accountable**, enabling donors, communities, and AI agents to operate with clarity and integrity.
+
+### Structural Clarity for Multi‑Layer Funding Systems
 
 This module applies RTT operators, SET load, governance substrate, and the triadic observer to philanthropic funding flows.  
 It replaces narrative with structure, enabling clarity, accountability, and alignment across donors, foundations, intermediaries, NGOs, and local partners.
@@ -68,11 +72,5 @@ Full file map:
 
 ## Badge
 🟣 **Philanthropy Module — RTT Applied Domain**
-
----
-
-## Purpose
-
-To make philanthropic systems **structurally visible**, **aligned**, and **accountable**, enabling donors, communities, and AI agents to operate with clarity and integrity.
 
 <img src="https://img.shields.io/badge/🟣Philanthropy-🌁Funding%20Transparency%20AI%20Ready-4c8eda?style=for-the-badge" alt="🟣 Philanthropy | Funding Transparency Model • AI‑Ready"/>
