@@ -1,3 +1,5 @@
+<img width="682" height="682" alt="tft_tops_module_image" src="https://github.com/user-attachments/assets/01696d49-7803-4250-a1fb-241089635dcc" />
+
 # 🧿 Tops — Triconceptual Simulations
 
 ## 1. _**tops**_ Extended Overview
