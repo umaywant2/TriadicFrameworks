@@ -1,4 +1,7 @@
+
 # **Internet Archive Module**
+
+- [`archive_org_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/archive_org/archive_org_module.json) — Agentic module schema role assignments
 
 The **archive_org** module provides a structured, AI‑parsable interface to:
 
