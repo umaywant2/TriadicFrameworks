@@ -1,26 +1,10 @@
-## 📜 Lineage — Canonical Lineage of TriadicFrameworks [html](https://www.triadicframeworks.org/lineage.html)  
+<img width="682" height="682" alt="tft_lineage" src="https://github.com/user-attachments/assets/952ff1e5-0a2c-44ff-a050-74a39eed4cd0" />
+
+## 📜 Lineage — TriadicFrameworks [html](https://www.triadicframeworks.org/lineage.html)  
 
 - [`LINEAGE_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/LINEAGE_module.json) — Agentic module schema role assignments
 
 *A structural, educational, resonance‑time‑aligned history of the canon.*
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🕊️Lineage%20Module-🧩Origin%20Expansion%20Operational%20Active-4c8eda?style=for-the-badge" alt="🕊️Lineage Module | 🧩Origin → Expansion → Operational Active"/>
-
----
 
 ### **Phase 0 — metaCo - Proto‑Substrate (Pre‑Canon)**  
 **What:**  
@@ -206,3 +190,19 @@ It is now ready to be used as the **canonical lineage document** across all modu
 | Virtual Universe Remix           | Educational simulations, scenario modules                   | World‑building and conceptual universe design      |
 | Collective Consciousness Atlas   | Atlas module, Ideas, Inverted Economics                     | Question mapping and regime‑aware analysis         |
 | Universal Translator             | Integrations, Coeus, language/overlay tools                 | Cross‑overlay resonance translation                |
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🕊️Lineage%20Module-🧩Origin%20Expansion%20Operational%20Active-4c8eda?style=for-the-badge" alt="🕊️Lineage Module | 🧩Origin → Expansion → Operational Active"/>
