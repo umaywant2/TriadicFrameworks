@@ -1,3 +1,5 @@
+<img width="682" height="682" alt="tft_resonance_labs_module_image" src="https://github.com/user-attachments/assets/e72d7ff4-5937-4239-af88-80094678ba5d" />
+
 # 👌 Resonance-Labs
 
 Resonance-Labs is the experimental wing of the 3Pack.  
