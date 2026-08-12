@@ -1,3 +1,5 @@
+<img width="682" height="682" alt="tft_tops_ai_pipeline_image" src="https://github.com/user-attachments/assets/3c3d8867-f722-498e-ac1d-4372aa9d88b5" />
+
 # tops AI Resonance Pipeline
 
 The **AI Resonance Pipeline** is the intelligence layer of tops.  
