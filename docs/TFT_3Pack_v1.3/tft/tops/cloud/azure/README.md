@@ -1,3 +1,5 @@
+<img width="682" height="682" alt="tft_tops_cloud_azure" src="https://github.com/user-attachments/assets/3055e196-a662-49e7-a442-51749f98a11b" />
+
 # tops Cloud / Azure
 
 The **cloud/azure** directory contains tops’ cloud integration scaffolds.  
