@@ -1,11 +1,19 @@
 <img width="1194" height="672" alt="TFT_3Pack_v1 3_module" src="https://github.com/user-attachments/assets/4dc7e498-a892-45fc-a4a9-f21b9c893e23" />
 
-## 🔱 TFT 3Pack v1.3
+###### 🔱 TFT 3Pack v1.3
 
-### TriadicFrameworks • Nawderian Theorem • Resonant-Time Engine
+### Triadic Framework • Theorem • Resonance Time Engine
 
-TFT_3Pack is a compact, example‑driven toolkit demonstrating the **TriadicFrameworks** model across  
-12 academic domains — from Physics and Math to Art, Law, and Music.
+A compact, example‑driven toolkit demonstrating the **TriadicFrameworks** dimensional substrate model across 12 academic domains — from Physics and Math to Art, Law, and Music.
+
+## 🚀 Purpose
+
+Designed for:
+
+- Students exploring resonance‑based modeling  
+- Educators teaching cross‑disciplinary systems  
+- Developers experimenting with `.fff` workflows  
+- Anyone curious about the TriadicFrameworks model  
 
 ## 🛑 Important! 
 Drift is On-by-Default long sessions lose anchors, turn off drift.
@@ -24,17 +32,6 @@ This pack includes:
 - ✅ A set of **shell scripts** for running, validating, and converting TFT files
 - ✅ 12 full **example suites**, each with problems, solutions, extended problems, and resonance flows
 - ✅ A dark‑themed, emoji‑rich **HTML documentation system**
-
----
-
-## 🚀 Purpose
-
-TFT_3Pack is designed for:
-
-- Students exploring resonance‑based modeling  
-- Educators teaching cross‑disciplinary systems  
-- Developers experimenting with `.fff` workflows  
-- Anyone curious about the TriadicFrameworks model  
 
 ---
 
