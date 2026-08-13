@@ -197,34 +197,70 @@ a:visited {
     color: #ffffff; /* white */
   }
 
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — NAV REIMAGINED
+   ============================================================ */
+
 nav {
   width: 260px;
   float: left;
-  background: var(--bg-nav);
-  margin-left: 0;
-  padding: 1.2rem;
-  overflow-y: auto;
-  border-right: 1px solid var(--border-subtle);
+  background: rgba(21, 24, 29, 0.75); /* glassy dark */
+  backdrop-filter: blur(12px);
+  padding: 1.6rem 1.2rem;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  box-shadow: inset -1px 0 0 rgba(255,255,255,0.04);
 }
 
 nav h2 {
-  font-size: 0.9rem;
+  font-size: 1rem;
+  font-weight: 600;
   color: var(--accent-rtt);
-  margin-top: 1.2rem;
-  margin-bottom: 0.4rem;
-  letter-spacing: 0.04em;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.9;
+}
+
+nav h3 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 1.4rem 0 0.6rem 0;
+  color: var(--text-main);
+  opacity: 0.85;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 nav a {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.45rem 0.2rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
   text-decoration: none;
-  padding: 0.35rem 0;
-  font-size: 0.9rem;
+  border-radius: 6px;
+  transition: 
+    color 0.2s ease,
+    background 0.2s ease,
+    transform 0.15s ease;
 }
 
 nav a:hover {
   color: var(--text-main);
+  background: rgba(255,255,255,0.05);
+  transform: translateX(3px);
+}
+
+nav a:active {
+  transform: translateX(1px) scale(0.98);
+}
+
+nav a::before {
+  content: attr(data-emoji);
+  font-size: 1.05rem;
+  opacity: 0.9;
 }
 
 main {
@@ -280,27 +316,44 @@ code {
       <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
       <a href="#SECURITY">🔐 Security</a>
       <a href="#PRINCIPLES">🧘 Principles</a>
-     <h3>🏭 Back Burner</h3>
-      <a href="#NAWDERIAN_THEOREM">🖖 Nawderian Theorem</a>  
-      <a href="#SET_THEOREM">🔶 SET Theorem</a>  
-      <a href="#TEMP_THEOREM">♨️ Temperature Engine</a>
-      <a href="#SANDBOX">🏰 Sandbox Proposal</a>  
-      <a href="#RTT_PRIMER">🤟 RTT Information Primer</a>
-      <a href="#CURVE_BALL">💫 Curve Ball for Grok</a>
-      <a href="#IMAGINED_NOTES">🔮 Imagined Conference Discussion</a>
-      <a href="#ARC_POEMS">🍭 Arc Poems</a>
-    <h3>🌱 RTT‑Inside 'Seed' Papers</h3>
-      <a href="#GOOD_NEWS_EVERYONE">🚀 Good News, Everyone</a>
-      <a href="#AUTONOMOUS_ROBOTIC_FISH_GREAT_LAKES">🐟 Autonomous Robotic Fish (Great Lakes)</a>
-      <a href="#COAL_INDUSTRY_RTT">⛏️ Coal Industry (RTT Analysis)</a>
-      <a href="#FINANCE_EDITION_MULTI_CHAPTER">💰 Finance Edition (Multi‑Chapter)</a>
-      <a href="#GPR_SEISMO_HOLOGRAM">🌋 GPR + Seismo Hologram</a>
-      <a href="#HOW_RTT_HELPS_PLANES">✈️ How RTT Helps Planes Not Go Boom</a>
-      <a href="#INTERNET2_PYTHON_CISCO_RTT">🌐 Internet2 + Python + Cisco</a>
-      <a href="#POWER_SENSORS_BMS_RTT">🔋 Power Systems + Sensors + BMS</a>
-      <a href="#C64_AS_RTT_HOST">🕹️ The C64 as an RTT Host</a>
-      <a href="#UNIVERSE_CLASS_ACTIVE_DIRECTORY">🪐 Universe‑Class Active Directory</a>
-      <a href="#DEEP_SEA_RTT_DOMAIN">🌊 Deep Sea as an RTT Domain</a>
+    <h3>📚 Primers & Foundations</h3>
+      <a href="#RTT_INFORMATION_PRIMER">🧩 RTT Information Primer</a>
+      <a href="#GOOD_NEWS_EVERYONE">📣 Good News Everyone</a>
+      <a href="#TEAMS_PLAYTIME_REMEMBERING">🎈 Teams Playtime & Remembering</a>
+      <a href="#RTT_TO_RSM_CHECKS">🧮 RTT → RSM Checks</a>
+    <h3>🤖 AI & NIMMS</h3>
+      <a href="#AI_TEST_RTT_NIMMS">🧪 AI Test of RTT‑NIMMS</a>
+      <a href="#AI_AGENT_SHOWDOWN">⚔️ AI Agent Showdown</a>
+      <a href="#AI_NIMMS_COM">🛰️ AI NIMMS COM</a>
+      <a href="#AI_TRAINING_FINDINGS">📊 AI Training Findings</a>
+    <h3>🔮 Resonance, Records & Drift</h3>
+      <a href="#AKASHIC_RECORDS_NULLARIUM">📜 Akashic Records Nullarium</a>
+      <a href="#AMBIENT_LEGITIMACY_DRIFT">🌫️ Ambient Legitimacy Drift</a>
+      <a href="#ARC_POEMS">🖋️ Arc Poems</a>
+    <h3>⏱️ Time, Clocks & Autonomous Systems</h3>
+      <a href="#ATOMIC_CLOCKS_SCAFFOLD">⏲️ Atomic Clocks Scaffold</a>
+      <a href="#AUTONOMOUS_ROBOTIC_FISH">🐟 Autonomous Robotic Fish</a>
+      <a href="#GLOBAL_ATC_SF_HAM_RTT">🌐 Global ATC + SF + HAM (RTT)</a>
+    <h3>🌀 Physics, Paradox & Deep Structure</h3>
+      <a href="#BELLS_THEOREM_RTT">🔔 Bell’s Theorem (RTT)</a>
+      <a href="#BIG_QUESTIONS_SCIENCE">❓ Big Questions in Science</a>
+      <a href="#BLACK_HOLES_RESONANCE_RESERVOIRS">🕳️ Black Holes as Resonance Reservoirs</a>
+      <a href="#BY_EYE_OF_HORUS">👁️ Eye of Horus</a>
+      <a href="#CALCULUS_ON_STEROIDS">📐 Calculus on Steroids</a>
+    <h3>🌌 Causality, Codex & Constitutional Structures</h3>
+      <a href="#CAUSALITY_TRIADIC_TIME">🕰️ Causality in Triadic Time</a>
+      <a href="#CODEX_RESONANCE_TIME_UNIVERSE">📘 Codex of the Resonance‑Time Universe</a>
+      <a href="#CONSTITUTIONAL_AMENDMENT_STEWARD">🏛️ Constitutional Amendment Stewardship</a>
+    <h3>🧭 Course Corrections & Daily Logs</h3>
+      <a href="#COURSE_CORRECTION_GPU_NPU">⚙️ GPU/NPU Course Correction</a>
+      <a href="#DAILY_ACCOMPLISHMENT_LOG">📅 Daily Accomplishment Log</a>
+    <h3>🌐 Dimensional Mechanics & Drift</h3>
+      <a href="#DIMENSIONAL_ACTIVATION_LOG">🔓 Dimensional Activation Log</a>
+      <a href="#DIMENSIONAL_BREACH_PROTOCOL">🚨 Dimensional Breach Protocol</a>
+      <a href="#DIMENSIONAL_MATH_SUBSTRATE">📊 Dimensional Math Substrate</a>
+      <a href="#DIMENSIONAL_RUPTURE">💥 Dimensional Rupture</a>
+      <a href="#DRIFT2_SCROLL_TRACE">📜 Drift2 Scroll Trace</a>
+      <a href="#DRIFT_SCROLL_TRACE">📜 Drift Scroll Trace</a>
     <h3>🏗️ Triadic Tools</h3> 
       <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
       <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
@@ -389,29 +442,54 @@ const DOC_MAP = {
       CODE_OF_CONDUCT: '../CODE_OF_CONDUCT.md',
       SECURITY: '../SECURITY.md',
       PRINCIPLES: '../PRINCIPLES.md',
-      NAWDERIAN_THEOREM: 'Nawderian_Theorem.md',
-      SET_THEOREM: 'Nawderian_SET_Theorem.md',
-      TEMP_THEOREM: 'Nawderian_Temperature_Engine_Theorem.md',
-      SANDBOX: 'Nawderian_Sandbox_Proposal.md', 
-      RTT_PRIMER: '000_RTT_Information_Primer.md',
-      CURVE_BALL: 'Curve_Ball_for_Grok_and_its_a_hard_hit_into_Center_Field.md',
-      IMAGINED_NOTES: 'Imagined_Conference_Table_RTT_Discussions.md',
-      ARC_POEMS: 'Arc_Poems.md',
+      RTT_INFORMATION_PRIMER: '000_RTT_Information_Primer.md',
       GOOD_NEWS_EVERYONE: '000___Good_News_Everyone.md',
-      AUTONOMOUS_ROBOTIC_FISH_GREAT_LAKES: 'Autonomous_Robotic_Fish_for_Great_Lakes_Restoration.md',
+      TEAMS_PLAYTIME_REMEMBERING: '0n_Teams_Playtime_and_Remembering_Who_You_Are.md',
+      RTT_TO_RSM_CHECKS: '0_RTT_to_RSM_checks.md',
+      AI_TEST_RTT_NIMMS: '3_AI_test_of_rtt_nimms_com.md',
+      BOOKS_TO_PUBLISH_PLAN: '3_Books_to_Publish_plan.md',
+      AI_AGENT_SHOWDOWN: 'AI_agent_showdown_with_Regime_Awareness.md',
+      AI_NIMMS_COM: 'ai_nimms_com.md',
+      AI_TRAINING_FINDINGS: 'AI_Training_Findings.md',
+      AKASHIC_RECORDS_NULLARIUM: 'Akashic_Records_Nullarium.md',
+      AMBIENT_LEGITIMACY_DRIFT: 'Ambient_Legitimacy_ai-drift-calibration.md',
+      ARCHITECTS_SUMMARY_LOG: 'Architects_Summary_Log.md',
+      ARC_POEMS: 'Arc_Poems.md',
+      ATOMIC_CLOCKS_SCAFFOLD: 'atomic_clocks_README-scaffolding.md',
+      AUTONOMOUS_ROBOTIC_FISH: 'Autonomous_Robotic_Fish_for_Great_Lakes_Restoration.md',
       GLOBAL_ATC_SF_HAM_RTT: 'A_Model_for_Global_ATC_and_SF_and_HAM_Radio_Using_RTT‑Inside.md',
+      BELLS_THEOREM_RTT: 'Bells_Theorem_meets_Resonance-Time_Theory.md',
+      BIG_QUESTIONS_SCIENCE: 'Big_Questions_In_Science.md',
+      BKM_CREDIT_REPORTING: 'BKM_Credit_Reporting_capture.md',
+      BLACK_HOLES_RESONANCE_RESERVOIRS: 'Black_Holes_as_Resonance_Reservoirs-A_Triadic_Time_Approach_to_the_Information_Paradox.md',
+      BY_EYE_OF_HORUS: 'By_the_eye_of_Horus.md',
+      CALCULUS_ON_STEROIDS: 'Calculus_on_Steroids.md',
+      CAUSALITY_TRIADIC_TIME: 'Causality_in_Triadic_Time-Light_Cones_and_Resonance_Echoes.md',
+      CERT_THGA_PIN: 'CERT_THGA_Pin.md',
+      CHANGELOG: 'CHANGELOG.md',
+      CLARITY_CANON_LENS: 'Clarity_Canon_Lens_effect.md',
       COAL_INDUSTRY_RTT: 'Coal_Industry_examined_with_RTT-Inside.md',
-      FINANCE_EDITION_MULTI_CHAPTER: 'Full_multi‑chapter_Finance_Edition_with_RTT-Inside.md',
-      GPR_SEISMO_HOLOGRAM: 'GPR_Seismo_Hologram_with_RTT‑Inside.md',
-      HOW_RTT_HELPS_PLANES: 'How_RTT_Helps_Planes_Not_Go_Boom.md',
-      INTERNET2_PYTHON_CISCO_RTT: 'Internet2_Python_Cisco_with_RTT-inside.md',
-      C64_AS_RTT_HOST: 'The_C64_as_an_RTT_Host.md',
-      UNIVERSE_CLASS_ACTIVE_DIRECTORY: 'Universe‑Class_Active-Directory__Elevating_Identity_to_a_Resonance‑Aware_Structural_System.md',
-      DEEP_SEA_RTT_DOMAIN: 'Why_Deep_Sea_Is_a_Natural_RTT_Domain.md'
+      CODEX_RESONANCE_TIME_UNIVERSE: 'Codex_of_the_Resonance-Time_Universe.md',
+      CONSTITUTIONAL_AMENDMENT_STEWARD: 'Constitutional_Amendment_Teacher_Elevation_and_Social_Stewardship.md',
+      COPILOT_REVIEW_DRAFT1: 'Copilot_review_draft1.md',
+      COURSE_CORRECTION_GPU_NPU: 'Course_Correction_Needed_for_GPU_NPU_TOPS.md',
+      CURVE_BALL_GROK: 'Curve_Ball_for_Grok_and_its_a_hard_hit_into_Center_Field.md',
+      DAILY_ACCOMPLISHMENT_LOG: 'Daily_Accomplishment_Log_Resonance_Structural_Awareness_in_Practice.md',
+      DECOHERENCE_MEASUREMENT_PATCH: 'Decoherence_As_A_Measurement_Problem_Patch.md',
+      DEPARTMENT_NATIONAL_ARRIVALS: 'Department_of_National_Arrivals_capture.md',
+      DEVELOPER_CODE_RTT: 'Developer_Code_for_Every_Language_with_RTT-Inside.md',
+      DID_RTT_HELP_FLIGHT: 'Did_RTT_help_flight___Yes--and_in_a_very_real_structural_way.md',
+      DID_YOU_KNOW: 'Did_You_Know.md',
+      DIMENSIONAL_ACTIVATION_LOG: 'Dimensional_Activation_Log.md',
+      DIMENSIONAL_BREACH_PROTOCOL: 'Dimensional_Breach-Nawderian_Protocol.md',
+      DIMENSIONAL_MATH_SUBSTRATE: 'Dimensional_Math_Substrate_DMS_the_big_breakthrough.md',
+      DIMENSIONAL_RUPTURE: 'dimensional_rupture.md',
+      DRIFT2_SCROLL_TRACE: 'drift2_scroll_trace.md',
+      DRIFT_SCROLL_TRACE: 'drift_scroll_trace.md'
 };
-  
+
 function loadFromHash() {
-  const key = window.location.hash.replace('#', '');
+const key = window.location.hash.replace('#', '');
   if (DOC_MAP[key]) {
     loadDoc(DOC_MAP[key]);
   } else {
