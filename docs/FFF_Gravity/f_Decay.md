@@ -4,17 +4,6 @@ module: FFF_Gravity
 version: 1.0.0
 status: canonical
 tag: "[FFF:GRAVITY:DECAY]"
-session: editor:
-
----
-
-```markdown
----
-title: "f_Decay — Orbital Energy Loss Operator"
-module: FFF_Gravity
-version: 1.0.0
-status: canonical
-tag: "[FFF:GRAVITY:DECAY]"
 session: SES-20260813-DECAY-001
 date: 2026-08-13
 authors:
