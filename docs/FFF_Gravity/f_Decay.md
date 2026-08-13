@@ -1,3 +1,4 @@
+```
 ---
 title: "f_Decay — Orbital Energy Loss Operator"
 module: FFF_Gravity
@@ -75,6 +76,8 @@ changelog:
     session: SES-20260813-DECAY-001
     author: Nawder + Copilot
     note: "Initial canonical production. δ, d_warn, d_collapse, t_decay frozen. PRIM:010–011 introduced. FM-004/FM-005 fully specified. 4 examples."
+```
+    
 ---
 
 <!-- metadata: section=header session=SES-20260813-DECAY-001 -->
