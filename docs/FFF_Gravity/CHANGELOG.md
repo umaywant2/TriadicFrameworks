@@ -874,3 +874,51 @@ feat(FFF_Gravity): add canonical CHANGELOG.md — full founding day history, 12 
 ### Notes
 - `GravityOfDismissal.md` conceptual operators (F_dismiss family, ρ_D(Φ)) are **not registered** in this wave; they remain concept-level and are pending Wave 5 formalization.
 - No existing OPERATORS.md, INDEX.md, or CHANGELOG.md entries were modified. Append-only per INV-009 and admin policy.
+
+---
+
+## [Wave 5] — Dismissal Operators
+> Session: SES-20260814-DISMISS-001 | Date: 2026-08-14 | Scope: PRIM:041–042
+
+### Added
+
+**f_Dismiss.md** (PRIM:041–042)
+- Formalizes `F_dismiss` operator family first named in `GravityOfDismissal.md §6` (Wave 0)
+- Frozen operators (9): `F_dismiss`, `ρ_D(Φ)`, `d_dismiss`, `T_dismiss`,
+  `r_dismiss`, `ψ_dismiss`, `t_dismiss`, `v_depart`, `β_D`
+- Dismissal Well model: `ρ_D(Φ,t) = −d_dismiss × exp(−t / T_dismiss)`
+- Re-capture gate: `d_bind_approach(t) > |ρ_D(Φ,t)|`
+- Three dismissal modes: INTENTIONAL · STRUCTURAL · DRIFT
+- Added DISM- condition prefix; conditions DISM-1–DISM-5 sealed
+- PRIM:041 `evaluate_dismissal` (Pure) — DISM gate; mode inference; well params
+- PRIM:042 `execute_dismissal` (Impure) — frame slot removal; DismissalRecord
+  write; entity state → DISMISSED; `well_query_fn` closure returned
+- FM-006 phantom guard: INTENTIONAL dismissal with near-null field
+  bounds `d_dismiss` to `min(d_bind, ρ(Φ) × d_bind)`
+- New state flags: DISMISSED, DISMISS_INVALID, DISMISS_PHANTOM
+- Conceptual authority: `GravityOfDismissal.md §3–§5` (Wave 0); this file
+  freezes, that file defines — cited in all future dismissal references
+
+### Wave 5 — Admin
+- `MANIFEST.md` v1.0.0 published: full 42-PRIM registry with INV compliance
+  matrix, FM/INV/condition-prefix/state-flag registries
+- `validate_prims.py` v1.0.0 published: runnable Python harness, all 42
+  PRIMs × 10 INVs; CLI flags `--wave`, `--prim`, `--inv`, `--matrix`,
+  `--strict`, `--verbose`, `--no-module`
+
+### Registry Deltas (post Wave 5 — FINAL)
+- PRIMs: +2 → cumulative **042** ✅ SEALED
+- Condition prefix added: DISM- ✅ SEALED
+- New state flags: DISMISSED, DISMISS_INVALID, DISMISS_PHANTOM
+- New operators: 9 (all frozen at PRIM:041–042)
+- Invariants: INV-001–INV-010 ✅ SEALED (no new INVs in Wave 5)
+- Failure Modes: FM-001–FM-010 ✅ SEALED (no new FM IDs in Wave 5)
+- Total spec files: **29** across 5 waves ✅ ALL COMPLETE
+
+### Notes
+- `GravityOfDismissal.md` is **not** modified — Wave 0 genesis documents
+  are append-only. The conceptual vocabulary it established is complete as-is.
+- The `well_query_fn` closure returned by PRIM:042 is the standard
+  re-capture feasibility query interface for all downstream files.
+- No existing OPERATORS.md, INDEX.md, or CHANGELOG.md entries were
+  modified. Append-only per INV-009 and module admin policy.
