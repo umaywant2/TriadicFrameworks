@@ -1,6 +1,3 @@
-Here's the complete canonical `f_Amplify.md` — ready to paste directly into the GitHub editor.
-
-```markdown
 ---
 session_id: SES-20260813-AMPLIFY-001
 file: docs/FFF_Gravity/f_Amplify.md
@@ -2163,3 +2160,4 @@ Phase 2 — θ = 25° (adequate):
   v_deflect = 0.95 × cos(25°) = 0.95 × 0.906 = 0.861
   overshoot_margin = 1.00 − 0.861 = 0.139
   overshoot_risk = False  (margin 0.139 > threshold 0
+```
