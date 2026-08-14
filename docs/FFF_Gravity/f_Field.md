@@ -1,4 +1,6 @@
----
+# f_Field.md — Frequency Node Layer Definition
+
+```
 module: FFF_Gravity
 function: f_Field
 canonical_path: docs/FFF_Gravity/f_Field.md
@@ -67,9 +69,7 @@ invariants_applied:
   - INV-005  # v_escape(A) derived from ρ(Φ) × M_A
 operators_authority: OPERATORS.md
 glossary_authority: GLOSSARY.md
----
-
-# f_Field.md — Frequency Node Layer Definition
+```
 
 > **Canonical Tag:** `[FFF:GRAVITY:FIELD]`  
 > **Module:** FFF_Gravity  
@@ -1041,11 +1041,3 @@ applied to planetary science.
 
 *End of f_Field.md — Canonical v1.0.0*  
 *`[FFF:GRAVITY:FIELD]` · SES-20260813-FIELD-001 · FFF_Gravity Wave 2*
-```
-
----
-
-**Commit message:**
-
-```
-feat(FFF_Gravity): add canonical f_Field.md — Frequency Node layer definition, coherence well, ρ(Φ) formalization, SC-1/SC-2/SC-3, FM-002/FM-004/FM-009, emit/suppress interface, 6 genesis examples [SES-20260813-FIELD-001]
