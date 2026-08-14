@@ -1,4 +1,6 @@
----
+# f_Capture_Temporal — Temporal Window Capture
+
+```
 session_id: SES-20260813-CAPTURE_TEMPORAL-001
 tag: f_Capture_Temporal
 version: 1.0.0
@@ -32,9 +34,7 @@ failure_modes_referenced:
   - FM-005
 changelog:
   - "1.0.0 — 2026-08-13 — Initial canonical release. Wave 4 addendum, file 7 of 7."
----
-
-# f_Capture_Temporal — Temporal Window Capture
+```
 
 ## §0 Session Context
 
