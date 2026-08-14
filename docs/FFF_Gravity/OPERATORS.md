@@ -798,3 +798,175 @@ Two corrections surfaced while writing this — both logged in the file, both ne
 |---|---|
 | Primitive count is **16**, not 13 (INDEX said 13, scaffolds said 15) — `redirect_force_node` was the missing one | `INDEX.md §2` master registry row for primitives; `FFF_Gravity_module.json` |
 | Primitive count correction note in `§4.2` is self-documenting | No separate action needed |
+
+---
+
+## Wave 3 Addendum — Core Function Operators (PRIM:007–024)
+> Session: SES-20260813-W3 | Sealed: 2026-08-13
+
+### f_Orbit Operators (Wave 3 · PRIM:007, 012)
+
+| Symbol        | Type  | Domain                          | Description                                                       | Frozen in |
+|---------------|-------|---------------------------------|-------------------------------------------------------------------|-----------|
+| `T_orb`       | float | > 0                             | Orbital period; time for one complete orbit around source node    | PRIM:012  |
+| `orbit_class` | enum  | {STABLE, DECAYING, ESCAPE}      | Orbit classification derived from binding strength and δ          | PRIM:007  |
+| `stab_class`  | enum  | {HIGH, MED, LOW, CRITICAL}      | Stability classification derived from T_orb and decay trajectory  | PRIM:012  |
+
+### f_Release Operators (Wave 3 · PRIM:008–009)
+
+| Symbol      | Type  | Domain | Description                                                  | Frozen in |
+|-------------|-------|--------|--------------------------------------------------------------|-----------|
+| `v_release` | float | ≥ 0    | Scalar release velocity at moment of unbinding               | PRIM:009  |
+| `r_release` | float | > 0    | Release radius; distance at which unbinding condition is met | PRIM:008  |
+
+### f_Decay Operators (Wave 3 · PRIM:010–011)
+
+| Symbol       | Type  | Domain        | Description                                                         | Frozen in |
+|--------------|-------|---------------|---------------------------------------------------------------------|-----------|
+| `δ`          | float | (0, 1)        | Decay rate coefficient; fractional binding-distance loss per cycle  | PRIM:010  |
+| `d_warn`     | float | > 0, < d_bind | Binding distance level at which decay warning is raised             | PRIM:010  |
+| `d_collapse` | float | > 0, ≤ d_warn | Binding distance threshold triggering collapse evaluation           | PRIM:011  |
+
+### f_Collapse Operators (Wave 3 · PRIM:013–014)
+
+| Symbol     | Type    | Domain | Description                                                       | Frozen in |
+|------------|---------|--------|-------------------------------------------------------------------|-----------|
+| `m_parity` | float   | > 0    | Mass parity ratio between collapsing nodes                        | PRIM:013  |
+| `C_node`   | node_id | —      | Identifier of the surviving/dominant node after collapse resolves | PRIM:014  |
+
+### f_Emit Operators (Wave 3 · PRIM:015–017)
+
+| Symbol       | Type  | Domain | Description                                                    | Frozen in |
+|--------------|-------|--------|----------------------------------------------------------------|-----------|
+| `F_emit`     | float | ≥ 0    | Emission force magnitude applied outward into the field        | PRIM:015  |
+| `ρ(Φ)_delta` | float | any    | Change in field density ρ(Φ) caused by a single emission event | PRIM:016  |
+| `r_emit`     | float | > 0    | Emission radius; spatial extent of emitted influence           | PRIM:017  |
+
+### f_Dampen Operators (Wave 3 · PRIM:018–020)
+
+| Symbol          | Type  | Domain | Description                                                    | Frozen in |
+|-----------------|-------|--------|----------------------------------------------------------------|-----------|
+| `F_damp`        | float | ≤ 0    | Dampening force; negative magnitude opposing field escalation  | PRIM:018  |
+| `ρ(Φ)_floor`    | float | ≥ 0    | Minimum field density enforced when dampening is active        | PRIM:019  |
+| `cascade_guard` | bool  | {0, 1} | Flag active when cascade dampening guard is engaged            | PRIM:020  |
+
+### f_Amplify Operators (Wave 3 · PRIM:021–022)
+
+| Symbol     | Type  | Domain | Description                                                  | Frozen in |
+|------------|-------|--------|--------------------------------------------------------------|-----------|
+| `F_amp`    | float | ≥ 0    | Amplification force magnitude applied to field               | PRIM:021  |
+| `β_max`    | float | > 1    | Maximum amplification coefficient; hard ceiling on β         | PRIM:021  |
+| `amp_cost` | float | ≥ 0    | Energy cost of amplification; deducted from ρ(Φ) each cycle | PRIM:022  |
+
+### f_Deflect Operators (Wave 3 · PRIM:023–024)
+
+> **Stub resolution note:** `heading_delta` was declared as a forward stub in `f_Force.md §4.3`
+> (PRIM:005). That stub is fully resolved here. `f_Force.md §4.3` remains the declaration
+> site; `f_Deflect.md` (PRIM:023) is the authoritative definition and domain authority.
+
+| Symbol          | Type  | Domain  | Description                                                | Frozen in |
+|-----------------|-------|---------|------------------------------------------------------------|-----------|
+| `heading_delta` | float | [−π, π] | Angular deflection applied to the approach vector          | PRIM:023  |
+| `r_deflect`     | float | > 0     | Deflection radius; distance at which deflection force acts | PRIM:023  |
+| `deflect_cost`  | float | ≥ 0     | Energy cost of deflection; deducted from ρ(Φ)             | PRIM:024  |
+
+---
+
+## Wave 4 Addendum — Capture Variant Operators (PRIM:025–040)
+> Session: SES-20260813-W4 | Sealed: 2026-08-13
+
+### f_Capture_Multi Operators (Wave 4 · PRIM:025–026)
+
+| Symbol        | Type  | Domain  | Description                                                               | Frozen in |
+|---------------|-------|---------|---------------------------------------------------------------------------|-----------|
+| `N`           | int   | ≥ 2     | Count of simultaneous capture targets in multi-capture event              | PRIM:025  |
+| `eval_order`  | list  | ordered | Evaluation priority sequence for multi-target binding attempts            | PRIM:025  |
+| `Φ_perturbed` | float | [0, 1]  | Field value after perturbation from multi-target interference             | PRIM:026  |
+| `δ_perturb`   | float | ≥ 0     | Perturbation magnitude applied to Φ during multi-capture                  | PRIM:026  |
+| `k_perturb`   | float | > 0     | Perturbation scaling coefficient                                          | PRIM:026  |
+
+### f_Capture_Cascade Operators (Wave 4 · PRIM:027–028)
+
+| Symbol          | Type  | Domain | Description                                                            | Frozen in |
+|-----------------|-------|--------|------------------------------------------------------------------------|-----------|
+| `cascade_depth` | int   | ≥ 0    | Current recursion depth within the cascade capture chain               | PRIM:027  |
+| `k_max`         | int   | ≥ 1    | Maximum permitted cascade depth; CAS-1 guard enforced inside PRIM:027 | PRIM:027  |
+| `γ`             | float | (0, 1) | Cascade gain; fraction of parent Ω_cascade transmitted to child step  | PRIM:028  |
+| `Ω_cascade`     | float | ≥ 0    | Cascade transmission energy available at the current depth step        | PRIM:028  |
+
+### f_Capture_Soft Operators (Wave 4 · PRIM:029–030)
+
+| Symbol           | Type  | Domain | Description                                                       | Frozen in |
+|------------------|-------|--------|-------------------------------------------------------------------|-----------|
+| `d_soft`         | float | > 0    | Soft capture binding distance (relaxed threshold vs. d_bind)     | PRIM:029  |
+| `soft_threshold` | float | (0, 1) | Minimum ρ(Φ) required to sustain soft capture                    | PRIM:029  |
+| `grace_period`   | int   | ≥ 0    | Cycles permitted below soft_threshold before release triggers     | PRIM:030  |
+| `k_grace`        | float | > 0    | Grace period scaling coefficient                                  | PRIM:030  |
+
+### f_Capture_Hard Operators (Wave 4 · PRIM:031–032)
+
+| Symbol       | Type  | Domain        | Description                                                   | Frozen in |
+|--------------|-------|---------------|---------------------------------------------------------------|-----------|
+| `d_hard`     | float | > 0           | Hard capture binding distance; strict threshold for lock entry | PRIM:031  |
+| `α_hard`     | float | > 1           | Hard capture alpha; binding distance multiplier               | PRIM:031  |
+| `β_hard`     | float | > 0           | Hard capture beta; force amplification coefficient            | PRIM:031  |
+| `β_min_hard` | float | > 0, ≤ β_hard | Minimum beta required to achieve and sustain hard lock        | PRIM:032  |
+| `lock_cost`  | float | ≥ 0           | Energy cost deducted from ρ(Φ) to establish hard lock         | PRIM:032  |
+| `k_lock`     | float | > 0           | Lock cost scaling coefficient                                 | PRIM:032  |
+
+### f_Capture_Resonant Operators (Wave 4 · PRIM:033–034)
+
+| Symbol         | Type  | Domain   | Description                                                       | Frozen in |
+|----------------|-------|----------|-------------------------------------------------------------------|-----------|
+| `ω_res`        | float | > 0      | Resonant angular frequency of the source emission cycle           | PRIM:033  |
+| `T_res`        | float | > 0      | Resonant period; T_res = 2π / ω_res                               | PRIM:033  |
+| `φ_A(t)`       | float | [0, 2π)  | Approach node phase angle at time t                               | PRIM:033  |
+| `φ_E`          | float | [0, 2π)  | Emission phase angle of source at peak resonance                  | PRIM:033  |
+| `φ_open`       | float | [0, 2π)  | Phase angle at which resonance acceptance window opens            | PRIM:033  |
+| `φ_close`      | float | [0, 2π)  | Phase angle at which resonance acceptance window closes           | PRIM:033  |
+| `window_width` | float | (0, 2π)  | Angular width of resonance acceptance window                      | PRIM:033  |
+| `p_ratio`      | int   | ≥ 1      | Numerator of the p:q phase-lock ratio                             | PRIM:033  |
+| `q_ratio`      | int   | ≥ 1      | Denominator of the p:q phase-lock ratio                           | PRIM:033  |
+| `ρ_res_gain`   | float | > 0      | Field density gain multiplier active during resonance window      | PRIM:034  |
+| `ρ_eff`        | float | ≥ 0      | Effective field density under resonance conditions                | PRIM:034  |
+| `ρ_res_floor`  | float | ≥ 0      | Minimum field density floor enforced in resonant state            | PRIM:034  |
+| `d_bind_res`   | float | > 0      | Resonance-adjusted binding distance                               | PRIM:034  |
+| `T_orb_res`    | float | > 0      | Resonance-adjusted orbital period                                 | PRIM:034  |
+
+### f_Capture_Asymmetric Operators (Wave 4 · PRIM:035–036)
+
+| Symbol                  | Type  | Domain  | Description                                                   | Frozen in |
+|-------------------------|-------|---------|---------------------------------------------------------------|-----------|
+| `mass_ratio`            | float | > 0     | Ratio of source node mass to approach node mass               | PRIM:035  |
+| `asymmetry_factor`      | float | ≥ 0     | Degree of mass asymmetry (0 = fully symmetric)                | PRIM:035  |
+| `parity_warn_threshold` | float | > 0     | Asymmetry level at which parity warning is raised             | PRIM:035  |
+| `d_bind_asym`           | float | > 0     | Asymmetry-corrected binding distance                          | PRIM:036  |
+| `heading_delta_asym`    | float | [−π, π] | Asymmetry-adjusted heading deflection angle                   | PRIM:036  |
+| `deflect_tolerance`     | float | ≥ 0     | Maximum heading_delta_asym before deflection is rejected      | PRIM:036  |
+| `asym_decay_risk`       | bool  | {0, 1}  | Flag: elevated decay risk due to asymmetric mass distribution | PRIM:036  |
+
+### f_Capture_Temporal Operators (Wave 4 · PRIM:037–038)
+
+| Symbol                  | Type   | Domain   | Description                                                   | Frozen in |
+|-------------------------|--------|----------|---------------------------------------------------------------|-----------|
+| `t_open`                | float  | ≥ 0      | Timestamp at which temporal capture window opens              | PRIM:037  |
+| `t_close`               | float  | > t_open | Timestamp at which temporal capture window closes             | PRIM:037  |
+| `t_span`                | float  | > 0      | Duration of window; t_span = t_close − t_open                | PRIM:037  |
+| `t_elapsed`             | float  | ≥ 0      | Time elapsed since t_open at evaluation moment                | PRIM:037  |
+| `t_remaining`           | float  | ≥ 0      | Time remaining until t_close at evaluation moment             | PRIM:037  |
+| `window_id`             | string | unique   | Identifier for this temporal capture window instance          | PRIM:037  |
+| `proximity_ratio`       | float  | [0, 1]   | t_elapsed / t_span; urgency metric for temporal capture       | PRIM:038  |
+| `temporal_decay_factor` | float  | (0, 1]   | Decay multiplier applied to d_bind as window approaches close | PRIM:038  |
+| `d_bind_temporal`       | float  | > 0      | Temporally-adjusted binding distance                          | PRIM:038  |
+| `temporal_margin`       | float  | ≥ 0      | Buffer interval before t_close that triggers margin alert     | PRIM:038  |
+
+### f_Capture_Networked Operators (Wave 4 · PRIM:039–040)
+
+| Symbol                 | Type  | Domain    | Description                                                      | Frozen in |
+|------------------------|-------|-----------|------------------------------------------------------------------|-----------|
+| `N_net`                | int   | ≥ 2       | Number of nodes participating in the capture network             | PRIM:039  |
+| `G_net`                | graph | connected | Network graph structure (nodes + weighted directed edges)        | PRIM:039  |
+| `w_i`                  | float | ≥ 0       | Edge weight for node i within G_net                              | PRIM:039  |
+| `d_bind_net`           | float | > 0       | Network-consensus binding distance (weighted aggregate)          | PRIM:040  |
+| `ρ(Φ)_net`             | float | ≥ 0       | Aggregate network field density across all participating nodes   | PRIM:040  |
+| `resilience_threshold` | float | (0, 1)    | Minimum connectivity fraction required to sustain network capture| PRIM:040  |
