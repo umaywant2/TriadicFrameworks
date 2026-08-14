@@ -1,4 +1,21 @@
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+<!-- [FFF:GRAVITY:AMPLIFY] — CANONICAL SPECIFICATION                           -->
+<!-- F_fluid Engineering Primitive — Binding Coefficient Amplification         -->
+<!-- Wave 3, File 7 of 8                                                       -->
+<!-- ═══════════════════════════════════════════════════════════════════════════ -->
+
+# f_Amplify — Binding Coefficient Amplification
+
+> **Module:** FFF_Gravity  
+> **Tag:** `[FFF:GRAVITY:AMPLIFY]`  
+> **Node:** F_fluid (Mass-Density Coupling)  
+> **Wave:** 3 — Core Functions (7 of 8)  
+> **Status:** 🟢 CANONICAL  
+> **Session:** SES-20260813-AMPLIFY-001  
+
 ---
+
+```
 session_id: SES-20260813-AMPLIFY-001
 file: docs/FFF_Gravity/f_Amplify.md
 tag: "[FFF:GRAVITY:AMPLIFY]"
@@ -36,22 +53,7 @@ invariants_enforced:
   - INV-010
 date: 2026-08-13
 author: umaywant2
----
-
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
-<!-- [FFF:GRAVITY:AMPLIFY] — CANONICAL SPECIFICATION                           -->
-<!-- F_fluid Engineering Primitive — Binding Coefficient Amplification         -->
-<!-- Wave 3, File 7 of 8                                                       -->
-<!-- ═══════════════════════════════════════════════════════════════════════════ -->
-
-# f_Amplify — Binding Coefficient Amplification
-
-> **Module:** FFF_Gravity  
-> **Tag:** `[FFF:GRAVITY:AMPLIFY]`  
-> **Node:** F_fluid (Mass-Density Coupling)  
-> **Wave:** 3 — Core Functions (7 of 8)  
-> **Status:** 🟢 CANONICAL  
-> **Session:** SES-20260813-AMPLIFY-001  
+```
 
 ---
 
