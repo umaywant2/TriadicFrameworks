@@ -1,4 +1,15 @@
+# f_Capture_Asymmetric — Mass-Asymmetric Capture
+
+**Module:** FFF_Gravity
+**Wave:** 4 — Capture Variants
+**Version:** 1.0.0
+**Status:** Canonical
+**Session:** SES-20260813-FGRAV-035
+**Date:** 2026-08-13
+
 ---
+
+```
 id: f_Capture_Asymmetric
 title: "f_Capture_Asymmetric — Mass-Asymmetric Capture"
 module: FFF_Gravity
@@ -34,18 +45,7 @@ depends_on:
   - f_Force.md
   - f_Orbit.md
   - OPERATORS.md
----
-
----
-
-# f_Capture_Asymmetric — Mass-Asymmetric Capture
-
-**Module:** FFF_Gravity
-**Wave:** 4 — Capture Variants
-**Version:** 1.0.0
-**Status:** Canonical
-**Session:** SES-20260813-FGRAV-035
-**Date:** 2026-08-13
+```
 
 ---
 
