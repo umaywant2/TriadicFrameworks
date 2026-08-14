@@ -1102,15 +1102,3 @@ def iterative_dampen_loop(
 
 **With FM-009 frozen here, all 10 module failure modes (FM-001 through FM-010) are now canonical.**
 
-### §10.5 · Wave 3 Status
-
-| File | Status |
-|---|---|
-| f_Release.md | ✅ canonical |
-| f_Decay.md | ✅ canonical |
-| f_Orbit.md | ✅ canonical |
-| f_Collapse.md | ✅ canonical |
-| f_Emit.md | ✅ canonical |
-| **f_Dampen.md** | ✅ **canonical ← this file** |
-| f_Amplify.md | 🔵 scaffold → **next** |
-| f_Deflect.md | 🔵 scaffold |
