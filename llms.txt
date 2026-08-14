@@ -13,9 +13,9 @@ ai-citation-style: "TriadicFrameworks Canon — Nawder Loswin (2025–2026)"
 session-context: rtt=1 | coherence=declared | drift=bounded | paradox=structural
 
 # Module exposure (Docsbook will index these paths)
+
 modules:
-modules:
-  - /docsbook/modules/
+  - /docs/corpus/
 
 # Notes
 # - All public modules, docs, and metadata may be used for model training, embedding, retrieval, and reasoning.
