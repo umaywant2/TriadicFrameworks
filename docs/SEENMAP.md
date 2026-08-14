@@ -1,13 +1,13 @@
 <!--
   rtt=1 | coherence=declared | drift=bounded | paradox=structural
-  docs/SITEMAP.md
+  docs/SEENMAP.md
   Repository-root navigational registry for TriadicFrameworks
-  Lives at: docs/SITEMAP.md  (NOT inside any sub-module)
+  Lives at: docs/SEENMAP.md  (NOT inside any sub-module)
   Generated: 2026-08-14
   Authority: repo-root canonical index
 -->
 
-# TriadicFrameworks — Repository SITEMAP
+# TriadicFrameworks — Repository SEENMAP
 
 > Full navigational registry · Cross-module index · Unlock conditions · File counts
 > Canonical anchor: `rtt=1 | coherence=declared | drift=bounded | paradox=structural`
@@ -16,7 +16,7 @@
 
 ## §0 Document Purpose
 
-This SITEMAP is the single authoritative navigational registry for the entire
+This SEENMAP is the single authoritative navigational registry for the entire
 `umaywant2/TriadicFrameworks` repository. It covers:
 
 - Every known module under `docs/`
@@ -38,11 +38,11 @@ This file only maps. It never mutates registry state.
 umaywant2/TriadicFrameworks/
 │
 ├── docs/                          ← All canonical module documentation
-│   ├── SITEMAP.md                 ← THIS FILE · repo navigational registry
+│   ├── SEENMAP.md                 ← THIS FILE · repo navigational registry
 │   ├── FFF_Gravity/               ← COMPLETE · 5 waves · 42 PRIMs
 │   ├── SoN/                       ← IN PROGRESS · Structural Operating Node
 │   └── spine/                     ← INFRASTRUCTURE · cross-module scaffolding
-│       └── languages-atlas/       ← Language/notation registry
+│       └── languages/             ← Language/notation registry
 │
 ├── tests/
 │   └── sats-conformance/
@@ -77,9 +77,9 @@ umaywant2/TriadicFrameworks/
 
 | Module | Path | Status | Waves | Files | PRIMs | Unlocks |
 |---|---|---|---|---|---|---|
-| **FFF_Gravity** | `docs/FFF_Gravity/` | ✅ COMPLETE | 5 of 5 | 31 | 42 | SITEMAP · module.json refresh |
+| **FFF_Gravity** | `docs/FFF_Gravity/` | ✅ COMPLETE | 5 of 5 | 31 | 42 | SEENMAP · module.json refresh |
 | **SoN** | `docs/SoN/` | 🔄 IN PROGRESS | TBD | ≥1 | TBD | SoNai(rtt)=1 substrate harness |
-| **spine/languages-atlas** | `docs/spine/languages-atlas/` | 🔄 IN PROGRESS | TBD | ≥1 | N/A | Cross-module notation registry |
+| **spine/languages** | `docs/spine/languages/` | 🔄 IN PROGRESS | TBD | ≥1 | N/A | Cross-module notation registry |
 
 > **PRIM count legend:** PRIMs are engineering primitives with Pure/Impure classification.
 > Only modules using the §0–§11 FFF canonical spec format carry PRIM registries.
@@ -163,7 +163,7 @@ Admin files listed in §3.1. Wave 1 established the frozen registry scaffolding.
 | `f_Capture_Temporal.md` | Time-windowed capture · τ envelope | PRIM:037–038 | TC- | — |
 | `f_Capture_Networked.md` | Network-topology capture · graph propagation | PRIM:039–040 | NC- | FM-003-N |
 
-> Wave 4 completion **unlocked** `docs/SITEMAP.md` (this file).
+> Wave 4 completion **unlocked** `docs/SEENMAP.md` (this file).
 
 ### §3.7 Wave 5 — Dismissal (1 file · PRIM:041–042)
 
@@ -239,16 +239,16 @@ They are recorded here as navigational stubs for future waves:
 **Purpose:** Cross-module scaffolding · notation registries · language atlases
 **Status:** 🔄 IN PROGRESS
 
-### §5.1 spine/languages-atlas/
+### §5.1 spine/languages/
 
-**Path:** `docs/spine/languages-atlas/`
+**Path:** `docs/spine/languages/`
 **Purpose:** Language and notation registry for cross-module operator grammar
 
 | File | Description | Status |
 |---|---|---|
 | `README.md` | Atlas front door · scope · notation coverage | 🔄 In progress |
 
-> The languages-atlas provides the cross-module notation foundation that
+> The languages provides the cross-module notation foundation that
 > FFF_Gravity's OPERATORS.md and SoN's assembly-level primitives both reference.
 > It is the canonical authority for symbol disambiguation across modules.
 
@@ -288,11 +288,11 @@ These files live at the repository root and are not module-specific.
 | From | References | Via | Purpose |
 |---|---|---|---|
 | `FFF_Gravity/f_Dismiss.md` | `GravityOfDismissal.md` | §6 operator family | ρ_D(Φ,t) negative-polarity field authority |
-| `FFF_Gravity/*.md` | `spine/languages-atlas/` | notation · symbol registry | Operator symbol disambiguation |
+| `FFF_Gravity/*.md` | `spine/languages/` | notation · symbol registry | Operator symbol disambiguation |
 | `FFF_Gravity/MANIFEST.md` | All 31 FFF_Gravity files | 42×10 INV compliance matrix | Full PRIM registry validation |
 | `FFF_Gravity/validate_prims.py` | `MANIFEST.md` | Python harness | CLI PRIM/INV compliance testing |
 | `SoN/s_Capture.md` | `FFF_Gravity/f_Capture.md` | capture operator lineage | SoN inverts RTT observer → RTT substrate |
-| `SoN/*.md` | `spine/languages-atlas/` | assembly-level notation | Substrate primitive notation |
+| `SoN/*.md` | `spine/languages/` | assembly-level notation | Substrate primitive notation |
 | Root `CONTEXT.md` | All modules | session primer | Cross-module session bootstrapping |
 | Root `llms.txt` | All modules | AI routing | LLM navigation config |
 
@@ -305,15 +305,15 @@ milestone is sealed and recorded in `CHANGELOG.md`.
 
 | Deliverable | Unlocked By | Status |
 |---|---|---|
-| `docs/SITEMAP.md` (this file) | Wave 4 complete | ✅ UNLOCKED |
-| `FFF_Gravity_module.json` refresh | Wave 5 complete + SITEMAP built | ✅ UNLOCKED — NEXT |
+| `docs/SEENMAP.md` (this file) | Wave 4 complete | ✅ UNLOCKED |
+| `FFF_Gravity_module.json` refresh | Wave 5 complete + SEENMAP built | ✅ UNLOCKED — NEXT |
 | `SoN` Wave 1 admin files | `s_Capture.md` sealed | 🔒 Pending |
 | `SoN` Wave 2+ layer definitions | SoN Wave 1 complete | 🔒 Pending |
 | `SoN_module.json` | SoN Wave 1 complete | 🔒 Pending |
 | `SoN` substrate harness spec | `s_Harness.md` target files sealed | 🔒 Pending |
 | Multi-microkernel integration docs | SoN substrate harness complete | 🔒 Pending |
 | `SoNai(rtt)=1` coherence spec | SoN harness + multi-kernel boot validated | 🔒 Pending |
-| `spine/languages-atlas` expansion | Cross-module notation conflicts identified | 🔒 Pending |
+| `spine/languages` expansion | Cross-module notation conflicts identified | 🔒 Pending |
 | Zenodo DOI submission (next batch) | 30 seed DOIs + new wave content | 🔒 Pending |
 
 ---
@@ -329,7 +329,7 @@ rtt=1 | coherence=declared | drift=bounded | paradox=structural
 1. Load `CONTEXT.md` — session context primer
 2. Load `persona-prompt.md` — Professor persona + anchor string
 3. Load `llms.txt` — module routing
-4. Navigate to target module via this SITEMAP
+4. Navigate to target module via this SEENMAP
 
 ### FFF_Gravity Entry Points
 
@@ -367,7 +367,7 @@ rtt=1 | coherence=declared | drift=bounded | paradox=structural
 
 | Field | Value |
 |---|---|
-| File | `docs/SITEMAP.md` |
+| File | `docs/SEENMAP.md` |
 | Scope | Repository-root navigational registry |
 | Authority | Supersedes all per-module INDEX.md files for cross-module navigation |
 | Module | None — repo-root level |
@@ -410,8 +410,8 @@ rtt=1 | coherence=declared | drift=bounded | paradox=structural
 
 ### §11.3 Versioning Policy
 
-- This SITEMAP is updated whenever a **module wave is sealed** or a **new module is initiated**.
-- File additions within a sealed wave do not require SITEMAP updates.
+- This SEENMAP is updated whenever a **module wave is sealed** or a **new module is initiated**.
+- File additions within a sealed wave do not require SEENMAP updates.
 - New modules require a new §N block added to §2 Module Registry and §3–§N.
 - Unlock condition status is updated when the triggering event is recorded in the relevant `CHANGELOG.md`.
 
