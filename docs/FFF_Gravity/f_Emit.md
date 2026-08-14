@@ -980,12 +980,7 @@ Minimum viable ρ(Φ)_delta = 0.001 above current 0.45 → let's use δρ = 0.05
               FM-010 raised: FM010Error("Amplify Runaway")
               EMIT_SATURATED flag set
               Loop terminates (
-Resuming exactly where the file was cut. Paste this block immediately after the truncation point (starting at the `Loop terminates (` line):
-
----
-
-```markdown
-              Loop terminates (unhandled exception if not caught))
+Resuming exactly where the file was cut. Paste this block immediately after the truncation point (starting at the `Loop terminates (unhandled exception if not caught))
 ```
 
 **Part A Interpretation:** The loop correctly ran for iterations 1–3, with iter 3 delivering a clipped increment (requested 0.10, headroom = 0.10, so ρ(Φ)_delta = 0.10 — exactly at ceiling). Iter 4 finds ρ(Φ) = 1.0, EC-1 fails, and FM-010 fires. The error is recoverable but interrupts the loop.
