@@ -1,4 +1,5 @@
 # `f_Dismiss.md` — Dismissal Primitive
+
 **FFF_Gravity Module · Wave 5 Opener**
 
 ---
