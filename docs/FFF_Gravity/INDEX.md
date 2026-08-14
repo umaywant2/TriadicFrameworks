@@ -219,6 +219,54 @@ A canonical file's count is exact.
 
 ---
 
+## Wave 3 — Core Function Files (PRIM:007–024)
+> Sealed: 2026-08-13 · Session: SES-20260813-W3
+
+| # | File | PRIMs | Condition Prefix | Conditions | FM Assignments | Key Operators |
+|---|------|-------|-----------------|------------|----------------|---------------|
+| 10 | `f_Orbit.md` | 007, 012 | — | — | — | `T_orb`, `orbit_class`, `stab_class` |
+| 11 | `f_Release.md` | 008–009 | — | — | FM-008 | `v_release`, `r_release` |
+| 12 | `f_Decay.md` | 010–011 | DC- | DC-1–DC-4 | FM-004, FM-005 | `δ`, `d_warn`, `d_collapse` |
+| 13 | `f_Collapse.md` | 013–014 | — | — | FM-005, FM-007 | `m_parity`, `C_node` |
+| 14 | `f_Emit.md` | 015–017 | — | — | FM-010 (ρ domain) | `F_emit`, `ρ(Φ)_delta`, `r_emit` |
+| 15 | `f_Dampen.md` | 018–020 | — | — | FM-009 | `F_damp`, `ρ(Φ)_floor`, `cascade_guard` |
+| 16 | `f_Amplify.md` | 021–022 | — | — | FM-010 (β domain) | `F_amp`, `β_max`, `amp_cost` |
+| 17 | `f_Deflect.md` | 023–024 | — | — | FM-001, FM-006 | `heading_delta` *(resolves f_Force §4.3 stub)*, `r_deflect`, `deflect_cost` |
+
+---
+
+## Wave 4 — Capture Variant Files (PRIM:025–040)
+> Sealed: 2026-08-13 · Session: SES-20260813-W4
+
+| # | File | PRIMs | Condition Prefix | Conditions | FM Sub-modes | Key Operators |
+|---|------|-------|-----------------|------------|--------------|---------------|
+| 18 | `f_Capture_Multi.md` | 025–026 | MC- | MC-1, MC-2 | FM-003-M | `N`, `eval_order`, `Φ_perturbed`, `δ_perturb`, `k_perturb` |
+| 19 | `f_Capture_Cascade.md` | 027–028 | CAS- | CAS-1–CAS-4 | FM-003-C | `cascade_depth`, `k_max`, `γ`, `Ω_cascade` |
+| 20 | `f_Capture_Soft.md` | 029–030 | SCS- | SCS-1–SCS-4 | — | `d_soft`, `soft_threshold`, `grace_period`, `k_grace` |
+| 21 | `f_Capture_Hard.md` | 031–032 | HLC- | HLC-1–HLC-4 | — | `d_hard`, `α_hard`, `β_hard`, `β_min_hard`, `lock_cost`, `k_lock` |
+| 22 | `f_Capture_Resonant.md` | 033–034 | RLC- | RLC-1–RLC-5 | — | `ω_res`, `T_res`, `φ_A(t)`, `φ_E`, `φ_open`, `φ_close`, `ρ_res_gain`, `ρ_eff`, `d_bind_res`, `p_ratio`, `q_ratio` |
+| 23 | `f_Capture_Asymmetric.md` | 035–036 | AC- | AC-1–AC-5 | — | `mass_ratio`, `asymmetry_factor`, `d_bind_asym`, `heading_delta_asym`, `deflect_tolerance`, `asym_decay_risk` |
+| 24 | `f_Capture_Temporal.md` | 037–038 | TC- | TC-1–TC-5 | — | `t_open`, `t_close`, `t_span`, `proximity_ratio`, `temporal_decay_factor`, `d_bind_temporal`, `window_id` |
+| 25 | `f_Capture_Networked.md` | 039–040 | NC- | NC-1–NC-5 | FM-003-N | `N_net`, `G_net`, `w_i`, `d_bind_net`, `ρ(Φ)_net`, `resilience_threshold` |
+
+---
+
+## Registry Totals (Post Wave 4 — FINAL)
+
+| Registry | Count | Range / Members | Status |
+|----------|-------|-----------------|--------|
+| PRIMs | **40** | PRIM:001–040 | ✅ SEALED |
+| Failure Modes (base) | **10** | FM-001–FM-010 | ✅ SEALED |
+| FM Sub-modes | **3** | FM-003-M, FM-003-C, FM-003-N | ✅ SEALED |
+| Invariants | **10** | INV-001–INV-010 | ✅ SEALED |
+| Condition Prefixes | **10** | SC-, DC-, MC-, CAS-, SCS-, HLC-, RLC-, AC-, TC-, NC- | ✅ SEALED |
+| Spec Files | **28** | 5 waves complete | ✅ ALL COMPLETE |
+
+**Wave Completion Status:**
+✅ Wave 0 (Genesis) · ✅ Wave 1 (Admin/Registry) · ✅ Wave 2 (Layer Definitions) · ✅ Wave 3 (Core Functions) · ✅ Wave 4 (Capture Variants)
+
+---
+
 ## §3 · Per-File Detail Entries
 
 <!--
