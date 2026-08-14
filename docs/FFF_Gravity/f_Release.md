@@ -1,4 +1,6 @@
----
+# f_Release · Orbital Exit Operator
+
+```
 title: "f_Release — Orbital Exit Operator"
 file_id: "FFF:GRAVITY:RELEASE"
 version: "1.0.0"
@@ -41,11 +43,9 @@ changelog:
     date: "2026-08-13"
     session: "SES-20260813-RELEASE-001"
     note: "Initial canonical production. Full §0–§11. All operators, primitives, FM-008, and 4 examples defined and frozen."
----
+```
 
 <!-- metadata: file=f_Release.md version=1.0.0 status=canonical session=SES-20260813-RELEASE-001 wave=3 -->
-
-# f_Release · Orbital Exit Operator
 
 > **[FFF:GRAVITY:RELEASE]** — Wave 3 · Core Function  
 > Inverse of `f_Capture`. Governs the conditions and mechanics by which a captured Element exits an Attractor's coherence well cleanly, transitioning to terminal state `RELEASED`.
