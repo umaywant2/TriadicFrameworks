@@ -1,4 +1,6 @@
----
+# `f_Deflect` — Heading Deflection Primitive
+
+```
 session_id: SES-20260813-DEFLECT-001
 file: docs/FFF_Gravity/f_Deflect.md
 module: FFF_Gravity
@@ -40,7 +42,7 @@ changelog:
       - Introduces PRIM:024 compute_deflection_cost (Pure)
       - Wave 3 completion milestone — all 8 files canonical
       - Wave 4 fully unlocked
----
+```
 
 <!-- ============================================================
      f_Deflect.md — FFF_Gravity Module
@@ -49,8 +51,6 @@ changelog:
      Status: CANONICAL
      Wave 3 FINAL — all 8 files complete upon this publication
      ============================================================ -->
-
-# `f_Deflect` — Heading Deflection Primitive
 
 > **F_force engineering primitive.**  
 > Modifies the direction of `v_approach` via angular redirect.  
