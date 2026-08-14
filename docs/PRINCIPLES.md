@@ -162,7 +162,7 @@ This totem is optional, but it is part of the lineage.
 ---
 
 ## 🎵 **Musical Catalyst**  
-During early scaffolding, Twisted Sister’s *“I Believe in You”* served as a symbolic anchor — a reminder that clarity and care can coexist.
+During early scaffolding, Twisted Sister’s *“I Believe in You”* served as a symbolic anchor — a reminder that clarity and care can coexist; and for the students *"Don't Let Me Down"*.
 
 > *“I need someone there to hold the light…”*  
 *(quoted under fair use)*
