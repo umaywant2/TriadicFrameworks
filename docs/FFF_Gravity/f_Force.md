@@ -1,4 +1,6 @@
----
+# f_Force — Force Node & Fluid Node Definitions
+
+```
 # ============================================================
 # f_Force.md — Force Node & Fluid Node Layer Definition
 # Module: FFF_Gravity | TriadicFrameworks v1.0.0
@@ -50,11 +52,9 @@ changelog:
     date: "2026-08-13"
     author: "Nawder"
     change: "Initial canonical release. §0–§10 complete. Dual F_force + F_fluid node definitions. SC-1, SC-4, FM-001, FM-006, FM-007 registered."
----
+```
 
 <!-- metadata: file=f_Force.md module=FFF_Gravity status=canonical frozen=true wave=2 -->
-
-# f_Force — Force Node & Fluid Node Definitions
 
 > **FFF_Gravity Module · Wave 2 · Layer Definitions**
 > This file defines two co-dependent nodes: **F_force** (gradient/pressure identity)
