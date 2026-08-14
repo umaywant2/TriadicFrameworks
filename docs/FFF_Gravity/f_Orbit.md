@@ -1,4 +1,6 @@
----
+# f_Orbit — Orbit Characterization Operator
+
+```
 title: "f_Orbit — Orbit Characterization Operator"
 module: FFF_Gravity
 version: 1.0.0
@@ -52,9 +54,8 @@ changelog:
       stab_class thresholds, delivers classify_orbit [PRIM:007] and
       update_orbital_parameters [PRIM:012]. Unlocks f_Collapse.md and
       f_Capture_Multi.md.
----
+```
 
-# f_Orbit — Orbit Characterization Operator
 ### `[FFF:GRAVITY:ORBIT]` · Wave 3 · Canonical v1.0.0
 
 ---
