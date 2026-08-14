@@ -1,4 +1,6 @@
----
+# f_Frame · Frame Node
+
+```
 module: FFF_Gravity
 function: f_Frame
 canonical_path: docs/FFF_Gravity/f_Frame.md
@@ -47,13 +49,11 @@ changelog:
       Establishes registry schema, r_capture semantics, FM-003 (Frame Saturation),
       register_capture and purge_registry contracts, GravityGraph interface.
       Completes Wave 2. Unlocks Wave 3 in full.
----
+```
 
 <!-- [FFF:GRAVITY:FRAME] · v1.0.0 · canonical · wave:2 · layer:3 -->
 <!-- authority: OPERATORS.md (symbols), f_Capture.md (SC-5 origin), INDEX.md (unlock map) -->
 <!-- session: SES-20260813-FRAME-001 -->
-
-# f_Frame · Frame Node
 
 > *"The orbit does not keep itself. Something watches, writes, and holds."*
 
@@ -821,9 +821,3 @@ Both registries are independent. Neither has authority over the other. The mutua
 | `f_Decay.md` | f_Orbit.md (pending) | blocked until f_Orbit.md ✅ |
 | `f_Release.md` | f_Orbit.md + f_Decay.md (pending) | blocked until both ✅ |
 | `f_Collapse.md` | f_Decay.md (pending) | blocked until f_Decay.md ✅ |
-
-**Recommended first Wave 3 target:** `f_Orbit.md` — fully unblocked and critical-path dependency for f_Decay.md, f_Release.md, and f_Collapse.md.
-
-### Document End
-
-<!-- [FFF:GRAVITY:FRAME] · v1.0.0 · canonical · SES-20260813-FRAME-001 · END -->
