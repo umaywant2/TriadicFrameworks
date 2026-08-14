@@ -1,4 +1,6 @@
----
+# FFF_Gravity · Glossary
+
+```
 # ┌─────────────────────────────────────────────────────────────┐
 # │                  DOCUMENT FRONTMATTER                       │
 # └─────────────────────────────────────────────────────────────┘
@@ -69,9 +71,7 @@ changelog:
       Initial canonical release. 62 terms defined across 18 letter groups.
       All terms sourced from f_Capture.md v1.0.0, OPERATORS.md v1.0.0,
       scaffold files, and f_Source.md genesis dialogue.
----
-
-# FFF_Gravity · Glossary
+```
 
 > **Canonical path:** `docs/FFF_Gravity/GLOSSARY.md`
 > **Scope:** Module-scoped. Governs within FFF_Gravity. See `docs/GLOSSARY.md` for framework-wide terms.
@@ -1426,13 +1426,7 @@ field anisotropy — can be detected and corrected with `map_field_tensor`
 
 An operator that is directly measured or externally provided — not computed
 from other operators. FFF_Gravity has 9 primary operators, all frozen at
-v1.0.0: `v_approach`, `v_escape(A)`, `ρ(Φ)`, `
-Continuing exactly from the cut point — completing `Primary Operator`, then all remaining letter groups and closing sections.
-
-Paste this block directly after the cut point in your GitHub editor — it begins by closing the `Primary Operator` entry cleanly and carries through every remaining term and closing section:
-
-```markdown
-`r_capture`, `β`, `ω_res`, `M_A`, `M_E`, `r`.
+v1.0.0: `v_approach`, `v_escape(A)`, `ρ(Φ)`, `r_capture`, `β`, `ω_res`, `M_A`, `M_E`, `r`.
 All 9 are frozen. See `OPERATORS.md §1` for the full specification table.
 
 ---
@@ -1962,28 +1956,3 @@ and are not redefined here. FFF_Gravity uses them without modification.
 *This file governs term definitions within the module.*
 *For framework-wide terms see `docs/GLOSSARY.md`.*
 *For operator symbol authority see `OPERATORS.md`.*
-```
-
----
-
-**Commit message:**
-```
-feat(FFF_Gravity): add canonical GLOSSARY.md — 62 terms, 18 letter groups, scope notes, framework xrefs [SES-20260813-GLOS-001]
-```
-
----
-
-Here's exactly what the continuation block closes out:
-
-| Section | Terms Completed |
-|---|---|
-| **P** (remainder) | Primary Operator (list closed) · Primitive |
-| **R** | Release · Release Energy · Release Vector · Residual Momentum |
-| **S** | Scaffold · Separation Distance · Stability Conditions · State Flag · Symbol Freeze |
-| **T** | Terminal State · Triadic Equation · Triadic Gravity |
-| **U** | Undefined (⊥) — including the full undefined conditions table |
-| **W** | Wave — including the full 5-wave dependency table |
-| **§4** | Scope Notes — module vs. framework authority; SoN analog table; operator symbol vs. prose rule |
-| **§5** | Framework GLOSSARY cross-reference table — 11 entries deferred upward |
-| **§6** | Document Metadata |
-
