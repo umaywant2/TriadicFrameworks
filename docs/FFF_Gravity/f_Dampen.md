@@ -1,4 +1,6 @@
----
+# f_Dampen — Field Suppression Primitive
+
+```
 title: "f_Dampen — Field Suppression Primitive"
 module: FFF_Gravity
 version: 1.0.0
@@ -64,9 +66,8 @@ changelog:
       r_damp, cascade_guard, E_damp frozen. PRIM:018–020 frozen. FM-009
       (Dampen Cascade) fully specified. DAMP-C-1 through DAMP-C-4 conjunctive
       conditions. 4 canonical examples. Full INV compliance table.
----
+```
 
-# f_Dampen — Field Suppression Primitive
 **Tag:** `[FFF:GRAVITY:DAMPEN]` · **Wave 3 · File 6 of 8** · **Canonical v1.0.0**
 
 ---
@@ -1101,4 +1102,3 @@ def iterative_dampen_loop(
 | FM-009 | Dampen Cascade | fatal | ρ(Φ) reaches floor; null propagates to adjacent node | No (INV-006) |
 
 **With FM-009 frozen here, all 10 module failure modes (FM-001 through FM-010) are now canonical.**
-
