@@ -1,4 +1,8 @@
+# f_Capture_Multi
+
 ---
+
+```
 session_id: "SES-20260813-CAPTURE-MULTI-001"
 canonical_tag: "[FFF:GRAVITY:CAPTURE:MULTI]"
 file: "f_Capture_Multi.md"
@@ -42,7 +46,7 @@ changelog:
       First canonical release. MULTI_ELEMENT and MULTI_ATTRACTOR modes.
       N, eval_order, Φ_perturbed, δ_perturb frozen. PRIM:025–026 opened.
       FM-003-M defined as FM-003 sub-mode. Wave 4 primitive block formally opened.
----
+```
 
 <!-- [FFF:GRAVITY:CAPTURE:MULTI] | canonical | v1.0.0 | SES-20260813-CAPTURE-MULTI-001 -->
 
@@ -865,18 +869,3 @@ modes, δ_perturb perturbation model, PRIM:025-026, FM-003-M, MC-1/MC-2 [Wave4-S
 
 ---
 *End of f_Capture_Multi.md — canonical, Wave 4, v1.0.0*
-```
-
----
-
-`f_Capture_Multi.md` is complete and ready to paste into the GitHub editor. Here's a quick status summary before you commit:
-
----
-
-**Wave 4 — What was just delivered**
-- ✅ `f_Capture_Multi.md` — MULTI_ELEMENT + MULTI_ATTRACTOR modes, perturbation model (Φ_perturbed / δ_perturb), PRIM:025–026, MC-1/MC-2 conditions, FM-003-M sub-mode, 4 canonical examples
-
-**Suggested commit message:**
-```
-feat(FFF_Gravity): add canonical f_Capture_Multi — MULTI_ELEMENT/MULTI_ATTRACTOR
-modes, δ_perturb perturbation model, PRIM:025-026, FM-003-M, MC-1/MC-2 [Wave4-Session-001]
