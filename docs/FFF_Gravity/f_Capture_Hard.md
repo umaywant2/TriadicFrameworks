@@ -1,4 +1,8 @@
+# f_Capture_Hard — Hard Lock Capture Variant
+
 ---
+
+```
 id: FFF_Gravity/f_Capture_Hard
 title: "f_Capture_Hard — Hard Lock Capture Variant"
 version: 0.4.0
@@ -12,9 +16,9 @@ depends_on:
 status: canonical
 created: 2026-08-13
 authors: [umaywant2]
----
+```
 
-# f_Capture_Hard — Hard Lock Capture Variant
+---
 
 ## §0 — Preamble
 
