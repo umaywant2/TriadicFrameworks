@@ -219,6 +219,36 @@ A canonical file's count is exact.
 
 ---
 
+## Wave 5 — Dismissal (PRIM:041–042)
+> Sealed: 2026-08-14 · Session: SES-20260814-DISMISS-001
+
+| # | File | PRIMs | Condition Prefix | Conditions | FM References | Key Operators |
+|---|------|-------|-----------------|------------|---------------|---------------|
+| 29 | `f_Dismiss.md` | 041–042 | DISM- | DISM-1–DISM-5 | FM-001 (WELL_BARRIER), FM-002, FM-006 (DISMISS_PHANTOM) | `F_dismiss`, `ρ_D(Φ)`, `d_dismiss`, `T_dismiss`, `r_dismiss`, `ψ_dismiss`, `t_dismiss`, `v_depart`, `β_D` |
+
+**Wave 5 note:** `f_Dismiss.md` formalizes the `F_dismiss` operator family that
+was named conceptually in `GravityOfDismissal.md §6` (Wave 0). All nine operators
+are frozen in `f_Dismiss.md`. The Dismissal Well model is the sole negative-polarity
+extension of `ρ(Φ)` in the module; `ρ_D(Φ) ∈ (−1, 0]` is its authoritative domain.
+
+---
+
+## Registry Totals (Post Wave 5 — FINAL)
+
+| Registry               | Count      | Range / Members                                    | Status     |
+|------------------------|------------|----------------------------------------------------|------------|
+| PRIMs                  | **42**     | PRIM:001–042                                       | ✅ SEALED  |
+| Failure Modes (base)   | **10**     | FM-001–FM-010                                      | ✅ SEALED  |
+| FM Sub-modes           | **3**      | FM-003-M, FM-003-C, FM-003-N                       | ✅ SEALED  |
+| Invariants             | **10**     | INV-001–INV-010                                    | ✅ SEALED  |
+| Condition Prefixes     | **11**     | SC-, DC-, MC-, CAS-, SCS-, HLC-, RLC-, AC-, TC-, NC-, DISM- | ✅ SEALED |
+| Spec Files             | **29**     | 5 waves complete                                   | ✅ ALL COMPLETE |
+
+**Wave Completion:**
+✅ Wave 0 · ✅ Wave 1 · ✅ Wave 2 · ✅ Wave 3 · ✅ Wave 4 · ✅ Wave 5
+
+---
+
 ## Wave 3 — Core Function Files (PRIM:007–024)
 > Sealed: 2026-08-13 · Session: SES-20260813-W3
 
