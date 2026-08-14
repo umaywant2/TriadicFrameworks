@@ -1,4 +1,6 @@
----
+# FFF_Gravity · Index
+
+```
 # ┌─────────────────────────────────────────────────────────────┐
 # │                  DOCUMENT FRONTMATTER                       │
 # └─────────────────────────────────────────────────────────────┘
@@ -53,9 +55,7 @@ changelog:
     date:    2026-08-13
     author:  TriadicFrameworks
     notes:   Initial canonical release. 27 files registered. 4 canonical, 22 scaffold, 1 archived.
----
-
-# FFF_Gravity · Index
+```
 
 > **Canonical path:** `docs/FFF_Gravity/INDEX.md`
 > **Scope:** All files in `docs/FFF_Gravity/` · Branch: `main`
