@@ -772,3 +772,105 @@ bump to change:
 **Commit message:**
 ```
 feat(FFF_Gravity): add canonical CHANGELOG.md — full founding day history, 12 sessions, v1.0.0 record, session registry [SES-20260813-CL-001]
+
+---
+
+## [Wave 3] — Core Function Operators
+> Session: SES-20260813-W3 | Date: 2026-08-13 | Scope: PRIM:007–024
+
+### Added
+
+**f_Orbit.md** (PRIM:007, 012)
+- Added `T_orb` (orbital period), `orbit_class` enum, `stab_class` enum
+- Defines stable/decaying/escape orbit classification from binding and decay state
+
+**f_Release.md** (PRIM:008–009)
+- Added `v_release` (scalar release velocity) and `r_release` (release radius)
+- Introduces FM-008: unbinding at insufficient escape velocity
+
+**f_Decay.md** (PRIM:010–011)
+- Added `δ` (decay rate), `d_warn` (warning threshold), `d_collapse` (collapse threshold)
+- Introduces FM-004 (decay cascade) and FM-005 (collapse eligibility)
+- Added DC- condition prefix; conditions DC-1–DC-4 sealed
+
+**f_Collapse.md** (PRIM:013–014)
+- Added `m_parity` (mass parity ratio) and `C_node` (surviving node identifier)
+- Collapse evaluation triggered by FM-005; resolution routed through FM-007
+
+**f_Emit.md** (PRIM:015–017)
+- Added `F_emit` (emission force), `ρ(Φ)_delta` (field density change per event), `r_emit` (emission radius)
+- Introduces FM-010 ρ domain guard (ρ(Φ) ceiling enforcement)
+
+**f_Dampen.md** (PRIM:018–020)
+- Added `F_damp` (dampening force, negative polarity), `ρ(Φ)_floor` (minimum floor), `cascade_guard` (flag)
+- Introduces FM-009: dampening chain lockout guard
+
+**f_Amplify.md** (PRIM:021–022)
+- Added `F_amp` (amplification force), `β_max` (hard ceiling on β), `amp_cost` (energy deduction per cycle)
+- Introduces FM-010 β domain guard (β ceiling enforcement)
+
+**f_Deflect.md** (PRIM:023–024)
+- Added `heading_delta` (angular deflection, [−π, π]), `r_deflect` (deflection radius), `deflect_cost` (energy cost)
+- **Resolves forward stub:** `heading_delta` declared in `f_Force.md §4.3` (PRIM:005); now fully defined at PRIM:023
+- Introduces FM-001 (bind threshold guard) and FM-006 (deflection-direction guard)
+
+### Registry Deltas (post Wave 3)
+- PRIMs: +18 → cumulative **024**
+- Failure Modes active: FM-004, FM-005, FM-006, FM-007, FM-008, FM-009, FM-010
+- Stub resolved: `heading_delta` (f_Force.md §4.3 → f_Deflect.md PRIM:023)
+
+---
+
+## [Wave 4] — Capture Variant Operators
+> Session: SES-20260813-W4 | Date: 2026-08-13 | Scope: PRIM:025–040
+
+### Added
+
+**f_Capture_Multi.md** (PRIM:025–026)
+- Added `N`, `eval_order`, `Φ_perturbed`, `δ_perturb`, `k_perturb`
+- Added MC- condition prefix; conditions MC-1, MC-2 sealed
+- Introduces FM sub-mode FM-003-M (multi-target bind conflict guard)
+
+**f_Capture_Cascade.md** (PRIM:027–028)
+- Added `cascade_depth`, `k_max`, `γ` (cascade gain), `Ω_cascade`
+- Added CAS- condition prefix; conditions CAS-1–CAS-4 sealed
+- Introduces FM sub-mode FM-003-C (cascade depth overflow guard)
+
+**f_Capture_Soft.md** (PRIM:029–030)
+- Added `d_soft`, `soft_threshold`, `grace_period`, `k_grace`
+- Added SCS- condition prefix; conditions SCS-1–SCS-4 sealed
+
+**f_Capture_Hard.md** (PRIM:031–032)
+- Added `d_hard`, `α_hard`, `β_hard`, `β_min_hard`, `lock_cost`, `k_lock`
+- Added HLC- condition prefix; conditions HLC-1–HLC-4 sealed
+
+**f_Capture_Resonant.md** (PRIM:033–034)
+- Added `ω_res`, `T_res`, `φ_A(t)`, `φ_E`, `φ_open`, `φ_close`, `window_width`, `p_ratio`, `q_ratio`
+- Added `ρ_res_gain`, `ρ_eff`, `ρ_res_floor`, `d_bind_res`, `T_orb_res`
+- Added RLC- condition prefix; conditions RLC-1–RLC-5 sealed
+
+**f_Capture_Asymmetric.md** (PRIM:035–036)
+- Added `mass_ratio`, `asymmetry_factor`, `parity_warn_threshold`
+- Added `d_bind_asym`, `heading_delta_asym`, `deflect_tolerance`, `asym_decay_risk`
+- Added AC- condition prefix; conditions AC-1–AC-5 sealed
+
+**f_Capture_Temporal.md** (PRIM:037–038)
+- Added `t_open`, `t_close`, `t_span`, `t_elapsed`, `t_remaining`, `window_id`
+- Added `proximity_ratio`, `temporal_decay_factor`, `d_bind_temporal`, `temporal_margin`
+- Added TC- condition prefix; conditions TC-1–TC-5 sealed
+
+**f_Capture_Networked.md** (PRIM:039–040)
+- Added `N_net`, `G_net`, `w_i`, `d_bind_net`, `ρ(Φ)_net`, `resilience_threshold`
+- Added NC- condition prefix; conditions NC-1–NC-5 sealed
+- Introduces FM sub-mode FM-003-N (network partition guard)
+
+### Registry Deltas (post Wave 4 — FINAL)
+- PRIMs: +16 → cumulative **040** ✅ SEALED
+- FM Sub-modes added: FM-003-M, FM-003-C, FM-003-N ✅ SEALED
+- Condition prefixes added: MC-, CAS-, SCS-, HLC-, RLC-, AC-, TC-, NC- ✅ SEALED
+- Invariants: INV-001–INV-010 ✅ SEALED (no new INVs introduced in Waves 3–4)
+- Total spec files: **28** across 5 waves ✅ ALL COMPLETE
+
+### Notes
+- `GravityOfDismissal.md` conceptual operators (F_dismiss family, ρ_D(Φ)) are **not registered** in this wave; they remain concept-level and are pending Wave 5 formalization.
+- No existing OPERATORS.md, INDEX.md, or CHANGELOG.md entries were modified. Append-only per INV-009 and admin policy.
