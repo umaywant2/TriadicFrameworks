@@ -1,4 +1,6 @@
----
+# FFF_Gravity · Operators
+
+```
 # ┌─────────────────────────────────────────────────────────────┐
 # │                  DOCUMENT FRONTMATTER                       │
 # └─────────────────────────────────────────────────────────────┘
@@ -59,9 +61,7 @@ changelog:
       Initial canonical release. 9 primary operators, 10 derived operators,
       11 state flags, 15 primitives, 10 failure modes. All symbols from
       f_Capture.md v1.0.0 frozen. Wave 3+ symbols marked pending.
----
-
-# FFF_Gravity · Operators
+```
 
 > **Canonical path:** `docs/FFF_Gravity/OPERATORS.md`
 > **Authority:** This document is the single source of truth for all operator
