@@ -14,7 +14,7 @@ But before the legalese, a note from Nawder Loswin, creator of TriadicFrameworks
 
 MIT License
 
-Copyright (c) 2025-2026 TriadicFrameworks.org
+Copyright (c) 2026 Nawder Loswin
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
