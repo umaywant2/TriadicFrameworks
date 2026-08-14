@@ -428,3 +428,5 @@ What the README delivers vs. the other admin files:
 | **Reading orders** by role | **Version history** (`CHANGELOG.md`) |
 | **Unlock dependencies** at a glance | **Machine-readable** descriptor (`FFF_Gravity_module.json`) |
 | **Failure mode index** for quick lookup | Per-FM detail in each function file |
+
+- [`FFF_Gravity_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/FFF_Gravity/FFF_Gravity_module.json) — Agentic module schema role assignments
