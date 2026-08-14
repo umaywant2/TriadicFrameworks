@@ -1,4 +1,8 @@
+# f_Capture_Networked — Distributed Network Capture Variant
+
 ---
+
+```
 file: f_Capture_Networked.md
 module: FFF_Gravity
 wave: "4 — Addendum (file 8 of 8)"
@@ -20,9 +24,10 @@ depends_on:
   - f_Deflect.md
   - f_Capture_Multi.md
   - f_Capture_Cascade.md
+```
+
 ---
 
-# f_Capture_Networked — Distributed Network Capture Variant
 ### FFF_Gravity Module · Wave 4 Addendum · Session SES-20260813-CAPTURE_NETWORKED-001
 
 ---
@@ -33,7 +38,7 @@ depends_on:
 |----------------------|-------------------------------------------------|
 | Session ID           | SES-20260813-CAPTURE_NETWORKED-001              |
 | Date                 | 2026-08-13                                      |
-| Wave                 | Wave 4 Addendum — file 8 of 8 (Capture series) |
+| Wave                 | Wave 4 Addendum — file 8 of 8 (Capture series)  |
 | Author               | umaywant2                                       |
 | Status               | Canonical — paste-ready                         |
 | PRIM range this file | PRIM:039 – PRIM:040                             |
@@ -81,11 +86,11 @@ f_Capture_Cascade.md  →  cascade propagation (reference — not invoked here)
 |-----------------------|---------------------------------------------------------------|
 | **File**              | `f_Capture_Networked.md`                                      |
 | **Function class**    | Capture variant — distributed network binding                 |
-| **Governing equation**| `G = F_freq · F_fluid · F_force` [INV-001]                   |
+| **Governing equation**| `G = F_freq · F_fluid · F_force` [INV-001]                    |
 | **Primary operator**  | `d_bind_net` — weighted network binding depth                 |
-| **Triadic position**  | F_fluid (mass-density / binding) — distributed               |
-| **Directionality**    | Entity E ← Network {A_1 … A_N} (many-to-one pull)           |
-| **Reversibility**     | Non-reversible once NC-1–NC-5 all pass and lock committed    |
+| **Triadic position**  | F_fluid (mass-density / binding) — distributed                |
+| **Directionality**    | Entity E ← Network {A_1 … A_N} (many-to-one pull)             |
+| **Reversibility**     | Non-reversible once NC-1–NC-5 all pass and lock committed     |
 | **State mutation**    | PRIM:040 only — all participating node frames mutated         |
 
 ### §1.2 Triadic Position — Companion Table
@@ -102,13 +107,13 @@ f_Capture_Cascade.md  →  cascade propagation (reference — not invoked here)
 |--------------------|------------------------|------------------------------------------|
 | f_Capture          | Single A → E           | Baseline; establishes d_bind, β          |
 | f_Capture_Multi    | A → {E_1…E_n}          | One attractor, many entities             |
-| f_Capture_Cascade  | A_1 → A_2 → … → E     | Sequential chain, field perturbation     |
+| f_Capture_Cascade  | A_1 → A_2 → … → E     | Sequential chain, field perturbation      |
 | f_Capture_Soft     | A → E (low β)          | Graceful shallow lock; reversible        |
 | f_Capture_Hard     | A → E (high α_hard)    | Irreversible deep lock                   |
 | f_Capture_Resonant | A ↔ E (mutual freq)    | Resonance-driven co-lock                 |
 | f_Capture_Asymmetric| A → E (M_A ≫ M_E)     | Mass-asymmetric binding                  |
 | f_Capture_Temporal | A → E (time-decay)     | Binding degrades with proximity history  |
-| **f_Capture_Networked** | **{A_1…A_N} → E** | **Distributed network co-attraction**   |
+| **f_Capture_Networked** | **{A_1…A_N} → E** | **Distributed network co-attraction**    |
 
 ---
 
@@ -164,9 +169,9 @@ G = F_freq · F_fluid · F_force
 
 | Node     | Network Expression                                          |
 |----------|-------------------------------------------------------------|
-| F_freq   | `F_freq_net = min(F_freq_i) for i ∈ active(G_net)`         |
-| F_fluid  | `F_fluid_net = ρ(Φ)_net × d_bind_net`                      |
-| F_force  | `F_force_net = Σ(w_i_norm × F_force_i)`                    |
+| F_freq   | `F_freq_net = min(F_freq_i) for i ∈ active(G_net)`          |
+| F_fluid  | `F_fluid_net = ρ(Φ)_net × d_bind_net`                       |
+| F_force  | `F_force_net = Σ(w_i_norm × F_force_i)`                     |
 
 > **Note on F_freq_net:** Coherence is the bottleneck quantity — the network's effective coherence is bounded by its weakest node. A single low-frequency node can suppress the entire network pull.
 
