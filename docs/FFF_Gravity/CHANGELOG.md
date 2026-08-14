@@ -1,4 +1,6 @@
----
+# FFF_Gravity · Changelog
+
+```
 # ┌─────────────────────────────────────────────────────────────┐
 # │                  DOCUMENT FRONTMATTER                       │
 # └─────────────────────────────────────────────────────────────┘
@@ -81,9 +83,7 @@ changelog:
     date:    2026-08-13
     author:  TriadicFrameworks
     notes:   Initial canonical release. Full module established in one founding day.
----
-
-# FFF_Gravity · Changelog
+```
 
 > **Canonical path:** `docs/FFF_Gravity/CHANGELOG.md`
 > **Policy:** Append-only. Entries are never edited or removed after writing.
