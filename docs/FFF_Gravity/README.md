@@ -1,3 +1,5 @@
+<img width="682" height="682" alt="triadic_gravity_resonance_field" src="https://github.com/user-attachments/assets/28d9cd98-16e5-46b3-b478-a80c589240ca" />
+
 ---
 # ┌─────────────────────────────────────────────────────────────┐
 # │                  DOCUMENT FRONTMATTER                       │
