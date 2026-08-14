@@ -1,4 +1,6 @@
----
+# f_Capture_Resonant — Resonance-Locked Capture
+
+```
 id: f_Capture_Resonant
 title: "f_Capture_Resonant — Resonance-Locked Capture"
 module: FFF_Gravity
@@ -33,11 +35,9 @@ depends_on:
   - f_Field.md
   - f_Force.md
   - OPERATORS.md
----
+```
 
 ---
-
-# f_Capture_Resonant — Resonance-Locked Capture
 
 **Module:** FFF_Gravity
 **Wave:** 4 — Capture Variants
