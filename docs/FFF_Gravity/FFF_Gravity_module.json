@@ -1,802 +1,835 @@
 {
-  "_meta": {
-    "document": "FFF_Gravity_module.json",
-    "canonical_path": "docs/FFF_Gravity/FFF_Gravity_module.json",
-    "canonical_tag": "[FFF:GRAVITY:MODULE]",
-    "description": "Machine-readable descriptor for the FFF_Gravity module. Authoritative for tooling, AI traversal, Zenodo metadata sync, and cross-module dependency resolution. Human-readable companion: README.md. Symbol authority: OPERATORS.md.",
-    "version": "1.0.0",
-    "status": "canonical",
-    "stability": "living",
-    "normative": true,
-    "created": "2026-08-13",
-    "last_modified": "2026-08-13",
-    "encoding": "UTF-8",
-    "authors": ["TriadicFrameworks"],
-    "license": "see /LICENSE at repository root",
-    "update_policy": "Update when any file changes status, a symbol is added or frozen, or the dependency graph changes. Bump version to match OPERATORS.md version.",
-    "session_context": {
-      "current_session": {
-        "session_id": "SES-20260813-JSON-001",
-        "opened_at": "2026-08-13T08:28:00-04:00",
-        "closed_at": null,
-        "editor": "Nawder",
-        "branch": "main",
-        "intent": "Create canonical FFF_Gravity_module.json — full machine-readable module descriptor",
-        "status": "active"
-      },
-      "session_history": [
-        { "session_id": "SES-20260813-005",    "intent": "Full module scaffold",          "status": "closed" },
-        { "session_id": "SES-20260813-README-001", "intent": "Create README.md",          "status": "closed" },
-        { "session_id": "SES-20260813-INDEX-001",  "intent": "Create INDEX.md",           "status": "closed" },
-        { "session_id": "SES-20260813-OPS-001",    "intent": "Create OPERATORS.md",       "status": "closed" },
-        { "session_id": "SES-20260813-GLOS-001",   "intent": "Create GLOSSARY.md",        "status": "closed" },
-        { "session_id": "SES-20260813-CL-001",     "intent": "Create CHANGELOG.md",       "status": "closed" }
-      ]
-    }
-  },
+  "_comment": "FFF_Gravity_module.json — Machine-readable module manifest",
+  "_version": "2.0.0",
+  "_last_updated": "2026-08-14",
+  "_session": "SES-20260814-JSON-REFRESH-001",
+  "_status": "SEALED",
+  "_waves_complete": 5,
+  "_repo": "umaywant2/TriadicFrameworks",
+  "_path": "docs/FFF_Gravity/FFF_Gravity_module.json",
+  "_seenmap": "docs/SEENMAP.md",
+  "_spine_languages": "docs/spine/languages/",
 
   "module": {
+    "id": "FFF_Gravity",
     "name": "FFF_Gravity",
-    "canonical_tag": "[FFF:GRAVITY]",
-    "framework": "TriadicFrameworks",
-    "layer": "Field–Force–Frame",
-    "domain": "Attractor Dynamics / Binding Logic / Triadic Gravity",
-    "version": "1.0.0",
-    "status": "canonical",
-    "stability": "stable",
-    "maturity": "production-ready",
-    "created": "2026-08-13",
-    "last_modified": "2026-08-13",
-    "authors": ["TriadicFrameworks"],
-    "license": "see /LICENSE at repository root",
-    "repository": "https://github.com/umaywant2/TriadicFrameworks",
-    "module_path": "docs/FFF_Gravity/",
-    "related_modules": [
-      "SoN",
-      "FFF_Field",
-      "FFF_Frame",
-      "FFF_Momentum",
-      "FFF_Resonance",
-      "FFF_Registry"
-    ],
-    "related_docs": [
-      "docs/SITEMAP.md",
-      "docs/SoN/s_Capture.md",
-      "docs/PRINCIPLES.md",
-      "docs/GLOSSARY.md",
-      "docs/Grammar.md"
-    ],
-    "tags": [
-      "FFF",
-      "gravity",
-      "capture",
-      "attractor",
-      "binding",
-      "orbital-dynamics",
-      "triadic",
-      "resonance",
-      "field-force-frame",
-      "attractor-dynamics"
-    ]
-  },
-
-  "triadic_model": {
-    "equation": "G = F_freq · F_fluid · F_force",
-    "description": "Gravity is a local triadic ratio of three inseparable nodes. None can be removed at any scale or epoch. Only their ratios change.",
-    "nodes": {
-      "F_freq": {
-        "name": "Frequency Node",
-        "identity": "Gravitational field identity — coherence well, resonance signature, substrate anchor",
-        "primary_operator": "ρ(Φ)",
-        "engineering_primitive": "f_Emit / f_Dampen",
-        "defined_in": "f_Field.md",
-        "collapse_mode": "FM-002"
-      },
-      "F_fluid": {
-        "name": "Fluid Node",
-        "identity": "Mass-density identity — distribution, pooling, substrate continuity",
-        "primary_operators": ["M_A", "M_E"],
-        "engineering_primitive": "f_Amplify",
-        "defined_in": "f_Force.md",
-        "collapse_mode": "FM-007"
-      },
-      "F_force": {
-        "name": "Force Node",
-        "identity": "Gradient/pressure identity — atmospheric, isomorphic, overlay fields",
-        "primary_operator": "v_approach",
-        "engineering_primitive": "f_Deflect",
-        "defined_in": "f_Force.md",
-        "collapse_mode": "FM-001"
-      }
+    "full_name": "Framework Field Function — Gravity",
+    "tag": "[FFF:GRAVITY]",
+    "triadic_equation": "G = F_freq · F_fluid · F_force",
+    "triadic_nodes": {
+      "F_freq": "Frequency / field-coherence layer — ρ(Φ), ω_res, field density",
+      "F_fluid": "Fluid / binding layer — β, d_bind, mass, frame capacity",
+      "F_force": "Force / approach layer — v_approach, v_escape, heading_delta"
     },
-    "fff_stack": {
-      "Field": {
-        "component": "Φ (field state)",
-        "role": "Ambient medium — F_freq provides ρ(Φ)",
-        "provided_by": "FFF_Field (external)"
-      },
-      "Force": {
-        "component": "f_Capture and sibling functions",
-        "role": "Operative computation layer",
-        "provided_by": "this module"
-      },
-      "Frame": {
-        "component": "Ω (capture outcome)",
-        "role": "Registry, boundary conditions, recorded relational state",
-        "provided_by": "f_Frame.md"
-      }
-    }
+    "version": "2.0.0",
+    "status": "SEALED",
+    "waves_total": 5,
+    "files_total": 31,
+    "prim_total": 42,
+    "prim_range": "PRIM:001–042",
+    "invariant_total": 10,
+    "failure_mode_total": 13,
+    "condition_prefix_total": 11,
+    "state_flag_total": 31,
+    "operator_total_approx": 101,
+    "path": "docs/FFF_Gravity/",
+    "date_created": "2026-01-01",
+    "date_sealed": "2026-08-14",
+    "author": "umaywant2",
+    "license": "Apache-2.0",
+    "coherence_anchor": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
   },
 
-  "external_dependencies": {
-    "inbound": [
-      {
-        "module": "FFF_Field",
-        "provides": ["Φ (field state)", "ρ(Φ)"],
-        "consumed_by": ["f_Capture", "f_Field"]
-      },
-      {
-        "module": "FFF_Momentum",
-        "provides": ["v_approach", "v_escape(A)", "p_res"],
-        "consumed_by": ["f_Capture", "f_Force"]
-      },
-      {
-        "module": "FFF_Resonance",
-        "provides": ["ω_res"],
-        "consumed_by": ["f_Capture", "f_Field"]
-      },
-      {
-        "module": "FFF_Frame",
-        "provides": ["registry_capacity", "boundary_conditions"],
-        "consumed_by": ["f_Capture", "f_Frame"]
-      }
-    ],
-    "outbound": [
-      {
-        "module": "FFF_Registry",
-        "receives": ["capture_records", "orbital_parameters", "state_flag_transitions"],
-        "written_by": ["register_capture", "execute_release", "execute_collapse", "flag_decay"]
-      }
-    ]
-  },
-
-  "files": {
-    "wave_0": [
-      {
-        "file": "f_Capture.md",
-        "type": "core_function",
-        "status": "canonical",
-        "version": "1.0.0",
-        "canonical_tag": "[FFF:GRAVITY:CAPTURE]",
-        "wave": 0,
-        "sections": 13,
-        "section_range": "§0–§12",
-        "operators": { "primary": 6, "derived": 4, "flags": 5 },
-        "primitives": 6,
-        "failure_modes": ["FM-001","FM-002","FM-003","FM-004","FM-005","FM-006","FM-007"],
-        "examples": ["EX-001","EX-002","EX-003","EX-004"],
-        "depends_on": ["f_Field","f_Force","f_Frame","FFF_Momentum","FFF_Resonance"],
-        "provides_to": ["f_Release","f_Decay","f_Orbit","f_Collapse","f_Capture_Multi","f_Capture_Cascade","f_Capture_Resonant","f_Capture_Asymmetric","f_Capture_Temporal","f_Capture_Networked"],
-        "reference_implementation": true
-      },
-      {
-        "file": "f_Source.md",
-        "type": "genesis_archive",
-        "status": "archived",
-        "version": null,
-        "wave": 0,
-        "read_only": true,
-        "description": "Genesis dialogue — originating flash conversations that produced the FFF triadic gravity model",
-        "use": "Primary source for F_freq/F_fluid/F_force node definitions in Wave 2 files"
-      },
-      {
-        "file": "GravityOfDismissal.md",
-        "type": "strategic",
-        "status": "canonical",
-        "version": "1.0.0",
-        "canonical_tag": "[FFF:GRAVITY:HISTORY:DISMISSAL]",
-        "wave": 0,
-        "sections": 13,
-        "section_range": "§1–§13",
-        "dismissal_cases": 15,
-        "attack_vectors": 7,
-        "depends_on": [],
-        "provides_to": ["GLOSSARY (Matilda Effect, Institutional Playbook terms)"]
-      }
-    ],
-    "wave_1": [
-      {
-        "file": "README.md",
-        "type": "admin",
-        "status": "canonical",
-        "version": "1.0.0",
-        "wave": 1,
-        "sections": 9,
-        "section_range": "§1–§9",
-        "normative": false,
-        "description": "Module front door — orientation, file registry, reading orders, failure mode index"
-      },
-      {
-        "file": "INDEX.md",
-        "type": "admin",
-        "status": "canonical",
-        "version": "1.0.0",
-        "canonical_tag": "[FFF:GRAVITY:INDEX]",
-        "wave": 1,
-        "sections": 9,
-        "section_range": "§0–§9",
-        "normative": false,
-        "description": "Authoritative file registry — per-file detail, dependency graph, unlock sequence, completion tracker, AI traversal interface"
-      },
-      {
-        "file": "OPERATORS.md",
-        "type": "admin",
-        "status": "canonical",
-        "version": "1.0.0",
-        "canonical_tag": "[FFF:GRAVITY:OPERATORS]",
-        "wave": 1,
-        "sections": 10,
-        "section_range": "§0–§9",
-        "normative": true,
-        "authority": "Single source of truth for all operator symbols in FFF_Gravity",
-        "description": "Master symbol table — primary operators, derived operators, state flags, primitives, failure modes, composition rules, freeze registry"
-      },
-      {
-        "file": "GLOSSARY.md",
-        "type": "admin",
-        "status": "canonical",
-        "version": "1.0.0",
-        "canonical_tag": "[FFF:GRAVITY:GLOSSARY]",
-        "wave": 1,
-        "sections": 6,
-        "section_range": "§0–§6",
-        "normative": true,
-        "term_count": 62,
-        "description": "Module-scoped term definitions — 62 terms, 18 letter groups"
-      },
-      {
-        "file": "CHANGELOG.md",
-        "type": "admin",
-        "status": "canonical",
-        "version": "1.0.0",
-        "canonical_tag": "[FFF:GRAVITY:CHANGELOG]",
-        "wave": 1,
-        "sections": 4,
-        "section_range": "§0–§4",
-        "normative": false,
-        "append_only": true,
-        "sessions_recorded": 12,
-        "description": "Append-only version history — one entry per version, session registry, contribution protocol"
-      },
-      {
-        "file": "FFF_Gravity_module.json",
-        "type": "admin",
-        "status": "canonical",
-        "version": "1.0.0",
-        "canonical_tag": "[FFF:GRAVITY:MODULE]",
-        "wave": 1,
-        "normative": true,
-        "description": "Machine-readable module descriptor — this file"
-      }
-    ],
-    "wave_2": [
-      {
-        "file": "f_Field.md",
-        "type": "layer_definition",
-        "status": "scaffold",
-        "version": "0.1.0",
-        "canonical_tag": "[FFF:GRAVITY:FIELD]",
-        "wave": 2,
-        "node": "F_freq",
-        "sections_planned": 10,
-        "section_range": "§0–§9",
-        "primary_gaps": ["§2 canonical description (coherence well)", "ρ(Φ) formal derivation", "turbulence definition"],
-        "freeze_trigger": "f_Field.md → canonical",
-        "unlocks": ["f_Emit","f_Dampen","f_Capture_Asymmetric (§3 full definition)"]
-      },
-      {
-        "file": "f_Force.md",
-        "type": "layer_definition",
-        "status": "scaffold",
-        "version": "0.1.0",
-        "canonical_tag": "[FFF:GRAVITY:FORCE]",
-        "wave": 2,
-        "node": "F_force",
-        "sections_planned": 7,
-        "section_range": "§0–§6",
-        "primary_gaps": ["§2 canonical description", "force node passive/dominant distinction", "FROT overlay interface"],
-        "freeze_trigger": "f_Force.md → canonical",
-        "unlocks": ["f_Deflect","f_Capture_Asymmetric (§4.2 heading operators)"]
-      },
-      {
-        "file": "f_Frame.md",
-        "type": "layer_definition",
-        "status": "scaffold",
-        "version": "0.1.0",
-        "canonical_tag": "[FFF:GRAVITY:FRAME]",
-        "wave": 2,
-        "sections_planned": 6,
-        "section_range": "§0–§5",
-        "primary_gaps": ["§2 canonical description", "capacity derivation formula", "expansion via f_Amplify interface"],
-        "freeze_trigger": "f_Frame.md → canonical",
-        "unlocks": ["f_Capture_Multi (§4 capacity_remaining)","f_Capture_Networked (§3 GravityGraph as extension)"]
-      }
-    ],
-    "wave_3": [
-      {
-        "file": "f_Release.md",
-        "type": "core_function",
-        "status": "scaffold",
-        "version": "0.1.0",
-        "canonical_tag": "[FFF:GRAVITY:RELEASE]",
-        "wave": 3,
-        "inverse_of": "f_Capture",
-        "sections_planned": 11,
-        "section_range": "§0–§10",
-        "new_operators": ["v_release", "E_rel", "r_release"],
-        "new_primitives": ["compute_release_vector", "execute_release"],
-        "new_failure_modes": ["FM-008"],
-        "blocked_by": ["f_Orbit.md → canonical", "f_Decay.md → canonical"],
-        "primary_gaps": ["§2 prose", "v_release formula", "E_rel formula", "release conditions table", "3 examples"]
-      },
-      {
-        "file": "f_Decay.md",
-        "type": "core_function",
-        "status": "scaffold",
-        "version": "0.1.0",
-        "canonical_tag": "[FFF:GRAVITY:DECAY]",
-        "wave": 3,
-        "sections_planned": 11,
-        "section_range": "§0–§10",
-        "new_operators": ["δ", "d_collapse", "d_warn", "t_decay"],
-        "new_primitives": ["compute_decay_rate", "assess_decay_cause"],
-        "existing_primitive_defined_here": "flag_decay",
-        "failure_modes_raised": ["FM-004", "FM-005"],
-        "cycle_based": true,
-        "blocked_by": ["f_Orbit.md → canonical"],
-        "primary_gaps": ["§2 prose", "threshold values for d_warn and d_collapse", "reversal interface spec", "3 examples"]
-      },
-      {
-        "file": "f_Orbit.md",
-        "type": "core_function",
-        "status": "scaffold",
-        "version": "0.1.0",
-        "canonical_tag": "[FFF:GRAVITY:ORBIT]",
-        "wave": 3,
-        "sections_planned": 10,
-        "section_range": "§0–§9",
-        "new_operators": ["e", "T_orb", "orbit_class", "stab_class"],
-        "new_primitives": ["classify_orbit", "update_orbital_parameters"],
-        "orbit_classes": ["circular", "elliptical", "eccentric", "resonant"],
-        "stability_classes": ["stable", "marginal", "precarious"],
-        "blocked_by": [],
-        "note": "f_Capture.md already canonical — f_Orbit.md opens immediately",
-        "primary_gaps": ["§2 prose", "T_orb formula", "threshold formal values", "4 examples"]
-      },
-      {
-        "file": "f_Collapse.md",
-        "type": "core_function",
-        "status": "scaffold",
-        "version": "0.1.0",
-        "canonical_tag": "[FFF:GRAVITY:COLLAPSE]",
-        "wave": 3,
-        "terminal": true,
-        "sections_planned": 11,
-        "section_range": "§0–§10",
-        "new_operators": ["d_collapse", "m_parity", "C_node"],
-        "new_primitives": ["execute_collapse", "initialize_composite_node", "purge_registry"],
-        "collapse_paths": {
-          "FM-005": "Asymmetric infall — E absorbed into A",
-          "FM-007": "Mutual dissolution — composite node C created"
+  "waves": [
+    {
+      "wave": 0,
+      "name": "Genesis",
+      "status": "SEALED",
+      "prim_range": null,
+      "files": [
+        {
+          "file": "f_Capture.md",
+          "type": "operator-genesis",
+          "description": "Base capture operator — d_bind, β, e, SC- conditions, v_escape",
+          "condition_prefix": "SC-",
+          "conditions": ["SC-1","SC-2","SC-3","SC-4","SC-5"],
+          "prims": [],
+          "status": "SEALED"
         },
-        "blocked_by": ["f_Decay.md → canonical"],
-        "primary_gaps": ["§2 prose", "d_collapse value", "m_parity formula", "composite node schema", "3 examples"]
-      },
-      {
-        "file": "f_Emit.md",
-        "type": "core_function",
-        "status": "scaffold",
-        "version": "0.1.0",
-        "canonical_tag": "[FFF:GRAVITY:EMIT]",
-        "wave": 3,
-        "node": "F_freq",
-        "inverse_of": "f_Dampen",
-        "sections_planned": 10,
-        "section_range": "§0–§9",
-        "new_operators": ["F_emit", "ρ(Φ)_delta", "r_emit", "E_emit"],
-        "new_primitives": ["emit_field", "compute_emit_cost", "check_emit_ceiling"],
-        "failure_risk": "FM-010",
-        "blocked_by": ["f_Field.md → canonical"],
-        "primary_gaps": ["§2 prose", "F_emit formula", "energy cost model", "emission decay rate", "examples"]
-      },
-      {
-        "file": "f_Dampen.md",
-        "type": "core_function",
-        "status": "scaffold",
-        "version": "0.1.0",
-        "canonical_tag": "[FFF:GRAVITY:DAMPEN]",
-        "wave": 3,
-        "node": "F_freq",
-        "inverse_of": "f_Emit",
-        "sections_planned": 7,
-        "section_range": "§0–§6",
-        "new_operators": ["F_damp", "ρ(Φ)_floor", "r_damp"],
-        "new_primitives": ["suppress_field", "check_floor", "check_cascade_risk"],
-        "new_failure_modes": ["FM-009"],
-        "blocked_by": ["f_Field.md → canonical"],
-        "primary_gaps": ["§2 prose", "F_damp bounds", "propagation model", "examples"]
-      },
-      {
-        "file": "f_Amplify.md",
-        "type": "core_function",
-        "status": "scaffold",
-        "version": "0.1.0",
-        "canonical_tag": "[FFF:GRAVITY:AMPLIFY]",
-        "wave": 3,
-        "node": "F_fluid",
-        "sections_planned": 7,
-        "section_range": "§0–§6",
-        "new_operators": ["F_amp", "β_max", "amp_cost"],
-        "new_primitives": ["amplify_coupling", "check_runaway_risk"],
-        "new_failure_modes": ["FM-010"],
-        "blocked_by": [],
-        "note": "f_Capture.md canonical — f_Amplify opens immediately",
-        "primary_gaps": ["§2 prose", "F_amp ceiling derivation", "energy cost model", "examples"]
-      },
-      {
-        "file": "f_Deflect.md",
-        "type": "core_function",
-        "status": "scaffold",
-        "version": "0.1.0",
-        "canonical_tag": "[FFF:GRAVITY:DEFLECT]",
-        "wave": 3,
-        "node": "F_force",
-        "sections_planned": 8,
-        "section_range": "§0–§7",
-        "new_operators": ["heading_delta", "r_deflect", "deflect_cost"],
-        "new_primitives": ["redirect_force_node", "compute_deflection_cost"],
-        "blocked_by": ["f_Force.md → canonical"],
-        "primary_gaps": ["§2 prose", "heading bounds", "deflection cost formula", "examples"]
-      }
-    ],
-    "wave_4": [
-      {
-        "file": "f_Capture_Multi.md",
-        "type": "capture_variant",
-        "status": "scaffold",
-        "version": "0.1.0",
-        "canonical_tag": "[FFF:GRAVITY:CAPTURE:MULTI]",
-        "wave": 4,
-        "extends": "f_Capture",
-        "sections_planned": 7,
-        "new_operators": ["N", "eval_order", "Φ_perturbed", "capacity_remaining"],
-        "new_failure_modes": ["FM-003-M"],
-        "blocked_by": ["f_Orbit.md → canonical", "f_Frame.md → canonical"],
-        "primary_gaps": ["§2 prose", "evaluation order priority rule", "cross-element perturbation model", "examples"]
-      },
-      {
-        "file": "f_Capture_Cascade.md",
-        "type": "capture_variant",
-        "status": "scaffold",
-        "version": "0.1.0",
-        "canonical_tag": "[FFF:GRAVITY:CAPTURE:CASCADE]",
-        "wave": 4,
-        "extends": "f_Capture",
-        "sections_planned": 6,
-        "new_operators": ["Δcurvature", "perturbation_sensitivity", "cascade_depth"],
-        "blocked_by": ["f_Decay.md → canonical"],
-        "primary_gaps": ["§2 prose", "perturbation magnitude formula", "cascade termination condition", "examples"]
-      },
-      {
-        "file": "f_Capture_Resonant.md",
-        "type": "capture_variant",
-        "status": "scaffold",
-        "version": "0.1.0",
-        "canonical_tag": "[FFF:GRAVITY:CAPTURE:RESONANT]",
-        "wave": 4,
-        "extends": "f_Capture",
-        "inverse_problem": true,
-        "sections_planned": 11,
-        "new_operators": ["ω_res_target", "approach_parameters", "solution_space", "energy_cost", "nearest_valid"],
-        "new_primitives": ["solve_resonant_approach", "validate_resonant_solution", "find_nearest_valid_resonance", "compute_engineering_cost"],
-        "blocked_by": ["f_Deflect.md → canonical", "f_Emit.md → canonical", "f_Amplify.md → canonical"],
-        "primary_gaps": ["§2 prose", "solver algorithm", "solution space characterization", "resonance target table values", "examples"]
-      },
-      {
-        "file": "f_Capture_Asymmetric.md",
-        "type": "capture_variant",
-        "status": "scaffold",
-        "version": "0.1.0",
-        "canonical_tag": "[FFF:GRAVITY:CAPTURE:ASYMMETRIC]",
-        "wave": 4,
-        "extends": "f_Capture",
-        "key_departure": "Replaces scalar ρ(Φ) with directional tensor ρ(Φ,θ)",
-        "sections_planned": 11,
-        "new_operators": ["ρ(Φ,θ)", "θ_approach", "anisotropy_index", "θ_optimal", "θ_critical"],
-        "new_primitives": ["map_field_tensor", "evaluate_at_heading", "find_optimal_heading", "assess_postlock_coherence"],
-        "blocked_by": ["f_Field.md → canonical", "f_Force.md → canonical", "f_Deflect.md → canonical"],
-        "primary_gaps": ["§2 prose", "field tensor representation format", "anisotropy index formula", "examples"]
-      },
-      {
-        "file": "f_Capture_Temporal.md",
-        "type": "capture_variant",
-        "status": "scaffold",
-        "version": "0.1.0",
-        "canonical_tag": "[FFF:GRAVITY:CAPTURE:TEMPORAL]",
-        "wave": 4,
-        "extends": "f_Capture",
-        "key_departure": "All operators become time-indexed: M_A(t), ρ(Φ,t), r_capture(t)",
-        "sections_planned": 11,
-        "new_operators": ["C_thresh(t)", "t_entry", "t_encounter", "temporal_capture_window", "ΔM_A", "Δρ"],
-        "new_primitives": ["build_approach_timeseries", "find_encounter_conditions", "detect_phase_miss", "compute_optimal_entry_time"],
-        "blocked_by": ["f_Field.md → canonical", "f_Decay.md → canonical"],
-        "primary_gaps": ["§2 prose", "time-series representation format", "phase miss detection algorithm", "examples"]
-      },
-      {
-        "file": "f_Capture_Networked.md",
-        "type": "capture_variant",
-        "status": "scaffold",
-        "version": "0.1.0",
-        "canonical_tag": "[FFF:GRAVITY:CAPTURE:NETWORKED]",
-        "wave": 4,
-        "extends": "f_Capture",
-        "key_addition": "GravityGraph — persistent directed weighted graph of all capture events",
-        "sections_planned": 12,
-        "new_operators": ["GravityGraph", "G_node", "G_edge", "G_degree", "G_depth", "G_stability", "G_cascade_risk"],
-        "new_primitives": ["write_to_graph", "update_edge_state", "purge_graph_node", "create_composite_node", "execute_graph_query", "compute_cascade_path", "compute_stability_index", "snapshot_graph"],
-        "topology_patterns": ["Star", "Chain", "Cluster", "Isolate", "Critical Node", "Ghost Orbit"],
-        "blocked_by": ["f_Decay.md → canonical", "f_Release.md → canonical", "f_Collapse.md → canonical", "f_Frame.md → canonical"],
-        "primary_gaps": ["§2 prose", "graph storage format decision", "query interface formal spec", "examples"]
-      }
-    ]
-  },
-
-  "canonical_functions": {
-    "f_Capture": {
-      "tag": "[FFF:GRAVITY:CAPTURE]",
-      "status": "canonical",
-      "version": "1.0.0",
-      "triadic_equation": "f_Capture(E, A, Φ) → Ω",
-      "inputs": {
-        "E": "Element — incoming body (mass, velocity, trajectory)",
-        "A": "Attractor — binding node (mass, field strength, escape velocity)",
-        "Φ": "Field State — ambient field conditions at moment of encounter"
-      },
-      "outputs": {
-        "Ω": "Capture outcome: stable_orbit | decay_orbit | escape | collision"
-      },
-      "reference_implementation": true,
-      "sections": 13
+        {
+          "file": "f_Source.md",
+          "type": "node-registry",
+          "description": "Attractor and entity node registry — M_A, M_E, r_capture, T_dismiss (read-only per INV-007)",
+          "condition_prefix": null,
+          "prims": [],
+          "status": "SEALED"
+        },
+        {
+          "file": "GravityOfDismissal.md",
+          "type": "conceptual-genesis",
+          "description": "Conceptual foundation for dismissal as active repulsive force. Defines Dismissal Well model ρ_D(Φ,t)=−d_dismiss×exp(−t/T_dismiss). Three dismissal modes: INTENTIONAL, STRUCTURAL, DRIFT. F_dismiss family named conceptually here; frozen in f_Dismiss.md Wave 5.",
+          "condition_prefix": null,
+          "prims": [],
+          "operators_named_conceptually": [
+            "F_dismiss","ρ_D(Φ)","d_dismiss","T_dismiss","r_dismiss",
+            "ψ_dismiss","t_dismiss","v_depart","β_D"
+          ],
+          "dismissal_well_formula": "ρ_D(Φ,t) = −d_dismiss × exp(−t / T_dismiss)",
+          "recapture_gate": "d_bind_approach(t) > |ρ_D(Φ,t)|",
+          "authority": "Sole authority for negative-polarity field extension in this module",
+          "status": "SEALED"
+        }
+      ]
     },
-    "f_Release": {
-      "tag": "[FFF:GRAVITY:RELEASE]",
-      "status": "scaffold",
-      "inverse_of": "f_Capture",
-      "triadic_equation": "f_Release(E, A, Φ, d_bind) → RELEASED | FM-008"
+    {
+      "wave": 1,
+      "name": "Admin / Registry",
+      "status": "SEALED",
+      "prim_range": null,
+      "note": "Establishes frozen registry scaffolding. No PRIMs introduced.",
+      "files": [
+        {
+          "file": "README.md",
+          "type": "navigation",
+          "description": "Module front door — scope, usage, quick-start",
+          "status": "SEALED"
+        },
+        {
+          "file": "INDEX.md",
+          "type": "file-index",
+          "description": "Full file index with PRIM ranges, wave tags, condition prefixes — updated through Wave 5",
+          "status": "SEALED"
+        },
+        {
+          "file": "OPERATORS.md",
+          "type": "symbol-authority",
+          "description": "Single authoritative operator registry per INV-009 — ~101 operators across all waves",
+          "operator_count_approx": 101,
+          "status": "SEALED"
+        },
+        {
+          "file": "GLOSSARY.md",
+          "type": "term-definitions",
+          "description": "FFF_Gravity-scoped term definitions",
+          "status": "SEALED"
+        },
+        {
+          "file": "CHANGELOG.md",
+          "type": "change-log",
+          "description": "Wave-by-wave mutation log — append-only — updated through Wave 5",
+          "status": "SEALED"
+        },
+        {
+          "file": "FFF_Gravity_module.json",
+          "type": "machine-registry",
+          "description": "This file — machine-readable module manifest",
+          "version": "2.0.0",
+          "status": "CURRENT"
+        }
+      ]
     },
-    "f_Decay": {
-      "tag": "[FFF:GRAVITY:DECAY]",
-      "status": "scaffold",
-      "triadic_equation": "f_Decay(E, A, Φ, t) → d_bind(t) | FM-004 | FM-005",
-      "cycle_based": true
+    {
+      "wave": 2,
+      "name": "Layer Definitions",
+      "status": "SEALED",
+      "prim_range": "001–006",
+      "inv_sealed_at_wave": null,
+      "files": [
+        {
+          "file": "f_Field.md",
+          "type": "layer-definition",
+          "layer": "F_freq",
+          "description": "Frequency / field-coherence layer — ρ(Φ) computation and update",
+          "prims": [
+            {"id": "001", "name": "compute_field_density", "type": "Pure"},
+            {"id": "002", "name": "update_field_state",    "type": "Impure"}
+          ],
+          "operators_introduced": ["ρ(Φ)","Φ"],
+          "fm_active": ["FM-002"],
+          "status": "SEALED"
+        },
+        {
+          "file": "f_Force.md",
+          "type": "layer-definition",
+          "layer": "F_force",
+          "description": "Force / approach layer — force vector, approach vector, heading_delta stub",
+          "prims": [
+            {"id": "003", "name": "compute_force_vector",    "type": "Pure"},
+            {"id": "004", "name": "register_capture",        "type": "Impure"},
+            {"id": "005", "name": "compute_approach_vector", "type": "Pure"}
+          ],
+          "operators_introduced": ["v_approach","v_escape","F_force"],
+          "stub_declared": "heading_delta (resolved in f_Deflect.md PRIM:023)",
+          "fm_active": ["FM-001"],
+          "status": "SEALED"
+        },
+        {
+          "file": "f_Frame.md",
+          "type": "layer-definition",
+          "layer": "F_fluid",
+          "description": "Fluid / frame capacity layer — slot management, capacity checks",
+          "prims": [
+            {"id": "006", "name": "check_frame_capacity", "type": "Pure"}
+          ],
+          "operators_introduced": ["capacity_MAX","frame_count","k_frame"],
+          "fm_active": ["FM-003"],
+          "status": "SEALED"
+        }
+      ]
     },
-    "f_Orbit": {
-      "tag": "[FFF:GRAVITY:ORBIT]",
-      "status": "scaffold",
-      "triadic_equation": "f_Orbit(E, A, p_res, ω_res) → orbital_parameters"
+    {
+      "wave": 3,
+      "name": "Core Functions",
+      "status": "SEALED",
+      "prim_range": "007–024",
+      "inv_registry_sealed_here": true,
+      "inv_sealed_count": 10,
+      "files": [
+        {
+          "file": "f_Orbit.md",
+          "type": "core-function",
+          "description": "Orbital trajectory, regime stability, orbit/stability classification",
+          "prims": [
+            {"id": "007", "name": "classify_orbit",         "type": "Pure"},
+            {"id": "012", "name": "compute_orbital_period", "type": "Pure"}
+          ],
+          "operators_introduced": ["T_orb","orbit_class","stab_class"],
+          "orbit_classes": ["CIRCULAR","ELLIPTICAL","ECCENTRIC","RESONANT"],
+          "stab_classes": ["STABLE","MARGINAL","PRECARIOUS"],
+          "status": "SEALED"
+        },
+        {
+          "file": "f_Release.md",
+          "type": "core-function",
+          "description": "Controlled release from gravitational capture — no Dismissal Well produced",
+          "prims": [
+            {"id": "008", "name": "compute_release_vector", "type": "Pure"},
+            {"id": "009", "name": "execute_release",        "type": "Impure"}
+          ],
+          "operators_introduced": ["v_release","r_release"],
+          "fm_active": ["FM-008"],
+          "note": "Release produces no Dismissal Well; re-capture is immediate and standard-cost",
+          "status": "SEALED"
+        },
+        {
+          "file": "f_Decay.md",
+          "type": "core-function",
+          "description": "Field decay, exponential attenuation, d_warn / d_collapse thresholds",
+          "prims": [
+            {"id": "010", "name": "compute_decay_step",           "type": "Pure"},
+            {"id": "011", "name": "evaluate_collapse_eligibility", "type": "Pure"}
+          ],
+          "operators_introduced": ["δ","d_warn","d_collapse"],
+          "condition_prefix": "DC-",
+          "conditions": ["DC-1","DC-2","DC-3","DC-4"],
+          "fm_active": ["FM-004","FM-005"],
+          "status": "SEALED"
+        },
+        {
+          "file": "f_Collapse.md",
+          "type": "core-function",
+          "description": "Gravitational collapse, path evaluation, C_node resolution",
+          "prims": [
+            {"id": "013", "name": "evaluate_collapse_path", "type": "Pure"},
+            {"id": "014", "name": "execute_collapse",       "type": "Impure"}
+          ],
+          "operators_introduced": ["m_parity","C_node"],
+          "fm_active": ["FM-005","FM-007"],
+          "collapse_paths": {
+            "Path_A": "Asymmetric infall — one node dominant",
+            "Path_B": "Mutual dissolution — m_parity threshold crossed → C_node"
+          },
+          "status": "SEALED"
+        },
+        {
+          "file": "f_Emit.md",
+          "type": "core-function",
+          "description": "Field emission, outward propagation, ρ(Φ) delta computation",
+          "prims": [
+            {"id": "015", "name": "compute_emit_vector", "type": "Pure"},
+            {"id": "016", "name": "compute_field_delta",  "type": "Pure"},
+            {"id": "017", "name": "execute_emit",         "type": "Impure"}
+          ],
+          "operators_introduced": ["F_emit","ρ(Φ)_delta","r_emit"],
+          "fm_active": ["FM-010"],
+          "fm_domain": "ρ domain (ρ(Φ) ceiling enforcement)",
+          "status": "SEALED"
+        },
+        {
+          "file": "f_Dampen.md",
+          "type": "core-function",
+          "description": "Dampening, amplitude reduction, cascade guard",
+          "prims": [
+            {"id": "018", "name": "compute_dampen_force", "type": "Pure"},
+            {"id": "019", "name": "apply_field_floor",    "type": "Pure"},
+            {"id": "020", "name": "execute_dampen",       "type": "Impure"}
+          ],
+          "operators_introduced": ["F_damp","ρ(Φ)_floor","cascade_guard"],
+          "fm_active": ["FM-009"],
+          "status": "SEALED"
+        },
+        {
+          "file": "f_Amplify.md",
+          "type": "core-function",
+          "description": "Amplification, gain application, runaway risk check",
+          "prims": [
+            {"id": "021", "name": "compute_amplify_force", "type": "Pure"},
+            {"id": "022", "name": "check_runaway_risk",    "type": "Pure"}
+          ],
+          "operators_introduced": ["F_amp","β_max","amp_cost"],
+          "fm_active": ["FM-010"],
+          "fm_domain": "β domain (β ceiling enforcement)",
+          "status": "SEALED"
+        },
+        {
+          "file": "f_Deflect.md",
+          "type": "core-function",
+          "description": "Directional field redirection — resolves heading_delta stub from f_Force.md §4.3",
+          "prims": [
+            {"id": "023", "name": "compute_deflection_angle", "type": "Pure"},
+            {"id": "024", "name": "execute_deflect",           "type": "Impure"}
+          ],
+          "operators_introduced": ["heading_delta","r_deflect","deflect_cost"],
+          "stub_resolved": "heading_delta (declared f_Force.md §4.3 PRIM:005 → defined here PRIM:023)",
+          "fm_active": ["FM-001","FM-006"],
+          "status": "SEALED"
+        }
+      ]
     },
-    "f_Collapse": {
-      "tag": "[FFF:GRAVITY:COLLAPSE]",
-      "status": "scaffold",
-      "terminal": true,
-      "triadic_equation": "f_Collapse(E, A, d_bind) → CAPTURE_COLLISION"
+    {
+      "wave": 4,
+      "name": "Capture Variants",
+      "status": "SEALED",
+      "prim_range": "025–040",
+      "fm_submodes_introduced": ["FM-003-M","FM-003-C","FM-003-N"],
+      "unlock_produced": "docs/SEENMAP.md",
+      "files": [
+        {
+          "file": "f_Capture_Multi.md",
+          "type": "capture-variant",
+          "description": "Multi-node simultaneous capture — N entities or attractors, eval_order sequencing",
+          "prims": [
+            {"id": "025", "name": "execute_multi_capture",       "type": "Impure"},
+            {"id": "026", "name": "compute_perturbation_budget", "type": "Pure"}
+          ],
+          "operators_introduced": ["N","eval_order","Φ_perturbed","δ_perturb","k_perturb"],
+          "condition_prefix": "MC-",
+          "conditions": ["MC-1","MC-2"],
+          "fm_submode": "FM-003-M",
+          "status": "SEALED"
+        },
+        {
+          "file": "f_Capture_Cascade.md",
+          "type": "capture-variant",
+          "description": "Sequential cascade capture — γ gain, Ω_cascade recurrence, k_max depth ceiling",
+          "prims": [
+            {"id": "027", "name": "evaluate_cascade_eligibility", "type": "Pure"},
+            {"id": "028", "name": "execute_cascade_step",         "type": "Impure"}
+          ],
+          "operators_introduced": ["cascade_depth","k_max","γ","Ω_cascade"],
+          "condition_prefix": "CAS-",
+          "conditions": ["CAS-1","CAS-2","CAS-3","CAS-4"],
+          "termination_codes": ["T-NAT","T-DEPTH","T-CAP","T-INIT"],
+          "fm_submode": "FM-003-C",
+          "status": "SEALED"
+        },
+        {
+          "file": "f_Capture_Soft.md",
+          "type": "capture-variant",
+          "description": "Provisional binding below standard floor — grace period, soft_threshold, four resolution pathways",
+          "prims": [
+            {"id": "029", "name": "evaluate_soft_eligibility", "type": "Pure"},
+            {"id": "030", "name": "execute_soft_capture",      "type": "Impure"}
+          ],
+          "operators_introduced": ["d_soft","soft_threshold","grace_period","k_grace"],
+          "condition_prefix": "SCS-",
+          "conditions": ["SCS-1","SCS-2","SCS-3","SCS-4"],
+          "resolution_pathways": ["STRENGTHEN","DISSOLVE","EXPIRE","HOLD"],
+          "state_flags": ["CAPTURE_SOFT","SOFT_STRENGTHENED","SOFT_DISSOLVED","GRACE_EXPIRED"],
+          "status": "SEALED"
+        },
+        {
+          "file": "f_Capture_Hard.md",
+          "type": "capture-variant",
+          "description": "Hard-lock binary-threshold capture — d_hard, β_min_hard, lock_cost, no retry policy",
+          "prims": [
+            {"id": "031", "name": "evaluate_hard_eligibility", "type": "Pure"},
+            {"id": "032", "name": "execute_hard_lock",         "type": "Impure"}
+          ],
+          "operators_introduced": ["d_hard","α_hard","β_hard","β_min_hard","lock_cost","k_lock"],
+          "condition_prefix": "HLC-",
+          "conditions": ["HLC-1","HLC-2","HLC-3","HLC-4"],
+          "no_retry_policy": true,
+          "atomic_state_skip": "APPROACH_LIVE → ORBIT_STABLE (no CAPTURE_LOCKED intermediate)",
+          "state_flags": ["HARD_ELIGIBLE","ORBIT_STABLE","HARD_REJECTED","FRAME_SATURATED"],
+          "status": "SEALED"
+        },
+        {
+          "file": "f_Capture_Resonant.md",
+          "type": "capture-variant",
+          "description": "Resonance-matched phase-gated capture — ω_res, φ window, ρ_res_gain, T_orb_res, FM-004 drift cycle",
+          "prims": [
+            {"id": "033", "name": "eval_resonance_window", "type": "Pure"},
+            {"id": "034", "name": "lock_resonance",        "type": "Impure"}
+          ],
+          "operators_introduced": [
+            "ω_res","T_res","φ_A(t)","φ_E","φ_open","φ_close","window_width","t_arrive","t_next_open",
+            "ρ_res_gain","ρ_eff","ρ_res_floor","d_bind_res","T_orb_res","p_ratio","q_ratio"
+          ],
+          "condition_prefix": "RLC-",
+          "conditions": ["RLC-1","RLC-2","RLC-3","RLC-4","RLC-5"],
+          "orbit_class_written": "RESONANT",
+          "fm_active": ["FM-001","FM-002","FM-003","FM-004","FM-006"],
+          "state_flags": ["WINDOW_OPEN","WINDOW_CLOSED","RESONANCE_LOCKED","RESONANCE_LOST"],
+          "status": "SEALED"
+        },
+        {
+          "file": "f_Capture_Asymmetric.md",
+          "type": "capture-variant",
+          "description": "Mass-asymmetric approach — asymmetry_factor, d_bind_asym, heading_delta_asym, FM-007 parity breach routing",
+          "prims": [
+            {"id": "035", "name": "eval_asymmetric_approach", "type": "Pure"},
+            {"id": "036", "name": "lock_asymmetric",           "type": "Impure"}
+          ],
+          "operators_introduced": [
+            "mass_ratio","asymmetry_factor","parity_warn_threshold",
+            "d_bind_asym","heading_delta_asym","deflect_tolerance","asym_decay_risk"
+          ],
+          "condition_prefix": "AC-",
+          "conditions": ["AC-1","AC-2","AC-3","AC-4","AC-5"],
+          "orbit_classes_written": ["ELLIPTICAL","ECCENTRIC"],
+          "parity_routing": "mass_ratio ≥ m_parity → FM-007 → f_Collapse.md Path B",
+          "fm_active": ["FM-001","FM-002","FM-003","FM-005","FM-007"],
+          "state_flags": ["ASYMMETRIC_APPROACH","PARITY_WARN","PARITY_BREACH","ASYMMETRIC_LOCKED"],
+          "status": "SEALED"
+        },
+        {
+          "file": "f_Capture_Temporal.md",
+          "type": "capture-variant",
+          "description": "Absolute clock-time window capture — proximity_ratio attenuation, temporal_margin, window_id uniqueness",
+          "prims": [
+            {"id": "037", "name": "evaluate_temporal_window", "type": "Pure"},
+            {"id": "038", "name": "lock_temporal_capture",    "type": "Impure"}
+          ],
+          "operators_introduced": [
+            "t_open","t_close","t_span","t_elapsed","t_remaining","window_id",
+            "proximity_ratio","temporal_decay_factor","d_bind_temporal","temporal_margin"
+          ],
+          "condition_prefix": "TC-",
+          "conditions": ["TC-1","TC-2","TC-3","TC-4","TC-5"],
+          "temporal_miss_reasons": ["OUTSIDE_WINDOW","MARGIN_VIOLATED","WINDOW_EXHAUSTED"],
+          "fm_active": ["FM-001","FM-004","FM-005"],
+          "state_flags": ["CAPTURE_TEMPORAL","TEMPORAL_MISS","WINDOW_EXHAUSTED"],
+          "status": "SEALED"
+        },
+        {
+          "file": "f_Capture_Networked.md",
+          "type": "capture-variant",
+          "description": "Distributed network co-attraction — G_net graph topology, w_i weights, d_bind_net weighted aggregate, NC-4 connectivity guard",
+          "prims": [
+            {"id": "039", "name": "evaluate_network_capture", "type": "Pure"},
+            {"id": "040", "name": "lock_network_capture",     "type": "Impure"}
+          ],
+          "operators_introduced": ["N_net","G_net","w_i","d_bind_net","ρ(Φ)_net","resilience_threshold"],
+          "condition_prefix": "NC-",
+          "conditions": ["NC-1","NC-2","NC-3","NC-4","NC-5"],
+          "fm_submode": "FM-003-N",
+          "fm_active": ["FM-001","FM-002","FM-003-N"],
+          "state_flags": ["NETWORK_CAPTURED","NETWORK_MISS","NETWORK_SATURATED"],
+          "network_binding_formula": "d_bind_net = Σ(w_i_norm × d_bind_i)",
+          "status": "SEALED"
+        }
+      ]
     },
-    "f_Emit": {
-      "tag": "[FFF:GRAVITY:EMIT]",
-      "status": "scaffold",
-      "node": "F_freq",
-      "triadic_equation": "f_Emit(A, F_emit, r_local) → ρ(Φ)_new | EMIT_ACTIVE"
-    },
-    "f_Dampen": {
-      "tag": "[FFF:GRAVITY:DAMPEN]",
-      "status": "scaffold",
-      "node": "F_freq",
-      "triadic_equation": "f_Dampen(A, F_damp, r_local) → ρ(Φ)_new | DAMPEN_ACTIVE | FM-009"
-    },
-    "f_Amplify": {
-      "tag": "[FFF:GRAVITY:AMPLIFY]",
-      "status": "scaffold",
-      "node": "F_fluid",
-      "triadic_equation": "f_Amplify(A, E, F_amp) → β_new | P_eff_new | FM-010"
-    },
-    "f_Deflect": {
-      "tag": "[FFF:GRAVITY:DEFLECT]",
-      "status": "scaffold",
-      "node": "F_force",
-      "triadic_equation": "f_Deflect(E, heading_delta, r_deflect) → v_approach_new"
+    {
+      "wave": 5,
+      "name": "Dismissal",
+      "status": "SEALED",
+      "prim_range": "041–042",
+      "prim_registry_sealed_here": true,
+      "prim_sealed_count": 42,
+      "files": [
+        {
+          "file": "f_Dismiss.md",
+          "type": "dismissal-primitive",
+          "description": "Formalizes F_dismiss operator family from GravityOfDismissal.md Wave 0. PRIM:041 evaluate_dismissal (Pure), PRIM:042 execute_dismissal (Impure). Three dismissal modes: INTENTIONAL/STRUCTURAL/DRIFT. Dismissal Well with exponential decay. FM-006 phantom guard.",
+          "prims": [
+            {"id": "041", "name": "evaluate_dismissal", "type": "Pure"},
+            {"id": "042", "name": "execute_dismissal",  "type": "Impure"}
+          ],
+          "operators_frozen": [
+            "F_dismiss","ρ_D(Φ)","d_dismiss","T_dismiss","r_dismiss",
+            "ψ_dismiss","t_dismiss","v_depart","β_D"
+          ],
+          "condition_prefix": "DISM-",
+          "conditions": ["DISM-1","DISM-2","DISM-3","DISM-4","DISM-5"],
+          "dismissal_modes": {
+            "INTENTIONAL": {
+              "initiator": "A (deliberate)",
+              "well_depth": "d_bind(t_dismiss)",
+              "T_dismiss_profile": "Long",
+              "r_dismiss_scale": 1.0
+            },
+            "STRUCTURAL": {
+              "initiator": "Field (FM-002 collapse)",
+              "well_depth": "ρ(Φ) × d_bind(t_dismiss)",
+              "T_dismiss_profile": "Short",
+              "r_dismiss_scale": 0.75
+            },
+            "DRIFT": {
+              "initiator": "Decay (passive)",
+              "well_depth": "v_depart × k_drift",
+              "T_dismiss_profile": "Very short",
+              "r_dismiss_scale": 0.40
+            }
+          },
+          "well_formula": "ρ_D(Φ,t) = −d_dismiss × exp(−t / T_dismiss)",
+          "recapture_gate": "d_bind_approach(t) > |ρ_D(Φ,t)|",
+          "well_query_fn": "Closure returned by execute_dismissal — f(t_current) → |ρ_D(Φ,t)|",
+          "phantom_guard": "FM-006: ρ(Φ) < ε_field on INTENTIONAL → d_dismiss bounded to min(d_bind, ρ(Φ)×d_bind)",
+          "conceptual_authority": "GravityOfDismissal.md §3–§5 (Wave 0)",
+          "fm_active": ["FM-001","FM-002","FM-006"],
+          "state_flags": ["DISMISSED","DISMISS_INVALID","DISMISS_PHANTOM"],
+          "status": "SEALED"
+        }
+      ]
     }
-  },
+  ],
 
-  "operators": {
-    "primary": [
-      { "symbol": "v_approach",  "name": "Approach Vector",   "node": "F_force", "type": "scalar", "range": "[0,∞)",  "frozen": true, "defined_in": "f_Capture.md §4.1" },
-      { "symbol": "v_escape(A)", "name": "Escape Velocity",   "node": "F_freq",  "type": "scalar", "range": "(0,∞)",  "frozen": true, "defined_in": "f_Capture.md §4.1" },
-      { "symbol": "ρ(Φ)",        "name": "Field Density",     "node": "F_freq",  "type": "scalar", "range": "[0,1]",  "frozen": true, "defined_in": "f_Field.md §4.1"   },
-      { "symbol": "r_capture",   "name": "Capture Radius",    "node": "Frame",   "type": "scalar", "range": "(0,∞)",  "frozen": true, "defined_in": "f_Capture.md §4.1" },
-      { "symbol": "β",           "name": "Binding Coefficient","node": "derived","type": "scalar", "range": "[0,∞)",  "frozen": true, "defined_in": "f_Capture.md §4.1" },
-      { "symbol": "ω_res",       "name": "Orbital Resonance", "node": "F_freq",  "type": "ratio",  "range": "ℚ∪ℝ",   "frozen": true, "defined_in": "f_Capture.md §4.1" },
-      { "symbol": "M_A",         "name": "Attractor Mass",    "node": "F_fluid", "type": "scalar", "range": "(0,∞)",  "frozen": true, "defined_in": "f_Field.md §4.1"   },
-      { "symbol": "M_E",         "name": "Element Mass",      "node": "F_fluid", "type": "scalar", "range": "(0,∞)",  "frozen": true, "defined_in": "f_Capture.md §4.1" },
-      { "symbol": "r",           "name": "Separation Distance","node": "geometry","type": "scalar","range": "(0,∞)",  "frozen": true, "defined_in": "f_Capture.md §4.1" }
-    ],
-    "derived": [
-      { "symbol": "P_eff",   "name": "Effective Pull",      "formula": "M_A × ρ(Φ) / r²",                      "frozen": true,  "defined_in": "f_Capture.md §4.2" },
-      { "symbol": "C_thresh","name": "Capture Threshold",   "formula": "v_escape(A) − v_approach",              "frozen": true,  "defined_in": "f_Capture.md §4.2" },
-      { "symbol": "d_bind",  "name": "Binding Depth",       "formula": "β × ρ(Φ) × (1 − e)",                   "frozen": true,  "defined_in": "f_Capture.md §4.2" },
-      { "symbol": "p_res",   "name": "Residual Momentum",   "formula": "M_E × (v_approach − C_thresh)",        "frozen": true,  "defined_in": "f_Capture.md §4.2" },
-      { "symbol": "e",       "name": "Orbital Eccentricity","formula": "p_res / (p_res + P_eff)",               "frozen": true,  "defined_in": "f_Orbit.md §4.1",   "pending": "formula frozen; file scaffold" },
-      { "symbol": "T_orb",   "name": "Orbital Period",      "formula": "pending f_Orbit.md §4.1",              "frozen": false, "defined_in": "f_Orbit.md §4.1"   },
-      { "symbol": "δ",       "name": "Decay Rate",          "formula": "Δd_bind / Δt",                         "frozen": false, "defined_in": "f_Decay.md §4.1"   },
-      { "symbol": "E_rel",   "name": "Release Energy",      "formula": "pending f_Release.md §4.1",            "frozen": false, "defined_in": "f_Release.md §4.1" },
-      { "symbol": "F_emit",  "name": "Emit Field Strength", "formula": "pending f_Emit.md §4.1",               "frozen": false, "defined_in": "f_Emit.md §4.1"    },
-      { "symbol": "F_damp",  "name": "Dampen Depth",        "formula": "pending f_Dampen.md §4.1",             "frozen": false, "defined_in": "f_Dampen.md §4.1"  }
-    ],
-    "supplementary": [
-      { "symbol": "F_amp",         "name": "Amplification Factor",    "frozen": false, "defined_in": "f_Amplify.md §4.1" },
-      { "symbol": "β_max",         "name": "Binding Coeff Ceiling",   "frozen": false, "defined_in": "f_Amplify.md §4.1" },
-      { "symbol": "heading_delta", "name": "Heading Change",          "frozen": false, "defined_in": "f_Deflect.md §4.1" },
-      { "symbol": "r_emit",        "name": "Emission Radius",         "frozen": false, "defined_in": "f_Emit.md §4.1"    },
-      { "symbol": "r_damp",        "name": "Dampening Radius",        "frozen": false, "defined_in": "f_Dampen.md §4.1"  },
-      { "symbol": "d_warn",        "name": "Decay Warning Threshold", "frozen": false, "defined_in": "f_Decay.md §4.1"   },
-      { "symbol": "d_collapse",    "name": "Collapse Threshold",      "frozen": false, "defined_in": "f_Decay.md §4.1"   },
-      { "symbol": "m_parity",      "name": "Mass Parity Threshold",   "frozen": false, "defined_in": "f_Collapse.md §4.1"}
+  "post_wave_admin": {
+    "description": "Validation and navigational artifacts produced after Wave 5 sealed",
+    "artifacts": [
+      {
+        "file": "MANIFEST.md",
+        "description": "Full 42-PRIM registry with 42×10 INV compliance matrix, FM/INV/condition-prefix/state-flag registries",
+        "prim_matrix_dimensions": "42 × 10",
+        "inv_tokens": ["✅","—","⚠"],
+        "status": "SEALED"
+      },
+      {
+        "file": "validate_prims.py",
+        "description": "Runnable Python validation harness — all 42 PRIMs × 10 INVs, structural assertions, CLI flags",
+        "version": "1.0.0",
+        "cli_flags": ["--wave","--prim","--inv","--matrix","--strict","--verbose","--no-module"],
+        "assertion_count_approx": 803,
+        "exit_codes": {"0": "all pass", "1": "failures (--strict only)"},
+        "status": "SEALED"
+      }
     ]
   },
 
-  "state_flags": [
-    { "flag": "CAPTURE_PENDING",   "terminal": false, "frozen": true,  "set_by": "compute_approach_vector", "defined_in": "f_Capture.md §4.3" },
-    { "flag": "CAPTURE_LOCKED",    "terminal": false, "frozen": true,  "set_by": "register_capture",        "defined_in": "f_Capture.md §4.3" },
-    { "flag": "CAPTURE_DECAYING",  "terminal": false, "frozen": true,  "set_by": "flag_decay",              "defined_in": "f_Capture.md §4.3" },
-    { "flag": "CAPTURE_FAILED",    "terminal": true,  "frozen": true,  "set_by": "register_capture",        "defined_in": "f_Capture.md §4.3" },
-    { "flag": "CAPTURE_COLLISION", "terminal": true,  "frozen": true,  "set_by": "execute_collapse",        "defined_in": "f_Capture.md §4.3" },
-    { "flag": "ORBIT_STABLE",      "terminal": false, "frozen": true,  "set_by": "classify_orbit",          "defined_in": "f_Orbit.md §4"     },
-    { "flag": "ORBIT_ECCENTRIC",   "terminal": false, "frozen": true,  "set_by": "classify_orbit",          "defined_in": "f_Orbit.md §4"     },
-    { "flag": "RELEASED",          "terminal": true,  "frozen": true,  "set_by": "execute_release",         "defined_in": "f_Release.md §4"   },
-    { "flag": "COLLAPSED",         "terminal": true,  "frozen": true,  "set_by": "execute_collapse",        "defined_in": "f_Collapse.md §4"  },
-    { "flag": "DAMPEN_ACTIVE",     "terminal": false, "frozen": true,  "set_by": "suppress_field",          "defined_in": "f_Dampen.md §4"    },
-    { "flag": "EMIT_ACTIVE",       "terminal": false, "frozen": true,  "set_by": "emit_field",              "defined_in": "f_Emit.md §4"      }
-  ],
-
-  "engineering_primitives": [
-    { "id":  1, "name": "compute_approach_vector",    "pure": true,  "frozen": true,  "eval_step": 1,      "defined_in": "f_Capture.md §7.2"  },
-    { "id":  2, "name": "resolve_escape_velocity",    "pure": true,  "frozen": true,  "eval_step": 2,      "defined_in": "f_Capture.md §7.2"  },
-    { "id":  3, "name": "evaluate_capture_threshold", "pure": true,  "frozen": true,  "eval_step": 5,      "defined_in": "f_Capture.md §7.2"  },
-    { "id":  4, "name": "lock_orbit",                 "pure": false, "frozen": true,  "eval_step": 8,      "defined_in": "f_Capture.md §7.2"  },
-    { "id":  5, "name": "register_capture",           "pure": false, "frozen": true,  "eval_step": 9,      "defined_in": "f_Capture.md §7.2"  },
-    { "id":  6, "name": "flag_decay",                 "pure": false, "frozen": true,  "eval_step": "10-CYCLE", "defined_in": "f_Capture.md §7.2" },
-    { "id":  7, "name": "classify_orbit",             "pure": true,  "frozen": false, "eval_step": "post-lock", "defined_in": "f_Orbit.md §7"  },
-    { "id":  8, "name": "compute_release_vector",     "pure": true,  "frozen": false, "defined_in": "f_Release.md §7"  },
-    { "id":  9, "name": "execute_release",            "pure": false, "frozen": false, "defined_in": "f_Release.md §7"  },
-    { "id": 10, "name": "execute_collapse",           "pure": false, "frozen": false, "defined_in": "f_Collapse.md §7" },
-    { "id": 11, "name": "initialize_composite_node",  "pure": false, "frozen": false, "defined_in": "f_Collapse.md §7" },
-    { "id": 12, "name": "purge_registry",             "pure": false, "frozen": false, "defined_in": "f_Collapse.md §7" },
-    { "id": 13, "name": "emit_field",                 "pure": false, "frozen": false, "defined_in": "f_Emit.md §7"     },
-    { "id": 14, "name": "suppress_field",             "pure": false, "frozen": false, "defined_in": "f_Dampen.md §7"   },
-    { "id": 15, "name": "amplify_coupling",           "pure": false, "frozen": false, "defined_in": "f_Amplify.md §7"  },
-    { "id": 16, "name": "redirect_force_node",        "pure": false, "frozen": false, "defined_in": "f_Deflect.md §7"  }
-  ],
-
-  "failure_modes": [
-    { "id": "FM-001", "name": "Overshoot",          "node": "F_force", "severity": "error", "frozen": true,  "terminal": true,  "recoverable": false, "defined_in": "f_Capture.md §6"  },
-    { "id": "FM-002", "name": "Field Null",          "node": "F_freq",  "severity": "error", "frozen": true,  "terminal": true,  "recoverable": false, "defined_in": "f_Capture.md §6"  },
-    { "id": "FM-003", "name": "Frame Saturation",   "node": "Frame",   "severity": "error", "frozen": true,  "terminal": true,  "recoverable": false, "defined_in": "f_Capture.md §6"  },
-    { "id": "FM-004", "name": "Resonance Drift",    "node": "ω_res",   "severity": "warn",  "frozen": true,  "terminal": false, "recoverable": true,  "defined_in": "f_Capture.md §6"  },
-    { "id": "FM-005", "name": "Decay Spiral",       "node": "d_bind",  "severity": "fatal", "frozen": true,  "terminal": true,  "recoverable": false, "defined_in": "f_Decay.md §6"    },
-    { "id": "FM-006", "name": "Phantom Capture",    "node": "ρ(Φ)",    "severity": "warn",  "frozen": true,  "terminal": true,  "recoverable": false, "defined_in": "f_Capture.md §6"  },
-    { "id": "FM-007", "name": "Mutual Dissolution", "node": "F_fluid", "severity": "fatal", "frozen": true,  "terminal": true,  "recoverable": false, "defined_in": "f_Collapse.md §6" },
-    { "id": "FM-008", "name": "Release Overshoot",  "node": "F_force", "severity": "error", "frozen": false, "terminal": true,  "recoverable": false, "defined_in": "f_Release.md §6"  },
-    { "id": "FM-009", "name": "Dampen Cascade",     "node": "F_freq",  "severity": "fatal", "frozen": false, "terminal": false, "recoverable": true,  "defined_in": "f_Dampen.md §6"   },
-    { "id": "FM-010", "name": "Amplify Runaway",    "node": "F_fluid", "severity": "fatal", "frozen": false, "terminal": true,  "recoverable": false, "defined_in": "f_Amplify.md §6"  }
-  ],
-
-  "stability_conditions": [
-    { "id": 1, "name": "Approach",          "predicate": "v_approach < v_escape(A)",       "governing_operator": "C_thresh",             "eval_step": 5, "failure_if_violated": "FM-001" },
-    { "id": 2, "name": "Field Coherence",   "predicate": "ρ(Φ) ≠ 0 ∧ uniform",           "governing_operator": "ρ(Φ)",                 "eval_step": 2, "failure_if_violated": "FM-002" },
-    { "id": 3, "name": "Resonance",         "predicate": "ω_res ∈ ℚ",                     "governing_operator": "ω_res",                "eval_step": 7, "failure_if_violated": "FM-004" },
-    { "id": 4, "name": "Binding Floor",     "predicate": "β ≥ 1.0",                       "governing_operator": "β",                    "eval_step": 4, "failure_if_violated": "FM-001" },
-    { "id": 5, "name": "Frame Compatibility","predicate": "Frame.registry_capacity > 0",  "governing_operator": "Frame",                "eval_step": 6, "failure_if_violated": "FM-003" }
-  ],
-
-  "composition_rules": [
-    { "name": "Effective Pull",         "formula": "P_eff = M_A × ρ(Φ) / r²",                   "defined_when": "ρ(Φ) > 0 ∧ r > 0"         },
-    { "name": "Binding Coefficient",    "formula": "β = P_eff / (M_E × v_approach)",             "defined_when": "v_approach > 0"             },
-    { "name": "Capture Threshold",      "formula": "C_thresh = v_escape(A) − v_approach",        "defined_when": "always"                     },
-    { "name": "Residual Momentum",      "formula": "p_res = M_E × (v_approach − C_thresh)",     "defined_when": "C_thresh > 0"               },
-    { "name": "Orbital Eccentricity",   "formula": "e = p_res / (p_res + P_eff)",               "defined_when": "P_eff > 0"                  },
-    { "name": "Binding Depth",          "formula": "d_bind = β × ρ(Φ) × (1 − e)",              "defined_when": "e ∈ [0,1)"                  },
-    { "name": "Decay Rate",             "formula": "δ = Δd_bind / Δt",                          "defined_when": "t ≥ 1 (post first cycle)"   },
-    { "name": "Capture Gate",           "formula": "C_thresh > 0 ∧ ρ(Φ) > 0 ∧ ω_res ∈ ℚ ∧ β ≥ 1.0 ∧ Frame.capacity > 0", "defined_when": "all inputs defined" }
-  ],
-
-  "unlock_sequence": {
-    "wave_0": { "status": "complete", "files": ["f_Capture.md","f_Source.md","GravityOfDismissal.md"], "blocked_by": null },
-    "wave_1": { "status": "complete", "files": ["README.md","INDEX.md","OPERATORS.md","GLOSSARY.md","CHANGELOG.md","FFF_Gravity_module.json"], "blocked_by": null },
-    "wave_2": { "status": "open",     "files": ["f_Field.md","f_Force.md","f_Frame.md"],               "blocked_by": "Wave 1 stable" },
-    "wave_3": {
-      "status": "partially_open",
-      "files": ["f_Release.md","f_Decay.md","f_Orbit.md","f_Collapse.md","f_Emit.md","f_Dampen.md","f_Amplify.md","f_Deflect.md"],
-      "open_now": ["f_Orbit.md","f_Amplify.md"],
-      "blocked_by": "Wave 2 canonical (most); f_Orbit.md canonical (f_Decay, f_Release, f_Collapse)"
-    },
-    "wave_4": { "status": "locked",   "files": ["f_Capture_Multi.md","f_Capture_Cascade.md","f_Capture_Resonant.md","f_Capture_Asymmetric.md","f_Capture_Temporal.md","f_Capture_Networked.md"], "blocked_by": "All Wave 3 canonical" }
+  "prim_registry": {
+    "total": 42,
+    "range": "PRIM:001–042",
+    "sealed": true,
+    "sealed_at_wave": 5,
+    "registry": [
+      {"id":"001","name":"compute_field_density",       "type":"Pure",  "source":"f_Field",             "wave":2},
+      {"id":"002","name":"update_field_state",          "type":"Impure","source":"f_Field",             "wave":2},
+      {"id":"003","name":"compute_force_vector",        "type":"Pure",  "source":"f_Force",             "wave":2},
+      {"id":"004","name":"register_capture",            "type":"Impure","source":"f_Frame",             "wave":2},
+      {"id":"005","name":"compute_approach_vector",     "type":"Pure",  "source":"f_Force",             "wave":2},
+      {"id":"006","name":"check_frame_capacity",        "type":"Pure",  "source":"f_Frame",             "wave":2},
+      {"id":"007","name":"classify_orbit",              "type":"Pure",  "source":"f_Orbit",             "wave":3},
+      {"id":"008","name":"compute_release_vector",      "type":"Pure",  "source":"f_Release",           "wave":3},
+      {"id":"009","name":"execute_release",             "type":"Impure","source":"f_Release",           "wave":3},
+      {"id":"010","name":"compute_decay_step",          "type":"Pure",  "source":"f_Decay",             "wave":3},
+      {"id":"011","name":"evaluate_collapse_eligibility","type":"Pure", "source":"f_Decay",             "wave":3},
+      {"id":"012","name":"compute_orbital_period",      "type":"Pure",  "source":"f_Orbit",             "wave":3},
+      {"id":"013","name":"evaluate_collapse_path",      "type":"Pure",  "source":"f_Collapse",          "wave":3},
+      {"id":"014","name":"execute_collapse",            "type":"Impure","source":"f_Collapse",          "wave":3},
+      {"id":"015","name":"compute_emit_vector",         "type":"Pure",  "source":"f_Emit",              "wave":3},
+      {"id":"016","name":"compute_field_delta",         "type":"Pure",  "source":"f_Emit",              "wave":3},
+      {"id":"017","name":"execute_emit",                "type":"Impure","source":"f_Emit",              "wave":3},
+      {"id":"018","name":"compute_dampen_force",        "type":"Pure",  "source":"f_Dampen",            "wave":3},
+      {"id":"019","name":"apply_field_floor",           "type":"Pure",  "source":"f_Dampen",            "wave":3},
+      {"id":"020","name":"execute_dampen",              "type":"Impure","source":"f_Dampen",            "wave":3},
+      {"id":"021","name":"compute_amplify_force",       "type":"Pure",  "source":"f_Amplify",           "wave":3},
+      {"id":"022","name":"check_runaway_risk",          "type":"Pure",  "source":"f_Amplify",           "wave":3},
+      {"id":"023","name":"compute_deflection_angle",    "type":"Pure",  "source":"f_Deflect",           "wave":3},
+      {"id":"024","name":"execute_deflect",             "type":"Impure","source":"f_Deflect",           "wave":3},
+      {"id":"025","name":"execute_multi_capture",       "type":"Impure","source":"f_Capture_Multi",     "wave":4},
+      {"id":"026","name":"compute_perturbation_budget", "type":"Pure",  "source":"f_Capture_Multi",     "wave":4},
+      {"id":"027","name":"evaluate_cascade_eligibility","type":"Pure",  "source":"f_Capture_Cascade",   "wave":4},
+      {"id":"028","name":"execute_cascade_step",        "type":"Impure","source":"f_Capture_Cascade",   "wave":4},
+      {"id":"029","name":"evaluate_soft_eligibility",   "type":"Pure",  "source":"f_Capture_Soft",      "wave":4},
+      {"id":"030","name":"execute_soft_capture",        "type":"Impure","source":"f_Capture_Soft",      "wave":4},
+      {"id":"031","name":"evaluate_hard_eligibility",   "type":"Pure",  "source":"f_Capture_Hard",      "wave":4},
+      {"id":"032","name":"execute_hard_lock",           "type":"Impure","source":"f_Capture_Hard",      "wave":4},
+      {"id":"033","name":"eval_resonance_window",       "type":"Pure",  "source":"f_Capture_Resonant",  "wave":4},
+      {"id":"034","name":"lock_resonance",              "type":"Impure","source":"f_Capture_Resonant",  "wave":4},
+      {"id":"035","name":"eval_asymmetric_approach",    "type":"Pure",  "source":"f_Capture_Asymmetric","wave":4},
+      {"id":"036","name":"lock_asymmetric",             "type":"Impure","source":"f_Capture_Asymmetric","wave":4},
+      {"id":"037","name":"evaluate_temporal_window",    "type":"Pure",  "source":"f_Capture_Temporal",  "wave":4},
+      {"id":"038","name":"lock_temporal_capture",       "type":"Impure","source":"f_Capture_Temporal",  "wave":4},
+      {"id":"039","name":"evaluate_network_capture",    "type":"Pure",  "source":"f_Capture_Networked", "wave":4},
+      {"id":"040","name":"lock_network_capture",        "type":"Impure","source":"f_Capture_Networked", "wave":4},
+      {"id":"041","name":"evaluate_dismissal",          "type":"Pure",  "source":"f_Dismiss",           "wave":5},
+      {"id":"042","name":"execute_dismissal",           "type":"Impure","source":"f_Dismiss",           "wave":5}
+    ]
   },
 
-  "invariants": [
-    { "id": "INV-001", "statement": "G = F_freq · F_fluid · F_force — triadic gravity equation; nodes are inseparable at any scale" },
-    { "id": "INV-002", "statement": "f_Capture(E, A, Φ) → Ω — canonical function signature; frozen at v1.0.0" },
-    { "id": "INV-003", "statement": "ρ(Φ) = 0 always triggers FM-002 — no exceptions, no overrides" },
-    { "id": "INV-004", "statement": "β < 1.0 always produces flyby (CAPTURE_FAILED) — no exceptions" },
-    { "id": "INV-005", "statement": "All five Stability Conditions are conjunctive — no partial capture" },
-    { "id": "INV-006", "statement": "Terminal states (CAPTURE_FAILED, CAPTURE_COLLISION, RELEASED, COLLAPSED) are irreversible" },
-    { "id": "INV-007", "statement": "f_Source.md is read-only — historical record; never to be edited" },
-    { "id": "INV-008", "statement": "Operator evaluation order (10 steps in OPERATORS.md §7) is normative — out-of-order is undefined behavior" },
-    { "id": "INV-009", "statement": "OPERATORS.md is the symbol authority — overrides all function files on conflicts" },
-    { "id": "INV-010", "statement": "Frozen symbols (v1.0.0 set) cannot be renamed without a major version bump of OPERATORS.md" }
-  ],
+  "invariant_registry": {
+    "total": 10,
+    "sealed": true,
+    "sealed_at_wave": 3,
+    "registry": [
+      {"id":"INV-001","statement":"G = F_freq · F_fluid · F_force — triadic identity must be preserved in every gravitational evaluation","wave_introduced":2},
+      {"id":"INV-002","statement":"ρ(Φ) ∈ [0,1]; ρ_D(Φ) ∈ (−1,0] — field density domains are strictly bounded","wave_introduced":2},
+      {"id":"INV-003","statement":"ρ(Φ) = 0 → FM-002 (Field Null) fires unconditionally; no PRIM bypasses this","wave_introduced":2},
+      {"id":"INV-004","statement":"β < 1.0 → FM-001 (Flyby/Approach Rejection) fires unconditionally","wave_introduced":2},
+      {"id":"INV-005","statement":"All condition sets within a file are conjunctive (AND-gated); any failed condition aborts","wave_introduced":2},
+      {"id":"INV-006","statement":"Terminal state flags are irreversible; no PRIM may clear a terminal flag once set","wave_introduced":2},
+      {"id":"INV-007","statement":"f_Source.md is read-only; no PRIM mutates source-node registered properties","wave_introduced":2},
+      {"id":"INV-008","statement":"Evaluation order within a PRIM is normative; the documented sequence is binding","wave_introduced":3},
+      {"id":"INV-009","statement":"OPERATORS.md is the single authoritative symbol registry; all symbols pre-registered","wave_introduced":3},
+      {"id":"INV-010","statement":"Operators are frozen on first canonical appearance; redefinition is prohibited","wave_introduced":3}
+    ]
+  },
 
-  "counts": {
-    "total_files": 26,
-    "canonical": 8,
-    "scaffold": 17,
-    "archived": 1,
-    "total_operators": {
-      "primary": 9,
-      "derived": 10,
-      "supplementary": 8,
-      "state_flags": 11,
-      "primitives": 16,
-      "failure_modes": 10,
-      "grand_total": 64
-    },
-    "frozen_operators": {
-      "primary": 9,
-      "derived": 5,
-      "state_flags": 11,
-      "primitives": 6,
-      "failure_modes": 7,
-      "total_frozen": 38
-    },
-    "pending_operators": {
-      "derived": 5,
-      "supplementary": 8,
-      "primitives": 10,
-      "failure_modes": 3,
-      "total_pending": 26
-    },
-    "sessions_to_date": 12,
-    "stability_conditions": 5,
-    "composition_rules": 8,
-    "invariants": 10,
-    "canonical_examples": 4,
-    "dismissal_cases": 15,
-    "attack_vectors": 7,
-    "glossary_terms": 62
+  "failure_mode_registry": {
+    "total_base": 10,
+    "total_submodes": 3,
+    "total": 13,
+    "sealed": true,
+    "sealed_at_wave": 3,
+    "registry": [
+      {
+        "id":"FM-001","name":"Flyby / Approach Rejection","domain":"F_force",
+        "fatal":false,"wave_introduced":2,
+        "sub_annotations":["WELL_BARRIER","WINDOW_MISS","TRAJECTORY_MISS","TEMPORAL_MISS","OUTSIDE_WINDOW","MARGIN_VIOLATED","WINDOW_EXHAUSTED","APPROACH_REJECTION","OVERSHOOT"]
+      },
+      {"id":"FM-002","name":"Field Null","domain":"F_freq","fatal":true,"wave_introduced":2,"sub_annotations":["FIELD_NULL"]},
+      {
+        "id":"FM-003","name":"Frame Saturation","domain":"F_fluid","fatal":false,"wave_introduced":2,
+        "submodes":[
+          {"id":"FM-003-M","introduced_in":"f_Capture_Multi","wave":4,"trigger":"Multi-target bind conflict mid-session"},
+          {"id":"FM-003-C","introduced_in":"f_Capture_Cascade","wave":4,"trigger":"Cascade capacity breach mid-chain"},
+          {"id":"FM-003-N","introduced_in":"f_Capture_Networked","wave":4,"trigger":"All network node frames simultaneously saturated"}
+        ]
+      },
+      {"id":"FM-004","name":"Resonance Drift","domain":"F_freq","fatal":false,"wave_introduced":3,"note":"Primary post-capture risk for RESONANT orbits; recoverable"},
+      {"id":"FM-005","name":"Decay Spiral","domain":"F_freq/fluid","fatal":"orbit (not entity)","wave_introduced":3},
+      {"id":"FM-006","name":"Phantom Capture","domain":"F_force","fatal":true,"wave_introduced":3,"sub_annotations":["PHANTOM_RESONANCE","DISMISS_PHANTOM"]},
+      {"id":"FM-007","name":"Mutual Dissolution","domain":"F_fluid","fatal":true,"wave_introduced":3,"sub_annotations":["PARITY_BREACH"]},
+      {"id":"FM-008","name":"Release Failure","domain":"F_force","fatal":false,"wave_introduced":3},
+      {"id":"FM-009","name":"Dampen Cascade Lockout","domain":"F_freq","fatal":false,"wave_introduced":3},
+      {"id":"FM-010","name":"Amplify Ceiling","domain":"F_fluid","fatal":false,"wave_introduced":3,"sub_annotations":["β_domain","ρ_domain"]}
+    ]
+  },
+
+  "condition_prefix_registry": {
+    "total": 11,
+    "sealed": true,
+    "registry": [
+      {"prefix":"SC-", "name":"Stability Conditions",       "file":"f_Capture.md",             "wave":0,"conditions":["SC-1","SC-2","SC-3","SC-4","SC-5"]},
+      {"prefix":"DC-", "name":"Decay Conditions",           "file":"f_Decay.md",               "wave":3,"conditions":["DC-1","DC-2","DC-3","DC-4"]},
+      {"prefix":"MC-", "name":"Multi-Capture Conditions",   "file":"f_Capture_Multi.md",       "wave":4,"conditions":["MC-1","MC-2"]},
+      {"prefix":"CAS-","name":"Cascade Conditions",         "file":"f_Capture_Cascade.md",     "wave":4,"conditions":["CAS-1","CAS-2","CAS-3","CAS-4"]},
+      {"prefix":"SCS-","name":"Soft Capture Conditions",    "file":"f_Capture_Soft.md",        "wave":4,"conditions":["SCS-1","SCS-2","SCS-3","SCS-4"]},
+      {"prefix":"HLC-","name":"Hard Lock Conditions",       "file":"f_Capture_Hard.md",        "wave":4,"conditions":["HLC-1","HLC-2","HLC-3","HLC-4"]},
+      {"prefix":"RLC-","name":"Resonance Lock Conditions",  "file":"f_Capture_Resonant.md",    "wave":4,"conditions":["RLC-1","RLC-2","RLC-3","RLC-4","RLC-5"]},
+      {"prefix":"AC-", "name":"Asymmetric Conditions",      "file":"f_Capture_Asymmetric.md",  "wave":4,"conditions":["AC-1","AC-2","AC-3","AC-4","AC-5"]},
+      {"prefix":"TC-", "name":"Temporal Conditions",        "file":"f_Capture_Temporal.md",    "wave":4,"conditions":["TC-1","TC-2","TC-3","TC-4","TC-5"]},
+      {"prefix":"NC-", "name":"Network Conditions",         "file":"f_Capture_Networked.md",   "wave":4,"conditions":["NC-1","NC-2","NC-3","NC-4","NC-5"]},
+      {"prefix":"DISM-","name":"Dismissal Conditions",      "file":"f_Dismiss.md",             "wave":5,"conditions":["DISM-1","DISM-2","DISM-3","DISM-4","DISM-5"]}
+    ]
+  },
+
+  "state_flag_registry": {
+    "total": 31,
+    "sealed": true,
+    "registry": [
+      {"flag":"CAPTURE_LOCKED",      "set_by":"PRIM:004","terminal":true, "meaning":"Standard capture committed; orbit evaluation begins"},
+      {"flag":"CAPTURE_SOFT",        "set_by":"PRIM:030","terminal":false,"meaning":"Provisional binding within grace period"},
+      {"flag":"SOFT_STRENGTHENED",   "set_by":"PRIM:030","terminal":true, "meaning":"Soft capture promoted to CAPTURE_LOCKED"},
+      {"flag":"SOFT_DISSOLVED",      "set_by":"PRIM:030","terminal":true, "meaning":"Soft capture fell below soft_threshold; released"},
+      {"flag":"GRACE_EXPIRED",       "set_by":"PRIM:030","terminal":true, "meaning":"Grace period exhausted without resolution"},
+      {"flag":"ORBIT_STABLE",        "set_by":"PRIM:032","terminal":true, "meaning":"Hard lock confirmed; direct ORBIT_STABLE entry (no CAPTURE_LOCKED intermediate)"},
+      {"flag":"HARD_ELIGIBLE",       "set_by":"PRIM:031","terminal":false,"meaning":"HLC conditions passed; PRIM:032 may proceed"},
+      {"flag":"HARD_REJECTED",       "set_by":"PRIM:031","terminal":true, "meaning":"HLC conditions failed; no_retry_flag latched; encounter closed"},
+      {"flag":"FRAME_SATURATED",     "set_by":"PRIM:032","terminal":false,"meaning":"FM-003 in hard lock path; retriable after capacity release"},
+      {"flag":"WINDOW_OPEN",         "set_by":"PRIM:033","terminal":false,"meaning":"Resonance phase check passed"},
+      {"flag":"WINDOW_CLOSED",       "set_by":"PRIM:033","terminal":false,"meaning":"Resonance phase check failed; retry at t_next_open"},
+      {"flag":"RESONANCE_LOCKED",    "set_by":"PRIM:034","terminal":true, "meaning":"Resonant orbit committed; orbit_class = RESONANT; stab_class = STABLE"},
+      {"flag":"RESONANCE_LOST",      "set_by":"FM-004",  "terminal":false,"meaning":"ρ(Φ) < ρ_res_floor; orbit degraded to ELLIPTICAL/MARGINAL; recoverable"},
+      {"flag":"ASYMMETRIC_APPROACH", "set_by":"PRIM:035","terminal":false,"meaning":"mass_ratio > 0 detected; asymmetry corrections active"},
+      {"flag":"PARITY_WARN",         "set_by":"PRIM:035","terminal":false,"meaning":"mass_ratio ≥ 0.75×m_parity; approaching dissolution boundary"},
+      {"flag":"PARITY_BREACH",       "set_by":"PRIM:035","terminal":true, "meaning":"mass_ratio ≥ m_parity; FM-007 → f_Collapse.md Path B"},
+      {"flag":"ASYMMETRIC_LOCKED",   "set_by":"PRIM:036","terminal":true, "meaning":"Asymmetric capture committed; orbit_class ELLIPTICAL or ECCENTRIC"},
+      {"flag":"CAPTURE_TEMPORAL",    "set_by":"PRIM:038","terminal":true, "meaning":"Temporal window capture committed"},
+      {"flag":"TEMPORAL_MISS",       "set_by":"PRIM:037","terminal":false,"meaning":"TC-1, TC-2, or TC-5 failed; entity not captured in this window"},
+      {"flag":"WINDOW_EXHAUSTED",    "set_by":"PRIM:038","terminal":false,"meaning":"window_id already consumed; re-entry blocked until new window_id issued"},
+      {"flag":"NETWORK_CAPTURED",    "set_by":"PRIM:040","terminal":true, "meaning":"Entity locked across distributed attractor network"},
+      {"flag":"NETWORK_MISS",        "set_by":"PRIM:039","terminal":false,"meaning":"NC- conditions failed; network capture aborted"},
+      {"flag":"NETWORK_SATURATED",   "set_by":"PRIM:039","terminal":false,"meaning":"FM-003-N: capacity_net = 0; all node frames full"},
+      {"flag":"DISMISSED",           "set_by":"PRIM:042","terminal":"relation","meaning":"(A,E) binding severed; Dismissal Well active; entity itself remains active"},
+      {"flag":"DISMISS_INVALID",     "set_by":"PRIM:041","terminal":false,"meaning":"DISM condition failed; no state mutation occurred"},
+      {"flag":"DISMISS_PHANTOM",     "set_by":"PRIM:041","terminal":false,"meaning":"FM-006 phantom guard triggered; d_dismiss bounded to min(d_bind, ρ(Φ)×d_bind)"},
+      {"flag":"CAPTURE_FAILED",      "set_by":"Various", "terminal":false,"meaning":"Generic capture rejection; retry possible depending on condition"},
+      {"flag":"PARTIAL_CASCADE",     "set_by":"PRIM:028","terminal":false,"meaning":"FM-003-C partial state; prior steps committed; cascade halted"},
+      {"flag":"FIELD_NULL",          "set_by":"PRIM:002","terminal":true, "meaning":"ρ(Φ) = 0; FM-002 active; no captures possible"},
+      {"flag":"COLLAPSED",           "set_by":"PRIM:014","terminal":true, "meaning":"Node collapsed; no further operations"},
+      {"flag":"RELEASED",            "set_by":"PRIM:009","terminal":"orbit","meaning":"Entity released from this orbit; no Dismissal Well created; entity may form new orbits"}
+    ]
+  },
+
+  "operator_families": {
+    "note": "Grouped by wave/file. Full canonical listing in OPERATORS.md.",
+    "total_approx": 101,
+    "families": [
+      {
+        "source": "f_Field / f_Force / f_Frame",
+        "wave": 2,
+        "operators": ["ρ(Φ)","Φ","v_approach","v_escape","F_force","capacity_MAX","frame_count","k_frame"]
+      },
+      {
+        "source": "f_Orbit / f_Release / f_Decay / f_Collapse",
+        "wave": 3,
+        "operators": ["T_orb","orbit_class","stab_class","v_release","r_release","δ","d_warn","d_collapse","m_parity","C_node"]
+      },
+      {
+        "source": "f_Emit / f_Dampen / f_Amplify / f_Deflect",
+        "wave": 3,
+        "operators": ["F_emit","ρ(Φ)_delta","r_emit","F_damp","ρ(Φ)_floor","cascade_guard","F_amp","β_max","amp_cost","heading_delta","r_deflect","deflect_cost"]
+      },
+      {
+        "source": "f_Capture_Multi / f_Capture_Cascade",
+        "wave": 4,
+        "operators": ["N","eval_order","Φ_perturbed","δ_perturb","k_perturb","cascade_depth","k_max","γ","Ω_cascade"]
+      },
+      {
+        "source": "f_Capture_Soft / f_Capture_Hard",
+        "wave": 4,
+        "operators": ["d_soft","soft_threshold","grace_period","k_grace","d_hard","α_hard","β_hard","β_min_hard","lock_cost","k_lock"]
+      },
+      {
+        "source": "f_Capture_Resonant",
+        "wave": 4,
+        "operators": ["ω_res","T_res","φ_A(t)","φ_E","φ_open","φ_close","window_width","t_arrive","t_next_open","ρ_res_gain","ρ_eff","ρ_res_floor","d_bind_res","T_orb_res","p_ratio","q_ratio"]
+      },
+      {
+        "source": "f_Capture_Asymmetric",
+        "wave": 4,
+        "operators": ["mass_ratio","asymmetry_factor","parity_warn_threshold","d_bind_asym","heading_delta_asym","deflect_tolerance","asym_decay_risk"]
+      },
+      {
+        "source": "f_Capture_Temporal",
+        "wave": 4,
+        "operators": ["t_open","t_close","t_span","t_elapsed","t_remaining","window_id","proximity_ratio","temporal_decay_factor","d_bind_temporal","temporal_margin"]
+      },
+      {
+        "source": "f_Capture_Networked",
+        "wave": 4,
+        "operators": ["N_net","G_net","w_i","d_bind_net","ρ(Φ)_net","resilience_threshold"]
+      },
+      {
+        "source": "f_Dismiss",
+        "wave": 5,
+        "operators": ["F_dismiss","ρ_D(Φ)","d_dismiss","T_dismiss","r_dismiss","ψ_dismiss","t_dismiss","v_depart","β_D"]
+      }
+    ]
+  },
+
+  "cross_module_references": {
+    "seenmap": "docs/SEENMAP.md",
+    "spine_languages": "docs/spine/languages/",
+    "son_module": "docs/SoN/",
+    "references": [
+      {
+        "from": "f_Dismiss.md",
+        "to":   "GravityOfDismissal.md",
+        "via":  "§6 operator family",
+        "purpose": "ρ_D(Φ,t) negative-polarity field authority; conceptual anchor"
+      },
+      {
+        "from": "All FFF_Gravity files",
+        "to":   "docs/spine/languages/",
+        "via":  "notation registry",
+        "purpose": "Cross-module operator symbol disambiguation"
+      },
+      {
+        "from": "FFF_Gravity/MANIFEST.md",
+        "to":   "All 31 FFF_Gravity files",
+        "via":  "42×10 INV compliance matrix",
+        "purpose": "Full PRIM registry validation"
+      },
+      {
+        "from": "FFF_Gravity/validate_prims.py",
+        "to":   "MANIFEST.md",
+        "via":  "Python harness",
+        "purpose": "CLI PRIM/INV compliance testing — exit 0 = all pass"
+      },
+      {
+        "from": "docs/SoN/s_Capture.md",
+        "to":   "FFF_Gravity/f_Capture.md",
+        "via":  "capture operator lineage",
+        "purpose": "SoN inverts the RTT observer layer; FFF_Gravity provides the gravitational model SoN extends"
+      }
+    ]
+  },
+
+  "unlock_conditions": {
+    "produced_by_this_module": [
+      {
+        "artifact": "docs/SEENMAP.md",
+        "unlocked_by": "Wave 4 complete",
+        "status": "DELIVERED"
+      },
+      {
+        "artifact": "FFF_Gravity_module.json v2.0.0",
+        "unlocked_by": "Wave 5 complete + SEENMAP.md delivered",
+        "status": "THIS FILE"
+      }
+    ],
+    "downstream_unlocks": [
+      {
+        "artifact": "docs/SoN/ Wave 1 admin files",
+        "unlocked_by": "s_Capture.md sealed",
+        "status": "PENDING"
+      },
+      {
+        "artifact": "SoN_module.json",
+        "unlocked_by": "SoN Wave 1 complete",
+        "status": "PENDING"
+      },
+      {
+        "artifact": "Multi-microkernel integration docs",
+        "unlocked_by": "SoN substrate harness complete",
+        "status": "PENDING"
+      },
+      {
+        "artifact": "Zenodo DOI next batch",
+        "unlocked_by": "30 seed DOIs + new wave content",
+        "status": "PENDING"
+      }
+    ]
   },
 
   "changelog": [
     {
       "version": "1.0.0",
+      "date": "2026-01-01",
+      "session": "SES-INIT",
+      "notes": "Initial module manifest. Waves 0–2 registered."
+    },
+    {
+      "version": "1.1.0",
+      "date": "2026-06-01",
+      "session": "SES-W3",
+      "notes": "Wave 3 Core Functions added. PRIM:007–024 registered. INV registry sealed at INV-010. FM registry sealed at FM-010."
+    },
+    {
+      "version": "1.2.0",
       "date": "2026-08-13",
-      "author": "TriadicFrameworks",
-      "bump_type": "initial",
-      "sessions": [
-        "SES-20260813-001","SES-20260813-002","SES-20260813-003",
-        "SES-20260813-004","SES-20260813-005","SES-20260813-GOD-001",
-        "SES-20260813-SITEMAP-001","SES-20260813-README-001",
-        "SES-20260813-INDEX-001","SES-20260813-OPS-001",
-        "SES-20260813-GLOS-001","SES-20260813-CL-001","SES-20260813-JSON-001"
-      ],
-      "notes": "Initial canonical release. Full module established across 13 sessions on founding day 2026-08-13. 8 canonical files, 17 scaffolds, 1 archive. 38 symbols frozen."
+      "session": "SES-20260813-W4",
+      "notes": "Wave 4 Capture Variants added. PRIM:025–040 registered. 8 capture variant files. FM sub-modes FM-003-M, FM-003-C, FM-003-N introduced. 11 condition prefixes sealed. SEENMAP.md (formerly SITEMAP.md) unlocked."
+    },
+    {
+      "version": "2.0.0",
+      "date": "2026-08-14",
+      "session": "SES-20260814-JSON-REFRESH-001",
+      "notes": "Full refresh. Wave 5 (f_Dismiss.md, PRIM:041–042) added. PRIM registry sealed at 42. F_dismiss family frozen (9 operators). DISM- condition prefix added (total: 11). MANIFEST.md and validate_prims.py registered as post-Wave-5 admin artifacts. Path corrections: SITEMAP.md → SEENMAP.md, spine/languages-atlas/ → spine/languages/. Module status: SEALED."
     }
   ]
 }
