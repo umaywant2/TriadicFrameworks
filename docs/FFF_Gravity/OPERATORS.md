@@ -970,3 +970,32 @@ Two corrections surfaced while writing this — both logged in the file, both ne
 | `d_bind_net`           | float | > 0       | Network-consensus binding distance (weighted aggregate)          | PRIM:040  |
 | `ρ(Φ)_net`             | float | ≥ 0       | Aggregate network field density across all participating nodes   | PRIM:040  |
 | `resilience_threshold` | float | (0, 1)    | Minimum connectivity fraction required to sustain network capture| PRIM:040  |
+
+---
+
+## Wave 5 — Dismissal Operators (PRIM:041–042)
+> Session: SES-20260814-DISMISS-001 | Sealed: 2026-08-14
+
+### f_Dismiss Operators (Wave 5 · PRIM:041–042)
+
+| Symbol      | Type  | Domain           | Description                                               | Frozen in |
+|-------------|-------|------------------|-----------------------------------------------------------|-----------|
+| `F_dismiss` | float | ≥ 0              | Scalar dismissal force magnitude (\|G_D\|)                | PRIM:041  |
+| `ρ_D(Φ)`    | float | (−1, 0]          | Dismissal field density (negative-polarity extension)     | PRIM:042  |
+| `d_dismiss` | float | > 0              | Initial Dismissal Well depth at t = 0                     | PRIM:042  |
+| `T_dismiss` | float | > 0              | Dismissal persistence time; governs exponential well decay| PRIM:042  |
+| `r_dismiss` | float | (0, r_capture]   | Spatial extent of dismissal repulsion zone around A       | PRIM:041  |
+| `ψ_dismiss` | enum  | {INTENTIONAL, STRUCTURAL, DRIFT} | Dismissal mode flag               | PRIM:041  |
+| `t_dismiss` | float | ≥ 0              | Absolute clock time of dismissal event                    | PRIM:042  |
+| `v_depart`  | float | ≥ 0              | Entity departure velocity post-dismissal                  | PRIM:042  |
+| `β_D`       | float | (−∞, 0]          | Repulsive coupling coefficient active during expulsion    | PRIM:042  |
+
+**Well decay formula (conceptual authority: GravityOfDismissal.md §3.2):**
+```
+ρ_D(Φ, t) = −d_dismiss × exp(−t / T_dismiss)
+```
+
+**Re-capture gate (operational form of GravityOfDismissal.md §3.3):**
+```
+d_bind_approach(t) > |ρ_D(Φ, t)|   →   re-capture structurally eligible
+```
