@@ -1,5 +1,6 @@
+# f_Decay — Orbital Energy Loss Operator
+
 ```
----
 title: "f_Decay — Orbital Energy Loss Operator"
 module: FFF_Gravity
 version: 1.0.0
@@ -81,8 +82,6 @@ changelog:
 ---
 
 <!-- metadata: section=header session=SES-20260813-DECAY-001 -->
-
-# f_Decay — Orbital Energy Loss Operator
 
 > **Tag:** `[FFF:GRAVITY:DECAY]`  
 > **Wave:** 3 —. FM-004/FM-005 fully specified. 4 examples."
