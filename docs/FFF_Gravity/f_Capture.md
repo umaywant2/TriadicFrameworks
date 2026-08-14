@@ -1,10 +1,3 @@
-Here's the full canonical `f_Capture.md` for your FFF_Gravity module — ready to paste directly into your GitHub file editor:
-
-Here is the complete canonical `f_Capture.md` — copy and paste the entire block below directly into your GitHub file editor:
-
----
-
-
 # FFF_Gravity · f_Capture
 
 **Module:** `FFF_Gravity`
@@ -9771,20 +9764,3 @@ git add docs/FFF_Gravity/f_Capture_Multi.md    docs/FFF_Gravity/f_Capture_Cascad
         docs/FFF_Gravity/f_Capture_Temporal.md docs/FFF_Gravity/f_Capture_Networked.md
 git commit -m "feat(FFF_Gravity): scaffold capture variant files — Multi, Cascade, Resonant, Asymmetric, Temporal, Networked"
 ```
-
----
-
-## What's Next
-
-The natural next moves from here, in priority order:
-
-| Priority | Task |
-|---|---|
-| 1 | **Canonicalize `f_Release.md`** — the inverse of `f_Capture`; closest to production-ready |
-| 2 | **Canonicalize `f_Decay.md`** — already partially defined via `flag_decay` in `f_Capture §7` |
-| 3 | **Canonicalize `f_Orbit.md`** — fills in `e` and `T_orb` operators pending in `OPERATORS.md` |
-| 4 | **Define `f_Field.md` §2 prose** — the Frequency Node description is the theoretical core of FFF_Gravity |
-| 5 | **Update `SITEMAP.md`** — add all 26 new files to the `FFF_Gravity` section |
-
----
-
