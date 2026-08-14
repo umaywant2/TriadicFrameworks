@@ -1,4 +1,6 @@
----
+# Gravity of Dismissal
+
+```
 file: GravityOfDismissal.md
 module: FFF_Gravity
 wave: 0
@@ -24,9 +26,7 @@ note: >
   symbols. Those are introduced in the Wave that formalizes each concept.
   This file is the conceptual authority for all dismissal-related phenomena
   across the FFF_Gravity module.
----
-
-# Gravity of Dismissal
+```
 
 > *Capture is the inward pull; dismissal is the force that makes the pull
 > irreversible in the opposite direction.*
