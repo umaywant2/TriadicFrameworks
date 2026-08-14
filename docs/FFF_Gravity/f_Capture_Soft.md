@@ -1,4 +1,6 @@
----
+# f_Capture_Soft — Provisional Binding Variant
+
+```
 session_id: SES-20260813-SOFT-001
 tag: "[FFF:GRAVITY:CAPTURE:SOFT]"
 version: 1.0.0
@@ -41,9 +43,7 @@ changelog:
       d_soft, soft_threshold, grace_period, k_grace frozen.
       PRIM:029–030 opened. Four resolution pathways: STRENGTHEN,
       DISSOLVE, EXPIRE, HOLD. Four canonical examples.
----
-
-# f_Capture_Soft — Provisional Binding Variant
+```
 
 > **[FFF:GRAVITY:CAPTURE:SOFT]** · Wave 4 · File 3 of 6 · PRIM:029–030  
 > A soft capture is a provisional binding established when `d_bind` falls
