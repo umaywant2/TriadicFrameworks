@@ -1,4 +1,9 @@
+# f_Capture_Cascade.md
+## FFF_Gravity — Cascade Capture Variant
+
 ---
+
+```
 session_id: SES-20260813-CASCADE-001
 tag: "[FFF:GRAVITY:CAPTURE:CASCADE]"
 version: 1.0.0
@@ -23,12 +28,7 @@ new_primitives:
 new_failure_modes:
   - FM-003-C  # sub-mode of FM-003 — Cascade Frame Saturation (partial-chain state)
 inv_compliance: enforced   # INV-001–INV-010
----
-
-# f_Capture_Cascade.md
-## FFF_Gravity — Cascade Capture Variant
-
----
+```
 
 ## §0 — Session Context
 
