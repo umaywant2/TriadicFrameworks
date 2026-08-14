@@ -1,4 +1,6 @@
----
+# f_Collapse — Terminal Infall Operator
+
+```
 title: "f_Collapse — Terminal Infall Operator"
 module: FFF_Gravity
 version: 1.0.0
@@ -55,7 +57,7 @@ changelog:
       PRIM:013 execute_collapse and PRIM:014 initialize_composite_node frozen.
       GravityGraph notification interface specified. 4 canonical examples. Full
       INV compliance table. purge_registry called as defined in f_Frame.md §7.2.
----
+```
 
 <!-- FILE_TAG: [FFF:GRAVITY:COLLAPSE] -->
 <!-- WAVE: 3 | POSITION: 4-of-8 | STATUS: canonical -->
@@ -67,8 +69,6 @@ changelog:
 <!-- FM_FROZEN: FM-007 (Mutual Dissolution) -->
 
 ---
-
-# f_Collapse — Terminal Infall Operator
 
 **Tag:** `[FFF:GRAVITY:COLLAPSE]`
 **Wave 3 · File 4 of 8**
