@@ -1,4 +1,5 @@
-### d_Examples.md — Applying Corrections to Top 10 Representative Works  
+# Applying Corrections to Top 10 Representative Works  
+
 *Purpose: Show how the Drift Taxonomy and minimal operators correct representative gravity results, without changing their validated domains.*
 
 Below are **generic example blocks** for the Top 10 papers. You can replace the placeholders (`[Paper Title]`, etc.) with actual citations once you finalize the list.
