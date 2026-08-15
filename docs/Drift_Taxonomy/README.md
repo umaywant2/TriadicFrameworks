@@ -1,4 +1,6 @@
-# **README.md — Drift Taxonomy**
+# Drift Taxonomy
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Drift_Taxonomy/module.json) — Agentic module schema role assignments
 
 ## **Overview**
 
