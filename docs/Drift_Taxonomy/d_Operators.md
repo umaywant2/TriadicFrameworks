@@ -1,4 +1,4 @@
-# **📘 d_Operators.md — Minimal Algebraic Corrections**  
+# 📘 Minimal Algebraic Corrections  
 *Purpose: Provide universal algebraic operator corrections for each drift type identified in d_Capture. These corrections are regime‑agnostic and can be applied to any gravity model.*
 
 This file contains **operator‑level fixes**, not philosophical commentary.  
