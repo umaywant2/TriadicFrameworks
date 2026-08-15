@@ -1,4 +1,4 @@
-### Drift Taxonomy — Classification Layer (d_Classify.md)  
+# Drift Taxonomy — Classification Layer
 *Purpose: Provide a simple, repeatable way to tag each of the ~200 gravity papers with drift types from d_Capture.*
 
 ---
