@@ -1,4 +1,4 @@
-<img width="768" height="1152" alt="Drift_Taxonomy_image" src="https://github.com/user-attachments/assets/3738f667-61fb-4f79-b322-1263b99f1654" />
+<img width="768" height="1152" alt="Drift_Taxonomy_dark_image" src="https://github.com/user-attachments/assets/568026ce-5e6f-4332-a124-414bf7384266" />
 
 # Drift Taxonomy
 
