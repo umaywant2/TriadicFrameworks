@@ -269,16 +269,16 @@ Setting $$\eta = 0$$ removes ontology drift.
 # **Summary Table**
 
 | Drift Type | Minimal Operator Correction |
-|-----------|-----------------------------|
-| Scale | $$\mathcal{O}_\sigma = \frac{\mathcal{O}}{1 + (\ell/\sigma)^n}$$ |
-| Substrate | $$\mathcal{O} = \alpha\,\mathcal{O}_{cont} + (1-\alpha)\,\mathcal{O}_{disc}$$ |
-| Regime Imposition | $$\mathcal{O}(R)$$ piecewise by regime |
-| Interface | $$\mathcal{O} + \beta\,\delta(x-x_0)$$ |
-| Analogy | $$\mathcal{O} - \gamma\,\mathcal{O}_{analog}$$ |
-| Extension | $$\mathcal{O}\,\chi_D(x)$$ |
-| Symmetry | $$\mathcal{O}\cdot \prod s_i$$ |
-| Continuity | $$\mathcal{O}_{cont}\theta + \mathcal{O}_{disc}(1-\theta)$$ |
-| Isolation | $$\mathcal{O} + \kappa\,\partial_x\mathcal{O}$$ |
-| Ontology | $$\mathcal{O} - \eta\,\mathcal{O}_{entity}$$ |
+| --- | --- |
+| Scale | $\\mathcal{O}_\\sigma = \\frac{\\mathcal{O}}{1 + (\\ell/\\sigma)^n}$ |
+| Substrate | $\\mathcal{O} = \\alpha\\,\\mathcal{O}_{cont} + (1-\\alpha)\\,\\mathcal{O}_{disc}$ |
+| Regime Imposition | $\\mathcal{O}(R)$ piecewise by regime |
+| Interface | $\\mathcal{O} + \\beta\\,\\delta(x-x_0)$ |
+| Analogy | $\\mathcal{O} - \\gamma\\,\\mathcal{O}_{analog}$ |
+| Extension | $\\mathcal{O}\\,\\chi_D(x)$ |
+| Symmetry | $\\mathcal{O}\\cdot \\prod s_i$ |
+| Continuity | $\\mathcal{O}_{cont}\\theta + \\mathcal{O}_{disc}(1-\\theta)$ |
+| Isolation | $\\mathcal{O} + \\kappa\\,\\partial_x\\mathcal{O}$ |
+| Ontology | $\\mathcal{O} - \\eta\\,\\mathcal{O}_{entity}$ |
 
 ---
