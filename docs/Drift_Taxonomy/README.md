@@ -1,3 +1,5 @@
+<img width="768" height="1152" alt="Drift_Taxonomy_image" src="https://github.com/user-attachments/assets/3738f667-61fb-4f79-b322-1263b99f1654" />
+
 # Drift Taxonomy
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Drift_Taxonomy/module.json) — Agentic module schema role assignments
