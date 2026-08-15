@@ -1,4 +1,4 @@
-# **d_Paper.md — Gravity Regime Drift and Minimal Operator Corrections**  
+# Gravity Regime Drift and Minimal Operator Corrections  
 *A unified mathematical regularization of anomalies across classical, quantum, and cosmological gravity literature.*
 
 ---
