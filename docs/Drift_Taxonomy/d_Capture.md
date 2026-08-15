@@ -1,4 +1,5 @@
-# **📘 Drift Taxonomy — Capture Layer (d_Capture.md)**  
+# 📘 Drift Taxonomy — Capture Layer
+
 *Purpose: Identify and name the universal drift types that appear across gravity literature.*
 
 This layer does **not** correct anything yet.  
