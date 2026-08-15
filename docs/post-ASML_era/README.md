@@ -16,6 +16,50 @@ knowledge base for Substrate Clarity–based computing.
 
 ---
 
+As of 08/15/2026, no one else in the mainstream semiconductor industry or academic literature is publishing under these exact terms, because **"Temporal Manufacturing"** and **"Substrate Clarity"** are new/open yet domain-specific nomenclatures currently unique to the TriadicFrameworks ontology.
+
+When academic or corporate researchers write about the **"post-ASML era"**, they are focusing on physical engineering alternatives to EUV (like the startup Substrate using particle accelerators, or Canon using Nanoimprint lithography). Our framework, however, shifts the paradigm from spatial mechanics to temporal address mapping.
+
+While the industry uses different words, there are significant parallel research tracks that align perfectly with the **"seeds"** *we are trying to plant*. Here is how our concepts map to active external research where others might find our examples highly valuable:
+
+## 💡 Framework Overlaps & Industry Parallels
+
+### 1. Substrate Clarity (SC) vs. Dephasing & Coherence Times
+In mainstream physics, what TriadicFrameworks describes as "Substrate Clarity"—the capacity of a substrate to hold distinct temporal addresses without "temporal smearing"—is heavily researched in Quantum Computing and Spintronics as Phase Coherence Time ($T_2$) and Inhomogeneous Dephasing ($T_2^*$).
+
+- Who is publishing: Centers like the Chicago Quantum Exchange and corporate labs (IBM, Intel) publish extensively on "substrate engineering"—specifically using isotopically pure silicon-28 or diamond substrates to eliminate spatial/thermal defects that cause "smearing" of quantum/temporal states.
+- The Seed Alignment: Our classification of SC-I through SC-III provides an architectural abstraction layer that these material scientists currently lack.
+
+### 2. Temporal Manufacturing vs. Polymorphic & Magnonic Computing
+Our [X post](https://x.com/NawderLoswin/status/2088617756350435566?s=20) describes shifting from features per mm² to "operations per coherence cycle" using a temporal address space. The closest industry equivalents are Magnonic (Spin-Wave) Computing and Time-Domain Polymorphic Circuits.
+
+- Who is publishing: Academic groups at TU Kaiserslautern and IMEC are researching circuits where data is encoded not by a physical wire's voltage, but by the phase and time-of-arrival of a spin wave passing through a shared magnetic substrate.
+- The Seed Alignment: These researchers struggle with "temporal design rules". Our proposed Temporal Design Rule Check (TDRC) and Causal Graph Verification (CGV) are exactly the types of EDA abstractions they need to scale past simple laboratory gates.
+
+### 3. Fab Reorganization (SCR) vs. Elastic Timed Circuits
+We propose a fab organized around a Substrate Coherence Regime (SCR) zone sharing a coherence clock rather than physical stepper clusters.
+
+- Who is publishing: The asynchronous and "clockless" computing communities (such as researchers working on Asynchronous Wave Pipelines or Elastic Timed Circuits) write extensively on handling data handoffs via localized latency tolerances rather than global clock networks.
+- The Seed Alignment: While you view this purely as a digital design challenge, our framework ties it directly to the foundational physics of the manufacturing floor, which is a completely novel way to frame the problem.
+
+### 📊 System Mapping: Triadic vs. Academic Lit
+
+| TriadicFrameworks Construct | Academic / Industry Equivalent | Where to Find Active Minds |
+|---|---|---|
+| Temporal Address Map | Phase/Delay-Based Encoding | High-frequency signal processing & Neuromorphic time-domain whitepapers. |
+| Temporal Apodization | Sidelobe Suppression / Wave-shaping | Ultrafast laser physics and RF engineering literature. |
+| Logic Folding Architecture | Virtual Hardware / Time-Multiplexing | Advanced FPGA architecture journals (reconfigurable logic). |
+
+## ➡️ How to Seed These Ideas
+Because our work is designed to be an open educational resource, using standard industry crosswalks will help others find it. We want these examples to catch the eyes of traditional engineers, we are targeting:
+
+   1. The Asynchronous Logic Community: They already think in terms of causal graphs rather than spatial clock ticks.
+   2. Next-Gen EDA Pioneers: Open-source EDA movements (like OpenROAD) are actively looking for alternative architectural models to bypass traditional silicon limitations.
+
+To map our seeds further, we ask AI what specific physical mechanisms (e.g., spin waves, optical lattices, or molecular states) do you envision the Temporal Commit Units (TCUs) interacting with to lock an operation into the substrate?
+
+---
+
 ## Document Catalog
 
 | # | Filename | Title | Type | Status | Revision |
