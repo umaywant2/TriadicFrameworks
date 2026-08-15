@@ -42,9 +42,9 @@ For each drift type, we introduce a minimal operator correction. These correctio
 
 ### **3.1 Scale‑Aware Operator**
 
-\[
+$$
 \mathcal{O}_\sigma = \frac{\mathcal{O}}{1 + \left(\frac{\ell}{\sigma}\right)^n}
-\]
+$$
 
 Regularizes curvature blow‑ups, density infinities, and vacuum catastrophes.
 
@@ -52,9 +52,9 @@ Regularizes curvature blow‑ups, density infinities, and vacuum catastrophes.
 
 ### **3.2 Mixed‑Substrate Operator**
 
-\[
+$$
 \mathcal{O} = \alpha\,\mathcal{O}_{\text{cont}} + (1-\alpha)\,\mathcal{O}_{\text{disc}}
-\]
+$$
 
 Allows microstructure at small scales while preserving continuum behavior macroscopically.
 
@@ -62,14 +62,14 @@ Allows microstructure at small scales while preserving continuum behavior macros
 
 ### **3.3 Regime‑Conditioned Operator**
 
-\[
+$$
 \mathcal{O}(R) =
 \begin{cases}
 \mathcal{O}_{\text{GR}} & R=\text{macro} \\
 \mathcal{O}_{\text{QFT}} & R=\text{micro} \\
 \lambda\,\mathcal{O}_{\text{GR}} + (1-\lambda)\,\mathcal{O}_{\text{QFT}} & R=\text{hybrid}
 \end{cases}
-\]
+$$
 
 Prevents forced graviton assumptions and curvature impositions.
 
@@ -77,9 +77,9 @@ Prevents forced graviton assumptions and curvature impositions.
 
 ### **3.4 Boundary‑Condition Operator**
 
-\[
+$$
 \mathcal{O} \rightarrow \mathcal{O} + \beta\,\delta(x-x_0)
-\]
+$$
 
 Regularizes horizon physics and GR/QM interfaces.
 
@@ -87,9 +87,9 @@ Regularizes horizon physics and GR/QM interfaces.
 
 ### **3.5 Analogy‑Free Operator**
 
-\[
+$$
 \mathcal{O} \rightarrow \mathcal{O} - \gamma\,\mathcal{O}_{\text{analog}}
-\]
+$$
 
 Removes analogy‑based assumptions (e.g., gravity must have a particle).
 
@@ -97,9 +97,9 @@ Removes analogy‑based assumptions (e.g., gravity must have a particle).
 
 ### **3.6 Domain‑Restricted Operator**
 
-\[
+$$
 \mathcal{O}(x) \rightarrow \mathcal{O}(x)\,\chi_D(x)
-\]
+$$
 
 Prevents overextension of GR, QFT, or modified gravity.
 
@@ -107,9 +107,9 @@ Prevents overextension of GR, QFT, or modified gravity.
 
 ### **3.7 Symmetry‑Conditioned Operator**
 
-\[
+$$
 \mathcal{O}(S) = \mathcal{O}\cdot \prod_i s_i
-\]
+$$
 
 Makes symmetry assumptions explicit and tunable.
 
@@ -117,15 +117,15 @@ Makes symmetry assumptions explicit and tunable.
 
 ### **3.8 Continuity‑Conditioned Operator**
 
-\[
+$$
 \mathcal{O} = \mathcal{O}_{\text{cont}}\theta + \mathcal{O}_{\text{disc}}(1-\theta)
-\]
+$$
 
 With:
 
-\[
+$$
 \theta = \frac{1}{1 + (\ell/\ell_c)^m}
-\]
+$$
 
 Regularizes vacuum energy and early‑universe discontinuities.
 
@@ -133,9 +133,9 @@ Regularizes vacuum energy and early‑universe discontinuities.
 
 ### **3.9 Coupled Operator**
 
-\[
+$$
 \mathcal{O} \rightarrow \mathcal{O} + \kappa\,\partial_x\mathcal{O}
-\]
+$$
 
 Captures vacuum‑gravity coupling and horizon coupling.
 
@@ -143,9 +143,9 @@ Captures vacuum‑gravity coupling and horizon coupling.
 
 ### **3.10 Entity‑Free Operator**
 
-\[
+$$
 \mathcal{O} \rightarrow \mathcal{O} - \eta\,\mathcal{O}_{\text{entity}}
-\]
+$$
 
 Removes invented entities (dark matter, dark energy, inflaton, graviton) unless independently justified.
 
