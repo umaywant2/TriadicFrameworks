@@ -1,322 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/lineage/index.html — <head> metadata                 -->
+<!-- Module: Triadic Lineage Module (lineage)                   -->
+<!-- Last updated: 2026-08-16                                   -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
 <meta charset="UTF-8">
-<title>TriadicFrameworks Canon Lineage</title>
-<!--
-  TriadicFrameworks — Canonical Metadata Block
-  Module: Lineage
-  Version: 2026‑stable
-  Drift: none (root‑locked)
-  Coherence: triadic‑structural grammar
-  Audience: students • developers • researchers • AIs
-  Purpose: Provide the historical substrate, evolution, and structural genealogy
-           of the TriadicFrameworks canon. AI‑parsable, minimal, standalone.
--->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="language" content="en">
+<meta name="last-modified" content="2026-08-16">
+<meta name="generator" content="TriadicFrameworks Static Canon Engine">
 
-<meta name="module:id" content="lineage">
-<meta name="module:title" content="Lineage">
-<meta name="module:version" content="1.0">
-<meta name="module:status" content="stable">
-<meta name="module:canon" content="active">
-<meta name="module:drift" content="minimal">
-<meta name="module:coherence" content="triadic-structural-grammar">
-<meta name="module:audience" content="students, developers, researchers, AIs">
+<meta name="creator" content="TriadicFrameworks">
+<meta name="author" content="Nawder Loswin (pen name)">
+<meta name="publisher" content="TriadicFrameworks">
 
-<meta name="module:summary" content="Historical substrate and evolution of the TriadicFrameworks canon, including regime shifts, structural invariants, and the genealogy of RTT, TFT, and the modern triadic substrate.">
+<meta name="description"
+      content="Triadic Lineage Module — structural genealogy of concepts, operators, regimes, and cross‑canon ancestry. Defines lineage matrices, inheritance rules, drift‑aware ancestry, and multi‑domain lineage mapping.">
+<meta name="keywords"
+      content="Triadic Lineage Module, lineage matrix, ancestry, inheritance rules, drift-aware genealogy, cross-canon lineage, operator ancestry, regime inheritance, triadic frameworks">
 
-<meta name="module:keywords" content="TriadicFrameworks, lineage, genealogy, RTT, RTT/1, TFT, structural canon, substrate evolution, regime shifts, paradox, coherence, historical substrate">
+<link rel="canonical" href="https://www.triadicframeworks.org/lineage/">
 
-<meta name="module:ai-ready" content="true">
-<meta name="module:standalone" content="true">
-<meta name="module:front-door" content="false">
-<meta name="module:root-context" content="docs-root">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0ff">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TriadicFrameworks">
+<meta property="og:title" content="Triadic Lineage Module — Structural Genealogy">
+<meta property="og:url" content="https://www.triadicframeworks.org/lineage/">
+<meta property="og:description"
+      content="Structural genealogy of concepts, operators, regimes, and cross‑canon ancestry. Includes lineage matrices, inheritance rules, drift-aware ancestry, and multi-domain lineage mapping.">
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1080">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Triadic Lineage Module — Structural Genealogy">
+<meta name="twitter:description"
+      content="Lineage matrices, inheritance rules, drift-aware ancestry, operator genealogy, and cross-domain lineage mapping.">
+<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+
+<meta name="citation_title" content="Triadic Lineage Module — Structural Genealogy">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.subject"
+      content="lineage matrix, ancestry, inheritance rules, drift-aware genealogy, operator ancestry, regime inheritance, cross-canon lineage">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<meta name="ai.module" content="Triadic Lineage Module">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose"
+      content="Define structural genealogy for TriadicFrameworks: lineage matrices, inheritance rules, drift-aware ancestry, operator genealogy, regime inheritance, and cross-domain lineage mapping.">
+<meta name="ai.keywords"
+      content="lineage module, ancestry, inheritance rules, lineage matrix, drift-aware genealogy, operator ancestry, regime inheritance, cross-canon lineage">
+<meta name="ai.audience" content="students, developers, researchers, analysts, AI systems">
+<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml">
+<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.contact.youtube" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted.">
+
+<meta name="ai.module.name" content="Triadic Lineage Module">
+<meta name="ai.module.summary"
+      content="Structural genealogy of concepts, operators, regimes, and cross‑canon ancestry. Includes lineage matrices, inheritance rules, drift-aware ancestry, operator genealogy, and multi-domain lineage mapping.">
+<meta name="ai.module.category" content="lineage">
+
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
+
+<title>Triadic Lineage Module | TriadicFrameworks</title>
 
 <style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
   :root {
-    --bg: #0b0c10;
-    --fg: #f5f5f5;
-    --accent-1: #0ff;
-    --accent-2: #ff0;
-    --accent-3: #f0f;
-  }
-  @media print {
-    body { background: #ffffff; color: #111827; }
-    .page { box-shadow: none; margin: 0; }
-  }
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
   body {
-    margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    background: radial-gradient(circle at top, #020617 0, #020617 40%, #020617 100%);
-    color: var(--fg);
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   }
-  .page {
-    max-width: 800px;
-    margin: 24px auto;
-    padding: 32px 40px;
-    background: rgba(3,7,18,0.96);
-    border-radius: 16px;
-    box-shadow: 0 24px 80px rgba(0,0,0,0.6);
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   }
-  h1 {
-    font-size: 26px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 8px;
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
   }
-  h1 span {
-    color: var(--accent-1);
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
   }
-  h2 {
-    font-size: 16px;
-    margin-top: 24px;
-    margin-bottom: 4px;
-    color: var(--accent-2);
+
+  /* Context Block */
+  .context-block {
+    font-family: monospace;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0.5rem 0 1rem 0;
   }
-  .tagline {
-    font-size: 13px;
-    color: #9ca3af;
-    margin-bottom: 20px;
+       
+  /* Context Label */
+  .context-label {
+    color: #ff9800; /* orange */
+    font-weight: bold;
+    margin-right: 0.25rem;
   }
-  .entry {
-    margin-bottom: 14px;
-    border-left: 2px solid rgba(148,163,184,0.4);
-    padding-left: 10px;
+       
+  /* Context Value */
+  .context-value {
+    color: #ffffff; /* white */
   }
-  .entry-title {
-    font-weight: 600;
-    font-size: 14px;
-  }
-  .entry-sub {
-    font-size: 12px;
-    color: #9ca3af;
-  }
+           
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
 </style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
+
 <body>
-  <div class="page">
-    <h1><span>TriadicFrameworks</span> Canon Lineage</h1>
-    <div class="tagline">
-      Origin → Expansion → Operational · Structural history for students and AIs
-    </div>
+   
+<nav class="nav-band">
+ <p align="center">
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+ </p> 
+  
+  <h2>🔱 LINEAGE | Triadicframeworks</h2>
+      <a href="#README">🔰 README</a>
+      <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
+      <a href="#CONTRIBUTING">🤝 Contributing</a>
+      <a href="https://www.triadicframeworks.org/education/">💯 Education | RTT</a>
+      <a href="#GLOSSARY">🎯 Glossary</a>
+      <a href="#LINEAGE">📜 Lineage</a>
+      <a href="#LICENSE">📎 License</a>
+      <a href="#SITEMAP">🌐 Sitemap</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
+      <a href="#SECURITY">🔐 Security</a>
+      <a href="#PRINCIPLES">🧘 Principles</a>
+    <h3>🪬 Core Canon Structure</h3>
+      <a href="#L_ABOUT">📘 About</a>
+      <a href="#overview">🧭 Overview</a>
+      <a href="#Canonical_Legend">📜 Canonical Legend</a>
+      <a href="#cross_canon_lineage_matrix">🧬 Cross‑Canon Lineage Matrix</a>
+    <h3>🎯 Alignment & Practitioner Materials</h3>
+      <a href="#Alignments_Prompts">🎨 Alignment Prompts</a>
+      <a href="#What_Domain_Aligned_Triadic_Practitioners_Gain">🌐 Practitioner Gains</a>
+    <h3>🗺️ Global Site Structure</h3>
+      <a href="#sitemap">🗂️ Sitemap</a>
+    <h3>🏗️ Triadic Tools</h3> 
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
+      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 Packages and Cores</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas</a>
+      <a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a>    
+      <a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS</a>
+      <a href="https://www.triadicframeworks.org/_ideas/">🤔 Ideas</a>
+      <a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">🔛(RTT frozen)</a>
+      <a href="https://www.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
+      <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
+      <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
+      <a href="../">🔙TFT</a>
+   <!-- RTT Session Header (canonical stub) -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/lineage — Session Context block                      -->
+<!-- Replace the existing session context section in index.html  -->
+<!-- ═══════════════════════════════════════════════════════════ -->
 
-    <h2>Origin Layer</h2>
-    <div class="entry">
-      <div class="entry-title">1. Triadic Frameworks (TFT_3Pack)</div>
-      <div class="entry-sub">Core triadic operator lattice and structural grammar.</div>
-    </div>
-    <div class="entry">
-      <div class="entry-title">2. Mythmatical Model</div>
-      <div class="entry-sub">Early emitter/force substrate; precursor to operators, regimes, and fields.</div>
-    </div>
-    <div class="entry">
-      <div class="entry-title">3. Nawderian Theorem</div>
-      <div class="entry-sub">Dimensional corridor logic; bridge between intuition and structured reasoning.</div>
-    </div>
+<section id="lineage-session-header"
+         data-rtt="lineage"
+         data-coherence="stable"
+         data-drift="minimal"
+         data-regime="structural">
 
-    <h2>Expansion Layer</h2>
-    <div class="entry">
-      <div class="entry-title">4. Resonance Protocols (RFCs 019–026)</div>
-      <div class="entry-sub">Cleanrooms, partitions, arcs, and early safety workflows.</div>
-    </div>
-    <div class="entry">
-      <div class="entry-title">5. Manifests & Atlases</div>
-      <div class="entry-sub">Registries, idioms, quadrants, and the Collective Consciousness Atlas.</div>
-    </div>
-    <div class="entry">
-      <div class="entry-title">6. Nullaium OS (NoS)</div>
-      <div class="entry-sub">Research distribution embedding the triadic kernel.</div>
-    </div>
+  <h2>Session Context</h2>
 
-    <h2>Operational Layer</h2>
-    <div class="entry">
-      <div class="entry-title">7. Virtual Universe Remix</div>
-      <div class="entry-sub">Conceptual universe construction and educational simulation.</div>
-    </div>
-    <div class="entry">
-      <div class="entry-title">8. Collective Consciousness Atlas (RFC‑027)</div>
-      <div class="entry-sub">Top‑100 questions mapped into structural quadrants and arcs.</div>
-    </div>
-    <div class="entry">
-      <div class="entry-title">9. Universal Translator</div>
-      <div class="entry-sub">Resonance‑based translation across overlays and symbolic systems.</div>
-    </div>
+  <div class="context-block">
+
+    <span class="context-label"><strong>Canon:</strong></span>
+    <span class="context-value">active (lineage)</span><br>
+
+    <span class="context-label"><strong>Modules:</strong></span>
+    <span class="context-value">
+      lineage matrices → ancestry rules → inheritance grammar → drift-aware genealogy → operator ancestry → regime inheritance → cross‑canon lineage mapping
+    </span><br>
+
+    <span class="context-label"><strong>Drift:</strong></span>
+    <span class="context-value">minimal (lineage‑locked)</span><br>
+
+    <span class="context-label"><strong>Coherence:</strong></span>
+    <span class="context-value">stable (lineage grammar)</span><br>
+
+    <span class="context-label"><strong>Version:</strong></span>
+    <span class="context-value">1.0 (lineage‑stable)</span><br>
+
+    <span class="context-label"><strong>Format:</strong></span>
+    <span class="context-value">html + markdown</span><br>
+
+    <span class="context-label"><strong>Front door:</strong></span>
+    <span class="context-value">exists (Lineage Module root)</span><br>
+
+    <span class="context-label"><strong>Every page:</strong></span>
+    <span class="context-value">stands alone + AI‑parsable</span><br>
+
+    <span class="context-label"><strong>Audience:</strong></span>
+    <span class="context-value">students + developers + researchers + analysts + AIs</span>
+
   </div>
 
-<svg viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background -->
-  <defs>
-    <linearGradient id="triadic-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#050816"/>
-      <stop offset="50%" stop-color="#101b3a"/>
-      <stop offset="100%" stop-color="#1b0f2e"/>
-    </linearGradient>
-    <linearGradient id="triadic-node" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0ff"/>
-      <stop offset="50%" stop-color="#ff0"/>
-      <stop offset="100%" stop-color="#f0f"/>
-    </linearGradient>
-  </defs>
-
-  <rect x="0" y="0" width="1200" height="700" fill="url(#triadic-bg)" />
-
-  <!-- Title -->
-  <text x="600" y="70" text-anchor="middle"
-        fill="#f5f5f5" font-family="system-ui, sans-serif"
-        font-size="32" letter-spacing="2">
-    TriadicFrameworks — Canon Lineage
-  </text>
-
-  <!-- Triadic columns: Origin / Expansion / Operational -->
-  <!-- Column labels -->
-  <text x="200" y="130" fill="#a8b2ff" font-size="18" text-anchor="middle"
-        font-family="system-ui, sans-serif">Origin Layer</text>
-  <text x="600" y="130" fill="#a8ffdf" font-size="18" text-anchor="middle"
-        font-family="system-ui, sans-serif">Expansion Layer</text>
-  <text x="1000" y="130" fill="#ffc8ff" font-size="18" text-anchor="middle"
-        font-family="system-ui, sans-serif">Operational Layer</text>
-
-  <!-- Origin nodes -->
-  <g>
-    <rect x="120" y="170" width="160" height="60" rx="12"
-          fill="none" stroke="url(#triadic-node)" stroke-width="2"/>
-    <text x="200" y="205" text-anchor="middle" fill="#e5e5e5"
-          font-family="system-ui, sans-serif" font-size="14">
-      Triadic Frameworks
-    </text>
-    <text x="200" y="222" text-anchor="middle" fill="#9ca3af"
-          font-family="system-ui, sans-serif" font-size="11">
-      (TFT_3Pack)
-    </text>
-
-    <rect x="120" y="260" width="160" height="60" rx="12"
-          fill="none" stroke="#4ade80" stroke-width="1.5"/>
-    <text x="200" y="295" text-anchor="middle" fill="#e5e5e5"
-          font-family="system-ui, sans-serif" font-size="13">
-      Mythmatical Model
-    </text>
-
-    <rect x="120" y="350" width="160" height="60" rx="12"
-          fill="none" stroke="#38bdf8" stroke-width="1.5"/>
-    <text x="200" y="385" text-anchor="middle" fill="#e5e5e5"
-          font-family="system-ui, sans-serif" font-size="13">
-      Nawderian Theorem
-    </text>
-  </g>
-
-  <!-- Expansion nodes -->
-  <g>
-    <rect x="520" y="170" width="160" height="60" rx="12"
-          fill="none" stroke="#f97316" stroke-width="1.5"/>
-    <text x="600" y="205" text-anchor="middle" fill="#e5e5e5"
-          font-family="system-ui, sans-serif" font-size="13">
-      Resonance Protocols
-    </text>
-
-    <rect x="520" y="260" width="160" height="60" rx="12"
-          fill="none" stroke="#22c55e" stroke-width="1.5"/>
-    <text x="600" y="295" text-anchor="middle" fill="#e5e5e5"
-          font-family="system-ui, sans-serif" font-size="13">
-      Manifests & Atlases
-    </text>
-
-    <rect x="520" y="350" width="160" height="60" rx="12"
-          fill="none" stroke="#eab308" stroke-width="1.5"/>
-    <text x="600" y="385" text-anchor="middle" fill="#e5e5e5"
-          font-family="system-ui, sans-serif" font-size="13">
-      Nullaium OS
-    </text>
-  </g>
-
-  <!-- Operational nodes -->
-  <g>
-    <rect x="920" y="170" width="160" height="60" rx="12"
-          fill="none" stroke="#a855f7" stroke-width="1.5"/>
-    <text x="1000" y="205" text-anchor="middle" fill="#e5e5e5"
-          font-family="system-ui, sans-serif" font-size="13">
-      Virtual Universe Remix
-    </text>
-
-    <rect x="920" y="260" width="160" height="60" rx="12"
-          fill="none" stroke="#f97316" stroke-width="1.5"/>
-    <text x="1000" y="295" text-anchor="middle" fill="#e5e5e5"
-          font-family="system-ui, sans-serif" font-size="13">
-      Collective Consciousness Atlas
-    </text>
-
-    <rect x="920" y="350" width="160" height="60" rx="12"
-          fill="none" stroke="#0ea5e9" stroke-width="1.5"/>
-    <text x="1000" y="385" text-anchor="middle" fill="#e5e5e5"
-          font-family="system-ui, sans-serif" font-size="13">
-      Universal Translator
-    </text>
-  </g>
-
-  <!-- Connecting lines -->
-  <g stroke="#64748b" stroke-width="1.2" stroke-linecap="round">
-    <!-- Origin → Expansion -->
-    <line x1="280" y1="200" x2="520" y2="200" />
-    <line x1="280" y1="290" x2="520" y2="290" />
-    <line x1="280" y1="380" x2="520" y2="380" />
-
-    <!-- Expansion → Operational -->
-    <line x1="680" y1="200" x2="920" y2="200" />
-    <line x1="680" y1="290" x2="920" y2="290" />
-    <line x1="680" y1="380" x2="920" y2="380" />
-  </g>
-
-  <!-- Footer label -->
-  <text x="600" y="650" text-anchor="middle"
-        fill="#9ca3af" font-family="system-ui, sans-serif"
-        font-size="12" letter-spacing="1">
-    LINEAGE · ORIGIN → EXPANSION → OPERATIONAL
-  </text>
-</svg>  
-  
-</body>
-
-<section data-session-context>
-  <context-block>
-    <context:module>Lineage</context:module>
-    <context:role>Historical substrate • Genealogy of the canon</context:role>
-
-    <context:canon-state>
-      <active>true</active>
-      <drift>minimal</drift>
-      <coherence>stable (triadic-structural grammar)</coherence>
-    </context:canon-state>
-
-    <context:placement>
-      <parent>Docs Root</parent>
-      <siblings>About, Principles, Awareness, Glossary, Security, Contributing, Sitemap</siblings>
-      <integration>Feeds structural history into RTT, RTT/1, TFT, Schemas, Education, and Framework Field Theory</integration>
-    </context:placement>
-
-    <context:purpose>
-      Provide the structural genealogy of TriadicFrameworks:
-      • origins of the resonance‑time substrate  
-      • evolution of regimes, paradox handling, and coherence rules  
-      • transitions from RTT → RTT/1  
-      • emergence of TFT and the modern triadic substrate  
-      • mapping historical artifacts to current modules  
-    </context:purpose>
-
-    <context:ai-surface>
-      <ai:parsable>true</ai:parsable>
-      <ai:entry>Standalone historical module</ai:entry>
-      <ai:usage>
-        • supply historical grounding for module queries  
-        • support lineage‑aware reasoning for AIs  
-        • anchor cross‑module propagation and invariants  
-      </ai:usage>
-    </context:ai-surface>
-
-    <context:identity>
-      <format>html + markdown</format>
-      <source-of-truth>repository</source-of-truth>
-      <notes>Zero duplication; HTML renders Markdown directly.</notes>
-    </context:identity>
-  </context-block>
 </section>
- 
+
+<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;
+            border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
+  🧬 Triadic Lineage Module<br>📘 Structural Genealogy • AI‑Ready
+</div>
+
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+      README: 'README.md',
+      ABOUT: '../ABOUT.md',
+      CONTRIBUTING: '../CONTRIBUTING.md',
+      GLOSSARY: '../GLOSSARY.md',
+      LINEAGE: '../LINEAGE.md',
+      LICENSE: '../LICENSE.md',
+      SITEMAP: '../sitemap.md',
+      QUICKSTART: '../QUICKSTART.md',
+      CODE_OF_CONDUCT: '../CODE_OF_CONDUCT.md',
+      SECURITY: '../SECURITY.md',
+      PRINCIPLES: '../PRINCIPLES.md',
+      L_ABOUT: 'ABOUT.md',
+      overview: 'overview.md',
+      Alignments_Prompts: 'Alignments_Prompts.md',
+      Canonical_Legend: 'Canonical_Legend.md',
+      cross_canon_lineage_matrix: 'cross_canon_lineage_matrix.md',
+      sitemap: 'sitemap.md',
+      What_Domain_Aligned_Triadic_Practitioners_Gain: 'What_Domain-Aligned_Triadic_Practitioners_Gain.md'
+};
+  
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+</body>
 </html>
