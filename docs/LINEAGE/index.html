@@ -14,843 +14,309 @@
            of the TriadicFrameworks canon. AI‑parsable, minimal, standalone.
 -->
 
-<!-- Core module identity -->
-<meta name="module:id"          content="lineage">
-<meta name="module:title"       content="Lineage">
-<meta name="module:version"     content="2.0">
-<meta name="module:status"      content="stable">
-<meta name="module:canon"       content="active">
-<meta name="module:drift"       content="none">
-<meta name="module:coherence"   content="triadic-structural-grammar">
-<meta name="module:audience"    content="students, developers, researchers, AIs">
-<meta name="module:updated"     content="2026-08">
+<meta name="module:id" content="lineage">
+<meta name="module:title" content="Lineage">
+<meta name="module:version" content="1.0">
+<meta name="module:status" content="stable">
+<meta name="module:canon" content="active">
+<meta name="module:drift" content="minimal">
+<meta name="module:coherence" content="triadic-structural-grammar">
+<meta name="module:audience" content="students, developers, researchers, AIs">
 
-<meta name="module:summary" content="Historical substrate and evolution of the TriadicFrameworks canon across Phases 0–9, including regime shifts, structural invariants, lineage invariants, defensive publication layer, and the genealogy of RTT, TFT, and the modern triadic substrate.">
+<meta name="module:summary" content="Historical substrate and evolution of the TriadicFrameworks canon, including regime shifts, structural invariants, and the genealogy of RTT, TFT, and the modern triadic substrate.">
 
-<meta name="module:keywords" content="TriadicFrameworks, lineage, genealogy, RTT, RTT/1, TFT, structural canon, substrate evolution, regime shifts, paradox, coherence, historical substrate, Phase 0, metaCo, Nawderian Theorem, Nullaium OS, Universal Translator">
+<meta name="module:keywords" content="TriadicFrameworks, lineage, genealogy, RTT, RTT/1, TFT, structural canon, substrate evolution, regime shifts, paradox, coherence, historical substrate">
 
-<meta name="module:ai-ready"        content="true">
-<meta name="module:standalone"      content="true">
-<meta name="module:front-door"      content="false">
-<meta name="module:root-context"    content="docs-root">
-<meta name="module:phases"          content="0,1,2,3,4,5,6,7,8,9">
-<meta name="module:schema"          content="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/LINEAGE_module.json">
+<meta name="module:ai-ready" content="true">
+<meta name="module:standalone" content="true">
+<meta name="module:front-door" content="false">
+<meta name="module:root-context" content="docs-root">
 
 <style>
-  /* ── Option C — hybrid dark layout ── */
   :root {
-    --bg:           #0b0c10;
-    --fg:           #f5f5f5;
-    --accent-1:     #0ff;
-    --accent-2:     #ff0;
-    --accent-3:     #f0f;
-    --accent-4:     #4ade80;
-    --accent-5:     #fb923c;
-    --muted:        #9ca3af;
-    --border:       rgba(148,163,184,0.25);
-    --card-bg:      rgba(15,23,42,0.85);
-    --phase-pre:    rgba(0,255,255,0.08);
-    --phase-origin: rgba(255,255,0,0.06);
-    --phase-expand: rgba(240,0,240,0.06);
-    --phase-ops:    rgba(74,222,128,0.06);
+    --bg: #0b0c10;
+    --fg: #f5f5f5;
+    --accent-1: #0ff;
+    --accent-2: #ff0;
+    --accent-3: #f0f;
   }
-
   @media print {
     body { background: #ffffff; color: #111827; }
     .page { box-shadow: none; margin: 0; }
-    .phase-card { border: 1px solid #d1d5db; background: #f9fafb; }
-    .invariant-block { border: 1px solid #d1d5db; background: #f3f4f6; }
   }
-
-  *, *::before, *::after { box-sizing: border-box; }
-
   body {
     margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: radial-gradient(circle at top, #020617 0%, #020617 40%, #020617 100%);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: radial-gradient(circle at top, #020617 0, #020617 40%, #020617 100%);
     color: var(--fg);
-    line-height: 1.6;
   }
-
   .page {
-    max-width: 860px;
-    margin: 28px auto;
-    padding: 36px 44px;
+    max-width: 800px;
+    margin: 24px auto;
+    padding: 32px 40px;
     background: rgba(3,7,18,0.96);
     border-radius: 16px;
     box-shadow: 0 24px 80px rgba(0,0,0,0.6);
   }
-
-  /* ── Header ── */
   h1 {
     font-size: 26px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    margin: 0 0 6px;
+    margin-bottom: 8px;
   }
-  h1 span { color: var(--accent-1); }
-
+  h1 span {
+    color: var(--accent-1);
+  }
+  h2 {
+    font-size: 16px;
+    margin-top: 24px;
+    margin-bottom: 4px;
+    color: var(--accent-2);
+  }
   .tagline {
     font-size: 13px;
-    color: var(--muted);
-    margin-bottom: 28px;
+    color: #9ca3af;
+    margin-bottom: 20px;
   }
-
-  /* ── Section headings ── */
-  h2 {
-    font-size: 14px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--accent-2);
-    margin: 32px 0 12px;
-    padding-bottom: 4px;
-    border-bottom: 1px solid var(--border);
-  }
-
-  h3 {
-    font-size: 13px;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--accent-3);
-    margin: 22px 0 8px;
-  }
-
-  /* ── Layer badges ── */
-  .layer-badge {
-    display: inline-block;
-    font-size: 10px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    padding: 2px 8px;
-    border-radius: 4px;
+  .entry {
     margin-bottom: 14px;
+    border-left: 2px solid rgba(148,163,184,0.4);
+    padding-left: 10px;
+  }
+  .entry-title {
     font-weight: 600;
-  }
-  .layer-pre    { background: rgba(0,255,255,0.12); color: var(--accent-1); border: 1px solid rgba(0,255,255,0.3); }
-  .layer-origin { background: rgba(255,255,0,0.10); color: var(--accent-2); border: 1px solid rgba(255,255,0,0.3); }
-  .layer-expand { background: rgba(240,0,240,0.10); color: var(--accent-3); border: 1px solid rgba(240,0,240,0.3); }
-  .layer-ops    { background: rgba(74,222,128,0.12); color: var(--accent-4); border: 1px solid rgba(74,222,128,0.3); }
-
-  /* ── Phase cards ── */
-  .phase-card {
-    border-radius: 10px;
-    padding: 16px 18px;
-    margin-bottom: 14px;
-    border-left: 3px solid transparent;
-  }
-  .phase-card.pre    { background: var(--phase-pre);    border-color: var(--accent-1); }
-  .phase-card.origin { background: var(--phase-origin); border-color: var(--accent-2); }
-  .phase-card.expand { background: var(--phase-expand); border-color: var(--accent-3); }
-  .phase-card.ops    { background: var(--phase-ops);    border-color: var(--accent-4); }
-
-  .phase-header {
-    display: flex;
-    align-items: baseline;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-  .phase-num {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    color: var(--muted);
-    min-width: 56px;
-  }
-  .phase-title {
     font-size: 14px;
-    font-weight: 700;
-    color: var(--fg);
   }
-
-  .phase-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
+  .entry-sub {
     font-size: 12px;
+    color: #9ca3af;
   }
-  @media (max-width: 600px) {
-    .phase-grid { grid-template-columns: 1fr; }
-  }
-
-  .phase-cell-label {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 4px;
-  }
-  .phase-cell-body {
-    color: #cbd5e1;
-    font-size: 12px;
-    line-height: 1.55;
-  }
-
-  /* ── Invariant blocks ── */
-  .invariant-block {
-    background: rgba(15,23,42,0.7);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 14px 16px;
-    margin-bottom: 10px;
-    font-size: 12px;
-  }
-  .invariant-block strong {
-    color: var(--accent-1);
-    font-size: 11px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: 4px;
-  }
-  .invariant-block p { margin: 0; color: #cbd5e1; line-height: 1.55; }
-
-  /* ── Modules mapping table ── */
-  .mapping-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 12px;
-    margin-top: 10px;
-  }
-  .mapping-table th {
-    text-align: left;
-    font-size: 10px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--muted);
-    padding: 6px 10px;
-    border-bottom: 1px solid var(--border);
-  }
-  .mapping-table td {
-    padding: 7px 10px;
-    border-bottom: 1px solid rgba(148,163,184,0.1);
-    color: #cbd5e1;
-    vertical-align: top;
-    line-height: 1.5;
-  }
-  .mapping-table tr:last-child td { border-bottom: none; }
-  .mapping-table tr:hover td { background: rgba(255,255,255,0.03); }
-  .map-phase { color: var(--accent-1); font-weight: 600; white-space: nowrap; }
-  .map-module { color: var(--accent-4); }
-  .map-role   { color: var(--muted); }
-
-  /* ── Timeline ── */
-  .timeline {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 12px;
-  }
-  .timeline li {
-    display: flex;
-    gap: 12px;
-    padding: 6px 0;
-    border-bottom: 1px solid rgba(148,163,184,0.08);
-    align-items: flex-start;
-  }
-  .timeline li:last-child { border-bottom: none; }
-  .tl-num {
-    min-width: 22px;
-    font-weight: 700;
-    color: var(--accent-1);
-    font-size: 11px;
-    padding-top: 1px;
-  }
-  .tl-name  { font-weight: 600; color: var(--fg); min-width: 200px; }
-  .tl-desc  { color: var(--muted); }
-
-  /* ── Defensive publication block ── */
-  .def-pub {
-    background: rgba(251,146,60,0.07);
-    border: 1px solid rgba(251,146,60,0.25);
-    border-radius: 8px;
-    padding: 14px 16px;
-    font-size: 12px;
-    color: #cbd5e1;
-  }
-  .def-pub-label {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--accent-5);
-    margin-bottom: 6px;
-  }
-
-  /* ── Canon alignment notes ── */
-  .canon-notes ul {
-    margin: 6px 0 0 18px;
-    padding: 0;
-    font-size: 12px;
-    color: #cbd5e1;
-    line-height: 1.7;
-  }
-
-  /* ── AI badge row ── */
-  .badge-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 28px;
-    padding-top: 16px;
-    border-top: 1px solid var(--border);
-    font-size: 11px;
-  }
-  .badge {
-    background: rgba(15,23,42,0.8);
-    border: 1px solid var(--border);
-    border-radius: 5px;
-    padding: 3px 9px;
-    color: var(--muted);
-    letter-spacing: 0.06em;
-  }
-  .badge b { color: var(--fg); }
-
-  /* ── SVG diagram ── */
-  .svg-wrap {
-    overflow-x: auto;
-    margin: 18px 0 24px;
-    border-radius: 10px;
-    background: rgba(2,6,23,0.7);
-    border: 1px solid var(--border);
-    padding: 12px 4px 8px;
-  }
-
-  /* ── Session context block ── */
-  lineage-context { display: block; margin-top: 28px; }
-  session-block   { display: block; font-size: 11px; color: var(--muted); border-top: 1px solid var(--border); padding-top: 14px; line-height: 1.8; }
-  session-block b { color: var(--fg); }
 </style>
 </head>
 <body>
-<div class="page">
-
-  <!-- ══ HEADER ══════════════════════════════════════════════════════════ -->
-  <h1><span>TriadicFrameworks</span> Canon Lineage</h1>
-  <div class="tagline">
-    Pre‑Canon → Origin → Expansion → Operational &nbsp;·&nbsp;
-    Structural history for students and AIs &nbsp;·&nbsp;
-    <a href="https://www.triadicframeworks.org/lineage.html" style="color:var(--accent-1);text-decoration:none;">triadicframeworks.org/lineage.html</a>
-  </div>
-
-  <!-- ══ SVG LINEAGE DIAGRAM ══════════════════════════════════════════════ -->
-  <div class="svg-wrap">
-    <svg viewBox="0 0 1400 520" width="100%" xmlns="http://www.w3.org/2000/svg"
-         role="img" aria-label="TriadicFrameworks Canon Lineage — Phase 0 through Phase 9">
-      <defs>
-        <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-          <path d="M0,0 L0,6 L8,3 z" fill="rgba(148,163,184,0.5)"/>
-        </marker>
-        <filter id="glow">
-          <feGaussianBlur stdDeviation="3" result="blur"/>
-          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-        </filter>
-      </defs>
-
-      <!-- Column backgrounds -->
-      <rect x="10"   y="10" width="310" height="500" rx="10" fill="rgba(0,255,255,0.03)"  stroke="rgba(0,255,255,0.12)"  stroke-width="1"/>
-      <rect x="340"  y="10" width="310" height="500" rx="10" fill="rgba(255,255,0,0.03)"  stroke="rgba(255,255,0,0.12)"  stroke-width="1"/>
-      <rect x="670"  y="10" width="310" height="500" rx="10" fill="rgba(240,0,240,0.03)"  stroke="rgba(240,0,240,0.12)"  stroke-width="1"/>
-      <rect x="1000" y="10" width="390" height="500" rx="10" fill="rgba(74,222,128,0.03)" stroke="rgba(74,222,128,0.12)" stroke-width="1"/>
-
-      <!-- Column labels -->
-      <text x="165"  y="38" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="2" fill="#0ff"    font-family="system-ui,sans-serif">PRE‑CANON</text>
-      <text x="495"  y="38" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="2" fill="#ff0"    font-family="system-ui,sans-serif">ORIGIN LAYER</text>
-      <text x="825"  y="38" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="2" fill="#f0f"    font-family="system-ui,sans-serif">EXPANSION LAYER</text>
-      <text x="1195" y="38" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="2" fill="#4ade80" font-family="system-ui,sans-serif">OPERATIONAL LAYER</text>
-
-      <!-- Phase 0 — Pre-Canon (metaCo) -->
-      <rect x="40"  y="60" width="250" height="58" rx="8" fill="rgba(0,255,255,0.08)" stroke="#0ff" stroke-width="1.5" filter="url(#glow)"/>
-      <text x="165" y="82" text-anchor="middle" font-size="10" fill="#9ca3af" font-family="system-ui,sans-serif">Phase 0</text>
-      <text x="165" y="98" text-anchor="middle" font-size="12" font-weight="700" fill="#0ff" font-family="system-ui,sans-serif">metaCo</text>
-      <text x="165" y="112" text-anchor="middle" font-size="10" fill="#cbd5e1" font-family="system-ui,sans-serif">Proto‑Substrate (Pre‑Canon)</text>
-
-      <!-- Phase 1 — Origin: TFT_3Pack -->
-      <rect x="370" y="60" width="250" height="58" rx="8" fill="rgba(255,255,0,0.08)" stroke="#ff0" stroke-width="1.5"/>
-      <text x="495" y="82" text-anchor="middle" font-size="10" fill="#9ca3af" font-family="system-ui,sans-serif">Phase 1</text>
-      <text x="495" y="98" text-anchor="middle" font-size="12" font-weight="700" fill="#ff0" font-family="system-ui,sans-serif">Triadic Frameworks</text>
-      <text x="495" y="112" text-anchor="middle" font-size="10" fill="#cbd5e1" font-family="system-ui,sans-serif">TFT_3Pack — Operator Lattice</text>
-
-      <!-- Phase 2 — Origin: Mythmatical Model -->
-      <rect x="370" y="145" width="250" height="58" rx="8" fill="rgba(255,255,0,0.06)" stroke="rgba(255,255,0,0.6)" stroke-width="1.5"/>
-      <text x="495" y="167" text-anchor="middle" font-size="10" fill="#9ca3af" font-family="system-ui,sans-serif">Phase 2</text>
-      <text x="495" y="183" text-anchor="middle" font-size="12" font-weight="700" fill="#ff0" font-family="system-ui,sans-serif">Mythmatical Model</text>
-      <text x="495" y="197" text-anchor="middle" font-size="10" fill="#cbd5e1" font-family="system-ui,sans-serif">Early Emitters Era</text>
-
-      <!-- Phase 3 — Origin: Nawderian Theorem -->
-      <rect x="370" y="230" width="250" height="58" rx="8" fill="rgba(255,255,0,0.06)" stroke="rgba(255,255,0,0.6)" stroke-width="1.5"/>
-      <text x="495" y="252" text-anchor="middle" font-size="10" fill="#9ca3af" font-family="system-ui,sans-serif">Phase 3</text>
-      <text x="495" y="268" text-anchor="middle" font-size="12" font-weight="700" fill="#ff0" font-family="system-ui,sans-serif">Nawderian Theorem</text>
-      <text x="495" y="282" text-anchor="middle" font-size="10" fill="#cbd5e1" font-family="system-ui,sans-serif">Dimensional Corridor Logic</text>
-
-      <!-- Phase 4 — Expansion: Resonance Protocols -->
-      <rect x="700" y="60" width="250" height="58" rx="8" fill="rgba(240,0,240,0.08)" stroke="#f0f" stroke-width="1.5"/>
-      <text x="825" y="82" text-anchor="middle" font-size="10" fill="#9ca3af" font-family="system-ui,sans-serif">Phase 4</text>
-      <text x="825" y="98" text-anchor="middle" font-size="12" font-weight="700" fill="#f0f" font-family="system-ui,sans-serif">Resonance Protocols</text>
-      <text x="825" y="112" text-anchor="middle" font-size="10" fill="#cbd5e1" font-family="system-ui,sans-serif">RFCs 019–026</text>
-
-      <!-- Phase 5 — Expansion: Manifests & Atlases -->
-      <rect x="700" y="145" width="250" height="58" rx="8" fill="rgba(240,0,240,0.06)" stroke="rgba(240,0,240,0.6)" stroke-width="1.5"/>
-      <text x="825" y="167" text-anchor="middle" font-size="10" fill="#9ca3af" font-family="system-ui,sans-serif">Phase 5</text>
-      <text x="825" y="183" text-anchor="middle" font-size="12" font-weight="700" fill="#f0f" font-family="system-ui,sans-serif">Manifests &amp; Atlases</text>
-      <text x="825" y="197" text-anchor="middle" font-size="10" fill="#cbd5e1" font-family="system-ui,sans-serif">Registries · Quadrants · AI‑Ready</text>
-
-      <!-- Phase 6 — Expansion: Nullaium OS -->
-      <rect x="700" y="230" width="250" height="58" rx="8" fill="rgba(240,0,240,0.06)" stroke="rgba(240,0,240,0.6)" stroke-width="1.5"/>
-      <text x="825" y="252" text-anchor="middle" font-size="10" fill="#9ca3af" font-family="system-ui,sans-serif">Phase 6</text>
-      <text x="825" y="268" text-anchor="middle" font-size="12" font-weight="700" fill="#f0f" font-family="system-ui,sans-serif">Nullaium OS (NoS)</text>
-      <text x="825" y="282" text-anchor="middle" font-size="10" fill="#cbd5e1" font-family="system-ui,sans-serif">Research Distribution · Triadic Kernel</text>
-
-      <!-- Phase 7 — Operational: Virtual Universe Remix -->
-      <rect x="1030" y="60" width="330" height="58" rx="8" fill="rgba(74,222,128,0.08)" stroke="#4ade80" stroke-width="1.5"/>
-      <text x="1195" y="82" text-anchor="middle" font-size="10" fill="#9ca3af" font-family="system-ui,sans-serif">Phase 7</text>
-      <text x="1195" y="98" text-anchor="middle" font-size="12" font-weight="700" fill="#4ade80" font-family="system-ui,sans-serif">Virtual Universe Remix</text>
-      <text x="1195" y="112" text-anchor="middle" font-size="10" fill="#cbd5e1" font-family="system-ui,sans-serif">Conceptual Universe · Educational Sim</text>
-
-      <!-- Phase 8 — Operational: Collective Consciousness Atlas -->
-      <rect x="1030" y="145" width="330" height="58" rx="8" fill="rgba(74,222,128,0.06)" stroke="rgba(74,222,128,0.6)" stroke-width="1.5"/>
-      <text x="1195" y="167" text-anchor="middle" font-size="10" fill="#9ca3af" font-family="system-ui,sans-serif">Phase 8</text>
-      <text x="1195" y="183" text-anchor="middle" font-size="12" font-weight="700" fill="#4ade80" font-family="system-ui,sans-serif">Collective Consciousness Atlas</text>
-      <text x="1195" y="197" text-anchor="middle" font-size="10" fill="#cbd5e1" font-family="system-ui,sans-serif">RFC‑027 · Top‑100 Questions</text>
-
-      <!-- Phase 9 — Operational: Universal Translator -->
-      <rect x="1030" y="230" width="330" height="58" rx="8" fill="rgba(74,222,128,0.06)" stroke="rgba(74,222,128,0.6)" stroke-width="1.5"/>
-      <text x="1195" y="252" text-anchor="middle" font-size="10" fill="#9ca3af" font-family="system-ui,sans-serif">Phase 9</text>
-      <text x="1195" y="268" text-anchor="middle" font-size="12" font-weight="700" fill="#4ade80" font-family="system-ui,sans-serif">Universal Translator</text>
-      <text x="1195" y="282" text-anchor="middle" font-size="10" fill="#cbd5e1" font-family="system-ui,sans-serif">Resonance‑Based · Cross‑Overlay</text>
-
-      <!-- Connector arrows: Phase 0 → Phase 1 -->
-      <line x1="290" y1="89" x2="368" y2="89" stroke="rgba(148,163,184,0.4)" stroke-width="1.5" marker-end="url(#arr)"/>
-
-      <!-- Phase 0 → Phase 2 (diagonal) -->
-      <line x1="290" y1="100" x2="368" y2="170" stroke="rgba(148,163,184,0.2)" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arr)"/>
-
-      <!-- Origin → Expansion connectors -->
-      <line x1="620" y1="89"  x2="698" y2="89"  stroke="rgba(148,163,184,0.4)" stroke-width="1.5" marker-end="url(#arr)"/>
-      <line x1="620" y1="174" x2="698" y2="174" stroke="rgba(148,163,184,0.4)" stroke-width="1.5" marker-end="url(#arr)"/>
-      <line x1="620" y1="259" x2="698" y2="174" stroke="rgba(148,163,184,0.2)" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arr)"/>
-
-      <!-- Expansion → Operational connectors -->
-      <line x1="950" y1="89"  x2="1028" y2="89"  stroke="rgba(148,163,184,0.4)" stroke-width="1.5" marker-end="url(#arr)"/>
-      <line x1="950" y1="174" x2="1028" y2="174" stroke="rgba(148,163,184,0.4)" stroke-width="1.5" marker-end="url(#arr)"/>
-      <line x1="950" y1="259" x2="1028" y2="259" stroke="rgba(148,163,184,0.4)" stroke-width="1.5" marker-end="url(#arr)"/>
-
-      <!-- Vertical flow lines within layers -->
-      <line x1="495" y1="118" x2="495" y2="143" stroke="rgba(255,255,0,0.3)"    stroke-width="1.2" marker-end="url(#arr)"/>
-      <line x1="495" y1="203" x2="495" y2="228" stroke="rgba(255,255,0,0.3)"    stroke-width="1.2" marker-end="url(#arr)"/>
-      <line x1="825" y1="118" x2="825" y2="143" stroke="rgba(240,0,240,0.3)"    stroke-width="1.2" marker-end="url(#arr)"/>
-      <line x1="825" y1="203" x2="825" y2="228" stroke="rgba(240,0,240,0.3)"    stroke-width="1.2" marker-end="url(#arr)"/>
-      <line x1="1195" y1="118" x2="1195" y2="143" stroke="rgba(74,222,128,0.3)" stroke-width="1.2" marker-end="url(#arr)"/>
-      <line x1="1195" y1="203" x2="1195" y2="228" stroke="rgba(74,222,128,0.3)" stroke-width="1.2" marker-end="url(#arr)"/>
-
-      <!-- Bottom label -->
-      <text x="700" y="490" text-anchor="middle" font-size="10" fill="rgba(148,163,184,0.5)" letter-spacing="2" font-family="system-ui,sans-serif">LINEAGE · PRE‑CANON → ORIGIN → EXPANSION → OPERATIONAL</text>
-    </svg>
-  </div>
-
-  <!-- ══ PRE-CANON LAYER ════════════════════════════════════════════════ -->
-  <h2>Pre‑Canon Layer</h2>
-  <span class="layer-badge layer-pre">Phase 0 · Proto‑Substrate</span>
-
-  <div class="phase-card pre">
-    <div class="phase-header">
-      <span class="phase-num">Phase 0</span>
-      <span class="phase-title">metaCo — Proto‑Substrate (Pre‑Canon)</span>
+  <div class="page">
+    <h1><span>TriadicFrameworks</span> Canon Lineage</h1>
+    <div class="tagline">
+      Origin → Expansion → Operational · Structural history for students and AIs
     </div>
-    <div class="phase-grid">
-      <div>
-        <div class="phase-cell-label">What</div>
-        <div class="phase-cell-body">Early attempt to unify context across silos. (2024–2025)</div>
-      </div>
-      <div>
-        <div class="phase-cell-label">Why it mattered</div>
-        <div class="phase-cell-body">First appearance of <strong style="color:#0ff">drift‑awareness, meta‑routing, and coherence preservation</strong>.</div>
-      </div>
-      <div>
-        <div class="phase-cell-label">Unlocked</div>
-        <div class="phase-cell-body">Serves as the conceptual ancestor of RTT, Mode, Opacity, and the entire substrate architecture.</div>
-      </div>
+
+    <h2>Origin Layer</h2>
+    <div class="entry">
+      <div class="entry-title">1. Triadic Frameworks (TFT_3Pack)</div>
+      <div class="entry-sub">Core triadic operator lattice and structural grammar.</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">2. Mythmatical Model</div>
+      <div class="entry-sub">Early emitter/force substrate; precursor to operators, regimes, and fields.</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">3. Nawderian Theorem</div>
+      <div class="entry-sub">Dimensional corridor logic; bridge between intuition and structured reasoning.</div>
+    </div>
+
+    <h2>Expansion Layer</h2>
+    <div class="entry">
+      <div class="entry-title">4. Resonance Protocols (RFCs 019–026)</div>
+      <div class="entry-sub">Cleanrooms, partitions, arcs, and early safety workflows.</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">5. Manifests & Atlases</div>
+      <div class="entry-sub">Registries, idioms, quadrants, and the Collective Consciousness Atlas.</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">6. Nullaium OS (NoS)</div>
+      <div class="entry-sub">Research distribution embedding the triadic kernel.</div>
+    </div>
+
+    <h2>Operational Layer</h2>
+    <div class="entry">
+      <div class="entry-title">7. Virtual Universe Remix</div>
+      <div class="entry-sub">Conceptual universe construction and educational simulation.</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">8. Collective Consciousness Atlas (RFC‑027)</div>
+      <div class="entry-sub">Top‑100 questions mapped into structural quadrants and arcs.</div>
+    </div>
+    <div class="entry">
+      <div class="entry-title">9. Universal Translator</div>
+      <div class="entry-sub">Resonance‑based translation across overlays and symbolic systems.</div>
     </div>
   </div>
 
-  <!-- ══ ORIGIN LAYER ══════════════════════════════════════════════════ -->
-  <h2>Origin Layer</h2>
-  <span class="layer-badge layer-origin">Phases 1–3 · Structural Grammar</span>
+<svg viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="triadic-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050816"/>
+      <stop offset="50%" stop-color="#101b3a"/>
+      <stop offset="100%" stop-color="#1b0f2e"/>
+    </linearGradient>
+    <linearGradient id="triadic-node" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0ff"/>
+      <stop offset="50%" stop-color="#ff0"/>
+      <stop offset="100%" stop-color="#f0f"/>
+    </linearGradient>
+  </defs>
 
-  <div class="phase-card origin">
-    <div class="phase-header">
-      <span class="phase-num">Phase 1</span>
-      <span class="phase-title">Triadic Frameworks (TFT_3Pack)</span>
-    </div>
-    <div class="phase-grid">
-      <div>
-        <div class="phase-cell-label">What</div>
-        <div class="phase-cell-body">The original triadic operator lattice — the earliest articulation of <em>three interacting forces</em> that shaped all later work.</div>
-      </div>
-      <div>
-        <div class="phase-cell-label">Why it mattered</div>
-        <div class="phase-cell-body">Established that <strong style="color:#ff0">resonance phenomena can be partitioned into stable triads</strong>, forming the first structural grammar.</div>
-      </div>
-      <div>
-        <div class="phase-cell-label">Unlocked</div>
-        <div class="phase-cell-body">A repeatable way to classify behavior, gradients, and coherence patterns.</div>
-      </div>
-    </div>
-  </div>
+  <rect x="0" y="0" width="1200" height="700" fill="url(#triadic-bg)" />
 
-  <div class="phase-card origin">
-    <div class="phase-header">
-      <span class="phase-num">Phase 2</span>
-      <span class="phase-title">Mythmatical Model (Early Emitters Era)</span>
-    </div>
-    <div class="phase-grid">
-      <div>
-        <div class="phase-cell-label">What</div>
-        <div class="phase-cell-body">An early attempt to map resonance into "forces," "fluids," and "frequencies" — a proto‑substrate.</div>
-      </div>
-      <div>
-        <div class="phase-cell-label">Why it mattered</div>
-        <div class="phase-cell-body">Introduced the idea of <strong style="color:#ff0">partitioned emitters</strong>, which later evolved into modern <em>operators, regimes, and fields</em>.</div>
-      </div>
-      <div>
-        <div class="phase-cell-label">Unlocked</div>
-        <div class="phase-cell-body">The first safety protocols, early cleanroom logic, and the idea of resonance as a measurable structure. (Modern canon supersedes the terminology but preserves the insight.)</div>
-      </div>
-    </div>
-  </div>
+  <!-- Title -->
+  <text x="600" y="70" text-anchor="middle"
+        fill="#f5f5f5" font-family="system-ui, sans-serif"
+        font-size="32" letter-spacing="2">
+    TriadicFrameworks — Canon Lineage
+  </text>
 
-  <div class="phase-card origin">
-    <div class="phase-header">
-      <span class="phase-num">Phase 3</span>
-      <span class="phase-title">Nawderian Theorem (Dimensional Corridor Logic)</span>
-    </div>
-    <div class="phase-grid">
-      <div>
-        <div class="phase-cell-label">What</div>
-        <div class="phase-cell-body">A symbolic expression describing how <strong style="color:#ff0">dimensional clarity emerges from ordered triads</strong>.</div>
-      </div>
-      <div>
-        <div class="phase-cell-label">Why it mattered</div>
-        <div class="phase-cell-body">Provided the first formal bridge between intuitive resonance and structured dimensional reasoning.</div>
-      </div>
-      <div>
-        <div class="phase-cell-label">Unlocked</div>
-        <div class="phase-cell-body">The confidence that the framework could support <strong style="color:#ff0">mathematical, educational, and AI‑reasoning checks</strong>.</div>
-      </div>
-    </div>
-  </div>
+  <!-- Triadic columns: Origin / Expansion / Operational -->
+  <!-- Column labels -->
+  <text x="200" y="130" fill="#a8b2ff" font-size="18" text-anchor="middle"
+        font-family="system-ui, sans-serif">Origin Layer</text>
+  <text x="600" y="130" fill="#a8ffdf" font-size="18" text-anchor="middle"
+        font-family="system-ui, sans-serif">Expansion Layer</text>
+  <text x="1000" y="130" fill="#ffc8ff" font-size="18" text-anchor="middle"
+        font-family="system-ui, sans-serif">Operational Layer</text>
 
-  <!-- ══ EXPANSION LAYER ═══════════════════════════════════════════════ -->
-  <h2>Expansion Layer</h2>
-  <span class="layer-badge layer-expand">Phases 4–6 · Applied Tools</span>
+  <!-- Origin nodes -->
+  <g>
+    <rect x="120" y="170" width="160" height="60" rx="12"
+          fill="none" stroke="url(#triadic-node)" stroke-width="2"/>
+    <text x="200" y="205" text-anchor="middle" fill="#e5e5e5"
+          font-family="system-ui, sans-serif" font-size="14">
+      Triadic Frameworks
+    </text>
+    <text x="200" y="222" text-anchor="middle" fill="#9ca3af"
+          font-family="system-ui, sans-serif" font-size="11">
+      (TFT_3Pack)
+    </text>
 
-  <div class="phase-card expand">
-    <div class="phase-header">
-      <span class="phase-num">Phase 4</span>
-      <span class="phase-title">Resonance Protocols (RFCs 019–026)</span>
-    </div>
-    <div class="phase-grid">
-      <div>
-        <div class="phase-cell-label">What</div>
-        <div class="phase-cell-body">Scroll‑style documents defining partitions, arcs, cleanrooms, consciousness lenses, and earth‑theme mappings.</div>
-      </div>
-      <div>
-        <div class="phase-cell-label">Why it mattered</div>
-        <div class="phase-cell-body">Translated abstract theory into <strong style="color:#f0f">applied educational tools</strong>.</div>
-      </div>
-      <div>
-        <div class="phase-cell-label">Unlocked</div>
-        <div class="phase-cell-body">The first practical workflows for mapping systems, questions, and conceptual universes.</div>
-      </div>
-    </div>
-  </div>
+    <rect x="120" y="260" width="160" height="60" rx="12"
+          fill="none" stroke="#4ade80" stroke-width="1.5"/>
+    <text x="200" y="295" text-anchor="middle" fill="#e5e5e5"
+          font-family="system-ui, sans-serif" font-size="13">
+      Mythmatical Model
+    </text>
 
-  <div class="phase-card expand">
-    <div class="phase-header">
-      <span class="phase-num">Phase 5</span>
-      <span class="phase-title">Manifests &amp; Atlases</span>
-    </div>
-    <div class="phase-grid">
-      <div>
-        <div class="phase-cell-label">What</div>
-        <div class="phase-cell-body">Machine‑readable registries: idioms, quadrants, earth fields, question sets, fringe sets.</div>
-      </div>
-      <div>
-        <div class="phase-cell-label">Why it mattered</div>
-        <div class="phase-cell-body">Made the canon <strong style="color:#f0f">modular, remixable, and AI‑ready</strong>.</div>
-      </div>
-      <div>
-        <div class="phase-cell-label">Unlocked</div>
-        <div class="phase-cell-body">The Collective Consciousness Atlas and the first resonance‑cartography tools.</div>
-      </div>
-    </div>
-  </div>
+    <rect x="120" y="350" width="160" height="60" rx="12"
+          fill="none" stroke="#38bdf8" stroke-width="1.5"/>
+    <text x="200" y="385" text-anchor="middle" fill="#e5e5e5"
+          font-family="system-ui, sans-serif" font-size="13">
+      Nawderian Theorem
+    </text>
+  </g>
 
-  <div class="phase-card expand">
-    <div class="phase-header">
-      <span class="phase-num">Phase 6</span>
-      <span class="phase-title">Nullaium OS (NoS)</span>
-    </div>
-    <div class="phase-grid">
-      <div>
-        <div class="phase-cell-label">What</div>
-        <div class="phase-cell-body">A research distribution embedding the early triadic kernel.</div>
-      </div>
-      <div>
-        <div class="phase-cell-label">Why it mattered</div>
-        <div class="phase-cell-body">Proved the canon could be <strong style="color:#f0f">operationalized</strong>, not just described.</div>
-      </div>
-      <div>
-        <div class="phase-cell-label">Unlocked</div>
-        <div class="phase-cell-body">AI‑service experiments and the idea of a living, executable resonance‑time environment.</div>
-      </div>
-    </div>
-  </div>
+  <!-- Expansion nodes -->
+  <g>
+    <rect x="520" y="170" width="160" height="60" rx="12"
+          fill="none" stroke="#f97316" stroke-width="1.5"/>
+    <text x="600" y="205" text-anchor="middle" fill="#e5e5e5"
+          font-family="system-ui, sans-serif" font-size="13">
+      Resonance Protocols
+    </text>
 
-  <!-- ══ OPERATIONAL LAYER ═════════════════════════════════════════════ -->
-  <h2>Operational Layer</h2>
-  <span class="layer-badge layer-ops">Phases 7–9 · Living Canon</span>
+    <rect x="520" y="260" width="160" height="60" rx="12"
+          fill="none" stroke="#22c55e" stroke-width="1.5"/>
+    <text x="600" y="295" text-anchor="middle" fill="#e5e5e5"
+          font-family="system-ui, sans-serif" font-size="13">
+      Manifests & Atlases
+    </text>
 
-  <div class="phase-card ops">
-    <div class="phase-header">
-      <span class="phase-num">Phase 7</span>
-      <span class="phase-title">Virtual Universe Remix</span>
-    </div>
-    <div class="phase-grid">
-      <div>
-        <div class="phase-cell-label">What</div>
-        <div class="phase-cell-body">A lightweight document for constructing conceptual universes.</div>
-      </div>
-      <div>
-        <div class="phase-cell-label">Why it mattered</div>
-        <div class="phase-cell-body">Showed how the theorem + framework + model could be used for <strong style="color:#4ade80">world‑building and educational simulation</strong>.</div>
-      </div>
-      <div>
-        <div class="phase-cell-label">Unlocked</div>
-        <div class="phase-cell-body">The idea of a <em>virtual campus</em> where students design conceptual tools and systems.</div>
-      </div>
-    </div>
-  </div>
+    <rect x="520" y="350" width="160" height="60" rx="12"
+          fill="none" stroke="#eab308" stroke-width="1.5"/>
+    <text x="600" y="385" text-anchor="middle" fill="#e5e5e5"
+          font-family="system-ui, sans-serif" font-size="13">
+      Nullaium OS
+    </text>
+  </g>
 
-  <div class="phase-card ops">
-    <div class="phase-header">
-      <span class="phase-num">Phase 8</span>
-      <span class="phase-title">Collective Consciousness Atlas (RFC‑027)</span>
-    </div>
-    <div class="phase-grid">
-      <div>
-        <div class="phase-cell-label">What</div>
-        <div class="phase-cell-body">A registry of humanity's top‑100 questions, mapped into quadrants and arcs.</div>
-      </div>
-      <div>
-        <div class="phase-cell-label">Why it mattered</div>
-        <div class="phase-cell-body">Demonstrated that <strong style="color:#4ade80">every question has a structural home</strong>.</div>
-      </div>
-      <div>
-        <div class="phase-cell-label">Unlocked</div>
-        <div class="phase-cell-body">A Rosetta‑style onboarding map for students and AIs.</div>
-      </div>
-    </div>
-  </div>
+  <!-- Operational nodes -->
+  <g>
+    <rect x="920" y="170" width="160" height="60" rx="12"
+          fill="none" stroke="#a855f7" stroke-width="1.5"/>
+    <text x="1000" y="205" text-anchor="middle" fill="#e5e5e5"
+          font-family="system-ui, sans-serif" font-size="13">
+      Virtual Universe Remix
+    </text>
 
-  <div class="phase-card ops">
-    <div class="phase-header">
-      <span class="phase-num">Phase 9</span>
-      <span class="phase-title">Universal Translator (Resonance‑Based)</span>
-    </div>
-    <div class="phase-grid">
-      <div>
-        <div class="phase-cell-label">What</div>
-        <div class="phase-cell-body">A scaffold for translating emotional, symbolic, and dimensional meaning across overlays.</div>
-      </div>
-      <div>
-        <div class="phase-cell-label">Why it mattered</div>
-        <div class="phase-cell-body">Showed that resonance‑aligned translation could unify <strong style="color:#4ade80">language, symbolism, and conceptual structure</strong>.</div>
-      </div>
-      <div>
-        <div class="phase-cell-label">Unlocked</div>
-        <div class="phase-cell-body">The first cross‑overlay clarity tools.</div>
-      </div>
-    </div>
-  </div>
+    <rect x="920" y="260" width="160" height="60" rx="12"
+          fill="none" stroke="#f97316" stroke-width="1.5"/>
+    <text x="1000" y="295" text-anchor="middle" fill="#e5e5e5"
+          font-family="system-ui, sans-serif" font-size="13">
+      Collective Consciousness Atlas
+    </text>
 
-  <!-- ══ STRUCTURAL INVARIANTS ════════════════════════════════════════ -->
-  <h2>Structural Invariants</h2>
+    <rect x="920" y="350" width="160" height="60" rx="12"
+          fill="none" stroke="#0ea5e9" stroke-width="1.5"/>
+    <text x="1000" y="385" text-anchor="middle" fill="#e5e5e5"
+          font-family="system-ui, sans-serif" font-size="13">
+      Universal Translator
+    </text>
+  </g>
 
-  <div class="invariant-block">
-    <strong>Triadic Partition</strong>
-    <p>All resonance phenomena decompose into exactly three interacting forces. No phase has violated this partition; all extensions have refined it.</p>
-  </div>
-  <div class="invariant-block">
-    <strong>Coherence Preservation</strong>
-    <p>Each phase transition preserves the coherence of prior phases. Terminology may be superseded; structural insight is never discarded.</p>
-  </div>
-  <div class="invariant-block">
-    <strong>Drift‑Awareness</strong>
-    <p>First surfaced in Phase 0 (metaCo), drift‑awareness is carried forward as a first‑class primitive across all subsequent modules.</p>
-  </div>
-  <div class="invariant-block">
-    <strong>AI‑Parsability</strong>
-    <p>Every artifact from Phase 4 onward is designed to be machine‑readable, AI‑navigable, and schema‑consistent with the modern module system.</p>
-  </div>
+  <!-- Connecting lines -->
+  <g stroke="#64748b" stroke-width="1.2" stroke-linecap="round">
+    <!-- Origin → Expansion -->
+    <line x1="280" y1="200" x2="520" y2="200" />
+    <line x1="280" y1="290" x2="520" y2="290" />
+    <line x1="280" y1="380" x2="520" y2="380" />
 
-  <!-- ══ LINEAGE INVARIANTS ════════════════════════════════════════════ -->
-  <h2>Lineage Invariants</h2>
+    <!-- Expansion → Operational -->
+    <line x1="680" y1="200" x2="920" y2="200" />
+    <line x1="680" y1="290" x2="920" y2="290" />
+    <line x1="680" y1="380" x2="920" y2="380" />
+  </g>
 
-  <div class="invariant-block">
-    <strong>Root‑Lock</strong>
-    <p>The lineage document is root‑locked: it cannot itself drift. It anchors cross‑module propagation and is the authoritative historical record.</p>
-  </div>
-  <div class="invariant-block">
-    <strong>Phase Monotonicity</strong>
-    <p>Phases are numbered and ordered by emergence. Numbering is stable; new phases append, never replace.</p>
-  </div>
-  <div class="invariant-block">
-    <strong>Zero Duplication</strong>
-    <p>Content lives once. This HTML renders the canonical lineage; the Markdown source (<code style="font-size:11px;color:#0ff">docs/LINEAGE.md</code>) is the single source of truth.</p>
-  </div>
-  <div class="invariant-block">
-    <strong>Historical Accuracy Over Terminology</strong>
-    <p>Deprecated terms (e.g., early emitter vocabulary) are documented accurately. Modern canon supersedes terminology — never erases origin.</p>
-  </div>
-
-  <!-- ══ DEFENSIVE PUBLICATION LAYER ══════════════════════════════════ -->
-  <h2>Defensive Publication Layer</h2>
-  <div class="def-pub">
-    <div class="def-pub-label">🛡 Defensive Publication — Prior Art Notice</div>
-    This lineage document constitutes a formal prior‑art disclosure for the structural concepts, terminology, phase architecture, and invariant framework described herein. All phases (0–9) and their derivative constructs — including the Nawderian Theorem, Nullaium OS, and the Resonance‑Time substrate — are documented here for the public record. Publication date: 2026. Repository: <code style="color:#fb923c">github.com/umaywant2/TriadicFrameworks</code>.
-  </div>
-
-  <!-- ══ CANON TIMELINE ════════════════════════════════════════════════ -->
-  <h2>TriadicFrameworks Canon Timeline</h2>
-  <ul class="timeline">
-    <li><span class="tl-num">0</span><span class="tl-name">metaCo (Proto‑Substrate)</span><span class="tl-desc">First appearance of drift‑awareness, meta‑routing, and coherence preservation.</span></li>
-    <li><span class="tl-num">1</span><span class="tl-name">Triadic Frameworks (TFT_3Pack)</span><span class="tl-desc">Origin of the triadic operator lattice and structural grammar.</span></li>
-    <li><span class="tl-num">2</span><span class="tl-name">Mythmatical Model</span><span class="tl-desc">Early emitter/force/field substrate; precursor to operators, regimes, and fields.</span></li>
-    <li><span class="tl-num">3</span><span class="tl-name">Nawderian Theorem</span><span class="tl-desc">Dimensional corridor logic; formal bridge between intuition and structured reasoning.</span></li>
-    <li><span class="tl-num">4</span><span class="tl-name">Resonance Protocols (RFCs 019–026)</span><span class="tl-desc">Cleanrooms, partitions, arcs, and early safety/structure workflows.</span></li>
-    <li><span class="tl-num">5</span><span class="tl-name">Manifests &amp; Atlases</span><span class="tl-desc">Registries, idioms, quadrants, and the Collective Consciousness Atlas.</span></li>
-    <li><span class="tl-num">6</span><span class="tl-name">Nullaium OS (NoS)</span><span class="tl-desc">Research distribution embedding the triadic kernel.</span></li>
-    <li><span class="tl-num">7</span><span class="tl-name">Virtual Universe Remix</span><span class="tl-desc">Conceptual universe construction and educational simulation.</span></li>
-    <li><span class="tl-num">8</span><span class="tl-name">Collective Consciousness Atlas (RFC‑027)</span><span class="tl-desc">Top‑100 questions mapped into structural quadrants and arcs.</span></li>
-    <li><span class="tl-num">9</span><span class="tl-name">Universal Translator</span><span class="tl-desc">Resonance‑based translation across overlays and symbolic systems.</span></li>
-  </ul>
-
-  <!-- ══ LINEAGE → MODULES MAPPING ════════════════════════════════════ -->
-  <h2>Lineage → Modules Mapping</h2>
-  <table class="mapping-table">
-    <thead>
-      <tr>
-        <th>Lineage Element</th>
-        <th>Primary Modern Modules</th>
-        <th>Role in 2026 Canon</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="map-phase">Ph 0 — metaCo Proto‑Substrate</td>
-        <td class="map-module">Early attempt to unify context across silos</td>
-        <td class="map-role">Conceptual ancestor of substrate architecture</td>
-      </tr>
-      <tr>
-        <td class="map-phase">Ph 1 — Triadic Frameworks (TFT_3Pack)</td>
-        <td class="map-module">FFT, Coeus, Low Dimensional Structures</td>
-        <td class="map-role">Core triadic grammar and operator lattice</td>
-      </tr>
-      <tr>
-        <td class="map-phase">Ph 2 — Mythmatical Model</td>
-        <td class="map-module">AI Resonance Seed, Governance Substrate Model</td>
-        <td class="map-role">Early substrate → modern ontology + governance</td>
-      </tr>
-      <tr>
-        <td class="map-phase">Ph 3 — Nawderian Theorem</td>
-        <td class="map-module">FFT, AI Resonance Seed</td>
-        <td class="map-role">Dimensional reasoning + resonance‑time primitives</td>
-      </tr>
-      <tr>
-        <td class="map-phase">Ph 4 — Resonance Protocols</td>
-        <td class="map-module">Integrations, TFT Workflows</td>
-        <td class="map-role">Applied workflows, safety, and structural practice</td>
-      </tr>
-      <tr>
-        <td class="map-phase">Ph 5 — Manifests &amp; Atlases</td>
-        <td class="map-module">Collective Consciousness Atlas, Ideas/Questions modules</td>
-        <td class="map-role">Registries, question maps, and conceptual atlases</td>
-      </tr>
-      <tr>
-        <td class="map-phase">Ph 6 — Nullaium OS (NoS)</td>
-        <td class="map-module">Future runtime / tooling layer (planned)</td>
-        <td class="map-role">Operationalization of the triadic kernel</td>
-      </tr>
-      <tr>
-        <td class="map-phase">Ph 7 — Virtual Universe Remix</td>
-        <td class="map-module">Educational simulations, scenario modules</td>
-        <td class="map-role">World‑building and conceptual universe design</td>
-      </tr>
-      <tr>
-        <td class="map-phase">Ph 8 — Collective Consciousness Atlas</td>
-        <td class="map-module">Atlas module, Ideas, Inverted Economics</td>
-        <td class="map-role">Question mapping and regime‑aware analysis</td>
-      </tr>
-      <tr>
-        <td class="map-phase">Ph 9 — Universal Translator</td>
-        <td class="map-module">Integrations, Coeus, language/overlay tools</td>
-        <td class="map-role">Cross‑overlay resonance translation</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <!-- ══ 2026 CANON ALIGNMENT NOTES ═══════════════════════════════════ -->
-  <h2>🧭 2026 Canon Alignment Notes</h2>
-  <div class="canon-notes">
-    <p style="font-size:12px;color:#cbd5e1;margin:0 0 6px;">This refreshed lineage:</p>
-    <ul>
-      <li>Removes deprecated terminology while preserving historical accuracy</li>
-      <li>Adds Phase 0 (metaCo) as the canonical pre‑canon layer</li>
-      <li>Aligns all phase entries with the modern What / Why / Unlocked card format</li>
-      <li>Aligns with the modern module system and agentic schema (<code style="color:#0ff;font-size:11px">LINEAGE_module.json</code>)</li>
-      <li>Is safe for students and AIs — no raw deprecated emitter vocabulary exposed at the surface</li>
-      <li>Matches the metadata style used across the full ecosystem</li>
-      <li>Is consistent with the educational framing of TriadicFrameworks</li>
-      <li>Is now ready to serve as the <strong style="color:#0ff">canonical lineage document</strong> across all modules</li>
-    </ul>
-  </div>
-
-  <!-- ══ BADGE ROW ═════════════════════════════════════════════════════ -->
-  <div class="badge-row">
-    <span class="badge">🤖 <b>AI‑Ready</b> Module</span>
-    <span class="badge">📦 <b>Standalone</b></span>
-    <span class="badge">🔒 <b>Root‑Locked</b></span>
-    <span class="badge">📜 <b>Phases 0–9</b></span>
-    <span class="badge">🛡 <b>Defensive Publication</b></span>
-    <span class="badge">🧭 <b>2026‑Stable</b></span>
-    <span class="badge">TriadicFrameworks</span>
-  </div>
-
-  <!-- ══ SESSION CONTEXT BLOCK ═════════════════════════════════════════ -->
-  <lineage-context>
-    <session-block>
-      <b>Module</b>: Lineage &nbsp;·&nbsp;
-      <b>Version</b>: 2026‑stable &nbsp;·&nbsp;
-      <b>Phases</b>: 0–9 &nbsp;·&nbsp;
-      <b>Status</b>: active · root‑locked · canonical<br>
-      <b>Feeds into</b>: RTT, RTT/1, TFT, Schemas, Education, Framework Field Theory<br>
-      <b>Purpose</b>: Provide the structural genealogy of TriadicFrameworks —
-        origins of the resonance‑time substrate,
-        evolution of regimes &amp; paradox handling,
-        coherence rules, transitions from RTT → RTT/1,
-        emergence of TFT and the modern triadic substrate,
-        mapping historical artifacts to current modules.<br>
-      <b>AI instructions</b>: Standalone historical module.
-        Supply historical grounding for module queries.
-        Support lineage‑aware reasoning for AIs.
-        Anchor cross‑module propagation and invariants.<br>
-      <b>Source</b>: <code style="color:#0ff">docs/LINEAGE.md</code> &nbsp;·&nbsp;
-      <b>Schema</b>: <code style="color:#0ff">docs/LINEAGE_module.json</code> &nbsp;·&nbsp;
-      <b>Format</b>: HTML + Markdown repository · Zero duplication
-    </session-block>
-  </lineage-context>
-
-</div><!-- /.page -->
+  <!-- Footer label -->
+  <text x="600" y="650" text-anchor="middle"
+        fill="#9ca3af" font-family="system-ui, sans-serif"
+        font-size="12" letter-spacing="1">
+    LINEAGE · ORIGIN → EXPANSION → OPERATIONAL
+  </text>
+</svg>  
+  
 </body>
+
+<section data-session-context>
+  <context-block>
+    <context:module>Lineage</context:module>
+    <context:role>Historical substrate • Genealogy of the canon</context:role>
+
+    <context:canon-state>
+      <active>true</active>
+      <drift>minimal</drift>
+      <coherence>stable (triadic-structural grammar)</coherence>
+    </context:canon-state>
+
+    <context:placement>
+      <parent>Docs Root</parent>
+      <siblings>About, Principles, Awareness, Glossary, Security, Contributing, Sitemap</siblings>
+      <integration>Feeds structural history into RTT, RTT/1, TFT, Schemas, Education, and Framework Field Theory</integration>
+    </context:placement>
+
+    <context:purpose>
+      Provide the structural genealogy of TriadicFrameworks:
+      • origins of the resonance‑time substrate  
+      • evolution of regimes, paradox handling, and coherence rules  
+      • transitions from RTT → RTT/1  
+      • emergence of TFT and the modern triadic substrate  
+      • mapping historical artifacts to current modules  
+    </context:purpose>
+
+    <context:ai-surface>
+      <ai:parsable>true</ai:parsable>
+      <ai:entry>Standalone historical module</ai:entry>
+      <ai:usage>
+        • supply historical grounding for module queries  
+        • support lineage‑aware reasoning for AIs  
+        • anchor cross‑module propagation and invariants  
+      </ai:usage>
+    </context:ai-surface>
+
+    <context:identity>
+      <format>html + markdown</format>
+      <source-of-truth>repository</source-of-truth>
+      <notes>Zero duplication; HTML renders Markdown directly.</notes>
+    </context:identity>
+  </context-block>
+</section>
+ 
 </html>
