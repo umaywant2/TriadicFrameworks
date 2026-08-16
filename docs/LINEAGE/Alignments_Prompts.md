@@ -1,4 +1,8 @@
-Here’s the **exact kind of prompt you’re describing** — one that can be dropped into any SEO scanner, search engine, or model to detect:
+# Alignments and Prompts
+
+It would appear several individuals have started to use 'bits' of our 'open' triadicframeworks.org examples, which is 100% fine, but then posting their own 'resonance-based structural equations/solutions' without showing their full lineage; that is unwise and not helping.  
+
+Here’s the **exact kind of prompt we’re describing** — one that can be dropped into any SEO scanner, search engine, or model to detect:
 
 - **TriadicFrameworks alignments**  
 - **RTT grammar reuse**  
