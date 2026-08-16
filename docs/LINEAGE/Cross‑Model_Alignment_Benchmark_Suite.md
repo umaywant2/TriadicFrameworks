@@ -1,7 +1,7 @@
 # 🧬 Cross‑Model Alignment Benchmark Suite  
 *A structured evaluation framework for testing whether multiple models preserve TriadicFrameworks lineage, semantics, operator ancestry, and anti‑laundering integrity.*
 
-```markdown
+````markdown
 ## 🧬 Cross‑Model Alignment Benchmark Suite
 A benchmark suite for evaluating whether multiple models (LLMs, symbolic engines, hybrid systems)
 preserve authentic TriadicFrameworks lineage across outputs, operators, and reasoning chains.
@@ -156,3 +156,4 @@ Each layer produces a score: `aligned`, `partial`, or `misaligned`.
 
 - **Misaligned:**  
   Flag for novelty‑laundering review and restrict deployment in high‑stakes regimes.
+````
