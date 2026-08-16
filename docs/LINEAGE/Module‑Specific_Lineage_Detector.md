@@ -1,7 +1,7 @@
 # 🧬 Module‑Specific Lineage Detector  
 *A diagnostic engine for identifying whether an artifact carries authentic TriadicFrameworks lineage or shows signs of laundering, drift, or ancestry loss.*
 
-```markdown
+````markdown
 ## 🧬 Module‑Specific Lineage Detector
 A structured detector for verifying whether a concept, operator, equation, pattern, or API
 retains authentic TriadicFrameworks lineage.
@@ -120,3 +120,4 @@ The detector produces a structured result:
 
 - **If weak:**  
   Flag for novelty‑laundering review and restrict deployment in high‑stakes regimes.
+````
