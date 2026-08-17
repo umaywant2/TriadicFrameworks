@@ -92,6 +92,25 @@
     "examples": "d_Examples.md",
     "paper": "d_Paper.md",
     "source": "d_Source.md"
+  },
+
+  "ai": {
+    "module": "Drift_Taxonomy",
+    "version": "1.0.0",
+    "purpose": "AI-ready metadata for drift classification and operator correction.",
+    "navigation": "sitemap_main.xml",
+    "discussions": "https://github.com/umaywant2/TriadicFrameworks/discussions",
+    "contact": {
+      "x": "@TriadicFrameworks",
+      "youtube": "@TriadicFrameworks"
+    },
+    "license": "Open educational use permitted"
+  },
+
+  "citation": {
+    "author": "Nawder Loswin",
+    "publication_date": "2026",
+    "title": "Drift Taxonomy: Unified Regularization of Gravity Regime Drift",
+    "subject": "Gravity Analysis"
   }
 }
-
