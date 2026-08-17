@@ -1,0 +1,32 @@
+{
+  "validator": {
+    "required_fields": [
+      "module.name",
+      "module.category",
+      "module.summary",
+      "module.purpose",
+      "module.version",
+      "roles",
+      "analyzer_layer",
+      "files",
+      "ai",
+      "citation"
+    ],
+    "checks": {
+      "module.name": "must be non-empty string",
+      "module.category": "must match known TF categories",
+      "module.version": "must follow semantic versioning",
+      "roles.engine": "must exist",
+      "analyzer_layer.operator": "must list at least one operator",
+      "files.README": "must point to README.md",
+      "ai.module": "must match module.name",
+      "citation.author": "must be non-empty"
+    },
+    "coherence_rules": {
+      "operator_count": ">= 5",
+      "drift_count": ">= 5",
+      "file_map_complete": "all referenced files must exist",
+      "metadata_alignment": "ai.module == module.name"
+    }
+  }
+}
