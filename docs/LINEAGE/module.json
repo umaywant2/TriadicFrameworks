@@ -1,0 +1,136 @@
+{
+  "module": "LINEAGE",
+  "category": "structural-genealogy",
+  "summary": "Defines ancestry, inheritance, drift, laundering detection, and cross‑canon lineage for TriadicFrameworks.",
+  "version": "1.0.0",
+  "front_door": "README.md",
+
+  "files": [
+    {
+      "file": "README.md",
+      "role": "index",
+      "analyzer_layer": "index",
+      "purpose": "Module front door; defines scope, operators, and lineage analysis stack."
+    },
+    {
+      "file": "ABOUT.md",
+      "role": "profile",
+      "analyzer_layer": "regime",
+      "purpose": "Identity, purpose, audience, and structural position of the LINEAGE module."
+    },
+    {
+      "file": "overview.md",
+      "role": "overview",
+      "analyzer_layer": "dimensional",
+      "purpose": "Conceptual overview of lineage grammar, ancestry rules, and drift accounting."
+    },
+    {
+      "file": "Canonical_Legend.md",
+      "role": "reference",
+      "analyzer_layer": "legend",
+      "purpose": "Canonical symbols, tags, and notation for lineage and ancestry mapping."
+    },
+    {
+      "file": "cross_canon_lineage_matrix.md",
+      "role": "map",
+      "analyzer_layer": "matrix",
+      "purpose": "Cross‑canon ancestry mapping across RTT, GU, TF, and external frameworks."
+    },
+    {
+      "file": "Alignments_Prompts.md",
+      "role": "example",
+      "analyzer_layer": "operator",
+      "purpose": "Alignment prompts for evaluating model ancestry, drift, and laundering risk."
+    },
+    {
+      "file": "Alignments_Prompts_source.md",
+      "role": "example",
+      "analyzer_layer": "operator",
+      "purpose": "Source‑level alignment prompts used for deeper lineage evaluation."
+    },
+    {
+      "file": "Alignments_Prompts.json",
+      "role": "engine",
+      "analyzer_layer": "operator",
+      "purpose": "Machine‑readable alignment prompt definitions for automated lineage scans."
+    },
+    {
+      "file": "Integrity_Matrix.md",
+      "role": "diagnostic",
+      "analyzer_layer": "matrix",
+      "purpose": "Lineage‑integrity matrix for evaluating ancestry consistency and drift boundaries."
+    },
+    {
+      "file": "Novelty‑Laundering_Risk_Map.md",
+      "role": "diagnostic",
+      "analyzer_layer": "risk",
+      "purpose": "Risk map for detecting novelty‑laundering across modules and external models."
+    },
+    {
+      "file": "Module‑Specific_Lineage_Detector.md",
+      "role": "engine",
+      "analyzer_layer": "detector",
+      "purpose": "Module‑specific lineage detector for ancestry, drift, and laundering signatures."
+    },
+    {
+      "file": "Cross‑Model_Alignment_Benchmark_Suite.md",
+      "role": "example",
+      "analyzer_layer": "benchmark",
+      "purpose": "Benchmark suite for evaluating cross‑model alignment and ancestry coherence."
+    },
+    {
+      "file": "TriadicFrameworks_Defensive_Publication_Template.md",
+      "role": "template",
+      "analyzer_layer": "publication",
+      "purpose": "Defensive publication template for protecting lineage‑critical innovations."
+    },
+    {
+      "file": "Unified_Super‑Prompt.md",
+      "role": "engine",
+      "analyzer_layer": "operator",
+      "purpose": "Unified lineage super‑prompt integrating all operators and diagnostic layers."
+    },
+    {
+      "file": "What_Domain-Aligned_Triadic_Practitioners_Gain.md",
+      "role": "example",
+      "analyzer_layer": "practitioner",
+      "purpose": "Practitioner‑aligned explanation of lineage benefits and structural clarity."
+    },
+    {
+      "file": "Lineage_Scan_Schema.json",
+      "role": "engine",
+      "analyzer_layer": "schema",
+      "purpose": "JSON schema defining machine‑readable lineage scan structure."
+    },
+    {
+      "file": "index.md",
+      "role": "index",
+      "analyzer_layer": "index",
+      "purpose": "Markdown index for module navigation and GitHub browsing."
+    },
+    {
+      "file": "index.html",
+      "role": "index",
+      "analyzer_layer": "index",
+      "purpose": "HTML index for web‑rendered module navigation."
+    },
+    {
+      "file": "sitemap.md",
+      "role": "index",
+      "analyzer_layer": "sitemap",
+      "purpose": "Module‑level sitemap for internal navigation and AI discovery."
+    },
+    {
+      "file": "lineage_constellation.svg",
+      "role": "signature",
+      "analyzer_layer": "visual",
+      "purpose": "Constellation diagram showing lineage operators and ancestry flows."
+    }
+  ],
+
+  "governance": {
+    "upstream": ["CANON", "DRIFT", "COHERENCE"],
+    "downstream": ["FFT_ANALYZER", "RTT", "GU", "WIKIPEDIA_MODULE"],
+    "regime": "structural"
+  }
+}
