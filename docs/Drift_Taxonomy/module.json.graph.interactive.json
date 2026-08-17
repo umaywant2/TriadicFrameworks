@@ -1,0 +1,32 @@
+{
+  "nodes": [
+    { "id": "Core_Concepts", "label": "Core_Concepts", "group": "core" },
+    { "id": "Gravity_Foundations", "label": "Gravity_Foundations", "group": "gravity" },
+    { "id": "Drift_Taxonomy", "label": "Drift_Taxonomy", "group": "gravity" },
+    { "id": "FFF_Gravity", "label": "FFF_Gravity", "group": "gravity" },
+    { "id": "RTT_Operators", "label": "RTT_Operators", "group": "operators" },
+    { "id": "Operator_Families", "label": "Operator_Families", "group": "operators" },
+    { "id": "Module_Graph", "label": "Module_Graph", "group": "meta" },
+
+    { "id": "d_Capture", "label": "d_Capture.md", "group": "drift_taxonomy" },
+    { "id": "d_Classify", "label": "d_Classify.md", "group": "drift_taxonomy" },
+    { "id": "d_Operators", "label": "d_Operators.md", "group": "drift_taxonomy" },
+    { "id": "d_Examples", "label": "d_Examples.md", "group": "drift_taxonomy" },
+    { "id": "d_Paper", "label": "d_Paper.md", "group": "drift_taxonomy" }
+  ],
+  "edges": [
+    { "from": "Core_Concepts", "to": "Gravity_Foundations", "type": "conceptual" },
+    { "from": "Gravity_Foundations", "to": "Drift_Taxonomy", "type": "module" },
+    { "from": "Gravity_Foundations", "to": "FFF_Gravity", "type": "module" },
+
+    { "from": "RTT_Operators", "to": "Operator_Families", "type": "module" },
+
+    { "from": "Drift_Taxonomy", "to": "d_Capture", "type": "file" },
+    { "from": "Drift_Taxonomy", "to": "d_Classify", "type": "file" },
+    { "from": "Drift_Taxonomy", "to": "d_Operators", "type": "file" },
+    { "from": "Drift_Taxonomy", "to": "d_Examples", "type": "file" },
+    { "from": "Drift_Taxonomy", "to": "d_Paper", "type": "file" },
+
+    { "from": "Gravity_Foundations", "to": "Module_Graph", "type": "meta" }
+  ]
+}
