@@ -1,6 +1,10 @@
 <img width="1194" height="672" alt="LINEAGE_module" src="https://github.com/user-attachments/assets/7e7c677f-081b-44ea-9075-5a54bae953b6" />
 
-# 🧬 LINEAGE Module — README
+# 🧬 LINEAGE Module
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/LINEAGE/module.json) — Agentic module schema role assignments
+- [`Alignments_Prompts.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/LINEAGE/Alignments_Prompts.json) — Agentic module schema role assignments
+- [`Lineage_Scan_Schema.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/LINEAGE/Lineage_Scan_Schema.json) — Agentic module schema role assignments
 
 The **LINEAGE** module defines the structural genealogy of TriadicFrameworks concepts, operators,
 equations, regimes, and cross‑canon ancestry.  
