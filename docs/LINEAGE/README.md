@@ -1,4 +1,4 @@
-<img width="1194" height="672" alt="LINEAGE_module" src="https://github.com/user-attachments/assets/7e7c677f-081b-44ea-9075-5a54bae953b6" />
+<img width="1194" height="672" alt="LINEAGE_module_image" src="https://github.com/user-attachments/assets/b52a3a8e-03cc-464a-8a15-58cb58b65962" />
 
 # 🧬 LINEAGE Module
 
