@@ -1,0 +1,138 @@
+{
+  "tests": [
+    {
+      "name": "Valid Minimal Module",
+      "input": {
+        "module": {
+          "name": "Test_Module",
+          "category": "example",
+          "summary": "Minimal valid module.",
+          "purpose": "Testing the module schema.",
+          "version": "1.0.0"
+        },
+        "roles": {
+          "engine": "Core logic.",
+          "profile": "Conceptual structure.",
+          "signature": "Operator signature.",
+          "diagnostic": "Diagnostics.",
+          "map": "Mapping.",
+          "example": "Examples.",
+          "index": "README.md"
+        },
+        "analyzer_layer": {
+          "operator": ["op1"],
+          "dimensional": ["macro-scale"],
+          "regime": ["GR-macro"],
+          "drift": ["scale"],
+          "coherence": ["module-consistency"],
+          "cross-cutting": ["workflow"]
+        },
+        "files": {
+          "README": "README.md"
+        },
+        "ai": {
+          "module": "Test_Module",
+          "version": "1.0.0",
+          "purpose": "AI metadata."
+        },
+        "citation": {
+          "author": "Author Name",
+          "publication_date": "2026",
+          "title": "Test Module"
+        }
+      },
+      "expected": "PASS"
+    },
+
+    {
+      "name": "Missing Required Field",
+      "input": {
+        "module": {
+          "name": "Broken_Module",
+          "category": "example",
+          "summary": "Missing purpose.",
+          "version": "1.0.0"
+        }
+      },
+      "expected": "FAIL: module.purpose missing"
+    },
+
+    {
+      "name": "Invalid Version Format",
+      "input": {
+        "module": {
+          "name": "BadVersion",
+          "category": "example",
+          "summary": "Invalid version.",
+          "purpose": "Testing.",
+          "version": "1.0"
+        },
+        "roles": {
+          "engine": "x",
+          "profile": "x",
+          "signature": "x",
+          "diagnostic": "x",
+          "map": "x",
+          "example": "x",
+          "index": "README.md"
+        },
+        "analyzer_layer": {
+          "operator": ["op"]
+        },
+        "files": {
+          "README": "README.md"
+        },
+        "ai": {
+          "module": "BadVersion",
+          "version": "1.0",
+          "purpose": "x"
+        },
+        "citation": {
+          "author": "x",
+          "publication_date": "2026",
+          "title": "x"
+        }
+      },
+      "expected": "FAIL: module.version must follow semantic versioning"
+    },
+
+    {
+      "name": "AI Module Mismatch",
+      "input": {
+        "module": {
+          "name": "Mismatch",
+          "category": "example",
+          "summary": "AI mismatch.",
+          "purpose": "Testing.",
+          "version": "1.0.0"
+        },
+        "roles": {
+          "engine": "x",
+          "profile": "x",
+          "signature": "x",
+          "diagnostic": "x",
+          "map": "x",
+          "example": "x",
+          "index": "README.md"
+        },
+        "analyzer_layer": {
+          "operator": ["op"]
+        },
+        "files": {
+          "README": "README.md"
+        },
+        "ai": {
+          "module": "WrongName",
+          "version": "1.0.0",
+          "purpose": "x"
+        },
+        "citation": {
+          "author": "x",
+          "publication_date": "2026",
+          "title": "x"
+        }
+      },
+      "expected": "FAIL: ai.module must match module.name"
+    }
+  ]
+}
