@@ -1,0 +1,116 @@
++ {
++   "module": {
++     "name": "Drift_Taxonomy",
++     "category": "gravity-analysis",
++     "summary": "A universal taxonomy for identifying, classifying, and correcting regime drift in gravitational physics.",
++     "purpose": "Provide a structured system for capturing drift types, classifying literature, deriving minimal algebraic corrections, and assembling a unified meta-paper.",
++     "version": "1.0.0",
++     "keywords": [
++       "gravity",
++       "regime drift",
++       "operator corrections",
++       "taxonomy",
++       "classification",
++       "meta-analysis",
++       "scale-aware operators",
++       "substrate corrections"
++     ],
++     "audience": "Researchers, physicists, mathematicians, and contributors preparing the unified drift-correction paper."
++   },
++
++   "roles": {
++     "engine": "Defines the drift taxonomy and operator families used to regularize gravitational anomalies.",
++     "profile": "Describes drift types and their signatures across classical, quantum, and cosmological regimes.",
++     "signature": "Minimal algebraic operator corrections applicable across all drift categories.",
++     "diagnostic": "Classification templates for evaluating ~200 gravity papers.",
++     "map": "Representative examples demonstrating corrections on ten canonical works.",
++     "example": "Worked corrections applied to selected papers.",
++     "extension": "Future drift types or operator families may be added as the corpus expands.",
++     "index": "README.md provides the directory overview and workflow.",
++     "reference": "d_Source.md contains source lists and citation anchors.",
++     "template": "Classification and operator templates for contributors."
++   },
++
++   "analyzer_layer": {
++     "operator": [
++       "scale-aware operator",
++       "mixed-substrate operator",
++       "regime-conditioned operator",
++       "boundary-condition operator",
++       "analogy-free operator",
++       "domain-restricted operator",
++       "symmetry-conditioned operator",
++       "continuity-conditioned operator",
++       "coupled operator",
++       "entity-free operator"
++     ],
++     "dimensional": [
++       "macro-scale",
++       "micro-scale",
++       "hybrid-scale",
++       "cosmic-scale",
++       "extreme-curvature"
++     ],
++     "regime": [
++       "GR-macro",
++       "QM-micro",
++       "Hybrid-GR/QM",
++       "Cosmo-LCDM",
++       "BH-extreme",
++       "Alt-gravity"
++     ],
++     "drift": [
++       "scale",
++       "substrate",
++       "regime-imposition",
++       "interface",
++       "analogy",
++       "extension",
++       "symmetry",
++       "continuity",
++       "isolation",
++       "ontology"
++     ],
++     "coherence": [
++       "taxonomy consistency",
++       "operator alignment",
++       "example coverage",
++       "meta-paper integration"
++     ],
++     "cross-cutting": [
++       "classification workflow",
++       "operator application workflow",
++       "publication workflow"
++     ]
++   },
++
++   "files": {
++     "README": "README.md",
++     "capture": "d_Capture.md",
++     "classify": "d_Classify.md",
++     "operators": "d_Operators.md",
++     "examples": "d_Examples.md",
++     "paper": "d_Paper.md",
++     "source": "d_Source.md"
++   },
++
++   "ai": {
++     "module": "Drift_Taxonomy",
++     "version": "1.0.0",
++     "purpose": "AI-ready metadata for drift classification and operator correction.",
++     "navigation": "sitemap_main.xml",
++     "discussions": "https://github.com/umaywant2/TriadicFrameworks/discussions",
++     "contact": {
++       "x": "@TriadicFrameworks",
++       "youtube": "@TriadicFrameworks"
++     },
++     "license": "Open educational use permitted"
++   },
++
++   "citation": {
++     "author": "Nawder Loswin",
++     "publication_date": "2026",
++     "title": "Drift Taxonomy: Unified Regularization of Gravity Regime Drift",
++     "subject": "Gravity Analysis"
++   }
++ }
