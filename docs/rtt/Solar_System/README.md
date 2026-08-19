@@ -1,6 +1,9 @@
 <img width="1194" height="672" alt="RTT_Solar_System_module" src="https://github.com/user-attachments/assets/a74ab976-63ae-4eb3-bc98-ab02283572e7" />
 
 # **RTT SOLAR SYSTEM CANON**  
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Solar_System/module.json) — Agentic module schema role assignments
+
 *A substrate‑aware, triadic, resonance‑based reinterpretation of the Solar System*
 
 ---
