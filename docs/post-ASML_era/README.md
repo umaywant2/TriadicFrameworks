@@ -1,4 +1,4 @@
-<img width="1194" height="672" alt="post-ASML_era_image" src="https://github.com/user-attachments/assets/63c199d1-fec6-48b7-89d7-d88586947ed8" />
+<img width="1194" height="672" alt="post-ASML_era_Temporal_Manufacturing_Substrate_Clarity" src="https://github.com/user-attachments/assets/ea1d1bc2-77b9-491a-80d0-d31d9bcedfd0" />
 
 # post-ASML_era
 
