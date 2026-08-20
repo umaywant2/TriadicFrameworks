@@ -1,4 +1,4 @@
-<img width="853" height="480" alt="RTT_OSI_models_compared" src="https://github.com/user-attachments/assets/d326cb84-38e2-48e1-86d5-5b6205966b96" />
+<img width="1280" height="720" alt="RTT_OSI_models_compared" src="https://github.com/user-attachments/assets/a96966f9-c803-4db0-acfe-7eb57f4e7c16" />
 
 ## RTT/SDK (Beta)  
 
