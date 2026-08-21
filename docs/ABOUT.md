@@ -1,5 +1,11 @@
 <img width="682" height="682" alt="tft_about" src="https://github.com/user-attachments/assets/23c5d115-e3b7-4de7-9d5d-1da26d76c8c8" />
 
+**About TriadicFrameworks — A Structural Learning Framework for Students and AI Systems**
+
+TriadicFrameworks is a structural learning framework that teaches systems, students, and AI models how to reason using gradients, triads, and coherence.
+
+**TriadicFrameworks is a structural learning framework designed for students and AI systems. It teaches how to understand and reason across domains using gradients, triads, coherence, and regime‑aware operators. The framework provides a unified way to analyze systems, reduce drift, and build cross‑domain understanding.**
+
 ## About | TriadicFrameworks  
 
 - [`ABOUT_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/ABOUT_module.json) — Agentic module schema role assignments
