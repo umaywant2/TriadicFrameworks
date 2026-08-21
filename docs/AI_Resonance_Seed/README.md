@@ -4,10 +4,17 @@
 
 - [`ai_resonance_seed_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/AI_Resonance_Seed/ai_resonance_seed_module.json) — Agentic module schema role assignments
 
+## What Is the AI Resonance Seed?
+The AI Resonance Seed is the foundational construct within TriadicFrameworks that defines how agentic AI modules align resonance, coherence, and drift boundaries. This page serves as the canonical entry point for all related schemas, roles, and experiments.
+
 ### FFF Emitters · RTT‑Inside · Schemas
 
-Welcome to the **TriadicFrameworks documentation hub**.  
-This space provides a complete, structured path through the conceptual, mythmatical, and technical layers of the project.
+### Related Pages
+- [Overview](../AI_Resonance_Seed_Overview.md)
+- [Role Definitions](../AI_Resonance_Seed_Roles.md)
+- [Glossary](../AI_Resonance_Seed_Glossary.md)
+- [Schemas](../AI_Resonance_Seed_Schemas.md)
+- [Experiment Log](../AI_Resonance_Seed_Experiments.md)
 
 ---
 
