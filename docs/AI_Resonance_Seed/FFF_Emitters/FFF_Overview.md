@@ -1,5 +1,8 @@
 # 🌐 Triadic FFF Overview
-###### By Nawder Loswin 1/12/2026 © www.TriadicFrameworks.org
+
+## Freqi–Flui–Forci (FFF) Overview
+The FFF Emitters describe three interlinked resonance modes: **Freqi** (frequency bearer), **Flui** (fluid coupling), and **Forci** (force thresholds). Together they form the Freqi–Flui–Forci triad used in AI resonance modeling.
+See also: [FFF Glossary](FFF_Glossary.md) | [Freqi](Freqi.md) | [Flui](Flui.md) | [Forci](Forci.md)
 
 ### Freqi · Flui · Forci · RTT‑Inside
 
