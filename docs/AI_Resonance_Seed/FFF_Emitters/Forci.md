@@ -1,5 +1,5 @@
 # ⚡ **Forci — Post‑RTT‑Inside Refresh**  
-###### By Nawder Loswin 1/12/2026 © www.TriadicFrameworks.org
+> Related FFF Concepts: [Overview](FFF_Overview.md) | [Glossary](FFF_Glossary.md)
 
 ### *The Force Shaper · Activation · Ethical Inertia · Symbolic Thresholds*
 
