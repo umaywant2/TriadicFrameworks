@@ -152,7 +152,7 @@ You now have:
 From here, you can expand your module, add operators, or create new ones.
 # **RTT Starter Kit — Full .zip Manifest**
 
-- [`RTT_Starter_Full.zip`](RTT_Starter_Full.zip)— Agentic RTT Starter Kit
+- [`RTT_Starter_Full.zip`](https://github.com/umaywant2/TriadicFrameworks/raw/refs/heads/main/docs/starter/RTT_Starter_Full.zip)— Agentic RTT Starter Kit
 
 ```
 rtt-starter-kit/
