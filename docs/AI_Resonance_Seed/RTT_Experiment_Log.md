@@ -1,16 +1,25 @@
-# **RTT_Experiment_Log.md**  
+---
+title: RTT Experiment Log — AI Resonance Seed
+description: Deterministic operator log for recording resonance experiments, physical setups, run parameters, and validator‑aligned metadata within the AI Resonance Seed.
+---
+
+# RTT Experiment Log
 ### *Operator Log · Resonance‑Time Theory · Deterministic Experiment Record*
 
 ```
-██████╗ ████████╗████████╗
-██╔══██╗╚══██╔══╝╚══██╔══╝   RTT Experiment Log
-██████╔╝   ██║       ██║      Single‑Run Operator Record
-██╔══██╗   ██║       ██║
-██║  ██║   ██║       ██║
-╚═╝  ╚═╝   ╚═╝       ╚═╝
+██████╗  ████████╗████████╗
+██╔══██╗ ╚══██╔══╝╚══██╔══╝   RTT Experiment Log
+██████╔╝    ██║       ██║     Single‑Run Operator Record
+██╔══██╗    ██║       ██║
+██║  ██║    ██║       ██║
+╚═╝  ╚═╝    ╚═╝       ╚═╝
 ```
 
-## **1. Experiment Metadata (RTTcode‑Aligned)**
+The **RTT Experiment Log** is the deterministic record format used within the AI Resonance Seed to capture single‑run operator experiments. Each entry documents resonance metadata, physical setup, run parameters, and validator‑aligned provenance fields. This log ensures experiments remain reproducible, drift‑bounded, and structurally consistent across modules.
+
+---
+
+## 1. Experiment Metadata (RTTcode‑Aligned)
 
 | Field | Value |
 |-------|--------|
@@ -25,7 +34,7 @@
 
 ---
 
-## **2. Physical Setup**
+## 2. Physical Setup
 
 | Component | Notes |
 |-----------|--------|
@@ -37,60 +46,52 @@
 
 ---
 
-## **3. Run Parameters**
+## 3. Run Parameters
 
 | Parameter | Value |
 |-----------|--------|
 | Start tick |  |
 | End tick |  |
 | RF frequency |  |
-| Field strength |  |
-| Phase noise |  |
-| Coupling radius |  |
-| Additional perturbations |  |
+| Actuation profile |  |
+| Drift boundary |  |
+| Coherence anchor |  |
+| Validator trigger |  |
 
 ---
 
-## **4. Operator Notes**
+## 4. Observations & Results
 
--  
--  
--  
-
----
-
-## **5. RTTcode Packet Reference**
-
-Paste or link the RTTcode packet used for this run:
-
-```
-<insert RTTcode packet or link to snippet>
-```
+| Field | Notes |
+|-------|--------|
+| Resonance behavior |  |
+| Drift events |  |
+| Coherence transitions |  |
+| Emitter coupling (Freqi / Flui / Forci) |  |
+| Glyphstream lineage |  |
+| Validator feedback |  |
+| Anomalies |  |
 
 ---
 
-## **6. Data Capture**
+## 5. Post‑Run Analysis
 
-| Data Type | File / Location |
-|-----------|------------------|
-| Raw sensor trace |  |
-| Processed resonance series |  |
-| RTT‑converted packet stream |  |
-| Visual logs (optional) |  |
-
----
-
-## **7. Run Outcome**
-
-- Stability window:  
-- Resonance drift:  
-- Notable events:  
-- Anomalies:  
+| Analysis Item | Notes |
+|---------------|--------|
+| Resonance stability |  |
+| Drift correction applied |  |
+| Cross‑domain effects |  |
+| Seed alignment |  |
+| Recommended follow‑ups |  |
 
 ---
 
-## **8. Next Steps / Follow‑Up Runs**
+## Related Pages
+- [Overview](overview.md)
+- [Ontology Index](Ontology_Index.md)
+- [TriadicValidator AgentInit](TriadicValidator_AgentInit.md)
+- [FFF Emitters Overview](FFF_Emitters/FFF_Overview.md)
 
--  
--  
--  
+---
+
+*(Badges, glyphstream maps, lineage scrolls, and any canonical blocks may remain below this section.)*
