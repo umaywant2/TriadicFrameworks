@@ -1,1 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Module Orientation -->
+  <url>
+    <loc>/docs/AI_Resonance_Seed/README.md</loc>
+  </url>
+  <url>
+    <loc>/docs/AI_Resonance_Seed/primer.md</loc>
+  </url>
+  <url>
+    <loc>/docs/AI_Resonance_Seed/how_to_read.md</loc>
+  </url>
+
+  <!-- Substrate + Primitives -->
+  <url>
+    <loc>/docs/AI_Resonance_Seed/minimal_substrate.md</loc>
+  </url>
+  <url>
+    <loc>/docs/AI_Resonance_Seed/invariants.yaml</loc>
+  </url>
+  <url>
+    <loc>/docs/AI_Resonance_Seed/resonance_time_primitives.yaml</loc>
+  </url>
+
+  <!-- Schemas -->
+  <url>
+    <loc>/docs/AI_Resonance_Seed/schemas/</loc>
+  </url>
+
+  <!-- Emitters -->
+  <url>
+    <loc>/docs/AI_Resonance_Seed/emitters/</loc>
+  </url>
+
+  <!-- Validator -->
+  <url>
+    <loc>/docs/AI_Resonance_Seed/validator.md</loc>
+  </url>
+
+  <!-- Lineage -->
+  <url>
+    <loc>/docs/AI_Resonance_Seed/lineage.md</loc>
+  </url>
+
+  <!-- Dashboards -->
+  <url>
+    <loc>/docs/AI_Resonance_Seed/dashboards/</loc>
+  </url>
+
+  <!-- Migration -->
+  <url>
+    <loc>/docs/AI_Resonance_Seed/migration.md</loc>
+  </url>
+
+  <!-- Module Metadata -->
+  <url>
+    <loc>/docs/AI_Resonance_Seed/ai_resonance_seed_module.json</loc>
+  </url>
+  <url>
+    <loc>/docs/AI_Resonance_Seed/ai_resonance_seed_module.schema.json</loc>
+  </url>
+  <url>
+    <loc>/docs/AI_Resonance_Seed/ai_resonance_seed_module.graph.json</loc>
+  </url>
+
+</urlset>
 
