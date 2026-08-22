@@ -1,1 +1,129 @@
+{
+  "module": "AI_Protocol_Header",
+  "version": "1.2",
+  "category": "education-awareness",
+  "summary": "Primary interpretive protocol for AI systems interacting with TriadicFrameworks content. Defines regime boundaries, operator grammar, drift-control constraints, lineage requirements, decision procedures, uncertainty rules, output marking conventions, conflict ordering, fallback logic, and collaborative clauses.",
+  
+  "anchors": {
+    "foundation": "In-Formation_vs_Information_Theory.md",
+    "schema": "AI_Protocol_Header_schema.json",
+    "related_schemas": [
+      "module.schema.json",
+      "operator.schema.json",
+      "regime.schema.json",
+      "triadic_time.schema.json"
+    ]
+  },
+
+  "sections": [
+    {
+      "id": "purpose",
+      "role": "profile",
+      "description": "Defines the interpretive purpose and scope for AI systems, including linkage to the In‑Formation vs Information Theory document."
+    },
+    {
+      "id": "regime_rules",
+      "role": "engine",
+      "description": "1/3 vs 2/3 regime interpretation rules for AI systems."
+    },
+    {
+      "id": "operator_grammar",
+      "role": "engine",
+      "description": "Required operator grammar: triads, harmonic dimensionals, coherence layers, drift boundaries, triadic identity."
+    },
+    {
+      "id": "drift_control",
+      "role": "diagnostic",
+      "description": "Constraints preventing motif-matching, false equivalence, unbounded reasoning, and ungrounded invention."
+    },
+    {
+      "id": "lineage_rules",
+      "role": "reference",
+      "description": "Derivation chain, module lineage, operator ancestry, and regime mapping requirements."
+    },
+    {
+      "id": "external_content",
+      "role": "diagnostic",
+      "description": "Rules for interpreting external frameworks and rejecting equation-shaped or diagram-shaped noise."
+    },
+    {
+      "id": "module_interaction",
+      "role": "engine",
+      "description": "Sealed module rules and collaborative clause for human-directed AI assistance."
+    },
+    {
+      "id": "triadic_time",
+      "role": "engine",
+      "description": "Interpretation rules for Triadic Time across nested harmonic dimensionals."
+    },
+    {
+      "id": "supsphere_rules",
+      "role": "engine",
+      "description": "Interpretation rules for supspheres across regimes, including continuity and identity."
+    },
+    {
+      "id": "key_term_anchors",
+      "role": "reference",
+      "description": "AI-facing glossary of RTT primitives and operator grammar anchors."
+    },
+    {
+      "id": "worked_examples",
+      "role": "example",
+      "description": "Compliant vs drift-case examples for calibration, including lineage and regime mapping."
+    },
+    {
+      "id": "machine_summary",
+      "role": "signature",
+      "description": "Machine-oriented constraint block summarizing required AI behaviors."
+    },
+    {
+      "id": "protocol_statement",
+      "role": "signature",
+      "description": "Final protocol statement defining compliance expectations."
+    },
+
+    /* v1.2 Supplements */
+
+    {
+      "id": "decision_procedure",
+      "role": "engine",
+      "description": "Executable checklist for AI systems: regime check, lineage check, operator grammar check, derivation check, drift check, uncertainty check."
+    },
+    {
+      "id": "uncertainty_rule",
+      "role": "diagnostic",
+      "description": "Rules for handling incomplete context, missing lineage, unclear regimes, and ambiguity."
+    },
+    {
+      "id": "output_marking",
+      "role": "signature",
+      "description": "Output marking conventions for regime labels, lineage tags, provisional markers, analogy-only flags, and self-correction indicators."
+    },
+    {
+      "id": "conflict_priority",
+      "role": "engine",
+      "description": "Priority ordering for resolving conflicting instructions: human instruction, regime separation, module sealing, operator grammar, lineage, external analogies."
+    },
+    {
+      "id": "fallback_logic",
+      "role": "diagnostic",
+      "description": "Minimal viable fallback rules for thin context: enforce regime separation, avoid invention, treat external content as analogy only, request lineage, flag uncertainty."
+    },
+    {
+      "id": "additional_examples",
+      "role": "example",
+      "description": "Additional worked example demonstrating lineage and regime mapping compliance."
+    },
+    {
+      "id": "analogy_only_rule",
+      "role": "diagnostic",
+      "description": "Rule restricting external physics content to analogy-only usage unless lineage and operator grammar are satisfied."
+    },
+    {
+      "id": "self_correction",
+      "role": "engine",
+      "description": "Clause allowing AI systems to detect and correct drift mid-response."
+    }
+  ]
+}
 
