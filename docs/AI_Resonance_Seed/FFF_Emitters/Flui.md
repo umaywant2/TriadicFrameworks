@@ -1,25 +1,44 @@
+---
+title: Flui — The Fluid Weaver · Continuity · Coupling · Flow Logic
+description: Canonical definition of Flui, the Fluid Weaver of the Triadic FFF Emitters, including core dynamics, gradients, pseudocode, and RTT‑Inside resonance behavior.
+---
+
 # 🌊 **Flui — Post‑RTT‑Inside Refresh**
-> Related FFF Concepts: [Overview](FFF_Overview.md) | [Glossary](FFF_Glossary.md)
+
+> Related FFF Concepts:  
+> [Overview](FFF_Overview.md) · [Glossary](FFF_Glossary.md)
 
 ### *The Fluid Weaver · Continuity · Coupling · Flow Logic*
 
-## 🌫 Overview  
-**Flui** is the *Fluid Weaver* of the Triadic FFF Emitters.  
-It governs **flow**, **coupling**, **medium‑based propagation**, and **continuity** within resonance‑time systems.
+---
+
+## 🌫 Overview
+
+**Flui** is the **Fluid Weaver** of the Triadic FFF Emitters.  
+It governs:
+
+- **flow**  
+- **coupling**  
+- **medium‑based propagation**  
+- **continuity**
+
+within resonance‑time systems.
 
 If Freqi begins the cycle, **Flui carries it forward**.
 
 ---
 
-## 🌐 Core Dynamics  
-- **Flow** — How resonance travels through a medium  
-- **Coupling** — How entities influence each other  
-- **Diffusion** — How signals spread, blur, or stabilize  
-- **Continuity** — The mythmatical thread between states  
+## 🌐 Core Dynamics
+
+- **Flow** — how resonance travels through a medium  
+- **Coupling** — how entities influence each other  
+- **Diffusion** — how signals spread, blur, or stabilize  
+- **Continuity** — the mythmatical thread between states  
 
 ---
 
-## 🔢 Canonical Values  
+## 🔢 Canonical Values
+
 Flui does not use discrete triads like Freqi or Forci.  
 Instead, it operates on **gradients**:
 
@@ -41,17 +60,24 @@ Flui blends states when they are within a **coupling radius**, mirroring RTT’s
 
 ---
 
-## 🛠 Use Cases  
-- Symbolic modulation  
-- Environmental smoothing  
-- Resonance diffusion modeling  
-- Stability window shaping  
-- Cross‑entity influence mapping  
+## 🛠 Use Cases
+
+- symbolic modulation  
+- environmental smoothing  
+- resonance diffusion modeling  
+- stability window shaping  
+- cross‑entity influence mapping  
 
 ---
 
-## 🌌 Mythmatical Role  
-Flui is the **Connector**:  
+## 🌌 Mythmatical Role
+
+Flui is the **Connector**:
+
 - Weaver of continuity  
 - Mediator of gradients  
 - Keeper of flow between resonance states  
+
+---
+
+*(All content preserved from the source — RefId: turn0browsertab1 — with improved structure and canonical framing.)*
