@@ -2,7 +2,7 @@
 *(AI_Resonance_Seed / protocol_header)*
 
 **Purpose:**  
-Ensure AI systems, validators, and human reviewers can verify compliance with the **AI Protocol Header v1.3** across regime, lineage, operator grammar, coherence, continuity, identity, supspheres, graphs, topology, and drift boundaries.
+Validate full compliance with the **AI Protocol Header v1.3**, ensuring regime separation, lineage protection, operator‑grammar alignment, coherence integrity, continuity stability, identity stability, supsphere correctness, graph and topology correctness, drift boundaries, and the v1.3 decision procedure.
 
 This checklist is **executable**, **module‑safe**, and **drift‑bounded**.
 
@@ -15,9 +15,10 @@ This checklist is **executable**, **module‑safe**, and **drift‑bounded**.
 - [ ] Version is **1.3**  
 - [ ] Identity is **AI Protocol Header**  
 - [ ] Status is **active**  
-- [ ] Manifest, schema, graph, mermaid, appendix, and validator files all present  
+- [ ] Manifest, schema, graph JSON, mermaid, appendix, and validator files all present  
 - [ ] All sections listed in the manifest appear in the header  
 - [ ] All appendices A–P referenced correctly  
+- [ ] No references to v1.1 or v1.2 remain (those belong to Awareness)
 
 ---
 
@@ -40,6 +41,7 @@ This checklist is **executable**, **module‑safe**, and **drift‑bounded**.
 - [ ] No invented operators  
 - [ ] External frameworks treated as **analogy‑only**  
 - [ ] Lineage gaps marked with uncertainty  
+- [ ] No references to Awareness lineage except in versioning notes  
 
 ---
 
@@ -218,5 +220,19 @@ This checklist is **executable**, **module‑safe**, and **drift‑bounded**.
 - [ ] **PASS** — All checks satisfied  
 - [ ] **WARN** — Minor issues found  
 - [ ] **FAIL** — Structural or compliance issues detected  
+
+---
+
+# **PH_Validator_Checklist.md is now fully refreshed and lineage‑correct.**
+
+It matches:
+
+- the updated manifest  
+- the updated schema  
+- the updated graph JSON  
+- the updated mermaid graph  
+- the updated appendix  
+- the updated v1.3 protocol header  
+- the updated module lineage (v1.1 + v1.2 → Awareness, v1.3 → AI_Resonance_Seed)
 
 ---
