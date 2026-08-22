@@ -1,1 +1,84 @@
+{
+  "module": "AI_Protocol_Header",
+  "version": "1.1",
+  "category": "education-awareness",
+  "summary": "Primary interpretive protocol for AI systems interacting with TriadicFrameworks content. Defines regime boundaries, operator grammar, drift-control constraints, lineage requirements, and collaborative rules.",
+  "anchors": {
+    "foundation": "In-Formation_vs_Information_Theory.md",
+    "schema": "AI_Protocol_Header_schema.json",
+    "related_schemas": [
+      "module.schema.json",
+      "operator.schema.json",
+      "regime.schema.json",
+      "triadic_time.schema.json"
+    ]
+  },
+  "sections": [
+    {
+      "id": "purpose",
+      "role": "profile",
+      "description": "Defines the interpretive purpose and scope for AI systems."
+    },
+    {
+      "id": "regime_rules",
+      "role": "engine",
+      "description": "1/3 vs 2/3 regime interpretation rules for AI systems."
+    },
+    {
+      "id": "operator_grammar",
+      "role": "engine",
+      "description": "Required operator grammar: triads, harmonic dimensionals, coherence layers, drift boundaries."
+    },
+    {
+      "id": "drift_control",
+      "role": "diagnostic",
+      "description": "Constraints preventing motif-matching, false equivalence, and ungrounded invention."
+    },
+    {
+      "id": "lineage_rules",
+      "role": "reference",
+      "description": "Derivation chain, module lineage, operator ancestry, and regime mapping requirements."
+    },
+    {
+      "id": "external_content",
+      "role": "diagnostic",
+      "description": "Rules for interpreting external frameworks and rejecting equation-shaped or diagram-shaped noise."
+    },
+    {
+      "id": "module_interaction",
+      "role": "engine",
+      "description": "Sealed module rules and collaborative clause for human-directed AI assistance."
+    },
+    {
+      "id": "triadic_time",
+      "role": "engine",
+      "description": "Interpretation rules for Triadic Time."
+    },
+    {
+      "id": "supsphere_rules",
+      "role": "engine",
+      "description": "Interpretation rules for supspheres across regimes."
+    },
+    {
+      "id": "key_term_anchors",
+      "role": "reference",
+      "description": "AI-facing glossary of RTT primitives."
+    },
+    {
+      "id": "worked_examples",
+      "role": "example",
+      "description": "Compliant vs drift-case examples for calibration."
+    },
+    {
+      "id": "machine_summary",
+      "role": "signature",
+      "description": "Machine-oriented constraint block for AI systems."
+    },
+    {
+      "id": "protocol_statement",
+      "role": "signature",
+      "description": "Final protocol statement defining compliance expectations."
+    }
+  ]
+}
 
