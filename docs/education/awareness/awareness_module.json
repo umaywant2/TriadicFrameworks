@@ -1,62 +1,113 @@
 {
-  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
-
-  "module": {
-    "name": "RTT Awareness",
-    "path": "docs/education/awareness",
-    "canon_tag": "awareness",
-    "version": "1.0",
-    "layer": "Education Foundational Layer",
-    "status": "Active, Canonical",
-    "purpose": "Passive, non-enforcing conceptual layer introducing the triadic substrate, resonance, invariants, and shared vocabulary.",
-    "parent": "education-core",
-    "url": "https://www.triadicframeworks.org/education/awareness"
-  },
-
-  "session_context": {
-    "canon": "active (education-foundational)",
-    "modules_linked": [
-      "recognition → substrate vocabulary → resonance → invariants → lineage → conceptual orientation"
-    ],
-    "drift": "minimal (recognition-locked)",
-    "coherence": "stable (foundational grammar)",
-    "format": "html + markdown + conceptual text",
-    "front_door": "exists (Awareness root)",
-    "every_page": "observational + non-prescriptive + AI-parsable",
-    "audience": ["students", "general readers", "AI systems"]
-  },
-
-  "structural_grammar": {
-    "dimensional_envelope": "D0–D1",
-    "regime_envelope": "R0",
-    "coherence_envelope": "C0–C2",
-    "drift_sensitivity": "low",
-    "regime_sensitivity": "low"
-  },
-
-  "cross_module_propagation": {
-    "imports": [
-      "education-core",
-      "curriculum"
-    ],
-    "exports": [
-      "substrate vocabulary",
-      "recognition layer",
-      "conceptual orientation",
-      "lineage preservation"
-    ]
-  },
-
-  "submodules": [
-    { "name": "Minimal Structural Spec", "path": "Minimal_Structural_Spec.md" },
-    { "name": "Dimensional Science", "path": "dimensional_science.md" },
-    { "name": "Arrival Literacy", "path": "arrival_literacy.md" },
-    { "name": "Energy Regimes", "path": "Energy_Regimes_and_Speeds.md" },
-    { "name": "Naming Stack", "path": "The_RTT_Naming_Stack.md" }
-  ],
-
+  "module": "Awareness",
+  "version": "1.0",
+  "category": "education-awareness",
+  "summary": "RTT Awareness module: reframing physical, cognitive, and cultural assumptions using regime-aware structural reasoning.",
   "files": [
-    { "filename": "README.md", "path": "README.md", "purpose": "Awareness overview.", "role": "profile", "depends_on": [] },
-    { "filename": "index.html", "path": "index.html", "purpose": "Front door for Awareness.", "role": "index", "depends_on": [] }
+    {
+      "path": "README.md",
+      "role": "profile",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Ancient_Aliens_RTT‑Awareness.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "arrival_literacy.md",
+      "role": "profile",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Cross_Platform_Deployment.md",
+      "role": "extension",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "dimensional_science.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "Dimensional_Science_Lineage.svg",
+      "role": "map",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "Energy_Regimes_and_Speeds.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "Extension_Minimal_Architecture.md",
+      "role": "extension",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Inheritance_RTT_Awareness_as_CSS.md",
+      "role": "template",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "In‑Formation_vs_Information_Theory.md",
+      "role": "profile",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Light_Speed_After_Regime_Awareness.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "Minimal_Structural_Spec.md",
+      "role": "signature",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "State_Changes_Across_Matter_Life_and_Mind.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "The_Great_Pyramid.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "The_RTT_Naming_Stack.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "The_Standard_Models_Arithmetic_Error_In_RTT_Terms.md",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "Top_Theories_with_Regime_Awareness.md",
+      "role": "map",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Trip_Report_from_Earth.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "What_Happens_If.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "When_you_know_RTT_and_you_look_at_the_stars.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    }
   ]
 }
