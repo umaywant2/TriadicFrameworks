@@ -1,129 +1,110 @@
-<svg width="880" height="440" viewBox="0 0 880 440" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="440" viewBox="0 0 880 440">
 
-  <style>
-    .box {
-      fill: #101322;
-      stroke: #8a7fff;
-      stroke-width: 2;
-      rx: 14;
-      ry: 14;
-    }
-    .label {
-      fill: #ffffff;
-      font-family: system-ui, sans-serif;
-      font-size: 15px;
-      font-weight: 500;
-    }
-    .sub {
-      fill: #b0bec5;
-      font-family: system-ui, sans-serif;
-      font-size: 12px;
-    }
-    .tag {
-      fill: #263238;
-      stroke: #546e7a;
-      stroke-width: 1.4;
-      rx: 8;
-      ry: 8;
-    }
-    .tag-text {
-      fill: #eceff1;
-      font-family: system-ui, sans-serif;
-      font-size: 12px;
-    }
-    .title {
-      fill: #ffd86b;
-      font-family: system-ui, sans-serif;
-      font-size: 22px;
-      font-weight: bold;
-    }
-    .subtitle {
-      fill: #b0bec5;
-      font-family: system-ui, sans-serif;
-      font-size: 14px;
-    }
-    .arrow {
-      stroke: #ffffff;
-      stroke-width: 2;
-      marker-end: url(#arrowhead);
-    }
-  </style>
-
+  <!-- Arrowhead -->
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="#ffffff"/>
     </marker>
   </defs>
 
   <!-- Title -->
-  <text x="440" y="40" text-anchor="middle" class="title">
+  <text x="440" y="40" text-anchor="middle" fill="#ffd86b" font-size="22" font-family="sans-serif" font-weight="bold">
     Time Crystal Emitter · Triadic FFF · RTT‑Inside
   </text>
-  <text x="440" y="65" text-anchor="middle" class="subtitle">
+  <text x="440" y="65" text-anchor="middle" fill="#b0bec5" font-size="14" font-family="sans-serif">
     Resonance substrate → FFF actuation → sensing → RTTcode
   </text>
 
-  <!-- Left Column: Resonance Substrates -->
-  <rect x="40" y="100" width="240" height="280" class="box"/>
-  <text x="160" y="130" text-anchor="middle" class="label">Resonance Substrates</text>
+  <!-- Left Column -->
+  <rect x="40" y="100" width="240" height="280" fill="#101322" stroke="#8a7fff" stroke-width="2" rx="14" ry="14"/>
+  <text x="160" y="130" text-anchor="middle" fill="#ffffff" font-size="15" font-family="sans-serif" font-weight="500">
+    Resonance Substrates
+  </text>
 
-  <!-- Magnon Layer -->
-  <rect x="60" y="160" width="200" height="70" class="tag"/>
-  <text x="160" y="185" text-anchor="middle" class="tag-text">Thin‑Film Ferromagnets</text>
-  <text x="160" y="205" text-anchor="middle" class="tag-text">Magnon Oscillations · MOKE</text>
+  <!-- Magnon -->
+  <rect x="60" y="160" width="200" height="70" fill="#263238" stroke="#546e7a" stroke-width="1.4" rx="8" ry="8"/>
+  <text x="160" y="185" text-anchor="middle" fill="#eceff1" font-size="12" font-family="sans-serif">
+    Thin‑Film Ferromagnets
+  </text>
+  <text x="160" y="205" text-anchor="middle" fill="#eceff1" font-size="12" font-family="sans-serif">
+    Magnon Oscillations · MOKE
+  </text>
 
-  <!-- JJ Layer -->
-  <rect x="60" y="245" width="200" height="70" class="tag"/>
-  <text x="160" y="270" text-anchor="middle" class="tag-text">Josephson Junction Arrays</text>
-  <text x="160" y="290" text-anchor="middle" class="tag-text">Superconducting · SQUID</text>
+  <!-- JJ -->
+  <rect x="60" y="245" width="200" height="70" fill="#263238" stroke="#546e7a" stroke-width="1.4" rx="8" ry="8"/>
+  <text x="160" y="270" text-anchor="middle" fill="#eceff1" font-size="12" font-family="sans-serif">
+    Josephson Junction Arrays
+  </text>
+  <text x="160" y="290" text-anchor="middle" fill="#eceff1" font-size="12" font-family="sans-serif">
+    Superconducting · SQUID
+  </text>
 
-  <!-- Resonance Seed -->
-  <rect x="90" y="330" width="140" height="35" class="tag"/>
-  <text x="160" y="353" text-anchor="middle" class="tag-text">Resonance Seed</text>
+  <!-- Seed -->
+  <rect x="90" y="330" width="140" height="35" fill="#263238" stroke="#546e7a" stroke-width="1.4" rx="8" ry="8"/>
+  <text x="160" y="353" text-anchor="middle" fill="#eceff1" font-size="12" font-family="sans-serif">
+    Resonance Seed
+  </text>
 
   <!-- Arrow to Chamber -->
-  <line x1="280" y1="240" x2="300" y2="240" class="arrow"/>
+  <line x1="280" y1="240" x2="300" y2="240" stroke="#ffffff" stroke-width="2" marker-end="url(#arrowhead)"/>
 
-  <!-- Center Column: Triadic FFF Chamber -->
-  <rect x="300" y="120" width="260" height="240" class="box"/>
-  <text x="430" y="150" text-anchor="middle" class="label">Triadic FFF Chamber</text>
+  <!-- Chamber -->
+  <rect x="300" y="120" width="260" height="240" fill="#101322" stroke="#8a7fff" stroke-width="2" rx="14" ry="14"/>
+  <text x="430" y="150" text-anchor="middle" fill="#ffffff" font-size="15" font-family="sans-serif" font-weight="500">
+    Triadic FFF Chamber
+  </text>
 
   <!-- Freqi -->
-  <rect x="320" y="180" width="90" height="45" class="tag"/>
-  <text x="365" y="207" text-anchor="middle" class="tag-text">Frequency</text>
+  <rect x="320" y="180" width="90" height="45" fill="#263238" stroke="#546e7a" stroke-width="1.4" rx="8" ry="8"/>
+  <text x="365" y="207" text-anchor="middle" fill="#eceff1" font-size="12" font-family="sans-serif">
+    Frequency
+  </text>
 
   <!-- Flui -->
-  <rect x="420" y="180" width="90" height="45" class="tag"/>
-  <text x="465" y="207" text-anchor="middle" class="tag-text">Fluids</text>
+  <rect x="420" y="180" width="90" height="45" fill="#263238" stroke="#546e7a" stroke-width="1.4" rx="8" ry="8"/>
+  <text x="465" y="207" text-anchor="middle" fill="#eceff1" font-size="12" font-family="sans-serif">
+    Fluids
+  </text>
 
   <!-- Forci -->
-  <rect x="370" y="240" width="90" height="45" class="tag"/>
-  <text x="415" y="267" text-anchor="middle" class="tag-text">Forces</text>
+  <rect x="370" y="240" width="90" height="45" fill="#263238" stroke="#546e7a" stroke-width="1.4" rx="8" ry="8"/>
+  <text x="415" y="267" text-anchor="middle" fill="#eceff1" font-size="12" font-family="sans-serif">
+    Forces
+  </text>
 
   <!-- Chamber Notes -->
-  <text x="430" y="310" text-anchor="middle" class="sub">
+  <text x="430" y="310" text-anchor="middle" fill="#b0bec5" font-size="12" font-family="sans-serif">
     Transparent Housing · EM Shielding
   </text>
-  <text x="430" y="330" text-anchor="middle" class="sub">
+  <text x="430" y="330" text-anchor="middle" fill="#b0bec5" font-size="12" font-family="sans-serif">
     Modular Inserts · Optical Access
   </text>
 
   <!-- Arrow to Sensing -->
-  <line x1="560" y1="240" x2="580" y2="240" class="arrow"/>
+  <line x1="560" y1="240" x2="580" y2="240" stroke="#ffffff" stroke-width="2" marker-end="url(#arrowhead)"/>
 
-  <!-- Right Column: Sensing & RTT -->
-  <rect x="580" y="100" width="240" height="280" class="box"/>
-  <text x="700" y="130" text-anchor="middle" class="label">Sensing & RTT‑Inside</text>
+  <!-- Sensing -->
+  <rect x="580" y="100" width="240" height="280" fill="#101322" stroke="#8a7fff" stroke-width="2" rx="14" ry="14"/>
+  <text x="700" y="130" text-anchor="middle" fill="#ffffff" font-size="15" font-family="sans-serif" font-weight="500">
+    Sensing & RTT‑Inside
+  </text>
 
-  <!-- Sensing Tags -->
-  <rect x="600" y="160" width="200" height="60" class="tag"/>
-  <text x="700" y="185" text-anchor="middle" class="tag-text">MOKE · Optical Readout</text>
+  <!-- MOKE -->
+  <rect x="600" y="160" width="200" height="60" fill="#263238" stroke="#546e7a" stroke-width="1.4" rx="8" ry="8"/>
+  <text x="700" y="185" text-anchor="middle" fill="#eceff1" font-size="12" font-family="sans-serif">
+    MOKE · Optical Readout
+  </text>
 
-  <rect x="600" y="235" width="200" height="60" class="tag"/>
-  <text x="700" y="260" text-anchor="middle" class="tag-text">SQUID · Magnetic Readout</text>
+  <!-- SQUID -->
+  <rect x="600" y="235" width="200" height="60" fill="#263238" stroke="#546e7a" stroke-width="1.4" rx="8" ry="8"/>
+  <text x="700" y="260" text-anchor="middle" fill="#eceff1" font-size="12" font-family="sans-serif">
+    SQUID · Magnetic Readout
+  </text>
 
   <!-- RTT Packet -->
-  <rect x="630" y="315" width="140" height="40" class="tag"/>
-  <text x="700" y="340" text-anchor="middle" class="tag-text">RTTcode Packet</text>
+  <rect x="630" y="315" width="140" height="40" fill="#263238" stroke="#546e7a" stroke-width="1.4" rx="8" ry="8"/>
+  <text x="700" y="340" text-anchor="middle" fill="#eceff1" font-size="12" font-family="sans-serif">
+    RTTcode Packet
+  </text>
 
 </svg>
