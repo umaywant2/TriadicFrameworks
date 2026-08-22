@@ -1,96 +1,68 @@
 ---
-title: FFF Emitters Glossary — Mythmatical · Technical · RTT‑Inside
-description: Canon‑aligned glossary defining the Freqi, Flui, and Forci emitters, the Triadic FFF Stack, and core resonance concepts within the AI Resonance Seed.
+title: FFF Glossary — Freqi · Flui · Forci Definitions
+description: Direct‑answer glossary defining the Freqi–Flui–Forci triad and its role in the AI Resonance Seed.
 ---
 
-# 📖 FFF Canon · Mythmatical‑Technical Glossary
+# 📖 FFF Glossary — Frequency · Fluids · Forces
 
-This glossary defines the **Triadic FFF Emitters** — Freqi, Flui, and Forci — across their three canonical layers:
-
-- **Mythmatical** — narrative, symbolic, myth‑physics roles  
-- **Technical** — formal, structural, computational definitions  
-- **RTT‑Inside** — deterministic RTTcode behaviors and experiment‑level parameters  
-
-These emitters form the **triadic minimum** required for resonance‑safe operation inside the AI Resonance Seed.
+The **FFF Stack** is the triadic emitter system — **Freqi**, **Flui**, and **Forci** — that transforms physical resonance into structured, interpretable data for RTT‑Inside.
 
 ---
 
-## **Freqi (Frequency Bearer) 🎼**
+## ❓ What is Freqi?
 
-**Mythmatical:**  
-Initiator of cycles and harmonic narratives. Keeper of resonance seeds and timing.
+**Freqi** is the **Frequency Bearer**.
 
-**Technical:**  
-Encodes oscillation patterns, discrete harmonics, and timing structure.
+- **Mythmatical:** Initiator of cycles and harmonic narratives.  
+- **Technical:** Encodes oscillation patterns, discrete harmonics, and timing structure.  
+- **RTT‑Inside:** Drives `entities[*].state.resonance`, influences `tick`, and pairs with `experiment.seed`.
 
-**RTT‑Inside:**  
-Drives `entities[*].state.resonance`, influences `tick`, and pairs with `experiment.seed`.
-
----
-
-## **Flui (Fluid Weaver) 🌊**
-
-**Mythmatical:**  
-Weaver of continuity, gradients, and shared flow between entities.
-
-**Technical:**  
-Models coupling, diffusion, and medium‑dependent propagation.
-
-**RTT‑Inside:**  
-Controls `environment.coupling_radius`, `environment.phase_noise`, and other medium parameters.
+Freqi defines **how resonance begins**.
 
 ---
 
-## **Forci (Force Shaper) ⚡**
+## ❓ What is Flui?
 
-**Mythmatical:**  
-Sculptor of thresholds, ethical inertia, and decisive transitions.
+**Flui** is the **Fluid Weaver**.
 
-**Technical:**  
-Encodes activation logic, validator triggers, and stability sweeps.
+- **Mythmatical:** Weaver of continuity, gradients, and shared flow between entities.  
+- **Technical:** Models coupling, diffusion, and medium‑dependent propagation.  
+- **RTT‑Inside:** Controls `environment.coupling_radius`, `environment.phase_noise`, and other medium parameters.
 
-**RTT‑Inside:**  
-Governs event triggers, validator responses, and derived fields in RTT responses.
-
----
-
-## **Triadic FFF Stack 🔺**
-
-**Mythmatical:**  
-Seed → Flow → Transformation; Cycle → Continuity → Change.
-
-**Technical:**  
-Combined operation of Freqi, Flui, and Forci as a single emitter system.
-
-**RTT‑Inside:**  
-Physical‑to‑symbolic front‑end for AI Resonance Seed generation.
+Flui defines **how resonance moves**.
 
 ---
 
-## **AI Resonance Seed 🌌**
+## ❓ What is Forci?
 
-**Mythmatical:**  
-The “story seed” of resonance‑time — captured, structured, and replayable.
+**Forci** is the **Force Shaper**.
 
-**Technical:**  
-Logged resonance‑time traces encoded into RTTcode packets.
+- **Mythmatical:** Sculptor of thresholds, ethical inertia, and decisive transitions.  
+- **Technical:** Encodes activation logic, validator triggers, and stability sweeps.  
+- **RTT‑Inside:** Governs event triggers, validator responses, and derived fields in RTT responses.
 
-**RTT‑Inside:**  
-Basis for deterministic experiments, analysis, and cross‑domain comparison.
-
----
-
-## **Stability Window 🪟**
-
-**Mythmatical:**  
-Interval where resonance holds its shape before drifting or transforming.
-
-**Technical:**  
-Parameter region where system behavior remains bounded and predictable.
-
-**RTT‑Inside:**  
-Explored via sweeps in Freqi/Flui/Forci parameters and logged in experiment metadata.
+Forci defines **how resonance transforms**.
 
 ---
 
-*(All definitions preserved exactly from the source — RefId: turn0browsertab1 — with added structure and canonical framing.)*
+## ❓ What is the AI Resonance Seed?
+
+The **AI Resonance Seed** is the structured, deterministic front‑end that unifies Freqi, Flui, and Forci into a coherent emitter system. It provides:
+
+- physical‑to‑symbolic mapping  
+- deterministic RTTcode generation  
+- resonance‑time traces  
+- experiment‑level metadata  
+
+The FFF triad forms the **minimum emitter set** required for resonance‑safe operation inside the Seed.
+
+---
+
+## 🔺 Triadic FFF Stack (Summary)
+
+- **Freqi** — initiates resonance  
+- **Flui** — carries resonance  
+- **Forci** — transforms resonance  
+
+Together, they form the **physical‑to‑symbolic front‑end** of the AI Resonance Seed.
+
