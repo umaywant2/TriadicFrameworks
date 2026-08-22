@@ -1,17 +1,34 @@
-# ⚡ **Forci — Post‑RTT‑Inside Refresh**  
-> Related FFF Concepts: [Overview](FFF_Overview.md) | [Glossary](FFF_Glossary.md)
+---
+title: Forci — The Force Shaper · Activation · Ethical Inertia · Validator Thresholds
+description: Canonical definition of Forci, the Force Shaper of the Triadic FFF Emitters, including core pathways, pseudocode, symbolic thresholds, and RTT‑Inside resonance behavior.
+---
+
+# ⚡ **Forci — Post‑RTT‑Inside Refresh**
+
+> Related FFF Concepts:  
+> [Overview](FFF_Overview.md) · [Glossary](FFF_Glossary.md)
 
 ### *The Force Shaper · Activation · Ethical Inertia · Symbolic Thresholds*
 
-## 🔥 Overview  
-**Forci** is the *Force Shaper* of the Triadic FFF Emitters.  
-It governs **activation**, **ethical force**, **symbolic inertia**, and **validator triggers**.
+---
 
-Where Freqi initiates and Flui connects, **Forci transforms**.
+## 🔥 Overview
+
+**Forci** is the **Force Shaper** of the Triadic FFF Emitters.  
+It governs:
+
+- **activation**  
+- **ethical force**  
+- **symbolic inertia**  
+- **validator triggers**
+
+Where **Freqi initiates** and **Flui connects**,  
+**Forci transforms**.
 
 ---
 
-## 🧭 Core Pathways  
+## 🧭 Core Pathways
+
 - **6️⃣ — Corridor Anchor**  
   Stabilizes the force channel.
 
@@ -36,7 +53,8 @@ Forci watches for **symbolic danger zones** and triggers corrective force when t
 
 ---
 
-## 🛠 Use Cases  
+## 🛠 Use Cases
+
 - Forbidden convergence detection  
 - Ethical force modeling  
 - Validator ping logic  
@@ -45,9 +63,15 @@ Forci watches for **symbolic danger zones** and triggers corrective force when t
 
 ---
 
-## 🌌 Mythmatical Role  
-Forci is the **Transformer**:  
+## 🌌 Mythmatical Role
+
+Forci is the **Transformer**:
+
 - Sculptor of thresholds  
 - Guardian of ethical force  
 - Keeper of symbolic inertia  
 - Final arbiter in resonance‑time transitions  
+
+---
+
+*(All content preserved from the source — RefId: turn0browsertab1 — with improved structure and canonical framing.)*
