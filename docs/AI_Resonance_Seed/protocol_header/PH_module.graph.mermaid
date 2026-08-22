@@ -1,1 +1,66 @@
+flowchart TD
+
+    %% ============================
+    %%   AI Protocol Header v1.3
+    %% ============================
+
+    A[Overview]:::profile
+
+    %% Core Engine Nodes
+    RS[Regime Separation]:::engine
+    LP[Lineage Protection]:::engine
+    OG[Operator Grammar]:::engine
+    CL[Coherence Layers]:::engine
+    CI[Continuity & Identity]:::engine
+    SS[Supsphere Structures]:::engine
+
+    %% Diagnostics / Reference / Signature
+    DB[Drift Boundaries]:::diagnostic
+    AR[Analogy‑Only Rule]:::reference
+    OM[Output Marking]:::signature
+    CC[Collaborative Clause]:::profile
+    MS[Module Sealing]:::reference
+    SUM[Machine Summary]:::signature
+
+    %% v1.3 Supplements
+    DP[Decision Procedure]:::engine
+    UR[Uncertainty Rule]:::diagnostic
+    PO[Priority Ordering]:::engine
+    AI[Appendix Integration]:::reference
+    MI[Module Integration]:::profile
+    VER[Versioning]:::profile
+
+    %% ============================
+    %%   Graph Edges (Flow)
+    %% ============================
+
+    A --> RS
+    RS --> LP
+    LP --> OG
+    OG --> CL
+    CL --> CI
+    CI --> SS
+    SS --> DB
+    DB --> AR
+    AR --> OM
+    OM --> CC
+    CC --> MS
+
+    %% v1.3 supplement flow
+    MS --> DP
+    DP --> UR
+    UR --> PO
+    PO --> AI
+    AI --> MI
+    MI --> VER
+
+    %% ============================
+    %%   Styling
+    %% ============================
+
+    classDef profile fill:#dfe7fd,stroke:#4a63b4,stroke-width:1px,color:#000;
+    classDef engine fill:#e8f5e9,stroke:#2e7d32,stroke-width:1px,color:#000;
+    classDef diagnostic fill:#fff3e0,stroke:#ef6c00,stroke-width:1px,color:#000;
+    classDef reference fill:#f3e5f5,stroke:#6a1b9a,stroke-width:1px,color:#000;
+    classDef signature fill:#e0f7fa,stroke:#00838f,stroke-width:1px,color:#000;
 
