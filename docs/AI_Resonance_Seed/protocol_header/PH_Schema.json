@@ -1,1 +1,228 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Protocol Header v1.3 Schema",
+  "description": "Schema for validating the AI Protocol Header v1.3 files within the AI_Resonance_Seed module.",
+  "type": "object",
+
+  "properties": {
+    "module": {
+      "type": "string",
+      "const": "AI_Resonance_Seed",
+      "description": "Parent module for the protocol header."
+    },
+
+    "submodule": {
+      "type": "string",
+      "const": "protocol_header",
+      "description": "Submodule containing the protocol header files."
+    },
+
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+$",
+      "description": "Semantic version number for the protocol header."
+    },
+
+    "identity": {
+      "type": "string",
+      "description": "Human-readable identity of the protocol header."
+    },
+
+    "description": {
+      "type": "string",
+      "description": "Short description of the protocol header purpose."
+    },
+
+    "status": {
+      "type": "string",
+      "enum": ["active", "deprecated"],
+      "description": "Lifecycle status of the protocol header."
+    },
+
+    "files": {
+      "type": "object",
+      "properties": {
+        "header": { "type": "string" },
+        "appendix": { "type": "string" },
+        "schema": { "type": "string" },
+        "validator": { "type": "string" },
+        "graph_json": { "type": "string" },
+        "graph_mermaid": { "type": "string" }
+      },
+      "required": [
+        "header",
+        "appendix",
+        "schema",
+        "validator",
+        "graph_json",
+        "graph_mermaid"
+      ]
+    },
+
+    "ai": {
+      "type": "object",
+      "properties": {
+        "purpose": { "type": "string" },
+        "audience": { "type": "string" },
+        "keywords": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "versioning": {
+          "type": "object",
+          "properties": {
+            "previous": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "current": { "type": "string" },
+            "notes": { "type": "string" }
+          },
+          "required": ["current"]
+        }
+      },
+      "required": ["purpose", "audience", "keywords", "versioning"]
+    },
+
+    "operator_grammar": {
+      "type": "object",
+      "properties": {
+        "triads": { "type": "boolean" },
+        "harmonic_dimensionals": { "type": "boolean" },
+        "pure_impure_pairing": { "type": "boolean" },
+        "coherence_layers": { "type": "boolean" },
+        "continuity": { "type": "boolean" },
+        "identity": { "type": "boolean" },
+        "supspheres": { "type": "boolean" },
+        "graphs": { "type": "boolean" },
+        "topology": { "type": "boolean" },
+        "drift_detection": { "type": "boolean" }
+      },
+      "required": [
+        "triads",
+        "harmonic_dimensionals",
+        "pure_impure_pairing",
+        "coherence_layers",
+        "continuity",
+        "identity",
+        "supspheres",
+        "graphs",
+        "topology",
+        "drift_detection"
+      ]
+    },
+
+    "regime": {
+      "type": "object",
+      "properties": {
+        "supports": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "rules": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["supports", "rules"]
+    },
+
+    "lineage": {
+      "type": "object",
+      "properties": {
+        "protected": { "type": "boolean" },
+        "rules": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["protected", "rules"]
+    },
+
+    "coherence": {
+      "type": "object",
+      "properties": {
+        "triad_required": { "type": "boolean" },
+        "dimensional_required": { "type": "boolean" },
+        "drift_checks": { "type": "boolean" }
+      },
+      "required": [
+        "triad_required",
+        "dimensional_required",
+        "drift_checks"
+      ]
+    },
+
+    "continuity": {
+      "type": "object",
+      "properties": {
+        "propagation": { "type": "boolean" },
+        "diagnostics": { "type": "boolean" },
+        "stability": { "type": "boolean" }
+      },
+      "required": ["propagation", "diagnostics", "stability"]
+    },
+
+    "identity": {
+      "type": "object",
+      "properties": {
+        "stability": { "type": "boolean" },
+        "fragmentation_checks": { "type": "boolean" }
+      },
+      "required": ["stability", "fragmentation_checks"]
+    },
+
+    "supsphere": {
+      "type": "object",
+      "properties": {
+        "continuity": { "type": "boolean" },
+        "graph": { "type": "boolean" },
+        "topology": { "type": "boolean" }
+      },
+      "required": ["continuity", "graph", "topology"]
+    },
+
+    "decision_procedure": {
+      "type": "object",
+      "properties": {
+        "steps": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": ["steps"]
+    },
+
+    "integration": {
+      "type": "object",
+      "properties": {
+        "module_json": { "type": "string" },
+        "graph": { "type": "string" },
+        "schema": { "type": "string" },
+        "validator": { "type": "string" }
+      },
+      "required": ["module_json", "graph", "schema", "validator"]
+    }
+  },
+
+  "required": [
+    "module",
+    "submodule",
+    "version",
+    "identity",
+    "description",
+    "status",
+    "files",
+    "ai",
+    "operator_grammar",
+    "regime",
+    "lineage",
+    "coherence",
+    "continuity",
+    "identity",
+    "supsphere",
+    "decision_procedure",
+    "integration"
+  ]
+}
 
