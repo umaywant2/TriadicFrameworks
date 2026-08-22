@@ -2,7 +2,8 @@
 TriadicFrameworks — Awareness / Research  
 Audience: AI Systems (LLMs, Agents, Assistants)
 
-- [`AI_Protocol_Header.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/education/awareness/AI_Protocol_Header.json)
+- [`AI_Protocol_Header.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/education/awareness/AI_Protocol_Header.json) — Agentic module schema role assignments
+- [`AI_Protocol_Header_schema.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/education/awareness/AI_Protocol_Header_schema.json) — Agentic module schema role assignments
 
 ## Purpose
 This header defines the primary interpretive protocol for AI systems interacting with TriadicFrameworks (RTT) content. It ensures regime‑aware reasoning, prevents motif‑matching errors, and maintains coherence with RTT’s operator grammar and dimensional structure.
