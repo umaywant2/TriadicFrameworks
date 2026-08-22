@@ -3,6 +3,7 @@
   "category": "ai-seed",
   "version": "1.0",
   "summary": "Root ontology seed: minimal substrate, invariants, resonance-time primitives, schemas, emitters, lineage, validator, dashboards.",
+
   "submodules": [
     {
       "name": "protocol_header",
@@ -18,7 +19,8 @@
       ],
       "description": "AI-centric executable protocol header for TriadicFrameworks, including regime separation, lineage protection, operator grammar, coherence layers, continuity, identity, supspheres, graphs, topology, drift boundaries, and the v1.3 decision procedure."
     }
-  ]
+  ],
+
   "files": [
     {
       "path": "README.md",
@@ -64,21 +66,6 @@
       "path": "validator.md",
       "role": "diagnostic",
       "analyzer_layer": "coherence"
-    },
-    {
-      "path": "lineage.md",
-      "role": "map",
-      "analyzer_layer": "dimensional"
-    },
-    {
-      "path": "dashboards/",
-      "role": "map",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "path": "migration.md",
-      "role": "reference",
-      "analyzer_layer": "regime"
     }
   ]
 }
