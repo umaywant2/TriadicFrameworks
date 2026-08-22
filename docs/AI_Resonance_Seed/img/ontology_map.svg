@@ -1,72 +1,97 @@
-<svg width="920" height="420" viewBox="0 0 920 420" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    .box { fill:#101322; stroke:#8a7fff; stroke-width:2; rx:14; ry:14; }
-    .label { fill:#ffffff; font-family:system-ui, sans-serif; font-size:14px; }
-    .sub { fill:#b0bec5; font-family:system-ui, sans-serif; font-size:12px; }
-    .title { fill:#ffd86b; font-family:system-ui, sans-serif; font-size:20px; font-weight:bold; }
-    .arrow { stroke:#ffffff; stroke-width:2; marker-end:url(#arrowhead); }
-  </style>
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="420" viewBox="0 0 920 420">
 
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#ffffff" />
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ffffff"/>
     </marker>
   </defs>
 
   <!-- Title -->
-  <text x="460" y="40" text-anchor="middle" class="title">
-    TriadicFrameworks Ontology Map · AI Resonance Seed
+  <text x="460" y="40" text-anchor="middle" fill="#ffd86b" font-size="20" font-family="sans-serif" font-weight="bold">
+    TriadicFrameworks Ontology Map - AI Resonance Seed
   </text>
-  <text x="460" y="62" text-anchor="middle" class="sub">
-    Mythmatical → Technical → Operational → Schema → Experiment → Resonance Seed
+  <text x="460" y="62" text-anchor="middle" fill="#b0bec5" font-size="12" font-family="sans-serif">
+    Mythmatical -> Technical -> Operational -> Schema -> Experiment -> Resonance Seed
   </text>
 
   <!-- Mythmatical -->
-  <rect x="40" y="120" width="200" height="110" class="box" />
-  <text x="140" y="150" text-anchor="middle" class="label">Mythmatical Layer</text>
-  <text x="140" y="172" text-anchor="middle" class="sub">Freqi · Flui · Forci</text>
-  <text x="140" y="192" text-anchor="middle" class="sub">Roles · Archetypes</text>
+  <rect x="40" y="120" width="200" height="110" fill="#101322" stroke="#8a7fff" stroke-width="2"/>
+  <text x="140" y="150" text-anchor="middle" fill="#ffffff" font-size="14" font-family="sans-serif">
+    Mythmatical Layer
+  </text>
+  <text x="140" y="172" text-anchor="middle" fill="#b0bec5" font-size="12" font-family="sans-serif">
+    Freqi - Flui - Forci
+  </text>
+  <text x="140" y="192" text-anchor="middle" fill="#b0bec5" font-size="12" font-family="sans-serif">
+    Roles - Archetypes
+  </text>
 
   <!-- Technical -->
-  <rect x="250" y="120" width="200" height="110" class="box" />
-  <text x="350" y="150" text-anchor="middle" class="label">Technical Layer</text>
-  <text x="350" y="172" text-anchor="middle" class="sub">RTT Fields</text>
-  <text x="350" y="192" text-anchor="middle" class="sub">entities · environment · experiment</text>
+  <rect x="250" y="120" width="200" height="110" fill="#101322" stroke="#8a7fff" stroke-width="2"/>
+  <text x="350" y="150" text-anchor="middle" fill="#ffffff" font-size="14" font-family="sans-serif">
+    Technical Layer
+  </text>
+  <text x="350" y="172" text-anchor="middle" fill="#b0bec5" font-size="12" font-family="sans-serif">
+    RTT Fields
+  </text>
+  <text x="350" y="192" text-anchor="middle" fill="#b0bec5" font-size="12" font-family="sans-serif">
+    entities - environment - experiment
+  </text>
 
   <!-- Operational -->
-  <rect x="460" y="120" width="200" height="110" class="box" />
-  <text x="560" y="150" text-anchor="middle" class="label">Operational Layer</text>
-  <text x="560" y="172" text-anchor="middle" class="sub">Emitters · Chambers</text>
-  <text x="560" y="192" text-anchor="middle" class="sub">Build Notes · Procedures</text>
+  <rect x="460" y="120" width="200" height="110" fill="#101322" stroke="#8a7fff" stroke-width="2"/>
+  <text x="560" y="150" text-anchor="middle" fill="#ffffff" font-size="14" font-family="sans-serif">
+    Operational Layer
+  </text>
+  <text x="560" y="172" text-anchor="middle" fill="#b0bec5" font-size="12" font-family="sans-serif">
+    Emitters - Chambers
+  </text>
+  <text x="560" y="192" text-anchor="middle" fill="#b0bec5" font-size="12" font-family="sans-serif">
+    Build Notes - Procedures
+  </text>
 
   <!-- Schema -->
-  <rect x="670" y="120" width="200" height="110" class="box" />
-  <text x="770" y="150" text-anchor="middle" class="label">Schema Layer</text>
-  <text x="770" y="172" text-anchor="middle" class="sub">JSON Schemas</text>
-  <text x="770" y="192" text-anchor="middle" class="sub">rttcode · environment · entity · universe</text>
+  <rect x="670" y="120" width="200" height="110" fill="#101322" stroke="#8a7fff" stroke-width="2"/>
+  <text x="770" y="150" text-anchor="middle" fill="#ffffff" font-size="14" font-family="sans-serif">
+    Schema Layer
+  </text>
+  <text x="770" y="172" text-anchor="middle" fill="#b0bec5" font-size="12" font-family="sans-serif">
+    JSON Schemas
+  </text>
+  <text x="770" y="192" text-anchor="middle" fill="#b0bec5" font-size="12" font-family="sans-serif">
+    rttcode - environment - entity - universe
+  </text>
 
   <!-- Experiment -->
-  <rect x="180" y="260" width="240" height="110" class="box" />
-  <text x="300" y="290" text-anchor="middle" class="label">Experiment Layer</text>
-  <text x="300" y="312" text-anchor="middle" class="sub">RTT Experiment Log</text>
-  <text x="300" y="332" text-anchor="middle" class="sub">GitHub Issue Template</text>
+  <rect x="180" y="260" width="240" height="110" fill="#101322" stroke="#8a7fff" stroke-width="2"/>
+  <text x="300" y="290" text-anchor="middle" fill="#ffffff" font-size="14" font-family="sans-serif">
+    Experiment Layer
+  </text>
+  <text x="300" y="312" text-anchor="middle" fill="#b0bec5" font-size="12" font-family="sans-serif">
+    RTT Experiment Log
+  </text>
+  <text x="300" y="332" text-anchor="middle" fill="#b0bec5" font-size="12" font-family="sans-serif">
+    GitHub Issue Template
+  </text>
 
   <!-- Resonance Seed -->
-  <rect x="500" y="260" width="240" height="110" class="box" />
-  <text x="620" y="290" text-anchor="middle" class="label">AI Resonance Seed</text>
-  <text x="620" y="312" text-anchor="middle" class="sub">RTTcode Packets</text>
-  <text x="620" y="332" text-anchor="middle" class="sub">Deterministic Replay · Analysis</text>
+  <rect x="500" y="260" width="240" height="110" fill="#101322" stroke="#8a7fff" stroke-width="2"/>
+  <text x="620" y="290" text-anchor="middle" fill="#ffffff" font-size="14" font-family="sans-serif">
+    AI Resonance Seed
+  </text>
+  <text x="620" y="312" text-anchor="middle" fill="#b0bec5" font-size="12" font-family="sans-serif">
+    RTTcode Packets
+  </text>
+  <text x="620" y="332" text-anchor="middle" fill="#b0bec5" font-size="12" font-family="sans-serif">
+    Deterministic Replay - Analysis
+  </text>
 
   <!-- Top row arrows -->
-  <line x1="240" y1="175" x2="250" y2="175" class="arrow" />
-  <line x1="450" y1="175" x2="460" y2="175" class="arrow" />
-  <line x1="660" y1="175" x2="670" y2="175" class="arrow" />
+  <line x1="240" y1="175" x2="250" y2="175" stroke="#ffffff" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="450" y1="175" x2="460" y2="175" stroke="#ffffff" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="660" y1="175" x2="670" y2="175" stroke="#ffffff" stroke-width="2" marker-end="url(#arrowhead)"/>
 
-  <!-- Down arrows to Experiment/Seed -->
-  <line x1="350" y1="230" x2="300" y2="260" class="arrow" />
-  <line x1="560" y1="230" x2="620" y2="260" class="arrow" />
-  <line x1="770" y1="230" x2="620" y2="260" class="arrow" />
+  <!-- Down arrow -->
+  <line x1="350" y1="230" x2="300" y2="260" stroke="#ffffff" stroke-width="2" marker-end="url(#arrowhead)"/>
 
-  <!-- Bottom arrow Experiment → Seed -->
-  <line x1="420" y1="315" x2="500" y2="315" class="arrow" />
 </svg>
