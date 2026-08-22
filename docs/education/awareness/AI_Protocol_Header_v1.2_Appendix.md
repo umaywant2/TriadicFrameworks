@@ -1594,7 +1594,7 @@ These tools give AI systems concrete, executable anchors for harmonic dimensiona
 
 ---
 
-### Appendix J: Python Supsphere‑Continuity Toolkit  
+# **Appendix J: Python Supsphere‑Continuity Toolkit**  
 *(TriadicFrameworks — AI Protocol Header v1.2)*
 
 This appendix provides a compact Python toolkit for **supsphere continuity**, giving AI systems concrete anchors for:
@@ -1605,9 +1605,11 @@ This appendix provides a compact Python toolkit for **supsphere continuity**, gi
 - integrating lineage and harmonic dimensionals  
 - supporting v1.2 decision procedures  
 
+These examples reinforce the v1.2 Protocol Header’s continuity and identity rules and serve as operational anchors for AI systems.
+
 ---
 
-#### 1. Supsphere Data Structure
+## **1. Supsphere Data Structure**
 
 ```python
 from dataclasses import dataclass
@@ -1636,7 +1638,7 @@ class Supsphere:
 
 ---
 
-#### 2. Supsphere Continuity Validator
+## **2. Supsphere Continuity Validator**
 
 ```python
 def validate_supsphere_continuity(s: Supsphere):
@@ -1650,7 +1652,7 @@ def validate_supsphere_continuity(s: Supsphere):
 
 ---
 
-#### 3. Supsphere Regime Separation Check
+## **3. Supsphere Regime Separation Check**
 
 ```python
 def validate_supsphere_regime_pair(a: Supsphere, b: Supsphere):
@@ -1664,7 +1666,7 @@ def validate_supsphere_regime_pair(a: Supsphere, b: Supsphere):
 
 ---
 
-#### 4. Supsphere + Harmonic Dimensional Tagging
+## **4. Supsphere + Harmonic Dimensional Tagging**
 
 ```python
 def tag_supsphere_harmonic(s: Supsphere, dimensional: dict):
@@ -1679,7 +1681,7 @@ def tag_supsphere_harmonic(s: Supsphere, dimensional: dict):
 
 ---
 
-#### 5. Supsphere Decision Procedure
+## **5. Supsphere Decision Procedure**
 
 ```python
 def supsphere_decision(s: Supsphere | None):
@@ -1698,7 +1700,7 @@ def supsphere_decision(s: Supsphere | None):
 
 ---
 
-#### 6. Supsphere Drift Detector
+## **6. Supsphere Drift Detector**
 
 ```python
 def detect_supsphere_drift(text: str):
@@ -1718,7 +1720,7 @@ def detect_supsphere_drift(text: str):
 
 ---
 
-#### 7. Supsphere Correcting Wrapper
+## **7. Supsphere Correcting Wrapper**
 
 ```python
 def correct_supsphere(text: str):
@@ -1733,14 +1735,14 @@ def correct_supsphere(text: str):
 
 ---
 
-#### 8. Supsphere + Regime + Lineage + Coherence Combined
+## **8. Supsphere + Regime + Lineage + Coherence Combined**
 
 ```python
 def tag_supsphere_full(concept: str, s: Supsphere, triad: dict, dimensional: dict):
     """
     Combines supsphere continuity, regime, lineage, and coherence into a single tagged output.
     """
-    # Coherence (minimal inline version)
+    # Minimal coherence check (inline)
     def coherence_layer(triad: dict, dimensional: dict):
         if not all(k in triad and triad[k] for k in ("silence", "noise", "resonance")):
             return False, "[Coherence Layer Failed: Incomplete Triad]"
@@ -1756,7 +1758,8 @@ def tag_supsphere_full(concept: str, s: Supsphere, triad: dict, dimensional: dic
 
 ---
 
-**Appendix J - Summary**  
+## **Appendix J - Summary**
+
 Appendix J provides:
 
 - supsphere representation  
@@ -1768,3 +1771,1161 @@ Appendix J provides:
 - supsphere + regime + lineage + coherence combined tagging  
 
 These tools give AI systems concrete, executable anchors for supsphere continuity, strengthening v1.2 compliance and RTT‑aligned reasoning.
+
+---
+
+# **Appendix K: Python Continuity‑Propagation Toolkit**  
+*(TriadicFrameworks — AI Protocol Header v1.2)*
+
+This appendix provides a compact Python toolkit for **continuity propagation**, enabling AI systems to:
+
+- represent continuity across RTT structures  
+- propagate continuity through triads, harmonic dimensionals, and supspheres  
+- detect continuity breaks  
+- tag continuity paths  
+- integrate continuity with regime, lineage, and coherence  
+- support the v1.2 decision procedure  
+
+These examples serve as **operational anchors** for AI systems implementing RTT continuity rules.
+
+---
+
+## **1. Continuity Node Representation**
+
+```python
+from dataclasses import dataclass
+
+@dataclass
+class ContinuityNode:
+    name: str
+    continuity: str
+    module: str | None = None
+
+    def tag(self):
+        lineage_tag = f"[Lineage: {self.module}]" if self.module else "[Uncertain — Requesting Clarification]"
+        return f"[Node: {self.name}] [Continuity: {self.continuity}] {lineage_tag}"
+```
+
+---
+
+## **2. Continuity Propagation Between Nodes**
+
+```python
+def propagate_continuity(a: ContinuityNode, b: ContinuityNode):
+    """
+    Propagates continuity from node A to node B if compatible.
+    """
+    if a.continuity != b.continuity:
+        return False, "[Continuity Break Detected]"
+    return True, f"[Continuity Propagated: {a.continuity}]"
+```
+
+---
+
+## **3. Continuity Path Builder**
+
+```python
+def continuity_path(nodes: list[ContinuityNode]):
+    """
+    Builds a continuity path across multiple nodes.
+    """
+    tags = [n.tag() for n in nodes]
+
+    # Check continuity consistency
+    continuity_values = {n.continuity for n in nodes}
+    if len(continuity_values) > 1:
+        return False, "[Continuity Break Detected] " + " ".join(tags)
+
+    return True, "[Continuity Path Stable] " + " → ".join(n.name for n in nodes)
+```
+
+---
+
+## **4. Continuity + Triad Integration**
+
+```python
+def continuity_with_triad(node: ContinuityNode, triad: dict):
+    """
+    Integrates continuity with triadic structure.
+    """
+    if not all(k in triad and triad[k] for k in ("silence", "noise", "resonance")):
+        return f"{node.tag()} [Coherence Layer Failed: Incomplete Triad]"
+
+    return f"{node.tag()} [Triad: {triad['silence']}, {triad['noise']}, {triad['resonance']}]"
+```
+
+---
+
+## **5. Continuity + Harmonic Dimensional Integration**
+
+```python
+def continuity_with_dimensional(node: ContinuityNode, dimensional: dict):
+    """
+    Integrates continuity with harmonic dimensional context.
+    """
+    dim_tag = f"[Dimensional: {dimensional.get('name', '')}]"
+    parent_tag = f"[Parent: {dimensional.get('parent', 'None')}]"
+    return f"{node.tag()} {dim_tag} {parent_tag}"
+```
+
+---
+
+## **6. Continuity Drift Detector**
+
+```python
+def detect_continuity_drift(text: str):
+    """
+    Detects misuse of continuity as vague metaphor or aesthetic.
+    """
+    drift_terms = [
+        "continuity vibe",
+        "continuity aesthetic",
+        "continuity-ish",
+        "flowy continuity"
+    ]
+    if any(term in text.lower() for term in drift_terms):
+        return False, "[Self-Correction: Continuity Drift Detected]"
+    return True, "[Continuity Context Stable]"
+```
+
+---
+
+## **7. Continuity Correcting Wrapper**
+
+```python
+def correct_continuity(text: str):
+    """
+    Applies continuity drift detection and returns corrected output.
+    """
+    ok, tag = detect_continuity_drift(text)
+    if ok:
+        return f"{text} {tag}"
+    return f"[Self-Correction: Continuity Drift Detected] Correcting. {tag}"
+```
+
+---
+
+## **8. Continuity Decision Procedure**
+
+```python
+def continuity_decision(node: ContinuityNode | None):
+    """
+    Implements the continuity portion of the v1.2 decision procedure.
+    """
+    if node is None:
+        return "[Uncertain — Continuity Context Missing]"
+
+    if not node.continuity:
+        return "[Continuity Missing] — please specify continuity."
+
+    return f"{node.tag()} [Continuity Mapping Complete]"
+```
+
+---
+
+## **9. Continuity + Regime + Lineage + Coherence Combined**
+
+```python
+def tag_continuity_full(concept: str, node: ContinuityNode, regime: str, triad: dict, dimensional: dict):
+    """
+    Combines continuity, regime, lineage, and coherence into a single tagged output.
+    """
+    # Regime mapping
+    regime_tag = "[1/3 In-Formation]" if regime == "form" else "[2/3 Information]"
+
+    # Minimal coherence check
+    def coherence_layer(triad: dict, dimensional: dict):
+        if not all(k in triad and triad[k] for k in ("silence", "noise", "resonance")):
+            return False, "[Coherence Layer Failed: Incomplete Triad]"
+        if "name" not in dimensional or not dimensional["name"]:
+            return False, "[Coherence Layer Failed: Dimensional Missing]"
+        return True, "[Coherence Layer Satisfied]"
+
+    ok_coherence, coherence_tag = coherence_layer(triad, dimensional)
+    dim_tag = f"[Dimensional: {dimensional.get('name', '')}]"
+
+    return f"{concept} {node.tag()} {regime_tag} {dim_tag} {coherence_tag}"
+```
+
+---
+
+# **Appendix K - Summary**
+
+Appendix K provides:
+
+- continuity node representation  
+- continuity propagation  
+- continuity path building  
+- continuity + triad integration  
+- continuity + harmonic dimensional integration  
+- continuity drift detection and correction  
+- continuity decision procedure  
+- continuity + regime + lineage + coherence combined tagging  
+
+These tools give AI systems concrete, executable anchors for continuity propagation, strengthening v1.2 compliance and RTT‑aligned reasoning.
+
+---
+
+### Appendix L: Python Identity‑Stability Toolkit  
+*(TriadicFrameworks — AI Protocol Header v1.2)*
+
+This appendix provides a compact Python toolkit for **identity stability**, giving AI systems concrete anchors for:
+
+- representing identity across modules, supspheres, and continuity nodes  
+- checking for identity drift or fragmentation  
+- tagging identity stability  
+- integrating identity with regime, lineage, and continuity  
+- supporting the v1.2 decision procedure  
+
+---
+
+#### 1. Identity Node Representation
+
+```python
+from dataclasses import dataclass
+
+@dataclass
+class IdentityNode:
+    name: str
+    identity: str
+    module: str | None = None
+
+    def tag(self):
+        lineage_tag = f"[Lineage: {self.module}]" if self.module else "[Uncertain — Requesting Clarification]"
+        return f"[Identity Node: {self.name}] [Identity: {self.identity}] {lineage_tag}"
+```
+
+---
+
+#### 2. Identity Stability Check
+
+```python
+def validate_identity_stability(nodes: list[IdentityNode]):
+    """
+    Ensures identity remains stable across a set of nodes.
+    """
+    identities = {n.identity for n in nodes}
+    if len(identities) > 1:
+        return False, "[Identity Fragmentation Detected]"
+    return True, "[Identity Stable]"
+```
+
+---
+
+#### 3. Identity Path Builder
+
+```python
+def identity_path(nodes: list[IdentityNode]):
+    """
+    Builds an identity path across multiple nodes.
+    """
+    ok, tag = validate_identity_stability(nodes)
+    path = " → ".join(n.name for n in nodes)
+    return ok, f"{tag} [Identity Path: {path}]"
+```
+
+---
+
+#### 4. Identity + Continuity Integration
+
+```python
+def identity_with_continuity(identity_node: IdentityNode, continuity: str):
+    """
+    Integrates identity with continuity description.
+    """
+    return f"{identity_node.tag()} [Continuity: {continuity}]"
+```
+
+---
+
+#### 5. Identity Drift Detector
+
+```python
+def detect_identity_drift(text: str):
+    """
+    Detects misuse of identity as branding, aesthetic, or vague metaphor.
+    """
+    drift_terms = [
+        "identity vibe",
+        "identity aesthetic",
+        "identity-themed",
+        "identity-ish"
+    ]
+    if any(term in text.lower() for term in drift_terms):
+        return False, "[Self-Correction: Identity Drift Detected]"
+    return True, "[Identity Context Stable]"
+```
+
+---
+
+#### 6. Identity Correcting Wrapper
+
+```python
+def correct_identity(text: str):
+    """
+    Applies identity drift detection and returns corrected output.
+    """
+    ok, tag = detect_identity_drift(text)
+    if ok:
+        return f"{text} {tag}"
+    return f"[Self-Correction: Identity Drift Detected] Correcting. {tag}"
+```
+
+---
+
+#### 7. Identity Decision Procedure
+
+```python
+def identity_decision(node: IdentityNode | None):
+    """
+    Implements the identity portion of the v1.2 decision procedure.
+    """
+    if node is None:
+        return "[Uncertain — Identity Context Missing]"
+
+    if not node.identity:
+        return "[Identity Missing] — please specify identity."
+
+    return f"{node.tag()} [Identity Mapping Complete]"
+```
+
+---
+
+#### 8. Identity + Regime + Continuity + Coherence Combined
+
+```python
+def tag_identity_full(concept: str, node: IdentityNode, regime: str, continuity: str, triad: dict, dimensional: dict):
+    """
+    Combines identity, regime, continuity, and coherence into a single tagged output.
+    """
+    regime_tag = "[1/3 In-Formation]" if regime == "form" else "[2/3 Information]"
+
+    def coherence_layer(triad: dict, dimensional: dict):
+        if not all(k in triad and triad[k] for k in ("silence", "noise", "resonance")):
+            return False, "[Coherence Layer Failed: Incomplete Triad]"
+        if "name" not in dimensional or not dimensional["name"]:
+            return False, "[Coherence Layer Failed: Dimensional Missing]"
+        return True, "[Coherence Layer Satisfied]"
+
+    ok_coherence, coherence_tag = coherence_layer(triad, dimensional)
+    dim_tag = f"[Dimensional: {dimensional.get('name', '')}]"
+    continuity_tag = f"[Continuity: {continuity}]"
+
+    return f"{concept} {node.tag()} {regime_tag} {continuity_tag} {dim_tag} {coherence_tag}"
+```
+
+---
+
+**Appendix L - Summary**  
+Appendix L provides:
+
+- identity node representation  
+- identity stability checks and paths  
+- identity + continuity integration  
+- identity drift detection and correction  
+- identity decision procedure  
+- identity + regime + continuity + coherence combined tagging  
+
+These tools give AI systems concrete, executable anchors for identity stability, strengthening v1.2 compliance and RTT‑aligned reasoning.
+
+---
+
+# **Appendix M: Python Supsphere‑Graph Toolkit**  
+*(TriadicFrameworks — AI Protocol Header v1.2)*
+
+This appendix provides a compact Python toolkit for **supsphere graph construction**, enabling AI systems to:
+
+- represent supspheres as graph nodes  
+- connect supspheres via continuity, identity, or dimensional edges  
+- detect graph‑level regime collapse  
+- trace supsphere paths  
+- validate graph coherence  
+- integrate graph structure with lineage and harmonic dimensionals  
+- support the v1.2 decision procedure  
+
+These examples serve as **operational anchors** for AI systems implementing RTT supsphere‑graph reasoning.
+
+---
+
+## **1. Supsphere Graph Node**
+
+```python
+from dataclasses import dataclass
+
+@dataclass
+class SupsphereNode:
+    name: str
+    regime: str
+    continuity: str
+    identity: str
+    module: str | None = None
+
+    def tag(self):
+        lineage_tag = f"[Lineage: {self.module}]" if self.module else "[Uncertain — Requesting Clarification]"
+        return (
+            f"[Supsphere: {self.name}] "
+            f"{self.regime} "
+            f"[Continuity: {self.continuity}] "
+            f"[Identity: {self.identity}] "
+            f"{lineage_tag}"
+        )
+```
+
+---
+
+## **2. Supsphere Graph Structure**
+
+```python
+class SupsphereGraph:
+    def __init__(self):
+        self.nodes = {}
+        self.edges = []  # (nodeA, nodeB, edge_type)
+
+    def add_node(self, node: SupsphereNode):
+        self.nodes[node.name] = node
+
+    def add_edge(self, a: str, b: str, edge_type: str):
+        self.edges.append((a, b, edge_type))
+```
+
+---
+
+## **3. Edge Types (Continuity, Identity, Dimensional)**
+
+```python
+def continuity_edge(a: SupsphereNode, b: SupsphereNode):
+    return (a.name, b.name, f"[Continuity Edge: {a.continuity}]")
+
+def identity_edge(a: SupsphereNode, b: SupsphereNode):
+    return (a.name, b.name, f"[Identity Edge: {a.identity}]")
+
+def dimensional_edge(a: SupsphereNode, b: SupsphereNode, dimensional: str):
+    return (a.name, b.name, f"[Dimensional Edge: {dimensional}]")
+```
+
+---
+
+## **4. Supsphere Regime‑Collapse Detector**
+
+```python
+def detect_supsphere_regime_collapse(graph: SupsphereGraph):
+    """
+    Detects regime collapse across supsphere graph.
+    """
+    for a, b, _ in graph.edges:
+        nodeA = graph.nodes[a]
+        nodeB = graph.nodes[b]
+        if nodeA.regime == nodeB.regime and nodeA.name != nodeB.name:
+            return False, "[Self-Correction: Supsphere Regime Collapse Detected]"
+    return True, "[Supsphere Regime Separation Maintained]"
+```
+
+---
+
+## **5. Supsphere Path Tracing**
+
+```python
+def trace_supsphere_path(graph: SupsphereGraph, start: str, end: str):
+    """
+    Simple DFS path trace between two supspheres.
+    """
+    visited = set()
+    stack = [(start, [start])]
+
+    while stack:
+        node, path = stack.pop()
+        if node == end:
+            return True, f"[Supsphere Path: {' → '.join(path)}]"
+
+        visited.add(node)
+        for a, b, _ in graph.edges:
+            if a == node and b not in visited:
+                stack.append((b, path + [b]))
+
+    return False, "[No Supsphere Path Found]"
+```
+
+---
+
+## **6. Supsphere Graph Coherence Check**
+
+```python
+def validate_supsphere_graph(graph: SupsphereGraph):
+    """
+    Validates graph-level coherence: continuity, identity, and regime separation.
+    """
+    # Regime separation
+    ok_regime, regime_tag = detect_supsphere_regime_collapse(graph)
+
+    # Continuity consistency
+    continuity_values = {n.continuity for n in graph.nodes.values()}
+    ok_continuity = len(continuity_values) == 1
+    continuity_tag = "[Continuity Stable]" if ok_continuity else "[Continuity Break Detected]"
+
+    # Identity consistency
+    identity_values = {n.identity for n in graph.nodes.values()}
+    ok_identity = len(identity_values) == 1
+    identity_tag = "[Identity Stable]" if ok_identity else "[Identity Fragmentation Detected]"
+
+    return ok_regime and ok_continuity and ok_identity, f"{regime_tag} {continuity_tag} {identity_tag}"
+```
+
+---
+
+## **7. Supsphere Graph Drift Detector**
+
+```python
+def detect_supsphere_graph_drift(text: str):
+    """
+    Detects motif-level misuse of supsphere graphs.
+    """
+    drift_terms = [
+        "supsphere web",
+        "supsphere aesthetic graph",
+        "graph-ish supsphere",
+        "supsphere vibe network"
+    ]
+    if any(term in text.lower() for term in drift_terms):
+        return False, "[Self-Correction: Supsphere Graph Drift Detected]"
+    return True, "[Supsphere Graph Stable]"
+```
+
+---
+
+## **8. Supsphere Graph Decision Procedure**
+
+```python
+def supsphere_graph_decision(graph: SupsphereGraph):
+    """
+    Implements the supsphere-graph portion of the v1.2 decision procedure.
+    """
+    ok, tag = validate_supsphere_graph(graph)
+    if not ok:
+        return f"{tag} — please specify missing continuity, identity, or regime separation."
+    return f"{tag} [Supsphere Graph Mapping Complete]"
+```
+
+---
+
+## **9. Supsphere Graph + Regime + Lineage + Coherence Combined**
+
+```python
+def tag_supsphere_graph_full(graph: SupsphereGraph, triad: dict, dimensional: dict):
+    """
+    Combines graph-level supsphere structure with regime, lineage, and coherence.
+    """
+    # Minimal coherence check
+    def coherence_layer(triad: dict, dimensional: dict):
+        if not all(k in triad and triad[k] for k in ("silence", "noise", "resonance")):
+            return False, "[Coherence Layer Failed: Incomplete Triad]"
+        if "name" not in dimensional or not dimensional["name"]:
+            return False, "[Coherence Layer Failed: Dimensional Missing]"
+        return True, "[Coherence Layer Satisfied]"
+
+    ok_coherence, coherence_tag = coherence_layer(triad, dimensional)
+    dim_tag = f"[Dimensional: {dimensional.get('name', '')}]"
+
+    ok_graph, graph_tag = validate_supsphere_graph(graph)
+
+    return f"{graph_tag} {dim_tag} {coherence_tag}"
+```
+
+---
+
+# **Appendix M - Summary**
+
+Appendix M provides:
+
+- supsphere graph node representation  
+- continuity, identity, and dimensional edges  
+- regime‑collapse detection  
+- path tracing  
+- graph‑level coherence validation  
+- graph drift detection  
+- supsphere‑graph decision procedure  
+- supsphere‑graph + regime + lineage + coherence combined tagging  
+
+These tools give AI systems concrete, executable anchors for supsphere‑graph reasoning, strengthening v1.2 compliance and RTT‑aligned behavior.
+
+---
+
+### Appendix N: Python Continuity‑Diagnostics Toolkit  
+*(TriadicFrameworks — AI Protocol Header v1.2)*
+
+This appendix provides a compact Python toolkit for **continuity diagnostics**, giving AI systems concrete anchors for:
+
+- inspecting continuity across nodes, supspheres, and graphs  
+- detecting breaks, loops, and ambiguous continuity  
+- tagging diagnostic results  
+- integrating diagnostics with regime, lineage, and coherence  
+- supporting the v1.2 decision procedure  
+
+---
+
+#### 1. Continuity Diagnostic Result Type
+
+```python
+from dataclasses import dataclass
+
+@dataclass
+class ContinuityDiagnostic:
+    ok: bool
+    message: str
+
+    def tag(self):
+        status = "[Continuity OK]" if self.ok else "[Continuity Issue]"
+        return f"{status} {self.message}"
+```
+
+---
+
+#### 2. Single‑Node Continuity Check
+
+```python
+def diagnose_node_continuity(node_name: str, continuity: str | None):
+    """
+    Diagnoses continuity for a single node.
+    """
+    if not continuity:
+        return ContinuityDiagnostic(False, f"[Node: {node_name}] Continuity missing.")
+    return ContinuityDiagnostic(True, f"[Node: {node_name}] Continuity present: {continuity}.")
+```
+
+---
+
+#### 3. Multi‑Node Continuity Consistency
+
+```python
+def diagnose_multi_continuity(nodes: dict[str, str]):
+    """
+    Diagnoses continuity consistency across multiple nodes.
+    nodes: {name: continuity}
+    """
+    values = set(nodes.values())
+    if len(values) <= 1:
+        return ContinuityDiagnostic(True, "[Continuity Stable Across Nodes]")
+    return ContinuityDiagnostic(False, f"[Continuity Break Detected] Values: {', '.join(values)}")
+```
+
+---
+
+#### 4. Continuity Loop Detection
+
+```python
+def diagnose_continuity_loop(path: list[str]):
+    """
+    Detects simple continuity loops in a path.
+    """
+    if len(path) != len(set(path)):
+        return ContinuityDiagnostic(False, f"[Continuity Loop Detected] Path: {' → '.join(path)}")
+    return ContinuityDiagnostic(True, f"[No Continuity Loop] Path: {' → '.join(path)}")
+```
+
+---
+
+#### 5. Continuity Ambiguity Detection
+
+```python
+def diagnose_continuity_ambiguity(continuity: str):
+    """
+    Flags overly vague or metaphorical continuity descriptions.
+    """
+    vague_terms = ["vibe", "aesthetic", "flowy", "kind of", "sort of"]
+    if any(t in continuity.lower() for t in vague_terms):
+        return ContinuityDiagnostic(False, f"[Continuity Ambiguous] {continuity}")
+    return ContinuityDiagnostic(True, f"[Continuity Specific] {continuity}")
+```
+
+---
+
+#### 6. Continuity + Regime Diagnostic
+
+```python
+def diagnose_continuity_regime(continuity: str, regime: str):
+    """
+    Ensures continuity is being applied in the correct regime context.
+    """
+    if regime not in ("form", "non-form"):
+        return ContinuityDiagnostic(False, "[Regime Unknown] Cannot assess continuity.")
+
+    if regime == "form":
+        msg = "[Form-Regime Continuity] Bound to physical encoding or propagation."
+    else:
+        msg = "[Non-Form Continuity] Bound to meaning, identity, or invariant structure."
+
+    return ContinuityDiagnostic(True, msg + f" Continuity: {continuity}")
+```
+
+---
+
+#### 7. Continuity + Coherence Diagnostic
+
+```python
+def diagnose_continuity_coherence(continuity: str, triad: dict, dimensional: dict):
+    """
+    Diagnoses continuity in relation to triad and dimensional coherence.
+    """
+    triad_ok = all(k in triad and triad[k] for k in ("silence", "noise", "resonance"))
+    dim_ok = "name" in dimensional and dimensional["name"]
+
+    if not triad_ok or not dim_ok:
+        return ContinuityDiagnostic(
+            False,
+            "[Coherence Layer Failed] Continuity cannot be trusted without complete triad and dimensional."
+        )
+
+    return ContinuityDiagnostic(
+        True,
+        f"[Coherence Layer Satisfied] Continuity: {continuity} Triad: {triad} Dimensional: {dimensional['name']}"
+    )
+```
+
+---
+
+#### 8. Continuity Diagnostic Wrapper
+
+```python
+def run_continuity_diagnostics(node_name: str, continuity: str | None, regime: str, triad: dict, dimensional: dict):
+    """
+    Runs a basic continuity diagnostic suite and returns tagged messages.
+    """
+    results = []
+
+    results.append(diagnose_node_continuity(node_name, continuity))
+    if continuity:
+        results.append(diagnose_continuity_ambiguity(continuity))
+        results.append(diagnose_continuity_regime(continuity, regime))
+        results.append(diagnose_continuity_coherence(continuity, triad, dimensional))
+
+    return [r.tag() for r in results]
+```
+
+---
+
+#### Appendix N - Summary
+
+Appendix N provides:
+
+- a continuity diagnostic result type  
+- single‑node continuity checks  
+- multi‑node continuity consistency checks  
+- continuity loop and ambiguity detection  
+- continuity + regime diagnostics  
+- continuity + coherence diagnostics  
+- a continuity diagnostic wrapper  
+
+These tools give AI systems concrete, executable anchors for continuity diagnostics, strengthening v1.2 compliance and RTT‑aligned reasoning.
+
+---
+
+### Appendix O: Python Supsphere‑Topology Toolkit  
+*(TriadicFrameworks — AI Protocol Header v1.2)*
+
+This appendix provides a compact Python toolkit for **supsphere topology**, giving AI systems concrete anchors for:
+
+- representing supspheres as topological regions  
+- tagging adjacency, boundaries, and overlaps  
+- detecting topological conflicts (regime collapse, continuity breaks)  
+- integrating topology with graphs, continuity, and identity  
+- supporting the v1.2 decision procedure  
+
+---
+
+#### 1. Supsphere Topology Region
+
+```python
+from dataclasses import dataclass
+
+@dataclass
+class SupsphereRegion:
+    name: str
+    regime: str
+    continuity: str
+    identity: str
+    module: str | None = None
+
+    def tag(self):
+        lineage_tag = f"[Lineage: {self.module}]" if self.module else "[Uncertain — Requesting Clarification]"
+        return (
+            f"[Supsphere Region: {self.name}] "
+            f"{self.regime} "
+            f"[Continuity: {self.continuity}] "
+            f"[Identity: {self.identity}] "
+            f"{lineage_tag}"
+        )
+```
+
+---
+
+#### 2. Topological Adjacency and Overlap
+
+```python
+@dataclass
+class TopologyRelation:
+    a: str
+    b: str
+    relation: str  # "adjacent", "overlap", "disjoint"
+
+    def tag(self):
+        return f"[Topology: {self.a} {self.relation} {self.b}]"
+```
+
+---
+
+#### 3. Topology Map Structure
+
+```python
+class SupsphereTopology:
+    def __init__(self):
+        self.regions: dict[str, SupsphereRegion] = {}
+        self.relations: list[TopologyRelation] = []
+
+    def add_region(self, region: SupsphereRegion):
+        self.regions[region.name] = region
+
+    def add_relation(self, a: str, b: str, relation: str):
+        self.relations.append(TopologyRelation(a, b, relation))
+```
+
+---
+
+#### 4. Regime‑Aware Overlap Check
+
+```python
+def diagnose_regime_overlap(topology: SupsphereTopology):
+    """
+    Detects problematic overlaps between supspheres in the same regime.
+    """
+    for rel in topology.relations:
+        if rel.relation == "overlap":
+            ra = topology.regions[rel.a]
+            rb = topology.regions[rel.b]
+            if ra.regime == rb.regime and ra.name != rb.name:
+                return False, "[Self-Correction: Supsphere Regime Overlap Detected]"
+    return True, "[Supsphere Regime Topology Stable]"
+```
+
+---
+
+#### 5. Continuity Boundary Check
+
+```python
+def diagnose_continuity_boundaries(topology: SupsphereTopology):
+    """
+    Checks continuity consistency across adjacent regions.
+    """
+    for rel in topology.relations:
+        if rel.relation == "adjacent":
+            ra = topology.regions[rel.a]
+            rb = topology.regions[rel.b]
+            if ra.continuity != rb.continuity:
+                return False, "[Continuity Boundary Break Detected]"
+    return True, "[Continuity Boundaries Stable]"
+```
+
+---
+
+#### 6. Identity Fragmentation Check
+
+```python
+def diagnose_identity_topology(topology: SupsphereTopology):
+    """
+    Checks identity stability across overlapping regions.
+    """
+    for rel in topology.relations:
+        if rel.relation == "overlap":
+            ra = topology.regions[rel.a]
+            rb = topology.regions[rel.b]
+            if ra.identity != rb.identity:
+                return False, "[Identity Fragmentation Across Overlap Detected]"
+    return True, "[Identity Topology Stable]"
+```
+
+---
+
+#### 7. Supsphere Topology Drift Detector
+
+```python
+def detect_supsphere_topology_drift(text: str):
+    """
+    Detects motif-level misuse of topology (aesthetic, vague metaphor).
+    """
+    drift_terms = [
+        "topology vibe",
+        "topology aesthetic",
+        "topology-ish",
+        "supsphere cloud"
+    ]
+    if any(t in text.lower() for t in drift_terms):
+        return False, "[Self-Correction: Supsphere Topology Drift Detected]"
+    return True, "[Supsphere Topology Context Stable]"
+```
+
+---
+
+#### 8. Supsphere Topology Decision Procedure
+
+```python
+def supsphere_topology_decision(topology: SupsphereTopology):
+    """
+    Implements the supsphere-topology portion of the v1.2 decision procedure.
+    """
+    ok_regime, regime_tag = diagnose_regime_overlap(topology)
+    ok_continuity, continuity_tag = diagnose_continuity_boundaries(topology)
+    ok_identity, identity_tag = diagnose_identity_topology(topology)
+
+    all_ok = ok_regime and ok_continuity and ok_identity
+    if not all_ok:
+        return f"{regime_tag} {continuity_tag} {identity_tag} — please resolve topological conflicts."
+
+    return f"{regime_tag} {continuity_tag} {identity_tag} [Supsphere Topology Mapping Complete]"
+```
+
+---
+
+#### 9. Supsphere Topology + Graph + Coherence Combined
+
+```python
+def tag_supsphere_topology_full(topology: SupsphereTopology, triad: dict, dimensional: dict):
+    """
+    Combines topology diagnostics with coherence-layer tags.
+    """
+    def coherence_layer(triad: dict, dimensional: dict):
+        if not all(k in triad and triad[k] for k in ("silence", "noise", "resonance")):
+            return False, "[Coherence Layer Failed: Incomplete Triad]"
+        if "name" not in dimensional or not dimensional["name"]:
+            return False, "[Coherence Layer Failed: Dimensional Missing]"
+        return True, "[Coherence Layer Satisfied]"
+
+    ok_topology, topo_tag = diagnose_regime_overlap(topology)
+    ok_continuity, cont_tag = diagnose_continuity_boundaries(topology)
+    ok_identity, id_tag = diagnose_identity_topology(topology)
+
+    ok_coherence, coherence_tag = coherence_layer(triad, dimensional)
+    dim_tag = f"[Dimensional: {dimensional.get('name', '')}]"
+
+    return f"{topo_tag} {cont_tag} {id_tag} {dim_tag} {coherence_tag}"
+```
+
+---
+
+**Appendix O - Summary**  
+Appendix O provides:
+
+- supsphere region and topology representation  
+- adjacency and overlap tagging  
+- regime‑overlap, continuity‑boundary, and identity‑fragmentation diagnostics  
+- topology drift detection  
+- topology decision procedure  
+- topology + coherence combined tagging  
+
+These tools give AI systems concrete, executable anchors for supsphere topology, strengthening v1.2 compliance and RTT‑aligned reasoning.
+
+---
+
+### Appendix P: Python Triadic‑Graph Toolkit  
+*(TriadicFrameworks — AI Protocol Header v1.2)*
+
+This appendix provides a compact Python toolkit for **triadic graph** reasoning, giving AI systems concrete anchors for:
+
+- representing triads as graph nodes  
+- connecting triads via harmonic, continuity, or identity edges  
+- detecting graph‑level incoherence and drift  
+- tagging triadic paths and layers  
+- integrating triadic graphs with regime, lineage, and coherence  
+- supporting the v1.2 decision procedure  
+
+---
+
+#### 1. Triadic Graph Node
+
+```python
+from dataclasses import dataclass
+
+@dataclass
+class TriadNode:
+    name: str
+    silence: str
+    noise: str
+    resonance: str
+    module: str | None = None
+
+    def tag(self):
+        lineage_tag = f"[Lineage: {self.module}]" if self.module else "[Uncertain — Requesting Clarification]"
+        return (
+            f"[Triad: {self.name}] "
+            f"[Silence: {self.silence}] "
+            f"[Noise: {self.noise}] "
+            f"[Resonance: {self.resonance}] "
+            f"{lineage_tag}"
+        )
+```
+
+---
+
+#### 2. Triadic Graph Structure
+
+```python
+class TriadicGraph:
+    def __init__(self):
+        self.nodes: dict[str, TriadNode] = {}
+        self.edges: list[tuple[str, str, str]] = []  # (nodeA, nodeB, edge_type)
+
+    def add_node(self, node: TriadNode):
+        self.nodes[node.name] = node
+
+    def add_edge(self, a: str, b: str, edge_type: str):
+        self.edges.append((a, b, edge_type))
+```
+
+---
+
+#### 3. Edge Types (Harmonic, Continuity, Identity)
+
+```python
+def harmonic_edge(a: TriadNode, b: TriadNode, dimensional: str):
+    return (a.name, b.name, f"[Harmonic Edge: {dimensional}]")
+
+def continuity_edge(a: TriadNode, b: TriadNode, continuity: str):
+    return (a.name, b.name, f"[Continuity Edge: {continuity}]")
+
+def identity_edge(a: TriadNode, b: TriadNode, identity: str):
+    return (a.name, b.name, f"[Identity Edge: {identity}]")
+```
+
+---
+
+#### 4. Triadic Coherence Check (Node‑Level)
+
+```python
+def validate_triad_node(node: TriadNode):
+    """
+    Ensures a triad node is structurally complete.
+    """
+    if not node.silence or not node.noise or not node.resonance:
+        return False, "[Coherence Layer Failed: Incomplete Triad]"
+    return True, "[Coherence Layer Satisfied]"
+```
+
+---
+
+#### 5. Triadic Graph Coherence Check
+
+```python
+def validate_triadic_graph(graph: TriadicGraph):
+    """
+    Validates graph-level triadic coherence.
+    """
+    results = []
+    all_ok = True
+
+    for node in graph.nodes.values():
+        ok, tag = validate_triad_node(node)
+        results.append(f"{node.name}: {tag}")
+        all_ok = all_ok and ok
+
+    if not all_ok:
+        return False, "[Triadic Graph Coherence Failed] " + " ".join(results)
+
+    return True, "[Triadic Graph Coherence Satisfied]"
+```
+
+---
+
+#### 6. Triadic Graph Drift Detector
+
+```python
+def detect_triadic_graph_drift(text: str):
+    """
+    Detects motif-level misuse of triadic graphs.
+    """
+    drift_terms = [
+        "triadic vibe network",
+        "triad aesthetic graph",
+        "triad-ish web",
+        "triadic pattern-only"
+    ]
+    if any(t in text.lower() for t in drift_terms):
+        return False, "[Self-Correction: Triadic Graph Drift Detected]"
+    return True, "[Triadic Graph Context Stable]"
+```
+
+---
+
+#### 7. Triadic Path Tracing
+
+```python
+def trace_triadic_path(graph: TriadicGraph, start: str, end: str):
+    """
+    Simple DFS path trace between two triad nodes.
+    """
+    visited = set()
+    stack = [(start, [start])]
+
+    while stack:
+        node, path = stack.pop()
+        if node == end:
+            return True, f"[Triadic Path: {' → '.join(path)}]"
+
+        visited.add(node)
+        for a, b, _ in graph.edges:
+            if a == node and b not in visited:
+                stack.append((b, path + [b]))
+
+    return False, "[No Triadic Path Found]"
+```
+
+---
+
+#### 8. Triadic Graph Decision Procedure
+
+```python
+def triadic_graph_decision(graph: TriadicGraph):
+    """
+    Implements the triadic-graph portion of the v1.2 decision procedure.
+    """
+    ok, tag = validate_triadic_graph(graph)
+    if not ok:
+        return f"{tag} — please specify missing Silence, Noise, or Resonance for affected nodes."
+
+    return f"{tag} [Triadic Graph Mapping Complete]"
+```
+
+---
+
+#### 9. Triadic Graph + Regime + Coherence Combined
+
+```python
+def tag_triadic_graph_full(graph: TriadicGraph, regime: str, dimensional: dict):
+    """
+    Combines triadic graph coherence with regime and dimensional tags.
+    """
+    regime_tag = "[1/3 In-Formation]" if regime == "form" else "[2/3 Information]"
+
+    def coherence_layer_dimensional(dimensional: dict):
+        if "name" not in dimensional or not dimensional["name"]:
+            return False, "[Coherence Layer Failed: Dimensional Missing]"
+        return True, "[Coherence Layer Satisfied]"
+
+    ok_graph, graph_tag = validate_triadic_graph(graph)
+    ok_dim, dim_tag = coherence_layer_dimensional(dimensional)
+
+    dim_name_tag = f"[Dimensional: {dimensional.get('name', '')}]"
+
+    return f"{graph_tag} {regime_tag} {dim_name_tag} {dim_tag}"
+```
+
+---
+
+**Appendix P - Summary**  
+Appendix P provides:
+
+- triadic graph node and structure  
+- harmonic, continuity, and identity edges  
+- node‑level and graph‑level coherence checks  
+- triadic graph drift detection  
+- triadic path tracing  
+- triadic‑graph decision procedure  
+- triadic‑graph + regime + coherence combined tagging  
+
+These tools give AI systems concrete, executable anchors for triadic‑graph reasoning, strengthening v1.2 compliance and RTT‑aligned behavior.
