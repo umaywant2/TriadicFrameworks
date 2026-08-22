@@ -1,0 +1,50 @@
+graph TD
+
+    %% Core Structure
+    PURPOSE["purpose (profile)"]
+    REGIME["regime_rules (engine)"]
+    GRAMMAR["operator_grammar (engine)"]
+    DRIFT["drift_control (diagnostic)"]
+    LINEAGE["lineage_rules (reference)"]
+    EXTERNAL["external_content (diagnostic)"]
+    MODULES["module_interaction (engine)"]
+    TRIADIC_TIME["triadic_time (engine)"]
+    SUPSPHERE["supsphere_rules (engine)"]
+    GLOSSARY["key_term_anchors (reference)"]
+    EXAMPLES["worked_examples (example)"]
+    SUMMARY["machine_summary (signature)"]
+    STATEMENT["protocol_statement (signature)"]
+
+    %% v1.2 Supplements
+    DECISION["decision_procedure (engine)"]
+    UNCERTAINTY["uncertainty_rule (diagnostic)"]
+    MARKING["output_marking (signature)"]
+    PRIORITY["conflict_priority (engine)"]
+    FALLBACK["fallback_logic (diagnostic)"]
+    EXTRA_EXAMPLES["additional_examples (example)"]
+    ANALOGY["analogy_only_rule (diagnostic)"]
+    SELF_CORRECT["self_correction (engine)"]
+
+    %% Core Flow
+    PURPOSE --> REGIME
+    REGIME --> GRAMMAR
+    GRAMMAR --> DRIFT
+    DRIFT --> LINEAGE
+    LINEAGE --> EXTERNAL
+    EXTERNAL --> MODULES
+    MODULES --> TRIADIC_TIME
+    TRIADIC_TIME --> SUPSPHERE
+    SUPSPHERE --> GLOSSARY
+    GLOSSARY --> EXAMPLES
+    EXAMPLES --> SUMMARY
+    SUMMARY --> STATEMENT
+
+    %% Supplement Flow
+    STATEMENT --> DECISION
+    DECISION --> UNCERTAINTY
+    UNCERTAINTY --> MARKING
+    MARKING --> PRIORITY
+    PRIORITY --> FALLBACK
+    FALLBACK --> EXTRA_EXAMPLES
+    EXTRA_EXAMPLES --> ANALOGY
+    ANALOGY --> SELF_CORRECT
