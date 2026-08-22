@@ -1,1 +1,65 @@
+{
+  "module": "AI Resonance Seed",
+  "graph_version": "1.0",
+  "nodes": [
+    "README.md",
+    "primer.md",
+    "how_to_read.md",
+    "minimal_substrate.md",
+    "invariants.yaml",
+    "resonance_time_primitives.yaml",
+    "schemas/",
+    "emitters/",
+    "validator.md",
+    "lineage.md",
+    "dashboards/",
+    "migration.md"
+  ],
+  "edges": [
+    {
+      "from": "README.md",
+      "to": "primer.md"
+    },
+    {
+      "from": "primer.md",
+      "to": "how_to_read.md"
+    },
+    {
+      "from": "how_to_read.md",
+      "to": "minimal_substrate.md"
+    },
+    {
+      "from": "minimal_substrate.md",
+      "to": "invariants.yaml"
+    },
+    {
+      "from": "invariants.yaml",
+      "to": "resonance_time_primitives.yaml"
+    },
+    {
+      "from": "resonance_time_primitives.yaml",
+      "to": "schemas/"
+    },
+    {
+      "from": "schemas/",
+      "to": "emitters/"
+    },
+    {
+      "from": "emitters/",
+      "to": "validator.md"
+    },
+    {
+      "from": "validator.md",
+      "to": "lineage.md"
+    },
+    {
+      "from": "lineage.md",
+      "to": "dashboards/"
+    },
+    {
+      "from": "dashboards/",
+      "to": "migration.md"
+    }
+  ]
+}
 
