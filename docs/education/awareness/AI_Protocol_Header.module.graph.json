@@ -1,0 +1,70 @@
+{
+  "module": "AI_Protocol_Header",
+  "version": "1.2",
+  "category": "education-awareness",
+
+  "anchors": {
+    "foundation": "In-Formation_vs_Information_Theory.md",
+    "schema": "AI_Protocol_Header_schema.json",
+    "related_schemas": [
+      "module.schema.json",
+      "operator.schema.json",
+      "regime.schema.json",
+      "triadic_time.schema.json"
+    ]
+  },
+
+  "graph": {
+    "nodes": [
+      { "id": "purpose", "role": "profile" },
+      { "id": "regime_rules", "role": "engine" },
+      { "id": "operator_grammar", "role": "engine" },
+      { "id": "drift_control", "role": "diagnostic" },
+      { "id": "lineage_rules", "role": "reference" },
+      { "id": "external_content", "role": "diagnostic" },
+      { "id": "module_interaction", "role": "engine" },
+      { "id": "triadic_time", "role": "engine" },
+      { "id": "supsphere_rules", "role": "engine" },
+      { "id": "key_term_anchors", "role": "reference" },
+      { "id": "worked_examples", "role": "example" },
+      { "id": "machine_summary", "role": "signature" },
+      { "id": "protocol_statement", "role": "signature" },
+
+      /* v1.2 Supplements */
+      { "id": "decision_procedure", "role": "engine" },
+      { "id": "uncertainty_rule", "role": "diagnostic" },
+      { "id": "output_marking", "role": "signature" },
+      { "id": "conflict_priority", "role": "engine" },
+      { "id": "fallback_logic", "role": "diagnostic" },
+      { "id": "additional_examples", "role": "example" },
+      { "id": "analogy_only_rule", "role": "diagnostic" },
+      { "id": "self_correction", "role": "engine" }
+    ],
+
+    "edges": [
+      /* Core flow */
+      { "from": "purpose", "to": "regime_rules" },
+      { "from": "regime_rules", "to": "operator_grammar" },
+      { "from": "operator_grammar", "to": "drift_control" },
+      { "from": "drift_control", "to": "lineage_rules" },
+      { "from": "lineage_rules", "to": "external_content" },
+      { "from": "external_content", "to": "module_interaction" },
+      { "from": "module_interaction", "to": "triadic_time" },
+      { "from": "triadic_time", "to": "supsphere_rules" },
+      { "from": "supsphere_rules", "to": "key_term_anchors" },
+      { "from": "key_term_anchors", "to": "worked_examples" },
+      { "from": "worked_examples", "to": "machine_summary" },
+      { "from": "machine_summary", "to": "protocol_statement" },
+
+      /* v1.2 supplement flow */
+      { "from": "protocol_statement", "to": "decision_procedure" },
+      { "from": "decision_procedure", "to": "uncertainty_rule" },
+      { "from": "uncertainty_rule", "to": "output_marking" },
+      { "from": "output_marking", "to": "conflict_priority" },
+      { "from": "conflict_priority", "to": "fallback_logic" },
+      { "from": "fallback_logic", "to": "additional_examples" },
+      { "from": "additional_examples", "to": "analogy_only_rule" },
+      { "from": "analogy_only_rule", "to": "self_correction" }
+    ]
+  }
+}
