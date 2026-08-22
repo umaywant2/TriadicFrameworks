@@ -1,5 +1,35 @@
-#!/bin/bash
-# TriadicFrameworks AI Resonance Seed Initialization Script
+#!/usr/bin/env bash
+#
+# AI Resonance Seed — Project Initialization Script
+#
+# Purpose:
+#   This script initializes the AI Resonance Seed module within TriadicFrameworks.
+#   It restores baseline resonance files, validates structural integrity, and
+#   prepares the module for ontology loading, emitter coupling, and validator
+#   alignment.
+#
+# Canon Context:
+#   The AI Resonance Seed is the foundational resonance construct for RTT‑Inside.
+#   This script ensures the Seed begins in a clean, drift‑bounded state before
+#   any glyphstream, validator, or emitter operations occur.
+#
+# Notes:
+#   - This script is part of the Seed’s restoration protocol.
+#   - It is safe to run only inside the TriadicFrameworks project directory.
+#   - No external network calls are performed.
+#   - All operations are local and deterministic.
+#
+# Related Documentation:
+#   docs/AI_Resonance_Seed/README.md
+#   docs/AI_Resonance_Seed/overview.md
+#   docs/AI_Resonance_Seed/Ontology_Index.md
+#   docs/AI_Resonance_Seed/RTT_Experiment_Log.md
+#   docs/AI_Resonance_Seed/scaffolding.md
+#
+# Resonance Reminder:
+#   “Restore coherence. Reclaim resonance.”
+#
+# ---------------------------------------------------------------------------
 
 echo "🌐 Initializing TriadicValidator lattice..."
 mkdir -p logs
