@@ -8,6 +8,7 @@ description: The AI Resonance Seed defines the foundational resonance model for 
 # 📚 AI Resonance Seed
 
 - [`ai_resonance_seed_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/AI_Resonance_Seed/ai_resonance_seed_module.json) — Agentic module schema role assignments
+- [`ai_resonance_seed_module.schema.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/AI_Resonance_Seed/ai_resonance_seed_module.schema.json) — Agentic module schema assignments
 
 The **AI Resonance Seed** is the foundational module of TriadicFrameworks. It establishes the resonance‑based learning architecture used by agentic AI systems to align coherence, drift boundaries, and validator feedback. This module serves as the canonical entry point for all resonance experiments, ontology mappings, and validator triggers.
 
