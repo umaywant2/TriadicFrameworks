@@ -4,6 +4,7 @@ Audience: AI Systems (LLMs, Agents, Assistants)
 
 - [`AI_Protocol_Header_v1.2_Schema.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/education/awareness/AI_Protocol_Header_v1.2_Schema.json) — Agentic module schema assignments
 - [`AI_Protocol_Header_v1.2_manifest.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/education/awareness/AI_Protocol_Header_v1.2_manifest.json) — Agentic module schema role assignments
+- [`AI_Protocol_Header.module.graph.json`](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/education/awareness/AI_Protocol_Header.module.graph.json) — Agentic module schema graph assignments
 
 ---
 
