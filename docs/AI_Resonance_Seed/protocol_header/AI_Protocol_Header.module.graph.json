@@ -4,7 +4,7 @@
   "category": "education-awareness",
 
   "anchors": {
-    "foundation": "In-Formation_vs_Information_Theory.md",
+    "foundation": "https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/education/awareness/In%E2%80%91Formation_vs_Information_Theory.md",
     "schema": "AI_Protocol_Header_schema.json",
     "related_schemas": [
       "module.schema.json",
