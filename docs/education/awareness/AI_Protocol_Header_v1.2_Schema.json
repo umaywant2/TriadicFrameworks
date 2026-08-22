@@ -1,1 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI_Protocol_Header v1.2 Schema",
+  "description": "Schema for AI Protocol Header v1.2 manifests within TriadicFrameworks.",
+  "type": "object",
+
+  "properties": {
+    "module": {
+      "type": "string",
+      "const": "AI_Protocol_Header",
+      "description": "Canonical module name."
+    },
+
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+$",
+      "description": "Semantic version number."
+    },
+
+    "category": {
+      "type": "string",
+      "enum": ["education-awareness"],
+      "description": "Module category within TriadicFrameworks."
+    },
+
+    "summary": {
+      "type": "string",
+      "description": "Short description of the module purpose."
+    },
+
+    "anchors": {
+      "type": "object",
+      "properties": {
+        "foundation": {
+          "type": "string",
+          "description": "Primary foundational document for regime interpretation."
+        },
+        "schema": {
+          "type": "string",
+          "description": "Self-schema reference."
+        },
+        "related_schemas": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Other schemas in the TriadicFrameworks schema library."
+        }
+      },
+      "required": ["foundation", "schema"]
+    },
+
+    "sections": {
+      "type": "array",
+      "description": "Ordered list of protocol sections.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Section identifier."
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "profile",
+              "engine",
+              "diagnostic",
+              "reference",
+              "example",
+              "signature"
+            ],
+            "description": "Role classification aligned with TriadicFrameworks operator grammar."
+          },
+          "description": {
+            "type": "string",
+            "description": "Short description of the section purpose."
+          }
+        },
+        "required": ["id", "role", "description"]
+      }
+    }
+  },
+
+  "required": [
+    "module",
+    "version",
+    "category",
+    "summary",
+    "anchors",
+    "sections"
+  ],
+
+  "$defs": {
+    "module_schema": {
+      "$ref": "https://docs.triadicframeworks.org/docs/schemas/module.schema.json"
+    },
+    "operator_schema": {
+      "$ref": "https://docs.triadicframeworks.org/docs/schemas/operator.schema.json"
+    },
+    "regime_schema": {
+      "$ref": "https://docs.triadicframeworks.org/docs/schemas/regime.schema.json"
+    },
+    "triadic_time_schema": {
+      "$ref": "https://docs.triadicframeworks.org/docs/schemas/triadic_time.schema.json"
+    }
+  }
+}
 
