@@ -1,1 +1,71 @@
+{
+  "module": "AI_Resonance_Seed",
+  "submodule": "protocol_header",
+  "version": "1.3",
+  "category": "ai-protocol",
+
+  "anchors": {
+    "header": "PH_v1.3.md",
+    "appendix": "PH_Appendix.md",
+    "schema": "PH_Schema.json",
+    "manifest": "PH_manifest.json",
+    "validator": "PH_Validator_Checklist.md",
+    "related_schemas": [
+      "module.schema.json",
+      "operator.schema.json",
+      "regime.schema.json",
+      "triadic_time.schema.json"
+    ]
+  },
+
+  "graph": {
+    "nodes": [
+      { "id": "overview", "role": "profile" },
+      { "id": "regime_separation", "role": "engine" },
+      { "id": "lineage_protection", "role": "engine" },
+      { "id": "operator_grammar", "role": "engine" },
+      { "id": "coherence_layers", "role": "engine" },
+      { "id": "continuity_identity", "role": "engine" },
+      { "id": "supsphere_structures", "role": "engine" },
+      { "id": "drift_boundaries", "role": "diagnostic" },
+      { "id": "analogy_only_rule", "role": "reference" },
+      { "id": "output_marking", "role": "signature" },
+      { "id": "collaborative_clause", "role": "profile" },
+      { "id": "module_sealing", "role": "reference" },
+      { "id": "machine_summary", "role": "signature" },
+
+      /* v1.3 Supplements */
+      { "id": "decision_procedure", "role": "engine" },
+      { "id": "uncertainty_rule", "role": "diagnostic" },
+      { "id": "priority_ordering", "role": "engine" },
+      { "id": "appendix_integration", "role": "reference" },
+      { "id": "module_integration", "role": "profile" },
+      { "id": "versioning", "role": "profile" }
+    ],
+
+    "edges": [
+      /* Core conceptual flow */
+      { "from": "overview", "to": "regime_separation" },
+      { "from": "regime_separation", "to": "lineage_protection" },
+      { "from": "lineage_protection", "to": "operator_grammar" },
+      { "from": "operator_grammar", "to": "coherence_layers" },
+      { "from": "coherence_layers", "to": "continuity_identity" },
+      { "from": "continuity_identity", "to": "supsphere_structures" },
+      { "from": "supsphere_structures", "to": "drift_boundaries" },
+      { "from": "drift_boundaries", "to": "analogy_only_rule" },
+      { "from": "analogy_only_rule", "to": "output_marking" },
+      { "from": "output_marking", "to": "collaborative_clause" },
+      { "from": "collaborative_clause", "to": "module_sealing" },
+      { "from": "module_sealing", "to": "machine_summary" },
+
+      /* v1.3 supplement flow */
+      { "from": "machine_summary", "to": "decision_procedure" },
+      { "from": "decision_procedure", "to": "uncertainty_rule" },
+      { "from": "uncertainty_rule", "to": "priority_ordering" },
+      { "from": "priority_ordering", "to": "appendix_integration" },
+      { "from": "appendix_integration", "to": "module_integration" },
+      { "from": "module_integration", "to": "versioning" }
+    ]
+  }
+}
 
