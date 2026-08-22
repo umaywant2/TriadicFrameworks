@@ -63,16 +63,6 @@
       "path": "migration.md",
       "role": "reference",
       "analyzer_layer": "regime"
-    },
-    {
-      "path": "legacy_preservation.md",
-      "role": "reference",
-      "analyzer_layer": "regime"
-    },
-    {
-      "path": "index.html",
-      "role": "index",
-      "analyzer_layer": "operator"
     }
   ]
 }
