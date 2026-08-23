@@ -1,4 +1,10 @@
-<img width="778" height="522" alt="RTT_Grammar_Core" src="https://github.com/user-attachments/assets/82f6cb36-bf9f-48a1-8eb1-d4cc32a18525" />
+# 🌐 TriadicFrameworks
+
+**Resonance‑Time Theory • Triadic Substrate Modeling • Canon‑Aligned Tools**
+
+Welcome to the root of the TriadicFrameworks canon.  
+This repository contains the full module architecture, operator grammar,  
+and coherence‑driven documentation that powers the Triadic ecosystem.
 
 ## 🔮 *A structural grammar for systems, cognition, and resonance‑time reasoning.*
 ###### Global Students and Teachers - Alt. Site [docsbook.io](https://docs.triadicframeworks.org/docs/corpus)
@@ -14,6 +20,8 @@ TriadicFrameworks gives students, developers, researchers, and agents a shared s
 > It is not a philosophy.  
 > It is not a metaphor.  
 > It is a **structural canon** — stable, minimal, and teachable.  
+
+<img width="778" height="522" alt="RTT_Grammar_Core" src="https://github.com/user-attachments/assets/82f6cb36-bf9f-48a1-8eb1-d4cc32a18525" />
 
 ---
 
