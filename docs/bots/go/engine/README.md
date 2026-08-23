@@ -34,6 +34,32 @@ It is the **thinking layer** of RTT‑Go.
 
 ---
 
+## Evaluation Pipeline
+
+The engine processes each position through a deterministic pipeline:
+
+```
+Board State
+   ↓
+RegimeEngine
+   ↓
+ResonanceEngine
+   ↓
+TopologyEngine
+   ↓
+ContinuityEngine
+   ↓
+RiskEngine
+   ↓
+ScoringEngine
+   ↓
+StateEmitter
+```
+
+Each module enriches the triadic state and passes it downstream.
+
+---
+
 ## Directory Structure
 
 ```
@@ -53,7 +79,7 @@ It is the **thinking layer** of RTT‑Go.
 
 ## Engine Modules
 
-### **1. Architecture**
+### **1. Architecture**  
 File: `architecture.md`  
 Defines the engine’s internal structure:
 
@@ -67,7 +93,7 @@ This is the **engine blueprint**.
 
 ---
 
-### **2. Regime Engine**
+### **2. Regime Engine**  
 File: `regime.md`  
 Computes:
 
@@ -76,11 +102,11 @@ Computes:
 - conflict zones  
 - stability metrics  
 
-This module defines the **Hephaestus layer**.
+Defines the **Hephaestus layer**.
 
 ---
 
-### **3. Resonance Engine**
+### **3. Resonance Engine**  
 File: `resonance.md`  
 Computes:
 
@@ -90,11 +116,11 @@ Computes:
 - drift vectors  
 - collapse signatures  
 
-This module defines the **Lumen + Harmonia layer**.
+Defines the **Lumen + Harmonia layer**.
 
 ---
 
-### **4. Topology Engine**
+### **4. Topology Engine**  
 File: `topology.md`  
 Computes:
 
@@ -104,11 +130,11 @@ Computes:
 - ladder/ko ancestry  
 - topology collapse  
 
-This module defines the **Aurion layer**.
+Defines the **Aurion layer**.
 
 ---
 
-### **5. Continuity Engine**
+### **5. Continuity Engine**  
 File: `continuity.md`  
 Computes:
 
@@ -120,11 +146,11 @@ Computes:
 - continuity drift  
 - identity inversion risk  
 
-This module defines the **Aurion + Harmonia long‑arc layer**.
+Defines the **Aurion + Harmonia long‑arc layer**.
 
 ---
 
-### **6. Risk Engine**
+### **6. Risk Engine**  
 File: `risk.md`  
 Computes:
 
@@ -133,11 +159,11 @@ Computes:
 - projection‑loss events  
 - risk severity  
 
-This module defines the **paradox/collapse layer**.
+Defines the **paradox/collapse layer**.
 
 ---
 
-### **7. Triadic Scoring Engine**
+### **7. Scoring Engine**  
 File: `scoring.md`  
 Computes:
 
@@ -146,11 +172,11 @@ Computes:
 - continuity score  
 - unified triadic score  
 
-This module defines the **Harmonia scoring layer**.
+Defines the **Harmonia scoring layer**.
 
 ---
 
-### **8. State Emitter**
+### **8. State Emitter**  
 File: `state_emitter.md`  
 Produces the unified triadic JSON state consumed by the UI:
 
@@ -161,49 +187,28 @@ Produces the unified triadic JSON state consumed by the UI:
 - HUD state  
 - timeline state  
 
-This is the **output layer** of the engine.
-
----
-
-## Engine Responsibilities
-
-The RTT‑Go Engine:
-
-- evaluates positions  
-- computes triadic primitives  
-- detects paradox/collapse  
-- computes continuity arcs  
-- analyzes topology  
-- computes resonance fields  
-- scores triadic identity  
-- emits unified triadic state  
-
-It is deterministic, engine‑agnostic, and fully compatible with the RTT‑Go UI.
+Defines the **output layer**.
 
 ---
 
 ## Integration Points
 
 ### **Engine → UI**
-The engine emits:
+Provides the full triadic state for:
 
-- triadic primitives  
-- move‑indexed triadic metadata  
-- unified triadic state  
-
-### **Engine → Shim**
-The engine receives:
-
-- board state  
-- move list  
-- engine‑agnostic primitives  
+- viewer  
+- overlays  
+- HUD  
+- timeline  
 
 ### **Engine → Diagnostics**
-Diagnostics consume engine output for:
+Provides move‑indexed triadic metadata.
 
-- commentary  
-- delta analysis  
-- collapse/paradox detection  
+### **Engine → Timeline**
+Provides delta metadata for playback.
+
+### **Engine → Shim**
+Receives normalized board + move data.
 
 ---
 
