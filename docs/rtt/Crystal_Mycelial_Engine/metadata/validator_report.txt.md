@@ -1,0 +1,96 @@
+```text
+VALIDATOR REPORT — Crystal_Mycelial_Engine
+TriadicFrameworks / RTT / CMH / MSRM
+2026-08-02
+
+
+SECTION 1 — METADATA BLOCK
+----------------------------------------
+head_block.html: OK
+canonical fields: OK
+OG/Twitter fields: OK
+citation metadata: OK
+Dublin Core: OK
+AI metadata suite: OK
+favicon suite: OK
+module‑unique fields: OK
+no phantom fields detected
+
+
+SECTION 2 — SESSION CONTEXT
+----------------------------------------
+context-label/value pairs: OK
+canon identifiers: OK
+module identity: OK
+coherence description: OK
+front-door reference: OK
+audience field: OK
+no drift detected
+
+
+SECTION 3 — SIDEBAR AUDIT
+----------------------------------------
+navigation_links.json: OK
+frontdoor/index.html: OK
+regime pages: OK
+reference pages: OK
+substrate pages: OK
+metadata pages: OK
+no missing or phantom entries
+
+
+SECTION 4 — REGIME CONSISTENCY
+----------------------------------------
+BGR → HRR → MLR sequence: OK
+envelope transitions: OK
+operator emphasis by regime: OK
+substrate transitions (bio → hybrid → mineral): OK
+ASCII flow diagram: OK
+
+
+SECTION 5 — OPERATOR GRAMMAR
+----------------------------------------
+P/E/G/M/S families: OK
+HybridOps: OK
+regime‑specific operator sets: OK
+no undefined operators referenced
+no cross‑regime conflicts
+
+
+SECTION 6 — ENVELOPE ALIGNMENT
+----------------------------------------
+BGR moisture/nutrient/EM: OK
+HRR ion/coherence/moisture: OK
+MLR supersaturation/thermal/resonance: OK
+values match canonical ranges
+no envelope drift detected
+
+
+SECTION 7 — MODULE.JSON INTEGRITY
+----------------------------------------
+module identity: OK
+version: OK
+category: OK
+summary: OK
+file groups: OK
+analyzer_layer: OK
+role: OK
+AI metadata: OK
+no missing fields
+no deprecated fields
+
+
+SECTION 8 — CANON COMPLIANCE
+----------------------------------------
+RTT substrate grammar: OK
+CMH regime structure: OK
+MSRM envelope cycle: OK
+TF documentation format: OK
+no violations detected
+
+
+FINAL STATUS
+----------------------------------------
+Crystal_Mycelial_Engine module passes all validator checks.
+Module is canonical, internally consistent, and ready for publication.
+```

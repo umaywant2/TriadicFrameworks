@@ -1,0 +1,133 @@
+{
+  "identity": {
+    "name": "Causal Field Matrix",
+    "canonical_id": "RTT_CAUSAL_FIELD_MATRIX",
+    "module_path": "/docs/rtt/Cross_Domain_Causality_Weaver/",
+    "version": "1.0",
+    "status": "canon-stable"
+  },
+
+  "rtt": {
+    "rtt_level": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+
+  "schema": {
+    "fields": [
+      "causal_type",
+      "regime",
+      "causal_magnitude",
+      "causal_direction",
+      "causal_curvature",
+      "discontinuity_depth",
+      "propagation_rate",
+      "stability_envelope"
+    ]
+  },
+
+  "entries": [
+    {
+      "causal_type": "signature",
+      "regime": "R1",
+      "causal_magnitude": 0.41,
+      "causal_direction": "conceptual",
+      "causal_curvature": 0.22,
+      "discontinuity_depth": 0.11,
+      "propagation_rate": 0.33,
+      "stability_envelope": 0.63
+    },
+    {
+      "causal_type": "signature",
+      "regime": "R4",
+      "causal_magnitude": 0.72,
+      "causal_direction": "dimensional",
+      "causal_curvature": 0.44,
+      "discontinuity_depth": 0.22,
+      "propagation_rate": 0.41,
+      "stability_envelope": 0.57
+    },
+    {
+      "causal_type": "vector",
+      "regime": "R1-R4",
+      "causal_magnitude": 0.83,
+      "causal_direction": "R1↔R4",
+      "causal_curvature": 0.52,
+      "discontinuity_depth": 0.22,
+      "propagation_rate": 0.33,
+      "stability_envelope": 0.69
+    },
+    {
+      "causal_type": "vector",
+      "regime": "R2-R3",
+      "causal_magnitude": 0.79,
+      "causal_direction": "R3→R2",
+      "causal_curvature": 0.58,
+      "discontinuity_depth": 0.31,
+      "propagation_rate": 0.27,
+      "stability_envelope": 0.72
+    },
+    {
+      "causal_type": "field",
+      "regime": "R1-R2-R3",
+      "causal_magnitude": 0.94,
+      "causal_direction": "tensor",
+      "causal_curvature": 0.63,
+      "discontinuity_depth": 0.37,
+      "propagation_rate": 0.41,
+      "stability_envelope": 0.78
+    },
+    {
+      "causal_type": "field",
+      "regime": "R2-R4",
+      "causal_magnitude": 0.88,
+      "causal_direction": "R4→R2",
+      "causal_curvature": 0.55,
+      "discontinuity_depth": 0.33,
+      "propagation_rate": 0.29,
+      "stability_envelope": 0.73
+    },
+    {
+      "causal_type": "discontinuity",
+      "regime": "R1-R3",
+      "causal_magnitude": 0.67,
+      "causal_direction": "R1→R3",
+      "causal_curvature": 0.33,
+      "discontinuity_depth": 0.22,
+      "propagation_rate": 0.38,
+      "stability_envelope": 0.55
+    },
+    {
+      "causal_type": "discontinuity",
+      "regime": "R2-R4",
+      "causal_magnitude": 0.88,
+      "causal_direction": "R2↔R4",
+      "causal_curvature": 0.47,
+      "discontinuity_depth": 0.29,
+      "propagation_rate": 0.33,
+      "stability_envelope": 0.66
+    },
+    {
+      "causal_type": "bridge",
+      "regime": "R1-R4",
+      "causal_magnitude": 0.83,
+      "causal_direction": "R1↔R4",
+      "causal_curvature": 0.52,
+      "discontinuity_depth": 0.22,
+      "propagation_rate": 0.33,
+      "stability_envelope": 0.69
+    },
+    {
+      "causal_type": "bridge",
+      "regime": "R3-R4",
+      "causal_magnitude": 0.91,
+      "causal_direction": "R3→R4",
+      "causal_curvature": 0.71,
+      "discontinuity_depth": 0.52,
+      "propagation_rate": 0.44,
+      "stability_envelope": 0.82
+    }
+  ]
+}
+

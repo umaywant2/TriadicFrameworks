@@ -1,0 +1,101 @@
+{
+  "module": "RTT_Emotions",
+  "version": "1.1.0",
+  "category": "rtt-emotional-dynamics",
+  "summary": "Parent emotional ontology module referencing six sub-modules and defining RTT resonance-aware emotional operators.",
+  "description": "The RTT Emotions parent module defines shared metadata, resonance primitives, regime logic, alignment structures, observer models, and emotional operators. It delegates all 60 emotional operators to six sub-modules for clarity, modularity, and long-term maintainability. This version includes the FORGIVE resonance operator and updated drift/coherence mechanics.",
+
+  "includes": [
+    "emotions_part_a.json",
+    "emotions_part_b.json",
+    "emotions_part_c.json",
+    "emotions_part_d.json",
+    "emotions_part_e.json",
+    "emotions_part_f.json",
+    "forgive_operator.json"
+  ],
+
+  "shared_definitions": {
+    "variables": {
+      "D": "drift",
+      "C": "coherence",
+      "R": "resonance alignment",
+      "ΔO": "observer distance",
+      "A_s": "self alignment",
+      "A_o": "other alignment",
+      "A_w": "world alignment",
+      "σ": "emotional intensity",
+      "θ": "context factor",
+      "k_e": "emotion-specific constant",
+      "Ng": "gravity class (1g–9g)",
+      "0g": "gravity-drop lever",
+      "G_coh": "coherent give operator",
+      "G_rec": "reconciliation give operator"
+    },
+
+    "regimes": {
+      "coherence": "stabilizing emotions that reduce drift",
+      "corridor": "transitional emotions that can increase or decrease drift",
+      "drift": "destabilizing emotions that increase drift",
+      "meta": "emotions that modulate regime thresholds",
+      "structural": "RTT-native emotions tied to coherence/drift operators",
+      "forgive": "resonance realignment operator that drops gravity and restores coherence"
+    }
+  },
+
+  "observer_model": {
+    "self": "internal emotional state",
+    "other": "perceived emotional state",
+    "world": "contextual emotional meaning",
+    "resonance": "alignment geometry across self/other/world triad"
+  },
+
+  "regime_transitions": {
+    "drift_to_corridor": "E_coh + E_cor > D",
+    "corridor_to_coherence": "E_coh > D + |R - C|",
+    "coherence_to_corridor": "E_cor > E_coh",
+    "corridor_to_drift": "E_drift > E_coh + E_cor",
+    "coherence_to_drift": "E_drift >> E_coh",
+    "drift_to_coherence": "E_coh >> D",
+
+    "forgive_transition": {
+      "Ng_detected": "Ng_burden > 0",
+      "truth_required": "truth_packet.present == true",
+      "integration": "Ng_integrated = normalize(Ng_burden)",
+      "lever": "0g = drop(Ng_integrated)",
+      "coherence_restore": "give_coherent = rebuild_resonance(0g)"
+    },
+
+    "meta_modulation": {
+      "meta_awareness": "D_effective = D / (1 + M_aw)",
+      "clarity": "C' = C + E_clarity",
+      "overwhelm": "D' = D + E_overwhelm",
+      "numbness": "E_effective = E / (1 + E_numb)"
+    }
+  },
+
+  "alignment_triads": {
+    "values": [-1, 0, 1],
+    "description": "Triadic alignment signature for each emotion: (self, other, world)."
+  },
+
+  "operators": {
+    "FORGIVE": {
+      "kind": "resonance_operator",
+      "signature": "Ng → 0g → give",
+      "description": "Drops gravity, preserves truth, restores coherence, and stabilizes resonance.",
+      "phases": [
+        "Recognition",
+        "Truth-Keeping",
+        "Integration",
+        "Inversion (0g)",
+        "Restoration (give_coherent)",
+        "Continuity",
+        "Renewal"
+      ]
+    }
+  },
+
+  "status": "modular",
+  "license": "Open educational use permitted"
+}

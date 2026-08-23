@@ -1,0 +1,63 @@
+{
+  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
+
+  "module": {
+    "name": "RTT C64 Host",
+    "path": "docs/rtt/c64host",
+    "canon_tag": "rtt-c64",
+    "version": "1.0",
+    "layer": "RTT Host Layer — Retro Engine",
+    "status": "Active, Canonical",
+    "purpose": "Retro-hosted RTT/1 engine: runtime, memory model, I/O surfaces, examples, integration.",
+    "parent": "rtt-engine",
+    "url": "https://www.triadicframeworks.org/rtt/c64host"
+  },
+
+  "session_context": {
+    "canon": "active (rtt-host-retro)",
+    "modules_linked": [
+      "runtime → memory model → I/O surfaces → examples → integration"
+    ],
+    "drift": "minimal (host-locked)",
+    "coherence": "stable (retro-host grammar)",
+    "format": "html + markdown + diagrams",
+    "front_door": "exists (RTT C64 Host root)",
+    "every_page": "stands alone + AI-parsable",
+    "audience": ["students", "developers", "researchers", "AI systems"]
+  },
+
+  "structural_grammar": {
+    "dimensional_envelope": "D0–D3",
+    "regime_envelope": "R0–R1",
+    "coherence_envelope": "C0–C2",
+    "drift_sensitivity": "low",
+    "regime_sensitivity": "low"
+  },
+
+  "cross_module_propagation": {
+    "imports": [
+      "RTT/1 operators",
+      "SARG structural grammar"
+    ],
+    "exports": [
+      "C64 runtime",
+      "C64 memory model",
+      "C64 I/O surfaces",
+      "retro-host examples",
+      "retro-host integration"
+    ]
+  },
+
+  "submodules": [
+    { "name": "C64 Runtime", "path": "c64_runtime.md" },
+    { "name": "C64 Memory Model", "path": "c64_memory.md" },
+    { "name": "C64 I/O", "path": "c64_io.md" },
+    { "name": "C64 Examples", "path": "c64_examples.md" },
+    { "name": "C64 Integration", "path": "c64_integration.md" }
+  ],
+
+  "files": [
+    { "filename": "README.md", "path": "README.md", "purpose": "Overview of RTT C64 Host.", "role": "profile", "depends_on": [] },
+    { "filename": "index.html", "path": "index.html", "purpose": "Front door for RTT C64 Host.", "role": "index", "depends_on": [] }
+  ]
+}

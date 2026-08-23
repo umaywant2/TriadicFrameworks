@@ -1,0 +1,153 @@
+{
+  "module": {
+    "id": "qCompute",
+    "name": "qCompute — RTT‑Inside Compute Harness",
+    "version": "2026",
+    "category": "RTT-Inside Compute Layer",
+    "purpose": "Structural compute harness providing resonance tiers, deterministic routing, drift-bounded frames, environment transitions, append-only capture, and strict replay.",
+    "summary": "Defines the operator pipeline, backend system, frame manager, drift engine, transition engine, capture ledger, and replay verifier for RTT-Inside."
+  },
+
+  "files": [
+    {
+      "path": "qc_FrontDoor.html",
+      "role": "frontdoor",
+      "analyzer_layer": "index",
+      "description": "HTML front door for the qCompute module with canonical metadata and session context."
+    },
+    {
+      "path": "qc_Index.md",
+      "role": "index",
+      "analyzer_layer": "index",
+      "description": "Module overview, file map, and structural orientation."
+    },
+
+    {
+      "path": "qc_Identity.md",
+      "role": "signature",
+      "analyzer_layer": "index",
+      "description": "Defines the identity, purpose, invariants, and structural role of qCompute."
+    },
+    {
+      "path": "qc_Session.md",
+      "role": "engine",
+      "analyzer_layer": "operator",
+      "description": "Session engine: environment, drift bound, lineage, tokens, frames, and trace buffer."
+    },
+    {
+      "path": "qc_Validator.md",
+      "role": "engine",
+      "analyzer_layer": "operator",
+      "description": "Legality engine: grammar, arguments, environment, tier, backend, tokens."
+    },
+    {
+      "path": "qc_Operators.md",
+      "role": "engine",
+      "analyzer_layer": "operator",
+      "description": "Operator catalog defining r1, r2, r3, measurement, and meta operators."
+    },
+    {
+      "path": "qc_OperatorGrammar.md",
+      "role": "signature",
+      "analyzer_layer": "operator",
+      "description": "Formal grammar and legality rules for all operators."
+    },
+
+    {
+      "path": "qc_Backends.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional",
+      "description": "Backend overview: local-sim, hybrid-sim, hardware-qpu-2."
+    },
+    {
+      "path": "qc_BackendProfiles.md",
+      "role": "profile",
+      "analyzer_layer": "dimensional",
+      "description": "Deep metadata profiles for each backend."
+    },
+
+    {
+      "path": "qc_Router.md",
+      "role": "engine",
+      "analyzer_layer": "regime",
+      "description": "Routing engine: backend selection, frame reuse, tier escalation, drift overflow."
+    },
+    {
+      "path": "qc_ResonanceFrame.md",
+      "role": "engine",
+      "analyzer_layer": "regime",
+      "description": "Frame manager: lifecycle, tier monotonicity, backend binding, drift accumulation."
+    },
+    {
+      "path": "qc_Drift.md",
+      "role": "engine",
+      "analyzer_layer": "regime",
+      "description": "Drift engine: predicted/measured drift, accumulation, overflow, environment bounds."
+    },
+    {
+      "path": "qc_Transitions.md",
+      "role": "engine",
+      "analyzer_layer": "regime",
+      "description": "Environment transition engine: sandbox → production → archive."
+    },
+
+    {
+      "path": "qc_Capture.md",
+      "role": "engine",
+      "analyzer_layer": "drift",
+      "description": "Capture engine: writes operators, frames, transitions, and hash-linked ledger."
+    },
+    {
+      "path": "qc_Replay.md",
+      "role": "engine",
+      "analyzer_layer": "coherence",
+      "description": "Replay engine: reconstructs sessions, verifies invariants, enforces integrity."
+    },
+
+    {
+      "path": "qc_API.md",
+      "role": "signature",
+      "analyzer_layer": "operator",
+      "description": "Public API surface for sessions, operators, transitions, capture, and replay."
+    },
+    {
+      "path": "qc_Flow.md",
+      "role": "map",
+      "analyzer_layer": "cross-cutting",
+      "description": "Narrative pipeline walkthrough of the entire structural cycle."
+    },
+    {
+      "path": "qc_Examples_Minimal.md",
+      "role": "example",
+      "analyzer_layer": "cross-cutting",
+      "description": "Minimal structural examples demonstrating basic qCompute usage."
+    },
+    {
+      "path": "qc_Examples_Advanced.md",
+      "role": "example",
+      "analyzer_layer": "cross-cutting",
+      "description": "Advanced multi-frame, multi-transition, multi-backend examples."
+    }
+  ],
+
+  "schema": {
+    "roles": [
+      "engine",
+      "profile",
+      "signature",
+      "index",
+      "frontdoor",
+      "example",
+      "map"
+    ],
+    "analyzer_layers": [
+      "operator",
+      "dimensional",
+      "regime",
+      "drift",
+      "coherence",
+      "index",
+      "cross-cutting"
+    ]
+  }
+}

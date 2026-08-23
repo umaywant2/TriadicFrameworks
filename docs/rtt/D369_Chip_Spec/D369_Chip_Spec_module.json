@@ -1,0 +1,150 @@
+{
+  "module": "D369_Chip_Spec",
+  "version": "1.1",
+  "category": "rtt",
+  "summary": "Structural observability reservation for silicon — metadata channels that preserve source identity, lifecycle state, and temporal lineage without altering functional behavior. 19 content files, 76 numbered identifiers, 182 checklist items, zero drift from Capture Source.",
+  "canon_tag": "rtt-d369-chip-spec",
+  "layer": "structural-substrate",
+  "tier": "mid-spine",
+  "parent": "RTT",
+  "status": "first-fill-complete",
+  "imports": ["RTT/1", "SARG"],
+  "exports": ["Temperature", "Demi-Force", "FFF", "Coherence Engine"],
+  "session_context": {
+    "canon": "active",
+    "drift": "zero (capture-locked)",
+    "coherence": "stable (structural-observability grammar)",
+    "format": "markdown + ASCII diagrams + tabular data",
+    "front_door": "README.md",
+    "every_page": "stands alone + AI-parsable + engineer-readable",
+    "audience": "engineers + students + AIs + reviewers"
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "operator",
+      "purpose": "Module front door — building metaphor, 3D–9D overview, reading order, RTT spine position."
+    },
+    {
+      "path": "Capture_Source.md",
+      "role": "engine",
+      "analyzer_layer": "lineage",
+      "purpose": "Verbatim capture of the original tft_rtt_3d_9d_chip_spec.md — all lineage starts here."
+    },
+    {
+      "path": "Spec_Overview.md",
+      "role": "profile",
+      "analyzer_layer": "dimensional",
+      "purpose": "Executive-level specification summary — full module in one sitting, 14 sections."
+    },
+    {
+      "path": "Contractual_Requirements.md",
+      "role": "engine",
+      "analyzer_layer": "coherence",
+      "purpose": "Page 1 of 3 — 12 formal SHALL requirements (R1.1–R7.1), design review checklist, architecture targets."
+    },
+    {
+      "path": "Engineering_Rationale.md",
+      "role": "reference",
+      "analyzer_layer": "operator",
+      "purpose": "Page 2 of 3 — 10 rationale statements (ER-1–ER-10), cost argument, DFT comparison, design freedom (DF-1–DF-3)."
+    },
+    {
+      "path": "Non_Claims_and_Boundaries.md",
+      "role": "engine",
+      "analyzer_layer": "drift",
+      "purpose": "Page 3 of 3 — 10 non-claims (NC-1–NC-10), 4 boundaries (B-1–B-4), silence clause (S-1–S-3), Anti-Inflation Principle."
+    },
+    {
+      "path": "Diagram_SoC.md",
+      "role": "map",
+      "analyzer_layer": "dimensional",
+      "purpose": "Monolithic SoC block decomposition — NoC erasures (N-1–N-5), cache hierarchy, power domains, debug vs. metadata."
+    },
+    {
+      "path": "Diagram_Chiplet.md",
+      "role": "map",
+      "analyzer_layer": "dimensional",
+      "purpose": "Chiplet topologies (4 canonical), D2D protocol analysis, interposer types, HBM Problem, structural observability stack."
+    },
+    {
+      "path": "Internal_Design_Review_Checklist.md",
+      "role": "diagnostic",
+      "analyzer_layer": "cross-cutting",
+      "purpose": "Standalone carry-in review artifact — 62 items across 10 sections, architecture variant tags, bidirectional traceability."
+    },
+    {
+      "path": "Memory_Controller_Checklist.md",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence",
+      "purpose": "Controller pipeline checklist — 55 items across 10 sections, 8 failure modes (MC-1–MC-8), Meta_MEM channel spec."
+    },
+    {
+      "path": "DIMM_Module_Checklist.md",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence",
+      "purpose": "DIMM structural observability — 38 items across 7 sections, 5 failure modes (FM-1–FM-5), DDR generation matrix."
+    },
+    {
+      "path": "Board_Level_Alignment.md",
+      "role": "engine",
+      "analyzer_layer": "regime",
+      "purpose": "Board preservation — 4 rules, 4 failure modes, 27-item checklist, memory hierarchy persistence model."
+    },
+    {
+      "path": "Memory_Alignment_Spec.md",
+      "role": "engine",
+      "analyzer_layer": "regime",
+      "purpose": "Full-stack memory hierarchy — 8 tiers (Register to Archive), volatility line, 7 structural events (ME-1–ME-7), 5 principles (MA-1–MA-5)."
+    },
+    {
+      "path": "Adoption_Roadmap.md",
+      "role": "map",
+      "analyzer_layer": "cross-cutting",
+      "purpose": "Six-phase adoption pathway — spec freeze through cross-domain integration, risk register, fabs-before-students ordering."
+    },
+    {
+      "path": "FAQ.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting",
+      "purpose": "40+ questions across 12 sections — every answer source-traced to originating D369 file, includes §12 student questions."
+    },
+    {
+      "path": "Glossary_Extensions.md",
+      "role": "reference",
+      "analyzer_layer": "operator",
+      "purpose": "70+ terms across 8 sections — extends master glossary with D369-specific, extended, and numbered reference terms."
+    },
+    {
+      "path": "Meta.md",
+      "role": "reference",
+      "analyzer_layer": "coherence",
+      "purpose": "Module manifest — 20-file table, dependency graph, 76-identifier registry, checklist inventory, AI discovery tags."
+    },
+    {
+      "path": "Session_Context.md",
+      "role": "index",
+      "analyzer_layer": "regime",
+      "purpose": "Structural handshake — canon rules, anti-patterns, contribution rules, AI agent quick-reference, reading order."
+    },
+    {
+      "path": "Student_Learning_Paths.md",
+      "role": "extension",
+      "analyzer_layer": "cross-cutting",
+      "purpose": "4 background-specific paths (EE, CS, Physics, Interdisciplinary), 3 depth levels, milestone markers, educator guidance."
+    },
+    {
+      "path": "Substrate_Literacy.md",
+      "role": "extension",
+      "analyzer_layer": "operator",
+      "purpose": "Capstone — defines substrate literacy as the unified lens, maps all 19 files to literacy facets, documents the full erasure chain."
+    },
+    {
+      "path": "D369_Chip_Spec_module.json",
+      "role": "index",
+      "analyzer_layer": "operator",
+      "purpose": "Machine-readable module manifest — file roles, analyzer layers, session context, imports/exports, AI discovery metadata."
+    }
+  ]
+}

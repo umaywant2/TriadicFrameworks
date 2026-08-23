@@ -1,0 +1,88 @@
+{
+  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
+  "$generated": "2026-08-03T09:53:00",
+  "$version": "1.4",
+  "$round": "R5",
+  "identity": {
+    "module": "RTT_INSIDE_ENTERPRISE",
+    "canonical_name": "Inside · Enterprise",
+    "module_path": "docs/rtt/Inside/Enterprise",
+    "version": "RTT/3",
+    "status": "Active Canonical",
+    "category": "RTT Deployment Layer",
+    "summary": "Enterprise-domain RTT deployment context: org-structure coherence, capital utilization, labor stress, and infrastructure capacity regime diagnostics"
+  },
+  "purpose": {
+    "role": "Enterprise-domain RTT deployment context: org-structure coherence, capital utilization, labor stress, and infrastructure capacity regime diagnostics",
+    "description": "RTT Inside Enterprise is the Enterprise-domain deployment context for the RTT engine stack. It provides domain-native signal labels, regime vocabulary, and translation tables mapping abstract RTT signals to Enterprise-specific constructs: structural faultlines → org-structure fractures; drift vectors → capital migration and labor displacement velocity; substrate capacity → infrastructure runway and budget headroom; coherence → cross-functional integration quality; DRM → enterprise-wide interdependency resonance map. The Enterprise context is consumed by the Domain Overlay to produce Enterprise-flavoured DDRs, DAMs, and CDCSs.",
+    "spine_role": "Domain translation context for Enterprise S3 Spine DDR generation",
+    "audience": [
+      "executives",
+      "org architects",
+      "analysts",
+      "AIs"
+    ]
+  },
+  "structure": {
+    "module_type": "Enterprise Domain Context",
+    "triadic_lens": "enterprise-as-rtt-deployment",
+    "analyzer_layer": [
+      "RTT Deployment Layer",
+      "Core Frameworks — Structural Spine"
+    ]
+  },
+  "files": {
+    "core": [
+      "Enterprise.md",
+      "index.md"
+    ],
+    "support": [
+      "module.json",
+      "README.md"
+    ],
+    "ai": [
+      "module.json"
+    ]
+  },
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural",
+    "format": "module.json",
+    "round": "R5"
+  },
+  "ai_metadata": {
+    "navigation": {
+      "url": "https://www.triadicframeworks.org/rtt/Inside/Enterprise/",
+      "path": "docs/rtt/Inside/Enterprise"
+    },
+    "ai_ready": true,
+    "ai_module_id": "RTT_INSIDE_ENTERPRISE",
+    "ai_keywords": [
+      "enterprise",
+      "org structure",
+      "capital utilization",
+      "labor stress",
+      "infrastructure capacity",
+      "enterprise DDR",
+      "org-structure faultlines",
+      "TriadicFrameworks",
+      "S3 Spine",
+      "R5"
+    ],
+    "ai_purpose": "Enterprise-domain RTT deployment context: org-structure coherence, capital utilization, labor stress, and infrastructure capacity regime diagnostics",
+    "ai_audience": [
+      "executives",
+      "org architects",
+      "analysts",
+      "AIs"
+    ],
+    "license": "See docs/LICENSE_module.json",
+    "module": {
+      "module_id": "RTT_INSIDE_ENTERPRISE",
+      "canonical_name": "Inside · Enterprise",
+      "version": "RTT/3"
+    }
+  }
+}

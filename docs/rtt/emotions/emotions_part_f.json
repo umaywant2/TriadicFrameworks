@@ -1,0 +1,103 @@
+{
+  "module": "RTT_Emotions_Part_F",
+  "version": "1.0.0",
+  "parent": "emotions_module.json",
+  "category": "rtt-emotional-dynamics.part-f",
+  "summary": "Drift, meta, and structural emotions (set F): 10 high-impact emotional operators.",
+  "description": "Part F of the RTT Emotions Module. Contains 10 drift, meta, and structural emotions with RTT equations, alignment triads, drift effects, and transition conditions. These emotions modulate regime thresholds, coherence baselines, and drift amplification.",
+
+  "emotions": {
+
+    /* ========================= */
+    /*  META EMOTIONS            */
+    /* ========================= */
+
+    "meta_awareness": {
+      "equation": "M_aw = k_maw * σ * Φ_awareness",
+      "regime": "meta",
+      "alignment_triad": { "self": 1, "other": 0, "world": 1 },
+      "drift_effect": "reduces",
+      "transition": "M_aw increases → D_effective decreases"
+    },
+
+    "emotional_clarity": {
+      "equation": "E_clar = k_clar * σ * Φ_labeling",
+      "regime": "meta",
+      "alignment_triad": { "self": 1, "other": 0, "world": 1 },
+      "drift_effect": "reduces",
+      "transition": "E_clar increases → C' increases"
+    },
+
+    "numbness": {
+      "equation": "N_mb = k_nmb * σ / (1 + E_numb)",
+      "regime": "meta",
+      "alignment_triad": { "self": 0, "other": 0, "world": -1 },
+      "drift_effect": "reduces emotional amplitude",
+      "transition": "high numbness → suppressed emotional operators"
+    },
+
+    "overwhelm": {
+      "equation": "O_w = k_ow * σ * (D + |R - C|)",
+      "regime": "meta",
+      "alignment_triad": { "self": -1, "other": 0, "world": -1 },
+      "drift_effect": "increases",
+      "transition": "O_w > threshold → drift amplification"
+    },
+
+    /* ========================= */
+    /*  STRUCTURAL EMOTIONS      */
+    /* ========================= */
+
+    "coherence_relief": {
+      "equation": "E_relief = k_rel * σ * (C' - C)",
+      "regime": "structural",
+      "alignment_triad": { "self": 1, "other": 1, "world": 1 },
+      "drift_effect": "reduces",
+      "transition": "E_relief > 0 → coherence restoration"
+    },
+
+    "alignment_joy": {
+      "equation": "A_joy = k_joy * σ * (A_s + A_o + A_w)",
+      "regime": "structural",
+      "alignment_triad": { "self": 1, "other": 1, "world": 1 },
+      "drift_effect": "reduces",
+      "transition": "A_joy > threshold → strong coherence"
+    },
+
+    "drift_anxiety": {
+      "equation": "D_anx = k_danx * σ * D",
+      "regime": "structural",
+      "alignment_triad": { "self": -1, "other": 0, "world": -1 },
+      "drift_effect": "increases",
+      "transition": "D_anx > threshold → drift acceleration"
+    },
+
+    "collapse_fear": {
+      "equation": "C_fear = k_cfear * σ * (D + ΔO + |R - C|)",
+      "regime": "structural",
+      "alignment_triad": { "self": -1, "other": 0, "world": -1 },
+      "drift_effect": "increases",
+      "transition": "C_fear > threshold → regime collapse"
+    },
+
+    "isolation": {
+      "equation": "Iso = k_iso * σ * (ΔO + A_s_negative)",
+      "regime": "structural",
+      "alignment_triad": { "self": -1, "other": -1, "world": -1 },
+      "drift_effect": "increases",
+      "transition": "Iso > threshold → deep drift"
+    },
+
+    "distrust": {
+      "equation": "D_tr = k_dtr * σ * (A_o_negative + ΔO)",
+      "regime": "structural",
+      "alignment_triad": { "self": -1, "other": -1, "world": 0 },
+      "drift_effect": "increases",
+      "transition": "D_tr > threshold → drift reinforcement"
+    }
+
+  },
+
+  "status": "complete",
+  "license": "Open educational use permitted"
+}

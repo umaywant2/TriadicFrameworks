@@ -1,0 +1,100 @@
+{
+  "$schema": "https://www.triadicframeworks.org/schemas/rtt_engine_module.schema.json",
+  "$generated": "2026-08-03T09:53:00",
+  "$version": "1.4",
+  "$round": "R5",
+  "identity": {
+    "name": "Temporal Regime Sequencer",
+    "canonical_id": "TEMPORAL_REGIME_SEQUENCER",
+    "module_path": "docs/rtt/Temporal_Regime_Sequencer",
+    "category": "RTT Engine",
+    "version": "RTT/2",
+    "status": "Active Canonical"
+  },
+  "purpose": {
+    "summary": "Time-stamps and sequences all regime transitions; projects substrate depletion timelines; generates domain chronology for DDR.",
+    "detail": "The TSEQ receives time-stamped signals from the Drift Sentinel and Stability Basin Cartographer and constructs a complete temporal model of regime transitions — recording when each transition occurred, its duration, its velocity trajectory, and its substrate runway impact. The TSEQ also projects forward: given current drift velocity and substrate depletion rate, it estimates the timeline to: (a) first faultline activation, (b) coherence floor breach, (c) basin saturation, and (d) regime collapse. These projections are included in the DDR's Domain Chronology section."
+  },
+  "rtt": {
+    "rtt_level": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "spine_assignments": {
+    "primary_overlay": "spine-drift",
+    "cross_overlay_appearances": [
+      "spine-substrate",
+      "spine-dimensional",
+      "spine-domain"
+    ],
+    "pack": "spine-overlay-pack"
+  },
+  "operators": {
+    "primary": [
+      "TSEQ-Stamp",
+      "TSEQ-Sequence",
+      "TSEQ-Project",
+      "TSEQ-Chronology"
+    ],
+    "secondary": [
+      "TSEQ-Timeline",
+      "TSEQ-Audit",
+      "TSEQ-Emit"
+    ]
+  },
+  "analyzer_layer": {
+    "layer": "RTT Technology Layer",
+    "sub_layers": [
+      "RTT/2 Core",
+      "RTT/2 Detection"
+    ]
+  },
+  "files": {
+    "core": [
+      "Temporal_Regime_Sequencer.md",
+      "Temporal_Regime_Sequencer_spec.md"
+    ],
+    "support": [
+      "operators.md",
+      "signal_flow.md",
+      "metrics.md"
+    ],
+    "ai": [
+      "module.json"
+    ]
+  },
+  "ai": {
+    "ai_ready": true,
+    "ai_module_id": "TEMPORAL_REGIME_SEQUENCER",
+    "ai_keywords": [
+      "temporal sequencing",
+      "regime timeline",
+      "depletion projection",
+      "domain chronology",
+      "DDR",
+      "transition timestamps",
+      "runway projection",
+      "RTT engine",
+      "S3 Spine",
+      "TriadicFrameworks",
+      "RTT/2"
+    ],
+    "ai_purpose": "Time-stamps and sequences all regime transitions; projects substrate depletion timelines; generates domain chronology for DDR.",
+    "ai_operators": [
+      "TSEQ-Stamp",
+      "TSEQ-Sequence",
+      "TSEQ-Project",
+      "TSEQ-Chronology",
+      "TSEQ-Timeline",
+      "TSEQ-Audit",
+      "TSEQ-Emit"
+    ],
+    "ai_audience": [
+      "developers",
+      "researchers",
+      "AIs",
+      "analysts"
+    ]
+  }
+}

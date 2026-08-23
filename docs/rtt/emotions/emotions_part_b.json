@@ -1,0 +1,95 @@
+{
+  "module": "RTT_Emotions_Part_B",
+  "version": "1.0.0",
+  "parent": "emotions_module.json",
+  "category": "rtt-emotional-dynamics.part-b",
+  "summary": "Coherence and group-alignment emotions (set B): 10 stabilizing emotional operators.",
+  "description": "Part B of the RTT Emotions Module. Contains 10 coherence and group-alignment emotions with RTT equations, alignment triads, drift effects, and transition conditions.",
+
+  "emotions": {
+
+    "respect": {
+      "equation": "R_esp = k_r * σ * (R / (1 + ΔO))",
+      "regime": "coherence",
+      "alignment_triad": { "self": 1, "other": 1, "world": 0 },
+      "drift_effect": "reduces",
+      "transition": "R_esp > D"
+    },
+
+    "hope": {
+      "equation": "H = k_h * σ * (R_future / (1 + D))",
+      "regime": "coherence",
+      "alignment_triad": { "self": 1, "other": 0, "world": 1 },
+      "drift_effect": "reduces",
+      "transition": "H > D"
+    },
+
+    "affection": {
+      "equation": "A_ff = k_aff * σ * (R / (1 + ΔO))",
+      "regime": "coherence",
+      "alignment_triad": { "self": 1, "other": 1, "world": 0 },
+      "drift_effect": "reduces",
+      "transition": "A_ff > D"
+    },
+
+    "belonging": {
+      "equation": "B = k_b * σ * (R_group / (1 + ΔO_group))",
+      "regime": "coherence",
+      "alignment_triad": { "self": 1, "other": 1, "world": 1 },
+      "drift_effect": "reduces",
+      "transition": "B > D"
+    },
+
+    "admiration": {
+      "equation": "A_dm = k_adm * σ * (R_other / (1 + ΔO))",
+      "regime": "coherence",
+      "alignment_triad": { "self": 1, "other": 1, "world": 0 },
+      "drift_effect": "reduces",
+      "transition": "A_dm > D"
+    },
+
+    "courage_stabilizing": {
+      "equation": "C_stab = k_c2 * σ * (R / (1 + D))",
+      "regime": "coherence",
+      "alignment_triad": { "self": 1, "other": 0, "world": 1 },
+      "drift_effect": "reduces",
+      "transition": "C_stab > D"
+    },
+
+    "loyalty": {
+      "equation": "L_oy = k_loy * σ * (A_s + A_o)",
+      "regime": "coherence",
+      "alignment_triad": { "self": 1, "other": 1, "world": 0 },
+      "drift_effect": "reduces",
+      "transition": "L_oy > D"
+    },
+
+    "security": {
+      "equation": "Sec = k_sec * σ * (C / (1 + D))",
+      "regime": "coherence",
+      "alignment_triad": { "self": 1, "other": 0, "world": 1 },
+      "drift_effect": "reduces",
+      "transition": "Sec > D"
+    },
+
+    "stability": {
+      "equation": "Stab = k_stab * σ * C",
+      "regime": "coherence",
+      "alignment_triad": { "self": 1, "other": 0, "world": 1 },
+      "drift_effect": "reduces",
+      "transition": "Stab > D"
+    },
+
+    "warmth": {
+      "equation": "W = k_w * σ * (A_s + A_o)",
+      "regime": "coherence",
+      "alignment_triad": { "self": 1, "other": 1, "world": 0 },
+      "drift_effect": "reduces",
+      "transition": "W > D"
+    }
+
+  },
+
+  "status": "complete",
+  "license": "Open educational use permitted"
+}

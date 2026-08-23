@@ -1,0 +1,23 @@
+{
+  "module": {
+    "name": "rtt-2",
+    "version": "1.0",
+    "category": "rtt-detection",
+    "summary": "RTT/2 — Structural Detection Engine (SDE): CPV, FGT, CRM, MODE, ZONE, and the RTT2_DETECTION_PACKET.",
+    "purpose": "Provide the full operator grammar for collapse detection and regime classification in RTT/2.",
+    "audience": ["students", "instructors", "researchers", "AIs"]
+  },
+
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "RTT2_Extract_Minimal.md",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    }
+  ]
+}

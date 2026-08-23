@@ -1,0 +1,38 @@
+{
+  "module": "Echo Classifier",
+  "version": "1.0",
+  "category": "rtt-echo-engine",
+  "summary": "HSP/06c classification engine — 5 inputs, 6 echo types (E1 structural, E2 semantic, E3 regime, E4 dimensional, E5 recursive, E6 meta), zero‑drift pipeline, operators (EC‑Read, EC‑Classify, EC‑Tag), integration pathways (HSP parent, TEL, Substrate Flow), worked examples, and EC capture lineage.",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "operators.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "examples.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "integration.md",
+      "role": "engine",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "EC_Capture.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    }
+  ]
+}

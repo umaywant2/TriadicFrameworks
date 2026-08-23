@@ -1,0 +1,107 @@
+# ✅ **echo_map.txt (v1.0)**  
+### *Canonical ASCII Echo Map — Families • Triggers • Signatures • Escalation*
+
+```
+===============================================================
+   RTT ECHO MAP — ASCII SET (v1.0)
+   Echo Families • Triggers • Signatures • Escalation Path
+===============================================================
+
+
+                     ECHO FAMILY MAP (F1–F6)
+                     ------------------------
+
+      F1 --------> F2 --------> F3 --------> F4 --------> F5 --------> F6
+   Structural    Harmonic    Substrate    Recursion   Drift-Shadow    Atlas
+       |            |            |            |            |            |
+       A            B            C            D            E            F
+   Trigger A    Trigger B    Trigger C    Trigger D    Trigger E    Trigger F
+   (struct)     (harmonic)   (substrate)  (recur)      (drift)      (atlas)
+
+
+===============================================================
+   ECHO SIGNATURE MAP (A–F)
+===============================================================
+
+   Signature A → Structural Echo
+       Triad repetition, operator recurrence, stable intervals
+
+   Signature B → Harmonic Echo
+       Interval alignment, resonance peaks, ladder parallels
+
+   Signature C → Substrate Echo
+       Cross-layer migration, semantic reinterpretation
+
+   Signature D → Recursion Echo
+       Ladder → Cycle → Map → Atlas pattern repetition
+
+   Signature E → Drift-Shadow Echo
+       Drift residue, mutation, inversion, instability
+
+   Signature F → Atlas Echo
+       High-altitude resonance, cross-module lineage
+
+
+===============================================================
+   ECHO ESCALATION PATH (Canonical)
+===============================================================
+
+   A → B → C → D → E → F
+   Structural → Harmonic → Substrate → Recursion → Drift → Atlas
+
+   ASCII:
+        [A] ---> [B] ---> [C] ---> [D] ---> [E] ---> [F]
+        F1        F2        F3        F4        F5        F6
+
+
+===============================================================
+   ECHO PRESSURE ZONES
+===============================================================
+
+   Mild:      F1, F2
+   Moderate:  F3, F4
+   High:      F5
+   Critical:  F6
+
+   ASCII:
+        F1  F2   F3   F4    F5     F6
+        .   .    ▒    ▓     █      █
+
+
+===============================================================
+   SUBSTRATE MIGRATION MAP (Echo-Centric)
+===============================================================
+
+   S → C ↔ H → So → A
+
+   Echo Families:
+       F1: S → C
+       F2: H
+       F3: S/C/H/So
+       F4: H → So → A
+       F5: S/H/A (unstable)
+       F6: A
+
+   ASCII:
+        S ---> C <===> H ---> So ---> A
+        |       |       |       |       |
+       F1      F3      F2      F4      F6
+                        ^       ^
+                        |       |
+                       F5 (drift-shadow)
+
+
+===============================================================
+   ECHO CLASSIFIER (Compact ASCII)
+===============================================================
+
+   Trigger → Signature → ESI → Substrates → Recursion → Echo Type
+
+   ASCII:
+        [T] --> [S] --> [ESI] --> [Sub] --> [R] --> [E#]
+
+
+===============================================================
+   END OF FILE — Echo Map ASCII (v1.0)
+===============================================================
+```

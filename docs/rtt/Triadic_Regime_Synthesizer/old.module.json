@@ -1,0 +1,78 @@
+{
+  "identity": {
+    "name": "Triadic Regime Synthesizer",
+    "canonical_id": "RTT_TRIADIC_REGIME_SYNTHESIZER",
+    "module_path": "/docs/rtt/Triadic_Regime_Synthesizer/",
+    "category": "rtt-structural",
+    "version": "1.0",
+    "status": "canon-stable"
+  },
+
+  "purpose": {
+    "summary": "RTT/1 regime-level intelligence engine for synthesizing, merging, and harmonizing regime structures across conceptual, computational, and physical domains.",
+    "detail": "The Triadic Regime Synthesizer integrates regime interlocks, merges regime boundaries, computes regime synthesis tensors, and produces unified regime structures for higher-level RTT engines such as the Paradox Gradient Analyzer, Coherence Tensor Engine, Drift Sentinel, Faultline Detector, Stability Basin Cartographer, Temporal Regime Sequencer, Causality Weaver, and Dimensional Resonance Scanner."
+  },
+
+  "rtt": {
+    "rtt_level": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+
+  "operators": {
+    "primary": [
+      "TRS-Synthesize",
+      "TRS-Merge",
+      "TRS-Harmonize",
+      "TRS-Boundary",
+      "TRS-Tensor",
+      "TRS-Resolve"
+    ],
+    "secondary": [
+      "RTT-Regime",
+      "RTT-Synthesis",
+      "RTT-Boundary",
+      "RTT-Structural"
+    ]
+  },
+
+  "analyzer_layer": {
+    "layer": "regime",
+    "sub_layers": [
+      "regime-synthesis",
+      "boundary-harmonization",
+      "interlock-integration",
+      "synthesis-tensor-analysis",
+      "structural-regime-evaluation"
+    ]
+  },
+
+  "files": {
+    "core": [
+      "README.md",
+      "Triadic_Regime_Synthesizer.md",
+      "trs_examples.md",
+      "trs_diagrams.svg"
+    ],
+    "support": [
+      "regime_synthesis_profiles.md",
+      "regime_boundary_cases.md",
+      "regime_synthesis_matrix.json"
+    ],
+    "ai": [
+      "trs_prompts.md",
+      "trs_operators.md"
+    ]
+  },
+
+  "ai": {
+    "ai_ready": true,
+    "ai_module_id": "RTT_TRIADIC_REGIME_SYNTHESIZER",
+    "ai_keywords": "RTT, regime synthesis, regime harmonization, synthesis tensor, boundary integration, structural regime analysis",
+    "ai_purpose": "Provide regime-level synthesis intelligence for RTT/1 by integrating regime interlocks, harmonizing regime boundaries, computing synthesis tensors, and generating unified regime structures across conceptual, computational, and physical domains.",
+    "ai_operators": "TRS-Synthesize, TRS-Merge, TRS-Harmonize, TRS-Boundary, TRS-Tensor, TRS-Resolve",
+    "ai_audience": "researchers, systems designers, AI systems"
+  }
+}
+

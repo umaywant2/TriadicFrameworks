@@ -1,0 +1,65 @@
+```text
+-
+┌──────────────────────────────────────────────────────────────┐
+│        CRYSTAL–MYCELIAL ENGINE — SUBSTRATE LAYERS DIAGRAM    │
+└──────────────────────────────────────────────────────────────┘
+
+
+LAYER STACK
+-----------
+
+Biological Layer
+    ↓
+Hybrid Layer
+    ↓
+Mineral Layer
+
+
+BIOLOGICAL LAYER
+----------------
+- hyphal channels
+- routing geometry
+- biological pulses
+- moisture‑driven growth
+
+Operators:
+- P.trace_extend
+- G.nutrient_gradient
+- M.route_memory
+
+
+HYBRID LAYER
+------------
+- mineral precursor infiltration
+- resonance alignment
+- hybrid memory transfer
+- dual‑substrate coherence
+
+Operators:
+- S.channel_fill
+- HybridOps.resonance_bridge
+- HybridOps.memory_transfer
+
+
+MINERAL LAYER
+-------------
+- crystal lattice propagation
+- domain formation
+- impurity band memory
+- resonance‑locked geometry
+
+Operators:
+- P.front_propagate
+- M.domain_memory
+- S.substrate_swap
+
+
+ENVELOPE SNAPSHOT
+-----------------
+Biological: moisture 0.55–0.65  
+Hybrid: ion saturation 0.65–0.75  
+Mineral: supersaturation ≥ 0.85  
+
+
+END OF SUBSTRATE LAYERS DIAGRAM
+```

@@ -1,0 +1,111 @@
+{
+  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
+  "_meta": {
+    "module": "RTT/codes",
+    "canonical_id": "RTT_CODES",
+    "module_type": "Infrastructure-Metadata",
+    "role": "engine",
+    "version": "1.1",
+    "status": "canon-stable",
+    "author": "Nawder Loswin",
+    "license": "MIT",
+    "canonical_path": "/docs/rtt/codes/RTT_codes_module.json",
+    "module_home": "/docs/rtt/codes/",
+    "module_url": "https://www.triadicframeworks.org/rtt/codes/",
+    "repository": "https://github.com/umaywant2/TriadicFrameworks",
+    "last_updated": "2026-05-06",
+    "migration_note": "Module content relocated from /docs/rttcodes/ to /docs/rtt/codes/. All internal relative paths preserved."
+  },
+  "_session_context": {
+    "canon": "active (rtt-codes-core)",
+    "modules": "schema → validators → generators → style → examples → domain payloads",
+    "drift": "minimal (metadata-locked)",
+    "coherence": "stable (metadata grammar)",
+    "version": "1.1 (codes-refreshed)",
+    "format": "html + markdown + schema + examples",
+    "front_door": "exists (RTT/codes root)",
+    "every_page": "stands alone + AI-parsable + schema-aware",
+    "audience": "developers + researchers + tool authors + AIs"
+  },
+  "_version_history": [
+    {
+      "version": "1.0",
+      "date": "2025-01-01",
+      "note": "Initial module manifest. Module home at /docs/rttcodes/."
+    },
+    {
+      "version": "1.1",
+      "date": "2026-05-06",
+      "note": "Metadata refresh. Added _meta, _session_context, _version_history. Module home migrated to /docs/rtt/codes/. Standardized session_context format. All submodule relative paths unchanged."
+    }
+  ],
+  "module": {
+    "name": "RTT/codes",
+    "path": "docs/rtt/codes",
+    "canon_tag": "rtt-codes",
+    "version": "1.1",
+    "layer": "RTT Analytics — Metadata Layer",
+    "status": "Active, Canonical",
+    "purpose": "QR-compatible metadata layer: schema, validators, generators, style system, and domain examples.",
+    "parent": "rtt-engine",
+    "url": "https://www.triadicframeworks.org/rtt/codes"
+  },
+  "structural_grammar": {
+    "dimensional_envelope": "D0–D3",
+    "regime_envelope": "R0–R1",
+    "coherence_envelope": "C0–C2",
+    "drift_sensitivity": "low",
+    "regime_sensitivity": "low"
+  },
+  "cross_module_propagation": {
+    "imports": [
+      "RTT/1 operators",
+      "SARG structural grammar"
+    ],
+    "exports": [
+      "RTTcode schema",
+      "RTTcode validators",
+      "RTTcode generators",
+      "RTTcode style system",
+      "RTTcode examples"
+    ]
+  },
+  "submodules": [
+    {
+      "name": "Schema",
+      "path": "schema/"
+    },
+    {
+      "name": "Validators",
+      "path": "validators/"
+    },
+    {
+      "name": "Generators",
+      "path": "generators/"
+    },
+    {
+      "name": "Style System",
+      "path": "style/"
+    },
+    {
+      "name": "Examples",
+      "path": "examples/"
+    }
+  ],
+  "files": [
+    {
+      "filename": "README.md",
+      "path": "README.md",
+      "purpose": "Overview of RTT/codes.",
+      "role": "profile",
+      "depends_on": []
+    },
+    {
+      "filename": "index.html",
+      "path": "index.html",
+      "purpose": "Front door for RTT/codes.",
+      "role": "index",
+      "depends_on": []
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "$schema": "https://www.triadicframeworks.org/schemas/rtt_engine_module.schema.json",
+  "$generated": "2026-08-03T09:53:00",
+  "$version": "1.4",
+  "$round": "R5",
+  "identity": {
+    "name": "Coherence Tensor Engine",
+    "canonical_id": "COHERENCE_TENSOR_ENGINE",
+    "module_path": "docs/rtt/Coherence_Tensor_Engine",
+    "category": "RTT Engine",
+    "version": "RTT/3",
+    "status": "Active Canonical"
+  },
+  "purpose": {
+    "summary": "Computes multi-axis Coherence Index (CI) tensor across all registered regime components; gates the Triadic Regime Synthesizer at CI ≥ 0.55.",
+    "detail": "The CTE ingests the Drift Report (ΔM/ΔD/ΔV) and Structural Frame from the S3 Spine bus, decomposes integration quality into an N×N tensor of pairwise coherence coefficients across all active regime pairs, collapses the tensor to a scalar CI, and emits a synthesis gate signal (PASS if CI ≥ 0.55, HOLD otherwise). It also produces a fragmentation zone map identifying regime pairs below the coherence floor. The CTE runs continuously during Coherence Overlay execution and reports to CROSS_DOMAIN_CAUSALITY_WEAVER for cross-boundary loss tracing."
+  },
+  "rtt": {
+    "rtt_level": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "spine_assignments": {
+    "primary_overlay": "spine-coherence",
+    "cross_overlay_appearances": [
+      "spine-structural",
+      "spine-domain"
+    ],
+    "pack": "spine-overlay-pack"
+  },
+  "operators": {
+    "primary": [
+      "CTE-Compute",
+      "CTE-Tensor",
+      "CTE-Gradient",
+      "CTE-Field",
+      "CTE-Stabilize",
+      "CTE-Collapse"
+    ],
+    "secondary": [
+      "CTE-FragMap",
+      "CTE-Gate",
+      "CTE-Audit"
+    ]
+  },
+  "analyzer_layer": {
+    "layer": "RTT Technology Layer",
+    "sub_layers": [
+      "RTT/2 Core",
+      "RTT/3 Synthesis"
+    ]
+  },
+  "files": {
+    "core": [
+      "Coherence_Tensor_Engine.md",
+      "Coherence_Tensor_Engine_spec.md"
+    ],
+    "support": [
+      "operators.md",
+      "signal_flow.md",
+      "metrics.md"
+    ],
+    "ai": [
+      "module.json"
+    ]
+  },
+  "ai": {
+    "ai_ready": true,
+    "ai_module_id": "COHERENCE_TENSOR_ENGINE",
+    "ai_keywords": [
+      "Coherence Index",
+      "CI tensor",
+      "synthesis gate",
+      "fragmentation",
+      "coherence floor",
+      "regime coherence",
+      "CI ≥ 0.55",
+      "RTT engine",
+      "S3 Spine",
+      "TriadicFrameworks",
+      "RTT/3"
+    ],
+    "ai_purpose": "Computes multi-axis Coherence Index (CI) tensor across all registered regime components; gates the Triadic Regime Synthesizer at CI ≥ 0.55.",
+    "ai_operators": [
+      "CTE-Compute",
+      "CTE-Tensor",
+      "CTE-Gradient",
+      "CTE-Field",
+      "CTE-Stabilize",
+      "CTE-Collapse",
+      "CTE-FragMap",
+      "CTE-Gate",
+      "CTE-Audit"
+    ],
+    "ai_audience": [
+      "developers",
+      "researchers",
+      "AIs",
+      "analysts"
+    ]
+  }
+}

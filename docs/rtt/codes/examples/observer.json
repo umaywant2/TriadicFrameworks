@@ -1,0 +1,12 @@
+{
+  "domain": "observer",
+  "artifact_type": "module",
+  "version": "v0.4.2",
+  "triad": {
+    "f_R": "0.65",
+    "tau_R": "310ms",
+    "Q_R": "0.84"
+  },
+  "url": "https://www.triadicframeworks.org/docs/observer-hierarchy/",
+  "checksum": "C1E8A4D0F9B23377"
+}

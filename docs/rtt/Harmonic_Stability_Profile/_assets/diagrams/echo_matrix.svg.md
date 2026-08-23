@@ -1,0 +1,111 @@
+## ✅ **echo_matrix.svg (v1.0)**  
+### *Canonical SVG Echo Matrix — Families × Substrates × Stability*
+
+<img width="597" height="439" alt="echo_matrix_svg" src="https://github.com/user-attachments/assets/eecc19a6-1ae1-4bdf-a11b-4df5fdbaa547" />
+
+```svg
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="980" height="720" viewBox="0 0 980 720"
+     xmlns="http://www.w3.org/2000/svg"
+     font-family="Arial, sans-serif">
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="490" y="50" text-anchor="middle"
+        font-size="30" font-weight="bold">
+    Echo Matrix — Families × Substrates × Stability
+  </text>
+
+  <!-- Column Labels (Substrates) -->
+  <g font-size="20" font-weight="bold">
+    <text x="240" y="110" text-anchor="middle">S</text>
+    <text x="380" y="110" text-anchor="middle">C</text>
+    <text x="520" y="110" text-anchor="middle">H</text>
+    <text x="660" y="110" text-anchor="middle">So</text>
+    <text x="800" y="110" text-anchor="middle">A</text>
+  </g>
+
+  <!-- Row Labels (Echo Families) -->
+  <g font-size="20" font-weight="bold">
+    <text x="120" y="170">F1</text>
+    <text x="120" y="240">F2</text>
+    <text x="120" y="310">F3</text>
+    <text x="120" y="380">F4</text>
+    <text x="120" y="450">F5</text>
+    <text x="120" y="520">F6</text>
+  </g>
+
+  <!-- Grid -->
+  <g stroke="#000" stroke-width="2">
+    <!-- Horizontal lines -->
+    <line x1="180" y1="130" x2="900" y2="130"/>
+    <line x1="180" y1="200" x2="900" y2="200"/>
+    <line x1="180" y1="270" x2="900" y2="270"/>
+    <line x1="180" y1="340" x2="900" y2="340"/>
+    <line x1="180" y1="410" x2="900" y2="410"/>
+    <line x1="180" y1="480" x2="900" y2="480"/>
+    <line x1="180" y1="550" x2="900" y2="550"/>
+
+    <!-- Vertical lines -->
+    <line x1="180" y1="130" x2="180" y2="550"/>
+    <line x1="300" y1="130" x2="300" y2="550"/>
+    <line x1="440" y1="130" x2="440" y2="550"/>
+    <line x1="580" y1="130" x2="580" y2="550"/>
+    <line x1="720" y1="130" x2="720" y2="550"/>
+    <line x1="900" y1="130" x2="900" y2="550"/>
+  </g>
+
+  <!-- Matrix Content (Canonical Echo Placement) -->
+  <g font-size="18">
+
+    <!-- F1 Structural -->
+    <text x="240" y="170" text-anchor="middle">●</text>
+    <text x="380" y="170" text-anchor="middle">●</text>
+
+    <!-- F2 Harmonic -->
+    <text x="520" y="240" text-anchor="middle">●</text>
+
+    <!-- F3 Substrate -->
+    <text x="240" y="310" text-anchor="middle">●</text>
+    <text x="380" y="310" text-anchor="middle">●</text>
+    <text x="520" y="310" text-anchor="middle">●</text>
+    <text x="660" y="310" text-anchor="middle">●</text>
+
+    <!-- F4 Recursion -->
+    <text x="520" y="380" text-anchor="middle">●</text>
+    <text x="660" y="380" text-anchor="middle">●</text>
+    <text x="800" y="380" text-anchor="middle">●</text>
+
+    <!-- F5 Drift-Shadow -->
+    <text x="240" y="450" text-anchor="middle">●</text>
+    <text x="520" y="450" text-anchor="middle">●</text>
+    <text x="800" y="450" text-anchor="middle">●</text>
+
+    <!-- F6 Atlas -->
+    <text x="800" y="520" text-anchor="middle">●</text>
+
+  </g>
+
+  <!-- Legend -->
+  <g font-size="16">
+    <text x="180" y="600">● = Echo presence</text>
+    <text x="180" y="630">F1–F6 = Echo Families</text>
+    <text x="180" y="660">S, C, H, So, A = Substrates</text>
+  </g>
+
+</svg>
+```
+
+---
+
+## What this SVG gives you
+- **Valid XML** — GitHub will render it cleanly  
+- **Echo families F1–F6** placed in their canonical substrate positions  
+- **Substrate columns** (S, C, H, So, A)  
+- **Grid‑based matrix** matching the Cross‑Substrate Echo Matrix  
+- **Zero drift, zero recursion, zero echo‑pressure** in the diagram itself  
+- Fully aligned with the HSP suite and TEL  
+
+This is the **canonical Echo Matrix SVG** for v1.0.

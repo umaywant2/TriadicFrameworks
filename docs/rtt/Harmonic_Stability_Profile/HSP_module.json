@@ -1,0 +1,233 @@
+{
+  "module": "Harmonic Stability Profile",
+  "version": "1.0",
+  "category": "rtt-analytics-core",
+  "summary": "RTT/1 analytics suite — harmonic operators, stability envelopes, drift detection and mapping, echo classification (E1–E6), echo matrices, recursion detection, substrate flow, triadic echo lattice, real‑time writing tools, timeline, triadic summaries, and visual asset library (ASCII + SVG).",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "00_DOCTYPE_Header.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "Operators.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "HSP_Suite_Operator_Grammar_Specification.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "HSP_Suite_Student_Cheat_Sheet.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "01_Harmonic_Stability_Profile.md",
+      "role": "engine",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "01a_HSP_Classes.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "01b_HSP_Metrics.md",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "01c_HSP_Corpus_Map.md",
+      "role": "map",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "01d_HSP_Stability_Tiers.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "02_Concept_Drift_Map.md",
+      "role": "diagnostic",
+      "analyzer_layer": "drift"
+    },
+    {
+      "path": "02a_Drift_Categories.md",
+      "role": "diagnostic",
+      "analyzer_layer": "drift"
+    },
+    {
+      "path": "02b_Drift_Patterns.md",
+      "role": "diagnostic",
+      "analyzer_layer": "drift"
+    },
+    {
+      "path": "02c_Drift_Hotspots.md",
+      "role": "diagnostic",
+      "analyzer_layer": "drift"
+    },
+    {
+      "path": "02d_Drift_Summary.md",
+      "role": "diagnostic",
+      "analyzer_layer": "drift"
+    },
+    {
+      "path": "03_Early_Stabilizations_Audit.md",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "03a_Overloaded_Concepts.md",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "03b_Meaning_Shifts.md",
+      "role": "diagnostic",
+      "analyzer_layer": "drift"
+    },
+    {
+      "path": "03c_MultiRole_Structures.md",
+      "role": "diagnostic",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "04_Canon_SelfEcho_Map.md",
+      "role": "map",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "04a_Echo_Families.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "04b_Echo_Diagrams_ASCII.md",
+      "role": "map",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "04c_Echo_Strength_Index.md",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "05_Echo_Matrices.md",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "05a_CrossSubstrate_Echo_Matrix.md",
+      "role": "diagnostic",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "05b_Echo_Heatmap.md",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "06_Harmonic_Recursion_Detector.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "06a_Echo_Triggers.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "06b_Echo_Signatures.md",
+      "role": "signature",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "06c_Echo_Classifier.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "07_Triadic_Echo_Lattice.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "08_Substrate_Echo_Flow_Map.md",
+      "role": "map",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "09_RealTime_Writing_Checklist.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "10_Timeline_of_Conceptual_Evolution.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "11_Triadic_Summaries.md",
+      "role": "profile",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "_assets/ascii/drift_vectors.txt.md",
+      "role": "map",
+      "analyzer_layer": "drift"
+    },
+    {
+      "path": "_assets/ascii/echo_lattice.txt.md",
+      "role": "map",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "_assets/ascii/recursion_detector.txt.md",
+      "role": "map",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "_assets/diagrams/drift_map.svg.md",
+      "role": "map",
+      "analyzer_layer": "drift"
+    },
+    {
+      "path": "_assets/diagrams/echo_lattice.svg.md",
+      "role": "map",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "_assets/diagrams/echo_matrix.svg.md",
+      "role": "map",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "_assets/diagrams/harmonic_stability_map.svg.md",
+      "role": "map",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "_assets/diagrams/recursion_heatmap.svg.md",
+      "role": "map",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "_assets/diagrams/substrate_flow_map.svg.md",
+      "role": "map",
+      "analyzer_layer": "regime"
+    }
+  ]
+}

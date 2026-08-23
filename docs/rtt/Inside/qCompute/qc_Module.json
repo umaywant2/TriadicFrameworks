@@ -1,0 +1,90 @@
+{
+  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
+  "$generated": "2026-08-03T09:53:00",
+  "$version": "1.4",
+  "$round": "R5",
+  "identity": {
+    "module": "RTT_INSIDE_QCOMPUTE",
+    "canonical_name": "Inside · qCompute",
+    "module_path": "docs/rtt/Inside/qCompute",
+    "version": "RTT/3",
+    "status": "Active Canonical",
+    "category": "RTT Deployment Layer",
+    "summary": "Quantum compute RTT deployment context: qubit coherence, error budget, gate fidelity, decoherence rate, and entanglement bandwidth regime diagnostics"
+  },
+  "purpose": {
+    "role": "Quantum compute RTT deployment context: qubit coherence, error budget, gate fidelity, decoherence rate, and entanglement bandwidth regime diagnostics",
+    "description": "RTT Inside qCompute is the Quantum Compute deployment context for the RTT engine stack. It maps abstract Triadic signals to quantum-compute-native constructs: structural faultlines → qubit decoherence fault planes and gate fidelity boundaries; drift vectors → error rate migration and thermal drift; substrate capacity → qubit count runway and entanglement bandwidth; coherence index → quantum error-correction cycle quality; DRM → cross-qubit resonance and interference map. The qCompute context produces DDRs formatted as quantum system diagnostic reports, DAMs ranked by error budget impact, and CDCSs tracing decoherence propagation paths.",
+    "spine_role": "Domain translation context for Quantum Compute S3 Spine DDR generation",
+    "audience": [
+      "quantum engineers",
+      "researchers",
+      "AIs",
+      "physicists"
+    ]
+  },
+  "structure": {
+    "module_type": "Quantum Compute Domain Context",
+    "triadic_lens": "qcompute-as-rtt-deployment",
+    "analyzer_layer": [
+      "RTT Deployment Layer",
+      "Core Frameworks — Structural Spine"
+    ]
+  },
+  "files": {
+    "core": [
+      "qCompute.md",
+      "index.md"
+    ],
+    "support": [
+      "module.json",
+      "README.md"
+    ],
+    "ai": [
+      "module.json"
+    ]
+  },
+  "session_context": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural",
+    "format": "module.json",
+    "round": "R5"
+  },
+  "ai_metadata": {
+    "navigation": {
+      "url": "https://www.triadicframeworks.org/rtt/Inside/qCompute/",
+      "path": "docs/rtt/Inside/qCompute"
+    },
+    "ai_ready": true,
+    "ai_module_id": "RTT_INSIDE_QCOMPUTE",
+    "ai_keywords": [
+      "qCompute",
+      "quantum compute",
+      "qubit coherence",
+      "decoherence",
+      "gate fidelity",
+      "error budget",
+      "entanglement",
+      "quantum DDR",
+      "qubit faultlines",
+      "TriadicFrameworks",
+      "S3 Spine",
+      "R5"
+    ],
+    "ai_purpose": "Quantum compute RTT deployment context: qubit coherence, error budget, gate fidelity, decoherence rate, and entanglement bandwidth regime diagnostics",
+    "ai_audience": [
+      "quantum engineers",
+      "researchers",
+      "AIs",
+      "physicists"
+    ],
+    "license": "See docs/LICENSE_module.json",
+    "module": {
+      "module_id": "RTT_INSIDE_QCOMPUTE",
+      "canonical_name": "Inside · qCompute",
+      "version": "RTT/3"
+    }
+  }
+}
