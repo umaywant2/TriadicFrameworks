@@ -1,66 +1,99 @@
 # RTT Leela Zero Shim  
 *(for `/docs/bots/go/shim/leela_zero_shim.md`)*
 
-This document describes how the RTT Shim integrates with **Leela Zero**, providing a triadic, regime‑aware decision layer on top of Leela Zero’s native policy/value inference and MCTS search.
+The **RTT Leela Zero Shim** integrates RTT’s triadic evaluation pipeline with **Leela Zero’s** native policy/value inference and MCTS search.
+
+Leela Zero’s architecture is simpler than KataGo’s — no ownership maps, no score‑lead head, no territory estimation — which makes RTT integration **clean, predictable, and stable**.
 
 The shim does **not** replace Leela Zero’s logic.  
-It **wraps** it — injecting RTT structure, resonance, continuity, and projection‑loss awareness into the engine’s decision loop.
+It **wraps** it, injecting RTT’s:
+
+- structural identity  
+- resonance pressure  
+- continuity arcs  
+- topology ancestry  
+- paradox/collapse detection  
+- unified triadic scoring  
+
+into Leela Zero’s decision loop.
 
 ---
 
-## Purpose
+## 1. Purpose
 
 The RTT Shim for Leela Zero:
 
-- converts board + search state into RTT primitives,
-- runs the RTT agentic stack (Lumen → Hephaestus → Aurion → Harmonia),
-- produces **triadic scores** for candidate moves,
+- converts board + search state into RTT primitives  
+- runs the RTT agentic stack  
+  - **Lumen → Hephaestus → Aurion → Harmonia**  
+- produces **triadic scores** for candidate moves  
 - reweights Leela Zero’s:
-  - policy priors,
-  - value estimates,
-  - MCTS node expansion priorities,
-- enforces continuity‑preserving, resonance‑aligned decision flow.
+  - policy priors  
+  - value estimates  
+  - MCTS node expansion priorities  
+- enforces continuity‑preserving, resonance‑aligned decision flow  
 
 This creates an engine that still “plays Go” in the Leela Zero sense — but with RTT’s deeper structural awareness.
 
 ---
 
-## Integration Points
+## 2. Integration Points
 
-Leela Zero’s architecture is simpler than KataGo’s, which makes RTT integration clean and predictable.
-
-### **Policy Post‑Processing**
-Leela Zero produces:
-
-- `policy[]` (move probabilities)
-
-RTT injects:
-
-- triadic score blending,
-- continuity weighting,
-- resonance pressure adjustments.
-
-### **Value Post‑Processing**
-Leela Zero’s value head predicts win probability only.  
-RTT adjusts this using:
-
-- continuity arcs,
-- projection‑loss risk,
-- ancestry alignment.
-
-### **MCTS Node Expansion**
-RTT can:
-
-- reorder child nodes,
-- adjust exploration constants,
-- prune paradoxical lines,
-- stabilize long‑arc continuity.
+Leela Zero’s architecture exposes three clean hook points:
 
 ---
 
-## RTT Flow
+### **Policy Post‑Processing**
 
-```text
+Leela Zero produces:
+
+- `policy[]` — move probabilities
+
+RTT injects:
+
+- triadic score blending  
+- continuity weighting  
+- resonance pressure adjustments  
+- paradox/collapse suppression  
+
+This produces **continuity‑aware priors**.
+
+---
+
+### **Value Post‑Processing**
+
+Leela Zero’s value head predicts **win probability only**.
+
+RTT adjusts this using:
+
+- continuity arcs  
+- projection‑loss risk  
+- ancestry alignment  
+- long‑arc drift  
+- collapse signatures  
+
+This produces **identity‑aware value estimates**.
+
+---
+
+### **MCTS Node Expansion**
+
+RTT can:
+
+- reorder child nodes  
+- adjust exploration constants  
+- prune paradoxical lines  
+- stabilize long‑arc continuity  
+- suppress collapse‑risk branches  
+- promote continuity‑preserving sequences  
+
+This produces **triadic‑stable search behavior**.
+
+---
+
+## 3. RTT Flow
+
+```
 [Leela Zero NN Inference]
       |
       v
@@ -83,33 +116,33 @@ RTT can:
 
 ---
 
-## RTT Primitive Extraction
+## 4. RTT Primitive Extraction
 
 ### Lumen (RTT/1)
 Extracts Go‑specific structural features:
 
 - influence fields  
-- territory pressure gradients  
+- pressure gradients  
 - group connectivity  
 - weak points / cutting points  
-- shape identity (bamboo, table, empty triangle)  
-- continuity anchors (moyo, frameworks, direction of play)
+- shape identity  
+- continuity anchors  
 
 ### Hephaestus (RTT/2)
 Assigns regime profiles:
 
-- **1/3 local:** liberties, cuts, ataris  
-- **2/3 structural:** influence, direction, large‑scale shape  
-- **3/3 continuity:** long‑arc plan integrity, moyo evolution  
+- **1/3 local** — liberties, cuts, shape  
+- **2/3 structural** — influence, direction of play  
+- **3/3 continuity** — long‑arc identity  
 
 ### Aurion (RTT/3)
 Evaluates:
 
 - ko topology  
 - ladder ancestry  
-- projection loss  
+- projection‑loss  
 - continuity collapse  
-- paradoxical sequences  
+- paradox precursors  
 
 ### Harmonia (RTT/12)
 Synthesizes:
@@ -118,14 +151,14 @@ Synthesizes:
 - global structure  
 - continuity arcs  
 - resonance pressure  
-- drift/coherence balance  
+- drift/coherence  
 - operator lineage  
 
 Produces **triadic scores** per move.
 
 ---
 
-## Triadic Scoring Model
+## 5. Triadic Scoring Model
 
 Each candidate move receives:
 
@@ -146,22 +179,22 @@ final_policy = blend(policy, triadic_score)
 final_value  = blend(value, continuity_score)
 ```
 
-Blend functions are configurable per bot mode:
+Blend modes:
 
-- **strict triadic** (RTT dominates)
-- **hybrid** (RTT + Leela Zero balanced)
-- **teaching mode** (RTT annotations only)
-- **analysis mode** (RTT overlays, no move selection)
+- **strict triadic** — RTT dominates  
+- **hybrid** — RTT + Leela Zero balanced  
+- **teaching mode** — RTT annotations only  
+- **analysis mode** — RTT overlays, no move selection  
 
 ---
 
-## Shim Responsibilities
+## 6. Shim Responsibilities
 
 ### 1. **State Conversion**
 Convert Leela Zero’s board + search state into RTT primitives.
 
 ### 2. **Agentic Execution**
-Run the RTT stack in order:
+Run the RTT stack:
 
 1. Lumen  
 2. Hephaestus  
@@ -193,7 +226,7 @@ Expose RTT overlays:
 
 ---
 
-## Example Shim Pseudocode
+## 7. Example Shim Pseudocode
 
 ```text
 function rtt_leela_zero_shim(position, policy, value):
@@ -210,7 +243,7 @@ function rtt_leela_zero_shim(position, policy, value):
 
 ---
 
-## Modes
+## 8. Modes
 
 ### **RTT‑Go Bot**
 Full triadic integration.
@@ -226,14 +259,23 @@ Leela Zero + RTT blended decision logic.
 
 ---
 
-## File Location
+## 9. File Location
 
 ```
 /docs/bots/go/shim/leela_zero_shim.md
 ```
 
-This file defines the shim logic and integration points for RTT‑enhanced Leela Zero.
-
 ---
 
-> **“Go is resonance, continuity, and topology. RTT simply reveals the deeper structure already inside it.”**
+## 10. Summary
+
+The RTT Leela Zero Shim is a **triadic decision layer** that enhances Leela Zero with:
+
+- structural identity  
+- resonance pressure  
+- continuity arcs  
+- ancestry stability  
+- paradox/collapse detection  
+- unified triadic scoring  
+
+Leela Zero still plays Go — RTT simply reveals the deeper structure already inside it.
