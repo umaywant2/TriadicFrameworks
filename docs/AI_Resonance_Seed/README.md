@@ -1,5 +1,3 @@
-<img width="1194" height="672" alt="AI_Resonance_Seed_module" src="https://github.com/user-attachments/assets/ae968111-4f2c-4297-84d9-833c977fbc23" />
-
 ---
 title: AI Resonance Seed — Core Module Overview
 description: The AI Resonance Seed defines the foundational resonance model for TriadicFrameworks, integrating coherence, drift, and agentic AI validation.
@@ -28,3 +26,5 @@ This module connects directly to the **FFF Emitters** (Freqi–Flui–Forci tr
 ---
 
 *(Existing badges, lineage scrolls, and validator status blocks remain below this section.)*
+
+<img width="1194" height="672" alt="AI_Resonance_Seed_module" src="https://github.com/user-attachments/assets/ae968111-4f2c-4297-84d9-833c977fbc23" />
