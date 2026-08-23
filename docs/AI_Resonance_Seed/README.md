@@ -11,7 +11,6 @@ description: The AI Resonance Seed defines the foundational resonance model for 
 The **AI Resonance Seed** is the foundational module of TriadicFrameworks. It establishes the resonance‑based learning architecture used by agentic AI systems to align coherence, drift boundaries, and validator feedback. This module serves as the canonical entry point for all resonance experiments, ontology mappings, and validator triggers.
 
 ### 🔗 Related Pages
-- [AI Resonance Seed Overview](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/AI_Resonance_Seed/overview.md)
 - [Ontology Index](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/AI_Resonance_Seed/Ontology_Index.md)
 - [RTT Experiment Log](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/AI_Resonance_Seed/RTT_Experiment_Log.md)
 - [TriadicValidator AgentInit](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/AI_Resonance_Seed/TriadicValidator_AgentInit.md)
