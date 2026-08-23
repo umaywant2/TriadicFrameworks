@@ -230,7 +230,7 @@ PhoenixGo + RTT blended decision logic.
 ## File Location
 
 ```
-/docs/bots/go/phoenixgo_shim.md
+/docs/bots/go/shim/phoenixgo_shim.md
 ```
 
 This file defines the shim logic and integration points for RTT‑enhanced PhoenixGo.
