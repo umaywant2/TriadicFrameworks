@@ -1,7 +1,9 @@
 # RTT‑Go Examples  
 *(Examples for `/docs/bots/go/examples/rtt_go_examples.md`)*
 
-This document provides **worked examples** demonstrating how the RTT triadic stack (Lumen → Hephaestus → Aurion → Harmonia) interacts with Go engine outputs (KataGo, Leela Zero, PhoenixGo) to produce continuity‑preserving, resonance‑aligned move decisions.
+This document provides **worked examples** demonstrating how the RTT triadic stack  
+**Lumen → Hephaestus → Aurion → Harmonia**  
+interacts with Go engine outputs (KataGo, Leela Zero, PhoenixGo) to produce continuity‑preserving, resonance‑aligned move decisions.
 
 These examples are designed for:
 
@@ -12,34 +14,38 @@ These examples are designed for:
 
 ---
 
-## Example 1 — Local vs Structural vs Continuity Move
+# Example 1 — Local vs Structural vs Continuity Move
 
-### Position
-Black has a weak group on the right side. White has a large moyo forming on the left. It is Black’s turn.
+### Position  
+Black has a weak group on the right side.  
+White has a large moyo forming on the left.  
+It is Black’s turn.
 
-### Candidate Moves
+### Candidate Moves  
 - **A:** Atari the cutting stone  
 - **B:** Extend the weak group  
 - **C:** Expand left‑side moyo boundary  
 
-### RTT Interpretation
+---
 
-#### **Lumen (RTT/1)**
+## RTT Interpretation
+
+### **Lumen (RTT/1)**  
 - identifies weak group on right  
 - identifies moyo boundary on left  
 - influence map shows left side is globally dominant  
 
-#### **Hephaestus (RTT/2)**
+### **Hephaestus (RTT/2)**  
 - A → **1/3 local**  
 - B → **2/3 structural**  
 - C → **3/3 continuity**  
 
-#### **Aurion (RTT/3)**
+### **Aurion (RTT/3)**  
 - A → paradox risk (locally good, globally bad)  
 - B → stabilizes topology  
 - C → continuity‑aligned but risky due to weak group  
 
-#### **Harmonia (RTT/12)**
+### **Harmonia (RTT/12)**  
 Triadic scores:
 
 | Move | Local | Structural | Continuity | Paradox | Projection Loss | Final |
@@ -48,186 +54,201 @@ Triadic scores:
 | B | medium | **high** | medium | low | low | **high** |
 | C | low | medium | **high** | medium | **high** | medium |
 
-### **RTT‑Go Decision**
-**Move B** — extend the weak group — is selected.
-
+### **RTT‑Go Decision**  
+**Move B** — extend the weak group — is selected.  
 It preserves continuity, avoids paradox, and stabilizes topology.
 
 ---
 
-## Example 2 — Ladder Ancestry and Projection‑Loss
+# Example 2 — Ladder Ancestry & Projection‑Loss
 
-### Position
-White threatens a ladder. Black can:
+### Position  
+White threatens a ladder on the right side.  
+Black has a potential ladder‑breaker on the left, but it is thin.
 
-- **A:** Play the ladder breaker  
-- **B:** Strengthen the laddered group locally  
-- **C:** Play a large territorial move elsewhere  
+### Candidate Moves  
+- **A:** Play the ladder‑breaker  
+- **B:** Strengthen the laddered group  
+- **C:** Ignore and expand center influence  
 
-### RTT Interpretation
+---
 
-#### **Lumen**
-- detects ladder shape  
-- marks ladder ancestry  
-- identifies global influence  
+## RTT Interpretation
 
-#### **Hephaestus**
-- A → structural  
-- B → local  
-- C → continuity  
+### **Lumen (RTT/1)**  
+- identifies ladder path  
+- identifies thin ladder‑breaker  
+- pressure map shows center expansion is viable  
 
-#### **Aurion**
-- A → stabilizes ancestry  
-- B → paradox (local fix but ladder still fails)  
-- C → catastrophic projection‑loss  
+### **Hephaestus (RTT/2)**  
+- A → **2/3 structural**  
+- B → **1/3 local**  
+- C → **3/3 continuity**  
 
-#### **Harmonia**
+### **Aurion (RTT/3)**  
+- A → ladder ancestry unstable  
+- B → stabilizes ancestry  
+- C → projection‑loss risk (ignoring ladder breaks continuity)  
+
+### **Harmonia (RTT/12)**  
 Triadic scores:
 
-| Move | Ancestry | Projection Loss | Paradox | Final |
-|------|----------|------------------|---------|-------|
-| A | **aligned** | low | low | **high** |
-| B | misaligned | medium | **high** | low |
-| C | broken | **very high** | medium | very low |
+| Move | Ladder Stability | Structural | Continuity | Projection Loss | Final |
+|------|------------------|------------|------------|------------------|-------|
+| A | **unstable** | high | medium | medium | medium |
+| B | **stable** | medium | medium | low | **high** |
+| C | medium | medium | **high** | **high** | low |
 
-### **RTT‑Go Decision**
-**Move A** — ladder breaker — is selected.
+### **RTT‑Go Decision**  
+**Move B** — strengthen the laddered group — is selected.  
+It preserves ancestry, avoids projection‑loss, and maintains continuity.
 
 ---
 
-## Example 3 — Ko Topology and Continuity Collapse
+# Example 3 — Moyo Continuity vs Local Gain
 
-### Position
-A large ko fight threatens the stability of both players’ frameworks.
+### Position  
+White has a large moyo on the top side.  
+Black has a chance to invade locally or expand globally.
 
-### Candidate Moves
-- **A:** Take the ko  
-- **B:** Threaten locally  
-- **C:** Play a global ko threat  
+### Candidate Moves  
+- **A:** Local invasion  
+- **B:** Reduce moyo from the outside  
+- **C:** Expand Black’s own moyo on the bottom  
 
-### RTT Interpretation
+---
 
-#### **Lumen**
-- identifies ko topology  
-- marks framework boundaries  
+## RTT Interpretation
 
-#### **Hephaestus**
-- A → local  
-- B → local  
-- C → structural/continuity  
+### **Lumen (RTT/1)**  
+- identifies moyo boundaries  
+- identifies invasion points  
+- pressure map shows top moyo is strong  
 
-#### **Aurion**
-- A → high collapse risk  
-- B → insufficient  
-- C → stabilizes continuity  
+### **Hephaestus (RTT/2)**  
+- A → **1/3 local**  
+- B → **2/3 structural**  
+- C → **3/3 continuity**  
 
-#### **Harmonia**
+### **Aurion (RTT/3)**  
+- A → paradox risk (local gain, global collapse)  
+- B → stable reduction  
+- C → continuity‑aligned but risky if moyo is thin  
+
+### **Harmonia (RTT/12)**  
 Triadic scores:
 
-| Move | Ko Stability | Continuity | Collapse Risk | Final |
-|------|--------------|------------|---------------|-------|
-| A | low | low | **high** | low |
-| B | medium | low | medium | medium |
-| C | **high** | **high** | low | **high** |
+| Move | Local | Structural | Continuity | Drift | Final |
+|------|-------|------------|------------|-------|-------|
+| A | high | low | low | negative | low |
+| B | medium | **high** | medium | positive | **high** |
+| C | low | medium | **high** | medium | medium |
 
-### **RTT‑Go Decision**
-**Move C** — global ko threat — is selected.
+### **RTT‑Go Decision**  
+**Move B** — reduce the moyo from the outside — is selected.  
+It preserves continuity while avoiding paradox.
 
 ---
 
-## Example 4 — Moyo Continuity vs Local Urgency
+# Example 4 — Ko Topology & Paradox Suppression
 
-### Position
-White has a massive moyo forming. Black has a small local weakness.
+### Position  
+A large ko fight is developing in the center.  
+Both players have ko threats, but Black’s threats are weaker.
 
-### Candidate Moves
-- **A:** Fix local weakness  
-- **B:** Reduce moyo  
-- **C:** Invade moyo  
+### Candidate Moves  
+- **A:** Start the ko  
+- **B:** Strengthen ko threats  
+- **C:** Play a stabilizing move elsewhere  
 
-### RTT Interpretation
+---
 
-#### **Lumen**
-- identifies moyo boundary  
-- marks local defect  
+## RTT Interpretation
 
-#### **Hephaestus**
-- A → local  
-- B → structural  
-- C → continuity  
+### **Lumen (RTT/1)**  
+- identifies ko shape  
+- identifies weak threats  
+- pressure map shows center instability  
 
-#### **Aurion**
-- A → paradox (fixing local loses global)  
-- B → stabilizes topology  
-- C → high‑risk continuity move  
+### **Hephaestus (RTT/2)**  
+- A → **1/3 local**  
+- B → **2/3 structural**  
+- C → **3/3 continuity**  
 
-#### **Harmonia**
+### **Aurion (RTT/3)**  
+- A → paradox risk (ko unstable)  
+- B → stabilizes ko ancestry  
+- C → continuity‑aligned but may concede initiative  
+
+### **Harmonia (RTT/12)**  
 Triadic scores:
 
-| Move | Local | Structural | Continuity | Risk | Final |
-|------|-------|------------|------------|------|-------|
-| A | high | low | low | medium | low |
-| B | medium | **high** | medium | low | **high** |
-| C | low | medium | **high** | **high** | medium |
+| Move | Ko Stability | Structural | Continuity | Paradox | Final |
+|------|--------------|------------|------------|---------|-------|
+| A | **unstable** | medium | low | **high** | low |
+| B | **stable** | high | medium | low | **high** |
+| C | medium | medium | **high** | medium | medium |
 
-### **RTT‑Go Decision**
-**Move B** — reduce the moyo — is selected.
-
----
-
-## Example 5 — Teaching Mode Output
-
-In teaching mode, RTT does **not** select moves.  
-It produces overlays:
-
-```
-Move A — Local (1/3)
-  - Tactical fix
-  - Paradox risk: high
-  - Continuity impact: negative
-
-Move B — Structural (2/3)
-  - Influence shift
-  - Stabilizes topology
-  - Continuity impact: positive
-
-Move C — Continuity (3/3)
-  - Long-arc moyo evolution
-  - Projection-loss risk: medium
-```
-
-This mode is ideal for learning RTT‑Go.
+### **RTT‑Go Decision**  
+**Move B** — strengthen ko threats — is selected.  
+It stabilizes ko topology and avoids paradox.
 
 ---
 
-## Example 6 — Analysis Mode Output
+# Example 5 — Drift & Coherence Alignment
 
-In analysis mode, RTT evaluates human games:
+### Position  
+The game is transitioning from midgame to endgame.  
+Influence drift is shifting from left → center.
 
-```
-Move 57 — Paradox detected
-  - Local shape fix
-  - Global continuity collapse
-  - Ladder ancestry violated
-
-Move 103 — Continuity anchor preserved
-  - Framework evolution aligned
-  - Influence drift stabilized
-```
-
-This mode is ideal for commentary and study.
+### Candidate Moves  
+- **A:** Play a large endgame move on the left  
+- **B:** Reinforce center influence  
+- **C:** Start a small fight on the right  
 
 ---
 
-## Summary
+## RTT Interpretation
 
-These examples demonstrate how RTT:
+### **Lumen (RTT/1)**  
+- identifies drift direction  
+- identifies influence arcs  
+- identifies weak points  
 
-- interprets Go positions structurally  
-- maps moves into triadic regimes  
-- detects topology, ancestry, paradox, and collapse  
-- synthesizes unified triadic strategy  
-- blends with engine policy/value  
-- selects continuity‑preserving moves  
+### **Hephaestus (RTT/2)**  
+- A → **1/3 local**  
+- B → **2/3 structural**  
+- C → **1/3 local**  
 
-RTT‑Go is not a new engine — it is a **triadic intelligence layer** that reveals the deeper structure already inside the game.
+### **Aurion (RTT/3)**  
+- A → drift‑misaligned  
+- B → drift‑aligned  
+- C → paradox risk  
+
+### **Harmonia (RTT/12)**  
+Triadic scores:
+
+| Move | Drift Alignment | Structural | Continuity | Final |
+|------|------------------|------------|------------|-------|
+| A | negative | medium | medium | low |
+| B | **positive** | **high** | high | **high** |
+| C | negative | low | low | low |
+
+### **RTT‑Go Decision**  
+**Move B** — reinforce center influence — is selected.  
+It aligns with drift, preserves continuity, and stabilizes structure.
+
+---
+
+# Summary
+
+These examples demonstrate how RTT‑Go:
+
+- interprets Go positions through triadic identity  
+- resolves paradox vs continuity  
+- stabilizes ladders, ko, and ancestry  
+- aligns moves with drift/coherence  
+- avoids projection‑loss  
+- produces continuity‑preserving decisions  
+
+RTT does not replace Go engines — it **reveals** the deeper structure already inside the game.
