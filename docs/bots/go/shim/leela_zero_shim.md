@@ -1,5 +1,5 @@
 # RTT Leela Zero Shim  
-*(for `/docs/bots/go/leela_zero_shim.md`)*
+*(for `/docs/bots/go/shim/leela_zero_shim.md`)*
 
 This document describes how the RTT Shim integrates with **Leela Zero**, providing a triadic, regime‑aware decision layer on top of Leela Zero’s native policy/value inference and MCTS search.
 
@@ -229,7 +229,7 @@ Leela Zero + RTT blended decision logic.
 ## File Location
 
 ```
-/docs/bots/go/leela_zero_shim.md
+/docs/bots/go/shim/leela_zero_shim.md
 ```
 
 This file defines the shim logic and integration points for RTT‑enhanced Leela Zero.
