@@ -1,21 +1,27 @@
 # PhoenixGo RTT Shim  
-*(Go Bot Module)*
+*(RTT Integration Layer for PhoenixGo)*
 
-This document describes how the RTT Shim integrates with **PhoenixGo**, providing a triadic, continuity‑preserving decision layer on top of PhoenixGo’s neural‑network policy/value inference and stable MCTS search.
+The **RTT PhoenixGo Shim** integrates RTT’s triadic evaluation pipeline with **PhoenixGo’s** neural‑network policy/value inference and its notably stable MCTS search.
 
-PhoenixGo is structurally similar to Leela Zero but with more predictable MCTS behavior, making it an excellent engine for RTT teaching, analysis, and hybrid triadic integration.
+PhoenixGo is structurally similar to Leela Zero but with **more predictable MCTS behavior**, making it ideal for:
 
-The RTT shim does **not** replace PhoenixGo’s logic.  
-It **wraps** it — injecting RTT structure, resonance, continuity, and projection‑loss awareness into the engine’s decision loop.
+- RTT teaching mode  
+- RTT analysis mode  
+- hybrid triadic integration  
+- continuity‑preserving play  
+
+The shim does **not** replace PhoenixGo’s logic.  
+It **wraps** it — injecting RTT structure, resonance, continuity, topology ancestry, and projection‑loss awareness into PhoenixGo’s decision loop.
 
 ---
 
-## Purpose
+## 1. Purpose
 
 The RTT Shim for PhoenixGo:
 
 - converts board + search state into RTT primitives  
-- runs the RTT agentic stack (Lumen → Hephaestus → Aurion → Harmonia)  
+- runs the RTT agentic stack  
+  - **Lumen → Hephaestus → Aurion → Harmonia**  
 - produces **triadic scores** for candidate moves  
 - reweights PhoenixGo’s:
   - policy priors  
@@ -27,46 +33,63 @@ PhoenixGo remains PhoenixGo — RTT simply reveals and stabilizes the deeper str
 
 ---
 
-## Integration Points
+## 2. Integration Points
 
-PhoenixGo provides clean hooks for RTT integration:
+PhoenixGo exposes clean, predictable hook points for RTT integration:
+
+---
 
 ### **Policy/Value Post‑Processing**
+
 PhoenixGo outputs:
 
-- `policy[]` (move probabilities)  
-- `value` (win probability)  
+- `policy[]` — move probabilities  
+- `value` — win probability  
 
 RTT injects:
 
 - triadic score blending  
 - continuity weighting  
 - resonance pressure adjustments  
+- paradox/collapse suppression  
+
+This produces **continuity‑aware priors** and **identity‑aware value estimates**.
+
+---
 
 ### **MCTS Node Expansion**
+
 PhoenixGo’s stable MCTS allows RTT to:
 
 - reorder child nodes  
 - adjust exploration constants  
 - prune paradoxical lines  
 - stabilize long‑arc continuity  
+- suppress collapse‑risk branches  
+- promote continuity‑preserving sequences  
 
-### **Search Loop**
-RTT observes:
-
-- influence evolution  
-- group connectivity  
-- moyo boundaries  
-- ladder/ko ancestry  
-- continuity arcs  
-
-These feed into Aurion and Harmonia.
+This produces **triadic‑stable search behavior**.
 
 ---
 
-## RTT Flow
+### **Search Loop**
 
-```text
+RTT observes:
+
+- influence evolution  
+- pressure gradients  
+- ko threats  
+- ladder ancestry  
+- continuity arcs  
+- drift/coherence balance  
+
+These feed into Aurion + Harmonia.
+
+---
+
+## 3. RTT Flow
+
+```
 [PhoenixGo NN Inference]
       |
       v
@@ -88,80 +111,93 @@ These feed into Aurion and Harmonia.
 
 ---
 
-## RTT Primitive Extraction (Lumen)
+## 4. RTT Primitive Extraction
 
-Lumen extracts:
+### Lumen (RTT/1)
+Extracts:
 
 - influence fields  
 - pressure gradients  
 - group connectivity  
-- shape signatures  
+- shape identity  
 - continuity anchors  
-- drift vectors  
-- resonance maps  
 
 PhoenixGo does not provide ownership maps, so RTT computes influence internally.
 
 ---
 
-## Regime Mapping (Hephaestus)
+### Hephaestus (RTT/2)
+Assigns regime profiles:
 
-Hephaestus assigns regime identity:
-
-- **1/3 local:** cuts, ataris, shape fixes  
-- **2/3 structural:** influence shifts, direction of play  
-- **3/3 continuity:** moyo evolution, long‑arc identity  
-
-Each move receives a regime profile vector.
+- **1/3 local** — liberties, cuts, shape  
+- **2/3 structural** — influence, direction of play  
+- **3/3 continuity** — long‑arc identity  
 
 ---
 
-## Topology & Projection‑Loss (Aurion)
-
-Aurion evaluates:
+### Aurion (RTT/3)
+Evaluates:
 
 - ladder ancestry  
 - ko topology  
+- projection‑loss  
 - continuity collapse  
-- projection‑loss risk  
-- paradox detection  
-- risk‑arc mapping  
+- paradox precursors  
 
 PhoenixGo’s stable MCTS makes Aurion’s topology signals highly reliable.
 
 ---
 
-## Triadic Synthesis (Harmonia)
+### Harmonia (RTT/12)
+Synthesizes:
 
-Harmonia produces unified triadic scores:
+- local shape  
+- global structure  
+- continuity arcs  
+- resonance pressure  
+- drift/coherence  
+- operator lineage  
+
+Produces **triadic scores** per move.
+
+---
+
+## 5. Triadic Scoring Model
+
+Each candidate move receives:
 
 ```
 triadic_score = f(
-    local,
-    structural,
-    continuity,
-    resonance,
-    ancestry_alignment,
-    projection_loss_penalty,
-    paradox_penalty
+    regime_profile,
+    resonance_pressure,
+    continuity_delta,
+    projection_loss_risk,
+    ancestry_alignment
 )
 ```
 
-These scores blend with PhoenixGo’s policy/value:
+Blending with PhoenixGo’s native outputs:
 
 ```
 final_policy = blend(policy, triadic_score)
 final_value  = blend(value, continuity_score)
 ```
 
+Blend modes:
+
+- **strict triadic** — RTT dominates  
+- **hybrid** — RTT + PhoenixGo balanced  
+- **teaching mode** — RTT annotations only  
+- **analysis mode** — RTT overlays, no move selection  
+
 ---
 
-## Shim Responsibilities
+## 6. Shim Responsibilities
 
-### **1. State Conversion**
+### 1. **State Conversion**
 Convert PhoenixGo’s board + search state into RTT primitives.
 
-### **2. Agentic Execution**
+### 2. **Agentic Execution**
 Run the RTT stack:
 
 1. Lumen  
@@ -169,14 +205,14 @@ Run the RTT stack:
 3. Aurion  
 4. Harmonia  
 
-### **3. Score Injection**
+### 3. **Score Injection**
 Feed triadic scores into:
 
 - policy priors  
 - value estimates  
 - MCTS node ordering  
 
-### **4. Continuity Enforcement**
+### 4. **Continuity Enforcement**
 Flag or prune moves that:
 
 - break moyo continuity  
@@ -184,7 +220,7 @@ Flag or prune moves that:
 - violate ladder ancestry  
 - introduce paradoxical ko loops  
 
-### **5. Diagnostics (optional)**
+### 5. **Diagnostics (optional)**
 Expose RTT overlays:
 
 - regime tags  
@@ -194,7 +230,7 @@ Expose RTT overlays:
 
 ---
 
-## Example Shim Pseudocode
+## 7. Example Shim Pseudocode
 
 ```text
 function rtt_phoenixgo_shim(position, policy, value):
@@ -211,7 +247,7 @@ function rtt_phoenixgo_shim(position, policy, value):
 
 ---
 
-## Modes
+## 8. Modes
 
 ### **RTT‑Go Bot**
 Full triadic integration.
@@ -227,14 +263,23 @@ PhoenixGo + RTT blended decision logic.
 
 ---
 
-## File Location
+## 9. File Location
 
 ```
 /docs/bots/go/shim/phoenixgo_shim.md
 ```
 
-This file defines the shim logic and integration points for RTT‑enhanced PhoenixGo.
-
 ---
 
-> **“PhoenixGo is stable. RTT makes it strategic.”**
+## 10. Summary
+
+The RTT PhoenixGo Shim is a **triadic decision layer** that enhances PhoenixGo with:
+
+- structural identity  
+- resonance pressure  
+- continuity arcs  
+- ancestry stability  
+- paradox/collapse detection  
+- unified triadic scoring  
+
+PhoenixGo still plays Go — RTT simply reveals the deeper structure already inside it.
