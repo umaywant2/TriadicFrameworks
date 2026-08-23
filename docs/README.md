@@ -2,7 +2,7 @@
 
 **Resonance‑Time Theory • Triadic Substrate Modeling • Canon‑Aligned Tools**
 
-Welcome to the root of the TriadicFrameworks canon.  
+Welcome to the webroot of the TriadicFrameworks canon.  
 This repository contains the full module architecture, operator grammar,  
 and coherence‑driven documentation that powers the Triadic ecosystem.
 
