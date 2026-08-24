@@ -1,0 +1,242 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/schemas/module_go_state.json",
+  "title": "RTT-Go StateEmitter",
+  "description": "Triadic state output for a Go position using KataGo analysis JSON.",
+  "type": "object",
+
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "module_id": { "type": "string" },
+        "position_id": { "type": "string" },
+        "board_size": { "type": "integer", "enum": [19] },
+        "next_player": { "type": "string", "enum": ["B", "W"] },
+        "ply": { "type": "integer", "minimum": 0 }
+      },
+      "required": ["module_id", "position_id", "board_size", "next_player", "ply"]
+    },
+
+    "board": {
+      "type": "array",
+      "description": "19x19 board, row-major.",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": ["B", "W", "."]
+        },
+        "minItems": 19,
+        "maxItems": 19
+      },
+      "minItems": 19,
+      "maxItems": 19
+    },
+
+    "katago": {
+      "type": "object",
+      "description": "Raw KataGo analysis fields.",
+      "properties": {
+        "policy": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 361,
+          "maxItems": 361
+        },
+        "ownership": {
+          "type": "array",
+          "items": { "type": "number" },
+          "minItems": 361,
+          "maxItems": 361
+        },
+        "scoreLead": { "type": "number" },
+        "rootInfo": { "type": "object" },
+        "pv": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "visits": { "type": "integer" }
+      },
+      "required": ["policy", "ownership", "scoreLead", "rootInfo", "pv", "visits"]
+    },
+
+    "continuity_arcs": {
+      "type": "array",
+      "description": "Long-arc identity curves.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "points": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "x": { "type": "integer" },
+                "y": { "type": "integer" }
+              },
+              "required": ["x", "y"]
+            }
+          },
+          "stability": {
+            "type": "string",
+            "enum": ["stable", "strengthening", "fragile", "collapsing"]
+          }
+        },
+        "required": ["points", "stability"]
+      }
+    },
+
+    "resonance_fields": {
+      "type": "array",
+      "description": "Pressure gradients derived from ownership.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "region": { "type": "string" },
+          "pressure": {
+            "type": "string",
+            "enum": ["mild", "moderate", "high", "extreme"]
+          }
+        },
+        "required": ["region", "pressure"]
+      }
+    },
+
+    "drift_arrows": {
+      "type": "array",
+      "description": "Directional flow of influence.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "from": {
+            "type": "object",
+            "properties": {
+              "x": { "type": "integer" },
+              "y": { "type": "integer" }
+            },
+            "required": ["x", "y"]
+          },
+          "to": {
+            "type": "object",
+            "properties": {
+              "x": { "type": "integer" },
+              "y": { "type": "integer" }
+            },
+            "required": ["x", "y"]
+          },
+          "alignment": {
+            "type": "string",
+            "enum": ["aligned", "misaligned"]
+          }
+        },
+        "required": ["from", "to", "alignment"]
+      }
+    },
+
+    "topology_graphs": {
+      "type": "object",
+      "properties": {
+        "cut_points": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "weak_points": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "ladder_paths": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "ko_nodes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "moyo_boundaries": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    "ancestry_lines": {
+      "type": "array",
+      "description": "Lineage of tactical sequences.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sequence": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "stability": {
+            "type": "string",
+            "enum": ["stable", "fragile", "collapsing"]
+          }
+        },
+        "required": ["sequence", "stability"]
+      }
+    },
+
+    "risk": {
+      "type": "object",
+      "properties": {
+        "paradox": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "collapse": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "projection_loss": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    "triadic_score": {
+      "type": "object",
+      "properties": {
+        "local": { "type": "number", "minimum": 0, "maximum": 1 },
+        "structural": { "type": "number", "minimum": 0, "maximum": 1 },
+        "continuity": { "type": "number", "minimum": 0, "maximum": 1 },
+        "risk": { "type": "number", "minimum": 0, "maximum": 1 },
+        "final": { "type": "number", "minimum": 0, "maximum": 1 }
+      },
+      "required": ["local", "structural", "continuity", "risk", "final"]
+    },
+
+    "timeline": {
+      "type": "array",
+      "description": "Move history leading to this position.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ply": { "type": "integer" },
+          "move": { "type": "string" },
+          "player": { "type": "string", "enum": ["B", "W"] }
+        },
+        "required": ["ply", "move", "player"]
+      }
+    }
+  },
+
+  "required": [
+    "metadata",
+    "board",
+    "katago",
+    "continuity_arcs",
+    "resonance_fields",
+    "drift_arrows",
+    "topology_graphs",
+    "ancestry_lines",
+    "risk",
+    "triadic_score"
+  ]
+}
