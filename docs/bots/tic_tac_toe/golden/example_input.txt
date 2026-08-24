@@ -1,1 +1,29 @@
+# ✅ `/docs/bots/tic_tac_toe/golden/example_input.txt`
 
+A short, clean 5‑ply human‑vs‑human sequence designed to expose:
+
+- regime shifts  
+- projection‑loss  
+- continuity collapse  
+- structural drift  
+- resonance over rows/columns/diagonals  
+
+```
+X plays center.
+O plays top-left.
+X plays top-center.
+O plays middle-left.
+X plays top-right (threat).
+O plays bottom-left.
+X plays middle-right.
+```
+
+This yields the final board:
+
+```
+X X X
+O X .
+O . .
+```
+
+X wins via top-row continuity.
