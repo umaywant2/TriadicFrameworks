@@ -1,1 +1,130 @@
+{
+  "module": {
+    "name": "RTT-Go Bot Module",
+    "summary": "RTT agentic layer for Go engines (KataGo, Leela Zero, PhoenixGo), providing triadic structure, continuity, resonance, topology, ancestry, risk analysis, and unified triadic scoring.",
+    "category": "bots.go"
+  },
+
+  "ai": {
+    "module": {
+      "name": "RTT-Go",
+      "summary": "Triadic agentic interpretation layer for Go.",
+      "category": "RTT-Agentic",
+      "version": "1.0",
+      "purpose": "Provide triadic identity, continuity arcs, resonance fields, topology/ancestry stability, paradox/collapse detection, and triadic scoring for Go engines.",
+      "keywords": [
+        "triadic",
+        "continuity",
+        "resonance",
+        "topology",
+        "ancestry",
+        "drift",
+        "paradox",
+        "collapse",
+        "projection-loss",
+        "MCTS hooks",
+        "agentic layer"
+      ],
+      "audience": "Developers, theorists, Go players, AI researchers"
+    }
+  },
+
+  "session": {
+    "context": {
+      "canon": "TriadicFrameworks",
+      "modules": "RTT-Go Bot Suite",
+      "drift": "Continuity-first agentic interpretation",
+      "coherence": "RTT operator lineage",
+      "version": "2026",
+      "format": "module.json",
+      "front_door": "/docs/bots/go/README.md",
+      "every_page": "Triadic identity preserved across all files",
+      "audience": "Technical + triadic readers"
+    }
+  },
+
+  "badge": {
+    "emoji": "⚫",
+    "label": "RTT-Go"
+  },
+
+  "files": [
+    { "path": "overview.md", "role": "profile", "analyzer_layer": "cross-cutting" },
+    { "path": "README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+
+    { "path": "analysis/continuity_arcs.md", "role": "diagnostic", "analyzer_layer": "coherence" },
+    { "path": "analysis/regime_maps.md", "role": "diagnostic", "analyzer_layer": "regime" },
+    { "path": "analysis/resonance_fields.md", "role": "diagnostic", "analyzer_layer": "operator" },
+    { "path": "analysis/topology_graphs.md", "role": "diagnostic", "analyzer_layer": "dimensional" },
+
+    { "path": "engine/architecture.md", "role": "engine", "analyzer_layer": "cross-cutting" },
+    { "path": "engine/continuity.md", "role": "engine", "analyzer_layer": "coherence" },
+    { "path": "engine/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+    { "path": "engine/regime.md", "role": "engine", "analyzer_layer": "regime" },
+    { "path": "engine/resonance.md", "role": "engine", "analyzer_layer": "operator" },
+    { "path": "engine/risk.md", "role": "engine", "analyzer_layer": "cross-cutting" },
+    { "path": "engine/scoring.md", "role": "engine", "analyzer_layer": "coherence" },
+    { "path": "engine/state_emitter.md", "role": "engine", "analyzer_layer": "cross-cutting" },
+    { "path": "engine/topology.md", "role": "engine", "analyzer_layer": "dimensional" },
+
+    { "path": "examples/analysis_mode.md", "role": "example", "analyzer_layer": "cross-cutting" },
+    { "path": "examples/analysis_mode_examples.md", "role": "example", "analyzer_layer": "cross-cutting" },
+    { "path": "examples/combined_examples.md", "role": "example", "analyzer_layer": "cross-cutting" },
+    { "path": "examples/full_game_walkthrough.md", "role": "example", "analyzer_layer": "coherence" },
+    { "path": "examples/rtt_go_examples.md", "role": "example", "analyzer_layer": "cross-cutting" },
+    { "path": "examples/teaching_mode.md", "role": "example", "analyzer_layer": "cross-cutting" },
+    { "path": "examples/teaching_mode_examples.md", "role": "example", "analyzer_layer": "cross-cutting" },
+    { "path": "examples/triadic_cheatsheet.md", "role": "reference", "analyzer_layer": "cross-cutting" },
+    { "path": "examples/triadic_commentary_examples.md", "role": "example", "analyzer_layer": "coherence" },
+    { "path": "examples/triadic_diagram_set.md", "role": "map", "analyzer_layer": "cross-cutting" },
+    { "path": "examples/triadic_faq.md", "role": "reference", "analyzer_layer": "cross-cutting" },
+    { "path": "examples/triadic_glossary.md", "role": "reference", "analyzer_layer": "cross-cutting" },
+    { "path": "examples/triadic_overlays.md", "role": "map", "analyzer_layer": "cross-cutting" },
+    { "path": "examples/triadic_visual_guide.md", "role": "map", "analyzer_layer": "cross-cutting" },
+    { "path": "examples/ui_overlay_examples.md", "role": "example", "analyzer_layer": "cross-cutting" },
+
+    { "path": "logic/continuity.md", "role": "engine", "analyzer_layer": "coherence" },
+    { "path": "logic/engine.md", "role": "engine", "analyzer_layer": "cross-cutting" },
+    { "path": "logic/examples.md", "role": "example", "analyzer_layer": "cross-cutting" },
+    { "path": "logic/mcts.md", "role": "engine", "analyzer_layer": "cross-cutting" },
+    { "path": "logic/mcts_hooks.md", "role": "engine", "analyzer_layer": "cross-cutting" },
+    { "path": "logic/notes.md", "role": "reference", "analyzer_layer": "cross-cutting" },
+    { "path": "logic/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+    { "path": "logic/search_flow.md", "role": "engine", "analyzer_layer": "cross-cutting" },
+
+    { "path": "rtt/aurion.md", "role": "signature", "analyzer_layer": "dimensional" },
+    { "path": "rtt/harmonia.md", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "rtt/hephaestus.md", "role": "signature", "analyzer_layer": "regime" },
+    { "path": "rtt/lumen.md", "role": "signature", "analyzer_layer": "operator" },
+    { "path": "rtt/operator_index.md", "role": "index", "analyzer_layer": "cross-cutting" },
+    { "path": "rtt/operator_lineage.md", "role": "map", "analyzer_layer": "cross-cutting" },
+
+    { "path": "shim/katago_shim.md", "role": "extension", "analyzer_layer": "cross-cutting" },
+    { "path": "shim/leela_zero_shim.md", "role": "extension", "analyzer_layer": "cross-cutting" },
+    { "path": "shim/phoenixgo_shim.md", "role": "extension", "analyzer_layer": "cross-cutting" },
+
+    { "path": "ui/api.md", "role": "engine", "analyzer_layer": "cross-cutting" },
+    { "path": "ui/assets.md", "role": "reference", "analyzer_layer": "cross-cutting" },
+    { "path": "ui/components", "role": "index", "analyzer_layer": "cross-cutting" },
+    { "path": "ui/manifest.md", "role": "index", "analyzer_layer": "cross-cutting" },
+    { "path": "ui/overlays.md", "role": "map", "analyzer_layer": "cross-cutting" },
+    { "path": "ui/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+    { "path": "ui/spec.md", "role": "reference", "analyzer_layer": "cross-cutting" },
+    { "path": "ui/state_contract.md", "role": "engine", "analyzer_layer": "cross-cutting" },
+    { "path": "ui/triadic_hud.md", "role": "map", "analyzer_layer": "coherence" },
+    { "path": "ui/triadic_viewer.md", "role": "map", "analyzer_layer": "cross-cutting" },
+
+    { "path": "ui/components/diagnostics.md", "role": "diagnostic", "analyzer_layer": "cross-cutting" },
+    { "path": "ui/components/hud.md", "role": "map", "analyzer_layer": "coherence" },
+    { "path": "ui/components/index.md", "role": "index", "analyzer_layer": "cross-cutting" },
+    { "path": "ui/components/overlays.md", "role": "map", "analyzer_layer": "cross-cutting" },
+    { "path": "ui/components/timeline.md", "role": "map", "analyzer_layer": "coherence" },
+    { "path": "ui/components/viewer.md", "role": "map", "analyzer_layer": "cross-cutting" }
+  ],
+
+  "phantom_flags": {
+    "has_phantoms": false,
+    "notes": "All files accounted for; no phantom entries."
+  }
+}
 
