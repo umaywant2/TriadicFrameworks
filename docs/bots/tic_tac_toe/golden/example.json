@@ -1,8 +1,8 @@
 {
   "metadata": {
     "module_id": "bots.tic_tac_toe",
-    "position_id": "golden_example_v2",
-    "next_player": "X",
+    "position_id": "golden_example_v3",
+    "next_player": "O",
     "ply": 7
   },
 
@@ -12,24 +12,25 @@
     { "ply": 3, "coord": "B1", "player": "X" },
     { "ply": 4, "coord": "A2", "player": "O" },
     { "ply": 5, "coord": "C1", "player": "X" },
-    { "ply": 6, "coord": "A3", "player": "O" },
+    { "ply": 6, "coord": "C3", "player": "O" },
     { "ply": 7, "coord": "C2", "player": "X" }
   ],
 
   "board": [
     ["O", "X", "X"],
     ["O", "X", "X"],
-    ["O", " ", " "]
+    [" ", " ", "O"]
   ],
 
   "legal_moves": [
-    { "coord": "B3", "index": 7 },
-    { "coord": "C3", "index": 8 }
+    { "coord": "A3", "index": 6 },
+    { "coord": "B3", "index": 7 }
   ],
 
   "lumen": {
     "winning_lines": [],
     "threat_lines": [
+      ["A1", "A2", "A3"],
       ["B1", "B2", "B3"]
     ],
     "fork_opportunities": []
@@ -37,30 +38,30 @@
 
   "regime": {
     "proportions": {
-      "local": 0.33,
-      "structural": 0.33,
-      "continuity": 0.34
+      "local": 0.40,
+      "structural": 0.30,
+      "continuity": 0.30
     },
     "move_tags": [
-      { "coord": "B3", "regime": "continuity" },
-      { "coord": "C3", "regime": "local" }
+      { "coord": "A3", "regime": "local" },
+      { "coord": "B3", "regime": "continuity" }
     ]
   },
 
   "ancestry": {
-    "win_paths": [],
-    "draw_paths": [
-      ["B3", "C3"]
+    "win_paths": [
+      ["A3"]
     ],
+    "draw_paths": [],
     "loss_paths": [
-      ["A1", "A2", "A3"]
+      ["B3"]
     ]
   },
 
   "risk": {
     "move_risks": [
-      { "coord": "B3", "projection_loss": false, "collapse_risk": "low" },
-      { "coord": "C3", "projection_loss": true,  "collapse_risk": "high" }
+      { "coord": "A3", "projection_loss": false, "collapse_risk": "low" },
+      { "coord": "B3", "projection_loss": true,  "collapse_risk": "high" }
     ]
   },
 
@@ -70,9 +71,11 @@
   },
 
   "triadic_score": {
-    "local": 0.33,
-    "structural": 0.33,
-    "continuity": 0.34,
-    "final": 0.72
-  }
+    "local": 0.40,
+    "structural": 0.30,
+    "continuity": 0.30,
+    "final": 0.34
+  },
+
+  "winner": null
 }
