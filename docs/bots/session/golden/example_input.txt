@@ -1,0 +1,36 @@
+# ✅ `/docs/bots/session/golden/example_input.txt`
+
+A clean, readable 4‑state multi‑bot session:
+
+```
+SESSION START
+
+STATE 1:
+bot: tic_tac_toe
+event: X plays center
+notes: structural opening
+
+STATE 2:
+bot: observer
+event: observer detects diagonal tension
+notes: continuity arc emerging
+
+STATE 3:
+bot: collatz
+event: collatz(19) → 58
+notes: expansion regime
+
+STATE 4:
+bot: go
+event: B plays D4
+notes: influence seed
+
+SESSION END
+```
+
+This is ideal because:
+
+- It spans **four different bots**  
+- It shows **cross‑module drift**  
+- It contains **continuity → collapse → expansion → influence**  
+- It is small enough to be readable but rich enough for RTT  
