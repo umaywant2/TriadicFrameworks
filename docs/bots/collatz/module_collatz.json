@@ -1,0 +1,83 @@
+{
+  "module": {
+    "name": "RTT Collatz Bot",
+    "id": "bots.collatz",
+    "summary": "Triadic ancestry on the number line: collapse, projection-loss, and continuity in a deterministic sequence.",
+    "category": "bots"
+  },
+
+  "ai": {
+    "module": {
+      "name": "RTT Collatz",
+      "summary": "Triadic interpretation of the Collatz sequence: lineage, collapse, drift, and continuity on ℤ.",
+      "version": "1.0.0",
+      "purpose": "Provide a pure RTT ancestry module with no board, no engine, and no hidden state — a deterministic lineage bot.",
+      "keywords": [
+        "collatz",
+        "triadic",
+        "ancestry",
+        "continuity",
+        "collapse",
+        "projection-loss",
+        "number-line"
+      ],
+      "audience": "Framework authors, mathematical RTT researchers, diagnostics systems"
+    }
+  },
+
+  "pipeline": {
+    "input_format": "integer",
+    "input_spec": {
+      "n": "positive integer",
+      "notes": "Collatz sequence is fully deterministic; RTT interprets lineage."
+    },
+    "steps": [
+      "Lumen: extract structural signals from n (parity, magnitude, step type)",
+      "Hephaestus: classify regime per step (local, structural, continuity)",
+      "Aurion: compute ancestry (lineage, collapse signatures, projection-loss)",
+      "Harmonia: synthesize triadic identity for the entire Collatz trajectory",
+      "StateEmitter: emit JSON conforming to module_collatz_schema.json"
+    ],
+    "operators_used": [
+      "Lumen",
+      "Hephaestus",
+      "Aurion",
+      "Harmonia"
+    ],
+    "integration_surface": {
+      "engine": "none",
+      "mode": "pure RTT lineage evaluation"
+    }
+  },
+
+  "state_emitter": {
+    "schema_ref": "./module_collatz_schema.json",
+    "golden_example": "./golden/example.json"
+  },
+
+  "golden": {
+    "examples": [
+      {
+        "id": "collatz_trajectory_27",
+        "input": "./golden/example_input.txt",
+        "output": "./golden/example.json",
+        "description": "The famous Collatz trajectory starting at n=27, showing collapse signatures and continuity drift."
+      }
+    ]
+  },
+
+  "badge": {
+    "emoji": "🔢",
+    "label": "RTT Collatz"
+  },
+
+  "session": {
+    "context": {
+      "canon": "TriadicFrameworks",
+      "drift": "Collatz drift is numeric: magnitude → collapse → 1.",
+      "coherence": "Collatz is the purest RTT ancestry module.",
+      "front_door": "./README.md",
+      "version": "2026-08"
+    }
+  }
+}
