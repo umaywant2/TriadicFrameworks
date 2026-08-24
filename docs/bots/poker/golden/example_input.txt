@@ -1,0 +1,44 @@
+# ♠️ `/docs/bots/poker/golden/example_input.txt`
+
+A compact, readable hand with meaningful RTT structure:
+
+```
+POKER HAND — GOLDEN EXAMPLE
+
+PLAYERS:
+BTN (X)
+BB  (O)
+
+STACKS:
+X: 100bb
+O: 100bb
+
+PRE-FLOP:
+X raises to 2.5bb
+O calls
+
+FLOP: K♣ 7♦ 3♠
+X bets 3bb
+O calls
+
+TURN: 9♦
+X bets 9bb
+O raises to 27bb
+X calls
+
+RIVER: 2♣
+X checks
+O bets 41bb
+X folds
+
+NOTES:
+- X shows bluff continuity on flop → turn.
+- O shows structural pressure with turn raise.
+- Collapse signature occurs on river.
+- Projection-loss occurs when X abandons bluff arc.
+```
+
+This is ideal because:
+
+- It contains **pressure**, **continuity**, **collapse**, **projection‑loss**, and **ancestry**.
+- It is small enough to be readable but rich enough for RTT.
