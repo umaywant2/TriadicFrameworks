@@ -1,0 +1,117 @@
+{
+  "metadata": {
+    "module_id": "bots.collatz",
+    "sequence_id": "collatz_golden_v1",
+    "start": 19,
+    "length": 20
+  },
+
+  "timeline": [
+    { "index": 1,  "value": 19 },
+    { "index": 2,  "value": 58 },
+    { "index": 3,  "value": 29 },
+    { "index": 4,  "value": 88 },
+    { "index": 5,  "value": 44 },
+    { "index": 6,  "value": 22 },
+    { "index": 7,  "value": 11 },
+    { "index": 8,  "value": 34 },
+    { "index": 9,  "value": 17 },
+    { "index": 10, "value": 52 },
+    { "index": 11, "value": 26 },
+    { "index": 12, "value": 13 },
+    { "index": 13, "value": 40 },
+    { "index": 14, "value": 20 },
+    { "index": 15, "value": 10 },
+    { "index": 16, "value": 5 },
+    { "index": 17, "value": 16 },
+    { "index": 18, "value": 8 },
+    { "index": 19, "value": 4 },
+    { "index": 20, "value": 2 },
+    { "index": 21, "value": 1 }
+  ],
+
+  "lumen": [
+    { "index": 1,  "signals": ["odd_expansion_seed"] },
+    { "index": 2,  "signals": ["even_compression"] },
+    { "index": 3,  "signals": ["odd_expansion"] },
+    { "index": 4,  "signals": ["even_compression"] },
+    { "index": 5,  "signals": ["even_compression"] },
+    { "index": 6,  "signals": ["even_compression"] },
+    { "index": 7,  "signals": ["odd_expansion"] },
+    { "index": 8,  "signals": ["even_compression"] },
+    { "index": 9,  "signals": ["odd_expansion"] },
+    { "index": 10, "signals": ["even_compression"] },
+    { "index": 11, "signals": ["even_compression"] },
+    { "index": 12, "signals": ["odd_expansion"] },
+    { "index": 13, "signals": ["even_compression"] },
+    { "index": 14, "signals": ["even_compression"] },
+    { "index": 15, "signals": ["even_compression"] },
+    { "index": 16, "signals": ["odd_expansion"] },
+    { "index": 17, "signals": ["even_compression"] },
+    { "index": 18, "signals": ["even_compression"] },
+    { "index": 19, "signals": ["even_compression"] },
+    { "index": 20, "signals": ["even_compression"] },
+    { "index": 21, "signals": ["attractor_state"] }
+  ],
+
+  "regime": [
+    { "index": 1,  "regime": "E" },
+    { "index": 2,  "regime": "S" },
+    { "index": 3,  "regime": "E" },
+    { "index": 4,  "regime": "S" },
+    { "index": 5,  "regime": "S" },
+    { "index": 6,  "regime": "S" },
+    { "index": 7,  "regime": "E" },
+    { "index": 8,  "regime": "S" },
+    { "index": 9,  "regime": "E" },
+    { "index": 10, "regime": "S" },
+    { "index": 11, "regime": "S" },
+    { "index": 12, "regime": "E" },
+    { "index": 13, "regime": "S" },
+    { "index": 14, "regime": "S" },
+    { "index": 15, "regime": "S" },
+    { "index": 16, "regime": "E" },
+    { "index": 17, "regime": "S" },
+    { "index": 18, "regime": "S" },
+    { "index": 19, "regime": "S" },
+    { "index": 20, "regime": "S" },
+    { "index": 21, "regime": "R" }
+  ],
+
+  "ancestry": [
+    { "index": 1,  "collapse_signature": false, "projection_loss": false },
+    { "index": 2,  "collapse_signature": false, "projection_loss": false },
+    { "index": 3,  "collapse_signature": false, "projection_loss": false },
+    { "index": 4,  "collapse_signature": false, "projection_loss": false },
+    { "index": 5,  "collapse_signature": false, "projection_loss": false },
+    { "index": 6,  "collapse_signature": false, "projection_loss": false },
+    { "index": 7,  "collapse_signature": true,  "projection_loss": false },
+    { "index": 8,  "collapse_signature": false, "projection_loss": false },
+    { "index": 9,  "collapse_signature": true,  "projection_loss": false },
+    { "index": 10, "collapse_signature": false, "projection_loss": false },
+    { "index": 11, "collapse_signature": false, "projection_loss": false },
+    { "index": 12, "collapse_signature": true,  "projection_loss": false },
+    { "index": 13, "collapse_signature": false, "projection_loss": false },
+    { "index": 14, "collapse_signature": false, "projection_loss": false },
+    { "index": 15, "collapse_signature": false, "projection_loss": false },
+    { "index": 16, "collapse_signature": true,  "projection_loss": false },
+    { "index": 17, "collapse_signature": false, "projection_loss": false },
+    { "index": 18, "collapse_signature": false, "projection_loss": false },
+    { "index": 19, "collapse_signature": false, "projection_loss": false },
+    { "index": 20, "collapse_signature": false, "projection_loss": false },
+    { "index": 21, "collapse_signature": true,  "projection_loss": true }
+  ],
+
+  "drift": {
+    "direction": "toward-attractor",
+    "strength": "strong"
+  },
+
+  "triadic_identity": {
+    "local": 0.19,
+    "structural": 0.46,
+    "continuity": 0.35,
+    "risk": 0.27,
+    "final": 0.74
+  }
+}
