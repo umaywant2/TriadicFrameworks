@@ -1,0 +1,41 @@
+# ✅ `/docs/bots/go/golden/example_input.txt`
+
+A compact 9×9 sequence that demonstrates:
+
+- early local fighting  
+- structural enclosure  
+- continuity arc formation  
+- collapse signature (corner failure)  
+- projection‑loss (shape inversion)  
+
+```
+BOARD SIZE: 9x9
+
+MOVE SEQUENCE:
+1. B D4
+2. W F4
+3. B D6
+4. W F6
+5. B C5
+6. W G5
+7. B C4
+8. W G4
+9. B E5
+10. W E4
+11. B D5
+12. W F5
+13. B C6
+14. W G6
+15. B B5
+16. W H5
+17. B C3
+18. W G3
+19. B D3
+20. W F3
+
+NOTES:
+- Black builds a left‑side influence arc.
+- White builds a right‑side influence arc.
+- Central tension emerges around E5/E4.
+- Collapse signature at move 15 (B B5).
+- Projection‑loss at move 18 (W G3).
