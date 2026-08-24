@@ -1,0 +1,110 @@
+{
+  "module": {
+    "name": "RTT Checkers Bot",
+    "id": "bots.checkers",
+    "summary": "Discrete triadic engine: tempo, structure, ladder ancestry, collapse signatures, projection-loss, and unified triadic scoring for checkers positions.",
+    "category": "bots"
+  },
+
+  "ai": {
+    "module": {
+      "name": "RTT-Checkers",
+      "summary": "Triadic interpretation of checkers: tempo, structure, ladders, and collapse risk.",
+      "version": "1.0.0",
+      "purpose": "Provide triadic identity for checkers positions using resonance fields, continuity arcs, ladder ancestry, drift, collapse signatures, and Harmonia synthesis.",
+      "keywords": [
+        "checkers",
+        "draughts",
+        "triadic",
+        "tempo",
+        "structure",
+        "ladder",
+        "ancestry",
+        "drift",
+        "collapse",
+        "projection-loss"
+      ],
+      "audience": "AI researchers, game theorists, engine integrators, diagnostics systems"
+    }
+  },
+
+  "pipeline": {
+    "input_format": "checkers_state_json",
+    "input_spec": {
+      "board": "8x8 dark-square occupancy with piece type and owner",
+      "side_to_move": "player to move",
+      "legal_moves": "list of legal moves (including captures)",
+      "history": "move history"
+    },
+
+    "steps": [
+      "Lumen: extract structural signals (piece balance, ladder topology, king presence, tempo anchors)",
+      "Hephaestus: classify regime per move (local material/tempo, structural ladders, continuity of plan)",
+      "Aurion: compute ancestry (ladder lineage, king walks, collapse signatures, projection-loss)",
+      "Harmonia: synthesize triadic identity for the position (local, structural, continuity, risk)",
+      "StateEmitter: emit JSON conforming to module_checkers_schema.json"
+    ],
+
+    "operators_used": [
+      "Lumen",
+      "Hephaestus",
+      "Aurion",
+      "Harmonia"
+    ],
+
+    "integration_surface": {
+      "engine": "none",
+      "mode": "pure RTT positional interpretation"
+    }
+  },
+
+  "triadic_overlays": {
+    "continuity_arcs": "plan/ladder/king long-arc identity curves",
+    "resonance_fields": "pressure gradients from tempo and structural ladders",
+    "drift_arrows": "directional flow of positional identity",
+    "topology_graphs": "ladder topology, king routes, capture nets",
+    "ancestry_lines": "lineage of ladders and king walks",
+    "risk_indicators": "paradox, collapse, projection-loss",
+    "triadic_hud": "local/structural/continuity scores + positional stability"
+  },
+
+  "scoring": {
+    "weights": {
+      "local": 0.35,
+      "structural": 0.40,
+      "continuity": 0.25
+    },
+    "risk_penalty": 0.20
+  },
+
+  "state_emitter": {
+    "schema_ref": "./module_checkers_schema.json",
+    "golden_example": "./golden/example.json"
+  },
+
+  "golden": {
+    "examples": [
+      {
+        "id": "checkers_ladder_collapse",
+        "input": "./golden/example_input.txt",
+        "output": "./golden/example.json",
+        "description": "A position showing ladder stability, king resonance, tempo drift, and a projection-loss collapse event."
+      }
+    ]
+  },
+
+  "badge": {
+    "emoji": "⛀",
+    "label": "RTT Checkers"
+  },
+
+  "session": {
+    "context": {
+      "canon": "TriadicFrameworks",
+      "drift": "Checkers drift is tempo-driven: ladders → king routes → collapse.",
+      "coherence": "Checkers is the RTT module for discrete ladder identity.",
+      "front_door": "./README.md",
+      "version": "2026-08"
+    }
+  }
+}
