@@ -4,8 +4,9 @@
 
 RTT Tic-Tac-Toe is the **unit test bot** for the TriadicFrameworks suite.
 
-It proves that the RTT pipeline can emit a **fully structured**, **fully replayable**,  
-**schema-valid**, and **triadic** JSON document for the smallest non-trivial game tree.
+It demonstrates that the RTT pipeline can emit a **fully structured**,  
+**fully replayable**, **schema-valid**, and **triadic** JSON document for the  
+smallest non-trivial perfect-information game.
 
 This module is the **build gate**: if RTT cannot be made precise here,  
 it cannot be trusted anywhere else.
@@ -14,30 +15,41 @@ it cannot be trusted anywhere else.
 
 ## What this bot demonstrates
 
-- **Conformance:** every position emits a JSON document that validates against  
-  `module_tic_tac_toe_schema.json`.
+### ✔ Conformance  
+Every position emits a JSON document that validates against  
+`module_tic_tac_toe_schema.json`.
 
-- **Shared Envelope:** the bot emits the standard RTT envelope:
-  - `metadata`
-  - `timeline`
-  - `board` + `legal_moves`
-  - `lumen`
-  - `regime`
-  - `ancestry`
-  - `risk`
-  - `drift`
-  - `triadic_score`
+### ✔ Shared Envelope  
+The bot emits the standard RTT envelope:
 
-- **Replayability:** the timeline is hand-replayable and produces the exact board  
-  shown in the `state` snapshot.
+- `metadata`
+- `timeline`
+- `board` + `legal_moves`
+- `lumen`
+- `regime`
+- `ancestry`
+- `risk`
+- `drift`
+- `triadic_score`
+- `winner`
 
-- **Projection-loss:** moves like `C3` demonstrate collapse and projection-loss  
-  even in a 3×3 grid.
+### ✔ Replayability  
+The timeline is hand-replayable and produces the exact board shown in the snapshot.  
+Coordinates use **A1 = top-left**, **C3 = bottom-right**, row-major.
 
-- **Continuity:** threat-lines and ancestry show long-arc identity  
-  (win/draw/loss paths).
+### ✔ Projection-loss  
+The golden position shows a live choice where the current player (O) can:
 
-- **Regime:** local / structural / continuity tags are meaningful even in tiny games.
+- play **A3** → immediate win (local), or  
+- misplay **B3** → projection-loss (hands X a future continuity win path)
+
+### ✔ Continuity  
+Threat-lines and ancestry show long-arc identity (win/draw/loss paths)  
+even in a 3×3 grid.
+
+### ✔ Regime  
+Local / structural / continuity tags are meaningful even in tiny games  
+and are enforced by Hephaestus.
 
 ---
 
@@ -48,51 +60,55 @@ it cannot be trusted anywhere else.
 
 - `module_tic_tac_toe_schema.json`  
   JSON Schema for the StateEmitter output.  
-  Validates the **snapshot** (`board`, `legal_moves`, `lumen`, `regime`, etc.).
+  Validates the **snapshot** (`board`, `legal_moves`, `lumen`, `regime`, etc.)  
+  and the shared envelope.
 
 - `golden/example_input.txt`  
-  The exact 7-ply sequence used to produce the golden state.  
-  Replayable by hand.
+  The exact 7‑ply sequence used to produce the golden state.  
+  Replayable by hand and consistent with turn parity.
 
 - `golden/example.json`  
   The full triadic state for the position, including:
-  - timeline (the move history),
-  - snapshot (`board`, `legal_moves`),
-  - structural extraction,
-  - regime proportions,
-  - ancestry,
-  - risk,
-  - drift,
-  - triadic score.
+  - timeline (move history)
+  - snapshot (`board`, `legal_moves`)
+  - structural extraction
+  - regime proportions
+  - ancestry
+  - risk
+  - drift
+  - triadic score (with published Harmonia weights)
+  - winner (null for this position)
 
-  This file **conforms to the schema** and is the reference fixture for the suite.
+This file **conforms to the schema** and is the reference fixture for the suite.
 
 ---
 
 ## Pipeline (v2)
 
-1. **Input:**  
-   - 3×3 board  
+1. **Input**  
+   - timeline (ply, coord, player)  
+   - 3×3 board derived from timeline  
    - next player  
-   - optional timeline
+   - coordinate system: `A1` top-left → `C3` bottom-right
 
-2. **Lumen:**  
+2. **Lumen**  
    - detect winning lines  
    - detect threat lines  
    - detect fork opportunities
 
-3. **Hephaestus:**  
+3. **Hephaestus**  
    - tag each legal move as `local`, `structural`, or `continuity`  
-   - compute regime proportions
-
-4. **Aurion:**  
-   - classify ancestry (win/draw/loss paths)
-
-5. **Harmonia:**  
-   - compute numeric triadic scores  
+   - compute regime proportions  
    - enforce `local + structural + continuity = 1.0`
 
-6. **StateEmitter:**  
+4. **Aurion**  
+   - classify ancestry (win/draw/loss paths)
+
+5. **Harmonia**  
+   - compute numeric triadic scores using published weights  
+   - derive `final` from those weights
+
+6. **StateEmitter**  
    - emit the shared RTT envelope  
    - validate against `module_tic_tac_toe_schema.json`
 
@@ -103,8 +119,9 @@ it cannot be trusted anywhere else.
 - No external engine  
 - No randomness  
 - No hidden information  
+- No pruning or heuristics  
 - No UI contract beyond the schema  
-- No pruning or heuristics — full enumeration only
+- Full enumeration only
 
 This bot is the **reference conformance fixture** for RTT.
 
