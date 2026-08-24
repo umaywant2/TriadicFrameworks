@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "module_id": "bots.poker",
+    "hand_id": "poker_golden_v1",
+    "street": "river",
+    "next_player": "X"
+  },
+
+  "visible_state": {
+    "board": ["Kc", "7d", "3s", "9d", "2c"],
+    "pot": 83.5,
+    "stacks": {
+      "X": 68.5,
+      "O": 72
+    }
+  },
+
+  "hidden_state": {
+    "X": ["??", "??"],
+    "O": ["??", "??"]
+  },
+
+  "lumen": {
+    "range_compression": "medium",
+    "pressure_nodes": ["flop_bet", "turn_raise", "river_bet"],
+    "pot_geometry": "large"
+  },
+
+  "regime": [
+    { "action": "X raises preflop", "regime": "structural" },
+    { "action": "O calls preflop", "regime": "local" },
+    { "action": "X bets flop", "regime": "continuity" },
+    { "action": "O calls flop", "regime": "local" },
+    { "action": "X bets turn", "regime": "continuity" },
+    { "action": "O raises turn", "regime": "structural" },
+    { "action": "X calls turn", "regime": "continuity" },
+    { "action": "X checks river", "regime": "local" },
+    { "action": "O bets river", "regime": "structural" },
+    { "action": "X folds river", "regime": "continuity" }
+  ],
+
+  "ancestry": [
+    {
+      "sequence": ["preflop_raise"],
+      "collapse_signature": false,
+      "projection_loss": false
+    },
+    {
+      "sequence": ["preflop_raise", "flop_bet"],
+      "collapse_signature": false,
+      "projection_loss": false
+    },
+    {
+      "sequence": ["preflop_raise", "flop_bet", "turn_bet"],
+      "collapse_signature": false,
+      "projection_loss": false
+    },
+    {
+      "sequence": ["preflop_raise", "flop_bet", "turn_bet", "turn_raise"],
+      "collapse_signature": true,
+      "projection_loss": false
+    },
+    {
+      "sequence": ["preflop_raise", "flop_bet", "turn_bet", "turn_raise", "river_fold"],
+      "collapse_signature": true,
+      "projection_loss": true
+    }
+  ],
+
+  "drift": {
+    "direction": "pressure-collapse",
+    "strength": "strong",
+    "alignment": "broken"
+  },
+
+  "risk": {
+    "paradox": "medium",
+    "collapse": "high",
+    "projection_loss": "high"
+  },
+
+  "triadic_score": {
+    "local": 0.24,
+    "structural": 0.39,
+    "continuity": 0.37,
+    "risk": 0.48,
+    "final": 0.71
+  }
+}
