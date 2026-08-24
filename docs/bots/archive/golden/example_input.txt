@@ -1,0 +1,32 @@
+## `/docs/bots/archive/golden/example_input.txt`
+
+A clean 4‑snapshot temporal evolution of a document:
+
+```
+SNAPSHOT 1 (2026-08-01 10:00)
+Title: Resonance Field Notes
+Content: Initial draft with outline only.
+Metadata: version=1.0
+
+SNAPSHOT 2 (2026-08-01 12:00)
+Title: Resonance Field Notes
+Content: Added section on drift taxonomy.
+Metadata: version=1.1
+
+SNAPSHOT 3 (2026-08-01 14:00)
+Title: Resonance Field Notes
+Content: Major rewrite; removed drift taxonomy; added collapse signatures.
+Metadata: version=2.0
+
+SNAPSHOT 4 (2026-08-01 16:00)
+Title: Resonance Field Notes
+Content: Restored drift taxonomy; merged collapse signatures; unified triadic arc.
+Metadata: version=2.1
+```
+
+This sequence is ideal because:
+
+- Snapshot 3 introduces a **collapse signature** (major rewrite).  
+- Snapshot 4 introduces **projection‑loss recovery** (restoring drift taxonomy).  
+- Continuity arcs form across snapshots 2 → 4.  
+- Drift direction is clear (toward unified triadic arc).  
