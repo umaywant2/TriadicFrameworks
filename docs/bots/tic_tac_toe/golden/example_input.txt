@@ -1,6 +1,11 @@
-# RTT Tic-Tac-Toe Golden Input (v2)
+# RTT Tic-Tac-Toe Golden Input (v3)
 # This input describes the exact 7-ply sequence used in example.json.
 # The final board and next-player match the corrected golden.
+
+Coordinate system:
+- A1 = top-left, C3 = bottom-right
+- Rows increase downward (1 → 3)
+- Columns increase left-to-right (A → C)
 
 Sequence:
 1. X plays center        (B2)
@@ -8,24 +13,28 @@ Sequence:
 3. X plays top-center    (B1)
 4. O plays middle-left   (A2)
 5. X plays top-right     (C1)
-6. O plays bottom-left   (A3)
+6. O plays bottom-right  (C3)
 7. X plays middle-right  (C2)
 
 Final Board (row-major):
 O X X
 O X X
-O . .
+. . O
 
-Next player: X
+Next player: O
 Ply: 7
+
+Legal moves:
+- A3 (index 6)
+- B3 (index 7)
 
 Notes:
 - No player has a winning line.
-- X threatens the middle column (B1, B2, B3).
-- O controls the entire left column (A1, A2, A3).
+- O threatens the left column (A1, A2, A3): A3 is an immediate win.
+- X threatens the middle column (B1, B2, B3): B3 is a continuity threat.
 - This position is ideal for demonstrating:
   - regime proportions
   - threat-line detection
-  - projection-loss on C3
+  - projection-loss (O misplaying B3)
   - continuity potential on B3
   - drift toward left-column dominance
