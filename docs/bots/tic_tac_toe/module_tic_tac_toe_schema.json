@@ -15,7 +15,8 @@
         "next_player": { "type": "string", "enum": ["X", "O"] },
         "ply": { "type": "integer", "minimum": 0 }
       },
-      "required": ["module_id", "position_id", "next_player", "ply"]
+      "required": ["module_id", "position_id", "next_player", "ply"],
+      "additionalProperties": false
     },
 
     "timeline": {
@@ -28,7 +29,8 @@
           "coord": { "type": "string", "pattern": "^[ABC][123]$" },
           "player": { "type": "string", "enum": ["X", "O"] }
         },
-        "required": ["ply", "coord", "player"]
+        "required": ["ply", "coord", "player"],
+        "additionalProperties": false
       }
     },
 
@@ -53,17 +55,11 @@
       "items": {
         "type": "object",
         "properties": {
-          "coord": {
-            "type": "string",
-            "pattern": "^[ABC][123]$"
-          },
-          "index": {
-            "type": "integer",
-            "minimum": 0,
-            "maximum": 8
-          }
+          "coord": { "type": "string", "pattern": "^[ABC][123]$" },
+          "index": { "type": "integer", "minimum": 0, "maximum": 8 }
         },
-        "required": ["coord", "index"]
+        "required": ["coord", "index"],
+        "additionalProperties": false
       }
     },
 
@@ -92,7 +88,9 @@
           "type": "array",
           "items": { "type": "string", "pattern": "^[ABC][123]$" }
         }
-      }
+      },
+      "required": ["winning_lines", "threat_lines", "fork_opportunities"],
+      "additionalProperties": false
     },
 
     "regime": {
@@ -105,7 +103,8 @@
             "structural": { "type": "number", "minimum": 0, "maximum": 1 },
             "continuity": { "type": "number", "minimum": 0, "maximum": 1 }
           },
-          "required": ["local", "structural", "continuity"]
+          "required": ["local", "structural", "continuity"],
+          "additionalProperties": false
         },
         "move_tags": {
           "type": "array",
@@ -113,15 +112,15 @@
             "type": "object",
             "properties": {
               "coord": { "type": "string", "pattern": "^[ABC][123]$" },
-              "regime": {
-                "type": "string",
-                "enum": ["local", "structural", "continuity"]
-              }
+              "regime": { "type": "string", "enum": ["local", "structural", "continuity"] }
             },
-            "required": ["coord", "regime"]
+            "required": ["coord", "regime"],
+            "additionalProperties": false
           }
         }
-      }
+      },
+      "required": ["proportions", "move_tags"],
+      "additionalProperties": false
     },
 
     "ancestry": {
@@ -148,7 +147,9 @@
             "items": { "type": "string", "pattern": "^[ABC][123]$" }
           }
         }
-      }
+      },
+      "required": ["win_paths", "draw_paths", "loss_paths"],
+      "additionalProperties": false
     },
 
     "risk": {
@@ -161,15 +162,15 @@
             "properties": {
               "coord": { "type": "string", "pattern": "^[ABC][123]$" },
               "projection_loss": { "type": "boolean" },
-              "collapse_risk": {
-                "type": "string",
-                "enum": ["none", "low", "medium", "high"]
-              }
+              "collapse_risk": { "type": "string", "enum": ["none", "low", "medium", "high"] }
             },
-            "required": ["coord", "projection_loss", "collapse_risk"]
+            "required": ["coord", "projection_loss", "collapse_risk"],
+            "additionalProperties": false
           }
         }
-      }
+      },
+      "required": ["move_risks"],
+      "additionalProperties": false
     },
 
     "drift": {
@@ -178,7 +179,8 @@
         "direction": { "type": "string" },
         "strength": { "type": "string", "enum": ["low", "medium", "high"] }
       },
-      "required": ["direction", "strength"]
+      "required": ["direction", "strength"],
+      "additionalProperties": false
     },
 
     "triadic_score": {
@@ -189,12 +191,19 @@
         "continuity": { "type": "number", "minimum": 0, "maximum": 1 },
         "final": { "type": "number", "minimum": 0, "maximum": 1 }
       },
-      "required": ["local", "structural", "continuity", "final"]
+      "required": ["local", "structural", "continuity", "final"],
+      "additionalProperties": false
+    },
+
+    "winner": {
+      "type": ["string", "null"],
+      "enum": ["X", "O", "draw", null]
     }
   },
 
   "required": [
     "metadata",
+    "timeline",
     "board",
     "legal_moves",
     "lumen",
@@ -202,6 +211,9 @@
     "ancestry",
     "risk",
     "drift",
-    "triadic_score"
-  ]
+    "triadic_score",
+    "winner"
+  ],
+
+  "additionalProperties": false
 }
