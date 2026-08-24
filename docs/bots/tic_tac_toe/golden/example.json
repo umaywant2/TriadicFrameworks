@@ -2,60 +2,72 @@
   "metadata": {
     "module_id": "bots.tic_tac_toe",
     "position_id": "golden_example_v1",
-    "length": 7,
-    "players": ["X", "O"]
+    "next_player": "X",
+    "ply": 7
   },
 
   "timeline": [
-    { "index": 1, "player": "X", "move": "center" },
-    { "index": 2, "player": "O", "move": "top-left" },
-    { "index": 3, "player": "X", "move": "top-center" },
-    { "index": 4, "player": "O", "move": "middle-left" },
-    { "index": 5, "player": "X", "move": "top-right" },
-    { "index": 6, "player": "O", "move": "bottom-left" },
-    { "index": 7, "player": "X", "move": "middle-right" }
+    { "ply": 1, "coord": "B2", "player": "X" },
+    { "ply": 2, "coord": "A1", "player": "O" },
+    { "ply": 3, "coord": "B1", "player": "X" },
+    { "ply": 4, "coord": "A2", "player": "O" },
+    { "ply": 5, "coord": "C1", "player": "X" },
+    { "ply": 6, "coord": "A3", "player": "O" },
+    { "ply": 7, "coord": "C2", "player": "X" }
   ],
 
-  "lumen": [
-    { "index": 1, "signals": ["center_control", "open_topology"] },
-    { "index": 2, "signals": ["corner_anchor", "emerging_diagonal"] },
-    { "index": 3, "signals": ["row_pressure", "two_in_row_potential"] },
-    { "index": 4, "signals": ["side_anchor", "diagonal_disruption"] },
-    { "index": 5, "signals": ["three_in_row_threat", "continuity_arc"] },
-    { "index": 6, "signals": ["corner_anchor", "threat_response_failure"] },
-    { "index": 7, "signals": ["final_alignment", "continuity_completion"] }
-  ],
-
-  "regime": [
-    { "index": 1, "regime": "structural" },
-    { "index": 2, "regime": "local" },
-    { "index": 3, "regime": "structural" },
-    { "index": 4, "regime": "local" },
-    { "index": 5, "regime": "continuity" },
-    { "index": 6, "regime": "local" },
-    { "index": 7, "regime": "continuity" }
-  ],
-
-  "ancestry": [
-    { "index": 1, "collapse_signature": false, "projection_loss": false },
-    { "index": 2, "collapse_signature": false, "projection_loss": false },
-    { "index": 3, "collapse_signature": false, "projection_loss": false },
-    { "index": 4, "collapse_signature": true,  "projection_loss": false },
-    { "index": 5, "collapse_signature": false, "projection_loss": false },
-    { "index": 6, "collapse_signature": true,  "projection_loss": true },
-    { "index": 7, "collapse_signature": false, "projection_loss": false }
-  ],
-
-  "drift": {
-    "direction": "top-row",
-    "strength": "strong"
+  "state": {
+    "board": [
+      ["O", "X", "X"],
+      ["O", "X", "X"],
+      ["O", " ", " "]
+    ],
+    "legal_moves": [
+      { "coord": "B3", "index": 7 },
+      { "coord": "C3", "index": 8 }
+    ]
   },
 
-  "triadic_identity": {
-    "local": 0.22,
-    "structural": 0.41,
-    "continuity": 0.37,
-    "risk": 0.18,
-    "final": 0.78
+  "lumen": {
+    "winning_lines": [],
+    "threat_lines": [["B1", "B2", "B3"]],
+    "fork_opportunities": []
+  },
+
+  "regime": {
+    "proportions": {
+      "local": 0.33,
+      "structural": 0.33,
+      "continuity": 0.34
+    },
+    "move_tags": [
+      { "coord": "B3", "regime": "continuity" },
+      { "coord": "C3", "regime": "local" }
+    ]
+  },
+
+  "ancestry": {
+    "win_paths": [],
+    "draw_paths": [["B3", "C3"]],
+    "loss_paths": [["A1", "A2", "A3"]]
+  },
+
+  "risk": {
+    "move_risks": [
+      { "coord": "B3", "projection_loss": false, "collapse_risk": "low" },
+      { "coord": "C3", "projection_loss": true,  "collapse_risk": "high" }
+    ]
+  },
+
+  "drift": {
+    "direction": "left-column",
+    "strength": "medium"
+  },
+
+  "triadic_score": {
+    "local": 0.33,
+    "structural": 0.33,
+    "continuity": 0.34,
+    "final": 0.72
   }
 }
