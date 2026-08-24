@@ -10,7 +10,7 @@
     "module": {
       "name": "RTT Tic-Tac-Toe",
       "summary": "Triadic interpretation of a 3x3 game tree using the shared RTT envelope.",
-      "version": "2.0.0",
+      "version": "3.0.0",
       "purpose": "Serve as the build-gate unit test for the TriadicFrameworks suite.",
       "keywords": [
         "tic_tac_toe",
@@ -20,7 +20,8 @@
         "continuity",
         "perfect-information",
         "unit-test",
-        "shared-envelope"
+        "shared-envelope",
+        "threat-lines"
       ],
       "audience": "Framework authors, engine integrators, test harnesses"
     }
@@ -32,14 +33,15 @@
       "timeline": "sequence of moves (ply, coord, player)",
       "board": "3x3 grid derived from timeline",
       "cells": ["X", "O", " "],
-      "next_player": "X or O"
+      "next_player": "X or O",
+      "coordinate_system": "A1 top-left → C3 bottom-right"
     },
 
     "steps": [
       "Lumen: extract winning lines, threat lines, fork opportunities",
-      "Hephaestus: classify legal moves as local / structural / continuity",
+      "Hephaestus: classify legal moves as local / structural / continuity; enforce sum-to-1 proportions",
       "Aurion: compute ancestry (win paths, draw paths, loss paths)",
-      "Harmonia: compute triadic score; enforce local+structural+continuity = 1",
+      "Harmonia: compute triadic score using published weights; derive final score",
       "StateEmitter: emit shared RTT envelope; validate against schema"
     ],
 
@@ -49,6 +51,12 @@
       "Aurion",
       "Harmonia"
     ],
+
+    "harmonia_weights": {
+      "local": 0.30,
+      "structural": 0.30,
+      "continuity": 0.40
+    },
 
     "integration_surface": {
       "engine": "none",
@@ -64,10 +72,10 @@
   "golden": {
     "examples": [
       {
-        "id": "ttt_golden_v2",
+        "id": "ttt_golden_v3",
         "input": "./golden/example_input.txt",
         "output": "./golden/example.json",
-        "description": "Replayable 7-ply sequence demonstrating threat-lines, regime proportions, projection-loss, and continuity potential."
+        "description": "Legal 7-ply position: O threatens A3 (local win), X threatens B3 (continuity). Demonstrates threat-lines, regime proportions, projection-loss, and continuity potential."
       }
     ]
   },
@@ -81,7 +89,7 @@
     "context": {
       "canon": "TriadicFrameworks",
       "drift": "Conformance-first; tiny state space used to validate RTT invariants.",
-      "coherence": "All bots must emit the shared RTT envelope: metadata, timeline, snapshot, lumen, regime, ancestry, risk, drift, triadic_score.",
+      "coherence": "All bots must emit the shared RTT envelope: metadata, timeline, snapshot, lumen, regime, ancestry, risk, drift, triadic_score, winner.",
       "front_door": "./README.md",
       "version": "2026-08"
     }
