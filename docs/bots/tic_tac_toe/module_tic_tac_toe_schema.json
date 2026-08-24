@@ -1,0 +1,182 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/schemas/module_tic_tac_toe_state.json",
+  "title": "RTT Tic-Tac-Toe StateEmitter",
+  "description": "Triadic state output for a single Tic-Tac-Toe position.",
+  "type": "object",
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "module_id": { "type": "string" },
+        "position_id": { "type": "string" },
+        "next_player": { "type": "string", "enum": ["X", "O"] },
+        "ply": { "type": "integer", "minimum": 0 }
+      },
+      "required": ["module_id", "position_id", "next_player", "ply"]
+    },
+    "board": {
+      "type": "array",
+      "description": "3x3 board, row-major.",
+      "items": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": ["X", "O", " "]
+        },
+        "minItems": 3,
+        "maxItems": 3
+      },
+      "minItems": 3,
+      "maxItems": 3
+    },
+    "legal_moves": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "coord": {
+            "type": "string",
+            "description": "Cell coordinate, e.g., 'A1', 'B2', 'C3'."
+          },
+          "index": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 8
+          }
+        },
+        "required": ["coord", "index"]
+      }
+    },
+    "lumen": {
+      "type": "object",
+      "description": "Structural extraction: lines, forks, immediate wins/losses.",
+      "properties": {
+        "winning_lines": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 3,
+            "maxItems": 3
+          }
+        },
+        "threat_lines": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 3,
+            "maxItems": 3
+          }
+        },
+        "fork_opportunities": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "regime": {
+      "type": "object",
+      "description": "Hephaestus regime proportions and tags.",
+      "properties": {
+        "proportions": {
+          "type": "object",
+          "properties": {
+            "local": { "type": "number", "minimum": 0, "maximum": 1 },
+            "structural": { "type": "number", "minimum": 0, "maximum": 1 },
+            "continuity": { "type": "number", "minimum": 0, "maximum": 1 }
+          },
+          "required": ["local", "structural", "continuity"]
+        },
+        "move_tags": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "coord": { "type": "string" },
+              "regime": {
+                "type": "string",
+                "enum": ["local", "structural", "continuity"]
+              }
+            },
+            "required": ["coord", "regime"]
+          }
+        }
+      }
+    },
+    "ancestry": {
+      "type": "object",
+      "description": "Aurion ancestry: win/draw/loss line classification.",
+      "properties": {
+        "win_paths": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "draw_paths": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "loss_paths": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "risk": {
+      "type": "object",
+      "description": "Projection-loss and collapse risk for each move.",
+      "properties": {
+        "move_risks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "coord": { "type": "string" },
+              "projection_loss": { "type": "boolean" },
+              "collapse_risk": {
+                "type": "string",
+                "enum": ["none", "low", "medium", "high"]
+              }
+            },
+            "required": ["coord", "projection_loss", "collapse_risk"]
+          }
+        }
+      }
+    },
+    "triadic_score": {
+      "type": "object",
+      "description": "Harmonia synthesis for the position.",
+      "properties": {
+        "local": { "type": "number", "minimum": 0, "maximum": 1 },
+        "structural": { "type": "number", "minimum": 0, "maximum": 1 },
+        "continuity": { "type": "number", "minimum": 0, "maximum": 1 },
+        "final": { "type": "number", "minimum": 0, "maximum": 1 }
+      },
+      "required": ["local", "structural", "continuity", "final"]
+    },
+    "timeline": {
+      "type": "array",
+      "description": "Optional move history leading to this position.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ply": { "type": "integer", "minimum": 0 },
+          "coord": { "type": "string" },
+          "player": { "type": "string", "enum": ["X", "O"] }
+        },
+        "required": ["ply", "coord", "player"]
+      }
+    }
+  },
+  "required": ["metadata", "board", "legal_moves", "lumen", "regime", "ancestry", "risk", "triadic_score"]
+}
