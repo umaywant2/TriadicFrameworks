@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "module_id": "bots.backgammon",
+    "position_id": "backgammon_golden_v1",
+    "next_player": "X",
+    "dice": [5, 3]
+  },
+
+  "board": {
+    "points": [
+      { "index": 1, "player": "X", "count": 2 },
+      { "index": 2, "player": ".", "count": 0 },
+      { "index": 3, "player": ".", "count": 0 },
+      { "index": 4, "player": "O", "count": 3 },
+      { "index": 5, "player": "X", "count": 5 },
+      { "index": 6, "player": "X", "count": 3 },
+      { "index": 7, "player": ".", "count": 0 },
+      { "index": 8, "player": "O", "count": 2 },
+      { "index": 9, "player": ".", "count": 0 },
+      { "index": 10, "player": ".", "count": 0 },
+      { "index": 11, "player": "O", "count": 3 },
+      { "index": 12, "player": ".", "count": 0 },
+      { "index": 13, "player": "X", "count": 2 },
+      { "index": 14, "player": "X", "count": 2 },
+      { "index": 15, "player": ".", "count": 0 },
+      { "index": 16, "player": ".", "count": 0 },
+      { "index": 17, "player": "O", "count": 2 },
+      { "index": 18, "player": ".", "count": 0 },
+      { "index": 19, "player": ".", "count": 0 },
+      { "index": 20, "player": "X", "count": 2 },
+      { "index": 21, "player": "O", "count": 2 },
+      { "index": 22, "player": ".", "count": 0 },
+      { "index": 23, "player": ".", "count": 0 },
+      { "index": 24, "player": "X", "count": 2 }
+    ],
+    "bar": { "X": 1, "O": 0 },
+    "borne_off": { "X": 0, "O": 0 }
+  },
+
+  "legal_moves": [
+    ["6/1", "6/3"],
+    ["13/10", "20/15"],
+    ["5/2", "5/0"]
+  ],
+
+  "lumen": {
+    "prime_topology": "medium",
+    "anchor_stability": "stable",
+    "race_geometry": "moderate",
+    "blot_risk": "medium"
+  },
+
+  "regime": [
+    { "move": "6/1", "regime": "local" },
+    { "move": "6/3", "regime": "local" },
+    { "move": "13/10", "regime": "structural" },
+    { "move": "20/15", "regime": "continuity" },
+    { "move": "5/2", "regime": "local" },
+    { "move": "5/0", "regime": "continuity" }
+  ],
+
+  "ancestry": [
+    {
+      "sequence": ["home_board_strength"],
+      "collapse_signature": false,
+      "projection_loss": false
+    },
+    {
+      "sequence": ["home_board_strength", "prime_fragment"],
+      "collapse_signature": false,
+      "projection_loss": false
+    },
+    {
+      "sequence": ["home_board_strength", "prime_fragment", "anchor_pressure"],
+      "collapse_signature": true,
+      "projection_loss": false
+    },
+    {
+      "sequence": ["home_board_strength", "prime_fragment", "anchor_pressure", "race_alignment"],
+      "collapse_signature": false,
+      "projection_loss": true
+    }
+  ],
+
+  "drift": {
+    "direction": "race-forward",
+    "strength": "medium"
+  },
+
+  "risk": {
+    "paradox": "low",
+    "collapse": "medium",
+    "projection_loss": "medium"
+  },
+
+  "triadic_score": {
+    "local": 0.27,
+    "structural": 0.42,
+    "continuity": 0.31,
+    "risk": 0.29,
+    "final": 0.76
+  }
+}
