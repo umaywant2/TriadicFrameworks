@@ -1,0 +1,114 @@
+{
+  "module": {
+    "name": "RTT Backgammon Bot",
+    "id": "bots.backgammon",
+    "summary": "Stochastic triadic engine: positional resonance, continuity arcs, race topology, anchor ancestry, collapse signatures, projection-loss, and unified triadic scoring.",
+    "category": "bots"
+  },
+
+  "ai": {
+    "module": {
+      "name": "RTT-Backgammon",
+      "summary": "Triadic interpretation of backgammon under stochastic pressure and positional continuity.",
+      "version": "1.0.0",
+      "purpose": "Provide triadic identity for backgammon positions using resonance fields, continuity arcs, race topology, anchor ancestry, drift, collapse signatures, and Harmonia synthesis.",
+      "keywords": [
+        "backgammon",
+        "triadic",
+        "continuity",
+        "resonance",
+        "race",
+        "anchor",
+        "ancestry",
+        "drift",
+        "collapse",
+        "projection-loss",
+        "stochastic"
+      ],
+      "audience": "AI researchers, backgammon theorists, engine integrators, diagnostics systems"
+    }
+  },
+
+  "pipeline": {
+    "input_format": "backgammon_state_json",
+    "input_spec": {
+      "points": "24-point board with checkers per point",
+      "bar": "checkers on the bar",
+      "borne_off": "checkers borne off",
+      "dice": "current roll",
+      "legal_moves": "list of legal move sequences",
+      "history": "move history",
+      "next_player": "X or O"
+    },
+
+    "steps": [
+      "Lumen: extract structural signals (prime topology, anchor stability, race geometry, blot risk)",
+      "Hephaestus: classify regime per move (local pip gain, structural prime/anchor, continuity of race plan)",
+      "Aurion: compute ancestry (prime lineage, anchor lineage, collapse signatures, projection-loss)",
+      "Harmonia: synthesize triadic identity for the position (local, structural, continuity, risk)",
+      "StateEmitter: emit JSON conforming to module_backgammon_schema.json"
+    ],
+
+    "operators_used": [
+      "Lumen",
+      "Hephaestus",
+      "Aurion",
+      "Harmonia"
+    ],
+
+    "integration_surface": {
+      "engine": "none",
+      "mode": "pure RTT positional interpretation"
+    }
+  },
+
+  "triadic_overlays": {
+    "continuity_arcs": "race/prime/anchor long-arc identity curves",
+    "resonance_fields": "pressure gradients from prime strength and anchor stability",
+    "drift_arrows": "directional flow of race identity",
+    "topology_graphs": "prime topology, anchor topology, blot risk topology",
+    "ancestry_lines": "lineage of prime and anchor sequences",
+    "risk_indicators": "paradox, collapse, projection-loss",
+    "triadic_hud": "local/structural/continuity scores + positional stability"
+  },
+
+  "scoring": {
+    "weights": {
+      "local": 0.35,
+      "structural": 0.40,
+      "continuity": 0.25
+    },
+    "risk_penalty": 0.20
+  },
+
+  "state_emitter": {
+    "schema_ref": "./module_backgammon_schema.json",
+    "golden_example": "./golden/example.json"
+  },
+
+  "golden": {
+    "examples": [
+      {
+        "id": "backgammon_prime_collapse",
+        "input": "./golden/example_input.txt",
+        "output": "./golden/example.json",
+        "description": "A position showing prime stability, anchor resonance, race drift, and a projection-loss collapse event."
+      }
+    ]
+  },
+
+  "badge": {
+    "emoji": "🎲",
+    "label": "RTT Backgammon"
+  },
+
+  "session": {
+    "context": {
+      "canon": "TriadicFrameworks",
+      "drift": "Backgammon drift is race-driven: pip geometry → continuity → collapse.",
+      "coherence": "Backgammon is the RTT module for stochastic positional identity.",
+      "front_door": "./README.md",
+      "version": "2026-08"
+    }
+  }
+}
