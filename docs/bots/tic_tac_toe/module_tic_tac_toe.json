@@ -1,0 +1,78 @@
+{
+  "module": {
+    "name": "RTT Tic-Tac-Toe Bot",
+    "id": "bots.tic_tac_toe",
+    "summary": "Triadic unit-test bot: perfect-information, tiny state space, visible projection-loss and continuity.",
+    "category": "bots"
+  },
+  "ai": {
+    "module": {
+      "name": "RTT Tic-Tac-Toe",
+      "summary": "Triadic interpretation of a 3x3 game tree: conformance, projection-loss, and continuity in miniature.",
+      "version": "1.0.0",
+      "purpose": "Serve as the unit test for the TriadicFrameworks bots suite, proving the RTT pipeline on a tiny, fully enumerable game.",
+      "keywords": [
+        "tic_tac_toe",
+        "triadic",
+        "conformance",
+        "projection-loss",
+        "continuity",
+        "perfect-information",
+        "unit-test"
+      ],
+      "audience": "Framework authors, engine integrators, test harnesses"
+    }
+  },
+  "pipeline": {
+    "input_format": "board_state",
+    "input_spec": {
+      "board": "3x3 grid",
+      "cells": "['X','O',' ']",
+      "next_player": "X or O"
+    },
+    "steps": [
+      "Lumen: extract shape, lines, forks, immediate wins/losses",
+      "Hephaestus: classify moves as 1/3 local, 2/3 structural, 3/3 continuity",
+      "Aurion: compute ancestry of lines (win paths, draw paths, collapse paths)",
+      "Harmonia: synthesize triadic score per move and per position",
+      "StateEmitter: emit JSON state conforming to module_tic_tac_toe_schema.json"
+    ],
+    "operators_used": [
+      "Lumen",
+      "Hephaestus",
+      "Aurion",
+      "Harmonia"
+    ],
+    "integration_surface": {
+      "engine": "none",
+      "mode": "pure RTT evaluation (no external game engine)"
+    }
+  },
+  "state_emitter": {
+    "schema_ref": "./module_tic_tac_toe_schema.json",
+    "golden_example": "./golden/example.json"
+  },
+  "golden": {
+    "examples": [
+      {
+        "id": "ttt_fork_projection_loss",
+        "input": "./golden/example_input.txt",
+        "output": "./golden/example.json",
+        "description": "Classic X-fork position where a seemingly neutral move causes projection-loss and inevitable collapse."
+      }
+    ]
+  },
+  "badge": {
+    "emoji": "❎",
+    "label": "RTT TTT"
+  },
+  "session": {
+    "context": {
+      "canon": "TriadicFrameworks",
+      "drift": "Conformance-first; tiny state space used to validate RTT invariants.",
+      "coherence": "All bots must behave like tic_tac_toe in miniature: clear pipeline, clear schema, clear golden example.",
+      "front_door": "./README.md",
+      "version": "2026-08"
+    }
+  }
+}
