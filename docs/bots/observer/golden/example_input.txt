@@ -1,1 +1,55 @@
+# ✅ `/docs/bots/observer/golden/example_input.txt`
 
+This input is a **sequence of states** from a hypothetical bot session.  
+Observer doesn’t care *which* bot — it cares about **state evolution**.
+
+```
+STATE 1:
+engine: tic_tac_toe
+board: X . .
+       . O .
+       . . .
+move: X plays top-left
+notes: opening structure
+
+STATE 2:
+engine: tic_tac_toe
+board: X . .
+       . O .
+       . . X
+move: X plays bottom-right
+notes: diagonal tension emerging
+
+STATE 3:
+engine: tic_tac_toe
+board: X O .
+       . O .
+       . . X
+move: O plays top-middle
+notes: structural disruption
+
+STATE 4:
+engine: tic_tac_toe
+board: X O X
+       . O .
+       . . X
+move: X plays top-right
+notes: continuity arc forming
+
+STATE 5:
+engine: tic_tac_toe
+board: X O X
+       . O .
+       O . X
+move: O plays bottom-left
+notes: collapse signature
+```
+
+This is a **clean 5‑state evolution** with:
+
+- structural → continuity → collapse  
+- diagonal tension  
+- projection‑loss event  
+- clear ancestry lines  
+
+Perfect for Observer.
