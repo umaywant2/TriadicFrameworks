@@ -1,0 +1,109 @@
+{
+  "module": {
+    "name": "RTT Session Bot",
+    "id": "bots.session",
+    "summary": "Triadic session engine: coherence, drift, regime shifts, collapse signatures, projection-loss, and triadic identity across conversation.",
+    "category": "bots"
+  },
+
+  "ai": {
+    "module": {
+      "name": "RTT-Session",
+      "summary": "Triadic interpretation of dialogue and interaction sequences.",
+      "version": "1.0.0",
+      "purpose": "Provide triadic identity for conversations, tracking drift, coherence, regime shifts, collapse signatures, and projection-loss across time.",
+      "keywords": [
+        "session",
+        "triadic",
+        "coherence",
+        "drift",
+        "regime shifts",
+        "collapse",
+        "projection-loss",
+        "conversation",
+        "sequence"
+      ],
+      "audience": "AI researchers, conversation systems, diagnostics, meta-analysis tools"
+    }
+  },
+
+  "pipeline": {
+    "input_format": "conversation_stream",
+    "input_spec": {
+      "type": "sequence",
+      "items": "message objects",
+      "fields": ["timestamp", "sender", "text"],
+      "notes": "Session bot observes dialogue; it does not generate it."
+    },
+
+    "steps": [
+      "Lumen: extract structural signals from each message (topic, intent, polarity, semantic anchors)",
+      "Hephaestus: classify regime per message (local, structural, continuity)",
+      "Aurion: detect collapse signatures, projection-loss, lineage breaks",
+      "Harmonia: compute triadic identity for the entire session",
+      "StateEmitter: emit JSON conforming to module_session_schema.json"
+    ],
+
+    "operators_used": [
+      "Lumen",
+      "Hephaestus",
+      "Aurion",
+      "Harmonia"
+    ],
+
+    "integration_surface": {
+      "engine": "none",
+      "mode": "pure RTT session interpretation"
+    }
+  },
+
+  "session_overlays": {
+    "continuity_arcs": "semantic continuity curves across messages",
+    "resonance_fields": "emotional/semantic pressure gradients",
+    "drift_arrows": "directional flow of conversation intent",
+    "regime_map": "local/structural/continuity tagging per message",
+    "collapse_signatures": "topic or intent collapse",
+    "projection_loss": "long-arc identity inversion",
+    "triadic_hud": "coherence, drift strength, regime proportions"
+  },
+
+  "scoring": {
+    "weights": {
+      "local": 0.30,
+      "structural": 0.40,
+      "continuity": 0.30
+    },
+    "risk_penalty": 0.20
+  },
+
+  "state_emitter": {
+    "schema_ref": "./module_session_schema.json",
+    "golden_example": "./golden/example.json"
+  },
+
+  "golden": {
+    "examples": [
+      {
+        "id": "session_drift_alignment",
+        "input": "./golden/example_input.txt",
+        "output": "./golden/example.json",
+        "description": "A short conversation showing drift alignment, regime shifts, and a continuity collapse event."
+      }
+    ]
+  },
+
+  "badge": {
+    "emoji": "💬",
+    "label": "RTT Session"
+  },
+
+  "session": {
+    "context": {
+      "canon": "TriadicFrameworks",
+      "drift": "Session drift is semantic and emotional, not spatial.",
+      "coherence": "Session bot is the RTT engine for dialogue identity.",
+      "front_door": "./README.md",
+      "version": "2026-08"
+    }
+  }
+}
