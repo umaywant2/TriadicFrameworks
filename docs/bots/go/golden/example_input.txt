@@ -39,3 +39,4 @@ NOTES:
 - Central tension emerges around E5/E4.
 - Collapse signature at move 15 (B B5).
 - Projection‑loss at move 18 (W G3).
+```
