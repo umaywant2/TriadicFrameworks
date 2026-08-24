@@ -1,0 +1,97 @@
+{
+  "metadata": {
+    "module_id": "bots.checkers",
+    "position_id": "checkers_golden_v1",
+    "side_to_move": "X"
+  },
+
+  "board": [
+    { "square": "a3", "player": "X", "kind": "man" },
+    { "square": "c3", "player": "X", "kind": "man" },
+    { "square": "e3", "player": ".", "kind": "." },
+    { "square": "g3", "player": "O", "kind": "man" },
+
+    { "square": "b4", "player": ".", "kind": "." },
+    { "square": "d4", "player": "X", "kind": "man" },
+    { "square": "f4", "player": ".", "kind": "." },
+    { "square": "h4", "player": "O", "kind": "man" },
+
+    { "square": "a5", "player": "X", "kind": "man" },
+    { "square": "c5", "player": ".", "kind": "." },
+    { "square": "e5", "player": "O", "kind": "man" },
+    { "square": "g5", "player": ".", "kind": "." },
+
+    { "square": "b6", "player": ".", "kind": "." },
+    { "square": "d6", "player": "O", "kind": "man" },
+    { "square": "f6", "player": "X", "kind": "man" },
+    { "square": "h6", "player": ".", "kind": "." },
+
+    { "square": "a7", "player": ".", "kind": "." },
+    { "square": "c7", "player": "X", "kind": "man" },
+    { "square": "e7", "player": ".", "kind": "." },
+    { "square": "g7", "player": "O", "kind": "man" }
+  ],
+
+  "legal_moves": [
+    "c3-d4",
+    "a5-b6",
+    "f6-g7(capture)",
+    "c7-d8(king)"
+  ],
+
+  "lumen": {
+    "piece_balance": "equal",
+    "ladder_topology": "stable",
+    "king_presence": "none",
+    "tempo_pressure": "medium"
+  },
+
+  "regime": [
+    { "move": "c3-d4", "regime": "structural" },
+    { "move": "a5-b6", "regime": "local" },
+    { "move": "f6-g7(capture)", "regime": "continuity" },
+    { "move": "c7-d8(king)", "regime": "continuity" }
+  ],
+
+  "ancestry": [
+    {
+      "sequence": ["ladder_development"],
+      "collapse_signature": false,
+      "projection_loss": false
+    },
+    {
+      "sequence": ["ladder_development", "tempo_shift"],
+      "collapse_signature": false,
+      "projection_loss": false
+    },
+    {
+      "sequence": ["ladder_development", "capture_net"],
+      "collapse_signature": true,
+      "projection_loss": false
+    },
+    {
+      "sequence": ["ladder_development", "king_route"],
+      "collapse_signature": false,
+      "projection_loss": true
+    }
+  ],
+
+  "drift": {
+    "direction": "king-route",
+    "strength": "medium"
+  },
+
+  "risk": {
+    "paradox": "low",
+    "collapse": "medium",
+    "projection_loss": "medium"
+  },
+
+  "triadic_score": {
+    "local": 0.25,
+    "structural": 0.41,
+    "continuity": 0.34,
+    "risk": 0.31,
+    "final": 0.74
+  }
+}
