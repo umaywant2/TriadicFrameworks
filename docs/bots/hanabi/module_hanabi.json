@@ -1,0 +1,114 @@
+{
+  "module": {
+    "name": "RTT Hanabi Bot",
+    "id": "bots.hanabi",
+    "summary": "Cooperative hidden-information triadic engine: shared continuity, collective drift, regime alignment, collapse signatures, and Harmonia synthesis.",
+    "category": "bots"
+  },
+
+  "ai": {
+    "module": {
+      "name": "RTT-Hanabi",
+      "summary": "Triadic interpretation of cooperative hidden-information play in Hanabi.",
+      "version": "1.0.0",
+      "purpose": "Provide triadic identity for Hanabi states using shared continuity, cooperative resonance, collective ancestry, drift alignment, and Harmonia synthesis.",
+      "keywords": [
+        "hanabi",
+        "triadic",
+        "cooperative",
+        "hidden-information",
+        "continuity",
+        "resonance",
+        "ancestry",
+        "drift",
+        "collapse",
+        "projection-loss",
+        "harmonia"
+      ],
+      "audience": "AI researchers, cooperative-game theorists, teaching systems"
+    }
+  },
+
+  "pipeline": {
+    "input_format": "hanabi_state_json",
+    "input_spec": {
+      "hands": "hidden cards per player",
+      "visible_cards": "played stacks + discards",
+      "clues": "remaining clue tokens",
+      "bombs": "remaining fuse tokens",
+      "next_player": "player index",
+      "history": "sequence of moves"
+    },
+
+    "steps": [
+      "Lumen: structural extraction (visible stacks, clue economy, discard topology)",
+      "Hephaestus: regime mapping (local clue, structural inference, continuity alignment)",
+      "Aurion: cooperative ancestry (lineage of shared plans, collapse signatures, projection-loss)",
+      "Harmonia: unified triadic scoring for the team (local, structural, continuity, cooperative risk)",
+      "StateEmitter: emit JSON conforming to module_hanabi_schema.json"
+    ],
+
+    "operators_used": [
+      "Lumen",
+      "Hephaestus",
+      "Aurion",
+      "Harmonia"
+    ],
+
+    "integration_surface": {
+      "engine": "none",
+      "mode": "pure RTT cooperative inference"
+    }
+  },
+
+  "triadic_overlays": {
+    "continuity_arcs": "shared long-arc plan identity",
+    "resonance_fields": "cooperative pressure gradients (clue economy, stack stability)",
+    "drift_arrows": "directional flow of team intent",
+    "topology_graphs": "discard topology, stack stability, clue network",
+    "ancestry_lines": "lineage of cooperative plans",
+    "risk_indicators": "bomb risk, clue collapse, projection-loss",
+    "triadic_hud": "team-level local/structural/continuity scores + cooperative stability"
+  },
+
+  "scoring": {
+    "weights": {
+      "local": 0.25,
+      "structural": 0.35,
+      "continuity": 0.40
+    },
+    "risk_penalty": 0.20,
+    "cooperative_bonus": 0.15
+  },
+
+  "state_emitter": {
+    "schema_ref": "./module_hanabi_schema.json",
+    "golden_example": "./golden/example.json"
+  },
+
+  "golden": {
+    "examples": [
+      {
+        "id": "hanabi_shared_plan_alignment",
+        "input": "./golden/example_input.txt",
+        "output": "./golden/example.json",
+        "description": "A cooperative inference sequence showing clue economy drift, shared continuity, and a near-collapse event."
+      }
+    ]
+  },
+
+  "badge": {
+    "emoji": "🎆",
+    "label": "RTT Hanabi"
+  },
+
+  "session": {
+    "context": {
+      "canon": "TriadicFrameworks",
+      "drift": "Hanabi drift is cooperative intent alignment.",
+      "coherence": "Hanabi is the RTT module where Harmonia means synthesis.",
+      "front_door": "./README.md",
+      "version": "2026-08"
+    }
+  }
+}
