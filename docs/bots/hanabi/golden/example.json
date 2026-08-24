@@ -1,0 +1,85 @@
+{
+  "metadata": {
+    "module_id": "bots.hanabi",
+    "sequence_id": "hanabi_golden_v1",
+    "length": 5,
+    "players": ["A", "B"]
+  },
+
+  "timeline": [
+    { "index": 1, "player": "A", "action": "hint_color", "target": "B", "value": "blue" },
+    { "index": 2, "player": "B", "action": "play", "card": "blue_1" },
+    { "index": 3, "player": "A", "action": "discard", "card": "red_5" },
+    { "index": 4, "player": "B", "action": "hint_number", "target": "A", "value": "2" },
+    { "index": 5, "player": "A", "action": "play", "card": "yellow_2" }
+  ],
+
+  "lumen": [
+    { "index": 1, "signals": ["cooperative_intent", "color_resonance_seed"] },
+    { "index": 2, "signals": ["continuity_arc", "hint_alignment"] },
+    { "index": 3, "signals": ["discard_topology_shift", "collapse_signature"] },
+    { "index": 4, "signals": ["number_resonance", "continuity_extension"] },
+    { "index": 5, "signals": ["projection_loss_trigger", "misalignment"] }
+  ],
+
+  "regime": [
+    { "index": 1, "regime": "structural" },
+    { "index": 2, "regime": "continuity" },
+    { "index": 3, "regime": "local" },
+    { "index": 4, "regime": "structural" },
+    { "index": 5, "regime": "continuity" }
+  ],
+
+  "ancestry": [
+    {
+      "index": 1,
+      "sequence": ["hint", "color"],
+      "collapse_signature": false,
+      "projection_loss": false
+    },
+    {
+      "index": 2,
+      "sequence": ["hint", "color", "play"],
+      "collapse_signature": false,
+      "projection_loss": false
+    },
+    {
+      "index": 3,
+      "sequence": ["hint", "play", "discard"],
+      "collapse_signature": true,
+      "projection_loss": false
+    },
+    {
+      "index": 4,
+      "sequence": ["hint", "play", "discard", "hint"],
+      "collapse_signature": false,
+      "projection_loss": false
+    },
+    {
+      "index": 5,
+      "sequence": ["hint", "play", "discard", "hint", "misplay"],
+      "collapse_signature": false,
+      "projection_loss": true
+    }
+  ],
+
+  "drift": {
+    "direction": "hint-to-play",
+    "strength": "medium",
+    "alignment": "broken"
+  },
+
+  "risk": {
+    "collapse": "medium",
+    "projection_loss": "high",
+    "instability": "medium"
+  },
+
+  "triadic_identity": {
+    "local": 0.22,
+    "structural": 0.39,
+    "continuity": 0.39,
+    "risk": 0.41,
+    "final": 0.73
+  }
+}
