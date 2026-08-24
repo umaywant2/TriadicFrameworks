@@ -1,0 +1,22 @@
+# ♟️ `/docs/bots/chess/golden/example_input.txt`
+
+A clean, readable midgame position with meaningful RTT structure:
+
+```
+CHESS POSITION — GOLDEN EXAMPLE (FEN)
+
+r1bqk2r/pp1n1ppp/2p1pn2/3p4/3P1B2/2N1PN2/PP3PPP/R2QKB1R w KQkq - 4 7
+
+NOTES:
+- White has central presence (d4, f4).
+- Black has a stable d5–c6 pawn tension.
+- Knight routes (c3 → e4, f6 → e4) create continuity arcs.
+- King safety is balanced but fragile on both sides.
+- Collapse signature possible if White misplays the c3 knight.
+- Projection-loss possible if Black misorders the d5 tension release.
+```
+
+This position is ideal because:
+
+- It contains **center control**, **tension**, **king safety**, **pawn‑structure arcs**, **knight routes**, and **structural pressure**.
+- It is small enough to be readable but rich enough for RTT.
