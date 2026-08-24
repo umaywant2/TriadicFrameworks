@@ -1,0 +1,54 @@
+# `/docs/bots/checkers/golden/example_input.txt`
+
+A clean, readable midgame position with meaningful RTT structure:
+
+```
+CHECKERS POSITION — GOLDEN EXAMPLE
+
+BOARD (dark squares only):
+a3: X
+c3: X
+e3: .
+g3: O
+
+b4: .
+d4: X
+f4: .
+h4: O
+
+a5: X
+c5: .
+e5: O
+g5: .
+
+b6: .
+d6: O
+f6: X
+h6: .
+
+a7: .
+c7: X
+e7: .
+g7: O
+
+SIDE TO MOVE:
+X
+
+LEGAL MOVES (X):
+- c3 → d4
+- a5 → b6
+- f6 → g7 (capture)
+- c7 → d8 (kinging)
+
+NOTES:
+- X has a developing ladder on the c‑file.
+- O has a counter‑ladder forming on the g‑file.
+- King-route tension around c7 → d8.
+- Capture-net pressure around f6 → g7.
+- Collapse signature possible if X misorders ladder moves.
+```
+
+This position is ideal because:
+
+- It contains **ladders**, **kinging routes**, **capture nets**, **tempo tension**, and **structural arcs**.  
+- It is small enough to be readable but rich enough for RTT.
