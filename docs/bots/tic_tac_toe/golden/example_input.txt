@@ -1,29 +1,31 @@
-# ✅ `/docs/bots/tic_tac_toe/golden/example_input.txt`
+# RTT Tic-Tac-Toe Golden Input (v2)
+# This input describes the exact 7-ply sequence used in example.json.
+# The final board and next-player match the corrected golden.
 
-A short, clean 5‑ply human‑vs‑human sequence designed to expose:
+Sequence:
+1. X plays center        (B2)
+2. O plays top-left      (A1)
+3. X plays top-center    (B1)
+4. O plays middle-left   (A2)
+5. X plays top-right     (C1)
+6. O plays bottom-left   (A3)
+7. X plays middle-right  (C2)
 
-- regime shifts  
-- projection‑loss  
-- continuity collapse  
-- structural drift  
-- resonance over rows/columns/diagonals  
-
-```
-X plays center.
-O plays top-left.
-X plays top-center.
-O plays middle-left.
-X plays top-right (threat).
-O plays bottom-left.
-X plays middle-right.
-```
-
-This yields the final board:
-
-```
-X X X
-O X .
+Final Board (row-major):
+O X X
+O X X
 O . .
-```
 
-X wins via top-row continuity.
+Next player: X
+Ply: 7
+
+Notes:
+- No player has a winning line.
+- X threatens the middle column (B1, B2, B3).
+- O controls the entire left column (A1, A2, A3).
+- This position is ideal for demonstrating:
+  - regime proportions
+  - threat-line detection
+  - projection-loss on C3
+  - continuity potential on B3
+  - drift toward left-column dominance
