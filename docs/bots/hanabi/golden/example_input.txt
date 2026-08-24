@@ -1,0 +1,33 @@
+# ✅ `/docs/bots/hanabi/golden/example_input.txt`
+
+A compact, readable 5‑turn cooperative sequence:
+
+```
+HANABI SESSION — 5 TURNS
+
+TURN 1:
+Player A gives a color hint to Player B (Blue cards).
+Notes: establishing cooperative intent.
+
+TURN 2:
+Player B plays the hinted Blue 1.
+Notes: continuity arc begins.
+
+TURN 3:
+Player A discards a Red 5.
+Notes: discard topology shift; potential collapse signature.
+
+TURN 4:
+Player B gives a number hint to Player A (2s).
+Notes: resonance field forming.
+
+TURN 5:
+Player A misplays a Yellow 2 instead of the intended Blue 2.
+Notes: projection-loss event.
+```
+
+This sequence is ideal because:
+
+- It shows **hint → play → discard → hint → misplay**  
+- It contains **continuity**, **collapse**, **projection‑loss**  
+- It is small enough to be readable but rich enough for RTT  
