@@ -1,0 +1,114 @@
+{
+  "module": {
+    "name": "RTT Poker Bot",
+    "id": "bots.poker",
+    "summary": "Hidden-information triadic engine: bluff continuity, pressure resonance, betting-line ancestry, collapse signatures, projection-loss, and unified triadic scoring.",
+    "category": "bots"
+  },
+
+  "ai": {
+    "module": {
+      "name": "RTT-Poker",
+      "summary": "Triadic interpretation of poker under uncertainty: bluff arcs, pressure fields, continuity of betting identity.",
+      "version": "1.0.0",
+      "purpose": "Provide triadic identity for poker states using pressure resonance, bluff continuity, betting-line ancestry, drift, collapse signatures, and Harmonia synthesis.",
+      "keywords": [
+        "poker",
+        "triadic",
+        "bluff",
+        "pressure",
+        "continuity",
+        "resonance",
+        "ancestry",
+        "drift",
+        "collapse",
+        "projection-loss",
+        "hidden-information"
+      ],
+      "audience": "AI researchers, poker theorists, engine integrators, diagnostics systems"
+    }
+  },
+
+  "pipeline": {
+    "input_format": "poker_state_json",
+    "input_spec": {
+      "hole_cards": "hidden cards for each player",
+      "board": "community cards",
+      "pot": "current pot size",
+      "bets": "current street betting actions",
+      "stacks": "remaining chips per player",
+      "history": "full betting-line sequence",
+      "next_player": "player index"
+    },
+
+    "steps": [
+      "Lumen: extract structural signals (range compression, pot geometry, pressure anchors)",
+      "Hephaestus: classify regime per action (local EV, structural pressure, continuity of bluff/value line)",
+      "Aurion: compute ancestry (betting-line lineage, collapse signatures, projection-loss)",
+      "Harmonia: synthesize triadic identity for the hand (local, structural, continuity, risk)",
+      "StateEmitter: emit JSON conforming to module_poker_schema.json"
+    ],
+
+    "operators_used": [
+      "Lumen",
+      "Hephaestus",
+      "Aurion",
+      "Harmonia"
+    ],
+
+    "integration_surface": {
+      "engine": "none",
+      "mode": "pure RTT uncertainty interpretation"
+    }
+  },
+
+  "triadic_overlays": {
+    "continuity_arcs": "bluff/value long-arc identity curves",
+    "resonance_fields": "pressure gradients from pot geometry and stack depth",
+    "drift_arrows": "directional flow of betting identity",
+    "topology_graphs": "range topology, pressure nodes, collapse points",
+    "ancestry_lines": "lineage of betting sequences",
+    "risk_indicators": "paradox, collapse, projection-loss",
+    "triadic_hud": "local/structural/continuity scores + pressure stability"
+  },
+
+  "scoring": {
+    "weights": {
+      "local": 0.40,
+      "structural": 0.35,
+      "continuity": 0.25
+    },
+    "risk_penalty": 0.20
+  },
+
+  "state_emitter": {
+    "schema_ref": "./module_poker_schema.json",
+    "golden_example": "./golden/example.json"
+  },
+
+  "golden": {
+    "examples": [
+      {
+        "id": "poker_bluff_projection_loss",
+        "input": "./golden/example_input.txt",
+        "output": "./golden/example.json",
+        "description": "A betting-line sequence showing bluff continuity, pressure resonance, and a projection-loss collapse event."
+      }
+    ]
+  },
+
+  "badge": {
+    "emoji": "♠️",
+    "label": "RTT Poker"
+  },
+
+  "session": {
+    "context": {
+      "canon": "TriadicFrameworks",
+      "drift": "Poker drift is pressure-driven: pot geometry → identity → collapse.",
+      "coherence": "Poker is the RTT module for uncertainty identity.",
+      "front_door": "./README.md",
+      "version": "2026-08"
+    }
+  }
+}
