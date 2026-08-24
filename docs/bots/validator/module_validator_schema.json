@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/schemas/module_validator_state.json",
+  "title": "RTT Validator StateEmitter",
+  "description": "Triadic validation output for an RTT module bundle.",
+  "type": "object",
+
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "module_id": { "type": "string" },
+        "validated_module": { "type": "string" },
+        "status": {
+          "type": "string",
+          "enum": ["pass", "fail", "warning"]
+        }
+      },
+      "required": ["module_id", "validated_module", "status"]
+    },
+
+    "manifest_checks": {
+      "type": "array",
+      "description": "Results of manifest validation.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "check": { "type": "string" },
+          "result": {
+            "type": "string",
+            "enum": ["pass", "fail", "warning"]
+          }
+        },
+        "required": ["check", "result"]
+      }
+    },
+
+    "schema_checks": {
+      "type": "array",
+      "description": "Results of schema validation.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "check": { "type": "string" },
+          "result": {
+            "type": "string",
+            "enum": ["pass", "fail", "warning"]
+          }
+        },
+        "required": ["check", "result"]
+      }
+    },
+
+    "golden_checks": {
+      "type": "array",
+      "description": "Results of golden example validation.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "check": { "type": "string" },
+          "result": {
+            "type": "string",
+            "enum": ["pass", "fail", "warning"]
+          }
+        },
+        "required": ["check", "result"]
+      }
+    },
+
+    "lineage_checks": {
+      "type": "array",
+      "description": "Operator lineage and pipeline consistency checks.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "check": { "type": "string" },
+          "result": {
+            "type": "string",
+            "enum": ["pass", "fail", "warning"]
+          }
+        },
+        "required": ["check", "result"]
+      }
+    },
+
+    "triadic_score": {
+      "type": "object",
+      "description": "Harmonia synthesis for module conformance.",
+      "properties": {
+        "manifest": { "type": "number", "minimum": 0, "maximum": 1 },
+        "schema": { "type": "number", "minimum": 0, "maximum": 1 },
+        "golden": { "type": "number", "minimum": 0, "maximum": 1 },
+        "lineage": { "type": "number", "minimum": 0, "maximum": 1 },
+        "risk": { "type": "number", "minimum": 0, "maximum": 1 },
+        "final": { "type": "number", "minimum": 0, "maximum": 1 }
+      },
+      "required": ["manifest", "schema", "golden", "lineage", "risk", "final"]
+    }
+  },
+
+  "required": [
+    "metadata",
+    "manifest_checks",
+    "schema_checks",
+    "golden_checks",
+    "lineage_checks",
+    "triadic_score"
+  ]
+}
