@@ -1,7 +1,7 @@
 {
   "metadata": {
     "module_id": "bots.tic_tac_toe",
-    "position_id": "golden_example_v1",
+    "position_id": "golden_example_v2",
     "next_player": "X",
     "ply": 7
   },
@@ -16,21 +16,22 @@
     { "ply": 7, "coord": "C2", "player": "X" }
   ],
 
-  "state": {
-    "board": [
-      ["O", "X", "X"],
-      ["O", "X", "X"],
-      ["O", " ", " "]
-    ],
-    "legal_moves": [
-      { "coord": "B3", "index": 7 },
-      { "coord": "C3", "index": 8 }
-    ]
-  },
+  "board": [
+    ["O", "X", "X"],
+    ["O", "X", "X"],
+    ["O", " ", " "]
+  ],
+
+  "legal_moves": [
+    { "coord": "B3", "index": 7 },
+    { "coord": "C3", "index": 8 }
+  ],
 
   "lumen": {
     "winning_lines": [],
-    "threat_lines": [["B1", "B2", "B3"]],
+    "threat_lines": [
+      ["B1", "B2", "B3"]
+    ],
     "fork_opportunities": []
   },
 
@@ -48,8 +49,12 @@
 
   "ancestry": {
     "win_paths": [],
-    "draw_paths": [["B3", "C3"]],
-    "loss_paths": [["A1", "A2", "A3"]]
+    "draw_paths": [
+      ["B3", "C3"]
+    ],
+    "loss_paths": [
+      ["A1", "A2", "A3"]
+    ]
   },
 
   "risk": {
