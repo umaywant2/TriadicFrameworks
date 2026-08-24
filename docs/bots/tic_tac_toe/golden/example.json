@@ -1,1 +1,61 @@
+{
+  "metadata": {
+    "module_id": "bots.tic_tac_toe",
+    "position_id": "golden_example_v1",
+    "length": 7,
+    "players": ["X", "O"]
+  },
 
+  "timeline": [
+    { "index": 1, "player": "X", "move": "center" },
+    { "index": 2, "player": "O", "move": "top-left" },
+    { "index": 3, "player": "X", "move": "top-center" },
+    { "index": 4, "player": "O", "move": "middle-left" },
+    { "index": 5, "player": "X", "move": "top-right" },
+    { "index": 6, "player": "O", "move": "bottom-left" },
+    { "index": 7, "player": "X", "move": "middle-right" }
+  ],
+
+  "lumen": [
+    { "index": 1, "signals": ["center_control", "open_topology"] },
+    { "index": 2, "signals": ["corner_anchor", "emerging_diagonal"] },
+    { "index": 3, "signals": ["row_pressure", "two_in_row_potential"] },
+    { "index": 4, "signals": ["side_anchor", "diagonal_disruption"] },
+    { "index": 5, "signals": ["three_in_row_threat", "continuity_arc"] },
+    { "index": 6, "signals": ["corner_anchor", "threat_response_failure"] },
+    { "index": 7, "signals": ["final_alignment", "continuity_completion"] }
+  ],
+
+  "regime": [
+    { "index": 1, "regime": "structural" },
+    { "index": 2, "regime": "local" },
+    { "index": 3, "regime": "structural" },
+    { "index": 4, "regime": "local" },
+    { "index": 5, "regime": "continuity" },
+    { "index": 6, "regime": "local" },
+    { "index": 7, "regime": "continuity" }
+  ],
+
+  "ancestry": [
+    { "index": 1, "collapse_signature": false, "projection_loss": false },
+    { "index": 2, "collapse_signature": false, "projection_loss": false },
+    { "index": 3, "collapse_signature": false, "projection_loss": false },
+    { "index": 4, "collapse_signature": true,  "projection_loss": false },
+    { "index": 5, "collapse_signature": false, "projection_loss": false },
+    { "index": 6, "collapse_signature": true,  "projection_loss": true },
+    { "index": 7, "collapse_signature": false, "projection_loss": false }
+  ],
+
+  "drift": {
+    "direction": "top-row",
+    "strength": "strong"
+  },
+
+  "triadic_identity": {
+    "local": 0.22,
+    "structural": 0.41,
+    "continuity": 0.37,
+    "risk": 0.18,
+    "final": 0.78
+  }
+}
