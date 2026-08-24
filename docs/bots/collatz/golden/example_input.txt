@@ -1,0 +1,35 @@
+# ✅ `/docs/bots/collatz/golden/example_input.txt`
+
+A clean, pedagogical Collatz run that exposes all three regimes:
+
+```
+Start: 19
+
+19 → 58
+58 → 29
+29 → 88
+88 → 44
+44 → 22
+22 → 11
+11 → 34
+34 → 17
+17 → 52
+52 → 26
+26 → 13
+13 → 40
+40 → 20
+20 → 10
+10 → 5
+5 → 16
+16 → 8
+8 → 4
+4 → 2
+2 → 1
+```
+
+This sequence is ideal because:
+
+- It alternates expansion/compression cleanly  
+- It has multiple continuity arcs  
+- It has two projection‑loss moments  
+- It collapses into the attractor (4 → 2 → 1)  
