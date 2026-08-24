@@ -1,0 +1,132 @@
+{
+  "module": {
+    "name": "RTT Validator Bot",
+    "id": "bots.validator",
+    "summary": "Triadic conformance engine: validates schemas, pipelines, golden examples, operator lineage, drift, and triadic invariants across all RTT bots.",
+    "category": "bots"
+  },
+
+  "ai": {
+    "module": {
+      "name": "RTT-Validator",
+      "summary": "The RTT meta-engine that checks correctness, consistency, and conformance across all bots.",
+      "version": "1.0.0",
+      "purpose": "Validate RTT modules by checking schema conformance, pipeline correctness, operator lineage, drift stability, risk signatures, and golden example fidelity.",
+      "keywords": [
+        "validator",
+        "triadic",
+        "conformance",
+        "schema",
+        "pipeline",
+        "lineage",
+        "drift",
+        "risk",
+        "golden-example",
+        "meta-bot"
+      ],
+      "audience": "Framework maintainers, engine integrators, diagnostics systems"
+    }
+  },
+
+  "pipeline": {
+    "input_format": "rtt_module_bundle",
+    "input_spec": {
+      "manifest": "module_<bot>.json",
+      "schema": "module_<bot>_schema.json",
+      "golden_input": "golden/example_input.*",
+      "golden_output": "golden/example.json",
+      "notes": "Validator consumes the entire module bundle."
+    },
+
+    "steps": [
+      "Lumen: extract structural signals from manifest + schema",
+      "Hephaestus: classify regime of module components (local, structural, continuity)",
+      "Aurion: check ancestry consistency (operator lineage, pipeline order, collapse signatures)",
+      "Harmonia: compute triadic conformance score for the module",
+      "StateEmitter: emit JSON conforming to module_validator_schema.json"
+    ],
+
+    "operators_used": [
+      "Lumen",
+      "Hephaestus",
+      "Aurion",
+      "Harmonia"
+    ],
+
+    "integration_surface": {
+      "engine": "none",
+      "mode": "pure RTT meta-validation"
+    }
+  },
+
+  "validation_checks": {
+    "manifest": [
+      "required fields present",
+      "pipeline defined",
+      "operators listed",
+      "integration surface valid",
+      "badge present"
+    ],
+    "schema": [
+      "valid JSON Schema",
+      "required fields present",
+      "triadic fields present",
+      "risk fields present",
+      "timeline fields present"
+    ],
+    "golden_example": [
+      "input matches schema",
+      "output matches schema",
+      "triadic invariants satisfied",
+      "risk signatures consistent",
+      "continuity arcs valid"
+    ],
+    "lineage": [
+      "operator order correct",
+      "pipeline steps consistent",
+      "no missing operators",
+      "no invalid transitions"
+    ]
+  },
+
+  "scoring": {
+    "weights": {
+      "manifest": 0.25,
+      "schema": 0.30,
+      "golden": 0.30,
+      "lineage": 0.15
+    },
+    "risk_penalty": 0.20
+  },
+
+  "state_emitter": {
+    "schema_ref": "./module_validator_schema.json",
+    "golden_example": "./golden/example.json"
+  },
+
+  "golden": {
+    "examples": [
+      {
+        "id": "validator_conformance_pass",
+        "input": "./golden/example_input.txt",
+        "output": "./golden/example.json",
+        "description": "A full RTT module bundle that passes all conformance checks."
+      }
+    ]
+  },
+
+  "badge": {
+    "emoji": "✔️",
+    "label": "RTT Validator"
+  },
+
+  "session": {
+    "context": {
+      "canon": "TriadicFrameworks",
+      "drift": "Validator drift is structural: modules must remain aligned.",
+      "coherence": "Validator ensures suite-wide coherence.",
+      "front_door": "./README.md",
+      "version": "2026-08"
+    }
+  }
+}
