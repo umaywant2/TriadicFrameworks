@@ -1,0 +1,51 @@
+# ✅ `/docs/bots/validator/golden/example_input.txt`
+
+A compact, readable module bundle for Validator to inspect:
+
+```
+MODULE BUNDLE FOR VALIDATION
+----------------------------
+
+MANIFEST:
+{
+  "module": {
+    "name": "RTT MiniBot",
+    "id": "bots.minibot",
+    "summary": "Tiny demonstration bot.",
+    "category": "bots"
+  },
+  "pipeline": {
+    "steps": ["Lumen", "Hephaestus", "Aurion", "Harmonia"]
+  }
+}
+
+SCHEMA:
+{
+  "type": "object",
+  "properties": {
+    "value": { "type": "number" },
+    "status": { "type": "string" }
+  },
+  "required": ["value", "status"]
+}
+
+GOLDEN INPUT:
+{
+  "value": 42,
+  "status": "ok"
+}
+
+GOLDEN OUTPUT:
+{
+  "value": 42,
+  "status": "ok"
+}
+```
+
+This bundle is intentionally simple but structurally complete, allowing Validator to demonstrate:
+
+- manifest checks  
+- schema checks  
+- golden example checks  
+- lineage checks  
+- triadic scoring  
