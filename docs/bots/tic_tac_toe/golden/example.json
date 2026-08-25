@@ -31,10 +31,11 @@
     "winning_lines": [],
     "threat_lines": [
       ["A1", "A2", "A3"],
-      ["B1", "B2", "B3"]
+      ["B1", "B2", "B3"],
+      ["C1", "B2", "A3"]
     ],
     "fork_opportunities": []
-  },
+    },
 
   "regime": {
     "proportions": {
@@ -74,7 +75,7 @@
     "local": 0.40,
     "structural": 0.30,
     "continuity": 0.30,
-    "final": 0.34
+    "final": 0.33
   },
 
   "winner": null
