@@ -4,19 +4,20 @@
   "title": "RTT Tic-Tac-Toe StateEmitter",
   "description": "Shared-envelope triadic state output for a single Tic-Tac-Toe position.",
   "type": "object",
+  "additionalProperties": false,
 
   "properties": {
 
     "metadata": {
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "module_id": { "type": "string" },
         "position_id": { "type": "string" },
         "next_player": { "type": "string", "enum": ["X", "O"] },
         "ply": { "type": "integer", "minimum": 0 }
       },
-      "required": ["module_id", "position_id", "next_player", "ply"],
-      "additionalProperties": false
+      "required": ["module_id", "position_id", "next_player", "ply"]
     },
 
     "timeline": {
@@ -24,13 +25,13 @@
       "description": "Replayable move history leading to this position.",
       "items": {
         "type": "object",
+        "additionalProperties": false,
         "properties": {
           "ply": { "type": "integer", "minimum": 0 },
           "coord": { "type": "string", "pattern": "^[ABC][123]$" },
           "player": { "type": "string", "enum": ["X", "O"] }
         },
-        "required": ["ply", "coord", "player"],
-        "additionalProperties": false
+        "required": ["ply", "coord", "player"]
       }
     },
 
@@ -54,17 +55,18 @@
       "type": "array",
       "items": {
         "type": "object",
+        "additionalProperties": false,
         "properties": {
           "coord": { "type": "string", "pattern": "^[ABC][123]$" },
           "index": { "type": "integer", "minimum": 0, "maximum": 8 }
         },
-        "required": ["coord", "index"],
-        "additionalProperties": false
+        "required": ["coord", "index"]
       }
     },
 
     "lumen": {
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "winning_lines": {
           "type": "array",
@@ -89,42 +91,42 @@
           "items": { "type": "string", "pattern": "^[ABC][123]$" }
         }
       },
-      "required": ["winning_lines", "threat_lines", "fork_opportunities"],
-      "additionalProperties": false
+      "required": ["winning_lines", "threat_lines", "fork_opportunities"]
     },
 
     "regime": {
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "proportions": {
           "type": "object",
+          "additionalProperties": false,
           "properties": {
             "local": { "type": "number", "minimum": 0, "maximum": 1 },
             "structural": { "type": "number", "minimum": 0, "maximum": 1 },
             "continuity": { "type": "number", "minimum": 0, "maximum": 1 }
           },
-          "required": ["local", "structural", "continuity"],
-          "additionalProperties": false
+          "required": ["local", "structural", "continuity"]
         },
         "move_tags": {
           "type": "array",
           "items": {
             "type": "object",
+            "additionalProperties": false,
             "properties": {
               "coord": { "type": "string", "pattern": "^[ABC][123]$" },
               "regime": { "type": "string", "enum": ["local", "structural", "continuity"] }
             },
-            "required": ["coord", "regime"],
-            "additionalProperties": false
+            "required": ["coord", "regime"]
           }
         }
       },
-      "required": ["proportions", "move_tags"],
-      "additionalProperties": false
+      "required": ["proportions", "move_tags"]
     },
 
     "ancestry": {
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "win_paths": {
           "type": "array",
@@ -148,51 +150,50 @@
           }
         }
       },
-      "required": ["win_paths", "draw_paths", "loss_paths"],
-      "additionalProperties": false
+      "required": ["win_paths", "draw_paths", "loss_paths"]
     },
 
     "risk": {
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "move_risks": {
           "type": "array",
           "items": {
             "type": "object",
+            "additionalProperties": false,
             "properties": {
               "coord": { "type": "string", "pattern": "^[ABC][123]$" },
               "projection_loss": { "type": "boolean" },
               "collapse_risk": { "type": "string", "enum": ["none", "low", "medium", "high"] }
             },
-            "required": ["coord", "projection_loss", "collapse_risk"],
-            "additionalProperties": false
+            "required": ["coord", "projection_loss", "collapse_risk"]
           }
         }
       },
-      "required": ["move_risks"],
-      "additionalProperties": false
+      "required": ["move_risks"]
     },
 
     "drift": {
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "direction": { "type": "string" },
         "strength": { "type": "string", "enum": ["low", "medium", "high"] }
       },
-      "required": ["direction", "strength"],
-      "additionalProperties": false
+      "required": ["direction", "strength"]
     },
 
     "triadic_score": {
       "type": "object",
+      "additionalProperties": false,
       "properties": {
         "local": { "type": "number", "minimum": 0, "maximum": 1 },
         "structural": { "type": "number", "minimum": 0, "maximum": 1 },
         "continuity": { "type": "number", "minimum": 0, "maximum": 1 },
         "final": { "type": "number", "minimum": 0, "maximum": 1 }
       },
-      "required": ["local", "structural", "continuity", "final"],
-      "additionalProperties": false
+      "required": ["local", "structural", "continuity", "final"]
     },
 
     "winner": {
@@ -213,7 +214,5 @@
     "drift",
     "triadic_score",
     "winner"
-  ],
-
-  "additionalProperties": false
+  ]
 }
