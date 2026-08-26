@@ -1,13 +1,14 @@
 {
-  "$schema": "https://triadicframeworks.nawder.com/schema/module.schema.json",
+  "$schema": "https://triadicframeworks.org/schema/module.schema.json",
   "id": "vocabulary",
   "label": "Vocabulary",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "layer": "Linguistic Layer",
   "status": "draft",
-  "author": "Nawder",
+  "author": "Nawder Loswin",
   "protocol": "metadata-refresh-v1",
-  "canonical": "https://triadicframeworks.nawder.com/modules/vocabulary/",
+  "rtt": "rtt=1 | coherence=declared | drift=bounded | paradox=structural",
+  "canonical": "https://triadicframeworks.org/vocabulary/",
   "description": {
     "short": "The precise, shared language of the triadic system: terms, definitions, and conceptual distinctions.",
     "long": "PLACEHOLDER: Full long-form description of the Vocabulary module."
@@ -17,16 +18,16 @@
     "color": "#5fa8d3"
   },
   "og": {
-    "image": "https://triadicframeworks.nawder.com/assets/og/vocabulary-cover.png",
+    "image": "https://triadicframeworks.org/assets/og/vocabulary-cover.png",
     "locale": "en_US"
   },
   "sections": [
-    { "id": "overview",     "heading": "Overview",                  "status": "placeholder" },
-    { "id": "taxonomy",     "heading": "Term Taxonomy",             "status": "placeholder" },
-    { "id": "glossary",     "heading": "Glossary",                  "status": "placeholder" },
-    { "id": "distinctions", "heading": "Conceptual Distinctions",   "status": "placeholder" },
-    { "id": "usage",        "heading": "Usage in Context",          "status": "placeholder" },
-    { "id": "cross-links",  "heading": "Cross-Module Connections",  "status": "placeholder" }
+    { "id": "overview",     "heading": "Overview",                 "status": "placeholder" },
+    { "id": "taxonomy",     "heading": "Term Taxonomy",            "status": "placeholder" },
+    { "id": "glossary",     "heading": "Glossary",                 "status": "placeholder" },
+    { "id": "distinctions", "heading": "Conceptual Distinctions",  "status": "placeholder" },
+    { "id": "usage",        "heading": "Usage in Context",         "status": "placeholder" },
+    { "id": "cross-links",  "heading": "Cross-Module Connections", "status": "placeholder" }
   ],
   "crossLinks": ["son", "invariants", "hooks"],
   "assets": {

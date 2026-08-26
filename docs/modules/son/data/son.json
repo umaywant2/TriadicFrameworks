@@ -1,13 +1,14 @@
 {
-  "$schema": "https://triadicframeworks.nawder.com/schema/module.schema.json",
+  "$schema": "https://triadicframeworks.org/schema/module.schema.json",
   "id": "son",
   "label": "SoN",
-  "version": "1.0.0",
-  "layer": "Narrative Layer",
+  "version": "2.0.0",
+  "layer": "Core Layer",
   "status": "draft",
-  "author": "Nawder",
+  "author": "Nawder Loswin",
   "protocol": "metadata-refresh-v1",
-  "canonical": "https://triadicframeworks.nawder.com/modules/son/",
+  "rtt": "rtt=1 | coherence=declared | drift=bounded | paradox=structural",
+  "canonical": "https://triadicframeworks.org/son/",
   "description": {
     "short": "Structural operating Node — Pre-everything, the triadic time dimensional core primitive base for all systems.",
     "long": "PLACEHOLDER: Full long-form description of the SoN module."
@@ -17,16 +18,16 @@
     "color": "#7c6fef"
   },
   "og": {
-    "image": "https://triadicframeworks.nawder.com/assets/og/son-cover.png",
+    "image": "https://triadicframeworks.org/assets/og/son-cover.png",
     "locale": "en_US"
   },
   "sections": [
-    { "id": "overview",     "heading": "Overview",              "status": "placeholder" },
-    { "id": "triadic-map",  "heading": "Triadic Structure Map", "status": "placeholder" },
-    { "id": "layers",       "heading": "Narrative Layers",      "status": "placeholder" },
-    { "id": "concepts",     "heading": "Key Concepts",          "status": "placeholder" },
-    { "id": "examples",     "heading": "Examples & Case Studies","status": "placeholder" },
-    { "id": "cross-links",  "heading": "Cross-Module Connections","status": "placeholder" }
+    { "id": "overview",    "heading": "Overview",               "status": "placeholder" },
+    { "id": "triadic-map", "heading": "Triadic Structure Map",  "status": "placeholder" },
+    { "id": "layers",      "heading": "Dimensional Layers",     "status": "placeholder" },
+    { "id": "concepts",    "heading": "Key Concepts",           "status": "placeholder" },
+    { "id": "examples",    "heading": "Examples & Case Studies","status": "placeholder" },
+    { "id": "cross-links", "heading": "Cross-Module Connections","status": "placeholder" }
   ],
   "crossLinks": ["vocabulary", "invariants", "hooks"],
   "assets": {

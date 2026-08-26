@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" data-tf-dev="false">
+<html lang="en" data-tf-dev="false" data-module="hooks">
 <head>
-  <!-- ═══════════════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════════════════════
        TriadicFrameworks · Module: Hooks
-       Canonical Index Skeleton · v1.0.0
-       Author: Nawder · Protocol: Metadata Refresh v1
-       Last Refreshed: 2026-08-26T12:49:00-04:00
-       ═══════════════════════════════════════════════════ -->
+       Canonical Index · v2.0.0 · AI-first
+       Author: Nawder Loswin · Protocol: Metadata Refresh v1
+       Last Refreshed: 2026-08-26T15:21:00-04:00
+       ═══════════════════════════════════════════════════════════ -->
 
   <!-- Core Encoding & Viewport -->
   <meta charset="UTF-8" />
@@ -15,255 +15,367 @@
 
   <!-- Canonical Identity -->
   <title>Hooks | TriadicFrameworks</title>
-  <link rel="canonical" href="https://triadicframeworks.nawder.com/modules/hooks/" />
+  <link rel="canonical" href="https://triadicframeworks.org/hooks/" />
 
   <!-- Primary SEO Meta -->
   <meta name="description" content="Hooks — a TriadicFrameworks module cataloguing the mechanisms by which triadic structures create and sustain engagement: attention, commitment, and momentum." />
-  <meta name="keywords" content="TriadicFrameworks, Hooks, Nawder, triadic, engagement, attention, commitment, momentum" />
-  <meta name="author" content="Nawder" />
+  <meta name="keywords" content="TriadicFrameworks, Hooks, Nawder Loswin, triadic, engagement, attention, commitment, momentum, hook typology" />
+  <meta name="author" content="Nawder Loswin" />
   <meta name="robots" content="index, follow" />
 
+  <!-- TriadicFrameworks RTT Session Meta (AI-readable) -->
+  <meta name="tf:module"      content="hooks" />
+  <meta name="tf:layer"       content="Engagement Layer" />
+  <meta name="tf:version"     content="2.0.0" />
+  <meta name="tf:author"      content="Nawder Loswin" />
+  <meta name="tf:protocol"    content="metadata-refresh-v1" />
+  <meta name="tf:rtt"         content="rtt=1 | coherence=declared | drift=bounded | paradox=structural" />
+  <meta name="tf:session"     content="__SESSION_ID__" />
+  <meta name="tf:timestamp"   content="__SESSION_TIMESTAMP__" />
+  <meta name="tf:canonical"   content="https://triadicframeworks.org/hooks/" />
+  <meta name="tf:cross-links" content="son,vocabulary,invariants" />
+
   <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="TriadicFrameworks" />
-  <meta property="og:title" content="Hooks | TriadicFrameworks" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:title"       content="Hooks | TriadicFrameworks" />
   <meta property="og:description" content="Cataloguing the mechanisms by which triadic structures create and sustain engagement: attention, commitment, and momentum." />
-  <meta property="og:url" content="https://triadicframeworks.nawder.com/modules/hooks/" />
-  <meta property="og:image" content="https://triadicframeworks.nawder.com/assets/og/hooks-cover.png" />
-  <meta property="og:locale" content="en_US" />
+  <meta property="og:url"         content="https://triadicframeworks.org/hooks/" />
+  <meta property="og:image"       content="https://triadicframeworks.org/assets/og/hooks-cover.png" />
+  <meta property="og:locale"      content="en_US" />
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Hooks | TriadicFrameworks" />
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Hooks | TriadicFrameworks" />
   <meta name="twitter:description" content="Cataloguing the mechanisms by which triadic structures create and sustain engagement: attention, commitment, and momentum." />
-  <meta name="twitter:image" content="https://triadicframeworks.nawder.com/assets/og/hooks-cover.png" />
+  <meta name="twitter:image"       content="https://triadicframeworks.org/assets/og/hooks-cover.png" />
 
-  <!-- Schema.org JSON-LD -->
+  <!-- Schema.org JSON-LD (AI-first: full structured data) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LearningResource",
     "name": "Hooks",
     "description": "A TriadicFrameworks module cataloguing the mechanisms by which triadic structures create and sustain engagement.",
-    "author": { "@type": "Person", "name": "Nawder" },
-    "isPartOf": { "@type": "WebSite", "name": "TriadicFrameworks", "url": "https://triadicframeworks.nawder.com" },
-    "url": "https://triadicframeworks.nawder.com/modules/hooks/",
+    "author": {
+      "@type": "Person",
+      "name": "Nawder Loswin"
+    },
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "TriadicFrameworks",
+      "url": "https://triadicframeworks.org"
+    },
+    "url": "https://triadicframeworks.org/hooks/",
     "inLanguage": "en",
-    "dateModified": "2026-08-26"
+    "dateModified": "2026-08-26",
+    "version": "2.0.0",
+    "educationalLevel": "advanced",
+    "keywords": [
+      "hooks",
+      "engagement",
+      "attention",
+      "commitment",
+      "momentum",
+      "triadic",
+      "TriadicFrameworks",
+      "Nawder Loswin"
+    ],
+    "hasPart": [
+      { "@type": "WebPageElement", "name": "Overview",                     "cssSelector": "#overview" },
+      { "@type": "WebPageElement", "name": "Hook Typology",                "cssSelector": "#typology" },
+      { "@type": "WebPageElement", "name": "Engagement Mechanisms",        "cssSelector": "#mechanisms" },
+      { "@type": "WebPageElement", "name": "Hook Catalog",                 "cssSelector": "#catalog" },
+      { "@type": "WebPageElement", "name": "Worked Examples",              "cssSelector": "#examples" },
+      { "@type": "WebPageElement", "name": "Anti-Patterns & Broken Hooks", "cssSelector": "#antipatterns" },
+      { "@type": "WebPageElement", "name": "Cross-Module Links",           "cssSelector": "#cross-links" }
+    ]
   }
   </script>
-
-  <!-- Session Context — tokens injected at runtime by Metadata Refresh Protocol v1 -->
-  <meta name="tf:module" content="hooks" />
-  <meta name="tf:module-version" content="1.0.0" />
-  <meta name="tf:session-id" content="__SESSION_ID__" />
-  <meta name="tf:session-user" content="Nawder" />
-  <meta name="tf:session-timestamp" content="__SESSION_TIMESTAMP__" />
-  <meta name="tf:refresh-protocol" content="metadata-refresh-v1" />
-  <meta name="tf:data-path" content="/modules/hooks/data/hooks.json" />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/assets/icons/hooks.svg" />
-  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-hooks.png" />
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="/assets/css/triadic-base.css" />
   <link rel="stylesheet" href="/assets/css/modules/hooks.css" />
+
+  <!-- Favicon / module icon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/hooks.svg" />
 </head>
 
-<body data-module="hooks" data-version="1.0.0" data-user="Nawder">
+<body data-module="hooks" data-user="Nawder Loswin" data-layer="engagement">
 
-  <!-- ── SKIP NAV ─────────────────────────────────────── -->
+  <!-- ── SKIP LINK ─────────────────────────────────────────── -->
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- ── SITE HEADER ──────────────────────────────────── -->
+  <!-- ── HEADER ───────────────────────────────────────────── -->
   <header class="tf-header" role="banner">
     <nav class="tf-nav" aria-label="TriadicFrameworks global navigation">
       <a class="tf-nav__home" href="/">TriadicFrameworks</a>
+
+      <!-- 2-level breadcrumb: Home → Hooks -->
       <ol class="tf-breadcrumb" aria-label="Breadcrumb">
         <li><a href="/">Home</a></li>
-        <li><a href="/modules/">Modules</a></li>
         <li aria-current="page">Hooks</li>
       </ol>
+
       <!-- Module switcher -->
       <nav class="tf-module-switcher" aria-label="Switch module">
-        <a href="/modules/son/"        class="tf-module-switcher__link" data-module="son">SoN</a>
-        <a href="/modules/vocabulary/" class="tf-module-switcher__link" data-module="vocabulary">Vocabulary</a>
-        <a href="/modules/invariants/" class="tf-module-switcher__link" data-module="invariants">Invariants</a>
-        <a href="/modules/hooks/"      class="tf-module-switcher__link" data-module="hooks" aria-current="page">Hooks</a>
+        <a href="/son/"        class="tf-module-switcher__link" data-module="son">SoN</a>
+        <a href="/vocabulary/" class="tf-module-switcher__link" data-module="vocabulary">Vocabulary</a>
+        <a href="/invariants/" class="tf-module-switcher__link" data-module="invariants">Invariants</a>
+        <a href="/hooks/"      class="tf-module-switcher__link tf-module-switcher__link--active" data-module="hooks" aria-current="page">Hooks</a>
       </nav>
     </nav>
   </header>
 
-  <!-- ── MODULE HERO ──────────────────────────────────── -->
-  <section class="tf-module-hero" aria-labelledby="module-title">
-    <div class="tf-module-hero__badge-row">
-      <!-- Badge: Module Identity -->
-      <span class="tf-badge tf-badge--module" aria-label="Module: Hooks">
-        <span class="tf-badge__icon" aria-hidden="true">◎</span>
-        <span class="tf-badge__label">Hooks</span>
-      </span>
-      <!-- Badge: Status -->
-      <span class="tf-badge tf-badge--status tf-badge--draft" aria-label="Status: Draft">
-        Draft
-      </span>
-      <!-- Badge: Framework Layer -->
-      <span class="tf-badge tf-badge--layer" aria-label="Framework layer: Engagement">
-        Engagement Layer
-      </span>
-      <!-- Badge: Version -->
-      <span class="tf-badge tf-badge--version" aria-label="Version 1.0.0">
-        v1.0.0
-      </span>
-    </div>
-
-    <h1 id="module-title" class="tf-module-hero__title">Hooks</h1>
-    <p class="tf-module-hero__tagline">
-      <!-- PLACEHOLDER: one-line module tagline -->
-      [Tagline: e.g., "The mechanics of pull — how triadic structures seize attention, build commitment, and sustain momentum."]
-    </p>
-  </section>
-
-  <!-- ── SESSION CONTEXT STRIP ────────────────────────── -->
-  <aside class="tf-session-context" aria-label="Session context" data-session-id="__SESSION_ID__">
-    <span class="tf-session-context__user">Nawder</span>
+  <!-- ── SESSION CONTEXT STRIP ────────────────────────────── -->
+  <aside class="tf-session-context"
+         aria-label="Session context"
+         data-session-id="__SESSION_ID__"
+         data-tf-component="session-context">
+    <span class="tf-session-context__user">Nawder Loswin</span>
     <span class="tf-session-context__divider" aria-hidden="true">&middot;</span>
     <span class="tf-session-context__module">Hooks</span>
     <span class="tf-session-context__divider" aria-hidden="true">&middot;</span>
-    <time class="tf-session-context__timestamp" datetime="__SESSION_TIMESTAMP__">__SESSION_TIMESTAMP__</time>
+    <time class="tf-session-context__timestamp"
+          datetime="__SESSION_TIMESTAMP__">__SESSION_TIMESTAMP__</time>
     <span class="tf-session-context__divider" aria-hidden="true">&middot;</span>
     <span class="tf-session-context__protocol">Metadata Refresh v1</span>
   </aside>
 
-  <!-- ── MAIN CONTENT ──────────────────────────────────── -->
+  <!-- ── MAIN ─────────────────────────────────────────────── -->
   <main id="main-content" class="tf-main" role="main">
 
-    <!-- ── § 1 · MODULE OVERVIEW ─────────────────────── -->
-    <section class="tf-section tf-section--overview" aria-labelledby="section-overview">
-      <h2 id="section-overview" class="tf-section__heading">Overview</h2>
-      <!-- PLACEHOLDER: Explain what hooks are in the triadic context and how they operate -->
-      <p class="tf-placeholder">[PLACEHOLDER: Hooks module overview — define hooks within TriadicFrameworks and their role in sustaining engagement across the triadic arc.]</p>
+    <!-- MODULE HERO -->
+    <section class="tf-hero" aria-labelledby="module-title" data-section="hero">
+      <div class="tf-hero__inner tf-container">
+        <div class="tf-hero__badge">
+          <img class="tf-hero__icon" src="/assets/icons/hooks.svg" alt="" aria-hidden="true" width="48" height="48" />
+          <span class="tf-badge tf-badge--draft" data-tf-badge="status">Draft</span>
+          <span class="tf-badge tf-badge--layer" style="--badge-color:#5fd38a">Engagement Layer</span>
+        </div>
+        <h1 id="module-title" class="tf-hero__title">Hooks</h1>
+        <p class="tf-hero__lead">
+          The mechanisms by which triadic structures create and sustain engagement — attention, commitment, and momentum.
+        </p>
+      </div>
     </section>
 
-    <!-- ── § 2 · HOOK TYPOLOGY ───────────────────────── -->
-    <section class="tf-section tf-section--typology" aria-labelledby="section-typology">
-      <h2 id="section-typology" class="tf-section__heading">Hook Typology</h2>
-      <!-- PLACEHOLDER: Classification of hook types (e.g., opening, sustaining, closing) -->
-      <div class="tf-typology tf-placeholder">
-        <div class="tf-type-card" data-type="opening">
-          <h3 class="tf-type-card__title">[Opening Hook — PLACEHOLDER]</h3>
-          <p class="tf-type-card__desc">[Description — PLACEHOLDER]</p>
-        </div>
-        <div class="tf-type-card" data-type="sustaining">
-          <h3 class="tf-type-card__title">[Sustaining Hook — PLACEHOLDER]</h3>
-          <p class="tf-type-card__desc">[Description — PLACEHOLDER]</p>
-        </div>
-        <div class="tf-type-card" data-type="closing">
-          <h3 class="tf-type-card__title">[Closing Hook — PLACEHOLDER]</h3>
-          <p class="tf-type-card__desc">[Description — PLACEHOLDER]</p>
+    <!-- ──────────────────────────────────────────────────────
+         SECTION 1 · OVERVIEW
+         ────────────────────────────────────────────────────── -->
+    <section id="overview"
+             class="tf-section"
+             aria-labelledby="h-overview"
+             data-section-id="overview"
+             data-section-status="placeholder">
+      <div class="tf-container">
+        <h2 id="h-overview" class="tf-section__title">Overview</h2>
+        <div class="tf-placeholder" data-placeholder="overview">
+          <p class="tf-placeholder__label">[ Overview — awaiting content population ]</p>
         </div>
       </div>
     </section>
 
-    <!-- ── § 3 · ENGAGEMENT MECHANISMS ──────────────── -->
-    <section class="tf-section tf-section--mechanisms" aria-labelledby="section-mechanisms">
-      <h2 id="section-mechanisms" class="tf-section__heading">Engagement Mechanisms</h2>
-      <!-- PLACEHOLDER: The three core mechanisms — attention, commitment, momentum -->
-      <div class="tf-mechanism-triad tf-placeholder">
-        <div class="tf-mechanism-triad__pole" data-mechanism="attention">
-          <h3>[Attention — PLACEHOLDER]</h3>
-          <p>[How the hook captures attention — PLACEHOLDER]</p>
-        </div>
-        <div class="tf-mechanism-triad__pole" data-mechanism="commitment">
-          <h3>[Commitment — PLACEHOLDER]</h3>
-          <p>[How the hook builds commitment — PLACEHOLDER]</p>
-        </div>
-        <div class="tf-mechanism-triad__pole" data-mechanism="momentum">
-          <h3>[Momentum — PLACEHOLDER]</h3>
-          <p>[How the hook sustains momentum — PLACEHOLDER]</p>
+    <!-- ──────────────────────────────────────────────────────
+         SECTION 2 · HOOK TYPOLOGY
+         ────────────────────────────────────────────────────── -->
+    <section id="typology"
+             class="tf-section"
+             aria-labelledby="h-typology"
+             data-section-id="typology"
+             data-section-status="placeholder">
+      <div class="tf-container">
+        <h2 id="h-typology" class="tf-section__title">Hook Typology</h2>
+        <div class="tf-typology" role="list" aria-label="Hook types">
+          <article class="tf-type-card"
+                   role="listitem"
+                   tabindex="0"
+                   data-type="opening"
+                   aria-label="Opening hooks">
+            <h3 class="tf-type-card__title">Opening</h3>
+            <p class="tf-type-card__desc tf-placeholder__label">[ Opening hook definition — TBD ]</p>
+          </article>
+          <article class="tf-type-card"
+                   role="listitem"
+                   tabindex="0"
+                   data-type="sustaining"
+                   aria-label="Sustaining hooks">
+            <h3 class="tf-type-card__title">Sustaining</h3>
+            <p class="tf-type-card__desc tf-placeholder__label">[ Sustaining hook definition — TBD ]</p>
+          </article>
+          <article class="tf-type-card"
+                   role="listitem"
+                   tabindex="0"
+                   data-type="closing"
+                   aria-label="Closing hooks">
+            <h3 class="tf-type-card__title">Closing</h3>
+            <p class="tf-type-card__desc tf-placeholder__label">[ Closing hook definition — TBD ]</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ── § 4 · HOOK CATALOG ────────────────────────── -->
-    <section class="tf-section tf-section--catalog" aria-labelledby="section-catalog">
-      <h2 id="section-catalog" class="tf-section__heading">Hook Catalog</h2>
-      <!-- PLACEHOLDER: Named hooks with IDs, types, descriptions, and usage conditions -->
-      <table class="tf-hook-table tf-placeholder" aria-label="Hook catalog">
-        <thead>
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Name</th>
-            <th scope="col">Type</th>
-            <th scope="col">Mechanism</th>
-            <th scope="col">Usage Condition</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>[HK-001]</td>
-            <td>[Hook Name — PLACEHOLDER]</td>
-            <td>[Type — PLACEHOLDER]</td>
-            <td>[Mechanism — PLACEHOLDER]</td>
-            <td>[Condition — PLACEHOLDER]</td>
-          </tr>
-          <tr>
-            <td>[HK-002]</td>
-            <td>[Hook Name — PLACEHOLDER]</td>
-            <td>[Type — PLACEHOLDER]</td>
-            <td>[Mechanism — PLACEHOLDER]</td>
-            <td>[Condition — PLACEHOLDER]</td>
-          </tr>
-          <tr>
-            <td>[HK-003]</td>
-            <td>[Hook Name — PLACEHOLDER]</td>
-            <td>[Type — PLACEHOLDER]</td>
-            <td>[Mechanism — PLACEHOLDER]</td>
-            <td>[Condition — PLACEHOLDER]</td>
-          </tr>
-        </tbody>
-      </table>
+    <!-- ──────────────────────────────────────────────────────
+         SECTION 3 · ENGAGEMENT MECHANISMS
+         ────────────────────────────────────────────────────── -->
+    <section id="mechanisms"
+             class="tf-section"
+             aria-labelledby="h-mechanisms"
+             data-section-id="mechanisms"
+             data-section-status="placeholder">
+      <div class="tf-container">
+        <h2 id="h-mechanisms" class="tf-section__title">Engagement Mechanisms</h2>
+        <div class="tf-mechanism-triad"
+             role="group"
+             aria-label="Triadic engagement mechanisms">
+          <div class="tf-mechanism-triad__pole"
+               tabindex="0"
+               data-mechanism="attention"
+               aria-label="Attention mechanism">
+            <h3>Attention</h3>
+            <p class="tf-placeholder__label">[ Attention mechanism — TBD ]</p>
+          </div>
+          <div class="tf-mechanism-triad__pole"
+               tabindex="0"
+               data-mechanism="commitment"
+               aria-label="Commitment mechanism">
+            <h3>Commitment</h3>
+            <p class="tf-placeholder__label">[ Commitment mechanism — TBD ]</p>
+          </div>
+          <div class="tf-mechanism-triad__pole"
+               tabindex="0"
+               data-mechanism="momentum"
+               aria-label="Momentum mechanism">
+            <h3>Momentum</h3>
+            <p class="tf-placeholder__label">[ Momentum mechanism — TBD ]</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- ── § 5 · WORKED EXAMPLES ─────────────────────── -->
-    <section class="tf-section tf-section--examples" aria-labelledby="section-examples">
-      <h2 id="section-examples" class="tf-section__heading">Worked Examples</h2>
-      <!-- PLACEHOLDER: Annotated hook analyses from SoN narratives or other domains -->
-      <p class="tf-placeholder">[PLACEHOLDER: Add annotated worked examples of hooks in action, cross-referenced with SoN module narratives.]</p>
+    <!-- ──────────────────────────────────────────────────────
+         SECTION 4 · HOOK CATALOG
+         ────────────────────────────────────────────────────── -->
+    <section id="catalog"
+             class="tf-section"
+             aria-labelledby="h-catalog"
+             data-section-id="catalog"
+             data-section-status="placeholder">
+      <div class="tf-container">
+        <h2 id="h-catalog" class="tf-section__title">Hook Catalog</h2>
+        <div class="tf-table-wrap" role="region" aria-labelledby="h-catalog" tabindex="0">
+          <table class="tf-table tf-hook-table" aria-label="Hook catalog">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Type</th>
+                <th scope="col">Mechanism</th>
+                <th scope="col">Condition</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- PLACEHOLDER: rows populated from hooks.json / docs -->
+              <tr data-hook-id="HK-000"
+                  data-type="opening"
+                  data-mechanism="attention"
+                  tabindex="0">
+                <td>HK-000</td>
+                <td class="tf-placeholder__label">[ Hook name ]</td>
+                <td class="tf-placeholder__label">Opening</td>
+                <td class="tf-placeholder__label">Attention</td>
+                <td class="tf-placeholder__label">[ Condition — TBD ]</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </section>
 
-    <!-- ── § 6 · ANTI-PATTERNS & BROKEN HOOKS ────────── -->
-    <section class="tf-section tf-section--antipatterns" aria-labelledby="section-antipatterns">
-      <h2 id="section-antipatterns" class="tf-section__heading">Anti-Patterns &amp; Broken Hooks</h2>
-      <!-- PLACEHOLDER: Common hook failures — false promises, dropped threads, momentum collapse -->
-      <p class="tf-placeholder">[PLACEHOLDER: Catalogue hook anti-patterns — false promises, dropped threads, momentum collapse, and remediation strategies.]</p>
+    <!-- ──────────────────────────────────────────────────────
+         SECTION 5 · WORKED EXAMPLES
+         ────────────────────────────────────────────────────── -->
+    <section id="examples"
+             class="tf-section"
+             aria-labelledby="h-examples"
+             data-section-id="examples"
+             data-section-status="placeholder">
+      <div class="tf-container">
+        <h2 id="h-examples" class="tf-section__title">Worked Examples</h2>
+        <div class="tf-placeholder" data-placeholder="examples">
+          <p class="tf-placeholder__label">[ Worked examples — awaiting content population ]</p>
+        </div>
+      </div>
     </section>
 
-    <!-- ── § 7 · CROSS-MODULE LINKS ──────────────────── -->
-    <section class="tf-section tf-section--cross-links" aria-labelledby="section-cross-links">
-      <h2 id="section-cross-links" class="tf-section__heading">Cross-Module Connections</h2>
-      <nav aria-label="Related modules">
-        <ul class="tf-cross-links">
-          <li><a href="/modules/son/"        class="tf-cross-link">SoN</a></li>
-          <li><a href="/modules/vocabulary/" class="tf-cross-link">Vocabulary</a></li>
-          <li><a href="/modules/invariants/" class="tf-cross-link">Invariants</a></li>
-        </ul>
-      </nav>
+    <!-- ──────────────────────────────────────────────────────
+         SECTION 6 · ANTI-PATTERNS & BROKEN HOOKS
+         ────────────────────────────────────────────────────── -->
+    <section id="antipatterns"
+             class="tf-section"
+             aria-labelledby="h-antipatterns"
+             data-section-id="antipatterns"
+             data-section-status="placeholder">
+      <div class="tf-container">
+        <h2 id="h-antipatterns" class="tf-section__title">Anti-Patterns &amp; Broken Hooks</h2>
+        <div class="tf-placeholder" data-placeholder="antipatterns">
+          <p class="tf-placeholder__label">[ Anti-patterns &amp; broken hooks — awaiting content population ]</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────────────────────────────────────────────────────
+         SECTION 7 · CROSS-MODULE LINKS
+         ────────────────────────────────────────────────────── -->
+    <section id="cross-links"
+             class="tf-section tf-section--cross-links"
+             aria-labelledby="h-cross-links"
+             data-section-id="cross-links"
+             data-section-status="placeholder">
+      <div class="tf-container">
+        <h2 id="h-cross-links" class="tf-section__title">Cross-Module Connections</h2>
+        <nav class="tf-cross-link-grid" aria-label="Linked modules">
+          <a class="tf-cross-link-card tf-card" href="/son/" data-module="son">
+            <img class="tf-cross-link-card__icon" src="/assets/icons/son.svg" alt="" aria-hidden="true" width="32" height="32" />
+            <span class="tf-cross-link-card__label">SoN</span>
+            <span class="tf-cross-link-card__layer">Core Layer</span>
+          </a>
+          <a class="tf-cross-link-card tf-card" href="/vocabulary/" data-module="vocabulary">
+            <img class="tf-cross-link-card__icon" src="/assets/icons/vocabulary.svg" alt="" aria-hidden="true" width="32" height="32" />
+            <span class="tf-cross-link-card__label">Vocabulary</span>
+            <span class="tf-cross-link-card__layer">Linguistic Layer</span>
+          </a>
+          <a class="tf-cross-link-card tf-card" href="/invariants/" data-module="invariants">
+            <img class="tf-cross-link-card__icon" src="/assets/icons/invariants.svg" alt="" aria-hidden="true" width="32" height="32" />
+            <span class="tf-cross-link-card__label">Invariants</span>
+            <span class="tf-cross-link-card__layer">Structural Layer</span>
+          </a>
+        </nav>
+      </div>
     </section>
 
   </main>
 
-  <!-- ── SITE FOOTER ──────────────────────────────────── -->
+  <!-- ── FOOTER ────────────────────────────────────────────── -->
   <footer class="tf-footer" role="contentinfo">
-    <p class="tf-footer__copy">&copy; <span id="tf-year">2026</span> Nawder &middot; TriadicFrameworks</p>
-    <p class="tf-footer__meta">Module: Hooks &middot; Protocol: Metadata Refresh v1 &middot; Session: <span class="tf-footer__session-id">__SESSION_ID__</span></p>
+    <p class="tf-footer__copy">
+      &copy; <span id="tf-year">2026</span> Nawder Loswin &middot; TriadicFrameworks
+    </p>
+    <p class="tf-footer__meta">
+      Module: Hooks &middot;
+      Protocol: Metadata Refresh v1 &middot;
+      Session: <span class="tf-footer__session-id">__SESSION_ID__</span>
+    </p>
+    <p class="tf-footer__links">
+      <a href="https://triadicframeworks.org/">Home</a>
+      <a href="https://docs.triadicframeworks.org/">Docs</a>
+      <a href="https://github.com/umaywant2/TriadicFrameworks">GitHub</a>
+    </p>
   </footer>
 
-  <!-- ── SCRIPTS ───────────────────────────────────────── -->
-  <!-- triadic-core.js bootstraps TF.session, runs Metadata Refresh Protocol v1,
-       applies module colour token, and fires tf:ready — no inline session script needed. -->
-  <script src="/assets/js/triadic-core.js" defer></script>
-  <script src="/assets/js/modules/hooks.js" defer></script>
+  <!-- ── SCRIPTS ───────────────────────────────────────────── -->
+  <script src="/assets/js/triadic-core.js"></script>
+  <script src="/assets/js/modules/hooks.js"></script>
 
 </body>
 </html>

@@ -1,13 +1,14 @@
 {
-  "$schema": "https://triadicframeworks.nawder.com/schema/module.schema.json",
+  "$schema": "https://triadicframeworks.org/schema/module.schema.json",
   "id": "invariants",
   "label": "Invariants",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "layer": "Structural Layer",
   "status": "draft",
-  "author": "Nawder",
+  "author": "Nawder Loswin",
   "protocol": "metadata-refresh-v1",
-  "canonical": "https://triadicframeworks.nawder.com/modules/invariants/",
+  "rtt": "rtt=1 | coherence=declared | drift=bounded | paradox=structural",
+  "canonical": "https://triadicframeworks.org/invariants/",
   "description": {
     "short": "The fixed structural properties that hold across all triadic configurations, regardless of domain or context.",
     "long": "PLACEHOLDER: Full long-form description of the Invariants module."
@@ -17,16 +18,16 @@
     "color": "#d36b5f"
   },
   "og": {
-    "image": "https://triadicframeworks.nawder.com/assets/og/invariants-cover.png",
+    "image": "https://triadicframeworks.org/assets/og/invariants-cover.png",
     "locale": "en_US"
   },
   "sections": [
-    { "id": "overview",     "heading": "Overview",                          "status": "placeholder" },
-    { "id": "catalog",      "heading": "Invariant Catalog",                 "status": "placeholder" },
-    { "id": "proof",        "heading": "Proof Conditions",                  "status": "placeholder" },
-    { "id": "domains",      "heading": "Domain Applications",               "status": "placeholder" },
-    { "id": "violations",   "heading": "Apparent Violations & Edge Cases",  "status": "placeholder" },
-    { "id": "cross-links",  "heading": "Cross-Module Connections",          "status": "placeholder" }
+    { "id": "overview",    "heading": "Overview",                         "status": "placeholder" },
+    { "id": "catalog",     "heading": "Invariant Catalog",                "status": "placeholder" },
+    { "id": "proof",       "heading": "Proof Conditions",                 "status": "placeholder" },
+    { "id": "domains",     "heading": "Domain Applications",              "status": "placeholder" },
+    { "id": "violations",  "heading": "Apparent Violations & Edge Cases", "status": "placeholder" },
+    { "id": "cross-links", "heading": "Cross-Module Connections",         "status": "placeholder" }
   ],
   "crossLinks": ["son", "vocabulary", "hooks"],
   "assets": {

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" data-tf-dev="false">
+<html lang="en" data-tf-dev="false" data-module="vocabulary">
 <head>
-  <!-- ═══════════════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════════════════════
        TriadicFrameworks · Module: Vocabulary
-       Canonical Index Skeleton · v1.0.0
-       Author: Nawder · Protocol: Metadata Refresh v1
-       Last Refreshed: 2026-08-26T12:47:00-04:00
-       ═══════════════════════════════════════════════════ -->
+       Canonical Index · v2.0.0 · AI-first
+       Author: Nawder Loswin · Protocol: Metadata Refresh v1
+       Last Refreshed: 2026-08-26T15:21:00-04:00
+       ═══════════════════════════════════════════════════════════ -->
 
   <!-- Core Encoding & Viewport -->
   <meta charset="UTF-8" />
@@ -15,209 +15,315 @@
 
   <!-- Canonical Identity -->
   <title>Vocabulary | TriadicFrameworks</title>
-  <link rel="canonical" href="https://triadicframeworks.nawder.com/modules/vocabulary/" />
+  <link rel="canonical" href="https://triadicframeworks.org/vocabulary/" />
 
   <!-- Primary SEO Meta -->
   <meta name="description" content="Vocabulary — a TriadicFrameworks module establishing the precise, shared language of the triadic system: terms, definitions, and conceptual distinctions." />
-  <meta name="keywords" content="TriadicFrameworks, Vocabulary, Nawder, triadic, glossary, definitions, conceptual language" />
-  <meta name="author" content="Nawder" />
+  <meta name="keywords" content="TriadicFrameworks, Vocabulary, Nawder Loswin, triadic, glossary, definitions, conceptual language, distinctions" />
+  <meta name="author" content="Nawder Loswin" />
   <meta name="robots" content="index, follow" />
 
+  <!-- TriadicFrameworks RTT Session Meta (AI-readable) -->
+  <meta name="tf:module"      content="vocabulary" />
+  <meta name="tf:layer"       content="Linguistic Layer" />
+  <meta name="tf:version"     content="2.0.0" />
+  <meta name="tf:author"      content="Nawder Loswin" />
+  <meta name="tf:protocol"    content="metadata-refresh-v1" />
+  <meta name="tf:rtt"         content="rtt=1 | coherence=declared | drift=bounded | paradox=structural" />
+  <meta name="tf:session"     content="__SESSION_ID__" />
+  <meta name="tf:timestamp"   content="__SESSION_TIMESTAMP__" />
+  <meta name="tf:canonical"   content="https://triadicframeworks.org/vocabulary/" />
+  <meta name="tf:cross-links" content="son,invariants,hooks" />
+
   <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="TriadicFrameworks" />
-  <meta property="og:title" content="Vocabulary | TriadicFrameworks" />
+  <meta property="og:type"        content="website" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:title"       content="Vocabulary | TriadicFrameworks" />
   <meta property="og:description" content="Establishing the precise, shared language of the triadic system: terms, definitions, and conceptual distinctions." />
-  <meta property="og:url" content="https://triadicframeworks.nawder.com/modules/vocabulary/" />
-  <meta property="og:image" content="https://triadicframeworks.nawder.com/assets/og/vocabulary-cover.png" />
-  <meta property="og:locale" content="en_US" />
+  <meta property="og:url"         content="https://triadicframeworks.org/vocabulary/" />
+  <meta property="og:image"       content="https://triadicframeworks.org/assets/og/vocabulary-cover.png" />
+  <meta property="og:locale"      content="en_US" />
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Vocabulary | TriadicFrameworks" />
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Vocabulary | TriadicFrameworks" />
   <meta name="twitter:description" content="Establishing the precise, shared language of the triadic system: terms, definitions, and conceptual distinctions." />
-  <meta name="twitter:image" content="https://triadicframeworks.nawder.com/assets/og/vocabulary-cover.png" />
+  <meta name="twitter:image"       content="https://triadicframeworks.org/assets/og/vocabulary-cover.png" />
 
-  <!-- Schema.org JSON-LD -->
+  <!-- Schema.org JSON-LD (AI-first: full structured data) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LearningResource",
     "name": "Vocabulary",
     "description": "A TriadicFrameworks module establishing the precise, shared language of the triadic system.",
-    "author": { "@type": "Person", "name": "Nawder" },
-    "isPartOf": { "@type": "WebSite", "name": "TriadicFrameworks", "url": "https://triadicframeworks.nawder.com" },
-    "url": "https://triadicframeworks.nawder.com/modules/vocabulary/",
+    "author": {
+      "@type": "Person",
+      "name": "Nawder Loswin"
+    },
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "TriadicFrameworks",
+      "url": "https://triadicframeworks.org"
+    },
+    "url": "https://triadicframeworks.org/vocabulary/",
     "inLanguage": "en",
-    "dateModified": "2026-08-26"
+    "dateModified": "2026-08-26",
+    "version": "2.0.0",
+    "educationalLevel": "advanced",
+    "keywords": [
+      "triadic vocabulary",
+      "glossary",
+      "conceptual distinctions",
+      "TriadicFrameworks",
+      "Nawder Loswin"
+    ],
+    "hasPart": [
+      { "@type": "WebPageElement", "name": "Overview",                "cssSelector": "#overview" },
+      { "@type": "WebPageElement", "name": "Term Taxonomy",           "cssSelector": "#taxonomy" },
+      { "@type": "WebPageElement", "name": "Glossary",                "cssSelector": "#glossary" },
+      { "@type": "WebPageElement", "name": "Conceptual Distinctions", "cssSelector": "#distinctions" },
+      { "@type": "WebPageElement", "name": "Usage in Context",        "cssSelector": "#usage" },
+      { "@type": "WebPageElement", "name": "Cross-Module Links",      "cssSelector": "#cross-links" }
+    ]
   }
   </script>
-
-  <!-- Session Context — tokens injected at runtime by Metadata Refresh Protocol v1 -->
-  <meta name="tf:module" content="vocabulary" />
-  <meta name="tf:module-version" content="1.0.0" />
-  <meta name="tf:session-id" content="__SESSION_ID__" />
-  <meta name="tf:session-user" content="Nawder" />
-  <meta name="tf:session-timestamp" content="__SESSION_TIMESTAMP__" />
-  <meta name="tf:refresh-protocol" content="metadata-refresh-v1" />
-  <meta name="tf:data-path" content="/modules/vocabulary/data/vocabulary.json" />
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/assets/icons/vocabulary.svg" />
-  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-vocabulary.png" />
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="/assets/css/triadic-base.css" />
   <link rel="stylesheet" href="/assets/css/modules/vocabulary.css" />
+
+  <!-- Favicon / module icon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/icons/vocabulary.svg" />
 </head>
 
-<body data-module="vocabulary" data-version="1.0.0" data-user="Nawder">
+<body data-module="vocabulary" data-user="Nawder Loswin" data-layer="linguistic">
 
-  <!-- ── SKIP NAV ─────────────────────────────────────── -->
+  <!-- ── SKIP LINK ─────────────────────────────────────────── -->
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- ── SITE HEADER ──────────────────────────────────── -->
+  <!-- ── HEADER ───────────────────────────────────────────── -->
   <header class="tf-header" role="banner">
     <nav class="tf-nav" aria-label="TriadicFrameworks global navigation">
       <a class="tf-nav__home" href="/">TriadicFrameworks</a>
+
+      <!-- 2-level breadcrumb: Home → Vocabulary -->
       <ol class="tf-breadcrumb" aria-label="Breadcrumb">
         <li><a href="/">Home</a></li>
-        <li><a href="/modules/">Modules</a></li>
         <li aria-current="page">Vocabulary</li>
       </ol>
+
       <!-- Module switcher -->
       <nav class="tf-module-switcher" aria-label="Switch module">
-        <a href="/modules/son/"        class="tf-module-switcher__link" data-module="son">SoN</a>
-        <a href="/modules/vocabulary/" class="tf-module-switcher__link" data-module="vocabulary" aria-current="page">Vocabulary</a>
-        <a href="/modules/invariants/" class="tf-module-switcher__link" data-module="invariants">Invariants</a>
-        <a href="/modules/hooks/"      class="tf-module-switcher__link" data-module="hooks">Hooks</a>
+        <a href="/son/"        class="tf-module-switcher__link" data-module="son">SoN</a>
+        <a href="/vocabulary/" class="tf-module-switcher__link tf-module-switcher__link--active" data-module="vocabulary" aria-current="page">Vocabulary</a>
+        <a href="/invariants/" class="tf-module-switcher__link" data-module="invariants">Invariants</a>
+        <a href="/hooks/"      class="tf-module-switcher__link" data-module="hooks">Hooks</a>
       </nav>
     </nav>
   </header>
 
-  <!-- ── MODULE HERO ──────────────────────────────────── -->
-  <section class="tf-module-hero" aria-labelledby="module-title">
-    <div class="tf-module-hero__badge-row">
-      <!-- Badge: Module Identity -->
-      <span class="tf-badge tf-badge--module" aria-label="Module: Vocabulary">
-        <span class="tf-badge__icon" aria-hidden="true">◇</span>
-        <span class="tf-badge__label">Vocabulary</span>
-      </span>
-      <!-- Badge: Status -->
-      <span class="tf-badge tf-badge--status tf-badge--draft" aria-label="Status: Draft">
-        Draft
-      </span>
-      <!-- Badge: Framework Layer -->
-      <span class="tf-badge tf-badge--layer" aria-label="Framework layer: Linguistic">
-        Linguistic Layer
-      </span>
-      <!-- Badge: Version -->
-      <span class="tf-badge tf-badge--version" aria-label="Version 1.0.0">
-        v1.0.0
-      </span>
-    </div>
-
-    <h1 id="module-title" class="tf-module-hero__title">Vocabulary</h1>
-    <p class="tf-module-hero__tagline">
-      <!-- PLACEHOLDER: one-line module tagline -->
-      [Tagline: e.g., "The shared lexicon that makes triadic reasoning precise and portable."]
-    </p>
-  </section>
-
-  <!-- ── SESSION CONTEXT STRIP ────────────────────────── -->
-  <aside class="tf-session-context" aria-label="Session context" data-session-id="__SESSION_ID__">
-    <span class="tf-session-context__user">Nawder</span>
+  <!-- ── SESSION CONTEXT STRIP ────────────────────────────── -->
+  <aside class="tf-session-context"
+         aria-label="Session context"
+         data-session-id="__SESSION_ID__"
+         data-tf-component="session-context">
+    <span class="tf-session-context__user">Nawder Loswin</span>
     <span class="tf-session-context__divider" aria-hidden="true">&middot;</span>
     <span class="tf-session-context__module">Vocabulary</span>
     <span class="tf-session-context__divider" aria-hidden="true">&middot;</span>
-    <time class="tf-session-context__timestamp" datetime="__SESSION_TIMESTAMP__">__SESSION_TIMESTAMP__</time>
+    <time class="tf-session-context__timestamp"
+          datetime="__SESSION_TIMESTAMP__">__SESSION_TIMESTAMP__</time>
     <span class="tf-session-context__divider" aria-hidden="true">&middot;</span>
     <span class="tf-session-context__protocol">Metadata Refresh v1</span>
   </aside>
 
-  <!-- ── MAIN CONTENT ──────────────────────────────────── -->
+  <!-- ── MAIN ─────────────────────────────────────────────── -->
   <main id="main-content" class="tf-main" role="main">
 
-    <!-- ── § 1 · MODULE OVERVIEW ─────────────────────── -->
-    <section class="tf-section tf-section--overview" aria-labelledby="section-overview">
-      <h2 id="section-overview" class="tf-section__heading">Overview</h2>
-      <!-- PLACEHOLDER: Description of the Vocabulary module's purpose — grounding shared language -->
-      <p class="tf-placeholder">[PLACEHOLDER: Vocabulary module overview — why precise shared language is foundational to TriadicFrameworks.]</p>
-    </section>
-
-    <!-- ── § 2 · TERM TAXONOMY ───────────────────────── -->
-    <section class="tf-section tf-section--taxonomy" aria-labelledby="section-taxonomy">
-      <h2 id="section-taxonomy" class="tf-section__heading">Term Taxonomy</h2>
-      <!-- PLACEHOLDER: Visual or structural map of term categories (e.g., structural, relational, modal) -->
-      <div class="tf-taxonomy tf-placeholder">
-        <div class="tf-taxonomy__group" data-group="structural">[Structural Terms — PLACEHOLDER]</div>
-        <div class="tf-taxonomy__group" data-group="relational">[Relational Terms — PLACEHOLDER]</div>
-        <div class="tf-taxonomy__group" data-group="modal">[Modal Terms — PLACEHOLDER]</div>
+    <!-- MODULE HERO -->
+    <section class="tf-hero" aria-labelledby="module-title" data-section="hero">
+      <div class="tf-hero__inner tf-container">
+        <div class="tf-hero__badge">
+          <img class="tf-hero__icon" src="/assets/icons/vocabulary.svg" alt="" aria-hidden="true" width="48" height="48" />
+          <span class="tf-badge tf-badge--draft" data-tf-badge="status">Draft</span>
+          <span class="tf-badge tf-badge--layer" style="--badge-color:#5fa8d3">Linguistic Layer</span>
+        </div>
+        <h1 id="module-title" class="tf-hero__title">Vocabulary</h1>
+        <p class="tf-hero__lead">
+          The precise, shared language of the triadic system — terms, definitions, and conceptual distinctions.
+        </p>
       </div>
     </section>
 
-    <!-- ── § 3 · GLOSSARY ───────────────────────────── -->
-    <section class="tf-section tf-section--glossary" aria-labelledby="section-glossary">
-      <h2 id="section-glossary" class="tf-section__heading">Glossary</h2>
-      <!-- PLACEHOLDER: Alphabetical or thematic term list with definitions -->
-      <dl class="tf-glossary tf-placeholder">
-        <dt class="tf-glossary__term">[Term A — PLACEHOLDER]</dt>
-        <dd class="tf-glossary__def">[Definition A — PLACEHOLDER]</dd>
-
-        <dt class="tf-glossary__term">[Term B — PLACEHOLDER]</dt>
-        <dd class="tf-glossary__def">[Definition B — PLACEHOLDER]</dd>
-
-        <dt class="tf-glossary__term">[Term C — PLACEHOLDER]</dt>
-        <dd class="tf-glossary__def">[Definition C — PLACEHOLDER]</dd>
-      </dl>
-    </section>
-
-    <!-- ── § 4 · CONCEPTUAL DISTINCTIONS ─────────────── -->
-    <section class="tf-section tf-section--distinctions" aria-labelledby="section-distinctions">
-      <h2 id="section-distinctions" class="tf-section__heading">Conceptual Distinctions</h2>
-      <!-- PLACEHOLDER: Common confusions / near-synonym comparisons across modules -->
-      <div class="tf-distinctions tf-placeholder">
-        <div class="tf-distinction-pair" data-pair="a-vs-b">
-          <span class="tf-distinction-pair__left">[Term A]</span>
-          <span class="tf-distinction-pair__vs" aria-hidden="true">vs.</span>
-          <span class="tf-distinction-pair__right">[Term B]</span>
-          <p class="tf-distinction-pair__note">[Distinction note — PLACEHOLDER]</p>
+    <!-- ──────────────────────────────────────────────────────
+         SECTION 1 · OVERVIEW
+         ────────────────────────────────────────────────────── -->
+    <section id="overview"
+             class="tf-section"
+             aria-labelledby="h-overview"
+             data-section-id="overview"
+             data-section-status="placeholder">
+      <div class="tf-container">
+        <h2 id="h-overview" class="tf-section__title">Overview</h2>
+        <div class="tf-placeholder" data-placeholder="overview">
+          <p class="tf-placeholder__label">[ Overview — awaiting content population ]</p>
         </div>
       </div>
     </section>
 
-    <!-- ── § 5 · USAGE IN CONTEXT ────────────────────── -->
-    <section class="tf-section tf-section--usage" aria-labelledby="section-usage">
-      <h2 id="section-usage" class="tf-section__heading">Usage in Context</h2>
-      <!-- PLACEHOLDER: Short annotated examples showing each term correctly applied -->
-      <p class="tf-placeholder">[PLACEHOLDER: Add annotated in-context usage examples for key vocabulary terms.]</p>
+    <!-- ──────────────────────────────────────────────────────
+         SECTION 2 · TERM TAXONOMY
+         ────────────────────────────────────────────────────── -->
+    <section id="taxonomy"
+             class="tf-section"
+             aria-labelledby="h-taxonomy"
+             data-section-id="taxonomy"
+             data-section-status="placeholder">
+      <div class="tf-container">
+        <h2 id="h-taxonomy" class="tf-section__title">Term Taxonomy</h2>
+        <div class="tf-taxonomy" role="list" aria-label="Term taxonomy groups">
+          <div class="tf-taxonomy__group" role="listitem" data-group="structural">
+            <h3 class="tf-taxonomy__group-title">Structural</h3>
+            <p class="tf-placeholder__label">[ Structural terms — TBD ]</p>
+          </div>
+          <div class="tf-taxonomy__group" role="listitem" data-group="relational">
+            <h3 class="tf-taxonomy__group-title">Relational</h3>
+            <p class="tf-placeholder__label">[ Relational terms — TBD ]</p>
+          </div>
+          <div class="tf-taxonomy__group" role="listitem" data-group="modal">
+            <h3 class="tf-taxonomy__group-title">Modal</h3>
+            <p class="tf-placeholder__label">[ Modal terms — TBD ]</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- ── § 6 · CROSS-MODULE LINKS ──────────────────── -->
-    <section class="tf-section tf-section--cross-links" aria-labelledby="section-cross-links">
-      <h2 id="section-cross-links" class="tf-section__heading">Cross-Module Connections</h2>
-      <nav aria-label="Related modules">
-        <ul class="tf-cross-links">
-          <li><a href="/modules/son/"        class="tf-cross-link">SoN</a></li>
-          <li><a href="/modules/invariants/" class="tf-cross-link">Invariants</a></li>
-          <li><a href="/modules/hooks/"      class="tf-cross-link">Hooks</a></li>
-        </ul>
-      </nav>
+    <!-- ──────────────────────────────────────────────────────
+         SECTION 3 · GLOSSARY
+         ────────────────────────────────────────────────────── -->
+    <section id="glossary"
+             class="tf-section"
+             aria-labelledby="h-glossary"
+             data-section-id="glossary"
+             data-section-status="placeholder">
+      <div class="tf-container">
+        <h2 id="h-glossary" class="tf-section__title">Glossary</h2>
+        <!-- Live filter injected by vocabulary.js -->
+        <div id="glossary-filter-mount" data-tf-component="glossary-filter" aria-label="Filter glossary terms"></div>
+        <dl class="tf-glossary" aria-label="TriadicFrameworks term glossary">
+          <!-- PLACEHOLDER: <dt> / <dd> pairs populated from vocabulary data -->
+          <dt class="tf-glossary__term tf-placeholder__label">[ Term A ]</dt>
+          <dd class="tf-glossary__def tf-placeholder__label">[ Definition — TBD ]</dd>
+          <dt class="tf-glossary__term tf-placeholder__label">[ Term B ]</dt>
+          <dd class="tf-glossary__def tf-placeholder__label">[ Definition — TBD ]</dd>
+          <dt class="tf-glossary__term tf-placeholder__label">[ Term C ]</dt>
+          <dd class="tf-glossary__def tf-placeholder__label">[ Definition — TBD ]</dd>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ──────────────────────────────────────────────────────
+         SECTION 4 · CONCEPTUAL DISTINCTIONS
+         ────────────────────────────────────────────────────── -->
+    <section id="distinctions"
+             class="tf-section"
+             aria-labelledby="h-distinctions"
+             data-section-id="distinctions"
+             data-section-status="placeholder">
+      <div class="tf-container">
+        <h2 id="h-distinctions" class="tf-section__title">Conceptual Distinctions</h2>
+        <div class="tf-distinctions" role="list" aria-label="Paired conceptual distinctions">
+          <div class="tf-distinction-pair"
+               role="listitem"
+               tabindex="0"
+               data-pair="placeholder-1"
+               data-expanded="false">
+            <span class="tf-distinction-pair__left  tf-placeholder__label">[ Concept A ]</span>
+            <span class="tf-distinction-pair__vs" aria-hidden="true">vs</span>
+            <span class="tf-distinction-pair__right tf-placeholder__label">[ Concept B ]</span>
+          </div>
+          <div class="tf-distinction-pair"
+               role="listitem"
+               tabindex="0"
+               data-pair="placeholder-2"
+               data-expanded="false">
+            <span class="tf-distinction-pair__left  tf-placeholder__label">[ Concept C ]</span>
+            <span class="tf-distinction-pair__vs" aria-hidden="true">vs</span>
+            <span class="tf-distinction-pair__right tf-placeholder__label">[ Concept D ]</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────────────────────────────────────────────────────
+         SECTION 5 · USAGE IN CONTEXT
+         ────────────────────────────────────────────────────── -->
+    <section id="usage"
+             class="tf-section"
+             aria-labelledby="h-usage"
+             data-section-id="usage"
+             data-section-status="placeholder">
+      <div class="tf-container">
+        <h2 id="h-usage" class="tf-section__title">Usage in Context</h2>
+        <div class="tf-placeholder" data-placeholder="usage">
+          <p class="tf-placeholder__label">[ Usage in context — awaiting content population ]</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ──────────────────────────────────────────────────────
+         SECTION 6 · CROSS-MODULE LINKS
+         ────────────────────────────────────────────────────── -->
+    <section id="cross-links"
+             class="tf-section tf-section--cross-links"
+             aria-labelledby="h-cross-links"
+             data-section-id="cross-links"
+             data-section-status="placeholder">
+      <div class="tf-container">
+        <h2 id="h-cross-links" class="tf-section__title">Cross-Module Connections</h2>
+        <nav class="tf-cross-link-grid" aria-label="Linked modules">
+          <a class="tf-cross-link-card tf-card" href="/son/" data-module="son">
+            <img class="tf-cross-link-card__icon" src="/assets/icons/son.svg" alt="" aria-hidden="true" width="32" height="32" />
+            <span class="tf-cross-link-card__label">SoN</span>
+            <span class="tf-cross-link-card__layer">Core Layer</span>
+          </a>
+          <a class="tf-cross-link-card tf-card" href="/invariants/" data-module="invariants">
+            <img class="tf-cross-link-card__icon" src="/assets/icons/invariants.svg" alt="" aria-hidden="true" width="32" height="32" />
+            <span class="tf-cross-link-card__label">Invariants</span>
+            <span class="tf-cross-link-card__layer">Structural Layer</span>
+          </a>
+          <a class="tf-cross-link-card tf-card" href="/hooks/" data-module="hooks">
+            <img class="tf-cross-link-card__icon" src="/assets/icons/hooks.svg" alt="" aria-hidden="true" width="32" height="32" />
+            <span class="tf-cross-link-card__label">Hooks</span>
+            <span class="tf-cross-link-card__layer">Engagement Layer</span>
+          </a>
+        </nav>
+      </div>
     </section>
 
   </main>
 
-  <!-- ── SITE FOOTER ──────────────────────────────────── -->
+  <!-- ── FOOTER ────────────────────────────────────────────── -->
   <footer class="tf-footer" role="contentinfo">
-    <p class="tf-footer__copy">&copy; <span id="tf-year">2026</span> Nawder &middot; TriadicFrameworks</p>
-    <p class="tf-footer__meta">Module: Vocabulary &middot; Protocol: Metadata Refresh v1 &middot; Session: <span class="tf-footer__session-id">__SESSION_ID__</span></p>
+    <p class="tf-footer__copy">
+      &copy; <span id="tf-year">2026</span> Nawder Loswin &middot; TriadicFrameworks
+    </p>
+    <p class="tf-footer__meta">
+      Module: Vocabulary &middot;
+      Protocol: Metadata Refresh v1 &middot;
+      Session: <span class="tf-footer__session-id">__SESSION_ID__</span>
+    </p>
+    <p class="tf-footer__links">
+      <a href="https://triadicframeworks.org/">Home</a>
+      <a href="https://docs.triadicframeworks.org/">Docs</a>
+      <a href="https://github.com/umaywant2/TriadicFrameworks">GitHub</a>
+    </p>
   </footer>
 
-  <!-- ── SCRIPTS ───────────────────────────────────────── -->
-  <!-- triadic-core.js bootstraps TF.session, runs Metadata Refresh Protocol v1,
-       applies module colour token, and fires tf:ready — no inline session script needed. -->
-  <script src="/assets/js/triadic-core.js" defer></script>
-  <script src="/assets/js/modules/vocabulary.js" defer></script>
+  <!-- ── SCRIPTS ───────────────────────────────────────────── -->
+  <script src="/assets/js/triadic-core.js"></script>
+  <script src="/assets/js/modules/vocabulary.js"></script>
 
 </body>
 </html>

@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://triadicframeworks.nawder.com/schema/module.schema.json",
+  "$id": "https://triadicframeworks.org/schema/module.schema.json",
   "title": "TriadicFrameworks Module",
-  "description": "Canonical schema for a TriadicFrameworks module metadata record.",
+  "description": "Canonical schema for a TriadicFrameworks module metadata record. v2.0.0 — domain corrected to triadicframeworks.org.",
   "type": "object",
   "required": ["id", "label", "version", "layer", "status", "author", "protocol", "canonical", "description", "badge"],
   "properties": {
@@ -23,7 +23,7 @@
     "layer": {
       "type": "string",
       "description": "Framework layer this module occupies.",
-      "enum": ["Narrative Layer", "Linguistic Layer", "Structural Layer", "Engagement Layer"]
+      "enum": ["Core Layer", "Linguistic Layer", "Structural Layer", "Engagement Layer"]
     },
     "status": {
       "type": "string",
@@ -31,17 +31,23 @@
     },
     "author": {
       "type": "string",
-      "default": "Nawder"
+      "default": "Nawder Loswin"
     },
     "protocol": {
       "type": "string",
       "description": "Metadata refresh protocol version.",
       "default": "metadata-refresh-v1"
     },
+    "rtt": {
+      "type": "string",
+      "description": "RTT session string embedded in tf:rtt meta tag.",
+      "default": "rtt=1 | coherence=declared | drift=bounded | paradox=structural"
+    },
     "canonical": {
       "type": "string",
       "format": "uri",
-      "description": "Canonical URL for the module index."
+      "description": "Canonical URL for the module index. Must use triadicframeworks.org domain.",
+      "pattern": "^https://triadicframeworks\\.org/"
     },
     "description": {
       "type": "object",
@@ -62,7 +68,7 @@
     "og": {
       "type": "object",
       "properties": {
-        "image": { "type": "string", "format": "uri" },
+        "image":  { "type": "string", "format": "uri" },
         "locale": { "type": "string", "default": "en_US" }
       }
     },

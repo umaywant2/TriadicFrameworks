@@ -1,6 +1,7 @@
 <!-- ═══════════════════════════════════════════════════════════
      TriadicFrameworks · Shared Component: Session Context Strip
-     _shared/components/session-context.html · v1.0.0
+     _shared/components/_session-context.html · v2.0.0
+     Author: Nawder Loswin · Protocol: Metadata Refresh v1
      Usage: replace MODULE_LABEL with actual module name.
      Tokens __SESSION_ID__ and __SESSION_TIMESTAMP__ are
      injected at runtime by Metadata Refresh Protocol v1.
@@ -8,8 +9,9 @@
 
 <aside class="tf-session-context"
        aria-label="Session context"
-       data-session-id="__SESSION_ID__">
-  <span class="tf-session-context__user">Nawder</span>
+       data-session-id="__SESSION_ID__"
+       data-tf-component="session-context">
+  <span class="tf-session-context__user">Nawder Loswin</span>
   <span class="tf-session-context__divider" aria-hidden="true">&middot;</span>
   <span class="tf-session-context__module"><!-- MODULE_LABEL --></span>
   <span class="tf-session-context__divider" aria-hidden="true">&middot;</span>

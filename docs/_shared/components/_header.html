@@ -1,7 +1,10 @@
 <!-- ═══════════════════════════════════════════════════════════
      TriadicFrameworks · Shared Component: Header + Nav
-     _shared/components/header.html · v1.0.0
-     Usage: replace MODULE_ID, MODULE_LABEL with actual values
+     _shared/components/_header.html · v2.0.0
+     Author: Nawder Loswin · Protocol: Metadata Refresh v1
+     Usage: replace MODULE_ID, MODULE_LABEL with actual values.
+     Active link: add class tf-module-switcher__link--active
+                  and aria-current="page" to current module link.
      ═══════════════════════════════════════════════════════════ -->
 
 <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -9,17 +12,19 @@
 <header class="tf-header" role="banner">
   <nav class="tf-nav" aria-label="TriadicFrameworks global navigation">
     <a class="tf-nav__home" href="/">TriadicFrameworks</a>
+
+    <!-- 2-level breadcrumb: Home → Module (no /modules/ parent) -->
     <ol class="tf-breadcrumb" aria-label="Breadcrumb">
       <li><a href="/">Home</a></li>
-      <li><a href="/modules/">Modules</a></li>
       <li aria-current="page"><!-- MODULE_LABEL --></li>
     </ol>
-    <!-- Optional: module switcher -->
+
+    <!-- Module switcher — paths are root-relative, no /modules/ prefix -->
     <nav class="tf-module-switcher" aria-label="Switch module">
-      <a href="/modules/son/"        class="tf-module-switcher__link" data-module="son">SoN</a>
-      <a href="/modules/vocabulary/" class="tf-module-switcher__link" data-module="vocabulary">Vocabulary</a>
-      <a href="/modules/invariants/" class="tf-module-switcher__link" data-module="invariants">Invariants</a>
-      <a href="/modules/hooks/"      class="tf-module-switcher__link" data-module="hooks">Hooks</a>
+      <a href="/son/"        class="tf-module-switcher__link" data-module="son">SoN</a>
+      <a href="/vocabulary/" class="tf-module-switcher__link" data-module="vocabulary">Vocabulary</a>
+      <a href="/invariants/" class="tf-module-switcher__link" data-module="invariants">Invariants</a>
+      <a href="/hooks/"      class="tf-module-switcher__link" data-module="hooks">Hooks</a>
     </nav>
   </nav>
 </header>
