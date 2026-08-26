@@ -1,0 +1,40 @@
+{
+  "$schema": "https://triadicframeworks.nawder.com/schema/module.schema.json",
+  "id": "invariants",
+  "label": "Invariants",
+  "version": "1.0.0",
+  "layer": "Structural Layer",
+  "status": "draft",
+  "author": "Nawder",
+  "protocol": "metadata-refresh-v1",
+  "canonical": "https://triadicframeworks.nawder.com/modules/invariants/",
+  "description": {
+    "short": "The fixed structural properties that hold across all triadic configurations, regardless of domain or context.",
+    "long": "PLACEHOLDER: Full long-form description of the Invariants module."
+  },
+  "badge": {
+    "icon": "◉",
+    "color": "#d36b5f"
+  },
+  "og": {
+    "image": "https://triadicframeworks.nawder.com/assets/og/invariants-cover.png",
+    "locale": "en_US"
+  },
+  "sections": [
+    { "id": "overview",     "heading": "Overview",                          "status": "placeholder" },
+    { "id": "catalog",      "heading": "Invariant Catalog",                 "status": "placeholder" },
+    { "id": "proof",        "heading": "Proof Conditions",                  "status": "placeholder" },
+    { "id": "domains",      "heading": "Domain Applications",               "status": "placeholder" },
+    { "id": "violations",   "heading": "Apparent Violations & Edge Cases",  "status": "placeholder" },
+    { "id": "cross-links",  "heading": "Cross-Module Connections",          "status": "placeholder" }
+  ],
+  "crossLinks": ["son", "vocabulary", "hooks"],
+  "assets": {
+    "css":     "/assets/css/modules/invariants.css",
+    "js":      "/assets/js/modules/invariants.js",
+    "icon":    "/assets/icons/invariants.svg",
+    "ogImage": "/assets/og/invariants-cover.png"
+  },
+  "dateCreated":  "2026-08-26",
+  "dateModified": "2026-08-26"
+}

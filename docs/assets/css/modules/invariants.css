@@ -1,0 +1,94 @@
+/* ═══════════════════════════════════════════════════════════════
+   TriadicFrameworks · Module CSS: Invariants
+   assets/css/modules/invariants.css · v1.0.0
+   Extends: triadic-base.css
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── MODULE COLOR OVERRIDE ──────────────────────────────────── */
+[data-module="invariants"] {
+  --tf-module-color:     #d36b5f;
+  --tf-module-color-dim: rgba(211, 107, 95, 0.15);
+}
+
+/* ── INVARIANT TABLE ────────────────────────────────────────── */
+.tf-invariant-table {
+  /* Extends .tf-table from base */
+}
+.tf-invariant-table td:nth-child(2) {
+  font-weight: 600;
+  color: var(--tf-color-text);
+}
+.tf-invariant-table td:nth-child(4) {
+  font-size: var(--tf-font-size-xs);
+  color: var(--tf-color-text-muted);
+  font-style: italic;
+}
+
+/* ── PROOF CONDITIONS ───────────────────────────────────────── */
+.tf-proof-conditions { display: flex; flex-direction: column; gap: var(--tf-space-6); }
+.tf-proof-condition {
+  background: var(--tf-color-bg-card);
+  border: 1px solid var(--tf-color-border);
+  border-radius: var(--tf-radius-lg);
+  padding: var(--tf-space-6);
+  position: relative;
+  overflow: hidden;
+}
+.tf-proof-condition::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px; height: 100%;
+  background: var(--tf-module-color);
+}
+.tf-proof-condition__title {
+  font-size: var(--tf-font-size-base);
+  font-weight: 700;
+  margin-bottom: var(--tf-space-4);
+  font-family: var(--tf-font-mono);
+  color: var(--tf-module-color);
+}
+.tf-proof-condition__condition,
+.tf-proof-condition__falsifier {
+  font-size: var(--tf-font-size-sm);
+  color: var(--tf-color-text-muted);
+  padding: var(--tf-space-3) var(--tf-space-4);
+  border-radius: var(--tf-radius-sm);
+  margin-bottom: var(--tf-space-2);
+}
+.tf-proof-condition__condition {
+  background: rgba(70, 190, 130, 0.06);
+  border-left: 2px solid rgba(70, 190, 130, 0.4);
+}
+.tf-proof-condition__falsifier {
+  background: rgba(211, 107, 95, 0.06);
+  border-left: 2px solid rgba(211, 107, 95, 0.4);
+}
+
+/* ── DOMAIN APPLICATION GRID ────────────────────────────────── */
+.tf-domain-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: var(--tf-space-4);
+}
+.tf-domain-card {
+  background: var(--tf-color-bg-card);
+  border: 1px solid var(--tf-color-border);
+  border-radius: var(--tf-radius-lg);
+  padding: var(--tf-space-6);
+  font-size: var(--tf-font-size-sm);
+  transition: border-color var(--tf-transition), box-shadow var(--tf-transition);
+}
+.tf-domain-card:hover {
+  border-color: var(--tf-module-color);
+  box-shadow: var(--tf-shadow-glow);
+}
+/* PLACEHOLDER: domain-specific badge icon colours */
+.tf-domain-card[data-domain="narrative"] { /* PLACEHOLDER */ }
+.tf-domain-card[data-domain="cognitive"]  { /* PLACEHOLDER */ }
+.tf-domain-card[data-domain="social"]     { /* PLACEHOLDER */ }
+
+/* ── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .tf-domain-grid { grid-template-columns: 1fr; }
+}

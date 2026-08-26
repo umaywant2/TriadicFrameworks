@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" role="img" aria-label="SoN module icon">
+  <!-- TriadicFrameworks · SoN Icon · v1.0.0 · #7c6fef -->
+  <!-- PLACEHOLDER: replace paths with final icon artwork -->
+  <circle cx="24" cy="24" r="22" stroke="#7c6fef" stroke-width="2" fill="none"/>
+  <!-- Triadic diamond ◈ -->
+  <polygon points="24,6 38,24 24,42 10,24" stroke="#7c6fef" stroke-width="1.5" fill="rgba(124,111,239,0.12)"/>
+  <polygon points="24,12 34,24 24,36 14,24" stroke="#7c6fef" stroke-width="1" fill="rgba(124,111,239,0.2)"/>
+  <circle cx="24" cy="24" r="2.5" fill="#7c6fef"/>
+</svg>

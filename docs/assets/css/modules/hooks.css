@@ -1,0 +1,88 @@
+/* ═══════════════════════════════════════════════════════════════
+   TriadicFrameworks · Module CSS: Hooks
+   assets/css/modules/hooks.css · v1.0.0
+   Extends: triadic-base.css
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── MODULE COLOR OVERRIDE ──────────────────────────────────── */
+[data-module="hooks"] {
+  --tf-module-color:     #5fd38a;
+  --tf-module-color-dim: rgba(95, 211, 138, 0.15);
+}
+
+/* ── HOOK TYPOLOGY CARDS ────────────────────────────────────── */
+.tf-typology {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--tf-space-4);
+  margin-block: var(--tf-space-6);
+}
+.tf-type-card {
+  background: var(--tf-color-bg-card);
+  border: 1px solid var(--tf-color-border);
+  border-radius: var(--tf-radius-lg);
+  padding: var(--tf-space-6);
+  transition: border-color var(--tf-transition), box-shadow var(--tf-transition);
+}
+.tf-type-card:hover {
+  border-color: var(--tf-module-color);
+  box-shadow: var(--tf-shadow-glow);
+}
+.tf-type-card__title {
+  font-size: var(--tf-font-size-base);
+  font-weight: 700;
+  color: var(--tf-module-color);
+  margin-bottom: var(--tf-space-3);
+}
+.tf-type-card__desc {
+  font-size: var(--tf-font-size-sm);
+  color: var(--tf-color-text-muted);
+}
+.tf-type-card[data-type="opening"]    { /* PLACEHOLDER: opening hook accent */ }
+.tf-type-card[data-type="sustaining"] { /* PLACEHOLDER: sustaining accent   */ }
+.tf-type-card[data-type="closing"]    { /* PLACEHOLDER: closing accent       */ }
+
+/* ── ENGAGEMENT MECHANISMS TRIAD ────────────────────────────── */
+.tf-mechanism-triad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--tf-space-4);
+  margin-block: var(--tf-space-6);
+}
+.tf-mechanism-triad__pole {
+  text-align: center;
+  background: var(--tf-color-bg-card);
+  border: 1px solid var(--tf-color-border);
+  border-radius: var(--tf-radius-lg);
+  padding: var(--tf-space-8) var(--tf-space-6);
+}
+.tf-mechanism-triad__pole h3 {
+  font-size: var(--tf-font-size-base);
+  font-weight: 700;
+  color: var(--tf-module-color);
+  margin-bottom: var(--tf-space-3);
+}
+.tf-mechanism-triad__pole p {
+  font-size: var(--tf-font-size-sm);
+  color: var(--tf-color-text-muted);
+}
+.tf-mechanism-triad__pole[data-mechanism="attention"]  { /* PLACEHOLDER */ }
+.tf-mechanism-triad__pole[data-mechanism="commitment"] { /* PLACEHOLDER */ }
+.tf-mechanism-triad__pole[data-mechanism="momentum"]   { /* PLACEHOLDER */ }
+
+/* ── HOOK CATALOG TABLE ─────────────────────────────────────── */
+.tf-hook-table {
+  /* Extends .tf-table from base */
+}
+.tf-hook-table td:nth-child(2) { font-weight: 600; color: var(--tf-color-text); }
+.tf-hook-table td:nth-child(3) {
+  font-size: var(--tf-font-size-xs);
+  color: var(--tf-module-color);
+  font-family: var(--tf-font-mono);
+}
+
+/* ── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .tf-typology          { grid-template-columns: 1fr; }
+  .tf-mechanism-triad   { grid-template-columns: 1fr; }
+}

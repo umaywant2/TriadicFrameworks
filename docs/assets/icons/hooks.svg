@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" role="img" aria-label="Hooks module icon">
+  <!-- TriadicFrameworks · Hooks Icon · v1.0.0 · #5fd38a -->
+  <!-- PLACEHOLDER: replace paths with final icon artwork -->
+  <circle cx="24" cy="24" r="22" stroke="#5fd38a" stroke-width="2" fill="none"/>
+  <!-- Dotted circle ◎ -->
+  <circle cx="24" cy="24" r="13" stroke="#5fd38a" stroke-width="1.5" stroke-dasharray="3 3" fill="rgba(95,211,138,0.08)"/>
+  <circle cx="24" cy="24" r="2.5" fill="#5fd38a"/>
+</svg>

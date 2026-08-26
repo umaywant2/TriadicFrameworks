@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" role="img" aria-label="Invariants module icon">
+  <!-- TriadicFrameworks · Invariants Icon · v1.0.0 · #d36b5f -->
+  <!-- PLACEHOLDER: replace paths with final icon artwork -->
+  <circle cx="24" cy="24" r="22" stroke="#d36b5f" stroke-width="2" fill="none"/>
+  <!-- Bullseye ◉ -->
+  <circle cx="24" cy="24" r="14" stroke="#d36b5f" stroke-width="1.5" fill="rgba(211,107,95,0.08)"/>
+  <circle cx="24" cy="24" r="7"  stroke="#d36b5f" stroke-width="1.5" fill="rgba(211,107,95,0.15)"/>
+  <circle cx="24" cy="24" r="2.5" fill="#d36b5f"/>
+</svg>

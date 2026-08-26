@@ -1,0 +1,100 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://triadicframeworks.nawder.com/schema/module.schema.json",
+  "title": "TriadicFrameworks Module",
+  "description": "Canonical schema for a TriadicFrameworks module metadata record.",
+  "type": "object",
+  "required": ["id", "label", "version", "layer", "status", "author", "protocol", "canonical", "description", "badge"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique module identifier (slug).",
+      "enum": ["son", "vocabulary", "invariants", "hooks"]
+    },
+    "label": {
+      "type": "string",
+      "description": "Human-readable module name."
+    },
+    "version": {
+      "type": "string",
+      "description": "Semver module version.",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "layer": {
+      "type": "string",
+      "description": "Framework layer this module occupies.",
+      "enum": ["Narrative Layer", "Linguistic Layer", "Structural Layer", "Engagement Layer"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "review", "live", "archived"]
+    },
+    "author": {
+      "type": "string",
+      "default": "Nawder"
+    },
+    "protocol": {
+      "type": "string",
+      "description": "Metadata refresh protocol version.",
+      "default": "metadata-refresh-v1"
+    },
+    "canonical": {
+      "type": "string",
+      "format": "uri",
+      "description": "Canonical URL for the module index."
+    },
+    "description": {
+      "type": "object",
+      "required": ["short", "long"],
+      "properties": {
+        "short": { "type": "string", "maxLength": 160 },
+        "long":  { "type": "string" }
+      }
+    },
+    "badge": {
+      "type": "object",
+      "required": ["icon", "color"],
+      "properties": {
+        "icon":  { "type": "string", "description": "Unicode badge icon character." },
+        "color": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" }
+      }
+    },
+    "og": {
+      "type": "object",
+      "properties": {
+        "image": { "type": "string", "format": "uri" },
+        "locale": { "type": "string", "default": "en_US" }
+      }
+    },
+    "sections": {
+      "type": "array",
+      "description": "Ordered list of content sections for this module.",
+      "items": {
+        "type": "object",
+        "required": ["id", "heading", "status"],
+        "properties": {
+          "id":      { "type": "string" },
+          "heading": { "type": "string" },
+          "status":  { "type": "string", "enum": ["placeholder", "draft", "complete"] },
+          "notes":   { "type": "string" }
+        }
+      }
+    },
+    "crossLinks": {
+      "type": "array",
+      "description": "Sibling modules this module links to.",
+      "items": { "type": "string", "enum": ["son", "vocabulary", "invariants", "hooks"] }
+    },
+    "assets": {
+      "type": "object",
+      "properties": {
+        "css":     { "type": "string" },
+        "js":      { "type": "string" },
+        "icon":    { "type": "string" },
+        "ogImage": { "type": "string" }
+      }
+    },
+    "dateCreated":  { "type": "string", "format": "date" },
+    "dateModified": { "type": "string", "format": "date" }
+  }
+}

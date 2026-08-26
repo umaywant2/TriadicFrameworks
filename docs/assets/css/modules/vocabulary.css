@@ -1,0 +1,98 @@
+/* ═══════════════════════════════════════════════════════════════
+   TriadicFrameworks · Module CSS: Vocabulary
+   assets/css/modules/vocabulary.css · v1.0.0
+   Extends: triadic-base.css
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── MODULE COLOR OVERRIDE ──────────────────────────────────── */
+[data-module="vocabulary"] {
+  --tf-module-color:     #5fa8d3;
+  --tf-module-color-dim: rgba(95, 168, 211, 0.15);
+}
+
+/* ── TERM TAXONOMY ──────────────────────────────────────────── */
+.tf-taxonomy {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: var(--tf-space-4);
+  margin-block: var(--tf-space-6);
+}
+.tf-taxonomy__group {
+  background: var(--tf-color-bg-card);
+  border: 1px solid var(--tf-color-border);
+  border-top: 3px solid var(--tf-module-color);
+  border-radius: var(--tf-radius-lg);
+  padding: var(--tf-space-6);
+  font-size: var(--tf-font-size-sm);
+  transition: box-shadow var(--tf-transition);
+}
+.tf-taxonomy__group:hover { box-shadow: var(--tf-shadow-glow); }
+/* PLACEHOLDER: group-specific accent colours per type */
+
+/* ── GLOSSARY ───────────────────────────────────────────────── */
+.tf-glossary {
+  display: grid;
+  gap: 0;
+  border: 1px solid var(--tf-color-border);
+  border-radius: var(--tf-radius-lg);
+  overflow: hidden;
+}
+.tf-glossary__term {
+  background: var(--tf-color-bg-surface);
+  padding: var(--tf-space-3) var(--tf-space-6);
+  font-weight: 700;
+  font-size: var(--tf-font-size-sm);
+  color: var(--tf-module-color);
+  border-bottom: 1px solid var(--tf-color-border);
+  font-family: var(--tf-font-mono);
+  letter-spacing: 0.02em;
+}
+.tf-glossary__def {
+  background: var(--tf-color-bg-card);
+  padding: var(--tf-space-4) var(--tf-space-6);
+  font-size: var(--tf-font-size-sm);
+  color: var(--tf-color-text);
+  border-bottom: 1px solid var(--tf-color-border);
+  margin: 0;
+}
+.tf-glossary__def:last-child { border-bottom: none; }
+
+/* ── CONCEPTUAL DISTINCTIONS ────────────────────────────────── */
+.tf-distinctions { display: flex; flex-direction: column; gap: var(--tf-space-4); }
+.tf-distinction-pair {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: var(--tf-space-4);
+  background: var(--tf-color-bg-card);
+  border: 1px solid var(--tf-color-border);
+  border-radius: var(--tf-radius-lg);
+  padding: var(--tf-space-6);
+}
+.tf-distinction-pair__left,
+.tf-distinction-pair__right {
+  font-weight: 700;
+  font-size: var(--tf-font-size-sm);
+  color: var(--tf-module-color);
+  font-family: var(--tf-font-mono);
+}
+.tf-distinction-pair__vs {
+  font-size: var(--tf-font-size-xs);
+  color: var(--tf-color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.tf-distinction-pair__note {
+  grid-column: 1 / -1;
+  font-size: var(--tf-font-size-sm);
+  color: var(--tf-color-text-muted);
+  margin-top: var(--tf-space-2);
+  /* PLACEHOLDER */
+}
+
+/* ── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .tf-taxonomy { grid-template-columns: 1fr; }
+  .tf-distinction-pair { grid-template-columns: 1fr; }
+  .tf-distinction-pair__vs { text-align: center; }
+}

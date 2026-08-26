@@ -1,0 +1,41 @@
+{
+  "$schema": "https://triadicframeworks.nawder.com/schema/module.schema.json",
+  "id": "hooks",
+  "label": "Hooks",
+  "version": "1.0.0",
+  "layer": "Engagement Layer",
+  "status": "draft",
+  "author": "Nawder",
+  "protocol": "metadata-refresh-v1",
+  "canonical": "https://triadicframeworks.nawder.com/modules/hooks/",
+  "description": {
+    "short": "The mechanisms by which triadic structures create and sustain engagement: attention, commitment, and momentum.",
+    "long": "PLACEHOLDER: Full long-form description of the Hooks module."
+  },
+  "badge": {
+    "icon": "◎",
+    "color": "#5fd38a"
+  },
+  "og": {
+    "image": "https://triadicframeworks.nawder.com/assets/og/hooks-cover.png",
+    "locale": "en_US"
+  },
+  "sections": [
+    { "id": "overview",      "heading": "Overview",                      "status": "placeholder" },
+    { "id": "typology",      "heading": "Hook Typology",                 "status": "placeholder" },
+    { "id": "mechanisms",    "heading": "Engagement Mechanisms",         "status": "placeholder" },
+    { "id": "catalog",       "heading": "Hook Catalog",                  "status": "placeholder" },
+    { "id": "examples",      "heading": "Worked Examples",               "status": "placeholder" },
+    { "id": "antipatterns",  "heading": "Anti-Patterns & Broken Hooks",  "status": "placeholder" },
+    { "id": "cross-links",   "heading": "Cross-Module Connections",      "status": "placeholder" }
+  ],
+  "crossLinks": ["son", "vocabulary", "invariants"],
+  "assets": {
+    "css":     "/assets/css/modules/hooks.css",
+    "js":      "/assets/js/modules/hooks.js",
+    "icon":    "/assets/icons/hooks.svg",
+    "ogImage": "/assets/og/hooks-cover.png"
+  },
+  "dateCreated":  "2026-08-26",
+  "dateModified": "2026-08-26"
+}

@@ -1,0 +1,70 @@
+/* ═══════════════════════════════════════════════════════════════
+   TriadicFrameworks · Module CSS: SoN (Structural operating Node)
+   assets/css/modules/son.css · v1.0.0
+   Extends: triadic-base.css
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── MODULE COLOR OVERRIDE ──────────────────────────────────── */
+[data-module="son"] {
+  --tf-module-color:     #7c6fef;
+  --tf-module-color-dim: rgba(124, 111, 239, 0.15);
+}
+
+/* ── MODULE HERO ────────────────────────────────────────────── */
+/* PLACEHOLDER: SoN-specific hero treatments */
+
+/* ── TRIADIC MAP ────────────────────────────────────────────── */
+.tf-triadic-map {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--tf-space-4);
+  margin-block: var(--tf-space-6);
+}
+.tf-triadic-map__pole {
+  background: var(--tf-color-bg-card);
+  border: 1px solid var(--tf-color-border);
+  border-radius: var(--tf-radius-lg);
+  padding: var(--tf-space-6);
+  text-align: center;
+  font-weight: 600;
+  transition: border-color var(--tf-transition), box-shadow var(--tf-transition);
+}
+.tf-triadic-map__pole:hover {
+  border-color: var(--tf-module-color);
+  box-shadow: var(--tf-shadow-glow);
+}
+.tf-triadic-map__pole[data-pole="tension"]        { /* PLACEHOLDER: tension pole styling  */ }
+.tf-triadic-map__pole[data-pole="transformation"] { /* PLACEHOLDER: transformation pole   */ }
+.tf-triadic-map__pole[data-pole="resolution"]     { /* PLACEHOLDER: resolution pole       */ }
+
+/* ── NARRATIVE LAYERS ───────────────────────────────────────── */
+.tf-layer-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--tf-space-3);
+}
+.tf-layer-list__item {
+  padding: var(--tf-space-4) var(--tf-space-6);
+  background: var(--tf-color-bg-card);
+  border: 1px solid var(--tf-color-border);
+  border-left: 3px solid var(--tf-module-color);
+  border-radius: var(--tf-radius-md);
+  font-size: var(--tf-font-size-sm);
+  /* PLACEHOLDER: layer-specific accent colours */
+}
+
+/* ── CONCEPT GRID ───────────────────────────────────────────── */
+.tf-concept-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: var(--tf-space-4);
+}
+.tf-concept-card {
+  /* Extends .tf-card — add SoN-specific overrides below */
+  /* PLACEHOLDER */
+}
+
+/* ── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .tf-triadic-map { grid-template-columns: 1fr; }
+}
