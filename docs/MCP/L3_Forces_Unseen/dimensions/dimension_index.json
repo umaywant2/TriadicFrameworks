@@ -1,0 +1,96 @@
+{
+  "version": "0.1.0",
+  "canonical": "R5",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "title": "TriadicFrameworks MCP — Dimensional Subsystem Index",
+  "description": "Canonical index of all dimensional constructs belonging to the Forces Unseen layer. Each dimension inherits the forces triad and participates in unseen force‑regime mechanics.",
+
+  "dimensions": [
+    {
+      "id": "L4",
+      "name": "L4 Dimension",
+      "path": "docs/MCP/L3_Forces_Unseen/dimensions/L4.json",
+      "purpose": "Base force-regime dimensional anchor.",
+      "triad": "forces"
+    },
+    {
+      "id": "L5",
+      "name": "L5 Dimension",
+      "path": "docs/MCP/L3_Forces_Unseen/dimensions/L5.json",
+      "purpose": "Secondary force-regime extension.",
+      "triad": "forces"
+    },
+    {
+      "id": "L8",
+      "name": "L8 Dimension",
+      "path": "docs/MCP/L3_Forces_Unseen/dimensions/L8.json",
+      "purpose": "High-order force-regime modulation.",
+      "triad": "forces"
+    },
+    {
+      "id": "L10",
+      "name": "L10 Dimension",
+      "path": "docs/MCP/L3_Forces_Unseen/dimensions/L10.json",
+      "purpose": "Force-regime coherence expansion.",
+      "triad": "forces"
+    },
+    {
+      "id": "L11",
+      "name": "L11 Dimension",
+      "path": "docs/MCP/L3_Forces_Unseen/dimensions/L11.json",
+      "purpose": "Force-regime continuity mapping.",
+      "triad": "forces"
+    },
+    {
+      "id": "L12",
+      "name": "L12 Dimension",
+      "path": "docs/MCP/L3_Forces_Unseen/dimensions/L12.json",
+      "purpose": "Force-regime rupture modeling.",
+      "triad": "forces"
+    },
+    {
+      "id": "L16",
+      "name": "L16 Dimension",
+      "path": "docs/MCP/L3_Forces_Unseen/dimensions/L16.json",
+      "purpose": "Force-regime gradient-field synthesis.",
+      "triad": "forces"
+    },
+    {
+      "id": "L26",
+      "name": "L26 Dimension",
+      "path": "docs/MCP/L3_Forces_Unseen/dimensions/L26.json",
+      "purpose": "Force-regime multi-axis coherence.",
+      "triad": "forces"
+    },
+    {
+      "id": "L32",
+      "name": "L32 Dimension",
+      "path": "docs/MCP/L3_Forces_Unseen/dimensions/L32.json",
+      "purpose": "Force-regime structural integrity mapping.",
+      "triad": "forces"
+    },
+    {
+      "id": "LH",
+      "name": "LH Dimension",
+      "path": "docs/MCP/L3_Forces_Unseen/dimensions/LH.json",
+      "purpose": "High-order harmonic force-regime behavior.",
+      "triad": "forces"
+    },
+    {
+      "id": "LI",
+      "name": "LI Dimension",
+      "path": "docs/MCP/L3_Forces_Unseen/dimensions/LI.json",
+      "purpose": "Integrity-focused force-regime invariant mapping.",
+      "triad": "forces"
+    }
+  ],
+
+  "coherence": {
+    "hostsDimensions": true,
+    "spine": "S3",
+    "description": "All dimensional constructs belong to the Forces Unseen layer and inherit the forces triad. They extend the S3 spine and participate in gradient, field, rupture, and integrity mechanics."
+  }
+}
