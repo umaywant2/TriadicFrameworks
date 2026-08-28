@@ -1,0 +1,20 @@
+{
+  "canonical": "R5",
+  "layer": "L1_Frequency_Unseen",
+  "triad": "oscillation",
+  "lineage": ["qmroot", "frequency"],
+
+  "purpose": "Defines unseen oscillation behavior including spectral regimes, drift, coherence, and analyzer mechanics.",
+
+  "contents": {
+    "files": ["README.md"],
+    "modules": [],
+    "notes": "L1 contains no schemas or registries; it references L3 schemas for validation."
+  },
+
+  "coherence": {
+    "inheritsFrom": "L0_QMROOT",
+    "inheritsTo": ["L2_Fluids_Seen"],
+    "description": "Oscillation emerges from root-state behavior and transitions into continuity mechanics."
+  }
+}
