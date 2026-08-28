@@ -1,4 +1,128 @@
-{"layer": "L1_Frequency_Unseen",
-"triad": "frequency",
-"qmroot": "0D"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L1_Frequency_Unseen",
+  "triad": "frequency",
+  "title": "TriadicFrameworks MCP — AI Module Registry",
+  "description": "Registry of all AI modules in the Frequency Layer (Unseen). Defines module identities, resonance domains, diagnostics, and cosmology alignment.",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "modules": [
+    {
+      "name": "ai.contact",
+      "version": "1.0.0",
+      "purpose": "Defines AI contact identity and communication metadata.",
+      "lineage": "qmroot-0D",
+      "triad": "frequency",
+      "layer": "L1_Frequency_Unseen"
+    },
+    {
+      "name": "ai.discussions",
+      "version": "1.0.0",
+      "purpose": "Defines AI discussion channels, categories, and resonance-based dialogue metadata.",
+      "lineage": "qmroot-0D",
+      "triad": "frequency",
+      "layer": "L1_Frequency_Unseen"
+    },
+    {
+      "name": "ai.license",
+      "version": "1.0.0",
+      "purpose": "Defines AI license, permissions, restrictions, and cosmology requirements.",
+      "lineage": "qmroot-0D",
+      "triad": "frequency",
+      "layer": "L1_Frequency_Unseen"
+    },
+    {
+      "name": "ai.module",
+      "version": "1.0.0",
+      "purpose": "Defines the AI module identity, operator domain, diagnostics, graph, and indexer capabilities.",
+      "lineage": "qmroot-0D",
+      "triad": "frequency",
+      "layer": "L1_Frequency_Unseen"
+    },
+    {
+      "name": "ai.navigation",
+      "version": "1.0.0",
+      "purpose": "Defines navigation metadata for AI agents within the Frequency Layer.",
+      "lineage": "qmroot-0D",
+      "triad": "frequency",
+      "layer": "L1_Frequency_Unseen"
+    },
+    {
+      "name": "ai.operator",
+      "version": "1.0.0",
+      "purpose": "Defines operator metadata, domains, and resonance primitives.",
+      "lineage": "qmroot-0D",
+      "triad": "frequency",
+      "layer": "L1_Frequency_Unseen"
+    },
+    {
+      "name": "ai.registry",
+      "version": "1.0.0",
+      "purpose": "Defines registry metadata for AI identities and modules.",
+      "lineage": "qmroot-0D",
+      "triad": "frequency",
+      "layer": "L1_Frequency_Unseen"
+    },
+    {
+      "name": "ai.session",
+      "version": "1.0.0",
+      "purpose": "Defines session metadata for AI interactions within the Frequency Layer.",
+      "lineage": "qmroot-0D",
+      "triad": "frequency",
+      "layer": "L1_Frequency_Unseen"
+    }
+  ],
+
+  "resonance": {
+    "operatorDomain": "frequency",
+    "supportsOperatorResolution": true,
+    "supportsDiagnosticSuite": true,
+    "supportsGraphTraversal": true,
+    "supportsIndexerMapping": true
+  },
+
+  "metadata": {
+    "canonical": "R5",
+    "qmroot": "0D",
+    "layer": "L1_Frequency_Unseen",
+    "triad": "frequency"
+  },
+
+  "examples": [
+    {
+      "name": "Canonical AI module registry lookup",
+      "input": {
+        "request": "listAIModules"
+      },
+      "output": {
+        "modules": [
+          "ai.contact",
+          "ai.discussions",
+          "ai.license",
+          "ai.module",
+          "ai.navigation",
+          "ai.operator",
+          "ai.registry",
+          "ai.session"
+        ],
+        "layer": "L1_Frequency_Unseen",
+        "triad": "frequency",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "reality": {
+        "description": "Returns the list of AI modules defined in the Frequency Layer.",
+        "details": "Machine-level registry enumeration of all AI modules."
+      },
+      "imagination": {
+        "description": "Symbolic interpretation of the module registry.",
+        "details": "The unseen resonance layer reveals its instruments, each tuned to a different oscillation."
+      },
+      "information": {
+        "description": "Cosmology and lineage notes.",
+        "details": "Registry identity anchored to qmroot-0D and triad-frequency ensures cosmological consistency."
+      }
+    }
+  ]
 }
