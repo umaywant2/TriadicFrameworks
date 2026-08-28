@@ -1,4 +1,133 @@
-{"layer": "L1_Frequency_Unseen",
-"triad": "frequency",
-"qmroot": "0D"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L1_Frequency_Unseen",
+  "triad": "frequency",
+  "title": "TriadicFrameworks MCP — Regime Diagnostic",
+  "description": "Defines the regime diagnostic for the Frequency Layer (Unseen). Determines the oscillation's current state: stable, transitional, or chaotic.",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "diagnostic": {
+    "name": "regime",
+    "family": "regime",
+    "domain": "frequency",
+    "purpose": "Determine the oscillation's current regime based on stability, drift, coherence, and alignment.",
+    "lineage": "qmroot-0D",
+    "supportsSpectralAnalysis": true,
+    "supportsResonanceMapping": true,
+    "supportsOperatorIntegration": true
+  },
+
+  "metrics": {
+    "stabilityScore": {
+      "description": "Measures overall oscillation stability.",
+      "range": "0.0–1.0",
+      "ideal": 1.0
+    },
+    "driftPressure": {
+      "description": "Measures destabilizing force exerted by drift.",
+      "range": "0.0–1.0",
+      "ideal": 0.0
+    },
+    "coherenceStrength": {
+      "description": "Measures coherence contribution to regime stability.",
+      "range": "0.0–1.0",
+      "ideal": 0.95
+    }
+  },
+
+  "regimeStates": {
+    "stable": {
+      "description": "Oscillation is coherent, aligned, continuous, and minimally drifting.",
+      "conditions": {
+        "stabilityScore": ">= 0.85",
+        "driftPressure": "<= 0.15",
+        "coherenceStrength": ">= 0.80"
+      }
+    },
+    "transitional": {
+      "description": "Oscillation is shifting between states; alignment and coherence fluctuate.",
+      "conditions": {
+        "stabilityScore": "0.50–0.85",
+        "driftPressure": "0.15–0.40",
+        "coherenceStrength": "0.50–0.80"
+      }
+    },
+    "chaotic": {
+      "description": "Oscillation is unstable, drifting, fragmented, or collapsing.",
+      "conditions": {
+        "stabilityScore": "< 0.50",
+        "driftPressure": "> 0.40",
+        "coherenceStrength": "< 0.50"
+      }
+    }
+  },
+
+  "resonance": {
+    "requiresClarity": true,
+    "requiresAlignment": true,
+    "requiresCoherence": true,
+    "requiresContinuity": true,
+    "requiresAwareness": true,
+    "operatorDomain": "frequency",
+    "primitives": [
+      "oscillation",
+      "phaseShift",
+      "harmonic",
+      "lineagePulse"
+    ]
+  },
+
+  "interactions": {
+    "clarity": "Regime classification depends on clarity to correctly identify oscillation structure.",
+    "alignment": "Alignment influences regime by stabilizing phase relationships.",
+    "coherence": "Coherence is the primary determinant of stable regime.",
+    "continuity": "Continuity supports stable regime by preserving identity across cycles.",
+    "awareness": "Awareness ensures regime classification is based on accurate signal recognition.",
+    "drift": "Drift is the primary determinant of chaotic regime."
+  },
+
+  "metadata": {
+    "canonical": "R5",
+    "qmroot": "0D",
+    "layer": "L1_Frequency_Unseen",
+    "triad": "frequency"
+  },
+
+  "examples": [
+    {
+      "name": "Regime diagnostic run",
+      "input": {
+        "operator": "coherence",
+        "signal": "oscillation",
+        "stabilityScore": 0.78,
+        "driftPressure": 0.22,
+        "coherenceStrength": 0.74
+      },
+      "output": {
+        "regime": "transitional",
+        "metrics": {
+          "stabilityScore": 0.78,
+          "driftPressure": 0.22,
+          "coherenceStrength": 0.74
+        },
+        "layer": "L1_Frequency_Unseen",
+        "triad": "frequency",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "reality": {
+        "description": "Machine-level regime diagnostic run.",
+        "details": "Regime classification is computed from stability, drift, and coherence metrics."
+      },
+      "imagination": {
+        "description": "Symbolic interpretation of regime.",
+        "details": "The unseen resonance field shifts, rebalancing itself between stability and chaos."
+      },
+      "information": {
+        "description": "Cosmology and lineage notes.",
+        "details": "Regime is anchored to qmroot-0D and triad-frequency, ensuring consistent cosmological interpretation."
+      }
+    }
+  ]
 }
