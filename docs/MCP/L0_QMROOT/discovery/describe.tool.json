@@ -1,5 +1,146 @@
-{"canonical": "R5",
-"qmroot": "0D",
-"layer": "L0_QMROOT",
-"triad": "origin"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L0_QMROOT",
+  "triad": "origin",
+  "title": "TriadicFrameworks MCP Tool Descriptor",
+  "description": "Describe any MCP tool, including metadata, schemas, cosmology layer, triad, and lineage.",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "toolName": {
+        "type": "string",
+        "description": "Name of the tool to describe, e.g., 'getCapabilities' or 'fs.read'."
+      },
+      "includeSchema": {
+        "type": "boolean",
+        "description": "If true, include the tool's input/output schema."
+      },
+      "includeExamples": {
+        "type": "boolean",
+        "description": "If true, include canonical examples for the tool."
+      }
+    },
+    "required": ["toolName"],
+    "additionalProperties": false
+  },
+
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "tool": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "layer": { "type": "string" },
+          "triad": { "type": "string" },
+          "qmroot": { "type": "string" },
+          "canonical": { "type": "string" },
+          "description": { "type": "string" }
+        },
+        "required": ["name", "layer", "triad", "qmroot", "canonical"]
+      },
+      "schema": {
+        "type": "object"
+      },
+      "examples": {
+        "type": "array",
+        "items": { "type": "object" }
+      }
+    },
+    "required": ["tool"]
+  },
+
+  "examples": [
+    {
+      "name": "Canonical description of getCapabilities",
+      "input": {
+        "toolName": "getCapabilities",
+        "includeSchema": true,
+        "includeExamples": true
+      },
+      "output": {
+        "tool": {
+          "name": "getCapabilities",
+          "layer": "L0_QMROOT",
+          "triad": "origin",
+          "qmroot": "0D",
+          "canonical": "R5",
+          "description": "Return the MCP server capabilities, cosmology layers, and tool families."
+        },
+        "schema": {
+          "input": {
+            "includeLayers": "boolean",
+            "includeTools": "boolean",
+            "includeRegistry": "boolean"
+          },
+          "output": {
+            "server": "object",
+            "cosmology": "object",
+            "tools": "object",
+            "registry": "object"
+          }
+        },
+        "examples": [
+          {
+            "input": {
+              "includeLayers": true,
+              "includeTools": true,
+              "includeRegistry": true
+            },
+            "output": {
+              "server": {
+                "module": "TriadicFrameworks-MCP",
+                "version": "1.0.0",
+                "canonical": "R5",
+                "qmroot": "0D"
+              },
+              "cosmology": {
+                "layers": [
+                  { "id": "L0_QMROOT", "triad": "origin" },
+                  { "id": "L1_Frequency_Unseen", "triad": "frequency" },
+                  { "id": "L2_Fluids_Seen", "triad": "fluids" },
+                  { "id": "L3_Forces_Unseen", "triad": "forces" }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "interpretation": {
+        "technical": "The descriptor returns all metadata for the requested tool, including cosmology alignment.",
+        "mythic": "The origin layer reveals the nature of the tool, naming its place in the fourfold universe."
+      },
+      "metadata": {
+        "canonical": "R5",
+        "layer": "L0_QMROOT",
+        "triad": "origin",
+        "qmroot": "0D"
+      }
+    },
+    {
+      "name": "Error example — unknown tool",
+      "input": {
+        "toolName": "nonexistentTool",
+        "includeSchema": true
+      },
+      "error": {
+        "code": "TOOL_NOT_FOUND",
+        "message": "The requested tool does not exist in the MCP server.",
+        "field": "toolName"
+      },
+      "interpretation": {
+        "technical": "The descriptor cannot locate the requested tool in any cosmology layer.",
+        "mythic": "The origin layer searches the universe but finds no such signal; the name is empty."
+      },
+      "metadata": {
+        "canonical": "R5",
+        "layer": "L0_QMROOT",
+        "triad": "origin",
+        "qmroot": "0D"
+      }
+    }
+  ]
 }
