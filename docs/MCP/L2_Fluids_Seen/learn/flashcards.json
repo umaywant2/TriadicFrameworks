@@ -1,3 +1,83 @@
-{"layer": "L2_Fluids_Seen",
-"triad": "fluids"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L2_Fluids_Seen",
+  "triad": "fluids",
+  "title": "TriadicFrameworks MCP — L2 Fluids Seen Flashcards",
+  "description": "Flashcards for learning fluidic resonance, continuity, laminarity, turbulence, viscosity, and flow-state mechanics.",
+  "note": "This file provides canonical flashcards for the L2 Fluids Seen layer.",
+
+  "flashcards": [
+    {
+      "id": "fc_l2_001",
+      "question": "What is fluidic resonance?",
+      "answer": "The transformation of oscillation into flow within the seen layer, producing continuous, directional, volumetric motion.",
+      "layer": "L2_Fluids_Seen",
+      "triad": "fluids"
+    },
+    {
+      "id": "fc_l2_002",
+      "question": "Define laminarity.",
+      "answer": "Laminarity measures smooth, ordered flow with minimal turbulence.",
+      "layer": "L2_Fluids_Seen",
+      "triad": "fluids"
+    },
+    {
+      "id": "fc_l2_003",
+      "question": "What is turbulence?",
+      "answer": "Turbulence is chaotic, unstable flow characterized by vortices and irregular motion.",
+      "layer": "L2_Fluids_Seen",
+      "triad": "fluids"
+    },
+    {
+      "id": "fc_l2_004",
+      "question": "Define viscosity.",
+      "answer": "Viscosity is internal friction within a fluid medium, determining resistance to flow.",
+      "layer": "L2_Fluids_Seen",
+      "triad": "fluids"
+    },
+    {
+      "id": "fc_l2_005",
+      "question": "What is continuity in L2?",
+      "answer": "Continuity is the preservation of identity across flow transitions, ensuring stable movement.",
+      "layer": "L2_Fluids_Seen",
+      "triad": "fluids"
+    },
+    {
+      "id": "fc_l2_006",
+      "question": "What does flow integrity represent?",
+      "answer": "Flow integrity measures the overall stability and coherence of a fluid’s motion.",
+      "layer": "L2_Fluids_Seen",
+      "triad": "fluids"
+    },
+    {
+      "id": "fc_l2_007",
+      "question": "What is a continuity channel?",
+      "answer": "A continuity channel is a stable fluid pathway that preserves identity across transitions.",
+      "layer": "L2_Fluids_Seen",
+      "triad": "fluids"
+    },
+    {
+      "id": "fc_l2_008",
+      "question": "How does L2 relate to L1?",
+      "answer": "L2 transforms L1 oscillation into visible flow-state dynamics.",
+      "layer": "L2_Fluids_Seen",
+      "triad": "fluids"
+    }
+  ],
+
+  "reality": {
+    "description": "Machine-level flashcard definitions.",
+    "details": "Each flashcard provides a concise definition of a fluidic resonance concept."
+  },
+
+  "imagination": {
+    "description": "Symbolic interpretation.",
+    "details": "Fluidic resonance forms channels, vortices, and laminar streams within the seen layer."
+  },
+
+  "information": {
+    "description": "Cosmology notes.",
+    "details": "Fluidic concepts inherit qmroot lineage through frequency into seen-layer dynamics."
+  }
 }
