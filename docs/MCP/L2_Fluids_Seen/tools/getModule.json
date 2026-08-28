@@ -1,4 +1,180 @@
-{"layer": "L2_Fluids_Seen",
-"triad": "fluids",
-"qmroot": "0D"
-} 
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L2_Fluids_Seen",
+  "triad": "fluids",
+  "title": "TriadicFrameworks MCP — Module Identity Resolver",
+  "description": "Retrieves module-level metadata for components of the Fluids Seen Layer, including examples, fs tools, learning modules, and operational tools.",
+  "note": "This is the canonical module identity resolver for L2 fluidic resonance.",
+
+  "tool": {
+    "name": "getModule",
+    "version": "1.0.0",
+    "purpose": "Return module-level metadata for a given L2 module.",
+    "lineage": "qmroot-0D",
+    "supportsModuleIdentity": true,
+    "supportsResonanceMetadata": true
+  },
+
+  "input": {
+    "module": {
+      "type": "string",
+      "description": "Name of the module (examples, fs.list, fs.read, fs.search, fs.metadata, flashcards, module.summaries, operator.cheat.sheets, quizzes, tools)."
+    },
+    "includeExtended": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether to include extended module metadata."
+    }
+  },
+
+  "output": {
+    "module": {
+      "type": "object",
+      "fields": {
+        "name": "string",
+        "category": "string",
+        "purpose": "string",
+        "metadata": {
+          "type": "object",
+          "description": "Module-level metadata fields."
+        },
+        "extended": {
+          "optional": true,
+          "description": "Extended metadata returned only if includeExtended=true."
+        }
+      }
+    },
+    "layer": "L2_Fluids_Seen",
+    "triad": "fluids",
+    "qmroot": "0D",
+    "canonical": "R5"
+  },
+
+  "moduleDefinitions": {
+    "examples": {
+      "category": "examples",
+      "purpose": "Demonstrate fluidic resonance, laminarity, turbulence, viscosity, continuity, and flow-state metrics.",
+      "metadata": {
+        "contains": ["fluid examples", "resonance transformations"],
+        "resonanceDomain": "fluids"
+      }
+    },
+    "fs.list": {
+      "category": "fluid substrate tool",
+      "purpose": "List all fluid substrates available within the Fluids Seen layer.",
+      "metadata": {
+        "contains": ["laminar", "turbulent", "viscous", "continuity"],
+        "resonanceDomain": "fluids"
+      }
+    },
+    "fs.read": {
+      "category": "fluid substrate tool",
+      "purpose": "Read full metadata for a single fluid substrate.",
+      "metadata": {
+        "contains": ["laminarity", "turbulence", "viscosity", "continuity"],
+        "resonanceDomain": "fluids"
+      }
+    },
+    "fs.search": {
+      "category": "fluid substrate tool",
+      "purpose": "Search fluid substrates using keyword, category, or resonance-aware criteria.",
+      "metadata": {
+        "contains": ["search modes", "resonance filters"],
+        "resonanceDomain": "fluids"
+      }
+    },
+    "fs.metadata": {
+      "category": "metadata schema",
+      "purpose": "Define metadata fields for fluid substrates.",
+      "metadata": {
+        "contains": ["laminarity", "turbulence", "viscosity", "continuity", "flowIntegrity"],
+        "resonanceDomain": "fluids"
+      }
+    },
+    "flashcards": {
+      "category": "learning",
+      "purpose": "Provide flashcards for fluidic resonance concepts.",
+      "metadata": {
+        "contains": ["laminarity", "turbulence", "viscosity", "continuity"],
+        "resonanceDomain": "fluids"
+      }
+    },
+    "module.summaries": {
+      "category": "learning",
+      "purpose": "Provide summaries of all L2 modules.",
+      "metadata": {
+        "contains": ["module descriptions", "fluidic resonance overview"],
+        "resonanceDomain": "fluids"
+      }
+    },
+    "operator.cheat.sheets": {
+      "category": "learning",
+      "purpose": "Provide cheat sheets for fluidic operators.",
+      "metadata": {
+        "contains": ["flow", "pressure", "viscosity", "continuity", "channel", "rupture"],
+        "resonanceDomain": "fluids"
+      }
+    },
+    "quizzes": {
+      "category": "learning",
+      "purpose": "Provide quizzes for fluidic resonance concepts.",
+      "metadata": {
+        "contains": ["laminarity", "turbulence", "viscosity", "continuity", "flowIntegrity"],
+        "resonanceDomain": "fluids"
+      }
+    },
+    "tools": {
+      "category": "tools",
+      "purpose": "Provide operational tools for fluidic analysis.",
+      "metadata": {
+        "contains": ["flow-state evaluation", "laminarity/turbulence diagnostics", "continuity mapping"],
+        "resonanceDomain": "fluids"
+      }
+    }
+  },
+
+  "examples": [
+    {
+      "name": "Module identity retrieval example",
+      "input": {
+        "module": "fs.list",
+        "includeExtended": true
+      },
+      "output": {
+        "module": {
+          "name": "fs.list",
+          "category": "fluid substrate tool",
+          "purpose": "List all fluid substrates available within the Fluids Seen layer.",
+          "metadata": {
+            "contains": ["laminar", "turbulent", "viscous", "continuity"],
+            "resonanceDomain": "fluids"
+          },
+          "extended": {
+            "description": "fs.list is the canonical substrate enumerator for L2 fluidic resonance.",
+            "cosmology": "Inherits qmroot-0D lineage through frequency into seen-layer dynamics."
+          }
+        },
+        "layer": "L2_Fluids_Seen",
+        "triad": "fluids",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+
+      "reality": {
+        "description": "Machine-level module identity retrieval.",
+        "details": "Module metadata is resolved using module → category → definition mapping."
+      },
+
+      "imagination": {
+        "description": "Symbolic interpretation.",
+        "details": "The fluid field reveals its structural modules as channels of knowledge."
+      },
+
+      "information": {
+        "description": "Cosmology notes.",
+        "details": "Module identity inherits qmroot lineage through frequency into seen-layer dynamics."
+      }
+    }
+  ]
+}
