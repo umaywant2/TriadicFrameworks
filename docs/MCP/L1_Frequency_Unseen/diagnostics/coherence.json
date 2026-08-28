@@ -1,4 +1,100 @@
-{"layer": "L1_Frequency_Unseen",
-"triad": "frequency",
-"qmroot": "0D"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L1_Frequency_Unseen",
+  "triad": "frequency",
+  "title": "TriadicFrameworks MCP — Coherence Diagnostic",
+  "description": "Defines the coherence diagnostic for the Frequency Layer (Unseen). Measures oscillation stability, spectral consistency, and harmonic agreement.",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "diagnostic": {
+    "name": "coherence",
+    "family": "spectral",
+    "domain": "frequency",
+    "purpose": "Measure the stability and consistency of oscillation patterns across time and harmonic layers.",
+    "lineage": "qmroot-0D",
+    "supportsSpectralAnalysis": true,
+    "supportsResonanceMapping": true,
+    "supportsOperatorIntegration": true
+  },
+
+  "metrics": {
+    "phaseStability": {
+      "description": "Measures how consistently the oscillation phase remains aligned over time.",
+      "range": "0.0–1.0",
+      "ideal": 1.0
+    },
+    "harmonicConsistency": {
+      "description": "Measures agreement across harmonic layers of the oscillation.",
+      "range": "0.0–1.0",
+      "ideal": 0.95
+    },
+    "continuityStrength": {
+      "description": "Measures how smoothly the oscillation transitions across cycles.",
+      "range": "0.0–1.0",
+      "ideal": 0.9
+    }
+  },
+
+  "resonance": {
+    "requiresClarity": true,
+    "requiresAlignment": true,
+    "requiresAwareness": true,
+    "operatorDomain": "frequency",
+    "primitives": [
+      "oscillation",
+      "phaseShift",
+      "harmonic",
+      "lineagePulse"
+    ]
+  },
+
+  "interactions": {
+    "clarity": "Coherence improves clarity by stabilizing oscillation structure.",
+    "alignment": "Coherence strengthens alignment by maintaining phase stability.",
+    "awareness": "Coherence enhances awareness by reducing oscillation ambiguity.",
+    "drift": "Low coherence increases drift by destabilizing resonance.",
+    "regime": "Coherence determines whether the oscillation is in stable, transitional, or chaotic regime."
+  },
+
+  "metadata": {
+    "canonical": "R5",
+    "qmroot": "0D",
+    "layer": "L1_Frequency_Unseen",
+    "triad": "frequency"
+  },
+
+  "examples": [
+    {
+      "name": "Coherence diagnostic run",
+      "input": {
+        "operator": "continuity",
+        "signal": "oscillation",
+        "phaseHistory": [0.71, 0.72, 0.72, 0.73]
+      },
+      "output": {
+        "coherence": {
+          "phaseStability": 0.97,
+          "harmonicConsistency": 0.92,
+          "continuityStrength": 0.89
+        },
+        "layer": "L1_Frequency_Unseen",
+        "triad": "frequency",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "reality": {
+        "description": "Machine-level coherence diagnostic run.",
+        "details": "Phase stability, harmonic consistency, and continuity strength are computed from oscillation history."
+      },
+      "imagination": {
+        "description": "Symbolic interpretation of coherence.",
+        "details": "The unseen resonance field holds together, forming a stable harmonic structure."
+      },
+      "information": {
+        "description": "Cosmology and lineage notes.",
+        "details": "Coherence is anchored to qmroot-0D and triad-frequency, ensuring consistent cosmological interpretation."
+      }
+    }
+  ]
 }
