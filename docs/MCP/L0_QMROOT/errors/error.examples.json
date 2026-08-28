@@ -1,5 +1,126 @@
-{"canonical": "R5",
-"qmroot": "0D",
-"layer": "L0_QMROOT",
-"triad": "origin"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L0_QMROOT",
+  "triad": "origin",
+  "title": "TriadicFrameworks MCP — Canonical Error Examples",
+  "description": "Example error payloads for the Origin Layer (0D) of the TriadicFrameworks MCP cosmology.",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "examples": [
+    {
+      "name": "AUTH_MISSING_TOKEN",
+      "input": {
+        "clientId": "tfmcp-client-001",
+        "timestamp": "2026-08-28T16:10:00Z"
+      },
+      "error": {
+        "code": "AUTH_MISSING_TOKEN",
+        "message": "Authentication token is required.",
+        "layer": "L0_QMROOT",
+        "triad": "origin",
+        "qmroot": "0D"
+      },
+      "interpretation": {
+        "technical": "The authentication payload is missing the required 'token' field.",
+        "mythic": "The observer approaches the gate without a name; the origin layer cannot open."
+      }
+    },
+
+    {
+      "name": "AUTH_TOKEN_EXPIRED",
+      "input": {
+        "clientId": "tfmcp-client-002",
+        "timestamp": "2026-08-28T16:10:00Z",
+        "token": "eyJhbGciOi...expiredToken",
+        "expiresAt": "2026-08-28T15:00:00Z"
+      },
+      "error": {
+        "code": "AUTH_TOKEN_EXPIRED",
+        "message": "Authentication token has expired.",
+        "layer": "L0_QMROOT",
+        "triad": "origin",
+        "qmroot": "0D"
+      },
+      "interpretation": {
+        "technical": "The token expiration timestamp is earlier than the current validation time.",
+        "mythic": "The signal has faded; the origin layer no longer hears the observer."
+      }
+    },
+
+    {
+      "name": "AUTH_CLIENTID_MISMATCH",
+      "input": {
+        "clientId": "tfmcp-client-003",
+        "timestamp": "2026-08-28T16:10:00Z",
+        "token": "eyJhbGciOi...validToken",
+        "tokenClientId": "tfmcp-client-999"
+      },
+      "error": {
+        "code": "AUTH_CLIENTID_MISMATCH",
+        "message": "Token clientId does not match payload clientId.",
+        "layer": "L0_QMROOT",
+        "triad": "origin",
+        "qmroot": "0D"
+      },
+      "interpretation": {
+        "technical": "The token was issued to a different clientId.",
+        "mythic": "The identity is fractured; the origin layer rejects the mismatched signal."
+      }
+    },
+
+    {
+      "name": "TOOL_NOT_FOUND",
+      "input": {
+        "toolName": "nonexistentTool"
+      },
+      "error": {
+        "code": "TOOL_NOT_FOUND",
+        "message": "Requested tool does not exist.",
+        "layer": "L0_QMROOT",
+        "triad": "origin",
+        "qmroot": "0D"
+      },
+      "interpretation": {
+        "technical": "The discovery system cannot locate the requested tool.",
+        "mythic": "The origin layer searches the universe but finds no such instrument."
+      }
+    },
+
+    {
+      "name": "EMPTY_QUERY",
+      "input": {
+        "query": ""
+      },
+      "error": {
+        "code": "EMPTY_QUERY",
+        "message": "Search query cannot be empty.",
+        "layer": "L0_QMROOT",
+        "triad": "origin",
+        "qmroot": "0D"
+      },
+      "interpretation": {
+        "technical": "Search requires a non-empty query string.",
+        "mythic": "The origin layer cannot respond to silence; the observer must speak a name."
+      }
+    },
+
+    {
+      "name": "INVALID_INPUT_TYPE",
+      "input": {
+        "includeDescriptions": "yes"
+      },
+      "error": {
+        "code": "INVALID_INPUT_TYPE",
+        "message": "Input field type is invalid.",
+        "layer": "L0_QMROOT",
+        "triad": "origin",
+        "qmroot": "0D"
+      },
+      "interpretation": {
+        "technical": "The input type does not match the schema.",
+        "mythic": "The origin layer rejects a blurred signal; clarity is required."
+      }
+    }
+  ]
 }
