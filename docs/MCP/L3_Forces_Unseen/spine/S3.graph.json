@@ -1,4 +1,100 @@
-{"layer": "L3_Forces_Unseen",
-"triad": "forces",
-"qmroot": "0D"
-} 
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "title": "TriadicFrameworks MCP — L3 Forces Unseen Spine Graph",
+  "description": "Defines the structural graph for unseen force regimes, including nodes, edges, and force-state mechanics.",
+  "note": "This graph anchors force-regime structure within the TriadicFrameworks spine.",
+
+  "graph": {
+    "version": "1.0.0",
+    "purpose": "Model unseen force-regime structure and causal interactions.",
+    "lineage": "qmroot-0D",
+
+    "nodes": [
+      {
+        "id": "gradient",
+        "label": "Causal Gradient",
+        "description": "Directional causal influence within unseen force regimes.",
+        "semantics": ["gradientIntensity", "gradientCoherence"]
+      },
+      {
+        "id": "field",
+        "label": "Influence Field",
+        "description": "Unseen field of influence shaping force-state mechanics.",
+        "semantics": ["fieldCoherence", "influenceContinuity"]
+      },
+      {
+        "id": "rupture",
+        "label": "Rupture Potential",
+        "description": "Likelihood of force-state rupture within unseen regimes.",
+        "semantics": ["rupturePotential"]
+      },
+      {
+        "id": "integrity",
+        "label": "Force Integrity",
+        "description": "Structural integrity of unseen force-state mechanics.",
+        "semantics": ["forceIntegrity"]
+      }
+    ],
+
+    "edges": [
+      {
+        "from": "gradient",
+        "to": "field",
+        "type": "influence",
+        "description": "Causal gradients shape unseen influence fields."
+      },
+      {
+        "from": "field",
+        "to": "integrity",
+        "type": "coherence",
+        "description": "Influence-field coherence stabilizes force integrity."
+      },
+      {
+        "from": "gradient",
+        "to": "rupture",
+        "type": "stress",
+        "description": "High gradient intensity increases rupture potential."
+      },
+      {
+        "from": "integrity",
+        "to": "rupture",
+        "type": "stability",
+        "description": "Strong force integrity reduces rupture likelihood."
+      }
+    ]
+  },
+
+  "examples": [
+    {
+      "name": "Spine graph traversal example",
+      "input": {
+        "startNode": "gradient"
+      },
+      "output": {
+        "path": ["gradient", "field", "integrity"],
+        "layer": "L3_Forces_Unseen",
+        "triad": "forces",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+
+      "reality": {
+        "description": "Machine-level graph traversal.",
+        "details": "Traversal follows influence → coherence → integrity edges."
+      },
+
+      "imagination": {
+        "description": "Symbolic interpretation.",
+        "details": "Causal gradients flow into influence fields, stabilizing force integrity."
+      },
+
+      "information": {
+        "description": "Cosmology notes.",
+        "details": "Graph lineage flows qmroot → frequency → fluids → forces."
+      }
+    }
+  ]
+}
