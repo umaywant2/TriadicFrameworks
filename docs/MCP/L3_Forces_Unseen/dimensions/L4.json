@@ -1,1 +1,77 @@
+{
+  "canonical": "R5",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "dimension": "L4",
+  "title": "TriadicFrameworks MCP — L4 Dimensional Framework",
+  "description": "Defines the 4-dimensional internal projection model, including spacetime, quaternions, polychorons, and 4-manifolds, reinterpreted as internal axes of influence within the unseen force regime.",
+  "note": "In RTT cosmology, 4D constructs are internal projections of L3 force-state mechanics.",
+
+  "structure": {
+    "mathematical": [
+      "quaternion algebra",
+      "4-manifolds",
+      "rotations in 4D Euclidean space",
+      "convex regular 4-polytopes (polychorons)"
+    ],
+    "physical": [
+      "spacetime (3+1)",
+      "fourth spatial dimension (non-geometric projection)"
+    ],
+    "cultural": [
+      "fourth dimension in art",
+      "fourth dimension in literature"
+    ]
+  },
+
+  "rtt_reinterpretation": {
+    "summary": "4D constructs represent internal axes of influence, not external geometric dimensions.",
+    "details": [
+      "Quaternions define rotational influence channels inside unseen force regimes.",
+      "Polychorons represent multi-axis coherence structures.",
+      "Spacetime is treated as a force-regime projection, not a geometric container.",
+      "4-manifolds map to continuity surfaces inside influence fields."
+    ]
+  },
+
+  "force_regime_mapping": {
+    "gradientIntensity": "4D rotations define multi-axis gradient transformations.",
+    "fieldCoherence": "Polychoron symmetry stabilizes influence-field coherence.",
+    "influenceContinuity": "4-manifold continuity maps to influence persistence.",
+    "rupturePotential": "High-dimensional stress surfaces define rupture thresholds.",
+    "forceIntegrity": "Quaternionic structure reinforces internal force-state stability."
+  },
+
+  "projection_semantics": {
+    "axes": 4,
+    "type": "internal",
+    "interpretation": "Each axis represents a distinct influence channel within the unseen force regime.",
+    "examples": [
+      "Quaternion basis vectors (i, j, k) as influence directions.",
+      "Polychoron facets as coherence surfaces.",
+      "Spacetime intervals as gradient pathways."
+    ]
+  },
+
+  "examples": [
+    {
+      "name": "Quaternion Influence Projection",
+      "structure": "quaternion",
+      "mapping": ["gradientIntensity", "forceIntegrity"],
+      "interpretation": "Quaternion multiplication defines rotational influence channels inside the unseen force regime."
+    },
+    {
+      "name": "Polychoron Coherence Surface",
+      "structure": "600-cell polychoron",
+      "mapping": ["fieldCoherence", "influenceContinuity"],
+      "interpretation": "Polychoron symmetry stabilizes multi-axis coherence within influence fields."
+    }
+  ],
+
+  "cosmology": {
+    "lineage": "qmroot → frequency → fluids → forces → internal 4D projection",
+    "triad_alignment": "unseen",
+    "notes": "L4 dimensional constructs extend L3 force-regime mechanics through internal projection axes."
+  }
+}
 
