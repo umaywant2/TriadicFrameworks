@@ -1,3 +1,132 @@
-{"layer": "L3_Forces_Unseen",
-"triad": "forces"
-} 
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "title": "TriadicFrameworks MCP — L3 Forces Unseen Module Registry",
+  "description": "Registry of all modules within the Forces Unseen Layer, including examples, registry tools, schemas, and spine integrations.",
+  "note": "This registry anchors module identity, lineage, and force-regime semantics for L3.",
+
+  "identity": {
+    "name": "TriadicFrameworks-L3-ModuleRegistry",
+    "version": "1.0.0",
+    "lineage": "qmroot-0D",
+    "triad": "forces",
+    "description": "Canonical registry identity for unseen force-regime modules."
+  },
+
+  "modules": [
+    {
+      "name": "examples",
+      "category": "examples",
+      "purpose": "Demonstrate unseen force regimes, causal gradients, influence fields, and force-state mechanics.",
+      "metadata": {
+        "contains": ["force examples", "regime transformations"],
+        "operatorDomain": "forces"
+      }
+    },
+    {
+      "name": "ai_registry",
+      "category": "registry",
+      "purpose": "Define AI identities and module metadata for the Forces Unseen layer.",
+      "metadata": {
+        "contains": ["ai identities", "force-regime alignment"],
+        "operatorDomain": "forces"
+      }
+    },
+    {
+      "name": "module_registry",
+      "category": "registry",
+      "purpose": "Enumerate all modules within the L3 Forces Unseen layer.",
+      "metadata": {
+        "contains": ["module definitions", "force-regime metadata"],
+        "operatorDomain": "forces"
+      }
+    },
+    {
+      "name": "modules_group",
+      "category": "registry",
+      "purpose": "Group modules into functional categories for force-regime analysis.",
+      "metadata": {
+        "contains": ["group definitions", "force-state grouping"],
+        "operatorDomain": "forces"
+      }
+    },
+    {
+      "name": "sitemap_modules",
+      "category": "registry",
+      "purpose": "Provide sitemap-style indexing of all L3 modules.",
+      "metadata": {
+        "contains": ["sitemap entries", "module paths"],
+        "operatorDomain": "forces"
+      }
+    },
+    {
+      "name": "schemas",
+      "category": "schemas",
+      "purpose": "Define JSON schemas for force-state tools, diagnostics, and operators.",
+      "metadata": {
+        "contains": ["force-state schema", "regime metadata schema"],
+        "operatorDomain": "forces"
+      }
+    },
+    {
+      "name": "spine",
+      "category": "spine",
+      "purpose": "Integrate L3 force-regime mechanics into the TriadicFrameworks spine.",
+      "metadata": {
+        "contains": ["spine integration", "force-regime mapping"],
+        "operatorDomain": "forces"
+      }
+    }
+  ],
+
+  "output": {
+    "modules": "List of all L3 modules with categories, purposes, and metadata.",
+    "layer": "L3_Forces_Unseen",
+    "triad": "forces",
+    "qmroot": "0D",
+    "canonical": "R5"
+  },
+
+  "examples": [
+    {
+      "name": "Module registry lookup example",
+      "input": {
+        "request": "listModules"
+      },
+      "output": {
+        "modules": [
+          {
+            "name": "examples",
+            "category": "examples",
+            "purpose": "Demonstrate unseen force regimes, causal gradients, influence fields, and force-state mechanics.",
+            "metadata": {
+              "contains": ["force examples", "regime transformations"],
+              "operatorDomain": "forces"
+            }
+          }
+        ],
+        "layer": "L3_Forces_Unseen",
+        "triad": "forces",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+
+      "reality": {
+        "description": "Machine-level module registry lookup.",
+        "details": "Modules are returned from the canonical module registry array."
+      },
+
+      "imagination": {
+        "description": "Symbolic interpretation.",
+        "details": "The unseen force field reveals its structural modules as influence channels."
+      },
+
+      "information": {
+        "description": "Cosmology notes.",
+        "details": "Module identity inherits qmroot lineage through frequency → fluids → forces."
+      }
+    }
+  ]
+}
