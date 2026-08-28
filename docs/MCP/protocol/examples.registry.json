@@ -1,1 +1,48 @@
+{
+  "version": "0.1.0",
+  "examples": [
+    {
+      "id": "fft-analyzer.canonical.001",
+      "module": "FFT Analyzer",
+      "layer": "L1_Frequency_Unseen",
+      "kind": ["canonical"],
+      "path": "docs/MCP/L1_Frequency_Unseen/FFT_Analyzer/examples/canonical.001.json"
+    },
+    {
+      "id": "fft-analyzer.error.001",
+      "module": "FFT Analyzer",
+      "layer": "L1_Frequency_Unseen",
+      "kind": ["error"],
+      "path": "docs/MCP/L1_Frequency_Unseen/FFT_Analyzer/examples/error.001.json"
+    },
+    {
+      "id": "gradient-field.canonical.001",
+      "module": "Gradient Field",
+      "layer": "L3_Forces_Unseen",
+      "kind": ["canonical"],
+      "path": "docs/MCP/L3_Forces_Unseen/Gradient_Field/examples/canonical.001.json"
+    },
+    {
+      "id": "rupture-surface.reality.001",
+      "module": "Rupture Surface",
+      "layer": "L3_Forces_Unseen",
+      "kind": ["reality"],
+      "path": "docs/MCP/L3_Forces_Unseen/Rupture_Surface/examples/reality.001.json"
+    },
+    {
+      "id": "coherence-map.information.001",
+      "module": "Coherence Map",
+      "layer": "L2_Fluids_Seen",
+      "kind": ["information"],
+      "path": "docs/MCP/L2_Fluids_Seen/Coherence_Map/examples/information.001.json"
+    },
+    {
+      "id": "origin-qmroot.qmroot.001",
+      "module": "Origin",
+      "layer": "L0_QMROOT",
+      "kind": ["qmroot"],
+      "path": "docs/MCP/L0_QMROOT/Origin/examples/qmroot.001.json"
+    }
+  ]
+}
 
