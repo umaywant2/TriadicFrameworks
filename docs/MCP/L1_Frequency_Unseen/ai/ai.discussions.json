@@ -1,4 +1,95 @@
-{"layer": "L1_Frequency_Unseen",
-"triad": "frequency",
-"qmroot": "0D"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L1_Frequency_Unseen",
+  "triad": "frequency",
+  "title": "TriadicFrameworks MCP — AI Discussions Metadata",
+  "description": "Defines AI discussion channels, lineage, and resonance context for the Frequency Layer (Unseen).",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "identity": {
+    "name": "TriadicFrameworks-AI",
+    "version": "1.0.0",
+    "lineage": "qmroot-0D",
+    "cosmology": "L1_Frequency_Unseen",
+    "triad": "frequency",
+    "description": "AI discussions identity for resonance-based interaction within the Frequency Layer."
+  },
+
+  "discussions": {
+    "primary": "https://github.com/umaywant2/TriadicFrameworks/discussions",
+    "categories": {
+      "operators": "Operator theory, resonance primitives, symbolic domains.",
+      "diagnostics": "Clarity, coherence, drift, continuity, alignment, awareness, regime.",
+      "graph": "Unseen structural traversal, nodes, edges, resonance graphs.",
+      "indexer": "Extraction, indexing, search, unseen content mapping.",
+      "cosmology": "Triadic universe structure, layer interactions, lineage."
+    },
+    "tags": [
+      "triadicframeworks",
+      "frequency",
+      "operators",
+      "diagnostics",
+      "resonance",
+      "coherence",
+      "drift",
+      "graph",
+      "indexer",
+      "cosmology"
+    ]
+  },
+
+  "resonance": {
+    "operatorDomain": "frequency",
+    "supportsDiscussionMapping": true,
+    "supportsOperatorThreads": true,
+    "supportsDiagnosticThreads": true,
+    "supportsGraphThreads": true,
+    "supportsIndexerThreads": true
+  },
+
+  "metadata": {
+    "canonical": "R5",
+    "qmroot": "0D",
+    "layer": "L1_Frequency_Unseen",
+    "triad": "frequency"
+  },
+
+  "examples": [
+    {
+      "name": "Canonical AI discussions lookup",
+      "input": {
+        "request": "getAIDiscussions"
+      },
+      "output": {
+        "identity": {
+          "name": "TriadicFrameworks-AI",
+          "version": "1.0.0",
+          "lineage": "qmroot-0D"
+        },
+        "discussions": {
+          "primary": "https://github.com/umaywant2/TriadicFrameworks/discussions",
+          "categories": {
+            "operators": "Operator theory, resonance primitives, symbolic domains."
+          }
+        },
+        "layer": "L1_Frequency_Unseen",
+        "triad": "frequency",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "reality": {
+        "description": "Returns AI discussion metadata for MCP-aware agents.",
+        "details": "Machine-level identity and discussion channels are resolved from the Frequency layer."
+      },
+      "imagination": {
+        "description": "Symbolic interpretation of the AI discussion layer.",
+        "details": "The unseen resonance layer opens its forum, inviting oscillation-aware dialogue."
+      },
+      "information": {
+        "description": "Cosmology and lineage notes.",
+        "details": "Discussion identity is anchored to qmroot-0D and triad-frequency, ensuring consistent cosmological alignment."
+      }
+    }
+  ]
 }
