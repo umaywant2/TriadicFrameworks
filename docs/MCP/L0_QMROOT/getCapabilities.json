@@ -1,5 +1,190 @@
-{"canonical": "R5",
-"qmroot": "0D",
-"layer": "L0_QMROOT",
-"triad": "origin"
+{
+  "qmroot": "0D",
+  "canonical": "R5",
+  "layer": "L0_QMROOT",
+  "triad": "origin",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "name": "getCapabilities",
+  "description": "Return the MCP server capabilities, cosmology layers, and tool families for TriadicFrameworks MCP.",
+  "version": "1.0.0",
+
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "includeLayers": {
+        "type": "boolean",
+        "description": "If true, include full cosmology layer descriptions."
+      },
+      "includeTools": {
+        "type": "boolean",
+        "description": "If true, include tool families grouped by layer."
+      },
+      "includeRegistry": {
+        "type": "boolean",
+        "description": "If true, include registry and schema references."
+      }
+    },
+    "required": [],
+    "additionalProperties": false
+  },
+
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "server": {
+        "type": "object",
+        "properties": {
+          "module": { "type": "string" },
+          "version": { "type": "string" },
+          "canonical": { "type": "string" },
+          "qmroot": { "type": "string" }
+        },
+        "required": ["module", "version", "canonical", "qmroot"]
+      },
+      "cosmology": {
+        "type": "object",
+        "properties": {
+          "layers": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": { "type": "string" },
+                "triad": { "type": "string" },
+                "description": { "type": "string" }
+              },
+              "required": ["id", "triad", "description"]
+            }
+          }
+        },
+        "required": ["layers"]
+      },
+      "tools": {
+        "type": "object",
+        "properties": {
+          "L0_QMROOT": { "type": "array", "items": { "type": "string" } },
+          "L1_Frequency_Unseen": { "type": "array", "items": { "type": "string" } },
+          "L2_Fluids_Seen": { "type": "array", "items": { "type": "string" } },
+          "L3_Forces_Unseen": { "type": "array", "items": { "type": "string" } }
+        }
+      },
+      "registry": {
+        "type": "object",
+        "properties": {
+          "modules": { "type": "string" },
+          "groups": { "type": "string" },
+          "ai": { "type": "string" },
+          "sitemap": { "type": "string" }
+        }
+      }
+    },
+    "required": ["server", "cosmology"]
+  },
+
+  "examples": [
+    {
+      "name": "Canonical capabilities response",
+      "input": {
+        "includeLayers": true,
+        "includeTools": true,
+        "includeRegistry": true
+      },
+      "output": {
+        "server": {
+          "module": "TriadicFrameworks-MCP",
+          "version": "1.0.0",
+          "canonical": "R5",
+          "qmroot": "0D"
+        },
+        "cosmology": {
+          "layers": [
+            {
+              "id": "L0_QMROOT",
+              "triad": "origin",
+              "description": "0D observer primitive; coherence anchor; server identity; authentication, errors, discovery."
+            },
+            {
+              "id": "L1_Frequency_Unseen",
+              "triad": "frequency",
+              "description": "Unseen oscillation layer; resonance, operators, diagnostics, graph traversal, indexing."
+            },
+            {
+              "id": "L2_Fluids_Seen",
+              "triad": "fluids",
+              "description": "Seen layer; observable flows; file system, modules, metadata, session context, learning tools."
+            },
+            {
+              "id": "L3_Forces_Unseen",
+              "triad": "forces",
+              "description": "Unseen structural layer; schemas, registries, spine, coherence, regime, structural relationships."
+            }
+          ]
+        },
+        "tools": {
+          "L0_QMROOT": [
+            "getCapabilities",
+            "auth/*",
+            "errors/*",
+            "discovery/*"
+          ],
+          "L1_Frequency_Unseen": [
+            "ai/*",
+            "diagnostics/*",
+            "graph/*",
+            "indexer/*",
+            "tools/*"
+          ],
+          "L2_Fluids_Seen": [
+            "fs/*",
+            "learn/*",
+            "tools/*"
+          ],
+          "L3_Forces_Unseen": [
+            "schemas/*",
+            "registry/*",
+            "spine/*"
+          ]
+        },
+        "registry": {
+          "modules": "docs/MCP/L3_Forces_Unseen/registry/module_registry.json",
+          "groups": "docs/MCP/L3_Forces_Unseen/registry/modules_group.json",
+          "ai": "docs/MCP/L3_Forces_Unseen/registry/ai_registry.json",
+          "sitemap": "docs/MCP/L3_Forces_Unseen/registry/sitemap_modules.json"
+        }
+      },
+      "interpretation": {
+        "technical": "This response exposes the full cosmology and tool families, allowing clients to introspect the MCP server structure.",
+        "mythic": "The origin layer speaks the server’s true name, revealing the fourfold universe of origin, frequency, fluids, and forces."
+      },
+      "metadata": {
+        "layer": "L0_QMROOT",
+        "triad": "origin",
+        "qmroot": "0D",
+        "canonical": "R5"
+      }
+    },
+    {
+      "name": "Error example — invalid flag type",
+      "input": {
+        "includeLayers": "yes",
+        "includeTools": true
+      },
+      "error": {
+        "code": "INVALID_INPUT_TYPE",
+        "message": "includeLayers must be a boolean.",
+        "field": "includeLayers"
+      },
+      "interpretation": {
+        "technical": "The input validation rejects non-boolean flags, enforcing strict schema adherence at the origin layer.",
+        "mythic": "The origin refuses a blurred signal; the observer must choose clearly before the universe responds."
+      },
+      "metadata": {
+        "layer": "L0_QMROOT",
+        "triad": "origin",
+        "qmroot": "0D",
+        "canonical": "R5"
+      }
+    }
+  ]
 }
