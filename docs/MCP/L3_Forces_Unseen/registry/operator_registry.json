@@ -1,1 +1,55 @@
+{
+  "version": "0.1.0",
+  "canonical": "R5",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "description": "Canonical registry of all force‑regime operators in TriadicFrameworks MCP. Each operator includes category, definition, semantics, and impact profile.",
+
+  "operators": [
+    {
+      "name": "push",
+      "category": "push",
+      "definition": "Applies outward gradient pressure across a force‑regime surface.",
+      "semantics": ["gradientIntensity"],
+      "impactProfile": "Increases gradient intensity; used to amplify unseen force transitions."
+    },
+    {
+      "name": "pull",
+      "category": "pull",
+      "definition": "Applies inward gradient contraction across a force‑regime surface.",
+      "semantics": ["gradientIntensity"],
+      "impactProfile": "Decreases gradient intensity; used to stabilize or collapse force transitions."
+    },
+    {
+      "name": "bind",
+      "category": "bind",
+      "definition": "Creates coherence bonds between force‑regime surfaces.",
+      "semantics": ["fieldCoherence", "forceIntegrity"],
+      "impactProfile": "Increases coherence and structural integrity across unseen force fields."
+    },
+    {
+      "name": "gradient",
+      "category": "gradient",
+      "definition": "Modulates gradientIntensity across force‑regime axes.",
+      "semantics": ["gradientIntensity"],
+      "impactProfile": "Controls slope and intensity of unseen force gradients."
+    },
+    {
+      "name": "fieldShift",
+      "category": "fieldShift",
+      "definition": "Shifts fieldCoherence across influence channels.",
+      "semantics": ["fieldCoherence", "influenceContinuity"],
+      "impactProfile": "Reorients unseen force fields; used for coherence realignment."
+    },
+    {
+      "name": "ruptureForce",
+      "category": "ruptureForce",
+      "definition": "Introduces rupturePotential into force‑regime surfaces.",
+      "semantics": ["rupturePotential"],
+      "impactProfile": "Creates discontinuities; used to model rupture, breakage, or instability."
+    }
+  ]
+}
 
