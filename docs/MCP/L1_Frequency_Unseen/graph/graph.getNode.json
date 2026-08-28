@@ -1,4 +1,113 @@
-{"layer": "L1_Frequency_Unseen",
-"triad": "frequency",
-"qmroot": "0D"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L1_Frequency_Unseen",
+  "triad": "frequency",
+  "title": "TriadicFrameworks MCP — Graph Node Lookup",
+  "description": "Retrieves a node from the Frequency Layer resonance graph, including metadata and harmonic/phase relationships.",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "function": {
+    "name": "graph.getNode",
+    "version": "1.0.0",
+    "purpose": "Return a node and its metadata from the unseen resonance graph.",
+    "lineage": "qmroot-0D",
+    "supportsTraversal": true,
+    "supportsResonanceGraph": true
+  },
+
+  "input": {
+    "nodeId": {
+      "type": "string",
+      "description": "The ID of the node to retrieve."
+    },
+    "includeEdges": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether to include edges connected to the node."
+    }
+  },
+
+  "output": {
+    "node": {
+      "type": "object",
+      "description": "The retrieved node.",
+      "fields": {
+        "nodeId": "string",
+        "label": "string",
+        "type": "string",
+        "metadata": {
+          "description": "Node metadata including resonance properties."
+        }
+      }
+    },
+    "edges": {
+      "optional": true,
+      "description": "Edges connected to the node, returned only if includeEdges=true."
+    },
+    "layer": "L1_Frequency_Unseen",
+    "triad": "frequency",
+    "qmroot": "0D",
+    "canonical": "R5"
+  },
+
+  "resonance": {
+    "graphType": "oscillation-graph",
+    "supportsHarmonicNodes": true,
+    "supportsPhaseNodes": true,
+    "supportsLineageNodes": true,
+    "operatorDomain": "frequency"
+  },
+
+  "examples": [
+    {
+      "name": "Graph node lookup",
+      "input": {
+        "nodeId": "coherence-02",
+        "includeEdges": true
+      },
+      "output": {
+        "node": {
+          "nodeId": "coherence-02",
+          "label": "Coherence Diagnostic Node",
+          "type": "diagnostic",
+          "metadata": {
+            "harmonicLevel": 3,
+            "phase": 0.72,
+            "description": "Coherence stabilizes oscillation structure across cycles."
+          }
+        },
+        "edges": [
+          {
+            "edgeId": "coherence→clarity",
+            "from": "coherence-02",
+            "to": "clarity-01",
+            "weight": 0.91
+          },
+          {
+            "edgeId": "coherence→continuity",
+            "from": "coherence-02",
+            "to": "continuity-04",
+            "weight": 0.87
+          }
+        ],
+        "layer": "L1_Frequency_Unseen",
+        "triad": "frequency",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "reality": {
+        "description": "Machine-level graph node lookup.",
+        "details": "Node metadata and connected edges are retrieved from the resonance graph."
+      },
+      "imagination": {
+        "description": "Symbolic interpretation of node lookup.",
+        "details": "The unseen resonance field reveals a focal point of oscillation stability."
+      },
+      "information": {
+        "description": "Cosmology and lineage notes.",
+        "details": "Graph nodes inherit qmroot-0D and triad-frequency metadata for cosmological consistency."
+      }
+    }
+  ]
 }
