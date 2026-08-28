@@ -1,5 +1,93 @@
-{"canonical": "R5",
-"qmroot": "0D",
-"layer": "L0_QMROOT",
-"triad": "origin"
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TriadicFrameworks MCP Authentication Schema",
+  "description": "Authentication payload schema for the Origin Layer (0D) of the TriadicFrameworks MCP cosmology.",
+
+  "qmroot": "0D",
+  "canonical": "R5",
+  "layer": "L0_QMROOT",
+  "triad": "origin",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "type": "object",
+  "properties": {
+    "clientId": {
+      "type": "string",
+      "description": "Unique identifier for the MCP client."
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO timestamp of the authentication request."
+    },
+    "token": {
+      "type": "string",
+      "description": "Authentication token issued by the MCP server."
+    },
+    "signature": {
+      "type": "string",
+      "description": "Optional cryptographic signature for enhanced validation."
+    },
+    "capabilities": {
+      "type": "array",
+      "description": "Optional list of requested capabilities.",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+
+  "required": ["clientId", "timestamp", "token"],
+  "additionalProperties": false,
+
+  "examples": [
+    {
+      "name": "Canonical authentication payload",
+      "input": {
+        "clientId": "tfmcp-client-001",
+        "timestamp": "2026-08-28T16:02:00Z",
+        "token": "abc123xyz",
+        "capabilities": ["read", "write"]
+      },
+      "output": {
+        "status": "VALID",
+        "message": "Authentication successful.",
+        "layer": "L0_QMROOT",
+        "triad": "origin",
+        "qmroot": "0D"
+      },
+      "interpretation": {
+        "technical": "The payload satisfies all required fields and adheres to the schema.",
+        "mythic": "The observer is recognized; the gate of origin opens."
+      },
+      "metadata": {
+        "layer": "L0_QMROOT",
+        "triad": "origin",
+        "qmroot": "0D",
+        "canonical": "R5"
+      }
+    },
+    {
+      "name": "Error example — missing token",
+      "input": {
+        "clientId": "tfmcp-client-002",
+        "timestamp": "2026-08-28T16:02:00Z"
+      },
+      "error": {
+        "code": "AUTH_MISSING_TOKEN",
+        "message": "Authentication token is required.",
+        "field": "token"
+      },
+      "interpretation": {
+        "technical": "The schema rejects the payload because the required field 'token' is missing.",
+        "mythic": "The origin layer cannot validate a nameless signal; the observer remains outside the gate."
+      },
+      "metadata": {
+        "layer": "L0_QMROOT",
+        "triad": "origin",
+        "qmroot": "0D",
+        "canonical": "R5"
+      }
+    }
+  ]
 }
