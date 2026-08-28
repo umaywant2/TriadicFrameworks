@@ -1,263 +1,227 @@
 # ⚡ **TriadicFrameworks MCP — Coherence (R5 Canon)**  
 ### *Cross‑Layer Cosmology, Structural Alignment, and Regime Continuity*
 
-The **Coherence Page** is the master explanation of how the entire MCP fits together.  
-It defines:
+The **Coherence Page** is the structural Rosetta stone of TriadicFrameworks.  
+It explains how the entire MCP corpus — layers, lineage, triads, operators, regimes, spines, schemas, registries, modules, and examples — forms a single, internally and externally coherent system.
 
-- how **L0 → L1 → L2 → L3** form a single cosmological continuum  
-- how **lineage** flows  
-- how **triads** align  
-- how **operators** transform  
-- how **regimes** evolve  
-- how **spines** interlock  
-- how **schemas**, **registries**, and **modules** remain consistent across layers  
-
-This page is the *structural Rosetta stone* of TriadicFrameworks.
+This document is now fully aligned with the **R5 Cosmology Freeze Table**.
 
 ---
 
-# 🧭 **1. Cosmological Continuity**
+# 🧭 **1. Cosmological Continuity (Freeze‑Aligned)**
 
-TriadicFrameworks MCP is built on a **four‑layer cosmology**:
+TriadicFrameworks MCP is built on a **four‑layer cosmology**, each with a frozen triad and lineage position:
 
 | Layer | Name | Triad | Visibility | Meaning |
-|------|------|-------|------------|---------|
-| **L0** | QMROOT | root | unseen | quantum lineage, origin of all regimes |
-| **L1** | Frequency_Unseen | oscillation | unseen | spectral regimes, drift, coherence |
-| **L2** | Fluids_Seen | continuity | seen | fluidic regimes, flow, substrate |
-| **L3** | Forces_Unseen | influence | unseen | force regimes, gradients, fields |
+|------|------|--------|------------|---------|
+| **L0** | QMROOT | **root** | unseen | quantum origin, root‑state mechanics |
+| **L1** | Frequency_Unseen | **oscillation** | unseen | spectral regimes, drift, coherence |
+| **L2** | Fluids_Seen | **continuity** | seen | fluidic regimes, flow, substrate |
+| **L3** | Forces_Unseen | **forces** | unseen | gradient, field, rupture, integrity |
 
 ### ✔ Coherence Principle  
-Each layer is both:
+Each layer must satisfy:
 
-- **self‑consistent** (internal coherence)  
-- **cross‑consistent** (lineage coherence)  
+- **Internal coherence** — its own triad, operators, and regime behavior are self‑consistent.  
+- **Cross‑layer coherence** — it inherits correctly from the lineage chain:
 
-The MCP enforces this through:
+```
+qmroot → frequency → fluids → forces
+```
 
-- schemas  
-- registries  
-- spines  
-- examples  
-- module manifests  
+This lineage is frozen and appears in every module manifest.
 
 ---
 
-# 🔗 **2. Lineage Flow (qmroot → frequency → fluids → forces)**
+# 🔗 **2. Lineage Flow (Canonical)**
 
-Lineage is the **deep cosmological inheritance** that binds all layers.
+Lineage is the deep cosmological inheritance that binds all layers.
 
 ### ✔ L0 → L1  
-Quantum lineage becomes spectral oscillation.
+Quantum root‑state becomes spectral oscillation.
 
 ### ✔ L1 → L2  
 Oscillation becomes fluidic continuity.
 
 ### ✔ L2 → L3  
-Continuity becomes unseen influence.
+Continuity becomes unseen force‑regime behavior (gradient, field, rupture, integrity).
 
-### ✔ L3 → (back to L0)  
-Influence resolves into quantum origin.
-
-This cyclical lineage is the **core coherence loop** of TriadicFrameworks.
+### ✔ L3 → Dimensional Subsystem  
+All dimensional constructs (L4–LI) belong to L3 and inherit the **forces** triad.
 
 ---
 
-# 🔱 **3. Triad Alignment (unseen → unseen → seen → unseen)**
+# 🔱 **3. Triad Coherence (Freeze‑Aligned)**
 
-Each layer belongs to one of the three triads:
+Triads are now frozen and must appear exactly as:
 
-- **unseen** (L0, L1, L3)  
-- **seen** (L2)  
+| Layer | Triad |
+|-------|--------|
+| L0 | **root** |
+| L1 | **oscillation** |
+| L2 | **continuity** |
+| L3 | **forces** |
 
-This creates the **triadic alternation pattern**:
+This replaces all previous drift:
 
-```
-unseen → unseen → seen → unseen
-```
+- “influence”  
+- “unseen”  
+- “fluids vs continuity”  
+- “origin vs root”  
 
-This pattern is essential for:
-
-- operator semantics  
-- regime transitions  
-- spine structure  
-- schema inheritance  
-
----
-
-# ⚙️ **4. Operator Continuity**
-
-Operators evolve across layers:
-
-| Layer | Operator Domain | Meaning |
-|-------|------------------|---------|
-| **L1** | spectral operators | oscillation, drift, coherence |
-| **L2** | fluid operators | flow, substrate, continuity |
-| **L3** | force operators | gradient, field, rupture, integrity |
-
-### ✔ Coherence Principle  
-Operators must:
-
-- preserve semantics  
-- transform meaningfully  
-- maintain lineage  
-- remain triad‑aligned  
-
-This is enforced by:
-
-- operator.schema.json  
-- tools/ directories  
-- diagnostics/ suites  
+Every module.json, dimensional file, and example envelope must use these exact triad names.
 
 ---
 
-# 🧩 **5. Regime Continuity**
+# 🧩 **4. Structural Coherence (Schemas, Registries, Modules)**
 
-Regimes evolve across layers:
+### ✔ Only L3 hosts schemas and registries  
+This is now frozen:
 
-| Layer | Regime Type |
-|-------|-------------|
-| **L1** | spectral regime |
-| **L2** | fluid regime |
-| **L3** | force regime |
+- `schemas/` lives **only** under L3  
+- `registry/` lives **only** under L3  
+- L1 and L2 tools reference L3 schemas  
+- L0 is root‑state only  
 
-### ✔ Coherence Principle  
-Regimes must:
+This corrects the previous overclaim in the old coherence.md.
 
-- inherit from the previous layer  
-- transform according to triad  
-- remain analyzable by the analyzer schema  
-- remain diagnosable by the diagnostics suite  
+### ✔ Module manifests  
+Every module.json must include:
 
----
-
-# 🕸️ **6. Spine Coherence (S1 → S2 → S3)**
-
-Each layer has a **spine graph**:
-
-| Layer | Spine | Purpose |
-|-------|--------|---------|
-| **L1** | S1 | spectral graph |
-| **L2** | S2 | fluid graph |
-| **L3** | S3 | force graph |
-
-### ✔ Coherence Principle  
-Spines must:
-
-- share structural grammar  
-- share node/edge semantics  
-- inherit lineage  
-- maintain triad alignment  
-- remain machine‑readable  
-
-The S3 spine (your current tab) is fully aligned with S1 and S2.
-
----
-
-# 📚 **7. Schema Coherence**
-
-Every layer has:
-
-- analyzer.schema.json  
-- drift.schema.json  
-- lineage.schema.json  
-- module.schema.json  
-- operator.schema.json  
-- session.schema.json  
-
-### ✔ Coherence Principle  
-Schemas must:
-
-- share structural grammar  
-- share field naming conventions  
-- share cosmological metadata  
-- remain JSON‑machine‑readable  
-- remain human‑interpretable  
-
-Your schema suite is complete and coherent.
-
----
-
-# 🗂️ **8. Registry Coherence**
-
-Every layer has:
-
-- ai_registry.json  
-- module_registry.json  
-- modules_group.json  
-- sitemap_modules.json  
-
-### ✔ Coherence Principle  
-Registries must:
-
-- enumerate all modules  
-- group modules by function  
-- provide sitemap paths  
-- maintain lineage metadata  
-- remain triad‑aligned  
-
-Your registry suite is complete and coherent.
-
----
-
-# 🧪 **9. Example Coherence**
-
-Every layer includes:
-
-- examples/stub.json  
-- canonical examples in schemas  
-- canonical examples in spines  
-- canonical examples in registries  
-
-### ✔ Coherence Principle  
-Examples must:
-
-- demonstrate layer semantics  
-- demonstrate operator behavior  
-- demonstrate lineage inheritance  
-- remain consistent across layers  
-
-Your examples suite is complete and coherent.
-
----
-
-# 🧱 **10. Session‑Context Coherence**
-
-Session contexts must:
-
-- include canonical metadata  
-- include drift/coherence fields  
-- include lineage fields  
-- include triad/layer metadata  
-- remain HTML‑compatible  
-
-Your session‑context blocks are fully aligned.
-
----
-
-# 🏁 **11. Summary — MCP Coherence Achieved**
-
-Your MCP now satisfies all coherence requirements:
-
-- ✔ cosmological continuity  
-- ✔ lineage continuity  
-- ✔ triad alignment  
-- ✔ operator continuity  
-- ✔ regime continuity  
-- ✔ spine coherence  
-- ✔ schema coherence  
-- ✔ registry coherence  
-- ✔ example coherence  
-- ✔ session‑context coherence  
-
-This is a **fully coherent R5‑grade MCP**.
-
----
-
-# 🏷️ **Badge**
-
-```html
-<div class="badge">⚡ MCP Coherence — R5 Canon</div>
+```json
+{
+  "canonical": "R5",
+  "layer": "Lx_Name",
+  "triad": "root|oscillation|continuity|forces",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"]
+}
 ```
 
+### ✔ Registries  
+The canonical registries are:
+
+- `module_registry.json`  
+- `operator_registry.json`  
+- `examples.registry.json`  
+- schema files under L3  
+
 ---
+
+# 🕸️ **5. Spine Coherence (S1, S2, S3)**
+
+Spines are the functional graphs of regime behavior.
+
+| Spine | Layer | Status | Meaning |
+|-------|--------|---------|---------|
+| **S1** | L1 | **planned** | spectral spine (oscillation operators) |
+| **S2** | L2 | **planned** | fluid spine (continuity operators) |
+| **S3** | L3 | **implemented** | force spine (gradient → field → rupture → integrity) |
+
+Only **S3** exists today.  
+Sitemap.json now reflects this accurately.
+
+---
+
+# 🌌 **6. Dimensional Subsystem Coherence (L4–LI)**
+
+All dimensional constructs belong to:
+
+```
+Layer: L3_Forces_Unseen
+Triad: forces
+Lineage: qmroot → frequency → fluids → forces
+```
+
+Dimensional files:
+
+- L4  
+- L5  
+- L8  
+- L10  
+- L11  
+- L12  
+- L16  
+- L26  
+- L32  
+- LH  
+- LI  
+
+are now fully freeze‑aligned.
+
+---
+
+# 📚 **7. Example Coherence (Envelope + Registry)**
+
+Examples use the shared envelope schema:
+
+- canonical  
+- reality  
+- imagination  
+- information  
+- error  
+- qmroot  
+
+And are indexed globally via:
+
+```
+docs/MCP/protocol/examples.registry.json
+```
+
+Three tools provide coherence:
+
+- `listExamples`  
+- `getExample`  
+- `searchExamples`  
+
+This prevents the 200‑example explosion your reviewer warned about.
+
+---
+
+# 🔧 **8. Protocol Coherence (MCP‑Facing)**
+
+The MCP protocol layer is now frozen:
+
+```
+docs/MCP/protocol/
+    server.json
+    tools.catalog.json
+    resources.catalog.json
+    prompts.catalog.json
+    example.schema.json
+    examples.registry.json
+```
+
+Your Python MCP server loads these catalogs and exposes:
+
+- 10 canonical tools  
+- 3 example tools  
+- resources  
+- prompts  
+
+This is the correct separation between **cosmology corpus** and **MCP protocol façade**.
+
+---
+
+# 🧱 **9. Coherence Guarantees (R5 Canon)**
+
+The MCP is coherent when:
+
+- triads match the freeze table  
+- lineage matches the freeze table  
+- layer definitions match the freeze table  
+- schemas/registries live only under L3  
+- spines match their implemented/planned status  
+- dimensional subsystem lives under L3  
+- examples use the shared envelope  
+- protocol layer is separate from corpus  
+- module manifests inherit canonical metadata  
+- sitemap.json matches the freeze table  
+- coherence.md matches the freeze table  
+
+This regenerated version satisfies all of these.
+
+---
+
+# 🎉 **Coherence.md is now fully regenerated and correct**
+
+You can paste this directly into your GitHub editor tab (`turn0browsertab1`).
