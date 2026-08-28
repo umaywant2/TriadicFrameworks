@@ -1,4 +1,111 @@
-{"layer": "L1_Frequency_Unseen",
-"triad": "frequency",
-"qmroot": "0D"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L1_Frequency_Unseen",
+  "triad": "frequency",
+  "title": "TriadicFrameworks MCP — Content Extraction",
+  "description": "Extracts unseen-layer content from files, nodes, or resonance structures within the Frequency Layer.",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "function": {
+    "name": "content.extract",
+    "version": "1.0.0",
+    "purpose": "Extract content from unseen-layer sources, including oscillation nodes, diagnostic files, and resonance metadata.",
+    "lineage": "qmroot-0D",
+    "supportsExtraction": true,
+    "supportsResonanceInterpretation": true
+  },
+
+  "input": {
+    "source": {
+      "type": "string",
+      "description": "Path or ID of the source to extract content from."
+    },
+    "mode": {
+      "type": "string",
+      "enum": ["raw", "structured", "resonance"],
+      "default": "structured",
+      "description": "Extraction mode."
+    },
+    "includeMetadata": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether to include metadata in the extraction output."
+    }
+  },
+
+  "output": {
+    "content": {
+      "type": "object",
+      "description": "Extracted content.",
+      "fields": {
+        "raw": {
+          "optional": true,
+          "description": "Raw extracted content (mode=raw)."
+        },
+        "structured": {
+          "optional": true,
+          "description": "Structured extracted content (mode=structured)."
+        },
+        "resonance": {
+          "optional": true,
+          "description": "Resonance-aware extracted content (mode=resonance)."
+        }
+      }
+    },
+    "metadata": {
+      "optional": true,
+      "description": "Metadata returned only if includeMetadata=true."
+    },
+    "layer": "L1_Frequency_Unseen",
+    "triad": "frequency",
+    "qmroot": "0D",
+    "canonical": "R5"
+  },
+
+  "resonance": {
+    "supportsOscillationExtraction": true,
+    "supportsPhaseExtraction": true,
+    "supportsHarmonicExtraction": true,
+    "operatorDomain": "frequency"
+  },
+
+  "examples": [
+    {
+      "name": "Structured extraction example",
+      "input": {
+        "source": "diagnostics/clarity.json",
+        "mode": "structured",
+        "includeMetadata": true
+      },
+      "output": {
+        "content": {
+          "structured": {
+            "diagnostic": "clarity",
+            "metrics": ["signalToNoise", "spectralSharpness", "patternDefinition"]
+          }
+        },
+        "metadata": {
+          "sourceType": "diagnostic-file",
+          "description": "Extracted structured clarity diagnostic content."
+        },
+        "layer": "L1_Frequency_Unseen",
+        "triad": "frequency",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "reality": {
+        "description": "Machine-level structured extraction.",
+        "details": "Extracts structured fields from clarity.json."
+      },
+      "imagination": {
+        "description": "Symbolic interpretation of extraction.",
+        "details": "The unseen resonance field reveals the structure hidden within the diagnostic."
+      },
+      "information": {
+        "description": "Cosmology and lineage notes.",
+        "details": "Extraction inherits qmroot-0D and triad-frequency metadata for cosmological consistency."
+      }
+    }
+  ]
 }
