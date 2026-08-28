@@ -1,1 +1,5 @@
-
+{canonical: "R5",
+qmroot: "0D",
+cosmology: "L0_QMROOT",
+triad: "origin"
+}
