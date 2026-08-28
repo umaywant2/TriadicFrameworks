@@ -1,4 +1,115 @@
-{"layer": "L1_Frequency_Unseen",
-"triad": "frequency",
-"qmroot": "0D"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L1_Frequency_Unseen",
+  "triad": "frequency",
+  "title": "TriadicFrameworks MCP — Coherence Resolution Tool",
+  "description": "Computes and resolves coherence from oscillation data within the Frequency Layer (Unseen). Produces phase stability, harmonic consistency, and continuity strength.",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "tool": {
+    "name": "resolveCoherence",
+    "version": "1.0.0",
+    "purpose": "Resolve coherence metrics from oscillation history and harmonic-phase structure.",
+    "lineage": "qmroot-0D",
+    "supportsCoherenceResolution": true,
+    "supportsResonanceAnalysis": true
+  },
+
+  "input": {
+    "phaseHistory": {
+      "type": "array",
+      "description": "List of phase values over time used to compute phase stability."
+    },
+    "harmonicLayers": {
+      "type": "array",
+      "description": "List of harmonic values used to compute harmonic consistency."
+    },
+    "cycleHistory": {
+      "type": "array",
+      "description": "List of cycle patterns used to compute continuity strength."
+    },
+    "operator": {
+      "type": "string",
+      "description": "Operator used during the coherence resolution run (e.g., clarity, alignment)."
+    }
+  },
+
+  "output": {
+    "coherence": {
+      "type": "object",
+      "fields": {
+        "phaseStability": {
+          "type": "number",
+          "description": "Computed stability of oscillation phase over time."
+        },
+        "harmonicConsistency": {
+          "type": "number",
+          "description": "Computed agreement across harmonic layers."
+        },
+        "continuityStrength": {
+          "type": "number",
+          "description": "Computed smoothness of oscillation transitions across cycles."
+        }
+      }
+    },
+    "layer": "L1_Frequency_Unseen",
+    "triad": "frequency",
+    "qmroot": "0D",
+    "canonical": "R5"
+  },
+
+  "resonance": {
+    "requiresClarity": true,
+    "requiresAlignment": true,
+    "requiresAwareness": true,
+    "requiresContinuity": true,
+    "requiresDrift": false,
+    "operatorDomain": "frequency",
+    "primitives": [
+      "oscillation",
+      "phaseShift",
+      "harmonic",
+      "lineagePulse"
+    ]
+  },
+
+  "examples": [
+    {
+      "name": "Coherence resolution example",
+      "input": {
+        "phaseHistory": [0.71, 0.72, 0.72, 0.73],
+        "harmonicLayers": [1.0, 0.96, 0.94],
+        "cycleHistory": [
+          { "pattern": "0.71", "phase": 0.72 },
+          { "pattern": "0.71", "phase": 0.73 },
+          { "pattern": "0.72", "phase": 0.73 }
+        ],
+        "operator": "clarity"
+      },
+      "output": {
+        "coherence": {
+          "phaseStability": 0.97,
+          "harmonicConsistency": 0.93,
+          "continuityStrength": 0.90
+        },
+        "layer": "L1_Frequency_Unseen",
+        "triad": "frequency",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "reality": {
+        "description": "Machine-level coherence resolution.",
+        "details": "Phase stability, harmonic consistency, and continuity strength are computed from oscillation history."
+      },
+      "imagination": {
+        "description": "Symbolic interpretation of coherence.",
+        "details": "The unseen resonance field holds together, forming a stable harmonic structure."
+      },
+      "information": {
+        "description": "Cosmology and lineage notes.",
+        "details": "Coherence resolution inherits qmroot-0D and triad-frequency metadata for cosmological consistency."
+      }
+    }
+  ]
 }
