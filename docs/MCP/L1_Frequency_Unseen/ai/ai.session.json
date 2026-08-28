@@ -1,4 +1,112 @@
-{"layer": "L1_Frequency_Unseen",
-"triad": "frequency",
-"qmroot": "0D"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L1_Frequency_Unseen",
+  "triad": "frequency",
+  "title": "TriadicFrameworks MCP — AI Session Metadata",
+  "description": "Defines session metadata for AI interactions within the Frequency Layer (Unseen). Supports resonance-aware operator, diagnostic, graph, and indexer session contexts.",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "identity": {
+    "name": "TriadicFrameworks-AI-Session",
+    "version": "1.0.0",
+    "lineage": "qmroot-0D",
+    "cosmology": "L1_Frequency_Unseen",
+    "triad": "frequency",
+    "description": "AI session identity for resonance-based interactions within the Frequency Layer."
+  },
+
+  "session": {
+    "context": {
+      "operator": {
+        "current": null,
+        "history": [],
+        "supportsOperatorTracking": true
+      },
+      "diagnostics": {
+        "lastRun": null,
+        "history": [],
+        "supportsDiagnosticTracking": true
+      },
+      "graph": {
+        "lastTraversal": null,
+        "supportsGraphSession": true
+      },
+      "indexer": {
+        "lastIndex": null,
+        "supportsIndexerSession": true
+      },
+      "metadata": {
+        "sessionId": "auto",
+        "timestamp": "auto",
+        "supportsTemporalTracking": true
+      }
+    },
+    "supportsPersistence": true,
+    "supportsResonanceState": true,
+    "supportsOperatorMemory": true,
+    "supportsDiagnosticMemory": true
+  },
+
+  "resonance": {
+    "operatorDomain": "frequency",
+    "requiresCoherence": true,
+    "requiresAlignment": true,
+    "requiresContinuity": true,
+    "supportsSpectralAnalysis": true,
+    "supportsResonanceMapping": true
+  },
+
+  "metadata": {
+    "canonical": "R5",
+    "qmroot": "0D",
+    "layer": "L1_Frequency_Unseen",
+    "triad": "frequency"
+  },
+
+  "examples": [
+    {
+      "name": "Canonical AI session lookup",
+      "input": {
+        "request": "getAISession"
+      },
+      "output": {
+        "session": {
+          "context": {
+            "operator": {
+              "current": null,
+              "history": []
+            },
+            "diagnostics": {
+              "lastRun": null,
+              "history": []
+            },
+            "graph": {
+              "lastTraversal": null
+            },
+            "indexer": {
+              "lastIndex": null
+            }
+          },
+          "supportsPersistence": true
+        },
+        "layer": "L1_Frequency_Unseen",
+        "triad": "frequency",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "reality": {
+        "description": "Machine-level session metadata for AI agents in the Frequency Layer.",
+        "details": "Tracks operator usage, diagnostic runs, graph traversals, and indexer operations."
+      },
+      "imagination": {
+        "description": "Symbolic interpretation of the session.",
+        "details": "The unseen resonance field remembers the oscillations of the observer, forming a continuity of interpretation."
+      },
+      "information": {
+        "description": "Cosmology and lineage notes.",
+        "details": "Session identity anchored to qmroot-0D ensures consistent cosmological alignment."
+      }
+    }
+  ]
 }
