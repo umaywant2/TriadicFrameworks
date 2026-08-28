@@ -1,5 +1,93 @@
-{"canonical": "R5",
-"qmroot": "0D",
-"layer": "L0_QMROOT",
-"triad": "origin"
+{
+  "qmroot": "0D",
+  "canonical": "R5",
+  "layer": "L0_QMROOT",
+  "triad": "origin",
+  "title": "TriadicFrameworks MCP Authentication Token",
+  "description": "Token definition for authentication in the Origin Layer (0D) of the TriadicFrameworks MCP cosmology.",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "token": {
+    "type": "string",
+    "format": "jwt-or-opaque",
+    "description": "Authentication token issued by the MCP server. May be JWT or opaque depending on server configuration."
+  },
+
+  "fields": {
+    "issuedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when the token was issued."
+    },
+    "expiresAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when the token expires."
+    },
+    "clientId": {
+      "type": "string",
+      "description": "Identifier of the client to whom the token was issued."
+    },
+    "scope": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "List of capabilities granted by this token."
+    }
+  },
+
+  "required": ["token", "issuedAt", "expiresAt", "clientId"],
+
+  "examples": [
+    {
+      "name": "Canonical token",
+      "input": {
+        "clientId": "tfmcp-client-001",
+        "issuedAt": "2026-08-28T16:03:00Z",
+        "expiresAt": "2026-08-28T18:03:00Z",
+        "token": "eyJhbGciOi...canonicalExampleToken",
+        "scope": ["read", "write", "diagnostics"]
+      },
+      "output": {
+        "status": "TOKEN_VALID",
+        "message": "Token accepted by origin layer.",
+        "layer": "L0_QMROOT",
+        "triad": "origin",
+        "qmroot": "0D"
+      },
+      "interpretation": {
+        "technical": "Token contains all required fields and valid timestamps.",
+        "mythic": "The observer is granted passage; the gate of origin recognizes the signature."
+      },
+      "metadata": {
+        "layer": "L0_QMROOT",
+        "triad": "origin",
+        "qmroot": "0D",
+        "canonical": "R5"
+      }
+    },
+    {
+      "name": "Error example — expired token",
+      "input": {
+        "clientId": "tfmcp-client-002",
+        "issuedAt": "2026-08-28T12:00:00Z",
+        "expiresAt": "2026-08-28T14:00:00Z",
+        "token": "eyJhbGciOi...expiredToken"
+      },
+      "error": {
+        "code": "AUTH_TOKEN_EXPIRED",
+        "message": "Authentication token has expired.",
+        "field": "expiresAt"
+      },
+      "interpretation": {
+        "technical": "The token's expiration timestamp is in the past.",
+        "mythic": "The signal has faded; the origin layer no longer hears the observer."
+      },
+      "metadata": {
+        "layer": "L0_QMROOT",
+        "triad": "origin",
+        "qmroot": "0D",
+        "canonical": "R5"
+      }
+    }
+  ]
 }
