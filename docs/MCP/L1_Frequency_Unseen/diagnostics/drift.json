@@ -1,4 +1,103 @@
-{"layer": "L1_Frequency_Unseen",
-"triad": "frequency",
-"qmroot": "0D"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L1_Frequency_Unseen",
+  "triad": "frequency",
+  "title": "TriadicFrameworks MCP — Drift Diagnostic",
+  "description": "Defines the drift diagnostic for the Frequency Layer (Unseen). Measures instability, deviation, phase slippage, and resonance breakdown.",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "diagnostic": {
+    "name": "drift",
+    "family": "drift",
+    "domain": "frequency",
+    "purpose": "Measure instability and deviation in oscillation patterns, identifying early signs of resonance breakdown.",
+    "lineage": "qmroot-0D",
+    "supportsSpectralAnalysis": true,
+    "supportsResonanceMapping": true,
+    "supportsOperatorIntegration": true
+  },
+
+  "metrics": {
+    "phaseSlippage": {
+      "description": "Measures deviation in oscillation phase over time.",
+      "range": "0.0–1.0",
+      "ideal": 0.0
+    },
+    "harmonicDeviation": {
+      "description": "Measures inconsistency across harmonic layers.",
+      "range": "0.0–1.0",
+      "ideal": 0.05
+    },
+    "instabilityIndex": {
+      "description": "Measures overall resonance instability.",
+      "range": "0.0–1.0",
+      "ideal": 0.1
+    }
+  },
+
+  "resonance": {
+    "requiresClarity": true,
+    "requiresAlignment": true,
+    "requiresCoherence": true,
+    "requiresContinuity": true,
+    "requiresAwareness": true,
+    "operatorDomain": "frequency",
+    "primitives": [
+      "oscillation",
+      "phaseShift",
+      "harmonic",
+      "lineagePulse"
+    ]
+  },
+
+  "interactions": {
+    "clarity": "Drift reduces clarity by introducing spectral noise.",
+    "alignment": "Drift disrupts alignment by destabilizing phase relationships.",
+    "coherence": "Drift breaks coherence by causing oscillation fragmentation.",
+    "continuity": "Drift interrupts continuity by degrading identity retention.",
+    "awareness": "Drift reduces awareness by masking oscillation patterns.",
+    "regime": "Drift determines whether the oscillation is in stable, transitional, or chaotic regime."
+  },
+
+  "metadata": {
+    "canonical": "R5",
+    "qmroot": "0D",
+    "layer": "L1_Frequency_Unseen",
+    "triad": "frequency"
+  },
+
+  "examples": [
+    {
+      "name": "Drift diagnostic run",
+      "input": {
+        "operator": "coherence",
+        "signal": "oscillation",
+        "phaseHistory": [0.71, 0.72, 0.75, 0.80]
+      },
+      "output": {
+        "drift": {
+          "phaseSlippage": 0.32,
+          "harmonicDeviation": 0.18,
+          "instabilityIndex": 0.27
+        },
+        "layer": "L1_Frequency_Unseen",
+        "triad": "frequency",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "reality": {
+        "description": "Machine-level drift diagnostic run.",
+        "details": "Phase slippage, harmonic deviation, and instability index are computed from oscillation history."
+      },
+      "imagination": {
+        "description": "Symbolic interpretation of drift.",
+        "details": "The unseen resonance field begins to wobble, slipping out of alignment and losing structural integrity."
+      },
+      "information": {
+        "description": "Cosmology and lineage notes.",
+        "details": "Drift is anchored to qmroot-0D and triad-frequency, ensuring consistent cosmological interpretation."
+      }
+    }
+  ]
 }
