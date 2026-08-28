@@ -1,108 +1,112 @@
 {
-  "qmroot": "0D",
   "canonical": "R5",
   "module": "TriadicFrameworks-MCP",
-  "version": "1.0.0",
-  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
-  
+  "version": "0.1.0",
+
+  "lineage": [
+    "qmroot",
+    "frequency",
+    "fluids",
+    "forces"
+  ],
+
+  "note": "This manifest defines the cosmology-facing MCP corpus. The protocol-facing MCP server lives under docs/MCP/protocol/.",
+
   "cosmology": {
     "layers": [
       {
         "id": "L0_QMROOT",
-        "triad": "origin",
-        "description": "0D observer primitive; coherence anchor; server identity; authentication, errors, discovery."
+        "triad": "root",
+        "description": "Quantum origin and root-state mechanics; coherence anchor; lineage seed."
       },
       {
         "id": "L1_Frequency_Unseen",
-        "triad": "frequency",
-        "description": "Unseen oscillation layer; resonance, operators, diagnostics, graph traversal, indexing."
+        "triad": "oscillation",
+        "description": "Unseen oscillation layer; spectral regimes, drift, coherence, analyzer behavior."
       },
       {
         "id": "L2_Fluids_Seen",
-        "triad": "fluids",
-        "description": "Seen layer; observable flows; file system, modules, metadata, session context, learning tools."
+        "triad": "continuity",
+        "description": "Seen-world continuity layer; flow, substrate, fluidic mechanics."
       },
       {
         "id": "L3_Forces_Unseen",
         "triad": "forces",
-        "description": "Unseen structural layer; schemas, registries, spine, coherence, regime, structural relationships."
+        "description": "Unseen force-regime layer; gradient, field, rupture, integrity; schemas, registries, spine."
       }
     ]
   },
 
   "structure": {
     "root": "docs/MCP",
+
     "layers": {
       "L0_QMROOT": {
         "path": "docs/MCP/L0_QMROOT",
-        "tools": [
-          "getCapabilities",
-          "auth/*",
-          "errors/*",
-          "discovery/*"
-        ],
         "files": [
-          "server.json",
           "README.md"
-        ]
+        ],
+        "tools": []
       },
+
       "L1_Frequency_Unseen": {
         "path": "docs/MCP/L1_Frequency_Unseen",
-        "tools": [
-          "ai/*",
-          "diagnostics/*",
-          "graph/*",
-          "indexer/*",
-          "tools/*"
-        ],
         "files": [
           "README.md"
-        ]
+        ],
+        "tools": []
       },
+
       "L2_Fluids_Seen": {
         "path": "docs/MCP/L2_Fluids_Seen",
-        "tools": [
-          "fs/*",
-          "learn/*",
-          "tools/*"
-        ],
         "files": [
           "README.md"
-        ]
+        ],
+        "tools": []
       },
+
       "L3_Forces_Unseen": {
         "path": "docs/MCP/L3_Forces_Unseen",
-        "tools": [
-          "schemas/*",
-          "registry/*",
-          "spine/*"
-        ],
         "files": [
-          "README.md"
-        ]
+          "README.md",
+          "schemas/module.schema.json",
+          "schemas/operator.schema.json",
+          "registry/module_registry.json",
+          "registry/operator_registry.json",
+          "spine/S3.graph.json"
+        ],
+        "tools": []
       }
     }
   },
 
-  "registry": {
-    "modules": "docs/MCP/L3_Forces_Unseen/registry/module_registry.json",
-    "groups": "docs/MCP/L3_Forces_Unseen/registry/modules_group.json",
-    "ai": "docs/MCP/L3_Forces_Unseen/registry/ai_registry.json",
-    "sitemap": "docs/MCP/L3_Forces_Unseen/registry/sitemap_modules.json"
+  "dimensions": {
+    "path": "docs/MCP/L3_Forces_Unseen/dimensions",
+    "triad": "forces",
+    "items": [
+      "L4.json",
+      "L5.json",
+      "L8.json",
+      "L10.json",
+      "L11.json",
+      "L12.json",
+      "L16.json",
+      "L26.json",
+      "L32.json",
+      "LH.json",
+      "LI.json"
+    ]
   },
 
-  "schemas": {
-    "module": "docs/MCP/L3_Forces_Unseen/schemas/module.schema.json",
-    "operator": "docs/MCP/L3_Forces_Unseen/schemas/operator.schema.json",
-    "analyzer": "docs/MCP/L3_Forces_Unseen/schemas/analyzer.schema.json",
-    "drift": "docs/MCP/L3_Forces_Unseen/schemas/drift.schema.json",
-    "lineage": "docs/MCP/L3_Forces_Unseen/schemas/lineage.schema.json",
-    "session": "docs/MCP/L3_Forces_Unseen/schemas/session.schema.json"
-  },
-
-  "spine": {
-    "graph": "docs/MCP/L3_Forces_Unseen/spine/S3.graph.json",
-    "canonical": "R5"
+  "protocol": {
+    "path": "docs/MCP/protocol",
+    "files": [
+      "server.json",
+      "tools.catalog.json",
+      "resources.catalog.json",
+      "prompts.catalog.json",
+      "example.schema.json",
+      "examples.registry.json"
+    ]
   }
 }
-
