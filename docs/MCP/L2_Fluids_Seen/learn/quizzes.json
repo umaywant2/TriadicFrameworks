@@ -1,3 +1,127 @@
-{"layer": "L2_Fluids_Seen",
-"triad": "fluids"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L2_Fluids_Seen",
+  "triad": "fluids",
+  "title": "TriadicFrameworks MCP — L2 Fluids Seen Quizzes",
+  "description": "Quizzes for testing knowledge of fluidic resonance, continuity, laminarity, turbulence, viscosity, pressure gradients, and flow-state mechanics.",
+  "note": "This file provides canonical quizzes for the L2 Fluids Seen layer.",
+
+  "quizzes": [
+    {
+      "id": "quiz_l2_001",
+      "name": "Fluidic Resonance Basics",
+      "questions": [
+        {
+          "q": "What is fluidic resonance?",
+          "choices": [
+            "Transformation of oscillation into flow",
+            "Transformation of flow into oscillation",
+            "Collapse of continuity channels",
+            "Increase in turbulence"
+          ],
+          "answer": "Transformation of oscillation into flow"
+        },
+        {
+          "q": "Which property measures smooth, ordered flow?",
+          "choices": ["Turbulence", "Laminarity", "Viscosity", "Pressure Gradient"],
+          "answer": "Laminarity"
+        },
+        {
+          "q": "What does continuity represent?",
+          "choices": [
+            "Internal friction",
+            "Directional pressure change",
+            "Preservation of identity across flow transitions",
+            "Chaotic vortices"
+          ],
+          "answer": "Preservation of identity across flow transitions"
+        }
+      ]
+    },
+
+    {
+      "id": "quiz_l2_002",
+      "name": "Flow-State Mechanics",
+      "questions": [
+        {
+          "q": "High turbulence typically indicates:",
+          "choices": [
+            "Stable laminar flow",
+            "Chaotic flow-state behavior",
+            "High continuity",
+            "Low viscosity"
+          ],
+          "answer": "Chaotic flow-state behavior"
+        },
+        {
+          "q": "Which factor increases resistance to flow?",
+          "choices": ["Low viscosity", "High viscosity", "High laminarity", "Low turbulence"],
+          "answer": "High viscosity"
+        },
+        {
+          "q": "Flow integrity measures:",
+          "choices": [
+            "Internal friction",
+            "Overall stability and coherence of flow",
+            "Directional pressure change",
+            "Identity preservation"
+          ],
+          "answer": "Overall stability and coherence of flow"
+        }
+      ]
+    },
+
+    {
+      "id": "quiz_l2_003",
+      "name": "Fluid Substrate Identification",
+      "questions": [
+        {
+          "q": "Which substrate has the highest continuity?",
+          "choices": [
+            "Laminar Flow",
+            "Turbulent Flow",
+            "Viscous Medium",
+            "Continuity Channel"
+          ],
+          "answer": "Continuity Channel"
+        },
+        {
+          "q": "A chaotic-vortex signature corresponds to:",
+          "choices": [
+            "Laminar Flow",
+            "Turbulent Flow",
+            "Viscous Medium",
+            "Continuity Channel"
+          ],
+          "answer": "Turbulent Flow"
+        },
+        {
+          "q": "Which substrate is characterized by high internal friction?",
+          "choices": [
+            "Laminar Flow",
+            "Turbulent Flow",
+            "Viscous Medium",
+            "Continuity Channel"
+          ],
+          "answer": "Viscous Medium"
+        }
+      ]
+    }
+  ],
+
+  "reality": {
+    "description": "Machine-level quiz definitions.",
+    "details": "Each quiz provides structured questions for evaluating knowledge of fluidic resonance concepts."
+  },
+
+  "imagination": {
+    "description": "Symbolic interpretation.",
+    "details": "Fluidic resonance forms channels, vortices, laminar streams, pressure waves, and continuity pathways."
+  },
+
+  "information": {
+    "description": "Cosmology notes.",
+    "details": "Fluidic concepts inherit qmroot lineage through frequency into seen-layer dynamics."
+  }
 }
