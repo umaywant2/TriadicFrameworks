@@ -1,4 +1,131 @@
-{"layer": "L1_Frequency_Unseen",
-"triad": "frequency",
-"qmroot": "0D"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L1_Frequency_Unseen",
+  "triad": "frequency",
+  "title": "TriadicFrameworks MCP — Content Search",
+  "description": "Searches unseen-layer indexed content using resonance-aware semantics within the Frequency Layer.",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "function": {
+    "name": "content.search",
+    "version": "1.0.0",
+    "purpose": "Search indexed unseen-layer content using keyword, resonance, or harmonic-phase criteria.",
+    "lineage": "qmroot-0D",
+    "supportsSearch": true,
+    "supportsResonanceSearch": true,
+    "supportsMultiModeSearch": true
+  },
+
+  "modes": {
+    "keyword": {
+      "description": "Search by literal keyword match.",
+      "idealUse": "Basic content discovery."
+    },
+    "resonance": {
+      "description": "Search by resonance properties such as harmonic level, phase, or oscillation identity.",
+      "idealUse": "Frequency-layer semantic search."
+    },
+    "hybrid": {
+      "description": "Combine keyword and resonance search.",
+      "idealUse": "Complex or multi-dimensional search queries."
+    }
+  },
+
+  "input": {
+    "query": {
+      "type": "string",
+      "description": "Search query string."
+    },
+    "mode": {
+      "type": "string",
+      "enum": ["keyword", "resonance", "hybrid"],
+      "default": "hybrid",
+      "description": "Search mode."
+    },
+    "limit": {
+      "type": "number",
+      "default": 10,
+      "description": "Maximum number of results to return."
+    },
+    "includeMetadata": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether to include metadata in search results."
+    }
+  },
+
+  "output": {
+    "results": {
+      "type": "array",
+      "description": "List of search results.",
+      "items": {
+        "key": "string",
+        "value": "any",
+        "metadata": {
+          "optional": true,
+          "description": "Metadata returned only if includeMetadata=true."
+        }
+      }
+    },
+    "layer": "L1_Frequency_Unseen",
+    "triad": "frequency",
+    "qmroot": "0D",
+    "canonical": "R5"
+  },
+
+  "resonance": {
+    "supportsOscillationSearch": true,
+    "supportsPhaseSearch": true,
+    "supportsHarmonicSearch": true,
+    "operatorDomain": "frequency"
+  },
+
+  "examples": [
+    {
+      "name": "Hybrid search example",
+      "input": {
+        "query": "coherence",
+        "mode": "hybrid",
+        "limit": 5,
+        "includeMetadata": true
+      },
+      "output": {
+        "results": [
+          {
+            "key": "diagnostic",
+            "value": "coherence",
+            "metadata": {
+              "source": "diagnostics/coherence.json",
+              "harmonicLevel": 3,
+              "phase": 0.72
+            }
+          },
+          {
+            "key": "metrics.phaseStability",
+            "value": 0.97,
+            "metadata": {
+              "source": "diagnostics/coherence.json"
+            }
+          }
+        ],
+        "layer": "L1_Frequency_Unseen",
+        "triad": "frequency",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "reality": {
+        "description": "Machine-level hybrid search.",
+        "details": "Search combines keyword match with resonance metadata filtering."
+      },
+      "imagination": {
+        "description": "Symbolic interpretation of search.",
+        "details": "The unseen resonance field highlights nodes whose oscillations match the query."
+      },
+      "information": {
+        "description": "Cosmology and lineage notes.",
+        "details": "Search results inherit qmroot-0D and triad-frequency metadata for cosmological consistency."
+      }
+    }
+  ]
 }
