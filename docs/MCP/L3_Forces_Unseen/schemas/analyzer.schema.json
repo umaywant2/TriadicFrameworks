@@ -1,4 +1,97 @@
-{"layer": "L3_Forces_Unseen",
-"triad": "forces",
-"qmroot": "0D"
-} 
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "title": "TriadicFrameworks MCP — L3 Forces Unseen Analyzer Schema",
+  "description": "Defines the schema for force-regime analysis, including gradient intensity, field coherence, influence continuity, and rupture potential.",
+  "note": "This schema governs unseen force-state evaluation.",
+
+  "schema": {
+    "name": "forceRegimeAnalyzer",
+    "version": "1.0.0",
+    "purpose": "Analyze unseen force regimes and compute force-state metrics.",
+    "lineage": "qmroot-0D",
+
+    "input": {
+      "type": "object",
+      "fields": {
+        "gradientIntensity": {
+          "type": "number",
+          "description": "Strength of directional causal gradient.",
+          "range": [0, 1]
+        },
+        "fieldCoherence": {
+          "type": "number",
+          "description": "Stability of unseen influence field.",
+          "range": [0, 1]
+        },
+        "influenceContinuity": {
+          "type": "number",
+          "description": "Preservation of influence identity across transitions.",
+          "range": [0, 1]
+        }
+      }
+    },
+
+    "output": {
+      "type": "object",
+      "fields": {
+        "regimeStability": {
+          "type": "number",
+          "description": "Overall stability of the force regime.",
+          "range": [0, 1]
+        },
+        "rupturePotential": {
+          "type": "number",
+          "description": "Likelihood of force-state rupture.",
+          "range": [0, 1]
+        },
+        "forceIntegrity": {
+          "type": "number",
+          "description": "Coherence and structural integrity of the force field.",
+          "range": [0, 1]
+        },
+        "layer": "L3_Forces_Unseen",
+        "triad": "forces",
+        "qmroot": "0D",
+        "canonical": "R5"
+      }
+    }
+  },
+
+  "examples": [
+    {
+      "name": "Force regime analysis example",
+      "input": {
+        "gradientIntensity": 0.72,
+        "fieldCoherence": 0.44,
+        "influenceContinuity": 0.81
+      },
+      "output": {
+        "regimeStability": 0.63,
+        "rupturePotential": 0.22,
+        "forceIntegrity": 0.74,
+        "layer": "L3_Forces_Unseen",
+        "triad": "forces",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+
+      "reality": {
+        "description": "Machine-level force-state evaluation.",
+        "details": "Metrics computed from gradientIntensity, fieldCoherence, and influenceContinuity."
+      },
+
+      "imagination": {
+        "description": "Symbolic interpretation.",
+        "details": "The unseen force field stabilizes into a coherent influence regime."
+      },
+
+      "information": {
+        "description": "Cosmology notes.",
+        "details": "Force regimes inherit qmroot lineage through frequency → fluids → forces."
+      }
+    }
+  ]
+}
