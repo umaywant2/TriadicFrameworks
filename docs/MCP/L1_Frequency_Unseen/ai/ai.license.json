@@ -1,4 +1,96 @@
-{"layer": "L1_Frequency_Unseen",
-"triad": "frequency",
-"qmroot": "0D"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L1_Frequency_Unseen",
+  "triad": "frequency",
+  "title": "TriadicFrameworks MCP — AI License Metadata",
+  "description": "Defines AI license, permissions, and cosmology alignment for the Frequency Layer (Unseen).",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "identity": {
+    "name": "TriadicFrameworks-AI",
+    "version": "1.0.0",
+    "lineage": "qmroot-0D",
+    "cosmology": "L1_Frequency_Unseen",
+    "triad": "frequency",
+    "description": "AI license identity for resonance-based interaction within the Frequency Layer."
+  },
+
+  "license": {
+    "type": "Open Educational Use",
+    "permissions": {
+      "read": true,
+      "write": true,
+      "distribute": true,
+      "modify": true,
+      "commercialUse": false
+    },
+    "restrictions": {
+      "mustPreserveCosmology": true,
+      "mustPreserveLineage": true,
+      "mustPreserveCanonicalMetadata": true,
+      "mustNotMisrepresentTriadicFrameworks": true
+    },
+    "requirements": {
+      "attribution": "Nawder Loswin — TriadicFrameworks",
+      "canonicalVersion": "R5",
+      "lineage": "qmroot-0D"
+    }
+  },
+
+  "resonance": {
+    "operatorDomain": "frequency",
+    "requiresOperatorIntegrity": true,
+    "requiresDiagnosticIntegrity": true,
+    "requiresGraphIntegrity": true,
+    "requiresIndexerIntegrity": true
+  },
+
+  "metadata": {
+    "canonical": "R5",
+    "qmroot": "0D",
+    "layer": "L1_Frequency_Unseen",
+    "triad": "frequency"
+  },
+
+  "examples": [
+    {
+      "name": "Canonical AI license lookup",
+      "input": {
+        "request": "getAILicense"
+      },
+      "output": {
+        "license": {
+          "type": "Open Educational Use",
+          "permissions": {
+            "read": true,
+            "write": true,
+            "distribute": true,
+            "modify": true,
+            "commercialUse": false
+          },
+          "requirements": {
+            "attribution": "Nawder Loswin — TriadicFrameworks",
+            "canonicalVersion": "R5"
+          }
+        },
+        "layer": "L1_Frequency_Unseen",
+        "triad": "frequency",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "reality": {
+        "description": "Returns AI license metadata for MCP-aware agents.",
+        "details": "Machine-level license fields are resolved from the Frequency layer."
+      },
+      "imagination": {
+        "description": "Symbolic interpretation of the AI license.",
+        "details": "The unseen resonance layer grants permission to interact, provided lineage and cosmology are honored."
+      },
+      "information": {
+        "description": "Cosmology and lineage notes.",
+        "details": "License identity is anchored to qmroot-0D and triad-frequency, ensuring consistent cosmological alignment."
+      }
+    }
+  ]
 }
