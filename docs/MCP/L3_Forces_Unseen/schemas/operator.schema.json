@@ -1,168 +1,64 @@
 {
   "canonical": "R5",
-  "qmroot": "0D",
   "layer": "L3_Forces_Unseen",
   "triad": "forces",
-  "title": "TriadicFrameworks MCP — L3 Forces Unseen Operator Schema",
-  "description": "Defines the schema for unseen force-regime operators, including push, pull, bind, gradient, fieldShift, and ruptureForce.",
-  "note": "This schema governs operator-level mechanics for unseen force regimes.",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "title": "TriadicFrameworks MCP — Operator Schema (L3 Forces Unseen)",
+  "description": "Real JSON Schema for unseen force‑regime operators. Defines canonical operator identity, category, semantics, and impact profile.",
+  "version": "0.1.0",
 
   "schema": {
-    "name": "forceRegimeOperator",
-    "version": "1.0.0",
-    "purpose": "Define operators that manipulate unseen force regimes.",
-    "lineage": "qmroot-0D",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "forceRegimeOperator",
+    "description": "JSON Schema for operators that manipulate unseen force‑regime mechanics.",
+    "type": "object",
 
-    "identity": {
-      "type": "object",
-      "fields": {
-        "name": {
-          "type": "string",
-          "description": "Canonical operator name."
-        },
-        "category": {
-          "type": "string",
-          "description": "Operator category (push, pull, bind, gradient, fieldShift, ruptureForce)."
-        },
-        "description": {
-          "type": "string",
-          "description": "Functional description of the operator."
-        }
-      }
-    },
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "Canonical operator name."
+      },
 
-    "primitives": {
-      "type": "array",
-      "description": "Primitive force-regime semantics used by the operator.",
-      "items": [
-        "gradientIntensity",
-        "fieldCoherence",
-        "influenceContinuity",
-        "rupturePotential",
-        "forceIntegrity"
-      ]
-    },
+      "category": {
+        "type": "string",
+        "description": "Operator category.",
+        "enum": [
+          "push",
+          "pull",
+          "bind",
+          "gradient",
+          "fieldShift",
+          "ruptureForce"
+        ]
+      },
 
-    "metadata": {
-      "type": "object",
-      "fields": {
-        "forceDomain": {
+      "description": {
+        "type": "string",
+        "description": "Functional description of the operator."
+      },
+
+      "semantics": {
+        "type": "array",
+        "description": "Force‑regime semantics directly manipulated by the operator.",
+        "items": {
           "type": "string",
-          "allowed": ["forces"],
-          "description": "Domain of unseen force-regime mechanics."
-        },
-        "operatorSemantics": {
-          "type": "array",
-          "description": "Semantics directly manipulated by the operator.",
-          "items": "string"
-        },
-        "impactProfile": {
-          "type": "string",
-          "description": "Description of how the operator affects unseen force-state mechanics."
-        }
-      }
-    }
-  },
-
-  "operators": {
-    "push": {
-      "category": "push",
-      "description": "Applies outward causal influence.",
-      "operatorSemantics": ["gradientIntensity", "forceIntegrity"],
-      "impactProfile": "Increases directional gradient and stabilizes outward force projection."
-    },
-    "pull": {
-      "category": "pull",
-      "description": "Applies inward causal influence.",
-      "operatorSemantics": ["gradientIntensity", "influenceContinuity"],
-      "impactProfile": "Strengthens inward gradient and enhances continuity of influence."
-    },
-    "bind": {
-      "category": "bind",
-      "description": "Creates structural cohesion within unseen force fields.",
-      "operatorSemantics": ["fieldCoherence", "forceIntegrity"],
-      "impactProfile": "Increases field coherence and stabilizes force-state integrity."
-    },
-    "gradient": {
-      "category": "gradient",
-      "description": "Modifies directional causal gradients.",
-      "operatorSemantics": ["gradientIntensity"],
-      "impactProfile": "Adjusts the strength and direction of causal gradients."
-    },
-    "fieldShift": {
-      "category": "fieldShift",
-      "description": "Shifts unseen influence fields.",
-      "operatorSemantics": ["fieldCoherence", "influenceContinuity"],
-      "impactProfile": "Reconfigures influence fields and adjusts continuity pathways."
-    },
-    "ruptureForce": {
-      "category": "ruptureForce",
-      "description": "Induces or evaluates rupture potential.",
-      "operatorSemantics": ["rupturePotential"],
-      "impactProfile": "Raises or measures rupture likelihood within force regimes."
-    }
-  },
-
-  "examples": [
-    {
-      "name": "Operator schema example",
-      "input": {
-        "identity": {
-          "name": "bind",
-          "category": "bind",
-          "description": "Creates structural cohesion within unseen force fields."
-        },
-        "primitives": [
-          "fieldCoherence",
-          "forceIntegrity"
-        ],
-        "metadata": {
-          "forceDomain": "forces",
-          "operatorSemantics": [
+          "enum": [
+            "gradientIntensity",
             "fieldCoherence",
+            "influenceContinuity",
+            "rupturePotential",
             "forceIntegrity"
-          ],
-          "impactProfile": "Increases field coherence and stabilizes force-state integrity."
-        }
-      },
-      "output": {
-        "operator": {
-          "name": "bind",
-          "category": "bind",
-          "description": "Creates structural cohesion within unseen force fields.",
-          "primitives": [
-            "fieldCoherence",
-            "forceIntegrity"
-          ],
-          "metadata": {
-            "forceDomain": "forces",
-            "operatorSemantics": [
-              "fieldCoherence",
-              "forceIntegrity"
-            ],
-            "impactProfile": "Increases field coherence and stabilizes force-state integrity."
-          },
-          "layer": "L3_Forces_Unseen",
-          "triad": "forces",
-          "qmroot": "0D",
-          "canonical": "R5"
+          ]
         }
       },
 
-      "reality": {
-        "description": "Machine-level operator schema resolution.",
-        "details": "Operator identity, primitives, and metadata resolved according to schema definitions."
-      },
-
-      "imagination": {
-        "description": "Symbolic interpretation.",
-        "details": "Unseen force operators reveal their influence patterns."
-      },
-
-      "information": {
-        "description": "Cosmology notes.",
-        "details": "Operator lineage flows qmroot → frequency → fluids → forces."
+      "impactProfile": {
+        "type": "string",
+        "description": "Description of how the operator affects unseen force‑state mechanics."
       }
-    }
-  ]
+    },
+
+    "required": ["name", "category", "description"]
+  }
 }
