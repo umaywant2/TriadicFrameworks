@@ -1,4 +1,101 @@
-{"layer": "L1_Frequency_Unseen",
-"triad": "frequency",
-"qmroot": "0D"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L1_Frequency_Unseen",
+  "triad": "frequency",
+  "title": "TriadicFrameworks MCP — Awareness Diagnostic",
+  "description": "Defines the awareness diagnostic for the Frequency Layer (Unseen). Measures resonance presence, recognition, and responsiveness within oscillation fields.",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "diagnostic": {
+    "name": "awareness",
+    "family": "drift",
+    "domain": "frequency",
+    "purpose": "Measure whether an oscillation is detected, recognized, and meaningfully responded to by the operator.",
+    "lineage": "qmroot-0D",
+    "supportsSpectralAnalysis": true,
+    "supportsResonanceMapping": true,
+    "supportsOperatorIntegration": true
+  },
+
+  "metrics": {
+    "signalPresence": {
+      "description": "Measures whether an oscillation is present in the resonance field.",
+      "range": "0.0–1.0",
+      "ideal": 1.0
+    },
+    "signalRecognition": {
+      "description": "Measures whether the operator correctly identifies the oscillation pattern.",
+      "range": "0.0–1.0",
+      "ideal": 0.95
+    },
+    "signalResponsiveness": {
+      "description": "Measures how effectively the operator responds to the detected oscillation.",
+      "range": "0.0–1.0",
+      "ideal": 0.9
+    }
+  },
+
+  "resonance": {
+    "requiresClarity": true,
+    "requiresAlignment": true,
+    "requiresCoherence": true,
+    "operatorDomain": "frequency",
+    "primitives": [
+      "oscillation",
+      "phaseShift",
+      "harmonic",
+      "lineagePulse"
+    ]
+  },
+
+  "interactions": {
+    "clarity": "Awareness increases clarity by improving recognition of oscillation patterns.",
+    "alignment": "Awareness supports alignment by ensuring the operator responds to the correct signal.",
+    "coherence": "Awareness stabilizes coherence by reducing misinterpretation of oscillation.",
+    "drift": "Low awareness increases drift by allowing unnoticed oscillation deviation.",
+    "regime": "Awareness determines whether the oscillation is in detectable, transitional, or blind regime."
+  },
+
+  "metadata": {
+    "canonical": "R5",
+    "qmroot": "0D",
+    "layer": "L1_Frequency_Unseen",
+    "triad": "frequency"
+  },
+
+  "examples": [
+    {
+      "name": "Awareness diagnostic run",
+      "input": {
+        "operator": "coherence",
+        "signal": "oscillation",
+        "expectedPattern": "harmonic-3",
+        "actualPattern": "harmonic-3"
+      },
+      "output": {
+        "awareness": {
+          "signalPresence": 1.0,
+          "signalRecognition": 0.97,
+          "signalResponsiveness": 0.92
+        },
+        "layer": "L1_Frequency_Unseen",
+        "triad": "frequency",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "reality": {
+        "description": "Machine-level awareness diagnostic run.",
+        "details": "Presence, recognition, and responsiveness are computed from operator interaction with the oscillation."
+      },
+      "imagination": {
+        "description": "Symbolic interpretation of awareness.",
+        "details": "The unseen resonance field opens its eyes, perceiving the oscillation clearly and responding with precision."
+      },
+      "information": {
+        "description": "Cosmology and lineage notes.",
+        "details": "Awareness is anchored to qmroot-0D and triad-frequency, ensuring consistent cosmological interpretation."
+      }
+    }
+  ]
 }
