@@ -1,4 +1,167 @@
-{"layer": "L1_Frequency_Unseen",
-"triad": "frequency",
-"qmroot": "0D"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L1_Frequency_Unseen",
+  "triad": "frequency",
+  "title": "TriadicFrameworks MCP — Operator Lookup Tool",
+  "description": "Retrieves operator metadata for the Frequency Layer (Unseen), including domain, family, primitives, and resonance properties.",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "tool": {
+    "name": "getOperator",
+    "version": "1.0.0",
+    "purpose": "Return operator metadata for a given operator name.",
+    "lineage": "qmroot-0D",
+    "supportsOperatorLookup": true,
+    "supportsResonanceAnalysis": true
+  },
+
+  "input": {
+    "operatorName": {
+      "type": "string",
+      "description": "Name of the operator to retrieve (e.g., clarity, coherence, oscillation, harmonic)."
+    },
+    "includeMetadata": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether to include extended metadata in the response."
+    }
+  },
+
+  "output": {
+    "operator": {
+      "type": "object",
+      "fields": {
+        "name": "string",
+        "domain": "string",
+        "family": "string",
+        "primitives": {
+          "type": "array",
+          "description": "List of resonance primitives associated with the operator."
+        },
+        "defaultPrimitive": {
+          "type": "string",
+          "description": "Primary primitive used by the operator."
+        },
+        "metadata": {
+          "optional": true,
+          "description": "Extended operator metadata returned only if includeMetadata=true."
+        }
+      }
+    },
+    "layer": "L1_Frequency_Unseen",
+    "triad": "frequency",
+    "qmroot": "0D",
+    "canonical": "R5"
+  },
+
+  "resolutionRules": {
+    "operators": {
+      "clarity": {
+        "domain": "frequency",
+        "family": "spectral",
+        "primitives": ["oscillation", "harmonic"],
+        "defaultPrimitive": "oscillation"
+      },
+      "coherence": {
+        "domain": "frequency",
+        "family": "spectral",
+        "primitives": ["harmonic", "phaseShift"],
+        "defaultPrimitive": "harmonic"
+      },
+      "alignment": {
+        "domain": "frequency",
+        "family": "drift",
+        "primitives": ["phaseShift"],
+        "defaultPrimitive": "phaseShift"
+      },
+      "awareness": {
+        "domain": "frequency",
+        "family": "drift",
+        "primitives": ["oscillation"],
+        "defaultPrimitive": "oscillation"
+      },
+      "continuity": {
+        "domain": "frequency",
+        "family": "spectral",
+        "primitives": ["harmonic"],
+        "defaultPrimitive": "harmonic"
+      },
+      "drift": {
+        "domain": "frequency",
+        "family": "drift",
+        "primitives": ["phaseShift"],
+        "defaultPrimitive": "phaseShift"
+      },
+      "regime": {
+        "domain": "frequency",
+        "family": "regime",
+        "primitives": ["harmonic", "phaseShift"],
+        "defaultPrimitive": "harmonic"
+      },
+      "oscillation": {
+        "domain": "frequency",
+        "family": "primitive",
+        "primitives": ["oscillation"],
+        "defaultPrimitive": "oscillation"
+      },
+      "phaseShift": {
+        "domain": "frequency",
+        "family": "primitive",
+        "primitives": ["phaseShift"],
+        "defaultPrimitive": "phaseShift"
+      },
+      "harmonic": {
+        "domain": "frequency",
+        "family": "primitive",
+        "primitives": ["harmonic"],
+        "defaultPrimitive": "harmonic"
+      },
+      "lineagePulse": {
+        "domain": "frequency",
+        "family": "primitive",
+        "primitives": ["lineagePulse"],
+        "defaultPrimitive": "lineagePulse"
+      }
+    }
+  },
+
+  "examples": [
+    {
+      "name": "Operator lookup example",
+      "input": {
+        "operatorName": "clarity",
+        "includeMetadata": true
+      },
+      "output": {
+        "operator": {
+          "name": "clarity",
+          "domain": "frequency",
+          "family": "spectral",
+          "primitives": ["oscillation", "harmonic"],
+          "defaultPrimitive": "oscillation",
+          "metadata": {
+            "description": "Clarity sharpens oscillation structure and reduces spectral noise.",
+            "harmonicLevel": 3
+          }
+        },
+        "layer": "L1_Frequency_Unseen",
+        "triad": "frequency",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "reality": {
+        "description": "Machine-level operator lookup.",
+        "details": "Operator metadata is resolved using the operator → layer mapping rules."
+      },
+      "imagination": {
+        "description": "Symbolic interpretation of operator lookup.",
+        "details": "The unseen resonance field reveals the operator’s structural role."
+      },
+      "information": {
+        "description": "Cosmology and lineage notes.",
+        "details": "Operator lookup inherits qmroot-0D and triad-frequency metadata for cosmological consistency."
+      }
+    }
+  ]
 }
