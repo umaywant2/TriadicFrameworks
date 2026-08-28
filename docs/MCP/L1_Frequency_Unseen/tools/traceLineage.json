@@ -1,4 +1,123 @@
-{"layer": "L1_Frequency_Unseen",
-"triad": "frequency",
-"qmroot": "0D"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L1_Frequency_Unseen",
+  "triad": "frequency",
+  "title": "TriadicFrameworks MCP — Lineage Tracing Tool",
+  "description": "Traces cosmological, structural, and resonance lineage for entities within the Frequency Layer (Unseen). Produces ancestry chains from qmroot → triad → diagnostic/operator.",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "tool": {
+    "name": "traceLineage",
+    "version": "1.0.0",
+    "purpose": "Trace the lineage chain of an entity from qmroot ancestry through triad inheritance to diagnostic/operator identity.",
+    "lineage": "qmroot-0D",
+    "supportsLineageTracing": true,
+    "supportsResonanceAnalysis": true
+  },
+
+  "input": {
+    "entity": {
+      "type": "string",
+      "description": "Name or ID of the entity whose lineage should be traced (e.g., clarity, coherence, harmonic, oscillation)."
+    },
+    "includeMetadata": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether to include extended lineage metadata."
+    }
+  },
+
+  "output": {
+    "lineage": {
+      "type": "object",
+      "fields": {
+        "ancestry": {
+          "type": "array",
+          "description": "Ordered lineage chain from qmroot → triad → entity.",
+          "items": "string"
+        },
+        "origin": {
+          "type": "string",
+          "description": "Primary cosmological origin (always qmroot-0D for Frequency Layer entities)."
+        },
+        "triad": {
+          "type": "string",
+          "description": "Triad inheritance (frequency)."
+        },
+        "entityType": {
+          "type": "string",
+          "description": "Resolved entity type (diagnostic, operator, primitive)."
+        },
+        "metadata": {
+          "optional": true,
+          "description": "Extended lineage metadata returned only if includeMetadata=true."
+        }
+      }
+    },
+    "layer": "L1_Frequency_Unseen",
+    "triad": "frequency",
+    "qmroot": "0D",
+    "canonical": "R5"
+  },
+
+  "resolutionRules": {
+    "diagnostics": {
+      "clarity": ["qmroot-0D", "triad-frequency", "diagnostic-clarity"],
+      "coherence": ["qmroot-0D", "triad-frequency", "diagnostic-coherence"],
+      "alignment": ["qmroot-0D", "triad-frequency", "diagnostic-alignment"],
+      "awareness": ["qmroot-0D", "triad-frequency", "diagnostic-awareness"],
+      "continuity": ["qmroot-0D", "triad-frequency", "diagnostic-continuity"],
+      "drift": ["qmroot-0D", "triad-frequency", "diagnostic-drift"],
+      "regime": ["qmroot-0D", "triad-frequency", "diagnostic-regime"]
+    },
+    "operators": {
+      "oscillation": ["qmroot-0D", "triad-frequency", "operator-oscillation"],
+      "phaseShift": ["qmroot-0D", "triad-frequency", "operator-phaseShift"],
+      "harmonic": ["qmroot-0D", "triad-frequency", "operator-harmonic"],
+      "lineagePulse": ["qmroot-0D", "triad-frequency", "operator-lineagePulse"]
+    }
+  },
+
+  "examples": [
+    {
+      "name": "Lineage tracing example",
+      "input": {
+        "entity": "coherence",
+        "includeMetadata": true
+      },
+      "output": {
+        "lineage": {
+          "ancestry": [
+            "qmroot-0D",
+            "triad-frequency",
+            "diagnostic-coherence"
+          ],
+          "origin": "qmroot-0D",
+          "triad": "frequency",
+          "entityType": "diagnostic",
+          "metadata": {
+            "description": "Coherence inherits its cosmological origin from qmroot-0D and its structural identity from the frequency triad.",
+            "harmonicLevel": 3
+          }
+        },
+        "layer": "L1_Frequency_Unseen",
+        "triad": "frequency",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "reality": {
+        "description": "Machine-level lineage tracing.",
+        "details": "Lineage is resolved using entity → ancestry mapping rules."
+      },
+      "imagination": {
+        "description": "Symbolic interpretation of lineage.",
+        "details": "The unseen resonance field reveals the ancestry chain that gives the entity its identity."
+      },
+      "information": {
+        "description": "Cosmology and lineage notes.",
+        "details": "Lineage tracing inherits qmroot-0D and triad-frequency metadata for cosmological consistency."
+      }
+    }
+  ]
 }
