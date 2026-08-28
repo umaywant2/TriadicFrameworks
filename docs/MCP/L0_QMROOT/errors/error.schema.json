@@ -1,5 +1,104 @@
-{"canonical": "R5",
-"qmroot": "0D",
-"layer": "L0_QMROOT",
-"triad": "origin"
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TriadicFrameworks MCP Error Schema",
+  "description": "Canonical error payload schema for the Origin Layer (0D) of the TriadicFrameworks MCP cosmology.",
+
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L0_QMROOT",
+  "triad": "origin",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string",
+      "description": "Canonical error code defined in canonical.error.codes.json."
+    },
+    "message": {
+      "type": "string",
+      "description": "Human-readable error message."
+    },
+    "field": {
+      "type": "string",
+      "description": "Optional field name associated with the error."
+    },
+    "layer": {
+      "type": "string",
+      "description": "Cosmology layer where the error originated."
+    },
+    "triad": {
+      "type": "string",
+      "description": "Triadic classification of the error."
+    },
+    "qmroot": {
+      "type": "string",
+      "description": "Lineage marker for the TriadicFrameworks cosmology."
+    },
+    "canonical": {
+      "type": "string",
+      "description": "Canonical version identifier."
+    }
+  },
+
+  "required": ["code", "message", "layer", "triad", "qmroot", "canonical"],
+  "additionalProperties": false,
+
+  "examples": [
+    {
+      "name": "Canonical error — missing token",
+      "input": {
+        "clientId": "tfmcp-client-001",
+        "timestamp": "2026-08-28T16:12:00Z"
+      },
+      "error": {
+        "code": "AUTH_MISSING_TOKEN",
+        "message": "Authentication token is required.",
+        "layer": "L0_QMROOT",
+        "triad": "origin",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "interpretation": {
+        "technical": "The payload fails schema validation because the required 'token' field is missing.",
+        "mythic": "The observer approaches the gate without a name; the origin layer cannot open."
+      }
+    },
+    {
+      "name": "Canonical error — operator not found",
+      "input": {
+        "operatorName": "nonexistentOperator"
+      },
+      "error": {
+        "code": "OPERATOR_NOT_FOUND",
+        "message": "Requested operator does not exist.",
+        "layer": "L1_Frequency_Unseen",
+        "triad": "frequency",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "interpretation": {
+        "technical": "The operator registry cannot locate the requested operator.",
+        "mythic": "The frequency layer listens for resonance but hears no oscillation with that name."
+      }
+    },
+    {
+      "name": "Canonical error — schema validation failed",
+      "input": {
+        "unexpectedField": "value"
+      },
+      "error": {
+        "code": "SCHEMA_UNEXPECTED_FIELD",
+        "message": "Input contains fields not defined in schema.",
+        "layer": "L3_Forces_Unseen",
+        "triad": "forces",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "interpretation": {
+        "technical": "The payload includes fields not permitted by the schema.",
+        "mythic": "The structural layer rejects the malformed shape; the universe preserves its order."
+      }
+    }
+  ]
 }
