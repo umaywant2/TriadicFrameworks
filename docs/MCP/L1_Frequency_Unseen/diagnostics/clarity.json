@@ -1,4 +1,100 @@
-{"layer": "L1_Frequency_Unseen",
-"triad": "frequency",
-"qmroot": "0D"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L1_Frequency_Unseen",
+  "triad": "frequency",
+  "title": "TriadicFrameworks MCP — Clarity Diagnostic",
+  "description": "Defines the clarity diagnostic for the Frequency Layer (Unseen). Measures spectral sharpness, noise reduction, and oscillation definition.",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "diagnostic": {
+    "name": "clarity",
+    "family": "spectral",
+    "domain": "frequency",
+    "purpose": "Measure spectral sharpness and reduce noise to reveal the true oscillation pattern.",
+    "lineage": "qmroot-0D",
+    "supportsSpectralAnalysis": true,
+    "supportsResonanceMapping": true,
+    "supportsOperatorIntegration": true
+  },
+
+  "metrics": {
+    "signalToNoise": {
+      "description": "Measures the ratio of meaningful oscillation to background noise.",
+      "range": "0.0–1.0",
+      "ideal": 1.0
+    },
+    "spectralSharpness": {
+      "description": "Measures how sharply defined the oscillation pattern is.",
+      "range": "0.0–1.0",
+      "ideal": 0.95
+    },
+    "patternDefinition": {
+      "description": "Measures how clearly the oscillation pattern can be interpreted.",
+      "range": "0.0–1.0",
+      "ideal": 0.9
+    }
+  },
+
+  "resonance": {
+    "requiresAlignment": true,
+    "requiresAwareness": true,
+    "requiresCoherence": true,
+    "operatorDomain": "frequency",
+    "primitives": [
+      "oscillation",
+      "phaseShift",
+      "harmonic",
+      "lineagePulse"
+    ]
+  },
+
+  "interactions": {
+    "alignment": "Clarity improves alignment by reducing spectral noise that disrupts phase agreement.",
+    "awareness": "Clarity enhances awareness by making oscillation patterns easier to detect.",
+    "coherence": "Clarity stabilizes coherence by sharpening oscillation structure.",
+    "drift": "Low clarity increases drift by allowing noise to distort resonance.",
+    "regime": "Clarity determines whether the oscillation is in readable, transitional, or chaotic regime."
+  },
+
+  "metadata": {
+    "canonical": "R5",
+    "qmroot": "0D",
+    "layer": "L1_Frequency_Unseen",
+    "triad": "frequency"
+  },
+
+  "examples": [
+    {
+      "name": "Clarity diagnostic run",
+      "input": {
+        "operator": "alignment",
+        "signal": "oscillation",
+        "noiseLevel": 0.08
+      },
+      "output": {
+        "clarity": {
+          "signalToNoise": 0.93,
+          "spectralSharpness": 0.90,
+          "patternDefinition": 0.88
+        },
+        "layer": "L1_Frequency_Unseen",
+        "triad": "frequency",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "reality": {
+        "description": "Machine-level clarity diagnostic run.",
+        "details": "Signal-to-noise, spectral sharpness, and pattern definition are computed from operator output."
+      },
+      "imagination": {
+        "description": "Symbolic interpretation of clarity.",
+        "details": "The unseen resonance field becomes transparent, revealing the true shape of oscillation."
+      },
+      "information": {
+        "description": "Cosmology and lineage notes.",
+        "details": "Clarity is anchored to qmroot-0D and triad-frequency, ensuring consistent cosmological interpretation."
+      }
+    }
+  ]
 }
