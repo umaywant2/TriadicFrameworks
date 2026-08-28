@@ -1,4 +1,173 @@
-{"layer": "L1_Frequency_Unseen",
-"triad": "frequency",
-"qmroot": "0D"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L1_Frequency_Unseen",
+  "triad": "frequency",
+  "title": "TriadicFrameworks MCP — Operator Search Tool",
+  "description": "Searches operators within the Frequency Layer (Unseen) using keyword, prefix, or resonance-aware criteria.",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "tool": {
+    "name": "searchOperators",
+    "version": "1.0.0",
+    "purpose": "Search operators by name, prefix, or resonance properties.",
+    "lineage": "qmroot-0D",
+    "supportsOperatorSearch": true,
+    "supportsResonanceSearch": true,
+    "supportsHybridSearch": true
+  },
+
+  "modes": {
+    "keyword": {
+      "description": "Literal keyword match.",
+      "idealUse": "Basic operator discovery."
+    },
+    "prefix": {
+      "description": "Prefix-based search (e.g., 'coh', 'clar').",
+      "idealUse": "Fast operator lookup."
+    },
+    "resonance": {
+      "description": "Search by harmonic level, phase, or primitive.",
+      "idealUse": "Frequency-layer semantic search."
+    },
+    "hybrid": {
+      "description": "Combine keyword and resonance search.",
+      "idealUse": "Complex multi-dimensional queries."
+    }
+  },
+
+  "input": {
+    "query": {
+      "type": "string",
+      "description": "Search query string."
+    },
+    "mode": {
+      "type": "string",
+      "enum": ["keyword", "prefix", "resonance", "hybrid"],
+      "default": "hybrid",
+      "description": "Search mode."
+    },
+    "limit": {
+      "type": "number",
+      "default": 10,
+      "description": "Maximum number of results to return."
+    },
+    "includeMetadata": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether to include metadata in search results."
+    }
+  },
+
+  "output": {
+    "results": {
+      "type": "array",
+      "description": "List of operator search results.",
+      "items": {
+        "name": "string",
+        "domain": "string",
+        "family": "string",
+        "primitives": {
+          "type": "array"
+        },
+        "metadata": {
+          "optional": true,
+          "description": "Extended metadata returned only if includeMetadata=true."
+        }
+      }
+    },
+    "layer": "L1_Frequency_Unseen",
+    "triad": "frequency",
+    "qmroot": "0D",
+    "canonical": "R5"
+  },
+
+  "resolutionRules": {
+    "operators": {
+      "clarity": {
+        "domain": "frequency",
+        "family": "spectral",
+        "primitives": ["oscillation", "harmonic"],
+        "harmonicLevel": 3
+      },
+      "coherence": {
+        "domain": "frequency",
+        "family": "spectral",
+        "primitives": ["harmonic", "phaseShift"],
+        "harmonicLevel": 3
+      },
+      "alignment": {
+        "domain": "frequency",
+        "family": "drift",
+        "primitives": ["phaseShift"],
+        "harmonicLevel": 2
+      },
+      "awareness": {
+        "domain": "frequency",
+        "family": "drift",
+        "primitives": ["oscillation"],
+        "harmonicLevel": 1
+      },
+      "continuity": {
+        "domain": "frequency",
+        "family": "spectral",
+        "primitives": ["harmonic"],
+        "harmonicLevel": 3
+      },
+      "drift": {
+        "domain": "frequency",
+        "family": "drift",
+        "primitives": ["phaseShift"],
+        "harmonicLevel": 2
+      },
+      "regime": {
+        "domain": "frequency",
+        "family": "regime",
+        "primitives": ["harmonic", "phaseShift"],
+        "harmonicLevel": 3
+      }
+    }
+  },
+
+  "examples": [
+    {
+      "name": "Hybrid operator search example",
+      "input": {
+        "query": "coh",
+        "mode": "hybrid",
+        "limit": 5,
+        "includeMetadata": true
+      },
+      "output": {
+        "results": [
+          {
+            "name": "coherence",
+            "domain": "frequency",
+            "family": "spectral",
+            "primitives": ["harmonic", "phaseShift"],
+            "metadata": {
+              "harmonicLevel": 3,
+              "description": "Coherence stabilizes oscillation structure."
+            }
+          }
+        ],
+        "layer": "L1_Frequency_Unseen",
+        "triad": "frequency",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "reality": {
+        "description": "Machine-level operator search.",
+        "details": "Search combines prefix match with resonance metadata filtering."
+      },
+      "imagination": {
+        "description": "Symbolic interpretation of operator search.",
+        "details": "The unseen resonance field highlights operators whose oscillations match the query."
+      },
+      "information": {
+        "description": "Cosmology and lineage notes.",
+        "details": "Operator search inherits qmroot-0D and triad-frequency metadata for cosmological consistency."
+      }
+    }
+  ]
 }
