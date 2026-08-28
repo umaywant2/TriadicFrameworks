@@ -1,4 +1,150 @@
-{"layer": "L3_Forces_Unseen",
-"triad": "forces",
-"qmroot": "0D"
-} 
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "title": "TriadicFrameworks MCP — L3 Forces Unseen Module Schema",
+  "description": "Defines the schema for module identity, purpose, metadata, and lineage within the Forces Unseen Layer.",
+  "note": "This schema governs module-level structure for unseen force-regime mechanics.",
+
+  "schema": {
+    "name": "forceRegimeModule",
+    "version": "1.0.0",
+    "purpose": "Define module identity and metadata for unseen force-regime components.",
+    "lineage": "qmroot-0D",
+
+    "identity": {
+      "type": "object",
+      "fields": {
+        "name": {
+          "type": "string",
+          "description": "Canonical module name."
+        },
+        "category": {
+          "type": "string",
+          "description": "Module category (examples, registry, schemas, spine)."
+        },
+        "purpose": {
+          "type": "string",
+          "description": "Description of the module's cosmological and functional role."
+        }
+      }
+    },
+
+    "metadata": {
+      "type": "object",
+      "fields": {
+        "forceDomain": {
+          "type": "string",
+          "description": "Domain of unseen force-regime mechanics.",
+          "allowed": ["forces"]
+        },
+        "contains": {
+          "type": "array",
+          "description": "List of components or semantics defined by the module.",
+          "items": "string"
+        },
+        "regimeSemantics": {
+          "type": "array",
+          "description": "Force-regime semantics relevant to the module.",
+          "items": [
+            "gradientIntensity",
+            "fieldCoherence",
+            "influenceContinuity",
+            "rupturePotential",
+            "forceIntegrity"
+          ]
+        }
+      }
+    },
+
+    "lineage": {
+      "type": "object",
+      "fields": {
+        "inheritsFrom": {
+          "type": "string",
+          "description": "Ancestor cosmological layer.",
+          "allowed": [
+            "L0_QMROOT",
+            "L1_Frequency_Unseen",
+            "L2_Fluids_Seen"
+          ]
+        },
+        "inheritanceStrength": {
+          "type": "number",
+          "description": "Strength of lineage inheritance.",
+          "range": [0, 1]
+        }
+      }
+    }
+  },
+
+  "examples": [
+    {
+      "name": "Module schema example",
+      "input": {
+        "identity": {
+          "name": "examples",
+          "category": "examples",
+          "purpose": "Demonstrate unseen force regimes and causal gradients."
+        },
+        "metadata": {
+          "forceDomain": "forces",
+          "contains": ["force examples", "regime transformations"],
+          "regimeSemantics": [
+            "gradientIntensity",
+            "fieldCoherence",
+            "influenceContinuity",
+            "rupturePotential",
+            "forceIntegrity"
+          ]
+        },
+        "lineage": {
+          "inheritsFrom": "L2_Fluids_Seen",
+          "inheritanceStrength": 0.74
+        }
+      },
+      "output": {
+        "module": {
+          "name": "examples",
+          "category": "examples",
+          "purpose": "Demonstrate unseen force regimes and causal gradients.",
+          "metadata": {
+            "forceDomain": "forces",
+            "contains": ["force examples", "regime transformations"],
+            "regimeSemantics": [
+              "gradientIntensity",
+              "fieldCoherence",
+              "influenceContinuity",
+              "rupturePotential",
+              "forceIntegrity"
+            ]
+          },
+          "lineage": {
+            "inheritsFrom": "L2_Fluids_Seen",
+            "inheritanceStrength": 0.74
+          },
+          "layer": "L3_Forces_Unseen",
+          "triad": "forces",
+          "qmroot": "0D",
+          "canonical": "R5"
+        }
+      },
+
+      "reality": {
+        "description": "Machine-level module schema resolution.",
+        "details": "Module identity, metadata, and lineage resolved according to schema definitions."
+      },
+
+      "imagination": {
+        "description": "Symbolic interpretation.",
+        "details": "Unseen force modules reveal their structural influence patterns."
+      },
+
+      "information": {
+        "description": "Cosmology notes.",
+        "details": "Module lineage flows qmroot → frequency → fluids → forces."
+      }
+    }
+  ]
+}
