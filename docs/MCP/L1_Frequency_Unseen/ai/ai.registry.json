@@ -1,4 +1,87 @@
-{"layer": "L1_Frequency_Unseen",
-"triad": "frequency",
-"qmroot": "0D"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L1_Frequency_Unseen",
+  "triad": "frequency",
+  "title": "TriadicFrameworks MCP — AI Registry Metadata",
+  "description": "Defines registry metadata for AI identities and modules within the Frequency Layer (Unseen).",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "identity": {
+    "name": "TriadicFrameworks-AI-Registry",
+    "version": "1.0.0",
+    "lineage": "qmroot-0D",
+    "cosmology": "L1_Frequency_Unseen",
+    "triad": "frequency",
+    "description": "AI registry identity for resonance-based indexing and identity resolution within the Frequency Layer."
+  },
+
+  "registry": {
+    "modules": [
+      "ai.contact",
+      "ai.discussions",
+      "ai.license",
+      "ai.module",
+      "ai.modules",
+      "ai.navigation",
+      "ai.operator",
+      "ai.session"
+    ],
+    "supportsIdentityLookup": true,
+    "supportsModuleLookup": true,
+    "supportsLineageResolution": true,
+    "supportsResonanceMapping": true
+  },
+
+  "resonance": {
+    "operatorDomain": "frequency",
+    "requiresCoherence": true,
+    "requiresAlignment": true,
+    "supportsSpectralAnalysis": true,
+    "supportsDiagnosticIntegration": true
+  },
+
+  "metadata": {
+    "canonical": "R5",
+    "qmroot": "0D",
+    "layer": "L1_Frequency_Unseen",
+    "triad": "frequency"
+  },
+
+  "examples": [
+    {
+      "name": "Canonical AI registry lookup",
+      "input": {
+        "request": "getAIRegistry"
+      },
+      "output": {
+        "modules": [
+          "ai.contact",
+          "ai.discussions",
+          "ai.license",
+          "ai.module",
+          "ai.modules",
+          "ai.navigation",
+          "ai.operator",
+          "ai.session"
+        ],
+        "layer": "L1_Frequency_Unseen",
+        "triad": "frequency",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "reality": {
+        "description": "Machine-level registry lookup for AI identities and modules.",
+        "details": "The registry enumerates all AI modules defined within the Frequency Layer."
+      },
+      "imagination": {
+        "description": "Symbolic interpretation of the registry.",
+        "details": "The unseen resonance field reveals its catalog of instruments, each tuned to a different oscillation."
+      },
+      "information": {
+        "description": "Cosmology and lineage notes.",
+        "details": "Registry identity anchored to qmroot-0D ensures consistent cosmological alignment."
+      }
+    }
+  ]
 }
