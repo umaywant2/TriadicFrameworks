@@ -1,4 +1,157 @@
-{"layer": "L1_Frequency_Unseen",
-"triad": "frequency",
-"qmroot": "0D"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L1_Frequency_Unseen",
+  "triad": "frequency",
+  "title": "TriadicFrameworks MCP — Graph Traversal",
+  "description": "Traverses the resonance graph of the Frequency Layer (Unseen). Supports harmonic, phase, and lineage traversal modes.",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "function": {
+    "name": "graph.traverse",
+    "version": "1.0.0",
+    "purpose": "Traverse the unseen resonance graph using harmonic, phase, or lineage traversal modes.",
+    "lineage": "qmroot-0D",
+    "supportsTraversal": true,
+    "supportsResonanceGraph": true,
+    "supportsMultiModeTraversal": true
+  },
+
+  "modes": {
+    "harmonic": {
+      "description": "Traverse nodes connected through harmonic resonance relationships.",
+      "idealUse": "Exploring spectral alignment and coherence structures."
+    },
+    "phase": {
+      "description": "Traverse nodes connected through phase relationships.",
+      "idealUse": "Exploring alignment, drift, and phase stability."
+    },
+    "lineage": {
+      "description": "Traverse nodes connected through qmroot lineage relationships.",
+      "idealUse": "Exploring cosmology, ancestry, and structural inheritance."
+    }
+  },
+
+  "input": {
+    "startNodeId": {
+      "type": "string",
+      "description": "The ID of the node where traversal begins."
+    },
+    "mode": {
+      "type": "string",
+      "enum": ["harmonic", "phase", "lineage"],
+      "default": "harmonic",
+      "description": "Traversal mode."
+    },
+    "depth": {
+      "type": "number",
+      "default": 3,
+      "description": "Maximum traversal depth."
+    },
+    "includeMetadata": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether to include full node and edge metadata."
+    }
+  },
+
+  "output": {
+    "path": {
+      "type": "array",
+      "description": "Ordered list of nodes visited during traversal.",
+      "items": {
+        "nodeId": "string",
+        "label": "string",
+        "metadata": {
+          "optional": true,
+          "description": "Node metadata returned only if includeMetadata=true."
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "description": "Edges traversed.",
+      "items": {
+        "edgeId": "string",
+        "from": "string",
+        "to": "string",
+        "weight": "number",
+        "metadata": {
+          "optional": true
+        }
+      }
+    },
+    "layer": "L1_Frequency_Unseen",
+    "triad": "frequency",
+    "qmroot": "0D",
+    "canonical": "R5"
+  },
+
+  "resonance": {
+    "graphType": "oscillation-graph",
+    "supportsHarmonicTraversal": true,
+    "supportsPhaseTraversal": true,
+    "supportsLineageTraversal": true,
+    "operatorDomain": "frequency"
+  },
+
+  "examples": [
+    {
+      "name": "Harmonic traversal example",
+      "input": {
+        "startNodeId": "clarity-01",
+        "mode": "harmonic",
+        "depth": 2,
+        "includeMetadata": true
+      },
+      "output": {
+        "path": [
+          {
+            "nodeId": "clarity-01",
+            "label": "Clarity Diagnostic Node",
+            "metadata": {
+              "harmonicLevel": 3,
+              "description": "Clarity sharpens oscillation structure."
+            }
+          },
+          {
+            "nodeId": "coherence-02",
+            "label": "Coherence Diagnostic Node",
+            "metadata": {
+              "harmonicLevel": 3,
+              "description": "Coherence stabilizes oscillation structure."
+            }
+          }
+        ],
+        "edges": [
+          {
+            "edgeId": "clarity→coherence",
+            "from": "clarity-01",
+            "to": "coherence-02",
+            "weight": 0.92,
+            "metadata": {
+              "type": "harmonic",
+              "description": "Clarity strengthens coherence."
+            }
+          }
+        ],
+        "layer": "L1_Frequency_Unseen",
+        "triad": "frequency",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "reality": {
+        "description": "Machine-level harmonic traversal.",
+        "details": "Traversal follows harmonic edges between resonance nodes."
+      },
+      "imagination": {
+        "description": "Symbolic interpretation of traversal.",
+        "details": "The unseen resonance field reveals a harmonic pathway through oscillation structure."
+      },
+      "information": {
+        "description": "Cosmology and lineage notes.",
+        "details": "Traversal inherits qmroot-0D and triad-frequency metadata for cosmological consistency."
+      }
+    }
+  ]
 }
