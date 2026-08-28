@@ -1,3 +1,124 @@
-{"layer": "L2_Fluids_Seen",
-"triad": "fluids"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L2_Fluids_Seen",
+  "triad": "fluids",
+  "title": "TriadicFrameworks MCP — Fluid Substrate Listing Tool",
+  "description": "Lists all fluid substrates available within the Fluids Seen Layer, including laminar, turbulent, viscous, and continuity-governed substrates.",
+  "note": "This is the canonical listing function for L2 fluid substrates.",
+
+  "function": {
+    "name": "fs.list",
+    "version": "1.0.0",
+    "purpose": "Enumerate all fluid substrates accessible to L2_Fluids_Seen.",
+    "lineage": "qmroot-0D",
+    "supportsFluidListing": true,
+    "supportsResonanceClassification": true
+  },
+
+  "input": {
+    "includeMetadata": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether to include metadata for each fluid substrate."
+    },
+    "filter": {
+      "type": "string",
+      "enum": ["all", "laminar", "turbulent", "viscous", "continuity"],
+      "default": "all",
+      "description": "Optional filter for substrate type."
+    }
+  },
+
+  "output": {
+    "substrates": {
+      "type": "array",
+      "description": "List of fluid substrates.",
+      "items": {
+        "name": "string",
+        "category": "string",
+        "metadata": {
+          "optional": true,
+          "description": "Extended substrate metadata returned only if includeMetadata=true."
+        }
+      }
+    },
+    "layer": "L2_Fluids_Seen",
+    "triad": "fluids",
+    "qmroot": "0D",
+    "canonical": "R5"
+  },
+
+  "substrateDefinitions": {
+    "laminar": {
+      "name": "laminarFlow",
+      "category": "laminar",
+      "metadata": {
+        "description": "Smooth, ordered flow with minimal turbulence.",
+        "continuity": 0.95
+      }
+    },
+    "turbulent": {
+      "name": "turbulentFlow",
+      "category": "turbulent",
+      "metadata": {
+        "description": "Chaotic, high-energy flow with unstable vortices.",
+        "continuity": 0.42
+      }
+    },
+    "viscous": {
+      "name": "viscousMedium",
+      "category": "viscous",
+      "metadata": {
+        "description": "High-resistance medium with strong internal friction.",
+        "continuity": 0.78
+      }
+    },
+    "continuity": {
+      "name": "continuityChannel",
+      "category": "continuity",
+      "metadata": {
+        "description": "Stable channel preserving identity across flow transitions.",
+        "continuity": 0.99
+      }
+    }
+  },
+
+  "examples": [
+    {
+      "name": "Fluid substrate listing example",
+      "input": {
+        "includeMetadata": true,
+        "filter": "laminar"
+      },
+      "output": {
+        "substrates": [
+          {
+            "name": "laminarFlow",
+            "category": "laminar",
+            "metadata": {
+              "description": "Smooth, ordered flow with minimal turbulence.",
+              "continuity": 0.95
+            }
+          }
+        ],
+        "layer": "L2_Fluids_Seen",
+        "triad": "fluids",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "reality": {
+        "description": "Machine-level fluid substrate listing.",
+        "details": "Returns laminar substrates with continuity metadata."
+      },
+      "imagination": {
+        "description": "Symbolic interpretation.",
+        "details": "The fluid field reveals its smoothest, most stable channels."
+      },
+      "information": {
+        "description": "Cosmology notes.",
+        "details": "Fluid substrates inherit qmroot lineage through frequency into seen-layer dynamics."
+      }
+    }
+  ]
 }
