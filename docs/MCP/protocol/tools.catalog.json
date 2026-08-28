@@ -1,1 +1,239 @@
+{
+  "version": "0.1.0",
+  "tools": [
+    {
+      "name": "getCapabilities",
+      "description": "Return the server capabilities including available tools, resources, and protocol version.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "version": { "type": "string" },
+          "tools": { "type": "array", "items": { "type": "string" } },
+          "resources": { "type": "array", "items": { "type": "string" } }
+        },
+        "required": ["version", "tools"]
+      }
+    },
+
+    {
+      "name": "listModules",
+      "description": "List all modules in the TriadicFrameworks corpus, across all layers.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "layer": { "type": "string" }
+        },
+        "required": []
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "modules": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": { "type": "string" },
+                "name": { "type": "string" },
+                "layer": { "type": "string" }
+              },
+              "required": ["id", "name", "layer"]
+            }
+          }
+        },
+        "required": ["modules"]
+      }
+    },
+
+    {
+      "name": "getModule",
+      "description": "Return the metadata, lineage, and schema reference for a single module.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" }
+        },
+        "required": ["id"]
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "layer": { "type": "string" },
+          "metadata": { "type": "object" }
+        },
+        "required": ["id", "name", "layer", "metadata"]
+      }
+    },
+
+    {
+      "name": "getOperator",
+      "description": "Return operator metadata including definition, layer, and analyzer mapping.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "operator": { "type": "string" }
+        },
+        "required": ["operator"]
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "operator": { "type": "string" },
+          "definition": { "type": "string" },
+          "layer": { "type": "string" }
+        },
+        "required": ["operator", "definition", "layer"]
+      }
+    },
+
+    {
+      "name": "searchOperators",
+      "description": "Search operators by keyword, regime, or analyzer layer.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": { "type": "string" }
+        },
+        "required": ["query"]
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "results": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "operator": { "type": "string" },
+                "definition": { "type": "string" },
+                "layer": { "type": "string" }
+              },
+              "required": ["operator", "definition", "layer"]
+            }
+          }
+        },
+        "required": ["results"]
+      }
+    },
+
+    {
+      "name": "traceLineage",
+      "description": "Return the lineage chain for a module or operator across the four-layer cosmology.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" }
+        },
+        "required": ["id"]
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "lineage": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["lineage"]
+      }
+    },
+
+    {
+      "name": "diagnoseDrift",
+      "description": "Compute drift metrics including phase slippage, harmonic deviation, and instability index.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "phaseHistory": {
+            "type": "array",
+            "items": { "type": "number" }
+          },
+          "harmonicLayers": {
+            "type": "array",
+            "items": { "type": "number" }
+          },
+          "operator": { "type": "string" }
+        },
+        "required": ["phaseHistory"]
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "driftIndex": { "type": "number" },
+          "instability": { "type": "number" },
+          "notes": { "type": "string" }
+        },
+        "required": ["driftIndex", "instability"]
+      }
+    },
+
+    {
+      "name": "mapRegime",
+      "description": "Map a module or operator to its force-regime (gradient, field, rupture, integrity).",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" }
+        },
+        "required": ["id"]
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "regime": { "type": "string" }
+        },
+        "required": ["regime"]
+      }
+    },
+
+    {
+      "name": "resolveCoherence",
+      "description": "Return coherence diagnostics including layer alignment, triad consistency, and schema validity.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" }
+        },
+        "required": ["id"]
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "coherent": { "type": "boolean" },
+          "issues": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["coherent"]
+      }
+    },
+
+    {
+      "name": "renderSessionContext",
+      "description": "Render the canonical session context block for a module or operator.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" }
+        },
+        "required": ["id"]
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "context": { "type": "object" }
+        },
+        "required": ["context"]
+      }
+    }
+  ]
+}
 
