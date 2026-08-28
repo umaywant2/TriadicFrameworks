@@ -1,0 +1,42 @@
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "title": "TriadicFrameworks MCP — L3 Forces Unseen Example Stub",
+  "description": "Minimal example stub for the Forces Unseen Layer. Provides a canonical template for force-regime examples.",
+  "note": "This is a stub file. Replace or extend as needed for module-specific examples.",
+
+  "example": {
+    "name": "stub-force-example",
+    "input": {
+      "gradientIntensity": 0.50,
+      "fieldCoherence": 0.40,
+      "influenceContinuity": 0.75
+    },
+    "output": {
+      "regimeStability": 0.62,
+      "rupturePotential": 0.18,
+      "forceIntegrity": 0.71,
+      "layer": "L3_Forces_Unseen",
+      "triad": "forces",
+      "qmroot": "0D",
+      "canonical": "R5"
+    },
+
+    "reality": {
+      "description": "Machine-level force-state evaluation.",
+      "details": "Force-state metrics computed from gradientIntensity, fieldCoherence, and influenceContinuity."
+    },
+
+    "imagination": {
+      "description": "Symbolic interpretation of unseen forces.",
+      "details": "The unseen force field stabilizes into a coherent influence regime."
+    },
+
+    "information": {
+      "description": "Cosmology and lineage notes.",
+      "details": "Force regimes inherit qmroot lineage through frequency and fluids into unseen-layer dynamics."
+    }
+  }
+}
