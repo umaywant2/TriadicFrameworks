@@ -1,4 +1,109 @@
-{"layer": "L1_Frequency_Unseen",
-"triad": "frequency",
-"qmroot": "0D"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L1_Frequency_Unseen",
+  "triad": "frequency",
+  "title": "TriadicFrameworks MCP — AI Operator Metadata",
+  "description": "Defines operator metadata, domains, resonance primitives, and diagnostic alignment for the Frequency Layer (Unseen).",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "identity": {
+    "name": "TriadicFrameworks-AI-Operator",
+    "version": "1.0.0",
+    "lineage": "qmroot-0D",
+    "cosmology": "L1_Frequency_Unseen",
+    "triad": "frequency",
+    "description": "AI operator identity for resonance-based interpretation within the Frequency Layer."
+  },
+
+  "operator": {
+    "domain": "frequency",
+    "families": {
+      "spectral": [
+        "clarity",
+        "coherence",
+        "continuity"
+      ],
+      "drift": [
+        "drift",
+        "alignment",
+        "awareness"
+      ],
+      "regime": [
+        "regime",
+        "threshold",
+        "phase"
+      ]
+    },
+    "primitives": {
+      "oscillation": "Base resonance primitive for all frequency operators.",
+      "phaseShift": "Operator primitive for adjusting resonance phase.",
+      "harmonic": "Operator primitive for multi-frequency alignment.",
+      "lineagePulse": "Operator primitive tied to qmroot lineage."
+    },
+    "default": "clarity",
+    "supportsResolution": true,
+    "supportsSearch": true,
+    "supportsDiagnostics": true,
+    "supportsLineageMapping": true
+  },
+
+  "diagnostics": {
+    "alignment": true,
+    "awareness": true,
+    "clarity": true,
+    "coherence": true,
+    "continuity": true,
+    "drift": true,
+    "regime": true
+  },
+
+  "resonance": {
+    "operatorDomain": "frequency",
+    "requiresCoherence": true,
+    "requiresAlignment": true,
+    "requiresContinuity": true,
+    "supportsSpectralAnalysis": true,
+    "supportsResonanceMapping": true
+  },
+
+  "metadata": {
+    "canonical": "R5",
+    "qmroot": "0D",
+    "layer": "L1_Frequency_Unseen",
+    "triad": "frequency"
+  },
+
+  "examples": [
+    {
+      "name": "Canonical operator lookup",
+      "input": {
+        "operatorName": "clarity"
+      },
+      "output": {
+        "operator": {
+          "name": "clarity",
+          "domain": "frequency",
+          "family": "spectral",
+          "primitive": "oscillation"
+        },
+        "layer": "L1_Frequency_Unseen",
+        "triad": "frequency",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "reality": {
+        "description": "Machine-level operator lookup for the Frequency Layer.",
+        "details": "Operator metadata is resolved from the spectral family and resonance primitives."
+      },
+      "imagination": {
+        "description": "Symbolic interpretation of the clarity operator.",
+        "details": "The unseen resonance field sharpens, revealing the structure of oscillation."
+      },
+      "information": {
+        "description": "Cosmology and lineage notes.",
+        "details": "Operator identity anchored to qmroot-0D ensures consistent cosmological alignment."
+      }
+    }
+  ]
 }
