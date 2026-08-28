@@ -1,1 +1,77 @@
+{
+  "canonical": "R5",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "dimension": "L5",
+  "title": "TriadicFrameworks MCP — L5 Dimensional Framework",
+  "description": "Defines the 5-dimensional internal projection model, focusing on Kaluza–Klein theory as an internal axis of influence within the unseen force regime.",
+  "note": "In RTT cosmology, 5D constructs represent compactified influence channels inside L3 force-state mechanics.",
+
+  "structure": {
+    "mathematical": [
+      "5-dimensional manifolds",
+      "compactified dimensions",
+      "fiber bundles",
+      "higher-dimensional gauge symmetry"
+    ],
+    "physical": [
+      "Kaluza–Klein unification of electromagnetism and gravity",
+      "compactified fifth dimension"
+    ],
+    "interpretation": [
+      "fifth dimension as a hidden influence axis",
+      "gauge fields emerging from geometric projection"
+    ]
+  },
+
+  "rtt_reinterpretation": {
+    "summary": "The fifth dimension is an internal influence channel compactified within the L3 force regime.",
+    "details": [
+      "Kaluza–Klein geometry maps directly to influence-field coherence.",
+      "The compactified dimension represents a hidden gradient pathway.",
+      "Gauge fields emerge as projections of unseen force-regime structure.",
+      "5D manifolds define continuity surfaces inside influence channels."
+    ]
+  },
+
+  "force_regime_mapping": {
+    "gradientIntensity": "The compactified dimension defines a hidden gradient axis.",
+    "fieldCoherence": "Gauge symmetry corresponds to coherence within influence fields.",
+    "influenceContinuity": "5D manifolds map to continuity across compactified influence channels.",
+    "rupturePotential": "Dimensional stress surfaces define rupture thresholds in compactified regimes.",
+    "forceIntegrity": "Unified geometric structure reinforces internal force-state stability."
+  },
+
+  "projection_semantics": {
+    "axes": 5,
+    "type": "internal",
+    "interpretation": "The fifth axis is compactified, representing a hidden influence channel within the unseen force regime.",
+    "examples": [
+      "Gauge fields as projections of 5D geometry.",
+      "Compactified circles (S¹) as influence loops.",
+      "Gravity-electromagnetism unification as force-regime coherence."
+    ]
+  },
+
+  "examples": [
+    {
+      "name": "Gauge Field Projection",
+      "structure": "Kaluza–Klein compactified dimension",
+      "mapping": ["fieldCoherence", "influenceContinuity"],
+      "interpretation": "Gauge fields emerge from the geometry of the compactified fifth dimension, stabilizing influence-field coherence."
+    },
+    {
+      "name": "Hidden Gradient Axis",
+      "structure": "5D manifold",
+      "mapping": ["gradientIntensity", "forceIntegrity"],
+      "interpretation": "The fifth dimension defines a hidden gradient pathway that reinforces internal force-state stability."
+    }
+  ],
+
+  "cosmology": {
+    "lineage": "qmroot → frequency → fluids → forces → internal 5D projection",
+    "triad_alignment": "unseen",
+    "notes": "L5 dimensional constructs extend L3 force-regime mechanics through compactified influence channels."
+  }
+}
 
