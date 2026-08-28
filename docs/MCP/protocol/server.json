@@ -1,1 +1,47 @@
+{
+  "name": "triadicframeworks-mcp",
+  "version": "0.1.0",
+  "description": "MCP server exposing TriadicFrameworks modules, operators, lineage, drift diagnostics, coherence checks, and example resources.",
+
+  "packages": [
+    {
+      "name": "stdio",
+      "transport": "stdio",
+      "description": "Standard MCP JSON-RPC over stdio transport."
+    }
+  ],
+
+  "tools": [
+    "getCapabilities",
+    "listModules",
+    "getModule",
+    "getOperator",
+    "searchOperators",
+    "traceLineage",
+    "diagnoseDrift",
+    "mapRegime",
+    "resolveCoherence",
+    "renderSessionContext",
+    "listExamples",
+    "getExample",
+    "searchExamples"
+  ],
+
+  "resources": [
+    "modules",
+    "operators",
+    "examples",
+    "schemas",
+    "spines",
+    "registry"
+  ],
+
+  "prompts": [
+    "explainModule",
+    "diagnoseModule",
+    "mapModuleRegime",
+    "summarizeOperator",
+    "explainExample"
+  ]
+}
 
