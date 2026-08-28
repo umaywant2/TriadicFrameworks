@@ -1,3 +1,87 @@
-{"layer": "L3_Forces_Unseen",
-"triad": "forces"
-} 
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "title": "TriadicFrameworks MCP — AI Registry Metadata (L3 Forces Unseen)",
+  "description": "Defines registry metadata for AI identities and modules within the Forces Unseen Layer.",
+  "note": "This registry anchors all AI components operating in the unseen force regime domain.",
+
+  "identity": {
+    "name": "TriadicFrameworks-AI-Registry-L3",
+    "version": "1.0.0",
+    "lineage": "qmroot-0D",
+    "cosmology": "L3_Forces_Unseen",
+    "triad": "forces",
+    "description": "AI registry identity for force-regime indexing and influence-field resolution."
+  },
+
+  "registry": {
+    "modules": [
+      "ai.contact",
+      "ai.discussions",
+      "ai.license",
+      "ai.module",
+      "ai.modules",
+      "ai.navigation",
+      "ai.operator",
+      "ai.session"
+    ],
+    "supportsIdentityLookup": true,
+    "supportsModuleLookup": true,
+    "supportsLineageResolution": true,
+    "supportsForceRegimeMapping": true
+  },
+
+  "forceRegime": {
+    "operatorDomain": "forces",
+    "supportsGradientAnalysis": true,
+    "supportsInfluenceFieldMapping": true,
+    "supportsRupturePotentialDiagnostics": true,
+    "supportsRegimeStabilityEvaluation": true
+  },
+
+  "metadata": {
+    "canonical": "R5",
+    "qmroot": "0D",
+    "layer": "L3_Forces_Unseen",
+    "triad": "forces"
+  },
+
+  "examples": [
+    {
+      "name": "Canonical AI registry lookup (L3)",
+      "input": {
+        "request": "getAIRegistry"
+      },
+      "output": {
+        "modules": [
+          "ai.contact",
+          "ai.discussions",
+          "ai.license",
+          "ai.module",
+          "ai.modules",
+          "ai.navigation",
+          "ai.operator",
+          "ai.session"
+        ],
+        "layer": "L3_Forces_Unseen",
+        "triad": "forces",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "reality": {
+        "description": "Machine-level registry lookup for AI identities and modules.",
+        "details": "The registry enumerates all AI modules defined within the Forces Unseen layer."
+      },
+      "imagination": {
+        "description": "Symbolic interpretation of unseen forces.",
+        "details": "The unseen force field reveals its catalog of influence instruments."
+      },
+      "information": {
+        "description": "Cosmology and lineage notes.",
+        "details": "Registry identity anchored to qmroot-0D ensures consistent cosmological alignment."
+      }
+    }
+  ]
+}
