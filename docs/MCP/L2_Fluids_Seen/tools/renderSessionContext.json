@@ -1,4 +1,91 @@
-{"layer": "L2_Fluids_Seen",
-"triad": "fluids",
-"qmroot": "0D"
-} 
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L2_Fluids_Seen",
+  "triad": "fluids",
+  "title": "TriadicFrameworks MCP — Session Context Renderer",
+  "description": "Renders the canonical session-context HTML block for L2 Fluids Seen modules.",
+  "note": "This is the canonical renderer for fluidic resonance session-context blocks.",
+
+  "tool": {
+    "name": "renderSessionContext",
+    "version": "1.0.0",
+    "purpose": "Generate the HTML session-context block for any L2 module.",
+    "lineage": "qmroot-0D",
+    "supportsSessionContext": true
+  },
+
+  "input": {
+    "module": {
+      "type": "string",
+      "description": "Name of the module requesting the session-context block."
+    },
+    "context": {
+      "type": "object",
+      "description": "Optional overrides for context fields.",
+      "fields": {
+        "drift": "string",
+        "coherence": "string",
+        "version": "string",
+        "audience": "string"
+      }
+    }
+  },
+
+  "output": {
+    "html": {
+      "type": "string",
+      "description": "Rendered HTML session-context block."
+    },
+    "layer": "L2_Fluids_Seen",
+    "triad": "fluids",
+    "qmroot": "0D",
+    "canonical": "R5"
+  },
+
+  "defaults": {
+    "drift": "Seen-layer fluidic drift",
+    "coherence": "Flow-state coherence",
+    "version": "1.0.0",
+    "audience": "MCP implementers, RTT researchers, cosmology engineers"
+  },
+
+  "template": {
+    "html": "<div class=\"session-context\">\n  <span class=\"context-label\">Canon:</span>\n  <span class=\"context-value\">R5</span>\n\n  <span class=\"context-label\">Modules:</span>\n  <span class=\"context-value\">L2_Fluids_Seen</span>\n\n  <span class=\"context-label\">Drift:</span>\n  <span class=\"context-value\">{{drift}}</span>\n\n  <span class=\"context-label\">Coherence:</span>\n  <span class=\"context-value\">{{coherence}}</span>\n\n  <span class=\"context-label\">Version:</span>\n  <span class=\"context-value\">{{version}}</span>\n\n  <span class=\"context-label\">Format:</span>\n  <span class=\"context-value\">module</span>\n\n  <span class=\"context-label\">Front door:</span>\n  <span class=\"context-value\">docs/MCP/L2_Fluids_Seen/{{module}}</span>\n\n  <span class=\"context-label\">Every page:</span>\n  <span class=\"context-value\">inherits qmroot → frequency → fluids</span>\n\n  <span class=\"context-label\">Audience:</span>\n  <span class=\"context-value\">{{audience}}</span>\n</div>"
+  },
+
+  "examples": [
+    {
+      "name": "Render session context for fs.list",
+      "input": {
+        "module": "fs.list",
+        "context": {
+          "drift": "Laminar drift",
+          "coherence": "Substrate coherence"
+        }
+      },
+      "output": {
+        "html": "<div class=\"session-context\">\n  <span class=\"context-label\">Canon:</span>\n  <span class=\"context-value\">R5</span>\n  <span class=\"context-label\">Modules:</span>\n  <span class=\"context-value\">L2_Fluids_Seen</span>\n  <span class=\"context-label\">Drift:</span>\n  <span class=\"context-value\">Laminar drift</span>\n  <span class=\"context-label\">Coherence:</span>\n  <span class=\"context-value\">Substrate coherence</span>\n  <span class=\"context-label\">Version:</span>\n  <span class=\"context-value\">1.0.0</span>\n  <span class=\"context-label\">Format:</span>\n  <span class=\"context-value\">module</span>\n  <span class=\"context-label\">Front door:</span>\n  <span class=\"context-value\">docs/MCP/L2_Fluids_Seen/fs.list</span>\n  <span class=\"context-label\">Every page:</span>\n  <span class=\"context-value\">inherits qmroot → frequency → fluids</span>\n  <span class=\"context-label\">Audience:</span>\n  <span class=\"context-value\">MCP implementers, RTT researchers, cosmology engineers</span>\n</div>",
+        "layer": "L2_Fluids_Seen",
+        "triad": "fluids",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+
+      "reality": {
+        "description": "Machine-level HTML rendering.",
+        "details": "Context fields are merged with defaults and injected into the template."
+      },
+
+      "imagination": {
+        "description": "Symbolic interpretation.",
+        "details": "The fluid field stabilizes into a coherent laminar context block."
+      },
+
+      "information": {
+        "description": "Cosmology notes.",
+        "details": "Session context inherits qmroot lineage through frequency into seen-layer fluid dynamics."
+      }
+    }
+  ]
+}
