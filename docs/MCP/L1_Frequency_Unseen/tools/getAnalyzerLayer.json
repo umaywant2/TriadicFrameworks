@@ -1,4 +1,98 @@
-{"layer": "L1_Frequency_Unseen",
-"triad": "frequency",
-"qmroot": "0D"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L1_Frequency_Unseen",
+  "triad": "frequency",
+  "title": "TriadicFrameworks MCP — Analyzer Layer Resolver",
+  "description": "Resolves the analyzer layer for a given operator, diagnostic, or resonance primitive within the Frequency Layer.",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "tool": {
+    "name": "getAnalyzerLayer",
+    "version": "1.0.0",
+    "purpose": "Determine the analyzer layer (L0–L3) for a given entity.",
+    "lineage": "qmroot-0D",
+    "supportsIntrospection": true,
+    "supportsLayerResolution": true
+  },
+
+  "input": {
+    "entity": {
+      "type": "string",
+      "description": "Name or ID of the operator, diagnostic, or resonance primitive."
+    },
+    "includeMetadata": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether to include metadata about the resolved layer."
+    }
+  },
+
+  "output": {
+    "layer": {
+      "type": "string",
+      "description": "Resolved analyzer layer (e.g., L0_QMROOT, L1_Frequency_Unseen, L2_Fluids_Seen, L3_Forces_Unseen)."
+    },
+    "metadata": {
+      "optional": true,
+      "description": "Metadata returned only if includeMetadata=true."
+    },
+    "triad": "frequency",
+    "qmroot": "0D",
+    "canonical": "R5"
+  },
+
+  "resolutionRules": {
+    "diagnostics": {
+      "clarity": "L1_Frequency_Unseen",
+      "alignment": "L1_Frequency_Unseen",
+      "awareness": "L1_Frequency_Unseen",
+      "coherence": "L1_Frequency_Unseen",
+      "continuity": "L1_Frequency_Unseen",
+      "drift": "L1_Frequency_Unseen",
+      "regime": "L1_Frequency_Unseen"
+    },
+    "operators": {
+      "oscillation": "L1_Frequency_Unseen",
+      "phaseShift": "L1_Frequency_Unseen",
+      "harmonic": "L1_Frequency_Unseen",
+      "lineagePulse": "L0_QMROOT"
+    },
+    "primitives": {
+      "qmroot": "L0_QMROOT",
+      "frequency": "L1_Frequency_Unseen"
+    }
+  },
+
+  "examples": [
+    {
+      "name": "Analyzer layer resolution example",
+      "input": {
+        "entity": "coherence",
+        "includeMetadata": true
+      },
+      "output": {
+        "layer": "L1_Frequency_Unseen",
+        "metadata": {
+          "entityType": "diagnostic",
+          "description": "Coherence is a spectral diagnostic belonging to the Frequency Layer."
+        },
+        "triad": "frequency",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "reality": {
+        "description": "Machine-level analyzer layer resolution.",
+        "details": "Layer is resolved using diagnostic → layer mapping rules."
+      },
+      "imagination": {
+        "description": "Symbolic interpretation of layer resolution.",
+        "details": "The unseen resonance field reveals the structural tier where the entity resides."
+      },
+      "information": {
+        "description": "Cosmology and lineage notes.",
+        "details": "Layer resolution inherits qmroot-0D and triad-frequency metadata for cosmological consistency."
+      }
+    }
+  ]
 }
