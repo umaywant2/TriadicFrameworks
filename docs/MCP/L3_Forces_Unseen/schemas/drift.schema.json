@@ -1,4 +1,103 @@
-{"layer": "L3_Forces_Unseen",
-"triad": "forces",
-"qmroot": "0D"
-} 
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "title": "TriadicFrameworks MCP — L3 Forces Unseen Drift Schema",
+  "description": "Defines the schema for force-regime drift, including gradient drift, influence drift, coherence drift, and rupture drift.",
+  "note": "This schema governs unseen force-state drift evaluation.",
+
+  "schema": {
+    "name": "forceRegimeDrift",
+    "version": "1.0.0",
+    "purpose": "Analyze drift within unseen force regimes and compute drift-state metrics.",
+    "lineage": "qmroot-0D",
+
+    "input": {
+      "type": "object",
+      "fields": {
+        "gradientDrift": {
+          "type": "number",
+          "description": "Change in directional causal gradient over time.",
+          "range": [0, 1]
+        },
+        "fieldDrift": {
+          "type": "number",
+          "description": "Change in unseen influence field coherence.",
+          "range": [0, 1]
+        },
+        "continuityDrift": {
+          "type": "number",
+          "description": "Change in influence continuity across transitions.",
+          "range": [0, 1]
+        },
+        "ruptureDrift": {
+          "type": "number",
+          "description": "Change in rupture potential within the force regime.",
+          "range": [0, 1]
+        }
+      }
+    },
+
+    "output": {
+      "type": "object",
+      "fields": {
+        "driftStability": {
+          "type": "number",
+          "description": "Overall stability of drift within the force regime.",
+          "range": [0, 1]
+        },
+        "driftCoherence": {
+          "type": "number",
+          "description": "Coherence of drift across unseen force fields.",
+          "range": [0, 1]
+        },
+        "driftIntegrity": {
+          "type": "number",
+          "description": "Structural integrity of drift-state mechanics.",
+          "range": [0, 1]
+        },
+        "layer": "L3_Forces_Unseen",
+        "triad": "forces",
+        "qmroot": "0D",
+        "canonical": "R5"
+      }
+    }
+  },
+
+  "examples": [
+    {
+      "name": "Force-regime drift analysis example",
+      "input": {
+        "gradientDrift": 0.62,
+        "fieldDrift": 0.41,
+        "continuityDrift": 0.77,
+        "ruptureDrift": 0.29
+      },
+      "output": {
+        "driftStability": 0.58,
+        "driftCoherence": 0.47,
+        "driftIntegrity": 0.71,
+        "layer": "L3_Forces_Unseen",
+        "triad": "forces",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+
+      "reality": {
+        "description": "Machine-level drift evaluation.",
+        "details": "Drift metrics computed from gradientDrift, fieldDrift, continuityDrift, and ruptureDrift."
+      },
+
+      "imagination": {
+        "description": "Symbolic interpretation.",
+        "details": "The unseen force field shifts into a new drift-state configuration."
+      },
+
+      "information": {
+        "description": "Cosmology notes.",
+        "details": "Force-regime drift inherits qmroot lineage through frequency → fluids → forces."
+      }
+    }
+  ]
+}
