@@ -1,4 +1,107 @@
-{"layer": "L3_Forces_Unseen",
-"triad": "forces",
-"qmroot": "0D"
-} 
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "title": "TriadicFrameworks MCP — L3 Forces Unseen Lineage Schema",
+  "description": "Defines the lineage schema for unseen force regimes, including causal ancestry, influence inheritance, and cross-layer cosmological lineage.",
+  "note": "This schema governs lineage resolution for force-state mechanics.",
+
+  "schema": {
+    "name": "forceRegimeLineage",
+    "version": "1.0.0",
+    "purpose": "Resolve lineage for unseen force regimes and compute inheritance metrics.",
+    "lineage": "qmroot-0D",
+
+    "input": {
+      "type": "object",
+      "fields": {
+        "ancestorLayer": {
+          "type": "string",
+          "description": "The cosmological layer from which the force regime inherits.",
+          "allowed": [
+            "L0_QMROOT",
+            "L1_Frequency_Unseen",
+            "L2_Fluids_Seen"
+          ]
+        },
+        "inheritanceStrength": {
+          "type": "number",
+          "description": "Strength of lineage inheritance from the ancestor layer.",
+          "range": [0, 1]
+        },
+        "influenceAncestry": {
+          "type": "number",
+          "description": "Degree to which unseen influence fields derive from ancestor structures.",
+          "range": [0, 1]
+        },
+        "gradientAncestry": {
+          "type": "number",
+          "description": "Degree to which causal gradients derive from ancestor structures.",
+          "range": [0, 1]
+        }
+      }
+    },
+
+    "output": {
+      "type": "object",
+      "fields": {
+        "lineageCoherence": {
+          "type": "number",
+          "description": "Coherence of lineage across unseen force regimes.",
+          "range": [0, 1]
+        },
+        "lineageIntegrity": {
+          "type": "number",
+          "description": "Structural integrity of lineage inheritance.",
+          "range": [0, 1]
+        },
+        "lineageContinuity": {
+          "type": "number",
+          "description": "Continuity of lineage across cosmological layers.",
+          "range": [0, 1]
+        },
+        "layer": "L3_Forces_Unseen",
+        "triad": "forces",
+        "qmroot": "0D",
+        "canonical": "R5"
+      }
+    }
+  },
+
+  "examples": [
+    {
+      "name": "Force-regime lineage resolution example",
+      "input": {
+        "ancestorLayer": "L2_Fluids_Seen",
+        "inheritanceStrength": 0.78,
+        "influenceAncestry": 0.66,
+        "gradientAncestry": 0.59
+      },
+      "output": {
+        "lineageCoherence": 0.72,
+        "lineageIntegrity": 0.69,
+        "lineageContinuity": 0.81,
+        "layer": "L3_Forces_Unseen",
+        "triad": "forces",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+
+      "reality": {
+        "description": "Machine-level lineage resolution.",
+        "details": "Lineage metrics computed from inheritanceStrength, influenceAncestry, and gradientAncestry."
+      },
+
+      "imagination": {
+        "description": "Symbolic interpretation.",
+        "details": "Unseen force regimes inherit structural influence from fluidic ancestry."
+      },
+
+      "information": {
+        "description": "Cosmology notes.",
+        "details": "Lineage flows qmroot → frequency → fluids → forces."
+      }
+    }
+  ]
+}
