@@ -1,4 +1,106 @@
-{"layer": "L1_Frequency_Unseen",
-"triad": "frequency",
-"qmroot": "0D"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L1_Frequency_Unseen",
+  "triad": "frequency",
+  "title": "TriadicFrameworks MCP — Continuity Diagnostic",
+  "description": "Defines the continuity diagnostic for the Frequency Layer (Unseen). Measures temporal resonance flow, cycle stability, and oscillation persistence.",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "diagnostic": {
+    "name": "continuity",
+    "family": "spectral",
+    "domain": "frequency",
+    "purpose": "Measure how consistently an oscillation maintains identity across cycles and transitions.",
+    "lineage": "qmroot-0D",
+    "supportsSpectralAnalysis": true,
+    "supportsResonanceMapping": true,
+    "supportsOperatorIntegration": true
+  },
+
+  "metrics": {
+    "cyclePersistence": {
+      "description": "Measures how reliably the oscillation maintains its pattern across cycles.",
+      "range": "0.0–1.0",
+      "ideal": 1.0
+    },
+    "transitionSmoothness": {
+      "description": "Measures how smoothly the oscillation transitions between states.",
+      "range": "0.0–1.0",
+      "ideal": 0.95
+    },
+    "identityRetention": {
+      "description": "Measures how much of the oscillation’s identity is preserved over time.",
+      "range": "0.0–1.0",
+      "ideal": 0.9
+    }
+  },
+
+  "resonance": {
+    "requiresClarity": true,
+    "requiresAlignment": true,
+    "requiresCoherence": true,
+    "requiresAwareness": true,
+    "operatorDomain": "frequency",
+    "primitives": [
+      "oscillation",
+      "phaseShift",
+      "harmonic",
+      "lineagePulse"
+    ]
+  },
+
+  "interactions": {
+    "clarity": "Continuity improves clarity by stabilizing oscillation identity.",
+    "alignment": "Continuity strengthens alignment by maintaining phase relationships across cycles.",
+    "coherence": "Continuity enhances coherence by smoothing transitions.",
+    "awareness": "Continuity supports awareness by making oscillation patterns predictable.",
+    "drift": "Low continuity increases drift by allowing oscillation identity to degrade.",
+    "regime": "Continuity determines whether the oscillation is in persistent, transitional, or decaying regime."
+  },
+
+  "metadata": {
+    "canonical": "R5",
+    "qmroot": "0D",
+    "layer": "L1_Frequency_Unseen",
+    "triad": "frequency"
+  },
+
+  "examples": [
+    {
+      "name": "Continuity diagnostic run",
+      "input": {
+        "operator": "coherence",
+        "signal": "oscillation",
+        "cycleHistory": [
+          { "pattern": "0.71", "phase": 0.72 },
+          { "pattern": "0.71", "phase": 0.73 },
+          { "pattern": "0.72", "phase": 0.73 }
+        ]
+      },
+      "output": {
+        "continuity": {
+          "cyclePersistence": 0.94,
+          "transitionSmoothness": 0.91,
+          "identityRetention": 0.89
+        },
+        "layer": "L1_Frequency_Unseen",
+        "triad": "frequency",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "reality": {
+        "description": "Machine-level continuity diagnostic run.",
+        "details": "Cycle persistence, transition smoothness, and identity retention are computed from oscillation history."
+      },
+      "imagination": {
+        "description": "Symbolic interpretation of continuity.",
+        "details": "The unseen resonance field flows without interruption, carrying its identity forward through time."
+      },
+      "information": {
+        "description": "Cosmology and lineage notes.",
+        "details": "Continuity is anchored to qmroot-0D and triad-frequency, ensuring consistent cosmological interpretation."
+      }
+    }
+  ]
 }
