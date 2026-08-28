@@ -1,5 +1,153 @@
-{"canonical": "R5",
-"qmroot": "0D",
-"layer": "L0_QMROOT",
-"triad": "origin"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L0_QMROOT",
+  "triad": "origin",
+  "title": "TriadicFrameworks MCP — Canonical Error Codes",
+  "description": "Canonical error code registry for the Origin Layer (0D) of the TriadicFrameworks MCP cosmology.",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "errorFamilies": {
+    "AUTH": {
+      "AUTH_MISSING_TOKEN": {
+        "message": "Authentication token is required.",
+        "layer": "L0_QMROOT",
+        "triad": "origin"
+      },
+      "AUTH_TOKEN_EXPIRED": {
+        "message": "Authentication token has expired.",
+        "layer": "L0_QMROOT",
+        "triad": "origin"
+      },
+      "AUTH_CLIENTID_MISMATCH": {
+        "message": "Token clientId does not match payload clientId.",
+        "layer": "L0_QMROOT",
+        "triad": "origin"
+      },
+      "AUTH_INVALID_SIGNATURE": {
+        "message": "Signature validation failed.",
+        "layer": "L0_QMROOT",
+        "triad": "origin"
+      }
+    },
+
+    "DISCOVERY": {
+      "TOOL_NOT_FOUND": {
+        "message": "Requested tool does not exist.",
+        "layer": "L0_QMROOT",
+        "triad": "origin"
+      },
+      "EMPTY_QUERY": {
+        "message": "Search query cannot be empty.",
+        "layer": "L0_QMROOT",
+        "triad": "origin"
+      },
+      "INVALID_INPUT_TYPE": {
+        "message": "Input field type is invalid.",
+        "layer": "L0_QMROOT",
+        "triad": "origin"
+      }
+    },
+
+    "SCHEMA": {
+      "SCHEMA_VALIDATION_FAILED": {
+        "message": "Input does not match schema.",
+        "layer": "L3_Forces_Unseen",
+        "triad": "forces"
+      },
+      "SCHEMA_UNEXPECTED_FIELD": {
+        "message": "Input contains fields not defined in schema.",
+        "layer": "L3_Forces_Unseen",
+        "triad": "forces"
+      }
+    },
+
+    "FS": {
+      "FS_NOT_FOUND": {
+        "message": "Requested file does not exist.",
+        "layer": "L2_Fluids_Seen",
+        "triad": "fluids"
+      },
+      "FS_READ_ERROR": {
+        "message": "Unable to read file contents.",
+        "layer": "L2_Fluids_Seen",
+        "triad": "fluids"
+      },
+      "FS_METADATA_ERROR": {
+        "message": "Unable to retrieve file metadata.",
+        "layer": "L2_Fluids_Seen",
+        "triad": "fluids"
+      }
+    },
+
+    "OPERATOR": {
+      "OPERATOR_NOT_FOUND": {
+        "message": "Requested operator does not exist.",
+        "layer": "L1_Frequency_Unseen",
+        "triad": "frequency"
+      },
+      "OPERATOR_DOMAIN_MISMATCH": {
+        "message": "Operator does not belong to the requested domain.",
+        "layer": "L1_Frequency_Unseen",
+        "triad": "frequency"
+      },
+      "OPERATOR_SEARCH_EMPTY": {
+        "message": "No operators matched the search query.",
+        "layer": "L1_Frequency_Unseen",
+        "triad": "frequency"
+      }
+    },
+
+    "REGISTRY": {
+      "REGISTRY_MODULE_NOT_FOUND": {
+        "message": "Module ID not found in registry.",
+        "layer": "L3_Forces_Unseen",
+        "triad": "forces"
+      },
+      "REGISTRY_GROUP_NOT_FOUND": {
+        "message": "Module group not found.",
+        "layer": "L3_Forces_Unseen",
+        "triad": "forces"
+      },
+      "REGISTRY_AI_NOT_FOUND": {
+        "message": "AI identity not found in registry.",
+        "layer": "L3_Forces_Unseen",
+        "triad": "forces"
+      }
+    }
+  },
+
+  "examples": [
+    {
+      "name": "Canonical error lookup",
+      "input": {
+        "code": "AUTH_TOKEN_EXPIRED"
+      },
+      "output": {
+        "message": "Authentication token has expired.",
+        "layer": "L0_QMROOT",
+        "triad": "origin",
+        "qmroot": "0D"
+      },
+      "interpretation": {
+        "technical": "The error registry returns the canonical message and cosmology metadata.",
+        "mythic": "The origin layer declares the signal faded; the observer must renew their token."
+      }
+    },
+    {
+      "name": "Error example — unknown error code",
+      "input": {
+        "code": "NONEXISTENT_ERROR"
+      },
+      "error": {
+        "code": "ERROR_CODE_NOT_FOUND",
+        "message": "The requested error code does not exist in the canonical registry.",
+        "field": "code"
+      },
+      "interpretation": {
+        "technical": "The registry cannot locate the requested error code.",
+        "mythic": "The origin layer hears a name with no lineage; the universe does not recognize it."
+      }
+    }
+  ]
 }
