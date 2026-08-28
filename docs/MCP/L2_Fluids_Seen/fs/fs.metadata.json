@@ -1,3 +1,93 @@
-{"layer": "L2_Fluids_Seen",
-"triad": "fluids"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L2_Fluids_Seen",
+  "triad": "fluids",
+  "title": "TriadicFrameworks MCP — Fluid Substrate Metadata",
+  "description": "Defines metadata fields for fluid substrates within the Fluids Seen Layer, including laminarity, turbulence, viscosity, continuity, and flow-state resonance.",
+  "note": "This metadata schema is used by fs.list, fs.read, fs.search, and all L2 fluidic tools.",
+
+  "metadata": {
+    "fields": {
+      "laminarity": {
+        "type": "number",
+        "description": "Degree of smooth, ordered flow (0.0–1.0)."
+      },
+      "turbulence": {
+        "type": "number",
+        "description": "Degree of chaotic, unstable flow (0.0–1.0)."
+      },
+      "viscosity": {
+        "type": "number",
+        "description": "Internal friction of the fluid medium (0.0–1.0)."
+      },
+      "continuity": {
+        "type": "number",
+        "description": "Preservation of identity across flow transitions (0.0–1.0)."
+      },
+      "pressureGradient": {
+        "type": "number",
+        "description": "Directional pressure change across the fluid field."
+      },
+      "flowIntegrity": {
+        "type": "number",
+        "description": "Overall stability and coherence of the flow-state."
+      },
+      "substrateCategory": {
+        "type": "string",
+        "enum": ["laminar", "turbulent", "viscous", "continuity"],
+        "description": "Category of fluid substrate."
+      },
+      "resonanceSignature": {
+        "type": "string",
+        "description": "Symbolic signature describing the substrate’s resonance behavior."
+      }
+    }
+  },
+
+  "resonance": {
+    "supportsLaminarity": true,
+    "supportsTurbulence": true,
+    "supportsViscosity": true,
+    "supportsContinuity": true,
+    "supportsFlowIntegrity": true,
+    "operatorDomain": "fluids"
+  },
+
+  "examples": [
+    {
+      "name": "Fluid substrate metadata example",
+      "input": {
+        "substrate": "laminarFlow"
+      },
+      "output": {
+        "metadata": {
+          "laminarity": 0.95,
+          "turbulence": 0.05,
+          "viscosity": 0.12,
+          "continuity": 0.98,
+          "pressureGradient": 0.30,
+          "flowIntegrity": 0.92,
+          "substrateCategory": "laminar",
+          "resonanceSignature": "smooth-channel"
+        },
+        "layer": "L2_Fluids_Seen",
+        "triad": "fluids",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "reality": {
+        "description": "Machine-level metadata retrieval.",
+        "details": "Metadata fields are returned from the fluid substrate definition."
+      },
+      "imagination": {
+        "description": "Symbolic interpretation.",
+        "details": "The fluid field forms a stable laminar channel with high continuity."
+      },
+      "information": {
+        "description": "Cosmology notes.",
+        "details": "Fluidic metadata inherits qmroot lineage through frequency into seen-layer dynamics."
+      }
+    }
+  ]
 }
