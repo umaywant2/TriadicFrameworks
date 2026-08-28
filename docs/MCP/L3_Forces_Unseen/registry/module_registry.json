@@ -1,131 +1,115 @@
 {
+  "version": "0.1.0",
   "canonical": "R5",
-  "qmroot": "0D",
   "layer": "L3_Forces_Unseen",
   "triad": "forces",
-  "title": "TriadicFrameworks MCP — L3 Forces Unseen Module Registry",
-  "description": "Registry of all modules within the Forces Unseen Layer, including examples, registry tools, schemas, and spine integrations.",
-  "note": "This registry anchors module identity, lineage, and force-regime semantics for L3.",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
 
-  "identity": {
-    "name": "TriadicFrameworks-L3-ModuleRegistry",
-    "version": "1.0.0",
-    "lineage": "qmroot-0D",
-    "triad": "forces",
-    "description": "Canonical registry identity for unseen force-regime modules."
-  },
+  "title": "TriadicFrameworks MCP — L3 Forces Unseen Module Registry",
+  "description": "Canonical registry of all modules belonging to the Forces Unseen layer, including schemas, registries, spine, dimensions, operators, and examples.",
 
   "modules": [
     {
-      "name": "examples",
+      "id": "examples",
+      "name": "Examples",
       "category": "examples",
-      "purpose": "Demonstrate unseen force regimes, causal gradients, influence fields, and force-state mechanics.",
+      "purpose": "Provides example envelopes for canonical, reality, imagination, information, error, and qmroot examples.",
+      "path": "docs/MCP/L3_Forces_Unseen/examples",
       "metadata": {
-        "contains": ["force examples", "regime transformations"],
-        "operatorDomain": "forces"
+        "contains": ["example envelopes"],
+        "forceDomain": "forces"
       }
     },
+
     {
-      "name": "ai_registry",
-      "category": "registry",
-      "purpose": "Define AI identities and module metadata for the Forces Unseen layer.",
-      "metadata": {
-        "contains": ["ai identities", "force-regime alignment"],
-        "operatorDomain": "forces"
-      }
-    },
-    {
-      "name": "module_registry",
-      "category": "registry",
-      "purpose": "Enumerate all modules within the L3 Forces Unseen layer.",
-      "metadata": {
-        "contains": ["module definitions", "force-regime metadata"],
-        "operatorDomain": "forces"
-      }
-    },
-    {
-      "name": "modules_group",
-      "category": "registry",
-      "purpose": "Group modules into functional categories for force-regime analysis.",
-      "metadata": {
-        "contains": ["group definitions", "force-state grouping"],
-        "operatorDomain": "forces"
-      }
-    },
-    {
-      "name": "sitemap_modules",
-      "category": "registry",
-      "purpose": "Provide sitemap-style indexing of all L3 modules.",
-      "metadata": {
-        "contains": ["sitemap entries", "module paths"],
-        "operatorDomain": "forces"
-      }
-    },
-    {
-      "name": "schemas",
+      "id": "schemas",
+      "name": "Schemas",
       "category": "schemas",
-      "purpose": "Define JSON schemas for force-state tools, diagnostics, and operators.",
+      "purpose": "Defines JSON Schemas for modules, operators, and examples.",
+      "path": "docs/MCP/L3_Forces_Unseen/schemas",
       "metadata": {
-        "contains": ["force-state schema", "regime metadata schema"],
-        "operatorDomain": "forces"
+        "contains": [
+          "module.schema.json",
+          "operator.schema.json"
+        ],
+        "forceDomain": "forces"
       }
     },
+
     {
-      "name": "spine",
-      "category": "spine",
-      "purpose": "Integrate L3 force-regime mechanics into the TriadicFrameworks spine.",
+      "id": "registry",
+      "name": "Registry",
+      "category": "registry",
+      "purpose": "Provides canonical registries for modules, operators, and examples.",
+      "path": "docs/MCP/L3_Forces_Unseen/registry",
       "metadata": {
-        "contains": ["spine integration", "force-regime mapping"],
-        "operatorDomain": "forces"
-      }
-    }
-  ],
-
-  "output": {
-    "modules": "List of all L3 modules with categories, purposes, and metadata.",
-    "layer": "L3_Forces_Unseen",
-    "triad": "forces",
-    "qmroot": "0D",
-    "canonical": "R5"
-  },
-
-  "examples": [
-    {
-      "name": "Module registry lookup example",
-      "input": {
-        "request": "listModules"
-      },
-      "output": {
-        "modules": [
-          {
-            "name": "examples",
-            "category": "examples",
-            "purpose": "Demonstrate unseen force regimes, causal gradients, influence fields, and force-state mechanics.",
-            "metadata": {
-              "contains": ["force examples", "regime transformations"],
-              "operatorDomain": "forces"
-            }
-          }
+        "contains": [
+          "module_registry.json",
+          "operator_registry.json"
         ],
-        "layer": "L3_Forces_Unseen",
-        "triad": "forces",
-        "qmroot": "0D",
-        "canonical": "R5"
-      },
+        "forceDomain": "forces"
+      }
+    },
 
-      "reality": {
-        "description": "Machine-level module registry lookup.",
-        "details": "Modules are returned from the canonical module registry array."
-      },
+    {
+      "id": "spine",
+      "name": "S3 Spine",
+      "category": "spine",
+      "purpose": "Implements the force-regime spine: gradient → field → rupture → integrity.",
+      "path": "docs/MCP/L3_Forces_Unseen/spine/S3.graph.json",
+      "metadata": {
+        "contains": ["S3.graph.json"],
+        "forceDomain": "forces"
+      }
+    },
 
-      "imagination": {
-        "description": "Symbolic interpretation.",
-        "details": "The unseen force field reveals its structural modules as influence channels."
-      },
+    {
+      "id": "dimensions",
+      "name": "Dimensional Subsystem",
+      "category": "dimension",
+      "purpose": "Defines dimensional constructs belonging to the Forces Unseen layer.",
+      "path": "docs/MCP/L3_Forces_Unseen/dimensions",
+      "metadata": {
+        "contains": [
+          "L4.json",
+          "L5.json",
+          "L8.json",
+          "L10.json",
+          "L11.json",
+          "L12.json",
+          "L16.json",
+          "L26.json",
+          "L32.json",
+          "LH.json",
+          "LI.json"
+        ],
+        "forceDomain": "forces"
+      }
+    },
 
-      "information": {
-        "description": "Cosmology notes.",
-        "details": "Module identity inherits qmroot lineage through frequency → fluids → forces."
+    {
+      "id": "operators",
+      "name": "Operators",
+      "category": "operator",
+      "purpose": "Defines force-regime operators including push, pull, bind, gradient, fieldShift, and ruptureForce.",
+      "path": "docs/MCP/L3_Forces_Unseen/operators",
+      "metadata": {
+        "contains": [
+          "operator_registry.json"
+        ],
+        "forceDomain": "forces"
+      }
+    },
+
+    {
+      "id": "module",
+      "name": "Module Manifest",
+      "category": "module",
+      "purpose": "Defines the canonical module manifest for TriadicFrameworks MCP.",
+      "path": "docs/MCP/module.json",
+      "metadata": {
+        "contains": ["module.json"],
+        "forceDomain": "forces"
       }
     }
   ]
