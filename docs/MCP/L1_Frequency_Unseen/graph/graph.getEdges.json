@@ -1,4 +1,109 @@
-{"layer": "L1_Frequency_Unseen",
-"triad": "frequency",
-"qmroot": "0D"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L1_Frequency_Unseen",
+  "triad": "frequency",
+  "title": "TriadicFrameworks MCP — Graph Edge Lookup",
+  "description": "Retrieves all edges connected to a node in the Frequency Layer resonance graph.",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "function": {
+    "name": "graph.getEdges",
+    "version": "1.0.0",
+    "purpose": "Return all edges connected to a given node in the unseen resonance graph.",
+    "lineage": "qmroot-0D",
+    "supportsTraversal": true,
+    "supportsResonanceGraph": true
+  },
+
+  "input": {
+    "nodeId": {
+      "type": "string",
+      "description": "The ID of the node whose edges should be retrieved."
+    },
+    "includeMetadata": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether to include full edge metadata in the response."
+    }
+  },
+
+  "output": {
+    "edges": {
+      "type": "array",
+      "description": "List of edges connected to the node.",
+      "items": {
+        "edgeId": "string",
+        "from": "string",
+        "to": "string",
+        "weight": "number",
+        "metadata": {
+          "optional": true,
+          "description": "Edge metadata returned only if includeMetadata=true."
+        }
+      }
+    },
+    "layer": "L1_Frequency_Unseen",
+    "triad": "frequency",
+    "qmroot": "0D",
+    "canonical": "R5"
+  },
+
+  "resonance": {
+    "graphType": "oscillation-graph",
+    "supportsHarmonicEdges": true,
+    "supportsPhaseEdges": true,
+    "supportsLineageEdges": true,
+    "operatorDomain": "frequency"
+  },
+
+  "examples": [
+    {
+      "name": "Graph edge lookup",
+      "input": {
+        "nodeId": "clarity-01",
+        "includeMetadata": true
+      },
+      "output": {
+        "edges": [
+          {
+            "edgeId": "clarity→coherence",
+            "from": "clarity-01",
+            "to": "coherence-02",
+            "weight": 0.92,
+            "metadata": {
+              "type": "harmonic",
+              "description": "Clarity strengthens coherence by stabilizing spectral structure."
+            }
+          },
+          {
+            "edgeId": "clarity→alignment",
+            "from": "clarity-01",
+            "to": "alignment-03",
+            "weight": 0.88,
+            "metadata": {
+              "type": "phase",
+              "description": "Clarity reduces noise, improving phase alignment."
+            }
+          }
+        ],
+        "layer": "L1_Frequency_Unseen",
+        "triad": "frequency",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "reality": {
+        "description": "Machine-level graph edge lookup.",
+        "details": "Edges are retrieved from the resonance graph and returned with metadata."
+      },
+      "imagination": {
+        "description": "Symbolic interpretation of graph edges.",
+        "details": "The unseen resonance field reveals its connections, showing how oscillations influence one another."
+      },
+      "information": {
+        "description": "Cosmology and lineage notes.",
+        "details": "Graph edges inherit qmroot-0D and triad-frequency metadata for cosmological consistency."
+      }
+    }
+  ]
 }
