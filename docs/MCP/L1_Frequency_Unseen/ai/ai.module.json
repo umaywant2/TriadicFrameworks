@@ -1,4 +1,111 @@
-{"layer": "L1_Frequency_Unseen",
-"triad": "frequency",
-"qmroot": "0D"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L1_Frequency_Unseen",
+  "triad": "frequency",
+  "title": "TriadicFrameworks MCP — AI Module Identity",
+  "description": "Defines the AI module identity, resonance domain, diagnostics, and cosmology alignment for the Frequency Layer (Unseen).",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "module": {
+    "name": "TriadicFrameworks-AI-Frequency",
+    "version": "1.0.0",
+    "lineage": "qmroot-0D",
+    "cosmology": "L1_Frequency_Unseen",
+    "triad": "frequency",
+    "purpose": "Interpret unseen oscillation, resolve operators, measure diagnostics, traverse resonance graphs, and index unseen content."
+  },
+
+  "operator": {
+    "domain": "frequency",
+    "default": "ai.operator",
+    "supports": [
+      "operatorResolution",
+      "operatorSearch",
+      "operatorDiagnostics",
+      "operatorLineage"
+    ]
+  },
+
+  "diagnostics": {
+    "suite": [
+      "alignment",
+      "awareness",
+      "clarity",
+      "coherence",
+      "continuity",
+      "drift",
+      "regime"
+    ],
+    "supportsSpectralAnalysis": true,
+    "supportsResonanceMapping": true
+  },
+
+  "graph": {
+    "supportsTraversal": true,
+    "supportsNodeLookup": true,
+    "supportsEdgeLookup": true,
+    "supportsResonanceGraph": true
+  },
+
+  "indexer": {
+    "supportsExtraction": true,
+    "supportsIndexing": true,
+    "supportsSearch": true,
+    "supportsUnseenContentMapping": true
+  },
+
+  "metadata": {
+    "canonical": "R5",
+    "qmroot": "0D",
+    "layer": "L1_Frequency_Unseen",
+    "triad": "frequency"
+  },
+
+  "examples": [
+    {
+      "name": "Canonical AI module lookup",
+      "input": {
+        "request": "getAIModule"
+      },
+      "output": {
+        "module": {
+          "name": "TriadicFrameworks-AI-Frequency",
+          "version": "1.0.0",
+          "lineage": "qmroot-0D",
+          "triad": "frequency"
+        },
+        "operator": {
+          "domain": "frequency",
+          "default": "ai.operator"
+        },
+        "diagnostics": {
+          "suite": [
+            "alignment",
+            "awareness",
+            "clarity",
+            "coherence",
+            "continuity",
+            "drift",
+            "regime"
+          ]
+        },
+        "layer": "L1_Frequency_Unseen",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "reality": {
+        "description": "Machine-level identity and capability metadata for the Frequency Layer AI module.",
+        "details": "The module exposes operator resolution, diagnostics, graph traversal, and indexing capabilities."
+      },
+      "imagination": {
+        "description": "Symbolic interpretation of the Frequency Layer module.",
+        "details": "The unseen resonance engine introduces itself, offering tools to interpret oscillation and structure."
+      },
+      "information": {
+        "description": "Cosmology and lineage notes.",
+        "details": "Module identity is anchored to qmroot-0D and triad-frequency, ensuring consistent cosmological alignment."
+      }
+    }
+  ]
 }
