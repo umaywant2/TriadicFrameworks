@@ -1,3 +1,97 @@
-{"layer": "L3_Forces_Unseen",
-"triad": "forces"
-} 
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "title": "TriadicFrameworks MCP — L3 Forces Unseen Sitemap Module Index",
+  "description": "Provides sitemap-style indexing of all modules within the Forces Unseen Layer.",
+  "note": "This sitemap anchors module paths, lineage, and force-regime semantics for L3.",
+
+  "sitemap": [
+    {
+      "name": "examples",
+      "path": "docs/MCP/L3_Forces_Unseen/examples/",
+      "category": "examples",
+      "purpose": "Demonstrate unseen force regimes, causal gradients, influence fields, and force-state mechanics."
+    },
+    {
+      "name": "ai_registry",
+      "path": "docs/MCP/L3_Forces_Unseen/registry/ai_registry.json",
+      "category": "registry",
+      "purpose": "Define AI identities and module metadata for the Forces Unseen layer."
+    },
+    {
+      "name": "module_registry",
+      "path": "docs/MCP/L3_Forces_Unseen/registry/module_registry.json",
+      "category": "registry",
+      "purpose": "Enumerate all modules within the L3 Forces Unseen layer."
+    },
+    {
+      "name": "modules_group",
+      "path": "docs/MCP/L3_Forces_Unseen/registry/modules_group.json",
+      "category": "registry",
+      "purpose": "Group modules into functional categories for force-regime analysis."
+    },
+    {
+      "name": "sitemap_modules",
+      "path": "docs/MCP/L3_Forces_Unseen/registry/sitemap_modules.json",
+      "category": "registry",
+      "purpose": "Provide sitemap-style indexing of all L3 modules."
+    },
+    {
+      "name": "schemas",
+      "path": "docs/MCP/L3_Forces_Unseen/schemas/",
+      "category": "schemas",
+      "purpose": "Define JSON schemas for force-state tools, diagnostics, and operators."
+    },
+    {
+      "name": "spine",
+      "path": "docs/MCP/L3_Forces_Unseen/spine/",
+      "category": "spine",
+      "purpose": "Integrate L3 force-regime mechanics into the TriadicFrameworks spine."
+    }
+  ],
+
+  "metadata": {
+    "canonical": "R5",
+    "qmroot": "0D",
+    "layer": "L3_Forces_Unseen",
+    "triad": "forces"
+  },
+
+  "examples": [
+    {
+      "name": "Sitemap lookup example",
+      "input": {
+        "request": "getSitemapModules"
+      },
+      "output": {
+        "sitemap": [
+          {
+            "name": "examples",
+            "path": "docs/MCP/L3_Forces_Unseen/examples/"
+          }
+        ],
+        "layer": "L3_Forces_Unseen",
+        "triad": "forces",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+
+      "reality": {
+        "description": "Machine-level sitemap lookup.",
+        "details": "Modules are returned from the canonical sitemap array."
+      },
+
+      "imagination": {
+        "description": "Symbolic interpretation.",
+        "details": "Unseen force structures reveal their paths as influence channels."
+      },
+
+      "information": {
+        "description": "Cosmology notes.",
+        "details": "Sitemap lineage inherits qmroot → frequency → fluids → forces."
+      }
+    }
+  ]
+}
