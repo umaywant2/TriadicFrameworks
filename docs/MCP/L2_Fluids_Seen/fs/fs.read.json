@@ -1,3 +1,138 @@
-{"layer": "L2_Fluids_Seen",
-"triad": "fluids"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L2_Fluids_Seen",
+  "triad": "fluids",
+  "title": "TriadicFrameworks MCP — Fluid Substrate Reader",
+  "description": "Reads and returns full metadata for a fluid substrate within the Fluids Seen Layer, including laminarity, turbulence, viscosity, continuity, and resonance signature.",
+  "note": "This is the canonical reader function for L2 fluid substrates.",
+
+  "function": {
+    "name": "fs.read",
+    "version": "1.0.0",
+    "purpose": "Retrieve full metadata for a single fluid substrate.",
+    "lineage": "qmroot-0D",
+    "supportsFluidRead": true,
+    "supportsResonanceInterpretation": true
+  },
+
+  "input": {
+    "substrate": {
+      "type": "string",
+      "description": "Name of the fluid substrate to read (e.g., laminarFlow, turbulentFlow, viscousMedium, continuityChannel)."
+    },
+    "includeResonance": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether to include resonance signature and continuity profile."
+    }
+  },
+
+  "output": {
+    "metadata": {
+      "type": "object",
+      "description": "Full metadata for the fluid substrate.",
+      "fields": {
+        "laminarity": "number",
+        "turbulence": "number",
+        "viscosity": "number",
+        "continuity": "number",
+        "pressureGradient": "number",
+        "flowIntegrity": "number",
+        "substrateCategory": "string",
+        "resonanceSignature": {
+          "optional": true,
+          "description": "Symbolic signature describing the substrate’s resonance behavior."
+        }
+      }
+    },
+    "layer": "L2_Fluids_Seen",
+    "triad": "fluids",
+    "qmroot": "0D",
+    "canonical": "R5"
+  },
+
+  "substrateDefinitions": {
+    "laminarFlow": {
+      "laminarity": 0.95,
+      "turbulence": 0.05,
+      "viscosity": 0.12,
+      "continuity": 0.98,
+      "pressureGradient": 0.30,
+      "flowIntegrity": 0.92,
+      "substrateCategory": "laminar",
+      "resonanceSignature": "smooth-channel"
+    },
+    "turbulentFlow": {
+      "laminarity": 0.22,
+      "turbulence": 0.78,
+      "viscosity": 0.08,
+      "continuity": 0.41,
+      "pressureGradient": 0.65,
+      "flowIntegrity": 0.37,
+      "substrateCategory": "turbulent",
+      "resonanceSignature": "chaotic-vortex"
+    },
+    "viscousMedium": {
+      "laminarity": 0.60,
+      "turbulence": 0.20,
+      "viscosity": 0.88,
+      "continuity": 0.78,
+      "pressureGradient": 0.22,
+      "flowIntegrity": 0.70,
+      "substrateCategory": "viscous",
+      "resonanceSignature": "slow-dense-field"
+    },
+    "continuityChannel": {
+      "laminarity": 0.90,
+      "turbulence": 0.10,
+      "viscosity": 0.15,
+      "continuity": 0.99,
+      "pressureGradient": 0.18,
+      "flowIntegrity": 0.95,
+      "substrateCategory": "continuity",
+      "resonanceSignature": "identity-preserving-stream"
+    }
+  },
+
+  "examples": [
+    {
+      "name": "Fluid substrate read example",
+      "input": {
+        "substrate": "viscousMedium",
+        "includeResonance": true
+      },
+      "output": {
+        "metadata": {
+          "laminarity": 0.60,
+          "turbulence": 0.20,
+          "viscosity": 0.88,
+          "continuity": 0.78,
+          "pressureGradient": 0.22,
+          "flowIntegrity": 0.70,
+          "substrateCategory": "viscous",
+          "resonanceSignature": "slow-dense-field"
+        },
+        "layer": "L2_Fluids_Seen",
+        "triad": "fluids",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+
+      "reality": {
+        "description": "Machine-level substrate read.",
+        "details": "Metadata fields are returned from the fluid substrate definition."
+      },
+
+      "imagination": {
+        "description": "Symbolic interpretation.",
+        "details": "The fluid field thickens, slowing into a dense, viscous stream."
+      },
+
+      "information": {
+        "description": "Cosmology notes.",
+        "details": "Fluidic metadata inherits qmroot lineage through frequency into seen-layer dynamics."
+      }
+    }
+  ]
 }
