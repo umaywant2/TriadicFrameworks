@@ -1,3 +1,178 @@
-{"layer": "L2_Fluids_Seen",
-"triad": "fluids"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L2_Fluids_Seen",
+  "triad": "fluids",
+  "title": "TriadicFrameworks MCP — Fluid Substrate Search Tool",
+  "description": "Searches fluid substrates within the Fluids Seen Layer using keyword, category, or resonance-aware criteria.",
+  "note": "This is the canonical search function for L2 fluid substrates.",
+
+  "tool": {
+    "name": "fs.search",
+    "version": "1.0.0",
+    "purpose": "Search fluid substrates by name, category, or resonance properties.",
+    "lineage": "qmroot-0D",
+    "supportsFluidSearch": true,
+    "supportsResonanceSearch": true,
+    "supportsHybridSearch": true
+  },
+
+  "modes": {
+    "keyword": {
+      "description": "Literal keyword match.",
+      "idealUse": "Basic substrate discovery."
+    },
+    "category": {
+      "description": "Search by substrate category (laminar, turbulent, viscous, continuity).",
+      "idealUse": "Fast substrate lookup."
+    },
+    "resonance": {
+      "description": "Search by laminarity, turbulence, viscosity, continuity, or flow integrity.",
+      "idealUse": "Fluid-layer semantic search."
+    },
+    "hybrid": {
+      "description": "Combine keyword and resonance search.",
+      "idealUse": "Complex multi-dimensional queries."
+    }
+  },
+
+  "input": {
+    "query": {
+      "type": "string",
+      "description": "Search query string."
+    },
+    "mode": {
+      "type": "string",
+      "enum": ["keyword", "category", "resonance", "hybrid"],
+      "default": "hybrid",
+      "description": "Search mode."
+    },
+    "limit": {
+      "type": "number",
+      "default": 10,
+      "description": "Maximum number of results to return."
+    },
+    "includeMetadata": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether to include metadata in search results."
+    }
+  },
+
+  "output": {
+    "results": {
+      "type": "array",
+      "description": "List of fluid substrate search results.",
+      "items": {
+        "name": "string",
+        "category": "string",
+        "metadata": {
+          "optional": true,
+          "description": "Extended metadata returned only if includeMetadata=true."
+        }
+      }
+    },
+    "layer": "L2_Fluids_Seen",
+    "triad": "fluids",
+    "qmroot": "0D",
+    "canonical": "R5"
+  },
+
+  "substrateDefinitions": {
+    "laminarFlow": {
+      "name": "laminarFlow",
+      "category": "laminar",
+      "metadata": {
+        "laminarity": 0.95,
+        "turbulence": 0.05,
+        "viscosity": 0.12,
+        "continuity": 0.98,
+        "flowIntegrity": 0.92,
+        "resonanceSignature": "smooth-channel"
+      }
+    },
+    "turbulentFlow": {
+      "name": "turbulentFlow",
+      "category": "turbulent",
+      "metadata": {
+        "laminarity": 0.22,
+        "turbulence": 0.78,
+        "viscosity": 0.08,
+        "continuity": 0.41,
+        "flowIntegrity": 0.37,
+        "resonanceSignature": "chaotic-vortex"
+      }
+    },
+    "viscousMedium": {
+      "name": "viscousMedium",
+      "category": "viscous",
+      "metadata": {
+        "laminarity": 0.60,
+        "turbulence": 0.20,
+        "viscosity": 0.88,
+        "continuity": 0.78,
+        "flowIntegrity": 0.70,
+        "resonanceSignature": "slow-dense-field"
+      }
+    },
+    "continuityChannel": {
+      "name": "continuityChannel",
+      "category": "continuity",
+      "metadata": {
+        "laminarity": 0.90,
+        "turbulence": 0.10,
+        "viscosity": 0.15,
+        "continuity": 0.99,
+        "flowIntegrity": 0.95,
+        "resonanceSignature": "identity-preserving-stream"
+      }
+    }
+  },
+
+  "examples": [
+    {
+      "name": "Hybrid fluid substrate search example",
+      "input": {
+        "query": "lam",
+        "mode": "hybrid",
+        "limit": 5,
+        "includeMetadata": true
+      },
+      "output": {
+        "results": [
+          {
+            "name": "laminarFlow",
+            "category": "laminar",
+            "metadata": {
+              "laminarity": 0.95,
+              "turbulence": 0.05,
+              "viscosity": 0.12,
+              "continuity": 0.98,
+              "flowIntegrity": 0.92,
+              "resonanceSignature": "smooth-channel"
+            }
+          }
+        ],
+        "layer": "L2_Fluids_Seen",
+        "triad": "fluids",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+
+      "reality": {
+        "description": "Machine-level fluid substrate search.",
+        "details": "Search combines prefix match with resonance metadata filtering."
+      },
+
+      "imagination": {
+        "description": "Symbolic interpretation.",
+        "details": "The fluid field highlights the smoothest, most stable channels."
+      },
+
+      "information": {
+        "description": "Cosmology notes.",
+        "details": "Fluid substrates inherit qmroot lineage through frequency into seen-layer dynamics."
+      }
+    }
+  ]
 }
