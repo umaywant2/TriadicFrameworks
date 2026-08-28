@@ -1,5 +1,165 @@
-{"canonical": "R5",
-"qmroot": "0D",
-"layer": "L0_QMROOT",
-"triad": "origin"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L0_QMROOT",
+  "triad": "origin",
+  "title": "TriadicFrameworks MCP — List All Tools",
+  "description": "List all MCP tools grouped by cosmology layer and triad.",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "includeDescriptions": {
+        "type": "boolean",
+        "description": "If true, include short descriptions for each tool."
+      },
+      "includeLayerMetadata": {
+        "type": "boolean",
+        "description": "If true, include cosmology layer metadata."
+      }
+    },
+    "required": [],
+    "additionalProperties": false
+  },
+
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "tools": {
+        "type": "object",
+        "properties": {
+          "L0_QMROOT": { "type": "array", "items": { "type": "string" } },
+          "L1_Frequency_Unseen": { "type": "array", "items": { "type": "string" } },
+          "L2_Fluids_Seen": { "type": "array", "items": { "type": "string" } },
+          "L3_Forces_Unseen": { "type": "array", "items": { "type": "string" } }
+        },
+        "required": [
+          "L0_QMROOT",
+          "L1_Frequency_Unseen",
+          "L2_Fluids_Seen",
+          "L3_Forces_Unseen"
+        ]
+      },
+      "metadata": {
+        "type": "object"
+      }
+    },
+    "required": ["tools"]
+  },
+
+  "examples": [
+    {
+      "name": "Canonical tool listing",
+      "input": {
+        "includeDescriptions": true,
+        "includeLayerMetadata": true
+      },
+      "output": {
+        "tools": {
+          "L0_QMROOT": [
+            "getCapabilities",
+            "auth.schema",
+            "auth.token",
+            "auth.validate",
+            "errors.canonical",
+            "errors.schema",
+            "errors.examples",
+            "discovery.describe.tool",
+            "discovery.list.all.tools",
+            "discovery.search.tools"
+          ],
+          "L1_Frequency_Unseen": [
+            "ai.contact",
+            "ai.discussions",
+            "ai.license",
+            "ai.module",
+            "ai.modules",
+            "ai.navigation",
+            "ai.operator",
+            "ai.registry",
+            "ai.session",
+            "diagnostics.alignment",
+            "diagnostics.awareness",
+            "diagnostics.clarity",
+            "diagnostics.coherence",
+            "diagnostics.continuity",
+            "diagnostics.drift",
+            "diagnostics.regime",
+            "graph.getEdges",
+            "graph.getNode",
+            "graph.traverse",
+            "indexer.content.extract",
+            "indexer.content.index",
+            "indexer.content.search",
+            "tools.diagnoseDrift",
+            "tools.getAnalyzerLayer",
+            "tools.getOperator",
+            "tools.mapRegime",
+            "tools.resolveCoherence",
+            "tools.searchOperators",
+            "tools.traceLineage"
+          ],
+          "L2_Fluids_Seen": [
+            "fs.list",
+            "fs.metadata",
+            "fs.read",
+            "fs.search",
+            "learn.flashcards",
+            "learn.module.summaries",
+            "learn.operator.cheat.sheets",
+            "learn.quizzes",
+            "tools.getMetadata",
+            "tools.getModule",
+            "tools.listModules",
+            "tools.renderSessionContext"
+          ],
+          "L3_Forces_Unseen": [
+            "registry.ai_registry",
+            "registry.modules_group",
+            "registry.module_registry",
+            "registry.sitemap_modules",
+            "schemas.analyzer",
+            "schemas.drift",
+            "schemas.lineage",
+            "schemas.module",
+            "schemas.operator",
+            "schemas.session",
+            "spine.S3.graph"
+          ]
+        },
+        "metadata": {
+          "layer": "L0_QMROOT",
+          "triad": "origin",
+          "qmroot": "0D",
+          "canonical": "R5"
+        }
+      },
+      "interpretation": {
+        "technical": "The origin layer enumerates all tools across the cosmology, grouped by layer and triad.",
+        "mythic": "The observer surveys the fourfold universe, naming every instrument of resonance, flow, and force."
+      }
+    },
+    {
+      "name": "Error example — invalid flag type",
+      "input": {
+        "includeDescriptions": "yes"
+      },
+      "error": {
+        "code": "INVALID_INPUT_TYPE",
+        "message": "includeDescriptions must be a boolean.",
+        "field": "includeDescriptions"
+      },
+      "interpretation": {
+        "technical": "The schema rejects non-boolean flags.",
+        "mythic": "The origin layer cannot parse a blurred signal; the observer must speak clearly."
+      },
+      "metadata": {
+        "layer": "L0_QMROOT",
+        "triad": "origin",
+        "qmroot": "0D",
+        "canonical": "R5"
+      }
+    }
+  ]
 }
