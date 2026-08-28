@@ -1,4 +1,126 @@
-{"layer": "L1_Frequency_Unseen",
-"triad": "frequency",
-"qmroot": "0D"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L1_Frequency_Unseen",
+  "triad": "frequency",
+  "title": "TriadicFrameworks MCP — Regime Mapping Tool",
+  "description": "Maps stability, drift, and coherence metrics to a regime classification within the Frequency Layer.",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "tool": {
+    "name": "mapRegime",
+    "version": "1.0.0",
+    "purpose": "Determine the oscillation regime (stable, transitional, chaotic) from input metrics.",
+    "lineage": "qmroot-0D",
+    "supportsRegimeMapping": true,
+    "supportsResonanceAnalysis": true
+  },
+
+  "input": {
+    "stabilityScore": {
+      "type": "number",
+      "description": "Overall oscillation stability (0.0–1.0)."
+    },
+    "driftPressure": {
+      "type": "number",
+      "description": "Destabilizing force exerted by drift (0.0–1.0)."
+    },
+    "coherenceStrength": {
+      "type": "number",
+      "description": "Contribution of coherence to regime stability (0.0–1.0)."
+    },
+    "includeMetadata": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether to include metadata in the output."
+    }
+  },
+
+  "output": {
+    "regime": {
+      "type": "string",
+      "description": "Regime classification: stable, transitional, or chaotic."
+    },
+    "metrics": {
+      "type": "object",
+      "description": "Echo of input metrics.",
+      "fields": {
+        "stabilityScore": "number",
+        "driftPressure": "number",
+        "coherenceStrength": "number"
+      }
+    },
+    "metadata": {
+      "optional": true,
+      "description": "Metadata returned only if includeMetadata=true."
+    },
+    "layer": "L1_Frequency_Unseen",
+    "triad": "frequency",
+    "qmroot": "0D",
+    "canonical": "R5"
+  },
+
+  "mappingRules": {
+    "stable": {
+      "conditions": {
+        "stabilityScore": ">= 0.85",
+        "driftPressure": "<= 0.15",
+        "coherenceStrength": ">= 0.80"
+      }
+    },
+    "transitional": {
+      "conditions": {
+        "stabilityScore": "0.50–0.85",
+        "driftPressure": "0.15–0.40",
+        "coherenceStrength": "0.50–0.80"
+      }
+    },
+    "chaotic": {
+      "conditions": {
+        "stabilityScore": "< 0.50",
+        "driftPressure": "> 0.40",
+        "coherenceStrength": "< 0.50"
+      }
+    }
+  },
+
+  "examples": [
+    {
+      "name": "Regime mapping example",
+      "input": {
+        "stabilityScore": 0.78,
+        "driftPressure": 0.22,
+        "coherenceStrength": 0.74,
+        "includeMetadata": true
+      },
+      "output": {
+        "regime": "transitional",
+        "metrics": {
+          "stabilityScore": 0.78,
+          "driftPressure": 0.22,
+          "coherenceStrength": 0.74
+        },
+        "metadata": {
+          "description": "Oscillation is shifting between states; alignment and coherence fluctuate.",
+          "source": "mapRegime"
+        },
+        "layer": "L1_Frequency_Unseen",
+        "triad": "frequency",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "reality": {
+        "description": "Machine-level regime mapping.",
+        "details": "Regime classification is computed from stability, drift, and coherence metrics."
+      },
+      "imagination": {
+        "description": "Symbolic interpretation of regime mapping.",
+        "details": "The unseen resonance field shifts, rebalancing itself between stability and chaos."
+      },
+      "information": {
+        "description": "Cosmology and lineage notes.",
+        "details": "Regime mapping inherits qmroot-0D and triad-frequency metadata for cosmological consistency."
+      }
+    }
+  ]
 }
