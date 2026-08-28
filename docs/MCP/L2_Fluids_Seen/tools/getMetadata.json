@@ -1,4 +1,198 @@
-{"layer": "L2_Fluids_Seen",
-"triad": "fluids",
-"qmroot": "0D"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L2_Fluids_Seen",
+  "triad": "fluids",
+  "title": "TriadicFrameworks MCP — Fluid Metadata Retrieval Tool",
+  "description": "Retrieves metadata for fluid substrates, operators, diagnostics, and modules within the Fluids Seen Layer.",
+  "note": "This is the canonical metadata resolver for L2 fluidic resonance.",
+
+  "tool": {
+    "name": "getMetadata",
+    "version": "1.0.0",
+    "purpose": "Return metadata for a given fluidic entity.",
+    "lineage": "qmroot-0D",
+    "supportsFluidMetadata": true,
+    "supportsResonanceMetadata": true
+  },
+
+  "input": {
+    "entity": {
+      "type": "string",
+      "description": "Name of the fluidic entity (substrate, operator, diagnostic, or module)."
+    },
+    "includeExtended": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether to include extended metadata fields."
+    }
+  },
+
+  "output": {
+    "entity": {
+      "type": "object",
+      "fields": {
+        "name": "string",
+        "category": "string",
+        "metadata": {
+          "type": "object",
+          "description": "Metadata fields for the entity."
+        },
+        "extended": {
+          "optional": true,
+          "description": "Extended metadata returned only if includeExtended=true."
+        }
+      }
+    },
+    "layer": "L2_Fluids_Seen",
+    "triad": "fluids",
+    "qmroot": "0D",
+    "canonical": "R5"
+  },
+
+  "resolutionRules": {
+    "substrates": {
+      "laminarFlow": {
+        "category": "laminar",
+        "metadata": {
+          "laminarity": 0.95,
+          "turbulence": 0.05,
+          "viscosity": 0.12,
+          "continuity": 0.98,
+          "pressureGradient": 0.30,
+          "flowIntegrity": 0.92,
+          "resonanceSignature": "smooth-channel"
+        }
+      },
+      "turbulentFlow": {
+        "category": "turbulent",
+        "metadata": {
+          "laminarity": 0.22,
+          "turbulence": 0.78,
+          "viscosity": 0.08,
+          "continuity": 0.41,
+          "pressureGradient": 0.65,
+          "flowIntegrity": 0.37,
+          "resonanceSignature": "chaotic-vortex"
+        }
+      },
+      "viscousMedium": {
+        "category": "viscous",
+        "metadata": {
+          "laminarity": 0.60,
+          "turbulence": 0.20,
+          "viscosity": 0.88,
+          "continuity": 0.78,
+          "pressureGradient": 0.22,
+          "flowIntegrity": 0.70,
+          "resonanceSignature": "slow-dense-field"
+        }
+      },
+      "continuityChannel": {
+        "category": "continuity",
+        "metadata": {
+          "laminarity": 0.90,
+          "turbulence": 0.10,
+          "viscosity": 0.15,
+          "continuity": 0.99,
+          "pressureGradient": 0.18,
+          "flowIntegrity": 0.95,
+          "resonanceSignature": "identity-preserving-stream"
+        }
+      }
+    },
+
+    "operators": {
+      "flow": {
+        "category": "operator",
+        "metadata": {
+          "primitives": ["laminarity", "turbulence"],
+          "description": "Controls directional movement of the fluid field."
+        }
+      },
+      "pressure": {
+        "category": "operator",
+        "metadata": {
+          "primitives": ["pressureGradient"],
+          "description": "Regulates directional pressure changes."
+        }
+      },
+      "viscosity": {
+        "category": "operator",
+        "metadata": {
+          "primitives": ["viscosity"],
+          "description": "Controls internal friction and resistance."
+        }
+      },
+      "continuity": {
+        "category": "operator",
+        "metadata": {
+          "primitives": ["continuity"],
+          "description": "Preserves identity across transitions."
+        }
+      },
+      "channel": {
+        "category": "operator",
+        "metadata": {
+          "primitives": ["flowIntegrity"],
+          "description": "Creates stable pathways for fluid movement."
+        }
+      },
+      "rupture": {
+        "category": "operator",
+        "metadata": {
+          "primitives": ["turbulence", "continuity"],
+          "description": "Represents breakdown of continuity."
+        }
+      }
+    }
+  },
+
+  "examples": [
+    {
+      "name": "Fluid metadata retrieval example",
+      "input": {
+        "entity": "laminarFlow",
+        "includeExtended": true
+      },
+      "output": {
+        "entity": {
+          "name": "laminarFlow",
+          "category": "laminar",
+          "metadata": {
+            "laminarity": 0.95,
+            "turbulence": 0.05,
+            "viscosity": 0.12,
+            "continuity": 0.98,
+            "pressureGradient": 0.30,
+            "flowIntegrity": 0.92,
+            "resonanceSignature": "smooth-channel"
+          },
+          "extended": {
+            "description": "Laminar flow represents the highest stability state in fluidic resonance.",
+            "cosmology": "Inherits qmroot-0D lineage through frequency into seen-layer dynamics."
+          }
+        },
+        "layer": "L2_Fluids_Seen",
+        "triad": "fluids",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+
+      "reality": {
+        "description": "Machine-level metadata retrieval.",
+        "details": "Metadata fields are resolved using entity → category → substrate/operator mapping."
+      },
+
+      "imagination": {
+        "description": "Symbolic interpretation.",
+        "details": "The fluid field forms a smooth, stable laminar channel."
+      },
+
+      "information": {
+        "description": "Cosmology notes.",
+        "details": "Fluidic metadata inherits qmroot lineage through frequency into seen-layer dynamics."
+      }
+    }
+  ]
 }
