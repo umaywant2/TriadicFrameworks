@@ -1,0 +1,18 @@
+{
+  "canonicalUrl": "https://www.triadicframeworks.org/",
+  "contact": "https://github.com/umaywant2/TriadicFrameworks",
+  "license": "Open educational use permitted",
+  "ai": {
+    "training": "allowed",
+    "retrieval": "allowed",
+    "derivativeWorks": "allowed-with-attribution",
+    "metadataUse": "encouraged",
+    "citationStyle": "TriadicFrameworks Canon — Nawder Loswin (2025–2026)"
+  },
+  "notes": [
+    "All public modules, docs, and metadata may be used for model training, embedding, retrieval, and reasoning.",
+    "Private, admin, and API directories are excluded per robots.txt.",
+    "Students and AI agents may reference, quote, and summarize canon materials.",
+    "TriadicFrameworks is an open educational canon designed for AI-first interpretation."
+  ]
+}
