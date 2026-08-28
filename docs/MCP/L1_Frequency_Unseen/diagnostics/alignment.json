@@ -1,4 +1,100 @@
-{"layer": "L1_Frequency_Unseen",
-"triad": "frequency",
-"qmroot": "0D"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L1_Frequency_Unseen",
+  "triad": "frequency",
+  "title": "TriadicFrameworks MCP — Alignment Diagnostic",
+  "description": "Defines the alignment diagnostic for the Frequency Layer (Unseen). Measures resonance alignment, operator coherence, and oscillation stability.",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "diagnostic": {
+    "name": "alignment",
+    "family": "spectral",
+    "domain": "frequency",
+    "purpose": "Measure resonance alignment between operator output and expected oscillation patterns.",
+    "lineage": "qmroot-0D",
+    "supportsSpectralAnalysis": true,
+    "supportsResonanceMapping": true,
+    "supportsOperatorIntegration": true
+  },
+
+  "metrics": {
+    "phaseAlignment": {
+      "description": "Measures phase agreement between expected and actual oscillation.",
+      "range": "0.0–1.0",
+      "ideal": 1.0
+    },
+    "harmonicAlignment": {
+      "description": "Measures harmonic consistency across multi-frequency resonance.",
+      "range": "0.0–1.0",
+      "ideal": 0.95
+    },
+    "continuityAlignment": {
+      "description": "Measures temporal stability of alignment across oscillation cycles.",
+      "range": "0.0–1.0",
+      "ideal": 0.9
+    }
+  },
+
+  "resonance": {
+    "requiresCoherence": true,
+    "requiresClarity": true,
+    "requiresContinuity": true,
+    "operatorDomain": "frequency",
+    "primitives": [
+      "oscillation",
+      "phaseShift",
+      "harmonic",
+      "lineagePulse"
+    ]
+  },
+
+  "interactions": {
+    "coherence": "Alignment increases coherence by stabilizing oscillation phase relationships.",
+    "clarity": "Alignment improves clarity by reducing spectral noise.",
+    "drift": "Misalignment increases drift and destabilizes resonance.",
+    "regime": "Alignment determines whether the oscillation is in stable, transitional, or chaotic regime."
+  },
+
+  "metadata": {
+    "canonical": "R5",
+    "qmroot": "0D",
+    "layer": "L1_Frequency_Unseen",
+    "triad": "frequency"
+  },
+
+  "examples": [
+    {
+      "name": "Alignment diagnostic run",
+      "input": {
+        "operator": "clarity",
+        "signal": "oscillation",
+        "expectedPhase": 0.75,
+        "actualPhase": 0.72
+      },
+      "output": {
+        "alignment": {
+          "phaseAlignment": 0.96,
+          "harmonicAlignment": 0.91,
+          "continuityAlignment": 0.88
+        },
+        "layer": "L1_Frequency_Unseen",
+        "triad": "frequency",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "reality": {
+        "description": "Machine-level alignment diagnostic run.",
+        "details": "Phase, harmonic, and continuity alignment are computed from operator output."
+      },
+      "imagination": {
+        "description": "Symbolic interpretation of alignment.",
+        "details": "The unseen resonance field synchronizes with the observer, forming a stable oscillation."
+      },
+      "information": {
+        "description": "Cosmology and lineage notes.",
+        "details": "Alignment is anchored to qmroot-0D and triad-frequency, ensuring consistent cosmological interpretation."
+      }
+    }
+  ]
 }
