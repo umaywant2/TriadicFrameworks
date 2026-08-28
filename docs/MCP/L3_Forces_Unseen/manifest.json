@@ -1,0 +1,50 @@
+{
+  "canonical": "R5",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "purpose": "Defines unseen force-regime mechanics including gradient, field, rupture, and integrity. Hosts all schemas, registries, operators, spine, and dimensional subsystem.",
+
+  "contents": {
+    "files": [
+      "README.md",
+      "schemas/module.schema.json",
+      "schemas/operator.schema.json",
+      "registry/module_registry.json",
+      "registry/operator_registry.json",
+      "spine/S3.graph.json"
+    ],
+    "modules": [
+      "examples",
+      "schemas",
+      "registry",
+      "spine",
+      "dimensions",
+      "operators",
+      "module"
+    ],
+    "dimensions": [
+      "L4.json",
+      "L5.json",
+      "L8.json",
+      "L10.json",
+      "L11.json",
+      "L12.json",
+      "L16.json",
+      "L26.json",
+      "L32.json",
+      "LH.json",
+      "LI.json"
+    ]
+  },
+
+  "coherence": {
+    "inheritsFrom": "L2_Fluids_Seen",
+    "hostsSchemas": true,
+    "hostsRegistries": true,
+    "hostsSpine": "S3",
+    "hostsDimensions": true,
+    "description": "L3 is the structural anchor of the MCP corpus. All validation, operator semantics, and dimensional constructs originate here."
+  }
+}
