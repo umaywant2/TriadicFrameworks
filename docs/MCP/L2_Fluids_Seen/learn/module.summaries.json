@@ -1,3 +1,89 @@
-{"layer": "L2_Fluids_Seen",
-"triad": "fluids"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L2_Fluids_Seen",
+  "triad": "fluids",
+  "title": "TriadicFrameworks MCP — L2 Fluids Seen Module Summaries",
+  "description": "Summaries of all modules within the Fluids Seen Layer, covering fluidic resonance, continuity, laminarity, turbulence, viscosity, and flow-state mechanics.",
+  "note": "This file provides canonical summaries for the L2 Fluids Seen layer.",
+
+  "modules": {
+    "examples": {
+      "summary": "Canonical examples demonstrating fluidic resonance, laminarity, turbulence, viscosity, continuity, and flow-state metrics.",
+      "purpose": "Provide concrete demonstrations of fluidic behavior and resonance transformations.",
+      "layer": "L2_Fluids_Seen",
+      "triad": "fluids"
+    },
+
+    "fs.list": {
+      "summary": "Lists all fluid substrates available within the Fluids Seen layer.",
+      "purpose": "Enumerate laminar, turbulent, viscous, and continuity-governed substrates.",
+      "layer": "L2_Fluids_Seen",
+      "triad": "fluids"
+    },
+
+    "fs.metadata": {
+      "summary": "Defines metadata fields for fluid substrates, including laminarity, turbulence, viscosity, continuity, and flow integrity.",
+      "purpose": "Provide a canonical schema for fluidic resonance metadata.",
+      "layer": "L2_Fluids_Seen",
+      "triad": "fluids"
+    },
+
+    "fs.read": {
+      "summary": "Reads and returns full metadata for a single fluid substrate.",
+      "purpose": "Retrieve laminarity, turbulence, viscosity, continuity, and resonance signatures.",
+      "layer": "L2_Fluids_Seen",
+      "triad": "fluids"
+    },
+
+    "fs.search": {
+      "summary": "Searches fluid substrates using keyword, category, or resonance-aware criteria.",
+      "purpose": "Enable discovery of fluid substrates based on flow-state properties.",
+      "layer": "L2_Fluids_Seen",
+      "triad": "fluids"
+    },
+
+    "flashcards": {
+      "summary": "Flashcards for learning fluidic resonance, continuity, laminarity, turbulence, viscosity, and flow-state mechanics.",
+      "purpose": "Provide structured learning resources for L2 concepts.",
+      "layer": "L2_Fluids_Seen",
+      "triad": "fluids"
+    },
+
+    "operator.cheat.sheets": {
+      "summary": "Cheat sheets for fluidic operators such as flow, pressure, viscosity, continuity, channel, and rupture.",
+      "purpose": "Provide quick-reference guides for operator usage and resonance behavior.",
+      "layer": "L2_Fluids_Seen",
+      "triad": "fluids"
+    },
+
+    "quizzes": {
+      "summary": "Quizzes for testing knowledge of fluidic resonance, continuity, laminarity, turbulence, viscosity, and flow-state mechanics.",
+      "purpose": "Assess understanding of L2 concepts through structured questions.",
+      "layer": "L2_Fluids_Seen",
+      "triad": "fluids"
+    },
+
+    "tools": {
+      "summary": "Operational tools for fluidic analysis, including flow-state evaluation, laminarity/turbulence diagnostics, and continuity mapping.",
+      "purpose": "Provide machine-level functions for analyzing fluidic resonance.",
+      "layer": "L2_Fluids_Seen",
+      "triad": "fluids"
+    }
+  },
+
+  "reality": {
+    "description": "Machine-level module summaries.",
+    "details": "Each module summary provides a concise description of its purpose and role within the Fluids Seen layer."
+  },
+
+  "imagination": {
+    "description": "Symbolic interpretation.",
+    "details": "Fluidic resonance forms channels, vortices, laminar streams, and continuity pathways within the seen layer."
+  },
+
+  "information": {
+    "description": "Cosmology notes.",
+    "details": "All L2 modules inherit qmroot lineage through frequency into seen-layer fluid dynamics."
+  }
 }
