@@ -1,4 +1,185 @@
-{"layer": "L3_Forces_Unseen",
-"triad": "forces",
-"qmroot": "0D"
-} 
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "title": "TriadicFrameworks MCP — L3 Forces Unseen Session Context Schema",
+  "description": "Defines the schema for session-context metadata within the Forces Unseen Layer, including drift, coherence, lineage, and force-regime semantics.",
+  "note": "This schema governs session-context blocks for unseen force-state mechanics.",
+
+  "schema": {
+    "name": "forceRegimeSession",
+    "version": "1.0.0",
+    "purpose": "Define session-context identity and metadata for unseen force-regime components.",
+    "lineage": "qmroot-0D",
+
+    "identity": {
+      "type": "object",
+      "fields": {
+        "module": {
+          "type": "string",
+          "description": "Name of the module requesting the session-context block."
+        },
+        "format": {
+          "type": "string",
+          "description": "Format of the page (README.md, module, schema, registry)."
+        },
+        "version": {
+          "type": "string",
+          "description": "Version of the module or schema."
+        }
+      }
+    },
+
+    "drift": {
+      "type": "object",
+      "fields": {
+        "forceDrift": {
+          "type": "string",
+          "description": "Description of drift within unseen force regimes."
+        },
+        "gradientDrift": {
+          "type": "string",
+          "description": "Description of drift in causal gradients."
+        },
+        "coherenceDrift": {
+          "type": "string",
+          "description": "Description of drift in influence-field coherence."
+        }
+      }
+    },
+
+    "coherence": {
+      "type": "object",
+      "fields": {
+        "forceCoherence": {
+          "type": "string",
+          "description": "Coherence of unseen force-state mechanics."
+        },
+        "fieldCoherence": {
+          "type": "string",
+          "description": "Coherence of influence fields."
+        },
+        "gradientCoherence": {
+          "type": "string",
+          "description": "Coherence of causal gradients."
+        }
+      }
+    },
+
+    "lineage": {
+      "type": "object",
+      "fields": {
+        "inheritsFrom": {
+          "type": "string",
+          "description": "Ancestor cosmological layer.",
+          "allowed": [
+            "L0_QMROOT",
+            "L1_Frequency_Unseen",
+            "L2_Fluids_Seen"
+          ]
+        },
+        "inheritanceStrength": {
+          "type": "number",
+          "description": "Strength of lineage inheritance.",
+          "range": [0, 1]
+        }
+      }
+    },
+
+    "semantics": {
+      "type": "array",
+      "description": "Force-regime semantics relevant to the session.",
+      "items": [
+        "gradientIntensity",
+        "fieldCoherence",
+        "influenceContinuity",
+        "rupturePotential",
+        "forceIntegrity"
+      ]
+    }
+  },
+
+  "examples": [
+    {
+      "name": "Session-context schema example",
+      "input": {
+        "identity": {
+          "module": "examples",
+          "format": "README.md",
+          "version": "1.0.0"
+        },
+        "drift": {
+          "forceDrift": "Unseen-layer force drift",
+          "gradientDrift": "Directional gradient drift",
+          "coherenceDrift": "Influence-field coherence drift"
+        },
+        "coherence": {
+          "forceCoherence": "Force-state coherence",
+          "fieldCoherence": "Influence-field coherence",
+          "gradientCoherence": "Causal gradient coherence"
+        },
+        "lineage": {
+          "inheritsFrom": "L2_Fluids_Seen",
+          "inheritanceStrength": 0.81
+        },
+        "semantics": [
+          "gradientIntensity",
+          "fieldCoherence",
+          "influenceContinuity",
+          "rupturePotential",
+          "forceIntegrity"
+        ]
+      },
+      "output": {
+        "session": {
+          "identity": {
+            "module": "examples",
+            "format": "README.md",
+            "version": "1.0.0"
+          },
+          "drift": {
+            "forceDrift": "Unseen-layer force drift",
+            "gradientDrift": "Directional gradient drift",
+            "coherenceDrift": "Influence-field coherence drift"
+          },
+          "coherence": {
+            "forceCoherence": "Force-state coherence",
+            "fieldCoherence": "Influence-field coherence",
+            "gradientCoherence": "Causal gradient coherence"
+          },
+          "lineage": {
+            "inheritsFrom": "L2_Fluids_Seen",
+            "inheritanceStrength": 0.81
+          },
+          "semantics": [
+            "gradientIntensity",
+            "fieldCoherence",
+            "influenceContinuity",
+            "rupturePotential",
+            "forceIntegrity"
+          ],
+          "layer": "L3_Forces_Unseen",
+          "triad": "forces",
+          "qmroot": "0D",
+          "canonical": "R5"
+        }
+      },
+
+      "reality": {
+        "description": "Machine-level session-context resolution.",
+        "details": "Session identity, drift, coherence, lineage, and semantics resolved according to schema definitions."
+      },
+
+      "imagination": {
+        "description": "Symbolic interpretation.",
+        "details": "Unseen force regimes reveal their contextual influence patterns."
+      },
+
+      "information": {
+        "description": "Cosmology notes.",
+        "details": "Session lineage flows qmroot → frequency → fluids → forces."
+      }
+    }
+  ]
+}
