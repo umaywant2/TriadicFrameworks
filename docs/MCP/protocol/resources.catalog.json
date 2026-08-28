@@ -1,1 +1,53 @@
+{
+  "version": "0.1.0",
+  "resources": [
+    {
+      "name": "modules",
+      "description": "All TriadicFrameworks modules across L0–L3, loaded from module_registry.json.",
+      "schema": {
+        "$ref": "module.schema.json"
+      }
+    },
+    {
+      "name": "operators",
+      "description": "Operator definitions, analyzer mappings, and regime metadata.",
+      "schema": {
+        "$ref": "operator.schema.json"
+      }
+    },
+    {
+      "name": "examples",
+      "description": "Example envelopes for canonical, reality, imagination, information, error, and qmroot examples.",
+      "schema": {
+        "$ref": "example.schema.json"
+      },
+      "registry": "examples.registry.json"
+    },
+    {
+      "name": "schemas",
+      "description": "All JSON Schemas used by the TriadicFrameworks corpus, including module, operator, and example schemas.",
+      "items": [
+        "module.schema.json",
+        "operator.schema.json",
+        "example.schema.json"
+      ]
+    },
+    {
+      "name": "spines",
+      "description": "Functional canon graphs including S3.graph.json and future S1/S2 spines.",
+      "items": [
+        "S3.graph.json"
+      ]
+    },
+    {
+      "name": "registry",
+      "description": "Global registries for modules, operators, examples, and schemas.",
+      "items": [
+        "module_registry.json",
+        "operator_registry.json",
+        "examples.registry.json"
+      ]
+    }
+  ]
+}
 
