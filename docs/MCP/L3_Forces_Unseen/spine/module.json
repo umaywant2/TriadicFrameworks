@@ -1,1 +1,126 @@
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "title": "TriadicFrameworks MCP — L3 Forces Unseen Spine Module",
+  "description": "Module manifest for the S3 spine, defining structural graph identity, purpose, metadata, lineage, and force-regime semantics.",
+  "note": "This module anchors the S3 spine within the TriadicFrameworks MCP.",
+
+  "identity": {
+    "name": "S3_Spine",
+    "category": "spine",
+    "purpose": "Define and maintain the structural graph for unseen force regimes.",
+    "version": "1.0.0"
+  },
+
+  "metadata": {
+    "forceDomain": "forces",
+    "contains": [
+      "S3.graph.json",
+      "m_Source.md",
+      "README.md"
+    ],
+    "regimeSemantics": [
+      "gradientIntensity",
+      "fieldCoherence",
+      "influenceContinuity",
+      "rupturePotential",
+      "forceIntegrity"
+    ],
+    "graphNodes": [
+      "gradient",
+      "field",
+      "rupture",
+      "integrity"
+    ],
+    "graphEdges": [
+      "gradient→field",
+      "field→integrity",
+      "gradient→rupture",
+      "integrity→rupture"
+    ]
+  },
+
+  "lineage": {
+    "inheritsFrom": "L2_Fluids_Seen",
+    "inheritanceStrength": 0.82,
+    "description": "S3 spine inherits fluidic continuity and transforms it into unseen force-regime structure."
+  },
+
+  "integration": {
+    "graph": "S3.graph.json",
+    "source": "m_Source.md",
+    "readme": "README.md",
+    "description": "Defines structural graph, cosmological explanation, and canonical documentation for the L3 spine."
+  },
+
+  "examples": [
+    {
+      "name": "spine-module-example",
+      "input": {
+        "request": "getModule",
+        "module": "S3_Spine"
+      },
+      "output": {
+        "identity": {
+          "name": "S3_Spine",
+          "category": "spine",
+          "purpose": "Define and maintain the structural graph for unseen force regimes.",
+          "version": "1.0.0"
+        },
+        "metadata": {
+          "forceDomain": "forces",
+          "contains": [
+            "S3.graph.json",
+            "m_Source.md",
+            "README.md"
+          ],
+          "regimeSemantics": [
+            "gradientIntensity",
+            "fieldCoherence",
+            "influenceContinuity",
+            "rupturePotential",
+            "forceIntegrity"
+          ],
+          "graphNodes": [
+            "gradient",
+            "field",
+            "rupture",
+            "integrity"
+          ],
+          "graphEdges": [
+            "gradient→field",
+            "field→integrity",
+            "gradient→rupture",
+            "integrity→rupture"
+          ]
+        },
+        "lineage": {
+          "inheritsFrom": "L2_Fluids_Seen",
+          "inheritanceStrength": 0.82
+        },
+        "layer": "L3_Forces_Unseen",
+        "triad": "forces",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+
+      "reality": {
+        "description": "Machine-level module manifest resolution.",
+        "details": "Module identity, metadata, lineage, and integration resolved according to schema definitions."
+      },
+
+      "imagination": {
+        "description": "Symbolic interpretation.",
+        "details": "Unseen force structures reveal their graph-based influence patterns."
+      },
+
+      "information": {
+        "description": "Cosmology notes.",
+        "details": "Module lineage flows qmroot → frequency → fluids → forces."
+      }
+    }
+  ]
+}
 
