@@ -1,0 +1,20 @@
+{
+  "canonical": "R5",
+  "layer": "L2_Fluids_Seen",
+  "triad": "continuity",
+  "lineage": ["qmroot", "frequency", "fluids"],
+
+  "purpose": "Defines seen-world continuity mechanics including flow, substrate, and fluidic regime behavior.",
+
+  "contents": {
+    "files": ["README.md"],
+    "modules": [],
+    "notes": "L2 contains no schemas or registries; it references L3 schemas for validation."
+  },
+
+  "coherence": {
+    "inheritsFrom": "L1_Frequency_Unseen",
+    "inheritsTo": ["L3_Forces_Unseen"],
+    "description": "Continuity emerges from oscillation behavior and transitions into unseen force-regime mechanics."
+  }
+}
