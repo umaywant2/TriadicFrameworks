@@ -1,3 +1,99 @@
-{"layer": "L2_Fluids_Seen",
-"triad": "fluids"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L2_Fluids_Seen",
+  "triad": "fluids",
+  "title": "TriadicFrameworks MCP — L2 Fluids Seen Operator Cheat Sheets",
+  "description": "Cheat sheets for fluidic operators governing flow-state mechanics, continuity, laminarity, turbulence, viscosity, pressure, and rupture.",
+  "note": "This file provides canonical operator cheat sheets for the L2 Fluids Seen layer.",
+
+  "operators": [
+    {
+      "name": "flow",
+      "domain": "fluids",
+      "family": "motion",
+      "primitives": ["laminarity", "turbulence"],
+      "summary": "Controls directional movement of the fluid field.",
+      "usage": [
+        "Increase laminarity for stable channels.",
+        "Decrease turbulence for smoother flow.",
+        "Balance pressureGradient to maintain continuity."
+      ]
+    },
+    {
+      "name": "pressure",
+      "domain": "fluids",
+      "family": "force",
+      "primitives": ["pressureGradient"],
+      "summary": "Regulates directional pressure changes across the fluid field.",
+      "usage": [
+        "High pressureGradient increases turbulence.",
+        "Low pressureGradient stabilizes laminar flow.",
+        "Use pressure to initiate or halt flow-state transitions."
+      ]
+    },
+    {
+      "name": "viscosity",
+      "domain": "fluids",
+      "family": "medium",
+      "primitives": ["viscosity"],
+      "summary": "Controls internal friction and resistance to flow.",
+      "usage": [
+        "High viscosity slows flow and increases continuity.",
+        "Low viscosity accelerates flow and reduces stability.",
+        "Viscosity interacts strongly with laminarity."
+      ]
+    },
+    {
+      "name": "continuity",
+      "domain": "fluids",
+      "family": "identity",
+      "primitives": ["continuity"],
+      "summary": "Preserves identity across flow transitions.",
+      "usage": [
+        "High continuity stabilizes flow-state mechanics.",
+        "Low continuity increases rupture risk.",
+        "Continuity is essential for long-range fluid coherence."
+      ]
+    },
+    {
+      "name": "channel",
+      "domain": "fluids",
+      "family": "structure",
+      "primitives": ["flowIntegrity"],
+      "summary": "Creates stable pathways for fluid movement.",
+      "usage": [
+        "Channels increase laminarity.",
+        "Channels reduce turbulence.",
+        "Channels preserve continuity across transitions."
+      ]
+    },
+    {
+      "name": "rupture",
+      "domain": "fluids",
+      "family": "failure",
+      "primitives": ["turbulence", "continuity"],
+      "summary": "Represents breakdown of continuity and collapse of flow-state structure.",
+      "usage": [
+        "High turbulence increases rupture risk.",
+        "Low continuity triggers rupture events.",
+        "Rupture is the failure mode of fluidic resonance."
+      ]
+    }
+  ],
+
+  "reality": {
+    "description": "Machine-level operator definitions.",
+    "details": "Each operator cheat sheet provides structured guidance for fluidic resonance control."
+  },
+
+  "imagination": {
+    "description": "Symbolic interpretation.",
+    "details": "Operators shape channels, vortices, laminar streams, pressure waves, and continuity pathways."
+  },
+
+  "information": {
+    "description": "Cosmology notes.",
+    "details": "Fluidic operators inherit qmroot lineage through frequency into seen-layer dynamics."
+  }
 }
