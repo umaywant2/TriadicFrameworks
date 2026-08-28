@@ -1,1 +1,116 @@
+{
+  "canonical": "R5",
+  "title": "TriadicFrameworks MCP — Root Sitemap",
+  "description": "Master sitemap for the entire MCP, indexing all layers, modules, registries, schemas, spines, and canonical documentation.",
+  "qmroot": "0D",
+  "triad": "root",
+  "layer": "MCP",
+
+  "root": {
+    "module": "docs/MCP/module.json",
+    "readme": "docs/MCP/README.md",
+    "source": "docs/MCP/m_Source.md",
+    "coherence": "docs/MCP/coherence.md"
+  },
+
+  "layers": [
+    {
+      "id": "L0_QMROOT",
+      "triad": "unseen",
+      "lineage": "0D",
+      "path": "docs/MCP/L0_QMROOT/",
+      "files": {
+        "server": "docs/MCP/L0_QMROOT/server.json",
+        "capabilities": "docs/MCP/L0_QMROOT/getCapabilities.json",
+        "readme": "docs/MCP/L0_QMROOT/README.md"
+      },
+      "directories": {
+        "auth": "docs/MCP/L0_QMROOT/auth/",
+        "discovery": "docs/MCP/L0_QMROOT/discovery/",
+        "errors": "docs/MCP/L0_QMROOT/errors/",
+        "examples": "docs/MCP/L0_QMROOT/examples/"
+      }
+    },
+
+    {
+      "id": "L1_Frequency_Unseen",
+      "triad": "unseen",
+      "lineage": "qmroot → frequency",
+      "path": "docs/MCP/L1_Frequency_Unseen/",
+      "files": {
+        "readme": "docs/MCP/L1_Frequency_Unseen/README.md"
+      },
+      "directories": {
+        "ai": "docs/MCP/L1_Frequency_Unseen/ai/",
+        "diagnostics": "docs/MCP/L1_Frequency_Unseen/diagnostics/",
+        "graph": "docs/MCP/L1_Frequency_Unseen/graph/",
+        "indexer": "docs/MCP/L1_Frequency_Unseen/indexer/",
+        "tools": "docs/MCP/L1_Frequency_Unseen/tools/",
+        "examples": "docs/MCP/L1_Frequency_Unseen/examples/"
+      }
+    },
+
+    {
+      "id": "L2_Fluids_Seen",
+      "triad": "seen",
+      "lineage": "qmroot → frequency → fluids",
+      "path": "docs/MCP/L2_Fluids_Seen/",
+      "files": {
+        "readme": "docs/MCP/L2_Fluids_Seen/README.md"
+      },
+      "directories": {
+        "fs": "docs/MCP/L2_Fluids_Seen/fs/",
+        "learn": "docs/MCP/L2_Fluids_Seen/learn/",
+        "tools": "docs/MCP/L2_Fluids_Seen/tools/",
+        "examples": "docs/MCP/L2_Fluids_Seen/examples/"
+      }
+    },
+
+    {
+      "id": "L3_Forces_Unseen",
+      "triad": "unseen",
+      "lineage": "qmroot → frequency → fluids → forces",
+      "path": "docs/MCP/L3_Forces_Unseen/",
+      "files": {
+        "readme": "docs/MCP/L3_Forces_Unseen/README.md"
+      },
+      "directories": {
+        "examples": "docs/MCP/L3_Forces_Unseen/examples/",
+        "registry": "docs/MCP/L3_Forces_Unseen/registry/",
+        "schemas": "docs/MCP/L3_Forces_Unseen/schemas/",
+        "spine": "docs/MCP/L3_Forces_Unseen/spine/"
+      }
+    }
+  ],
+
+  "spines": {
+    "S1": "docs/MCP/L1_Frequency_Unseen/graph/",
+    "S2": "docs/MCP/L2_Fluids_Seen/",
+    "S3": "docs/MCP/L3_Forces_Unseen/spine/"
+  },
+
+  "registries": {
+    "L1": "docs/MCP/L1_Frequency_Unseen/ai/ai.registry.json",
+    "L2": "docs/MCP/L2_Fluids_Seen/tools/listModules.json",
+    "L3": "docs/MCP/L3_Forces_Unseen/registry/module_registry.json"
+  },
+
+  "schemas": {
+    "L3": {
+      "analyzer": "docs/MCP/L3_Forces_Unseen/schemas/analyzer.schema.json",
+      "drift": "docs/MCP/L3_Forces_Unseen/schemas/drift.schema.json",
+      "lineage": "docs/MCP/L3_Forces_Unseen/schemas/lineage.schema.json",
+      "module": "docs/MCP/L3_Forces_Unseen/schemas/module.schema.json",
+      "operator": "docs/MCP/L3_Forces_Unseen/schemas/operator.schema.json",
+      "session": "docs/MCP/L3_Forces_Unseen/schemas/session.schema.json"
+    }
+  },
+
+  "examples": {
+    "L0": "docs/MCP/L0_QMROOT/examples/stub.json",
+    "L1": "docs/MCP/L1_Frequency_Unseen/examples/stub.json",
+    "L2": "docs/MCP/L2_Fluids_Seen/examples/stub.json",
+    "L3": "docs/MCP/L3_Forces_Unseen/examples/stub.json"
+  }
+}
 
