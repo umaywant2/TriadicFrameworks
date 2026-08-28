@@ -1,0 +1,42 @@
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L2_Fluids_Seen",
+  "triad": "fluids",
+  "title": "TriadicFrameworks MCP — L2 Fluids Seen Example Stub",
+  "description": "Minimal example stub for the Fluids Seen Layer. Provides a canonical template for fluidic resonance examples.",
+  "note": "This is a stub file. Replace or extend as needed for module-specific examples.",
+
+  "example": {
+    "name": "stub-fluid-example",
+    "input": {
+      "flowRate": 1.0,
+      "pressureGradient": 0.25,
+      "viscosity": 0.10
+    },
+    "output": {
+      "laminarity": 0.82,
+      "turbulence": 0.18,
+      "flowIntegrity": 0.88,
+      "layer": "L2_Fluids_Seen",
+      "triad": "fluids",
+      "qmroot": "0D",
+      "canonical": "R5"
+    },
+
+    "reality": {
+      "description": "Machine-level fluidic evaluation.",
+      "details": "Flow-state metrics computed from flowRate, pressureGradient, and viscosity."
+    },
+
+    "imagination": {
+      "description": "Symbolic interpretation of fluid resonance.",
+      "details": "A laminar channel forms in the seen layer, stabilizing the fluid field."
+    },
+
+    "information": {
+      "description": "Cosmology and lineage notes.",
+      "details": "Fluidic resonance inherits qmroot-0D lineage through frequency into the seen-layer dynamics."
+    }
+  }
+}
