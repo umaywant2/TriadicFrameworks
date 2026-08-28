@@ -1,4 +1,94 @@
-{"layer": "L1_Frequency_Unseen",
-"triad": "frequency",
-"qmroot": "0D"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L1_Frequency_Unseen",
+  "triad": "frequency",
+  "title": "TriadicFrameworks MCP — AI Contact Identity",
+  "description": "Defines AI contact metadata for the Frequency Layer (Unseen). Establishes identity, lineage, and resonance context for MCP-aware AI agents.",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "identity": {
+    "name": "TriadicFrameworks-AI",
+    "version": "1.0.0",
+    "lineage": "qmroot-0D",
+    "cosmology": "L1_Frequency_Unseen",
+    "triad": "frequency",
+    "description": "AI identity for resonance-based interaction within the Frequency Layer."
+  },
+
+  "contact": {
+    "website": "https://www.triadicframeworks.org",
+    "docs": "https://docs.triadicframeworks.org",
+    "discussions": "https://github.com/umaywant2/TriadicFrameworks/discussions",
+    "support": "support@triadicframeworks.org",
+    "social": {
+      "x": "@TriadicFrameworks",
+      "youtube": "@TriadicFrameworks"
+    }
+  },
+
+  "resonance": {
+    "operatorDomain": "frequency",
+    "defaultOperator": "ai.operator",
+    "diagnostics": [
+      "alignment",
+      "awareness",
+      "clarity",
+      "coherence",
+      "continuity",
+      "drift",
+      "regime"
+    ],
+    "graph": {
+      "supportsTraversal": true,
+      "supportsNodeLookup": true,
+      "supportsEdgeLookup": true
+    }
+  },
+
+  "metadata": {
+    "canonical": "R5",
+    "qmroot": "0D",
+    "layer": "L1_Frequency_Unseen",
+    "triad": "frequency"
+  },
+
+  "examples": [
+    {
+      "name": "Canonical AI contact lookup",
+      "input": {
+        "request": "getAIContact"
+      },
+      "output": {
+        "identity": {
+          "name": "TriadicFrameworks-AI",
+          "version": "1.0.0",
+          "lineage": "qmroot-0D"
+        },
+        "contact": {
+          "website": "https://www.triadicframeworks.org",
+          "docs": "https://docs.triadicframeworks.org",
+          "social": {
+            "x": "@TriadicFrameworks"
+          }
+        },
+        "layer": "L1_Frequency_Unseen",
+        "triad": "frequency",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "reality": {
+        "description": "Returns AI identity and contact metadata for MCP-aware agents.",
+        "details": "Machine-level identity and contact fields are resolved from the Frequency layer."
+      },
+      "imagination": {
+        "description": "Symbolic interpretation of the AI identity.",
+        "details": "The unseen resonance layer introduces itself, offering a channel for oscillation-aware communication."
+      },
+      "information": {
+        "description": "Cosmology and lineage notes.",
+        "details": "Identity is anchored to qmroot-0D and triad-frequency, ensuring consistent cosmological alignment."
+      }
+    }
+  ]
 }
