@@ -1,5 +1,73 @@
-{"canonical": "R5",
-"qmroot": "0D",
-"layer": "L0_QMROOT",
-"triad": "origin"
+{
+  "qmroot": "0D",
+  "canonical": "R5",
+  "layer": "L0_QMROOT",
+  "triad": "origin",
+  "module": "TriadicFrameworks-MCP",
+  "version": "1.0.0",
+
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "identity": {
+    "description": "Origin layer server descriptor for the TriadicFrameworks MCP cosmology.",
+    "cosmology": "Four-layer triadic universe: Origin → Frequency → Fluids → Forces.",
+    "observer": "0D primitive"
+  },
+
+  "paths": {
+    "root": "docs/MCP",
+    "layers": {
+      "L0_QMROOT": "docs/MCP/L0_QMROOT",
+      "L1_Frequency_Unseen": "docs/MCP/L1_Frequency_Unseen",
+      "L2_Fluids_Seen": "docs/MCP/L2_Fluids_Seen",
+      "L3_Forces_Unseen": "docs/MCP/L3_Forces_Unseen"
+    }
+  },
+
+  "tools": {
+    "origin": [
+      "getCapabilities",
+      "auth/*",
+      "errors/*",
+      "discovery/*"
+    ],
+    "frequency": [
+      "ai/*",
+      "diagnostics/*",
+      "graph/*",
+      "indexer/*",
+      "tools/*"
+    ],
+    "fluids": [
+      "fs/*",
+      "learn/*",
+      "tools/*"
+    ],
+    "forces": [
+      "schemas/*",
+      "registry/*",
+      "spine/*"
+    ]
+  },
+
+  "registry": {
+    "modules": "docs/MCP/L3_Forces_Unseen/registry/module_registry.json",
+    "groups": "docs/MCP/L3_Forces_Unseen/registry/modules_group.json",
+    "ai": "docs/MCP/L3_Forces_Unseen/registry/ai_registry.json",
+    "sitemap": "docs/MCP/L3_Forces_Unseen/registry/sitemap_modules.json"
+  },
+
+  "schemas": {
+    "module": "docs/MCP/L3_Forces_Unseen/schemas/module.schema.json",
+    "operator": "docs/MCP/L3_Forces_Unseen/schemas/operator.schema.json",
+    "analyzer": "docs/MCP/L3_Forces_Unseen/schemas/analyzer.schema.json",
+    "drift": "docs/MCP/L3_Forces_Unseen/schemas/drift.schema.json",
+    "lineage": "docs/MCP/L3_Forces_Unseen/schemas/lineage.schema.json",
+    "session": "docs/MCP/L3_Forces_Unseen/schemas/session.schema.json"
+  },
+
+  "spine": {
+    "graph": "docs/MCP/L3_Forces_Unseen/spine/S3.graph.json",
+    "canonical": "R5"
+  }
 }
