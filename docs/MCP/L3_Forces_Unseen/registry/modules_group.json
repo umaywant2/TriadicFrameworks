@@ -1,3 +1,92 @@
-{"layer": "L3_Forces_Unseen",
-"triad": "forces"
-} 
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "title": "TriadicFrameworks MCP — L3 Forces Unseen Grouped Module Registry",
+  "description": "Groups all L3 modules into functional categories for unseen force-regime analysis.",
+  "note": "This registry organizes modules by cosmological function within the Forces Unseen layer.",
+
+  "groups": {
+    "examples": {
+      "description": "Demonstrations of unseen force regimes, causal gradients, influence fields, and force-state mechanics.",
+      "modules": ["examples"]
+    },
+
+    "registry": {
+      "description": "Identity, module, and sitemap registries for force-regime indexing.",
+      "modules": [
+        "ai_registry",
+        "module_registry",
+        "modules_group",
+        "sitemap_modules"
+      ]
+    },
+
+    "schemas": {
+      "description": "JSON schemas defining force-state metadata, diagnostics, and operator structures.",
+      "modules": ["schemas"]
+    },
+
+    "spine": {
+      "description": "Integration of L3 force-regime mechanics into the TriadicFrameworks spine.",
+      "modules": ["spine"]
+    }
+  },
+
+  "metadata": {
+    "canonical": "R5",
+    "qmroot": "0D",
+    "layer": "L3_Forces_Unseen",
+    "triad": "forces"
+  },
+
+  "examples": [
+    {
+      "name": "Grouped module registry lookup",
+      "input": {
+        "request": "getModuleGroups"
+      },
+      "output": {
+        "groups": {
+          "examples": {
+            "modules": ["examples"]
+          },
+          "registry": {
+            "modules": [
+              "ai_registry",
+              "module_registry",
+              "modules_group",
+              "sitemap_modules"
+            ]
+          },
+          "schemas": {
+            "modules": ["schemas"]
+          },
+          "spine": {
+            "modules": ["spine"]
+          }
+        },
+        "layer": "L3_Forces_Unseen",
+        "triad": "forces",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+
+      "reality": {
+        "description": "Machine-level grouped module lookup.",
+        "details": "Groups are returned from the canonical modules_group registry."
+      },
+
+      "imagination": {
+        "description": "Symbolic interpretation.",
+        "details": "Unseen force structures organize themselves into coherent influence clusters."
+      },
+
+      "information": {
+        "description": "Cosmology notes.",
+        "details": "Module grouping inherits qmroot lineage through frequency → fluids → forces."
+      }
+    }
+  ]
+}
