@@ -1,4 +1,106 @@
-{"layer": "L1_Frequency_Unseen",
-"triad": "frequency",
-"qmroot": "0D"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L1_Frequency_Unseen",
+  "triad": "frequency",
+  "title": "TriadicFrameworks MCP — Drift Diagnostic Tool",
+  "description": "Operational tool for evaluating drift within the Frequency Layer (Unseen). Computes phase slippage, harmonic deviation, and instability index.",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "tool": {
+    "name": "diagnoseDrift",
+    "version": "1.0.0",
+    "purpose": "Compute drift metrics from oscillation history and operator context.",
+    "lineage": "qmroot-0D",
+    "supportsDiagnostics": true,
+    "supportsResonanceAnalysis": true
+  },
+
+  "input": {
+    "phaseHistory": {
+      "type": "array",
+      "description": "List of phase values over time used to compute phase slippage."
+    },
+    "harmonicLayers": {
+      "type": "array",
+      "description": "List of harmonic values used to compute harmonic deviation."
+    },
+    "operator": {
+      "type": "string",
+      "description": "Operator used during the diagnostic run (e.g., coherence, clarity)."
+    }
+  },
+
+  "output": {
+    "drift": {
+      "type": "object",
+      "fields": {
+        "phaseSlippage": {
+          "type": "number",
+          "description": "Computed deviation in oscillation phase over time."
+        },
+        "harmonicDeviation": {
+          "type": "number",
+          "description": "Computed inconsistency across harmonic layers."
+        },
+        "instabilityIndex": {
+          "type": "number",
+          "description": "Computed overall resonance instability."
+        }
+      }
+    },
+    "layer": "L1_Frequency_Unseen",
+    "triad": "frequency",
+    "qmroot": "0D",
+    "canonical": "R5"
+  },
+
+  "resonance": {
+    "requiresClarity": true,
+    "requiresAlignment": true,
+    "requiresCoherence": true,
+    "requiresContinuity": true,
+    "requiresAwareness": true,
+    "operatorDomain": "frequency",
+    "primitives": [
+      "oscillation",
+      "phaseShift",
+      "harmonic",
+      "lineagePulse"
+    ]
+  },
+
+  "examples": [
+    {
+      "name": "Drift diagnostic tool run",
+      "input": {
+        "phaseHistory": [0.71, 0.72, 0.75, 0.80],
+        "harmonicLayers": [1.0, 0.95, 0.88],
+        "operator": "coherence"
+      },
+      "output": {
+        "drift": {
+          "phaseSlippage": 0.32,
+          "harmonicDeviation": 0.18,
+          "instabilityIndex": 0.27
+        },
+        "layer": "L1_Frequency_Unseen",
+        "triad": "frequency",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "reality": {
+        "description": "Machine-level drift computation.",
+        "details": "Phase slippage, harmonic deviation, and instability index are computed from oscillation history and harmonic layers."
+      },
+      "imagination": {
+        "description": "Symbolic interpretation of drift.",
+        "details": "The unseen resonance field begins to wobble, slipping out of alignment and losing structural integrity."
+      },
+      "information": {
+        "description": "Cosmology and lineage notes.",
+        "details": "Drift computation inherits qmroot-0D and triad-frequency metadata for cosmological consistency."
+      }
+    }
+  ]
 }
