@@ -1,4 +1,101 @@
-{"layer": "L1_Frequency_Unseen",
-"triad": "frequency",
-"qmroot": "0D"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L1_Frequency_Unseen",
+  "triad": "frequency",
+  "title": "TriadicFrameworks MCP — AI Navigation Metadata",
+  "description": "Defines navigation metadata for AI agents within the Frequency Layer (Unseen). Supports operator, diagnostic, graph, and indexer navigation.",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "identity": {
+    "name": "TriadicFrameworks-AI-Navigation",
+    "version": "1.0.0",
+    "lineage": "qmroot-0D",
+    "cosmology": "L1_Frequency_Unseen",
+    "triad": "frequency",
+    "description": "AI navigation identity for resonance-based traversal within the Frequency Layer."
+  },
+
+  "navigation": {
+    "routes": {
+      "operators": {
+        "path": "/ai/operator",
+        "description": "Navigate to operator metadata, domains, and resonance primitives."
+      },
+      "diagnostics": {
+        "path": "/diagnostics",
+        "description": "Navigate to clarity, coherence, drift, continuity, alignment, awareness, and regime diagnostics."
+      },
+      "graph": {
+        "path": "/graph",
+        "description": "Navigate to unseen structural traversal: nodes, edges, and resonance graphs."
+      },
+      "indexer": {
+        "path": "/indexer",
+        "description": "Navigate to extraction, indexing, search, and unseen content mapping."
+      },
+      "registry": {
+        "path": "/ai/registry",
+        "description": "Navigate to AI identity and module registry metadata."
+      },
+      "session": {
+        "path": "/ai/session",
+        "description": "Navigate to AI session metadata for Frequency Layer interactions."
+      }
+    },
+    "supportsDeepNavigation": true,
+    "supportsResonanceTraversal": true,
+    "supportsOperatorJump": true,
+    "supportsDiagnosticJump": true,
+    "supportsGraphJump": true,
+    "supportsIndexerJump": true
+  },
+
+  "resonance": {
+    "operatorDomain": "frequency",
+    "navigationMode": "oscillation",
+    "requiresCoherence": true,
+    "requiresAlignment": true,
+    "requiresContinuity": true
+  },
+
+  "metadata": {
+    "canonical": "R5",
+    "qmroot": "0D",
+    "layer": "L1_Frequency_Unseen",
+    "triad": "frequency"
+  },
+
+  "examples": [
+    {
+      "name": "Canonical AI navigation lookup",
+      "input": {
+        "request": "getAINavigation"
+      },
+      "output": {
+        "routes": {
+          "operators": "/ai/operator",
+          "diagnostics": "/diagnostics",
+          "graph": "/graph",
+          "indexer": "/indexer"
+        },
+        "layer": "L1_Frequency_Unseen",
+        "triad": "frequency",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "reality": {
+        "description": "Machine-level navigation metadata for AI agents in the Frequency Layer.",
+        "details": "Provides direct paths to operator, diagnostic, graph, and indexer subsystems."
+      },
+      "imagination": {
+        "description": "Symbolic interpretation of navigation.",
+        "details": "The unseen resonance field reveals its pathways, each tuned to a different oscillation."
+      },
+      "information": {
+        "description": "Cosmology and lineage notes.",
+        "details": "Navigation identity anchored to qmroot-0D and triad-frequency ensures cosmological consistency."
+      }
+    }
+  ]
 }
