@@ -1,4 +1,123 @@
-{"layer": "L1_Frequency_Unseen",
-"triad": "frequency",
-"qmroot": "0D"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L1_Frequency_Unseen",
+  "triad": "frequency",
+  "title": "TriadicFrameworks MCP — Content Indexer",
+  "description": "Indexes unseen-layer content for discovery, traversal, and resonance-aware classification within the Frequency Layer.",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "function": {
+    "name": "content.index",
+    "version": "1.0.0",
+    "purpose": "Index unseen-layer content into a structured, resonance-aware index for MCP modules.",
+    "lineage": "qmroot-0D",
+    "supportsIndexing": true,
+    "supportsResonanceClassification": true
+  },
+
+  "input": {
+    "source": {
+      "type": "string",
+      "description": "Path or ID of the content to index."
+    },
+    "mode": {
+      "type": "string",
+      "enum": ["basic", "resonance", "full"],
+      "default": "resonance",
+      "description": "Indexing mode."
+    },
+    "includeMetadata": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether to include metadata in the index."
+    }
+  },
+
+  "output": {
+    "index": {
+      "type": "object",
+      "description": "The generated index.",
+      "fields": {
+        "keys": {
+          "type": "array",
+          "description": "List of indexed keys."
+        },
+        "map": {
+          "type": "object",
+          "description": "Key → content mapping."
+        },
+        "resonance": {
+          "optional": true,
+          "description": "Resonance-aware index fields (mode=resonance or full)."
+        }
+      }
+    },
+    "metadata": {
+      "optional": true,
+      "description": "Metadata returned only if includeMetadata=true."
+    },
+    "layer": "L1_Frequency_Unseen",
+    "triad": "frequency",
+    "qmroot": "0D",
+    "canonical": "R5"
+  },
+
+  "resonance": {
+    "supportsOscillationIndexing": true,
+    "supportsPhaseIndexing": true,
+    "supportsHarmonicIndexing": true,
+    "operatorDomain": "frequency"
+  },
+
+  "examples": [
+    {
+      "name": "Resonance indexing example",
+      "input": {
+        "source": "diagnostics/coherence.json",
+        "mode": "resonance",
+        "includeMetadata": true
+      },
+      "output": {
+        "index": {
+          "keys": [
+            "diagnostic",
+            "metrics.phaseStability",
+            "metrics.harmonicConsistency",
+            "metrics.continuityStrength"
+          ],
+          "map": {
+            "diagnostic": "coherence",
+            "metrics.phaseStability": 0.97,
+            "metrics.harmonicConsistency": 0.92,
+            "metrics.continuityStrength": 0.89
+          },
+          "resonance": {
+            "harmonicLevel": 3,
+            "phase": 0.72
+          }
+        },
+        "metadata": {
+          "sourceType": "diagnostic-file",
+          "description": "Indexed coherence diagnostic content."
+        },
+        "layer": "L1_Frequency_Unseen",
+        "triad": "frequency",
+        "qmroot": "0D",
+        "canonical": "R5"
+      },
+      "reality": {
+        "description": "Machine-level resonance indexing.",
+        "details": "Extracted keys and resonance metadata are organized into an index."
+      },
+      "imagination": {
+        "description": "Symbolic interpretation of indexing.",
+        "details": "The unseen resonance field arranges itself into a structured pattern, revealing hidden relationships."
+      },
+      "information": {
+        "description": "Cosmology and lineage notes.",
+        "details": "Indexing inherits qmroot-0D and triad-frequency metadata for cosmological consistency."
+      }
+    }
+  ]
 }
