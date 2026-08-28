@@ -1,5 +1,159 @@
-{"canonical": "R5",
-"qmroot": "0D",
-"layer": "L0_QMROOT",
-"triad": "origin"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L0_QMROOT",
+  "triad": "origin",
+  "title": "TriadicFrameworks MCP — Search Tools",
+  "description": "Search MCP tools by name, prefix, or description across all cosmology layers.",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "query": {
+        "type": "string",
+        "description": "Search term used to match tool names or descriptions."
+      },
+      "includeDescriptions": {
+        "type": "boolean",
+        "description": "If true, include tool descriptions in the search results."
+      },
+      "limit": {
+        "type": "integer",
+        "description": "Maximum number of results to return.",
+        "minimum": 1
+      }
+    },
+    "required": ["query"],
+    "additionalProperties": false
+  },
+
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "results": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "tool": { "type": "string" },
+            "layer": { "type": "string" },
+            "triad": { "type": "string" },
+            "description": { "type": "string" }
+          },
+          "required": ["tool", "layer", "triad"]
+        }
+      },
+      "metadata": {
+        "type": "object"
+      }
+    },
+    "required": ["results"]
+  },
+
+  "examples": [
+    {
+      "name": "Canonical search — prefix match",
+      "input": {
+        "query": "fs.",
+        "includeDescriptions": true,
+        "limit": 10
+      },
+      "output": {
+        "results": [
+          {
+            "tool": "fs.list",
+            "layer": "L2_Fluids_Seen",
+            "triad": "fluids",
+            "description": "List files in the MCP file system."
+          },
+          {
+            "tool": "fs.metadata",
+            "layer": "L2_Fluids_Seen",
+            "triad": "fluids",
+            "description": "Retrieve metadata for a file."
+          },
+          {
+            "tool": "fs.read",
+            "layer": "L2_Fluids_Seen",
+            "triad": "fluids",
+            "description": "Read file contents."
+          },
+          {
+            "tool": "fs.search",
+            "layer": "L2_Fluids_Seen",
+            "triad": "fluids",
+            "description": "Search files by name or content."
+          }
+        ],
+        "metadata": {
+          "layer": "L0_QMROOT",
+          "triad": "origin",
+          "qmroot": "0D",
+          "canonical": "R5"
+        }
+      },
+      "interpretation": {
+        "technical": "Prefix search returns all tools beginning with 'fs.' from the Fluids layer.",
+        "mythic": "The origin layer listens for the pattern and reveals all flows that match the observer’s call."
+      }
+    },
+    {
+      "name": "Canonical search — operator tools",
+      "input": {
+        "query": "operator",
+        "includeDescriptions": false
+      },
+      "output": {
+        "results": [
+          {
+            "tool": "ai.operator",
+            "layer": "L1_Frequency_Unseen",
+            "triad": "frequency"
+          },
+          {
+            "tool": "tools.getOperator",
+            "layer": "L1_Frequency_Unseen",
+            "triad": "frequency"
+          },
+          {
+            "tool": "tools.searchOperators",
+            "layer": "L1_Frequency_Unseen",
+            "triad": "frequency"
+          }
+        ],
+        "metadata": {
+          "layer": "L0_QMROOT",
+          "triad": "origin",
+          "qmroot": "0D",
+          "canonical": "R5"
+        }
+      },
+      "interpretation": {
+        "technical": "Search matches operator-related tools across the Frequency layer.",
+        "mythic": "The origin layer detects oscillation signatures and reveals the instruments of resonance."
+      }
+    },
+    {
+      "name": "Error example — empty query",
+      "input": {
+        "query": ""
+      },
+      "error": {
+        "code": "EMPTY_QUERY",
+        "message": "Search query cannot be empty.",
+        "field": "query"
+      },
+      "interpretation": {
+        "technical": "The search tool requires a non-empty query string.",
+        "mythic": "The origin layer cannot respond to silence; the observer must speak a name."
+      },
+      "metadata": {
+        "layer": "L0_QMROOT",
+        "triad": "origin",
+        "qmroot": "0D",
+        "canonical": "R5"
+      }
+    }
+  ]
 }
