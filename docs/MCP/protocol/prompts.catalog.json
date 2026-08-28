@@ -1,1 +1,26 @@
+{
+  "version": "0.1.0",
+  "prompts": [
+    {
+      "name": "explainModule",
+      "description": "Explain a module in clear, structured language including purpose, layer, lineage, and operator relationships."
+    },
+    {
+      "name": "diagnoseModule",
+      "description": "Provide diagnostic analysis of a module including drift, coherence, and regime alignment."
+    },
+    {
+      "name": "mapModuleRegime",
+      "description": "Map a module to its force-regime (gradient, field, rupture, integrity) with justification."
+    },
+    {
+      "name": "summarizeOperator",
+      "description": "Summarize an operator including definition, analyzer layer, and usage context."
+    },
+    {
+      "name": "explainExample",
+      "description": "Explain an example envelope including reality, imagination, and information interpretations."
+    }
+  ]
+}
 
