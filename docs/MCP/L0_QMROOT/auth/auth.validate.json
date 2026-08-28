@@ -1,5 +1,123 @@
-{"canonical": "R5",
-"qmroot": "0D",
-"layer": "L0_QMROOT",
-"triad": "origin"
+{
+  "canonical": "R5",
+  "qmroot": "0D",
+  "layer": "L0_QMROOT",
+  "triad": "origin",
+  "title": "TriadicFrameworks MCP Authentication Validator",
+  "description": "Validation tool for authentication payloads and tokens in the Origin Layer (0D) of the TriadicFrameworks MCP cosmology.",
+  "note": "Students may rename qmroot if extending the work; it is a lineage artifact for TriadicFrameworks and RTT.",
+
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "clientId": { "type": "string" },
+      "timestamp": { "type": "string", "format": "date-time" },
+      "token": { "type": "string" },
+      "signature": { "type": "string" },
+      "capabilities": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    },
+    "required": ["clientId", "timestamp", "token"],
+    "additionalProperties": false
+  },
+
+  "validationRules": {
+    "tokenFormat": "Token must be non-empty and match server token format (JWT or opaque).",
+    "timestampFreshness": "Timestamp must be within acceptable drift window.",
+    "expirationCheck": "Token must not be expired.",
+    "signatureCheck": "If signature is present, it must match server verification.",
+    "clientIdMatch": "Token clientId must match payload clientId."
+  },
+
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "status": { "type": "string" },
+      "message": { "type": "string" },
+      "layer": { "type": "string" },
+      "triad": { "type": "string" },
+      "qmroot": { "type": "string" }
+    },
+    "required": ["status", "message", "layer", "triad", "qmroot"]
+  },
+
+  "examples": [
+    {
+      "name": "Canonical validation success",
+      "input": {
+        "clientId": "tfmcp-client-001",
+        "timestamp": "2026-08-28T16:05:00Z",
+        "token": "eyJhbGciOi...validToken",
+        "signature": "canonicalSignature",
+        "capabilities": ["read", "write"]
+      },
+      "output": {
+        "status": "AUTH_VALID",
+        "message": "Authentication payload and token validated successfully.",
+        "layer": "L0_QMROOT",
+        "triad": "origin",
+        "qmroot": "0D"
+      },
+      "interpretation": {
+        "technical": "All validation checks passed: token format, freshness, expiration, signature, and clientId match.",
+        "mythic": "The observer’s signal resonates clearly; the gate of origin opens without resistance."
+      },
+      "metadata": {
+        "canonical": "R5",
+        "layer": "L0_QMROOT",
+        "triad": "origin",
+        "qmroot": "0D"
+      }
+    },
+    {
+      "name": "Error example — token expired",
+      "input": {
+        "clientId": "tfmcp-client-002",
+        "timestamp": "2026-08-28T16:05:00Z",
+        "token": "eyJhbGciOi...expiredToken",
+        "expiresAt": "2026-08-28T15:00:00Z"
+      },
+      "error": {
+        "code": "AUTH_TOKEN_EXPIRED",
+        "message": "Authentication token has expired.",
+        "field": "expiresAt"
+      },
+      "interpretation": {
+        "technical": "The token expiration timestamp is earlier than the current validation time.",
+        "mythic": "The signal has dimmed; the origin layer no longer recognizes the observer’s presence."
+      },
+      "metadata": {
+        "canonical": "R5",
+        "layer": "L0_QMROOT",
+        "triad": "origin",
+        "qmroot": "0D"
+      }
+    },
+    {
+      "name": "Error example — clientId mismatch",
+      "input": {
+        "clientId": "tfmcp-client-003",
+        "timestamp": "2026-08-28T16:05:00Z",
+        "token": "eyJhbGciOi...validToken",
+        "tokenClientId": "tfmcp-client-999"
+      },
+      "error": {
+        "code": "AUTH_CLIENTID_MISMATCH",
+        "message": "Token clientId does not match payload clientId.",
+        "field": "clientId"
+      },
+      "interpretation": {
+        "technical": "The token was issued to a different clientId.",
+        "mythic": "The origin layer detects a fractured identity; the observer’s signal is not their own."
+      },
+      "metadata": {
+        "canonical": "R5",
+        "layer": "L0_QMROOT",
+        "triad": "origin",
+        "qmroot": "0D"
+      }
+    }
+  ]
 }
