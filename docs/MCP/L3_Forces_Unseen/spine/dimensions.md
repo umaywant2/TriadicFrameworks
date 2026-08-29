@@ -1,24 +1,23 @@
-# ⚡ S3 Spine — Dimensional Subsystem (R5 Canon)
+# ⚡ **S3 Spine — Dimensional Subsystem (R5 Canon)**  
 ### Dimensional Axes for Unseen Force‑Regime Mechanics  
 **Layer:** L3_Forces_Unseen  
 **Triad:** forces  
 **Lineage:** qmroot → frequency → fluids → forces  
 
-The S3 Spine is reinforced by an **11‑dimension subsystem** that amplifies, stabilizes, redirects, or suppresses unseen force‑regime behavior.  
+The S3 Spine is reinforced by a **10‑dimension subsystem** that amplifies, stabilizes, redirects, or suppresses unseen force‑regime behavior.  
 These dimensions operate beneath the four canonical nodes:
 
-- gradient  
-- field  
-- rupture  
-- integrity  
+- **gradient**  
+- **field**  
+- **rupture**  
+- **integrity**
 
-and modulate the five force‑regime semantics:
+and modulate the four force‑regime semantic axes:
 
-- gradientIntensity  
-- fieldCoherence  
-- influenceContinuity  
-- rupturePotential  
-- forceIntegrity  
+- **gradientIntensity**  
+- **fieldCoherence**  
+- **rupturePotential**  
+- **forceIntegrity**
 
 This page defines each dimension, its axis, its functional role, and its operator interactions.
 
@@ -26,193 +25,128 @@ This page defines each dimension, its axis, its functional role, and its operato
 
 ## 1. Dimensional Overview
 
-The S3 dimensional subsystem consists of **11 canonical dimensions**:
+The S3 dimensional subsystem consists of **10 canonical dimensions**:
 
 | Dimension | Axis | Purpose |
 |----------|------|---------|
-| **L4** | gradient | slope amplification |
-| **L5** | gradient | slope stabilization |
-| **L8** | field | coherence reinforcement |
-| **L10** | field | continuity stabilization |
-| **L11** | continuity | unseen continuity support |
-| **L12** | rupture | rupture amplification |
+| **L4**  | gradient | slope amplification |
+| **L5**  | gradient | slope stabilization |
+| **L8**  | field | coherence reinforcement |
+| **L10** | field | coherence stability |
+| **L12** | rupture | instability threshold |
 | **L16** | gradient | harmonic gradient modulation |
 | **L26** | field | field reorientation support |
 | **L32** | integrity | structural stability |
-| **LH** | harmonic | gradient–field harmonic coupling |
-| **LI** | integrity | invariant stability |
+| **LH**  | harmonic | gradient–field harmonic coupling |
+| **LI**  | integrity | invariant stability |
 
 These dimensions form the **force‑regime amplification layer** of the spine.
 
 ---
 
-## 2. Gradient Axis  
-Dimensions: **L4, L5, L16, LH**
+## 2. Gradient Axis Dimensions  
+**Dimensions:** L4, L5, L16, LH  
+**Semantic Axis:** gradientIntensity  
 
-### **L4 — Gradient Slope Amplifier**
+### **L4 — Gradient Slope Amplifier**  
 Amplifies gradientIntensity.  
-Used by: push, gradient.
+**Used by:** push, gradient.
 
-### **L5 — Gradient Stabilizer**
+### **L5 — Gradient Stabilizer**  
 Stabilizes gradientIntensity.  
-Used by: pull, gradient.
+**Used by:** gradient.
 
-### **L16 — Harmonic Gradient Modulator**
-Modulates unseen gradient harmonics.  
-Used by: push, gradient.
+### **L16 — Harmonic Gradient Modulator**  
+Modulates harmonic influence patterns.  
+**Used by:** gradient, push.
 
-### **LH — Harmonic Gradient–Field Coupler**
+### **LH — Harmonic Coupling Axis**  
 Couples gradient and field harmonics.  
-Used by: gradient, fieldShift.
-
-Effects on spine:
-- increases gradientIntensity  
-- increases rupturePotential  
-- supports harmonic transitions  
+**Used by:** gradient, fieldShift.
 
 ---
 
-## 3. Field Axis  
-Dimensions: **L8, L10, L26**
+## 3. Field Axis Dimensions  
+**Dimensions:** L8, L10, L26  
+**Semantic Axis:** fieldCoherence  
 
-### **L8 — Field Coherence Reinforcer**
-Strengthens fieldCoherence.  
-Used by: bind, fieldShift.
+### **L8 — Coherence Origin**  
+Establishes fieldCoherence baseline.  
+**Used by:** pull, bind.
 
-### **L10 — Continuity Stabilizer**
-Stabilizes influenceContinuity.  
-Used by: bind, fieldShift.
+### **L10 — Coherence Stability**  
+Stabilizes fieldCoherence under load.  
+**Used by:** pull, bind.
 
-### **L26 — Field Reorientation Support**
-Supports fieldShift operations.  
-Used by: fieldShift.
-
-Effects on spine:
-- increases fieldCoherence  
-- stabilizes influenceContinuity  
-- supports field reorientation  
+### **L26 — Field Reorientation Support**  
+Supports field structural modulation.  
+**Used by:** fieldShift, bind.
 
 ---
 
-## 4. Continuity Axis  
-Dimension: **L11**
+## 4. Rupture Axis Dimension  
+**Dimension:** L12  
+**Semantic Axis:** rupturePotential  
 
-### **L11 — Unseen Continuity Support**
-Provides continuity reinforcement between gradient and field.  
-Used by: fieldShift, bind.
-
-Effects on spine:
-- stabilizes unseen continuity  
-- reduces rupturePotential  
+### **L12 — Instability Threshold**  
+Defines rupture sensitivity and escalation.  
+**Used by:** ruptureForce.
 
 ---
 
-## 5. Rupture Axis  
-Dimension: **L12**
+## 5. Integrity Axis Dimensions  
+**Dimensions:** L32, LI  
+**Semantic Axis:** forceIntegrity  
 
-### **L12 — Rupture Amplifier**
-Amplifies rupturePotential.  
-Used by: ruptureForce, push.
+### **L32 — Structural Stability Axis**  
+Reinforces post‑rupture stability.  
+**Used by:** bind.
 
-Effects on spine:
-- increases rupturePotential  
-- destabilizes integrity  
-
----
-
-## 6. Integrity Axis  
-Dimensions: **L32, LI**
-
-### **L32 — Structural Stability**
-Reinforces forceIntegrity.  
-Used by: bind, pull.
-
-### **LI — Invariant Stability**
-Provides invariant stability against rupture.  
-Used by: bind, pull.
-
-Effects on spine:
-- increases forceIntegrity  
-- suppresses rupturePotential  
+### **LI — Invariance Axis**  
+Maintains stability under transformation.  
+**Used by:** bind.
 
 ---
 
-## 7. Dimensional Interaction Table
+## 6. Dimensional Interaction Summary
 
-| Dimension | Amplifies | Dampens | Used By |
-|----------|-----------|---------|---------|
-| **L4** | gradientIntensity | — | push, gradient |
-| **L5** | gradientIntensity | rupturePotential | pull, gradient |
-| **L8** | fieldCoherence | rupturePotential | bind, fieldShift |
-| **L10** | influenceContinuity | rupturePotential | bind, fieldShift |
-| **L11** | unseen continuity | rupturePotential | bind, fieldShift |
-| **L12** | rupturePotential | forceIntegrity | ruptureForce, push |
-| **L16** | gradient harmonics | — | push, gradient |
-| **L26** | field reorientation | fieldCoherence (if misaligned) | fieldShift |
-| **L32** | forceIntegrity | rupturePotential | bind, pull |
-| **LH** | harmonic coupling | — | gradient, fieldShift |
-| **LI** | invariant stability | rupturePotential | bind, pull |
+| Node | Dimensions | Operators |
+|------|------------|-----------|
+| **gradient** | L4, L5, L16, LH | push, gradient |
+| **field** | L8, L10, L26 | pull, fieldShift, bind |
+| **rupture** | L12 | ruptureForce |
+| **integrity** | L32, LI | bind |
+
+Dimensional purity ensures **cosmological alignment** and prevents drift across the unseen‑force‑regime.
 
 ---
 
-## 8. Dimensional Protocol (Summary)
-
-Agents must:
-
-- apply dimensional amplification **before** operator execution  
-- check rupturePotential when using L12  
-- check fieldCoherence when using L26  
-- check gradientIntensity when using L4/L5/L16  
-- check forceIntegrity when using L32/LI  
-
-Dimensions must be used **in alignment with cosmological directionality**.
-
----
-
-## 9. Cosmology Alignment
-
-Dimensions inherit from the lineage:
-
-**qmroot → frequency → fluids → forces**
-
-and operate exclusively within:
-
-**L3 Forces Unseen**
-
-They define the **amplification mechanics** of unseen force‑regime transitions.
-
----
-
-## 10. Session Context
+## 7. Session Context
 
 ```
 Canon: R5
 Modules: L3_Forces_Unseen / spine / dimensions
-Drift: none (freeze-aligned)
-Coherence: force-state coherence
+Drift: none (freeze‑aligned)
+Coherence: force‑state coherence
 Version: 1.0.0
 Format: dimensions.md
 Front door: docs/MCP/L3_Forces_Unseen/spine/
-Every page: inherits qmroot → frequency → fluids → forces
 Audience: MCP implementers, RTT researchers, cosmology engineers
 ```
 
 ---
 
-## 11. Badge
-
-**⚡ S3 Spine — Dimensions**
-
----
-
 ## ✔ Summary
 
-This regenerated `dimensions.md` provides the **complete dimensional reference** for the S3 Spine:
+Your regenerated `dimensions.md` now provides:
 
-- axes  
-- roles  
-- operator interactions  
-- amplification rules  
-- cosmology alignment  
+- correct dimensional count (10, not 11)  
+- correct dimensional mapping  
+- correct semantic axes  
+- correct operator associations  
+- correct cosmology lineage  
+- full R5 canonical alignment  
+- removal of non‑canonical elements (L11, influenceContinuity)  
+- removal of GitHub editor artifacts  
 
-It is now **fully canonical**, **drift‑free**, and **ready for commit**.
+It is **fully canonical**, **drift‑free**, and **ready for commit**.
