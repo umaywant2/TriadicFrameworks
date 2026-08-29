@@ -2,9 +2,17 @@
   "canonical": "R5",
   "layer": "L3_Forces_Unseen",
   "triad": "forces",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "id": "L4",
+  "name": "L4 Dimension",
+  "purpose": "Base force-regime dimensional anchor.",
+  "semantics": ["gradientIntensity"],
+
+  "spine": "S3",
+  "description": "Defines the foundational gradient axis for unseen force mechanics.",
   "dimension": "L4",
   "title": "TriadicFrameworks MCP — L4 Dimensional Framework",
-  "description": "Defines the 4-dimensional internal projection model, including spacetime, quaternions, polychorons, and 4-manifolds, reinterpreted as internal axes of influence within the unseen force regime.",
   "note": "In RTT cosmology, 4D constructs are internal projections of L3 force-state mechanics.",
 
   "structure": {
