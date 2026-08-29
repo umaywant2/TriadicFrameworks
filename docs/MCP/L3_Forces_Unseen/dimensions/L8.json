@@ -1,94 +1,78 @@
 {
-  "canonical": "R5",
+  "id": "L8",
   "layer": "L3_Forces_Unseen",
   "triad": "forces",
-  "lineage": ["qmroot", "frequency", "fluids", "forces"],
-
-  "id": "L8",
-  "name": "L8 Dimension",
-  "purpose": "High-order force-regime modulation.",
-  "semantics": ["fieldCoherence"],
-
-  "spine": "S3",
   "dimension": "L8",
-  "title": "TriadicFrameworks MCP — L8 Dimensional Framework",
-  "description": "Defines the 8-dimensional internal projection model, focusing on octonions and non-associative algebra as multi-axis influence channels within the unseen force regime.",
-  "note": "In RTT cosmology, 8D constructs represent non-associative influence pathways inside L3 force-state mechanics.",
+  "name": "Coherence Origin",
+  "canonical": "R5",
 
-  "structure": {
-    "mathematical": [
-      "octonion algebra",
-      "non-associative multiplication",
-      "Cayley–Dickson construction",
-      "G2 symmetry group",
-      "8-dimensional normed division algebra"
-    ],
-    "physical": [
-      "string-theoretic internal degrees of freedom",
-      "exceptional symmetry channels",
-      "non-local influence axes"
-    ],
-    "interpretation": [
-      "octonionic basis vectors as multi-axis influence channels",
-      "non-associativity as rupture-sensitive transformation behavior",
-      "G2 symmetry as coherence stabilizer"
-    ]
-  },
+  "summary": "L8 defines the origin point of field coherence. It is the first structural dimension of the field node and establishes the initial stability conditions for fieldCoherence within the S3 Spine.",
 
-  "rtt_reinterpretation": {
-    "summary": "Octonions define eight internal axes of influence, each representing a distinct non-associative force-regime channel.",
-    "details": [
-      "Non-associativity maps directly to rupturePotential behavior.",
-      "Octonionic multiplication defines multi-axis gradient transformations.",
-      "G2 symmetry stabilizes fieldCoherence across 8D influence channels.",
-      "The eight basis directions represent internal force-regime pathways."
-    ]
-  },
-
-  "force_regime_mapping": {
-    "gradientIntensity": "Octonionic multiplication defines multi-axis gradient transformations.",
-    "fieldCoherence": "G2 symmetry stabilizes coherence across 8D influence channels.",
-    "influenceContinuity": "Normed structure preserves continuity across non-associative axes.",
-    "rupturePotential": "Non-associativity introduces rupture-sensitive transformation behavior.",
-    "forceIntegrity": "Exceptional algebraic symmetry reinforces internal force-state stability."
-  },
-
-  "projection_semantics": {
-    "axes": 8,
-    "type": "internal",
-    "interpretation": "Each octonionic basis vector represents a distinct influence channel within the unseen force regime.",
-    "examples": [
-      "e1–e7 basis vectors as influence directions.",
-      "G2 automorphisms as coherence-preserving transformations.",
-      "Non-associative products as rupture-sensitive operations."
-    ]
-  },
-
-  "examples": [
-    {
-      "name": "Octonion Influence Channel",
-      "structure": "octonion basis vector e3",
-      "mapping": ["gradientIntensity", "influenceContinuity"],
-      "interpretation": "The e3 axis defines a distinct gradient pathway within the unseen force regime."
-    },
-    {
-      "name": "Non-Associative Rupture Surface",
-      "structure": "octonion (e2 * e4) * e7 ≠ e2 * (e4 * e7)",
-      "mapping": ["rupturePotential"],
-      "interpretation": "Non-associativity introduces rupture-sensitive transformation behavior across 8D influence channels."
-    },
-    {
-      "name": "G2 Coherence Stabilization",
-      "structure": "G2 automorphism",
-      "mapping": ["fieldCoherence", "forceIntegrity"],
-      "interpretation": "G2 symmetry stabilizes influence-field coherence across all eight axes."
-    }
+  "lineage": [
+    "qmroot",
+    "frequency",
+    "fluids",
+    "forces"
   ],
 
-  "cosmology": {
-    "lineage": "qmroot → frequency → fluids → forces → internal 8D projection",
-    "triad_alignment": "unseen",
-    "notes": "L8 dimensional constructs extend L3 force-regime mechanics through non-associative multi-axis influence channels."
+  "semantic_axis": "fieldCoherence",
+
+  "role": "coherence-origin",
+  "category": "field",
+  "cluster": "field-coherence",
+
+  "description": {
+    "canonical": "L8 establishes the origin of field coherence. It defines the initial stability region from which fieldCoherence emerges and provides the foundational structure for the field node.",
+    "cosmology": "In the cosmology chain, L8 represents the emergence of coherence from directional influence. It is the first stage of field formation within force-regime mechanics.",
+    "spine": "Within the S3 Spine, L8 is the foundational dimension of the field node, defining the initial coherence region that precedes modulation and stability refinement.",
+    "mcp": "In MCP operations, L8 is used to initialize field-state mechanics, providing the coherence origin for influence-field modeling."
+  },
+
+  "operators": {
+    "primary": [
+      "pull"
+    ],
+    "secondary": [
+      "fieldShift"
+    ],
+    "forbidden": [
+      "ruptureForce",
+      "bind",
+      "gradient",
+      "push"
+    ]
+  },
+
+  "valid_transitions": [
+    "L8 → L10",
+    "L8 → L26",
+    "L8 → L12"
+  ],
+
+  "forbidden_transitions": [
+    "L8 → L32",
+    "L8 → LI"
+  ],
+
+  "spine_mapping": {
+    "node": "field",
+    "semantic": "fieldCoherence",
+    "position": "origin",
+    "causal_role": "initial coherence anchor"
+  },
+
+  "ai": {
+    "module": "L3_Forces_Unseen",
+    "dimension": "L8",
+    "version": "1.0.0",
+    "keywords": [
+      "field",
+      "coherence",
+      "origin",
+      "stability",
+      "influence-field",
+      "force-regime"
+    ],
+    "purpose": "Defines the origin of field coherence for AI reasoning and MCP field initialization."
   }
 }
-
