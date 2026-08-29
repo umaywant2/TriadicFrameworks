@@ -1,0 +1,15 @@
+<svg width="460" height="260" xmlns="http://www.w3.org/2000/svg">
+  <!-- L66 -->
+  <rect x="60" y="40" width="140" height="60" fill="#444" stroke="#777" rx="8"/>
+  <text x="130" y="75" font-size="14" fill="#fff" text-anchor="middle">L66</text>
+
+  <!-- L33 -->
+  <rect x="260" y="40" width="140" height="60" fill="#333" stroke="#666" rx="8"/>
+  <text x="330" y="75" font-size="14" fill="#fff" text-anchor="middle">L33</text>
+
+  <!-- L99 envelope -->
+  <rect x="130" y="140" width="200" height="70" fill="#555" stroke="#888" rx="8"/>
+  <text x="230" y="175" font-size="16" fill="#fff" text-anchor="middle">
+    L99 • Full Resonance (99%)
+  </text>
+</svg>
