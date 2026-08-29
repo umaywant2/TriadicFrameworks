@@ -1,57 +1,52 @@
 {
+  "id": "S3-Spine",
+  "title": "S3 Spine — Unseen Force-Regime Manifest",
   "canonical": "R5",
   "layer": "L3_Forces_Unseen",
   "triad": "forces",
-  "lineage": ["qmroot", "frequency", "fluids", "forces"],
-
-  "id": "S3-Spine",
-  "title": "S3 Spine — Unseen Force-Regime Structural Graph",
-  "description": "Canonical manifest for the S3 Spine subsystem of TriadicFrameworks, defining structural, semantic, dimensional, operator, sequencing, and example assets.",
+  "regime": "unseen-force-regime",
   "version": "1.0.0",
 
-  "files": {
-    "graph": "S3.graph.json",
-    "dot": "S3.dot",
-    "deep": "deep.md",
-    "source": "m_Source.md",
-    "protocol": "protocol.md",
-    "operators": "operators.md",
-    "dimensions": "dimensions.md",
-    "registry": "registry.md",
-    "schemas": "schemas.md",
-    "module": "module.json",
-    "dimensional_map": "dimensional_mapping.json",
-    "operator_map": "operator_interaction_map.json",
-    "sequencing_rules": "operator_sequencing_rules.json"
-  },
+  "description": "Manifest for the S3 Spine subsystem, defining graph, operators, dimensions, envelopes, catalogs, and cosmology lineage for unseen force-regime mechanics.",
 
-  "examples": {
-    "registry": "spine.examples.registry.json",
-    "schema": "example.schema.json",
-    "directory": "examples/",
-    "docs": "examples/docs/",
-    "index": "examples/index.md",
-    "sitemap": "examples/sitemap.json",
-    "envelopes": [
-      "examples/canonical.001.json",
-      "examples/reality.001.json",
-      "examples/imagination.001.json",
-      "examples/information.001.json",
-      "examples/error.001.json",
-      "examples/qmroot.001.json"
-    ]
-  },
-
-  "structure": {
-    "nodes": ["gradient", "field", "rupture", "integrity"],
-    "semantics": [
-      "gradientIntensity",
-      "fieldCoherence",
-      "influenceContinuity",
-      "rupturePotential",
-      "forceIntegrity"
+  "cosmology": {
+    "lineage": [
+      "qmroot",
+      "frequency",
+      "fluids",
+      "forces"
     ],
-    "operators": [
+    "origin": "qmroot",
+    "triad": "forces",
+    "regime": "unseen-force-regime",
+    "inheritance": {
+      "qmroot": "latent potentials of influence, coherence, rupture, stability",
+      "frequency": "oscillation and continuity of unseen influence",
+      "fluids": "seen-state flow and continuity mechanics",
+      "forces": "unseen causal mechanics expressed as gradients, fields, rupture, integrity"
+    },
+    "mapping": {
+      "gradient": "proto-influence → influence → causal gradient",
+      "field": "proto-coherence → coherence → influence field",
+      "rupture": "proto-instability → instability → rupture potential",
+      "integrity": "proto-stability → stability → force integrity"
+    },
+    "dimensions": {
+      "gradient": ["L4", "L5", "L16", "LH"],
+      "field": ["L8", "L10", "L26"],
+      "rupture": ["L12"],
+      "integrity": ["L32", "LI"]
+    }
+  },
+
+  "graph": {
+    "file": "S3.graph.json",
+    "dot": "S3.dot",
+    "nodes": ["gradient", "field", "rupture", "integrity"]
+  },
+
+  "operators": {
+    "list": [
       "push",
       "pull",
       "bind",
@@ -59,25 +54,71 @@
       "fieldShift",
       "ruptureForce"
     ],
-    "dimensions": [
+    "interaction_map": "operator_interaction_map.json",
+    "sequencing_rules": "operator_sequencing_rules.json"
+  },
+
+  "dimensions": {
+    "list": [
       "L4", "L5", "L16", "LH",
       "L8", "L10", "L26",
       "L11",
       "L12",
       "L32", "LI"
-    ]
+    ],
+    "mapping": "dimensional_mapping.json"
   },
 
-  "docsbook": {
-    "front_door": "README.md",
-    "sitemap": "sitemap.json",
-    "category": "L3 Forces Unseen",
-    "badge": "⚡ S3 Spine — L3 Forces Unseen"
+  "envelopes": {
+    "canonical": "docs/canonical.json",
+    "reality": "docs/reality.json",
+    "imagination": "docs/imagination.json",
+    "information": "docs/information.json",
+    "error": "docs/error.json",
+    "qmroot": "docs/qmroot.json"
+  },
+
+  "examples": {
+    "registry": "spine.examples.registry.json",
+    "schema": "examples/example.schema.json",
+    "directory": "examples/"
+  },
+
+  "docs": {
+    "readme": "README.md",
+    "protocol": "protocol.md",
+    "coherence": "coherence.md",
+    "operators": "operators.md",
+    "dimensions": "dimensions.md",
+    "registry": "registry.md",
+    "schemas": "schemas.md",
+    "module": "module.md",
+    "deep": "deep.md",
+    "sitemap": "sitemap.json"
+  },
+
+  "catalogs": {
+    "tools": "tools.catalog.json",
+    "resources": "resources.catalog.json",
+    "prompts": "prompts.catalog.json"
+  },
+
+  "server": {
+    "config": "server.json"
+  },
+
+  "ai": {
+    "metadata": "ai.metadata.json",
+    "registry": "ai_registry.json"
+  },
+
+  "corpus": {
+    "index": "corpus.json"
   },
 
   "session": {
     "canon": "R5",
-    "modules": "L3_Forces_Unseen / spine",
+    "modules": "L3_Forces_Unseen / spine / manifest",
     "drift": "none",
     "coherence": "force-state coherence",
     "format": "manifest.json",
