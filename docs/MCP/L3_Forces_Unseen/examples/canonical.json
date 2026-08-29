@@ -1,0 +1,20 @@
+{
+  "canonical": "R5",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "id": "canonical",
+  "module": "examples",
+  "kind": ["canonical"],
+  "path": "docs/MCP/L3_Forces_Unseen/examples/canonical.json",
+
+  "envelope": {
+    "canonical": "The canonical form expresses the example in its pure, layer‑aligned, triad‑aligned structure.",
+    "reality": "Not applicable.",
+    "imagination": "Not applicable.",
+    "information": "Not applicable.",
+    "error": "Not applicable.",
+    "qmroot": "Not applicable."
+  }
+}
