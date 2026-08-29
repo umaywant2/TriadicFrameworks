@@ -3,12 +3,8 @@
   "layer": "L3_Forces_Unseen",
   "triad": "forces",
   "lineage": ["qmroot", "frequency", "fluids", "forces"],
-
   "id": "S3-Spine-Sitemap",
-  "title": "S3 Spine — Module Sitemap",
-  "description": "Docsbook sitemap for the S3 Spine subsystem, indexing all documentation, structural assets, operators, dimensions, schemas, registry, catalogs, server configuration, AI metadata, and corpus files.",
   "version": "1.0.0",
-
   "front_door": "README.md",
 
   "sections": [
@@ -20,9 +16,15 @@
         "deep.md",
         "m_Source.md",
         "protocol.md",
-        "coherence.md"
+        "coherence.md",
+        "cosmology.md",
+        "operators.md",
+        "dimensions.md",
+        "schemas.md",
+        "registry.md"
       ]
     },
+
     {
       "id": "structure",
       "title": "Structural Assets",
@@ -34,6 +36,7 @@
         "operator_sequencing_rules.json"
       ]
     },
+
     {
       "id": "operators",
       "title": "Operators",
@@ -44,9 +47,11 @@
         "operators/docs/gradient.md",
         "operators/docs/pull.md",
         "operators/docs/push.md",
-        "operators/docs/ruptureForce.md"
+        "operators/docs/ruptureForce.md",
+        "operator_registry.json"
       ]
     },
+
     {
       "id": "dimensions",
       "title": "Dimensions",
@@ -55,6 +60,7 @@
         "dimensional_mapping.json"
       ]
     },
+
     {
       "id": "examples",
       "title": "Examples",
@@ -63,36 +69,15 @@
         "example.schema.json",
         "examples/index.md",
         "examples/sitemap.json",
-        "examples/canonical.001.json",
-        "examples/reality.001.json",
-        "examples/imagination.001.json",
-        "examples/information.001.json",
-        "examples/error.001.json",
-        "examples/qmroot.001.json"
+        "examples/docs/canonical.md",
+        "examples/docs/reality.md",
+        "examples/docs/imagination.md",
+        "examples/docs/information.md",
+        "examples/docs/error.md",
+        "examples/docs/qmroot.md"
       ]
     },
-    {
-      "id": "schemas",
-      "title": "Schemas",
-      "files": [
-        "schemas.md",
-        "analyzer.schema.json",
-        "drift.schema.json",
-        "lineage.schema.json",
-        "module.schema.json",
-        "operator.schema.json",
-        "session.schema.json"
-      ]
-    },
-    {
-      "id": "registry",
-      "title": "Registry",
-      "files": [
-        "registry.md",
-        "module.json",
-        "manifest.json"
-      ]
-    },
+
     {
       "id": "catalogs",
       "title": "Catalogs",
@@ -102,20 +87,25 @@
         "prompts.catalog.json"
       ]
     },
+
     {
       "id": "server",
-      "title": "Server Configuration",
+      "title": "Server",
       "files": [
-        "server.json"
+        "server.json",
+        "protocol.md"
       ]
     },
+
     {
       "id": "ai",
       "title": "AI Metadata",
       "files": [
-        "ai.metadata.json"
+        "ai.metadata.json",
+        "ai_registry.json"
       ]
     },
+
     {
       "id": "corpus",
       "title": "Corpus",
@@ -123,16 +113,5 @@
         "corpus.json"
       ]
     }
-  ],
-
-  "session": {
-    "canon": "R5",
-    "modules": "L3_Forces_Unseen / spine / sitemap",
-    "drift": "none",
-    "coherence": "force-state coherence",
-    "format": "sitemap.json",
-    "version": "1.0.0",
-    "inheritance": "qmroot → frequency → fluids → forces",
-    "audience": "MCP implementers, RTT researchers, cosmology engineers"
-  }
+  ]
 }
