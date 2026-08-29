@@ -1,121 +1,109 @@
 {
+  "id": "S3-Spine-Resources-Catalog",
   "canonical": "R5",
+  "version": "1.0.0",
   "layer": "L3_Forces_Unseen",
   "triad": "forces",
-  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+  "regime": "unseen-force-regime",
 
-  "title": "S3 Spine — Resource Catalog",
-  "description": "Canonical resource catalog for the S3 Spine subsystem, indexing all structural, semantic, dimensional, operator, sequencing, example, and documentation assets.",
-  "version": "1.0.0",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
 
   "resources": [
     {
-      "id": "s3.resource.graph",
-      "category": "structure",
-      "description": "Canonical S3 Spine structural graph defining nodes, edges, and causal direction.",
+      "id": "resource.graph",
+      "category": "graph",
+      "description": "Canonical S3 Spine structural graph defining nodes, edges, semantics, and causal direction.",
       "path": "docs/MCP/L3_Forces_Unseen/spine/S3.graph.json"
     },
     {
-      "id": "s3.resource.dot",
-      "category": "structure",
+      "id": "resource.dot",
+      "category": "graph",
       "description": "DOT diagram for S3 Spine graph visualization.",
       "path": "docs/MCP/L3_Forces_Unseen/spine/S3.dot"
     },
     {
-      "id": "s3.resource.dimensions",
+      "id": "resource.dimensions",
       "category": "dimension",
-      "description": "Dimensional mapping for the 11-dimension subsystem used by the S3 Spine.",
+      "description": "Dimensional mapping for the 10-dimension subsystem used by the S3 Spine.",
       "path": "docs/MCP/L3_Forces_Unseen/spine/dimensional_mapping.json"
     },
     {
-      "id": "s3.resource.operators",
+      "id": "resource.operators",
       "category": "operator",
-      "description": "Operator interaction map defining compatibility, semantics, and dimensional amplification.",
+      "description": "Operator interaction map defining semantics, dimensional amplification, and node effects.",
       "path": "docs/MCP/L3_Forces_Unseen/spine/operator_interaction_map.json"
     },
     {
-      "id": "s3.resource.sequencing",
+      "id": "resource.sequencing",
       "category": "operator",
-      "description": "Operator sequencing rules defining valid and invalid transitions.",
+      "description": "Operator sequencing rules defining valid and forbidden transitions.",
       "path": "docs/MCP/L3_Forces_Unseen/spine/operator_sequencing_rules.json"
     },
     {
-      "id": "s3.resource.module",
+      "id": "resource.module",
       "category": "module",
       "description": "Module manifest describing the S3 Spine subsystem.",
       "path": "docs/MCP/L3_Forces_Unseen/spine/module.json"
     },
     {
-      "id": "s3.resource.manifest",
+      "id": "resource.manifest",
       "category": "module",
       "description": "Canonical manifest for the S3 Spine subsystem.",
       "path": "docs/MCP/L3_Forces_Unseen/spine/manifest.json"
     },
     {
-      "id": "s3.resource.deep",
+      "id": "resource.examples",
+      "category": "example",
+      "description": "Example registry and envelope definitions for the S3 Spine subsystem.",
+      "path": "docs/MCP/L3_Forces_Unseen/spine/spine.examples.registry.json"
+    },
+    {
+      "id": "resource.example.schema",
+      "category": "example",
+      "description": "Schema for example envelope JSON files.",
+      "path": "docs/MCP/L3_Forces_Unseen/spine/example.schema.json"
+    },
+    {
+      "id": "resource.server",
+      "category": "server",
+      "description": "MCP server configuration for the S3 Spine subsystem.",
+      "path": "docs/MCP/L3_Forces_Unseen/spine/server.json"
+    },
+    {
+      "id": "resource.protocol",
+      "category": "protocol",
+      "description": "MCP protocol definition for the S3 Spine subsystem.",
+      "path": "docs/MCP/L3_Forces_Unseen/spine/protocol.md"
+    },
+    {
+      "id": "resource.ai.metadata",
+      "category": "ai",
+      "description": "AI metadata for the S3 Spine subsystem.",
+      "path": "docs/MCP/L3_Forces_Unseen/spine/ai.metadata.json"
+    },
+    {
+      "id": "resource.ai.registry",
+      "category": "ai",
+      "description": "AI registry for the S3 Spine subsystem.",
+      "path": "docs/MCP/L3_Forces_Unseen/spine/ai_registry.json"
+    },
+    {
+      "id": "resource.docs",
+      "category": "documentation",
+      "description": "Documentation pages for the S3 Spine subsystem.",
+      "path": "docs/MCP/L3_Forces_Unseen/spine/"
+    },
+    {
+      "id": "resource.deep",
       "category": "documentation",
       "description": "Deep documentation for the S3 Spine subsystem.",
       "path": "docs/MCP/L3_Forces_Unseen/spine/deep.md"
     },
     {
-      "id": "s3.resource.source",
+      "id": "resource.source",
       "category": "documentation",
       "description": "Source-of-truth documentation for the S3 Spine subsystem.",
       "path": "docs/MCP/L3_Forces_Unseen/spine/m_Source.md"
-    },
-    {
-      "id": "s3.resource.protocol",
-      "category": "documentation",
-      "description": "Operational protocol for interacting with the S3 Spine subsystem.",
-      "path": "docs/MCP/L3_Forces_Unseen/spine/protocol.md"
-    },
-    {
-      "id": "s3.resource.registry",
-      "category": "registry",
-      "description": "Unified registry for S3 Spine structural, operator, dimensional, and example assets.",
-      "path": "docs/MCP/L3_Forces_Unseen/spine/registry.md"
-    },
-    {
-      "id": "s3.resource.schemas",
-      "category": "schema",
-      "description": "Schema reference for example, module, operator, dimensional, lineage, and session schemas.",
-      "path": "docs/MCP/L3_Forces_Unseen/spine/schemas.md"
-    },
-    {
-      "id": "s3.resource.examples.registry",
-      "category": "example",
-      "description": "Registry of all S3 Spine example envelopes.",
-      "path": "docs/MCP/L3_Forces_Unseen/spine/spine.examples.registry.json"
-    },
-    {
-      "id": "s3.resource.examples.schema",
-      "category": "example",
-      "description": "Schema for S3 Spine example envelopes.",
-      "path": "docs/MCP/L3_Forces_Unseen/spine/example.schema.json"
-    },
-    {
-      "id": "s3.resource.examples.docs",
-      "category": "example",
-      "description": "Documentation pages for S3 Spine example envelopes.",
-      "path": "docs/MCP/L3_Forces_Unseen/spine/examples/docs/"
-    },
-    {
-      "id": "s3.resource.examples.index",
-      "category": "example",
-      "description": "Docsbook index page for S3 Spine examples.",
-      "path": "docs/MCP/L3_Forces_Unseen/spine/examples/index.md"
-    },
-    {
-      "id": "s3.resource.examples.sitemap",
-      "category": "example",
-      "description": "Docsbook sitemap for S3 Spine examples.",
-      "path": "docs/MCP/L3_Forces_Unseen/spine/examples/sitemap.json"
-    },
-    {
-      "id": "s3.resource.readme",
-      "category": "documentation",
-      "description": "Front-door README for the S3 Spine subsystem.",
-      "path": "docs/MCP/L3_Forces_Unseen/spine/README.md"
     }
   ]
 }
