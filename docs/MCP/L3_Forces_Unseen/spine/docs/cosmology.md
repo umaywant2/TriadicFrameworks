@@ -161,6 +161,27 @@ Audience: MCP implementers, RTT researchers, cosmology engineers
 
 ---
 
+## Continuity Mechanics (L4 Composite Resonance System)
+
+After the completion of the functional force-regime chain (gradient → field → rupture → integrity), the cosmology extends into the continuity-mechanics manifold. This manifold is constructed from composite resonance envelopes derived from the proto-resonance seed L11.
+
+### Composite Resonance Chain
+- **L11** — proto-resonance seed  
+- **L33** — seen resonance envelope (33%)  
+- **L66** — hidden resonance envelope (66%)  
+- **L99** — full resonance envelope (99%)  
+
+These envelopes do not participate in the S3 Spine.  
+They form the continuity layer that overlays the functional cosmology.
+
+### External Resonance Source
+- **Validator Pulse (1%)** — external origin of resonance
+
+### Cosmology Integration
+The continuity-mechanics manifold attaches after **integrity**, forming the extended cosmology chain:
+
+---
+
 ## ✔ Summary
 
 Your regenerated `cosmology.md` now provides:
