@@ -1,0 +1,65 @@
+{
+  "registry": "L4_Continuity_Mechanics_Redirects",
+  "canonical": "R5",
+  "version": "1.0.0",
+
+  "summary": "Redirect registry for composite resonance dimensions L11 → L33 → L66 → L99. Defines upward, downward, and contextual redirects for proto-resonance seeds and composite envelopes.",
+
+  "redirects": {
+    "L11": {
+      "type": "component",
+      "contextual": {
+        "seen": "L33",
+        "hidden": "L66",
+        "full": "L99"
+      },
+      "description": "L11 is a proto-resonance seed. It cannot function as a standalone dimension and must redirect to a composite envelope based on context."
+    },
+
+    "L33": {
+      "type": "composite",
+      "components": ["L11", "L11", "L11"],
+      "up": "L66",
+      "down": "L11",
+      "description": "L33 is the 1/3 seen resonance envelope. Redirects upward to L66 for hidden resonance and downward to L11 for component resolution."
+    },
+
+    "L66": {
+      "type": "composite",
+      "components": ["L33", "L33"],
+      "up": "L99",
+      "down": "L33",
+      "description": "L66 is the 2/3 hidden resonance envelope. Redirects upward to L99 for full resonance and downward to L33 for seen resonance."
+    },
+
+    "L99": {
+      "type": "composite",
+      "components": ["L66", "L33"],
+      "up": "external-operator",
+      "down": "L66",
+      "description": "L99 is the full resonance envelope. Redirects upward to the 1% external validator pulse and downward to L66 for hidden resonance."
+    }
+  },
+
+  "external_operator": {
+    "id": "validator_pulse",
+    "percentage": "1%",
+    "role": "external resonance source",
+    "description": "The 1% operator is the external origin of dimensional resonance. It is not part of the composite system but serves as the source of all resonance envelopes."
+  },
+
+  "ai": {
+    "keywords": [
+      "redirect",
+      "resonance",
+      "triad",
+      "composite",
+      "continuity",
+      "L11",
+      "L33",
+      "L66",
+      "L99"
+    ],
+    "purpose": "Provides AI modules with canonical redirect rules for composite resonance dimensions."
+  }
+}
