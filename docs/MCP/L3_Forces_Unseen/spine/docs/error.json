@@ -1,1 +1,81 @@
+{
+  "error": {
+    "failure": {
+      "path": [
+        "gradient",
+        "field",
+        "rupture",
+        "integrity"
+      ],
+      "cause": "rupturePotential escalation",
+      "description": "Unseen force-regime instability causes coherence breakdown and structural collapse.",
+      "effects": [
+        "gradientIntensity destabilized",
+        "fieldCoherence degraded",
+        "influenceContinuity interrupted",
+        "forceIntegrity compromised"
+      ]
+    },
+    "operators": [
+      "gradient",
+      "ruptureForce"
+    ],
+    "dimensions": [
+      "L4",
+      "L10",
+      "L12",
+      "L32"
+    ],
+    "graph": {
+      "nodes": [
+        {
+          "id": "gradient",
+          "error": "instability onset"
+        },
+        {
+          "id": "field",
+          "error": "coherence breakdown"
+        },
+        {
+          "id": "rupture",
+          "error": "failure threshold exceeded"
+        },
+        {
+          "id": "integrity",
+          "error": "structural collapse"
+        }
+      ],
+      "edges": [
+        {
+          "from": "gradient",
+          "to": "field",
+          "error": "instability propagates into field"
+        },
+        {
+          "from": "field",
+          "to": "rupture",
+          "error": "coherence collapse triggers rupture escalation"
+        },
+        {
+          "from": "rupture",
+          "to": "integrity",
+          "error": "rupture overwhelms structural stability"
+        }
+      ]
+    },
+    "layer": "L3_Forces_Unseen",
+    "triad": "forces",
+    "canonical": "R5",
+    "lineage": "qmroot → frequency → fluids → forces"
+  },
+  "session": {
+    "canon": "R5",
+    "modules": "L3_Forces_Unseen / spine / docs / error.json",
+    "drift": "none",
+    "coherence": "force-state coherence",
+    "version": "1.0.0",
+    "format": "error.json",
+    "audience": "MCP implementers, RTT researchers, cosmology engineers"
+  }
+}
 
