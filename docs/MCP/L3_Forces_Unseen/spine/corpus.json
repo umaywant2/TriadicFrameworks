@@ -5,8 +5,6 @@
   "lineage": ["qmroot", "frequency", "fluids", "forces"],
 
   "id": "S3-Spine-Corpus",
-  "title": "S3 Spine — Corpus Index",
-  "description": "Canonical corpus index for the S3 Spine subsystem, enumerating all structural, semantic, dimensional, operator, sequencing, example, documentation, and catalog assets.",
   "version": "1.0.0",
 
   "structure": {
@@ -16,7 +14,6 @@
     "semantics": [
       "gradientIntensity",
       "fieldCoherence",
-      "influenceContinuity",
       "rupturePotential",
       "forceIntegrity"
     ]
@@ -27,7 +24,6 @@
     "list": [
       "L4", "L5", "L16", "LH",
       "L8", "L10", "L26",
-      "L11",
       "L12",
       "L32", "LI"
     ]
@@ -72,12 +68,12 @@
     "dimensions": "dimensions.md",
     "registry": "registry.md",
     "schemas": "schemas.md",
-    "coherence": "coherence.md"
-  },
-
-  "module": {
-    "manifest": "manifest.json",
-    "module": "module.json"
+    "coherence": "coherence.md",
+    "resources": "resources.catalog.md",
+    "prompts": "prompts.catalog.md",
+    "server": "server.md",
+    "manifest": "manifest.md",
+    "module": "module.md"
   },
 
   "catalogs": {
@@ -91,7 +87,8 @@
   },
 
   "ai": {
-    "metadata": "ai.metadata.json"
+    "metadata": "ai.metadata.json",
+    "registry": "ai_registry.json"
   },
 
   "session": {
@@ -105,4 +102,3 @@
     "audience": "MCP implementers, RTT researchers, cosmology engineers"
   }
 }
-
