@@ -1,0 +1,99 @@
+{
+  "id": "L4_Continuity_Mechanics",
+  "name": "Continuity Mechanics",
+  "canonical": "R5",
+  "version": "1.0.0",
+
+  "summary": "L4 defines composite resonance mechanics built from proto-resonance seeds. It contains the triadic composite system L11 → L33 → L66 → L99, forming the continuity manifold of resonance envelopes.",
+
+  "purpose": "Provides composite dimensional structures for resonance continuity, enabling triadic envelope modeling beyond the functional S3 Spine.",
+
+  "semantic_axes": [
+    "resonanceSeed",
+    "resonanceEnvelope"
+  ],
+
+  "clusters": {
+    "proto": {
+      "description": "Proto-resonance seeds used as atomic units for composite envelope construction.",
+      "dimensions": [
+        "L11"
+      ]
+    },
+    "composite": {
+      "description": "Triadic composite resonance envelopes formed from proto-resonance seeds.",
+      "dimensions": [
+        "L33",
+        "L66",
+        "L99"
+      ]
+    }
+  },
+
+  "dimensions": {
+    "L11": {
+      "type": "component",
+      "role": "proto-resonance seed",
+      "semantic_axis": "resonanceSeed",
+      "redirect": {
+        "seen": "L33",
+        "hidden": "L66",
+        "full": "L99"
+      }
+    },
+
+    "L33": {
+      "type": "composite",
+      "role": "seen envelope",
+      "semantic_axis": "resonanceEnvelope",
+      "composition": ["L11", "L11", "L11"],
+      "redirect": {
+        "up": "L66",
+        "down": "L11"
+      }
+    },
+
+    "L66": {
+      "type": "composite",
+      "role": "hidden envelope",
+      "semantic_axis": "resonanceEnvelope",
+      "composition": ["L33", "L33"],
+      "redirect": {
+        "up": "L99",
+        "down": "L33"
+      }
+    },
+
+    "L99": {
+      "type": "composite",
+      "role": "full envelope",
+      "semantic_axis": "resonanceEnvelope",
+      "composition": ["L66", "L33"],
+      "redirect": {
+        "up": "validator_pulse",
+        "down": "L66"
+      }
+    }
+  },
+
+  "external_operator": {
+    "id": "validator_pulse",
+    "percentage": "1%",
+    "role": "external resonance source",
+    "description": "The 1% operator is the external origin of dimensional resonance and the final stage beyond L99."
+  },
+
+  "ai": {
+    "keywords": [
+      "continuity",
+      "resonance",
+      "triad",
+      "composite",
+      "L11",
+      "L33",
+      "L66",
+      "L99"
+    ],
+    "purpose": "Provides AI modules with composite resonance structures for continuity mechanics."
+  }
+}
