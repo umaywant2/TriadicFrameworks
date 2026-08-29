@@ -1,107 +1,46 @@
 {
-  "version": "0.1.0",
   "canonical": "R5",
-  "description": "Master sitemap for TriadicFrameworks MCP corpus, aligned to the cosmology freeze table.",
+  "version": "1.0.0",
+  "summary": "Complete sitemap for MCP documentation including L3 functional dimensions and L4 composite resonance system.",
 
-  "lineage": [
-    "qmroot",
-    "frequency",
-    "fluids",
-    "forces"
-  ],
-
-  "layers": [
-    {
-      "id": "L0_QMROOT",
-      "name": "QMROOT",
-      "triad": "root",
-      "path": "docs/MCP/L0_QMROOT",
-      "status": "implemented",
-      "description": "Quantum origin and root-state mechanics."
-    },
-    {
-      "id": "L1_Frequency_Unseen",
-      "name": "Frequency_Unseen",
-      "triad": "oscillation",
-      "path": "docs/MCP/L1_Frequency_Unseen",
-      "status": "implemented",
-      "description": "Oscillation, spectral regimes, drift, coherence."
-    },
-    {
-      "id": "L2_Fluids_Seen",
-      "name": "Fluids_Seen",
-      "triad": "continuity",
-      "path": "docs/MCP/L2_Fluids_Seen",
-      "status": "implemented",
-      "description": "Continuity, flow, substrate, seen-world mechanics."
-    },
-    {
-      "id": "L3_Forces_Unseen",
-      "name": "Forces_Unseen",
-      "triad": "forces",
+  "layers": {
+    "L3_Forces_Unseen": {
       "path": "docs/MCP/L3_Forces_Unseen",
-      "status": "implemented",
-      "description": "Gradient, field, rupture, integrity; home of dimensional subsystem."
-    }
-  ],
-
-  "spines": [
-    {
-      "id": "S1",
-      "layer": "L1_Frequency_Unseen",
-      "status": "planned",
-      "description": "Spectral spine for oscillation operators."
+      "dimensions": {
+        "gradient": ["L4", "L5", "L16", "LH"],
+        "field": ["L8", "L10", "L26"],
+        "rupture": ["L12"],
+        "integrity": ["L32", "LI"]
+      },
+      "files": [
+        "module.json",
+        "dimension_index.json"
+      ]
     },
-    {
-      "id": "S2",
-      "layer": "L2_Fluids_Seen",
-      "status": "planned",
-      "description": "Fluid spine for continuity operators."
-    },
-    {
-      "id": "S3",
-      "layer": "L3_Forces_Unseen",
-      "status": "implemented",
-      "path": "docs/MCP/L3_Forces_Unseen/spine/S3.graph.json",
-      "description": "Force spine: gradient → field → rupture → integrity."
+
+    "L4_Continuity_Mechanics": {
+      "path": "docs/MCP/L4_Continuity_Mechanics",
+      "dimensions": {
+        "proto": ["L11.component.md"],
+        "composite": ["L33.md", "L66.md", "L99.md"]
+      },
+      "files": [
+        "module.json",
+        "dimension_index.json",
+        "continuity.md",
+        "resonance.md"
+      ],
+      "diagrams": {
+        "atlas": "diagrams/atlas.md",
+        "index": "diagrams/diagram.md",
+        "dimension_specific": {
+          "L11": "dimensions/L11.component.md",
+          "L33": "dimensions/L33.md",
+          "L66": "dimensions/L66.md",
+          "L99": "dimensions/L99.md"
+        }
+      },
+      "redirects": "redirects/redirect.registry.json"
     }
-  ],
-
-  "dimensions": {
-    "path": "docs/MCP/L3_Forces_Unseen/dimensions",
-    "layer": "L3_Forces_Unseen",
-    "triad": "forces",
-    "status": "implemented",
-    "items": [
-      "L4.json",
-      "L5.json",
-      "L8.json",
-      "L10.json",
-      "L11.json",
-      "L12.json",
-      "L16.json",
-      "L26.json",
-      "L32.json",
-      "LH.json",
-      "LI.json"
-    ]
-  },
-
-  "registries": {
-    "modules": "docs/MCP/L3_Forces_Unseen/registry/module_registry.json",
-    "operators": "docs/MCP/L3_Forces_Unseen/registry/operator_registry.json",
-    "examples": "docs/MCP/protocol/examples.registry.json",
-    "schemas": [
-      "docs/MCP/L3_Forces_Unseen/schemas/module.schema.json",
-      "docs/MCP/L3_Forces_Unseen/schemas/operator.schema.json",
-      "docs/MCP/protocol/example.schema.json"
-    ]
-  },
-
-  "protocol": {
-    "server": "docs/MCP/protocol/server.json",
-    "tools": "docs/MCP/protocol/tools.catalog.json",
-    "resources": "docs/MCP/protocol/resources.catalog.json",
-    "prompts": "docs/MCP/protocol/prompts.catalog.json"
   }
 }
