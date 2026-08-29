@@ -1,0 +1,22 @@
+digraph S3_Spine {
+  graph [label="S3 Spine — L3 Forces Unseen (R5 Canon)", labelloc=top, fontsize=18];
+  rankdir=LR;
+  node [shape=ellipse, style=filled, fillcolor="#222244", fontcolor="white", fontsize=12];
+
+  gradient  [label="gradient\n(Causal Gradient)"];
+  field     [label="field\n(Influence Field)"];
+  rupture   [label="rupture\n(Rupture Potential)"];
+  integrity [label="integrity\n(Force Integrity)"];
+
+  // Core causal edges
+  gradient -> field     [label="influence", color="#66ccff"];
+  field    -> integrity [label="coherence", color="#66ff66"];
+  gradient -> rupture   [label="stress", color="#ff9966"];
+  integrity-> rupture   [label="stability", color="#ff6666"];
+
+  // Optional styling clusters (dimensions as comments)
+  // L4/L5/L16: gradient-axis & synthesis
+  // L8/L10/L26: field-coherence & continuity
+  // L12/L32: rupture & integrity axes
+  // LH/LI: harmonic & invariant support
+}
