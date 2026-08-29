@@ -2,6 +2,14 @@
   "canonical": "R5",
   "layer": "L3_Forces_Unseen",
   "triad": "forces",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "id": "LH",
+  "name": "LH Dimension",
+  "purpose": "High-order harmonic force-regime behavior.",
+  "semantics": ["gradientIntensity", "fieldCoherence"],
+
+  "spine": "S3",
   "dimension": "LI",
   "title": "TriadicFrameworks MCP — Infinite-Dimensional Framework (LI)",
   "description": "Defines infinite-dimensional constructs including Hilbert space, function space, and operator-based influence channels as functional hyperspace projections within the unseen force regime.",
