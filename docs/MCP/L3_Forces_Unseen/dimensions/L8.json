@@ -2,6 +2,14 @@
   "canonical": "R5",
   "layer": "L3_Forces_Unseen",
   "triad": "forces",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "id": "L8",
+  "name": "L8 Dimension",
+  "purpose": "High-order force-regime modulation.",
+  "semantics": ["fieldCoherence"],
+
+  "spine": "S3",
   "dimension": "L8",
   "title": "TriadicFrameworks MCP — L8 Dimensional Framework",
   "description": "Defines the 8-dimensional internal projection model, focusing on octonions and non-associative algebra as multi-axis influence channels within the unseen force regime.",
