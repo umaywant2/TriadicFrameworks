@@ -1,8 +1,10 @@
 {
-  "id": "L4_Continuity_Mechanics",
-  "name": "Continuity Mechanics",
-  "canonical": "R5",
-  "version": "1.0.0",
+  "id": "continuity_mechanics",
+  "layer": "L3_Forces_Unseen",
+  "category": "subsystem",
+  "triad": "continuity",
+  "description": "Composite resonance subsystem inside L3 (Forces Unseen). Models L11/L33/L66/L99 envelopes and the validator pulse.",
+  "version": "0.1.0",
 
   "summary": "L4 defines composite resonance mechanics built from proto-resonance seeds. It contains the triadic composite system L11 → L33 → L66 → L99, forming the continuity manifold of resonance envelopes.",
 
