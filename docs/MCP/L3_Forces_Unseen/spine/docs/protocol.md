@@ -1,8 +1,8 @@
 # ⚡ **S3 Spine — MCP Protocol (R5 Canon)**  
-### Wire‑Facing Protocol, Tool Definitions, Schemas, Cosmology Alignment, and Runtime Behavior  
+### Wire‑Facing Protocol • Tool Definitions • Schemas • Cosmology Enforcement • Runtime Behavior  
 **Layer:** L3_Forces_Unseen  
 **Triad:** forces  
-**Regime:** unseen-force-regime  
+**Regime:** unseen‑force‑regime  
 **Lineage:** qmroot → frequency → fluids → forces  
 
 The **S3 Spine MCP Protocol** defines how external agents, MCP runtimes, and Docsbook engines interact with the S3 Spine subsystem.  
@@ -17,7 +17,7 @@ It specifies:
 - envelope access  
 - registry discovery  
 
-This page provides the complete protocol definition.
+This is the **wire‑facing interface** for the S3 Spine module.
 
 ---
 
@@ -32,7 +32,7 @@ This page provides the complete protocol definition.
 | **Canonical** | R5 |
 | **Version** | 1.0.0 |
 
-The protocol is the **wire‑facing interface** for the S3 Spine module.
+The protocol defines the **runtime contract** for all external systems.
 
 ---
 
@@ -44,329 +44,210 @@ The protocol enforces the cosmology lineage:
 qmroot → frequency → fluids → forces
 ```
 
-### Cosmology Enforcement
+### Cosmology Enforcement Rules
 
-- All graph traversal must respect lineage evolution  
-- All operator calls must respect cosmological inheritance  
-- All dimensional queries must map to cosmological axes  
-- All envelope access must preserve cosmological ordering  
+- All graph traversal must respect lineage evolution.  
+- All operator calls must respect cosmological inheritance.  
+- All dimensional axes must map to lineage‑correct nodes.  
+- All envelope access must preserve cosmology ordering.  
+- All MCP tools must load lineage metadata before execution.
 
-### Node Evolution
-
-| Node | Evolution |
-|------|-----------|
-| gradient | proto-influence → influence → causal gradient |
-| field | proto-coherence → coherence → influence field |
-| rupture | proto-instability → instability → rupture potential |
-| integrity | proto-stability → stability → force integrity |
-
-The protocol ensures **cosmological continuity**.
+Cosmology alignment ensures **origin‑state correctness** and **regime purity**.
 
 ---
 
-## 3. Tool Catalog
+## 3. Graph Traversal Protocol
 
-Tools are defined in:
+Graph traversal is governed by:
+
+- `S3.graph.json`  
+- `operator_interaction_map.json`  
+- `operator_sequencing_rules.json`  
+- `dimensional_mapping.json`  
+
+### Allowed Traversal
 
 ```
-tools.catalog.json
+gradient → field → rupture → integrity
 ```
+
+### Traversal Rules
+
+- No reverse traversal.  
+- No cycles.  
+- No cross‑regime transitions.  
+- No dimensional leakage.  
+- All transitions must use valid operators.
+
+Traversal is validated by MCP graph tools:
+
+- `graph.getNode`  
+- `graph.getEdges`  
+- `graph.traverse`  
+
+---
+
+## 4. Operator Protocol
+
+Operators must follow causal and dimensional rules.
+
+### Primary Operators
+
+| Operator | Role | Acts On |
+|----------|------|---------|
+| **gradient** | shapes influence | gradient → field |
+| **ruptureForce** | escalates instability | field → rupture |
+| **bind** | stabilizes integrity | field → integrity |
+
+### Secondary Operators
+
+| Operator | Role | Acts On |
+|----------|------|---------|
+| **push** | increases gradientIntensity | gradient |
+| **pull** | increases fieldCoherence | field |
+| **fieldShift** | modulates field structure | field |
+
+### Operator Rules
+
+- gradient → field  
+- field → rupture  
+- field → integrity  
+- rupture → integrity  
+- no reverse transitions  
+- no cross‑triad leakage  
+
+Operators are validated by:
+
+- `operator.schema.json`  
+- `operator_interaction_map.json`  
+- `operator_sequencing_rules.json`
+
+---
+
+## 5. Dimensional Protocol
+
+Dimensions define cosmological axes.
+
+### Dimensional Mapping
+
+| Node | Dimensions |
+|------|------------|
+| **gradient** | L4, L5, L16, LH |
+| **field** | L8, L10, L26 |
+| **rupture** | L12 |
+| **integrity** | L32, LI |
+
+### Dimensional Rules
+
+- No dimensional leakage.  
+- No mixed‑regime inheritance.  
+- No reverse dimensional mapping.  
+- All operators must use lineage‑correct dimensions.
+
+Dimensions are validated by:
+
+- `dimensional_mapping.json`  
+- `dimensions.md`  
+- `lineage.schema.json`
+
+---
+
+## 6. Envelope Protocol
+
+Envelopes provide interpretive layers:
+
+| Envelope | Purpose |
+|----------|----------|
+| **canonical** | structural interpretation |
+| **reality** | machine‑level execution |
+| **imagination** | symbolic interpretation |
+| **information** | informational encoding |
+| **error** | failure‑mode interpretation |
+| **qmroot** | origin‑state interpretation |
+
+### Envelope Access Rules
+
+- Envelope access must respect cosmology lineage.  
+- Envelope transitions must preserve structural truth.  
+- Envelope JSON must match `example.schema.json`.
+
+Envelope access is validated by:
+
+- `envelope_registry.json`  
+- `example.schema.json`
+
+---
+
+## 7. Registry Protocol
+
+Registries define discovery and indexing.
+
+### Registry Files
+
+- `module_registry.json`  
+- `operator_registry.json`  
+- `dimension_registry.json`  
+- `envelope_registry.json`  
+- `spine.examples.registry.json`  
+- `ai_registry.json`  
+- `tools.catalog.json`
+
+### Registry Rules
+
+- All MCP tools must load module registry first.  
+- Envelope registry must match example schema.  
+- Operator registry must match operator schema.  
+- Dimension registry must match dimensional mapping.  
+- AI registry must load metadata before envelope access.
+
+---
+
+## 8. MCP Tool Protocol
 
 ### Tool Families
 
-- **Graph Tools**  
-- **Operator Tools**  
-- **Dimension Tools**  
-- **Diagnostics Tools**  
-- **Lineage Tools**  
-- **Envelope Tools**  
-- **Registry Tools**  
+| Tool Family | Purpose |
+|-------------|----------|
+| **graph.\*** | structural traversal |
+| **content.\*** | extraction, indexing, search |
+| **diagnostics.\*** | drift + coherence analysis |
+| **lineage.\*** | cosmology tracing |
+| **envelope.\*** | envelope generation + comparison |
 
-Each tool has:
+### Tool Rules
 
-- `id`  
-- `description`  
-- `inputSchema`  
-- `outputSchema`  
-- `cosmology` (optional)  
-- `dimensions` (optional)  
-- `operators` (optional)  
+- Tools must respect cosmology lineage.  
+- Tools must validate operator sequencing.  
+- Tools must enforce dimensional purity.  
+- Tools must load registry metadata before execution.
 
 ---
 
-## 4. Graph Tools
-
-### `graph.getNode`
-
-Returns a node definition.
-
-**Input:**
-
-```json
-{ "id": "gradient" }
-```
-
-**Output:**
-
-- node meaning  
-- semantics  
-- dimensions  
-- cosmology mapping  
-
----
-
-### `graph.getEdges`
-
-Returns edges from a node.
-
-**Input:**
-
-```json
-{ "id": "field" }
-```
-
-**Output:**
-
-- outgoing edges  
-- allowed operators  
-- dimensional constraints  
-
----
-
-### `graph.traverse`
-
-Traverses the S3 graph.
-
-**Input:**
-
-```json
-{ "from": "gradient", "to": "integrity" }
-```
-
-**Output:**
-
-- traversal path  
-- operator sequence  
-- dimensional sequence  
-- cosmology validation  
-
----
-
-## 5. Operator Tools
-
-### `getOperator`
-
-Returns operator definition.
-
-**Input:**
-
-```json
-{ "id": "ruptureForce" }
-```
-
-**Output:**
-
-- operator type  
-- allowed transitions  
-- dimensional subsystem  
-- cosmology inheritance  
-
----
-
-### `searchOperators`
-
-Searches operators by semantics or dimensions.
-
-**Input:**
-
-```json
-{ "query": "instability" }
-```
-
-**Output:**
-
-- ruptureForce  
-- rupture semantics  
-- L12 dimensional mapping  
-
----
-
-## 6. Dimension Tools
-
-### `getAnalyzerLayer`
-
-Returns dimensional subsystem for a node.
-
-**Input:**
-
-```json
-{ "id": "field" }
-```
-
-**Output:**
-
-- L8, L10, L26  
-
----
-
-### `mapRegime`
-
-Maps dimensions to regime mechanics.
-
-**Input:**
-
-```json
-{ "regime": "unseen-force-regime" }
-```
-
-**Output:**
-
-- gradient → L4/L5/L16/LH  
-- field → L8/L10/L26  
-- rupture → L12  
-- integrity → L32/LI  
-
----
-
-## 7. Diagnostics Tools
-
-### `diagnoseDrift`
-
-Detects drift across:
-
-- semantics  
-- dimensions  
-- operators  
-- cosmology  
-- envelopes  
-
-**Input:**
-
-```json
-{ "node": "field" }
-```
-
-**Output:**
-
-- semantic drift  
-- dimensional drift  
-- operator drift  
-
----
-
-### `resolveCoherence`
-
-Validates structural, semantic, dimensional, and cosmological coherence.
-
-**Input:**
-
-```json
-{ "path": ["gradient", "field", "rupture"] }
-```
-
-**Output:**
-
-- coherence report  
-- operator correctness  
-- dimensional purity  
-
----
-
-## 8. Lineage Tools
-
-### `traceLineage`
-
-Returns cosmology lineage for a node.
-
-**Input:**
-
-```json
-{ "id": "integrity" }
-```
-
-**Output:**
-
-- proto-stability → stability → force integrity  
-
----
-
-## 9. Envelope Tools
-
-### `getEnvelope`
-
-Returns envelope JSON.
-
-**Input:**
-
-```json
-{ "type": "canonical" }
-```
-
-**Output:**
-
-- canonical.json  
-
----
-
-### `listEnvelopes`
-
-Lists all envelope types.
-
-**Output:**
-
-- canonical  
-- reality  
-- imagination  
-- information  
-- error  
-- qmroot  
-
----
-
-## 10. Registry Tools
-
-### `listModules`
-
-Returns module registry entries.
-
-### `listTools`
-
-Returns tool catalog entries.
-
-### `callExample`
-
-Executes an example envelope.
-
----
-
-## 11. Protocol JSON (for MCP tools)
+## 9. Protocol JSON (for MCP tools)
 
 ```json
 {
   "protocol": {
     "id": "S3-Spine-MCP",
-    "tools": "tools.catalog.json",
-    "schemas": "schemas.md",
-    "registry": "registry.md",
-    "cosmology": "cosmology.md",
-    "operators": "operators.md",
-    "dimensions": "dimensions.md",
-    "module": "module.md",
-    "envelopes": [
-      "canonical",
-      "reality",
-      "imagination",
-      "information",
-      "error",
-      "qmroot"
-    ]
+    "canonical": "R5",
+    "version": "1.0.0",
+    "layer": "L3_Forces_Unseen",
+    "triad": "forces",
+    "regime": "unseen-force-regime",
+    "lineage": ["qmroot", "frequency", "fluids", "forces"],
+    "graph": "S3.graph.json",
+    "operators": "operator_registry.json",
+    "dimensions": "dimension_registry.json",
+    "envelopes": "envelope_registry.json",
+    "examples": "spine.examples.registry.json",
+    "tools": "tools.catalog.json"
   }
 }
 ```
 
 ---
 
-## 12. Session Context
+## 10. Session Context
 
 ```
 Canon: R5
@@ -383,15 +264,17 @@ Audience: MCP implementers, RTT researchers, cosmology engineers
 
 ## ✔ Summary
 
-This regenerated `protocol.md` provides:
+Your regenerated `protocol.md` now provides:
 
-- full MCP protocol definition  
-- tool families  
-- input/output schemas  
+- full protocol identity  
 - cosmology enforcement  
-- operator + dimension rules  
-- envelope access  
-- registry integration  
-- JSON for tooling  
+- graph traversal rules  
+- operator protocol  
+- dimensional protocol  
+- envelope protocol  
+- registry protocol  
+- MCP tool protocol  
+- protocol JSON  
+- complete R5 canonical alignment  
 
-It is now **fully canonical**, **drift‑free**, and **ready for commit**.
+It is **fully canonical**, **drift‑free**, and **ready for commit**.
