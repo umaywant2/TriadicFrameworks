@@ -1,0 +1,88 @@
+{
+  "canonical": "R5",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "id": "S3-Spine",
+  "title": "S3 Spine — Unseen Force-Regime Structural Graph",
+  "description": "Canonical manifest for the S3 Spine subsystem of TriadicFrameworks, defining structural, semantic, dimensional, operator, sequencing, and example assets.",
+  "version": "1.0.0",
+
+  "files": {
+    "graph": "S3.graph.json",
+    "dot": "S3.dot",
+    "deep": "deep.md",
+    "source": "m_Source.md",
+    "protocol": "protocol.md",
+    "operators": "operators.md",
+    "dimensions": "dimensions.md",
+    "registry": "registry.md",
+    "schemas": "schemas.md",
+    "module": "module.json",
+    "dimensional_map": "dimensional_mapping.json",
+    "operator_map": "operator_interaction_map.json",
+    "sequencing_rules": "operator_sequencing_rules.json"
+  },
+
+  "examples": {
+    "registry": "spine.examples.registry.json",
+    "schema": "example.schema.json",
+    "directory": "examples/",
+    "docs": "examples/docs/",
+    "index": "examples/index.md",
+    "sitemap": "examples/sitemap.json",
+    "envelopes": [
+      "examples/canonical.001.json",
+      "examples/reality.001.json",
+      "examples/imagination.001.json",
+      "examples/information.001.json",
+      "examples/error.001.json",
+      "examples/qmroot.001.json"
+    ]
+  },
+
+  "structure": {
+    "nodes": ["gradient", "field", "rupture", "integrity"],
+    "semantics": [
+      "gradientIntensity",
+      "fieldCoherence",
+      "influenceContinuity",
+      "rupturePotential",
+      "forceIntegrity"
+    ],
+    "operators": [
+      "push",
+      "pull",
+      "bind",
+      "gradient",
+      "fieldShift",
+      "ruptureForce"
+    ],
+    "dimensions": [
+      "L4", "L5", "L16", "LH",
+      "L8", "L10", "L26",
+      "L11",
+      "L12",
+      "L32", "LI"
+    ]
+  },
+
+  "docsbook": {
+    "front_door": "README.md",
+    "sitemap": "sitemap.json",
+    "category": "L3 Forces Unseen",
+    "badge": "⚡ S3 Spine — L3 Forces Unseen"
+  },
+
+  "session": {
+    "canon": "R5",
+    "modules": "L3_Forces_Unseen / spine",
+    "drift": "none",
+    "coherence": "force-state coherence",
+    "format": "manifest.json",
+    "version": "1.0.0",
+    "inheritance": "qmroot → frequency → fluids → forces",
+    "audience": "MCP implementers, RTT researchers, cosmology engineers"
+  }
+}
