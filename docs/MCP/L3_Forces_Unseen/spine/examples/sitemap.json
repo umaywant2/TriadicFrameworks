@@ -2,17 +2,19 @@
   "canonical": "R5",
   "layer": "L3_Forces_Unseen",
   "triad": "forces",
-  "lineage": ["qmroot", "frequency", "fluids", "forces"],
-
+  "lineage": [
+    "qmroot",
+    "frequency",
+    "fluids",
+    "forces"
+  ],
   "title": "S3 Spine — Example Sitemap",
   "description": "Docsbook sitemap entry for the S3 Spine example subsystem.",
-  "version": "0.1.0",
-
+  "version": "1.0.0",
   "sitemap": {
     "path": "docs/MCP/L3_Forces_Unseen/spine/examples/",
     "index": "index.md",
     "readme": "README.md",
-
     "categories": [
       {
         "id": "canonical",
@@ -62,15 +64,12 @@
       {
         "id": "qmroot",
         "title": "QMROOT Examples",
-        "description": "Origin-state interpretation of spine behavior in pre-regime qmroot substrate.",
+        "description": "Origin-state interpretation of proto-influence, proto-coherence, proto-instability, and proto-stability.",
         "files": [
           "qmroot.001.json",
           "docs/qmroot.md"
         ]
       }
-    ],
-
-    "registry": "spine.examples.registry.json",
-    "schema": "example.schema.json"
+    ]
   }
 }
