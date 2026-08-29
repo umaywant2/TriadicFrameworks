@@ -1,94 +1,77 @@
 {
-  "canonical": "R5",
+  "id": "L16",
   "layer": "L3_Forces_Unseen",
   "triad": "forces",
-  "lineage": ["qmroot", "frequency", "fluids", "forces"],
-
-  "id": "L16",
-  "name": "L16 Dimension",
-  "purpose": "Force-regime gradient-field synthesis.",
-  "semantics": ["gradientIntensity", "fieldCoherence"],
-
-  "spine": "S3",
   "dimension": "L16",
-  "title": "TriadicFrameworks MCP — L16 Dimensional Framework",
-  "description": "Defines the 16-dimensional internal projection model, focusing on sedenions, zero divisors, and rupture-dominant influence channels within the unseen force regime.",
-  "note": "In RTT cosmology, 16D constructs represent rupture-prone hyperspace axes of influence inside L3 force-state mechanics.",
+  "name": "Gradient Modulation",
+  "canonical": "R5",
 
-  "structure": {
-    "mathematical": [
-      "sedenion algebra",
-      "non-associative and non-alternative multiplication",
-      "presence of zero divisors",
-      "Cayley–Dickson 16D construction",
-      "loss of normed division algebra properties"
-    ],
-    "physical": [
-      "unstable hyperspace channels",
-      "non-invertible influence pathways",
-      "rupture-prone internal degrees of freedom"
-    ],
-    "interpretation": [
-      "zero divisors as rupture surfaces",
-      "non-alternativity as unstable influence transformations",
-      "16D axes as extended hyperspace channels with degraded coherence"
-    ]
-  },
+  "summary": "L16 defines the modulation axis of unseen directional influence. It is the third structural dimension of the gradient node and determines the modulation behavior of gradientIntensity within the S3 Spine.",
 
-  "rtt_reinterpretation": {
-    "summary": "16D constructs represent rupture-prone influence channels where algebraic instability maps directly to force-regime rupturePotential.",
-    "details": [
-      "Zero divisors correspond to rupture surfaces inside influence fields.",
-      "Non-associativity and non-alternativity destabilize gradientIntensity pathways.",
-      "Loss of division algebra structure reduces forceIntegrity.",
-      "Sedenion axes represent hyperspace channels with degraded coherence."
-    ]
-  },
-
-  "force_regime_mapping": {
-    "gradientIntensity": "Non-associative multiplication produces unstable gradient transformations.",
-    "fieldCoherence": "Coherence is weakened due to non-alternativity and zero divisors.",
-    "influenceContinuity": "Continuity is disrupted by non-invertible influence channels.",
-    "rupturePotential": "Zero divisors create rupture surfaces and instability thresholds.",
-    "forceIntegrity": "Loss of division algebra structure reduces internal force-state stability."
-  },
-
-  "projection_semantics": {
-    "axes": 16,
-    "type": "internal",
-    "interpretation": "Sixteen axes represent hyperspace directions with unstable algebraic behavior, mapping directly to rupture-prone influence channels.",
-    "examples": [
-      "Zero divisor pairs as rupture surfaces.",
-      "Non-alternative multiplication as unstable influence transformation.",
-      "Cayley–Dickson doubling as expansion of hyperspace axes."
-    ]
-  },
-
-  "examples": [
-    {
-      "name": "Zero Divisor Rupture Surface",
-      "structure": "sedenion zero divisor pair",
-      "mapping": ["rupturePotential"],
-      "interpretation": "Zero divisors define rupture surfaces inside the unseen force regime."
-    },
-    {
-      "name": "Unstable Gradient Transformation",
-      "structure": "non-associative sedenion product",
-      "mapping": ["gradientIntensity"],
-      "interpretation": "Non-associativity destabilizes gradient pathways across 16D axes."
-    },
-    {
-      "name": "Coherence Degradation",
-      "structure": "non-alternative multiplication",
-      "mapping": ["fieldCoherence", "forceIntegrity"],
-      "interpretation": "Non-alternativity weakens coherence and reduces internal force-state stability."
-    }
+  "lineage": [
+    "qmroot",
+    "frequency",
+    "fluids",
+    "forces"
   ],
 
-  "cosmology": {
-    "lineage": "qmroot → frequency → fluids → forces → internal 16D projection",
-    "triad_alignment": "unseen",
-    "notes": "L16 dimensional constructs extend L3 force-regime mechanics through rupture-prone hyperspace channels defined by sedenion algebra."
+  "semantic_axis": "gradientIntensity",
+
+  "role": "modulation",
+  "category": "gradient",
+  "cluster": "gradient-origin",
+
+  "description": {
+    "canonical": "L16 establishes the modulation behavior of unseen directional influence. It refines the origin (L4) and direction (L5) by defining how gradientIntensity varies, oscillates, or transforms across influence channels.",
+    "cosmology": "In the cosmology chain, L16 represents the emergence of modulation from directional bias. It is the third stage of gradient formation within force-regime mechanics.",
+    "spine": "Within the S3 Spine, L16 is the modulation dimension of the gradient node, shaping the dynamic behavior of influence before harmonic coupling.",
+    "mcp": "In MCP operations, L16 is used to modulate gradient-state mechanics, providing the modulation coordinate for influence modeling."
+  },
+
+  "operators": {
+    "primary": [
+      "gradient"
+    ],
+    "secondary": [
+      "push"
+    ],
+    "forbidden": [
+      "ruptureForce",
+      "bind",
+      "pull",
+      "fieldShift"
+    ]
+  },
+
+  "valid_transitions": [
+    "L16 → LH",
+    "L16 → L8"
+  ],
+
+  "forbidden_transitions": [
+    "L16 → L12",
+    "L16 → L32",
+    "L16 → LI"
+  ],
+
+  "spine_mapping": {
+    "node": "gradient",
+    "semantic": "gradientIntensity",
+    "position": "modulation",
+    "causal_role": "influence modulation"
+  },
+
+  "ai": {
+    "module": "L3_Forces_Unseen",
+    "dimension": "L16",
+    "version": "1.0.0",
+    "keywords": [
+      "gradient",
+      "modulation",
+      "influence",
+      "force-regime",
+      "dynamic"
+    ],
+    "purpose": "Defines the modulation axis of unseen directional influence for AI reasoning and MCP gradient modulation."
   }
 }
-
