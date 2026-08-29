@@ -1,76 +1,91 @@
 {
+  "id": "S3-Spine",
+  "title": "S3 Spine — Unseen Force-Regime Module",
   "canonical": "R5",
   "layer": "L3_Forces_Unseen",
   "triad": "forces",
-  "cosmology": {
+  "category": "unseen-force-regime",
+  "version": "1.0.0",
+
+  "description": "Defines the structural, semantic, dimensional, operator, sequencing, and example systems of the S3 Spine unseen force-regime mechanics.",
+
   "lineage": [
     "qmroot",
     "frequency",
     "fluids",
     "forces"
   ],
-  "triad": "forces",
-  "regime": "unseen-force-regime",
-  "origin": "qmroot",
-  "inheritance": {
-    "qmroot": {
-      "meaning": "latent potentials of influence, coherence, rupture, stability"
+
+  "cosmology": {
+    "lineage": [
+      "qmroot",
+      "frequency",
+      "fluids",
+      "forces"
+    ],
+    "triad": "forces",
+    "regime": "unseen-force-regime",
+    "origin": "qmroot",
+    "inheritance": {
+      "qmroot": {
+        "meaning": "latent potentials of influence, coherence, rupture, stability"
+      },
+      "frequency": {
+        "meaning": "oscillation and continuity of unseen influence"
+      },
+      "fluids": {
+        "meaning": "seen-state flow and continuity mechanics"
+      },
+      "forces": {
+        "meaning": "unseen causal mechanics expressed as gradients, fields, rupture, integrity"
+      }
     },
-    "frequency": {
-      "meaning": "oscillation and continuity of unseen influence"
+    "mapping": {
+      "gradient": "proto-influence → influence → causal gradient",
+      "field": "proto-coherence → coherence → influence field",
+      "rupture": "proto-instability → instability → rupture potential",
+      "integrity": "proto-stability → stability → force integrity"
     },
-    "fluids": {
-      "meaning": "seen-state flow and continuity mechanics"
-    },
-    "forces": {
-      "meaning": "unseen causal mechanics expressed as gradients, fields, rupture, integrity"
+    "dimensions": {
+      "gradient": ["L4", "L5", "L16", "LH"],
+      "field": ["L8", "L10", "L26"],
+      "rupture": ["L12"],
+      "integrity": ["L32", "LI"]
     }
   },
-  "mapping": {
-    "gradient": "proto-influence → influence → causal gradient",
-    "field": "proto-coherence → coherence → influence field",
-    "rupture": "proto-instability → instability → rupture potential",
-    "integrity": "proto-stability → stability → force integrity"
-  },
-  "dimensions": {
-    "gradient": ["L4", "L5", "L16", "LH"],
-    "field": ["L8", "L10", "L26"],
-    "rupture": ["L12"],
-    "integrity": ["L32", "LI"]
-  }
-}
-  "lineage": ["qmroot", "frequency", "fluids", "forces"],
 
-  "title": "S3 Spine Module",
-  "description": "Canonical module manifest for the S3 Spine, defining the structural graph, operator interactions, dimensional mapping, and sequencing rules for unseen force‑regime mechanics.",
-  "version": "0.1.0",
-
-  "module": {
-    "id": "S3",
-    "name": "S3 Spine",
-    "category": "spine",
-    "purpose": "Defines the structural graph of unseen force‑regime transitions: gradient → field → rupture → integrity."
-  },
-
-  "files": {
-    "graph": "S3.graph.json",
-    "readme": "README.md",
-    "source": "m_Source.md",
-    "sequencing": "operator_sequencing_rules.json",
-    "dimensions": "dimensional_mapping.json",
-    "operators": "operator_interaction_map.json"
-  },
-
-  "structure": {
-    "nodes": ["gradient", "field", "rupture", "integrity"],
-    "semantics": [
-      "gradientIntensity",
-      "fieldCoherence",
-      "influenceContinuity",
-      "rupturePotential",
-      "forceIntegrity"
+  "ai": {
+    "module": "spine",
+    "category": "unseen-force-regime",
+    "purpose": "Define and interpret the structural graph of unseen force mechanics.",
+    "keywords": [
+      "spine",
+      "forces",
+      "unseen",
+      "gradient",
+      "field",
+      "rupture",
+      "integrity",
+      "operators",
+      "dimensions",
+      "sequencing",
+      "examples"
     ],
-    "operators": [
+    "audience": [
+      "MCP implementers",
+      "RTT researchers",
+      "cosmology engineers"
+    ]
+  },
+
+  "graph": {
+    "file": "S3.graph.json",
+    "dot": "S3.dot",
+    "nodes": ["gradient", "field", "rupture", "integrity"]
+  },
+
+  "operators": {
+    "list": [
       "push",
       "pull",
       "bind",
@@ -78,18 +93,62 @@
       "fieldShift",
       "ruptureForce"
     ],
-    "dimensions": [
-      "L4", "L5", "L8", "L10", "L11",
-      "L12", "L16", "L26", "L32",
-      "LH", "LI"
-    ]
+    "interaction_map": "operator_interaction_map.json",
+    "sequencing_rules": "operator_sequencing_rules.json"
   },
 
-  "coherence": {
-    "spine": "S3",
-    "hostsGraph": true,
-    "hostsOperators": true,
-    "hostsDimensions": true,
-    "description": "S3 is the structural backbone of the L3 Forces Unseen layer, defining causal transitions and force‑regime mechanics."
+  "dimensions": {
+    "list": [
+      "L4", "L5", "L16", "LH",
+      "L8", "L10", "L26",
+      "L11",
+      "L12",
+      "L32", "LI"
+    ],
+    "mapping": "dimensional_mapping.json"
+  },
+
+  "examples": {
+    "registry": "spine.examples.registry.json",
+    "schema": "examples/example.schema.json",
+    "directory": "examples/"
+  },
+
+  "docs": {
+    "front_door": "README.md",
+    "deep": "deep.md",
+    "protocol": "protocol.md",
+    "coherence": "coherence.md",
+    "operators": "operators.md",
+    "dimensions": "dimensions.md",
+    "registry": "registry.md",
+    "schemas": "schemas.md",
+    "module": "module.md",
+    "sitemap": "sitemap.json"
+  },
+
+  "catalogs": {
+    "tools": "tools.catalog.json",
+    "resources": "resources.catalog.json",
+    "prompts": "prompts.catalog.json"
+  },
+
+  "server": {
+    "config": "server.json"
+  },
+
+  "corpus": {
+    "index": "corpus.json"
+  },
+
+  "session": {
+    "canon": "R5",
+    "modules": "L3_Forces_Unseen / spine / module",
+    "drift": "none",
+    "coherence": "force-state coherence",
+    "format": "module.json",
+    "version": "1.0.0",
+    "inheritance": "qmroot → frequency → fluids → forces",
+    "audience": "MCP implementers, RTT researchers, cosmology engineers"
   }
 }
