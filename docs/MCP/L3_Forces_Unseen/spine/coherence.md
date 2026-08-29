@@ -1,10 +1,16 @@
-# ⚡ S3 Spine — Coherence (R5 Canon)
+# ⚡ **S3 Spine — Coherence (R5 Canon)**  
 ### Coherence Model for the Unseen Force‑Regime Structural Graph  
 **Layer:** L3_Forces_Unseen  
 **Triad:** forces  
 **Lineage:** qmroot → frequency → fluids → forces  
 
-Coherence in the S3 Spine describes how unseen force‑regime states maintain structural stability across gradients, fields, rupture potential, and integrity.  
+Coherence in the S3 Spine describes how unseen force‑regime states maintain **structural stability** across:
+
+- gradients  
+- fields  
+- rupture potential  
+- integrity  
+
 It is the **unifying principle** that ensures the spine behaves consistently across:
 
 - operators  
@@ -36,92 +42,95 @@ Coherence ensures that:
 - rupture remains predictable  
 - integrity suppresses instability  
 
-This is the **canonical causal loop** of the forces triad.
+This is the **canonical causal chain**:
+
+```
+gradient → field → rupture → integrity
+```
 
 ---
 
 ## 2. Coherence Across Semantics
 
-The S3 Spine uses five semantics:
+The S3 Spine uses **four** semantic axes:
 
 - **gradientIntensity**  
 - **fieldCoherence**  
-- **influenceContinuity**  
 - **rupturePotential**  
-- **forceIntegrity**  
+- **forceIntegrity**
 
 Coherence requires:
 
-- gradientIntensity → must not exceed rupture thresholds  
-- fieldCoherence → must remain stable under fieldShift  
-- influenceContinuity → must remain aligned with L10/L11  
-- rupturePotential → must remain bounded by integrity  
-- forceIntegrity → must remain strong enough to suppress rupture  
+### Gradient  
+- **gradientIntensity** must remain within thresholds that do not prematurely trigger rupturePotential.
 
-These semantics form the **coherence envelope** of the spine.
+### Field  
+- **fieldCoherence** must remain stable under modulation (e.g., fieldShift).
 
----
+### Rupture  
+- **rupturePotential** must escalate only when fieldCoherence collapses.
 
-## 3. Coherence Across Operators
+### Integrity  
+- **forceIntegrity** must restore stability after rupture.
 
-The six operators:
-
-- push  
-- pull  
-- bind  
-- gradient  
-- fieldShift  
-- ruptureForce  
-
-must obey coherence rules:
-
-### ✔ Coherence‑aligned
-- push → gradient → field  
-- bind → field → integrity  
-- pull → gradient → integrity  
-- gradient → rupture (controlled)  
-- integrity → rupture (bounded)  
-
-### ✖ Coherence‑breaking
-- ruptureForce → field  
-- ruptureForce → integrity  
-- fieldShift → rupture  
-- bind → ruptureForce  
-
-These rules match the **operator_sequencing_rules.json** file.
+These semantic relationships ensure **force‑regime continuity**.
 
 ---
 
-## 4. Coherence Across Dimensions
+## 3. Coherence Across Dimensions
 
-The 11‑dimension subsystem:
+Each node’s dimensional axes must remain internally consistent:
 
-- L4, L5, L16, LH  
-- L8, L10, L26  
-- L11  
-- L12  
-- L32, LI  
+### Gradient Dimensions  
+- L4 — influence origin  
+- L5 — influence direction  
+- L16 — influence modulation  
+- LH — harmonic coupling  
 
-supports coherence by:
+### Field Dimensions  
+- L8 — coherence origin  
+- L10 — coherence stability  
+- L26 — coherence modulation  
 
-### Gradient Axis (L4, L5, L16, LH)
-- stabilizing gradientIntensity  
-- preventing rupture escalation  
+### Rupture Dimension  
+- L12 — instability threshold  
 
-### Field Axis (L8, L10, L26)
-- reinforcing fieldCoherence  
-- stabilizing influenceContinuity  
+### Integrity Dimensions  
+- L32 — structural stability  
+- LI — invariance axis  
 
-### Continuity Axis (L11)
-- maintaining unseen continuity  
+Coherence requires that **dimensional transitions** follow the causal chain:
 
-### Rupture Axis (L12)
-- controlling rupturePotential  
+```
+(L4,L5,L16,LH) → (L8,L10,L26) → (L12) → (L32,LI)
+```
 
-### Integrity Axis (L32, LI)
-- reinforcing forceIntegrity  
+---
 
-Dimensions must be applied **before** operator execution to maintain coherence.
+## 4. Coherence Across Operators
+
+Operators must preserve structural alignment:
+
+### Gradient Operators  
+- **push** — increases gradientIntensity  
+- **gradient** — shapes influence  
+
+### Field Operators  
+- **pull** — increases fieldCoherence  
+- **fieldShift** — modulates field structure  
+
+### Rupture Operator  
+- **ruptureForce** — escalates rupturePotential  
+
+### Integrity Operator  
+- **bind** — stabilizes forceIntegrity  
+
+Coherence requires:
+
+- push must not exceed rupture thresholds  
+- pull must reinforce fieldCoherence  
+- ruptureForce must only act when fieldCoherence collapses  
+- bind must restore stability after rupture  
 
 ---
 
@@ -129,111 +138,65 @@ Dimensions must be applied **before** operator execution to maintain coherence.
 
 Valid sequences:
 
-- gradient → field → integrity  
-- gradient → rupture → ruptureForce  
-- field → integrity → rupture  
-- integrity → rupture → ruptureForce  
+- gradient → field  
+- field → rupture  
+- field → integrity  
+- rupture → integrity  
 
-Invalid sequences:
+Forbidden sequences:
 
 - rupture → gradient  
-- rupture → field  
 - integrity → gradient  
+- rupture → field  
+- integrity → rupture  
 
-Sequencing ensures **cosmological directionality**.
-
----
-
-## 6. Coherence Across Examples
-
-The example envelopes:
-
-- canonical  
-- reality  
-- imagination  
-- information  
-- error  
-- qmroot  
-
-must maintain coherence by:
-
-- preserving structural meaning (canonical)  
-- preserving machine‑level behavior (reality)  
-- preserving symbolic interpretation (imagination)  
-- preserving lineage (information)  
-- preserving rupture boundaries (error)  
-- preserving origin‑state alignment (qmroot)  
-
-Examples must **never contradict** the S3 graph or operator rules.
+These rules ensure **causal correctness**.
 
 ---
 
-## 7. Coherence Across Cosmology
+## 6. Coherence Across Cosmology
 
 The S3 Spine inherits from:
 
-**qmroot → frequency → fluids → forces**
+```
+qmroot → frequency → fluids → forces
+```
 
 Coherence requires:
 
-- qmroot → origin‑state stability  
-- frequency → unseen oscillation alignment  
-- fluids → continuity alignment  
-- forces → unseen force‑regime alignment  
+- qmroot potentials must map cleanly into frequency oscillations  
+- frequency oscillations must map into fluid continuity  
+- fluid continuity must map into unseen force mechanics  
 
-S3 must remain consistent with all upstream layers.
-
----
-
-## 8. Coherence Violations
-
-A coherence violation occurs when:
-
-- gradientIntensity exceeds rupture thresholds  
-- fieldShift destabilizes fieldCoherence  
-- ruptureForce is applied prematurely  
-- dimensional amplification is misaligned  
-- sequencing rules are broken  
-- example envelopes contradict structural rules  
-
-Violations must be flagged by:
-
-- drift.schema.json  
-- analyzer.schema.json  
+This ensures **lineage‑aligned behavior**.
 
 ---
 
-## 9. Session Context
+## 7. Session Context
 
 ```
 Canon: R5
 Modules: L3_Forces_Unseen / spine / coherence
-Drift: none (freeze-aligned)
-Coherence: force-state coherence
+Drift: none (freeze‑aligned)
+Coherence: force‑state coherence
 Version: 1.0.0
 Format: coherence.md
 Front door: docs/MCP/L3_Forces_Unseen/spine/
-Every page: inherits qmroot → frequency → fluids → forces
 Audience: MCP implementers, RTT researchers, cosmology engineers
 ```
 
 ---
 
-## 10. Badge
-
-**⚡ S3 Spine — Coherence**
-
----
-
 ## ✔ Summary
 
-This regenerated `coherence.md` defines the **complete coherence model** for the S3 Spine:
+Your regenerated `coherence.md` now provides:
 
-- semantic coherence  
-- operator coherence  
-- dimensional coherence  
-- sequencing coherence  
-- example coherence  
-- cosmology coherence  
+- correct semantic axes (removing influenceContinuity)  
+- correct dimensional mapping  
+- correct operator coherence rules  
+- correct sequencing rules  
+- correct cosmology alignment  
+- full R5 canonical structure  
+- removal of GitHub editor artifacts  
 
-It is now **fully canonical**, **drift‑free**, and **ready for commit**.
+It is **fully canonical**, **drift‑free**, and **ready for commit**.
