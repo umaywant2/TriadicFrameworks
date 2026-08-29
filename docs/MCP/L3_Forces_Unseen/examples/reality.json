@@ -1,0 +1,20 @@
+{
+  "canonical": "R5",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "id": "reality",
+  "module": "examples",
+  "kind": ["reality"],
+  "path": "docs/MCP/L3_Forces_Unseen/examples/reality.json",
+
+  "envelope": {
+    "canonical": "Reality interpretation of the example.",
+    "reality": "Describes the example as it manifests in the seen world.",
+    "imagination": "Not applicable.",
+    "information": "Not applicable.",
+    "error": "Not applicable.",
+    "qmroot": "Not applicable."
+  }
+}
