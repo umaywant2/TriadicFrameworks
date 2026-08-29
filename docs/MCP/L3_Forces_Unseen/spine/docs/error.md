@@ -1,11 +1,16 @@
-# ⚡ S3 Spine — Error Envelope (R5 Canon)
+# ⚡ **S3 Spine — Error Envelope (R5 Canon)**  
 ### Misalignment, Instability & Failure‑Mode Interpretation Layer  
 **Layer:** L3_Forces_Unseen  
 **Triad:** forces  
 **Lineage:** qmroot → frequency → fluids → forces  
 
 The **error envelope** describes how an S3 Spine example behaves when unseen force‑regime mechanics enter states of **misalignment**, **instability**, or **rupture‑driven breakdown**.  
-It is the layer used for **diagnostics**, **drift detection**, **coherence validation**, and **failure‑mode analysis**.
+It is the layer used for:
+
+- diagnostics  
+- drift detection  
+- coherence validation  
+- failure‑mode analysis  
 
 This page defines the error‑layer meaning of the S3 Spine example.
 
@@ -37,16 +42,16 @@ This is the **canonical failure pattern** of the forces triad.
 
 ## 2. Error Interpretation of Nodes
 
-### **gradient → instability onset**
+### **gradient → instability onset**  
 Represents the moment unseen influence becomes erratic or misaligned.
 
-### **field → coherence breakdown**
+### **field → coherence breakdown**  
 Represents the collapse of structured influence fields.
 
-### **rupture → failure threshold**
+### **rupture → failure threshold**  
 Represents the escalation of rupturePotential beyond safe limits.
 
-### **integrity → structural collapse**
+### **integrity → structural collapse**  
 Represents the failure of forceIntegrity to contain rupture.
 
 In error mode, these nodes represent **breakdown states**.
@@ -59,112 +64,88 @@ In error mode, these nodes represent **breakdown states**.
 |----------|---------------|
 | **gradientIntensity** | unstable or excessive influence |
 | **fieldCoherence** | degraded or fragmented field structure |
-| **influenceContinuity** | interrupted or corrupted flow |
-| **rupturePotential** | elevated beyond safe thresholds |
-| **forceIntegrity** | insufficient to contain rupture |
+| **rupturePotential** | escalating instability threshold |
+| **forceIntegrity** | compromised structural stability |
 
-The example triggers:
-
-- elevated rupturePotential  
-- degraded fieldCoherence  
-- compromised forceIntegrity  
+These semantics describe **failure‑state behavior** across the traversal.
 
 ---
 
-## 4. Error Operator Mapping
+## 4. Error Operator Interpretation
 
-The failure mode aligns with two rupture‑aligned operators:
+Operators become **failure‑mode triggers**:
 
-### **gradient operator → destabilization**
-Gradient transitions amplify instability instead of shaping fields.
+| Operator | Error Role |
+|----------|------------|
+| **gradient** | initiates instability |
+| **ruptureForce** | escalates breakdown |
+| **bind** | fails to stabilize integrity |
 
-### **ruptureForce operator → breakdown**
-RuptureForce overwhelms integrity, causing structural collapse.
+The example’s failure pattern typically involves:
 
-These operators represent **error‑state transitions**.
+- **gradient** misalignment  
+- **ruptureForce** escalation  
+- **bind** inability to restore stability  
 
----
-
-## 5. Error Dimensional Mapping
-
-The 11‑dimension subsystem becomes failure channels:
-
-### Gradient Dimensions (L4, L5, L16, LH)
-→ amplify instability when misaligned.
-
-### Field Dimensions (L8, L10, L26)
-→ fail to stabilize coherence under stress.
-
-### Rupture Dimension (L12)
-→ escalates rupturePotential into failure.
-
-### Integrity Dimensions (L32, LI)
-→ insufficient to contain rupture escalation.
-
-The example activates **L12**, the rupture dimension.
+This is the operator‑level analogue of rupture‑driven collapse.
 
 ---
 
-## 6. Error Envelope JSON
+## 5. Error Dimensional Interpretation
+
+Dimensions become **instability axes**:
+
+### Gradient Dimensions  
+- **L4** — unstable influence origin  
+- **L5** — erratic directional shaping  
+
+### Field Dimensions  
+- **L8** — coherence origin collapse  
+- **L10** — stability degradation  
+
+### Rupture Dimension  
+- **L12** — instability threshold breach  
+
+### Integrity Dimensions  
+- **L32** — structural failure  
+- **LI** — loss of invariance  
+
+These axes describe **failure‑mode dimensional behavior**.
+
+---
+
+## 6. Error JSON (for MCP tools)
 
 ```json
 {
   "error": {
-    "failure": {
-      "path": ["gradient", "field", "rupture", "integrity"],
-      "cause": "rupturePotential escalation",
-      "effects": [
-        "gradientIntensity destabilized",
-        "fieldCoherence degraded",
-        "forceIntegrity compromised"
-      ]
+    "path": ["gradient", "field", "rupture", "integrity"],
+    "semantics": [
+      "gradientIntensity",
+      "fieldCoherence",
+      "rupturePotential",
+      "forceIntegrity"
+    ],
+    "operators": ["gradient", "ruptureForce", "bind"],
+    "dimensions": {
+      "gradient": ["L4", "L5"],
+      "field": ["L8", "L10"],
+      "rupture": ["L12"],
+      "integrity": ["L32", "LI"]
     },
-    "operators": ["gradient", "ruptureForce"],
-    "dimensions": ["L4", "L10", "L12", "L32"],
-    "layer": "L3_Forces_Unseen",
-    "triad": "forces",
-    "canonical": "R5"
+    "states": {
+      "gradient": "instability onset",
+      "field": "coherence breakdown",
+      "rupture": "failure threshold",
+      "integrity": "structural collapse"
+    }
   }
 }
 ```
 
-This matches the structure defined in `example.schema.json`.
-
 ---
 
-## 7. MCP Role
-
-Error envelopes are used when a client requests:
-
-- diagnostics  
-- anomaly detection  
-- failure‑mode analysis  
-- drift detection  
-- coherence validation  
-
-They are essential for:
-
-- operator misuse detection  
-- dimensional misalignment analysis  
-- rupture escalation modeling  
-- structural integrity evaluation  
-
----
-
-## 8. Cosmology Role
-
-Error envelopes map unseen force‑regime breakdowns into:
-
-- rupture escalation  
-- coherence collapse  
-- instability propagation  
-- lineage‑aligned failure patterns  
-
-They connect unseen mechanics to **cosmological instability analysis**.
-
----
-
-## 9. Session Context
+## 7. Session Context
 
 ```
 Canon: R5
@@ -174,28 +155,20 @@ Coherence: force-state coherence
 Version: 1.0.0
 Format: error.md
 Front door: docs/MCP/L3_Forces_Unseen/spine/
-Every page: inherits qmroot → frequency → fluids → forces
 Audience: MCP implementers, RTT researchers, cosmology engineers
 ```
 
 ---
 
-## 10. Badge
-
-**⚡ S3 Spine — Error Envelope**
-
----
-
 ## ✔ Summary
 
-This regenerated `error.md` provides the **failure‑mode interpretation** of the S3 Spine example:
+Your regenerated `error.md` now provides:
 
-- instability onset  
-- coherence breakdown  
-- rupture escalation  
-- integrity collapse  
-- operator misuse  
-- dimensional misalignment  
-- cosmology‑aligned failure patterns  
+- complete failure‑mode interpretation  
+- rupture‑aligned breakdown semantics  
+- operator‑level failure triggers  
+- dimensional instability axes  
+- MCP‑ready error JSON  
+- full R5 canonical alignment  
 
-It is now **fully canonical**, **drift‑free**, and **ready for commit**.
+It is **fully canonical**, **drift‑free**, and **ready for commit**.
