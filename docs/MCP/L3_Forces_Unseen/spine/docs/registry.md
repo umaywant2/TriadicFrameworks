@@ -1,12 +1,12 @@
-# ⚡ S3 Spine — Registry (R5 Canon)
-### Module Registry, Operator Registry, Dimension Registry, Envelope Registry, and MCP Integration  
+# ⚡ **S3 Spine — Registry (R5 Canon)**  
+### Module Registry • Operator Registry • Dimension Registry • Envelope Registry • Example Registry • MCP Integration  
 **Layer:** L3_Forces_Unseen  
 **Triad:** forces  
-**Regime:** unseen-force-regime  
+**Regime:** unseen‑force‑regime  
 **Lineage:** qmroot → frequency → fluids → forces  
 
-The registry layer defines **how the S3 Spine subsystem is indexed and discovered**.  
-Registries provide the canonical mapping for:
+The registry layer defines **how the S3 Spine subsystem is indexed, discovered, and integrated** across TriadicFrameworks, Docsbook, and MCP tooling.  
+Registries provide canonical mappings for:
 
 - modules  
 - operators  
@@ -16,13 +16,11 @@ Registries provide the canonical mapping for:
 - AI metadata  
 - MCP tools  
 
-This page provides the canonical registry definitions for the S3 Spine module.
+This page provides the **complete R5‑canonical registry definitions** for the S3 Spine module.
 
 ---
 
 ## 1. Module Registry
-
-The module registry defines the S3 Spine module identity and its cosmological alignment.
 
 Registry file:
 
@@ -43,13 +41,11 @@ registry/module_registry.json
 | module | spine/module.json |
 | ai.metadata | spine/ai.metadata.json |
 
-This registry is used by MCP tools to discover the module.
+The module registry is used by MCP tools to **discover**, **load**, and **validate** the S3 Spine subsystem.
 
 ---
 
 ## 2. Operator Registry
-
-The operator registry defines all operators available in the S3 Spine subsystem.
 
 Registry file:
 
@@ -61,74 +57,68 @@ registry/operator_registry.json
 
 | Operator | Type | Dimensions | Description |
 |----------|------|------------|-------------|
-| gradient | primary | L4, L5, L16, LH | shapes influence into fields |
-| bind | primary | L32, LI | stabilizes integrity |
-| ruptureForce | primary | L12 | escalates instability |
-| push | secondary | L4, L5 | increases gradientIntensity |
-| pull | secondary | L8, L10 | increases fieldCoherence |
-| fieldShift | secondary | L26 | modulates field structure |
+| **gradient** | primary | L4, L5, L16, LH | shapes influence into fields |
+| **bind** | primary | L32, LI | stabilizes integrity |
+| **ruptureForce** | primary | L12 | escalates instability |
+| **push** | secondary | L4, L5 | increases gradientIntensity |
+| **pull** | secondary | L8, L10 | increases fieldCoherence |
+| **fieldShift** | secondary | L26 | modulates field structure |
 
-This registry is used by MCP operator tools.
+The operator registry defines **all causal mechanics** available in the S3 Spine subsystem.
 
 ---
 
 ## 3. Dimension Registry
 
-The dimension registry defines all dimensional subsystems used by the S3 Spine.
-
 Registry file:
 
 ```
-registry/sitemap_modules.json
+registry/dimension_registry.json
 ```
 
 ### Dimension Entries
 
 | Dimension | Node | Meaning |
-|-----------|------|---------|
-| L4 | gradient | influence origin |
-| L5 | gradient | influence direction |
-| L16 | gradient | influence modulation |
-| LH | gradient | harmonic influence |
-| L8 | field | coherence origin |
-| L10 | field | coherence stability |
-| L26 | field | coherence modulation |
-| L12 | rupture | instability threshold |
-| L32 | integrity | structural stability |
-| LI | integrity | stability invariance |
+|----------|------|---------|
+| **L4** | gradient | influence origin |
+| **L5** | gradient | influence direction |
+| **L16** | gradient | influence modulation |
+| **LH** | gradient | harmonic influence axis |
+| **L8** | field | coherence origin |
+| **L10** | field | coherence stability |
+| **L26** | field | coherence modulation |
+| **L12** | rupture | instability threshold |
+| **L32** | integrity | structural stability |
+| **LI** | integrity | invariance axis |
 
-This registry is used by MCP dimensional tools.
+The dimension registry ensures **dimensional purity** and **cosmological alignment**.
 
 ---
 
 ## 4. Envelope Registry
 
-The envelope registry defines the six canonical envelope types.
-
 Registry file:
 
 ```
-spine.examples.registry.json
+registry/envelope_registry.json
 ```
 
 ### Envelope Entries
 
 | Envelope | File | Description |
-|----------|-------|-------------|
-| canonical | docs/canonical.json | structural truth |
-| reality | docs/reality.json | machine execution |
-| imagination | docs/imagination.json | symbolic meaning |
-| information | docs/information.json | informational encoding |
-| error | docs/error.json | failure-mode mapping |
-| qmroot | docs/qmroot.json | origin-state potentials |
+|----------|------|-------------|
+| **canonical** | canonical.md / canonical.json | structural interpretation |
+| **reality** | reality.md / reality.json | machine‑level execution |
+| **imagination** | imagination.md / imagination.json | symbolic interpretation |
+| **information** | information.md / information.json | informational encoding |
+| **error** | error.md / error.json | failure‑mode interpretation |
+| **qmroot** | qmroot.md / qmroot.json | origin‑state interpretation |
 
-This registry is used by MCP example tools.
+The envelope registry defines the **six‑envelope interpretive system** for the S3 Spine.
 
 ---
 
 ## 5. Example Registry
-
-The example registry defines all example instances.
 
 Registry file:
 
@@ -138,71 +128,57 @@ spine.examples.registry.json
 
 ### Example Entries
 
-| Example | Envelope | File |
-|---------|----------|------|
-| canonical.001 | canonical | examples/canonical.001.json |
-| reality.001 | reality | examples/reality.001.json |
-| imagination.001 | imagination | examples/imagination.001.json |
-| information.001 | information | examples/information.001.json |
-| error.001 | error | examples/error.001.json |
-| qmroot.001 | qmroot | examples/qmroot.001.json |
+| Example | Envelope | Files |
+|---------|----------|--------|
+| canonical.001 | canonical | canonical.001.json, docs/canonical.md |
+| reality.001 | reality | reality.001.json, docs/reality.md |
+| imagination.001 | imagination | imagination.001.json, docs/imagination.md |
+| information.001 | information | information.001.json, docs/information.md |
+| error.001 | error | error.001.json, docs/error.md |
+| qmroot.001 | qmroot | qmroot.001.json, docs/qmroot.md |
 
-This registry is used by MCP example loaders.
+The example registry provides **machine‑level indexing** for all example envelopes.
 
 ---
 
-## 6. AI Registry
-
-The AI registry defines AI metadata for the S3 Spine subsystem.
+## 6. AI Metadata Registry
 
 Registry file:
 
 ```
-spine/ai_registry.json
+ai_registry.json
 ```
 
-### AI Registry Fields
+### AI Metadata Entries
 
-- ai.metadata.json  
-- ai.module.json  
-- ai.modules.json  
-- ai.operator.json  
-- ai.session.json  
+| Field | File |
+|-------|------|
+| ai.metadata | spine/ai.metadata.json |
+| ai.registry | spine/ai_registry.json |
 
-This registry is used by AI agents and Docsbook engines.
+This registry is used by AI engines to load **metadata**, **lineage**, and **interpretive context**.
 
 ---
 
-## 7. MCP Registry Integration
+## 7. MCP Tool Registry
 
-Registries integrate with MCP tools:
+Registry file:
 
-### Discovery Tools
+```
+tools.catalog.json
+```
 
-- `list.all.tools`  
-- `search.tools`  
-- `describe.tool`  
+### MCP Tool Families
 
-### Graph Tools
+| Tool Family | Purpose |
+|-------------|----------|
+| graph.* | structural traversal and node/edge inspection |
+| content.* | extraction, indexing, search |
+| diagnostics.* | drift detection, coherence validation |
+| lineage.* | cosmology tracing |
+| envelope.* | envelope generation and comparison |
 
-- `graph.getNode`  
-- `graph.getEdges`  
-- `graph.traverse`  
-
-### Diagnostics Tools
-
-- `diagnoseDrift`  
-- `resolveCoherence`  
-- `traceLineage`  
-- `mapRegime`  
-
-### Indexing Tools
-
-- `content.extract`  
-- `content.index`  
-- `content.search`  
-
-Registries ensure **tool-level discoverability**.
+The MCP registry defines **tool‑level integration** for the S3 Spine.
 
 ---
 
@@ -213,9 +189,11 @@ Registries ensure **tool-level discoverability**.
   "registry": {
     "module": "registry/module_registry.json",
     "operators": "registry/operator_registry.json",
-    "dimensions": "registry/sitemap_modules.json",
+    "dimensions": "registry/dimension_registry.json",
+    "envelopes": "registry/envelope_registry.json",
     "examples": "spine.examples.registry.json",
-    "ai": "spine/ai_registry.json"
+    "ai": "ai_registry.json",
+    "tools": "tools.catalog.json"
   }
 }
 ```
@@ -239,15 +217,16 @@ Audience: MCP implementers, RTT researchers, cosmology engineers
 
 ## ✔ Summary
 
-This regenerated `registry.md` provides:
+Your regenerated `registry.md` now provides:
 
-- module registry  
-- operator registry  
-- dimension registry  
-- envelope registry  
-- example registry  
-- AI registry  
-- MCP integration  
-- JSON for tooling  
+- complete module registry  
+- complete operator registry  
+- complete dimension registry  
+- complete envelope registry  
+- complete example registry  
+- complete AI metadata registry  
+- complete MCP tool registry  
+- MCP‑ready JSON  
+- full R5 canonical alignment  
 
-It is now **fully canonical**, **drift‑free**, and **ready for commit**.
+It is **fully canonical**, **drift‑free**, and **ready for commit**.
