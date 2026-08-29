@@ -1,0 +1,79 @@
+{
+  "canonical": "R5",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "id": "S3-Spine-Server",
+  "title": "S3 Spine — MCP Server",
+  "description": "Canonical MCP server configuration for the S3 Spine subsystem, exposing graph, operator, dimensional, sequencing, example, registry, schema, and documentation tools.",
+  "version": "1.0.0",
+
+  "module": {
+    "manifest": "manifest.json",
+    "module": "module.json",
+    "registry": "registry.md",
+    "schemas": "schemas.md"
+  },
+
+  "catalogs": {
+    "tools": "tools.catalog.json",
+    "resources": "resources.catalog.json",
+    "prompts": "prompts.catalog.json"
+  },
+
+  "server": {
+    "capabilities": [
+      "graph.load",
+      "graph.dot",
+      "operator.map",
+      "operator.sequence",
+      "dimension.map",
+      "example.load",
+      "example.describe",
+      "module.describe",
+      "documentation.load"
+    ],
+    "endpoints": {
+      "graph": "S3.graph.json",
+      "dot": "S3.dot",
+      "operators": "operator_interaction_map.json",
+      "sequencing": "operator_sequencing_rules.json",
+      "dimensions": "dimensional_mapping.json",
+      "examples": "spine.examples.registry.json",
+      "exampleSchema": "example.schema.json",
+      "deep": "deep.md",
+      "source": "m_Source.md",
+      "protocol": "protocol.md",
+      "readme": "README.md"
+    }
+  },
+
+  "loaders": {
+    "python": "src/loaders/corpus.py",
+    "mcp": "src/mcp/server.py"
+  },
+
+  "corpus": {
+    "directory": "src/corpus/",
+    "index": "corpus.json"
+  },
+
+  "docsbook": {
+    "front_door": "README.md",
+    "sitemap": "sitemap.json",
+    "category": "L3 Forces Unseen",
+    "badge": "⚡ S3 Spine — MCP Server"
+  },
+
+  "session": {
+    "canon": "R5",
+    "modules": "L3_Forces_Unseen / spine / server",
+    "drift": "none",
+    "coherence": "force-state coherence",
+    "format": "server.json",
+    "version": "1.0.0",
+    "inheritance": "qmroot → frequency → fluids → forces",
+    "audience": "MCP implementers, RTT researchers, cosmology engineers"
+  }
+}
