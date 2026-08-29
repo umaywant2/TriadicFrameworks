@@ -1,70 +1,78 @@
-# S3 Spine — Example Index (Docsbook)
-### L3 Forces Unseen — TriadicFrameworks Cosmology
+# ⚡ **S3 Spine — Example Index (R5 Canon)**  
+### Docsbook Navigation • Six‑Envelope Example System • Cosmology‑Aligned  
+**Layer:** L3_Forces_Unseen  
+**Triad:** forces  
+**Subsystem:** S3 Spine  
+**Lineage:** qmroot → frequency → fluids → forces  
 
-This index provides the Docsbook navigation entry for the **S3 Spine example subsystem**, the interpretive layer for the structural graph of unseen force‑regime mechanics.
+This index provides the **Docsbook front door** for the S3 Spine example subsystem — the interpretive layer for the structural graph of unseen force‑regime mechanics.  
+Examples in this directory express the canonical causal cycle:
 
-The S3 spine defines the canonical causal cycle:
+```
+gradient → field → rupture → integrity
+```
 
-**gradient → field → rupture → integrity**
-
-Examples in this directory express that cycle across six interpretive layers.
+Each example explores this cycle through one of the **six TriadicFrameworks interpretive envelopes**, providing a complete multi‑angle representation of unseen force‑regime behavior.
 
 ---
 
 ## 📚 Example Categories
 
-Each example follows the six‑field TriadicFrameworks example schema:
+Every example follows the **six‑field TriadicFrameworks example schema**, providing a full interpretive spread:
 
-| Category     | Purpose |
-|--------------|---------|
+| Category | Purpose |
+|----------|---------|
 | **canonical** | Pure structural traversal of the spine |
-| **reality**   | Machine‑level / operational interpretation |
+| **reality** | Machine‑level / operational interpretation |
 | **imagination** | Symbolic or hypothetical interpretation |
 | **information** | Structural / informational mapping |
 | **error** | Misalignment, instability, rupture failure modes |
 | **qmroot** | Origin‑state, pre‑regime interpretation |
 
-These categories provide a complete interpretive envelope for the S3 spine.
+Together, these envelopes form the **complete interpretive system** for the S3 Spine.
 
 ---
 
 ## 📁 Example Files
 
-### Canonical
+### **Canonical**
 - `canonical.001.json`  
 - `docs/canonical.md`
 
-### Reality
+### **Reality**
 - `reality.001.json`  
 - `docs/reality.md`
 
-### Imagination
+### **Imagination**
 - `imagination.001.json`  
 - `docs/imagination.md`
 
-### Information
+### **Information**
 - `information.001.json`  
 - `docs/information.md`
 
-### Error
+### **Error**
 - `error.001.json`  
 - `docs/error.md`
 
-### QMROOT
+### **QMROOT**
 - `qmroot.001.json`  
 - `docs/qmroot.md`
+
+Each example pair (`.json` + `.md`) provides both **machine‑readable** and **human‑readable** interpretations.
 
 ---
 
 ## 🧭 Cosmology Alignment
 
+Examples in this directory are aligned with the full S3 Spine cosmology:
+
 - **Layer:** L3_Forces_Unseen  
 - **Triad:** forces  
 - **Lineage:** qmroot → frequency → fluids → forces  
 - **Canonical:** R5  
-- **Subsystem:** S3 Spine  
 
-Examples are aligned with:
+They inherit structural and semantic truth from:
 
 - `S3.graph.json`  
 - `operator_interaction_map.json`  
@@ -73,7 +81,7 @@ Examples are aligned with:
 - `deep.md`  
 - `module.json`  
 
-(  [github.com](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/MCP/L3_Forces_Unseen/spine))
+This ensures **cosmological continuity** and **regime correctness**.
 
 ---
 
@@ -81,14 +89,18 @@ Examples are aligned with:
 
 All examples in this directory are indexed by:
 
-**`spine.examples.registry.json`**
+```
+spine.examples.registry.json
+```
 
-This registry is used by:
+This registry supports:
 
 - Docsbook navigation  
 - MCP example discovery  
 - structural indexing  
 - example search and filtering  
+
+It is the **machine‑level backbone** of the example subsystem.
 
 ---
 
@@ -99,7 +111,7 @@ Canon: R5
 Modules: L3_Forces_Unseen / spine / examples
 Drift: none (freeze-aligned)
 Coherence: force-state coherence
-Version: 0.1.0
+Version: 1.0.0
 Format: index.md
 Front door: docs/MCP/L3_Forces_Unseen/spine/examples/
 Every page: inherits qmroot → frequency → fluids → forces
@@ -110,20 +122,19 @@ Audience: MCP implementers, RTT researchers, cosmology engineers
 
 ## 🏷️ Badge
 
-**📦 S3 Spine — Example Index**
+📦 **S3 Spine — Example Index**
 
 ---
 
 ## ✔ Summary
 
-This index page provides the **Docsbook front door** for the S3 spine example subsystem.  
-It is:
+This regenerated `index.md` provides:
 
-- freeze‑aligned  
-- triad‑aligned  
-- lineage‑aligned  
-- drift‑free  
-- MCP‑ready  
-- Docsbook‑ready  
+- complete Docsbook navigation  
+- full six‑envelope example system  
+- cosmology alignment  
+- registry integration  
+- canonical R5 formatting  
+- drift‑free, freeze‑aligned structure  
 
-and completes the example documentation layer for the S3 spine.
+It is now **fully canonical**, **MCP‑ready**, **Docsbook‑ready**, and **ready for commit**.
