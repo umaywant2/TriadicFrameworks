@@ -1,0 +1,61 @@
+{
+  "canonical": "R5",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "title": "S3 Spine — Example Registry",
+  "description": "Canonical registry of example envelopes associated with the S3 Spine subsystem.",
+  "version": "0.1.0",
+
+  "examples": [
+    {
+      "id": "s3.canonical.001",
+      "module": "S3 Spine",
+      "layer": "L3_Forces_Unseen",
+      "kind": ["canonical"],
+      "path": "docs/MCP/L3_Forces_Unseen/spine/examples/canonical.001.json",
+      "description": "Canonical example of S3 spine traversal and causal structure."
+    },
+    {
+      "id": "s3.reality.001",
+      "module": "S3 Spine",
+      "layer": "L3_Forces_Unseen",
+      "kind": ["reality"],
+      "path": "docs/MCP/L3_Forces_Unseen/spine/examples/reality.001.json",
+      "description": "Reality interpretation of S3 spine transitions in machine-level graph traversal."
+    },
+    {
+      "id": "s3.imagination.001",
+      "module": "S3 Spine",
+      "layer": "L3_Forces_Unseen",
+      "kind": ["imagination"],
+      "path": "docs/MCP/L3_Forces_Unseen/spine/examples/imagination.001.json",
+      "description": "Imaginative interpretation of causal gradients flowing into influence fields."
+    },
+    {
+      "id": "s3.information.001",
+      "module": "S3 Spine",
+      "layer": "L3_Forces_Unseen",
+      "kind": ["information"],
+      "path": "docs/MCP/L3_Forces_Unseen/spine/examples/information.001.json",
+      "description": "Information-layer example describing cosmological lineage and structural mapping."
+    },
+    {
+      "id": "s3.error.001",
+      "module": "S3 Spine",
+      "layer": "L3_Forces_Unseen",
+      "kind": ["error"],
+      "path": "docs/MCP/L3_Forces_Unseen/spine/examples/error.001.json",
+      "description": "Error-mode example describing rupture misalignment or coherence failure."
+    },
+    {
+      "id": "s3.qmroot.001",
+      "module": "S3 Spine",
+      "layer": "L3_Forces_Unseen",
+      "kind": ["qmroot"],
+      "path": "docs/MCP/L3_Forces_Unseen/spine/examples/qmroot.001.json",
+      "description": "QMROOT interpretation of S3 spine behavior in pre-regime origin state."
+    }
+  ]
+}
