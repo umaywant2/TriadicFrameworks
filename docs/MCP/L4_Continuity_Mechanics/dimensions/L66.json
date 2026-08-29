@@ -1,1 +1,36 @@
+{
+  "id": "L66",
+  "layer": "L4_Continuity_Mechanics",
+  "dimension": "L66",
+  "name": "Hidden Resonance Envelope",
+  "canonical": "R5",
+
+  "summary": "L66 is the 2/3 resonance envelope formed from two L33 envelopes. It represents the hidden portion of the supsphere.",
+
+  "composition": {
+    "components": ["L33", "L33"],
+    "structure": "dual-triad"
+  },
+
+  "role": "hidden",
+  "category": "resonance",
+  "cluster": "envelope",
+
+  "description": {
+    "canonical": "L66 represents the hidden resonance envelope. It is formed from two L33 envelopes, producing the 2/3 lostational portion of the supsphere.",
+    "cosmology": "L66 corresponds to the hidden resonance band in continuity mechanics. It is the second stable composite envelope.",
+    "mcp": "L66 is used for modeling hidden resonance structures and continuity manifolds."
+  },
+
+  "redirects": {
+    "up": "L99",
+    "down": "L33"
+  },
+
+  "ai": {
+    "version": "1.0.0",
+    "keywords": ["resonance", "hidden", "continuity", "lostational"],
+    "purpose": "Models the hidden resonance envelope in composite dimensional systems."
+  }
+}
 
