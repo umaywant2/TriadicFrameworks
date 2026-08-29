@@ -1,0 +1,76 @@
+{
+  "canonical": "R5",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "title": "S3 Spine — Example Sitemap",
+  "description": "Docsbook sitemap entry for the S3 Spine example subsystem.",
+  "version": "0.1.0",
+
+  "sitemap": {
+    "path": "docs/MCP/L3_Forces_Unseen/spine/examples/",
+    "index": "index.md",
+    "readme": "README.md",
+
+    "categories": [
+      {
+        "id": "canonical",
+        "title": "Canonical Examples",
+        "description": "Pure structural traversal of the S3 spine.",
+        "files": [
+          "canonical.001.json",
+          "docs/canonical.md"
+        ]
+      },
+      {
+        "id": "reality",
+        "title": "Reality Examples",
+        "description": "Machine-level interpretation of spine transitions.",
+        "files": [
+          "reality.001.json",
+          "docs/reality.md"
+        ]
+      },
+      {
+        "id": "imagination",
+        "title": "Imagination Examples",
+        "description": "Symbolic or hypothetical interpretation of unseen force-regime mechanics.",
+        "files": [
+          "imagination.001.json",
+          "docs/imagination.md"
+        ]
+      },
+      {
+        "id": "information",
+        "title": "Information Examples",
+        "description": "Informational mapping of spine semantics and lineage.",
+        "files": [
+          "information.001.json",
+          "docs/information.md"
+        ]
+      },
+      {
+        "id": "error",
+        "title": "Error Examples",
+        "description": "Failure-mode interpretation describing rupture misalignment or integrity collapse.",
+        "files": [
+          "error.001.json",
+          "docs/error.md"
+        ]
+      },
+      {
+        "id": "qmroot",
+        "title": "QMROOT Examples",
+        "description": "Origin-state interpretation of spine behavior in pre-regime qmroot substrate.",
+        "files": [
+          "qmroot.001.json",
+          "docs/qmroot.md"
+        ]
+      }
+    ],
+
+    "registry": "spine.examples.registry.json",
+    "schema": "example.schema.json"
+  }
+}
