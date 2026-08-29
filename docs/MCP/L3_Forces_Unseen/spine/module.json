@@ -2,6 +2,43 @@
   "canonical": "R5",
   "layer": "L3_Forces_Unseen",
   "triad": "forces",
+  "cosmology": {
+  "lineage": [
+    "qmroot",
+    "frequency",
+    "fluids",
+    "forces"
+  ],
+  "triad": "forces",
+  "regime": "unseen-force-regime",
+  "origin": "qmroot",
+  "inheritance": {
+    "qmroot": {
+      "meaning": "latent potentials of influence, coherence, rupture, stability"
+    },
+    "frequency": {
+      "meaning": "oscillation and continuity of unseen influence"
+    },
+    "fluids": {
+      "meaning": "seen-state flow and continuity mechanics"
+    },
+    "forces": {
+      "meaning": "unseen causal mechanics expressed as gradients, fields, rupture, integrity"
+    }
+  },
+  "mapping": {
+    "gradient": "proto-influence → influence → causal gradient",
+    "field": "proto-coherence → coherence → influence field",
+    "rupture": "proto-instability → instability → rupture potential",
+    "integrity": "proto-stability → stability → force integrity"
+  },
+  "dimensions": {
+    "gradient": ["L4", "L5", "L16", "LH"],
+    "field": ["L8", "L10", "L26"],
+    "rupture": ["L12"],
+    "integrity": ["L32", "LI"]
+  }
+}
   "lineage": ["qmroot", "frequency", "fluids", "forces"],
 
   "title": "S3 Spine Module",
