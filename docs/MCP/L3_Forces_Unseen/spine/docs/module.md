@@ -1,11 +1,11 @@
 # ⚡ **S3 Spine — Module Documentation (R5 Canon)**  
-### Structural, Semantic, Dimensional, Cosmological, and MCP Definition  
-**Layer:** L3_Forces_Unseen  
-**Triad:** forces  
-**Regime:** unseen-force-regime  
-**Lineage:** qmroot → frequency → fluids → forces  
+### Structural • Semantic • Dimensional • Cosmological • Operator • Envelope • MCP Definition  
+**Layer:** L3_Forces_Unseen**  
+**Triad:** forces**  
+**Regime:** unseen‑force‑regime**  
+**Lineage:** qmroot → frequency → fluids → forces**
 
-The **S3 Spine module** defines the structural, semantic, dimensional, cosmological, and operator mechanics of the unseen‑force‑regime.  
+The **S3 Spine module** defines the complete mechanics of the unseen‑force‑regime.  
 It is the canonical representation of:
 
 - the S3 graph  
@@ -16,7 +16,7 @@ It is the canonical representation of:
 - the cosmology lineage  
 - the MCP integration layer  
 
-This page provides the complete module definition.
+This page provides the **full module definition**.
 
 ---
 
@@ -35,7 +35,8 @@ The S3 Spine is the **force‑regime structural module** of TriadicFrameworks.
 
 ---
 
-## 2. Cosmology Alignment
+## 2. Cosmology Alignment  
+*(Your tab ended mid‑table here; this is the complete canonical version.)*
 
 The S3 Spine inherits its mechanics through the cosmology lineage:
 
@@ -49,38 +50,29 @@ qmroot → frequency → fluids → forces
 |-------|---------|
 | **qmroot** | latent potentials of influence, coherence, rupture, stability |
 | **frequency** | oscillation and continuity of unseen influence |
-| **fluids** | seen-state flow and continuity mechanics |
+| **fluids** | seen‑state flow and continuity mechanics |
 | **forces** | unseen causal mechanics expressed as gradients, fields, rupture, integrity |
 
-### Node Evolution
+### Node Evolution Across Lineage
 
 | Node | Evolution |
 |------|-----------|
-| gradient | proto-influence → influence → causal gradient |
-| field | proto-coherence → coherence → influence field |
-| rupture | proto-instability → instability → rupture potential |
-| integrity | proto-stability → stability → force integrity |
+| **gradient** | proto‑influence → oscillating influence → flowing influence → causal gradient |
+| **field** | proto‑coherence → oscillating coherence → fluid‑state coherence → influence field |
+| **rupture** | proto‑instability → oscillation break → fluid discontinuity → rupture potential |
+| **integrity** | proto‑stability → oscillation stability → fluid continuity → structural stability |
 
-The S3 Spine expresses the **final causal form** of these inherited potentials.
+Cosmology alignment ensures **origin‑state correctness** and **regime purity**.
 
 ---
 
 ## 3. Structural Definition
 
-The S3 Spine graph defines the canonical causal chain:
+The S3 Spine expresses unseen force‑regime mechanics through four canonical nodes:
 
 ```
 gradient → field → rupture → integrity
 ```
-
-### Node Meanings
-
-| Node | Meaning |
-|------|---------|
-| **gradient** | directional unseen influence |
-| **field** | influence field shaping force-state mechanics |
-| **rupture** | instability threshold |
-| **integrity** | structural stability |
 
 ### Structural Rules
 
@@ -91,133 +83,101 @@ gradient → field → rupture → integrity
 - no cycles  
 - no reverse traversal  
 
-This defines the **structural truth** of the module.
+This defines the **canonical causal chain**.
 
 ---
 
 ## 4. Semantic Definition
 
-The S3 Spine defines four semantic axes:
+Each node expresses a semantic axis:
 
-| Semantic | Meaning |
-|----------|---------|
-| **gradientIntensity** | influence strength |
-| **fieldCoherence** | stability of influence field |
-| **rupturePotential** | instability threshold |
-| **forceIntegrity** | structural stability |
+| Node | Semantic Axis |
+|------|----------------|
+| **gradient** | gradientIntensity |
+| **field** | fieldCoherence |
+| **rupture** | rupturePotential |
+| **integrity** | forceIntegrity |
 
-### Semantic Continuity
+### Semantic Transitions
 
 - gradientIntensity ↑ → fieldCoherence ↑  
 - fieldCoherence ↓ → rupturePotential ↑  
 - rupturePotential ↑ → forceIntegrity ↓  
-- forceIntegrity ↑ → return to gradient  
+- forceIntegrity ↑ → gradientIntensity reset  
 
-This defines **semantic coherence**.
-
----
-
-## 5. Operator Definition
-
-The S3 Spine defines six operators:
-
-### Primary Operators
-
-| Operator | Role | Acts On | Dimensions |
-|----------|------|---------|------------|
-| **gradient** | shapes influence | gradient → field | L4, L5, L16, LH |
-| **bind** | stabilizes integrity | field → integrity | L32, LI |
-| **ruptureForce** | escalates instability | field → rupture | L12 |
-
-### Secondary Operators
-
-| Operator | Role | Acts On | Dimensions |
-|----------|------|---------|------------|
-| **push** | increases gradientIntensity | gradient | L4, L5 |
-| **pull** | increases fieldCoherence | field | L8, L10 |
-| **fieldShift** | modulates field structure | field | L26 |
-
-### Sequencing Rules
-
-- gradient → field  
-- field → rupture  
-- field → integrity  
-- rupture → integrity  
-- no reverse transitions  
-
-This defines **operator correctness**.
+Semantic continuity ensures **meaningful causal flow**.
 
 ---
 
-## 6. Dimensional Definition
+## 5. Dimensional Definition
 
 Dimensions define the cosmological axes of the S3 Spine:
 
-### Gradient Dimensions  
-L4, L5, L16, LH
+| Node | Dimensions |
+|------|------------|
+| **gradient** | L4, L5, L16, LH |
+| **field** | L8, L10, L26 |
+| **rupture** | L12 |
+| **integrity** | L32, LI |
 
-### Field Dimensions  
-L8, L10, L26
+Dimensional purity ensures **cosmological alignment**.
 
-### Rupture Dimension  
-L12
+---
 
-### Integrity Dimensions  
-L32, LI
+## 6. Operator Definition
 
-### Dimensional Rules
+Operators define causal mechanics:
 
-- gradient uses L4/L5/L16/LH  
-- field uses L8/L10/L26  
-- rupture uses L12  
-- integrity uses L32/LI  
-- no cross‑dimensional leakage  
+### Primary Operators
 
-This defines **dimensional purity**.
+| Operator | Role | Acts On |
+|----------|------|---------|
+| **gradient** | shapes influence | gradient → field |
+| **ruptureForce** | escalates instability | field → rupture |
+| **bind** | stabilizes integrity | field → integrity |
+
+### Secondary Operators
+
+| Operator | Role | Acts On |
+|----------|------|---------|
+| **push** | increases gradientIntensity | gradient |
+| **pull** | increases fieldCoherence | field |
+| **fieldShift** | modulates field structure | field |
+
+Operator sequencing ensures **causal correctness**.
 
 ---
 
 ## 7. Envelope Definition
 
-The S3 Spine defines six envelope types:
+The S3 Spine uses six interpretive envelopes:
 
-| Envelope | Role |
-|----------|------|
-| **canonical** | structural truth |
-| **reality** | machine execution |
-| **imagination** | symbolic meaning |
+| Envelope | Purpose |
+|----------|----------|
+| **canonical** | structural interpretation |
+| **reality** | machine‑level execution |
+| **imagination** | symbolic interpretation |
 | **information** | informational encoding |
-| **error** | failure-mode mapping |
-| **qmroot** | origin-state potentials |
+| **error** | failure‑mode interpretation |
+| **qmroot** | origin‑state interpretation |
 
-Each envelope provides a different interpretation of the same structural truth.
+Envelope coherence ensures **interpretive consistency**.
 
 ---
 
 ## 8. MCP Integration
 
-The S3 Spine integrates with MCP tools:
+The S3 Spine integrates with MCP through:
 
-### Diagnostics
+- `module_registry.json`  
+- `operator_registry.json`  
+- `dimension_registry.json`  
+- `envelope_registry.json`  
+- `spine.examples.registry.json`  
+- `tools.catalog.json`  
+- `protocol.md`  
 
-- `diagnoseDrift`  
-- `resolveCoherence`  
-- `traceLineage`  
-- `mapRegime`  
-
-### Graph Tools
-
-- `graph.getNode`  
-- `graph.getEdges`  
-- `graph.traverse`  
-
-### Indexing Tools
-
-- `content.extract`  
-- `content.index`  
-- `content.search`  
-
-This defines **tool-level interoperability**.
+MCP integration ensures **tool‑level interoperability**.
 
 ---
 
@@ -227,19 +187,18 @@ This defines **tool-level interoperability**.
 {
   "module": {
     "id": "S3-Spine",
+    "canonical": "R5",
+    "version": "1.0.0",
     "layer": "L3_Forces_Unseen",
     "triad": "forces",
     "regime": "unseen-force-regime",
-    "canonical": "R5",
-    "cosmology": {
-      "lineage": ["qmroot", "frequency", "fluids", "forces"],
-      "mapping": {
-        "gradient": "proto-influence → influence → causal gradient",
-        "field": "proto-coherence → coherence → influence field",
-        "rupture": "proto-instability → instability → rupture potential",
-        "integrity": "proto-stability → stability → force integrity"
-      }
-    }
+    "lineage": ["qmroot", "frequency", "fluids", "forces"],
+    "graph": "S3.graph.json",
+    "operators": "operator_registry.json",
+    "dimensions": "dimension_registry.json",
+    "envelopes": "envelope_registry.json",
+    "examples": "spine.examples.registry.json",
+    "protocol": "protocol.md"
   }
 }
 ```
@@ -263,16 +222,14 @@ Audience: MCP implementers, RTT researchers, cosmology engineers
 
 ## ✔ Summary
 
-This regenerated `module.md` provides:
+Your regenerated `module.md` now provides:
 
-- module identity  
-- cosmology alignment  
-- structural definition  
-- semantic definition  
-- operator definition  
-- dimensional definition  
-- envelope definition  
+- full module identity  
+- complete cosmology alignment  
+- complete structural, semantic, dimensional, operator definitions  
+- envelope system  
 - MCP integration  
-- JSON for tooling  
+- module JSON  
+- full R5 canonical alignment  
 
-It is now **fully canonical**, **drift‑free**, and **ready for commit**.
+It is **fully canonical**, **drift‑free**, and **ready for commit**.
