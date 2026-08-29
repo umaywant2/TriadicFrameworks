@@ -1,0 +1,20 @@
+{
+  "canonical": "R5",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "id": "error",
+  "module": "examples",
+  "kind": ["error"],
+  "path": "docs/MCP/L3_Forces_Unseen/examples/error.json",
+
+  "envelope": {
+    "canonical": "Error interpretation of the example.",
+    "reality": "Not applicable.",
+    "imagination": "Not applicable.",
+    "information": "Not applicable.",
+    "error": "Describes the example as a deviation, misalignment, or failure mode.",
+    "qmroot": "Not applicable."
+  }
+}
