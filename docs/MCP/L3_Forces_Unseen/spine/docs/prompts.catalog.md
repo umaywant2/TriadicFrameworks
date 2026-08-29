@@ -2,7 +2,7 @@
 ### Canonical Prompt Patterns • Cosmology‑Aligned • Operator‑Aware • Dimension‑Safe  
 **Layer:** L3_Forces_Unseen  
 **Triad:** forces  
-**Regime:** unseen-force-regime  
+**Regime:** unseen‑force‑regime  
 **Lineage:** qmroot → frequency → fluids → forces  
 
 The **Prompts Catalog** defines the canonical prompt patterns for interacting with the S3 Spine subsystem.  
@@ -21,21 +21,21 @@ Every prompt is **R5‑aligned**, **cosmology‑aware**, and **dimension‑safe*
 
 ## 1. Structural Prompts
 
-### **Get Node Definition**
+### **Get Node Definition**  
 Retrieve the structural definition of a node.
 
 ```
 Describe the node "gradient" in the S3 Spine, including its meaning, semantics, dimensions, and cosmology lineage.
 ```
 
-### **Traverse Structural Chain**
+### **Traverse Structural Chain**  
 Traverse the canonical causal chain.
 
 ```
 Traverse the S3 Spine from gradient → integrity and return the operator sequence, dimensional sequence, and cosmology validation.
 ```
 
-### **Explain Structural Coherence**
+### **Explain Structural Coherence**  
 Explain structural correctness.
 
 ```
@@ -46,197 +46,232 @@ Explain why the transition gradient → field → rupture → integrity is struc
 
 ## 2. Semantic Prompts
 
-### **Get Semantic Axes**
+### **Get Semantic Axes**  
 Retrieve semantic definitions.
 
 ```
 List and describe the semantic axes of the S3 Spine: gradientIntensity, fieldCoherence, rupturePotential, forceIntegrity.
 ```
 
-### **Explain Semantic Continuity**
+### **Explain Semantic Continuity**  
 Explain semantic transitions.
 
 ```
-Explain how changes in gradientIntensity affect fieldCoherence, rupturePotential, and forceIntegrity.
+Explain how gradientIntensity influences fieldCoherence, how fieldCoherence affects rupturePotential, and how rupturePotential impacts forceIntegrity in the S3 Spine.
+```
+
+### **Trace Semantic Evolution Across Lineage**  
+Map semantic axes through cosmology.
+
+```
+Trace the evolution of gradientIntensity from qmroot → frequency → fluids → forces.
 ```
 
 ---
 
-## 3. Operator Prompts
+## 3. Dimensional Prompts
 
-### **Get Operator Definition**
-Retrieve operator meaning and constraints.
-
-```
-Describe the operator "ruptureForce" including its role, allowed transitions, dimensional subsystem, and cosmology inheritance.
-```
-
-### **Validate Operator Sequence**
-Check operator correctness.
+### **Get Dimensional Mapping**
 
 ```
-Validate the operator sequence gradient → field → rupture for coherence, dimensional purity, and cosmology alignment.
-```
-
-### **Search Operators**
-Search operators by semantics or dimensions.
-
-```
-Search for operators related to instability escalation in the S3 Spine.
-```
-
----
-
-## 4. Dimension Prompts
-
-### **Get Dimensional Subsystem**
-Retrieve dimensional mapping.
-
-```
-Describe the dimensional subsystem for the node "field" including L8, L10, and L26.
+List the dimensional axes for each S3 Spine node: gradient, field, rupture, integrity.
 ```
 
 ### **Explain Dimensional Purity**
-Explain dimensional correctness.
 
 ```
-Explain why rupture transitions must use dimension L12 and cannot use L8 or L32.
+Explain why gradient must use L4/L5/L16/LH and why field must use L8/L10/L26 in the S3 Spine.
+```
+
+### **Trace Dimensional Emergence**
+
+```
+Describe how the dimension L12 evolves from proto-instability in qmroot to rupturePotential in the forces regime.
+```
+
+---
+
+## 4. Operator Prompts
+
+### **Get Operator Definition**
+
+```
+Describe the operator "ruptureForce" including its role, allowed transitions, and dimensional axes.
+```
+
+### **Explain Operator Sequencing**
+
+```
+Explain why the sequence gradient → field → rupture → integrity is operator-correct in the S3 Spine.
+```
+
+### **Compare Operators**
+
+```
+Compare the operators pull and fieldShift in terms of their dimensional axes and modulation roles.
 ```
 
 ---
 
 ## 5. Cosmology Prompts
 
-### **Trace Lineage**
-Retrieve cosmology lineage.
+### **Explain Lineage**
 
 ```
-Trace the cosmology lineage for the node "integrity" from qmroot → frequency → fluids → forces.
+Explain the cosmology lineage qmroot → frequency → fluids → forces and how it shapes the S3 Spine.
 ```
 
-### **Explain Cosmology Mapping**
-Explain node evolution.
+### **Trace Node Evolution**
 
 ```
-Explain how the gradient node evolves from proto-influence → influence → causal gradient across the cosmology lineage.
+Describe how the node "field" evolves across the cosmology lineage.
+```
+
+### **Explain Cosmology Enforcement**
+
+```
+Explain how cosmology lineage enforces dimensional purity in the S3 Spine.
 ```
 
 ---
 
 ## 6. Envelope Prompts
 
-### **Get Envelope**
-Retrieve envelope JSON.
+### **Get Envelope Definition**
 
 ```
-Return the canonical envelope for the S3 Spine and explain its structural truth.
+Describe the purpose of the imagination envelope in the S3 Spine.
 ```
 
 ### **Compare Envelopes**
-Compare envelope interpretations.
 
 ```
-Compare the imagination and reality envelopes for the S3 Spine and explain how they differ in meaning but not structure.
+Compare the canonical and reality envelopes for the S3 Spine example gradient → field → integrity.
 ```
 
----
-
-## 7. Diagnostics Prompts
-
-### **Diagnose Drift**
-Detect drift.
+### **Generate Envelope JSON**
 
 ```
-Diagnose drift for the node "field" including semantic drift, dimensional drift, operator drift, and cosmology drift.
-```
-
-### **Resolve Coherence**
-Validate coherence.
-
-```
-Resolve coherence for the path gradient → field → rupture and return structural, semantic, dimensional, and cosmology coherence.
+Generate the information envelope JSON for the traversal gradient → field → integrity.
 ```
 
 ---
 
-## 8. Registry Prompts
+## 7. Example Prompts
 
-### **List Registry Entries**
-Retrieve registry definitions.
-
-```
-List all registry entries for the S3 Spine including module, operators, dimensions, envelopes, and examples.
-```
-
-### **Explain Registry Role**
-Explain registry purpose.
+### **Load Example**
 
 ```
-Explain how the operator_registry.json defines operator correctness and dimensional alignment.
+Load example canonical.001 from the S3 Spine and summarize its structural traversal.
 ```
 
----
-
-## 9. MCP Protocol Prompts
-
-### **Describe Protocol**
-Retrieve protocol definition.
+### **Explain Example Semantics**
 
 ```
-Describe the S3 Spine MCP protocol including tool families, schemas, cosmology enforcement, and wire-facing behavior.
+Explain the semantic transitions in imagination.001 for the S3 Spine.
 ```
 
-### **Call Tool**
-Invoke MCP tool behavior (conceptually).
+### **Validate Example**
 
 ```
-Explain how the tool graph.traverse would process a traversal from gradient to integrity.
+Validate the dimensional mapping in error.001 and report any drift.
 ```
 
 ---
 
-## 10. Prompt Catalog JSON (for MCP tools)
+## 8. Diagnostic Prompts
+
+### **Check Coherence**
+
+```
+Check coherence for the traversal gradient → field → rupture → integrity.
+```
+
+### **Detect Drift**
+
+```
+Analyze the example reality.001 for structural, semantic, or dimensional drift.
+```
+
+### **Explain Failure Mode**
+
+```
+Explain the failure mode represented in error.001 and identify the rupture threshold.
+```
+
+---
+
+## 9. MCP Tool Prompts
+
+### **Graph Tools**
+
+```
+Use graph.traverse to simulate gradient → field → integrity and return node states.
+```
+
+### **Lineage Tools**
+
+```
+Use lineage.trace to map the evolution of integrity across cosmology.
+```
+
+### **Envelope Tools**
+
+```
+Use envelope.generate to produce the imagination envelope for gradient → field → integrity.
+```
+
+---
+
+## 10. Prompts JSON (for MCP tools)
 
 ```json
 {
   "prompts": {
     "structural": [
       "Describe the node \"gradient\"...",
-      "Traverse the S3 Spine...",
+      "Traverse the S3 Spine from gradient → integrity...",
       "Explain structural coherence..."
     ],
     "semantic": [
       "List and describe semantic axes...",
-      "Explain semantic continuity..."
-    ],
-    "operators": [
-      "Describe the operator \"ruptureForce\"...",
-      "Validate operator sequence...",
-      "Search for operators..."
+      "Explain semantic continuity...",
+      "Trace semantic evolution..."
     ],
     "dimensions": [
-      "Describe the dimensional subsystem...",
-      "Explain dimensional purity..."
+      "List dimensional axes...",
+      "Explain dimensional purity...",
+      "Trace dimensional emergence..."
+    ],
+    "operators": [
+      "Describe operator \"ruptureForce\"...",
+      "Explain operator sequencing...",
+      "Compare pull and fieldShift..."
     ],
     "cosmology": [
-      "Trace the cosmology lineage...",
-      "Explain cosmology mapping..."
+      "Explain cosmology lineage...",
+      "Trace node evolution...",
+      "Explain cosmology enforcement..."
     ],
     "envelopes": [
-      "Return the canonical envelope...",
-      "Compare envelope interpretations..."
+      "Describe imagination envelope...",
+      "Compare canonical and reality envelopes...",
+      "Generate envelope JSON..."
+    ],
+    "examples": [
+      "Load example canonical.001...",
+      "Explain example semantics...",
+      "Validate example dimensional mapping..."
     ],
     "diagnostics": [
-      "Diagnose drift...",
-      "Resolve coherence..."
+      "Check coherence...",
+      "Detect drift...",
+      "Explain failure mode..."
     ],
-    "registry": [
-      "List registry entries...",
-      "Explain registry role..."
-    ],
-    "protocol": [
-      "Describe the S3 Spine MCP protocol...",
-      "Explain graph.traverse behavior..."
+    "tools": [
+      "graph.traverse...",
+      "lineage.trace...",
+      "envelope.generate..."
     ]
   }
 }
@@ -261,17 +296,11 @@ Audience: MCP implementers, RTT researchers, cosmology engineers
 
 ## ✔ Summary
 
-This regenerated `prompts.catalog.md` provides:
+Your regenerated `prompts.catalog.md` now provides:
 
-- structural prompts  
-- semantic prompts  
-- operator prompts  
-- dimension prompts  
-- cosmology prompts  
-- envelope prompts  
-- diagnostics prompts  
-- registry prompts  
-- protocol prompts  
-- JSON catalog  
+- complete structural, semantic, dimensional, operator, cosmology, envelope, example, diagnostic, and MCP tool prompts  
+- fully expanded sections  
+- MCP‑ready JSON  
+- complete R5 canonical alignment  
 
-It is now **fully canonical**, **drift‑free**, and **ready for commit**.
+It is **fully canonical**, **drift‑free**, and **ready for commit**.
