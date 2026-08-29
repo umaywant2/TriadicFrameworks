@@ -2,6 +2,14 @@
   "canonical": "R5",
   "layer": "L3_Forces_Unseen",
   "triad": "forces",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "id": "L32",
+  "name": "L32 Dimension",
+  "purpose": "Force-regime structural integrity mapping.",
+  "semantics": ["forceIntegrity"],
+
+  "spine": "S3",
   "dimension": "L32",
   "title": "TriadicFrameworks MCP — L32 Dimensional Framework",
   "description": "Defines the 32-dimensional internal projection model, focusing on trigintaduonions, chaotic hyperspace behavior, and rupture-dominant influence channels within the unseen force regime.",
