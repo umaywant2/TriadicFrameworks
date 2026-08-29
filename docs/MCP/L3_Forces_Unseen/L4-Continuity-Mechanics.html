@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L4 Continuity Mechanics — TriadicFrameworks Docsbook</title>
+  <style>
+    /* ===== CSS CUSTOM PROPERTIES ===== */
+    :root {
+      --sidebar-w: 280px;
+      --accent: #00e5ff;
+      --accent-dim: #00b8cc;
+      --accent-glow: rgba(0,229,255,0.15);
+      --accent-soft: rgba(0,229,255,0.08);
+      --sidebar-bg: #0f1117;
+      --sidebar-hover: #181b25;
+      --sidebar-active: #1a1e2a;
+      --sidebar-border: #2a2e3a;
+      --main-bg: #f9fafb;
+      --main-alt: #ffffff;
+      --main-dark: #111827;
+      --main-darkalt: #1a1f2e;
+      --text-primary: #1f2937;
+      --text-secondary: #4b5563;
+      --text-muted: #6b7280;
+      --text-light: #9ca3af;
+      --text-lighter: #d1d5db;
+      --text-white: #e5e7eb;
+      --border-light: #e5e7eb;
+      --border-medium: #d1d5db;
+      --bg-gray-50: #f9fafb;
+      --bg-gray-100: #f3f4f6;
+      --bg-gray-200: #e5e7eb;
+      --purple-100: #ede9fe;
+      --purple-500: #a855f7;
+      --purple-600: #9333ea;
+      --purple-700: #7c3aed;
+      --purple-800: #5b21b6;
+      --purple-text: #c4b5fd;
+      --purple-soft: #a78bfa;
+      --green-50: #f0fdf4;
+      --green-500: #22c55e;
+      --green-600: #16a34a;
+      --green-700: #15803d;
+      --blue-500: #3b82f6;
+      --blue-700: #1d4ed8;
+      --blue-800: #1e40af;
+      --amber-400: #fbbf24;
+      --amber-500: #f59e0b;
+      --amber-700: #b45309;
+      --amber-800: #92400e;
+      --red-400: #f87171;
+      --red-500: #ef4444;
+      --cyan-700: #0891b2;
+      --note-bg: #eff6ff;
+      --note-border: #3b82f6;
+      --note-text: #1e40af;
+      --warn-bg: #fffbeb;
+      --warn-border: #f59e0b;
+      --warn-text: #92400e;
+      --anchor-bg: #f5f3ff;
+      --anchor-border: #7c3aed;
+      --anchor-text: #5b21b6;
+      --cblock-bg: #1e1e2e;
+      --code-keyword: #00e5ff;
+      --code-string: #f59e0b;
+      --code-value: #4ade80;
+      --code-comment: #6b7280;
+      --code-type: #c084fc;
+      --font-display: Georgia, 'Times New Roman', serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'Courier New', Courier, monospace;
+    }
+
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-sans);
+      background: var(--main-bg);
+      color: var(--text-primary);
+      line-height: 1.6;
+    }
+
+    /* ===== SCROLLBAR ===== */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--text-secondary); border-radius: 3px; }
+
+    /* ===== SIDEBAR ===== */
+    #sidebar-9xkq {
+      position: fixed; top: 0; left: 0; bottom: 0;
+      width: var(--sidebar-w); background: var(--sidebar-bg);
+      overflow-y: auto; z-index: 40;
+      transition: transform 0.3s ease;
+      border-right: 1px solid var(--sidebar-border);
+    }
+    #sidebar-9xkq::-webkit-scrollbar-thumb { background: #3a3e4a; }
+    .sidebar-header {
+      padding: 24px 20px 16px;
+      border-bottom: 1px solid var(--sidebar-border);
+    }
+    .sidebar-header-inner { display: flex; align-items: center; gap: 12px; }
+    .sidebar-logo {
+      width: 36px; height: 36px; border-radius: 8px;
+      background: linear-gradient(135deg, var(--accent), #1a0533);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; color: #fff; font-size: 14px; font-family: var(--font-mono);
+    }
+    .sidebar-title { color: #fff; font-weight: 600; font-size: 14px; letter-spacing: 0.02em; }
+    .sidebar-subtitle { color: var(--text-muted); font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; }
+    .sidebar-nav { padding: 16px 0; }
+    .sidebar-nav-label {
+      padding: 0 20px; margin-bottom: 8px;
+      font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em;
+      color: var(--text-secondary); font-weight: 600;
+    }
+    .sidebar-link {
+      display: flex; align-items: center; gap: 8px;
+      padding: 7px 16px 7px 24px; font-size: 13px;
+      color: var(--text-light); border-left: 3px solid transparent;
+      transition: all 0.15s ease; cursor: pointer; text-decoration: none;
+    }
+    .sidebar-link:hover { color: var(--text-white); background: var(--sidebar-hover); }
+    .sidebar-link.active-link { color: var(--accent); border-left-color: var(--accent); background: var(--sidebar-active); font-weight: 600; }
+    .sidebar-layer {
+      padding: 6px 16px 6px 24px; font-size: 13px;
+      color: var(--text-muted); cursor: default;
+    }
+    .sidebar-layer.is-l4 { color: var(--accent); font-weight: 700; display: flex; align-items: center; gap: 8px; }
+    .l4-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); display: inline-block; }
+    .sidebar-section {
+      padding: 7px 16px 7px 40px; font-size: 12px;
+      color: var(--text-muted); cursor: pointer; text-decoration: none;
+      display: block; border-left: 3px solid transparent; transition: all 0.15s;
+    }
+    .sidebar-section:hover { color: var(--text-lighter); background: var(--sidebar-hover); }
+    .sidebar-section.active-section { color: var(--accent); border-left-color: var(--accent); }
+    .sidebar-footer {
+      padding: 16px 20px 24px;
+      border-top: 1px solid var(--sidebar-border);
+      margin-top: 16px;
+    }
+    .sidebar-version { font-size: 10px; color: var(--text-secondary); }
+
+    /* ===== MAIN CONTENT ===== */
+    #main-content-3rmq {
+      margin-left: var(--sidebar-w); min-height: 100vh;
+      transition: margin-left 0.3s ease, background 0.3s ease, color 0.3s ease;
+    }
+
+    /* ===== TOP BAR ===== */
+    .topbar {
+      position: sticky; top: 0; z-index: 30;
+      border-bottom: 1px solid var(--border-light);
+      background: rgba(255,255,255,0.8);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    }
+    .topbar-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 24px;
+    }
+    .topbar-left { display: flex; align-items: center; gap: 12px; }
+    .hamburger-btn {
+      display: none; padding: 8px; margin-left: -8px;
+      background: none; border: none; cursor: pointer; border-radius: 8px;
+      color: var(--text-primary);
+    }
+    .hamburger-btn:hover { background: var(--bg-gray-100); }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-light); }
+    .breadcrumb-sep { color: var(--text-light); font-size: 12px; }
+    .breadcrumb-active { color: var(--accent); font-weight: 600; }
+    .topbar-right { display: flex; align-items: center; gap: 12px; }
+    .dm-btn {
+      padding: 8px; border-radius: 8px; background: none; border: none;
+      cursor: pointer; color: var(--text-primary); transition: background 0.15s;
+      display: flex; align-items: center;
+    }
+    .dm-btn:hover { background: var(--bg-gray-100); }
+    .dm-btn svg { width: 20px; height: 20px; }
+    .dm-btn .moon-icon { display: none; }
+
+    /* ===== MAIN AREA ===== */
+    .main-inner {
+      padding: 0 24px 64px;
+      max-width: 56rem;
+    }
+
+    /* ===== UTILITIES ===== */
+    .flex { display: flex; }
+    .flex-wrap { flex-wrap: wrap; }
+    .items-center { align-items: center; }
+    .items-start { align-items: flex-start; }
+    .justify-center { justify-content: center; }
+    .justify-between { justify-content: space-between; }
+    .justify-end { justify-content: flex-end; }
+    .gap-2 { gap: 8px; }
+    .gap-3 { gap: 12px; }
+    .gap-4 { gap: 16px; }
+    .gap-5 { gap: 20px; }
+    .mt-3 { margin-top: 12px; }
+    .mt-4 { margin-top: 16px; }
+    .mt-5 { margin-top: 20px; }
+    .mt-6 { margin-top: 24px; }
+    .mb-1 { margin-bottom: 4px; }
+    .mb-2 { margin-bottom: 8px; }
+    .mb-3 { margin-bottom: 12px; }
+    .mb-4 { margin-bottom: 16px; }
+    .mb-6 { margin-bottom: 24px; }
+    .mb-8 { margin-bottom: 32px; }
+    .mb-10 { margin-bottom: 40px; }
+    .mb-12 { margin-bottom: 48px; }
+    .space-y-5 > * + * { margin-top: 20px; }
+    .text-center { text-align: center; }
+    .text-right { text-align: right; }
+    .w-full { width: 100%; }
+    .flex-1 { flex: 1; }
+    .flex-shrink-0 { flex-shrink: 0; }
+    .hidden { display: none !important; }
+    .inline-block { display: inline-block; }
+    .inline-flex { display: inline-flex; align-items: center; }
+    .block { display: block; }
+    .relative { position: relative; }
+    .overflow-hidden { overflow: hidden; }
+    .overflow-x-auto { overflow-x: auto; }
+    .scroll-mt-20 { scroll-margin-top: 80px; }
+    .max-w-2xl { max-width: 42rem; }
+    .leading-relaxed { line-height: 1.625; }
+    .cursor-pointer { cursor: pointer; }
+    .user-select-none { user-select: none; }
+    .font-mono { font-family: var(--font-mono); }
+    .font-display { font-family: var(--font-display); }
+    .font-medium { font-weight: 500; }
+    .font-semibold { font-weight: 600; }
+    .font-bold { font-weight: 700; }
+    .italic { font-style: italic; }
+    em { font-style: italic; }
+    .text-xs { font-size: 12px; }
+    .text-sm { font-size: 14px; }
+    .text-base { font-size: 16px; }
+    .text-lg { font-size: 18px; }
+    .text-xl { font-size: 20px; }
+    .text-2xl { font-size: 24px; }
+
+    /* ===== BADGE / PILL ===== */
+    .badge {
+      display: inline-flex; align-items: center;
+      padding: 6px 16px; border-radius: 9999px;
+      font-size: 14px; font-weight: 700;
+      font-family: var(--font-mono); letter-spacing: 0.05em;
+    }
+    .badge-l4 {
+      color: var(--accent); background: rgba(0,229,255,0.1);
+      border: 1px solid rgba(0,229,255,0.3);
+      box-shadow: 0 0 18px rgba(0,229,255,0.18);
+    }
+    .tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 12px; font-family: var(--font-mono);
+      padding: 4px 10px; border-radius: 4px;
+      background: var(--bg-gray-100); color: var(--text-muted);
+    }
+    .tag-green {
+      background: var(--green-50); color: var(--green-700);
+      font-weight: 600;
+    }
+    .status-dot {
+      width: 8px; height: 8px; border-radius: 50%; display: inline-block;
+    }
+    .status-green { background: var(--green-500); }
+    .status-amber { background: var(--amber-500); }
+    .status-purple { background: var(--purple-500); }
+
+    /* ===== HEADINGS ===== */
+    .page-title {
+      font-family: var(--font-display);
+      font-size: 2.5rem; font-weight: 700;
+      color: #111827; margin-bottom: 12px; line-height: 1.2;
+    }
+    .page-subtitle {
+      font-size: 1.125rem; color: var(--text-light);
+      font-style: italic; max-width: 42rem; line-height: 1.6;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 1.5rem; font-weight: 700;
+      color: #111827;
+    }
+    .section-number { color: var(--text-light); font-family: var(--font-mono); font-size: 18px; margin-right: 4px; }
+
+    /* ===== SECTION DIVIDER ===== */
+    .section-divider {
+      position: relative; text-align: center; margin: 48px 0 40px;
+    }
+    .section-divider::before {
+      content: ''; position: absolute; left: 0; right: 0; top: 50%;
+      height: 1px; background: var(--border-light);
+    }
+    .section-divider span {
+      position: relative; background: var(--main-bg);
+      padding: 0 16px; font-size: 11px; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--text-light); font-weight: 500;
+    }
+
+    /* ===== SECTION HEADING (collapsible) ===== */
+    .section-heading {
+      cursor: pointer; user-select: none;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .toggle-arrow {
+      transition: transform 0.2s; font-size: 14px; color: var(--text-light);
+    }
+    .toggle-arrow.collapsed { transform: rotate(-90deg); }
+    .section-content {
+      transition: max-height 0.4s ease, opacity 0.3s ease;
+      overflow: hidden;
+    }
+    .section-content.collapsed-content {
+      max-height: 0 !important; opacity: 0; padding-top: 0 !important;
+    }
+
+    /* ===== CODE BLOCKS ===== */
+    .code-block {
+      background: var(--cblock-bg); border-radius: 10px;
+      overflow: hidden; position: relative;
+    }
+    .code-block pre {
+      padding: 20px 24px; margin: 0; overflow-x: auto;
+      font-size: 13px; line-height: 1.7; color: var(--text-white);
+    }
+    .code-block code { font-family: var(--font-mono); }
+    .copy-btn {
+      position: absolute; top: 10px; right: 10px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: var(--text-light); border-radius: 6px;
+      padding: 5px 10px; font-size: 11px; cursor: pointer;
+      transition: all 0.15s; font-family: var(--font-sans);
+      display: flex; align-items: center; gap: 4px;
+    }
+    .copy-btn:hover { background: rgba(255,255,255,0.14); color: var(--text-white); }
+    .ck { color: var(--code-keyword); }
+    .cs { color: var(--code-string); }
+    .cv { color: var(--code-value); }
+    .cc { color: var(--code-comment); }
+    .ct { color: var(--code-type); }
+
+    /* ===== CALLOUTS ===== */
+    .callout {
+      border-left: 4px solid; border-radius: 0 8px 8px 0;
+      padding: 16px 20px; margin: 24px 0;
+      display: flex; gap: 12px; align-items: flex-start;
+    }
+    .callout-note { border-color: var(--note-border); background: var(--note-bg); }
+    .callout-warn { border-color: var(--warn-border); background: var(--warn-bg); }
+    .callout-anchor { border-color: var(--anchor-border); background: var(--anchor-bg); }
+    .callout-icon { flex-shrink: 0; margin-top: 2px; width: 20px; height: 20px; }
+    .callout-label { font-weight: 600; font-size: 14px; }
+    .callout-note .callout-label { color: var(--blue-800); }
+    .callout-note .callout-text { color: #1d4ed8; font-size: 14px; margin-top: 4px; }
+    .callout-warn .callout-label { color: var(--amber-800); }
+    .callout-warn .callout-text { color: var(--amber-700); font-size: 14px; margin-top: 4px; }
+    .callout-anchor .callout-label { color: var(--purple-800); }
+    .callout-anchor .callout-text { color: #6d28d9; font-size: 14px; margin-top: 4px; }
+
+    /* ===== TABLES ===== */
+    .data-table { width: 100%; font-size: 14px; border-collapse: collapse; }
+    .data-table th {
+      text-align: left; padding: 12px 16px; font-weight: 600;
+      color: #374151; background: var(--bg-gray-100);
+      position: sticky; top: 0; z-index: 2;
+    }
+    .data-table td { padding: 12px 16px; border-top: 1px solid #f3f4f6; }
+    .data-table tr:nth-child(even) td { background: rgba(249,250,251,0.5); }
+    .table-wrap { overflow-x: auto; border-radius: 8px; border: 1px solid var(--border-light); }
+
+    /* ===== RESONANCE CARDS ===== */
+    .res-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .res-card {
+      border: 1px solid var(--border-light); border-radius: 12px;
+      padding: 20px 24px; transition: all 0.25s; cursor: pointer;
+      position: relative; overflow: hidden; background: #fff;
+    }
+    .res-card:hover {
+      box-shadow: 0 0 20px rgba(0,229,255,0.08);
+      border-color: rgba(0,229,255,0.25); transform: translateY(-2px);
+    }
+    .expand-content {
+      max-height: 0; overflow: hidden; opacity: 0;
+      transition: max-height 0.35s ease, opacity 0.25s ease, margin 0.25s ease;
+      margin-top: 0;
+    }
+    .res-card.expanded .expand-content { max-height: 300px; opacity: 1; margin-top: 16px; }
+    .res-card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+    .res-badge {
+      display: inline-flex; align-items: center;
+      padding: 4px 10px; border-radius: 6px;
+      font-size: 12px; font-weight: 700; font-family: var(--font-mono);
+      background: var(--purple-100); color: #6d28d9;
+    }
+    .res-status { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 500; }
+    .res-card-title { font-weight: 600; color: #111827; margin-bottom: 4px; }
+    .res-card-sub { font-size: 12px; font-family: var(--font-mono); color: var(--text-light); margin-bottom: 8px; }
+    .res-card-desc { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+    .pulse-weight { display: flex; align-items: center; gap: 8px; margin-top: 12px; }
+    .pulse-weight-label { font-size: 12px; color: var(--text-light); }
+    .pulse-weight-val { font-size: 12px; font-family: var(--font-mono); font-weight: 700; color: var(--accent); }
+
+    /* Pulse bar */
+    .pulse-bar-track { height: 8px; background: var(--bg-gray-200); border-radius: 4px; overflow: hidden; }
+    .pulse-bar-fill { height: 100%; border-radius: 4px; transition: width 0.6s ease; }
+    .pulse-cyan { background: var(--accent); }
+    .pulse-amber { background: var(--amber-400); }
+    .pulse-purple { background: var(--purple-500); }
+
+    /* ===== SVG DIAGRAM CONTAINER ===== */
+    .diagram-wrap { display: flex; justify-content: center; margin: 32px 0; }
+    .diagram-wrap svg { width: 100%; }
+    .diagram-stack { max-width: 680px; }
+    .diagram-interference { max-width: 580px; }
+    .diagram-pulse { max-width: 620px; }
+    .diagram-redirect { max-width: 560px; }
+
+    /* ===== NAV CARDS ===== */
+    .nav-row { display: flex; gap: 16px; margin-bottom: 40px; }
+    .nav-card {
+      flex: 1; border: 1px solid var(--border-light); border-radius: 12px;
+      padding: 20px; transition: all 0.25s; cursor: pointer; background: #fff;
+    }
+    .nav-card:hover { border-color: rgba(0,229,255,0.5); box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+    .nav-card-label { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--text-light); margin-bottom: 4px; transition: color 0.15s; }
+    .nav-card:hover .nav-card-label { color: var(--accent); }
+    .nav-card-title { font-weight: 600; color: #1f2937; }
+    .related-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .related-card {
+      border: 1px solid var(--border-light); border-radius: 12px;
+      padding: 16px; transition: all 0.25s; cursor: pointer; background: #fff;
+    }
+    .related-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+    .related-badge {
+      display: inline-block; padding: 2px 8px; border-radius: 4px;
+      font-size: 10px; font-weight: 700; font-family: var(--font-mono);
+      margin-bottom: 8px;
+    }
+    .related-badge-purple { background: var(--purple-100); color: #6d28d9; }
+    .related-badge-cyan { background: #ecfeff; color: var(--cyan-700); }
+    .related-badge-amber { background: #fffbeb; color: var(--amber-700); }
+    .related-title { font-weight: 500; color: #1f2937; font-size: 14px; }
+    .related-section-title {
+      font-weight: 600; color: #374151; margin-bottom: 16px;
+      font-size: 14px; text-transform: uppercase; letter-spacing: 0.06em;
+    }
+
+    /* ===== FILTER BAR ===== */
+    .filter-bar { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+    .filter-input-wrap { display: flex; align-items: center; gap: 8px; flex: 1; }
+    .filter-input {
+      font-size: 14px; border: 1px solid var(--border-light);
+      border-radius: 8px; padding: 8px 12px; width: 100%; max-width: 280px;
+      font-family: var(--font-sans); outline: none; transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .filter-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(0,229,255,0.15); }
+    .filter-label { display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 14px; color: var(--text-muted); }
+    .filter-label input[type="checkbox"] { border-radius: 4px; border: 1px solid var(--border-medium); }
+
+    /* ===== EXPAND DETAIL ===== */
+    .expand-detail { padding-top: 12px; border-top: 1px solid #f3f4f6; }
+    .expand-label {
+      font-size: 11px; color: var(--text-light); font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px;
+    }
+    .expand-formula { font-size: 14px; font-family: var(--font-mono); color: var(--text-muted); }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      border-top: 1px solid var(--border-light);
+      padding: 32px 24px; text-align: center;
+    }
+    .site-footer p { font-size: 12px; color: var(--text-light); margin: 0; }
+    .site-footer p + p { margin-top: 4px; }
+
+    /* ===== MOBILE OVERLAY ===== */
+    .mobile-overlay {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.5); z-index: 35;
+    }
+    .mobile-overlay.active { display: block; }
+
+    /* ===== FADE IN ON SCROLL ===== */
+    .fade-target {
+      opacity: 0; transform: translateY(16px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .fade-target.visible { opacity: 1; transform: translateY(0); }
+
+    /* ===== DARK MODE ===== */
+    body.dark-mode { background: var(--main-dark); color: var(--text-white); }
+    body.dark-mode #main-content-3rmq { background: var(--main-dark); color: var(--text-white); }
+    body.dark-mode .topbar { background: rgba(17,24,39,0.85); border-color: #374151; }
+    body.dark-mode .dm-btn { color: var(--text-white); }
+    body.dark-mode .dm-btn:hover { background: #1f2937; }
+    body.dark-mode .dm-btn .sun-icon { display: none; }
+    body.dark-mode .dm-btn .moon-icon { display: block; }
+    body.dark-mode .page-title,
+    body.dark-mode .section-title,
+    body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 { color: var(--text-white); }
+    body.dark-mode .callout-note { background: #1e293b; }
+    body.dark-mode .callout-note .callout-label,
+    body.dark-mode .callout-note .callout-text { color: #93c5fd !important; }
+    body.dark-mode .callout-warn { background: #292117; }
+    body.dark-mode .callout-warn .callout-label,
+    body.dark-mode .callout-warn .callout-text { color: #fcd34d !important; }
+    body.dark-mode .callout-anchor { background: #1a1030; }
+    body.dark-mode .callout-anchor .callout-label,
+    body.dark-mode .callout-anchor .callout-text { color: #c4b5fd !important; }
+    body.dark-mode .res-card { border-color: #374151; background: var(--main-darkalt); }
+    body.dark-mode .res-card:hover { border-color: rgba(0,229,255,0.25); }
+    body.dark-mode .res-card-title { color: var(--text-white); }
+    body.dark-mode .data-table th { background: #1f2937; color: var(--text-white); }
+    body.dark-mode .data-table td { border-color: #374151; }
+    body.dark-mode .data-table tr:nth-child(even) td { background: var(--main-darkalt); }
+    body.dark-mode .data-table tr:nth-child(odd) td { background: var(--main-dark); }
+    body.dark-mode .table-wrap { border-color: #374151; }
+    body.dark-mode hr { border-color: #374151; }
+    body.dark-mode .nav-card { background: var(--main-darkalt); border-color: #374151; }
+    body.dark-mode .nav-card:hover { border-color: rgba(0,229,255,0.5); }
+    body.dark-mode .nav-card-title { color: var(--text-lighter); }
+    body.dark-mode .related-card { background: var(--main-darkalt); border-color: #374151; }
+    body.dark-mode .related-title { color: var(--text-lighter); }
+    body.dark-mode .breadcrumb { color: var(--text-light); }
+    body.dark-mode .section-divider::before { background: #374151; }
+    body.dark-mode .section-divider span { background: var(--main-dark); }
+    body.dark-mode .filter-input { background: var(--main-darkalt); border-color: #374151; color: var(--text-white); }
+    body.dark-mode .filter-label { color: var(--text-light); }
+    body.dark-mode .site-footer { border-color: #374151; }
+    body.dark-mode .tag { background: #1f2937; color: var(--text-light); }
+    body.dark-mode .tag-green { background: #064e3b; color: #4ade80; }
+    body.dark-mode .expand-detail { border-color: #374151; }
+    body.dark-mode .pulse-bar-track { background: #374151; }
+    body.dark-mode .hamburger-btn { color: var(--text-white); }
+    body.dark-mode .hamburger-btn:hover { background: #1f2937; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1023px) {
+      .main-inner { padding: 0 24px 48px; }
+      .related-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 767px) {
+      #sidebar-9xkq { transform: translateX(-100%); }
+      #sidebar-9xkq.open { transform: translateX(0); }
+      #main-content-3rmq { margin-left: 0; }
+      .hamburger-btn { display: flex; align-items: center; }
+      .topbar-inner { padding: 12px 16px; }
+      .main-inner { padding: 0 16px 48px; }
+      .page-title { font-size: 1.75rem; }
+      .section-title { font-size: 1.25rem; }
+      .page-subtitle { font-size: 1rem; }
+      .res-grid { grid-template-columns: 1fr; }
+      .nav-row { flex-direction: column; }
+      .related-grid { grid-template-columns: 1fr 1fr; }
+      .hide-mobile { display: none; }
+    }
+    @media (max-width: 480px) {
+      .related-grid { grid-template-columns: 1fr; }
+    }
+    @media (min-width: 768px) {
+      .main-inner { padding: 0 40px 64px; }
+    }
+    @media (min-width: 1024px) {
+      .main-inner { padding: 0 64px 64px; }
+      .page-title { font-size: 3rem; }
+    }
+  </style>
+</head>
+<body data-id="0">
+  <app-icon data-id="1" hidden data-icon="layers" data-palette="Dark"></app-icon>
+
+  <!-- Mobile overlay -->
+  <div data-id="2" id="mobile-overlay-4kzq" class="mobile-overlay"></div>
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside data-id="3" id="sidebar-9xkq">
+    <div data-id="4" class="sidebar-header">
+      <div data-id="5" class="sidebar-header-inner">
+        <div data-id="6" class="sidebar-logo">TF</div>
+        <div data-id="7">
+          <div data-id="8" class="sidebar-title">TriadicFrameworks</div>
+          <div data-id="9" class="sidebar-subtitle">Docsbook</div>
+        </div>
+      </div>
+    </div>
+    <nav data-id="10" class="sidebar-nav">
+      <div data-id="11" class="sidebar-nav-label">Cosmological Layers</div>
+      <div data-id="12" class="sidebar-layer">L1 · Foundation Substrate</div>
+      <div data-id="13" class="sidebar-layer">L2 · Field Emergence</div>
+      <div data-id="14" class="sidebar-layer">L3 · Pattern Crystallization</div>
+      <div data-id="15" class="sidebar-layer is-l4">
+        <span data-id="16" class="l4-dot"></span>
+        L4 · Continuity Mechanics
+      </div>
+      <a data-id="17" href="#section-overview" class="sidebar-section active-section" data-nav="section-overview">Overview</a>
+      <a data-id="18" href="#section-cosmology" class="sidebar-section" data-nav="section-cosmology">Cosmology Placement</a>
+      <a data-id="19" href="#section-resonance" class="sidebar-section" data-nav="section-resonance">Composite Resonance</a>
+      <a data-id="20" href="#section-validator" class="sidebar-section" data-nav="section-validator">Validator Pulse</a>
+      <a data-id="21" href="#section-redirects" class="sidebar-section" data-nav="section-redirects">Redirects</a>
+      <a data-id="22" href="#section-metadata" class="sidebar-section" data-nav="section-metadata">Dimension Metadata</a>
+      <div data-id="23" class="sidebar-layer">L5 · Entropic Resolution</div>
+      <div data-id="24" class="sidebar-layer">L6 · Resonance Amplification</div>
+      <div data-id="25" class="sidebar-layer">L7 · Identity Coherence</div>
+      <div data-id="26" class="sidebar-layer">L8 · Temporal Folding</div>
+      <div data-id="27" class="sidebar-layer">L9 · Axiom Compression</div>
+      <div data-id="28" class="sidebar-layer">L10 · Meta-Structural Binding</div>
+      <div data-id="29" class="sidebar-layer">L11 · Composite Node Alpha</div>
+      <div data-id="30" class="sidebar-layer">L12 · Convergence Layer</div>
+    </nav>
+    <div data-id="31" class="sidebar-footer">
+      <span data-id="32" class="sidebar-version">v3.2.1 · STABLE</span>
+    </div>
+  </aside>
+
+  <!-- ===== MAIN ===== -->
+  <div data-id="33" id="main-content-3rmq">
+    <!-- Top bar -->
+    <header data-id="34" class="topbar" id="topbar-7ynq">
+      <div data-id="35" class="topbar-inner">
+        <div data-id="36" class="topbar-left">
+          <button data-id="37" id="hamburger-btn-2mqx" class="hamburger-btn" aria-label="Open menu">
+            <svg data-id="38" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line data-id="39" x1="4" y1="6" x2="20" y2="6"/><line data-id="40" x1="4" y1="12" x2="20" y2="12"/><line data-id="41" x1="4" y1="18" x2="20" y2="18"/></svg>
+          </button>
+          <nav data-id="42" class="breadcrumb">
+            <span data-id="43" class="font-medium">TriadicFrameworks</span>
+            <span data-id="44" class="breadcrumb-sep">›</span>
+            <span data-id="45">Layers</span>
+            <span data-id="46" class="breadcrumb-sep">›</span>
+            <span data-id="47" class="breadcrumb-active">L4 · Continuity Mechanics</span>
+          </nav>
+        </div>
+        <div data-id="48" class="topbar-right">
+          <button data-id="49" id="darkmode-btn-8jkl" class="dm-btn" title="Toggle dark mode">
+            <svg data-id="50" class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle data-id="51" cx="12" cy="12" r="5"/><line data-id="52" x1="12" y1="1" x2="12" y2="3"/><line data-id="53" x1="12" y1="21" x2="12" y2="23"/><line data-id="54" x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line data-id="55" x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line data-id="56" x1="1" y1="12" x2="3" y2="12"/><line data-id="57" x1="21" y1="12" x2="23" y2="12"/><line data-id="58" x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line data-id="59" x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg data-id="60" class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path data-id="61" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main data-id="62" class="main-inner">
+
+      <!-- ===== HEADER BANNER ===== -->
+      <section data-id="63" style="margin-top:40px; margin-bottom:48px;" id="banner-5tqp">
+        <div data-id="64" class="flex flex-wrap gap-3 mb-4 items-center">
+          <span data-id="65" class="badge badge-l4">L4</span>
+          <span data-id="66" class="tag">Layer Class: Structural</span>
+          <span data-id="67" class="tag">Axis: Continuity</span>
+        </div>
+        <h1 data-id="68" class="page-title" id="title-main-9abc">Continuity Mechanics</h1>
+        <p data-id="69" class="page-subtitle">"The substrate that weaves temporal threads into persistent structural reality."</p>
+        <div data-id="70" class="flex items-center gap-3 mt-5">
+          <span data-id="71" class="tag" style="gap:6px;">
+            <svg data-id="72" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path data-id="73" d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line data-id="74" x1="7" y1="7" x2="7.01" y2="7"/></svg>
+            v3.2.1
+          </span>
+          <span data-id="75" class="tag tag-green" style="gap:6px;"><span data-id="76" class="status-dot status-green"></span> STABLE</span>
+        </div>
+      </section>
+
+      <!-- ===== SECTION 1: Overview ===== -->
+      <div data-id="77" class="section-divider"><span data-id="78">Section 1</span></div>
+      <section data-id="79" id="section-overview" class="mb-12 scroll-mt-20">
+        <div data-id="80" class="section-heading" data-section="sec1">
+          <span data-id="81" class="toggle-arrow">▾</span>
+          <h2 data-id="82" class="section-title"><span data-id="83" class="section-number">§1 ·</span> Overview</h2>
+        </div>
+        <div data-id="84" class="section-content mt-6 space-y-5" id="sec1-content">
+          <p data-id="85" class="text-base leading-relaxed" style="color:#374151;">L4 Continuity Mechanics governs the persistence of identity and state across temporal intervals within the TriadicFrameworks cosmological stack. Where L3 handles pattern emergence and L5 handles entropic resolution, L4 acts as the binding membrane that ensures structural continuity — the "why things remain recognizably themselves" across change events. It is the custodial engine of coherence, sitting at the precise boundary where generated structures must prove they deserve to persist.</p>
+          <p data-id="86" class="text-base leading-relaxed" style="color:#374151;">Its principal function is to resolve continuity tensors from upstream layers, validate them through the <span data-id="87" class="font-mono text-sm" style="background:var(--bg-gray-100);padding:2px 6px;border-radius:4px;">Validator Pulse</span> mechanism, and emit redirect signals when continuity breaks are detected. It interfaces with four Composite Resonance harmonics (<span data-id="88" class="font-mono text-sm" style="color:var(--accent);">L11</span>, <span data-id="89" class="font-mono text-sm" style="color:var(--accent);">L33</span>, <span data-id="90" class="font-mono text-sm" style="color:var(--accent);">L66</span>, <span data-id="91" class="font-mono text-sm" style="color:var(--accent);">L99</span>) which serve as attunement checkpoints distributed across the cosmological stack, forming a resonant lattice that continuously monitors and reinforces the structural integrity of ascending state.</p>
+          <p data-id="92" class="text-base leading-relaxed" style="color:#374151;">L4 is simultaneously the most structurally conservative layer and the one most sensitive to perturbation — small breaks in continuity at L4 can cascade into identity dissolution at <span data-id="93" class="font-mono text-sm">L7+</span>. This paradox is by design: a conservative gatekeeper must be maximally responsive to threats. The tension between rigidity and sensitivity is resolved through the Composite Resonance network, which provides adaptive damping and amplification in response to the current state of the entire cosmological column.</p>
+
+          <div data-id="94" class="callout callout-note">
+            <svg data-id="95" class="callout-icon" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle data-id="96" cx="12" cy="12" r="10"/><line data-id="97" x1="12" y1="16" x2="12" y2="12"/><line data-id="98" x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <div data-id="99">
+              <span data-id="100" class="callout-label">NOTE</span>
+              <p data-id="101" class="callout-text">L4 does not generate continuity — it <em data-id="102">maintains</em> it. Generative continuity is the domain of L3. L4's role is custodial and corrective.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SECTION 2: Cosmology Placement ===== -->
+      <div data-id="103" class="section-divider"><span data-id="104">Section 2</span></div>
+      <section data-id="105" id="section-cosmology" class="mb-12 scroll-mt-20">
+        <div data-id="106" class="section-heading" data-section="sec2">
+          <span data-id="107" class="toggle-arrow">▾</span>
+          <h2 data-id="108" class="section-title"><span data-id="109" class="section-number">§2 ·</span> Cosmology Placement</h2>
+        </div>
+        <div data-id="110" class="section-content mt-6" id="sec2-content">
+          <!-- SVG Diagram -->
+          <div data-id="111" class="fade-target diagram-wrap">
+            <svg data-id="112" viewBox="0 0 700 740" class="diagram-stack" xmlns="http://www.w3.org/2000/svg" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+              <defs data-id="113">
+                <filter data-id="114" id="glowL4" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur data-id="115" stdDeviation="6" result="blur"/>
+                  <feFlood data-id="116" flood-color="#00e5ff" flood-opacity="0.35"/>
+                  <feComposite data-id="117" in2="blur" operator="in"/>
+                  <feMerge data-id="118"><feMergeNode data-id="119"/><feMergeNode data-id="120" in="SourceGraphic"/></feMerge>
+                </filter>
+                <marker data-id="121" id="arrowCyan" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto" fill="#00e5ff"><polygon data-id="122" points="0 0, 8 3, 0 6"/></marker>
+                <marker data-id="123" id="arrowGray" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto" fill="#9ca3af"><polygon data-id="124" points="0 0, 8 3, 0 6"/></marker>
+              </defs>
+              <rect data-id="125" width="700" height="740" rx="12" fill="#111827"/>
+              <text data-id="126" x="350" y="32" text-anchor="middle" fill="#9ca3af" font-size="11" font-weight="600" letter-spacing="0.1em">COSMOLOGICAL LAYER STACK</text>
+              <g data-id="127" id="layer-stack">
+                <rect data-id="128" x="120" y="50" width="300" height="36" rx="4" fill="#1f2937" stroke="#374151" stroke-width="1"/><text data-id="129" x="270" y="73" text-anchor="middle" fill="#9ca3af" font-size="11"><tspan data-id="130" font-weight="600" fill="#6b7280">L1</tspan>  Foundation Substrate</text>
+                <rect data-id="131" x="120" y="92" width="300" height="36" rx="4" fill="#1f2937" stroke="#374151" stroke-width="1"/><text data-id="132" x="270" y="115" text-anchor="middle" fill="#9ca3af" font-size="11"><tspan data-id="133" font-weight="600" fill="#6b7280">L2</tspan>  Field Emergence</text>
+                <rect data-id="134" x="120" y="134" width="300" height="36" rx="4" fill="#252d3a" stroke="#4b5563" stroke-width="1"/><text data-id="135" x="270" y="157" text-anchor="middle" fill="#d1d5db" font-size="11"><tspan data-id="136" font-weight="600" fill="#9ca3af">L3</tspan>  Pattern Crystallization</text>
+                <rect data-id="137" x="116" y="178" width="308" height="42" rx="6" fill="#0a2a30" stroke="#00e5ff" stroke-width="2.5" filter="url(#glowL4)"/><text data-id="138" x="270" y="204" text-anchor="middle" fill="#00e5ff" font-size="13" font-weight="700">L4  Continuity Mechanics</text>
+                <rect data-id="139" x="120" y="228" width="300" height="36" rx="4" fill="#1f2937" stroke="#374151" stroke-width="1"/><text data-id="140" x="270" y="251" text-anchor="middle" fill="#9ca3af" font-size="11"><tspan data-id="141" font-weight="600" fill="#6b7280">L5</tspan>  Entropic Resolution</text>
+                <rect data-id="142" x="120" y="270" width="300" height="36" rx="4" fill="#1f2937" stroke="#374151" stroke-width="1"/><text data-id="143" x="270" y="293" text-anchor="middle" fill="#9ca3af" font-size="11"><tspan data-id="144" font-weight="600" fill="#6b7280">L6</tspan>  Resonance Amplification</text>
+                <rect data-id="145" x="120" y="312" width="300" height="36" rx="4" fill="#1f2937" stroke="#374151" stroke-width="1"/><text data-id="146" x="270" y="335" text-anchor="middle" fill="#9ca3af" font-size="11"><tspan data-id="147" font-weight="600" fill="#6b7280">L7</tspan>  Identity Coherence</text>
+                <rect data-id="148" x="120" y="354" width="300" height="36" rx="4" fill="#1f2937" stroke="#374151" stroke-width="1"/><text data-id="149" x="270" y="377" text-anchor="middle" fill="#9ca3af" font-size="11"><tspan data-id="150" font-weight="600" fill="#6b7280">L8</tspan>  Temporal Folding</text>
+                <rect data-id="151" x="120" y="396" width="300" height="36" rx="4" fill="#1f2937" stroke="#374151" stroke-width="1"/><text data-id="152" x="270" y="419" text-anchor="middle" fill="#9ca3af" font-size="11"><tspan data-id="153" font-weight="600" fill="#6b7280">L9</tspan>  Axiom Compression</text>
+                <rect data-id="154" x="120" y="438" width="300" height="36" rx="4" fill="#1f2937" stroke="#374151" stroke-width="1"/><text data-id="155" x="270" y="461" text-anchor="middle" fill="#9ca3af" font-size="11"><tspan data-id="156" font-weight="600" fill="#6b7280">L10</tspan>  Meta-Structural Binding</text>
+                <rect data-id="157" x="120" y="480" width="300" height="36" rx="4" fill="#1a1030" stroke="#7c3aed" stroke-width="1"/><text data-id="158" x="270" y="503" text-anchor="middle" fill="#c4b5fd" font-size="11"><tspan data-id="159" font-weight="600" fill="#a78bfa">L11</tspan>  Composite Node Alpha</text>
+                <rect data-id="160" x="120" y="522" width="300" height="36" rx="4" fill="#1f2937" stroke="#374151" stroke-width="1"/><text data-id="161" x="270" y="545" text-anchor="middle" fill="#9ca3af" font-size="11"><tspan data-id="162" font-weight="600" fill="#6b7280">L12</tspan>  Convergence Layer</text>
+              </g>
+              <line data-id="163" x1="460" y1="152" x2="460" y2="195" stroke="#00e5ff" stroke-width="1.5" marker-end="url(#arrowCyan)"/>
+              <text data-id="164" x="480" y="177" fill="#00e5ff" font-size="9" font-style="italic">continuity tensors</text>
+              <line data-id="165" x1="480" y1="208" x2="480" y2="244" stroke="#00e5ff" stroke-width="1.5" marker-end="url(#arrowCyan)"/>
+              <text data-id="166" x="500" y="230" fill="#00e5ff" font-size="9" font-style="italic">validated state</text>
+              <line data-id="167" x1="440" y1="220" x2="440" y2="496" stroke="#a78bfa" stroke-width="1" stroke-dasharray="5,4" marker-end="url(#arrowGray)"/>
+              <text data-id="168" x="448" y="370" fill="#a78bfa" font-size="9" font-style="italic" transform="rotate(90,448,370)">resonance tap</text>
+              <rect data-id="169" x="30" y="50" width="70" height="120" rx="4" fill="none" stroke="#4b5563" stroke-dasharray="3,3"/>
+              <text data-id="170" x="65" y="116" text-anchor="middle" fill="#6b7280" font-size="9" font-weight="600">LOWER</text>
+              <text data-id="171" x="65" y="127" text-anchor="middle" fill="#6b7280" font-size="8">TRIAD</text>
+              <rect data-id="172" x="30" y="228" width="70" height="120" rx="4" fill="none" stroke="#4b5563" stroke-dasharray="3,3"/>
+              <text data-id="173" x="65" y="294" text-anchor="middle" fill="#6b7280" font-size="9" font-weight="600">UPPER</text>
+              <text data-id="174" x="65" y="305" text-anchor="middle" fill="#6b7280" font-size="8">TRIAD</text>
+              <text data-id="175" x="65" y="200" text-anchor="middle" fill="#00e5ff" font-size="8" font-weight="700">BOUNDARY</text>
+              <text data-id="176" x="620" y="130" text-anchor="middle" fill="#4b5563" font-size="9">↑ UPSTREAM</text>
+              <text data-id="177" x="620" y="270" text-anchor="middle" fill="#4b5563" font-size="9">↓ DOWNSTREAM</text>
+              <rect data-id="178" x="120" y="580" width="420" height="100" rx="8" fill="#1a1f2e" stroke="#2a2e3a"/>
+              <text data-id="179" x="140" y="602" fill="#9ca3af" font-size="10" font-weight="600">LEGEND</text>
+              <line data-id="180" x1="140" y1="616" x2="170" y2="616" stroke="#00e5ff" stroke-width="2"/>
+              <text data-id="181" x="178" y="620" fill="#9ca3af" font-size="10">Data flow (tensors / validated state)</text>
+              <line data-id="182" x1="140" y1="636" x2="170" y2="636" stroke="#a78bfa" stroke-width="1" stroke-dasharray="5,4"/>
+              <text data-id="183" x="178" y="640" fill="#9ca3af" font-size="10">Resonance tap (composite harmonic)</text>
+              <rect data-id="184" x="140" y="650" width="24" height="14" rx="3" fill="#0a2a30" stroke="#00e5ff" stroke-width="1.5"/>
+              <text data-id="185" x="178" y="662" fill="#9ca3af" font-size="10">Active layer (L4)</text>
+            </svg>
+          </div>
+
+          <p data-id="186" class="text-base leading-relaxed" style="color:#374151; margin-top:24px; margin-bottom:32px;">L4 occupies the fourth position in the primary cosmological axis, positioned at the boundary between the generative lower triad (<span data-id="187" class="font-mono text-sm">L1–L3</span>) and the resolution upper triad (<span data-id="188" class="font-mono text-sm">L5–L7</span>). This placement is not incidental — the fourth position in TriadicFrameworks cosmology is always assigned to the binding/continuity role within any dimensional octave.</p>
+
+          <!-- Interface Table -->
+          <div data-id="189" class="table-wrap">
+            <table data-id="190" class="data-table">
+              <thead data-id="191">
+                <tr data-id="192">
+                  <th data-id="193">Layer</th>
+                  <th data-id="194">Name</th>
+                  <th data-id="195">Role</th>
+                  <th data-id="196">Interface with L4</th>
+                </tr>
+              </thead>
+              <tbody data-id="197">
+                <tr data-id="198"><td data-id="199" class="font-mono font-semibold" style="color:var(--accent);">L3</td><td data-id="200">Pattern Crystallization</td><td data-id="201" style="color:var(--text-muted);">Generative</td><td data-id="202" style="color:var(--text-muted);">Emits continuity tensors upstream to L4 for validation</td></tr>
+                <tr data-id="203" style="background:rgba(0,229,255,0.04);"><td data-id="204" class="font-mono font-bold" style="color:var(--accent);">L4</td><td data-id="205" class="font-semibold">Continuity Mechanics</td><td data-id="206" style="color:var(--text-muted);">Structural (self)</td><td data-id="207" style="color:var(--text-muted);">Validates, maintains Continuity Register, emits pulses</td></tr>
+                <tr data-id="208"><td data-id="209" class="font-mono font-semibold" style="color:var(--accent);">L5</td><td data-id="210">Entropic Resolution</td><td data-id="211" style="color:var(--text-muted);">Resolution</td><td data-id="212" style="color:var(--text-muted);">Receives validated state from L4 for entropic processing</td></tr>
+                <tr data-id="213"><td data-id="214" class="font-mono font-semibold" style="color:#a855f7;">L11</td><td data-id="215">Composite Node Alpha</td><td data-id="216" style="color:var(--text-muted);">Composite Harmonic</td><td data-id="217" style="color:var(--text-muted);">Resonance tap; stabilizes first-order continuity loop</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SECTION 3: Composite Resonance ===== -->
+      <div data-id="218" class="section-divider"><span data-id="219">Section 3</span></div>
+      <section data-id="220" id="section-resonance" class="mb-12 scroll-mt-20">
+        <div data-id="221" class="section-heading" data-section="sec3">
+          <span data-id="222" class="toggle-arrow">▾</span>
+          <h2 data-id="223" class="section-title"><span data-id="224" class="section-number">§3 ·</span> Composite Resonance</h2>
+        </div>
+        <div data-id="225" class="section-content mt-6" id="sec3-content">
+          <p data-id="226" class="text-base leading-relaxed mb-8" style="color:#374151;">Composite Resonance nodes are meta-layer harmonics generated when multiple base-layer frequencies superimpose. L4 resonates with four such nodes, forming a distributed validation lattice that spans the entire cosmological stack. Each node serves a distinct function in maintaining and confirming continuity state.</p>
+
+          <!-- Resonance Cards -->
+          <div data-id="227" class="res-grid mb-10">
+            <!-- L11 -->
+            <div data-id="228" class="res-card" data-rescard="L11">
+              <div data-id="229" class="res-card-header">
+                <span data-id="230" class="res-badge">L11</span>
+                <div data-id="231" class="res-status"><span data-id="232" class="status-dot status-green"></span><span data-id="233" style="color:var(--green-700);">ACTIVE</span></div>
+              </div>
+              <h3 data-id="234" class="res-card-title">First Composite Fold</h3>
+              <p data-id="235" class="res-card-sub">L4 + L7 harmonic</p>
+              <p data-id="236" class="res-card-desc">Stabilizes the first-order continuity loop and feeds corrective tensors back into L4 during minor perturbations.</p>
+              <div data-id="237" class="pulse-weight">
+                <span data-id="238" class="pulse-weight-label">Pulse Weight:</span>
+                <span data-id="239" class="pulse-weight-val">0.33</span>
+              </div>
+              <div data-id="240" class="expand-content">
+                <div data-id="241" class="expand-detail">
+                  <p data-id="242" class="expand-label">Harmonic Formula</p>
+                  <p data-id="243" class="expand-formula">H(L11) = ƒ(L4) ⊕ ƒ(L7) | phase_lock = true</p>
+                  <p data-id="244" class="expand-label" style="margin-top:12px;">Pulse Weight</p>
+                  <div data-id="245" class="pulse-bar-track" style="margin-top:4px;"><div data-id="246" class="pulse-bar-fill pulse-cyan" style="width: 33%"></div></div>
+                  <p data-id="247" class="text-xs text-right" style="color:var(--text-light);margin-top:4px;">0.33 / 1.00</p>
+                </div>
+              </div>
+            </div>
+            <!-- L33 -->
+            <div data-id="248" class="res-card" data-rescard="L33">
+              <div data-id="249" class="res-card-header">
+                <span data-id="250" class="res-badge">L33</span>
+                <div data-id="251" class="res-status"><span data-id="252" class="status-dot status-green"></span><span data-id="253" style="color:var(--green-700);">ACTIVE</span></div>
+              </div>
+              <h3 data-id="254" class="res-card-title">Triadic Echo Chamber</h3>
+              <p data-id="255" class="res-card-sub">L4 × L3 × L11 harmonic</p>
+              <p data-id="256" class="res-card-desc">Acts as the triadic echo point where continuity patterns are confirmed through threefold verification before ascending to L5.</p>
+              <div data-id="257" class="pulse-weight">
+                <span data-id="258" class="pulse-weight-label">Pulse Weight:</span>
+                <span data-id="259" class="pulse-weight-val">0.33</span>
+              </div>
+              <div data-id="260" class="expand-content">
+                <div data-id="261" class="expand-detail">
+                  <p data-id="262" class="expand-label">Harmonic Formula</p>
+                  <p data-id="263" class="expand-formula">H(L33) = ƒ(L4) ⊗ ƒ(L3) ⊗ ƒ(L11)</p>
+                  <p data-id="264" class="expand-label" style="margin-top:12px;">Pulse Weight</p>
+                  <div data-id="265" class="pulse-bar-track" style="margin-top:4px;"><div data-id="266" class="pulse-bar-fill pulse-cyan" style="width: 33%"></div></div>
+                  <p data-id="267" class="text-xs text-right" style="color:var(--text-light);margin-top:4px;">0.33 / 1.00</p>
+                </div>
+              </div>
+            </div>
+            <!-- L66 -->
+            <div data-id="268" class="res-card" data-rescard="L66">
+              <div data-id="269" class="res-card-header">
+                <span data-id="270" class="res-badge">L66</span>
+                <div data-id="271" class="res-status"><span data-id="272" class="status-dot status-amber"></span><span data-id="273" style="color:var(--amber-700);">CONDITIONAL</span></div>
+              </div>
+              <h3 data-id="274" class="res-card-title">Dual-Hex Convergence</h3>
+              <p data-id="275" class="res-card-sub">L33 × L2 harmonic</p>
+              <p data-id="276" class="res-card-desc">Dual-hex convergence amplifies resonance signals between L4 and L6, creating a stabilizing bypass bridge during entropic spikes.</p>
+              <div data-id="277" class="pulse-weight">
+                <span data-id="278" class="pulse-weight-label">Pulse Weight:</span>
+                <span data-id="279" class="pulse-weight-val">0.66</span>
+              </div>
+              <div data-id="280" class="expand-content">
+                <div data-id="281" class="expand-detail">
+                  <p data-id="282" class="expand-label">Harmonic Formula</p>
+                  <p data-id="283" class="expand-formula">H(L66) = ƒ(L33) ⊗ ƒ(L2) | conditional_gate</p>
+                  <p data-id="284" class="expand-label" style="margin-top:12px;">Pulse Weight</p>
+                  <div data-id="285" class="pulse-bar-track" style="margin-top:4px;"><div data-id="286" class="pulse-bar-fill pulse-amber" style="width: 66%"></div></div>
+                  <p data-id="287" class="text-xs text-right" style="color:var(--text-light);margin-top:4px;">0.66 / 1.00</p>
+                </div>
+              </div>
+            </div>
+            <!-- L99 -->
+            <div data-id="288" class="res-card" data-rescard="L99">
+              <div data-id="289" class="res-card-header">
+                <span data-id="290" class="res-badge">L99</span>
+                <div data-id="291" class="res-status"><span data-id="292" class="status-dot status-purple"></span><span data-id="293" style="color:#6d28d9;">TERMINAL</span></div>
+              </div>
+              <h3 data-id="294" class="res-card-title">Apex Resonance Null</h3>
+              <p data-id="295" class="res-card-sub">L33 × L3 harmonic</p>
+              <p data-id="296" class="res-card-desc">Apex Resonance Null is the terminal harmonic — it fires when all three lower composite nodes confirm continuity, signaling full structural coherence to L10+.</p>
+              <div data-id="297" class="pulse-weight">
+                <span data-id="298" class="pulse-weight-label">Pulse Weight:</span>
+                <span data-id="299" class="pulse-weight-val">0.99</span>
+              </div>
+              <div data-id="300" class="expand-content">
+                <div data-id="301" class="expand-detail">
+                  <p data-id="302" class="expand-label">Harmonic Formula</p>
+                  <p data-id="303" class="expand-formula">H(L99) = ƒ(L33) ⊗ ƒ(L3) | apex_null</p>
+                  <p data-id="304" class="expand-label" style="margin-top:12px;">Pulse Weight</p>
+                  <div data-id="305" class="pulse-bar-track" style="margin-top:4px;"><div data-id="306" class="pulse-bar-fill pulse-purple" style="width: 99%"></div></div>
+                  <p data-id="307" class="text-xs text-right" style="color:var(--text-light);margin-top:4px;">0.99 / 1.00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interference SVG -->
+          <div data-id="308" class="fade-target diagram-wrap">
+            <svg data-id="309" viewBox="0 0 600 300" class="diagram-interference" xmlns="http://www.w3.org/2000/svg" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+              <rect data-id="310" width="600" height="300" rx="12" fill="#111827"/>
+              <text data-id="311" x="300" y="26" text-anchor="middle" fill="#e5e7eb" font-size="11" font-weight="600">Composite Resonance Interference — L4 Harmonic Field</text>
+              <line data-id="312" x1="50" y1="250" x2="560" y2="250" stroke="#374151" stroke-width="1"/>
+              <line data-id="313" x1="50" y1="40" x2="50" y2="250" stroke="#374151" stroke-width="1"/>
+              <text data-id="314" x="300" y="272" text-anchor="middle" fill="#6b7280" font-size="10">Phase / Time →</text>
+              <text data-id="315" x="20" y="145" text-anchor="middle" fill="#6b7280" font-size="10" transform="rotate(-90,20,145)">Amplitude</text>
+              <line data-id="316" x1="50" y1="145" x2="560" y2="145" stroke="#374151" stroke-width="0.5" stroke-dasharray="4,4"/>
+              <path data-id="317" d="M50,145 Q80,80 110,145 T170,145 T230,145 T290,145 T350,145 T410,145 T470,145 T530,145 T560,145" fill="none" stroke="#00e5ff" stroke-width="1.5" opacity="0.7"/>
+              <path data-id="318" d="M50,145 Q95,65 140,145 T230,145 T320,145 T410,145 T500,145 T560,145" fill="none" stroke="#a78bfa" stroke-width="1.5" opacity="0.7"/>
+              <path data-id="319" d="M50,145 Q120,55 190,145 T330,145 T470,145 T560,145" fill="none" stroke="#f59e0b" stroke-width="1.5" opacity="0.7"/>
+              <path data-id="320" d="M50,145 Q155,40 260,145 T470,145 T560,145" fill="none" stroke="#ec4899" stroke-width="1.5" opacity="0.7"/>
+              <path data-id="321" d="M50,145 C70,95 90,75 110,105 C130,135 145,160 170,145 C195,130 210,85 240,100 C270,115 285,155 310,145 C335,135 350,90 380,110 C410,130 425,165 450,145 C475,125 490,80 510,115 C530,150 545,145 560,145" fill="none" stroke="white" stroke-width="2.5" opacity="0.85"/>
+              <rect data-id="322" x="60" y="42" width="130" height="80" rx="6" fill="#1a1f2e" stroke="#2a2e3a"/>
+              <line data-id="323" x1="70" y1="58" x2="90" y2="58" stroke="#00e5ff" stroke-width="2"/><text data-id="324" x="96" y="62" fill="#9ca3af" font-size="9">L11 — Cyan</text>
+              <line data-id="325" x1="70" y1="74" x2="90" y2="74" stroke="#a78bfa" stroke-width="2"/><text data-id="326" x="96" y="78" fill="#9ca3af" font-size="9">L33 — Purple</text>
+              <line data-id="327" x1="70" y1="90" x2="90" y2="90" stroke="#f59e0b" stroke-width="2"/><text data-id="328" x="96" y="94" fill="#9ca3af" font-size="9">L66 — Orange</text>
+              <line data-id="329" x1="70" y1="106" x2="90" y2="106" stroke="#ec4899" stroke-width="2"/><text data-id="330" x="96" y="110" fill="#9ca3af" font-size="9">L99 — Magenta</text>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SECTION 4: Validator Pulse ===== -->
+      <div data-id="331" class="section-divider"><span data-id="332">Section 4</span></div>
+      <section data-id="333" id="section-validator" class="mb-12 scroll-mt-20">
+        <div data-id="334" class="section-heading" data-section="sec4">
+          <span data-id="335" class="toggle-arrow">▾</span>
+          <h2 data-id="336" class="section-title"><span data-id="337" class="section-number">§4 ·</span> Validator Pulse</h2>
+        </div>
+        <div data-id="338" class="section-content mt-6 space-y-5" id="sec4-content">
+          <p data-id="339" class="text-base leading-relaxed" style="color:#374151;">The Validator Pulse is L4's primary diagnostic and enforcement mechanism. Every continuity tensor arriving from L3 is subjected to a Validator Pulse cycle before being promoted to L5. The pulse operates as a three-phase gate: <strong data-id="340">Intake</strong>, <strong data-id="341">Coherence Check</strong>, and <strong data-id="342">Emit</strong>.</p>
+          <p data-id="343" class="text-base leading-relaxed" style="color:#374151;">During Intake, the raw tensor is buffered and its structural signature is extracted. During Coherence Check, the signature is compared against the <span data-id="344" class="font-mono text-sm" style="background:var(--bg-gray-100);padding:2px 6px;border-radius:4px;">Continuity Register</span> — a persistent state store maintained by L4 across temporal intervals. If the signature matches within tolerance thresholds (configurable via Dimension Metadata), the tensor passes. If it fails, a redirect signal is emitted instead.</p>
+          <p data-id="345" class="text-base leading-relaxed" style="color:#374151;">The pulse fires at a base cadence of <span data-id="346" class="font-mono text-sm">1</span> per structural tick, but this rate is modulated by the Composite Resonance nodes — specifically <span data-id="347" class="font-mono text-sm" style="color:var(--accent);">L11</span> which can double the pulse rate during high-perturbation events, and <span data-id="348" class="font-mono text-sm" style="color:var(--accent);">L99</span> which can suppress the pulse entirely during apex coherence states.</p>
+
+          <!-- Pulse Waveform SVG -->
+          <div data-id="349" class="fade-target diagram-wrap">
+            <svg data-id="350" viewBox="0 0 640 240" class="diagram-pulse" xmlns="http://www.w3.org/2000/svg" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+              <rect data-id="351" width="640" height="240" rx="12" fill="#1a1a2e"/>
+              <text data-id="352" x="320" y="24" text-anchor="middle" fill="#e5e7eb" font-size="11" font-weight="600">Validator Pulse Waveform</text>
+              <line data-id="353" x1="50" y1="200" x2="600" y2="200" stroke="#374151" stroke-width="1"/>
+              <line data-id="354" x1="50" y1="40" x2="50" y2="200" stroke="#374151" stroke-width="1"/>
+              <text data-id="355" x="325" y="222" text-anchor="middle" fill="#6b7280" font-size="9">Structural Ticks</text>
+              <text data-id="356" x="22" y="120" text-anchor="middle" fill="#6b7280" font-size="9" transform="rotate(-90,22,120)">Pulse Amplitude</text>
+              <polyline data-id="357" points="60,170 60,70 100,70 100,170 140,170 140,70 180,70 180,170 220,170 220,70 260,70 260,170" fill="none" stroke="#00e5ff" stroke-width="2"/>
+              <rect data-id="358" x="270" y="35" width="140" height="175" rx="4" fill="rgba(239,68,68,0.06)" stroke="#ef4444" stroke-width="0.5" stroke-dasharray="3,3"/>
+              <text data-id="359" x="340" y="48" text-anchor="middle" fill="#ef4444" font-size="8" font-weight="600">PERTURBATION ZONE</text>
+              <polyline data-id="360" points="280,170 280,70 300,70 300,170 310,170 310,70 325,70 325,170 335,170 335,70 350,70 350,170 360,170 360,70 375,70 375,170 385,170 385,70 400,70 400,170" fill="none" stroke="#00e5ff" stroke-width="2"/>
+              <line data-id="361" x1="340" y1="56" x2="340" y2="65" stroke="#f59e0b" stroke-width="1"/>
+              <text data-id="362" x="340" y="62" text-anchor="middle" fill="#f59e0b" font-size="7">L11 double-fire</text>
+              <rect data-id="363" x="420" y="35" width="120" height="175" rx="4" fill="rgba(168,85,247,0.06)" stroke="#a855f7" stroke-width="0.5" stroke-dasharray="3,3"/>
+              <text data-id="364" x="480" y="48" text-anchor="middle" fill="#a855f7" font-size="8" font-weight="600">L99 NULL ZONE</text>
+              <line data-id="365" x1="420" y1="170" x2="540" y2="170" stroke="#00e5ff" stroke-width="2" opacity="0.5" stroke-dasharray="6,4"/>
+              <polyline data-id="366" points="550,170 550,70 590,70 590,170" fill="none" stroke="#00e5ff" stroke-width="2"/>
+              <g data-id="367" fill="#4b5563" font-size="8">
+                <text data-id="368" x="60" y="212" text-anchor="middle">0</text>
+                <text data-id="369" x="140" y="212" text-anchor="middle">2</text>
+                <text data-id="370" x="220" y="212" text-anchor="middle">4</text>
+                <text data-id="371" x="340" y="212" text-anchor="middle">~</text>
+                <text data-id="372" x="480" y="212" text-anchor="middle">null</text>
+                <text data-id="373" x="570" y="212" text-anchor="middle">n</text>
+              </g>
+            </svg>
+          </div>
+
+          <!-- Code block -->
+          <div data-id="374" class="code-block" id="codeblock-vp-3xyz">
+            <button data-id="375" class="copy-btn" data-copy="codeblock-vp-3xyz">
+              <svg data-id="376" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect data-id="377" x="9" y="9" width="13" height="13" rx="2" ry="2"/><path data-id="378" d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              Copy
+            </button>
+            <pre data-id="379"><code data-id="380"><span data-id="381" class="ct">ValidatorPulse</span> {
+  <span data-id="382" class="ck">tensor_id</span>:     <span data-id="383" class="cv">UUID</span>         <span data-id="384" class="cc">// incoming continuity tensor</span>
+  <span data-id="385" class="ck">signature</span>:     <span data-id="386" class="cv">Hex[64]</span>      <span data-id="387" class="cc">// structural fingerprint</span>
+  <span data-id="388" class="ck">tick</span>:          <span data-id="389" class="cv">Int</span>          <span data-id="390" class="cc">// current structural tick</span>
+  <span data-id="391" class="ck">coherence</span>:     <span data-id="392" class="cv">Float[0..1]</span>  <span data-id="393" class="cc">// match against continuity register</span>
+  <span data-id="394" class="ck">emit_mode</span>:     <span data-id="395" class="cs">PROMOTE</span> | <span data-id="396" class="cs">REDIRECT</span> | <span data-id="397" class="cs">NULL</span>
+  <span data-id="398" class="ck">resonance_tap</span>: <span data-id="399" class="cs">L11</span> | <span data-id="400" class="cs">L33</span> | <span data-id="401" class="cs">L66</span> | <span data-id="402" class="cs">L99</span> | <span data-id="403" class="cs">NONE</span>
+  <span data-id="404" class="ck">timestamp</span>:     <span data-id="405" class="cv">EpochTick</span>
+}</code></pre>
+          </div>
+
+          <div data-id="406" class="callout callout-warn" style="margin-top:24px;">
+            <svg data-id="407" class="callout-icon" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path data-id="408" d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line data-id="409" x1="12" y1="9" x2="12" y2="13"/><line data-id="410" x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <div data-id="411">
+              <span data-id="412" class="callout-label">WARNING</span>
+              <p data-id="413" class="callout-text">A coherence value below <span data-id="414" class="font-mono">0.42</span> triggers an automatic REDIRECT emit regardless of other conditions. Tensors with coherence below <span data-id="415" class="font-mono">0.17</span> are quarantined in the Discontinuity Buffer and require manual resolution.</p>
+            </div>
+          </div>
+
+          <!-- Phase Table -->
+          <div data-id="416" class="table-wrap" style="margin-top:24px;">
+            <table data-id="417" class="data-table">
+              <thead data-id="418">
+                <tr data-id="419">
+                  <th data-id="420">Phase</th>
+                  <th data-id="421">Trigger</th>
+                  <th data-id="422">Output</th>
+                  <th data-id="423">Resonance Node</th>
+                </tr>
+              </thead>
+              <tbody data-id="424">
+                <tr data-id="425"><td data-id="426" class="font-medium">Intake</td><td data-id="427" style="color:var(--text-muted);">New tensor from L3</td><td data-id="428" style="color:var(--text-muted);">Buffered signature</td><td data-id="429" style="color:var(--text-light);">—</td></tr>
+                <tr data-id="430"><td data-id="431" class="font-medium">Coherence Check</td><td data-id="432" style="color:var(--text-muted);">Intake complete</td><td data-id="433" style="color:var(--text-muted);">Pass / Fail decision</td><td data-id="434" class="font-mono text-xs" style="color:var(--accent);">L11 <span data-id="435" style="color:var(--text-light);">(if perturbation)</span></td></tr>
+                <tr data-id="436"><td data-id="437" class="font-medium">Emit: PROMOTE</td><td data-id="438" style="color:var(--text-muted);">Coherence ≥ 0.42</td><td data-id="439" style="color:var(--text-muted);">Tensor promoted to L5</td><td data-id="440" class="font-mono text-xs" style="color:var(--accent);">L33 confirmation</td></tr>
+                <tr data-id="441"><td data-id="442" class="font-medium">Emit: REDIRECT</td><td data-id="443" style="color:var(--text-muted);">Coherence &lt; 0.42</td><td data-id="444" style="color:var(--text-muted);">Redirect signal + corrective vector</td><td data-id="445" class="font-mono text-xs" style="color:var(--accent);">L66 bridge</td></tr>
+                <tr data-id="446"><td data-id="447" class="font-medium">Emit: NULL</td><td data-id="448" style="color:var(--text-muted);">L99 apex state</td><td data-id="449" style="color:var(--text-muted);">Pulse suppressed; coherence assumed</td><td data-id="450" class="font-mono text-xs" style="color:#a855f7;">L99</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SECTION 5: Redirects ===== -->
+      <div data-id="451" class="section-divider"><span data-id="452">Section 5</span></div>
+      <section data-id="453" id="section-redirects" class="mb-12 scroll-mt-20">
+        <div data-id="454" class="section-heading" data-section="sec5">
+          <span data-id="455" class="toggle-arrow">▾</span>
+          <h2 data-id="456" class="section-title"><span data-id="457" class="section-number">§5 ·</span> Redirects</h2>
+        </div>
+        <div data-id="458" class="section-content mt-6 space-y-5" id="sec5-content">
+          <p data-id="459" class="text-base leading-relaxed" style="color:#374151;">When the Validator Pulse emits a <span data-id="460" class="font-mono text-sm" style="background:var(--bg-gray-100);padding:2px 6px;border-radius:4px;">REDIRECT</span>, L4 constructs a corrective vector and routes the failed tensor to one of three redirect targets: <span data-id="461" class="font-mono text-sm">L3</span> (for re-emergence), <span data-id="462" class="font-mono text-sm">L4.self</span> (for internal correction loop), or <span data-id="463" class="font-mono text-sm">L6</span> (for resonance amplification bypass). The choice of redirect target is determined by the Redirect Resolution Matrix, which weighs the failure type, coherence score, and current composite resonance state.</p>
+          <p data-id="464" class="text-base leading-relaxed" style="color:#374151;">Redirects are not errors — they are a fundamental part of L4's continuity assurance protocol. A healthy L4 will produce a non-zero redirect rate. A zero redirect rate for extended periods may indicate resonance stagnation, which is itself a diagnostic signal that the composite lattice may require recalibration.</p>
+
+          <!-- Redirect Flow SVG -->
+          <div data-id="465" class="fade-target diagram-wrap">
+            <svg data-id="466" viewBox="0 0 580 480" class="diagram-redirect" xmlns="http://www.w3.org/2000/svg" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+              <defs data-id="467">
+                <marker data-id="468" id="arrowW" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto" fill="#00e5ff"><polygon data-id="469" points="0 0, 8 3, 0 6"/></marker>
+              </defs>
+              <rect data-id="470" width="580" height="480" rx="12" fill="#111827"/>
+              <text data-id="471" x="290" y="24" text-anchor="middle" fill="#e5e7eb" font-size="11" font-weight="600">Redirect Resolution Flow</text>
+              <rect data-id="472" x="200" y="40" width="180" height="36" rx="8" fill="#1a1f2e" stroke="#00e5ff" stroke-width="1.5"/>
+              <text data-id="473" x="290" y="63" text-anchor="middle" fill="#e5e7eb" font-size="11">Incoming Tensor (L3)</text>
+              <line data-id="474" x1="290" y1="76" x2="290" y2="100" stroke="#00e5ff" stroke-width="1.5" marker-end="url(#arrowW)"/>
+              <polygon data-id="475" points="290,105 385,145 290,185 195,145" fill="#1a1f2e" stroke="#00e5ff" stroke-width="1.5"/>
+              <text data-id="476" x="290" y="140" text-anchor="middle" fill="#e5e7eb" font-size="9">Validator Pulse</text>
+              <text data-id="477" x="290" y="152" text-anchor="middle" fill="#9ca3af" font-size="8">Coherence Check</text>
+              <line data-id="478" x1="385" y1="145" x2="480" y2="145" stroke="#4ade80" stroke-width="1.5" marker-end="url(#arrowW)"/>
+              <text data-id="479" x="430" y="138" text-anchor="middle" fill="#4ade80" font-size="9" font-weight="600">PASS</text>
+              <rect data-id="480" x="480" y="127" width="80" height="36" rx="6" fill="#064e3b" stroke="#4ade80" stroke-width="1"/>
+              <text data-id="481" x="520" y="148" text-anchor="middle" fill="#4ade80" font-size="9">PROMOTE</text>
+              <text data-id="482" x="520" y="159" text-anchor="middle" fill="#6b7280" font-size="7">→ L5</text>
+              <line data-id="483" x1="290" y1="185" x2="290" y2="220" stroke="#ef4444" stroke-width="1.5" marker-end="url(#arrowW)"/>
+              <text data-id="484" x="302" y="206" fill="#ef4444" font-size="9" font-weight="600">FAIL</text>
+              <polygon data-id="485" points="290,225 385,265 290,305 195,265" fill="#1a1f2e" stroke="#f59e0b" stroke-width="1.5"/>
+              <text data-id="486" x="290" y="260" text-anchor="middle" fill="#e5e7eb" font-size="8">Redirect Resolution</text>
+              <text data-id="487" x="290" y="272" text-anchor="middle" fill="#9ca3af" font-size="8">Matrix</text>
+              <line data-id="488" x1="195" y1="265" x2="80" y2="265" stroke="#00e5ff" stroke-width="1.5" marker-end="url(#arrowW)"/>
+              <text data-id="489" x="140" y="258" text-anchor="middle" fill="#9ca3af" font-size="8">0.17 – 0.42</text>
+              <rect data-id="490" x="10" y="247" width="70" height="36" rx="6" fill="#1a1f2e" stroke="#00e5ff" stroke-width="1"/>
+              <text data-id="491" x="45" y="262" text-anchor="middle" fill="#00e5ff" font-size="8">Redirect</text>
+              <text data-id="492" x="45" y="274" text-anchor="middle" fill="#6b7280" font-size="7">→ L3</text>
+              <path data-id="493" d="M45,247 L45,80 L200,62" fill="none" stroke="#00e5ff" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrowW)"/>
+              <text data-id="494" x="55" y="168" fill="#4b5563" font-size="7" transform="rotate(-90,55,168)">re-emergence</text>
+              <line data-id="495" x1="290" y1="305" x2="290" y2="340" stroke="#ef4444" stroke-width="1.5" marker-end="url(#arrowW)"/>
+              <text data-id="496" x="310" y="326" fill="#9ca3af" font-size="8">&lt; 0.17</text>
+              <rect data-id="497" x="215" y="345" width="150" height="36" rx="6" fill="#3b1010" stroke="#ef4444" stroke-width="1"/>
+              <text data-id="498" x="290" y="362" text-anchor="middle" fill="#fca5a5" font-size="9">Discontinuity Buffer</text>
+              <text data-id="499" x="290" y="374" text-anchor="middle" fill="#6b7280" font-size="7">(Quarantine)</text>
+              <line data-id="500" x1="385" y1="265" x2="480" y2="265" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arrowW)"/>
+              <text data-id="501" x="430" y="258" text-anchor="middle" fill="#9ca3af" font-size="8">L66 active</text>
+              <rect data-id="502" x="480" y="247" width="80" height="36" rx="6" fill="#1a1f2e" stroke="#f59e0b" stroke-width="1"/>
+              <text data-id="503" x="520" y="262" text-anchor="middle" fill="#f59e0b" font-size="8">Redirect</text>
+              <text data-id="504" x="520" y="274" text-anchor="middle" fill="#6b7280" font-size="7">→ L6 Bypass</text>
+              <line data-id="505" x1="45" y1="283" x2="45" y2="430" stroke="#374151" stroke-width="1" stroke-dasharray="3,3"/>
+              <line data-id="506" x1="45" y1="430" x2="290" y2="430" stroke="#374151" stroke-width="1" stroke-dasharray="3,3"/>
+              <line data-id="507" x1="520" y1="283" x2="520" y2="430" stroke="#374151" stroke-width="1" stroke-dasharray="3,3"/>
+              <line data-id="508" x1="520" y1="430" x2="290" y2="430" stroke="#374151" stroke-width="1" stroke-dasharray="3,3"/>
+              <line data-id="509" x1="290" y1="381" x2="290" y2="420" stroke="#374151" stroke-width="1" stroke-dasharray="3,3"/>
+              <rect data-id="510" x="205" y="418" width="170" height="34" rx="6" fill="#1a1f2e" stroke="#374151" stroke-width="1"/>
+              <text data-id="511" x="290" y="440" text-anchor="middle" fill="#9ca3af" font-size="9">Continuity Register Update</text>
+            </svg>
+          </div>
+
+          <div data-id="512" class="callout callout-anchor">
+            <svg data-id="513" class="callout-icon" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle data-id="514" cx="12" cy="5" r="3"/><line data-id="515" x1="12" y1="22" x2="12" y2="8"/><path data-id="516" d="M5 12H2a10 10 0 0 0 20 0h-3"/></svg>
+            <div data-id="517">
+              <span data-id="518" class="callout-label">ANCHOR</span>
+              <p data-id="519" class="callout-text">The Redirect Resolution Matrix is defined in the Dimension Metadata block. See §6 for configurable thresholds.</p>
+            </div>
+          </div>
+
+          <!-- Redirect Vector code block -->
+          <div data-id="520" class="code-block" style="margin-top:24px;" id="codeblock-rv-4abc">
+            <button data-id="521" class="copy-btn" data-copy="codeblock-rv-4abc">
+              <svg data-id="522" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect data-id="523" x="9" y="9" width="13" height="13" rx="2" ry="2"/><path data-id="524" d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              Copy
+            </button>
+            <pre data-id="525"><code data-id="526"><span data-id="527" class="ct">RedirectVector</span> {
+  <span data-id="528" class="ck">source_tensor</span>:  <span data-id="529" class="cv">UUID</span>
+  <span data-id="530" class="ck">failure_mode</span>:   <span data-id="531" class="cs">COHERENCE_LOW</span> | <span data-id="532" class="cs">SIGNATURE_MISMATCH</span> | <span data-id="533" class="cs">REGISTER_OVERFLOW</span>
+  <span data-id="534" class="ck">coherence_val</span>:  <span data-id="535" class="cv">Float</span>
+  <span data-id="536" class="ck">redirect_to</span>:    <span data-id="537" class="cs">L3</span> | <span data-id="538" class="cs">L4_SELF</span> | <span data-id="539" class="cs">L6</span>
+  <span data-id="540" class="ck">corrective_ops</span>: <span data-id="541" class="cv">Op[]</span>         <span data-id="542" class="cc">// list of structural correction ops</span>
+  <span data-id="543" class="ck">ttl</span>:            <span data-id="544" class="cv">Int</span>          <span data-id="545" class="cc">// ticks before redirect expires</span>
+  <span data-id="546" class="ck">origin_tick</span>:    <span data-id="547" class="cv">EpochTick</span>
+}</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SECTION 6: Dimension Metadata ===== -->
+      <div data-id="548" class="section-divider"><span data-id="549">Section 6</span></div>
+      <section data-id="550" id="section-metadata" class="mb-12 scroll-mt-20">
+        <div data-id="551" class="section-heading" data-section="sec6">
+          <span data-id="552" class="toggle-arrow">▾</span>
+          <h2 data-id="553" class="section-title"><span data-id="554" class="section-number">§6 ·</span> Dimension Metadata</h2>
+        </div>
+        <div data-id="555" class="section-content mt-6" id="sec6-content">
+          <p data-id="556" class="text-base leading-relaxed mb-6" style="color:#374151;">Every layer in TriadicFrameworks carries a Dimension Metadata block — a structured descriptor of the layer's operational parameters, thresholds, cosmological coordinates, and interface contracts. The L4 metadata block is reproduced in full below.</p>
+
+          <!-- Filters -->
+          <div data-id="557" class="filter-bar">
+            <div data-id="558" class="filter-input-wrap">
+              <svg data-id="559" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-light)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle data-id="560" cx="11" cy="11" r="8"/><line data-id="561" x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <input data-id="562" type="text" id="meta-filter-input-5jkl" placeholder="Filter by key name..." class="filter-input" />
+            </div>
+            <label data-id="563" class="filter-label">
+              <input data-id="564" type="checkbox" id="mutable-toggle-6mno" />
+              <span data-id="565">Show Mutable Only</span>
+            </label>
+          </div>
+
+          <!-- Metadata Table -->
+          <div data-id="566" class="table-wrap mb-8">
+            <table data-id="567" class="data-table" id="meta-table-7pqr">
+              <thead data-id="568">
+                <tr data-id="569">
+                  <th data-id="570">Key</th>
+                  <th data-id="571">Value</th>
+                  <th data-id="572">Type</th>
+                  <th data-id="573">Mutable</th>
+                  <th data-id="574" class="hide-mobile">Description</th>
+                </tr>
+              </thead>
+              <tbody data-id="575" id="meta-tbody-8stu">
+              </tbody>
+            </table>
+          </div>
+
+          <!-- YAML code block -->
+          <div data-id="576" class="code-block" id="codeblock-yaml-9vwx">
+            <button data-id="577" class="copy-btn" data-copy="codeblock-yaml-9vwx">
+              <svg data-id="578" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect data-id="579" x="9" y="9" width="13" height="13" rx="2" ry="2"/><path data-id="580" d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              Copy
+            </button>
+            <pre data-id="581"><code data-id="582"><span data-id="583" class="ct">layer</span>:
+  <span data-id="584" class="ck">id</span>: <span data-id="585" class="cv">L4</span>
+  <span data-id="586" class="ck">name</span>: <span data-id="587" class="cs">"Continuity Mechanics"</span>
+  <span data-id="588" class="ck">class</span>: <span data-id="589" class="cv">Structural</span>
+  <span data-id="590" class="ck">axis</span>: <span data-id="591" class="cv">Continuity</span>
+  <span data-id="592" class="ck">version</span>: <span data-id="593" class="cv">3.2.1</span>
+  <span data-id="594" class="ck">status</span>: <span data-id="595" class="cv">STABLE</span>
+
+<span data-id="596" class="ct">cosmology</span>:
+  <span data-id="597" class="ck">position</span>: <span data-id="598" class="cv">4</span>
+  <span data-id="599" class="ck">triad</span>: <span data-id="600" class="cs">Lower-Upper Boundary</span>
+  <span data-id="601" class="ck">octave</span>: <span data-id="602" class="cv">Primary</span>
+
+<span data-id="603" class="ct">continuity</span>:
+  <span data-id="604" class="ck">register_size</span>: <span data-id="605" class="cv">4096</span>
+  <span data-id="606" class="ck">tick_cadence</span>: <span data-id="607" class="cv">1</span>
+
+<span data-id="608" class="ct">coherence</span>:
+  <span data-id="609" class="ck">promote_threshold</span>: <span data-id="610" class="cv">0.42</span>
+  <span data-id="611" class="ck">quarantine_threshold</span>: <span data-id="612" class="cv">0.17</span>
+
+<span data-id="613" class="ct">redirect</span>:
+  <span data-id="614" class="ck">default_target</span>: <span data-id="615" class="cv">L3</span>
+  <span data-id="616" class="ck">ttl_default</span>: <span data-id="617" class="cv">144</span>
+  <span data-id="618" class="ck">matrix_version</span>: <span data-id="619" class="cs">"2.1"</span>
+
+<span data-id="620" class="ct">resonance</span>:
+  <span data-id="621" class="ck">L11_weight</span>: <span data-id="622" class="cv">0.33</span>
+  <span data-id="623" class="ck">L33_weight</span>: <span data-id="624" class="cv">0.33</span>
+  <span data-id="625" class="ck">L66_weight</span>: <span data-id="626" class="cv">0.66</span>
+  <span data-id="627" class="ck">L99_weight</span>: <span data-id="628" class="cv">0.99</span>
+  <span data-id="629" class="ck">perturbation_threshold</span>: <span data-id="630" class="cv">0.75</span>
+
+<span data-id="631" class="ct">interfaces</span>:
+  <span data-id="632" class="ck">upstream</span>: <span data-id="633" class="cv">L3</span>
+  <span data-id="634" class="ck">downstream</span>: <span data-id="635" class="cv">L5</span>
+  <span data-id="636" class="ck">resonance_taps</span>: <span data-id="637" class="cs">[L11, L33, L66, L99]</span>
+  <span data-id="638" class="ck">bypass</span>: <span data-id="639" class="cv">L6</span></code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SECTION 7: Navigation ===== -->
+      <div data-id="640" class="section-divider"><span data-id="641">Navigation</span></div>
+      <section data-id="642" id="section-nav-bottom" class="mb-12">
+        <!-- Prev / Next -->
+        <div data-id="643" class="nav-row">
+          <div data-id="644" class="nav-card">
+            <div data-id="645" class="nav-card-label">
+              <svg data-id="646" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line data-id="647" x1="19" y1="12" x2="5" y2="12"/><polyline data-id="648" points="12 19 5 12 12 5"/></svg>
+              Previous
+            </div>
+            <div data-id="649" class="nav-card-title">L3 · Pattern Crystallization</div>
+          </div>
+          <div data-id="650" class="nav-card" style="text-align:right;">
+            <div data-id="651" class="nav-card-label" style="justify-content:flex-end;">
+              Next
+              <svg data-id="652" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line data-id="653" x1="5" y1="12" x2="19" y2="12"/><polyline data-id="654" points="12 5 19 12 12 19"/></svg>
+            </div>
+            <div data-id="655" class="nav-card-title">L5 · Entropic Resolution</div>
+          </div>
+        </div>
+
+        <!-- Related Chapters -->
+        <h3 data-id="656" class="related-section-title">Related Chapters</h3>
+        <div data-id="657" class="related-grid">
+          <div data-id="658" class="related-card">
+            <span data-id="659" class="related-badge related-badge-purple">L11</span>
+            <div data-id="660" class="related-title">First Composite Fold</div>
+          </div>
+          <div data-id="661" class="related-card">
+            <span data-id="662" class="related-badge related-badge-purple">L33</span>
+            <div data-id="663" class="related-title">Triadic Echo Chamber</div>
+          </div>
+          <div data-id="664" class="related-card">
+            <span data-id="665" class="related-badge related-badge-cyan">REF</span>
+            <div data-id="666" class="related-title">Validator Pulse Reference</div>
+          </div>
+          <div data-id="667" class="related-card">
+            <span data-id="668" class="related-badge related-badge-amber">REF</span>
+            <div data-id="669" class="related-title">Redirect Resolution Matrix</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer data-id="670" class="site-footer">
+      <p data-id="671">TriadicFrameworks Docsbook · Chapter L4 · v3.2.1 · Generated 2026-08-29</p>
+      <p data-id="672">Made by Copilot</p>
+    </footer>
+  </div>
+
+  <script>
+    // =================== METADATA TABLE DATA ===================
+    var metaData = [
+      { key: 'layer.id', value: 'L4', type: 'LayerID', mutable: false, desc: 'Canonical layer identifier' },
+      { key: 'layer.name', value: 'Continuity Mechanics', type: 'String', mutable: false, desc: 'Human-readable name' },
+      { key: 'layer.class', value: 'Structural', type: 'Enum', mutable: false, desc: 'Structural / Generative / Resolution' },
+      { key: 'layer.axis', value: 'Continuity', type: 'Enum', mutable: false, desc: 'Primary operational axis' },
+      { key: 'layer.version', value: '3.2.1', type: 'SemVer', mutable: false, desc: 'Schema version' },
+      { key: 'layer.status', value: 'STABLE', type: 'Enum', mutable: false, desc: 'STABLE / DRAFT / DEPRECATED' },
+      { key: 'cosmology.position', value: '4', type: 'Int', mutable: false, desc: 'Position in primary cosmological axis' },
+      { key: 'cosmology.triad', value: 'Lower-Upper Boundary', type: 'String', mutable: false, desc: 'Sits at L3/L5 boundary' },
+      { key: 'cosmology.octave', value: 'Primary', type: 'Enum', mutable: false, desc: 'PRIMARY / SECONDARY / HARMONIC' },
+      { key: 'continuity.register_size', value: '4096', type: 'Int', mutable: true, desc: 'Max tensor entries in Continuity Register' },
+      { key: 'continuity.tick_cadence', value: '1', type: 'Int', mutable: true, desc: 'Base pulse rate per structural tick' },
+      { key: 'coherence.promote_threshold', value: '0.42', type: 'Float', mutable: true, desc: 'Minimum coherence for PROMOTE' },
+      { key: 'coherence.quarantine_threshold', value: '0.17', type: 'Float', mutable: true, desc: 'Below this → Discontinuity Buffer' },
+      { key: 'redirect.default_target', value: 'L3', type: 'LayerID', mutable: true, desc: 'Default redirect destination' },
+      { key: 'redirect.ttl_default', value: '144', type: 'Int', mutable: true, desc: 'Default redirect TTL in ticks' },
+      { key: 'redirect.matrix_version', value: '2.1', type: 'SemVer', mutable: true, desc: 'Redirect Resolution Matrix version' },
+      { key: 'resonance.L11_weight', value: '0.33', type: 'Float', mutable: true, desc: 'L11 composite pulse weight' },
+      { key: 'resonance.L33_weight', value: '0.33', type: 'Float', mutable: true, desc: 'L33 composite pulse weight' },
+      { key: 'resonance.L66_weight', value: '0.66', type: 'Float', mutable: true, desc: 'L66 composite pulse weight' },
+      { key: 'resonance.L99_weight', value: '0.99', type: 'Float', mutable: true, desc: 'L99 composite pulse weight' },
+      { key: 'resonance.perturbation_threshold', value: '0.75', type: 'Float', mutable: true, desc: 'L11 double-fire trigger' },
+      { key: 'interfaces.upstream', value: 'L3', type: 'LayerID', mutable: false, desc: 'Primary upstream interface' },
+      { key: 'interfaces.downstream', value: 'L5', type: 'LayerID', mutable: false, desc: 'Primary downstream interface' },
+      { key: 'interfaces.resonance_taps', value: 'L11, L33, L66, L99', type: 'LayerID[]', mutable: false, desc: 'Composite resonance connections' },
+      { key: 'interfaces.bypass', value: 'L6', type: 'LayerID', mutable: false, desc: 'Resonance bypass target' }
+    ];
+
+    function renderMetaTable(filter, mutableOnly) {
+      var tbody = document.getElementById('meta-tbody-8stu');
+      if (!tbody) return;
+      tbody.innerHTML = '';
+      var filterLower = (filter || '').toLowerCase();
+      metaData.forEach(function(row, i) {
+        if (filterLower && row.key.toLowerCase().indexOf(filterLower) === -1) return;
+        if (mutableOnly && !row.mutable) return;
+        var tr = document.createElement('tr');
+        tr.style.borderTop = '1px solid #f3f4f6';
+        if (i % 2 !== 0) tr.style.background = 'rgba(249,250,251,0.5)';
+        tr.innerHTML =
+          '<td style="padding:10px 16px;font-family:var(--font-mono);font-size:12px;color:var(--accent);">' + row.key + '</td>' +
+          '<td style="padding:10px 16px;font-family:var(--font-mono);font-size:12px;">' + row.value + '</td>' +
+          '<td style="padding:10px 16px;font-size:12px;color:var(--text-light);">' + row.type + '</td>' +
+          '<td style="padding:10px 16px;font-size:12px;">' + (row.mutable ? '<span style="color:var(--green-600);font-weight:600;">Yes</span>' : '<span style="color:var(--text-light);">No</span>') + '</td>' +
+          '<td class="hide-mobile" style="padding:10px 16px;font-size:12px;color:var(--text-light);">' + row.desc + '</td>';
+        tbody.appendChild(tr);
+      });
+    }
+    renderMetaTable('', false);
+
+    var metaFilterInput = document.getElementById('meta-filter-input-5jkl');
+    var mutableToggle = document.getElementById('mutable-toggle-6mno');
+    if (metaFilterInput) {
+      metaFilterInput.addEventListener('input', function() {
+        renderMetaTable(metaFilterInput.value, mutableToggle && mutableToggle.checked);
+      });
+    }
+    if (mutableToggle) {
+      mutableToggle.addEventListener('change', function() {
+        renderMetaTable(metaFilterInput ? metaFilterInput.value : '', mutableToggle.checked);
+      });
+    }
+
+    // =================== DARK MODE ===================
+    var dmBtn = document.getElementById('darkmode-btn-8jkl');
+    if (dmBtn) {
+      dmBtn.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        var isDark = document.body.classList.contains('dark-mode');
+        // Update text colors for body paragraphs in dark mode
+        document.querySelectorAll('p[style*="color:#374151"]').forEach(function(el) {
+          el.style.color = isDark ? '#d1d5db' : '#374151';
+        });
+        document.querySelectorAll('.font-mono[style*="background:var(--bg-gray-100)"]').forEach(function(el) {
+          if (isDark) {
+            el.style.background = '#1f2937';
+          } else {
+            el.style.background = 'var(--bg-gray-100)';
+          }
+        });
+      });
+    }
+
+    // =================== HAMBURGER MENU (MOBILE) ===================
+    var hamburgerBtn = document.getElementById('hamburger-btn-2mqx');
+    var sidebar = document.getElementById('sidebar-9xkq');
+    var overlay = document.getElementById('mobile-overlay-4kzq');
+    function closeSidebar() {
+      if (sidebar) sidebar.classList.remove('open');
+      if (overlay) overlay.classList.remove('active');
+    }
+    if (hamburgerBtn) {
+      hamburgerBtn.addEventListener('click', function() {
+        if (sidebar) sidebar.classList.add('open');
+        if (overlay) overlay.classList.add('active');
+      });
+    }
+    if (overlay) {
+      overlay.addEventListener('click', closeSidebar);
+    }
+
+    // =================== SECTION COLLAPSE ===================
+    document.querySelectorAll('.section-heading').forEach(function(heading) {
+      heading.addEventListener('click', function() {
+        var sectionId = heading.getAttribute('data-section');
+        var content = document.getElementById(sectionId + '-content');
+        var arrow = heading.querySelector('.toggle-arrow');
+        if (content) {
+          content.classList.toggle('collapsed-content');
+        }
+        if (arrow) {
+          arrow.classList.toggle('collapsed');
+          arrow.textContent = arrow.classList.contains('collapsed') ? '▸' : '▾';
+        }
+      });
+    });
+
+    // =================== RESONANCE CARD EXPAND ===================
+    document.querySelectorAll('.res-card').forEach(function(card) {
+      card.addEventListener('click', function() {
+        card.classList.toggle('expanded');
+      });
+    });
+
+    // =================== COPY BUTTONS ===================
+    document.querySelectorAll('.copy-btn').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var blockId = btn.getAttribute('data-copy');
+        var block = document.getElementById(blockId);
+        if (block) {
+          var code = block.querySelector('code');
+          if (code) {
+            var text = code.textContent || code.innerText;
+            navigator.clipboard.writeText(text).then(function() {
+              var origHTML = btn.innerHTML;
+              btn.innerHTML = '<span style="color:#4ade80;">✓ Copied</span>';
+              setTimeout(function() { btn.innerHTML = origHTML; }, 1500);
+            }).catch(function() {});
+          }
+        }
+      });
+    });
+
+    // =================== SCROLLSPY ===================
+    var sectionIds = ['section-overview', 'section-cosmology', 'section-resonance', 'section-validator', 'section-redirects', 'section-metadata'];
+    var sidebarLinks = document.querySelectorAll('.sidebar-section');
+
+    function updateScrollspy() {
+      var currentId = sectionIds[0];
+      for (var i = 0; i < sectionIds.length; i++) {
+        var el = document.getElementById(sectionIds[i]);
+        if (el) {
+          var rect = el.getBoundingClientRect();
+          if (rect.top <= 120) {
+            currentId = sectionIds[i];
+          }
+        }
+      }
+      sidebarLinks.forEach(function(link) {
+        if (link.getAttribute('data-nav') === currentId) {
+          link.classList.add('active-section');
+        } else {
+          link.classList.remove('active-section');
+        }
+      });
+    }
+    window.addEventListener('scroll', updateScrollspy);
+    updateScrollspy();
+
+    // =================== FADE IN ON SCROLL ===================
+    function checkFadeTargets() {
+      document.querySelectorAll('.fade-target').forEach(function(el) {
+        var rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 60) {
+          el.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', checkFadeTargets);
+    checkFadeTargets();
+
+    // =================== SIDEBAR NAV CLICK ===================
+    sidebarLinks.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var targetId = link.getAttribute('data-nav');
+        var target = document.getElementById(targetId);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        if (window.innerWidth < 768) {
+          closeSidebar();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
