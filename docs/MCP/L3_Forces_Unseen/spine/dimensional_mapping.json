@@ -1,0 +1,78 @@
+{
+  "canonical": "R5",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "title": "S3 Spine — Dimensional Mapping",
+  "description": "Canonical mapping of S3 nodes to dimensional constructs (L4–LI), including semantic roles and operator amplification.",
+  "version": "0.1.0",
+
+  "nodes": [
+    {
+      "id": "gradient",
+      "semantics": ["gradientIntensity"],
+      "dimensions": [
+        { "id": "L4", "role": "gradient-axis" },
+        { "id": "L5", "role": "gradient-field bridge" },
+        { "id": "L16", "role": "gradient-field synthesis" },
+        { "id": "LH", "role": "harmonic gradient-field" }
+      ],
+      "operators": ["push", "pull", "gradient"]
+    },
+    {
+      "id": "field",
+      "semantics": ["fieldCoherence", "influenceContinuity"],
+      "dimensions": [
+        { "id": "L5", "role": "gradient-field bridge" },
+        { "id": "L8", "role": "field-coherence" },
+        { "id": "L10", "role": "coherence-continuity" },
+        { "id": "L26", "role": "multi-axis coherence" },
+        { "id": "LH", "role": "harmonic gradient-field" }
+      ],
+      "operators": ["bind", "fieldShift", "gradient"]
+    },
+    {
+      "id": "rupture",
+      "semantics": ["rupturePotential"],
+      "dimensions": [
+        { "id": "L12", "role": "rupture-axis" },
+        { "id": "L32", "role": "integrity-axis (rupture counterbalance)" }
+      ],
+      "operators": ["ruptureForce", "push", "gradient"]
+    },
+    {
+      "id": "integrity",
+      "semantics": ["forceIntegrity"],
+      "dimensions": [
+        { "id": "L32", "role": "integrity-axis" },
+        { "id": "LI", "role": "integrity-invariant" },
+        { "id": "L8", "role": "coherence support" }
+      ],
+      "operators": ["bind", "pull", "fieldShift"]
+    }
+  ],
+
+  "dimensionRoles": {
+    "L4": "Base gradient dimensional anchor",
+    "L5": "Gradient-field bridge",
+    "L8": "Field-coherence axis",
+    "L10": "Coherence-continuity axis",
+    "L11": "Continuity axis (supporting field→integrity transitions)",
+    "L12": "Rupture axis",
+    "L16": "Gradient-field synthesis",
+    "L26": "Multi-axis coherence",
+    "L32": "Integrity axis",
+    "LH": "Harmonic gradient-field",
+    "LI": "Integrity invariant"
+  },
+
+  "operatorAmplification": {
+    "push": ["L4", "L5", "L16"],
+    "pull": ["L4", "L5", "L16"],
+    "bind": ["L8", "L10", "L32", "LI"],
+    "gradient": ["L4", "L5", "L16"],
+    "fieldShift": ["L8", "L10", "L26"],
+    "ruptureForce": ["L12", "L32"]
+  }
+}
