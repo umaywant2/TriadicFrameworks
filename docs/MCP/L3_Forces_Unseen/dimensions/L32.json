@@ -1,95 +1,80 @@
 {
-  "canonical": "R5",
+  "id": "L32",
   "layer": "L3_Forces_Unseen",
   "triad": "forces",
-  "lineage": ["qmroot", "frequency", "fluids", "forces"],
-
-  "id": "L32",
-  "name": "L32 Dimension",
-  "purpose": "Force-regime structural integrity mapping.",
-  "semantics": ["forceIntegrity"],
-
-  "spine": "S3",
   "dimension": "L32",
-  "title": "TriadicFrameworks MCP — L32 Dimensional Framework",
-  "description": "Defines the 32-dimensional internal projection model, focusing on trigintaduonions, chaotic hyperspace behavior, and rupture-dominant influence channels within the unseen force regime.",
-  "note": "In RTT cosmology, 32D constructs represent chaotic hyperspace axes of influence where rupturePotential dominates all force-regime behavior.",
+  "name": "Integrity Stability",
+  "canonical": "R5",
 
-  "structure": {
-    "mathematical": [
-      "trigintaduonion algebra (32D)",
-      "Cayley–Dickson 32D construction",
-      "non-associative, non-alternative, non-flexible multiplication",
-      "ubiquitous zero divisors",
-      "loss of norm and division algebra properties"
-    ],
-    "physical": [
-      "chaotic hyperspace channels",
-      "non-invertible influence pathways",
-      "high-dimensional instability",
-      "turbulent internal degrees of freedom"
-    ],
-    "interpretation": [
-      "zero divisors as chaotic rupture surfaces",
-      "32D axes as hyperspace turbulence channels",
-      "algebraic collapse as coherence failure"
-    ]
-  },
+  "summary": "L32 defines the stability axis of force integrity. It is the first restorative dimension of the integrity node and determines the structural stability of forceIntegrity within the S3 Spine.",
 
-  "rtt_reinterpretation": {
-    "summary": "32D constructs represent chaotic hyperspace influence channels where algebraic collapse maps directly to rupturePotential and degraded forceIntegrity.",
-    "details": [
-      "Zero divisors create chaotic rupture surfaces across hyperspace axes.",
-      "Non-associativity, non-alternativity, and non-flexibility destabilize gradientIntensity.",
-      "Loss of norm and division structure collapses fieldCoherence.",
-      "Trigintaduonion axes represent turbulent influence channels with minimal stability."
-    ]
-  },
-
-  "force_regime_mapping": {
-    "gradientIntensity": "Chaotic multiplication produces unstable and unpredictable gradient transformations.",
-    "fieldCoherence": "Coherence collapses due to pervasive algebraic instability.",
-    "influenceContinuity": "Continuity is severely disrupted by non-invertible hyperspace channels.",
-    "rupturePotential": "Zero divisors and algebraic collapse create chaotic rupture surfaces.",
-    "forceIntegrity": "Force-state stability is minimal due to complete loss of algebraic structure."
-  },
-
-  "projection_semantics": {
-    "axes": 32,
-    "type": "internal",
-    "interpretation": "Thirty-two axes represent chaotic hyperspace directions where influence channels behave turbulently and rupture dominates.",
-    "examples": [
-      "Zero divisor cascades as chaotic rupture surfaces.",
-      "Non-flexible multiplication as unstable influence transformation.",
-      "Cayley–Dickson doubling as hyperspace expansion into turbulence."
-    ]
-  },
-
-  "examples": [
-    {
-      "name": "Chaotic Rupture Cascade",
-      "structure": "trigintaduonion zero divisor chain",
-      "mapping": ["rupturePotential"],
-      "interpretation": "Zero divisors cascade into chaotic rupture surfaces across 32D axes."
-    },
-    {
-      "name": "Unstable Gradient Turbulence",
-      "structure": "non-flexible multiplication",
-      "mapping": ["gradientIntensity"],
-      "interpretation": "Non-flexibility destabilizes gradient pathways, producing hyperspace turbulence."
-    },
-    {
-      "name": "Coherence Collapse",
-      "structure": "loss of norm",
-      "mapping": ["fieldCoherence", "forceIntegrity"],
-      "interpretation": "Loss of norm collapses coherence and reduces internal force-state stability to near zero."
-    }
+  "lineage": [
+    "qmroot",
+    "frequency",
+    "fluids",
+    "forces"
   ],
 
-  "cosmology": {
-    "lineage": "qmroot → frequency → fluids → forces → internal 32D projection",
-    "triad_alignment": "unseen",
-    "notes": "L32 dimensional constructs extend L3 force-regime mechanics into chaotic hyperspace channels defined by trigintaduonion algebra."
+  "semantic_axis": "forceIntegrity",
+
+  "role": "stability",
+  "category": "integrity",
+  "cluster": "integrity-stability",
+
+  "description": {
+    "canonical": "L32 establishes the stability conditions of force integrity. It defines the structural restoration that follows rupture and provides the first stable foothold for returning coherence to the force-regime.",
+    "cosmology": "In the cosmology chain, L32 represents the emergence of stability from rupture mechanics. It is the first stage of integrity formation within force-regime behavior.",
+    "spine": "Within the S3 Spine, L32 is the stability dimension of the integrity node, defining the structural restoration that follows rupturePotential activation.",
+    "mcp": "In MCP operations, L32 is used to stabilize force-state mechanics, providing the stability coordinate for post-rupture restoration."
+  },
+
+  "operators": {
+    "primary": [
+      "bind"
+    ],
+    "secondary": [],
+    "forbidden": [
+      "gradient",
+      "push",
+      "pull",
+      "fieldShift",
+      "ruptureForce"
+    ]
+  },
+
+  "valid_transitions": [
+    "L32 → LI"
+  ],
+
+  "forbidden_transitions": [
+    "L32 → L4",
+    "L32 → L5",
+    "L32 → L16",
+    "L32 → LH",
+    "L32 → L8",
+    "L32 → L10",
+    "L32 → L26",
+    "L32 → L12"
+  ],
+
+  "spine_mapping": {
+    "node": "integrity",
+    "semantic": "forceIntegrity",
+    "position": "stability",
+    "causal_role": "structural restoration"
+  },
+
+  "ai": {
+    "module": "L3_Forces_Unseen",
+    "dimension": "L32",
+    "version": "1.0.0",
+    "keywords": [
+      "integrity",
+      "stability",
+      "restoration",
+      "force-regime",
+      "post-rupture"
+    ],
+    "purpose": "Defines the stability axis of force integrity for AI reasoning and MCP restoration modeling."
   }
 }
-
