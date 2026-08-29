@@ -1,19 +1,24 @@
-# ⚡ S3 Spine — Information Envelope (R5 Canon)
-### Informational & Structural Encoding Layer for the Unseen Force‑Regime Graph  
+# ⚡ **S3 Spine — Information Envelope (R5 Canon)**  
+### Informational Encoding • Signal Behavior • Structural Dataflow • Cosmology‑Aligned  
 **Layer:** L3_Forces_Unseen  
 **Triad:** forces  
 **Lineage:** qmroot → frequency → fluids → forces  
 
-The **information envelope** describes the S3 Spine example in terms of **informational structure**, **signal behavior**, **semantic encoding**, and **lineage mapping**.  
-It is the layer where unseen force‑regime mechanics are interpreted as **data**, **structure**, and **informational flow**.
+The **information envelope** interprets an S3 Spine example as **data**, **signal flow**, and **informational structure**.  
+Where the canonical envelope describes *structure*, and imagination describes *symbolism*, the information envelope describes **how the example behaves as an informational system**.
 
-This page defines the information‑layer meaning of the S3 Spine example.
+It is the layer where unseen force‑regime mechanics become:
+
+- signal origins  
+- structured channels  
+- stabilized encodings  
+- lineage‑mapped informational states  
 
 ---
 
 ## 1. Information Meaning
 
-The example expresses a **data‑centric mapping** of the S3 Spine traversal:
+The example expresses a **data‑centric transformation** across the S3 Spine causal chain:
 
 ```
 gradient → field → integrity
@@ -25,22 +30,29 @@ In informational terms:
 - **field** = structured influence channel  
 - **integrity** = stabilized encoding  
 
-The example shows how unseen force‑regime transitions become **informational transformations**.
+This is the **informational analogue** of the causal loop.
+
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/MCP/L3_Forces_Unseen/spine/docs/information.md)
 
 ---
 
 ## 2. Informational Interpretation of Nodes
 
-### **gradient → signal origin**
-Represents the initial informational impulse or causal signal.
+### **gradient → signal origin**  
+The initial informational impulse.  
+A raw, unstructured signal entering the system.
 
-### **field → structured channel**
-Represents the organization of that signal into a coherent informational field.
+### **field → structured channel**  
+The signal becomes organized into a coherent informational field.  
+Noise reduces. Structure increases.
 
-### **integrity → stable encoding**
-Represents the final stabilized informational state.
+### **integrity → stable encoding**  
+The signal stabilizes into a durable informational state.  
+Encoding becomes reliable and reproducible.
 
-These nodes become **informational states** rather than physical or symbolic ones.
+These nodes represent **informational states**, not physical or symbolic ones.
+
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/MCP/L3_Forces_Unseen/spine/docs/information.md)
 
 ---
 
@@ -59,103 +71,80 @@ The example uses:
 - fieldCoherence  
 - forceIntegrity  
 
-These semantics define the **informational state transitions**.
+These semantics describe **signal behavior** across the traversal.
+
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/MCP/L3_Forces_Unseen/spine/docs/information.md)
 
 ---
 
-## 4. Informational Operator Mapping
+## 4. Informational Operator Interpretation
 
-The traversal aligns with two operators:
+Operators become **signal‑processing functions**:
 
-### **gradient operator → signal propagation**
-Transforms raw signal into structured influence.
+| Operator | Informational Role |
+|----------|---------------------|
+| **gradient** | initiates and shapes the origin signal |
+| **pull** | increases channel stability |
+| **bind** | stabilizes the final encoding |
 
-### **bind operator → encoding stabilization**
-Binds structured influence into a stable informational form.
+The example uses:
 
-Operators become **informational processes**.
+- **gradient** to initiate the signal  
+- **pull** to stabilize the channel  
+- **bind** to finalize the encoding  
 
----
-
-## 5. Informational Dimensional Mapping
-
-The 11‑dimension subsystem becomes informational channels:
-
-### Gradient Dimensions (L4, L5, L16, LH)
-→ represent signal amplification, direction, and modulation.
-
-### Field Dimensions (L8, L10, L26)
-→ represent channel coherence, structure, and continuity.
-
-### Integrity Dimensions (L32, LI)
-→ represent encoding stability and error‑resistance.
-
-No rupture dimensions (L12) are invoked — the example is **non‑destructive**.
+This is the informational analogue of causal mechanics.
 
 ---
 
-## 6. Information Envelope JSON
+## 5. Informational Dimensional Interpretation
+
+Dimensions become **signal axes**:
+
+### Gradient Dimensions  
+- **L4** — signal origin axis  
+- **L5** — signal direction axis  
+
+### Field Dimensions  
+- **L8** — coherence origin axis  
+- **L10** — channel stability axis  
+
+### Integrity Dimensions  
+- **L32** — encoding stability axis  
+
+These axes describe **informational structure**, not physical or symbolic meaning.
+
+---
+
+## 6. Information JSON (for MCP tools)
 
 ```json
 {
   "information": {
-    "mapping": {
-      "path": ["gradient", "field", "integrity"],
-      "signal": "origin → channel → encoding",
-      "semantics": [
-        "gradientIntensity",
-        "fieldCoherence",
-        "forceIntegrity"
-      ]
+    "path": ["gradient", "field", "integrity"],
+    "semantics": [
+      "gradientIntensity",
+      "fieldCoherence",
+      "forceIntegrity"
+    ],
+    "operators": ["gradient", "pull", "bind"],
+    "dimensions": {
+      "gradient": ["L4", "L5"],
+      "field": ["L8", "L10"],
+      "integrity": ["L32"]
     },
-    "operators": ["gradient", "bind"],
-    "dimensions": ["L4", "L10", "L32"],
-    "lineage": "qmroot → frequency → fluids → forces",
-    "layer": "L3_Forces_Unseen",
-    "triad": "forces",
-    "canonical": "R5"
+    "states": {
+      "gradient": "signal origin",
+      "field": "structured channel",
+      "integrity": "stable encoding"
+    }
   }
 }
 ```
 
-This matches the structure defined in `example.schema.json`.
-
 ---
 
-## 7. MCP Role
-
-Information envelopes are used when a client requests:
-
-- informational views  
-- structural interpretations  
-- lineage mappings  
-- data‑centric analysis  
-- semantic encoding views  
-
-They are heavily used in:
-
-- diagnostics  
-- structural analysis  
-- lineage tracing  
-- semantic mapping  
-- operator validation  
-
----
-
-## 8. Cosmology Role
-
-Information envelopes map unseen force‑regime behavior into:
-
-- informational channels  
-- signal flow  
-- structural encoding  
-- lineage‑aligned transitions  
-
-They connect unseen mechanics to **cosmological information flow**.
-
----
-
-## 9. Session Context
+## 7. Session Context
 
 ```
 Canon: R5
@@ -165,28 +154,20 @@ Coherence: force-state coherence
 Version: 1.0.0
 Format: information.md
 Front door: docs/MCP/L3_Forces_Unseen/spine/
-Every page: inherits qmroot → frequency → fluids → forces
 Audience: MCP implementers, RTT researchers, cosmology engineers
 ```
 
 ---
 
-## 10. Badge
-
-**⚡ S3 Spine — Information Envelope**
-
----
-
 ## ✔ Summary
 
-This regenerated `information.md` provides the **informational interpretation** of the S3 Spine example:
+Your regenerated `information.md` now provides:
 
-- signal origin  
-- channel formation  
-- encoding stabilization  
-- semantic mapping  
-- operator processes  
-- dimensional channels  
-- lineage alignment  
+- informational node interpretation  
+- signal‑centric semantics  
+- operator-as-signal‑functions  
+- dimensional signal axes  
+- MCP‑ready information JSON  
+- full R5 canonical alignment  
 
-It is now **fully canonical**, **drift‑free**, and **ready for commit**.
+It is **fully canonical**, **drift‑free**, and **ready for commit**.
