@@ -1,89 +1,55 @@
 {
+  "layer": "L4_Continuity_Mechanics",
   "canonical": "R5",
-  "version": "1.0.0",
-  "summary": "Canonical index of all MCP dimensions across L3 and L4, including composite resonance envelopes.",
+  "path": "docs/MCP/L4_Continuity_Mechanics",
 
-  "layers": {
-    "L3_Forces_Unseen": {
-      "description": "Functional force-regime dimensions aligned with the S3 Spine.",
-      "clusters": {
-        "gradient": {
-          "semantic_axis": "gradientIntensity",
-          "dimensions": [
-            "L4",
-            "L5",
-            "L16",
-            "LH"
-          ]
-        },
-        "field": {
-          "semantic_axis": "fieldCoherence",
-          "dimensions": [
-            "L8",
-            "L10",
-            "L26"
-          ]
-        },
-        "rupture": {
-          "semantic_axis": "rupturePotential",
-          "dimensions": [
-            "L12"
-          ]
-        },
-        "integrity": {
-          "semantic_axis": "forceIntegrity",
-          "dimensions": [
-            "L32",
-            "LI"
-          ]
-        }
+  "dimensions": {
+    "proto": {
+      "id": "L11",
+      "file": "dimensions/L11.component.json",
+      "doc": "dimensions/L11.component.md"
+    },
+    "composite": {
+      "L33": {
+        "id": "L33",
+        "file": "dimensions/L33.json",
+        "doc": "dimensions/L33.md"
+      },
+      "L66": {
+        "id": "L66",
+        "file": "dimensions/L66.json",
+        "doc": "dimensions/L66.md"
+      },
+      "L99": {
+        "id": "L99",
+        "file": "dimensions/L99.json",
+        "doc": "dimensions/L99.md"
       }
     },
-
-    "L4_Continuity_Mechanics": {
-      "description": "Composite resonance dimensions formed from proto-resonance seeds.",
-      "clusters": {
-        "proto": {
-          "semantic_axis": "resonanceSeed",
-          "dimensions": [
-            "L11"
-          ]
-        },
-        "composite": {
-          "semantic_axis": "resonanceEnvelope",
-          "dimensions": [
-            "L33",
-            "L66",
-            "L99"
-          ]
-        }
+    "external_operator": {
+      "validator_pulse": {
+        "id": "validator_pulse",
+        "file": "dimensions/validator_pulse.json"
       }
     }
+  },
+
+  "docs": {
+    "module": "module.json",
+    "index": "dimension_index.json",
+    "continuity": "continuity.md",
+    "resonance": "resonance.md",
+    "cosmology": "cosmology.md"
+  },
+
+  "visuals": {
+    "atlas": "diagrams/atlas.md",
+    "diagram_index": "diagrams/diagram.md",
+    "cosmology_svg": "diagrams/cosmology.svg",
+    "composite_animation": "diagrams/composite_animation.svg"
   },
 
   "redirects": {
-    "L11": {
-      "seen": "L33",
-      "hidden": "L66",
-      "full": "L99"
-    },
-    "L33": {
-      "up": "L66",
-      "down": "L11"
-    },
-    "L66": {
-      "up": "L99",
-      "down": "L33"
-    },
-    "L99": {
-      "up": "validator_pulse",
-      "down": "L66"
-    }
-  },
-
-  "external_operator": {
-    "id": "validator_pulse",
-    "percentage": "1%",
-    "role": "external resonance source"
+    "registry": "redirects/redirect.registry.json"
   }
 }
