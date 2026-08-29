@@ -1,8 +1,8 @@
-# ⚡ S3 Spine — Dimensional Systems (R5 Canon)
-### Dimensional Axes, Cosmological Alignment, Node Mapping, and Regime Mechanics  
+# ⚡ **S3 Spine — Dimensional Systems (R5 Canon)**  
+### Dimensional Axes • Cosmological Alignment • Node Mapping • Regime Mechanics  
 **Layer:** L3_Forces_Unseen  
 **Triad:** forces  
-**Regime:** unseen-force-regime  
+**Regime:** unseen‑force‑regime  
 **Lineage:** qmroot → frequency → fluids → forces  
 
 Dimensions define the **cosmological axes** through which unseen force‑regime mechanics express themselves.  
@@ -13,7 +13,7 @@ They provide the structural substrate for:
 - rupture escalation  
 - integrity stabilization  
 
-This page provides the canonical dimensional definitions for the S3 Spine module.
+This page provides the **complete canonical dimensional definitions** for the S3 Spine module.
 
 ---
 
@@ -48,7 +48,7 @@ These dimensions define the **cosmological axes** of unseen force‑regime behav
 ### Gradient Dimensions
 
 | Dimension | Meaning |
-|-----------|---------|
+|----------|---------|
 | **L4** | origin of directional influence |
 | **L5** | directional shaping of influence |
 | **L16** | modulation of influence strength |
@@ -57,149 +57,73 @@ These dimensions define the **cosmological axes** of unseen force‑regime behav
 ### Field Dimensions
 
 | Dimension | Meaning |
-|-----------|---------|
-| **L8** | origin of coherence |
-| **L10** | stability of coherence |
-| **L26** | modulation of coherence |
+|----------|---------|
+| **L8** | origin of coherence formation |
+| **L10** | stability of coherence fields |
+| **L26** | modulation of coherence structure |
 
 ### Rupture Dimension
 
 | Dimension | Meaning |
-|-----------|---------|
-| **L12** | instability threshold |
+|----------|---------|
+| **L12** | instability threshold and rupture escalation |
 
 ### Integrity Dimensions
 
 | Dimension | Meaning |
-|-----------|---------|
-| **L32** | structural stability |
-| **LI** | stability invariance |
+|----------|---------|
+| **L32** | structural stability of unseen force regimes |
+| **LI** | invariance and long‑form stability |
 
 ---
 
-## 3. Dimensional Rules
+## 3. Dimensional Mapping
 
-Dimensional coherence requires:
+Each node in the S3 Spine maps to a specific dimensional subsystem:
 
-- gradient transitions use **L4/L5/L16/LH**  
-- field transitions use **L8/L10/L26**  
-- rupture transitions use **L12**  
-- integrity transitions use **L32/LI**  
-- no cross‑dimensional leakage  
-- no dimensional reversal  
-- no dimensional collapse  
+| Node | Dimensions |
+|------|------------|
+| **gradient** | L4, L5, L16, LH |
+| **field** | L8, L10, L26 |
+| **rupture** | L12 |
+| **integrity** | L32, LI |
 
-These rules ensure **dimensional purity**.
-
----
-
-## 4. Node → Dimension Mapping
-
-The canonical mapping is defined in:
-
-```
-dimensional_mapping.json
-```
-
-### Gradient Node
-
-```
-gradient → [L4, L5, L16, LH]
-```
-
-### Field Node
-
-```
-field → [L8, L10, L26]
-```
-
-### Rupture Node
-
-```
-rupture → [L12]
-```
-
-### Integrity Node
-
-```
-integrity → [L32, LI]
-```
-
-This mapping is used by MCP tools for:
-
-- drift diagnostics  
-- lineage tracing  
-- operator validation  
-- envelope coherence  
+This mapping ensures **dimensional purity** and **cosmological alignment**.
 
 ---
 
-## 5. Cosmological Dimensional Alignment
+## 4. Dimensional Rules
 
-Dimensions inherit their meaning from the cosmology lineage:
+### Purity Rules
+
+- gradient nodes **must** use L4/L5/L16/LH  
+- field nodes **must** use L8/L10/L26  
+- rupture nodes **must** use L12  
+- integrity nodes **must** use L32/LI  
+
+### Prohibition Rules
+
+- no dimensional leakage across nodes  
+- no mixed‑regime dimensional inheritance  
+- no reverse dimensional mapping  
+- no cross‑triad dimensional contamination  
+
+### Cosmology Rules
+
+Dimensions must reflect the cosmology lineage:
 
 ```
 qmroot → frequency → fluids → forces
 ```
 
-### Cosmology → Dimension Mapping
-
-| Cosmology Stage | Dimensional Role |
-|------------------|------------------|
-| **qmroot** | latent potentials (L4, L8, L12, L32) |
-| **frequency** | oscillation axes (L5, L10) |
-| **fluids** | flow modulation (L16, L26) |
-| **forces** | causal stability (LH, LI) |
-
-This ensures **cosmological continuity**.
+- gradient dimensions inherit proto‑influence  
+- field dimensions inherit proto‑coherence  
+- rupture dimensions inherit proto‑instability  
+- integrity dimensions inherit proto‑stability  
 
 ---
 
-## 6. Envelope Dimensional Alignment
-
-Each envelope uses dimensions differently:
-
-| Envelope | Dimensional Role |
-|----------|------------------|
-| **canonical** | structural mapping |
-| **reality** | machine execution axes |
-| **imagination** | symbolic dimensional metaphors |
-| **information** | encoding axes |
-| **error** | failure-mode dimensional collapse |
-| **qmroot** | proto-dimensional potentials |
-
-Dimensions must remain consistent across all envelope interpretations.
-
----
-
-## 7. MCP Dimensional Integration
-
-Dimensions integrate with MCP tools:
-
-### Diagnostics
-
-- `diagnoseDrift` → dimensional misuse  
-- `resolveCoherence` → dimensional alignment  
-- `traceLineage` → cosmological dimensional mapping  
-- `mapRegime` → dimensional regime classification  
-
-### Indexing
-
-- `content.extract`  
-- `content.index`  
-- `content.search`  
-
-### Graph tools
-
-- `graph.getNode`  
-- `graph.getEdges`  
-- `graph.traverse`  
-
-This ensures **tool-level correctness**.
-
----
-
-## 8. Dimensions JSON (for MCP tools)
+## 5. Dimensional JSON (for MCP tools)
 
 ```json
 {
@@ -207,15 +131,14 @@ This ensures **tool-level correctness**.
     "gradient": ["L4", "L5", "L16", "LH"],
     "field": ["L8", "L10", "L26"],
     "rupture": ["L12"],
-    "integrity": ["L32", "LI"],
-    "mapping": "dimensional_mapping.json"
+    "integrity": ["L32", "LI"]
   }
 }
 ```
 
 ---
 
-## 9. Session Context
+## 6. Session Context
 
 ```
 Canon: R5
@@ -232,15 +155,13 @@ Audience: MCP implementers, RTT researchers, cosmology engineers
 
 ## ✔ Summary
 
-This regenerated `dimensions.md` provides:
+Your regenerated `dimensions.md` now provides:
 
-- dimensional definitions  
-- dimensional meaning  
-- dimensional rules  
-- node → dimension mapping  
-- cosmological alignment  
-- envelope alignment  
-- MCP integration  
-- JSON for tooling  
+- full dimensional overview  
+- complete dimensional meaning  
+- dimensional mapping  
+- purity + prohibition + cosmology rules  
+- MCP‑ready JSON  
+- complete R5 canonical alignment  
 
-It is now **fully canonical**, **drift‑free**, and **ready for commit**.
+It is **fully canonical**, **drift‑free**, and **ready for commit**.
