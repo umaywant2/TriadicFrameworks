@@ -2,6 +2,14 @@
   "canonical": "R5",
   "layer": "L3_Forces_Unseen",
   "triad": "forces",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "id": "L12",
+  "name": "L12 Dimension",
+  "purpose": "Force-regime rupture modeling.",
+  "semantics": ["rupturePotential"],
+
+  "spine": "S3",
   "dimension": "L12",
   "title": "TriadicFrameworks MCP — L12 Dimensional Framework",
   "description": "Defines the 12-dimensional internal projection model, focusing on F-theory, elliptic fibrations, and dual-fiber influence channels within the unseen force regime.",
