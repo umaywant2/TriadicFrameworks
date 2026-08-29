@@ -3,10 +3,9 @@
   "layer": "L3_Forces_Unseen",
   "triad": "forces",
   "lineage": ["qmroot", "frequency", "fluids", "forces"],
-
-  "title": "S3 Spine — Prompt Catalog",
-  "description": "Canonical prompt catalog for the S3 Spine subsystem, providing structured MCP prompts for graph traversal, operator execution, dimensional amplification, and example interpretation.",
   "version": "1.0.0",
+
+  "id": "S3-Spine-Prompt-Catalog",
 
   "prompts": [
     {
@@ -24,7 +23,7 @@
     {
       "id": "s3.prompt.operator.apply",
       "category": "operator",
-      "description": "Apply a spine operator (push, pull, bind, gradient, fieldShift, ruptureForce) to a node and describe the resulting semantic changes.",
+      "description": "Apply a spine operator (push, pull, bind, gradient, fieldShift, ruptureForce) and describe resulting semantic changes.",
       "path": "docs/MCP/L3_Forces_Unseen/spine/operators.md"
     },
     {
@@ -36,20 +35,20 @@
     {
       "id": "s3.prompt.dimension.apply",
       "category": "dimension",
-      "description": "Apply dimensional amplification to a spine semantic using the 11-dimension subsystem.",
+      "description": "Apply dimensional amplification to a spine semantic using the 10-dimension subsystem.",
       "path": "docs/MCP/L3_Forces_Unseen/spine/dimensions.md"
     },
     {
       "id": "s3.prompt.dimension.map",
       "category": "dimension",
-      "description": "Explain how a specific dimension (L4, L5, L8, L10, L11, L12, L16, L26, L32, LH, LI) interacts with operators and semantics.",
+      "description": "Explain how a specific dimension (L4, L5, L8, L10, L12, L16, L26, L32, LH, LI) interacts with operators and semantics.",
       "path": "docs/MCP/L3_Forces_Unseen/spine/dimensional_mapping.json"
     },
     {
       "id": "s3.prompt.example.load",
       "category": "example",
       "description": "Load a spine example envelope (canonical, reality, imagination, information, error, qmroot).",
-      "path": "docs/MCP/L3_Forces_Unseen/spine/examples/spine.examples.registry.json"
+      "path": "docs/MCP/L3_Forces_Unseen/spine/spine.examples.registry.json"
     },
     {
       "id": "s3.prompt.example.describe",
@@ -64,22 +63,28 @@
       "path": "docs/MCP/L3_Forces_Unseen/spine/protocol.md"
     },
     {
+      "id": "s3.prompt.server.describe",
+      "category": "server",
+      "description": "Describe the MCP server configuration, capabilities, and endpoints for the S3 Spine subsystem.",
+      "path": "docs/MCP/L3_Forces_Unseen/spine/server.json"
+    },
+    {
+      "id": "s3.prompt.ai.metadata",
+      "category": "ai",
+      "description": "Explain the AI metadata structure for the S3 Spine subsystem.",
+      "path": "docs/MCP/L3_Forces_Unseen/spine/ai.metadata.json"
+    },
+    {
       "id": "s3.prompt.registry.describe",
       "category": "registry",
-      "description": "Describe the spine registry and its relationships across structural, operator, dimensional, and example assets.",
+      "description": "Describe the unified registry structure for the S3 Spine subsystem.",
       "path": "docs/MCP/L3_Forces_Unseen/spine/registry.md"
     },
     {
-      "id": "s3.prompt.schemas.describe",
-      "category": "schema",
-      "description": "Explain the schemas used by the S3 Spine subsystem including example, module, operator, dimensional, lineage, and session schemas.",
-      "path": "docs/MCP/L3_Forces_Unseen/spine/schemas.md"
-    },
-    {
-      "id": "s3.prompt.module.describe",
-      "category": "module",
-      "description": "Describe the S3 Spine module manifest including structural files, documentation, examples, and Docsbook metadata.",
-      "path": "docs/MCP/L3_Forces_Unseen/spine/manifest.json"
+      "id": "s3.prompt.resources.catalog",
+      "category": "resource",
+      "description": "Describe the resource catalog for the S3 Spine subsystem.",
+      "path": "docs/MCP/L3_Forces_Unseen/spine/resources.catalog.json"
     }
   ]
 }
