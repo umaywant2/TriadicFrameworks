@@ -1,36 +1,47 @@
 {
   "id": "L33",
   "layer": "L4_Continuity_Mechanics",
+  "triad": "continuity",
   "dimension": "L33",
   "name": "Seen Resonance Envelope",
   "canonical": "R5",
 
-  "summary": "L33 is the 1/3 resonance envelope formed from three L11 proto-resonance seeds. It represents the visible portion of the supsphere.",
+  "summary": "L33 is the 1/3 seen resonance envelope formed from three L11 proto-resonance seeds. It represents the visible portion of the continuity manifold.",
 
-  "composition": {
-    "components": ["L11", "L11", "L11"],
-    "structure": "triad"
-  },
-
+  "semantic_axis": "resonanceEnvelope",
   "role": "seen",
-  "category": "resonance",
-  "cluster": "envelope",
+  "category": "composite",
+  "fraction": "33%",
 
-  "description": {
-    "canonical": "L33 represents the visible resonance envelope. It is the first composite dimension formed from three L11 seeds, producing the 1/3 seen portion of the supsphere.",
-    "cosmology": "L33 corresponds to the visible resonance band in continuity mechanics. It is the first stable composite envelope.",
-    "mcp": "L33 is used for modeling visible resonance structures and continuity surfaces."
-  },
+  "composition": [
+    "L11",
+    "L11",
+    "L11"
+  ],
 
   "redirects": {
     "up": "L66",
     "down": "L11"
   },
 
+  "description": {
+    "canonical": "L33 defines the seen resonance envelope. It is the first stable composite structure in the continuity mechanics layer.",
+    "cosmology": "In the cosmology chain, L33 represents the emergence of seen resonance following the integrity node.",
+    "continuity": "L33 models the visible continuity surface derived from triadic proto-resonance.",
+    "mcp": "Used for modeling seen resonance behavior in continuity mechanics."
+  },
+
   "ai": {
+    "module": "L4_Continuity_Mechanics",
+    "dimension": "L33",
     "version": "1.0.0",
-    "keywords": ["resonance", "seen", "triad", "continuity"],
-    "purpose": "Models the visible resonance envelope in composite dimensional systems."
+    "keywords": [
+      "resonance",
+      "seen",
+      "continuity",
+      "composite",
+      "triad"
+    ],
+    "purpose": "Defines the seen resonance envelope for AI reasoning and composite modeling."
   }
 }
-
