@@ -2,6 +2,14 @@
   "canonical": "R5",
   "layer": "L3_Forces_Unseen",
   "triad": "forces",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "id": "L11",
+  "name": "L11 Dimension",
+  "purpose": "Force-regime continuity mapping.",
+  "semantics": ["influenceContinuity"],
+
+  "spine": "S3",
   "dimension": "L11",
   "title": "TriadicFrameworks MCP — L11 Dimensional Framework",
   "description": "Defines the 11-dimensional internal projection model, focusing on M-theory, branes, and hyperspace influence channels within the unseen force regime.",
