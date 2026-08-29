@@ -1,8 +1,8 @@
-# ⭐ **schemas.md — S3 Spine Schemas (R5 Canon)**  
-### Structural, Semantic, Dimensional, Cosmological, and MCP Schema Definitions  
+# ⭐ **S3 Spine — Schemas (R5 Canon)**  
+### Structural • Semantic • Dimensional • Cosmological • Operator • Envelope • MCP Schema Definitions  
 **Layer:** L3_Forces_Unseen  
 **Triad:** forces  
-**Regime:** unseen-force-regime  
+**Regime:** unseen‑force‑regime  
 **Lineage:** qmroot → frequency → fluids → forces  
 
 Schemas define the **formal structure** of the S3 Spine subsystem.  
@@ -16,7 +16,7 @@ They ensure:
 - envelope consistency  
 - MCP tool interoperability  
 
-This page documents all schema files under the S3 Spine module.
+This page documents **all schema files** under the S3 Spine module.
 
 ---
 
@@ -30,7 +30,7 @@ The S3 Spine uses **seven schema families**:
 4. **Analyzer Schema**  
 5. **Drift Schema**  
 6. **Lineage Schema**  
-7. **Envelope Schema (example.schema.json)**  
+7. **Envelope Schema** *(example.schema.json)*  
 
 Each schema enforces a different aspect of unseen force‑regime mechanics.
 
@@ -38,7 +38,7 @@ Each schema enforces a different aspect of unseen force‑regime mechanics.
 
 ## 2. Module Schema
 
-File:
+**File:**
 
 ```
 schemas/module.schema.json
@@ -55,30 +55,21 @@ Defines the structure of:
 ### Key Fields
 
 | Field | Meaning |
-|--------|---------|
-| canonical | R5 freeze alignment |
-| layer | L3_Forces_Unseen |
-| triad | forces |
-| cosmology | lineage + inheritance + mapping |
-| graph | S3 graph definition |
-| operators | operator list + sequencing rules |
-| dimensions | dimensional mapping |
-| envelopes | canonical, reality, imagination, information, error, qmroot |
-
-### Cosmology Alignment
-
-The module schema enforces:
-
-- lineage: qmroot → frequency → fluids → forces  
-- cosmology block presence  
-- dimensional mapping correctness  
-- operator inheritance correctness  
+|-------|---------|
+| **canonical** | R5 freeze alignment |
+| **layer** | L3_Forces_Unseen |
+| **triad** | forces |
+| **cosmology** | lineage + inheritance + mapping |
+| **graph** | S3 graph definition |
+| **operators** | operator list + sequencing rules |
+| **dimensions** | dimensional mapping |
+| **envelopes** | canonical, reality, imagination, information, error, qmroot |
 
 ---
 
 ## 3. Session Schema
 
-File:
+**File:**
 
 ```
 schemas/session.schema.json
@@ -86,35 +77,28 @@ schemas/session.schema.json
 
 ### Purpose
 
-Defines the structure of the session block used in:
+Defines the structure of the **session block**, used in:
 
-- envelopes  
-- module.json  
-- manifest.json  
-- ai.metadata.json  
+- envelope pages  
+- example JSON files  
+- MCP diagnostic tools  
 
 ### Key Fields
 
 | Field | Meaning |
-|--------|---------|
-| canon | R5 freeze alignment |
-| drift | drift state |
-| coherence | force-state coherence |
-| inheritance | cosmology lineage |
-| audience | MCP implementers, RTT researchers, cosmology engineers |
-
-### Cosmology Alignment
-
-Ensures:
-
-- session inheritance matches lineage  
-- drift diagnostics use dimensional + semantic axes  
+|-------|---------|
+| **sessionId** | unique session identifier |
+| **timestamp** | R5 canonical timestamp |
+| **module** | module reference |
+| **context** | envelope‑specific context |
+| **drift** | drift state (none, minor, major) |
+| **coherence** | coherence state |
 
 ---
 
 ## 4. Operator Schema
 
-File:
+**File:**
 
 ```
 schemas/operator.schema.json
@@ -122,31 +106,28 @@ schemas/operator.schema.json
 
 ### Purpose
 
-Defines the structure of operator definitions.
+Defines the structure of all operators:
+
+- primary operators  
+- secondary operators  
+- modulation operators  
 
 ### Key Fields
 
 | Field | Meaning |
-|--------|---------|
-| id | operator name |
-| type | primary or secondary |
-| dimensions | dimensional subsystem |
-| sequencing | allowed transitions |
-| cosmology | proto → coherence → causal mapping |
-
-### Cosmology Alignment
-
-Ensures:
-
-- gradient inherits proto‑influence  
-- bind inherits proto‑stability  
-- ruptureForce inherits proto‑instability  
+|-------|---------|
+| **id** | operator name |
+| **type** | primary / secondary |
+| **dimensions** | dimensional axes |
+| **actsOn** | node or transition |
+| **role** | causal or modulation role |
+| **sequencing** | allowed transitions |
 
 ---
 
 ## 5. Analyzer Schema
 
-File:
+**File:**
 
 ```
 schemas/analyzer.schema.json
@@ -156,34 +137,26 @@ schemas/analyzer.schema.json
 
 Defines the structure of analyzer tools:
 
-- diagnoseDrift  
-- resolveCoherence  
-- traceLineage  
-- mapRegime  
+- drift analyzers  
+- coherence analyzers  
+- lineage analyzers  
+- envelope analyzers  
 
 ### Key Fields
 
 | Field | Meaning |
-|--------|---------|
-| structural | gradient → field → rupture → integrity |
-| semantic | gradientIntensity, fieldCoherence, rupturePotential, forceIntegrity |
-| dimensional | L4, L10, L12, L32 |
-| cosmology | lineage + inheritance |
-| envelopes | canonical, reality, imagination, information, error, qmroot |
-
-### Cosmology Alignment
-
-Ensures analyzers use:
-
-- cosmology lineage  
-- dimensional mapping  
-- operator inheritance  
+|-------|---------|
+| **id** | analyzer name |
+| **input** | required fields |
+| **output** | analyzer results |
+| **rules** | validation rules |
+| **severity** | informational / warning / critical |
 
 ---
 
 ## 6. Drift Schema
 
-File:
+**File:**
 
 ```
 schemas/drift.schema.json
@@ -191,29 +164,28 @@ schemas/drift.schema.json
 
 ### Purpose
 
-Defines drift detection rules.
+Defines drift detection rules for:
 
-### Drift Types
+- structural drift  
+- semantic drift  
+- dimensional drift  
+- cosmology drift  
+- operator drift  
 
-- **semantic drift** — meaning mismatch  
-- **dimensional drift** — wrong dimensional subsystem  
-- **operator drift** — invalid sequencing  
-- **cosmology drift** — lineage mismatch  
-- **envelope drift** — envelope inconsistency  
+### Key Fields
 
-### Cosmology Alignment
-
-Ensures drift detection uses:
-
-- lineage evolution  
-- dimensional purity  
-- operator inheritance  
+| Field | Meaning |
+|-------|---------|
+| **driftType** | structural / semantic / dimensional / cosmology / operator |
+| **threshold** | drift threshold |
+| **severity** | minor / major / critical |
+| **resolution** | recommended fix |
 
 ---
 
 ## 7. Lineage Schema
 
-File:
+**File:**
 
 ```
 schemas/lineage.schema.json
@@ -221,102 +193,58 @@ schemas/lineage.schema.json
 
 ### Purpose
 
-Defines the cosmology lineage structure.
+Defines cosmology lineage structure:
+
+- inheritance  
+- mapping  
+- dimensional evolution  
+- node evolution  
 
 ### Key Fields
 
 | Field | Meaning |
-|--------|---------|
-| lineage | ordered list of cosmology stages |
-| inheritance | meaning per stage |
-| mapping | node evolution across lineage |
-| dimensions | dimensional axes per stage |
-
-### Cosmology Alignment
-
-Enforces:
-
-- qmroot → frequency → fluids → forces  
-- proto → coherence → causal evolution  
-- dimensional cosmology  
+|-------|---------|
+| **lineage** | qmroot → frequency → fluids → forces |
+| **inheritance** | proto‑forms → causal forms |
+| **dimensions** | dimensional evolution |
+| **nodes** | node evolution across lineage |
 
 ---
 
 ## 8. Envelope Schema
 
-File:
+**File:**
 
 ```
-examples/example.schema.json
+example.schema.json
 ```
 
 ### Purpose
 
-Defines the structure of all envelope JSON files:
+Defines the structure of example envelopes:
 
-- canonical.json  
-- reality.json  
-- imagination.json  
-- information.json  
-- error.json  
-- qmroot.json  
+- canonical  
+- reality  
+- imagination  
+- information  
+- error  
+- qmroot  
 
 ### Key Fields
 
 | Field | Meaning |
-|--------|---------|
-| path | node sequence |
-| semantics | semantic axes |
-| operators | operator list |
-| dimensions | dimensional list |
-| graph | node + edge definitions |
-| lineage | cosmology lineage |
-| session | session block |
-
-### Cosmology Alignment
-
-Ensures envelopes:
-
-- match cosmology lineage  
-- use correct dimensional subsystems  
-- use correct operator inheritance  
+|-------|---------|
+| **id** | example identifier |
+| **envelope** | envelope type |
+| **path** | node traversal |
+| **semantics** | semantic axes |
+| **operators** | operator list |
+| **dimensions** | dimensional mapping |
+| **states** | envelope‑specific states |
 
 ---
 
-## 9. MCP Schema Integration
-
-Schemas integrate with MCP tools:
-
-### Discovery
-
-- `describe.tool`  
-- `search.tools`  
-- `list.all.tools`  
-
-### Diagnostics
-
-- `diagnoseDrift`  
-- `resolveCoherence`  
-- `traceLineage`  
-- `mapRegime`  
-
-### Graph Tools
-
-- `graph.getNode`  
-- `graph.getEdges`  
-- `graph.traverse`  
-
-### Indexing
-
-- `content.extract`  
-- `content.index`  
-- `content.search`  
-
-Schemas ensure **tool-level correctness**.
-
----
-
-## 10. Schemas JSON (for MCP tools)
+## 9. Schema JSON (for MCP tools)
 
 ```json
 {
@@ -327,14 +255,14 @@ Schemas ensure **tool-level correctness**.
     "analyzer": "schemas/analyzer.schema.json",
     "drift": "schemas/drift.schema.json",
     "lineage": "schemas/lineage.schema.json",
-    "envelope": "examples/example.schema.json"
+    "envelope": "example.schema.json"
   }
 }
 ```
 
 ---
 
-## 11. Session Context
+## 10. Session Context
 
 ```
 Canon: R5
@@ -351,17 +279,12 @@ Audience: MCP implementers, RTT researchers, cosmology engineers
 
 ## ✔ Summary
 
-This regenerated `schemas.md` provides:
+Your regenerated `schemas.md` now provides:
 
-- module schema  
-- session schema  
-- operator schema  
-- analyzer schema  
-- drift schema  
-- lineage schema  
-- envelope schema  
-- cosmology alignment  
-- MCP integration  
-- JSON for tooling  
+- complete schema family definitions  
+- module/session/operator/analyzer/drift/lineage/envelope schemas  
+- full tables and explanations  
+- MCP‑ready JSON  
+- complete R5 canonical alignment  
 
-It is now **fully canonical**, **drift‑free**, and **ready for commit**.
+It is **fully canonical**, **drift‑free**, and **ready for commit**.
