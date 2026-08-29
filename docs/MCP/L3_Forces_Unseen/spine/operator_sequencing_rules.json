@@ -1,12 +1,12 @@
 {
+  "id": "S3-Spine-Operator-Sequencing",
   "canonical": "R5",
+  "version": "1.0.0",
   "layer": "L3_Forces_Unseen",
   "triad": "forces",
-  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+  "regime": "unseen-force-regime",
 
-  "title": "S3 Spine — Operator Sequencing Rules",
-  "description": "Canonical sequencing rules for force‑regime operators across S3 nodes, including semantic constraints, dimensional amplifiers, and rupture‑integrity safety conditions.",
-  "version": "0.1.0",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
 
   "nodes": ["gradient", "field", "rupture", "integrity"],
 
@@ -16,8 +16,17 @@
       "operators": ["push", "gradient", "fieldShift"],
       "constraints": {
         "semantics": ["gradientIntensity", "fieldCoherence"],
-        "dimensions": ["L4", "L5", "L8", "L16"],
+        "dimensions": ["L4", "L5", "L16", "LH", "L8", "L10", "L26"],
         "description": "Gradient operators may precede field operators when gradientIntensity is stable or increasing."
+      }
+    },
+    {
+      "pattern": ["field", "rupture"],
+      "operators": ["ruptureForce"],
+      "constraints": {
+        "semantics": ["fieldCoherence", "rupturePotential"],
+        "dimensions": ["L8", "L10", "L26", "L12"],
+        "description": "Field coherence collapse may induce rupture; ruptureForce accelerates this transition."
       }
     },
     {
@@ -25,26 +34,17 @@
       "operators": ["bind", "fieldShift"],
       "constraints": {
         "semantics": ["fieldCoherence", "forceIntegrity"],
-        "dimensions": ["L8", "L10", "L32", "LI"],
+        "dimensions": ["L8", "L10", "L26", "L32", "LI"],
         "description": "Field operators may precede integrity operators when fieldCoherence supports structural stability."
       }
     },
     {
-      "pattern": ["gradient", "rupture"],
-      "operators": ["push", "gradient", "ruptureForce"],
+      "pattern": ["rupture", "integrity"],
+      "operators": ["bind"],
       "constraints": {
-        "semantics": ["gradientIntensity", "rupturePotential"],
-        "dimensions": ["L4", "L12"],
-        "description": "High gradientIntensity may induce rupture; ruptureForce accelerates this transition."
-      }
-    },
-    {
-      "pattern": ["integrity", "rupture"],
-      "operators": ["ruptureForce"],
-      "constraints": {
-        "semantics": ["forceIntegrity", "rupturePotential"],
-        "dimensions": ["L32", "L12"],
-        "description": "Integrity may fail under ruptureForce; sequencing allowed only when rupturePotential exceeds threshold."
+        "semantics": ["rupturePotential", "forceIntegrity"],
+        "dimensions": ["L12", "L32", "LI"],
+        "description": "Integrity may be restored after rupture when bind stabilizes forceIntegrity."
       }
     }
   ],
@@ -52,88 +52,19 @@
   "forbiddenSequences": [
     {
       "pattern": ["rupture", "gradient"],
-      "reason": "Rupture cannot directly produce gradient; violates causal direction of S3 spine."
+      "reason": "Rupture cannot produce gradient; violates causal direction of S3 spine."
     },
     {
       "pattern": ["integrity", "gradient"],
-      "reason": "Integrity cannot directly generate gradient; requires field or continuity mediation."
+      "reason": "Integrity cannot generate gradient; requires field or continuity mediation."
     },
     {
       "pattern": ["rupture", "field"],
       "reason": "Rupture disrupts fieldCoherence; field cannot be reconstructed without gradient stabilization."
+    },
+    {
+      "pattern": ["integrity", "rupture"],
+      "reason": "Integrity cannot escalate directly into rupture; requires field instability."
     }
-  ],
-
-  "semanticConstraints": {
-    "gradientIntensity": {
-      "min": 0,
-      "max": 1,
-      "rules": [
-        "High gradientIntensity increases rupturePotential.",
-        "Low gradientIntensity stabilizes integrity.",
-        "FieldShift may redirect gradient flow but cannot exceed max intensity."
-      ]
-    },
-    "fieldCoherence": {
-      "rules": [
-        "FieldCoherence must be nonzero to transition to integrity.",
-        "Bind increases fieldCoherence.",
-        "RuptureForce reduces fieldCoherence."
-      ]
-    },
-    "rupturePotential": {
-      "rules": [
-        "RupturePotential increases under push and ruptureForce.",
-        "Bind and pull suppress rupturePotential.",
-        "Integrity sequencing requires rupturePotential below threshold."
-      ]
-    },
-    "forceIntegrity": {
-      "rules": [
-        "Integrity increases under bind and pull.",
-        "Integrity decreases under push and ruptureForce.",
-        "Integrity must exceed threshold to suppress rupture."
-      ]
-    }
-  },
-
-  "dimensionalAmplifiers": {
-    "gradient": ["L4", "L5", "L16", "LH"],
-    "field": ["L8", "L10", "L26", "LH"],
-    "rupture": ["L12", "L32"],
-    "integrity": ["L32", "LI", "L8"]
-  },
-
-  "operatorCompatibility": {
-    "push": {
-      "compatibleWith": ["gradient", "field"],
-      "incompatibleWith": ["integrity"],
-      "description": "Push amplifies gradient; may destabilize integrity."
-    },
-    "pull": {
-      "compatibleWith": ["gradient", "integrity"],
-      "incompatibleWith": ["rupture"],
-      "description": "Pull stabilizes gradient and integrity; suppresses rupture."
-    },
-    "bind": {
-      "compatibleWith": ["field", "integrity"],
-      "incompatibleWith": ["rupture"],
-      "description": "Bind increases coherence and integrity; cannot follow rupture."
-    },
-    "gradient": {
-      "compatibleWith": ["gradient", "field", "rupture"],
-      "incompatibleWith": [],
-      "description": "Gradient modulation is universally compatible except after rupture."
-    },
-    "fieldShift": {
-      "compatibleWith": ["field", "integrity"],
-      "incompatibleWith": ["rupture"],
-      "description": "FieldShift reorients fields; cannot operate after rupture."
-    },
-    "ruptureForce": {
-      "compatibleWith": ["rupture"],
-      "incompatibleWith": ["field", "integrity"],
-      "description": "RuptureForce increases rupturePotential; incompatible with stabilization operators."
-    }
-  }
+  ]
 }
