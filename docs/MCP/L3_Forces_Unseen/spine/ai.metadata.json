@@ -2,12 +2,50 @@
   "canonical": "R5",
   "layer": "L3_Forces_Unseen",
   "triad": "forces",
-  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+  "lineage": [
+    "qmroot",
+    "frequency",
+    "fluids",
+    "forces"
+  ],
 
   "id": "S3-Spine-AI",
   "title": "S3 Spine — AI Metadata",
-  "description": "AI metadata for the S3 Spine subsystem, enabling MCP agents, Docsbook engines, and AI tooling to discover, classify, and interpret structural, semantic, dimensional, operator, sequencing, and example assets.",
+  "description": "AI metadata for the S3 Spine subsystem, enabling MCP agents, Docsbook engines, and AI tooling to discover, classify, and interpret structural, semantic, dimensional, operator, sequencing, cosmology, and example assets.",
   "version": "1.0.0",
+
+  "cosmology": {
+    "lineage": [
+      "qmroot",
+      "frequency",
+      "fluids",
+      "forces"
+    ],
+    "triad": "forces",
+    "regime": "unseen-force-regime",
+    "origin": "qmroot",
+
+    "inheritance": {
+      "qmroot": "latent potentials of influence, coherence, rupture, stability",
+      "frequency": "oscillation and continuity of unseen influence",
+      "fluids": "seen-state flow and continuity mechanics",
+      "forces": "unseen causal mechanics expressed as gradients, fields, rupture, integrity"
+    },
+
+    "mapping": {
+      "gradient": "proto-influence → influence → causal gradient",
+      "field": "proto-coherence → coherence → influence field",
+      "rupture": "proto-instability → instability → rupture potential",
+      "integrity": "proto-stability → stability → force integrity"
+    },
+
+    "dimensions": {
+      "gradient": ["L4", "L5", "L16", "LH"],
+      "field": ["L8", "L10", "L26"],
+      "rupture": ["L12"],
+      "integrity": ["L32", "LI"]
+    }
+  },
 
   "ai": {
     "module": "spine",
@@ -24,7 +62,9 @@
       "operators",
       "dimensions",
       "sequencing",
-      "examples"
+      "examples",
+      "cosmology",
+      "lineage"
     ],
     "audience": [
       "MCP implementers",
@@ -65,29 +105,5 @@
       "examples/error.001.json",
       "examples/qmroot.001.json"
     ]
-  },
-
-  "catalogs": {
-    "tools": "tools.catalog.json",
-    "resources": "resources.catalog.json",
-    "prompts": "prompts.catalog.json"
-  },
-
-  "docsbook": {
-    "front_door": "README.md",
-    "sitemap": "sitemap.json",
-    "category": "L3 Forces Unseen",
-    "badge": "⚡ S3 Spine — AI Metadata"
-  },
-
-  "session": {
-    "canon": "R5",
-    "modules": "L3_Forces_Unseen / spine / ai.metadata",
-    "drift": "none",
-    "coherence": "force-state coherence",
-    "format": "ai.metadata.json",
-    "version": "1.0.0",
-    "inheritance": "qmroot → frequency → fluids → forces",
-    "audience": "MCP implementers, RTT researchers, cosmology engineers"
   }
 }
