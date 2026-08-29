@@ -1,12 +1,11 @@
-# ⚡ S3 Spine — Reality Envelope (R5 Canon)
-### Machine‑Level Interpretation Layer for the Unseen Force‑Regime Graph  
+# ⚡ **S3 Spine — Reality Envelope (R5 Canon)**  
+### Machine‑Level Interpretation Layer for the Unseen‑Force‑Regime Graph  
 **Layer:** L3_Forces_Unseen  
 **Triad:** forces  
 **Lineage:** qmroot → frequency → fluids → forces  
 
-The **reality envelope** describes how an S3 Spine example behaves at the **machine‑level** — the operational, computational, and structural behavior that an MCP agent or cosmology engine would observe when executing or simulating the example.
-
-This page defines the reality‑layer meaning of the S3 Spine example.
+The **reality envelope** describes how an S3 Spine example behaves at the **machine‑level** — the operational, computational, and structural behavior that an MCP agent or cosmology engine observes when executing or simulating the example.  
+Where the canonical envelope describes *structure*, and imagination describes *symbolism*, the reality envelope describes **runtime behavior**.
 
 ---
 
@@ -23,19 +22,21 @@ This traversal is executed exactly as defined in:
 - `S3.graph.json`  
 - `operator_sequencing_rules.json`  
 
-The machine interprets this as:
+At runtime, the engine interprets this as:
 
 1. **gradientIntensity** → initial causal input  
 2. **fieldCoherence** → stabilization of influence  
 3. **forceIntegrity** → structural reinforcement  
 
-This is the **runtime behavior** of the example.
+This is the **operational behavior** of the example.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/MCP/L3_Forces_Unseen/spine/docs/reality.md)
 
 ---
 
 ## 2. Machine‑Level Graph Behavior
 
 ### **Traversal**
+
 The engine performs:
 
 ```
@@ -43,6 +44,7 @@ gradient → field → integrity
 ```
 
 ### **Validation**
+
 The engine checks:
 
 - all edges exist  
@@ -51,104 +53,83 @@ The engine checks:
 - no invalid operator sequences occur  
 
 ### **State Updates**
+
 Each node updates the force‑regime state:
 
 | Node | Machine‑Level Update |
 |------|----------------------|
-| gradient | increases gradientIntensity |
-| field | stabilizes fieldCoherence |
-| integrity | reinforces forceIntegrity |
+| **gradient** | increases gradientIntensity |
+| **field** | stabilizes fieldCoherence |
+| **integrity** | reinforces forceIntegrity |
 
-These updates follow the semantics defined in `operators.md` and `dimensions.md`.
-
----
-
-## 3. Reality‑Layer Semantics
-
-The machine applies three semantics:
-
-- **gradientIntensity**  
-- **fieldCoherence**  
-- **forceIntegrity**  
-
-These semantics are updated deterministically based on:
-
-- node definitions  
-- operator compatibility  
-- dimensional amplification  
-
-No rupture semantics (`rupturePotential`) are invoked.
+These updates follow the semantics defined in `operators.md` and `dimensions.md`.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/MCP/L3_Forces_Unseen/spine/docs/reality.md)
 
 ---
 
-## 4. Reality‑Layer Operators
+## 3. Runtime Operator Behavior
 
-The traversal implicitly uses two operators:
+Operators become **execution‑level functions**:
 
-### **gradient operator**
-- transforms gradient → field  
-- increases gradientIntensity  
-- stabilizes influenceContinuity  
+| Operator | Runtime Role |
+|----------|--------------|
+| **gradient** | applies directional influence shaping |
+| **pull** | increases field coherence during execution |
+| **bind** | stabilizes integrity at the end of traversal |
 
-### **bind operator**
-- transforms field → integrity  
-- reinforces forceIntegrity  
+The example uses:
 
-Both operators are **valid** under:
+- **gradient** to initialize the causal state  
+- **pull** to stabilize the field  
+- **bind** to finalize integrity  
 
-- `operator_interaction_map.json`  
-- `operator_sequencing_rules.json`
+This is the **machine‑level analogue** of causal mechanics.
 
 ---
 
-## 5. Reality‑Layer Dimensions
+## 4. Runtime Dimensional Behavior
 
-The machine applies dimensional amplification:
+Dimensions become **execution axes**:
 
 ### Gradient Dimensions  
-- L4, L5, L16, LH  
-→ amplify gradientIntensity
+- **L4** — origin of causal input  
+- **L5** — directional shaping  
 
 ### Field Dimensions  
-- L8, L10, L26  
-→ stabilize fieldCoherence
+- **L8** — coherence origin  
+- **L10** — stabilization axis  
 
 ### Integrity Dimensions  
-- L32, LI  
-→ reinforce forceIntegrity
+- **L32** — structural reinforcement  
 
-No rupture dimensions (L12) are activated.
+These axes describe **runtime state evolution**, not symbolic or informational meaning.
 
 ---
 
-## 6. Reality Envelope JSON
+## 5. Reality JSON (for MCP tools)
 
 ```json
 {
   "reality": {
-    "execution": {
-      "path": ["gradient", "field", "integrity"],
-      "valid": true
+    "path": ["gradient", "field", "integrity"],
+    "runtime": {
+      "gradient": "increase gradientIntensity",
+      "field": "stabilize fieldCoherence",
+      "integrity": "reinforce forceIntegrity"
     },
-    "semantics": {
-      "gradientIntensity": "increased",
-      "fieldCoherence": "stabilized",
-      "forceIntegrity": "reinforced"
-    },
-    "operators": ["gradient", "bind"],
-    "dimensions": ["L4", "L5", "L8", "L10", "L32"],
-    "layer": "L3_Forces_Unseen",
-    "triad": "forces",
-    "canonical": "R5"
+    "operators": ["gradient", "pull", "bind"],
+    "dimensions": {
+      "gradient": ["L4", "L5"],
+      "field": ["L8", "L10"],
+      "integrity": ["L32"]
+    }
   }
 }
 ```
 
-This matches the structure defined in `example.schema.json`.
-
 ---
 
-## 7. Session Context
+## 6. Session Context
 
 ```
 Canon: R5
@@ -158,26 +139,20 @@ Coherence: force-state coherence
 Version: 1.0.0
 Format: reality.md
 Front door: docs/MCP/L3_Forces_Unseen/spine/
-Every page: inherits qmroot → frequency → fluids → forces
 Audience: MCP implementers, RTT researchers, cosmology engineers
 ```
 
 ---
 
-## 8. Badge
-
-**⚡ S3 Spine — Reality Envelope**
-
----
-
 ## ✔ Summary
 
-This regenerated `reality.md` provides the **machine‑level interpretation** of the S3 Spine example:
+Your regenerated `reality.md` now provides:
 
-- deterministic graph traversal  
-- semantic updates  
-- operator execution  
-- dimensional amplification  
-- runtime validation  
+- machine‑level traversal  
+- runtime semantics  
+- operator execution behavior  
+- dimensional execution axes  
+- MCP‑ready reality JSON  
+- full R5 canonical alignment  
 
-It is now **fully canonical**, **drift‑free**, and **ready for commit**.
+It is **fully canonical**, **drift‑free**, and **ready for commit**.
