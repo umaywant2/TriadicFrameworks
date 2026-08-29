@@ -1,78 +1,70 @@
 {
+  "id": "S3-Spine-Dimensional-Mapping",
   "canonical": "R5",
+  "version": "1.0.0",
   "layer": "L3_Forces_Unseen",
   "triad": "forces",
-  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+  "regime": "unseen-force-regime",
 
-  "title": "S3 Spine — Dimensional Mapping",
-  "description": "Canonical mapping of S3 nodes to dimensional constructs (L4–LI), including semantic roles and operator amplification.",
-  "version": "0.1.0",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
 
   "nodes": [
     {
       "id": "gradient",
       "semantics": ["gradientIntensity"],
       "dimensions": [
-        { "id": "L4", "role": "gradient-axis" },
-        { "id": "L5", "role": "gradient-field bridge" },
-        { "id": "L16", "role": "gradient-field synthesis" },
-        { "id": "LH", "role": "harmonic gradient-field" }
+        { "id": "L4", "role": "influence-origin" },
+        { "id": "L5", "role": "influence-direction" },
+        { "id": "L16", "role": "influence-modulation" },
+        { "id": "LH", "role": "harmonic-influence-axis" }
       ],
-      "operators": ["push", "pull", "gradient"]
+      "operators": ["push", "gradient"]
     },
+
     {
       "id": "field",
-      "semantics": ["fieldCoherence", "influenceContinuity"],
+      "semantics": ["fieldCoherence"],
       "dimensions": [
-        { "id": "L5", "role": "gradient-field bridge" },
-        { "id": "L8", "role": "field-coherence" },
-        { "id": "L10", "role": "coherence-continuity" },
-        { "id": "L26", "role": "multi-axis coherence" },
-        { "id": "LH", "role": "harmonic gradient-field" }
+        { "id": "L8", "role": "coherence-origin" },
+        { "id": "L10", "role": "coherence-stability" },
+        { "id": "L26", "role": "coherence-modulation" }
       ],
-      "operators": ["bind", "fieldShift", "gradient"]
+      "operators": ["pull", "fieldShift", "bind"]
     },
+
     {
       "id": "rupture",
       "semantics": ["rupturePotential"],
       "dimensions": [
-        { "id": "L12", "role": "rupture-axis" },
-        { "id": "L32", "role": "integrity-axis (rupture counterbalance)" }
+        { "id": "L12", "role": "instability-threshold" }
       ],
-      "operators": ["ruptureForce", "push", "gradient"]
+      "operators": ["ruptureForce"]
     },
+
     {
       "id": "integrity",
       "semantics": ["forceIntegrity"],
       "dimensions": [
-        { "id": "L32", "role": "integrity-axis" },
-        { "id": "LI", "role": "integrity-invariant" },
-        { "id": "L8", "role": "coherence support" }
+        { "id": "L32", "role": "structural-stability" },
+        { "id": "LI", "role": "invariance-axis" }
       ],
-      "operators": ["bind", "pull", "fieldShift"]
+      "operators": ["bind"]
     }
   ],
 
   "dimensionRoles": {
-    "L4": "Base gradient dimensional anchor",
-    "L5": "Gradient-field bridge",
-    "L8": "Field-coherence axis",
-    "L10": "Coherence-continuity axis",
-    "L11": "Continuity axis (supporting field→integrity transitions)",
-    "L12": "Rupture axis",
-    "L16": "Gradient-field synthesis",
-    "L26": "Multi-axis coherence",
-    "L32": "Integrity axis",
-    "LH": "Harmonic gradient-field",
-    "LI": "Integrity invariant"
-  },
+    "L4": "Influence origin axis",
+    "L5": "Influence direction axis",
+    "L16": "Influence modulation axis",
+    "LH": "Harmonic influence axis",
 
-  "operatorAmplification": {
-    "push": ["L4", "L5", "L16"],
-    "pull": ["L4", "L5", "L16"],
-    "bind": ["L8", "L10", "L32", "LI"],
-    "gradient": ["L4", "L5", "L16"],
-    "fieldShift": ["L8", "L10", "L26"],
-    "ruptureForce": ["L12", "L32"]
+    "L8": "Field coherence origin",
+    "L10": "Field coherence stability",
+    "L26": "Field coherence modulation",
+
+    "L12": "Rupture instability threshold",
+
+    "L32": "Structural stability axis",
+    "LI": "Integrity invariance axis"
   }
 }
