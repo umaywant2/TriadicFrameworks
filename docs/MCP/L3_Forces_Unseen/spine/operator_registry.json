@@ -1,1 +1,68 @@
+{
+  "id": "S3-Spine-Operator-Registry",
+  "canonical": "R5",
+  "version": "1.0.0",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "regime": "unseen-force-regime",
+
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "operators": [
+    {
+      "id": "push",
+      "category": "secondary",
+      "semantics": ["gradientIntensity"],
+      "dimensions": ["L4", "L5", "L16", "LH"],
+      "actsOn": ["gradient"],
+      "description": "Increases gradientIntensity and amplifies influence propagation."
+    },
+    {
+      "id": "pull",
+      "category": "secondary",
+      "semantics": ["fieldCoherence"],
+      "dimensions": ["L8", "L10", "L26"],
+      "actsOn": ["field"],
+      "description": "Increases fieldCoherence and stabilizes influence fields."
+    },
+    {
+      "id": "fieldShift",
+      "category": "secondary",
+      "semantics": ["fieldCoherence"],
+      "dimensions": ["L8", "L10", "L26"],
+      "actsOn": ["field"],
+      "description": "Modulates field structure and adjusts coherence patterns."
+    },
+    {
+      "id": "gradient",
+      "category": "primary",
+      "semantics": ["gradientIntensity"],
+      "dimensions": ["L4", "L5", "L16", "LH"],
+      "actsOn": ["gradient"],
+      "description": "Shapes influence and controls gradient-field transitions."
+    },
+    {
+      "id": "ruptureForce",
+      "category": "primary",
+      "semantics": ["rupturePotential"],
+      "dimensions": ["L12"],
+      "actsOn": ["field", "rupture"],
+      "description": "Escalates instability and collapses fieldCoherence."
+    },
+    {
+      "id": "bind",
+      "category": "primary",
+      "semantics": ["fieldCoherence", "forceIntegrity"],
+      "dimensions": ["L8", "L10", "L32", "LI"],
+      "actsOn": ["field", "integrity"],
+      "description": "Stabilizes integrity and reinforces field coherence."
+    }
+  ],
+
+  "files": {
+    "interaction_map": "operator_interaction_map.json",
+    "sequencing_rules": "operator_sequencing_rules.json",
+    "documentation": "operators.md"
+  }
+}
 
