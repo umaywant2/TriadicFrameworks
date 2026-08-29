@@ -2,6 +2,14 @@
   "canonical": "R5",
   "layer": "L3_Forces_Unseen",
   "triad": "forces",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "id": "LH",
+  "name": "LH Dimension",
+  "purpose": "High-order harmonic force-regime behavior.",
+  "semantics": ["gradientIntensity", "fieldCoherence"],
+
+  "spine": "S3",
   "dimension": "LH",
   "title": "TriadicFrameworks MCP — Higher-Dimensional Framework (LH)",
   "description": "Defines generalized higher-dimensional constructs including vector spaces, rotation planes, hyperspace geometry, and string-theoretic dimensionality as internal influence channels within the unseen force regime.",
