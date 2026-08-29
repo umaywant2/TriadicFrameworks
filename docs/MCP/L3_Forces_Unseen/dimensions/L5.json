@@ -1,85 +1,78 @@
 {
-  "canonical": "R5",
+  "id": "L5",
   "layer": "L3_Forces_Unseen",
   "triad": "forces",
-  "lineage": ["qmroot", "frequency", "fluids", "forces"],
-
-  "id": "L5",
-  "name": "L5 Dimension",
-  "purpose": "Secondary force-regime extension.",
-  "semantics": ["gradientIntensity", "fieldCoherence"],
-
-  "spine": "S3",
-  "description": "Defines the 5-dimensional internal projection model, focusing on Kaluza–Klein theory as an internal axis of influence within the unseen force regime.",
   "dimension": "L5",
-  "title": "TriadicFrameworks MCP — L5 Dimensional Framework",
-  "note": "In RTT cosmology, 5D constructs represent compactified influence channels inside L3 force-state mechanics.",
+  "name": "Influence Direction",
+  "canonical": "R5",
 
-  "structure": {
-    "mathematical": [
-      "5-dimensional manifolds",
-      "compactified dimensions",
-      "fiber bundles",
-      "higher-dimensional gauge symmetry"
-    ],
-    "physical": [
-      "Kaluza–Klein unification of electromagnetism and gravity",
-      "compactified fifth dimension"
-    ],
-    "interpretation": [
-      "fifth dimension as a hidden influence axis",
-      "gauge fields emerging from geometric projection"
-    ]
-  },
+  "summary": "L5 defines the directional axis of unseen influence. It is the second structural component of the gradient node and determines the orientation of gradientIntensity within the S3 Spine.",
 
-  "rtt_reinterpretation": {
-    "summary": "The fifth dimension is an internal influence channel compactified within the L3 force regime.",
-    "details": [
-      "Kaluza–Klein geometry maps directly to influence-field coherence.",
-      "The compactified dimension represents a hidden gradient pathway.",
-      "Gauge fields emerge as projections of unseen force-regime structure.",
-      "5D manifolds define continuity surfaces inside influence channels."
-    ]
-  },
-
-  "force_regime_mapping": {
-    "gradientIntensity": "The compactified dimension defines a hidden gradient axis.",
-    "fieldCoherence": "Gauge symmetry corresponds to coherence within influence fields.",
-    "influenceContinuity": "5D manifolds map to continuity across compactified influence channels.",
-    "rupturePotential": "Dimensional stress surfaces define rupture thresholds in compactified regimes.",
-    "forceIntegrity": "Unified geometric structure reinforces internal force-state stability."
-  },
-
-  "projection_semantics": {
-    "axes": 5,
-    "type": "internal",
-    "interpretation": "The fifth axis is compactified, representing a hidden influence channel within the unseen force regime.",
-    "examples": [
-      "Gauge fields as projections of 5D geometry.",
-      "Compactified circles (S¹) as influence loops.",
-      "Gravity-electromagnetism unification as force-regime coherence."
-    ]
-  },
-
-  "examples": [
-    {
-      "name": "Gauge Field Projection",
-      "structure": "Kaluza–Klein compactified dimension",
-      "mapping": ["fieldCoherence", "influenceContinuity"],
-      "interpretation": "Gauge fields emerge from the geometry of the compactified fifth dimension, stabilizing influence-field coherence."
-    },
-    {
-      "name": "Hidden Gradient Axis",
-      "structure": "5D manifold",
-      "mapping": ["gradientIntensity", "forceIntegrity"],
-      "interpretation": "The fifth dimension defines a hidden gradient pathway that reinforces internal force-state stability."
-    }
+  "lineage": [
+    "qmroot",
+    "frequency",
+    "fluids",
+    "forces"
   ],
 
-  "cosmology": {
-    "lineage": "qmroot → frequency → fluids → forces → internal 5D projection",
-    "triad_alignment": "unseen",
-    "notes": "L5 dimensional constructs extend L3 force-regime mechanics through compactified influence channels."
+  "semantic_axis": "gradientIntensity",
+
+  "role": "direction",
+  "category": "gradient",
+  "cluster": "gradient-origin",
+
+  "description": {
+    "canonical": "L5 establishes the directional orientation of unseen influence. It refines the origin defined by L4 and determines the slope, heading, and directional bias of gradientIntensity.",
+    "cosmology": "In the cosmology chain, L5 represents the emergence of directional bias from proto-origin states. It is the second stage of gradient formation within force-regime mechanics.",
+    "spine": "Within the S3 Spine, L5 is the directional dimension of the gradient node, shaping the influence vector that precedes field formation.",
+    "mcp": "In MCP operations, L5 is used to orient gradient-state mechanics, providing the directional coordinate for influence modeling."
+  },
+
+  "operators": {
+    "primary": [
+      "gradient"
+    ],
+    "secondary": [
+      "push"
+    ],
+    "forbidden": [
+      "ruptureForce",
+      "bind",
+      "fieldShift",
+      "pull"
+    ]
+  },
+
+  "valid_transitions": [
+    "L5 → L16",
+    "L5 → LH",
+    "L5 → L8"
+  ],
+
+  "forbidden_transitions": [
+    "L5 → L12",
+    "L5 → L32",
+    "L5 → LI"
+  ],
+
+  "spine_mapping": {
+    "node": "gradient",
+    "semantic": "gradientIntensity",
+    "position": "direction",
+    "causal_role": "orienting influence vector"
+  },
+
+  "ai": {
+    "module": "L3_Forces_Unseen",
+    "dimension": "L5",
+    "version": "1.0.0",
+    "keywords": [
+      "gradient",
+      "direction",
+      "influence",
+      "orientation",
+      "force-regime"
+    ],
+    "purpose": "Defines the directional axis of unseen influence for AI reasoning and MCP gradient orientation."
   }
 }
-
