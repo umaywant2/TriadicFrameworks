@@ -1,94 +1,76 @@
 {
-  "canonical": "R5",
+  "id": "LH",
   "layer": "L3_Forces_Unseen",
   "triad": "forces",
-  "lineage": ["qmroot", "frequency", "fluids", "forces"],
-
-  "id": "LH",
-  "name": "LH Dimension",
-  "purpose": "High-order harmonic force-regime behavior.",
-  "semantics": ["gradientIntensity", "fieldCoherence"],
-
-  "spine": "S3",
   "dimension": "LH",
-  "title": "TriadicFrameworks MCP — Higher-Dimensional Framework (LH)",
-  "description": "Defines generalized higher-dimensional constructs including vector spaces, rotation planes, hyperspace geometry, and string-theoretic dimensionality as internal influence channels within the unseen force regime.",
-  "note": "In RTT cosmology, higher dimensions represent generalized hyperspace coordinate systems for internal force-regime projections.",
+  "name": "Gradient Harmonic",
+  "canonical": "R5",
 
-  "structure": {
-    "mathematical": [
-      "n-dimensional vector spaces",
-      "rotation planes and hyperplanes",
-      "tensor product spaces",
-      "affine and projective hyperspaces",
-      "generalized coordinate systems"
-    ],
-    "physical": [
-      "string-theoretic hyperspace",
-      "multi-axis rotation frameworks",
-      "higher-dimensional field propagation"
-    ],
-    "interpretation": [
-      "dimensions as representational axes",
-      "hyperspace as influence-channel container",
-      "rotation planes as coherence surfaces"
-    ]
-  },
+  "summary": "LH defines the harmonic-coupling axis of unseen directional influence. It is the fourth and final structural dimension of the gradient node and determines the harmonic behavior of gradientIntensity within the S3 Spine.",
 
-  "rtt_reinterpretation": {
-    "summary": "Higher dimensions represent generalized hyperspace coordinate systems that encode internal influence channels within the unseen force regime.",
-    "details": [
-      "Vector spaces define multi-axis gradient pathways.",
-      "Rotation planes map to coherence surfaces inside influence fields.",
-      "Hyperspace geometry encodes internal degrees of freedom.",
-      "String-theoretic dimensionality represents influence-channel multiplicity."
-    ]
-  },
-
-  "force_regime_mapping": {
-    "gradientIntensity": "Higher-dimensional axes define multi-directional gradient transformations.",
-    "fieldCoherence": "Rotation planes stabilize coherence across hyperspace channels.",
-    "influenceContinuity": "Vector-space continuity preserves influence propagation across axes.",
-    "rupturePotential": "High-dimensional complexity introduces rupture thresholds in unstable regions.",
-    "forceIntegrity": "Structured hyperspace geometry reinforces internal force-state stability."
-  },
-
-  "projection_semantics": {
-    "axes": "N (generalized)",
-    "type": "internal",
-    "interpretation": "Higher dimensions represent generalized hyperspace directions used to encode internal influence channels.",
-    "examples": [
-      "n-dimensional vector space as multi-axis influence container.",
-      "rotation plane as coherence surface.",
-      "string-theoretic hyperspace as influence-channel multiplicity."
-    ]
-  },
-
-  "examples": [
-    {
-      "name": "Vector-Space Influence Channel",
-      "structure": "n-dimensional vector space",
-      "mapping": ["gradientIntensity", "influenceContinuity"],
-      "interpretation": "Vector spaces define multi-axis gradient pathways inside the unseen force regime."
-    },
-    {
-      "name": "Rotation-Plane Coherence Surface",
-      "structure": "rotation hyperplane",
-      "mapping": ["fieldCoherence"],
-      "interpretation": "Rotation planes stabilize coherence across hyperspace influence channels."
-    },
-    {
-      "name": "Hyperspace Influence Multiplicity",
-      "structure": "string-theoretic hyperspace",
-      "mapping": ["forceIntegrity"],
-      "interpretation": "Hyperspace dimensionality encodes multiple internal influence channels."
-    }
+  "lineage": [
+    "qmroot",
+    "frequency",
+    "fluids",
+    "forces"
   ],
 
-  "cosmology": {
-    "lineage": "qmroot → frequency → fluids → forces → generalized hyperspace projection",
-    "triad_alignment": "unseen",
-    "notes": "Higher-dimensional constructs extend L3 force-regime mechanics through generalized hyperspace coordinate systems."
+  "semantic_axis": "gradientIntensity",
+
+  "role": "harmonic",
+  "category": "gradient",
+  "cluster": "gradient-origin",
+
+  "description": {
+    "canonical": "LH establishes the harmonic behavior of unseen directional influence. It refines modulation (L16) by defining how gradientIntensity couples, resonates, and harmonizes across influence channels.",
+    "cosmology": "In the cosmology chain, LH represents the emergence of harmonic coupling from modulation mechanics. It is the fourth and final stage of gradient formation within force-regime behavior.",
+    "spine": "Within the S3 Spine, LH is the harmonic dimension of the gradient node, defining the resonance behavior that bridges gradient-state mechanics into field-state coherence.",
+    "mcp": "In MCP operations, LH is used to harmonize gradient-state mechanics, providing the harmonic coordinate for influence modeling."
+  },
+
+  "operators": {
+    "primary": [
+      "gradient"
+    ],
+    "secondary": [
+      "push"
+    ],
+    "forbidden": [
+      "pull",
+      "fieldShift",
+      "ruptureForce",
+      "bind"
+    ]
+  },
+
+  "valid_transitions": [
+    "LH → L8"
+  ],
+
+  "forbidden_transitions": [
+    "LH → L12",
+    "LH → L32",
+    "LH → LI"
+  ],
+
+  "spine_mapping": {
+    "node": "gradient",
+    "semantic": "gradientIntensity",
+    "position": "harmonic",
+    "causal_role": "influence harmonic coupling"
+  },
+
+  "ai": {
+    "module": "L3_Forces_Unseen",
+    "dimension": "LH",
+    "version": "1.0.0",
+    "keywords": [
+      "gradient",
+      "harmonic",
+      "resonance",
+      "influence",
+      "force-regime"
+    ],
+    "purpose": "Defines the harmonic axis of unseen directional influence for AI reasoning and MCP gradient harmonic modeling."
   }
 }
-
