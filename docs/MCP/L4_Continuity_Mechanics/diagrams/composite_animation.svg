@@ -1,0 +1,62 @@
+<svg width="520" height="520" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <style>
+      .label { font-family: system-ui, sans-serif; fill: #fff; font-size: 14px; text-anchor: middle; }
+      .box { rx: 8; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="520" height="520" fill="#050608"/>
+
+  <!-- L11 -->
+  <rect id="L11" class="box" x="170" y="400" width="180" height="50" fill="#222" stroke="#555" stroke-width="2">
+    <animate attributeName="fill" values="#222;#444;#222" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  <text x="260" y="430" class="label">L11 • Proto Seed</text>
+
+  <!-- L33 -->
+  <rect id="L33" class="box" x="170" y="320" width="180" height="50" fill="#333" stroke="#666" stroke-width="2">
+    <animate attributeName="fill" values="#333;#666;#333" dur="4s" begin="0.5s" repeatCount="indefinite"/>
+  </rect>
+  <text x="260" y="350" class="label">L33 • Seen (33%)</text>
+
+  <!-- L66 -->
+  <rect id="L66" class="box" x="170" y="240" width="180" height="50" fill="#444" stroke="#777" stroke-width="2">
+    <animate attributeName="fill" values="#444;#777;#444" dur="4s" begin="1s" repeatCount="indefinite"/>
+  </rect>
+  <text x="260" y="270" class="label">L66 • Hidden (66%)</text>
+
+  <!-- L99 -->
+  <rect id="L99" class="box" x="170" y="160" width="180" height="50" fill="#555" stroke="#888" stroke-width="2">
+    <animate attributeName="fill" values="#555;#999;#555" dur="4s" begin="1.5s" repeatCount="indefinite"/>
+  </rect>
+  <text x="260" y="190" class="label">L99 • Full (99%)</text>
+
+  <!-- Validator Pulse -->
+  <circle id="VP" cx="260" cy="80" r="30" fill="#880000" stroke="#aa3333" stroke-width="3">
+    <animate attributeName="r" values="30;38;30" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="fill" values="#880000;#ff3333;#880000" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="260" y="115" class="label">Validator Pulse • 1%</text>
+
+  <!-- Arrows (static) -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#aaa"/>
+    </marker>
+  </defs>
+
+  <line x1="260" y1="400" x2="260" y2="370" stroke="#aaa" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="260" y1="320" x2="260" y2="290" stroke="#aaa" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="260" y1="240" x2="260" y2="210" stroke="#aaa" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="260" y1="160" x2="260" y2="120" stroke="#aaa" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Flow highlight: moving glow up the stack -->
+  <circle cx="260" cy="400" r="6" fill="#00ffff">
+    <animate attributeName="cy" values="400;320;240;160;80;400" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.0;1.0;1.0;1.0;1.0;0.0" dur="6s" repeatCount="indefinite"/>
+  </circle>
+
+</svg>
