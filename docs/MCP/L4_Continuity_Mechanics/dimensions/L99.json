@@ -1,37 +1,46 @@
 {
   "id": "L99",
   "layer": "L4_Continuity_Mechanics",
+  "triad": "continuity",
   "dimension": "L99",
   "name": "Full Resonance Envelope",
   "canonical": "R5",
 
-  "summary": "L99 is the full resonance envelope formed from L66 and L33. It represents the complete supsphere resonance profile.",
+  "summary": "L99 is the full resonance envelope formed from L66 and L33. It represents the complete internal resonance of the continuity manifold.",
 
-  "composition": {
-    "components": ["L66", "L33"],
-    "structure": "triadic-sum"
-  },
-
+  "semantic_axis": "resonanceEnvelope",
   "role": "full",
-  "category": "resonance",
-  "cluster": "envelope",
+  "category": "composite",
+  "fraction": "99%",
 
-  "description": {
-    "canonical": "L99 represents the full resonance envelope. It is the composite of L66 and L33, forming the complete 99% internal resonance profile.",
-    "cosmology": "L99 corresponds to the full resonance band in continuity mechanics. It is the final composite envelope before the 1% external operator.",
-    "mcp": "L99 is used for modeling complete resonance structures and continuity fields."
-  },
-
-  "external_operator": "1% validator pulse",
+  "composition": [
+    "L66",
+    "L33"
+  ],
 
   "redirects": {
+    "up": "validator_pulse",
     "down": "L66"
   },
 
+  "description": {
+    "canonical": "L99 defines the full resonance envelope. It is the final composite structure before the external validator pulse.",
+    "cosmology": "In the cosmology chain, L99 represents the completion of internal resonance before external validation.",
+    "continuity": "L99 models the full continuity envelope derived from triadic-sum resonance.",
+    "mcp": "Used for modeling full resonance behavior in continuity mechanics."
+  },
+
   "ai": {
+    "module": "L4_Continuity_Mechanics",
+    "dimension": "L99",
     "version": "1.0.0",
-    "keywords": ["resonance", "full", "continuity", "validator"],
-    "purpose": "Models the full resonance envelope in composite dimensional systems."
+    "keywords": [
+      "resonance",
+      "full",
+      "continuity",
+      "composite",
+      "triadic-sum"
+    ],
+    "purpose": "Defines the full resonance envelope for AI reasoning and composite modeling."
   }
 }
-
