@@ -1,4 +1,8 @@
 # TriadicFrameworks MCP  
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/MCP/module.json) — Agentic module schema role assignments
+- [`sitemap.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/MCP/sitemap.json) — Agentic module schema role assignments
+
 ### Cosmology-Aligned Multi-Tool Server (R5 Canon)
 
 **qmroot:** 0D  
