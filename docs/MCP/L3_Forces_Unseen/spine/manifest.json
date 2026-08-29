@@ -1,24 +1,13 @@
 {
   "id": "S3-Spine",
-  "title": "S3 Spine — Unseen Force-Regime Manifest",
   "canonical": "R5",
+  "version": "1.0.0",
   "layer": "L3_Forces_Unseen",
   "triad": "forces",
   "regime": "unseen-force-regime",
-  "version": "1.0.0",
-
-  "description": "Manifest for the S3 Spine subsystem, defining graph, operators, dimensions, envelopes, catalogs, and cosmology lineage for unseen force-regime mechanics.",
 
   "cosmology": {
-    "lineage": [
-      "qmroot",
-      "frequency",
-      "fluids",
-      "forces"
-    ],
-    "origin": "qmroot",
-    "triad": "forces",
-    "regime": "unseen-force-regime",
+    "lineage": ["qmroot", "frequency", "fluids", "forces"],
     "inheritance": {
       "qmroot": "latent potentials of influence, coherence, rupture, stability",
       "frequency": "oscillation and continuity of unseen influence",
@@ -29,101 +18,76 @@
       "gradient": "proto-influence → influence → causal gradient",
       "field": "proto-coherence → coherence → influence field",
       "rupture": "proto-instability → instability → rupture potential",
-      "integrity": "proto-stability → stability → force integrity"
-    },
-    "dimensions": {
-      "gradient": ["L4", "L5", "L16", "LH"],
-      "field": ["L8", "L10", "L26"],
-      "rupture": ["L12"],
-      "integrity": ["L32", "LI"]
+      "integrity": "proto-stability → stability → structural stability"
     }
   },
 
   "graph": {
     "file": "S3.graph.json",
     "dot": "S3.dot",
-    "nodes": ["gradient", "field", "rupture", "integrity"]
+    "nodes": ["gradient", "field", "rupture", "integrity"],
+    "edges": [
+      ["gradient", "field"],
+      ["field", "rupture"],
+      ["field", "integrity"],
+      ["rupture", "integrity"]
+    ]
   },
 
   "operators": {
     "list": [
+      "gradient",
+      "ruptureForce",
+      "bind",
       "push",
       "pull",
-      "bind",
-      "gradient",
-      "fieldShift",
-      "ruptureForce"
+      "fieldShift"
     ],
     "interaction_map": "operator_interaction_map.json",
     "sequencing_rules": "operator_sequencing_rules.json"
   },
 
   "dimensions": {
-    "list": [
-      "L4", "L5", "L16", "LH",
-      "L8", "L10", "L26",
-      "L11",
-      "L12",
-      "L32", "LI"
-    ],
-    "mapping": "dimensional_mapping.json"
+    "gradient": ["L4", "L5", "L16", "LH"],
+    "field": ["L8", "L10", "L26"],
+    "rupture": ["L12"],
+    "integrity": ["L32", "LI"]
   },
 
   "envelopes": {
-    "canonical": "docs/canonical.json",
-    "reality": "docs/reality.json",
-    "imagination": "docs/imagination.json",
-    "information": "docs/information.json",
-    "error": "docs/error.json",
-    "qmroot": "docs/qmroot.json"
+    "types": [
+      "canonical",
+      "reality",
+      "imagination",
+      "information",
+      "error",
+      "qmroot"
+    ],
+    "registry": "envelope_registry.json"
+  },
+
+  "registries": {
+    "module": "module_registry.json",
+    "operators": "operator_registry.json",
+    "dimensions": "dimension_registry.json",
+    "envelopes": "envelope_registry.json",
+    "examples": "spine.examples.registry.json",
+    "ai": "ai_registry.json",
+    "tools": "tools.catalog.json"
   },
 
   "examples": {
     "registry": "spine.examples.registry.json",
-    "schema": "examples/example.schema.json",
-    "directory": "examples/"
+    "canonical": "canonical.001.json",
+    "reality": "reality.001.json",
+    "imagination": "imagination.001.json",
+    "information": "information.001.json",
+    "error": "error.001.json",
+    "qmroot": "qmroot.001.json"
   },
 
-  "docs": {
-    "readme": "README.md",
-    "protocol": "protocol.md",
-    "coherence": "coherence.md",
-    "operators": "operators.md",
-    "dimensions": "dimensions.md",
-    "registry": "registry.md",
-    "schemas": "schemas.md",
-    "module": "module.md",
-    "deep": "deep.md",
-    "sitemap": "sitemap.json"
-  },
-
-  "catalogs": {
-    "tools": "tools.catalog.json",
-    "resources": "resources.catalog.json",
-    "prompts": "prompts.catalog.json"
-  },
-
-  "server": {
-    "config": "server.json"
-  },
-
-  "ai": {
-    "metadata": "ai.metadata.json",
-    "registry": "ai_registry.json"
-  },
-
-  "corpus": {
-    "index": "corpus.json"
-  },
-
-  "session": {
-    "canon": "R5",
-    "modules": "L3_Forces_Unseen / spine / manifest",
-    "drift": "none",
-    "coherence": "force-state coherence",
-    "format": "manifest.json",
-    "version": "1.0.0",
-    "inheritance": "qmroot → frequency → fluids → forces",
-    "audience": "MCP implementers, RTT researchers, cosmology engineers"
+  "protocol": {
+    "file": "protocol.md",
+    "server": "server.json"
   }
 }
