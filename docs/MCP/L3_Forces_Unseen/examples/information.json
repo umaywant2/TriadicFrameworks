@@ -1,0 +1,20 @@
+{
+  "canonical": "R5",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "id": "information",
+  "module": "examples",
+  "kind": ["information"],
+  "path": "docs/MCP/L3_Forces_Unseen/examples/information.json",
+
+  "envelope": {
+    "canonical": "Information interpretation of the example.",
+    "reality": "Not applicable.",
+    "imagination": "Not applicable.",
+    "information": "Describes the example as an informational structure or signal.",
+    "error": "Not applicable.",
+    "qmroot": "Not applicable."
+  }
+}
