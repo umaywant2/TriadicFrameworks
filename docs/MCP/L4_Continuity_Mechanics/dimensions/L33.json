@@ -1,1 +1,36 @@
+{
+  "id": "L33",
+  "layer": "L4_Continuity_Mechanics",
+  "dimension": "L33",
+  "name": "Seen Resonance Envelope",
+  "canonical": "R5",
+
+  "summary": "L33 is the 1/3 resonance envelope formed from three L11 proto-resonance seeds. It represents the visible portion of the supsphere.",
+
+  "composition": {
+    "components": ["L11", "L11", "L11"],
+    "structure": "triad"
+  },
+
+  "role": "seen",
+  "category": "resonance",
+  "cluster": "envelope",
+
+  "description": {
+    "canonical": "L33 represents the visible resonance envelope. It is the first composite dimension formed from three L11 seeds, producing the 1/3 seen portion of the supsphere.",
+    "cosmology": "L33 corresponds to the visible resonance band in continuity mechanics. It is the first stable composite envelope.",
+    "mcp": "L33 is used for modeling visible resonance structures and continuity surfaces."
+  },
+
+  "redirects": {
+    "up": "L66",
+    "down": "L11"
+  },
+
+  "ai": {
+    "version": "1.0.0",
+    "keywords": ["resonance", "seen", "triad", "continuity"],
+    "purpose": "Models the visible resonance envelope in composite dimensional systems."
+  }
+}
 
