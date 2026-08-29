@@ -3,114 +3,49 @@
   "layer": "L3_Forces_Unseen",
   "triad": "forces",
   "lineage": ["qmroot", "frequency", "fluids", "forces"],
-  "id": "S3-Spine-Sitemap",
+  "id": "S3-Spine-Examples-Sitemap",
   "version": "1.0.0",
-  "front_door": "README.md",
+  "front_door": "examples/index.md",
 
   "sections": [
     {
-      "id": "documentation",
-      "title": "Documentation",
-      "files": [
-        "README.md",
-        "deep.md",
-        "m_Source.md",
-        "protocol.md",
-        "coherence.md",
-        "cosmology.md",
-        "operators.md",
-        "dimensions.md",
-        "schemas.md",
-        "registry.md"
-      ]
-    },
-
-    {
-      "id": "structure",
-      "title": "Structural Assets",
-      "files": [
-        "S3.graph.json",
-        "S3.dot",
-        "dimensional_mapping.json",
-        "operator_interaction_map.json",
-        "operator_sequencing_rules.json"
-      ]
-    },
-
-    {
-      "id": "operators",
-      "title": "Operators",
-      "files": [
-        "operators.md",
-        "operators/docs/bind.md",
-        "operators/docs/fieldShift.md",
-        "operators/docs/gradient.md",
-        "operators/docs/pull.md",
-        "operators/docs/push.md",
-        "operators/docs/ruptureForce.md",
-        "operator_registry.json"
-      ]
-    },
-
-    {
-      "id": "dimensions",
-      "title": "Dimensions",
-      "files": [
-        "dimensions.md",
-        "dimensional_mapping.json"
-      ]
-    },
-
-    {
-      "id": "examples",
-      "title": "Examples",
+      "id": "registry",
+      "title": "Example Registry",
       "files": [
         "spine.examples.registry.json",
-        "example.schema.json",
-        "examples/index.md",
-        "examples/sitemap.json",
-        "examples/docs/canonical.md",
-        "examples/docs/reality.md",
-        "examples/docs/imagination.md",
-        "examples/docs/information.md",
-        "examples/docs/error.md",
-        "examples/docs/qmroot.md"
+        "example.schema.json"
       ]
     },
-
     {
-      "id": "catalogs",
-      "title": "Catalogs",
+      "id": "envelopes",
+      "title": "Example Envelopes",
       "files": [
-        "tools.catalog.json",
-        "resources.catalog.json",
-        "prompts.catalog.json"
+        "canonical.001.json",
+        "reality.001.json",
+        "imagination.001.json",
+        "information.001.json",
+        "error.001.json",
+        "qmroot.001.json"
       ]
     },
-
     {
-      "id": "server",
-      "title": "Server",
+      "id": "docs",
+      "title": "Example Documentation",
       "files": [
-        "server.json",
-        "protocol.md"
+        "docs/canonical.md",
+        "docs/reality.md",
+        "docs/imagination.md",
+        "docs/information.md",
+        "docs/error.md",
+        "docs/qmroot.md"
       ]
     },
-
     {
-      "id": "ai",
-      "title": "AI Metadata",
+      "id": "navigation",
+      "title": "Navigation",
       "files": [
-        "ai.metadata.json",
-        "ai_registry.json"
-      ]
-    },
-
-    {
-      "id": "corpus",
-      "title": "Corpus",
-      "files": [
-        "corpus.json"
+        "index.md",
+        "sitemap.json"
       ]
     }
   ]
