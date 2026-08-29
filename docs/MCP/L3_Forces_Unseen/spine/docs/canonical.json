@@ -1,0 +1,57 @@
+{
+  "canonical": {
+    "path": [
+      "gradient",
+      "field",
+      "integrity"
+    ],
+    "semantics": [
+      "gradientIntensity",
+      "fieldCoherence",
+      "forceIntegrity"
+    ],
+    "graph": {
+      "nodes": [
+        {
+          "id": "gradient",
+          "meaning": "directional unseen influence"
+        },
+        {
+          "id": "field",
+          "meaning": "influence field shaping force-state mechanics"
+        },
+        {
+          "id": "integrity",
+          "meaning": "structural stability of unseen force regimes"
+        }
+      ],
+      "edges": [
+        {
+          "from": "gradient",
+          "to": "field",
+          "meaning": "gradients shape fields"
+        },
+        {
+          "from": "field",
+          "to": "integrity",
+          "meaning": "fields stabilize integrity"
+        }
+      ]
+    },
+    "valid": true,
+    "layer": "L3_Forces_Unseen",
+    "triad": "forces",
+    "canonical": "R5",
+    "lineage": "qmroot → frequency → fluids → forces",
+    "description": "Pure structural traversal of the S3 Spine graph following valid causal edges."
+  },
+  "session": {
+    "canon": "R5",
+    "modules": "L3_Forces_Unseen / spine / docs / canonical.json",
+    "drift": "none",
+    "coherence": "force-state coherence",
+    "version": "1.0.0",
+    "format": "canonical.json",
+    "audience": "MCP implementers, RTT researchers, cosmology engineers"
+  }
+}
