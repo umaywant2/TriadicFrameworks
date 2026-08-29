@@ -1,56 +1,58 @@
-# ⚡ **L3_Forces_Unseen — S3 Spine (R5 Canon)**  
-### *The Unseen Force‑Regime Structural Graph of TriadicFrameworks*
+# ⚡ L3_Forces_Unseen — S3 Spine (R5 Canon)
+### The Unseen Force‑Regime Structural Graph of TriadicFrameworks
 
-The **S3 Spine** is the canonical structural graph of the **L3 Forces Unseen** layer — the cosmological tier where:
+The **S3 Spine** is the canonical structural graph of the **L3 Forces Unseen** layer — the cosmological tier where unseen force‑regime mechanics emerge, interact, stabilize, rupture, and resolve.
 
-- **gradientIntensity**  
-- **fieldCoherence**  
-- **influenceContinuity**  
-- **rupturePotential**  
-- **forceIntegrity**  
+It defines how the five force‑regime semantics behave:
 
-all emerge and interact.
+- **gradientIntensity**
+- **fieldCoherence**
+- **influenceContinuity**
+- **rupturePotential**
+- **forceIntegrity**
 
-Where:
-
-- **L1 (S1)** models *oscillation*,  
-- **L2 (S2)** models *continuity*,  
-- **L3 (S3)** models *forces*.
-
-S3 is the **unseen causal layer**: gradients, fields, rupture, and integrity form the backbone of force‑regime mechanics.
+These semantics form the backbone of unseen causal mechanics.
 
 ---
 
 ## 🧭 Purpose of the S3 Spine
 
-The S3 spine models how unseen force‑regime states transform:
+The S3 Spine models how unseen force‑regime states transform:
 
 - **Gradients shape fields**  
 - **Fields stabilize integrity**  
 - **Gradients induce rupture**  
 - **Integrity suppresses rupture**
 
-This defines the **canonical causal loop** of the forces triad.
+This is the **canonical causal loop** of the forces triad.
+
+Where:
+
+- **L1 (S1)** models oscillation  
+- **L2 (S2)** models continuity  
+- **L3 (S3)** models forces  
+
+S3 is the **unseen causal layer**.
 
 ---
 
 ## 🔬 Core Concepts (Freeze‑Aligned)
 
-### 1. **Causal Gradient**  
+### 1. Causal Gradient  
 Directional unseen influence.  
-Semantics: **gradientIntensity**
+**Semantic:** `gradientIntensity`
 
-### 2. **Influence Field**  
+### 2. Influence Field  
 Unseen field shaping force‑state mechanics.  
-Semantics: **fieldCoherence**, **influenceContinuity**
+**Semantics:** `fieldCoherence`, `influenceContinuity`
 
-### 3. **Rupture Potential**  
+### 3. Rupture Potential  
 Likelihood of force‑state rupture.  
-Semantics: **rupturePotential**
+**Semantic:** `rupturePotential`
 
-### 4. **Force Integrity**  
+### 4. Force Integrity  
 Structural stability of unseen force regimes.  
-Semantics: **forceIntegrity**
+**Semantic:** `forceIntegrity`
 
 These four nodes form the **canonical S3 graph**.
 
@@ -60,17 +62,17 @@ These four nodes form the **canonical S3 graph**.
 
 ### **Nodes**
 
-| Node ID | Label | Meaning |
-|---------|--------|---------|
-| **gradient** | Causal Gradient | Directional unseen influence |
-| **field** | Influence Field | Unseen field shaping force‑state mechanics |
-| **rupture** | Rupture Potential | Likelihood of force‑state rupture |
-| **integrity** | Force Integrity | Structural stability of unseen force regimes |
+| Node | Label | Meaning |
+|------|--------|---------|
+| gradient | Causal Gradient | Directional unseen influence |
+| field | Influence Field | Unseen field shaping force‑state mechanics |
+| rupture | Rupture Potential | Likelihood of force‑state rupture |
+| integrity | Force Integrity | Structural stability of unseen force regimes |
 
 ### **Edges**
 
 | From | To | Type | Meaning |
-|------|-----|--------|---------|
+|------|----|------|---------|
 | gradient | field | influence | Gradients shape fields |
 | field | integrity | coherence | Fields stabilize integrity |
 | gradient | rupture | stress | High gradients increase rupture |
@@ -84,7 +86,7 @@ This is the **canonical S3 causal cycle**.
 
 - **Layer:** L3_Forces_Unseen  
 - **Triad:** forces  
-- **Lineage:** qmroot → frequency → fluids → forces  
+- **Lineage:** `qmroot → frequency → fluids → forces`  
 - **Canonical:** R5  
 - **Domain:** unseen force‑regime mechanics  
 
@@ -121,7 +123,10 @@ S3 is the **structural backbone** of the forces layer.
 }
 ```
 
-This example is fully aligned with the **example envelope schema** and **examples.registry.json**.
+This example is fully aligned with:
+
+- `example.schema.json`  
+- `spine.examples.registry.json`
 
 ---
 
@@ -132,7 +137,7 @@ Canon: R5
 Modules: L3_Forces_Unseen / spine
 Drift: none (freeze-aligned)
 Coherence: force-state coherence
-Version: 0.1.0
+Version: 1.0.0
 Format: README.md
 Front door: docs/MCP/L3_Forces_Unseen/spine/
 Every page: inherits qmroot → frequency → fluids → forces
@@ -149,14 +154,14 @@ Audience: MCP implementers, RTT researchers, cosmology engineers
 
 ## 📘 Summary
 
-The **S3 Spine** is the structural graph of the L3 Forces Unseen layer:
+The S3 Spine is the structural graph of the L3 Forces Unseen layer:
 
 - models unseen force regimes  
 - defines causal gradients and influence fields  
 - stabilizes force integrity  
 - evaluates rupture potential  
 - anchors force‑state mechanics to cosmological lineage  
-- supports dimensional subsystem (L4–LI)  
-- powers operator semantics (push, pull, bind, gradient, fieldShift, ruptureForce)
+- supports the dimensional subsystem (L4–LI)  
+- powers operator semantics (push, pull, bind, gradient, fieldShift, ruptureForce)  
 
-This README is now **fully canonical**, **freeze‑aligned**, and ready for commit.
+This README is now **fully canonical**, **freeze‑aligned**, and **ready for commit**.
