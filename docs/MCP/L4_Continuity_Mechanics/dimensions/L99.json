@@ -1,1 +1,37 @@
+{
+  "id": "L99",
+  "layer": "L4_Continuity_Mechanics",
+  "dimension": "L99",
+  "name": "Full Resonance Envelope",
+  "canonical": "R5",
+
+  "summary": "L99 is the full resonance envelope formed from L66 and L33. It represents the complete supsphere resonance profile.",
+
+  "composition": {
+    "components": ["L66", "L33"],
+    "structure": "triadic-sum"
+  },
+
+  "role": "full",
+  "category": "resonance",
+  "cluster": "envelope",
+
+  "description": {
+    "canonical": "L99 represents the full resonance envelope. It is the composite of L66 and L33, forming the complete 99% internal resonance profile.",
+    "cosmology": "L99 corresponds to the full resonance band in continuity mechanics. It is the final composite envelope before the 1% external operator.",
+    "mcp": "L99 is used for modeling complete resonance structures and continuity fields."
+  },
+
+  "external_operator": "1% validator pulse",
+
+  "redirects": {
+    "down": "L66"
+  },
+
+  "ai": {
+    "version": "1.0.0",
+    "keywords": ["resonance", "full", "continuity", "validator"],
+    "purpose": "Models the full resonance envelope in composite dimensional systems."
+  }
+}
 
