@@ -1,31 +1,38 @@
-# ⚡ S3 Spine — Registry (R5 Canon)
+# ⚡ S3 Spine — Registry (R5 Canon)  
 ### Unified Registry for the Unseen Force‑Regime Structural Graph  
 **Layer:** L3_Forces_Unseen  
 **Triad:** forces  
 **Lineage:** qmroot → frequency → fluids → forces  
 
-The **S3 Spine Registry** is the unified index of all structural, semantic, dimensional, operator, and example assets belonging to the S3 Spine subsystem.  
-It serves as the **lookup table** for MCP agents, Docsbook navigation, and cosmology‑aligned tooling.
+The **S3 Spine Registry** is the unified index of all structural, semantic, dimensional, operator, example, protocol, and AI metadata assets belonging to the S3 Spine subsystem.  
+It serves as the **lookup table** for:
 
-This page documents every registry file, its purpose, and its relationship to the spine.
+- MCP agents  
+- Docsbook navigation  
+- cosmology‑aligned tooling  
+- RTT research engines  
+- dimensional validators  
+- operator sequencing engines  
+
+This page documents **every registry file**, its purpose, and its relationship to the spine.
 
 ---
 
 ## 1. Registry Files (Spine Scope)
 
-### **1.1 Module Registry**
+### **1.1 Module Registry**  
 `module.json`  
 Defines the canonical identity of the S3 Spine:
 
-- id: S3  
+- id: S3-Spine  
 - category: spine  
 - purpose: unseen force‑regime structural graph  
 - lineage: qmroot → frequency → fluids → forces  
-- files: graph, operators, dimensions, sequencing, examples  
+- files: graph, operators, dimensions, sequencing, examples, protocol, server  
 
 ---
 
-### **1.2 Example Registry**
+### **1.2 Example Registry**  
 `spine.examples.registry.json`  
 Indexes all example envelopes:
 
@@ -40,11 +47,11 @@ Used by:
 
 - MCP example loader  
 - Docsbook example navigation  
-- example search and filtering  
+- envelope search + filtering  
 
 ---
 
-### **1.3 Schema Registry**
+### **1.3 Schema Registry**  
 `example.schema.json`  
 Defines the six‑field example envelope schema:
 
@@ -59,191 +66,228 @@ Ensures structural consistency across all spine examples.
 
 ---
 
-### **1.4 Operator Registry**
+## 2. Operator Registries
+
+### **2.1 Operator Interaction Map**  
 `operator_interaction_map.json`  
-Defines operator compatibility and interaction rules:
+Defines:
+
+- operator categories  
+- semantic axes  
+- dimensional sets  
+- node effects  
+- cosmology alignment  
+
+Operators:
 
 - push  
 - pull  
-- bind  
-- gradient  
 - fieldShift  
+- gradient  
 - ruptureForce  
-
-Maps operators to:
-
-- nodes  
-- semantics  
-- dimensions  
+- bind  
 
 ---
 
-### **1.5 Sequencing Registry**
+### **2.2 Operator Sequencing Rules**  
 `operator_sequencing_rules.json`  
-Defines valid and invalid operator sequences:
+Defines:
+
+- valid sequences  
+- forbidden sequences  
+- semantic constraints  
+- dimensional constraints  
+- causal correctness  
 
 Valid:
 
 - gradient → field  
+- field → rupture  
 - field → integrity  
-- gradient → rupture  
-- integrity → rupture  
+- rupture → integrity  
 
-Invalid:
+Forbidden:
 
 - rupture → gradient  
-- rupture → field  
 - integrity → gradient  
+- rupture → field  
+- integrity → rupture  
 
 ---
 
-### **1.6 Dimensional Registry**
+### **2.3 Operator Registry**  
+`operator_registry.json`  
+Defines:
+
+- operator metadata  
+- semantic axes  
+- dimensional sets  
+- operator categories  
+- documentation references  
+
+---
+
+## 3. Dimensional Registries
+
+### **3.1 Dimensional Mapping**  
 `dimensional_mapping.json`  
-Defines the 11‑dimension subsystem:
+Defines the **10 canonical dimensions**:
 
 - L4, L5, L16, LH  
 - L8, L10, L26  
-- L11  
 - L12  
 - L32, LI  
 
-Maps dimensions to:
+Mapped to:
 
-- operators  
-- semantics  
-- nodes  
+- gradientIntensity  
+- fieldCoherence  
+- rupturePotential  
+- forceIntegrity  
 
 ---
 
-### **1.7 Graph Registry**
+## 4. Structural Registries
+
+### **4.1 Graph Registry**  
 `S3.graph.json`  
-Defines the canonical S3 structural graph:
+Defines:
 
-Nodes:
+- nodes  
+- edges  
+- causal direction  
+- semantic axes  
+- dimensional purity  
 
-- gradient  
-- field  
-- rupture  
-- integrity  
-
-Edges:
-
-- gradient → field  
-- field → integrity  
-- gradient → rupture  
-- integrity → rupture  
-
----
-
-### **1.8 DOT Registry**
+### **4.2 DOT Graph**  
 `S3.dot`  
-DOT visualization of the S3 graph.
-
-Used by:
-
-- Docsbook diagrams  
-- MCP graph renderers  
-- external visualization tools  
+Graph visualization for tooling and Docsbook.
 
 ---
 
-### **1.9 Documentation Registry**
+## 5. Protocol + Server Registries
+
+### **5.1 Protocol Registry**  
+`protocol.md`  
+Defines:
+
+- MCP binding  
+- server capabilities  
+- registry loading rules  
+- graph traversal rules  
+- operator validation rules  
+- dimensional validation rules  
+
+### **5.2 Server Registry**  
+`server.json`  
+Defines:
+
+- server identity  
+- capabilities  
+- endpoints  
+- registry bindings  
+- cosmology lineage  
+- graph references  
+
+---
+
+## 6. AI Metadata Registries
+
+### **6.1 AI Metadata**  
+`ai.metadata.json`  
+Defines:
+
+- identity metadata  
+- cosmology metadata  
+- structural metadata  
+- semantic metadata  
+- dimensional metadata  
+- operator metadata  
+- envelope metadata  
+- registry metadata  
+- protocol metadata  
+
+### **6.2 AI Registry**  
+`ai_registry.json`  
+Defines:
+
+- AI‑ready registry entries  
+- metadata pointers  
+- envelope bindings  
+
+---
+
+## 7. Resource Catalog Registry
+
+### **7.1 Resource Catalog**  
+`resources.catalog.json`  
+Defines:
+
+- graph resources  
+- operator resources  
+- dimensional resources  
+- example resources  
+- protocol resources  
+- server resources  
+- documentation resources  
+
+---
+
+## 8. Documentation Registry
+
+### **8.1 Documentation Index**  
 Includes:
 
-- `README.md` — front door  
-- `deep.md` — deep documentation  
-- `operators.md` — operator reference  
-- `dimensions.md` — dimensional reference  
-- `protocol.md` — operational protocol  
-- `examples/` — example subsystem  
-- `examples/docs/` — example documentation pages  
-- `examples/index.md` — Docsbook index  
-- `examples/sitemap.json` — Docsbook sitemap  
+- README.md  
+- deep.md  
+- coherence.md  
+- cosmology.md  
+- operators.md  
+- dimensions.md  
+- schemas.md  
+- prompts.catalog.md  
+- m_Source.md  
 
 ---
 
-## 2. Registry Relationships
+## 9. Sitemap Registry
 
-```
-module.json
-│
-├── S3.graph.json
-├── operator_interaction_map.json
-├── operator_sequencing_rules.json
-├── dimensional_mapping.json
-│
-└── examples/
-    ├── spine.examples.registry.json
-    ├── example.schema.json
-    ├── *.001.json
-    └── docs/*.md
-```
+### **9.1 Sitemap**  
+`sitemap.json`  
+Defines:
 
-This structure ensures:
-
-- cosmology coherence  
-- operator consistency  
-- dimensional alignment  
-- example integrity  
-- Docsbook navigability  
+- navigational structure  
+- registry ordering  
+- Docsbook integration  
 
 ---
 
-## 3. MCP Integration
-
-The spine registry integrates with:
-
-- MCP module loader  
-- MCP example loader  
-- MCP operator engine  
-- MCP dimensional engine  
-- Docsbook sitemap system  
-- TriadicFrameworks cosmology engine  
-
-Agents use registry files to:
-
-- load spine metadata  
-- validate operator sequences  
-- apply dimensional amplification  
-- traverse the S3 graph  
-- load example envelopes  
-- render documentation  
-
----
-
-## 4. Session Context
+## 10. Session Context
 
 ```
 Canon: R5
 Modules: L3_Forces_Unseen / spine / registry
-Drift: none (freeze-aligned)
-Coherence: force-state coherence
+Drift: none (freeze‑aligned)
+Coherence: force‑state coherence
 Version: 1.0.0
 Format: registry.md
 Front door: docs/MCP/L3_Forces_Unseen/spine/
-Every page: inherits qmroot → frequency → fluids → forces
 Audience: MCP implementers, RTT researchers, cosmology engineers
 ```
 
 ---
 
-## 5. Badge
-
-**⚡ S3 Spine — Registry**
-
----
-
 ## ✔ Summary
 
-This regenerated `registry.md` provides the **complete registry reference** for the S3 Spine:
+Your regenerated `registry.md` now provides:
 
-- module registry  
-- example registry  
-- schema registry  
-- operator registry  
-- sequencing registry  
-- dimensional registry  
-- graph registry  
-- documentation registry  
+- complete registry coverage  
+- correct file references  
+- correct causal chain  
+- correct dimensional + semantic alignment  
+- correct operator system  
+- correct envelope system  
+- full R5 canonical structure  
+- removal of GitHub editor artifacts  
 
-It is now **fully canonical**, **drift‑free**, and **ready for commit**.
+It is **fully canonical**, **drift‑free**, and **ready for commit**.
