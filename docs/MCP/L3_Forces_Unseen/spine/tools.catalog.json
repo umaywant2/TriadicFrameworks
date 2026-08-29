@@ -1,121 +1,91 @@
 {
+  "id": "S3-Spine-Tools-Catalog",
   "canonical": "R5",
+  "version": "1.0.0",
   "layer": "L3_Forces_Unseen",
   "triad": "forces",
-  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+  "regime": "unseen-force-regime",
 
-  "title": "S3 Spine — Tool Catalog",
-  "description": "Canonical tool catalog for the S3 Spine subsystem, defining MCP tools for graph traversal, operator execution, dimensional amplification, sequencing validation, example loading, and documentation access.",
-  "version": "1.0.0",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
 
   "tools": [
     {
-      "id": "s3.tool.graph.load",
+      "id": "tool.graph",
       "category": "graph",
-      "description": "Load the S3 Spine structural graph including nodes, edges, semantics, and causal direction.",
-      "path": "docs/MCP/L3_Forces_Unseen/spine/S3.graph.json"
+      "description": "Access the S3 Spine structural graph including nodes, edges, semantics, and causal direction.",
+      "files": ["S3.graph.json", "S3.dot"]
     },
     {
-      "id": "s3.tool.graph.dot",
-      "category": "graph",
-      "description": "Load the DOT diagram for S3 Spine graph visualization.",
-      "path": "docs/MCP/L3_Forces_Unseen/spine/S3.dot"
-    },
-    {
-      "id": "s3.tool.operator.map",
+      "id": "tool.operators",
       "category": "operator",
-      "description": "Load operator interaction map defining compatibility, semantics, and dimensional amplification.",
-      "path": "docs/MCP/L3_Forces_Unseen/spine/operator_interaction_map.json"
+      "description": "Access operator interaction maps and sequencing rules.",
+      "files": [
+        "operator_interaction_map.json",
+        "operator_sequencing_rules.json"
+      ]
     },
     {
-      "id": "s3.tool.operator.sequence",
-      "category": "operator",
-      "description": "Load operator sequencing rules defining valid and invalid transitions.",
-      "path": "docs/MCP/L3_Forces_Unseen/spine/operator_sequencing_rules.json"
-    },
-    {
-      "id": "s3.tool.dimension.map",
+      "id": "tool.dimensions",
       "category": "dimension",
-      "description": "Load dimensional mapping for the 11-dimension subsystem used by the S3 Spine.",
-      "path": "docs/MCP/L3_Forces_Unseen/spine/dimensional_mapping.json"
+      "description": "Access dimensional mapping for the S3 Spine subsystem.",
+      "files": ["dimensional_mapping.json"]
     },
     {
-      "id": "s3.tool.module.load",
+      "id": "tool.module",
       "category": "module",
-      "description": "Load the S3 Spine module manifest.",
-      "path": "docs/MCP/L3_Forces_Unseen/spine/module.json"
+      "description": "Access the S3 Spine module definition.",
+      "files": ["module.json"]
     },
     {
-      "id": "s3.tool.manifest.load",
+      "id": "tool.manifest",
       "category": "module",
-      "description": "Load the canonical manifest for the S3 Spine subsystem.",
-      "path": "docs/MCP/L3_Forces_Unseen/spine/manifest.json"
+      "description": "Access the canonical manifest for the S3 Spine subsystem.",
+      "files": ["manifest.json"]
     },
     {
-      "id": "s3.tool.examples.registry",
+      "id": "tool.examples",
       "category": "example",
-      "description": "Load registry of all S3 Spine example envelopes.",
-      "path": "docs/MCP/L3_Forces_Unseen/spine/spine.examples.registry.json"
+      "description": "Access example envelopes and example registry.",
+      "files": [
+        "spine.examples.registry.json",
+        "example.schema.json"
+      ]
     },
     {
-      "id": "s3.tool.examples.schema",
-      "category": "example",
-      "description": "Load schema for S3 Spine example envelopes.",
-      "path": "docs/MCP/L3_Forces_Unseen/spine/example.schema.json"
+      "id": "tool.server",
+      "category": "server",
+      "description": "Access the MCP server configuration for the S3 Spine subsystem.",
+      "files": ["server.json"]
     },
     {
-      "id": "s3.tool.examples.docs",
-      "category": "example",
-      "description": "Load documentation pages for S3 Spine example envelopes.",
-      "path": "docs/MCP/L3_Forces_Unseen/spine/examples/docs/"
+      "id": "tool.protocol",
+      "category": "protocol",
+      "description": "Access the MCP protocol definition for the S3 Spine subsystem.",
+      "files": ["protocol.md"]
     },
     {
-      "id": "s3.tool.examples.index",
-      "category": "example",
-      "description": "Load Docsbook index page for S3 Spine examples.",
-      "path": "docs/MCP/L3_Forces_Unseen/spine/examples/index.md"
+      "id": "tool.ai",
+      "category": "ai",
+      "description": "Access AI metadata and AI registry.",
+      "files": [
+        "ai.metadata.json",
+        "ai_registry.json"
+      ]
     },
     {
-      "id": "s3.tool.examples.sitemap",
-      "category": "example",
-      "description": "Load Docsbook sitemap for S3 Spine examples.",
-      "path": "docs/MCP/L3_Forces_Unseen/spine/examples/sitemap.json"
-    },
-    {
-      "id": "s3.tool.docs.deep",
+      "id": "tool.docs",
       "category": "documentation",
-      "description": "Load deep documentation for the S3 Spine subsystem.",
-      "path": "docs/MCP/L3_Forces_Unseen/spine/deep.md"
-    },
-    {
-      "id": "s3.tool.docs.source",
-      "category": "documentation",
-      "description": "Load source-of-truth documentation for the S3 Spine subsystem.",
-      "path": "docs/MCP/L3_Forces_Unseen/spine/m_Source.md"
-    },
-    {
-      "id": "s3.tool.docs.protocol",
-      "category": "documentation",
-      "description": "Load operational protocol for interacting with the S3 Spine subsystem.",
-      "path": "docs/MCP/L3_Forces_Unseen/spine/protocol.md"
-    },
-    {
-      "id": "s3.tool.docs.registry",
-      "category": "registry",
-      "description": "Load unified registry for S3 Spine structural, operator, dimensional, and example assets.",
-      "path": "docs/MCP/L3_Forces_Unseen/spine/registry.md"
-    },
-    {
-      "id": "s3.tool.docs.schemas",
-      "category": "schema",
-      "description": "Load schema reference for example, module, operator, dimensional, lineage, and session schemas.",
-      "path": "docs/MCP/L3_Forces_Unseen/spine/schemas.md"
-    },
-    {
-      "id": "s3.tool.docs.readme",
-      "category": "documentation",
-      "description": "Load front-door README for the S3 Spine subsystem.",
-      "path": "docs/MCP/L3_Forces_Unseen/spine/README.md"
+      "description": "Access documentation pages for the S3 Spine subsystem.",
+      "files": [
+        "README.md",
+        "m_Source.md",
+        "operators.md",
+        "dimensions.md",
+        "cosmology.md",
+        "coherence.md",
+        "resources.catalog.md",
+        "schemas.md"
+      ]
     }
   ]
 }
