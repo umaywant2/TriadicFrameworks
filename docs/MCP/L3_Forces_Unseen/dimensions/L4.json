@@ -10,7 +10,7 @@
   "semantics": ["gradientIntensity"],
 
   "spine": "S3",
-  "description": "Defines the foundational gradient axis for unseen force mechanics.",
+  "description": "Defines the 4-dimensional internal projection model, including spacetime, quaternions, polychorons, and 4-manifolds, reinterpreted as internal axes of influence within the unseen force regime.",
   "dimension": "L4",
   "title": "TriadicFrameworks MCP — L4 Dimensional Framework",
   "note": "In RTT cosmology, 4D constructs are internal projections of L3 force-state mechanics.",
