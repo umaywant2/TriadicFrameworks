@@ -1,1 +1,57 @@
+{
+  "id": "S3-Spine-Examples",
+  "canonical": "R5",
+  "version": "1.0.0",
+  "module": "S3-Spine",
+
+  "examples": [
+    {
+      "id": "canonical.001",
+      "envelope": "canonical",
+      "json": "canonical.001.json",
+      "doc": "canonical.md",
+      "description": "Structural interpretation of gradient → field → rupture → integrity."
+    },
+    {
+      "id": "reality.001",
+      "envelope": "reality",
+      "json": "reality.001.json",
+      "doc": "reality.md",
+      "description": "Machine-level execution of unseen force-regime traversal."
+    },
+    {
+      "id": "imagination.001",
+      "envelope": "imagination",
+      "json": "imagination.001.json",
+      "doc": "imagination.md",
+      "description": "Symbolic interpretation of causal mechanics."
+    },
+    {
+      "id": "information.001",
+      "envelope": "information",
+      "json": "information.001.json",
+      "doc": "information.md",
+      "description": "Informational encoding of the S3 Spine traversal."
+    },
+    {
+      "id": "error.001",
+      "envelope": "error",
+      "json": "error.001.json",
+      "doc": "error.md",
+      "description": "Failure-mode interpretation and rupture threshold analysis."
+    },
+    {
+      "id": "qmroot.001",
+      "envelope": "qmroot",
+      "json": "qmroot.001.json",
+      "doc": "qmroot.md",
+      "description": "Origin-state interpretation from the qmroot cosmology layer."
+    }
+  ],
+
+  "registry": {
+    "sitemap": "examples/sitemap.json",
+    "index": "examples/index.md"
+  }
+}
 
