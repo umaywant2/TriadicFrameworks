@@ -1,1 +1,73 @@
+{
+  "imagination": {
+    "symbolic": {
+      "path": [
+        "gradient",
+        "field",
+        "integrity"
+      ],
+      "meaning": "A creative impulse forms, expands into possibility, and crystallizes into stable meaning."
+    },
+    "metaphors": {
+      "gradient": "inspiration",
+      "field": "possibility shaping",
+      "integrity": "idea crystallization"
+    },
+    "semantics": {
+      "gradientIntensity": "inspiration strength",
+      "fieldCoherence": "clarity of forming idea",
+      "forceIntegrity": "stability of final concept"
+    },
+    "operators": [
+      "gradient",
+      "bind"
+    ],
+    "dimensions": [
+      "L4",
+      "L8",
+      "L32"
+    ],
+    "graph": {
+      "nodes": [
+        {
+          "id": "gradient",
+          "symbolic": "the first spark of unseen intention"
+        },
+        {
+          "id": "field",
+          "symbolic": "the shaping of possibility"
+        },
+        {
+          "id": "integrity",
+          "symbolic": "the crystallization of meaning"
+        }
+      ],
+      "edges": [
+        {
+          "from": "gradient",
+          "to": "field",
+          "symbolic": "inspiration expands into possibility"
+        },
+        {
+          "from": "field",
+          "to": "integrity",
+          "symbolic": "possibility stabilizes into a coherent idea"
+        }
+      ]
+    },
+    "layer": "L3_Forces_Unseen",
+    "triad": "forces",
+    "canonical": "R5",
+    "lineage": "qmroot → frequency → fluids → forces"
+  },
+  "session": {
+    "canon": "R5",
+    "modules": "L3_Forces_Unseen / spine / docs / imagination.json",
+    "drift": "none",
+    "coherence": "force-state coherence",
+    "version": "1.0.0",
+    "format": "imagination.json",
+    "audience": "MCP implementers, RTT researchers, cosmology engineers"
+  }
+}
 
