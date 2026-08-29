@@ -2,6 +2,14 @@
   "canonical": "R5",
   "layer": "L3_Forces_Unseen",
   "triad": "forces",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "id": "L16",
+  "name": "L16 Dimension",
+  "purpose": "Force-regime gradient-field synthesis.",
+  "semantics": ["gradientIntensity", "fieldCoherence"],
+
+  "spine": "S3",
   "dimension": "L16",
   "title": "TriadicFrameworks MCP — L16 Dimensional Framework",
   "description": "Defines the 16-dimensional internal projection model, focusing on sedenions, zero divisors, and rupture-dominant influence channels within the unseen force regime.",
