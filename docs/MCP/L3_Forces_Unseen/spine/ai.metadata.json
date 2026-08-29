@@ -1,0 +1,93 @@
+{
+  "canonical": "R5",
+  "layer": "L3_Forces_Unseen",
+  "triad": "forces",
+  "lineage": ["qmroot", "frequency", "fluids", "forces"],
+
+  "id": "S3-Spine-AI",
+  "title": "S3 Spine — AI Metadata",
+  "description": "AI metadata for the S3 Spine subsystem, enabling MCP agents, Docsbook engines, and AI tooling to discover, classify, and interpret structural, semantic, dimensional, operator, sequencing, and example assets.",
+  "version": "1.0.0",
+
+  "ai": {
+    "module": "spine",
+    "category": "unseen-force-regime",
+    "purpose": "Define and interpret the structural graph of unseen force mechanics.",
+    "keywords": [
+      "spine",
+      "forces",
+      "unseen",
+      "gradient",
+      "field",
+      "rupture",
+      "integrity",
+      "operators",
+      "dimensions",
+      "sequencing",
+      "examples"
+    ],
+    "audience": [
+      "MCP implementers",
+      "RTT researchers",
+      "cosmology engineers"
+    ]
+  },
+
+  "files": {
+    "graph": "S3.graph.json",
+    "dot": "S3.dot",
+    "deep": "deep.md",
+    "source": "m_Source.md",
+    "protocol": "protocol.md",
+    "operators": "operators.md",
+    "dimensions": "dimensions.md",
+    "registry": "registry.md",
+    "schemas": "schemas.md",
+    "manifest": "manifest.json",
+    "module": "module.json",
+    "dimensional_map": "dimensional_mapping.json",
+    "operator_map": "operator_interaction_map.json",
+    "sequencing_rules": "operator_sequencing_rules.json"
+  },
+
+  "examples": {
+    "registry": "spine.examples.registry.json",
+    "schema": "example.schema.json",
+    "directory": "examples/",
+    "docs": "examples/docs/",
+    "index": "examples/index.md",
+    "sitemap": "examples/sitemap.json",
+    "envelopes": [
+      "examples/canonical.001.json",
+      "examples/reality.001.json",
+      "examples/imagination.001.json",
+      "examples/information.001.json",
+      "examples/error.001.json",
+      "examples/qmroot.001.json"
+    ]
+  },
+
+  "catalogs": {
+    "tools": "tools.catalog.json",
+    "resources": "resources.catalog.json",
+    "prompts": "prompts.catalog.json"
+  },
+
+  "docsbook": {
+    "front_door": "README.md",
+    "sitemap": "sitemap.json",
+    "category": "L3 Forces Unseen",
+    "badge": "⚡ S3 Spine — AI Metadata"
+  },
+
+  "session": {
+    "canon": "R5",
+    "modules": "L3_Forces_Unseen / spine / ai.metadata",
+    "drift": "none",
+    "coherence": "force-state coherence",
+    "format": "ai.metadata.json",
+    "version": "1.0.0",
+    "inheritance": "qmroot → frequency → fluids → forces",
+    "audience": "MCP implementers, RTT researchers, cosmology engineers"
+  }
+}
