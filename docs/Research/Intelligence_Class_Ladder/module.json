@@ -464,4 +464,3 @@
     "version_policy": "All sub-module versions must match the ladder_version. A minor bump in any tier module requires a patch bump at ladder level. A breaking change in any tier module requires a minor bump at ladder level."
   }
 }
-
