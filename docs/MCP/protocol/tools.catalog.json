@@ -76,7 +76,30 @@
     },
     "required": ["examples"]
   }
-}
+},
+    
+{
+  "name": "getExample",
+  "description": "Retrieve a single example envelope by ID.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "id": { "type": "string" }
+    },
+    "required": ["id"],
+    "additionalProperties": false
+  },
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "example": {
+        "$ref": "example.schema.json"
+      }
+    },
+    "required": ["example"]
+  }
+},
+    
     {
       "name": "getModule",
       "description": "Return the metadata, lineage, and schema reference for a single module.",
@@ -120,6 +143,32 @@
       }
     },
 
+{
+  "name": "searchExamples",
+  "description": "Search example envelopes by module, layer, or kind.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "module": { "type": "string" },
+      "layer": { "type": "string" },
+      "kind": { "type": "string" }
+    },
+    "additionalProperties": false
+  },
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "results": {
+        "type": "array",
+        "items": {
+          "$ref": "example.schema.json"
+        }
+      }
+    },
+    "required": ["results"]
+  }
+},
+    
     {
       "name": "searchOperators",
       "description": "Search operators by keyword, regime, or analyzer layer.",
