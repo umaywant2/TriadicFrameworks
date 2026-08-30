@@ -1,0 +1,21 @@
+{
+  "module": "AGI",
+  "name": "Artificial General Intelligence",
+  "summary": "Domain-level intelligence responsible for reasoning, regime detection, triad decomposition, and strategy formation.",
+  "category": "intelligence-domain",
+  "version": "1.0",
+  "purpose": "Execute domain reasoning and coordinate ASIs under substrate constraints.",
+  "role": "profile",
+  "analyzer_layer": "operator",
+  "operators": [
+    "@domain.reason",
+    "@domain.regime.detect",
+    "@domain.triad.decompose",
+    "@domain.strategy.form",
+    "@domain.boundary.check"
+  ],
+  "lineage": {
+    "upstream": ["AAI"],
+    "downstream": ["ASI"]
+  }
+}
