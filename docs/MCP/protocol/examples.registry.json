@@ -1,48 +1,56 @@
 {
+  "id": "mcp.examplesRegistry",
   "version": "0.1.0",
+  "description": "Canonical example registry for the TriadicFrameworks MCP substrate.",
   "examples": [
     {
-      "id": "fft-analyzer.canonical.001",
-      "module": "FFT Analyzer",
-      "layer": "L1_Frequency_Unseen",
-      "kind": ["canonical"],
-      "path": "docs/MCP/L1_Frequency_Unseen/FFT_Analyzer/examples/canonical.001.json"
-    },
-    {
-      "id": "fft-analyzer.error.001",
-      "module": "FFT Analyzer",
-      "layer": "L1_Frequency_Unseen",
-      "kind": ["error"],
-      "path": "docs/MCP/L1_Frequency_Unseen/FFT_Analyzer/examples/error.001.json"
-    },
-    {
-      "id": "gradient-field.canonical.001",
-      "module": "Gradient Field",
+      "id": "conditions_substrate_model.001",
+      "module": "Conditions_Substrate_Model",
       "layer": "L3_Forces_Unseen",
-      "kind": ["canonical"],
-      "path": "docs/MCP/L3_Forces_Unseen/Gradient_Field/examples/canonical.001.json"
+      "kind": "canonical",
+      "path": "docs/MCP/Conditions_Substrate_Model/examples/example.001.json"
     },
     {
-      "id": "rupture-surface.reality.001",
-      "module": "Rupture Surface",
+      "id": "L3.canonical.001",
+      "module": "L3_Forces_Unseen",
       "layer": "L3_Forces_Unseen",
-      "kind": ["reality"],
-      "path": "docs/MCP/L3_Forces_Unseen/Rupture_Surface/examples/reality.001.json"
+      "kind": "canonical",
+      "path": "docs/MCP/L3_Forces_Unseen/examples/canonical.json"
     },
     {
-      "id": "coherence-map.information.001",
-      "module": "Coherence Map",
-      "layer": "L2_Fluids_Seen",
-      "kind": ["information"],
-      "path": "docs/MCP/L2_Fluids_Seen/Coherence_Map/examples/information.001.json"
+      "id": "L3.error.001",
+      "module": "L3_Forces_Unseen",
+      "layer": "L3_Forces_Unseen",
+      "kind": "error",
+      "path": "docs/MCP/L3_Forces_Unseen/examples/error.json"
     },
     {
-      "id": "origin-qmroot.qmroot.001",
-      "module": "Origin",
-      "layer": "L0_QMROOT",
-      "kind": ["qmroot"],
-      "path": "docs/MCP/L0_QMROOT/Origin/examples/qmroot.001.json"
+      "id": "L3.information.001",
+      "module": "L3_Forces_Unseen",
+      "layer": "L3_Forces_Unseen",
+      "kind": "information",
+      "path": "docs/MCP/L3_Forces_Unseen/examples/information.json"
+    },
+    {
+      "id": "L3.imagination.001",
+      "module": "L3_Forces_Unseen",
+      "layer": "L3_Forces_Unseen",
+      "kind": "imagination",
+      "path": "docs/MCP/L3_Forces_Unseen/examples/imagination.json"
+    },
+    {
+      "id": "L3.reality.001",
+      "module": "L3_Forces_Unseen",
+      "layer": "L3_Forces_Unseen",
+      "kind": "reality",
+      "path": "docs/MCP/L3_Forces_Unseen/examples/reality.json"
+    },
+    {
+      "id": "L3.qmroot.001",
+      "module": "L3_Forces_Unseen",
+      "layer": "L3_Forces_Unseen",
+      "kind": "qmroot",
+      "path": "docs/MCP/L3_Forces_Unseen/examples/qmroot.json"
     }
   ]
 }
-
