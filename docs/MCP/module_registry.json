@@ -1,0 +1,64 @@
+{
+  "id": "mcp.moduleRegistry",
+  "version": "0.1.0",
+  "description": "Canonical module registry for the TriadicFrameworks MCP substrate.",
+  "modules": [
+    {
+      "id": "L0_QMROOT",
+      "name": "Quantum Root",
+      "layer": "L0_QMROOT",
+      "triad": "origin",
+      "lineage": "origin",
+      "category": "layer",
+      "path": "docs/MCP/L0_QMROOT",
+      "coherent": true
+    },
+    {
+      "id": "L1_Frequency_Unseen",
+      "name": "Frequency Unseen",
+      "layer": "L1_Frequency_Unseen",
+      "triad": "frequency",
+      "lineage": "oscillation",
+      "category": "layer",
+      "path": "docs/MCP/L1_Frequency_Unseen",
+      "coherent": true
+    },
+    {
+      "id": "L2_Fluids_Seen",
+      "name": "Fluids Seen",
+      "layer": "L2_Fluids_Seen",
+      "triad": "fluids",
+      "lineage": "flow",
+      "category": "layer",
+      "path": "docs/MCP/L2_Fluids_Seen",
+      "coherent": true
+    },
+    {
+      "id": "L3_Forces_Unseen",
+      "name": "Forces Unseen",
+      "layer": "L3_Forces_Unseen",
+      "triad": "forces",
+      "lineage": "structure",
+      "category": "layer",
+      "path": "docs/MCP/L3_Forces_Unseen",
+      "coherent": true
+    },
+    {
+      "id": "continuity_mechanics",
+      "name": "Continuity Mechanics",
+      "layer": "L3_Forces_Unseen",
+      "triad": "continuity",
+      "lineage": "composite-resonance",
+      "category": "subsystem",
+      "path": "docs/MCP/L3_Forces_Unseen/continuity_mechanics",
+      "coherent": true,
+      "freezeTable": {
+        "L11": "stable",
+        "L33": "stable",
+        "L66": "stable",
+        "L99": "stable",
+        "validator_pulse": "active"
+      }
+    }
+  ]
+}
