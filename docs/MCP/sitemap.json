@@ -1,46 +1,57 @@
 {
-  "canonical": "R5",
-  "version": "1.0.0",
-  "summary": "Complete sitemap for MCP documentation including L3 functional dimensions and L4 composite resonance system.",
-
-  "layers": {
-    "L3_Forces_Unseen": {
-      "path": "docs/MCP/L3_Forces_Unseen",
-      "dimensions": {
-        "gradient": ["L4", "L5", "L16", "LH"],
-        "field": ["L8", "L10", "L26"],
-        "rupture": ["L12"],
-        "integrity": ["L32", "LI"]
-      },
-      "files": [
-        "module.json",
-        "dimension_index.json"
-      ]
+  "id": "mcp.sitemap",
+  "version": "0.1.0",
+  "description": "Root sitemap for the TriadicFrameworks MCP substrate. Lists all top-level MCP directories.",
+  "layers": [
+    {
+      "id": "L0_QMROOT",
+      "path": "docs/MCP/L0_QMROOT",
+      "triad": "origin"
     },
-
-    "L4_Continuity_Mechanics": {
-      "path": "docs/MCP/L4_Continuity_Mechanics",
-      "dimensions": {
-        "proto": ["L11.component.md"],
-        "composite": ["L33.md", "L66.md", "L99.md"]
-      },
-      "files": [
-        "module.json",
-        "dimension_index.json",
-        "continuity.md",
-        "resonance.md"
-      ],
-      "diagrams": {
-        "atlas": "diagrams/atlas.md",
-        "index": "diagrams/diagram.md",
-        "dimension_specific": {
-          "L11": "dimensions/L11.component.md",
-          "L33": "dimensions/L33.md",
-          "L66": "dimensions/L66.md",
-          "L99": "dimensions/L99.md"
-        }
-      },
-      "redirects": "redirects/redirect.registry.json"
+    {
+      "id": "L1_Frequency_Unseen",
+      "path": "docs/MCP/L1_Frequency_Unseen",
+      "triad": "frequency"
+    },
+    {
+      "id": "L2_Fluids_Seen",
+      "path": "docs/MCP/L2_Fluids_Seen",
+      "triad": "fluids"
+    },
+    {
+      "id": "L3_Forces_Unseen",
+      "path": "docs/MCP/L3_Forces_Unseen",
+      "triad": "forces"
     }
+  ],
+  "subsystems": [
+    {
+      "id": "continuity_mechanics",
+      "path": "docs/MCP/L3_Forces_Unseen/continuity_mechanics",
+      "triad": "continuity",
+      "category": "subsystem"
+    }
+  ],
+  "protocol": {
+    "path": "docs/MCP/protocol",
+    "files": [
+      "server.json",
+      "tools.catalog.json",
+      "resources.catalog.json",
+      "prompts.catalog.json",
+      "example.schema.json",
+      "examples.registry.json"
+    ]
+  },
+  "runtime": {
+    "path": "docs/MCP/src",
+    "files": [
+      "mcp/server.py",
+      "loaders/corpus.py"
+    ]
+  },
+  "registry": {
+    "examples": "docs/MCP/examples.registry.json",
+    "module": "docs/MCP/module.json"
   }
 }
