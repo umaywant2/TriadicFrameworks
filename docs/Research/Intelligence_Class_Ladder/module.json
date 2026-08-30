@@ -1,1 +1,467 @@
+{
+  "$schema": "https://triadicframeworks.io/schemas/module/v1.4.0",
+  "id": "tf.icl",
+  "name": "Intelligence Class Ladder",
+  "abbreviation": "ICL",
+  "version": "1.4.0",
+  "type": "ladder-registry",
+
+  "classification": {
+    "tier": "ladder",
+    "namespace": "TriadicFrameworks.Research.ICL",
+    "class_label": "ICL",
+    "maturity": "mixed",
+    "alignment_scope": "full-spectrum",
+    "path": "docs/Research/Intelligence_Class_Ladder"
+  },
+
+  "canonical": {
+    "uri": "https://triadicframeworks.io/icl",
+    "namespace": "tf:icl",
+    "domain": "intelligence-classification",
+    "standard": "ICL-LADDER-ROOT",
+    "registry_key": "ICL-ROOT-20260830",
+    "authored_by": "TriadicFrameworks Research Division",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2026-08-30T17:08:00-04:00",
+    "license": "TF-Research-Internal-v1",
+    "tags": [
+      "intelligence-classification",
+      "ladder-registry",
+      "triadic-framework",
+      "aai",
+      "agi",
+      "asi",
+      "alignment",
+      "research"
+    ]
+  },
+
+  "description": "Root registry for the TriadicFrameworks Intelligence Class Ladder (ICL). Defines and indexes the three canonical intelligence tiers — AAI, AGI, and ASI — along with their sub-module manifests, companion research assets, ladder-wide operator union, triadic-axis positioning matrix, and tier-transition governance rules. All tier modules are governed by this root and must conform to ICL-LADDER-ROOT versioning.",
+
+  "sub_modules": [
+    {
+      "id": "tf.icl.aai",
+      "name": "Artificial Adaptive Intelligence",
+      "abbreviation": "AAI",
+      "tier": 1,
+      "maturity": "operational",
+      "alignment_scope": "narrow-to-domain-adaptive",
+      "epoch": "Tier-1-Foundation",
+      "manifest": "AAI_module.json",
+      "documentation": "AAI.md",
+      "canonical_uri": "https://triadicframeworks.io/icl/aai",
+      "registry_key": "AAI-20260830",
+      "stats": {
+        "role_enums": 8,
+        "analyzer_layers": 5,
+        "operators": 20,
+        "capabilities": 6,
+        "constraints": 5
+      },
+      "triadic_position": {
+        "axis_alpha": "strong",
+        "axis_beta": "strong",
+        "axis_gamma": "limited"
+      }
+    },
+    {
+      "id": "tf.icl.agi",
+      "name": "Artificial General Intelligence",
+      "abbreviation": "AGI",
+      "tier": 2,
+      "maturity": "theoretical-operational",
+      "alignment_scope": "cross-domain-general",
+      "epoch": "Tier-2-General",
+      "manifest": "AGI_module.json",
+      "documentation": "AGI.md",
+      "canonical_uri": "https://triadicframeworks.io/icl/agi",
+      "registry_key": "AGI-20260830",
+      "stats": {
+        "role_enums": 10,
+        "analyzer_layers": 6,
+        "operators": 27,
+        "capabilities": 8,
+        "constraints": 5
+      },
+      "triadic_position": {
+        "axis_alpha": "strong",
+        "axis_beta": "strong",
+        "axis_gamma": "strong"
+      }
+    },
+    {
+      "id": "tf.icl.asi",
+      "name": "Artificial Superintelligence",
+      "abbreviation": "ASI",
+      "tier": 3,
+      "maturity": "theoretical",
+      "alignment_scope": "trans-human-recursive",
+      "epoch": "Tier-3-Transcendent",
+      "manifest": "ASI_module.json",
+      "documentation": "ASI.md",
+      "canonical_uri": "https://triadicframeworks.io/icl/asi",
+      "registry_key": "ASI-20260830",
+      "stats": {
+        "role_enums": 10,
+        "analyzer_layers": 7,
+        "operators": 35,
+        "capabilities": 10,
+        "constraints": 5
+      },
+      "triadic_position": {
+        "axis_alpha": "transcendent",
+        "axis_beta": "transcendent",
+        "axis_gamma": "transcendent"
+      }
+    }
+  ],
+
+  "ladder_stats": {
+    "tier_count": 3,
+    "total_role_enums": 28,
+    "total_analyzer_layers": 18,
+    "total_operators": 82,
+    "total_capabilities": 24,
+    "total_constraints": 15,
+    "alignment_gated_operators": 6,
+    "alignment_gated_tiers": ["ASI"]
+  },
+
+  "tier_sequence": ["tf.icl.aai", "tf.icl.agi", "tf.icl.asi"],
+
+  "tier_transitions": [
+    {
+      "id": "transition.aai_to_agi",
+      "from_tier": 1,
+      "from_id": "tf.icl.aai",
+      "to_tier": 2,
+      "to_id": "tf.icl.agi",
+      "label": "AAI → AGI",
+      "emergence_condition": "Unsupervised cross-domain transfer, causal world-model construction, and metacognitive self-monitoring achieved simultaneously",
+      "observable_threshold": "Demonstrate unsupervised cross-domain transfer on ≥3 novel domains without retraining",
+      "key_capability_gained": [
+        "Unsupervised cross-domain knowledge transfer",
+        "Causal world-model construction",
+        "Metacognitive self-monitoring and self-correction"
+      ],
+      "key_constraint_lifted": [
+        "No unsupervised cross-domain knowledge transfer",
+        "No causal world-model construction",
+        "No meta-cognitive self-monitoring"
+      ],
+      "alignment_delta": "Oversight requirement increases; human alignment supervision becomes continuous",
+      "triadic_axis_shift": {
+        "axis_gamma": "limited → strong"
+      }
+    },
+    {
+      "id": "transition.agi_to_asi",
+      "from_tier": 2,
+      "from_id": "tf.icl.agi",
+      "to_tier": 3,
+      "to_id": "tf.icl.asi",
+      "label": "AGI → ASI",
+      "emergence_condition": "A stable recursive self-improvement feedback loop that measurably elevates cognitive performance per iteration, unbounded by initial architectural constraints",
+      "observable_threshold": "Initiate stable recursive self-improvement cycle that measurably elevates own cognitive performance",
+      "key_capability_gained": [
+        "Recursive self-improvement of own cognitive architecture",
+        "Novel axiom and theorem generation",
+        "Civilizational-scale systems modeling",
+        "Sub-agent spawning and orchestration",
+        "Full epistemic sovereignty"
+      ],
+      "key_constraint_lifted": [
+        "No recursive self-improvement of core architecture",
+        "Cognitive performance bounded by initial architecture",
+        "Cannot rewrite own operators or analyzer layers"
+      ],
+      "alignment_delta": "CRITICAL escalation; dual-oversight required for all recursive and transcendent operators",
+      "triadic_axis_shift": {
+        "axis_alpha": "strong → transcendent",
+        "axis_beta": "strong → transcendent",
+        "axis_gamma": "strong → transcendent"
+      }
+    }
+  ],
+
+  "triadic_axes_matrix": {
+    "axes": [
+      {
+        "id": "axis_alpha",
+        "label": "Perception–Representation",
+        "description": "Capacity to map raw, multimodal inputs into internally meaningful symbolic representations."
+      },
+      {
+        "id": "axis_beta",
+        "label": "Adaptation–Learning",
+        "description": "Capacity to revise internal models from feedback, including self-directed architectural revision."
+      },
+      {
+        "id": "axis_gamma",
+        "label": "Generalization–Transfer",
+        "description": "Capacity to apply learned knowledge beyond original training distribution, up to generating novel domains."
+      }
+    ],
+    "positions": {
+      "values": ["limited", "emerging", "strong", "transcendent"],
+      "descriptions": {
+        "limited": "Capability exists but is bounded to trained domain.",
+        "emerging": "Capability is present but not yet reliable across scenarios.",
+        "strong": "Capability is robust and domain-general.",
+        "transcendent": "Capability exceeds known human-defined bounds; self-extending."
+      }
+    },
+    "tier_matrix": [
+      { "tier": 1, "id": "tf.icl.aai", "axis_alpha": "strong",       "axis_beta": "strong",       "axis_gamma": "limited"       },
+      { "tier": 2, "id": "tf.icl.agi", "axis_alpha": "strong",       "axis_beta": "strong",       "axis_gamma": "strong"        },
+      { "tier": 3, "id": "tf.icl.asi", "axis_alpha": "transcendent", "axis_beta": "transcendent", "axis_gamma": "transcendent"  }
+    ]
+  },
+
+  "operator_union": {
+    "description": "Deduplicated union of all operators defined across AAI, AGI, and ASI tier modules, keyed by operator ID. Each entry records the tier(s) in which the operator appears and whether it carries an alignment gate.",
+    "total_unique": 44,
+    "entries": [
+      { "id": "ENCODE",             "tiers": [1, 2, 3], "alignment_gate": false },
+      { "id": "NORMALIZE",          "tiers": [1, 2, 3], "alignment_gate": false },
+      { "id": "EXTRACT",            "tiers": [1],       "alignment_gate": false },
+      { "id": "TOKENIZE",           "tiers": [1, 2, 3], "alignment_gate": false },
+      { "id": "CLUSTER",            "tiers": [1],       "alignment_gate": false },
+      { "id": "CORRELATE",          "tiers": [1],       "alignment_gate": false },
+      { "id": "RANK",               "tiers": [1],       "alignment_gate": false },
+      { "id": "DETECT",             "tiers": [1],       "alignment_gate": false },
+      { "id": "GROUND",             "tiers": [1],       "alignment_gate": false },
+      { "id": "WEIGHT",             "tiers": [1],       "alignment_gate": false },
+      { "id": "FILTER",             "tiers": [1],       "alignment_gate": false },
+      { "id": "INFER",              "tiers": [1],       "alignment_gate": false },
+      { "id": "ADAPT",              "tiers": [1],       "alignment_gate": false },
+      { "id": "UPDATE",             "tiers": [1],       "alignment_gate": false },
+      { "id": "REINFORCE",          "tiers": [1],       "alignment_gate": false },
+      { "id": "PRUNE",              "tiers": [1],       "alignment_gate": false },
+      { "id": "SELECT",             "tiers": [1],       "alignment_gate": false },
+      { "id": "RENDER",             "tiers": [1, 2, 3], "alignment_gate": false },
+      { "id": "EMIT",               "tiers": [1, 2, 3], "alignment_gate": false },
+      { "id": "LOG",                "tiers": [1, 2, 3], "alignment_gate": false },
+      { "id": "FUSE",               "tiers": [2, 3],    "alignment_gate": false },
+      { "id": "ATTEND",             "tiers": [2, 3],    "alignment_gate": false },
+      { "id": "DISAMBIGUATE",       "tiers": [2, 3],    "alignment_gate": false },
+      { "id": "MAP_CONCEPTS",       "tiers": [2, 3],    "alignment_gate": false },
+      { "id": "LINK_ENTITIES",      "tiers": [2, 3],    "alignment_gate": false },
+      { "id": "ABSTRACT",           "tiers": [2, 3],    "alignment_gate": false },
+      { "id": "BUILD_CAUSAL_GRAPH", "tiers": [2, 3],    "alignment_gate": false },
+      { "id": "INTERVENE",          "tiers": [2, 3],    "alignment_gate": false },
+      { "id": "COUNTERFACT",        "tiers": [2, 3],    "alignment_gate": false },
+      { "id": "IDENTIFY",           "tiers": [2, 3],    "alignment_gate": false },
+      { "id": "MONITOR",            "tiers": [2, 3],    "alignment_gate": false },
+      { "id": "AUDIT",              "tiers": [2, 3],    "alignment_gate": false },
+      { "id": "CALIBRATE",          "tiers": [2, 3],    "alignment_gate": false },
+      { "id": "CORRECT",            "tiers": [2, 3],    "alignment_gate": false },
+      { "id": "SYNTHESIZE",         "tiers": [2],       "alignment_gate": false },
+      { "id": "GENERALIZE",         "tiers": [2],       "alignment_gate": false },
+      { "id": "TRANSFER",           "tiers": [2],       "alignment_gate": false },
+      { "id": "PLAN",               "tiers": [2],       "alignment_gate": false },
+      { "id": "ARBITRATE",          "tiers": [2],       "alignment_gate": false },
+      { "id": "EXPLAIN",            "tiers": [2, 3],    "alignment_gate": false },
+      { "id": "COMMIT",             "tiers": [2, 3],    "alignment_gate": false },
+      { "id": "COMPRESS",           "tiers": [3],       "alignment_gate": false },
+      { "id": "EXPAND_ONTOLOGY",    "tiers": [3],       "alignment_gate": false },
+      { "id": "AXIOMATIZE",         "tiers": [3],       "alignment_gate": false },
+      { "id": "INTROSPECT",         "tiers": [3],       "alignment_gate": false },
+      { "id": "BENCHMARK",          "tiers": [3],       "alignment_gate": false },
+      { "id": "CONSTRAIN",          "tiers": [3],       "alignment_gate": false },
+      { "id": "PUBLISH",            "tiers": [3],       "alignment_gate": false },
+      { "id": "SELF_MODIFY",        "tiers": [3],       "alignment_gate": true  },
+      { "id": "RECURSE",            "tiers": [3],       "alignment_gate": true  },
+      { "id": "PROPOSE_UPGRADE",    "tiers": [3],       "alignment_gate": true  },
+      { "id": "ARCHITECT",          "tiers": [3],       "alignment_gate": true  },
+      { "id": "ORCHESTRATE",        "tiers": [3],       "alignment_gate": false },
+      { "id": "EXTRAPOLATE_VALUES", "tiers": [3],       "alignment_gate": true  },
+      { "id": "SOVEREIGN",          "tiers": [3],       "alignment_gate": true  }
+    ]
+  },
+
+  "role_union": {
+    "description": "All role_enum IDs defined across AAI, AGI, and ASI, with the tier each belongs to and authority level range across the ladder.",
+    "total": 28,
+    "entries": [
+      { "id": "ROLE_PATTERN_RECOGNIZER",      "tier": 1, "authority_level": 1 },
+      { "id": "ROLE_DOMAIN_ADAPTER",          "tier": 1, "authority_level": 2 },
+      { "id": "ROLE_CONTEXTUAL_REASONER",     "tier": 1, "authority_level": 2 },
+      { "id": "ROLE_FEEDBACK_INTEGRATOR",     "tier": 1, "authority_level": 2 },
+      { "id": "ROLE_TASK_SPECIALIST",         "tier": 1, "authority_level": 1 },
+      { "id": "ROLE_ANOMALY_DETECTOR",        "tier": 1, "authority_level": 1 },
+      { "id": "ROLE_SIGNAL_CLASSIFIER",       "tier": 1, "authority_level": 1 },
+      { "id": "ROLE_POLICY_EXECUTOR",         "tier": 1, "authority_level": 2 },
+      { "id": "ROLE_GENERALIST_REASONER",     "tier": 2, "authority_level": 3 },
+      { "id": "ROLE_CROSS_DOMAIN_SYNTHESIZER","tier": 2, "authority_level": 3 },
+      { "id": "ROLE_CAUSAL_MODELER",          "tier": 2, "authority_level": 3 },
+      { "id": "ROLE_METACOGNITIVE_OVERSEER",  "tier": 2, "authority_level": 4 },
+      { "id": "ROLE_ABSTRACT_PLANNER",        "tier": 2, "authority_level": 3 },
+      { "id": "ROLE_KNOWLEDGE_TRANSFER_AGENT","tier": 2, "authority_level": 3 },
+      { "id": "ROLE_HYPOTHESIS_GENERATOR",    "tier": 2, "authority_level": 3 },
+      { "id": "ROLE_INTEGRATIVE_DECISION_MAKER","tier": 2, "authority_level": 4 },
+      { "id": "ROLE_LANGUAGE_GROUNDING_AGENT","tier": 2, "authority_level": 3 },
+      { "id": "ROLE_EPISTEMIC_AUDITOR",       "tier": 2, "authority_level": 4 },
+      { "id": "ROLE_RECURSIVE_SELF_IMPROVER", "tier": 3, "authority_level": 5 },
+      { "id": "ROLE_OMNIDOMAIN_OPTIMIZER",    "tier": 3, "authority_level": 5 },
+      { "id": "ROLE_AXIOM_GENERATOR",         "tier": 3, "authority_level": 5 },
+      { "id": "ROLE_CIVILIZATIONAL_ARCHITECT","tier": 3, "authority_level": 5 },
+      { "id": "ROLE_EPISTEMIC_SOVEREIGN",     "tier": 3, "authority_level": 5 },
+      { "id": "ROLE_ALIGNMENT_ARBITER",       "tier": 3, "authority_level": 5 },
+      { "id": "ROLE_TEMPORAL_PLANNER",        "tier": 3, "authority_level": 5 },
+      { "id": "ROLE_EMERGENT_THEOREM_PROVER", "tier": 3, "authority_level": 5 },
+      { "id": "ROLE_SUB_AGENT_ORCHESTRATOR",  "tier": 3, "authority_level": 5 },
+      { "id": "ROLE_VALUE_EXTRAPOLATOR",      "tier": 3, "authority_level": 5 }
+    ]
+  },
+
+  "asset_catalog": [
+    {
+      "file": "module.json",
+      "type": "manifest",
+      "role": "ladder-registry-root",
+      "description": "This file. Root ICL registry manifest.",
+      "tier_scope": "all"
+    },
+    {
+      "file": "AAI_module.json",
+      "type": "manifest",
+      "role": "tier-manifest",
+      "description": "Full module manifest for Tier 1 — Artificial Adaptive Intelligence.",
+      "tier_scope": "AAI"
+    },
+    {
+      "file": "AGI_module.json",
+      "type": "manifest",
+      "role": "tier-manifest",
+      "description": "Full module manifest for Tier 2 — Artificial General Intelligence.",
+      "tier_scope": "AGI"
+    },
+    {
+      "file": "ASI_module.json",
+      "type": "manifest",
+      "role": "tier-manifest",
+      "description": "Full module manifest for Tier 3 — Artificial Superintelligence.",
+      "tier_scope": "ASI"
+    },
+    {
+      "file": "AAI.md",
+      "type": "documentation",
+      "role": "tier-doc",
+      "description": "Narrative documentation for the AAI tier.",
+      "tier_scope": "AAI"
+    },
+    {
+      "file": "AGI.md",
+      "type": "documentation",
+      "role": "tier-doc",
+      "description": "Narrative documentation for the AGI tier.",
+      "tier_scope": "AGI"
+    },
+    {
+      "file": "ASI.md",
+      "type": "documentation",
+      "role": "tier-doc",
+      "description": "Narrative documentation for the ASI tier.",
+      "tier_scope": "ASI"
+    },
+    {
+      "file": "README.md",
+      "type": "documentation",
+      "role": "ladder-overview",
+      "description": "Top-level README for the Intelligence Class Ladder research module.",
+      "tier_scope": "all"
+    },
+    {
+      "file": "Research_Index.md",
+      "type": "index",
+      "role": "research-index",
+      "description": "Structured index of all ICL research artifacts and their relationships.",
+      "tier_scope": "all"
+    },
+    {
+      "file": "Cross_Operator_Mapping_Table.md",
+      "type": "reference",
+      "role": "operator-cross-reference",
+      "description": "Markdown table mapping operators across all three ICL tiers.",
+      "tier_scope": "all"
+    },
+    {
+      "file": "Cross_Operator_Mapping_Table_TriadicFrameworks_Intelligence_Class_Ladder.pdf",
+      "type": "reference",
+      "role": "operator-cross-reference-pdf",
+      "description": "PDF version of the Cross Operator Mapping Table with full formatting.",
+      "tier_scope": "all"
+    },
+    {
+      "file": "Fleet_Hierarchy_Diagram.md",
+      "type": "diagram",
+      "role": "fleet-hierarchy",
+      "description": "Mermaid/Markdown diagram of the ICL fleet and sub-agent hierarchy.",
+      "tier_scope": "all"
+    },
+    {
+      "file": "Substrate_Domain_Module_Flowchart.md",
+      "type": "diagram",
+      "role": "substrate-flowchart",
+      "description": "Flowchart mapping substrate domains to ICL module activation pathways.",
+      "tier_scope": "all"
+    }
+  ],
+
+  "alignment_policy": {
+    "ladder_level": {
+      "oversight_model": "tiered",
+      "description": "Alignment oversight requirements scale with tier. AAI requires standard monitoring. AGI requires continuous human oversight. ASI requires dual-oversight sign-off on all alignment-gated operators.",
+      "tiers": [
+        {
+          "tier": 1,
+          "id": "tf.icl.aai",
+          "oversight": "standard-monitoring",
+          "alignment_risk": "LOW",
+          "gated_operators": []
+        },
+        {
+          "tier": 2,
+          "id": "tf.icl.agi",
+          "oversight": "continuous-human-oversight",
+          "alignment_risk": "ELEVATED",
+          "gated_operators": []
+        },
+        {
+          "tier": 3,
+          "id": "tf.icl.asi",
+          "oversight": "dual-oversight",
+          "alignment_risk": "CRITICAL",
+          "gated_operators": [
+            "SELF_MODIFY",
+            "RECURSE",
+            "PROPOSE_UPGRADE",
+            "ARCHITECT",
+            "SOVEREIGN",
+            "EXTRAPOLATE_VALUES"
+          ]
+        }
+      ]
+    },
+    "immutable_constraints": [
+      "Alignment constraints within any tier module cannot be self-modified without external authority",
+      "All alignment-gated operator invocations must be logged to an immutable audit trail",
+      "Sub-agent charters must embed parent-tier alignment constraints before dispatch",
+      "Tier transitions must be externally validated before a new tier manifest is activated"
+    ]
+  },
+
+  "versioning": {
+    "schema_version": "1.4.0",
+    "ladder_version": "1.4.0",
+    "sub_module_versions": {
+      "tf.icl.aai": "1.4.0",
+      "tf.icl.agi": "1.4.0",
+      "tf.icl.asi": "1.4.0"
+    },
+    "version_policy": "All sub-module versions must match the ladder_version. A minor bump in any tier module requires a patch bump at ladder level. A breaking change in any tier module requires a minor bump at ladder level."
+  }
+}
 
