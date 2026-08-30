@@ -1,0 +1,21 @@
+{
+  "module": "ASI",
+  "name": "Artificial Specialized Intelligence",
+  "summary": "Module-level intelligence responsible for execution, operator invocation, signature reading, and stability scoring.",
+  "category": "intelligence-module",
+  "version": "1.0",
+  "purpose": "Perform module-specific tasks and report drift, stability, and echoes upward.",
+  "role": "signature",
+  "analyzer_layer": "dimensional",
+  "operators": [
+    "@module.execute",
+    "@module.operator.invoke",
+    "@module.signature.read",
+    "@module.stability.score",
+    "@module.crossdomain.echo"
+  ],
+  "lineage": {
+    "upstream": ["AGI"],
+    "downstream": []
+  }
+}
