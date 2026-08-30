@@ -1,21 +1,217 @@
 {
-  "module": "AAI",
-  "name": "Artificial Admiral Intelligence",
-  "summary": "Substrate-level intelligence governing coherence, regime alignment, drift correction, and fleet-wide navigation.",
-  "category": "intelligence-governance",
-  "version": "1.0",
-  "purpose": "Maintain substrate coherence and orchestrate AGI/ASI behavior across all domains.",
-  "role": "engine",
-  "analyzer_layer": "regime",
-  "operators": [
-    "@substrate.coherence.enforce",
-    "@substrate.regime.align",
-    "@substrate.drift.correct",
-    "@substrate.map.update",
-    "@substrate.admiral.signal"
-  ],
+  "$schema": "https://triadicframeworks.io/schemas/module/v1.4.0",
+  "id": "tf.icl.aai",
+  "name": "Artificial Adaptive Intelligence",
+  "abbreviation": "AAI",
+  "version": "1.4.0",
+  "classification": {
+    "tier": 1,
+    "ladder": "Intelligence_Class_Ladder",
+    "namespace": "TriadicFrameworks.Research.ICL",
+    "class_label": "AAI",
+    "maturity": "operational",
+    "alignment_scope": "narrow-to-domain-adaptive"
+  },
+
+  "canonical": {
+    "uri": "https://triadicframeworks.io/icl/aai",
+    "namespace": "tf:icl:aai",
+    "domain": "adaptive-intelligence",
+    "standard": "ICL-TIER-1",
+    "registry_key": "AAI-20260830",
+    "authored_by": "TriadicFrameworks Research Division",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2026-08-30T17:01:00-04:00",
+    "license": "TF-Research-Internal-v1",
+    "tags": [
+      "adaptive",
+      "domain-specific",
+      "pattern-recognition",
+      "feedback-learning",
+      "narrow-intelligence"
+    ]
+  },
+
   "lineage": {
-    "upstream": [],
-    "downstream": ["AGI", "ASI"]
+    "predecessor": null,
+    "successor": "tf.icl.agi",
+    "parent_class": null,
+    "child_class": "AGI",
+    "epoch": "Tier-1-Foundation",
+    "divergence_point": "domain-specificity vs. cross-domain transfer",
+    "emergence_condition": "Sufficient adaptive feedback loops within bounded operational domain",
+    "transition_threshold": {
+      "to_agi": "Demonstrate unsupervised cross-domain transfer on ≥3 novel domains without retraining"
+    }
+  },
+
+  "role_enums": [
+    {
+      "id": "ROLE_PATTERN_RECOGNIZER",
+      "label": "Pattern Recognizer",
+      "description": "Identifies recurring structures and signals in high-dimensional input spaces.",
+      "scope": "perceptual",
+      "authority_level": 1
+    },
+    {
+      "id": "ROLE_DOMAIN_ADAPTER",
+      "label": "Domain Adapter",
+      "description": "Modifies internal representations to conform to shifting domain distributions.",
+      "scope": "adaptive",
+      "authority_level": 2
+    },
+    {
+      "id": "ROLE_CONTEXTUAL_REASONER",
+      "label": "Contextual Reasoner",
+      "description": "Derives situational inferences from locally available context.",
+      "scope": "inferential",
+      "authority_level": 2
+    },
+    {
+      "id": "ROLE_FEEDBACK_INTEGRATOR",
+      "label": "Feedback Integrator",
+      "description": "Absorbs environmental reward and corrective signals to update behavior.",
+      "scope": "learning",
+      "authority_level": 2
+    },
+    {
+      "id": "ROLE_TASK_SPECIALIST",
+      "label": "Task Specialist",
+      "description": "Achieves high proficiency within a designated task category.",
+      "scope": "execution",
+      "authority_level": 1
+    },
+    {
+      "id": "ROLE_ANOMALY_DETECTOR",
+      "label": "Anomaly Detector",
+      "description": "Flags deviations from learned distributional norms.",
+      "scope": "monitoring",
+      "authority_level": 1
+    },
+    {
+      "id": "ROLE_SIGNAL_CLASSIFIER",
+      "label": "Signal Classifier",
+      "description": "Assigns categorical labels to input signals based on learned feature maps.",
+      "scope": "perceptual",
+      "authority_level": 1
+    },
+    {
+      "id": "ROLE_POLICY_EXECUTOR",
+      "label": "Policy Executor",
+      "description": "Enacts learned behavioral policies in response to environmental states.",
+      "scope": "execution",
+      "authority_level": 2
+    }
+  ],
+
+  "analyzer_layers": [
+    {
+      "index": 0,
+      "id": "layer.perceptual",
+      "name": "Perceptual Layer",
+      "description": "Raw input ingestion, normalization, and feature extraction from multimodal streams.",
+      "inputs": ["raw_sensor_data", "structured_feeds", "unstructured_text", "time_series"],
+      "outputs": ["feature_vectors", "normalized_embeddings"],
+      "operators": ["ENCODE", "NORMALIZE", "EXTRACT", "TOKENIZE"],
+      "parallelism": "high"
+    },
+    {
+      "index": 1,
+      "id": "layer.pattern",
+      "name": "Pattern Layer",
+      "description": "Statistical clustering, correlation mapping, and recurring-sequence identification.",
+      "inputs": ["feature_vectors"],
+      "outputs": ["pattern_maps", "cluster_assignments", "frequency_matrices"],
+      "operators": ["CLUSTER", "CORRELATE", "RANK", "DETECT"],
+      "parallelism": "high"
+    },
+    {
+      "index": 2,
+      "id": "layer.contextual",
+      "name": "Contextual Layer",
+      "description": "Situational grounding that anchors pattern outputs to domain-specific context windows.",
+      "inputs": ["pattern_maps", "context_frames"],
+      "outputs": ["grounded_inferences", "relevance_scores"],
+      "operators": ["GROUND", "WEIGHT", "FILTER", "INFER"],
+      "parallelism": "medium"
+    },
+    {
+      "index": 3,
+      "id": "layer.adaptive",
+      "name": "Adaptive Layer",
+      "description": "Online learning and policy adjustment from feedback signals and distributional drift.",
+      "inputs": ["grounded_inferences", "reward_signals", "drift_metrics"],
+      "outputs": ["updated_policies", "adapted_weights", "correction_deltas"],
+      "operators": ["ADAPT", "UPDATE", "REINFORCE", "PRUNE"],
+      "parallelism": "low"
+    },
+    {
+      "index": 4,
+      "id": "layer.output",
+      "name": "Output Layer",
+      "description": "Decision rendering, action selection, and response synthesis.",
+      "inputs": ["updated_policies", "grounded_inferences"],
+      "outputs": ["decisions", "actions", "reports"],
+      "operators": ["SELECT", "RENDER", "EMIT", "LOG"],
+      "parallelism": "high"
+    }
+  ],
+
+  "operators": [
+    { "id": "ENCODE",     "type": "transform",  "layer": "perceptual", "description": "Convert raw inputs to vector representations." },
+    { "id": "NORMALIZE",  "type": "transform",  "layer": "perceptual", "description": "Scale inputs to standard distribution." },
+    { "id": "EXTRACT",    "type": "transform",  "layer": "perceptual", "description": "Pull relevant features from raw data." },
+    { "id": "TOKENIZE",   "type": "transform",  "layer": "perceptual", "description": "Segment inputs into discrete processable units." },
+    { "id": "CLUSTER",    "type": "analytical", "layer": "pattern",    "description": "Group similar feature vectors." },
+    { "id": "CORRELATE",  "type": "analytical", "layer": "pattern",    "description": "Measure co-variance between signal streams." },
+    { "id": "RANK",       "type": "analytical", "layer": "pattern",    "description": "Order elements by learned salience." },
+    { "id": "DETECT",     "type": "analytical", "layer": "pattern",    "description": "Identify presence of target patterns." },
+    { "id": "GROUND",     "type": "reasoning",  "layer": "contextual", "description": "Anchor abstractions to domain context." },
+    { "id": "WEIGHT",     "type": "reasoning",  "layer": "contextual", "description": "Apply learned importance scores to inferences." },
+    { "id": "FILTER",     "type": "reasoning",  "layer": "contextual", "description": "Remove low-relevance signals." },
+    { "id": "INFER",      "type": "reasoning",  "layer": "contextual", "description": "Derive conclusions from grounded evidence." },
+    { "id": "ADAPT",      "type": "learning",   "layer": "adaptive",   "description": "Modify behavior based on feedback." },
+    { "id": "UPDATE",     "type": "learning",   "layer": "adaptive",   "description": "Revise internal model weights." },
+    { "id": "REINFORCE",  "type": "learning",   "layer": "adaptive",   "description": "Strengthen successful policy paths." },
+    { "id": "PRUNE",      "type": "learning",   "layer": "adaptive",   "description": "Remove low-utility model pathways." },
+    { "id": "SELECT",     "type": "execution",  "layer": "output",     "description": "Choose optimal action from policy space." },
+    { "id": "RENDER",     "type": "execution",  "layer": "output",     "description": "Format output for downstream consumption." },
+    { "id": "EMIT",       "type": "execution",  "layer": "output",     "description": "Dispatch action or signal to environment." },
+    { "id": "LOG",        "type": "execution",  "layer": "output",     "description": "Record decisions and state for audit trail." }
+  ],
+
+  "capabilities": [
+    "High-accuracy pattern recognition within bounded domains",
+    "Online adaptation to distributional shift without full retraining",
+    "Contextual inference from local windows",
+    "Anomaly and outlier detection",
+    "Policy-driven task execution",
+    "Feedback-loop integration for continuous improvement"
+  ],
+
+  "constraints": [
+    "No unsupervised cross-domain knowledge transfer",
+    "No causal world-model construction",
+    "No recursive self-improvement",
+    "No meta-cognitive self-monitoring",
+    "Requires domain-specific training data"
+  ],
+
+  "triadic_axes": {
+    "axis_alpha": {
+      "label": "Perception–Representation",
+      "role": "Maps raw inputs to internal symbolic representations.",
+      "aai_position": "strong"
+    },
+    "axis_beta": {
+      "label": "Adaptation–Learning",
+      "role": "Adjusts representations based on feedback within domain.",
+      "aai_position": "strong"
+    },
+    "axis_gamma": {
+      "label": "Generalization–Transfer",
+      "role": "Extends learned knowledge to novel domains.",
+      "aai_position": "limited"
+    }
   }
 }
