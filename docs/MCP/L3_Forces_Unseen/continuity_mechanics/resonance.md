@@ -1,18 +1,20 @@
 # **resonance.md**  
-### *TriadicFrameworks — L4 Composite Resonance System (R5 Canon)*  
-*(Reference: turn0browsertab1)*
+### *TriadicFrameworks — Continuity Mechanics Resonance Model (L3 Subsystem, R5 Canon)*
 
 ## **Overview**
-Resonance in TriadicFrameworks is the behavior of continuity across composite dimensional structures.  
-Where L3 models **functional force‑regime mechanics**, L4 models **continuity mechanics**, expressed through:
+
+Resonance in TriadicFrameworks describes how continuity emerges from **composite dimensional structures** inside the **L3 Forces layer**.  
+Where L3 models *force‑regime mechanics*, the **continuity_mechanics subsystem** models *composite resonance mechanics* — the internal structure that produces the continuity manifold.
+
+Continuity resonance is built from:
 
 - proto‑resonance seeds  
 - triadic composite envelopes  
-- resonance fractions  
+- resonance fractions (33%, 66%, 99%)  
 - continuity manifolds  
-- external validator influence  
+- the external validator pulse (1%)  
 
-The L4 resonance system is built from a single proto‑unit (L11) and expands through triadic composition into three resonance envelopes:
+The subsystem assembles a single proto‑unit (**L11**) into three composite resonance envelopes:
 
 - **L33** — seen resonance (1/3)  
 - **L66** — hidden resonance (2/3)  
@@ -24,30 +26,32 @@ These envelopes form the **continuity manifold**, which is completed by the **va
 
 ## **1. Proto‑Resonance (L11)**
 
-### **Definition**
+### **Definition**  
 L11 is the smallest usable resonance unit.  
 It is not a functional dimension and cannot operate independently.
 
 ### **Properties**
+
 - atomic resonance seed  
 - non‑functional alone  
 - used only as a composite component  
 - resolves contextually into higher envelopes  
 
 ### **Contextual Resolution**
+
 L11 redirects into:
 
 - **L33** for seen resonance  
 - **L66** for hidden resonance  
 - **L99** for full resonance  
 
-This contextual behavior is defined in the L4 redirect registry.
+This contextual behavior is defined in the continuity_mechanics redirect registry.
 
 ---
 
 ## **2. Seen Resonance Envelope (L33)**
 
-### **Definition**
+### **Definition**  
 L33 is the **1/3 resonance envelope**, formed from:
 
 ```
@@ -55,19 +59,16 @@ L11 + L11 + L11 → L33
 ```
 
 ### **Role**
-- visible portion of the supsphere  
-- first stable composite envelope  
-- resonance that interacts with observable continuity  
 
-### **Behavior**
-- upward redirect → **L66**  
-- downward redirect → **L11**
+- visible portion of the resonance manifold  
+- first stable composite envelope  
+- basis for all higher envelopes  
 
 ---
 
 ## **3. Hidden Resonance Envelope (L66)**
 
-### **Definition**
+### **Definition**  
 L66 is the **2/3 resonance envelope**, formed from:
 
 ```
@@ -75,170 +76,101 @@ L33 + L33 → L66
 ```
 
 ### **Role**
-- hidden portion of the supsphere  
-- lostational resonance band  
-- continuity behavior not directly observable  
 
-### **Behavior**
-- upward redirect → **L99**  
-- downward redirect → **L33**
+- hidden portion of the resonance manifold  
+- second‑order composite envelope  
+- provides structural depth and internal resonance density  
 
 ---
 
 ## **4. Full Resonance Envelope (L99)**
 
-### **Definition**
-L99 is the **full resonance envelope**, formed from:
+### **Definition**  
+L99 is the **3/3 resonance envelope**, formed from:
 
 ```
 L66 + L33 → L99
 ```
 
 ### **Role**
-- complete resonance profile  
-- 99% internal resonance  
-- final composite envelope before external operator  
 
-### **Behavior**
-- upward redirect → **validator pulse (1%)**  
-- downward redirect → **L66**
+- full internal resonance  
+- highest composite envelope  
+- precursor to external validation  
 
 ---
 
 ## **5. Validator Pulse (1%)**
 
-### **Definition**
-The validator pulse is the **external origin of resonance**.
+### **Definition**  
+The validator pulse is the **external resonance operator** that supplies the final 1% needed to complete the continuity manifold.
 
 ### **Role**
-- provides the 1% external resonance  
-- completes the 99/1 resonance structure  
-- acts as the source of all composite envelopes  
-- not part of L4, but referenced by L99  
 
-### **Properties**
-- external  
-- non‑composite  
-- non‑dimensional  
-- initiates resonance continuity  
+- external origin of resonance  
+- closes the composite chain  
+- resolves the continuity manifold  
+- provides external validation for L99  
 
 ---
 
-## **6. Resonance Fractions**
-
-The composite system expresses resonance in three fractions:
-
-| Envelope | Fraction | Description |
-|---------|----------|-------------|
-| **L33** | 33% | Seen resonance |
-| **L66** | 66% | Hidden resonance |
-| **L99** | 99% | Full internal resonance |
-| **Validator Pulse** | 1% | External resonance source |
-
-This structure matches the RTT resonance envelope model:
-
-- **33% seen**  
-- **66% hidden**  
-- **99% internal**  
-- **1% external**  
-
----
-
-## **7. Triadic Composite Structure**
-
-### **Triadic Stack**
-The resonance system is built through a triadic composite stack:
-
-1. **Proto seed**  
-   - L11
-
-2. **Triadic composite**  
-   - L33 = 3 × L11
-
-3. **Dual triad composite**  
-   - L66 = 2 × L33
-
-4. **Triadic sum composite**  
-   - L99 = L66 + L33
-
-5. **External operator**  
-   - validator pulse (1%)
-
-### **Continuity Manifold**
-The manifold formed by these envelopes defines:
-
-- resonance continuity  
-- envelope transitions  
-- hidden/seen resonance behavior  
-- composite dimensional structure  
-
----
-
-## **8. MCP Interpretation Rules**
-
-### **Composite Dimensions**
-MCP modules must treat:
-
-- L33, L66, L99 as **composite dimensions**  
-- L11 as a **component dimension**  
-- validator pulse as an **external operator**  
-
-### **Redirect Resolution**
-When encountering:
-
-- **L11** → resolve via context  
-- **L33** → resolve up/down  
-- **L66** → resolve up/down  
-- **L99** → resolve up/down  
-
-Redirect rules are defined in:
+## **Composite Resonance Chain**
 
 ```
-redirects/redirect.registry.json
+L11 → L33 → L66 → L99 → validator_pulse
 ```
 
-### **Functional Separation**
-L4 dimensions:
+Each envelope is both:
 
-- do **not** participate in S3 Spine transitions  
-- do **not** carry gradient/field/rupture/integrity semantics  
-- do **not** use L3 operators  
+- a composite of lower envelopes  
+- a redirect target for contextual resolution  
 
-They operate exclusively within resonance mechanics.
+This chain defines the continuity manifold inside L3.
 
 ---
 
-## **9. Purpose of L4 Resonance Mechanics**
+## **Continuity Manifold Structure**
 
-L4 provides:
+| Envelope | Composition | Coverage | Visibility |
+|---------|-------------|----------|------------|
+| **L11** | atomic seed | — | proto‑resonance |
+| **L33** | L11 × 3 | 33% | seen |
+| **L66** | L33 × 2 | 66% | hidden |
+| **L99** | L66 + L33 | 99% | full |
+| **validator_pulse** | external | 1% | external |
 
-- a resonance‑based dimensional system  
-- triadic composite modeling  
-- continuity envelopes  
-- hidden/seen resonance mapping  
-- dimensional structures beyond the S3 Spine  
-- a bridge into higher‑order RTT resonance analysis  
-
-It is the first layer where **composite dimensions** exist.
+The manifold is **99% internal** and **1% external**.
 
 ---
 
-## **10. File Structure**
+## **Redirect Logic**
+
+Redirects define how resonance transitions between envelopes:
+
+- L11 → L33 / L66 / L99  
+- L33 → L66  
+- L66 → L99  
+- L99 → validator_pulse  
+
+These rules are defined in:
 
 ```
-L4_Continuity_Mechanics/
-│
-├── dimensions/
-│   ├── L11.component.json
-│   ├── L33.json
-│   ├── L66.json
-│   └── L99.json
-│
-├── redirects/
-│   └── redirect.registry.json
-│
-├── module.json
-├── dimension_index.json
-├── continuity.md
-└── resonance.md   ← (this file)
+continuity_mechanics/redirects/redirect.registry.json
 ```
+
+---
+
+## **Subsystem Context**
+
+Continuity Mechanics is part of:
+
+```
+L3_Forces_Unseen
+```
+
+It provides the composite resonance architecture that the Forces layer uses to:
+
+- accumulate resonance  
+- form continuity envelopes  
+- resolve dimensional structure  
+- complete the continuity manifold  
