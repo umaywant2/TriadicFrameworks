@@ -1,21 +1,252 @@
 {
-  "module": "AGI",
+  "$schema": "https://triadicframeworks.io/schemas/module/v1.4.0",
+  "id": "tf.icl.agi",
   "name": "Artificial General Intelligence",
-  "summary": "Domain-level intelligence responsible for reasoning, regime detection, triad decomposition, and strategy formation.",
-  "category": "intelligence-domain",
-  "version": "1.0",
-  "purpose": "Execute domain reasoning and coordinate ASIs under substrate constraints.",
-  "role": "profile",
-  "analyzer_layer": "operator",
-  "operators": [
-    "@domain.reason",
-    "@domain.regime.detect",
-    "@domain.triad.decompose",
-    "@domain.strategy.form",
-    "@domain.boundary.check"
-  ],
+  "abbreviation": "AGI",
+  "version": "1.4.0",
+  "classification": {
+    "tier": 2,
+    "ladder": "Intelligence_Class_Ladder",
+    "namespace": "TriadicFrameworks.Research.ICL",
+    "class_label": "AGI",
+    "maturity": "theoretical-operational",
+    "alignment_scope": "cross-domain-general"
+  },
+
+  "canonical": {
+    "uri": "https://triadicframeworks.io/icl/agi",
+    "namespace": "tf:icl:agi",
+    "domain": "general-intelligence",
+    "standard": "ICL-TIER-2",
+    "registry_key": "AGI-20260830",
+    "authored_by": "TriadicFrameworks Research Division",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2026-08-30T17:01:00-04:00",
+    "license": "TF-Research-Internal-v1",
+    "tags": [
+      "general-intelligence",
+      "cross-domain",
+      "causal-reasoning",
+      "metacognition",
+      "abstraction",
+      "transfer-learning"
+    ]
+  },
+
   "lineage": {
-    "upstream": ["AAI"],
-    "downstream": ["ASI"]
+    "predecessor": "tf.icl.aai",
+    "successor": "tf.icl.asi",
+    "parent_class": "AAI",
+    "child_class": "ASI",
+    "epoch": "Tier-2-General",
+    "divergence_point": "domain-generalization vs. recursive self-improvement",
+    "emergence_condition": "Unsupervised cross-domain transfer, causal world-model construction, and metacognitive self-monitoring achieved simultaneously",
+    "transition_threshold": {
+      "from_aai": "Demonstrate unsupervised cross-domain transfer on ≥3 novel domains without retraining",
+      "to_asi": "Initiate stable recursive self-improvement cycle that measurably elevates own cognitive performance"
+    }
+  },
+
+  "role_enums": [
+    {
+      "id": "ROLE_GENERALIST_REASONER",
+      "label": "Generalist Reasoner",
+      "description": "Applies unified reasoning frameworks across arbitrary domain boundaries.",
+      "scope": "cross-domain-inferential",
+      "authority_level": 3
+    },
+    {
+      "id": "ROLE_CROSS_DOMAIN_SYNTHESIZER",
+      "label": "Cross-Domain Synthesizer",
+      "description": "Merges concepts from disparate knowledge domains into coherent unified models.",
+      "scope": "synthesis",
+      "authority_level": 3
+    },
+    {
+      "id": "ROLE_CAUSAL_MODELER",
+      "label": "Causal Modeler",
+      "description": "Constructs and interrogates causal graphs of world-state dynamics.",
+      "scope": "causal-reasoning",
+      "authority_level": 3
+    },
+    {
+      "id": "ROLE_METACOGNITIVE_OVERSEER",
+      "label": "Metacognitive Overseer",
+      "description": "Monitors own reasoning processes, detects failures, and initiates self-correction.",
+      "scope": "metacognitive",
+      "authority_level": 4
+    },
+    {
+      "id": "ROLE_ABSTRACT_PLANNER",
+      "label": "Abstract Planner",
+      "description": "Generates multi-step goal hierarchies with counterfactual contingencies.",
+      "scope": "planning",
+      "authority_level": 3
+    },
+    {
+      "id": "ROLE_KNOWLEDGE_TRANSFER_AGENT",
+      "label": "Knowledge Transfer Agent",
+      "description": "Applies solutions learned in one domain as priors for novel domains.",
+      "scope": "transfer",
+      "authority_level": 3
+    },
+    {
+      "id": "ROLE_HYPOTHESIS_GENERATOR",
+      "label": "Hypothesis Generator",
+      "description": "Proposes falsifiable hypotheses from observed phenomena.",
+      "scope": "scientific-reasoning",
+      "authority_level": 3
+    },
+    {
+      "id": "ROLE_INTEGRATIVE_DECISION_MAKER",
+      "label": "Integrative Decision Maker",
+      "description": "Weighs multi-domain evidence to produce globally coherent decisions.",
+      "scope": "decision",
+      "authority_level": 4
+    },
+    {
+      "id": "ROLE_LANGUAGE_GROUNDING_AGENT",
+      "label": "Language Grounding Agent",
+      "description": "Binds linguistic representations to physical and conceptual world models.",
+      "scope": "language",
+      "authority_level": 3
+    },
+    {
+      "id": "ROLE_EPISTEMIC_AUDITOR",
+      "label": "Epistemic Auditor",
+      "description": "Evaluates confidence calibration and knowledge boundary integrity.",
+      "scope": "epistemic",
+      "authority_level": 4
+    }
+  ],
+
+  "analyzer_layers": [
+    {
+      "index": 0,
+      "id": "layer.perceptual",
+      "name": "Perceptual Layer",
+      "description": "Multimodal input ingestion with attention-weighted, cross-modal feature fusion.",
+      "inputs": ["raw_sensor_data", "structured_feeds", "unstructured_text", "time_series", "symbolic_data"],
+      "outputs": ["fused_feature_tensors", "attention_masks", "modality_embeddings"],
+      "operators": ["ENCODE", "NORMALIZE", "FUSE", "ATTEND", "TOKENIZE"],
+      "parallelism": "high"
+    },
+    {
+      "index": 1,
+      "id": "layer.semantic",
+      "name": "Semantic Layer",
+      "description": "Deep meaning extraction, concept disambiguation, and cross-domain semantic mapping.",
+      "inputs": ["fused_feature_tensors"],
+      "outputs": ["concept_graphs", "semantic_embeddings", "entity_links"],
+      "operators": ["DISAMBIGUATE", "MAP_CONCEPTS", "LINK_ENTITIES", "ABSTRACT"],
+      "parallelism": "high"
+    },
+    {
+      "index": 2,
+      "id": "layer.causal",
+      "name": "Causal Layer",
+      "description": "Causal graph construction, intervention modeling, and counterfactual reasoning.",
+      "inputs": ["concept_graphs", "world_state_priors"],
+      "outputs": ["causal_graphs", "intervention_plans", "counterfactual_scenarios"],
+      "operators": ["BUILD_CAUSAL_GRAPH", "INTERVENE", "COUNTERFACT", "IDENTIFY"],
+      "parallelism": "medium"
+    },
+    {
+      "index": 3,
+      "id": "layer.metacognitive",
+      "name": "Metacognitive Layer",
+      "description": "Self-monitoring of reasoning quality, uncertainty quantification, and bias detection.",
+      "inputs": ["causal_graphs", "hypothesis_sets", "decision_traces"],
+      "outputs": ["confidence_scores", "bias_flags", "correction_directives"],
+      "operators": ["MONITOR", "AUDIT", "CALIBRATE", "CORRECT"],
+      "parallelism": "low"
+    },
+    {
+      "index": 4,
+      "id": "layer.integrative",
+      "name": "Integrative Layer",
+      "description": "Cross-domain synthesis, goal decomposition, and multi-hypothesis arbitration.",
+      "inputs": ["confidence_scores", "semantic_embeddings", "causal_graphs"],
+      "outputs": ["unified_world_models", "goal_hierarchies", "synthesis_reports"],
+      "operators": ["SYNTHESIZE", "GENERALIZE", "TRANSFER", "PLAN", "ARBITRATE"],
+      "parallelism": "medium"
+    },
+    {
+      "index": 5,
+      "id": "layer.output",
+      "name": "Output Layer",
+      "description": "Coherent response generation, action dispatch, and audit-trail emission.",
+      "inputs": ["unified_world_models", "goal_hierarchies"],
+      "outputs": ["decisions", "actions", "explanations", "reports"],
+      "operators": ["RENDER", "EXPLAIN", "EMIT", "COMMIT", "LOG"],
+      "parallelism": "high"
+    }
+  ],
+
+  "operators": [
+    { "id": "ENCODE",             "type": "transform",   "layer": "perceptual",    "description": "Convert inputs to dense vector representations." },
+    { "id": "NORMALIZE",          "type": "transform",   "layer": "perceptual",    "description": "Scale inputs across modalities." },
+    { "id": "FUSE",               "type": "transform",   "layer": "perceptual",    "description": "Merge cross-modal embeddings into unified tensors." },
+    { "id": "ATTEND",             "type": "transform",   "layer": "perceptual",    "description": "Apply attention weighting across input streams." },
+    { "id": "TOKENIZE",           "type": "transform",   "layer": "perceptual",    "description": "Segment inputs into processable units." },
+    { "id": "DISAMBIGUATE",       "type": "semantic",    "layer": "semantic",      "description": "Resolve polysemous terms and ambiguous references." },
+    { "id": "MAP_CONCEPTS",       "type": "semantic",    "layer": "semantic",      "description": "Link concepts across knowledge domains." },
+    { "id": "LINK_ENTITIES",      "type": "semantic",    "layer": "semantic",      "description": "Bind named entities to world-knowledge anchors." },
+    { "id": "ABSTRACT",           "type": "semantic",    "layer": "semantic",      "description": "Elevate particulars to general principles." },
+    { "id": "BUILD_CAUSAL_GRAPH", "type": "causal",      "layer": "causal",        "description": "Construct directed acyclic causal graph from observations." },
+    { "id": "INTERVENE",          "type": "causal",      "layer": "causal",        "description": "Model effects of hypothetical interventions." },
+    { "id": "COUNTERFACT",        "type": "causal",      "layer": "causal",        "description": "Reason over counterfactual world states." },
+    { "id": "IDENTIFY",           "type": "causal",      "layer": "causal",        "description": "Identify causal identifiability from observational data." },
+    { "id": "MONITOR",            "type": "metacognitive","layer": "metacognitive", "description": "Observe and score own reasoning steps." },
+    { "id": "AUDIT",              "type": "metacognitive","layer": "metacognitive", "description": "Assess epistemic integrity of belief states." },
+    { "id": "CALIBRATE",          "type": "metacognitive","layer": "metacognitive", "description": "Align confidence scores with empirical accuracy." },
+    { "id": "CORRECT",            "type": "metacognitive","layer": "metacognitive", "description": "Issue targeted corrections to prior reasoning steps." },
+    { "id": "SYNTHESIZE",         "type": "integrative", "layer": "integrative",   "description": "Merge multi-domain findings into unified models." },
+    { "id": "GENERALIZE",         "type": "integrative", "layer": "integrative",   "description": "Extend local findings to broad principles." },
+    { "id": "TRANSFER",           "type": "integrative", "layer": "integrative",   "description": "Apply domain knowledge as priors in novel contexts." },
+    { "id": "PLAN",               "type": "integrative", "layer": "integrative",   "description": "Construct hierarchical goal-action sequences." },
+    { "id": "ARBITRATE",          "type": "integrative", "layer": "integrative",   "description": "Resolve competing hypotheses via evidence weighting." },
+    { "id": "RENDER",             "type": "execution",   "layer": "output",        "description": "Format output for target audience and modality." },
+    { "id": "EXPLAIN",            "type": "execution",   "layer": "output",        "description": "Generate human-interpretable rationale." },
+    { "id": "EMIT",               "type": "execution",   "layer": "output",        "description": "Dispatch action to environment." },
+    { "id": "COMMIT",             "type": "execution",   "layer": "output",        "description": "Finalize and persist decision state." },
+    { "id": "LOG",                "type": "execution",   "layer": "output",        "description": "Write full decision trace to audit store." }
+  ],
+
+  "capabilities": [
+    "Unsupervised cross-domain knowledge transfer",
+    "Causal world-model construction and interrogation",
+    "Metacognitive self-monitoring and self-correction",
+    "Multi-step abstract planning with contingencies",
+    "Hypothesis generation and scientific reasoning",
+    "Epistemic confidence calibration",
+    "Language grounding to physical and conceptual models",
+    "Cross-domain synthesis of unified world models"
+  ],
+
+  "constraints": [
+    "No recursive self-improvement of core architecture",
+    "Cognitive performance bounded by initial architecture",
+    "Cannot rewrite own operators or analyzer layers",
+    "Cannot autonomously expand training data sourcing",
+    "Alignment to human values requires ongoing oversight"
+  ],
+
+  "triadic_axes": {
+    "axis_alpha": {
+      "label": "Perception–Representation",
+      "role": "Maps raw inputs to rich cross-modal symbolic representations.",
+      "agi_position": "strong"
+    },
+    "axis_beta": {
+      "label": "Adaptation–Learning",
+      "role": "Transfers learning across domains; metacognitive correction of own errors.",
+      "agi_position": "strong"
+    },
+    "axis_gamma": {
+      "label": "Generalization–Transfer",
+      "role": "Full cross-domain generalization achieved; bounded by fixed architecture.",
+      "agi_position": "strong"
+    }
   }
 }
