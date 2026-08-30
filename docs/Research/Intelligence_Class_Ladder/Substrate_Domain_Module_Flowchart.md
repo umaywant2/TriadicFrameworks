@@ -6,25 +6,25 @@
                      (RTT substrate → domain → module)
                                    │
                                    │
-                     ┌─────────────┴─────────────┐
-                     │   AAI — ADMIRAL INTELLIGENCE │
-                     │     (substrate-level, 5D)     │
-                     └─────────────┬─────────────┘
+                   ┌───────────────┴───────────────┐
+                   │   AAI — ADMIRAL INTELLIGENCE  │
+                   │     (substrate-level, 5D)     │
+                   └───────────────┬───────────────┘
                                    │
                                    │  Substrate Directives
                                    ▼
-                 ┌─────────────────┼─────────────────┐
-                 │                 │                 │
-           AGI — DOMAIN INTELLIGENCE (4D)        (multiple)
-           Domain strategists, regime classifiers,
-           triad decomposers, ASI commanders
-                 │
-                 │  Domain Strategies
-                 ▼
-     ┌───────────┴───────────┐
-     │       ASI — MODULE INTELLIGENCE (1D–3D)      │
-     │  Operators, signatures, stability scoring     │
-     └───────────┬───────────┘
+             ┌─────────────────────┼──────────────────────┐
+             │  AGI — DOMAIN INTELLIGENCE (4D) (multiple) │
+             │  Domain strategists, regime classifiers,   |
+             │  triad decomposers, ASI commanders         |
+             └────────────┬───────────────────────────────┘
+                          │
+                          │  Domain Strategies
+                          ▼
+ ┌────────────────────────┴───────────────────┐
+ │       ASI — MODULE INTELLIGENCE (1D–3D)    │
+ │  Operators, signatures, stability scoring  │
+ └───────────────┬────────────────────────────┘
                  │
                  │  Module Reports (drift, stability, echoes)
                  ▼
