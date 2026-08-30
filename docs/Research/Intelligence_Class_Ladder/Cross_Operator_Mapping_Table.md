@@ -1,6 +1,8 @@
 # **Cross Operator Mapping Table — TriadicFrameworks Intelligence Class Ladder** 
 
-- [``](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/Intelligence_Class_Ladder) — Agentic module schema role assignments
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/Intelligence_Class_Ladder/module.json) — Agentic module schema role assignments
+- [`Cross_Operator_Mapping_Table_TriadicFrameworks_Intelligence_Class_Ladder.pdf`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/Intelligence_Class_Ladder/Cross_Operator_Mapping_Table_TriadicFrameworks_Intelligence_Class_Ladder.pdf) — PDF document
+
 
 ## **Overview**
 This table maps the operator families across the three intelligence classes — **AAI**, **AGI**, and **ASI** — showing how substrate, domain, and module operators align, propagate, and constrain one another within the TriadicFrameworks fleet hierarchy.
