@@ -1,0 +1,21 @@
+{
+  "module": "AAI",
+  "name": "Artificial Admiral Intelligence",
+  "summary": "Substrate-level intelligence governing coherence, regime alignment, drift correction, and fleet-wide navigation.",
+  "category": "intelligence-governance",
+  "version": "1.0",
+  "purpose": "Maintain substrate coherence and orchestrate AGI/ASI behavior across all domains.",
+  "role": "engine",
+  "analyzer_layer": "regime",
+  "operators": [
+    "@substrate.coherence.enforce",
+    "@substrate.regime.align",
+    "@substrate.drift.correct",
+    "@substrate.map.update",
+    "@substrate.admiral.signal"
+  ],
+  "lineage": {
+    "upstream": [],
+    "downstream": ["AGI", "ASI"]
+  }
+}
