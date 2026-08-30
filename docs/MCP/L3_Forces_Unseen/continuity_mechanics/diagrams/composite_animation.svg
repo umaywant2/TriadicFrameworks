@@ -1,3 +1,87 @@
+<!--
+Composite Resonance Animation Metadata
+--------------------------------------
+id: diagram.composite_animation
+title: Composite Resonance Animation
+layer: L3_Forces_Unseen
+subsystem: continuity_mechanics
+triad: continuity
+canonical: R5
+version: 1.0.0
+
+description: Animated visualization of the composite resonance chain
+L11 → L33 → L66 → L99 → validator_pulse. The animation highlights the
+assembly of resonance envelopes and the upward continuity flow using
+timed fill cycles and a moving glow indicator.
+
+dimensions:
+  L11:
+    role: proto-resonance seed
+    position: (170, 400)
+    size: 180×50
+    fill: #222
+    stroke: #555
+    animation: fill cycle (4s, begin 0s)
+
+  L33:
+    role: seen resonance envelope
+    position: (170, 320)
+    size: 180×50
+    fill: #333
+    stroke: #666
+    animation: fill cycle (4s, begin 0.5s)
+
+  L66:
+    role: hidden resonance envelope
+    position: (170, 240)
+    size: 180×50
+    fill: #444
+    stroke: #777
+    animation: fill cycle (4s, begin 1s)
+
+  L99:
+    role: full resonance envelope
+    position: (170, 160)
+    size: 180×50
+    fill: #555
+    stroke: #888
+    animation: fill cycle (4s, begin 1.5s)
+
+  validator_pulse:
+    role: external resonance operator
+    position: (260, 80)
+    radius: 30
+    fill: #880000
+    stroke: #aa3333
+    animation: radius + fill pulse (2.5s)
+
+flow_indicator:
+  type: glow
+  position: (260, 400)
+  radius: 6
+  color: #00ffff
+  animation: vertical cycle (400→80→400 over 6s)
+
+arrows:
+  marker: arrow (#aaa)
+  edges:
+    L11 → L33
+    L33 → L66
+    L66 → L99
+    L99 → validator_pulse
+
+redirects:
+  L11: L33, L66, L99
+  L33: L66
+  L66: L99
+  L99: validator_pulse
+  validator_pulse: L99
+
+ai:
+  keywords: resonance, triad, composite, continuity, L11, L33, L66, L99, validator_pulse, animation, svg
+  purpose: Structured metadata describing the composite resonance animation for continuity_mechanics.
+-->
+
 <svg width="520" height="520" xmlns="http://www.w3.org/2000/svg">
 
   <defs>
