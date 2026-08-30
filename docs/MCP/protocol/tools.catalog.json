@@ -49,7 +49,34 @@
         "required": ["modules"]
       }
     },
-
+{
+  "name": "listExamples",
+  "description": "List all example envelopes registered in the MCP example registry.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {},
+    "additionalProperties": false
+  },
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "examples": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": { "type": "string" },
+            "module": { "type": "string" },
+            "layer": { "type": "string" },
+            "kind": { "type": "string" }
+          },
+          "required": ["id", "module", "layer", "kind"]
+        }
+      }
+    },
+    "required": ["examples"]
+  }
+}
     {
       "name": "getModule",
       "description": "Return the metadata, lineage, and schema reference for a single module.",
