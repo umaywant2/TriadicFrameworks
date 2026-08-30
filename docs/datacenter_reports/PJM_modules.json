@@ -1,0 +1,3830 @@
+{
+  "$schema": "https://triadicframeworks.org/schemas/module-v1.json",
+  "document.id": "pjm.module-registry",
+  "document.type": "territory_module_registry",
+  "document.version": "1.0.0",
+  "generated": "2026-08-30",
+  "territory": {
+    "id": "pjm",
+    "label": "PJM Interconnection Territory",
+    "grid": "PJM Interconnection",
+    "states": [
+      "VA",
+      "OH",
+      "PA",
+      "MD",
+      "NJ",
+      "WV",
+      "DE",
+      "DC"
+    ],
+    "clusters": [
+      {
+        "id": "nva",
+        "label": "Northern Virginia (Loudoun County)",
+        "state": "VA",
+        "drift": "High",
+        "coherence": "Very High"
+      },
+      {
+        "id": "coh",
+        "label": "Columbus / New Albany (Central Ohio)",
+        "state": "OH",
+        "drift": "Medium\u2013High",
+        "coherence": "High"
+      },
+      {
+        "id": "pit",
+        "label": "Pittsburgh Corridor (Western PA)",
+        "state": "PA",
+        "drift": "Medium",
+        "coherence": "Medium\u2013High"
+      },
+      {
+        "id": "njf",
+        "label": "Northern New Jersey Financial Cluster",
+        "state": "NJ",
+        "drift": "Medium",
+        "coherence": "High"
+      },
+      {
+        "id": "dcg",
+        "label": "Washington D.C. Government & Research",
+        "state": "DC",
+        "drift": "Medium",
+        "coherence": "High"
+      },
+      {
+        "id": "bmd",
+        "label": "Baltimore / Maryland Enterprise Cluster",
+        "state": "MD",
+        "drift": "Medium",
+        "coherence": "Medium\u2013High"
+      },
+      {
+        "id": "wva",
+        "label": "West Virginia Energy-Adjacency Cluster",
+        "state": "WV",
+        "drift": "Medium",
+        "coherence": "Medium"
+      },
+      {
+        "id": "del",
+        "label": "Delaware Micro-Cluster",
+        "state": "DE",
+        "drift": "Low\u2013Medium",
+        "coherence": "Medium"
+      }
+    ],
+    "rtt_envelope": "L0\u2013L3",
+    "facility_count": 69
+  },
+  "rtt_operator_schema": {
+    "FAC": "Facility scale and substrate",
+    "GOV": "Governance and regulatory alignment",
+    "CUL": "Cultural and workforce factors",
+    "STD": "Standards and compliance maturity",
+    "HUM": "Human factors and safety",
+    "TRI": "Triadic alignment",
+    "PLA": "Planetary impact",
+    "INF": "Infrastructure and grid adjacency",
+    "TAX": "Incentives and economic posture",
+    "RES": "Resonance and clarity",
+    "scale": [
+      "Low",
+      "Low\u2013Medium",
+      "Medium",
+      "Medium\u2013High",
+      "High",
+      "Very High"
+    ]
+  },
+  "modules": [
+    {
+      "module.id": "pjm.nva.aws-us-east-1-ashburn",
+      "module.version": "1.0.0",
+      "module.label": "AWS us-east-1 \u2013 Ashburn Cluster",
+      "module.role": "hyperscale_anchor",
+      "analyzer_layer": {
+        "primary": "L0",
+        "annotation": "hyperscale_core",
+        "envelope": "L0\u2013L3"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Northern Virginia",
+          "cluster_code": "nva",
+          "operator": "AWS us-east-1",
+          "substrate": "hyperscale",
+          "energy_grid": "PJM Interconnection",
+          "state": "VA",
+          "location": "Ashburn, Loudoun County, VA",
+          "index": 1,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": null,
+        "next": "pjm.nva.aws-sterling-a",
+        "cluster_home": "pjm.nva",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Very High",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "Very High",
+        "HUM": "Medium",
+        "TRI": "High",
+        "PLA": "Medium",
+        "INF": "Very High",
+        "TAX": "High",
+        "RES": "Very High"
+      },
+      "drift_coherence": {
+        "drift": "High",
+        "coherence": "Very High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.nva.aws-sterling-a",
+      "module.version": "1.0.0",
+      "module.label": "AWS \u2013 Sterling Campus A",
+      "module.role": "hyperscale_node",
+      "analyzer_layer": {
+        "primary": "L0",
+        "annotation": "hyperscale_core",
+        "envelope": "L0\u2013L3"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Northern Virginia",
+          "cluster_code": "nva",
+          "operator": "AWS",
+          "substrate": "hyperscale",
+          "energy_grid": "PJM Interconnection",
+          "state": "VA",
+          "location": "Sterling, Loudoun County, VA",
+          "index": 2,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.nva.aws-us-east-1-ashburn",
+        "next": "pjm.nva.aws-sterling-b",
+        "cluster_home": "pjm.nva",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Very High",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "Very High",
+        "HUM": "Medium",
+        "TRI": "High",
+        "PLA": "Medium",
+        "INF": "Very High",
+        "TAX": "High",
+        "RES": "Very High"
+      },
+      "drift_coherence": {
+        "drift": "High",
+        "coherence": "Very High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.nva.aws-sterling-b",
+      "module.version": "1.0.0",
+      "module.label": "AWS \u2013 Sterling Campus B",
+      "module.role": "hyperscale_node",
+      "analyzer_layer": {
+        "primary": "L0",
+        "annotation": "hyperscale_core",
+        "envelope": "L0\u2013L3"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Northern Virginia",
+          "cluster_code": "nva",
+          "operator": "AWS",
+          "substrate": "hyperscale",
+          "energy_grid": "PJM Interconnection",
+          "state": "VA",
+          "location": "Sterling, Loudoun County, VA",
+          "index": 3,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.nva.aws-sterling-a",
+        "next": "pjm.nva.aws-leesburg-expansion",
+        "cluster_home": "pjm.nva",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Very High",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "Very High",
+        "HUM": "Medium",
+        "TRI": "High",
+        "PLA": "Medium",
+        "INF": "Very High",
+        "TAX": "High",
+        "RES": "Very High"
+      },
+      "drift_coherence": {
+        "drift": "High",
+        "coherence": "Very High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.nva.aws-leesburg-expansion",
+      "module.version": "1.0.0",
+      "module.label": "AWS \u2013 Leesburg Expansion Zone",
+      "module.role": "hyperscale_node",
+      "analyzer_layer": {
+        "primary": "L0",
+        "annotation": "hyperscale_core",
+        "envelope": "L0\u2013L3"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Northern Virginia",
+          "cluster_code": "nva",
+          "operator": "AWS",
+          "substrate": "hyperscale",
+          "energy_grid": "PJM Interconnection",
+          "state": "VA",
+          "location": "Leesburg, Loudoun County, VA",
+          "index": 4,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.nva.aws-sterling-b",
+        "next": "pjm.nva.google-loudoun-campus",
+        "cluster_home": "pjm.nva",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "High",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "Very High",
+        "HUM": "Medium",
+        "TRI": "High",
+        "PLA": "Medium",
+        "INF": "High",
+        "TAX": "High",
+        "RES": "High"
+      },
+      "drift_coherence": {
+        "drift": "High",
+        "coherence": "Very High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.nva.google-loudoun-campus",
+      "module.version": "1.0.0",
+      "module.label": "Google \u2013 Loudoun County Campus",
+      "module.role": "hyperscale_anchor",
+      "analyzer_layer": {
+        "primary": "L0",
+        "annotation": "hyperscale_core",
+        "envelope": "L0\u2013L3"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Northern Virginia",
+          "cluster_code": "nva",
+          "operator": "Google",
+          "substrate": "hyperscale",
+          "energy_grid": "PJM Interconnection",
+          "state": "VA",
+          "location": "Loudoun County, VA",
+          "index": 5,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.nva.aws-leesburg-expansion",
+        "next": "pjm.nva.google-sterling-expansion",
+        "cluster_home": "pjm.nva",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Very High",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "Very High",
+        "HUM": "Medium",
+        "TRI": "High",
+        "PLA": "Medium",
+        "INF": "High",
+        "TAX": "Medium",
+        "RES": "High"
+      },
+      "drift_coherence": {
+        "drift": "High",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.nva.google-sterling-expansion",
+      "module.version": "1.0.0",
+      "module.label": "Google \u2013 Sterling Expansion Facility",
+      "module.role": "hyperscale_node",
+      "analyzer_layer": {
+        "primary": "L0",
+        "annotation": "hyperscale_core",
+        "envelope": "L0\u2013L3"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Northern Virginia",
+          "cluster_code": "nva",
+          "operator": "Google",
+          "substrate": "hyperscale",
+          "energy_grid": "PJM Interconnection",
+          "state": "VA",
+          "location": "Sterling, Loudoun County, VA",
+          "index": 6,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.nva.google-loudoun-campus",
+        "next": "pjm.nva.google-leesburg-dev",
+        "cluster_home": "pjm.nva",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "High",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "High",
+        "PLA": "Medium",
+        "INF": "High",
+        "TAX": "Medium",
+        "RES": "High"
+      },
+      "drift_coherence": {
+        "drift": "High",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.nva.google-leesburg-dev",
+      "module.version": "1.0.0",
+      "module.label": "Google \u2013 Leesburg Development Site",
+      "module.role": "hyperscale_node",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L3"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Northern Virginia",
+          "cluster_code": "nva",
+          "operator": "Google",
+          "substrate": "hyperscale",
+          "energy_grid": "PJM Interconnection",
+          "state": "VA",
+          "location": "Leesburg, Loudoun County, VA",
+          "index": 7,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.nva.google-sterling-expansion",
+        "next": "pjm.nva.msft-nva-campus",
+        "cluster_home": "pjm.nva",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "High",
+        "PLA": "Medium",
+        "INF": "High",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "High",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.nva.msft-nva-campus",
+      "module.version": "1.0.0",
+      "module.label": "Microsoft \u2013 Northern Virginia Campus",
+      "module.role": "hyperscale_anchor",
+      "analyzer_layer": {
+        "primary": "L0",
+        "annotation": "hyperscale_core",
+        "envelope": "L0\u2013L3"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Northern Virginia",
+          "cluster_code": "nva",
+          "operator": "Microsoft",
+          "substrate": "hyperscale",
+          "energy_grid": "PJM Interconnection",
+          "state": "VA",
+          "location": "Ashburn, Loudoun County, VA",
+          "index": 8,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.nva.google-leesburg-dev",
+        "next": "pjm.nva.msft-sterling-node",
+        "cluster_home": "pjm.nva",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Very High",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "Very High",
+        "HUM": "Medium",
+        "TRI": "High",
+        "PLA": "Medium",
+        "INF": "Very High",
+        "TAX": "High",
+        "RES": "Very High"
+      },
+      "drift_coherence": {
+        "drift": "High",
+        "coherence": "Very High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.nva.msft-sterling-node",
+      "module.version": "1.0.0",
+      "module.label": "Microsoft \u2013 Sterling Hyperscale Node",
+      "module.role": "hyperscale_node",
+      "analyzer_layer": {
+        "primary": "L0",
+        "annotation": "hyperscale_core",
+        "envelope": "L0\u2013L3"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Northern Virginia",
+          "cluster_code": "nva",
+          "operator": "Microsoft",
+          "substrate": "hyperscale",
+          "energy_grid": "PJM Interconnection",
+          "state": "VA",
+          "location": "Sterling, Loudoun County, VA",
+          "index": 9,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.nva.msft-nva-campus",
+        "next": "pjm.nva.msft-leesburg-compute",
+        "cluster_home": "pjm.nva",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "High",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "High",
+        "PLA": "Medium",
+        "INF": "High",
+        "TAX": "High",
+        "RES": "High"
+      },
+      "drift_coherence": {
+        "drift": "High",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.nva.msft-leesburg-compute",
+      "module.version": "1.0.0",
+      "module.label": "Microsoft \u2013 Leesburg Compute Facility",
+      "module.role": "hyperscale_node",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L3"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Northern Virginia",
+          "cluster_code": "nva",
+          "operator": "Microsoft",
+          "substrate": "hyperscale",
+          "energy_grid": "PJM Interconnection",
+          "state": "VA",
+          "location": "Leesburg, Loudoun County, VA",
+          "index": 10,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.nva.msft-sterling-node",
+        "next": "pjm.nva.meta-nva-expansion-a",
+        "cluster_home": "pjm.nva",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "High",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "High",
+        "PLA": "Medium",
+        "INF": "High",
+        "TAX": "Medium",
+        "RES": "High"
+      },
+      "drift_coherence": {
+        "drift": "High",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.nva.meta-nva-expansion-a",
+      "module.version": "1.0.0",
+      "module.label": "Meta \u2013 Northern Virginia Expansion A",
+      "module.role": "hyperscale_node",
+      "analyzer_layer": {
+        "primary": "L0",
+        "annotation": "hyperscale_core",
+        "envelope": "L0\u2013L3"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Northern Virginia",
+          "cluster_code": "nva",
+          "operator": "Meta",
+          "substrate": "hyperscale",
+          "energy_grid": "PJM Interconnection",
+          "state": "VA",
+          "location": "Loudoun County, VA",
+          "index": 11,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.nva.msft-leesburg-compute",
+        "next": "pjm.nva.meta-nva-expansion-b",
+        "cluster_home": "pjm.nva",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "High",
+        "GOV": "Medium",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "High",
+        "TAX": "Medium",
+        "RES": "High"
+      },
+      "drift_coherence": {
+        "drift": "High",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.nva.meta-nva-expansion-b",
+      "module.version": "1.0.0",
+      "module.label": "Meta \u2013 Northern Virginia Expansion B",
+      "module.role": "hyperscale_node",
+      "analyzer_layer": {
+        "primary": "L0",
+        "annotation": "hyperscale_core",
+        "envelope": "L0\u2013L3"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Northern Virginia",
+          "cluster_code": "nva",
+          "operator": "Meta",
+          "substrate": "hyperscale",
+          "energy_grid": "PJM Interconnection",
+          "state": "VA",
+          "location": "Loudoun County, VA",
+          "index": 12,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.nva.meta-nva-expansion-a",
+        "next": "pjm.nva.oracle-nva-facility",
+        "cluster_home": "pjm.nva",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "High",
+        "GOV": "Medium",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "High",
+        "TAX": "Medium",
+        "RES": "High"
+      },
+      "drift_coherence": {
+        "drift": "High",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.nva.oracle-nva-facility",
+      "module.version": "1.0.0",
+      "module.label": "Oracle \u2013 Northern Virginia Facility",
+      "module.role": "cloud_region",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L3"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Northern Virginia",
+          "cluster_code": "nva",
+          "operator": "Oracle",
+          "substrate": "cloud",
+          "energy_grid": "PJM Interconnection",
+          "state": "VA",
+          "location": "Loudoun County, VA",
+          "index": 13,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.nva.meta-nva-expansion-b",
+        "next": "pjm.nva.oracle-sterling-cloud",
+        "cluster_home": "pjm.nva",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "High",
+        "GOV": "Medium",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "High",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.nva.oracle-sterling-cloud",
+      "module.version": "1.0.0",
+      "module.label": "Oracle \u2013 Sterling Cloud Node",
+      "module.role": "cloud_region",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L3"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Northern Virginia",
+          "cluster_code": "nva",
+          "operator": "Oracle",
+          "substrate": "cloud",
+          "energy_grid": "PJM Interconnection",
+          "state": "VA",
+          "location": "Sterling, Loudoun County, VA",
+          "index": 14,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.nva.oracle-nva-facility",
+        "next": "pjm.nva.equinix-dc1",
+        "cluster_home": "pjm.nva",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "High",
+        "GOV": "Medium",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "High",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.nva.equinix-dc1",
+      "module.version": "1.0.0",
+      "module.label": "Equinix \u2013 Ashburn IBX DC1",
+      "module.role": "colocation_hub",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Northern Virginia",
+          "cluster_code": "nva",
+          "operator": "Equinix",
+          "substrate": "colocation",
+          "energy_grid": "PJM Interconnection",
+          "state": "VA",
+          "location": "Ashburn, VA",
+          "index": 15,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.nva.oracle-sterling-cloud",
+        "next": "pjm.nva.equinix-dc2",
+        "cluster_home": "pjm.nva",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "High",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "Very High",
+        "HUM": "Medium",
+        "TRI": "High",
+        "PLA": "Medium",
+        "INF": "Very High",
+        "TAX": "High",
+        "RES": "High"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "Very High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.nva.equinix-dc2",
+      "module.version": "1.0.0",
+      "module.label": "Equinix \u2013 Ashburn IBX DC2",
+      "module.role": "colocation_hub",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Northern Virginia",
+          "cluster_code": "nva",
+          "operator": "Equinix",
+          "substrate": "colocation",
+          "energy_grid": "PJM Interconnection",
+          "state": "VA",
+          "location": "Ashburn, VA",
+          "index": 16,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.nva.equinix-dc1",
+        "next": "pjm.nva.equinix-dc3",
+        "cluster_home": "pjm.nva",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "High",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "Very High",
+        "HUM": "Medium",
+        "TRI": "High",
+        "PLA": "Medium",
+        "INF": "Very High",
+        "TAX": "High",
+        "RES": "High"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "Very High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.nva.equinix-dc3",
+      "module.version": "1.0.0",
+      "module.label": "Equinix \u2013 Ashburn IBX DC3",
+      "module.role": "colocation_node",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Northern Virginia",
+          "cluster_code": "nva",
+          "operator": "Equinix",
+          "substrate": "colocation",
+          "energy_grid": "PJM Interconnection",
+          "state": "VA",
+          "location": "Ashburn, VA",
+          "index": 17,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.nva.equinix-dc2",
+        "next": "pjm.nva.equinix-dc4",
+        "cluster_home": "pjm.nva",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "High",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "Very High",
+        "HUM": "Medium",
+        "TRI": "High",
+        "PLA": "Medium",
+        "INF": "Very High",
+        "TAX": "High",
+        "RES": "High"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.nva.equinix-dc4",
+      "module.version": "1.0.0",
+      "module.label": "Equinix \u2013 Ashburn IBX DC4",
+      "module.role": "colocation_node",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Northern Virginia",
+          "cluster_code": "nva",
+          "operator": "Equinix",
+          "substrate": "colocation",
+          "energy_grid": "PJM Interconnection",
+          "state": "VA",
+          "location": "Ashburn, VA",
+          "index": 18,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.nva.equinix-dc3",
+        "next": "pjm.nva.equinix-dc5",
+        "cluster_home": "pjm.nva",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "High",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "Very High",
+        "HUM": "Medium",
+        "TRI": "High",
+        "PLA": "Medium",
+        "INF": "Very High",
+        "TAX": "High",
+        "RES": "High"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.nva.equinix-dc5",
+      "module.version": "1.0.0",
+      "module.label": "Equinix \u2013 Ashburn IBX DC5",
+      "module.role": "colocation_node",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Northern Virginia",
+          "cluster_code": "nva",
+          "operator": "Equinix",
+          "substrate": "colocation",
+          "energy_grid": "PJM Interconnection",
+          "state": "VA",
+          "location": "Ashburn, VA",
+          "index": 19,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.nva.equinix-dc4",
+        "next": "pjm.nva.equinix-dc6",
+        "cluster_home": "pjm.nva",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "High",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "Very High",
+        "HUM": "Medium",
+        "TRI": "High",
+        "PLA": "Medium",
+        "INF": "Very High",
+        "TAX": "High",
+        "RES": "High"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.nva.equinix-dc6",
+      "module.version": "1.0.0",
+      "module.label": "Equinix \u2013 Ashburn IBX DC6",
+      "module.role": "colocation_node",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Northern Virginia",
+          "cluster_code": "nva",
+          "operator": "Equinix",
+          "substrate": "colocation",
+          "energy_grid": "PJM Interconnection",
+          "state": "VA",
+          "location": "Ashburn, VA",
+          "index": 20,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.nva.equinix-dc5",
+        "next": "pjm.nva.dr-acc2",
+        "cluster_home": "pjm.nva",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "High",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "High",
+        "PLA": "Medium",
+        "INF": "Very High",
+        "TAX": "High",
+        "RES": "High"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.nva.dr-acc2",
+      "module.version": "1.0.0",
+      "module.label": "Digital Realty \u2013 ACC2",
+      "module.role": "colocation_hub",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Northern Virginia",
+          "cluster_code": "nva",
+          "operator": "Digital Realty",
+          "substrate": "colocation",
+          "energy_grid": "PJM Interconnection",
+          "state": "VA",
+          "location": "Ashburn, VA",
+          "index": 21,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.nva.equinix-dc6",
+        "next": "pjm.nva.dr-acc3",
+        "cluster_home": "pjm.nva",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "High",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "Very High",
+        "HUM": "Medium",
+        "TRI": "High",
+        "PLA": "Medium",
+        "INF": "Very High",
+        "TAX": "High",
+        "RES": "High"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.nva.dr-acc3",
+      "module.version": "1.0.0",
+      "module.label": "Digital Realty \u2013 ACC3",
+      "module.role": "colocation_node",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Northern Virginia",
+          "cluster_code": "nva",
+          "operator": "Digital Realty",
+          "substrate": "colocation",
+          "energy_grid": "PJM Interconnection",
+          "state": "VA",
+          "location": "Ashburn, VA",
+          "index": 22,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.nva.dr-acc2",
+        "next": "pjm.nva.dr-acc4",
+        "cluster_home": "pjm.nva",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "High",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "High",
+        "PLA": "Medium",
+        "INF": "Very High",
+        "TAX": "High",
+        "RES": "High"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.nva.dr-acc4",
+      "module.version": "1.0.0",
+      "module.label": "Digital Realty \u2013 ACC4",
+      "module.role": "colocation_node",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Northern Virginia",
+          "cluster_code": "nva",
+          "operator": "Digital Realty",
+          "substrate": "colocation",
+          "energy_grid": "PJM Interconnection",
+          "state": "VA",
+          "location": "Ashburn, VA",
+          "index": 23,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.nva.dr-acc3",
+        "next": "pjm.nva.dr-acc5",
+        "cluster_home": "pjm.nva",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "High",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "High",
+        "PLA": "Medium",
+        "INF": "Very High",
+        "TAX": "High",
+        "RES": "High"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.nva.dr-acc5",
+      "module.version": "1.0.0",
+      "module.label": "Digital Realty \u2013 ACC5",
+      "module.role": "colocation_node",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Northern Virginia",
+          "cluster_code": "nva",
+          "operator": "Digital Realty",
+          "substrate": "colocation",
+          "energy_grid": "PJM Interconnection",
+          "state": "VA",
+          "location": "Ashburn, VA",
+          "index": 24,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.nva.dr-acc4",
+        "next": "pjm.nva.qts-ashburn-expansion",
+        "cluster_home": "pjm.nva",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "High",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "High",
+        "PLA": "Medium",
+        "INF": "High",
+        "TAX": "High",
+        "RES": "High"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.nva.qts-ashburn-expansion",
+      "module.version": "1.0.0",
+      "module.label": "QTS \u2013 Ashburn Expansion Facility",
+      "module.role": "colocation_node",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Northern Virginia",
+          "cluster_code": "nva",
+          "operator": "QTS",
+          "substrate": "colocation",
+          "energy_grid": "PJM Interconnection",
+          "state": "VA",
+          "location": "Ashburn, VA",
+          "index": 25,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.nva.dr-acc5",
+        "next": "pjm.nva.yondr-sterling-build",
+        "cluster_home": "pjm.nva",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "Medium",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "High",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.nva.yondr-sterling-build",
+      "module.version": "1.0.0",
+      "module.label": "Yondr \u2013 Sterling Hyperscale Build",
+      "module.role": "hyperscale_node",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L3"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Northern Virginia",
+          "cluster_code": "nva",
+          "operator": "Yondr",
+          "substrate": "hyperscale",
+          "energy_grid": "PJM Interconnection",
+          "state": "VA",
+          "location": "Sterling, Loudoun County, VA",
+          "index": 26,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.nva.qts-ashburn-expansion",
+        "next": "pjm.nva.powerhouse-sterling-c",
+        "cluster_home": "pjm.nva",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "High",
+        "GOV": "Medium",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "High",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "Medium"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.nva.powerhouse-sterling-c",
+      "module.version": "1.0.0",
+      "module.label": "PowerHouse \u2013 Sterling Site C",
+      "module.role": "energy_adjacent_node",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L1"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Northern Virginia",
+          "cluster_code": "nva",
+          "operator": "PowerHouse",
+          "substrate": "energy-adjacent",
+          "energy_grid": "PJM Interconnection",
+          "state": "VA",
+          "location": "Sterling, Loudoun County, VA",
+          "index": 27,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.nva.yondr-sterling-build",
+        "next": "pjm.nva.powerhouse-sterling-d",
+        "cluster_home": "pjm.nva",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "Medium",
+        "CUL": "Medium",
+        "STD": "Medium",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "High",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "Medium"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.nva.powerhouse-sterling-d",
+      "module.version": "1.0.0",
+      "module.label": "PowerHouse \u2013 Sterling Site D",
+      "module.role": "energy_adjacent_node",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L1"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Northern Virginia",
+          "cluster_code": "nva",
+          "operator": "PowerHouse",
+          "substrate": "energy-adjacent",
+          "energy_grid": "PJM Interconnection",
+          "state": "VA",
+          "location": "Sterling, Loudoun County, VA",
+          "index": 28,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.nva.powerhouse-sterling-c",
+        "next": "pjm.coh.google-new-albany-campus",
+        "cluster_home": "pjm.nva",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "Medium",
+        "CUL": "Medium",
+        "STD": "Medium",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "High",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "Medium"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.coh.google-new-albany-campus",
+      "module.version": "1.0.0",
+      "module.label": "Google \u2013 New Albany Campus",
+      "module.role": "hyperscale_anchor",
+      "analyzer_layer": {
+        "primary": "L0",
+        "annotation": "hyperscale_core",
+        "envelope": "L0\u2013L3"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Columbus/New Albany",
+          "cluster_code": "coh",
+          "operator": "Google",
+          "substrate": "hyperscale",
+          "energy_grid": "PJM Interconnection",
+          "state": "OH",
+          "location": "New Albany, OH",
+          "index": 29,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.nva.powerhouse-sterling-d",
+        "next": "pjm.coh.google-new-albany-exp-a",
+        "cluster_home": "pjm.coh",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "High",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "High",
+        "TAX": "Medium",
+        "RES": "High"
+      },
+      "drift_coherence": {
+        "drift": "Medium\u2013High",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.coh.google-new-albany-exp-a",
+      "module.version": "1.0.0",
+      "module.label": "Google \u2013 New Albany Expansion A",
+      "module.role": "hyperscale_node",
+      "analyzer_layer": {
+        "primary": "L0",
+        "annotation": "hyperscale_core",
+        "envelope": "L0\u2013L3"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Columbus/New Albany",
+          "cluster_code": "coh",
+          "operator": "Google",
+          "substrate": "hyperscale",
+          "energy_grid": "PJM Interconnection",
+          "state": "OH",
+          "location": "New Albany, OH",
+          "index": 30,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.coh.google-new-albany-campus",
+        "next": "pjm.coh.google-new-albany-exp-b",
+        "cluster_home": "pjm.coh",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "High",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "High",
+        "TAX": "Medium",
+        "RES": "High"
+      },
+      "drift_coherence": {
+        "drift": "Medium\u2013High",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.coh.google-new-albany-exp-b",
+      "module.version": "1.0.0",
+      "module.label": "Google \u2013 New Albany Expansion B",
+      "module.role": "hyperscale_node",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L3"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Columbus/New Albany",
+          "cluster_code": "coh",
+          "operator": "Google",
+          "substrate": "hyperscale",
+          "energy_grid": "PJM Interconnection",
+          "state": "OH",
+          "location": "New Albany, OH",
+          "index": 31,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.coh.google-new-albany-exp-a",
+        "next": "pjm.coh.meta-central-ohio-dc",
+        "cluster_home": "pjm.coh",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "High",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "High",
+        "TAX": "Medium",
+        "RES": "High"
+      },
+      "drift_coherence": {
+        "drift": "Medium\u2013High",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.coh.meta-central-ohio-dc",
+      "module.version": "1.0.0",
+      "module.label": "Meta \u2013 Central Ohio Datacenter",
+      "module.role": "hyperscale_anchor",
+      "analyzer_layer": {
+        "primary": "L0",
+        "annotation": "hyperscale_core",
+        "envelope": "L0\u2013L3"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Columbus/New Albany",
+          "cluster_code": "coh",
+          "operator": "Meta",
+          "substrate": "hyperscale",
+          "energy_grid": "PJM Interconnection",
+          "state": "OH",
+          "location": "Columbus, OH",
+          "index": 32,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.coh.google-new-albany-exp-b",
+        "next": "pjm.coh.meta-central-ohio-exp-c",
+        "cluster_home": "pjm.coh",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Very High",
+        "GOV": "Medium",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "High",
+        "TAX": "Medium",
+        "RES": "High"
+      },
+      "drift_coherence": {
+        "drift": "Medium\u2013High",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.coh.meta-central-ohio-exp-c",
+      "module.version": "1.0.0",
+      "module.label": "Meta \u2013 Central Ohio Expansion C",
+      "module.role": "hyperscale_node",
+      "analyzer_layer": {
+        "primary": "L0",
+        "annotation": "hyperscale_core",
+        "envelope": "L0\u2013L3"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Columbus/New Albany",
+          "cluster_code": "coh",
+          "operator": "Meta",
+          "substrate": "hyperscale",
+          "energy_grid": "PJM Interconnection",
+          "state": "OH",
+          "location": "Columbus, OH",
+          "index": 33,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.coh.meta-central-ohio-dc",
+        "next": "pjm.coh.meta-central-ohio-exp-d",
+        "cluster_home": "pjm.coh",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "High",
+        "GOV": "Medium",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "High",
+        "TAX": "Medium",
+        "RES": "High"
+      },
+      "drift_coherence": {
+        "drift": "Medium\u2013High",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.coh.meta-central-ohio-exp-d",
+      "module.version": "1.0.0",
+      "module.label": "Meta \u2013 Central Ohio Expansion D",
+      "module.role": "hyperscale_node",
+      "analyzer_layer": {
+        "primary": "L0",
+        "annotation": "hyperscale_core",
+        "envelope": "L0\u2013L3"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Columbus/New Albany",
+          "cluster_code": "coh",
+          "operator": "Meta",
+          "substrate": "hyperscale",
+          "energy_grid": "PJM Interconnection",
+          "state": "OH",
+          "location": "Columbus, OH",
+          "index": 34,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.coh.meta-central-ohio-exp-c",
+        "next": "pjm.coh.msft-columbus-campus",
+        "cluster_home": "pjm.coh",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "High",
+        "GOV": "Medium",
+        "CUL": "Medium",
+        "STD": "Medium",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "High",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Medium\u2013High",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.coh.msft-columbus-campus",
+      "module.version": "1.0.0",
+      "module.label": "Microsoft \u2013 Columbus Region Campus",
+      "module.role": "hyperscale_anchor",
+      "analyzer_layer": {
+        "primary": "L0",
+        "annotation": "hyperscale_core",
+        "envelope": "L0\u2013L3"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Columbus/New Albany",
+          "cluster_code": "coh",
+          "operator": "Microsoft",
+          "substrate": "hyperscale",
+          "energy_grid": "PJM Interconnection",
+          "state": "OH",
+          "location": "Columbus, OH",
+          "index": 35,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.coh.meta-central-ohio-exp-d",
+        "next": "pjm.coh.msft-columbus-node-2",
+        "cluster_home": "pjm.coh",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "High",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "High",
+        "TAX": "Medium",
+        "RES": "High"
+      },
+      "drift_coherence": {
+        "drift": "Medium\u2013High",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.coh.msft-columbus-node-2",
+      "module.version": "1.0.0",
+      "module.label": "Microsoft \u2013 Columbus Region Node 2",
+      "module.role": "hyperscale_node",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L3"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Columbus/New Albany",
+          "cluster_code": "coh",
+          "operator": "Microsoft",
+          "substrate": "hyperscale",
+          "energy_grid": "PJM Interconnection",
+          "state": "OH",
+          "location": "Columbus, OH",
+          "index": 36,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.coh.msft-columbus-campus",
+        "next": "pjm.coh.msft-columbus-node-3",
+        "cluster_home": "pjm.coh",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "High",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "High",
+        "TAX": "Medium",
+        "RES": "High"
+      },
+      "drift_coherence": {
+        "drift": "Medium\u2013High",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.coh.msft-columbus-node-3",
+      "module.version": "1.0.0",
+      "module.label": "Microsoft \u2013 Columbus Region Node 3",
+      "module.role": "hyperscale_node",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L3"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Columbus/New Albany",
+          "cluster_code": "coh",
+          "operator": "Microsoft",
+          "substrate": "hyperscale",
+          "energy_grid": "PJM Interconnection",
+          "state": "OH",
+          "location": "Columbus, OH",
+          "index": 37,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.coh.msft-columbus-node-2",
+        "next": "pjm.coh.cyrusone-columbus-metro",
+        "cluster_home": "pjm.coh",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "Medium",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "High",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Medium\u2013High",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.coh.cyrusone-columbus-metro",
+      "module.version": "1.0.0",
+      "module.label": "CyrusOne \u2013 Columbus Metro Facility",
+      "module.role": "colocation_node",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Columbus/New Albany",
+          "cluster_code": "coh",
+          "operator": "CyrusOne",
+          "substrate": "colocation",
+          "energy_grid": "PJM Interconnection",
+          "state": "OH",
+          "location": "Columbus, OH",
+          "index": 38,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.coh.msft-columbus-node-3",
+        "next": "pjm.coh.cyrusone-new-albany-colo",
+        "cluster_home": "pjm.coh",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "High",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "Medium\u2013High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.coh.cyrusone-new-albany-colo",
+      "module.version": "1.0.0",
+      "module.label": "CyrusOne \u2013 New Albany Colocation",
+      "module.role": "colocation_node",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Columbus/New Albany",
+          "cluster_code": "coh",
+          "operator": "CyrusOne",
+          "substrate": "colocation",
+          "energy_grid": "PJM Interconnection",
+          "state": "OH",
+          "location": "New Albany, OH",
+          "index": 39,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.coh.cyrusone-columbus-metro",
+        "next": "pjm.coh.stack-columbus-a",
+        "cluster_home": "pjm.coh",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "Medium",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "High",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "Medium\u2013High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.coh.stack-columbus-a",
+      "module.version": "1.0.0",
+      "module.label": "Stack Infrastructure \u2013 Columbus Build A",
+      "module.role": "enterprise_node",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Columbus/New Albany",
+          "cluster_code": "coh",
+          "operator": "Stack Infrastructure",
+          "substrate": "enterprise",
+          "energy_grid": "PJM Interconnection",
+          "state": "OH",
+          "location": "Columbus, OH",
+          "index": 40,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.coh.cyrusone-new-albany-colo",
+        "next": "pjm.coh.stack-columbus-b",
+        "cluster_home": "pjm.coh",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "Medium",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "Medium",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "Medium\u2013High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.coh.stack-columbus-b",
+      "module.version": "1.0.0",
+      "module.label": "Stack Infrastructure \u2013 Columbus Build B",
+      "module.role": "enterprise_node",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Columbus/New Albany",
+          "cluster_code": "coh",
+          "operator": "Stack Infrastructure",
+          "substrate": "enterprise",
+          "energy_grid": "PJM Interconnection",
+          "state": "OH",
+          "location": "Columbus, OH",
+          "index": 41,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.coh.stack-columbus-a",
+        "next": "pjm.coh.qts-columbus-enterprise",
+        "cluster_home": "pjm.coh",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "Medium",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "Medium",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "Medium\u2013High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.coh.qts-columbus-enterprise",
+      "module.version": "1.0.0",
+      "module.label": "QTS \u2013 Columbus Enterprise Node",
+      "module.role": "enterprise_node",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Columbus/New Albany",
+          "cluster_code": "coh",
+          "operator": "QTS",
+          "substrate": "enterprise",
+          "energy_grid": "PJM Interconnection",
+          "state": "OH",
+          "location": "Columbus, OH",
+          "index": 42,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.coh.stack-columbus-b",
+        "next": "pjm.coh.amazon-columbus-enterprise",
+        "cluster_home": "pjm.coh",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "Medium",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "Medium",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "Medium\u2013High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.coh.amazon-columbus-enterprise",
+      "module.version": "1.0.0",
+      "module.label": "Amazon Enterprise \u2013 Columbus Compute Hub",
+      "module.role": "enterprise_node",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Columbus/New Albany",
+          "cluster_code": "coh",
+          "operator": "Amazon Enterprise",
+          "substrate": "enterprise",
+          "energy_grid": "PJM Interconnection",
+          "state": "OH",
+          "location": "Columbus, OH",
+          "index": 43,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.coh.qts-columbus-enterprise",
+        "next": "pjm.pit.dr-pittsburgh-metro",
+        "cluster_home": "pjm.coh",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "High",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "Medium",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "High",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "Medium\u2013High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.pit.dr-pittsburgh-metro",
+      "module.version": "1.0.0",
+      "module.label": "Digital Realty \u2013 Pittsburgh Metro Facility",
+      "module.role": "colocation_hub",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Pittsburgh Corridor",
+          "cluster_code": "pit",
+          "operator": "Digital Realty",
+          "substrate": "colocation",
+          "energy_grid": "PJM Interconnection",
+          "state": "PA",
+          "location": "Pittsburgh, PA",
+          "index": 44,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.coh.amazon-columbus-enterprise",
+        "next": "pjm.pit.regional-pittsburgh-node-a",
+        "cluster_home": "pjm.pit",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "Medium",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "Medium",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "Medium\u2013High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.pit.regional-pittsburgh-node-a",
+      "module.version": "1.0.0",
+      "module.label": "Regional Enterprise \u2013 Pittsburgh Compute Node A",
+      "module.role": "enterprise_node",
+      "analyzer_layer": {
+        "primary": "L2",
+        "annotation": "enterprise_edge",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Pittsburgh Corridor",
+          "cluster_code": "pit",
+          "operator": "Regional Enterprise",
+          "substrate": "enterprise",
+          "energy_grid": "PJM Interconnection",
+          "state": "PA",
+          "location": "Pittsburgh, PA",
+          "index": 45,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.pit.dr-pittsburgh-metro",
+        "next": "pjm.pit.regional-pittsburgh-node-b",
+        "cluster_home": "pjm.pit",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "Medium",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "Medium",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "Medium"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.pit.regional-pittsburgh-node-b",
+      "module.version": "1.0.0",
+      "module.label": "Regional Enterprise \u2013 Pittsburgh Compute Node B",
+      "module.role": "enterprise_node",
+      "analyzer_layer": {
+        "primary": "L2",
+        "annotation": "enterprise_edge",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Pittsburgh Corridor",
+          "cluster_code": "pit",
+          "operator": "Regional Enterprise",
+          "substrate": "enterprise",
+          "energy_grid": "PJM Interconnection",
+          "state": "PA",
+          "location": "Pittsburgh, PA",
+          "index": 46,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.pit.regional-pittsburgh-node-a",
+        "next": "pjm.pit.telecom-pittsburgh-fiber",
+        "cluster_home": "pjm.pit",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "Medium",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "Medium",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "Medium"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.pit.telecom-pittsburgh-fiber",
+      "module.version": "1.0.0",
+      "module.label": "Telecom Edge \u2013 Pittsburgh Fiber Hub",
+      "module.role": "edge_node",
+      "analyzer_layer": {
+        "primary": "L2",
+        "annotation": "enterprise_edge",
+        "envelope": "L0\u2013L1"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Pittsburgh Corridor",
+          "cluster_code": "pit",
+          "operator": "Telecom Edge",
+          "substrate": "edge",
+          "energy_grid": "PJM Interconnection",
+          "state": "PA",
+          "location": "Pittsburgh, PA",
+          "index": 47,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.pit.regional-pittsburgh-node-b",
+        "next": "pjm.pit.financial-pittsburgh-ll",
+        "cluster_home": "pjm.pit",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "Medium",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "Medium"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.pit.financial-pittsburgh-ll",
+      "module.version": "1.0.0",
+      "module.label": "Financial Sector \u2013 Pittsburgh Low-Latency Node",
+      "module.role": "financial_node",
+      "analyzer_layer": {
+        "primary": "L2",
+        "annotation": "enterprise_edge",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Pittsburgh Corridor",
+          "cluster_code": "pit",
+          "operator": "Financial Sector",
+          "substrate": "financial",
+          "energy_grid": "PJM Interconnection",
+          "state": "PA",
+          "location": "Pittsburgh, PA",
+          "index": 48,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.pit.telecom-pittsburgh-fiber",
+        "next": "pjm.njf.financial-nj-hub-a",
+        "cluster_home": "pjm.pit",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "Medium",
+        "TAX": "Medium",
+        "RES": "Medium\u2013High"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "Medium\u2013High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.njf.financial-nj-hub-a",
+      "module.version": "1.0.0",
+      "module.label": "Financial Datacenter \u2013 NJ Trading Hub A",
+      "module.role": "financial_node",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "NJ Financial",
+          "cluster_code": "njf",
+          "operator": "Financial Datacenter",
+          "substrate": "financial",
+          "energy_grid": "PJM Interconnection",
+          "state": "NJ",
+          "location": "Northern New Jersey, NJ",
+          "index": 49,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.pit.financial-pittsburgh-ll",
+        "next": "pjm.njf.financial-nj-hub-b",
+        "cluster_home": "pjm.njf",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "High",
+        "PLA": "Medium",
+        "INF": "Medium",
+        "TAX": "Medium",
+        "RES": "High"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.njf.financial-nj-hub-b",
+      "module.version": "1.0.0",
+      "module.label": "Financial Datacenter \u2013 NJ Trading Hub B",
+      "module.role": "financial_node",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "NJ Financial",
+          "cluster_code": "njf",
+          "operator": "Financial Datacenter",
+          "substrate": "financial",
+          "energy_grid": "PJM Interconnection",
+          "state": "NJ",
+          "location": "Northern New Jersey, NJ",
+          "index": 50,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.njf.financial-nj-hub-a",
+        "next": "pjm.njf.financial-nj-hub-c",
+        "cluster_home": "pjm.njf",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "High",
+        "PLA": "Medium",
+        "INF": "Medium",
+        "TAX": "Medium",
+        "RES": "High"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.njf.financial-nj-hub-c",
+      "module.version": "1.0.0",
+      "module.label": "Financial Datacenter \u2013 NJ Trading Hub C",
+      "module.role": "financial_node",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "NJ Financial",
+          "cluster_code": "njf",
+          "operator": "Financial Datacenter",
+          "substrate": "financial",
+          "energy_grid": "PJM Interconnection",
+          "state": "NJ",
+          "location": "Northern New Jersey, NJ",
+          "index": 51,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.njf.financial-nj-hub-b",
+        "next": "pjm.njf.equinix-nj-metro",
+        "cluster_home": "pjm.njf",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "High",
+        "PLA": "Medium",
+        "INF": "Medium",
+        "TAX": "Medium",
+        "RES": "High"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.njf.equinix-nj-metro",
+      "module.version": "1.0.0",
+      "module.label": "Equinix \u2013 NJ Metro Facility",
+      "module.role": "colocation_hub",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "NJ Financial",
+          "cluster_code": "njf",
+          "operator": "Equinix",
+          "substrate": "colocation",
+          "energy_grid": "PJM Interconnection",
+          "state": "NJ",
+          "location": "Northern New Jersey, NJ",
+          "index": 52,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.njf.financial-nj-hub-c",
+        "next": "pjm.njf.dr-nj-metro",
+        "cluster_home": "pjm.njf",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "High",
+        "PLA": "Medium",
+        "INF": "Medium",
+        "TAX": "Medium",
+        "RES": "High"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.njf.dr-nj-metro",
+      "module.version": "1.0.0",
+      "module.label": "Digital Realty \u2013 NJ Metro Facility",
+      "module.role": "colocation_node",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "NJ Financial",
+          "cluster_code": "njf",
+          "operator": "Digital Realty",
+          "substrate": "colocation",
+          "energy_grid": "PJM Interconnection",
+          "state": "NJ",
+          "location": "Northern New Jersey, NJ",
+          "index": 53,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.njf.equinix-nj-metro",
+        "next": "pjm.njf.telecom-nj-fiber",
+        "cluster_home": "pjm.njf",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "High",
+        "PLA": "Medium",
+        "INF": "Medium",
+        "TAX": "Medium",
+        "RES": "High"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.njf.telecom-nj-fiber",
+      "module.version": "1.0.0",
+      "module.label": "Telecom Edge \u2013 NJ Fiber Exchange",
+      "module.role": "edge_node",
+      "analyzer_layer": {
+        "primary": "L2",
+        "annotation": "enterprise_edge",
+        "envelope": "L0\u2013L1"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "NJ Financial",
+          "cluster_code": "njf",
+          "operator": "Telecom Edge",
+          "substrate": "edge",
+          "energy_grid": "PJM Interconnection",
+          "state": "NJ",
+          "location": "Northern New Jersey, NJ",
+          "index": 54,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.njf.dr-nj-metro",
+        "next": "pjm.dcg.federal-research-a",
+        "cluster_home": "pjm.njf",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "Medium",
+        "HUM": "Medium",
+        "TRI": "High",
+        "PLA": "Medium",
+        "INF": "Medium",
+        "TAX": "Medium",
+        "RES": "Medium\u2013High"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "Medium\u2013High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.dcg.federal-research-a",
+      "module.version": "1.0.0",
+      "module.label": "Federal Research Compute Facility A",
+      "module.role": "government_node",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Washington D.C.",
+          "cluster_code": "dcg",
+          "operator": "Federal Research Compute Facility A",
+          "substrate": "government",
+          "energy_grid": "PJM Interconnection",
+          "state": "DC",
+          "location": "Washington, D.C.",
+          "index": 55,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.njf.telecom-nj-fiber",
+        "next": "pjm.dcg.federal-research-b",
+        "cluster_home": "pjm.dcg",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "Very High",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "High",
+        "PLA": "Medium",
+        "INF": "Medium",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.dcg.federal-research-b",
+      "module.version": "1.0.0",
+      "module.label": "Federal Research Compute Facility B",
+      "module.role": "government_node",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Washington D.C.",
+          "cluster_code": "dcg",
+          "operator": "Federal Research Compute Facility B",
+          "substrate": "government",
+          "energy_grid": "PJM Interconnection",
+          "state": "DC",
+          "location": "Washington, D.C.",
+          "index": 56,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.dcg.federal-research-a",
+        "next": "pjm.dcg.gov-cloud-dc",
+        "cluster_home": "pjm.dcg",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "Very High",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "High",
+        "PLA": "Medium",
+        "INF": "Medium",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.dcg.gov-cloud-dc",
+      "module.version": "1.0.0",
+      "module.label": "Government Cloud Node \u2013 DC",
+      "module.role": "government_node",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Washington D.C.",
+          "cluster_code": "dcg",
+          "operator": "Government Cloud Node",
+          "substrate": "government",
+          "energy_grid": "PJM Interconnection",
+          "state": "DC",
+          "location": "Washington, D.C.",
+          "index": 57,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.dcg.federal-research-b",
+        "next": "pjm.dcg.public-sector-dc-metro",
+        "cluster_home": "pjm.dcg",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "Very High",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "High",
+        "PLA": "Medium",
+        "INF": "Medium",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.dcg.public-sector-dc-metro",
+      "module.version": "1.0.0",
+      "module.label": "Public Sector Datacenter \u2013 DC Metro",
+      "module.role": "government_node",
+      "analyzer_layer": {
+        "primary": "L2",
+        "annotation": "enterprise_edge",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Washington D.C.",
+          "cluster_code": "dcg",
+          "operator": "Public Sector Datacenter",
+          "substrate": "government",
+          "energy_grid": "PJM Interconnection",
+          "state": "DC",
+          "location": "Washington, D.C.",
+          "index": 58,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.dcg.gov-cloud-dc",
+        "next": "pjm.bmd.att-baltimore-edge",
+        "cluster_home": "pjm.dcg",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "Medium",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "Medium",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.bmd.att-baltimore-edge",
+      "module.version": "1.0.0",
+      "module.label": "AT&T \u2013 Baltimore Edge Node",
+      "module.role": "edge_node",
+      "analyzer_layer": {
+        "primary": "L2",
+        "annotation": "enterprise_edge",
+        "envelope": "L0\u2013L1"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Baltimore/Maryland",
+          "cluster_code": "bmd",
+          "operator": "AT&T",
+          "substrate": "edge",
+          "energy_grid": "PJM Interconnection",
+          "state": "MD",
+          "location": "Baltimore, MD",
+          "index": 59,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.dcg.public-sector-dc-metro",
+        "next": "pjm.bmd.verizon-baltimore-metro",
+        "cluster_home": "pjm.bmd",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "Medium\u2013High",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "Medium\u2013High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.bmd.verizon-baltimore-metro",
+      "module.version": "1.0.0",
+      "module.label": "Verizon \u2013 Baltimore Metro Facility",
+      "module.role": "edge_node",
+      "analyzer_layer": {
+        "primary": "L2",
+        "annotation": "enterprise_edge",
+        "envelope": "L0\u2013L1"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Baltimore/Maryland",
+          "cluster_code": "bmd",
+          "operator": "Verizon",
+          "substrate": "edge",
+          "energy_grid": "PJM Interconnection",
+          "state": "MD",
+          "location": "Baltimore, MD",
+          "index": 60,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.bmd.att-baltimore-edge",
+        "next": "pjm.bmd.lumen-baltimore-transport",
+        "cluster_home": "pjm.bmd",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "High",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "Medium\u2013High",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "Medium\u2013High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.bmd.lumen-baltimore-transport",
+      "module.version": "1.0.0",
+      "module.label": "Lumen \u2013 Baltimore Transport Node",
+      "module.role": "edge_node",
+      "analyzer_layer": {
+        "primary": "L2",
+        "annotation": "enterprise_edge",
+        "envelope": "L0\u2013L1"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Baltimore/Maryland",
+          "cluster_code": "bmd",
+          "operator": "Lumen",
+          "substrate": "edge",
+          "energy_grid": "PJM Interconnection",
+          "state": "MD",
+          "location": "Baltimore, MD",
+          "index": 61,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.bmd.verizon-baltimore-metro",
+        "next": "pjm.bmd.regional-baltimore-compute",
+        "cluster_home": "pjm.bmd",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "High",
+        "CUL": "Medium",
+        "STD": "Medium",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "Medium\u2013High",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "Medium\u2013High"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.bmd.regional-baltimore-compute",
+      "module.version": "1.0.0",
+      "module.label": "Regional Enterprise \u2013 Baltimore Compute Hub",
+      "module.role": "enterprise_node",
+      "analyzer_layer": {
+        "primary": "L2",
+        "annotation": "enterprise_edge",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Baltimore/Maryland",
+          "cluster_code": "bmd",
+          "operator": "Regional Enterprise",
+          "substrate": "enterprise",
+          "energy_grid": "PJM Interconnection",
+          "state": "MD",
+          "location": "Baltimore, MD",
+          "index": 62,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.bmd.lumen-baltimore-transport",
+        "next": "pjm.bmd.colo-baltimore-metro",
+        "cluster_home": "pjm.bmd",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "Medium",
+        "CUL": "Medium",
+        "STD": "Medium",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "Medium",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "Medium"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.bmd.colo-baltimore-metro",
+      "module.version": "1.0.0",
+      "module.label": "Colocation \u2013 Baltimore Metro Facility",
+      "module.role": "colocation_node",
+      "analyzer_layer": {
+        "primary": "L2",
+        "annotation": "enterprise_edge",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Baltimore/Maryland",
+          "cluster_code": "bmd",
+          "operator": "Colocation",
+          "substrate": "colocation",
+          "energy_grid": "PJM Interconnection",
+          "state": "MD",
+          "location": "Baltimore, MD",
+          "index": 63,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.bmd.regional-baltimore-compute",
+        "next": "pjm.wva.energy-adj-wv-node-a",
+        "cluster_home": "pjm.bmd",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "Medium",
+        "CUL": "Medium",
+        "STD": "Medium",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "Medium",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "Medium"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.wva.energy-adj-wv-node-a",
+      "module.version": "1.0.0",
+      "module.label": "Energy-Adjacent Datacenter \u2013 WV Node A",
+      "module.role": "energy_adjacent_node",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L1"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "West Virginia",
+          "cluster_code": "wva",
+          "operator": "Energy-Adjacent Datacenter",
+          "substrate": "energy-adjacent",
+          "energy_grid": "PJM Interconnection",
+          "state": "WV",
+          "location": "West Virginia",
+          "index": 64,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.bmd.colo-baltimore-metro",
+        "next": "pjm.wva.energy-adj-wv-node-b",
+        "cluster_home": "pjm.wva",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "Medium",
+        "CUL": "Medium",
+        "STD": "Medium",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "Medium",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "Medium"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.wva.energy-adj-wv-node-b",
+      "module.version": "1.0.0",
+      "module.label": "Energy-Adjacent Datacenter \u2013 WV Node B",
+      "module.role": "energy_adjacent_node",
+      "analyzer_layer": {
+        "primary": "L1",
+        "annotation": "regional_substrate",
+        "envelope": "L0\u2013L1"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "West Virginia",
+          "cluster_code": "wva",
+          "operator": "Energy-Adjacent Datacenter",
+          "substrate": "energy-adjacent",
+          "energy_grid": "PJM Interconnection",
+          "state": "WV",
+          "location": "West Virginia",
+          "index": 65,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.wva.energy-adj-wv-node-a",
+        "next": "pjm.wva.enterprise-wv-metro",
+        "cluster_home": "pjm.wva",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "Medium",
+        "CUL": "Medium",
+        "STD": "Medium",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "Medium",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "Medium"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.wva.enterprise-wv-metro",
+      "module.version": "1.0.0",
+      "module.label": "Enterprise Compute \u2013 WV Metro",
+      "module.role": "enterprise_node",
+      "analyzer_layer": {
+        "primary": "L2",
+        "annotation": "enterprise_edge",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "West Virginia",
+          "cluster_code": "wva",
+          "operator": "Enterprise Compute",
+          "substrate": "enterprise",
+          "energy_grid": "PJM Interconnection",
+          "state": "WV",
+          "location": "West Virginia",
+          "index": 66,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.wva.energy-adj-wv-node-b",
+        "next": "pjm.del.enterprise-wilmington",
+        "cluster_home": "pjm.wva",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Medium",
+        "GOV": "Medium",
+        "CUL": "Medium",
+        "STD": "Medium",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "Medium",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Medium",
+        "coherence": "Medium"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.del.enterprise-wilmington",
+      "module.version": "1.0.0",
+      "module.label": "Enterprise Datacenter \u2013 Wilmington Node",
+      "module.role": "enterprise_node",
+      "analyzer_layer": {
+        "primary": "L2",
+        "annotation": "enterprise_edge",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Delaware",
+          "cluster_code": "del",
+          "operator": "Enterprise Datacenter",
+          "substrate": "enterprise",
+          "energy_grid": "PJM Interconnection",
+          "state": "DE",
+          "location": "Wilmington, DE",
+          "index": 67,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.wva.enterprise-wv-metro",
+        "next": "pjm.del.telecom-delaware-fiber",
+        "cluster_home": "pjm.del",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Low\u2013Medium",
+        "GOV": "Medium",
+        "CUL": "Medium",
+        "STD": "Medium",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "Medium",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Low\u2013Medium",
+        "coherence": "Medium"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.del.telecom-delaware-fiber",
+      "module.version": "1.0.0",
+      "module.label": "Telecom Edge \u2013 Delaware Fiber Hub",
+      "module.role": "edge_node",
+      "analyzer_layer": {
+        "primary": "L2",
+        "annotation": "enterprise_edge",
+        "envelope": "L0\u2013L1"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Delaware",
+          "cluster_code": "del",
+          "operator": "Telecom Edge",
+          "substrate": "edge",
+          "energy_grid": "PJM Interconnection",
+          "state": "DE",
+          "location": "Delaware",
+          "index": 68,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.del.enterprise-wilmington",
+        "next": "pjm.del.regional-delaware-compute",
+        "cluster_home": "pjm.del",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Low\u2013Medium",
+        "GOV": "Medium",
+        "CUL": "Medium",
+        "STD": "Medium",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "Medium",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Low\u2013Medium",
+        "coherence": "Medium"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    },
+    {
+      "module.id": "pjm.del.regional-delaware-compute",
+      "module.version": "1.0.0",
+      "module.label": "Regional Enterprise \u2013 Delaware Compute Node",
+      "module.role": "enterprise_node",
+      "analyzer_layer": {
+        "primary": "L2",
+        "annotation": "enterprise_edge",
+        "envelope": "L0\u2013L2"
+      },
+      "ai": {
+        "module": {
+          "territory": "PJM",
+          "cluster": "Delaware",
+          "cluster_code": "del",
+          "operator": "Regional Enterprise",
+          "substrate": "enterprise",
+          "energy_grid": "PJM Interconnection",
+          "state": "DE",
+          "location": "Delaware",
+          "index": 69,
+          "total_in_territory": 69,
+          "schema_version": "tf-module-v1",
+          "generated": "2026-08-30"
+        }
+      },
+      "navigation": {
+        "prev": "pjm.del.telecom-delaware-fiber",
+        "next": null,
+        "cluster_home": "pjm.del",
+        "territory_home": "pjm"
+      },
+      "rtt_operators": {
+        "FAC": "Low\u2013Medium",
+        "GOV": "Medium",
+        "CUL": "Medium",
+        "STD": "Medium",
+        "HUM": "Medium",
+        "TRI": "Medium",
+        "PLA": "Medium",
+        "INF": "Medium",
+        "TAX": "Medium",
+        "RES": "Medium"
+      },
+      "drift_coherence": {
+        "drift": "Low\u2013Medium",
+        "coherence": "Medium"
+      },
+      "lineage": {
+        "source": "PJM.html",
+        "cite": "https://www.triadicframeworks.org/LINEAGE/",
+        "status": "placeholder \u2014 expand with full RTT profiling"
+      }
+    }
+  ]
+}
