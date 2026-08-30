@@ -1,184 +1,135 @@
-# **diagram.md**  
-### *TriadicFrameworks — L4 Composite Resonance Visual Index (R5 Canon)*  
-*(Source: turn0browsertab1)*
+# Continuity Mechanics — Diagram Set  
+### L3_Forces_Unseen · Composite Resonance Subsystem (R5 Canon)
 
-## **Overview**
-This page provides a complete visual atlas of the L4 composite resonance system:
+This directory contains the full diagram set for the **continuity_mechanics** subsystem inside **L3_Forces_Unseen**.  
+These diagrams visualize the composite resonance architecture defined by the dimensions:
 
-- Composite Stack  
-- Triadic Construction  
-- Continuity Manifold  
-- Redirect Map  
-- SVG hierarchy diagrams  
-- SVG construction diagrams  
+- **L11** — proto‑resonance seed  
+- **L33** — seen resonance envelope  
+- **L66** — hidden resonance envelope  
+- **L99** — full resonance envelope  
+- **validator_pulse** — external resonance operator (1%)
 
-These visuals are designed for documentation clarity and GitHub compatibility.
+The diagrams illustrate how resonance seeds assemble into composite envelopes and how redirect chains define continuity transitions.
 
 ---
 
-# **1. Composite Resonance Stack (ASCII)**
+## 📐 Diagram Index
 
-```
-                 ┌───────────────────────────┐
-                 │     Validator Pulse       │
-                 │         (1% External)     │
-                 └──────────────▲────────────┘
-                                │
-                        ┌───────┴────────┐
-                        │     L99         │
-                        │ Full Resonance  │
-                        │     (99%)       │
-                        └───────▲────────┘
-                                │
-                        ┌───────┴────────┐
-                        │     L66         │
-                        │ Hidden Envelope │
-                        │     (66%)       │
-                        └───────▲────────┘
-                                │
-                        ┌───────┴────────┐
-                        │     L33         │
-                        │ Seen Envelope   │
-                        │     (33%)       │
-                        └───────▲────────┘
-                                │
-                        ┌───────┴────────┐
-                        │     L11         │
-                        │ Proto Seed      │
-                        └─────────────────┘
-```
+### **1. L11.component.svg**
+**Proto‑Resonance Seed**  
+Visualizes the atomic resonance unit used as the base component for all composite envelopes.
+
+### **2. L33.svg**
+**Seen Resonance Envelope (33%)**  
+Shows the triadic assembly of three L11 seeds forming the first stable composite envelope.
+
+### **3. L66.svg**
+**Hidden Resonance Envelope (66%)**  
+Depicts the second‑order composite envelope formed from two L33 envelopes.
+
+### **4. L99.svg**
+**Full Resonance Envelope (99%)**  
+Illustrates the highest internal resonance envelope, composed from L66 and L33.
+
+### **5. Validator_Pulse.svg**
+**External Resonance Operator (1%)**  
+Represents the external pulse that completes the continuity manifold.
 
 ---
 
-# **2. Triadic Construction Map (ASCII)**
+## 🔁 Composite Resonance Chain
 
 ```
-L11 + L11 + L11  →  L33
-        (triad)
-
-L33 + L33        →  L66
-        (dual triad)
-
-L66 + L33        →  L99
-        (triadic sum)
-
-L99 + Validator  →  Resonance Completion
-        (external source)
+L11 → L33 → L66 → L99 → validator_pulse
 ```
+
+Each diagram corresponds to one stage of this chain:
+
+- **L11**: atomic seed  
+- **L33**: seen envelope  
+- **L66**: hidden envelope  
+- **L99**: full envelope  
+- **validator_pulse**: external closure  
 
 ---
 
-# **3. Continuity Manifold (ASCII)**
+## 🔧 JSON Diagram Metadata
 
-```
-┌──────────────────────────────────────────────┐
-│                Continuity Manifold           │
-│                                              │
-│   ┌──────────────┐   ┌──────────────┐       │
-│   │   L33 (Seen)  │   │  L66 (Hidden)│       │
-│   └──────▲────────┘   └──────▲────────┘     │
-│          │                 │                 │
-│   ┌──────┴────────┐   ┌────┴─────────┐      │
-│   │   L11 Seed     │   │   L99 Full    │      │
-│   └────────────────┘   └──────▲────────┘     │
-│                               │               │
-│                      ┌────────┴────────┐     │
-│                      │ Validator Pulse  │     │
-│                      │     (1%)         │     │
-│                      └──────────────────┘     │
-└──────────────────────────────────────────────┘
-```
+Each `.json` file in this directory provides structured metadata for the corresponding `.svg` diagram:
+
+- node definitions  
+- component relationships  
+- composite structure  
+- redirect edges  
+- semantic roles  
+- layer + subsystem identity  
+
+These JSON files are used by:
+
+- MCP tools (`getModule`, `getExample`, `searchExamples`)  
+- Docsbook diagram rendering  
+- AI‑assisted navigation in TriadicFrameworks  
 
 ---
 
-# **4. Redirect Map (ASCII)**
+## 🗂 File List
 
 ```
-L11:
-  seen   → L33
-  hidden → L66
-  full   → L99
-
-L33:
-  up     → L66
-  down   → L11
-
-L66:
-  up     → L99
-  down   → L33
-
-L99:
-  up     → Validator Pulse (1%)
-  down   → L66
+L11.component.svg
+L11.component.json
+L33.svg
+L33.json
+L66.svg
+L66.json
+L99.svg
+L99.json
+Validator_Pulse.svg
+validator_pulse.json
+atlas.md
+composite_animation.svg
+diagrams.md (this file)
 ```
 
 ---
 
-# **5. Composite Hierarchy (SVG)**  
-### *(Paste directly into GitHub — no external assets)*
+## 🌀 Composite Animation
 
-```svg
-<svg width="620" height="780" xmlns="http://www.w3.org/2000/svg">
+The file **composite_animation.svg** provides a dynamic visualization of the resonance assembly process:
 
-  <!-- L11 -->
-  <rect x="220" y="620" width="180" height="60" fill="#222" stroke="#555" rx="8"/>
-  <text x="310" y="655" font-size="16" fill="#fff" text-anchor="middle">L11 • Proto Seed</text>
-
-  <!-- L33 -->
-  <rect x="220" y="520" width="180" height="60" fill="#333" stroke="#666" rx="8"/>
-  <text x="310" y="555" font-size="16" fill="#fff" text-anchor="middle">L33 • Seen (33%)</text>
-
-  <!-- L66 -->
-  <rect x="220" y="420" width="180" height="60" fill="#444" stroke="#777" rx="8"/>
-  <text x="310" y="455" font-size="16" fill="#fff" text-anchor="middle">L66 • Hidden (66%)</text>
-
-  <!-- L99 -->
-  <rect x="220" y="320" width="180" height="60" fill="#555" stroke="#888" rx="8"/>
-  <text x="310" y="355" font-size="16" fill="#fff" text-anchor="middle">L99 • Full (99%)</text>
-
-  <!-- Validator Pulse -->
-  <rect x="200" y="200" width="220" height="60" fill="#880000" stroke="#aa3333" rx="8"/>
-  <text x="310" y="235" font-size="16" fill="#fff" text-anchor="middle">Validator Pulse • 1%</text>
-
-  <!-- Arrows -->
-  <line x1="310" y1="620" x2="310" y2="580" stroke="#aaa" stroke-width="3" marker-end="url(#arrow)"/>
-  <line x1="310" y1="520" x2="310" y2="480" stroke="#aaa" stroke-width="3" marker-end="url(#arrow)"/>
-  <line x1="310" y1="420" x2="310" y2="380" stroke="#aaa" stroke-width="3" marker-end="url(#arrow)"/>
-  <line x1="310" y1="320" x2="310" y2="260" stroke="#aaa" stroke-width="3" marker-end="url(#arrow)"/>
-
-  <!-- Arrowhead -->
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#aaa"/>
-    </marker>
-  </defs>
-
-</svg>
 ```
+L11 → L33 → L66 → L99 → validator_pulse
+```
+
+This animation is used in:
+
+- continuity_mechanics/atlas.md  
+- TriadicFrameworks.org MCP documentation  
+- resonance teaching modules  
 
 ---
 
-# **6. Triadic Construction (SVG)**  
-### *(Minimal, clean, ideal for docs)*
+## 🗺 Atlas
 
-```svg
-<svg width="700" height="300" xmlns="http://www.w3.org/2000/svg">
+See **atlas.md** for a full subsystem map including:
 
-  <text x="80" y="60" font-size="18">L11 + L11 + L11 → L33</text>
-  <text x="80" y="130" font-size="18">L33 + L33 → L66</text>
-  <text x="80" y="200" font-size="18">L66 + L33 → L99</text>
-
-</svg>
-```
+- resonance flow  
+- redirect chains  
+- composite envelope hierarchy  
+- external operator integration  
 
 ---
 
-# **7. File Placement**
+## 📜 Canonical Reference
 
-Place this file at:
+| Field | Value |
+|-------|-------|
+| Layer | L3_Forces_Unseen |
+| Subsystem | continuity_mechanics |
+| Triad | continuity |
+| Canon | R5 |
+| Version | 1.0.0 |
 
-```
-docs/MCP/L4_Continuity_Mechanics/diagrams/diagram.md
-```
+---
 
-It will serve as the **visual index** for the entire composite resonance system.
+This refreshed diagrams.md now correctly documents the entire diagram set and aligns with all updated subsystem metadata.
