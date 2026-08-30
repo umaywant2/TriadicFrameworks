@@ -1,0 +1,71 @@
+{
+  "id": "continuity_mechanics.dimensionIndex",
+  "version": "1.0.0",
+  "layer": "L3_Forces_Unseen",
+  "subsystem": "continuity_mechanics",
+  "triad": "continuity",
+  "canonical": "R5",
+
+  "summary": "Index of composite resonance dimensions for the continuity_mechanics subsystem. Defines proto-resonance seeds, composite envelopes, and the external validator pulse.",
+
+  "dimensions": {
+    "L11": {
+      "type": "component",
+      "role": "proto-resonance seed",
+      "semantic_axis": "resonanceSeed",
+      "redirect": {
+        "seen": "L33",
+        "hidden": "L66",
+        "full": "L99"
+      },
+      "path": "docs/MCP/L3_Forces_Unseen/continuity_mechanics/dimensions/L11.component.json"
+    },
+
+    "L33": {
+      "type": "composite",
+      "role": "seen resonance envelope",
+      "semantic_axis": "resonanceEnvelope",
+      "composition": ["L11", "L11", "L11"],
+      "redirect": {
+        "up": "L66",
+        "down": "L11"
+      },
+      "path": "docs/MCP/L3_Forces_Unseen/continuity_mechanics/dimensions/L33.json"
+    },
+
+    "L66": {
+      "type": "composite",
+      "role": "hidden resonance envelope",
+      "semantic_axis": "resonanceEnvelope",
+      "composition": ["L33", "L33"],
+      "redirect": {
+        "up": "L99",
+        "down": "L33"
+      },
+      "path": "docs/MCP/L3_Forces_Unseen/continuity_mechanics/dimensions/L66.json"
+    },
+
+    "L99": {
+      "type": "composite",
+      "role": "full resonance envelope",
+      "semantic_axis": "resonanceEnvelope",
+      "composition": ["L66", "L33"],
+      "redirect": {
+        "up": "validator_pulse",
+        "down": "L66"
+      },
+      "path": "docs/MCP/L3_Forces_Unseen/continuity_mechanics/dimensions/L99.json"
+    },
+
+    "validator_pulse": {
+      "type": "external",
+      "role": "external resonance operator",
+      "semantic_axis": "resonanceEnvelope",
+      "composition": ["external"],
+      "redirect": {
+        "down": "L99"
+      },
+      "path": "docs/MCP/L3_Forces_Unseen/continuity_mechanics/dimensions/validator_pulse.json"
+    }
+  }
+}
