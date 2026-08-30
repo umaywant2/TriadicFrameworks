@@ -1,55 +1,73 @@
 {
+  "id": "mcp.operatorRegistry",
   "version": "0.1.0",
-  "canonical": "R5",
-  "layer": "L3_Forces_Unseen",
-  "triad": "forces",
-  "lineage": ["qmroot", "frequency", "fluids", "forces"],
-
-  "description": "Canonical registry of all force‑regime operators in TriadicFrameworks MCP. Each operator includes category, definition, semantics, and impact profile.",
-
+  "description": "Canonical operator registry for the TriadicFrameworks MCP substrate.",
   "operators": [
     {
-      "name": "push",
-      "category": "push",
-      "definition": "Applies outward gradient pressure across a force‑regime surface.",
-      "semantics": ["gradientIntensity"],
-      "impactProfile": "Increases gradient intensity; used to amplify unseen force transitions."
-    },
-    {
-      "name": "pull",
-      "category": "pull",
-      "definition": "Applies inward gradient contraction across a force‑regime surface.",
-      "semantics": ["gradientIntensity"],
-      "impactProfile": "Decreases gradient intensity; used to stabilize or collapse force transitions."
-    },
-    {
+      "id": "bind",
       "name": "bind",
-      "category": "bind",
-      "definition": "Creates coherence bonds between force‑regime surfaces.",
-      "semantics": ["fieldCoherence", "forceIntegrity"],
-      "impactProfile": "Increases coherence and structural integrity across unseen force fields."
+      "layer": "L3_Forces_Unseen",
+      "triad": "forces",
+      "category": "operator",
+      "canonical": true,
+      "definition": "Creates a coherence attachment between two resonance surfaces.",
+      "semantics": "Binding establishes a stable relationship between fields or surfaces, enabling structured interaction.",
+      "docs": "docs/MCP/L3_Forces_Unseen/operators/docs/bind.md"
     },
     {
+      "id": "pull",
+      "name": "pull",
+      "layer": "L3_Forces_Unseen",
+      "triad": "forces",
+      "category": "operator",
+      "canonical": true,
+      "definition": "Draws a resonance surface inward toward a coherence anchor.",
+      "semantics": "Pulling reduces separation and increases coherence density.",
+      "docs": "docs/MCP/L3_Forces_Unseen/operators/docs/pull.md"
+    },
+    {
+      "id": "push",
+      "name": "push",
+      "layer": "L3_Forces_Unseen",
+      "triad": "forces",
+      "category": "operator",
+      "canonical": true,
+      "definition": "Applies outward force to a resonance surface, increasing separation.",
+      "semantics": "Pushing expands structure and reduces local coherence.",
+      "docs": "docs/MCP/L3_Forces_Unseen/operators/docs/push.md"
+    },
+    {
+      "id": "gradient",
       "name": "gradient",
-      "category": "gradient",
-      "definition": "Modulates gradientIntensity across force‑regime axes.",
-      "semantics": ["gradientIntensity"],
-      "impactProfile": "Controls slope and intensity of unseen force gradients."
+      "layer": "L3_Forces_Unseen",
+      "triad": "forces",
+      "category": "operator",
+      "canonical": true,
+      "definition": "Measures or induces change across a resonance field.",
+      "semantics": "Gradients describe directional change and are used to evaluate structural transitions.",
+      "docs": "docs/MCP/L3_Forces_Unseen/operators/docs/gradient.md"
     },
     {
+      "id": "fieldShift",
       "name": "fieldShift",
-      "category": "fieldShift",
-      "definition": "Shifts fieldCoherence across influence channels.",
-      "semantics": ["fieldCoherence", "influenceContinuity"],
-      "impactProfile": "Reorients unseen force fields; used for coherence realignment."
+      "layer": "L3_Forces_Unseen",
+      "triad": "forces",
+      "category": "operator",
+      "canonical": true,
+      "definition": "Shifts a resonance field into a new alignment or regime.",
+      "semantics": "Field shifts alter the underlying coherence regime and can trigger structural transitions.",
+      "docs": "docs/MCP/L3_Forces_Unseen/operators/docs/fieldShift.md"
     },
     {
+      "id": "ruptureForce",
       "name": "ruptureForce",
-      "category": "ruptureForce",
-      "definition": "Introduces rupturePotential into force‑regime surfaces.",
-      "semantics": ["rupturePotential"],
-      "impactProfile": "Creates discontinuities; used to model rupture, breakage, or instability."
+      "layer": "L3_Forces_Unseen",
+      "triad": "forces",
+      "category": "operator",
+      "canonical": true,
+      "definition": "Applies force sufficient to rupture a resonance surface.",
+      "semantics": "Rupture force breaks continuity and produces a discontinuity event.",
+      "docs": "docs/MCP/L3_Forces_Unseen/operators/docs/ruptureForce.md"
     }
   ]
 }
-
