@@ -1,0 +1,86 @@
+{
+  "id": "diagram.composite_animation",
+  "title": "Composite Resonance Animation",
+  "layer": "L3_Forces_Unseen",
+  "subsystem": "continuity_mechanics",
+  "triad": "continuity",
+  "canonical": "R5",
+  "version": "1.0.0",
+
+  "description": "Animated visualization of the composite resonance chain L11 → L33 → L66 → L99 → validator_pulse. Shows the assembly of proto-resonance seeds into composite envelopes and the final external validation pulse.",
+
+  "sequence": [
+    {
+      "step": 1,
+      "dimension": "L11",
+      "role": "proto-resonance seed",
+      "action": "seed appears",
+      "semantic_axis": "resonanceSeed"
+    },
+    {
+      "step": 2,
+      "dimension": "L33",
+      "role": "seen resonance envelope",
+      "action": "three L11 seeds merge",
+      "semantic_axis": "resonanceEnvelope"
+    },
+    {
+      "step": 3,
+      "dimension": "L66",
+      "role": "hidden resonance envelope",
+      "action": "two L33 envelopes merge",
+      "semantic_axis": "resonanceEnvelope"
+    },
+    {
+      "step": 4,
+      "dimension": "L99",
+      "role": "full resonance envelope",
+      "action": "L66 and L33 merge",
+      "semantic_axis": "resonanceEnvelope"
+    },
+    {
+      "step": 5,
+      "dimension": "validator_pulse",
+      "role": "external resonance operator",
+      "action": "external pulse completes manifold",
+      "semantic_axis": "resonanceEnvelope"
+    }
+  ],
+
+  "redirects": {
+    "L11": ["L33", "L66", "L99"],
+    "L33": ["L66"],
+    "L66": ["L99"],
+    "L99": ["validator_pulse"],
+    "validator_pulse": ["L99"]
+  },
+
+  "animation": {
+    "style": "triadic-assembly",
+    "duration_seconds": 12,
+    "loop": true,
+    "color_scheme": {
+      "L11": "#222",
+      "L33": "#333",
+      "L66": "#444",
+      "L99": "#555",
+      "validator_pulse": "#AA0000"
+    }
+  },
+
+  "ai": {
+    "keywords": [
+      "resonance",
+      "triad",
+      "composite",
+      "continuity",
+      "L11",
+      "L33",
+      "L66",
+      "L99",
+      "validator_pulse",
+      "animation"
+    ],
+    "purpose": "Provides AI modules with structured metadata describing the composite resonance animation for continuity_mechanics."
+  }
+}
