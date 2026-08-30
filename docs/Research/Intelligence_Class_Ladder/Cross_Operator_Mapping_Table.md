@@ -1,6 +1,5 @@
 # **Cross Operator Mapping Table — TriadicFrameworks Intelligence Class Ladder** 
 
-- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/Intelligence_Class_Ladder/module.json) — Agentic module schema role assignments
 - [`Cross_Operator_Mapping_Table_TriadicFrameworks_Intelligence_Class_Ladder.pdf`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/Intelligence_Class_Ladder/Cross_Operator_Mapping_Table_TriadicFrameworks_Intelligence_Class_Ladder.pdf) — PDF document
 
 
