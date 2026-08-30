@@ -1,0 +1,38 @@
+{
+  "module.id": "pjm.<facility_slug>",
+  "module.role": "datacenter-profile",
+  "module.category": "datacenter-analysis",
+  "module.version": "1.0.0",
+
+  "module.summary": "<short facility description>",
+  "module.cluster": "<cluster name>",
+  "module.state": "<state>",
+  "module.envelope": "<L0–L3>",
+  "module.type": "<hyperscale | colocation | enterprise | edge | financial | government | energy-adjacent>",
+
+  "ai.module": {
+    "schema": "schemas/datacenter_profile.schema.json",
+    "description": "RTT-aligned datacenter profile manifest for PJM territory."
+  },
+
+  "ai.navigation": {
+    "parent": "docs/datacenter_reports/PJM.html",
+    "cluster_page": "docs/datacenter_reports/PJM/<cluster>.html",
+    "facility_page": "docs/datacenter_reports/PJM/<facility>.html"
+  },
+
+  "rtt.operators": {
+    "FAC": "<score>",
+    "GOV": "<score>",
+    "CUL": "<score>",
+    "STD": "<score>",
+    "HUM": "<score>",
+    "TRI": "<score>",
+    "PLA": "<score>",
+    "INF": "<score>",
+    "TAX": "<score>",
+    "RES": "<score>"
+  },
+
+  "lineage": "https://www.triadicframeworks.org/LINEAGE/"
+}
