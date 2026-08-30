@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="The_Choices_We_Made_and_Why_dark" src="https://github.com/user-attachments/assets/18b429f9-dbc8-4012-9815-c5dcace935ef" />
+
 # ⭐ **The Choices We Made — and Why**  
 *A structural reflection on how TriadicFrameworks was built, and the example it aims to set.*  
 **Nawder Loswin · May 2026**
