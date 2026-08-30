@@ -1,9 +1,12 @@
 {
-  "registry": "L4_Continuity_Mechanics_Redirects",
+  "registry": "continuity_mechanics_redirects",
   "canonical": "R5",
   "version": "1.0.0",
 
-  "summary": "Redirect registry for composite resonance dimensions L11 → L33 → L66 → L99. Defines upward, downward, and contextual redirects for proto-resonance seeds and composite envelopes.",
+  "summary": "Redirect registry for composite resonance dimensions L11 → L33 → L66 → L99. Defines upward, downward, and contextual redirects for proto-resonance seeds and composite envelopes within the L3 Forces layer.",
+
+  "layer": "L3_Forces_Unseen",
+  "subsystem": "continuity_mechanics",
 
   "redirects": {
     "L11": {
@@ -35,7 +38,7 @@
     "L99": {
       "type": "composite",
       "components": ["L66", "L33"],
-      "up": "external-operator",
+      "up": "validator_pulse",
       "down": "L66",
       "description": "L99 is the full resonance envelope. Redirects upward to the 1% external validator pulse and downward to L66 for hidden resonance."
     }
@@ -45,7 +48,7 @@
     "id": "validator_pulse",
     "percentage": "1%",
     "role": "external resonance source",
-    "description": "The 1% operator is the external origin of dimensional resonance. It is not part of the composite system but serves as the source of all resonance envelopes."
+    "description": "The validator pulse is the 1% external origin of dimensional resonance. It is not part of the composite system but serves as the external closure for the resonance envelopes."
   },
 
   "ai": {
@@ -58,8 +61,9 @@
       "L11",
       "L33",
       "L66",
-      "L99"
+      "L99",
+      "validator_pulse"
     ],
-    "purpose": "Provides AI modules with canonical redirect rules for composite resonance dimensions."
+    "purpose": "Provides AI modules with canonical redirect rules for composite resonance dimensions inside the L3 Forces layer."
   }
 }
