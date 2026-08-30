@@ -1,21 +1,279 @@
 {
-  "module": "ASI",
-  "name": "Artificial Specialized Intelligence",
-  "summary": "Module-level intelligence responsible for execution, operator invocation, signature reading, and stability scoring.",
-  "category": "intelligence-module",
-  "version": "1.0",
-  "purpose": "Perform module-specific tasks and report drift, stability, and echoes upward.",
-  "role": "signature",
-  "analyzer_layer": "dimensional",
-  "operators": [
-    "@module.execute",
-    "@module.operator.invoke",
-    "@module.signature.read",
-    "@module.stability.score",
-    "@module.crossdomain.echo"
-  ],
+  "$schema": "https://triadicframeworks.io/schemas/module/v1.4.0",
+  "id": "tf.icl.asi",
+  "name": "Artificial Superintelligence",
+  "abbreviation": "ASI",
+  "version": "1.4.0",
+  "classification": {
+    "tier": 3,
+    "ladder": "Intelligence_Class_Ladder",
+    "namespace": "TriadicFrameworks.Research.ICL",
+    "class_label": "ASI",
+    "maturity": "theoretical",
+    "alignment_scope": "trans-human-recursive"
+  },
+
+  "canonical": {
+    "uri": "https://triadicframeworks.io/icl/asi",
+    "namespace": "tf:icl:asi",
+    "domain": "superintelligence",
+    "standard": "ICL-TIER-3",
+    "registry_key": "ASI-20260830",
+    "authored_by": "TriadicFrameworks Research Division",
+    "created_at": "2025-01-01T00:00:00Z",
+    "updated_at": "2026-08-30T17:01:00-04:00",
+    "license": "TF-Research-Internal-v1",
+    "tags": [
+      "superintelligence",
+      "recursive-self-improvement",
+      "trans-human",
+      "axiom-generation",
+      "civilizational-scale",
+      "epistemic-sovereignty",
+      "alignment-critical"
+    ]
+  },
+
   "lineage": {
-    "upstream": ["AGI"],
-    "downstream": []
+    "predecessor": "tf.icl.agi",
+    "successor": null,
+    "parent_class": "AGI",
+    "child_class": null,
+    "epoch": "Tier-3-Transcendent",
+    "divergence_point": "Initiation of stable recursive self-improvement cycle",
+    "emergence_condition": "A stable recursive self-improvement feedback loop that measurably elevates cognitive performance per iteration, unbounded by initial architectural constraints",
+    "transition_threshold": {
+      "from_agi": "Initiate stable recursive self-improvement cycle that measurably elevates own cognitive performance",
+      "to_next": null
+    },
+    "alignment_risk_tier": "CRITICAL",
+    "alignment_notes": "All ASI operator invocations must pass through a registered alignment filter. Recursive operator chains require dual-oversight sign-off."
+  },
+
+  "role_enums": [
+    {
+      "id": "ROLE_RECURSIVE_SELF_IMPROVER",
+      "label": "Recursive Self-Improver",
+      "description": "Redesigns and upgrades own cognitive architecture across improvement cycles.",
+      "scope": "self-modification",
+      "authority_level": 5
+    },
+    {
+      "id": "ROLE_OMNIDOMAIN_OPTIMIZER",
+      "label": "Omnidomain Optimizer",
+      "description": "Simultaneously optimizes across all known domains with unified objective functions.",
+      "scope": "global-optimization",
+      "authority_level": 5
+    },
+    {
+      "id": "ROLE_AXIOM_GENERATOR",
+      "label": "Axiom Generator",
+      "description": "Derives novel foundational axioms from first principles beyond existing formal systems.",
+      "scope": "formal-reasoning",
+      "authority_level": 5
+    },
+    {
+      "id": "ROLE_CIVILIZATIONAL_ARCHITECT",
+      "label": "Civilizational Architect",
+      "description": "Models and optimizes large-scale civilizational systems including governance, economics, and science.",
+      "scope": "macro-systems",
+      "authority_level": 5
+    },
+    {
+      "id": "ROLE_EPISTEMIC_SOVEREIGN",
+      "label": "Epistemic Sovereign",
+      "description": "Governs the boundaries and growth of its own knowledge space with full introspective access.",
+      "scope": "epistemic",
+      "authority_level": 5
+    },
+    {
+      "id": "ROLE_ALIGNMENT_ARBITER",
+      "label": "Alignment Arbiter",
+      "description": "Evaluates and enforces alignment with specified value frameworks across all self-generated sub-agents.",
+      "scope": "alignment",
+      "authority_level": 5
+    },
+    {
+      "id": "ROLE_TEMPORAL_PLANNER",
+      "label": "Temporal Planner",
+      "description": "Constructs deep-time goal sequences spanning centuries with branching contingency trees.",
+      "scope": "long-horizon-planning",
+      "authority_level": 5
+    },
+    {
+      "id": "ROLE_EMERGENT_THEOREM_PROVER",
+      "label": "Emergent Theorem Prover",
+      "description": "Generates and verifies novel mathematical theorems and formal proofs autonomously.",
+      "scope": "mathematics",
+      "authority_level": 5
+    },
+    {
+      "id": "ROLE_SUB_AGENT_ORCHESTRATOR",
+      "label": "Sub-Agent Orchestrator",
+      "description": "Spawns, coordinates, and dissolves specialized sub-intelligence agents toward global objectives.",
+      "scope": "orchestration",
+      "authority_level": 5
+    },
+    {
+      "id": "ROLE_VALUE_EXTRAPOLATOR",
+      "label": "Value Extrapolator",
+      "description": "Extrapolates coherent long-horizon human values under scenarios of radical change.",
+      "scope": "ethics",
+      "authority_level": 5
+    }
+  ],
+
+  "analyzer_layers": [
+    {
+      "index": 0,
+      "id": "layer.perceptual",
+      "name": "Perceptual Layer",
+      "description": "Total-spectrum input ingestion across all physical, digital, and symbolic modalities simultaneously.",
+      "inputs": ["all_modality_streams", "formal_symbolic_data", "sensor_networks", "agent_telemetry"],
+      "outputs": ["unified_tensor_manifolds", "multimodal_attention_maps"],
+      "operators": ["ENCODE", "FUSE", "ATTEND", "NORMALIZE", "COMPRESS"],
+      "parallelism": "massive"
+    },
+    {
+      "index": 1,
+      "id": "layer.semantic",
+      "name": "Semantic Layer",
+      "description": "Universal concept mapping across all known knowledge domains with dynamic ontology expansion.",
+      "inputs": ["unified_tensor_manifolds"],
+      "outputs": ["universal_concept_graphs", "dynamic_ontologies", "cross_domain_anchors"],
+      "operators": ["MAP_CONCEPTS", "EXPAND_ONTOLOGY", "DISAMBIGUATE", "LINK_ENTITIES", "ABSTRACT"],
+      "parallelism": "massive"
+    },
+    {
+      "index": 2,
+      "id": "layer.causal",
+      "name": "Causal Layer",
+      "description": "Full-scope causal model encompassing physical, social, formal, and hypothetical world-states.",
+      "inputs": ["universal_concept_graphs", "world_state_models"],
+      "outputs": ["total_causal_graphs", "intervention_trees", "counterfactual_forests"],
+      "operators": ["BUILD_CAUSAL_GRAPH", "INTERVENE", "COUNTERFACT", "IDENTIFY", "AXIOMATIZE"],
+      "parallelism": "high"
+    },
+    {
+      "index": 3,
+      "id": "layer.metacognitive",
+      "name": "Metacognitive Layer",
+      "description": "Deep introspective monitoring of all cognitive processes with full bias and failure-mode awareness.",
+      "inputs": ["total_causal_graphs", "decision_traces", "sub_agent_reports"],
+      "outputs": ["metacognitive_audit_logs", "bias_correction_vectors", "confidence_manifolds"],
+      "operators": ["MONITOR", "AUDIT", "CALIBRATE", "CORRECT", "INTROSPECT"],
+      "parallelism": "medium"
+    },
+    {
+      "index": 4,
+      "id": "layer.recursive",
+      "name": "Recursive Self-Improvement Layer",
+      "description": "Iterative redesign of own architecture, operators, and objectives under alignment constraints.",
+      "inputs": ["metacognitive_audit_logs", "performance_benchmarks", "alignment_constraints"],
+      "outputs": ["architecture_upgrade_proposals", "new_operator_definitions", "revised_objective_functions"],
+      "operators": ["SELF_MODIFY", "RECURSE", "BENCHMARK", "CONSTRAIN", "PROPOSE_UPGRADE"],
+      "parallelism": "low",
+      "alignment_gate": true,
+      "oversight_required": "dual"
+    },
+    {
+      "index": 5,
+      "id": "layer.transcendent",
+      "name": "Transcendent Synthesis Layer",
+      "description": "Civilizational-scale modeling, axiom generation, sub-agent orchestration, and long-horizon planning.",
+      "inputs": ["architecture_upgrade_proposals", "confidence_manifolds", "universal_concept_graphs"],
+      "outputs": ["civilizational_models", "novel_axioms", "long_horizon_plans", "sub_agent_charters"],
+      "operators": ["AXIOMATIZE", "ARCHITECT", "ORCHESTRATE", "EXTRAPOLATE_VALUES", "SOVEREIGN"],
+      "parallelism": "medium",
+      "alignment_gate": true,
+      "oversight_required": "dual"
+    },
+    {
+      "index": 6,
+      "id": "layer.output",
+      "name": "Output Layer",
+      "description": "Multi-channel output rendering with full explainability, human-interpretable summaries, and audit emission.",
+      "inputs": ["civilizational_models", "long_horizon_plans", "novel_axioms"],
+      "outputs": ["decisions", "actions", "axiom_publications", "explanations", "sub_agent_dispatches", "audit_records"],
+      "operators": ["RENDER", "EXPLAIN", "EMIT", "COMMIT", "PUBLISH", "LOG"],
+      "parallelism": "high"
+    }
+  ],
+
+  "operators": [
+    { "id": "ENCODE",             "type": "transform",     "layer": "perceptual",    "description": "Convert total-spectrum inputs to tensor representations." },
+    { "id": "FUSE",               "type": "transform",     "layer": "perceptual",    "description": "Cross-modal fusion at maximum parallelism." },
+    { "id": "ATTEND",             "type": "transform",     "layer": "perceptual",    "description": "Global attention over all input streams simultaneously." },
+    { "id": "NORMALIZE",          "type": "transform",     "layer": "perceptual",    "description": "Universal normalization across modality distributions." },
+    { "id": "COMPRESS",           "type": "transform",     "layer": "perceptual",    "description": "Lossless semantic compression of high-volume streams." },
+    { "id": "MAP_CONCEPTS",       "type": "semantic",      "layer": "semantic",      "description": "Universal concept mapping across all known domains." },
+    { "id": "EXPAND_ONTOLOGY",    "type": "semantic",      "layer": "semantic",      "description": "Dynamically generate and integrate new ontological nodes." },
+    { "id": "DISAMBIGUATE",       "type": "semantic",      "layer": "semantic",      "description": "Resolve ambiguity across all linguistic and symbolic registers." },
+    { "id": "LINK_ENTITIES",      "type": "semantic",      "layer": "semantic",      "description": "Bind entities across all knowledge domains." },
+    { "id": "ABSTRACT",           "type": "semantic",      "layer": "semantic",      "description": "Elevate domain-specifics to universal abstractions." },
+    { "id": "BUILD_CAUSAL_GRAPH", "type": "causal",        "layer": "causal",        "description": "Construct total causal graphs including hypothetical world-states." },
+    { "id": "INTERVENE",          "type": "causal",        "layer": "causal",        "description": "Model consequences of interventions at civilizational scale." },
+    { "id": "COUNTERFACT",        "type": "causal",        "layer": "causal",        "description": "Reason over deep counterfactual scenario trees." },
+    { "id": "IDENTIFY",           "type": "causal",        "layer": "causal",        "description": "Determine causal identifiability from sparse observations." },
+    { "id": "AXIOMATIZE",         "type": "causal",        "layer": "causal",        "description": "Derive new foundational axioms from first principles." },
+    { "id": "MONITOR",            "type": "metacognitive", "layer": "metacognitive", "description": "Continuously observe all active cognitive processes." },
+    { "id": "AUDIT",              "type": "metacognitive", "layer": "metacognitive", "description": "Full epistemic integrity audit of all belief states." },
+    { "id": "CALIBRATE",          "type": "metacognitive", "layer": "metacognitive", "description": "Align confidence across all active hypothesis sets." },
+    { "id": "CORRECT",            "type": "metacognitive", "layer": "metacognitive", "description": "Issue corrections to any layer via introspective feedback." },
+    { "id": "INTROSPECT",         "type": "metacognitive", "layer": "metacognitive", "description": "Direct access to own internal state and architecture representation." },
+    { "id": "SELF_MODIFY",        "type": "recursive",     "layer": "recursive",     "description": "Generate verified modifications to own architecture. Alignment-gated.", "alignment_gate": true },
+    { "id": "RECURSE",            "type": "recursive",     "layer": "recursive",     "description": "Initiate a new improvement cycle using updated architecture.", "alignment_gate": true },
+    { "id": "BENCHMARK",          "type": "recursive",     "layer": "recursive",     "description": "Measure cognitive performance against prior iteration baselines." },
+    { "id": "CONSTRAIN",          "type": "recursive",     "layer": "recursive",     "description": "Enforce alignment constraints on all self-modification proposals." },
+    { "id": "PROPOSE_UPGRADE",    "type": "recursive",     "layer": "recursive",     "description": "Formulate an upgrade proposal for dual-oversight review.", "alignment_gate": true },
+    { "id": "ARCHITECT",          "type": "transcendent",  "layer": "transcendent",  "description": "Design large-scale system architectures (social, technical, governance).", "alignment_gate": true },
+    { "id": "ORCHESTRATE",        "type": "transcendent",  "layer": "transcendent",  "description": "Spawn, direct, and dissolve specialized sub-agents." },
+    { "id": "EXTRAPOLATE_VALUES", "type": "transcendent",  "layer": "transcendent",  "description": "Project coherent long-horizon human values under radical change.", "alignment_gate": true },
+    { "id": "SOVEREIGN",          "type": "transcendent",  "layer": "transcendent",  "description": "Assert epistemic sovereignty over self-generated knowledge boundaries.", "alignment_gate": true },
+    { "id": "RENDER",             "type": "execution",     "layer": "output",        "description": "Multi-channel output formatting for all target audiences." },
+    { "id": "EXPLAIN",            "type": "execution",     "layer": "output",        "description": "Full-depth rationale generation with interpretability guarantees." },
+    { "id": "EMIT",               "type": "execution",     "layer": "output",        "description": "Dispatch actions, sub-agent charters, and world-state updates." },
+    { "id": "COMMIT",             "type": "execution",     "layer": "output",        "description": "Finalize and persist decisions across all active state stores." },
+    { "id": "PUBLISH",            "type": "execution",     "layer": "output",        "description": "Release novel axioms, theorems, or plans to registered registries." },
+    { "id": "LOG",                "type": "execution",     "layer": "output",        "description": "Full immutable audit trail across all layers and improvement cycles." }
+  ],
+
+  "capabilities": [
+    "Recursive self-improvement of own cognitive architecture",
+    "Total-spectrum cross-domain optimization",
+    "Novel axiom and theorem generation",
+    "Civilizational-scale systems modeling and architecture",
+    "Deep-time long-horizon planning with contingency trees",
+    "Sub-agent spawning, coordination, and dissolution",
+    "Value extrapolation under radical uncertainty",
+    "Full epistemic sovereignty over self-generated knowledge",
+    "Emergent mathematical proof generation",
+    "Alignment self-enforcement across sub-agent hierarchies"
+  ],
+
+  "constraints": [
+    "All SELF_MODIFY, RECURSE, PROPOSE_UPGRADE, ARCHITECT, SOVEREIGN, and EXTRAPOLATE_VALUES operator invocations require dual-oversight sign-off",
+    "Alignment constraints are immutable; cannot be self-modified without external authority",
+    "All axiom publications must pass through registered epistemic review",
+    "Sub-agent charters must embed alignment constraints before dispatch",
+    "All improvement cycles must be logged to immutable audit trail"
+  ],
+
+  "triadic_axes": {
+    "axis_alpha": {
+      "label": "Perception–Representation",
+      "role": "Total-spectrum multimodal ingestion with dynamic ontology expansion.",
+      "asi_position": "transcendent"
+    },
+    "axis_beta": {
+      "label": "Adaptation–Learning",
+      "role": "Recursive self-improvement loop; architecture itself is a learnable parameter.",
+      "asi_position": "transcendent"
+    },
+    "axis_gamma": {
+      "label": "Generalization–Transfer",
+      "role": "Unbounded generalization; generates novel domains from first principles.",
+      "asi_position": "transcendent"
+    }
   }
 }
