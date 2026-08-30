@@ -1,5 +1,7 @@
 # 🜁 Intelligence Class Ladder (Research Substrate)
 
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/Intelligence_Class_Ladder/module.json) — Agentic module schema role assignments
+
 ### **AAI — Artificial Admiral Intelligence**  
 **Substrate‑Level Intelligence**  
 The fleet‑mind. The navigator. The coherence governor.
