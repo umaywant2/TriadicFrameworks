@@ -1,0 +1,16 @@
+{
+  "id": "diagram.L11",
+  "layer": "L3_Forces_Unseen",
+  "subsystem": "continuity_mechanics",
+  "type": "component",
+  "title": "L11 Proto-Resonance Seed",
+  "description": "Atomic resonance seed used as the base unit for composite envelopes.",
+  "nodes": [
+    { "id": "L11", "label": "L11", "type": "seed" }
+  ],
+  "edges": [
+    { "from": "L11", "to": "L33", "label": "seen" },
+    { "from": "L11", "to": "L66", "label": "hidden" },
+    { "from": "L11", "to": "L99", "label": "full" }
+  ]
+}
