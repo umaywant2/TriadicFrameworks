@@ -3,6 +3,8 @@
 
 ---
 
+https://www.youtube.com/playlist?list=PLdJ7PcCVbyUE
+
 > Ref: URL and example images attached [https://docs.triadicframeworks.org/docs/frameworks/creation_guide](https://docs.triadicframeworks.org/docs/frameworks/creation_guide)
 > Ref: [artifacts](artifacts/FCG_Imagine_Series_Production_Bible.md)
 > 
