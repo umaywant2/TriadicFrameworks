@@ -1,0 +1,79 @@
+{
+  "module.id": "ercot.dallas_fort_worth",
+  "module.version": "1.0.0",
+  "module.category": "datacenter-analysis",
+  "module.summary": "RTT-Inside drift-bounded structural report for ERCOT Dallas / Fort Worth Metro cluster - the most mature colocation and interconnection ecosystem in ERCOT, anchored by Digital Realty, Equinix, QTS, AT&T, and Lumen.",
+  "module.role": "cluster-report",
+  "module.analyzer_layer": "dimensional",
+  "ai.module": {
+    "schema": "schemas/tensor_export.schema.json",
+    "description": "Cluster-level module manifest for ERCOT Dallas / Fort Worth Metro. Covers 17 facilities including Digital Realty campuses, Equinix IBX nodes, QTS Fort Worth, AT&T edge nodes, Lumen transport hubs, and regional enterprise compute."
+  },
+  "ai.tensors": {
+    "registry": "docs/datacenter_reports/tensor_registry.py",
+    "keys": ["planetary_substrate_tensor", "dimensional_fatigue_tensor", "qcompute_resonance_matrix", "multi_site_tensor"]
+  },
+  "ai.navigation": {
+    "territory": "docs/datacenter_reports/ERCOT/ERCOT_module.json",
+    "cluster_index": "docs/datacenter_reports/ERCOT/ERCOT_module.json#cluster_mapping",
+    "prev_cluster": "docs/datacenter_reports/ERCOT/shackelford/module.json",
+    "next_cluster": "docs/datacenter_reports/ERCOT/austin/module.json",
+    "front_door": "docs/datacenter_reports/README.md",
+    "regional_index": "docs/datacenter_reports/REGIONAL_INDEX.md",
+    "template": "docs/datacenter_reports/_TEMPLATE_Datacenter_Report.md",
+    "territory_html": "docs/datacenter_reports/ERCOT/ERCOT.html"
+  },
+  "ai.session_context": {
+    "file": "docs/datacenter_reports/session_context.md",
+    "mode": "drift-bounded",
+    "coherence": "triadic-operator-dimensional",
+    "audience": "students-operators-ai"
+  },
+  "cluster_mapping": {
+    "cluster.id": "ercot.dallas_fort_worth",
+    "cluster.name": "Dallas / Fort Worth Metro",
+    "cluster.region": "ERCOT",
+    "cluster.state": "Texas",
+    "cluster.country": "United States",
+    "cluster.type": "Colocation + enterprise + cloud",
+    "cluster.primary_operators": ["Digital Realty", "Equinix", "QTS", "AT&T", "Lumen", "Regional Enterprise"],
+    "cluster.notes": "Major interconnection hub; dense metro fiber routes; most mature colocation ecosystem in ERCOT; steady enterprise and colocation growth."
+  },
+  "rtt.envelopes": {
+    "drift": "Medium",
+    "drift.description": "Steady enterprise and colocation growth; metro constraints limit explosive expansion.",
+    "coherence": "High",
+    "coherence.description": "Mature fiber routes, stable enterprise ecosystem, strong interconnection fabric."
+  },
+  "rtt.facility_types": ["colocation-hub", "enterprise", "cloud-region", "edge-compute", "telecom-edge"],
+  "rtt.operator_scores": {
+    "FAC": "High", "GOV": "High", "CUL": "Medium", "STD": "Very High",
+    "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "Very High", "TAX": "Medium", "RES": "High"
+  },
+  "facilities": [
+    { "facility.id": "ercot.dfw.digital_realty_campus_1", "facility.name": "Digital Realty - Dallas Metro Campus", "facility.type": "colocation-hub", "facility.operator": "Digital Realty", "rtt.operator_scores": { "FAC": "High", "GOV": "High", "CUL": "Medium", "STD": "Very High", "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "Very High", "TAX": "Medium", "RES": "High" } },
+    { "facility.id": "ercot.dfw.equinix_ibx_da1", "facility.name": "Equinix - Dallas Metro IBX", "facility.type": "colocation-hub", "facility.operator": "Equinix", "rtt.operator_scores": { "FAC": "High", "GOV": "High", "CUL": "Medium", "STD": "Very High", "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "Very High", "TAX": "Medium", "RES": "High" } },
+    { "facility.id": "ercot.dfw.qts_fort_worth", "facility.name": "QTS - Fort Worth Datacenter", "facility.type": "enterprise", "facility.operator": "QTS", "rtt.operator_scores": { "FAC": "High", "GOV": "High", "CUL": "Medium", "STD": "Very High", "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "High" } },
+    { "facility.id": "ercot.dfw.att_dallas_edge", "facility.name": "AT&T - Dallas Edge Node", "facility.type": "edge-compute", "facility.operator": "AT&T", "rtt.operator_scores": { "FAC": "Medium", "GOV": "High", "CUL": "Medium", "STD": "High", "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "Very High", "TAX": "Medium", "RES": "High" } },
+    { "facility.id": "ercot.dfw.lumen_dallas_transport", "facility.name": "Lumen - Dallas Transport Node", "facility.type": "telecom-edge", "facility.operator": "Lumen", "rtt.operator_scores": { "FAC": "Medium", "GOV": "High", "CUL": "Medium", "STD": "High", "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "Very High", "TAX": "Medium", "RES": "High" } },
+    { "facility.id": "ercot.dfw.digital_realty_campus_2", "facility.name": "Digital Realty - Dallas Metro Campus 2", "facility.type": "colocation-hub", "facility.operator": "Digital Realty", "rtt.operator_scores": { "FAC": "High", "GOV": "High", "CUL": "Medium", "STD": "Very High", "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "Very High", "TAX": "Medium", "RES": "High" } },
+    { "facility.id": "ercot.dfw.digital_realty_campus_3", "facility.name": "Digital Realty - Dallas Metro Campus 3", "facility.type": "colocation-hub", "facility.operator": "Digital Realty", "rtt.operator_scores": { "FAC": "High", "GOV": "High", "CUL": "Medium", "STD": "Very High", "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "Very High", "TAX": "Medium", "RES": "High" } },
+    { "facility.id": "ercot.dfw.equinix_ibx_da2", "facility.name": "Equinix - Dallas IBX DA2", "facility.type": "colocation-hub", "facility.operator": "Equinix", "rtt.operator_scores": { "FAC": "High", "GOV": "High", "CUL": "Medium", "STD": "Very High", "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "Very High", "TAX": "Medium", "RES": "High" } },
+    { "facility.id": "ercot.dfw.equinix_ibx_da3", "facility.name": "Equinix - Dallas IBX DA3", "facility.type": "colocation-hub", "facility.operator": "Equinix", "rtt.operator_scores": { "FAC": "High", "GOV": "High", "CUL": "Medium", "STD": "Very High", "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "Very High", "TAX": "Medium", "RES": "High" } },
+    { "facility.id": "ercot.dfw.qts_fort_worth_expansion", "facility.name": "QTS - Fort Worth Expansion Facility", "facility.type": "enterprise", "facility.operator": "QTS", "rtt.operator_scores": { "FAC": "High", "GOV": "High", "CUL": "Medium", "STD": "Very High", "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "High" } },
+    { "facility.id": "ercot.dfw.qts_fort_worth_cloud", "facility.name": "QTS - Fort Worth Cloud Node", "facility.type": "cloud-region", "facility.operator": "QTS", "rtt.operator_scores": { "FAC": "High", "GOV": "High", "CUL": "Medium", "STD": "Very High", "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "High" } },
+    { "facility.id": "ercot.dfw.att_fort_worth_edge", "facility.name": "AT&T - Fort Worth Edge Node", "facility.type": "edge-compute", "facility.operator": "AT&T", "rtt.operator_scores": { "FAC": "Medium", "GOV": "High", "CUL": "Medium", "STD": "High", "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "Very High", "TAX": "Medium", "RES": "High" } },
+    { "facility.id": "ercot.dfw.att_dallas_fiber_exchange", "facility.name": "AT&T - Dallas Fiber Exchange", "facility.type": "telecom-edge", "facility.operator": "AT&T", "rtt.operator_scores": { "FAC": "Medium", "GOV": "High", "CUL": "Medium", "STD": "High", "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "Very High", "TAX": "Medium", "RES": "High" } },
+    { "facility.id": "ercot.dfw.lumen_dallas_metro_edge", "facility.name": "Lumen - Dallas Metro Edge Node", "facility.type": "telecom-edge", "facility.operator": "Lumen", "rtt.operator_scores": { "FAC": "Medium", "GOV": "High", "CUL": "Medium", "STD": "High", "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "Very High", "TAX": "Medium", "RES": "High" } },
+    { "facility.id": "ercot.dfw.lumen_dallas_transport_2", "facility.name": "Lumen - Dallas Transport Hub 2", "facility.type": "telecom-edge", "facility.operator": "Lumen", "rtt.operator_scores": { "FAC": "Medium", "GOV": "High", "CUL": "Medium", "STD": "High", "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "Very High", "TAX": "Medium", "RES": "High" } },
+    { "facility.id": "ercot.dfw.regional_enterprise_dallas", "facility.name": "Regional Enterprise - Dallas Compute Hub", "facility.type": "enterprise", "facility.operator": "Regional Enterprise", "rtt.operator_scores": { "FAC": "Medium", "GOV": "Medium-High", "CUL": "Medium", "STD": "High", "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "Medium-High" } },
+    { "facility.id": "ercot.dfw.regional_enterprise_fort_worth", "facility.name": "Regional Enterprise - Fort Worth Compute Hub", "facility.type": "enterprise", "facility.operator": "Regional Enterprise", "rtt.operator_scores": { "FAC": "Medium", "GOV": "Medium-High", "CUL": "Medium", "STD": "High", "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "Medium-High" } }
+  ],
+  "lineage": {
+    "source": "https://www.triadicframeworks.org/LINEAGE/",
+    "author": "Nawder Loswin",
+    "framework": "RTT - Resonance-Time Theory",
+    "generated": "2026-08-30",
+    "version_note": "June 2026 snapshot; 17 facilities in Dallas / Fort Worth Metro cluster"
+  }
+}
