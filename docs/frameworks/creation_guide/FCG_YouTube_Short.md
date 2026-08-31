@@ -219,6 +219,164 @@ It is the **official reference** for the Imagine Series.
 
 ---
 
+Here are the answers to your seven questions so you can lock the pipeline and begin generating the 10 shorts.
+
+---
+
+## **1. Nawder Lock (Character Consistency)**  
+Use the **two provided images** as the identity reference for every short.  
+They define:
+
+- face shape  
+- eye color  
+- hair style  
+- outfit palette  
+- emotional tone  
+
+You *may* create a clean base character sheet / turnaround **only if needed for animation consistency**, but the final render must match the two reference images exactly.
+
+**Verdict:**  
+✔ Use the two images as the canonical reference  
+✔ Optional: generate a turnaround sheet for internal use  
+✘ Do not redesign Nawder
+
+---
+
+## **2. Aspect & Format (Strict Requirements)**  
+Yes — strict **9:16 vertical Shorts**, **1080×1920**, **6.0 seconds**.
+
+**Camera & lighting preferences:**
+
+- Light cinematic motion (slow pan or zoom)  
+- Medium particle density (sparks, pulses, glows)  
+- Lighting: playful, soft, Pixar‑style  
+- Triadic palette:  
+  - Cyan `#00E0FF`  
+  - Gold `#FFD75A`  
+  - Magenta `#FF4DD8`
+
+**Verdict:**  
+✔ Vertical 9:16  
+✔ 1080×1920  
+✔ Light cinematic motion  
+✔ Triadic color palette  
+✔ No harsh shadows or gritty realism
+
+---
+
+## **3. Audio (Voice + Music + SFX)**  
+Yes — please generate:
+
+- youthful, energetic, friendly VO  
+- light synth bed  
+- 3‑6‑9 chime pulses  
+- soft whooshes  
+- electric flash for metadata moment  
+- warm hum for coherence
+
+You may composite them with FFmpeg.
+
+**Verdict:**  
+✔ Generate VO  
+✔ Generate music + SFX  
+✔ Composite audio  
+✘ No external stems needed
+
+---
+
+## **4. End Tags & Overlays**  
+Use the same end tag for all 10 shorts:
+
+**End Tag (last 1 second):**  
+**“Built with the Framework Creation Guide.”**
+
+Optional second line (allowed):  
+**“Powered by TriadicFrameworks.”**
+
+**Font:**  
+- Sans‑serif, clean, rounded  
+- White text with soft cyan glow  
+- Centered  
+- No watermark except the TriadicFrameworks logo (bottom-left, 20% opacity)
+
+**Verdict:**  
+✔ Same end tag for all videos  
+✔ Clean sans‑serif font  
+✔ TriadicFrameworks logo watermark  
+✘ No additional overlays
+
+---
+
+## **5. Output Delivery**  
+Please deliver:
+
+### **Required**
+- 10 final MP4s (6 seconds each)  
+- 10 VO MP3s  
+- 10 keyframe stills (PNG)  
+- 10 production notes (one per short)
+
+### **Optional but appreciated**
+- Playlist description  
+- Thumbnail set (vertical crop of keyframe + “IMAGINE” text)
+
+**Verdict:**  
+✔ MP4s  
+✔ VO MP3s  
+✔ Keyframes  
+✔ Production notes  
+✔ Playlist description + thumbnails
+
+---
+
+## **6. Student Remix Examples**  
+Yes — please produce **two example student remixes** using the Student Remix Module.
+
+Examples should be:
+
+- simple  
+- fun  
+- based on fictional student frameworks  
+- using the same Imagine format  
+- 6 seconds each
+
+**Verdict:**  
+✔ Produce 2 remix examples
+
+---
+
+## **7. Additional Constraints / Must‑Avoids**
+
+### **Must Avoid**
+- RTT physics terminology  
+- dark, horror, or gritty tones  
+- excessive realism  
+- rapid camera shakes  
+- overly complex backgrounds  
+- anything that breaks the “all‑ages Pixar‑friendly” tone
+
+### **Environment Preference**
+Use **one continuous lab environment** across all 10 shorts:
+
+- Nawder’s workshop  
+- Cosmic command center  
+- Triadic holographic elements
+
+Small variations are fine (lighting, angle, props), but keep the environment consistent.
+
+**Verdict:**  
+✔ One continuous environment  
+✔ Pixar‑friendly tone  
+✔ No RTT physics  
+✔ No gritty realism
+
+---
+
+# 🎉 **Ready for Production**  
+With these answers, you can lock the Nawder asset, finalize the pipeline, and begin generating the 10 Imagine shorts + 2 student remix examples.
+
+---
+
 We’re seeing the next layer:
 
 > **The Imagine Series shouldn’t just *teach* the FCG — it should *unlock* students so they can make their own “Imagine…” shorts about the frameworks *they* built.**
