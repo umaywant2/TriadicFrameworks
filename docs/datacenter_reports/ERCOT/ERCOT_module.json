@@ -1,0 +1,176 @@
+{
+  "module.id": "ercot.territory",
+  "module.version": "1.0.0",
+  "module.category": "datacenter-analysis",
+  "module.summary": "RTT-Inside drift-bounded territory manifest for ERCOT — the independent Texas grid. Covers 77 facilities across 8 clusters: Abilene/Milam, Shackelford, Dallas/Fort Worth, Austin, San Antonio, Houston, Temple/Hutto/Taylor, and Hale County.",
+  "module.role": "territory-index",
+  "module.analyzer_layer": "dimensional",
+  "ai.module": {
+    "schema": "schemas/tensor_export.schema.json",
+    "description": "Territory-level module manifest for the ERCOT interconnection. Indexes all 8 cluster-level module.json files, defines territory-wide RTT envelope, cluster mapping, and navigation pointers for AI and human readers."
+  },
+  "ai.tensors": {
+    "registry": "docs/datacenter_reports/tensor_registry.py",
+    "keys": [
+      "planetary_substrate_tensor",
+      "dimensional_fatigue_tensor",
+      "qcompute_resonance_matrix",
+      "multi_site_tensor"
+    ]
+  },
+  "ai.navigation": {
+    "front_door": "docs/datacenter_reports/README.md",
+    "regional_index": "docs/datacenter_reports/REGIONAL_INDEX.md",
+    "template": "docs/datacenter_reports/_TEMPLATE_Datacenter_Report.md",
+    "territory_html": "docs/datacenter_reports/ERCOT/ERCOT.html",
+    "clusters": {
+      "abilene_milam": "docs/datacenter_reports/ERCOT/abilene_milam/module.json",
+      "shackelford": "docs/datacenter_reports/ERCOT/shackelford/module.json",
+      "dallas_fort_worth": "docs/datacenter_reports/ERCOT/dallas_fort_worth/module.json",
+      "austin": "docs/datacenter_reports/ERCOT/austin/module.json",
+      "san_antonio": "docs/datacenter_reports/ERCOT/san_antonio/module.json",
+      "houston": "docs/datacenter_reports/ERCOT/houston/module.json",
+      "temple_hutto_taylor": "docs/datacenter_reports/ERCOT/temple_hutto_taylor/module.json",
+      "hale_county": "docs/datacenter_reports/ERCOT/hale_county/module.json"
+    }
+  },
+  "ai.session_context": {
+    "file": "docs/datacenter_reports/session_context.md",
+    "mode": "drift-bounded",
+    "coherence": "triadic-operator-dimensional",
+    "audience": "students-operators-ai"
+  },
+  "ai.visual_identity": {
+    "hero_prompt": "A wide 1080x600 hero image for the ERCOT territory module. Visual identity: deep black to amber-gold gradient suggesting Texas energy landscape, subtle triadic glyphs, faint transmission tower silhouettes, and a geometric grid mapping eight cluster nodes. No logos, no text, no representational imagery. Style: abstract, high-clarity, RTT-Inside, structural, dimensional."
+  },
+  "territory": {
+    "territory.id": "ercot",
+    "territory.name": "ERCOT — Electric Reliability Council of Texas",
+    "territory.grid": "ERCOT (Independent Texas Grid)",
+    "territory.state": "Texas",
+    "territory.country": "United States",
+    "territory.density": "Explosive hyperscale growth; hundreds of facilities planned or under construction",
+    "territory.rtt_envelope": "L0-L3 (hyperscale, enterprise, edge, energy-adjacent)",
+    "territory.facility_count": 77,
+    "territory.cluster_count": 8,
+    "territory.snapshot": "June 2026"
+  },
+  "cluster_mapping": [
+    {
+      "cluster.id": "ercot.abilene_milam",
+      "cluster.name": "Abilene / Milam County",
+      "cluster.type": "Hyperscale AI supercluster",
+      "cluster.facility_count": 11,
+      "cluster.primary_operators": ["OpenAI", "Oracle", "Regional Hyperscale Developers"],
+      "cluster.notes": "One of the largest AI-focused builds in the world; extreme energy adjacency; anchored by OpenAI Stargate.",
+      "cluster.module": "docs/datacenter_reports/ERCOT/abilene_milam/module.json"
+    },
+    {
+      "cluster.id": "ercot.shackelford",
+      "cluster.name": "Shackelford County",
+      "cluster.type": "Hyperscale expansion zone",
+      "cluster.facility_count": 9,
+      "cluster.primary_operators": ["Vantage", "Regional Hyperscale Developers"],
+      "cluster.notes": "High land availability; strong transmission adjacency; Vantage-anchored hyperscale expansion.",
+      "cluster.module": "docs/datacenter_reports/ERCOT/shackelford/module.json"
+    },
+    {
+      "cluster.id": "ercot.dallas_fort_worth",
+      "cluster.name": "Dallas / Fort Worth Metro",
+      "cluster.type": "Colocation + enterprise + cloud",
+      "cluster.facility_count": 17,
+      "cluster.primary_operators": ["Digital Realty", "Equinix", "QTS", "AT&T", "Lumen"],
+      "cluster.notes": "Major interconnection hub; dense metro fiber routes; most mature colocation ecosystem in ERCOT.",
+      "cluster.module": "docs/datacenter_reports/ERCOT/dallas_fort_worth/module.json"
+    },
+    {
+      "cluster.id": "ercot.austin",
+      "cluster.name": "Austin Metro",
+      "cluster.type": "Cloud + enterprise",
+      "cluster.facility_count": 11,
+      "cluster.primary_operators": ["Oracle", "Meta", "Microsoft", "Switch"],
+      "cluster.notes": "Strong tech ecosystem; emerging hyperscale builds; high cultural coherence.",
+      "cluster.module": "docs/datacenter_reports/ERCOT/austin/module.json"
+    },
+    {
+      "cluster.id": "ercot.san_antonio",
+      "cluster.name": "San Antonio",
+      "cluster.type": "Enterprise + cloud",
+      "cluster.facility_count": 7,
+      "cluster.primary_operators": ["Microsoft", "Regional Enterprise", "Telecom Edge"],
+      "cluster.notes": "Stable grid adjacency; growing cloud presence; Microsoft-anchored enterprise workloads.",
+      "cluster.module": "docs/datacenter_reports/ERCOT/san_antonio/module.json"
+    },
+    {
+      "cluster.id": "ercot.houston",
+      "cluster.name": "Houston Metro",
+      "cluster.type": "Enterprise + energy-adjacent compute",
+      "cluster.facility_count": 10,
+      "cluster.primary_operators": ["AT&T", "Lumen", "Regional Enterprise", "Telecom Edge"],
+      "cluster.notes": "Strong industrial adjacency; large metro fiber footprint; energy-sector compute presence.",
+      "cluster.module": "docs/datacenter_reports/ERCOT/houston/module.json"
+    },
+    {
+      "cluster.id": "ercot.temple_hutto_taylor",
+      "cluster.name": "Temple / Hutto / Taylor",
+      "cluster.type": "Hyperscale + AI expansion",
+      "cluster.facility_count": 8,
+      "cluster.primary_operators": ["Google", "Meta", "Regional Hyperscale Developers"],
+      "cluster.notes": "Rapid land development; strong transmission corridors; Google and Meta hyperscale expansion zone.",
+      "cluster.module": "docs/datacenter_reports/ERCOT/temple_hutto_taylor/module.json"
+    },
+    {
+      "cluster.id": "ercot.hale_county",
+      "cluster.name": "Hale County",
+      "cluster.type": "Energy-adjacent compute",
+      "cluster.facility_count": 4,
+      "cluster.primary_operators": ["Regional Enterprise", "Hyperscale Developers"],
+      "cluster.notes": "Proximity to wind generation; large land availability; emerging compute cluster.",
+      "cluster.module": "docs/datacenter_reports/ERCOT/hale_county/module.json"
+    }
+  ],
+  "rtt.territory_envelopes": {
+    "dominant_drift": "Very High (hyperscale frontier)",
+    "dominant_coherence": "Medium-High (grid-independent, multi-cluster)",
+    "clusters": {
+      "abilene_milam": { "drift": "Very High", "coherence": "High" },
+      "shackelford": { "drift": "High", "coherence": "Medium-High" },
+      "dallas_fort_worth": { "drift": "Medium", "coherence": "High" },
+      "austin": { "drift": "Medium-High", "coherence": "High" },
+      "san_antonio": { "drift": "Medium", "coherence": "Medium-High" },
+      "houston": { "drift": "Medium", "coherence": "Medium-High" },
+      "temple_hutto_taylor": { "drift": "High", "coherence": "Medium-High" },
+      "hale_county": { "drift": "Medium", "coherence": "Medium" }
+    }
+  },
+  "rtt.facility_types": [
+    "hyperscale-ai-supercluster",
+    "hyperscale-expansion",
+    "colocation-hub",
+    "enterprise",
+    "cloud-region",
+    "edge-compute",
+    "telecom-edge",
+    "energy-adjacent-compute",
+    "wind-corridor-compute"
+  ],
+  "rtt.operator_grammar": {
+    "FAC": "Facility scale and substrate",
+    "GOV": "Governance and regulatory alignment",
+    "CUL": "Cultural and workforce factors",
+    "STD": "Standards and compliance maturity",
+    "HUM": "Human factors and safety",
+    "TRI": "Triadic alignment",
+    "PLA": "Planetary impact",
+    "INF": "Infrastructure and grid adjacency",
+    "TAX": "Incentives and economic posture",
+    "RES": "Resonance and structural clarity"
+  },
+  "lineage": {
+    "source": "https://www.triadicframeworks.org/LINEAGE/",
+    "author": "Nawder Loswin",
+    "framework": "RTT - Resonance-Time Theory",
+    "generated": "2026-08-30",
+    "version_note": "June 2026 snapshot; 77 facilities across 8 ERCOT clusters"
+  }
+}
