@@ -52,3 +52,6 @@ Hero frame is already beat D. Cutting the other five beats from the same Nawder 
 <img width="784" height="1168" alt="image" src="https://github.com/user-attachments/assets/4cc1a7ba-a34f-4053-8c3a-fb30efc522d3" />
 <img width="784" height="1168" alt="image" src="https://github.com/user-attachments/assets/1d0b1fac-b9a9-443c-b20d-15e20c7c65af" />
 <img width="784" height="1168" alt="image" src="https://github.com/user-attachments/assets/c7d49506-41d5-4930-a3e4-b26d9f4d5fba" />
+
+---
+
