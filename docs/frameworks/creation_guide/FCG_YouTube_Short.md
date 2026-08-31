@@ -3,7 +3,7 @@
 
 ---
 
-https://www.youtube.com/playlist?list=PLdJ7PcCVbyUE
+<div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/6Z0AklQbP8U?list=PLdJ7PcCVbyUE&pp=sAgC&autoplay=1&mute=1&loop=1" title="TriadicFrameworks FCG Playlist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 > Ref: URL and example images attached [https://docs.triadicframeworks.org/docs/frameworks/creation_guide](https://docs.triadicframeworks.org/docs/frameworks/creation_guide)
 > Ref: [artifacts](artifacts/FCG_Imagine_Series_Production_Bible.md)
