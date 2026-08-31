@@ -1,0 +1,190 @@
+{
+  "module.id": "ercot.houston",
+  "module.version": "1.0.0",
+  "module.category": "datacenter-analysis",
+  "module.summary": "RTT-Inside drift-bounded structural report for ERCOT Houston Metro cluster — an enterprise and energy-adjacent compute hub with strong industrial adjacency, large metro fiber footprint, and telecom-anchored presence.",
+  "module.role": "cluster-report",
+  "module.analyzer_layer": "dimensional",
+  "ai.module": {
+    "schema": "schemas/tensor_export.schema.json",
+    "description": "Cluster-level module manifest for ERCOT Houston Metro. Covers 10 facilities including AT&T metro nodes, Lumen transport hubs, regional enterprise industrial compute, and telecom fiber exchange. Includes RTT operator scores, drift/coherence envelopes, facility list, and navigation pointers."
+  },
+  "ai.tensors": {
+    "registry": "docs/datacenter_reports/tensor_registry.py",
+    "keys": [
+      "planetary_substrate_tensor",
+      "dimensional_fatigue_tensor",
+      "qcompute_resonance_matrix",
+      "multi_site_tensor"
+    ]
+  },
+  "ai.navigation": {
+    "territory": "docs/datacenter_reports/ERCOT/ERCOT_module.json",
+    "cluster_index": "docs/datacenter_reports/ERCOT/ERCOT_module.json#cluster_mapping",
+    "prev_cluster": "docs/datacenter_reports/ERCOT/san_antonio/module.json",
+    "next_cluster": "docs/datacenter_reports/ERCOT/temple_hutto_taylor/module.json",
+    "front_door": "docs/datacenter_reports/README.md",
+    "regional_index": "docs/datacenter_reports/REGIONAL_INDEX.md",
+    "template": "docs/datacenter_reports/_TEMPLATE_Datacenter_Report.md",
+    "territory_html": "docs/datacenter_reports/ERCOT/ERCOT.html"
+  },
+  "ai.session_context": {
+    "file": "docs/datacenter_reports/session_context.md",
+    "mode": "drift-bounded",
+    "coherence": "triadic-operator-dimensional",
+    "audience": "students-operators-ai"
+  },
+  "cluster_mapping": {
+    "cluster.id": "ercot.houston",
+    "cluster.name": "Houston Metro",
+    "cluster.region": "ERCOT",
+    "cluster.state": "Texas",
+    "cluster.country": "United States",
+    "cluster.type": "Enterprise + energy-adjacent compute",
+    "cluster.primary_operators": ["AT&T", "Lumen", "Regional Enterprise", "Telecom Edge"],
+    "cluster.notes": "Strong industrial adjacency; large metro fiber footprint; energy-sector compute presence; incremental compute growth driven by industrial corridor."
+  },
+  "rtt.envelopes": {
+    "drift": "Medium",
+    "drift.description": "Industrial adjacency drives incremental compute growth; measured expansion pace.",
+    "coherence": "Medium-High",
+    "coherence.description": "Strong metro fiber, stable enterprise and telecom presence; industrial sector grounding."
+  },
+  "rtt.facility_types": [
+    "enterprise",
+    "energy-adjacent-compute",
+    "telecom-edge",
+    "edge-compute"
+  ],
+  "rtt.operator_scores": {
+    "FAC": "Medium-High",
+    "GOV": "Medium",
+    "CUL": "Medium",
+    "STD": "High",
+    "HUM": "Medium",
+    "TRI": "Medium",
+    "PLA": "Medium",
+    "INF": "High",
+    "TAX": "Medium",
+    "RES": "Medium-High"
+  },
+  "facilities": [
+    {
+      "facility.id": "ercot.houston.att_metro_facility_1",
+      "facility.name": "AT&T - Houston Metro Facility",
+      "facility.type": "enterprise",
+      "facility.operator": "AT&T",
+      "facility.description": "Primary AT&T enterprise and energy-adjacent compute facility in Houston Metro.",
+      "rtt.operator_scores": {
+        "FAC": "Medium-High", "GOV": "Medium", "CUL": "Medium", "STD": "High",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "Medium-High"
+      }
+    },
+    {
+      "facility.id": "ercot.houston.lumen_transport_1",
+      "facility.name": "Lumen - Houston Transport Node",
+      "facility.type": "telecom-edge",
+      "facility.operator": "Lumen",
+      "facility.description": "Primary Lumen transport hub in Houston; industrial adjacency and metro fiber backbone.",
+      "rtt.operator_scores": {
+        "FAC": "Medium", "GOV": "Medium", "CUL": "Medium", "STD": "High",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "Medium-High"
+      }
+    },
+    {
+      "facility.id": "ercot.houston.regional_enterprise_compute",
+      "facility.name": "Regional Enterprise - Houston Compute Node",
+      "facility.type": "enterprise",
+      "facility.operator": "Regional Enterprise",
+      "facility.description": "Enterprise workloads in Houston industrial corridor; mixed compute for energy-adjacent customers.",
+      "rtt.operator_scores": {
+        "FAC": "Medium", "GOV": "Medium", "CUL": "Medium", "STD": "High",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "Medium"
+      }
+    },
+    {
+      "facility.id": "ercot.houston.att_metro_node_2",
+      "facility.name": "AT&T - Houston Metro Node 2",
+      "facility.type": "edge-compute",
+      "facility.operator": "AT&T",
+      "facility.description": "Second AT&T metro compute node in Houston; expanded edge and enterprise coverage.",
+      "rtt.operator_scores": {
+        "FAC": "Medium", "GOV": "Medium", "CUL": "Medium", "STD": "High",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "Medium-High"
+      }
+    },
+    {
+      "facility.id": "ercot.houston.att_metro_node_3",
+      "facility.name": "AT&T - Houston Metro Node 3",
+      "facility.type": "edge-compute",
+      "facility.operator": "AT&T",
+      "facility.description": "Third AT&T metro node in Houston; redundant edge compute and metro fiber coverage.",
+      "rtt.operator_scores": {
+        "FAC": "Medium", "GOV": "Medium", "CUL": "Medium", "STD": "High",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "Medium-High"
+      }
+    },
+    {
+      "facility.id": "ercot.houston.lumen_transport_2",
+      "facility.name": "Lumen - Houston Transport Node 2",
+      "facility.type": "telecom-edge",
+      "facility.operator": "Lumen",
+      "facility.description": "Second Lumen transport hub in Houston; redundant transport and distributed edge compute.",
+      "rtt.operator_scores": {
+        "FAC": "Medium", "GOV": "Medium", "CUL": "Medium", "STD": "High",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "Medium-High"
+      }
+    },
+    {
+      "facility.id": "ercot.houston.lumen_transport_3",
+      "facility.name": "Lumen - Houston Transport Node 3",
+      "facility.type": "telecom-edge",
+      "facility.operator": "Lumen",
+      "facility.description": "Third Lumen transport node in Houston; extended metro fiber and edge compute capacity.",
+      "rtt.operator_scores": {
+        "FAC": "Medium", "GOV": "Medium", "CUL": "Medium", "STD": "High",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "Medium-High"
+      }
+    },
+    {
+      "facility.id": "ercot.houston.regional_enterprise_industrial_hub",
+      "facility.name": "Regional Enterprise - Houston Industrial Compute Hub",
+      "facility.type": "energy-adjacent-compute",
+      "facility.operator": "Regional Enterprise",
+      "facility.description": "Large-scale industrial compute hub in Houston energy corridor; serves energy-sector and enterprise customers.",
+      "rtt.operator_scores": {
+        "FAC": "Medium-High", "GOV": "Medium", "CUL": "Medium", "STD": "High",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "Medium"
+      }
+    },
+    {
+      "facility.id": "ercot.houston.regional_enterprise_metro_cloud",
+      "facility.name": "Regional Enterprise - Houston Metro Cloud Node",
+      "facility.type": "enterprise",
+      "facility.operator": "Regional Enterprise",
+      "facility.description": "Regional enterprise cloud node in Houston Metro; enterprise cloud-on-ramp and managed services.",
+      "rtt.operator_scores": {
+        "FAC": "Medium", "GOV": "Medium", "CUL": "Medium", "STD": "High",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "Medium"
+      }
+    },
+    {
+      "facility.id": "ercot.houston.telecom_edge_fiber_exchange",
+      "facility.name": "Telecom Edge - Houston Fiber Exchange",
+      "facility.type": "telecom-edge",
+      "facility.operator": "Telecom Edge Operator",
+      "facility.description": "Houston metro fiber exchange and aggregation point; backbone for industrial and enterprise metro connectivity.",
+      "rtt.operator_scores": {
+        "FAC": "Medium", "GOV": "Medium", "CUL": "Medium", "STD": "High",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "Medium-High"
+      }
+    }
+  ],
+  "lineage": {
+    "source": "https://www.triadicframeworks.org/LINEAGE/",
+    "author": "Nawder Loswin",
+    "framework": "RTT - Resonance-Time Theory",
+    "generated": "2026-08-30",
+    "version_note": "June 2026 snapshot; 10 facilities in Houston Metro cluster"
+  }
+}

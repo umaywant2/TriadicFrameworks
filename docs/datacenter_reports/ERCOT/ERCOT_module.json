@@ -50,7 +50,11 @@
     "territory.state": "Texas",
     "territory.country": "United States",
     "territory.density": "Explosive hyperscale growth; hundreds of facilities planned or under construction",
+<<<<<<< HEAD
     "territory.rtt_envelope": "L0–L3 (hyperscale, enterprise, edge, energy-adjacent)",
+=======
+    "territory.rtt_envelope": "L0-L3 (hyperscale, enterprise, edge, energy-adjacent)",
+>>>>>>> cf7729790d503e47e87947b3af22c0b4d3b840cd
     "territory.facility_count": 77,
     "territory.cluster_count": 8,
     "territory.snapshot": "June 2026"
@@ -131,6 +135,7 @@
   ],
   "rtt.territory_envelopes": {
     "dominant_drift": "Very High (hyperscale frontier)",
+<<<<<<< HEAD
     "dominant_coherence": "Medium–High (grid-independent, multi-cluster)",
     "clusters": {
       "abilene_milam": { "drift": "Very High", "coherence": "High" },
@@ -140,6 +145,17 @@
       "san_antonio": { "drift": "Medium", "coherence": "Medium–High" },
       "houston": { "drift": "Medium", "coherence": "Medium–High" },
       "temple_hutto_taylor": { "drift": "High", "coherence": "Medium–High" },
+=======
+    "dominant_coherence": "Medium-High (grid-independent, multi-cluster)",
+    "clusters": {
+      "abilene_milam": { "drift": "Very High", "coherence": "High" },
+      "shackelford": { "drift": "High", "coherence": "Medium-High" },
+      "dallas_fort_worth": { "drift": "Medium", "coherence": "High" },
+      "austin": { "drift": "Medium-High", "coherence": "High" },
+      "san_antonio": { "drift": "Medium", "coherence": "Medium-High" },
+      "houston": { "drift": "Medium", "coherence": "Medium-High" },
+      "temple_hutto_taylor": { "drift": "High", "coherence": "Medium-High" },
+>>>>>>> cf7729790d503e47e87947b3af22c0b4d3b840cd
       "hale_county": { "drift": "Medium", "coherence": "Medium" }
     }
   },
@@ -169,7 +185,11 @@
   "lineage": {
     "source": "https://www.triadicframeworks.org/LINEAGE/",
     "author": "Nawder Loswin",
+<<<<<<< HEAD
     "framework": "RTT — Resonance-Time Theory",
+=======
+    "framework": "RTT - Resonance-Time Theory",
+>>>>>>> cf7729790d503e47e87947b3af22c0b4d3b840cd
     "generated": "2026-08-30",
     "version_note": "June 2026 snapshot; 77 facilities across 8 ERCOT clusters"
   }

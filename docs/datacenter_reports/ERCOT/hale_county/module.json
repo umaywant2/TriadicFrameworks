@@ -1,0 +1,123 @@
+{
+  "module.id": "ercot.hale_county",
+  "module.version": "1.0.0",
+  "module.category": "datacenter-analysis",
+  "module.summary": "RTT-Inside drift-bounded structural report for ERCOT Hale County cluster - an emerging energy-adjacent compute zone with proximity to West Texas wind generation, large land availability, and developing infrastructure.",
+  "module.role": "cluster-report",
+  "module.analyzer_layer": "dimensional",
+  "ai.module": {
+    "schema": "schemas/tensor_export.schema.json",
+    "description": "Cluster-level module manifest for ERCOT Hale County. Covers 4 facilities including energy-adjacent datacenters, regional enterprise compute, and a wind corridor compute node. Includes RTT operator scores, drift/coherence envelopes, facility list, and navigation pointers."
+  },
+  "ai.tensors": {
+    "registry": "docs/datacenter_reports/tensor_registry.py",
+    "keys": [
+      "planetary_substrate_tensor",
+      "dimensional_fatigue_tensor",
+      "qcompute_resonance_matrix",
+      "multi_site_tensor"
+    ]
+  },
+  "ai.navigation": {
+    "territory": "docs/datacenter_reports/ERCOT/ERCOT_module.json",
+    "cluster_index": "docs/datacenter_reports/ERCOT/ERCOT_module.json#cluster_mapping",
+    "prev_cluster": "docs/datacenter_reports/ERCOT/temple_hutto_taylor/module.json",
+    "next_cluster": null,
+    "front_door": "docs/datacenter_reports/README.md",
+    "regional_index": "docs/datacenter_reports/REGIONAL_INDEX.md",
+    "template": "docs/datacenter_reports/_TEMPLATE_Datacenter_Report.md",
+    "territory_html": "docs/datacenter_reports/ERCOT/ERCOT.html"
+  },
+  "ai.session_context": {
+    "file": "docs/datacenter_reports/session_context.md",
+    "mode": "drift-bounded",
+    "coherence": "triadic-operator-dimensional",
+    "audience": "students-operators-ai"
+  },
+  "cluster_mapping": {
+    "cluster.id": "ercot.hale_county",
+    "cluster.name": "Hale County",
+    "cluster.region": "ERCOT",
+    "cluster.state": "Texas",
+    "cluster.country": "United States",
+    "cluster.type": "Energy-adjacent compute",
+    "cluster.primary_operators": ["Regional Enterprise", "Hyperscale Developers", "Wind Corridor Operators"],
+    "cluster.notes": "Proximity to West Texas wind generation; large land availability; emerging compute cluster; potential for higher coherence as infrastructure matures."
+  },
+  "rtt.envelopes": {
+    "drift": "Medium",
+    "drift.description": "Emerging energy-adjacent compute; wind corridor variability; developing land and transmission buildout.",
+    "coherence": "Medium",
+    "coherence.description": "Developing infrastructure; potential for higher coherence over time as operator density increases."
+  },
+  "rtt.facility_types": [
+    "energy-adjacent-compute",
+    "wind-corridor-compute",
+    "enterprise"
+  ],
+  "rtt.operator_scores": {
+    "FAC": "Medium",
+    "GOV": "Medium",
+    "CUL": "Low-Medium",
+    "STD": "Medium",
+    "HUM": "Medium",
+    "TRI": "Medium",
+    "PLA": "Medium",
+    "INF": "Medium-High",
+    "TAX": "Medium-High",
+    "RES": "Medium"
+  },
+  "facilities": [
+    {
+      "facility.id": "ercot.hale_county.energy_adjacent_node_a",
+      "facility.name": "Energy-Adjacent Datacenter - Hale County Node A",
+      "facility.type": "energy-adjacent-compute",
+      "facility.operator": "Energy-Adjacent Operator",
+      "facility.description": "Primary energy-adjacent datacenter in Hale County; proximity to West Texas wind generation and transmission corridors.",
+      "rtt.operator_scores": {
+        "FAC": "Medium", "GOV": "Medium", "CUL": "Low-Medium", "STD": "Medium",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "Medium-High", "RES": "Medium"
+      }
+    },
+    {
+      "facility.id": "ercot.hale_county.energy_adjacent_node_b",
+      "facility.name": "Energy-Adjacent Datacenter - Hale County Node B",
+      "facility.type": "energy-adjacent-compute",
+      "facility.operator": "Energy-Adjacent Operator",
+      "facility.description": "Secondary energy-adjacent datacenter in Hale County; additional compute capacity co-located with renewable energy infrastructure.",
+      "rtt.operator_scores": {
+        "FAC": "Medium", "GOV": "Medium", "CUL": "Low-Medium", "STD": "Medium",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "Medium-High", "RES": "Medium"
+      }
+    },
+    {
+      "facility.id": "ercot.hale_county.regional_enterprise_compute_hub",
+      "facility.name": "Regional Enterprise - Hale County Compute Hub",
+      "facility.type": "enterprise",
+      "facility.operator": "Regional Enterprise",
+      "facility.description": "Regional enterprise compute hub serving Hale County and surrounding Panhandle area.",
+      "rtt.operator_scores": {
+        "FAC": "Medium", "GOV": "Medium", "CUL": "Medium", "STD": "Medium",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "Medium-High", "TAX": "Medium-High", "RES": "Medium"
+      }
+    },
+    {
+      "facility.id": "ercot.hale_county.wind_corridor_compute",
+      "facility.name": "Wind Corridor Compute - Hale County Node",
+      "facility.type": "wind-corridor-compute",
+      "facility.operator": "Wind Corridor Operator",
+      "facility.description": "Purpose-built compute facility optimized for West Texas wind corridor variability; renewable-first energy posture.",
+      "rtt.operator_scores": {
+        "FAC": "Medium", "GOV": "Medium", "CUL": "Low-Medium", "STD": "Medium",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium-High", "INF": "Very High", "TAX": "Medium-High", "RES": "Medium"
+      }
+    }
+  ],
+  "lineage": {
+    "source": "https://www.triadicframeworks.org/LINEAGE/",
+    "author": "Nawder Loswin",
+    "framework": "RTT - Resonance-Time Theory",
+    "generated": "2026-08-30",
+    "version_note": "June 2026 snapshot; 4 facilities in Hale County cluster"
+  }
+}
