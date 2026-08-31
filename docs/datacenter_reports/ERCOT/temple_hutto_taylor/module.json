@@ -1,0 +1,168 @@
+{
+  "module.id": "ercot.temple_hutto_taylor",
+  "module.version": "1.0.0",
+  "module.category": "datacenter-analysis",
+  "module.summary": "RTT-Inside drift-bounded structural report for ERCOT Temple / Hutto / Taylor cluster - a rapidly expanding hyperscale and AI expansion zone anchored by Google and Meta, with aggressive land development and strong transmission corridors.",
+  "module.role": "cluster-report",
+  "module.analyzer_layer": "dimensional",
+  "ai.module": {
+    "schema": "schemas/tensor_export.schema.json",
+    "description": "Cluster-level module manifest for ERCOT Temple / Hutto / Taylor. Covers 8 facilities including Google expansion nodes, Meta Taylor hyperscale builds, regional hyperscale developers, and an energy-adjacent transmission node. Includes RTT operator scores, drift/coherence envelopes, facility list, and navigation pointers."
+  },
+  "ai.tensors": {
+    "registry": "docs/datacenter_reports/tensor_registry.py",
+    "keys": [
+      "planetary_substrate_tensor",
+      "dimensional_fatigue_tensor",
+      "qcompute_resonance_matrix",
+      "multi_site_tensor"
+    ]
+  },
+  "ai.navigation": {
+    "territory": "docs/datacenter_reports/ERCOT/ERCOT_module.json",
+    "cluster_index": "docs/datacenter_reports/ERCOT/ERCOT_module.json#cluster_mapping",
+    "prev_cluster": "docs/datacenter_reports/ERCOT/houston/module.json",
+    "next_cluster": "docs/datacenter_reports/ERCOT/hale_county/module.json",
+    "front_door": "docs/datacenter_reports/README.md",
+    "regional_index": "docs/datacenter_reports/REGIONAL_INDEX.md",
+    "template": "docs/datacenter_reports/_TEMPLATE_Datacenter_Report.md",
+    "territory_html": "docs/datacenter_reports/ERCOT/ERCOT.html"
+  },
+  "ai.session_context": {
+    "file": "docs/datacenter_reports/session_context.md",
+    "mode": "drift-bounded",
+    "coherence": "triadic-operator-dimensional",
+    "audience": "students-operators-ai"
+  },
+  "cluster_mapping": {
+    "cluster.id": "ercot.temple_hutto_taylor",
+    "cluster.name": "Temple / Hutto / Taylor",
+    "cluster.region": "ERCOT",
+    "cluster.state": "Texas",
+    "cluster.country": "United States",
+    "cluster.type": "Hyperscale + AI expansion",
+    "cluster.primary_operators": ["Google", "Meta", "Regional Hyperscale Developers"],
+    "cluster.notes": "Rapid land development; strong transmission corridors; Google and Meta anchor emerging hyperscale alignment; aggressive AI expansion zone between Austin and Waco."
+  },
+  "rtt.envelopes": {
+    "drift": "High",
+    "drift.description": "Rapid hyperscale and AI expansion; aggressive land development; transmission corridor buildouts.",
+    "coherence": "Medium-High",
+    "coherence.description": "Strong transmission corridors; emerging hyperscale alignment; maturing infrastructure fabric."
+  },
+  "rtt.facility_types": [
+    "hyperscale-expansion",
+    "cloud-region",
+    "ai-infrastructure",
+    "energy-adjacent-compute"
+  ],
+  "rtt.operator_scores": {
+    "FAC": "High",
+    "GOV": "Medium",
+    "CUL": "Medium",
+    "STD": "High",
+    "HUM": "Medium",
+    "TRI": "Medium-High",
+    "PLA": "Medium",
+    "INF": "High",
+    "TAX": "Medium-High",
+    "RES": "Medium-High"
+  },
+  "facilities": [
+    {
+      "facility.id": "ercot.tht.google_temple_hutto_taylor_expansion_1",
+      "facility.name": "Google - Temple/Hutto/Taylor Expansion Node",
+      "facility.type": "hyperscale-expansion",
+      "facility.operator": "Google",
+      "facility.description": "Primary Google emerging hyperscale and AI expansion node in the Temple/Hutto/Taylor corridor.",
+      "rtt.operator_scores": {
+        "FAC": "High", "GOV": "Medium", "CUL": "Medium", "STD": "High",
+        "HUM": "Medium", "TRI": "Medium-High", "PLA": "Medium", "INF": "High", "TAX": "Medium-High", "RES": "Medium-High"
+      }
+    },
+    {
+      "facility.id": "ercot.tht.google_temple_expansion_2",
+      "facility.name": "Google - Temple Expansion Node 2",
+      "facility.type": "hyperscale-expansion",
+      "facility.operator": "Google",
+      "facility.description": "Second Google expansion node in Temple; scaled hyperscale buildout for cloud and AI workloads.",
+      "rtt.operator_scores": {
+        "FAC": "High", "GOV": "Medium", "CUL": "Medium", "STD": "High",
+        "HUM": "Medium", "TRI": "Medium-High", "PLA": "Medium", "INF": "High", "TAX": "Medium-High", "RES": "Medium-High"
+      }
+    },
+    {
+      "facility.id": "ercot.tht.google_hutto_expansion_3",
+      "facility.name": "Google - Hutto Expansion Node 3",
+      "facility.type": "hyperscale-expansion",
+      "facility.operator": "Google",
+      "facility.description": "Third Google expansion node in Hutto; extended hyperscale footprint in the I-35 corridor.",
+      "rtt.operator_scores": {
+        "FAC": "High", "GOV": "Medium", "CUL": "Medium", "STD": "High",
+        "HUM": "Medium", "TRI": "Medium-High", "PLA": "Medium", "INF": "High", "TAX": "Medium-High", "RES": "Medium-High"
+      }
+    },
+    {
+      "facility.id": "ercot.tht.meta_taylor_hyperscale_a",
+      "facility.name": "Meta - Taylor Hyperscale Build A",
+      "facility.type": "hyperscale-expansion",
+      "facility.operator": "Meta",
+      "facility.description": "First Meta hyperscale build in Taylor; large-scale AI-adjacent data center construction.",
+      "rtt.operator_scores": {
+        "FAC": "High", "GOV": "Medium", "CUL": "Medium", "STD": "High",
+        "HUM": "Medium", "TRI": "Medium-High", "PLA": "Medium", "INF": "High", "TAX": "Medium-High", "RES": "High"
+      }
+    },
+    {
+      "facility.id": "ercot.tht.meta_taylor_hyperscale_b",
+      "facility.name": "Meta - Taylor Hyperscale Build B",
+      "facility.type": "hyperscale-expansion",
+      "facility.operator": "Meta",
+      "facility.description": "Second Meta hyperscale build in Taylor; continued large-scale AI infrastructure expansion.",
+      "rtt.operator_scores": {
+        "FAC": "High", "GOV": "Medium", "CUL": "Medium", "STD": "High",
+        "HUM": "Medium", "TRI": "Medium-High", "PLA": "Medium", "INF": "High", "TAX": "Medium-High", "RES": "High"
+      }
+    },
+    {
+      "facility.id": "ercot.tht.regional_temple_node_a",
+      "facility.name": "Regional Hyperscale Developer - Temple Node A",
+      "facility.type": "hyperscale-expansion",
+      "facility.operator": "Regional Hyperscale Developer",
+      "facility.description": "First regional hyperscale developer node in Temple; capitalizing on corridor transmission access.",
+      "rtt.operator_scores": {
+        "FAC": "Medium-High", "GOV": "Medium", "CUL": "Medium", "STD": "Medium-High",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "Medium-High", "RES": "Medium"
+      }
+    },
+    {
+      "facility.id": "ercot.tht.regional_temple_node_b",
+      "facility.name": "Regional Hyperscale Developer - Temple Node B",
+      "facility.type": "hyperscale-expansion",
+      "facility.operator": "Regional Hyperscale Developer",
+      "facility.description": "Second regional hyperscale developer node in Temple; expanded land-rich development.",
+      "rtt.operator_scores": {
+        "FAC": "Medium-High", "GOV": "Medium", "CUL": "Medium", "STD": "Medium-High",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "Medium-High", "RES": "Medium"
+      }
+    },
+    {
+      "facility.id": "ercot.tht.energy_adjacent_temple_transmission",
+      "facility.name": "Energy-Adjacent Compute - Temple Transmission Node",
+      "facility.type": "energy-adjacent-compute",
+      "facility.operator": "Energy-Adjacent Operator",
+      "facility.description": "Compute facility co-located with Temple-area transmission infrastructure; extreme grid adjacency for energy-adjacent workloads.",
+      "rtt.operator_scores": {
+        "FAC": "Medium-High", "GOV": "Medium", "CUL": "Low-Medium", "STD": "Medium",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Low-Medium", "INF": "Very High", "TAX": "High", "RES": "Medium"
+      }
+    }
+  ],
+  "lineage": {
+    "source": "https://www.triadicframeworks.org/LINEAGE/",
+    "author": "Nawder Loswin",
+    "framework": "RTT - Resonance-Time Theory",
+    "generated": "2026-08-30",
+    "version_note": "June 2026 snapshot; 8 facilities in Temple / Hutto / Taylor cluster"
+  }
+}
