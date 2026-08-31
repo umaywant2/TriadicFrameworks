@@ -4,6 +4,7 @@
 ---
 
 > Ref: URL and example images attached [https://docs.triadicframeworks.org/docs/frameworks/creation_guide](https://docs.triadicframeworks.org/docs/frameworks/creation_guide)
+> Ref: [artifacts](artifacts/FCG_Imagine_Series_Production_Bible.md)
 > 
 > <img width="646" height="362" alt="9008c5f9-61cb-4436-b030-52d37b99b9e5" src="https://github.com/user-attachments/assets/f298196c-71fc-49c5-9b54-eb9d9784acfd" />
 > <img width="599" height="553" alt="7330bc12-b46b-4550-be1b-b8179cea657d" src="https://github.com/user-attachments/assets/5ac41bc1-4e6b-4085-a19e-862e20961b9e" />
