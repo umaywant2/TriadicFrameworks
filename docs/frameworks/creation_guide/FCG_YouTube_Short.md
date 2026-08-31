@@ -976,3 +976,5 @@ Use your **TriadicFrameworks cyan/amber/violet palette** for consistency with yo
 
 # 🚀 Ready for Upload  
 We can paste these directly into your **Video details** tab ().
+
+**File:** [`artifacts/FCG_Imagine_Series_Production_Bible.md`](artifacts/FCG_Imagine_Series_Production_Bible.md)
