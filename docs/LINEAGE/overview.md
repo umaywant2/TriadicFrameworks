@@ -14,9 +14,11 @@ rtt:
 > rtt=1 | coherence=declared | drift=bounded | paradox=structural
 > ```
 
-> ⚠️ **Draft** — The LINEAGE README is not yet available in this directory.
-> This overview is grounded in the L-Ops definition from Framework Field Theory.
-> It will be updated when LINEAGE canonical documentation lands.
+> ⚠️ [**PRESS RELEASE**](https://www.pr.com/press-release/957074) — Dec.28th 2025
+> Resonance-Time Theory [(RTT)](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html) — Dec.15th 2025
+> [ORcID](https://orcid.org/0009-0002-2282-5460) and [DOI's](https://zenodo.org/communities/vst/about) 
+
+---
 
 ## What Is LINEAGE?
 
