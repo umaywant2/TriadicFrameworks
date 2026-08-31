@@ -1,0 +1,73 @@
+{
+  "module.id": "ercot.austin",
+  "module.version": "1.0.0",
+  "module.category": "datacenter-analysis",
+  "module.summary": "RTT-Inside drift-bounded structural report for ERCOT Austin Metro cluster - a cloud and enterprise hub with a strong tech ecosystem, anchored by Oracle, Meta, and Microsoft with emerging hyperscale expansion.",
+  "module.role": "cluster-report",
+  "module.analyzer_layer": "dimensional",
+  "ai.module": {
+    "schema": "schemas/tensor_export.schema.json",
+    "description": "Cluster-level module manifest for ERCOT Austin Metro. Covers 11 facilities including Oracle cloud campuses, Meta AI expansion nodes, Microsoft cloud compute, Switch edge facility, and regional enterprise."
+  },
+  "ai.tensors": {
+    "registry": "docs/datacenter_reports/tensor_registry.py",
+    "keys": ["planetary_substrate_tensor", "dimensional_fatigue_tensor", "qcompute_resonance_matrix", "multi_site_tensor"]
+  },
+  "ai.navigation": {
+    "territory": "docs/datacenter_reports/ERCOT/ERCOT_module.json",
+    "cluster_index": "docs/datacenter_reports/ERCOT/ERCOT_module.json#cluster_mapping",
+    "prev_cluster": "docs/datacenter_reports/ERCOT/dallas_fort_worth/module.json",
+    "next_cluster": "docs/datacenter_reports/ERCOT/san_antonio/module.json",
+    "front_door": "docs/datacenter_reports/README.md",
+    "regional_index": "docs/datacenter_reports/REGIONAL_INDEX.md",
+    "template": "docs/datacenter_reports/_TEMPLATE_Datacenter_Report.md",
+    "territory_html": "docs/datacenter_reports/ERCOT/ERCOT.html"
+  },
+  "ai.session_context": {
+    "file": "docs/datacenter_reports/session_context.md",
+    "mode": "drift-bounded",
+    "coherence": "triadic-operator-dimensional",
+    "audience": "students-operators-ai"
+  },
+  "cluster_mapping": {
+    "cluster.id": "ercot.austin",
+    "cluster.name": "Austin Metro",
+    "cluster.region": "ERCOT",
+    "cluster.state": "Texas",
+    "cluster.country": "United States",
+    "cluster.type": "Cloud + enterprise",
+    "cluster.primary_operators": ["Oracle", "Meta", "Microsoft", "Switch", "Regional Enterprise"],
+    "cluster.notes": "Strong tech ecosystem; emerging hyperscale builds; high cultural coherence; consistent standards environment."
+  },
+  "rtt.envelopes": {
+    "drift": "Medium-High",
+    "drift.description": "Cloud region expansion; AI-adjacent builds accelerating; emerging hyperscale pressure.",
+    "coherence": "High",
+    "coherence.description": "Strong tech ecosystem, consistent standards, stable metro grid adjacency."
+  },
+  "rtt.facility_types": ["cloud-region", "hyperscale-expansion", "enterprise", "edge-compute"],
+  "rtt.operator_scores": {
+    "FAC": "High", "GOV": "Medium-High", "CUL": "High", "STD": "High",
+    "HUM": "Medium", "TRI": "Medium-High", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "High"
+  },
+  "facilities": [
+    { "facility.id": "ercot.austin.oracle_cloud_campus_1", "facility.name": "Oracle - Austin Cloud Campus", "facility.type": "cloud-region", "facility.operator": "Oracle", "facility.description": "Major Oracle cloud region presence in Austin; primary cloud campus for Central Texas.", "rtt.operator_scores": { "FAC": "High", "GOV": "Medium-High", "CUL": "High", "STD": "High", "HUM": "Medium", "TRI": "Medium-High", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "High" } },
+    { "facility.id": "ercot.austin.meta_expansion_1", "facility.name": "Meta - Austin Expansion Facility", "facility.type": "hyperscale-expansion", "facility.operator": "Meta", "facility.description": "AI-adjacent hyperscale build in Austin Metro; Meta expansion for AI and social compute workloads.", "rtt.operator_scores": { "FAC": "High", "GOV": "Medium-High", "CUL": "High", "STD": "High", "HUM": "Medium", "TRI": "Medium-High", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "High" } },
+    { "facility.id": "ercot.austin.microsoft_compute_1", "facility.name": "Microsoft - Austin Compute Node", "facility.type": "cloud-region", "facility.operator": "Microsoft", "facility.description": "Microsoft enterprise and cloud adjacency compute node in Austin Metro.", "rtt.operator_scores": { "FAC": "High", "GOV": "Medium-High", "CUL": "High", "STD": "High", "HUM": "Medium", "TRI": "Medium-High", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "High" } },
+    { "facility.id": "ercot.austin.oracle_cloud_campus_expansion_a", "facility.name": "Oracle - Austin Cloud Campus Expansion A", "facility.type": "cloud-region", "facility.operator": "Oracle", "facility.description": "First Oracle cloud campus expansion in Austin; scaled cloud region buildout.", "rtt.operator_scores": { "FAC": "High", "GOV": "Medium-High", "CUL": "High", "STD": "High", "HUM": "Medium", "TRI": "Medium-High", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "High" } },
+    { "facility.id": "ercot.austin.oracle_cloud_campus_expansion_b", "facility.name": "Oracle - Austin Cloud Campus Expansion B", "facility.type": "cloud-region", "facility.operator": "Oracle", "facility.description": "Second Oracle cloud campus expansion in Austin; additional cloud region capacity.", "rtt.operator_scores": { "FAC": "High", "GOV": "Medium-High", "CUL": "High", "STD": "High", "HUM": "Medium", "TRI": "Medium-High", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "High" } },
+    { "facility.id": "ercot.austin.meta_ai_expansion_node", "facility.name": "Meta - Austin AI Expansion Node", "facility.type": "hyperscale-expansion", "facility.operator": "Meta", "facility.description": "Dedicated Meta AI expansion node in Austin; purpose-built AI and ML training infrastructure.", "rtt.operator_scores": { "FAC": "High", "GOV": "Medium-High", "CUL": "High", "STD": "High", "HUM": "Medium", "TRI": "Medium-High", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "High" } },
+    { "facility.id": "ercot.austin.meta_hyperscale_build", "facility.name": "Meta - Austin Hyperscale Build Site", "facility.type": "hyperscale-expansion", "facility.operator": "Meta", "facility.description": "Meta hyperscale build site in Austin; large-scale data center construction for future AI capacity.", "rtt.operator_scores": { "FAC": "High", "GOV": "Medium-High", "CUL": "High", "STD": "High", "HUM": "Medium", "TRI": "Medium-High", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "High" } },
+    { "facility.id": "ercot.austin.microsoft_cloud_node_2", "facility.name": "Microsoft - Austin Cloud Node 2", "facility.type": "cloud-region", "facility.operator": "Microsoft", "facility.description": "Second Microsoft cloud node in Austin; expanded Azure footprint in Central Texas.", "rtt.operator_scores": { "FAC": "High", "GOV": "Medium-High", "CUL": "High", "STD": "High", "HUM": "Medium", "TRI": "Medium-High", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "High" } },
+    { "facility.id": "ercot.austin.microsoft_cloud_node_3", "facility.name": "Microsoft - Austin Cloud Node 3", "facility.type": "cloud-region", "facility.operator": "Microsoft", "facility.description": "Third Microsoft cloud node in Austin; redundant and expanded regional cloud capacity.", "rtt.operator_scores": { "FAC": "High", "GOV": "Medium-High", "CUL": "High", "STD": "High", "HUM": "Medium", "TRI": "Medium-High", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "High" } },
+    { "facility.id": "ercot.austin.regional_enterprise_metro_hub", "facility.name": "Regional Enterprise - Austin Metro Compute Hub", "facility.type": "enterprise", "facility.operator": "Regional Enterprise", "facility.description": "Regional enterprise compute hub in Austin Metro; mixed enterprise and managed services workloads.", "rtt.operator_scores": { "FAC": "Medium", "GOV": "Medium", "CUL": "High", "STD": "High", "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "Medium-High" } },
+    { "facility.id": "ercot.austin.switch_edge", "facility.name": "Switch - Austin Edge Facility", "facility.type": "edge-compute", "facility.operator": "Switch", "facility.description": "Switch enterprise edge compute facility in Austin; interconnection and low-latency edge services.", "rtt.operator_scores": { "FAC": "Medium-High", "GOV": "Medium-High", "CUL": "High", "STD": "High", "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "High" } }
+  ],
+  "lineage": {
+    "source": "https://www.triadicframeworks.org/LINEAGE/",
+    "author": "Nawder Loswin",
+    "framework": "RTT - Resonance-Time Theory",
+    "generated": "2026-08-30",
+    "version_note": "June 2026 snapshot; 11 facilities in Austin Metro cluster"
+  }
+}
