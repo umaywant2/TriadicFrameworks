@@ -1,0 +1,178 @@
+{
+  "module.id": "ercot.shackelford",
+  "module.version": "1.0.0",
+  "module.category": "datacenter-analysis",
+  "module.summary": "RTT-Inside drift-bounded structural report for ERCOT Shackelford County cluster — a hyperscale expansion zone anchored by Vantage with high land availability and strong transmission adjacency.",
+  "module.role": "cluster-report",
+  "module.analyzer_layer": "dimensional",
+  "ai.module": {
+    "schema": "schemas/tensor_export.schema.json",
+    "description": "Cluster-level module manifest for ERCOT Shackelford County. Covers 9 facilities including Vantage campuses, regional hyperscale developers, and energy-adjacent compute nodes. Includes RTT operator scores, drift/coherence envelopes, facility list, and navigation pointers."
+  },
+  "ai.tensors": {
+    "registry": "docs/datacenter_reports/tensor_registry.py",
+    "keys": [
+      "planetary_substrate_tensor",
+      "dimensional_fatigue_tensor",
+      "qcompute_resonance_matrix",
+      "multi_site_tensor"
+    ]
+  },
+  "ai.navigation": {
+    "territory": "docs/datacenter_reports/ERCOT/ERCOT_module.json",
+    "cluster_index": "docs/datacenter_reports/ERCOT/ERCOT_module.json#cluster_mapping",
+    "prev_cluster": "docs/datacenter_reports/ERCOT/abilene_milam/module.json",
+    "next_cluster": "docs/datacenter_reports/ERCOT/dallas_fort_worth/module.json",
+    "front_door": "docs/datacenter_reports/README.md",
+    "regional_index": "docs/datacenter_reports/REGIONAL_INDEX.md",
+    "template": "docs/datacenter_reports/_TEMPLATE_Datacenter_Report.md",
+    "territory_html": "docs/datacenter_reports/ERCOT/ERCOT.html"
+  },
+  "ai.session_context": {
+    "file": "docs/datacenter_reports/session_context.md",
+    "mode": "drift-bounded",
+    "coherence": "triadic-operator-dimensional",
+    "audience": "students-operators-ai"
+  },
+  "cluster_mapping": {
+    "cluster.id": "ercot.shackelford",
+    "cluster.name": "Shackelford County",
+    "cluster.region": "ERCOT",
+    "cluster.state": "Texas",
+    "cluster.country": "United States",
+    "cluster.type": "Hyperscale expansion zone",
+    "cluster.primary_operators": ["Vantage", "Regional Hyperscale Developers"],
+    "cluster.notes": "High land availability; strong transmission adjacency; Vantage-anchored hyperscale expansion; rapid zoning and buildout."
+  },
+  "rtt.envelopes": {
+    "drift": "High",
+    "drift.description": "Rapid hyperscale expansion; evolving zoning and transmission buildouts.",
+    "coherence": "Medium–High",
+    "coherence.description": "Consistent land availability and strong transmission corridors."
+  },
+  "rtt.facility_types": [
+    "hyperscale-expansion",
+    "energy-adjacent-compute",
+    "enterprise"
+  ],
+  "rtt.operator_scores": {
+    "FAC": "High",
+    "GOV": "Medium",
+    "CUL": "Medium",
+    "STD": "Medium–High",
+    "HUM": "Medium",
+    "TRI": "Medium",
+    "PLA": "Medium",
+    "INF": "High",
+    "TAX": "Medium",
+    "RES": "Medium–High"
+  },
+  "facilities": [
+    {
+      "facility.id": "ercot.shackelford.vantage_campus_1",
+      "facility.name": "Vantage – Shackelford County Campus",
+      "facility.type": "hyperscale-expansion",
+      "facility.operator": "Vantage",
+      "facility.description": "Primary Vantage hyperscale expansion zone in Shackelford County; strong transmission adjacency.",
+      "rtt.operator_scores": {
+        "FAC": "High", "GOV": "Medium", "CUL": "Medium", "STD": "Medium–High",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "Medium–High"
+      }
+    },
+    {
+      "facility.id": "ercot.shackelford.regional_node_a",
+      "facility.name": "Regional Hyperscale Developer – Shackelford Node A",
+      "facility.type": "hyperscale-expansion",
+      "facility.operator": "Regional Hyperscale Developer",
+      "facility.description": "Emerging hyperscale build in Shackelford County; regional developer node.",
+      "rtt.operator_scores": {
+        "FAC": "High", "GOV": "Medium", "CUL": "Medium", "STD": "Medium",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "Medium"
+      }
+    },
+    {
+      "facility.id": "ercot.shackelford.regional_node_b",
+      "facility.name": "Regional Hyperscale Developer – Shackelford Node B",
+      "facility.type": "hyperscale-expansion",
+      "facility.operator": "Regional Hyperscale Developer",
+      "facility.description": "Land-rich expansion site in Shackelford County; regional developer build.",
+      "rtt.operator_scores": {
+        "FAC": "High", "GOV": "Medium", "CUL": "Medium", "STD": "Medium",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "Medium"
+      }
+    },
+    {
+      "facility.id": "ercot.shackelford.vantage_campus_2",
+      "facility.name": "Vantage – Shackelford Expansion Campus 2",
+      "facility.type": "hyperscale-expansion",
+      "facility.operator": "Vantage",
+      "facility.description": "Second Vantage expansion campus in Shackelford County; continued hyperscale buildout.",
+      "rtt.operator_scores": {
+        "FAC": "High", "GOV": "Medium", "CUL": "Medium", "STD": "Medium–High",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "Medium–High"
+      }
+    },
+    {
+      "facility.id": "ercot.shackelford.vantage_campus_3",
+      "facility.name": "Vantage – Shackelford Expansion Campus 3",
+      "facility.type": "hyperscale-expansion",
+      "facility.operator": "Vantage",
+      "facility.description": "Third Vantage expansion campus; extended hyperscale footprint in Shackelford County.",
+      "rtt.operator_scores": {
+        "FAC": "High", "GOV": "Medium", "CUL": "Medium", "STD": "Medium–High",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "Medium–High"
+      }
+    },
+    {
+      "facility.id": "ercot.shackelford.regional_node_c",
+      "facility.name": "Regional Hyperscale Developer – Shackelford Node C",
+      "facility.type": "hyperscale-expansion",
+      "facility.operator": "Regional Hyperscale Developer",
+      "facility.description": "Third regional hyperscale node in Shackelford County expansion corridor.",
+      "rtt.operator_scores": {
+        "FAC": "High", "GOV": "Medium", "CUL": "Medium", "STD": "Medium",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "Medium"
+      }
+    },
+    {
+      "facility.id": "ercot.shackelford.regional_node_d",
+      "facility.name": "Regional Hyperscale Developer – Shackelford Node D",
+      "facility.type": "hyperscale-expansion",
+      "facility.operator": "Regional Hyperscale Developer",
+      "facility.description": "Fourth regional hyperscale node; continued land-rich expansion.",
+      "rtt.operator_scores": {
+        "FAC": "High", "GOV": "Medium", "CUL": "Medium", "STD": "Medium",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "Medium"
+      }
+    },
+    {
+      "facility.id": "ercot.shackelford.energy_adjacent_wind_corridor",
+      "facility.name": "Energy-Adjacent Compute – Shackelford Wind Corridor Node",
+      "facility.type": "energy-adjacent-compute",
+      "facility.operator": "Energy-Adjacent Operator",
+      "facility.description": "Compute facility situated along Shackelford wind corridor; extreme grid and renewables adjacency.",
+      "rtt.operator_scores": {
+        "FAC": "Medium–High", "GOV": "Medium", "CUL": "Low–Medium", "STD": "Medium",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "Very High", "TAX": "Medium", "RES": "Medium"
+      }
+    },
+    {
+      "facility.id": "ercot.shackelford.enterprise_metro_node",
+      "facility.name": "Enterprise Compute – Shackelford Metro Node",
+      "facility.type": "enterprise",
+      "facility.operator": "Enterprise Operator",
+      "facility.description": "Enterprise-scale compute node serving metro adjacency needs in Shackelford County.",
+      "rtt.operator_scores": {
+        "FAC": "Medium", "GOV": "Medium", "CUL": "Medium", "STD": "Medium–High",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "Medium–High", "TAX": "Medium", "RES": "Medium"
+      }
+    }
+  ],
+  "lineage": {
+    "source": "https://www.triadicframeworks.org/LINEAGE/",
+    "author": "Nawder Loswin",
+    "framework": "RTT — Resonance-Time Theory",
+    "generated": "2026-08-30",
+    "version_note": "June 2026 snapshot; 9 facilities in Shackelford County cluster"
+  }
+}

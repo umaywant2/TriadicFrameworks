@@ -1,0 +1,202 @@
+{
+  "module.id": "ercot.abilene_milam",
+  "module.version": "1.0.0",
+  "module.category": "datacenter-analysis",
+  "module.summary": "RTT-Inside drift-bounded structural report for ERCOT Abilene / Milam County cluster — one of the largest AI-focused hyperscale superclusters in the world, anchored by OpenAI Stargate and Oracle.",
+  "module.role": "cluster-report",
+  "module.analyzer_layer": "dimensional",
+  "ai.module": {
+    "schema": "schemas/tensor_export.schema.json",
+    "description": "Cluster-level module manifest for ERCOT Abilene / Milam County. Covers 11 facilities including OpenAI Stargate, Oracle Stargate-adjacent nodes, regional hyperscale developers, and energy-adjacent compute sites. Includes RTT operator scores, drift/coherence envelopes, facility list, and navigation pointers."
+  },
+  "ai.tensors": {
+    "registry": "docs/datacenter_reports/tensor_registry.py",
+    "keys": [
+      "planetary_substrate_tensor",
+      "dimensional_fatigue_tensor",
+      "qcompute_resonance_matrix",
+      "multi_site_tensor"
+    ]
+  },
+  "ai.navigation": {
+    "territory": "docs/datacenter_reports/ERCOT/ERCOT_module.json",
+    "cluster_index": "docs/datacenter_reports/ERCOT/ERCOT_module.json#cluster_mapping",
+    "prev_cluster": null,
+    "next_cluster": "docs/datacenter_reports/ERCOT/shackelford/module.json",
+    "front_door": "docs/datacenter_reports/README.md",
+    "regional_index": "docs/datacenter_reports/REGIONAL_INDEX.md",
+    "template": "docs/datacenter_reports/_TEMPLATE_Datacenter_Report.md",
+    "territory_html": "docs/datacenter_reports/ERCOT/ERCOT.html"
+  },
+  "ai.session_context": {
+    "file": "docs/datacenter_reports/session_context.md",
+    "mode": "drift-bounded",
+    "coherence": "triadic-operator-dimensional",
+    "audience": "students-operators-ai"
+  },
+  "cluster_mapping": {
+    "cluster.id": "ercot.abilene_milam",
+    "cluster.name": "Abilene / Milam County",
+    "cluster.region": "ERCOT",
+    "cluster.state": "Texas",
+    "cluster.country": "United States",
+    "cluster.type": "Hyperscale AI supercluster",
+    "cluster.primary_operators": ["OpenAI", "Oracle", "Regional Hyperscale Developers", "AI Infrastructure Developers"],
+    "cluster.notes": "One of the largest AI-focused builds in the world; extreme energy adjacency; anchored by OpenAI Stargate; rapid land and transmission expansion."
+  },
+  "rtt.envelopes": {
+    "drift": "Very High",
+    "drift.description": "Hyperscale AI supercluster growth; extreme land and transmission demand; ongoing site expansion.",
+    "coherence": "High",
+    "coherence.description": "Strong alignment between energy adjacency, hyperscale operators, and grid infrastructure."
+  },
+  "rtt.facility_types": [
+    "hyperscale-ai-supercluster",
+    "hyperscale-expansion",
+    "cloud-adjacency",
+    "energy-adjacent-compute",
+    "ai-infrastructure"
+  ],
+  "rtt.operator_scores": {
+    "FAC": "Very High",
+    "GOV": "Medium",
+    "CUL": "Medium",
+    "STD": "High",
+    "HUM": "Medium",
+    "TRI": "High",
+    "PLA": "Medium",
+    "INF": "Very High",
+    "TAX": "High",
+    "RES": "High"
+  },
+  "facilities": [
+    {
+      "facility.id": "ercot.abilene_milam.openai_stargate_milam",
+      "facility.name": "OpenAI Stargate – Milam County",
+      "facility.type": "hyperscale-ai-supercluster",
+      "facility.operator": "OpenAI",
+      "facility.description": "Hyperscale AI supercluster; extreme energy adjacency; one of the largest AI infrastructure builds globally.",
+      "rtt.operator_scores": {
+        "FAC": "Very High", "GOV": "Medium", "CUL": "Medium", "STD": "High",
+        "HUM": "Medium", "TRI": "High", "PLA": "Medium", "INF": "Very High", "TAX": "High", "RES": "High"
+      }
+    },
+    {
+      "facility.id": "ercot.abilene_milam.oracle_stargate_adj_a",
+      "facility.name": "Oracle – Stargate-Adjacent Facility A",
+      "facility.type": "hyperscale-expansion",
+      "facility.operator": "Oracle",
+      "facility.description": "Large-scale cloud adjacency near OpenAI Stargate; supporting AI and cloud workloads.",
+      "rtt.operator_scores": {
+        "FAC": "High", "GOV": "Medium", "CUL": "Medium", "STD": "High",
+        "HUM": "Medium", "TRI": "High", "PLA": "Medium", "INF": "Very High", "TAX": "High", "RES": "High"
+      }
+    },
+    {
+      "facility.id": "ercot.abilene_milam.oracle_stargate_adj_b",
+      "facility.name": "Oracle – Stargate-Adjacent Facility B",
+      "facility.type": "hyperscale-expansion",
+      "facility.operator": "Oracle",
+      "facility.description": "Expansion node supporting AI workloads; cloud infrastructure adjacent to Stargate campus.",
+      "rtt.operator_scores": {
+        "FAC": "High", "GOV": "Medium", "CUL": "Medium", "STD": "High",
+        "HUM": "Medium", "TRI": "High", "PLA": "Medium", "INF": "Very High", "TAX": "High", "RES": "High"
+      }
+    },
+    {
+      "facility.id": "ercot.abilene_milam.openai_stargate_expansion_a",
+      "facility.name": "OpenAI Stargate – Expansion Zone A",
+      "facility.type": "hyperscale-expansion",
+      "facility.operator": "OpenAI",
+      "facility.description": "Phase expansion zone extending the Stargate AI supercluster footprint.",
+      "rtt.operator_scores": {
+        "FAC": "Very High", "GOV": "Medium", "CUL": "Medium", "STD": "High",
+        "HUM": "Medium", "TRI": "High", "PLA": "Medium", "INF": "Very High", "TAX": "High", "RES": "High"
+      }
+    },
+    {
+      "facility.id": "ercot.abilene_milam.openai_stargate_expansion_b",
+      "facility.name": "OpenAI Stargate – Expansion Zone B",
+      "facility.type": "hyperscale-expansion",
+      "facility.operator": "OpenAI",
+      "facility.description": "Secondary phase expansion zone for the Stargate supercluster buildout.",
+      "rtt.operator_scores": {
+        "FAC": "Very High", "GOV": "Medium", "CUL": "Medium", "STD": "High",
+        "HUM": "Medium", "TRI": "High", "PLA": "Medium", "INF": "Very High", "TAX": "High", "RES": "High"
+      }
+    },
+    {
+      "facility.id": "ercot.abilene_milam.oracle_milam_c",
+      "facility.name": "Oracle – Milam County Cloud Node C",
+      "facility.type": "cloud-adjacency",
+      "facility.operator": "Oracle",
+      "facility.description": "Cloud node expanding Oracle's Milam County footprint; supporting enterprise and AI workloads.",
+      "rtt.operator_scores": {
+        "FAC": "High", "GOV": "Medium", "CUL": "Medium", "STD": "High",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "High", "RES": "High"
+      }
+    },
+    {
+      "facility.id": "ercot.abilene_milam.oracle_milam_d",
+      "facility.name": "Oracle – Milam County Cloud Node D",
+      "facility.type": "cloud-adjacency",
+      "facility.operator": "Oracle",
+      "facility.description": "Additional Oracle cloud node in Milam County; enterprise cloud infrastructure.",
+      "rtt.operator_scores": {
+        "FAC": "High", "GOV": "Medium", "CUL": "Medium", "STD": "High",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "High", "RES": "High"
+      }
+    },
+    {
+      "facility.id": "ercot.abilene_milam.regional_milam_a",
+      "facility.name": "Regional Hyperscale Developer – Milam Node A",
+      "facility.type": "hyperscale-expansion",
+      "facility.operator": "Regional Hyperscale Developer",
+      "facility.description": "Emerging hyperscale build in Milam County; regional developer capitalizing on Stargate adjacency.",
+      "rtt.operator_scores": {
+        "FAC": "High", "GOV": "Medium", "CUL": "Medium", "STD": "Medium",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "High", "RES": "Medium"
+      }
+    },
+    {
+      "facility.id": "ercot.abilene_milam.regional_milam_b",
+      "facility.name": "Regional Hyperscale Developer – Milam Node B",
+      "facility.type": "hyperscale-expansion",
+      "facility.operator": "Regional Hyperscale Developer",
+      "facility.description": "Land-rich expansion site in Milam County; regional developer build.",
+      "rtt.operator_scores": {
+        "FAC": "High", "GOV": "Medium", "CUL": "Medium", "STD": "Medium",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "High", "RES": "Medium"
+      }
+    },
+    {
+      "facility.id": "ercot.abilene_milam.energy_adjacent_milam_substation",
+      "facility.name": "Energy-Adjacent Compute – Milam Substation Node",
+      "facility.type": "energy-adjacent-compute",
+      "facility.operator": "Energy-Adjacent Operator",
+      "facility.description": "Compute facility co-located with or adjacent to substation infrastructure; extreme grid adjacency.",
+      "rtt.operator_scores": {
+        "FAC": "High", "GOV": "Medium", "CUL": "Low–Medium", "STD": "Medium",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Low–Medium", "INF": "Very High", "TAX": "High", "RES": "Medium"
+      }
+    },
+    {
+      "facility.id": "ercot.abilene_milam.ai_infra_milam_build",
+      "facility.name": "AI Infrastructure Developer – Milam Build Site",
+      "facility.type": "ai-infrastructure",
+      "facility.operator": "AI Infrastructure Developer",
+      "facility.description": "Dedicated AI infrastructure build site in Milam County; purpose-built for AI compute workloads.",
+      "rtt.operator_scores": {
+        "FAC": "Very High", "GOV": "Medium", "CUL": "Medium", "STD": "High",
+        "HUM": "Medium", "TRI": "High", "PLA": "Medium", "INF": "Very High", "TAX": "High", "RES": "High"
+      }
+    }
+  ],
+  "lineage": {
+    "source": "https://www.triadicframeworks.org/LINEAGE/",
+    "author": "Nawder Loswin",
+    "framework": "RTT — Resonance-Time Theory",
+    "generated": "2026-08-30",
+    "version_note": "June 2026 snapshot; 11 facilities in Abilene / Milam County cluster"
+  }
+}

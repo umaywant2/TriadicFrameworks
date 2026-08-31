@@ -1,0 +1,157 @@
+{
+  "module.id": "ercot.san_antonio",
+  "module.version": "1.0.0",
+  "module.category": "datacenter-analysis",
+  "module.summary": "RTT-Inside drift-bounded structural report for ERCOT San Antonio cluster — a stable enterprise and cloud hub anchored by Microsoft, with growing cloud presence and solid grid adjacency.",
+  "module.role": "cluster-report",
+  "module.analyzer_layer": "dimensional",
+  "ai.module": {
+    "schema": "schemas/tensor_export.schema.json",
+    "description": "Cluster-level module manifest for ERCOT San Antonio. Covers 7 facilities including Microsoft cloud campuses, regional enterprise compute, telecom edge fiber, and energy-adjacent industrial compute. Includes RTT operator scores, drift/coherence envelopes, facility list, and navigation pointers."
+  },
+  "ai.tensors": {
+    "registry": "docs/datacenter_reports/tensor_registry.py",
+    "keys": [
+      "planetary_substrate_tensor",
+      "dimensional_fatigue_tensor",
+      "qcompute_resonance_matrix",
+      "multi_site_tensor"
+    ]
+  },
+  "ai.navigation": {
+    "territory": "docs/datacenter_reports/ERCOT/ERCOT_module.json",
+    "cluster_index": "docs/datacenter_reports/ERCOT/ERCOT_module.json#cluster_mapping",
+    "prev_cluster": "docs/datacenter_reports/ERCOT/austin/module.json",
+    "next_cluster": "docs/datacenter_reports/ERCOT/houston/module.json",
+    "front_door": "docs/datacenter_reports/README.md",
+    "regional_index": "docs/datacenter_reports/REGIONAL_INDEX.md",
+    "template": "docs/datacenter_reports/_TEMPLATE_Datacenter_Report.md",
+    "territory_html": "docs/datacenter_reports/ERCOT/ERCOT.html"
+  },
+  "ai.session_context": {
+    "file": "docs/datacenter_reports/session_context.md",
+    "mode": "drift-bounded",
+    "coherence": "triadic-operator-dimensional",
+    "audience": "students-operators-ai"
+  },
+  "cluster_mapping": {
+    "cluster.id": "ercot.san_antonio",
+    "cluster.name": "San Antonio",
+    "cluster.region": "ERCOT",
+    "cluster.state": "Texas",
+    "cluster.country": "United States",
+    "cluster.type": "Enterprise + cloud",
+    "cluster.primary_operators": ["Microsoft", "Regional Enterprise", "Telecom Edge"],
+    "cluster.notes": "Stable grid adjacency; growing cloud presence; Microsoft-anchored enterprise workloads; moderate expansion trajectory."
+  },
+  "rtt.envelopes": {
+    "drift": "Medium",
+    "drift.description": "Moderate cloud expansion; stable enterprise workloads; measured growth pace.",
+    "coherence": "Medium–High",
+    "coherence.description": "Good grid adjacency and enterprise consistency; well-established operational fabric."
+  },
+  "rtt.facility_types": [
+    "cloud-region",
+    "enterprise",
+    "telecom-edge",
+    "energy-adjacent-compute"
+  ],
+  "rtt.operator_scores": {
+    "FAC": "Medium–High",
+    "GOV": "Medium",
+    "CUL": "Medium",
+    "STD": "High",
+    "HUM": "Medium",
+    "TRI": "Medium",
+    "PLA": "Medium",
+    "INF": "Medium–High",
+    "TAX": "Medium",
+    "RES": "Medium–High"
+  },
+  "facilities": [
+    {
+      "facility.id": "ercot.san_antonio.microsoft_cloud_campus_1",
+      "facility.name": "Microsoft – San Antonio Cloud Campus",
+      "facility.type": "cloud-region",
+      "facility.operator": "Microsoft",
+      "facility.description": "Primary Microsoft cloud campus in San Antonio; stable grid adjacency, large enterprise workloads.",
+      "rtt.operator_scores": {
+        "FAC": "Medium–High", "GOV": "Medium", "CUL": "Medium", "STD": "High",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "Medium–High", "TAX": "Medium", "RES": "Medium–High"
+      }
+    },
+    {
+      "facility.id": "ercot.san_antonio.regional_enterprise_compute_hub",
+      "facility.name": "Regional Enterprise – San Antonio Compute Hub",
+      "facility.type": "enterprise",
+      "facility.operator": "Regional Enterprise",
+      "facility.description": "Enterprise hosting and metro fiber hub; mixed workloads in San Antonio Metro.",
+      "rtt.operator_scores": {
+        "FAC": "Medium", "GOV": "Medium", "CUL": "Medium", "STD": "High",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "Medium–High", "TAX": "Medium", "RES": "Medium"
+      }
+    },
+    {
+      "facility.id": "ercot.san_antonio.microsoft_cloud_campus_2",
+      "facility.name": "Microsoft – San Antonio Cloud Campus 2",
+      "facility.type": "cloud-region",
+      "facility.operator": "Microsoft",
+      "facility.description": "Second Microsoft cloud campus in San Antonio; expanded Azure capacity for South Texas.",
+      "rtt.operator_scores": {
+        "FAC": "Medium–High", "GOV": "Medium", "CUL": "Medium", "STD": "High",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "Medium–High", "TAX": "Medium", "RES": "Medium–High"
+      }
+    },
+    {
+      "facility.id": "ercot.san_antonio.microsoft_cloud_campus_3",
+      "facility.name": "Microsoft – San Antonio Cloud Campus 3",
+      "facility.type": "cloud-region",
+      "facility.operator": "Microsoft",
+      "facility.description": "Third Microsoft cloud campus in San Antonio; continued Azure regional expansion.",
+      "rtt.operator_scores": {
+        "FAC": "Medium–High", "GOV": "Medium", "CUL": "Medium", "STD": "High",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "Medium–High", "TAX": "Medium", "RES": "Medium–High"
+      }
+    },
+    {
+      "facility.id": "ercot.san_antonio.regional_enterprise_metro_node",
+      "facility.name": "Regional Enterprise – San Antonio Metro Node",
+      "facility.type": "enterprise",
+      "facility.operator": "Regional Enterprise",
+      "facility.description": "Regional enterprise metro compute node; secondary enterprise hosting in San Antonio.",
+      "rtt.operator_scores": {
+        "FAC": "Medium", "GOV": "Medium", "CUL": "Medium", "STD": "High",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "Medium", "TAX": "Medium", "RES": "Medium"
+      }
+    },
+    {
+      "facility.id": "ercot.san_antonio.telecom_edge_fiber_hub",
+      "facility.name": "Telecom Edge – San Antonio Fiber Hub",
+      "facility.type": "telecom-edge",
+      "facility.operator": "Telecom Edge Operator",
+      "facility.description": "Telecom edge fiber hub serving San Antonio Metro; aggregation point for metro fiber routes.",
+      "rtt.operator_scores": {
+        "FAC": "Medium", "GOV": "Medium", "CUL": "Medium", "STD": "High",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Medium", "INF": "High", "TAX": "Medium", "RES": "Medium–High"
+      }
+    },
+    {
+      "facility.id": "ercot.san_antonio.energy_adjacent_industrial",
+      "facility.name": "Energy-Adjacent Compute – San Antonio Industrial Node",
+      "facility.type": "energy-adjacent-compute",
+      "facility.operator": "Energy-Adjacent Operator",
+      "facility.description": "Energy-adjacent compute in San Antonio industrial corridor; proximity to grid infrastructure.",
+      "rtt.operator_scores": {
+        "FAC": "Medium", "GOV": "Medium", "CUL": "Low–Medium", "STD": "Medium",
+        "HUM": "Medium", "TRI": "Medium", "PLA": "Low–Medium", "INF": "High", "TAX": "Medium", "RES": "Medium"
+      }
+    }
+  ],
+  "lineage": {
+    "source": "https://www.triadicframeworks.org/LINEAGE/",
+    "author": "Nawder Loswin",
+    "framework": "RTT — Resonance-Time Theory",
+    "generated": "2026-08-30",
+    "version_note": "June 2026 snapshot; 7 facilities in San Antonio cluster"
+  }
+}
