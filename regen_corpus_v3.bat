@@ -7,13 +7,15 @@ echo /docs/
 echo ---------------------------------
 
 set seeds=main
+echo seeds = %seeds% 
 echo %seeds% >corpus\%seeds%.md
 copy corpus\%seeds%.md+README.md corpus\%seeds%.md
 copy corpus\%seeds%.md+persona-prompt.md corpus\%seeds%.md
 echo ---------------------------------
 echo.
-
+pause
 set seeds=docs
+echo seeds = %seeds% 
 echo %seeds% >corpus\%seeds%.md
 copy corpus\%seeds%.md+docs\ABOUT.md corpus\%seeds%.md
 copy corpus\%seeds%.md+docs\BUILD_LOG_2026-05-06.md corpus\%seeds%.md
