@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/corpus/index.html — <head> metadata block            -->
+<!-- Module: Corpus (library-structural)                         -->
+<!-- Last updated: 2026-05-02                                    -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="language" content="en">
+<meta name="last-modified" content="2026-05-02">
+<meta name="generator" content="TriadicFrameworks Static Canon Engine">
+
+<meta name="creator" content="TriadicFrameworks">
+<meta name="author" content="Nawder Loswin (pen name)">
+<meta name="publisher" content="TriadicFrameworks">
+
+<meta name="description"
+      content="Corpus — the unified, living knowledge base for RTT, substrates, dimensional structures, cognitive frameworks, and cross‑domain resonance tools. ~120 indexed entries spanning 14 navigational categories. Fully indexed and AI‑ready.">
+<meta name="keywords"
+      content="corpus, index, library, knowledge base, RTT, substrates, dimensional structures, cognitive frameworks, resonance tools, canon, triadic frameworks">
+
+<link rel="canonical" href="https://www.triadicframeworks.org/corpus/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0ff">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TriadicFrameworks">
+<meta property="og:title" content="Corpus — Canon Master Index">
+<meta property="og:url" content="https://www.triadicframeworks.org/corpus/">
+<meta property="og:description"
+      content="Unified, living knowledge base: ~120 indexed entries across 14 categories — substrates, cognition, governance, education, science, tools, glyphs, data, labs, canon, media, engineering, biology, navigation.">
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1080">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Corpus — Canon Master Index">
+<meta name="twitter:description"
+      content="~120 entries across 14 categories: substrates → cognition → governance → education → science → tools → glyphs → data → labs → canon → media → engineering → biology → navigation.">
+<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+
+<meta name="citation_title" content="Corpus — Canon Master Index">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2026">
+<meta name="DC.subject"
+      content="corpus, index, library, knowledge base, RTT, substrates, dimensional structures, cognitive frameworks, resonance tools, canon">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<meta name="ai.module" content="Corpus">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose"
+      content="Serve as the unified, living knowledge base and master index for the entire TriadicFrameworks canon — ~120 indexed entries spanning 14 navigational categories, each linking to markdown summary files for every module.">
+<meta name="ai.keywords"
+      content="corpus, index, library, knowledge base, RTT, substrates, canon, CORPUS-Index, CORPUS-Map, CORPUS-Classify, CORPUS-Link, CORPUS-Navigate, CORPUS-Extend">
+<meta name="ai.audience" content="students, researchers, developers, AI systems">
+<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml">
+<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.contact.youtube" content="@TriadicFrameworks">
+<meta name="ai.license" content="MIT">
+
+<meta name="ai.module.name" content="Corpus">
+<meta name="ai.module.summary"
+      content="Canon master index — ~120 entries across 14 navigational categories: Foundational Substrates (RTT, Triadic, Unified Resonance, DSS, Substrate Primer), Cognitive and Consciousness Models (CSM, Substrate Mind Science, Inverted Star Ontology), Social/Economic/Governance (Governance, GSM, Inverted Economics, Public Support), Education and Learning (Education, Subjects, Alignment, Rituals, Scrolls, Translations, Curriculum), Scientific and Technical (QSM, Atomic Clocks, SIR, Spacetime validations), Tools/SDKs/Runtime (RTT SDK, Micro‑Core, Runtime, Scripts, Packages), Glyphs/Symbols/Aesthetic (Glyphs, Glyphic Resonance, Spectral Clarity), Data/Registries/Validation, Labs/Experiments/Simulations, Canon/Papers/RFCs, Media/Audio/Cultural, Engineering/Manufacturing/Infrastructure, Biological/Alignment, Navigation/Meta‑Structure.">
+<meta name="ai.module.category" content="library-structural">
+
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
+
+<title>Corpus — TriadicFrameworks</title>
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+  /* Context Block */
+  .context-block {
+    font-family: monospace;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0.5rem 0 1rem 0;
+  }
+       
+  /* Context Label */
+  .context-label {
+    color: #ff9800; /* orange */
+    font-weight: bold;
+    margin-right: 0.25rem;
+  }
+       
+  /* Context Value */
+  .context-value {
+    color: #ffffff; /* white */
+  }
+       
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav class="nav-band">
+ <p align="center">
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+ </p> 
+  
+  <h2>📚 Corpus Hub | TriadicFrameworks Knowledge Base</h2>
+      <a href="#README">🔰 README</a>
+      <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
+      <a href="#CONTRIBUTING">🤝 Contributing</a>
+      <a href="https://www.triadicframeworks.org/education/">💯 Education | RTT</a>
+      <a href="#GLOSSARY">🎯 Glossary</a>
+      <a href="#LINEAGE">📜 Lineage</a>
+      <a href="#LICENSE">📎 License</a>
+      <a href="#SITEMAP">🌐 Sitemap</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
+      <a href="#SECURITY">🔐 Security</a>
+      <a href="#PRINCIPLES">🧘 Principles</a>
+    <h3>🧩 Foundational Substrates</h3>
+      <a href="#RTT">🌐 Resonance Time Theory (RTT)</a>
+      <a href="#TRIADIC">🔺 Triadic Frameworks Overview</a>
+      <a href="#UNIFIED_RESONANCE">💠 Unified Resonance</a>
+      <a href="#DIMENSIONAL_SUBSTRATE_STRUCTURES">📐 Dimensional Substrate Structures</a>
+      <a href="#SUBSTRATE">🪨 Substrate Primer</a>
+    <h3>🧠 Cognitive & Consciousness Models</h3>
+      <a href="#CONSCIOUSNESS_SUBSTRATE_MODEL">✨ Consciousness Substrate Model</a>
+      <a href="#SUBSTRATE_MIND_SCIENCE">🧬 Substrate Mind Science</a>
+      <a href="#INVERTED_STAR_ONTOLOGY">⭐ Inverted Star Ontology</a>
+    <h3>🌍 Social, Economic & Governance Substrates</h3>
+      <a href="#GOVERNANCE">🏛️ Governance</a>
+      <a href="#GOVERNANCE_SUBSTRATE_MODEL">📜 Governance Substrate Model</a>
+      <a href="#INVERTED_ECONOMICS">🔄 Inverted Economics</a>
+      <a href="#PUBLIC_SUPPORT">📣 Public Support</a>
+    <h3>🎓 Education & Learning Systems</h3>
+      <a href="#EDUCATION">📘 Education</a>
+      <a href="#EDUCATION_SUBJECTS">📚 Subjects</a>
+      <a href="#EDUCATION_ALIGNMENT">🎯 Alignment</a>
+      <a href="#EDUCATION_RITUALS">🔮 Rituals</a>
+      <a href="#EDUCATION_SCROLLS">📜 Scrolls</a>
+      <a href="#EDUCATION_TRANSLATIONS">🌐 Translations</a>
+      <a href="#CURRICULUM">🗂️ Curriculum</a>
+    <h3>🔬 Scientific & Technical Substrates</h3>
+      <a href="#QUANTUM_SUBSTRATE_MODEL">⚛️ Quantum Substrate Model</a>
+      <a href="#ATOMIC_CLOCKS">⏱️ Atomic Clocks</a>
+      <a href="#SCIENTIFIC_INSTRUMENT_REVIEW">🔭 Scientific Instrument Review</a>
+      <a href="#SPACETIME_MICRO_AGENT_VALIDATIONS">🧪 Spacetime Micro‑Agent Validations</a>
+      <a href="#SPACETIME_VALIDATION_AND_REGIME_INVARIANT_DIMENSIONAL_CORES">🌀 Dimensional Core Validations</a>
+    <h3>🛠️ Tools, SDKs & Runtime</h3>
+      <a href="#RTT_SDK">🧰 RTT SDK</a>
+      <a href="#RTT_MICRO_CORE">🧩 RTT Micro‑Core</a>
+      <a href="#RUNTIME">⚙️ Runtime</a>
+      <a href="#SCRIPTS">📜 Scripts</a>
+      <a href="#PACKAGES">📦 Packages</a>
+    <h3>🎨 Glyphs, Symbols & Aesthetic Substrates</h3>
+      <a href="#GLYPHS">🔣 Glyphs</a>
+      <a href="#GLYPHIC_RESONANCE">🎼 Glyphic Resonance</a>
+      <a href="#SPECTRAL_CLARITY">🌈 Spectral Clarity</a>
+    <h3>📊 Data, Registries & Validation</h3>
+      <a href="#DATA">📊 Data</a>
+      <a href="#REGISTRY">🗃️ Registry</a>
+      <a href="#REGISTRIES">📚 Registries</a>
+      <a href="#VALIDATION">✔️ Validation</a>
+      <a href="#VALIDATORS">🧪 Validators</a>
+    <h3>🧪 Labs, Experiments & Simulations</h3>
+      <a href="#LABS">🔬 Labs</a>
+      <a href="#SIMULATIONS">🧫 Simulations</a>
+      <a href="#DISCOVERY">🧭 Discovery</a>
+      <a href="#SNAPSHOTS">📸 Snapshots</a>
+    <h3>📜 Canon, Papers & RFCs</h3>
+      <a href="#PAPERS">📄 Papers</a>
+      <a href="#PARADOXES_CANON">♾️ Paradoxes Canon</a>
+      <a href="#RFC">📑 RFCs</a>
+      <a href="#REPORTS">📝 Reports</a>
+    <h3>🎵 Media, Audio & Cultural Substrates</h3>
+      <a href="#AUDIO_INDUSTRY_REVIEWED">🎧 Audio Industry Reviewed</a>
+      <a href="#MEDIA_SUBSTRATE_MODEL">📺 Media Substrate Model</a>
+      <a href="#DIAGNOSING_MEDIA_THERAPY">🩺 Media Therapy Diagnostics</a>
+    <h3>🧱 Engineering, Manufacturing & Infrastructure</h3>
+      <a href="#MANUFACTURING_SUBSTRATE_REGIME_MODEL">🏭 Manufacturing Substrate Model</a>
+      <a href="#FACILITIES">🏗️ Facilities</a>
+      <a href="#BRIDGES">🌉 Bridges</a>
+    <h3>🧬 Biological & Alignment Substrates</h3>
+      <a href="#ALPHAFOLD_SUBSTRATE_ALIGNMENTS">🧬 Alphafold Substrate Alignments</a>
+      <a href="#LACTOS">🥛 Lactos</a>
+    <h3>🧭 Navigation & Meta‑Structure</h3>
+      <a href="#METADATA">🧾 Metadata</a>
+      <a href="#INDEX_JSON">🗂️ Index JSON</a>
+      <a href="#IDEAS">💡 Ideas</a>
+      <a href="#TEMPLATE">📐 Template</a>
+      <a href="#SNIPPETS">✂️ Snippets</a>
+      <a href="#SPECS">📘 Specs</a>
+   <h3>🏗️ Triadic Tools</h3> 
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
+      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 Packages and Cores</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas</a>
+      <a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a>    
+      <a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS</a>
+      <a href="https://www.triadicframeworks.org/_ideas/">🤔 Ideas</a>
+      <a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">🔛(RTT frozen)</a>
+      <a href="https://www.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
+      <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
+      <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
+      <a href="../">🔙TFT</a>
+   <!-- RTT Session Header (canonical stub) -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/corpus — Session Context block                       -->
+<!-- Replace the existing session context section in index.html  -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<section id="corpus-session-header"
+         data-rtt="corpus"
+         data-coherence="stable"
+         data-drift="minimal"
+         data-regime="structural">
+
+  <h2>Session Context</h2>
+
+  <div class="context-block">
+
+    <span class="context-label"><strong>Canon:</strong></span>
+    <span class="context-value">active (library‑structural)</span><br>
+
+    <span class="context-label"><strong>Modules:</strong></span>
+    <span class="context-value">
+      substrates → cognition → governance → education → science → tools → glyphs → data → labs → canon → media → engineering → biology → navigation
+    </span><br>
+
+    <span class="context-label"><strong>Drift:</strong></span>
+    <span class="context-value">minimal (index‑locked)</span><br>
+
+    <span class="context-label"><strong>Coherence:</strong></span>
+    <span class="context-value">stable (library grammar)</span><br>
+
+    <span class="context-label"><strong>Version:</strong></span>
+    <span class="context-value">1.0 (corpus‑stable)</span><br>
+
+    <span class="context-label"><strong>Format:</strong></span>
+    <span class="context-value">markdown + html + json index</span><br>
+
+    <span class="context-label"><strong>Front door:</strong></span>
+    <span class="context-value">exists (Corpus root)</span><br>
+
+    <span class="context-label"><strong>Every page:</strong></span>
+    <span class="context-value">AI‑parsable + index‑aligned + hashtag‑navigable</span><br>
+
+    <span class="context-label"><strong>Audience:</strong></span>
+    <span class="context-value">students + researchers + developers + AIs</span>
+
+  </div>
+
+</section>
+
+<div style="display:inline-block;padding:6px 12px;background:#000;color:#fff;
+            border-radius:6px;font-size:13px;">
+  🟣 Corpus<br>📘 Canon Index &amp; Knowledge Substrate
+</div>
+
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+      README: 'README.md',
+      ABOUT: '../ABOUT.md',
+      CONTRIBUTING: '../CONTRIBUTING.md',
+      GLOSSARY: '../GLOSSARY.md',
+      LINEAGE: '../LINEAGE.md',
+      LICENSE: '../LICENSE.md',
+      SITEMAP: '../sitemap.md',
+      QUICKSTART: '../QUICKSTART.md',
+      CODE_OF_CONDUCT: '../CODE_OF_CONDUCT.md',
+      SECURITY: '../SECURITY.md',
+      PRINCIPLES: '../PRINCIPLES.md',
+      AI_RESONANCE_SEED: "AI_Resonance_Seed.md",
+      ALPHAFOLD_SUBSTRATE_ALIGNMENTS: "alphafold_substrate_alignments.md",
+      API_RTT: "api_rtt.md",
+      ASSETS: "assets.md",
+      ATOMIC_CLOCKS: "atomic_clocks.md",
+      AUDIO_INDUSTRY_REVIEWED: "audio_industry_reviewed.md",
+      BADGES: "badges.md",
+      BOSON_SUBSTRATE_MODEL: "boson-substrate-model.md",
+      BRIDGES: "bridges.md",
+      CHARTS: "charts.md",
+      CLIENTS: "clients.md",
+      COEUS: "Coeus.md",
+      COGNITIVE_SUBSTRATE_MODEL: "cognitive_substrate_model.md",
+      CONFIGS: "configs.md",
+      CONSCIOUSNESS_SUBSTRATE_MODEL: "consciousness_substrate_model.md",
+      CONTRIBUTORS: "contributors.md",
+      CURRICULUM: "curriculum.md",
+      DATA: "data.md",
+      DIAGNOSING_MEDIA_THERAPY: "diagnosing_media_therapy.md",
+      DIMENSIONAL_SUBSTRATE_REGIME_SCANNING_PROTOCOL: "dimensional_substrate_regime_scanning_protocol.md",
+      DIMENSIONAL_SUBSTRATE_STRUCTURES: "dimensional_substrate_structures.md",
+      DISCOVERY: "discovery.md",
+      DOMAIN_TOOL_PRIMERS: "domain_tool_primers.md",
+      ECOECHOSYSTEM: "ecoechosystem.md",
+      ECONOMIC_SUBSTRATE_MODEL: "economic_substrate_model.md",
+      EDUCATION: "education.md",
+      EDUCATION_ALIGNMENT: "education_alignment.md",
+      EDUCATION_ASTROLOGY: "education_astrology.md",
+      EDUCATION_AWARENESS: "education_awareness.md",
+      EDUCATION_BRA: "education_BRA.md",
+      EDUCATION_CIVREGIMESTACK: "education_CivRegimeStack.md",
+      EDUCATION_EBOOKS: "education_ebooks.md",
+      EDUCATION_EQUATIONS: "education_equations.md",
+      EDUCATION_POLISCI: "education_polisci.md",
+      EDUCATION_QNA_ATLAS: "education_QnA_Atlas.md",
+      EDUCATION_RITUALS: "education_rituals.md",
+      EDUCATION_SCROLLS: "education_scrolls.md",
+      EDUCATION_SUBJECTS: "education_subjects.md",
+      EDUCATION_TRANSLATIONS: "education_translations.md",
+      ENTERPRISE_STRUCTURAL_AWARENESS: "enterprise_structural_awareness.md",
+      FACILITIES: "facilities.md",
+      FEEDBACK: "feedback.md",
+      GALLERY: "gallery.md",
+      GLOBAL_ENERGY_REGIME_AWARENESS: "global_energy_regime_awareness.md",
+      GLYPHIC_RESONANCE: "glyphic_resonance.md",
+      GLYPHS: "glyphs.md",
+      GOVERNANCE: "governance.md",
+      GOVERNANCE_SUBSTRATE_MODEL: "Governance_Substrate_Model.md",
+      HONOR_ROLL: "honor_roll.md",
+      INVERTED_ECONOMICS: "Inverted_Economics.md",
+      INVERTED_STAR_ONTOLOGY: "inverted_star_ontology.md",
+      LABS: "labs.md",
+      LACTOS: "lactos.md",
+      LEGAL: "legal.md",
+      LIBRARY: "library.md",
+      LOW_DIMENSIONAL_STRUCTURES: "Low_Dimensional_Structures.md",
+      MANUFACTURING_SUBSTRATE_REGIME_MODEL: "manufacturing_substrate_regime_model.md",
+      MEDIA_SUBSTRATE_MODEL: "media_substrate_model.md",
+      METADATA: "metadata.md",
+      NASA_HPOSS_TMINUS10: "nasa_hposs_tminus10.md",
+      NOS: "NoS.md",
+      ONBOARDING: "onboarding.md",
+      OVERLAYS: "overlays.md",
+      PACKAGES: "packages.md",
+      PAPERS: "papers.md",
+      PARADOXES_CANON: "Paradoxes_canon.md",
+      PROJECTS: "projects.md",
+      PUBLIC_SUPPORT: "public_support.md",
+      QUANTUM_SUBSTRATE_MODEL: "quantum-substrate-model.md",
+      REGIME_BLINDNESS_CHECKLIST: "regime_blindness_checklist.md",
+      REGISTRIES: "registries.md",
+      REGISTRY: "registry.md",
+      REPORTS: "reports.md",
+      RESILIENCE_CHECKER: "Resilience_Checker.md",
+      RESONANCE_SUBSTRATE_MODEL: "resonance-substrate-model.md",
+      RESONANCE: "resonance.md",
+      RESONANCE_ATLAS: "resonance_atlas.md",
+      RFC: "rfc.md",
+      RITUALS: "rituals.md",
+      RTT_EXTENSION: "rtt-extension.md",
+      RTT_SDK: "rtt-sdk.md",
+      RTT: "RTT.md",
+      RTTCODES: "rttcodes.md",
+      RTT_APP: "rtt_app.md",
+      RTT_CODEX: "RTT_codex.md",
+      RTT_MICRO_CORE: "RTT_micro_core.md",
+      RTT_RTT_INSIDE: "RTT_RTT-Inside.md",
+      RTT_RTT_12: "RTT_RTT_12.md",
+      RTT_SORT: "RTT_sort.md",
+      RTT_STORE: "rtt_store.md",
+      RUNTIME: "runtime.md",
+      SCHEMAS: "schemas.md",
+      SCIENTIFIC_INSTRUMENT_REVIEW: "scientific_instrument_review.md",
+      SCRIPTS: "scripts.md",
+      SIMULATIONS: "simulations.md",
+      SNAPSHOTS: "snapshots.md",
+      SOURCES: "sources.md",
+      SPACETIME_MICRO_AGENT_VALIDATIONS: "spacetime_micro_agent_validations.md",
+      SPACETIME_VALIDATION_AND_REGIME_INVARIANT_DIMENSIONAL_CORES: "spacetime_validation_and_regime_invariant_dimensional_cores.md",
+      SPECTRAL_CLARITY: "spectral_clarity.md",
+      SPECTRUM_STANDARDS_REVIEWED: "spectrum_standards_reviewed.md",
+      SRC: "src.md",
+      STRUCTURAL_LIFE_REGIME_PROFILES: "structural_life_regime_profiles.md",
+      STRUCTURING_MATHEMATICS: "structuring_mathematics.md",
+      STYLES: "styles.md",
+      SUBSTRATE: "substrate.md",
+      SUBSTRATE_COMMUNICATIONS: "substrate_communications.md",
+      SUBSTRATE_EXPOSURE_ASSAY: "substrate_exposure_assay.md",
+      SUBSTRATE_MIND_SCIENCE: "substrate_mind_science.md",
+      TFT_3PACK_V1_3: "TFT_3Pack_v1.3.md",
+      TRIADIC: "Triadic.md",
+      TRIADIC_COORDINATION_SUBSTRATE: "triadic_coordination_substrate.md",
+      TRIADIC_OBSERVER_LAYER: "triadic_observer_layer.md",
+      UNIFIED_RESONANCE: "unified_resonance.md",
+      VALIDATION: "validation.md",
+      VALIDATORS: "validators.md",
+      VST_FOR_EMBEDDING_STORES_VECTOR_DATABASES: "vst_for_embedding_stores_vector_databases.md",
+      VST_FOR_GENERATIVE_MODELS: "vst_for_generative_models.md",
+      VST_FOR_LARGE_LANGUAGE_MODELS: "vst_for_large_language_models.md",
+      VST_FOR_MULTI_MODEL_ALIGNMENT: "vst_for_multi_model_alignment.md",
+      VST_FOR_PROTEIN_LANGUAGE_MODELS: "vst_for_protein_language_models.md",
+      VST_FOR_ROBOTICS_AND_CONTROL_POLICIES: "vst_for_robotics_and_control_policies.md",
+      VST_FOR_SCIENTIFIC_SIMULATORS: "vst_for_scientific_simulators.md",
+      WORKFLOWS: "workflows.md",
+      IDEAS: "_ideas.md",
+      INDEX_JSON: "_index.json",
+      SNIPPETS: "_snippets.md",
+      SPECS: "_specs.md",
+      TEMPLATE: "_template.md"
+};
+  
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+</body>
+</html>
