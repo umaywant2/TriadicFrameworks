@@ -1,4 +1,3 @@
----
 id: experiment_001
 title: Bridge Resonance Glyph Mapping
 structure: Suspension Bridge
@@ -10,10 +9,10 @@ resonance_signature:
     - support cables: 1.8 Hz
     - anchor towers: 0.9 Hz
 dimensional_alignment:
-  forci: 0.60
+  forci: 0.6
   flui: 0.55
-  freqi: 0.70
+  freqi: 0.7
 glyph_overlay: bridge_glyph_overlay_01.svg
 notes: >
-  This experiment maps architectural resonance to symbolic glyphs.
-  Frequencies tuned to avoid destructive harmonics and echo legacy permanence.
+  This experiment maps architectural resonance to symbolic glyphs. Frequencies
+  tuned to avoid destructive harmonics and echo legacy permanence.
