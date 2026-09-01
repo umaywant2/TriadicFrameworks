@@ -6,9 +6,11 @@
 
 *A structural, educational, resonance‑time‑aligned history of the canon.*
 
-### **Phase 0 — metaCo - Proto‑Substrate (Pre‑Canon)**  
+### **Phase 0 — ORCiD and metaCo - Proto‑Substrate (Pre‑Canon)**  
 **What:**  
 Early attempt to unify context across silos. (2024–2025) 
+
+On October 9th, 2025, first artifact of TriadicFrameworks — a private research tool that became the foundation for everything that followed. [ORCID](https://orcid.org/0009-0002-2282-5460). 
 
 **Why it mattered:**  
 First appearance of **drift‑awareness, meta‑routing, and coherence preservation**.
