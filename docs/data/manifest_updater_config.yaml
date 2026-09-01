@@ -1,39 +1,39 @@
 # 🧙 manifest_updater_config.yaml
 themes:
-  Quantum & Particle Vision:
+  "Quantum & Particle Vision":
     - quantum
     - particle
     - ghost
     - entropy
-  Planetary & Temporal Mapping:
+  "Planetary & Temporal Mapping":
     - planetary
     - time
     - saturn
     - zhang
-  Energy & Wireless Power:
+  "Energy & Wireless Power":
     - energy
     - wireless
     - zero point
     - power
-  Cognitive & Symbolic Formalization:
+  "Cognitive & Symbolic Formalization":
     - cognition
     - symbolic
     - formalization
     - ISO
-  Health & Ultrasound:
+  "Health & Ultrasound":
     - health
     - ultrasound
     - care
-  Engineering & Firmware:
+  "Engineering & Firmware":
     - firmware
     - ARM
     - x86
     - BMS
-  Music & Symbolic Extensions:
+  "Music & Symbolic Extensions":
     - music
     - quadratic
     - lenses
-  Elemental & Spectrum Research:
+  "Elemental & Spectrum Research":
     - elements
     - spectrum
     - rare
