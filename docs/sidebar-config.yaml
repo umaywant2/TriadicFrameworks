@@ -1,9 +1,8 @@
----
 sidebar:
-  - label: "Home"
+  - label: Home
     path: /
     icon: home
-  - group: "Core Engines"
+  - group: Core Engines
     icon: cpu
     items:
       - label: SARG
@@ -12,7 +11,7 @@ sidebar:
         path: /framework-field-theory
       - label: FFT Analyzer
         path: /fft-analyzer
-  - group: "Operators"
+  - group: Operators
     icon: zap
     items:
       - label: NoS
@@ -21,19 +20,19 @@ sidebar:
         path: /governance-substrate-model
       - label: Mode
         path: /mode
-  - group: "Dimensional"
+  - group: Dimensional
     icon: layers
     items:
       - label: Low Dimensional Structures
         path: /low-dimensional-structures
-  - group: "Diagnostics"
+  - group: Diagnostics
     icon: activity
     items:
       - label: Resilience Checker
         path: /resilience-checker
       - label: Drift Map
         path: /drift-map
-  - group: "Coherence"
+  - group: Coherence
     icon: circle
     items:
       - label: Opacity
@@ -46,7 +45,7 @@ sidebar:
         path: /spectral-clarity
       - label: Nawderian Theorem
         path: /nawderian-theorem
-  - group: "References"
+  - group: References
     icon: book
     items:
       - label: Paradoxes Canon
@@ -55,14 +54,14 @@ sidebar:
         path: /nist-module
       - label: Wikipedia Module
         path: /wikipedia-module
-  - group: "Cross-Cutting"
+  - group: Cross-Cutting
     icon: share-2
     items:
       - label: Integrations
         path: /integrations
       - label: Inverted Economics
         path: /inverted-economics
-  - group: "Extensions"
+  - group: Extensions
     icon: telescope
     items:
       - label: JWST-RTT
