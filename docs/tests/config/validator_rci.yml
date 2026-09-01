@@ -1,3 +1,5 @@
+---
+
 normalization:
   frequency:
     method: minmax

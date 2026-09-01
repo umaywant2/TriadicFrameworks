@@ -1,3 +1,5 @@
+---
+
 glyph:
   id: <UUID>
   symbol: <string>           # e.g., ◇, ◆, ⬣, custom SVG path

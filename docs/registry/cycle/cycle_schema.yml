@@ -1,3 +1,5 @@
+---
+
 cycle_status:
   timestamp: <ISO8601>
   scrolls:

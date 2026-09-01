@@ -1,3 +1,5 @@
+---
+
 hub_state:
   timestamp: <ISO8601>
   contributors: <list>

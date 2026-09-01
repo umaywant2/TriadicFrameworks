@@ -1,3 +1,5 @@
+---
+
 registry:
   project: {{PROJECT_NAME}}
   seeded: true

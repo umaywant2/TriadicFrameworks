@@ -1,3 +1,5 @@
+---
+
 # dimensions.yml
 # Phase offsets, harmonics, QoS weights, and CPU/NUMA pinning for each virtual dimension.
 # This file is read by the VCG orchestrator at startup.

@@ -1,3 +1,5 @@
+---
+
 alert:
   id: <UUID>
   timestamp: <ISO8601>

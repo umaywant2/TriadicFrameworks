@@ -1,3 +1,5 @@
+---
+
 event:
   id: <UUID>
   timestamp: <ISO8601>

@@ -1,3 +1,5 @@
+---
+
 search_query:
   id: <UUID>
   glyph: <◇|◆|⬣|custom|null>
