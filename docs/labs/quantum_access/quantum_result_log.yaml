@@ -1,8 +1,7 @@
----
 id: quantum_result_log_001
 source_submission: qubo_submission_001
 backend: D-Wave
-timestamp: 2025-09-30T11:05:00Z
+timestamp: 2025-09-30T11:05:00.000Z
 results:
   - frequency: 144
     optimized_score: 2.73
@@ -13,5 +12,5 @@ results:
     glyph: bridge_glyph_overlay_01.svg
     remix_trigger: false
 notes: >
-  Quantum annealing confirmed fold coherence at 144 Hz.
-  Remix lineage pulse triggered. Ready for overlay animation.
+  Quantum annealing confirmed fold coherence at 144 Hz. Remix lineage pulse
+  triggered. Ready for overlay animation.
