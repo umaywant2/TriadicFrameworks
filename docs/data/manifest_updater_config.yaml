@@ -1,39 +1,39 @@
 # 🧙 manifest_updater_config.yaml
 themes:
-  Quantum and Particle Vision:
+  Quantum_Particle_Vision:
     - quantum
     - particle
     - ghost
     - entropy
-  Planetary and Temporal Mapping:
+  Planetary_Temporal_Mapping:
     - planetary
     - time
     - saturn
     - zhang
-  Energy and Wireless Power:
+  Energy_Wireless_Power:
     - energy
     - wireless
     - zero point
     - power
-  Cognitive and Symbolic Formalization:
+  Cognitive_Symbolic_Formalization:
     - cognition
     - symbolic
     - formalization
     - ISO
-  Health and Ultrasound:
+  Health_Ultrasound:
     - health
     - ultrasound
     - care
-  Engineering and Firmware:
+  Engineering_Firmware:
     - firmware
     - ARM
     - x86
     - BMS
-  Music and Symbolic Extensions:
+  Music_Symbolic_Extensions:
     - music
     - quadratic
     - lenses
-  Elemental and Spectrum Research:
+  Elemental_Spectrum_Research:
     - elements
     - spectrum
     - rare
@@ -69,9 +69,8 @@ validation_rules:
     - resonance
     - triadic
 
-
 # 🔮 Theme Detection
-themes:
+theme_detection:
   Quantum: ["Quantum", "Particle", "Entanglement"]
   Health: ["Health", "Ultrasound", "Medical"]
   Music: ["Music", "Harmony", "Quadratic"]
@@ -117,32 +116,3 @@ manifest_path: "./papers/papers_manifest.md"
 changelog_path: "./papers/papers_manifest_changelog.md"
 log_path: "./papers/manifest_updater_log.md"
 scan_extensions: [".docx", ".pdf"]
-
-def detect_theme(filename, config_path="manifest_updater_config.yaml"):
-    import yaml
-    with open(config_path, "r") as f:
-        config = yaml.safe_load(f)
-    for theme, keywords in config.get("themes", {}).items():
-        if any(kw.lower() in filename.lower() for kw in keywords):
-            return theme
-    return "Unclassified"
-
-def main():
-    papers_dir = "papers"
-    manifest_path = "papers_manifest.md"
-    changelog_path = "papers_manifest_changelog.md"
-    badges_path = "BADGES_EARNED.md"
-
-    for filename in os.listdir(papers_dir):
-        if filename.endswith(".docx") or filename.endswith(".pdf"):
-            filepath = os.path.join(papers_dir, filename)
-            equations_exists = os.path.exists(os.path.join(papers_dir, "equations.md"))
-            reproducibility_exists = os.path.exists(os.path.join(papers_dir, "reproducibility.md"))
-            theme = detect_theme(filename)
-            suggested_badges = suggest_badges(filepath)
-
-            update_manifest(manifest_path, filename, theme, equations_exists, reproducibility_exists)
-            update_changelog(changelog_path, filename, theme)
-            update_badges_earned(badges_path, filename, suggested_badges)
-
-            print(f"🔔 Ping: {filename} processed with theme '{theme}' and badges {suggested_badges}")
