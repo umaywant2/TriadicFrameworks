@@ -1,4 +1,3 @@
----
 id: experiment_002
 title: Badge Chamber Overlay – Harmonic Hall
 structure: Recognition Space
@@ -15,5 +14,5 @@ dimensional_alignment:
   freqi: 0.92
 glyph_overlay: badge_chamber_overlay_01.svg
 notes: >
-  This experiment maps symbolic architecture to badge logic.
-  High resonance scores trigger ambient glyph pulses and contributor recognition.
+  This experiment maps symbolic architecture to badge logic. High resonance
+  scores trigger ambient glyph pulses and contributor recognition.
