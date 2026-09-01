@@ -1,41 +1,119 @@
+manifest_version: 1.0
+repo: TriadicFrameworks
+repo_owner: umaywant2
+repo_lineage:
+  created: 2025
+  updated: 2026-08-31
+  corpus_version: 3.0
+  canonical_status: active
+
+sitemap:
+  main: https://www.triadicframeworks.org/sitemap_main.xml
+  modules: https://www.triadicframeworks.org/modules/
+  corpus_index: /docs/corpus/module.json
+  docsbook_index: /docsbook/modules/corpus/INDEX.md
+
+ai_metadata:
+  ai_ready: true
+  ai_contact:
+    x: "@TriadicFrameworks"
+    youtube: "@TriadicFrameworks"
+  ai_license: "Open educational use permitted."
+
+repo_roles:
+  - documentation
+  - research
+  - substrate_models
+  - resonance_theory
+  - education_systems
+  - governance_models
+  - scientific_instruments
+  - labs_and_experiments
+  - ai_alignment
+  - corpus_archives
+
+module_index:
+  corpus: /docs/corpus/module.json
+  frameworks: /docs/Framework_Field_Theory/module.json
+  governance: /docs/Governance_Substrate_Model/module.json
+  consciousness: /docs/consciousness_substrate_model/module.json
+  resonance: /docs/resonance/module.json
+  operators: /docs/operators/module.json
+  nist: /docs/nist/module.json
+
+bundle_groups:
+  corpus_v3:
+    root: /docs/corpus
+    module: /docs/corpus/module.json
+    index: /docsbook/modules/corpus/INDEX.md
+    bundles_from_readme: true
+
+  frameworks:
+    root: /docs/Framework_Field_Theory
+    analyzer: /docs/Framework_Field_Theory/Analyzer
+    book: /docs/Framework_Field_Theory/Book_Repo_Eval_Edition
+
+  governance:
+    root: /docs/Governance_Substrate_Model
+    analyzer: /docs/Governance_Substrate_Model/Analyzer
+
+  consciousness:
+    root: /docs/consciousness_substrate_model
+
+  resonance:
+    root: /docs/resonance
+    atlas: /docs/resonance_atlas
+
+  education:
+    root: /docs/education
+    qna_atlas: /docs/education/QnA_Atlas
+    ebooks: /docs/education/ebooks
+
+  labs:
+    root: /docs/labs
+    applied: /docs/labs/applied
+    foundations: /docs/labs/foundations
+    symbolic: /docs/labs/symbolic_structures
+    quantum: /docs/labs/quantum_extensions
+    mythic: /docs/labs/mythic_symbolic
+
+validators:
+  - /docs/validators
+  - /docs/validation
+  - /docs/regime_blindness_checklist
+  - /docs/Resilience_Checker
+
+workflows:
+  - .github/workflows
+  - .github/ISSUE_TEMPLATE
+
 repo_structure:
   - .github/
-    - ISSUE_TEMPLATE/
-    - workflows/
   - docs/
-    - __pycache__/
-    - _template/
-    - assets/
-      - scripts/
-      - styles
-    - badges/
-    - configs/
-      - lenses/
-      - manifests/
-    - CoConsciousness/
-    - curriculum/
-    - data/
-    - engine/
-    - equations/
-    - glyphs/
-    - Hippocampus/
-    - honor_roll/
-    - images/
-    - labs/
-    - metadata/
-    - onboarding/
-    - papers/
-    - Resotectors/
-    - rituals/
-    - scripts/
-    - styles/
-    - tests/
-    - themes/
-    - validation/
-    - validators/
-    - VCG/
-    - VictorG/
-    - visual_language/
+  - assets/
+  - scripts/
+  - styles/
+  - badges/
+  - configs/
+  - lenses/
+  - manifests/
+  - curriculum/
+  - data/
+  - engine/
+  - equations/
+  - glyphs/
+  - honor_roll/
+  - images/
+  - labs/
+  - metadata/
+  - onboarding/
+  - papers/
+  - rituals/
+  - tests/
+  - themes/
+  - validation/
+  - validators/
+  - visual_language/
   - README.md
   - LICENSE
   - CONTRIBUTING.md
