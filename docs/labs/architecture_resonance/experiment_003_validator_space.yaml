@@ -1,4 +1,3 @@
----
 id: experiment_003
 title: Validator Space Resonance Mapping
 structure: Scoring Chamber
@@ -15,5 +14,5 @@ dimensional_alignment:
   freqi: 0.94
 glyph_overlay: validator_space_overlay_01.svg
 notes: >
-  This experiment maps validator logic to spatial glyphs.
-  High coherence triggers badge logic and remix lineage updates.
+  This experiment maps validator logic to spatial glyphs. High coherence
+  triggers badge logic and remix lineage updates.
