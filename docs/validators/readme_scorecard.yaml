@@ -1,3 +1,4 @@
+---
 validator_id: readme_integrity
 title: README Integrity Score
 description: Tracks contributor alignment with README structure, link health, and glyphic layout.
