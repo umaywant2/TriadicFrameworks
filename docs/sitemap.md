@@ -520,7 +520,3 @@ Are you ready to help further resonance and dimensional science? That's what thi
 https://zenodo.org/communities/vst
 https://zenodo.org/communities/vst/curation-policy
 ```
-
-                              ---
-
-🤖 AI‑Ready Module • TriadicFrameworks
