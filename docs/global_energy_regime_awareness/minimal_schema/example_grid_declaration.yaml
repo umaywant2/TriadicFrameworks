@@ -6,10 +6,10 @@ grid:
 
 energy_regime_awareness:
   declared_regime: "steady_state_generation"
-  operating_envelope: "Normal demand patterns, sufficient reserve margins, stable transmission topology"
+  operating_envelope: "Normal demand, adequate reserves, stable transmission"
   validity: "valid"
-  boundary_semantics: "Rising congestion or reserve depletion may indicate approach to peak demand regime"
-  non_catastrophic_exit: "Grid remains operational while assumptions are reassessed and regime is re-declared"
+  boundary_semantics: "Congestion or reserve loss signals shift toward peak demand"
+  non_catastrophic_exit: "Grid stays online while assumptions are reviewed and regime updated"
 
 scada:
   monitoring_level: standard
