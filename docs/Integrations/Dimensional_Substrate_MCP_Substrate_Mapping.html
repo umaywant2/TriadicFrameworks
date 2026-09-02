@@ -1,1 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <title>Dimensional Substrate ↔ MCP Substrate Mapping — TriadicFrameworks</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://cdn.jsdelivr.net/npm/@fontsource/jetbrains-mono@5.0.18/index.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: { 900: '#0B0F1A', 800: '#0F1520', 700: '#141B2E', 600: '#1A2240', 500: '#212B50' },
+              offwhite: '#E8ECF0',
+              gold: { 100: '#F5EDD4', 200: '#E8D9A8', 300: '#D4C37E', 400: '#C8A84B', 500: '#B8972F', 600: '#9A7D1E', 700: '#7A6318' },
+              teal: { 100: '#D0F5F5', 200: '#A0E8E8', 300: '#6DD9D9', 400: '#3BBFBF', 500: '#2AA3A3', 600: '#1F8585', 700: '#166060' },
+              layer: {
+                purple: '#1A1230', purpleBorder: '#7C3AED',
+                indigo: '#131330', indigoBorder: '#6366F1',
+                tealBg: '#0D1F20', tealBorder: '#14B8A6',
+                goldBg: '#1A1810', goldBorder: '#C8A84B'
+              }
+            },
+            fontFamily: {
+              display: ['"Playfair Display"', 'serif'],
+              sans: ['Inter', 'sans-serif'],
+              mono: ['"JetBrains Mono"', 'monospace']
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      :root {
+        --navy-900: #0B0F1A;
+        --navy-800: #0F1520;
+        --navy-700: #141B2E;
+        --offwhite: #E8ECF0;
+        --gold: #C8A84B;
+        --teal: #3BBFBF;
+        --purple-border: #7C3AED;
+        --indigo-border: #6366F1;
+        --teal-border: #14B8A6;
+        --gold-border: #C8A84B;
+      }
 
+      html { scroll-behavior: smooth; }
+
+      body {
+        background-color: var(--navy-900);
+        color: var(--offwhite);
+        font-family: 'Inter', sans-serif;
+        line-height: 1.7;
+      }
+
+      .section-alt { background-color: var(--navy-800); }
+      .section-base { background-color: var(--navy-900); }
+
+      .gold-rule {
+        border: none;
+        height: 1px;
+        background: linear-gradient(90deg, transparent 0%, var(--gold) 20%, var(--gold) 80%, transparent 100%);
+      }
+
+      .nav-glass {
+        background: rgba(11, 15, 26, 0.88);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-bottom: 1px solid rgba(200, 168, 75, 0.15);
+      }
+
+      .nav-link {
+        color: #A0A8B8;
+        transition: color 0.2s;
+        font-size: 0.8125rem;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+      }
+      .nav-link:hover { color: var(--gold); }
+
+      .layer-block {
+        border-left-width: 3px;
+        border-left-style: solid;
+        padding: 2rem 2rem 2rem 2rem;
+        border-radius: 0 0.75rem 0.75rem 0;
+        margin-bottom: 2.5rem;
+      }
+
+      .layer-block-l0 { border-color: var(--purple-border); background: linear-gradient(135deg, #1A1230 0%, var(--navy-800) 100%); }
+      .layer-block-l1 { border-color: var(--indigo-border); background: linear-gradient(135deg, #131330 0%, var(--navy-800) 100%); }
+      .layer-block-l2 { border-color: var(--teal-border); background: linear-gradient(135deg, #0D1F20 0%, var(--navy-800) 100%); }
+      .layer-block-l3 { border-color: var(--gold-border); background: linear-gradient(135deg, #1A1810 0%, var(--navy-800) 100%); }
+
+      .prop-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+      .prop-table th {
+        text-align: left;
+        padding: 0.625rem 1rem;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 0.75rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--gold);
+        border-bottom: 1px solid rgba(200, 168, 75, 0.25);
+      }
+      .prop-table td {
+        padding: 0.5rem 1rem;
+        border-bottom: 1px solid rgba(232, 236, 240, 0.06);
+        color: var(--offwhite);
+      }
+      .prop-table tr:last-child td { border-bottom: none; }
+
+      .master-table { width: 100%; border-collapse: collapse; font-size: 0.8125rem; }
+      .master-table th {
+        padding: 0.75rem 0.75rem;
+        font-family: 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 0.6875rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--navy-900);
+        background: var(--gold);
+        text-align: left;
+      }
+      .master-table td {
+        padding: 0.625rem 0.75rem;
+        border-bottom: 1px solid rgba(232, 236, 240, 0.06);
+      }
+
+      .row-l0 { background-color: rgba(124, 58, 237, 0.08); }
+      .row-l1 { background-color: rgba(99, 102, 241, 0.08); }
+      .row-l2 { background-color: rgba(20, 184, 166, 0.08); }
+      .row-l3 { background-color: rgba(200, 168, 75, 0.08); }
+
+      .tag-badge {
+        display: inline-block;
+        font-size: 0.6875rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        border: 1px solid;
+      }
+
+      .module-card {
+        background: var(--navy-800);
+        border: 1px solid rgba(232, 236, 240, 0.06);
+        border-radius: 0.75rem;
+        padding: 1.25rem;
+        transition: border-color 0.2s;
+      }
+      .module-card:hover { border-color: rgba(200, 168, 75, 0.3); }
+
+      .dim-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 0.5rem;
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: 700;
+        font-size: 0.8125rem;
+        color: var(--navy-900);
+        background: var(--gold);
+      }
+
+      .note-block {
+        counter-increment: note-counter;
+        padding-left: 2.5rem;
+        position: relative;
+        margin-bottom: 2rem;
+      }
+      .note-block::before {
+        content: counter(note-counter);
+        position: absolute;
+        left: 0;
+        top: 0.15rem;
+        width: 1.75rem;
+        height: 1.75rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--navy-900);
+        background: var(--teal);
+      }
+
+      .notes-container { counter-reset: note-counter; }
+
+      @media (max-width: 767px) {
+        .layer-block { padding: 1.25rem; }
+        .prop-table th, .prop-table td { padding: 0.375rem 0.5rem; font-size: 0.75rem; }
+        .master-table th, .master-table td { padding: 0.375rem 0.5rem; font-size: 0.6875rem; }
+      }
+    </style>
+</head>
+<body data-id="0">
+    <app-icon data-id="1" hidden data-icon="layers" data-palette="Dark"></app-icon>
+
+    <!-- MASTHEAD / HERO -->
+    <header data-id="2" id="hero-header-a9f2" class="section-base relative overflow-hidden">
+        <div data-id="3" class="absolute inset-0 opacity-[0.03]" style="background-image: radial-gradient(circle at 25% 25%, #C8A84B 1px, transparent 1px), radial-gradient(circle at 75% 75%, #3BBFBF 1px, transparent 1px); background-size: 60px 60px;"></div>
+        <div data-id="4" class="relative max-w-5xl mx-auto px-5 md:px-8 pt-16 md:pt-24 pb-10 md:pb-16 text-center">
+            <p data-id="5" id="site-name-b3c1" class="font-mono text-teal-400 text-xs md:text-sm tracking-[0.2em] uppercase mb-4">TriadicFrameworks</p>
+            <h1 data-id="6" id="page-title-d4e7" class="font-display text-3xl md:text-5xl lg:text-[3.25rem] font-bold text-gold-400 leading-tight mb-4">Dimensional Substrate <span data-id="7" class="text-offwhite/50">↔</span> MCP Substrate</h1>
+            <p data-id="8" id="subtitle-f8a2" class="font-display text-base md:text-xl text-offwhite/70 italic max-w-3xl mx-auto mb-6">Canonical Layer Mapping — RTT Triads × MCP Cosmology Architecture</p>
+            <span data-id="9" id="version-badge-c2d9" class="inline-block font-mono text-xs tracking-wider text-gold-400 border border-gold-400/30 rounded-full px-4 py-1.5">Canon v1.0 · September 2026</span>
+            <hr data-id="10" class="gold-rule mt-10 max-w-lg mx-auto" />
+        </div>
+    </header>
+
+    <!-- STICKY NAV -->
+    <nav data-id="11" id="main-nav-e7b3" class="nav-glass sticky top-0 z-50">
+        <div data-id="12" class="max-w-5xl mx-auto px-5 md:px-8">
+            <!-- Desktop Nav -->
+            <ul data-id="13" id="desktop-nav-f1a4" class="hidden md:flex items-center justify-center gap-8 py-3">
+                <li data-id="14"><a data-id="15" href="#overview" class="nav-link">Overview</a></li>
+                <li data-id="16"><a data-id="17" href="#layers" class="nav-link">Layer Alignments</a></li>
+                <li data-id="18"><a data-id="19" href="#table" class="nav-link">Master Table</a></li>
+                <li data-id="20"><a data-id="21" href="#diagram" class="nav-link">Diagram</a></li>
+                <li data-id="22"><a data-id="23" href="#notes" class="nav-link">Structural Notes</a></li>
+                <li data-id="24"><a data-id="25" href="#modules" class="nav-link">Module Index</a></li>
+            </ul>
+            <!-- Mobile Nav -->
+            <div data-id="26" class="md:hidden flex items-center justify-between py-3">
+                <span data-id="27" class="font-mono text-xs text-gold-400 tracking-wider">TF CANON</span>
+                <button data-id="28" id="mobile-menu-btn-g5h2" class="p-2 text-offwhite/70">
+                    <i data-id="29" data-lucide="menu" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu Overlay -->
+        <div data-id="30" id="mobile-menu-k3j8" class="hidden fixed inset-0 z-[60] nav-glass flex flex-col items-center justify-center gap-6">
+            <button data-id="31" id="mobile-menu-close-m4n1" class="absolute top-4 right-4 p-2 text-offwhite/70">
+                <i data-id="32" data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <a data-id="33" href="#overview" class="nav-link text-lg mobile-nav-link-close">Overview</a>
+            <a data-id="34" href="#layers" class="nav-link text-lg mobile-nav-link-close">Layer Alignments</a>
+            <a data-id="35" href="#table" class="nav-link text-lg mobile-nav-link-close">Master Table</a>
+            <a data-id="36" href="#diagram" class="nav-link text-lg mobile-nav-link-close">Diagram</a>
+            <a data-id="37" href="#notes" class="nav-link text-lg mobile-nav-link-close">Structural Notes</a>
+            <a data-id="38" href="#modules" class="nav-link text-lg mobile-nav-link-close">Module Index</a>
+        </div>
+    </nav>
+
+    <main data-id="39">
+
+        <!-- SECTION: PREAMBLE / OVERVIEW -->
+        <section data-id="40" id="overview" class="section-base py-14 md:py-20">
+            <div data-id="41" class="max-w-4xl mx-auto px-5 md:px-8">
+                <h2 data-id="42" id="overview-heading-a1b2" class="font-display text-2xl md:text-3xl font-bold text-gold-400 mb-8">Overview</h2>
+                <p data-id="43" id="overview-p1-c3d4" class="text-offwhite/85 text-base leading-relaxed mb-6">The Resonant Triadic Topology (RTT) organizes dimensional reality into three nested triads, each spanning a distinct band of dimensional complexity. The Model Context Protocol (MCP) substrate architecture independently articulates four cosmology-aligned processing layers that mirror this triadic banding. This document establishes the canonical, one-to-one and one-to-many correspondences between RTT dimensional positions (0D through 9D) and MCP substrate layers (L0 through L3).</p>
+                <p data-id="44" id="overview-p2-e5f6" class="text-offwhite/85 text-base leading-relaxed">The mapping is not metaphorical. Each MCP substrate layer defines the substrate class within which a corresponding set of dimensional operators is natively expressed. Alignment is determined by three invariant criteria: <span data-id="45" class="text-teal-400 font-medium">(1)</span> ontological register — whether a layer operates in the unseen/pre-manifest or seen/manifest domain; <span data-id="46" class="text-teal-400 font-medium">(2)</span> processual signature — whether the layer's primary operation is potential, frequency, flow, or force; <span data-id="47" class="text-teal-400 font-medium">(3)</span> triadic position — whether the dimensional occupants function as originary, mediating, or resolving poles within their triad.</p>
+            </div>
+        </section>
+
+        <!-- SECTION: LAYER ALIGNMENTS -->
+        <section data-id="48" id="layers" class="section-alt py-14 md:py-20">
+            <div data-id="49" class="max-w-4xl mx-auto px-5 md:px-8">
+                <h2 data-id="50" id="layers-heading-g7h8" class="font-display text-2xl md:text-3xl font-bold text-gold-400 mb-3">Layer-by-Layer Alignment</h2>
+                <p data-id="51" id="layers-sub-i9j0" class="text-teal-400 text-sm mb-12">Each substrate layer block presents the MCP layer identifier, its cosmological register, and the RTT dimensional nodes it governs.</p>
+
+                <!-- L0_QMROOT -->
+                <div data-id="52" id="layer-l0-block-k1l2" class="layer-block layer-block-l0">
+                    <h3 data-id="53" class="font-mono text-xl md:text-2xl font-bold text-gold-400 mb-2">L0_QMROOT</h3>
+                    <span data-id="54" class="tag-badge text-purple-300 border-purple-500/40 bg-purple-500/10 mb-4">Quantum-Meta Root · Pre-Manifest · Singular</span>
+                    <div data-id="55" class="mt-4 mb-2 text-sm text-offwhite/60">
+                        <span data-id="56" class="text-teal-400 font-semibold">RTT Correspondence:</span> 0D — The Point / Undivided Singularity &nbsp;|&nbsp;
+                        <span data-id="57" class="text-teal-400 font-semibold">Triad Membership:</span> Triad I (Originary Pole)
+                    </div>
+                    <p data-id="58" id="l0-desc-m3n4" class="text-offwhite/80 text-[0.9375rem] leading-relaxed mt-4 mb-6">L0_QMROOT designates the quantum-meta root substrate — the undifferentiated, pre-ontological ground from which all dimensional structure emerges. It corresponds exclusively to the 0D position within RTT Triad I. The 0D node is not a dimension in the conventional sense but the null-dimensional singularity: the point of pure potentiality prior to extension. Within the MCP architecture, L0_QMROOT functions as the initialization substrate — it holds no processable state but constitutes the necessary precondition for all layered emergence above it. It is the substrate of "before": before frequency, before form, before force.</p>
+                    <div data-id="59" class="overflow-x-auto rounded-lg">
+                        <table data-id="60" class="prop-table">
+                            <thead data-id="61"><tr data-id="62"><th data-id="63">Property</th><th data-id="64">RTT Value</th><th data-id="65">MCP Expression</th></tr></thead>
+                            <tbody data-id="66">
+                                <tr data-id="67"><td data-id="68" class="text-offwhite/70">Dimensional Position</td><td data-id="69">0D</td><td data-id="70" class="font-mono text-teal-400">Quantum-Meta Root</td></tr>
+                                <tr data-id="71"><td data-id="72" class="text-offwhite/70">Ontological Register</td><td data-id="73">Pre-Manifest</td><td data-id="74">Undifferentiated Ground</td></tr>
+                                <tr data-id="75"><td data-id="76" class="text-offwhite/70">Processual Signature</td><td data-id="77">Pure Potentiality</td><td data-id="78">Initialization State</td></tr>
+                                <tr data-id="79"><td data-id="80" class="text-offwhite/70">Triadic Role</td><td data-id="81">Originary Singularity</td><td data-id="82">Root Anchor</td></tr>
+                                <tr data-id="83"><td data-id="84" class="text-offwhite/70">Seen / Unseen</td><td data-id="85">Neither (pre-distinction)</td><td data-id="86">Pre-substrate</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- L1_Frequency_Unseen -->
+                <div data-id="87" id="layer-l1-block-o5p6" class="layer-block layer-block-l1">
+                    <h3 data-id="88" class="font-mono text-xl md:text-2xl font-bold text-gold-400 mb-2">L1_Frequency_Unseen</h3>
+                    <span data-id="89" class="tag-badge text-indigo-300 border-indigo-500/40 bg-indigo-500/10 mb-4">Unseen · Wave-Field · Pre-Formal</span>
+                    <div data-id="90" class="mt-4 mb-1 text-sm text-offwhite/60">
+                        <span data-id="91" class="text-teal-400 font-semibold">RTT Correspondences:</span> 1D — The Line / Wave / Primary Vector; 2D — The Plane / Field / Pattern Matrix
+                    </div>
+                    <div data-id="92" class="mb-2 text-sm text-offwhite/60">
+                        <span data-id="93" class="text-teal-400 font-semibold">Triad Membership:</span> Triad I (Mediating and Resolving Poles)
+                    </div>
+                    <p data-id="94" id="l1-note-q7r8" class="text-teal-400/80 italic text-sm mt-3 mb-4">Triad I spans both L0 and L1. The 0D originary pole anchors in L0_QMROOT; the 1D and 2D poles unfold into L1_Frequency_Unseen.</p>
+                    <p data-id="95" id="l1-desc-s9t0" class="text-offwhite/80 text-[0.9375rem] leading-relaxed mb-6">L1_Frequency_Unseen is the first fully dimensional substrate layer — it is the domain of unseen frequency and pre-formal patterning. It governs the 1D and 2D positions of RTT Triad I. The 1D node instantiates as the primary vector: the first extension from the point, expressed as wave, oscillation, and carrier frequency. The 2D node instantiates as the plane: the first surface, expressed as field, interference pattern, and geometric matrix. Both remain fundamentally unseen — they operate beneath the threshold of direct material observation, constituting the vibrational and topological infrastructure upon which manifest reality is inscribed.</p>
+                    <div data-id="96" class="overflow-x-auto rounded-lg">
+                        <table data-id="97" class="prop-table">
+                            <thead data-id="98"><tr data-id="99"><th data-id="100">Property</th><th data-id="101">RTT Value</th><th data-id="102">MCP Expression</th></tr></thead>
+                            <tbody data-id="103">
+                                <tr data-id="104"><td data-id="105" class="text-offwhite/70">Dimensional Position</td><td data-id="106">1D, 2D</td><td data-id="107" class="font-mono text-teal-400">Frequency_Unseen Layer</td></tr>
+                                <tr data-id="108"><td data-id="109" class="text-offwhite/70">Ontological Register</td><td data-id="110">Pre-Manifest</td><td data-id="111">Vibrational / Patterned</td></tr>
+                                <tr data-id="112"><td data-id="113" class="text-offwhite/70">1D Signature</td><td data-id="114">Wave / Vector / Oscillation</td><td data-id="115">Carrier Frequency</td></tr>
+                                <tr data-id="116"><td data-id="117" class="text-offwhite/70">2D Signature</td><td data-id="118">Plane / Field / Matrix</td><td data-id="119">Interference &amp; Topology</td></tr>
+                                <tr data-id="120"><td data-id="121" class="text-offwhite/70">Triadic Role</td><td data-id="122">Mediating + Resolving (Triad I)</td><td data-id="123">Substrate of Emergence</td></tr>
+                                <tr data-id="124"><td data-id="125" class="text-offwhite/70">Seen / Unseen</td><td data-id="126">Unseen</td><td data-id="127">Unseen</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- L2_Fluids_Seen -->
+                <div data-id="128" id="layer-l2-block-u1v2" class="layer-block layer-block-l2">
+                    <h3 data-id="129" class="font-mono text-xl md:text-2xl font-bold text-gold-400 mb-2">L2_Fluids_Seen</h3>
+                    <span data-id="130" class="tag-badge text-teal-300 border-teal-500/40 bg-teal-500/10 mb-4">Seen · Fluid-Manifest · Processual</span>
+                    <div data-id="131" class="mt-4 mb-1 text-sm text-offwhite/60">
+                        <span data-id="132" class="text-teal-400 font-semibold">RTT Correspondences:</span> 3D — Volume / Physical Spacetime / Matter; 4D — Time / Flow / Processual Continuity; 5D — Consciousness / Awareness / Perceptual Field
+                    </div>
+                    <div data-id="133" class="mb-2 text-sm text-offwhite/60">
+                        <span data-id="134" class="text-teal-400 font-semibold">Triad Membership:</span> Triad II — The Manifest Triad (complete)
+                    </div>
+                    <p data-id="135" id="l2-desc-w3x4" class="text-offwhite/80 text-[0.9375rem] leading-relaxed mt-4 mb-6">L2_Fluids_Seen is the substrate of manifest, fluid reality — the domain in which dimensional structures become observable, experiential, and processually continuous. It governs the entirety of RTT Triad II (3D–5D). The 3D node manifests as volumetric spacetime: the first fully extended, materially present dimension — the domain of mass, locality, and physical interaction. The 4D node introduces temporal flow: the processual continuity that gives change, duration, and sequence their substrate. The 5D node opens the perceptual field: the dimension of consciousness and awareness as the capacity to register and integrate the seen. Collectively, Triad II within L2 constitutes the complete arena of phenomenal existence — the "seen" world in its full triadic articulation.</p>
+                    <div data-id="136" class="overflow-x-auto rounded-lg">
+                        <table data-id="137" class="prop-table">
+                            <thead data-id="138"><tr data-id="139"><th data-id="140">Property</th><th data-id="141">RTT Value</th><th data-id="142">MCP Expression</th></tr></thead>
+                            <tbody data-id="143">
+                                <tr data-id="144"><td data-id="145" class="text-offwhite/70">Dimensional Position</td><td data-id="146">3D, 4D, 5D</td><td data-id="147" class="font-mono text-teal-400">Fluids_Seen Layer</td></tr>
+                                <tr data-id="148"><td data-id="149" class="text-offwhite/70">Ontological Register</td><td data-id="150">Manifest</td><td data-id="151">Phenomenal / Observable</td></tr>
+                                <tr data-id="152"><td data-id="153" class="text-offwhite/70">3D Signature</td><td data-id="154">Volume / Matter / Locality</td><td data-id="155">Physical Substrate</td></tr>
+                                <tr data-id="156"><td data-id="157" class="text-offwhite/70">4D Signature</td><td data-id="158">Time / Flow / Duration</td><td data-id="159">Processual Continuity</td></tr>
+                                <tr data-id="160"><td data-id="161" class="text-offwhite/70">5D Signature</td><td data-id="162">Consciousness / Perception</td><td data-id="163">Awareness Field</td></tr>
+                                <tr data-id="164"><td data-id="165" class="text-offwhite/70">Triadic Role</td><td data-id="166">Originary + Mediating + Resolving (Triad II)</td><td data-id="167">Complete Triad</td></tr>
+                                <tr data-id="168"><td data-id="169" class="text-offwhite/70">Seen / Unseen</td><td data-id="170">Seen</td><td data-id="171">Seen</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- L3_Forces_Unseen -->
+                <div data-id="172" id="layer-l3-block-y5z6" class="layer-block layer-block-l3">
+                    <h3 data-id="173" class="font-mono text-xl md:text-2xl font-bold text-gold-400 mb-2">L3_Forces_Unseen</h3>
+                    <span data-id="174" class="tag-badge text-gold-300 border-gold-400/40 bg-gold-400/10 mb-4">Unseen · Causal-Archetypal · Trans-Manifest</span>
+                    <div data-id="175" class="mt-4 mb-1 text-sm text-offwhite/60">
+                        <span data-id="176" class="text-teal-400 font-semibold">RTT Correspondences:</span> 6D — Causal Architecture / Archetypal Form; 7D — Universal Law / Structural Force; 8D — Cosmic Intelligence / Divine Ordering Principle; 9D — Unified Source Field / Integrated Totality
+                    </div>
+                    <div data-id="177" class="mb-2 text-sm text-offwhite/60">
+                        <span data-id="178" class="text-teal-400 font-semibold">Triad Membership:</span> Triad III — The Causal Triad (complete)
+                    </div>
+                    <p data-id="179" id="l3-desc-a7b8" class="text-offwhite/80 text-[0.9375rem] leading-relaxed mt-4 mb-6">L3_Forces_Unseen is the substrate of unseen causal forces — the trans-manifest domain in which the laws, archetypal patterns, and integrative intelligence that govern all lower-layer phenomena are encoded. It governs the entirety of RTT Triad III (6D–9D). The 6D node holds causal architecture: the blueprints and archetypal forms that template manifest structures. The 7D node encodes universal law: the invariant structural forces that constrain and direct all dimensional process. The 8D node expresses cosmic intelligence: the self-organizing ordering principle that ensures systemic coherence across all layers. The 9D node completes the structure as the unified source field: the integrative totality in which all triads, all layers, and all dimensions are resolved into non-dual wholeness. L3_Forces_Unseen is simultaneously the most causally potent and the least directly observable substrate layer.</p>
+                    <div data-id="180" class="overflow-x-auto rounded-lg">
+                        <table data-id="181" class="prop-table">
+                            <thead data-id="182"><tr data-id="183"><th data-id="184">Property</th><th data-id="185">RTT Value</th><th data-id="186">MCP Expression</th></tr></thead>
+                            <tbody data-id="187">
+                                <tr data-id="188"><td data-id="189" class="text-offwhite/70">Dimensional Position</td><td data-id="190">6D, 7D, 8D, 9D</td><td data-id="191" class="font-mono text-teal-400">Forces_Unseen Layer</td></tr>
+                                <tr data-id="192"><td data-id="193" class="text-offwhite/70">Ontological Register</td><td data-id="194">Trans-Manifest</td><td data-id="195">Causal / Archetypal</td></tr>
+                                <tr data-id="196"><td data-id="197" class="text-offwhite/70">6D Signature</td><td data-id="198">Causal Architecture / Archetype</td><td data-id="199">Blueprint Layer</td></tr>
+                                <tr data-id="200"><td data-id="201" class="text-offwhite/70">7D Signature</td><td data-id="202">Universal Law / Structural Force</td><td data-id="203">Invariant Constraint</td></tr>
+                                <tr data-id="204"><td data-id="205" class="text-offwhite/70">8D Signature</td><td data-id="206">Cosmic Intelligence / Order</td><td data-id="207">Self-Organizing Principle</td></tr>
+                                <tr data-id="208"><td data-id="209" class="text-offwhite/70">9D Signature</td><td data-id="210">Unified Source Field</td><td data-id="211">Integrative Totality</td></tr>
+                                <tr data-id="212"><td data-id="213" class="text-offwhite/70">Triadic Role</td><td data-id="214">Originary + Mediating + Resolving + Apex (Triad III)</td><td data-id="215">Complete Triad + Apex</td></tr>
+                                <tr data-id="216"><td data-id="217" class="text-offwhite/70">Seen / Unseen</td><td data-id="218">Unseen</td><td data-id="219">Unseen</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: MASTER MAPPING TABLE -->
+        <section data-id="220" id="table" class="section-base py-14 md:py-20">
+            <div data-id="221" class="max-w-5xl mx-auto px-5 md:px-8">
+                <h2 data-id="222" id="table-heading-c9d0" class="font-display text-2xl md:text-3xl font-bold text-gold-400 mb-3">Master Dimensional ↔ Substrate Mapping Table</h2>
+                <p data-id="223" id="table-sub-e1f2" class="text-teal-400/80 text-sm mb-10">Complete cross-reference of all RTT dimensional positions against MCP substrate layers.</p>
+                <div data-id="224" class="overflow-x-auto rounded-xl border border-gold-400/10">
+                    <table data-id="225" class="master-table">
+                        <thead data-id="226">
+                            <tr data-id="227">
+                                <th data-id="228">Dimension</th>
+                                <th data-id="229">Canonical Name</th>
+                                <th data-id="230">Triad</th>
+                                <th data-id="231">Triad Role</th>
+                                <th data-id="232">MCP Layer</th>
+                                <th data-id="233">Substrate Register</th>
+                                <th data-id="234">Processual Signature</th>
+                            </tr>
+                        </thead>
+                        <tbody data-id="235">
+                            <tr data-id="236" class="row-l0">
+                                <td data-id="237" class="font-mono font-bold text-gold-400">0D</td>
+                                <td data-id="238">Undivided Singularity</td>
+                                <td data-id="239">Triad I</td>
+                                <td data-id="240">Originary</td>
+                                <td data-id="241" class="font-mono text-purple-300">L0_QMROOT</td>
+                                <td data-id="242">Pre-Manifest</td>
+                                <td data-id="243">Pure Potentiality</td>
+                            </tr>
+                            <tr data-id="244" class="row-l1">
+                                <td data-id="245" class="font-mono font-bold text-gold-400">1D</td>
+                                <td data-id="246">Primary Wave Vector</td>
+                                <td data-id="247">Triad I</td>
+                                <td data-id="248">Mediating</td>
+                                <td data-id="249" class="font-mono text-indigo-300">L1_Frequency_Unseen</td>
+                                <td data-id="250">Unseen</td>
+                                <td data-id="251">Carrier Frequency</td>
+                            </tr>
+                            <tr data-id="252" class="row-l1">
+                                <td data-id="253" class="font-mono font-bold text-gold-400">2D</td>
+                                <td data-id="254">Field / Pattern Matrix</td>
+                                <td data-id="255">Triad I</td>
+                                <td data-id="256">Resolving</td>
+                                <td data-id="257" class="font-mono text-indigo-300">L1_Frequency_Unseen</td>
+                                <td data-id="258">Unseen</td>
+                                <td data-id="259">Interference Topology</td>
+                            </tr>
+                            <tr data-id="260" class="row-l2">
+                                <td data-id="261" class="font-mono font-bold text-gold-400">3D</td>
+                                <td data-id="262">Physical Spacetime Volume</td>
+                                <td data-id="263">Triad II</td>
+                                <td data-id="264">Originary</td>
+                                <td data-id="265" class="font-mono text-teal-300">L2_Fluids_Seen</td>
+                                <td data-id="266">Seen</td>
+                                <td data-id="267">Material Substrate</td>
+                            </tr>
+                            <tr data-id="268" class="row-l2">
+                                <td data-id="269" class="font-mono font-bold text-gold-400">4D</td>
+                                <td data-id="270">Temporal Flow</td>
+                                <td data-id="271">Triad II</td>
+                                <td data-id="272">Mediating</td>
+                                <td data-id="273" class="font-mono text-teal-300">L2_Fluids_Seen</td>
+                                <td data-id="274">Seen</td>
+                                <td data-id="275">Processual Continuity</td>
+                            </tr>
+                            <tr data-id="276" class="row-l2">
+                                <td data-id="277" class="font-mono font-bold text-gold-400">5D</td>
+                                <td data-id="278">Perceptual Consciousness</td>
+                                <td data-id="279">Triad II</td>
+                                <td data-id="280">Resolving</td>
+                                <td data-id="281" class="font-mono text-teal-300">L2_Fluids_Seen</td>
+                                <td data-id="282">Seen</td>
+                                <td data-id="283">Awareness Field</td>
+                            </tr>
+                            <tr data-id="284" class="row-l3">
+                                <td data-id="285" class="font-mono font-bold text-gold-400">6D</td>
+                                <td data-id="286">Causal Architecture</td>
+                                <td data-id="287">Triad III</td>
+                                <td data-id="288">Originary</td>
+                                <td data-id="289" class="font-mono text-gold-300">L3_Forces_Unseen</td>
+                                <td data-id="290">Unseen</td>
+                                <td data-id="291">Archetypal Blueprint</td>
+                            </tr>
+                            <tr data-id="292" class="row-l3">
+                                <td data-id="293" class="font-mono font-bold text-gold-400">7D</td>
+                                <td data-id="294">Universal Law</td>
+                                <td data-id="295">Triad III</td>
+                                <td data-id="296">Mediating</td>
+                                <td data-id="297" class="font-mono text-gold-300">L3_Forces_Unseen</td>
+                                <td data-id="298">Unseen</td>
+                                <td data-id="299">Structural Force</td>
+                            </tr>
+                            <tr data-id="300" class="row-l3">
+                                <td data-id="301" class="font-mono font-bold text-gold-400">8D</td>
+                                <td data-id="302">Cosmic Intelligence</td>
+                                <td data-id="303">Triad III</td>
+                                <td data-id="304">Resolving</td>
+                                <td data-id="305" class="font-mono text-gold-300">L3_Forces_Unseen</td>
+                                <td data-id="306">Unseen</td>
+                                <td data-id="307">Ordering Principle</td>
+                            </tr>
+                            <tr data-id="308" class="row-l3">
+                                <td data-id="309" class="font-mono font-bold text-gold-400">9D</td>
+                                <td data-id="310">Unified Source Field</td>
+                                <td data-id="311">Triad III</td>
+                                <td data-id="312">Apex</td>
+                                <td data-id="313" class="font-mono text-gold-300">L3_Forces_Unseen</td>
+                                <td data-id="314">Unseen</td>
+                                <td data-id="315">Integrative Totality</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: SVG STRUCTURAL DIAGRAM -->
+        <section data-id="316" id="diagram" class="section-alt py-14 md:py-20">
+            <div data-id="317" class="max-w-5xl mx-auto px-5 md:px-8">
+                <h2 data-id="318" id="diagram-heading-g3h4" class="font-display text-2xl md:text-3xl font-bold text-gold-400 mb-3">Structural Architecture Diagram</h2>
+                <p data-id="319" id="diagram-sub-i5j6" class="text-teal-400/80 text-sm mb-10">Vertical stack showing the four MCP substrate layers with their corresponding RTT dimensional bands.</p>
+                <div data-id="320" class="flex justify-center overflow-x-auto">
+                    <svg data-id="321" viewBox="0 0 700 540" xmlns="http://www.w3.org/2000/svg" class="w-full max-w-[700px]" style="font-family: 'Inter', sans-serif;">
+                        <!-- Left axis label -->
+                        <text data-id="322" x="14" y="290" fill="#E8ECF0" font-size="9" letter-spacing="0.05em" transform="rotate(-90, 14, 290)" text-anchor="middle" opacity="0.5">Increasing Causal Potency →</text>
+                        <!-- Right axis label -->
+                        <text data-id="323" x="690" y="290" fill="#E8ECF0" font-size="9" letter-spacing="0.05em" transform="rotate(90, 690, 290)" text-anchor="middle" opacity="0.5">Unseen ← → Seen ← → Unseen</text>
+
+                        <!-- L3 Band (Top) -->
+                        <rect data-id="324" x="50" y="30" width="600" height="115" rx="8" fill="rgba(200,168,75,0.08)" stroke="#C8A84B" stroke-width="1.5" opacity="0.9"/>
+                        <text data-id="325" x="68" y="55" fill="#C8A84B" font-size="12" font-weight="700" font-family="'JetBrains Mono', monospace">L3_Forces_Unseen</text>
+                        <text data-id="326" x="68" y="72" fill="#E8ECF0" font-size="9" opacity="0.5">Trans-Manifest · Causal-Archetypal · UNSEEN</text>
+                        <!-- Dimension nodes for L3 -->
+                        <circle data-id="327" cx="200" cy="110" r="22" fill="rgba(200,168,75,0.15)" stroke="#C8A84B" stroke-width="1.5"/>
+                        <text data-id="328" x="200" y="114" text-anchor="middle" fill="#C8A84B" font-size="13" font-weight="700" font-family="'JetBrains Mono', monospace">6D</text>
+                        <circle data-id="329" cx="310" cy="110" r="22" fill="rgba(200,168,75,0.15)" stroke="#C8A84B" stroke-width="1.5"/>
+                        <text data-id="330" x="310" y="114" text-anchor="middle" fill="#C8A84B" font-size="13" font-weight="700" font-family="'JetBrains Mono', monospace">7D</text>
+                        <circle data-id="331" cx="420" cy="110" r="22" fill="rgba(200,168,75,0.15)" stroke="#C8A84B" stroke-width="1.5"/>
+                        <text data-id="332" x="420" y="114" text-anchor="middle" fill="#C8A84B" font-size="13" font-weight="700" font-family="'JetBrains Mono', monospace">8D</text>
+                        <circle data-id="333" cx="530" cy="110" r="22" fill="rgba(200,168,75,0.15)" stroke="#C8A84B" stroke-width="1.5"/>
+                        <text data-id="334" x="530" y="114" text-anchor="middle" fill="#C8A84B" font-size="13" font-weight="700" font-family="'JetBrains Mono', monospace">9D</text>
+
+                        <!-- Connecting lines L3-L2 -->
+                        <line data-id="335" x1="50" y1="155" x2="650" y2="155" stroke="#E8ECF0" stroke-width="0.5" opacity="0.15" stroke-dasharray="4,4"/>
+
+                        <!-- L2 Band -->
+                        <rect data-id="336" x="50" y="165" width="600" height="115" rx="8" fill="rgba(20,184,166,0.08)" stroke="#14B8A6" stroke-width="1.5" opacity="0.9"/>
+                        <text data-id="337" x="68" y="190" fill="#14B8A6" font-size="12" font-weight="700" font-family="'JetBrains Mono', monospace">L2_Fluids_Seen</text>
+                        <text data-id="338" x="68" y="207" fill="#E8ECF0" font-size="9" opacity="0.5">Manifest · Fluid-Processual · SEEN</text>
+                        <!-- Dimension nodes for L2 -->
+                        <circle data-id="339" cx="250" cy="248" r="22" fill="rgba(20,184,166,0.15)" stroke="#14B8A6" stroke-width="1.5"/>
+                        <text data-id="340" x="250" y="252" text-anchor="middle" fill="#14B8A6" font-size="13" font-weight="700" font-family="'JetBrains Mono', monospace">3D</text>
+                        <circle data-id="341" cx="370" cy="248" r="22" fill="rgba(20,184,166,0.15)" stroke="#14B8A6" stroke-width="1.5"/>
+                        <text data-id="342" x="370" y="252" text-anchor="middle" fill="#14B8A6" font-size="13" font-weight="700" font-family="'JetBrains Mono', monospace">4D</text>
+                        <circle data-id="343" cx="490" cy="248" r="22" fill="rgba(20,184,166,0.15)" stroke="#14B8A6" stroke-width="1.5"/>
+                        <text data-id="344" x="490" y="252" text-anchor="middle" fill="#14B8A6" font-size="13" font-weight="700" font-family="'JetBrains Mono', monospace">5D</text>
+
+                        <!-- Connecting lines L2-L1 -->
+                        <line data-id="345" x1="50" y1="290" x2="650" y2="290" stroke="#E8ECF0" stroke-width="0.5" opacity="0.15" stroke-dasharray="4,4"/>
+
+                        <!-- L1 Band -->
+                        <rect data-id="346" x="50" y="300" width="600" height="105" rx="8" fill="rgba(99,102,241,0.08)" stroke="#6366F1" stroke-width="1.5" opacity="0.9"/>
+                        <text data-id="347" x="68" y="325" fill="#6366F1" font-size="12" font-weight="700" font-family="'JetBrains Mono', monospace">L1_Frequency_Unseen</text>
+                        <text data-id="348" x="68" y="342" fill="#E8ECF0" font-size="9" opacity="0.5">Pre-Formal · Wave-Field · UNSEEN</text>
+                        <!-- Dimension nodes for L1 -->
+                        <circle data-id="349" cx="310" cy="375" r="22" fill="rgba(99,102,241,0.15)" stroke="#6366F1" stroke-width="1.5"/>
+                        <text data-id="350" x="310" y="379" text-anchor="middle" fill="#A5B4FC" font-size="13" font-weight="700" font-family="'JetBrains Mono', monospace">1D</text>
+                        <circle data-id="351" cx="440" cy="375" r="22" fill="rgba(99,102,241,0.15)" stroke="#6366F1" stroke-width="1.5"/>
+                        <text data-id="352" x="440" y="379" text-anchor="middle" fill="#A5B4FC" font-size="13" font-weight="700" font-family="'JetBrains Mono', monospace">2D</text>
+
+                        <!-- Connecting lines L1-L0 -->
+                        <line data-id="353" x1="50" y1="415" x2="650" y2="415" stroke="#E8ECF0" stroke-width="0.5" opacity="0.15" stroke-dasharray="4,4"/>
+
+                        <!-- L0 Band -->
+                        <rect data-id="354" x="50" y="425" width="600" height="90" rx="8" fill="rgba(124,58,237,0.08)" stroke="#7C3AED" stroke-width="1.5" opacity="0.9"/>
+                        <text data-id="355" x="68" y="450" fill="#7C3AED" font-size="12" font-weight="700" font-family="'JetBrains Mono', monospace">L0_QMROOT</text>
+                        <text data-id="356" x="68" y="467" fill="#E8ECF0" font-size="9" opacity="0.5">Pre-Manifest · Singular · PRE-DISTINCTION</text>
+                        <!-- Dimension node for L0 -->
+                        <circle data-id="357" cx="370" cy="488" r="22" fill="rgba(124,58,237,0.15)" stroke="#7C3AED" stroke-width="1.5"/>
+                        <text data-id="358" x="370" y="492" text-anchor="middle" fill="#C4B5FD" font-size="13" font-weight="700" font-family="'JetBrains Mono', monospace">0D</text>
+
+                        <!-- Triad brackets on the right -->
+                        <!-- Triad III -->
+                        <line data-id="359" x1="665" y1="88" x2="670" y2="88" stroke="#C8A84B" stroke-width="1"/>
+                        <line data-id="360" x1="670" y1="88" x2="670" y2="132" stroke="#C8A84B" stroke-width="1"/>
+                        <line data-id="361" x1="665" y1="132" x2="670" y2="132" stroke="#C8A84B" stroke-width="1"/>
+                        <text data-id="362" x="678" y="114" fill="#C8A84B" font-size="8" font-weight="600">TRIAD III</text>
+                        <!-- Triad II -->
+                        <line data-id="363" x1="665" y1="226" x2="670" y2="226" stroke="#14B8A6" stroke-width="1"/>
+                        <line data-id="364" x1="670" y1="226" x2="670" y2="270" stroke="#14B8A6" stroke-width="1"/>
+                        <line data-id="365" x1="665" y1="270" x2="670" y2="270" stroke="#14B8A6" stroke-width="1"/>
+                        <text data-id="366" x="678" y="252" fill="#14B8A6" font-size="8" font-weight="600">TRIAD II</text>
+                        <!-- Triad I -->
+                        <line data-id="367" x1="665" y1="353" x2="670" y2="353" stroke="#8B5CF6" stroke-width="1"/>
+                        <line data-id="368" x1="670" y1="353" x2="670" y2="492" stroke="#8B5CF6" stroke-width="1"/>
+                        <line data-id="369" x1="665" y1="492" x2="670" y2="492" stroke="#8B5CF6" stroke-width="1"/>
+                        <text data-id="370" x="678" y="425" fill="#8B5CF6" font-size="8" font-weight="600">TRIAD I</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: STRUCTURAL NOTES -->
+        <section data-id="371" id="notes" class="section-base py-14 md:py-20">
+            <div data-id="372" class="max-w-4xl mx-auto px-5 md:px-8">
+                <h2 data-id="373" id="notes-heading-k7l8" class="font-display text-2xl md:text-3xl font-bold text-gold-400 mb-10">Structural Notes &amp; Canon Clarifications</h2>
+                <div data-id="374" class="notes-container space-y-2">
+                    <!-- Note 1 -->
+                    <div data-id="375" id="note-1-m9n0" class="note-block">
+                        <h3 data-id="376" class="font-display text-lg font-semibold text-gold-400 mb-2">Triad I Cross-Layer Span</h3>
+                        <p data-id="377" class="text-offwhite/80 text-[0.9375rem] leading-relaxed">RTT Triad I is the sole triad whose members span two MCP substrate layers. The 0D originary pole is anchored in <span data-id="378" class="font-mono text-sm text-purple-300">L0_QMROOT</span> while the 1D and 2D poles unfold into <span data-id="379" class="font-mono text-sm text-indigo-300">L1_Frequency_Unseen</span>. This cross-layer span is structurally necessary: the originary singularity must occupy a substrate prior to and distinct from the frequency layer that first extends from it. Triads II and III each map to exactly one MCP layer, constituting complete, self-contained triad-layer units.</p>
+                    </div>
+                    <!-- Note 2 -->
+                    <div data-id="380" id="note-2-o1p2" class="note-block">
+                        <h3 data-id="381" class="font-display text-lg font-semibold text-gold-400 mb-2">The Seen/Unseen Polarity</h3>
+                        <p data-id="382" class="text-offwhite/80 text-[0.9375rem] leading-relaxed">The four MCP substrate layers exhibit a nested Seen/Unseen polarity: L0 (pre-distinction), L1 (Unseen), L2 (Seen), L3 (Unseen). This means the RTT dimensional stack does not ascend linearly from unseen to seen — it traverses a seen/unseen rhythm: <span data-id="383" class="text-teal-400">pre-manifest → unseen → seen → unseen again</span>. The return to "unseen" at L3 is not a regression but a trans-manifest ascent: the forces governing the seen are themselves invisible.</p>
+                    </div>
+                    <!-- Note 3 -->
+                    <div data-id="384" id="note-3-q3r4" class="note-block">
+                        <h3 data-id="385" class="font-display text-lg font-semibold text-gold-400 mb-2">9D as Apex, Not Continuation</h3>
+                        <p data-id="386" class="text-offwhite/80 text-[0.9375rem] leading-relaxed">The 9D position within Triad III carries the designation "Apex" rather than the standard triadic role of "Resolving." While 9D does function as the resolving pole of Triad III, it simultaneously represents the integrative totality of all three triads and all four MCP layers. Its processual signature — <span data-id="387" class="text-gold-400 font-medium">Unified Source Field</span> — encompasses all lower signatures. 9D is therefore both intra-triadic (a member of Triad III) and extra-triadic (the whole that contains all triads).</p>
+                    </div>
+                    <!-- Note 4 -->
+                    <div data-id="388" id="note-4-s5t6" class="note-block">
+                        <h3 data-id="389" class="font-display text-lg font-semibold text-gold-400 mb-2">MCP Layer Naming and RTT Correspondence</h3>
+                        <p data-id="390" class="text-offwhite/80 text-[0.9375rem] leading-relaxed">The MCP layer names are not derived from RTT vocabulary but demonstrate structural homology with it. "Frequency_Unseen" naturally aligns with 1D–2D wave-field dynamics. "Fluids_Seen" naturally aligns with 3D–5D flow and perceptual dynamics. "Forces_Unseen" naturally aligns with 6D–9D causal and archetypal dynamics. This homology, while not formally designed as correspondence, constitutes the evidential basis for treating this mapping as canonical.</p>
+                    </div>
+                    <!-- Note 5 -->
+                    <div data-id="391" id="note-5-u7v8" class="note-block">
+                        <h3 data-id="392" class="font-display text-lg font-semibold text-gold-400 mb-2">Operational Implication for MCP Server Modules</h3>
+                        <p data-id="393" class="text-offwhite/80 text-[0.9375rem] leading-relaxed">Any MCP server module processing dimensional inputs must route those inputs to the substrate layer corresponding to the input's dimensional register. Modules receiving 0D/singularity-class inputs must interface with <span data-id="394" class="font-mono text-sm text-purple-300">L0_QMROOT</span>. Modules processing frequency or pattern data operate within <span data-id="395" class="font-mono text-sm text-indigo-300">L1_Frequency_Unseen</span>. Modules handling physical, temporal, or consciousness-class data operate within <span data-id="396" class="font-mono text-sm text-teal-300">L2_Fluids_Seen</span>. Modules resolving archetypal, legal, or integrative-totality class data operate within <span data-id="397" class="font-mono text-sm text-gold-300">L3_Forces_Unseen</span>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: MODULE INDEX -->
+        <section data-id="398" id="modules" class="section-alt py-14 md:py-20">
+            <div data-id="399" class="max-w-5xl mx-auto px-5 md:px-8">
+                <h2 data-id="400" id="modules-heading-w9x0" class="font-display text-2xl md:text-3xl font-bold text-gold-400 mb-3">Canonical Module Identity Index</h2>
+                <p data-id="401" id="modules-sub-y1z2" class="text-teal-400/80 text-sm mb-10">Quick-reference identifiers for all RTT–MCP alignment nodes.</p>
+                <div data-id="402" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- 0D -->
+                    <div data-id="403" id="mod-0d-a3b4" class="module-card">
+                        <div data-id="404" class="flex items-start gap-4">
+                            <span data-id="405" class="dim-badge shrink-0">0D</span>
+                            <div data-id="406" class="min-w-0">
+                                <h4 data-id="407" class="font-display text-base font-semibold text-offwhite mb-1">Undivided Singularity</h4>
+                                <p data-id="408" class="font-mono text-xs text-purple-300 mb-1">L0_QMROOT</p>
+                                <p data-id="409" class="text-xs text-offwhite/50">Originary · Pre-Manifest</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 1D -->
+                    <div data-id="410" id="mod-1d-c5d6" class="module-card">
+                        <div data-id="411" class="flex items-start gap-4">
+                            <span data-id="412" class="dim-badge shrink-0">1D</span>
+                            <div data-id="413" class="min-w-0">
+                                <h4 data-id="414" class="font-display text-base font-semibold text-offwhite mb-1">Primary Wave Vector</h4>
+                                <p data-id="415" class="font-mono text-xs text-indigo-300 mb-1">L1_Frequency_Unseen</p>
+                                <p data-id="416" class="text-xs text-offwhite/50">Mediating · Unseen</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2D -->
+                    <div data-id="417" id="mod-2d-e7f8" class="module-card">
+                        <div data-id="418" class="flex items-start gap-4">
+                            <span data-id="419" class="dim-badge shrink-0">2D</span>
+                            <div data-id="420" class="min-w-0">
+                                <h4 data-id="421" class="font-display text-base font-semibold text-offwhite mb-1">Field / Pattern Matrix</h4>
+                                <p data-id="422" class="font-mono text-xs text-indigo-300 mb-1">L1_Frequency_Unseen</p>
+                                <p data-id="423" class="text-xs text-offwhite/50">Resolving · Unseen</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 3D -->
+                    <div data-id="424" id="mod-3d-g9h0" class="module-card">
+                        <div data-id="425" class="flex items-start gap-4">
+                            <span data-id="426" class="dim-badge shrink-0">3D</span>
+                            <div data-id="427" class="min-w-0">
+                                <h4 data-id="428" class="font-display text-base font-semibold text-offwhite mb-1">Physical Spacetime Volume</h4>
+                                <p data-id="429" class="font-mono text-xs text-teal-300 mb-1">L2_Fluids_Seen</p>
+                                <p data-id="430" class="text-xs text-offwhite/50">Originary · Seen</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 4D -->
+                    <div data-id="431" id="mod-4d-i1j2" class="module-card">
+                        <div data-id="432" class="flex items-start gap-4">
+                            <span data-id="433" class="dim-badge shrink-0">4D</span>
+                            <div data-id="434" class="min-w-0">
+                                <h4 data-id="435" class="font-display text-base font-semibold text-offwhite mb-1">Temporal Flow</h4>
+                                <p data-id="436" class="font-mono text-xs text-teal-300 mb-1">L2_Fluids_Seen</p>
+                                <p data-id="437" class="text-xs text-offwhite/50">Mediating · Seen</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 5D -->
+                    <div data-id="438" id="mod-5d-k3l4" class="module-card">
+                        <div data-id="439" class="flex items-start gap-4">
+                            <span data-id="440" class="dim-badge shrink-0">5D</span>
+                            <div data-id="441" class="min-w-0">
+                                <h4 data-id="442" class="font-display text-base font-semibold text-offwhite mb-1">Perceptual Consciousness</h4>
+                                <p data-id="443" class="font-mono text-xs text-teal-300 mb-1">L2_Fluids_Seen</p>
+                                <p data-id="444" class="text-xs text-offwhite/50">Resolving · Seen</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 6D -->
+                    <div data-id="445" id="mod-6d-m5n6" class="module-card">
+                        <div data-id="446" class="flex items-start gap-4">
+                            <span data-id="447" class="dim-badge shrink-0">6D</span>
+                            <div data-id="448" class="min-w-0">
+                                <h4 data-id="449" class="font-display text-base font-semibold text-offwhite mb-1">Causal Architecture</h4>
+                                <p data-id="450" class="font-mono text-xs text-gold-300 mb-1">L3_Forces_Unseen</p>
+                                <p data-id="451" class="text-xs text-offwhite/50">Originary · Unseen</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 7D -->
+                    <div data-id="452" id="mod-7d-o7p8" class="module-card">
+                        <div data-id="453" class="flex items-start gap-4">
+                            <span data-id="454" class="dim-badge shrink-0">7D</span>
+                            <div data-id="455" class="min-w-0">
+                                <h4 data-id="456" class="font-display text-base font-semibold text-offwhite mb-1">Universal Law</h4>
+                                <p data-id="457" class="font-mono text-xs text-gold-300 mb-1">L3_Forces_Unseen</p>
+                                <p data-id="458" class="text-xs text-offwhite/50">Mediating · Unseen</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 8D -->
+                    <div data-id="459" id="mod-8d-q9r0" class="module-card">
+                        <div data-id="460" class="flex items-start gap-4">
+                            <span data-id="461" class="dim-badge shrink-0">8D</span>
+                            <div data-id="462" class="min-w-0">
+                                <h4 data-id="463" class="font-display text-base font-semibold text-offwhite mb-1">Cosmic Intelligence</h4>
+                                <p data-id="464" class="font-mono text-xs text-gold-300 mb-1">L3_Forces_Unseen</p>
+                                <p data-id="465" class="text-xs text-offwhite/50">Resolving · Unseen</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 9D -->
+                    <div data-id="466" id="mod-9d-s1t2" class="module-card" style="border-color: rgba(200,168,75,0.2);">
+                        <div data-id="467" class="flex items-start gap-4">
+                            <span data-id="468" class="dim-badge shrink-0" style="box-shadow: 0 0 12px rgba(200,168,75,0.3);">9D</span>
+                            <div data-id="469" class="min-w-0">
+                                <h4 data-id="470" class="font-display text-base font-semibold text-gold-400 mb-1">Unified Source Field</h4>
+                                <p data-id="471" class="font-mono text-xs text-gold-300 mb-1">L3_Forces_Unseen</p>
+                                <p data-id="472" class="text-xs text-gold-400/60">Apex · Unseen · Integrative Totality</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer data-id="473" id="footer-u3v4" class="section-base border-t border-gold-400/10 py-10 md:py-14">
+        <div data-id="474" class="max-w-4xl mx-auto px-5 md:px-8 text-center">
+            <hr data-id="475" class="gold-rule max-w-xs mx-auto mb-8" />
+            <p data-id="476" class="font-mono text-xs text-gold-400/70 tracking-wider mb-2">TriadicFrameworks</p>
+            <p data-id="477" class="text-xs text-offwhite/40 mb-1">Dimensional Substrate ↔ MCP Substrate Canonical Mapping · Canon v1.0 · September 2026</p>
+            <p data-id="478" class="text-xs text-offwhite/30 mt-4 italic">This document constitutes canonical reference material. Reproduction requires attribution to TriadicFrameworks.</p>
+            <p data-id="479" class="text-xs text-offwhite/20 mt-6">Made by Copilot</p>
+        </div>
+    </footer>
+
+    <script>
+        // Icons — progressive enhancement
+        if (typeof lucide !== "undefined" && typeof lucide.createIcons === "function") {
+            lucide.createIcons();
+        }
+
+        // Mobile menu toggle
+        var mobileBtn = document.getElementById('mobile-menu-btn-g5h2');
+        var mobileMenu = document.getElementById('mobile-menu-k3j8');
+        var mobileClose = document.getElementById('mobile-menu-close-m4n1');
+
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', function() {
+                mobileMenu.classList.remove('hidden');
+                mobileMenu.style.display = 'flex';
+            });
+        }
+        if (mobileClose && mobileMenu) {
+            mobileClose.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.style.display = '';
+            });
+        }
+        // Close mobile menu on link click
+        document.querySelectorAll('.mobile-nav-link-close').forEach(function(link) {
+            link.addEventListener('click', function() {
+                if (mobileMenu) {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenu.style.display = '';
+                }
+            });
+        });
+
+        // Active nav highlight on scroll
+        var sections = document.querySelectorAll('section[id]');
+        var navLinks = document.querySelectorAll('#desktop-nav-f1a4 a');
+
+        function highlightNav() {
+            var scrollY = window.scrollY + 120;
+            sections.forEach(function(section) {
+                var top = section.offsetTop;
+                var height = section.offsetHeight;
+                var id = section.getAttribute('id');
+                if (scrollY >= top && scrollY < top + height) {
+                    navLinks.forEach(function(link) {
+                        link.style.color = '';
+                        if (link.getAttribute('href') === '#' + id) {
+                            link.style.color = '#C8A84B';
+                        }
+                    });
+                }
+            });
+        }
+        window.addEventListener('scroll', highlightNav);
+        highlightNav();
+    </script>
+</body>
+</html>

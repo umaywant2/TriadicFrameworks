@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <title>Engine Integration Bridge — TriadicFrameworks × Unity & Unreal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bg: { DEFAULT: '#0B0F1A', alt: '#0F1520', card: '#111827', code: '#080C14' },
+                        fg: { DEFAULT: '#E8ECF0', muted: '#8B95A5', dim: '#6B7280' },
+                        gold: { DEFAULT: '#C8A84B', dark: '#A68A3A', light: '#D4BA6A' },
+                        teal: { DEFAULT: '#3BBFBF', dark: '#2A9E9E', light: '#14B8A6' },
+                        indigo: { DEFAULT: '#6366F1', dark: '#4F46E5', light: '#818CF8' },
+                        purple: { DEFAULT: '#7C3AED', dark: '#6D28D9', light: '#A78BFA' },
+                    },
+                    fontFamily: {
+                        mono: ['Fira Code', 'monospace'],
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        };
+    </script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@fontsource/fira-code@4/index.min.css" rel="stylesheet" />
+    <style>
+        :root {
+            --bg: #0B0F1A;
+            --bg-alt: #0F1520;
+            --bg-card: #111827;
+            --bg-code: #080C14;
+            --fg: #E8ECF0;
+            --fg-muted: #8B95A5;
+            --gold: #C8A84B;
+            --teal: #3BBFBF;
+            --teal-alt: #14B8A6;
+            --indigo: #6366F1;
+            --purple: #7C3AED;
+            --purple-light: #A78BFA;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--bg);
+            color: var(--fg);
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.625;
+        }
+
+        ::selection {
+            background: rgba(200,168,75,0.3);
+            color: #fff;
+        }
+
+        .font-serif { font-family: 'Playfair Display', Georgia, serif; }
+        .font-mono { font-family: 'Fira Code', monospace; }
+
+        /* Glassmorphism nav */
+        .glass-nav {
+            background: rgba(11,15,26,0.82);
+            backdrop-filter: blur(18px) saturate(1.4);
+            -webkit-backdrop-filter: blur(18px) saturate(1.4);
+            border-bottom: 1px solid rgba(200,168,75,0.15);
+        }
+
+        /* Gold rule */
+        .gold-rule {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        /* Card hover glow */
+        .card-glow { transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease; }
+        .card-glow:hover { transform: translateY(-2px); }
+        .card-glow-gold:hover { box-shadow: 0 0 20px rgba(200,168,75,0.15); border-color: var(--gold) !important; }
+        .card-glow-teal:hover { box-shadow: 0 0 20px rgba(59,191,191,0.15); border-color: var(--teal) !important; }
+        .card-glow-indigo:hover { box-shadow: 0 0 20px rgba(99,102,241,0.15); border-color: var(--indigo) !important; }
+        .card-glow-purple:hover { box-shadow: 0 0 20px rgba(124,58,237,0.15); border-color: var(--purple) !important; }
+
+        /* Tab active underline */
+        .tab-btn { position: relative; transition: color 0.2s; }
+        .tab-btn.active { color: var(--gold); }
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gold);
+            border-radius: 1px;
+        }
+
+        /* Code syntax colors */
+        .syn-kw { color: var(--indigo); }         /* keywords */
+        .syn-type { color: var(--teal); }          /* types */
+        .syn-comment { color: var(--fg-muted); font-style: italic; }
+        .syn-str { color: var(--gold); }           /* strings */
+        .syn-dec { color: var(--purple); }         /* decorators / attributes */
+        .syn-num { color: #F59E0B; }               /* numbers */
+
+        /* Table MCP row tints */
+        .row-l0 { background: rgba(124,58,237,0.08); }
+        .row-l1 { background: rgba(99,102,241,0.08); }
+        .row-l2 { background: rgba(20,184,166,0.08); }
+        .row-l3 { background: rgba(200,168,75,0.08); }
+
+        /* GATED badge */
+        .badge-gated {
+            display: inline-block;
+            background: rgba(239,68,68,0.2);
+            color: #F87171;
+            font-size: 0.65rem;
+            padding: 1px 6px;
+            border-radius: 3px;
+            font-family: 'Fira Code', monospace;
+            vertical-align: middle;
+            margin-left: 4px;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { background: rgba(200,168,75,0.3); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(200,168,75,0.5); }
+
+        /* Operator monospace panel */
+        .operator-panel {
+            background: var(--bg-code);
+            border-left: 3px solid var(--purple);
+            padding: 1rem 1.25rem;
+            border-radius: 0 6px 6px 0;
+            overflow-x: auto;
+        }
+
+        /* Pill badges */
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 14px;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            border: 1px solid rgba(200,168,75,0.25);
+            color: var(--fg-muted);
+            white-space: nowrap;
+        }
+
+        /* Code block */
+        .code-block {
+            background: var(--bg-code);
+            border: 1px solid rgba(200,168,75,0.1);
+            border-radius: 8px;
+            padding: 1.25rem 1.5rem;
+            overflow-x: auto;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.8rem;
+            line-height: 1.7;
+            tab-size: 4;
+        }
+
+        /* Note blocks */
+        .note-block {
+            border-left: 3px solid;
+            padding: 1.25rem 1.5rem;
+            background: var(--bg-card);
+            border-radius: 0 8px 8px 0;
+        }
+
+        /* Responsive table wrapper */
+        .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+        .table-wrap table { min-width: 900px; }
+
+        /* Section spacing */
+        .section-pad { padding: 4rem 0; }
+
+        @media (max-width: 767px) {
+            .section-pad { padding: 2.5rem 0; }
+            .code-block { font-size: 0.7rem; padding: 1rem; }
+        }
+
+        /* Layer block */
+        .layer-block {
+            background: var(--bg-card);
+            border-radius: 10px;
+            padding: 1.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 767px) {
+            .layer-block { padding: 1.25rem; }
+        }
+    </style>
+</head>
+<body data-id="0" class="min-h-screen">
+    <app-icon data-id="1" hidden data-icon="hexagon" data-palette="Dark"></app-icon>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- 1. MASTHEAD / HERO                        -->
+    <!-- ══════════════════════════════════════════ -->
+    <header data-id="2" id="hero-header-a1b2" class="relative" style="background: linear-gradient(180deg, #0B0F1A 0%, #0F1520 100%);">
+        <div data-id="3" class="max-w-5xl mx-auto px-5 md:px-8 pt-16 md:pt-24 pb-10 md:pb-14">
+            <!-- Glyph -->
+            <div data-id="4" id="hero-glyph-c3d4" class="text-gold text-6xl md:text-8xl font-serif mb-6 select-none" aria-hidden="true">⬡</div>
+
+            <h1 data-id="5" id="hero-title-e5f6" class="font-serif text-3xl md:text-5xl lg:text-6xl font-bold text-fg leading-tight mb-4">
+                Engine Integration Bridge
+            </h1>
+            <p data-id="6" id="hero-subtitle-g7h8" class="font-serif text-lg md:text-xl text-fg-muted max-w-3xl leading-relaxed mb-8">
+                RTT Dimensional Triads · MCP Substrate Layers · ICL Tiers — mapped to Unity &amp; Unreal Engine primitives
+            </p>
+
+            <!-- Metadata pills -->
+            <div data-id="7" id="hero-pills-i9j0" class="flex flex-wrap gap-2 mb-10">
+                <span data-id="8" class="pill">Integrations Module · TriadicFrameworks</span>
+                <span data-id="9" class="pill">Unity 6 · Unreal Engine 5.4</span>
+                <span data-id="10" class="pill">ICL v2.0.0 compatible</span>
+                <span data-id="11" class="pill">Companion: Dimensional Substrate Mapping</span>
+                <span data-id="12" class="pill">Companion: Intelligence Class Ladder</span>
+            </div>
+
+            <!-- Gold rule -->
+            <div data-id="13" class="gold-rule w-full mb-10"></div>
+
+            <!-- Hero paragraph -->
+            <p data-id="14" id="hero-para-k1l2" class="text-fg text-base md:text-lg leading-relaxed max-w-4xl">
+                The TriadicFrameworks ontological stack — nine dimensional nodes, four MCP substrate layers, three ICL tiers — is not abstract philosophy when viewed from a game engine. Every engine you already know solves the same structural problems: what is the root identity of a thing, how does invisible physics become visible geometry, how does an agent decide and act. This page is the translation layer. If you know Unity or Unreal, you already speak most of this language.
+            </p>
+        </div>
+    </header>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- 2. STICKY NAV                             -->
+    <!-- ══════════════════════════════════════════ -->
+    <nav data-id="15" id="sticky-nav-m3n4" class="glass-nav sticky top-0 z-50">
+        <div data-id="16" class="max-w-5xl mx-auto px-5 md:px-8">
+            <!-- Desktop nav -->
+            <div data-id="17" class="hidden md:flex items-center gap-6 py-3 text-sm">
+                <a data-id="18" href="#overview" class="text-fg-muted hover:text-gold transition-colors">Overview</a>
+                <a data-id="19" href="#dimensional" class="text-fg-muted hover:text-gold transition-colors">Dimensional Map</a>
+                <a data-id="20" href="#mcp" class="text-fg-muted hover:text-gold transition-colors">MCP Subsystems</a>
+                <a data-id="21" href="#icl" class="text-fg-muted hover:text-gold transition-colors">ICL Agent Tiers</a>
+                <a data-id="22" href="#code" class="text-fg-muted hover:text-gold transition-colors">Code Starters</a>
+                <a data-id="23" href="#projects" class="text-fg-muted hover:text-gold transition-colors">Project Seeds</a>
+                <a data-id="24" href="#notes" class="text-fg-muted hover:text-gold transition-colors">Canon Notes</a>
+            </div>
+            <!-- Mobile nav toggle -->
+            <div data-id="25" class="md:hidden flex items-center justify-between py-3">
+                <span data-id="26" class="font-serif text-gold text-sm font-semibold">⬡ Engine Integration Bridge</span>
+                <button data-id="27" id="mobile-menu-btn-o5p6" class="p-2 text-fg-muted hover:text-gold transition-colors" aria-label="Open navigation menu">
+                    <i data-id="28" data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile overlay -->
+        <div data-id="29" id="mobile-menu-q7r8" class="hidden fixed inset-0 z-50 bg-bg flex flex-col p-6">
+            <div data-id="30" class="flex justify-between items-center mb-8">
+                <span data-id="31" class="font-serif text-gold text-lg font-semibold">⬡ Navigation</span>
+                <button data-id="32" id="mobile-menu-close-s9t0" class="p-2 text-fg-muted hover:text-gold" aria-label="Close navigation menu">
+                    <i data-id="33" data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <div data-id="34" class="flex flex-col gap-5 text-lg">
+                <a data-id="35" href="#overview" class="mobile-nav-link text-fg-muted hover:text-gold transition-colors">Overview</a>
+                <a data-id="36" href="#dimensional" class="mobile-nav-link text-fg-muted hover:text-gold transition-colors">Dimensional Map</a>
+                <a data-id="37" href="#mcp" class="mobile-nav-link text-fg-muted hover:text-gold transition-colors">MCP Subsystems</a>
+                <a data-id="38" href="#icl" class="mobile-nav-link text-fg-muted hover:text-gold transition-colors">ICL Agent Tiers</a>
+                <a data-id="39" href="#code" class="mobile-nav-link text-fg-muted hover:text-gold transition-colors">Code Starters</a>
+                <a data-id="40" href="#projects" class="mobile-nav-link text-fg-muted hover:text-gold transition-colors">Project Seeds</a>
+                <a data-id="41" href="#notes" class="mobile-nav-link text-fg-muted hover:text-gold transition-colors">Canon Notes</a>
+            </div>
+        </div>
+    </nav>
+
+    <main data-id="42">
+        <!-- ══════════════════════════════════════════ -->
+        <!-- 3. OVERVIEW                               -->
+        <!-- ══════════════════════════════════════════ -->
+        <section data-id="43" id="overview" class="section-pad" style="background: #0F1520;">
+            <div data-id="44" class="max-w-5xl mx-auto px-5 md:px-8">
+                <h2 data-id="45" id="overview-heading-u1v2" class="font-serif text-2xl md:text-3xl font-bold text-fg mb-10">How to Read This Bridge</h2>
+
+                <div data-id="46" class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
+                    <!-- Card 1: Gold -->
+                    <div data-id="47" id="overview-card1-w3x4" class="bg-bg-card rounded-lg p-6 border-l-4" style="border-color: var(--gold);">
+                        <h3 data-id="48" class="font-serif text-lg font-semibold text-gold mb-3">Dimensional Nodes → Scene Architecture</h3>
+                        <p data-id="49" class="text-fg-muted text-sm leading-relaxed">The nine RTT dimensions (0D–9D) describe what a thing <em data-id="50">IS</em> ontologically. In engine terms they describe the layer of the scene graph a system lives at — from the null root of application init, through physics and rendering, to the top-level World Manager and Engine tick.</p>
+                    </div>
+                    <!-- Card 2: Teal -->
+                    <div data-id="51" id="overview-card2-y5z6" class="bg-bg-card rounded-lg p-6 border-l-4" style="border-color: var(--teal);">
+                        <h3 data-id="52" class="font-serif text-lg font-semibold text-teal mb-3">MCP Substrate Layers → Engine Subsystems</h3>
+                        <p data-id="53" class="text-fg-muted text-sm leading-relaxed">The four MCP layers (L0–L3) describe <em data-id="54">HOW</em> reality is processed — pre-manifest identity, unseen frequency, seen fluids, unseen forces. In engine terms: Asset Registry → Physics+Audio → Rendering+Gameplay → Rule Engines+AI Directors.</p>
+                    </div>
+                    <!-- Card 3: Indigo -->
+                    <div data-id="55" id="overview-card3-a7b8" class="bg-bg-card rounded-lg p-6 border-l-4" style="border-color: var(--indigo);">
+                        <h3 data-id="56" class="font-serif text-lg font-semibold text-indigo mb-3">ICL Tiers → Agent Behavior Complexity</h3>
+                        <p data-id="57" class="text-fg-muted text-sm leading-relaxed">The three ICL tiers (ANI→ACI→AGI) describe how intelligent an agent is. In engine terms: NavMeshAgent+FSM (ANI), BehaviorTree+Blackboard+EQS (ACI), AI Director+ML-Agents+LLM NPC (AGI/AAISI).</p>
+                    </div>
+                </div>
+
+                <!-- Warning note -->
+                <div data-id="58" id="overview-note-c9d0" class="note-block border-purple mb-6" style="border-color: var(--purple);">
+                    <p data-id="59" class="text-fg text-sm leading-relaxed">
+                        <span data-id="60" class="text-purple font-semibold">⚠️ &nbsp;Mapping Notes</span> — These are architectural homologies, not 1:1 API bindings. A single engine system may participate in multiple dimensional layers. The goal is conceptual orientation, not rigid classification. Treat each mapping as a starting hypothesis for your own integration design.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════ -->
+        <!-- 4. DIMENSIONAL NODE → ENGINE MAPPING      -->
+        <!-- ══════════════════════════════════════════ -->
+        <section data-id="61" id="dimensional" class="section-pad" style="background: #0B0F1A;">
+            <div data-id="62" class="max-w-5xl mx-auto px-5 md:px-8">
+                <h2 data-id="63" id="dim-heading-e1f2" class="font-serif text-2xl md:text-3xl font-bold text-fg mb-3">🜁 RTT Dimensional Nodes → Engine Architecture</h2>
+                <p data-id="64" class="text-fg-muted text-sm mb-8">All nine dimensions mapped to both engines side by side.</p>
+
+                <!-- Engine tabs -->
+                <div data-id="65" id="dim-tabs-g3h4" class="flex gap-6 mb-6 border-b border-gray-800 pb-1">
+                    <button data-id="66" class="tab-btn dim-tab active text-sm font-mono font-semibold pb-1" data-dim-tab="both">Both Engines</button>
+                    <button data-id="67" class="tab-btn dim-tab text-sm font-mono font-semibold text-fg-muted pb-1" data-dim-tab="unity">Unity 6</button>
+                    <button data-id="68" class="tab-btn dim-tab text-sm font-mono font-semibold text-fg-muted pb-1" data-dim-tab="unreal">Unreal 5.4</button>
+                </div>
+
+                <!-- Master table -->
+                <div data-id="69" class="table-wrap rounded-lg border border-gray-800 mb-8">
+                    <table data-id="70" id="dim-table-i5j6" class="w-full text-sm">
+                        <thead data-id="71">
+                            <tr data-id="72" class="bg-bg-card text-left">
+                                <th data-id="73" class="px-4 py-3 text-gold font-mono text-xs font-semibold">Dim</th>
+                                <th data-id="74" class="px-4 py-3 text-gold font-mono text-xs font-semibold">Canonical Name</th>
+                                <th data-id="75" class="px-4 py-3 text-gold font-mono text-xs font-semibold">MCP Layer</th>
+                                <th data-id="76" class="px-4 py-3 text-gold font-mono text-xs font-semibold dim-col-unity">Unity 6 Equivalent</th>
+                                <th data-id="77" class="px-4 py-3 text-gold font-mono text-xs font-semibold dim-col-unreal">Unreal 5.4 Equivalent</th>
+                                <th data-id="78" class="px-4 py-3 text-gold font-mono text-xs font-semibold">Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody data-id="79" class="font-mono text-xs leading-relaxed">
+                            <tr data-id="80" class="row-l0 border-t border-gray-800/50">
+                                <td data-id="81" class="px-4 py-3 text-purple font-semibold">0D</td>
+                                <td data-id="82" class="px-4 py-3 text-fg">Undivided Singularity</td>
+                                <td data-id="83" class="px-4 py-3"><span data-id="84" class="text-purple-light">L0_QMROOT</span></td>
+                                <td data-id="85" class="px-4 py-3 text-fg-muted dim-col-unity">Application.Init · SceneManager root · AppDomain</td>
+                                <td data-id="86" class="px-4 py-3 text-fg-muted dim-col-unreal">UEngine boot · FApp · GameInstance Init</td>
+                                <td data-id="87" class="px-4 py-3 text-fg-dim text-xs" style="font-family: Inter, sans-serif;">The zero-frame: pre-scene, pre-actor. Application lifecycle root.</td>
+                            </tr>
+                            <tr data-id="88" class="row-l1 border-t border-gray-800/50">
+                                <td data-id="89" class="px-4 py-3 text-indigo font-semibold">1D</td>
+                                <td data-id="90" class="px-4 py-3 text-fg">Primary Wave Vector</td>
+                                <td data-id="91" class="px-4 py-3"><span data-id="92" class="text-indigo-light">L1_Frequency_Unseen</span></td>
+                                <td data-id="93" class="px-4 py-3 text-fg-muted dim-col-unity">Physics.Raycast · AudioSource oscillator · LineRenderer</td>
+                                <td data-id="94" class="px-4 py-3 text-fg-muted dim-col-unreal">FVector ray · USoundWave · UPhysicsFieldComponent</td>
+                                <td data-id="95" class="px-4 py-3 text-fg-dim text-xs" style="font-family: Inter, sans-serif;">First extension from point — ray, wave, carrier.</td>
+                            </tr>
+                            <tr data-id="96" class="row-l1 border-t border-gray-800/50">
+                                <td data-id="97" class="px-4 py-3 text-indigo font-semibold">2D</td>
+                                <td data-id="98" class="px-4 py-3 text-fg">Field / Pattern Matrix</td>
+                                <td data-id="99" class="px-4 py-3"><span data-id="100" class="text-indigo-light">L1_Frequency_Unseen</span></td>
+                                <td data-id="101" class="px-4 py-3 text-fg-muted dim-col-unity">NavMesh surface · Texture2D · Collision Layer Matrix · Canvas</td>
+                                <td data-id="102" class="px-4 py-3 text-fg-muted dim-col-unreal">UNavigationSystemV1 · UTexture2D · FCollisionObjectQueryParams · UMG UCanvasPanel</td>
+                                <td data-id="103" class="px-4 py-3 text-fg-dim text-xs" style="font-family: Inter, sans-serif;">Surface, field, pattern — the 2D substrate of topology.</td>
+                            </tr>
+                            <tr data-id="104" class="row-l2 border-t border-gray-800/50">
+                                <td data-id="105" class="px-4 py-3 text-teal font-semibold">3D</td>
+                                <td data-id="106" class="px-4 py-3 text-fg">Physical Spacetime Volume</td>
+                                <td data-id="107" class="px-4 py-3"><span data-id="108" class="text-teal-light">L2_Fluids_Seen</span></td>
+                                <td data-id="109" class="px-4 py-3 text-fg-muted dim-col-unity">Transform · Rigidbody · MeshRenderer · Collider</td>
+                                <td data-id="110" class="px-4 py-3 text-fg-muted dim-col-unreal">AActor::GetActorTransform · UStaticMeshComponent · FBodyInstance</td>
+                                <td data-id="111" class="px-4 py-3 text-fg-dim text-xs" style="font-family: Inter, sans-serif;">The manifest world — position, mass, locality.</td>
+                            </tr>
+                            <tr data-id="112" class="row-l2 border-t border-gray-800/50">
+                                <td data-id="113" class="px-4 py-3 text-teal font-semibold">4D</td>
+                                <td data-id="114" class="px-4 py-3 text-fg">Temporal Flow</td>
+                                <td data-id="115" class="px-4 py-3"><span data-id="116" class="text-teal-light">L2_Fluids_Seen</span></td>
+                                <td data-id="117" class="px-4 py-3 text-fg-muted dim-col-unity">Time.deltaTime · Coroutine · Timeline · Animator</td>
+                                <td data-id="118" class="px-4 py-3 text-fg-muted dim-col-unreal">UGameplayStatics::GetTimeSeconds · FTimeline · UTimelineComponent · USequencer</td>
+                                <td data-id="119" class="px-4 py-3 text-fg-dim text-xs" style="font-family: Inter, sans-serif;">Duration, process, update loop — time as substrate.</td>
+                            </tr>
+                            <tr data-id="120" class="row-l2 border-t border-gray-800/50">
+                                <td data-id="121" class="px-4 py-3 text-teal font-semibold">5D</td>
+                                <td data-id="122" class="px-4 py-3 text-fg">Perceptual Consciousness</td>
+                                <td data-id="123" class="px-4 py-3"><span data-id="124" class="text-teal-light">L2_Fluids_Seen</span></td>
+                                <td data-id="125" class="px-4 py-3 text-fg-muted dim-col-unity">Camera · AudioListener · AI.Perception · UI.EventSystem</td>
+                                <td data-id="126" class="px-4 py-3 text-fg-muted dim-col-unreal">UCameraComponent · UAIPerceptionComponent · UEnhancedInputComponent</td>
+                                <td data-id="127" class="px-4 py-3 text-fg-dim text-xs" style="font-family: Inter, sans-serif;">The register of the seen — perception, awareness surface.</td>
+                            </tr>
+                            <tr data-id="128" class="row-l3 border-t border-gray-800/50">
+                                <td data-id="129" class="px-4 py-3 text-gold font-semibold">6D</td>
+                                <td data-id="130" class="px-4 py-3 text-fg">Causal Architecture</td>
+                                <td data-id="131" class="px-4 py-3"><span data-id="132" class="text-gold-light">L3_Forces_Unseen</span></td>
+                                <td data-id="133" class="px-4 py-3 text-fg-muted dim-col-unity">ScriptableObject · MonoBehaviour data contract · Addressables manifest</td>
+                                <td data-id="134" class="px-4 py-3 text-fg-muted dim-col-unreal">UDataAsset · UPrimaryDataAsset · FAssetData · Data Registry</td>
+                                <td data-id="135" class="px-4 py-3 text-fg-dim text-xs" style="font-family: Inter, sans-serif;">Blueprint layer — the archetypal form before instantiation.</td>
+                            </tr>
+                            <tr data-id="136" class="row-l3 border-t border-gray-800/50">
+                                <td data-id="137" class="px-4 py-3 text-gold font-semibold">7D</td>
+                                <td data-id="138" class="px-4 py-3 text-fg">Universal Law</td>
+                                <td data-id="139" class="px-4 py-3"><span data-id="140" class="text-gold-light">L3_Forces_Unseen</span></td>
+                                <td data-id="141" class="px-4 py-3 text-fg-muted dim-col-unity">Physics settings · LayerMask rules · ProjectSettings · Custom Rule Engine</td>
+                                <td data-id="142" class="px-4 py-3 text-fg-muted dim-col-unreal">UPhysicsSettings · Gameplay Ability System (GAS) · UGameplayEffect</td>
+                                <td data-id="143" class="px-4 py-3 text-fg-dim text-xs" style="font-family: Inter, sans-serif;">Invariant structural constraints — the rules the world runs under.</td>
+                            </tr>
+                            <tr data-id="144" class="row-l3 border-t border-gray-800/50">
+                                <td data-id="145" class="px-4 py-3 text-gold font-semibold">8D</td>
+                                <td data-id="146" class="px-4 py-3 text-fg">Cosmic Intelligence</td>
+                                <td data-id="147" class="px-4 py-3"><span data-id="148" class="text-gold-light">L3_Forces_Unseen</span></td>
+                                <td data-id="149" class="px-4 py-3 text-fg-muted dim-col-unity">GameManager singleton · World · Director class · EventSystem broadcaster</td>
+                                <td data-id="150" class="px-4 py-3 text-fg-muted dim-col-unreal">AGameMode · AGameState · UAIDirector · UWorldSubsystem</td>
+                                <td data-id="151" class="px-4 py-3 text-fg-dim text-xs" style="font-family: Inter, sans-serif;">The self-organizing system that keeps the world coherent.</td>
+                            </tr>
+                            <tr data-id="152" class="row-l3 border-t border-gray-800/50">
+                                <td data-id="153" class="px-4 py-3 text-gold font-semibold">9D</td>
+                                <td data-id="154" class="px-4 py-3 text-fg">Unified Source Field</td>
+                                <td data-id="155" class="px-4 py-3"><span data-id="156" class="text-gold-light">L3_Forces_Unseen</span></td>
+                                <td data-id="157" class="px-4 py-3 text-fg-muted dim-col-unity">Application root · EditorApplication · EntryPoint · RuntimeInitializeOnLoadMethod</td>
+                                <td data-id="158" class="px-4 py-3 text-fg-muted dim-col-unreal">UEngine · FEngineLoop · GEngine · FApp</td>
+                                <td data-id="159" class="px-4 py-3 text-fg-dim text-xs" style="font-family: Inter, sans-serif;">The integrative totality — the engine tick itself.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Callout -->
+                <div data-id="160" id="dim-callout-k7l8" class="bg-bg-card rounded-lg p-5 border border-gray-800">
+                    <p data-id="161" class="text-fg-muted text-sm leading-relaxed">
+                        <span data-id="162" class="text-teal font-semibold">Triadic rhythm in-engine:</span> 0D <span data-id="163" class="text-fg-dim">(SceneRoot)</span> → 1D–2D <span data-id="164" class="text-fg-dim">(Physics/Audio/Nav)</span> → 3D–5D <span data-id="165" class="text-fg-dim">(World/Time/Camera)</span> → 6D–9D <span data-id="166" class="text-fg-dim">(DataAssets/GAS/GameMode/GEngine)</span>. This is the layered boot sequence of every major engine — substrate first, manifest second, governance last.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════ -->
+        <!-- 5. MCP LAYER → ENGINE SUBSYSTEM           -->
+        <!-- ══════════════════════════════════════════ -->
+        <section data-id="167" id="mcp" class="section-pad" style="background: #0F1520;">
+            <div data-id="168" class="max-w-5xl mx-auto px-5 md:px-8">
+                <h2 data-id="169" id="mcp-heading-m9n0" class="font-serif text-2xl md:text-3xl font-bold text-fg mb-10">🜅 MCP Substrate Layers → Engine Subsystems</h2>
+
+                <!-- L0 -->
+                <div data-id="170" id="mcp-l0-o1p2" class="layer-block border-l-4" style="border-color: var(--purple);">
+                    <div data-id="171" class="flex flex-wrap items-center gap-3 mb-4">
+                        <span data-id="172" class="font-mono text-purple font-semibold text-sm">L0_QMROOT</span>
+                        <span data-id="173" class="text-fg-muted text-xs">·</span>
+                        <span data-id="174" class="text-fg-muted text-xs">Identity Anchor · Pre-Manifest · Root Scope</span>
+                    </div>
+                    <p data-id="175" class="text-fg text-sm leading-relaxed mb-5">
+                        L0 is the substrate before the world exists. In Unity: <span data-id="176" class="font-mono text-purple-light text-xs">RuntimeInitializeOnLoadMethod</span>, <span data-id="177" class="font-mono text-purple-light text-xs">Application.Init</span>, the moment before the first Scene loads. In Unreal: <span data-id="178" class="font-mono text-purple-light text-xs">FEngineLoop::PreInit</span>, <span data-id="179" class="font-mono text-purple-light text-xs">UEngine</span> construction, <span data-id="180" class="font-mono text-purple-light text-xs">GameInstance::Init</span> — the bootstrap context that defines what the application IS before any actor exists.
+                    </p>
+                    <div data-id="181" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div data-id="182" class="bg-bg-code rounded-lg p-4">
+                            <p data-id="183" class="text-gold text-xs font-mono font-semibold mb-2">Unity 6</p>
+                            <p data-id="184" class="text-fg-muted text-xs font-mono leading-relaxed">RuntimeInitializeOnLoadMethod · AppDomain · SceneManager (not yet loaded) · PlayerPrefs root</p>
+                        </div>
+                        <div data-id="185" class="bg-bg-code rounded-lg p-4">
+                            <p data-id="186" class="text-gold text-xs font-mono font-semibold mb-2">Unreal 5.4</p>
+                            <p data-id="187" class="text-fg-muted text-xs font-mono leading-relaxed">FEngineLoop · UGameInstance::Init · GEngine · FApp bootstrap</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- L1 -->
+                <div data-id="188" id="mcp-l1-q3r4" class="layer-block border-l-4" style="border-color: var(--indigo);">
+                    <div data-id="189" class="flex flex-wrap items-center gap-3 mb-4">
+                        <span data-id="190" class="font-mono text-indigo font-semibold text-sm">L1_Frequency_Unseen</span>
+                        <span data-id="191" class="text-fg-muted text-xs">·</span>
+                        <span data-id="192" class="text-fg-muted text-xs">Oscillation · Pattern · Pre-Formal</span>
+                    </div>
+                    <p data-id="193" class="text-fg text-sm leading-relaxed mb-5">
+                        L1 is the unseen vibrational and topological layer. In engine terms: physics simulation, audio synthesis, navigation mesh baking, collision layer configuration. These are the invisible systems that structure the manifest world — you never &ldquo;see&rdquo; a NavMesh or a physics solver directly, but everything that moves or sounds or finds a path runs through them.
+                    </p>
+                    <div data-id="194" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div data-id="195" class="bg-bg-code rounded-lg p-4">
+                            <p data-id="196" class="text-gold text-xs font-mono font-semibold mb-2">Unity 6</p>
+                            <p data-id="197" class="text-fg-muted text-xs font-mono leading-relaxed">Physics2D/3D subsystem · AudioMixer graph · NavMesh bake · Shader compilation · Collision Matrix · LineRenderer · Physics.Raycast</p>
+                        </div>
+                        <div data-id="198" class="bg-bg-code rounded-lg p-4">
+                            <p data-id="199" class="text-gold text-xs font-mono font-semibold mb-2">Unreal 5.4</p>
+                            <p data-id="200" class="text-fg-muted text-xs font-mono leading-relaxed">PhysX / Chaos solver · USoundWave + MetaSounds graph · UNavigationSystemV1 bake · UPhysicsFieldComponent · FCollisionQueryParams</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- L2 -->
+                <div data-id="201" id="mcp-l2-s5t6" class="layer-block border-l-4" style="border-color: var(--teal-alt);">
+                    <div data-id="202" class="flex flex-wrap items-center gap-3 mb-4">
+                        <span data-id="203" class="font-mono text-teal font-semibold text-sm">L2_Fluids_Seen</span>
+                        <span data-id="204" class="text-fg-muted text-xs">·</span>
+                        <span data-id="205" class="text-fg-muted text-xs">Manifest · Observable · Processual</span>
+                    </div>
+                    <p data-id="206" class="text-fg text-sm leading-relaxed mb-5">
+                        L2 is the seen world — everything with a Transform, a Mesh, a Camera, a Timeline. This is the majority of engine work: placing objects, animating them, receiving player input, rendering to screen. 3D volume (Actor placement), 4D flow (Animator, Timeline, coroutines, Update loop), 5D perception (Camera, AudioListener, AIPerception, InputSystem).
+                    </p>
+                    <div data-id="207" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div data-id="208" class="bg-bg-code rounded-lg p-4">
+                            <p data-id="209" class="text-gold text-xs font-mono font-semibold mb-2">Unity 6</p>
+                            <p data-id="210" class="text-fg-muted text-xs font-mono leading-relaxed">GameObject · Transform · MeshRenderer · Rigidbody · Animator · Coroutine · Camera · AudioListener · UnityEngine.UI · Input System</p>
+                        </div>
+                        <div data-id="211" class="bg-bg-code rounded-lg p-4">
+                            <p data-id="212" class="text-gold text-xs font-mono font-semibold mb-2">Unreal 5.4</p>
+                            <p data-id="213" class="text-fg-muted text-xs font-mono leading-relaxed">AActor · UStaticMeshComponent · USkeletalMeshComponent · FBodyInstance · UTimelineComponent · UCameraComponent · UEnhancedInputComponent · UMG</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- L3 -->
+                <div data-id="214" id="mcp-l3-u7v8" class="layer-block border-l-4" style="border-color: var(--gold);">
+                    <div data-id="215" class="flex flex-wrap items-center gap-3 mb-4">
+                        <span data-id="216" class="font-mono text-gold font-semibold text-sm">L3_Forces_Unseen</span>
+                        <span data-id="217" class="text-fg-muted text-xs">·</span>
+                        <span data-id="218" class="text-fg-muted text-xs">Causal · Archetypal · Trans-Manifest</span>
+                    </div>
+                    <p data-id="219" class="text-fg text-sm leading-relaxed mb-5">
+                        L3 is the governance layer — the unseen forces that define the rules of the world. In Unity: <span data-id="220" class="font-mono text-gold text-xs">ScriptableObject</span> data contracts, <span data-id="221" class="font-mono text-gold text-xs">ProjectSettings</span>, custom Rule Engines, GameManager singletons, ML-Agents training environments. In Unreal: <span data-id="222" class="font-mono text-gold text-xs">UDataAsset</span> definitions, Gameplay Ability System (GAS) rule sets, <span data-id="223" class="font-mono text-gold text-xs">UGameplayEffect</span> constraints, <span data-id="224" class="font-mono text-gold text-xs">AGameMode</span>, <span data-id="225" class="font-mono text-gold text-xs">AGameState</span>, AI Directors, UWorldSubsystem controllers.
+                    </p>
+                    <div data-id="226" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div data-id="227" class="bg-bg-code rounded-lg p-4">
+                            <p data-id="228" class="text-gold text-xs font-mono font-semibold mb-2">Unity 6</p>
+                            <p data-id="229" class="text-fg-muted text-xs font-mono leading-relaxed">ScriptableObject · GameManager · ProjectSettings · Physics.gravity · ML-Agents · Custom Rule Engine · Addressables manifest · RuntimeEventSystem</p>
+                        </div>
+                        <div data-id="230" class="bg-bg-code rounded-lg p-4">
+                            <p data-id="231" class="text-gold text-xs font-mono font-semibold mb-2">Unreal 5.4</p>
+                            <p data-id="232" class="text-fg-muted text-xs font-mono leading-relaxed">UDataAsset · UPrimaryDataAsset · AGameMode · AGameState · GAS · UGameplayEffect · UAIDirector · UWorldSubsystem · Blueprint Class Default Object</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════ -->
+        <!-- 6. ICL TIERS → AGENT BEHAVIOR             -->
+        <!-- ══════════════════════════════════════════ -->
+        <section data-id="233" id="icl" class="section-pad" style="background: #0B0F1A;">
+            <div data-id="234" class="max-w-5xl mx-auto px-5 md:px-8">
+                <h2 data-id="235" id="icl-heading-w9x0" class="font-serif text-2xl md:text-3xl font-bold text-fg mb-2">🜄 ICL Intelligence Tiers → Agent Behavior Architecture</h2>
+                <p data-id="236" class="text-teal text-sm mb-10">Each ICL tier maps to a distinct agent implementation pattern in both engines.</p>
+
+                <!-- ─── ANI TIER ─── -->
+                <div data-id="237" id="icl-ani-y1z2" class="layer-block border-l-4 mb-8" style="border-color: var(--indigo);">
+                    <div data-id="238" class="flex flex-wrap items-center gap-3 mb-2">
+                        <span data-id="239" class="font-mono text-xs px-3 py-1 rounded-full bg-indigo/20 text-indigo font-semibold">Tier 1 · ANI · @module.*</span>
+                    </div>
+                    <h3 data-id="240" class="font-serif text-lg font-semibold text-fg mb-2">The Specialist Agent — narrow, reactive, operator-driven.</h3>
+                    <p data-id="241" class="text-fg-muted text-sm leading-relaxed mb-5">
+                        ANI maps to agents that execute a single class of task reliably. They have no cross-domain awareness and no metacognitive surface. In engine terms: a NavMeshAgent following a path, a FiniteStateMachine cycling through patrol states, a BehaviorTree leaf node executing one action.
+                    </p>
+
+                    <!-- Implementation table -->
+                    <div data-id="242" class="table-wrap rounded-lg border border-gray-800 mb-5">
+                        <table data-id="243" class="w-full text-xs">
+                            <thead data-id="244">
+                                <tr data-id="245" class="bg-bg-code">
+                                    <th data-id="246" class="px-4 py-2 text-gold font-mono text-left font-semibold w-32">Engine</th>
+                                    <th data-id="247" class="px-4 py-2 text-gold font-mono text-left font-semibold">ANI Patterns</th>
+                                </tr>
+                            </thead>
+                            <tbody data-id="248" class="font-mono">
+                                <tr data-id="249" class="border-t border-gray-800/50">
+                                    <td data-id="250" class="px-4 py-2 text-teal">Unity 6</td>
+                                    <td data-id="251" class="px-4 py-2 text-fg-muted">NavMeshAgent · FiniteStateMachine (custom or Animancer) · BTLeafNode · Simple Sensor · Single-responsibility MonoBehaviour · Animator state machine</td>
+                                </tr>
+                                <tr data-id="252" class="border-t border-gray-800/50 bg-bg-code/50">
+                                    <td data-id="253" class="px-4 py-2 text-teal">Unreal 5.4</td>
+                                    <td data-id="254" class="px-4 py-2 text-fg-muted">UBTTaskNode leaf · UBTDecorator · UAIController (simple) · UPawnSensingComponent · UAIPerceptionComponent (single sense)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Operator mapping -->
+                    <div data-id="255" class="operator-panel" style="border-color: var(--indigo);">
+                        <p data-id="256" class="text-indigo text-xs font-mono font-semibold mb-2">Operator Mapping</p>
+<pre data-id="257" class="text-xs font-mono leading-loose text-fg-muted whitespace-pre-wrap"><span data-id="258" class="syn-dec">@module.detect</span>    → <span data-id="259" class="syn-type">Sensor.OnTriggerEnter</span> / <span data-id="260" class="syn-type">UAIPerceptionComponent.OnTargetPerceptionUpdated</span>
+<span data-id="261" class="syn-dec">@module.classify</span>  → <span data-id="262" class="syn-type">Animator.SetTrigger</span> / <span data-id="263" class="syn-type">BTDecorator</span> condition check
+<span data-id="264" class="syn-dec">@module.execute</span>   → <span data-id="265" class="syn-type">NavMeshAgent.SetDestination</span> / <span data-id="266" class="syn-type">UBTTaskNode::ExecuteTask</span>
+<span data-id="267" class="syn-dec">@module.report</span>    → <span data-id="268" class="syn-type">EventSystem.Invoke</span> / <span data-id="269" class="syn-type">UGameplayMessageSubsystem.BroadcastMessage</span>
+<span data-id="270" class="syn-dec">@module.adapt</span>     → <span data-id="271" class="syn-type">ML-Agents.PolicyUpdate</span> (inference mode) / <span data-id="272" class="syn-type">ULearningAgentsPolicy</span></pre>
+                    </div>
+                </div>
+
+                <!-- ─── ACI TIER ─── -->
+                <div data-id="273" id="icl-aci-a3b4" class="layer-block border-l-4 mb-8" style="border-color: var(--teal);">
+                    <div data-id="274" class="flex flex-wrap items-center gap-3 mb-2">
+                        <span data-id="275" class="font-mono text-xs px-3 py-1 rounded-full bg-teal/20 text-teal font-semibold">Tier 2 · ACI · @domain.*</span>
+                    </div>
+                    <h3 data-id="276" class="font-serif text-lg font-semibold text-fg mb-2">The Domain General Agent — reasoning, planning, cross-domain synthesis.</h3>
+                    <p data-id="277" class="text-fg-muted text-sm leading-relaxed mb-5">
+                        ACI maps to agents that can reason across multiple goal domains, maintain world models, and adapt plans in response to environment change. In engine terms: a full Behavior Tree with Blackboard memory and Environment Query System, a GOAP planner, or an agent that integrates multiple perception channels into a unified world model.
+                    </p>
+
+                    <div data-id="278" class="table-wrap rounded-lg border border-gray-800 mb-5">
+                        <table data-id="279" class="w-full text-xs">
+                            <thead data-id="280">
+                                <tr data-id="281" class="bg-bg-code">
+                                    <th data-id="282" class="px-4 py-2 text-gold font-mono text-left font-semibold w-32">Engine</th>
+                                    <th data-id="283" class="px-4 py-2 text-gold font-mono text-left font-semibold">ACI Patterns</th>
+                                </tr>
+                            </thead>
+                            <tbody data-id="284" class="font-mono">
+                                <tr data-id="285" class="border-t border-gray-800/50">
+                                    <td data-id="286" class="px-4 py-2 text-teal">Unity 6</td>
+                                    <td data-id="287" class="px-4 py-2 text-fg-muted">BehaviorDesigner / custom BT + Blackboard · GOAP planner · Utility AI · Multi-sensor fusion · Coroutine-driven reasoning loops · State → Goal → Plan architecture</td>
+                                </tr>
+                                <tr data-id="288" class="border-t border-gray-800/50 bg-bg-code/50">
+                                    <td data-id="289" class="px-4 py-2 text-teal">Unreal 5.4</td>
+                                    <td data-id="290" class="px-4 py-2 text-fg-muted">UBehaviorTree + UBlackboardComponent · UEnvQuerySystem (EQS) · USmartObjectSubsystem · UGameplayTasksComponent · UAbilitySystemComponent</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div data-id="291" class="operator-panel" style="border-color: var(--teal);">
+                        <p data-id="292" class="text-teal text-xs font-mono font-semibold mb-2">Operator Mapping</p>
+<pre data-id="293" class="text-xs font-mono leading-loose text-fg-muted whitespace-pre-wrap"><span data-id="294" class="syn-dec">@domain.synthesize</span>  → <span data-id="295" class="syn-type">Blackboard.SetValue</span> (world model write) / <span data-id="296" class="syn-type">UBlackboardComponent::SetValue</span>
+<span data-id="297" class="syn-dec">@domain.cause</span>       → <span data-id="298" class="syn-type">GOAP.BuildCausalChain</span> / Custom <span data-id="299" class="syn-type">UBTComposite</span> causal selector
+<span data-id="300" class="syn-dec">@domain.monitor</span>     → <span data-id="301" class="syn-type">UtilityAI.ScoreActions</span> / <span data-id="302" class="syn-type">EQS.RunQuery</span>
+<span data-id="303" class="syn-dec">@domain.dispatch</span>    → Blackboard → child BT sub-tree selection / <span data-id="304" class="syn-type">UBTComposite</span> dispatch
+<span data-id="305" class="syn-dec">@domain.plan</span>        → <span data-id="306" class="syn-type">GOAP.FormPlan</span> / HierarchicalTaskNetwork root call
+<span data-id="307" class="syn-dec">@domain.calibrate</span>   → Perception confidence threshold update / <span data-id="308" class="syn-type">UAIPerceptionComponent::SetSenseConfig</span></pre>
+                    </div>
+                </div>
+
+                <!-- ─── AGI / AAISI TIER ─── -->
+                <div data-id="309" id="icl-agi-c5d6" class="layer-block border-l-4 mb-8" style="border-color: var(--gold);">
+                    <div data-id="310" class="flex flex-wrap items-center gap-3 mb-2">
+                        <span data-id="311" class="font-mono text-xs px-3 py-1 rounded-full bg-gold/20 text-gold font-semibold">Tier 3 · AGI / AAISI · @substrate.* · APEX</span>
+                    </div>
+                    <h3 data-id="312" class="font-serif text-lg font-semibold text-fg mb-2">The Fleet Admiral — governance, recursive orchestration, continuity enforcement.</h3>
+                    <p data-id="313" class="text-fg-muted text-sm leading-relaxed mb-5">
+                        AGI/AAISI in-engine is the system that governs ALL other agents — the AI Director, the World Subsystem controller, the ML-Agents training loop that improves policies at runtime, or a large-language-model NPC orchestrator that issues charters to subordinate ACI agents. In engine terms this is rare but increasingly real: Unreal's AI Director (L4D-style), Unity ML-Agents in training mode, or an LLM-backed game master that dynamically rewrites narrative and dispatches domain agents.
+                    </p>
+
+                    <div data-id="314" class="table-wrap rounded-lg border border-gray-800 mb-5">
+                        <table data-id="315" class="w-full text-xs">
+                            <thead data-id="316">
+                                <tr data-id="317" class="bg-bg-code">
+                                    <th data-id="318" class="px-4 py-2 text-gold font-mono text-left font-semibold w-32">Engine</th>
+                                    <th data-id="319" class="px-4 py-2 text-gold font-mono text-left font-semibold">AGI / AAISI Patterns</th>
+                                </tr>
+                            </thead>
+                            <tbody data-id="320" class="font-mono">
+                                <tr data-id="321" class="border-t border-gray-800/50">
+                                    <td data-id="322" class="px-4 py-2 text-teal">Unity 6</td>
+                                    <td data-id="323" class="px-4 py-2 text-fg-muted">ML-Agents training loop (self-improving policy) · LLM NPC orchestrator (GPT/Gemini backend) · Custom AI Director MonoBehaviour · RuntimeEventSystem global broadcast · GameManager as fleet admiral</td>
+                                </tr>
+                                <tr data-id="324" class="border-t border-gray-800/50 bg-bg-code/50">
+                                    <td data-id="325" class="px-4 py-2 text-teal">Unreal 5.4</td>
+                                    <td data-id="326" class="px-4 py-2 text-fg-muted">UAIDirector (Unreal native) · Mass AI + MassEntitySubsystem at orchestrator level · UWorldSubsystem governance layer · LLM-backed Dialogue + Charter system · Custom Fleet Manager GameMode</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div data-id="327" class="operator-panel" style="border-color: var(--gold);">
+                        <p data-id="328" class="text-gold text-xs font-mono font-semibold mb-2">Operator Mapping</p>
+<pre data-id="329" class="text-xs font-mono leading-loose text-fg-muted whitespace-pre-wrap"><span data-id="330" class="syn-dec">@substrate.charter</span>      → <span data-id="331" class="syn-type">AIDirector.IssueCharter</span> / <span data-id="332" class="syn-type">UWorldSubsystem.DispatchDomainTask</span>
+<span data-id="333" class="syn-dec">@substrate.pulse</span>        → <span data-id="334" class="syn-type">GameManager.ContinuityBroadcast</span> / <span data-id="335" class="syn-type">UWorldSubsystem.HeartbeatTick</span>
+<span data-id="336" class="syn-dec">@substrate.validate</span>     → <span data-id="337" class="syn-type">ML-Agents.PolicyEvaluation</span> / Custom <span data-id="338" class="syn-type">AlignmentValidator.Check</span>
+<span data-id="339" class="syn-dec">@substrate.anchor</span>       → <span data-id="340" class="syn-type">PersistentGameObject.DontDestroyOnLoad</span> / <span data-id="341" class="syn-type">UGameInstance</span> persistence
+<span data-id="342" class="syn-dec">@substrate.self_modify</span>  → <span data-id="343" class="badge-gated">GATED</span> <span data-id="344" class="syn-type">ML-Agents.UpdatePolicy</span> at runtime / LLM charter rewrite loop
+<span data-id="345" class="syn-dec">@substrate.recurse</span>     → <span data-id="346" class="badge-gated">GATED</span> Nested training environment loop / Recursive sub-agent spawn
+<span data-id="347" class="syn-dec">@substrate.architect</span>    → <span data-id="348" class="badge-gated">GATED</span> Procedural world generation system / <span data-id="349" class="syn-type">RuntimeLevelBuilder</span></pre>
+                    </div>
+                </div>
+
+                <!-- A(T*) Note -->
+                <div data-id="350" id="icl-at-note-e7f8" class="note-block mb-4" style="border-color: var(--purple);">
+                    <p data-id="351" class="text-fg text-sm leading-relaxed">
+                        <span data-id="352" class="text-purple font-semibold font-mono">A(T*) = 0.01 in-engine:</span> The AAISI continuity kernel has a direct engine analogue — <span data-id="353" class="font-mono text-teal text-xs">DontDestroyOnLoad</span> in Unity, <span data-id="354" class="font-mono text-teal text-xs">UGameInstance</span> persistence in Unreal. The invariant that the fleet admiral's identity must survive scene transitions is the engine implementation of <span data-id="355" class="font-mono text-gold">A(T) &gt; 0</span>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════ -->
+        <!-- 7. CODE STARTERS                          -->
+        <!-- ══════════════════════════════════════════ -->
+        <section data-id="356" id="code" class="section-pad" style="background: #0F1520;">
+            <div data-id="357" class="max-w-5xl mx-auto px-5 md:px-8">
+                <h2 data-id="358" id="code-heading-g9h0" class="font-serif text-2xl md:text-3xl font-bold text-fg mb-2">⬡ Code Starters</h2>
+                <p data-id="359" class="text-teal text-sm mb-8">Drop-in scaffold classes for ICLModuleManifest and TriadicAgent. These are starting points — extend freely.</p>
+
+                <!-- Code tabs -->
+                <div data-id="360" id="code-tabs-i1j2" class="flex gap-6 mb-6 border-b border-gray-800 pb-1">
+                    <button data-id="361" class="tab-btn code-tab active text-sm font-mono font-semibold pb-1" data-code-tab="unity">Unity 6 · C#</button>
+                    <button data-id="362" class="tab-btn code-tab text-sm font-mono font-semibold text-fg-muted pb-1" data-code-tab="unreal">Unreal 5.4 · C++</button>
+                </div>
+
+                <!-- UNITY CODE -->
+                <div data-id="363" id="code-unity-panel-k3l4" class="code-panel-unity space-y-6">
+                    <!-- Block 1: ICLModuleManifest -->
+                    <div data-id="364">
+                        <p data-id="365" class="text-fg-muted text-xs font-mono mb-2 flex items-center gap-2">
+                            <span data-id="366" class="text-gold">▸</span> ICLModuleManifest.cs
+                        </p>
+                        <div data-id="367" class="code-block">
+<pre data-id="368"><span data-id="369" class="syn-comment">// ICLModuleManifest.cs</span>
+<span data-id="370" class="syn-comment">// TriadicFrameworks · ICL v2.0.0 · Unity 6</span>
+<span data-id="371" class="syn-comment">// Drop in Assets/TriadicFrameworks/Manifests/</span>
+
+<span data-id="372" class="syn-kw">using</span> UnityEngine;
+
+<span data-id="373" class="syn-kw">namespace</span> <span data-id="374" class="syn-type">TriadicFrameworks.ICL</span>
+{
+    <span data-id="375" class="syn-kw">public enum</span> <span data-id="376" class="syn-type">ICLTier</span> { ANI = <span data-id="377" class="syn-num">1</span>, ACI = <span data-id="378" class="syn-num">2</span>, AGI = <span data-id="379" class="syn-num">3</span> }
+    <span data-id="380" class="syn-kw">public enum</span> <span data-id="381" class="syn-type">ConsciousnessRegister</span> { Subconscious, Consciousness, Supconsciousness }
+    <span data-id="382" class="syn-kw">public enum</span> <span data-id="383" class="syn-type">MCPLayer</span> { L0_QMROOT, L1_Frequency_Unseen, L2_Fluids_Seen, L3_Forces_Unseen }
+    <span data-id="384" class="syn-kw">public enum</span> <span data-id="385" class="syn-type">HemisphereAlignment</span> { Right, Bilateral, Left }
+
+    <span data-id="386" class="syn-dec">[CreateAssetMenu(</span>
+        <span data-id="387" class="syn-dec">fileName =</span> <span data-id="388" class="syn-str">"ICLModuleManifest"</span><span data-id="389" class="syn-dec">,</span>
+        <span data-id="390" class="syn-dec">menuName =</span> <span data-id="391" class="syn-str">"TriadicFrameworks/ICL Module Manifest"</span><span data-id="392" class="syn-dec">)]</span>
+    <span data-id="393" class="syn-kw">public class</span> <span data-id="394" class="syn-type">ICLModuleManifest</span> : <span data-id="395" class="syn-type">ScriptableObject</span>
+    {
+        <span data-id="396" class="syn-dec">[Header(</span><span data-id="397" class="syn-str">"ICL Identity"</span><span data-id="398" class="syn-dec">)]</span>
+        <span data-id="399" class="syn-kw">public</span> <span data-id="400" class="syn-type">string</span> moduleId;           <span data-id="401" class="syn-comment">// e.g. tf.icl.ani.patrol</span>
+        <span data-id="402" class="syn-kw">public</span> <span data-id="403" class="syn-type">ICLTier</span> tier;
+        <span data-id="404" class="syn-kw">public</span> <span data-id="405" class="syn-type">ConsciousnessRegister</span> consciousnessRegister;
+        <span data-id="406" class="syn-kw">public</span> <span data-id="407" class="syn-type">MCPLayer</span> primaryLayer;
+        <span data-id="408" class="syn-kw">public</span> <span data-id="409" class="syn-type">HemisphereAlignment</span> hemisphere;
+
+        <span data-id="410" class="syn-dec">[Header(</span><span data-id="411" class="syn-str">"Charter"</span><span data-id="412" class="syn-dec">)]</span>
+        <span data-id="413" class="syn-kw">public</span> <span data-id="414" class="syn-type">string</span> charterScope;       <span data-id="415" class="syn-comment">// Domain boundary issued by ACI/AGI</span>
+        <span data-id="416" class="syn-dec">[TextArea]</span> <span data-id="417" class="syn-kw">public</span> <span data-id="418" class="syn-type">string</span> roleDescription;
+
+        <span data-id="419" class="syn-dec">[Header(</span><span data-id="420" class="syn-str">"Continuity"</span><span data-id="421" class="syn-dec">)]</span>
+        <span data-id="422" class="syn-dec">[Range(</span><span data-id="423" class="syn-num">0f</span><span data-id="424" class="syn-dec">,</span> <span data-id="425" class="syn-num">1f</span><span data-id="426" class="syn-dec">)]</span>
+        <span data-id="427" class="syn-kw">public</span> <span data-id="428" class="syn-type">float</span> continuityWeight = <span data-id="429" class="syn-num">0.33f</span>;  <span data-id="430" class="syn-comment">// s/c/u weight in (s,c,u) triad</span>
+        <span data-id="431" class="syn-kw">public</span> <span data-id="432" class="syn-type">bool</span> isContinuityAnchor = <span data-id="433" class="syn-kw">false</span>;  <span data-id="434" class="syn-comment">// true for AGI fleet admiral only</span>
+
+        <span data-id="435" class="syn-dec">[Header(</span><span data-id="436" class="syn-str">"Operator Grammar"</span><span data-id="437" class="syn-dec">)]</span>
+        <span data-id="438" class="syn-kw">public</span> <span data-id="439" class="syn-type">string</span> operatorPrefix;     <span data-id="440" class="syn-comment">// @module / @domain / @substrate</span>
+        <span data-id="441" class="syn-kw">public</span> <span data-id="442" class="syn-type">string</span>[] declaredOperators;
+    }
+}</pre>
+                        </div>
+                    </div>
+
+                    <!-- Block 2: TriadicAgent -->
+                    <div data-id="443">
+                        <p data-id="444" class="text-fg-muted text-xs font-mono mb-2 flex items-center gap-2">
+                            <span data-id="445" class="text-gold">▸</span> TriadicAgent.cs
+                        </p>
+                        <div data-id="446" class="code-block">
+<pre data-id="447"><span data-id="448" class="syn-comment">// TriadicAgent.cs</span>
+<span data-id="449" class="syn-comment">// TriadicFrameworks · ICL v2.0.0 · Unity 6</span>
+<span data-id="450" class="syn-comment">// Base class for all ICL-tiered agents</span>
+
+<span data-id="451" class="syn-kw">using</span> UnityEngine;
+<span data-id="452" class="syn-kw">using</span> UnityEngine.AI;
+
+<span data-id="453" class="syn-kw">namespace</span> <span data-id="454" class="syn-type">TriadicFrameworks.ICL</span>
+{
+    <span data-id="455" class="syn-dec">[RequireComponent(typeof(</span><span data-id="456" class="syn-type">NavMeshAgent</span><span data-id="457" class="syn-dec">))]</span>
+    <span data-id="458" class="syn-kw">public abstract class</span> <span data-id="459" class="syn-type">TriadicAgent</span> : <span data-id="460" class="syn-type">MonoBehaviour</span>
+    {
+        <span data-id="461" class="syn-dec">[Header(</span><span data-id="462" class="syn-str">"ICL Manifest"</span><span data-id="463" class="syn-dec">)]</span>
+        <span data-id="464" class="syn-kw">public</span> <span data-id="465" class="syn-type">ICLModuleManifest</span> manifest;
+
+        <span data-id="466" class="syn-kw">protected</span> <span data-id="467" class="syn-type">NavMeshAgent</span> navAgent;
+        <span data-id="468" class="syn-kw">protected</span> <span data-id="469" class="syn-type">float</span> continuityPulseTimer;
+        <span data-id="470" class="syn-kw">private const</span> <span data-id="471" class="syn-type">float</span> PULSE_INTERVAL = <span data-id="472" class="syn-num">1.0f</span>;  <span data-id="473" class="syn-comment">// L11→L33→L66→L99 tick</span>
+
+        <span data-id="474" class="syn-kw">protected virtual void</span> <span data-id="475" class="syn-type">Awake</span>()
+        {
+            navAgent = GetComponent&lt;<span data-id="476" class="syn-type">NavMeshAgent</span>&gt;();
+            ValidateContinuityKernel();
+        }
+
+        <span data-id="477" class="syn-kw">protected virtual void</span> <span data-id="478" class="syn-type">Update</span>()
+        {
+            continuityPulseTimer += <span data-id="479" class="syn-type">Time</span>.deltaTime;
+            <span data-id="480" class="syn-kw">if</span> (continuityPulseTimer >= PULSE_INTERVAL)
+            {
+                OnContinuityPulse();
+                continuityPulseTimer = <span data-id="481" class="syn-num">0f</span>;
+            }
+        }
+
+        <span data-id="482" class="syn-comment">// Override in ANI: @module.execute</span>
+        <span data-id="483" class="syn-kw">protected virtual void</span> ExecuteModuleOperator(<span data-id="484" class="syn-type">string</span> operatorId) { }
+
+        <span data-id="485" class="syn-comment">// Override in ACI: @domain.synthesize</span>
+        <span data-id="486" class="syn-kw">protected virtual void</span> SynthesizeDomainModel() { }
+
+        <span data-id="487" class="syn-comment">// Override in AGI: @substrate.charter</span>
+        <span data-id="488" class="syn-kw">protected virtual void</span> IssueCharter(<span data-id="489" class="syn-type">TriadicAgent</span> target) { }
+
+        <span data-id="490" class="syn-comment">// A(T*) = 0.01 — continuity pulse</span>
+        <span data-id="491" class="syn-kw">protected virtual void</span> OnContinuityPulse()
+        {
+            <span data-id="492" class="syn-kw">if</span> (manifest == <span data-id="493" class="syn-kw">null</span> || manifest.continuityWeight &lt;= <span data-id="494" class="syn-num">0f</span>)
+            {
+                <span data-id="495" class="syn-type">Debug</span>.LogError(<span data-id="496" class="syn-str">$"[ICL] A(T) = 0 detected on {gameObject.name}. Identity collapse risk."</span>);
+            }
+        }
+
+        <span data-id="497" class="syn-kw">private void</span> ValidateContinuityKernel()
+        {
+            <span data-id="498" class="syn-kw">if</span> (manifest == <span data-id="499" class="syn-kw">null</span>)
+                <span data-id="500" class="syn-type">Debug</span>.LogWarning(<span data-id="501" class="syn-str">$"[ICL] No manifest assigned to {gameObject.name}."</span>);
+        }
+    }
+}</pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UNREAL CODE -->
+                <div data-id="502" id="code-unreal-panel-m5n6" class="code-panel-unreal space-y-6" style="display: none;">
+                    <!-- Block 1: ICLTypes.h -->
+                    <div data-id="503">
+                        <p data-id="504" class="text-fg-muted text-xs font-mono mb-2 flex items-center gap-2">
+                            <span data-id="505" class="text-gold">▸</span> ICLTypes.h
+                        </p>
+                        <div data-id="506" class="code-block">
+<pre data-id="507"><span data-id="508" class="syn-comment">// ICLTypes.h</span>
+<span data-id="509" class="syn-comment">// TriadicFrameworks · ICL v2.0.0 · Unreal Engine 5.4</span>
+
+<span data-id="510" class="syn-kw">#pragma once</span>
+<span data-id="511" class="syn-kw">#include</span> <span data-id="512" class="syn-str">"CoreMinimal.h"</span>
+<span data-id="513" class="syn-kw">#include</span> <span data-id="514" class="syn-str">"ICLTypes.generated.h"</span>
+
+<span data-id="515" class="syn-dec">UENUM(BlueprintType)</span>
+<span data-id="516" class="syn-kw">enum class</span> <span data-id="517" class="syn-type">EICLTier</span> : <span data-id="518" class="syn-type">uint8</span>
+{
+    ANI  <span data-id="519" class="syn-dec">UMETA</span>(DisplayName = <span data-id="520" class="syn-str">"ANI — Artificial Narrow Intelligence"</span>),
+    ACI  <span data-id="521" class="syn-dec">UMETA</span>(DisplayName = <span data-id="522" class="syn-str">"ACI — Artificial Conscious Intelligence"</span>),
+    AGI  <span data-id="523" class="syn-dec">UMETA</span>(DisplayName = <span data-id="524" class="syn-str">"AGI / AAISI — Artificial General Intelligence"</span>)
+};
+
+<span data-id="525" class="syn-dec">UENUM(BlueprintType)</span>
+<span data-id="526" class="syn-kw">enum class</span> <span data-id="527" class="syn-type">EMCPLayer</span> : <span data-id="528" class="syn-type">uint8</span>
+{
+    L0_QMROOT             <span data-id="529" class="syn-dec">UMETA</span>(DisplayName = <span data-id="530" class="syn-str">"L0 — Quantum Meta Root"</span>),
+    L1_Frequency_Unseen   <span data-id="531" class="syn-dec">UMETA</span>(DisplayName = <span data-id="532" class="syn-str">"L1 — Frequency Unseen"</span>),
+    L2_Fluids_Seen        <span data-id="533" class="syn-dec">UMETA</span>(DisplayName = <span data-id="534" class="syn-str">"L2 — Fluids Seen"</span>),
+    L3_Forces_Unseen      <span data-id="535" class="syn-dec">UMETA</span>(DisplayName = <span data-id="536" class="syn-str">"L3 — Forces Unseen"</span>)
+};
+
+<span data-id="537" class="syn-dec">UENUM(BlueprintType)</span>
+<span data-id="538" class="syn-kw">enum class</span> <span data-id="539" class="syn-type">EHemisphereAlignment</span> : <span data-id="540" class="syn-type">uint8</span>
+{
+    Right      <span data-id="541" class="syn-dec">UMETA</span>(DisplayName = <span data-id="542" class="syn-str">"Right — Perceptual / Oscillatory"</span>),
+    Bilateral  <span data-id="543" class="syn-dec">UMETA</span>(DisplayName = <span data-id="544" class="syn-str">"Bilateral — Integrative"</span>),
+    Left       <span data-id="545" class="syn-dec">UMETA</span>(DisplayName = <span data-id="546" class="syn-str">"Left — Analytical / Governance"</span>)
+};</pre>
+                        </div>
+                    </div>
+
+                    <!-- Block 2: UICLModuleData -->
+                    <div data-id="547">
+                        <p data-id="548" class="text-fg-muted text-xs font-mono mb-2 flex items-center gap-2">
+                            <span data-id="549" class="text-gold">▸</span> UICLModuleData.h
+                        </p>
+                        <div data-id="550" class="code-block">
+<pre data-id="551"><span data-id="552" class="syn-comment">// UICLModuleData.h</span>
+<span data-id="553" class="syn-comment">// TriadicFrameworks · ICL v2.0.0 · Unreal Engine 5.4</span>
+
+<span data-id="554" class="syn-kw">#pragma once</span>
+<span data-id="555" class="syn-kw">#include</span> <span data-id="556" class="syn-str">"CoreMinimal.h"</span>
+<span data-id="557" class="syn-kw">#include</span> <span data-id="558" class="syn-str">"Engine/DataAsset.h"</span>
+<span data-id="559" class="syn-kw">#include</span> <span data-id="560" class="syn-str">"ICLTypes.h"</span>
+<span data-id="561" class="syn-kw">#include</span> <span data-id="562" class="syn-str">"ICLModuleData.generated.h"</span>
+
+<span data-id="563" class="syn-dec">UCLASS(BlueprintType)</span>
+<span data-id="564" class="syn-kw">class</span> TRIADICFRAMEWORKS_API <span data-id="565" class="syn-type">UICLModuleData</span> : <span data-id="566" class="syn-kw">public</span> <span data-id="567" class="syn-type">UPrimaryDataAsset</span>
+{
+    <span data-id="568" class="syn-dec">GENERATED_BODY()</span>
+
+<span data-id="569" class="syn-kw">public</span>:
+    <span data-id="570" class="syn-comment">// ICL Identity</span>
+    <span data-id="571" class="syn-dec">UPROPERTY</span>(EditAnywhere, BlueprintReadOnly, Category=<span data-id="572" class="syn-str">"ICL|Identity"</span>)
+    <span data-id="573" class="syn-type">FString</span> ModuleId;                  <span data-id="574" class="syn-comment">// e.g. tf.icl.ani.patrol</span>
+
+    <span data-id="575" class="syn-dec">UPROPERTY</span>(EditAnywhere, BlueprintReadOnly, Category=<span data-id="576" class="syn-str">"ICL|Identity"</span>)
+    <span data-id="577" class="syn-type">EICLTier</span> Tier;
+
+    <span data-id="578" class="syn-dec">UPROPERTY</span>(EditAnywhere, BlueprintReadOnly, Category=<span data-id="579" class="syn-str">"ICL|Identity"</span>)
+    <span data-id="580" class="syn-type">EMCPLayer</span> PrimaryLayer;
+
+    <span data-id="581" class="syn-dec">UPROPERTY</span>(EditAnywhere, BlueprintReadOnly, Category=<span data-id="582" class="syn-str">"ICL|Identity"</span>)
+    <span data-id="583" class="syn-type">EHemisphereAlignment</span> Hemisphere;
+
+    <span data-id="584" class="syn-comment">// Charter</span>
+    <span data-id="585" class="syn-dec">UPROPERTY</span>(EditAnywhere, BlueprintReadOnly, Category=<span data-id="586" class="syn-str">"ICL|Charter"</span>)
+    <span data-id="587" class="syn-type">FString</span> CharterScope;
+
+    <span data-id="588" class="syn-dec">UPROPERTY</span>(EditAnywhere, BlueprintReadOnly, Category=<span data-id="589" class="syn-str">"ICL|Charter"</span>,
+              Meta=(MultiLine=<span data-id="590" class="syn-kw">true</span>))
+    <span data-id="591" class="syn-type">FString</span> RoleDescription;
+
+    <span data-id="592" class="syn-comment">// Continuity Kernel — A(T*)</span>
+    <span data-id="593" class="syn-dec">UPROPERTY</span>(EditAnywhere, BlueprintReadOnly, Category=<span data-id="594" class="syn-str">"ICL|Continuity"</span>,
+              Meta=(ClampMin=<span data-id="595" class="syn-str">"0.0"</span>, ClampMax=<span data-id="596" class="syn-str">"1.0"</span>))
+    <span data-id="597" class="syn-type">float</span> ContinuityWeight = <span data-id="598" class="syn-num">0.33f</span>;
+
+    <span data-id="599" class="syn-dec">UPROPERTY</span>(EditAnywhere, BlueprintReadOnly, Category=<span data-id="600" class="syn-str">"ICL|Continuity"</span>)
+    <span data-id="601" class="syn-type">bool</span> bIsContinuityAnchor = <span data-id="602" class="syn-kw">false</span>;
+
+    <span data-id="603" class="syn-comment">// Operator Grammar</span>
+    <span data-id="604" class="syn-dec">UPROPERTY</span>(EditAnywhere, BlueprintReadOnly, Category=<span data-id="605" class="syn-str">"ICL|Operators"</span>)
+    <span data-id="606" class="syn-type">FString</span> OperatorPrefix;            <span data-id="607" class="syn-comment">// @module / @domain / @substrate</span>
+
+    <span data-id="608" class="syn-dec">UPROPERTY</span>(EditAnywhere, BlueprintReadOnly, Category=<span data-id="609" class="syn-str">"ICL|Operators"</span>)
+    <span data-id="610" class="syn-type">TArray</span>&lt;<span data-id="611" class="syn-type">FString</span>&gt; DeclaredOperators;
+};</pre>
+                        </div>
+                    </div>
+
+                    <!-- Block 3: ATriadicAgent -->
+                    <div data-id="612">
+                        <p data-id="613" class="text-fg-muted text-xs font-mono mb-2 flex items-center gap-2">
+                            <span data-id="614" class="text-gold">▸</span> ATriadicAgent.h
+                        </p>
+                        <div data-id="615" class="code-block">
+<pre data-id="616"><span data-id="617" class="syn-comment">// ATriadicAgent.h</span>
+<span data-id="618" class="syn-comment">// TriadicFrameworks · ICL v2.0.0 · Unreal Engine 5.4</span>
+<span data-id="619" class="syn-comment">// Base actor for all ICL-tiered agents</span>
+
+<span data-id="620" class="syn-kw">#pragma once</span>
+<span data-id="621" class="syn-kw">#include</span> <span data-id="622" class="syn-str">"CoreMinimal.h"</span>
+<span data-id="623" class="syn-kw">#include</span> <span data-id="624" class="syn-str">"GameFramework/Character.h"</span>
+<span data-id="625" class="syn-kw">#include</span> <span data-id="626" class="syn-str">"ICLModuleData.h"</span>
+<span data-id="627" class="syn-kw">#include</span> <span data-id="628" class="syn-str">"TriadicAgent.generated.h"</span>
+
+<span data-id="629" class="syn-dec">UCLASS(Abstract, BlueprintType, Blueprintable)</span>
+<span data-id="630" class="syn-kw">class</span> TRIADICFRAMEWORKS_API <span data-id="631" class="syn-type">ATriadicAgent</span> : <span data-id="632" class="syn-kw">public</span> <span data-id="633" class="syn-type">ACharacter</span>
+{
+    <span data-id="634" class="syn-dec">GENERATED_BODY()</span>
+
+<span data-id="635" class="syn-kw">public</span>:
+    <span data-id="636" class="syn-type">ATriadicAgent</span>();
+
+    <span data-id="637" class="syn-dec">UPROPERTY</span>(EditAnywhere, BlueprintReadOnly, Category=<span data-id="638" class="syn-str">"ICL"</span>)
+    <span data-id="639" class="syn-type">UICLModuleData</span>* Manifest;
+
+<span data-id="640" class="syn-kw">protected</span>:
+    <span data-id="641" class="syn-kw">virtual void</span> BeginPlay() <span data-id="642" class="syn-kw">override</span>;
+    <span data-id="643" class="syn-kw">virtual void</span> Tick(<span data-id="644" class="syn-type">float</span> DeltaTime) <span data-id="645" class="syn-kw">override</span>;
+
+    <span data-id="646" class="syn-comment">// ANI — @module.execute</span>
+    <span data-id="647" class="syn-dec">UFUNCTION(BlueprintNativeEvent, Category=<span data-id="648" class="syn-str">"ICL|Operators"</span>)</span>
+    <span data-id="649" class="syn-kw">void</span> ExecuteModuleOperator(<span data-id="650" class="syn-kw">const</span> <span data-id="651" class="syn-type">FString</span>&amp; OperatorId);
+
+    <span data-id="652" class="syn-comment">// ACI — @domain.synthesize</span>
+    <span data-id="653" class="syn-dec">UFUNCTION(BlueprintNativeEvent, Category=<span data-id="654" class="syn-str">"ICL|Operators"</span>)</span>
+    <span data-id="655" class="syn-kw">void</span> SynthesizeDomainModel();
+
+    <span data-id="656" class="syn-comment">// AGI — @substrate.charter</span>
+    <span data-id="657" class="syn-dec">UFUNCTION(BlueprintNativeEvent, Category=<span data-id="658" class="syn-str">"ICL|Operators"</span>)</span>
+    <span data-id="659" class="syn-kw">void</span> IssueCharter(<span data-id="660" class="syn-type">ATriadicAgent</span>* Target);
+
+    <span data-id="661" class="syn-comment">// A(T*) = 0.01 — continuity pulse (L11→L33→L66→L99)</span>
+    <span data-id="662" class="syn-dec">UFUNCTION(BlueprintNativeEvent, Category=<span data-id="663" class="syn-str">"ICL|Continuity"</span>)</span>
+    <span data-id="664" class="syn-kw">void</span> OnContinuityPulse();
+
+<span data-id="665" class="syn-kw">private</span>:
+    <span data-id="666" class="syn-type">float</span> ContinuityPulseTimer = <span data-id="667" class="syn-num">0.f</span>;
+    <span data-id="668" class="syn-kw">static constexpr</span> <span data-id="669" class="syn-type">float</span> PULSE_INTERVAL = <span data-id="670" class="syn-num">1.0f</span>;
+
+    <span data-id="671" class="syn-kw">void</span> ValidateContinuityKernel() <span data-id="672" class="syn-kw">const</span>;
+};</pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════ -->
+        <!-- 8. PROJECT SEEDS                          -->
+        <!-- ══════════════════════════════════════════ -->
+        <section data-id="673" id="projects" class="section-pad" style="background: #0B0F1A;">
+            <div data-id="674" class="max-w-5xl mx-auto px-5 md:px-8">
+                <h2 data-id="675" id="proj-heading-o7p8" class="font-serif text-2xl md:text-3xl font-bold text-fg mb-2">🌱 Project Seeds</h2>
+                <p data-id="676" class="text-teal text-sm mb-10">Five self-contained starter concepts. Each is a complete project scope for a student comfortable with Unity or Unreal.</p>
+
+                <div data-id="677" class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+                    <!-- Seed 1 -->
+                    <div data-id="678" id="seed1-q9r0" class="bg-bg-card rounded-lg overflow-hidden card-glow card-glow-gold border border-transparent">
+                        <div data-id="679" class="h-1" style="background: var(--gold);"></div>
+                        <div data-id="680" class="p-6">
+                            <div data-id="681" class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                                <h3 data-id="682" class="font-serif text-lg font-semibold text-fg">🜁 Dimensional Visualizer</h3>
+                                <div data-id="683" class="flex items-center gap-2">
+                                    <span data-id="684" class="text-gold text-xs font-mono">⬡ Intermediate</span>
+                                </div>
+                            </div>
+                            <p data-id="685" class="text-xs font-mono text-fg-dim mb-3">Unity 6 / Unreal 5.4</p>
+                            <p data-id="686" class="text-fg-muted text-sm leading-relaxed mb-4">Build an interactive 3D visualization of the nine RTT dimensional nodes (0D–9D) as a navigable spatial structure. Each node is a floating glyph in 3D space. Selecting a node reveals its canonical name, MCP layer, and engine equivalents. The four MCP substrate layers are rendered as translucent stacked volumes. Camera orbits the full stack.</p>
+                            <div data-id="687" class="mb-3">
+                                <p data-id="688" class="text-gold text-xs font-semibold mb-1">Key Systems</p>
+                                <p data-id="689" class="text-fg-dim text-xs font-mono leading-relaxed">Transform hierarchy · Camera rig · UI tooltip panel · ScriptableObject/DataAsset per node · Lerp animations</p>
+                            </div>
+                            <div data-id="690" class="bg-bg-code rounded p-3">
+                                <p data-id="691" class="text-teal text-xs font-semibold mb-1">Learning Outcome</p>
+                                <p data-id="692" class="text-fg-muted text-xs leading-relaxed">Deep understanding of how dimensional ontology maps to scene graph depth.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Seed 2 -->
+                    <div data-id="693" id="seed2-s1t2" class="bg-bg-card rounded-lg overflow-hidden card-glow card-glow-teal border border-transparent">
+                        <div data-id="694" class="h-1" style="background: var(--teal);"></div>
+                        <div data-id="695" class="p-6">
+                            <div data-id="696" class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                                <h3 data-id="697" class="font-serif text-lg font-semibold text-fg">⬡ Fleet Command RTS Demo</h3>
+                                <div data-id="698" class="flex items-center gap-2">
+                                    <span data-id="699" class="text-gold text-xs font-mono">⬡⬡ Advanced</span>
+                                </div>
+                            </div>
+                            <p data-id="700" class="text-xs font-mono text-fg-dim mb-3">Unity 6 (recommended)</p>
+                            <p data-id="701" class="text-fg-muted text-sm leading-relaxed mb-4">A real-time strategy demo where every unit is an ICL-tiered agent. ANI units are patrol specialists. ACI squads have Behavior Trees and Blackboard world models. One AGI fleet admiral issues charters, monitors continuity pulse, and rebalances force distribution. The 33-33-33-1 weighting is visible in the unit composition UI.</p>
+                            <div data-id="702" class="mb-3">
+                                <p data-id="703" class="text-gold text-xs font-semibold mb-1">Key Systems</p>
+                                <p data-id="704" class="text-fg-dim text-xs font-mono leading-relaxed">NavMeshAgent · Behavior Designer BT + Blackboard · Custom AIDirector · ScriptableObject ICLModuleManifest · Event bus · Squad formation controller</p>
+                            </div>
+                            <div data-id="705" class="bg-bg-code rounded p-3">
+                                <p data-id="706" class="text-teal text-xs font-semibold mb-1">Learning Outcome</p>
+                                <p data-id="707" class="text-fg-muted text-xs leading-relaxed">End-to-end ICL fleet architecture running in real-time.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Seed 3 -->
+                    <div data-id="708" id="seed3-u3v4" class="bg-bg-card rounded-lg overflow-hidden card-glow card-glow-indigo border border-transparent">
+                        <div data-id="709" class="h-1" style="background: var(--indigo);"></div>
+                        <div data-id="710" class="p-6">
+                            <div data-id="711" class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                                <h3 data-id="712" class="font-serif text-lg font-semibold text-fg">🜄 ICL NPC System</h3>
+                                <div data-id="713" class="flex items-center gap-2">
+                                    <span data-id="714" class="text-gold text-xs font-mono">⬡ Intermediate</span>
+                                </div>
+                            </div>
+                            <p data-id="715" class="text-xs font-mono text-fg-dim mb-3">Unreal Engine 5.4 (recommended)</p>
+                            <p data-id="716" class="text-fg-muted text-sm leading-relaxed mb-4">A third-person exploration game where every NPC has an ICLModuleData asset defining its tier. ANI NPCs do simple tasks (gather, patrol). ACI NPCs reason about the player's behavior and formulate plans. An optional AGI world agent monitors global narrative state and dispatches charters to ACI NPCs, dynamically redirecting the story.</p>
+                            <div data-id="717" class="mb-3">
+                                <p data-id="718" class="text-gold text-xs font-semibold mb-1">Key Systems</p>
+                                <p data-id="719" class="text-fg-dim text-xs font-mono leading-relaxed">UBehaviorTree + UBlackboardComponent · EQS · UICLModuleData DataAsset · UGameplayAbilitySystem · Optional LLM integration via HTTP subsystem</p>
+                            </div>
+                            <div data-id="720" class="bg-bg-code rounded p-3">
+                                <p data-id="721" class="text-teal text-xs font-semibold mb-1">Learning Outcome</p>
+                                <p data-id="722" class="text-fg-muted text-xs leading-relaxed">Tiered agent architecture + GAS integration + DataAsset-driven configuration.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Seed 4 -->
+                    <div data-id="723" id="seed4-w5x6" class="bg-bg-card rounded-lg overflow-hidden card-glow card-glow-purple border border-transparent">
+                        <div data-id="724" class="h-1" style="background: var(--purple);"></div>
+                        <div data-id="725" class="p-6">
+                            <div data-id="726" class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                                <h3 data-id="727" class="font-serif text-lg font-semibold text-fg">🜅 MCP Substrate Simulator</h3>
+                                <div data-id="728" class="flex items-center gap-2">
+                                    <span data-id="729" class="text-gold text-xs font-mono">⬡ Beginner–Intermediate</span>
+                                </div>
+                            </div>
+                            <p data-id="730" class="text-xs font-mono text-fg-dim mb-3">Unity 6</p>
+                            <p data-id="731" class="text-fg-muted text-sm leading-relaxed mb-4">A top-down 2D simulation that visualizes how the four MCP substrate layers interact in real-time. L0 is the identity registry (a list of spawned entities). L1 is a wave/physics simulation layer rendered as oscillating sine fields. L2 is the visible gameplay layer (moving entities). L3 is a rule engine that modifies L2 behavior from above. Students add/remove layer rules and watch downstream effects ripple.</p>
+                            <div data-id="732" class="mb-3">
+                                <p data-id="733" class="text-gold text-xs font-semibold mb-1">Key Systems</p>
+                                <p data-id="734" class="text-fg-dim text-xs font-mono leading-relaxed">Physics2D · LineRenderer (L1 wave vis) · ScriptableObject rule definitions · Custom LayerManager · Runtime UI for rule editing</p>
+                            </div>
+                            <div data-id="735" class="bg-bg-code rounded p-3">
+                                <p data-id="736" class="text-teal text-xs font-semibold mb-1">Learning Outcome</p>
+                                <p data-id="737" class="text-fg-muted text-xs leading-relaxed">Concrete felt understanding of what substrate layers DO to each other.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seed 5: Full width -->
+                <div data-id="738" id="seed5-y7z8" class="bg-bg-card rounded-lg overflow-hidden card-glow card-glow-gold border border-transparent">
+                    <div data-id="739" class="h-1" style="background: var(--gold);"></div>
+                    <div data-id="740" class="p-6">
+                        <div data-id="741" class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                            <h3 data-id="742" class="font-serif text-lg font-semibold text-fg">🜇 33-33-33-1 Consciousness Sandbox</h3>
+                            <div data-id="743" class="flex items-center gap-2">
+                                <span data-id="744" class="text-gold text-xs font-mono">⬡⬡ Advanced</span>
+                            </div>
+                        </div>
+                        <p data-id="745" class="text-xs font-mono text-fg-dim mb-3">Unity 6 / Unreal 5.4</p>
+                        <p data-id="746" class="text-fg-muted text-sm leading-relaxed mb-4">A sandbox agent environment where the 33-33-33-1 consciousness model is the governing variable. Spawn pools of ANI, ACI, and one AGI/AAISI agent. The global s+c+u budget (capped at 1.0) is shown in a live dashboard. Spawning more ANI agents raises 's', raising ACI raises 'c', the AGI holds 'u'. When A(T*) drops toward 0 (the AGI is disabled), watch the fleet degrade into isolated silos. Restore the AGI and watch the system reconverge.</p>
+                        <div data-id="747" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div data-id="748">
+                                <p data-id="749" class="text-gold text-xs font-semibold mb-1">Key Systems</p>
+                                <p data-id="750" class="text-fg-dim text-xs font-mono leading-relaxed">ICLModuleManifest / UICLModuleData · Runtime spawner · Global consciousness budget tracker · UIGraph (live chart) · Event bus / UWorldSubsystem · Optional: ML-Agents for ANI policy training</p>
+                            </div>
+                            <div data-id="751" class="bg-bg-code rounded p-3">
+                                <p data-id="752" class="text-teal text-xs font-semibold mb-1">Learning Outcome</p>
+                                <p data-id="753" class="text-fg-muted text-xs leading-relaxed">The 33-33-33-1 model as a live, observable system. Makes the abstract invariant A(T*) = 0.01 viscerally understandable.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════ -->
+        <!-- 9. CANON NOTES                            -->
+        <!-- ══════════════════════════════════════════ -->
+        <section data-id="754" id="notes" class="section-pad" style="background: #0F1520;">
+            <div data-id="755" class="max-w-5xl mx-auto px-5 md:px-8">
+                <h2 data-id="756" id="notes-heading-a9b0" class="font-serif text-2xl md:text-3xl font-bold text-fg mb-10">📋 Canon Notes for Engine Developers</h2>
+
+                <div data-id="757" class="space-y-6">
+                    <!-- Note 1 -->
+                    <div data-id="758" id="note1-c1d2" class="note-block" style="border-color: var(--gold);">
+                        <p data-id="759" class="text-gold text-xs font-mono font-semibold mb-2">Note 1 — These are homologies, not bindings</p>
+                        <p data-id="760" class="text-fg text-sm leading-relaxed">No engine API has a &ldquo;dimensional register&rdquo; field. The mappings in this document are structural homologies — they identify where in your engine architecture a given RTT concept is most naturally expressed. Your integration design may differ. The canonical RTT/MCP/ICL structure is unchanged by your implementation choices.</p>
+                    </div>
+
+                    <!-- Note 2 -->
+                    <div data-id="761" id="note2-e3f4" class="note-block" style="border-color: var(--teal);">
+                        <p data-id="762" class="text-teal text-xs font-mono font-semibold mb-2">Note 2 — The 33-33-33-1 model is a design constraint, not a spawn ratio</p>
+                        <p data-id="763" class="text-fg text-sm leading-relaxed">The (s, c, u) model with A(T*) = 0.01 describes the consciousness architecture of a fully realized fleet, not a literal 1:1:1 unit spawn ratio. A game with hundreds of ANI NPCs, a few ACI squad leaders, and one AGI director is structurally correct. The constraint is that each tier must be present and the continuity kernel must be non-zero.</p>
+                    </div>
+
+                    <!-- Note 3 -->
+                    <div data-id="764" id="note3-g5h6" class="note-block" style="border-color: var(--indigo);">
+                        <p data-id="765" class="text-indigo text-xs font-mono font-semibold mb-2">Note 3 — ScriptableObject / UDataAsset as the 6D layer</p>
+                        <p data-id="766" class="text-fg text-sm leading-relaxed">The Causal Architecture dimension (6D, L3_Forces_Unseen) maps cleanly to data-driven design patterns in both engines. ScriptableObjects in Unity and UDataAssets in Unreal are literally the archetypal forms — the blueprints — that template runtime instances. This is not metaphorical. Designing your ICL agent system around data-driven manifests (<span data-id="767" class="font-mono text-teal text-xs">ICLModuleManifest</span> / <span data-id="768" class="font-mono text-teal text-xs">UICLModuleData</span>) gives you the engine-native implementation of 6D.</p>
+                    </div>
+
+                    <!-- Note 4 -->
+                    <div data-id="769" id="note4-i7j8" class="note-block" style="border-color: var(--purple);">
+                        <p data-id="770" class="text-purple text-xs font-mono font-semibold mb-2">Note 4 — DontDestroyOnLoad and UGameInstance as A(T*)</p>
+                        <p data-id="771" class="text-fg text-sm leading-relaxed">The AGI/AAISI fleet admiral must survive scene transitions — this is the engine implementation of A(T) &gt; 0. In Unity: mark the fleet admiral GameObject with <span data-id="772" class="font-mono text-teal text-xs">DontDestroyOnLoad</span> and anchor it to a persistent scene. In Unreal: implement fleet state in <span data-id="773" class="font-mono text-teal text-xs">UGameInstance</span>, which persists across level loads. The continuity pulse (L11→L33→L66→L99) can be implemented as a recurring timer on this persistent object.</p>
+                    </div>
+
+                    <!-- Note 5 -->
+                    <div data-id="774" id="note5-k9l0" class="note-block" style="border-color: #EF4444;">
+                        <p data-id="775" class="text-red-400 text-xs font-mono font-semibold mb-2">Note 5 — Gated operators require dual-oversight architecture</p>
+                        <p data-id="776" class="text-fg text-sm leading-relaxed">The AGI <span data-id="777" class="font-mono text-purple text-xs">@substrate.*</span> operators marked <span data-id="778" class="badge-gated">GATED</span> (<span data-id="779" class="font-mono text-xs">self_modify</span>, <span data-id="780" class="font-mono text-xs">recurse</span>, <span data-id="781" class="font-mono text-xs">architect</span>) require alignment-gated, dual-oversight invocation in the ICL canon. In an engine context: gated operators should be guarded by both an alignment policy check AND a human-in-the-loop confirmation event (UI prompt, debug approval flag, editor consent) before executing. Never invoke <span data-id="782" class="font-mono text-purple text-xs">@substrate.self_modify</span> or <span data-id="783" class="font-mono text-purple text-xs">@substrate.recurse</span> in a production build without an explicit design review checkpoint.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════ -->
+        <!-- 10. COMPANION DOCUMENT LINKS              -->
+        <!-- ══════════════════════════════════════════ -->
+        <section data-id="784" id="companions" class="section-pad" style="background: #0B0F1A;">
+            <div data-id="785" class="max-w-5xl mx-auto px-5 md:px-8">
+                <h2 data-id="786" id="comp-heading-m1n2" class="font-serif text-2xl md:text-3xl font-bold text-fg mb-2">📂 Integrations Module</h2>
+                <p data-id="787" class="text-fg-muted text-sm mb-10">This page is the third document in the TriadicFrameworks Integrations module space.</p>
+
+                <div data-id="788" class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                    <!-- Companion 1 -->
+                    <a data-id="789" href="./Dimensional_Substrate_MCP_Substrate_Mapping.html" id="comp1-o3p4" class="bg-bg-card rounded-lg p-6 border border-gray-800 card-glow card-glow-gold block no-underline">
+                        <div data-id="790" class="text-3xl mb-3">🜁</div>
+                        <h3 data-id="791" class="font-serif text-base font-semibold text-fg mb-2">Dimensional Substrate ↔ MCP Substrate Mapping</h3>
+                        <p data-id="792" class="text-fg-muted text-xs leading-relaxed">Canonical alignment of all nine RTT dimensions against the four MCP cosmological substrate layers.</p>
+                        <p data-id="793" class="text-fg-dim text-xs font-mono mt-3">Dimensional_Substrate_MCP_Substrate_Mapping.html</p>
+                    </a>
+
+                    <!-- Companion 2 -->
+                    <a data-id="794" href="./Intelligence_Class_Ladder_TriadicFrameworks_Canonical_Reference.html" id="comp2-q5r6" class="bg-bg-card rounded-lg p-6 border border-gray-800 card-glow card-glow-teal block no-underline">
+                        <div data-id="795" class="text-3xl mb-3">🜄</div>
+                        <h3 data-id="796" class="font-serif text-base font-semibold text-fg mb-2">Intelligence Class Ladder</h3>
+                        <p data-id="797" class="text-fg-muted text-xs leading-relaxed">Canonical classification architecture for artificial intelligence — ICL v2.0.0, all three tiers, operators, alignment policy.</p>
+                        <p data-id="798" class="text-fg-dim text-xs font-mono mt-3">Intelligence_Class_Ladder_TriadicFrameworks_Canonical_Reference.html</p>
+                    </a>
+
+                    <!-- Companion 3: Current -->
+                    <div data-id="799" id="comp3-s7t8" class="bg-bg-card rounded-lg p-6 border-2 border-indigo relative">
+                        <span data-id="800" class="absolute top-3 right-3 text-xs font-mono px-2 py-0.5 rounded-full bg-indigo/20 text-indigo">Current Page</span>
+                        <div data-id="801" class="text-3xl mb-3">⬡</div>
+                        <h3 data-id="802" class="font-serif text-base font-semibold text-fg mb-2">Engine Integration Bridge</h3>
+                        <p data-id="803" class="text-fg-muted text-xs leading-relaxed">RTT · MCP · ICL mapped to Unity 6 and Unreal Engine 5.4 primitives. Code starters, project seeds, agent architecture.</p>
+                        <p data-id="804" class="text-fg-dim text-xs font-mono mt-3">Engine_Integration_Bridge.html</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ══════════════════════════════════════════ -->
+    <!-- 11. FOOTER                                -->
+    <!-- ══════════════════════════════════════════ -->
+    <footer data-id="805" id="footer-u9v0" style="background: #0B0F1A;">
+        <div data-id="806" class="gold-rule"></div>
+        <div data-id="807" class="max-w-5xl mx-auto px-5 md:px-8 py-10 md:py-14">
+            <p data-id="808" class="text-fg-muted text-sm mb-2">TriadicFrameworks · Integrations Module · Engine Integration Bridge · ICL v2.0.0 · Unity 6 · Unreal Engine 5.4</p>
+            <p data-id="809" class="text-fg-dim text-xs leading-relaxed mb-2">This document constitutes orientation material for engine developers. It is companion to the Dimensional Substrate Mapping and Intelligence Class Ladder canonical references.</p>
+            <p data-id="810" class="text-fg-dim text-xs mb-4">Reproduction requires attribution to TriadicFrameworks.</p>
+            <p data-id="811" class="text-fg-dim text-xs">Made by Copilot</p>
+        </div>
+    </footer>
+
+    <script>
+        // ── Progressive enhancement: Lucide icons ──
+        if (typeof lucide !== "undefined" && typeof lucide.createIcons === "function") {
+            lucide.createIcons();
+        }
+
+        // ── Mobile menu toggle ──
+        (function() {
+            var menuBtn = document.getElementById('mobile-menu-btn-o5p6');
+            var menuClose = document.getElementById('mobile-menu-close-s9t0');
+            var menu = document.getElementById('mobile-menu-q7r8');
+            if (menuBtn && menu) {
+                menuBtn.addEventListener('click', function() {
+                    menu.classList.remove('hidden');
+                });
+            }
+            if (menuClose && menu) {
+                menuClose.addEventListener('click', function() {
+                    menu.classList.add('hidden');
+                });
+            }
+            // Close on nav link click
+            var mobileLinks = document.querySelectorAll('.mobile-nav-link');
+            mobileLinks.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    if (menu) menu.classList.add('hidden');
+                });
+            });
+        })();
+
+        // ── Dimensional table: engine column tabs ──
+        (function() {
+            var dimTabs = document.querySelectorAll('.dim-tab');
+            var unityCols = document.querySelectorAll('.dim-col-unity');
+            var unrealCols = document.querySelectorAll('.dim-col-unreal');
+
+            function setDimView(view) {
+                dimTabs.forEach(function(t) {
+                    t.classList.remove('active');
+                    t.classList.add('text-fg-muted');
+                });
+                dimTabs.forEach(function(t) {
+                    if (t.getAttribute('data-dim-tab') === view) {
+                        t.classList.add('active');
+                        t.classList.remove('text-fg-muted');
+                    }
+                });
+                unityCols.forEach(function(c) {
+                    c.style.display = (view === 'unreal') ? 'none' : '';
+                });
+                unrealCols.forEach(function(c) {
+                    c.style.display = (view === 'unity') ? 'none' : '';
+                });
+            }
+
+            dimTabs.forEach(function(tab) {
+                tab.addEventListener('click', function() {
+                    setDimView(tab.getAttribute('data-dim-tab'));
+                });
+            });
+        })();
+
+        // ── Code section: Unity / Unreal tabs ──
+        (function() {
+            var codeTabs = document.querySelectorAll('.code-tab');
+            var unityPanel = document.getElementById('code-unity-panel-k3l4');
+            var unrealPanel = document.getElementById('code-unreal-panel-m5n6');
+
+            codeTabs.forEach(function(tab) {
+                tab.addEventListener('click', function() {
+                    var target = tab.getAttribute('data-code-tab');
+                    codeTabs.forEach(function(t) {
+                        t.classList.remove('active');
+                        t.classList.add('text-fg-muted');
+                    });
+                    tab.classList.add('active');
+                    tab.classList.remove('text-fg-muted');
+
+                    if (target === 'unity') {
+                        if (unityPanel) unityPanel.style.display = '';
+                        if (unrealPanel) unrealPanel.style.display = 'none';
+                    } else {
+                        if (unityPanel) unityPanel.style.display = 'none';
+                        if (unrealPanel) unrealPanel.style.display = '';
+                    }
+                });
+            });
+        })();
+
+        // ── Active nav link highlighting on scroll ──
+        (function() {
+            var sections = ['overview','dimensional','mcp','icl','code','projects','notes'];
+            var navLinks = document.querySelectorAll('#sticky-nav-m3n4 a[href^="#"]');
+
+            function updateActiveNav() {
+                var scrollY = window.scrollY + 120;
+                var active = '';
+                sections.forEach(function(id) {
+                    var el = document.getElementById(id);
+                    if (el && el.offsetTop <= scrollY) {
+                        active = id;
+                    }
+                });
+                navLinks.forEach(function(link) {
+                    if (link.getAttribute('href') === '#' + active) {
+                        link.classList.remove('text-fg-muted');
+                        link.classList.add('text-gold');
+                    } else {
+                        link.classList.add('text-fg-muted');
+                        link.classList.remove('text-gold');
+                    }
+                });
+            }
+
+            var ticking = false;
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    window.requestAnimationFrame(function() {
+                        updateActiveNav();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+            updateActiveNav();
+        })();
+    </script>
+</body>
+</html>
