@@ -109,7 +109,7 @@ ping:
       {
         "username": "Manifest Updater",
         "avatar_url": "https://your-avatar-url.com/icon.png",
-        "content": "📬 Ping: Contributor of `{paper}` — validation status is `{status}`. Theme: `{theme}`. Badge: `{badge}`. Remixable: ✅"
+        "content": "📬 Ping: Cont. of `{paper}` — v_status is `{status}`. T: `{theme}`. B: `{badge}`. Remixable: ✅"
       }
 
 # 🗂️ Manifest Settings
