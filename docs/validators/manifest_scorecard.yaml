@@ -1,3 +1,4 @@
+---
 validator_id: manifest_integrity
 title: Manifest Integrity Score
 description: Tracks contributor alignment with repo structure and manifest clarity.
