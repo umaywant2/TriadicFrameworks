@@ -1,3 +1,5 @@
+<img width="1168" height="784" alt="Integrations_Bridge_Info_image" src="https://github.com/user-attachments/assets/c66cea04-ca3c-4e31-90d4-da83590f28c1" />
+
 # Bridge Info — Integrations Module
 
 > **Module path:** `docs/Integrations/`
