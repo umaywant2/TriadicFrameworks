@@ -1,1 +1,165 @@
+{
+  "module": {
+    "name": "TSR_Cut_Over_Protocol",
+    "category": "Temporal Substrate Reform",
+    "version": "1.0",
+    "summary": "Canonical RTT protocol governing the transition from Gregorian Drift Regime to 13×28 Coherence Regime.",
+    "purpose": "Define the formal substrate transition mechanism, awareness overlays, dual-calendar phase, cut-over sequence, and stabilization lock for civil temporal reform.",
+    "audience": "Students, researchers, AI engines, civil planners"
+  },
+
+  "roles": {
+    "primary_role": "engine",
+    "role_enums": [
+      "engine",
+      "profile",
+      "signature",
+      "diagnostic",
+      "map",
+      "example",
+      "extension",
+      "index",
+      "reference",
+      "template"
+    ]
+  },
+
+  "analyzer_layers": {
+    "layer_enums": [
+      "operator",
+      "dimensional",
+      "regime",
+      "drift",
+      "coherence",
+      "cross-cutting"
+    ],
+    "active_layers": [
+      "operator",
+      "regime",
+      "coherence"
+    ]
+  },
+
+  "identity": {
+    "canonical_url": "https://www.triadicframeworks.org/Research/TSR_Cut_Over_Protocol",
+    "module_type": "RTT Protocol",
+    "ai_module": "TemporalSubstrate.CutOver",
+    "ai_version": "2026.1",
+    "ai_keywords": [
+      "temporal substrate",
+      "calendar reform",
+      "drift regime",
+      "coherence regime",
+      "overlay system",
+      "cut-over protocol",
+      "RTT operator grammar"
+    ]
+  },
+
+  "operators": {
+    "transition_operators": [
+      "Δsubstrate.dual.activate",
+      "Δsubstrate.overlay.awareness",
+      "Δsubstrate.awareness.peak",
+      "Δsubstrate.default.transition",
+      "Δsubstrate.preserve.window",
+      "Δsubstrate.legacy.deemphasize",
+      "Δsubstrate.stabilize",
+      "Δsubstrate.canon.close"
+    ],
+    "overlay_operators": [
+      "overlay.structural",
+      "overlay.dimensional",
+      "overlay.cognitive",
+      "overlay.regime",
+      "overlay.substrate"
+    ],
+    "regime_operators": [
+      "regime.drift",
+      "regime.coherence",
+      "regime.transition"
+    ],
+    "meta_operators": [
+      "meta.drift→coherence",
+      "meta.awareness→adoption"
+    ]
+  },
+
+  "regime_mapping": {
+    "drift_regime": {
+      "description": "Irregular month lengths, unstable week boundaries, seasonal drift, DST artifacts.",
+      "artifacts": [
+        "DST",
+        "month-length irregularity",
+        "seasonal drift",
+        "week-boundary instability"
+      ]
+    },
+    "coherence_regime": {
+      "description": "Uniform 13×28 month cycles, equinox anchoring, stable week architecture, DST elimination.",
+      "features": [
+        "uniform months",
+        "equinox year start",
+        "stable week cycles",
+        "DST removal"
+      ]
+    },
+    "transition_regime": {
+      "description": "Dual-calendar awareness period with overlays and parallel substrate operation.",
+      "conditions": [
+        "dual-calendar mode",
+        "overlay activation",
+        "awareness peak threshold"
+      ]
+    }
+  },
+
+  "overlay_packs": {
+    "packs": [
+      {
+        "name": "TSR_Structural_Overlay",
+        "description": "Structural comparison of Gregorian vs. 13×28 month architecture."
+      },
+      {
+        "name": "TSR_Dimensional_Overlay",
+        "description": "Seasonal drift vs. equinox anchoring."
+      },
+      {
+        "name": "TSR_Cognitive_Overlay",
+        "description": "Cognitive load comparison between irregular and uniform calendars."
+      },
+      {
+        "name": "TSR_Regime_Overlay",
+        "description": "Drift → Coherence regime visualization."
+      },
+      {
+        "name": "TSR_Substrate_Overlay",
+        "description": "Civil vs. astronomical substrate alignment."
+      }
+    ]
+  },
+
+  "cut_over_sequence": {
+    "steps": [
+      "Dual-Calendar Activation",
+      "Overlay Awareness Period",
+      "Awareness Peak Determination",
+      "Default Substrate Transition",
+      "Preservation Window",
+      "Legacy De-Emphasis",
+      "Substrate Stabilization",
+      "Canonical Closure"
+    ]
+  },
+
+  "ai_metadata": {
+    "navigation": "sitemap_main.xml",
+    "discussions": "https://github.com/umaywant2/TriadicFrameworks/discussions",
+    "contact": {
+      "x": "@TriadicFrameworks",
+      "youtube": "@TriadicFrameworks"
+    },
+    "license": "Open educational use permitted"
+  }
+}
 
