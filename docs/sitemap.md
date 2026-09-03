@@ -162,7 +162,6 @@ This is the **deep structure layer** — the “physics” of RTT.
 
 ## 4. Cognitive & Social Substrates (Human Layer)
 
-- [ /code/CODE_SessionContext.html ](https://www.triadicframeworks.org/code/CODE_SessionContext.html)
 - [ /code/ ](https://www.triadicframeworks.org/code/)
 - [ /ecoechosystem/ ](https://www.triadicframeworks.org/ecoechosystem/)
 - [ /Expectations/ ](https://www.triadicframeworks.org/Expectations/)
@@ -175,13 +174,8 @@ This is the **deep structure layer** — the “physics” of RTT.
 - [ /media_substrate_model/analyzer/ ](https://www.triadicframeworks.org/media_substrate_model/analyzer/)
 - [ /medicine/ ](https://www.triadicframeworks.org/medicine/)
 - [ /pantheons/ ](https://www.triadicframeworks.org/pantheons/)
-- [ /pantheons/egyptian/badges.html ](https://www.triadicframeworks.org/pantheons/egyptian/badges.html)
-- [ /pantheons/yoruba/badges.html ](https://www.triadicframeworks.org/pantheons/yoruba/badges.html)
 - [ /Philanthropy/ ](https://www.triadicframeworks.org/Philanthropy/)
-- [ /religious_substrate_grammar_model/cross_module_nav.html ](https://www.triadicframeworks.org/religious_substrate_grammar_model/cross_module_nav.html)
-- [ /religious_substrate_grammar_model/frontdoor.html ](https://www.triadicframeworks.org/religious_substrate_grammar_model/frontdoor.html)
 - [ /religious_substrate_grammar_model/ ](https://www.triadicframeworks.org/religious_substrate_grammar_model/)
-- [ /religious_substrate_grammar_model/session_context.html ](https://www.triadicframeworks.org/religious_substrate_grammar_model/session_context.html)
 - [ /spectral_clarity/ ](https://www.triadicframeworks.org/spectral_clarity/)
 - [ /structural_life_regime_profiles/ ](https://www.triadicframeworks.org/structural_life_regime_profiles/)
 - [ /substrate_mind_science/ ](https://www.triadicframeworks.org/substrate_mind_science/)
@@ -192,9 +186,7 @@ This is the **deep structure layer** — the “physics” of RTT.
 ## 5. Education & Curriculum (Learning Layer)
 
 - [ /charts/ ](https://www.triadicframeworks.org/charts/)
-- [ /charts/vsoul_dashboard.html ](https://www.triadicframeworks.org/charts/vsoul_dashboard.html)
 - [ /corpus/ ](https://www.triadicframeworks.org/corpus/)
-- [ /corpus/v2/ ](https://www.triadicframeworks.org/corpus/v2/)
 - [ /curriculum/ ](https://www.triadicframeworks.org/curriculum/)
 - [ /domain_tool_primers/ ](https://www.triadicframeworks.org/domain_tool_primers/)
 - [ /education/ ](https://www.triadicframeworks.org/education/)
@@ -250,18 +242,6 @@ This is the **deep structure layer** — the “physics” of RTT.
 - [ /prompts/rtt_infinity/vacuum/vacuum_prompts.html ](https://www.triadicframeworks.org/prompts/rtt_infinity/vacuum/vacuum_prompts.html)
 - [ /vocabulary/ ](https://www.triadicframeworks.org/vocabulary/)
 - [ /wikipedia/ ](https://www.triadicframeworks.org/wikipedia/)
-- [ /wikipedia/wikipedia_index_scaffold.html ](https://www.triadicframeworks.org/wikipedia/wikipedia_index_scaffold.html)
-- [ /wiki_scrolls/nawderian_wiki.html ](https://www.triadicframeworks.org/wiki_scrolls/nawderian_wiki.html)
-- [ /wiki_scrolls/wiki_home_1.6.html ](https://www.triadicframeworks.org/wiki_scrolls/wiki_home_1.6.html)
-- [ /wiki_scrolls/wiki_home_scroll_1.4.html ](https://www.triadicframeworks.org/wiki_scrolls/wiki_home_scroll_1.4.html)
-- [ /wiki_scrolls/wiki_home_scroll_1.5.html ](https://www.triadicframeworks.org/wiki_scrolls/wiki_home_scroll_1.5.html)
-- [ /wiki_scrolls/wiki_home_scroll_v1.1.html ](https://www.triadicframeworks.org/wiki_scrolls/wiki_home_scroll_v1.1.html)
-- [ /wiki_scrolls/wiki_home_scroll_v1.2.html ](https://www.triadicframeworks.org/wiki_scrolls/wiki_home_scroll_v1.2.html)
-- [ /wiki_scrolls/wiki_home_scroll_v1.3.html ](https://www.triadicframeworks.org/wiki_scrolls/wiki_home_scroll_v1.3.html)
-- [ /wiki_scrolls/wiki_home_scroll_v1.7.html ](https://www.triadicframeworks.org/wiki_scrolls/wiki_home_scroll_v1.7.html)
-- [ /wiki_scrolls/wiki_home_scroll_v1.8.html ](https://www.triadicframeworks.org/wiki_scrolls/wiki_home_scroll_v1.8.html)
-- [ /wiki_scrolls/wiki_home_scroll_v1.9.1.html ](https://www.triadicframeworks.org/wiki_scrolls/wiki_home_scroll_v1.9.1.html)
-- [ /wiki_scrolls/wiki_home_scroll_v1.9.html ](https://www.triadicframeworks.org/wiki_scrolls/wiki_home_scroll_v1.9.html)
 
 ---
 
