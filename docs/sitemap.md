@@ -42,6 +42,8 @@ _Inventory refresh: **2026-09-02** · **410** public URLs_
 - [ /LINEAGE/ ](https://www.triadicframeworks.org/LINEAGE/)
 - [ /Mode/ ](https://www.triadicframeworks.org/Mode/)
 - [ /Research/protocol_header/ ](https://www.triadicframeworks.org/Research/protocol_header/)
+- [ /Research/TSR-OverlayDiagramPack-v2.6.0-rc/ ](https://www.triadicframeworks.org/Research/TSR-OverlayDiagramPack-v2.6.0-rc.html
+)
 - [ /rtt/ ](https://www.triadicframeworks.org/rtt/)
 - [ /rtt/1/ ](https://www.triadicframeworks.org/rtt/1/)
 - [ /rtt/12/ ](https://www.triadicframeworks.org/rtt/12/)
@@ -413,6 +415,8 @@ These are checked last.
 - [ /_ideas/Games_Preview_post-RTT.html ](https://www.triadicframeworks.org/_ideas/Games_Preview_post-RTT.html)
 - [ /_ideas/Goal_Status_Check.html ](https://www.triadicframeworks.org/_ideas/Goal_Status_Check.html)
 - [ /_ideas/ ](https://www.triadicframeworks.org/_ideas/)
+- [ /_ideas/outreach/Nature_Systems_Packet ](https://www.triadicframeworks.org/_ideas/outreach/Nature_Systems_Packet.html)
+- [ /_ideas/outreach/NonProfit_Transparency_Packet ](https://www.triadicframeworks.org/_ideas/outreach/NonProfit_Transparency_Packet.html)
 - [ /_ideas/Nawderian_Theorem.html ](https://www.triadicframeworks.org/_ideas/Nawderian_Theorem.html)
 - [ /_ideas/Podcast_with_Grok_about_RTT.html ](https://www.triadicframeworks.org/_ideas/Podcast_with_Grok_about_RTT.html)
 - [ /_ideas/Resonance-Interwoven_Game_Design_with_RTT.html ](https://www.triadicframeworks.org/_ideas/Resonance-Interwoven_Game_Design_with_RTT.html)
