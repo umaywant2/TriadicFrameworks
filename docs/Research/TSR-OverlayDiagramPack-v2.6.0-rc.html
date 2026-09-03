@@ -1,1 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <title>Temporal Substrate Reform – Overlay Diagram Pack</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: { deep: '#0a0e1a', panel: '#111828', light: '#1a2240', mid: '#151d35' },
+              teal: { DEFAULT: '#00d4c8', dim: '#00a89e', glow: 'rgba(0,212,200,0.25)' },
+              gold: { DEFAULT: '#f5c542', dim: '#c49a2a', glow: 'rgba(245,197,66,0.2)' },
+              violet: { DEFAULT: '#9b5de5', dim: '#7a3fc4', glow: 'rgba(155,93,229,0.2)' },
+              crimson: { DEFAULT: '#e54b4b', dim: '#c03030', glow: 'rgba(229,75,75,0.2)' },
+              accent_green: { DEFAULT: '#3dd68c', dim: '#2aaf6e', glow: 'rgba(61,214,140,0.2)' },
+              txt: { DEFAULT: '#e0e6f0', dim: '#4a5568', muted: '#8a94a8', mid: '#6b7890' }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace']
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      :root {
+        --navy-deep: #0a0e1a;
+        --navy-panel: #111828;
+        --navy-light: #1a2240;
+        --navy-mid: #151d35;
+        --teal: #00d4c8;
+        --gold: #f5c542;
+        --violet: #9b5de5;
+        --crimson: #e54b4b;
+        --green: #3dd68c;
+        --txt: #e0e6f0;
+        --txt-dim: #4a5568;
+        --txt-muted: #8a94a8;
+      }
+      * { box-sizing: border-box; }
+      body { background: var(--navy-deep); color: var(--txt); margin: 0; font-family: 'Inter', sans-serif; }
+      .tab-active { border-bottom: 2px solid var(--teal); color: var(--teal); }
+      .tab-active .tab-glyph { color: var(--gold); }
+      .tab-btn { transition: all 0.2s ease; border-bottom: 2px solid transparent; }
+      .tab-btn:hover { color: var(--teal); background: rgba(0,212,200,0.06); }
+      .svg-node { transition: filter 0.2s ease, opacity 0.2s ease; }
+      .svg-node:hover { filter: drop-shadow(0 0 8px var(--teal)); cursor: pointer; }
+      .tooltip-box { position: absolute; background: var(--navy-panel); border: 1px solid rgba(0,212,200,0.3); border-radius: 8px; padding: 8px 12px; font-size: 11px; font-family: 'JetBrains Mono', monospace; color: var(--txt); pointer-events: none; z-index: 100; opacity: 0; transition: opacity 0.15s; max-width: 220px; }
+      .tooltip-box.show { opacity: 1; }
+      .legend-panel { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+      .legend-panel.open { max-height: 500px; }
+      .badge { display: inline-block; padding: 2px 10px; border-radius: 6px; font-family: 'JetBrains Mono', monospace; font-size: 11px; }
+      .chip { display: inline-block; padding: 2px 8px; border-radius: 4px; font-family: 'JetBrains Mono', monospace; font-size: 10px; margin: 2px; }
+      .info-label { font-family: 'JetBrains Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--txt-muted); margin-bottom: 2px; }
+      .info-value { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--txt); margin-bottom: 10px; }
+      .info-note { border-radius: 6px; padding: 8px 12px; font-size: 11px; margin-top: 8px; margin-bottom: 8px; }
+      @keyframes pulseFlux { 0%,100%{ opacity:0.7; } 50%{ opacity:1; } }
+      .flux-pulse { animation: pulseFlux 2s ease-in-out infinite; }
+      @media print {
+        header, .tab-nav, .info-panel, .legend-section, footer, .breadcrumb-bar, .mobile-menu-overlay { display: none !important; }
+        body { background: white; color: black; }
+        .diagram-canvas { width: 100% !important; max-width: 100% !important; flex: 1 1 100% !important; }
+        .diagram-canvas svg { width: 100% !important; height: auto !important; }
+        .main-content { display: block !important; }
+      }
+      @media (max-width: 767px) {
+        .tab-nav { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .tab-nav::-webkit-scrollbar { display: none; }
+      }
+      .mobile-menu-overlay { display: none; }
+      .mobile-menu-overlay.open { display: flex; }
+    </style>
+</head>
+<body data-id="0" class="min-h-screen flex flex-col">
+    <app-icon data-id="1" hidden data-icon="layers" data-palette="Dark"></app-icon>
 
+    <!-- HEADER -->
+    <header data-id="2" id="header-main" class="bg-navy-panel border-b border-navy-light">
+        <div data-id="3" class="max-w-[1400px] mx-auto px-4 md:px-6 py-4 md:py-5">
+            <div data-id="4" class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+                <div data-id="5">
+                    <h1 data-id="6" class="text-lg md:text-xl font-bold tracking-wide text-txt">
+                        TEMPORAL SUBSTRATE REFORM <span data-id="7" class="text-txt-muted mx-1">·</span> <span data-id="8" class="text-teal">OVERLAY DIAGRAM PACK</span>
+                    </h1>
+                    <p data-id="9" class="text-xs font-mono text-txt-muted mt-1">TriadicFrameworks Research Series · docs/Research · 9 Diagram Layers</p>
+                </div>
+                <div data-id="10" class="flex flex-wrap items-center gap-2">
+                    <span data-id="11" class="badge bg-teal/15 text-teal">v2.6.0-rc</span>
+                    <span data-id="12" class="badge bg-gold/15 text-gold">2026-09-03</span>
+                    <span data-id="13" class="badge bg-violet/15 text-violet">Gregorian ⟷ Triadic Epoch IV</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- TAB NAVIGATION -->
+    <nav data-id="14" class="tab-nav bg-navy-mid border-b border-navy-light" role="tablist" aria-label="Diagram tabs">
+        <div data-id="15" class="max-w-[1400px] mx-auto px-4 md:px-6 flex items-center gap-0 overflow-x-auto">
+            <button data-id="16" class="tab-btn tab-active flex items-center gap-1.5 px-3 md:px-4 py-3 text-xs md:text-sm font-medium whitespace-nowrap min-h-[44px]" role="tab" aria-selected="true" data-tab="0">
+                <span data-id="17" class="tab-glyph text-gold">☰</span> Structural
+            </button>
+            <button data-id="18" class="tab-btn flex items-center gap-1.5 px-3 md:px-4 py-3 text-xs md:text-sm font-medium text-txt-muted whitespace-nowrap min-h-[44px]" role="tab" aria-selected="false" data-tab="1">
+                <span data-id="19" class="tab-glyph">⬡</span> Dimensional
+            </button>
+            <button data-id="20" class="tab-btn flex items-center gap-1.5 px-3 md:px-4 py-3 text-xs md:text-sm font-medium text-txt-muted whitespace-nowrap min-h-[44px]" role="tab" aria-selected="false" data-tab="2">
+                <span data-id="21" class="tab-glyph">◈</span> Cognitive
+            </button>
+            <button data-id="22" class="tab-btn flex items-center gap-1.5 px-3 md:px-4 py-3 text-xs md:text-sm font-medium text-txt-muted whitespace-nowrap min-h-[44px]" role="tab" aria-selected="false" data-tab="3">
+                <span data-id="23" class="tab-glyph">⚡</span> Regime
+            </button>
+            <button data-id="24" class="tab-btn flex items-center gap-1.5 px-3 md:px-4 py-3 text-xs md:text-sm font-medium text-txt-muted whitespace-nowrap min-h-[44px]" role="tab" aria-selected="false" data-tab="4">
+                <span data-id="25" class="tab-glyph">◉</span> Substrate
+            </button>
+            <button data-id="26" class="tab-btn flex items-center gap-1.5 px-3 md:px-4 py-3 text-xs md:text-sm font-medium text-txt-muted whitespace-nowrap min-h-[44px]" role="tab" aria-selected="false" data-tab="5">
+                <span data-id="27" class="tab-glyph">◷</span> Awareness Period
+            </button>
+            <button data-id="28" class="tab-btn flex items-center gap-1.5 px-3 md:px-4 py-3 text-xs md:text-sm font-medium text-txt-muted whitespace-nowrap min-h-[44px]" role="tab" aria-selected="false" data-tab="6">
+                <span data-id="29" class="tab-glyph">⟳</span> Cut-Over Protocol
+            </button>
+            <button data-id="30" class="tab-btn flex items-center gap-1.5 px-3 md:px-4 py-3 text-xs md:text-sm font-medium text-txt-muted whitespace-nowrap min-h-[44px]" role="tab" aria-selected="false" data-tab="7">
+                <span data-id="31" class="tab-glyph">☀</span> DST Shift
+            </button>
+            <button data-id="32" class="tab-btn flex items-center gap-1.5 px-3 md:px-4 py-3 text-xs md:text-sm font-medium text-txt-muted whitespace-nowrap min-h-[44px]" role="tab" aria-selected="false" data-tab="8">
+                <span data-id="33" class="tab-glyph">✦</span> Moveable Holidays
+            </button>
+        </div>
+    </nav>
+
+    <!-- BREADCRUMB -->
+    <div data-id="34" class="breadcrumb-bar bg-navy-deep border-b border-navy-light">
+        <div data-id="35" class="max-w-[1400px] mx-auto px-4 md:px-6 py-2">
+            <p data-id="36" id="breadcrumb-text" class="font-mono text-[11px] text-txt-muted">TSR · Diagram 1 of 9 · Structural</p>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main data-id="37" class="flex-1">
+        <div data-id="38" class="max-w-[1400px] mx-auto px-4 md:px-6 py-4 md:py-6">
+            <div data-id="39" class="main-content flex flex-col lg:flex-row gap-4 md:gap-6">
+                <!-- DIAGRAM CANVAS -->
+                <div data-id="40" class="diagram-canvas flex-1 lg:w-[70%] bg-navy-panel rounded-xl border border-navy-light p-3 md:p-5 min-h-[400px] md:min-h-[520px] relative overflow-hidden">
+                    <div data-id="41" id="tooltip" class="tooltip-box"></div>
+
+                    <!-- DIAGRAM 1: STRUCTURAL -->
+                    <div data-id="42" class="diagram-panel" data-diagram="0">
+                        <svg data-id="43" viewBox="0 0 800 500" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
+                            <text data-id="44" x="12" y="250" fill="#4a5568" font-family="JetBrains Mono, monospace" font-size="9" transform="rotate(-90,12,250)" text-anchor="middle" letter-spacing="0.1em">STRUCTURAL LAYER · SL-01</text>
+                            <rect data-id="45" x="250" y="20" width="300" height="50" rx="6" fill="none" stroke="#f5c542" stroke-width="2" class="svg-node" data-tip="∇(T₀) — Root temporal substrate operator"/>
+                            <text data-id="46" x="400" y="48" fill="#e0e6f0" font-family="Inter, sans-serif" font-size="13" font-weight="600" text-anchor="middle">TEMPORAL SUBSTRATE</text>
+                            <text data-id="47" x="400" y="63" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="middle">∇(T₀)</text>
+                            <line data-id="48" x1="325" y1="70" x2="180" y2="120" stroke="#e0e6f0" stroke-opacity="0.2" stroke-width="1"/>
+                            <line data-id="49" x1="400" y1="70" x2="400" y2="120" stroke="#e0e6f0" stroke-opacity="0.2" stroke-width="1"/>
+                            <line data-id="50" x1="475" y1="70" x2="620" y2="120" stroke="#e0e6f0" stroke-opacity="0.2" stroke-width="1"/>
+                            <rect data-id="51" x="80" y="120" width="200" height="45" rx="5" fill="none" stroke="#00d4c8" stroke-width="1.5" class="svg-node" data-tip="⊕P — Primary Axis: defines the main temporal coordinate"/>
+                            <text data-id="52" x="180" y="145" fill="#e0e6f0" font-family="Inter, sans-serif" font-size="11" font-weight="500" text-anchor="middle">Primary Axis [P]</text>
+                            <text data-id="53" x="180" y="159" fill="#00d4c8" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="middle">⊕P</text>
+                            <rect data-id="54" x="300" y="120" width="200" height="45" rx="5" fill="none" stroke="#00d4c8" stroke-width="1.5" class="svg-node" data-tip="∆R — Reform Vector: bridges legacy to triadic systems"/>
+                            <text data-id="55" x="400" y="145" fill="#e0e6f0" font-family="Inter, sans-serif" font-size="11" font-weight="500" text-anchor="middle">Reform Vector [R]</text>
+                            <text data-id="56" x="400" y="159" fill="#00d4c8" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="middle">∆R</text>
+                            <rect data-id="57" x="520" y="120" width="200" height="45" rx="5" fill="none" stroke="#00d4c8" stroke-width="1.5" class="svg-node" data-tip="⊗C — Canon Shell: immutable reference frame"/>
+                            <text data-id="58" x="620" y="145" fill="#e0e6f0" font-family="Inter, sans-serif" font-size="11" font-weight="500" text-anchor="middle">Canon Shell [C]</text>
+                            <text data-id="59" x="620" y="159" fill="#00d4c8" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="middle">⊗C</text>
+                            <line data-id="60" x1="140" y1="165" x2="120" y2="210" stroke="#e0e6f0" stroke-opacity="0.15" stroke-width="1"/>
+                            <line data-id="61" x1="220" y1="165" x2="240" y2="210" stroke="#e0e6f0" stroke-opacity="0.15" stroke-width="1"/>
+                            <line data-id="62" x1="360" y1="165" x2="345" y2="210" stroke="#e0e6f0" stroke-opacity="0.15" stroke-width="1"/>
+                            <line data-id="63" x1="440" y1="165" x2="465" y2="210" stroke="#e0e6f0" stroke-opacity="0.15" stroke-width="1"/>
+                            <line data-id="64" x1="580" y1="165" x2="565" y2="210" stroke="#e0e6f0" stroke-opacity="0.15" stroke-width="1"/>
+                            <line data-id="65" x1="660" y1="165" x2="680" y2="210" stroke="#e0e6f0" stroke-opacity="0.15" stroke-width="1"/>
+                            <rect data-id="66" x="50" y="210" width="140" height="40" rx="4" fill="none" stroke="#9b5de5" stroke-width="1.2" class="svg-node" data-tip="Gregorian Grid: legacy calendar mapping layer"/>
+                            <text data-id="67" x="120" y="233" fill="#e0e6f0" font-family="Inter, sans-serif" font-size="10" text-anchor="middle">Gregorian Grid</text>
+                            <rect data-id="68" x="200" y="210" width="140" height="40" rx="4" fill="none" stroke="#9b5de5" stroke-width="1.2" class="svg-node" data-tip="Triadic Epoch: reformed temporal anchor system"/>
+                            <text data-id="69" x="270" y="233" fill="#e0e6f0" font-family="Inter, sans-serif" font-size="10" text-anchor="middle">Triadic Epoch</text>
+                            <rect data-id="70" x="280" y="260" width="120" height="35" rx="4" fill="none" stroke="#9b5de5" stroke-width="1.2" class="svg-node" data-tip="Δ-Flux: change propagation mechanism"/>
+                            <text data-id="71" x="340" y="281" fill="#e0e6f0" font-family="Inter, sans-serif" font-size="10" text-anchor="middle">Δ-Flux</text>
+                            <rect data-id="72" x="410" y="260" width="140" height="35" rx="4" fill="none" stroke="#9b5de5" stroke-width="1.2" class="svg-node" data-tip="Substrate Lock: immutability enforcement"/>
+                            <text data-id="73" x="480" y="281" fill="#e0e6f0" font-family="Inter, sans-serif" font-size="10" text-anchor="middle">Substrate Lock</text>
+                            <rect data-id="74" x="500" y="210" width="130" height="40" rx="4" fill="none" stroke="#9b5de5" stroke-width="1.2" class="svg-node" data-tip="Glyph Ledger: operator audit trail"/>
+                            <text data-id="75" x="565" y="233" fill="#e0e6f0" font-family="Inter, sans-serif" font-size="10" text-anchor="middle">Glyph Ledger</text>
+                            <rect data-id="76" x="640" y="210" width="130" height="40" rx="4" fill="none" stroke="#9b5de5" stroke-width="1.2" class="svg-node" data-tip="Operator Chain: sequential operator execution log"/>
+                            <text data-id="77" x="705" y="233" fill="#e0e6f0" font-family="Inter, sans-serif" font-size="10" text-anchor="middle">Operator Chain</text>
+                            <line data-id="78" x1="400" y1="300" x2="400" y2="340" stroke="#e0e6f0" stroke-opacity="0.12" stroke-width="1"/>
+                            <rect data-id="79" x="80" y="340" width="640" height="45" rx="4" fill="rgba(61,214,140,0.06)" stroke="#3dd68c" stroke-width="1.2" class="svg-node" data-tip="⊞ — Metadata Binding Layer: maps all operator outputs to the glyph ledger"/>
+                            <text data-id="80" x="400" y="365" fill="#3dd68c" font-family="JetBrains Mono, monospace" font-size="12" font-weight="500" text-anchor="middle">METADATA BINDING LAYER</text>
+                            <text data-id="81" x="400" y="380" fill="#3dd68c" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="middle">⊞</text>
+                        </svg>
+                    </div>
+
+                    <!-- DIAGRAM 2: DIMENSIONAL -->
+                    <div data-id="82" class="diagram-panel hidden" data-diagram="1">
+                        <svg data-id="83" viewBox="0 0 800 500" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
+                            <text data-id="84" x="12" y="250" fill="#4a5568" font-family="JetBrains Mono, monospace" font-size="9" transform="rotate(-90,12,250)" text-anchor="middle" letter-spacing="0.1em">DIMENSIONAL LAYER · DL-02</text>
+                            <text data-id="85" x="400" y="270" fill="rgba(155,93,229,0.06)" font-size="120" text-anchor="middle" font-family="Inter">⬡</text>
+                            <line data-id="86" x1="100" y1="380" x2="700" y2="380" stroke="#00d4c8" stroke-width="1.5" stroke-opacity="0.6"/>
+                            <text data-id="87" x="400" y="420" fill="#00d4c8" font-family="JetBrains Mono, monospace" font-size="10" text-anchor="middle">TEMPORAL DEPTH (τ)</text>
+                            <text data-id="88" x="100" y="398" fill="#00d4c8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">τ₀</text>
+                            <text data-id="89" x="220" y="398" fill="#00d4c8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">τ₁</text>
+                            <text data-id="90" x="340" y="398" fill="#00d4c8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">τ₂</text>
+                            <text data-id="91" x="460" y="398" fill="#00d4c8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">τ₃</text>
+                            <text data-id="92" x="580" y="398" fill="#00d4c8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">τ₄</text>
+                            <text data-id="93" x="700" y="398" fill="#00d4c8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">τ₅</text>
+                            <text data-id="94" x="650" y="370" fill="#00d4c8" font-family="JetBrains Mono, monospace" font-size="8" opacity="0.5">∆τ</text>
+                            <line data-id="95" x1="100" y1="80" x2="100" y2="380" stroke="#f5c542" stroke-width="1.5" stroke-opacity="0.6"/>
+                            <text data-id="96" x="60" y="230" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="10" text-anchor="middle" transform="rotate(-90,60,230)">SUBSTRATE BAND (β)</text>
+                            <text data-id="97" x="85" y="380" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="end">β₁</text>
+                            <text data-id="98" x="85" y="280" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="end">β₂</text>
+                            <text data-id="99" x="85" y="180" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="end">β₃</text>
+                            <text data-id="100" x="85" y="80" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="end">β₄</text>
+                            <text data-id="101" x="92" y="100" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="8" opacity="0.5">∇β</text>
+                            <line data-id="102" x1="100" y1="380" x2="350" y2="80" stroke="#9b5de5" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="6,3"/>
+                            <text data-id="103" x="260" y="200" fill="#9b5de5" font-family="JetBrains Mono, monospace" font-size="10" text-anchor="middle" transform="rotate(-50,260,200)">REFORM MAGNITUDE (ρ)</text>
+                            <polygon data-id="104" points="150,350 450,350 500,200 200,200" fill="rgba(61,214,140,0.08)" stroke="#3dd68c" stroke-width="0.5" stroke-opacity="0.3"/>
+                            <text data-id="105" x="340" y="290" fill="#3dd68c" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle" opacity="0.7">Active Substrate Plane</text>
+                            <polygon data-id="106" points="250,320 600,320 650,150 300,150" fill="rgba(0,212,200,0.06)" stroke="#00d4c8" stroke-width="0.5" stroke-opacity="0.3"/>
+                            <text data-id="107" x="470" y="250" fill="#00d4c8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle" opacity="0.7">Reform Horizon Plane</text>
+                            <polygon data-id="108" points="200,300 500,300 520,180 220,180" fill="rgba(155,93,229,0.07)" stroke="#9b5de5" stroke-width="0.5" stroke-opacity="0.3"/>
+                            <text data-id="109" x="370" y="220" fill="#9b5de5" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle" opacity="0.7">Awareness Overlap Zone</text>
+                            <polygon data-id="110" points="220,310 226,300 220,290 214,300" fill="#00d4c8" class="svg-node" data-tip="Intersection node: τ₁·β₂ — low reform magnitude"/>
+                            <polygon data-id="111" points="340,280 348,268 340,256 332,268" fill="#00d4c8" class="svg-node" data-tip="Intersection node: τ₂·β₂ — medium reform magnitude"/>
+                            <polygon data-id="112" points="460,240 470,226 460,212 450,226" fill="#9b5de5" class="svg-node" data-tip="Intersection node: τ₃·β₃ — high reform magnitude"/>
+                            <polygon data-id="113" points="580,200 592,184 580,168 568,184" fill="#f5c542" class="svg-node" data-tip="Intersection node: τ₄·β₃ — peak reform magnitude"/>
+                            <polygon data-id="114" points="340,180 349,166 340,152 331,166" fill="#9b5de5" class="svg-node" data-tip="Intersection node: τ₂·β₄ — elevated substrate band"/>
+                            <polygon data-id="115" points="460,340 467,330 460,320 453,330" fill="#3dd68c" class="svg-node" data-tip="Intersection node: τ₃·β₁ — substrate floor"/>
+                            <text data-id="116" x="400" y="320" fill="#9b5de5" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle" opacity="0.6">⊗ρ</text>
+                        </svg>
+                    </div>
+
+                    <!-- DIAGRAM 3: COGNITIVE -->
+                    <div data-id="117" class="diagram-panel hidden" data-diagram="2">
+                        <svg data-id="118" viewBox="0 0 800 500" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
+                            <text data-id="119" x="12" y="250" fill="#4a5568" font-family="JetBrains Mono, monospace" font-size="9" transform="rotate(-90,12,250)" text-anchor="middle" letter-spacing="0.1em">COGNITIVE LAYER · CL-03</text>
+                            <rect data-id="120" x="40" y="180" width="720" height="120" rx="8" fill="rgba(26,34,64,0.5)" stroke="none"/>
+                            <rect data-id="121" x="55" y="200" width="120" height="70" rx="8" fill="rgba(155,93,229,0.12)" stroke="#9b5de5" stroke-width="1.5" class="svg-node" data-tip="⊕ — Temporal Perception: initial signal intake from both calendar systems"/>
+                            <text data-id="122" x="115" y="232" fill="#9b5de5" font-family="Inter" font-size="10" font-weight="500" text-anchor="middle">Temporal</text>
+                            <text data-id="123" x="115" y="246" fill="#9b5de5" font-family="Inter" font-size="10" font-weight="500" text-anchor="middle">Perception</text>
+                            <text data-id="124" x="115" y="264" fill="#9b5de5" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle" opacity="0.7">⊕</text>
+                            <polygon data-id="125" points="180,235 200,230 200,240" fill="#e0e6f0" opacity="0.4"/>
+                            <line data-id="126" x1="175" y1="235" x2="198" y2="235" stroke="#e0e6f0" stroke-width="2" stroke-opacity="0.4"/>
+                            <text data-id="127" x="190" y="222" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle">⊕ merge</text>
+                            <rect data-id="128" x="205" y="200" width="120" height="70" rx="8" fill="rgba(0,212,200,0.12)" stroke="#00d4c8" stroke-width="1.5" class="svg-node" data-tip="∆ — Dual-Calendar Decode: separates Gregorian and Triadic signals"/>
+                            <text data-id="129" x="265" y="232" fill="#00d4c8" font-family="Inter" font-size="10" font-weight="500" text-anchor="middle">Dual-Calendar</text>
+                            <text data-id="130" x="265" y="246" fill="#00d4c8" font-family="Inter" font-size="10" font-weight="500" text-anchor="middle">Decode</text>
+                            <text data-id="131" x="265" y="264" fill="#00d4c8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle" opacity="0.7">∆</text>
+                            <polygon data-id="132" points="330,235 350,230 350,240" fill="#e0e6f0" opacity="0.4"/>
+                            <line data-id="133" x1="325" y1="235" x2="348" y2="235" stroke="#e0e6f0" stroke-width="2" stroke-opacity="0.4"/>
+                            <text data-id="134" x="340" y="222" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle">∆ decode</text>
+                            <rect data-id="135" x="355" y="200" width="120" height="70" rx="8" fill="rgba(245,197,66,0.12)" stroke="#f5c542" stroke-width="1.5" class="svg-node" data-tip="⊗ — Substrate Pattern Match: correlates decoded signals against known substrate patterns"/>
+                            <text data-id="136" x="415" y="232" fill="#f5c542" font-family="Inter" font-size="10" font-weight="500" text-anchor="middle">Substrate</text>
+                            <text data-id="137" x="415" y="246" fill="#f5c542" font-family="Inter" font-size="10" font-weight="500" text-anchor="middle">Pattern Match</text>
+                            <text data-id="138" x="415" y="264" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle" opacity="0.7">⊗</text>
+                            <polygon data-id="139" points="480,235 500,230 500,240" fill="#e0e6f0" opacity="0.4"/>
+                            <line data-id="140" x1="475" y1="235" x2="498" y2="235" stroke="#e0e6f0" stroke-width="2" stroke-opacity="0.4"/>
+                            <text data-id="141" x="490" y="222" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle">⊗ match</text>
+                            <rect data-id="142" x="505" y="200" width="120" height="70" rx="8" fill="rgba(229,75,75,0.12)" stroke="#e54b4b" stroke-width="1.5" class="svg-node" data-tip="∇ — Reform Model Activation: triggers the reform model based on pattern match confidence"/>
+                            <text data-id="143" x="565" y="232" fill="#e54b4b" font-family="Inter" font-size="10" font-weight="500" text-anchor="middle">Reform Model</text>
+                            <text data-id="144" x="565" y="246" fill="#e54b4b" font-family="Inter" font-size="10" font-weight="500" text-anchor="middle">Activation</text>
+                            <text data-id="145" x="565" y="264" fill="#e54b4b" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle" opacity="0.7">∇</text>
+                            <polygon data-id="146" points="630,235 650,230 650,240" fill="#e0e6f0" opacity="0.4"/>
+                            <line data-id="147" x1="625" y1="235" x2="648" y2="235" stroke="#e0e6f0" stroke-width="2" stroke-opacity="0.4"/>
+                            <text data-id="148" x="640" y="222" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle">∇ activate</text>
+                            <rect data-id="149" x="655" y="200" width="100" height="70" rx="8" fill="rgba(61,214,140,0.12)" stroke="#3dd68c" stroke-width="1.5" class="svg-node" data-tip="Awareness Output: final temporal awareness state emitted to the system"/>
+                            <text data-id="150" x="705" y="232" fill="#3dd68c" font-family="Inter" font-size="10" font-weight="500" text-anchor="middle">Awareness</text>
+                            <text data-id="151" x="705" y="246" fill="#3dd68c" font-family="Inter" font-size="10" font-weight="500" text-anchor="middle">Output</text>
+                            <text data-id="152" x="705" y="264" fill="#3dd68c" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle" opacity="0.7">⟳</text>
+                            <path data-id="153" d="M705,195 C705,100 115,100 115,195" fill="none" stroke="#f5c542" stroke-width="1.5" stroke-dasharray="6,3" stroke-opacity="0.5"/>
+                            <polygon data-id="154" points="115,192 110,180 120,180" fill="#f5c542" opacity="0.6"/>
+                            <text data-id="155" x="410" y="120" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="10" text-anchor="middle" opacity="0.7">METACOGNITIVE LOOP</text>
+                            <text data-id="156" x="410" y="135" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle" opacity="0.5">⟳ feedback</text>
+                        </svg>
+                    </div>
+
+                    <!-- DIAGRAM 4: REGIME -->
+                    <div data-id="157" class="diagram-panel hidden" data-diagram="3">
+                        <svg data-id="158" viewBox="0 0 800 500" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
+                            <text data-id="159" x="12" y="250" fill="#4a5568" font-family="JetBrains Mono, monospace" font-size="9" transform="rotate(-90,12,250)" text-anchor="middle" letter-spacing="0.1em">REGIME LAYER · RL-04</text>
+                            <text data-id="160" x="400" y="280" fill="rgba(229,75,75,0.05)" font-size="100" text-anchor="middle" font-family="Inter">⚡</text>
+                            <circle data-id="161" cx="200" cy="140" r="65" fill="rgba(229,75,75,0.08)" stroke="#e54b4b" stroke-width="2" class="svg-node" data-tip="RG-00 · NULL REGIME (Ø): No reform activity. System idle."/>
+                            <text data-id="162" x="200" y="130" fill="#e54b4b" font-family="Inter" font-size="11" font-weight="600" text-anchor="middle">NULL REGIME</text>
+                            <text data-id="163" x="200" y="148" fill="#e54b4b" font-family="JetBrains Mono, monospace" font-size="16" text-anchor="middle">(Ø)</text>
+                            <text data-id="164" x="200" y="168" fill="#e54b4b" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle" opacity="0.6">RG-00</text>
+                            <circle data-id="165" cx="600" cy="140" r="65" fill="rgba(245,197,66,0.08)" stroke="#f5c542" stroke-width="2" class="svg-node" data-tip="RG-01 · REFORM ONSET (R+): Reform triggered, awaiting substrate bind."/>
+                            <text data-id="166" x="600" y="125" fill="#f5c542" font-family="Inter" font-size="11" font-weight="600" text-anchor="middle">REFORM</text>
+                            <text data-id="167" x="600" y="142" fill="#f5c542" font-family="Inter" font-size="11" font-weight="600" text-anchor="middle">ONSET</text>
+                            <text data-id="168" x="600" y="160" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="14" text-anchor="middle">(R+)</text>
+                            <text data-id="169" x="600" y="175" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle" opacity="0.6">RG-01</text>
+                            <circle data-id="170" cx="600" cy="370" r="65" fill="rgba(0,212,200,0.08)" stroke="#00d4c8" stroke-width="2" class="svg-node" data-tip="RG-02 · SUBSTRATE ACTIVE (S·): Reform bound, substrate operational."/>
+                            <text data-id="171" x="600" y="355" fill="#00d4c8" font-family="Inter" font-size="11" font-weight="600" text-anchor="middle">SUBSTRATE</text>
+                            <text data-id="172" x="600" y="372" fill="#00d4c8" font-family="Inter" font-size="11" font-weight="600" text-anchor="middle">ACTIVE</text>
+                            <text data-id="173" x="600" y="390" fill="#00d4c8" font-family="JetBrains Mono, monospace" font-size="14" text-anchor="middle">(S·)</text>
+                            <text data-id="174" x="600" y="405" fill="#00d4c8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle" opacity="0.6">RG-02</text>
+                            <circle data-id="175" cx="200" cy="370" r="65" fill="rgba(155,93,229,0.08)" stroke="#9b5de5" stroke-width="2" class="svg-node" data-tip="RG-03 · LEGACY HOLDOVER (L~): Substrate decayed, legacy systems retained."/>
+                            <text data-id="176" x="200" y="355" fill="#9b5de5" font-family="Inter" font-size="11" font-weight="600" text-anchor="middle">LEGACY</text>
+                            <text data-id="177" x="200" y="372" fill="#9b5de5" font-family="Inter" font-size="11" font-weight="600" text-anchor="middle">HOLDOVER</text>
+                            <text data-id="178" x="200" y="390" fill="#9b5de5" font-family="JetBrains Mono, monospace" font-size="14" text-anchor="middle">(L~)</text>
+                            <text data-id="179" x="200" y="405" fill="#9b5de5" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle" opacity="0.6">RG-03</text>
+                            <line data-id="180" x1="265" y1="130" x2="530" y2="130" stroke="#e0e6f0" stroke-width="1.5" stroke-opacity="0.4" marker-end="url(#arrowW)"/>
+                            <text data-id="181" x="400" y="120" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">∆ trigger · threshold breach</text>
+                            <line data-id="182" x1="610" y1="210" x2="610" y2="300" stroke="#e0e6f0" stroke-width="1.5" stroke-opacity="0.4" marker-end="url(#arrowW)"/>
+                            <text data-id="183" x="660" y="260" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">⊗ bind</text>
+                            <line data-id="184" x1="535" y1="380" x2="270" y2="380" stroke="#e0e6f0" stroke-width="1.5" stroke-opacity="0.4" marker-end="url(#arrowW)"/>
+                            <text data-id="185" x="400" y="398" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">∇ decay · holdover</text>
+                            <line data-id="186" x1="190" y1="305" x2="190" y2="210" stroke="#e0e6f0" stroke-width="1.5" stroke-opacity="0.4" marker-end="url(#arrowW)"/>
+                            <text data-id="187" x="140" y="260" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">⟲ close</text>
+                            <line data-id="188" x1="545" y1="185" x2="260" y2="335" stroke="#f5c542" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="6,4"/>
+                            <text data-id="189" x="380" y="270" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle" opacity="0.6">↯ disruption bypass</text>
+                            <line data-id="190" x1="650" y1="320" x2="650" y2="200" stroke="#00d4c8" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="6,4"/>
+                            <text data-id="191" x="710" y="260" fill="#00d4c8" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle" opacity="0.6">⊕ re-act</text>
+                            <defs data-id="192">
+                                <marker data-id="193" id="arrowW" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                    <path data-id="194" d="M 0 0 L 10 5 L 0 10 z" fill="rgba(224,230,240,0.5)"/>
+                                </marker>
+                            </defs>
+                        </svg>
+                    </div>
+
+                    <!-- DIAGRAM 5: SUBSTRATE -->
+                    <div data-id="195" class="diagram-panel hidden" data-diagram="4">
+                        <svg data-id="196" viewBox="0 0 800 500" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
+                            <text data-id="197" x="12" y="250" fill="#4a5568" font-family="JetBrains Mono, monospace" font-size="9" transform="rotate(-90,12,250)" text-anchor="middle" letter-spacing="0.1em">SUBSTRATE LAYER · SUB-05</text>
+                            <rect data-id="198" x="80" y="40" width="580" height="40" rx="4" fill="rgba(224,230,240,0.06)" stroke="rgba(224,230,240,0.3)" stroke-width="1" class="svg-node" data-tip="IS-1 · Interface Stratum: surface-level temporal grid mapping"/>
+                            <text data-id="199" x="100" y="64" fill="#e0e6f0" font-family="JetBrains Mono, monospace" font-size="10">IS-1</text>
+                            <text data-id="200" x="370" y="64" fill="#e0e6f0" font-family="Inter" font-size="11" text-anchor="middle" font-weight="500">INTERFACE STRATUM</text>
+                            <text data-id="201" x="640" y="64" fill="#e0e6f0" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="end">⊞ grid-mapped</text>
+                            <rect data-id="202" x="80" y="90" width="580" height="70" rx="4" fill="rgba(0,212,200,0.1)" stroke="#00d4c8" stroke-width="1.2" class="svg-node" data-tip="RAZ · Reform Active Zone: primary layer where Δ-flux operators execute reform propagation"/>
+                            <text data-id="203" x="100" y="130" fill="#00d4c8" font-family="JetBrains Mono, monospace" font-size="10">RAZ</text>
+                            <text data-id="204" x="370" y="130" fill="#00d4c8" font-family="Inter" font-size="12" text-anchor="middle" font-weight="600">REFORM ACTIVE ZONE</text>
+                            <text data-id="205" x="640" y="130" fill="#00d4c8" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="end">∆ flux enabled</text>
+                            <rect data-id="206" x="80" y="170" width="580" height="60" rx="4" fill="rgba(245,197,66,0.1)" stroke="#f5c542" stroke-width="1.2" class="svg-node" data-tip="DCB · Dual-Calendar Bridge: merges Gregorian and Triadic temporal streams"/>
+                            <text data-id="207" x="100" y="204" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="10">DCB</text>
+                            <text data-id="208" x="370" y="204" fill="#f5c542" font-family="Inter" font-size="12" text-anchor="middle" font-weight="600">DUAL-CALENDAR BRIDGE</text>
+                            <text data-id="209" x="640" y="204" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="end">⊕ calendar merge</text>
+                            <rect data-id="210" x="160" y="175" width="420" height="50" rx="3" fill="none" stroke="#3dd68c" stroke-width="1" stroke-dasharray="6,3" stroke-opacity="0.6"/>
+                            <text data-id="211" x="370" y="218" fill="#3dd68c" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle" opacity="0.7">▲ AWARENESS WINDOW ▲</text>
+                            <rect data-id="212" x="80" y="240" width="580" height="70" rx="4" fill="rgba(155,93,229,0.1)" stroke="#9b5de5" stroke-width="1.2" class="svg-node" data-tip="CS · Canonical Substrate: immutable reference layer, locked by ⊗ operator"/>
+                            <text data-id="213" x="100" y="280" fill="#9b5de5" font-family="JetBrains Mono, monospace" font-size="10">CS</text>
+                            <text data-id="214" x="370" y="280" fill="#9b5de5" font-family="Inter" font-size="12" text-anchor="middle" font-weight="600">CANONICAL SUBSTRATE</text>
+                            <text data-id="215" x="640" y="280" fill="#9b5de5" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="end">⊗ locked</text>
+                            <rect data-id="216" x="80" y="320" width="580" height="55" rx="4" fill="rgba(229,75,75,0.08)" stroke="#e54b4b" stroke-width="1.2" class="svg-node" data-tip="LTC · Legacy Temporal Core: deprecated Gregorian-only subsystem, scheduled for archive"/>
+                            <text data-id="217" x="100" y="352" fill="#e54b4b" font-family="JetBrains Mono, monospace" font-size="10">LTC</text>
+                            <text data-id="218" x="370" y="352" fill="#e54b4b" font-family="Inter" font-size="11" text-anchor="middle" font-weight="500">LEGACY TEMPORAL CORE</text>
+                            <text data-id="219" x="640" y="352" fill="#e54b4b" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="end">∇ deprecated</text>
+                            <rect data-id="220" x="80" y="385" width="580" height="35" rx="4" fill="rgba(74,85,104,0.15)" stroke="#4a5568" stroke-width="1" class="svg-node" data-tip="NF-Ø · Null Foundation: inert base layer, no temporal operations"/>
+                            <text data-id="221" x="100" y="407" fill="#4a5568" font-family="JetBrains Mono, monospace" font-size="10">NF-Ø</text>
+                            <text data-id="222" x="370" y="407" fill="#4a5568" font-family="Inter" font-size="11" text-anchor="middle">NULL FOUNDATION</text>
+                            <text data-id="223" x="640" y="407" fill="#4a5568" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="end">inert</text>
+                            <line data-id="224" x1="720" y1="400" x2="720" y2="60" stroke="#3dd68c" stroke-width="2" stroke-opacity="0.5" marker-end="url(#arrowG)"/>
+                            <text data-id="225" x="745" y="230" fill="#3dd68c" font-family="JetBrains Mono, monospace" font-size="8" transform="rotate(-90,745,230)" text-anchor="middle">REFORM PROPAGATION ↑</text>
+                            <line data-id="226" x1="750" y1="60" x2="750" y2="400" stroke="#e54b4b" stroke-width="2" stroke-opacity="0.4" marker-end="url(#arrowR)"/>
+                            <text data-id="227" x="772" y="230" fill="#e54b4b" font-family="JetBrains Mono, monospace" font-size="8" transform="rotate(-90,772,230)" text-anchor="middle">DECAY VECTOR ↓</text>
+                            <defs data-id="228">
+                                <marker data-id="229" id="arrowG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                    <path data-id="230" d="M 0 0 L 10 5 L 0 10 z" fill="#3dd68c"/>
+                                </marker>
+                                <marker data-id="231" id="arrowR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                    <path data-id="232" d="M 0 0 L 10 5 L 0 10 z" fill="#e54b4b"/>
+                                </marker>
+                            </defs>
+                        </svg>
+                    </div>
+
+                    <!-- DIAGRAM 6: AWARENESS PERIOD -->
+                    <div data-id="233" class="diagram-panel hidden" data-diagram="5">
+                        <svg data-id="234" viewBox="0 0 800 500" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
+                            <text data-id="235" x="12" y="250" fill="#4a5568" font-family="JetBrains Mono, monospace" font-size="9" transform="rotate(-90,12,250)" text-anchor="middle" letter-spacing="0.1em">AWARENESS PERIOD · AP-06</text>
+                            <line data-id="236" x1="120" y1="400" x2="750" y2="400" stroke="#e0e6f0" stroke-opacity="0.3" stroke-width="1"/>
+                            <text data-id="237" x="120" y="418" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">T₀</text>
+                            <text data-id="238" x="172" y="418" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">T₁</text>
+                            <text data-id="239" x="225" y="418" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">T₂</text>
+                            <text data-id="240" x="277" y="418" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">T₃</text>
+                            <text data-id="241" x="330" y="418" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">T₄</text>
+                            <text data-id="242" x="382" y="418" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">T₅</text>
+                            <text data-id="243" x="435" y="418" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">T₆</text>
+                            <text data-id="244" x="487" y="418" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">T₇</text>
+                            <text data-id="245" x="540" y="418" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">T₈</text>
+                            <text data-id="246" x="592" y="418" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">T₉</text>
+                            <text data-id="247" x="645" y="418" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">T₁₀</text>
+                            <text data-id="248" x="697" y="418" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">T₁₁</text>
+                            <text data-id="249" x="750" y="418" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">T₁₂</text>
+                            <text data-id="250" x="55" y="120" fill="#00d4c8" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="middle" transform="rotate(-90,55,120)">GREGORIAN</text>
+                            <text data-id="251" x="55" y="310" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="middle" transform="rotate(-90,55,310)">TRIADIC EP.IV</text>
+                            <rect data-id="252" x="80" y="50" width="680" height="130" rx="6" fill="rgba(0,212,200,0.03)" stroke="rgba(0,212,200,0.1)" stroke-width="0.5"/>
+                            <rect data-id="253" x="120" y="70" width="105" height="50" rx="4" fill="rgba(155,93,229,0.15)" stroke="#9b5de5" stroke-width="1" class="svg-node" data-tip="Pre-Reform Window: T₀–T₂, legacy system stabilization period"/>
+                            <text data-id="254" x="172" y="98" fill="#9b5de5" font-family="Inter" font-size="9" text-anchor="middle" font-weight="500">Pre-Reform</text>
+                            <text data-id="255" x="172" y="112" fill="#9b5de5" font-family="Inter" font-size="8" text-anchor="middle">Window</text>
+                            <rect data-id="256" x="225" y="70" width="157" height="50" rx="4" fill="rgba(245,197,66,0.15)" stroke="#f5c542" stroke-width="1" class="svg-node" data-tip="Reform Onset: T₂–T₅, active reform initiation phase"/>
+                            <text data-id="257" x="303" y="100" fill="#f5c542" font-family="Inter" font-size="9" text-anchor="middle" font-weight="500">Reform Onset</text>
+                            <rect data-id="258" x="382" y="70" width="210" height="50" rx="4" fill="rgba(0,212,200,0.15)" stroke="#00d4c8" stroke-width="1" class="svg-node" data-tip="Active Substrate Period: T₅–T₉, peak reform activity"/>
+                            <text data-id="259" x="487" y="100" fill="#00d4c8" font-family="Inter" font-size="9" text-anchor="middle" font-weight="500">Active Substrate Period</text>
+                            <rect data-id="260" x="592" y="70" width="158" height="50" rx="4" fill="rgba(229,75,75,0.15)" stroke="#e54b4b" stroke-width="1" class="svg-node" data-tip="Post-Reform Closure: T₉–T₁₂, system finalization and archival"/>
+                            <text data-id="261" x="671" y="100" fill="#e54b4b" font-family="Inter" font-size="9" text-anchor="middle" font-weight="500">Post-Reform Closure</text>
+                            <rect data-id="262" x="80" y="250" width="680" height="130" rx="6" fill="rgba(245,197,66,0.03)" stroke="rgba(245,197,66,0.1)" stroke-width="0.5"/>
+                            <rect data-id="263" x="120" y="270" width="210" height="50" rx="4" fill="rgba(0,212,200,0.15)" stroke="#00d4c8" stroke-width="1" class="svg-node" data-tip="Epoch IV Open: T₀–T₄, triadic epoch initialization"/>
+                            <text data-id="264" x="225" y="300" fill="#00d4c8" font-family="Inter" font-size="9" text-anchor="middle" font-weight="500">Epoch IV Open</text>
+                            <rect data-id="265" x="330" y="270" width="210" height="50" rx="4" fill="rgba(245,197,66,0.15)" stroke="#f5c542" stroke-width="1" class="svg-node" data-tip="Canon Alignment: T₄–T₈, dual-calendar synchronization phase"/>
+                            <text data-id="266" x="435" y="300" fill="#f5c542" font-family="Inter" font-size="9" text-anchor="middle" font-weight="500">Canon Alignment</text>
+                            <rect data-id="267" x="540" y="270" width="210" height="50" rx="4" fill="rgba(155,93,229,0.15)" stroke="#9b5de5" stroke-width="1" class="svg-node" data-tip="Epoch IV Close: T₈–T₁₂, triadic epoch finalization"/>
+                            <text data-id="268" x="645" y="300" fill="#9b5de5" font-family="Inter" font-size="9" text-anchor="middle" font-weight="500">Epoch IV Close</text>
+                            <rect data-id="269" x="277" y="150" width="263" height="100" rx="6" fill="rgba(61,214,140,0.08)" stroke="#3dd68c" stroke-width="1" stroke-dasharray="5,3"/>
+                            <defs data-id="270"><pattern data-id="271" id="hatch" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)"><line data-id="272" x1="0" y1="0" x2="0" y2="8" stroke="#3dd68c" stroke-width="0.5" stroke-opacity="0.15"/></pattern></defs>
+                            <rect data-id="273" x="277" y="150" width="263" height="100" rx="6" fill="url(#hatch)"/>
+                            <text data-id="274" x="408" y="205" fill="#3dd68c" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="middle" font-weight="500">DUAL-CALENDAR</text>
+                            <text data-id="275" x="408" y="218" fill="#3dd68c" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="middle" font-weight="500">AWARENESS ZONE</text>
+                            <line data-id="276" x1="225" y1="55" x2="225" y2="395" stroke="#f5c542" stroke-width="1" stroke-dasharray="4,4" stroke-opacity="0.3"/>
+                            <polygon data-id="277" points="225,440 220,430 230,430" fill="#f5c542" opacity="0.6"/>
+                            <text data-id="278" x="225" y="450" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">SP-1</text>
+                            <line data-id="279" x1="382" y1="55" x2="382" y2="395" stroke="#f5c542" stroke-width="1" stroke-dasharray="4,4" stroke-opacity="0.3"/>
+                            <polygon data-id="280" points="382,440 377,430 387,430" fill="#f5c542" opacity="0.6"/>
+                            <text data-id="281" x="382" y="450" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">SP-2</text>
+                            <line data-id="282" x1="540" y1="55" x2="540" y2="395" stroke="#f5c542" stroke-width="1" stroke-dasharray="4,4" stroke-opacity="0.3"/>
+                            <polygon data-id="283" points="540,440 535,430 545,430" fill="#f5c542" opacity="0.6"/>
+                            <text data-id="284" x="540" y="450" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">SP-3</text>
+                        </svg>
+                    </div>
+
+                    <!-- DIAGRAM 7: CUT-OVER PROTOCOL -->
+                    <div data-id="285" class="diagram-panel hidden" data-diagram="6">
+                        <svg data-id="286" viewBox="0 0 800 1050" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
+                            <text data-id="287" x="12" y="525" fill="#4a5568" font-family="JetBrains Mono, monospace" font-size="9" transform="rotate(-90,12,525)" text-anchor="middle" letter-spacing="0.1em">CUT-OVER PROTOCOL · COP-07</text>
+                            <rect data-id="288" x="100" y="15" width="600" height="36" rx="5" fill="rgba(0,212,200,0.1)" stroke="#00d4c8" stroke-width="1"/>
+                            <text data-id="289" x="400" y="38" fill="#00d4c8" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle" font-weight="600">CUT-OVER PROTOCOL · COP-07 · ⟳ INITIATE</text>
+                            <line data-id="290" x1="400" y1="51" x2="400" y2="70" stroke="#e0e6f0" stroke-opacity="0.3" stroke-width="1"/>
+                            <rect data-id="291" x="150" y="70" width="500" height="55" rx="6" fill="rgba(61,214,140,0.08)" stroke="#3dd68c" stroke-width="1.2" class="svg-node" data-tip="Step 1: Validate substrate state, confirm dual-calendar sync, verify operator chain integrity"/>
+                            <text data-id="292" x="170" y="92" fill="#3dd68c" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">STEP 1 · PRE-FLIGHT CHECK</text>
+                            <text data-id="293" x="170" y="112" fill="#8a94a8" font-family="Inter" font-size="9">Verify substrate state, validate dual-calendar sync, confirm operator chain integrity</text>
+                            <line data-id="294" x1="400" y1="125" x2="400" y2="150" stroke="#e0e6f0" stroke-opacity="0.3" stroke-width="1"/>
+                            <polygon data-id="295" points="400,150 550,195 400,240 250,195" fill="rgba(245,197,66,0.08)" stroke="#f5c542" stroke-width="1.2" class="svg-node" data-tip="Decision Gate: Is the Reform Gate open? Checks if ∆(R) ≥ threshold θ"/>
+                            <text data-id="296" x="400" y="190" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="middle">Reform Gate Open?</text>
+                            <text data-id="297" x="400" y="205" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle" opacity="0.7">∆(R) ≥ θ?</text>
+                            <line data-id="298" x1="400" y1="240" x2="400" y2="268" stroke="#3dd68c" stroke-width="1" stroke-opacity="0.5"/>
+                            <text data-id="299" x="415" y="258" fill="#3dd68c" font-family="JetBrains Mono, monospace" font-size="8">YES</text>
+                            <line data-id="300" x1="250" y1="195" x2="130" y2="195" stroke="#e54b4b" stroke-width="1" stroke-opacity="0.5"/>
+                            <rect data-id="301" x="40" y="178" width="90" height="34" rx="4" fill="rgba(229,75,75,0.1)" stroke="#e54b4b" stroke-width="1"/>
+                            <text data-id="302" x="85" y="198" fill="#e54b4b" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">ABORT · ∇ NULL</text>
+                            <text data-id="303" x="215" y="188" fill="#e54b4b" font-family="JetBrains Mono, monospace" font-size="7">NO</text>
+                            <rect data-id="304" x="150" y="268" width="500" height="55" rx="6" fill="rgba(0,212,200,0.08)" stroke="#00d4c8" stroke-width="1.2" class="svg-node" data-tip="Step 2: Execute ⊗ lock on Canonical Substrate, suspend legacy core writes"/>
+                            <text data-id="305" x="170" y="290" fill="#00d4c8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">STEP 2 · SUBSTRATE FREEZE</text>
+                            <text data-id="306" x="170" y="310" fill="#8a94a8" font-family="Inter" font-size="9">Execute ⊗ lock on Canonical Substrate (CS). Suspend legacy core writes.</text>
+                            <line data-id="307" x1="400" y1="323" x2="400" y2="345" stroke="#e0e6f0" stroke-opacity="0.3" stroke-width="1"/>
+                            <rect data-id="308" x="150" y="345" width="500" height="55" rx="6" fill="rgba(155,93,229,0.08)" stroke="#9b5de5" stroke-width="1.2" class="svg-node" data-tip="Step 3: Activate Dual-Calendar Bridge layer, merge Gregorian ⊕ Triadic streams"/>
+                            <text data-id="309" x="170" y="367" fill="#9b5de5" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">STEP 3 · DUAL-CALENDAR BRIDGE ENGAGE</text>
+                            <text data-id="310" x="170" y="387" fill="#8a94a8" font-family="Inter" font-size="9">Activate DCB layer. Merge Gregorian ⊕ Triadic streams.</text>
+                            <line data-id="311" x1="400" y1="400" x2="400" y2="425" stroke="#e0e6f0" stroke-opacity="0.3" stroke-width="1"/>
+                            <polygon data-id="312" points="400,425 550,470 400,515 250,470" fill="rgba(245,197,66,0.08)" stroke="#f5c542" stroke-width="1.2" class="svg-node" data-tip="Decision Gate: Is the Awareness Window currently active? Checks AP-06 ∩ T_current"/>
+                            <text data-id="313" x="400" y="465" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="middle">Awareness Window Active?</text>
+                            <text data-id="314" x="400" y="480" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle" opacity="0.7">AP-06 ∩ T_current?</text>
+                            <line data-id="315" x1="400" y1="515" x2="400" y2="543" stroke="#3dd68c" stroke-width="1" stroke-opacity="0.5"/>
+                            <text data-id="316" x="415" y="533" fill="#3dd68c" font-family="JetBrains Mono, monospace" font-size="8">YES</text>
+                            <line data-id="317" x1="250" y1="470" x2="130" y2="470" stroke="#f5c542" stroke-width="1" stroke-opacity="0.5"/>
+                            <rect data-id="318" x="30" y="453" width="100" height="34" rx="4" fill="rgba(245,197,66,0.1)" stroke="#f5c542" stroke-width="1"/>
+                            <text data-id="319" x="80" y="473" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">HOLD · ⟲ sync</text>
+                            <text data-id="320" x="215" y="463" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="7">NO</text>
+                            <rect data-id="321" x="150" y="543" width="500" height="55" rx="6" fill="rgba(0,212,200,0.08)" stroke="#00d4c8" stroke-width="1.2" class="svg-node" data-tip="Step 4: Release ∆ flux through Reform Active Zone, propagate reform from IS-1 downward"/>
+                            <text data-id="322" x="170" y="565" fill="#00d4c8" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">STEP 4 · REFORM PROPAGATION</text>
+                            <text data-id="323" x="170" y="585" fill="#8a94a8" font-family="Inter" font-size="9">Release ∆ flux through RAZ. Propagate reform from IS-1 downward.</text>
+                            <line data-id="324" x1="400" y1="598" x2="400" y2="620" stroke="#e0e6f0" stroke-opacity="0.3" stroke-width="1"/>
+                            <rect data-id="325" x="150" y="620" width="500" height="55" rx="6" fill="rgba(229,75,75,0.08)" stroke="#e54b4b" stroke-width="1.2" class="svg-node" data-tip="Step 5: Mark Legacy Temporal Core as ∇ deprecated, archive legacy operators"/>
+                            <text data-id="326" x="170" y="642" fill="#e54b4b" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">STEP 5 · LEGACY DEPRECATION</text>
+                            <text data-id="327" x="170" y="662" fill="#8a94a8" font-family="Inter" font-size="9">Mark LTC as ∇ deprecated. Archive legacy operators.</text>
+                            <line data-id="328" x1="400" y1="675" x2="400" y2="700" stroke="#e0e6f0" stroke-opacity="0.3" stroke-width="1"/>
+                            <rect data-id="329" x="150" y="700" width="500" height="55" rx="6" fill="rgba(61,214,140,0.08)" stroke="#3dd68c" stroke-width="1.2" class="svg-node" data-tip="Step 6: Confirm ⊞ grid alignment, log to Glyph Ledger, emit ⟳ closure signal"/>
+                            <text data-id="330" x="170" y="722" fill="#3dd68c" font-family="JetBrains Mono, monospace" font-size="10" font-weight="600">STEP 6 · POST-CUT VALIDATION</text>
+                            <text data-id="331" x="170" y="742" fill="#8a94a8" font-family="Inter" font-size="9">Confirm ⊞ grid alignment. Log to Glyph Ledger. Emit ⟳ closure signal.</text>
+                        </svg>
+                    </div>
+
+                    <!-- DIAGRAM 8: DST SHIFT -->
+                    <div data-id="332" class="diagram-panel hidden" data-diagram="7">
+                        <svg data-id="333" viewBox="0 0 900 920" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
+                            <defs data-id="334">
+                                <pattern data-id="335" id="dst-stripes" patternUnits="userSpaceOnUse" width="10" height="10" patternTransform="rotate(45)">
+                                    <line data-id="336" x1="0" y1="0" x2="0" y2="10" stroke="#f5c542" stroke-width="3" stroke-opacity="0.25"/>
+                                    <line data-id="337" x1="5" y1="0" x2="5" y2="10" stroke="#0a0e1a" stroke-width="3" stroke-opacity="0.5"/>
+                                </pattern>
+                                <marker data-id="338" id="arrowDST" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                                    <path data-id="339" d="M 0 0 L 10 5 L 0 10 z" fill="rgba(224,230,240,0.5)"/>
+                                </marker>
+                            </defs>
+                            <!-- Left margin label -->
+                            <text data-id="340" x="12" y="460" fill="#4a5568" font-family="JetBrains Mono, monospace" font-size="9" transform="rotate(-90,12,460)" text-anchor="middle" letter-spacing="0.1em">DST SHIFT LAYER · DST-08</text>
+
+                            <!-- TOP SECTION HEADERS -->
+                            <text data-id="341" x="200" y="30" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle" font-weight="500">◀ BEFORE DST SHIFT</text>
+                            <text data-id="342" x="450" y="30" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="13" text-anchor="middle" font-weight="700">⚡ SHIFT EVENT</text>
+                            <text data-id="343" x="720" y="30" fill="#00d4c8" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle" font-weight="500">AFTER DST SHIFT ▶</text>
+
+                            <!-- ===== ROW A: SPRING FORWARD ===== -->
+                            <text data-id="344" x="40" y="80" fill="#3dd68c" font-family="JetBrains Mono, monospace" font-size="9" transform="rotate(-90,40,140)" text-anchor="middle">SPRING ∆(+1h)</text>
+
+                            <!-- Before clock (Spring) -->
+                            <circle data-id="345" cx="200" cy="140" r="60" fill="rgba(26,34,64,0.6)" stroke="#8a94a8" stroke-width="1.5"/>
+                            <circle data-id="346" cx="200" cy="140" r="3" fill="#e0e6f0"/>
+                            <!-- Hour hand pointing to ~2 (1:59) -->
+                            <line data-id="347" x1="200" y1="140" x2="200" y2="90" stroke="#e0e6f0" stroke-width="2.5" stroke-linecap="round"/>
+                            <!-- Minute hand pointing to 12 (59 min) -->
+                            <line data-id="348" x1="200" y1="140" x2="197" y2="85" stroke="#e0e6f0" stroke-width="1.5" stroke-linecap="round"/>
+                            <!-- Clock numbers -->
+                            <text data-id="349" x="200" y="92" fill="#8a94a8" font-family="JetBrains Mono" font-size="7" text-anchor="middle">12</text>
+                            <text data-id="350" x="248" y="143" fill="#8a94a8" font-family="JetBrains Mono" font-size="7" text-anchor="middle">3</text>
+                            <text data-id="351" x="200" y="196" fill="#8a94a8" font-family="JetBrains Mono" font-size="7" text-anchor="middle">6</text>
+                            <text data-id="352" x="152" y="143" fill="#8a94a8" font-family="JetBrains Mono" font-size="7" text-anchor="middle">9</text>
+                            <text data-id="353" x="200" y="218" fill="#e0e6f0" font-family="JetBrains Mono, monospace" font-size="10" text-anchor="middle" font-weight="600">1:59 AM</text>
+                            <!-- Lost hour band -->
+                            <rect data-id="354" x="80" y="228" width="240" height="20" rx="3" fill="rgba(229,75,75,0.2)" stroke="#e54b4b" stroke-width="0.8"/>
+                            <text data-id="355" x="200" y="241" fill="#e54b4b" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle">LOST HOUR · ∆τ = +1h · ⊞ gap inserted</text>
+                            <text data-id="356" x="200" y="262" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">02:00 → SKIPPED</text>
+                            <!-- Calendar badge -->
+                            <rect data-id="357" x="120" y="270" width="160" height="18" rx="4" fill="rgba(0,212,200,0.1)" stroke="#00d4c8" stroke-width="0.8"/>
+                            <text data-id="358" x="200" y="283" fill="#00d4c8" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle">2nd Sun · March · UTC-5→UTC-4</text>
+
+                            <!-- Center transition zone (Spring) -->
+                            <rect data-id="359" x="370" y="70" width="160" height="230" rx="4" fill="url(#dst-stripes)" stroke="#f5c542" stroke-width="0.8" stroke-opacity="0.4"/>
+                            <text data-id="360" x="450" y="150" fill="#f5c542" font-family="Inter" font-size="28" text-anchor="middle" opacity="0.6">☀</text>
+                            <text data-id="361" x="450" y="180" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">→→→</text>
+                            <text data-id="362" x="450" y="195" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle" font-weight="600">⊗ LOCK NEW OFFSET</text>
+                            <text data-id="363" x="450" y="115" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle" opacity="0.6">TEMPORAL</text>
+                            <text data-id="364" x="450" y="127" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle" opacity="0.6">DISCONTINUITY</text>
+
+                            <!-- After clock (Spring) -->
+                            <circle data-id="365" cx="720" cy="140" r="60" fill="rgba(26,34,64,0.6)" stroke="#00d4c8" stroke-width="1.5"/>
+                            <circle data-id="366" cx="720" cy="140" r="3" fill="#00d4c8"/>
+                            <!-- Hour hand at 3 -->
+                            <line data-id="367" x1="720" y1="140" x2="768" y2="140" stroke="#00d4c8" stroke-width="2.5" stroke-linecap="round"/>
+                            <!-- Minute hand at 12 -->
+                            <line data-id="368" x1="720" y1="140" x2="720" y2="90" stroke="#00d4c8" stroke-width="1.5" stroke-linecap="round"/>
+                            <text data-id="369" x="720" y="92" fill="#8a94a8" font-family="JetBrains Mono" font-size="7" text-anchor="middle">12</text>
+                            <text data-id="370" x="768" y="143" fill="#8a94a8" font-family="JetBrains Mono" font-size="7" text-anchor="middle">3</text>
+                            <text data-id="371" x="720" y="196" fill="#8a94a8" font-family="JetBrains Mono" font-size="7" text-anchor="middle">6</text>
+                            <text data-id="372" x="672" y="143" fill="#8a94a8" font-family="JetBrains Mono" font-size="7" text-anchor="middle">9</text>
+                            <text data-id="373" x="720" y="218" fill="#00d4c8" font-family="JetBrains Mono, monospace" font-size="10" text-anchor="middle" font-weight="600">3:00 AM</text>
+                            <!-- Green check -->
+                            <rect data-id="374" x="640" y="228" width="160" height="20" rx="3" fill="rgba(61,214,140,0.15)" stroke="#3dd68c" stroke-width="0.8"/>
+                            <text data-id="375" x="720" y="241" fill="#3dd68c" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle">✓ 03:00 · Substrate continues</text>
+                            <text data-id="376" x="720" y="262" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle">∆(+1h) applied · Triadic Node advances</text>
+                            <rect data-id="377" x="640" y="270" width="160" height="18" rx="4" fill="rgba(61,214,140,0.1)" stroke="#3dd68c" stroke-width="0.8"/>
+                            <text data-id="378" x="720" y="283" fill="#3dd68c" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle">Reform Operator: ∆(+1h)</text>
+
+                            <!-- Divider between rows -->
+                            <line data-id="379" x1="60" y1="310" x2="860" y2="310" stroke="#1a2240" stroke-width="1"/>
+
+                            <!-- ===== ROW B: FALL BACK ===== -->
+                            <text data-id="380" x="40" y="370" fill="#e54b4b" font-family="JetBrains Mono, monospace" font-size="9" transform="rotate(-90,40,430)" text-anchor="middle">FALL ∇(−1h)</text>
+
+                            <!-- Before clock (Fall) -->
+                            <circle data-id="381" cx="200" cy="420" r="60" fill="rgba(26,34,64,0.6)" stroke="#8a94a8" stroke-width="1.5"/>
+                            <circle data-id="382" cx="200" cy="420" r="3" fill="#e0e6f0"/>
+                            <line data-id="383" x1="200" y1="420" x2="200" y2="370" stroke="#e0e6f0" stroke-width="2.5" stroke-linecap="round"/>
+                            <line data-id="384" x1="200" y1="420" x2="197" y2="365" stroke="#e0e6f0" stroke-width="1.5" stroke-linecap="round"/>
+                            <text data-id="385" x="200" y="372" fill="#8a94a8" font-family="JetBrains Mono" font-size="7" text-anchor="middle">12</text>
+                            <text data-id="386" x="248" y="423" fill="#8a94a8" font-family="JetBrains Mono" font-size="7" text-anchor="middle">3</text>
+                            <text data-id="387" x="200" y="476" fill="#8a94a8" font-family="JetBrains Mono" font-size="7" text-anchor="middle">6</text>
+                            <text data-id="388" x="152" y="423" fill="#8a94a8" font-family="JetBrains Mono" font-size="7" text-anchor="middle">9</text>
+                            <text data-id="389" x="200" y="498" fill="#e0e6f0" font-family="JetBrains Mono, monospace" font-size="10" text-anchor="middle" font-weight="600">1:59 AM (2nd)</text>
+                            <!-- Gained hour band -->
+                            <rect data-id="390" x="80" y="508" width="240" height="20" rx="3" fill="rgba(155,93,229,0.2)" stroke="#9b5de5" stroke-width="0.8"/>
+                            <text data-id="391" x="200" y="521" fill="#9b5de5" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle">GAINED HOUR · ∇τ = −1h · ⊞ overlap inserted</text>
+                            <text data-id="392" x="200" y="542" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">02:00 → REPEATED</text>
+                            <rect data-id="393" x="120" y="550" width="160" height="18" rx="4" fill="rgba(155,93,229,0.1)" stroke="#9b5de5" stroke-width="0.8"/>
+                            <text data-id="394" x="200" y="563" fill="#9b5de5" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle">1st Sun · November · UTC-4→UTC-5</text>
+
+                            <!-- Center transition zone (Fall) -->
+                            <rect data-id="395" x="370" y="350" width="160" height="230" rx="4" fill="url(#dst-stripes)" stroke="#f5c542" stroke-width="0.8" stroke-opacity="0.4"/>
+                            <text data-id="396" x="450" y="430" fill="#9b5de5" font-family="Inter" font-size="28" text-anchor="middle" opacity="0.6">☽</text>
+                            <text data-id="397" x="450" y="460" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">←←←</text>
+                            <text data-id="398" x="450" y="475" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle" font-weight="600">⟲ RETROGRADE CLOSE</text>
+                            <text data-id="399" x="450" y="395" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle" opacity="0.6">TEMPORAL</text>
+                            <text data-id="400" x="450" y="407" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle" opacity="0.6">DISCONTINUITY</text>
+
+                            <!-- After clock (Fall) -->
+                            <circle data-id="401" cx="720" cy="420" r="60" fill="rgba(26,34,64,0.6)" stroke="#e54b4b" stroke-width="1.5"/>
+                            <circle data-id="402" cx="720" cy="420" r="3" fill="#e54b4b"/>
+                            <line data-id="403" x1="720" y1="420" x2="720" y2="370" stroke="#e54b4b" stroke-width="2.5" stroke-linecap="round"/>
+                            <line data-id="404" x1="720" y1="420" x2="717" y2="365" stroke="#e54b4b" stroke-width="1.5" stroke-linecap="round"/>
+                            <text data-id="405" x="720" y="372" fill="#8a94a8" font-family="JetBrains Mono" font-size="7" text-anchor="middle">12</text>
+                            <text data-id="406" x="768" y="423" fill="#8a94a8" font-family="JetBrains Mono" font-size="7" text-anchor="middle">3</text>
+                            <text data-id="407" x="720" y="476" fill="#8a94a8" font-family="JetBrains Mono" font-size="7" text-anchor="middle">6</text>
+                            <text data-id="408" x="672" y="423" fill="#8a94a8" font-family="JetBrains Mono" font-size="7" text-anchor="middle">9</text>
+                            <text data-id="409" x="720" y="498" fill="#e54b4b" font-family="JetBrains Mono, monospace" font-size="10" text-anchor="middle" font-weight="600">1:00 AM</text>
+                            <rect data-id="410" x="640" y="508" width="160" height="20" rx="3" fill="rgba(229,75,75,0.15)" stroke="#e54b4b" stroke-width="0.8"/>
+                            <text data-id="411" x="720" y="521" fill="#e54b4b" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle">⊘ 01:00 · Substrate rewinds</text>
+                            <text data-id="412" x="720" y="542" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle">∇(−1h) applied · Triadic Node holds</text>
+                            <rect data-id="413" x="640" y="550" width="160" height="18" rx="4" fill="rgba(229,75,75,0.1)" stroke="#e54b4b" stroke-width="0.8"/>
+                            <text data-id="414" x="720" y="563" fill="#e54b4b" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle">Reform Operator: ∇(−1h)</text>
+
+                            <!-- ===== DUAL-CALENDAR COMPARISON TABLE ===== -->
+                            <line data-id="415" x1="60" y1="590" x2="860" y2="590" stroke="#1a2240" stroke-width="1"/>
+                            <text data-id="416" x="450" y="615" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="middle" font-weight="500">DUAL-CALENDAR DST COMPARISON</text>
+                            <!-- Table header -->
+                            <rect data-id="417" x="80" y="625" width="760" height="22" rx="3" fill="rgba(0,212,200,0.08)"/>
+                            <text data-id="418" x="140" y="640" fill="#00d4c8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle" font-weight="600">Event</text>
+                            <text data-id="419" x="290" y="640" fill="#00d4c8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle" font-weight="600">Gregorian Date</text>
+                            <text data-id="420" x="460" y="640" fill="#00d4c8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle" font-weight="600">Triadic Epoch</text>
+                            <text data-id="421" x="620" y="640" fill="#00d4c8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle" font-weight="600">DST Operator</text>
+                            <text data-id="422" x="770" y="640" fill="#00d4c8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle" font-weight="600">Substrate Effect</text>
+                            <!-- Row 1 -->
+                            <rect data-id="423" x="80" y="649" width="760" height="22" rx="0" fill="rgba(26,34,64,0.4)"/>
+                            <text data-id="424" x="140" y="664" fill="#3dd68c" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle">Spring Forward 2026</text>
+                            <text data-id="425" x="290" y="664" fill="#e0e6f0" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle">Mar 08 · 02:00 EST</text>
+                            <text data-id="426" x="460" y="664" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle">Ep.IV · Cy.3 · Nd.8</text>
+                            <text data-id="427" x="620" y="664" fill="#3dd68c" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle">∆(+1h)</text>
+                            <text data-id="428" x="770" y="664" fill="#e0e6f0" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle">Gap · ⊞ insert</text>
+                            <!-- Row 2 -->
+                            <rect data-id="429" x="80" y="673" width="760" height="22" rx="0" fill="rgba(26,34,64,0.2)"/>
+                            <text data-id="430" x="140" y="688" fill="#e54b4b" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle">Fall Back 2026</text>
+                            <text data-id="431" x="290" y="688" fill="#e0e6f0" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle">Nov 01 · 02:00 EDT</text>
+                            <text data-id="432" x="460" y="688" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle">Ep.IV · Cy.9 · Nd.1</text>
+                            <text data-id="433" x="620" y="688" fill="#e54b4b" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle">∇(−1h)</text>
+                            <text data-id="434" x="770" y="688" fill="#e0e6f0" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle">Overlap · ⟲ close</text>
+
+                            <!-- ===== SUBSTRATE IMPACT BAR ===== -->
+                            <line data-id="435" x1="60" y1="710" x2="860" y2="710" stroke="#1a2240" stroke-width="1"/>
+                            <text data-id="436" x="450" y="735" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="middle" font-weight="500">SUBSTRATE LAYER RESPONSE · SUB-05 CROSS-REFERENCE</text>
+                            <!-- 5 segments -->
+                            <rect data-id="437" x="80" y="745" width="152" height="28" rx="3" fill="rgba(224,230,240,0.06)" stroke="rgba(224,230,240,0.3)" stroke-width="0.8" class="svg-node" data-tip="IS-1: Interface Stratum adjusted for DST offset change"/>
+                            <text data-id="438" x="156" y="763" fill="#e0e6f0" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle">IS-1 ☑ adjusted</text>
+
+                            <rect data-id="439" x="234" y="745" width="152" height="28" rx="3" fill="rgba(0,212,200,0.1)" stroke="#00d4c8" stroke-width="0.8" class="svg-node flux-pulse" data-tip="RAZ: Reform Active Zone executing ∆ flux for DST shift"/>
+                            <text data-id="440" x="310" y="763" fill="#00d4c8" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle">RAZ ∆ flux active</text>
+
+                            <rect data-id="441" x="388" y="745" width="152" height="28" rx="3" fill="rgba(245,197,66,0.1)" stroke="#f5c542" stroke-width="0.8" class="svg-node" data-tip="DCB: Dual-Calendar Bridge re-merged after DST offset change"/>
+                            <text data-id="442" x="464" y="763" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle">DCB ⊕ calendar re-merged</text>
+
+                            <rect data-id="443" x="542" y="745" width="152" height="28" rx="3" fill="rgba(155,93,229,0.1)" stroke="#9b5de5" stroke-width="0.8" class="svg-node" data-tip="CS: Canonical Substrate re-locked after DST propagation"/>
+                            <text data-id="444" x="618" y="763" fill="#9b5de5" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle">CS ⊗ re-locked</text>
+
+                            <rect data-id="445" x="696" y="745" width="144" height="28" rx="3" fill="rgba(229,75,75,0.08)" stroke="#e54b4b" stroke-width="0.8" class="svg-node" data-tip="LTC: Legacy Temporal Core archived post-DST"/>
+                            <text data-id="446" x="768" y="763" fill="#e54b4b" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle">LTC ∇ archived</text>
+                        </svg>
+                    </div>
+
+                    <!-- DIAGRAM 9: MOVEABLE HOLIDAYS -->
+                    <div data-id="447" class="diagram-panel hidden" data-diagram="8">
+                        <svg data-id="448" viewBox="0 0 900 1400" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Left margin label -->
+                            <text data-id="449" x="12" y="700" fill="#4a5568" font-family="JetBrains Mono, monospace" font-size="9" transform="rotate(-90,12,700)" text-anchor="middle" letter-spacing="0.1em">MOVEABLE HOLIDAYS LAYER · MH-09</text>
+
+                            <!-- HEADER -->
+                            <text data-id="450" x="450" y="30" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="14" text-anchor="middle" font-weight="700">✦ MOVEABLE HOLIDAYS · FLOATING TEMPORAL NODES</text>
+                            <text data-id="451" x="450" y="48" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="middle">Algorithmically Anchored · Reform-Aware · Substrate-Mapped</text>
+
+                            <!-- ===== SECTION A: EASTER ALGORITHM ===== -->
+                            <text data-id="452" x="450" y="78" fill="#f5c542" font-family="Inter" font-size="12" text-anchor="middle" font-weight="600">EASTER SUNDAY · BUTCHER-MEEUS ALGORITHM</text>
+
+                            <!-- Code block background -->
+                            <rect data-id="453" x="40" y="90" width="420" height="360" rx="6" fill="#0d1117" stroke="#1a2240" stroke-width="1.5"/>
+                            <!-- Code header -->
+                            <rect data-id="454" x="40" y="90" width="420" height="24" rx="6" fill="#151d35"/>
+                            <circle data-id="455" cx="58" cy="102" r="4" fill="#e54b4b" opacity="0.7"/>
+                            <circle data-id="456" cx="72" cy="102" r="4" fill="#f5c542" opacity="0.7"/>
+                            <circle data-id="457" cx="86" cy="102" r="4" fill="#3dd68c" opacity="0.7"/>
+                            <text data-id="458" x="250" y="106" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="7" text-anchor="middle">easter_algorithm.pas</text>
+
+                            <!-- Code lines -->
+                            <text data-id="459" x="55" y="132" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="7.5" font-style="italic">{ Easter Sunday — Anonymous Gregorian Algorithm }</text>
+                            <text data-id="460" x="55" y="145" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="7.5" font-style="italic">{ As computed in Pascal — a rite of passage! }</text>
+                            <text data-id="461" x="55" y="163" fill="#e0e6f0" font-family="JetBrains Mono, monospace" font-size="7.5"><tspan data-id="462" fill="#00d4c8">a</tspan> := Year <tspan data-id="463" fill="#9b5de5">MOD</tspan> <tspan data-id="464" fill="#f5c542">19</tspan>;</text>
+                            <text data-id="465" x="55" y="176" fill="#e0e6f0" font-family="JetBrains Mono, monospace" font-size="7.5"><tspan data-id="466" fill="#00d4c8">b</tspan> := Year <tspan data-id="467" fill="#9b5de5">DIV</tspan> <tspan data-id="468" fill="#f5c542">100</tspan>;</text>
+                            <text data-id="469" x="55" y="189" fill="#e0e6f0" font-family="JetBrains Mono, monospace" font-size="7.5"><tspan data-id="470" fill="#00d4c8">c</tspan> := Year <tspan data-id="471" fill="#9b5de5">MOD</tspan> <tspan data-id="472" fill="#f5c542">100</tspan>;</text>
+                            <text data-id="473" x="55" y="202" fill="#e0e6f0" font-family="JetBrains Mono, monospace" font-size="7.5"><tspan data-id="474" fill="#00d4c8">d</tspan> := b <tspan data-id="475" fill="#9b5de5">DIV</tspan> <tspan data-id="476" fill="#f5c542">4</tspan>;</text>
+                            <text data-id="477" x="55" y="215" fill="#e0e6f0" font-family="JetBrains Mono, monospace" font-size="7.5"><tspan data-id="478" fill="#00d4c8">e</tspan> := b <tspan data-id="479" fill="#9b5de5">MOD</tspan> <tspan data-id="480" fill="#f5c542">4</tspan>;</text>
+                            <text data-id="481" x="55" y="228" fill="#e0e6f0" font-family="JetBrains Mono, monospace" font-size="7.5"><tspan data-id="482" fill="#00d4c8">f</tspan> := (b + <tspan data-id="483" fill="#f5c542">8</tspan>) <tspan data-id="484" fill="#9b5de5">DIV</tspan> <tspan data-id="485" fill="#f5c542">25</tspan>;</text>
+                            <text data-id="486" x="55" y="241" fill="#e0e6f0" font-family="JetBrains Mono, monospace" font-size="7.5"><tspan data-id="487" fill="#00d4c8">g</tspan> := (b - f + <tspan data-id="488" fill="#f5c542">1</tspan>) <tspan data-id="489" fill="#9b5de5">DIV</tspan> <tspan data-id="490" fill="#f5c542">3</tspan>;</text>
+                            <text data-id="491" x="55" y="254" fill="#e0e6f0" font-family="JetBrains Mono, monospace" font-size="7.5"><tspan data-id="492" fill="#00d4c8">h</tspan> := (<tspan data-id="493" fill="#f5c542">19</tspan>*a+b-d-g+<tspan data-id="494" fill="#f5c542">15</tspan>) <tspan data-id="495" fill="#9b5de5">MOD</tspan> <tspan data-id="496" fill="#f5c542">30</tspan>;</text>
+                            <text data-id="497" x="55" y="267" fill="#e0e6f0" font-family="JetBrains Mono, monospace" font-size="7.5"><tspan data-id="498" fill="#00d4c8">i</tspan> := c <tspan data-id="499" fill="#9b5de5">DIV</tspan> <tspan data-id="500" fill="#f5c542">4</tspan>;</text>
+                            <text data-id="501" x="55" y="280" fill="#e0e6f0" font-family="JetBrains Mono, monospace" font-size="7.5"><tspan data-id="502" fill="#00d4c8">k</tspan> := c <tspan data-id="503" fill="#9b5de5">MOD</tspan> <tspan data-id="504" fill="#f5c542">4</tspan>;</text>
+                            <text data-id="505" x="55" y="293" fill="#e0e6f0" font-family="JetBrains Mono, monospace" font-size="7.5"><tspan data-id="506" fill="#00d4c8">l</tspan> := (<tspan data-id="507" fill="#f5c542">32</tspan>+<tspan data-id="508" fill="#f5c542">2</tspan>*e+<tspan data-id="509" fill="#f5c542">2</tspan>*i-h-k) <tspan data-id="510" fill="#9b5de5">MOD</tspan> <tspan data-id="511" fill="#f5c542">7</tspan>;</text>
+                            <text data-id="512" x="55" y="306" fill="#e0e6f0" font-family="JetBrains Mono, monospace" font-size="7.5"><tspan data-id="513" fill="#00d4c8">m</tspan> := (a+<tspan data-id="514" fill="#f5c542">11</tspan>*h+<tspan data-id="515" fill="#f5c542">22</tspan>*l) <tspan data-id="516" fill="#9b5de5">DIV</tspan> <tspan data-id="517" fill="#f5c542">451</tspan>;</text>
+                            <text data-id="518" x="55" y="326" fill="#e0e6f0" font-family="JetBrains Mono, monospace" font-size="7.5"><tspan data-id="519" fill="#3dd68c">Month</tspan> := (h+l-<tspan data-id="520" fill="#f5c542">7</tspan>*m+<tspan data-id="521" fill="#f5c542">114</tspan>) <tspan data-id="522" fill="#9b5de5">DIV</tspan> <tspan data-id="523" fill="#f5c542">31</tspan>;</text>
+                            <text data-id="524" x="55" y="339" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="7">  { 3=March, 4=April }</text>
+                            <text data-id="525" x="55" y="355" fill="#e0e6f0" font-family="JetBrains Mono, monospace" font-size="7.5"><tspan data-id="526" fill="#3dd68c">Day</tspan>   := ((h+l-<tspan data-id="527" fill="#f5c542">7</tspan>*m+<tspan data-id="528" fill="#f5c542">114</tspan>) <tspan data-id="529" fill="#9b5de5">MOD</tspan> <tspan data-id="530" fill="#f5c542">31</tspan>) + <tspan data-id="531" fill="#f5c542">1</tspan>;</text>
+
+                            <!-- Easter results table (right of code) -->
+                            <rect data-id="532" x="480" y="90" width="380" height="24" rx="4" fill="rgba(245,197,66,0.1)" stroke="#f5c542" stroke-width="0.8"/>
+                            <text data-id="533" x="670" y="106" fill="#f5c542" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="middle" font-weight="600">EASTER DATES 2020–2029</text>
+                            <!-- Table header -->
+                            <rect data-id="534" x="480" y="116" width="380" height="18" rx="0" fill="rgba(0,212,200,0.08)"/>
+                            <text data-id="535" x="510" y="129" fill="#00d4c8" font-family="JetBrains Mono" font-size="7" font-weight="600">Year</text>
+                            <text data-id="536" x="570" y="129" fill="#00d4c8" font-family="JetBrains Mono" font-size="7" font-weight="600">Easter</text>
+                            <text data-id="537" x="635" y="129" fill="#00d4c8" font-family="JetBrains Mono" font-size="7" font-weight="600">Day</text>
+                            <text data-id="538" x="760" y="129" fill="#00d4c8" font-family="JetBrains Mono" font-size="7" font-weight="600">Triadic Node</text>
+                            <!-- Rows -->
+                            <rect data-id="539" x="480" y="136" width="380" height="16" fill="rgba(26,34,64,0.4)"/>
+                            <text data-id="540" x="510" y="148" fill="#e0e6f0" font-family="JetBrains Mono" font-size="7">2020</text>
+                            <text data-id="541" x="570" y="148" fill="#f5c542" font-family="JetBrains Mono" font-size="7">Apr 12</text>
+                            <text data-id="542" x="635" y="148" fill="#8a94a8" font-family="JetBrains Mono" font-size="7">Sun</text>
+                            <text data-id="543" x="760" y="148" fill="#8a94a8" font-family="JetBrains Mono" font-size="7" text-anchor="middle">Ep.III · Cy.4 · Nd.12</text>
+
+                            <rect data-id="544" x="480" y="154" width="380" height="16" fill="rgba(26,34,64,0.2)"/>
+                            <text data-id="545" x="510" y="166" fill="#e0e6f0" font-family="JetBrains Mono" font-size="7">2021</text>
+                            <text data-id="546" x="570" y="166" fill="#f5c542" font-family="JetBrains Mono" font-size="7">Apr 04</text>
+                            <text data-id="547" x="635" y="166" fill="#8a94a8" font-family="JetBrains Mono" font-size="7">Sun</text>
+                            <text data-id="548" x="760" y="166" fill="#8a94a8" font-family="JetBrains Mono" font-size="7" text-anchor="middle">Ep.III · Cy.4 · Nd.4</text>
+
+                            <rect data-id="549" x="480" y="172" width="380" height="16" fill="rgba(26,34,64,0.4)"/>
+                            <text data-id="550" x="510" y="184" fill="#e0e6f0" font-family="JetBrains Mono" font-size="7">2022</text>
+                            <text data-id="551" x="570" y="184" fill="#f5c542" font-family="JetBrains Mono" font-size="7">Apr 17</text>
+                            <text data-id="552" x="635" y="184" fill="#8a94a8" font-family="JetBrains Mono" font-size="7">Sun</text>
+                            <text data-id="553" x="760" y="184" fill="#8a94a8" font-family="JetBrains Mono" font-size="7" text-anchor="middle">Ep.III · Cy.4 · Nd.17</text>
+
+                            <rect data-id="554" x="480" y="190" width="380" height="16" fill="rgba(26,34,64,0.2)"/>
+                            <text data-id="555" x="510" y="202" fill="#e0e6f0" font-family="JetBrains Mono" font-size="7">2023</text>
+                            <text data-id="556" x="570" y="202" fill="#f5c542" font-family="JetBrains Mono" font-size="7">Apr 09</text>
+                            <text data-id="557" x="635" y="202" fill="#8a94a8" font-family="JetBrains Mono" font-size="7">Sun</text>
+                            <text data-id="558" x="760" y="202" fill="#8a94a8" font-family="JetBrains Mono" font-size="7" text-anchor="middle">Ep.III · Cy.5 · Nd.9</text>
+
+                            <rect data-id="559" x="480" y="208" width="380" height="16" fill="rgba(26,34,64,0.4)"/>
+                            <text data-id="560" x="510" y="220" fill="#e0e6f0" font-family="JetBrains Mono" font-size="7">2024</text>
+                            <text data-id="561" x="570" y="220" fill="#f5c542" font-family="JetBrains Mono" font-size="7">Mar 31</text>
+                            <text data-id="562" x="635" y="220" fill="#8a94a8" font-family="JetBrains Mono" font-size="7">Sun</text>
+                            <text data-id="563" x="760" y="220" fill="#8a94a8" font-family="JetBrains Mono" font-size="7" text-anchor="middle">Ep.IV · Cy.3 · Nd.31</text>
+
+                            <rect data-id="564" x="480" y="226" width="380" height="16" fill="rgba(26,34,64,0.2)"/>
+                            <text data-id="565" x="510" y="238" fill="#e0e6f0" font-family="JetBrains Mono" font-size="7">2025</text>
+                            <text data-id="566" x="570" y="238" fill="#f5c542" font-family="JetBrains Mono" font-size="7">Apr 20</text>
+                            <text data-id="567" x="635" y="238" fill="#8a94a8" font-family="JetBrains Mono" font-size="7">Sun</text>
+                            <text data-id="568" x="760" y="238" fill="#8a94a8" font-family="JetBrains Mono" font-size="7" text-anchor="middle">Ep.IV · Cy.4 · Nd.20</text>
+
+                            <rect data-id="569" x="480" y="244" width="380" height="16" fill="rgba(245,197,66,0.08)"/>
+                            <text data-id="570" x="510" y="256" fill="#f5c542" font-family="JetBrains Mono" font-size="7" font-weight="600">2026</text>
+                            <text data-id="571" x="570" y="256" fill="#f5c542" font-family="JetBrains Mono" font-size="7" font-weight="600">Apr 05</text>
+                            <text data-id="572" x="635" y="256" fill="#f5c542" font-family="JetBrains Mono" font-size="7" font-weight="600">Sun</text>
+                            <text data-id="573" x="760" y="256" fill="#f5c542" font-family="JetBrains Mono" font-size="7" font-weight="600" text-anchor="middle">Ep.IV · Cy.4 · Nd.5</text>
+
+                            <rect data-id="574" x="480" y="262" width="380" height="16" fill="rgba(26,34,64,0.2)"/>
+                            <text data-id="575" x="510" y="274" fill="#e0e6f0" font-family="JetBrains Mono" font-size="7">2027</text>
+                            <text data-id="576" x="570" y="274" fill="#f5c542" font-family="JetBrains Mono" font-size="7">Mar 28</text>
+                            <text data-id="577" x="635" y="274" fill="#8a94a8" font-family="JetBrains Mono" font-size="7">Sun</text>
+                            <text data-id="578" x="760" y="274" fill="#8a94a8" font-family="JetBrains Mono" font-size="7" text-anchor="middle">Ep.IV · Cy.3 · Nd.28</text>
+
+                            <rect data-id="579" x="480" y="280" width="380" height="16" fill="rgba(26,34,64,0.4)"/>
+                            <text data-id="580" x="510" y="292" fill="#e0e6f0" font-family="JetBrains Mono" font-size="7">2028</text>
+                            <text data-id="581" x="570" y="292" fill="#f5c542" font-family="JetBrains Mono" font-size="7">Apr 16</text>
+                            <text data-id="582" x="635" y="292" fill="#8a94a8" font-family="JetBrains Mono" font-size="7">Sun</text>
+                            <text data-id="583" x="760" y="292" fill="#8a94a8" font-family="JetBrains Mono" font-size="7" text-anchor="middle">Ep.IV · Cy.4 · Nd.16</text>
+
+                            <rect data-id="584" x="480" y="298" width="380" height="16" fill="rgba(26,34,64,0.2)"/>
+                            <text data-id="585" x="510" y="310" fill="#e0e6f0" font-family="JetBrains Mono" font-size="7">2029</text>
+                            <text data-id="586" x="570" y="310" fill="#f5c542" font-family="JetBrains Mono" font-size="7">Apr 01</text>
+                            <text data-id="587" x="635" y="310" fill="#8a94a8" font-family="JetBrains Mono" font-size="7">Sun</text>
+                            <text data-id="588" x="760" y="310" fill="#8a94a8" font-family="JetBrains Mono" font-size="7" text-anchor="middle">Ep.IV · Cy.4 · Nd.1</text>
+
+                            <!-- SCATTER PLOT: Easter Date Range -->
+                            <rect data-id="589" x="480" y="325" width="380" height="130" rx="6" fill="rgba(26,34,64,0.5)" stroke="#1a2240" stroke-width="1"/>
+                            <text data-id="590" x="670" y="345" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="8" text-anchor="middle">EASTER DATE RANGE ACROSS GREGORIAN CALENDAR</text>
+                            <!-- X-axis: Mar 22 to Apr 25 = 35 days, map to 350px (500-840) -->
+                            <line data-id="591" x1="500" y1="420" x2="840" y2="420" stroke="#8a94a8" stroke-width="0.5" stroke-opacity="0.5"/>
+                            <text data-id="592" x="500" y="435" fill="#8a94a8" font-family="JetBrains Mono" font-size="6" text-anchor="middle">Mar 22</text>
+                            <text data-id="593" x="670" y="435" fill="#8a94a8" font-family="JetBrains Mono" font-size="6" text-anchor="middle">Apr 8</text>
+                            <text data-id="594" x="840" y="435" fill="#8a94a8" font-family="JetBrains Mono" font-size="6" text-anchor="middle">Apr 25</text>
+                            <!-- Most common zone band (Apr 3 - Apr 18): days 12-27 of 35 → x=500+12*9.71..840 -->
+                            <rect data-id="595" x="616" y="355" width="155" height="60" rx="3" fill="rgba(61,214,140,0.08)" stroke="#3dd68c" stroke-width="0.5" stroke-dasharray="4,2"/>
+                            <text data-id="596" x="693" y="367" fill="#3dd68c" font-family="JetBrains Mono" font-size="6" text-anchor="middle" opacity="0.7">Most Common Zone</text>
+                            <!-- Plot dots (x = 500 + (day_offset/35)*340) -->
+                            <!-- 2020: Apr 12 = day 21 → x=704 -->
+                            <circle data-id="597" cx="704" cy="395" r="5" fill="#f5c542" class="svg-node" data-tip="2020: Easter Apr 12"/>
+                            <text data-id="598" x="704" y="388" fill="#f5c542" font-family="JetBrains Mono" font-size="6" text-anchor="middle">'20</text>
+                            <!-- 2021: Apr 4 = day 13 → x=626 -->
+                            <circle data-id="599" cx="626" cy="395" r="5" fill="#f5c542" class="svg-node" data-tip="2021: Easter Apr 4"/>
+                            <text data-id="600" x="626" y="388" fill="#f5c542" font-family="JetBrains Mono" font-size="6" text-anchor="middle">'21</text>
+                            <!-- 2022: Apr 17 = day 26 → x=753 -->
+                            <circle data-id="601" cx="753" cy="395" r="5" fill="#f5c542" class="svg-node" data-tip="2022: Easter Apr 17"/>
+                            <text data-id="602" x="753" y="388" fill="#f5c542" font-family="JetBrains Mono" font-size="6" text-anchor="middle">'22</text>
+                            <!-- 2023: Apr 9 = day 18 → x=675 -->
+                            <circle data-id="603" cx="675" cy="395" r="5" fill="#f5c542" class="svg-node" data-tip="2023: Easter Apr 9"/>
+                            <text data-id="604" x="675" y="388" fill="#f5c542" font-family="JetBrains Mono" font-size="6" text-anchor="middle">'23</text>
+                            <!-- 2024: Mar 31 = day 9 → x=588 -->
+                            <circle data-id="605" cx="588" cy="395" r="5" fill="#f5c542" class="svg-node" data-tip="2024: Easter Mar 31"/>
+                            <text data-id="606" x="588" y="388" fill="#f5c542" font-family="JetBrains Mono" font-size="6" text-anchor="middle">'24</text>
+                            <!-- 2025: Apr 20 = day 29 → x=782 -->
+                            <circle data-id="607" cx="782" cy="395" r="5" fill="#f5c542" class="svg-node" data-tip="2025: Easter Apr 20"/>
+                            <text data-id="608" x="782" y="388" fill="#f5c542" font-family="JetBrains Mono" font-size="6" text-anchor="middle">'25</text>
+                            <!-- 2026: Apr 5 = day 14 → x=636 (highlighted) -->
+                            <circle data-id="609" cx="636" cy="395" r="7" fill="none" stroke="#f5c542" stroke-width="2"/>
+                            <circle data-id="610" cx="636" cy="395" r="5" fill="#f5c542" class="svg-node" data-tip="2026: Easter Apr 5 — Current Year"/>
+                            <text data-id="611" x="636" y="385" fill="#f5c542" font-family="JetBrains Mono" font-size="7" text-anchor="middle" font-weight="700">'26</text>
+                            <!-- 2027: Mar 28 = day 6 → x=558 -->
+                            <circle data-id="612" cx="558" cy="395" r="5" fill="#f5c542" class="svg-node" data-tip="2027: Easter Mar 28"/>
+                            <text data-id="613" x="558" y="388" fill="#f5c542" font-family="JetBrains Mono" font-size="6" text-anchor="middle">'27</text>
+                            <!-- 2028: Apr 16 = day 25 → x=743 -->
+                            <circle data-id="614" cx="743" cy="395" r="5" fill="#f5c542" class="svg-node" data-tip="2028: Easter Apr 16"/>
+                            <text data-id="615" x="743" y="388" fill="#f5c542" font-family="JetBrains Mono" font-size="6" text-anchor="middle">'28</text>
+                            <!-- 2029: Apr 1 = day 10 → x=597 -->
+                            <circle data-id="616" cx="597" cy="395" r="5" fill="#f5c542" class="svg-node" data-tip="2029: Easter Apr 1"/>
+                            <text data-id="617" x="597" y="388" fill="#f5c542" font-family="JetBrains Mono" font-size="6" text-anchor="middle">'29</text>
+                            <text data-id="618" x="670" y="450" fill="#8a94a8" font-family="JetBrains Mono" font-size="6" text-anchor="middle">Range: 35 days · Mar 22 – Apr 25 · Metonic Cycle (19-yr lunar repeat)</text>
+
+                            <!-- ===== SECTION B: DEPENDENCY TREE ===== -->
+                            <line data-id="619" x1="40" y1="475" x2="860" y2="475" stroke="#1a2240" stroke-width="1"/>
+                            <text data-id="620" x="450" y="500" fill="#f5c542" font-family="Inter" font-size="11" text-anchor="middle" font-weight="600">EASTER-DERIVED HOLIDAY DEPENDENCY TREE</text>
+
+                            <!-- CENTER NODE: Easter Sunday -->
+                            <circle data-id="621" cx="450" cy="600" r="40" fill="rgba(245,197,66,0.12)" stroke="#f5c542" stroke-width="2" class="svg-node" data-tip="Easter Sunday: E₀ — computed by Butcher-Meeus algorithm, anchor for 10+ derived holidays"/>
+                            <text data-id="622" x="450" y="595" fill="#f5c542" font-family="Inter" font-size="9" font-weight="700" text-anchor="middle">EASTER</text>
+                            <text data-id="623" x="450" y="608" fill="#f5c542" font-family="Inter" font-size="9" font-weight="700" text-anchor="middle">SUNDAY</text>
+                            <text data-id="624" x="450" y="622" fill="#f5c542" font-family="JetBrains Mono" font-size="9" text-anchor="middle">E₀</text>
+
+                            <!-- LEFT BRANCH: Pre-Easter -->
+                            <!-- Ash Wednesday E₀ − 46 -->
+                            <line data-id="625" x1="410" y1="590" x2="220" y2="540" stroke="#9b5de5" stroke-width="1" stroke-opacity="0.4"/>
+                            <rect data-id="626" x="120" y="520" width="150" height="35" rx="5" fill="rgba(155,93,229,0.1)" stroke="#9b5de5" stroke-width="1" class="svg-node" data-tip="Ash Wednesday: E₀ − 46 days. Start of Lent."/>
+                            <text data-id="627" x="195" y="538" fill="#9b5de5" font-family="Inter" font-size="8" text-anchor="middle" font-weight="500">ASH WEDNESDAY</text>
+                            <text data-id="628" x="195" y="550" fill="#9b5de5" font-family="JetBrains Mono" font-size="7" text-anchor="middle">E₀ − 46</text>
+
+                            <!-- Mardi Gras E₀ − 47 -->
+                            <line data-id="629" x1="170" y1="520" x2="130" y2="495" stroke="#00d4c8" stroke-width="1" stroke-opacity="0.3"/>
+                            <rect data-id="630" x="40" y="475" width="150" height="30" rx="4" fill="rgba(0,212,200,0.08)" stroke="#00d4c8" stroke-width="0.8" class="svg-node" data-tip="Mardi Gras / Shrove Tuesday: E₀ − 47 days. Day before Ash Wednesday."/>
+                            <text data-id="631" x="115" y="492" fill="#00d4c8" font-family="Inter" font-size="7" text-anchor="middle" font-weight="500">MARDI GRAS</text>
+                            <text data-id="632" x="115" y="502" fill="#00d4c8" font-family="JetBrains Mono" font-size="7" text-anchor="middle">E₀ − 47</text>
+
+                            <!-- Palm Sunday E₀ − 7 -->
+                            <line data-id="633" x1="415" y1="575" x2="250" y2="590" stroke="#9b5de5" stroke-width="1" stroke-opacity="0.4"/>
+                            <rect data-id="634" x="120" y="575" width="130" height="30" rx="4" fill="rgba(155,93,229,0.08)" stroke="#9b5de5" stroke-width="0.8" class="svg-node" data-tip="Palm Sunday: E₀ − 7 days. Start of Holy Week."/>
+                            <text data-id="635" x="185" y="592" fill="#9b5de5" font-family="Inter" font-size="8" text-anchor="middle" font-weight="500">PALM SUNDAY</text>
+                            <text data-id="636" x="185" y="602" fill="#9b5de5" font-family="JetBrains Mono" font-size="7" text-anchor="middle">E₀ − 7</text>
+
+                            <!-- Good Friday E₀ − 2 -->
+                            <line data-id="637" x1="420" y1="635" x2="280" y2="650" stroke="#e54b4b" stroke-width="1" stroke-opacity="0.4"/>
+                            <rect data-id="638" x="140" y="635" width="140" height="30" rx="4" fill="rgba(229,75,75,0.1)" stroke="#e54b4b" stroke-width="1" class="svg-node" data-tip="Good Friday: E₀ − 2 days. Crucifixion commemoration."/>
+                            <text data-id="639" x="210" y="652" fill="#e54b4b" font-family="Inter" font-size="8" text-anchor="middle" font-weight="500">GOOD FRIDAY</text>
+                            <text data-id="640" x="210" y="662" fill="#e54b4b" font-family="JetBrains Mono" font-size="7" text-anchor="middle">E₀ − 2</text>
+
+                            <!-- Holy Saturday E₀ − 1 -->
+                            <line data-id="641" x1="425" y1="638" x2="310" y2="690" stroke="#8a94a8" stroke-width="1" stroke-opacity="0.3"/>
+                            <rect data-id="642" x="200" y="680" width="130" height="26" rx="4" fill="rgba(138,148,168,0.08)" stroke="#8a94a8" stroke-width="0.8" class="svg-node" data-tip="Holy Saturday: E₀ − 1 day. Great Sabbath."/>
+                            <text data-id="643" x="265" y="696" fill="#8a94a8" font-family="Inter" font-size="7" text-anchor="middle">HOLY SATURDAY · E₀ − 1</text>
+
+                            <!-- RIGHT BRANCH: Post-Easter -->
+                            <!-- Easter Monday E₀ + 1 -->
+                            <line data-id="644" x1="485" y1="620" x2="590" y2="645" stroke="#3dd68c" stroke-width="1" stroke-opacity="0.4"/>
+                            <rect data-id="645" x="570" y="635" width="140" height="30" rx="4" fill="rgba(61,214,140,0.1)" stroke="#3dd68c" stroke-width="1" class="svg-node" data-tip="Easter Monday: E₀ + 1 day. Bank holiday in many countries."/>
+                            <text data-id="646" x="640" y="652" fill="#3dd68c" font-family="Inter" font-size="8" text-anchor="middle" font-weight="500">EASTER MONDAY</text>
+                            <text data-id="647" x="640" y="662" fill="#3dd68c" font-family="JetBrains Mono" font-size="7" text-anchor="middle">E₀ + 1</text>
+
+                            <!-- Ascension E₀ + 39 -->
+                            <line data-id="648" x1="490" y1="600" x2="640" y2="570" stroke="#00d4c8" stroke-width="1" stroke-opacity="0.4"/>
+                            <rect data-id="649" x="580" y="555" width="170" height="30" rx="4" fill="rgba(0,212,200,0.08)" stroke="#00d4c8" stroke-width="0.8" class="svg-node" data-tip="Ascension Thursday: E₀ + 39 days."/>
+                            <text data-id="650" x="665" y="572" fill="#00d4c8" font-family="Inter" font-size="8" text-anchor="middle" font-weight="500">ASCENSION THURSDAY</text>
+                            <text data-id="651" x="665" y="582" fill="#00d4c8" font-family="JetBrains Mono" font-size="7" text-anchor="middle">E₀ + 39</text>
+
+                            <!-- Pentecost E₀ + 49 -->
+                            <line data-id="652" x1="490" y1="585" x2="660" y2="530" stroke="#9b5de5" stroke-width="1" stroke-opacity="0.4"/>
+                            <rect data-id="653" x="600" y="515" width="160" height="30" rx="4" fill="rgba(155,93,229,0.08)" stroke="#9b5de5" stroke-width="0.8" class="svg-node" data-tip="Pentecost Sunday: E₀ + 49 days. Whitsunday."/>
+                            <text data-id="654" x="680" y="532" fill="#9b5de5" font-family="Inter" font-size="8" text-anchor="middle" font-weight="500">PENTECOST SUNDAY</text>
+                            <text data-id="655" x="680" y="542" fill="#9b5de5" font-family="JetBrains Mono" font-size="7" text-anchor="middle">E₀ + 49</text>
+
+                            <!-- Whit Monday E₀ + 50 -->
+                            <line data-id="656" x1="760" y1="530" x2="800" y2="545" stroke="#8a94a8" stroke-width="0.8" stroke-opacity="0.3"/>
+                            <rect data-id="657" x="760" y="545" width="100" height="22" rx="3" fill="rgba(138,148,168,0.06)" stroke="#8a94a8" stroke-width="0.5"/>
+                            <text data-id="658" x="810" y="559" fill="#8a94a8" font-family="JetBrains Mono" font-size="6" text-anchor="middle">Whit Mon · E₀+50</text>
+
+                            <!-- Trinity Sunday E₀ + 56 -->
+                            <line data-id="659" x1="490" y1="580" x2="700" y2="495" stroke="#00d4c8" stroke-width="1" stroke-opacity="0.3"/>
+                            <rect data-id="660" x="640" y="478" width="150" height="28" rx="4" fill="rgba(0,212,200,0.06)" stroke="#00d4c8" stroke-width="0.8" class="svg-node" data-tip="Trinity Sunday: E₀ + 56 days."/>
+                            <text data-id="661" x="715" y="495" fill="#00d4c8" font-family="Inter" font-size="7" text-anchor="middle" font-weight="500">TRINITY SUNDAY · E₀ + 56</text>
+
+                            <!-- Corpus Christi E₀ + 60 -->
+                            <line data-id="662" x1="490" y1="575" x2="720" y2="465" stroke="#f5c542" stroke-width="1" stroke-opacity="0.3"/>
+                            <rect data-id="663" x="660" y="445" width="150" height="28" rx="4" fill="rgba(245,197,66,0.08)" stroke="#f5c542" stroke-width="0.8" class="svg-node" data-tip="Corpus Christi: E₀ + 60 days."/>
+                            <text data-id="664" x="735" y="462" fill="#f5c542" font-family="Inter" font-size="7" text-anchor="middle" font-weight="500">CORPUS CHRISTI · E₀ + 60</text>
+
+                            <!-- ===== INDEPENDENTLY MOVEABLE HOLIDAYS ===== -->
+                            <line data-id="665" x1="40" y1="725" x2="860" y2="725" stroke="#1a2240" stroke-width="1"/>
+                            <text data-id="666" x="450" y="750" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="middle" font-weight="500">INDEPENDENTLY MOVEABLE · NTH-WEEKDAY ANCHORED</text>
+
+                            <rect data-id="667" x="40" y="765" width="200" height="55" rx="5" fill="rgba(245,197,66,0.08)" stroke="#f5c542" stroke-width="1" class="svg-node" data-tip="Thanksgiving (US): 4th Thursday in November. Weekday-anchored floating node."/>
+                            <text data-id="668" x="140" y="785" fill="#f5c542" font-family="Inter" font-size="8" text-anchor="middle" font-weight="500">THANKSGIVING (US)</text>
+                            <text data-id="669" x="140" y="798" fill="#f5c542" font-family="JetBrains Mono" font-size="7" text-anchor="middle">4th Thu · November</text>
+                            <text data-id="670" x="140" y="812" fill="#8a94a8" font-family="JetBrains Mono" font-size="6" text-anchor="middle">⊗ Nth-Weekday Lock · ∆Nov</text>
+
+                            <rect data-id="671" x="250" y="765" width="190" height="55" rx="5" fill="rgba(0,212,200,0.08)" stroke="#00d4c8" stroke-width="1" class="svg-node" data-tip="Thanksgiving (CA): 2nd Monday in October. Weekday-anchored floating node."/>
+                            <text data-id="672" x="345" y="785" fill="#00d4c8" font-family="Inter" font-size="8" text-anchor="middle" font-weight="500">THANKSGIVING (CA)</text>
+                            <text data-id="673" x="345" y="798" fill="#00d4c8" font-family="JetBrains Mono" font-size="7" text-anchor="middle">2nd Mon · October</text>
+                            <text data-id="674" x="345" y="812" fill="#8a94a8" font-family="JetBrains Mono" font-size="6" text-anchor="middle">⊗ Nth-Weekday Lock · ∆Oct</text>
+
+                            <rect data-id="675" x="450" y="765" width="190" height="55" rx="5" fill="rgba(61,214,140,0.08)" stroke="#3dd68c" stroke-width="1" class="svg-node" data-tip="Labor Day (US): 1st Monday in September. Weekday-anchored floating node."/>
+                            <text data-id="676" x="545" y="785" fill="#3dd68c" font-family="Inter" font-size="8" text-anchor="middle" font-weight="500">LABOR DAY (US)</text>
+                            <text data-id="677" x="545" y="798" fill="#3dd68c" font-family="JetBrains Mono" font-size="7" text-anchor="middle">1st Mon · September</text>
+                            <text data-id="678" x="545" y="812" fill="#8a94a8" font-family="JetBrains Mono" font-size="6" text-anchor="middle">⊗ Nth-Weekday Lock · ∆Sep</text>
+
+                            <rect data-id="679" x="650" y="765" width="210" height="55" rx="5" fill="rgba(155,93,229,0.08)" stroke="#9b5de5" stroke-width="1" class="svg-node" data-tip="Martin Luther King Jr Day: 3rd Monday in January. Weekday-anchored floating node."/>
+                            <text data-id="680" x="755" y="785" fill="#9b5de5" font-family="Inter" font-size="8" text-anchor="middle" font-weight="500">MLK JR DAY</text>
+                            <text data-id="681" x="755" y="798" fill="#9b5de5" font-family="JetBrains Mono" font-size="7" text-anchor="middle">3rd Mon · January</text>
+                            <text data-id="682" x="755" y="812" fill="#8a94a8" font-family="JetBrains Mono" font-size="6" text-anchor="middle">⊗ Nth-Weekday Lock · ∆Jan</text>
+
+                            <!-- ===== SUBSTRATE MAPPING STRIP ===== -->
+                            <line data-id="683" x1="40" y1="840" x2="860" y2="840" stroke="#1a2240" stroke-width="1"/>
+                            <text data-id="684" x="450" y="865" fill="#8a94a8" font-family="JetBrains Mono, monospace" font-size="9" text-anchor="middle" font-weight="500">FLOATING NODE SUBSTRATE SIGNATURE · ⊞ DYNAMIC GRID BINDING</text>
+
+                            <!-- Band 1: Fixed -->
+                            <line data-id="685" x1="60" y1="890" x2="840" y2="890" stroke="#e0e6f0" stroke-width="1.5" stroke-opacity="0.4"/>
+                            <text data-id="686" x="60" y="885" fill="#e0e6f0" font-family="JetBrains Mono" font-size="7">FIXED NODES (Dec 25, Jan 1, Jul 4...)</text>
+                            <circle data-id="687" cx="200" cy="890" r="3" fill="#e0e6f0" opacity="0.5"/>
+                            <circle data-id="688" cx="400" cy="890" r="3" fill="#e0e6f0" opacity="0.5"/>
+                            <circle data-id="689" cx="600" cy="890" r="3" fill="#e0e6f0" opacity="0.5"/>
+                            <circle data-id="690" cx="750" cy="890" r="3" fill="#e0e6f0" opacity="0.5"/>
+
+                            <!-- Band 2: Easter-derived -->
+                            <line data-id="691" x1="60" y1="915" x2="840" y2="915" stroke="#f5c542" stroke-width="1.5" stroke-dasharray="8,4" stroke-opacity="0.5"/>
+                            <text data-id="692" x="60" y="910" fill="#f5c542" font-family="JetBrains Mono" font-size="7">EASTER-DERIVED (Ash Wed → Corpus Christi)</text>
+                            <circle data-id="693" cx="250" cy="915" r="4" fill="#f5c542" opacity="0.6"/>
+                            <circle data-id="694" cx="380" cy="915" r="4" fill="#f5c542" opacity="0.6"/>
+                            <circle data-id="695" cx="500" cy="915" r="4" fill="#f5c542" opacity="0.6"/>
+                            <circle data-id="696" cx="620" cy="915" r="4" fill="#f5c542" opacity="0.6"/>
+
+                            <!-- Band 3: Weekday-anchored -->
+                            <line data-id="697" x1="60" y1="940" x2="840" y2="940" stroke="#00d4c8" stroke-width="1.5" stroke-dasharray="6,6" stroke-opacity="0.5"/>
+                            <text data-id="698" x="60" y="935" fill="#00d4c8" font-family="JetBrains Mono" font-size="7">WEEKDAY-ANCHORED (Thanksgiving, MLK, Labor Day...)</text>
+                            <rect data-id="699" x="280" y="935" width="40" height="10" rx="2" fill="none" stroke="#00d4c8" stroke-width="0.8" stroke-opacity="0.4"/>
+                            <rect data-id="700" x="500" y="935" width="40" height="10" rx="2" fill="none" stroke="#00d4c8" stroke-width="0.8" stroke-opacity="0.4"/>
+                            <rect data-id="701" x="700" y="935" width="40" height="10" rx="2" fill="none" stroke="#00d4c8" stroke-width="0.8" stroke-opacity="0.4"/>
+
+                            <!-- Annotation -->
+                            <text data-id="702" x="450" y="970" fill="#8a94a8" font-family="JetBrains Mono" font-size="7" text-anchor="middle">Reform Vector must bind floating nodes via ∆(offset) chains anchored to E₀ or Nth-weekday operators.</text>
+                            <text data-id="703" x="450" y="982" fill="#8a94a8" font-family="JetBrains Mono" font-size="7" text-anchor="middle">Static substrate lock ⊗ cannot be applied until runtime resolution.</text>
+                        </svg>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT INFO PANEL -->
+                <div data-id="704" class="info-panel w-full lg:w-[30%] bg-navy-panel rounded-xl border border-navy-light p-4 md:p-5 self-start">
+                    <div data-id="705" id="info-content">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- TRIADIC FRAMEWORKS LEGEND -->
+    <section data-id="706" class="legend-section bg-navy-mid border-t border-navy-light">
+        <div data-id="707" class="max-w-[1400px] mx-auto px-4 md:px-6">
+            <button data-id="708" id="legend-toggle" class="w-full py-3 flex items-center justify-between text-sm font-mono text-txt-muted min-h-[44px]">
+                <span data-id="709">▼ TriadicFrameworks Legend</span>
+                <i data-id="710" data-lucide="chevron-down" class="w-4 h-4 transition-transform duration-200"></i>
+            </button>
+            <div data-id="711" id="legend-panel" class="legend-panel">
+                <div data-id="712" class="grid grid-cols-1 md:grid-cols-2 gap-4 pb-5">
+                    <div data-id="713">
+                        <h4 data-id="714" class="font-mono text-teal text-xs font-semibold mb-3 uppercase tracking-wider">Operators</h4>
+                        <div data-id="715" class="space-y-1.5 text-xs font-mono">
+                            <div data-id="716" class="flex gap-3"><span data-id="717" class="text-teal w-5">∆</span><span data-id="718" class="text-txt-muted">Delta (Change)</span></div>
+                            <div data-id="719" class="flex gap-3"><span data-id="720" class="text-teal w-5">∇</span><span data-id="721" class="text-txt-muted">Nabla (Inverse/Decay)</span></div>
+                            <div data-id="722" class="flex gap-3"><span data-id="723" class="text-teal w-5">⊕</span><span data-id="724" class="text-txt-muted">Union (Merge)</span></div>
+                            <div data-id="725" class="flex gap-3"><span data-id="726" class="text-teal w-5">⊗</span><span data-id="727" class="text-txt-muted">Tensor (Bind/Lock)</span></div>
+                            <div data-id="728" class="flex gap-3"><span data-id="729" class="text-teal w-5">⟳</span><span data-id="730" class="text-txt-muted">Cycle (Iterate)</span></div>
+                            <div data-id="731" class="flex gap-3"><span data-id="732" class="text-teal w-5">⟲</span><span data-id="733" class="text-txt-muted">Retrograde (Reverse)</span></div>
+                            <div data-id="734" class="flex gap-3"><span data-id="735" class="text-teal w-5">↯</span><span data-id="736" class="text-txt-muted">Disruption (Bypass)</span></div>
+                            <div data-id="737" class="flex gap-3"><span data-id="738" class="text-teal w-5">⊞</span><span data-id="739" class="text-txt-muted">Grid (Map/Index)</span></div>
+                            <div data-id="740" class="flex gap-3"><span data-id="741" class="text-teal w-5">◈</span><span data-id="742" class="text-txt-muted">Core Node</span></div>
+                            <div data-id="743" class="flex gap-3"><span data-id="744" class="text-teal w-5">◉</span><span data-id="745" class="text-txt-muted">Substrate Core</span></div>
+                            <div data-id="746" class="flex gap-3"><span data-id="747" class="text-teal w-5">∆(±n)</span><span data-id="748" class="text-txt-muted">Offset (Holiday Shift)</span></div>
+                            <div data-id="749" class="flex gap-3"><span data-id="750" class="text-teal w-5">E₀</span><span data-id="751" class="text-txt-muted">Easter Anchor (Floating Origin)</span></div>
+                        </div>
+                    </div>
+                    <div data-id="752">
+                        <h4 data-id="753" class="font-mono text-gold text-xs font-semibold mb-3 uppercase tracking-wider">Glyphs</h4>
+                        <div data-id="754" class="space-y-1.5 text-xs font-mono">
+                            <div data-id="755" class="flex gap-3"><span data-id="756" class="text-gold w-5">☰</span><span data-id="757" class="text-txt-muted">Heaven · Structure</span></div>
+                            <div data-id="758" class="flex gap-3"><span data-id="759" class="text-gold w-5">☷</span><span data-id="760" class="text-txt-muted">Earth · Substrate</span></div>
+                            <div data-id="761" class="flex gap-3"><span data-id="762" class="text-gold w-5">☵</span><span data-id="763" class="text-txt-muted">Water · Flow</span></div>
+                            <div data-id="764" class="flex gap-3"><span data-id="765" class="text-gold w-5">☳</span><span data-id="766" class="text-txt-muted">Thunder · Regime</span></div>
+                            <div data-id="767" class="flex gap-3"><span data-id="768" class="text-gold w-5">☶</span><span data-id="769" class="text-txt-muted">Mountain · Stability</span></div>
+                            <div data-id="770" class="flex gap-3"><span data-id="771" class="text-gold w-5">☴</span><span data-id="772" class="text-txt-muted">Wind · Cognitive</span></div>
+                            <div data-id="773" class="flex gap-3"><span data-id="774" class="text-gold w-5">☱</span><span data-id="775" class="text-txt-muted">Lake · Awareness</span></div>
+                            <div data-id="776" class="flex gap-3"><span data-id="777" class="text-gold w-5">☲</span><span data-id="778" class="text-txt-muted">Fire · Protocol</span></div>
+                            <div data-id="779" class="flex gap-3"><span data-id="780" class="text-gold w-5">⬡</span><span data-id="781" class="text-txt-muted">Hex-Space · Dimensional</span></div>
+                            <div data-id="782" class="flex gap-3"><span data-id="783" class="text-gold w-5">◷</span><span data-id="784" class="text-txt-muted">Temporal Arc · Awareness</span></div>
+                            <div data-id="785" class="flex gap-3"><span data-id="786" class="text-gold w-5">☀</span><span data-id="787" class="text-txt-muted">Solar Arc · DST Shift</span></div>
+                            <div data-id="788" class="flex gap-3"><span data-id="789" class="text-gold w-5">✦</span><span data-id="790" class="text-txt-muted">Star Node · Floating Anchor</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- METADATA FOOTER -->
+    <footer data-id="791" class="bg-navy-panel border-t border-navy-light py-4">
+        <div data-id="792" class="max-w-[1400px] mx-auto px-4 md:px-6">
+            <div data-id="793" class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+                <p data-id="794" class="font-mono text-[10px] text-txt-dim leading-relaxed">
+                    TSR · OverlayDiagramPack · 9 Diagram Layers · v2.6.0-rc · 2026-09-03 · TriadicFrameworks · docs/Research · Gregorian⟷Triadic Ep.IV · SL-01 · DL-02 · CL-03 · RL-04 · SUB-05 · AP-06 · COP-07 · DST-08 · MH-09 · CC-BY-4.0
+                </p>
+                <div data-id="795" class="flex items-center gap-2 flex-shrink-0">
+                    <button data-id="796" id="copy-meta-btn" class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-navy-light text-txt-muted text-xs font-mono hover:bg-teal/10 hover:text-teal transition-colors min-h-[44px]">
+                        <i data-id="797" data-lucide="clipboard-copy" class="w-3.5 h-3.5"></i> Copy Metadata
+                    </button>
+                    <button data-id="798" id="print-btn" class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-navy-light text-txt-muted text-xs font-mono hover:bg-teal/10 hover:text-teal transition-colors min-h-[44px]">
+                        <i data-id="799" data-lucide="printer" class="w-3.5 h-3.5"></i> Print Diagram
+                    </button>
+                </div>
+            </div>
+            <p data-id="800" class="text-[10px] text-txt-dim mt-3 text-center">Made by Copilot</p>
+        </div>
+    </footer>
+
+    <script>
+    // Guard Lucide
+    if (typeof lucide !== "undefined" && typeof lucide.createIcons === "function") {
+        lucide.createIcons();
+    }
+
+    // ==================== DATA ====================
+    const diagramNames = ['Structural','Dimensional','Cognitive','Regime','Substrate','Awareness Period','Cut-Over Protocol','DST Shift','Moveable Holidays'];
+    const diagramGlyphs = ['☰','⬡','◈','⚡','◉','◷','⟳','☀','✦'];
+
+    const panelData = [
+        {
+            id: 'SL-01', glyph: '☰', glyphName: 'Heaven · Structure',
+            operators: '∇(T₀) → ⊕P ⊗ ∆R → ⊗C → ⊞',
+            dualCal: 'Gregorian: 2026-09-03 / Triadic: Ep.IV · Cy.7 · Nd.3',
+            desc: 'Defines the canonical hierarchy of temporal substrate components. The Reform Vector bridges legacy Gregorian grid mapping to Triadic Epoch anchors via ∆-Flux operators.',
+            elements: ['∇','⊕','∆','⊗','⊞'],
+            ref: 'TSR-PAPER · §1 · TriadicFrameworks v2.6',
+            extraNote: null
+        },
+        {
+            id: 'DL-02', glyph: '⬡', glyphName: 'Hex-Space · Multidimensional',
+            operators: '∆τ ⊗ ∇β → ρ̂',
+            dualCal: 'Gregorian: 2026-09-03 / Triadic: Ep.IV · Cy.7 · Nd.3',
+            desc: 'The three axes—temporal depth (τ), substrate band (β), and reform magnitude (ρ)—define the solution space in which reform operations are evaluated. Intersection nodes encode the magnitude of reform at each τ-β coordinate.',
+            elements: ['∆τ','∇β','⊗ρ'],
+            ref: 'TSR-PAPER · §2 · TriadicFrameworks v2.6',
+            extraNote: null
+        },
+        {
+            id: 'CL-03', glyph: '◈', glyphName: 'Core Node · Cognitive Nexus',
+            operators: '⊕ → ∆ → ⊗ → ∇ → ⟳',
+            dualCal: 'Gregorian: 2026-09-03 / Triadic: Ep.IV · Cy.7 · Nd.3',
+            desc: 'Maps the five cognitive processing stages that transform raw temporal signals into actionable awareness. The metacognitive loop (⟳) feeds output back to perception, enabling continuous calibration against dual-calendar drift.',
+            elements: ['⊕','∆','⊗','∇','⟳'],
+            ref: 'TSR-PAPER · §3 · TriadicFrameworks v2.6',
+            extraNote: null
+        },
+        {
+            id: 'RL-04', glyph: '⚡', glyphName: 'Thunder · Regime',
+            operators: 'Ø → ∆ → ⊗ → ∇ → ⟲  ·  disruption: ↯',
+            dualCal: 'Gregorian: 2026-09-03 / Triadic: Ep.IV · Cy.7 · Nd.3',
+            desc: 'Four regime states govern the lifecycle of temporal substrate reform. Transitions are triggered by threshold breaches (∆), substrate binding (⊗), decay (∇), and retrograde closure (⟲). The disruption bypass (↯) allows emergency state skipping.',
+            elements: ['∆','⊗','∇','⟲','↯','⊕'],
+            ref: 'TSR-PAPER · §4 · TriadicFrameworks v2.6',
+            extraNote: null
+        },
+        {
+            id: 'SUB-05', glyph: '◉', glyphName: 'Core · Substrate Depth',
+            operators: 'IS-1 ⊞ → RAZ ∆ → DCB ⊕ → CS ⊗ → LTC ∇ → NF-Ø',
+            dualCal: 'Gregorian: 2026-09-03 / Triadic: Ep.IV · Cy.7 · Nd.3',
+            desc: 'Six horizontal strata compose the temporal substrate cross-section. The Dual-Calendar Bridge (DCB) sits at the critical position between the Reform Active Zone and the Canonical Substrate, with the Awareness Window overlaid to mark the temporal sync aperture.',
+            elements: ['⊞','∆','⊕','⊗','∇'],
+            ref: 'TSR-PAPER · §5 · TriadicFrameworks v2.6',
+            extraNote: null
+        },
+        {
+            id: 'AP-06', glyph: '◷', glyphName: 'Partial Circle · Temporal Awareness',
+            operators: 'SP-1 (T₂) · SP-2 (T₅) · SP-3 (T₈)',
+            dualCal: 'Gregorian: 2026-09-03 / Triadic: Ep.IV · Cy.7 · Nd.3',
+            desc: 'Two calendar swim lanes—Gregorian and Triadic Epoch IV—run in parallel with offset phase blocks. The Dual-Calendar Awareness Zone (T₃–T₈) marks the critical overlap where both systems must be simultaneously tracked. Three sync points enforce alignment.',
+            elements: ['∆','⊕','⟳','SP-1','SP-2','SP-3'],
+            ref: 'TSR-PAPER · §6 · TriadicFrameworks v2.6',
+            extraNote: null
+        },
+        {
+            id: 'COP-07', glyph: '⟳', glyphName: 'Cycle · Protocol Execution',
+            operators: '6 steps + 2 decision gates',
+            dualCal: 'Gregorian: 2026-09-03 / Triadic: Ep.IV · Cy.7 · Nd.3',
+            desc: 'The ordered cut-over sequence begins with pre-flight validation, passes through two decision gates (Reform Gate, Awareness Window), freezes the substrate, engages the dual-calendar bridge, propagates reform, deprecates legacy systems, and concludes with post-cut validation and ⟳ closure.',
+            elements: ['∆','⊗','⊕','∇','⊞','⟳','⟲'],
+            ref: 'TSR-PAPER · §7 · TriadicFrameworks v2.6',
+            extraNote: null
+        },
+        {
+            id: 'DST-08', glyph: '☀', glyphName: 'Solar Arc · Temporal Shift',
+            operators: '∆(+1h) ⊗ lock → ⊞ gap / ∇(−1h) ⟲ close → ⊞ overlap',
+            dualCal: 'Gregorian: 2026-03-08 / 2026-11-01 · Triadic: Ep.IV shift nodes',
+            desc: 'Daylight Saving Time introduces deliberate discontinuities into the Temporal Substrate — a ∆(+1h) gap operator each spring (skipping 02:00–03:00) and a ∇(−1h) overlap operator each fall (repeating 01:00–02:00). Both events require full substrate re-lock via ⊗ and dual-calendar bridge re-sync via ⊕. The Reform Vector must account for DST boundaries as hard Sync Points in the Awareness Period diagram (AP-06).',
+            elements: ['∆(+1h)','∇(−1h)','⊗ lock','⟲ retrograde','⊞ grid-remap','⊕ merge'],
+            ref: 'TSR-PAPER · §8 · DST Discontinuity Analysis · TriadicFrameworks v2.6',
+            extraNote: { color: 'gold', text: '⚠ DST is not observed universally — Arizona (US), most of Africa, China, India, Japan, and others remain on fixed UTC offsets. The Temporal Substrate must branch at reform boundaries for non-DST regions.' }
+        },
+        {
+            id: 'MH-09', glyph: '✦', glyphName: 'Star Node · Floating Temporal Anchor',
+            operators: 'E₀ ← ∆(−n) / E₀ → ∆(+n) · ⊗ Nth-weekday · ⊞ dynamic bind',
+            dualCal: 'Easter 2026: Apr 05 (Gregorian) · Ep.IV · Cy.4 · Nd.5 (Triadic)',
+            desc: 'Moveable holidays are floating temporal nodes whose substrate position is computed algorithmically at runtime rather than fixed at design time. Easter Sunday, the canonical example, is determined by the Anonymous Gregorian Algorithm (Butcher-Meeus method), yielding a date in the 35-day window Mar 22–Apr 25. A cascade of 10+ derived holidays hang off Easter\'s anchor (E₀) via fixed-offset ∆ operators. Weekday-anchored holidays (Thanksgiving, MLK Day) use an Nth-weekday ⊗ lock pattern. Both types require dynamic ⊞ grid binding at reform time — static substrate locks cannot be pre-applied.',
+            elements: ['E₀ anchor','∆(±n) offset','⊗ Nth-weekday','⊞ dynamic bind','∇ deprecated-fixed-override'],
+            ref: 'TSR-PAPER · §9 · Floating Node Dynamics · TriadicFrameworks v2.6',
+            extraNote: { color: 'teal', text: '✏ Historical note: Computing Easter Sunday was a classic introductory algorithm challenge in Pascal and early BASIC — the Anonymous Gregorian Algorithm dates to at least the 1800s, predating computers by a century. It remains one of the most elegant date-computation algorithms in existence.' },
+            extraNote2: { color: 'gold', text: 'The Metonic Cycle (19 years) governs Easter\'s lunar basis — after 19 years, Easter dates approximately repeat, making variable \'a = Year MOD 19\' the core astronomical anchor.' }
+        }
+    ];
+
+    // ==================== TABS ====================
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const diagrams = document.querySelectorAll('.diagram-panel');
+    const breadcrumb = document.getElementById('breadcrumb-text');
+    const infoContent = document.getElementById('info-content');
+
+    function renderPanel(i) {
+        const d = panelData[i];
+        const chips = d.elements.map(e => `<span class="chip bg-teal/10 text-teal">${e}</span>`).join('');
+        let extraHTML = '';
+        if (d.extraNote) {
+            const bc = d.extraNote.color === 'gold' ? 'border-gold/40 bg-gold/5' : 'border-teal/40 bg-teal/5';
+            const tc = d.extraNote.color === 'gold' ? 'text-gold' : 'text-teal';
+            extraHTML += `<div class="info-note border ${bc} ${tc}" style="font-size:11px; line-height:1.5;">${d.extraNote.text}</div>`;
+        }
+        if (d.extraNote2) {
+            const bc2 = d.extraNote2.color === 'gold' ? 'border-gold/40 bg-gold/5' : 'border-teal/40 bg-teal/5';
+            const tc2 = d.extraNote2.color === 'gold' ? 'text-gold' : 'text-teal';
+            extraHTML += `<div class="info-note border ${bc2} ${tc2}" style="font-size:11px; line-height:1.5;">${d.extraNote2.text}</div>`;
+        }
+        infoContent.innerHTML = `
+            <h3 class="font-mono text-teal text-xs font-semibold uppercase tracking-wider mb-4">Layer Info</h3>
+            <div class="info-label">Layer ID</div>
+            <div class="info-value"><span class="badge bg-navy-light text-teal">${d.id}</span></div>
+            <div class="info-label">Operator Chain</div>
+            <div class="info-value text-[11px] leading-relaxed">${d.operators}</div>
+            <div class="info-label">Glyph</div>
+            <div class="info-value"><span class="text-gold text-lg mr-2">${d.glyph}</span><span class="text-txt-muted text-[11px]">${d.glyphName}</span></div>
+            <div class="info-label">Dual-Calendar</div>
+            <div class="info-value text-[11px]">${d.dualCal}</div>
+            <div class="info-label">Description</div>
+            <p class="text-[12px] text-txt-muted leading-relaxed mb-4">${d.desc}</p>
+            <h4 class="font-mono text-teal text-[10px] font-semibold uppercase tracking-wider mb-2 mt-4">Canon Elements</h4>
+            <div class="flex flex-wrap mb-4">${chips}</div>
+            <div class="info-label">Academic Reference</div>
+            <div class="info-value text-[10px] text-txt-dim">${d.ref}</div>
+            ${extraHTML}
+        `;
+    }
+
+    function switchTab(index) {
+        tabBtns.forEach((btn, i) => {
+            if (i === index) {
+                btn.classList.add('tab-active');
+                btn.setAttribute('aria-selected', 'true');
+            } else {
+                btn.classList.remove('tab-active');
+                btn.setAttribute('aria-selected', 'false');
+            }
+        });
+        diagrams.forEach((d, i) => {
+            d.classList.toggle('hidden', i !== index);
+        });
+        breadcrumb.textContent = `TSR · Diagram ${index + 1} of 9 · ${diagramNames[index]}`;
+        renderPanel(index);
+    }
+
+    tabBtns.forEach((btn, i) => {
+        btn.addEventListener('click', () => switchTab(i));
+    });
+
+    // Initial render
+    switchTab(0);
+
+    // ==================== TOOLTIPS ====================
+    const tooltip = document.getElementById('tooltip');
+    const canvas = document.querySelector('.diagram-canvas');
+
+    canvas.addEventListener('mouseover', (e) => {
+        const node = e.target.closest('.svg-node');
+        if (node && node.dataset.tip) {
+            tooltip.textContent = node.dataset.tip;
+            tooltip.classList.add('show');
+        }
+    });
+
+    canvas.addEventListener('mousemove', (e) => {
+        if (tooltip.classList.contains('show')) {
+            const rect = canvas.getBoundingClientRect();
+            let x = e.clientX - rect.left + 12;
+            let y = e.clientY - rect.top - 30;
+            if (x + 220 > rect.width) x = x - 240;
+            if (y < 0) y = e.clientY - rect.top + 16;
+            tooltip.style.left = x + 'px';
+            tooltip.style.top = y + 'px';
+        }
+    });
+
+    canvas.addEventListener('mouseout', (e) => {
+        const node = e.target.closest('.svg-node');
+        if (node) {
+            tooltip.classList.remove('show');
+        }
+    });
+
+    // ==================== LEGEND TOGGLE ====================
+    const legendToggle = document.getElementById('legend-toggle');
+    const legendPanel = document.getElementById('legend-panel');
+    let legendOpen = false;
+
+    legendToggle.addEventListener('click', () => {
+        legendOpen = !legendOpen;
+        legendPanel.classList.toggle('open', legendOpen);
+        const chevron = legendToggle.querySelector('i');
+        if (chevron) {
+            chevron.style.transform = legendOpen ? 'rotate(180deg)' : '';
+        }
+        legendToggle.querySelector('span').textContent = legendOpen ? '▲ TriadicFrameworks Legend' : '▼ TriadicFrameworks Legend';
+    });
+
+    // ==================== COPY METADATA ====================
+    const metaString = 'TSR · OverlayDiagramPack · 9 Diagram Layers · v2.6.0-rc · 2026-09-03 · TriadicFrameworks · docs/Research · Gregorian⟷Triadic Ep.IV · SL-01 · DL-02 · CL-03 · RL-04 · SUB-05 · AP-06 · COP-07 · DST-08 · MH-09 · CC-BY-4.0';
+    const copyBtn = document.getElementById('copy-meta-btn');
+
+    copyBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText(metaString).then(() => {
+            const orig = copyBtn.innerHTML;
+            copyBtn.innerHTML = '<span class="text-teal">✓ Copied</span>';
+            setTimeout(() => { copyBtn.innerHTML = orig;
+                if (typeof lucide !== "undefined" && typeof lucide.createIcons === "function") { lucide.createIcons(); }
+            }, 1500);
+        }).catch(() => {});
+    });
+
+    // ==================== PRINT ====================
+    const printBtn = document.getElementById('print-btn');
+    printBtn.addEventListener('click', () => { window.print(); });
+
+    </script>
+</body>
+</html>
