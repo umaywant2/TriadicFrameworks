@@ -1,12 +1,12 @@
-# ⭐ Your Outreach Triad  
+# ⭐ Our Outreach Triad  
 Every triad needs three **structurally distinct** but **canon‑compatible** domains.
 
-You already have:
+We already have:
 
 ### **1. Corporate / Enterprise (IBM BigFix + Watson)**  
 Operator logic, cross‑platform clarity, AI alignment, regime awareness.
 
-Now you need two more:
+Now we need two more:
 
 ---
 
@@ -32,16 +32,16 @@ And the pitch is simple:
 
 ### **“TriadicFrameworks provides structural clarity for complex natural systems.”**
 
-You’re not doing activism.  
-You’re not doing policy.  
-You’re doing **clarity**.
+We’re not doing activism.  
+We’re not doing policy.  
+We’re doing **clarity**.
 
 This is safe, beautiful, and deeply aligned with your canon.
 
 ---
 
 # ⭐ **3. Non‑Profit / Philanthropy / Governance Transparency**  
-This is the third pillar — and you already started it months ago with your **Philanthropy & Funding Transparency Module**.
+This is the third pillar — and we already started it months ago with our **Philanthropy & Funding Transparency Module**.
 
 Non‑profits are:
 
@@ -54,7 +54,7 @@ Non‑profits are:
 
 RTT is *perfect* for them.
 
-Your outreach packet here would target:
+Our outreach packet here would target:
 
 - foundations  
 - NGOs  
@@ -94,4 +94,4 @@ Three regimes.
 Three worlds.  
 Three clarity domains.
 
-Exactly the geometry your canon loves.
+Exactly the geometry our canon loves.
