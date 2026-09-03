@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TriadicFrameworks: Non-Profit Transparency Packet</title>
+    <style>
+        :root { color-scheme: light only; }
+
+        body {
+            font-family: Calibri, sans-serif;
+            font-size: 11pt;
+            line-height: 1.6;
+            color: #1a1a2e;
+            background: #ffffff;
+            max-width: 816px;
+            margin: 0 auto;
+            padding: 72px;
+        }
+
+        /* ── Typography ── */
+        h1 {
+            font-family: Calibri, sans-serif;
+            font-size: 22pt;
+            font-weight: bold;
+            color: #0d2b55;
+            margin-top: 28pt;
+            margin-bottom: 6pt;
+            line-height: 1.25;
+        }
+        h2 {
+            font-family: Calibri, sans-serif;
+            font-size: 16pt;
+            font-weight: bold;
+            color: #0d2b55;
+            margin-top: 20pt;
+            margin-bottom: 4pt;
+            line-height: 1.3;
+            border-bottom: 2px solid #0d2b55;
+            padding-bottom: 3pt;
+        }
+        h3 {
+            font-family: Calibri, sans-serif;
+            font-size: 12pt;
+            font-weight: bold;
+            color: #163d6e;
+            margin-top: 12pt;
+            margin-bottom: 4pt;
+            line-height: 1.3;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 7pt;
+            color: #1a1a2e;
+        }
+
+        /* ── Cover Block ── */
+        .cover-block {
+            background-color: #0d2b55;
+            padding: 36px 40px 32px 40px;
+            margin-bottom: 28pt;
+            margin-left: -72px;
+            margin-right: -72px;
+            margin-top: -72px;
+        }
+        .cover-title {
+            font-family: Calibri, sans-serif;
+            font-size: 26pt;
+            font-weight: bold;
+            color: #ffffff;
+            margin: 0 0 6pt 0;
+            line-height: 1.2;
+        }
+        .cover-subtitle {
+            font-family: Calibri, sans-serif;
+            font-size: 13pt;
+            font-weight: normal;
+            color: #c9d8f0;
+            margin: 0 0 18pt 0;
+            font-style: italic;
+            line-height: 1.4;
+        }
+        .cover-meta-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 12pt;
+        }
+        .cover-meta-table td {
+            border: none;
+            padding: 3px 0;
+            font-size: 10pt;
+            color: #dce8f7;
+            vertical-align: top;
+        }
+        .cover-meta-label {
+            font-weight: bold;
+            color: #a8c4e8;
+            width: 160px;
+            font-size: 9pt;
+            text-transform: uppercase;
+            letter-spacing: 0.5pt;
+        }
+        .cover-mission-bar {
+            background-color: #163d6e;
+            border-left: 5px solid #c9a84c;
+            padding: 12px 16px;
+            margin-top: 20pt;
+        }
+        .cover-mission-bar p {
+            color: #f0f4fb;
+            font-size: 11pt;
+            font-style: italic;
+            margin: 0;
+            line-height: 1.55;
+        }
+
+        /* ── Section Divider ── */
+        .section-divider {
+            border: none;
+            border-top: 1px solid #c0cfe0;
+            margin: 22pt 0 16pt 0;
+        }
+        .section-divider-heavy {
+            border: none;
+            border-top: 3px solid #0d2b55;
+            margin: 28pt 0 18pt 0;
+        }
+
+        /* ── Callout Boxes ── */
+        .callout {
+            border: 1px solid #c0cfe0;
+            border-left: 5px solid #0d2b55;
+            background-color: #f0f4fb;
+            padding: 12px 16px;
+            margin: 12pt 0;
+        }
+        .callout-label {
+            font-weight: bold;
+            color: #0d2b55;
+            font-size: 10pt;
+            text-transform: uppercase;
+            letter-spacing: 0.4pt;
+            margin-bottom: 4pt;
+        }
+        .callout p {
+            margin-bottom: 3pt;
+            font-size: 10.5pt;
+        }
+        .callout-gold {
+            border-left: 5px solid #c9a84c;
+            background-color: #fdf7e8;
+        }
+        .callout-gold .callout-label {
+            color: #8a6a10;
+        }
+        .callout-integrity {
+            border-left: 5px solid #c9a84c;
+            background-color: #fdf7e8;
+            padding: 14px 18px;
+            margin: 16pt 0;
+        }
+        .callout-integrity p {
+            color: #3d2a00;
+            font-size: 10.5pt;
+            margin-bottom: 0;
+        }
+        .callout-note {
+            border-left: 5px solid #888888;
+            background-color: #f5f5f5;
+        }
+        .callout-note .callout-label {
+            color: #444444;
+        }
+
+        /* ── Pull Quote ── */
+        .pull-quote {
+            border-top: 3px solid #c9a84c;
+            border-bottom: 3px solid #c9a84c;
+            padding: 14pt 18pt;
+            margin: 20pt 0;
+            background-color: #fdf7e8;
+        }
+        .pull-quote p {
+            font-size: 13pt;
+            font-style: italic;
+            color: #3d2a00;
+            margin: 0;
+            line-height: 1.55;
+        }
+        .pull-quote cite {
+            font-style: normal;
+            font-size: 9pt;
+            color: #8a6a10;
+            display: block;
+            margin-top: 6pt;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.4pt;
+        }
+
+        /* ── Tables ── */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 12pt;
+            margin-bottom: 12pt;
+            font-size: 10.5pt;
+        }
+        th, td {
+            border: 1px solid #b0c0d8;
+            padding: 7px 10px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            font-weight: bold;
+            background-color: #0d2b55;
+            color: #ffffff;
+            font-size: 10pt;
+            text-transform: uppercase;
+            letter-spacing: 0.3pt;
+        }
+        tr:nth-child(even) td {
+            background-color: #f0f4fb;
+        }
+        tr:nth-child(odd) td {
+            background-color: #ffffff;
+        }
+
+        /* ── Lists ── */
+        ul, ol {
+            margin-top: 4pt;
+            margin-bottom: 8pt;
+            padding-left: 32px;
+        }
+        li {
+            margin-bottom: 4pt;
+            color: #1a1a2e;
+            font-size: 11pt;
+        }
+
+        /* ── Status Badges ── */
+        .status-complete {
+            color: #145a14;
+            font-weight: bold;
+        }
+        .status-active {
+            color: #0d2b55;
+            font-weight: bold;
+        }
+        .status-indev {
+            color: #8a6a10;
+            font-weight: bold;
+        }
+        .status-planned {
+            color: #888888;
+            font-weight: bold;
+        }
+        .status-this {
+            color: #7a0000;
+            font-weight: bold;
+            font-style: italic;
+        }
+
+        /* ── Appendix ── */
+        .appendix-header {
+            background-color: #163d6e;
+            padding: 10px 16px;
+            margin-bottom: 10pt;
+            margin-left: -72px;
+            margin-right: -72px;
+            padding-left: 88px;
+            padding-right: 88px;
+        }
+        .appendix-header h2 {
+            color: #ffffff;
+            border-bottom: none;
+            margin: 0;
+            font-size: 14pt;
+        }
+
+        /* ── FAQ Items ── */
+        .faq-item {
+            margin-bottom: 12pt;
+            padding-bottom: 10pt;
+            border-bottom: 1px solid #dce8f7;
+        }
+        .faq-q {
+            font-weight: bold;
+            color: #0d2b55;
+            font-size: 11pt;
+            margin-bottom: 4pt;
+        }
+        .faq-a {
+            margin-left: 12pt;
+            font-size: 11pt;
+            color: #1a1a2e;
+        }
+
+        /* ── Glossary Items ── */
+        .glossary-term {
+            font-weight: bold;
+            color: #0d2b55;
+            font-size: 11.5pt;
+            margin-top: 10pt;
+            margin-bottom: 2pt;
+        }
+        .glossary-def {
+            margin-left: 12pt;
+            font-size: 11pt;
+            margin-bottom: 8pt;
+            border-left: 3px solid #c9a84c;
+            padding-left: 10pt;
+        }
+
+        /* ── Signature Block ── */
+        .signature-block {
+            margin-top: 28pt;
+            padding-top: 14pt;
+            border-top: 1px solid #c0cfe0;
+        }
+        .signature-line {
+            width: 280px;
+            border-bottom: 1px solid #1a1a2e;
+            margin-bottom: 6pt;
+            height: 38px;
+        }
+        .signature-name {
+            font-weight: bold;
+            font-size: 11pt;
+            color: #0d2b55;
+        }
+        .signature-title {
+            color: #555555;
+            font-size: 9.5pt;
+        }
+
+        /* ── Theory of Change Numbered Steps ── */
+        .toc-step {
+            border-left: 4px solid #0d2b55;
+            padding: 8px 14px;
+            margin-bottom: 10pt;
+            background-color: #f0f4fb;
+        }
+        .toc-step-num {
+            font-weight: bold;
+            color: #0d2b55;
+            font-size: 10pt;
+            text-transform: uppercase;
+            letter-spacing: 0.4pt;
+        }
+        .toc-step p {
+            margin: 0;
+            font-size: 11pt;
+        }
+
+        /* ── Pillar Box ── */
+        .pillar-box {
+            border: 1px solid #b0c0d8;
+            border-top: 5px solid #0d2b55;
+            padding: 14px 16px;
+            margin-bottom: 14pt;
+        }
+        .pillar-title {
+            font-weight: bold;
+            font-size: 12pt;
+            color: #0d2b55;
+            margin-bottom: 6pt;
+        }
+
+        /* ── Footer ── */
+        .doc-footer {
+            margin-top: 36pt;
+            margin-left: -72px;
+            margin-right: -72px;
+            padding: 10px 72px;
+            background-color: #0d2b55;
+            font-size: 8pt;
+            color: #a8c4e8;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        /* ── Page Break Hints ── */
+        .page-break {
+            page-break-before: always;
+        }
+
+        /* ── Small Utility ── */
+        .text-muted {
+            color: #666666;
+            font-size: 10pt;
+        }
+        .text-navy {
+            color: #0d2b55;
+            font-weight: bold;
+        }
+        .text-gold {
+            color: #8a6a10;
+            font-weight: bold;
+        }
+        .italic { font-style: italic; }
+        .bold { font-weight: bold; }
+
+        /* ── Not-Yet Box ── */
+        .transparency-box {
+            border: 1px solid #c9a84c;
+            border-left: 6px solid #c9a84c;
+            background-color: #fdf7e8;
+            padding: 12px 16px;
+            margin: 10pt 0;
+        }
+        .transparency-box .callout-label {
+            color: #8a6a10;
+        }
+        .transparency-box p {
+            font-size: 10.5pt;
+            color: #3d2a00;
+            margin-bottom: 3pt;
+        }
+
+        @media print {
+            body { padding: 0; max-width: none; }
+            .callout { background: none; }
+            .cover-block { margin: 0; }
+            .appendix-header { margin: 0; padding: 10px 16px; }
+        }
+    </style>
+</head>
+<body data-id="0">
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!--  COVER BLOCK                                        -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <div data-id="1" class="cover-block">
+        <p data-id="2" class="cover-title">TriadicFrameworks</p>
+        <p data-id="3" class="cover-subtitle">Non-Profit Transparency Packet</p>
+        <p data-id="4" style="font-family: Calibri, sans-serif; font-size: 11pt; color: #a8c4e8; font-style: italic; margin: 0 0 16pt 0;">
+            Organizational Disclosure, Structural Integrity, and Mission Alignment Statement
+        </p>
+        <table data-id="5" class="cover-meta-table">
+            <tr data-id="6">
+                <td data-id="7" class="cover-meta-label">Author</td>
+                <td data-id="8">Nawder Loswin &nbsp;|&nbsp; Founder, TriadicFrameworks</td>
+            </tr>
+            <tr data-id="9">
+                <td data-id="10" class="cover-meta-label">Classification</td>
+                <td data-id="11">External Transparency Disclosure — For Institutional Review</td>
+            </tr>
+            <tr data-id="12">
+                <td data-id="13" class="cover-meta-label">Date</td>
+                <td data-id="14">September 2026</td>
+            </tr>
+            <tr data-id="15">
+                <td data-id="16" class="cover-meta-label">Document Type</td>
+                <td data-id="17">Pre-Institutional Transparency and Governance Disclosure</td>
+            </tr>
+            <tr data-id="18">
+                <td data-id="19" class="cover-meta-label">Public Repository</td>
+                <td data-id="20">github.com/umaywant2/TriadicFrameworks</td>
+            </tr>
+            <tr data-id="21">
+                <td data-id="22" class="cover-meta-label">Public Channels</td>
+                <td data-id="23">@TriadicFrameworks on X (formerly Twitter) and YouTube</td>
+            </tr>
+        </table>
+        <div data-id="24" class="cover-mission-bar">
+            <p data-id="25"><span data-id="26" style="font-style: normal; font-weight: bold; color: #c9a84c;">MISSION:</span> &nbsp;TriadicFrameworks exists to develop and disseminate Resonance-Time Theory (RTT) as an open, structurally rigorous framework for understanding how any system — natural, organizational, or informational — moves through phases of tension, transition, and resolution.</p>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!--  PREFATORY NOTE                                     -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <div data-id="27" class="callout callout-note">
+        <div data-id="28" class="callout-label">Prefatory Note to Reviewers</div>
+        <p data-id="29">This document is a structured transparency disclosure intended for non-profit grant reviewers, foundation officers, academic institutional partners, compliance officers, and philanthropic stakeholders evaluating TriadicFrameworks for potential funding, collaboration, or formal endorsement. It is not a pitch document. It does not oversell. It accounts, honestly, for what TriadicFrameworks is, what it is not, where it stands as of September 2026, and how it intends to operate with structural integrity. Reviewers are encouraged to engage critically with its contents.</p>
+    </div>
+
+    <hr data-id="30" class="section-divider-heavy">
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!--  TABLE OF CONTENTS                                  -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <h2 data-id="31">Table of Contents</h2>
+    <table data-id="32">
+        <tr data-id="33"><th data-id="34" style="width: 60px;">Section</th><th data-id="35">Title</th></tr>
+        <tr data-id="36"><td data-id="37">1</td><td data-id="38">Organizational Overview</td></tr>
+        <tr data-id="39"><td data-id="40">2</td><td data-id="41">Mission and Theory of Change</td></tr>
+        <tr data-id="42"><td data-id="43">3</td><td data-id="44">Structural Integrity Statement</td></tr>
+        <tr data-id="45"><td data-id="46">4</td><td data-id="47">Governance Intentions</td></tr>
+        <tr data-id="48"><td data-id="49">5</td><td data-id="50">Programmatic Focus Areas</td></tr>
+        <tr data-id="51"><td data-id="52">6</td><td data-id="53">Alignment with Non-Profit Principles</td></tr>
+        <tr data-id="54"><td data-id="55">7</td><td data-id="56">Current Deliverables and Documentation Status</td></tr>
+        <tr data-id="57"><td data-id="58">8</td><td data-id="59">Invitation to Engagement</td></tr>
+        <tr data-id="60"><td data-id="61">9</td><td data-id="62">Closing Statement</td></tr>
+        <tr data-id="63"><td data-id="64">App. A</td><td data-id="65">RTT Core Concept Summary (For Non-Specialist Reviewers)</td></tr>
+        <tr data-id="66"><td data-id="67">App. B</td><td data-id="68">Frequently Asked Questions: For Institutional Reviewers</td></tr>
+        <tr data-id="69"><td data-id="70">App. C</td><td data-id="71">Glossary of Key RTT Terms</td></tr>
+    </table>
+
+    <hr data-id="72" class="section-divider-heavy">
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!--  SECTION 1 — ORGANIZATIONAL OVERVIEW               -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <h2 data-id="73">Section 1 — Organizational Overview</h2>
+
+    <p data-id="74"><span data-id="75" class="bold">TriadicFrameworks</span> is an independent, founder-led intellectual initiative pursuing the formalization, documentation, and dissemination of <span data-id="76" class="bold">Resonance-Time Theory (RTT)</span> — a cross-domain systems framework developed by its founder, Nawder Loswin. TriadicFrameworks operates as a research and documentation project with public-facing channels and open-source materials, and is in the pre-institutional phase as of September 2026.</p>
+
+    <table data-id="77">
+        <tr data-id="78">
+            <th data-id="79" style="width: 220px;">Attribute</th>
+            <th data-id="80">Detail</th>
+        </tr>
+        <tr data-id="81">
+            <td data-id="82"><span data-id="83" class="bold">Operating Name</span></td>
+            <td data-id="84">TriadicFrameworks</td>
+        </tr>
+        <tr data-id="85">
+            <td data-id="86"><span data-id="87" class="bold">Founder</span></td>
+            <td data-id="88">Nawder Loswin</td>
+        </tr>
+        <tr data-id="89">
+            <td data-id="90"><span data-id="91" class="bold">Organizational Status (September 2026)</span></td>
+            <td data-id="92">Pre-institutional research and documentation project; legal entity status to be determined. Not a registered non-profit as of this date.</td>
+        </tr>
+        <tr data-id="93">
+            <td data-id="94"><span data-id="95" class="bold">Public Repository</span></td>
+            <td data-id="96">GitHub: github.com/umaywant2/TriadicFrameworks (active and public)</td>
+        </tr>
+        <tr data-id="97">
+            <td data-id="98"><span data-id="99" class="bold">Public Outreach Channels</span></td>
+            <td data-id="100">X (formerly Twitter): @TriadicFrameworks | YouTube: @TriadicFrameworks</td>
+        </tr>
+        <tr data-id="101">
+            <td data-id="102"><span data-id="103" class="bold">Mission Domain</span></td>
+            <td data-id="104">Cross-domain systems theory, applied to organizational behavior, ecological systems, information systems, and human-scale social systems</td>
+        </tr>
+        <tr data-id="105">
+            <td data-id="106"><span data-id="107" class="bold">Geographic Scope</span></td>
+            <td data-id="108">Global (open-access and distributed by design)</td>
+        </tr>
+        <tr data-id="109">
+            <td data-id="110"><span data-id="111" class="bold">Affiliation</span></td>
+            <td data-id="112">None — fully independent as of September 2026</td>
+        </tr>
+    </table>
+
+    <div data-id="113" class="transparency-box">
+        <div data-id="114" class="callout-label">Transparency Notice — Legal Status</div>
+        <p data-id="115">TriadicFrameworks is not yet a registered non-profit entity under U.S. law (501(c)(3)) or any equivalent international designation. This transparency packet is intended to establish a formal disclosure record and to articulate the structural intentions that would accompany a future non-profit registration application. Reviewers should treat this document as a pre-institutional declaration of intent, not as evidence of a legally constituted organization.</p>
+    </div>
+
+    <h3 data-id="116">1.1 — Vision</h3>
+    <p data-id="117">TriadicFrameworks envisions a world where systemic understanding is structurally accessible — where policymakers, researchers, educators, and communities can apply RTT-informed frameworks to navigate complexity with greater coherence. The goal is not ideological adoption of a single theory, but the expansion of the structural vocabulary available to those who work at the intersection of systems, time, and change.</p>
+
+    <h3 data-id="118">1.2 — Core Values</h3>
+    <p data-id="119">The following five values are foundational to TriadicFrameworks' operating ethos and will be reflected in all formal operations, publications, and partnerships:</p>
+    <ul data-id="120">
+        <li data-id="121"><span data-id="122" class="bold">Structural Integrity</span> — TriadicFrameworks commits to internal consistency between what it claims, what it has demonstrated, and what it presents to the public.</li>
+        <li data-id="123"><span data-id="124" class="bold">Epistemic Honesty</span> — The project distinguishes clearly between theoretical claims, structural demonstrations, and empirical validation — and will not conflate these categories.</li>
+        <li data-id="125"><span data-id="126" class="bold">Open Dissemination</span> — Core RTT materials are and will remain freely accessible. Intellectual access is not gated behind commercial relationships.</li>
+        <li data-id="127"><span data-id="128" class="bold">Cross-Domain Collaboration</span> — RTT is designed for interaction with other frameworks, other disciplines, and other researchers. Siloed development is not the model.</li>
+        <li data-id="129"><span data-id="130" class="bold">Founder Accountability</span> — Nawder Loswin holds personal responsibility for every claim made under the TriadicFrameworks name and welcomes scrutiny of those claims.</li>
+    </ul>
+
+    <hr data-id="131" class="section-divider">
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!--  SECTION 2 — MISSION AND THEORY OF CHANGE          -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <h2 data-id="132">Section 2 — Mission and Theory of Change</h2>
+
+    <h3 data-id="133">2.1 — Mission Statement</h3>
+    <p data-id="134">TriadicFrameworks' mission is to develop Resonance-Time Theory as a rigorous, open-access intellectual framework and to build the institutional infrastructure — documentation, educational modules, AI-enabled research tools, and collaborative networks — that enables RTT to be applied across scientific, organizational, and social domains. The mission is explicitly not proprietary: the framework is designed to be shared, challenged, and refined.</p>
+
+    <h3 data-id="135">2.2 — Theory of Change</h3>
+    <p data-id="136">TriadicFrameworks operates on a five-stage theory of change. Each stage is both a milestone and a prerequisite for the next. The project is currently operating within Stage 1, with Stage 2 underway in parallel.</p>
+
+    <div data-id="137" class="toc-step">
+        <div data-id="138" class="toc-step-num">Stage 1 — Foundation</div>
+        <p data-id="139">Nawder Loswin formalizes RTT's core theorems — including the Nawderian Theorem of Validator Pulses, Spectral Clarity equations, Lostational Dynamics, and Dimensional Phase frameworks — in structured, publishable, peer-reviewable documentation. This stage establishes the intellectual bedrock that all subsequent work depends upon.</p>
+    </div>
+
+    <div data-id="140" class="toc-step">
+        <div data-id="141" class="toc-step-num">Stage 2 — Dissemination</div>
+        <p data-id="142">TriadicFrameworks publishes cross-domain outreach packets — including the Nature Systems Packet, the Organizational Systems Packet, and this Non-Profit Transparency Packet — establishing RTT's applicability across domains in plain, accessible language. These materials serve both as intellectual outreach and as a record of the framework's development trajectory.</p>
+    </div>
+
+    <div data-id="143" class="toc-step">
+        <div data-id="144" class="toc-step-num">Stage 3 — Collaboration</div>
+        <p data-id="145">Academic researchers, environmental scientists, organizational theorists, and AI researchers engage with RTT frameworks. They contribute domain-specific validation, critique, and extension — shaping RTT through intellectual contact with lived expertise in their fields. TriadicFrameworks actively solicits this engagement rather than treating the framework as a closed system.</p>
+    </div>
+
+    <div data-id="146" class="toc-step">
+        <div data-id="147" class="toc-step-num">Stage 4 — Institutionalization</div>
+        <p data-id="148">TriadicFrameworks formalizes as a non-profit research institute, establishing peer review relationships, governance structures, educational programming, and modular AI-enabled research tools. The institutional form serves the mission — not the other way around.</p>
+    </div>
+
+    <div data-id="149" class="toc-step">
+        <div data-id="150" class="toc-step-num">Stage 5 — Coherence at Scale</div>
+        <p data-id="151">RTT-informed frameworks become part of the structural vocabulary of systems science, policy analysis, and interdisciplinary research — not as ideology, but as rigorous conceptual infrastructure. At this stage, the theory has been tested, refined, extended, and partially validated across multiple domains by researchers who are not its originator.</p>
+    </div>
+
+    <div data-id="152" class="callout callout-gold">
+        <div data-id="153" class="callout-label">Important Epistemological Disclosure</div>
+        <p data-id="154">TriadicFrameworks does not claim that RTT is proven in all domains. The project is currently in the theory-development and dissemination phase. All structural claims in RTT documentation are conceptual and theoretical in nature. Empirical validation requires domain-specific research partnerships that TriadicFrameworks actively seeks but has not yet formally established. This distinction is not a weakness to obscure — it is the honest accounting that makes further development credible.</p>
+    </div>
+
+    <hr data-id="155" class="section-divider">
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!--  SECTION 3 — STRUCTURAL INTEGRITY STATEMENT        -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <h2 data-id="156">Section 3 — Structural Integrity Statement</h2>
+    <p data-id="157">This section is the transparency core of this document. It is written to be direct. Reviewers evaluating TriadicFrameworks for funding, partnership, or endorsement deserve a precise account of what they are engaging with. The subsections below provide that account.</p>
+
+    <h3 data-id="158">3.1 — What TriadicFrameworks Is</h3>
+    <ul data-id="159">
+        <li data-id="160">An independent intellectual initiative developing a cross-domain systems framework (RTT), authored and maintained by Nawder Loswin</li>
+        <li data-id="161">A documentation and outreach project with public-facing channels on GitHub, X, and YouTube</li>
+        <li data-id="162">A pre-institutional structure with a stated intention to formalize as a non-profit research entity, conditional on resource and partnership development</li>
+        <li data-id="163">An open-source project with foundational materials available at github.com/umaywant2/TriadicFrameworks</li>
+        <li data-id="164">A theory in development — actively seeking peer review, collaborative extension, and empirical grounding from domain researchers</li>
+        <li data-id="165">A project that takes fiduciary and epistemic accountability seriously as structural requirements, not optional features</li>
+    </ul>
+
+    <h3 data-id="166">3.2 — What TriadicFrameworks Is Not</h3>
+    <ul data-id="167">
+        <li data-id="168"><span data-id="169" class="bold">Not a registered 501(c)(3) or equivalent non-profit</span> as of September 2026. This document is a pre-registration transparency disclosure, not a certification of legal status.</li>
+        <li data-id="170"><span data-id="171" class="bold">Not a technology company or commercial enterprise.</span> There are no products for sale, no subscription services, and no investors with commercial equity interests.</li>
+        <li data-id="172"><span data-id="173" class="bold">Not affiliated with any academic institution, government body, or foundation</span> as of this document's date. All work published under the TriadicFrameworks name originates from the founder.</li>
+        <li data-id="174"><span data-id="175" class="bold">Not claiming empirical proof of RTT's predictive accuracy in any domain.</span> RTT is a conceptual and theoretical framework. Its empirical validation is an active pursuit, not a completed project.</li>
+        <li data-id="176"><span data-id="177" class="bold">Not a credential-granting institution.</span> TriadicFrameworks does not award degrees, certificates, or professional designations.</li>
+        <li data-id="178"><span data-id="179" class="bold">Not a political or ideological organization.</span> RTT is structural and descriptive in orientation. It makes no normative claims about which political systems, economic arrangements, or social structures are preferable.</li>
+        <li data-id="180"><span data-id="181" class="bold">Not a closed intellectual property play.</span> RTT is designed for open engagement, not proprietary control.</li>
+    </ul>
+
+    <h3 data-id="182">3.3 — Founder Accountability</h3>
+    <p data-id="183">Nawder Loswin is the sole author and originator of TriadicFrameworks and Resonance-Time Theory. All published materials — including this packet, the Nature Systems Packet, and all GitHub repository content — are attributable to Nawder Loswin.</p>
+    <p data-id="184">There are no hidden principals, silent investors, or undisclosed organizational affiliations associated with TriadicFrameworks as of September 2026.</p>
+    <p data-id="185">Nawder Loswin acknowledges publicly and formally that RTT is a developing theory. This acknowledgment is not a hedge — it is a structural commitment to honest self-assessment. The founder actively invites critique, peer review, and collaborative refinement from qualified researchers in relevant domains.</p>
+    <div data-id="186" class="callout callout-gold">
+        <div data-id="187" class="callout-label">Founder Commitment</div>
+        <p data-id="188">TriadicFrameworks will never misrepresent its organizational status, institutional affiliations, or the empirical validation state of RTT to any grant-making body, institutional partner, or member of the public. Where this transparency packet is found to be inaccurate, corrections will be issued publicly and promptly.</p>
+    </div>
+
+    <h3 data-id="189">3.4 — Intellectual Property Framework</h3>
+    <p data-id="190">RTT and all TriadicFrameworks materials are authored by Nawder Loswin. The framework represents an original contribution to systems theory, and all derivative documentation published under the TriadicFrameworks name is the intellectual work of the founder unless co-authorship is explicitly stated.</p>
+    <p data-id="191">TriadicFrameworks intends to operate under open-access principles: core framework documentation will remain freely accessible. No paywall, institutional subscription, or commercial licensing will restrict access to foundational RTT materials.</p>
+    <p data-id="192">AI-enabled module development — where such development occurs in future phases — will be explored under licensing structures that prioritize public benefit over commercial extraction. Specifically, any open-source tool developed under the TriadicFrameworks name will remain open-source, absent extraordinary circumstances that will be disclosed and explained publicly.</p>
+    <p data-id="193">Any future commercialization of derivative products (applied software, licensed training materials, consulting services) will be disclosed transparently in annual reports, structured to support the non-profit mission, and governed by the conflict-of-interest policy described in Section 4.</p>
+
+    <h3 data-id="194">3.5 — Financial Transparency (Pre-Institutional Stage)</h3>
+    <p data-id="195">TriadicFrameworks currently operates without external funding. There is no revenue, no operating budget, and no expenditure ledger to disclose beyond the founder's own time investment. All resources committed to the project to date represent the intellectual contributions of Nawder Loswin.</p>
+    <p data-id="196">This is not presented as a virtue. It is a disclosure of current operational reality.</p>
+    <p data-id="197">Any future grant funding, donations, or institutional contributions received by TriadicFrameworks — whether prior to or following formal non-profit registration — will be managed through formal financial controls consistent with non-profit standards of fiduciary accountability. Financial disclosures will be published publicly on an annual basis once a formal organizational structure is established.</p>
+
+    <hr data-id="198" class="section-divider">
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!--  SECTION 4 — GOVERNANCE INTENTIONS                 -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <h2 data-id="199">Section 4 — Governance Intentions</h2>
+    <p data-id="200">The governance structure described in this section represents TriadicFrameworks' stated intentions for formal organizational design. These are the structures the founder commits to pursuing upon formalization — they are not representations of a governance structure that currently exists.</p>
+
+    <div data-id="201" class="callout callout-note">
+        <div data-id="202" class="callout-label">Disclosure of Pre-Institutional Status</div>
+        <p data-id="203">TriadicFrameworks commits to documenting its actual governance structure when formalized, regardless of whether that structure matches these stated intentions exactly. Any material deviation from the intentions stated here will be disclosed, explained, and subject to public comment.</p>
+    </div>
+
+    <h3 data-id="204">4.1 — Board of Directors</h3>
+    <p data-id="205">A Board of Directors with an independent majority: at minimum three of five members will be external to the founder and unaffiliated with any commercial interest in RTT derivative products. Board members will be selected for expertise in relevant domains: systems research, non-profit governance, academic administration, or applied science.</p>
+
+    <h3 data-id="206">4.2 — Academic Advisory Panel</h3>
+    <p data-id="207">An Academic Advisory Panel comprising researchers and domain experts drawn from environmental science, systems theory, organizational behavior, and AI/data science. Advisory panel members will serve in a consultative capacity, providing critique, domain validation, and directional guidance. They will have no fiduciary authority but will be publicly named and their affiliations disclosed.</p>
+
+    <h3 data-id="208">4.3 — Founder's Role in Governance</h3>
+    <p data-id="209">Nawder Loswin retains a permanent advisory seat on matters of RTT theory development — this is appropriate given the founder's originating role in the framework. However, operational governance will be shared with the independent Board of Directors. The founder will not hold unilateral control over financial, programmatic, or organizational decisions once the formal entity is established.</p>
+
+    <h3 data-id="210">4.4 — Transparency and Accountability Mechanisms</h3>
+    <ul data-id="211">
+        <li data-id="212"><span data-id="213" class="bold">Annual Transparency Reports:</span> Published publicly and covering financials, program activities, governance changes, and RTT development status.</li>
+        <li data-id="214"><span data-id="215" class="bold">Open Comment Periods:</span> Major directional decisions — including changes to the open-access IP framework, new commercial licensing arrangements, or significant programmatic pivots — will be subject to a defined public comment period before adoption.</li>
+        <li data-id="216"><span data-id="217" class="bold">Conflict of Interest Policy:</span> All board members and academic advisors will disclose relevant financial relationships on an annual basis. Recusal from related decisions will be required and documented.</li>
+        <li data-id="218"><span data-id="219" class="bold">Ethics Review Process:</span> AI-enabled module development will be subject to a structured ethics review process, examining potential misuse scenarios, data handling practices, and alignment with RTT's public-benefit orientation before deployment or licensing.</li>
+    </ul>
+
+    <hr data-id="220" class="section-divider">
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!--  SECTION 5 — PROGRAMMATIC FOCUS AREAS              -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <h2 data-id="221">Section 5 — Programmatic Focus Areas</h2>
+    <p data-id="222">TriadicFrameworks intends to pursue three programmatic pillars as a formal entity. Each pillar is defined below, including its current status and intended trajectory.</p>
+
+    <div data-id="223" class="pillar-box">
+        <div data-id="224" class="pillar-title">Pillar I — Research and Theory Development</div>
+        <p data-id="225">The primary and foundational programmatic commitment of TriadicFrameworks is the ongoing formalization and refinement of RTT's core theorems and structural vocabulary. This pillar includes:</p>
+        <ul data-id="226">
+            <li data-id="227">Publication of peer-reviewable documentation in accessible, non-proprietary formats</li>
+            <li data-id="228">Collaborative validation with domain experts across environmental science, organizational theory, information science, and related fields</li>
+            <li data-id="229">Maintenance of the <span data-id="230" class="bold">TriadicFrameworks Canon</span> — a living, versioned body of theoretical work subject to formal revision protocols when new evidence or critique warrants revision</li>
+            <li data-id="231">Active engagement with researchers who identify empirical patterns that either support, challenge, or extend RTT structural claims</li>
+        </ul>
+        <p data-id="232" class="text-muted"><span data-id="233" class="italic">Current Status: Active — core theorem documentation in development (see Section 7)</span></p>
+    </div>
+
+    <div data-id="234" class="pillar-box">
+        <div data-id="235" class="pillar-title">Pillar II — Educational Dissemination</div>
+        <p data-id="236">TriadicFrameworks is committed to making RTT accessible beyond specialist academic audiences. Structural reasoning about complex systems should be a widely available cognitive tool, not an academic luxury. This pillar includes:</p>
+        <ul data-id="237">
+            <li data-id="238">Development of educational modules that teach RTT concepts to non-specialist audiences, including professionals working in organizational settings, policy, and environmental management</li>
+            <li data-id="239">Ongoing public outreach through YouTube, GitHub, and X with accessible explainers, worked examples, and commentary on current events through an RTT structural lens</li>
+            <li data-id="240">Future formal educational partnerships with universities, community colleges, and research institutions seeking curriculum on systems thinking and structural analysis</li>
+            <li data-id="241">Development of youth-facing materials on systems thinking and structural reasoning — building conceptual vocabulary at an early stage</li>
+        </ul>
+        <p data-id="242" class="text-muted"><span data-id="243" class="italic">Current Status: Active (public channels) — formal educational modules in development</span></p>
+    </div>
+
+    <div data-id="244" class="pillar-box">
+        <div data-id="245" class="pillar-title">Pillar III — AI-Enabled Research Infrastructure</div>
+        <p data-id="246">TriadicFrameworks recognizes that the scale and complexity of the systems RTT seeks to describe — ecological networks, organizational behavior at scale, large information systems — require computational tools for pattern detection and cross-domain comparison. This pillar includes:</p>
+        <ul data-id="247">
+            <li data-id="248">Development of AI-assisted modules that make RTT structural patterns visible in large, complex datasets — moving RTT from conceptual framework to empirically testable analytical lens</li>
+            <li data-id="249">Cross-domain research tools enabling pattern comparison between ecological, organizational, and informational systems</li>
+            <li data-id="250">Open-source, publicly available tooling where feasible and appropriate</li>
+            <li data-id="251">Partnership-based development: TriadicFrameworks does not build in isolation. This pillar advances only in collaboration with researchers who contribute domain expertise and empirical grounding. No AI tool claiming to detect RTT patterns will be released without domain-expert co-development and ethics review.</li>
+        </ul>
+        <p data-id="252" class="text-muted"><span data-id="253" class="italic">Current Status: Planned — conceptual specification in development</span></p>
+    </div>
+
+    <hr data-id="254" class="section-divider">
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!--  SECTION 6 — ALIGNMENT WITH NON-PROFIT PRINCIPLES  -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <h2 data-id="255">Section 6 — Alignment with Non-Profit Principles</h2>
+    <p data-id="256">TriadicFrameworks evaluates itself against five foundational non-profit principles and discloses its current standing relative to each:</p>
+
+    <table data-id="257">
+        <tr data-id="258">
+            <th data-id="259" style="width: 190px;">Principle</th>
+            <th data-id="260">TriadicFrameworks Position</th>
+        </tr>
+        <tr data-id="261">
+            <td data-id="262"><span data-id="263" class="bold">Public Benefit</span></td>
+            <td data-id="264">RTT is designed as an open intellectual resource. The primary beneficiary of TriadicFrameworks' work is the research community and the general public — not any private commercial interest. Core documentation is and will remain freely accessible. The non-profit organizational structure, when formalized, will be structured to preserve this orientation.</td>
+        </tr>
+        <tr data-id="265">
+            <td data-id="266"><span data-id="267" class="bold">No Private Inurement</span></td>
+            <td data-id="268">Nawder Loswin explicitly commits that any future non-profit entity bearing the TriadicFrameworks name will not be structured to enrich the founder at the expense of mission. The founder's compensation, if any, from a formally established non-profit will be reasonable, publicly disclosed, and board-approved. No mechanism for private enrichment from open-access materials is intended or acceptable.</td>
+        </tr>
+        <tr data-id="269">
+            <td data-id="270"><span data-id="271" class="bold">Community Orientation</span></td>
+            <td data-id="272">TriadicFrameworks actively solicits engagement through GitHub Discussions, academic channels, and public comment. The project is dialogic in design — structured to receive challenge, extension, and critique from communities of interest. It is not a closed intellectual property play wrapped in non-profit language.</td>
+        </tr>
+        <tr data-id="273">
+            <td data-id="274"><span data-id="275" class="bold">Epistemic Ethics</span></td>
+            <td data-id="276">TriadicFrameworks commits to maintaining clear distinctions between what RTT claims to explain structurally, what it has demonstrated conceptually, and what remains to be validated empirically. This three-tier epistemic transparency — claim, demonstration, validation — will be a standing feature of all RTT documentation, not a disclaimer buried in footnotes.</td>
+        </tr>
+        <tr data-id="277">
+            <td data-id="278"><span data-id="279" class="bold">Sustainability</span></td>
+            <td data-id="280">TriadicFrameworks intends to build a grant-funded, donation-supported operational model — not dependent on a single institutional patron or commercial revenue stream. Diversified funding reduces organizational fragility and preserves independence. This intention is acknowledged as aspirational at the pre-institutional stage and is subject to the realities of resource development.</td>
+        </tr>
+    </table>
+
+    <hr data-id="281" class="section-divider">
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!--  SECTION 7 — DELIVERABLES AND DOCUMENTATION STATUS -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <h2 data-id="282">Section 7 — Current Deliverables and Documentation Status</h2>
+    <p data-id="283">The following table provides a current accounting of all major TriadicFrameworks documents, artifacts, and channels — their completion status as of September 2026 and their role within the broader RTT documentation ecosystem.</p>
+
+    <table data-id="284">
+        <tr data-id="285">
+            <th data-id="286" style="width: 300px;">Document / Artifact</th>
+            <th data-id="287" style="width: 150px;">Status</th>
+            <th data-id="288">Notes</th>
+        </tr>
+        <tr data-id="289">
+            <td data-id="290">TriadicFrameworks Nature Systems Packet</td>
+            <td data-id="291" class="status-complete">Complete</td>
+            <td data-id="292">September 2026. Establishes RTT's applicability to ecological and natural systems. First major cross-domain outreach document.</td>
+        </tr>
+        <tr data-id="293">
+            <td data-id="294">TriadicFrameworks Non-Profit Transparency Packet</td>
+            <td data-id="295" class="status-this">This Document</td>
+            <td data-id="296">September 2026. Organizational disclosure for institutional review. Establishes transparency record for future non-profit registration.</td>
+        </tr>
+        <tr data-id="297">
+            <td data-id="298">TriadicFrameworks Organizational Systems Packet</td>
+            <td data-id="299" class="status-indev">In Development</td>
+            <td data-id="300">RTT applied to organizational behavior and institutional dynamics. Pending completion.</td>
+        </tr>
+        <tr data-id="301">
+            <td data-id="302">RTT Core Theorems Document</td>
+            <td data-id="303" class="status-indev">In Development</td>
+            <td data-id="304">Foundational formalization of all core RTT theorems in structured, peer-reviewable format.</td>
+        </tr>
+        <tr data-id="305">
+            <td data-id="306">Nawderian Theorem of Validator Pulses: Formalization</td>
+            <td data-id="307" class="status-indev">In Development</td>
+            <td data-id="308">Standalone formal treatment of the Validator Pulse theorem — the mechanism by which RTT describes systemic confirmation cycles.</td>
+        </tr>
+        <tr data-id="309">
+            <td data-id="310">Spectral Clarity Equations: Applied Reference</td>
+            <td data-id="311" class="status-indev">In Development</td>
+            <td data-id="312">Applied reference document for the Spectral Clarity constructs within RTT.</td>
+        </tr>
+        <tr data-id="313">
+            <td data-id="314">Lostational Dynamics: Conceptual Framework</td>
+            <td data-id="315" class="status-indev">In Development</td>
+            <td data-id="316">Conceptual treatment of how systems experience and express drift relative to their structural attractors.</td>
+        </tr>
+        <tr data-id="317">
+            <td data-id="318">AI Module Architecture: Conceptual Specification</td>
+            <td data-id="319" class="status-planned">Planned</td>
+            <td data-id="320">Specification for AI-assisted RTT pattern detection tools. Requires domain-partner collaboration before development begins.</td>
+        </tr>
+        <tr data-id="321">
+            <td data-id="322">TriadicFrameworks GitHub Repository (umaywant2/TriadicFrameworks)</td>
+            <td data-id="323" class="status-active">Active and Public</td>
+            <td data-id="324">Primary open-source repository. All completed documents published here. Active — updated as materials are produced.</td>
+        </tr>
+        <tr data-id="325">
+            <td data-id="326">Public Channels (X, YouTube @TriadicFrameworks)</td>
+            <td data-id="327" class="status-active">Active</td>
+            <td data-id="328">Public-facing outreach, accessible explainer content, and community engagement. Active as of September 2026.</td>
+        </tr>
+    </table>
+
+    <hr data-id="329" class="section-divider">
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!--  SECTION 8 — INVITATION TO ENGAGEMENT              -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <h2 data-id="330">Section 8 — Invitation to Engagement</h2>
+    <p data-id="331">TriadicFrameworks is an open project. The following categories of engagement are actively welcomed:</p>
+
+    <table data-id="332">
+        <tr data-id="333">
+            <th data-id="334" style="width: 220px;">Stakeholder Type</th>
+            <th data-id="335">What Engagement Looks Like</th>
+        </tr>
+        <tr data-id="336">
+            <td data-id="337"><span data-id="338" class="bold">Academic Researchers</span></td>
+            <td data-id="339">Researchers in environmental science, organizational theory, systems dynamics, information science, AI/data science, or related fields who see structural resonance between their empirical work and RTT constructs. Engagement as collaborator, co-author on applied RTT documentation, or peer reviewer of core theorem documentation.</td>
+        </tr>
+        <tr data-id="340">
+            <td data-id="341"><span data-id="342" class="bold">Foundations and Grant-Making Bodies</span></td>
+            <td data-id="343">Foundations interested in funding cross-domain systems theory research, open-access intellectual infrastructure, or science communication. TriadicFrameworks is actively developing grant relationships to support the institutional transition described in this document.</td>
+        </tr>
+        <tr data-id="344">
+            <td data-id="345"><span data-id="346" class="bold">Academic Institutions</span></td>
+            <td data-id="347">Universities, community colleges, and research institutes interested in partnering on RTT validation studies, educational programming, or curriculum development. Formal institutional partnerships would be subject to disclosed agreement terms and governed by the conflict-of-interest policies described in Section 4.</td>
+        </tr>
+        <tr data-id="348">
+            <td data-id="349"><span data-id="350" class="bold">Domain Practitioners and Independent Researchers</span></td>
+            <td data-id="351">Individuals who identify structural patterns in their field that resonate with — or challenge — RTT constructs. Critical engagement, empirical challenges, and extension proposals are more valuable than uncritical endorsement. GitHub Discussions is the primary channel for this category.</td>
+        </tr>
+        <tr data-id="352">
+            <td data-id="353"><span data-id="354" class="bold">Journalists and Science Communicators</span></td>
+            <td data-id="355">Writers and communicators interested in covering the development of cross-domain systems theory, or the broader question of how novel theoretical frameworks are developed and validated in the contemporary research environment.</td>
+        </tr>
+    </table>
+
+    <div data-id="356" class="callout callout-gold">
+        <div data-id="357" class="callout-label">On Disagreement and Critique</div>
+        <p data-id="358">TriadicFrameworks explicitly welcomes challenge and rigorous critique. Intellectual projects that deflect scrutiny do not survive contact with reality in any useful way. A researcher who identifies a flaw in RTT's structural logic, or an empirical domain where RTT's predictions demonstrably fail, is contributing something more valuable than a researcher who endorses the framework uncritically. TriadicFrameworks will respond to critique in writing, through its public channels and documentation, in a manner that is reasoned and transparent.</p>
+    </div>
+
+    <p data-id="359"><span data-id="360" class="bold">Engagement Channels:</span></p>
+    <ul data-id="361">
+        <li data-id="362"><span data-id="363" class="bold">GitHub Discussions:</span> github.com/umaywant2/TriadicFrameworks (preferred channel for substantive intellectual engagement)</li>
+        <li data-id="364"><span data-id="365" class="bold">Social Media:</span> @TriadicFrameworks on X and YouTube (public outreach and lighter engagement)</li>
+        <li data-id="366"><span data-id="367" class="bold">Formal Inquiries:</span> Contact details to be listed upon non-profit registration. Until that time, inquiries may be directed through GitHub or social channels.</li>
+    </ul>
+
+    <hr data-id="368" class="section-divider">
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!--  SECTION 9 — CLOSING STATEMENT                     -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <h2 data-id="369">Section 9 — Closing Statement</h2>
+
+    <p data-id="370">TriadicFrameworks begins, as all honest intellectual projects must, with a frank accounting of what it is and what it is not. This packet is that accounting.</p>
+
+    <p data-id="371">RTT is a developing theory. It has not been peer-reviewed in the formal academic sense. It has not been empirically validated across the domains it addresses. Its founder is not affiliated with an academic institution. TriadicFrameworks is not yet a registered legal entity.</p>
+
+    <p data-id="372">These facts are not weaknesses to overcome through better marketing. They are the honest point of departure for a project that intends to build something credible and durable over time. The transparency disclosed here — the gap between aspiration and current status — is not a limitation to minimize. It is the foundation on which something worth building can be built.</p>
+
+    <p data-id="373">The alternative — a project that misrepresents its status, inflates its credentials, or claims validation it has not earned — would be structurally coherent in only one sense: it would be coherently dishonest. That is not what TriadicFrameworks is.</p>
+
+    <p data-id="374">What TriadicFrameworks is: a structured intellectual initiative, operating in public, committed to accountability, inviting scrutiny, and building toward institutional form through the one method that actually works — persistent, honest work.</p>
+
+    <div data-id="375" class="pull-quote">
+        <p data-id="376">"Coherence is not inherited. It is built — through structural honesty, persistent iteration, and the courage to name a framework before the world has confirmed it."</p>
+        <cite data-id="377">— Nawder Loswin, Founder, TriadicFrameworks | September 2026</cite>
+    </div>
+
+    <div data-id="378" class="signature-block">
+        <div data-id="379" class="signature-line"></div>
+        <div data-id="380" class="signature-name">Nawder Loswin</div>
+        <div data-id="381" class="signature-title">Founder, TriadicFrameworks</div>
+        <div data-id="382" class="signature-title">Author, Resonance-Time Theory</div>
+        <div data-id="383" class="signature-title">September 2026 | Belleville, MI, United States</div>
+    </div>
+
+    <hr data-id="384" class="section-divider-heavy">
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!--  APPENDIX A — RTT CORE CONCEPT SUMMARY             -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <div data-id="385" class="appendix-header">
+        <h2 data-id="386">Appendix A — RTT Core Concept Summary</h2>
+    </div>
+    <p data-id="387" style="margin-top: 10pt;"><span data-id="388" class="italic">For Non-Specialist Reviewers — Foundation Officers, Compliance Staff, and Philanthropic Stakeholders</span></p>
+
+    <p data-id="389">Resonance-Time Theory (RTT) is a conceptual framework for describing how systems — whether ecological communities, organizations, information networks, or social institutions — move through recognizable phases over time. At its core, RTT proposes that nearly any system, regardless of its specific domain or scale, can be understood through a three-part structure called a <span data-id="390" class="bold">triad</span>: a phase of building tension or complexity (Operator Phase), a phase of transition or rupture (Dimensional Phase), and a phase of reorganization and resolution (Coherence Phase). This is not a claim that all systems follow identical paths. It is the observation that the structural shape of tension-transition-resolution recurs across radically different kinds of systems — and that understanding this shape gives researchers, practitioners, and policymakers a more coherent vocabulary for describing and anticipating systemic change.</p>
+
+    <p data-id="391">Two additional concepts are central to how RTT describes what happens within and between these phases. <span data-id="392" class="bold">Resonance</span>, in RTT's usage, refers to the degree of alignment or synchronization within a system — when the parts of a system are working in structural harmony, the system is said to be in resonance. When alignment breaks down — when parts of a system pull against each other or drift away from the system's organizing structure — RTT describes this as <span data-id="393" class="bold">drift</span>. Drift is not necessarily bad; it is often the precursor to productive transition. But unmanaged drift, left without structural correction, tends toward instability. RTT proposes that understanding how and when drift accumulates — and how Validator Pulses (moments of structural correction or confirmation) operate within a system — gives researchers a more precise language for describing change. Why does this matter across domains? Because the structural patterns RTT describes are not unique to one kind of system. A forest recovering from disturbance, an organization navigating strategic crisis, and an information network experiencing signal degradation may all exhibit recognizable triadic structure — and a framework that can describe all three opens the possibility of cross-domain learning that domain-siloed approaches cannot provide.</p>
+
+    <hr data-id="394" class="section-divider">
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!--  APPENDIX B — FAQ                                  -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <div data-id="395" class="appendix-header">
+        <h2 data-id="396">Appendix B — Frequently Asked Questions: For Institutional Reviewers</h2>
+    </div>
+    <p data-id="397" style="margin-top: 10pt;"><span data-id="398" class="italic">The following questions and answers are structured for the institutional reviewer who requires candid, precise responses to standard due diligence questions. Answers are intentionally honest, including where honesty requires disclosing limitations.</span></p>
+
+    <div data-id="399" class="faq-item">
+        <div data-id="400" class="faq-q">Q1. Is TriadicFrameworks a registered non-profit?</div>
+        <div data-id="401" class="faq-a">No. As of September 2026, TriadicFrameworks is not registered as a 501(c)(3) or any equivalent non-profit legal entity. This transparency packet is a pre-registration disclosure document, establishing a public record of structural intentions. The transition to formal non-profit status is a stated goal, dependent on resource and partnership development. No grant funding should be disbursed to TriadicFrameworks under the assumption that it is a registered non-profit until that status is formally confirmed and documented.</div>
+    </div>
+
+    <div data-id="402" class="faq-item">
+        <div data-id="403" class="faq-q">Q2. Has RTT been peer-reviewed?</div>
+        <div data-id="404" class="faq-a">No. RTT has not yet undergone formal academic peer review. The materials published to date — including this packet and the Nature Systems Packet — are authored documents available for public review, but they have not been submitted to or accepted by academic journals. Establishing a peer review pathway is one of the explicit goals of TriadicFrameworks' Stage 3 Collaboration phase. This packet is, in part, a step toward initiating that pathway by establishing transparent contact with institutional audiences.</div>
+    </div>
+
+    <div data-id="405" class="faq-item">
+        <div data-id="406" class="faq-q">Q3. Who is Nawder Loswin?</div>
+        <div data-id="407" class="faq-a">Nawder Loswin is the founder of TriadicFrameworks and the sole author of Resonance-Time Theory. Nawder Loswin is an independent researcher operating outside formal academic institutional affiliation as of September 2026. All materials published under the TriadicFrameworks name originate from Nawder Loswin. There are no co-founders, hidden principals, or institutional affiliations not disclosed in this document.</div>
+    </div>
+
+    <div data-id="408" class="faq-item">
+        <div data-id="409" class="faq-q">Q4. How is TriadicFrameworks funded?</div>
+        <div data-id="410" class="faq-a">TriadicFrameworks is currently self-funded through the intellectual time investment of its founder. There is no external funding, no revenue, and no operating budget beyond what the founder personally contributes in time. TriadicFrameworks is actively seeking grant relationships and institutional partnerships to support the transition to a formal non-profit research entity. Any external funding received will be disclosed publicly.</div>
+    </div>
+
+    <div data-id="411" class="faq-item">
+        <div data-id="412" class="faq-q">Q5. What makes RTT different from existing systems theories?</div>
+        <div data-id="413" class="faq-a">RTT distinguishes itself in three primary ways. First, it is <span data-id="414" class="bold">explicitly temporal</span> — the theory foregrounds time, phase progression, and the dynamics of transition as central to systemic description, rather than treating systems as primarily structural or spatial phenomena. Second, it is designed for <span data-id="415" class="bold">cross-domain structural comparison</span> — rather than being a theory optimized for one domain (as systems dynamics is often associated with engineering, or complexity theory with physics and biology), RTT is built around structural patterns intended to translate across ecological, organizational, informational, and social systems. Third, RTT introduces specific named constructs — Validator Pulses, Lostational Dynamics, Spectral Clarity — as precise analytical vocabulary, rather than relying on general metaphors. Whether these distinctions represent genuine advances over existing frameworks is a question that peer review and empirical testing are designed to answer. TriadicFrameworks does not claim RTT supersedes prior work; it claims it offers structural tools not fully addressed by existing frameworks.</div>
+    </div>
+
+    <div data-id="416" class="faq-item">
+        <div data-id="417" class="faq-q">Q6. What domains has RTT been applied to?</div>
+        <div data-id="418" class="faq-a">Conceptually: RTT has been applied in documentation to natural systems (the Nature Systems Packet, September 2026), organizational systems (Organizational Systems Packet, in development), and, through this document, to the structural dynamics of institutional transparency. Empirically: RTT has not yet been formally applied in peer-reviewed research to any domain. Empirical validation is an active goal requiring research partnerships that do not yet exist in formal terms. Reviewers should treat current applications as conceptual demonstrations, not empirical proof of predictive validity.</div>
+    </div>
+
+    <div data-id="419" class="faq-item">
+        <div data-id="420" class="faq-q">Q7. How can my institution engage with TriadicFrameworks?</div>
+        <div data-id="421" class="faq-a">Institutions may engage through several pathways: (1) <span data-id="422" class="bold">Research collaboration</span> — contributing domain expertise to RTT validation studies or co-authoring applied RTT documentation; (2) <span data-id="423" class="bold">Advisory role</span> — participating in the Academic Advisory Panel upon formal institutionalization; (3) <span data-id="424" class="bold">Educational partnership</span> — developing joint curriculum or programming on systems thinking informed by RTT; (4) <span data-id="425" class="bold">Grant support</span> — foundations may contact TriadicFrameworks through GitHub or social channels to discuss grant relationships pending formal registration; (5) <span data-id="426" class="bold">Critical review</span> — submitting formal written critiques of RTT documentation for public response. All engagement will be disclosed and attributed transparently.</div>
+    </div>
+
+    <div data-id="427" class="faq-item">
+        <div data-id="428" class="faq-q">Q8. What happens to RTT if TriadicFrameworks does not formalize as a non-profit?</div>
+        <div data-id="429" class="faq-a">RTT's core materials will remain publicly accessible on GitHub at github.com/umaywant2/TriadicFrameworks regardless of TriadicFrameworks' institutional trajectory. The theory does not disappear if the organization does not formalize. The open-access publishing model is specifically designed to ensure that RTT's intellectual content is not held hostage to any particular organizational outcome. If formal non-profit registration does not occur, TriadicFrameworks will issue a public statement explaining the circumstances and confirming the continued accessibility of all published materials.</div>
+    </div>
+
+    <div data-id="430" class="faq-item">
+        <div data-id="431" class="faq-q">Q9. How does TriadicFrameworks handle disagreement with its framework?</div>
+        <div data-id="432" class="faq-a">TriadicFrameworks actively invites disagreement and maintains a structural distinction between three categories of challenge: (1) challenges to RTT's internal structural logic — addressed through revision of theoretical documentation if the challenge is sound; (2) challenges based on empirical evidence that RTT's structural patterns do not appear in a given domain — incorporated as scoping evidence about RTT's domain of applicability; (3) challenges to RTT's conceptual distinctions — addressed through clarification or revision of the conceptual vocabulary. TriadicFrameworks does not treat any of these as threats. They are the mechanism by which the theory improves. Responses to substantive critiques will be issued in writing through public channels.</div>
+    </div>
+
+    <div data-id="433" class="faq-item" style="border-bottom: none; margin-bottom: 0;">
+        <div data-id="434" class="faq-q">Q10. What is the timeline to formal non-profit registration?</div>
+        <div data-id="435" class="faq-a">There is no fixed timeline. TriadicFrameworks does not claim a specific date for formal non-profit registration. The timeline is dependent on the development of research partnerships, the maturation of core RTT documentation to a peer-reviewable state, and the identification of founding board members and institutional collaborators. This transparency packet is a step toward that process — establishing the public record and structural intentions that would accompany a formal application. Foundations seeking to support TriadicFrameworks prior to formal registration are encouraged to discuss the specifics of their requirements directly.</div>
+    </div>
+
+    <hr data-id="436" class="section-divider">
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!--  APPENDIX C — GLOSSARY                             -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <div data-id="437" class="appendix-header">
+        <h2 data-id="438">Appendix C — Glossary of Key RTT Terms</h2>
+    </div>
+    <p data-id="439" style="margin-top: 10pt;"><span data-id="440" class="italic">Short definitions for institutional reviewers without a systems theory background. Each term is defined in RTT's specific usage, which may differ from usage in other frameworks.</span></p>
+
+    <div data-id="441" class="glossary-term">Resonance-Time Theory (RTT)</div>
+    <div data-id="442" class="glossary-def">The foundational framework developed by Nawder Loswin for describing how systems — natural, organizational, or informational — move through recurring structural phases over time. RTT proposes that the pattern of tension, transition, and resolution is a structural feature observable across radically different kinds of systems, providing a common analytical vocabulary for cross-domain systems research. RTT is a developing theory, currently in the conceptual formalization stage.</div>
+
+    <div data-id="443" class="glossary-term">Triadic Flow</div>
+    <div data-id="444" class="glossary-def">The fundamental structural unit of RTT: the three-phase sequence through which any system in RTT's model moves — Operator Phase (accumulating complexity or tension), Dimensional Phase (transition or rupture), and Coherence Phase (reorganization and resolution). Triadic Flow is not a claim that all systems follow a smooth or predictable path; it is the observation that this three-part structure recurs as a recognizable shape in systemic change across domains.</div>
+
+    <div data-id="445" class="glossary-term">Operator Phase</div>
+    <div data-id="446" class="glossary-def">The first phase of Triadic Flow, characterized by the accumulation of structural complexity, tension, or energy within a system. In an ecological system, this might describe the buildup of competitive pressure before a regime shift. In an organizational system, it might describe the accumulation of structural misalignment before a crisis. The Operator Phase is not inherently negative — it is the necessary precondition for transition and eventual coherence.</div>
+
+    <div data-id="447" class="glossary-term">Dimensional Phase</div>
+    <div data-id="448" class="glossary-def">The second phase of Triadic Flow: the moment or period of transition, rupture, or structural reorganization in which the accumulated tension of the Operator Phase is released or redirected. This phase may be rapid or gradual, catastrophic or managed. RTT identifies this phase as the point at which systems are most sensitive to intervention, adaptation, and directional change — and therefore most important to understand structurally.</div>
+
+    <div data-id="449" class="glossary-term">Coherence Phase</div>
+    <div data-id="450" class="glossary-def">The third phase of Triadic Flow: the period following Dimensional Phase transition in which the system reorganizes around a new or restored structural alignment. Coherence Phase does not imply a return to the prior state — systems that have passed through Dimensional Phase often reorganize into configurations qualitatively different from their pre-transition form. RTT's Coherence Phase describes stabilization, not stasis.</div>
+
+    <div data-id="451" class="glossary-term">Drift</div>
+    <div data-id="452" class="glossary-def">In RTT, drift refers to the progressive misalignment of a system's components relative to its structural organizing pattern. Drift accumulates when the forces maintaining systemic resonance are insufficient to counteract the pressures pulling components out of alignment. Drift is not inherently pathological — it can be productive, initiating necessary Dimensional Phase transitions — but uncorrected drift over time tends toward systemic instability or collapse.</div>
+
+    <div data-id="453" class="glossary-term">Validator Pulse</div>
+    <div data-id="454" class="glossary-def">A structural event or mechanism within RTT in which a system receives confirmation, correction, or recalibration that reinforces or adjusts its organizing pattern. Validator Pulses can be internal (a self-correcting feedback mechanism within the system) or external (a signal or force from the system's environment that prompts structural recalibration). In RTT's model, the frequency, amplitude, and timing of Validator Pulses are central to whether a system maintains coherence, drifts toward transition, or collapses.</div>
+
+    <div data-id="455" class="glossary-term">Spectral Clarity</div>
+    <div data-id="456" class="glossary-def">An RTT construct describing the degree to which a system's structural signal — its organizing pattern, identity, or purpose — is legible, coherent, and distinguishable from noise. High Spectral Clarity indicates that the system's structural pattern is strong and recognizable; low Spectral Clarity indicates that the pattern has become diffuse, ambiguous, or overwhelmed by disorganizing forces. Spectral Clarity is intended as a measurable dimension of systemic health within the RTT framework.</div>
+
+    <div data-id="457" class="glossary-term">Lostational Dynamics</div>
+    <div data-id="458" class="glossary-def">A theoretical construct within RTT describing the pattern of displacement, disorientation, and eventual re-anchoring that systems experience during and following Dimensional Phase transitions. Lostational Dynamics addresses the question of what happens to a system's identity, function, and structural coherence during the period when its prior organizing pattern has broken down but its new pattern has not yet stabilized. It is, in structural terms, the experience of being between states.</div>
+
+    <div data-id="459" class="glossary-term">Nawderian Theorem</div>
+    <div data-id="460" class="glossary-def">The formal theoretical proposition, developed by Nawder Loswin, that describes the relationship between Validator Pulse frequency and systemic coherence over time. Informally: the theorem proposes that systems with insufficient or mistimed Validator Pulses are structurally more likely to experience disorganizing drift and Dimensional Phase instability than systems with well-calibrated Validator Pulse patterns. The theorem is in active formalization and has not yet been subjected to formal peer review.</div>
+
+    <div data-id="461" class="glossary-term">Regime Transition</div>
+    <div data-id="462" class="glossary-def">In RTT's usage, a Regime Transition is a Dimensional Phase event of sufficient magnitude to produce a qualitatively different systemic configuration — not merely a fluctuation within the same structural pattern, but a shift to a new organizing regime. Regime Transitions are irreversible in the sense that the system that emerges from them is structurally distinct from the system that entered them. RTT draws on complexity theory's concept of phase transitions but situates it within the triadic temporal framework.</div>
+
+    <div data-id="463" class="glossary-term">Alignment Future</div>
+    <div data-id="464" class="glossary-def">An RTT concept describing the projected structural trajectory of a system under conditions of sustained resonance and managed drift. An Alignment Future is not a prediction — RTT does not claim deterministic predictive accuracy — but a structural description of the attractor state toward which a coherent system tends when its Validator Pulses are functioning, its Spectral Clarity is high, and its triadic flow is progressing without catastrophic disruption. The concept is used in RTT documentation as a heuristic for evaluating systemic health and potential.</div>
+
+    <div data-id="465" class="glossary-term">Forward Coherence</div>
+    <div data-id="466" class="glossary-def">The RTT principle that systemic coherence is not a property inherited from the past but actively constructed through ongoing structural work — repeated Validator Pulses, managed drift, and intentional navigation of Dimensional Phase transitions. Forward Coherence is both a descriptive observation (coherent systems are those that actively maintain alignment) and a normative orientation for practitioners applying RTT frameworks to organizational or policy contexts: coherence must be continuously earned, not assumed.</div>
+
+    <hr data-id="467" class="section-divider-heavy">
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!--  FOOTER                                             -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <div data-id="468" class="doc-footer">
+        TriadicFrameworks &nbsp;|&nbsp; Non-Profit Transparency Packet &nbsp;|&nbsp; Nawder Loswin &nbsp;|&nbsp; September 2026<br data-id="469">
+        External Disclosure — For Institutional Review &nbsp;|&nbsp; github.com/umaywant2/TriadicFrameworks &nbsp;|&nbsp; @TriadicFrameworks
+    </div>
+
+</body>
+</html>
