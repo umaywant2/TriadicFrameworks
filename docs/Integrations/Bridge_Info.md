@@ -46,6 +46,8 @@ docs/Integrations/
 
 ---
 
+<img width="1024" height="1024" alt="Integrations_Dimensional_Substrate_MCP_Substrate_Mapping" src="https://github.com/user-attachments/assets/93f2ed06-20b4-4b30-a78c-be42bdb6cb8b" />
+
 ## Page 1 — Dimensional Substrate ↔ MCP Substrate Mapping
 
 **File:** `Dimensional_Substrate_MCP_Substrate_Mapping.html`
@@ -98,6 +100,8 @@ Mapping is determined by three invariant criteria:
 | 9D | Unified Source Field | III | Apex | `L3_Forces_Unseen` | Unseen |
 
 ---
+
+<img width="1024" height="1024" alt="Integrations_Intelligence_Class_Ladder" src="https://github.com/user-attachments/assets/a203bba7-71f4-42f3-b1cf-3f90d42e430b" />
 
 ## Page 2 — Intelligence Class Ladder: Canonical Reference
 
@@ -164,6 +168,8 @@ The following `@substrate.*` operators require dual-oversight sign-off before in
 ```
 
 ---
+
+<img width="1024" height="1024" alt="Integrations_Engine_Integration_Bridge" src="https://github.com/user-attachments/assets/c82508d8-2fa5-402b-8433-3371a3480d5a" />
 
 ## Page 3 — Engine Integration Bridge
 
