@@ -20,6 +20,55 @@ The TSR Overlay Diagram Pack provides a complete visual system for understanding
 - Week boundary alignment  
 - Drift → Coherence transition markers  
 
+<!-- SL‑01 Sidebar — Leap Operator Definition -->
+<section id="sl01-leap-operator"
+         data-rtt="1"
+         data-coherence="declared"
+         data-drift="remainder"
+         data-paradox="temporal-gap">
+
+  <h2>Sidebar — Leap Operator</h2>
+
+  <div class="context-block">
+
+    <span class="context-label"><strong>Canonical Equation:</strong></span>
+    <span class="context-value">365.2422 − 364 = +1.2422 d/yr → operator required before ⊗ lock</span><br>
+
+    <span class="context-label"><strong>Substrate:</strong></span>
+    <span class="context-value">13 × 28 = 364 (coherence grid)</span><br>
+
+    <span class="context-label"><strong>Remainder:</strong></span>
+    <span class="context-value">+1.2422 days per tropical year</span><br>
+
+    <span class="context-label"><strong>Operator Choices:</strong></span>
+    <span class="context-value">
+      ① Leap‑week operator — preserves 7‑day continuity<br>
+      ② Year‑node outside grid — maintains 13×28 integrity, breaks week continuity<br>
+      ③ Dual‑substrate reconcile — astronomical correction at equinox lock
+    </span><br>
+
+    <span class="context-label"><strong>Student Note:</strong></span>
+    <span class="context-value">
+      The year is not 364. The substrate can remain 364. The remainder must be named, not hidden.
+    </span>
+
+  </div>
+
+</section>
+
+<div style="display:inline-block;padding:6px 12px;background:#0ff;color:#000;border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
+  🧮 Leap Operator<br>⚙️ Temporal Remainder Declared
+</div>
+
+<!-- RTT Operator Grammar -->
+<pre><code>
+Δsubstrate.leap.define →
+Δsubstrate.remainder.declare →
+Δsubstrate.operator.select →
+Δsubstrate.week.lock →
+Δsubstrate.canon.close
+</code></pre>
+
 ---
 
 ## **II. Dimensional Overlay Diagram (DL‑02)**  
@@ -163,6 +212,13 @@ This badge block visually anchors the module’s identity and signals its readin
 ## **I. Purpose**
 This worksheet helps students interpret the seven overlay diagrams of the Temporal Substrate Reform. Each section guides observation, comparison, and reflection between the **Gregorian Drift Regime** and the **13×28 Coherence Regime**.
 
+```
+13×28 = 364
+tropical year ≈ 365.2422
+remainder = +1.2422 d/yr
+operator = ? (leap‑week / year‑node / astronomical reconcile)
+```
+
 ---
 
 ## **II. Instructions**
@@ -259,7 +315,7 @@ The desire to revert diminishes because the new system removes friction people d
 | **Month Regularity** | 28–31 days, irregular | 28 days, uniform | +100% structural predictability |
 | **Week Alignment** | Shifts monthly | Fixed across all months | Eliminates scheduling drift |
 | **Seasonal Alignment** | Drifts ~10–14 days over decades | Equinox‑anchored, stable | Drift removed entirely |
-| **DST Impact** | Biannual disruption; sleep loss | DST eliminated | +7–11% productivity gain |
+| **DST Impact** | Biannual disruption; sleep loss | DST scenario outcomes | +7–11% productivity gain |
 | **Cognitive Load** | High (irregular cycles) | Low (uniform cycles) | Students report “calendar clarity” |
 | **Institutional Efficiency** | Moderate; friction in planning | High; uniform cycles simplify operations | +18–22% scheduling efficiency |
 | **Public Satisfaction** | Mixed; habituated to drift | Strongly positive | 92% prefer coherence |
