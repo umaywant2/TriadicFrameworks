@@ -224,6 +224,7 @@ __________________________________________________________
 ---
 
 # **IX. Post‑Simulation Retrospective: What Changed, and Did Anyone Want to Go Back?**
+###### *Coherence-Regime Thought Experiment*
 
 After ~25 years of simulated operation under the 13×28 Coherence Regime, researchers conducted a longitudinal review to determine whether participants expressed interest in returning to the Gregorian Drift Regime. The findings were remarkably consistent across demographic, cultural, and institutional groups.
 
