@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="0n_Teams_Playtime_and_Remembering_Who_You_Are" src="https://github.com/user-attachments/assets/656d72f4-3bea-4026-8503-223c9bfef6bc" />
+
 ## **On Teams, Playtime, and Remembering Who You Are**
 
 I’m an older man now.  
