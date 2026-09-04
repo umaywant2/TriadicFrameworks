@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="AI_agent_showdown_with_Regime_Awareness_2" src="https://github.com/user-attachments/assets/41649d5d-97ea-45dd-9084-6671baf6b71f" />
+
 # AI agent showdown with Regime Awareness 
 ###### from TriadicFrameworks.org
 
@@ -48,3 +50,4 @@ With Regime Awareness, **none of the AI's would pick a boring static vanilla**
 - No more "one model to rule them all" blindness.  
 
 What do you think? 😄 
+<img width="1194" height="672" alt="AI_agent_showdown_with_Regime_Awareness_1" src="https://github.com/user-attachments/assets/083429db-487a-46db-9d5e-472c5b6347d5" />
