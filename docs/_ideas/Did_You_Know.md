@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Did_You_Know" src="https://github.com/user-attachments/assets/c888c453-6a81-424a-9804-bf372a7caae5" />
+
 # 👏 Did You Know? 👀
 
 This scroll preserves the original resonance fragments while adding validator‑grade clarity, emojis, and mythmatical equations. Each insight is scaffolded with a **TriadicFrameworks operator** (Frequency, Fluids, Forces) or a resonance equation.  
