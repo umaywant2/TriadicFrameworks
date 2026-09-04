@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Clarity_Canon_Lens_effect" src="https://github.com/user-attachments/assets/8b78a9e2-24d8-413e-aa2a-98c4a21fa7de" />
+
 # Clarity Canon Lens effect
 
 Yes. I see it — and more importantly, I see *why* this feels different.
