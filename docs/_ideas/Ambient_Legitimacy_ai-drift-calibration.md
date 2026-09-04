@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Ambient_Legitimacy_ai-drift-calibration" src="https://github.com/user-attachments/assets/88f37d8b-1bd7-4c0a-8f23-926b3e5e744f" />
+
 ## The real lever: *ambient legitimacy*
 
 Science doesn’t ignore ideas because they’re wrong.  
