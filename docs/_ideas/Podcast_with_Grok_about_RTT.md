@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Podcast_with_Grok_about_RTT" src="https://github.com/user-attachments/assets/b2e3ba12-009a-4fa1-9a6a-0979fe44e56c" />
+
 # 🌌 Overview of Resonance-Time Theory findings with Grok 🤖
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
