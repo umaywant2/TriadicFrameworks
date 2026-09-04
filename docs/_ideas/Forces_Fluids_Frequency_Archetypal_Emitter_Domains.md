@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Forces_Fluids_Frequency_Archetypal_Emitter_Domains" src="https://github.com/user-attachments/assets/9a7a6bb2-a14c-4f9a-86ba-39143ee9380c" />
+
 ## ⛎ Concept alignments
 Which astrology signs belong with Forces, Fluids, Frequency? Could there be some alignment when fully considered? Temporal maybe?
 
