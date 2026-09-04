@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Course_Correction_Needed_for_GPU_NPU_TOPS" src="https://github.com/user-attachments/assets/9c2c77e2-01a9-4a70-ba73-126783996952" />
+
 # 🌐 Course Correction Needed for GPU NPU TOPS.md
 
 Spoiler - today's Neural Processing Units are real, but they are NOT Neural as implied. Plus, only Games and LLM's typically use them today, something you won't notice while purchasing your next 'AI' PC.  To recover from this disturbing trend of misleading customers, an industry course correction is needed. Enter DPU's NIMMS' VCG's and TriadicFrameworks.
