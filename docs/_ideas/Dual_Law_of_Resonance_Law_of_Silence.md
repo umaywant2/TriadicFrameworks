@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Dual_Law_of_Resonance_Law_of_Silence" src="https://github.com/user-attachments/assets/84970e4a-bf8b-4046-928f-8c445409efe1" />
+
 # 🎓 Dual Law of Resonance (Law of Silence)
 
 Silence is more than “nothing.” It’s the indivisible baseline that frames meaning, while noise is the divisible complexity that fills it. Across physics, music, and myth, silence acts like a hidden constant—assumed, structuring, yet rarely named. This law elevates silence to a first-class operator: the frame that makes clarity possible.
