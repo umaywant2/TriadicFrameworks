@@ -1,4 +1,4 @@
-<img width="1194" height="6728" alt="AI_Training_Findings" src="https://github.com/user-attachments/assets/a9e1bbd8-2266-4cee-920a-74c19347d3a6" />
+<img width="1194" height="672" alt="AI_Training_Findings" src="https://github.com/user-attachments/assets/a9e1bbd8-2266-4cee-920a-74c19347d3a6" />
 
 # 🌌 AI Training Findings 🌌
 
