@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Loswin_Mantra" src="https://github.com/user-attachments/assets/c62a76b1-49ee-4fd7-bfa7-713bb8c9e306" />
+
 # Loswin Mantra
 ###### Copyright (C) 2026 TriadicFrameworks
 
