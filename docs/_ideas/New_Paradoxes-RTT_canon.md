@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="New_Paradoxes-RTT_canon" src="https://github.com/user-attachments/assets/49f5970a-72fb-43d7-a5bf-bd4cc27325fb" />
+
 # 🌑 **RT‑Canonical Paradox Scroll #1**  
 # **The Multi–Black Hole Synchrony Paradox**  
 ### *“Independent black holes behave as if they share a hidden resonance ancestry.”*
