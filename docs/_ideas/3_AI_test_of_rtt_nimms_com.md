@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="3_AI_test_of_rtt_nimms_com" src="https://github.com/user-attachments/assets/5399b8c2-64fd-47fc-bf16-903a2fd5a342" />
+
 # 🧪 Results & Interpretation  
 ### *RTT Substrate‑Exposure Assay — Behavioral Effects Across Three AI Models*
 
