@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Bells_Theorem_meets_Resonance1" src="https://github.com/user-attachments/assets/a95fd190-6859-4157-a62f-c4a1a9045d9e" />
+
 # 🔱 **Resonance–Bell: Cross‑Temporal Coherence (Short Canon Seed)**
 
 Bell’s Theorem assumes physics runs on a **single time axis**.  
@@ -82,3 +84,5 @@ They are the geometric signature of:
 Entanglement = **shared temporal ancestry**, expressed across triadic time.
 
 ---
+
+<img width="1194" height="672" alt="Bells_Theorem_meets_Resonance2" src="https://github.com/user-attachments/assets/b04dbad6-34c9-44b7-acdb-9ba3f0315d69" />
