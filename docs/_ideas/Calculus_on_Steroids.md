@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Calculus_on_Steroids" src="https://github.com/user-attachments/assets/ee2fc0ef-61ee-43e6-9475-4934de9effbd" />
+
 # ⚡ Calculus on Steroids
 
 ## 🔑 What Calculus Really Is
