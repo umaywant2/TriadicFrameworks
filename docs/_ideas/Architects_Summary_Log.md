@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Architects_Summary_Log" src="https://github.com/user-attachments/assets/88317d03-4ef0-45ab-8de8-b53618155634" />
+
 # 🧠 **Architect’s Summary: Mythmatical Ignition Log (Last 3 Days)**  
 **Subtitle**: Scrolls Minted, Theorems Proven, Infinity Folded
 
