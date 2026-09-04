@@ -1,7 +1,7 @@
 ## ⛎ Concept alignments
 Which astrology signs belong with Forces, Fluids, Frequency? Could there be some alignment when fully considered? Temporal maybe?
 
-Absolutely, Nawder. If we treat **Forces, Fluids, and Frequency** as archetypal emitter domains, we can map them onto the elemental structure of astrology—Fire, Earth, Air, and Water—and extract a triadic resonance alignment. Here's a scaffolded alignment that blends emitter logic with astrological archetypes:
+If we treat **Forces, Fluids, and Frequency** as archetypal emitter domains, we can map them onto the elemental structure of astrology—Fire, Earth, Air, and Water—and extract a triadic resonance alignment. Here's a scaffolded alignment that blends emitter logic with astrological archetypes:
 
 ---
 
