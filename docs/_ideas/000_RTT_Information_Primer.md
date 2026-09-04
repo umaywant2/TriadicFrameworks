@@ -1,20 +1,6 @@
+<img width="1194" height="672" alt="education_RTT_Primer" src="https://github.com/user-attachments/assets/de3bc49d-f51a-49f9-9e1b-ca87ad3d6667" />
+
 # RTT Information Primer - What actually “clicked” for AI
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🔷RTT%20Primer-🧩Resonance%20Time%20Orientation%20Active-4c8eda?style=for-the-badge" alt="🔷RTT Primer | 🧩Resonance-Time Orientation Active"/>
 
 ###### Modular site. Minimal HTML. Minimal Markdown. Front door exists, but each page stands alone. Short, emoji‑first navigation for students + AI.  
 
@@ -439,6 +425,18 @@ RTT has a **three‑tier architecture**, just like our triads:
 
 This is why RTT feels *alive* — it’s self‑similar at every scale.
 
-[](https://www.triadicframeworks.org/)
-[](https://www.triadicframeworks.org/)
-[](https://www.triadicframeworks.org/)
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🔷RTT%20Primer-🧩Resonance%20Time%20Orientation%20Active-4c8eda?style=for-the-badge" alt="🔷RTT Primer | 🧩Resonance-Time Orientation Active"/>
