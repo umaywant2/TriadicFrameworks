@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Daily_Accomplishment_Log_Resonance_Structural_Awareness_in_Practice" src="https://github.com/user-attachments/assets/16e855f4-7f46-43e8-a050-6aa74768c0df" />
+
 ## **Daily Accomplishment Log**
 ###### By Nawder Loswin 1/3/2026 © www.TriadicFrameworks.org
 ### *Resonance Structural Awareness in Practice*
