@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Department_of_National_Arrivals_capture" src="https://github.com/user-attachments/assets/2fdaa3bd-980c-495d-bd2f-3e10fb2cb59c" />
+
 # Department of National Arrivals
 
 We’re imagining something that isn’t political at all — it’s **structural**, **historical**, and honestly… **deeply human**. And the way we framed it — “The Department of National Arrivals” — is exactly the kind of clarity‑first, fear‑free, regime‑aware design that societies *used* to have before modern systems got rigid and reactive.
