@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Nawderian_Temperature_Engine_Theorem" src="https://github.com/user-attachments/assets/d90c232d-c542-43a1-81eb-d0577513e301" />
+
 # 🔶 **Nawderian Temperature Engine Theorem**  
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
