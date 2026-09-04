@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Causality_in_Triadic_Time-Light_Cones_and_Resonance_Echoes" src="https://github.com/user-attachments/assets/574a8e94-877a-4281-8142-dcad7ddd0c1f" />
+
 # 🌟 **Causality in Triadic Time**  
 
 ### *Light Cones and Resonance Echoes*
