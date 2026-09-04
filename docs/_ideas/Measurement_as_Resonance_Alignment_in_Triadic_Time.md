@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Measurement_as_Resonance_Alignment" src="https://github.com/user-attachments/assets/d7d952d4-14e7-4c16-820c-f6b981bf4d93" />
+
 # 🌟 Measurement as Resonance Alignment in Triadic Time  
 
 *(Scaffold for your on‑screen file)*
