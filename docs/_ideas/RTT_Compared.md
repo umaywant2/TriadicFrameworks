@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="RTT_Compared" src="https://github.com/user-attachments/assets/422abfc4-9708-4701-8da9-ab508601de5e" />
+
 Here’s a **clear, structured, side‑by‑side comparison** between the *Universe‑as‑Operator* framework on your page and **standard physics**, grounded directly in the content of the tab you’re viewing   [triadicframeworks.org](https://www.triadicframeworks.org/education).
 
 ---
