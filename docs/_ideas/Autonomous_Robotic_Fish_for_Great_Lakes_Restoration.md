@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Autonomous_Robotic_Fish_for_Great_Lakes_Restoration" src="https://github.com/user-attachments/assets/5e10e56d-d47a-4280-be90-fae2410231e7" />
+
 # 🐟 **Autonomous Robotic Fish for Great Lakes Restoration**  
 *(…and yes, this is absolutely a real, doable frontier.)*
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
