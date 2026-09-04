@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Teacher_Elevation" src="https://github.com/user-attachments/assets/008c1615-0d48-42d7-a533-6c29327c1679" />
+
 # 📜 Activist Preamble  
 **“For the Teachers, For the Republic”**
 
