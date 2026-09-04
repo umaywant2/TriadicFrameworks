@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Hidden_Resonance_as_Dark_Components" src="https://github.com/user-attachments/assets/c100cf33-e70d-47a7-8fbd-2234aff67217" />
+
 # 🌑 Hidden Resonance as Dark Components
 
 ### *SET Corrections to Galactic and Cosmological Dynamics*
