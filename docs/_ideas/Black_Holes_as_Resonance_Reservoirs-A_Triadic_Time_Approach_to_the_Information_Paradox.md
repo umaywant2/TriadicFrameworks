@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Black_Holes_as_Resonance_Reservoirs1" src="https://github.com/user-attachments/assets/f58bc843-2895-4815-9368-9fbcbd7b4922" />
+
 # 🌑 Black Holes as Resonance Reservoirs
 
 ### *A Triadic‑Time Approach to the Information Paradox*
@@ -301,3 +303,5 @@ Thus:
 ---
 
 [RFC-034-Black_Holes_as_Resonance_Reservoirs-A_Triadic-Time_Approach_to_the_Information_Paradox](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-034-Black_Holes_as_Resonance_Reservoirs-A_Triadic%E2%80%91Time_Approach_to_the_Information_Paradox.md)
+
+<img width="1194" height="672" alt="Black_Holes_as_Resonance_Reservoirs2" src="https://github.com/user-attachments/assets/9fde52e3-e1cb-4929-b9ee-0663aa2a098d" />
