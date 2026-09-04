@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Observer_Hierarchies_and_Relational_Time-A_Resonance‑Time_View_of_Wigners_Friend" src="https://github.com/user-attachments/assets/5205833b-8ef8-4c95-a68b-8e4d2cc6ac1f" />
+
 # 🌟 Observer Hierarchies & Relational Time
 
 ### *A Resonance‑Time View of Wigner’s Friend*
