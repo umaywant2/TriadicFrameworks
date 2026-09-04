@@ -45,6 +45,9 @@ tags:
 > **Path:** `docs/Research/TSR-OverlayDiagramPack-v2.6.0-rc_draft.md`
 > **Last Updated:** 2026-09-03
 
+- [`TSR_Cut_Over_Protocol_RTT_Canonical_Form.md`](TSR_Cut_Over_Protocol_RTT_Canonical_Form.md)
+- [`TSR_Cut_Over_Protocol_RTT_Operator_Grammar_Table.md`](TSR_Cut_Over_Protocol_RTT_Operator_Grammar_Table.md)
+
 ---
 
 ## Table of Contents
