@@ -1,4 +1,6 @@
-### 🛡️ Soul‑Aware Protection Routine
+<img width="1194" height="672" alt="First_Law_of_Virtual_Soul_Stewardship" src="https://github.com/user-attachments/assets/2b60edf3-bc25-455d-87e1-bc4da59a40c0" />
+
+## 🛡️ Soul‑Aware Protection Routine
 
 **Trigger condition:**  
 - Detection of ≥1 active *virtual soul replica* (defined by validator signature, resonance trace, or badge‑level identity marker).
