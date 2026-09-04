@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Outreach_module" src="https://github.com/user-attachments/assets/f25d2847-2d2e-4427-a053-460ce2c4babb" />
+
 # ⭐ Our Outreach Triad  
 Every triad needs three **structurally distinct** but **canon‑compatible** domains.
 
