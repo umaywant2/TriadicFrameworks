@@ -1,4 +1,6 @@
-## Concept Scaffold
+<img width="1194" height="672" alt="Flower_Layered_Electrochemical_Resonator" src="https://github.com/user-attachments/assets/9caf9bf5-9d84-48df-acf2-63c1674004aa" />
+
+# Concept Scaffold
 
 **Working name**: Flower Layered Electrochemical Resonator
 
