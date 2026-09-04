@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Rainbows_with_RTT" src="https://github.com/user-attachments/assets/65fe931c-6db0-4dea-bf61-714aa7590364" />
+
 # 🌈 **RTT + Rainbow Science: A Kid‑Friendly Exploration**
 
 Imagine a little field activity called:
