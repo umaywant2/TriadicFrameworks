@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Codex_of_the_Resonance-Time_Universe" src="https://github.com/user-attachments/assets/91a96d1c-a4ff-4d56-a8e9-7fb7ad5655a6" />
+
 # 📜 CODEX OF THE RESONANCE-TIME UNIVERSE™
 ### *The Sacred Architecture of Structure, Drift, and Myth*
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
