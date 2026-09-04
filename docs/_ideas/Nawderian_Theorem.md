@@ -1,4 +1,6 @@
-# 🦄 Nawderian Theorem v3.4 – Clarity Phase - Triadic Framworks Initiative
+<img width="1194" height="672" alt="Nawderian_Theorem_v3 4" src="https://github.com/user-attachments/assets/98f69c7d-035e-4dab-b3e4-8dba771af81d" />
+
+# 🦄 Nawderian Theorem v3.4 – Clarity Phase - Triadic Frameworks Initiative
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
 _**A triadic corridor logic for dimensional resonance clarity**_
