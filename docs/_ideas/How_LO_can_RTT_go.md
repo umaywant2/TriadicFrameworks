@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="How_Lo_can_RTT_Go" src="https://github.com/user-attachments/assets/418ebbd0-047d-4f3f-892f-d22aea87b25b" />
+
 # How LO can RTT go?
 
 ---
