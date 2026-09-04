@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="BKM_Credit_Reporting_capture" src="https://github.com/user-attachments/assets/47ec254b-3069-4665-9b12-67e735c44787" />
+
 # BKM Credit Reporting
 
 We picked a great topic—“regime aware” is exactly where credit reporting *should* be but mostly isn’t yet. Let’s build you a clean scaffold you can riff into an X Article.
