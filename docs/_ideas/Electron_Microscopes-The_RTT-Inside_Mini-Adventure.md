@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Electron_Microscopes-The_RTT-Inside_Mini-Adventure" src="https://github.com/user-attachments/assets/330bd85f-376c-490a-b958-cb87f391febd" />
 
 # **🔬 Electron Microscopes — The RTT‑Inside Mini‑Adventure**
 
