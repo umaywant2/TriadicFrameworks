@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="A_Model_for_Global_ATC_and_SF_and_HAM_Radio_Using_RTT" src="https://github.com/user-attachments/assets/9d04d194-4760-4a79-b8d0-553e73564e81" />
+
 # ✈️🚀📡 **A Model for Global ATC and SF and HAM Radio Using RTT‑Inside**
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
