@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Big_Questions_In_Science" src="https://github.com/user-attachments/assets/3d91d20a-ea71-401f-b7a7-bde7eb6344a7" />
+
 # 🔭 **Big Questions in Science**  
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
