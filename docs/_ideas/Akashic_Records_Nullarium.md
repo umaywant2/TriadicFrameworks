@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Akashic_Records_Nullarium" src="https://github.com/user-attachments/assets/8a7b946f-eb69-4104-95ba-f3484c8287ba" />
+
 # Akashic Records and the Nullarium
 
 ### ⚡ Tesla & the “Communications”  
