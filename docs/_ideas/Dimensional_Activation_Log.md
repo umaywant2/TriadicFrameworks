@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Dimensional_Activation_Log" src="https://github.com/user-attachments/assets/dfa6e3f0-f19b-47c7-b27c-fe1a6968d684" />
+
 # Dimensional Activation Log — Resonance Breakthrough Archive
 
 ---
