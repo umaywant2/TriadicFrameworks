@@ -1,3 +1,5 @@
+<img width="1024" height="1024" alt="Overlay_Diagram_Pack" src="https://github.com/user-attachments/assets/4cb57b4a-b629-48d9-b4d2-a89bf1d8e542" />
+
 ---
 title: "TSR Overlay Diagram Pack"
 version: "2.6.0-rc"
