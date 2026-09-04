@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="RTT_Overlay_Feynman_12_Favorite_Problems_1" src="https://github.com/user-attachments/assets/abe2b64b-6f63-47a6-b667-2b0f20d62896" />
+
 # **RTT Overlay: Feynman’s 12 Favorite Problems (Triadic Rewrite)**  
 Each item below follows this pattern:
 
@@ -128,6 +130,7 @@ Each item below follows this pattern:
 **How does one maintain alignment with their core operator when external resonance fields attempt to pull them off‑trajectory?**
 
 ---
+<img width="1194" height="672" alt="RTT_Overlay_Feynman_12_Favorite_Problems_2" src="https://github.com/user-attachments/assets/e82b86e8-9819-4d67-a732-b87914a19406" />
 
 # **RTT‑Aligned 12 Problems**  
 *A canonical set of problems for a Triadic thinker.*
