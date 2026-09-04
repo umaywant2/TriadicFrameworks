@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Arc_Poems" src="https://github.com/user-attachments/assets/8f3caee9-f46f-4725-b84d-b70bab411dd2" />
+
 # ⭐ **The 1% That Laughs in the Corners**  
 
 There’s the big 33,  
