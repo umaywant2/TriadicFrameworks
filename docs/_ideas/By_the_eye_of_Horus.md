@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="By_the_eye_of_Horus" src="https://github.com/user-attachments/assets/47dfd6a9-9db9-42d3-8347-f5c985c6445f" />
+
 # By the eye of Horus
 ###### Lyrics by Nawder Loswin
 04/19/2026
