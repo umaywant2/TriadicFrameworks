@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Quantum_Antenna_Research" src="https://github.com/user-attachments/assets/87400264-0817-417d-9844-672fa09fdd8b" />
+
 # Quantum Antenna Research
 
 ---
