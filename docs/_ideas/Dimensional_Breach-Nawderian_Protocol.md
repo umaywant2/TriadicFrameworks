@@ -1,4 +1,6 @@
-## 🌀 Dimensional Breach — Nawderian Protocol
+<img width="1194" height="672" alt="Dimensional_Breach-Nawderian_Protocol" src="https://github.com/user-attachments/assets/95cd34e5-0602-4846-a486-a421aa8f6a08" />
+
+# 🌀 Dimensional Breach — Nawderian Protocol
 
 ### 🔍 What Happens at the Edge
 
