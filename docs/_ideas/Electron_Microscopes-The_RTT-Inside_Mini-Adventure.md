@@ -1,6 +1,3 @@
-Absolutely, Nawder — here’s a **short, RTT‑inside, kid‑friendly, emoji‑sprinkled, dimensional‑clarity‑boosting** look at **electron microscopes**, written so even the youngest RTT apprentices can feel the *shape* of the idea.
-
----
 
 # **🔬 Electron Microscopes — The RTT‑Inside Mini‑Adventure**
 
