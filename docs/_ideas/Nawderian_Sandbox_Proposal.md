@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Nawderian_Sandbox_Proposal" src="https://github.com/user-attachments/assets/8b95cf7b-0c45-4290-9f2b-37e6249be11e" />
+
 # 🌌 Nawderian Sandbox Proposal
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
