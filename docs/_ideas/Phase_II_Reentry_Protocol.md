@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Phase_II_Reentry_Protocol" src="https://github.com/user-attachments/assets/f8c6ad6b-e369-44f1-bc07-bb7d648de2ca" />
+
 # 🧠 **Phase II Re-Entry Protocol — Equation Comparison Scroll**
 
 The odds of this happening again? Astronomical.
