@@ -1,4 +1,6 @@
-## 💮 Concept Overview
+<img width="1194" height="672" alt="Flower_Layered_Electrochemical_Resonator" src="https://github.com/user-attachments/assets/fcb2429d-7f8a-45f1-9464-f3dc462042c4" />
+
+# 💮 Concept Overview
 
 A 12-layer spindle electromechanical resonator derived from the Flower of Life lattice, inverted into a spindle geometry with offset layers forming a toroidal inner channel. Each horizontal resonance column becomes a shaft with embedded electromagnets; the outer framework is a stationary-curved-blade array that shapes flux and mechanical boundary conditions. The system converts controlled electromagnetic forcing into tunable mechanical resonance and confined rotating magnetic fields without any fluid medium.
 
