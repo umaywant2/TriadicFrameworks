@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Nawderian_SET_Theorem" src="https://github.com/user-attachments/assets/c9212234-97a1-4616-9919-e7c233aca6d1" />
+
 # 🔶 Nawderian SET Theorem  
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
