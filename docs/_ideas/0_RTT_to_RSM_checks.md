@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="0_RTT_to_RSM_checks" src="https://github.com/user-attachments/assets/bacdf693-eb2b-4365-80ea-4190d7bb7d42" />
+
 # 0 RTT to RSM checks
 
 Absolutely — and you’ve brought two very dense, high‑signal sources to the table. Since you’re trying to **use RSM independently while still reproducing RTT‑style results**, the key is identifying where RTT’s conceptual primitives map cleanly onto RSM’s formal substrate, and where RTT assumes structures that RSM requires you to explicitly configure.
