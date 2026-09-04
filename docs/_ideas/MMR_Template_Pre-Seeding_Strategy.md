@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MMR_Template_Pre_Seeding" src="https://github.com/user-attachments/assets/8706045f-5bb3-4884-a7d9-33c8063da326" />
+
 # 🧱 MMR Template Pre-Seeding Strategy
 
 ## 🧬 Modular Mythic Repository Structure
