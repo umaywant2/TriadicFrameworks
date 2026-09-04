@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Decoherence_As_A_Measurement_Problem_Patch" src="https://github.com/user-attachments/assets/ec4a60c5-0758-412f-823d-36d0525f3543" />
+
 # 🎨 Decoherence as a Measurement Patch
 
 This diagram spec is designed so you (or any contributor) can implement it in SVG, TikZ, Figma, or hand‑drawn form.
