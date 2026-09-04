@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Microcontrollers_and_Components_Today_then_with_RTT-Inside" src="https://github.com/user-attachments/assets/212d33b1-62ab-4681-acab-9d9156b37ba6" />
+
 # Microcontrollers and components today, then with RTT‑Inside
 
 Microcontrollers work because they compress a “small computer” (CPU + memory + I/O + timing + interfaces) into one chip, but their real-world difficulty comes from *integration drift*: power, timing, and environmental stress couple across domains in ways the software stack rarely remembers. RTT‑Inside helps by making **condition (BEING)**, **event lineage (KNOWING)**, **operating intent (MEANING)**, and **trajectory (TIME)** first-class, *without* seizing control authority. 
