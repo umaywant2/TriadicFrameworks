@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Press_Release_TriadicFrameworks_Launches_as_an_Open_Educational_Resource_for_Triadic_Mathematical_Modeling_and_Structural_Analysis" src="https://github.com/user-attachments/assets/febb196f-2212-4652-8aa6-f2f9b2209d40" />
+
 # 📰 **PRESS RELEASE — FOR IMMEDIATE DISTRIBUTION**
 
 ## **TriadicFrameworks Launches as an Open Educational Resource for Triadic Mathematical Modeling and Structural Analysis**
