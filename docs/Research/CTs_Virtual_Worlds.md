@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="CTs_Virtual_Worlds" src="https://github.com/user-attachments/assets/b99b50bb-42ee-4ee1-a178-1b9791b5a026" />
+
 # Consciousness Transfers & Virtual Worlds — Operator Specification (Goal #3)
 
 ## Summary
