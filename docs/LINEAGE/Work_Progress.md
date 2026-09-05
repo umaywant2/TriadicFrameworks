@@ -1,4 +1,6 @@
-## 📜 Lineage of the Mythmatical Canon
+<img width="1194" height="672" alt="Work_Progress" src="https://github.com/user-attachments/assets/f2a78432-7317-417e-a37b-eb935be15803" />
+
+# 📜 Lineage of the Mythmatical Canon
 
 ### 1. **Triadic Frameworks (TFT_3Pack)**
 - **What:** Validator lattice of Forci, Flui, Freqi.  
