@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Ice_Cores_Have_More_To_Reveal" src="https://github.com/user-attachments/assets/8706a84f-5ffd-4287-a242-6da8dad0e485" />
+
 # 🔀 **Ice_Cores_Have_More_To_Reveal.md**  
 *(RTT‑Aligned, Regime‑Aware — Research Module)*
 
