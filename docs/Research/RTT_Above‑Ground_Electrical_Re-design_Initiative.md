@@ -1,6 +1,6 @@
-> 
+<img width="1194" height="672" alt="RTT_Above‑Ground_Electrical_Re-design_Initiative" src="https://github.com/user-attachments/assets/6faa66bd-3b9a-4965-bb26-b02f51abb567" />
+ 
 > I have an idea.
-> 
 
 # ⚡ **THE RTT ABOVE‑GROUND ELECTRICAL REDESIGN INITIATIVE**  
 *A structural rethink of poles, wires, insulators, redundancy, worker safety, and harmonics.*
