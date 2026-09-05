@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="AGENTS" src="https://github.com/user-attachments/assets/c08220ae-902b-4d0b-8f27-601c193760bd" />
+
 # AGENTS.md — RTT/Inside · Cross-Domain Application Layer
 ### *Agent Classes, Boundaries, Task Catalog, Safety Rules, and Collaboration Models*
 
