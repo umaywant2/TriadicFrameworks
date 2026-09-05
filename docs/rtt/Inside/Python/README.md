@@ -1,4 +1,3 @@
-<img width="672" height="1194" alt="rtt_Python" src="https://github.com/user-attachments/assets/a4abd7db-2214-4bf5-b650-785a7c89b9d8" />
 
 # RTT‑Inside / Python 
 
