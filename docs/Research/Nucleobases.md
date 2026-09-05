@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Nucleobases" src="https://github.com/user-attachments/assets/bba336b2-7164-40ce-abc8-d04ce10d5592" />
+
 # **Nucleobases**  
 
 - [`Nucleobases_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/Nucleobases_module.json) — Agentic module schema role assignments
