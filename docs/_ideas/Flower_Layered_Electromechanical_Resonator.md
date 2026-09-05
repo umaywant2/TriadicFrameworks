@@ -1,4 +1,4 @@
-<img width="1194" height="672" alt="Flower_Layered_Electrochemical_Resonator" src="https://github.com/user-attachments/assets/fcb2429d-7f8a-45f1-9464-f3dc462042c4" />
+<img width="1194" height="672" alt="Flower_Layered_Electromechanical_Resonator" src="https://github.com/user-attachments/assets/e9652e04-901f-4703-aa4f-369c47398b28" />
 
 # 💮 Concept Overview
 
