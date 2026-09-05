@@ -1,5 +1,5 @@
 # 🌱 Would a Chip‑Fab Student Intern Have Enough to Play With?
-###### [DPU](https://www.triadicframeworks.org/_ideas/#ADVANCE_DPU_VCG_NIMMS_ARCHITECTURE)
+- [`D369 Chip Spec`](https://www.triadicframeworks.org/rtt/D369_Chip_Spec)
 
 **Yes — and in fact, this entry is unusually well‑suited for them.**  
 Not because it teaches fabrication directly, but because it gives them the *structural mental model* they never get in school.
