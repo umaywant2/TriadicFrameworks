@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="hardware_RTT_NPU" src="https://github.com/user-attachments/assets/6858c0ea-375e-4b1d-9cb5-d95a7cc8447f" />
+
 # 🔥 What the vNPU page really is  
 Looking at the full content of the tab, here’s the truth:
 
