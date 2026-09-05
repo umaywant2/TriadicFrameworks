@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Inside_Global_Space_Force" src="https://github.com/user-attachments/assets/b15c8373-aa45-4aab-b317-e864f331e8b0" />
+
 # Space Force
 
 ---
