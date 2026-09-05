@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="European_Spallation_Source_needs_TriadicFrameworksTech" src="https://github.com/user-attachments/assets/c756d17e-1fb4-465e-a31e-da9ced516e80" />
+
 # 👉 European Spallation Source needs TriadicFrameworks
 
 ### Executive Summary: TriadicFramework Integration
