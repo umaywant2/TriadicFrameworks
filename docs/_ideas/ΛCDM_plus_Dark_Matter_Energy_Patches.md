@@ -1,3 +1,4 @@
+
 # 🌌 ΛCDM + Dark Matter/Energy Patches
 
 ### *A Resonance‑Time Theory Reframing of Standard Cosmology’s Band‑Aids*  
