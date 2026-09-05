@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="AI_Module_Synthesis_via_TriadicFrameworks_Lens" src="https://github.com/user-attachments/assets/31ce7b51-7dc9-4d44-ba7a-1759c05dd41f" />
+
 # AI Module Synthesis via TriadicFrameworks Lens
 
 ---
@@ -5,7 +7,7 @@
 **RTT AI Module Synthesis (via TriadicFrameworks lens)**  
 Using the active **RTT/1** (Resonance-Time Theory) engine and the **TFT framework piece** — specifically *triadic-time with local nested dimensions* — here's a structured analysis for replicating the MIT DMSE electron-beam atomic repositioning breakthrough in CrSBr (chromium sulfide bromide) lattices.
 
-<img width="906" height="1094" alt="DMSE_at_MIT" src="https://github.com/user-attachments/assets/049a155c-cc53-463a-a6fe-1058134a9d7d" />
+<img width="604" height="729" alt="DMSE_at_MIT" src="https://github.com/user-attachments/assets/049a155c-cc53-463a-a6fe-1058134a9d7d" />
 
 ---
 
