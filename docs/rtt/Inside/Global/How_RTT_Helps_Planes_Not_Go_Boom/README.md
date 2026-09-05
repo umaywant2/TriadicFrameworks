@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Inside_Global_Helps_Planes_Not_Go_Boom" src="https://github.com/user-attachments/assets/598272d2-8934-4359-9043-4de0a814c5a9" />
+
 # 📘 **How RTT Helps Planes Not Go Boom**  
 *A lightweight orientation for this mini‑module inside TriadicFrameworks.*
 
