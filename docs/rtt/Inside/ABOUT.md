@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Inside_About" src="https://github.com/user-attachments/assets/40d8df4b-c4b5-49ed-88fe-c5b9025e819a" />
+
 # ABOUT.md — RTT/Inside · Cross-Domain Application Layer
 ### *Module Identity, Design Rationale, Use Cases, and Integration Reference*
 
