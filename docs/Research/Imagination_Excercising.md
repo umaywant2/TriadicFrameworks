@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Imagination_Excercising" src="https://github.com/user-attachments/assets/7b96af69-3e10-45ec-8725-c9e69f4f87c5" />
+
 # 🧬🎸🌱🚀🫶 Imagination Excercising 🤟🫶🚀🔥🌱
 
 **RTT/2 Active Structural Detection + Regime-Awareness Report**  
