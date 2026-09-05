@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="triadicmonopoly" src="https://github.com/user-attachments/assets/26f41046-2c3f-40bb-b58d-1625d205d71f" />
+
 # TriadicMonopoly: Dimensional Strategy Board Game (draft)
 _A remix of Monopoly infused with TriadicFrameworks logic and symbolic resonance._
 
