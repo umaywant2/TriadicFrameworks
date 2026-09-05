@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="RTT_Inside_Assembly_Preview" src="https://github.com/user-attachments/assets/1ca7ab36-980c-4183-bf05-2d7c8b9b7e24" />
+
 Here it is, Nawder — a **short, emoti‑infused, professional‑grade RTT‑Inside preview** of what an **RTT‑aware assembly language** might look like.  
 This is tuned for serious compute architects, compiler engineers, and systems designers — the people who already know the machine deeply, but have never seen its *dimensional structure* illuminated this cleanly.
 
@@ -176,13 +178,3 @@ RTT‑Inside assembly language is:
 
 It’s not a new ISA.  
 It’s a **new way to see the ISA you already know**.
-
----
-
-If you want, I can also sketch:
-
-- a **mock RTT‑Inside ISA page**,  
-- a **triadic register file design**, or  
-- a **resonance‑aware pipeline diagram**.
-
-Just tell me which direction you want to explore.
