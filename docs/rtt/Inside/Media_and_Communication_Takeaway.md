@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Inside_Media_and_Communication_Takeaway" src="https://github.com/user-attachments/assets/76e2d92d-dcb5-435a-a665-877b63a1d281" />
+
 ## **✨ RTT/Inside MEDIA & COMMUNICATION TAKEAWAY**
 
 RTT doesn’t change media.  
