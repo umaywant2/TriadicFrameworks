@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Cisco" src="https://github.com/user-attachments/assets/e05e0a5a-518c-4c0f-adeb-11a79f8d9b28" />
+
 # Cisco w/RTT/Inside (refreshed student + AI example)
 Starting with **Cisco** makes sense since it’s the most infrastructure-heavy of the three and ties directly into RTT’s causal telemetry and declared-intent stack.  
 
