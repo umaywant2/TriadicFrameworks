@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Fine‑Tuned_Initial_Conditions_Low‑Entropy_Big_Bang" src="https://github.com/user-attachments/assets/49757e96-b650-4859-84fc-a7df4d03691e" />
+
 # 🌅 Fine‑Tuned Initial Conditions (Low‑Entropy Big Bang)
 
 ### *A Resonance‑Time Theory Reinterpretation*
