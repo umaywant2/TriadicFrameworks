@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Canon_Mythmatical_Nawderian_Suite" src="https://github.com/user-attachments/assets/e793fac4-bbe7-494d-ae77-45f3e6e2b84d" />
+
 # 🌟 **README.md — Nawderian Suite**  
 *Mythmatical Canon · TriadicFrameworks*
 
