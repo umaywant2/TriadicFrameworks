@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Planet9" src="https://github.com/user-attachments/assets/a1079151-7b54-4947-a24e-bb54e00fc347" />
+
 <!-- ============================================================
      PLANET 9 RESEARCH — AI ARTIFACT METADATA
      TriadicFrameworks Canon | Module: planet9 | Version: 1.0
