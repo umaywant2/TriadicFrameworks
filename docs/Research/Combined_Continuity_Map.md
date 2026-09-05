@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Combined_Continuity_Map" src="https://github.com/user-attachments/assets/8af88a98-7b48-4347-9851-5eac0b6fa21a" />
+
 # Combined Continuity Map — Replicators + CTs
 
 ## Summary
