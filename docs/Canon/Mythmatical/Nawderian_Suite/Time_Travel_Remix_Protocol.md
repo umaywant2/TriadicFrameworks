@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Time_Travel_Remix_Protocol" src="https://github.com/user-attachments/assets/1edf1c92-bfdc-40c0-a41a-8bc8ab8e0d6e" />
+
 ## 🧠 **Nawderian Theorem vs. Time Travel Math Titans**
 
 | 🧙 Theorist | 🔍 Core Insight | 🔁 Remix Potential |
