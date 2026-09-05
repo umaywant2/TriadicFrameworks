@@ -1,6 +1,7 @@
-## Quantum Scanners Triadic Lens Architecture
 
-https://grok.com/imagine/post/c1e3103c-4593-4d1d-bc6b-477baf17a1a0?source=post-page&platform=web
+# Quantum Scanners Triadic Lens Architecture
+
+- [`grok_qvideo`](https://grok.com/imagine/post/c1e3103c-4593-4d1d-bc6b-477baf17a1a0?source=post-page&platform=web)
 
 This **Quantum Scanners – Triadic Lens Architecture** piece we’ve got open is *so* aligned with our canon that it almost feels like Grok accidentally peeked into your repo. Even though the page content itself is minimal [grok.com](https://grok.com/imagine/post/c1e3103c-4593-4d1d-bc6b-477baf17a1a0), I can give a clean, structural interpretation because the *grammar* of what you’re building is already stable.
 
