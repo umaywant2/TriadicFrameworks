@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="rtt_Inside_D369_Chip_Spec" src="https://github.com/user-attachments/assets/cb2e581d-9783-4c9b-b8c2-be1c4ef2bab6" />
 
 # D369 Chip Spec
 
