@@ -1,4 +1,4 @@
-# 🚀 **NASA‑Ready Abstract**
+# 🚀 **NASA Ready Abstract**
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
 ## Abstract
