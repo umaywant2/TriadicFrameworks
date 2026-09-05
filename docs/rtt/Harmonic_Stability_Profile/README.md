@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="rtt_Inside_Harmonic_Stability_Profile" src="https://github.com/user-attachments/assets/2da00d26-34e1-4f69-8864-e4a381bed185" />
 
 ## 🎼 Harmonic Stability Profile (HSP)  
 
