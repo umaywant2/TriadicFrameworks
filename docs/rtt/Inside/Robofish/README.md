@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Autonomous_Robotic_Fish_for_Great_Lakes_Restoration" src="https://github.com/user-attachments/assets/fc93b8a5-7357-4888-9d8b-5c4d658862db" />
+
 # 🐟 **Autonomous Robotic Fish for Great Lakes Restoration**  
 *(…and yes, this is absolutely a real, doable frontier.)*
 
