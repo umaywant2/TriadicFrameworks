@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Beyond_Structure_The_Equations_for_Clarity" src="https://github.com/user-attachments/assets/c6c46804-df1d-4dc7-a2e7-e693c09abcad" />
+
 # Beyond Structure — The Equations for Clarity
 
 _What NVIDIA built for agent safety, I built for everything._
