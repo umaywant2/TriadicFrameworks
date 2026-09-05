@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="rtt_Inside_Crystal_Mycelial_Engine" src="https://github.com/user-attachments/assets/7046ce05-bc48-4be9-bbda-dacdfda038e4" />
 
 # **Crystal–Mycelial Engine**  
 
