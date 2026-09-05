@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Big_Data_examined_with_RTT" src="https://github.com/user-attachments/assets/73441a7d-96a4-4d32-b3f6-65058723b5f7" />
+
 # Big Data examined with RTT
 
 Continued from X.com article
