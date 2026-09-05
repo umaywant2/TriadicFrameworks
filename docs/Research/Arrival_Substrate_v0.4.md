@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Arrival_Substrate_v0 4" src="https://github.com/user-attachments/assets/26cef3dc-d84a-49c0-bf9e-fff14d40011d" />
+
 # Arrival Substrate v0.4 — Geometric Fixed‑Point Proof
 
 ## Summary
