@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Game_Developers" src="https://github.com/user-attachments/assets/59f5bfdc-8804-4496-8768-adfe385e089b" />
+
 # 🎮 **API for Game Developer Variants using RTT/Inside**  
 
 ### *A Practical Guide for Integrating Resonance Structural Awareness into Games & Simulations*
