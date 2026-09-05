@@ -1,3 +1,4 @@
+
 # 🛩️ **Kid‑Friendly Version: “How RTT Helps Planes Not Go Boom”**
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
