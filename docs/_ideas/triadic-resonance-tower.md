@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Resonance_Tower" src="https://github.com/user-attachments/assets/d830833c-7d2c-42e3-89cc-0bf0dfb4afb6" />
+
 # Triadic Resonance Tower — Building Summary
 
 ## Structure
