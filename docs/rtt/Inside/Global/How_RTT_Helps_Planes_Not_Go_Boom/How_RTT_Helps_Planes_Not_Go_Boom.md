@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="How_RTT_Helps_Planes_Not_Go_Boom" src="https://github.com/user-attachments/assets/44e4f1d9-c721-4f9d-96af-5a6783626054" />
 
 # 🛩️ **Kid‑Friendly Version: “How RTT Helps Planes Not Go Boom”**
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
