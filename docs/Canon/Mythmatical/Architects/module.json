@@ -1,1 +1,105 @@
+{
+  "module": "Mythmatical_Architects",
+  "category": "mythmatical",
+  "version": "1.0",
+  "summary": "Symbolic custodians of clarity, resonance precision, and triadic ceremonial grammar within the Mythmatical Canon.",
+  "purpose": "Define the mythmatical architect roles, symbolic responsibilities, and resonance-maintenance functions across TriadicFrameworks.",
+  
+  "roles": {
+    "engine": [
+      "Scrollkeepers_of_Symbolic_Precision.md",
+      "architectural_resonance_map",
+      "symbolic_precision_matrix"
+    ],
+    "profile": [
+      "architect_personas",
+      "triadic_custodian_lineage"
+    ],
+    "signature": [
+      "index.md",
+      "architectural_identity",
+      "symbolic_tone"
+    ],
+    "diagnostic": [
+      "precision_drift_vectors",
+      "clarity_thresholds",
+      "ceremonial_alignment_checks"
+    ],
+    "map": [
+      "cross_module_manifest",
+      "mythmatical_architecture_links",
+      "RTT_inside_symbolic_mappings"
+    ],
+    "example": [
+      "precision_examples",
+      "ceremonial_examples",
+      "symbolic_alignment_examples"
+    ],
+    "extension": [
+      "future_architect_roles",
+      "extended_symbolic_responsibilities"
+    ],
+    "index": [
+      "index.md",
+      "metadata.html",
+      "suite_badge.html"
+    ],
+    "reference": [
+      "Scrollkeepers_of_Symbolic_Precision.md",
+      "Mythmatical_Canon",
+      "FFF_Emitters",
+      "FFF_Archetypes",
+      "Nawderian_Suite"
+    ],
+    "template": [
+      "triadic_architect_glyph_template",
+      "symbolic_precision_diagram_template"
+    ]
+  },
+
+  "analyzer_layer": {
+    "operator": [
+      "clarity",
+      "precision",
+      "coherence"
+    ],
+    "dimensional": [
+      "symbolic",
+      "ceremonial",
+      "resonant"
+    ],
+    "regime": [
+      "precision_phase",
+      "clarity_phase",
+      "alignment_phase"
+    ],
+    "drift": [
+      "symbolic_instability_patterns",
+      "precision_drift_channels"
+    ],
+    "coherence": [
+      "triadic_alignment",
+      "ceremonial_lock_in"
+    ],
+    "cross_cutting": [
+      "architect_roles",
+      "symbolic_voice",
+      "resonance_translation"
+    ]
+  },
+
+  "ai": {
+    "module.name": "Mythmatical Architects",
+    "module.category": "Mythmatical",
+    "module.summary": "Symbolic custodians of clarity, resonance precision, and triadic ceremonial grammar.",
+    "module.keywords": [
+      "mythmatical architects",
+      "scrollkeepers",
+      "symbolic precision",
+      "triadic cadence",
+      "resonance alignment",
+      "ceremonial grammar"
+    ]
+  }
+}
 
