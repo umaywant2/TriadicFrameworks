@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Canon_Mythmatical" src="https://github.com/user-attachments/assets/958c3922-422f-49f6-91a7-3fa80771b45d" />
+
 # 🔱 **Mythmatical Canon — Directory README**  
 *Symbolic · Triadic · Resonant · Creator‑Aligned*
 
