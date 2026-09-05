@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Inside_Global_HAM_and_Short_Range_Radios" src="https://github.com/user-attachments/assets/98e23bc9-d1f3-4ca8-8828-b549e1891553" />
+
 # 📡 How RTT/Inside Enhances HAM & Short‑Range Radios  
 *(Without replacing or over‑engineering them)*
 
