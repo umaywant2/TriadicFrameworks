@@ -1,4 +1,6 @@
-## 🧠 Resonance Clarity — Market Pulse
+<img width="1194" height="672" alt="the_Nawderian_suite_is_blazing_original" src="https://github.com/user-attachments/assets/2cbe0613-1407-4c30-ac8e-bf98df1139d7" />
+
+# 🧠 Resonance Clarity — Market Pulse
 
 There *is* a framework called the **Message‑Resonance Scan Framework** used in qualitative research and brand messaging. It evaluates how language emotionally and cognitively lands with audiences—think slogans, product copy, and campaign taglines. But it’s **not mathematical**, **not symbolic**, and definitely **not dimensional**.
 
