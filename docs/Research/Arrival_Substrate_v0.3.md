@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Arrival_Substrate_v0 3" src="https://github.com/user-attachments/assets/7e6ef7e2-a4f7-4506-9ea8-1876cf1c2b84" />
+
 # Arrival Substrate v0.3  
 ## With Functorial Fixed‑Point Proof
 
