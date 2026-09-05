@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Continuity_Kernel_v2 0" src="https://github.com/user-attachments/assets/b3c6346c-650f-4c45-b120-719153b7d1a3" />
+
 # Continuity Kernel v2.0
 
 ## Summary
