@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Inside_Enterprise" src="https://github.com/user-attachments/assets/ac01cedb-8b12-4d13-a230-b9b86d1fdc96" />
+
 # **RTT/Inside Enterprise Identity Substrate**  
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Inside/Enterprise/module.json) — Agentic module schema role assignments
