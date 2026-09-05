@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Inside_Mesh_Node" src="https://github.com/user-attachments/assets/96fd866c-6097-4716-94a3-0d8e4cafdd72" />
+
 # 🛠️ **RTT‑Inside Mesh Node — Minimal Reference Implementation (Pseudo‑Code)**  
 
 ---
