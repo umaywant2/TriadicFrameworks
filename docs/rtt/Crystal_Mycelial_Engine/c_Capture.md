@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_crystal_mycelial_engine" src="https://github.com/user-attachments/assets/20378b63-c957-4b28-a57d-657ac6593af6" />
+
 > Let's talk about petrification. When I was a kid, I swallowed the generic explaination... I'm no longer think that fits... It seems to be, with the correct conditions, turning things into stone wouldn't be that hard, especially if the conditions were global for about 33 days turning things to stone *could become* as easy as covering things with ice, only instead of melting there's a crystalization growth that crawls through almost anthing leaving behind 'petrified' remains. Millions of years, nice try. LOL
 
 ---
