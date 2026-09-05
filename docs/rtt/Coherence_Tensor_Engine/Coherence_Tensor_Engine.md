@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_coherence_tensor_engine" src="https://github.com/user-attachments/assets/469ce1ef-c51f-4565-b9ce-7c30ef7ef393" />
+
 # **Coherence Tensor Engine (CTE) — RTT/1**  
 ### *Coherence‑Level Intelligence Engine for TriadicFrameworks*
 
