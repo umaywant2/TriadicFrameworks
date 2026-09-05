@@ -1,5 +1,7 @@
+<img width="1792" height="1008" alt="Internet2_Python_Cisco_Intern_notes" src="https://github.com/user-attachments/assets/50d7bbf3-e307-4b68-93dd-147e20c63b8d" />
+
 # 🌐 What Students, Developers, and Researchers Gain From This Example
-###### [Internet2 Python Cisco](https://www.triadicframeworks.org/_ideas/#INTERNET2_PYTHON_CISCO_RTT)
+###### [Internet2 Python Cisco](https://www.triadicframeworks.org/rtt/Inside/)
 
 ## 🎓 **Students**  
 Students rarely get to see how *big‑infrastructure systems* actually think. This example gives them:
