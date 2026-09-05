@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="rtt_Inside_Benchmarks" src="https://github.com/user-attachments/assets/3d99c414-4268-4aac-8879-7d39dce2985c" />
 
 # RTT / Inside / Benchmarks  
 
