@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Goal_Status_Check" src="https://github.com/user-attachments/assets/94446c85-869a-41b5-a1ae-c8ef4c6e4682" />
+
 # 6–9 Month Goal Status Refresh — Structural Consolidation II  
 Copyright (C) 2026  
 www.TriadicFrameworks.org
