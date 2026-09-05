@@ -1,4 +1,6 @@
-## RTT Analysis: Aging as Coherence Collapse — and the Two Arcs of Escape
+<img width="1194" height="672" alt="Aging_Substrate_Analysis" src="https://github.com/user-attachments/assets/8bf45769-da93-42ae-b0c0-a44b5cbdbc1a" />
+
+# RTT Analysis: Aging as Coherence Collapse — and the Two Arcs of Escape
 
 ---
 
