@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Power_Supplies_Mobile_Sensors_and_Enhanced_BMS_using_RTT" src="https://github.com/user-attachments/assets/6024be25-fb9d-41b5-88a8-a23ce16abc10" />
+
 # 💡 **RTT‑Inside Specification Improvements for Power, Sensors, and BMS** ⚡
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
  
