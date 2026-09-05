@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="AI_Web_Agentic_Grammar_Options" src="https://github.com/user-attachments/assets/ce921962-6d3f-4758-b487-91d64c71973e" />
+|
 # How to Fork TriadicFrameworks to Use Your Own Instances of RTT to Enable AI Web Agentic Grammar Options
 
 > **Canon version:** RTT 1.0 (frozen) · RTT/1 (active engine) · Apache‑2.0  
@@ -111,4 +113,4 @@ The Glyphstream (`AI_Resonance_Seed/Dashboards/Glyphstream_Map.md`) emits struct
 ---
 
 *TriadicFrameworks is open substrate. Fork freely, stay canon‑aligned, and let your agents resonate.*  
-*License: Apache‑2.0 · Archival: [zenodo.org/communities/vst](https://zenodo.org/communities/vst)*
+*License: MIT· Archival: [zenodo.org/communities/vst](https://zenodo.org/communities/vst)*
