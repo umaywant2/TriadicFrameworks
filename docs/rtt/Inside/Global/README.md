@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="A_Model_for_Global_ATC_and_SF_and_HAM_Radio_Using_RTT" src="https://github.com/user-attachments/assets/dbdfb4ef-2584-4e0f-973f-1b70ccd5e736" />
+
 # ✈️🚀📡 **A Model for Global ATC and SF and HAM Radio Using RTT/Inside**
 
 *A structural, mythmatical, and operational re‑architecture*
