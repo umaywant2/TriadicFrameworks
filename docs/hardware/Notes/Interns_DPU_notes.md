@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Interns_DPU_notes" src="https://github.com/user-attachments/assets/fc10c1af-c622-4b40-8dbb-d214f0c6b4da" />
+
 # 🌱 Would a Chip‑Fab Student Intern Have Enough to Play With?
 - [`D369 Chip Spec`](https://www.triadicframeworks.org/rtt/D369_Chip_Spec)
 
