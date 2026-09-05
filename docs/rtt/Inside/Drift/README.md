@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Inside_Drift" src="https://github.com/user-attachments/assets/796aa57d-1293-4fd9-9740-50f333f12c96" />
+
 # 🤷 **AI Drift Gone with RTT-Inside**
 
 ### **A Research‑Style Manifesto on Chimera, Drift, and Structural Correction**
