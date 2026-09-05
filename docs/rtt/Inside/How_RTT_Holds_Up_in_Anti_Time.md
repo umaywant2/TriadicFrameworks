@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="How_RTT_Holds_Up_in_Anti_Time" src="https://github.com/user-attachments/assets/9e5db027-38b9-4a14-987e-244a9b01cfc2" />
+
 # 🔮 How RTT Holds Up in Antitime  
 *(A triadic, structural explanation students will actually enjoy)*
 
