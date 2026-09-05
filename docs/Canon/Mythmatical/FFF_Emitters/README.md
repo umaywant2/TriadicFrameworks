@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Canon_Mythmatical_FFF_Emitters" src="https://github.com/user-attachments/assets/ea4f7a63-7822-43e4-b165-8252b20cf479" />
+
 # 🔱 **README.md — FFF Emitters (Mythmatical Canon)**  
 *Frequency · Fluids · Forces · Triadic Emitters of Resonance*
 
