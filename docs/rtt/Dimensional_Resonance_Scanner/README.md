@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="rtt_Inside_Dimensional_Resonance_Scanner" src="https://github.com/user-attachments/assets/fb484e54-2e9a-4b67-9a9c-1de654ec65fc" />
 
 # **Dimensional Resonance Scanner — RTT/1**  
 
