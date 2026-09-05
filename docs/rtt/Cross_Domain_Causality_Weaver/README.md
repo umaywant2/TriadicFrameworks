@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="rtt_Inside_Cross_Domain_Causality_Weaver" src="https://github.com/user-attachments/assets/c12dc313-bee1-43a3-af55-e87a34014ebf" />
 
 # **Cross‑Domain Causality Weaver — RTT/1**  
 
