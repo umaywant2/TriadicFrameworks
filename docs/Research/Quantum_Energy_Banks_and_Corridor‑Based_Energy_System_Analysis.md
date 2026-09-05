@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Quantum_Energy_Banks_and_Corridor" src="https://github.com/user-attachments/assets/67f38cbf-7d03-4e75-8add-88b1d1ab9554" />
+
 # 📝 Quantum Energy Banks - Corridor‑Based Energy System Analysis
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
