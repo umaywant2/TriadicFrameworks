@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Full_multi_chapter_Finance_Edition_with_RTT_Inside" src="https://github.com/user-attachments/assets/733c9545-8564-4139-a1ec-2e0d7325e8bd" />
+
 # **📘 Full Multi‑Chapter Finance Edition with RTT‑Inside**
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
