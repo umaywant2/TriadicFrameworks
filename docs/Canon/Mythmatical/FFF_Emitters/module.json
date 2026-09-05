@@ -1,1 +1,107 @@
+{
+  "module": "FFF_Emitters",
+  "category": "mythmatical",
+  "version": "1.0",
+  "summary": "Mythmatical roles and resonance functions of the Triadic FFF Emitters — Frequency, Fluids, and Forces.",
+  "purpose": "Define the symbolic, structural, and resonance-based interpretation of the FFF Emitters within TriadicFrameworks.",
+  "roles": {
+    "engine": [
+      "Mythmatical_Roles_of_FFF_Emitters.md",
+      "frequency_resonance_map",
+      "fluid_coupling_map",
+      "force_shaping_map"
+    ],
+    "profile": [
+      "FFF_Archetypes.md",
+      "triadic_emitter_personas",
+      "mythmatical_emitter_voice"
+    ],
+    "signature": [
+      "index.md",
+      "triadic_emitter_identity",
+      "mythmatical_emitter_tone"
+    ],
+    "diagnostic": [
+      "emitter_drift_vectors",
+      "resonance_thresholds",
+      "triadic_stability_patterns"
+    ],
+    "map": [
+      "cross_module_manifest",
+      "cosmology_emitter_links",
+      "RTT_inside_mappings"
+    ],
+    "example": [
+      "cosmology_examples",
+      "governance_examples",
+      "architecture_examples",
+      "hardware_examples",
+      "mythmatical_examples"
+    ],
+    "extension": [
+      "future_emitter_expansions",
+      "extended_resonance_roles"
+    ],
+    "index": [
+      "index.md",
+      "metadata.html",
+      "suite_badge.html"
+    ],
+    "reference": [
+      "Mythmatical_Roles_of_FFF_Emitters.md",
+      "FFF_Archetypes.md",
+      "Mythmatical_Manifest",
+      "Lostational_Mythos",
+      "Resonance_Beings"
+    ],
+    "template": [
+      "triadic_emitter_glyph_template",
+      "resonance_flow_diagram_template"
+    ]
+  },
+  "analyzer_layer": {
+    "operator": [
+      "clarity",
+      "drift",
+      "coherence"
+    ],
+    "dimensional": [
+      "frequency",
+      "fluids",
+      "forces"
+    ],
+    "regime": [
+      "oscillation_phase",
+      "flow_phase",
+      "force_phase"
+    ],
+    "drift": [
+      "emitter_instability_patterns",
+      "fluid_drift_channels"
+    ],
+    "coherence": [
+      "frequency_lock_in",
+      "force_alignment"
+    ],
+    "cross_cutting": [
+      "triadic_emitter_roles",
+      "mythmatical_voice",
+      "resonance_translation"
+    ]
+  },
+  "ai": {
+    "module.name": "FFF Emitters",
+    "module.category": "Mythmatical",
+    "module.summary": "Mythmatical roles and resonance mappings of Frequency, Fluids, and Forces.",
+    "module.keywords": [
+      "Frequency",
+      "Fluids",
+      "Forces",
+      "Resonance",
+      "Triadic Emitters",
+      "Mythmatical Roles",
+      "RTT-Inside"
+    ]
+  }
+}
 
