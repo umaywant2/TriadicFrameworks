@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Mythmatical_Architects" src="https://github.com/user-attachments/assets/d54b825d-6f71-4515-a6e1-3a6d473021f3" />
+
 # 🧬 Mythmatical Architects — Scrollkeepers of Symbolic Precision
 
 ## 📜 Definition
