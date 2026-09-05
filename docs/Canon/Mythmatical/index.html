@@ -1,0 +1,529 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- /docs/_ideas/index.html — <head>                               -->
+<!-- Module: Ideas Sandbox (ideation — non-canonical)                -->
+<!-- Last updated: 2026-05-06                                       -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="language" content="en" />
+<meta name="last-modified" content="2026-05-06" />
+<meta name="generator" content="TriadicFrameworks Static Canon Engine" />
+<meta name="creator" content="TriadicFrameworks" />
+<meta name="author" content="Nawder Loswin" />
+<meta name="publisher" content="TriadicFrameworks" />
+
+<title>Ideas (Sandbox) — TriadicFrameworks</title>
+
+<meta name="description"
+      content="TriadicFrameworks Ideas Sandbox — non‑canonical cooker for prototypes, sketches, drafts, seed papers, game concepts, and early‑stage RTT explorations. 288 entries across physics, AI, governance, cosmology, education, and infrastructure." />
+<meta name="keywords"
+      content="ideas, sandbox, prototypes, drafts, concept incubation, RTT-Inside, seed papers, game design, cosmology, governance" />
+
+<!-- ═══ Module Identity (standardized per D369 template) ═══ -->
+
+<meta name="module" content="Ideas Sandbox" />
+<meta name="canonical-id" content="IDEAS" />
+<meta name="module-type" content="Ideation" />
+<meta name="version" content="1.1" />
+<meta name="status" content="non-canonical" />
+<meta name="parent" content="TriadicFrameworks Root" />
+<meta name="siblings" content="Research, D369_Chip_Spec, FCG, Education" />
+<meta name="canonical-path" content="/docs/_ideas/" />
+<meta name="last-updated" content="2026-05-06" />
+<meta name="license" content="MIT" />
+
+<!-- ═══ AI Discovery (standardized) ═══ -->
+
+<meta name="ai-ready" content="true" />
+<meta name="ai-module-id" content="IDEAS" />
+<meta name="ai-operators"
+      content="IDEA-Sketch, IDEA-Draft, IDEA-Prototype, IDEA-Promote, IDEA-Archive" />
+
+<meta name="ai.module" content="Ideas Sandbox" />
+<meta name="ai.module.name" content="Ideas Sandbox" />
+<meta name="ai.module.category" content="ideation" />
+<meta name="ai.module.summary"
+      content="Non-canonical cooker: 288 entries (219 .md, 39 .html, 10 .json, 3 .py, 2 .pdf, 2 .zip, 4 .svg). Ideas are cooked here before promotion to canonical modules. Submodules: How RTT Helps Planes Not Go Boom (7 chapters), art/ (4 SVGs), 9 game/mythic manifests." />
+<meta name="ai.version" content="1.1" />
+<meta name="ai.purpose"
+      content="Provide a safe, non-canonical space for idea incubation and early-stage exploration across all TriadicFrameworks domains." />
+<meta name="ai.keywords"
+      content="ideas, sandbox, prototypes, drafts, concept incubation, seed papers, RTT-Inside, game design, cosmology, governance, physics, AI" />
+<meta name="ai.audience" content="developers, researchers, AI systems" />
+<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml" />
+<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions" />
+<meta name="ai.contact.x" content="@TriadicFrameworks" />
+<meta name="ai.contact.youtube" content="@TriadicFrameworks" />
+<meta name="ai.license" content="MIT" />
+
+<!-- ═══ Canonical / SEO ═══ -->
+
+<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#0ff" />
+
+<!-- ═══ Open Graph ═══ -->
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="TriadicFrameworks" />
+<meta property="og:title" content="Ideas (Sandbox) — TriadicFrameworks" />
+<meta property="og:url" content="https://www.triadicframeworks.org/_ideas/" />
+<meta property="og:description"
+      content="Non-canonical cooker — 288 entries across prototypes, seed papers, game concepts, and early-stage RTT explorations." />
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+
+<!-- ═══ Twitter Card ═══ -->
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Ideas (Sandbox) — TriadicFrameworks" />
+<meta name="twitter:description"
+      content="288 entries cooking — prototypes, seed papers, game concepts, and RTT explorations." />
+
+<!-- ═══ Citation ═══ -->
+
+<meta name="citation_title" content="Ideas Sandbox — TriadicFrameworks" />
+<meta name="citation_author" content="Nawder Loswin" />
+<meta name="citation_date" content="2026-05-06" />
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+       
+  /* Context Block */
+  .context-block {
+    font-family: monospace;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0.5rem 0 1rem 0;
+  }
+       
+  /* Context Label */
+  .context-label {
+    color: #ff9800; /* orange */
+    font-weight: bold;
+    margin-right: 0.25rem;
+  }
+       
+  /* Context Value */
+  .context-value {
+    color: #ffffff; /* white */
+  }
+
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — NAV REIMAGINED
+   ============================================================ */
+
+nav {
+  width: 260px;
+  float: left;
+  background: rgba(21, 24, 29, 0.75); /* glassy dark */
+  backdrop-filter: blur(12px);
+  padding: 1.6rem 1.2rem;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  box-shadow: inset -1px 0 0 rgba(255,255,255,0.04);
+}
+
+nav h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent-rtt);
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.9;
+}
+
+nav h3 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 1.4rem 0 0.6rem 0;
+  color: var(--text-main);
+  opacity: 0.85;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.45rem 0.2rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 
+    color 0.2s ease,
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+
+nav a:hover {
+  color: var(--text-main);
+  background: rgba(255,255,255,0.05);
+  transform: translateX(3px);
+}
+
+nav a:active {
+  transform: translateX(1px) scale(0.98);
+}
+
+nav a::before {
+  content: attr(data-emoji);
+  font-size: 1.05rem;
+  opacity: 0.9;
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+</head>
+
+<body>
+   
+<nav class="nav-band">
+ <p align="center">
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+ </p> 
+
+  <h2>🤔 Ideas | TriadicFrameworks</h2>
+      <a href="#README">🔰 README</a>
+      <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
+      <a href="#CONTRIBUTING">🤝 Contributing</a>
+      <a href="https://www.triadicframeworks.org/education/">💯 Education | RTT</a>
+      <a href="#GLOSSARY">🎯 Glossary</a>
+      <a href="#LINEAGE">📜 Lineage</a>
+      <a href="#LICENSE">📎 License</a>
+      <a href="#SITEMAP">🌐 Sitemap</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
+      <a href="#SECURITY">🔐 Security</a>
+      <a href="#PRINCIPLES">🧘 Principles</a>
+    <h3>📚 Primers & Foundations</h3>
+      <a href="#RTT_INFORMATION_PRIMER">🧩 RTT Information Primer</a>
+      <a href="#GOOD_NEWS_EVERYONE">📣 Good News Everyone</a>
+      <a href="#TEAMS_PLAYTIME_REMEMBERING">🎈 Teams Playtime & Remembering</a>
+      <a href="#RTT_TO_RSM_CHECKS">🧮 RTT → RSM Checks</a>
+    <h3>🤖 AI & NIMMS</h3>
+      <a href="#AI_TEST_RTT_NIMMS">🧪 AI Test of RTT‑NIMMS</a>
+      <a href="#AI_AGENT_SHOWDOWN">⚔️ AI Agent Showdown</a>
+      <a href="#AI_NIMMS_COM">🛰️ AI NIMMS COM</a>
+      <a href="#AI_TRAINING_FINDINGS">📊 AI Training Findings</a>
+    <h3>🔮 Resonance, Records & Drift</h3>
+      <a href="#AKASHIC_RECORDS_NULLARIUM">📜 Akashic Records Nullarium</a>
+      <a href="#AMBIENT_LEGITIMACY_DRIFT">🌫️ Ambient Legitimacy Drift</a>
+      <a href="#ARC_POEMS">🖋️ Arc Poems</a>
+    <h3>⏱️ Time, Clocks & Autonomous Systems</h3>
+      <a href="#ATOMIC_CLOCKS_SCAFFOLD">⏲️ Atomic Clocks Scaffold</a>
+      <a href="#AUTONOMOUS_ROBOTIC_FISH">🐟 Autonomous Robotic Fish</a>
+      <a href="#GLOBAL_ATC_SF_HAM_RTT">🌐 Global ATC + SF + HAM (RTT)</a>
+    <h3>🌀 Physics, Paradox & Deep Structure</h3>
+      <a href="#BELLS_THEOREM_RTT">🔔 Bell’s Theorem (RTT)</a>
+      <a href="#BIG_QUESTIONS_SCIENCE">❓ Big Questions in Science</a>
+      <a href="#BLACK_HOLES_RESONANCE_RESERVOIRS">🕳️ Black Holes as Resonance Reservoirs</a>
+      <a href="#BY_EYE_OF_HORUS">👁️ Eye of Horus</a>
+      <a href="#CALCULUS_ON_STEROIDS">📐 Calculus on Steroids</a>
+    <h3>🌌 Causality, Codex & Constitutional Structures</h3>
+      <a href="#CAUSALITY_TRIADIC_TIME">🕰️ Causality in Triadic Time</a>
+      <a href="#CODEX_RESONANCE_TIME_UNIVERSE">📘 Codex of the Resonance‑Time Universe</a>
+      <a href="#CONSTITUTIONAL_AMENDMENT_STEWARD">🏛️ Constitutional Amendment Stewardship</a>
+    <h3>🧭 Course Corrections & Daily Logs</h3>
+      <a href="#COURSE_CORRECTION_GPU_NPU">⚙️ GPU/NPU Course Correction</a>
+      <a href="#DAILY_ACCOMPLISHMENT_LOG">📅 Daily Accomplishment Log</a>
+    <h3>🌐 Dimensional Mechanics & Drift</h3>
+      <a href="#DIMENSIONAL_ACTIVATION_LOG">🔓 Dimensional Activation Log</a>
+      <a href="#DIMENSIONAL_BREACH_PROTOCOL">🚨 Dimensional Breach Protocol</a>
+      <a href="#DIMENSIONAL_MATH_SUBSTRATE">📊 Dimensional Math Substrate</a>
+      <a href="#DIMENSIONAL_RUPTURE">💥 Dimensional Rupture</a>
+      <a href="#DRIFT2_SCROLL_TRACE">📜 Drift2 Scroll Trace</a>
+      <a href="#DRIFT_SCROLL_TRACE">📜 Drift Scroll Trace</a>
+    <h3>🏗️ Triadic Tools</h3> 
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
+      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 Packages and Cores</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas</a>
+      <a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a>    
+      <a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS</a>
+      <a href="https://www.triadicframeworks.org/_ideas/">🤔 Ideas</a>
+      <a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">🔛(RTT frozen)</a>
+      <a href="https://www.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
+      <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
+      <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
+      <a href="../">🔙TFT</a>
+   <!-- RTT Session Header (canonical stub) -->
+<section id="ideas-session-header"
+         data-ideas="1"
+         data-coherence="loose"
+         data-drift="allowed"
+         data-layer="ideation">
+
+  <h2>Session Context</h2>
+
+  <div class="context-block">
+
+    <span class="context-label"><strong>Canon:</strong></span>
+    <span class="context-value">non‑canonical (sandbox)</span><br>
+
+    <span class="context-label"><strong>Modules:</strong></span>
+    <span class="context-value">
+      sketches → drafts → prototypes → concept notes → experiments → promoted articles
+    </span><br>
+
+    <span class="context-label"><strong>Drift:</strong></span>
+    <span class="context-value">allowed (sandbox)</span><br>
+
+    <span class="context-label"><strong>Coherence:</strong></span>
+    <span class="context-value">loose (ideation grammar)</span><br>
+
+    <span class="context-label"><strong>Version:</strong></span>
+    <span class="context-value">1.1 (ideas‑refreshed)</span><br>
+
+    <span class="context-label"><strong>Format:</strong></span>
+    <span class="context-value">markdown + html + json manifests + python + svg + pdf</span><br>
+
+    <span class="context-label"><strong>Front door:</strong></span>
+    <span class="context-value">exists (Ideas root)</span><br>
+
+    <span class="context-label"><strong>Every page:</strong></span>
+    <span class="context-value">non‑canonical + exploratory</span><br>
+
+    <span class="context-label"><strong>Audience:</strong></span>
+    <span class="context-value">developers + researchers + AIs</span>
+
+  </div>
+
+</section>
+
+<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;border-radius:6px;font-size:13px;">
+  🟣 Ideas Sandbox<br>📘 Non‑Canonical Cooker · 288 entries · v1.1
+</div>
+
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+// ============================================================
+// PRE‑RTT DOCUMENT MAP — FULL CATEGORIZED INVENTORY
+// Purpose: Orientation-first structural map for review, pruning,
+//          lineage preservation, and later RTT canon alignment.
+// ============================================================
+
+const DOC_MAP = {
+      README: 'README.md',
+      ABOUT: '../ABOUT.md',
+      CONTRIBUTING: '../CONTRIBUTING.md',
+      GLOSSARY: '../GLOSSARY.md',
+      LINEAGE: '../LINEAGE.md',
+      LICENSE: '../LICENSE.md',
+      SITEMAP: '../sitemap.md',
+      QUICKSTART: '../QUICKSTART.md',
+      CODE_OF_CONDUCT: '../CODE_OF_CONDUCT.md',
+      SECURITY: '../SECURITY.md',
+      PRINCIPLES: '../PRINCIPLES.md',
+      RTT_INFORMATION_PRIMER: '000_RTT_Information_Primer.md',
+      GOOD_NEWS_EVERYONE: '000___Good_News_Everyone.md',
+      TEAMS_PLAYTIME_REMEMBERING: '0n_Teams_Playtime_and_Remembering_Who_You_Are.md',
+      RTT_TO_RSM_CHECKS: '0_RTT_to_RSM_checks.md',
+      AI_TEST_RTT_NIMMS: '3_AI_test_of_rtt_nimms_com.md',
+      BOOKS_TO_PUBLISH_PLAN: '3_Books_to_Publish_plan.md',
+      AI_AGENT_SHOWDOWN: 'AI_agent_showdown_with_Regime_Awareness.md',
+      AI_NIMMS_COM: 'ai_nimms_com.md',
+      AI_TRAINING_FINDINGS: 'AI_Training_Findings.md',
+      AKASHIC_RECORDS_NULLARIUM: 'Akashic_Records_Nullarium.md',
+      AMBIENT_LEGITIMACY_DRIFT: 'Ambient_Legitimacy_ai-drift-calibration.md',
+      ARCHITECTS_SUMMARY_LOG: 'Architects_Summary_Log.md',
+      ARC_POEMS: 'Arc_Poems.md',
+      ATOMIC_CLOCKS_SCAFFOLD: 'atomic_clocks_README-scaffolding.md',
+      AUTONOMOUS_ROBOTIC_FISH: 'Autonomous_Robotic_Fish_for_Great_Lakes_Restoration.md',
+      GLOBAL_ATC_SF_HAM_RTT: 'A_Model_for_Global_ATC_and_SF_and_HAM_Radio_Using_RTT‑Inside.md',
+      BELLS_THEOREM_RTT: 'Bells_Theorem_meets_Resonance-Time_Theory.md',
+      BIG_QUESTIONS_SCIENCE: 'Big_Questions_In_Science.md',
+      BKM_CREDIT_REPORTING: 'BKM_Credit_Reporting_capture.md',
+      BLACK_HOLES_RESONANCE_RESERVOIRS: 'Black_Holes_as_Resonance_Reservoirs-A_Triadic_Time_Approach_to_the_Information_Paradox.md',
+      BY_EYE_OF_HORUS: 'By_the_eye_of_Horus.md',
+      CALCULUS_ON_STEROIDS: 'Calculus_on_Steroids.md',
+      CAUSALITY_TRIADIC_TIME: 'Causality_in_Triadic_Time-Light_Cones_and_Resonance_Echoes.md',
+      CERT_THGA_PIN: 'CERT_THGA_Pin.md',
+      CHANGELOG: 'CHANGELOG.md',
+      CLARITY_CANON_LENS: 'Clarity_Canon_Lens_effect.md',
+      COAL_INDUSTRY_RTT: 'Coal_Industry_examined_with_RTT-Inside.md',
+      CODEX_RESONANCE_TIME_UNIVERSE: 'Codex_of_the_Resonance-Time_Universe.md',
+      CONSTITUTIONAL_AMENDMENT_STEWARD: 'Constitutional_Amendment_Teacher_Elevation_and_Social_Stewardship.md',
+      COPILOT_REVIEW_DRAFT1: 'Copilot_review_draft1.md',
+      COURSE_CORRECTION_GPU_NPU: 'Course_Correction_Needed_for_GPU_NPU_TOPS.md',
+      CURVE_BALL_GROK: 'Curve_Ball_for_Grok_and_its_a_hard_hit_into_Center_Field.md',
+      DAILY_ACCOMPLISHMENT_LOG: 'Daily_Accomplishment_Log_Resonance_Structural_Awareness_in_Practice.md',
+      DECOHERENCE_MEASUREMENT_PATCH: 'Decoherence_As_A_Measurement_Problem_Patch.md',
+      DEPARTMENT_NATIONAL_ARRIVALS: 'Department_of_National_Arrivals_capture.md',
+      DEVELOPER_CODE_RTT: 'Developer_Code_for_Every_Language_with_RTT-Inside.md',
+      DID_RTT_HELP_FLIGHT: 'Did_RTT_help_flight___Yes--and_in_a_very_real_structural_way.md',
+      DID_YOU_KNOW: 'Did_You_Know.md',
+      DIMENSIONAL_ACTIVATION_LOG: 'Dimensional_Activation_Log.md',
+      DIMENSIONAL_BREACH_PROTOCOL: 'Dimensional_Breach-Nawderian_Protocol.md',
+      DIMENSIONAL_MATH_SUBSTRATE: 'Dimensional_Math_Substrate_DMS_the_big_breakthrough.md',
+      DIMENSIONAL_RUPTURE: 'dimensional_rupture.md',
+      DRIFT2_SCROLL_TRACE: 'drift2_scroll_trace.md',
+      DRIFT_SCROLL_TRACE: 'drift_scroll_trace.md'
+};
+
+function loadFromHash() {
+const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+</body>
+</html>
