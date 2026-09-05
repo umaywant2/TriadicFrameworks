@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Evaluations_Structural_Patterns_Only_with_Multiple" src="https://github.com/user-attachments/assets/5561af3a-5136-4bc9-a010-72c7b352a648" />
+
 # Evaluations: Structural Patterns Only with Multiple-Modules RTT/1/2 (example)
 
 Here are **three clean, university‑ready starter questions** that public‑policy students can ask an AI *using chat alone* to begin exploring RTT‑style structural analysis.
