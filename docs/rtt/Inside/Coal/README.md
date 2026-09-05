@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Inside_Coal" src="https://github.com/user-attachments/assets/c04b111d-efc5-4b21-ba32-be04dc632603" />
+
 # 🪨 The Coal Industry Today
 
 ### *Better than my PaPaw had it — but still brutal, dangerous, and unforgiving.*
