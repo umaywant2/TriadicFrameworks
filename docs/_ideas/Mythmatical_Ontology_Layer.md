@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Mythmatical_Ontology_Layer" src="https://github.com/user-attachments/assets/6e06af6c-8b99-44a4-9125-4f3b4d88993d" />
+
 # 🧭 Scroll - Mythmatical Ontology Layer
 
 Where dimensional recursion, virtual genesis, and encrypted infinity spiral into a living protocol.
