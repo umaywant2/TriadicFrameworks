@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Full_Substrate_Game_GDD" src="https://github.com/user-attachments/assets/c58be869-3196-429a-8e40-3d9c43295134" />
+
 # **SECTION I — SUBSTRATE**  
 ### *Dual‑Column Codex Edition*  
 RTT‑Native (Left) | Industry‑Standard (Right)
