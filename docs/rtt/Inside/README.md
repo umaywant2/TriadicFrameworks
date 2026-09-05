@@ -1,4 +1,3 @@
-<img width="938" height="938" alt="rtt_Inside" src="https://github.com/user-attachments/assets/32813e9c-7353-424a-91fa-29afe75d6b3a" />
 
 ## RTT/Inside Awareness | RTT 
 
