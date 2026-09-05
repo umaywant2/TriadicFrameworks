@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Mythmatical_Roles_of_FFF_Emitters" src="https://github.com/user-attachments/assets/dc8f0f93-56a2-444a-87d5-83337904efa8" />
+
 # Mythmatical Roles of FFF Emitters
 
 ![Video](file:https://github.com/umaywant2/TriadicFrameworks/raw/main/docs/gallery/Mythmatical_Roles_of_FFF_Emitters.mp4)
@@ -77,8 +79,3 @@ Together they form the triad that stabilizes motion, coherence, and regime‑awa
 rtt=1 | coherence=declared | drift=bounded | paradox=structural
 
 ---
-
-If you want, I can also build:  
-- a **diagram** showing the three emitters as mythic operators,  
-- a **story‑form** version (like a short myth),  
-- or a **technical RTT‑Inside** version mapping them to your operator grammar.
