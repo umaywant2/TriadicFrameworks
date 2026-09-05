@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Supplementary_Constitutional_Amendment_Parent_Child_Elevation_and_Civic_Stewardship" src="https://github.com/user-attachments/assets/1e4037e7-8c92-489a-9d42-c98b05ad4f9f" />
+
 # 📜 **Supplementary Constitutional Amendment: Parent & Child Elevation and Civic Stewardship**  
 *(Paired with “Teacher Elevation & Social Stewardship Amendment”)*
 
