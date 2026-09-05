@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Cross_Goal_Operator_Lattice" src="https://github.com/user-attachments/assets/3fb65a79-eecc-469e-963f-6b9967cb49fe" />
+
 # Cross‑Goal Operator Lattice (Goals #1, #2, #3)
 
 ## Summary
