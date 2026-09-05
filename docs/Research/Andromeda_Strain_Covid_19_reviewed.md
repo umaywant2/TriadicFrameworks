@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Andromeda_Strain_Covid_19_reviewed" src="https://github.com/user-attachments/assets/f37ca160-44cb-41b2-8bb1-c4f2cafb5a2a" />
+
 # Andromeda Strain and Covid 19 reviewed
 
 ## 🧪 1. **Regime Blindness Checklist**  
