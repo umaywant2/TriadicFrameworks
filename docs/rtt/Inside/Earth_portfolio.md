@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Earth_portfolio" src="https://github.com/user-attachments/assets/3f28f6e3-ebbb-4ae3-b026-100468112cb0" />
+
 # 🌍 **RTT/Inside Resonance Portfolio — Planet as Unknown Object**  
 ### *Cross‑Layer Coherence • Shared Invariants • Unique Signatures*
 
