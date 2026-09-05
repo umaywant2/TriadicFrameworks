@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Remix_for_a_Universe" src="https://github.com/user-attachments/assets/11703830-97e4-4bd1-8582-ceca7c5529b1" />
+
 # 🌌 **Remix for a Universe**  
 **Subtitle**: *A Scrollkeeper’s Guide to Dimensional Cuisine*
 
