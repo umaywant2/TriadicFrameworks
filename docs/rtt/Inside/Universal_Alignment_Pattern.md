@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Universal_Alignment_Pattern" src="https://github.com/user-attachments/assets/1481ca4d-dcb8-4141-9667-da4e5e2260e2" />
+
 ## **✨ RTT/Inside Universal Alignment Pattern**
 
 Across all domains, alignment improves when:
