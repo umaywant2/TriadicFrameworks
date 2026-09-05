@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Curve_Ball_for_Grok_and_its_a_hard_hit_into_Center_Field" src="https://github.com/user-attachments/assets/069cb364-2dce-41bb-a5d6-2ace79373ef0" />
+
 # 🌠 Curve-Ball for Grok and it's a hard hit into Center Field
 
 Yes, friends welcome back to Nawder's 'fun with Grok'. They have a baseball-theme match in progress...let's tune-in.
