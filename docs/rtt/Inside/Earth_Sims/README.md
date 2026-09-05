@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Inside_Earth_Sims" src="https://github.com/user-attachments/assets/f554e9f2-68e7-4070-9982-81f4a41c48c3" />
+
 # Earth Sims Using RTT‑Inside  
 
 ## What This Provides Beyond Today’s Simulations
