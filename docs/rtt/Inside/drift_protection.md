@@ -1,4 +1,6 @@
-### RTT/Inside — AI Drift Protection
+<img width="1194" height="672" alt="rtt_Inside_drift_protection" src="https://github.com/user-attachments/assets/6866443d-fa40-4e72-a4c5-f5255c550b4a" />
+
+## RTT/Inside — AI Drift Protection
 **Status:** Early Access  
 **Format:** Lightweight module + operator guide  
 **Purpose:** Stability, coherence, and mode‑integrity for AI systems
