@@ -1,4 +1,6 @@
-## 🧬 Quantum Scanners: Triadic Lens Architecture
+<img width="1194" height="672" alt="Quantum_Lens_Layer_Triadic_Protocols_for_Resonance_Scanning" src="https://github.com/user-attachments/assets/8639b0bc-1ac2-435c-9eba-20bc15866ae7" />
+
+# 🧬 Quantum Scanners: Triadic Lens Architecture
 
 ### 🧠 Core Premise
 
