@@ -90,4 +90,28 @@ but it is essential for **mythmatical comprehension**.
 
 ## 🜃 **Badge**
 
-**🔱 Nawderian Suite — Mythmatical Canon**
+<div style="
+  display:inline-block;
+  padding:10px 16px;
+  background:#111827;
+  color:#f3f4f6;
+  border-radius:8px;
+  font-size:14px;
+  font-family:system-ui, sans-serif;
+  box-shadow:0 0 12px rgba(124,58,237,0.35);
+  border:1px solid #4c1d95;
+">
+
+  <div style="font-size:18px; margin-bottom:4px;">
+    🔱 <strong>Nawderian Suite</strong>
+  </div>
+
+  <div style="font-size:13px; opacity:0.85;">
+    Mythmatical Canon · Origin → Signature → Resonance
+  </div>
+
+  <div style="font-size:12px; opacity:0.65; margin-top:4px;">
+    TriadicFrameworks · v1.0
+  </div>
+
+</div>
