@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="How_RTT_Applies_to_a_Standard_Power_Transformer" src="https://github.com/user-attachments/assets/15126108-2c50-4bc2-9a03-b5e84168cf75" />
+
 # ⚡ **How RTT Applies to a Standard Power Transformer**
 
 A pole‑mounted or pad‑mounted transformer is, at its core, a *resonance device*.  
