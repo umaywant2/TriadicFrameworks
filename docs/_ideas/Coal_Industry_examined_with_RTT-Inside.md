@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Coal_Industry_examined_with_RTT" src="https://github.com/user-attachments/assets/bc90e386-7941-4442-a989-6ca590fd10f5" />
+
 # 🪨 The Coal Industry Today
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
