@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Radiocarbon_and_Dating" src="https://github.com/user-attachments/assets/9f4a8318-d4e6-4516-9416-57dbe01c054f" />
+
 # **📘 DATING MODULE SET (RTT‑Aligned, Regime‑Aware)**  
 ### **Six Core Modules**  
 Radiocarbon • Luminescence • U‑Series • Dendrochronology • Paleomagnetism • Cosmogenic Nuclides
