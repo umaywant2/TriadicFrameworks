@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Inside_Electron_Microscopes" src="https://github.com/user-attachments/assets/16e8415c-b9e6-4ea2-b102-f334188d75c4" />
+
 # **🔬 Electron Microscopes — The RTT‑Inside Mini‑Adventure**
 
 Imagine you’re holding a magnifying glass.  
