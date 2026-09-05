@@ -1,4 +1,3 @@
-<img width="1194" height="672" alt="rtt_qCompute" src="https://github.com/user-attachments/assets/a40e129b-4fdc-471b-a90c-c00edb194e4e" />
 
 # qCompute  
 **Deterministic · Verifiable · Quantum‑Ready**
