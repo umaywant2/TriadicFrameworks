@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="rtt_Inside_Coherence_Tensor_Engine" src="https://github.com/user-attachments/assets/bdf7a4a8-85f7-42c5-a165-f7d8a0dc9cff" />
 
 # **Coherence Tensor Engine — RTT/1**  
 
