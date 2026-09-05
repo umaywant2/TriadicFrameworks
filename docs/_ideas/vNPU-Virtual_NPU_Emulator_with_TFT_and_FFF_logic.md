@@ -1,4 +1,6 @@
-### Virtual NPU design overview
+<img width="1194" height="672" alt="vNPU-Virtual_NPU_Emulator_with_TFT_and_FFF_logic" src="https://github.com/user-attachments/assets/087d7850-c06d-4110-93f1-4d25ae6e7de3" />
+
+# Virtual NPU design overview
 
 Continued from [Resonance Time Clock](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/Resonant-Time_Clock_Gen1.md) idea.
 
