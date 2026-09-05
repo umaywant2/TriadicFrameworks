@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="RTT_Facilities_Playbook" src="https://github.com/user-attachments/assets/68d9b6fd-61a7-4db7-9b34-7068d939a5a5" />
+
 # RTT Facilities Playbook
 
 ---
