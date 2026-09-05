@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="A_Resonant_Review_of_The_Universe_in_a_Nutshell" src="https://github.com/user-attachments/assets/cc90e03f-6c2a-4b14-b7f2-1b2b3e771e1b" />
+
 # 🌌 **A Resonant Review of *The Universe in a Nutshell***  
 ###### By Nawder Loswin 1/4/2026 www.TriadicFrameworks.org (share freely)
 
