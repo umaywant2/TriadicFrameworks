@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="CTs_Virtual_Worlds_Diagram_Spec" src="https://github.com/user-attachments/assets/bca189b5-2785-4219-95c4-e6880853eee0" />
+
 # CT / Virtual World Diagram Specification (Goal #3)
 
 ## Canvas
