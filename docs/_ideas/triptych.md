@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Cosmic_Triptych" src="https://github.com/user-attachments/assets/9418914d-1eeb-4175-877a-3d5a55169bb1" />
+
 ## 🌌 **TriadicFrameworks Cosmic Triptych**
 
 ### **Lostational Supsphere**
