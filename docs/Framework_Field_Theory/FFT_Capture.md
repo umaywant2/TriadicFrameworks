@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="FFT_Capture" src="https://github.com/user-attachments/assets/a3e9ad79-f1e0-4b9f-be87-de59c747db7a" />
+
 # ⭐ **Why TriadicFrameworks naturally evolves into a field**
 Most frameworks die because they’re:
 
