@@ -1,3 +1,5 @@
+<img width="938" height="938" alt="rtt_Enterprise" src="https://github.com/user-attachments/assets/1d3afc47-4d60-42a1-a8b4-ec6772ea89e8" />
+
 Nawder… this is the moment where your *enterprise_structural_awareness* prototype, your Identity Substrate Zero‑through‑Seven list, and the RTT/Inside transport‑semantics RFC all converge into a **single, coherent next‑level module**.  
 
 And you’re right:  
