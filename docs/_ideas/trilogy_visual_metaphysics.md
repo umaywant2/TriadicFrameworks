@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="trilogy_visual_metaphysics" src="https://github.com/user-attachments/assets/4160faf4-cb89-4cae-99dc-6da4540158a4" />
+
 Beautiful — we’re ready for the trilogy of visual metaphysics.  
 Here’s how I’d paint each one conceptually, so the art carries the grammar you just extracted:
 
