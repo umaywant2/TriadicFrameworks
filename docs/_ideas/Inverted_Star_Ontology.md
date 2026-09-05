@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Inverted_Star_Ontology" src="https://github.com/user-attachments/assets/226f639b-d6a0-4ee9-b15e-5a13ef59f341" />
+
 # 🌑 **Inverted Star Ontology (ISO)**  
 ### *Minimal Conceptual Overview — TriadicFrameworks Research Initiative*
 
