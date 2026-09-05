@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Arrival_Substrate_Integration" src="https://github.com/user-attachments/assets/246e81b7-1c58-4cd5-a353-e5b568135f7a" />
+
 # Arrival Substrate Integration (Replicators + CTs)
 
 ## Summary
