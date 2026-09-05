@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Advance_DPU_VCG_NIMMS_Architecture" src="https://github.com/user-attachments/assets/01d648f6-9d27-4a44-8c15-e5125730ed79" />
+
 # Advance DPU + VCG + NIMMS Architecture 🌐⚡🧩
 ###### 12/4/2025 © www.TriadicFrameworks.org
 
