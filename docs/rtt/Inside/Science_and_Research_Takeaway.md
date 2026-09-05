@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Inside_Science_and_Research_Takeaway" src="https://github.com/user-attachments/assets/e430151a-9e54-4fc6-8eff-bef0b8723dfc" />
+
 ## **✨ RTT/Inside SCIENCE & RESEARCH TAKEAWAY**
 
 RTT doesn’t change science.  
