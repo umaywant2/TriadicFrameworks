@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="JWST-RTT_Triadic_Core_Primitive_as_a_QA_Layer" src="https://github.com/user-attachments/assets/0e9306f8-8358-4814-9f2b-5f3cf9e3e3b9" />
+
 # 📡 JWST RTT triadic core primitive as a QA layer 🔭
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
