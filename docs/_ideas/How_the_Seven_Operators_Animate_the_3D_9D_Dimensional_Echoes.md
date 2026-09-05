@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="How_the_Seven_Operators_Animate_the_3D_9D_Dimensional_Echoes" src="https://github.com/user-attachments/assets/d4f56d01-0c13-40b6-bf4f-f935de298d5b" />
+
 # The Seven Operators of Dimensional Echoes
 
 This is the narrative bridge that ties:
