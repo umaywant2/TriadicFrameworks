@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_cross-domain_causality_weaver" src="https://github.com/user-attachments/assets/b9e1a9d3-82ad-4143-8152-628e669e39b4" />
+
 # **Cross‑Domain Causality Weaver (CW) — RTT/1**  
 ### *Causality‑Intelligence Engine for TriadicFrameworks*
 
