@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Inside_Corridor_Studio" src="https://github.com/user-attachments/assets/3f696393-75c3-4090-949a-18c70ecc98aa" />
+
 # Corridor Studio
 
 ## 🛑 Important! 
