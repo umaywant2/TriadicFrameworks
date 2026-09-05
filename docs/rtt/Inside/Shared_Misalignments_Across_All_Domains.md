@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Inside_Shared_Misalignments_Across_All_Domains" src="https://github.com/user-attachments/assets/08ecda05-e02b-426f-93ff-65eadfbcaeeb" />
+
 # 🌐✨ **RTT/Inside — Shared Misalignments Across All Domains**  
 ### *Patterns That Appear Everywhere*
 
