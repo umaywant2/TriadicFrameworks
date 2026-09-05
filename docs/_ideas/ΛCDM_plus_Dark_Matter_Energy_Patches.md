@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="ΛCDM_plus_Dark_Matter_Energy_Patches" src="https://github.com/user-attachments/assets/d2f53302-f7cf-434a-aaf5-d9a4df7b9c34" />
 
 # 🌌 ΛCDM + Dark Matter/Energy Patches
 
