@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Inside_Single_Page_JSON_Schema" src="https://github.com/user-attachments/assets/7da653d7-1bdd-4b07-9135-24ff156fb6f3" />
+
 ## **Option A — Single‑Page JSON Schema (Minimal, Complete)**
 
 ```json
