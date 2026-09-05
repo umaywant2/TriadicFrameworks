@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Quantum_Scanners_Triadic_Lens_Architecture" src="https://github.com/user-attachments/assets/edbc3ad9-c16c-4df8-9a2b-3197e9d8aee0" />
 
 # Quantum Scanners Triadic Lens Architecture
 
