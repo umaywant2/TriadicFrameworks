@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Dimensional_Resonance_Scanner" src="https://github.com/user-attachments/assets/57bf774a-7c2d-4b87-8622-eddfc1bd9141" />
+
 # **Dimensional Resonance Scanner (DRS) — RTT/1**  
 ### *Resonance‑Intelligence Engine for TriadicFrameworks*
 
