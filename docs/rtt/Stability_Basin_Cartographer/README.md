@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="rtt_Stability_Basin_Cartographer_" src="https://github.com/user-attachments/assets/cdf5f29a-c49b-4ffa-a901-5a1c3ca8b6e8" />
 
 # **Stability Basin Cartographer — RTT/1**  
 
