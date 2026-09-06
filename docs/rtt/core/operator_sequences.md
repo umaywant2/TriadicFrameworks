@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_operator_sequences" src="https://github.com/user-attachments/assets/b0768f19-a451-4a88-a92e-18fd7d278c29" />
+
 ---
 module_id: rtt.core.operator_sequences
 version: 1.0.0
