@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_guild_Little_Science_Series_Book_6_Little_Heat" src="https://github.com/user-attachments/assets/67fd4c08-b3ce-4888-a3c9-8247fed4bb90" />
+
 # 🔥 **Book 6 — Little Heat**  
 ### *Apprentice Arc · Transformation · Energy · Change*
 
