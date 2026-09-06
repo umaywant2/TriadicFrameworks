@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Inside_Capture_Template_Governance_Domain" src="https://github.com/user-attachments/assets/539229e7-a9b7-4e1a-b3cb-34e2f5911723" />
+
 # **RTT/Inside Capture Template — 🏛️ Governance Domain**  
 ### 💻 *Seeing Public Systems with Dimensional Clarity*
 
