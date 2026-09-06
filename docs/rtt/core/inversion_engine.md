@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_inversion_engine" src="https://github.com/user-attachments/assets/8b35b6e5-4ca4-4493-95a6-e25fc63ef484" />
+
 # 🔄 **RTT Inversion Engine**  
 *Procedural model for collapse → twist → emergence*  
 
