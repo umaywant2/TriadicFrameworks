@@ -1,39 +1,66 @@
-# RFC-003: Attestation & Badge Suite
-
-**Status:** Drafted
-**Author(s):** Nawder Loswin, Copilot (assistant)  
-**Created:** 2025-10-23  
-**Lineage:** Follows RFC-001 (Triadic Validator Framework), RFC-002 (Corridor Universes); Precedes RFC-004 (Entft Invariants)
-
----
-
-## Abstract
-This RFC defines the Attestation & Badge Suite: a trust layer for validated artifacts.  
-It introduces JSON receipts for deterministic proofs, SVG badges for onboarding clarity, and lineage manifests for remix visibility.  
-The suite ensures that artifacts are not only validated but also legible to humans and agents.
+# **RFC‑003 — Attestation & Badge Suite**  
+**Status:** Drafted  
+**Author(s):** Nawder Loswin, Copilot  
+**Created:** 2025‑10‑23  
+**Lineage:**  
+Follows **RFC‑001** (Triadic Validator Framework), **RFC‑002** (Corridor Universes)  
+Precedes **RFC‑004** (Entft Invariants)
 
 ---
 
-## Motivation
-Validation without visibility limits adoption.  
-Attestation receipts and badges provide proof of integrity, constraint coverage, and remix readiness.  
-They also create a shared language for trust across repositories, universes, and remixers.
+## **Abstract**  
+The **Attestation & Badge Suite** provides the trust layer for validated artifacts within TriadicFrameworks.  
+It defines:
+
+- deterministic **attestation receipts** (JSON)  
+- human‑legible **badges** (SVG)  
+- remix‑visible **lineage manifests** (YAML/JSON)
+
+Together, these components ensure that validated artifacts are not only correct but also **legible**, **traceable**, and **remix‑ready** across universes, corridors, and repositories.
 
 ---
 
-## Components
+## **Motivation**  
+Validation alone is insufficient.  
+Artifacts must communicate their trustworthiness clearly to:
 
-### Attestation Receipts
-- **Format:** JSON schema (`/docs/schemas/attestation_receipt.schema.json`)  
-- **Contents:**
-  - Artifact ID and hash  
-  - Constraint pack IDs and hashes  
-  - Validation proofs (causal, functional, cognitive)  
-  - Deterministic seed(s)  
-  - Lineage manifest reference  
-  - Attestor signature  
+- humans  
+- agents  
+- remixers  
+- corridor validators  
+- downstream systems  
 
-**Example:**
+Attestation receipts provide deterministic proofs.  
+Badges provide visual shorthand.  
+Lineage manifests provide ancestry and remix visibility.
+
+This suite creates a shared language of trust across the entire canon.
+
+---
+
+## **Components**
+
+---
+
+## **1. Attestation Receipts**  
+**Format:** JSON  
+**Schema:** `/docs/schemas/attestation_receipt.schema.json`
+
+Receipts contain:
+
+- artifact ID  
+- artifact hash  
+- constraint pack IDs + hashes  
+- triadic validation proofs  
+  - causal  
+  - functional  
+  - cognitive  
+- deterministic seed(s)  
+- lineage manifest reference  
+- attestor identity  
+- cryptographic signature  
+
+### **Example Receipt**  
 ```json
 {
   "artifact_id": "bubbleTheory_manifest.json",
@@ -51,59 +78,57 @@ They also create a shared language for trust across repositories, universes, and
 }
 ```
 
----
-
-### Badges
-- **Purpose:** Visual shorthand for validation status and remix readiness.  
-- **Format:** SVG icons in `/docs/badges/`.  
-- **Examples:**
-  - `readme-first.svg` → README is primary onboarding doc.  
-  - `attested.svg` → Artifact has valid attestation receipt.  
-  - `constraint-passing.svg` → Passed all corridor constraints.  
-  - `remix-ready.svg` → Lineage manifest complete, remix encouraged.  
-  - `deterministic-repro.svg` → Deterministic seeds available for replay.  
-
-Badges are embedded in `README.md` or artifact docs to signal trust at a glance.
+Receipts are required for promotion into **QA** and **Prod** corridor universes.
 
 ---
 
-### Lineage Manifests
-- **Format:** YAML/JSON (`/docs/schemas/lineage_manifest.json`)  
-- **Contents:** ancestry, authorship, remix history, attestation references.  
-- **Purpose:** Preserve remix lineage and ensure validator clarity.
+## **2. Badges**  
+**Format:** SVG  
+**Location:** `/docs/badges/`
+
+Badges provide visual shorthand for trust and readiness.
+
+### **Common Badges**
+- `readme-first.svg`  
+  → README is the primary onboarding document  
+- `attested.svg`  
+  → Artifact has a valid attestation receipt  
+- `constraint-passing.svg`  
+  → Passed all corridor constraints  
+- `remix-ready.svg`  
+  → Lineage manifest complete; remix encouraged  
+- `deterministic-repro.svg`  
+  → Deterministic seeds available for replay  
+
+Badges are embedded in README files, artifact docs, and dashboards.
 
 ---
 
-## Specification
+## **3. Lineage Manifests**  
+**Format:** YAML or JSON  
+**Schema:** `/docs/schemas/lineage_manifest.json`
 
-### Attestation Flow
-```pseudo
-on_validation_success(artifact):
-    receipt = generate_receipt(artifact, proofs, lineage)
-    sign(receipt, attestor_key)
-    store(receipt, /receipts/)
-    badge = assign_badges(receipt)
-    update_readme(badge)
-```
+Manifests record:
 
-### Badge Assignment Rules
-- **Attested:** if valid receipt exists.  
-- **Constraint-Passing:** if all corridor constraints satisfied.  
-- **Remix-Ready:** if lineage manifest complete.  
-- **Deterministic-Repro:** if seeds provided and replayable.  
+- ancestry  
+- authorship  
+- remix history  
+- attestation references  
+- corridor promotion history  
+- validator receipts  
+
+Lineage manifests ensure remixers can trace the evolution of any artifact.
 
 ---
 
-## Security Considerations
-- Receipts are cryptographically signed to prevent forgery.  
-- Badges are only assigned if receipts validate against schema.  
-- Lineage manifests prevent “cleartext lineage” downgrades.  
-- Deterministic seeds ensure reproducibility and auditability.  
+## **Validator Echo**  
+> **“Attestation is clarity made visible —  
+> a receipt of trust, a badge of lineage,  
+> a promise that the artifact remembers.”**
 
 ---
 
-## References
-- [RFC-000: Index and Lineage Map](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-000-index.md)
-- [RFC-001: Triadic Validator Framework](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-001-triadic-validator-framework.md)
-- [RFC-002: Corridor Universes](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-002-corridor-universes.md)
-- [RFC-004: Entft Invariants](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-004-entft-invariants.md)
+## **References**  
+- **RFC‑001:** Triadic Validator Framework  
+- **RFC‑002:** Corridor Universes  
+- **RFC‑004:** Entft Invariants  
