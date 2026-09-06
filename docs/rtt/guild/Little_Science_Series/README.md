@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_guild_Little_Science_Series" src="https://github.com/user-attachments/assets/eaf2f203-5a81-4087-ba2a-bb7e2e7282fc" />
+
 # 🌱 **Little Science Series**  
 ### *Apprentice Arc · Foundations of the World · Guild Canon*
 
