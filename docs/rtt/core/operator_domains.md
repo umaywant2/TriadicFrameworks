@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_operator_domains" src="https://github.com/user-attachments/assets/6a4032cc-a934-4584-9d91-3af39e388c46" />
+
 ---
 module_id: rtt.core.operator_domains
 version: 1.0.0
