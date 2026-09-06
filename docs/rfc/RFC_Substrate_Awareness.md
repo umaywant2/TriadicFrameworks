@@ -1,4 +1,4 @@
-## `rfc-substrate-awareness.md` — Document Summary
+## `RFC-Substrate-Awareness.md` — Document Summary
 
 **Identifier:** `TFAWG-0001` · **Status:** Draft · **Category:** Informational · **Date:** 2026-07-02
 
