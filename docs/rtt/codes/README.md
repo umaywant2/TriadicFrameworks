@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="rtt_codes_" src="https://github.com/user-attachments/assets/058f5ced-424f-40dd-bdfb-b20b31ef5cea" />
 
 # 🏳️‍🌈 RTT/codes — A QR‑Compatible Metadata Layer 
 
