@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_regime_constraints" src="https://github.com/user-attachments/assets/bce683f5-3440-4ca3-a365-08ce9699e24a" />
+
 ---
 module_id: rtt.core.regime_constraints
 version: 1.0.0
