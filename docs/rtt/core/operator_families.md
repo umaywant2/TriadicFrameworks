@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_operator_families" src="https://github.com/user-attachments/assets/55b16e8e-0f9d-44af-96ab-8a01e88f72b3" />
+
 ---
 module_id: rtt.core.operator_families
 version: 1.0.0
