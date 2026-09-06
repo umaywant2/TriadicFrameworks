@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_guild_Little_Science_Series_Book_3_Little_Motion" src="https://github.com/user-attachments/assets/bb027847-f0c9-456f-b170-ddc9839e4267" />
+
 # 📗 **Book 3 — Little Motion**  
 ### *Apprentice Arc · Change · Flow · The Nature of Movement*
 
