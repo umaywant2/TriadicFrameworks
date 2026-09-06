@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_operator_behaviors" src="https://github.com/user-attachments/assets/818cc537-9fc4-4766-ab91-5593981564c3" />
+
 ---
 module_id: rtt.core.operator_behaviors
 version: 1.0.0
