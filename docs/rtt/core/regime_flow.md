@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_regime_flow" src="https://github.com/user-attachments/assets/b00d3dec-0415-477d-aed0-dd7bc81adc77" />
+
 ---
 module_id: rtt.core.regime_flow
 version: 1.0.0
