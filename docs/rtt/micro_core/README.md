@@ -1,4 +1,3 @@
-<img width="938" height="938" alt="rtt_Micro_Core" src="https://github.com/user-attachments/assets/17566e58-9b1a-434e-827f-f5bc21d32fed" />
 
 ## 🔬 RTT Micro Core  
 
