@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_regime_index" src="https://github.com/user-attachments/assets/feef6f47-b8a3-4e4d-9891-8055cb47f01a" />
+
 ---
 module_id: rtt.core.regime_index
 version: 1.0.0
