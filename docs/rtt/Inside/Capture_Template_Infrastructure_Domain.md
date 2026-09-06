@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Inside_Capture_Template_Infrastructure_Domain" src="https://github.com/user-attachments/assets/c236c61c-9f5c-43ba-9833-a9cdf65b35eb" />
+
 # 🏗️ **RTT/Inside Capture Template — Infrastructure Domain**  
 ### 💻 *Seeing Foundations with Dimensional Clarity*
 
