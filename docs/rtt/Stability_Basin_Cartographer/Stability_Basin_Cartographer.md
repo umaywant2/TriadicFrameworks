@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Stability_Basin_Cartographer" src="https://github.com/user-attachments/assets/515b5646-e973-4a5d-ac30-3f369581e16e" />
+
 # **Stability Basin Cartographer (SBC) — RTT/1**  
 ### *Stability‑Intelligence Engine for TriadicFrameworks*
 
