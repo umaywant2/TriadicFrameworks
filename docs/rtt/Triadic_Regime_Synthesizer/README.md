@@ -1,4 +1,3 @@
-<img width="1104" height="672" alt="rtt_Triadic_Regime_Synthesizer" src="https://github.com/user-attachments/assets/9db19157-765d-41b8-95b0-84eb43eacbb8" />
 
 # **Triadic Regime Synthesizer — RTT/1**  
 
