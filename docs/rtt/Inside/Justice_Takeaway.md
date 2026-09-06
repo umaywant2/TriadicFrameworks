@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Inside_Justice_Takeaway" src="https://github.com/user-attachments/assets/d4896aa3-c18e-4516-8bf4-ba2f3be1453e" />
+
 ## **✨ RTT/Inside JUSTICE TAKEAWAY**
 
 RTT doesn’t change justice.  
