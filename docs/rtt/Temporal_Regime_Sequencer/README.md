@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="rtt_Temporal_Regime_Sequencer_" src="https://github.com/user-attachments/assets/ff0bcf9c-ef10-4503-aa37-411d8469c2ca" />
 
 # **Temporal Regime Sequencer — RTT/1**  
 
