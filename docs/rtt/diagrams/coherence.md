@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_diagram_coherence" src="https://github.com/user-attachments/assets/a48d7f3c-4a25-41e8-a2d4-1010d2e3fc98" />
+
 # 🔷 **Refreshed coherence.svg**  
 *(Drop directly into `/docs/rtt/diagrams/coherence.svg`)*
 
