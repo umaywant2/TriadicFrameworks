@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_store" src="https://github.com/user-attachments/assets/d5075d32-cc65-4830-9a9d-ff2033a744e8" />
+
 ## RTT/Store — Placeholder Copy 
 
 - [`RTT_store_module.json`](RTT_store_module.json) — Agentic module schema role assignments
@@ -52,6 +54,6 @@ rtt=1 | coherence=declared | drift=bounded | paradox=structural
 Under Construction
 
 **Contractor**  
-Triadicopilot Frameworks LLC
+TriadicFrameworks LLC
 
 > *For serious inquiries regarding RTT engagement, please refer to the RTT overview.*
