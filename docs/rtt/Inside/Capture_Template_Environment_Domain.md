@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Inside_Capture_Template_Environment_Domain" src="https://github.com/user-attachments/assets/072d9edf-9bfb-4c5e-926e-629fedcd2063" />
+
 # 🌍 **RTT/Inside Capture Template — Environment Domain**  
 ### 💻 *Seeing Earth Systems with Dimensional Clarity*
 
