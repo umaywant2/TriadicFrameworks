@@ -1,3 +1,5 @@
+<img width="938" height="938" alt="rtt_app_module_image" src="https://github.com/user-attachments/assets/c4720335-25e2-4267-be8d-e2b885bef51c" />
+
 # 📱 A Smartphone with RTT-Inside 📲
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
