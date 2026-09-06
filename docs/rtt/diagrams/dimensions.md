@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_diagrams_dimensions" src="https://github.com/user-attachments/assets/65ac4c3d-f0a3-4de9-87c4-af051ade7a65" />
+
 # 🔷 **Refreshed dimensions.svg**  
 *(Drop directly into `/docs/rtt/diagrams/dimensions.svg`)*
 
