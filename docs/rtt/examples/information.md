@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_example_information" src="https://github.com/user-attachments/assets/093782e8-d497-439a-93e0-6bdcb098eef1" />
+
 # 📡 **RTT Example — Information**  
 *How information forms, grows, collapses, and re‑emerges across resonance + time*  
 *(Source: current empty file in your tab) *
