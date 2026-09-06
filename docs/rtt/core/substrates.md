@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_substrates" src="https://github.com/user-attachments/assets/b81ca07b-9f43-40bb-9d2f-bd75a9f45419" />
+
 # 🧱 **RTT Substrates**  
 *What systems are made of, and how that shapes their behavior*  
 
