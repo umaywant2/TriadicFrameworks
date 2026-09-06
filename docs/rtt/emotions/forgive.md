@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_emotions_forgive_" src="https://github.com/user-attachments/assets/89c8eee4-97e3-4426-a176-05831b9b291c" />
+
 - [`forgive_operator.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/emotions/forgive_operator.json) — Agentic module schema role assignments
 
 # FORGIVE  
