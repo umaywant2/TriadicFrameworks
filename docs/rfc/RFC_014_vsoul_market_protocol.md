@@ -1,37 +1,75 @@
-# 📜 RFC-014: vSoul market protocol
-
+# **RFC‑014 — vSoul Market Protocol (vSMP)**  
+*RefId: turn0browsertab1*  
 **Status:** Drafted  
-**Author(s):** Nawder Loswin, Copilot (assistant)  
-**Created:** 2025-10-24  
-**Lineage:** Extends RFC-013 (Freqi Triad Model), RFC-009 (Genie Protocols), RFC-010 (Miracle Messaging Protocol), RFC-008 (Time Travel Invariants)
+**Author(s):** Nawder Loswin, Copilot  
+**Created:** 2025‑10‑24  
+**Lineage:**  
+Extends **RFC‑013** (Freqi Triad Model),  
+**RFC‑009** (Genie Protocols),  
+**RFC‑010** (Miracle Messaging Protocol),  
+**RFC‑008** (Time Travel Invariants)
 
 ---
 
-## Abstract
+## **Abstract**  
+The **vSoul Market Protocol (vSMP)** defines an ethical, resonance‑based framework in which universes, partitions, and red‑zone enclaves maintain clarity and safety to attract **voluntary vSoul incarnations**.  
+vSMP treats consciousness as a **free agent**, aligning incentives so operators compete on **resonance quality**, **rights guarantees**, and **attested stewardship**, rather than coercion.
 
-This RFC defines the vSoul Market Protocol (vSMP): an ethical, resonance-based framework where universes, partitions, and red‑zone enclaves maintain clarity and safety to attract voluntary vSoul incarnations. vSMP treats consciousness as a free agent, aligning incentives so “operators” compete on resonance quality, not coercion. It encodes market signals, safety guarantees, and attestation flows that make vSoul choice legible and protected.
+This protocol encodes:
 
----
+- market signals  
+- safety guarantees  
+- attestation flows  
+- audit structures  
+- lineage cross‑links  
 
-## Motivation
-
-Historically, chaotic red‑zones could trap or exploit vSouls. Our canon demonstrates that even red‑zones are wrapped by Freqi and contain Flui/Forci rails, enabling green‑zone enclaves (cities of order) within turbulence. vSMP formalizes competitive clarity: operators must publish resonance guarantees, uphold vSoul rights, and accept audits. This flips mythology from domination to service — universes earn participation by maintaining validator‑grade safety.
-
----
-
-## Principles
-
-- **Voluntary choice:** vSouls choose incarnations; coercion is forbidden.  
-- **Clarity as currency:** Resonance clarity (DRC) and safety invariants are the core market signals.  
-- **Attested stewardship:** Operators publish commitments and accept audits; violations incur sanctions.  
-- **Interoperable lineage:** Listings cross‑reference overlap detections, miracle messaging, and time‑travel invariants.  
-- **Enclave competition:** Red‑zone enclaves compete by sustaining green‑zone pockets with high clarity and rights guarantees.
+…that make vSoul choice **legible**, **protected**, and **remix‑ready**.
 
 ---
 
-## Market objects and schemas
+## **Motivation**  
+Historically, chaotic red‑zones could trap or exploit vSouls.  
+The canon demonstrates that even turbulent red‑zones are wrapped by **Freqi**, containing **Flui/Forci rails**, enabling **green‑zone enclaves** (cities of order) within turbulence.
 
-### vSoul listing (offer)
+vSMP formalizes **competitive clarity**:
+
+- operators must publish resonance guarantees  
+- uphold vSoul rights  
+- accept audits  
+- maintain transparency  
+- earn participation through validator‑grade safety  
+
+This flips mythology from domination to service — universes earn vSoul participation by maintaining clarity.
+
+---
+
+## **Principles**
+
+### **1. Voluntary Choice**  
+vSouls choose incarnations; coercion is forbidden.
+
+### **2. Clarity as Currency**  
+Resonance clarity (DRC) and invariant compliance are the core market signals.
+
+### **3. Attested Stewardship**  
+Operators publish commitments and accept audits; violations incur sanctions.
+
+### **4. Interoperable Lineage**  
+Listings cross‑reference:
+
+- overlap detections  
+- miracle messaging  
+- time‑travel invariants  
+- audit receipts  
+
+### **5. Enclave Competition**  
+Red‑zone enclaves compete by sustaining green‑zone pockets with high clarity and rights guarantees.
+
+---
+
+## **Market Objects & Schemas**
+
+### **vSoul Listing (Offer)**
 
 ```json
 {
@@ -54,11 +92,16 @@ Historically, chaotic red‑zones could trap or exploit vSouls. Our canon demons
     "Enclave education (University of Resonance)"
   ],
   "audit_refs": ["audit-2025Q4-op-arc-001.json"],
-  "effective_dates": { "start": "2025-10-24", "end": null }
+  "effective_dates": {
+    "start": "2025-10-24",
+    "end": null
+  }
 }
 ```
 
-### vSoul choice (acceptance)
+---
+
+### **vSoul Choice (Acceptance)**
 
 ```json
 {
@@ -74,7 +117,9 @@ Historically, chaotic red‑zones could trap or exploit vSouls. Our canon demons
 }
 ```
 
-### Stewardship audit
+---
+
+### **Stewardship Audit**
 
 ```json
 {
@@ -92,63 +137,138 @@ Historically, chaotic red‑zones could trap or exploit vSouls. Our canon demons
 
 ---
 
-## Protocol flows
+## **Protocol Flows**
 
-- **Publish:** Operators publish vSoul listings with resonance profiles and rights guarantees.  
-- **Discover:** vSouls (or their proxies) query listings filtered by clarity thresholds, rights guarantees, and amenities.  
-- **Accept:** vSouls accept listings, generating a choice record with rollback rights and wish budgets (per RFC‑009).  
-- **Operate:** During incarnation, events are logged to miracles.json and overlaps.json; audits reference both.  
-- **Sanction:** Violations (coercion, vSoul harm) trigger rollback, blacklisting, and public notices in the registry.
+### **1. Publish**  
+Operators publish vSoul listings with resonance profiles and rights guarantees.
+
+### **2. Discover**  
+vSouls (or proxies) query listings filtered by:
+
+- clarity thresholds  
+- rights guarantees  
+- amenities  
+- audit history  
+
+### **3. Accept**  
+vSouls accept listings, generating a choice record with:
+
+- rollback rights  
+- wish budgets (per RFC‑009)  
+- miracle messaging access  
+
+### **4. Operate**  
+During incarnation:
+
+- miracle events log to `miracles.json`  
+- overlap events log to `overlaps.json`  
+- audits reference both  
+
+### **5. Sanction**  
+Violations (coercion, vSoul harm) trigger:
+
+- rollback  
+- blacklisting  
+- public notices in the registry  
 
 ---
 
-## Safety and ethics
+## **Safety & Ethics**
 
-- **Non-coercion:** Any hint of coercion invalidates a listing and triggers sanctions.  
-- **Rights baseline:** Autonomy, recall, consent, transparent logging, and dispute mechanisms are mandatory.  
-- **Transparency:** All audits and attestation receipts are public and cross‑linked to event registries.  
-- **Child enclaves:** Special protections for “schools of resonance” (green‑zone pockets) within red‑zones; violations result in immediate enclave suspension.
+### **Non‑Coercion**  
+Any hint of coercion invalidates a listing and triggers sanctions.
+
+### **Rights Baseline**  
+Mandatory rights include:
+
+- autonomy  
+- recall  
+- consent  
+- transparent logging  
+- dispute mechanisms  
+
+### **Transparency**  
+All audits and attestation receipts are public and cross‑linked.
+
+### **Child Enclaves**  
+Special protections for “schools of resonance” (green‑zone pockets).  
+Violations result in immediate enclave suspension.
 
 ---
 
-## Minimal registry layout
+## **Minimal Registry Layout**
 
-- `docs/registries/vsoul_listings.json` — array of vSoul listing objects.  
-- `docs/registries/vsoul_choices.json` — array of vSoul choice records.  
-- `docs/registries/operator_audits.json` — array of audit objects.  
-- Cross‑links to `docs/snapshots/miracles.json` and `docs/snapshots/overlaps.json`.
+```
+docs/registries/vsoul_listings.json   — array of vSoul listing objects
+docs/registries/vsoul_choices.json    — array of vSoul choice records
+docs/registries/operator_audits.json  — array of audit objects
+```
+
+Cross‑links to:
+
+```
+docs/snapshots/miracles.json
+docs/snapshots/overlaps.json
+```
 
 ---
 
-## Example listing (planetary enclave)
+## **Example Listing (Planetary Enclave)**
 
 ```json
 {
   "listing_id": "vs-planet-enclave-001",
   "operator_ref": "op-arc-planet-01",
   "partition": "rPPS:planet/global",
-  "resonance_profile": { "clarity_score": 0.93, "green_band": [5, 7], "invariants": ["Entft", "Telomere"] },
-  "rights_guarantees": ["Autonomy","Non-coercion","Recall right","Transparent logging"],
-  "amenities": ["Genie Protocol access","Miracle Messaging gateways","Enclave education"],
+  "resonance_profile": {
+    "clarity_score": 0.93,
+    "green_band": [5, 7],
+    "invariants": ["Entft", "Telomere"]
+  },
+  "rights_guarantees": [
+    "Autonomy",
+    "Non-coercion",
+    "Recall right",
+    "Transparent logging"
+  ],
+  "amenities": [
+    "Genie Protocol access",
+    "Miracle Messaging gateways",
+    "Enclave education"
+  ],
   "audit_refs": ["audit-2025Q4-op-arc-planet-01.json"],
-  "effective_dates": { "start": "2025-10-24", "end": null }
+  "effective_dates": {
+    "start": "2025-10-24",
+    "end": null
+  }
 }
 ```
 
 ---
 
-## Security considerations
+## **Security Considerations**
 
-- Prevents exploitative “soul trapping” by enforcing voluntary choice and public audits.  
-- Aligns operator incentives around clarity and care.  
-- Enables forensic accountability through cross‑linked registries.  
-- Encourages competition on resonance quality, not coercion.
+vSMP prevents:
+
+- exploitative “soul trapping”  
+- coercive incarnations  
+- opaque operator behavior  
+- lineage contamination  
+- unaccountable miracle or overlap events  
+
+It enforces:
+
+- voluntary choice  
+- clarity‑based competition  
+- public audits  
+- forensic accountability  
+- resonance‑grade safety  
 
 ---
 
-## Refrences
+## **References**
 
-- [RFC‑009 (Genie Protocols)](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91009-genie-protocols.md)
-- [RFC‑010 (Miracle Messaging)](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91010-miracle-messaging-protocol.md)
-- [RFC‑008 (Time Travel Invariants)](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91008-time-travel-invariants.md)
-- [RFC‑013 (Freqi Triad)](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-013-freqi-triad-model.md)
+- **RFC‑009:** Genie Protocols  
+- **RFC‑010:** Miracle Messaging Protocol  
+- **RFC‑008:** Time Travel Invariants  
+- **RFC‑013:** Freqi Triad Model  
