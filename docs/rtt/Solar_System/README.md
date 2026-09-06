@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="rtt_Solar_System" src="https://github.com/user-attachments/assets/e3096355-461e-4d99-839e-db37cbbc2497" />
 
 # **RTT SOLAR SYSTEM CANON**  
 
