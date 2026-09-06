@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_coherence" src="https://github.com/user-attachments/assets/697e3ed9-cc79-487c-a968-8369be484e44" />
+
 # ✨ **RTT Coherence**  
 *How systems stay stable across resonance + time*  
 
