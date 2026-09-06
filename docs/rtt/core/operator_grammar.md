@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_operator_grammar" src="https://github.com/user-attachments/assets/472bdbb4-d1e3-46d4-9663-afae6f2eedeb" />
+
 ---
 module_id: rtt.core.operator_grammar
 version: 1.0.0
