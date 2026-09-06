@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_codes__" src="https://github.com/user-attachments/assets/07ad32e9-cfe9-44bc-8cba-562397a23e97" />
+
 # ⚡ Quickstart
 
 RTTcodes are QR‑compatible identifiers that bind any artifact to its canonical
