@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Inside_Glossary" src="https://github.com/user-attachments/assets/1c457cea-2d2d-461f-976f-c9ecb079eed0" />
+
 # GLOSSARY.md — RTT/Inside · Cross-Domain Application Layer
 ### *Canonical Term Definitions, Agent Classes, Zones, Modes, and Operator Reference*
 
