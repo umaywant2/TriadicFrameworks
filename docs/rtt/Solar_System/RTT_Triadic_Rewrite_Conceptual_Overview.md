@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="RTT_Solar_System_module" src="https://github.com/user-attachments/assets/a74ab976-63ae-4eb3-bc98-ab02283572e7" />
+
 # **RTT Triadic Rewrite — Conceptual Overview**
 
 Below is the *chat‑sized conceptual rewrite* of the Solar System article, showing how every classical section transforms under RTT’s Silence/Noise/Resonance model. The full document will contain the complete structured rewrite.
