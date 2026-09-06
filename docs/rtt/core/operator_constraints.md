@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_operator_constraints" src="https://github.com/user-attachments/assets/575a6c37-f810-47ac-aab6-4d2653d8aacf" />
+
 ---
 module_id: rtt.core.operator_constraints
 version: 1.0.0
