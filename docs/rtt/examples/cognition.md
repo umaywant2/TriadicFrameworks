@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_examples_cognition" src="https://github.com/user-attachments/assets/f36256f3-99d6-43bc-b9fb-faa7a684d668" />
+
 # 🧠 **RTT Example — Cognition**  
 *How minds perceive, interpret, and reorganize across resonance + time*  
 *(Source: current page content)   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/examples/cognition.md)*
