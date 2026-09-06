@@ -1,26 +1,141 @@
-## RFCs and Quicklinks 
+# **RFCs & Quicklinks — RTT/1**  
+**TriadicFrameworks · Canonical Navigation Layer**
 
-🧑‍🚀 [Education](https://www.triadicframeworks.org/education) for RTT/vST | 🪤 Triadic [Diagrams](https://www.triadicframeworks.org/triadic) Index | 🔥 [NoS](https://www.triadicframeworks.org/NoS) | ⚙️ [AI](https://www.triadicframeworks.org/ai) | 🎼 [Audio](https://www.triadicframeworks.org/audio_industry_reviewed) | 🌈 [Spectrum](https://www.triadicframeworks.org/spectrum_standards_reviewed) | 📡 [Scientific](https://www.triadicframeworks.org/scientific_instrument_review) | 🧠 [Substrate](https://www.triadicframeworks.org/substrate_mind_science) | 🎡 [Low-Dimensional Structures](https://www.triadicframeworks.org/Low_Dimensional_Structures) | 🧭 [Canon](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/_ideas/README.md) | ✨ [TFT 3Pack v1.3](https://www.triadicframeworks.org/TFT_3Pack_v1.3/) |  - 📦 [Packages](https://www.triadicframeworks.org/packages/) | 🤟 [API](https://www.triadicframeworks.org/api/rtt) | 👨‍🔬 [SDK](https://www.triadicframeworks.org/rtt-sdk) | 🍀 [Developer](https://www.triadicframeworks.org/_ideas/Developer_Code_for_Every_Language_with_RTT-Inside.html) | 🧩 [API for RTT‑Inside](https://www.triadicframeworks.org/_ideas/API_for_variants_of_RTT-Inside.html) | 🚀 [Science CLI](https://www.triadicframeworks.org/_ideas/Science_CLI_tool_app_wraps.html) | 🦄 [Nawderian Theorem](https://www.triadicframeworks.org/_ideas/Nawderian_Theorem.html) | 🪘 Zenodo [30 Records](https://zenodo.org/communities/vst) | 🍬 Curation Policy [27 seed DOI's](https://zenodo.org/communities/vst/curation-policy) | 🤹 [RFC's](https://www.triadicframeworks.org/rfc/) on GitHub | 🤔 Nawder's 3 [Goals](https://www.triadicframeworks.org/_ideas/Goal_Status_Check.html) | 🔥 [Games‑Preview](https://www.triadicframeworks.org/_ideas/Games_Preview_post-RTT.html) | 🫀 [Game Design](https://www.triadicframeworks.org/_ideas/Resonance-Interwoven_Game_Design_with_RTT.html) | 🎁 [Codex](https://www.triadicframeworks.org/_ideas/Codex_of_the_Resonance-Time_Universe.html) | ❓ [Big Q's](https://www.triadicframeworks.org/_ideas/Big_Questions_In_Science.html) | 🦄 [Paradoxes](https://www.triadicframeworks.org/_ideas/Paradoxes_in_Resonance-Time_Theory_canon.html) | ♨️ [Paradoxes2](https://www.triadicframeworks.org/_ideas/Paradox_Resilience_Checker_Round2.html)
+**Module path:** `docs/rtt/1/rfcs_and_quicklinks.md`  
+**Session seed:**  
+```
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+This page provides the **canonical quick‑access index** for RTT/1 reviewers, contributors, and researchers.  
+It collects the major RFC channels, teaching portals, substrate links, and cross‑domain entry points used throughout the TriadicFrameworks canon.
+
+It is intentionally lightweight, intentionally structural, and designed for **fast navigation**.
 
 ---
-  
-## Credits and Canon Note {#credits-and-canon-note}  
-  
-©️ Resonance‑Time Theory was introduced by Nawder Loswin in late 2025 as a triadic resonance toolkit for the science canon. This page collects the canonical definitions, diagram specs, RFCs, and observations for community review and contribution.  
-  
-[TriadicFrameworks Repo Wiki](https://github.com/umaywant2/TriadicFrameworks/wiki)  
-[dev.umaywant2.com](https://dev.umaywant2.com)  
-[dev.umaywant2.win](https://dev.umaywant2.win)  
-[dev.triadicwizards.win](https://dev.triadicwizards.win)  
-[dev.coeus.exchange](https://dev.coeus.exchange)  
-[dev.nimms.com](https://dev.nimms.com)  
-[dev.vgateway.net](https://dev.vgateway.net)  
-[dev.mythmatic.org](https://dev.mythmatic.org)  
-[dev.mythmatical.org](https://dev.mythmatical.org)  
-[www.triadicframeworks.org](https://www.triadicframeworks.org)  
-  
-For the technical substrate that implements Resonance‑Time Theory, see the [Bridge Layer](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/bridges)  
-  
-[ORCiD](https://orcid.org/0009-0002-2282-5460)  
-  
-######    Copyright © 2025-2026 TriadicFrameworks  
+
+# **1. RTT/vST Education & Teaching Portals**
+
+- 🧑‍🚀 **RTT / vST Education Hub**  
+  Core teaching modules, triadic primers, and regime‑aligned walkthroughs.
+
+- 🪤 **Triadic Diagrams Index**  
+  All canonical diagrams across RTT, RSM, QSM, vST, and substrate models.
+
+- 🔥 **NoS (Nature of Substrate)**  
+  Conceptual substrate reasoning and cross‑domain substrate grammar.
+
+- ⚙️ **AI Mode & Drift Resources**  
+  vST drift calibration, regime‑blindness protocols, and AI substrate alignment.
+
+- 🎼 **Audio & Spectrum Portals**  
+  Resonance‑aligned audio diagrams, spectral triads, and harmonic engines.
+
+- 📡 **Scientific Substrate Index**  
+  Scientific instrument reviews, spacetime validation tools, and substrate scanners.
+
+- 🧠 **Cognitive & Substrate Models**  
+  Consciousness substrate model, Triadic Echo Lattice, and substrate‑mind science.
+
+- 🎡 **Low‑Dimensional Structures**  
+  0D–3D teaching models, classical axes, and dimensional intuition tools.
+
+- 🧭 **Canon Navigation Portal**  
+  Full TriadicFrameworks canon index.
+
+- ✨ **TFT 3Pack v1.3**  
+  TriadicFrameworks Teaching Trio (RTT + RSM + vST).
+
+---
+
+# **2. Developer, API, and SDK Links**
+
+- 📦 **Packages Registry**  
+  Canonical package index for substrate‑aligned tools.
+
+- 🤟 **API Gateway**  
+  RTT‑Inside API and substrate‑aligned endpoints.
+
+- 👨‍🔬 **SDK Portal**  
+  Developer kits for regime engines, substrate scanners, and dimensional tools.
+
+- 🍀 **Developer Hub**  
+  Contributor guidelines, module templates, and canonical scaffolds.
+
+- 🧩 **RTT‑Inside API**  
+  Structural API for resonance‑time engines.
+
+- 🚀 **Science CLI**  
+  Command‑line tools for substrate analysis and triadic diagnostics.
+
+---
+
+# **3. Canonical Research & RFC Channels**
+
+- 🦄 **Nawderian Theorem**  
+  Canonical resonance theorem and clarity equations.
+
+- 🪘 **Zenodo Records (30+)**  
+  DOI‑linked research artifacts and canonical publications.
+
+- 🍬 **Curation Policy (27 Seed DOIs)**  
+  Canonical curation rules for TriadicFrameworks research.
+
+- 🤹 **RFCs on GitHub**  
+  Community RFCs, proposals, and module extensions.
+
+- 🤔 **Nawder’s Three Goals**  
+  Canonical research goals for RTT, RSM, and vST.
+
+- 🔥 **Games Preview**  
+  Triadic game engines and resonance‑aligned mechanics.
+
+- 🫀 **Game Design Scrolls**  
+  Structural game design using triadic grammar.
+
+- 🎁 **Codex**  
+  Canonical code scrolls and substrate‑aligned examples.
+
+- ❓ **Big Questions**  
+  Cross‑domain conceptual questions for RTT reviewers.
+
+- 🦄 **Paradoxes**  
+  Structural paradoxes and regime‑safe paradox engines.
+
+- ♨️ **Paradoxes II**  
+  Advanced paradox structures and inversion grammars.
+
+---
+
+# **4. Canon Note**
+
+© 2025–2026 **TriadicFrameworks**  
+Resonance‑Time Theory was introduced by **Nawder Loswin** in late 2025 as a triadic resonance toolkit for the science canon.  
+This page collects canonical definitions, diagram specs, RFCs, and observations for community review and contribution.  
+
+
+---
+
+# **5. External Portals**
+
+- **TriadicFrameworks Repo**  
+- **TriadicFrameworks Wiki**  
+- **dev.umaywant2.com**  
+- **dev.umaywant2.win**  
+- **dev.triadicwizards.win**  
+- **dev.coeus.exchange**  
+- **dev.nimms.com**  
+- **dev.vgateway.net**  
+- **dev.mythmatic.org**  
+- **dev.mythmatical.org**  
+- **[www.triadicframeworks.org](http://www.triadicframeworks.org)**
+
+These links provide access to the broader TriadicFrameworks ecosystem.  
+
+
+---
+
+# **6. Copyright**
+
+© 2025–2026 TriadicFrameworks  
+Open educational use permitted.
