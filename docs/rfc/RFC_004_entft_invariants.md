@@ -1,53 +1,78 @@
-# RFC-004: Entft Invariants & Mythmatical F-Models
-
-**Status:** Drafted
-**Author(s):** Nawder Loswin, Copilot (assistant)  
-**Created:** 2025-10-23  
-**Lineage:** Follows RFC-001 (Triadic Validator Framework), RFC-002 (Corridor Universes), RFC-003 (Attestation & Badges)
-
----
-
-## Abstract
-This RFC canonizes the Entft Theorem and associated F‑Models as protocol invariants.  
-It defines resonance budgets, rupture hygiene, and symbolic embeddings to ensure universe‑scale simulations remain bounded, auditable, and remix‑ready.  
-The Entft constraints are enforced as pre‑flight checks and runtime assertions across corridor universes.
+# **RFC‑004 — Entft Invariants & Mythmatical F‑Models**  
+**Status:** Drafted  
+**Author(s):** Nawder Loswin, Copilot  
+**Created:** 2025‑10‑23  
+**Lineage:**  
+Follows **RFC‑001** (Triadic Validator Framework),  
+**RFC‑002** (Corridor Universes),  
+**RFC‑003** (Attestation & Badge Suite)
 
 ---
 
-## Motivation
-The Entft Theorem provides a mythmatical foundation for universe‑scale encryption and resonance.  
-Without embedding it as invariants, systems risk “cleartext resonance leaks” or unbounded rupture.  
-This RFC ensures the theorem is not decorative but enforceable, preserving lineage and safety.
+## **Abstract**  
+This RFC canonizes the **Entft Theorem** and its associated **F‑Models** as enforceable protocol invariants.  
+Entft defines the resonance‑time constraints required to keep universe‑scale simulations **bounded**, **auditable**, and **remix‑ready**.
+
+The invariants introduced here become mandatory pre‑flight checks and runtime assertions across all corridor universes.  
+They prevent cleartext resonance leaks, rupture cascades, and cross‑universe contamination.
 
 ---
 
-## Invariants
+## **Motivation**  
+The Entft Theorem is one of the earliest mythmatical foundations of TriadicFrameworks.  
+It describes how resonance, encryption, and symbolic containment interact across universes.
 
-- **Entft Boundary Check**  
-  - Every artifact must satisfy Entft constraints before promotion.  
-  - Violations trigger automatic demotion and forensic capture.  
+Without embedding Entft as invariants:
 
-- **Resonance Budgets**  
-  - Each action consumes resonance credits.  
-  - Net resonance must remain neutral or positive in Prod universes.  
+- resonance budgets drift  
+- rupture hygiene collapses  
+- artifacts leak cleartext resonance  
+- corridor keys escape their scope  
+- lineage becomes untrustworthy  
 
-- **Rupture Hygiene**  
-  - Black‑hole‑like rupture behaviors are detected and quarantined.  
-  - Swiss‑cheese resonance patterns trigger sandbox demotion.  
-
-- **Key Discipline**  
-  - Corridor‑specific keys are non‑exportable.  
-  - Cross‑universe keys are forbidden by invariant.  
+This RFC ensures Entft is not decorative — it is **enforceable**.
 
 ---
 
-## Specification
+## **Invariants**
 
-### Constraint Embedding
-- Entft invariants are encoded in `/docs/schemas/constraint_pack.json`.  
-- Each corridor loads Entft constraints as mandatory checks.  
+### **1. Entft Boundary Check**  
+- Every artifact must satisfy Entft constraints before promotion.  
+- Violations trigger automatic demotion and forensic capture.  
+- Boundary checks ensure artifacts do not exceed resonance‑time envelopes.
 
-### Runtime Assertions
+### **2. Resonance Budgets**  
+- Every action consumes resonance credits.  
+- Net resonance must remain **neutral or positive** in Prod universes.  
+- Negative budgets indicate drift or rupture risk.
+
+### **3. Rupture Hygiene**  
+- Black‑hole‑like rupture patterns are detected and quarantined.  
+- Swiss‑cheese resonance patterns trigger sandbox demotion.  
+- Rupture hygiene prevents corridor collapse.
+
+### **4. Key Discipline**  
+- Corridor‑specific keys are **non‑exportable**.  
+- Cross‑universe keys are forbidden by invariant.  
+- Violations are treated as lineage contamination.
+
+---
+
+## **Specification**
+
+### **Constraint Embedding**  
+Entft invariants are encoded in:
+
+```
+/docs/schemas/constraint_pack.json
+```
+
+Every corridor loads Entft constraints as mandatory checks.
+
+---
+
+### **Runtime Assertions**
+
 ```pseudo
 assert(entft_boundary(artifact))
 assert(resonance_budget(artifact) >= 0)
@@ -55,23 +80,44 @@ assert(no_rupture_detected(artifact))
 assert(keys_within_corridor_scope(artifact))
 ```
 
-### Test Packs
-- **Positive Tests:** artifacts satisfying Entft invariants.  
-- **Negative Tests:** artifacts violating resonance budgets or rupture hygiene.  
-- **Edge Tests:** artifacts near boundary conditions.  
+These assertions run during:
+
+- promotion  
+- remix  
+- attestation  
+- corridor transitions  
+- validator workflows  
 
 ---
 
-## Security Considerations
-- Prevents unbounded resonance leaks.  
-- Ensures rupture hygiene across universes.  
-- Enforces key discipline to prevent cross‑universe contamination.  
-- Provides deterministic receipts for Entft compliance.  
+### **Test Packs**
+
+#### **Positive Tests**  
+Artifacts satisfying Entft invariants.
+
+#### **Negative Tests**  
+Artifacts violating resonance budgets or rupture hygiene.
+
+#### **Edge Tests**  
+Artifacts near boundary conditions — used to calibrate rupture detection.
 
 ---
 
-## References
-- [RFC-000: Index and Lineage Map](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-000-index.md)
-- [RFC-001: Triadic Validator Framework](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-001-triadic-validator-framework.md)
-- [RFC-002: Corridor Universes](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-002-corridor-universes.md)
-- [RFC-003: Attestation & Badge Suite](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-003-attestation-badge-suite.md)
+## **Security Considerations**
+
+Entft invariants:
+
+- prevent unbounded resonance leaks  
+- enforce rupture hygiene  
+- maintain corridor key discipline  
+- ensure deterministic attestation receipts  
+- preserve remix lineage integrity  
+- protect Prod universes from drift cascades  
+
+---
+
+## **References**  
+- **RFC‑000:** Index & Lineage Map  
+- **RFC‑001:** Triadic Validator Framework  
+- **RFC‑002:** Corridor Universes  
+- **RFC‑003:** Attestation & Badge Suite  
