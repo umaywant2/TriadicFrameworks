@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_regimes" src="https://github.com/user-attachments/assets/e06ea0f3-d5ec-4bcd-a066-ac7250fc8dcb" />
+
 # 🔺 **RTT Regimes**  
 *How systems change state across resonance + time*
 
