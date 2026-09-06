@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_example_systems" src="https://github.com/user-attachments/assets/10854920-decb-4e4e-90e7-0853b47b590b" />
+
 # 🏗️ **RTT Example — Systems**  
 *How complex systems behave across resonance, time, and dimensional access*  
 *(Source: current page content)   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/examples/systems.md)*
