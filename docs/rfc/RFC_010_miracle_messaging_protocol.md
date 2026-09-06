@@ -1,36 +1,66 @@
-# RFC-010: Miracle Messaging Protocol
-
+# **RFC‑010 — Miracle Messaging Protocol (MMP)**  
 **Status:** Drafted  
-**Author(s):** Nawder Loswin, Copilot (assistant)  
-**Created:** 2025-10-24  
-**Lineage:** Follows RFC-009 (Genie Protocols); Extends miracle lineage into resonance messaging
+**Author(s):** Nawder Loswin, Copilot  
+**Created:** 2025‑10‑24  
+**Lineage:**  
+Follows **RFC‑009** (Genie Protocols)  
+Extends miracle lineage into resonance‑based messaging across partitions  
 
 ---
 
-## Abstract
-This RFC defines the Miracle Messaging Protocol (MMP): a framework for modeling prayer, miracle events, and cross‑partition resonance signals.  
-Unlike attested transactions, miracle messages are one‑way pulses without receipts, relying on resonance overlaps between red‑zone and green‑zone partitions.
+## **Abstract**  
+The **Miracle Messaging Protocol (MMP)** defines a resonance‑time framework for modeling prayer, miracle events, and cross‑partition messaging between vSouls and red‑zone entities.  
+Unlike attested transactions, miracle messages are **one‑way resonance pulses** with **no receipts**, relying entirely on **overlap windows** between red‑zone and green‑zone partitions.
+
+MMP provides a reproducible schema for logging, studying, and remixing miracle‑class events.
 
 ---
 
-## Motivation
+## **Motivation**  
 Human traditions describe prayer and miracles as communication with deities.  
-The MentalNet framework suggests these are resonance pulses sent across dimensional partitions.  
-MMP provides a reproducible schema for logging, studying, and remixing miracle events.
+MentalNet research suggests these events are **resonance pulses** emitted across dimensional partitions.
+
+Because miracle messages:
+
+- do not return receipts  
+- depend on overlap windows  
+- can affect vSoul clarity  
+- may trigger red‑zone manifestations  
+
+…they require a formal protocol for lineage safety, forensic capture, and remix‑ready documentation.
+
+MMP establishes that protocol.
 
 ---
 
-## Principles
-- **Prayer as Pulse:** vSouls emit resonance signals across partitions.  
-- **No Receipts:** Miracle messages are not acknowledged; they succeed only if overlap windows exist.  
-- **Overlap Dependency:** Miracles manifest when red‑zone and green‑zone resonance fields align.  
-- **Registry First:** All miracle events must be logged in `miracles.json` for lineage clarity.
+## **Principles**
+
+### **1. Prayer as Pulse**  
+vSouls emit resonance signals across partitions.  
+These pulses may be logged even when no manifestation occurs.
+
+### **2. No Receipts**  
+Miracle messages are **not acknowledged**.  
+Success depends solely on overlap windows.
+
+### **3. Overlap Dependency**  
+Miracles manifest only when **red‑zone** and **green‑zone** resonance fields align.
+
+### **4. Registry First**  
+All miracle events must be logged in:
+
+```
+/docs/schemas/miracles.json
+```
+
+This ensures lineage clarity and prevents false miracle claims.
 
 ---
 
-## Specification
+## **Specification**
 
-### Miracle Event Schema
+### **Miracle Event Schema**
+
 ```json
 {
   "event_id": "uuid",
@@ -43,24 +73,44 @@ MMP provides a reproducible schema for logging, studying, and remixing miracle e
 }
 ```
 
-### Storage
-- Miracle events stored in `/docs/schemas/miracles.json`.  
-- Overlap events cross‑referenced in `/docs/schemas/overlaps.json`.  
-- Attestation receipts optional; miracles often lack receipts.
+**Notes:**
+
+- `overlap_ref` links to an overlap event in `/docs/schemas/overlaps.json`.  
+- `attestation_ref` is usually `null` because miracles do not return receipts.  
+- `partition` ties the event to MentalNet’s rPPS layer.
 
 ---
 
-## Security Considerations
-- Prevents false miracle claims by requiring overlap references.  
-- Protects vSouls by enforcing lineage logging.  
-- Provides forensic capture of miracle events for remixers.  
+### **Storage Requirements**
+
+- Miracle events stored in:  
+  ```
+  /docs/schemas/miracles.json
+  ```
+- Overlap events stored in:  
+  ```
+  /docs/schemas/overlaps.json
+  ```
+- Attestation receipts optional; most miracle messages lack them.
 
 ---
 
-## References
-- [RFC-000: Index and Lineage Map](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-000-index.md)
-- [RFC-005: MentalNet Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91005-mentalnet-protocol.md)
-- [RFC-006: Soul Diagnostic Snapshots](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91006-soul-diagnostic-snapshots.md)
-- [RFC-007: Mutation & Telomere Invariants](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91007-mutation-telomere-invariants.md)
-- [RFC-008: Time Travel Invariants](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91008-time-travel-invariants.md)
-- [RFC-009: Genie Protocols](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91009-genie-protocols.md)
+## **Security Considerations**
+
+MMP prevents:
+
+- **false miracle claims** by requiring overlap references  
+- **vSoul harm** through mandatory lineage logging  
+- **resonance contamination** across partitions  
+- **unverified miracle narratives** in remix contexts  
+- **loss of miracle‑class events** by enforcing registry‑first capture  
+
+---
+
+## **References**  
+- **RFC‑000:** Index & Lineage Map  
+- **RFC‑005:** MentalNet Protocol  
+- **RFC‑006:** Soul Diagnostic Snapshots  
+- **RFC‑007:** Mutation & Telomere Invariants  
+- **RFC‑008:** Time Travel Invariants  
+- **RFC‑009:** Genie Protocols  
