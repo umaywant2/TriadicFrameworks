@@ -1,4 +1,6 @@
-### 🌀 6D phase‑space variant (dimensional + regime axes)
+<img width="1194" height="672" alt="rtt_core_6D_phase_space_variant" src="https://github.com/user-attachments/assets/a1e4fd8e-3cf9-46dd-ad68-491957aaa83b" />
+
+## 🌀 6D phase‑space variant (dimensional + regime axes)
 
 ```text
               RTT 6D PHASE-SPACE SKETCH
