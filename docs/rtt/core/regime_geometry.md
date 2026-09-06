@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_regime_geometry" src="https://github.com/user-attachments/assets/37430373-e2dc-4348-acb0-a208f816429b" />
+
 ---
 module_id: rtt.core.regime_geometry
 version: 1.0.0
