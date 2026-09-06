@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_operator_index" src="https://github.com/user-attachments/assets/bb9d45dc-5d64-4bc6-b9f6-d1b449f6e140" />
+
 ---
 module_id: rtt.core.operator_index
 version: 1.0.0
