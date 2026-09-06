@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_guild_Little_Science_Series_Book_5_Little_Matter" src="https://github.com/user-attachments/assets/0dcd00af-4b17-4146-9c54-f484d9ceb776" />
+
 # 🪨 **Book 5 — Little Matter**  
 ### *Apprentice Arc · Form · Structure · The Nature of Matter*
 
