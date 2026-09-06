@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_diagrams_regime" src="https://github.com/user-attachments/assets/aef0a53e-3c80-49aa-a2cc-cd885c4919f8" />
+
 # 🔄 **Refreshed regime.svg**  
 *(Drop directly into `/docs/rtt/diagrams/regime.svg`)*
 
