@@ -1,52 +1,91 @@
-# RFC-001: Triadic Validator Framework
-
-**Status:** Drafted
-**Author(s):** Nawder Loswin, Copilot (assistant)  
-**Created:** 2025-10-23  
-**Lineage:** Precedes RFC-002 (Corridor Universes), RFC-003 (Attestation & Badges), RFC-004 (Entft Invariants)
-
----
-
-## Abstract
-This RFC defines the Triadic Validator Framework (TVF), a protocol for ensuring AI and system outputs are consistent with lineage, constraints, and onboarding clarity.  
-The framework enforces three dimensions of validation: **causal fidelity**, **functional coherence**, and **cognitive alignment**.  
-It introduces runtime roles (Validator, Attestor, Curator), constraint packs, lineage manifests, and a validation API.
+# **RFC‑001 — Triadic Validator Framework (TVF)**  
+**Status:** Drafted  
+**Author(s):** Nawder Loswin, Copilot  
+**Created:** 2025‑10‑23  
+**Lineage:** Precedes RFC‑002 (Corridor Universes), RFC‑003 (Attestation & Badges), RFC‑004 (Entft Invariants)
 
 ---
 
-## Motivation
-AI and distributed systems generate artifacts without enforceable lineage or coherence.  
-Without rails, outputs risk “cleartext lineage downgrades” — artifacts that appear valid but lack causal grounding, functional safety, or cognitive clarity.  
-The TVF provides a validator role to enforce rails across universes, corridors, and remix lineages.
+## **Abstract**  
+The **Triadic Validator Framework (TVF)** defines the core validation protocol used across TriadicFrameworks.  
+It ensures that all artifacts — AI outputs, scrolls, simulations, corridor events, remix lineages — maintain:
+
+- **Causal Fidelity**  
+- **Functional Coherence**  
+- **Cognitive Alignment**
+
+TVF introduces runtime roles (Validator, Attestor, Curator), constraint packs, lineage manifests, and a deterministic validation API.  
+It is the foundational clarity engine for all higher‑order systems.
 
 ---
 
-## Principles
-- **Causal Fidelity:** Every artifact must trace back to validated sources, proofs, or simulations.  
-- **Functional Coherence:** Artifacts must satisfy constraints of the active system and environment.  
-- **Cognitive Alignment:** Artifacts must be teachable, inspectable, and remixable by humans and agents.
+## **Motivation**  
+Distributed systems and AI engines generate artifacts that *appear* correct but lack:
+
+- causal grounding  
+- functional safety  
+- cognitive clarity  
+- remix‑friendly lineage  
+
+These failures produce **cleartext lineage downgrades** — artifacts that look valid but cannot be trusted.
+
+TVF prevents downgrades by enforcing rails across universes, corridors, and remix lineages.
 
 ---
 
-## Runtime Roles
-- **Validator:** Executes triadic checks against artifacts.  
-- **Attestor:** Signs successful validations with deterministic receipts.  
-- **Curator:** Maintains remixer-friendly docs, diffs, and badges.
+## **Principles**
+
+### **1. Causal Fidelity**  
+Every artifact must trace back to validated sources, proofs, simulations, or scroll lineage.
+
+### **2. Functional Coherence**  
+Artifacts must satisfy constraints of the active environment, corridor phase, and resonance budget.
+
+### **3. Cognitive Alignment**  
+Artifacts must be teachable, inspectable, remixable, and understandable by humans and agents.
 
 ---
 
-## Specification
+## **Runtime Roles**
 
-### Constraint Packs
-- JSON manifests defining invariants, rules, and safety envelopes.  
-- Example: `/docs/schemas/constraint_pack.json`
+### **Validator**  
+Executes triadic checks against artifacts.
 
-### Lineage Manifests
-- YAML/JSON files recording artifact ancestry, authorship, and remix lineage.  
-- Example: `/docs/schemas/lineage_manifest.json`
+### **Attestor**  
+Signs successful validations with deterministic receipts.
 
-### Validation API
-```pseudo
+### **Curator**  
+Maintains remixer‑friendly docs, diffs, badges, and lineage clarity.
+
+---
+
+## **Specification**
+
+### **Constraint Packs**  
+JSON manifests defining invariants, rules, resonance budgets, and safety envelopes.
+
+Example:  
+`/docs/schemas/constraint_pack.json`
+
+---
+
+### **Lineage Manifests**  
+YAML/JSON files recording:
+
+- artifact ancestry  
+- authorship  
+- remix lineage  
+- corridor phase  
+- validator receipts  
+
+Example:  
+`/docs/schemas/lineage_manifest.json`
+
+---
+
+### **Validation API**
+
+```python
 function validate(artifact, context):
     lineage = resolve_lineage(artifact.manifest)
     constraints = load_constraints(context.env, context.phase)
@@ -59,26 +98,36 @@ function validate(artifact, context):
         return reject_with_diagnostics(proofs)
 ```
 
-### Attestation Receipts
-- JSON receipts containing:
-  - Constraint hashes  
-  - Validation proofs  
-  - Deterministic seeds  
-  - Lineage references  
-- Example schema: `/docs/schemas/attestation_receipt.schema.json`
+---
+
+### **Attestation Receipts**  
+Deterministic JSON receipts containing:
+
+- constraint hashes  
+- validation proofs  
+- deterministic seeds  
+- lineage references  
+
+Schema:  
+`/docs/schemas/attestation_receipt.schema.json`
 
 ---
 
-## Security Considerations
-- Prevents lineage downgrades by enforcing causal traceability.  
-- Enforces resonance budgets and invariant checks.  
-- Provides deterministic receipts for auditability.  
-- Supports rollback and forensic capture in corridor universes.
+## **Security Considerations**
+
+TVF:
+
+- prevents lineage downgrades  
+- enforces resonance budgets  
+- ensures invariant compliance  
+- provides deterministic receipts for auditability  
+- supports rollback and forensic capture in corridor universes  
 
 ---
 
-## References
-- [RFC-000: Index and Lineage Map](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-000-index.md)
-- [RFC-002: Corridor Universes](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-002-corridor-universes.md)
-- [RFC-003: Attestation & Badge Suite](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-003-attestation-badge-suite.md)
-- [RFC-004: Entft Invariants](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-004-entft-invariants.md)
+## **References**
+
+- **RFC‑000:** Index & Lineage Map  
+- **RFC‑002:** Corridor Universes  
+- **RFC‑003:** Attestation & Badge Suite  
+- **RFC‑004:** Entft Invariants  
