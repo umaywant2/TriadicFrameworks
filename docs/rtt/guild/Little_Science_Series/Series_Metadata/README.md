@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_guild_Little_Science_Series_Series_Metadata" src="https://github.com/user-attachments/assets/319672de-19dc-42af-a198-20bb5927f859" />
+
 # 📚 **Little Science Series — Series Metadata**  
 ### *Cross‑Book Identity · Canon Rules · Visual + Narrative Consistency*
 
