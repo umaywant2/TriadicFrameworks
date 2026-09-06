@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="rtt_Triadic_Echo_Lattice_" src="https://github.com/user-attachments/assets/5a3a3f30-8006-4369-a885-04cdaf85ff7f" />
 
 # **Triadic Regime Synthesizer — RTT/1**  
 
