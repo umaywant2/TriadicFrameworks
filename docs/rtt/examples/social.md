@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_example_social_systems" src="https://github.com/user-attachments/assets/447fea7b-6f25-4d79-9e9f-e6a57320e757" />
+
 # 🧩 **RTT Example — Social Systems**  
 *How groups, communities, and societies change across resonance + time*  
 *(Source: current empty file in your tab)*
