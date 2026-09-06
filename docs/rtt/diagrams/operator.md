@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_diagrams_operator" src="https://github.com/user-attachments/assets/c0adbfcd-c2b7-436a-8241-803772099ffe" />
+
 # 🔧 **Refreshed operator.svg**  
 *(Drop directly into `/docs/rtt/diagrams/operator.svg`)*
 
