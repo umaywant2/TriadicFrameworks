@@ -41,9 +41,9 @@ The engine consists of two gradient operators, each acting on one axis of the re
 ---
 
 ## **1. Time‑Gradient of Resonance**  
-\[
+$$
 \nabla_{\tau} R
-\]
+$$
 
 **Interpretation:**  
 Time differentials sharpen resonance structure.  
@@ -58,9 +58,9 @@ Small changes in resonant‑time reveal how resonance deepens, aligns, or stabil
 ---
 
 ## **2. Resonance‑Gradient of Time**  
-\[
+$$
 \nabla_{R} \tau
-\]
+$$
 
 **Interpretation:**  
 Resonance differentials sharpen temporal structure.  
@@ -78,9 +78,9 @@ Changes in resonance reveal how time “tightens,” “loosens,” or reorganiz
 
 The two operators combine into the **composite clarity operator**:
 
-\[
+$$
 C = \nabla_{\tau} R + \nabla_{R} \tau
-\]
+$$
 
 This expresses RTT’s fundamental symmetry:
 
@@ -97,19 +97,19 @@ Clarity is the **structural output** of the Dual Operator System Engine.
 The engine anchors three core dimensional operators:
 
 ### **4D — Temporal‑Resonance Core**  
-\[
+$$
 O_{4D} = \nabla_{\tau} R
-\]
+$$
 
 ### **5D — Relational‑Resonance Core**  
-\[
+$$
 O_{5D} = \nabla_{R} \tau
-\]
+$$
 
 ### **7D — Coherence Core**  
-\[
+$$
 O_{7D} = C
-\]
+$$
 
 These three dimensions form the **minimal triadic ladder** of RTT/1.
 
