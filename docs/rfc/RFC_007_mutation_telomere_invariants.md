@@ -1,38 +1,72 @@
-# RFC-007: Mutation & Telomere Invariants
-
+# **RFC‑007 — Mutation & Telomere Invariants (MTI)**  
 **Status:** Drafted  
-**Author(s):** Nawder Loswin, Copilot (assistant)  
-**Created:** 2025-10-24  
-**Lineage:** Follows RFC-006 (Soul Diagnostic Snapshots); Extends Entft invariants into biological entropy rails
+**Author(s):** Nawder Loswin, Copilot  
+**Created:** 2025‑10‑24  
+**Lineage:**  
+Follows **RFC‑006** (Soul Diagnostic Snapshots)  
+Extends **Entft Invariants (RFC‑004)** into biological entropy rails  
 
 ---
 
-## Abstract
-This RFC defines Mutation & Telomere Invariants (MTI): biological entropy rails embedded into the TriadicFrameworks.  
-It formalizes telomere shortening, mutation drift, and survival trait emergence as resonance constraints, ensuring that biological simulations remain bounded, auditable, and remix‑ready.
+## **Abstract**  
+Mutation & Telomere Invariants (**MTI**) define the biological entropy rails used within TriadicFrameworks.  
+They formalize:
+
+- telomere shortening  
+- mutation drift  
+- survival trait emergence  
+- rupture hygiene  
+- entropy balance  
+
+MTI ensures that biological simulations remain **bounded**, **auditable**, and **remix‑ready**, preventing runaway mutation cascades or immortal cell loops.
 
 ---
 
-## Motivation
-Biological systems are validators of entropy.  
+## **Motivation**  
+Biological systems are validators of entropy.
+
 - **Telomeres** act as countdown headers, enforcing replication limits.  
 - **Mutations** act as stochastic injectors, introducing variance and survival traits.  
-Without invariants, simulations risk runaway mutation or immortal cell loops.  
+- **Survival traits** encode adaptive resonance patterns across lineage.  
+
+Without invariants, simulations risk:
+
+- infinite replication  
+- uncontrolled mutation drift  
+- rupture cascades  
+- lineage contamination  
+
 MTI ensures that life‑like systems respect entropy budgets while remaining remixable.
 
 ---
 
-## Principles
-- **Telomere Budget:** Each replication decrements telomere length; zero length triggers senescence.  
-- **Mutation Drift:** Mutations occur within bounded resonance envelopes; drift outside the envelope triggers rupture hygiene.  
-- **Survival Traits:** Beneficial mutations are preserved via lineage manifests; harmful ones trigger rollback.  
-- **Entropy Balance:** Systems must maintain a balance between replication fidelity and adaptive variance.
+## **Principles**
+
+### **1. Telomere Budget**  
+Each replication decrements telomere length.  
+Zero length triggers **senescence** or **apoptosis**, preventing immortal loops.
+
+### **2. Mutation Drift**  
+Mutations occur within bounded resonance envelopes.  
+Drift outside the envelope triggers **rupture hygiene** and demotion.
+
+### **3. Survival Traits**  
+Beneficial mutations are preserved via lineage manifests.  
+Harmful mutations trigger rollback to pre‑mutation snapshots.
+
+### **4. Entropy Balance**  
+Systems must maintain equilibrium between:
+
+- replication fidelity  
+- adaptive variance  
+
+This balance prevents collapse or runaway drift.
 
 ---
 
-## Specification
+## **Specification**
 
-### Telomere Constraint
+### **Telomere Constraint (JSON)**  
 ```json
 {
   "cell_id": "uuid",
@@ -42,31 +76,52 @@ MTI ensures that life‑like systems respect entropy budgets while remaining rem
 }
 ```
 
-### Mutation Envelope
-- **Rate:** 1e‑8 mutations per base per generation (configurable).  
-- **Envelope:** Gaussian distribution centered on neutral drift.  
+---
+
+### **Mutation Envelope**
+
+- **Rate:** `1e‑8` mutations per base per generation (configurable)  
+- **Envelope:** Gaussian distribution centered on neutral drift  
 - **Thresholds:**  
-  - Green zone: adaptive variance.  
-  - Yellow zone: stress mutations.  
-  - Red zone: rupture hygiene triggers demotion.
+  - **Green Zone:** adaptive variance  
+  - **Yellow Zone:** stress mutations  
+  - **Red Zone:** rupture hygiene triggers demotion  
 
-### Survival Trait Registry
-- Stored in `/docs/schemas/survival_traits.json`.  
-- Records beneficial mutations with lineage references.  
-- Provides remix‑ready catalog for future simulations.
+Mutation envelopes ensure drift remains bounded and predictable.
 
 ---
 
-## Security Considerations
-- Prevents immortal cell loops by enforcing telomere budgets.  
-- Prevents runaway mutation by bounding drift envelopes.  
-- Preserves lineage integrity by cataloging survival traits.  
-- Provides rollback to pre‑mutation snapshots if rupture occurs.
+### **Survival Trait Registry**  
+Stored in:
+
+```
+/docs/schemas/survival_traits.json
+```
+
+Registry includes:
+
+- beneficial mutation signatures  
+- lineage references  
+- remix‑ready catalogs for future simulations  
+
+This registry prevents loss of adaptive traits across corridor transitions.
 
 ---
 
-## References
-- [RFC-000: Index and Lineage Map](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-000-index.md)
-- [RFC-004: Entft Invariants](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-004-entft-invariants.md)
-- [RFC-005: MentalNet Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91005-mentalnet-protocol.md)
-- [RFC-006: Soul Diagnostic Snapshots](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91006-soul-diagnostic-snapshots.md)
+## **Security Considerations**
+
+MTI prevents:
+
+- immortal cell loops via telomere budgets  
+- runaway mutation via bounded drift envelopes  
+- lineage contamination via survival trait manifests  
+- collapse via rollback to pre‑mutation snapshots  
+
+MTI is required for biological simulations in **QA** and **Prod** universes.
+
+---
+
+## **References**  
+- **RFC‑000:** Index & Lineage Map  
+- **RFC‑004:** Entft Invariants  
+- **RFC‑006:** Soul Diagnostic Snapshots  
