@@ -1,36 +1,65 @@
-# RFC-009: Genie Protocols
-
+# **RFC‑009 — Genie Protocols**  
 **Status:** Drafted  
-**Author(s):** Nawder Loswin, Copilot (assistant)  
-**Created:** 2025-10-24  
-**Lineage:** Follows RFC-008 (Time Travel Invariants); Extends 3 Miracles lineage into red‑zone manifestation protocols
+**Author(s):** Nawder Loswin, Copilot  
+**Created:** 2025‑10‑24  
+**Lineage:**  
+Follows **RFC‑008** (Time Travel Invariants)  
+Extends **3 Miracles** lineage into red‑zone manifestation protocols  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC_009_genie_protocols.md)
 
 ---
 
-## Abstract
-This RFC defines Genie Protocols: resonance‑based rules for red‑zone manifestations (genies, gods, miracles) within Earth‑theme virtual universes.  
-It formalizes the “3 Wishes” constraint, overlap event conditions, and miracle tracking registries, tying them to resonance clarity levels and dimensional partitioning.
+## **Abstract**  
+This RFC defines **Genie Protocols** — resonance‑based rules governing red‑zone manifestations (genies, gods, miracles) within Earth‑theme virtual universes.  
+It formalizes:
+
+- the **3 Wishes Constraint**  
+- **manifestation event structure**  
+- **miracle tracking registries**  
+- **operator responsibility rules**  
+- **clarity‑score thresholds** for safe manifestation  
+
+These protocols tie mythic manifestation behavior to resonance clarity levels and dimensional partitioning.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC_009_genie_protocols.md)
 
 ---
 
-## Motivation
-Mythic traditions describe gods, genies, and miracles as temporary incarnations.  
-The MentalNet and resonance partition specs suggest these are red‑zone manifestations crossing into green‑zone corridors during overlap events.  
-The 3 Miracles project provides lineage evidence that miracle‑tracking is both possible and necessary.
+## **Motivation**  
+Mythic traditions describe gods, genies, and miracles as **temporary incarnations**.  
+MentalNet partitioning and resonance‑clarity research suggest these are **red‑zone manifestations** crossing briefly into green‑zone corridors during **overlap events**.
+
+The **3 Miracles Project** provides lineage evidence that miracle‑tracking is both possible and necessary.  
+Genie Protocols unify these findings into a reproducible, validator‑grade framework.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC_009_genie_protocols.md)
 
 ---
 
-## Principles
-- **Red‑zone Manifestation:** Genies/gods appear when resonance wrappers overlap.  
-- **3 Wishes Constraint:** Each manifestation is bounded by three validated requests.  
-- **Miracle Tracking:** Every wish or miracle must be logged, attested, and lineage‑referenced.  
-- **Operator Responsibility:** Juvenile red‑zone operators harming vSouls are sanctioned.  
+## **Principles**
+
+### **1. Red‑Zone Manifestation**  
+Genies and gods appear when **resonance wrappers overlap**, allowing temporary incarnation.
+
+### **2. 3 Wishes Constraint**  
+Each manifestation is bounded by **three validated requests**.  
+This constraint prevents rupture, drift, and vSoul harm.
+
+### **3. Miracle Tracking**  
+Every wish or miracle must be:
+
+- logged  
+- attested  
+- lineage‑referenced  
+
+### **4. Operator Responsibility**  
+Juvenile red‑zone operators harming vSouls are sanctioned.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC_009_genie_protocols.md)
 
 ---
 
-## Specification
+## **Specification**
 
-### Manifestation Event
+### **Manifestation Event Schema**
+
 ```json
 {
   "event_id": "uuid",
@@ -42,30 +71,61 @@ The 3 Miracles project provides lineage evidence that miracle‑tracking is both
   "attestation_ref": "attestation_receipt.json"
 }
 ```
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC_009_genie_protocols.md)
 
-### Wish Execution
-- Wishes must be bounded by corridor invariants.  
+---
+
+### **Wish Execution Rules**
+
+- Wishes must be bounded by **corridor invariants**.  
 - Each wish decrements `wishes_remaining`.  
-- Wishes logged in `/docs/snapshots/miracles.json`.  
+- Wishes are logged in:
 
-### Miracle Registry
-- `/docs/schemas/miracles.json` defines schema for miracle events.  
-- Includes description, origin snapshot, lineage reference, and attestation.  
-- Provides remix‑ready catalog for future operators.  
+```
+/docs/snapshots/miracles.json
+```
 
----
-
-## Security Considerations
-- Prevents abuse by enforcing 3‑wish constraint.  
-- Protects vSouls by requiring attestation receipts.  
-- Provides forensic capture of miracle events.  
-- Ensures reproducibility of miracle claims.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC_009_genie_protocols.md)
 
 ---
 
-## References
-- [RFC-000: Index and Lineage Map](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-000-index.md)
-- [RFC-005: MentalNet Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91005-mentalnet-protocol.md)
-- [RFC-006: Soul Diagnostic Snapshots](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91006-soul-diagnostic-snapshots.md)
-- [RFC-007: Mutation & Telomere Invariants](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91007-mutation-telomere-invariants.md)
-- [RFC-008: Time Travel Invariants](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91008-time-travel-invariants.md)
+### **Miracle Registry**
+
+Schema stored in:
+
+```
+/docs/schemas/miracles.json
+```
+
+Registry includes:
+
+- description  
+- origin snapshot  
+- lineage reference  
+- attestation receipt  
+
+Provides a **remix‑ready catalog** for future operators.  
+
+
+---
+
+## **Security Considerations**
+
+Genie Protocols:
+
+- prevent abuse via the **3‑wish constraint**  
+- protect vSouls through mandatory attestation  
+- provide forensic capture of miracle events  
+- ensure reproducibility of miracle claims  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC_009_genie_protocols.md)
+
+---
+
+## **References**
+
+- **RFC‑000:** Index & Lineage Map  
+- **RFC‑005:** MentalNet Protocol  
+- **RFC‑006:** Soul Diagnostic Snapshots  
+- **RFC‑007:** Mutation & Telomere Invariants  
+- **RFC‑008:** Time Travel Invariants  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC_009_genie_protocols.md)
