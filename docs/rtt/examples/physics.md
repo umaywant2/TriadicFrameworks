@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_example_physics" src="https://github.com/user-attachments/assets/eaa9f2c6-6af0-46c3-9daa-bdd2735b2c8d" />
+
 # 🌌 **RTT Example — Physics**  
 *How physical systems behave across resonance, time, and dimensional access*  
 *(Source: current page content)   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/examples/physics.md)*
