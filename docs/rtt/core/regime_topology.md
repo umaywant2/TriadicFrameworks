@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_regime_topology" src="https://github.com/user-attachments/assets/7413c5d5-dcb5-4f1b-b755-4ddae54ab23c" />
+
 ---
 module_id: rtt.core.regime_topology
 version: 1.0.0
