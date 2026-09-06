@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_diagrams_substrate_cycle" src="https://github.com/user-attachments/assets/02a3bf77-0b5a-4f4d-84b6-6898c64e796f" />
+
 # 🔄 **Refreshed substrate_cycle.svg**  
 *(Drop directly into `/docs/rtt/diagrams/substrate_cycle.svg`)*
 
