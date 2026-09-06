@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_observer" src="https://github.com/user-attachments/assets/f2d0d0ad-b71c-4778-ae6d-346569e9ec91" />
+
 # 👁️ **RTT Observer Model**  
 *How systems see, measure, and interpret across resonance + time*
 
