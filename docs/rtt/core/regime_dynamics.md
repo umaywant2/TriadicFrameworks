@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_regime_dynamics" src="https://github.com/user-attachments/assets/af061ec7-210e-4ace-9dc3-d4aa240cc588" />
+
 ---
 module_id: rtt.core.regime_dynamics
 version: 1.0.0
