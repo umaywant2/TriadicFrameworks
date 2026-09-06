@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="rtt_Structural_Faultline_Detector_" src="https://github.com/user-attachments/assets/06c53266-4173-4b88-8b38-755e8507efe7" />
 
 # **Structural Faultline Detector — RTT/1**  
 
