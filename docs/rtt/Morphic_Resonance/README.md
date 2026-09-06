@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="rtt_Inside_Morphic_Resonance" src="https://github.com/user-attachments/assets/bff719c1-9fee-42e1-aa69-a3e6802e56fd" />
 
 # Morphic Resonance  
 
