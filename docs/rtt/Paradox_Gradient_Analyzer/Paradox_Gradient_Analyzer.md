@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Paradox_Gradient_Analyzer" src="https://github.com/user-attachments/assets/405839c0-4ed9-426a-85fe-ba782cf7220b" />
+
 # **Paradox Gradient Analyzer (PGA) — RTT/1**  
 ### *Paradox‑Level Intelligence Engine for TriadicFrameworks*
 
