@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Inside_Capture_Template_Health_Domain" src="https://github.com/user-attachments/assets/c40c79c4-37cf-43b2-9c78-b75fa9d67dd9" />
+
 # **RTT/Inside Capture Template — ▶️ Health Domain**  
 ### *Seeing Care with Dimensional Clarity*
 
