@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_example_ecology" src="https://github.com/user-attachments/assets/f88cefc2-61e0-4805-a457-70f73bbd221a" />
+
 # 🌿 **RTT Example — Ecology**  
 *How ecosystems grow, interact, collapse, and re‑emerge across resonance + time*  
 *(Source: current empty file in your tab)   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/examples/ecology.md)*
