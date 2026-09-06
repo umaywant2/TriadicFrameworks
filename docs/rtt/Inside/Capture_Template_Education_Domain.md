@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Inside_Capture_Template_Education_Domain" src="https://github.com/user-attachments/assets/97774965-5904-4ff1-af00-6ec07b95ad8f" />
+
 # **RTT/Inside Capture Template — 🎓 Education Domain**  
 ### *Seeing Learning with Dimensional Clarity* 💻
 
