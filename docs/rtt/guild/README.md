@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_guild_apprentice_arc" src="https://github.com/user-attachments/assets/7abe942f-56ba-4c13-be50-5c444997680f" />
+
 # **RTT Guild**  
 ### *Apprenticeship · Storycraft · Conceptual Foundations*
 
