@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_alignment_quantum_cloning" src="https://github.com/user-attachments/assets/26c249fd-d7e5-4853-9659-fff07c682909" />
+
 ---
 module_id: rtt.core.alignment_quantum_cloning
 version: 1.0.0
