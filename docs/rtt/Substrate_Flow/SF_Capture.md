@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Substrate_Flow" src="https://github.com/user-attachments/assets/6edfd785-921c-4772-a1c9-beb11c7a1c40" />
+
 ## 📁 File Manifest
 
 | File | Role | Key Content |
