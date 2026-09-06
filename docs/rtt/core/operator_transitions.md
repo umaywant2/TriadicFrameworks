@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_operator_transitions" src="https://github.com/user-attachments/assets/c12243be-ff0e-4af4-a20c-c179457febc2" />
+
 ---
 module_id: rtt.core.operator_transitions
 version: 1.0.0
