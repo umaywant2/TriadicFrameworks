@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_operator_invariants" src="https://github.com/user-attachments/assets/ef35e1f1-bb0d-40c1-a9f1-a9edfcd676a0" />
+
 ---
 module_id: rtt.core.operator_invariants
 version: 1.0.0
