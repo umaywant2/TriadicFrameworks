@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_regime_domains" src="https://github.com/user-attachments/assets/37df3b88-1baa-49c9-ba90-14706f0bb57a" />
+
 ---
 module_id: rtt.core.regime_domains
 version: 1.0.0
