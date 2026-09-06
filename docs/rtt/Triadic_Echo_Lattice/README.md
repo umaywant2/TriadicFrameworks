@@ -1,4 +1,3 @@
-<img width="1194" height="672" alt="rtt_Triadic_Echo_Lattice" src="https://github.com/user-attachments/assets/94dd0614-3753-46c5-919e-7afc8ae9f31b" />
 
 # 🕸️ Triadic Echo Lattice
 
