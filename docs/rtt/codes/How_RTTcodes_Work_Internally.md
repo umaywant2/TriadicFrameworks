@@ -1,3 +1,5 @@
+<img width="938" height="938" alt="rtt_codes" src="https://github.com/user-attachments/assets/45c265aa-02d2-484c-b7bc-6b46609ab961" />
+
 # 🧩 **How RTTcodes Work Internally**  
 *A clear, canonical explainer for contributors and tool authors.*
 
