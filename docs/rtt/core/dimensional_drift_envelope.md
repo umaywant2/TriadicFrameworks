@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_dimensional_drift_envelope" src="https://github.com/user-attachments/assets/a3f018b6-86a1-418d-aeba-d07982242212" />
+
 ---
 module_id: rtt.core.dimensional_drift_envelope
 version: 1.0.0
