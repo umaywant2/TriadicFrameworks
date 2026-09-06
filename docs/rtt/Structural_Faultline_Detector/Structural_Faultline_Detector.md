@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Structural_Faultline_Detector" src="https://github.com/user-attachments/assets/c06038e6-112b-4cc9-9261-a1e2c1d00387" />
+
 # **Structural Faultline Detector (SFD) — RTT/1**  
 ### *Structural‑Intelligence Engine for TriadicFrameworks*
 
