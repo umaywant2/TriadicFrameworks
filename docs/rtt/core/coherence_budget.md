@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_coherence_budget" src="https://github.com/user-attachments/assets/a06f9fa1-71d5-436d-8063-fcb3640e5940" />
+
 ---
 module_id: rtt.core.coherence_budget
 version: 1.0.0
