@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_diagrams_triad" src="https://github.com/user-attachments/assets/cd7220ec-14a8-4d0c-b915-fbc404dbd182" />
+
 # 🔺 **Refreshed triad.svg**  
 *(Drop directly into `/docs/rtt/diagrams/triad.svg`)*
 
