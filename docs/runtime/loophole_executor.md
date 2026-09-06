@@ -1,4 +1,6 @@
-### 🔣 **Glyphic Execution Engine**
+<img width="1194" height="672" alt="runtime_glyphic_execution" src="https://github.com/user-attachments/assets/14d76825-3ef5-4b42-9b25-4cc41a739881" />
+
+## 🔣 **Glyphic Execution Engine**
 
 ```yaml
 glyph_trace:
