@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_guild_Little_Science_Series_Book_1_Little_Gravity" src="https://github.com/user-attachments/assets/3ea4123b-3533-4bf8-b980-94c48231f656" />
+
 # 📘 **Book 1 — Little Gravity**  
 ### *Apprentice Arc · Conceptual Foundations · Visual + Narrative Blueprint*
 
