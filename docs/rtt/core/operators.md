@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_operators" src="https://github.com/user-attachments/assets/87c56270-aa78-4866-a9e7-4a3baf1bc4a7" />
+
 # 🔧 **RTT Operators**  
 *The core actions systems perform across resonance + time*
 
