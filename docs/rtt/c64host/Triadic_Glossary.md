@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_c64host_module_image" src="https://github.com/user-attachments/assets/8fc58ba3-499d-4977-8f42-acbeef79acca" />
+
 # 🌌 **Triadic Glossary (Canonical Edition)**  
 ### *A unified lexicon of substrate, flow, resonance, and dimensionality across the Commodore → Amiga → RTT lineage*
 
