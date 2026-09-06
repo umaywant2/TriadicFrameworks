@@ -1,37 +1,148 @@
-## Core definitions 
+# **Core Definitions — RTT/1**  
+**TriadicFrameworks · Canonical Engine Layer**
 
-🌊 **Resonance‑Time Theory (RTT)**  
-A cross‑domain conceptual example used to illustrate structural reasoning patterns.  
-RTT is not a physics claim and not a cosmological model; it provides a vocabulary for exploring coherence, transitions, and system behavior across domains.
+**Module path:** `docs/rtt/1/core_definitions.md`  
+**Session seed:**  
+```
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
 
-**Resonance**  
-A measure of alignment or coherence within a system.  
-Used conceptually to describe when components, processes, or signals reinforce one another.
+RTT/1 provides a **minimal, structural vocabulary** for reasoning about resonance, coherence, transitions, and system behavior across domains.  
+These definitions are **conceptual**, **triadic**, and **non‑physical** — they describe patterns of organization, not mechanisms of physics.
 
-**Silence**  
-A state of unexcited capacity.  
-Represents potential, rest, or a system waiting for activation.
+This file is the **canonical glossary of primitives** used throughout RTT/1.
 
-**Noise**  
-Incoherent excitation.  
-Represents unaligned or competing signals, activity without structure.
+---
 
-**Time (conceptual)**  
-Not physical time — a sequence of updates, transitions, or changes in system state.  
-Used to describe how structures evolve across steps or phases.
+## **Resonance**  
+A measure of **alignment**, **coherence**, or **phase‑lock** within a system.  
+Resonance describes when components, processes, or signals **reinforce** one another, producing stable, self‑supporting patterns.
 
-**Triads**  
-Three‑part conceptual groupings used to organize examples.  
-Triads appear throughout RTT as a way to show balance, tension, or interaction between three forces or modes.
+Resonance is the only state in which **resonant‑time** is well‑defined.
 
-**Fields (conceptual)**  
+---
+
+## **Silence**  
+A state of **unexcited capacity**.  
+Silence represents latent potential, rest, or a system waiting for activation.  
+It is not “nothing”; it is **available structure**.
+
+Silence is the first state of the **S‑N‑R triad**.
+
+---
+
+## **Noise**  
+A state of **incoherent excitation**.  
+Noise represents unaligned or competing signals — activity without structure.  
+Noise is not “error”; it is **pre‑coherent excitation**.
+
+Noise is the second state of the **S‑N‑R triad**.
+
+---
+
+## **Resonance (R)**  
+A state of **coherent excitation**.  
+Resonance represents aligned, reinforcing signals — activity with structure.  
+Resonance is the only state where **τ = dR/dφ** is meaningful.
+
+Resonance is the third state of the **S‑N‑R triad**.
+
+---
+
+## **Time (Conceptual)**  
+Not physical time.  
+Time in RTT/1 is defined as:
+
+> **A sequence of updates, transitions, or changes in system state.**
+
+RTT/1 uses the **resonant‑time gradient**:
+
+$$
+\tau = \frac{dR}{d\phi}
+$$
+
+Time is a **structural derivative**, not a background dimension.
+
+---
+
+## **Triads**  
+Three‑part conceptual groupings used to organize structural reasoning.  
+Triads appear throughout RTT to express balance, tension, and interaction between three modes.
+
+Canonical triads include:
+
+- **Silence · Noise · Resonance**  
+- **Frequency · Fluids · Forces**  
+- **Spin · Electro‑field · Temperature**  
+- **t₍c₎ · t₍e₎ · t₍r₎**  
+- **f_R · τ_R · Q_R**
+
+Triads are the **minimal unit of structure** in RTT.
+
+---
+
+## **Fields (Conceptual)**  
 Abstract “spaces” where system behavior is described.  
-Not physical fields — simply domains where patterns or relationships are mapped.
+Fields are **not physical fields** — they are conceptual domains where patterns, relationships, or transitions are mapped.
 
-**Operators**  
+Examples:
+
+- coherence fields  
+- resonance fields  
+- regime fields  
+- dimensional fields  
+
+Fields provide the substrate for **operators**.
+
+---
+
+## **Operators**  
 Actions, transitions, or transformations applied to a system.  
-Used to illustrate how a system moves from one state to another.
+Operators describe **how** a system moves from one state to another.
 
-**Coherence**  
-The degree to which system components align, reinforce, or stabilize one another.  
-A recurring theme across RTT examples.
+RTT/1 uses:
+
+- **Dimensional Core Operators (DCOₙ)**  
+- **Extend / Constrain / Balance**  
+- **Dual Operator System Engine**  
+- **Resonance‑Time operators**  
+
+Operators act on **gradients**, not physical mechanisms.
+
+---
+
+## **Coherence**  
+The degree to which system components **align**, **reinforce**, or **stabilize** one another.  
+Coherence is a recurring theme across RTT — it determines:
+
+- stability  
+- clarity  
+- persistence  
+- resonance depth  
+- triad behavior  
+
+Coherence is **declared**, not assumed.
+
+---
+
+# **Structural Output Requirement**
+
+All RTT/1 definitions must include:
+
+> **Structural characterization only; not a physics claim.**
+
+This is mandatory.
+
+---
+
+# **See Also**
+
+- `/docs/rtt/1/ABOUT.md`  
+- `/docs/rtt/1/GLOSSARY.md`  
+- `/docs/rtt/1/canonical_operator.md`  
+- `/docs/rtt/1/dimensional_core_operators_dcos.md`  
+- `/docs/rtt/1/resonance_time_principle.md`  
+- `/docs/rtt/1/resonant_time_triad.md`  
+- `/docs/rtt/1/silence_noise_resonance_s_n_r.md`  
+- `/docs/rtt/1/frequency_first_fff_universe.md`  
+- `/docs/rtt/1/qmroot_dimensional_model.md`  
