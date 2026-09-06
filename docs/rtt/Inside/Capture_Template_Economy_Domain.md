@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Inside_Capture_Template_Economy_Domain" src="https://github.com/user-attachments/assets/b1fe4948-2669-41f2-ba0a-12f7e24765e9" />
+
 # 💰 **RTT/Inside Capture Template — Economy Domain**  
 ### *Seeing Value Systems with Dimensional Clarity* 💻
 
