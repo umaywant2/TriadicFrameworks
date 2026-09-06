@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Inside_Meta-Layer_Takeaway" src="https://github.com/user-attachments/assets/96d5f7f4-2e10-410e-8f8d-05ad5c6c65b4" />
+
 ## **✨ RTT/Inside META‑LAYER TAKEAWAY**
 
 RTT doesn’t change knowledge.  
