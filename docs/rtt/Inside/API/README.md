@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Inside_API" src="https://github.com/user-attachments/assets/5b9098e5-1433-47d7-a63a-e5d46e5677c8" />
+
 # 🧩 Why an RTT‑Inside API becomes inevitable
 
 If RTT‑Inside is going to be:
