@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_guild_Little_Science_Series_Book_2_Little_Light" src="https://github.com/user-attachments/assets/3567ead2-78a1-4793-ada3-002e6e272b14" />
+
 # 📘 **Book 2 — Little Light**  
 ### *Apprentice Arc · Revelation · Illumination of Understanding*
 
