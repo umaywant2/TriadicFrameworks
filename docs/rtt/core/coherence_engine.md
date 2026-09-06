@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_coherence_engine" src="https://github.com/user-attachments/assets/0eb99471-3632-4446-a9b8-c0840e3f79d5" />
+
 # ⚙️ **RTT Coherence Engine**  
 *Procedural model for tracking stability across resonance + time*
 
