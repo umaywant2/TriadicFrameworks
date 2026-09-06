@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_examples_ai_systems" src="https://github.com/user-attachments/assets/61574337-338d-433b-a182-61f35e834e4c" />
+
 # 🤖 **RTT Example — AI Systems**  
 *How artificial systems maintain coherence, shift regimes, and reorganize across resonance + time*  
 *(Source: current page content)   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/examples/ai.md)*
