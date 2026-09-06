@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_dimensions" src="https://github.com/user-attachments/assets/0c05b3e9-a936-401e-8e64-508044d8ea6b" />
+
 # 🔺 **RTT Dimensions**  
 *How systems gain, lose, and invert access to structure*  
 
