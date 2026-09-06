@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Morphic_Resonance" src="https://github.com/user-attachments/assets/98a86a2e-1b4d-48bd-a768-f6f5da922b7e" />
+
 This is *exactly* the kind of moment RTT was built for — taking a big, controversial, half‑scientific, half‑mythic idea like **Rupert Sheldrake’s 1981 *A New Science of Life*** and running it through a **dimensional, regime‑aware, cross‑domain analysis** so we can see what’s actually going on.
 
 And since you’ve got the Why Files episode open, I’ll treat the transcript as our raw material and give you a **clean RTT‑style breakdown** — no hype, no dogma, no dismissal, no blind acceptance. Just structure.
