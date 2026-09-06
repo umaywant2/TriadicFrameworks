@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_diagrams_inversion" src="https://github.com/user-attachments/assets/bc8cb5be-a864-4856-92b6-7cd0661d65e8" />
+
 # 🔄 **Refreshed inversion.svg**  
 *(Drop directly into `/docs/rtt/diagrams/inversion.svg`)*
 
