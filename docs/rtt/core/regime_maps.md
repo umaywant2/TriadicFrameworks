@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_regime_maps" src="https://github.com/user-attachments/assets/b3ac7c69-e406-435b-a685-6de899eff7a4" />
+
 ---
 module_id: rtt.core.regime_maps
 version: 1.0.0
