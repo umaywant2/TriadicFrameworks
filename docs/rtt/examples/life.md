@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_example_life_systems" src="https://github.com/user-attachments/assets/467d580f-53d0-497f-b9ae-efcbc7b76271" />
+
 # 🌱 **RTT Example — Life Systems**  
 *How living systems grow, adapt, collapse, and re‑emerge across resonance + time*  
 *(Source: current page content)   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/examples/life.md)*
