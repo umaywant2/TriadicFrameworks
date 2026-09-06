@@ -1,3 +1,5 @@
+<img width="1280" height="720" alt="RTT_OSI_models_compared" src="https://github.com/user-attachments/assets/a96966f9-c803-4db0-acfe-7eb57f4e7c16" />
+
 # **RTT‑Inside Quick‑Start Guide (Beta)**  
 *A fast path for developers integrating RTT structural awareness into their sites or services.*
 
