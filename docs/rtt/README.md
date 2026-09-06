@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="rtt_resonance_time_technology" src="https://github.com/user-attachments/assets/d4ad5280-2721-467e-81dd-ac8cb3175e02" />
 
 ## 🌀 Resonance Time Technology (RTT)  
 
