@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_equations" src="https://github.com/user-attachments/assets/5560e84d-84ac-4998-b949-1f9a4101af68" />
+
 # 🧮 **RTT Equations**  
 *Minimal symbolic forms for Resonance‑Time Technology*  
 
