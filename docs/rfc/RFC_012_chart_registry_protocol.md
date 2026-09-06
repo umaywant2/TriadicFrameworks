@@ -1,72 +1,179 @@
-# RFC-012: Chart Registry Protocol
-
+# **RFC‑012 — Chart Registry Protocol (CRP)**  
+*RefId: turn0browsertab1*  
 **Status:** Drafted  
-**Author(s):** Nawder Loswin, Copilot (assistant)  
-**Created:** 2025-10-24  
-**Lineage:** Extends RFC-000 (Index and Lineage Map); formalizes chart capture and registry
+**Author(s):** Nawder Loswin, Copilot  
+**Created:** 2025‑10‑24  
+**Lineage:**  
+Extends **RFC‑000** (Index & Lineage Map)  
+Formalizes chart capture, storage, and cross‑reference discipline across the canon
 
 ---
 
-## Abstract
-This RFC defines the Chart Registry Protocol (CRP): a framework for capturing, storing, and cross‑referencing charts used in TriadicFrameworks RFCs.  
-Charts provide visual clarity for resonance models, time travel matrices, miracle mappings, and other validator‑grade relationships.
+## **Abstract**  
+The **Chart Registry Protocol (CRP)** defines the canonical framework for capturing, storing, indexing, and cross‑referencing charts used throughout TriadicFrameworks.  
+Charts provide visual clarity for:
+
+- resonance models  
+- time‑travel matrices  
+- miracle mappings  
+- corridor universes  
+- validator‑grade relationships  
+- mythmatical operators  
+- cosmological structures  
+
+CRP ensures charts remain **discoverable**, **attestable**, **remix‑ready**, and **lineage‑safe**.
 
 ---
 
-## Motivation
-Charts have emerged as critical artifacts in the canon.  
-They clarify relationships between partitions, zones, and invariants, and serve as teaching tools for remixers.  
-Without a registry, charts risk being scattered or lost inside RFCs.
+## **Motivation**  
+Charts have become critical artifacts in the TriadicFrameworks canon.  
+They:
+
+- clarify dimensional relationships  
+- stabilize teaching pathways  
+- prevent drift in conceptual models  
+- provide visual anchors for remixers  
+- unify cross‑RFC structures  
+
+Without a registry, charts risk becoming scattered, duplicated, or lost inside individual RFCs.  
+CRP establishes a **single, canonical home** for all charts.
 
 ---
 
-## Principles
-- **Inline + Registry:** Charts remain embedded in RFCs but are also stored in `/docs/charts/`.  
-- **Cross‑Reference:** Each chart file links back to its source RFC.  
-- **Lineage Safety:** Charts are indexed in RFC‑000 for discoverability.  
-- **Remixability:** Charts are standalone `.md` files, remix‑ready for teaching or dashboards.
+## **Principles**
+
+### **1. Inline + Registry**  
+Charts remain embedded in their source RFCs **and** are stored as standalone files in:
+
+```
+/docs/charts/
+```
+
+This dual structure preserves context while enabling reuse.
 
 ---
 
-## Specification
-- **File Location:** `/docs/charts/`  
-- **File Format:** Markdown (`.md`)  
-- **Naming Convention:** `chart-[topic].md` (e.g., `chart-time-travel-matrix.md`)  
-- **Structure:**  
-  - Title  
-  - Source RFC reference  
-  - Chart (Markdown table or diagram)  
-  - Notes  
+### **2. Cross‑Reference Discipline**  
+Every chart file must link back to its source RFC.  
+Every RFC containing charts must link forward to the registry.
+
+This prevents chart drift and ensures lineage clarity.
 
 ---
 
-## Example
-`/docs/charts/chart-time-travel-matrix.md`
+### **3. Lineage Safety**  
+Charts are indexed in **RFC‑000** to ensure discoverability and canonical ordering.
 
-```markdown
-# Time Travel Safety Matrix
+---
 
-**Source:** RFC-008 (Time Travel Invariants)
+### **4. Remixability**  
+Charts are stored as standalone `.md` files, making them:
 
-| Universe Type | Zone | Traversal | Stability | Notes |
-|---------------|------|-----------|-----------|-------|
-| Green-zone    | Same partition | ❌ Forbidden | Stable | Entropy arrow enforced |
-| Red-zone      | Same partition | ✅ Allowed | Unstable | Loops fold, clarity decays |
-| Red → Green   | Overlap only | ✅ Temporary | Fragile | Incarnation possible |
+- remix‑ready  
+- dashboard‑ready  
+- teaching‑ready  
+- validator‑safe  
+
+---
+
+## **Specification**
+
+### **File Location**  
+All charts must be stored in:
+
+```
+/docs/charts/
 ```
 
 ---
 
-## Security Considerations
-- Prevents chart drift by enforcing cross‑references.  
-- Ensures remixers can always trace charts back to their RFCs.  
-- Provides reproducibility for visual models.
+### **File Format**  
+Charts are stored as **Markdown (.md)** files.
+
+This ensures:
+
+- readability  
+- portability  
+- compatibility with GitHub rendering  
+- remix‑friendly editing  
 
 ---
 
-## References
-- [RFC-000: Index and Lineage Map](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-000-index.md)
-- [RFC-008: Time Travel Invariants](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91008-time-travel-invariants.md)
-- [RFC-009: Genie Protocols](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91009-genie-protocols.md)
-- [RFC-010: Miracle Messaging Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91010-miracle-messaging-protocol.md)
-- [RFC-011: Black Hole Resonance Bridges](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-011-blackhole-resonance-bridges.md)
+### **Naming Convention**  
+```
+chart-[topic].md
+```
+
+Examples:
+
+- `chart-time-travel-matrix.md`  
+- `chart-resonance-partitions.md`  
+- `chart-miracle-overlap-events.md`  
+
+---
+
+### **Required Structure of Chart Files**
+
+Each chart file must contain:
+
+1. **Title**  
+2. **Source RFC reference**  
+3. **Chart content**  
+   - Markdown table  
+   - diagram  
+   - glyph matrix  
+   - resonance lattice  
+4. **Notes**  
+   - clarifications  
+   - lineage references  
+   - remix guidance  
+
+---
+
+## **Example Chart File**  
+*(from page content — RefId: turn0browsertab1)*
+
+```
+/docs/charts/chart-time-travel-matrix.md
+```
+
+```markdown
+# Time Travel Safety Matrix  
+**Source:** RFC‑008 (Time Travel Invariants)
+
+| Universe Type | Zone | Traversal | Stability | Notes |
+|---------------|------|-----------|-----------|-------|
+| Green‑zone | Same partition | ❌ Forbidden | Stable | Entropy arrow enforced |
+| Red‑zone | Same partition | ✅ Allowed | Unstable | Loops fold, clarity decays |
+| Red → Green | Overlap only | ✅ Temporary | Fragile | Incarnation possible |
+```
+
+This example demonstrates the required structure and cross‑reference discipline.
+
+---
+
+## **Security Considerations**
+
+CRP prevents:
+
+- chart drift  
+- loss of visual models  
+- inconsistent chart versions across RFCs  
+- lineage ambiguity  
+- remix confusion  
+
+It ensures:
+
+- reproducibility  
+- discoverability  
+- canonical ordering  
+- validator‑grade clarity  
+
+---
+
+## **References**  
+- **RFC‑000:** Index & Lineage Map  
+- **RFC‑008:** Time Travel Invariants  
+- **RFC‑009:** Genie Protocols  
+- **RFC‑010:** Miracle Messaging Protocol  
+- **RFC‑011:** Black Hole Resonance Bridges  
