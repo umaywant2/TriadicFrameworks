@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="rtt_Inside_Paradox_Gradient_Analyzer" src="https://github.com/user-attachments/assets/184c7e52-46cc-4134-bb3e-c030b98b03c2" />
 
 # **Paradox Gradient Analyzer — RTT/1**  
 
