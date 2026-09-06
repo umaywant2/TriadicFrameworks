@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_time_triads" src="https://github.com/user-attachments/assets/19501a54-b19e-44bb-bb9a-6b826efab489" />
+
 ---
 module_id: rtt.core.time_triads
 version: 1.0.0
