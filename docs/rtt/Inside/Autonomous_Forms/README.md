@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Inside_Autonomous_Forms" src="https://github.com/user-attachments/assets/a5be8978-fda0-41f1-bf61-9a43b1541983" />
+
 # 🤖 A Spark for Autonomous Forms using RTT-Inside
 
 You picked a good metaphor with the opera—right now the agent world is loud, impressive, and a little over‑orchestrated.
