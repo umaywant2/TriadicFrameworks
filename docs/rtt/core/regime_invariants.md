@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_regime_invariants" src="https://github.com/user-attachments/assets/8e55f06f-4964-42b0-90cb-31e2e8e921c4" />
+
 ---
 module_id: rtt.core.regime_invariants
 version: 1.0.0
