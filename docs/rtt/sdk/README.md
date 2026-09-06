@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="rtt_sdk_beta_shape" src="https://github.com/user-attachments/assets/47c85eda-f429-446b-b0e5-766db165295c" />
 
 ## RTT/SDK (Beta)  
 
