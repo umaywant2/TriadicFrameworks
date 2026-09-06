@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="rtt_Inside_Regime_Interlock_Mapper" src="https://github.com/user-attachments/assets/95eeef54-9213-4017-bd2a-d3382998113f" />
 
 # **Regime Interlock Mapper — RTT/1**  
 
