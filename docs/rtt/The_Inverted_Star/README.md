@@ -1,4 +1,4 @@
-<img width="1194" height="672" alt="rtt_The_Inverted_Star" src="https://github.com/user-attachments/assets/4c1a1a57-65f0-4fda-93bf-c0dfebc790a1" />
+<img width="1194" height="672" alt="rtt_The_Inverted_Star_" src="https://github.com/user-attachments/assets/9dbb0b97-74c5-4b2c-ad60-d067e9080922" />
 
 - [`The_Inverted_Star_module.json`](The_Inverted_Star_module.json) — Agentic module schema role assignments
 
