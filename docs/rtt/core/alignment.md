@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_alignment" src="https://github.com/user-attachments/assets/d4965863-3a4d-4901-bd9c-6fb51075be4e" />
+
 # 🔧 **RTT Alignment**  
 *How systems maintain coherence across resonance + time*
 
