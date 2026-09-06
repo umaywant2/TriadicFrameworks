@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_Inside_Capture_Template_Technology_Domain" src="https://github.com/user-attachments/assets/fe829b97-d6a5-42fe-841b-2afb1b4e5ff7" />
+
 # 💻 **RTT/Inside Capture Template — Technology Domain**  
 ### 🔬 *Seeing Tools with Dimensional Clarity*
 
