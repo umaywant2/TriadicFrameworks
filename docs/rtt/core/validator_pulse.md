@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_core_validator_pulse" src="https://github.com/user-attachments/assets/2e2c7c2e-ce94-4bc6-8989-2fb34ae1094d" />
+
 ---
 module_id: rtt.core.validator_pulse
 version: 1.0.0
