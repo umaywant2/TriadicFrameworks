@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="rtt_emotions_" src="https://github.com/user-attachments/assets/b6cbbe09-1a77-4536-bd3b-ae2e4b3be31b" />
 
 # RTT Emotions  
 - [`emotions_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/emotions/emotions_module.json) — Agentic module schema role assignments
