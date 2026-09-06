@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_example_neuroscience" src="https://github.com/user-attachments/assets/f2caf2df-5411-45a5-9165-612fbebc4c9b" />
+
 # 🧬 **RTT Example — Neuroscience**  
 *How neural systems stabilize, shift, collapse, and re‑emerge across resonance + time*  
 *(Source: current empty file in your tab)*
