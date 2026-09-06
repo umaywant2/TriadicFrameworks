@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_1_engine" src="https://github.com/user-attachments/assets/8a516032-4379-4a73-bdfd-04da58906790" />
+
 # 🦄 **RTT/1 — Resonance‑Time Tech (Root Engine)**  
 
 - [`rtt-engine_module.json`](rtt-engine_module.json) — Agentic module schema role assignments
