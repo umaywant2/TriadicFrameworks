@@ -1,3 +1,5 @@
+<img width="1194" height="1008" alt="rtt_Inside_Culture_Takeaway" src="https://github.com/user-attachments/assets/637a8ce3-f385-458f-80bd-42a7ebf15643" />
+
 ## **✨ RTT/Inside CULTURE TAKEAWAY**
 
 RTT doesn’t change culture.  
