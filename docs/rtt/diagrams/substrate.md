@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_diagrams_substrate" src="https://github.com/user-attachments/assets/a8df146b-e315-4a65-9071-1673334e49eb" />
+
 # 🧱 **Refreshed substrate.svg**  
 *(Drop directly into `/docs/rtt/diagrams/substrate.svg`)*
 
