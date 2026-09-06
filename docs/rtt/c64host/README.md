@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="rtt_c64host_" src="https://github.com/user-attachments/assets/683f1f64-1ca2-46ea-9e2b-6ab0c2b62494" />
 
 # 🕹️ The C‑64 as an RTT Host  
 
