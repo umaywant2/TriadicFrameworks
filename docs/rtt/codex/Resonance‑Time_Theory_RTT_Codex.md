@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_codex_module_image" src="https://github.com/user-attachments/assets/83695ac4-b104-4b7f-844f-2d106bdbbe9a" />
+
 # **📘 Resonance‑Time Theory (RTT) Codex**
 By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
