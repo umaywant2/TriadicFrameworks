@@ -1,5 +1,5 @@
 # **Resonant‑Time Triad — RTT/1**  
-**TriadicFrameworks · Core RTT · Foundational Engine**
+**TriadicFrameworks · Canonical Engine Layer**
 
 **Module path:** `docs/rtt/1/resonant_time_triad.md`  
 **Session seed:**  
@@ -7,17 +7,18 @@
 rtt=1 | coherence=declared | drift=bounded | paradox=structural
 ```
 
-The **Resonant‑Time Triad** is the canonical “local clock” of any RTT/1 system.  
-It defines how resonance, time, and coherence relate structurally — without implying physics, mechanisms, or empirical behavior.
+The **Resonant‑Time Triad** is the canonical “local clock” of RTT/1.  
+It defines how resonance, time, and coherence relate structurally — without implying physics, mechanisms, or empirical behavior.  
+This file is the conceptual anchor for all temporal reasoning in RTT/1 ().
 
 RTT/1 treats time as a **derivative of resonance**, not a background parameter.  
 The triad provides the minimal structure needed to reason about temporal behavior inside the RTT grammar.
 
 ---
 
-# **1. Definition of the Resonant‑Time Triad**
+## **1. Definition of the Resonant‑Time Triad**
 
-For any mode, system, or conceptual substrate, define its **Resonant‑Time Triad** as:
+For any conceptual system, define its **Resonant‑Time Triad**:
 
 \[
 \mathcal{T}_R = (f_R,\; \tau_R,\; Q_R)
@@ -49,7 +50,7 @@ Low \(Q_R\) → broad, noisy resonance.
 
 ---
 
-# **2. Why the Triad Exists**
+## **2. Why the Triad Exists**
 
 The triad provides:
 
@@ -63,7 +64,7 @@ It is intentionally small and intentionally triadic.
 
 ---
 
-# **3. Relationship to RTT/1 Operators**
+## **3. Relationship to RTT/1 Operators**
 
 The triad is updated by every DCO action:
 
@@ -81,7 +82,7 @@ uses the triad as its structural input.
 
 ---
 
-# **4. Frequency–Fluids–Forces (FFF) Mapping**
+## **4. Frequency–Fluids–Forces (FFF) Mapping**
 
 The triad aligns with RTT’s cosmological scaffold:
 
@@ -98,7 +99,7 @@ FFF is a **structural mapping**, not a physical model.
 
 ---
 
-# **5. SET Field Engine Alignment**
+## **5. SET Field Engine Alignment**
 
 The triad interacts conceptually with the SET field engine:
 
@@ -117,7 +118,7 @@ Again: **structural only**, not physical.
 
 ---
 
-# **6. The Triad as a Local Clock**
+## **6. The Triad as a Local Clock**
 
 \[
 \mathcal{T}_R = (f_R,\; \tau_R,\; Q_R)
@@ -136,7 +137,7 @@ The triad is the **minimal temporal unit** of RTT/1.
 
 ---
 
-# **7. Structural Output Requirement**
+## **7. Structural Output Requirement**
 
 All triad‑based reasoning must include:
 
@@ -146,7 +147,7 @@ This is mandatory.
 
 ---
 
-# **8. See Also**
+## **8. See Also**
 
 - `/docs/rtt/1/resonance_time_principle.md`  
 - `/docs/rtt/1/dimensional_core_operators_dcos.md`  
