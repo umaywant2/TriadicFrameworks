@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_guild_Little_Science_Series_Book_4_Little_Time" src="https://github.com/user-attachments/assets/065054d2-f586-4d19-a57d-8c755b5f2ffe" />
+
 # 🕰️ **Book 4 — Little Time**  
 ### *Apprentice Arc · Dilation · Sequence · The Nature of Time*
 
