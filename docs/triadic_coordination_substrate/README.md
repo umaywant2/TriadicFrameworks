@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="triadic_coordination_substrate" src="https://github.com/user-attachments/assets/3c2d4895-1b3e-4a51-94bc-584c0734d957" />
+
 ## Triadic Coordination Substrate
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
