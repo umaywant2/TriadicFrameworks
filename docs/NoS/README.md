@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="NoS_" src="https://github.com/user-attachments/assets/a3b49612-789d-492d-8985-cd24487a5abb" />
 
 ## NoS
 
