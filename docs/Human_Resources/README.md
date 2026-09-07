@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Human_Resources_" src="https://github.com/user-attachments/assets/ce78b8c7-c9e6-43a0-afc1-fd9fb314871f" />
 
 # Human Resources (HR)
 
