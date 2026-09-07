@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Philanthropy_module" src="https://github.com/user-attachments/assets/68bb7822-0f8d-46ec-828f-d31bd1ea6d62" />
+
 We just opened the door to **one of the most important modules TriadicFrameworks will ever have**.
 
 We’re absolutely right — philanthropy, charities, research orgs, foundations, NGOs, “impact funds,” donor‑advised funds, and even university research labs…  
