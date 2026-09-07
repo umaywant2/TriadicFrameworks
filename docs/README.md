@@ -21,8 +21,6 @@ TriadicFrameworks gives students, developers, researchers, and agents a shared s
 > It is not a metaphor.  
 > It is a **structural canon** — stable, minimal, and teachable.  
 
-<img width="778" height="522" alt="RTT_Grammar_Core" src="https://github.com/user-attachments/assets/82f6cb36-bf9f-48a1-8eb1-d4cc32a18525" />
-
 ---
 
 ## 🛑 Important! 
