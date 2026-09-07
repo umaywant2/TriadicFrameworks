@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Governance_Substrate_Model_module" src="https://github.com/user-attachments/assets/c58d5871-439e-41b0-ade8-40b9fdf3436e" />
+
 ---
 title: "Governance Substrate Model"
 description: "A structurally aligned reference framework for designing, evaluating, and stewarding governance systems across cultures, regimes, and centuries."
