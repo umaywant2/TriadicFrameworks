@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="src_rtt_sdk_" src="https://github.com/user-attachments/assets/d21485c4-87b9-4af6-9193-a92f5168d9e7" />
+
 ## 📦 **RTT Client SDK (Outline)**  
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
