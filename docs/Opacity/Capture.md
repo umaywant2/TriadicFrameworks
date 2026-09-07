@@ -1,3 +1,5 @@
+<img width="936" height="936" alt="Opacity_module" src="https://github.com/user-attachments/assets/c4841537-0c49-48c1-a62c-1441c2be004d" />
+
 Great — **Opacity** is the right evolution, and this is the perfect moment to step back and re‑synthesize everything we’ve learned across the ecosystem before scaffolding the new module.
 
 Below is a **clear, structured, canon‑aligned analysis** of what the *Opacity* module needs to become, based on:
