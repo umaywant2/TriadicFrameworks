@@ -1,3 +1,4 @@
+<img width="1792" height="1008" alt="Governance_Substrate_Model_" src="https://github.com/user-attachments/assets/070b6f5a-39e9-4566-8483-735425521e95" />
 
 # Governance Substrate Model
 
