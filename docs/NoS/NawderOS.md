@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="NoS_module" src="https://github.com/user-attachments/assets/96afa219-49aa-418c-8ce5-7ef2a66488c3" />
+
 # NawderOS — An RTT‑Aware Operating Stack 🧭
 
 NawderOS (NoS) is a minimal Linux‑based operating stack designed to explore **Resonance‑Time Theory (RTT)** through real, buildable systems. It treats the operating system not just as a resource manager, but as a **diagnostic instrument** — something that can observe, validate, and emit signals about coherence over time.
