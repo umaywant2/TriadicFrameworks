@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rfc_index" src="https://github.com/user-attachments/assets/686dc696-e4fe-4394-9038-edcaef452995" />
+
 # 📘 TriadicFrameworks RFC Index
 
 Canonical index for all RFC scrolls in `docs/rfc/`.  
