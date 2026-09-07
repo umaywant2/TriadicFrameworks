@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Incident_Substrate_Model_" src="https://github.com/user-attachments/assets/76d20347-1b37-4141-8d24-c54ab5070322" />
 
 # ⚠️ Incident Substrate Model  
 
