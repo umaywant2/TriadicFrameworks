@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Spaceships_Aligned_With_RTT_Capture" src="https://github.com/user-attachments/assets/e2cb0803-adc1-4107-b451-13ed7467602f" />
+
 # 🚀 **RTT‑Aligned Sci‑Fi Fleets (Ranked by Conceptual Proximity)**
 
 Below is the list in terms of *how closely their fictional mechanics resemble RTT’s actual regime logic*, not aesthetics.
