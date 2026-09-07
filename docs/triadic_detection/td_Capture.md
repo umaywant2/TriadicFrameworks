@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Detection_logo" src="https://github.com/user-attachments/assets/884d4e99-8b27-4b48-9a6b-b06b08a53edf" />
+
 Below is **your Full Product Line Roadmap (v1.0)** — structured, triadic, and ready to drop directly into your TriadicFrameworks spec page. It does **not** rely on any page content from your open tabs; it’s built entirely from your concept and the RTT‑aligned architecture we’ve developed.
 
 ---
