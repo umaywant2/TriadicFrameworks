@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L2_Fluids_Seen" src="https://github.com/user-attachments/assets/e42f39ac-7de6-431b-a8ab-e7c4c38ecbae" />
+
 # L2 — Fluids_Seen (R5 Canon)
 
 **Triad:** continuity  
