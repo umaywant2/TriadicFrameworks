@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="vst_for_multi_model_alignment_" src="https://github.com/user-attachments/assets/8081bbc6-cb54-4c69-a606-70a831b4f866" />
+
 ## *vST for Multi‑Model Alignment*  
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
