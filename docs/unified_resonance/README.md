@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Unified_Resonance_" src="https://github.com/user-attachments/assets/b15b0d1c-42b1-49ab-85cb-dbb47f0dfe45" />
+
 ## 🌀 Unified Resonance Canon  
 
 - [`unified_resonance_module.json`](unified_resonance_module.json) — Agentic module schema role assignments
