@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="resonance_atlas_" src="https://github.com/user-attachments/assets/7150be8f-db6c-4537-9bea-c89f6ecbf069" />
+
 ## 📜 Resonance Atlas (RTT‑Aligned Minimal Edition) 
 
 - [`resonance_atlas_module.json`](resonance_atlas_module.json) — Agentic module schema role assignments
