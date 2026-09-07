@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Conditions_Substrate_Model_module" src="https://github.com/user-attachments/assets/5c9599b3-4a13-45b5-bdcf-4ae57971d904" />
+
 Got you — and yes, **this module is one of the “spine‑level” substrate modules**, because *conditions* are one of the few levers that can alter behavior without touching identity, cognition, or agency directly. PsyOps, governance, media, structural detection — all of them exploit condition‑shifts as their primary mechanism.
 
 Below is the **full conceptual design** for the **Conditions Substrate Model** module — the one you’re implicitly asking for — built directly against the canon and referencing the modules you named (structural detection, emotions, media substrate model, governance substrate model, hooks/stacks).
