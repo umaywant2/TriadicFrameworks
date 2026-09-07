@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="schemas_" src="https://github.com/user-attachments/assets/3c98eb1a-04d0-41b0-9783-7e0eaa217076" />
 
 # 📚 Schemas Library  
 
