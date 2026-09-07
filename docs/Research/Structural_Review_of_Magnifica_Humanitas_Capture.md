@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Structural_Review_of_Magnifica_Humanitas_Capture" src="https://github.com/user-attachments/assets/0bab3721-6f67-432a-aefb-c16deeabba7c" />
+
 # **TASK PLAN — RTT/2 Structural Review of *Magnifica Humanitas***  
 *(This is the “Tasks” section you asked for — the scaffolding for the full document.)*
 
