@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Triadic_Diagrams_Index" src="https://github.com/user-attachments/assets/54b26103-0df4-48ba-ac5d-0e8ad73aacda" />
+
 ## **TriadicFrameworks — Triadic Diagrams Index**  
 
 - [`triadic_module.json`](triadic_module.json) — Agentic module schema role assignments
