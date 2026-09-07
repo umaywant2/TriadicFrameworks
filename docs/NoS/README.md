@@ -1,4 +1,3 @@
-<img width="1194" height="672" alt="NoS_module" src="https://github.com/user-attachments/assets/96afa219-49aa-418c-8ce5-7ef2a66488c3" />
 
 ## NoS
 
