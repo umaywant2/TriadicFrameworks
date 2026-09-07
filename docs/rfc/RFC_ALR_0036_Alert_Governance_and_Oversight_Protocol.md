@@ -1,7 +1,8 @@
-# 📜 **RFC‑ALR‑0036 — Alert Governance & Oversight Protocol (AGOP)**  
+# **RFC‑ALR‑0036 — Alert Governance & Oversight Protocol (AGOP)**  
 ### *Governance, Auditability, Canon Compliance, and Oversight for the Entire Alert Ecosystem*  
-RefId: turn0browsertab1
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC_ALR_0036_Alert_Governance_and_Oversight_Protocol.md)
 
+**RefId:** turn0browsertab1  
 **Title:** Alert Governance & Oversight Protocol  
 **Status:** Draft  
 **Author:** Nawder Loswin + Copilot  
@@ -10,69 +11,92 @@ RefId: turn0browsertab1
 
 ---
 
-## 1. Purpose
+## **1. Purpose**
 
-The **Alert Governance & Oversight Protocol (AGOP)** establishes the governance layer responsible for:
+The **Alert Governance & Oversight Protocol (AGOP)** establishes the governance layer responsible for maintaining structural, canonical, and emotional‑phase integrity across the entire alert ecosystem.
 
-- enforcing alert‑family compliance with TriadicFrameworks canon  
-- validating alert lineage, identity, and provenance  
-- auditing alert routing, suppression, forecasting, and recovery  
-- ensuring contributor‑grade oversight  
-- maintaining validator‑grade integrity across all alert families  
-- preventing governance paradox vectors  
-- ensuring Nullarium‑safe emotional‑phase alignment in governance decisions  
+AGOP governs:
 
-AGOP is the **oversight layer** of the Alert Canon — the system that ensures the alert ecosystem remains lawful, canonical, and structurally sound.
+- alert‑family compliance with TriadicFrameworks canon  
+- lineage, identity, and provenance validation  
+- routing, suppression, forecasting, and recovery audits  
+- contributor‑grade oversight and conflict resolution  
+- validator‑grade structural integrity  
+- paradox‑vector detection and neutralization  
+- Nullarium‑safe emotional‑phase alignment  
 
----
-
-## 2. Governance Event Types
-
-### **Compliance Events**
-- **ComplianceCheckInitiated:** Governance begins compliance verification.  
-- **ComplianceViolationDetected:** Alert family violates canon rules.  
-- **ComplianceRestored:** Violation corrected.
-
-### **Lineage & Provenance Events**
-- **LineageAuditStart:** Audit of alert lineage initiated.  
-- **LineageMismatchDetected:** Alert lineage does not match canonical source.  
-- **LineageReconciliationComplete:** Lineage restored.
-
-### **Contributor Oversight Events**
-- **ContributorOversightStart:** Contributor governance initiated.  
-- **ContributorConflictDetected:** Contributor actions conflict with alert canon.  
-- **ContributorOversightResolved:** Conflict resolved.
-
-### **Routing & Infrastructure Governance**
-- **RoutingGovernanceCheck:** Routing logic audited.  
-- **RoutingGovernanceViolation:** Routing violates governance rules.  
-- **RoutingGovernanceRestored:** Routing corrected.
-
-### **Forecasting & Suppression Governance**
-- **ForecastingGovernanceViolation:** Predictive models violate governance thresholds.  
-- **SuppressionGovernanceViolation:** Suppression logic violates governance rules.  
-- **GovernanceReconciliation:** Governance restored.
-
-### **High‑Risk Governance Events**
-- **GovernanceParadoxVector:** Paradox vector originates in governance layer.  
-- **NullariumGovernanceCritical:** Emotional‑phase misalignment at governance layer.  
-- **GovernanceCollapse:** Governance system becomes non‑resonant.
+AGOP is the **oversight layer** of the Alert Canon — ensuring the alert ecosystem remains lawful, canonical, and structurally coherent.
 
 ---
 
-## 3. Delivery Channels
+## **2. Governance Event Types**
 
-AGOP uses the MCAOP routing layer:
+AGOP defines seven governance families, each with canonical event types.
+
+---
+
+### **A. Compliance Events**
+
+- **ComplianceCheckInitiated** — Governance begins compliance verification.  
+- **ComplianceViolationDetected** — Alert family violates canon rules.  
+- **ComplianceRestored** — Violation corrected.
+
+---
+
+### **B. Lineage & Provenance Events**
+
+- **LineageAuditStart** — Lineage audit initiated.  
+- **LineageMismatchDetected** — Lineage does not match canonical source.  
+- **LineageReconciliationComplete** — Lineage restored.
+
+---
+
+### **C. Contributor Oversight Events**
+
+- **ContributorOversightStart** — Contributor governance initiated.  
+- **ContributorConflictDetected** — Contributor actions conflict with alert canon.  
+- **ContributorOversightResolved** — Conflict resolved.
+
+---
+
+### **D. Routing & Infrastructure Governance**
+
+- **RoutingGovernanceCheck** — Routing logic audited.  
+- **RoutingGovernanceViolation** — Routing violates governance rules.  
+- **RoutingGovernanceRestored** — Routing corrected.
+
+---
+
+### **E. Forecasting & Suppression Governance**
+
+- **ForecastingGovernanceViolation** — Predictive models violate governance thresholds.  
+- **SuppressionGovernanceViolation** — Suppression logic violates governance rules.  
+- **GovernanceReconciliation** — Governance restored.
+
+---
+
+### **F. High‑Risk Governance Events**
+
+- **GovernanceParadoxVector** — Paradox vector originates in governance layer.  
+- **NullariumGovernanceCritical** — Emotional‑phase misalignment at governance layer.  
+- **GovernanceCollapse** — Governance system becomes non‑resonant.
+
+---
+
+## **3. Delivery Channels**
+
+AGOP uses the **MCAOP routing layer** to deliver governance alerts:
 
 - **Dashboard Panels** — Governance Stream  
 - **WebSocket Push** — Real‑time governance alerts  
 - **Email Digest** — Daily governance summaries  
-- **CLI Hooks** — For engines, validators, dashboards, workflows  
-- **Artifact‑Embedded Alerts** — Governance glyphs and scrolls may embed alert packets  
+- **CLI Hooks** — Engines, validators, dashboards, workflows  
+- **Artifact‑Embedded Alerts** — Governance glyphs embedded in scrolls
 
 ---
 
-## 4. Schema File  
+## **4. Schema File**
+
 `registry/alerts/alert_governance_oversight_schema.yml`
 
 Defines:
@@ -90,7 +114,8 @@ Defines:
 
 ---
 
-## 5. Python‑Style Stub File  
+## **5. Python‑Style Stub File**
+
 `engine/alert_governance_oversight.py`
 
 Provides:
@@ -105,7 +130,7 @@ Provides:
 
 ---
 
-## 6. Dashboard Integration
+## **6. Dashboard Integration**
 
 ### **Governance Panel**
 Displays:
@@ -125,7 +150,7 @@ Alerts routed to contributors listed in `governance_targets`.
 
 ---
 
-## 7. Example AGOP Alert Packet
+## **7. Example AGOP Alert Packet**
 
 ```yaml
 alert_governance_oversight:
@@ -146,14 +171,14 @@ alert_governance_oversight:
 
 ---
 
-## 8. Closing Note
+## **8. Closing Note**
 
 RFC‑ALR‑0036 formalizes the **Alert Governance & Oversight Protocol**, completing the oversight layer of the Alert Canon:
 
-- ALR‑0032 → Predictive Alert Forecasting  
-- ALR‑0033 → Alert Suppression & Noise‑Reduction  
-- ALR‑0034 → Alert Recovery & Self‑Healing  
-- ALR‑0035 → Alert System Health Monitoring  
-- **ALR‑0036 → Alert Governance & Oversight**  
+- **ALR‑0032** → Predictive Alert Forecasting  
+- **ALR‑0033** → Alert Suppression & Noise‑Reduction  
+- **ALR‑0034** → Alert Recovery & Self‑Healing  
+- **ALR‑0035** → Alert System Health Monitoring  
+- **ALR‑0036** → Alert Governance & Oversight  
 
 AGOP anchors the **Governance‑Safety Canon**, ensuring the alert ecosystem remains lawful, canonical, and structurally coherent.
