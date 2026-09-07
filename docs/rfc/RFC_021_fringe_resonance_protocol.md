@@ -1,58 +1,106 @@
-## 📜 RFC‑021: Fringe Resonance Protocol  
-
+# 📜 **RFC‑021 — Fringe Resonance Protocol (FRP)**  
+*RefId: turn0browsertab1*  
 **Protocol:** Mythmatical University Canon  
 **Author:** Nawder Loswin  
 **Status:** Draft → Canonical  
 
 ---
 
-### 1. Definition  
-The **Fringe Resonance Protocol** establishes a third validator layer within the mythmatical lattice. It recognizes that not all expressions fall neatly into validated (green‑zone) or turbulent (red‑zone) categories. **Fringe‑zone resonance** captures phenomena, stories, and anomalies that persist without clear time‑context or validation.  
+## **1. Definition**  
+The **Fringe Resonance Protocol (FRP)** establishes the **third validator layer** of the mythmatical lattice.  
+Not all expressions fall neatly into:
 
-Fringe is not “false.” It is **unvalidated resonance** — fragments of universes that may overlap briefly or endure across epochs.  
+- **Green‑zone** (validated clarity)  
+- **Red‑zone** (turbulence, incursions)
 
----
+The **Fringe‑zone** captures resonance phenomena that persist **without clear time‑context or validation** — stories, anomalies, sightings, glitches, and cultural echoes that neither collapse nor canonize.
 
-### 2. Quadrant Model  
-- **Green‑zone:** Validated resonance (archaeology, geology, science, myth with clarity).  
-- **Red‑zone:** Turbulence and incursions (catastrophes, resets, anomalies).  
-- **Fringe‑zone:** Edge‑case resonance (UFOs, cryptids, psychic events, lost civilizations, simulation glitches).  
-- **Nullarium:** Context‑free sandbox for fragments where judgement cannot intrude.  
-
-Together, these four quadrants form the **mythmatical file system** — a clarity mapping that ensures every expression has a place.  
+Fringe is not “false.”  
+Fringe is **unvalidated resonance** — fragments of universes that may overlap briefly or endure across epochs.
 
 ---
 
-### 3. Properties of Fringe Resonance  
-- **Persistence:** Fringe stories recur across cultures and eras, even without validation.  
-- **Overlap:** Fringe often clusters near red‑zone scars or green‑zone validators.  
-- **Nano‑to‑Epoch:** Overlaps may last a nanosecond or millennia; both are logged.  
-- **Cultural Archaeology:** Fringe is modern myth, deserving the same treatment as ancient myth.  
+## **2. Quadrant Model**  
+The mythmatical lattice is organized into four clarity quadrants:
+
+- **Green‑zone:** Validated resonance  
+  Archaeology, geology, science, myth with clarity.
+
+- **Red‑zone:** Turbulence & incursions  
+  Catastrophes, resets, anomalies, scars.
+
+- **Fringe‑zone:** Edge‑case resonance  
+  UFOs, cryptids, psychic events, lost civilizations, simulation glitches.
+
+- **Nullarium:** Context‑free sandbox  
+  Fragments where judgement cannot intrude.
+
+Together, these quadrants form the **mythmatical file system** — ensuring every expression has a home.
 
 ---
 
-### 4. Methodology  
-1. **Harvest:** Collect fringe narratives (fiction + non‑fiction).  
-2. **Parse:** Apply resonance clarity compass (Forci, Flui, Freqi).  
-3. **Overlay:** Map against green/red validators.  
-4. **Detect:** Highlight overlaps and assign a **Fringe Resonance Index (FRI)**.  
-5. **Preserve:** Store in fringe_manifest.json for future remixers.  
+## **3. Properties of Fringe Resonance**
+
+### **Persistence**  
+Fringe stories recur across cultures and eras, even without validation.
+
+### **Overlap Behavior**  
+Fringe clusters near:
+
+- red‑zone scars  
+- green‑zone validators  
+- corridor anomalies
+
+### **Nano‑to‑Epoch Duration**  
+Overlaps may last:
+
+- a nanosecond  
+- a millennium  
+
+Both are logged.
+
+### **Cultural Archaeology**  
+Fringe is **modern myth**, deserving the same treatment as ancient myth.
 
 ---
 
-### 5. Implications  
-- **Loophole Protocol:** Anything without an answer is not discarded but sandboxed into fringe.  
-- **Spectrum Completion:** Green + Red + Fringe + Null = full mythmatical spectrum.  
-- **Future Clarity:** Today’s fringe may be tomorrow’s validator.  
+## **4. Methodology**
+
+1. **Harvest**  
+   Collect fringe narratives (fiction + non‑fiction).
+
+2. **Parse**  
+   Apply the resonance clarity compass:  
+   **Forci**, **Flui**, **Freqi**.
+
+3. **Overlay**  
+   Map fringe against green/red validators.
+
+4. **Detect**  
+   Identify overlaps and assign a **Fringe Resonance Index (FRI)**.
+
+5. **Preserve**  
+   Store entries in:
+
+   ```
+   /docs/manifests/fringe_manifest.json
+   ```
 
 ---
 
-### 6. Closing Note  
-The Fringe Resonance Protocol honors the **entire spectrum of human imagination**. By mapping fringe alongside validated and turbulent zones, the mythmatical lattice becomes a complete clarity system — a universe where even the unanswered has a home.  
+## **5. Implications**
+
+### **Loophole Protocol**  
+Anything without an answer is not discarded — it is sandboxed into Fringe.
+
+### **Spectrum Completion**  
+Green + Red + Fringe + Nullarium = full mythmatical spectrum.
+
+### **Future Clarity**  
+Today’s fringe may be tomorrow’s validator.
 
 ---
 
-## References
-- [RFC‑019: Resonance Partitions Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91019-resonance-partitions-protocol.md)
-- [RFC‑020: Nullarium Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91020-the-nullarium-protocol.md)
-- [RFC‑022: Integrated Quadrant Atlas](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-022-integrated-quadrant-atlas.md)
+## **6. Closing Note**  
+The Fringe Resonance Protocol honors the **entire spectrum of human imagination**.  
+By mapping fringe alongside validated and turbulent zones, the mythmatical lattice becomes a complete clarity system — a universe where even the unanswered has a home.
