@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="validation_" src="https://github.com/user-attachments/assets/3c28b050-372b-4ed8-a2f5-89c79e7006a8" />
+
 # ✔️ Validation — Logs, Protocols & Lineage Integrity 
 
 - [`validation_module.json`](validation_module.json) — Agentic module schema role assignments
