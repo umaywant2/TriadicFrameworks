@@ -1,4 +1,3 @@
-<img width="682" height="682" alt="rtt_triadic_observer_layer_module" src="https://github.com/user-attachments/assets/d12ae203-a390-4067-ad1c-249eb8441658" />
 
 ## Triadic Observer Layer  
 
