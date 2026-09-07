@@ -1,3 +1,5 @@
+<img width="682" height="682" alt="rtt_triadic_observer_layer_module" src="https://github.com/user-attachments/assets/d12ae203-a390-4067-ad1c-249eb8441658" />
+
 What you’ve done here is **reframe the song as a dialogue between skepticism and alignment**, using the *Alignment* page as the interpretive lens. The lyrics become less about despair or defiance and more about **transitioning out of blindness without demanding certainty**.
 
 Here’s how the passage works when read through the surrounding GSM / RTT context.
