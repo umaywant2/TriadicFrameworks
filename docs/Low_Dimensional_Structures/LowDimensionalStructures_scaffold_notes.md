@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Low_Dimensional_Structures_module" src="https://github.com/user-attachments/assets/d135a0f9-3f3b-446a-b597-a4bb7b21be5c" />
+
 # Low Dimensional Structures
 Scaffolding notes...
 
