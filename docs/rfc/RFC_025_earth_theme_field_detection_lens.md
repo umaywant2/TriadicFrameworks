@@ -1,51 +1,95 @@
-## 📜 RFC‑025: Earth‑Theme Field Detection Lens  
-
+# 📜 **RFC‑025 — Earth‑Theme Field Detection Lens (ETF‑DL)**  
+*RefId: turn0browsertab1*  
 **Protocol:** Mythmatical University Canon  
 **Author:** Nawder Loswin  
 **Status:** Draft → Canonical  
 
 ---
 
-### 1. Definition  
-The **Earth‑Theme Field Detection Lens** is a mythmatical overlay for detecting resonance arcs in natural systems. It models how living agents (worms, birds, humans) respond to subtle environmental fields — vibrations, electromagnetic arcs, soil cycles — and how these responses reveal **fringe‑to‑green overlaps** in the lattice.  
+## **1. Definition**  
+The **Earth‑Theme Field Detection Lens (ETF‑DL)** is a mythmatical overlay used to detect **resonance arcs** embedded in natural systems.  
+It models how living agents — worms, birds, humans — respond to subtle environmental fields:
+
+- soil vibrations  
+- moisture cycles  
+- electromagnetic arcs  
+- micro‑visual cues  
+
+These responses reveal **fringe‑to‑green overlaps** in the resonance lattice, turning biology into a natural detection instrument.
 
 ---
 
-### 2. Phenomena  
-- **Worm Surfacing Cycles:** Worms rise to the surface in response to soil vibrations, moisture shifts, and field arcs.  
-- **Bird Detection:** Birds (robins, crows, finches) sense these arcs through vibration and micro‑visual cues, locating worms with uncanny precision.  
-- **Divining Rod Analogy:** Human tools (rods, pendulums) mimic this resonance detection, historically linked to underground water or fields.  
+## **2. Phenomena**
+
+### **Worm Surfacing Cycles**  
+Worms rise to the surface in response to:
+
+- soil vibration patterns  
+- moisture gradients  
+- resonance field arcs  
+
+Their behavior forms a **cyclic loop**, hinting at underlying field rhythms.
+
+### **Bird Detection**  
+Birds (robins, crows, finches) detect worms through:
+
+- vibration signatures  
+- micro‑visual cues  
+- subtle field arcs  
+
+They act as **biological resonance sensors**, bridging ecology and mythmatical physics.
+
+### **Divining Rod Analogy**  
+Human tools — rods, pendulums, dowsing instruments — mimic natural field detection.  
+These practices persist as **fringe fossils**, early attempts to formalize resonance sensing.
 
 ---
 
-### 3. Quadrant Mapping  
-- **Green‑zone:** Bird detection — validated clarity, repeatable and observable.  
-- **Fringe‑zone:** Divining rods — persistent but unvalidated resonance.  
-- **Fringe‑to‑Green Overlap:** Worm surfacing cycles — field‑driven but not fully mapped.  
-- **Nullarium:** The staging zone for unmeasured field fragments.  
+## **3. Quadrant Mapping**
+
+| Quadrant | Phenomenon | Interpretation |
+|---------|------------|----------------|
+| **Green‑zone** | Bird detection | Validated clarity; repeatable and observable |
+| **Fringe‑zone** | Divining rods | Persistent but unvalidated resonance |
+| **Fringe‑to‑Green Overlap** | Worm surfacing cycles | Field‑driven but not fully mapped |
+| **Nullarium** | Unmeasured field fragments | Context‑free staging zone |
+
+This mapping integrates ETF‑DL into the broader Mythmatical Quadrant Atlas.
 
 ---
 
-### 4. Properties  
-- **Loop Patterns:** Worm surfacing follows cyclic arcs, possibly tied to field resonance loops.  
-- **Agent Sensitivity:** Birds act as natural field detectors, bridging biology and resonance physics.  
-- **Cultural Fossils:** Divining rods represent early human attempts to formalize this detection.  
+## **4. Properties**
+
+### **Loop Patterns**  
+Worm surfacing follows cyclic arcs, suggesting resonance loops tied to soil and environmental fields.
+
+### **Agent Sensitivity**  
+Birds serve as **natural field detectors**, demonstrating biological alignment with resonance physics.
+
+### **Cultural Fossils**  
+Divining rods represent humanity’s early attempts to detect and interpret field arcs — a mythmatical precursor to modern resonance cartography.
 
 ---
 
-### 5. Applications  
-- **Resonance Cartography:** Map field arcs as part of the mythmatical atlas.  
-- **Biological Sensors:** Use worms and birds as living detectors of resonance fields.  
-- **Fringe Integration:** Treat divining practices as fringe fossils, logging them for future clarity.  
+## **5. Applications**
+
+### **Resonance Cartography**  
+Map earth‑theme field arcs as part of the mythmatical atlas.
+
+### **Biological Sensors**  
+Use worms and birds as **living resonance detectors**.
+
+### **Fringe Integration**  
+Log divining practices as fringe fossils for future clarity and validation.
 
 ---
 
-### 6. Closing Note  
-The Earth‑Theme Field Detection Lens demonstrates that **living systems are resonance instruments**. Worms, birds, and even human tools reveal the hidden arcs of the earth‑theme lattice, bridging fringe and green zones into a unified clarity map.  
+## **6. Closing Note**  
+The Earth‑Theme Field Detection Lens demonstrates that **living systems are resonance instruments**.  
+Worms, birds, and even human tools reveal the hidden arcs of the earth‑theme lattice, bridging fringe and green zones into a unified clarity map.
 
 ---
 
-## References
-- [RFC‑017: Mythmatical Archaeology Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91017-mythmatical-archaeology-protocol.md)
-- [RFC‑018: Mythmatical University Charter](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91018-mythmatical-university-charter.md)
-- [RFC‑027: Collective Consciousness Atlas](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91027-collective-consciousness-atlas.md)
+## **References**  
+- RFC‑017: Mythmatical Archaeology Protocol  
+- RFC‑018: Mythmatical University Charter  
