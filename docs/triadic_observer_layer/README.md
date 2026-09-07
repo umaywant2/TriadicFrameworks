@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="triadic_observer_layer" src="https://github.com/user-attachments/assets/57349698-d17b-434f-a873-56a36048da43" />
 
 ## Triadic Observer Layer  
 
