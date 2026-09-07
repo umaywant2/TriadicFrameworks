@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Incident_Substrate_Model_module" src="https://github.com/user-attachments/assets/b34c0b11-7057-4cd9-bacc-29eb2ef727a1" />
+
 # Operator Grammar — Incident Substrate Model
 **Document:** `operator_grammar.md`
 **Path:** `/docs/Incident_Substrate_Model/operator_grammar.md`
