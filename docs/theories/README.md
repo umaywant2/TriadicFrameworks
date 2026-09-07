@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="theories_" src="https://github.com/user-attachments/assets/2d28bfa8-95ae-4f0c-acb4-84584169bbd3" />
 
 # Theories — Canon‑Aligned, Regime‑Aware Modules  
 
