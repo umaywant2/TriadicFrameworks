@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="spine_" src="https://github.com/user-attachments/assets/bfed74d1-62ce-40f5-92a9-46adc691c67c" />
+
 # 🧬 TriadicFrameworks Spine Module  
 The **Spine** is the structural backbone of the TriadicFrameworks canon.  
 It provides the *overlay system*, *continuity mechanics*, *module graph*, and *schema definitions* that allow all RTT/1 modules to align under a unified substrate.
