@@ -1,4 +1,3 @@
-<img width="1194" height="672" alt="Law_module" src="https://github.com/user-attachments/assets/99faf2d6-4e8d-49e1-b5da-396ad4f986ec" />
 
 # Law
 
