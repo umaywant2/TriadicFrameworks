@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Low_Dimensional_Structures_" src="https://github.com/user-attachments/assets/94f2c2ea-36b0-4d5e-847a-75220eb3a272" />
 
 ## Low_Dimensional_Structures
 
