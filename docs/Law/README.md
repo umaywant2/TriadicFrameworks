@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Law_" src="https://github.com/user-attachments/assets/bc59c9aa-a797-46c1-a19e-35e1850e8c08" />
 
 # Law
 
