@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="LINEAGE_module_image" src="https://github.com/user-attachments/assets/b52a3a8e-03cc-464a-8a15-58cb58b65962" />
+
 # 🧬 Cross‑Model Alignment Benchmark Suite  
 *A structured evaluation framework for testing whether multiple models preserve TriadicFrameworks lineage, semantics, operator ancestry, and anti‑laundering integrity.*
 
