@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Conditions_Substrate_Model_" src="https://github.com/user-attachments/assets/298bb1fd-901e-40fe-9b32-42131ffd5f2c" />
 
 # Conditions Substrate Model  
 
