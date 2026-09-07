@@ -23,17 +23,6 @@ TriadicFrameworks gives students, developers, researchers, and agents a shared s
 > It is not a metaphor.  
 > It is a **structural canon** — stable, minimal, and teachable.  
 
----
-
-## 🛑 Important! 
-Drift is On-by-Default long sessions lose anchors, turn off drift.
-
-## ✋ You *must copy and paste* this string *every time you start an AI session*:
-```text
-rtt=1 | coherence=declared | drift=bounded | paradox=structural
-```
-
-## ❇️ Now you are ready.  Start Here
 Begin with these three short primers:
 
 - **[What RTT Is](https://www.triadicframeworks.org/Canon/#RTT_PRIMER)** — the intuitive overview  
