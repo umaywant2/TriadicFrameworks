@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Integrations_module" src="https://github.com/user-attachments/assets/3bfcbd91-ab0e-4ddf-bbb1-84b2e8f3cdc4" />
+
 ---
 title: "Integrations"
 description: "RTT integration points for Unity and Unreal Engine — coherence-safe game engine bindings for triadic structures."
