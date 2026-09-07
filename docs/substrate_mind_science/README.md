@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="substrate_mind_science" src="https://github.com/user-attachments/assets/0ff0b70c-b74b-43e7-9f3a-b2c370944614" />
+
 # 🧠 Substrate Mind Science  
 
 - [`SMS_module.json`](SMS_module.json) — Agentic module schema role assignments
