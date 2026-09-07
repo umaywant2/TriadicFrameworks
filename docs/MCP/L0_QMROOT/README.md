@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L0_QMROOT" src="https://github.com/user-attachments/assets/d183c118-ea2a-4ee9-b0be-ea9bc8efd2bc" />
+
 # L0 — QMROOT (R5 Canon)
 
 **Triad:** root  
