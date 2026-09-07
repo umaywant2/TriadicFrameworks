@@ -1,4 +1,3 @@
-<img width="1194" height="672" alt="Philanthropy_module" src="https://github.com/user-attachments/assets/68bb7822-0f8d-46ec-828f-d31bd1ea6d62" />
 
 # Philanthropy & Funding Transparency  
 
