@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="validators_" src="https://github.com/user-attachments/assets/17609ac9-3fa3-41b9-8850-3da272c56b50" />
+
 ## 🛡️ Validators
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
