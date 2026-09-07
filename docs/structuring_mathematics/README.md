@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="structuring_mathematics_" src="https://github.com/user-attachments/assets/4334810c-8c27-4b91-9330-b352b9d792f1" />
+
 ## **Structuring Mathematics**  
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
