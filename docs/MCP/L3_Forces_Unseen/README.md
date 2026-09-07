@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen" src="https://github.com/user-attachments/assets/17ee5503-543f-41b3-90b3-c31d72a51273" />
+
 # L3 — Forces_Unseen (R5 Canon)
 
 **Triad:** forces  
