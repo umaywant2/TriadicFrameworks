@@ -1,44 +1,66 @@
-# 📘 RFC-039 Decoherence As A Measurement Problem Patch
+# 📘 **RFC‑039 — Decoherence as a Measurement‑Problem Patch**  
+### *A Resonance‑Time Reinterpretation*  
+RefId: turn0browsertab1
 
-### *A Resonance‑Time Reinterpretation*
+**Protocol:** Mythmatical University Canon  
+**Author:** Nawder Loswin  
+**Status:** Draft → Canonical  
+**Lineage:**  
+Extends **RFC‑028** (Measurement as Resonance Alignment)  
+Extends **RFC‑029** (Observer Hierarchies & Relational Time)  
+Extends **RFC‑033** (Causality in Triadic Time)
 
-This section builds on:
+---
 
-- **§3 Measurement as Resonance Alignment in Triadic Time**  
-- **§4 Observer Hierarchies and Relational Time**  
-- **§6 Causality in Triadic Time**  
+## **11. Decoherence as a Patch, Not a Mechanism**
 
-Standard quantum mechanics treats decoherence as a **patch** that explains why superpositions appear to collapse.  
-Resonance‑Time Theory shows that decoherence is simply **relational‑time divergence**, not a fundamental mechanism.
+Standard quantum mechanics treats **decoherence** as the explanation for why:
+
+- macroscopic objects appear classical  
+- interference disappears  
+- measurement outcomes look definite  
+
+The usual story:
+
+> “The environment entangles with the system, suppressing interference.”
+
+But this explains **appearance**, not **mechanism**.  
+It is a **phenomenological patch** — a workaround applied because the underlying temporal model is incomplete.
+
+Resonance‑Time Theory shows that decoherence is simply **relational‑time divergence**, not a physical collapse mechanism.
 
 ---
 
 ## **11.1 Why Decoherence Is Used**
 
-Standard QM uses decoherence to explain:
+Standard QM invokes decoherence to:
 
-- why macroscopic objects appear classical  
-- why interference disappears  
-- why measurement outcomes look definite  
+- justify classicality  
+- explain loss of interference  
+- avoid explicit collapse  
+- preserve unitary evolution  
 
-The patch says:
+It works mathematically, but conceptually it:
 
-> “The environment entangles with the system, suppressing interference.”
+- depends on arbitrary system/environment splits  
+- hides the measurement problem inside huge Hilbert spaces  
+- never explains how a *single* outcome is selected  
 
-But this explains **appearance**, not **mechanism**.
+Decoherence is a **band‑aid**, not a structural solution.
 
 ---
 
 ## **11.2 Why Many Dislike It**
 
-Critics argue decoherence:
+Critics point out that decoherence:
 
-- does not explain *actual* outcome selection  
 - does not solve the measurement problem  
-- depends on arbitrary system–environment splits  
-- hides the problem behind large Hilbert spaces  
+- does not explain actual outcome selection  
+- does not explain why *one* branch becomes real  
+- does not eliminate the need for an observer  
+- does not provide a physical collapse mechanism  
 
-It is a **phenomenological patch**, not a structural explanation.
+It is a **patch** — useful, but not fundamental.
 
 ---
 
@@ -46,88 +68,71 @@ It is a **phenomenological patch**, not a structural explanation.
 
 In Resonance‑Time Theory, measurement is:
 
-$$R = \text{sgn}(\mathbf{n} \cdot \hat{\boldsymbol{T}})$$
+\[
+R = \operatorname{sgn}(\mathbf{n} \cdot \hat{\boldsymbol{T}})
+\]
 
-with:
+with measurement direction:
 
-$$\mathbf{n} = (n_c, n_e, n_r)$$
+\[
+\mathbf{n} = (n_c, n_e, n_r)
+\]
 
-A measurement event occurs when:
+and resonance‑time operator:
 
-$$\mathbf{n} \cdot \boldsymbol{\tau}_O \approx \mathbf{n} \cdot \boldsymbol{\tau}_S$$
+\[
+\hat{\boldsymbol{T}} = (\hat{T}_c, \hat{T}_e, \hat{T}_r)
+\]
 
-Decoherence corresponds to:
+### **Key Insight**
 
-$$\Delta t_r \gg 0$$
+Decoherence is not collapse.  
+It is **divergence along the relational‑time axis**:
 
-Meaning:
-
-- the system’s relational‑time branches separate  
-- the observer cannot align with all branches  
-- measurement alignment becomes impossible  
-
-✨ **Decoherence = relational‑time misalignment.**
-
-No collapse.  
-No environment patch.  
-Just geometry in triadic time.
-
----
-
-## **11.4 Example: Two‑Branch Decoherence**
-
-Let the system evolve into:
-
-$$\boldsymbol{\tau}_{S_1} = (t_c, t_e, t_r)$$
-
-$$\boldsymbol{\tau}_{S_2} = (t_c, t_e, t_r + \Delta t_r)$$
-
-If:
-
-$$\Delta t_r \gg 0$$
-
-then:
-
-$$\mathbf{n} \cdot \boldsymbol{\tau}_{S_1} \neq \mathbf{n} \cdot \boldsymbol{\tau}_{S_2}$$
-
-The observer cannot align with both.
-
-✨ **The appearance of collapse is the appearance of alignment loss.**
-
----
-
-## **11.5 CHSH‑Style Interpretation**
-
-Using:
-
-$$E(\mathbf{n}_x,\mathbf{n}_y) = -\,\mathbf{n}_x \cdot \mathbf{n}_y$$
-
-CHSH violations require:
-
-$$n_{x,r}, n_{y,r} \neq 0$$
-
-Decoherence increases $$\Delta t_r$$, destroying the relational‑time coherence needed for CHSH violation.
+- the system and environment separate in \(t_r\)  
+- relational ancestry becomes misaligned  
+- coherence becomes unobservable from the observer’s frame  
 
 Thus:
 
-- Decoherence suppresses CHSH  
-- CHSH requires relational‑time alignment  
-- Standard QM treats this as “environmental noise”  
-- Resonance‑Time Theory treats it as **geometry**  
+- collapse = **alignment**  
+- decoherence = **divergence**  
 
-✨ **CHSH coherence is a relational‑time resource.**
+No environment‑induced magic.  
+No hidden Hilbert‑space trickery.  
+Just **triadic‑time geometry**.
+
+---
+
+## **11.4 Why This Solves the Patch Problem**
+
+Resonance‑Time Theory provides:
+
+- a structural mechanism (alignment/divergence)  
+- a geometric interpretation (triadic‑time manifold)  
+- an observer‑dependent collapse rule  
+- a relational‑time axis that carries contextual ancestry  
+
+Decoherence becomes:
+
+- not a fix  
+- not a workaround  
+- not a phenomenological patch  
+
+…but a **natural consequence** of relational‑time misalignment.
 
 ---
 
-## **11.6 Summary**
+## **11.5 Closing Note**
 
-- Decoherence is a patch in standard QM  
-- It explains appearance, not mechanism  
-- Resonance‑Time Theory replaces it with relational‑time geometry  
-- Decoherence = $$\Delta t_r \gg 0$$  
-- Collapse = loss of resonance alignment  
-- CHSH coherence = preserved relational‑time alignment  
+Decoherence is not a collapse mechanism.  
+It is a **temporal divergence** — a relational‑time separation that makes coherence inaccessible to the observer’s frame.
 
-✨ **What decoherence patches, Resonance‑Time explains.**
+Resonance‑Time Theory replaces the decoherence patch with a structural explanation rooted in:
 
----
+- triadic‑time geometry  
+- resonance alignment  
+- relational ancestry  
+- observer‑dependent coherence  
+
+This resolves the measurement‑problem patchwork and integrates decoherence into the broader resonance‑time canon.
