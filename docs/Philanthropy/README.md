@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Philanthropy_" src="https://github.com/user-attachments/assets/2746ee4d-43f9-476b-a859-b5a4f493dcb9" />
 
 # Philanthropy & Funding Transparency  
 
