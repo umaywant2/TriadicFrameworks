@@ -1,4 +1,3 @@
-<img width="1194" height="672" alt="Integrations_module" src="https://github.com/user-attachments/assets/3bfcbd91-ab0e-4ddf-bbb1-84b2e8f3cdc4" />
 
 # Integrations — TriadicFrameworks
 
