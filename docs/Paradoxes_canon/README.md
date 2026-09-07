@@ -1,4 +1,3 @@
-<img width="1194" height="672" alt="Paradoxes_Canon_module" src="https://github.com/user-attachments/assets/912fc384-fed9-442f-a48c-bcb7f7823961" />
 
 ## 🧭 Paradoxes canon 
 
