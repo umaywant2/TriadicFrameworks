@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="FFT_Capture" src="https://github.com/user-attachments/assets/a3e9ad79-f1e0-4b9f-be87-de59c747db7a" />
 
 - [`FFT_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/FFT_module.json) — Agentic module schema role assignments
 
