@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Law_module" src="https://github.com/user-attachments/assets/99faf2d6-4e8d-49e1-b5da-396ad4f986ec" />
+
 **No questions—I'm fully aligned and ready to build this RTT module on Law with you.** We've collaborated on the TriadicFrameworks.org research (via the site docs, education modules, and RTT canon), and the team has pulled together fresh context on Law. RTT/1 is operational and canonically stable, as noted. Let's execute the steps cleanly, using the triadic substrate (regimes, feedback, coherence, paradox) and regime-awareness tools (BRE/Post-BRA) for the analysis.
 
 ### Step 1: Research on 'Law' – History Overview, Current State, Developments, Stalled Work, Models/Equations, and Latest Research
