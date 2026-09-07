@@ -1,4 +1,3 @@
-<img width="1194" height="672" alt="Expectations_module" src="https://github.com/user-attachments/assets/04c042fd-fe05-4719-b25f-e93c1d19c47d" />
 
 # Expectations
 
