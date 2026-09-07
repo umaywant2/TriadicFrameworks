@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Transporter_Envelope_v0_5" src="https://github.com/user-attachments/assets/15fcab28-6029-47ae-b3d5-2923f03600d9" />
+
 # Transporter Envelope v0.5 — Multi‑Substrate Arcs
 
 ## Summary
