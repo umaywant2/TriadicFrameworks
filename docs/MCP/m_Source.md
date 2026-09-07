@@ -1,3 +1,5 @@
+<img width="1168" height="784" alt="MCP_module_hero_image" src="https://github.com/user-attachments/assets/77b797fb-454f-40a8-b1fb-84035ab6b29c" />
+
 # m_Source.md
 
 > An MCP server is a Model Context Protocol server that connects AI applications (like Claude or ChatGPT) to external tools, data sources, and workflows, enabling secure, standardized access to resources, tools, and prompts.
