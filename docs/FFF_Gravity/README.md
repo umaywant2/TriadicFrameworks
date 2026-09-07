@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="FFF_Gravity_" src="https://github.com/user-attachments/assets/ce470c72-72b0-482d-a269-eb40256b1819" />
 
 <!--
   docs/FFF_Gravity/README.md
