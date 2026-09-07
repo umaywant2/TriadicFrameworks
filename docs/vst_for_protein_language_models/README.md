@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="vst_for_protein_language_models_" src="https://github.com/user-attachments/assets/a1d900fb-58cb-4694-99a7-d8738e7d2a39" />
+
 ## *vST for Protein Language Models*  
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
