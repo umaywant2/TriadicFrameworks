@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="MODE_" src="https://github.com/user-attachments/assets/f068e386-bcb9-4379-99cb-322cdebe2e04" />
 
 ## 🎛️ Mode
 
