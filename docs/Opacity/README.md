@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Opacity_" src="https://github.com/user-attachments/assets/d497a8d5-da43-4353-9c73-47ac83cc2754" />
 
 # 🌑 Opacity
 
