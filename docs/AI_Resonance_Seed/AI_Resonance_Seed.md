@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="AI_Resonance_Seed_module" src="https://github.com/user-attachments/assets/ae968111-4f2c-4297-84d9-833c977fbc23" />
+
 ---
 title: AI Resonance Seed — Canonical Module Definition
 description: The AI Resonance Seed defines the core resonance model of TriadicFrameworks, establishing coherence, drift boundaries, and validator alignment for agentic AI systems.
