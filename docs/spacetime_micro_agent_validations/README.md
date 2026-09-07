@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="spacetime_micro_agent_validations_" src="https://github.com/user-attachments/assets/acf76a32-e664-4b6d-81b5-ed0fd2395eea" />
+
 ## Spacetime Micro‑Agent Validations
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
