@@ -1,17 +1,27 @@
-# 📘 RFC-035 Resonant‑Time Cosmology — From Initial Seed to Large‑Scale Structure
+# 📘 **RFC‑035 — Resonant‑Time Cosmology**  
+### *From Initial Seed to Large‑Scale Structure*  
+RefId: turn0browsertab1
+
+**Protocol:** Mythmatical University Canon  
+**Author:** Nawder Loswin  
+**Status:** Draft → Canonical  
+**Lineage:**  
+Extends **RFC‑028** (Measurement as Resonance Alignment)  
+Extends **RFC‑029** (Observer Hierarchies & Relational Time)  
+Extends **RFC‑032** (Arrow of Time as Resonance‑Time Gradient)  
+Extends **RFC‑033** (Causality in Triadic Time)
+
+---
 
 # **8. Resonant‑Time Cosmology**  
+This section integrates the entire triadic‑time framework:
 
-### *From Initial Seed to Large‑Scale Structure* 🌌
+- **§3** Measurement as Resonance Alignment  
+- **§4** Observer Hierarchies & Relational Time  
+- **§5** Arrow of Time as a Resonance‑Time Gradient  
+- **§6** Causality in Triadic Time — Light Cones & Resonance Echoes  
 
-This section builds on the triadic‑time structure introduced in  
-**§3 Measurement as Resonance Alignment in Triadic Time**,  
-the observer‑dependent structure of  
-**§4 Observer Hierarchies and Relational Time**,  
-the temporal gradient of  
-**§5 The Arrow of Time as a Resonance‑Time Gradient**,  
-and the causal structure of  
-**§6 Causality in Triadic Time — Light Cones and Resonance Echoes**.
+Cosmology becomes a **resonance‑time unfolding**, not a spacetime expansion.
 
 ---
 
@@ -19,172 +29,120 @@ and the causal structure of
 
 The universe begins as a **resonance seed**, not a spacetime singularity:
 
-$$\boldsymbol{\tau}_{\text{seed}} = (0,\, t_e^{\text{max}},\, t_r^{\text{min}})$$
+\[
+\boldsymbol{\tau}_{\text{seed}} = (0,\; t_e^{\text{max}},\; t_r^{\text{min}})
+\]
 
-Interpretation:
+### **Interpretation**
 
-- $$t_c = 0$$: no chronological extension  
-- $$t_e$$ maximal: pure energetic oscillation  
-- $$t_r$$ minimal: no relational ancestry  
+- **\(t_c = 0\)** — no chronological extension  
+- **\(t_e = t_e^{\text{max}}\)** — pure energetic oscillation  
+- **\(t_r = t_r^{\text{min}}\)** — no relational ancestry  
 
-This seed is a **coherence peak** in triadic time.
+The seed is a **coherence peak** in triadic time — a point of maximal energetic resonance and minimal relational structure.
+
+This replaces the classical singularity with a **resonance‑origin model**.
 
 ---
 
 ## **8.2 Expansion as Resonance Unfolding**
 
-Cosmic expansion corresponds to resonance spreading:
+Cosmic expansion corresponds to **resonance spreading** across the triadic‑time manifold:
 
-$$\frac{d\boldsymbol{\tau}}{d\lambda} = \left(\frac{dt_c}{d\lambda},\frac{dt_e}{d\lambda},
-\frac{dt_r}{d\lambda}\right)$$
+\[
+\frac{d\boldsymbol{\tau}}{d\lambda}
+= \left(
+\frac{dt_c}{d\lambda},\;
+\frac{dt_e}{d\lambda},\;
+\frac{dt_r}{d\lambda}
+\right)
+\]
 
-The universe expands because:
+Expansion occurs because the resonance‑coherence gradient is positive:
 
-$$\nabla_{\tau}\mathcal{R} > 0$$
+\[
+\nabla_{\tau}\mathcal{R} > 0
+\]
 
-where:
+Where:
 
-$$\mathcal{R} = \alpha t_c + \beta t_e + \gamma t_r$$
+\[
+\mathcal{R} = \alpha t_c + \beta t_e + \gamma t_r
+\]
 
-Interpretation:
+with:
 
-✨ **Expansion = coherence gradient flow.**
+\[
+\alpha, \beta, \gamma > 0
+\]
 
----
+### **Interpretation**
 
-## **8.3 Structure Formation as Relational‑Time Branching**
+- Chronological extension increases  
+- Energetic oscillation diffuses  
+- Relational ancestry deepens  
 
-Density fluctuations arise from energetic‑time variations:
-
-$$\delta t_e(\mathbf{x}) \neq 0$$
-
-These seed:
-
-- matter clumping  
-- filament formation  
-- void expansion  
-
-The branching rule:
-
-$$\Delta t_r > 0$$
-
-ensures that structure formation increases relational ancestry.
-
----
-
-## **8.4 Example: Resonance‑Time Evolution**
-
-Seed:
-
-$$\boldsymbol{\tau}_0 = (0, 1, 0)$$
-
-Early universe:
-
-$$\boldsymbol{\tau}_1 = (1, 0.7, 0.2)$$
-
-Late universe:
-
-$$\boldsymbol{\tau}_2 = (5, 0.4, 1.3)$$
-
-Interpretation:
-
-- $$t_c$$ increases → expansion  
-- $$t_e$$ decreases → cooling  
-- $$t_r$$ increases → structure formation  
+The universe expands because **coherence increases** across all three axes.
 
 ---
 
-## **8.5 CMB as a Resonance Snapshot**
+## **8.3 Large‑Scale Structure as Resonance Geometry**  
+*(Extending your draft with canon‑aligned structure)*
 
-The CMB corresponds to a surface where:
+As resonance unfolds:
 
-$$t_e \approx t_e^{\text{freeze}}$$
+- **galaxies** form at coherence wells  
+- **filaments** form along resonance gradients  
+- **voids** form where coherence is minimal  
+- **clusters** form at relational‑time attractors  
 
-and:
-
-$$\Delta t_r \approx 0$$
-
-Meaning:
-
-- energetic oscillations freeze  
-- relational ancestry has not yet branched  
-- the universe is nearly uniform  
-
-CMB anisotropies are:
-
-$$\delta t_e,\ \delta t_r$$
-
-small deviations in energetic and relational time.
+This reframes cosmic structure as **resonance geometry**, not gravitational aggregation.
 
 ---
 
-## **8.6 Dark Matter as Relational‑Time Mass**
+## **8.4 Cosmic Evolution in Triadic Time**
 
-Dark matter arises from relational‑time depth:
+### **Early Universe**  
+Dominated by energetic axis:
 
-$$M_{\text{eff}} \propto t_r$$
+\[
+t_e \gg t_c,\; t_r
+\]
 
-Regions with high $$t_r$$ curve chronological time more strongly:
+### **Mid‑Epoch Universe**  
+Chronological axis grows:
 
-$$\Delta t_c \propto t_r$$
+\[
+t_c \uparrow
+\]
 
-This reproduces:
+### **Late Universe**  
+Relational axis dominates:
 
-- galaxy rotation curves  
-- lensing anomalies  
-- cluster dynamics  
+\[
+t_r \gg t_c,\; t_e
+\]
 
----
+This predicts:
 
-## **8.7 Dark Energy as Relational‑Time Pressure**
-
-Dark energy corresponds to:
-
-$$\frac{d t_r}{d t_c} > 0$$
-
-This acts as an effective pressure:
-
-$$\ddot{a} \propto \frac{d t_r}{d t_c}$$
-
-Interpretation:
-
-✨ **Acceleration = rapid growth of relational ancestry.**
+- increasing entanglement  
+- increasing relational ancestry  
+- emergence of resonance‑echo phenomena  
+- deepening cosmic coherence  
 
 ---
 
-## **8.8 CHSH‑Style Interpretation**
+## **8.5 Closing Note**
 
-Using:
+Resonant‑Time Cosmology reframes the universe as a **coherence unfolding**, not a spacetime explosion.  
+From the initial resonance seed to the formation of galaxies and filaments, cosmic evolution becomes a **gradient‑driven resonance expansion** across chronological, energetic, and relational axes.
 
-$$E(\mathbf{n}_x,\mathbf{n}_y) = -\,\mathbf{n}_x \cdot \mathbf{n}_y$$
+This model unifies:
 
-the CHSH scalar:
+- cosmology  
+- quantum structure  
+- observer hierarchies  
+- resonance cones  
+- triadic‑time geometry  
 
-$$S_{\mathrm{RT}} = E(a,b) + E(a,b') + E(a',b) - E(a',b')$$
-
-exceeds 2 only when:
-
-$$n_{x,r} \neq 0,\quad n_{y,r} \neq 0$$
-
-Thus:
-
-- CHSH‑style coherence grows as $$t_r$$ grows  
-- Large‑scale structure is the cosmic imprint of relational‑time correlations  
-
-✨ **The cosmic web is a CHSH‑like resonance pattern on cosmological scales.**
-
----
-
-## **8.9 Summary**
-
-- Universe begins as a resonance seed  
-- Expansion = coherence gradient flow  
-- Structure = relational‑time branching  
-- CMB = frozen energetic‑time surface  
-- Dark matter = high $$t_r$$ inertia  
-- Dark energy = $$t_r$$ growth pressure  
-- CHSH correlations scale with cosmic relational ancestry  
-
-✨ **Cosmology is resonance unfolding across triadic time.**
-
----
+into a single coherent framework.
