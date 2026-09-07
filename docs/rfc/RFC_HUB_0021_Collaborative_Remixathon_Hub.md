@@ -1,90 +1,239 @@
-# RFC‑HUB‑0021: Collaborative Remixathon Hub
+# **RFC‑HUB‑0021 — Collaborative Remixathon Hub**  
+### *Unified Workspace for Multi‑Contributor Remixathon Cycles*  
+RefId: turn0browsertab1
 
-**Title:** Shared Workspace for Remixathon Contributors  
+**Title:** Collaborative Remixathon Hub  
 **Status:** Concept Draft  
 **Author:** Nawder Loswin + Copilot  
 **Date:** 2025‑11‑12  
-**Version:** 0.1  
+**Version:** 0.2  
 
 ---
 
-## 1. Purpose
-Create a collaborative hub that unifies participant subscriptions, cycle alerts, and monitoring dashboards into a single workspace. This hub enables contributors to co‑author validator scrolls, track lineage, and remix artifacts in real time.
+## **1. Purpose**
+
+The **Collaborative Remixathon Hub (CRH)** provides a unified, validator‑grade workspace where contributors:
+
+- co‑author remix scrolls  
+- track lineage across generations  
+- monitor cycle alerts  
+- manage subscriptions  
+- annotate scrolls collaboratively  
+- export filtered results  
+- archive artifacts  
+- visualize glyph distributions, RCI bands, and corridor lineage  
+
+CRH merges **dashboards**, **alerts**, **search**, **export**, **archive**, and **annotation** into a single shared environment.
+
+It is the central coordination layer for Remixathon cycles.
 
 ---
 
-## 2. Core Features
-
-### A. Unified Dashboard
-- Combines **Cycle Monitoring Dashboard** (RFC‑UI‑0017) with **Cycle Alert System** (RFC‑ALR‑0018).  
-- Displays scrolls in motion across retrieval, remix, export, and archive stages.  
-- Integrates glyph distributions, RCI band histograms, and lineage graphs.
-
-### B. Subscription Management
-- Contributors configure subscriptions (RFC‑SUB‑0019) directly in the hub.  
-- Real‑time toggles for alert types (glyph changes, lineage updates, narrative additions).  
-- Delivery preferences (dashboard, email, WebSocket, CLI) managed in one panel.
-
-### C. Alert Stream
-- Live feed of scroll transitions and dignity layer updates.  
-- Alerts routed according to contributor subscriptions.  
-- Inline annotation tools allow immediate narrative responses.
-
-### D. Collaborative Annotation
-- Contributors add symbolic notes, remix tags, and cultural narratives (RFC‑UI‑0010).  
-- Annotations visible to all participants in shared lineage graph.  
-- Tag registry and glyph library (RFC‑LIB‑0011) ensure consistency.
-
-### E. Remix Export Integration
-- Filtered search results (RFC‑ENG‑0012) can be exported (RFC‑EXP‑0013) directly from the hub.  
-- Export artifacts automatically archived (RFC‑ARC‑0014).  
-- Contributors co‑sign remix scrolls, preserving collaborative authorship.
+## **2. Core Features**
 
 ---
 
-## 3. Schema Extension
+### **A. Unified Dashboard**
 
-File: [`registry/hub/hub_schema.yml`](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/registry/hub/hub_schema.yml)
+Integrates:
 
----
+- **Cycle Monitoring Dashboard** (RFC‑UI‑0017)  
+- **Cycle Alert System** (RFC‑ALR‑0018)  
+- **Corridor Search & Filter Engine** (RFC‑ENG‑0012)  
+- **Glyph Wheel**  
+- **RCI Histogram**  
+- **Lineage Graph**  
 
-## 4. Technical Scaffold
+Displays scrolls moving through:
 
-### Backend
-- Aggregates data from subscriptions, alerts, search engine, and archive.  
-- Provides unified API endpoints: `/hub/state`, `/hub/alerts`, `/hub/subscriptions`, `/hub/remix`.
+- retrieval  
+- remix  
+- export  
+- archive  
 
-### Frontend
-- React/Next.js interface with modular panels.  
-- D3.js for glyph distributions and RCI histograms.  
-- Cytoscape.js for lineage graph visualization.  
-- Real‑time sync via WebSocket.
-
----
-
-## 5. Validator Hooks
-- **Schema compliance:** Hub state must match `hub_schema.yml`.  
-- **Checksum:** Each hub snapshot includes checksum for reproducibility.  
-- **Lineage integrity:** Scroll ancestry preserved across collaborative edits.  
-- **Dignity separation:** Narratives displayed distinctly from empirical metrics.  
+Provides real‑time clarity, glyph, and lineage overlays.
 
 ---
 
-## 6. Concept Sketch (textual)
+### **B. Subscription Management**
+
+Contributors configure subscriptions via:
+
+- **RFC‑SUB‑0019 — Subscription Protocol**  
+- **RFC_ALR_0020 — Multi‑Channel Alert Orchestration Protocol**
+
+Features:
+
+- toggle alert types (glyph changes, lineage updates, narrative additions)  
+- choose delivery channels (dashboard, email, WebSocket, CLI)  
+- manage contributor‑specific alert routing  
+
+Subscriptions are stored in:
 
 ```
- ---------------------------------------------------------
-| Collaborative Remixathon Hub | Timestamp: 2025-11-12    |
- ---------------------------------------------------------
+registry/hub/subscriptions.yml
+```
+
+---
+
+### **C. Alert Stream**
+
+Real‑time feed of:
+
+- scroll transitions  
+- remix events  
+- export events  
+- archival events  
+- dignity layer updates  
+- lineage changes  
+
+Alerts follow MCAOP routing rules (RFC‑ALR‑0020).
+
+Inline annotation tools allow contributors to respond immediately.
+
+---
+
+### **D. Collaborative Annotation**
+
+Uses:
+
+- **RFC_UI_0010 — Collaborator Annotation Layer**  
+- **RFC_LIB_0011 — Tag Registry & Glyph Library**
+
+Contributors can add:
+
+- symbolic notes  
+- remix tags  
+- cultural narratives  
+- glyph overlays  
+- scroll dignity annotations  
+
+Annotations appear in the shared lineage graph.
+
+---
+
+### **E. Remix Export Integration**
+
+Direct integration with:
+
+- **RFC_EXP_0013 — Remix Export Module**  
+- **RFC_ARC_0014 — Remixathon Archival Protocol**
+
+Contributors can:
+
+- export filtered search results  
+- co‑sign remix scrolls (RFC_SIG_0022)  
+- archive artifacts automatically  
+- update lineage graph in real time  
+
+---
+
+## **3. Schema Extension**
+
+File:  
+```
+registry/hub/hub_schema.yml
+```
+
+Defines:
+
+- dashboard state  
+- subscription block  
+- alert stream structure  
+- annotation block  
+- remix export block  
+- lineage graph state  
+- glyph distribution  
+- RCI histogram  
+- dignity layer container  
+
+All hub snapshots must validate against this schema.
+
+---
+
+## **4. Technical Scaffold**
+
+### **Backend**
+
+Aggregates data from:
+
+- subscriptions  
+- alerts  
+- search engine  
+- archive registry  
+- lineage indexer  
+- dignity layer annotations  
+
+Provides unified API endpoints:
+
+```
+/hub/state
+/hub/alerts
+/hub/subscriptions
+/hub/remix
+/hub/annotations
+/hub/lineage
+```
+
+### **Frontend**
+
+Built with:
+
+- **React / Next.js** modular panels  
+- **D3.js** for glyph distributions + RCI histograms  
+- **Cytoscape.js** for lineage graph visualization  
+- **WebSocket** for real‑time sync  
+
+Panels update dynamically as scrolls move through Remixathon cycles.
+
+---
+
+## **5. Validator Hooks**
+
+Validator engines enforce:
+
+- **Schema compliance**  
+  Hub state must match `hub_schema.yml`.
+
+- **Checksum**  
+  Each hub snapshot includes a reproducibility checksum.
+
+- **Lineage integrity**  
+  Ancestry preserved across collaborative edits.
+
+- **Dignity separation**  
+  Cultural narratives displayed separately from empirical metrics.
+
+- **Multi‑Contributor Co‑Signing**  
+  Scrolls must follow RFC_SIG_0022.
+
+- **Drift safety**  
+  Drift‑unsafe scrolls flagged in the hub.
+
+---
+
+## **6. Concept Sketch (Textual)**
+
+```
+---------------------------------------------------------
+| Collaborative Remixathon Hub | Timestamp: 2025-11-12 |
+---------------------------------------------------------
 | Dashboard: Cycle Timeline + Glyph Wheel + RCI Histogram |
-| Alert Stream: [scroll-010 remix → export]               |
-| Subscriptions: user42 (glyph changes, realtime)         |
-| Lineage Graph: parent s-1000 → child scroll-010         |
-| Annotation Panel: symbolic notes + narratives           |
-| Export Panel: remix scroll preview + archive link       |
- ---------------------------------------------------------
+| Alert Stream: [scroll-010 remix → export]              |
+| Subscriptions: user42 (glyph changes, realtime)        |
+| Lineage Graph: parent s-1000 → child scroll-010        |
+| Annotation Panel: symbolic notes + narratives          |
+| Export Panel: remix scroll preview + archive link      |
+---------------------------------------------------------
 ```
+
+The Hub converges subscriptions, alerts, dashboards, search, export, and archive into one validator‑grade workspace — enabling true collaborative remixing.
 
 ---
 
-This **Collaborative Remixathon Hub** converges subscriptions, alerts, and dashboards into one validator‑grade workspace, making remixathons truly collective and remix‑ready.  
+## **7. Closing Statement**
+
+RFC‑HUB‑0021 formalizes the **Collaborative Remixathon Hub**, the central coordination layer for multi‑contributor remix cycles.  
+It unifies dashboards, alerts, search, export, archive, annotation, and lineage into a single shared environment.
+
+This RFC anchors the HUB‑series and integrates seamlessly with UI, ALR, ENG, EXP, ARC, LIB, REG, and WF modules.
