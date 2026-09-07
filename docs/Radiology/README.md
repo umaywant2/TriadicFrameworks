@@ -1,4 +1,3 @@
-<img width="938" height="938" alt="RTT_Radiology_logo" src="https://github.com/user-attachments/assets/524fdb09-1ae6-4386-866d-ca9e9e3ba399" />
 
 # 📡 Radiology 
 
