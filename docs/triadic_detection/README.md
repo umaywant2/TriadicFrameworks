@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="triadic_detection" src="https://github.com/user-attachments/assets/8169ce5e-4afa-46e0-8219-612be2a6feed" />
+
 # **triadic_detection_readme.md**  
 
 - [`triadic_detection_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/triadic_detection/triadic_detection_module.json) — Agentic module schema role assignments
