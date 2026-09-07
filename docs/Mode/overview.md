@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Mode_module" src="https://github.com/user-attachments/assets/bbd96431-faf8-4fdd-9fd8-ccd94f9a4a69" />
+
 ---
 title: "Mode"
 description: "The session stance layer — five interaction modes that define how an RTT-compliant system engages, not what it processes."
