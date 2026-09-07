@@ -1,4 +1,6 @@
-# RFC‑VER‑0023: Signature Verification Service
+# **RFC‑VER‑0023 — Signature Verification Service**  
+### *Validator‑Grade Multi‑Contributor Signature Authentication*  
+RefId: turn0browsertab1
 
 **Title:** Validator Service for Multi‑Contributor Signature Authentication  
 **Status:** Draft  
@@ -8,81 +10,204 @@
 
 ---
 
-## 1. Purpose
-Provide a service that validates co‑signatures on remix scrolls against contributor registries. This ensures that shared authorship is authentic, reproducible, and preserved in the archival lineage.
+## **1. Purpose**
+
+The **Signature Verification Service (SVS)** validates co‑signatures on remix scrolls against contributor registries.  
+It ensures:
+
+- shared authorship is authentic  
+- signatures are cryptographically valid  
+- symbolic signatures match contributor identity  
+- timestamps align with export windows  
+- lineage integrity is preserved  
+- validator‑grade reproducibility  
+
+SVS is a core component of the Remixathon validator cluster.
 
 ---
 
-## 2. Workflow Steps
+# **2. Workflow Steps**
 
-1. **Signature Extraction**  
-   - Parse signatures from remix scroll metadata (`remix_scroll.signatures`).  
-   - Collect contributor IDs and signature payloads.
-
-2. **Registry Lookup**  
-   - Query contributor registry for public keys or symbolic signature references.  
-   - Verify contributor identity and active status.
-
-3. **Signature Validation**  
-   - Cryptographic check (PGP/ECDSA).  
-   - Symbolic check (glyph‑based validator signatures).  
-   - Timestamp validation (must match scroll export window).
-
-4. **Verification Report**  
-   - Generate validator report with pass/fail per contributor.  
-   - Aggregate into scroll dignity layer: “authorship confirmed” badge.  
+SVS follows a four‑stage verification pipeline.
 
 ---
 
-## 3. Schema Extension
+## **2.1 Signature Extraction**
 
-File: [`registry/signatures/verification_schema.yml`](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/registry/signatures/verification_schema.yml)
+Parse signatures from:
 
----
+```
+remix_scroll.signatures
+```
 
-## 4. API Endpoints
+Extract:
 
-- `POST /verify/signatures` → Submit scroll for signature verification.  
-- `GET /verify/report/{scroll_id}` → Retrieve verification report.  
-- `GET /verify/contributor/{id}` → Check contributor signature status.  
-
----
-
-## 5. Python‑style Stub
-
-File: [`api/signature_verification.py`](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/api/signature_verification.py)
+- contributor IDs  
+- signature payloads  
+- signature types (PGP, ECDSA, symbolic)  
+- timestamp metadata  
 
 ---
 
-## 6. Dashboard Integration
+## **2.2 Registry Lookup**
 
-- **Verification Panel:** Contributors can view signature validation results.  
-- **Badge Display:** Scrolls marked with “authentic authorship” or “partial authorship.”  
-- **Contributor Registry Link:** Click contributor ID to view registry entry.  
-- **Lineage Graph Overlay:** Nodes annotated with verification status.  
+Query the **Contributor Registry** for:
 
----
+- public keys  
+- symbolic signature references  
+- contributor identity  
+- contributor active status  
 
-## 7. Validator Hooks
-
-- **Schema compliance:** Reports must match `verification_schema.yml`.  
-- **Checksum:** Each report includes checksum for reproducibility.  
-- **Lineage integrity:** Verified co‑signatures preserved in ancestry index.  
-- **Dignity separation:** Authorship badges displayed distinctly from narratives.  
+Registry lookup ensures signatures map to valid contributors.
 
 ---
 
-## 8. Concept Sketch (textual)
+## **2.3 Signature Validation**
+
+SVS performs three checks:
+
+### **Cryptographic Validation**
+- PGP  
+- ECDSA  
+- key‑pair match  
+- payload integrity  
+
+### **Symbolic Validation**
+Glyph‑based validator signatures checked against:
+
+- glyph library  
+- contributor symbolic signature reference  
+
+### **Timestamp Validation**
+Signature timestamp must fall within the scroll’s export window.
+
+---
+
+## **2.4 Verification Report**
+
+SVS generates a validator‑grade report:
+
+- pass/fail per contributor  
+- overall authorship status  
+- checksum  
+- dignity‑layer badge:
+
+```
+"authorship confirmed"
+```
+
+Report is appended to scroll metadata.
+
+---
+
+# **3. Schema Extension**
+
+File:  
+```
+registry/signatures/verification_schema.yml
+```
+
+Defines:
+
+- contributor ID  
+- signature type  
+- validation status  
+- timestamp  
+- checksum  
+- lineage linkage  
+
+---
+
+# **4. API Endpoints**
+
+### **POST /verify/signatures**  
+Submit scroll for signature verification.
+
+### **GET /verify/report/{scroll_id}**  
+Retrieve verification report.
+
+### **GET /verify/contributor/{id}**  
+Check contributor signature status.
+
+---
+
+# **5. Python‑Style Stub**
+
+File:  
+```
+api/signature_verification.py
+```
+
+```python
+def verify_signatures(scroll):
+    results = []
+    for sig in scroll["signatures"]:
+        contributor = lookup_contributor(sig["id"])
+        crypt_valid = verify_crypto(sig["payload"], contributor["public_key"])
+        symbolic_valid = verify_symbolic(sig["glyph"], contributor["symbolic_signature"])
+        timestamp_valid = verify_timestamp(sig["timestamp"], scroll["export_window"])
+
+        results.append({
+            "id": sig["id"],
+            "cryptographic": crypt_valid,
+            "symbolic": symbolic_valid,
+            "timestamp": timestamp_valid,
+            "status": crypt_valid and symbolic_valid and timestamp_valid
+        })
+
+    return {
+        "scroll_id": scroll["id"],
+        "results": results,
+        "overall_status": all(r["status"] for r in results)
+    }
+```
+
+---
+
+# **6. Dashboard Integration**
+
+### **Verification Panel**
+Contributors view signature validation results.
+
+### **Badge Display**
+Scrolls marked:
+
+- **authentic authorship**  
+- **partial authorship**  
+
+### **Contributor Registry Link**
+Click contributor ID → registry entry.
+
+### **Lineage Graph Overlay**
+Nodes annotated with verification status.
+
+---
+
+# **7. Validator Hooks**
+
+### **Schema Compliance**
+Reports must match `verification_schema.yml`.
+
+### **Checksum**
+Each report includes reproducibility checksum.
+
+### **Lineage Integrity**
+Verified co‑signatures preserved in ancestry index.
+
+### **Dignity Separation**
+Authorship badges displayed distinctly from narratives.
+
+---
+
+# **8. Concept Sketch (Textual)**
 
 ```
 Verification Report: scroll-010
  └─ Contributors:
-      - user42 (PGP) → valid
+      - user42 (PGP)   → valid
       - user17 (ECDSA) → valid
  └─ Overall Status: authentic
  └─ Badge: "Shared Authorship Confirmed"
 ```
 
----
-
-This **Signature Verification Service** ensures co‑signatures are authentic, validated against contributor registries, and preserved as validator‑grade lineage.  
+SVS ensures co‑signatures are authentic, validated against contributor registries, and preserved as validator‑grade lineage.
