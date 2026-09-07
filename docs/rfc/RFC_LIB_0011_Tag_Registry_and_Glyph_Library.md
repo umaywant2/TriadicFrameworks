@@ -1,27 +1,58 @@
-# RFC‑LIB‑0011: Tag Registry and Glyph Library
+# **RFC‑LIB‑0011 — Tag Registry and Glyph Library**  
+### *Canonical Registry for Remixathon Tags and Corridor Glyphs*  
+RefId: turn0browsertab1
 
 **Title:** Canonical Tag Registry and Glyph Library for Remixathon Annotations  
 **Status:** Draft  
 **Author:** Nawder Loswin + Copilot  
 **Date:** 2025‑11‑12  
-**Version:** 0.1  
+**Version:** 0.2  
 
 ---
 
-## 1. Purpose
-Provide a centralized registry of remix tags and glyphs to ensure annotation consistency. Contributors can search, reuse, and remix tags/glyphs across scrolls and dashboards, preventing fragmentation.
+## **1. Purpose**
+
+The **Tag Registry and Glyph Library (TRGL)** provides a unified, canonical repository for:
+
+- remix tags  
+- corridor glyphs  
+- symbolic overlays  
+- annotation metadata  
+- contributor‑defined semantic categories  
+
+TRGL ensures:
+
+- consistency across Remixathon cycles  
+- interoperability across dashboards  
+- lineage‑safe tag/glyph inheritance  
+- validator‑grade schema compliance  
+- drift‑safe annotation reuse  
+
+It is the foundational library for all annotation‑based workflows in TriadicFrameworks.
 
 ---
 
-## 2. Tag Registry
+## **2. Tag Registry Schema**
 
-### Schema
+File:  
+```
+registry/tags/tag_schema.yml
+```
 
-File: [`registry/tags/tag_schema.yml`](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/registry/tags/tag_schema.yml)
+### **Tag Fields**
 
----
+Each tag includes:
 
-### Example Entries
+- **id** — canonical tag ID  
+- **name** — human‑readable tag name  
+- **description** — semantic meaning  
+- **category** — semantic / rail / cultural / experimental / cipher‑dense  
+- **created_by** — contributor identity  
+- **timestamp** — creation time  
+- **lineage** — optional parent tag  
+- **checksum** — validator reproducibility hash  
+
+### **Example Entries**
 
 ```yaml
 - id: t-001
@@ -41,15 +72,28 @@ File: [`registry/tags/tag_schema.yml`](https://github.com/umaywant2/TriadicFrame
 
 ---
 
-## 3. Glyph Library
+## **3. Glyph Library Schema**
 
-### Schema
+File:  
+```
+registry/glyphs/glyph_schema.yml
+```
 
-File: [`registry/glyphs/glyph_schema.yml`](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/registry/glyphs/glyph_schema.yml)
+### **Glyph Fields**
 
----
+Each glyph includes:
 
-### Example Entries
+- **id** — canonical glyph ID  
+- **symbol** — Unicode or SVG symbol  
+- **name** — glyph name  
+- **meaning** — semantic or rail meaning  
+- **category** — corridor / rail / cultural / substrate / temporal  
+- **created_by** — system or contributor  
+- **timestamp** — creation time  
+- **lineage** — optional parent glyph  
+- **checksum** — validator reproducibility hash  
+
+### **Example Entries**
 
 ```yaml
 - id: g-001
@@ -79,40 +123,92 @@ File: [`registry/glyphs/glyph_schema.yml`](https://github.com/umaywant2/TriadicF
 
 ---
 
-## 4. API Endpoints
+## **4. API Endpoints**
 
-- `GET /tags` → List all tags.  
-- `GET /tags/{id}` → Retrieve tag details.  
-- `POST /tags` → Create new tag.  
-- `GET /glyphs` → List all glyphs.  
-- `GET /glyphs/{id}` → Retrieve glyph details.  
-- `POST /glyphs` → Create new glyph.  
+### **Tag Endpoints**
 
----
+- `GET /tags` — list all tags  
+- `GET /tags/{id}` — retrieve tag details  
+- `POST /tags` — create new tag  
 
-## 5. Dashboard Integration
+### **Glyph Endpoints**
 
-- **Autocomplete:** Annotation panel pulls tag registry for consistent naming.  
-- **Glyph Selector:** Dashboard nodes display glyph library icons; contributors choose from canonical set.  
-- **Search:** Contributors can filter corridors by tag or glyph across remixathon reports.  
+- `GET /glyphs` — list all glyphs  
+- `GET /glyphs/{id}` — retrieve glyph details  
+- `POST /glyphs` — create new glyph  
 
----
+All endpoints enforce:
 
-## 6. Validator Hooks
-
-- **Schema compliance:** All tags/glyphs must conform to schema.  
-- **Checksum:** Each entry includes checksum for reproducibility.  
-- **Lineage integrity:** New tags/glyphs must cite parent lineage if derived.  
-- **Separation:** Cultural glyphs stored distinctly from rail glyphs.  
+- schema compliance  
+- checksum validation  
+- lineage integrity  
+- drift‑safe constraints  
 
 ---
 
-## 7. Notes
+## **5. Dashboard Integration**
 
-- Registry ensures remixathons remain remixable: tags and glyphs are consistent across contributors.  
-- Glyph library supports both Unicode symbols and custom SVG paths for richer overlays.  
-- Tags and glyphs are validator‑grade artifacts, archived in `registry/tags/` and `registry/glyphs/`.  
+### **Autocomplete**
+Annotation panels pull tag registry entries for consistent naming.
+
+### **Glyph Selector**
+Dashboard nodes display glyph icons from the canonical library.
+
+### **Search Integration**
+Corridor search (ENG‑0012) filters by tag or glyph across:
+
+- scrolls  
+- dashboards  
+- lineage graphs  
+- remixathon reports  
+
+### **Remixathon Integration**
+Tags and glyphs appear in:
+
+- dignity layers  
+- scroll metadata  
+- remix lineage diffs  
+- export bundles  
 
 ---
 
-This scaffold gives you a canonical registry and library for tags and glyphs, ensuring remixathon annotations are consistent, searchable, and remixable.  
+## **6. Validator Hooks**
+
+Validator engines enforce:
+
+- **Schema compliance**  
+  All tags/glyphs must match their schemas.
+
+- **Checksum**  
+  Ensures reproducibility and integrity.
+
+- **Lineage integrity**  
+  Derived tags/glyphs must cite parent lineage.
+
+- **Separation of concerns**  
+  Cultural glyphs stored separately from rail glyphs.
+
+- **Drift safety**  
+  Drift‑unsafe tags/glyphs require override.
+
+---
+
+## **7. Notes**
+
+- TRGL ensures Remixathon cycles remain remixable and consistent.  
+- Glyph library supports both Unicode symbols and custom SVG paths.  
+- Tags and glyphs are validator‑grade artifacts stored in:  
+  - `registry/tags/`  
+  - `registry/glyphs/`  
+- TRGL integrates with:  
+  - Search & Filter Engine (ENG‑0012)  
+  - Remix Export Module (EXP‑0013)  
+  - Collaborative Hub (HUB‑0021)  
+  - Archival Protocol (ARC‑0014)  
+
+---
+
+## **8. Closing Statement**
+
+RFC‑LIB‑0011 formalizes the **Tag Registry and Glyph Library**, the canonical annotation system for Remixathon cycles.  
+It ensures tags and glyphs remain consistent, searchable, lineage‑safe, and validator‑grade across all TriadicFrameworks workflows.
