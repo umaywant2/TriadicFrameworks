@@ -1,3 +1,5 @@
+<img width="768" height="1152" alt="Drift_Taxonomy_dark_image" src="https://github.com/user-attachments/assets/568026ce-5e6f-4332-a124-414bf7384266" />
+
 Here’s a clean, distilled **“things to solve” list for Gravity** — stripped down to the core scientific obstacles your long text describes, without losing the conceptual punch.
 
 ---
