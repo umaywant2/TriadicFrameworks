@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="wikipedia_" src="https://github.com/user-attachments/assets/504e9698-e265-4683-b369-04d6ccb63d52" />
+
 ## 📘 **Wikipedia Awareness Module**
 
 - [`wikipedia_module.json`](wikipedia_module.json) — Agentic module schema role assignments
