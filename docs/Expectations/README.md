@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Expectations_" src="https://github.com/user-attachments/assets/7e4cf7c6-bdfd-4228-b547-47ef1f5ad88e" />
 
 # Expectations
 
