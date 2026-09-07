@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="MCP_" src="https://github.com/user-attachments/assets/1df6254c-8404-4733-9479-f1585ff08bfb" />
 
 # **TriadicFrameworks MCP — Cosmology‑Aligned Multi‑Tool Server (R5 Canon)**  
 *(Generated from `module.json`, Freeze A applied)*
