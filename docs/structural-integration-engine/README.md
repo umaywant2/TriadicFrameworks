@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="structural-integration-engine__" src="https://github.com/user-attachments/assets/b94510ee-7753-41ca-a8d0-71bb3481e01f" />
+
 # Structural Integration Engine (SIE) — RTT/3 
 
 - [`structural-integration-engine_module.json`](structural-integration-engine_module.json) — Agentic module schema role
