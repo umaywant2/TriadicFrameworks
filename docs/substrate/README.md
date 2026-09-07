@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="substrate_" src="https://github.com/user-attachments/assets/2b3387e0-7a0b-4d75-9a26-de9be3e9d237" />
+
 # Triadic Substrate 
 
 - [`substrate_module.json`](substrate_module.json) — Agentic module schema role assignments
