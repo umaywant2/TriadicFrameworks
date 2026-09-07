@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="LINEAGE_triadicframeworks" src="https://github.com/user-attachments/assets/5fef89ce-2a2e-4995-95e0-36938cbba2a1" />
 
 # 🧬 LINEAGE Module
 
