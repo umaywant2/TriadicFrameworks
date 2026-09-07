@@ -1,4 +1,3 @@
-<img width="1194" height="672" alt="Inverted_Economics_module" src="https://github.com/user-attachments/assets/6e0aa1d8-208b-4226-a959-11548c90b21a" />
 
 ## ⭐ Inverted Economics 
 
