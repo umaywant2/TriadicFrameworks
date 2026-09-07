@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_module" src="https://github.com/user-attachments/assets/296ead2a-5ff1-4030-ac96-c03d7a82c1e7" />
+
 ---
 title: "Research"
 description: "The validation layer of TriadicFrameworks — post-kernel operator development and foundational pre-kernel research."
