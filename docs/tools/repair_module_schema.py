@@ -2,28 +2,18 @@ import os
 import json
 
 ROOT = "docs"
-
-EXCLUDED_DIRS = {
-    "spine",
-    "_template",
-    "assets",
-    "images",
-    "tools"
-}
+EXCLUDED = {"spine","_template","assets","images","tools"}
 
 EXPECTED_CANON_REF = "/docs/spine/spine.json"
-
 EXPECTED_INHERIT = {
     "canon": True,
     "session_context": True,
     "triad_alias_resolution": True
 }
-
 EXPECTED_RTT = {
     "layer": 1,
     "source": "https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html"
 }
-
 EXPECTED_AI_INIT = {
     "load_spine_first": True,
     "load_canon_first": True,
@@ -35,133 +25,122 @@ EXPECTED_AI_INIT = {
 # DISCOVERY
 # ---------------------------------------------------------
 def find_modules():
-    modules = []
-    for root, dirs, files in os.walk(ROOT):
-        if any(ex in root for ex in EXCLUDED_DIRS):
-            continue
+    out=[]
+    for root,dirs,files in os.walk(ROOT):
+        if any(ex in root for ex in EXCLUDED): continue
         if "module.json" in files:
-            modules.append(os.path.join(root, "module.json"))
-    return modules
+            out.append(os.path.join(root,"module.json"))
+    return out
 
 # ---------------------------------------------------------
 # STRUCTURAL + VALUE REPAIR
 # ---------------------------------------------------------
-def repair_module_schema(path):
-    with open(path, "r", encoding="utf-8") as f:
-        try:
-            data = json.load(f)
-        except json.JSONDecodeError:
-            # Hard reset to minimal valid structure
-            data = {}
+def repair(path):
+    fixes=[]
+    try:
+        with open(path,"r",encoding="utf-8") as f:
+            data=json.load(f)
+    except:
+        data={"module":{}}
+        fixes.append("module.json was invalid JSON — rebuilt")
 
-    fixes = []
-
-    # Ensure top-level module object
-    if not isinstance(data.get("module"), dict):
-        data["module"] = {}
+    if not isinstance(data.get("module"),dict):
+        data["module"]={}
         fixes.append("module object created")
 
-    module = data["module"]
+    module=data["module"]
+    dirname=os.path.basename(os.path.dirname(path))
 
-    # Basic identity fields
-    dirname = os.path.basename(os.path.dirname(path))
-
-    if not isinstance(module.get("name"), str):
-        module["name"] = dirname
-        fixes.append("module.name set to directory name")
-
-    if not isinstance(module.get("summary"), str):
-        module["summary"] = f"{dirname} module (auto‑repaired summary)"
+    # Identity fields
+    if not isinstance(module.get("name"),str):
+        module["name"]=dirname
+        fixes.append("module.name created")
+    if not isinstance(module.get("summary"),str):
+        module["summary"]=f"{dirname} module (auto‑repaired)"
         fixes.append("module.summary created")
-
-    if not isinstance(module.get("category"), str):
-        module["category"] = "uncategorized"
+    if not isinstance(module.get("category"),str):
+        module["category"]="uncategorized"
         fixes.append("module.category created")
 
     # canon_ref
-    if module.get("canon_ref") != EXPECTED_CANON_REF:
-        module["canon_ref"] = EXPECTED_CANON_REF
-        fixes.append("canon_ref corrected/created")
+    if module.get("canon_ref")!=EXPECTED_CANON_REF:
+        module["canon_ref"]=EXPECTED_CANON_REF
+        fixes.append("canon_ref corrected")
 
-    # inherit block
-    inherit = module.get("inherit")
-    if not isinstance(inherit, dict):
-        inherit = {}
-        module["inherit"] = inherit
+    # inherit
+    inherit=module.get("inherit")
+    if not isinstance(inherit,dict):
+        inherit={}
+        module["inherit"]=inherit
         fixes.append("inherit object created")
+    for k,v in EXPECTED_INHERIT.items():
+        if inherit.get(k)!=v:
+            inherit[k]=v
+            fixes.append(f"inherit.{k} corrected")
 
-    for key, expected in EXPECTED_INHERIT.items():
-        if inherit.get(key) != expected:
-            inherit[key] = expected
-            fixes.append(f"inherit.{key} corrected/created")
-
-    # rtt block
-    rtt = module.get("rtt")
-    if not isinstance(rtt, dict):
-        rtt = {}
-        module["rtt"] = rtt
+    # rtt
+    rtt=module.get("rtt")
+    if not isinstance(rtt,dict):
+        rtt={}
+        module["rtt"]=rtt
         fixes.append("rtt object created")
+    for k,v in EXPECTED_RTT.items():
+        if rtt.get(k)!=v:
+            rtt[k]=v
+            fixes.append(f"rtt.{k} corrected")
 
-    for key, expected in EXPECTED_RTT.items():
-        if rtt.get(key) != expected:
-            rtt[key] = expected
-            fixes.append(f"rtt.{key} corrected/created")
-
-    # ai.initialization block
-    ai = module.get("ai")
-    if not isinstance(ai, dict):
-        ai = {}
-        module["ai"] = ai
+    # ai.initialization
+    ai=module.get("ai")
+    if not isinstance(ai,dict):
+        ai={}
+        module["ai"]=ai
         fixes.append("ai object created")
 
-    init = ai.get("initialization")
-    if not isinstance(init, dict):
-        init = {}
-        ai["initialization"] = init
+    init=ai.get("initialization")
+    if not isinstance(init,dict):
+        init={}
+        ai["initialization"]=init
         fixes.append("ai.initialization object created")
 
-    for key, expected in EXPECTED_AI_INIT.items():
-        if init.get(key) != expected:
-            init[key] = expected
-            fixes.append(f"ai.initialization.{key} corrected/created")
+    for k,v in EXPECTED_AI_INIT.items():
+        if init.get(k)!=v:
+            init[k]=v
+            fixes.append(f"ai.initialization.{k} corrected")
 
-    # Write back if anything changed
+    # Write back
     if fixes:
-        with open(path, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=2)
+        with open(path,"w",encoding="utf-8") as f:
+            json.dump(data,f,indent=2)
     return fixes
 
 # ---------------------------------------------------------
 # MAIN
 # ---------------------------------------------------------
 def main():
-    print("\n=== TriadicFrameworks Module.json Schema‑Repair Engine ===\n")
+    print("\n=== TriadicFrameworks Schema‑Repair Engine ===\n")
+    modules=find_modules()
+    repaired=0
 
-    modules = find_modules()
-    total = len(modules)
-    repaired = 0
-
-    for module_path in modules:
-        name = os.path.basename(os.path.dirname(module_path))
-        fixes = repair_module_schema(module_path)
-
+    for m in modules:
+        name=os.path.basename(os.path.dirname(m))
+        fixes=repair(m)
         if fixes:
-            repaired += 1
-            print(f"✔ {name} — schema repaired:")
-            for fix in fixes:
-                print(f"   - {fix}")
+            repaired+=1
+            print(f"✔ {name} — repaired:")
+            for f in fixes:
+                print(f"   - {f}")
         else:
-            print(f"✔ {name} — already structurally valid")
+            print(f"✔ {name} — already valid")
 
     print("\n=== Summary ===")
-    print(f"Total modules scanned: {total}")
+    print(f"Modules scanned: {len(modules)}")
     print(f"Modules repaired: {repaired}")
-    print(f"Modules already valid: {total - repaired}")
+    print(f"Modules already valid: {len(modules)-repaired}")
 
-    if repaired == 0:
-        print("\n✨ All module.json files are structurally canon‑valid.")
-    else:
+    if repaired:
         print("\n✨ Schema structure normalized across all modules.")
+    else:
+        print("\n✨ All modules structurally canon‑valid.")
 
-if __name__ == "__main__":
+if __name__=="__main__":
     main()
