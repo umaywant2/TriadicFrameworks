@@ -1,0 +1,145 @@
+name: Canon Drift Audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+  pull_request:
+
+jobs:
+  scan-triads:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        pip install regex
+
+    - name: Create triads-key file
+      run: |
+        cat << 'EOF' > triads_key.json
+        {
+          "RTT": {
+            "SET": {
+              "name": "Spin → Elec → Temp",
+              "description": "Gives me the anisotropic acceleration decomposition → This is the most computationally useful of the stacks."
+            },
+
+            "S-N-R": {
+              "name": "Silence → Noise → Resonance",
+              "description": "Tells which modes are active, dormant, or incoherent. This is the state classifier.",
+              "aliases": ["S–N–R", "S‑N‑R"]
+            },
+
+            "S-E-R": {
+              "name": "Seed → Expansion → Resonance",
+              "description": "Tells me the temporal phase of the system. This is the evolution classifier.",
+              "aliases": ["S–E–R", "S‑E‑R"]
+            }
+          },
+
+          "TFT": {
+            "TFT": {
+              "name": "Triadic → Framework → Tech",
+              "description": "The meta‑rule: everything is triadic, everything projects, everything loops."
+            },
+            "FFF": {
+              "name": "Frequency → Fluids → Forces",
+              "description": "Which physical substrate to treat as the carrier of resonance."
+            }
+          }
+        }
+        EOF
+
+    - name: Run triad drift audit
+      run: |
+        python3 << 'EOF'
+        import os, json, re
+
+        # Load canonical triads
+        with open("triads_key.json") as f:
+            canon = json.load(f)
+
+        # Flatten triad keys and alias spellings
+        triad_map = {}
+        triad_aliases = {}
+
+        for domain, triads in canon.items():
+            for key, data in triads.items():
+                triad_map[key] = data
+                if "aliases" in data:
+                    for alias in data["aliases"]:
+                        triad_aliases[alias] = key
+
+        # Combined list of canonical keys + alias spellings
+        all_keys = list(triad_map.keys()) + list(triad_aliases.keys())
+
+        # Regex to detect any spelling variant
+        triad_regex = re.compile(r'\\b(' + '|'.join(map(re.escape, all_keys)) + r')\\b')
+
+        drift_hits = []
+
+        # Walk repo
+        for root, dirs, files in os.walk("."):
+            for file in files:
+                # Skip workflow files and binary assets
+                if file.endswith((".png", ".jpg", ".jpeg", ".gif", ".svg", ".ico")):
+                    continue
+
+                path = os.path.join(root, file)
+                try:
+                    with open(path, "r", encoding="utf-8") as f:
+                        content = f.read()
+                except:
+                    continue
+
+                # Scan for triad acronyms
+                for match in triad_regex.finditer(content):
+                    found = match.group(1)
+                    triad = triad_aliases.get(found, found)  # resolve alias → canonical key
+                    canon_desc = triad_map[triad]["description"]
+
+                    # Extract nearby text (context window)
+                    start = max(0, match.start() - 200)
+                    end = min(len(content), match.end() + 200)
+                    context = content[start:end]
+
+                    # Validate description presence
+                    if canon_desc.lower() not in context.lower():
+                        drift_hits.append({
+                            "file": path,
+                            "triad": triad,
+                            "found_spelling": found,
+                            "expected": canon_desc,
+                            "context": context.strip()
+                        })
+
+        # Output results
+        if drift_hits:
+            print("=== CANON DRIFT DETECTED ===")
+            for hit in drift_hits:
+                print(f"\\nFile: {hit['file']}")
+                print(f"Triad: {hit['triad']} (found as: {hit['found_spelling']})")
+                print(f"Expected Description: {hit['expected']}")
+                print(f"Context Snippet:\\n{hit['context']}")
+            with open("drift_report.json", "w") as f:
+                json.dump(drift_hits, f, indent=2)
+        else:
+            print("Canon is clean — no drift found.")
+
+        EOF
+
+    - name: Upload drift report artifact
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: drift-report
+        path: drift_report.json
