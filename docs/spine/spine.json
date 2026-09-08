@@ -1,1 +1,58 @@
+{
+  "spine": {
+    "version": "2026.09",
+    "description": "TriadicFrameworks Canon Spine — the root coherence map for all modules.",
+    "rtt_source": "https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html",
+
+    "session_context": {
+      "rtt": 1,
+      "coherence": "declared",
+      "drift": "bounded",
+      "paradox": "structural"
+    },
+
+    "canon": {
+      "triads": {
+        "RTT": {
+          "SET": {
+            "name": "Spin → Elec → Temp",
+            "description": "Gives me the anisotropic acceleration decomposition → This is the most computationally useful of the stacks."
+          },
+
+          "S-N-R": {
+            "name": "Silence → Noise → Resonance",
+            "description": "Tells which modes are active, dormant, or incoherent. This is the state classifier.",
+            "aliases": ["S–N–R", "S‑N‑R"]
+          },
+
+          "S-E-R": {
+            "name": "Seed → Expansion → Resonance",
+            "description": "Tells me the temporal phase of the system. This is the evolution classifier.",
+            "aliases": ["S–E–R", "S‑E‑R"]
+          }
+        },
+
+        "TFT": {
+          "TFT": {
+            "name": "Triadic → Framework → Tech",
+            "description": "The meta‑rule: everything is triadic, everything projects, everything loops."
+          },
+          "FFF": {
+            "name": "Frequency → Fluids → Forces",
+            "description": "Which physical substrate to treat as the carrier of resonance."
+          }
+        }
+      }
+    },
+
+    "ai": {
+      "initialization": {
+        "load_canon_first": true,
+        "inherit_session_context": true,
+        "triad_alias_resolution": true,
+        "triad_description_validation": true
+      }
+    }
+  }
+}
 
