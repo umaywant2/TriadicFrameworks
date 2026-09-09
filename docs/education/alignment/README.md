@@ -1,4 +1,3 @@
-<img width="682" height="682" alt="rtt_education_alignment" src="https://github.com/user-attachments/assets/d3c95c5d-604e-407d-978c-034904c350dd" />
 
 ## 🌐 Alignment - What RTT Unlocked  
 
