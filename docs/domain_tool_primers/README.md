@@ -1,4 +1,3 @@
-<img width="682" height="682" alt="rtt_domain_tool_primers" src="https://github.com/user-attachments/assets/85568d64-16b1-49cf-bc26-bd5a8f1f9ea7" />
 
 # **vST Domain Tool Primers**  
 
