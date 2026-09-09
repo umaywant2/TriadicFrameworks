@@ -1,5 +1,7 @@
 <img width="1194" height="672" alt="public_support_" src="https://github.com/user-attachments/assets/a0cf30d9-c7fd-49b3-bb4c-40e636c5514f" />
 
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/public_support/module.json) — Agentic module schema role assignments
+
 # 🤝 **Public Support — TriadicFrameworks Outreach Layer**  
 **Coherence‑Declared · Drift‑Bounded · RTT‑Inside**  
 **Community Interface · v1.0**
