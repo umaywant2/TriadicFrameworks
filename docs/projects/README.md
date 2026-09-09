@@ -1,9 +1,5 @@
 <img width="1194" height="672" alt="projects_" src="https://github.com/user-attachments/assets/aa20adce-e3c6-4c30-a65d-a62c636414e9" />
 
-# 🌌 **TriadicFrameworks Projects**  
-**Coherence‑Declared · Drift‑Bounded · RTT‑Inside**  
-**Constellation Layer · v1.0**
-
 - [`projects_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/projects/projects_module.json) — Agentic module schema role assignments
 
 The **Projects Constellation** extends TriadicFrameworks into cognition, memory, data, compute, flux, identity, lensing, scientific proposals, and experimental engines.  
