@@ -18,6 +18,8 @@ badge_block: 🧾
 # 🧾 TriadicFrameworks DOI Index  
 ### *A unified reference for all published research artifacts, modules, and substrate models.*
 
+- [`DOI_index_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/DOI_index_module.json) — Agentic module schema role assignments
+
 This index provides a complete, structured list of all TriadicFrameworks DOIs, including:
 
 - DOI badges  
