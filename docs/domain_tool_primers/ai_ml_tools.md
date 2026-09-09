@@ -1,3 +1,5 @@
+<img width="682" height="682" alt="rtt_domain_tool_primers" src="https://github.com/user-attachments/assets/85568d64-16b1-49cf-bc26-bd5a8f1f9ea7" />
+
 # **AI / ML Tool Primer**  
 *A minimal starting point for exploring vST concepts inside AI and machine‑learning environments*
 
