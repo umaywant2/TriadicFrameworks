@@ -1,6 +1,5 @@
-<img width="1194" height="672" alt="_ideas_Detroit_Salt_Mines" src="https://github.com/user-attachments/assets/855df851-bdbb-452d-8bb0-4fd0087079af" />
 
-## 💡 _ideas — our 'Michigan Manifestations' Vault  
+# 💡 _ideas — our 'Michigan Manifestations' Vault  
 
 - [`_ideas_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/_ideas/_ideas_module.json) — Agentic module schema role assignments
 
