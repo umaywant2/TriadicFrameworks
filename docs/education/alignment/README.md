@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="triadicframeworks_Alignment_" src="https://github.com/user-attachments/assets/e84989e4-37b0-475c-b524-f3d4c8596726" />
 
 ## 🌐 Alignment - What RTT Unlocked  
 
