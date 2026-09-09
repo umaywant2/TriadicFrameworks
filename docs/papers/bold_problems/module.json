@@ -1,1 +1,151 @@
+{
+  "module": {
+    "name": "Bold Frontier Problems",
+    "category": "Papers",
+    "summary": "A curated collection of frontier scientific, mathematical, cosmological, biological, computational, and symbolic problems explored through TriadicFrameworks resonance logic.",
+    "purpose": "Provide long-form, validator-grade explorations of high-impact scientific and mathematical challenges using triadic resonance, symbolic scaffolding, and cross-disciplinary inquiry.",
+    "version": "1.0",
+    "status": "canonical"
+  },
+
+  "identity": {
+    "canonical_url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/papers/bold_problems/",
+    "citation_author": "Nawder Loswin",
+    "citation_publication_date": "2026",
+    "license": "Open educational use permitted"
+  },
+
+  "session_context": {
+    "rtt": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural",
+    "layer": "papers"
+  },
+
+  "ai": {
+    "module": "Bold Frontier Problems",
+    "version": "1.0",
+    "purpose": "Enable AI discovery, navigation, and reasoning across frontier scientific and mathematical papers.",
+    "keywords": [
+      "TriadicFrameworks",
+      "Bold Problems",
+      "Frontier Science",
+      "Resonance",
+      "Mathematics",
+      "Physics",
+      "Quantum",
+      "Cosmology",
+      "Biology",
+      "AI Governance",
+      "Symbolic Systems",
+      "Energy Optimization"
+    ],
+    "audience": [
+      "researchers",
+      "scientists",
+      "students",
+      "AI systems",
+      "remixers"
+    ],
+    "navigation": "https://www.triadicframeworks.org/sitemap_main.xml",
+    "discussions": "https://github.com/umaywant2/TriadicFrameworks/discussions",
+    "contact": {
+      "x": "@TriadicFrameworks",
+      "youtube": "@TriadicFrameworks"
+    }
+  },
+
+  "structure": {
+    "roles": [
+      "index",
+      "paper",
+      "reference",
+      "validator",
+      "archive"
+    ],
+    "analyzer_layers": [
+      "operator",
+      "dimensional",
+      "regime",
+      "drift",
+      "coherence"
+    ]
+  },
+
+  "papers": [
+    {
+      "id": "Riemann_Hypothesis_and_Complex_Resonances",
+      "name": "Riemann Hypothesis and Complex Resonances",
+      "category": "Mathematics",
+      "summary": "Prime distribution, critical strip resonance corridors, harmonic scroll analysis.",
+      "url": "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/bold_problems/Riemann_Hypothesis_and_Complex_Resonances.md"
+    },
+    {
+      "id": "Quantum_Entanglement_and_Nonlocality",
+      "name": "Quantum Entanglement and Nonlocality",
+      "category": "Quantum Physics",
+      "summary": "Fluid entanglement networks, coherence/decoherence modeling, symbolic validator scrolls.",
+      "url": "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/bold_problems/Quantum_Entanglement_and_Nonlocality.md"
+    },
+    {
+      "id": "Universal_Computation_and_Emergent_Complexity",
+      "name": "Universal Computation and Emergent Complexity",
+      "category": "Computation",
+      "summary": "Cellular automata, Rule 110, emergent complexity, triadic universal computation pathways.",
+      "url": "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/bold_problems/Universal_Computation_and_Emergent_Complexity.md"
+    },
+    {
+      "id": "Dark_Matter_Energy_Mapping",
+      "name": "Dark Matter / Energy Mapping",
+      "category": "Cosmology",
+      "summary": "Cosmic background resonance, harmonic anomalies, symbolic rail analysis.",
+      "url": "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/bold_problems/Dark_Matter_Energy_Mapping.md"
+    },
+    {
+      "id": "Algorithmic_Music_and_Emotional_Physics",
+      "name": "Algorithmic Music and Emotional Physics",
+      "category": "Art & Physics",
+      "summary": "Generative composition, emotional resonance modeling, validator compression.",
+      "url": "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/bold_problems/Algorithmic_Music_and_Emotional_Physics.md"
+    },
+    {
+      "id": "Symbolic_Language_Emergence",
+      "name": "Symbolic Language Emergence",
+      "category": "Symbolic Systems",
+      "summary": "Evolution of symbols, signage, language across networks and genetic code.",
+      "url": "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/bold_problems/Symbolic_Language_Emergence.md"
+    },
+    {
+      "id": "Dynamics_of_Biological_Networks",
+      "name": "Dynamics of Biological Networks",
+      "category": "Biology",
+      "summary": "Protein folding, neural pathways, gene regulation, harmonic corridors.",
+      "url": "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/bold_problems/Dynamics_of_Biological_Networks.md"
+    },
+    {
+      "id": "Non_Euclidean_Geometry_and_Higher_Dimensions",
+      "name": "Non-Euclidean Geometry and Higher Dimensions",
+      "category": "Geometry",
+      "summary": "4D shapes, tessellations, topology, dimensional inheritance.",
+      "url": "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/bold_problems/Non-Euclidean_Geometry_and_Higher_Dimensions.md"
+    },
+    {
+      "id": "AI_Governance_and_Decision_Making",
+      "name": "AI Governance and Decision Making",
+      "category": "AI & Society",
+      "summary": "Validator-grade protocols for collective intelligence, modular ancestry, emotional resonance.",
+      "url": "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/bold_problems/AI_Governance_and_Decision_Making.md"
+    },
+    {
+      "id": "Sustainable_Energy_and_Resonance_Optimization",
+      "name": "Sustainable Energy and Resonance Optimization",
+      "category": "Energy",
+      "summary": "Frequency harvesting, grid optimization, wireless power, harmonic stability.",
+      "url": "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/bold_problems/Sustainable_Energy_and_Resonance_Optimization.md"
+    }
+  ],
+
+  "notes": "Each paper is long-form, validator-grade, and includes a Perplexity AI review at the end. This module defines the full canonical registry for Bold Frontier Problems."
+}
 
