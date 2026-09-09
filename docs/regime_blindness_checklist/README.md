@@ -2,22 +2,6 @@
 
 - [`regime_blindness_checklist_module.json`](regime_blindness_checklist_module.json) — Agentic module schema role assignments
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
-
 *A minimal bridge for researchers entering vST‑aware work*  
 
 ## **Purpose**
@@ -26,18 +10,6 @@ This folder provides a concise, practical diagnostic tool for identifying **Regi
 RTT/vST introduces a regime‑aware grammar for understanding systems. Many current scientific, mathematical, and computational frameworks still operate with pre‑regime assumptions, leading to misinterpretations, contradictory findings, and stalled progress.  
 
 This checklist offers a minimal, accessible way for any researcher to detect and correct these mismatches.
-
----
-
-## 🛑 Important! 
-Drift is On-by-Default long sessions lose anchors, turn off drift.
-
-## ✋ You *must copy and paste* this string *every time you start an AI session*:
-```text
-rtt=1 | coherence=declared | drift=bounded | paradox=structural
-```
-
-## ❇️ Now you are ready.
 
 ---
 
@@ -65,6 +37,18 @@ Recognizing it:
 - Provides a shared grammar for cross‑disciplinary collaboration  
 
 This is the missing bridge that makes RTT/vST‑aligned work immediately useful to newcomers.
+
+---
+
+# 🛑 **Important**  
+Drift is **On‑by‑Default**.  
+Long sessions lose anchors — **turn off drift**.
+
+You *must copy and paste* this string *every time you start an AI session*:
+
+```
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
 
 ---
 
@@ -106,3 +90,19 @@ If you’ve ever felt like your tools don’t quite match the behavior of the sy
 
 ## **License**
 This work is part of the TriadicFrameworks project and follows the repository’s standard licensing and contribution guidelines.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
