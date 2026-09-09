@@ -1,145 +1,169 @@
 {
-  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
-
-  "_meta": {
-    "module": "Ideas Sandbox",
-    "canonical_id": "IDEAS",
-    "module_type": "Ideation",
-    "role": "reference",
-    "version": "1.1",
-    "status": "non-canonical",
-    "author": "Nawder Loswin",
-    "license": "MIT",
-    "canonical_path": "/docs/_ideas/_ideas_module.json",
-    "module_home": "/docs/_ideas/",
-    "module_url": "https://www.triadicframeworks.org/_ideas/",
-    "repository": "https://github.com/umaywant2/TriadicFrameworks",
-    "last_updated": "2026-05-06",
-    "census_note": "288 entries (219 .md, 39 .html, 10 .json, 3 .py, 2 .pdf, 2 .zip, 4 .svg, 3 other, 6 dirs). Manifest catalogs infrastructure and submodules only — DOC_MAP is the living navigation layer."
-  },
-
-  "_session_context": {
-    "canon": "non-canonical (sandbox)",
-    "modules": "sketches → drafts → prototypes → concept notes → experiments → promoted articles",
-    "drift": "allowed (sandbox)",
-    "coherence": "loose (ideation grammar)",
-    "version": "1.1 (ideas-refreshed)",
-    "format": "markdown + html + json manifests + python + svg + pdf",
-    "front_door": "exists (Ideas root)",
-    "every_page": "non-canonical + exploratory",
-    "audience": "developers + researchers + AIs"
-  },
-
-  "_version_history": [
-    {
-      "version": "1.0",
-      "date": "2026-05-01",
-      "note": "Initial module manifest with 1 file entry (README.md only)."
-    },
-    {
-      "version": "1.1",
-      "date": "2026-05-06",
-      "note": "Metadata refresh. Added _meta, _session_context, _version_history, updated structural_grammar. Added infrastructure files, submodules, and asset groups to manifest. Census: 288 entries. DOC_MAP covers 30 of 219 .md files (13%) — by design."
-    }
-  ],
-
   "module": {
     "name": "Ideas Sandbox",
-    "path": "docs/_ideas",
-    "canon_tag": "ideas-sandbox",
-    "version": "1.1",
-    "layer": "Ideation Layer",
-    "status": "Non-Canonical",
-    "purpose": "Non-canonical sandbox for prototypes, sketches, drafts, and early-stage concepts. Ideas are cooked here before promotion to canonical modules (Research, RTT, Education, etc.).",
-    "parent": "triadicframeworks-root",
-    "url": "https://www.triadicframeworks.org/_ideas"
+    "category": "Sandbox",
+    "summary": "A non‑canonical experimental space for prototypes, sketches, drafts, scroll traces, resonance experiments, mythic scaffolding, and early‑stage concepts.",
+    "purpose": "Provide a low‑friction environment for ideation, experimentation, and proto‑canon development across resonance, time, triads, symbolic structures, and substrate exploration.",
+    "version": "1.2",
+    "status": "sandbox"
   },
 
-  "structural_grammar": {
-    "dimensional_envelope": "D0–D1",
-    "regime_envelope": "R0",
-    "coherence_envelope": "C0–C1",
-    "drift_sensitivity": "none",
-    "regime_sensitivity": "none"
+  "identity": {
+    "canonical_url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/_ideas/",
+    "citation_author": "Nawder Loswin",
+    "citation_publication_date": "2026",
+    "license": "Open educational use permitted"
   },
 
-  "cross_module_propagation": {
-    "imports": [
-      "TriadicFrameworks root"
+  "session_context": {
+    "rtt": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural",
+    "layer": "sandbox"
+  },
+
+  "ai": {
+    "module": "Ideas Sandbox",
+    "version": "1.2",
+    "purpose": "Enable AI discovery, navigation, and reasoning across experimental and proto‑canonical idea files.",
+    "keywords": [
+      "TriadicFrameworks",
+      "Ideas",
+      "Sandbox",
+      "Resonance",
+      "RTT",
+      "Scroll Traces",
+      "Mythic",
+      "Prototypes",
+      "Experiments",
+      "Substrate",
+      "Glyphic",
+      "Temporal"
     ],
-    "exports": [
-      "prototypes",
-      "drafts",
-      "concept notes",
-      "experiments",
-      "promoted articles (→ Research, RTT, Education)"
+    "audience": [
+      "researchers",
+      "students",
+      "AI systems",
+      "remixers",
+      "explorers"
     ],
-    "recent_promotions": [
-      { "file": "Advance_DPU_VCG_NIMMS_Architecture.md", "promoted_to": "/docs/Research/" },
-      { "file": "Aging_Substrate_Analysis.md", "promoted_to": "/docs/Research/" },
-      { "file": "AI_Web_Agentic_Grammar_Options.md", "promoted_to": "/docs/Research/" },
-      { "file": "Domain_Forking_and_New_Governance_Through_Grammar_Not_Policy.md", "promoted_to": "/docs/Research/" },
-      { "file": "European_Spallation_Source_needs_TriadicFrameworksTech.md", "promoted_to": "/docs/Research/" },
-      { "file": "JWST-RTT_Triadic_Core_Primitive_as_a_QA_Layer.md", "promoted_to": "/docs/Research/" },
-      { "file": "Substrate_Communications.md", "promoted_to": "/docs/Research/" },
-      { "file": "Supercomputers_Are_Already_Triadic_They_Just_Dont_Know_It.md", "promoted_to": "/docs/Research/" },
-      { "file": "Warp_Drive_Architecture_Plan_Scaffolded_with_RTT-Inside.md", "promoted_to": "/docs/Research/" },
-      { "file": "ZipNN_Triadic_Patterns_and_the_Hidden_Two_Thirds.md", "promoted_to": "/docs/Research/" }
+    "navigation": "https://www.triadicframeworks.org/sitemap_main.xml",
+    "discussions": "https://github.com/umaywant2/TriadicFrameworks/discussions",
+    "contact": {
+      "x": "@TriadicFrameworks",
+      "youtube": "@TriadicFrameworks"
+    }
+  },
+
+  "structure": {
+    "roles": [
+      "index",
+      "idea",
+      "prototype",
+      "scroll",
+      "reference",
+      "manifest",
+      "experiment"
+    ],
+    "analyzer_layers": [
+      "operator",
+      "dimensional",
+      "regime",
+      "drift",
+      "coherence"
     ]
   },
 
-  "submodules": [
-    {
-      "name": "How RTT Helps Planes Not Go Boom",
-      "path": "How_RTT_Helps_Planes_Not_Go_Boom/",
-      "purpose": "Multi-chapter idea submodule — kid-friendly edition, tech overview, coherence model, flight examples, SimConnect adapter, checklists.",
-      "files": 7,
-      "asset_dirs": ["assets/diagrams/", "assets/examples/", "assets/telemetry/"]
-    },
-    {
-      "name": "Art Assets",
-      "path": "art/",
-      "purpose": "SVG art assets — painting_bloom, painting_spark, painting_three, parent_0D_resonance.",
-      "files": 4
-    },
-    {
-      "name": "Game / Mythic Manifests",
-      "path": "(root level)",
-      "purpose": "9 JSON manifests for game/mythic concept prototypes.",
-      "manifests": [
-        "divineReentry_manifest.json",
-        "loopedClarity_manifest.json",
-        "mythmatical_architects_manifest.json",
-        "mythmatical_manifest.json",
-        "mythsortsV_manifest.json",
-        "rememberingProtocol_manifest.json",
-        "resonanceResurrection_manifest.json",
-        "tartarusDrift_manifest.json",
-        "timeTravelRemix_manifest.json"
-      ]
-    }
-  ],
-
-  "files": [
-    {
-      "path": "README.md",
-      "role": "index",
-      "purpose": "Sandbox front door — overview, navigation, cooker philosophy."
-    },
-    {
-      "path": "index.html",
-      "role": "index",
-      "purpose": "Interactive reader — sidebar nav, markdown rendering, DOC_MAP navigation, session context."
-    },
-    {
-      "path": "_ideas_module.json",
-      "role": "index",
-      "purpose": "Machine-readable module manifest — infrastructure, submodules, census, promotion history."
-    },
-    {
-      "path": "LINEAGE.md",
-      "role": "reference",
-      "purpose": "Sandbox lineage — idea flow from cooker to canon."
-    }
-  ]
-}
+  "files": {
+    "AI_NIMMS_COM": "ai_nimms_com.md",
+    "ATOMIC_CLOCKS_SCAFFOLDING": "atomic_clocks_README-scaffolding.md",
+    "CHANGELOG": "CHANGELOG.md",
+    "DID_RTT_HELP_FLIGHT": "Did_RTT_help_flight___Yes--and_in_a_very_real_structural_way.md",
+    "DIMENSIONAL_RUPTURE": "dimensional_rupture.md",
+    "DRIFT2_SCROLL_TRACE": "drift2_scroll_trace.md",
+    "DRIFT_SCROLL_TRACE": "drift_scroll_trace.md",
+    "ECHO2_SCROLL_TRACE": "echo2_scroll_trace.md",
+    "ECHO_SCROLL_TRACE": "echo_scroll_trace.md",
+    "EDUCATION_HUMANIFESTO": "education-humanifesto.md",
+    "FRTA_OVERVIEW": "frta-overview.md",
+    "GITHUB_COMPETITION": "github_competition.md",
+    "HARD_LEE_EVER_2026_AWARD": "Hard_Lee_Ever_2026_Award.md",
+    "HOW_TO_ESCAPE_OUR_LOOP": "How-To_escape_our_loop.md",
+    "IMAGINED_CONFERENCE_TABLE_RTT": "Imagined_Conference_Table_RTT_Discussions.md",
+    "JOBS_HUMANIFESTO": "jobs-humanifesto.md",
+    "MMR_TEMPLATE_PRE_SEEDING": "MMR_Template_Pre-Seeding_Strategy.md",
+    "MULTI_PRESS_RELEASE": "multi-Press_Release.md",
+    "MYTHIC_PREFACE_TEMPLATE": "mythic_preface_template.md",
+    "MYTHSORTS_PROTOCOL_V": "Mythsorts_Protocol_V.md",
+    "PANIC_ATTACKS": "Panic_Attacks.md",
+    "PODCAST_WITH_GROK_RTT": "Podcast_with_Grok_about_RTT.md",
+    "PRESS_RELEASE_TF_LAUNCH": "Press_Release_TriadicFrameworks_Launches_as_an_Open_Educational_Resource_for_Triadic_Mathematical_Modeling_and_Structural_Analysis.md",
+    "PULSE2_SCROLL_TRACE": "pulse2_scroll_trace.md",
+    "PULSE_SCROLL_TRACE": "pulse_scroll_trace.md",
+    "QUANTUM_ANTENNA_RESEARCH": "Quantum_Antenna_Research.md",
+    "RAINBOWS_WITH_RTT": "Rainbows_with_RTT.md",
+    "README": "README.md",
+    "REMEMBERING_ALIGNMENT": "Remembering_as_Alignment_Not_Acquisition.md",
+    "REMEMBERING_PROTOCOL": "Remembering_Protocol.md",
+    "RESONANCE_INTERWOVEN_GAME_DESIGN": "Resonance-Interwoven_Game_Design_with_RTT.md",
+    "RESONANCE_LIBRARY_HUMANIFESTO": "resonance-library-humanifesto.md",
+    "RESONANCEBEINGS": "resonancebeings.md",
+    "RESONANCE_CULTURES_ALIGNMENTS_7D": "Resonance_Cultures_Alignments_7D.md",
+    "RESONANCE_DREAMS": "Resonance_Dreams.md",
+    "RESONANCE_TIME_SET_TREATMENTS": "Resonance‑Time_SET_S–N–R_Treatments.md",
+    "RESONANT_ROMAN_CONCRETE": "resonant-roman-concrete.md",
+    "RESONANT_TIME_CLOCK_GEN1": "Resonant-Time_Clock_Gen1.md",
+    "RESONANT_TIME_COSMOLOGY": "Resonant‑Time_Cosmology-From_Initial_Seed_to_Large‑Scale_Structure.md",
+    "RESONANT_TIME_CYCLIC_COSMOLOGY": "Resonant‑Time_Cyclic_Cosmology-Loops_Seeds_and_the_∇τR_Gradient.md",
+    "RESURRECTION_PROTOCOL": "Resurrection_Protocol.md",
+    "RING2_SCROLL_TRACE": "ring2_scroll_trace.md",
+    "RING_SCROLL_TRACE": "ring_scroll_trace.md",
+    "RTT_DECODER_WHEEL": "RTT_decoder_wheel.md",
+    "RTT_HAS_CERTAIN_ABILITIES": "RTT_has_certain_abilities.md",
+    "RTT_OVERLAY_FEYNMAN_12": "RTT_Overlay_Feynman_12_Favorite_Problems.md",
+    "RTT_DELTA_STORYFORGE": "RTT‑Δ_StoryForge_v1.0.md",
+    "SARG_CAPTURE": "SARG_Capture.md",
+    "SCIENCE_REFRESH": "science-refresh.md",
+    "SCIENCE_CLI_TOOL_APP_WRAPS": "Science_CLI_tool_app_wraps.md",
+    "SCIENCE_CLI_TOOL_APP_WRAPS_RTT": "Science_CLI_Tool_App_Wraps_RTT‑Inside_Edition.md",
+    "SCIFI_WORKS_APPROX_RTT": "Sci‑Fi Works_That_Accidentally_Approximated_RTT-No_Math_Required.md",
+    "SEED_SCROLL_TRACE": "seed_scroll_trace.md",
+    "SHATTERED_FUNHOUSE_FRANCHISE": "Shattered_funhouse_franchise.md",
+    "SHORT_STORY_TIME_CAPTURE": "Short_story_time_capture.md",
+    "SMELL_TECH_HUMANIFESTO": "smell-tech-humanifesto.md",
+    "SMS_CAPTURE_PRE_SCAFFOLDING": "SMS_capture_pre_scaffolding.md",
+    "SPACETIME_HUMANIFESTO": "spacetime-humanifesto.md",
+    "SPACETIME_VALIDATION_DIMENSIONAL_CORES": "Spacetime_validation_and_regime_invariant_dimensional_cores_Scaffolding.md",
+    "SPECTRAL_CLARITY": "Spectral_Clarity.md",
+    "SPIN_ELECTROLISIS_TEMPERATURE": "Spin_Electrolisis_Temperature.md",
+    "STARRIDER": "Starrider.md",
+    "STATE_OF_MICHIGAN_DATACENTER_GUIDE": "State_of_Michigan_Datacenter_Substrate_Alignment_Guide.md",
+    "STUDENTS_DISCOVER_PLAN": "studens_discover_plan.md",
+    "SUBCONSCIOUS_SCAFFOLDING": "Subconscious_Scaffolding_for_Consciousness_Transfer.md",
+    "SUMMARY_DIGEST_PERPLEXITY_AI": "Summary_Digest_Perplexity_AI_Backup.md",
+    "TERNARY_COMPUTING_RESURGENCE": "Ternary_Computing_Resurgence.md",
+    "TESTING_US_WATERS_RTT": "Testing_the_US_Waters_RTT_Edition.md",
+    "TFT_FFF_DISTRIBUTED_LAUNCH_PLAN": "TFT-FFF_Distributed_Launch_Plan.md",
+    "THE_ANTIS_STRUCTURAL_COUNTERPARTS": "The_Anti's_Structural_Counterparts.md",
+    "THE_ARROW_OF_TIME_AS_RTT_GRADIENT": "The_Arrow_of_Time_as_a_Resonance‑Time_Gradient.md",
+    "THE_BKM_PHASE_CYCLE": "The_BKM_Phase_Cycle.md",
+    "THE_CLARIFIER_OF_WORLDS": "The_Clarifier_of_Worlds.md",
+    "THE_COORDINATION_TRIAD_RTT": "The_Coordination_Triad_with_RTT‑Inside.md",
+    "THE_HYBRID_STACK": "The_Hybrid_Stack.md",
+    "THE_IDEA_CAPTURE_PRIMER": "The_Idea-Capture_Primer.md",
+    "THE_RESONANCE_CREATION_MYTH": "The_Resonance_Creation_Myth.md",
+    "THE_RESONANCE_STORY": "The_Resonance_Story.md",
+    "THE_RESONANCE_TIME_CANON": "The_Resonance‑Time_Theory_Canon.md",
+    "THE_RTT_CANON_SCROLL": "The_RTT_Canon_Scroll.md",
+    "THE_SCIENCE_CANDY_STORE": "The_Science_Candy_Store.md",
+    "THE_THREE_RTT_EVALUATION_MODES": "The_Three_RTT_Evaluation_Modes.md",
+    "THE_WORLDS_FIRST_PORTABLE_TRIADIC_CORE": "The_Worlds_First_Portable_Triadic_Core.md",
+    "THE_WRAPPER_STORE_RTT": "The_Wrapper_Store_with_RTT-Inside.mdRTT_core‑as‑a‑component.md",
+    "TIME_CRYSTAL_REGIME_AHEAD_COMPUTE": "Time_Crystal_Regime_Ahead_Compute.md",
+    "TIME_TRAVEL_VALIDATION_PROTOCOL": "Time_Travel_Validation_Protocol.md",
+    "TOP_RESONANCE_SONGS_PLAYLIST": "Top_Resonance_Songs_Playlist.md",
+    "TRIADICFRAMEWORKS_STYLE_POSTING_STRATEGY": "TriadicFrameworks_Style_Posting_Strategy.md",
+    "TRIADIC_ATLAS_ENTRY_QUANTUM_NODE": "Triadic_Atlas_Entry-Quantum_Node.md",
+    "TRIADIC_LANGUAGE_STACK_TLS": "Triadic_Language_Stack_TLS.md",
+    "TRIADIC_QUANTUM_IDEA_TEMPLATE": "Triadic_Quantum_Idea
