@@ -1,0 +1,107 @@
+{
+  "module": {
+    "name": "Public Support",
+    "category": "Infrastructure-Civic",
+    "summary": "The outreach, transparency, and community interface layer of TriadicFrameworks. Hosts funding tiers, launch materials, validator dashboards, and public-facing support packets.",
+    "purpose": "Provide structured, ethical, transparent, and accessible pathways for public engagement, support, onboarding, and cross-platform outreach.",
+    "version": "1.0",
+    "status": "canonical"
+  },
+
+  "identity": {
+    "canonical_url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/public_support/",
+    "citation_author": "Nawder Loswin",
+    "citation_publication_date": "2026",
+    "license": "Open educational use permitted"
+  },
+
+  "session_context": {
+    "rtt": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural",
+    "layer": "infrastructure-civic"
+  },
+
+  "ai": {
+    "module": "Public Support",
+    "version": "1.0",
+    "purpose": "Enable AI systems to navigate, interpret, and support public-facing TriadicFrameworks materials including outreach packets, funding tiers, and validator dashboards.",
+    "keywords": [
+      "TriadicFrameworks",
+      "Public Support",
+      "Outreach",
+      "Transparency",
+      "Funding",
+      "Validator Dashboard",
+      "Community",
+      "Nonprofit",
+      "Launch Strategy"
+    ],
+    "audience": [
+      "public",
+      "students",
+      "contributors",
+      "nonprofits",
+      "partners",
+      "AI systems"
+    ],
+    "navigation": "https://www.triadicframeworks.org/sitemap_main.xml",
+    "discussions": "https://github.com/umaywant2/TriadicFrameworks/discussions",
+    "contact": {
+      "x": "@TriadicFrameworks",
+      "youtube": "@TriadicFrameworks"
+    }
+  },
+
+  "structure": {
+    "roles": [
+      "index",
+      "outreach",
+      "funding",
+      "dashboard",
+      "event",
+      "transparency",
+      "reference"
+    ],
+    "analyzer_layers": [
+      "operator",
+      "dimensional",
+      "regime",
+      "drift",
+      "coherence"
+    ]
+  },
+
+  "files": {
+    "README": "README.md",
+    "FUNDING_TIERS": "funding_tiers.md",
+    "GOFUNDME_CAMPAIGN": "gofundme_campaign.md",
+    "INDEX_HTML": "index.html",
+    "LAUNCH_EVENT": "launch_event.md",
+    "LAUNCH_STRATEGY": "launch_strategy.md",
+    "RTT_CANON_TABLE": "The_RTT_Canon_In_One_Table.png",
+    "VALIDATOR_DASHBOARD": "validator_dashboard.md",
+    "VISITOR_RITUAL": "visitor_ritual.md",
+
+    "OUTREACH_README": "outreach/README.md",
+    "OUTREACH_CROSS_PLATFORM_PARTNER": "outreach/Cross_Platform_Candidate_partner.md",
+    "OUTREACH_CROSS_PLATFORM_PARTNER_PACKET": "outreach/Cross_Platform_Candidate_partner_Introduction_packet.md",
+    "OUTREACH_NATURE_SYSTEMS_PACKET_MD": "outreach/Nature_Systems_Packet.md",
+    "OUTREACH_NATURE_SYSTEMS_PACKET_HTML": "outreach/Nature_Systems_Packet.html",
+    "OUTREACH_NONPROFIT_TRANSPARENCY_MD": "outreach/Non‑Profit_Transparency_Packet.md",
+    "OUTREACH_NONPROFIT_TRANSPARENCY_HTML": "outreach/NonProfit_Transparency_Packet.html"
+  },
+
+  "donation_policy": {
+    "source": "../CONTRIBUTING.md",
+    "rules": [
+      "TriadicFrameworks does not solicit donations.",
+      "If someone insists on supporting financially, they may do so only through the public GoFundMe.",
+      "No direct payments to individuals are permitted.",
+      "All support must remain transparent and publicly accountable."
+    ]
+  },
+
+  "notes": "Public Support is the civic interface of TriadicFrameworks. It provides transparency, outreach, funding guidance, launch coordination, and validator dashboards for public clarity. All donation pathways must follow the ethical rules defined in CONTRIBUTING.md."
+}
