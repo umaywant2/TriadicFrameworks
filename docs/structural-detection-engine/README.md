@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="structural-detection-engine_" src="https://github.com/user-attachments/assets/1692c785-fb12-497e-9c96-3c9b99f6e85f" />
+
 # Structural Detection Engine (SDE) — RTT/2  
 
 - [`structural-detection-engine_module.json`](structural-detection-engine_module.json) — Agentic module schema role

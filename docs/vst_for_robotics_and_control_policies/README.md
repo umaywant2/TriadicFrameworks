@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="vst_for_robotics_and_control_policies_" src="https://github.com/user-attachments/assets/62604b71-b2a3-456d-8ee4-501f3d15559b" />
+
 ## *vST for Robotics and Control Policies*  
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">

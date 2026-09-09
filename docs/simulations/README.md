@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="simulations_" src="https://github.com/user-attachments/assets/490098cd-0d46-4442-ae1f-b82c890cc04a" />
+
 ## 🧪 Simulations Directory
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">

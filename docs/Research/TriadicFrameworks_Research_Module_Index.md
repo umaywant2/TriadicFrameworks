@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_TriadicFrameworks_Research_Module_Index" src="https://github.com/user-attachments/assets/3c205d13-7143-4c84-9647-3751386c3eb6" />
+
 # Research Module — Operator Index  
 TriadicFrameworks (2026)
 

@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="substrate_exposure_assay_" src="https://github.com/user-attachments/assets/9ca5256f-cc40-4fdc-b985-2d4724b4051e" />
+
 # Substrate Exposure Assay  
 _A minimal RTT/vST‑aligned protocol for observing structural behavior across AI models._
 

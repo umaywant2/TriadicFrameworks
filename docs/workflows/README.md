@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="workflow_engine_" src="https://github.com/user-attachments/assets/51d2001a-37f5-47c1-bb68-529cc16e7b6d" />
+
 # 🌀⚙️📜 Workflow Engines  
 
 - [`workflows_module.json`](workflows_module.json) — Agentic module schema role assignments

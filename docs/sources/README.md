@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="sources_" src="https://github.com/user-attachments/assets/ca941cd7-56d8-4fe1-8429-cefd286ca5b2" />
+
 # 🎶 Sources Module 'Good Vibrations'  
 
 <img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>

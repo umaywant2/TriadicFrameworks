@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_TSR_Cut_Over_Protocol_RTT_Canonical_Form" src="https://github.com/user-attachments/assets/60f6228b-a20b-48fe-bd67-f97351a99ca5" />
+
 # **Cut‑Over Protocol — RTT Canonical Form**  
 ### *Temporal Substrate Reform (TSR) — Transition Regime Specification v1.0*
 

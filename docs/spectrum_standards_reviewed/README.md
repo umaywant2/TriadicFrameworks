@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="spectrum_standards_reviewed_" src="https://github.com/user-attachments/assets/3b829cfa-620c-4962-b2f7-9efac6166e41" />
+
 # Spectrum Standards Reviewed  
 _A structural, regime‑aware analysis of spectrum, exposure, leakage, and coexistence._
 

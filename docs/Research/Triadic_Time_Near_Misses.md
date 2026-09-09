@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Triadic_Time_Near_Misses" src="https://github.com/user-attachments/assets/3b1a6444-5f39-4eba-9bfa-aa618a693d61" />
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">

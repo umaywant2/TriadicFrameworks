@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="structural_life_regime_profiles_" src="https://github.com/user-attachments/assets/eb6565f3-c46c-460e-b49f-295c8f604d5e" />
+
 ## **Structural Life‑Regime Profiles**  
 
 - [`SLRP_module.json`](SLRP_module.json) — Agentic module schema role assignments

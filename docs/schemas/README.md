@@ -1,4 +1,4 @@
-<img width="682" height="682" alt="rtt_schemas" src="https://github.com/user-attachments/assets/8f35dba9-e3bf-462e-aafc-b64d238ec530" />
+<img width="1194" height="672" alt="schemas_" src="https://github.com/user-attachments/assets/3c98eb1a-04d0-41b0-9783-7e0eaa217076" />
 
 # 📚 Schemas Library  
 

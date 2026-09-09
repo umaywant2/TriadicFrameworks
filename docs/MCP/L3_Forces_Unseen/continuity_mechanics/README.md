@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_continuity_mechanics" src="https://github.com/user-attachments/assets/790dd823-c4fb-488c-8d31-1bfc266fa1e9" />
+
 # **Continuity Mechanics (L3 Subsystem)**  
 ### *Composite Resonance Architecture of the Forces Layer (R5 Canon)*
 

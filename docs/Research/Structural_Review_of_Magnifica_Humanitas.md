@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Structural_Review_of_Magnifica_Humanitas" src="https://github.com/user-attachments/assets/3cf20ee0-9799-46b5-a289-b6603ae268ba" />
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">

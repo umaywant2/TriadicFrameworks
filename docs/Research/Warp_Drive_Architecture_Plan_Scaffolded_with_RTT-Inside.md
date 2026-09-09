@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Warp_Drive_Architecture" src="https://github.com/user-attachments/assets/9194b093-c226-46fe-82cb-34e4489b3bb8" />
+
 # 🚀 **Warp Drive Architecture Plan v0.1 – “Make It So"** 🛸
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 

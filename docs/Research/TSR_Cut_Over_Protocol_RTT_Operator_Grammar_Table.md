@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_TSR_Cut_Over_Protocol_RTT_Operator_Grammar_Table" src="https://github.com/user-attachments/assets/af876e11-d408-44a7-bf38-31ded0193173" />
+
 # **RTT Operator Grammar Table — Temporal Substrate Reform (TSR)**  
 ### *Canonical Operator Definitions for Drift → Coherence Transition*
 

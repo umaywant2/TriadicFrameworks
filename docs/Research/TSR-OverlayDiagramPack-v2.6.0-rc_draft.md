@@ -1,4 +1,4 @@
-<img width="1024" height="1024" alt="Overlay_Diagram_Pack" src="https://github.com/user-attachments/assets/4cb57b4a-b629-48d9-b4d2-a89bf1d8e542" />
+<img width="1194" height="672" alt="Research_TSR-OverlayDiagramPack-v2 6 0-rc_draft" src="https://github.com/user-attachments/assets/45ff67e6-74dc-4eb5-aedf-4a595e70a8a9" />
 
 ---
 title: "TSR Overlay Diagram Pack"
@@ -818,3 +818,5 @@ This document adheres to **TriadicFrameworks Canon Style Guide §4–§7**. Key 
      TriadicFrameworks Canon Document
      Generated: 2026-09-03
      ============================================================ -->
+
+<img width="1024" height="1024" alt="Overlay_Diagram_Pack" src="https://github.com/user-attachments/assets/4cb57b4a-b629-48d9-b4d2-a89bf1d8e542" />

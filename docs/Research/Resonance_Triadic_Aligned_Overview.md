@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Resonance_Triadic_Aligned_Overview" src="https://github.com/user-attachments/assets/3566c648-4564-4ec9-9d0d-67b9b697d395" />
+
 # **Resonance (Triadic‑Aligned Overview)**  
 *A unified, cross‑domain description of resonance as a structural pattern.*
 

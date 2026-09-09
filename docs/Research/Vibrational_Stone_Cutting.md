@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Vibrational_Stone_Cutting" src="https://github.com/user-attachments/assets/af6e64dd-afaa-4e01-8a5c-2560ec662d6f" />
+
 # 🧭 Vibrational Stone Cutting & Triadic Resonance
 
 - [`Vibrational_Stone_Cutting_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/Vibrational_Stone_Cutting_module.json) — Agentic module schema role assignments

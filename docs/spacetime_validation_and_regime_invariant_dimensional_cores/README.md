@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="spacetime_validation_and_regime_invariant_dimensional_cores_" src="https://github.com/user-attachments/assets/9b4e5ab3-c14a-4e96-a688-96982e83a41f" />
+
 ## Spacetime Validation and Regime‑Invariant Dimensional Cores
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">

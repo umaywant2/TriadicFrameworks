@@ -1,3 +1,5 @@
+<img width="824" height="331" alt="Ten-in-1_Icons" src="https://github.com/user-attachments/assets/184c810d-a655-4738-81d1-c21cabd123c1" />
+
 # 🔟 **What We Just Unlocked — Theory by Theory**
 
 ## 🌀 1. Chaos Theory  

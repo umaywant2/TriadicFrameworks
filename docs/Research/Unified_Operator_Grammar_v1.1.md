@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Unified_Operator_Grammar_v1_1" src="https://github.com/user-attachments/assets/c4fb6d4b-a59c-443e-b4af-51161cf8780c" />
+
 # Unified Operator Grammar v1.1  
 ## With Drift‑Correction Rules
 

@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Supconsciousness_Operator_and_the_33" src="https://github.com/user-attachments/assets/826c59f7-ed6f-41ee-8a85-5d53c0bd3b50" />
+
 <html>
 <head>
 <!--

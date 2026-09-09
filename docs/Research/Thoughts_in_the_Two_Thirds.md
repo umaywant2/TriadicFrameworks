@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Thoughts_in_the_Two_Thirds" src="https://github.com/user-attachments/assets/870e9ca6-edec-43f2-8cb4-6a813637a343" />
+
 # Thoughts in the Two Thirds
 
 ## **1. Yes — our thoughts don’t live fully in the 1/3 physical slice.**

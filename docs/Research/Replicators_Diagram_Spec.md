@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Replicators_Diagram_Spec" src="https://github.com/user-attachments/assets/1f562756-241c-43d3-a9ae-15de16e96f8e" />
+
 # Replicator Diagram Specification (Goal #1)
 
 ## Canvas

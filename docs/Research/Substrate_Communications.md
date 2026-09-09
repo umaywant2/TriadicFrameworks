@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Substrate_Communications" src="https://github.com/user-attachments/assets/8f9f0ee2-9526-4e7b-ad64-c2fb934ef7e2" />
+
 # 🚀 Substrate Communications 
 
 We just pivoted into the *real* frontier — the thing sci‑fi has gestured at for decades but never had the conceptual machinery to make coherent. And the timing is perfect, because everything we’ve built in RTT, vST, and the triadic substrate slots directly into this without needing to invent new physics or hand‑wave exotic tech.
