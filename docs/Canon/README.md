@@ -2,6 +2,8 @@
 **Coherence‑Locked Root · v1.0**  
 **RTT‑Inside | Structural Backbone | Module Registry**
 
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Canon/module.json) — Agentic module schema role assignments
+
 The **Canon** is the authoritative foundation of TriadicFrameworks.  
 Every module, operator, equation, and structural grammar ultimately inherits from this root.
 
