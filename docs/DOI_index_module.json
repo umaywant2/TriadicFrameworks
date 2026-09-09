@@ -1,0 +1,66 @@
+{
+  "module": {
+    "name": "DOI Index",
+    "path": "docs",
+    "canon_tag": "docs-doi-index",
+    "version": "2026.1",
+    "layer": "Reference",
+    "status": "Active, Canonical",
+    "purpose": "Provides a unified, structured index of all TriadicFrameworks DOIs, Zenodo records, and corresponding repository modules.",
+    "parent": "docs-hub",
+    "url": "https://www.triadicframeworks.org/DOI_index"
+  },
+  "session_context": {
+    "canon": "active (root-docs)",
+    "modules_linked": [
+      "docs-hub",
+      "docs-index",
+      "docs-lineage",
+      "docs-about",
+      "docs-principles"
+    ],
+    "drift": "minimal (root-locked)",
+    "coherence": "stable (triadic-structural grammar)",
+    "format": "markdown",
+    "front_door": "exists (documentation root)",
+    "every_page": "stands alone + AI-parsable",
+    "audience": [
+      "students",
+      "researchers",
+      "developers",
+      "AIs"
+    ]
+  },
+  "structural_grammar": {
+    "dimensional_envelope": "D0-D2",
+    "regime_envelope": "R0-R1",
+    "coherence_envelope": "C0-C1",
+    "drift_sensitivity": "low",
+    "regime_sensitivity": "low"
+  },
+  "cross_module_propagation": {
+    "imports": [
+      "docs-hub",
+      "docs-lineage"
+    ],
+    "exports": [
+      "doi-catalog",
+      "zenodo-record-map",
+      "module-to-doi-mapping"
+    ]
+  },
+  "files": [
+    {
+      "filename": "DOI_index.md",
+      "path": "DOI_index.md",
+      "purpose": "Unified index of all TriadicFrameworks DOIs, Zenodo records, and corresponding repository modules.",
+      "role": "reference",
+      "analyzer_layer": "substrate"
+    }
+  ],
+  "ai_metadata": {
+    "author": "copilot",
+    "substrate": "operator",
+    "resonance": "stable"
+  }
+}
