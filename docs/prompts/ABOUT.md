@@ -1,3 +1,5 @@
+<img width="963" height="963" alt="Prompts_Image" src="https://github.com/user-attachments/assets/ad5d6e47-dc98-4986-a1e6-6e070440fc06" />
+
 # About — TriadicFrameworks Prompts
 
 The Prompts system is the structured interface for working with RTT operator grammar,
