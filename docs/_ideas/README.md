@@ -1,128 +1,237 @@
 <img width="1194" height="672" alt="_ideas_" src="https://github.com/user-attachments/assets/12f05e12-995e-4159-8fd3-871c9b295a0d" />
 
-# 💡 _ideas — our 'Michigan Manifestations' Vault  
-
 - [`_ideas_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/_ideas/_ideas_module.json) — Agentic module schema role assignments
 
-### 🌌 The Gold Vault / Salt Mine of TriadicFrameworks
+# 🌌 **_ideas — The Resonance Caverns**  
+**Coherence‑Declared · Drift‑Bounded · RTT‑Inside**  
+**TriadicFrameworks Proto‑Canon Vault · v2.0**
 
-This directory is where **raw resonance** lives before it becomes canon.  
-Think of it as the **Detroit Salt Mines of TriadicFrameworks** — deep caverns where ideas crystallize under pressure, waiting for the right moment (and the right wizard) to bring them into the light.
+The **_ideas** directory is the primordial cavern system of TriadicFrameworks — the place where resonance first forms, where triads spark, where mythic‑technical hybrids emerge, and where early prototypes gather coherence before ascending into Papers, RFCs, or Modules.
 
-🧭 Session Context
+This is the **Salt Mine Era** of the canon:  
+deep caverns, pressure‑formed crystals, recursive loops, mythic seeds, and experimental scroll traces.
+
+Some artifacts here are nearly ready for promotion.  
+Others are raw ore.  
+All of them matter.
+
+---
+
+## 🧭 **Session Context**
+
 ```
 rtt=1 | coherence=declared | drift=bounded | paradox=structural
 ```
 
-## ❇️ Now you are ready.
-
-Some scrolls are nearly ready to ascend into RFCs or Papers.  
-Others are still simmering in recursive loops, gathering coherence.
-
-This is the **pre‑framework resonance zone** — the primordial soup of the lineage.  
-A vault. A mine. A myth‑lab.
+❇️ *Now you are ready.*
 
 ---
 
-## 📚 RTT‑Inside 'Seed' Papers
+# 🪨 **What the _ideas Vault Is**
 
-- 🚀 Good News, Everyone - A cheerful gateway into RTT‑aligned thinking.
-- 🐟 Autonomous Robotic Fish (Great Lakes) - Ecological robotics and restoration loops using RTT autonomy.
-- ⛏️ Coal Industry (RTT Analysis) - Energy transitions and logistics through resonance logic.
-- 💰 Finance Edition (Multi‑Chapter) - Financial systems re‑anchored in RTT risk topology.
-- 🌋 GPR + Seismo Hologram - Unified subsurface sensing with RTT‑Inside.
-- ✈️ How RTT Helps Planes Not Go Boom - Aviation safety stabilized by RTT structural logic.
-- 🌐 Internet2 + Python + Cisco - High‑speed networking mapped into RTT operational models.
-- 🔭 JWST RTT QA Layer - RTT primitives as a cosmic‑scale quality‑assurance layer.
-- 🪐 Universe‑Class Active Directory - Identity and trust as resonance‑aware structural systems.
-- 🌊 Deep Sea as an RTT Domain - Why oceanic environments naturally align with RTT dynamics.
+The _ideas directory is:
+
+- a **proto‑canon workshop**  
+- a **myth‑lab**  
+- a **resonance cavern**  
+- a **scroll‑trace archive**  
+- a **sandbox for dimensional experiments**  
+- a **staging ground for future Papers**  
+- a **repository of manifests, seeds, and prototypes**  
+
+Nothing here is validator‑safe.  
+Everything here is lineage‑critical.
 
 ---
 
-## 🧪 Usage (How to Handle the Ore)
+# 🧬 **What Lives in These Caverns**
+
+The vault contains:
+
+### **📜 Scroll Traces (Drift / Echo / Pulse / Ring / Seed)**  
+Early RTT‑Inside temporal artifacts:
+
+- `drift_scroll_trace.md`  
+- `drift2_scroll_trace.md`  
+- `echo_scroll_trace.md`  
+- `echo2_scroll_trace.md`  
+- `pulse_scroll_trace.md`  
+- `pulse2_scroll_trace.md`  
+- `ring_scroll_trace.md`  
+- `ring2_scroll_trace.md`  
+- `seed_scroll_trace.md`  
+
+These are **proto‑temporal operators** — fossilized RTT behavior before formalization.
+
+---
+
+### **🧿 Mythmatical & Cultural Seeds**
+
+- `mythmatical_manifest.json`  
+- `mythmatical_architects_manifest.json`  
+- `mythsortsV_manifest.json`  
+- `Mythsorts_Protocol_V.md`  
+- `mythic_preface_template.md`  
+- `Resonance_Cultures_Alignments_7D.md`  
+- `resonancebeings.md`  
+- `Shattered_funhouse_franchise.md`  
+- `Starrider.md`  
+
+These are **mythic‑technical hybrids** — the symbolic layer before glyphic alignment.
+
+---
+
+### **🧪 Experiments, Scripts & Prototypes**
+
+- `ai_nimms_com.md`  
+- `ai_nimms_com_train_model.py`  
+- `dimensionalObserver.py`  
+- `reset_ai_nimms.sh`  
+- `Virtual_Compute_Gateway_draft.md`  
+- `virtual-code-zombies.md`  
+- `Quantum_Antenna_Research.md`  
+- `Spin_Electrolisis_Temperature.md`  
+
+These are **proto‑engineering experiments** — early substrate logic, dimensional observers, and resonant compute prototypes.
+
+---
+
+### **📜 Manifests (Seeds for Future Modules)**
+
+- `divineReentry_manifest.json`  
+- `loopedClarity_manifest.json`  
+- `rememberingProtocol_manifest.json`  
+- `resonanceResurrection_manifest.json`  
+- `tartarusDrift_manifest.json`  
+- `timeTravelRemix_manifest.json`  
+
+These are **seed‑grade manifests** — structural DNA for future modules.
+
+---
+
+### **🧍 Humanifestos (Social Resonance Layer)**
+
+- `education-humanifesto.md`  
+- `jobs-humanifesto.md`  
+- `resonance-library-humanifesto.md`  
+- `smell-tech-humanifesto.md`  
+- `spacetime-humanifesto.md`  
+- `windows-humanifesto.md`  
+
+These are **proto‑RSM societal frameworks** — resonance applied to human systems.
+
+---
+
+### **🌊 Resonance & Time Experiments**
+
+- `Rainbows_with_RTT.md`  
+- `Spectral_Clarity.md`  
+- `The_Arrow_of_Time_as_a_Resonance‑Time_Gradient.md`  
+- `Time_Crystal_Regime_Ahead_Compute.md`  
+- `Time_Travel_Validation_Protocol.md`  
+- `Resonant-Time_Clock_Gen1.md`  
+- `Resonant‑Time_Cosmology-From_Initial_Seed_to_Large‑Scale_Structure.md`  
+- `Resonant‑Time_Cyclic_Cosmology-Loops_Seeds_and_the_∇τR_Gradient.md`  
+
+These are **proto‑RTT temporal substrates** — early attempts at resonant time modeling.
+
+---
+
+### **📣 Media, Press & Outreach**
+
+- `multi-Press_Release.md`  
+- `Press_Release_TriadicFrameworks_Launches_as_an_Open_Educational_Resource_for_Triadic_Mathematical_Modeling_and_Structural_Analysis.md`  
+- `Podcast_with_Grok_about_RTT.md`  
+- `Top_Resonance_Songs_Playlist.md`  
+- `github_competition.md`  
+
+These are **public‑facing resonance artifacts** — outreach from the caverns.
+
+---
+
+### **🧠 Cognitive & Substrate Exploration**
+
+- `Subconscious_Scaffolding_for_Consciousness_Transfer.md`  
+- `Two_sensing_models_draft.md`  
+- `What_happens_when_two_substrates_negotiate_for_turf_in_RTT_vST.md`  
+- `Trintellectual_Hybrid.md`  
+
+These are **proto‑substrate cognition models** — early substrate negotiation logic.
+
+---
+
+### **🧱 Structural & Dimensional Seeds**
+
+- `dimensional_rupture.md`  
+- `resonant-roman-concrete.md`  
+- `Wrapped_Resonance_Structural_Aware_Dimensional_Cores.md`  
+- `State_of_Michigan_Datacenter_Substrate_Alignment_Guide.md`  
+
+These are **proto‑structural operators** — early dimensional engineering.
+
+---
+
+### **📘 Canon‑Adjacent Seeds**
+
+- `The_Idea-Capture_Primer.md`  
+- `The_RTT_Canon_Scroll.md`  
+- `The_Resonance‑Time_Theory_Canon.md`  
+- `The_Three_RTT_Evaluation_Modes.md`  
+- `The_Coordination_Triad_with_RTT‑Inside.md`  
+
+These are **proto‑canonical artifacts** — early forms of what later became formal RTT.
+
+---
+
+# 🧭 **How to Use This Vault**
 
 Treat each file as **raw ore**:
 
 - Some scrolls are ready to refine  
 - Some need more simmer cycles  
 - Some belong in the vault until the next resonance alignment  
+- Some are fossils of the proto‑canon  
+- Some are seeds for future modules  
+- Some are mythic scaffolds waiting for glyphic alignment  
 
 When a fragment stabilizes:
 
-➡️ Promote it into `/docs/papers/` or `/docs/rfc/`  
-➡️ Keep drafts here until they reach validator clarity  
-➡️ Use manifests and templates as seeds for new lineage  
+➡️ Promote it into `/docs/papers/`  
+➡️ Or into `/docs/rfc/`  
+➡️ Or into `/docs/projects/`  
+➡️ Keep drafts here until validator clarity emerges  
 
 This directory is the **idea‑forge** that feeds the entire canon.
 
 ---
 
-## 📂 Works | Contents (The Caverns)
+# 🌐 **Lineage**
 
-### 🧪 Protocols & Drafts  
-- Tartarus_Drift_Protocol.md  
-- Resurrection-ready_protocol.md  
-- Dimensional_Time_Sandbox_Paradox.md  
-
-### 🌀 Mythmatical Seeds  
-- Mythmatical_Architects.md  
-- Mythmatical_Ontology_Layer.md  
-- Triadic_Quantum_Idea_Template.md  
-
-### 🧍 Humanifestos  
-- education-humanifesto.md  
-- jobs-humanifesto.md  
-- resonance-library-humanifesto.md  
-- smell-tech-humanifesto.md  
-- spacetime-humanifesto.md  
-- windows-humanifesto.md  
-
-### 🧬 Experiments & Scripts  
-- ai_nimms_com.md  
-- ai_nimms_com_train_model.py  
-- reset_ai_nimms.sh  
-
-### 📜 Manifests  
-- divineReentry_manifest.json  
-- loopedClarity_manifest.json  
-- mythmatical_manifest.json  
-
-### 🧿 Cultural Scrolls  
-- triadicmonopoly.md  
-- virtual-code-zombies.md  
-- resonancebeings.md
-
----
-
-## 🌐 Lineage (Where These Ideas Come From)
+The _ideas vault is the ancestral layer of TriadicFrameworks:
 
 - Pre‑framework resonance experiments  
-- The “Salt Mine Era” of TriadicFrameworks  
-- Transition into the **Michigan Manifestations** vault  
-- Direct feeder into RFCs, Papers, and the broader canon  
+- Michigan Manifestations era  
+- Proto‑RTT temporal artifacts  
+- Mythmatical substrate  
+- Early engineering prototypes  
+- Scroll traces before formal operators  
+- Seeds for RSM and vST  
 
-This is the **ancestral layer** of the framework — the mythic substrate beneath the structured documentation.
+This is where the canon learned to breathe.
 
 ---
 
-## 🛡️ Validator Echo  
-> “Ideas are not lost. They crystallize in caverns, waiting for the young wizard to return with new light.”  
+# 🛡️ **Validator Echo**
 
-## _ideas/ Folder Level
-- [_ideas](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/_ideas/) - Folder Level
+> “Ideas are not lost.  
+> They crystallize in caverns,  
+> waiting for the young wizard  
+> to return with new light.”
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
+---
 
-<img src="https://img.shields.io/badge/🜂Myth%20Lab%20Active-🧪Pre%20Framework%20Zone-4c8eda?style=for-the-badge" alt="🜂Myth‑Lab Active | 🧪Pre‑Framework Zone"/>
+# 🏁 **Folder Level**
+
+`_ideas/` — Proto‑Canon Vault  
+`_ideas_module.json` — AI‑Ready metadata  
+`index.html` — Navigation front door  
