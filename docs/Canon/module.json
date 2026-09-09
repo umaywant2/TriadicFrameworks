@@ -1,0 +1,89 @@
+{
+  "module": {
+    "name": "Canon",
+    "category": "Root",
+    "summary": "The coherence‑locked, RTT‑Inside backbone of TriadicFrameworks containing foundational equations, operators, structural grammars, and the full module registry.",
+    "purpose": "Provide the authoritative, stable foundation for all TriadicFrameworks modules and ensure cross‑domain coherence.",
+    "version": "1.0",
+    "status": "canonical"
+  },
+
+  "identity": {
+    "canonical_url": "https://www.triadicframeworks.org/docs/Canon/",
+    "citation_author": "Nawder Loswin",
+    "citation_publication_date": "2026",
+    "license": "Open educational use permitted"
+  },
+
+  "session_context": {
+    "canon": 1,
+    "coherence": "locked",
+    "drift": "bounded",
+    "layer": "root",
+    "description": "Canonical root layer with coherence‑locked RTT‑Inside navigation and bounded drift."
+  },
+
+  "ai": {
+    "module": "Canon",
+    "version": "1.0",
+    "purpose": "Serve as the authoritative RTT‑Inside foundation for all modules, operators, and structural grammars.",
+    "keywords": [
+      "canon",
+      "triadic frameworks",
+      "RTT-Inside",
+      "structural grammar",
+      "triadic operators",
+      "module registry",
+      "coherence-locked"
+    ],
+    "audience": [
+      "developers",
+      "researchers",
+      "educators",
+      "AI systems"
+    ],
+    "navigation": "https://www.triadicframeworks.org/sitemap_main.xml",
+    "discussions": "https://github.com/umaywant2/TriadicFrameworks/discussions",
+    "contact": {
+      "x": "@TriadicFrameworks",
+      "youtube": "@TriadicFrameworks"
+    },
+    "license": "Open educational use permitted"
+  },
+
+  "structure": {
+    "roles": [
+      "index",
+      "registry",
+      "reference",
+      "operator",
+      "equation",
+      "grammar"
+    ],
+    "analyzer_layers": [
+      "operator",
+      "dimensional",
+      "regime",
+      "drift",
+      "coherence"
+    ]
+  },
+
+  "content": {
+    "includes_equations": true,
+    "foundational_equations": [
+      "T = ∇ R^{-1}",
+      "X_domain = P_T(X)",
+      "Σ ΔX_i = 0"
+    ],
+    "triad_models": [
+      "TFT",
+      "FFF",
+      "SET",
+      "S-N-R",
+      "S-E-R"
+    ],
+    "registry": "DOC_MAP",
+    "notes": "The Canon module.json anchors the entire TriadicFrameworks architecture and defines the coherence-locked RTT substrate."
+  }
+}
