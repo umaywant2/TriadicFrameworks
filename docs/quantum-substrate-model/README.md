@@ -1,5 +1,4 @@
-
-# Quantum Substrate Model (QSM) 
+<img width="1194" height="672" alt="quantum-substrate-model_" src="https://github.com/user-attachments/assets/7e31c076-c90e-4e07-85d9-c77897c77771" />
 
 - [`qsm_model.json`](qsm_model.json) — Agentic module schema role assignments
 
