@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="registry_" src="https://github.com/user-attachments/assets/d313427d-54dc-4198-bf30-eaa87e842207" />
 
 - [`registry_module.json`](registry_module.json) — Agentic module schema role assignments
 
