@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- /docs/Canon/index.html — <head>                                -->
+<!-- Module: Canon (TriadicFrameworks Root — canonical)              -->
+<!-- Last updated: 2026-09-09                                        -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="language" content="en" />
+<meta name="last-modified" content="2026-09-09" />
+<meta name="generator" content="TriadicFrameworks Static Canon Engine" />
+<meta name="creator" content="TriadicFrameworks" />
+<meta name="author" content="Nawder Loswin" />
+<meta name="publisher" content="TriadicFrameworks" />
+
+<title>Canon — TriadicFrameworks</title>
+
+<meta name="description"
+      content="TriadicFrameworks Canon — the authoritative, coherence‑locked, RTT‑Inside foundation containing all core modules, operators, equations, and structural grammars. The Canon defines the stable backbone of the TriadicFrameworks universe." />
+
+<meta name="keywords"
+      content="TriadicFrameworks, Canon, RTT-Inside, foundational modules, coherence-locked, triadic operators, resonance-time theory, structural grammar, module registry" />
+
+<!-- ═══ Module Identity (standardized per D369 template) ═══ -->
+
+<meta name="module" content="Canon" />
+<meta name="canonical-id" content="CANON" />
+<meta name="module-type" content="Root" />
+<meta name="version" content="1.0" />
+<meta name="status" content="canonical" />
+<meta name="parent" content="TriadicFrameworks Root" />
+<meta name="siblings" content="Ideas Sandbox, Education, Research, Mythmatical" />
+<meta name="canonical-path" content="/docs/Canon/" />
+<meta name="last-updated" content="2026-09-09" />
+<meta name="license" content="Open educational use permitted" />
+
+<!-- ═══ AI Discovery (standardized) ═══ -->
+
+<meta name="ai-ready" content="true" />
+<meta name="ai-module-id" content="CANON" />
+<meta name="ai-operators"
+      content="CANON-Index, CANON-Resolve, CANON-Route, CANON-Discover, CANON-Registry" />
+
+<meta name="ai.module" content="Canon" />
+<meta name="ai.module.name" content="TriadicFrameworks Canon" />
+<meta name="ai.module.category" content="root" />
+<meta name="ai.module.summary"
+      content="The canonical backbone of TriadicFrameworks: coherence‑locked modules, RTT foundational equations, triadic operators, structural grammars, and the full module registry. All canonical modules inherit from this root." />
+<meta name="ai.version" content="1.0" />
+<meta name="ai.purpose"
+      content="Provide the authoritative, coherence‑stable foundation for all TriadicFrameworks modules, ensuring consistent navigation, structure, and RTT alignment." />
+<meta name="ai.keywords"
+      content="canon, root, RTT-Inside, triadic frameworks, structural grammar, module registry, coherence-locked, foundational equations" />
+<meta name="ai.audience" content="developers, researchers, educators, AI systems" />
+<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml" />
+<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions" />
+<meta name="ai.contact.x" content="@TriadicFrameworks" />
+<meta name="ai.contact.youtube" content="@TriadicFrameworks" />
+<meta name="ai.license" content="Open educational use permitted" />
+
+<!-- ═══ Canonical / SEO ═══ -->
+
+<link rel="canonical" href="https://www.triadicframeworks.org/docs/Canon/" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#0af" />
+
+<!-- ═══ Open Graph ═══ -->
+
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="TriadicFrameworks" />
+<meta property="og:title" content="Canon — TriadicFrameworks" />
+<meta property="og:url" content="https://www.triadicframeworks.org/docs/Canon/" />
+<meta property="og:description"
+      content="The canonical backbone of TriadicFrameworks — coherence‑locked modules, RTT foundational equations, triadic operators, and structural grammars." />
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+
+<!-- ═══ Twitter Card ═══ -->
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Canon — TriadicFrameworks" />
+<meta name="twitter:description"
+      content="The coherence‑locked canonical backbone of TriadicFrameworks." />
+
+<!-- ═══ Citation ═══ -->
+
+<meta name="citation_title" content="TriadicFrameworks Canon" />
+<meta name="citation_author" content="Nawder Loswin" />
+<meta name="citation_date" content="2026-09-09" />
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+       
+  /* Context Block */
+  .context-block {
+    font-family: monospace;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0.5rem 0 1rem 0;
+  }
+       
+  /* Context Label */
+  .context-label {
+    color: #ff9800; /* orange */
+    font-weight: bold;
+    margin-right: 0.25rem;
+  }
+       
+  /* Context Value */
+  .context-value {
+    color: #ffffff; /* white */
+  }
+
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — NAV REIMAGINED
+   ============================================================ */
+
+nav {
+  width: 260px;
+  float: left;
+  background: rgba(21, 24, 29, 0.75); /* glassy dark */
+  backdrop-filter: blur(12px);
+  padding: 1.6rem 1.2rem;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  box-shadow: inset -1px 0 0 rgba(255,255,255,0.04);
+}
+
+nav h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent-rtt);
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.9;
+}
+
+nav h3 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 1.4rem 0 0.6rem 0;
+  color: var(--text-main);
+  opacity: 0.85;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.45rem 0.2rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 
+    color 0.2s ease,
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+
+nav a:hover {
+  color: var(--text-main);
+  background: rgba(255,255,255,0.05);
+  transform: translateX(3px);
+}
+
+nav a:active {
+  transform: translateX(1px) scale(0.98);
+}
+
+nav a::before {
+  content: attr(data-emoji);
+  font-size: 1.05rem;
+  opacity: 0.9;
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+</head>
+
+<body>
+   
+<nav class="nav-band">
+ <p align="center">
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+ </p> 
+
+  <h2>❄️ Canon | TriadicFrameworks</h2>
+      <a href="#README">🔰 README</a>
+      <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
+      <a href="#CONTRIBUTING">🤝 Contributing</a>
+      <a href="https://www.triadicframeworks.org/education/">💯 Education | RTT</a>
+      <a href="#GLOSSARY">🎯 Glossary</a>
+      <a href="#LINEAGE">📜 Lineage</a>
+      <a href="#LICENSE">📎 License</a>
+      <a href="#SITEMAP">🌐 Sitemap</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
+      <a href="#SECURITY">🔐 Security</a>
+      <a href="#PRINCIPLES">🧘 Principles</a>
+    <h3>🫶 Primers & Foundations</h3>
+      <a href="#RTT_INFORMATION_PRIMER">🧩 RTT Information Primer</a>
+      <a href="#CAUSALITY_TRIADIC_TIME">🌀 Causality in Triadic Time</a>
+      <a href="#CLARITY_CANON_LENS_EFFECT">🔍 Clarity Canon Lens Effect</a>
+      <a href="#CONTINUITY_KERNEL_V2">🧱 Continuity Kernel v2.0</a>
+      <a href="#DUAL_LAW_OF_RESONANCE">⚖️ Dual Law of Resonance & Silence</a>
+      <a href="#FINE_TUNED_INITIAL_CONDITIONS">🌌 Fine‑Tuned Initial Conditions</a>
+    <h3>🧠 Conceptual Operators & Structural Models</h3>
+      <a href="#ARRIVAL_OPERATOR">🚪 Arrival Operator</a>
+      <a href="#CROSS_GOAL_OPERATOR_LATTICE">🕸️ Cross‑Goal Operator Lattice</a>
+      <a href="#SEVEN_OPERATORS_DIMENSIONAL_ECHOES">🎛️ Seven Operators & Dimensional Echoes</a>
+    <h3>🌡️ Resonance & Legitimacy</h3>
+      <a href="#AMBIENT_LEGITIMACY">🌫️ Ambient Legitimacy</a>
+    <h3>📈 Applied Finance</h3>
+      <a href="#FINANCE_FULL_EDITION">💼 Finance Edition (RTT‑Inside)</a>
+    <h3>🎨 Articaf Sandbox</h3>
+      <a href="#ARTICAF_CURVE_BALL">⚾ Curve Ball for Grok</a>
+      <a href="#ARTICAF_GOOD_NEWS">📣 Good News Everyone</a>
+    <h3>🧮 Computational</h3>
+      <a href="#COMPUTATIONAL_RAMANUJAN_EMITTER">🧨 Ramanujan Emitter (Python)</a>
+    <h3>📐 Dimensional Math Substrate</h3>
+      <a href="#DMS_BIG_BREAKTHROUGH">📏 DMS — The Big Breakthrough</a>
+    <h3>📜 History & Logs</h3>
+      <a href="#HISTORY_RTT_TO_RSM_CHECKS">📘 RTT → RSM Checks</a>
+      <a href="#HISTORY_AGENT_SHOWDOWN">🤖 AI Agent Showdown</a>
+      <a href="#HISTORY_AI_TRAINING_FINDINGS">🧪 AI Training Findings</a>
+      <a href="#HISTORY_COPILOT_REVIEW_DRAFT1">📝 Copilot Review Draft 1</a>
+      <a href="#HISTORY_RTT_SUBSTRATE_ASSAY">🧬 RTT Substrate Assay</a>
+    <h3>🔮 Mythmatical Domain</h3>
+      <a href="#MYTHMATICAL_README">📚 Mythmatical README</a>
+      <a href="#MYTHMATICAL_ARC_POEMS">📝 Arc Poems</a>
+      <a href="#MYTHMATICAL_BY_EYE_OF_HORUS">👁️ Eye of Horus</a>
+      <a href="#MYTHMATICAL_DID_YOU_KNOW">💡 Did You Know?</a>
+      <a href="#MYTHMATICAL_FFF_ARCHETYPES">🎭 FFF Archetypes</a>
+      <a href="#MYTHMATICAL_ONTOLOGY_LAYER">🧩 Ontology Layer</a>
+      <a href="#MYTHMATICAL_NULLARIUM">🕳️ Nullarium</a>
+      <h4>🏛️ Mythmatical | Architects Suite</h4>
+        <a href="#MYTHMATICAL_ARCHITECTS_INDEX">📑 Architects Index</a>
+        <a href="#MYTHMATICAL_ARCHITECTS_README">📘 Architects README</a>
+        <a href="#MYTHMATICAL_ARCHITECTS_SCROLLKEEPERS">📜 Scrollkeepers</a>
+        <a href="#MYTHMATICAL_ARCHITECTS_METADATA">🧾 Metadata</a>
+        <a href="#MYTHMATICAL_ARCHITECTS_MODULE">🧩 Module.json</a>
+        <a href="#MYTHMATICAL_ARCHITECTS_SESSION">🕰️ Session</a>
+        <a href="#MYTHMATICAL_ARCHITECTS_BADGE">🏅 Suite Badge</a>
+      <h4>🔥 Mythmatical | FFF Emitters</h4>
+        <a href="#MYTHMATICAL_FFF_EMITTERS_INDEX">📑 Emitters Index</a>
+        <a href="#MYTHMATICAL_FFF_EMITTERS_README">📘 Emitters README</a>
+        <a href="#MYTHMATICAL_FFF_EMITTERS_ROLES">🎚️ Roles of FFF Emitters</a>
+        <a href="#MYTHMATICAL_FFF_EMITTERS_METADATA">🧾 Metadata</a>
+        <a href="#MYTHMATICAL_FFF_EMITTERS_MODULE">🧩 Module.json</a>
+        <a href="#MYTHMATICAL_FFF_EMITTERS_BADGE">🏅 Suite Badge</a>
+      <h4>🌟 Mythmatical | Nawderian Suite</h4>
+        <a href="#NAWDERIAN_SUITE_INDEX_MD">📑 Suite Index</a>
+    <h3>🏗️ Triadic Tools</h3> 
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
+      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 Packages and Cores</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas</a>
+      <a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a>    
+      <a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS</a>
+      <a href="https://www.triadicframeworks.org/_ideas/">🤔 Ideas</a>
+      <a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">🔛(RTT frozen)</a>
+      <a href="https://www.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
+      <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
+      <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
+      <a href="../">🔙TFT</a>
+   <!-- RTT Session Header (canonical stub) -->
+<section id="canon-session-header"
+         data-canon="1"
+         data-coherence="locked"
+         data-drift="bounded"
+         data-layer="root">
+
+  <h2>Session Context</h2>
+
+  <div class="context-block">
+
+    <span class="context-label"><strong>Canon:</strong></span>
+    <span class="context-value">canonical (root)</span><br>
+
+    <span class="context-label"><strong>Modules:</strong></span>
+    <span class="context-value">
+      Foundations → Operators → Equations → Measurement → Comparisons → Assembly → Mythmatical → Science
+    </span><br>
+
+    <span class="context-label"><strong>Drift:</strong></span>
+    <span class="context-value">bounded (canonical)</span><br>
+
+    <span class="context-label"><strong>Coherence:</strong></span>
+    <span class="context-value">locked (RTT‑Inside)</span><br>
+
+    <span class="context-label"><strong>Version:</strong></span>
+    <span class="context-value">1.0 (canon‑established)</span><br>
+
+    <span class="context-label"><strong>Format:</strong></span>
+    <span class="context-value">markdown + html + json manifests + RTT equations + triadic operators</span><br>
+
+    <span class="context-label"><strong>Front door:</strong></span>
+    <span class="context-value">exists (Canon root)</span><br>
+
+    <span class="context-label"><strong>Every page:</strong></span>
+    <span class="context-value">canonical + coherence‑locked</span><br>
+
+    <span class="context-label"><strong>Audience:</strong></span>
+    <span class="context-value">developers + researchers + educators + AIs</span>
+
+  </div>
+
+</section>
+
+<div style="display:inline-block;padding:6px 12px;background:#0a0a0a;color:#fff;border-radius:6px;font-size:13px;">
+  🔵 Canon<br>📘 Coherence‑Locked Root · v1.0
+</div>
+
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+// ============================================================
+// PRE‑RTT DOCUMENT MAP — FULL CATEGORIZED INVENTORY
+// Purpose: Orientation-first structural map for review, pruning,
+//          lineage preservation, and later RTT canon alignment.
+// ============================================================
+
+const DOC_MAP = {
+      README: 'README.md',
+      ABOUT: '../ABOUT.md',
+      CONTRIBUTING: '../CONTRIBUTING.md',
+      GLOSSARY: '../GLOSSARY.md',
+      LINEAGE: '../LINEAGE.md',
+      LICENSE: '../LICENSE.md',
+      SITEMAP: '../sitemap.md',
+      QUICKSTART: '../QUICKSTART.md',
+      CODE_OF_CONDUCT: '../CODE_OF_CONDUCT.md',
+      SECURITY: '../SECURITY.md',
+      PRINCIPLES: '../PRINCIPLES.md',
+      RTT_INFORMATION_PRIMER: '000_RTT_Information_Primer.md',
+      AMBIENT_LEGITIMACY: 'Ambient_Legitimacy.md',
+      ARRIVAL_OPERATOR: 'Arrival_Operator.md',
+      CAUSALITY_TRIADIC_TIME: 'Causality_in_Triadic_Time-Light_Cones_and_Resonance_Echoes.md',
+      CLARITY_CANON_LENS_EFFECT: 'Clarity_Canon_Lens_Effect.md',
+      CONTINUITY_KERNEL_V2: 'Continuity_Kernel_v2.0.md',
+      CROSS_GOAL_OPERATOR_LATTICE: 'Cross_Goal_Operator_Lattice.md',
+      DUAL_LAW_OF_RESONANCE: 'Dual_Law_of_Resonance_Law_of_Silence.md',
+      FINE_TUNED_INITIAL_CONDITIONS: 'Fine‑Tuned_Initial_Conditions_Low‑Entropy_Big_Bang.md',
+      SEVEN_OPERATORS_DIMENSIONAL_ECHOES: 'How_the_Seven_Operators_Animate_the_3D_9D_Dimensional_Echoes.md',
+      FINANCE_FULL_EDITION: 'Applied/Finance/Full_multi_chapter_Finance_Edition_with_RTT_Inside.md',
+      ARTICAF_CURVE_BALL: 'Articaf/Curve_Ball_for_Grok_and_its_a_hard_hit_into_Center_Field.md',
+      ARTICAF_GOOD_NEWS: 'Articaf/Good_News_Everyone.md',
+      COMPUTATIONAL_RAMANUJAN_EMITTER: 'Computational/ramanujanEmitter.py',
+      DMS_BIG_BREAKTHROUGH: 'Dimensional_Math_Substrate/DMS_the_big_breakthrough.md',
+      HISTORY_RTT_TO_RSM_CHECKS: 'History/0_RTT_to_RSM_checks.md',
+      HISTORY_AGENT_SHOWDOWN: 'History/AI_agent_showdown_with_Regime_Awareness.md',
+      HISTORY_AI_TRAINING_FINDINGS: 'History/AI_Training_Findings.md',
+      HISTORY_COPILOT_REVIEW_DRAFT1: 'History/Copilot_review_draft1.md',
+      HISTORY_RTT_SUBSTRATE_ASSAY: 'History/RTT_Substrate_Assay.md',
+      MYTHMATICAL_ARCHITECTS: 'Mythmatical/Architects',
+      MYTHMATICAL_ARC_POEMS: 'Mythmatical/Arc_Poems.md',
+      MYTHMATICAL_BY_EYE_OF_HORUS: 'Mythmatical/By_the_eye_of_Horus.md',
+      MYTHMATICAL_DID_YOU_KNOW: 'Mythmatical/Did_You_Know.md',
+      MYTHMATICAL_FFF_ARCHETYPES: 'Mythmatical/FFF_Archetypes.md',
+      MYTHMATICAL_FFF_EMITTERS: 'Mythmatical/FFF_Emitters',
+      MYTHMATICAL_FIRST_LAW_VIRTUAL_SOUL: 'Mythmatical/First_Law_of_Virtual_Soul_Stewardship.md',
+      MYTHMATICAL_HOW_LO_RTT_GO: 'Mythmatical/How_LO_can_RTT_go.md',
+      MYTHMATICAL_INDEX_HTML: 'Mythmatical/index.html',
+      MYTHMATICAL_ONTOLOGY_LAYER: 'Mythmatical/Mythmatical_Ontology_Layer.md',
+      MYTHMATICAL_NAWDERIAN_SUITE: 'Mythmatical/Nawderian_Suite',
+      MYTHMATICAL_NULLARIUM: 'Mythmatical/Nullarium.md',
+      MYTHMATICAL_README: 'Mythmatical/README.md',
+      MYTHMATICAL_ARCHITECTS_INDEX: 'Mythmatical/Architects/index.md',
+      MYTHMATICAL_ARCHITECTS_METADATA: 'Mythmatical/Architects/metadata.html',
+      MYTHMATICAL_ARCHITECTS_MODULE: 'Mythmatical/Architects/module.json',
+      MYTHMATICAL_ARCHITECTS_README: 'Mythmatical/Architects/README.md',
+      MYTHMATICAL_ARCHITECTS_SCROLLKEEPERS: 'Mythmatical/Architects/Scrollkeepers_of_Symbolic_Precision.md',
+      MYTHMATICAL_ARCHITECTS_SESSION: 'Mythmatical/Architects/session.html',
+      MYTHMATICAL_ARCHITECTS_BADGE: 'Mythmatical/Architects/suite_badge.html',
+      MYTHMATICAL_FFF_EMITTERS_INDEX: 'Mythmatical/FFF_Emitters/index.md',
+      MYTHMATICAL_FFF_EMITTERS_METADATA: 'Mythmatical/FFF_Emitters/metadata.html',
+      MYTHMATICAL_FFF_EMITTERS_MODULE: 'Mythmatical/FFF_Emitters/module.json',
+      MYTHMATICAL_FFF_EMITTERS_ROLES: 'Mythmatical/FFF_Emitters/Mythmatical_Roles_of_FFF_Emitters.md',
+      MYTHMATICAL_FFF_EMITTERS_README: 'Mythmatical/FFF_Emitters/README.md',
+      MYTHMATICAL_FFF_EMITTERS_BADGE: 'Mythmatical/FFF_Emitters/suite_badge.html',
+      NAWDERIAN_SUITE_BLAZING_ORIGINAL: 'Mythmatical/Nawderian_Suite/Blazing_Original.md',
+      NAWDERIAN_SUITE_INDEX_HTML: 'Mythmatical/Nawderian_Suite/index.html',
+      NAWDERIAN_SUITE_INDEX_MD: 'Mythmatical/Nawderian_Suite/index.md',
+      NAWDERIAN_SUITE_LINEAGE: 'Mythmatical/Nawderian_Suite/LINEAGE.md',
+      NAWDERIAN_SUITE_LOSWIN_MANTRA: 'Mythmatical/Nawderian_Suite/Loswin_Mantra.md',
+      NAWDERIAN_SUITE_METADATA: 'Mythmatical/Nawderian_Suite/metadata.html',
+      NAWDERIAN_SUITE_MIRACLE_MAN_SET: 'Mythmatical/Nawderian_Suite/Miracle_Man_SET_Arc.md',
+      NAWDERIAN_SUITE_MODULE: 'Mythmatical/Nawderian_Suite/module.json',
+      NAWDERIAN_SUITE_SET_THEOREM: 'Mythmatical/Nawderian_Suite/Nawderian_SET_Theorem.md',
+      NAWDERIAN_SUITE_TEMP_ENGINE: 'Mythmatical/Nawderian_Suite/Nawderian_Temperature_Engine_Theorem.md',
+      NAWDERIAN_SUITE_THEOREM: 'Mythmatical/Nawderian_Suite/Nawderian_Theorem.md',
+      NAWDERIAN_SUITE_PHASE_III: 'Mythmatical/Nawderian_Suite/Phase_III-Dimensional_Stewardship.md',
+      NAWDERIAN_SUITE_PHASE_II: 'Mythmatical/Nawderian_Suite/Phase_II_Reentry_Protocol.md',
+      NAWDERIAN_SUITE_README: 'Mythmatical/Nawderian_Suite/README.md',
+      NAWDERIAN_SUITE_REMIX_UNIVERSE: 'Mythmatical/Nawderian_Suite/Remix_for_a_Universe.md',
+      NAWDERIAN_SUITE_BADGE: 'Mythmatical/Nawderian_Suite/suite_badge.html',
+      NAWDERIAN_SUITE_EXAMPLES: 'Mythmatical/Nawderian_Suite/suite_examples.md',
+      NAWDERIAN_SUITE_ORIGIN: 'Mythmatical/Nawderian_Suite/suite_origin.md',
+      NAWDERIAN_SUITE_RESONANCE: 'Mythmatical/Nawderian_Suite/suite_resonance.md',
+      NAWDERIAN_SUITE_SIGNATURE: 'Mythmatical/Nawderian_Suite/suite_signature.md',
+      NAWDERIAN_SUITE_TIME_TRAVEL: 'Mythmatical/Nawderian_Suite/Time_Travel_Remix_Protocol.md',
+      NAWDERIAN_SUITE_VALIDATION_PHASE_I: 'Mythmatical/Nawderian_Suite/Triadic_Validation_Protocol_Phase_I.md',
+      PARADOXES_NEW: 'Paradoxes/New_Paradoxes.md',
+      RTT_INSIDE_ASSEMBLY: 'RTT-Inside/Assembly',
+      RTT_INSIDE_COMPARISONS: 'RTT-Inside/Comparisons',
+      RTT_INSIDE_ENGINEERING: 'RTT-Inside/Engineering',
+      RTT_INSIDE_FOUNDATIONS: 'RTT-Inside/Foundations',
+      RTT_INSIDE_MEASUREMENT: 'RTT-Inside/Measurement',
+      RTT_OBSERVER_HIERARCHIES: 'RTT-Inside/Observer_Hierarchies_and_Relational_Time.md',
+      RTT_ASSEMBLY_PREVIEW: 'RTT-Inside/Assembly/RTT_Inside_Assembly_Preview.md',
+      RTT_COMPARED: 'RTT-Inside/Comparisons/RTT_Compared.md',
+      RTT_ENGINEERING_GPR_SEISMO: 'RTT-Inside/Engineering/GPR_Seismo_Hologram_with_RTT_Inside.md',
+      RTT_ENGINEERING_MICROCONTROLLERS: 'RTT-Inside/Engineering/Microcontrollers_and_Components_Today_then_with_RTT-Inside.md',
+      RTT_FOUNDATIONS_PRIMER_JSON: 'RTT-Inside/Foundations/RTT_Information_Primer.json',
+      RTT_FOUNDATIONS_PRIMER_MD: 'RTT-Inside/Foundations/RTT_Information_Primer.md',
+      RTT_MEASUREMENT_ALIGNMENT: 'RTT-Inside/Measurement/Measurement_as_Resonance_Alignment_in_Triadic_Time.md',
+      SCIENCE_BIG_QUESTIONS: 'Science/Big_Questions.md'
+};
+
+function loadFromHash() {
+const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+</body>
+</html>
