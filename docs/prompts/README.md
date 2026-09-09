@@ -1,5 +1,4 @@
-
-# Prompts Site
+<img width="1194" height="672" alt="prompts_" src="https://github.com/user-attachments/assets/12c27c9c-2c3c-4f15-a05c-9efe3dcfd5cb" />
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/prompts/module.json) — Agentic module schema role assignments
 
