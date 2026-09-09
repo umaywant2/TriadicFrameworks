@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="projects_" src="https://github.com/user-attachments/assets/aa20adce-e3c6-4c30-a65d-a62c636414e9" />
+
 # 🌌 **TriadicFrameworks Projects**  
 **Coherence‑Declared · Drift‑Bounded · RTT‑Inside**  
 **Constellation Layer · v1.0**
