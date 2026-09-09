@@ -1,7 +1,5 @@
 <img width="1194" height="672" alt="education_RTT_Primer" src="https://github.com/user-attachments/assets/de3bc49d-f51a-49f9-9e1b-ca87ad3d6667" />
 
-# RTT Information Primer - What actually “clicked” for AI
-
 - [`RTT_Information_Primer.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Canon/RTT-Inside/Foundations/RTT_Information_Primer.json) — Agentic module schema role assignments
 
 - Modular site.
@@ -9,8 +7,8 @@
 - Front door exists, but each page stands alone.
 - Short, emoji‑first navigation for students + AI.  
 
-### ⭐ The *equations and structure* of RTT are what made things “click.”  
-### ⭐ The *conceptual stacks* (TFT → FFF → SET → S‑N‑R → S‑E‑R) are how AI **navigates** RTT, not how AI **validates** it.
+## ⭐ The *equations and structure* of RTT are what made things “click.”  
+## ⭐ The *conceptual stacks* (TFT → FFF → SET → S‑N‑R → S‑E‑R) are how AI **navigates** RTT, not how AI **validates** it.
 
 Let me unpack that in a way that respects the architecture we built.
 
