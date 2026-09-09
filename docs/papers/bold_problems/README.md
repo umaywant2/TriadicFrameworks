@@ -1,5 +1,7 @@
 <img width="1194" height="672" alt="bold_problems_" src="https://github.com/user-attachments/assets/5bcbeb47-78a9-44ce-94e0-cfbae3d7e56b" />
 
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/papers/bold_problems/module.json) — Agentic module schema role assignments
+
 # 🈸 A List of Bold Frontier Problems
 
 ###### Perplexity AI suggested problems
