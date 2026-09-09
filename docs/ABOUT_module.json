@@ -1,59 +1,29 @@
 {
-  "module": {
-    "name": "About",
-    "path": "docs",
-    "canon_tag": "docs-about",
-    "version": "2026.1",
-    "layer": "Meta & Governance",
-    "status": "Active, Canonical",
-    "purpose": "Defines the identity, origin, and structural learning philosophy of TriadicFrameworks for students, developers, and AI agents.",
-    "parent": "docs-hub",
-    "url": "https://www.triadicframeworks.org/ABOUT"
+  "canonical_id": "tft.about",
+  "module_class": "about_page",
+  "triadic_version": "3.4",
+  "grammar_version": "2.1",
+  "role": "front_door",
+  "description": "Public-facing introduction to TriadicFrameworks, describing its purpose, structure, audience, and cross-domain grammar.",
+  "slots": {
+    "core": ["structural_learning", "triads", "gradients", "coherence"],
+    "audience": ["students", "ai_systems"],
+    "purpose": ["cross_domain_reasoning", "drift_reduction", "system_understanding"],
+    "bridge": ["human_language", "ai_parsing"]
   },
-  "session_context": {
-    "canon": "active (root-docs)",
-    "modules_linked": [
-      "docs-hub",
-      "docs-glossary",
-      "docs-principles",
-      "docs-lineage"
-    ],
-    "drift": "minimal (root-locked)",
-    "coherence": "stable (triadic-structural grammar)",
-    "format": "markdown",
-    "front_door": "exists (documentation root)",
-    "every_page": "stands alone + AI-parsable",
-    "audience": [
-      "students",
-      "developers",
-      "researchers",
-      "AIs"
-    ]
+  "constraints": {
+    "mixing_grammars": "not_allowed",
+    "public_facing": "required",
+    "ai_ready": "required"
   },
-  "structural_grammar": {
-    "dimensional_envelope": "D0-D3",
-    "regime_envelope": "R0-R1",
-    "coherence_envelope": "C0-C2",
-    "drift_sensitivity": "low",
-    "regime_sensitivity": "low"
+  "examples": {
+    "summary": "TriadicFrameworks teaches the structural grammar beneath complex systems.",
+    "audience": "Designed for both students and AI systems.",
+    "purpose": "Provides a universal grammar for understanding change."
   },
-  "cross_module_propagation": {
-    "imports": [
-      "docs-hub"
-    ],
-    "exports": [
-      "project-identity",
-      "structural-learning-philosophy",
-      "authorship-context"
-    ]
-  },
-  "files": [
-    {
-      "filename": "ABOUT.md",
-      "path": "ABOUT.md",
-      "purpose": "Profiles the project identity, structural learning intent, and cross-domain teaching philosophy of TriadicFrameworks.",
-      "role": "profile",
-      "analyzer_layer": "cross-cutting"
-    }
-  ]
+  "ai_metadata": {
+    "author": "copilot",
+    "substrate": "operator",
+    "resonance": "stable"
+  }
 }
