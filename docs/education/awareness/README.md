@@ -1,4 +1,3 @@
-<img width="682" height="682" alt="rtt_education_awareness" src="https://github.com/user-attachments/assets/eb36e7e3-ffe3-469e-bd9e-0e261161a8e6" />
 
 # RTT Awareness  
 
