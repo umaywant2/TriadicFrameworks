@@ -3,6 +3,8 @@
 # 📦 **TriadicFrameworks Packages**  
 **RTT‑Inside | Modular Distribution Suite | v1.0**
 
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/packages/module.json) — Agentic module schema role assignments
+
 The **Packages** module defines how TriadicFrameworks components are distributed, installed, and integrated across shells, Python environments, and cross‑package interaction maps.  
 It serves as the **deployment backbone** for the WR‑SADC suite and the TFT‑3pack system.
 
