@@ -2,7 +2,7 @@
 
 ## 💡 _ideas — our 'Michigan Manifestations' Vault  
 
-- [`_ideas_module.json`](_ideas_module.json) — Agentic module schema role assignments
+- [`_ideas_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/_ideas/_ideas_module.json) — Agentic module schema role assignments
 
 ### 🌌 The Gold Vault / Salt Mine of TriadicFrameworks
 
