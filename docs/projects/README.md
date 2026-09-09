@@ -5,9 +5,6 @@
 The **Projects Constellation** extends TriadicFrameworks into cognition, memory, data, compute, flux, identity, lensing, scientific proposals, and experimental engines.  
 Each project is a **living scroll** — active, evolving, and echoing into remix lineage.
 
-This README is the **why** (mythic arc, purpose, lineage).  
-See **`[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`** for the **how** (commands, demos, contribution steps).
-
 ---
 
 ## 🧭 **Session Context**
@@ -31,8 +28,6 @@ rtt=1 | coherence=declared | drift=bounded | paradox=structural
 **Purpose:** Extend TriadicFrameworks into applied cognition, memory, flux, compute, identity, lensing, and scientific proposal engines.  
 **Version:** 1.0  
 **Status:** Canonical  
-**Front Door:** `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
-**Manifest:** `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`
 
 ---
 
@@ -80,8 +75,7 @@ Explores how multiple minds and machines resonate together, building collective 
 - **Status:** Active (2025)  
 - **Focus:** Collective overlays, memory bridges, onboarding rituals  
 - **Cross‑Links:**  
-  - `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
-  - `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`
+  - [`CoConsciousness`](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/projects/CoConsciousness/)  
 
 ---
 
@@ -92,8 +86,7 @@ The lantern of continuity, storing resonance states and enabling recall across g
 - **Status:** Active (2025)  
 - **Focus:** Lineage recall indexes, validator memory links, symbolic recall  
 - **Cross‑Links:**  
-  - `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
-  - `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`
+  - [`Hippocampus`](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/projects/Hippocampus/)
 
 ---
 
@@ -104,8 +97,7 @@ Transforms raw data streams into resonance‑aware interpretations using fractal
 - **Status:** Active (2025)  
 - **Focus:** Lens prototyping, TryCoder mapping, resonance‑aware diagnostics  
 - **Cross‑Links:**  
-  - `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
-  - `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`
+  - [`Resotectors`](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/projects/Resotectors/)
 
 ---
 
@@ -116,8 +108,7 @@ A modular gateway that extends TriadicFrameworks into cloud and cluster environm
 - **Status:** Active (2025)  
 - **Focus:** Distributed orchestration, tops integration, cross‑platform TFT runs  
 - **Cross‑Links:**  
-  - `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
-  - `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`
+  - [`VCG`](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/projects/VCG/)
 
 ---
 
@@ -128,8 +119,7 @@ Explores how flux and gravity variability shape resonance patterns in the lattic
 - **Status:** Active (2025)  
 - **Focus:** Flux simulations, resonance pattern modeling, glyphic overlays  
 - **Cross‑Links:**  
-  - `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
-  - `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`
+  - [`VictorG`](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/projects/VictorG/)
 
 ---
 
@@ -150,17 +140,10 @@ Together, these five projects form the **active constellation** of TriadicFramew
 # 🧩 **Identity & Lensing Modules**
 
 ## 🕶️ Identity Shadow Generator  
-- `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
-- `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
-- `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`
+- [`Id_Shadow_Gen`](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/projects/Id_Shadow_Gen/)
 
 ## 🔭 Lens Engine  
-- `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
-- `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
-- `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
-- `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
-- `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
-- `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`
+- [`lens`](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/projects/lens/)
 
 ---
 
@@ -169,40 +152,21 @@ Together, these five projects form the **active constellation** of TriadicFramew
 ## 🛰️ NASA H‑POSS T‑10  
 Full proposal set including:
 
-- `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
-- `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
-- `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
-- `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
-- `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
-- `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
-- `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
-- `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`
+- [`nasa_hposs_tminus10.md`](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/projects/nasa_hposs_tminus10.md/)
 
 ---
 
 # 🎮 **Game Engines**
 
 ## 🃏 Poker Variants Engine  
-- `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
-- `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
-- `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
-- `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
-- `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`
+- [`poker-variants`](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/projects/poker-variants/)
 
 ---
 
 # 🌀 **Regime Exploration**
 
 ## 🧩 The Missing Regime  
-- `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
-- `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`
-
----
-
-# 🧪 **Evaluations & Manifests**
-
-- `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`  
-- `[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`
+- [`The_Missing_Regime`](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/projects/The_Missing_Regime/)
 
 ---
 
@@ -237,18 +201,5 @@ Projects are where **mythic lattice meets engineering reality**.
 
 This README pairs with:
 
-**`[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`**  
 - README.md = **the why**  
 - QUICKSTART.md = **the how**
-
----
-
-If you want, I can also generate:
-
-- **projects/module.json (extended)**  
-- **projects/index.html metadata block**  
-- **projects badge set (SVG + HTML)**  
-- **projects sitemap**  
-- **projects operator registry**
-
-Just tell me the next artifact you want.
