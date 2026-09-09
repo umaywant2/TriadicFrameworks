@@ -1,84 +1,34 @@
 {
-  "module_name": "Grammar",
-  "file": "docs/Grammar.md",
-  "version": "1.0",
-  "description": "Defines the minimal canonical grammar for TriadicFrameworks, including operators, structural primitives, regime markers, dimensional transitions, and cross-module propagation rules.",
-  "role": "reference",
-  "analyzer_layer": "operator",
-  "purpose": "Provide the authoritative grammar substrate for all modules, ensuring zero drift, consistent operator semantics, and student-accessible definitions.",
-  "status": "active",
-  "canonical": true,
-  "ai_ready": true,
-  "exports": [
-    "operators",
-    "dimensional_primitives",
-    "regime_markers",
-    "coherence_rules",
-    "cross_module_propagation"
-  ],
-  "imports": [
-    "SARG",
-    "ResilienceChecker",
-    "ParadoxesCanon",
-    "LowDimensionalStructures",
-    "FrameworkFieldTheory",
-    "Mode",
-    "Opacity"
-  ],
-  "structure": {
-    "sections": [
-      {
-        "id": "operators",
-        "title": "Operators",
-        "summary": "Defines the canonical operator grammar used across all modules, including triadic operators, regime operators, and coherence operators."
-      },
-      {
-        "id": "dimensional_primitives",
-        "title": "Dimensional Primitives",
-        "summary": "Lists the base dimensional constructs used for RTT, paradox analysis, and substrate modeling."
-      },
-      {
-        "id": "regime_markers",
-        "title": "Regime Markers",
-        "summary": "Defines the markers that indicate transitions between light, causal, paradox, and coherence regimes."
-      },
-      {
-        "id": "coherence_rules",
-        "title": "Coherence Rules",
-        "summary": "Specifies the rules that maintain cross-module coherence and prevent drift."
-      },
-      {
-        "id": "cross_module_propagation",
-        "title": "Cross-Module Propagation",
-        "summary": "Describes how grammar elements propagate across modules and how lineage is maintained."
-      }
-    ]
+  "canonical_id": "tft.grammar",
+  "module_class": "grammar",
+  "triadic_version": "3.4",
+  "grammar_version": "2.1",
+  "role": "substrate",
+  "description": "Defines the structural grammar used by RTT modules for awareness, regimes, alignment, time, flows, and resonance.",
+  "slots": {
+    "awareness": ["observer", "object", "boundary", "signal", "noise", "resonance"],
+    "regime": ["core", "wrap", "flows", "feedback", "coherence", "drift"],
+    "alignment": ["intent", "constraints", "resonance", "misalignment", "required_shift"],
+    "time": ["crisis_time", "negotiation_time", "deep_time", "drift_time", "memory"],
+    "flow": ["material_flows", "information_flows", "trust_flows", "energy_flows", "capital_flows"],
+    "resonance": ["pattern", "substrate", "match", "mismatch", "amplification", "damping"]
   },
-  "lineage": {
-    "parent": "DocsRoot",
-    "siblings": [
-      "Glossary",
-      "SARG",
-      "Corpus",
-      "Lineage",
-      "Principles"
-    ],
-    "children": []
+  "constraints": {
+    "mixing_grammars": "not_allowed",
+    "stacking_modules": "allowed",
+    "blending_modules": "not_allowed"
+  },
+  "examples": {
+    "awareness": "The observer is treating fatigue as noise rather than signal.",
+    "regime": "The core is stable, but the wrap is drifting due to inconsistent incentives.",
+    "alignment": "The intent is stability, but the constraints reward escalation.",
+    "time": "Crisis time dominates, compressing the horizon.",
+    "flow": "Trust flows are blocked at the boundary between teams.",
+    "resonance": "The pattern cannot land because the substrate is too noisy."
   },
   "ai_metadata": {
-    "ai.module": "Grammar",
-    "ai.version": "1.0",
-    "ai.purpose": "Provide the minimal canonical grammar for all TriadicFrameworks modules.",
-    "ai.keywords": [
-      "grammar",
-      "operators",
-      "dimensional",
-      "regime",
-      "coherence",
-      "substrate",
-      "triadic",
-      "RTT"
-    ],
-    "ai.audience": "students, researchers, AI agents"
+    "author": "copilot",
+    "substrate": "operator",
+    "resonance": "stable"
   }
 }
