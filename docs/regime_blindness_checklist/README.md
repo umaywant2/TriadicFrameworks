@@ -1,4 +1,4 @@
-## **Regime Blindness Checklist**  
+<img width="1194" height="672" alt="regime_blindness_checklist_" src="https://github.com/user-attachments/assets/afb18687-247b-49a5-a9ed-6012a5ab59b8" />
 
 - [`regime_blindness_checklist_module.json`](regime_blindness_checklist_module.json) — Agentic module schema role assignments
 
