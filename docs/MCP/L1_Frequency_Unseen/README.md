@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L1_Frequency" src="https://github.com/user-attachments/assets/291ca060-0d45-41e0-a94c-69bdbe695587" />
+
 # L1 — Frequency_Unseen (R5 Canon)
 
 **Triad:** oscillation  

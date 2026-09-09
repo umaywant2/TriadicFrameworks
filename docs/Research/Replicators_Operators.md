@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Replicators_Operators" src="https://github.com/user-attachments/assets/784634ff-1374-4d4e-9860-2b29c2ac98a0" />
+
 # Replicators — Operator Specification (Goal #1)
 
 ## Summary

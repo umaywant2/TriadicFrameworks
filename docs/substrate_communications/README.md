@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="substrate_communications_" src="https://github.com/user-attachments/assets/9456acea-bee9-4eb2-95d9-5c435cdafa01" />
+
 # Substrate Communications  
 _A minimal structural framework for drift‑aware, paradox‑preserving messaging across heterogeneous systems._
 

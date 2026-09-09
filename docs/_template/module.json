@@ -1,0 +1,36 @@
+{
+  "module": {
+    "name": "<<<MODULE_NAME>>>",
+    "summary": "<<<MODULE_SUMMARY>>>",
+    "category": "<<<MODULE_CATEGORY>>>",
+
+    "canon_ref": "/docs/spine/spine.json",
+
+    "inherit": {
+      "canon": true,
+      "session_context": true,
+      "triad_alias_resolution": true
+    },
+
+    "rtt": {
+      "layer": 1,
+      "source": "https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html"
+    },
+
+    "ai": {
+      "initialization": {
+        "load_spine_first": true,
+        "load_canon_first": true,
+        "apply_session_context": true,
+        "triad_validation": true
+      }
+    },
+
+    "files": {
+      "maps": [],
+      "operators": [],
+      "examples": [],
+      "references": []
+    }
+  }
+}

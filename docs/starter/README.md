@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="starter_" src="https://github.com/user-attachments/assets/280f61bf-0c68-4f6c-8fa8-6b86443615b9" />
+
 # **RTT Starter Kit — How to Create Your First Agentic Module**  
 
 - [`starter_module.json`](starter_module.json) — Agentic module schema role assignments

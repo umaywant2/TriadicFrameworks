@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="taxes_" src="https://github.com/user-attachments/assets/0755f2c1-a4c9-4763-bfd2-f71005d9fb60" />
+
 # Taxes Module  
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/taxes/module.json) — Agentic module schema role assignments

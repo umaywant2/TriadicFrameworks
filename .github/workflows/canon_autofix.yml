@@ -1,0 +1,32 @@
+name: TriadicFrameworks Canon Auto-Fix
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  autofix:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout PR branch
+      uses: actions/checkout@v4
+      with:
+        ref: ${{ github.event.pull_request.head.ref }}
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: pip install requests
+
+    - name: Run Canon Auto-Fix
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        python docs/tools/canon_autofix.py \
+          --repo "${{ github.repository }}" \
+          --pr "${{ github.event.pull_request.number }}" \
+          --branch "${{ github.event.pull_request.head.ref }}"

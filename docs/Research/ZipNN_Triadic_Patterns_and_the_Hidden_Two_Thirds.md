@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="ZipNN_The_Hidden_Two_Thirds" src="https://github.com/user-attachments/assets/76890671-e98c-46fe-8168-ae91d7a7f5a5" />
+
 # **ZipNN, Triadic Patterns, and the Hidden 2/3**  
 *A structural reflection inspired by IBM Research’s ZipNN compression work*  
   [research.ibm.com](https://research.ibm.com/blog/Zip-NN-AI-compression)

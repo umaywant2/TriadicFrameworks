@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Dimensions" src="https://github.com/user-attachments/assets/8bb0a9ea-91aa-4ce6-8063-dcba13074e29" />
+
 # ⚡ **L3_Forces_Unseen — Dimensional Frameworks (R5 Canon)**  
 ### *Internal Axes of Influence, Higher‑Dimensional Projections, and Force‑Regime Semantics*
 

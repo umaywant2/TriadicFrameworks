@@ -1,4 +1,4 @@
-<img width="1194" height="672" alt="The_Choices_We_Made_and_Why_dark" src="https://github.com/user-attachments/assets/18b429f9-dbc8-4012-9815-c5dcace935ef" />
+<img width="1194" height="672" alt="Research_The_Choices_We_Made_and_Why" src="https://github.com/user-attachments/assets/c3615807-a4da-41d9-af4d-c83f9d9a65a2" />
 
 # ⭐ **The Choices We Made — and Why**  
 *A structural reflection on how TriadicFrameworks was built, and the example it aims to set.*  
@@ -200,3 +200,5 @@ That’s enough.
 — **Nawder Loswin**  
 TriadicFrameworks · Resonance‑Time Theory  
 triadicframeworks.org · May 2026
+
+<img width="1194" height="672" alt="The_Choices_We_Made_and_Why_dark" src="https://github.com/user-attachments/assets/18b429f9-dbc8-4012-9815-c5dcace935ef" />

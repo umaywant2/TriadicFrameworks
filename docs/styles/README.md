@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="styles_" src="https://github.com/user-attachments/assets/366b9c5f-bfcf-455e-a39a-b8c4372ff000" />
+
 ## 🧭 Styles Directory
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">

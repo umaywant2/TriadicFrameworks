@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="spectral_clarity_" src="https://github.com/user-attachments/assets/bf911a92-5921-4e96-8ef8-d7eccbad243c" />
+
 ## 📜 Spectral Clarity 
 
 - [`spectral_clarity_module.json`](spectral_clarity_module.json) — Agentic module schema role assignments

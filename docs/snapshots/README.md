@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="snapshots_" src="https://github.com/user-attachments/assets/bbdd25c6-04f7-4230-88a1-930d4e302343" />
+
 ## 📸 Snapshots — Temporal Overlap Records  
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">

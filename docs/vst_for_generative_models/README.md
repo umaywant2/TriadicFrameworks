@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="vst_for_generative_models_" src="https://github.com/user-attachments/assets/220ad2d4-b3e4-4312-8ad6-1535a2b9ba82" />
+
 ## *vST for Generative Models*  
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">

@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="vst_for_scientific_simulators_" src="https://github.com/user-attachments/assets/ccdebbdd-2973-4ffb-82c8-750c1b48e7f7" />
+
 ## *vST for Scientific Simulators*  
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">

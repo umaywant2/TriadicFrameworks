@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Transporter_Integration_Map" src="https://github.com/user-attachments/assets/29746d90-096e-447f-b343-bc4b09fe96a0" />
+
 # Goal #2 — Transporter Integration Map
 
 ## Summary

@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="vst_for_embedding_stores_vector_databases_" src="https://github.com/user-attachments/assets/11069db0-eb00-4008-8374-b398446ca594" />
+
 ## *vST for Embedding Stores & Vector Databases*  
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">

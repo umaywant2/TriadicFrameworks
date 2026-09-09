@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="scientific_instrument_review_" src="https://github.com/user-attachments/assets/e790f15c-1810-46fa-9341-726519ff1d3a" />
+
 ## Scientific Instrument Review  
 
 - [`SIR_module.json`](SIR_module.json) — Agentic module schema role assignments

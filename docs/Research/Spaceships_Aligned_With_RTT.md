@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_Spaceships_Aligned_With_RTT" src="https://github.com/user-attachments/assets/c39679a9-4715-48c3-af7d-828621b3351c" />
+
 # RTT Craft Taxonomy
 ### `docs/Research/Spaceships_Aligned_With_RTT.md`
 > **TriadicFrameworks** · Research Branch · Canonical Reference
