@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="_ideas_Detroit_Salt_Mines" src="https://github.com/user-attachments/assets/855df851-bdbb-452d-8bb0-4fd0087079af" />
+
 # 🍬 **The Science Candy Store — Quick Resonance‑Time Snapshot**
 
 ## Quantum foundations sweets
