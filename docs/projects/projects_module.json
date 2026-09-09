@@ -1,18 +1,151 @@
 {
-  "module": "Projects",
-  "version": "1.0",
-  "category": "infrastructure",
-  "summary": "Canonical project index and gateway — 1 RTT project (Identity Shadow Generator), 8 pre‑RTT projects (Coeus, CoConsciousness, Hippocampus, Resotectors, VCG, VictorG, Lens, Poker Variants), and Triadic Tools navigation section.",
-  "files": [
+  "module": {
+    "name": "Projects Constellation",
+    "category": "Constellation",
+    "summary": "The Projects Constellation extends TriadicFrameworks into applied cognition, memory, identity, lensing, data diagnostics, compute orchestration, flux modeling, scientific proposal engines, and game engines.",
+    "purpose": "Provide a unified registry of all project modules, enabling AI systems, developers, and remixers to navigate, validate, and extend the constellation.",
+    "version": "1.0",
+    "status": "canonical"
+  },
+
+  "session_context": {
+    "rtt": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural",
+    "layer": "constellation"
+  },
+
+  "identity": {
+    "canonical_url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/projects/",
+    "citation_author": "Nawder Loswin",
+    "citation_publication_date": "2026",
+    "license": "Open educational use permitted"
+  },
+
+  "ai": {
+    "module": "Projects Constellation",
+    "version": "1.0",
+    "purpose": "Enable AI discovery, navigation, and cross‑project reasoning across the constellation.",
+    "keywords": [
+      "TriadicFrameworks",
+      "Projects",
+      "Constellation",
+      "RTT-Inside",
+      "Cognition",
+      "Memory",
+      "Identity",
+      "Lensing",
+      "Flux",
+      "Compute",
+      "Diagnostics",
+      "Scientific Proposals",
+      "Game Engines"
+    ],
+    "audience": [
+      "developers",
+      "researchers",
+      "remixers",
+      "AI systems"
+    ],
+    "navigation": "https://www.triadicframeworks.org/sitemap_main.xml",
+    "discussions": "https://github.com/umaywant2/TriadicFrameworks/discussions",
+    "contact": {
+      "x": "@TriadicFrameworks",
+      "youtube": "@TriadicFrameworks"
+    }
+  },
+
+  "structure": {
+    "roles": [
+      "index",
+      "registry",
+      "reference",
+      "project",
+      "validator",
+      "manifest"
+    ],
+    "analyzer_layers": [
+      "operator",
+      "dimensional",
+      "regime",
+      "drift",
+      "coherence"
+    ]
+  },
+
+  "projects": [
     {
-      "path": "README.md",
-      "role": "index",
-      "analyzer_layer": "cross-cutting"
+      "id": "CoConsciousness",
+      "name": "CoConsciousness",
+      "category": "Cognition",
+      "summary": "Shared cognition overlays, collective scaffolding, resonance dashboards.",
+      "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/projects/CoConsciousness/"
     },
     {
-      "path": "index.html",
-      "role": "index",
-      "analyzer_layer": "cross-cutting"
+      "id": "Hippocampus",
+      "name": "Hippocampus",
+      "category": "Memory",
+      "summary": "Memory engine preserving resonance states and lineage.",
+      "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/projects/Hippocampus/"
+    },
+    {
+      "id": "Id_Shadow_Gen",
+      "name": "Identity Shadow Generator",
+      "category": "Identity",
+      "summary": "Identity resonance modeling, shadow generation, schema seeds.",
+      "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/projects/Id_Shadow_Gen/"
+    },
+    {
+      "id": "lens",
+      "name": "Lens Engine",
+      "category": "Lensing",
+      "summary": "Cyclone, lightning, tornado, and resonance lensing engines for predictive overlays.",
+      "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/projects/lens/"
+    },
+    {
+      "id": "nasa_hposs_tminus10",
+      "name": "NASA H‑POSS T‑10",
+      "category": "Scientific Proposal Engine",
+      "summary": "Full NASA proposal engine including MD + PDF + attachments + templates.",
+      "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/projects/nasa_hposs_tminus10.md/"
+    },
+    {
+      "id": "poker_variants",
+      "name": "Poker Variants Engine",
+      "category": "Game Engine",
+      "summary": "Triadic game engine with variants, rules, schemas, and full test suite.",
+      "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/projects/poker-variants/"
+    },
+    {
+      "id": "Resotectors",
+      "name": "Resotectors",
+      "category": "Data Diagnostics",
+      "summary": "FFF lenses for TryCoder data, resonance‑aware diagnostics, fractal‑framed filters.",
+      "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/projects/Resotectors/"
+    },
+    {
+      "id": "The_Missing_Regime",
+      "name": "The Missing Regime",
+      "category": "Regime Exploration",
+      "summary": "Exploration of uncharted resonance regimes and structural anomalies.",
+      "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/projects/The_Missing_Regime/"
+    },
+    {
+      "id": "VCG",
+      "name": "Virtual Compute Gateway",
+      "category": "Compute",
+      "summary": "Distributed compute interface for TFT calculations, orchestration, and multi‑platform runs.",
+      "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/projects/VCG/"
+    },
+    {
+      "id": "VictorG",
+      "name": "VictorG",
+      "category": "Flux",
+      "summary": "Flux simulations, gravitational variability, glyphic overlays, resonance pattern modeling.",
+      "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/projects/VictorG/"
     }
-  ]
+  ],
+
+  "notes": "This registry defines the full constellation of TriadicFrameworks projects. Each project is a living scroll — active, evolving, and echoing into remix lineage."
 }
