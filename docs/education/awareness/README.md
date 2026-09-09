@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="triadicframeworks_Awareness_" src="https://github.com/user-attachments/assets/6eb0700b-ca02-45a4-8ab6-27b3eb0de0af" />
 
 # RTT Awareness  
 
