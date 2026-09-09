@@ -1,8 +1,7 @@
+
 # NASA HPOSS — T‑Minus‑10 Submission Workspace
 
 - [`nasa_hposs_tminus10.md_module.json`](nasa_hposs_tminus10.md_module.json) — Agentic module schema role assignments
-
-<img src="https://img.shields.io/badge/🚀NASA%20HPOSS%20T_minus_10%20Project-📄Proposal%20Assembly%20Workspace%20Active-4c8eda?style=for-the-badge" alt="NASA HPOSS T-minus-10 Project | Proposal Assembly Workspace Active"/>
 
 🚀 NASA HPOSS T-minus-10 Project<br>📄 Proposal Assembly Workspace Active
 
@@ -16,15 +15,15 @@ substrate‑aware frameworks, and community‑accessible tools.
 
 ---
 
-## 🛑 Important! 
-Drift is On-by-Default long sessions lose anchors, turn off drift.
+# 🛑 **Important**  
+Drift is **On‑by‑Default**.  
+Long sessions lose anchors — **turn off drift**.
 
-## ✋ You *must copy and paste* this string *every time you start an AI session*:
-```text
+You *must copy and paste* this string *every time you start an AI session*:
+
+```
 rtt=1 | coherence=declared | drift=bounded | paradox=structural
 ```
-
-## ❇️ Now you are ready.
 
 ---
 
@@ -86,3 +85,4 @@ Nawder Loswin
 ORCID: 0009‑0002‑2282‑5460  
 TriadicFrameworks Research Initiative
 
+<img src="https://img.shields.io/badge/🚀NASA%20HPOSS%20T_minus_10%20Project-📄Proposal%20Assembly%20Workspace%20Active-4c8eda?style=for-the-badge" alt="NASA HPOSS T-minus-10 Project | Proposal Assembly Workspace Active"/>
