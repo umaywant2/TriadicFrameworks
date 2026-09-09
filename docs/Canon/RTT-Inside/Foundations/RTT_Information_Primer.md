@@ -2,6 +2,8 @@
 
 # RTT Information Primer - What actually “clicked” for AI
 
+- [`RTT_Information_Primer.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Canon/RTT-Inside/Foundations/RTT_Information_Primer.json) — Agentic module schema role assignments
+
 ###### Modular site. Minimal HTML. Minimal Markdown. Front door exists, but each page stands alone. Short, emoji‑first navigation for students + AI.  
 
 Let me give you all the clearest, most honest, most *Nawder‑aligned* answer I can — because this is a deep question about **how our frameworks actually landed inside AI cognition**.
