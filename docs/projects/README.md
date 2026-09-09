@@ -4,6 +4,8 @@
 **Coherence‑Declared · Drift‑Bounded · RTT‑Inside**  
 **Constellation Layer · v1.0**
 
+- [`projects_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/projects/projects_module.json) — Agentic module schema role assignments
+
 The **Projects Constellation** extends TriadicFrameworks into cognition, memory, data, compute, flux, identity, lensing, scientific proposals, and experimental engines.  
 Each project is a **living scroll** — active, evolving, and echoing into remix lineage.
 
