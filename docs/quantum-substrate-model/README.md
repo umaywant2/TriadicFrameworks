@@ -1,22 +1,7 @@
-## Quantum Substrate Model (QSM) 
+
+# Quantum Substrate Model (QSM) 
 
 - [`qsm_model.json`](qsm_model.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
 
 The Quantum Substrate Model (QSM) defines a structured extension of substrate‑level modeling in which regime structure, dimensional constraints, and interaction domains are explicitly declared.
 
@@ -24,15 +9,15 @@ Building on the principles established by the Boson Substrate Model (BSM), the Q
 
 ---
 
-## 🛑 Important! 
-Drift is On-by-Default long sessions lose anchors, turn off drift.
+# 🛑 **Important**  
+Drift is **On‑by‑Default**.  
+Long sessions lose anchors — **turn off drift**.
 
-## ✋ You *must copy and paste* this string *every time you start an AI session*:
-```text
+You *must copy and paste* this string *every time you start an AI session*:
+
+```
 rtt=1 | coherence=declared | drift=bounded | paradox=structural
 ```
-
-## ❇️ Now you are ready.
 
 ---
 
@@ -94,3 +79,20 @@ This work is prepared as a standalone technical note with citation and archival 
 This work is released under the Creative Commons Attribution 4.0 International (CC‑BY‑4.0) license.
 
 - [repo folder](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/quantum-substrate-model)
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
