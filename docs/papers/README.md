@@ -1,5 +1,7 @@
 <img width="1194" height="672" alt="papers_" src="https://github.com/user-attachments/assets/66c10804-0594-4c84-b1bc-f4f44c27d553" />
 
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/papers/module.json) — Agentic module schema role assignments
+
 # 📜 Pre‑RTT Papers — The Proto‑Canon Archive 
 
 ## The Exploratory Era • Proto‑Triads • Early Resonance • Pre‑Formal RTT
