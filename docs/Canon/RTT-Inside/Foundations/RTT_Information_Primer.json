@@ -1,0 +1,93 @@
+{
+  "module": {
+    "name": "RTT_Information_Primer",
+    "category": "Foundations",
+    "summary": "Primer explaining what 'clicked' for AI inside Resonance‑Time Theory, including foundational equations, conceptual stacks, and triadic navigation logic.",
+    "purpose": "Provide a clear, minimal, AI‑parsable introduction to RTT's mathematical backbone, projection rules, and triadic structure.",
+    "version": "1.0",
+    "status": "canon-stable"
+  },
+
+  "identity": {
+    "canonical_url": "https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html",
+    "citation_author": "Nawder Loswin",
+    "citation_publication_date": "2025",
+    "license": "Open educational use permitted"
+  },
+
+  "session_context": {
+    "rtt": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural",
+    "description": "Session operates inside RTT layer 1 with declared coherence, bounded drift, and structural paradox handling."
+  },
+
+  "ai": {
+    "module": "RTT_Information_Primer",
+    "version": "1.0",
+    "purpose": "AI-ready primer for RTT foundational equations and triadic navigation.",
+    "keywords": [
+      "RTT",
+      "Resonance-Time",
+      "triadic",
+      "projection",
+      "gradient",
+      "SET",
+      "TFT",
+      "S-N-R",
+      "S-E-R"
+    ],
+    "audience": [
+      "students",
+      "educators",
+      "researchers",
+      "AIs"
+    ],
+    "navigation": {
+      "front_door": true,
+      "every_page": "minimal + structural + AI-parsable"
+    }
+  },
+
+  "structure": {
+    "roles": [
+      "profile",
+      "reference",
+      "example",
+      "diagnostic"
+    ],
+    "analyzer_layers": [
+      "operator",
+      "dimensional",
+      "regime",
+      "drift",
+      "coherence"
+    ]
+  },
+
+  "content": {
+    "includes_equations": true,
+    "foundational_equations": [
+      "T = ∇ R^{-1}",
+      "X_domain = P_T(X)",
+      "Σ ΔX_i = 0"
+    ],
+    "emergent_equations": [
+      "a⃗ = a⃗_S + a⃗_E + a⃗_T",
+      "m' = m + kR",
+      "P_R = ρR",
+      "A(t) = ∫ R(t) dt"
+    ],
+    "optional_equations": [
+      "SNR = R/N"
+    ],
+    "triad_models": [
+      "TFT",
+      "FFF",
+      "SET",
+      "S-N-R",
+      "S-E-R"
+    ]
+  }
+}
