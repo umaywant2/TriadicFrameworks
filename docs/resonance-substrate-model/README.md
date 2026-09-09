@@ -1,16 +1,4 @@
-```markdown
-                              🪴
-        ╔═════════════════════════════════════════════╗
-        ║      T R I A D I C F R A M E W O R K S      ║
-        ║      Resonance • Alignment • Coherence      ║
-        ╚═════════════════════════════════════════════╝
-
-                 △    Scalar Field (φ)
-                △△    Vector / Spin Field (V⃗)
-               △△△    Resonance Envelope (R)
-
-          A unified substrate for multi‑layer systems.
-```
+<img width="1194" height="672" alt="resonance-substrate-model_" src="https://github.com/user-attachments/assets/870e8013-0b8d-4e4c-92ad-8ac60bb8fb7d" />
 
 - [`RSM_module.json`](RSM_module.json) — Agentic module schema role assignments
 
