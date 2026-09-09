@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="lactos_" src="https://github.com/user-attachments/assets/ffa264e8-3051-4dac-9519-b94f9edbe7c4" />
 
 # 🧪 Localized Anisotropic Collision & Triadic Ontology System  
 
