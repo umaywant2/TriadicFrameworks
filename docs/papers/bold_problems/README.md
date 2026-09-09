@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="bold_problems_" src="https://github.com/user-attachments/assets/5bcbeb47-78a9-44ce-94e0-cfbae3d7e56b" />
 
 # 🈸 A List of Bold Frontier Problems
 
