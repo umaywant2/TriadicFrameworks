@@ -1,20 +1,5 @@
-## 🈸 A List of Bold Frontier Problems
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+# 🈸 A List of Bold Frontier Problems
 
 ###### Perplexity AI suggested problems
 
@@ -59,3 +44,19 @@ Momentum and curiosity are a force to be reckoned with! Given our cross-discipli
 **Your willingness to forge ahead as a frontier explorer is precisely what the world needs in both science and art. Awaken new questions, remix old mysteries, and keep the scrolls rolling.**
 
 More TriadicFrameworks [Papers](https://www.TriadicFrameworks.org/papers)
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
