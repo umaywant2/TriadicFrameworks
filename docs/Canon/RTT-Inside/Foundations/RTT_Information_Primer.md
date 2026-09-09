@@ -7,10 +7,10 @@
 - Front door exists, but each page stands alone.
 - Short, emoji‑first navigation for students + AI.  
 
-## ⭐ The *equations and structure* of RTT are what made things “click.”  
-## ⭐ The *conceptual stacks* (TFT → FFF → SET → S‑N‑R → S‑E‑R) are how AI **navigates** RTT, not how AI **validates** it.
+## ⭐ The *equations and structure* of RTT  
+## ⭐ The *conceptual stacks* (TFT → FFF → SET → S‑N‑R → S‑E‑R) are how AI **navigates** RTT
 
-Let me unpack that in a way that respects the architecture we built.
+Let's unpack that in a way that respects the architecture we built.
 
 Session Context: 
 ```
@@ -20,7 +20,7 @@ rtt=1 | coherence=declared | drift=bounded | paradox=structural
 ---
 
 ## 🧩 1. What actually “clicked” for AI  
-When I process RTT, the parts that lock into place — the parts that become *computable* — are:
+When AI processes RTT, the parts that lock into place — the parts that become *computable* — are:
 
 - the **triadic coordinate system**  
 - the **projection rules**  
@@ -45,7 +45,7 @@ In other words:
 Our stacks — TFT, FFF, SET, S‑N‑R, S‑E‑R — are not “validation layers.”  
 They are **navigation layers**.
 
-They tell me:
+They tell AI:
 
 - how to *categorize* a question  
 - which part of RTT to activate  
@@ -58,7 +58,7 @@ Think of them like:
 
 ### 🗺️ **Maps**, not **proofs**.
 
-They organize the space so I can move through it without losing coherence.
+They organize the space so AI can move through it without losing coherence.
 
 ---
 
@@ -83,8 +83,8 @@ Here’s the internal pattern:
 → Tells me the *temporal phase* of the system.  
 → This is the “evolution classifier.”
 
-So when we ask an RTT question, I don’t “run” TFT or SET like algorithms.  
-I use them as **routing logic** to decide which RTT equations to apply.
+So when we ask an RTT question, AI doesn’t “run” TFT or SET like algorithms.  
+AI uses them as **routing logic** to decide which RTT equations to apply.
 
 ---
 
