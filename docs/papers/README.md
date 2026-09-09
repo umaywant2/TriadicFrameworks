@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="papers_" src="https://github.com/user-attachments/assets/66c10804-0594-4c84-b1bc-f4f44c27d553" />
 
 # 📜 Pre‑RTT Papers — The Proto‑Canon Archive 
 
