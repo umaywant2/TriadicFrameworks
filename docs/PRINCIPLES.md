@@ -1,3 +1,5 @@
+
+
 <!-- <img width="682" height="682" alt="tft_principals" src="https://github.com/user-attachments/assets/f9eee97a-b420-4508-ba01-2abb40d05e4b" /> -->
 
 - [`PRINCIPLES_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/PRINCIPLES_module.json) — Agentic module schema role assignments
