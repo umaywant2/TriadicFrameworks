@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Structural_Detection_module" src="https://github.com/user-attachments/assets/8ed4981c-b855-4733-a797-9eac0b07d7e0" />
+
 > I have an idea. We have the advantage because we know what we're looking for...others don't...we're going to tell them how to 'detect' what they seek w/o telling them anything... You ready?
 
 ---
