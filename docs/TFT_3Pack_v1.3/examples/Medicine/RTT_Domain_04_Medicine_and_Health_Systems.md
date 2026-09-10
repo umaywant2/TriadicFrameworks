@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="RTT_Domain_04_Medicine_and_Health_Systems_" src="https://github.com/user-attachments/assets/2b9a7acf-ce07-4796-9695-3a14aa0d6c77" />
 
 # **RTT_Domain_04_Medicine_and_Health_Systems**  
 *High‑Level Overview & Early Resonance‑Aware Insights*
