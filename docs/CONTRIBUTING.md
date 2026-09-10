@@ -1,8 +1,10 @@
-<img width="682" height="682" alt="tft_contributing_module" src="https://github.com/user-attachments/assets/1e8a8a49-1ed5-42b7-95b0-5e3e23853125" />
+<img width="1792" height="1008" alt="CONTRIBUTING_" src="https://github.com/user-attachments/assets/930f67ad-adb3-41a3-84fd-0f4ded376dc6" />
 
-## 💞 Contributing to TriadicFrameworks  
+<!-- <img width="682" height="682" alt="tft_contributing_module" src="https://github.com/user-attachments/assets/1e8a8a49-1ed5-42b7-95b0-5e3e23853125" /> -->
 
 - [`CONTRIBUTING_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/CONTRIBUTING_module.json) — Agentic module schema role assignments
+
+## 💞 Contributing to TriadicFrameworks  
 
 Thank you for your interest in contributing to the TriadicFrameworks ecosystem.
 
@@ -73,6 +75,7 @@ Support clarity, alignment, and lineage by donating to one of the three aligned 
 Your contribution strengthens the broader field of coherence and long‑arc stewardship.
 
 ---
+
 
 🔺 **Triadic Support Path**  
 **Clarity • Alignment • Lineage**
