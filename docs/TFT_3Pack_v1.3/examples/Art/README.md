@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="TFT_3Pack_v1 3_examples_Art_" src="https://github.com/user-attachments/assets/5e1f2565-ab9a-4302-a678-d689332e3bf1" />
+
 # Art examples and the TriadicFrameworks resonance model
 
 These examples show how the Nawderian theorem and the TriadicFrameworks stack apply to artistic domains, especially time-based and color-based media.
