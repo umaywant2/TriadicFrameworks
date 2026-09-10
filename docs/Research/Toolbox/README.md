@@ -1,9 +1,10 @@
-<img width="1194" height="672" alt="Research_Toolbox_module" src="https://github.com/user-attachments/assets/d44eff8a-d13d-4b45-b058-191643b00d50" />
+<img width="1194" height="672" alt="Research_Toolbox_" src="https://github.com/user-attachments/assets/8819a2be-7fd7-45ac-a9ae-f378cd62574e" />
 
-# **Research Toolbox**  
+<!-- <img width="1194" height="672" alt="Research_Toolbox_module" src="https://github.com/user-attachments/assets/d44eff8a-d13d-4b45-b058-191643b00d50" /> -->
 
 - [`RT_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/Toolbox/RT_module.json) — Agentic module schema role assignments
 
+# **Research Toolbox**  
 **Four‑Source Substrate + RTT/1–3 Engine Patterns for Structured Research Reasoning**
 
 ## 🛑 Important! 
