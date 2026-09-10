@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="TFT_3Pack_v1 3_examples_Math_" src="https://github.com/user-attachments/assets/48904082-94b0-4658-b6d9-42116473e34c" />
+
 # Math examples and the TriadicFrameworks resonance model
 
 These examples show how the Nawderian theorem and the TriadicFrameworks stack apply to mathematical systems:
