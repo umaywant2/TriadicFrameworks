@@ -1,1 +1,55 @@
+module:
+  name: Rock_Paper_Scissors
+  version: 1.0.0
+  date: "2026-09-09"
+  repository: TriadicFrameworks
+  path: docs/Rock_Paper_Scissors
+  domain: Agentic Science / Game-Theoretic Triadics
+  description: >
+    Triadic encoding of the Rock-Paper-Scissors zero-sum game.
+    Models each throw as a triadic node with Peircean positional
+    semantics, cyclic dominance relations, and agentic choice protocol.
 
+entities:
+  - id: rock
+    file: entities/Rock.md
+    triadic_position: Firstness
+    beats: scissors
+    beaten_by: paper
+
+  - id: paper
+    file: entities/Paper.md
+    triadic_position: Secondness
+    beats: rock
+    beaten_by: scissors
+
+  - id: scissors
+    file: entities/Scissors.md
+    triadic_position: Thirdness
+    beats: paper
+    beaten_by: rock
+
+relations:
+  - id: dominance
+    file: relations/dominance.md
+    type: cyclic
+    arity: 3
+  - id: outcomes
+    file: relations/outcomes.md
+    type: matrix
+    encoding: [-1, 0, 1]
+
+agentic:
+  - id: agent_protocol
+    file: agentic/agent_protocol.md
+  - id: nash_equilibrium
+    file: agentic/Nash_equilibrium.md
+
+tags:
+  - game-theory
+  - triadic
+  - zero-sum
+  - cyclic-dominance
+  - agentic
+  - benchmark
+  - Peircean
