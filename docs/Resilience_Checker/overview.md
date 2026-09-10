@@ -1,4 +1,6 @@
----
+<img width="1194" height="672" alt="Resilience_Checker_module" src="https://github.com/user-attachments/assets/15bd4404-becc-4892-b915-d327af1284c6" />
+
+<!-- ---
 title: "Resilience Checker"
 description: "108 canonical paradox analyses — a layered diagnostic surface for regime literacy and structural resilience training."
 stability: stable
@@ -8,7 +10,7 @@ rtt:
   coherence: declared
   drift: bounded
   paradox: structural
----
+--- -->
 
 > ```
 > rtt=1 | coherence=declared | drift=bounded | paradox=structural
