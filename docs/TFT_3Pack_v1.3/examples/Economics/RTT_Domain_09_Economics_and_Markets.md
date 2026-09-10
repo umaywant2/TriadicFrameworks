@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="RTT_Domain_09_Economics_and_Markets_" src="https://github.com/user-attachments/assets/ae58d7c1-6c04-4a67-a319-dbc8f0f8fdb2" />
 
 # **RTT_Domain_09_Economics_and_Markets**  
 *High‑Level Overview & Early Resonance‑Aware Insights*
