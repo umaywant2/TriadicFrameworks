@@ -1,8 +1,8 @@
-
-###### 🔱 TFT 3Pack v1.3
+<img width="1194" height="672" alt="TFT_3Pack_v1 3_" src="https://github.com/user-attachments/assets/222bf729-079e-4e8e-9078-03bd41d43ae0" />
 
 ### Triadic Framework • Theorem • Resonance Time Engine
 
+###### 🔱 TFT 3Pack v1.3
 A compact, example‑driven toolkit demonstrating the **TriadicFrameworks** dimensional substrate model across 12 academic domains — from Physics and Math to Art, Law, and Music.
 
 ## 🚀 Purpose
