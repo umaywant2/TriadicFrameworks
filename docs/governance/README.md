@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Governance_" src="https://github.com/user-attachments/assets/dad20e73-3154-41fe-914a-b80fc73677ce" />
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/governance/module.json) — Agentic module schema role assignments
 
