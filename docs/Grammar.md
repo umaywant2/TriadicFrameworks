@@ -1,4 +1,6 @@
----
+<img width="1124 height="672" alt="Grammar_" src="https://github.com/user-attachments/assets/fdb00137-87be-4274-940c-7e85c68c0e2d" />
+
+<!-- ---
 canonical_id: tft.grammar
 doc_class: module_grammar
 triadic_version: 3.4
@@ -23,7 +25,7 @@ ai_metadata:
   substrate: operator
   resonance: stable
 badge_block: 🔤
----
+--- -->
 
 # 🔤 Grammar Module  
 ### *Dimensional Cross‑Domain Agentic AI Grammar for RTT Modules*
