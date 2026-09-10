@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="TFT_3Pack_v1 3_examples_Music_" src="https://github.com/user-attachments/assets/bb4dfa78-ffd0-490d-b0a3-2fca31afedb4" />
+
 # Music examples and the TriadicFrameworks resonance model
 
 These examples show how the Nawderian theorem and the TriadicFrameworks stack apply to musical systems:
