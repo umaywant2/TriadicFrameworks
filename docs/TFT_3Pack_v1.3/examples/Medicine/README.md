@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="TFT_3Pack_v1 3_examples_Medicine_" src="https://github.com/user-attachments/assets/c7cc288d-bff0-4e2b-bc13-08eec8ba42e0" />
+
 # Medicine examples and the TriadicFrameworks resonance model
 
 These examples show how the Nawderian theorem and the TriadicFrameworks stack apply to medical systems:
