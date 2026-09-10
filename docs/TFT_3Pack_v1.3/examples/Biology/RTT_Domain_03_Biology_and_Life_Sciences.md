@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="RTT_Domain_03_Biology_and_Life_Sciences_" src="https://github.com/user-attachments/assets/0960347f-1bca-425f-a871-85f327448a7b" />
+
 # **RTT_Domain_03_Biology_and_Life_Sciences**  
 *High‑Level Overview & Early Resonance‑Aware Insights*
 
