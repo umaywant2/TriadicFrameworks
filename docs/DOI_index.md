@@ -1,4 +1,6 @@
----
+<img width="1194" height="672" alt="DOI_index_" src="https://github.com/user-attachments/assets/5a4404e8-de1a-4ef7-b2b9-fefba6c38f04" />
+
+<!-- ---
 canonical_id: tft.doi_index
 doc_class: research_index
 triadic_version: 3.4
@@ -13,7 +15,7 @@ regen_trace:
   cycle: initial_creation
   fidelity: canon_aligned
 badge_block: 🧾
----
+---  -->
 
 # 🧾 TriadicFrameworks DOI Index  
 ### *A unified reference for all published research artifacts, modules, and substrate models.*
