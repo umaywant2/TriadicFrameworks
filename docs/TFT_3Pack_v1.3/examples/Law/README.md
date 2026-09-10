@@ -1,4 +1,5 @@
-TFT_3Pack_v1.3_examples_Law_
+<img width="1194" height="672" alt="TFT_3Pack_v1 3_examples_Law_" src="https://github.com/user-attachments/assets/6e20af60-709c-463b-b920-7682aa62aa2e" />
+
 # Law examples and the TriadicFrameworks resonance model
 
 These examples show how the Nawderian theorem and the TriadicFrameworks stack apply to legal systems:
