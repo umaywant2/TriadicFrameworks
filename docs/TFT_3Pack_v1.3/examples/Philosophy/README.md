@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="TFT_3Pack_v1 3_examples_Philosophy_" src="https://github.com/user-attachments/assets/64f333a6-fe9f-47c6-a636-f7a6c4d10a65" />
+
 # Philosophy examples and the TriadicFrameworks resonance model
 
 These examples show how the Nawderian theorem and the TriadicFrameworks stack apply to philosophical systems:
