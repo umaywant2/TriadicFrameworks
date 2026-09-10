@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="IPD12_" src="https://github.com/user-attachments/assets/41dc68df-a6fd-471b-be3f-2336329f12f1" />
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/frameworks/ipd_12/module.json) — Agentic module schema role assignments
 
