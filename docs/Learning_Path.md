@@ -1,5 +1,8 @@
+<img width="1194" height="672" alt="Learning_Path_" src="https://github.com/user-attachments/assets/19b49747-3643-40d4-8262-0f191a3fafc6" />
+
 # Learning Path Map
-# TriadicFrameworks by Nawder Loswin
+
+###### TriadicFrameworks by Nawder Loswin
 
 ## Beginner Track
 1. Docs Root (Home) — Entry point to the TriadicFrameworks canon
