@@ -1,4 +1,6 @@
----
+<img width="1194" height="672" alt="LINEAGE_" src="https://github.com/user-attachments/assets/e024f76a-b342-4598-9aee-2c8fecfa5584" />
+
+<!-- ---
 canonical_id: tft.lineage
 doc_class: lineage_summary
 triadic_version: 3.4
@@ -16,7 +18,7 @@ lineage:
   previous: LINEAGE.md (canonical version)
   delta: simplified narrative + reduced metadata density
 badge_block: 🧬
----
+--- -->
 
 # 🧬 TriadicFrameworks Lineage  
 ### *A concise history of how the framework evolved*
