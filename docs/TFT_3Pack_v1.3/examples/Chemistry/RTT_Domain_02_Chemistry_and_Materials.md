@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="RTT_Domain_02_Chemistry_and_Materials_" src="https://github.com/user-attachments/assets/502f3c5d-f3ee-4d18-824b-9431e5a2ffcd" />
+
 # **RTT_Domain_02_Chemistry_and_Materials**  
 *High‑Level Overview & Early Resonance‑Aware Insights*
 
