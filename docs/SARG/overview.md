@@ -1,4 +1,6 @@
----
+<img width="1194" height="672" alt="SARG_module" src="https://github.com/user-attachments/assets/81810090-e8ee-4298-b7da-47865735765a" />
+
+<!-- ---
 title: "SARG"
 description: "Substrate-Agnostic Resonance Grammar — a universal 4-layer mapping system for any substrate across any scale."
 stability: stable
@@ -8,7 +10,7 @@ rtt:
   coherence: declared
   drift: bounded
   paradox: structural
----
+--- -->
 
 > ```
 > rtt=1 | coherence=declared | drift=bounded | paradox=structural
