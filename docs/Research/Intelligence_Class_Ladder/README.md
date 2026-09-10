@@ -1,6 +1,6 @@
-![Intelligence_Class_Ladder](https://github.com/user-attachments/assets/5ca1e1b2-aab5-48e3-8fef-8f734e49aef2)
+<img width="1194" height="672" alt="Intelligence_Class_Ladder_" src="https://github.com/user-attachments/assets/f8acef72-52cf-4886-9bf2-43cd9334ac0a" />
 
-# 🜁 Intelligence Class Ladder (Research Substrate)
+<!-- ![Intelligence_Class_Ladder](https://github.com/user-attachments/assets/5ca1e1b2-aab5-48e3-8fef-8f734e49aef2) -->
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/Intelligence_Class_Ladder/module.json) — Agentic module schema role assignments
 
