@@ -1,23 +1,8 @@
-## 📡 Media Substrate Model (MSM) 
+<img width="1194" height="672" alt="msrm_" src="https://github.com/user-attachments/assets/fbab00e1-0234-4aa0-98c8-d06fecc4907c" />
 
 - [`msm_model.json`](msm_model.json) — Agentic module schema role assignments
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/📡Media%20Substrate%20Model-🔹Structural%20Physics%20Layer%20Active-4c8eda?style=for-the-badge" alt="Media Substrate Model | Ready for Students"/>
-
+# 📡 Media Substrate Model (MSM) 
 The Media Substrate Model describes the structural physics of media ecosystems. It treats media not as content or ideology, but as an environment with measurable forces, stable basins, and predictable transitions. The MSM provides a substrate‑level vocabulary for analyzing how signal, distribution, attention, narrative, and cadence interact to shape collective perception and behavior.
 
 The model is designed to parallel the Governance Substrate Model (GSM) while capturing the unique dynamics of media systems. It serves as the foundation for the MSM Analyzer, Observer, and Simulation Engine.
@@ -160,3 +145,19 @@ The MSM and GSM are parallel substrates:
 They interact through attention, narrative, and distribution, but remain independent substrates with their own physics, basins, and invariants.
 
 The MSM Analyzer will mirror the GSM Analyzer once the substrate base is complete.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/📡Media%20Substrate%20Model-🔹Structural%20Physics%20Layer%20Active-4c8eda?style=for-the-badge" alt="Media Substrate Model | Ready for Students"/>
