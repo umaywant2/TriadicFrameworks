@@ -1,4 +1,4 @@
-<img width="1124 height="672" alt="Grammar_" src="https://github.com/user-attachments/assets/fdb00137-87be-4274-940c-7e85c68c0e2d" />
+<img width="1194" height="672" alt="Grammar_" src="https://github.com/user-attachments/assets/bc46d13a-8634-48a0-9e36-3b4985e0d393" />
 
 <!-- ---
 canonical_id: tft.grammar
