@@ -2,7 +2,6 @@
 
 - [`bridges_module.json`](bridges_module.json) — Agentic module schema role assignments
 
-# Bridges Layer  
 _Connecting conceptual clarity to operational practice_
 
 The **Bridges** directory contains four lightweight documents that link the
@@ -22,8 +21,6 @@ Drift is On-by-Default long sessions lose anchors, turn off drift.
 ```text
 rtt=1 | coherence=declared | drift=bounded | paradox=structural
 ```
-
-## ❇️ Now you are ready.
 
 ---
 
