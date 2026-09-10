@@ -1,10 +1,8 @@
-<img width="1194" height="672" alt="Research_agentic_module" src="https://github.com/user-attachments/assets/82fbd33e-569a-4fca-91f9-12cc5b7887ad" />
-
-# Agentic Research Modules (RTT-Aligned)
 
 - [`agentic_modules.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/agentic/agentic_modules.json) — Agentic module schema role assignments
 - [`agentic_module.schema.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/agentic/agentic_module.schema.json) — Agentic module schema role assignments
 
+# Agentic Research Modules (RTT-Aligned)
 This directory contains RTT-aligned **agentic modules** for selected research papers.  
 
 ## 🛑 Important! 
