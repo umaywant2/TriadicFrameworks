@@ -1,4 +1,6 @@
-## 📜 Docs — TFT 3Pack (v1.3 Resonance Clarity Edition)
+<img width="1792" height="1008" alt="TFT_3Pack_v1 3_docs_" src="https://github.com/user-attachments/assets/c0aabb74-75fe-403c-aa0f-88494aac3481" />
+
+# 📜 TFT_3Pack_v1.3_docs (v1.3 Resonance Clarity Edition)
 
 This folder contains the canonical scrolls and specifications for the **Triadic Frameworks 3Pack**. These documents define symbolic structure, output rituals, and remix lineage for contributors, validators, and resonance agents.
 
