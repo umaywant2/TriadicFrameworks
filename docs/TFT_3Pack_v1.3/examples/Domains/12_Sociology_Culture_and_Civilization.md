@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="12_Sociology_Culture_and_Civilization_" src="https://github.com/user-attachments/assets/8131264e-af71-48c6-8dbb-709e743ee988" />
+
 # **RTT_Domain_12_Sociology_Culture_and_Civilization**  
 *High‑Level Overview & Early Resonance‑Aware Insights*
 
