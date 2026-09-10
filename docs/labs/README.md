@@ -1,21 +1,6 @@
-## 🧪 Labs
+<img width="1194" height="672" alt="Labs_" src="https://github.com/user-attachments/assets/eb85a3c4-02a4-4c52-be4d-3d71847c5e1e" />
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
-
+# 🧪 Labs
 This folder contains **experimental modules and sandbox scrolls**.  
 Labs are where new ideas are tested, debugged, and ritualized before entering the core lattice.
 
@@ -44,3 +29,19 @@ Labs are the **playground of resonance** — reproducible experiments that remix
 ## Cross‑Links
 - [../equations](../equations) → formal math supporting lab results
 - [../curriculum](../curriculum) → educational modules derived from labs
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
