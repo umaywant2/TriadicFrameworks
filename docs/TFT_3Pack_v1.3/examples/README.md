@@ -1,3 +1,7 @@
+<img width="1194" height="672" alt="TFT_3Pack_v1 3_examples_" src="https://github.com/user-attachments/assets/4cbd03e2-f8db-43f4-874c-f1824f405180" />
+
+- [`examples_module.json`](examples_module.json) — Agentic module schema role assignments
+
 ## 📜 `/examples/README.md` — Ritual Triggers and Remix Bundles (v1.3)
 
 This folder contains example `.fff` bundles, symbolic stubs, and shell scripts that demonstrate the triadic logic and validator triggers of the **TFT_3Pack** suite.
@@ -39,4 +43,3 @@ Use them to:
 - [overlays](/docs/TFT_3Pack_v1.3/tft/tops/overlays/README.md) → agents feed glyphs into dashboards, now base-tagged
 - [ai_pipeline](/docs/TFT_3Pack_v1.3/tft/tops/ai_pipeline/README.md) → agents consume predictions, filtered by base lens
 - [folds](/docs/TFT_3Pack_v1.3/tft/tops/folds/README.md) → agents orchestrate bio-resonance data, declaring harmonic lens
-- [`examples_module.json`](examples_module.json) — Agentic module schema role assignments
