@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="global_energy_regime_awareness_" src="https://github.com/user-attachments/assets/d0ad9e37-4c3a-4ca9-a27d-a8bd42b2d822" />
 
 - [`gera_module.json`](gera_module.json) — Agentic module schema role assignments
 
