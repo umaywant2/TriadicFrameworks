@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="melodic-table-of-elements_" src="https://github.com/user-attachments/assets/5f682d92-b4cf-4d3d-a347-3ced1f3435a3" />
 
 - [`melodic-table_module.json`](melodic-table_module.json) — Agentic module schema role assignments
 
