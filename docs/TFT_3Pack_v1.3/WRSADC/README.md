@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="TFT_3Pack_v1 3_WRSADC_" src="https://github.com/user-attachments/assets/eace9d76-d2d6-4760-879d-9238ee180a85" />
 
 ## WRSADC — Wrapped Resonance Structural Aware Dimensional Core
 
