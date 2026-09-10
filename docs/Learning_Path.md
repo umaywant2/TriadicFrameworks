@@ -1,5 +1,7 @@
 <img width="1194" height="672" alt="Learning_Path_" src="https://github.com/user-attachments/assets/19b49747-3643-40d4-8262-0f191a3fafc6" />
 
+- [`Learning_Path.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Learning_Path.json) — Agentic module schema role assignments
+
 # Learning Path Map
 
 ###### TriadicFrameworks by Nawder Loswin
