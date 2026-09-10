@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="framework_creation_guide_" src="https://github.com/user-attachments/assets/e0633fbe-4a0b-45f9-b422-7f2c6e763b95" />
 
 - [`FCG_module.json`](FCG_module.json) — Agentic module schema role assignments
 
