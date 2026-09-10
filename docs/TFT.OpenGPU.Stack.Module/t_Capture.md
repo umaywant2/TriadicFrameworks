@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="TFT_OpenGPU_module_image" src="https://github.com/user-attachments/assets/2eb0a3b4-55be-41f4-839c-58114befcdb1" />
+
 # t_Capture — TFT.OpenGPU.Stack.Module
 **Resonance-Time Theory Capture Document**  
 **Module:** TFT.OpenGPU.Stack.Module  
