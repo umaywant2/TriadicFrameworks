@@ -1,8 +1,10 @@
-<img width="682" height="682" alt="tft_code_of_conduct" src="https://github.com/user-attachments/assets/44b6ebdf-276a-4db3-975c-d04ea07c62e8" />
+<img width="1194" height="672" alt="CODE_OF_CONDUCT_" src="https://github.com/user-attachments/assets/e57593ad-0009-4167-bb18-dc2c8eb8d611" />
 
-## 🌿 Code of Conduct  
+<!-- <img width="682" height="682" alt="tft_code_of_conduct" src="https://github.com/user-attachments/assets/44b6ebdf-276a-4db3-975c-d04ea07c62e8" /> -->
 
 - [`CODE_OF_CONDUCT_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/CODE_OF_CONDUCT_module.json) — Agentic module schema role assignments
+
+## 🌿 Code of Conduct  
 
 The Triadic Frameworks community brings together contributors, explorers, educators, researchers, and curious thinkers from all over the world. Some are professionals, some are volunteers, and all of us participate in building, teaching, and stewarding the canon.
 
