@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Research_Agentic_" src="https://github.com/user-attachments/assets/3566db2f-2d11-4f7c-a521-895e31671151" />
 
 - [`agentic_modules.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/agentic/agentic_modules.json) — Agentic module schema role assignments
 - [`agentic_module.schema.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/agentic/agentic_module.schema.json) — Agentic module schema role assignments
