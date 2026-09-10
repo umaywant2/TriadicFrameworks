@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Rock_Paper_Scissors_" src="https://github.com/user-attachments/assets/f560d478-0c9e-40e6-b6bb-f9c0fa9e7695" />
+
 # Rock Paper Scissors — TriadicFrameworks Module
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Rock_Paper_Scissors/module.json) — Agentic module schema role assignments
