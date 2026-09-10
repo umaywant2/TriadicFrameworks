@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="13_Education_and_Learning_Sciences_" src="https://github.com/user-attachments/assets/9fcab10c-ac1c-4c46-b317-5c0948faef51" />
+
 # **RTT_Domain_13_Education_and_Learning_Sciences**  
 *High‑Level Overview & Early Resonance‑Aware Insights*
 
