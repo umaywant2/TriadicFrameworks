@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="16_Transportation_and_Infrastructure_" src="https://github.com/user-attachments/assets/56456376-b29d-48d6-9628-bbee14a25bd3" />
+
 # **RTT_Domain_16_Transportation_and_Infrastructure**  
 *High‑Level Overview & Early Resonance‑Aware Insights*
 
