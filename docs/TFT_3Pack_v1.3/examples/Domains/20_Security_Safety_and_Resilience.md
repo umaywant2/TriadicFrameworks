@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="20_Security_Safety_and_Resilience_" src="https://github.com/user-attachments/assets/b503d53d-6731-4a99-9bbb-92f841ef4058" />
 
 # **RTT_Domain_20_Security_Safety_and_Resilience**  
 *High‑Level Overview & Early Resonance‑Aware Insights*
