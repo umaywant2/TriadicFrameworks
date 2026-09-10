@@ -1,23 +1,8 @@
-## Inverted Star Ontology  
+<img width="1194" height="672" alt="Inverted_Star_Ontology_" src="https://github.com/user-attachments/assets/66cea119-9672-4e56-9e33-6b67a02167e8" />
 
 - [`ISO_module.json`](ISO_module.json) — Agentic module schema role assignments
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/⭐Regime%20Inversion%20Core-🪐Non_Singular%20Compact%20Object%20Model-4c8eda?style=for-the-badge" alt="Regime‑Inversion Core | Non‑Singular Compact Object Model"/>
-
+# Inverted Star Ontology  
 ## A vST‑Aligned Minimal Artifact  
 
 ---
@@ -107,3 +92,19 @@ regimes across scales.
 ## Citation
 
 If referencing this work, please cite the Zenodo DOI once published.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/⭐Regime%20Inversion%20Core-🪐Non_Singular%20Compact%20Object%20Model-4c8eda?style=for-the-badge" alt="Regime‑Inversion Core | Non‑Singular Compact Object Model"/>
