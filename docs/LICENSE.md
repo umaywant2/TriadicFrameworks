@@ -1,9 +1,10 @@
-<img width="682" height="682" alt="tft_license" src="https://github.com/user-attachments/assets/b9a2b4d3-28ea-4fc0-922b-c3c54663195e" />
+<img width="1194" height="672" alt="LICENSE_" src="https://github.com/user-attachments/assets/7b4e5ef3-4def-42c8-b60f-292ecd825a1f" />
 
-## 👮 License | Open 
+<!-- <img width="682" height="682" alt="tft_license" src="https://github.com/user-attachments/assets/b9a2b4d3-28ea-4fc0-922b-c3c54663195e" /> -->
 
 - [`LICENSE_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/LICENSE_module.json) — Agentic module schema role assignments
 
+## 👮 License | Open 
 This framework is released under the MIT License.
 
 But before the legalese, a note from Nawder Loswin, creator of TriadicFrameworks:
