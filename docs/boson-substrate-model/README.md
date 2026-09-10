@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="boson-substrate-model_" src="https://github.com/user-attachments/assets/bd2880d5-4aa0-46a5-a357-83dd16caecef" />
 
 - [`bsm_module.json`](bsm_module.json) — Agentic module schema role assignments
   
