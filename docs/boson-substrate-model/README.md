@@ -1,22 +1,7 @@
-# Boson Substrate Model (BSM) 
 
 - [`bsm_module.json`](bsm_module.json) — Agentic module schema role assignments
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🧩Minimal%20Substrate-📐Structural%20Only-4c8eda?style=for-the-badge" alt="🧩Minimal Substrate | 📐Structural Only"/>
+  
+# Boson Substrate Model (BSM) 
 
 The Boson Substrate Model (BSM) defines a minimal structural substrate intended to support higher‑order operator dynamics without encoding domain‑specific semantics or empirical claims.
 
@@ -81,3 +66,19 @@ This work is published as a standalone technical note with citation and archival
 This work is released under the Creative Commons Attribution 4.0 International (CC‑BY‑4.0) license.
 
 - [repo folder](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/boson-substrate-model)
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🧩Minimal%20Substrate-📐Structural%20Only-4c8eda?style=for-the-badge" alt="🧩Minimal Substrate | 📐Structural Only"/>
