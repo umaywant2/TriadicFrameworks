@@ -20,6 +20,8 @@ lineage:
 badge_block: 🧬
 --- -->
 
+- [`LINEAGE_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/LINEAGE_module.json) — Agentic module schema role assignments
+
 # 🧬 TriadicFrameworks Lineage  
 ### *A concise history of how the framework evolved*
 
