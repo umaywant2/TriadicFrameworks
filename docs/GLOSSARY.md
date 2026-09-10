@@ -1,9 +1,10 @@
-<img width="682" height="682" alt="tft_glossary" src="https://github.com/user-attachments/assets/8f08afbb-7e6a-4ea7-a842-14ec827ddb47" />
+<img width="1194" height="672" alt="GLOSSARY_" src="https://github.com/user-attachments/assets/fd94fa54-deac-4eb0-8bcc-df5555ac6a03" />
 
-## 🌐 Glossary (Core Structural Layer)
+<!-- <img width="682" height="682" alt="tft_glossary" src="https://github.com/user-attachments/assets/8f08afbb-7e6a-4ea7-a842-14ec827ddb47" /> -->
 
 - [`GLOSSARY_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/GLOSSARY_module.json) — Agentic module schema role assignments
 
+## 🌐 Glossary (Core Structural Layer)
 *(This is the grammar — not the modules, not the domains, not the examples. These are the invariant rules that every part of the canon obeys.)*
 
 This glossary defines the core canon of Triadic Frameworks and Resonance-Time Theory. Terms are kept operational and minimal to support clear regime awareness and cross-domain application.
