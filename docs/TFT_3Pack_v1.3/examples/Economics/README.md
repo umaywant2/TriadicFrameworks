@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="TFT_3Pack_v1 3_examples_Economics_" src="https://github.com/user-attachments/assets/d306c367-557c-4127-9a41-64ff40613eab" />
+
 # Economics examples and the TriadicFrameworks resonance model
 
 These examples show how the Nawderian theorem and the TriadicFrameworks stack apply to economic systems:
