@@ -1,1 +1,142 @@
+{
+  "module": "honor_roll",
+  "version": "1.0.0",
+  "description": "Resonance-aware lineage, contributor recognition, badge registry, and honor-roll ledger for TriadicFrameworks.",
+  "ai": {
+    "module_kind": "registry",
+    "substrate": "lineage",
+    "coherence": "declared",
+    "drift": "bounded"
+  },
+
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "coherence",
+      "purpose": "Primary overview of the Honor Roll subsystem; defines lineage, resonance events, badge echoes, and validator roles."
+    },
+    {
+      "path": "BADGES_EARNED.md",
+      "role": "reference",
+      "analyzer_layer": "operator",
+      "purpose": "Record of badge-earning events; operator-level resonance achievements."
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting",
+      "purpose": "Contributor guidelines; cross-cutting rules for participation and lineage integrity."
+    },
+    {
+      "path": "CONTRIBUTOR_BADGES.md",
+      "role": "reference",
+      "analyzer_layer": "operator",
+      "purpose": "Definitions and conditions for contributor badges; operator-level resonance echoes."
+    },
+    {
+      "path": "contributor_honor_roll.md",
+      "role": "index",
+      "analyzer_layer": "regime",
+      "purpose": "Human-readable honor roll listing; regime-level view of contributor lineage."
+    },
+    {
+      "path": "contributors.yaml",
+      "role": "profile",
+      "analyzer_layer": "dimensional",
+      "purpose": "Contributor registry; dimensional metadata for identity, lineage, and resonance profiles."
+    },
+    {
+      "path": "dashboard.md",
+      "role": "map",
+      "analyzer_layer": "regime",
+      "purpose": "Dashboard of honor-roll metrics; regime-level visualization of lineage and resonance activity."
+    },
+    {
+      "path": "glyph_registry.md",
+      "role": "registry",
+      "analyzer_layer": "operator",
+      "purpose": "Registry of glyphs associated with honor-roll events; operator-level symbolic mapping."
+    },
+    {
+      "path": "hippocampus_contributors.md",
+      "role": "reference",
+      "analyzer_layer": "coherence",
+      "purpose": "Memory-core contributor list; coherence layer for long-term lineage preservation."
+    },
+    {
+      "path": "honor_roll_ledger.json",
+      "role": "engine",
+      "analyzer_layer": "regime",
+      "purpose": "Canonical ledger of honor-roll events; regime-level engine for resonance tracking."
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "operator",
+      "purpose": "Web-facing index for honor-roll content; operator-level presentation layer."
+    },
+    {
+      "path": "papers_contributor_honor_roll.md",
+      "role": "reference",
+      "analyzer_layer": "dimensional",
+      "purpose": "Paper-style documentation of honor-roll theory; dimensional analysis of lineage and resonance."
+    },
+    {
+      "path": "resonance_council.md",
+      "role": "signature",
+      "analyzer_layer": "regime",
+      "purpose": "Defines the resonance council; signature-level governance structure for lineage validation."
+    },
+    {
+      "path": "triadic_curriculum_index.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting",
+      "purpose": "Index linking honor-roll lineage to curriculum; cross-cutting educational integration."
+    },
+    {
+      "path": "triadic_discussion_starter.md",
+      "role": "template",
+      "analyzer_layer": "operator",
+      "purpose": "Discussion starter template; operator-level scaffolding for contributor engagement."
+    },
+    {
+      "path": "triadic_equation_registry.md",
+      "role": "registry",
+      "analyzer_layer": "dimensional",
+      "purpose": "Registry of equations relevant to honor-roll resonance analysis; dimensional substrate mapping."
+    },
+    {
+      "path": "triadic_sponsor_pitch.md",
+      "role": "example",
+      "analyzer_layer": "coherence",
+      "purpose": "Example pitch document; coherence-level narrative for sponsorship and lineage support."
+    },
+    {
+      "path": "triadic_visual_index.md",
+      "role": "index",
+      "analyzer_layer": "operator",
+      "purpose": "Visual index of honor-roll artifacts; operator-level visual mapping."
+    },
+    {
+      "path": "umaywant2.prompt.yml",
+      "role": "signature",
+      "analyzer_layer": "drift",
+      "purpose": "Prompt configuration; drift-aware signature for AI session initialization."
+    },
+
+    {
+      "path": "profiles/",
+      "role": "index",
+      "analyzer_layer": "dimensional",
+      "purpose": "Directory of contributor profiles; dimensional identity mapping."
+    },
+    {
+      "path": "profiles/nawder_loswin.md",
+      "role": "profile",
+      "analyzer_layer": "dimensional",
+      "purpose": "Contributor profile for Nawder Loswin; dimensional identity and lineage metadata."
+    }
+  ]
+}
 
