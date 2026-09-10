@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Library_" src="https://github.com/user-attachments/assets/d70618a9-92ad-4d04-b058-262cab6da7dc" />
 
 # 📚 Library — Canonical Reference Shelf 
 ## Resonance • Indices • Core Reference Material
