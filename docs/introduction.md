@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "Introduction to TriadicFrameworks"
 description: "A reader's orientation to TriadicFrameworks — what it is, why it exists, how its parts relate, and where to go next."
 date: "2026-07-13"
@@ -13,7 +13,7 @@ rtt_review_cycle: quarterly
 rtt_last_reviewed: "2026-07-13"
 rtt_tags: [introduction, overview, orientation, TIRF, FFT, RTT, getting-started]
 rtt_related: DOC-000, DOC-010
----
+--- -->
 
 # Introduction to TriadicFrameworks
 
