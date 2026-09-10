@@ -1,4 +1,4 @@
-
+<img width="1194" height="672" alt="PRINCIPLES_" src="https://github.com/user-attachments/assets/9e5ebd94-6cf7-438c-831a-d61cafc51901" />
 
 <!-- <img width="682" height="682" alt="tft_principals" src="https://github.com/user-attachments/assets/f9eee97a-b420-4508-ba01-2abb40d05e4b" /> -->
 
