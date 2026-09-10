@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="SECURITY_" src="https://github.com/user-attachments/assets/0c81c407-a48c-4cc8-bd92-85d81aa2f280" />
+
 <!-- <img width="682" height="682" alt="tft_security" src="https://github.com/user-attachments/assets/8edab501-f84c-4394-9d00-bf7f3e2b1d7e" /> -->
 
 - [`SECURITY_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/SECURITY_module.json) — Agentic module schema role assignments
