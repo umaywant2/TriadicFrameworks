@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="18_Agriculture_and_Food_Systems_" src="https://github.com/user-attachments/assets/dfc45265-1d52-4afb-858d-31c248284bc3" />
 
 # **RTT_Domain_18_Agriculture_and_Food_Systems**  
 *High‑Level Overview & Early Resonance‑Aware Insights*
