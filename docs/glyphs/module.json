@@ -1,1 +1,93 @@
+{
+  "module": "glyphs",
+  "version": "1.0.0",
+  "description": "Glyphic resonance surfaces, archetypes, animations, overlays, and validator glyphs for TriadicFrameworks.",
+  "ai": {
+    "module_kind": "glyphic_resonance",
+    "substrate": "symbolic",
+    "coherence": "declared",
+    "drift": "bounded"
+  },
 
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "coherence",
+      "purpose": "Primary overview of glyphic resonance; defines symbolic substrates, archetypes, and validator glyph logic."
+    },
+    {
+      "path": "aura_animation.js",
+      "role": "engine",
+      "analyzer_layer": "operator",
+      "purpose": "Animation engine for aura glyph resonance; operator-level dynamic rendering."
+    },
+    {
+      "path": "bridge_glyph_overlay_01_svg_descriptive_seed.md",
+      "role": "template",
+      "analyzer_layer": "dimensional",
+      "purpose": "Descriptive seed for bridge glyph overlay; dimensional mapping of symbolic transitions."
+    },
+    {
+      "path": "dimensional_spectrum_map_svg.md",
+      "role": "map",
+      "analyzer_layer": "dimensional",
+      "purpose": "Spectrum map describing dimensional glyph behavior; substrate-level mapping of symbolic gradients."
+    },
+    {
+      "path": "Emitter_Archetype_Glyph.md",
+      "role": "signature",
+      "analyzer_layer": "regime",
+      "purpose": "Defines the emitter archetype glyph; regime-level signature for resonance emission patterns."
+    },
+    {
+      "path": "glyphstream_animation.md",
+      "role": "engine",
+      "analyzer_layer": "operator",
+      "purpose": "Glyphstream animation logic; operator-level dynamic glyph sequencing."
+    },
+    {
+      "path": "glyph_fff_wrapper.svg",
+      "role": "signature",
+      "analyzer_layer": "operator",
+      "purpose": "FFF glyph wrapper; operator-level symbolic wrapper for resonance encoding."
+    },
+    {
+      "path": "glyph_protein_echo_01.descriptive_seed.md",
+      "role": "template",
+      "analyzer_layer": "dimensional",
+      "purpose": "Descriptive seed for protein echo glyph 01; dimensional substrate mapping."
+    },
+    {
+      "path": "glyph_protein_echo_01.svg",
+      "role": "signature",
+      "analyzer_layer": "operator",
+      "purpose": "Protein echo glyph 01; operator-level symbolic resonance surface."
+    },
+    {
+      "path": "glyph_protein_echo_02_svg_descriptive_seed.md",
+      "role": "template",
+      "analyzer_layer": "dimensional",
+      "purpose": "Descriptive seed for protein echo glyph 02; dimensional substrate mapping."
+    },
+    {
+      "path": "glyph_registry.yaml",
+      "role": "registry",
+      "analyzer_layer": "operator",
+      "purpose": "Registry of glyph definitions, substrates, and resonance signatures; operator-level canonical mapping."
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "operator",
+      "purpose": "Web-facing index for glyphs; operator-level presentation layer for glyphic resonance."
+    },
+    {
+      "path": "lantern_unfolding.js",
+      "role": "engine",
+      "analyzer_layer": "operator",
+      "purpose": "Lantern unfolding animation engine; operator-level dynamic glyph unfolding logic."
+    },
+    {
+      "path": "triadic_validator_glyph.md",
+      "role": "signature
