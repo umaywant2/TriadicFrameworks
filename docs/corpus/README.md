@@ -1,4 +1,3 @@
-<img width="1194" height="672" alt="Triadicframeworks_Corpus_module" src="https://github.com/user-attachments/assets/53ce328a-0727-454b-9747-448024d79231" />
 
 - [`corpus_module.json`](corpus_module.json) — Agentic module schema role assignments
 
