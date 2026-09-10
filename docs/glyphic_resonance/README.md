@@ -1,23 +1,8 @@
-## 🌀 Glyphic Resonance  
+<img width="1194" height="672" alt="Glyphic_Resonance_" src="https://github.com/user-attachments/assets/e8265da9-3d0c-4256-b652-f0b739b97da4" />
 
 - [`glyphic_resonance_module.json`](glyphic_resonance_module.json) — Agentic module schema role assignments
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🎼Glyphic%20Resonance-🔹Harmonic%20Bridge%20Layer%20Active%20AI_Ready-4c8eda?style=for-the-badge" alt="Glyphic Resonance | Ready for Students"/>
-
+## 🌀 Glyphic Resonance  
 This folder contains **glyph overlays and resonance maps**.  
 
 ---
@@ -48,3 +33,20 @@ It ensures that glyphs are not just decorative but functional, activating resona
 ## Cross‑Links
 - [../glyphs](../glyphs) → base glyph sets
 - [../resonance](../resonance) → dashboards and translators
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🎼Glyphic%20Resonance-🔹Harmonic%20Bridge%20Layer%20Active%20AI_Ready-4c8eda?style=for-the-badge" alt="Glyphic Resonance | Ready for Students"/>
+
