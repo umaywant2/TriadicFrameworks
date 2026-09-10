@@ -1,3 +1,6 @@
+<img width="1194" height="672" alt="Medicine_" src="https://github.com/user-attachments/assets/16858810-7509-4e52-93eb-60c75c192166" />
+
+- [`medicine_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/medicine/medicine_module.json) — Agentic module schema role assignments
 
 # **Medicine Module**  
 ### *RTT/1‑Aligned • Zero Drift • Structural • Student‑Safe*
@@ -195,7 +198,3 @@ This module is part of the **TriadicFrameworks** system and follows the same sta
 - operator‑first design  
 - student accessibility  
 - AI‑parsable structure  
-
----
-
-## **End of README**
