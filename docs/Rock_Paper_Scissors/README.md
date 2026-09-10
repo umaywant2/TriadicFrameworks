@@ -1,5 +1,7 @@
 # Rock Paper Scissors — TriadicFrameworks Module
 
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Rock_Paper_Scissors/module.json) — Agentic module schema role assignments
+
 > **Path:** `docs/Rock_Paper_Scissors/`  
 > **Version:** 1.0.0  
 > **Updated:** 2026-09-09  
