@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="RTT_Domain_15_Art_Design_and_Creative_Systems_" src="https://github.com/user-attachments/assets/7e382ddb-c8ea-4eb5-9c4a-6dc7d360dd89" />
+
 # **RTT_Domain_15_Art_Design_and_Creative_Systems**  
 *High‑Level Overview & Early Resonance‑Aware Insights*
 
