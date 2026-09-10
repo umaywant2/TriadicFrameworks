@@ -1,3 +1,4 @@
+
 # **RTT_Domain_06_Engineering**  
 *High‑Level Overview & Early Resonance‑Aware Insights*
 
