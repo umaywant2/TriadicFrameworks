@@ -1,9 +1,8 @@
-<img width="682" height="682" alt="tft_quickstart" src="https://github.com/user-attachments/assets/8cba3455-c953-47ff-8cca-2195d3435e1c" />
-
-## 🚀 Quickstart  
+<!-- <img width="682" height="682" alt="tft_quickstart" src="https://github.com/user-attachments/assets/8cba3455-c953-47ff-8cca-2195d3435e1c" /> -->
 
 - [`QUICKSTART_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/QUICKSTART_module.json) — Agentic module schema role assignments
 
+## 🚀 Quickstart  
 *A student‑first, Copilot‑friendly introduction to Resonance‑Time Theory*
 
 ## **0. What RTT *is* (in 60 seconds)**  
