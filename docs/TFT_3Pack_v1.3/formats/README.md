@@ -1,3 +1,6 @@
+
+- [`formats_module.json`](formats_module.json) — Agentic module schema role assignments
+
 # TFT File Format (.fff)
 
 The `.fff` file format defines the structure of TriadicFrameworks resonance files.  
@@ -54,6 +57,5 @@ description = "Sample resonance file"
 - `validate_tft.sh` — structural checks  
 - `convert_tft.sh` — readable summaries  
 - `batch_process.sh` — multi-file workflows
-- [`formats_module.json`](formats_module.json) — Agentic module schema role assignments
 
 They serve as the core data format for all TFT_3Pack examples.
