@@ -1,4 +1,6 @@
----
+<img width="1194" height="672" alt="About_TriadicFrameworks_" src="https://github.com/user-attachments/assets/5949fdd6-7faf-4331-86db-3702fb4a7922" />
+
+<!-- ---
 canonical_id: tft.about
 doc_class: about_page
 triadic_version: 3.4
@@ -23,7 +25,7 @@ ai_metadata:
   substrate: operator
   resonance: stable
 badge_block: 🧭
----
+--- -->
 
 # 🧭 About TriadicFrameworks  
 ### *A Structural Learning Framework for Students and AI Systems*
