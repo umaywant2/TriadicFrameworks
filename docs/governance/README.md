@@ -1,4 +1,6 @@
 
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/governance/module.json) — Agentic module schema role assignments
+
 # 🏛️ Governance  
 ## Structural Logic • Membership Protocols • Symbolic Permanence
 
