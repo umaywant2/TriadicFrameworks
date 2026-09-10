@@ -1,24 +1,8 @@
-# Bridges Layer  
 
 - [`bridges_module.json`](bridges_module.json) — Agentic module schema role assignments
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🌉Bridges%20Layer-🧩Interpretive%20Canon%20Active-4c8eda?style=for-the-badge" alt="🌉Bridges Layer | 🧩Interpretive Canon Active"/>
-
-Connecting conceptual clarity to operational practice
+# Bridges Layer  
+_Connecting conceptual clarity to operational practice_
 
 The **Bridges** directory contains four lightweight documents that link the
 core TriadicFrameworks canon to the practical environments where reviewers,
@@ -135,4 +119,18 @@ documentation ecosystem.
 
 ---
 
-If you'd like, I can also generate the **Bridge Layer Overview** file you mentioned earlier, or refine each individual bridge file to match this structure.
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🌉Bridges%20Layer-🧩Interpretive%20Canon%20Active-4c8eda?style=for-the-badge" alt="🌉Bridges Layer | 🧩Interpretive Canon Active"/>
