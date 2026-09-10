@@ -9,6 +9,8 @@
   Authority: repo-root canonical index
 -->
 
+- [`SEENMAP.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/SEENMAP.json) — Agentic module schema role assignments
+
 # TriadicFrameworks — Repository SEENMAP
 
 > Full navigational registry · Cross-module index · Unlock conditions · File counts
