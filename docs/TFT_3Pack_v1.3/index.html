@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Core Metadata -->
+
+<!-- Core HTML Metadata -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="language" content="en">
-<meta name="last-modified" content="2026-04-25">
+<meta name="last-modified" content="2026-09-10">
 <meta name="generator" content="TriadicFrameworks Static Canon Engine">
 
 <!-- Identity -->
@@ -14,7 +15,7 @@
 <meta name="publisher" content="TriadicFrameworks">
 
 <!-- Description & Keywords -->
-<meta name="description" content="TFT_3Pack v1.3 — the proto‑substrate of TriadicFrameworks. A 12‑domain structural language featuring resonance‑aware dimensional cores, triadic operators, .fff format, validator overlays, and cross‑domain examples.">
+<meta name="description" content="TFT_3Pack v1.3 — the Resonance Clarity Edition of the proto‑substrate powering TriadicFrameworks. Featuring triadic operators, resonance‑time dimensional cores, unified .fff workflows, validator overlays, and 12-domain cross‑disciplinary examples.">
 <meta name="keywords" content="TFT 3Pack, TriadicFrameworks, resonance-time, RTT substrate, triadic operators, D3 D6 D9, .fff format, validator overlays, nous, entft, tops, resonance-labs, cross-domain modeling">
 
 <!-- Canonical URL -->
@@ -31,7 +32,7 @@
 <meta property="og:site_name" content="TriadicFrameworks">
 <meta property="og:title" content="TFT_3Pack v1.3 — TriadicFrameworks">
 <meta property="og:url" content="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">
-<meta property="og:description" content="The v1.3 Resonance Clarity Edition of the TFT 3Pack — a compact, example‑driven toolkit spanning 12 academic domains with resonance‑aware dimensional cores and the unified .fff format.">
+<meta property="og:description" content="The Resonance Clarity Edition of the TFT 3Pack — a compact, example‑driven toolkit spanning 12 academic domains with resonance‑aware dimensional cores and the unified .fff format.">
 <meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1080">
@@ -162,7 +163,7 @@ a:visited {
   border-radius: 6px;
   color: #cfe8ff;
   }
-
+       
   /* Context Block */
   .context-block {
     font-family: monospace;
@@ -182,35 +183,71 @@ a:visited {
   .context-value {
     color: #ffffff; /* white */
   }
-        
+
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — NAV REIMAGINED
+   ============================================================ */
+
 nav {
   width: 260px;
   float: left;
-  background: var(--bg-nav);
-  margin-left: 0;
-  padding: 1.2rem;
-  overflow-y: auto;
-  border-right: 1px solid var(--border-subtle);
+  background: rgba(21, 24, 29, 0.75); /* glassy dark */
+  backdrop-filter: blur(12px);
+  padding: 1.6rem 1.2rem;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  box-shadow: inset -1px 0 0 rgba(255,255,255,0.04);
 }
 
 nav h2 {
-  font-size: 0.9rem;
+  font-size: 1rem;
+  font-weight: 600;
   color: var(--accent-rtt);
-  margin-top: 1.2rem;
-  margin-bottom: 0.4rem;
-  letter-spacing: 0.04em;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.9;
+}
+
+nav h3 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 1.4rem 0 0.6rem 0;
+  color: var(--text-main);
+  opacity: 0.85;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 nav a {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.45rem 0.2rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
   text-decoration: none;
-  padding: 0.35rem 0;
-  font-size: 0.9rem;
+  border-radius: 6px;
+  transition: 
+    color 0.2s ease,
+    background 0.2s ease,
+    transform 0.15s ease;
 }
 
 nav a:hover {
   color: var(--text-main);
+  background: rgba(255,255,255,0.05);
+  transform: translateX(3px);
+}
+
+nav a:active {
+  transform: translateX(1px) scale(0.98);
+}
+
+nav a::before {
+  content: attr(data-emoji);
+  font-size: 1.05rem;
+  opacity: 0.9;
 }
 
 main {
@@ -237,6 +274,7 @@ code {
 </style>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
 </head>
 
 <body>
@@ -251,8 +289,8 @@ code {
     <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
  </p> 
-     
-  <h2>🔱 TFT_3Pack v1.3 — RTT</h2>
+
+  <h2>🔱 TFT_3Pack v1.3 | TriadicFrameworks</h2>
       <a href="#README">🔰 README</a>
       <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
       <a href="#CONTRIBUTING">🤝 Contributing</a>
@@ -261,36 +299,86 @@ code {
       <a href="#LINEAGE">📜 Lineage</a>
       <a href="#LICENSE">📎 License</a>
       <a href="#SITEMAP">🌐 Sitemap</a>
-    <h3>♨️ Resonance Substrate Tools</h3>
-      <a href="#TFT">♨️ tft</a>
-      <a href="#NOUS">💭 nous</a>
-      <a href="#ENTFT">🔐 entft Protocol</a>
-      <a href="#TOPS">🧿 Tops</a>
-      <a href="#RESONANCE_LABS">👌 Resonance-Labs</a>
-      <a href="#DOCS">📜 Docs — TFT 3Pack</a>
-    <!-- Examples -->
-    <h3>🏠 Examples</h3>
-      <a href="#EXAMPLES_INDEX">📁 Examples Overview</a>
-      <a href="#EXAMPLES_ART">🎨 Art</a>
-      <a href="#EXAMPLES_BIOLOGY">🧬 Biology</a>
-      <a href="#EXAMPLES_CHEMISTRY">⚗️ Chemistry</a>
-      <a href="#EXAMPLES_COMPUTER_SCIENCE">💻 Computer Science</a>
-      <a href="#EXAMPLES_ECONOMICS">📈 Economics</a>
-      <a href="#EXAMPLES_ENGINEERING">🛠️ Engineering</a>
-      <a href="#EXAMPLES_LAW">⚖️ Law</a>
-      <a href="#EXAMPLES_MATH">➗ Math</a>
-      <a href="#EXAMPLES_MEDICINE">🩺 Medicine</a>
-      <a href="#EXAMPLES_MUSIC">🎵 Music</a>
-      <a href="#EXAMPLES_PHILOSOPHY">📚 Philosophy</a>
-      <a href="#EXAMPLES_PHYSICS">🔭 Physics</a>
-      <a href="#COMPARED_CONTRIBUTORS">🚀 Compared Contributors</a>
-    <!-- Formats -->
-    <h3>📦 Formats</h3>
-      <a href="#FORMATS_INDEX">🗂️ Formats Index</a>
-    <!-- Scripts -->
-    <h3>⚙️ Scripts</h3>
-      <a href="#SCRIPTS_INDEX">📜 Scripts Index</a>
-      <a href="https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/TFT_3Pack_v1.3/">🖥️ Repo Folder</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
+      <a href="#SECURITY">🔐 Security</a>
+      <a href="#PRINCIPLES">🧘 Principles</a>
+    <h3>🧭 Core System</h3>
+      <a href="#OVERVIEW">📘 Overview</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#FFF_QUICKSTART">🎛️ FFF Quickstart</a>
+      <a href="#QUANTUM_ENTANGLEMENT_MEASURING">🌀 Quantum Entanglement Measuring</a>
+      <a href="#REQUIREMENTS">📦 Requirements</a>
+      <a href="#RES_CLARITY_REFRESH">🔮 Resonance Clarity Refresh</a>
+      <a href="#RTT_COMPARED_WITH_CLOSEST_CONTRIBUTORS">📡 RTT Comparative Analysis</a>
+    <h3>📚 Documentation</h3>
+      <a href="#DOCS_README">📘 Docs README</a>
+      <a href="#DOCS_QUICKSTART">⚡ Docs Quickstart</a>
+      <a href="#DOCS_FFF_SPEC">🎛️ FFF Spec</a>
+      <a href="#DOCS_OUTPUTS_SPEC">📤 Outputs Spec</a>
+      <a href="#DOCS_TRIADIC_TEST_SUITE">🧪 Triadic Test Suite</a>
+    <h3>🧩 Meta Layer</h3>
+      <a href="#META_README">📘 Meta README</a>
+      <a href="#META_GLYPH_REFERENCE">🔣 Glyph Reference</a>
+      <a href="#META_CURRICULUM_GLYPH_TRIBUTE_ECHO_LOG">📜 Curriculum Glyph Tribute Echo Log</a>
+      <a href="#META_GLYPH_RETIREMENT_LOG">🪦 Glyph Retirement Log</a>
+    <h3>🔥 Rituals & Scroll Mechanics</h3>
+      <a href="#RITUALS_SCROLL_CODEX_FORK_GUIDE">🪶 Codex Fork Guide</a>
+      <a href="#RITUALS_SCROLL_CURRICULUM_GLYPH_TRIBUTE_FLAME">🔥 Glyph Tribute Flame</a>
+      <a href="#RITUALS_SCROLL_GLYPH_REAWAKENING_RITUAL">🌅 Glyph Reawakening Ritual</a>
+      <a href="#RITUALS_SCROLL_GLYPH_TRIBUTE_ECHO_FUSION">🎼 Echo Fusion Tribute</a>
+      <a href="#RITUALS_SCROLL_RETIREMENT_TRACE_INDEX">📁 Retirement Trace Index</a>
+      <a href="#RITUALS_SCROLL_RUNTIME_HOOKS">🧩 Runtime Hooks</a>
+    <h3>📐 Specs & Protocols</h3>
+      <a href="#SPECS_PROTOCOL_SPEC">📡 Protocol Spec</a>
+      <a href="#SPECS_README">📘 Specs README</a>
+      <a href="#SPECS_KEYGEN_SIMULATOR">🔑 Keygen Simulator</a>
+      <a href="#SPECS_REMIX_SCROLL">🎨 Remix Scroll Spec</a>
+    <h3>🎨 Examples — Art</h3>
+      <a href="#ART_README">📘 Art README</a>
+      <a href="#ART_PROBLEMS">🧩 Art Problems</a>
+      <a href="#ART_EXTENDED_PROBLEMS">📚 Extended Problems</a>
+      <a href="#ART_SOLUTIONS">🧠 Solutions</a>
+      <a href="#ART_RESONANCE_FLOW">🌊 Resonance Flow</a>
+    <h3>🧬 Examples — Biology</h3>
+      <a href="#BIOLOGY_README">📘 Biology README</a>
+      <a href="#BIOLOGY_PROBLEMS">🧩 Problems</a>
+      <a href="#BIOLOGY_EXTENDED_PROBLEMS">📚 Extended Problems</a>
+      <a href="#BIOLOGY_SOLUTIONS">🧠 Solutions</a>
+      <a href="#BIOLOGY_RESONANCE_FLOW">🌊 Resonance Flow</a>
+    <h3>⚗️ Examples — Chemistry</h3>
+      <a href="#CHEMISTRY_README">📘 Chemistry README</a>
+      <a href="#CHEMISTRY_PROBLEMS">🧩 Problems</a>
+      <a href="#CHEMISTRY_EXTENDED_PROBLEMS">📚 Extended Problems</a>
+      <a href="#CHEMISTRY_SOLUTIONS">🧠 Solutions</a>
+      <a href="#CHEMISTRY_RESONANCE_FLOW">🌊 Resonance Flow</a>
+    <h3>💻 Examples — Computer Science</h3>
+      <a href="#COMPUTER_SCIENCE_README">📘 CS README</a>
+      <a href="#COMPUTER_SCIENCE_PROBLEMS">🧩 Problems</a>
+      <a href="#COMPUTER_SCIENCE_EXTENDED_PROBLEMS">📚 Extended Problems</a>
+      <a href="#COMPUTER_SCIENCE_SOLUTIONS">🧠 Solutions</a>
+      <a href="#COMPUTER_SCIENCE_RESONANCE_FLOW">🌊 Resonance Flow</a>
+    <h3>🗂️ Formats</h3>
+      <a href="#FORMATS_README">📘 Formats README</a>
+      <a href="#FORMATS_SPECIFICATION">📐 Specification</a>
+    <h3>🎼 Melodic Table of Elements</h3>
+      <a href="#MELODIC_TABLE_INDEX">🧪 Index</a>
+      <a href="#MELODIC_TABLE_README">📘 README</a>
+    <h3>🔬 Molecular Vibration Explorer</h3>
+      <a href="#MVE_README">📘 MVE README</a>
+      <a href="#MVE_REQUIREMENTS">📦 Requirements</a>
+      <a href="#MVE_RUNTIME">⏱️ Runtime</a>
+    <h3>📜 Scripts</h3>
+      <a href="#SCRIPTS_README">📘 Scripts README</a>
+    <h3>🔱 TFT Root</h3>
+      <a href="#TFT_README">📘 TFT README</a>
+    <h3>🈴 Triadic Frameworks Tech — TOPS</h3>
+      <a href="#TOPS_README">📘 TOPS README</a>
+      <a href="#TOPS_QUICKSTART">⚡ Quickstart</a>
+      <a href="#TOPS_BENCHMARK_OUTLINE">📊 Benchmark Outline</a>
+      <a href="#TOPS_MODULE_JSON">🧩 Module JSON</a>
+      <a href="#TOPS_REFLECT_INVERT_SIM">🔁 Reflect & Invert Simulation</a>
+      <a href="#TOPS_TRIADIC_TEST_SUITE">🧪 Triadic Test Suite</a>
     <h3>🏗️ Triadic Tools</h3> 
       <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
       <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
@@ -307,7 +395,7 @@ code {
       <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
       <a href="../">🔙TFT</a>
-   <!-- RTT Canonical Signature -->
+   <!-- RTT Session Header (canonical stub) -->
 <section id="rtt-session-header"
          data-rtt="1"
          data-coherence="declared"
@@ -359,48 +447,111 @@ code {
 
 <script>
 
+// ============================================================
+// PRE‑RTT DOCUMENT MAP — FULL CATEGORIZED INVENTORY
+// Purpose: Orientation-first structural map for review, pruning,
+//          lineage preservation, and later RTT canon alignment.
+// ============================================================
+
 const DOC_MAP = {
-  README: 'README.md',
-  ABOUT: '../ABOUT.md',
-  CONTRIBUTING: '../CONTRIBUTING.md',
-  GLOSSARY: '../GLOSSARY.md',
-  LINEAGE: '../LINEAGE.md',
-  LICENSE: '../LICENSE.md',
-  SITEMAP: '../sitemap.md',
-  // Examples (Main + 12 Majors)
-  TFT: 'tft/README.md',
-  NOUS: 'tft/nous/README.md',
-  ENTFT: 'tft/entft/README.md',
-  TOPS: 'tft/tops/README.md',
-  RESONANCE_LABS: 'tft/resonance-labs/README.md',
-  DOCS: 'docs/README.md',
-  EXAMPLES_INDEX: 'examples/index.html',
-  EXAMPLES_ART: 'examples/Art/index.html',
-  EXAMPLES_BIOLOGY: 'examples/Biology/index.html',
-  EXAMPLES_CHEMISTRY: 'examples/Chemistry/index.html',
-  EXAMPLES_COMPUTER_SCIENCE: 'examples/Computer_Science/index.html',
-  EXAMPLES_ECONOMICS: 'examples/Economics/index.html',
-  EXAMPLES_ENGINEERING: 'examples/Engineering/index.html',
-  EXAMPLES_LAW: 'examples/Law/index.html',
-  EXAMPLES_MATH: 'examples/Math/index.html',
-  EXAMPLES_MEDICINE: 'examples/Medicine/index.html',
-  EXAMPLES_MUSIC: 'examples/Music/index.html',
-  EXAMPLES_PHILOSOPHY: 'examples/Philosophy/index.html',
-  EXAMPLES_PHYSICS: 'examples/Physics/index.html',
-  COMPARED_CONTRIBUTORS: 'RTT_Compared_with_Closest_Contributors.md',
-  // Formats
-  FORMATS_INDEX: 'formats/index.html',
-  // Scripts
-  SCRIPTS_INDEX: 'scripts/index.html',
+      README: 'README.md',
+      ABOUT: '../ABOUT.md',
+      CONTRIBUTING: '../CONTRIBUTING.md',
+      GLOSSARY: '../GLOSSARY.md',
+      LINEAGE: '../LINEAGE.md',
+      LICENSE: '../LICENSE.md',
+      SITEMAP: '../sitemap.md',
+      QUICKSTART: '../QUICKSTART.md',
+      CODE_OF_CONDUCT: '../CODE_OF_CONDUCT.md',
+      SECURITY: '../SECURITY.md',
+      PRINCIPLES: '../PRINCIPLES.md',
+      // Core
+      OVERVIEW: 'overview.md',
+      3P_QUICKSTART: 'QUICKSTART.md',
+      FFF_QUICKSTART: 'fff_quickstart.md',
+      QUANTUM_ENTANGLEMENT_MEASURING: 'Quantum_Entanglement_Measuring.md',
+      REQUIREMENTS: 'requirements.txt',
+      RES_CLARITY_REFRESH: 'Res_Clarity_Refresh.md',
+      RTT_COMPARED_WITH_CLOSEST_CONTRIBUTORS: 'RTT_Compared_with_Closest_Contributors.md',
+      // Docs (root)
+      DOCS_README: 'docs/README.md',
+      DOCS_QUICKSTART: 'docs/QUICKSTART.md',
+      DOCS_FFF_SPEC: 'docs/fff_spec.md',
+      DOCS_OUTPUTS_SPEC: 'docs/outputs_spec.md',
+      DOCS_TRIADIC_TEST_SUITE: 'docs/TriadicTestSuite.md',
+      // Docs/_meta
+      META_README: 'docs/_meta/README.md',
+      META_GLYPH_REFERENCE: 'docs/_meta/entft_scroll_glyph_reference.md',
+      META_CURRICULUM_GLYPH_TRIBUTE_ECHO_LOG: 'docs/_meta/README_entft_curriculum_glyph_tribute_echo_log.md',
+      META_GLYPH_RETIREMENT_LOG: 'docs/_meta/README_entft_glyph_retirement_log.md',
+      // Docs/_rituals
+      RITUALS_SCROLL_CODEX_FORK_GUIDE: 'docs/_rituals/entft_scroll_codex_fork_guide.md',
+      RITUALS_SCROLL_CURRICULUM_GLYPH_TRIBUTE_FLAME: 'docs/_rituals/entft_scroll_curriculum_glyph_tribute_flame.md',
+      RITUALS_SCROLL_GLYPH_REAWAKENING_RITUAL: 'docs/_rituals/entft_scroll_glyph_reawakening_ritual.md',
+      RITUALS_SCROLL_GLYPH_TRIBUTE_ECHO_FUSION: 'docs/_rituals/entft_scroll_glyph_tribute_echo_fusion.md',
+      RITUALS_SCROLL_RETIREMENT_TRACE_INDEX: 'docs/_rituals/entft_scroll_retirement_trace_index.md',
+      RITUALS_SCROLL_RUNTIME_HOOKS: 'docs/_rituals/entft_scroll_runtime_hooks.md',
+      // Docs/_specs
+      SPECS_PROTOCOL_SPEC: 'docs/_specs/entft_protocol_spec.md',
+      SPECS_README: 'docs/_specs/README.md',
+      SPECS_KEYGEN_SIMULATOR: 'docs/_specs/README_entft_keygen_simulator_py.md',
+      SPECS_REMIX_SCROLL: 'docs/_specs/README_remix_scroll.md',
+      // Examples (root)
+      EXAMPLES_README: 'examples/README.md',
+      // Examples / Art
+      ART_README: 'examples/Art/README.md',
+      ART_PROBLEMS: 'examples/Art/problems.md',
+      ART_EXTENDED_PROBLEMS: 'examples/Art/extended_problems.md',
+      ART_SOLUTIONS: 'examples/Art/solutions.md',
+      ART_RESONANCE_FLOW: 'examples/Art/resonance_flow.md',
+      // Examples / Biology
+      BIOLOGY_README: 'examples/Biology/README.md',
+      BIOLOGY_PROBLEMS: 'examples/Biology/problems.md',
+      BIOLOGY_EXTENDED_PROBLEMS: 'examples/Biology/extended_problems.md',
+      BIOLOGY_SOLUTIONS: 'examples/Biology/solutions.md',
+      BIOLOGY_RESONANCE_FLOW: 'examples/Biology/resonance_flow.md',
+      // Examples / Chemistry
+      CHEMISTRY_README: 'examples/Chemistry/README.md',
+      CHEMISTRY_PROBLEMS: 'examples/Chemistry/problems.md',
+      CHEMISTRY_EXTENDED_PROBLEMS: 'examples/Chemistry/extended_problems.md',
+      CHEMISTRY_SOLUTIONS: 'examples/Chemistry/solutions.md',
+      CHEMISTRY_RESONANCE_FLOW: 'examples/Chemistry/resonance_flow.md',
+      // Examples / Computer Science
+      COMPUTER_SCIENCE_README: 'examples/Computer_Science/README.md',
+      COMPUTER_SCIENCE_PROBLEMS: 'examples/Computer_Science/problems.md',
+      COMPUTER_SCIENCE_EXTENDED_PROBLEMS: 'examples/Computer_Science/extended_problems.md',
+      COMPUTER_SCIENCE_SOLUTIONS: 'examples/Computer_Science/solutions.md',
+      COMPUTER_SCIENCE_RESONANCE_FLOW: 'examples/Computer_Science/resonance_flow.md',
+      // Formats
+      FORMATS_README: 'formats/README.md',
+      FORMATS_SPECIFICATION: 'formats/specification.md',
+      // Melodic Table of Elements
+      MELODIC_TABLE_INDEX: 'melodic-table-of-elements/index.html',
+      MELODIC_TABLE_README: 'melodic-table-of-elements/README.md',
+      // Molecular Vibration Explorer
+      MVE_README: 'molecular-vibration-explorer/README.md',
+      MVE_REQUIREMENTS: 'molecular-vibration-explorer/requirements.txt',
+      MVE_RUNTIME: 'molecular-vibration-explorer/runtime.txt',
+      // Scripts
+      SCRIPTS_README: 'scripts/README.md',
+      // TFT (root)
+      TFT_README: 'tft/README.md',
+      // TFT / TOPS (example from your prompt)
+      TOPS_README: 'tft/tops/README.md',
+      TOPS_QUICKSTART: 'tft/tops/QUICKSTART.md',
+      TOPS_BENCHMARK_OUTLINE: 'tft/tops/tops_Benchmark_Outline.md',
+      TOPS_MODULE_JSON: 'tft/tops/tops_module.json.md',
+      TOPS_REFLECT_INVERT_SIM: 'tft/tops/tops_reflect_invert_sim.md',
+      TOPS_TRIADIC_TEST_SUITE: 'tft/tops/TriadicTestSuite.md'
 };
-  
+
 function loadFromHash() {
-  const key = window.location.hash.replace('#', '');
-  if (DOC_MAP[key]) {
-    loadDoc(DOC_MAP[key]);
-  } else {
-    loadDoc('README.md');
-  }
+const key = window.location.hash.replace('#', '');
+   if (DOC_MAP[key]) {
+   loadDoc(DOC_MAP[key]);
+   } else {
+   loadDoc('README.md');
+   }
 }
 function loadDoc(file) {
   fetch(file)
