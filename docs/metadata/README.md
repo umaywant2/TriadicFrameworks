@@ -1,23 +1,7 @@
-# 🧾 Metadata  
 
 - [`metadata_module.json`](metadata_module.json) — Agentic module schema role assignments
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🟦Metadata-📘Catalog%20Layer%20AI%20Ready-4c8eda?style=for-the-badge" alt="Metadata | Catalog Layer • AI‑Ready"/>
-
+# 🧾 Metadata  
 This folder contains **descriptive indexes and tables**.  
 Metadata ensures discoverability, clarity, and remix lineage.
 
@@ -47,3 +31,19 @@ Metadata is the **catalog layer** — it makes every artifact findable and remix
 ## Cross‑Links
 - [../library](../library) → curated collections
 - [../curriculum](../curriculum) → indexes for teaching
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🟦Metadata-📘Catalog%20Layer%20AI%20Ready-4c8eda?style=for-the-badge" alt="Metadata | Catalog Layer • AI‑Ready"/>
