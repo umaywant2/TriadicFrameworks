@@ -1,3 +1,5 @@
+![Intelligence_Class_Ladder](https://github.com/user-attachments/assets/5ca1e1b2-aab5-48e3-8fef-8f734e49aef2)
+
 # Intelligence Class Ladder — Research Index
 *(ICL v2.0.0 · TriadicFrameworks Research Division)*
 
