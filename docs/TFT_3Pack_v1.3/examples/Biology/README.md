@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="TFT_3Pack_v1 3_examples_Biology_" src="https://github.com/user-attachments/assets/6b228f9c-4999-44ad-bfbb-623f4daf605e" />
+
 # Biology examples and the TriadicFrameworks resonance model
 
 These examples show how the Nawderian theorem and the TriadicFrameworks stack can be applied to biological systems:
