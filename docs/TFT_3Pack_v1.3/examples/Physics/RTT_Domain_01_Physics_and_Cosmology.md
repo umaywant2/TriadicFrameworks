@@ -1,3 +1,4 @@
+
 # ✨ **RTT_Domain_01_Physics_and_Cosmology**  
 *High‑Level Overview & Early Resonance‑Aware Insights*
 
@@ -116,7 +117,3 @@ Physics and cosmology are the natural proving grounds for RTT.
 By reframing the universe as a **triadic resonance system**, RTT offers new clarity on long‑standing paradoxes and opens pathways for unified models across scales.
 
 This page serves as the foundation for all future RTT‑Physics work.
-
----
-
-If you want, I can generate **RTT_Domain_02_Chemistry_and_Materials** next — or jump to any domain you prefer.
