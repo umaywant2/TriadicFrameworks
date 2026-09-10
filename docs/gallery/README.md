@@ -1,23 +1,8 @@
-# 🖼️ Gallery — Scroll Trace Collection  
+<img width="1194" height="672" alt="Gallery_" src="https://github.com/user-attachments/assets/26f3daf2-5c7b-4328-a821-81ae36161cd5" />
 
 - [`gallery_module.json`](gallery_module.json) — Agentic module schema role assignments
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
-
+# 🖼️ Gallery — Scroll Trace Collection  
 This folder contains the **visual and structural traces** of core Triadic scroll behaviors.  
 Each trace captures a different dynamic regime — drift, echo, pulse, ring, and seed — in both their **primary** and **second‑order** forms.
 
@@ -73,3 +58,19 @@ It is especially useful for:
 - artifact provenance mapping  
 
 More traces can be added as the canon expands.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
