@@ -1,3 +1,4 @@
+
 # **Medicine Module**  
 ### *RTT/1‑Aligned • Zero Drift • Structural • Student‑Safe*
 
