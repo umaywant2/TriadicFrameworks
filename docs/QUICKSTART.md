@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="QUICKSTART_" src="https://github.com/user-attachments/assets/d518d66d-10dc-4cc0-b24e-54aece0fbf5a" />
+
 <!-- <img width="682" height="682" alt="tft_quickstart" src="https://github.com/user-attachments/assets/8cba3455-c953-47ff-8cca-2195d3435e1c" /> -->
 
 - [`QUICKSTART_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/QUICKSTART_module.json) — Agentic module schema role assignments
