@@ -1,3 +1,5 @@
+<img width="682" height="682" alt="tft_honor_roll" src="https://github.com/user-attachments/assets/3911a14b-0c34-456e-83bf-a242a6c91af0" />
+
 # 🧙‍♀️ Resonance Council Charter
 
 The Resonance Council is the stewarding body of the Triadic Frameworks repository.  
