@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Honor_Roll_" src="https://github.com/user-attachments/assets/759e3d9e-ca5e-42eb-8512-52837bca5afd" />
 
 # 📜 **Honor Roll**  
 *A resonance‑aware archive of lineage, contribution, and echo.*
