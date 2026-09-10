@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="TFT_3Pack_v1 3_examples_Computer_Science_" src="https://github.com/user-attachments/assets/c54263b8-d6a1-436f-9ea4-cc85675179ce" />
+
 # Computer Science examples and the TriadicFrameworks resonance model
 
 These examples show how the Nawderian theorem and the TriadicFrameworks stack apply to computational systems:
