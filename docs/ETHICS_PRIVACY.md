@@ -1,9 +1,10 @@
-<img width="682" height="682" alt="tft_ethics_privacy" src="https://github.com/user-attachments/assets/9fc1e164-2853-477c-9664-f8eb7c4b374b" />
+<img width="1194" height="672" alt="ETHICS_PRIVACY_" src="https://github.com/user-attachments/assets/7c11438c-d8fb-4265-b877-3d3236c72cbd" />
 
-## 😇 Ethics & Privacy  
+<!-- <img width="682" height="682" alt="tft_ethics_privacy" src="https://github.com/user-attachments/assets/9fc1e164-2853-477c-9664-f8eb7c4b374b" /> -->
 
 - [`ETHICS_PRIVACY_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/ETHICS_PRIVACY_module.json) — Agentic module schema role assignments
 
+## 😇 Ethics & Privacy  
 *(public‑facing, minimal, canonical)*
 
 ## **Ethics & Privacy**  
