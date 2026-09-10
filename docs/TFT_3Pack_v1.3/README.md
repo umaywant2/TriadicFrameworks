@@ -1,4 +1,3 @@
-<img width="1194" height="672" alt="TFT_3Pack_v1 3_module" src="https://github.com/user-attachments/assets/4dc7e498-a892-45fc-a4a9-f21b9c893e23" />
 
 ###### 🔱 TFT 3Pack v1.3
 
