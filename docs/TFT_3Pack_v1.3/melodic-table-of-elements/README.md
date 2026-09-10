@@ -1,11 +1,7 @@
+
+- [`melodic-table_module.json`](melodic-table_module.json) — Agentic module schema role assignments
+
 # The interactive periodic table of elements
-
-[![License](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![Website](https://img.shields.io/website?down_color=red&down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Fleonard-seydoux.github.io%2Fmelodic-table-of-elements%2F)](https://leonard-seydoux.github.io/melodic-table-of-elements/)
-[![GitHub last commit](https://img.shields.io/github/last-commit/leonard-seydoux/melodic-table-of-elements)]()
-[![GitHub contributors](https://img.shields.io/github/contributors/leonard-seydoux/melodic-table-of-elements)]()
-![GitHub repo size](https://img.shields.io/github/repo-size/leonard-seydoux/melodic-table-of-elements)
-
 
 This repository is an artistic project that turns the periodic table of elements into an interactive musical instrument. No description needed, just try it at https://leonard-seydoux.github.io/melodic-table-of-elements/. The project aims at evolving, so feel free to contribute! 
 
@@ -31,4 +27,8 @@ Finally, the waveform is shaped with a Tukey window, with an exponential decay t
 
 One notable issue is the click sound that may appear when the pointer leaves and re-enters the element before the fade-out of the sound. This is due to the fact that the sound is stopped and restarted when the pointer leaves and re-enters the element. I tried to have an "emergency" fade-out of the sound when the pointer leaves and re-enters the element, but it did not work. If you have any idea on how to solve this issue, please let me know!
 
-- [`melodic-table_module.json`](melodic-table_module.json) — Agentic module schema role assignments
+[![License](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![Website](https://img.shields.io/website?down_color=red&down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Fleonard-seydoux.github.io%2Fmelodic-table-of-elements%2F)](https://leonard-seydoux.github.io/melodic-table-of-elements/)
+[![GitHub last commit](https://img.shields.io/github/last-commit/leonard-seydoux/melodic-table-of-elements)]()
+[![GitHub contributors](https://img.shields.io/github/contributors/leonard-seydoux/melodic-table-of-elements)]()
+![GitHub repo size](https://img.shields.io/github/repo-size/leonard-seydoux/melodic-table-of-elements)
