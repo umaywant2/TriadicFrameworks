@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="TFT_3Pack_v1 3_formats_" src="https://github.com/user-attachments/assets/68b3bb84-7af3-484a-a320-2215add901a4" />
 
 - [`formats_module.json`](formats_module.json) — Agentic module schema role assignments
 
