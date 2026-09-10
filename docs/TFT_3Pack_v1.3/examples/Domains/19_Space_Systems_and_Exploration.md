@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="19_Space_Systems_and_Exploration_" src="https://github.com/user-attachments/assets/db6404c6-1a09-4628-8eab-05339d42b8f4" />
 
 # **RTT_Domain_19_Space_Systems_and_Exploration**  
 *High‑Level Overview & Early Resonance‑Aware Insights*
