@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="RTT_Domain_08_Mathematics_and_Logic_" src="https://github.com/user-attachments/assets/481a35bc-544d-459b-978d-a6ae97707255" />
+
 # **RTT_Domain_08_Mathematics_and_Logic**  
 *High‑Level Overview & Early Resonance‑Aware Insights*
 
