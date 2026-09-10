@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="ipd_12_image" src="https://github.com/user-attachments/assets/29cf629d-affc-44b2-bcef-5cf9c22e78cb" />
+
 # ABOUT — Intransitive Prime‑Numbered 12‑Sided Engine (IPD‑12)
 
 **Module path:** `docs/frameworks/ipd_12/`
