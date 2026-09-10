@@ -1,4 +1,4 @@
-<img width="1792" height="1008" alt="CONTRIBUTING_" src="https://github.com/user-attachments/assets/930f67ad-adb3-41a3-84fd-0f4ded376dc6" />
+<img width="1194" height="672" alt="CONTRIBUTING_" src="https://github.com/user-attachments/assets/930f67ad-adb3-41a3-84fd-0f4ded376dc6" />
 
 <!-- <img width="682" height="682" alt="tft_contributing_module" src="https://github.com/user-attachments/assets/1e8a8a49-1ed5-42b7-95b0-5e3e23853125" /> -->
 
