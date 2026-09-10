@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="RTT_Domain_06_Engineering_" src="https://github.com/user-attachments/assets/27eab199-293e-4871-89db-bf3e612e0102" />
 
 # **RTT_Domain_06_Engineering**  
 *High‑Level Overview & Early Resonance‑Aware Insights*
