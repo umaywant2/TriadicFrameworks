@@ -1,3 +1,4 @@
+TFT_3Pack_v1.3_examples_Engineering_
 # Engineering examples and the TriadicFrameworks resonance model
 
 These examples show how the Nawderian theorem and the TriadicFrameworks stack apply to engineering systems:
