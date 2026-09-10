@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="14_Communication_Media_and_Language_" src="https://github.com/user-attachments/assets/283acb70-7938-414b-873d-2540ce18f554" />
+
 # **RTT_Domain_14_Communication_Media_and_Language**  
 *High‑Level Overview & Early Resonance‑Aware Insights*
 
