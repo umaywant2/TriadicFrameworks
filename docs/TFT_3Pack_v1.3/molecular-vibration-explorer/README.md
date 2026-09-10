@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="molecular-vibration-explorer_" src="https://github.com/user-attachments/assets/b99f8943-5d42-463c-a6f2-fd95f1d73d59" />
+
 # Molecular Vibration Explorer
 
 **Molecular Vibration Explorer** is an interactive tool for exploring molecular vibrational spectra and tensorial light-vibration coupling strength for applications in the field of surface-enhanced spectroscopy. The Gold database gathers the results from density functional theory calculations on 2’800 commercially available thiol compounds linked to a gold atom, with the main motivation to screen the best molecules for THz and mid-infrared to visible upconversion. The Thiol database contains calculations on 1’900 commercially available thiol compounds. The different tools available to analyze the database were previously introduced in the following references: 
