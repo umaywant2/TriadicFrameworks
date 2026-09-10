@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="SARG_" src="https://github.com/user-attachments/assets/061218b7-355d-4afb-87f1-2deb3e626eb4" />
 
 - [`SARG_module.json`](SARG_module.json) — Agentic module schema role assignments
 
