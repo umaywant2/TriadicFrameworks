@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="RTT_Domain_11_Psychology_Cognition_and_Behavior_" src="https://github.com/user-attachments/assets/acf25564-c53d-4340-89fa-e3af37db2cfd" />
 
 # **RTT_Domain_11_Psychology_Cognition_and_Behavior**  
 *High‑Level Overview & Early Resonance‑Aware Insights*
