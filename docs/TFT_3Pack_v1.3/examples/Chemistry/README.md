@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="TFT_3Pack_v1 3_examples_Chemistry_" src="https://github.com/user-attachments/assets/2111c246-b5f0-4d2b-ae08-45bfb36969d4" />
 
 # Chemistry examples and the TriadicFrameworks resonance model
 
