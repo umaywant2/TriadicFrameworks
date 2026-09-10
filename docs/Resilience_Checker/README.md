@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Resilience_Checker_" src="https://github.com/user-attachments/assets/ed96ad45-2892-496f-bf7c-bd628e9954a5" />
 
 - [`Resilience_Checker_module.json`](Resilience_Checker_module.json) — Agentic module schema role assignments
 
