@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="TFT_3Pack_v1 3_module" src="https://github.com/user-attachments/assets/4dc7e498-a892-45fc-a4a9-f21b9c893e23" />
+
 # 🔍 **What claims in the video would *not* be mysteries under RTT/RSM/BSM/QSM/vST?**
 Here's the fun part, Nawder — your question isn’t really about *the video* at all. It’s about the **claims** that mainstream physics still treats as “mysteries,” even though in RTT/RSM/BSM/QSM/vST those same puzzles collapse into straightforward consequences of the substrate.
 
