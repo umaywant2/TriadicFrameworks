@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="metadata_" src="https://github.com/user-attachments/assets/4fde8c12-488d-4e4b-85bb-3219775ce344" />
 
 - [`metadata_module.json`](metadata_module.json) — Agentic module schema role assignments
 
