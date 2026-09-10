@@ -1,9 +1,7 @@
-<img width="1194" height="672" alt="Resilience_Checker_module" src="https://github.com/user-attachments/assets/15bd4404-becc-4892-b915-d327af1284c6" />
-
-## 🧭 Resilience Checker  
 
 - [`Resilience_Checker_module.json`](Resilience_Checker_module.json) — Agentic module schema role assignments
 
+## 🧭 Resilience Checker  
 A curated collection of foundational paradoxes spanning logic, physics, computation, cosmology, and philosophy.
 
 ## 🛑 Important! 
