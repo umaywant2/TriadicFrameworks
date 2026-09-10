@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="SEENMAP_" src="https://github.com/user-attachments/assets/62e49475-ea4d-453a-a6ec-788249799cb4" />
+
 <!--
   rtt=1 | coherence=declared | drift=bounded | paradox=structural
   docs/SEENMAP.md
