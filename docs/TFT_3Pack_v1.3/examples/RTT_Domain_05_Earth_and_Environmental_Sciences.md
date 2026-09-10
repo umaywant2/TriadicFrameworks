@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="RTT_Domain_05_Earth_and_Environmental_Sciences_" src="https://github.com/user-attachments/assets/c9fa58de-db34-4f53-8cd1-95b487c67da2" />
+
 # **RTT_Domain_05_Earth_and_Environmental_Sciences**  
 *High‑Level Overview & Early Resonance‑Aware Insights*
 
