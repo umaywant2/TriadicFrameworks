@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="RTT_Domain_07_Computing_AI_and_Information_Systems_" src="https://github.com/user-attachments/assets/21e46329-180b-466b-b7fd-024d7c6866ee" />
+
 # **RTT_Domain_07_Computing_AI_and_Information_Systems**  
 *High‑Level Overview & Early Resonance‑Aware Insights*
 
