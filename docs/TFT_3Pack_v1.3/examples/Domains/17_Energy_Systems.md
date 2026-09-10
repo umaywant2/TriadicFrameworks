@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="17_Energy_Systems_" src="https://github.com/user-attachments/assets/b69822f8-2846-4633-84a5-1d8e121fb81f" />
 
 # **RTT_Domain_17_Energy_Systems**  
 *High‑Level Overview & Early Resonance‑Aware Insights*
