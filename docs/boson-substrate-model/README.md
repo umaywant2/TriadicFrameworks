@@ -2,8 +2,6 @@
 
 - [`bsm_module.json`](bsm_module.json) — Agentic module schema role assignments
   
-# Boson Substrate Model (BSM) 
-
 The Boson Substrate Model (BSM) defines a minimal structural substrate intended to support higher‑order operator dynamics without encoding domain‑specific semantics or empirical claims.
 
 The model formalizes a coherent substrate layer in which operator‑mediated interactions occur under explicitly declared operating regimes. Its purpose is to make substrate assumptions, boundaries, and validation conditions inspectable and reproducible.
