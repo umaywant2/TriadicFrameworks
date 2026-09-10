@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="RTT_Domain_01_Physics_and_Cosmology_" src="https://github.com/user-attachments/assets/511ae298-c7ee-470d-ad79-4861734a092b" />
 
 # ✨ **RTT_Domain_01_Physics_and_Cosmology**  
 *High‑Level Overview & Early Resonance‑Aware Insights*
