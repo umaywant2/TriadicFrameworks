@@ -1,1 +1,282 @@
+{
+  "$schema": "https://triadicframeworks.org/schemas/module/v1.0.0",
+  "module": {
+    "id": "rock_paper_scissors",
+    "label": "Rock Paper Scissors",
+    "version": "1.0.0",
+    "created": "2026-09-09",
+    "updated": "2026-09-09",
+    "status": "stable",
+    "repository": "TriadicFrameworks",
+    "path": "docs/Rock_Paper_Scissors",
+    "description": "Triadic encoding of the Rock-Paper-Scissors zero-sum game. Models each throw as a triadic node with Peircean positional semantics (Firstness/Secondness/Thirdness), cyclic Z₃ dominance relations, a complete signed payoff matrix, and a multi-tier agentic decision protocol. Serves as the canonical minimal benchmark for the TriadicFrameworks project.",
+    "domain": ["Agentic Science", "Game-Theoretic Triadics", "Peircean Semiotics"],
+    "tags": [
+      "triadic", "game-theory", "zero-sum", "cyclic-dominance",
+      "Peircean", "agentic", "benchmark",
+      "Firstness", "Secondness", "Thirdness", "Nash", "Z3"
+    ]
+  },
 
+  "triadic_schema": {
+    "framework": "Peircean",
+    "positions": ["Firstness", "Secondness", "Thirdness"],
+    "sign_types": ["Qualisign", "Sinsign", "Legisign"],
+    "completeness": "full",
+    "closure": "cyclic"
+  },
+
+  "entities": [
+    {
+      "id": "rock",
+      "label": "Rock",
+      "file": "entities/Rock.md",
+      "triadic_position": "Firstness",
+      "peirce_sign_type": "Qualisign",
+      "qualitative_descriptors": ["solid", "inert", "immediate", "dense", "resistant"],
+      "phenomenology": "Brute presence; pre-relational; self-contained",
+      "modality": "Actuality without relation",
+      "beats": ["scissors"],
+      "beaten_by": ["paper"],
+      "draws": ["rock"],
+      "outcome_vector": {
+        "vs_rock": 0,
+        "vs_paper": -1,
+        "vs_scissors": 1
+      },
+      "agentic": {
+        "nash_weight": 0.3333,
+        "novice_empirical_frequency": 0.354,
+        "risk_against": "paper",
+        "reward_against": "scissors",
+        "heuristic_biases": [
+          "loss_aversion_reset_after_scissors_loss",
+          "default_anchor_for_naive_players"
+        ]
+      }
+    },
+    {
+      "id": "paper",
+      "label": "Paper",
+      "file": "entities/Paper.md",
+      "triadic_position": "Secondness",
+      "peirce_sign_type": "Sinsign",
+      "qualitative_descriptors": ["flexible", "mediating", "covering", "contextual", "relational"],
+      "phenomenology": "Brute dyadic fact; requires Other to be itself",
+      "modality": "Reaction; dyadic encounter; relation-dependence",
+      "beats": ["rock"],
+      "beaten_by": ["scissors"],
+      "draws": ["paper"],
+      "outcome_vector": {
+        "vs_rock": 1,
+        "vs_paper": 0,
+        "vs_scissors": -1
+      },
+      "agentic": {
+        "nash_weight": 0.3333,
+        "novice_empirical_frequency": 0.317,
+        "risk_against": "scissors",
+        "reward_against": "rock",
+        "heuristic_biases": [
+          "optimal_response_to_rock_heavy_opponent",
+          "least_salient_weapon_for_novice_players"
+        ]
+      }
+    },
+    {
+      "id": "scissors",
+      "label": "Scissors",
+      "file": "entities/Scissors.md",
+      "triadic_position": "Thirdness",
+      "peirce_sign_type": "Legisign",
+      "qualitative_descriptors": ["precise", "differentiating", "mediating", "dual", "cutting"],
+      "phenomenology": "Thirdness as synthesis; brings relation into act",
+      "modality": "Mediation; law-like regularity; habit-formation",
+      "beats": ["paper"],
+      "beaten_by": ["rock"],
+      "draws": ["scissors"],
+      "outcome_vector": {
+        "vs_rock": -1,
+        "vs_paper": 1,
+        "vs_scissors": 0
+      },
+      "agentic": {
+        "nash_weight": 0.3333,
+        "novice_empirical_frequency": 0.329,
+        "risk_against": "rock",
+        "reward_against": "paper",
+        "heuristic_biases": [
+          "second_order_reasoning_signal",
+          "habit_pattern_detection_analog"
+        ]
+      }
+    }
+  ],
+
+  "relations": {
+    "dominance": {
+      "id": "dominance",
+      "file": "relations/dominance.md",
+      "type": "cyclic_binary",
+      "arity": 2,
+      "properties": {
+        "irreflexive": true,
+        "asymmetric": true,
+        "transitive": false,
+        "cyclic": true,
+        "cycle_length": 3,
+        "group_symmetry": "Z3"
+      },
+      "edges": [
+        { "from": "rock",     "to": "scissors", "label": "crushes",
+          "mechanism": "compressive force exceeds shear tolerance of blade" },
+        { "from": "scissors", "to": "paper",    "label": "cuts",
+          "mechanism": "differentiation boundary severs relational continuity" },
+        { "from": "paper",    "to": "rock",     "label": "covers",
+          "mechanism": "contextual relation supersedes pure immediacy" }
+      ],
+      "triadic_reading": {
+        "firstness_over_thirdness": "Brute immediacy destroys the mechanism of mediation",
+        "thirdness_over_secondness": "Differentiation severs relational coverage",
+        "secondness_over_firstness": "Contextual relation supersedes pure presence"
+      },
+      "adjacency_matrix": {
+        "row_order": ["rock", "paper", "scissors"],
+        "col_order": ["rock", "paper", "scissors"],
+        "values": [
+          [0, 0, 1],
+          [1, 0, 0],
+          [0, 1, 0]
+        ],
+        "encoding": "1 = row dominates col"
+      }
+    },
+
+    "outcomes": {
+      "id": "outcomes",
+      "file": "relations/outcomes.md",
+      "type": "payoff_matrix",
+      "perspective": "player_a",
+      "encoding": { "win": 1, "draw": 0, "loss": -1 },
+      "properties": {
+        "zero_sum": true,
+        "antisymmetric": true,
+        "skew_symmetric": true,
+        "diagonal": 0,
+        "matrix_rank": 2
+      },
+      "matrix": {
+        "row_order": ["rock", "paper", "scissors"],
+        "col_order": ["rock", "paper", "scissors"],
+        "values": [
+          [ 0, -1,  1],
+          [ 1,  0, -1],
+          [-1,  1,  0]
+        ]
+      },
+      "expected_value_at_nash": {
+        "nash_vs_nash":          0.000,
+        "nash_vs_rock_only":     0.333,
+        "nash_vs_paper_only":    0.333,
+        "nash_vs_scissors_only": 0.333,
+        "pure_vs_nash":         -0.333
+      }
+    }
+  },
+
+  "game_theory": {
+    "game_type": "zero_sum",
+    "players": 2,
+    "action_set_size": 3,
+    "pure_strategy_nash_equilibria": [],
+    "mixed_strategy_nash_equilibrium": {
+      "strategy": { "rock": 0.3333, "paper": 0.3333, "scissors": 0.3333 },
+      "expected_payoff_per_player": 0.0,
+      "uniqueness": true,
+      "support": "full",
+      "symmetric": true,
+      "derivation_file": "agentic/Nash_equilibrium.md"
+    },
+    "minimax_value": 0.0,
+    "evolutionary_stability": {
+      "is_ess": true,
+      "stability_type": "neutrally_stable_orbit",
+      "note": "Replicator dynamic produces non-convergent cyclic trajectories around σ*"
+    },
+    "exploitability": [
+      { "deviation": "rock_heavy",     "optimal_exploit": "paper",    "direction": "paper_only" },
+      { "deviation": "paper_heavy",    "optimal_exploit": "scissors", "direction": "scissors_only" },
+      { "deviation": "scissors_heavy", "optimal_exploit": "rock",     "direction": "rock_only" }
+    ]
+  },
+
+  "agentic": {
+    "protocol_file": "agentic/agent_protocol.md",
+    "tiers": [
+      {
+        "tier": 0,
+        "name": "Naive",
+        "peirce_mode": "Firstness",
+        "sign_type": "Qualisign",
+        "strategy": "uniform_random",
+        "implements_nash": true,
+        "exploits": "none",
+        "exploited_by": "any_adaptive_agent_against_any_bias"
+      },
+      {
+        "tier": 1,
+        "name": "Adaptive",
+        "peirce_mode": "Secondness",
+        "sign_type": "Sinsign",
+        "strategy": "counter_most_frequent_observed_throw",
+        "implements_nash": false,
+        "exploits": "deterministic_and_biased_opponents",
+        "exploited_by": "tier_2_agents_aware_of_adaptive_pattern"
+      },
+      {
+        "tier": 2,
+        "name": "Triadic",
+        "peirce_mode": "Thirdness",
+        "sign_type": "Legisign",
+        "strategy": "recursive_opponent_tier_modeling",
+        "implements_nash": "fallback_against_tier_2_opponents",
+        "exploits": "tier_0_and_tier_1_opponents",
+        "exploited_by": "none_under_nash_fallback"
+      }
+    ],
+    "decision_loop": [
+      "Observe opponent history H",
+      "Estimate opponent tier T ∈ {0, 1, 2}",
+      "Select move M = triadic_agent(H, T, self_history)",
+      "Submit M; observe outcome O ∈ {win, draw, loss}",
+      "Update opponent model and self history",
+      "If O = loss → increment tier estimate",
+      "If 3+ consecutive wins → freeze current strategy"
+    ],
+    "priors": {
+      "description": "Empirically-informed initialization before any opponent history is observed",
+      "novice":       { "rock": 0.354, "paper": 0.317, "scissors": 0.329 },
+      "intermediate": { "rock": 0.340, "paper": 0.327, "scissors": 0.333 },
+      "expert_nash":  { "rock": 0.333, "paper": 0.333, "scissors": 0.333 }
+    }
+  },
+
+  "files": [
+    { "path": "README.md",                   "type": "documentation", "role": "user_entry_point" },
+    { "path": "index.md",                    "type": "documentation", "role": "module_overview_and_registry" },
+    { "path": "module.json",                 "type": "manifest",      "role": "machine_readable_full_schema" },
+    { "path": "module.yaml",                 "type": "manifest",      "role": "machine_readable_lightweight" },
+    { "path": "entities/Rock.md",            "type": "entity",        "role": "triadic_definition" },
+    { "path": "entities/Paper.md",           "type": "entity",        "role": "triadic_definition" },
+    { "path": "entities/Scissors.md",        "type": "entity",        "role": "triadic_definition" },
+    { "path": "relations/dominance.md",      "type": "relation",      "role": "cyclic_dominance_schema" },
+    { "path": "relations/outcomes.md",       "type": "relation",      "role": "full_outcome_matrix" },
+    { "path": "agentic/agent_protocol.md",   "type": "agentic",       "role": "move_selection_protocol" },
+    { "path": "agentic/Nash_equilibrium.md", "type": "agentic",       "role": "equilibrium_reference" }
+  ],
+
+  "related_modules": [
+    { "id": "core_schema",       "path": "docs/Core_Schema",       "relation": "parent_ontology" },
+    { "id": "agentic_protocols", "path": "docs/Agentic_Protocols", "relation": "general_agent_framework" }
+  ]
+}
