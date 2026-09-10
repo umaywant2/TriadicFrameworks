@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="bridges_" src="https://github.com/user-attachments/assets/79e25a04-57fa-4c00-8c9f-bca4460cf641" />
 
 - [`bridges_module.json`](bridges_module.json) — Agentic module schema role assignments
 
