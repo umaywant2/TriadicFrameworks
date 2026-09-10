@@ -1,0 +1,216 @@
+{
+  "seenmap": {
+    "purpose": "Repository-wide navigational registry; cross-module index; unlock conditions; file counts.",
+    "anchors": {
+      "rtt": 1,
+      "coherence": "declared",
+      "drift": "bounded",
+      "paradox": "structural"
+    },
+
+    "topology": {
+      "root": "umaywant2/TriadicFrameworks",
+      "directories": {
+        "docs": "Canonical module documentation",
+        "SEENMAP.md": "Repository navigational registry",
+        "FFF_Gravity": "Complete module (5 waves)",
+        "SoN": "Structural Operating Node (in progress)",
+        "spine": "Infrastructure scaffolding",
+        "languages": "Notation registry",
+        "tests": "Test harnesses",
+        "sats-conformance": "SATS engine",
+        "harness": "Substrate-aware ordering contract"
+      },
+      "root_files": {
+        "README.md": "Repository front door",
+        "CONTEXT.md": "Session context primer",
+        "LICENSE": "Apache-2.0",
+        "CHANGELOG.md": "Root-level changelog",
+        "modules.txt": "Machine-readable module registry",
+        "glossary-seed.yaml": "Cross-module glossary seed",
+        "llms.txt": "AI routing config",
+        "persona-prompt.md": "AI persona definition",
+        "zenodo.json": "Archival metadata",
+        "pyproject.toml": "Python config",
+        "requirements.txt": "Python dependencies",
+        "robots.txt": "Crawler directives",
+        "CNAME": "GitHub Pages domain binding"
+      }
+    },
+
+    "module_registry": [
+      {
+        "name": "FFF_Gravity",
+        "path": "docs/FFF_Gravity/",
+        "status": "complete",
+        "waves": 5,
+        "files": 31,
+        "prims": 42,
+        "unlocks": ["SEENMAP", "module.json refresh"]
+      },
+      {
+        "name": "SoN",
+        "path": "docs/SoN/",
+        "status": "in_progress",
+        "waves": "TBD",
+        "files": "TBD",
+        "prims": "TBD",
+        "unlocks": ["SoNai(rtt)=1 substrate harness"]
+      },
+      {
+        "name": "spine/languages",
+        "path": "docs/spine/languages/",
+        "status": "in_progress",
+        "waves": "TBD",
+        "files": "TBD",
+        "prims": "N/A"
+      }
+    ],
+
+    "modules": {
+      "FFF_Gravity": {
+        "triadic_equation": "G = F_freq · F_fluid · F_force",
+        "invariants": "INV-001–INV-010",
+        "prims": "PRIM-001–042",
+        "failure_modes": ["FM-001–FM-010", "FM-003-M", "FM-003-C", "FM-003-N"],
+        "condition_prefixes": [
+          "SC", "DC", "MC", "CAS", "SCS", "HLC", "RLC", "AC", "TC", "NC", "DISM"
+        ],
+        "state_flags": 31,
+        "operators": 101,
+        "waves": {
+          "wave0": {
+            "files": ["f_Capture.md", "f_Source.md", "GravityOfDismissal.md"],
+            "prim_range": "001–006"
+          },
+          "wave1": {
+            "files": ["README.md", "INDEX.md", "OPERATORS.md", "GLOSSARY.md", "CHANGELOG.md", "MANIFEST.md"],
+            "prim_range": "none"
+          },
+          "wave2": {
+            "files": ["f_Field.md", "f_Force.md", "f_Frame.md"],
+            "prim_range": "001–006"
+          },
+          "wave3": {
+            "files": [
+              "f_Orbit.md", "f_Release.md", "f_Decay.md", "f_Collapse.md",
+              "f_Emit.md", "f_Dampen.md", "f_Amplify.md", "f_Deflect.md"
+            ],
+            "prim_range": "007–024"
+          },
+          "wave4": {
+            "files": [
+              "f_Capture_Multi.md", "f_Capture_Cascade.md", "f_Capture_Soft.md",
+              "f_Capture_Hard.md", "f_Capture_Resonant.md", "f_Capture_Asymmetric.md",
+              "f_Capture_Temporal.md", "f_Capture_Networked.md"
+            ],
+            "prim_range": "025–040"
+          },
+          "wave5": {
+            "files": ["f_Dismiss.md"],
+            "prim_range": "041–042"
+          }
+        }
+      },
+
+      "SoN": {
+        "lineage": "Inverse of NoS",
+        "codename": "SoNai",
+        "vision": "RTT-aware substrate for AI training models",
+        "academic_frame": "Professor persona",
+        "known_files": ["s_Capture.md"],
+        "planned": [
+          "s_Field.md",
+          "s_Force.md",
+          "s_Frame.md",
+          "s_Orbit.md",
+          "s_Harness.md",
+          "SoN_module.json",
+          "README.md",
+          "INDEX.md",
+          "OPERATORS.md",
+          "CHANGELOG.md"
+        ],
+        "microkernel_targets": {
+          "seL4": "Formal minimality",
+          "L4": "Performance minimality",
+          "Redox": "Memory-safe minimality"
+        }
+      },
+
+      "spine": {
+        "purpose": "Cross-module scaffolding and notation registry",
+        "languages": {
+          "README.md": "Atlas front door"
+        }
+      }
+    },
+
+    "cross_module_references": [
+      {
+        "from": "FFF_Gravity/f_Dismiss.md",
+        "via": "GravityOfDismissal.md",
+        "purpose": "Negative-polarity field authority"
+      },
+      {
+        "from": "FFF_Gravity/*.md",
+        "via": "spine/languages/",
+        "purpose": "Operator symbol disambiguation"
+      },
+      {
+        "from": "SoN/s_Capture.md",
+        "via": "FFF_Gravity/f_Capture.md",
+        "purpose": "Capture operator lineage"
+      },
+      {
+        "from": "Root CONTEXT.md",
+        "via": "All modules",
+        "purpose": "Session bootstrapping"
+      }
+    ],
+
+    "unlock_conditions": [
+      {
+        "deliverable": "SEENMAP.md",
+        "unlocked_by": "FFF_Gravity Wave 4",
+        "status": "complete"
+      },
+      {
+        "deliverable": "FFF_Gravity_module.json refresh",
+        "unlocked_by": "Wave 5 + SEENMAP",
+        "status": "next"
+      },
+      {
+        "deliverable": "SoN Wave 1 admin files",
+        "unlocked_by": "s_Capture.md sealed",
+        "status": "pending"
+      },
+      {
+        "deliverable": "SoN substrate harness",
+        "unlocked_by": "s_Harness.md",
+        "status": "pending"
+      }
+    ],
+
+    "metadata": {
+      "file": "docs/SEENMAP.md",
+      "scope": "Repository-root navigational registry",
+      "generated": "2026-08-14",
+      "unlocked_by": "FFF_Gravity Wave 4",
+      "next_action": "Refresh FFF_Gravity_module.json",
+      "maintainer": "umaywant2",
+      "license": "Apache-2.0",
+      "repo_totals": {
+        "canonical_modules": 3,
+        "spec_files": 32,
+        "sealed_prims": 42,
+        "sealed_invariants": 10,
+        "sealed_failure_modes": 13,
+        "operators": 101,
+        "condition_prefixes": 11,
+        "state_flags": 31,
+        "zenodo_seed_dois": 30
+      }
+    }
+  }
+}
