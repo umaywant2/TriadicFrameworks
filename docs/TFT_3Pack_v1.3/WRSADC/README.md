@@ -1,4 +1,3 @@
-<img width="1194" height="672" alt="WRSADC_module" src="https://github.com/user-attachments/assets/b98384cf-8f8a-4d94-b701-64bd02186fd2" />
 
 ## WRSADC — Wrapped Resonance Structural Aware Dimensional Core
 
