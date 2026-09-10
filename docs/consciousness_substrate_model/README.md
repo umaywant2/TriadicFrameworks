@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="consciousness_substrate_model_" src="https://github.com/user-attachments/assets/0484e8ab-495a-40e8-855f-bb0871a02864" />
+
 - [`csm_module.json`](csm_module.json) — Agentic module schema role assignments
 
 # Consciousness Substrate Model (CSM)  
