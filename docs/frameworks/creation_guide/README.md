@@ -1,9 +1,7 @@
-<img width="1194" height="672" alt="Framework_Creation_Guide_module" src="https://github.com/user-attachments/assets/fbdef2dc-f8f3-4b7f-89df-bcb59e57348c" />
-
-# ⭐ FRAMEWORK CREATION GUIDE (FCG)
 
 - [`FCG_module.json`](FCG_module.json) — Agentic module schema role assignments
 
+# ⭐ FRAMEWORK CREATION GUIDE (FCG)
 *A new top‑level module in the TriadicFrameworks canon*
 
 ## Purpose
