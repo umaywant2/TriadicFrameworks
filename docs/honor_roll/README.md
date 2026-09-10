@@ -1,7 +1,5 @@
-<img width="682" height="682" alt="tft_honor_roll" src="https://github.com/user-attachments/assets/3911a14b-0c34-456e-83bf-a242a6c91af0" />
 
-## 📜 **Honor Roll**  
-
+# 📜 **Honor Roll**  
 *A resonance‑aware archive of lineage, contribution, and echo.*
 
 The Honor Roll is the **memory core** of TriadicFrameworks —  
