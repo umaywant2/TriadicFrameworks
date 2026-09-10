@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="TFT_3Pack_Quickstart_" src="https://github.com/user-attachments/assets/c461c1f9-b576-4b61-8eee-56b5cb83ee6c" />
+
 # 🚀 QUICKSTART: TFT_3Pack_v1.3 (Updated with Resonance Clarity)
 
 Welcome, remixer. This guide activates the triadic shell.
