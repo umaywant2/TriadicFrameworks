@@ -1,4 +1,3 @@
-<img width="1194" height="672" alt="Structural_Detection_module" src="https://github.com/user-attachments/assets/8ed4981c-b855-4733-a797-9eac0b07d7e0" />
 
 - [`structural_detection_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Structural_Detection/structural_detection_module.json)
 
