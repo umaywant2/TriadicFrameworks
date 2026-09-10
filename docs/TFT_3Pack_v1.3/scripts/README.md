@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="TFT_3Pack_Scripts_" src="https://github.com/user-attachments/assets/163c158b-25e0-47a7-86c9-2c2761ebf7da" />
+
 # TFT_3Pack Scripts (.sh)
 
 This folder contains the executable shell scripts used throughout the TFT_3Pack example suite.  
