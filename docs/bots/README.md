@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="bots_" src="https://github.com/user-attachments/assets/67e5c25f-fb46-436f-8da1-2f5537dad9bf" />
+
 # RTT Bots Registry
 
 The **Bots** directory contains all RTT engines that interpret structure, drift, continuity, collapse, projection‑loss, and ancestry across different domains.
