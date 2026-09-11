@@ -70,7 +70,7 @@ One person, augmented by AI, built an entire canon — 200++ modules across 7 la
 - Decision and Planning 1 month 12/25
 - Press Release and YouTube announcement videos 12/28/25
 - DOI's 1 month 01/26
-- 200+ agentic ai modules 02-09/26
+- 200+ agentic grammar example student and ai modules 02/26-09/26
 
 The substrate of knowledge production has changed. We modeled that honestly.
 
