@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Discovery_" src="https://github.com/user-attachments/assets/b9f7f1cd-5ebd-4b77-a7ad-338f6da57942" />
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/discovery/module.json) — Agentic module schema role assignments
 
