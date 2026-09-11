@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Hardware_" src="https://github.com/user-attachments/assets/7b088e00-df76-43c8-b9a8-01c1307a51aa" />
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/hardware/module.json) — Agentic module schema role assignments
 
