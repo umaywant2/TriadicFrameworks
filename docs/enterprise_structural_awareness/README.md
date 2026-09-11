@@ -1,23 +1,7 @@
-## Enterprise Structural Awareness  
 
 - [`esa_module.json`](esa_module.json) — Agentic module schema role assignments
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
-
+# Enterprise Structural Awareness  
 Enterprise systems are composed of layered products, policies, configurations, and operational practices that evolve over long lifecycles. While these systems are highly capable, they often lack explicit mechanisms for declaring when assumptions hold, when they drift, and when operating contexts change.
 
 ## 🛑 Important! 
@@ -58,3 +42,19 @@ Enterprise Structural Awareness is intentionally quiet. Its value lies in making
 It is offered as a reference surface rather than a prescription, enabling enterprise teams to recognize and articulate structural context that already exists within their systems.
 
 - [repo folder](../)
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
