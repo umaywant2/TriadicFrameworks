@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="NIST_" src="https://github.com/user-attachments/assets/0a8bbe20-b0d0-4fc9-b8f0-5ab292ff8745" />
 
 - [`nist_module.json`](nist_module.json) — Agentic module schema role assignments
 
