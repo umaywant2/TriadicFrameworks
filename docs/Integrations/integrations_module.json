@@ -1,88 +1,407 @@
 {
-  "module": "Integrations",
-  "version": "1.0",
-  "category": "integrations",
-  "summary": "Cross‑module interoperability: operator linking, field‑safe routing, regime‑aware pathways, substrate alignment rules, examples.",
+  "$schema": "../_shared/schema/module.schema.json",
+
+  "identity": {
+    "module": "Integrations",
+    "title": "Engine Integrations & Substrate Bridges",
+    "canonical_url": "https://triadicframeworks.org/docs/Integrations",
+    "version": "1.0.0"
+  },
+
+  "purpose": "Provides Unity, Unreal Engine (UE6), and cross-engine integration modules for applying TriadicFrameworks concepts inside real engines. Includes substrate bridges, dimensional mappings, editor tools, examples, schemas, and RTT operator primitives.",
+
+  "category": "integration",
+
+  "analyzer_layer": [
+    "operator",
+    "regime",
+    "coherence"
+  ],
+
   "files": [
     {
-      "path": "README.md",
-      "role": "profile",
-      "analyzer_layer": "operator"
+      "name": "Bridge_Info.md",
+      "role": "bridge",
+      "description": "Overview of engine-to-engine integration bridges."
     },
     {
-      "path": "integration_pathways.md",
-      "role": "engine",
-      "analyzer_layer": "cross-cutting"
+      "name": "Dimensional_Substrate_MCP_Substrate_Mapping.html",
+      "role": "mapping",
+      "description": "Dimensional substrate mapping for MCP substrate alignment."
     },
     {
-      "path": "substrate_alignment_rules.md",
-      "role": "signature",
-      "analyzer_layer": "operator"
+      "name": "Engine_Integration_Bridge.html",
+      "role": "bridge",
+      "description": "Structural routing between engines and RTT substrate layers."
     },
     {
-      "path": "operator_linking_examples.md",
-      "role": "example",
-      "analyzer_layer": "operator"
-    },
-    {
-      "path": "field_safe_routing.md",
-      "role": "engine",
-      "analyzer_layer": "regime"
-    },
-    {
-      "path": "regime_aware_pathways.md",
-      "role": "engine",
-      "analyzer_layer": "regime"
-    },
-    {
-      "path": "integration_map.md",
-      "role": "map",
-      "analyzer_layer": "dimensional"
-    },
-    {
-      "path": ".lineage",
-      "role": "map",
-      "analyzer_layer": "dimensional"
-    },
-    {
-      "path": "index.html",
+      "name": "index.html",
       "role": "index",
-      "analyzer_layer": "operator"
+      "description": "HTML index for browsing integration modules."
     },
-  ],
-},
-{
-  "engine": "Unreal Engine 6",
-  "identity": "ue6",
-  "category": "real-time-engine",
-  "status": "active",
-  "version": "6.0",
-  "integration": {
-    "rtt_primitives": [
-      "phi_field",
-      "variance_stabilizer",
-      "resonance_probe",
-      "entropy_trace",
-      "hybrid_operator_bridge"
-    ],
-    "ue6_features": [
-      "Nanite 2.0 structural mesh streaming",
-      "Lumen 2.0 resonance-aware GI",
-      "Temporal Super Resolution 3",
-      "World Partition 2 with dynamic regime loading",
-      "MetaSounds 2.0 (resonance-aligned audio graph)"
-    ],
-    "rtt_alignment": {
-      "phi": "maps to UE6 Nanite structural emergence",
-      "variance": "maps to Lumen temporal stabilization",
-      "resonance": "maps to MetaSounds harmonic propagation",
-      "entropy": "maps to World Partition streaming boundaries",
-      "quantum": "future hook: hybrid simulation layer"
+    {
+      "name": "integrations_module.json",
+      "role": "module",
+      "description": "Metadata manifest for the Integrations directory."
     },
-    "hooks": {
-      "blueprint": "RTT/Integrations/UE6/Blueprint/RTT_Primitives.uasset",
-      "cpp": "RTT/Integrations/UE6/Source/RTTUE6.cpp",
-      "editor": "RTT/Integrations/UE6/Editor/RTTTools.py"
+    {
+      "name": "Intelligence_Class_Ladder_TriadicFrameworks_Canonical_Reference.html",
+      "role": "reference",
+      "description": "Canonical reference for the TriadicFrameworks intelligence class ladder."
+    },
+    {
+      "name": "overview.md",
+      "role": "overview",
+      "description": "High-level overview of integration pathways."
+    },
+    {
+      "name": "README.md",
+      "role": "index",
+      "description": "Primary documentation for engine integrations."
+    },
+
+    /* ---------------------------- UE6 ---------------------------- */
+
+    {
+      "name": "UE6/index.html",
+      "role": "index",
+      "description": "UE6 integration index."
+    },
+    {
+      "name": "UE6/index.md",
+      "role": "index",
+      "description": "Markdown index for UE6 integrations."
+    },
+    {
+      "name": "UE6/README.md",
+      "role": "guide",
+      "description": "UE6 integration guide."
+    },
+    {
+      "name": "UE6/Blueprint_Naming_Conventions.md",
+      "role": "blueprint",
+      "description": "Naming conventions for RTT-aligned UE6 Blueprints."
+    },
+    {
+      "name": "UE6/Cross-Module_Operator_Glossary.md",
+      "role": "glossary",
+      "description": "Glossary of cross-module RTT operators for UE6."
+    },
+    {
+      "name": "UE6/Cross-Module_Propagation_Animation_Script.md",
+      "role": "script",
+      "description": "Propagation animation script for RTT operators."
+    },
+    {
+      "name": "UE6/Examples.md",
+      "role": "examples",
+      "description": "Overview of UE6 RTT examples."
+    },
+    {
+      "name": "UE6/M_RTT_EntropyField.md",
+      "role": "specification",
+      "description": "Entropy field mapping for RTT in UE6."
+    },
+    {
+      "name": "UE6/M_RTT_ResonanceHeatmap.md",
+      "role": "specification",
+      "description": "Resonance heatmap visualization for UE6."
+    },
+    {
+      "name": "UE6/Operator_Map.md",
+      "role": "map",
+      "description": "Operator map for RTT inside UE6."
+    },
+    {
+      "name": "UE6/RTT_Showcase.umap",
+      "role": "scene",
+      "description": "RTT showcase scene for UE6."
+    },
+    {
+      "name": "UE6/RTT_Showcase_Walkthrough.md",
+      "role": "guide",
+      "description": "Walkthrough for the RTT showcase scene."
+    },
+    {
+      "name": "UE6/RTT_TEL-Side_Index.md",
+      "role": "index",
+      "description": "TEL-side operator index for UE6."
+    },
+    {
+      "name": "UE6/TEL_Operator_Glossary.md",
+      "role": "glossary",
+      "description": "Glossary of TEL operators for UE6."
+    },
+    {
+      "name": "UE6/ue6_cross_module_propagation.json",
+      "role": "registry",
+      "description": "Cross-module propagation registry for UE6."
+    },
+    {
+      "name": "UE6/ue6_integration_registry.json",
+      "role": "registry",
+      "description": "Integration registry for UE6."
+    },
+    {
+      "name": "UE6/UE6_module.json",
+      "role": "module",
+      "description": "UE6 module metadata."
+    },
+    {
+      "name": "UE6/ue6_project.json",
+      "role": "project",
+      "description": "UE6 project metadata."
+    },
+    {
+      "name": "UE6/WBP_RTT_OperatorPanel.md",
+      "role": "ui",
+      "description": "RTT operator panel widget documentation."
+    },
+
+    /* ---------------------------- UE6 Blueprints ---------------------------- */
+
+    {
+      "name": "UE6/Blueprint/README.md",
+      "role": "blueprint",
+      "description": "Blueprint integration guide."
+    },
+    {
+      "name": "UE6/Blueprint/RTT_Primitives.json",
+      "role": "blueprint",
+      "description": "RTT primitive definitions for UE6 Blueprints."
+    },
+    {
+      "name": "UE6/Blueprint/RTT_Primitives.uasset",
+      "role": "asset",
+      "description": "UE6 Blueprint asset containing RTT primitives."
+    },
+
+    /* ---------------------------- UE6 Editor Tools ---------------------------- */
+
+    {
+      "name": "UE6/Editor/EDITOR_TOOLS.md",
+      "role": "tools",
+      "description": "Overview of RTT editor tools for UE6."
+    },
+    {
+      "name": "UE6/Editor/RTTTools.py",
+      "role": "tool",
+      "description": "Python tools for RTT integration."
+    },
+    {
+      "name": "UE6/Editor/RTT_EntropyInspector.py",
+      "role": "tool",
+      "description": "Entropy inspector tool for UE6."
+    },
+    {
+      "name": "UE6/Editor/RTT_MenuExtension.py",
+      "role": "tool",
+      "description": "Menu extension for RTT editor tools."
+    },
+    {
+      "name": "UE6/Editor/RTT_OperatorTimeline.py",
+      "role": "tool",
+      "description": "Operator timeline visualization tool."
+    },
+    {
+      "name": "UE6/Editor/RTT_ResonanceVisualizer.py",
+      "role": "tool",
+      "description": "Resonance visualizer for UE6."
+    },
+    {
+      "name": "UE6/Editor/WBP_RTT_Timeline.md",
+      "role": "ui",
+      "description": "Timeline widget documentation."
+    },
+
+    /* ---------------------------- UE6 Examples ---------------------------- */
+
+    {
+      "name": "UE6/Examples/BP_RTT_EntropyDemo.md",
+      "role": "example",
+      "description": "Blueprint entropy demo."
+    },
+    {
+      "name": "UE6/Examples/BP_RTT_HybridDemo.md",
+      "role": "example",
+      "description": "Hybrid RTT demo."
+    },
+    {
+      "name": "UE6/Examples/BP_RTT_ResonanceDemo.md",
+      "role": "example",
+      "description": "Resonance demo."
+    },
+    {
+      "name": "UE6/Examples/ProjectStructure.md",
+      "role": "structure",
+      "description": "Project structure overview."
+    },
+    {
+      "name": "UE6/Examples/RTT_Showcase.umap",
+      "role": "scene",
+      "description": "RTT showcase example scene."
+    },
+    {
+      "name": "UE6/Examples/TEL-side_operator_ladder_diagram.mm",
+      "role": "diagram",
+      "description": "TEL-side operator ladder diagram."
+    },
+    {
+      "name": "UE6/Examples/UE6_Benchmarks_TEL_diagram_Mermaid.mm",
+      "role": "diagram",
+      "description": "TEL benchmark diagram."
+    },
+
+    /* ---------------------------- UE6 Example Manifests ---------------------------- */
+
+    {
+      "name": "UE6/Examples/manifests/BP_RTT_EntropyDemo.json",
+      "role": "manifest",
+      "description": "Manifest for entropy demo."
+    },
+    {
+      "name": "UE6/Examples/manifests/BP_RTT_HybridDemo.json",
+      "role": "manifest",
+      "description": "Manifest for hybrid demo."
+    },
+    {
+      "name": "UE6/Examples/manifests/BP_RTT_ResonanceDemo.json",
+      "role": "manifest",
+      "description": "Manifest for resonance demo."
+    },
+    {
+      "name": "UE6/Examples/manifests/RTT_Showcase.umap.json",
+      "role": "manifest",
+      "description": "Manifest for RTT showcase."
+    },
+
+    /* ---------------------------- UE6 Schemas ---------------------------- */
+
+    {
+      "name": "UE6/schemas/RTT_UE6_Benchmarks_TEL.json",
+      "role": "schema",
+      "description": "Schema for TEL benchmarks."
+    },
+    {
+      "name": "UE6/schemas/RTT_UE6_Project_Reconstruction.json",
+      "role": "schema",
+      "description": "Schema for project reconstruction."
+    },
+    {
+      "name": "UE6/schemas/ue6_blueprint.schema.json",
+      "role": "schema",
+      "description": "Blueprint schema."
+    },
+    {
+      "name": "UE6/schemas/ue6_project.schema.json",
+      "role": "schema",
+      "description": "UE6 project schema."
+    },
+
+    /* ---------------------------- UE6 Source ---------------------------- */
+
+    {
+      "name": "UE6/Source/RTTUE6.cpp",
+      "role": "source",
+      "description": "RTT UE6 C++ source."
+    },
+    {
+      "name": "UE6/Source/RTTUE6.h",
+      "role": "source",
+      "description": "RTT UE6 header."
+    },
+
+    /* ---------------------------- Unity ---------------------------- */
+
+    {
+      "name": "Unity/RTT/RTTApplyResult.cs",
+      "role": "script",
+      "description": "Unity RTT apply result script."
+    },
+    {
+      "name": "Unity/RTT/RTTCoreClient.cs",
+      "role": "script",
+      "description": "Unity RTT core client."
+    },
+    {
+      "name": "Unity/RTT/RTTCoreConfig.asset",
+      "role": "asset",
+      "description": "Unity RTT configuration asset."
+    },
+    {
+      "name": "Unity/RTT/RTTStateCapture.cs",
+      "role": "script",
+      "description": "Unity RTT state capture script."
+    },
+    {
+      "name": "Unity/RTT/Examples/RTT_DemoController.cs",
+      "role": "example",
+      "description": "Unity RTT demo controller."
+    },
+    {
+      "name": "Unity/RTT/Examples/RTT_DemoScene.unity",
+      "role": "scene",
+      "description": "Unity RTT demo scene."
+    },
+
+    /* ---------------------------- Unreal ---------------------------- */
+
+    {
+      "name": "Unreal/RTT/RTTCoreClient.h",
+      "role": "source",
+      "description": "Unreal RTT core client header."
+    },
+    {
+      "name": "Unreal/RTT/RTTCoreConfig.h",
+      "role": "source",
+      "description": "Unreal RTT core config header."
+    },
+    {
+      "name": "Unreal/RTT/RTTDemoActor.h",
+      "role": "source",
+      "description": "Unreal RTT demo actor header."
+    },
+    {
+      "name": "Unreal/RTT/RTTCoreClient.h.cpp",
+      "role": "source",
+      "description": "Unreal RTT core client implementation."
+    },
+    {
+      "name": "Unreal/RTT/RTTCoreConfig.h.cpp",
+      "role": "source",
+      "description": "Unreal RTT core config implementation."
+    },
+    {
+      "name": "Unreal/RTT/RTTDemoActor.h.cpp",
+      "role": "source",
+      "description": "Unreal RTT demo actor implementation."
+    },
+    {
+      "name": "Unreal/RTT/RTTDemoActor.h/RTTDemoActor.cpp",
+      "role": "source",
+      "description": "Unreal RTT demo actor combined implementation."
     }
+  ],
+
+  "ai": {
+    "ready": true,
+    "module_summary": "Unity, UE6, and Unreal integration modules including RTT primitives, editor tools, examples, schemas, and substrate bridges.",
+    "keywords": [
+      "integration",
+      "Unity",
+      "UE6",
+      "Unreal",
+      "RTT",
+      "Blueprint",
+      "editor tools",
+      "schemas",
+      "examples",
+      "triadicframeworks"
+    ]
+  },
+
+  "drift": {
+    "phantom_entries": false,
+    "schema_mismatch": false
   }
 }
