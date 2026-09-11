@@ -1,4 +1,6 @@
 
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/_shared/module.json) — Agentic module schema role assignments
+
 # 📁 `_shared` — Global Components & Schema
 
 The `_shared` directory contains reusable components and schema definitions used across the TriadicFrameworks documentation system.  
