@@ -1,5 +1,5 @@
 
-- [``]()
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/_specs/module.json)  — Agentic module schema role assignments
 
 # 📁 `_specs` — Canonical Specifications
 
