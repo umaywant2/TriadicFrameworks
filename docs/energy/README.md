@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Energy_" src="https://github.com/user-attachments/assets/cb778709-8741-4771-96e9-78d1fe5208c5" />
 
 - [`energy_module.json`](energy_module.json) — Agentic module schema role assignments
 
