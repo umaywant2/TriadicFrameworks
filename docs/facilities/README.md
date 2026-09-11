@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Facilities_" src="https://github.com/user-attachments/assets/52c2a00d-a833-4331-9da7-36eff4ff0e6c" />
 
 - [`facilities_module.json`](facilities_module.json) — Agentic module schema role assignments
 
