@@ -1,1 +1,48 @@
+{
+  "$schema": "../_shared/schema/module.schema.json",
 
+  "identity": {
+    "module": "images",
+    "title": "Visual Asset Archive",
+    "canonical_url": "https://triadicframeworks.org/docs/images",
+    "version": "1.0.0"
+  },
+
+  "purpose": "Contains the complete visual archive for TriadicFrameworks, including diagrams, renders, metaphysical illustrations, educational graphics, harmonic field art, and branding assets.",
+
+  "category": "visual-assets",
+
+  "analyzer_layer": [
+    "operator",
+    "dimensional",
+    "coherence"
+  ],
+
+  "files": [
+    {
+      "name": "*",
+      "role": "asset",
+      "description": "All images, diagrams, renders, and visual materials used across the TriadicFrameworks canon."
+    }
+  ],
+
+  "ai": {
+    "ready": true,
+    "module_summary": "Master archive of all visual assets used throughout TriadicFrameworks.",
+    "keywords": [
+      "images",
+      "visuals",
+      "diagrams",
+      "RTT",
+      "harmonic",
+      "cosmology",
+      "branding",
+      "triadicframeworks"
+    ]
+  },
+
+  "drift": {
+    "phantom_entries": false,
+    "schema_mismatch": false
+  }
+}
