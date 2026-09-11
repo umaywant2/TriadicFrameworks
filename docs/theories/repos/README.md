@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Repos_" src="https://github.com/user-attachments/assets/490c6303-49c3-46a5-937f-eea652913896" />
+
 # TriadicFrameworks — Repos Module Index
 
 > **Directory:** `docs/theories/repos/`
