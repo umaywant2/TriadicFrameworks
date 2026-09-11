@@ -1,1 +1,45 @@
+{
+  "$schema": "../_shared/schema/module.schema.json",
 
+  "identity": {
+    "module": "discovery",
+    "title": "Discovery Modules",
+    "canonical_url": "https://triadicframeworks.org/docs/discovery",
+    "version": "1.0.0"
+  },
+
+  "purpose": "Contains exploratory documents and scroll galleries used to reveal loopholes, anomalies, and emergent conceptual structures within TriadicFrameworks.",
+
+  "category": "exploration",
+
+  "analyzer_layer": [
+    "operator",
+    "dimensional",
+    "drift"
+  ],
+
+  "files": [
+    {
+      "name": "loophole_scroll_gallery.md",
+      "role": "exploration",
+      "description": "Scroll-based gallery illustrating loophole behaviors and conceptual anomalies."
+    }
+  ],
+
+  "ai": {
+    "ready": true,
+    "module_summary": "Exploratory scroll galleries and discovery documents revealing emergent structures and loophole behaviors.",
+    "keywords": [
+      "discovery",
+      "loophole",
+      "scroll-gallery",
+      "exploration",
+      "triadicframeworks"
+    ]
+  },
+
+  "drift": {
+    "phantom_entries": false,
+    "schema_mismatch": false
+  }
+}
