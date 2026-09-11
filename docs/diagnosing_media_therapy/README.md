@@ -1,21 +1,7 @@
+
+- [``]()
+
 # Diagnosing Media Therapy (DMT)
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
-
 *A gentle, RTT‑aligned reflective practice using media as a mirror of mind.*
 
 Diagnosing Media Therapy (DMT) is a lightweight, indirect method for noticing emotional patterns over time.  
@@ -136,3 +122,19 @@ This keeps the process safe, human, and low‑pressure.
 ## 🌟 Purpose
 DMT offers a humane, indirect way to notice emotional patterns over time —  
 a small, daily practice that supports clarity, grounding, and self‑understanding.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
