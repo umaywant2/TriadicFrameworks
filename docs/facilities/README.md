@@ -1,9 +1,7 @@
-<img width="1194" height="672" alt="facilities_module" src="https://github.com/user-attachments/assets/60dc7c90-5008-434b-94cb-73fdfc9c58cb" />
-
-## 🔰 Facilities 
 
 - [`facilities_module.json`](facilities_module.json) — Agentic module schema role assignments
 
+# 🔰 Facilities 
 **RTT Facilities · City Systems · Modernization Frameworks**
 
 This folder contains all documentation, templates, and governance materials related to **RTT Facilities** — the physical, operational, and communication infrastructure that cities, residents, operators, and GHQ rely on during modernization cycles.
