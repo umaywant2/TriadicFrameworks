@@ -1,3 +1,6 @@
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/diagrams/module.json) — Agentic module schema role assignments
+
 # 🖼️ Diagrams — Canonical Visuals & Structural Maps
 
 The `diagrams` directory contains visual representations of core TriadicFrameworks concepts.  
