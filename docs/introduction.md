@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Introduction_" src="https://github.com/user-attachments/assets/16e1381a-2f6c-4625-8028-62291c41b591" />
+
 <!-- ---
 title: "Introduction to TriadicFrameworks"
 description: "A reader's orientation to TriadicFrameworks — what it is, why it exists, how its parts relate, and where to go next."
