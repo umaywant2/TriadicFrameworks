@@ -5,31 +5,27 @@
 # 🖼️ Diagrams — Canonical Visuals & Structural Maps
 
 The `diagrams` directory contains visual representations of core TriadicFrameworks concepts.  
-These diagrams provide structural clarity, visual anchors, and cross‑module coherence for RTT, TAM, and multi‑domain operators.
+These diagrams provide structural clarity, visual anchors, and cross‑module coherence for RTT, Arrival mechanics, and FREQi system behavior.
 
 Diagrams are used throughout the canon to:
 
-- illustrate operator loops  
-- show temporal mapping  
+- illustrate operator and arrival flows  
+- show resonance pathways  
 - visualize dimensional envelopes  
-- clarify drift/coherence relationships  
-- support developer onboarding  
+- clarify coherence and drift relationships  
+- support developer onboarding and conceptual understanding  
 
 ---
 
 ## 📄 Included Diagrams
 
-### `Temporal_Address_Mapping_Spec.md`
-A visual‑forward specification describing the **Temporal Address Mapping (TAM)** diagram.  
-Shows how temporal addresses propagate, resolve, and interact with RTT operator loops.
+### `arrival.md`
+Markdown‑based diagram/spec describing the **Arrival** module’s conceptual and structural visuals.  
+Shows arrival arcs, substrate transitions, and cross‑domain alignment patterns.
 
-This diagram is referenced by:
-
-- RTT Kernel  
-- TAM design spec  
-- Temporal modules  
-- Diagnostics  
-- Developer quick‑start  
+### `freqi_overview.svg`
+SVG diagram providing a visual overview of the **FREQi** system.  
+Illustrates frequency envelopes, interaction layers, and resonance mapping.
 
 ---
 
@@ -38,13 +34,13 @@ This diagram is referenced by:
 Inside any module:
 
 ```md
-See: `docs/diagrams/Temporal_Address_Mapping_Spec.md`
+See: `docs/diagrams/arrival.md`
 ```
 
 Or include directly:
 
 ```md
-{{#include ../diagrams/Temporal_Address_Mapping_Spec.md}}
+{{#include ../diagrams/arrival.md}}
 ```
 
 Diagrams ensure your documentation remains **visual**, **canonical**, and **drift‑proof**.
