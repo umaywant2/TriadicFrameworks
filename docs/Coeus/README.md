@@ -1,9 +1,7 @@
-<img width="1194" height="672" alt="Coeus_module" src="https://github.com/user-attachments/assets/f0ab6362-c388-43e7-b950-467c9fd1b961" />
-
-# 🧠 Coeus Protocol  
 
 - [`coeus_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Coeus/coeus_module.json) — Agentic module schema role assignments
 
+# 🧠 Coeus Protocol  
 **Multi-AI Research Sandbox & Coin Exchange Framework**  
 *A triadic system for recursive cognition, remixable research, and observer-grade ethics*
 
