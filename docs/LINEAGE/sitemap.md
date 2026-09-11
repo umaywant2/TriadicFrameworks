@@ -1,3 +1,5 @@
+<img width="682" height="682" alt="tft_sitemap" src="https://github.com/user-attachments/assets/ed43bd55-38b0-45e8-94c5-0327040d359f" />
+
 # Global LINEAGE Sitemap — TriadicFrameworks
 
 **Scope:** Canonical lineage entries, cross‑maps, and structural diagrams across modules.
