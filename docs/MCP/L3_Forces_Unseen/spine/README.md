@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="MCP_L3_Forces_Unseen_spine_" src="https://github.com/user-attachments/assets/c91d9b5b-505c-443a-b2da-77e4d9110350" />
+
 # ⚡ L3_Forces_Unseen — S3 Spine (R5 Canon)  
 ### The Unseen Force‑Regime Structural Graph of TriadicFrameworks  
 **Layer:** L3 Forces Unseen  
