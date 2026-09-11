@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Contributors_" src="https://github.com/user-attachments/assets/042a1401-de38-4e69-96a5-9ee42ba4eba0" />
 
 - [`contributors_module.json`](contributors_module.json) — Agentic module schema role assignments
 
