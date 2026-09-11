@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Dimensional_Substrate_Structures_" src="https://github.com/user-attachments/assets/aee74298-a980-4c7d-95b1-cbbca2ad1859" />
 
 - [`dimensional_substrate_structures_module.json`](dimensional_substrate_structures_module.json) — Agentic module schema role assignments
 
