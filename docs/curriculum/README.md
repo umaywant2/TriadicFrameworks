@@ -1,23 +1,7 @@
-# **TriadicFrameworks — Curriculum Overview**  
 
 - [`curriculum_module.json`](curriculum_module.json) — Agentic module schema role assignments
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🟦Curriculum-📘Learning%20Pathway%20Substrate-4c8eda?style=for-the-badge" alt="Curriculum | Learning Pathway Substrate"/>
-
+# **TriadicFrameworks — Curriculum Overview**  
 *A structured learning pathway for regime‑aware thinking, design, and stewardship.*
 
 ---
@@ -141,3 +125,19 @@ It exists to help learners:
 - act as coherent observers  
 
 …so they can design, govern, and steward systems that remain **in phase** with their environment.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🟦Curriculum-📘Learning%20Pathway%20Substrate-4c8eda?style=for-the-badge" alt="Curriculum | Learning Pathway Substrate"/>
