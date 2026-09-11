@@ -1,3 +1,6 @@
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/data-formats/module.json) — Agentic module schema role assignments
+
 # 🗂️ Data Formats — Canonical Schemas
 
 The `data-formats` directory contains all canonical data schemas used across TriadicFrameworks.  
