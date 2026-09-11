@@ -1,1 +1,82 @@
+{
+  "module": "registries",
+  "version": "1.0.0",
+  "description": "Canonical registry manifests for TriadicFrameworks: archeo, earth‑field, fringe, idiom, operator audits, quadrants, questions, universities, and vsoul listings.",
+  "ai": {
+    "module_kind": "registry_cluster",
+    "substrate": "catalog",
+    "coherence": "declared",
+    "drift": "bounded"
+  },
+
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "coherence",
+      "purpose": "Primary overview of the registries subsystem; defines registry purpose, lineage, and cross‑module integration."
+    },
+
+    {
+      "path": "archaeo_manifest.json",
+      "role": "registry",
+      "analyzer_layer": "dimensional",
+      "purpose": "Archaeo substrate manifest; dimensional registry of ancient symbolic and structural archetypes."
+    },
+    {
+      "path": "earth_field_manifest.json",
+      "role": "registry",
+      "analyzer_layer": "regime",
+      "purpose": "Earth‑field substrate manifest; regime‑level mapping of terrestrial resonance fields."
+    },
+    {
+      "path": "fringe_manifest.json",
+      "role": "registry",
+      "analyzer_layer": "drift",
+      "purpose": "Fringe substrate manifest; drift‑layer catalog of edge‑case symbolic and conceptual structures."
+    },
+    {
+      "path": "idiom_manifest.json",
+      "role": "registry",
+      "analyzer_layer": "operator",
+      "purpose": "Idiom manifest; operator‑layer registry of idiomatic patterns and linguistic resonance structures."
+    },
+    {
+      "path": "operator_audits.json",
+      "role": "diagnostic",
+      "analyzer_layer": "operator",
+      "purpose": "Operator audits; diagnostic registry for operator‑layer coherence, drift, and substrate alignment."
+    },
+    {
+      "path": "quadrant_manifest.json",
+      "role": "map",
+      "analyzer_layer": "dimensional",
+      "purpose": "Quadrant manifest; dimensional mapping of quadrant‑based substrate and resonance structures."
+    },
+    {
+      "path": "questions_manifest.json",
+      "role": "registry",
+      "analyzer_layer": "cross-cutting",
+      "purpose": "Questions manifest; cross‑cutting registry of inquiry patterns across substrates and regimes."
+    },
+    {
+      "path": "university_manifest.json",
+      "role": "registry",
+      "analyzer_layer": "regime",
+      "purpose": "University manifest; regime‑level registry of institutional resonance structures and academic substrates."
+    },
+    {
+      "path": "vsoul_choices.json",
+      "role": "profile",
+      "analyzer_layer": "dimensional",
+      "purpose": "Vsoul choices registry; dimensional identity‑choice mapping for vsoul archetypes."
+    },
+    {
+      "path": "vsoul_listings.json",
+      "role": "registry",
+      "analyzer_layer": "dimensional",
+      "purpose": "Vsoul listings; dimensional registry of vsoul archetypes, attributes, and resonance profiles."
+    }
+  ]
+}
 
