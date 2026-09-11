@@ -1,5 +1,5 @@
 
-- [``]()
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/diagnosing_media_therapy/module.json) — Agentic module schema role assignments
 
 # Diagnosing Media Therapy (DMT)
 *A gentle, RTT‑aligned reflective practice using media as a mirror of mind.*
