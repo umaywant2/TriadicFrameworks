@@ -1,1 +1,60 @@
+{
+  "$schema": "../_shared/schema/module.schema.json",
+  "identity": {
+    "module": "_shared",
+    "title": "Shared Components & Schema",
+    "canonical_url": "https://triadicframeworks.org/docs/_shared",
+    "version": "1.0.0"
+  },
 
+  "purpose": "Provides reusable HTML components and the canonical module.json schema used across all TriadicFrameworks documentation modules.",
+
+  "category": "documentation-core",
+
+  "analyzer_layer": [
+    "operator",
+    "regime",
+    "cross-cutting"
+  ],
+
+  "files": [
+    {
+      "name": "components_header.html",
+      "role": "template",
+      "description": "Shared header block for Docsbook pages."
+    },
+    {
+      "name": "components_footer.html",
+      "role": "template",
+      "description": "Shared footer block for Docsbook pages."
+    },
+    {
+      "name": "components_session-context.html",
+      "role": "template",
+      "description": "Reusable session context block for canonical metadata."
+    },
+    {
+      "name": "schema/module.schema.json",
+      "role": "schema",
+      "description": "Canonical JSON Schema for all module.json files."
+    }
+  ],
+
+  "ai": {
+    "ready": true,
+    "module_summary": "Shared components and schema definitions that unify the documentation system.",
+    "keywords": [
+      "shared",
+      "schema",
+      "components",
+      "docsbook",
+      "triadicframeworks",
+      "canonical"
+    ]
+  },
+
+  "drift": {
+    "phantom_entries": false,
+    "schema_mismatch": false
+  }
+}
