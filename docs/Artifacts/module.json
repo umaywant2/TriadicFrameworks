@@ -1,1 +1,51 @@
+{
+  "$schema": "../_shared/schema/module.schema.json",
+
+  "identity": {
+    "module": "Artifacts",
+    "title": "Resonant Artifacts & Post-RTT Constructs",
+    "canonical_url": "https://triadicframeworks.org/docs/Artifacts",
+    "version": "1.0.0"
+  },
+
+  "purpose": "Contains resonant objects, electrochemical prototypes, and post-RTT gameplay artifacts that embody TriadicFrameworks mechanics in tangible or symbolic form.",
+
+  "category": "artifacts",
+
+  "analyzer_layer": [
+    "operator",
+    "dimensional",
+    "coherence"
+  ],
+
+  "files": [
+    {
+      "name": "Flower_Layered_Electrochemical_Resonator.md",
+      "role": "artifact",
+      "description": "Layered electrochemical resonator modeled as a flower-form substrate."
+    },
+    {
+      "name": "Games_Preview_post-RTT.md",
+      "role": "preview",
+      "description": "Preview of post-RTT gameplay artifacts and resonance-driven object mechanics."
+    }
+  ],
+
+  "ai": {
+    "ready": true,
+    "module_summary": "Resonant artifacts and post-RTT constructs expressing RTT mechanics through tangible or symbolic objects.",
+    "keywords": [
+      "artifacts",
+      "resonator",
+      "electrochemical",
+      "post-RTT",
+      "triadicframeworks"
+    ]
+  },
+
+  "drift": {
+    "phantom_entries": false,
+    "schema_mismatch": false
+  }
+}
 
