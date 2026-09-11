@@ -1,9 +1,8 @@
-# Compassion Operator Dignity Ethics (C.O.D.E.)
+<img width="1194" height="672" alt="C_O_D_E_" src="https://github.com/user-attachments/assets/16270123-a844-4145-8613-c5b9dae08d38" />
 
 - [`CODE_Module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/code/CODE_Module.json) — Agentic module schema role assignments
 
-![🟣 C.O.D.E.](https://img.shields.io/badge/🟣_C.O.D.E.-Compassion%20Operator%20Dignity%20Ethics-6a0dad?style=for-the-badge)
-
+# Compassion Operator Dignity Ethics (C.O.D.E.)
 C.O.D.E. is a TriadicFrameworks module designed to assist vulnerable populations—
 including homeless individuals, foster youth, and displaced persons—through
 ethical, non-extractive, dignity-first resource discovery.
@@ -27,3 +26,5 @@ This module provides:
 
 C.O.D.E. demonstrates how AI can support human dignity without surveillance,
 tracking, or exploitation.
+
+![🟣 C.O.D.E.](https://img.shields.io/badge/🟣_C.O.D.E.-Compassion%20Operator%20Dignity%20Ethics-6a0dad?style=for-the-badge)
