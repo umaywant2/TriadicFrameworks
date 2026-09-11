@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="facilities_module" src="https://github.com/user-attachments/assets/60dc7c90-5008-434b-94cb-73fdfc9c58cb" />
+
 # 📘 RTT Facilities — Glossary  
 **Canonical Terms & Definitions**
 
