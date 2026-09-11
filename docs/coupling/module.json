@@ -1,1 +1,68 @@
+{
+  "$schema": "../_shared/schema/module.schema.json",
 
+  "identity": {
+    "module": "coupling",
+    "title": "Cross-Domain Coupling Maps",
+    "canonical_url": "https://triadicframeworks.org/docs/coupling",
+    "version": "1.0.0"
+  },
+
+  "purpose": "Defines cross-domain coupling maps for Atmosphere interactions with Biosphere, Cryosphere, Hydrosphere, Land, and Magnetosphere. Used for diagnostics, regime analysis, and RTT multi-domain simulations.",
+
+  "category": "domain-coupling",
+
+  "analyzer_layer": [
+    "dimensional",
+    "regime",
+    "cross-cutting"
+  ],
+
+  "files": [
+    {
+      "name": "atmosphere_to_biosphere.json",
+      "role": "map",
+      "description": "Coupling map for Atmosphere ↔ Biosphere interactions."
+    },
+    {
+      "name": "atmosphere_to_cryosphere.json",
+      "role": "map",
+      "description": "Coupling map for Atmosphere ↔ Cryosphere interactions."
+    },
+    {
+      "name": "atmosphere_to_hydrosphere.json",
+      "role": "map",
+      "description": "Coupling map for Atmosphere ↔ Hydrosphere interactions."
+    },
+    {
+      "name": "atmosphere_to_land.json",
+      "role": "map",
+      "description": "Coupling map for Atmosphere ↔ Land interactions."
+    },
+    {
+      "name": "atmosphere_to_magnetosphere.json",
+      "role": "map",
+      "description": "Coupling map for Atmosphere ↔ Magnetosphere interactions."
+    }
+  ],
+
+  "ai": {
+    "ready": true,
+    "module_summary": "Cross-domain coupling maps defining Atmosphere interactions with all major system domains.",
+    "keywords": [
+      "coupling",
+      "atmosphere",
+      "biosphere",
+      "cryosphere",
+      "hydrosphere",
+      "land",
+      "magnetosphere",
+      "triadicframeworks"
+    ]
+  },
+
+  "drift": {
+    "phantom_entries": false,
+    "schema_mismatch": false
+  }
+}
