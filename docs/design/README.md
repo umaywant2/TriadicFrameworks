@@ -1,3 +1,6 @@
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/design/module.json) — Agentic module schema role assignments
+
 # 🎨 Design — Canonical Structural Specifications
 
 The `design` directory contains formal design‑level specifications for TriadicFrameworks.  
