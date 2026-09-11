@@ -1,5 +1,5 @@
 
-- [``]()
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/fab/module.json) — Agentic module schema role assignments
 
 # 🏭 FAB — Fabrication Grammar & Substrate Qualification
 
