@@ -1,1 +1,63 @@
+{
+  "$schema": "../_shared/schema/module.schema.json",
 
+  "identity": {
+    "module": "cosmology",
+    "title": "Cosmology & Triadic Metaphysics",
+    "canonical_url": "https://triadicframeworks.org/docs/cosmology",
+    "version": "1.0.0"
+  },
+
+  "purpose": "Contains cosmological and metaphysical documents that extend RTT mechanics into quantum behavior, cosmic grammar, and ΛCDM resonance overlays.",
+
+  "category": "cosmology",
+
+  "analyzer_layer": [
+    "dimensional",
+    "regime",
+    "coherence"
+  ],
+
+  "files": [
+    {
+      "name": "RTT/Quantum_Scanners_Triadic_Lens_Architecture.md",
+      "role": "cosmology",
+      "description": "Quantum-scale scanning and triadic lens architecture."
+    },
+    {
+      "name": "RTT/Trilogy_Visual_Metaphysics.md",
+      "role": "cosmology",
+      "description": "Visual metaphysics of the Trilogy cosmic model."
+    },
+    {
+      "name": "RTT/Triptych_Cosmic_Grammar.md",
+      "role": "cosmology",
+      "description": "Cosmic grammar and triadic structural syntax."
+    },
+    {
+      "name": "RTT/ΛCDM_plus_Dark_Matter_Energy_Patches.md",
+      "role": "cosmology",
+      "description": "ΛCDM extensions integrating RTT resonance patches and dark matter/energy fields."
+    }
+  ],
+
+  "ai": {
+    "ready": true,
+    "module_summary": "Cosmic-scale RTT documents covering quantum scanners, Trilogy metaphysics, Triptych grammar, and ΛCDM resonance overlays.",
+    "keywords": [
+      "cosmology",
+      "quantum",
+      "trilogy",
+      "triptych",
+      "ΛCDM",
+      "dark matter",
+      "dark energy",
+      "triadicframeworks"
+    ]
+  },
+
+  "drift": {
+    "phantom_entries": false,
+    "schema_mismatch": false
+  }
+}
