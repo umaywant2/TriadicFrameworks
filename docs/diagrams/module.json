@@ -5,10 +5,10 @@
     "module": "diagrams",
     "title": "Canonical Diagrams",
     "canonical_url": "https://triadicframeworks.org/docs/diagrams",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
 
-  "purpose": "Contains canonical diagrams and visual specifications used to illustrate RTT, TAM, dimensional envelopes, and cross-domain structural relationships.",
+  "purpose": "Contains canonical diagrams and visual specifications for TriadicFrameworks, including arrival mechanics and FREQi system overviews.",
 
   "category": "diagram",
 
@@ -20,19 +20,24 @@
 
   "files": [
     {
-      "name": "Temporal_Address_Mapping_Spec.md",
+      "name": "arrival.md",
       "role": "diagram",
-      "description": "Visual specification for Temporal Address Mapping (TAM)."
+      "description": "Markdown-based diagram/spec describing the Arrival module’s conceptual and structural visuals."
+    },
+    {
+      "name": "freqi_overview.svg",
+      "role": "diagram",
+      "description": "SVG diagram providing a visual overview of FREQi system mechanics."
     }
   ],
 
   "ai": {
     "ready": true,
-    "module_summary": "Canonical diagrams illustrating RTT, TAM, and dimensional structures.",
+    "module_summary": "Canonical diagrams illustrating Arrival mechanics and FREQi system structure.",
     "keywords": [
       "diagram",
-      "TAM",
-      "temporal-address",
+      "arrival",
+      "freqi",
       "visual-spec",
       "triadicframeworks"
     ]
