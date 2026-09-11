@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Feedback_" src="https://github.com/user-attachments/assets/d91e7390-480b-4a01-908d-c48c69a987e3" />
 
 -[`feedback_module.json`](feedback_module.json) — Agentic module schema role assignments
 
