@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Curriculum_" src="https://github.com/user-attachments/assets/baae9073-5fb4-4bae-aed0-f44ffe11f8f5" />
 
 - [`curriculum_module.json`](curriculum_module.json) — Agentic module schema role assignments
 
