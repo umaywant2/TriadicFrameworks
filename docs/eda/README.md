@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="eda_" src="https://github.com/user-attachments/assets/60a27e83-aafa-4cc3-8ad4-67fb62d575eb" />
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/eda/module.json) — Agentic module schema role assignments
 
