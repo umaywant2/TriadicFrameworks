@@ -1,3 +1,5 @@
+<img width="682" height="682" alt="rtt_ecoechosystem_module" src="https://github.com/user-attachments/assets/7540b0ad-5dba-400a-baca-2f496fca0bd0" />
+
 # **EcoEchoSystem — Overview**  
 *A substrate‑aligned, cross‑domain simulation environment*
 
