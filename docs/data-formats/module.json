@@ -1,1 +1,57 @@
+{
+  "$schema": "../_shared/schema/module.schema.json",
 
+  "identity": {
+    "module": "data-formats",
+    "title": "Canonical Data Format Schemas",
+    "canonical_url": "https://triadicframeworks.org/docs/data-formats",
+    "version": "1.0.0"
+  },
+
+  "purpose": "Contains formal data schemas defining canonical structures for RTT diagnostics, coupling tables, violation logs, and layer mapping formats.",
+
+  "category": "schema",
+
+  "analyzer_layer": [
+    "operator",
+    "dimensional",
+    "regime"
+  ],
+
+  "files": [
+    {
+      "name": "TCT_DEF_Schema.md",
+      "role": "schema",
+      "description": "Triadic Coupling Table schema for cross-domain diagnostics."
+    },
+    {
+      "name": "TDRC_Violation_Log_Schema.md",
+      "role": "schema",
+      "description": "Schema for Triadic Drift & Resonance Compliance violation logs."
+    },
+    {
+      "name": "TLMF_Schema.md",
+      "role": "schema",
+      "description": "Triadic Layer Mapping Format schema for operator and dimensional mapping."
+    }
+  ],
+
+  "ai": {
+    "ready": true,
+    "module_summary": "Canonical schemas for RTT diagnostics, coupling tables, violation logs, and layer mapping formats.",
+    "keywords": [
+      "schema",
+      "TCT",
+      "TDRC",
+      "TLMF",
+      "triadicframeworks",
+      "data-format",
+      "canonical"
+    ]
+  },
+
+  "drift": {
+    "phantom_entries": false,
+    "schema_mismatch": false
+  }
+}
