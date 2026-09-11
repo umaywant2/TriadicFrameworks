@@ -2,7 +2,6 @@
 
 - [`CODE_Module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/code/CODE_Module.json) — Agentic module schema role assignments
 
-# Compassion Operator Dignity Ethics (C.O.D.E.)
 C.O.D.E. is a TriadicFrameworks module designed to assist vulnerable populations—
 including homeless individuals, foster youth, and displaced persons—through
 ethical, non-extractive, dignity-first resource discovery.
