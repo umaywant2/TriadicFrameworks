@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Configs_" src="https://github.com/user-attachments/assets/5c75f869-6588-4aa6-825a-e9e67c25fccd" />
 
 - [`configs_module.json`](configs_module.json) — Agentic module schema role assignments
 
