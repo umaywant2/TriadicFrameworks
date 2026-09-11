@@ -1,10 +1,8 @@
-<img width="682" height="682" alt="tft_sitemap" src="https://github.com/user-attachments/assets/ed43bd55-38b0-45e8-94c5-0327040d359f" />
-
-## 🌐 Site‑Map | TriadicFrameworks  
 
 - [`sitemap_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/sitemap_module.json) — Agentic module schema role assignments
 - [`sitemap_main.xml`](https://www.triadicframeworks.org/sitemap_main.xml) — Machine sitemap (urlset)
 
+# 🌐 Site‑Map | TriadicFrameworks  
 *Structural, harmonic, and substrate‑aligned overview*
 
 _Alternate Site_ 🥈 [docsbook.io](https://docs.triadicframeworks.org/docs/corpus/)
