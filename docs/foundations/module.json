@@ -1,1 +1,46 @@
+{
+  "$schema": "../_shared/schema/module.schema.json",
 
+  "identity": {
+    "module": "foundations",
+    "title": "Foundational Concepts",
+    "canonical_url": "https://triadicframeworks.org/docs/foundations",
+    "version": "1.0.0"
+  },
+
+  "purpose": "Contains foundational documents that introduce core TriadicFrameworks concepts, including operator structure, resonance behavior, and dimensional mechanics.",
+
+  "category": "foundations",
+
+  "analyzer_layer": [
+    "operator",
+    "dimensional",
+    "coherence"
+  ],
+
+  "files": [
+    {
+      "name": "Triadic_Operator_Primer.md",
+      "role": "primer",
+      "description": "Introductory primer on Triadic Operators and foundational RTT mechanics."
+    }
+  ],
+
+  "ai": {
+    "ready": true,
+    "module_summary": "Foundational TriadicFrameworks concepts including operator structure and resonance mechanics.",
+    "keywords": [
+      "foundations",
+      "operator",
+      "primer",
+      "triadicframeworks",
+      "resonance",
+      "dimensional"
+    ]
+  },
+
+  "drift": {
+    "phantom_entries": false,
+    "schema_mismatch": false
+  }
+}
