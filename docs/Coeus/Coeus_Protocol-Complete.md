@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Coeus_module" src="https://github.com/user-attachments/assets/f0ab6362-c388-43e7-b950-467c9fd1b961" />
+
 # 🧩 **Coeus Protocol — Release Candidate Draft (v0.1)**  
 ### *A Resonance‑Aware Research Market for Civilization‑Scale Inquiry*
 ###### By Nawder Loswin 1/5/2026 © www.TriadicFrameworks.org
