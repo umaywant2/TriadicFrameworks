@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="diagnosing_media_therapy_" src="https://github.com/user-attachments/assets/59bbdb1f-bf62-478e-ad81-3504c5b04d64" />
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/diagnosing_media_therapy/module.json) — Agentic module schema role assignments
 
