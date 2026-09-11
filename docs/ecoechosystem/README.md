@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Ecoechosystem_" src="https://github.com/user-attachments/assets/0be0ae0e-fd20-4fb8-9746-b5f42595dcdf" />
 
 - [`eco_module.json`](eco_module.json) — Agentic module schema role assignments
 
