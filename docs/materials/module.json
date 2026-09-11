@@ -1,1 +1,45 @@
+{
+  "$schema": "../_shared/schema/module.schema.json",
 
+  "identity": {
+    "module": "materials",
+    "title": "Substrate Materials Classification",
+    "canonical_url": "https://triadicframeworks.org/docs/materials",
+    "version": "1.0.0"
+  },
+
+  "purpose": "Contains substrate material classification documents defining resonance properties, dimensional compatibility, and structural behavior within TriadicFrameworks.",
+
+  "category": "materials",
+
+  "analyzer_layer": [
+    "dimensional",
+    "operator",
+    "coherence"
+  ],
+
+  "files": [
+    {
+      "name": "SC_Classification.md",
+      "role": "classification",
+      "description": "Canonical substrate classification document defining material categories and resonance behavior."
+    }
+  ],
+
+  "ai": {
+    "ready": true,
+    "module_summary": "Substrate material classification including resonance properties and dimensional compatibility.",
+    "keywords": [
+      "materials",
+      "substrate",
+      "classification",
+      "resonance",
+      "triadicframeworks"
+    ]
+  },
+
+  "drift": {
+    "phantom_entries": false,
+    "schema_mismatch": false
+  }
+}
