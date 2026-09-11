@@ -1,3 +1,6 @@
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/games/module.json) — Agentic module schema role assignments
+
 # 🎲 Games — Playful Triadic Experiments
 
 The `games` directory contains playful, experimental, and interactive modules built on top of TriadicFrameworks concepts.  
