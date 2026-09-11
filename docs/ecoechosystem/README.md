@@ -1,9 +1,7 @@
-<img width="682" height="682" alt="rtt_ecoechosystem_module" src="https://github.com/user-attachments/assets/7540b0ad-5dba-400a-baca-2f496fca0bd0" />
-
-# EcoEchoSystem
 
 - [`eco_module.json`](eco_module.json) — Agentic module schema role assignments
 
+# EcoEchoSystem
 ## *A Cross‑Domain, Substrate‑Aligned Simulation Environment*
 
 The **EcoEchoSystem** is a multi‑layer, forkable simulation substrate built on **Resonance‑Time Theory (RTT)** and **Validated Spacetime (vST)**. It provides a unified environment where physics, psychology, economics, governance, AI, biology, and cognition operate on a shared **triadic substrate**.
