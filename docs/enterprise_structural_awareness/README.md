@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Enterprise_Structural_Awareness_" src="https://github.com/user-attachments/assets/ecc1ad07-9d26-4df7-afd8-24e71df45d08" />
 
 - [`esa_module.json`](esa_module.json) — Agentic module schema role assignments
 
