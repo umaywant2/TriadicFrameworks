@@ -1,1 +1,62 @@
+{
+  "$schema": "../_shared/schema/module.schema.json",
 
+  "identity": {
+    "module": "hardware",
+    "title": "Triadic Hardware Modules",
+    "canonical_url": "https://triadicframeworks.org/docs/hardware",
+    "version": "1.0.0"
+  },
+
+  "purpose": "Contains hardware-aligned documents including DPU notes, NPU architecture, and virtual NPU emulation logic implementing TFT and FFF operator behavior.",
+
+  "category": "hardware",
+
+  "analyzer_layer": [
+    "operator",
+    "dimensional",
+    "regime"
+  ],
+
+  "files": [
+    {
+      "name": "Notes/Interns_DPU_notes.md",
+      "role": "notes",
+      "description": "Internal DPU notes covering drift handling and resonance thresholds."
+    },
+    {
+      "name": "RTT_NPU/README.md",
+      "role": "specification",
+      "description": "Overview of RTT Neural Processing Unit architecture."
+    },
+    {
+      "name": "RTT_NPU/Seed_Info.md",
+      "role": "reference",
+      "description": "Seed-level initialization and resonance mapping for NPU substrates."
+    },
+    {
+      "name": "RTT_NPU/vNPU_Virtual_NPU_Emulator_with_TFT_and_FFF_logic.md",
+      "role": "emulator",
+      "description": "Virtual NPU emulator implementing TFT and FFF logic."
+    }
+  ],
+
+  "ai": {
+    "ready": true,
+    "module_summary": "Hardware modules defining DPU concepts, NPU architecture, and virtual NPU emulation with TFT/FFF logic.",
+    "keywords": [
+      "hardware",
+      "NPU",
+      "DPU",
+      "TFT",
+      "FFF",
+      "emulator",
+      "triadicframeworks"
+    ]
+  },
+
+  "drift": {
+    "phantom_entries": false,
+    "schema_mismatch": false
+  }
+}
