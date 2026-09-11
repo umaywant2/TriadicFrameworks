@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Coupling_" src="https://github.com/user-attachments/assets/93d283c4-00da-4f44-8635-476e0dd6845d" />
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/coupling/module.json) — Agentic module schema role assignments
 
