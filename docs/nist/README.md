@@ -1,23 +1,7 @@
-## 📘 **NIST Awareness Primer**  
 
 - [`nist_module.json`](nist_module.json) — Agentic module schema role assignments
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🧪NIST%20Examples%20Module-🔹Awareness%20Primer%20Active-4c8eda?style=for-the-badge" alt="NIST Examples Module | Awareness Primer Active"/>
-
+# 📘 **NIST Awareness Primer**  
 *A student‑friendly introduction to NIST through a TriadicFrameworks lens*
 
 ## 🎯 Purpose  
@@ -109,3 +93,19 @@ Pick any NIST domain from the list above and answer:
 1. Which regime does this domain primarily operate in?  
 2. What assumptions does the domain make about measurement or coherence?  
 3. Where might upstream (R0–R2) reasoning help clarify the domain’s goals?
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🧪NIST%20Examples%20Module-🔹Awareness%20Primer%20Active-4c8eda?style=for-the-badge" alt="NIST Examples Module | Awareness Primer Active"/>
