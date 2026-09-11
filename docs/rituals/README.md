@@ -1,4 +1,6 @@
 
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rituals/module.json) — Agentic module schema role assignments
+
 # 🔮 Rituals
 This folder contains the **ceremonial scrolls** of TriadicFrameworks.  
 Rituals are symbolic enactments that honor lineage, trigger badges, and echo resonance.
