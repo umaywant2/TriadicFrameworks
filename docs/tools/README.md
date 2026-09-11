@@ -1,5 +1,6 @@
+<img width="1194" height="672" alt="Tools_" src="https://github.com/user-attachments/assets/4a88531f-931d-46aa-98a1-4529114bf9f2" />
 
-- [``]() — Agentic module schema role assignments
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/tools/module.json) — Agentic module schema role assignments
 
 # 🛠️ TriadicFrameworks Tools Module  
 **Canonical Engine Cluster for Drift Repair, Purity Audits, Schema Enforcement, and Structural Generation**
