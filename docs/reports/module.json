@@ -1,1 +1,27 @@
+{
+  "module": "reports",
+  "version": "1.0.0",
+  "description": "TriadicFrameworks reporting surfaces: structured summaries, regime‑aligned documentation, and coherence‑audited report scaffolds.",
+  "ai": {
+    "module_kind": "reporting",
+    "substrate": "documentation",
+    "coherence": "declared",
+    "drift": "bounded"
+  },
+
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "coherence",
+      "purpose": "Primary overview of the reports subsystem; defines report types, coherence rules, and structural expectations."
+    },
+    {
+      "path": "module.json",
+      "role": "engine",
+      "analyzer_layer": "operator",
+      "purpose": "Self‑describing module manifest; operator‑layer metadata for report discovery and module introspection."
+    }
+  ]
+}
 
