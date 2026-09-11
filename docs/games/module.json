@@ -1,1 +1,46 @@
+{
+  "$schema": "../_shared/schema/module.schema.json",
 
+  "identity": {
+    "module": "games",
+    "title": "Triadic Games",
+    "canonical_url": "https://triadicframeworks.org/docs/games",
+    "version": "1.0.0"
+  },
+
+  "purpose": "Contains playful and experimental game modules that explore TriadicFrameworks concepts through interactive mechanics and triadic rule systems.",
+
+  "category": "games",
+
+  "analyzer_layer": [
+    "operator",
+    "regime",
+    "coherence"
+  ],
+
+  "files": [
+    {
+      "name": "TriadicMonopoly/",
+      "role": "game",
+      "description": "Triadic reinterpretation of Monopoly using RTT mechanics and resonance-based gameplay."
+    }
+  ],
+
+  "ai": {
+    "ready": true,
+    "module_summary": "Playful game modules exploring TriadicFrameworks concepts through interactive mechanics.",
+    "keywords": [
+      "games",
+      "triadic",
+      "monopoly",
+      "RTT",
+      "resonance",
+      "experimental"
+    ]
+  },
+
+  "drift": {
+    "phantom_entries": false,
+    "schema_mismatch": false
+  }
+}
