@@ -1,7 +1,5 @@
 <img width="1194" height="672" alt="triadicframeworks_webroot" src="https://github.com/user-attachments/assets/75116294-fe39-465c-bb4e-5905f5bdcb3e" />
 
-# 🌐 TriadicFrameworks
-
 **Resonance‑Time Theory • Triadic Substrate Modeling • Canon‑Aligned Tools**
 
 Welcome to the webroot of the TriadicFrameworks canon.  
