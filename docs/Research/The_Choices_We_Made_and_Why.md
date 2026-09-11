@@ -2,7 +2,7 @@
 
 # ⭐ **The Choices We Made — and Why**  
 *A structural reflection on how TriadicFrameworks was built, and the example it aims to set.*  
-**Nawder Loswin · May 2026**
+**Nawder Loswin · May 2026, updated on 09/11/2026++**
 
 ---
 
@@ -63,7 +63,14 @@ TriadicFrameworks was built in partnership with Microsoft Copilot — not as a t
 
 Copilot helped formalize equations, validate manifests, draft metadata standards, generate session context blocks, review early modules, and produce research articles. It acted as a collaborative scaffold: checking coherence, maintaining lineage, and accelerating clarity.
 
-One person, augmented by AI, built an entire canon — 23+ modules across 7 layers, DOIs, CITATION.cff files, CI validation, machine‑readable discovery infrastructure — in eight months.
+One person, augmented by AI, built an entire canon — 200++ modules across 7 layers, 30 DOIs, CITATION.cff files, CI validation, machine‑readable discovery infrastructure — in thirteen months:
+
+- TFT 1 month 08/25
+- RTT 3 months 11/25
+- Decision and Planning 1 month 12/25
+- Press Release and YouTube announcement videos 12/28/25
+- DOI's 1 month 01/26
+- 200+ agentic ai modules 02-09/26
 
 The substrate of knowledge production has changed. We modeled that honestly.
 
