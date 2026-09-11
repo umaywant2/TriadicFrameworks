@@ -1,1 +1,51 @@
+{
+  "$schema": "../_shared/schema/module.schema.json",
 
+  "identity": {
+    "module": "eda",
+    "title": "Resonance-Aligned EDA",
+    "canonical_url": "https://triadicframeworks.org/docs/eda",
+    "version": "1.0.0"
+  },
+
+  "purpose": "Contains resonance-aware Electronic Design Automation documents for post-ASML fabrication flows, substrate-aware PDK integration, and Triadic Transfer Function references.",
+
+  "category": "fabrication-design-automation",
+
+  "analyzer_layer": [
+    "operator",
+    "dimensional",
+    "regime"
+  ],
+
+  "files": [
+    {
+      "name": "PostASML_PDK_Integration.md",
+      "role": "specification",
+      "description": "Integration rules for post-ASML era PDKs using resonance-aligned fabrication grammar."
+    },
+    {
+      "name": "TTF_Reference.md",
+      "role": "reference",
+      "description": "Reference document for Triadic Transfer Functions (TTF) and substrate resonance mapping."
+    }
+  ],
+
+  "ai": {
+    "ready": true,
+    "module_summary": "Resonance-aware EDA documents covering post-ASML PDK integration and Triadic Transfer Function references.",
+    "keywords": [
+      "EDA",
+      "post-ASML",
+      "PDK",
+      "TTF",
+      "fabrication",
+      "triadicframeworks"
+    ]
+  },
+
+  "drift": {
+    "phantom_entries": false,
+    "schema_mismatch": false
+  }
+}
