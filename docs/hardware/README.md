@@ -1,5 +1,5 @@
 
-- [``]()
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/hardware/module.json) — Agentic module schema role assignments
 
 # 🔧 Hardware — Triadic Processing Units & Substrate Logic
 
