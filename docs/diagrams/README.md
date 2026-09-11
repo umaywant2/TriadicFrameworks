@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Diagrams_" src="https://github.com/user-attachments/assets/129275c4-ce4c-40fa-b39c-aeb1a6549585" />
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/diagrams/module.json) — Agentic module schema role assignments
 
