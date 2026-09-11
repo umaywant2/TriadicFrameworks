@@ -1,1 +1,51 @@
+{
+  "$schema": "../_shared/schema/module.schema.json",
 
+  "identity": {
+    "module": "hooks",
+    "title": "Event Hooks & Trigger Layer",
+    "canonical_url": "https://triadicframeworks.org/docs/hooks",
+    "version": "1.0.0"
+  },
+
+  "purpose": "Contains canonical event hooks, trigger definitions, and automation metadata used across TriadicFrameworks modules.",
+
+  "category": "automation",
+
+  "analyzer_layer": [
+    "operator",
+    "regime",
+    "coherence"
+  ],
+
+  "files": [
+    {
+      "name": "index.html",
+      "role": "index",
+      "description": "HTML index for browsing available hooks."
+    },
+    {
+      "name": "data/hooks.json",
+      "role": "registry",
+      "description": "Canonical hook registry defining triggers, events, and automation metadata."
+    }
+  ],
+
+  "ai": {
+    "ready": true,
+    "module_summary": "Event-driven automation layer containing hook definitions and trigger metadata.",
+    "keywords": [
+      "hooks",
+      "automation",
+      "events",
+      "triggers",
+      "registry",
+      "triadicframeworks"
+    ]
+  },
+
+  "drift": {
+    "phantom_entries": false,
+    "schema_mismatch": false
+  }
+}
