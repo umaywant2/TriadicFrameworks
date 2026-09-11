@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Corpus_" src="https://github.com/user-attachments/assets/a8aa975c-0e88-4ce2-95b6-28ba5e05f81d" />
 
 - [`corpus_module.json`](corpus_module.json) — Agentic module schema role assignments
 
