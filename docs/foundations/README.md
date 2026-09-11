@@ -1,5 +1,5 @@
 
-- [``]()
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/foundations/module.json) — Agentic module schema role assignments
 
 # 🧱 Foundations — Core Triadic Concepts
 
