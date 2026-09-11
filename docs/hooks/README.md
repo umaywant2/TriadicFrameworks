@@ -1,3 +1,6 @@
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/hooks/module.json) — Agentic module schema role assignments
+
 # 🪝 Hooks — Canonical Event & Trigger Layer
 
 The `hooks` directory contains the event‑driven trigger layer for TriadicFrameworks.  
