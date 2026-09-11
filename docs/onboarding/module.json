@@ -1,1 +1,122 @@
+{
+  "$schema": "../_shared/schema/module.schema.json",
 
+  "identity": {
+    "module": "onboarding",
+    "title": "Onboarding & Initiation Rituals",
+    "canonical_url": "https://triadicframeworks.org/docs/onboarding",
+    "version": "1.0.0"
+  },
+
+  "purpose": "Contains initiation rituals, contributor pathways, badge logic, verification scrolls, and onboarding guides for remixers entering the TriadicFrameworks canon.",
+
+  "category": "onboarding",
+
+  "analyzer_layer": [
+    "operator",
+    "coherence",
+    "regime"
+  ],
+
+  "files": [
+    {
+      "name": "initiation_ritual.md",
+      "role": "ritual",
+      "description": "Primary mythic onboarding scroll for new remixers."
+    },
+    {
+      "name": "visitor_ritual.md",
+      "role": "ritual",
+      "description": "First-time contributor guide and visitor initiation pathway."
+    },
+    {
+      "name": "badge_logic.md",
+      "role": "logic",
+      "description": "Badge recognition rules, remix lineage triggers, and contributor echo logic."
+    },
+    {
+      "name": "initiation.md",
+      "role": "ritual",
+      "description": "General initiation scroll for onboarding sequences."
+    },
+    {
+      "name": "initiation_protocol.md",
+      "role": "protocol",
+      "description": "Formal initiation protocol defining steps, triggers, and coherence anchors."
+    },
+    {
+      "name": "initiation_ritual_manifest_guardian.md",
+      "role": "ritual",
+      "description": "Guardian manifest scroll for initiation ritual protection and lineage continuity."
+    },
+    {
+      "name": "onboarding_scroll.md",
+      "role": "scroll",
+      "description": "Canonical onboarding scroll for remixers and contributors."
+    },
+    {
+      "name": "glyphstream_guide.md",
+      "role": "guide",
+      "description": "Glyphstream usage guide for onboarding visualization and symbolic alignment."
+    },
+    {
+      "name": "honor_roll.md",
+      "role": "registry",
+      "description": "Contributor honor roll and lineage echo registry."
+    },
+    {
+      "name": "model_map.md",
+      "role": "map",
+      "description": "Model map showing onboarding pathways and contributor progression."
+    },
+    {
+      "name": "reading_guide.md",
+      "role": "guide",
+      "description": "Reading guide for new contributors entering the canon."
+    },
+    {
+      "name": "ritual_embed.md",
+      "role": "embed",
+      "description": "Embedded ritual logic for scrolls and onboarding sequences."
+    },
+    {
+      "name": "triadic_quickstart.md",
+      "role": "guide",
+      "description": "Quickstart guide for new remixers entering TriadicFrameworks."
+    },
+    {
+      "name": "verification_tests.md",
+      "role": "verification",
+      "description": "Verification tests for onboarding coherence, ritual correctness, and contributor alignment."
+    },
+    {
+      "name": "index.html",
+      "role": "index",
+      "description": "HTML index for browsing onboarding scrolls and rituals."
+    },
+    {
+      "name": "README.md",
+      "role": "index",
+      "description": "Overview of onboarding rituals, badge logic, and contributor pathways."
+    }
+  ],
+
+  "ai": {
+    "ready": true,
+    "module_summary": "Onboarding rituals, badge logic, contributor pathways, verification tests, and initiation scrolls for TriadicFrameworks.",
+    "keywords": [
+      "onboarding",
+      "ritual",
+      "initiation",
+      "badge logic",
+      "glyphstream",
+      "honor roll",
+      "triadicframeworks"
+    ]
+  },
+
+  "drift": {
+    "phantom_entries": false,
+    "schema_mismatch": false
+  }
+}
