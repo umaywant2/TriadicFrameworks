@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Onboarding_" src="https://github.com/user-attachments/assets/1881bb55-c6bd-493d-a679-90c0cb81839c" />
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/onboarding/module.json) — Agentic module schema role assignments
 
