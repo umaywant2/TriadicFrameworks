@@ -1,3 +1,6 @@
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/coupling/module.json) — Agentic module schema role assignments
+
 # 🌐 Coupling Maps — Cross‑Domain Interaction Layer
 
 The `coupling` directory contains all cross‑domain coupling maps for TriadicFrameworks.  
