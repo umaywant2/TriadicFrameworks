@@ -1,5 +1,7 @@
 <img width="1194" height="672" alt="Research_The_Choices_We_Made_and_Why" src="https://github.com/user-attachments/assets/c3615807-a4da-41d9-af4d-c83f9d9a65a2" />
 
+- [`The_Choices_We_Made_and_Why_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/The_Choices_We_Made_and_Why_module.json) — Agentic module schema role assignments
+
 # ⭐ **The Choices We Made — and Why**  
 *A structural reflection on how TriadicFrameworks was built, and the example it aims to set.*  
 **Nawder Loswin · May 2026, updated on 09/11/2026++**
