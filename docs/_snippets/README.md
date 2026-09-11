@@ -1,5 +1,5 @@
 
-- [``]()
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/_snippets/module.json) — Agentic module schema role assignments
 
 # 🎯 How to reference these snippets in your docs
 Inside `RTT_Developer_Quick-Start.md` or any other doc:
