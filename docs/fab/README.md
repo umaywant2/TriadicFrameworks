@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Fab_" src="https://github.com/user-attachments/assets/d7f18000-b6f6-49e1-8cbd-4db7857a0d31" />
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/fab/module.json) — Agentic module schema role assignments
 
