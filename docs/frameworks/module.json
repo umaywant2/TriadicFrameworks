@@ -1,1 +1,50 @@
+{
+  "$schema": "../_shared/schema/module.schema.json",
 
+  "identity": {
+    "module": "frameworks",
+    "title": "Framework Lineage & Creation Guides",
+    "canonical_url": "https://triadicframeworks.org/docs/frameworks",
+    "version": "1.0.0"
+  },
+
+  "purpose": "Contains framework-level modules including creation guides and IPD lineage structures that define how TriadicFrameworks modules are built, evolved, and maintained.",
+
+  "category": "framework",
+
+  "analyzer_layer": [
+    "operator",
+    "regime",
+    "coherence"
+  ],
+
+  "files": [
+    {
+      "name": "creation_guide/",
+      "role": "guide",
+      "description": "Canonical guide for creating new TriadicFrameworks modules."
+    },
+    {
+      "name": "ipd_12/",
+      "role": "framework",
+      "description": "IPD-12 lineage module defining iterative pattern development rules."
+    }
+  ],
+
+  "ai": {
+    "ready": true,
+    "module_summary": "Framework-level modules including creation guides and IPD lineage structures.",
+    "keywords": [
+      "framework",
+      "creation guide",
+      "IPD",
+      "pattern development",
+      "triadicframeworks"
+    ]
+  },
+
+  "drift": {
+    "phantom_entries": false,
+    "schema_mismatch": false
+  }
+}
