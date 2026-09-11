@@ -1,1 +1,39 @@
+{
+  "module": "diagnosing_media_therapy",
+  "version": "1.0.0",
+  "description": "RTT‑aligned reflective media‑based micro‑capture routine for noticing emotional patterns over time.",
+  "ai": {
+    "module_kind": "reflective_protocol",
+    "substrate": "media_resonance",
+    "coherence": "declared",
+    "drift": "bounded"
+  },
+
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "coherence",
+      "purpose": "Primary overview of DMT workflow, schema, privacy boundaries, and reflective practice framing."
+    },
+    {
+      "path": "dmt_init_capture.md",
+      "role": "engine",
+      "analyzer_layer": "operator",
+      "purpose": "Initial capture routine for media‑reaction entries; operator‑layer signal intake and resonance tagging."
+    },
+    {
+      "path": "session_template.md",
+      "role": "template",
+      "analyzer_layer": "dimensional",
+      "purpose": "User‑facing session template; dimensional scaffolding for media‑reaction entries and longitudinal mapping."
+    },
+    {
+      "path": "triadic_axes_media.md",
+      "role": "map",
+      "analyzer_layer": "regime",
+      "purpose": "Triadic axes for media resonance; regime‑level mapping of identity, stress, coherence, drift, and memory domains."
+    }
+  ]
+}
 
