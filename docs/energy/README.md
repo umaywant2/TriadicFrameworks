@@ -1,23 +1,7 @@
-## 🎭 Energy — A TriadicFrameworks Exploration of Technique, Gradients, and Regime Awareness
 
 - [`energy_module.json`](energy_module.json) — Agentic module schema role assignments
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/⚡Gradient%20Aligned-🎓Ready%20for%20Students-4c8eda?style=for-the-badge" alt="⚡Gradient Aligned | 🎓Ready for Students"/>
-
+# 🎭 Energy — A TriadicFrameworks Exploration of Technique, Gradients, and Regime Awareness
 The **energy** directory explores one of the most misunderstood domains in science and engineering:  
 the belief that “energy limits” define what is possible.
 
@@ -124,3 +108,19 @@ This directory becomes the **anchor** for all future explorations of:
 - “energy inversion” thinking  
 
 It is the beginning of a new way of understanding energy — one aligned with **gradients, technique, and regime awareness**, not brute force.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/⚡Gradient%20Aligned-🎓Ready%20for%20Students-4c8eda?style=for-the-badge" alt="⚡Gradient Aligned | 🎓Ready for Students"/>
