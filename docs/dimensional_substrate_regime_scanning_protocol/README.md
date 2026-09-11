@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Dimensional_Susstrate_Regime_Scanning_" src="https://github.com/user-attachments/assets/f41d3009-3e8d-473f-bbc0-8593a042adc1" />
 
 - [`dsrsp_module.json`](dsrsp_module.json) — Agentic module schema role assignments
 
