@@ -1,0 +1,26 @@
+{
+  "module": "rituals",
+  "version": "1.0.0",
+  "description": "Ceremonial scrolls of TriadicFrameworks: badge ceremonies, lineage echoes, initiation protocols, and symbolic enactments.",
+  "ai": {
+    "module_kind": "ceremonial",
+    "substrate": "mythic_resonance",
+    "coherence": "declared",
+    "drift": "bounded"
+  },
+
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "coherence",
+      "purpose": "Primary overview of Rituals; defines ceremonial logic, lineage echoes, badge triggers, and session anchors."
+    },
+    {
+      "path": "badge_ceremony.md",
+      "role": "signature",
+      "analyzer_layer": "regime",
+      "purpose": "Formal badge‑ceremony script; regime‑level symbolic enactment of lineage recognition."
+    }
+  ]
+}
