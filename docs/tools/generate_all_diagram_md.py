@@ -30,29 +30,58 @@ def generate_diagram_md(path, module):
     name = module["name"]
     category = module["category"]
 
-    content = f"""# {name} — Diagram
+    lines = [
+        f"# {name} — Diagram",
+        "",
+        "## Canon Diagram Overview",
+        f"This diagram provides a structural visualization of the **{name}** module within the **{category}** domain of TriadicFrameworks.",
+        "",
+        "It is designed to be AI‑readable, drift‑resistant, and canon‑aligned.",
+        "",
+        "---",
+        "",
+        "## Module Position in Canon",
+        f"- **RTT Layer:** {module['rtt']['layer']}",
+        "- **Canon Reference:** `/docs/spine/spine.json`",
+        "- **Triad Inheritance:** RTT + TFT triads",
+        "- **Session Context:** rtt=1 | coherence=declared | drift=bounded | paradox=structural",
+        "",
+        "---",
+        "",
+        "## Diagram (Mermaid Spec Placeholder)",
+        "",
+        "```mermaid",
+        "flowchart TD",
+        f"    A[Module: {name}] --> B[Category: {category}]",
+        f"    A --> C[RTT Layer: {module['rtt']['layer']}]",
+        "    A --> D[Canon Ref: spine.json]",
+        "    A --> E[Triads: RTT + TFT]",
+        "    A --> F[Session Context]",
+        "```",
+        "",
+        "---",
+        "",
+        "Generated automatically by `generate_all_diagram_md.py`."
+    ]
 
-## Canon Diagram Overview
-This diagram provides a structural visualization of the **{name}** module within the **{category}** domain of TriadicFrameworks.
+    with open(diagram_path, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines))
 
-It is designed to be AI‑readable, drift‑resistant, and canon‑aligned.
+    print(f"✔ Created {diagram_path}")
 
----
+def main():
+    print("\n=== TriadicFrameworks Diagram Generator ===\n")
 
-## Module Position in Canon
-- **RTT Layer:** {module['rtt']['layer']}
-- **Canon Reference:** `/docs/spine/spine.json`
-- **Triad Inheritance:** RTT + TFT triads
-- **Session Context:** rtt=1 | coherence=declared | drift=bounded | paradox=structural
+    for root, dirs, files in os.walk("docs"):
+        if any(ex in root.split(os.sep) for ex in EXCLUDED_DIRS):
+            continue
 
----
+        if is_module_dir(root):
+            module = load_module_json(root)
+            if module:
+                generate_diagram_md(root, module)
 
-## Diagram (Mermaid Spec Placeholder)
+    print("\n✨ Diagram generation complete.\n")
 
-```mermaid
-flowchart TD
-    A[Module: {name}] --> B[Category: {category}]
-    A --> C[RTT Layer: {module['rtt']['layer']}]
-    A --> D[Canon Ref: spine.json]
-    A --> E[Triads: RTT + TFT]
-    A --> F[Session Context]
+if __name__ == "__main__":
+    main()
