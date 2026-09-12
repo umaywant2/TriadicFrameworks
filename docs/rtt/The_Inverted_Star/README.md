@@ -1,6 +1,6 @@
 <img width="1194" height="672" alt="rtt_The_Inverted_Star_" src="https://github.com/user-attachments/assets/9dbb0b97-74c5-4b2c-ad60-d067e9080922" />
 
-<div align="center"><iframe width="1194" height="672" src="https://www.youtube.com/embed/6Z0AklQbP8U?list=PLacFsbReLJPw&pp=sAgC&autoplay=1&mute=1&loop=1" title="TriadicFrameworks Books Playlist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div align="center"><iframe width="796" height="448" src="https://www.youtube.com/embed/6Z0AklQbP8U?list=PLacFsbReLJPw&pp=sAgC&autoplay=1&mute=1&loop=1" title="TriadicFrameworks Books Playlist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 - [`The_Inverted_Star_module.json`](The_Inverted_Star_module.json) — Agentic module schema role assignments
 
