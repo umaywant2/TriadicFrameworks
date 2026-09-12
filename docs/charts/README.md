@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="Charts_" src="https://github.com/user-attachments/assets/4d4d0640-d7e8-477a-beec-fc65a887823d" />
 
 - [`charts_module.json`](charts_module.json) — Agentic module schema role assignments
 
