@@ -234,6 +234,40 @@ pre {
 code {
   color: var(--text-main);
 }
+
+/* Custom arrow icons */
+details > summary::before {
+  content: "⏵"; /* collapsed */
+  padding-right: 6px;
+  font-size: 0.9em;
+}
+details[open] > summary::before {
+  content: "⏷"; /* expanded */
+}
+
+/* Make the h2/h3 feel like the toggle */
+details > summary h2,
+details > summary h3 {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hover effect */
+details > summary:hover h2,
+details > summary:hover h3 {
+  text-decoration: underline;
+}
+
+/* Optional: fade-in animation for opened blocks */
+details[open] {
+  animation: fadeIn 0.15s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+      
 </style>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -253,7 +287,8 @@ code {
   </svg>
  </p> 
 
-  <h2>🔆 Framework Field Theory (FFT)</h2>
+   <details>
+     <summary><h2>🔆 Framework Field Theory (FFT)</h2></summary>
       <a href="#README">🔰 README</a>
       <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
       <a href="#CONTRIBUTING">🤝 Contributing</a>
@@ -266,36 +301,54 @@ code {
       <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
       <a href="#SECURITY">🔐 Security</a>
       <a href="#PRINCIPLES">🧘 Principles</a>
-    <h3>🌱 PART I — Origin</h3>
+   </details>
+   <details>
+     <summary><h3>🌱 PART I — Origin</h3></summary>
       <a href="#ORIGIN_WHY_FIELD">🌄 Why FFT Becomes a Field</a>
       <a href="#ORIGIN_THRESHOLD">⚡ Threshold Moment</a>
-    <h3>📐 PART II — Definition</h3>
+   </details>
+   <details>
+     <summary><h3>📐 PART II — Definition</h3></summary>
       <a href="#WHAT_IS_FFT">📘 What Is FFT?</a>
       <a href="#WHY_FFT_EXISTS">🎯 Why FFT Exists</a>
       <a href="#WHAT_FFT_STUDIES">🔍 What FFT Studies</a>
-    <h3>🧩 PART III — Operators</h3>
+   </details>
+   <details>
+     <summary><h3>🧩 PART III — Operators</h3></summary>
       <a href="#OPERATOR_FAMILIES">🧬 Operator Families</a>
       <a href="#OPERATOR_ECOLOGY">🌿 Operator Ecology</a>
-    <h3>🌀 PART IV — Dimensionality</h3>
+   </details>
+   <details>
+     <summary><h3>🌀 PART IV — Dimensionality</h3></summary>
       <a href="#DIMENSIONAL_LAYERS">📊 Dimensional Layers</a>
       <a href="#DIMENSIONAL_COMPATIBILITY">🔗 Dimensional Compatibility</a>
-    <h3>🎭 PART V — Identity</h3>
+   </details>
+   <details>
+     <summary><h3>🎭 PART V — Identity</h3></summary>
       <a href="#FRAMEWORK_SIGNATURES">🖋 Framework Signatures</a>
       <a href="#FRAMEWORK_EVOLUTION">🌱 Framework Evolution</a>
       <a href="#COHERENCE_AND_PARADOX">♾ Coherence & Paradox</a>
-    <h3>🏗 PART VI — Meta‑Architecture</h3>
+   </details>
+   <details>
+     <summary><h3>🏗 PART VI — Meta‑Architecture</h3></summary>
       <a href="#META_ARCHITECTURE">🏛 Meta‑Architecture</a>
       <a href="#COHERENCE_ENGINE">🔥 Coherence Engine</a>
-    <h3>🧪 PART VII — Examples</h3>
+   </details>
+   <details>
+     <summary><h3>🧪 PART VII — Examples</h3></summary>
       <a href="#EXAMPLE_FRAMEWORKS">🧰 Example Frameworks</a>
       <a href="#CROSS_DOMAIN_TRANSLATIONS">🌐 Cross‑Domain Translations</a>
       <a href="#PARADOX_RESOLUTION">⚖ Paradox Resolution</a>
       <a href="#DIMENSIONAL_UPGRADES">⤴ Dimensional Upgrades</a>
       <a href="#HYBRID_FRAMEWORKS">🧿 Hybrid Frameworks</a>
-    <h3>📚 PART VIII — Teaching</h3>
+   </details>
+   <details>
+     <summary><h3>📚 PART VIII — Teaching</h3></summary>
       <a href="#TEACHING_MODULES">🎓 Teaching Modules</a>
       <a href="#LEARNING_PATH">🧭 Learning Path</a>
-    <h3>🔬 PART IX — Research</h3>
+   </details>
+   <details>
+     <summary><h3>🔬 PART IX — Research</h3></summary>
       <a href="#RESEARCH_QUESTIONS">❓ Research Questions</a>
       <a href="#OPEN_PROBLEMS">🚧 Open Problems</a>
       <a href="#TESTABLE_PREDICTIONS">🎂 Testable Predictions</a>
@@ -306,10 +359,14 @@ code {
       <a href="https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Framework_Field_Theory/incidentals/">🧾 Incidentals</a>
       <a href="#CIV_UNLOCKS">🔓 Civilization Unlocks</a> 
       <a href="#AI_DRIFT_ERAS">🦹 AI Drift Era's</a>
-    <h3>🛠 PART X — Infrastructure</h3>
+   </details>
+   <details>
+     <summary><h3>🛠 PART X — Infrastructure</h3></summary>
       <a href="#GITHUB_ARCHITECTURE">🏗 GitHub Architecture</a>
       <a href="#CONTRIBUTION_GUIDE">🤝 Contribution Guide</a>
-    <h3>📎 PART XI — Appendices A–Z</h3>
+   </details>
+   <details>
+     <summary><h3>📎 PART XI — Appendices A–Z</h3></summary>
       <a href="#APP_A_FIELD_GLOSSARY">📖 Appendix A — Field Glossary</a>
       <a href="#APP_B_CANONICAL_DIAGRAMS">🗺 Appendix B — Canonical Diagrams</a>
       <a href="#APP_C_OPERATOR_ECOLOGY_MAP">🌳 Appendix C — Operator Ecology Map</a>
@@ -336,7 +393,9 @@ code {
       <a href="#APP_X_FIELD_VALIDATION">🧮 Appendix X — Field‑Level Validation</a>
       <a href="#APP_Y_CANON_DRIFT_CORRECTION">🌀 Appendix Y — Drift‑Correction Algorithms</a>
       <a href="#APP_Z_DIMENSIONAL_PEDAGOGY">📘 Appendix Z — Dimensional Pedagogy Methods</a>
-    <h3>📚 PART XI — Appendices AA-AL</h3>
+   </details>
+   <details>
+     <summary><h3>📚 PART XI — Appendices AA-AL</h3></summary>
       <a href="#APPENDIX_AA_OPERATOR_DEFINITIONS">🧩 Appendix AA — Operator Definitions | Canonical definitions of D, A, C, α, S.</a>
       <a href="#APPENDIX_AB_DELTA_SET_PARAMETERIZATION">🧮 Appendix AB — ΔSET Parameterization | Formal ΔSET structure and κ‑parameter roles.</a>
       <a href="#APPENDIX_AC_SIMULATION_PROTOCOLS">🧪 Appendix AC — Simulation Protocols | Standardized procedures for FFT simulations.</a>
@@ -349,23 +408,33 @@ code {
       <a href="#APPENDIX_AJ_REGIME_AWARE_VISUALIZATION_METHODS">🎨 Appendix AJ — Regime‑Aware Visualization Methods | Canonical visualization techniques for FFT.</a>
       <a href="#APPENDIX_AK_FFT_SIMULATION_BENCHMARK_SUITE">🧪 Appendix AK — FFT Simulation Benchmark Suite | Standardized benchmark problems for FFT solvers.</a>
       <a href="#APPENDIX_AL_CANONICAL_DIAGRAM_TEMPLATES">🖼️ Appendix AL — Canonical Diagram Templates | SVG‑ready templates for the visual canon.</a>
-    <h3>📚 PART XI — Regime-Aware Visualization</h3>
+   </details>
+   <details>
+     <summary><h3>📚 PART XI — Regime-Aware Visualization</h3></summary>
       <a href="#APPENDIX_REGIME_AWARE_VISUALIZATION_SVG">🧩 Regime‑Aware Visualization (SVG) | High‑resolution SVG specification.</a>
       <a href="#APPENDIX_REGIME_AWARE_VISUALIZATION_DIAGRAM">🖥️ Regime‑Aware Visualization Diagram | Full composite visualization.</a>
       <a href="#APPENDIX_REGIME_AWARE_VISUALIZATION_FIGMA_COMPONENTS">🧱 Regime‑Aware Visualization — Figma Modular Component Set | Componentized visual canon.</a>
       <a href="#APPENDIX_REGIME_AWARE_VISUAL_GRAMMAR">📏 Regime‑Aware Visual Grammar | Canonical rules for FFT’s visual language.</a>
-    <h3>🤖 PART XII — 3‑AI Reviews</h3>
+   </details>
+   <details>
+     <summary><h3>🤖 PART XII — 3‑AI Reviews</h3></summary>
       <a href="#AI_REVIEWS_README">📘 Review Overview</a>
       <a href="#AI_REVIEW_GROK">⚡ Grok Review</a>
       <a href="#AI_REVIEW_PERPLEXITY">🔍 Perplexity Review</a>
       <a href="#AI_REVIEW_GEMINI">🔷 Gemini Review</a>
       <a href="#AI_REVIEW_COMPARISONS">📊 Triadic Comparison</a>
       <a href="#AI_REVIEW_CLOSING">🏁 Closing Statements</a>
-    <h3>🤖 PART XIII — External Reviewer</h3>
+   </details>
+   <details>
+     <summary><h3>🤖 PART XIII — External Reviewer</h3></summary>
       <a href="#AI_REVIEW_DUCK">🦆 Duck | Full Review</a> 
-    <h3>📐 PART XIV — Mathematical Foundations</h3>
+   </details>
+   <details>
+     <summary><h3>📐 PART XIV — Mathematical Foundations</h3></summary>
       <a href="#PART_XIV_README">📘 Mathematical Foundations | Core substrate, operators, and formal structure of FFT.</a>
-    <h3>🏗️ Triadic Tools</h3> 
+   </details>
+   <details>
+     <summary><h3>🏗️ Triadic Tools</h3></summary> 
       <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
       <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
       <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
@@ -381,6 +450,7 @@ code {
       <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
       <a href="../">🔙TFT</a>
+   </details>
    <!-- RTT Session Header (canonical stub) -->
 <!-- ═══════════════════════════════════════════════════════════ -->
 <!-- /docs/Framework_Field_Theory — Session Context block       -->
