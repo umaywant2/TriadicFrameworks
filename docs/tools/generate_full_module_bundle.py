@@ -1,6 +1,6 @@
 import os
 import json
-import subprocess
+from copy import deepcopy
 
 TEMPLATE_PATH = "docs/_template/module.json"
 SPINE_REF = "/docs/spine/spine.json"
@@ -18,11 +18,7 @@ def load_template():
         return json.load(f)
 
 def is_module_dir(path):
-    # A module directory is any directory containing content files
-    # but NOT already containing module.json
-    if "module.json" in os.listdir(path):
-        return True
-    return False
+    return "module.json" in os.listdir(path)
 
 def write_json(path, data):
     with open(path, "w", encoding="utf-8") as f:
@@ -42,13 +38,13 @@ def generate_module_json(path, template, name, category):
         print(f"❌ module.json already exists in {path}, skipping.")
         return None
 
-    data = template.copy()
+    data = deepcopy(template)
 
     data["module"]["name"] = name
     data["module"]["summary"] = f"Auto‑generated module.json for {name}"
     data["module"]["category"] = category
-
     data["module"]["canon_ref"] = SPINE_REF
+
     data["module"]["inherit"] = {
         "canon": True,
         "session_context": True,
@@ -83,38 +79,39 @@ def generate_index_md(path, module):
         print(f"❌ INDEX.md already exists in {path}, skipping.")
         return
 
-    content = f"""# {module['name']}
+    lines = [
+        f"# {module['name']}",
+        "",
+        f"**Category:** {module['category']}  ",
+        f"**Summary:** {module['summary']}",
+        "",
+        "---",
+        "",
+        "## Canon Inheritance",
+        "This module inherits the TriadicFrameworks canon from:",
+        "",
+        "`/docs/spine/spine.json`",
+        "",
+        "It loads:",
+        "",
+        "- RTT triads",
+        "- TFT triads",
+        "- Session context",
+        "- RTT frozen source",
+        "- AI initialization rules",
+        "",
+        "---",
+        "",
+        "## RTT Layer",
+        f"This module operates at **RTT Layer {module['rtt']['layer']}**",
+        f"Source: {module['rtt']['source']}",
+        "",
+        "---",
+        "",
+        "Generated automatically by `generate_full_module_bundle.py`."
+    ]
 
-**Category:** {module['category']}  
-**Summary:** {module['summary']}
-
----
-
-## Canon Inheritance
-This module inherits the TriadicFrameworks canon from:
-
-`/docs/spine/spine.json`
-
-It loads:
-
-- RTT triads  
-- TFT triads  
-- Session context  
-- RTT frozen source  
-- AI initialization rules  
-
----
-
-## RTT Layer
-This module operates at **RTT Layer {module['rtt']['layer']}**  
-Source: {module['rtt']['source']}
-
----
-
-Generated automatically by `generate_full_module_bundle.py`.
-"""
-
-    write_text(out_path, content)
+    write_text(out_path, "\n".join(lines))
     print(f"✔ Created {out_path}")
 
 # ---------------------------------------------------------
@@ -127,37 +124,38 @@ def generate_overview_md(path, module):
         print(f"❌ A_Overview.md already exists in {path}, skipping.")
         return
 
-    content = f"""# {module['name']} — Overview
+    lines = [
+        f"# {module['name']} — Overview",
+        "",
+        "## Purpose",
+        module["summary"],
+        "",
+        f"This module belongs to the **{module['category']}** domain of TriadicFrameworks.",
+        "",
+        "---",
+        "",
+        "## Canon Context",
+        "This module inherits the full TriadicFrameworks canon:",
+        "",
+        "- RTT triads",
+        "- TFT triads",
+        "- Session context",
+        "- RTT frozen source",
+        "- AI initialization rules",
+        "",
+        "Canon reference: `/docs/spine/spine.json`",
+        "",
+        "---",
+        "",
+        "## RTT Layer",
+        f"This module operates at **RTT Layer {module['rtt']['layer']}**.",
+        "",
+        "---",
+        "",
+        "Generated automatically by `generate_full_module_bundle.py`."
+    ]
 
-## Purpose
-{module['summary']}
-
-This module belongs to the **{module['category']}** domain of TriadicFrameworks.
-
----
-
-## Canon Context
-This module inherits the full TriadicFrameworks canon:
-
-- RTT triads  
-- TFT triads  
-- Session context  
-- RTT frozen source  
-- AI initialization rules  
-
-Canon reference: `/docs/spine/spine.json`
-
----
-
-## RTT Layer
-This module operates at **RTT Layer {module['rtt']['layer']}**.
-
----
-
-Generated automatically by `generate_full_module_bundle.py`.
-"""
-
-    write_text(out_path, content)
+    write_text(out_path, "\n".join(lines))
     print(f"✔ Created {out_path}")
 
 # ---------------------------------------------------------
@@ -170,19 +168,56 @@ def generate_diagram_md(path, module):
         print(f"❌ diagram.md already exists in {path}, skipping.")
         return
 
-    content = f"""# {module['name']} — Diagram
+    lines = [
+        f"# {module['name']} — Diagram",
+        "",
+        "## Canon Diagram Overview",
+        f"This diagram provides a structural visualization of the **{module['name']}** module.",
+        "",
+        "---",
+        "",
+        "## Diagram (Mermaid)",
+        "",
+        "```mermaid",
+        "flowchart TD",
+        f"    A[Module: {module['name']}] --> B[Category: {module['category']}]",
+        f"    A --> C[RTT Layer: {module['rtt']['layer']}]",
+        "    A --> D[Canon Ref: spine.json]",
+        "    A --> E[Triads: RTT + TFT]",
+        "    A --> F[Session Context]",
+        "```",
+        "",
+        "---",
+        "",
+        "Generated automatically by `generate_full_module_bundle.py`."
+    ]
 
-## Canon Diagram Overview
-This diagram provides a structural visualization of the **{module['name']}** module.
+    write_text(out_path, "\n".join(lines))
+    print(f"✔ Created {out_path}")
 
----
+# ---------------------------------------------------------
+# MAIN
+# ---------------------------------------------------------
+def main():
+    print("\n=== TriadicFrameworks Full Module Bundle Generator ===\n")
 
-## Diagram (Mermaid)
+    template = load_template()
 
-```mermaid
-flowchart TD
-    A[Module: {module['name']}] --> B[Category: {module['category']}]
-    A --> C[RTT Layer: {module['rtt']['layer']}]
-    A --> D[Canon Ref: spine.json]
-    A --> E[Triads: RTT + TFT]
-    A --> F[Session Context]
+    for root, dirs, files in os.walk("docs"):
+        if any(ex in root.split(os.sep) for ex in EXCLUDED_DIRS):
+            continue
+
+        if is_module_dir(root):
+            module_name = os.path.basename(root)
+            module_category = os.path.basename(os.path.dirname(root))
+
+            module = generate_module_json(root, template, module_name, module_category)
+            if module:
+                generate_index_md(root, module)
+                generate_overview_md(root, module)
+                generate_diagram_md(root, module)
+
+    print("\n✨ Full bundle generation complete.\n")
+
+if __name__ == "__main__":
+    main()
