@@ -54,23 +54,24 @@ def generate_module_graph(domain_path, modules):
 
     mermaid_lines.append("```")
 
-    content = f"""# {domain_name} — Module Graph
-
-This file provides a domain‑level module graph for **{domain_name}**.
-
----
-
-## Module Graph (Mermaid)
-
-{'\n'.join(mermaid_lines)}
-
----
-
-Generated automatically by `generate_domain_bundle.py`.
-"""
+    lines = [
+        f"# {domain_name} — Module Graph",
+        "",
+        f"This file provides a domain‑level module graph for **{domain_name}**.",
+        "",
+        "---",
+        "",
+        "## Module Graph (Mermaid)",
+        "",
+        *mermaid_lines,
+        "",
+        "---",
+        "",
+        "Generated automatically by `generate_domain_bundle.py`."
+    ]
 
     with open(out_path, "w", encoding="utf-8") as f:
-        f.write(content)
+        f.write("\n".join(lines))
 
     print(f"✔ Created {out_path}")
 
@@ -144,36 +145,38 @@ def generate_domain_overview(domain_path, modules):
 
     module_list = "\n".join(module_lines)
 
-    content = f"""# {domain_name} — Domain Overview
-
-## Purpose
-This document provides a domain‑level overview for **{domain_name}**, summarizing its structural role within the TriadicFrameworks canon and listing all modules contained within this domain.
-
----
-
-## Modules in This Domain
-{module_list}
-
----
-
-## Canon Context
-This domain inherits the full TriadicFrameworks canon:
-
-- RTT triads  
-- TFT triads  
-- Session context  
-- RTT frozen source  
-- AI initialization rules  
-
-Canon reference: `/docs/spine/spine.json`
-
----
-
-Generated automatically by `generate_domain_bundle.py`.
-"""
+    lines = [
+        f"# {domain_name} — Domain Overview",
+        "",
+        "## Purpose",
+        f"This document provides a domain‑level overview for **{domain_name}**, summarizing its structural role within the TriadicFrameworks canon and listing all modules contained within this domain.",
+        "",
+        "---",
+        "",
+        "## Modules in This Domain",
+        "",
+        module_list,
+        "",
+        "---",
+        "",
+        "## Canon Context",
+        "This domain inherits the full TriadicFrameworks canon:",
+        "",
+        "- RTT triads",
+        "- TFT triads",
+        "- Session context",
+        "- RTT frozen source",
+        "- AI initialization rules",
+        "",
+        "Canon reference: `/docs/spine/spine.json`",
+        "",
+        "---",
+        "",
+        "Generated automatically by `generate_domain_bundle.py`."
+    ]
 
     with open(out_path, "w", encoding="utf-8") as f:
-        f.write(content)
+        f.write("\n".join(lines))
 
     print(f"✔ Created {out_path}")
 
