@@ -236,6 +236,50 @@ pre {
 code {
   color: var(--text-main);
 }
+
+/* Hide the default arrow */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+/* Custom arrow icons */
+details > summary::before {
+  content: "⏵"; /* collapsed */
+  padding-right: 6px;
+  font-size: 0.9em;
+}
+details[open] > summary::before {
+  content: "⏷"; /* expanded */
+}
+
+/* Make the h2/h3 feel like the toggle */
+details > summary h2,
+details > summary h3 {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hover effect */
+details > summary:hover h2,
+details > summary:hover h3 {
+  text-decoration: underline;
+}
+
+/* Optional: fade-in animation for opened blocks */
+details[open] {
+  animation: fadeIn 0.15s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+      
 </style>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -254,7 +298,8 @@ code {
   </svg>
  </p> 
   
-  <h2>🌱 Education Hub | RTT/1</h2>
+   <details>
+     <summary><h2>🌱 Education Hub | RTT/1</h2></summary>
       <a href="#README">🔰 README</a>
       <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
       <a href="#CONTRIBUTING">🤝 Contributing</a>
@@ -267,35 +312,49 @@ code {
       <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
       <a href="#SECURITY">🔐 Security</a>
       <a href="#PRINCIPLES">🧘 Principles</a>
-    <h3>🤹 Info</h3>
+   </details>
+   <details>
+     <summary><h2>🤹 Info</h2></summary>
       <a href="#RTT_PRIMER">🚉 RTT Primer</a>
       <a href="https://www.triadicframeworks.org/education/BRA/">🌱 Before Regime Awareness</a>
       <a href="#SIX_STAGES_EVOLUTION">🐾 Six Stages of Evolution</a>
       <a href="#MYTH_VALIDATION_SWEEP">✅ Myth Validation Sweep</a>
       <a href="#ZENODO">📌 Zenodo Community</a>
-    <h3>🧩 Foundational Substrates</h3>
+   </details>
+   <details>
+     <summary><h2>🧩 Foundational Substrates</h2></summary>
       <a href="#DARK_SEC">🌑 Dark Sector</a>
       <a href="#PERODIC_REORG">🧪 Periodic Table (RTTvST)</a>
       <a href="#MATERIALS_SCI">🧱 Materials Science</a>
       <a href="#MAPPED">🔺 Science Dependancies Mapped</a>
-    <h3>🔥 Biological Systems</h3>
+   </details>
+   <details>
+     <summary><h2>🔥 Biological Systems</h2></summary>
       <a href="#BIOSCIENCE">🧬 Bioscience</a>
       <a href="#PROTEIN_REGIMES">🧩 Protein Folding & Structural Regimes</a>
       <a href="#BIOLOGICAL_TAXONOMY">🌿 Biological Taxonomy</a>
       <a href="#META_PATH">🔁 Metabolic Pathways</a>
       <a href="#GENETIC_CODE">🧬 Genetic Code</a>
-    <h3>⚛️ Neural & Cognitive Systems</h3>
+   </details>
+   <details>
+     <summary><h2>⚛️ Neural & Cognitive Systems</h2></summary>
       <a href="#NEURAL_CODING">🧠 Neural Coding</a>
       <a href="#PERSONALITY">🧩 Personality</a>
-    <h3>🌍 Planetary & Environmental Systems</h3>
+   </details>
+   <details>
+     <summary><h2>🌍 Planetary & Environmental Systems</h2></summary>
       <a href="#CLI_CLASS">🌦️ Climate Classification</a>
-    <h3>🌈 Physical & Cosmological Structure</h3>
+   </details>
+   <details>
+     <summary><h2>🌈 Physical & Cosmological Structure</h2></summary>
       <a href="#MOD_PHYSICS">⚛️ Standard Model of Particle Physics</a>
       <a href="#PHYSICAL_COSMOLOGY">🌌 Physical Cosmology</a>
       <a href="#COSMO_THEO">🔮 Cosmological Theory</a>
       <a href="#LARGE_SCALE_STRUCTURE">🕸️ Large Scale Structure</a>
       <a href="#UNIVERSE_AS_OPERATOR">🐙 Universe as Operator</a>
-    <h3>🫀 Subjects & Translations</h3>
+   </details>
+   <details>
+     <summary><h2>🫀 Subjects & Translations</h2></summary>
       <a href="https://www.triadicframeworks.org/education/subjects/">♻️ Subjects</a>
       <a href="https://www.triadicframeworks.org/education/animals/">🦉 Animals</a>
       <a href="https://www.triadicframeworks.org/education/translations/">🩹 Translations</a>
@@ -310,7 +369,9 @@ code {
       <a href="https://www.triadicframeworks.org/badges/">🛡️ Badges</a>
       <a href="https://www.triadicframeworks.org/projects/">🧪 Projects</a>
       <a href="https://www.triadicframeworks.org/labs/">🧑‍🚀 Labs</a>
-    <h3>🏗️ Triadic Tools</h3> 
+   </details>
+   <details>
+     <summary><h2>🏗️ Triadic Tools</h2></summary> 
       <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
       <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
       <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
@@ -326,6 +387,7 @@ code {
       <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
       <a href="../">🔙TFT</a>
+   </details>
    <!-- RTT Session Header (canonical stub) -->
 <!-- ═══════════════════════════════════════════════════════════ -->
 <!-- /docs/education — Session Context block                    -->
@@ -338,7 +400,8 @@ code {
          data-drift="minimal"
          data-regime="structural">
 
-  <h2>Session Context</h2>
+    <details>
+     <summary><h2>Session Context</h2></summary>
 
   <div class="context-block">
 
@@ -372,7 +435,7 @@ code {
     <span class="context-value">students + educators + systems thinkers + AIs</span>
 
   </div>
-
+    </details>
 </section>
 
 <div style="display:inline-block;padding:6px 12px;background:#000;color:#fff;
