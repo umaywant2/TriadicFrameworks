@@ -1,3 +1,4 @@
+<img width="1792" height="1008" alt="Research_Regime_Aware_Vortex_Math_" src="https://github.com/user-attachments/assets/aebca68b-febd-4737-969f-ecdf926ec0bc" />
 
 - [`Regime_Aware_Vortex_Math.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/Regime_Aware_Vortex_Math.json) — Agentic module schema role assignments
 
