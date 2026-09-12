@@ -258,6 +258,50 @@ pre {
 code {
   color: var(--text-main);
 }
+
+/* Hide the default arrow */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+/* Custom arrow icons */
+details > summary::before {
+  content: "⏵"; /* collapsed */
+  padding-right: 6px;
+  font-size: 0.9em;
+}
+details[open] > summary::before {
+  content: "⏷"; /* expanded */
+}
+
+/* Make the h2/h3 feel like the toggle */
+details > summary h2,
+details > summary h3 {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hover effect */
+details > summary:hover h2,
+details > summary:hover h3 {
+  text-decoration: underline;
+}
+
+/* Optional: fade-in animation for opened blocks */
+details[open] {
+  animation: fadeIn 0.15s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+      
 </style>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -289,7 +333,7 @@ code {
       <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
       <a href="#SECURITY">🔐 Security</a>
       <a href="#PRINCIPLES">🧘 Principles</a>
-    <h3>🧩 Core Substrates & Engines</h3>
+    <h2>🧩 Core Substrates & Engines</h2>
       <a href="#CORE_ALIGNMENT">🧲 Alignment</a>
       <a href="#CORE_ALIGNMENT_QUANTUM_CLONING">🎩 Quantum Cloning</a>
       <a href="#CORE_COHERENCE">🔄 Coherence</a>
@@ -299,7 +343,7 @@ code {
       <a href="#CORE_INVERSION_ENGINE">🌀 Inversion Engine</a>
       <a href="#CORE_OBSERVER">👁️ Observer</a>
       <a href="#CORE_SUBSTRATES">🪨 Substrates</a>
-    <h3>🛠 Core Operators</h3>
+    <h2>🛠 Core Operators</h2>
       <a href="#CORE_OPERATORS">🛠️ Operators (Overview)</a>
       <a href="#CORE_OPERATOR_INDEX">📚 Operator Index</a>
       <a href="#CORE_OPERATOR_GRAMMAR">✏️ Operator Grammar</a>
@@ -310,7 +354,7 @@ code {
       <a href="#CORE_OPERATOR_INVARIANTS">📏 Operator Invariants</a>
       <a href="#CORE_OPERATOR_CONSTRAINTS">🚧 Operator Constraints</a>
       <a href="#CORE_OPERATOR_DOMAINS">🌐 Operator Domains</a>
-    <h3>🌡 Core Regimes</h3>
+    <h2>🌡 Core Regimes</h2>
       <a href="#CORE_REGIMES">🌡️ Regimes (Overview)</a>
       <a href="#CORE_REGIME_INDEX">📚 Regime Index</a>
       <a href="#CORE_REGIME_MAPS">🗺️ Regime Maps</a>
@@ -322,13 +366,13 @@ code {
       <a href="#CORE_REGIME_INVARIANTS">📏 Regime Invariants</a>
       <a href="#CORE_REGIME_CONSTRAINTS">🚧 Regime Constraints</a>
       <a href="#CORE_REGIME_DOMAINS">🌐 Regime Domains</a>
-    <h3>🌪 Core Coherence & Drift</h3>
+    <h2>🌪 Core Coherence & Drift</h2>
       <a href="#CORE_COHERENCE_BUDGET">💰 Coherence Budget</a>
       <a href="#CORE_DIMENSIONAL_DRIFT_ENVELOPE">🌪 Dimensional Drift Envelope</a>
-    <h3>⏱ Core Time & Validator</h3>
+    <h2>⏱ Core Time & Validator</h2>
       <a href="#CORE_TIME_TRIADS">⏱️ Time Triads</a>
       <a href="#CORE_VALIDATOR_PULSE">✅ Validator Pulse</a>
-    <h3>🧪 Core Micro‑Core Tools & Analyzers</h3>
+    <h2>🧪 Core Micro‑Core Tools & Analyzers</h2>
       <a href="https://www.triadicframeworks.org/rtt/Coherence_Tensor_Engine/">🧬 Coherence Tensor Engine</a>
       <a href="https://www.triadicframeworks.org/rtt/Cross_Domain_Causality_Weaver/">🕸️ Cross‑Domain Causality Weaver</a>
       <a href="https://www.triadicframeworks.org/rtt/Dimensional_Resonance_Scanner/">📡 Dimensional Resonance Scanner</a>
@@ -339,7 +383,7 @@ code {
       <a href="https://www.triadicframeworks.org/rtt/Structural_Faultline_Detector/">🌋 Structural Faultline Detector</a>
       <a href="https://www.triadicframeworks.org/rtt/Temporal_Regime_Sequencer/">⏳ Temporal Regime Sequencer</a>
       <a href="https://www.triadicframeworks.org/rtt/Triadic_Regime_Synthesizer/">🔮 Triadic Regime Synthesizer</a>
-    <h3>🖼️ Diagrams & Visual Grammar</h3>
+    <h2>🖼️ Diagrams & Visual Grammar</h2>
       <a href="#DIAGRAM_COHERENCE">🔄 Coherence Diagram</a>
       <a href="#DIAGRAM_DIMENSIONS">📐 Dimensional Diagram</a>
       <a href="#DIAGRAM_INVERSION">🌀 Inversion Diagram</a>
@@ -348,7 +392,7 @@ code {
       <a href="#DIAGRAM_SUBSTRATE">🪨 Substrate Diagram</a>
       <a href="#DIAGRAM_SUBSTRATE_CYCLE">♻️ Substrate Cycle</a>
       <a href="#DIAGRAM_TRIAD">🔺 Triad Diagram</a>
-    <h3>🌍 Examples Across Domains</h3>
+    <h2>🌍 Examples Across Domains</h2>
       <a href="#EXAMPLE_AI">🤖 AI</a>
       <a href="#EXAMPLE_COGNITION">🧠 Cognition</a>
       <a href="#EXAMPLE_ECOLOGY">🌱 Ecology</a>
@@ -358,7 +402,7 @@ code {
       <a href="#EXAMPLE_PHYSICS">⚛️ Physics</a>
       <a href="#EXAMPLE_SOCIAL">👥 Social Systems</a>
       <a href="#EXAMPLE_SYSTEMS">🔧 Systems</a>
-    <h3>🗺️ Maps & Cross‑Scale Navigation</h3>
+    <h2>🗺️ Maps & Cross‑Scale Navigation</h2>
       <a href="#MAP_ARRIVAL">🛬 Arrival Map</a>
       <a href="#MAP_COHERENCE">🔄 Coherence Map</a>
       <a href="#MAP_DIMENSION">📐 Dimension Map</a>
@@ -377,7 +421,7 @@ code {
       <a href="#SORT_SORTABLE_TABLE_VERSION">📊 Sortable Table</a>
       <a href="#SORT_TRIADIC_GEOMETRY_VERSION">🔺 Triadic Geometry</a>
       <a href="#SORT_VISUAL_DIMENSIONAL_LADDER">👁️ Visual Ladder</a>
-    <h3>📼 RTT/1 Modules</h3> 
+    <h2>📼 RTT/1 Modules</h2> 
       <a href="https://www.triadicframeworks.org/rtt/Morphic_Resonance/">🌀 RTT/Morphic Resonance — Cross‑Temporal</a>
       <a href="https://www.triadicframeworks.org/rtt/emotions/">💠 RTT/Emotions — Structural, Regime‑Aware</a>
       <a href="https://www.triadicframeworks.org/rtt/Inside/">✨ RTT/Inside — Alignment, Clarity</a>
@@ -394,11 +438,11 @@ code {
       <a href="https://www.triadicframeworks.org/rtt/codes/">🏳️‍🌈 RTT/codes — Metadata Layer</a>
       <a href="https://www.triadicframeworks.org/rtt/sdk/">🖥️ RTT/sdk — API interface</a>
       <a href="https://www.triadicframeworks.org/rtt/store/">🛢️ RTT/Store — Technology</a>
-    <h3>🧬 Micro‑Core</h3>
+    <h2>🧬 Micro‑Core</h2>
       <a href="https://www.triadicframeworks.org/rtt/codex/">📔 RTT Codex Preview</a>
       <a href="https://www.triadicframeworks.org/rtt/micro_core/">🔬 Micro‑Core | RTT</a>
       <a href="https://www.triadicframeworks.org/rtt/12/">🔺 RTT‑12 — Harmonic Resonance</a>
-    <h3>🏗️ Triadic Tools</h3> 
+    <h2>🏗️ Triadic Tools</h2> 
       <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
       <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
       <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
@@ -421,7 +465,8 @@ code {
          data-drift="minimal"
          data-regime="structural">
 
-  <h2>Session Context</h2>
+    <details>
+     <summary><h2>Session Context</h2></summary>
 
   <div class="context-block">
 
@@ -455,7 +500,7 @@ code {
     <span class="context-value">students + developers + researchers + AIs</span>
 
   </div>
-
+    </details>
 </section>
 
 <div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;border-radius:6px;font-size:13px;">
