@@ -1,3 +1,6 @@
+
+- [`Regime_Aware_Vortex_Math.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/Regime_Aware_Vortex_Math.json) — Agentic module schema role assignments
+
 # 🔺 Regime‑Aware Vortex Math  
 ### Resonance‑Aligned, Operator‑Bounded, RTT‑Inside
 
