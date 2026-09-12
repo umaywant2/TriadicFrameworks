@@ -1,8 +1,8 @@
 <img width="1194" height="672" alt="FFT_Capture" src="https://github.com/user-attachments/assets/a3e9ad79-f1e0-4b9f-be87-de59c747db7a" />
 
-- [`FFT_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/FFT_module.json) — Agentic module schema role assignments
+<div align="center"><iframe width="1194" height="672" src="https://www.youtube.com/embed/6Z0AklQbP8U?list=PLacFsbReLJPw&pp=sAgC&autoplay=1&mute=1&loop=1" title="TriadicFrameworks Books Playlist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
-<div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/6Z0AklQbP8U?list=PLacFsbReLJPw&pp=sAgC&autoplay=1&mute=1&loop=1" title="TriadicFrameworks Books Playlist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+- [`FFT_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/FFT_module.json) — Agentic module schema role assignments
 
 ```
  ███████╗███████╗████████╗     ███████╗██╗██╗     ██████╗ 
