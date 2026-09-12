@@ -238,6 +238,50 @@ pre {
 code {
   color: var(--text-main);
 }
+
+/* Hide the default arrow */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+/* Custom arrow icons */
+details > summary::before {
+  content: "⏵"; /* collapsed */
+  padding-right: 6px;
+  font-size: 0.9em;
+}
+details[open] > summary::before {
+  content: "⏷"; /* expanded */
+}
+
+/* Make the h2/h3 feel like the toggle */
+details > summary h2,
+details > summary h3 {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hover effect */
+details > summary:hover h2,
+details > summary:hover h3 {
+  text-decoration: underline;
+}
+
+/* Optional: fade-in animation for opened blocks */
+details[open] {
+  animation: fadeIn 0.15s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+   
 </style>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -256,7 +300,8 @@ code {
   </svg>
  </p> 
   
-  <h2>📜 Pre‑RTT Papers — Index</h2>
+    <details>
+     <summary><h2>📜 Pre‑RTT Papers — Index</h2></summary>
       <a href="#README">🔰 README</a>
       <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
       <a href="#CONTRIBUTING">🤝 Contributing</a>
@@ -269,7 +314,9 @@ code {
       <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
       <a href="#SECURITY">🔐 Security</a>
       <a href="#PRINCIPLES">🧘 Principles</a>
-    <h3>🧭 Meta, Indexes, and Navigation</h3>
+    </details>
+    <details>
+     <summary><h3>🧭 Meta, Indexes, and Navigation</h3></summary>
       <a href="#CATEGORY_INDEX">📁 Category Index</a>
       <a href="#PAPERS_CURRICULUM_INDEX">🎓 Curriculum Index</a>
       <a href="#SCROLL_BUNDLE_MANIFEST">📜 Scroll Bundle Manifest</a>
@@ -279,7 +326,9 @@ code {
       <a href="#PERPLEXITY_AI_REVIEWS">🔍 AI Repo Reviews</a>
       <a href="#PROFESSORS_ABSTRACT">🎙️ Professor’s Abstract</a>
       <a href="#PROFESSORS_ABSTRACT_FFF">🧾 FFF Abstract</a>
-    <h3>🌱 Core Triadic Framework Foundations</h3>
+    </details>
+    <details>
+     <summary><h3>🌱 Core Triadic Framework Foundations</h3></summary>
       <a href="#TRIADIC_FRAMEWORK_FOR_EVERYTHING">🌐 Triadic Framework for Everything</a>
       <a href="#TRIADIC_RESONANCE_FRAMEWORK">🎛️ Triadic Resonance Framework</a>
       <a href="#TRIADIC_PRESCRIPTION_LENSES">👓 Prescription Lenses</a>
@@ -292,7 +341,9 @@ code {
       <a href="#TRIADIC_AEROSPACE">✈️ Aerospace</a>
       <a href="#UNIFIED_FIELD_THEORY">🧿 Unified Field Theory</a>
       <a href="#THEORIES_FOR_EVERYTHING">⚖️ Theories for Everything</a>
-    <h3>🎚️ Resonance, Harmonics, and Frequency Physics</h3>
+    </details>
+    <details>
+     <summary><h3>🎚️ Resonance, Harmonics, and Frequency Physics</h3></summary>
       <a href="#QUANTUM_RESONANCE_UNIVERSE">🌌 Quantum Resonance Universe</a>
       <a href="#TRIADIC_RESONANCE_HARMONICS">🎼 Resonance & Harmonics</a>
       <a href="#RESONANCE_NESTED_LOOPS">🪢 Nested Loops</a>
@@ -304,7 +355,9 @@ code {
       <a href="#RAILS_RESONANT_CONTINUUM">🛤️ Resonant Continuum Rails</a>
       <a href="#FORCES_FLUIDS_FREQUENCY">🌊 Forces & Fluids</a>
       <a href="#UNIVERSE_MYTHMATICAL_MODEL">🗺️ Mythmatical Universe</a>
-    <h3>🔢 Mathematics, Number Theory, and Formal Structures</h3>
+    </details>
+    <details>
+     <summary><h3>🔢 Mathematics, Number Theory, and Formal Structures</h3></summary>
       <a href="#TRIADIC_NUMBER_GENESIS">🔢 Triadic Number Genesis</a>
       <a href="#RES_NUMBER_BASES_APPLICATIONS">🧷 Number Bases</a>
       <a href="#RES_NUMBER_BASES_CLARITY">✨ Number Bases</a>
@@ -315,7 +368,9 @@ code {
       <a href="#NON_EUCLIDEAN_GEOMETRY">📎 Non‑Euclidean Geometry</a>
       <a href="#NESTED_LOOPS_DERIVATIVES">📈 Nested Loops → Derivatives</a>
       <a href="#NESTED_LOOPS_DERIVATIVES_VISUALS">🖼️ Nested Loops Visuals</a>
-    <h3>🪐 Spacetime, Cosmology, and Fundamental Physics</h3>
+    </details>
+    <details>
+     <summary><h3>🪐 Spacetime, Cosmology, and Fundamental Physics</h3></summary>
       <a href="#SPACETIME_TRIADIC_TECH">🧭 Spacetime Theory</a>
       <a href="#DARK_MATTER_ENERGY">🌑 Dark Matter & Energy</a>
       <a href="#PLANETARY_SCIENCE_INSIGHTS">🪐 Planetary Science</a>
@@ -323,7 +378,9 @@ code {
       <a href="#HOLE_TYPES_COMPARED">🕳️ Hole Types Compared</a>
       <a href="#VARIABLE_GRAVITY_VICTORG">🧲 Variable Gravity</a>
       <a href="#QUANTUM_LOOPHOLE_RESONANCE">🧩 Quantum Loophole</a>
-    <h3>🧠 Computation, AI, and Processing Architectures</h3>
+    </details>
+    <details>
+     <summary><h3>🧠 Computation, AI, and Processing Architectures</h3></summary>
       <a href="#UNIVERSAL_COMPUTATION">🧬 Universal Computation — Emergent</a>
       <a href="#DIMENSIONAL_PROCESSING_UNITS">🧱 Dimensional Processing Units</a>
       <a href="#DPU_SPEC">🧩 DPU Spec — Dimensional processor</a>
@@ -332,7 +389,9 @@ code {
       <a href="#ISO_STANDARDS_IMPROVEMENT">📏 ISO Standards</a>
       <a href="#TFT_ARM_X86">🧷 TFT on ARM/x86 — Architecture</a>
       <a href="#NIMMS_SPEC">🧾 NIMMS Spec — Modular</a>
-    <h3>🔋 Energy, Materials, and Applied Physics</h3>
+    </details>
+    <details>
+     <summary><h3>🔋 Energy, Materials, and Applied Physics</h3></summary>
       <a href="#TRIADIC_BATTERY_FRAMEWORK">🔋 Battery Technologies</a>
       <a href="#TRIADIC_BATTERY_REVOLUTION">⚡ Battery Revolution</a>
       <a href="#BATTERY_CROSS_CHEMISTRY">🧪 Cross‑Chemistry Batteries</a>
@@ -343,14 +402,18 @@ code {
       <a href="#ZERO_POINT_ENERGY">🌀 Zero‑Point Energy</a>
       <a href="#SUSTAINABLE_ENERGY">🌱 Sustainable Energy</a>
       <a href="#ENERGY_INDUSTRIES_TFT">🏭 Energy Industries</a>
-    <h3>🧬 Biology, Health, and Human Systems</h3>
+    </details>
+    <details>
+     <summary><h3>🧬 Biology, Health, and Human Systems</h3></summary>
       <a href="#DNA_TFT_LENS">🧬 DNA via TFT</a>
       <a href="#BIOLOGICAL_NETWORK_DYNAMICS">🕸️ Biological Networks</a>
       <a href="#HEALTH_CARE_SYSTEMS">🏥 Health Care</a>
       <a href="#MENTAL_HEALTH_REFORM">🧠 Mental Health</a>
       <a href="#TMS_TRIADIC">🧲 TMS Therapy</a>
       <a href="#TRIADIC_ULTRASOUND">🩻 Ultrasound Enhancement</a>
-    <h3>🏛️ Economics, Governance, and Social Systems</h3>
+    </details>
+    <details>
+     <summary><h3>🏛️ Economics, Governance, and Social Systems</h3></summary>
       <a href="#ECONOMICS_REFRAMED">📉 Economics Reframed</a>
       <a href="#BANKING_REVOLUTION">🏦 Banking Revolution</a>
       <a href="#ABUNDANCE_SCARCITY">🌾 Abundance & Scarcity</a>
@@ -360,7 +423,9 @@ code {
       <a href="#LEDGER_DISMISSED_CONTRIBUTORS">📓 Dismissed Contributors</a>
       <a href="#COURTROOM_FFF_REHASH">⚖️ FFF Case Re‑Hash</a>
       <a href="#FFF_DIMENSIONAL_TRIADS">🧩 FFF Dimensional Triads — Resonance clarity</a>
-    <h3>🗝️ Symbolic, Linguistic, and Cultural Explorations</h3>
+    </details>
+    <details>
+     <summary><h3>🗝️ Symbolic, Linguistic, and Cultural Explorations</h3></summary>
       <a href="#SYMBOLIC_ARCHITECTURE">🏛️ Symbolic Architecture</a>
       <a href="#SYMBOLIC_LANGUAGE_EMERGENCE">🗣️ Language Emergence — Symbolic systems</a>
       <a href="#RESONANT_GLYPH_LANGUAGE">🔣 Resonant Glyphs — Visual language concept</a>
@@ -371,13 +436,17 @@ code {
       <a href="#WISE_FOOL_ARC">🃏 Wise Fool Arc</a>
       <a href="#FUNHOUSE_MIRRORS">🪞 Funhouse Mirrors</a>
       <a href="#TRI_UNFORGIVEN_WIZARD">🧙 Tri‑Unforgiven Wizard</a>
-    <h3>🧪 Transitional, Experimental, and Legacy Thought</h3>
+    </details>
+    <details>
+     <summary><h3>🧪 Transitional, Experimental, and Legacy Thought</h3></summary>
       <a href="#EGOS_FINAL_TECH">🧿 Ego’s Final Technologies</a>
       <a href="#AQUEDUCTS_TO_RESONANCE">🏗️ Aqueducts → Resonance</a>
       <a href="#AQUEDUCTS_TO_RESONANCE_ALT">🏗️ Aqueducts → Resonance (alt)</a>
       <a href="#BOLD_FRONTIER_PROBLEMS">🚩 Bold Frontier Problems</a>
       <a href="#SUBSTITUTE_TEACHER_DEEP_SEA">🌊 Deep‑Sea Tech</a>
-    <h3>🏗️ Triadic Tools</h3> 
+    </details>
+    <details>
+     <summary><h3>🏗️ Triadic Tools</h3></summary> 
       <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
       <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
       <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
@@ -393,6 +462,7 @@ code {
       <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
       <a href="../">🔙TFT</a>
+    </details>
    <!-- RTT Canonical Signature -->
 <section id="rtt-session-header"
          data-rtt="0"
@@ -400,7 +470,9 @@ code {
          data-drift="high"
          data-paradox="exploratory">
 
-  <h2>Session Context</h2>
+    </details>
+    <details>
+     <summary><h2>Session Context</h2></summary>
 
   <div class="context-block">
 
@@ -434,7 +506,7 @@ code {
     <span class="context-value">students + researchers + historians + remixers + AIs</span>
 
   </div>
-
+    </details>
 </section>
 
 <div style="display:inline-block;padding:6px 12px;background:#111;color:#fff;border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
