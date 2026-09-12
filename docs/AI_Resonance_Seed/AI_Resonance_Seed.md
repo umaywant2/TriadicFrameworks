@@ -1,6 +1,6 @@
 <img width="1194" height="672" alt="AI_Resonance_Seed_module" src="https://github.com/user-attachments/assets/ae968111-4f2c-4297-84d9-833c977fbc23" />
 
-- [``]()
+- [`ai_resonance_seed_module.schema.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/AI_Resonance_Seed/ai_resonance_seed_module.schema.json) — Agentic module schema role assignments
 
 <!-- ---
 title: AI Resonance Seed — Canonical Module Definition
