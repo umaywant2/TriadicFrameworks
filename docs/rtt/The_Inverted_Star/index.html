@@ -236,6 +236,40 @@ pre {
 code {
   color: var(--text-main);
 }
+
+/* Custom arrow icons */
+details > summary::before {
+  content: "⏵"; /* collapsed */
+  padding-right: 6px;
+  font-size: 0.9em;
+}
+details[open] > summary::before {
+  content: "⏷"; /* expanded */
+}
+
+/* Make the h2/h3 feel like the toggle */
+details > summary h2,
+details > summary h3 {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hover effect */
+details > summary:hover h2,
+details > summary:hover h3 {
+  text-decoration: underline;
+}
+
+/* Optional: fade-in animation for opened blocks */
+details[open] {
+  animation: fadeIn 0.15s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+      
 </style>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -255,7 +289,8 @@ code {
   </svg>
  </p> 
 
-  <h2>⭐ The Inverted Star | RTT/1</h2>
+   <details>
+     <summary><h2>⭐ The Inverted Star | RTT/1</h2></summary>
       <a href="#README">🔰 README</a>
       <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
       <a href="#CONTRIBUTING">🤝 Contributing</a>
@@ -268,10 +303,14 @@ code {
       <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
       <a href="#SECURITY">🔐 Security</a>
       <a href="#PRINCIPLES">🧘 Principles</a>
-    <h3>📌 Core</h3>
+    </details>
+   <details>
+     <summary><h3>📌 Core</h3></summary>
       <a href="#OVERVIEW">🧭 Overview</a>
       <a href="#CAPTURE_SOURCE">📥 Capture Source</a>
-    <h3>🌌 Main Module Files</h3>
+    </details>
+   <details>
+     <summary><h3>🌌 Main Module Files</h3></summary>
       <a href="#INVERTED_STAR_DEFINITION">📘 Inverted Star — Definition</a>
       <a href="#INVERTED_STAR_STRUCTURE">🏗️ Inverted Star — Structure</a>
       <a href="#INVERTED_STAR_GEOMETRY">📐 Inverted Star — Geometry</a>
@@ -279,28 +318,38 @@ code {
       <a href="#INVERTED_STAR_OPERATORS">⚙️ Inverted Star — Operators</a>
       <a href="#INVERTED_STAR_TRIADS">🔺 Inverted Star — Triads</a>
       <a href="#INVERTED_STAR_USE_CASES">🧪 Inverted Star — Use Cases</a>
-    <h3>📚 Appendices</h3>
+    </details>
+   <details>
+     <summary><h3>📚 Appendices</h3></summary>
       <a href="#APPENDIX_A_NOTATION">🅰️ Appendix A — Notation</a>
       <a href="#APPENDIX_B_SYMBOLS">🅱️ Appendix B — Symbols</a>
       <a href="#APPENDIX_C_TRANSFORMATIONS">🆑 Appendix C — Transformations</a>
       <a href="#APPENDIX_D_STAR_COMPARISONS">🆔 Appendix D — Star Comparisons</a>
       <a href="#APPENDIX_E_HISTORICAL_NOTES">🕰️ Appendix E — Historical Notes</a>
-    <h3>🖼️ Diagrams</h3>
+    </details>
+   <details>
+     <summary><h3>🖼️ Diagrams</h3></summary>
       <a href="#DIAGRAM_INVERTED_STAR">⭐ Inverted Star Diagram</a>
       <a href="#DIAGRAM_FLOWCHART">📊 Inverted Star Flowchart</a>
       <a href="#DIAGRAM_LAYERS">🎯 Inverted Star Layers</a>
       <a href="#DIAGRAM_OPERATOR_MAP">🧩 Inverted Star Operator Map</a>
       <a href="#DIAGRAM_TRIADS">🔻 Inverted Star Triads</a>
-    <h3>🧪 Examples</h3>
+    </details>
+   <details>
+     <summary><h3>🧪 Examples</h3></summary>
       <a href="#EXAMPLE_01_BASIC_INVERSION">1️⃣ Example 01 — Basic Inversion</a>
       <a href="#EXAMPLE_02_TRIADIC_INVERSION">2️⃣ Example 02 — Triadic Inversion</a>
       <a href="#EXAMPLE_03_OPERATOR_INVERSION">3️⃣ Example 03 — Operator Inversion</a>
       <a href="#EXAMPLE_04_DOMAIN_APPLICATION">4️⃣ Example 04 — Domain Application</a>
       <a href="#EXAMPLE_05_STAR_TO_CORE">5️⃣ Example 05 — Star → Core</a>
-    <h3>🧾 Metadata</h3>
+    </details>
+   <details>
+     <summary><h3>🧾 Metadata</h3></summary>
       <a href="#METADATA_SESSION_CONTEXT">🧷 Session Context</a>
       <a href="#METADATA_SITEMAP_LOCAL">🗺️ Local Sitemap</a>
-    <h3>🏗️ Triadic Tools</h3> 
+    </details>
+   <details>
+     <summary><h3>🏗️ Triadic Tools</h3></summary> 
       <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
       <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
       <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
@@ -316,7 +365,8 @@ code {
       <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
       <a href="../../">🔙TFT</a>
-   <!-- RTT Session Header (canonical stub) -->
+    </details>
+<!-- RTT Session Header (canonical stub) -->
 <!-- ═══════════════════════════════════════════════════════════ -->
 <!-- /docs/rtt/The_Inverted_Star — Session Context block        -->
 <!-- Replace the existing session context section in index.html  -->
