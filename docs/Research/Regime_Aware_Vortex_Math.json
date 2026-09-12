@@ -1,0 +1,49 @@
+{
+  "$schema": "../_shared/schema/module.schema.json",
+
+  "identity": {
+    "module": "Regime_Aware_Vortex_Math",
+    "title": "Regime‑Aware Vortex Math",
+    "canonical_url": "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Research/Regime_Aware_Vortex_Math.md",
+    "version": "1.0.0"
+  },
+
+  "purpose": "Provides the first RTT‑aligned, resonance‑aware, regime‑bounded formulation of Vortex Math. Reinterprets vortex behavior using triadic operators, dimensional gradients, harmonic resonance fields, and coherence‑safe propagation. Removes mysticism and replaces it with operator logic grounded in RTT.",
+
+  "category": "research",
+
+  "analyzer_layer": [
+    "operator",
+    "dimensional",
+    "coherence",
+    "regime"
+  ],
+
+  "files": [
+    {
+      "name": "Regime_Aware_Vortex_Math.md",
+      "role": "research",
+      "description": "Primary research document defining vortex math through RTT operators, resonance fields, dimensional gradients, and regime awareness."
+    }
+  ],
+
+  "ai": {
+    "ready": true,
+    "module_summary": "RTT‑aligned reinterpretation of Vortex Math using triadic operators, resonance fields, dimensional gradients, and regime‑bounded propagation.",
+    "keywords": [
+      "vortex math",
+      "resonance",
+      "RTT",
+      "triadic operators",
+      "regime awareness",
+      "dimensional gradients",
+      "harmonic fields",
+      "research"
+    ]
+  },
+
+  "drift": {
+    "phantom_entries": false,
+    "schema_mismatch": false
+  }
+}
