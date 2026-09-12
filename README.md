@@ -1,6 +1,6 @@
 <img width="1194" height="672" alt="traidicframeworks_main_" src="https://github.com/user-attachments/assets/aaf735ff-1230-4ea6-9ec3-378e10a07e61" />
 
-<div align="center"><iframe width="1194" height="672" src="https://www.youtube.com/embed/6Z0AklQbP8U?list=PLCySUiruOkPjmThQqnfe3AfaiPo4Kw41K&autoplay=1&mute=1&loop=1" title="TriadicFrameworks Playlist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div align="center"><iframe width="796" height="448" src="https://www.youtube.com/embed/6Z0AklQbP8U?list=PLCySUiruOkPjmThQqnfe3AfaiPo4Kw41K&autoplay=1&mute=1&loop=1" title="TriadicFrameworks Playlist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 **Resonance‑Time Theory • Triadic Substrate Modeling • Canon‑Aligned Tools**
 
