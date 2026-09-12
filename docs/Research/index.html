@@ -158,8 +158,8 @@ a:visited {
   border-radius: 6px;
   color: #cfe8ff;
   }
-
- /* Context Block */
+       
+  /* Context Block */
   .context-block {
     font-family: monospace;
     font-size: 0.95rem;
@@ -178,35 +178,71 @@ a:visited {
   .context-value {
     color: #ffffff; /* white */
   }
-       
+
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — NAV REIMAGINED
+   ============================================================ */
+
 nav {
   width: 260px;
   float: left;
-  background: var(--bg-nav);
-  margin-left: 0;
-  padding: 1.2rem;
-  overflow-y: auto;
-  border-right: 1px solid var(--border-subtle);
+  background: rgba(21, 24, 29, 0.75); /* glassy dark */
+  backdrop-filter: blur(12px);
+  padding: 1.6rem 1.2rem;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  box-shadow: inset -1px 0 0 rgba(255,255,255,0.04);
 }
 
 nav h2 {
-  font-size: 0.9rem;
+  font-size: 1rem;
+  font-weight: 600;
   color: var(--accent-rtt);
-  margin-top: 1.2rem;
-  margin-bottom: 0.4rem;
-  letter-spacing: 0.04em;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.9;
+}
+
+nav h3 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 1.4rem 0 0.6rem 0;
+  color: var(--text-main);
+  opacity: 0.85;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 nav a {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.45rem 0.2rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
   text-decoration: none;
-  padding: 0.35rem 0;
-  font-size: 0.9rem;
+  border-radius: 6px;
+  transition: 
+    color 0.2s ease,
+    background 0.2s ease,
+    transform 0.15s ease;
 }
 
 nav a:hover {
   color: var(--text-main);
+  background: rgba(255,255,255,0.05);
+  transform: translateX(3px);
+}
+
+nav a:active {
+  transform: translateX(1px) scale(0.98);
+}
+
+nav a::before {
+  content: attr(data-emoji);
+  font-size: 1.05rem;
+  opacity: 0.9;
 }
 
 main {
@@ -233,6 +269,7 @@ code {
 </style>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
 </head>
 
 <body>
@@ -247,8 +284,10 @@ code {
     <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
  </p> 
-  
-  <h2>🌱 Research | RTT/1</h2>
+
+   <details open>
+     <summary>🌱 Research | RTT/1</summary>
+     <p>
       <a href="#README">🔰 README</a>
       <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
       <a href="#CONTRIBUTING">🤝 Contributing</a>
@@ -261,110 +300,243 @@ code {
       <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
       <a href="#SECURITY">🔐 Security</a>
       <a href="#PRINCIPLES">🧘 Principles</a>
-    <h3>🪴 Module Info</h3>
-      <a href="#TRIADICFRAMEWORKS_RESEARCH_MODULE_INDEX">📚 Module Index</a>
+    </details>
+   </p>
+   <details>
+     <summary>🌱🌱 Research Module Info</summary>
+     <p>
+      <a href="#README">🔰 README</a>
+      <a href="#CHANGELOG">📜 Changelog</a>
       <a href="#OVERVIEW">🧭 Overview</a>
-    <h3>4️⃣ Mode Dimensional Searching</h3>  
-      <a href="#GOOGLE">🍒 Google</a>
-      <a href="#BING">🌀 Bing</a>
-      <a href="#DUCKDUCKGO">🦆 DuckDuckGo</a>
-      <a href="#BIG_DATA_EXAMINED_WITH_RTT">📊 Big Data with RTT</a>
-    <h3>🪐 Planet 9 Cluster</h3>
-      <a href="#PLANET9">🪐 Planet9</a>
-      <a href="#PLANET9_PROFILE">📇 Planet9 Profile</a>
-      <a href="#PLANET9_MAP">🗺 Planet9 Map</a>
-      <a href="#PLANET9_ENGINE">⚙️ Planet9 Engine</a>
-      <a href="#PLANET9_SIGNATURE">✒️ Planet9 Signature</a>
-      <a href="#PLANET9_DIAGNOSTIC">🧪 Planet9 Diagnostic</a>
-      <a href="#ASSETS_PLANET9_HERO">🖼 Planet9 Hero</a>
-    <h3>⚡ Core Resonance & Math</h3>
-      <a href="#ORIGIN_OF_RESONANCE_MATH">📐 Origin of Resonance Math</a>
-      <a href="#RESonANCE_TRIADIC_ALIGNED_OVERVIEW">📈 Resonance Triadic Overview</a>
-      <a href="#TRIADIC_TIME_NEAR_MISSES">⏱ Triadic Time Near Misses</a>
-      <a href="#QUANTUM_LENS_LAYER_TRIADIC_PROTOCOLS">🔍 Quantum Lens Layer</a>
-      <a href="#QUANTUM_ENERGY_BANKS_CORRIDOR_SYSTEM">🏦 Quantum Energy Banks</a>
-      <a href="#BELLS_THEOREM_MEETS_RTT">🔔 Bell’s Theorem meets RTT</a>
-    <h3>🚀 Substrates, Transporters & Spaceships</h3>
+    </details>
+   </p>
+  <details>
+     <summary>🧪 Core Research Documents</summary>
+     <p>
+      <a href="#ADVANCE_DPU_VCG_NIMMS_ARCHITECTURE">⚙️ Advance DPU VCG NIMMS Architecture</a>
+      <a href="#AGING_SUBSTRATE_ANALYSIS">🧬 Aging Substrate Analysis</a>
+      <a href="#AI_MODULE_SYNTHESIS_VIA_TRIADICFRAMEWORKS_LENS">🤖 AI Module Synthesis via TriadicFrameworks Lens</a>
+      <a href="#AI_WEB_AGENTIC_GRAMMAR_OPTIONS">🌐 AI Web Agentic Grammar Options</a>
+      <a href="#ANDROMEDA_STRAIN_COVID_19_REVIEWED">🦠 Andromeda Strain / COVID‑19 Reviewed</a>
+      <a href="#ARC_VALUE_MODULATION_MULTI_REGIME_TRUTH_DELIVERY_FOR_HUMAN_GROWTH">🔺 Arc Value Modulation (Multi‑Regime Truth Delivery)</a>
       <a href="#ARRIVAL_SUBSTRATE_INTEGRATION">🛬 Arrival Substrate Integration</a>
-      <a href="#ARRIVAL_SUBSTRATE_V0_3">🧪 Arrival Substrate v0.3</a>
-      <a href="#ARRIVAL_SUBSTRATE_V0_4">🧪 Arrival Substrate v0.4</a>
-      <a href="#TRANSPORTER_ENVELOPE_V0_5">📦 Transporter Envelope v0.5</a>
-      <a href="#TRANSPORTER_INTEGRATION_MAP">🗺 Transporter Integration Map</a>
-      <a href="#SPACESHIPS_ALIGNED_WITH_RTT">🚀 Spaceships Aligned with RTT</a>
-      <a href="#SPACESHIPS_ALIGNED_WITH_RTT_CAPTURE">📸 Spaceships Capture</a>
+      <a href="#ARRIVAL_SUBSTRATE_V0_3">🛬 Arrival Substrate v0.3</a>
+      <a href="#ARRIVAL_SUBSTRATE_V0_4">🛬 Arrival Substrate v0.4</a>
+      <a href="#AUTONOMOUS_ROBOTIC_FISH_FOR_GREAT_LAKES_RESTORATION">🐟 Autonomous Robotic Fish (Great Lakes Restoration)</a>
+      <a href="#A_MODEL_FOR_GLOBAL_ATC_AND_SF_AND_HAM_RADIO_USING_RTT_INSIDE">📡 Global ATC + SF + HAM Radio (RTT‑Inside)</a>
+      <a href="#A_RESONANT_REVIEW_OF_THE_UNIVERSE_IN_A_NUTSHELL">🌌 Resonant Review of *The Universe in a Nutshell*</a>
+      <a href="#BELLS_THEOREM_MEETS_RESONANCE_TIME_THEORY">🔔 Bell’s Theorem meets RTT</a>
+      <a href="#BEYOND_STRUCTURE_THE_EQUATIONS_FOR_CLARITY">📐 Beyond Structure — The Equations for Clarity</a>
+      <a href="#BIG_DATA_EXAMINED_WITH_RTT">📊 Big Data Examined with RTT</a>
+      <a href="#BING">🔍 Bing</a>
+      <a href="#BKM_CREDIT_REPORTING_CAPTURE">💳 BKM Credit Reporting Capture</a>
+      <a href="#BLACK_HOLES_AS_RESONANCE_RESERVOIRS">🕳️ Black Holes as Resonance Reservoirs</a>
+      <a href="#CALCULUS_ON_STEROIDS">➗ Calculus on Steroids</a>
+      <a href="#COMBINED_CONTINUITY_MAP">🧩 Combined Continuity Map</a>
+      <a href="#COURSE_CORRECTION_NEEDED_FOR_GPU_NPU_TOPS">⚠️ GPU/NPU TOPS Course Correction</a>
+      <a href="#CROSS_GOAL_OPERATOR_MATRIX">🔀 Cross‑Goal Operator Matrix</a>
+      <a href="#CROSS_MODULE_PROPAGATION_MAP">🔁 Cross‑Module Propagation Map</a>
+      <a href="#CTS_VIRTUAL_WORLDS">🌐 CTs Virtual Worlds</a>
+      <a href="#CTS_VIRTUAL_WORLDS_DIAGRAM_SPEC">🗺️ CTs Virtual Worlds Diagram Spec</a>
+      <a href="#DECOHERENCE_AS_A_MEASUREMENT_PROBLEM_PATCH">🧪 Decoherence Patch</a>
+      <a href="#DEVELOPER_CODE_FOR_EVERY_LANGUAGE_WITH_RTT_INSIDE">💻 Developer Code for Every Language (RTT‑Inside)</a>
+      <a href="#DOMAIN_FORKING_AND_NEW_GOVERNANCE_THROUGH_GRAMMAR_NOT_POLICY">🌉 Domain Forking & Governance via Grammar</a>
+      <a href="#DRAFT_TRIADICFRAMEWORKS_WIKIPEDIA_INFO">📘 Draft TriadicFrameworks Wikipedia Info</a>
+      <a href="#DREAMS_VS_IMAGINATION">💭 Dreams vs Imagination</a>
+      <a href="#DUCKDUCKGO">🦆 DuckDuckGo</a>
+      <a href="#EARTH_SIMS_USING_RTT_INSIDE_WHAT_THIS_PROVIDES">🌍 Earth Sims (RTT‑Inside)</a>
+      <a href="#ELECTRONICS_SEMICONDUCTORS_SUPERCONDUCTORS_RTT_INSIDE">⚡ Electronics / Semiconductors / Superconductors (RTT‑Inside)</a>
+      <a href="#ELECTRON_MICROSCOPES_RTT_MINI_ADVENTURE">🔬 Electron Microscopes — RTT Mini‑Adventure</a>
+      <a href="#EUROPEAN_SPALLATION_SOURCE_NEEDS_TRIADICFRAMEWORKSTECH">🇪🇺 European Spallation Source Needs TFT</a>
+      <a href="#EVALUATIONS_STRUCTURAL_PATTERNS_ONLY_WITH_MULTIPLE_MODULES">📏 Structural Pattern Evaluations</a>
+      <a href="#FLOWER_LAYERED_ELECTROMECHANICAL_RESONATOR">🌸 Flower Layered Electromechanical Resonator</a>
       <a href="#FULL_SUBSTRATE_GAME_GDD">🎮 Full Substrate Game GDD</a>
-    <h3>🧮 Operators & Grammars</h3>
-      <a href="#CROSS_GOAL_OPERATOR_MATRIX">🧩 Cross Goal Operator Matrix</a>
-      <a href="#OPERATORS_33_33_33_1">3️⃣3‑33‑33‑1 Operator</a>
-      <a href="#OPERATORS_33_33_33_1_DIAGRAM_SPEC">📐 33‑33‑33‑1 Diagram Spec</a>
-      <a href="#OPERATORS_ARRIVAL_SUBSTRATE_V0_2">🧪 Arrival Substrate v0.2 (Ops)</a>
-      <a href="#OPERATORS_DPU_OPERATOR_ALGEBRA_V0_1">🧮 DPU Operator Algebra v0.1</a>
-      <a href="#OPERATORS_DPU_READY_OPERATOR_ALGEBRA">✅ DPU‑Ready Operator Algebra</a>
-      <a href="#OPERATORS_TRANSITION_FUNCTOR_V0_1">🔀 Transition Functor v0.1</a>
-      <a href="#OPERATORS_TRANSPORTER_ENVELOPE">📦 Transporter Envelope (Ops)</a>
-      <a href="#UNIFIED_OPERATOR_GRAMMAR_V1_0">📜 Unified Operator Grammar v1.0</a>
-      <a href="#UNIFIED_OPERATOR_GRAMMAR_V1_1">📜 Unified Operator Grammar v1.1</a>
-      <a href="#TSR_CUT_OVER_PROTOCOL_CANONICAL">✂️ TSR Cut Over Protocol (Canonical)</a>
-      <a href="#TSR_CUT_OVER_PROTOCOL_OPERATOR_GRAMMAR_TABLE">📊 TSR Operator Grammar Table</a>
-    <h3>📡 Facilities, Infrastructure & Above‑Ground RTT</h3>
-      <a href="#RTT_FACILITIES_PLAYBOOK">🏭 RTT Facilities Playbook</a>
-      <a href="#RTT_ABOVE_GROUND_ELECTRICAL_REDESIGN">⚡ Above‑Ground Electrical Re‑design</a>
-      <a href="#POWER_SUPPLIES_MOBILE_SENSORS_BMS_RTT_INSIDE">🔋 Power Supplies & BMS (RTT‑Inside)</a>
-      <a href="#COURSE_CORRECTION_GPU_NPU_TOPS">📉 GPU/NPU TOPS Course Correction</a>
-      <a href="#SUPERCOMPUTERS_TRIADIC">🧠 Supercomputers Are Already Triadic</a>
-    <h3>🧪 Experiments, Evaluations & Exercises</h3>
-      <a href="#EVALUATIONS_STRUCTURAL_PATTERNS">📏 Structural Patterns Evaluations</a>
-<!--      <a href="#EXERCISES_BEFORE_AFTER_RTT_VISUALIZATION">🖼 Before/After RTT Visualization</a>
-      <a href="#EXERCISES_FORECAST_VS_ACTUALS">📈 Forecast vs Actuals Exercise</a>
-      <a href="#EXERCISES_OPERATIONAL_HEALTH_CHECK">🩺 Operational Health Check Diagram</a>
-      <a href="#EXERCISES_SOCIAL_SECURITY_PROTOFUND">💵 Social Security Protofund</a>
-      <a href="#EXERCISES_SOCIAL_SECURITY_PROTOFUND_INSTRUCTOR">👩‍🏫 Protofund Instructor Guide</a>
-      <a href="#EXERCISES_SOCIAL_SECURITY_PROTOFUND_WORKSHEET">📄 Protofund Worksheet</a>
--->      
-    <h3>🧬 Life, Cosmology & Hidden Resonance</h3>
-      <a href="#NUCLEOBASES">🧬 Nucleobases</a>
+      <a href="#GOAL_2_TRANSPORTERS_ADDENDUM">🚚 Goal 2 Transporters Addendum</a>
+      <a href="#GOAL_STATUS_CHECK">📈 Goal Status Check</a>
+      <a href="#GOOGLE">🔎 Google</a>
+      <a href="#HIDDEN_RESONANCE_AS_DARK_COMPONENTS_SET_CORRECTIONS">🌌 Hidden Resonance as Dark Components</a>
+      <a href="#HOW_RTT_APPLIES_TO_A_STANDARD_POWER_TRANSFORMER">⚡ RTT Applied to Power Transformers</a>
       <a href="#ICE_CORES_HAVE_MORE_TO_REVEAL">🧊 Ice Cores Have More to Reveal</a>
-      <a href="#HIDDEN_RESONANCE_DARK_COMPONENTS">🌌 Hidden Resonance as Dark Components</a>
-      <a href="#BLACK_HOLES_AS_RESONANCE_RESERVOIRS">🕳 Black Holes as Resonance Reservoirs</a>
-      <a href="#EUROPEAN_SPALLATION_SOURCE_TRIADICFRAMEWORKSTECH">🇪🇺 European Spallation Source</a>
-      <a href="#JWST_RTT_TRIADIC_CORE_QA_LAYER">🔭 JWST RTT Triadic Core QA Layer</a>
-    <h3>🧠 Imagination, Dreams & Supconsciousness</h3>
-      <a href="#DREAMS_VS_IMAGINATION">💤 Dreams vs Imagination</a>
-      <a href="#IMAGINATION_EXERCISING">🏋️ Imagination Exercising</a>
-      <a href="#SUPCONSCIOUSNESS_OPERATOR_33_33_33_1">🧠 Supconsciousness Operator 33‑33‑33‑1</a>
-      <a href="#THOUGHTS_IN_THE_TWO_THIRDS">🧩 Thoughts in the Two Thirds</a>
-    <h3>📜 Lineage, Maps & Cross‑Module Views</h3>
-      <a href="#COMBINED_CONTINUITY_MAP">🗺 Combined Continuity Map</a>
-      <a href="#CROSS_MODULE_PROPAGATION_MAP">🔗 Cross Module Propagation Map</a>
-<!--      <a href="#LINEAGE_INDEX">📚 LINEAGE Index</a>
-      <a href="#LINEAGE_SITEMAP">🗺 LINEAGE Sitemap</a>
-      <a href="#LINEAGE_CROSS_MODULE_MATRIX">🧩 Cross Module Lineage Matrix</a>
-      <a href="#LINEAGE_FORECAST_VS_ACTUALS">📈 LINEAGE Forecast vs Actuals</a>
-      <a href="#LINEAGE_FORECAST_VS_ACTUALS_PROTOFUND_CROSSMAP">🔗 Protofund Crossmap</a>
-    <h3>📐 Diagrams & Glyphs</h3>
-      <a href="#DIAGRAM_FOUR_SOURCE_SUBSTRATE">📐 Four Source Substrate Diagram</a>
-      <a href="#DIAGRAM_MODE_OPACITY_CHAIN">🌫 Mode Opacity Chain</a>
-      <a href="#DIAGRAM_RTT_ENGINE_TRIAD">⚙️ RTT Engine Triad Diagram</a>
-      <a href="#DIAGRAM_TEL_ECHO_MAP">📡 TEL Echo Map</a>
-      <a href="#DIAGRAM_TRIADIC_SUPER">🌌 Triadic Super Diagram</a>
-      <a href="#GLYPHS_ANIMATION_SPEC">🎞 Glyph Animation Spec</a>
-      <a href="#GLYPHS_LEGEND">🔣 Glyph Legend</a>
--->
-      <h3>📦 Checklists, Quickstarts & Captures</h3>
-<!--      <a href="#CHECKLISTS_README">✅ Checklists README</a> -->
-      <a href="#CHECKLISTS_CAPTURE">📋 Checklists Capture</a>
-<!--      <a href="#QUICKSTART">⚡ Quickstart</a>
-      <a href="#QUICKSTART_AGENT">🤖 Quickstart Agent</a>
-      <a href="#RT_CAPTURE">📸 RT Capture</a>
-      <a href="#TSR_OVERLAY_DIAGRAM_PACK">🧩 TSR Overlay Diagram Pack</a>
--->
-    <h3>🧾 Meta, Drafts & Structural Reviews</h3>
-      <a href="#CHANGELOG">📝 CHANGELOG</a>
-      <a href="#DRAFT_TRIADICFRAMEWORKS_WIKIPEDIA_INFO">📄 TriadicFrameworks Wikipedia Draft</a>
-      <a href="#STRUCTURAL_REVIEW_MAGNIFICA_HUMANITAS">🏛 Magnifica Humanitas Review</a>
-      <a href="#STRUCTURAL_REVIEW_MAGNIFICA_HUMANITAS_CAPTURE">📸 Magnifica Humanitas Capture</a>
-      <a href="#THE_CHOICES_WE_MADE_AND_WHY">🧭 The Choices We Made and Why</a>
-    <h3>🏗️ Triadic Tools</h3> 
+      <a href="#IMAGINATION_EXCERCISE">🎨 Imagination Exercising</a>
+      <a href="#INTERNET3_DRAFT">🌐 Internet3 Draft</a>
+      <a href="#INVERTED_STAR_ONTOLOGY">⭐ Inverted Star Ontology</a>
+      <a href="#JWST_RTT_TRIADIC_CORE_PRIMITIVE_QA_LAYER">🔭 JWST RTT Triadic Core Primitive QA Layer</a>
+      <a href="#MODULE_WORK">🧱 Module Work</a>
+      <a href="#NUCLEOBASES">🧬 Nucleobases</a>
+      <a href="#ORIGIN_OF_RESONANCE_MATH">📐 Origin of Resonance Math</a>
+      <a href="#PLANET9">🪐 Planet 9</a>
+      <a href="#PLANET9_DIAGNOSTIC">🧪 Planet 9 Diagnostic</a>
+      <a href="#PLANET9_ENGINE">🚀 Planet 9 Engine</a>
+      <a href="#PLANET9_MAP">🗺️ Planet 9 Map</a>
+      <a href="#PLANET9_PROFILE">📘 Planet 9 Profile</a>
+      <a href="#PLANET9_SIGNATURE">🔑 Planet 9 Signature</a>
+      <a href="#POWER_SUPPLIES_MOBILE_SENSORS_BMS_RTT_INSIDE">🔋 Power Supplies / Sensors / BMS (RTT‑Inside)</a>
+      <a href="#QCOMPUTE_RTT_PREVIEW">🧮 qCompute RTT Preview</a>
+      <a href="#QUANTUM_ENERGY_BANKS_AND_CORRIDOR_SYSTEM_ANALYSIS">⚛️ Quantum Energy Banks & Corridor Systems</a>
+      <a href="#QUANTUM_LENS_LAYER_TRIADIC_PROTOCOLS">🔍 Quantum Lens Layer Protocols</a>
+      <a href="#RADIOCARBON_AND_DATING">🧪 Radiocarbon & Dating</a>
+      <a href="#REGIME_AWARE_VORTEX_MATH">🌀 Regime‑Aware Vortex Math</a>
+      <a href="#REPLICATORS_DIAGRAM_SPEC">🧬 Replicators Diagram Spec</a>
+      <a href="#REPLICATORS_OPERATORS">🧬 Replicators Operators</a>
+      <a href="#RESONANCE_TRIADIC_ALIGNED_OVERVIEW">🔺 Resonance Triadic Aligned Overview</a>
+      <a href="#RTT_ABOVE_GROUND_ELECTRICAL_REDESIGN_INITIATIVE">⚡ RTT Above‑Ground Electrical Re‑design</a>
+      <a href="#RTT_FACILITIES_PLAYBOOK">🏭 RTT Facilities Playbook</a>
+      <a href="#SPACESHIPS_ALIGNED_WITH_RTT">🚀 Spaceships Aligned with RTT</a>
+      <a href="#SPACESHIPS_ALIGNED_WITH_RTT_CAPTURE">🚀 Spaceships Aligned with RTT (Capture)</a>
+      <a href="#STRUCTURAL_REVIEW_MAGNIFICA_HUMANITAS">📘 Structural Review — Magnifica Humanitas</a>
+      <a href="#STRUCTURAL_REVIEW_MAGNIFICA_HUMANITAS_CAPTURE">📘 Structural Review — Magnifica Humanitas (Capture)</a>
+      <a href="#SUBSTRATE_COMMUNICATIONS">📡 Substrate Communications</a>
+      <a href="#SUPCONSCIOUSNESS_OPERATOR_33_33_33_1_MODEL">🧠 Supconsciousness Operator (33‑33‑33‑1)</a>
+      <a href="#SUPERCOMPUTERS_ARE_ALREADY_TRIADIC">🖥️ Supercomputers Are Already Triadic</a>
+      <a href="#THE_CHOICES_WE_MADE_AND_WHY">📜 The Choices We Made and Why</a>
+      <a href="#THE_INTERFACE_BOUNDARY">🧩 The Interface Boundary</a>
+      <a href="#THOUGHTS_IN_THE_TWO_THIRDS">🧠 Thoughts in the Two‑Thirds</a>
+      <a href="#TRANSPORTER_ENVELOPE_V0_5">📦 Transporter Envelope v0.5</a>
+      <a href="#TRANSPORTER_INTEGRATION_MAP">🗺️ Transporter Integration Map</a>
+      <a href="#TRIADICFRAMEWORKS_RESEARCH_MODULE_INDEX">📚 TriadicFrameworks Research Module Index</a>
+      <a href="#TRIADIC_TIME_NEAR_MISSES">⏳ Triadic Time Near Misses</a>
+      <a href="#TSR_OVERLAY_DIAGRAM_PACK">📐 TSR Overlay Diagram Pack</a>
+      <a href="#TSR_CUT_OVER_PROTOCOL_RTT_CANONICAL_FORM">📘 TSR Cut‑Over Protocol (Canonical)</a>
+      <a href="#TSR_CUT_OVER_PROTOCOL_RTT_OPERATOR_GRAMMAR_TABLE">📘 TSR Operator Grammar Table</a>
+      <a href="#UNIFIED_DIAGRAM_SPEC">🗺️ Unified Diagram Spec</a>
+      <a href="#UNIFIED_OPERATOR_DIAGRAM_SVG">🗺️ Unified Operator Diagram (SVG)</a>
+      <a href="#UNIFIED_OPERATOR_GRAMMAR_V1_0">📘 Unified Operator Grammar v1.0</a>
+      <a href="#UNIFIED_OPERATOR_GRAMMAR_V1_1">📘 Unified Operator Grammar v1.1</a>
+      <a href="#VIBRATIONAL_STONE_CUTTING">🪨 Vibrational Stone Cutting</a>
+      <a href="#WARP_DRIVE_ARCHITECTURE_PLAN_RTT_INSIDE">🚀 Warp Drive Architecture (RTT‑Inside)</a>
+      <a href="#ZIPNN_TRIADIC_PATTERNS_AND_HIDDEN_TWO_THIRDS">🧩 ZipNN Triadic Patterns & Hidden Two‑Thirds</a>
+    </details>
+   </p>
+   <details>
+     <summary>🌱🧮 Agentic Math</summary>
+     <p>
+      <a href="#AGENTIC_ABC_TAU_MISSING_PRIMES">🔢 abc‑tau Missing Primes</a>
+      <a href="#AGENTIC_ABOUT">📘 Agentic ABOUT</a>
+      <a href="#AGENTIC_ANDREWS_DHAR_PARTITIONS">📐 Andrews‑Dhar Partitions</a>
+      <a href="#AGENTIC_CHEBYSHEV_DEMAZURE_DYCK">📐 Chebyshev‑Demazure‑Dyck</a>
+      <a href="#AGENTIC_COLLATZ_TRANSFORMERS_RTT">🔁 Collatz Transformers (RTT)</a>
+      <a href="#AGENTIC_CROP_CIRCLE_AGENTIC_EVALS">🌀 Crop Circle Agentic Evals</a>
+      <a href="#AGENTIC_FEL_SYZYGIES">📐 Fel Syzygies</a>
+      <a href="#AGENTIC_NEKR_OKOUNKOV_DOMINANT_ZEROS">🧮 Nekr‑Okounkov Dominant Zeros</a>
+      <a href="#AGENTIC_PARITY_K_DIFFERENTIALS">➗ Parity‑k Differentials</a>
+      <a href="#AGENTIC_PARTIAL_REGULAR_PRIMES">🔢 Partial Regular Primes</a>
+      <a href="#AGENTIC_P AUCITY_LATTICE_TRIANGLES">🔺 Paucity Lattice Triangles</a>
+      <a href="#AGENTIC_QUADRATIC_RATIONAL_DINV">📐 Quadratic Rational dinv</a>
+      <a href="#AGENTIC_README">📘 Agentic README</a>
+      <a href="#AGENTIC_RECIPROCALS_PARTITION_POLYNOMIALS">📐 Reciprocals Partition Polynomials</a>
+      <a href="#AGENTIC_THAKUR_POWER_SUMS">🔢 Thakur Power Sums</a>
+      <a href="#AGENTIC_WE_CANT_AGREE_FORMALLY">📘 We Can’t Agree Formally</a>
+    </details>
+   </p>
+   <details>
+     <summary>🌱📁 Assets</summary>
+     <p>
+      <a href="#ASSETS_README">📘 Assets README</a>
+    </details>
+   </p>
+   <details>
+     <summary>🌱📋 Checklists</summary>
+     <p>
+      <a href="#CHECKLISTS_CAPTURE">📄 Checklists Capture</a>
+      <a href="#CHECKLISTS_README">📘 Checklists README</a>
+    </details>
+   </p>
+   <details>
+     <summary>🌱🧠 Intelligence Class Ladder</summary>
+     <p>
+      <a href="#ICL_ACI">🧠 ACI</a>
+      <a href="#ICL_AGI">🤖 AGI</a>
+      <a href="#ICL_ANI">🧠 ANI</a>
+      <a href="#ICL_CROSS_OPERATOR_MAPPING_TABLE">🔀 Cross‑Operator Mapping Table</a>
+      <a href="#ICL_FLEET_HIERARCHY_DIAGRAM">🛸 Fleet Hierarchy Diagram</a>
+      <a href="#ICL_MIGRATION_V1_TO_V2">📈 Migration v1 → v2</a>
+      <a href="#ICL_README">📘 ICL README</a>
+      <a href="#ICL_RESEARCH_INDEX">📚 ICL Research Index</a>
+      <a href="#ICL_SUBSTRATE_DOMAIN_MODULE_FLOWCHART">🗺️ Substrate Domain Module Flowchart</a>
+    </details>
+   </p>
+   <details>
+     <summary>🌱⚙️ Operators</summary>
+     <p>
+      <a href="#OP_33_33_33_1">🔺 33‑33‑33‑1 Operator</a>
+      <a href="#OP_33_33_33_1_DIAGRAM_SPEC">📐 33‑33‑33‑1 Diagram Spec</a>
+      <a href="#OP_ARRIVAL_SUBSTRATE_V0_2">🛬 Arrival Substrate v0.2</a>
+      <a href="#OP_DPU_OPERATOR_ALGEBRA_V0_1">📐 DPU Operator Algebra v0.1</a>
+      <a href="#OP_DPU_READY_OPERATOR_ALGEBRA">📐 DPU‑Ready Operator Algebra</a>
+      <a href="#OP_TRANSITION_FUNCTOR_V0_1">🔁 Transition Functor v0.1</a>
+      <a href="#OP_TRANSITION_FUNCTOR_V0_1_COPY">🔁 Transition Functor v0.1 (Copy)</a>
+      <a href="#OP_TRANSPORTER_ENVELOPE">📦 Transporter Envelope</a>
+      <a href="#OP_TRANSPORTER_ENVELOPE_DIAGRAM_SPEC">📐 Transporter Envelope Diagram Spec</a>
+    </details>
+   </p>
+   <details>
+     <summary>🌱📜 Protocol Header</summary>
+     <p>
+      <a href="#PH_ALLELES">🧬 Alleles</a>
+      <a href="#PH_CAPTURE">📄 Capture</a>
+      <a href="#PH_COMPATIBILITY_MATRIX">📊 Compatibility Matrix</a>
+      <a href="#PH_EXAMPLES">📘 Examples</a>
+      <a href="#PH_FULL_MATRIX">📐 Full Matrix</a>
+      <a href="#PH_GENOME">🧬 Genome</a>
+      <a href="#PH_INDEX">📘 Index</a>
+      <a href="#PH_LOCI">🧬 Loci</a>
+      <a href="#PH_MULTILINGUAL">🌐 Multilingual</a>
+      <a href="#PH_PROXIMITY_CLOUD">☁️ Proximity Cloud</a>
+      <a href="#PH_TESTS">🧪 Tests</a>
+      <a href="#PH_P_CAPTURE">📄 p_Capture</a>
+      <a href="#PH_README">📘 Protocol Header README</a>
+    </details>
+   </p>
+   <details>
+     <summary>🌱🧰 Toolbox</summary>
+     <p>
+      <a href="#TB_QUICKSTART">⚡ Quickstart</a>
+      <a href="#TB_QUICKSTART_AGENT">🤖 Quickstart Agent</a>
+      <a href="#TB_README">📘 Toolbox README</a>
+      <a href="#TB_RT_CAPTURE">📄 RT Capture</a>
+    </details>
+   </p>
+   <details>
+     <summary>🌱📐 Toolbox Diagrams</summary>
+     <p>
+      <a href="#TB_DIAGRAM_FOUR_SOURCE_SUBSTRATE">🗺️ Four Source Substrate Diagram</a>
+      <a href="#TB_DIAGRAM_MODE_OPACITY_CHAIN">🔗 Mode Opacity Chain</a>
+      <a href="#TB_DIAGRAM_RTT_ENGINE_TRIAD">🔺 RTT Engine Triad Diagram</a>
+      <a href="#TB_DIAGRAM_TEL_ECHO_MAP">📡 TEL Echo Map</a>
+      <a href="#TB_DIAGRAM_TRIADIC_SUPER">🧩 Triadic Super Diagram</a>
+    </details>
+   </p>
+   <details>
+     <summary>🌱📝 Toolbox Exercises</summary>
+     <p>
+      <a href="#TB_EX_BEFORE_AFTER_RTT_VISUALIZATION">🧪 Before/After RTT Visualization</a>
+      <a href="#TB_EX_FORECAST_VS_ACTUALS">📈 Forecast vs Actuals</a>
+      <a href="#TB_EX_OPERATIONAL_HEALTH_CHECK">🩺 Operational Health Check</a>
+      <a href="#TB_EX_SOCIAL_SECURITY_PROTOFUND">🏛️ Social Security Protofund</a>
+      <a href="#TB_EX_SOCIAL_SECURITY_PROTOFUND_INSTRUCTOR">📘 Social Security Protofund Instructor</a>
+      <a href="#TB_EX_SOCIAL_SECURITY_PROTOFUND_WORKSHEET">📄 Social Security Protofund Worksheet</a>
+    </details>
+   </p>
+   <details>
+     <summary>🌱🔣 Toolbox Glyphs</summary>
+     <p>
+      <a href="#TB_GLYPH_ANIMATION_SPEC">🎞️ Glyph Animation Spec</a>
+      <a href="#TB_GLYPH_LEGEND">🔤 Glyph Legend</a>
+    </details>
+   </p>
+   <details>
+     <summary>🌱🧬 Toolbox Lineage</summary>
+     <p>
+      <a href="#TB_LINEAGE_CROSS_MODULE_MATRIX">🧩 Cross‑Module Lineage Matrix</a>
+      <a href="#TB_LINEAGE_FORECAST_VS_ACTUALS">📈 Forecast vs Actuals</a>
+      <a href="#TB_LINEAGE_FORECAST_VS_ACTUALS_PROTOFUND_CROSSMAP">🗺️ Protofund Crossmap</a>
+      <a href="#TB_LINEAGE_INDEX">📚 Lineage Index</a>
+      <a href="#TB_LINEAGE_SITEMAP">🧭 Lineage Sitemap</a>
+     </p>
+    </details>
+    <details open>
+     <summary>🏗️ Triadic Tools</summary>
+     <p>
       <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
       <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
       <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
@@ -380,6 +552,8 @@ code {
       <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
       <a href="../">🔙TFT</a>
+     </p>
+    </details>
    <!-- RTT Session Header (canonical stub) -->
 <section id="research-session-header"
          data-rtt="research"
@@ -431,6 +605,12 @@ code {
 
 <script>
 
+// ============================================================
+// PRE‑RTT DOCUMENT MAP — FULL CATEGORIZED INVENTORY
+// Purpose: Orientation-first structural map for review, pruning,
+//          lineage preservation, and later RTT canon alignment.
+// ============================================================
+
 const DOC_MAP = {
       README: 'README.md',
       ABOUT: '../ABOUT.md',
@@ -443,8 +623,8 @@ const DOC_MAP = {
       CODE_OF_CONDUCT: '../CODE_OF_CONDUCT.md',
       SECURITY: '../SECURITY.md',
       PRINCIPLES: '../PRINCIPLES.md',
-      // Agentic AI Search Engine examples
-      RADIO_CARBON_DATING: 'Radiocarbon_and_Dating.md',
+      CHANGELOG: 'CHANGELOG.md',
+      OVERVIEW: 'overview.md',
       ADVANCE_DPU_VCG_NIMMS_ARCHITECTURE: 'Advance_DPU_VCG_NIMMS_Architecture.md',
       AGING_SUBSTRATE_ANALYSIS: 'Aging_Substrate_Analysis.md',
       AI_MODULE_SYNTHESIS_VIA_TRIADICFRAMEWORKS_LENS: 'AI_Module_Synthesis_via_TriadicFrameworks_Lens.md',
@@ -455,49 +635,47 @@ const DOC_MAP = {
       ARRIVAL_SUBSTRATE_V0_3: 'Arrival_Substrate_v0.3.md',
       ARRIVAL_SUBSTRATE_V0_4: 'Arrival_Substrate_v0.4.md',
       AUTONOMOUS_ROBOTIC_FISH_FOR_GREAT_LAKES_RESTORATION: 'Autonomous_Robotic_Fish_for_Great_Lakes_Restoration.md',
-      GLOBAL_ATC_SF_HAM_RADIO_RTT_INSIDE: 'A_Model_for_Global_ATC_and_SF_and_HAM_Radio_Using_RTT-Inside.md',
-      RESONANT_REVIEW_UNIVERSE_IN_A_NUTSHELL: 'A_Resonant_Review_of_The_Universe_in_a_Nutshell.md',
-      BELLS_THEOREM_MEETS_RTT: 'Bells_Theorem_meets_Resonance-Time_Theory.md',
-      BEYOND_STRUCTURE_EQUATIONS_FOR_CLARITY: 'Beyond_Structure_The_Equations_for_Clarity.md',
+      A_MODEL_FOR_GLOBAL_ATC_AND_SF_AND_HAM_RADIO_USING_RTT_INSIDE: 'A_Model_for_Global_ATC_and_SF_and_HAM_Radio_Using_RTT-Inside.md',
+      A_RESONANT_REVIEW_OF_THE_UNIVERSE_IN_A_NUTSHELL: 'A_Resonant_Review_of_The_Universe_in_a_Nutshell.md',
+      BELLS_THEOREM_MEETS_RESONANCE_TIME_THEORY: 'Bells_Theorem_meets_Resonance-Time_Theory.md',
+      BEYOND_STRUCTURE_THE_EQUATIONS_FOR_CLARITY: 'Beyond_Structure_The_Equations_for_Clarity.md',
       BIG_DATA_EXAMINED_WITH_RTT: 'Big_Data_examined_with_RTT.md',
       BING: 'Bing.md',
       BKM_CREDIT_REPORTING_CAPTURE: 'BKM_Credit_Reporting_capture.md',
       BLACK_HOLES_AS_RESONANCE_RESERVOIRS: 'Black_Holes_as_Resonance_Reservoirs.md',
       CALCULUS_ON_STEROIDS: 'Calculus_on_Steroids.md',
-      CHANGELOG: 'CHANGELOG.md',
       COMBINED_CONTINUITY_MAP: 'Combined_Continuity_Map.md',
-      COURSE_CORRECTION_GPU_NPU_TOPS: 'Course_Correction_Needed_for_GPU_NPU_TOPS.md',
+      COURSE_CORRECTION_NEEDED_FOR_GPU_NPU_TOPS: 'Course_Correction_Needed_for_GPU_NPU_TOPS.md',
       CROSS_GOAL_OPERATOR_MATRIX: 'Cross_Goal_Operator_Matrix.md',
       CROSS_MODULE_PROPAGATION_MAP: 'Cross_Module_Propagation_Map.md',
       CTS_VIRTUAL_WORLDS: 'CTs_Virtual_Worlds.md',
       CTS_VIRTUAL_WORLDS_DIAGRAM_SPEC: 'CTs_Virtual_Worlds_Diagram_Spec.md',
-      DECOHERENCE_MEASUREMENT_PROBLEM_PATCH: 'Decoherence_As_A_Measurement_Problem_Patch.md',
-      DEVELOPER_CODE_FOR_EVERY_LANGUAGE_RTT_INSIDE: 'Developer_Code_for_Every_Language_with_RTT-Inside.md',
-      DOMAIN_FORKING_NEW_GOVERNANCE: 'Domain_Forking_and_New_Governance_Through_Grammar_Not_Policy.md',
+      DECOHERENCE_AS_A_MEASUREMENT_PROBLEM_PATCH: 'Decoherence_As_A_Measurement_Problem_Patch.md',
+      DEVELOPER_CODE_FOR_EVERY_LANGUAGE_WITH_RTT_INSIDE: 'Developer_Code_for_Every_Language_with_RTT-Inside.md',
+      DOMAIN_FORKING_AND_NEW_GOVERNANCE_THROUGH_GRAMMAR_NOT_POLICY: 'Domain_Forking_and_New_Governance_Through_Grammar_Not_Policy.md',
       DRAFT_TRIADICFRAMEWORKS_WIKIPEDIA_INFO: 'Draft_TriadicFrameworks_Wikipedia_Info.md',
       DREAMS_VS_IMAGINATION: 'Dreams_vs_Imagination.md',
       DUCKDUCKGO: 'DuckDuckGo.md',
-      EARTH_SIMS_RTT_INSIDE: 'Earth_Sims_using_RTT-Inside_What_This_Provides.md',
+      EARTH_SIMS_USING_RTT_INSIDE_WHAT_THIS_PROVIDES: 'Earth_Sims_using_RTT-Inside_What_This_Provides.md',
       ELECTRONICS_SEMICONDUCTORS_SUPERCONDUCTORS_RTT_INSIDE: 'Electronics_Semiconductors_Superconductors_RTT-Inside.md',
-      ELECTRON_MICROSCOPES_RTT_INSIDE: 'Electron_Microscopes-The_RTT-Inside_Mini-Adventure.md',
-      EUROPEAN_SPALLATION_SOURCE_TRIADICFRAMEWORKSTECH: 'European_Spallation_Source_needs_TriadicFrameworksTech.md',
-      EVALUATIONS_STRUCTURAL_PATTERNS: 'Evaluations_Structural_Patterns_Only_with_Multiple-Modules.md',
+      ELECTRON_MICROSCOPES_RTT_MINI_ADVENTURE: 'Electron_Microscopes-The_RTT-Inside_Mini-Adventure.md',
+      EUROPEAN_SPALLATION_SOURCE_NEEDS_TRIADICFRAMEWORKSTECH: 'European_Spallation_Source_needs_TriadicFrameworksTech.md',
+      EVALUATIONS_STRUCTURAL_PATTERNS_ONLY_WITH_MULTIPLE_MODULES: 'Evaluations_Structural_Patterns_Only_with_Multiple-Modules.md',
       FLOWER_LAYERED_ELECTROMECHANICAL_RESONATOR: 'Flower_Layered_Electromechanical_Resonator.md',
       FULL_SUBSTRATE_GAME_GDD: 'Full_Substrate_Game_GDD.md',
       GOAL_2_TRANSPORTERS_ADDENDUM: 'Goal_2_Transporters_Addendum.md',
       GOAL_STATUS_CHECK: 'Goal_Status_Check.md',
       GOOGLE: 'Google.md',
-      HIDDEN_RESONANCE_DARK_COMPONENTS: 'Hidden_Resonance_as_Dark_Components-SET_Corrections_to_Galactic_and_Cosmological_Dynamics.md',
-      HOW_RTT_APPLIES_TO_STANDARD_POWER_TRANSFORMER: 'How_RTT_Applies_to_a_Standard_Power_Transformer.md',
+      HIDDEN_RESONANCE_AS_DARK_COMPONENTS_SET_CORRECTIONS: 'Hidden_Resonance_as_Dark_Components-SET_Corrections_to_Galactic_and_Cosmological_Dynamics.md',
+      HOW_RTT_APPLIES_TO_A_STANDARD_POWER_TRANSFORMER: 'How_RTT_Applies_to_a_Standard_Power_Transformer.md',
       ICE_CORES_HAVE_MORE_TO_REVEAL: 'Ice_Cores_Have_More_To_Reveal.md',
-      IMAGINATION_EXERCISING: 'Imagination_Excercising.md',
+      IMAGINATION_EXCERCISE: 'Imagination_Excercising.md',
       INTERNET3_DRAFT: 'Internet3_draft.md',
       INVERTED_STAR_ONTOLOGY: 'Inverted_Star_Ontology.md',
-      JWST_RTT_TRIADIC_CORE_QA_LAYER: 'JWST-RTT_Triadic_Core_Primitive_as_a_QA_Layer.md',
+      JWST_RTT_TRIADIC_CORE_PRIMITIVE_QA_LAYER: 'JWST-RTT_Triadic_Core_Primitive_as_a_QA_Layer.md',
       MODULE_WORK: 'module_work.md',
       NUCLEOBASES: 'Nucleobases.md',
       ORIGIN_OF_RESONANCE_MATH: 'Origin_of_Resonance_Math.md',
-      OVERVIEW: 'overview.md',
       PLANET9: 'Planet9.md',
       PLANET9_DIAGNOSTIC: 'planet9_diagnostic.md',
       PLANET9_ENGINE: 'planet9_engine.md',
@@ -505,76 +683,127 @@ const DOC_MAP = {
       PLANET9_PROFILE: 'planet9_profile.md',
       PLANET9_SIGNATURE: 'planet9_signature.md',
       POWER_SUPPLIES_MOBILE_SENSORS_BMS_RTT_INSIDE: 'Power_Supplies_Mobile_Sensors_and_Enhanced_BMS_using_RTT-Inside.md',
-      QCOMPUTE_RTT_INSIDE_PREVIEW: 'qCompute_with_RTT-Inside_Preview.md',
-      QUANTUM_ENERGY_BANKS_CORRIDOR_SYSTEM: 'Quantum_Energy_Banks_and_Corridor‑Based_Energy_System_Analysis.md',
+      QCOMPUTE_RTT_PREVIEW: 'qCompute_with_RTT-Inside_Preview.md',
+      QUANTUM_ENERGY_BANKS_AND_CORRIDOR_SYSTEM_ANALYSIS: 'Quantum_Energy_Banks_and_Corridor‑Based_Energy_System_Analysis.md',
       QUANTUM_LENS_LAYER_TRIADIC_PROTOCOLS: 'Quantum_Lens_Layer_Triadic_Protocols_for_Resonance_Scanning.md',
+      RADIOCARBON_AND_DATING: 'Radiocarbon_and_Dating.md',
+      REGIME_AWARE_VORTEX_MATH: 'Regime_Aware_Vortex_Math.md',
       REPLICATORS_DIAGRAM_SPEC: 'Replicators_Diagram_Spec.md',
       REPLICATORS_OPERATORS: 'Replicators_Operators.md',
       RESONANCE_TRIADIC_ALIGNED_OVERVIEW: 'Resonance_Triadic_Aligned_Overview.md',
-      RTT_ABOVE_GROUND_ELECTRICAL_REDESIGN: 'RTT_Above‑Ground_Electrical_Re-design_Initiative.md',
+      RTT_ABOVE_GROUND_ELECTRICAL_REDESIGN_INITIATIVE: 'RTT_Above‑Ground_Electrical_Re-design_Initiative.md',
       RTT_FACILITIES_PLAYBOOK: 'RTT_Facilities_Playbook.md',
       SPACESHIPS_ALIGNED_WITH_RTT: 'Spaceships_Aligned_With_RTT.md',
       SPACESHIPS_ALIGNED_WITH_RTT_CAPTURE: 'Spaceships_Aligned_With_RTT_Capture.md',
       STRUCTURAL_REVIEW_MAGNIFICA_HUMANITAS: 'Structural_Review_of_Magnifica_Humanitas.md',
       STRUCTURAL_REVIEW_MAGNIFICA_HUMANITAS_CAPTURE: 'Structural_Review_of_Magnifica_Humanitas_Capture.md',
       SUBSTRATE_COMMUNICATIONS: 'Substrate_Communications.md',
-      SUPCONSCIOUSNESS_OPERATOR_33_33_33_1: 'Supconsciousness_Operator_and_the_33-33-33-1_Model.md',
-      SUPERCOMPUTERS_TRIADIC: 'Supercomputers_Are_Already_Triadic_They_Just_Dont_Know_It.md',
+      SUPCONSCIOUSNESS_OPERATOR_33_33_33_1_MODEL: 'Supconsciousness_Operator_and_the_33-33-33-1_Model.md',
+      SUPERCOMPUTERS_ARE_ALREADY_TRIADIC: 'Supercomputers_Are_Already_Triadic_They_Just_Dont_Know_It.md',
       THE_CHOICES_WE_MADE_AND_WHY: 'The_Choices_We_Made_and_Why.md',
-      INTERFACE_BOUNDARY: 'the_interface_boundary.md',
+      THE_INTERFACE_BOUNDARY: 'the_interface_boundary.md',
       THOUGHTS_IN_THE_TWO_THIRDS: 'Thoughts_in_the_Two_Thirds.md',
       TRANSPORTER_ENVELOPE_V0_5: 'Transporter_Envelope_v0.5.md',
       TRANSPORTER_INTEGRATION_MAP: 'Transporter_Integration_Map.md',
       TRIADICFRAMEWORKS_RESEARCH_MODULE_INDEX: 'TriadicFrameworks_Research_Module_Index.md',
       TRIADIC_TIME_NEAR_MISSES: 'Triadic_Time_Near_Misses.md',
       TSR_OVERLAY_DIAGRAM_PACK: 'TSR-OverlayDiagramPack-v2.6.0-rc_draft.md',
-      TSR_CUT_OVER_PROTOCOL_CANONICAL: 'TSR_Cut_Over_Protocol_RTT_Canonical_Form.md',
-      TSR_CUT_OVER_PROTOCOL_OPERATOR_GRAMMAR_TABLE: 'TSR_Cut_Over_Protocol_RTT_Operator_Grammar_Table.md',
+      TSR_CUT_OVER_PROTOCOL_RTT_CANONICAL_FORM: 'TSR_Cut_Over_Protocol_RTT_Canonical_Form.md',
+      TSR_CUT_OVER_PROTOCOL_RTT_OPERATOR_GRAMMAR_TABLE: 'TSR_Cut_Over_Protocol_RTT_Operator_Grammar_Table.md',
       UNIFIED_DIAGRAM_SPEC: 'Unified_Diagram_Spec.md',
       UNIFIED_OPERATOR_DIAGRAM_SVG: 'unified_operator_diagram.svg.md',
       UNIFIED_OPERATOR_GRAMMAR_V1_0: 'Unified_Operator_Grammar_v1.0.md',
       UNIFIED_OPERATOR_GRAMMAR_V1_1: 'Unified_Operator_Grammar_v1.1.md',
       VIBRATIONAL_STONE_CUTTING: 'Vibrational_Stone_Cutting.md',
-      WARP_DRIVE_ARCHITECTURE_RTT_INSIDE: 'Warp_Drive_Architecture_Plan_Scaffolded_with_RTT-Inside.md',
-      ZIPNN_TRIADIC_PATTERNS: 'ZipNN_Triadic_Patterns_and_the_Hidden_Two_Thirds.md',
-      ASSETS_PLANET9_HERO: 'assets/README.md',
+      WARP_DRIVE_ARCHITECTURE_PLAN_RTT_INSIDE: 'Warp_Drive_Architecture_Plan_Scaffolded_with_RTT-Inside.md',
+      ZIPNN_TRIADIC_PATTERNS_AND_HIDDEN_TWO_THIRDS: 'ZipNN_Triadic_Patterns_and_the_Hidden_Two_Thirds.md',
+      // Agentic Math / Research
+      AGENTIC_ABC_TAU_MISSING_PRIMES: 'agentic/abc-tau-missing-primes.md',
+      AGENTIC_ABOUT: 'agentic/ABOUT.md',
+      AGENTIC_ANDREWS_DHAR_PARTITIONS: 'agentic/andrews-dhar-partitions.md',
+      AGENTIC_CHEBYSHEV_DEMAZURE_DYCK: 'agentic/chebyshev-demazure-dyck.md',
+      AGENTIC_COLLATZ_TRANSFORMERS_RTT: 'agentic/collatz_transformers_rtt.md',
+      AGENTIC_CROP_CIRCLE_AGENTIC_EVALS: 'agentic/Crop_Circle_Agentic_Evals.md',
+      AGENTIC_FEL_SYZYGIES: 'agentic/fel-syzygies.md',
+      AGENTIC_NEKR_OKOUNKOV_DOMINANT_ZEROS: 'agentic/nekr-okounkov-dominant-zeros.md',
+      AGENTIC_PARITY_K_DIFFERENTIALS: 'agentic/parity-k-differentials.md',
+      AGENTIC_PARTIAL_REGULAR_PRIMES: 'agentic/partial-regular-primes.md',
+      AGENTIC_P AUCITY_LATTICE_TRIANGLES: 'agentic/paucity-lattice-triangles.md',
+      AGENTIC_QUADRATIC_RATIONAL_DINV: 'agentic/quadratic-rational-dinv.md',
+      AGENTIC_README: 'agentic/README.md',
+      AGENTIC_RECIPROCALS_PARTITION_POLYNOMIALS: 'agentic/reciprocals-partition-polynomials.md',
+      AGENTIC_THAKUR_POWER_SUMS: 'agentic/thakur-power-sums.md',
+      AGENTIC_WE_CANT_AGREE_FORMALLY: 'agentic/we-cant-agree-formally.md',
+      // Assets
       ASSETS_README: 'assets/README.md',
+      // Checklists
       CHECKLISTS_CAPTURE: 'checklists/checklists_Capture.md',
       CHECKLISTS_README: 'checklists/README.md',
-      OPERATORS_33_33_33_1: 'Operators/33-33-33-1.md',
-      OPERATORS_33_33_33_1_DIAGRAM_SPEC: 'Operators/33-33-33-1_Diagram_Spec.md',
-      OPERATORS_ARRIVAL_SUBSTRATE_V0_2: 'Operators/Arrival_Substrate_v0.2.md',
-      OPERATORS_DPU_OPERATOR_ALGEBRA_V0_1: 'Operators/dpu_operator_algebra_v0.1.md',
-      OPERATORS_DPU_READY_OPERATOR_ALGEBRA: 'Operators/DPU‑Ready_Operator_Algebra.md',
-      OPERATORS_TRANSITION_FUNCTOR_V0_1_COPY: 'Operators/transition_functor_v0.1 - Copy.md',
-      OPERATORS_TRANSITION_FUNCTOR_V0_1: 'Operators/transition_functor_v0.1.md',
-      OPERATORS_TRANSPORTER_ENVELOPE: 'Operators/transporter_envelope.md',
-      OPERATORS_TRANSPORTER_ENVELOPE_DIAGRAM_SPEC: 'Operators/Transporter_Envelope_Diagram_Spec.md',
-      QUICKSTART: 'Quickstart.md',
-      QUICKSTART_AGENT: 'Quickstart_Agent.md',
-      RT_CAPTURE: 'RT_Capture.md',
-      DIAGRAM_FOUR_SOURCE_SUBSTRATE: 'diagrams/four_source_substrate_diagram.md',
-      DIAGRAM_MODE_OPACITY_CHAIN: 'diagrams/mode_opacity_chain.md',
-      DIAGRAM_RTT_ENGINE_TRIAD: 'diagrams/rtt_engine_triad_diagram.md',
-      DIAGRAM_TEL_ECHO_MAP: 'diagrams/tel_echo_map.md',
-      DIAGRAM_TRIADIC_SUPER: 'diagrams/triadic_super_diagram.md',
-      EXERCISES_BEFORE_AFTER_RTT_VISUALIZATION: 'exercises/before_after_rtt_visualization.md',
-      EXERCISES_FORECAST_VS_ACTUALS: 'exercises/forecast_vs_actuals_exercise.md',
-      EXERCISES_OPERATIONAL_HEALTH_CHECK: 'exercises/operational_health_check_diagram.md',
-      EXERCISES_SOCIAL_SECURITY_PROTOFUND: 'exercises/social_security_protofund.md',
-      EXERCISES_SOCIAL_SECURITY_PROTOFUND_INSTRUCTOR: 'exercises/social_security_protofund_instructor.md',
-      EXERCISES_SOCIAL_SECURITY_PROTOFUND_WORKSHEET: 'exercises/social_security_protofund_worksheet.md',
-      GLYPHS_ANIMATION_SPEC: 'glyphs/glyph_animation_spec.md',
-      GLYPHS_LEGEND: 'glyphs/glyph_legend.md',
-      LINEAGE_CROSS_MODULE_MATRIX: 'LINEAGE/cross_module_lineage_matrix.md',
-      LINEAGE_FORECAST_VS_ACTUALS: 'LINEAGE/forecast_vs_actuals.md',
-      LINEAGE_FORECAST_VS_ACTUALS_PROTOFUND_CROSSMAP: 'LINEAGE/forecast_vs_actuals_protofund_crossmap.md',
-      LINEAGE_INDEX: 'LINEAGE/index.md',
-      LINEAGE_SITEMAP: 'LINEAGE/sitemap.md'
+      // Intelligence Class Ladder
+      ICL_ACI: 'Intelligence_Class_Ladder/ACI.md',
+      ICL_AGI: 'Intelligence_Class_Ladder/AGI.md',
+      ICL_ANI: 'Intelligence_Class_Ladder/ANI.md',
+      ICL_CROSS_OPERATOR_MAPPING_TABLE: 'Intelligence_Class_Ladder/Cross_Operator_Mapping_Table.md',
+      ICL_FLEET_HIERARCHY_DIAGRAM: 'Intelligence_Class_Ladder/Fleet_Hierarchy_Diagram.md',
+      ICL_MIGRATION_V1_TO_V2: 'Intelligence_Class_Ladder/migration_v1_to_v2.md',
+      ICL_README: 'Intelligence_Class_Ladder/README.md',
+      ICL_RESEARCH_INDEX: 'Intelligence_Class_Ladder/Research_Index.md',
+      ICL_SUBSTRATE_DOMAIN_MODULE_FLOWCHART: 'Intelligence_Class_Ladder/Substrate_Domain_Module_Flowchart.md',
+      // Operators
+      OP_33_33_33_1: 'Operators/33-33-33-1.md',
+      OP_33_33_33_1_DIAGRAM_SPEC: 'Operators/33-33-33-1_Diagram_Spec.md',
+      OP_ARRIVAL_SUBSTRATE_V0_2: 'Operators/Arrival_Substrate_v0.2.md',
+      OP_DPU_OPERATOR_ALGEBRA_V0_1: 'Operators/dpu_operator_algebra_v0.1.md',
+      OP_DPU_READY_OPERATOR_ALGEBRA: 'Operators/DPU‑Ready_Operator_Algebra.md',
+      OP_TRANSITION_FUNCTOR_V0_1: 'Operators/transition_functor_v0.1.md',
+      OP_TRANSITION_FUNCTOR_V0_1_COPY: 'Operators/transition_functor_v0.1 - Copy.md',
+      OP_TRANSPORTER_ENVELOPE: 'Operators/transporter_envelope.md',
+      OP_TRANSPORTER_ENVELOPE_DIAGRAM_SPEC: 'Operators/Transporter_Envelope_Diagram_Spec.md',
+      // Protocol Header
+      PH_ALLELES: 'protocol_header/protocol_header_alleles.md',
+      PH_CAPTURE: 'protocol_header/protocol_header_capture.md',
+      PH_COMPATIBILITY_MATRIX: 'protocol_header/protocol_header_compatibility_matrix.md',
+      PH_EXAMPLES: 'protocol_header/protocol_header_examples.md',
+      PH_FULL_MATRIX: 'protocol_header/protocol_header_full_matrix.md',
+      PH_GENOME: 'protocol_header/protocol_header_genome.md',
+      PH_INDEX: 'protocol_header/protocol_header_index.md',
+      PH_LOCI: 'protocol_header/protocol_header_loci.md',
+      PH_MULTILINGUAL: 'protocol_header/protocol_header_multilingual.md',
+      PH_PROXIMITY_CLOUD: 'protocol_header/protocol_header_proximity_cloud.md',
+      PH_TESTS: 'protocol_header/protocol_header_tests.md',
+      PH_P_CAPTURE: 'protocol_header/p_Capture.md',
+      PH_README: 'protocol_header/README.md',
+      // Toolbox
+      TB_QUICKSTART: 'Toolbox/Quickstart.md',
+      TB_QUICKSTART_AGENT: 'Toolbox/Quickstart_Agent.md',
+      TB_README: 'Toolbox/README.md',
+      TB_RT_CAPTURE: 'Toolbox/RT_Capture.md',
+      // Toolbox Diagrams
+      TB_DIAGRAM_FOUR_SOURCE_SUBSTRATE: 'Toolbox/diagrams/four_source_substrate_diagram.md',
+      TB_DIAGRAM_MODE_OPACITY_CHAIN: 'Toolbox/diagrams/mode_opacity_chain.md',
+      TB_DIAGRAM_RTT_ENGINE_TRIAD: 'Toolbox/diagrams/rtt_engine_triad_diagram.md',
+      TB_DIAGRAM_TEL_ECHO_MAP: 'Toolbox/diagrams/tel_echo_map.md',
+      TB_DIAGRAM_TRIADIC_SUPER: 'Toolbox/diagrams/triadic_super_diagram.md',
+      // Toolbox Exercises
+      TB_EX_BEFORE_AFTER_RTT_VISUALIZATION: 'Toolbox/exercises/before_after_rtt_visualization.md',
+      TB_EX_FORECAST_VS_ACTUALS: 'Toolbox/exercises/forecast_vs_actuals_exercise.md',
+      TB_EX_OPERATIONAL_HEALTH_CHECK: 'Toolbox/exercises/operational_health_check_diagram.md',
+      TB_EX_SOCIAL_SECURITY_PROTOFUND: 'Toolbox/exercises/social_security_protofund.md',
+      TB_EX_SOCIAL_SECURITY_PROTOFUND_INSTRUCTOR: 'Toolbox/exercises/social_security_protofund_instructor.md',
+      TB_EX_SOCIAL_SECURITY_PROTOFUND_WORKSHEET: 'Toolbox/exercises/social_security_protofund_worksheet.md',
+      // Toolbox Glyphs
+      TB_GLYPH_ANIMATION_SPEC: 'Toolbox/glyphs/glyph_animation_spec.md',
+      TB_GLYPH_LEGEND: 'Toolbox/glyphs/glyph_legend.md',
+      // Toolbox Lineage
+      TB_LINEAGE_CROSS_MODULE_MATRIX: 'Toolbox/LINEAGE/cross_module_lineage_matrix.md',
+      TB_LINEAGE_FORECAST_VS_ACTUALS: 'Toolbox/LINEAGE/forecast_vs_actuals.md',
+      TB_LINEAGE_FORECAST_VS_ACTUALS_PROTOFUND_CROSSMAP: 'Toolbox/LINEAGE/forecast_vs_actuals_protofund_crossmap.md',
+      TB_LINEAGE_INDEX: 'Toolbox/LINEAGE/index.md',
+      TB_LINEAGE_SITEMAP: 'Toolbox/LINEAGE/sitemap.md'
 };
-   
+
 function loadFromHash() {
-  const key = window.location.hash.replace('#', '');
+const key = window.location.hash.replace('#', '');
   if (DOC_MAP[key]) {
     loadDoc(DOC_MAP[key]);
   } else {
