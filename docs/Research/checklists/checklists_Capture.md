@@ -2,7 +2,7 @@
 
 > I just realized something. Sometimes, watching the various science/psuedo videos triggers something important, and this thought was.
 > 
-> Climate Chage - A big deal, lots of miss-information lots of sensational claims and warnings with unanchored references, using a regime blind base of frameworks - all blind no cross domain.
+> Climate Change - A big deal, lots of miss-information lots of sensational claims and warnings with unanchored references, using a regime blind base of frameworks - all blind no cross domain.
 > 
 > MY realization? The claims and research tied to ice cores.  Why? they are using the ice cores, many core aligned means we have an anchor approach. The problem is, no evidence for how many times the regimes shifted or more importantly, grow compact melt... There's something here that is highly suspicious, ice cores need a few more reference points. Starting with, who decided what's a year or period in every part of the cores, last I checked ice throughout the year changes a lot, and when its covered and compressed its moving, it's not like dating geology - they went too far on a drift evidence branch.  We need RTT ai modules to help see it.
 
