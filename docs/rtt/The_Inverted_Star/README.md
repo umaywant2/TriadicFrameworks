@@ -1,11 +1,10 @@
 <img width="1194" height="672" alt="rtt_The_Inverted_Star_" src="https://github.com/user-attachments/assets/9dbb0b97-74c5-4b2c-ad60-d067e9080922" />
 
+<div align="center"><iframe width="1194" height="672" src="https://www.youtube.com/embed/6Z0AklQbP8U?list=PLacFsbReLJPw&pp=sAgC&autoplay=1&mute=1&loop=1" title="TriadicFrameworks Books Playlist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
 - [`The_Inverted_Star_module.json`](The_Inverted_Star_module.json) — Agentic module schema role assignments
 
-<div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/6Z0AklQbP8U?list=PLacFsbReLJPw&pp=sAgC&autoplay=1&mute=1&loop=1" title="TriadicFrameworks Books Playlist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-
 # ⭐ The Inverted Star - [Book 2](https://www.triadicframeworks.org/rtt/The_Inverted_Star/Review_Book2_TIS.md)
-
 ### RTT Structural Operator • Cycle Geometry • Inversion Engine (v1.0)
 
 The **Inverted Star** is a structural operator inside the RTT substrate.  
