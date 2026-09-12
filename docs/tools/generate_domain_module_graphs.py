@@ -11,7 +11,6 @@ EXCLUDED_DIRS = {
 }
 
 def find_domains():
-    """Return all top-level domain directories under /docs."""
     domains = []
     for item in os.listdir(ROOT):
         path = os.path.join(ROOT, item)
@@ -20,7 +19,6 @@ def find_domains():
     return domains
 
 def find_modules(domain_path):
-    """Return all module directories inside a domain."""
     modules = []
     for root, dirs, files in os.walk(domain_path):
         if "module.json" in files:
@@ -28,7 +26,6 @@ def find_modules(domain_path):
     return modules
 
 def generate_graph(domain_path, modules):
-    """Create module_graph.md inside the domain directory."""
     out_path = os.path.join(domain_path, "module_graph.md")
 
     if os.path.exists(out_path):
@@ -37,7 +34,6 @@ def generate_graph(domain_path, modules):
 
     domain_name = os.path.basename(domain_path)
 
-    # Build Mermaid graph
     mermaid_lines = [
         "```mermaid",
         "flowchart TD",
@@ -50,40 +46,41 @@ def generate_graph(domain_path, modules):
 
     mermaid_lines.append("```")
 
-    content = f"""# {domain_name} — Module Graph
-
-This file provides a domain‑level module graph for **{domain_name}**.
-
-It lists all modules detected under:
-
-`{domain_path}`
-
----
-
-## Canon Context
-This domain inherits the full TriadicFrameworks canon:
-
-- RTT triads  
-- TFT triads  
-- Session context  
-- RTT frozen source  
-- AI initialization rules  
-
-Canon reference: `/docs/spine/spine.json`
-
----
-
-## Module Graph (Mermaid)
-
-{'\n'.join(mermaid_lines)}
-
----
-
-Generated automatically by `generate_domain_module_graphs.py`.
-"""
+    lines = [
+        f"# {domain_name} — Module Graph",
+        "",
+        f"This file provides a domain‑level module graph for **{domain_name}**.",
+        "",
+        "It lists all modules detected under:",
+        "",
+        f"`{domain_path}`",
+        "",
+        "---",
+        "",
+        "## Canon Context",
+        "This domain inherits the full TriadicFrameworks canon:",
+        "",
+        "- RTT triads",
+        "- TFT triads",
+        "- Session context",
+        "- RTT frozen source",
+        "- AI initialization rules",
+        "",
+        "Canon reference: `/docs/spine/spine.json`",
+        "",
+        "---",
+        "",
+        "## Module Graph (Mermaid)",
+        "",
+        *mermaid_lines,
+        "",
+        "---",
+        "",
+        "Generated automatically by `generate_domain_module_graphs.py`."
+    ]
 
     with open(out_path, "w", encoding="utf-8") as f:
-        f.write(content)
+        f.write("\n".join(lines))
 
     print(f"✔ Created {out_path}")
 
