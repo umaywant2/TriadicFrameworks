@@ -686,7 +686,7 @@ We’re right on time.
 
 ### Library of Congress Control Number (LCCN): 2026917007
 ### ISBN's:
-- eBook: 979-8-90224-361-8
-- Paperback: 979-8-90224-362-5
-- Hardback: 979-8-90224-363-2
+- eBook: 979-8-950812-27-9
+- Paperback: 979-8-950812-28-6
+- Hardback: 979-8-950812-29-3
 - Published by Byte Books Publishing
