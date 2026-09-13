@@ -81,141 +81,157 @@
 
 <style>
 /* ============================================================
-   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   NAWDERIAN NEON ARCADE THEME — RTT/1 SYNTHWAVE EDITION
    ============================================================ */
 
-  :root {
-  --bg-main: #0d0f12;
-  --bg-nav: #15181d;
-  --border-subtle: #2a2f38;
-  --text-main: #dfe7f3;
-  --text-muted: #9aa4b2;
-  --accent-rtt: #8ab4ff;
+:root {
+  --bg-main: #05060a;                 /* deep CRT black */
+  --bg-nav: #0a0c12;                  /* darker sidebar */
+  --bg-panel: #0f1118;
+
+  --text-main: #e8f7ff;               /* neon ice */
+  --text-muted: #7a8ca0;              /* CRT fade */
+
+  --neon-cyan: #3df5ff;
+  --neon-magenta: #ff3dfc;
+  --neon-yellow: #ffe66d;
+
+  --triadic-neon: linear-gradient(135deg,
+                      #3df5ff,
+                      #ff3dfc,
+                      #ffe66d);
+
+  --scanline: repeating-linear-gradient(
+                to bottom,
+                rgba(255,255,255,0.03) 0px,
+                rgba(255,255,255,0.03) 1px,
+                rgba(0,0,0,0.05) 2px
+              );
+
   --radius: 10px;
-  --shadow: 0 0 20px rgba(0,0,0,0.4);
-  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
-  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
-  --rtt-accent-mid:  #9ece6a;   /* balance */
-  --rtt-accent-high: #f7768e;   /* emphasis */
+  --glow: 0 0 12px rgba(255, 0, 180, 0.45),
+          0 0 24px rgba(0, 255, 255, 0.25);
 }
 
-.protocol a,
-.equation a {
-  border-bottom-style: dotted;
-}
-
-/* Base link style */
-a {
-  color: var(--rtt-accent-mid);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-  transition: color 0.2s ease, border-color 0.2s ease;
-}
-
-/* Hover / focus */
-a:hover,
-a:focus {
-  color: var(--rtt-accent-high);
-  border-bottom-color: var(--rtt-accent-high);
-}
-
-/* Visited links */
-a:visited {
-  color: var(--rtt-accent-low);
-}
-
-  /* Base layout */
-  html { scroll-behavior: smooth; }
-  body {
+/* Base layout */
+html { scroll-behavior: smooth; }
+body {
   margin: 0;
   padding: 0;
   background: var(--bg-main);
+  background-image: var(--scanline);
   color: var(--text-main);
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto;
   line-height: 1.65;
   font-size: 17px;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  }
+}
 
-  /* Headings */
-  h1, h2, h3, h4 {
+/* Neon headings */
+h1, h2, h3, h4 {
   font-weight: 700;
   margin-top: 1.8em;
   margin-bottom: 0.5em;
   line-height: 1.2;
-  background: var(--triadic);
+  background: var(--triadic-neon);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  }
+  text-shadow: var(--glow);
+}
 
-  /* Paragraphs and lists */
-  p, ul, ol {
+/* Paragraphs and lists */
+p, ul, ol {
   padding: 0 1em;
   margin: 0 0 1.1em 0;
-  color: #dfe7f3;
-  }
+  color: var(--text-main);
+}
 
-  /* Code/pre */
-  pre, code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
-  background: rgba(255,255,255,0.02);
+/* Neon links */
+a {
+  color: var(--neon-cyan);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255,255,255,0.25);
+  transition: color 0.2s ease, border-color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--neon-magenta);
+  border-bottom-color: var(--neon-magenta);
+  text-shadow: 0 0 8px var(--neon-magenta);
+}
+
+a:visited {
+  color: var(--neon-yellow);
+}
+
+/* Code blocks */
+pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono";
+  background: rgba(255,255,255,0.04);
   padding: 0.4em 0.6em;
   border-radius: 6px;
-  color: #cfe8ff;
-  }
+  color: #dffaff;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: inset 0 0 12px rgba(0,255,255,0.15);
+}
 
-  /* Context Block */
-  .context-block {
-    font-family: monospace;
-    font-size: 0.95rem;
-    line-height: 1.4;
-    margin: 0.5rem 0 1rem 0;
-  }
-       
-  /* Context Label */
-  .context-label {
-    color: #ff9800; /* orange */
-    font-weight: bold;
-    margin-right: 0.25rem;
-  }
-       
-  /* Context Value */
-  .context-value {
-    color: #ffffff; /* white */
-  }
-     
+/* Context block */
+.context-block {
+  font-family: monospace;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0.5rem 0 1rem 0;
+  padding: 1rem;
+  background: var(--bg-panel);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--glow);
+}
+
+.context-label {
+  color: var(--neon-yellow);
+  font-weight: bold;
+  margin-right: 0.25rem;
+}
+
+.context-value {
+  color: var(--text-main);
+}
+
+/* Navigation panel */
 nav {
   width: 260px;
   float: left;
   background: var(--bg-nav);
-  margin-left: 0;
   padding: 1.2rem;
   overflow-y: auto;
-  border-right: 1px solid var(--border-subtle);
+  border-right: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 4px 0 12px rgba(0,0,0,0.4);
 }
 
 nav h2 {
   font-size: 0.9rem;
-  color: var(--accent-rtt);
+  color: var(--neon-cyan);
   margin-top: 1.2rem;
   margin-bottom: 0.4rem;
   letter-spacing: 0.04em;
+  text-shadow: var(--glow);
 }
 
 nav a {
   display: block;
   color: var(--text-muted);
-  text-decoration: none;
   padding: 0.35rem 0;
   font-size: 0.9rem;
 }
 
 nav a:hover {
-  color: var(--text-main);
+  color: var(--neon-magenta);
+  text-shadow: 0 0 6px var(--neon-magenta);
 }
 
+/* Main content */
 main {
   flex: 1;
   padding: 2.5rem;
@@ -223,20 +239,65 @@ main {
 }
 
 main h1, main h2, main h3 {
-  color: var(--accent-rtt);
+  color: var(--neon-cyan);
   font-weight: 500;
+  text-shadow: var(--glow);
 }
 
 pre {
   background: #0b0d12;
   padding: 1rem;
   overflow-x: auto;
-  border-left: 2px solid var(--accent-rtt);
+  border-left: 2px solid var(--neon-magenta);
 }
 
 code {
-  color: var(--text-main);
+  color: var(--neon-cyan);
 }
+
+/* Hide the default arrow */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+/* Custom arrow icons */
+details > summary::before {
+  content: "⏵"; /* collapsed */
+  padding-right: 6px;
+  font-size: 0.9em;
+}
+details[open] > summary::before {
+  content: "⏷"; /* expanded */
+}
+
+/* Make the h2/h3 feel like the toggle */
+details > summary h2,
+details > summary h3 {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hover effect */
+details > summary:hover h2,
+details > summary:hover h3 {
+  text-decoration: underline;
+}
+
+/* Optional: fade-in animation for opened blocks */
+details[open] {
+  animation: fadeIn 0.15s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+      
 </style>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -255,8 +316,9 @@ code {
   </svg>
  </p> 
   
-  <h2>🛄 EcoEchoSystem | RTT/1/RSM/vST</h2>
-    <h3>🌱 City & Civ Regime-Aware Sims</h3>
+   <details>
+     <summary><h2>🛄 EcoEchoSystem | RTT/1/RSM/vST</h2></summary>
+    <h3>🌱 City & Civ Regime-Aware Sims</h3></summary>
       <a href="#README">🔰 README</a>
       <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
       <a href="#CONTRIBUTING">🤝 Contributing</a>
@@ -269,13 +331,17 @@ code {
       <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
       <a href="#SECURITY">🔐 Security</a>
       <a href="#PRINCIPLES">🧘 Principles</a>
-    <h3>🤹 Participation patterns</h3>
+   </details>
+   <details>
+     <summary><h3>🤹 Participation patterns</h3></summary>
       <a href="#OVERVIEW">🌍 Overview</a>
       <a href="#COMMUNITY_README">👥 Community — Participation</a>
       <a href="#COMMUNITY_EDUCATION_MODE">🎓 Education Mode</a>
       <a href="#COMMUNITY_RESEARCH_MODE">🔬 Research Mode</a>
       <a href="#COMMUNITY_SHARED_TEMPLATES">📂 Shared Templates</a>
-    <h3>💈 Shared regime infrastructure</h3>
+   </details>
+   <details>
+     <summary><h3>💈 Shared regime infrastructure</h3></summary>
       <a href="#CROSS_DOMAIN_README">🌐 Cross‑Domain Substrate</a>
       <a href="#CROSS_DOMAIN_OVERVIEW">🧭 Cross‑Domain Overview</a>
       <a href="#CROSS_DOMAIN_INTERFACES">🔗 Interfaces</a>
@@ -287,14 +353,20 @@ code {
       <a href="#CROSS_DOMAIN_MULTI_SCALE_SIMULATION">📐 Multi‑Scale Simulation</a>
       <a href="#CROSS_DOMAIN_MAPPINGS">🗺️ Cross‑Domain Mappings</a>
       <a href="#CROSS_DOMAIN_REGIME_COUPLING_ENGINE">⚙️ Regime Coupling Engine</a>
-    <h3>📦 Specialized regime lenses</h3>
+   </details>
+   <details>
+     <summary><h3>📦 Specialized regime lenses</h3></summary>
       <a href="#DOMAIN_MODULES_README">📦 Domain Modules</a>
-    <h3>🤖 Autonomous participants</h3>
+   </details>
+   <details>
+     <summary><h3>🤖 Autonomous participants</h3></summary>
       <a href="#AI_AGENTS_README">🤖 AI Agents</a>
       <a href="#AI_ALIGNMENT_CONSTRAINTS">🧠 Alignment Constraints</a>
       <a href="#AI_LEARNING_REGIMES">📈 Learning Regimes</a>
       <a href="#AI_MULTI_REGIME_AGENTS">🔀 Multi‑Regime Agents</a>
-    <h3>🧬 Living system regimes</h3>
+   </details>
+   <details>
+     <summary><h3>🧬 Living system regimes</h3></summary>
       <a href="#BIOLOGY_README">🧬 Biology</a>
       <a href="#BIOLOGY_STRUCTURES">🏗️ Structures</a>
       <a href="#BIOLOGY_REGIMES">🧭 Regimes</a>
@@ -311,29 +383,39 @@ code {
       <a href="#BIOLOGY_EVOLUTIONARY_REGIMES">🧬 Evolutionary Regimes</a>
       <a href="#BIOLOGY_INTERFACES">🔗 Biological Interfaces</a>
       <a href="#BIOLOGY_TRANSITIONS">🚪 Biological Transitions</a>
-    <h3>💰 Resource and exchange regimes</h3>
+   </details>
+   <details>
+     <summary><h3>💰 Resource and exchange regimes</h3></summary>
       <a href="#ECONOMICS_README">💰 Economics</a>
       <a href="#ECONOMICS_MARKET_REGIMES">📊 Market Regimes</a>
       <a href="#ECONOMICS_RESOURCE_FLOWS">🔄 Resource Flows</a>
       <a href="#ECONOMICS_STABILITY_CYCLES">⚖️ Economic Stability</a>
-    <h3>🏛️ Collective decision regimes</h3>
+   </details>
+   <details>
+     <summary><h3>🏛️ Collective decision regimes</h3></summary>
       <a href="#GOVERNANCE_README">🏛️ Governance</a>
       <a href="#GOVERNANCE_COLLECTIVE_BEHAVIOR">👥 Collective Behavior</a>
       <a href="#GOVERNANCE_POLICY_REGIMES">📜 Policy Regimes</a>
       <a href="#GOVERNANCE_INSTITUTIONAL_TRANSITIONS">🏗️ Institutional Transitions</a>
-    <h3>⚛️ Fundamental constraints</h3>
+   </details>
+   <details>
+     <summary><h3>⚛️ Fundamental constraints</h3></summary>
       <a href="#PHYSICS_README">⚛️ Physics</a>
       <a href="#PHYSICS_CLASSICAL_REGIMES">📐 Classical Regimes</a>
       <a href="#PHYSICS_QUANTUM_REGIMES">🔬 Quantum Regimes</a>
       <a href="#PHYSICS_FIELD_INTERACTIONS">🌌 Field Interactions</a>
       <a href="#PHYSICS_VST_CONSTRAINTS">🧭 vST Constraints</a>
-    <h3>🧠 Cognitive and emotional regimes</h3>
+   </details>
+   <details>
+     <summary><h3>🧠 Cognitive and emotional regimes</h3></summary>
       <a href="#PSYCHOLOGY_README">🧠 Psychology</a>
       <a href="#PSYCHOLOGY_COGNITIVE_REGIMES">💭 Cognitive Regimes</a>
       <a href="#PSYCHOLOGY_EMOTIONAL_ACTIVATION">❤️ Emotional Activation</a>
       <a href="#PSYCHOLOGY_IDENTITY_TRANSITIONS">🔄 Identity Transitions</a>
       <a href="#PSYCHOLOGY_TRAUMA_REGIMES">🩹 Trauma Regimes</a>
-    <h3>⚙️ Execution backbone</h3>
+   </details>
+   <details>
+     <summary><h3>⚙️ Execution backbone</h3></summary>
       <a href="#SUBSTRATE_ENGINE_README">⚙️ Substrate Engine</a>
       <a href="#SUBSTRATE_TRIADIC_ENGINE">🔺 Triadic Substrate</a>
       <a href="#SUBSTRATE_EVENT_BUS">📡 Event Bus</a>
@@ -341,23 +423,31 @@ code {
       <a href="#SUBSTRATE_REGIME_AWARENESS">👁️ Regime Awareness</a>
       <a href="#SUBSTRATE_REGIME_TRANSITIONS">🚪 Regime Transitions</a>
       <a href="#SUBSTRATE_VST_ALIGNMENT">🧭 vST Alignment</a>
-    <h3>🌳 Capability progression</h3>
+   </details>
+   <details>
+     <summary><h3>🌳 Capability progression</h3></summary>
       <a href="#TECH_TREE_README">🌳 Tech Tree</a>
       <a href="#TECH_TIER_0">🪨 Tier 0 — Pre‑existing tools.</a>
       <a href="#TECH_TIER_1">🧬 Tier 1 — Substrate unlocks.</a>
       <a href="#TECH_TIER_2">📦 Tier 2 — Domain unlocks.</a>
       <a href="#TECH_TIER_3">🌐 Tier 3 — Cross‑domain unlocks.</a>
       <a href="#TECH_TIER_4">🏙️ Tier 4 — Civilization unlocks.</a>
-    <h3>📐 Reusable scaffolds</h3>
+   </details>
+   <details>
+     <summary><h3>📐 Reusable scaffolds</h3></summary>
       <a href="#TEMPLATES_README">📐 Templates</a>
       <a href="#DOMAIN_MODULE_TEMPLATE">📄 Domain Module Template</a>
-    <h3>🖥️ Human‑system interaction</h3>
+   </details>
+   <details>
+     <summary><h3>🖥️ Human‑system interaction</h3></summary>
       <a href="#UI_LAYER_README">🖥️ UI Layer</a>
       <a href="#UI_ACTIVATION_HEATMAPS">🔥 Activation Heatmaps</a>
       <a href="#UI_REGIME_OVERLAYS">🧭 Regime Overlays</a>
       <a href="#UI_SCENARIO_BUILDER">🧩 Scenario Builder</a>
       <a href="#UI_TIME_REGIME_CONTROLS">⏱️ Time & Regime Controls</a>
-    <h3>🏗️ Triadic Tools</h3> 
+   </details>
+   <details>
+     <summary><h2>🏗️ Triadic Tools</h2></summary> 
       <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
       <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
       <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
@@ -373,6 +463,7 @@ code {
       <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
       <a href="../">🔙TFT</a>
+   </details>
    <!-- RTT Canonical Signature -->
 <!-- ═══════════════════════════════════════════════════════════ -->
 <!-- /docs/ecoechosystem — Session Context block                -->
@@ -385,7 +476,9 @@ code {
          data-drift="bounded"
          data-regime="structural">
 
-  <h2>Session Context</h2>
+   </details>
+   <details>
+     <summary><h2>Session Context</h2></summary>
 
   <div class="context-block">
 
@@ -419,7 +512,7 @@ code {
     <span class="context-value">researchers + developers + educators + AIs</span>
 
   </div>
-
+   </details>
 </section>
 
 <div style="display:inline-block;padding:6px 12px;background:#000;color:#fff;
