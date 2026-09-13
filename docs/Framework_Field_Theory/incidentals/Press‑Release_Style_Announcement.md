@@ -16,3 +16,6 @@ FFT is released openly with:
 - a comprehensive documentation set
 
 More information is available at TriadicFrameworks.org.
+
+The book (FFT) is also on-sale at Amazon as of 09/10/2026
+https://amazn.so/lvyKG7g
