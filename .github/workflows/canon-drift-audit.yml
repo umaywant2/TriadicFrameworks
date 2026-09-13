@@ -1,3 +1,40 @@
+# ------------------------------------------------------------
+# TriadicFrameworks — Canon Drift Audit Workflow
+#
+# Purpose:
+#   Performs automated scanning of the repository to detect
+#   drift, misalignment, or structural inconsistencies across:
+#     • module.json files
+#     • domain/module directories
+#     • RTT/TFT metadata fields
+#     • canon inheritance patterns
+#
+# What this workflow does:
+#   - Runs on a scheduled basis (or manual dispatch)
+#   - Executes drift-audit scripts in /docs/tools/
+#   - Produces console-level drift reports in GitHub Actions
+#   - Helps maintain canon integrity and structural coherence
+#
+# Who uses this:
+#   - Canon maintainers
+#   - Contributors validating module updates
+#   - Automated lineage and drift systems
+#
+# When to run manually:
+#   - After large refactors
+#   - After adding or reorganizing modules/domains
+#   - Before major releases or canon freezes
+#
+# What does NOT use this file:
+#   - Weekly check-in workflow
+#   - Domain/module bundle generators
+#   - Navigation or Jekyll site builders
+#   - Any Python scripts outside drift auditing
+#
+# Notes:
+#   This workflow is NOT auto-generated. It is maintained manually.
+# ------------------------------------------------------------
+
 name: Canon Drift Audit
 
 on:
