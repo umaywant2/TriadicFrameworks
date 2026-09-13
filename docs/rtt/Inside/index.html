@@ -105,141 +105,157 @@
       
 <style>
 /* ============================================================
-   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   NAWDERIAN NEON ARCADE THEME — RTT/1 SYNTHWAVE EDITION
    ============================================================ */
 
-  :root {
-  --bg-main: #0d0f12;
-  --bg-nav: #15181d;
-  --border-subtle: #2a2f38;
-  --text-main: #dfe7f3;
-  --text-muted: #9aa4b2;
-  --accent-rtt: #8ab4ff;
+:root {
+  --bg-main: #05060a;                 /* deep CRT black */
+  --bg-nav: #0a0c12;                  /* darker sidebar */
+  --bg-panel: #0f1118;
+
+  --text-main: #e8f7ff;               /* neon ice */
+  --text-muted: #7a8ca0;              /* CRT fade */
+
+  --neon-cyan: #3df5ff;
+  --neon-magenta: #ff3dfc;
+  --neon-yellow: #ffe66d;
+
+  --triadic-neon: linear-gradient(135deg,
+                      #3df5ff,
+                      #ff3dfc,
+                      #ffe66d);
+
+  --scanline: repeating-linear-gradient(
+                to bottom,
+                rgba(255,255,255,0.03) 0px,
+                rgba(255,255,255,0.03) 1px,
+                rgba(0,0,0,0.05) 2px
+              );
+
   --radius: 10px;
-  --shadow: 0 0 20px rgba(0,0,0,0.4);
-  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
-  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
-  --rtt-accent-mid:  #9ece6a;   /* balance */
-  --rtt-accent-high: #f7768e;   /* emphasis */
+  --glow: 0 0 12px rgba(255, 0, 180, 0.45),
+          0 0 24px rgba(0, 255, 255, 0.25);
 }
 
-.protocol a,
-.equation a {
-  border-bottom-style: dotted;
-}
-
-/* Base link style */
-a {
-  color: var(--rtt-accent-mid);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-  transition: color 0.2s ease, border-color 0.2s ease;
-}
-
-/* Hover / focus */
-a:hover,
-a:focus {
-  color: var(--rtt-accent-high);
-  border-bottom-color: var(--rtt-accent-high);
-}
-
-/* Visited links */
-a:visited {
-  color: var(--rtt-accent-low);
-}
-
-  /* Base layout */
-  html { scroll-behavior: smooth; }
-  body {
+/* Base layout */
+html { scroll-behavior: smooth; }
+body {
   margin: 0;
   padding: 0;
   background: var(--bg-main);
+  background-image: var(--scanline);
   color: var(--text-main);
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto;
   line-height: 1.65;
   font-size: 17px;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  }
+}
 
-  /* Headings */
-  h1, h2, h3, h4 {
+/* Neon headings */
+h1, h2, h3, h4 {
   font-weight: 700;
   margin-top: 1.8em;
   margin-bottom: 0.5em;
   line-height: 1.2;
-  background: var(--triadic);
+  background: var(--triadic-neon);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  }
+  text-shadow: var(--glow);
+}
 
-  /* Paragraphs and lists */
-  p, ul, ol {
+/* Paragraphs and lists */
+p, ul, ol {
   padding: 0 1em;
   margin: 0 0 1.1em 0;
-  color: #dfe7f3;
-  }
+  color: var(--text-main);
+}
 
-  /* Code/pre */
-  pre, code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
-  background: rgba(255,255,255,0.02);
+/* Neon links */
+a {
+  color: var(--neon-cyan);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255,255,255,0.25);
+  transition: color 0.2s ease, border-color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--neon-magenta);
+  border-bottom-color: var(--neon-magenta);
+  text-shadow: 0 0 8px var(--neon-magenta);
+}
+
+a:visited {
+  color: var(--neon-yellow);
+}
+
+/* Code blocks */
+pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono";
+  background: rgba(255,255,255,0.04);
   padding: 0.4em 0.6em;
   border-radius: 6px;
-  color: #cfe8ff;
-  }
+  color: #dffaff;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: inset 0 0 12px rgba(0,255,255,0.15);
+}
 
-  /* Context Block */
-  .context-block {
-    font-family: monospace;
-    font-size: 0.95rem;
-    line-height: 1.4;
-    margin: 0.5rem 0 1rem 0;
-  }
-       
-  /* Context Label */
-  .context-label {
-    color: #ff9800; /* orange */
-    font-weight: bold;
-    margin-right: 0.25rem;
-  }
-       
-  /* Context Value */
-  .context-value {
-    color: #ffffff; /* white */
-  }
-   
+/* Context block */
+.context-block {
+  font-family: monospace;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0.5rem 0 1rem 0;
+  padding: 1rem;
+  background: var(--bg-panel);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--glow);
+}
+
+.context-label {
+  color: var(--neon-yellow);
+  font-weight: bold;
+  margin-right: 0.25rem;
+}
+
+.context-value {
+  color: var(--text-main);
+}
+
+/* Navigation panel */
 nav {
   width: 260px;
   float: left;
   background: var(--bg-nav);
-  margin-left: 0;
   padding: 1.2rem;
   overflow-y: auto;
-  border-right: 1px solid var(--border-subtle);
+  border-right: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 4px 0 12px rgba(0,0,0,0.4);
 }
 
 nav h2 {
   font-size: 0.9rem;
-  color: var(--accent-rtt);
+  color: var(--neon-cyan);
   margin-top: 1.2rem;
   margin-bottom: 0.4rem;
   letter-spacing: 0.04em;
+  text-shadow: var(--glow);
 }
 
 nav a {
   display: block;
   color: var(--text-muted);
-  text-decoration: none;
   padding: 0.35rem 0;
   font-size: 0.9rem;
 }
 
 nav a:hover {
-  color: var(--text-main);
+  color: var(--neon-magenta);
+  text-shadow: 0 0 6px var(--neon-magenta);
 }
 
+/* Main content */
 main {
   flex: 1;
   padding: 2.5rem;
@@ -247,20 +263,65 @@ main {
 }
 
 main h1, main h2, main h3 {
-  color: var(--accent-rtt);
+  color: var(--neon-cyan);
   font-weight: 500;
+  text-shadow: var(--glow);
 }
 
 pre {
   background: #0b0d12;
   padding: 1rem;
   overflow-x: auto;
-  border-left: 2px solid var(--accent-rtt);
+  border-left: 2px solid var(--neon-magenta);
 }
 
 code {
-  color: var(--text-main);
+  color: var(--neon-cyan);
 }
+
+/* Hide the default arrow */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+/* Custom arrow icons */
+details > summary::before {
+  content: "⏵"; /* collapsed */
+  padding-right: 6px;
+  font-size: 0.9em;
+}
+details[open] > summary::before {
+  content: "⏷"; /* expanded */
+}
+
+/* Make the h2/h3 feel like the toggle */
+details > summary h2,
+details > summary h3 {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hover effect */
+details > summary:hover h2,
+details > summary:hover h3 {
+  text-decoration: underline;
+}
+
+/* Optional: fade-in animation for opened blocks */
+details[open] {
+  animation: fadeIn 0.15s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+      
 </style>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -279,7 +340,8 @@ code {
   </svg>
  </p> 
   
-  <h2>🧭 RTT/Inside | RTT/1</h2>
+   <details>
+     <summary><h2>🧭 RTT/Inside | RTT/1</h2></summary>
       <a href="#README">🔰 README</a>
       <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
       <a href="#CONTRIBUTING">🤝 Contributing</a>
@@ -292,7 +354,9 @@ code {
       <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
       <a href="#SECURITY">🔐 Security</a>
       <a href="#PRINCIPLES">🧘 Principles</a>
-    <h3>📥 Capture Templates</h3>
+   </details>
+   <details>
+     <summary><h3>📥 Capture Templates</h3></summary>
       <a href="#CAPTURE_TEMPLATE_ECONOMY_DOMAIN">💹 Economy</a>
       <a href="#CAPTURE_TEMPLATE_EDUCATION_DOMAIN">🎓 Education</a>
       <a href="#CAPTURE_TEMPLATE_ENVIRONMENT_DOMAIN">🌿 Environment</a>
@@ -300,18 +364,24 @@ code {
       <a href="#CAPTURE_TEMPLATE_HEALTH_DOMAIN">🩺 Health</a>
       <a href="#CAPTURE_TEMPLATE_INFRASTRUCTURE_DOMAIN">🏗️ Infrastructure</a>
       <a href="#CAPTURE_TEMPLATE_TECHNOLOGY_DOMAIN">🧪 Technology</a>
-    <h3>🧠 Domain Takeaways</h3>
+   </details>
+   <details>
+     <summary><h3>🧠 Domain Takeaways</h3></summary>
       <a href="#CULTURE_TAKEAWAY">🎭 Culture</a>
       <a href="#JUSTICE_TAKEAWAY">⚖️ Justice</a>
       <a href="#MEDIA_AND_COMMUNICATION_TAKEAWAY">📡 Media & Communication</a>
       <a href="#META_LAYER_TAKEAWAY">🌀 Meta‑Layer</a>
       <a href="#ANTITIME_REGIME">💎 Anti-Time Regime</a> 
       <a href="#SCIENCE_AND_RESEARCH_TAKEAWAY">🔬 Science & Research</a>
-    <h3>🧩 Universal Alignment Layer</h3>
+   </details>
+   <details>
+     <summary><h3>🧩 Universal Alignment Layer</h3></summary>
       <a href="#SHARED_MISALIGNMENTS_ACROSS_ALL_DOMAINS">🧷 Shared Misalignments Across Domains</a>
       <a href="#SINGLE_PAGE_JSON_SCHEMA">📄 Single‑Page JSON Schema</a>
       <a href="#UNIVERSAL_ALIGNMENT_PATTERN">🌐 Universal Alignment Pattern</a>
-    <h3>🧩 Core Concepts</h3>       
+   </details>
+   <details>
+     <summary><h3>🧩 Core Concepts</h3></summary>       
       <a href="#ENTFT_COMMAND_GRAMMAR">🧮 ENTFT Command Grammar</a>
       <a href="#ENTFT_ENCRYPTION">🔐 ENTFT Encryption</a>
       <a href="#ENTFT_HANDSHAKE_SEQUENCE">🤝 ENTFT Handshake Sequence</a>
@@ -319,13 +389,17 @@ code {
       <a href="#UNIVERSE_CLASS_EXAMPLE">🌌 Universe‑Class Example</a>
       <a href="#UNIVERSE_CLASS_RESONANCE_SYSTEM_CONCEPT">🪐 Universe‑Class Resonance System Concept</a> 
       <a href="#CHANGELOG">🧾 Changelog</a>
-    <h3>🛫 ATC Scenario</h3>
+   </details>
+   <details>
+     <summary><h3>🛫 ATC Scenario</h3></summary>
       <a href="#ATC_README">📘 ATC Overview</a>
       <a href="#ATC_PHASE_1_INTEGRATION_GUIDE">🛠️ Phase 1 Integration Guide</a>
       <a href="#ATC_PHASE_1_VARIANT">🔧 Phase 1 Variant</a>
       <a href="#ATC_PHASE_2_AUTOMATION_INTEGRATION_GUIDE">🤖 Phase 2 Automation Integration</a>
       <a href="#ATC_PHASE_3_RESONANCE_NATIVE_ARCHITECTURE_GUIDE">🛰️ Phase 3 Resonance‑Native Architecture</a>
-    <h3>📡 HAM Scenario</h3>
+   </details>
+   <details>
+     <summary><h3>📡 HAM Scenario</h3></summary>
       <a href="#HAM_README">📘 HAM Overview</a>
       <a href="#HAM_3D_OPERATOR_INTERACTION_MODEL">🧭 3D Operator Interaction Model</a>
       <a href="#HAM_3D_PLANETARY_COHERENCE_VIEW">🌐 3D Planetary Coherence View</a>
@@ -335,20 +409,28 @@ code {
       <a href="#HAM_OPERATORS">👥 Operators</a>
       <a href="#HAM_PROPAGATION_MAP">📡 Propagation Map</a>
       <a href="#HAM_TRAINING_MODULE">🎓 Training Module</a>
-    <h3>🚀 Space Force Scenario</h3>
+   </details>
+   <details>
+     <summary><h3>🚀 Space Force Scenario</h3></summary>
       <a href="#SPACE_FORCE_README">📘 Space Force Overview</a>
       <a href="#SPACE_FORCE_PHASE_1">🛠️ Phase 1</a>
       <a href="#SPACE_FORCE_PHASE_2_AUTOMATION">🤖 Phase 2 Automation</a>
       <a href="#SPACE_FORCE_PHASE_3_RESONANCE_NATIVE_CORE">🌌 Phase 3 Resonance‑Native Core</a>
-    <h3>🗃️ Portfolios</h3>
+   </details>
+   <details>
+     <summary><h3>🗃️ Portfolios</h3></summary>
       <a href="#EARTH">🌏 Earth</a>
-    <h3>🧩 API</h3>
+   </details>
+   <details>
+     <summary><h3>🧩 API</h3></summary>
       <a href="#API_README">📘 API Overview</a>
       <a href="#API_CORE_API_FORMAL_JSON_SCHEMAS">🧬 Core API Formal JSON Schemas</a>
       <a href="#API_CORE_API_SURFACE">🌐 Core API Surface</a>
       <a href="#API_NAMESPACE_VERSIONING_IDENTIFIERS">🏷️ Namespace Versioning Identifiers</a>
       <a href="API_RTT_VARIANTS">🤠 API for Variants of RTT</a>
-    <h3>🤖 Autonomous Forms</h3>
+   </details>
+   <details>
+     <summary><h3>🤖 Autonomous Forms</h3></summary>
       <a href="#AUTONOMOUS_FORMS_README">📘 Autonomous Forms Overview</a>
       <a href="#AUTONOMOUS_FORMS_CONCRETE_SCAFFOLDS">🧱 Concrete Scaffolds</a>
       <a href="#AUTONOMOUS_FORMS_CORRIDOR_TRACE_TYPES">🛰️ Corridor Trace Types</a>
@@ -360,7 +442,9 @@ code {
       <a href="#AUTONOMOUS_FORMS_REWIND_MECHANICS">🔄 Rewind Mechanics</a>
       <a href="#AUTONOMOUS_FORMS_STREAM_JSON_TRACES_LIVE">📶 Stream JSON Traces Live</a>
       <a href="#AUTONOMOUS_FORMS_WEB_BASED_CORRIDOR_VIEWER">🖥️ Web‑Based Corridor Viewer</a>
-    <h3>⛏️ Coal Industry Scenario</h3>
+   </details>
+   <details>
+     <summary><h3>⛏️ Coal Industry Scenario</h3></summary>
       <a href="#COAL_README">📘 Coal Overview</a>
       <a href="#COAL_ADVANTAGES">💡 Advantages</a>
       <a href="#COAL_COAL_INDUSTRY_VARIANT">⚙️ Industry Variant</a>
@@ -370,12 +454,16 @@ code {
       <a href="#COAL_RESONANCE_AWARE_UNDERGROUND_MAP">🗺️ Underground Map</a>
       <a href="#COAL_VIRTUAL_MINE_TEST_HARNESS">🧪 Virtual Mine Test Harness</a>
       <a href="#COAL_WRITE_UP_ALIGNMENT">📝 Write‑Up Alignment</a>
-    <h3>🎛️ Corridor Studio</h3>
+   </details>
+   <details>
+     <summary><h3>🎛️ Corridor Studio</h3></summary>
       <a href="#CORRIDOR_STUDIO_README">📘 Corridor Studio Overview</a>
       <a href="#CORRIDOR_STUDIO_DARK_MODE_OSCILLOSCOPE">🌑 Dark‑Mode Oscilloscope</a>
       <a href="#CORRIDOR_STUDIO_DARK_MODE_OSCILLOSCOPE_THEME">🎨 Oscilloscope Theme</a>
       <a href="#CORRIDOR_STUDIO_STUDIO_TOOLBAR">🧰 Studio Toolbar</a>
-    <h3>🌪️ Drift Analysis</h3>
+   </details>
+   <details>
+     <summary><h3>🌪️ Drift Analysis</h3></summary>
       <a href="#DRIFT_README">📘 Drift Overview</a>
       <a href="#DRIFT_CONCLUSION">🔚 Conclusion</a>
       <a href="#DRIFT_GLOBAL_EFFORTS">🌍 Global Efforts</a>
@@ -383,7 +471,9 @@ code {
       <a href="#DRIFT_QUANTIFYING_DRIFT">📏 Quantifying Drift</a>
       <a href="#DRIFT_STRUCTURAL_CORRECTION">🛠️ Structural Correction</a>
       <a href="#DRIFT_WHY_DRIFT_PERSISTS">❓ Why Drift Persists</a>
-    <h3>🌎 Earth Sims</h3>
+   </details>
+   <details>
+     <summary><h3>🌎 Earth Sims</h3></summary>
       <a href="#EARTH_SIMS_README">📘 Earth Sims Overview</a>
       <a href="#EARTH_SIMS_ABM_WITH_OVERLAY">🧩 ABM with Overlay</a>
       <a href="#EARTH_SIMS_AGENT_BASED_MODELING">👥 Agent‑Based Modeling</a>
@@ -391,10 +481,14 @@ code {
       <a href="#EARTH_SIMS_INSIDE_VS_AGENT">⚖️ Inside vs Agent</a>
       <a href="#EARTH_SIMS_MIN_INTERFACE_SPEC">📐 Min Interface Spec</a>
       <a href="#EARTH_SIMS_SIMULATION_BUILDERS">🏗️ Simulation Builders</a>
-    <h3>🔬 Electron Microscopes</h3>
+   </details>
+   <details>
+     <summary><h3>🔬 Electron Microscopes</h3></summary>
       <a href="#ELECTRON_MICROSCOPES_README">📘 Electron Microscopes Overview</a>
       <a href="#ELECTRON_MICROSCOPES_MRI_MACHINES">🧲 MRI Machines</a>
-    <h3>📚 Examples</h3>
+   </details>
+   <details>
+     <summary><h3>📚 Examples</h3></summary>
       <a href="#EXAMPLES_ADVANCED_NODE_SCALING_LIMITS">📏 Advanced Node Scaling Limits</a>
       <a href="#EXAMPLES_BLOOD_TEST_PREVIEW">🩸 Blood Test Preview</a>
       <a href="#EXAMPLES_CHEMISTRY_PROFESSIONALS_USING_RTT_INSIDE">⚗️ Chemistry Professionals</a>
@@ -407,7 +501,9 @@ code {
       <a href="#EXAMPLES_MAPPING_SEMICONDUCTOR_FAB_PIPELINE">🛠️ Semiconductor Fab Pipeline</a>
       <a href="#EXAMPLES_SUPERCONDUCTOR_FABRICATION_PIPELINE">❄️ Superconductor Fabrication Pipeline</a>
       <a href="#EXAMPLES_SUPERCONDUCTOR_SPECIFIC">🔬 Superconductor Specific</a>
-    <h3>💼 Finance</h3>
+   </details>
+   <details>
+     <summary><h3>💼 Finance</h3></summary>
       <a href="#FINANCE_README">📘 Finance Overview</a>
       <a href="#FINANCE_CIO_READY_SLIDE_DECK_OUTLINE">🧾 CIO‑Ready Slide Deck Outline</a>
       <a href="#FINANCE_DESIGN_SYSTEM_QUICK_REFERENCE">📐 Design System Quick Reference</a>
@@ -419,65 +515,97 @@ code {
       <a href="#FINANCE_POSTER_SET_DESIGN_SPECS">📏 Poster Set Design Specs</a>
       <a href="#FINANCE_STRUCTURAL_DIAGRAMS">🧩 Structural Diagrams</a>
       <a href="#FINANCE_SYSTEM_SPECIFICATION">⚙️ System Specification</a>
-    <h3>📡 Mesh Node</h3>
+   </details>
+   <details>
+     <summary><h3>📡 Mesh Node</h3></summary>
       <a href="#MESH_NODE_README">📘 Mesh Node Overview</a>
       <a href="#MESH_NODE_HARDWARE_BLOCK_DIAGRAM">🔌 Hardware Block Diagram</a>
       <a href="#MESH_NODE_MINE_WIDE_DEPLOYMENT_PLAN">🏭 Mine‑Wide Deployment Plan</a>
       <a href="#MESH_NODE_TWO_SKUS">📦 Two SKUs</a>
-    <h3>🐟 Robofish</h3>
+   </details>
+   <details>
+     <summary><h3>🐟 Robofish</h3></summary>
       <a href="#ROBOFISH_README">📘 Robofish Overview</a>
       <a href="#ROBOFISH_ARCHITECTURE">🏗️ Architecture</a>
       <a href="#ROBOFISH_ECOLOGICAL_ROBOS">🌊 Ecological Robos</a>
-    <h3>🛰️ Cisco Sub‑Module</h3>
+   </details>
+   <details>
+     <summary><h3>🛰️ Cisco Sub‑Module</h3></summary>
       <a href="#CISCO_README">📘 Cisco README</a>
       <a href="#CISCO_OPERATOR_HOOKS">🪝 Operator Hooks</a>
       <a href="#CISCO_OPERATOR_HOOKS_GRID">🧩 Operator Hooks Grid</a>
       <a href="#CISCO_EXAMPLE_FLOW_LINEAGE">🔀 Flow Lineage Example</a>
-    <h3>🌐 Internet2 Sub‑Module</h3>
+   </details>
+   <details>
+     <summary><h3>🌐 Internet2 Sub‑Module</h3></summary>
       <a href="#INTERNET2_README">📘 Internet2 README</a>
       <a href="#INTERNET2_OPERATOR_HOOKS">🪝 Operator Hooks</a>
       <a href="#INTERNET2_OPERATOR_HOOKS_DSRS_AWARENESS">🛰️ DSRS Awareness Hooks</a>
       <a href="#INTERNET2_OPERATOR_HOOKS_GRID">🧩 Operator Hooks Grid</a>
       <a href="#INTERNET2_EXAMPLE_INVARIANT_ARC">🌀 Invariant Arc Example</a>
-    <h3>🐍 Python Sub‑Module</h3>
+   </details>
+   <details>
+     <summary><h3>🐍 Python Sub‑Module</h3></summary>
       <a href="#PYTHON_README">📘 Python README</a>
       <a href="#PYTHON_OPERATOR_HOOKS">🪝 Operator Hooks</a>
       <a href="#PYTHON_OPERATOR_HOOKS_SEMANTIC">🧠 Semantic Hooks</a>
       <a href="#PYTHON_CAUSAL_TRACE_EXAMPLE">🧵 Causal Trace Example</a>
       <a href="#PYTHON_CROSS_MODULE_EXAMPLES">🔗 Cross‑Module Examples</a>
       <a href="#PYTHON_TRIADIC_FULL_STACK_EXAMPLE">🛠️ Triadic Full‑Stack Example</a>
-  <h2>🧭 qCompute | RTT/Inside</h2>
+   </details>
+   <details>
+     <summary><h2>🧭 qCompute | RTT/Inside</h2></summary>
       <a href="#README">🔰 README</a>
-    <h3>⚙️ Core Identity</h3>
+   </details>
+   <details>
+     <summary><h3>⚙️ Core Identity</h3></summary>
       <a href="#INDEX">📘 Index</a>
       <a href="#IDENTITY">🧩 Identity</a>
       <a href="#SESSION">🗂️ Session</a>
       <a href="#VALIDATOR">🔒 Validator</a>
-    <h3>🧮 Operators & Grammar</h3>
+   </details>
+   <details>
+     <summary><h3>🧮 Operators & Grammar</h3></summary>
       <a href="#OPERATORS">🎛️ Operators</a>
       <a href="#OPERATOR_GRAMMAR">📐 Operator Grammar</a>
-    <h3>🖧 Backends & Routing</h3>
+   </details>
+   <details>
+     <summary><h3>🖧 Backends & Routing</h3></summary>
       <a href="#BACKENDS">🖥️ Backends</a>
       <a href="#BACKEND_PROFILES">📊 Backend Profiles</a>
       <a href="#ROUTER">🛰️ Router</a>
       <a href="#RESONANCE_FRAME">🌀 Resonance Frame</a>
-    <h3>🌌 Drift & Transitions</h3>
+   </details>
+   <details>
+     <summary><h3>🌌 Drift & Transitions</h3></summary>
       <a href="#DRIFT">🌫️ Drift</a>
       <a href="#TRANSITIONS">🔀 Transitions</a>
-    <h3>📥 Capture & Replay</h3>
+   </details>
+   <details>
+     <summary><h3>📥 Capture & Replay</h3></summary>
       <a href="#CAPTURE">📥 Capture</a>
       <a href="#REPLAY">📤 Replay</a>
-    <h3>🔧 API & Flow</h3>
+   </details>
+   <details>
+     <summary><h3>🔧 API & Flow</h3></summary>
       <a href="#API">🔌 API</a>
       <a href="#FLOW">🔁 Flow</a>
-    <h3>📚 Examples</h3>
+   </details>
+   <details>
+     <summary><h3>📚 Examples</h3></summary>
       <a href="#EXAMPLES_MINIMAL">📄 Minimal Examples</a>
       <a href="#EXAMPLES_ADVANCED">📘 Advanced Examples</a>
-    <h3>🚪 Front Door</h3>
+   </details>
+   <details>
+     <summary><h3>🚪 Front Door</h3></summary>
       <a href="#FRONTDOOR">🚪 FrontDoor.html</a>
-    <h3>🧬 Module Identity</h3>
+   </details>
+   <details>
+     <summary><h3>🧬 Module Identity</h3></summary>
       <a href="#MODULE">🧬 qc_Module.json</a>
-    <h3>🏗️ Triadic Tools</h3> 
+   </details>
+   <details>
+     <summary><h3>🏗️ Triadic Tools</h3></summary> 
       <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
       <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
       <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
@@ -493,6 +621,7 @@ code {
       <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
       <a href="../../">🔙TFT</a>
+   </details>
    <!-- RTT Session Header (canonical stub) -->
 <section id="rtt-inside-session-header"
          data-rtt="inside"
@@ -500,7 +629,8 @@ code {
          data-drift="minimal"
          data-regime="structural">
 
-  <h2>Session Context</h2>
+   <details>
+     <summary><h2>Session Context</h2></summary>
 
   <div class="context-block">
 
