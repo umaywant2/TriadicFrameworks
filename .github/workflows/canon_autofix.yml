@@ -1,3 +1,40 @@
+# ------------------------------------------------------------
+# TriadicFrameworks — Canon Auto-Fix Workflow
+#
+# Purpose:
+#   Automatically detects and corrects drift inside pull requests.
+#   This workflow runs the Canon Auto-Fix Bot, which:
+#     • Scans changed module.json files in PRs
+#     • Applies canon inheritance rules
+#     • Repairs RTT/TFT metadata
+#     • Fixes missing or incorrect fields
+#     • Commits corrections directly to the PR branch
+#
+# What triggers this workflow:
+#   - Pull request events (opened, synchronized, reopened)
+#   - Manual dispatch if needed
+#
+# Who uses this:
+#   - Contributors submitting PRs
+#   - Canon maintainers reviewing changes
+#   - Automated drift-prevention systems
+#
+# When to run manually:
+#   - If a PR shows drift but the auto-fix did not trigger
+#   - After major canon refactors
+#   - When validating external contributions
+#
+# What does NOT use this workflow:
+#   - Weekly check-in system
+#   - Domain/module bundle generators
+#   - Diagram or SVG generators
+#   - Navigation/Jekyll site builders
+#
+# Notes:
+#   This workflow is NOT auto-generated. It is maintained manually.
+#   It is part of the TriadicFrameworks canon integrity suite.
+# ------------------------------------------------------------
+
 name: TriadicFrameworks Canon Auto-Fix
 
 on:
