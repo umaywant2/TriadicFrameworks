@@ -1,26 +1,22 @@
 <img width="1194" height="672" alt="starter_" src="https://github.com/user-attachments/assets/280f61bf-0c68-4f6c-8fa8-6b86443615b9" />
 
-# **RTT Starter Kit — How to Create Your First Agentic Module**  
+<img width="902" height="253" alt="starter-hero" src="https://github.com/user-attachments/assets/4186f0e5-8eb6-4483-9831-43322bd2b14b" />
 
 - [`starter_module.json`](starter_module.json) — Agentic module schema role assignments
 
-<img width="902" height="253" alt="starter-hero" src="https://github.com/user-attachments/assets/4186f0e5-8eb6-4483-9831-43322bd2b14b" />
-
+# **RTT Starter Kit — How to Create Your First Agentic Module**  
 **Time:** 1–3 hours  
 **Audience:** Students, beginners, first‑time module authors  
 **Goal:** Go from zero → a working RTT module with agentic grammar, published on GitHub.
 
 ---
 
-## 🛑 Important! 
-Drift is On-by-Default long sessions lose anchors, turn off drift.
+### ✋ Important! 
+AI drift is On-by-Default long sessions lose anchors, turn off drift.
 
-## ✋ You *must copy and paste* this string *every time you start an AI session*:
 ```text
 rtt=1 | coherence=declared | drift=bounded | paradox=structural
 ```
-
-## ❇️ Now you are ready.
 
 ---
 
