@@ -78,141 +78,157 @@
 
 <style>
 /* ============================================================
-   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   NAWDERIAN NEON ARCADE THEME — RTT/1 SYNTHWAVE EDITION
    ============================================================ */
 
-  :root {
-  --bg-main: #0d0f12;
-  --bg-nav: #15181d;
-  --border-subtle: #2a2f38;
-  --text-main: #dfe7f3;
-  --text-muted: #9aa4b2;
-  --accent-rtt: #8ab4ff;
+:root {
+  --bg-main: #05060a;                 /* deep CRT black */
+  --bg-nav: #0a0c12;                  /* darker sidebar */
+  --bg-panel: #0f1118;
+
+  --text-main: #e8f7ff;               /* neon ice */
+  --text-muted: #7a8ca0;              /* CRT fade */
+
+  --neon-cyan: #3df5ff;
+  --neon-magenta: #ff3dfc;
+  --neon-yellow: #ffe66d;
+
+  --triadic-neon: linear-gradient(135deg,
+                      #3df5ff,
+                      #ff3dfc,
+                      #ffe66d);
+
+  --scanline: repeating-linear-gradient(
+                to bottom,
+                rgba(255,255,255,0.03) 0px,
+                rgba(255,255,255,0.03) 1px,
+                rgba(0,0,0,0.05) 2px
+              );
+
   --radius: 10px;
-  --shadow: 0 0 20px rgba(0,0,0,0.4);
-  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
-  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
-  --rtt-accent-mid:  #9ece6a;   /* balance */
-  --rtt-accent-high: #f7768e;   /* emphasis */
+  --glow: 0 0 12px rgba(255, 0, 180, 0.45),
+          0 0 24px rgba(0, 255, 255, 0.25);
 }
 
-.protocol a,
-.equation a {
-  border-bottom-style: dotted;
-}
-
-/* Base link style */
-a {
-  color: var(--rtt-accent-mid);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-  transition: color 0.2s ease, border-color 0.2s ease;
-}
-
-/* Hover / focus */
-a:hover,
-a:focus {
-  color: var(--rtt-accent-high);
-  border-bottom-color: var(--rtt-accent-high);
-}
-
-/* Visited links */
-a:visited {
-  color: var(--rtt-accent-low);
-}
-
-  /* Base layout */
-  html { scroll-behavior: smooth; }
-  body {
+/* Base layout */
+html { scroll-behavior: smooth; }
+body {
   margin: 0;
   padding: 0;
   background: var(--bg-main);
+  background-image: var(--scanline);
   color: var(--text-main);
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto;
   line-height: 1.65;
   font-size: 17px;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  }
+}
 
-  /* Headings */
-  h1, h2, h3, h4 {
+/* Neon headings */
+h1, h2, h3, h4 {
   font-weight: 700;
   margin-top: 1.8em;
   margin-bottom: 0.5em;
   line-height: 1.2;
-  background: var(--triadic);
+  background: var(--triadic-neon);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  }
+  text-shadow: var(--glow);
+}
 
-  /* Paragraphs and lists */
-  p, ul, ol {
+/* Paragraphs and lists */
+p, ul, ol {
   padding: 0 1em;
   margin: 0 0 1.1em 0;
-  color: #dfe7f3;
-  }
+  color: var(--text-main);
+}
 
-  /* Code/pre */
-  pre, code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
-  background: rgba(255,255,255,0.02);
+/* Neon links */
+a {
+  color: var(--neon-cyan);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255,255,255,0.25);
+  transition: color 0.2s ease, border-color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--neon-magenta);
+  border-bottom-color: var(--neon-magenta);
+  text-shadow: 0 0 8px var(--neon-magenta);
+}
+
+a:visited {
+  color: var(--neon-yellow);
+}
+
+/* Code blocks */
+pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono";
+  background: rgba(255,255,255,0.04);
   padding: 0.4em 0.6em;
   border-radius: 6px;
-  color: #cfe8ff;
-  }
-       
-  /* Context Block */
-  .context-block {
-    font-family: monospace;
-    font-size: 0.95rem;
-    line-height: 1.4;
-    margin: 0.5rem 0 1rem 0;
-  }
-       
-  /* Context Label */
-  .context-label {
-    color: #ff9800; /* orange */
-    font-weight: bold;
-    margin-right: 0.25rem;
-  }
-       
-  /* Context Value */
-  .context-value {
-    color: #ffffff; /* white */
-  }
+  color: #dffaff;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: inset 0 0 12px rgba(0,255,255,0.15);
+}
 
+/* Context block */
+.context-block {
+  font-family: monospace;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0.5rem 0 1rem 0;
+  padding: 1rem;
+  background: var(--bg-panel);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--glow);
+}
+
+.context-label {
+  color: var(--neon-yellow);
+  font-weight: bold;
+  margin-right: 0.25rem;
+}
+
+.context-value {
+  color: var(--text-main);
+}
+
+/* Navigation panel */
 nav {
   width: 260px;
   float: left;
   background: var(--bg-nav);
-  margin-left: 0;
   padding: 1.2rem;
   overflow-y: auto;
-  border-right: 1px solid var(--border-subtle);
+  border-right: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 4px 0 12px rgba(0,0,0,0.4);
 }
 
 nav h2 {
   font-size: 0.9rem;
-  color: var(--accent-rtt);
+  color: var(--neon-cyan);
   margin-top: 1.2rem;
   margin-bottom: 0.4rem;
   letter-spacing: 0.04em;
+  text-shadow: var(--glow);
 }
 
 nav a {
   display: block;
   color: var(--text-muted);
-  text-decoration: none;
   padding: 0.35rem 0;
   font-size: 0.9rem;
 }
 
 nav a:hover {
-  color: var(--text-main);
+  color: var(--neon-magenta);
+  text-shadow: 0 0 6px var(--neon-magenta);
 }
 
+/* Main content */
 main {
   flex: 1;
   padding: 2.5rem;
@@ -220,19 +236,30 @@ main {
 }
 
 main h1, main h2, main h3 {
-  color: var(--accent-rtt);
+  color: var(--neon-cyan);
   font-weight: 500;
+  text-shadow: var(--glow);
 }
 
 pre {
   background: #0b0d12;
   padding: 1rem;
   overflow-x: auto;
-  border-left: 2px solid var(--accent-rtt);
+  border-left: 2px solid var(--neon-magenta);
 }
 
 code {
-  color: var(--text-main);
+  color: var(--neon-cyan);
+}
+
+/* Hide the default arrow */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 4px 0;
 }
 
 /* Custom arrow icons */
@@ -303,39 +330,39 @@ details[open] {
       <a href="#PRINCIPLES">🧘 Principles</a>
    </details>
    <details>
-     <summary><h2>🌱 I — Origin</h2></summary>
+     <summary><h3>🌱 I — Origin</h3></summary>
       <a href="#ORIGIN_WHY_FIELD">🌄 Why FFT Becomes a Field</a>
       <a href="#ORIGIN_THRESHOLD">⚡ Threshold Moment</a>
    </details>
    <details>
-     <summary><h2>📐 II — Definition</h2></summary>
+     <summary><h3>📐 II — Definition</h3></summary>
       <a href="#WHAT_IS_FFT">📘 What Is FFT?</a>
       <a href="#WHY_FFT_EXISTS">🎯 Why FFT Exists</a>
       <a href="#WHAT_FFT_STUDIES">🔍 What FFT Studies</a>
    </details>
    <details>
-     <summary><h2>🧩 III — Operators</h2></summary>
+     <summary><h3>🧩 III — Operators</h3></summary>
       <a href="#OPERATOR_FAMILIES">🧬 Operator Families</a>
       <a href="#OPERATOR_ECOLOGY">🌿 Operator Ecology</a>
    </details>
    <details>
-     <summary><h2>🌀 IV — Dimensionality</h2></summary>
+     <summary><h3>🌀 IV — Dimensionality</h3></summary>
       <a href="#DIMENSIONAL_LAYERS">📊 Dimensional Layers</a>
       <a href="#DIMENSIONAL_COMPATIBILITY">🔗 Dimensional Compatibility</a>
    </details>
    <details>
-     <summary><h2>🎭 V — Identity</h2></summary>
+     <summary><h3>🎭 V — Identity</h3></summary>
       <a href="#FRAMEWORK_SIGNATURES">🖋 Framework Signatures</a>
       <a href="#FRAMEWORK_EVOLUTION">🌱 Framework Evolution</a>
       <a href="#COHERENCE_AND_PARADOX">♾ Coherence & Paradox</a>
    </details>
    <details>
-     <summary><h2>🏗 VI — Meta‑Architecture</h2></summary>
+     <summary><h3>🏗 VI — Meta‑Architecture</h3></summary>
       <a href="#META_ARCHITECTURE">🏛 Meta‑Architecture</a>
       <a href="#COHERENCE_ENGINE">🔥 Coherence Engine</a>
    </details>
    <details>
-     <summary><h2>🧪 VII — Examples</h2></summary>
+     <summary><h3>🧪 VII — Examples</h3></summary>
       <a href="#EXAMPLE_FRAMEWORKS">🧰 Example Frameworks</a>
       <a href="#CROSS_DOMAIN_TRANSLATIONS">🌐 Cross‑Domain Translations</a>
       <a href="#PARADOX_RESOLUTION">⚖ Paradox Resolution</a>
@@ -343,12 +370,12 @@ details[open] {
       <a href="#HYBRID_FRAMEWORKS">🧿 Hybrid Frameworks</a>
    </details>
    <details>
-     <summary><h2>📚 VIII — Teaching</h2></summary>
+     <summary><h3>📚 VIII — Teaching</h3></summary>
       <a href="#TEACHING_MODULES">🎓 Teaching Modules</a>
       <a href="#LEARNING_PATH">🧭 Learning Path</a>
    </details>
    <details>
-     <summary><h2>🔬 IX — Research</h2></summary>
+     <summary><h3>🔬 IX — Research</h3></summary>
       <a href="#RESEARCH_QUESTIONS">❓ Research Questions</a>
       <a href="#OPEN_PROBLEMS">🚧 Open Problems</a>
       <a href="#TESTABLE_PREDICTIONS">🎂 Testable Predictions</a>
@@ -361,12 +388,12 @@ details[open] {
       <a href="#AI_DRIFT_ERAS">🦹 AI Drift Era's</a>
    </details>
    <details>
-     <summary><h2>🛠 X — Infrastructure</h2></summary>
+     <summary><h3>🛠 X — Infrastructure</h3></summary>
       <a href="#GITHUB_ARCHITECTURE">🏗 GitHub Architecture</a>
       <a href="#CONTRIBUTION_GUIDE">🤝 Contribution Guide</a>
    </details>
    <details>
-     <summary><h2>📎 XI — Appendices A–Z</h2></summary>
+     <summary><h3>📎 XI — Appendices A–Z</h3></summary>
       <a href="#APP_A_FIELD_GLOSSARY">📖 Appendix A — Field Glossary</a>
       <a href="#APP_B_CANONICAL_DIAGRAMS">🗺 Appendix B — Canonical Diagrams</a>
       <a href="#APP_C_OPERATOR_ECOLOGY_MAP">🌳 Appendix C — Operator Ecology Map</a>
@@ -395,7 +422,7 @@ details[open] {
       <a href="#APP_Z_DIMENSIONAL_PEDAGOGY">📘 Appendix Z — Dimensional Pedagogy Methods</a>
    </details>
    <details>
-     <summary><h2>📚 XI — Appendices AA-AL</h2></summary>
+     <summary><h3>📚 XI — Appendices AA-AL</h3></summary>
       <a href="#APPENDIX_AA_OPERATOR_DEFINITIONS">🧩 Appendix AA — Operator Definitions | Canonical definitions of D, A, C, α, S.</a>
       <a href="#APPENDIX_AB_DELTA_SET_PARAMETERIZATION">🧮 Appendix AB — ΔSET Parameterization | Formal ΔSET structure and κ‑parameter roles.</a>
       <a href="#APPENDIX_AC_SIMULATION_PROTOCOLS">🧪 Appendix AC — Simulation Protocols | Standardized procedures for FFT simulations.</a>
@@ -410,14 +437,14 @@ details[open] {
       <a href="#APPENDIX_AL_CANONICAL_DIAGRAM_TEMPLATES">🖼️ Appendix AL — Canonical Diagram Templates | SVG‑ready templates for the visual canon.</a>
    </details>
    <details>
-     <summary><h2>📚 XI — Regime-Aware Visualization</h2></summary>
+     <summary><h3>📚 XI — Regime-Aware Visualization</h3></summary>
       <a href="#APPENDIX_REGIME_AWARE_VISUALIZATION_SVG">🧩 Regime‑Aware Visualization (SVG) | High‑resolution SVG specification.</a>
       <a href="#APPENDIX_REGIME_AWARE_VISUALIZATION_DIAGRAM">🖥️ Regime‑Aware Visualization Diagram | Full composite visualization.</a>
       <a href="#APPENDIX_REGIME_AWARE_VISUALIZATION_FIGMA_COMPONENTS">🧱 Regime‑Aware Visualization — Figma Modular Component Set | Componentized visual canon.</a>
       <a href="#APPENDIX_REGIME_AWARE_VISUAL_GRAMMAR">📏 Regime‑Aware Visual Grammar | Canonical rules for FFT’s visual language.</a>
    </details>
    <details>
-     <summary><h2>🤖 XII — 3‑AI Reviews</h2></summary>
+     <summary><h3>🤖 XII — 3‑AI Reviews</h3></summary>
       <a href="#AI_REVIEWS_README">📘 Review Overview</a>
       <a href="#AI_REVIEW_GROK">⚡ Grok Review</a>
       <a href="#AI_REVIEW_PERPLEXITY">🔍 Perplexity Review</a>
@@ -426,11 +453,11 @@ details[open] {
       <a href="#AI_REVIEW_CLOSING">🏁 Closing Statements</a>
    </details>
    <details>
-     <summary><h2>🤖 XIII — External Reviewer</h2></summary>
+     <summary><h3>🤖 XIII — External Reviewer</h3></summary>
       <a href="#AI_REVIEW_DUCK">🦆 Duck | Full Review</a> 
    </details>
    <details>
-     <summary><h2>📐 XIV — Mathematical Foundations</h2></summary>
+     <summary><h3>📐 XIV — Mathematical Foundations</h3></summary>
       <a href="#PART_XIV_README">📘 Mathematical Foundations | Core substrate, operators, and formal structure of FFT.</a>
    </details>
    <details>
