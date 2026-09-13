@@ -1,3 +1,34 @@
+# ------------------------------------------------------------
+# TriadicFrameworks — Weekly Check-In Workflow
+#
+# Purpose:
+#   Automatically generates a weekly lineage snapshot inside:
+#     /docs/WEEKLY_CHECKINS/<YYYY-MM-DD>/checkin.md
+#
+# What this workflow does:
+#   - Runs every Sunday at 09:00 EDT (13:00 UTC)
+#   - Creates a timestamped folder for the weekly check-in
+#   - Generates a structured lineage file (module: LINEAGE)
+#   - Commits the new check-in to the repository
+#
+# Who uses this:
+#   - The TriadicFrameworks lineage system
+#   - Canon maintainers reviewing drift, coherence, and module activity
+#
+# When to run manually:
+#   - Use "Run workflow" in GitHub Actions if:
+#       • You want an immediate lineage snapshot
+#       • You made major canon changes and want a fresh check-in
+#
+# What does NOT use this file:
+#   - Python generators in /docs/tools/
+#   - Domain/module bundle scripts
+#   - Navigation or Jekyll site builders
+#
+# Notes:
+#   This workflow is NOT auto-generated. It is maintained manually.
+# ------------------------------------------------------------
+
 name: Weekly Check-In Generator
 "on":
   schedule:
