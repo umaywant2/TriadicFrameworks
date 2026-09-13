@@ -1,5 +1,35 @@
 ---
 
+# ------------------------------------------------------------
+# TriadicFrameworks Documentation Navigation Map
+#
+# Purpose:
+#   This file defines the sidebar / top‑level navigation
+#   structure for the TriadicFrameworks documentation site.
+#
+# Who reads this:
+#   Jekyll (via the `_data` directory) loads this YAML file
+#   to build navigation menus when generating the static site.
+#
+# How it is used:
+#   - Controls ordering of docs pages
+#   - Controls grouping of domains/modules
+#   - Provides structure for the site layout
+#
+# When to update:
+#   - When adding new domains or major sections
+#   - When reorganizing documentation hierarchy
+#
+# What does NOT use this file:
+#   - GitHub Actions workflows
+#   - Python generators in /docs/tools/
+#   - CI pipelines
+#   - Module bundle scripts
+#
+# Notes:
+#   This file is NOT auto‑generated. It is maintained manually.
+# ------------------------------------------------------------
+
 main:
   - title: AI Resonance Seed
     url: /AI_Resonance_Seed/
