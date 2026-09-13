@@ -1,23 +1,7 @@
-## 📁 _template 
 
 - [`template_module.json`](template_module.json) — Agentic module schema role assignments
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🧩Template%20Core-🗺️Navigation%20First-4c8eda?style=for-the-badge" alt="🧩Template Core | 🗺️Navigation First"/>
-
+# 📁 _template 
 Use this in *every* folder. It’s intentionally minimal, predictable, and student‑friendly.
 
 ```markdown
@@ -1453,25 +1437,18 @@ The Start Here UI is the **dynamic layer** that keeps the site fresh without tou
 
 ---
 
-## 🎯 Optional Enhancements (if you want them later)
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
 
-I can also generate:
-
-- **Icons per kind** (📘 primer, 🧪 simulation, 🧩 example…)  
-- **Auto‑sorting by importance**  
-- **Auto‑extracting the first heading as the title**  
-- **Auto‑extracting the first sentence as a description**  
-- **A “New This Week” badge**  
-- **A “Recommended Path” generator** based on tags  
-
-Just say the word and I’ll scaffold the next layer.
-
----
-
-If you want, I can now integrate this component directly into:
-
-- your **landing page HTML**,  
-- your **folder‑level index.html template**,  
-- or your **docs/README.md wrapper**.
-
-Where would you like it to live?
+<img src="https://img.shields.io/badge/🧩Template%20Core-🗺️Navigation%20First-4c8eda?style=for-the-badge" alt="🧩Template Core | 🗺️Navigation First"/>
