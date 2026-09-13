@@ -1,3 +1,39 @@
+# ------------------------------------------------------------
+# TriadicFrameworks — Drift Guardian Workflow
+#
+# Purpose:
+#   Runs the Drift Guardian bot on every pull request to detect
+#   structural drift in module.json files. This workflow:
+#     • Scans only changed module.json files in PRs
+#     • Computes drift severity (0–4)
+#     • Posts inline comments directly on drifted lines
+#     • Adds a summary drift report to the PR
+#     • Helps contributors correct canon misalignment early
+#
+# What triggers this workflow:
+#   - Pull request events (opened, synchronized, reopened)
+#
+# Who uses this:
+#   - Contributors submitting PRs
+#   - Canon maintainers reviewing structural changes
+#   - Automated drift-prevention systems
+#
+# When to run manually:
+#   - Rarely needed; use manual dispatch only when testing
+#     Drift Guardian updates or validating PR behavior.
+#
+# What does NOT use this workflow:
+#   - Weekly check-in system
+#   - Canon auto-fix workflow
+#   - Domain/module bundle generators
+#   - Diagram/SVG generators
+#   - Navigation or Jekyll site builders
+#
+# Notes:
+#   This workflow is NOT auto-generated. It is maintained manually.
+#   It is part of the TriadicFrameworks canon integrity suite.
+# ------------------------------------------------------------
+
 name: TriadicFrameworks Drift Guardian
 
 on:
