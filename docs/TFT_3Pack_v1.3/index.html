@@ -79,177 +79,157 @@
 
 <style>
 /* ============================================================
-   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   NAWDERIAN NEON ARCADE THEME — RTT/1 SYNTHWAVE EDITION
    ============================================================ */
 
-  :root {
-  --bg-main: #0d0f12;
-  --bg-nav: #15181d;
-  --border-subtle: #2a2f38;
-  --text-main: #dfe7f3;
-  --text-muted: #9aa4b2;
-  --accent-rtt: #8ab4ff;
+:root {
+  --bg-main: #05060a;                 /* deep CRT black */
+  --bg-nav: #0a0c12;                  /* darker sidebar */
+  --bg-panel: #0f1118;
+
+  --text-main: #e8f7ff;               /* neon ice */
+  --text-muted: #7a8ca0;              /* CRT fade */
+
+  --neon-cyan: #3df5ff;
+  --neon-magenta: #ff3dfc;
+  --neon-yellow: #ffe66d;
+
+  --triadic-neon: linear-gradient(135deg,
+                      #3df5ff,
+                      #ff3dfc,
+                      #ffe66d);
+
+  --scanline: repeating-linear-gradient(
+                to bottom,
+                rgba(255,255,255,0.03) 0px,
+                rgba(255,255,255,0.03) 1px,
+                rgba(0,0,0,0.05) 2px
+              );
+
   --radius: 10px;
-  --shadow: 0 0 20px rgba(0,0,0,0.4);
-  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
-  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
-  --rtt-accent-mid:  #9ece6a;   /* balance */
-  --rtt-accent-high: #f7768e;   /* emphasis */
+  --glow: 0 0 12px rgba(255, 0, 180, 0.45),
+          0 0 24px rgba(0, 255, 255, 0.25);
 }
 
-.protocol a,
-.equation a {
-  border-bottom-style: dotted;
-}
-
-/* Base link style */
-a {
-  color: var(--rtt-accent-mid);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-  transition: color 0.2s ease, border-color 0.2s ease;
-}
-
-/* Hover / focus */
-a:hover,
-a:focus {
-  color: var(--rtt-accent-high);
-  border-bottom-color: var(--rtt-accent-high);
-}
-
-/* Visited links */
-a:visited {
-  color: var(--rtt-accent-low);
-}
-
-  /* Base layout */
-  html { scroll-behavior: smooth; }
-  body {
+/* Base layout */
+html { scroll-behavior: smooth; }
+body {
   margin: 0;
   padding: 0;
   background: var(--bg-main);
+  background-image: var(--scanline);
   color: var(--text-main);
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto;
   line-height: 1.65;
   font-size: 17px;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  }
+}
 
-  /* Headings */
-  h1, h2, h3, h4 {
+/* Neon headings */
+h1, h2, h3, h4 {
   font-weight: 700;
   margin-top: 1.8em;
   margin-bottom: 0.5em;
   line-height: 1.2;
-  background: var(--triadic);
+  background: var(--triadic-neon);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  }
+  text-shadow: var(--glow);
+}
 
-  /* Paragraphs and lists */
-  p, ul, ol {
+/* Paragraphs and lists */
+p, ul, ol {
   padding: 0 1em;
   margin: 0 0 1.1em 0;
-  color: #dfe7f3;
-  }
+  color: var(--text-main);
+}
 
-  /* Code/pre */
-  pre, code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
-  background: rgba(255,255,255,0.02);
+/* Neon links */
+a {
+  color: var(--neon-cyan);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255,255,255,0.25);
+  transition: color 0.2s ease, border-color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--neon-magenta);
+  border-bottom-color: var(--neon-magenta);
+  text-shadow: 0 0 8px var(--neon-magenta);
+}
+
+a:visited {
+  color: var(--neon-yellow);
+}
+
+/* Code blocks */
+pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono";
+  background: rgba(255,255,255,0.04);
   padding: 0.4em 0.6em;
   border-radius: 6px;
-  color: #cfe8ff;
-  }
-       
-  /* Context Block */
-  .context-block {
-    font-family: monospace;
-    font-size: 0.95rem;
-    line-height: 1.4;
-    margin: 0.5rem 0 1rem 0;
-  }
-       
-  /* Context Label */
-  .context-label {
-    color: #ff9800; /* orange */
-    font-weight: bold;
-    margin-right: 0.25rem;
-  }
-       
-  /* Context Value */
-  .context-value {
-    color: #ffffff; /* white */
-  }
+  color: #dffaff;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: inset 0 0 12px rgba(0,255,255,0.15);
+}
 
-/* ============================================================
-   NAWDERIAN COSMIC TRIADIC THEME — NAV REIMAGINED
-   ============================================================ */
+/* Context block */
+.context-block {
+  font-family: monospace;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0.5rem 0 1rem 0;
+  padding: 1rem;
+  background: var(--bg-panel);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--glow);
+}
 
+.context-label {
+  color: var(--neon-yellow);
+  font-weight: bold;
+  margin-right: 0.25rem;
+}
+
+.context-value {
+  color: var(--text-main);
+}
+
+/* Navigation panel */
 nav {
   width: 260px;
   float: left;
-  background: rgba(21, 24, 29, 0.75); /* glassy dark */
-  backdrop-filter: blur(12px);
-  padding: 1.6rem 1.2rem;
-  border-right: 1px solid rgba(255,255,255,0.06);
-  box-shadow: inset -1px 0 0 rgba(255,255,255,0.04);
+  background: var(--bg-nav);
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 4px 0 12px rgba(0,0,0,0.4);
 }
 
 nav h2 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--accent-rtt);
-  margin: 0 0 1rem 0;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  opacity: 0.9;
-}
-
-nav h3 {
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin: 1.4rem 0 0.6rem 0;
-  color: var(--text-main);
-  opacity: 0.85;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--neon-cyan);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+  text-shadow: var(--glow);
 }
 
 nav a {
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
-  padding: 0.45rem 0.2rem;
-  font-size: 0.9rem;
+  display: block;
   color: var(--text-muted);
-  text-decoration: none;
-  border-radius: 6px;
-  transition: 
-    color 0.2s ease,
-    background 0.2s ease,
-    transform 0.15s ease;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
 }
 
 nav a:hover {
-  color: var(--text-main);
-  background: rgba(255,255,255,0.05);
-  transform: translateX(3px);
+  color: var(--neon-magenta);
+  text-shadow: 0 0 6px var(--neon-magenta);
 }
 
-nav a:active {
-  transform: translateX(1px) scale(0.98);
-}
-
-nav a::before {
-  content: attr(data-emoji);
-  font-size: 1.05rem;
-  opacity: 0.9;
-}
-
+/* Main content */
 main {
   flex: 1;
   padding: 2.5rem;
@@ -257,20 +237,65 @@ main {
 }
 
 main h1, main h2, main h3 {
-  color: var(--accent-rtt);
+  color: var(--neon-cyan);
   font-weight: 500;
+  text-shadow: var(--glow);
 }
 
 pre {
   background: #0b0d12;
   padding: 1rem;
   overflow-x: auto;
-  border-left: 2px solid var(--accent-rtt);
+  border-left: 2px solid var(--neon-magenta);
 }
 
 code {
-  color: var(--text-main);
+  color: var(--neon-cyan);
 }
+
+/* Hide the default arrow */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+/* Custom arrow icons */
+details > summary::before {
+  content: "⏵"; /* collapsed */
+  padding-right: 6px;
+  font-size: 0.9em;
+}
+details[open] > summary::before {
+  content: "⏷"; /* expanded */
+}
+
+/* Make the h2/h3 feel like the toggle */
+details > summary h2,
+details > summary h3 {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hover effect */
+details > summary:hover h2,
+details > summary:hover h3 {
+  text-decoration: underline;
+}
+
+/* Optional: fade-in animation for opened blocks */
+details[open] {
+  animation: fadeIn 0.15s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+      
 </style>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -290,7 +315,8 @@ code {
   </svg>
  </p> 
 
-  <h2>🔱 TFT_3Pack v1.3 | TriadicFrameworks</h2>
+   <details>
+     <summary><h2>🔱 TFT_3Pack v1.3 | TriadicFrameworks</h2></summary>
       <a href="#README">🔰 README</a>
       <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
       <a href="#CONTRIBUTING">🤝 Contributing</a>
@@ -303,7 +329,9 @@ code {
       <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
       <a href="#SECURITY">🔐 Security</a>
       <a href="#PRINCIPLES">🧘 Principles</a>
-    <h3>🧭 Core System</h3>
+   </details>
+   <details>
+     <summary><h3>🧭 Core System</h3></summary>
       <a href="#OVERVIEW">📘 Overview</a>
       <a href="#P_QUICKSTART">⚡ Quickstart</a>
       <a href="#FFF_QUICKSTART">🎛️ FFF Quickstart</a>
@@ -311,75 +339,105 @@ code {
       <a href="#REQUIREMENTS">📦 Requirements</a>
       <a href="#RES_CLARITY_REFRESH">🔮 Resonance Clarity Refresh</a>
       <a href="#RTT_COMPARED_WITH_CLOSEST_CONTRIBUTORS">📡 RTT Comparative Analysis</a>
-    <h3>📚 Documentation</h3>
+   </details>
+   <details>
+     <summary><h3>📚 Documentation</h3></summary>
       <a href="#DOCS_README">📘 Docs README</a>
       <a href="#DOCS_QUICKSTART">⚡ Docs Quickstart</a>
       <a href="#DOCS_FFF_SPEC">🎛️ FFF Spec</a>
       <a href="#DOCS_OUTPUTS_SPEC">📤 Outputs Spec</a>
       <a href="#DOCS_TRIADIC_TEST_SUITE">🧪 Triadic Test Suite</a>
-    <h3>🧩 Meta Layer</h3>
+   </details>
+   <details>
+     <summary><h3>🧩 Meta Layer</h3></summary>
       <a href="#META_README">📘 Meta README</a>
       <a href="#META_GLYPH_REFERENCE">🔣 Glyph Reference</a>
       <a href="#META_CURRICULUM_GLYPH_TRIBUTE_ECHO_LOG">📜 Curriculum Glyph Tribute Echo Log</a>
       <a href="#META_GLYPH_RETIREMENT_LOG">🪦 Glyph Retirement Log</a>
-    <h3>🔥 Rituals & Scroll Mechanics</h3>
+   </details>
+   <details>
+     <summary><h3>🔥 Rituals & Scroll Mechanics</h3></summary>
       <a href="#RITUALS_SCROLL_CODEX_FORK_GUIDE">🪶 Codex Fork Guide</a>
       <a href="#RITUALS_SCROLL_CURRICULUM_GLYPH_TRIBUTE_FLAME">🔥 Glyph Tribute Flame</a>
       <a href="#RITUALS_SCROLL_GLYPH_REAWAKENING_RITUAL">🌅 Glyph Reawakening Ritual</a>
       <a href="#RITUALS_SCROLL_GLYPH_TRIBUTE_ECHO_FUSION">🎼 Echo Fusion Tribute</a>
       <a href="#RITUALS_SCROLL_RETIREMENT_TRACE_INDEX">📁 Retirement Trace Index</a>
       <a href="#RITUALS_SCROLL_RUNTIME_HOOKS">🧩 Runtime Hooks</a>
-    <h3>📐 Specs & Protocols</h3>
+   </details>
+   <details>
+     <summary><h3>📐 Specs & Protocols</h3></summary>
       <a href="#SPECS_PROTOCOL_SPEC">📡 Protocol Spec</a>
       <a href="#SPECS_README">📘 Specs README</a>
       <a href="#SPECS_KEYGEN_SIMULATOR">🔑 Keygen Simulator</a>
       <a href="#SPECS_REMIX_SCROLL">🎨 Remix Scroll Spec</a>
-    <h3>🎨 Examples — Art</h3>
+   </details>
+   <details>
+     <summary><h3>🎨 Examples — Art</h3></summary>
       <a href="#ART_README">📘 Art README</a>
       <a href="#ART_PROBLEMS">🧩 Art Problems</a>
       <a href="#ART_EXTENDED_PROBLEMS">📚 Extended Problems</a>
       <a href="#ART_SOLUTIONS">🧠 Solutions</a>
       <a href="#ART_RESONANCE_FLOW">🌊 Resonance Flow</a>
-    <h3>🧬 Examples — Biology</h3>
+   </details>
+   <details>
+     <summary><h3>🧬 Examples — Biology</h3></summary>
       <a href="#BIOLOGY_README">📘 Biology README</a>
       <a href="#BIOLOGY_PROBLEMS">🧩 Problems</a>
       <a href="#BIOLOGY_EXTENDED_PROBLEMS">📚 Extended Problems</a>
       <a href="#BIOLOGY_SOLUTIONS">🧠 Solutions</a>
       <a href="#BIOLOGY_RESONANCE_FLOW">🌊 Resonance Flow</a>
-    <h3>⚗️ Examples — Chemistry</h3>
+   </details>
+   <details>
+     <summary><h3>⚗️ Examples — Chemistry</h3></summary>
       <a href="#CHEMISTRY_README">📘 Chemistry README</a>
       <a href="#CHEMISTRY_PROBLEMS">🧩 Problems</a>
       <a href="#CHEMISTRY_EXTENDED_PROBLEMS">📚 Extended Problems</a>
       <a href="#CHEMISTRY_SOLUTIONS">🧠 Solutions</a>
       <a href="#CHEMISTRY_RESONANCE_FLOW">🌊 Resonance Flow</a>
-    <h3>💻 Examples — Computer Science</h3>
+   </details>
+   <details>
+     <summary><h3>💻 Examples — Computer Science</h3></summary>
       <a href="#COMPUTER_SCIENCE_README">📘 CS README</a>
       <a href="#COMPUTER_SCIENCE_PROBLEMS">🧩 Problems</a>
       <a href="#COMPUTER_SCIENCE_EXTENDED_PROBLEMS">📚 Extended Problems</a>
       <a href="#COMPUTER_SCIENCE_SOLUTIONS">🧠 Solutions</a>
       <a href="#COMPUTER_SCIENCE_RESONANCE_FLOW">🌊 Resonance Flow</a>
-    <h3>🗂️ Formats</h3>
+   </details>
+   <details>
+     <summary><h3>🗂️ Formats</h3></summary>
       <a href="#FORMATS_README">📘 Formats README</a>
       <a href="#FORMATS_SPECIFICATION">📐 Specification</a>
-    <h3>🎼 Melodic Table of Elements</h3>
+   </details>
+   <details>
+     <summary><h3>🎼 Melodic Table of Elements</h3></summary>
       <a href="#MELODIC_TABLE_INDEX">🧪 Index</a>
       <a href="#MELODIC_TABLE_README">📘 README</a>
-    <h3>🔬 Molecular Vibration Explorer</h3>
+   </details>
+   <details>
+     <summary><h3>🔬 Molecular Vibration Explorer</h3></summary>
       <a href="#MVE_README">📘 MVE README</a>
       <a href="#MVE_REQUIREMENTS">📦 Requirements</a>
       <a href="#MVE_RUNTIME">⏱️ Runtime</a>
-    <h3>📜 Scripts</h3>
+   </details>
+   <details>
+     <summary><h3>📜 Scripts</h3></summary>
       <a href="#SCRIPTS_README">📘 Scripts README</a>
-    <h3>🔱 TFT Root</h3>
+   </details>
+   <details>
+     <summary><h2>🔱 TFT Root</h2></summary>
       <a href="#TFT_README">📘 TFT README</a>
-    <h3>🈴 Triadic Frameworks Tech — TOPS</h3>
+   </details>
+   <details>
+     <summary><h3>🈴 Triadic Frameworks Tech — TOPS</h3></summary>
       <a href="#TOPS_README">📘 TOPS README</a>
       <a href="#TOPS_QUICKSTART">⚡ Quickstart</a>
       <a href="#TOPS_BENCHMARK_OUTLINE">📊 Benchmark Outline</a>
       <a href="#TOPS_MODULE_JSON">🧩 Module JSON</a>
       <a href="#TOPS_REFLECT_INVERT_SIM">🔁 Reflect & Invert Simulation</a>
       <a href="#TOPS_TRIADIC_TEST_SUITE">🧪 Triadic Test Suite</a>
-    <h3>🏗️ Triadic Tools</h3> 
+   </details>
+   <details>
+     <summary><h2>🏗️ Triadic Tools</h2></summary> 
       <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
       <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
       <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
@@ -395,6 +453,7 @@ code {
       <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
       <a href="../">🔙TFT</a>
+   </details>
    <!-- RTT Session Header (canonical stub) -->
 <section id="rtt-session-header"
          data-rtt="1"
@@ -402,7 +461,8 @@ code {
          data-drift="bounded"
          data-paradox="structural">
 
-  <h2>Session Context</h2>
+   <details>
+     <summary><h2>Session Context</h2></summary>
 
   <div class="context-block">
 
@@ -434,7 +494,7 @@ code {
     <span class="context-value">students + educators + developers + AIs</span>
 
   </div>
-
+   </details>
 </section>
 
 <div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
