@@ -62,6 +62,6 @@ It is designed to be modular, validator-friendly, and quantum-hostile by design.
 
 ## 🔗 Triadic Quicklinks
 
-- [`scroll_curriculum_fork_guide.md`](tft/entft/TFThooks/agents/scroll_curriculum_fork_guide.md) — Ritual guide for scroll forking and badge ignition  
-- [`badge_logic_engine_py.md`](tft/entft/TFThooks/agents/README_badge_logic_engine_py.md) — Flame hook trigger logic  
-- [`tops_agent_interface_py.md`](tft/entft/TFThooks/agents/README_tops_agent_interface.md) — Trace generator and echo logger  
+- [`scroll_curriculum_fork_guide.md`](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/TFT_3Pack_v1.3/tft/entft/TFThooks/agents/scroll_curriculum_fork_guide.md) — Ritual guide for scroll forking and badge ignition  
+- [`badge_logic_engine_py.md`](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/TFT_3Pack_v1.3/tft/entft/TFThooks/agents/README_badge_logic_engine_py.md) — Flame hook trigger logic  
+- [`tops_agent_interface_py.md`](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/TFT_3Pack_v1.3/tft/entft/TFThooks/agents/README_tops_agent_interface.md) — Trace generator and echo logger  
