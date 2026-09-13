@@ -25,9 +25,9 @@ Every module in this repository is an independent unit of theory or tooling. Eac
 
 | If you want to… | Start here |
 |---|---|
-| Understand the core three-layer architecture | [Triadic Model](/concepts/triadic-model/) |
-| Read the foundational theory document | [Framework Field Theory](#framework-field-theory) |
-| Understand what RTT metadata means | [README → RTT Metadata](https://github.com/umaywant2/TriadicFrameworks#rtt-metadata) |
+| Understand the core three-layer architecture | [Triadic Model](concepts/triadic-model.md) |
+| Read the foundational theory document | [Framework Field Theory](Framework_Field_Theory/) |
+| Understand what RTT metadata means | [README → RTT Metadata](metadata/) |
 | Browse all modules | The sections below |
 
 ---
