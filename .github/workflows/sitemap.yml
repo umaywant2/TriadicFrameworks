@@ -27,8 +27,7 @@ jobs:
 
       - name: Run sitemap generator
         run: |
-          chmod +x tools/generate_canon_sitemap.py
-          node tools/generate_canon_sitemap.py
+          python3 tools/generate_canon_sitemap.py
 
       - name: Commit updated sitemap
         run: |
