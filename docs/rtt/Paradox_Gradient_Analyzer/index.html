@@ -107,98 +107,224 @@
 <!-- ═══════════════════════════════════════════════════════════════ -->
 
 <style>
-:root {
-  --pga-bg-1: #ff416c;     /* paradox-axis: red-pink */
-  --pga-bg-2: #ff4b2b;     /* gradient-axis: orange-red */
-  --pga-bg-3: #2b5876;     /* paradox basin: deep blue */
+/* ============================================================
+   NAWDERIAN NEON ARCADE THEME — RTT/1 SYNTHWAVE EDITION
+   ============================================================ */
 
-  --pga-glass: rgba(255,255,255,0.10);
-  --pga-border: rgba(255,255,255,0.25);
-  --pga-text: #f0f0f0;
-  --pga-shadow: 0 0 22px rgba(0,0,0,0.45);
+:root {
+  --bg-main: #05060a;                 /* deep CRT black */
+  --bg-nav: #0a0c12;                  /* darker sidebar */
+  --bg-panel: #0f1118;
+
+  --text-main: #e8f7ff;               /* neon ice */
+  --text-muted: #7a8ca0;              /* CRT fade */
+
+  --neon-cyan: #3df5ff;
+  --neon-magenta: #ff3dfc;
+  --neon-yellow: #ffe66d;
+
+  --triadic-neon: linear-gradient(135deg,
+                      #3df5ff,
+                      #ff3dfc,
+                      #ffe66d);
+
+  --scanline: repeating-linear-gradient(
+                to bottom,
+                rgba(255,255,255,0.03) 0px,
+                rgba(255,255,255,0.03) 1px,
+                rgba(0,0,0,0.05) 2px
+              );
+
+  --radius: 10px;
+  --glow: 0 0 12px rgba(255, 0, 180, 0.45),
+          0 0 24px rgba(0, 255, 255, 0.25);
 }
 
-/* Page background — paradox gradient */
+/* Base layout */
+html { scroll-behavior: smooth; }
 body {
-  background: linear-gradient(
-    135deg,
-    var(--pga-bg-1) 0%,
-    var(--pga-bg-2) 50%,
-    var(--pga-bg-3) 100%
-  );
-  background-attachment: fixed;
-  color: var(--pga-text);
-  font-family: "Inter", "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  background-image: var(--scanline);
+  color: var(--text-main);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Neon headings */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic-neon);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: var(--glow);
+}
+
+/* Paragraphs and lists */
+p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: var(--text-main);
+}
+
+/* Neon links */
+a {
+  color: var(--neon-cyan);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255,255,255,0.25);
+  transition: color 0.2s ease, border-color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--neon-magenta);
+  border-bottom-color: var(--neon-magenta);
+  text-shadow: 0 0 8px var(--neon-magenta);
+}
+
+a:visited {
+  color: var(--neon-yellow);
+}
+
+/* Code blocks */
+pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono";
+  background: rgba(255,255,255,0.04);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #dffaff;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: inset 0 0 12px rgba(0,255,255,0.15);
+}
+
+/* Context block */
+.context-block {
+  font-family: monospace;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0.5rem 0 1rem 0;
+  padding: 1rem;
+  background: var(--bg-panel);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--glow);
+}
+
+.context-label {
+  color: var(--neon-yellow);
+  font-weight: bold;
+  margin-right: 0.25rem;
+}
+
+.context-value {
+  color: var(--text-main);
+}
+
+/* Navigation panel */
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 4px 0 12px rgba(0,0,0,0.4);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--neon-cyan);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+  text-shadow: var(--glow);
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--neon-magenta);
+  text-shadow: 0 0 6px var(--neon-magenta);
+}
+
+/* Main content */
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--neon-cyan);
+  font-weight: 500;
+  text-shadow: var(--glow);
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--neon-magenta);
+}
+
+code {
+  color: var(--neon-cyan);
+}
+
+/* Hide the default arrow */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+/* Custom arrow icons */
+details > summary::before {
+  content: "⏵"; /* collapsed */
+  padding-right: 6px;
+  font-size: 0.9em;
+}
+details[open] > summary::before {
+  content: "⏷"; /* expanded */
+}
+
+/* Make the h2/h3 feel like the toggle */
+details > summary h2,
+details > summary h3 {
+  display: inline;
   margin: 0;
   padding: 0;
 }
 
-/* Glass panel */
-.pga-panel {
-  background: var(--pga-glass);
-  backdrop-filter: blur(14px);
-  border: 1px solid var(--pga-border);
-  border-radius: 14px;
-  padding: 24px 32px;
-  margin: 32px auto;
-  max-width: 900px;
-  box-shadow: var(--pga-shadow);
+/* Hover effect */
+details > summary:hover h2,
+details > summary:hover h3 {
+  text-decoration: underline;
 }
 
-/* Section headers */
-.pga-panel h2,
-.pga-panel h3 {
-  margin-top: 0;
-  color: #ffffff;
-  text-shadow: 0 0 6px rgba(255,255,255,0.4);
+/* Optional: fade-in animation for opened blocks */
+details[open] {
+  animation: fadeIn 0.15s ease;
 }
-
-/* Links */
-.pga-panel a {
-  display: inline-block;
-  padding: 6px 10px;
-  margin: 4px 0;
-  border-radius: 6px;
-  color: #ffffff;
-  text-decoration: none;
-  background: rgba(255,255,255,0.08);
-  transition: all 0.25s ease;
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
-
-.pga-panel a:hover {
-  background: rgba(255,255,255,0.18);
-  transform: translateY(-2px);
-  box-shadow: 0 0 12px rgba(255,255,255,0.35);
-}
-
-/* Session context block */
-.context-block {
-  background: rgba(0,0,0,0.25);
-  padding: 16px 20px;
-  border-radius: 10px;
-  border: 1px solid rgba(255,255,255,0.18);
-  margin-top: 12px;
-}
-
-.context-label {
-  color: #fdfdfd;
-}
-
-.context-value {
-  color: #e0e0e0;
-}
-
-/* Badge */
-.pga-badge {
-  display: inline-block;
-  padding: 8px 14px;
-  background: rgba(0,0,0,0.45);
-  color: #fff;
-  border-radius: 8px;
-  font-size: 14px;
-  margin-top: 20px;
-  box-shadow: var(--pga-shadow);
-}
+      
 </style>
 
 </head>
@@ -214,7 +340,8 @@ body {
          data-drift="bounded"
          data-regime="analyzer">
 
-  <h2>Session Context</h2>
+   <details>
+     <summary><h2>Session Context</h2></summary>
 
   <div class="context-block">
 
@@ -251,7 +378,7 @@ body {
     <span class="context-value">students + developers + researchers + AIs</span>
 
   </div>
-
+   </details>
 </section>
 
 <div class="pga-badge">
@@ -263,7 +390,9 @@ body {
 <!-- ═══════════════════════════════════════════════════════════════ -->
 
 <div class="pga-panel">
-<h3>📁 Module Files</h3>
+
+   <details>
+     <summary><h3>📁 Module Files</h3></summary>
 
 <ul>
   <li><a href="README.md">README.md</a></li>
@@ -277,6 +406,7 @@ body {
   <li><a href="paradox_gradient_matrix.json">paradox_gradient_matrix.json</a></li>
   <li><a href="module.json">module.json</a></li>
 </ul>
+   </details>
 </div>
 
 </body>
