@@ -421,15 +421,10 @@ details[open] {
   🌑 OPC • CORE • v1.0<br>🌀 Universal Regime‑Perception Failure Mode Active
 </div>
 
-  </nav>
+</nav>
 
-  <!-- ═══════════ Main Content ═══════════ -->
-  <main>
-    <div id="content">
-      <div class="loading">Loading module…</div>
-    </div>
-  </main>
-
+<main id="content"></main>
+      
   <!-- ═══════════ Script ═══════════ -->
   <script>
     // ── DOC_MAP ──
@@ -451,46 +446,41 @@ details[open] {
       OPERATORS: 'operators.md',
     };
 
-    const contentEl = document.getElementById('content');
-
-    // ── Load document by key ──
-    async function loadDoc(key) {
-      const file = DOC_MAP[key];
-      if (!file) {
-        contentEl.innerHTML = '<p style="color:var(--text-dim);">Document not found.</p>';
-        return;
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
       }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
 
-      contentEl.innerHTML = '<div class="loading">Loading module…</div>';
-
-      try {
-        const res = await fetch(file);
-        if (!res.ok) throw new Error(res.statusText);
-        const md = await res.text();
-        contentEl.innerHTML = marked.parse(md);
-      } catch (err) {
-        contentEl.innerHTML =
-          '<p style="color:#c44;">Failed to load <code>' + file + '</code>: ' + err.message + '</p>';
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
       }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
 
-      // Highlight active nav link
-      document.querySelectorAll('nav a').forEach(a => {
-        a.classList.toggle('active', a.getAttribute('href') === '#' + key);
-      });
-
-      // Scroll content to top
-      document.querySelector('main').scrollTop = 0;
-    }
-
-    // ── Hash routing ──
-    function loadFromHash() {
-      const key = location.hash.replace('#', '') || 'README';
-      loadDoc(key);
-    }
-
-    window.addEventListener('hashchange', loadFromHash);
-    window.addEventListener('DOMContentLoaded', loadFromHash);
-  </script>
+</script>
 
 </body>
 </html>
