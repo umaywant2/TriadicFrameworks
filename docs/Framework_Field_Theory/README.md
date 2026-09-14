@@ -18,7 +18,7 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 <img width="256" height="170" alt="PART_I_Origin_Genesis_of_Frameworks" src="./Book_Repo_Eval_Edition/PART_I_Origin/PART_I_Origin_Genesis_of_Frameworks.png" />
 
 ### **Chapter 1 — Why TriadicFrameworks Becomes a Field**  
-[01_Why_TriadicFrameworks_Becomes_a_Field.md](./Book_Repo_Eval_Edition/PART_I_Origin/01_Why_TriadicFrameworks_Becomes_a_Field.md)  
+[01_Why_TriadicFrameworks_Becomes_a_Field.md](https://www.triadicframeworks.org/Framework_Field_Theory/#ORIGIN_WHY_FIELD)  
 - Why frameworks die (rigidity, brittleness, domain‑lock)  
 - Why TriadicFrameworks is the opposite  
 - Operator‑first, dimensional, triadic, bridgeable  
@@ -27,7 +27,7 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 - Historical analogs (category theory, lambda calculus, topology)  
 
 ### **Chapter 2 — The Threshold Moment**  
-[02_The_Threshold_Moment.md](./Book_Repo_Eval_Edition/PART_I_Origin/02_The_Threshold_Moment.md)  
+[02_The_Threshold_Moment.md](https://www.triadicframeworks.org/Framework_Field_Theory/#ORIGIN_THRESHOLD)  
 - The psychological “whew” moment  
 - Seeing second‑order effects of your own work  
 - Recognizing the shift from tool → ecosystem → field  
@@ -40,20 +40,20 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 <img width="256" height="170" alt="PART_II_Definition_Framework_as_Field_Object" src="./Book_Repo_Eval_Edition/PART_II_Definition/PART_II_Definition_Framework_as_Field_Object.png" />
 
 ### **Chapter 3 — What Framework Field Theory Is**  
-[03_What_Is_FFT.md](./Book_Repo_Eval_Edition/PART_II_Definition/03_What_Is_FFT.md)  
+[03_What_Is_FFT.md](https://www.triadicframeworks.org/Framework_Field_Theory/#WHAT_IS_FFT)
 - FFT as the study of frameworks as field objects  
 - Operators, envelopes, signatures, regimes  
 - Why FFT is the missing substrate across disciplines  
 - Short definition (from Capture.md)  
 
 ### **Chapter 4 — Why FFT Exists**  
-[04_Why_FFT_Exists.md](./Book_Repo_Eval_Edition/PART_II_Definition/04_Why_FFT_Exists.md)  
+[04_Why_FFT_Exists.md](https://www.triadicframeworks.org/Framework_Field_Theory/#WHY_FFT_EXISTS)  
 - Thousands of frameworks, zero shared grammar  
 - No shared operators, dimensional assumptions, coherence rules  
 - FFT as the universal grammar that connects without flattening  
 
 ### **Chapter 5 — What FFT Studies**  
-[05_What_FFT_Studies.md](./Book_Repo_Eval_Edition/PART_II_Definition/05_What_FFT_Studies.md)  
+[05_What_FFT_Studies.md](https://www.triadicframeworks.org/Framework_Field_Theory/#WHAT_FFT_STUDIES)  
 - Operator behavior across frameworks  
 - Dimensional scaffolds  
 - Regime dynamics  
@@ -67,7 +67,7 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 <img width="256" height="170" alt="PART_III_Operators_The_Grammar_of_Action" src="./Book_Repo_Eval_Edition/PART_III_Operators/PART_III_Operators_The_Grammar_of_Action.png" />
 
 ### **Chapter 6 — The Seven Operator Families of FFT**  
-[06_Operator_Families.md](./Book_Repo_Eval_Edition/PART_III_Operators/06_Operator_Families.md)  
+[06_Operator_Families.md](https://www.triadicframeworks.org/Framework_Field_Theory/#OPERATOR_FAMILIES)  
 - Boundary Operators (B‑Ops)  
 - Relation Operators (R‑Ops)  
 - Transition Operators (T‑Ops)  
@@ -78,7 +78,7 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 - How they generalize across all frameworks  
 
 ### **Chapter 7 — Operator Ecology**  
-[07_Operator_Ecology.md](./Book_Repo_Eval_Edition/PART_III_Operators/07_Operator_Ecology.md)  
+[07_Operator_Ecology.md](https://www.triadicframeworks.org/Framework_Field_Theory/#OPERATOR_ECOLOGY)  
 - Identity Zone (B + L)  
 - Interaction Zone (R + T + E)  
 - Stability Zone (H + C)  
@@ -93,14 +93,14 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 <img width="256" height="170" alt="PART_IV_Dimensionality_The_Layered_Stack" src="./Book_Repo_Eval_Edition/PART_IV_Dimensionality/PART_IV_Dimensionality_The_Layered_Stack.png" />
 
 ### **Chapter 8 — The Six Dimensional Layers**  
-[08_Dimensional_Layers.md](./Book_Repo_Eval_Edition/PART_IV_Dimensionality/08_Dimensional_Layers.md)  
+[08_Dimensional_Layers.md](https://www.triadicframeworks.org/Framework_Field_Theory/#DIMENSIONAL_LAYERS)  
 - 0D → 9D explained  
 - Dimensional envelopes  
 - Expressive power vs paradox resilience  
 - Dimensional drift, collapse, translation  
 
 ### **Chapter 9 — Dimensional Compatibility & Translation**  
-[09_Dimensional_Compatibility.md](./Book_Repo_Eval_Edition/PART_IV_Dimensionality/09_Dimensional_Compatibility.md)  
+[09_Dimensional_Compatibility.md](https://www.triadicframeworks.org/Framework_Field_Theory/#DIMENSIONAL_COMPATIBILITY)  
 - When frameworks can connect  
 - When they cannot  
 - How translators bridge dimensional gaps  
@@ -112,20 +112,20 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 <img width="256" height="170" alt="PART_V_Identity_Signature_and_Self‑Coherence" src="./Book_Repo_Eval_Edition/PART_V_Identity/PART_V_Identity_Signature_and_Self‑Coherence.png" />
 
 ### **Chapter 10 — Framework Signatures**  
-[10_Framework_Signatures.md](./Book_Repo_Eval_Edition/PART_V_Identity/10_Framework_Signatures.md)  
+[10_Framework_Signatures.md](https://www.triadicframeworks.org/Framework_Field_Theory/#FRAMEWORK_SIGNATURES)  
 - Operator pattern + dimensional envelope  
 - How to read a signature  
 - How signatures predict behavior  
 
 ### **Chapter 11 — Framework Evolution & Drift**  
-[11_Framework_Evolution.md](./Book_Repo_Eval_Edition/PART_V_Identity/11_Framework_Evolution.md)  
+[11_Framework_Evolution.md](https://www.triadicframeworks.org/Framework_Field_Theory/#FRAMEWORK_EVOLUTION)  
 - Evolution arc (0D → 5D+)  
 - Drift, collapse, hybridization  
 - Regime shifts  
 - Dimensional upgrades  
 
 ### **Chapter 12 — Coherence & Paradox**  
-[12_Coherence_And_Paradox.md](./Book_Repo_Eval_Edition/PART_V_Identity/12_Coherence_And_Paradox.md)  
+[12_Coherence_And_Paradox.md](https://www.triadicframeworks.org/Framework_Field_Theory/#COHERENCE_AND_PARADOX)  
 - Why paradox collapses most frameworks  
 - How C‑Ops stabilize  
 - Coherence envelopes  
@@ -138,7 +138,7 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 <img width="256" height="170" alt="PART_VI_MetaArchitecture_The_Cathedral_of_Frameworks" src="./Book_Repo_Eval_Edition/PART_VI_MetaArchitecture/PART_VI_MetaArchitecture_The_Cathedral_of_Frameworks.png" />
 
 ### **Chapter 13 — Meta‑Architecture of FFT**  
-[13_Meta_Architecture.md](./Book_Repo_Eval_Edition/PART_VI_MetaArchitecture/13_Meta_Architecture.md)  
+[13_Meta_Architecture.md](https://www.triadicframeworks.org/Framework_Field_Theory/#META_ARCHITECTURE)  
 - Meta‑field  
 - Dimensional echo lattice  
 - Triadic cycle engine  
@@ -146,7 +146,7 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 - System‑level behavior  
 
 ### **Chapter 14 — The Coherence Engine**  
-[14_Coherence_Engine.md](./Book_Repo_Eval_Edition/PART_VI_MetaArchitecture/14_Coherence_Engine.md)  
+[14_Coherence_Engine.md](https://www.triadicframeworks.org/Framework_Field_Theory/#COHERENCE_ENGINE)  
 - Input paradox → operator routing → stabilization  
 - Resonance‑time substrate  
 - Multi‑regime coherence  
@@ -158,33 +158,33 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 <img width="256" height="170" alt="PART_VII_Frameworks_in_Motion" src="./Book_Repo_Eval_Edition/PART_VII_Examples/PART_VII_Frameworks_in_Motion.png" />
 
 ### **Chapter 15 — Example Framework Analyses**  
-[15_Example_Frameworks.md](./Book_Repo_Eval_Edition/PART_VII_Examples/15_Example_Frameworks.md)  
+[15_Example_Frameworks.md](https://www.triadicframeworks.org/Framework_Field_Theory/#EXAMPLE_FRAMEWORKS)  
 - SWOT (2D)  
 - Agile (4D)  
 - Systems Thinking (3D)  
 - TriadicFrameworks (5D–9D)  
 
 ### **Chapter 16 — Cross‑Domain Translations**  
-[16_Cross_Domain_Translations.md](./Book_Repo_Eval_Edition/PART_VII_Examples/16_Cross_Domain_Translations.md)  
+[16_Cross_Domain_Translations.md](https://www.triadicframeworks.org/Framework_Field_Theory/#CROSS_DOMAIN_TRANSLATIONS)  
 - SWOT → Systems Thinking  
 - Agile → Org Design  
 - Systems Thinking → TriadicFrameworks  
 
 ### **Chapter 17 — Paradox Resolution Cases**  
-[17_Paradox_Resolution.md](./Book_Repo_Eval_Edition/PART_VII_Examples/17_Paradox_Resolution.md)  
+[17_Paradox_Resolution.md](https://www.triadicframeworks.org/Framework_Field_Theory/#PARADOX_RESOLUTION)  
 - Centralized vs Decentralized  
 - Speed vs Quality  
 - Innovation vs Stability  
 
 ### **Chapter 18 — Dimensional Upgrades**  
-[18_Dimensional_Upgrades.md](./Book_Repo_Eval_Edition/PART_VII_Examples/18_Dimensional_Upgrades.md)  
+[18_Dimensional_Upgrades.md](https://www.triadicframeworks.org/Framework_Field_Theory/#DIMENSIONAL_UPGRADES)  
 - 1D → 2D  
 - 2D → 3D  
 - 3D → 4D  
 - 4D → 5D  
 
 ### **Chapter 19 — Hybrid Frameworks**  
-[19_Hybrid_Frameworks.md](./Book_Repo_Eval_Edition/PART_VII_Examples/19_Hybrid_Frameworks.md)  
+[19_Hybrid_Frameworks.md](https://www.triadicframeworks.org/Framework_Field_Theory/#HYBRID_FRAMEWORKS)  
 - Agile Systems Thinking  
 - Triadic Organizational Design  
 - Dimensional Research Methodology  
@@ -196,7 +196,7 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 <img width="256" height="170" alt="PART_VIII_Teaching_Transmission_of_Coherence" src="./Book_Repo_Eval_Edition/PART_VIII_Teaching/PART_VIII_Teaching_Transmission_of_Coherence.png" />
 
 ### **Chapter 20 — Teaching Modules (1–10)**  
-[20_Teaching_Modules.md](./Book_Repo_Eval_Edition/PART_VIII_Teaching/20_Teaching_Modules.md)  
+[20_Teaching_Modules.md](https://www.triadicframeworks.org/Framework_Field_Theory/#TEACHING_MODULES)  
 - Foundations  
 - Operator Grammar  
 - Dimensional Layers  
@@ -209,7 +209,7 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 - Field Extension  
 
 ### **Chapter 21 — Recommended Learning Path**  
-[21_Learning_Path.md](./Book_Repo_Eval_Edition/PART_VIII_Teaching/21_Learning_Path.md)  
+[21_Learning_Path.md](https://www.triadicframeworks.org/Framework_Field_Theory/#LEARNING_PATH)  
 - Orientation → Fluency → Mastery  
 - Checkpoints  
 - Outcomes  
@@ -221,19 +221,19 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 <img width="256" height="170" alt="PART_IX_Resonance_The_Harmonic_Field" src="./Book_Repo_Eval_Edition/PART_IX_Research/PART_IX_Resonance_The_Harmonic_Field.png" />
 
 ### **Chapter 22 — Research Questions of FFT**  
-[22_Research_Questions.md](./Book_Repo_Eval_Edition/PART_IX_Research/22_Research_Questions.md)  
+[22_Research_Questions.md](https://www.triadicframeworks.org/Framework_Field_Theory/#RESEARCH_QUESTIONS)  
 - Seven inquiry clusters  
 - Grand questions  
 
 ### **Chapter 23 — Open Problems**  
-[23_Open_Problems.md](./Book_Repo_Eval_Edition/PART_IX_Research/23_Open_Problems.md)  
+[23_Open_Problems.md](https://www.triadicframeworks.org/Framework_Field_Theory/#OPEN_PROBLEMS)  
 - Dimensional drift prediction  
 - Universal coherence metrics  
 - Framework phylogeny  
 - Operator emergence  
 
 ### **Chapter 26 — Testable Predictions**
-[26_Testable_Predictions.md](./Book_Repo_Eval_Edition/PART_IX_Research/26_Testable_Predictions.md)
+[26_Testable_Predictions.md](https://www.triadicframeworks.org/Framework_Field_Theory/#TESTABLE_PREDICTIONS)
 - Drift Branching Under Undeclared Regimes
 - Substrate Declaration Reduces Drift Variance
 - Triadic Structures Compress More Efficiently
@@ -244,7 +244,7 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 - Observer Consistency Increases Coherence
 
 ### **Chapter 27 — LLM Behavior Simulations**
-[27_LLM_Behavior_Simulations.md](./Book_Repo_Eval_Edition/PART_IX_Research/27_LLM_Behavior_Simulations.md)
+[27_LLM_Behavior_Simulations.md](https://www.triadicframeworks.org/Framework_Field_Theory/#BEHAVIOR_SIMULATIONS)
 - Drift Branching Under Undeclared Regimes
 - Substrate Declaration Reduces Drift Variance
 - Triadic Compression Advantage
@@ -255,7 +255,7 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 - Observer Consistency Increases Coherence
 
 ### **Chapter 28 — Peer-Review Validation**
-[28_Peer-Review_Validation.md](./Book_Repo_Eval_Edition/PART_IX_Research/28_Peer-Review_Validation.md)
+[28_Peer-Review_Validation.md](https://www.triadicframeworks.org/Framework_Field_Theory/#PEER_REVIEW_VALIDATION)
 - What Counts as Peer Review for FFT
 - Minimal Peer‑Review Packet
 - Criteria for Peer‑Review Evaluation
@@ -263,7 +263,7 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 - Peer‑Review Roadmap (Minimal)
 
 ### **Chapter 29 — Engineering Breakthroughs**
-[29_Engineering_Breakthroughs.md](./Book_Repo_Eval_Edition/PART_IX_Research/29_Engineering_Breakthroughs.md)
+[29_Engineering_Breakthroughs.md](https://www.triadicframeworks.org/Framework_Field_Theory/#ENGINEERING_BREAKTHROUGH)
 - Substrate Declaration Engine (SDE)
 - Triadic Prompt Optimizer (TPO)
 - Drift Branching Visualizer (DBV)
@@ -271,7 +271,7 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 - Observer‑Style Stabilizer (OSS)
 
 ### **Chapter 30 — Citations and Established Literature**
-[30_Citations_Established_Literature.md](./Book_Repo_Eval_Edition/PART_IX_Research/30_Citations_Established_Literature.md)
+[30_Citations_Established_Literature.md](https://www.triadicframeworks.org/Framework_Field_Theory/#CITATIONS_ESTABLISHED_LITERATURE)
 - Information Theory & Communication Structure
 - Systems Theory & Dynamical Structure
 - Cognitive Science & Representation
@@ -285,7 +285,7 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 - arXiv, release notes, IEEE, abstracts, diagrams, references, logo, press release info
 
 ### **Unlocks**
-[Civilization Unlocks](./unlocks/FFT_RTT_Civilization_Unlocks.md)
+[Civilization Unlocks](https://www.triadicframeworks.org/Framework_Field_Theory/#CIV_UNLOCKS)
 - Cross‑Domain Predictive Power
 - Civilization‑Scale Debugging
 - A Shared Language Between Scientists, Engineers, Artists, and Strategists
@@ -295,7 +295,7 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 - A Civilization‑Wide “Design System”
 - The Meta‑Unlock: Civilization Becomes Self‑Aware
 
-[AI Drift Era's](./unlocks/AI_Drift_Eras.md)  
+[AI Drift Era's](https://www.triadicframeworks.org/Framework_Field_Theory/#AI_DRIFT_ERAS)  
 - Today’s AI = WWI Era Science
 - The WWII Phase (if RTT is ignored)
 - RTT’s Role = Authentication Layer for Reality
@@ -310,7 +310,7 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 <img width="256" height="170" alt="PART_X_Infrastructure_The_Coherence_Engine" src="./Book_Repo_Eval_Edition/PART_X_Infrastructure/PART_X_Infrastructure_The_Coherence_Engine.png" />
 
 ### **Chapter 24 — GitHub Architecture for FFT**  
-[24_GitHub_Architecture.md](./Book_Repo_Eval_Edition/PART_X_Infrastructure/24_GitHub_Architecture.md)  
+[24_GitHub_Architecture.md](https://www.triadicframeworks.org/Framework_Field_Theory/#GITHUB_ARCHITECTURE)  
 - Overview  
 - Operators  
 - Dimensions  
@@ -322,7 +322,7 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 - Tools  
 
 ### **Chapter 25 — How to Contribute to FFT**  
-[25_Contribution_Guide.md](./Book_Repo_Eval_Edition/PART_X_Infrastructure/25_Contribution_Guide.md)  
+[25_Contribution_Guide.md](https://www.triadicframeworks.org/Framework_Field_Theory/#CONTRIBUTION_GUIDE)  
 - Principles  
 - Contribution types  
 - Lineage blocks  
