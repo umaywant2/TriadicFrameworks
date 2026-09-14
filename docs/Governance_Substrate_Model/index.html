@@ -87,141 +87,157 @@
 
 <style>
 /* ============================================================
-   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   NAWDERIAN NEON ARCADE THEME — RTT/1 SYNTHWAVE EDITION
    ============================================================ */
 
-  :root {
-  --bg-main: #0d0f12;
-  --bg-nav: #15181d;
-  --border-subtle: #2a2f38;
-  --text-main: #dfe7f3;
-  --text-muted: #9aa4b2;
-  --accent-rtt: #8ab4ff;
+:root {
+  --bg-main: #05060a;                 /* deep CRT black */
+  --bg-nav: #0a0c12;                  /* darker sidebar */
+  --bg-panel: #0f1118;
+
+  --text-main: #e8f7ff;               /* neon ice */
+  --text-muted: #7a8ca0;              /* CRT fade */
+
+  --neon-cyan: #3df5ff;
+  --neon-magenta: #ff3dfc;
+  --neon-yellow: #ffe66d;
+
+  --triadic-neon: linear-gradient(135deg,
+                      #3df5ff,
+                      #ff3dfc,
+                      #ffe66d);
+
+  --scanline: repeating-linear-gradient(
+                to bottom,
+                rgba(255,255,255,0.03) 0px,
+                rgba(255,255,255,0.03) 1px,
+                rgba(0,0,0,0.05) 2px
+              );
+
   --radius: 10px;
-  --shadow: 0 0 20px rgba(0,0,0,0.4);
-  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
-  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
-  --rtt-accent-mid:  #9ece6a;   /* balance */
-  --rtt-accent-high: #f7768e;   /* emphasis */
+  --glow: 0 0 12px rgba(255, 0, 180, 0.45),
+          0 0 24px rgba(0, 255, 255, 0.25);
 }
 
-.protocol a,
-.equation a {
-  border-bottom-style: dotted;
-}
-
-/* Base link style */
-a {
-  color: var(--rtt-accent-mid);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-  transition: color 0.2s ease, border-color 0.2s ease;
-}
-
-/* Hover / focus */
-a:hover,
-a:focus {
-  color: var(--rtt-accent-high);
-  border-bottom-color: var(--rtt-accent-high);
-}
-
-/* Visited links */
-a:visited {
-  color: var(--rtt-accent-low);
-}
-
-  /* Base layout */
-  html { scroll-behavior: smooth; }
-  body {
+/* Base layout */
+html { scroll-behavior: smooth; }
+body {
   margin: 0;
   padding: 0;
   background: var(--bg-main);
+  background-image: var(--scanline);
   color: var(--text-main);
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto;
   line-height: 1.65;
   font-size: 17px;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  }
+}
 
-  /* Headings */
-  h1, h2, h3, h4 {
+/* Neon headings */
+h1, h2, h3, h4 {
   font-weight: 700;
   margin-top: 1.8em;
   margin-bottom: 0.5em;
   line-height: 1.2;
-  background: var(--triadic);
+  background: var(--triadic-neon);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  }
+  text-shadow: var(--glow);
+}
 
-  /* Paragraphs and lists */
-  p, ul, ol {
+/* Paragraphs and lists */
+p, ul, ol {
   padding: 0 1em;
   margin: 0 0 1.1em 0;
-  color: #dfe7f3;
-  }
+  color: var(--text-main);
+}
 
-  /* Code/pre */
-  pre, code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
-  background: rgba(255,255,255,0.02);
+/* Neon links */
+a {
+  color: var(--neon-cyan);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255,255,255,0.25);
+  transition: color 0.2s ease, border-color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--neon-magenta);
+  border-bottom-color: var(--neon-magenta);
+  text-shadow: 0 0 8px var(--neon-magenta);
+}
+
+a:visited {
+  color: var(--neon-yellow);
+}
+
+/* Code blocks */
+pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono";
+  background: rgba(255,255,255,0.04);
   padding: 0.4em 0.6em;
   border-radius: 6px;
-  color: #cfe8ff;
-  }
+  color: #dffaff;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: inset 0 0 12px rgba(0,255,255,0.15);
+}
 
-  /* Context Block */
-  .context-block {
-    font-family: monospace;
-    font-size: 0.95rem;
-    line-height: 1.4;
-    margin: 0.5rem 0 1rem 0;
-  }
-       
-  /* Context Label */
-  .context-label {
-    color: #ff9800; /* orange */
-    font-weight: bold;
-    margin-right: 0.25rem;
-  }
-       
-  /* Context Value */
-  .context-value {
-    color: #ffffff; /* white */
-  }
+/* Context block */
+.context-block {
+  font-family: monospace;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0.5rem 0 1rem 0;
+  padding: 1rem;
+  background: var(--bg-panel);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--glow);
+}
 
+.context-label {
+  color: var(--neon-yellow);
+  font-weight: bold;
+  margin-right: 0.25rem;
+}
+
+.context-value {
+  color: var(--text-main);
+}
+
+/* Navigation panel */
 nav {
   width: 260px;
   float: left;
   background: var(--bg-nav);
-  margin-left: 0;
   padding: 1.2rem;
   overflow-y: auto;
-  border-right: 1px solid var(--border-subtle);
+  border-right: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 4px 0 12px rgba(0,0,0,0.4);
 }
 
 nav h2 {
   font-size: 0.9rem;
-  color: var(--accent-rtt);
+  color: var(--neon-cyan);
   margin-top: 1.2rem;
   margin-bottom: 0.4rem;
   letter-spacing: 0.04em;
+  text-shadow: var(--glow);
 }
 
 nav a {
   display: block;
   color: var(--text-muted);
-  text-decoration: none;
   padding: 0.35rem 0;
   font-size: 0.9rem;
 }
 
 nav a:hover {
-  color: var(--text-main);
+  color: var(--neon-magenta);
+  text-shadow: 0 0 6px var(--neon-magenta);
 }
 
+/* Main content */
 main {
   flex: 1;
   padding: 2.5rem;
@@ -229,20 +245,65 @@ main {
 }
 
 main h1, main h2, main h3 {
-  color: var(--accent-rtt);
+  color: var(--neon-cyan);
   font-weight: 500;
+  text-shadow: var(--glow);
 }
 
 pre {
   background: #0b0d12;
   padding: 1rem;
   overflow-x: auto;
-  border-left: 2px solid var(--accent-rtt);
+  border-left: 2px solid var(--neon-magenta);
 }
 
 code {
-  color: var(--text-main);
+  color: var(--neon-cyan);
 }
+
+/* Hide the default arrow */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+/* Custom arrow icons */
+details > summary::before {
+  content: "⏵"; /* collapsed */
+  padding-right: 6px;
+  font-size: 0.9em;
+}
+details[open] > summary::before {
+  content: "⏷"; /* expanded */
+}
+
+/* Make the h2/h3 feel like the toggle */
+details > summary h2,
+details > summary h3 {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hover effect */
+details > summary:hover h2,
+details > summary:hover h3 {
+  text-decoration: underline;
+}
+
+/* Optional: fade-in animation for opened blocks */
+details[open] {
+  animation: fadeIn 0.15s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+      
 </style>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -261,8 +322,8 @@ code {
   </svg>
  </p> 
   
-<!-- Governance Substrate Model — Document Map -->
-  <h2>🗽 Governance Substrate Model | RTT/1</h2>
+   <details>
+     <summary><h2>🗽 Governance Substrate Model | RTT/1</h2></summary>
       <a href="#README">🔰 README</a>
       <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
       <a href="#CONTRIBUTING">🤝 Contributing</a>
@@ -275,58 +336,80 @@ code {
       <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
       <a href="#SECURITY">🔐 Security</a>
       <a href="#PRINCIPLES">🧘 Principles</a>
-    <h3>🎞️ Related Modules</h3>
+   </details>
+   <details>
+     <summary><h3>🎞️ Related Modules</h3></summary>
       <a href="https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/">🗽 GSM Analyzer</a>
       <a href="https://www.triadicframeworks.org/media_substrate_model/">📡 Media Substrate Model</a>
       <a href="https://www.triadicframeworks.org/arrival_substrate_model/">🌅 Arrival Substrate Model</a>
-    <h3>🧭 Invariants — What Must Never Break</h3>
+   </details>
+   <details>
+     <summary><h3>🧭 Invariants — What Must Never Break</h3></summary>
       <a href="#ALIGNMENT_OVER_ENFORCEMENT">🛡️ Alignment Over Enforcement</a>
       <a href="#INVARIANT_PRINCIPLES">📐 Invariant Principles</a>
       <a href="#MINIMAL_MORAL_DENOMINATOR">⚖️ Minimal Moral Denominator</a>
       <a href="#REGIME_AWARENESS_AS_DUTY">🌍 Regime Awareness as Duty</a>
-    <h3>👁️ Awareness — How Drift Is Detected</h3>
+   </details>
+   <details>
+     <summary><h3>👁️ Awareness — How Drift Is Detected</h3></summary>
       <a href="#AI_ASSISTED_SENSING">🤖 AI‑Assisted Sensing</a>
       <a href="#EARLY_WARNING_SIGNALS">🚨 Early Warning Signals</a>
       <a href="#ESCALATION_PATTERNS">📈 Escalation Patterns</a>
       <a href="#IMMIGRANT_AWARENESS">🗽 Immigrant Awareness</a>
       <a href="#INTERRUPTION_WITHOUT_DOMINATION">✋ Interruption Without Domination</a>
-    <h3>🧪 Evaluation — How Decisions Are Tested</h3>
+   </details>
+   <details>
+     <summary><h3>🧪 Evaluation — How Decisions Are Tested</h3></summary>
       <a href="#CROSS_REGIME_STRESS_TESTS">🧬 Cross‑Regime Stress Tests</a>
       <a href="#FAILURE_MODE_MAPPING">💥 Failure Mode Mapping</a>
       <a href="#MINIMAL_SUFFICIENCY_CHECKS">🧩 Minimal Sufficiency Checks</a>
       <a href="#RTT_EVALUATION_FRAMEWORK">🔍 RTT Evaluation Framework</a>
-    <h3>✅ Validation — What Earns Trust</h3>
+   </details>
+   <details>
+     <summary><h3>✅ Validation — What Earns Trust</h3></summary>
       <a href="#DOI_CANON_INTERFACE">📚 DOI Canon Interface</a>
       <a href="#HUMAN_CURATED_AI_SIFT">🧠 Human‑Curated AI Sift</a>
       <a href="#MINIMAL_THEME_SUBMISSIONS">📝 Minimal Theme Submissions</a>
       <a href="#VALIDATED_SCIENCE_CRITERIA">🔬 Validated Science Criteria</a>
-    <h3>🛠️ Implementation — How Alignment Becomes Real</h3>
+   </details>
+   <details>
+     <summary><h3>🛠️ Implementation — How Alignment Becomes Real</h3></summary>
       <a href="#AI_ALIGNMENT_SURFACES">🧠 AI Alignment Surfaces</a>
       <a href="#CORE_SYSTEM_DESIGN">🏗️ Core System Design</a>
       <a href="#EDUCATION_EMBEDDING">🎓 Education Embedding</a>
       <a href="#INFRASTRUCTURE_RETROFIT_PATTERNS">🔧 Infrastructure Retrofit Patterns</a>
-    <h3>🧑‍✈️ Leadership — What Leaders Are Responsible For</h3>
+   </details>
+   <details>
+     <summary><h3>🧑‍✈️ Leadership — What Leaders Are Responsible For</h3></summary>
       <a href="#MAINTAINING_LEGIBILITY">🔎 Maintaining Legibility</a>
       <a href="#PHASE_MANAGEMENT">⏳ Phase Management</a>
       <a href="#STEWARDSHIP_NOT_CONTROL">🌱 Stewardship Not Control</a>
       <a href="#WHEN_NOT_TO_ACT">🛑 When Not to Act</a>
-    <h3>🌱 Incubation — How New Systems Are Born</h3>
+   </details>
+   <details>
+     <summary><h3>🌱 Incubation — How New Systems Are Born</h3></summary>
       <a href="#GLOBAL_COORDINATION">🌐 Global Coordination</a>
       <a href="#RTT_INCUBATOR_TRIAD_MODEL">🔺 RTT Incubator Triad Model</a>
       <a href="#STUDENT_LED_GOVERNANCE">🎒 Student‑Led Governance</a>
       <a href="#UNTETHERED_VENTURE_GROWTH">🚀 Untethered Venture Growth</a>
-    <h3>🕰️ History — Why These Rules Exist</h3>
+   </details>
+   <details>
+     <summary><h3>🕰️ History — Why These Rules Exist</h3></summary>
       <a href="#LATE_CORRECTION_COSTS">💸 Late Correction Costs</a>
       <a href="#LESSONS_FROM_FAILURE">📉 Lessons From Failure</a>
       <a href="#RESOURCE_MISALLOCATION">📊 Resource Misallocation</a>
       <a href="#WHY_GOVERNANCE_FAILED_BEFORE">❓ Why Governance Failed Before</a>
-    <h3>📎 Appendices — Living Extensions</h3>
+   </details>
+   <details>
+     <summary><h3>📎 Appendices — Living Extensions</h3></summary>
       <a href="#CASE_STUDIES">📂 Case Studies</a>
       <a href="#FUTURE_WORK">🔮 Future Work</a>
       <a href="#SIMULATIONS">🎦 Simulations</a>
       <a href="#GLOSSARY">📖 Glossary</a>
       <a href="#OPEN_QUESTIONS">❔ Open Questions</a>
-    <h3>🔌 Adapters — How Existing Systems Translate</h3>
+   </details>
+   <details>
+     <summary><h3>🔌 Adapters — How Existing Systems Translate</h3></summary>
       <a href="#ADAPTER_PRINCIPLES">🧩 Adapter Principles</a>
       <a href="#CONTAINMENT_WHEN_TRANSLATION_FAILS">🧯 Containment When Translation Fails</a>
       <a href="#LEGACY_SYSTEM_MAPPING">🗺️ Legacy System Mapping</a>
@@ -338,7 +421,9 @@ code {
       <a href="#PUNISHMENT_REHABILITATIVE_ADAPTER">⚖️ Punishment–Rehabilitative Adapter</a>
       <a href="#INVERTED_ECONOMICS_ADAPTER">🔄 Inverted Economics Adapter</a>
       <a href="#LOCAL_LEADERSHIP_ROLES_ADAPTER">🚸 Local Leadership Roles Adapter</a>
-   <h3>🏗️ Triadic Tools</h3> 
+   </details>
+   <details>
+     <summary><h2>🏗️ Triadic Tools</h2></summary> 
       <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
       <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
       <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
@@ -354,6 +439,7 @@ code {
       <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
       <a href="../">🔙TFT</a>
+   </details>
    <!-- RTT Canonical Signature -->
 <!-- ═══════════════════════════════════════════════════════════ -->
 <!-- /docs/Governance_Substrate_Model — Session Context block  -->
@@ -366,7 +452,8 @@ code {
          data-drift="minimal"
          data-regime="structural">
 
-  <h2>Session Context</h2>
+   <details>
+     <summary><h2>Session Context</h2></summary>
 
   <div class="context-block">
 
@@ -400,7 +487,7 @@ code {
     <span class="context-value">students + researchers + designers + stewards + AIs</span>
 
   </div>
-
+   </details>
 </section>
 
 <div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;
