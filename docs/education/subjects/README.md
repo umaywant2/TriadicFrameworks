@@ -1,23 +1,7 @@
-## 🎓 Subjects | Education  
 
 - [`subjects_module.json`](subjects_module.json) — Agentic module schema role assignments
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🧭Education%20Core-🌐Unified%20Scientific%20Atlas%20Active-4c8eda?style=for-the-badge" alt="🧭Education Core | 🌐Unified Scientific Atlas Active"/>
-
+# 🎓 Subjects | Education  
 A single RTT lens across all scientific subjects
 
 ## 🌐 Cross‑Domain Unification
@@ -103,3 +87,19 @@ This folder provides:
 - a bridge between classical science and modern resonance theory  
 
 It is the **educational core** of the RTT canon.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🧭Education%20Core-🌐Unified%20Scientific%20Atlas%20Active-4c8eda?style=for-the-badge" alt="🧭Education Core | 🌐Unified Scientific Atlas Active"/>
