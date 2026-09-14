@@ -74,141 +74,157 @@
 
 <style>
 /* ============================================================
-   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   NAWDERIAN NEON ARCADE THEME — RTT/1 SYNTHWAVE EDITION
    ============================================================ */
 
-  :root {
-  --bg-main: #0d0f12;
-  --bg-nav: #15181d;
-  --border-subtle: #2a2f38;
-  --text-main: #dfe7f3;
-  --text-muted: #9aa4b2;
-  --accent-rtt: #8ab4ff;
+:root {
+  --bg-main: #05060a;                 /* deep CRT black */
+  --bg-nav: #0a0c12;                  /* darker sidebar */
+  --bg-panel: #0f1118;
+
+  --text-main: #e8f7ff;               /* neon ice */
+  --text-muted: #7a8ca0;              /* CRT fade */
+
+  --neon-cyan: #3df5ff;
+  --neon-magenta: #ff3dfc;
+  --neon-yellow: #ffe66d;
+
+  --triadic-neon: linear-gradient(135deg,
+                      #3df5ff,
+                      #ff3dfc,
+                      #ffe66d);
+
+  --scanline: repeating-linear-gradient(
+                to bottom,
+                rgba(255,255,255,0.03) 0px,
+                rgba(255,255,255,0.03) 1px,
+                rgba(0,0,0,0.05) 2px
+              );
+
   --radius: 10px;
-  --shadow: 0 0 20px rgba(0,0,0,0.4);
-  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
-  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
-  --rtt-accent-mid:  #9ece6a;   /* balance */
-  --rtt-accent-high: #f7768e;   /* emphasis */
+  --glow: 0 0 12px rgba(255, 0, 180, 0.45),
+          0 0 24px rgba(0, 255, 255, 0.25);
 }
 
-.protocol a,
-.equation a {
-  border-bottom-style: dotted;
-}
-
-/* Base link style */
-a {
-  color: var(--rtt-accent-mid);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-  transition: color 0.2s ease, border-color 0.2s ease;
-}
-
-/* Hover / focus */
-a:hover,
-a:focus {
-  color: var(--rtt-accent-high);
-  border-bottom-color: var(--rtt-accent-high);
-}
-
-/* Visited links */
-a:visited {
-  color: var(--rtt-accent-low);
-}
-
-  /* Base layout */
-  html { scroll-behavior: smooth; }
-  body {
+/* Base layout */
+html { scroll-behavior: smooth; }
+body {
   margin: 0;
   padding: 0;
   background: var(--bg-main);
+  background-image: var(--scanline);
   color: var(--text-main);
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto;
   line-height: 1.65;
   font-size: 17px;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  }
+}
 
-  /* Headings */
-  h1, h2, h3, h4 {
+/* Neon headings */
+h1, h2, h3, h4 {
   font-weight: 700;
   margin-top: 1.8em;
   margin-bottom: 0.5em;
   line-height: 1.2;
-  background: var(--triadic);
+  background: var(--triadic-neon);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  }
+  text-shadow: var(--glow);
+}
 
-  /* Paragraphs and lists */
-  p, ul, ol {
+/* Paragraphs and lists */
+p, ul, ol {
   padding: 0 1em;
   margin: 0 0 1.1em 0;
-  color: #dfe7f3;
-  }
+  color: var(--text-main);
+}
 
-  /* Code/pre */
-  pre, code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
-  background: rgba(255,255,255,0.02);
+/* Neon links */
+a {
+  color: var(--neon-cyan);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255,255,255,0.25);
+  transition: color 0.2s ease, border-color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--neon-magenta);
+  border-bottom-color: var(--neon-magenta);
+  text-shadow: 0 0 8px var(--neon-magenta);
+}
+
+a:visited {
+  color: var(--neon-yellow);
+}
+
+/* Code blocks */
+pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono";
+  background: rgba(255,255,255,0.04);
   padding: 0.4em 0.6em;
   border-radius: 6px;
-  color: #cfe8ff;
-  }
+  color: #dffaff;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: inset 0 0 12px rgba(0,255,255,0.15);
+}
 
- /* Context Block */
-  .context-block {
-    font-family: monospace;
-    font-size: 0.95rem;
-    line-height: 1.4;
-    margin: 0.5rem 0 1rem 0;
-  }
-       
-  /* Context Label */
-  .context-label {
-    color: #ff9800; /* orange */
-    font-weight: bold;
-    margin-right: 0.25rem;
-  }
-       
-  /* Context Value */
-  .context-value {
-    color: #ffffff; /* white */
-  }
-       
+/* Context block */
+.context-block {
+  font-family: monospace;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0.5rem 0 1rem 0;
+  padding: 1rem;
+  background: var(--bg-panel);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--glow);
+}
+
+.context-label {
+  color: var(--neon-yellow);
+  font-weight: bold;
+  margin-right: 0.25rem;
+}
+
+.context-value {
+  color: var(--text-main);
+}
+
+/* Navigation panel */
 nav {
   width: 260px;
   float: left;
   background: var(--bg-nav);
-  margin-left: 0;
   padding: 1.2rem;
   overflow-y: auto;
-  border-right: 1px solid var(--border-subtle);
+  border-right: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 4px 0 12px rgba(0,0,0,0.4);
 }
 
 nav h2 {
   font-size: 0.9rem;
-  color: var(--accent-rtt);
+  color: var(--neon-cyan);
   margin-top: 1.2rem;
   margin-bottom: 0.4rem;
   letter-spacing: 0.04em;
+  text-shadow: var(--glow);
 }
 
 nav a {
   display: block;
   color: var(--text-muted);
-  text-decoration: none;
   padding: 0.35rem 0;
   font-size: 0.9rem;
 }
 
 nav a:hover {
-  color: var(--text-main);
+  color: var(--neon-magenta);
+  text-shadow: 0 0 6px var(--neon-magenta);
 }
 
+/* Main content */
 main {
   flex: 1;
   padding: 2.5rem;
@@ -216,20 +232,65 @@ main {
 }
 
 main h1, main h2, main h3 {
-  color: var(--accent-rtt);
+  color: var(--neon-cyan);
   font-weight: 500;
+  text-shadow: var(--glow);
 }
 
 pre {
   background: #0b0d12;
   padding: 1rem;
   overflow-x: auto;
-  border-left: 2px solid var(--accent-rtt);
+  border-left: 2px solid var(--neon-magenta);
 }
 
 code {
-  color: var(--text-main);
+  color: var(--neon-cyan);
 }
+
+/* Hide the default arrow */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+/* Custom arrow icons */
+details > summary::before {
+  content: "⏵"; /* collapsed */
+  padding-right: 6px;
+  font-size: 0.9em;
+}
+details[open] > summary::before {
+  content: "⏷"; /* expanded */
+}
+
+/* Make the h2/h3 feel like the toggle */
+details > summary h2,
+details > summary h3 {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hover effect */
+details > summary:hover h2,
+details > summary:hover h3 {
+  text-decoration: underline;
+}
+
+/* Optional: fade-in animation for opened blocks */
+details[open] {
+  animation: fadeIn 0.15s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+      
 </style>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -248,7 +309,8 @@ code {
   </svg>
  </p> 
   
-  <h2>🌬️ Atmosphere Module | RTT/1</h2>
+   <details>
+     <summary><h2>🌬️ Atmosphere Module | RTT/1</h2></summary>
       <a href="#README">🔰 README</a>
       <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
       <a href="#CONTRIBUTING">🤝 Contributing</a>
@@ -261,107 +323,147 @@ code {
       <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
       <a href="#SECURITY">🔐 Security</a>
       <a href="#PRINCIPLES">🧘 Principles</a>
-    <h3>🌀 Core Module Files</h3>
+   </details>
+   <details>
+     <summary><h3>🌀 Core Module Files</h3></summary>
       <a href="#INDEX">📘 Index</a>
       <a href="#MODULE_INDEX">🧭 Module Index</a>
       <a href="#A_CAPTURE">📥 Capture Notes</a>
       <a href="#A_DIFF_TABLE">📊 Diff Table</a>
       <a href="#ATMOSPHERE_AGENT">🤖 Atmosphere Agent</a>
-    <h3>🌡️ Module-Level Diagnostics</h3>
+   </details>
+   <details>
+     <summary><h3>🌡️ Module-Level Diagnostics</h3></summary>
       <a href="#ATMOSPHERE_ENVELOPE">🧩 Envelope</a>
       <a href="#ATMOSPHERE_EXAMPLE">🧪 Example</a>
       <a href="#ATMOSPHERE_MAP">🗺️ Map</a>
       <a href="#ATMOSPHERE_TRACE">📈 Trace</a>
       <a href="#OPERATORS_ATMOSPHERE">⚙️ Operators</a>
-    <h3>🔍 Clarity Diagnostics</h3>
+   </details>
+   <details>
+     <summary><h3>🔍 Clarity Diagnostics</h3></summary>
       <a href="#CLARITY_DIAGNOSTIC">✨ Diagnostic</a>
       <a href="#CLARITY_DIAGNOSTIC_MAP">🗺️ Map</a>
       <a href="#CLARITY_DIAGNOSTIC_TRACE">📈 Trace</a>
       <a href="#CLARITY_ENVELOPE">📦 Envelope</a>
-    <h3>🔗 Coherence Diagnostics</h3>
+   </details>
+   <details>
+     <summary><h3>🔗 Coherence Diagnostics</h3></summary>
       <a href="#COHERENCE_DIAGNOSTIC">🔗 Diagnostic</a>
       <a href="#COHERENCE_ENVELOPE">📦 Envelope</a>
       <a href="#COHERENCE_MAP">🗺️ Map</a>
       <a href="#COHERENCE_TRACE">📈 Trace</a>
-    <h3>🧬 Composition Diagnostics</h3>
+   </details>
+   <details>
+     <summary><h3>🧬 Composition Diagnostics</h3></summary>
       <a href="#COMPOSITION_DIAGNOSTIC">🧬 Diagnostic</a>
       <a href="#COMPOSITION_ENVELOPE">📦 Envelope</a>
       <a href="#COMPOSITION_MAP">🗺️ Map</a>
       <a href="#COMPOSITION_TRACE">📈 Trace</a>
-    <h3>🔁 Continuity Diagnostics</h3>
+   </details>
+   <details>
+     <summary><h3>🔁 Continuity Diagnostics</h3></summary>
       <a href="#CONTINUITY_DIAGNOSTIC">🔁 Diagnostic</a>
       <a href="#CONTINUITY_ENVELOPE">📦 Envelope</a>
       <a href="#CONTINUITY_MAP">🗺️ Map</a>
       <a href="#CONTINUITY_TRACE">📈 Trace</a>
-    <h3>📐 Dimensional Diagnostics</h3>
+   </details>
+   <details>
+     <summary><h3>📐 Dimensional Diagnostics</h3></summary>
       <a href="#DIMENSIONAL_DIAGNOSTIC">📐 Diagnostic</a>
       <a href="#DIMENSIONAL_DIAGNOSTIC_TRACE">📈 Diagnostic Trace</a>
       <a href="#DIMENSIONAL_ENVELOPE">📦 Envelope</a>
       <a href="#DIMENSIONAL_ENVELOPE_MIN">📦 Envelope (Min)</a>
       <a href="#DIMENSIONAL_MAP">🗺️ Map</a>
       <a href="#DIMENSIONAL_TRACE">📈 Trace</a>
-    <h3>🌫️ Drift Diagnostics</h3>
+   </details>
+   <details>
+     <summary><h3>🌫️ Drift Diagnostics</h3></summary>
       <a href="#DRIFT_DIAGNOSTIC">🌫️ Diagnostic</a>
       <a href="#DRIFT_DIAGNOSTIC_TRACE">📈 Diagnostic Trace</a>
       <a href="#DRIFT_ENVELOPE">📦 Envelope</a>
       <a href="#DRIFT_ENVELOPE_MIN">📦 Envelope (Min)</a>
       <a href="#DRIFT_MAP">🗺️ Map</a>
       <a href="#DRIFT_TRACE">📈 Trace</a>
-    <h3>🌪️ Dynamics Diagnostics</h3>
+   </details>
+   <details>
+     <summary><h3>🌪️ Dynamics Diagnostics</h3></summary>
       <a href="#DYNAMICS_DIAGNOSTIC">🌪️ Diagnostic</a>
       <a href="#DYNAMICS_ENVELOPE">📦 Envelope</a>
       <a href="#DYNAMICS_MAP">🗺️ Map</a>
       <a href="#DYNAMICS_TRACE">📈 Trace</a>
-    <h3>🔥 Forcing Diagnostics</h3>
+   </details>
+   <details>
+     <summary><h3>🔥 Forcing Diagnostics</h3></summary>
       <a href="#FORCING_DIAGNOSTIC">🔥 Diagnostic</a>
       <a href="#FORCING_ENVELOPE">📦 Envelope</a>
       <a href="#FORCING_MAP">🗺️ Map</a>
       <a href="#FORCING_TRACE">📈 Trace</a>
-    <h3>💧 Hydrospheric Diagnostics</h3>
+   </details>
+   <details>
+     <summary><h3>💧 Hydrospheric Diagnostics</h3></summary>
       <a href="#HYDROSPHERIC_DIAGNOSTIC">💧 Diagnostic</a>
       <a href="#HYDROSPHERIC_ENVELOPE">📦 Envelope</a>
       <a href="#HYDROSPHERIC_MAP">🗺️ Map</a>
       <a href="#HYDROSPHERIC_TRACE">📈 Trace</a>
-    <h3>🎯 Nudge Diagnostics</h3>
+   </details>
+   <details>
+     <summary><h3>🎯 Nudge Diagnostics</h3></summary>
       <a href="#NUDGE_DIAGNOSTIC">🎯 Diagnostic</a>
       <a href="#NUDGE_ENVELOPE">📦 Envelope</a>
       <a href="#NUDGE_MAP">🗺️ Map</a>
       <a href="#NUDGE_TRACE">📈 Trace</a>
-    <h3>🌀 Paradox Diagnostics</h3>
+   </details>
+   <details>
+     <summary><h3>🌀 Paradox Diagnostics</h3></summary>
       <a href="#PARADOX_DIAGNOSTIC">🌀 Diagnostic</a>
       <a href="#PARADOX_DIAGNOSTIC_TRACE">📈 Diagnostic Trace</a>
       <a href="#PARADOX_ENVELOPE">📦 Envelope</a>
       <a href="#PARADOX_ENVELOPE_MIN">📦 Envelope (Min)</a>
       <a href="#PARADOX_MAP">🗺️ Map</a>
       <a href="#PARADOX_TRACE">📈 Trace</a>
-    <h3>🎵 Resonance Diagnostics</h3>
+   </details>
+   <details>
+     <summary><h3>🎵 Resonance Diagnostics</h3></summary>
       <a href="#RESONANCE_DIAGNOSTIC">🎵 Diagnostic</a>
       <a href="#RESONANCE_DIAGNOSTIC_TRACE">📈 Diagnostic Trace</a>
       <a href="#RESONANCE_ENVELOPE">📦 Envelope</a>
       <a href="#RESONANCE_ENVELOPE_MIN">📦 Envelope (Min)</a>
       <a href="#RESONANCE_MAP">🗺️ Map</a>
       <a href="#RESONANCE_TRACE">📈 Trace</a>
-    <h3>🌍 Teleconnection Diagnostics</h3>
+   </details>
+   <details>
+     <summary><h3>🌍 Teleconnection Diagnostics</h3></summary>
       <a href="#TELECONNECTION_DIAGNOSTIC">🌍 Diagnostic</a>
       <a href="#TELECONNECTION_ENVELOPE">📦 Envelope</a>
       <a href="#TELECONNECTION_MAP">🗺️ Map</a>
       <a href="#TELECONNECTION_TRACE">📈 Trace</a>
-    <h3>🔥 Thermodynamics Diagnostics</h3>
+   </details>
+   <details>
+     <summary><h3>🔥 Thermodynamics Diagnostics</h3></summary>
       <a href="#THERMODYNAMICS_DIAGNOSTIC">🔥 Diagnostic</a>
       <a href="#THERMODYNAMICS_ENVELOPE">📦 Envelope</a>
       <a href="#THERMODYNAMICS_MAP">🗺️ Map</a>
       <a href="#THERMODYNAMICS_TRACE">📈 Trace</a>
-    <h3>📚 Examples</h3>
+   </details>
+   <details>
+     <summary><h3>📚 Examples</h3></summary>
       <a href="#EXAMPLE_BASELINE">📘 Baseline Example</a>
       <a href="#EXAMPLE_ADVANCED">🚀 Advanced Example</a>
-    <h3>❄️ Extensions</h3>
+   </details>
+   <details>
+     <summary><h3>❄️ Extensions</h3></summary>
       <a href="#CRYOSPHERE_COUPLING">❄️ Cryosphere Coupling</a>
       <a href="#OCEAN_COUPLING">🌊 Ocean Coupling</a>
-    <h3>🔮 Future</h3>
+   </details>
+   <details>
+     <summary><h3>🔮 Future</h3></summary>
       <a href="#BIOSPHERE_FEEDBACK">🌱 Biosphere Feedback</a>
       <a href="#LAND_COUPLING">🌍 Land Coupling</a>
       <a href="#MAGNETOSPHERE_COUPLING">🧲 Magnetosphere Coupling</a>
-    <h3>🗺️ Maps</h3>
+   </details>
+   <details>
+     <summary><h3>🗺️ Maps</h3></summary>
       <a href="#MAP_CLARITY">✨ Clarity Map</a>
       <a href="#MAP_COHERENCE">🔗 Coherence Map</a>
       <a href="#MAP_COMPOSITION">🧬 Composition Map</a>
@@ -376,24 +478,32 @@ code {
       <a href="#MAP_RESONANCE">🎵 Resonance Map</a>
       <a href="#MAP_TELECONNECTION">🌍 Teleconnection Map</a>
       <a href="#MAP_THERMODYNAMICS">🔥 Thermodynamics Map</a>
-    <h3>🧰 Prompts</h3>
+   </details>
+   <details>
+     <summary><h3>🧰 Prompts</h3></summary>
       <a href="#PROMPTS_EXAMPLES">📘 Example Prompts</a>
       <a href="#PROMPTS_MODULE">🧭 Module Prompts</a>
       <a href="#PROMPTS_TEMPLATES">📐 Templates</a>
-    <h3>📜 Registry</h3>
+   </details>
+   <details>
+     <summary><h3>📜 Registry</h3></summary>
       <a href="#REGISTRY_AGENTS">🤖 Agents</a>
       <a href="#REGISTRY_INDEX">📘 Registry Index</a>
       <a href="#REGISTRY_MODULE">🧭 Module Registry</a>
       <a href="#REGISTRY_OPERATORS">⚙️ Operators</a>
       <a href="#REGISTRY_SCALES">📏 Scales</a>
       <a href="#REGISTRY_SEVEN_PHASES">7️⃣ Seven Phases</a>
-    <h3>🧪 Session</h3>
+   </details>
+   <details>
+     <summary><h3>🧪 Session</h3></summary>
       <a href="#SESSION_AUDIT_LOG">📋 Audit Log</a>
       <a href="#SESSION_CAPTURE_NOTES">📝 Capture Notes</a>
       <a href="#SESSION_CONTEXT">📦 Session Context</a>
       <a href="#SESSION_INDEX">🧭 Session Index</a>
       <a href="#SESSION_TRACE">📈 Session Trace</a>
-    <h3>🏗️ Triadic Tools</h3> 
+   </details>
+   <details>
+     <summary><h2>🏗️ Triadic Tools</h2></summary> 
       <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
       <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
       <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
@@ -409,6 +519,7 @@ code {
       <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
       <a href="../">🔙TFT</a>
+   </details>
    <!-- RTT Session Header (canonical stub) -->
 <section id="atmosphere-session-header"
          data-rtt="atmosphere"
@@ -416,7 +527,8 @@ code {
          data-drift="bounded"
          data-regime="environmental">
 
-  <h2>Session Context</h2>
+   <details>
+     <summary><h2>Session Context</h2></summary>
 
 <!-- ═══════════════════════════════════════════════════════════════ -->
 <!-- Session Context — Atmosphere Module (RTT/1 Environmental Domain) -->
@@ -462,7 +574,7 @@ code {
   </div>
 
 </section>
-
+   </details>
 </section>
 
 <div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;
