@@ -80,141 +80,157 @@
 
 <style>
 /* ============================================================
-   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   NAWDERIAN NEON ARCADE THEME — RTT/1 SYNTHWAVE EDITION
    ============================================================ */
 
-  :root {
-  --bg-main: #0d0f12;
-  --bg-nav: #15181d;
-  --border-subtle: #2a2f38;
-  --text-main: #dfe7f3;
-  --text-muted: #9aa4b2;
-  --accent-rtt: #8ab4ff;
+:root {
+  --bg-main: #05060a;                 /* deep CRT black */
+  --bg-nav: #0a0c12;                  /* darker sidebar */
+  --bg-panel: #0f1118;
+
+  --text-main: #e8f7ff;               /* neon ice */
+  --text-muted: #7a8ca0;              /* CRT fade */
+
+  --neon-cyan: #3df5ff;
+  --neon-magenta: #ff3dfc;
+  --neon-yellow: #ffe66d;
+
+  --triadic-neon: linear-gradient(135deg,
+                      #3df5ff,
+                      #ff3dfc,
+                      #ffe66d);
+
+  --scanline: repeating-linear-gradient(
+                to bottom,
+                rgba(255,255,255,0.03) 0px,
+                rgba(255,255,255,0.03) 1px,
+                rgba(0,0,0,0.05) 2px
+              );
+
   --radius: 10px;
-  --shadow: 0 0 20px rgba(0,0,0,0.4);
-  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
-  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
-  --rtt-accent-mid:  #9ece6a;   /* balance */
-  --rtt-accent-high: #f7768e;   /* emphasis */
+  --glow: 0 0 12px rgba(255, 0, 180, 0.45),
+          0 0 24px rgba(0, 255, 255, 0.25);
 }
 
-.protocol a,
-.equation a {
-  border-bottom-style: dotted;
-}
-
-/* Base link style */
-a {
-  color: var(--rtt-accent-mid);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-  transition: color 0.2s ease, border-color 0.2s ease;
-}
-
-/* Hover / focus */
-a:hover,
-a:focus {
-  color: var(--rtt-accent-high);
-  border-bottom-color: var(--rtt-accent-high);
-}
-
-/* Visited links */
-a:visited {
-  color: var(--rtt-accent-low);
-}
-
-  /* Base layout */
-  html { scroll-behavior: smooth; }
-  body {
+/* Base layout */
+html { scroll-behavior: smooth; }
+body {
   margin: 0;
   padding: 0;
   background: var(--bg-main);
+  background-image: var(--scanline);
   color: var(--text-main);
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto;
   line-height: 1.65;
   font-size: 17px;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  }
+}
 
-  /* Headings */
-  h1, h2, h3, h4 {
+/* Neon headings */
+h1, h2, h3, h4 {
   font-weight: 700;
   margin-top: 1.8em;
   margin-bottom: 0.5em;
   line-height: 1.2;
-  background: var(--triadic);
+  background: var(--triadic-neon);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  }
+  text-shadow: var(--glow);
+}
 
-  /* Paragraphs and lists */
-  p, ul, ol {
+/* Paragraphs and lists */
+p, ul, ol {
   padding: 0 1em;
   margin: 0 0 1.1em 0;
-  color: #dfe7f3;
-  }
+  color: var(--text-main);
+}
 
-  /* Code/pre */
-  pre, code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
-  background: rgba(255,255,255,0.02);
+/* Neon links */
+a {
+  color: var(--neon-cyan);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255,255,255,0.25);
+  transition: color 0.2s ease, border-color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--neon-magenta);
+  border-bottom-color: var(--neon-magenta);
+  text-shadow: 0 0 8px var(--neon-magenta);
+}
+
+a:visited {
+  color: var(--neon-yellow);
+}
+
+/* Code blocks */
+pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono";
+  background: rgba(255,255,255,0.04);
   padding: 0.4em 0.6em;
   border-radius: 6px;
-  color: #cfe8ff;
-  }
+  color: #dffaff;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: inset 0 0 12px rgba(0,255,255,0.15);
+}
 
- /* Context Block */
-  .context-block {
-    font-family: monospace;
-    font-size: 0.95rem;
-    line-height: 1.4;
-    margin: 0.5rem 0 1rem 0;
-  }
-       
-  /* Context Label */
-  .context-label {
-    color: #ff9800; /* orange */
-    font-weight: bold;
-    margin-right: 0.25rem;
-  }
-       
-  /* Context Value */
-  .context-value {
-    color: #ffffff; /* white */
-  }
-  
+/* Context block */
+.context-block {
+  font-family: monospace;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0.5rem 0 1rem 0;
+  padding: 1rem;
+  background: var(--bg-panel);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--glow);
+}
+
+.context-label {
+  color: var(--neon-yellow);
+  font-weight: bold;
+  margin-right: 0.25rem;
+}
+
+.context-value {
+  color: var(--text-main);
+}
+
+/* Navigation panel */
 nav {
   width: 260px;
   float: left;
   background: var(--bg-nav);
-  margin-left: 0;
   padding: 1.2rem;
   overflow-y: auto;
-  border-right: 1px solid var(--border-subtle);
+  border-right: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 4px 0 12px rgba(0,0,0,0.4);
 }
 
 nav h2 {
   font-size: 0.9rem;
-  color: var(--accent-rtt);
+  color: var(--neon-cyan);
   margin-top: 1.2rem;
   margin-bottom: 0.4rem;
   letter-spacing: 0.04em;
+  text-shadow: var(--glow);
 }
 
 nav a {
   display: block;
   color: var(--text-muted);
-  text-decoration: none;
   padding: 0.35rem 0;
   font-size: 0.9rem;
 }
 
 nav a:hover {
-  color: var(--text-main);
+  color: var(--neon-magenta);
+  text-shadow: 0 0 6px var(--neon-magenta);
 }
 
+/* Main content */
 main {
   flex: 1;
   padding: 2.5rem;
@@ -222,20 +238,65 @@ main {
 }
 
 main h1, main h2, main h3 {
-  color: var(--accent-rtt);
+  color: var(--neon-cyan);
   font-weight: 500;
+  text-shadow: var(--glow);
 }
 
 pre {
   background: #0b0d12;
   padding: 1rem;
   overflow-x: auto;
-  border-left: 2px solid var(--accent-rtt);
+  border-left: 2px solid var(--neon-magenta);
 }
 
 code {
-  color: var(--text-main);
+  color: var(--neon-cyan);
 }
+
+/* Hide the default arrow */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+/* Custom arrow icons */
+details > summary::before {
+  content: "⏵"; /* collapsed */
+  padding-right: 6px;
+  font-size: 0.9em;
+}
+details[open] > summary::before {
+  content: "⏷"; /* expanded */
+}
+
+/* Make the h2/h3 feel like the toggle */
+details > summary h2,
+details > summary h3 {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hover effect */
+details > summary:hover h2,
+details > summary:hover h3 {
+  text-decoration: underline;
+}
+
+/* Optional: fade-in animation for opened blocks */
+details[open] {
+  animation: fadeIn 0.15s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+      
 </style>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -254,7 +315,8 @@ code {
   </svg>
  </p> 
   
-  <h2>🛂 Enterprise Structural Awareness — Documentation Index</h2>
+   <details>
+     <summary><h2>🛂 Enterprise Structural Awareness — Documentation Index</h2></summary>
       <a href="#README">🔰 README</a>
       <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
       <a href="#CONTRIBUTING">🤝 Contributing</a>
@@ -267,39 +329,57 @@ code {
       <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
       <a href="#SECURITY">🔐 Security</a>
       <a href="#PRINCIPLES">🧘 Principles</a>
-    <h3>🎯 Overview</h3>
+   </details>
+   <details>
+     <summary><h3>🎯 Overview</h3></summary>
       <a href="#OVERVIEW_PURPOSE">🎯 Purpose</a>
       <a href="#OVERVIEW_SCOPE_AND_NON_GOALS">📏 Scope & Non‑Goals</a>
       <a href="#OVERVIEW_TERMINOLOGY_ALIGNMENT">📚 Terminology Alignment</a>
-    <h3>🧩 Entry Points</h3>
+   </details>
+   <details>
+     <summary><h3>🧩 Entry Points</h3></summary>
       <a href="#ENTRY_CONFIGURATION_SURFACES">🧩 Configuration Surfaces</a>
       <a href="#ENTRY_POLICY_OBJECTS">📜 Policy Objects</a>
       <a href="#ENTRY_METADATA_AND_ANNOTATIONS">🏷️ Metadata & Annotations</a>
       <a href="#ENTRY_LIFECYCLE_STATES">🔄 Lifecycle States</a>
-    <h3>🧬 Minimal Schema</h3>
+   </details>
+   <details>
+     <summary><h3>🧬 Minimal Schema</h3></summary>
       <a href="#SCHEMA_STRUCTURAL_AWARENESS">🧬 Structural Awareness Schema</a>
       <a href="#SCHEMA_EXAMPLE_SINGLE_FILE">📄 Example Single File</a>
       <a href="#SCHEMA_DESIGN_NOTES">📝 Schema Design Notes</a>
-    <h3>🕊️ Integration Patterns</h3>
+   </details>
+   <details>
+     <summary><h3>🕊️ Integration Patterns</h3></summary>
       <a href="#INTEGRATION_PASSIVE_DECLARATION">🕊️ Passive Declaration</a>
       <a href="#INTEGRATION_DOCUMENTATION_ONLY_ADOPTION">📖 Documentation‑Only Adoption</a>
       <a href="#INTEGRATION_OBSERVABILITY_ALIGNMENT">📊 Observability Alignment</a>
       <a href="#INTEGRATION_AUTOMATION_BOUNDARY_MARKERS">🚦 Automation Boundary Markers</a>
-    <h3>⚙️ Enterprise Examples</h3>
+   </details>
+   <details>
+     <summary><h3>⚙️ Enterprise Examples</h3></summary>
       <a href="#EXAMPLE_CONFIGURATION_MANAGEMENT">⚙️ Configuration Management</a>
       <a href="#EXAMPLE_IDENTITY_AND_ACCESS">🔐 Identity & Access</a>
       <a href="#EXAMPLE_MONITORING_AND_ALERTING">🚨 Monitoring & Alerting</a>
       <a href="#EXAMPLE_SERVICE_ORCHESTRATION">🧵 Service Orchestration</a>
-    <h3>🔧 Operational Implications</h3>
+   </details>
+   <details>
+     <summary><h3>🔧 Operational Implications</h3></summary>
       <a href="#OPERATIONS_CHANGE_MANAGEMENT">🔧 Change Management</a>
       <a href="#OPERATIONS_INCIDENT_INTERPRETATION">🧯 Incident Interpretation</a>
       <a href="#OPERATIONS_POSTMORTEM_CLARITY">🧾 Postmortem Clarity</a>
-    <h3>🔗 Relationships</h3>
+   </details>
+   <details>
+     <summary><h3>🔗 Relationships</h3></summary>
       <a href="#RELATIONSHIP_TO_MSRM">🔗 Relationship to MSRM</a>
       <a href="#RELATIONSHIP_TO_RSM">🌊 Relationship to RSM</a>
-    <h3>🔮 Future Directions</h3>
+   </details>
+   <details>
+     <summary><h3>🔮 Future Directions</h3></summary>
       <a href="#FUTURE_DIRECTIONS">🔮 Future Directions</a>
-    <h3>🏗️ Triadic Tools</h3> 
+   </details>
+   <details>
+     <summary><h2>🏗️ Triadic Tools</h2></summary> 
       <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
       <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
       <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
@@ -315,6 +395,7 @@ code {
       <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
       <a href="../">🔙TFT</a>
+   </details>
    <!-- RTT Canonical Signature -->
 <!-- ═══════════════════════════════════════════════════════════ -->
 <!-- /docs/enterprise_structural_awareness — Session Context    -->
@@ -327,7 +408,8 @@ code {
          data-drift="minimal"
          data-regime="structural">
 
-  <h2>Session Context</h2>
+   <details>
+     <summary><h2>Session Context</h2></summary>
 
   <div class="context-block">
 
@@ -361,7 +443,7 @@ code {
     <span class="context-value">enterprise architects + engineers + product teams + AIs</span>
 
   </div>
-
+   </details>
 </section>
 
 <div style="display:inline-block;padding:6px 12px;background:#000;color:#fff;
