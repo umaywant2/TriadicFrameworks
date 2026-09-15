@@ -17,7 +17,7 @@
 
 - **EIN Confirmation (IRS)**  
   EIN: 42-3542585  
-  Responsible Party: Andrew C. Wilson  
+  Responsible Party: Nawder Loswin  
   Business Activity: SERVICE — Substrate Grammar
 
 - **DBA Registration**  
