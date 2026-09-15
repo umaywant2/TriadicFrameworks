@@ -62,123 +62,154 @@
       
 <style>
 /* ============================================================
-   IPD‑12 DIMENSIONAL ALLOY THEME — MOBILE FIRST
+   NAWDERIAN NEON ARCADE THEME — RTT/1 SYNTHWAVE EDITION
    ============================================================ */
 
 :root {
-  /* Dimensional Alloy Palette */
-  --ipd-bg-1: #0a0c10;        /* deep substrate */
-  --ipd-bg-2: #11141a;        /* alloy shadow */
-  --ipd-bg-3: #1c2129;        /* engine steel */
-  --ipd-accent-1: #6dd5ed;    /* refractive vacuum */
-  --ipd-accent-2: #2193b0;    /* curvature alloy */
-  --ipd-accent-3: #b3ffab;    /* coherence stabilizer */
-  --ipd-accent-4: #ff9a9e;    /* paradox trigger */
+  --bg-main: #05060a;                 /* deep CRT black */
+  --bg-nav: #0a0c12;                  /* darker sidebar */
+  --bg-panel: #0f1118;
 
-  --ipd-text-main: #e6eef7;
-  --ipd-text-muted: #9aa4b2;
+  --text-main: #e8f7ff;               /* neon ice */
+  --text-muted: #7a8ca0;              /* CRT fade */
 
-  --ipd-radius: 10px;
-  --ipd-shadow: 0 0 24px rgba(0,0,0,0.45);
+  --neon-cyan: #3df5ff;
+  --neon-magenta: #ff3dfc;
+  --neon-yellow: #ffe66d;
 
-  --ipd-gradient: linear-gradient(135deg, var(--ipd-bg-1), var(--ipd-bg-2), var(--ipd-bg-3));
-  --ipd-prime-cycle: linear-gradient(135deg, var(--ipd-accent-1), var(--ipd-accent-2), var(--ipd-accent-3));
+  --triadic-neon: linear-gradient(135deg,
+                      #3df5ff,
+                      #ff3dfc,
+                      #ffe66d);
+
+  --scanline: repeating-linear-gradient(
+                to bottom,
+                rgba(255,255,255,0.03) 0px,
+                rgba(255,255,255,0.03) 1px,
+                rgba(0,0,0,0.05) 2px
+              );
+
+  --radius: 10px;
+  --glow: 0 0 12px rgba(255, 0, 180, 0.45),
+          0 0 24px rgba(0, 255, 255, 0.25);
 }
 
 /* Base layout */
 html { scroll-behavior: smooth; }
-
 body {
   margin: 0;
   padding: 0;
-  background: var(--ipd-gradient);
-  color: var(--ipd-text-main);
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg-main);
+  background-image: var(--scanline);
+  color: var(--text-main);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto;
   line-height: 1.65;
   font-size: 17px;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Headings — Prime Cycle Alloy */
+/* Neon headings */
 h1, h2, h3, h4 {
   font-weight: 700;
   margin-top: 1.8em;
   margin-bottom: 0.5em;
   line-height: 1.2;
-  background: var(--ipd-prime-cycle);
+  background: var(--triadic-neon);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-shadow: var(--glow);
 }
 
 /* Paragraphs and lists */
 p, ul, ol {
   padding: 0 1em;
   margin: 0 0 1.1em 0;
-  color: var(--ipd-text-main);
+  color: var(--text-main);
 }
 
-/* Links */
+/* Neon links */
 a {
-  color: var(--ipd-accent-1);
+  color: var(--neon-cyan);
   text-decoration: none;
-  border-bottom: 1px solid rgba(255,255,255,0.25);
-  transition: color 0.2s ease, border-color 0.2s ease;
+  border-bottom: 1px dashed rgba(255,255,255,0.25);
+  transition: color 0.2s ease, border-color 0.2s ease, text-shadow 0.2s ease;
 }
 
 a:hover,
 a:focus {
-  color: var(--ipd-accent-4);
-  border-bottom-color: var(--ipd-accent-4);
+  color: var(--neon-magenta);
+  border-bottom-color: var(--neon-magenta);
+  text-shadow: 0 0 8px var(--neon-magenta);
 }
 
 a:visited {
-  color: var(--ipd-accent-2);
+  color: var(--neon-yellow);
 }
 
-/* Code / Pre */
+/* Code blocks */
 pre, code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
-  background: rgba(255,255,255,0.03);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono";
+  background: rgba(255,255,255,0.04);
   padding: 0.4em 0.6em;
   border-radius: 6px;
-  color: #cfe8ff;
+  color: #dffaff;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: inset 0 0 12px rgba(0,255,255,0.15);
 }
 
-pre {
-  background: #0b0d12;
+/* Context block */
+.context-block {
+  font-family: monospace;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0.5rem 0 1rem 0;
   padding: 1rem;
-  overflow-x: auto;
-  border-left: 2px solid var(--ipd-accent-2);
+  background: var(--bg-panel);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--glow);
 }
 
-/* Navigation */
+.context-label {
+  color: var(--neon-yellow);
+  font-weight: bold;
+  margin-right: 0.25rem;
+}
+
+.context-value {
+  color: var(--text-main);
+}
+
+/* Navigation panel */
 nav {
   width: 260px;
   float: left;
-  background: var(--ipd-bg-2);
+  background: var(--bg-nav);
   padding: 1.2rem;
   overflow-y: auto;
-  border-right: 1px solid rgba(255,255,255,0.12);
+  border-right: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 4px 0 12px rgba(0,0,0,0.4);
 }
 
 nav h2 {
   font-size: 0.9rem;
-  color: var(--ipd-accent-3);
+  color: var(--neon-cyan);
   margin-top: 1.2rem;
   margin-bottom: 0.4rem;
   letter-spacing: 0.04em;
+  text-shadow: var(--glow);
 }
 
 nav a {
   display: block;
-  color: var(--ipd-text-muted);
+  color: var(--text-muted);
   padding: 0.35rem 0;
   font-size: 0.9rem;
 }
 
 nav a:hover {
-  color: var(--ipd-text-main);
+  color: var(--neon-magenta);
+  text-shadow: 0 0 6px var(--neon-magenta);
 }
 
 /* Main content */
@@ -189,11 +220,66 @@ main {
 }
 
 main h1, main h2, main h3 {
-  color: var(--ipd-accent-1);
+  color: var(--neon-cyan);
   font-weight: 500;
+  text-shadow: var(--glow);
 }
-</style>
 
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--neon-magenta);
+}
+
+code {
+  color: var(--neon-cyan);
+}
+
+/* Hide the default arrow */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+/* Custom arrow icons */
+details > summary::before {
+  content: "⏵"; /* collapsed */
+  padding-right: 6px;
+  font-size: 0.9em;
+}
+details[open] > summary::before {
+  content: "⏷"; /* expanded */
+}
+
+/* Make the h2/h3 feel like the toggle */
+details > summary h2,
+details > summary h3 {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hover effect */
+details > summary:hover h2,
+details > summary:hover h3 {
+  text-decoration: underline;
+}
+
+/* Optional: fade-in animation for opened blocks */
+details[open] {
+  animation: fadeIn 0.15s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+      
+</style>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
@@ -211,7 +297,8 @@ main h1, main h2, main h3 {
   </svg>
  </p> 
   
-  <h2>⚙️ IPD‑12 Engine Core | RTT/1</h2>
+   <details>
+     <summary><h2>⚙️ IPD‑12 Engine Core | RTT/1</h2></summary>
       <a href="#README">🔰 README</a>
       <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
       <a href="#CONTRIBUTING">🤝 Contributing</a>
@@ -224,41 +311,61 @@ main h1, main h2, main h3 {
       <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
       <a href="#SECURITY">🔐 Security</a>
       <a href="#PRINCIPLES">🧘 Principles</a>
-    <h3>🧭 Core Structure</h3>
+   </details>
+   <details>
+     <summary><h3>🧭 Core Structure</h3></summary>
       <a href="#ABOUT">💪 About | IPD_12</a>
       <a href="#AGENTS">🦾 Agents | AI's</a>
       <a href="#GLOSSARY">🦻 Glossary</a>
       <a href="#REGIME_MAP">🗺️ Regime Map</a>
       <a href="#COMPATIBILITY_NOTES">🔧 Compatibility Notes</a>
-    <h3>🔄 Cycles & Dimensionality</h3>
+   </details>
+   <details>
+     <summary><h3>🔄 Cycles & Dimensionality</h3></summary>
       <a href="#CYCLE_ANIMATION_ASCII">📈 Cycle Animation (ASCII)</a>
       <a href="#CYCLE_DIAGRAMS">🌀 Cycle Diagrams</a>
       <a href="#DIMENSIONAL_LIFT_COLLAPSE_MAP">📡 Dimensional Lift/Collapse Map</a>
-    <h3>⚡ Intake Manifolds</h3>
+   </details>
+   <details>
+     <summary><h3>⚡ Intake Manifolds</h3></summary>
       <a href="#ELECTRIC_INTAKE_MANIFOLDS">⚡ Electric Intake Manifolds</a>
       <a href="#ELECTRIC_INTAKE_MANIFOLD_SVG_DIAGRAMS">🖼️ Electric Intake Manifold SVG Diagrams</a>
       <a href="#INTAKE_MANIFOLD_SPECIFICATION">📘 Intake Manifold Specification</a>
-    <h3>🧩 Engine Block</h3>
+   </details>
+   <details>
+     <summary><h3>🧩 Engine Block</h3></summary>
       <a href="#ENGINE_BLOCK">🧱 Engine Block</a>
       <a href="#OBSERVER_FIRST_ENGINE">👁️ Observer‑First Engine</a>
       <a href="#PHYSICAL_LAYOUT">📐 Physical Layout</a>
-    <h3>📤 Header Manifolds</h3>
+   </details>
+   <details>
+     <summary><h3>📤 Header Manifolds</h3></summary>
       <a href="#HEADER_MANIFOLD_SVG_SET">🖼️ Header Manifold SVG Set</a>
       <a href="#OUTPUT_HEADERS">📤 Output Headers</a>
       <a href="#H_MED_HEADER_MANIFOLD_SPECIFICATION">🩺 H‑Med Header Manifold Specification</a>
-    <h3>🧬 Substrate Systems</h3>
+   </details>
+   <details>
+     <summary><h3>🧬 Substrate Systems</h3></summary>
       <a href="#SUBSTRATE_CUBE_DIAGRAM">🧊 Substrate Cube Diagram</a>
       <a href="#SUBSTRATE_PRIMITIVES_JSON">📦 Substrate Primitives (JSON)</a>
       <a href="#SUBSTRATE_PRIMITIVES">📦 Substrate Primitives</a>
-    <h3>👁️ Observer Systems</h3>
+   </details>
+   <details>
+     <summary><h3>👁️ Observer Systems</h3></summary>
       <a href="#OBSERVER_MODEL">👁️ Observer Model</a>
       <a href="#OBSERVER_OVERHEAD_AND_GAIN_SPEC">📊 Observer Overhead & Gain Spec</a>
-    <h3>🔢 Prime States</h3>
+   </details>
+   <details>
+     <summary><h3>🔢 Prime States</h3></summary>
       <a href="#PRIME_STATE_DIMENSIONAL_PROFILES">🔢 Prime State Dimensional Profiles</a>
       <a href="#PRIME_STATE_ICONS_SVG">🖼️ Prime State Icons (SVG)</a>
-    <h3>🖥️ HPC/QC Hybrid</h3>
+   </details>
+   <details>
+     <summary><h3>🖥️ HPC/QC Hybrid</h3></summary>
       <a href="#HPC_QC_SUBSTRATE_ENGINE">🧮 HPC/QC Substrate Engine</a>
-    <h3>🏗️ Triadic Tools</h3> 
+   </details>
+   <details>
+     <summary><h2>🏗️ Triadic Tools</h2></summary> 
       <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
       <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
       <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
@@ -274,6 +381,7 @@ main h1, main h2, main h3 {
       <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
       <a href="../../">🔙TFT</a>
+   </details>
   <!-- RTT Canonical Signature -->
 <section id="ipd12-session-header"
          data-ipd12="1"
@@ -281,7 +389,8 @@ main h1, main h2, main h3 {
          data-drift="none"
          data-layer="engine-core">
 
-  <h2>Session Context</h2>
+   <details>
+     <summary><h2>Session Context</h2></summary>
 
   <div class="context-block">
 
@@ -316,7 +425,7 @@ main h1, main h2, main h3 {
     <span class="context-value">researchers + engineers + systems designers + AIs</span>
 
   </div>
-
+   </details>
 </section>
 
 <div style="display:inline-block;padding:6px 12px;background:#000;color:#fff;
