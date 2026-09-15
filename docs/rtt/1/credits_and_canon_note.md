@@ -29,7 +29,7 @@ This page serves as the **canonical record** for RTT/1’s origin, stewardship, 
 # **Credits**
 
 ### **Author & Steward**
-**Nawder Loswin (Andrew Wilson)**  
+**Nawder Loswin (Santa's Mythmatical Elf)**  
 Creator of Resonance‑Time Theory and the TriadicFrameworks Canon.
 
 ### **TriadicFrameworks Repository**
