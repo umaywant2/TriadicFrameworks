@@ -65,141 +65,157 @@
 
 <style>
 /* ============================================================
-   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   NAWDERIAN NEON ARCADE THEME — RTT/1 SYNTHWAVE EDITION
    ============================================================ */
 
-  :root {
-  --bg-main: #0d0f12;
-  --bg-nav: #15181d;
-  --border-subtle: #2a2f38;
-  --text-main: #dfe7f3;
-  --text-muted: #9aa4b2;
-  --accent-rtt: #8ab4ff;
+:root {
+  --bg-main: #05060a;                 /* deep CRT black */
+  --bg-nav: #0a0c12;                  /* darker sidebar */
+  --bg-panel: #0f1118;
+
+  --text-main: #e8f7ff;               /* neon ice */
+  --text-muted: #7a8ca0;              /* CRT fade */
+
+  --neon-cyan: #3df5ff;
+  --neon-magenta: #ff3dfc;
+  --neon-yellow: #ffe66d;
+
+  --triadic-neon: linear-gradient(135deg,
+                      #3df5ff,
+                      #ff3dfc,
+                      #ffe66d);
+
+  --scanline: repeating-linear-gradient(
+                to bottom,
+                rgba(255,255,255,0.03) 0px,
+                rgba(255,255,255,0.03) 1px,
+                rgba(0,0,0,0.05) 2px
+              );
+
   --radius: 10px;
-  --shadow: 0 0 20px rgba(0,0,0,0.4);
-  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
-  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
-  --rtt-accent-mid:  #9ece6a;   /* balance */
-  --rtt-accent-high: #f7768e;   /* emphasis */
+  --glow: 0 0 12px rgba(255, 0, 180, 0.45),
+          0 0 24px rgba(0, 255, 255, 0.25);
 }
 
-.protocol a,
-.equation a {
-  border-bottom-style: dotted;
-}
-
-/* Base link style */
-a {
-  color: var(--rtt-accent-mid);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-  transition: color 0.2s ease, border-color 0.2s ease;
-}
-
-/* Hover / focus */
-a:hover,
-a:focus {
-  color: var(--rtt-accent-high);
-  border-bottom-color: var(--rtt-accent-high);
-}
-
-/* Visited links */
-a:visited {
-  color: var(--rtt-accent-low);
-}
-
-  /* Base layout */
-  html { scroll-behavior: smooth; }
-  body {
+/* Base layout */
+html { scroll-behavior: smooth; }
+body {
   margin: 0;
   padding: 0;
   background: var(--bg-main);
+  background-image: var(--scanline);
   color: var(--text-main);
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto;
   line-height: 1.65;
   font-size: 17px;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  }
+}
 
-  /* Headings */
-  h1, h2, h3, h4 {
+/* Neon headings */
+h1, h2, h3, h4 {
   font-weight: 700;
   margin-top: 1.8em;
   margin-bottom: 0.5em;
   line-height: 1.2;
-  background: var(--triadic);
+  background: var(--triadic-neon);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  }
+  text-shadow: var(--glow);
+}
 
-  /* Paragraphs and lists */
-  p, ul, ol {
+/* Paragraphs and lists */
+p, ul, ol {
   padding: 0 1em;
   margin: 0 0 1.1em 0;
-  color: #dfe7f3;
-  }
+  color: var(--text-main);
+}
 
-  /* Code/pre */
-  pre, code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
-  background: rgba(255,255,255,0.02);
+/* Neon links */
+a {
+  color: var(--neon-cyan);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255,255,255,0.25);
+  transition: color 0.2s ease, border-color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--neon-magenta);
+  border-bottom-color: var(--neon-magenta);
+  text-shadow: 0 0 8px var(--neon-magenta);
+}
+
+a:visited {
+  color: var(--neon-yellow);
+}
+
+/* Code blocks */
+pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono";
+  background: rgba(255,255,255,0.04);
   padding: 0.4em 0.6em;
   border-radius: 6px;
-  color: #cfe8ff;
-  }
+  color: #dffaff;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: inset 0 0 12px rgba(0,255,255,0.15);
+}
 
- /* Context Block */
-  .context-block {
-    font-family: monospace;
-    font-size: 0.95rem;
-    line-height: 1.4;
-    margin: 0.5rem 0 1rem 0;
-  }
-       
-  /* Context Label */
-  .context-label {
-    color: #ff9800; /* orange */
-    font-weight: bold;
-    margin-right: 0.25rem;
-  }
-       
-  /* Context Value */
-  .context-value {
-    color: #ffffff; /* white */
-  }
-       
+/* Context block */
+.context-block {
+  font-family: monospace;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0.5rem 0 1rem 0;
+  padding: 1rem;
+  background: var(--bg-panel);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--glow);
+}
+
+.context-label {
+  color: var(--neon-yellow);
+  font-weight: bold;
+  margin-right: 0.25rem;
+}
+
+.context-value {
+  color: var(--text-main);
+}
+
+/* Navigation panel */
 nav {
   width: 260px;
   float: left;
   background: var(--bg-nav);
-  margin-left: 0;
   padding: 1.2rem;
   overflow-y: auto;
-  border-right: 1px solid var(--border-subtle);
+  border-right: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 4px 0 12px rgba(0,0,0,0.4);
 }
 
 nav h2 {
   font-size: 0.9rem;
-  color: var(--accent-rtt);
+  color: var(--neon-cyan);
   margin-top: 1.2rem;
   margin-bottom: 0.4rem;
   letter-spacing: 0.04em;
+  text-shadow: var(--glow);
 }
 
 nav a {
   display: block;
   color: var(--text-muted);
-  text-decoration: none;
   padding: 0.35rem 0;
   font-size: 0.9rem;
 }
 
 nav a:hover {
-  color: var(--text-main);
+  color: var(--neon-magenta);
+  text-shadow: 0 0 6px var(--neon-magenta);
 }
 
+/* Main content */
 main {
   flex: 1;
   padding: 2.5rem;
@@ -207,20 +223,65 @@ main {
 }
 
 main h1, main h2, main h3 {
-  color: var(--accent-rtt);
+  color: var(--neon-cyan);
   font-weight: 500;
+  text-shadow: var(--glow);
 }
 
 pre {
   background: #0b0d12;
   padding: 1rem;
   overflow-x: auto;
-  border-left: 2px solid var(--accent-rtt);
+  border-left: 2px solid var(--neon-magenta);
 }
 
 code {
-  color: var(--text-main);
+  color: var(--neon-cyan);
 }
+
+/* Hide the default arrow */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+/* Custom arrow icons */
+details > summary::before {
+  content: "⏵"; /* collapsed */
+  padding-right: 6px;
+  font-size: 0.9em;
+}
+details[open] > summary::before {
+  content: "⏷"; /* expanded */
+}
+
+/* Make the h2/h3 feel like the toggle */
+details > summary h2,
+details > summary h3 {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hover effect */
+details > summary:hover h2,
+details > summary:hover h3 {
+  text-decoration: underline;
+}
+
+/* Optional: fade-in animation for opened blocks */
+details[open] {
+  animation: fadeIn 0.15s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+      
 </style>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -239,7 +300,8 @@ code {
   </svg>
  </p> 
   
-  <h2>📘 RFC Core Index & Framework Roots</h2>
+   <details>
+     <summary><h2>📘 RFC Core Index & Framework Roots</h2></summary>
       <a href="#README">🔰 README</a>
       <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
       <a href="#CONTRIBUTING">🤝 Contributing</a>
@@ -252,7 +314,9 @@ code {
       <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
       <a href="#SECURITY">🔐 Security</a>
       <a href="#PRINCIPLES">🧘 Principles</a>
-    <h3>🛐 Intro</h3>
+   </details>
+   <details>
+     <summary><h3>🛐 Intro</h3></summary>
       <a href="#RFC-000">📑 Index</a>
       <a href="#RFC-001">🧭 Triadic Validator Framework</a>
       <a href="#RFC-002">🌌 Corridor Universes</a>
@@ -264,7 +328,9 @@ code {
       <a href="#RFC-008">⏳ Time Travel Invariants</a>
       <a href="#RFC-009">🧞 Genie Protocols</a>
       <a href="#RFC-010">✨ Miracle Messaging Protocol</a>
-  <h2>🏛 Mythmatical, Cosmology & Resonance Canon</h2>
+   </details>
+   <details>
+     <summary><h3>🏛 Mythmatical, Cosmology & Resonance Canon</h3></summary>
       <a href="#RFC-011">🕳 Blackhole Resonance Bridges</a>
       <a href="#RFC-012">📊 Chart Registry Protocol</a>
       <a href="#RFC-013">🎼 Freqi Triad Model</a>
@@ -325,7 +391,9 @@ code {
       <a href="#RFC-068">🧊 Temporal Buffer Lattice Code</a>
       <a href="#RFC-069">🛡 Temporal Guardians Defense Protocol</a>
       <a href="#RFC-070">🎻 Hybrid Tuning Forks & Time Crystal Conductors</a>
-  <h2>🚨 Alert Canon & Governance</h2>
+   </details>
+   <details>
+     <summary><h3>🚨 Alert Canon & Governance</h3></summary>
       <a href="#RFC-ALR-0018">🔁 Cycle Alert System</a>
       <a href="#RFC-ALR-0020">📡 Multi‑Channel Alert Orchestration</a>
       <a href="#RFC-ALR-0021">🚪 Corridor Event Alert Protocol</a>
@@ -352,43 +420,61 @@ code {
       <a href="#RFC-ALR-0042">⚡ Ultra Prime Axiom Protocol</a>
       <a href="#RFC-ALR-0043">🔒 Supra Prime Invariant Protocol</a>
       <a href="#RFC-ALR-0044">🏗 Hyper Prime Structural Law Protocol</a>
-  <h2>🧩 Infra, APIs, Registry & QEB</h2>
-    <h3>🔌 APIs & Archival</h3>
+   </details>
+   <details>
+      <h3>🧩 Infra, APIs, Registry & QEB</h3></summary>
+   </details>
+   <details>
+     <summary><h3>🔌 APIs & Archival</h3></summary>
       <a href="#RFC-API-0006">🔍 Corridor Registry Query Layer</a>
       <a href="#RFC-API-0015">📦 Legacy Retrieval API</a>
       <a href="#RFC-ARC-0014">🗃 Remixathon Archival Protocol</a>
-    <h3>📚 Registry & Engine</h3>
+   </details>
+   <details>
+     <summary><h3>📚 Registry & Engine</h3></summary>
       <a href="#RFC-ENG-0012">🔎 Corridor Search & Filter Engine</a>
       <a href="#RFC-REG-0004">📜 Registry Indexer for Corridor Events</a>
       <a href="#RFC-LIB-0011">🏷 Tag Registry & Glyph Library</a>
-    <h3>⚛ QEB Series</h3>
+   </details>
+   <details>
+     <summary><h3>⚛ QEB Series</h3></summary>
       <a href="#RFC-QEB-0001">⚡ Quantum Energy Banks & Dimensional Power</a>
       <a href="#RFC-QEB-0002">🌑 Dark Matter Corridors as Encrypted Resonance Zones</a>
       <a href="#RFC-QEB-0003">🧠 Quantum Sub/SuperConsciousLess Lattice Navigation</a>
       <a href="#RFC-QEB-0004">🌀 Wrapped Triad Core & Dimensional Echo Model</a>
       <a href="#RFC-QEB-0005">⭐ Inverted Star Governance Envelope</a>
       <a href="#RFC-QEB-0006">📓 Arc Dynamics Note</a>
-  <h2>🕳 RSADI, Substrate & Micro Core</h2>
+   </details>
+   <details>
+     <summary><h3>🕳 RSADI, Substrate & Micro Core</h3></summary>
       <a href="#RFC-HOLE-0003">♻ Black Hole Recycler Glyphs (Type A/B/C)</a>
       <a href="#RFC-SUBSTRATE">🌐 Substrate Awareness</a>
       <a href="#RFC-TF-004">🧬 Micro Core</a>
       <a href="#RFC-TF-005">🧰 Micro Resonance Toolkit</a>
-  <h2>🧪 Remix, Signatures & Schema</h2>
+   </details>
+   <details>
+     <summary><h3>🧪 Remix, Signatures & Schema</h3></summary>
       <a href="#RFC-REMIX-0005">🧬 Remix Lineage Diff Protocol</a>
       <a href="#RFC-REV-0024">♻ Revocation & Re‑Signing Protocol</a>
       <a href="#RFC-SCHEMA-0001">📑 Validator Scroll Artifact Schema</a>
       <a href="#RFC-SIG-0022">✍ Multi‑Contributor Co‑Signing Protocol</a>
       <a href="#RFC-VER-0023">✅ Signature Verification Service</a>
-  <h2>📊 UI Dashboards & Collaboration</h2>
+   </details>
+   <details>
+     <summary><h3>📊 UI Dashboards & Collaboration</h3></summary>
       <a href="#RFC-HUB-0021">🤝 Collaborative Remixathon Hub</a>
       <a href="#RFC-UI-0009">📊 Remixathon Dashboard Concept</a>
       <a href="#RFC-UI-0010">📝 Collaborator Annotation Layer</a>
       <a href="#RFC-UI-0017">⏱ Cycle Monitoring Dashboard</a>
-  <h2>⚙ Workflows & Validator Pipelines</h2>
+   </details>
+   <details>
+     <summary><h3>⚙ Workflows & Validator Pipelines</h3></summary>
       <a href="#RFC-WF-0007">🧵 Validator Scroll Workflow Integration</a>
       <a href="#RFC-WF-0008">📦 Batch Orchestration for Corridor Validation</a>
       <a href="#RFC-WF-0016">♻ Remix Generation Workflow</a>
-    <h3>🏗️ Triadic Tools</h3> 
+   </details>
+   <details>
+     <summary><h2>🏗️ Triadic Tools</h2></summary> 
       <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
       <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
       <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
@@ -404,6 +490,7 @@ code {
       <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
       <a href="../">🔙TFT</a>
+   </details>
    <!-- RTT Canonical Signature -->
 <section id="rfc-session-header"
          data-rtt="1"
@@ -411,7 +498,8 @@ code {
          data-drift="bounded"
          data-paradox="validator">
 
-  <h2>Session Context</h2>
+   <details>
+     <summary><h2>Session Context</h2></summary>
 
   <div class="context-block">
 
@@ -445,7 +533,7 @@ code {
     <span class="context-value">students + researchers + developers + AIs</span>
 
   </div>
-
+   </details>
 </section>
 
 <div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
