@@ -3,7 +3,7 @@
 This document records the completed DOI publication phase for the TriadicFrameworks ecosystem.  
 These records establish provenance, timestamped lineage, and citation anchors for the foundational work.
 
-**Future citations and new DOI creation should use the Zenodo _TriadicFrameworks Community_.**  
+**Future citations and new DOI creation should use the Zenodo _vST Community_.**  
 This archive remains stable and complete.
 
 ---
@@ -76,7 +76,7 @@ For:
 - student projects,
 - extensions or forks,
 
-**please use the Zenodo _TriadicFrameworks Community_** to ensure continuity, discoverability, and proper lineage tracking.
+**please use the Zenodo _vST Community_** to ensure continuity, discoverability, and proper lineage tracking.
 
 ---
 
