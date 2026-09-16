@@ -253,10 +253,54 @@ pre {
 code {
   color: var(--neon-cyan);
 }
-</style>
 
+/* Hide the default arrow */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+/* Custom arrow icons */
+details > summary::before {
+  content: "⏵"; /* collapsed */
+  padding-right: 6px;
+  font-size: 0.9em;
+}
+details[open] > summary::before {
+  content: "⏷"; /* expanded */
+}
+
+/* Make the h2/h3 feel like the toggle */
+details > summary h2,
+details > summary h3 {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hover effect */
+details > summary:hover h2,
+details > summary:hover h3 {
+  text-decoration: underline;
+}
+
+/* Optional: fade-in animation for opened blocks */
+details[open] {
+  animation: fadeIn 0.15s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+      
+</style>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
 </head>
 
 <body>
@@ -271,8 +315,9 @@ code {
     <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
  </p> 
-  
-  <h2>✨ Agentic Research | RTT/1/Agentic</h2>
+
+   <details>
+     <summary><h2>✨ Agentic Research | RTT/1/Agentic</h2></summary>
       <a href="#README">🔰 README</a>
       <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
       <a href="#CONTRIBUTING">🤝 Contributing</a>
@@ -285,26 +330,38 @@ code {
       <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
       <a href="#SECURITY">🔐 Security</a>
       <a href="#PRINCIPLES">🧘 Principles</a>
-    <h3>📂 Directory meta</h3>
+   </details>
+   <details>
+     <summary><h3>📂 Directory meta</h3></summary>
       <a href="#ABOUT_RESEARCH_AGENTIC">📘 ABOUT Agentic Research</a>
-    <h3>🔢 Arithmetic & partition structures</h3>
+   </details>
+   <details>
+     <summary><h3>🔢 Arithmetic & partition structures</h3></summary>
       <a href="#ABC_TAU_MISSING_PRIMES">🧮 abc–τ missing primes</a>
       <a href="#ANDREWS_DHAR_PARTITIONS">📊 Andrews–Dhar partitions</a>
       <a href="#PARTIAL_REGULAR_PRIMES">🧱 Partial regular primes</a>
       <a href="#THAKUR_POWER_SUMS">⚡ Thakur power sums</a>
       <a href="#RECIPROCALS_PARTITION_POLYNOMIALS">♻️ Reciprocals of partition polynomials</a>
-    <h3>🧩 Analytic–combinatorial resonance</h3>
+   </details>
+   <details>
+     <summary><h3>🧩 Analytic–combinatorial resonance</h3></summary>
       <a href="#CHEBYSHEV_DEMAZURE_DYCK">🧩 Chebyshev–Demazure–Dyck</a>
       <a href="#QUADRATIC_RATIONAL_DINV">🔷 Quadratic rational dinv</a>
-    <h3>📐 Geometric & lattice regimes</h3>
+   </details>
+   <details>
+     <summary><h3>📐 Geometric & lattice regimes</h3></summary>
       <a href="#PAUCITY_LATTICE_TRIANGLES">🔺 Paucity of lattice triangles</a>
       <a href="#FEL_SYZYGIES">🧵 Fel syzygies</a>
       <a href="#NEKR_OKOUNKOV_DOMINANT_ZEROS">🎯 Nekrasov–Okounkov dominant zeros</a>
       <a href="#PARITY_K_DIFFERENTIALS">⚖️ Parity k‑differentials</a>
-    <h3>🔁 Dynamics & epistemic logic</h3>
+   </details>
+   <details>
+     <summary><h3>🔁 Dynamics & epistemic logic</h3></summary>
       <a href="#COLLATZ_TRANSFORMERS_RTT">🔁 Collatz transformers (RTT)</a>
       <a href="#WE_CANT_AGREE_FORMALLY">🧠 We can’t agree formally</a>
-    <h3>🏗️ Triadic Tools</h3> 
+   </details>
+   <details>
+     <summary><h2>🏗️ Triadic Tools</h2></summary> 
       <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
       <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
       <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
@@ -320,6 +377,7 @@ code {
       <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
       <a href="../../">🔙TFT</a>
+   </details>
    <!-- RTT Canonical Signature -->
 <!-- ═══════════════════════════════════════════════════════════ -->
 <!-- /docs/Research/agentic — Session Context block              -->
@@ -331,7 +389,8 @@ code {
          data-drift="bounded"
          data-regime="agentic">
 
-  <h2>Session Context</h2>
+   <details>
+     <summary><h2>Session Context</h2></summary>
 
   <div class="context-block">
 
@@ -368,7 +427,7 @@ code {
     <span class="context-value">researchers • students • educators • AIs • multi‑sandbox systems</span>
 
   </div>
-
+   </details>
 </section>
 
 <div style="display:inline-block;padding:6px 12px;background:#1a1a33;color:#fff;
