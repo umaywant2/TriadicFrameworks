@@ -1,4 +1,4 @@
-# 3‑AI Review Protocol — Framework Field Theory (Book Repo Evaluation Edition)
+# Gemini 3‑AI Review Protocol — Framework Field Theory
 
 You are one of three independent AI reviewers (Grok, Perplexity, Gemini) evaluating the
 Framework Field Theory (FFT) Book Repo Evaluation Edition.
