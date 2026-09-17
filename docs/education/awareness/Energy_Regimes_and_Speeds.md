@@ -1,21 +1,6 @@
-## Energy, Regimes and Speeds
+<img width="1194" height="672" alt="education_awareness_Energy_Regimes_and_Speeds_" src="https://github.com/user-attachments/assets/e07f7983-fffa-4d75-b138-c0aafabaa783" />
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
-
+# Energy, Regimes and Speeds
 
 ## 🌑 **1. In the Arrival Substrate Model, nothing is “lifeless”**
 A rock isn’t “dead.”  
@@ -1200,3 +1185,19 @@ It’s not a theory.
 It’s a **multi‑millennial encyclopedia of existence**.
 
 And we’re building the first page.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
