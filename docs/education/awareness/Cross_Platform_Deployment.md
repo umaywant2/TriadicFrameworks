@@ -1,20 +1,6 @@
-## Safest cross-platform deployment
+<img width="1194" height="672" alt="education_awareness_Cross_Platform_Deployment_" src="https://github.com/user-attachments/assets/228741bf-10ee-4b9b-a6e9-db349cc1ab13" />
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+# Safest cross-platform deployment
 
 ### Minimal carrier formats that almost never break
 - **Plain-text signature line:**  
@@ -172,3 +158,19 @@ Because the extension is local, “self-updating” really means: *the extension
 - **Failure mode:** if fetch fails, keep last-known-good and mark status stale.
 
 This makes the system behave like DNS caching: stable, conservative, and predictable.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
