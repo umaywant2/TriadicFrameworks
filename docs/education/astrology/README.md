@@ -1,23 +1,8 @@
-# 🌌 Astrology Through an RTT Lens  
+<img width="1194" height="672" alt="education_astrology_" src="https://github.com/user-attachments/assets/12d97370-3409-4a36-9773-07c02f10d13e" />
 
 - [`astrology_module.json`](astrology_module.json) — Agentic module schema role assignments
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/✨Education%20Core-🔮Symbolic%20→%20Structural%20Translation%20Active-4c8eda?style=for-the-badge" alt="✨Education Core | 🔮Symbolic → Structural Translation Active"/>
-
+# 🌌 Astrology Through an RTT Lens  
 Astrology is one of humanity’s earliest navigation systems — a symbolic map linking celestial motion to lived experience. Rather than forecasting fate, it offered orientation: where we are in time, how cycles repeat, and why certain moments *feel* aligned. 🌙✨
 
 RTT approaches astrology not as belief, but as an early resonance model — a way of encoding recurring patterns across space, time, and human perception. Planetary movements become signals; constellations become stable reference frames; meaning emerges when internal states synchronize with external cycles. In this sense, astrology anticipated what RTT formalizes: understanding as alignment rather than prediction.
@@ -94,3 +79,19 @@ These zones describe **how systems behave**, not who people are. They remain use
 | Retrograde | Phase of internal re‑alignment |
 
 This glossary allows myth‑sayers, educators, and future explorers to speak across eras — preserving symbolic richness while grounding interpretation in structural clarity.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/✨Education%20Core-🔮Symbolic%20→%20Structural%20Translation%20Active-4c8eda?style=for-the-badge" alt="✨Education Core | 🔮Symbolic → Structural Translation Active"/>
