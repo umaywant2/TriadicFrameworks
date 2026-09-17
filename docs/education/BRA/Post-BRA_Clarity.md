@@ -1,4 +1,6 @@
-### 1. Which domains gain the most from post‑BRA clarity
+<img width="682" height="682" alt="education_Before_Regime_Awareness" src="https://github.com/user-attachments/assets/e3b8e290-e33f-4bd4-aaad-55268d0595d8" />
+
+## 1. Which domains gain the most from post‑BRA clarity
 
 **Biggest relative gain (they’re currently most distorted by regime blindness):**
 
