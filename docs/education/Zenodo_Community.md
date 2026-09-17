@@ -78,6 +78,8 @@ For:
 
 **please use the Zenodo _vST Community_** to ensure continuity, discoverability, and proper lineage tracking.
 
+- https://zenodo.org/communities/vst/about
+
 ---
 
 _This archive remains immutable and serves as the historical backbone of the TriadicFrameworks canon._
