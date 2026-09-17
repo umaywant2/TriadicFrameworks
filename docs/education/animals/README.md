@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_animals_" src="https://github.com/user-attachments/assets/93443a36-c53f-49a3-a7d3-f63aacc9ee9e" />
+
 - [`animals_module.json`](animals_module.json) — Agentic module schema role assignments
 
 # 🎼 Animals | Education  
