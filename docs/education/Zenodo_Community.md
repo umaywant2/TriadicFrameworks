@@ -1,4 +1,6 @@
-# TriadicFrameworks — DOI Archive & Citation Guidance
+<img width="1194" height="672" alt="education_Zenodo_Community_" src="https://github.com/user-attachments/assets/898e4f6b-53cb-4cdd-a25f-e3352bd2c888" />
+
+# DOI Archive & Citation Guidance
 
 This document records the completed DOI publication phase for the TriadicFrameworks ecosystem.  
 These records establish provenance, timestamped lineage, and citation anchors for the foundational work.
