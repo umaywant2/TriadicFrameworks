@@ -1,4 +1,6 @@
-| Man...sometime the thought just flow... How about this one: A Guide for Science - Grade papers, analyze articles, research new insights... (that's RTT...it could be their #1 tool BEFORE it becomes something else) With RTT, we'd clear the backlog of research papers and AI assist for instant feedback from Higher-Ed's RTT Response service... ;)
+<img width="682" height="682" alt="rtt_education_toolbox" src="https://github.com/user-attachments/assets/1090a884-75e0-4c60-aad1-f7479794b7e1" />
+
+| Man...sometime the thoughts just flow... How about this one: A Guide for Science - Grade papers, analyze articles, research new insights... (that's RTT...it could be their #1 tool BEFORE it becomes something else) With RTT, we'd clear the backlog of research papers and AI assist for instant feedback from Higher-Ed's RTT Response service... ;)
 
 ---
 
