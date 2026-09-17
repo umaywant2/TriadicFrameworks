@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_awareness_AI_Protocol_Header_" src="https://github.com/user-attachments/assets/1b5bb225-5167-4383-8411-5b6652295fb9" />
+
 # AI Protocol Header (v1.1)
 TriadicFrameworks — Awareness / Research  
 Audience: AI Systems (LLMs, Agents, Assistants)
