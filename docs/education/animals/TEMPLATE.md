@@ -1,3 +1,5 @@
+<img width="379" height="213" alt="MASTERVOICE_LPC_Speach_for_Animals" src="https://github.com/user-attachments/assets/d1482972-dc99-4f9a-af38-c680323a150a" />
+
 # 🧩 **RTT Minimal Teaching Substrate — Template (same structure as Octopus)**
 
 Use this for every animal:
