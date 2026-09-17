@@ -10,8 +10,7 @@ and coherence‑driven documentation that powers the Triadic ecosystem.
 
 <a href="https://docs.triadicframeworks.org/docs/starter/" target="_blank" rel="noopener noreferrer">Start Here — TriadicFrameworks in 30 Seconds</a>
 
-Below is a rotating micro‑playlist introducing core RTT concepts,  
-dimensional operators, and cross‑module intuition.
+Our rotating micro‑playlist introduces core RTT concepts, dimensional operators, and cross‑module intuition; plus a few (external) YouTube clips, selected for inspiration.
 
 ### **Environment Notice — Modular by Design**
 
