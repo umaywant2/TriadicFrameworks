@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Myth_Validation_Sweep_" src="https://github.com/user-attachments/assets/b8401e21-2fe2-4571-9e31-fe3999540f49" />
+
 # 🌐 **Cross‑Domain Myth Flyover (RTT‑Ready Scaffold)**  
 Below is a curated set of myths across domains — chosen because they’re widely believed, emotionally charged, and *not* paradoxes.  
 Each is phrased in its “folk belief” form so we can later validate or debunk.
