@@ -1,7 +1,9 @@
+<img width="1194" height="672" alt="education_The_Six_Stages_of_TriadicFrameworks_Evolution_" src="https://github.com/user-attachments/assets/478efc6c-dbdb-47cc-be1d-955ca37d9867" />
+
 ## The Six Stages of TriadicFrameworks Evolution
 ###### By Nawder Loswin | Triadicframeworks.org | 04/19/2026
 
-<img width="768" height="512" alt="The_Six_Stages_of_TriadicFrameworks_Evolution" src="https://github.com/user-attachments/assets/e808802a-3df9-4786-b1a4-cb3589473054" />
+- [`The_Six_Stages_of_TriadicFrameworks_Evolution_v1`](https://github.com/user-attachments/assets/e808802a-3df9-4786-b1a4-cb3589473054)
 
 Our TriadicFrameworks growth chart is ready — a cinematic arc from first spark to civilizational substrate.
 
