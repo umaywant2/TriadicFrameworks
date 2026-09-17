@@ -1,9 +1,7 @@
-<img width="682" height="682" alt="education_Before_Regime_Awareness" src="https://github.com/user-attachments/assets/e3b8e290-e33f-4bd4-aaad-55268d0595d8" />
-
-# 🌱 Before Regime Awareness & Post‑BRA | Education  
 
 - [`bra_module.json`](bra_module.json) — Agentic module schema role assignments
 
+# 🌱 Before Regime Awareness & Post‑BRA | Education  
 *A navigation hub for regime literacy, substrate awareness, and the transition from Before Regime Awareness → Post‑BRA.*
 
 ## 🛑 Important! 
