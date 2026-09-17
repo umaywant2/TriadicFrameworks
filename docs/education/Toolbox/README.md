@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="education_Toolbox_" src="https://github.com/user-attachments/assets/7ae76db1-50cb-432c-a385-d04a1023a87f" />
 
 - [`edu-toolbox_module.json`](edu-toolbox_module.json) — Agentic module schema role assignments
 
