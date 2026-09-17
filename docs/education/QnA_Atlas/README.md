@@ -1,23 +1,8 @@
-## 🧪 QnA Atlas (seed examples) | RTT  
+<img width="1194" height="672" alt="education_QnA_Atlas_" src="https://github.com/user-attachments/assets/7ad5734f-bd0e-4060-ae91-56287b437998" />
 
 - [`qna_atlas_module.json`](qna_atlas_module.json) — Agentic module schema role assignments
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🗺️Education%20Core-📚Programmatic%20Atlas%20Active-4c8eda?style=for-the-badge" alt="🗺️Education Core | 📚Programmatic Atlas Active"/>
-
+# 🧪 QnA Atlas (seed examples) | RTT  
 **Purpose** — A compact, navigable index for the QnA Atlas used by RTT learning projects. This README orients contributors and consumers to the scaffold, conventions, and how to find seed content quickly.
 
 ## 🛑 Important! 
@@ -91,3 +76,19 @@ const DOC_MAP = {
 - Verify keys after renaming or moving files.  
 - Keep domain groups alphabetized in the DOC_MAP.  
 - Run a quick link-check when adding external resources.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🗺️Education%20Core-📚Programmatic%20Atlas%20Active-4c8eda?style=for-the-badge" alt="🗺️Education Core | 📚Programmatic Atlas Active"/>
