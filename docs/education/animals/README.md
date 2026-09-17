@@ -1,9 +1,6 @@
 - [`animals_module.json`](animals_module.json) — Agentic module schema role assignments
 
-<img width="379" height="213" alt="MASTERVOICE_LPC_Speach_for_Animals" src="https://github.com/user-attachments/assets/d1482972-dc99-4f9a-af38-c680323a150a" />
-
 # 🎼 Animals | Education  
-
 _**What “pied‑piper’d structural notes” really means**_
 
 ## 🛑 Important! 
