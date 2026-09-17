@@ -1,21 +1,6 @@
-## **Ancient Aliens Theory — RTT Awareness View**
+<img width="1194" height="672" alt="education_awareness_Ancient_Aliens_" src="https://github.com/user-attachments/assets/60fa5ce7-a62a-4756-a379-d73b160fb056" />
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
-
+# **Ancient Aliens Theory — RTT Awareness View**
 ## **Purpose**
 This page applies the RTT Awareness model to a culturally persistent narrative: the Ancient Aliens Theory.  
 The goal is **recognition**, not validation; **structure**, not belief; **resonance‑mapping**, not adjudication.
@@ -438,3 +423,19 @@ Caption:
   </defs>
 </svg>
 ```
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
