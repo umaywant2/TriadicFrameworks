@@ -1,352 +1,588 @@
 {
-  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
-  "module": {
-    "name": "TFT 3Pack",
-    "path": "docs/TFT_3Pack_v1.3",
-    "canon_tag": "tft-3pack",
-    "version": "1.3",
-    "layer": "Tools & Infrastructure",
-    "status": "Active, Canonical",
-    "purpose": "Compact, example-driven toolkit demonstrating the TriadicFrameworks model across 12 academic domains via shell scripts, .fff resonance files, and a dark-themed documentation system.",
-    "parent": "webroot",
-    "url": "https://www.triadicframeworks.org/TFT_3Pack_v1.3/"
-  },
-  "session_context": {
-    "canon": "active (tft-3pack)",
-    "modules_linked": [
-      "shell scripts ↔ .fff formats ↔ 12 subject example sets ↔ resonance operators ↔ student workflows",
-      "RTT-Inside ↔ Wrapped Resonance Structural Aware Dimensional Cores"
-    ],
-    "drift": "minimal (example-stable)",
-    "coherence": "stable (triadic-example-grammar)",
-    "format": "html + markdown + shell scripts + .fff files",
-    "front_door": "exists (TFT_3Pack_v1.3/index.html)",
-    "every_page": "stands alone + student-ready + operator-aware",
-    "audience": [
-      "students",
-      "educators",
-      "developers",
-      "researchers",
-      "AIs"
-    ]
-  },
-  "structural_grammar": {
-    "dimensional_envelope": "D3–D9",
-    "regime_envelope": "R1–R2",
-    "coherence_envelope": "C1–C3",
-    "drift_sensitivity": "low",
-    "regime_sensitivity": "medium"
-  },
-  "cross_module_propagation": {
-    "imports": [
-      "rtt-core",
-      "rtt-inside",
-      "nawderian-theorem"
-    ],
-    "exports": [
-      ".fff resonance file format",
-      "triadic operator examples (D3, D6, D9)",
-      "12-domain academic example suites",
-      "shell execution pipeline (run, validate, convert, batch)",
-      "base-type lens switching (binary, decimal, hex, phi, pi, corridor6.9, etc.)",
-      "resonance constants (τ_r, T_f, ΛΘ, F3, X)"
-    ]
-  },
-  "submodules": [
-    {
-      "name": "Documentation",
-      "path": "docs/",
-      "file_count": 2,
-      "role": "reference",
-      "manifest": null
+  "module": "TFT_3Pack_v1.3",
+  "version": "1.3",
+  "description": "TriadicFrameworks 3Pack: Resonance-ready starter suite containing the TFT Core, FFF Quickstart, and Domain-linked example sets. Designed for AI navigation, operator grammar, and cross-domain resonance modeling.",
+
+  "files": {
+    "README": { "path": "README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+    "FFF_QUICKSTART": { "path": "fff_quickstart.md", "role": "quickstart", "analyzer_layer": "operator" },
+    "OVERVIEW": { "path": "overview.md", "role": "overview", "analyzer_layer": "cross-cutting" },
+    "QUANTUM_ENTANGLEMENT_MEASURING": { "path": "Quantum_Entanglement_Measuring.md", "role": "example", "analyzer_layer": "dimensional" },
+    "QUICKSTART": { "path": "QUICKSTART.md", "role": "quickstart", "analyzer_layer": "operator" },
+    "RES_CLARITY_REFRESH": { "path": "Res_Clarity_Refresh.md", "role": "refresh", "analyzer_layer": "coherence" },
+    "RTT_COMPARED_WITH_CLOSEST_CONTRIBUTORS": { "path": "RTT_Compared_with_Closest_Contributors.md", "role": "comparison", "analyzer_layer": "cross-cutting" },
+    "TFT_3PACK_MODULE_JSON": { "path": "tft_3pack_module.json.md", "role": "manifest", "analyzer_layer": "cross-cutting" },
+
+    "DOCS": {
+      "FFF_SPEC": { "path": "docs/fff_spec.md", "role": "spec", "analyzer_layer": "operator" },
+      "OUTPUTS_SPEC": { "path": "docs/outputs_spec.md", "role": "spec", "analyzer_layer": "operator" },
+      "QUICKSTART": { "path": "docs/QUICKSTART.md", "role": "quickstart", "analyzer_layer": "operator" },
+      "README": { "path": "docs/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+      "TRIADIC_TEST_SUITE": { "path": "docs/TriadicTestSuite.md", "role": "test", "analyzer_layer": "operator" }
     },
-    {
-      "name": "Examples",
-      "path": "examples/",
-      "file_count": 14,
-      "role": "example",
-      "manifest": null
+
+    "META": {
+      "GLYPH_REFERENCE": { "path": "docs/_meta/entft_scroll_glyph_reference.md", "role": "reference", "analyzer_layer": "dimensional" },
+      "README": { "path": "docs/_meta/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+      "CURRICULUM_GLYPH_TRIBUTE_ECHO_LOG": { "path": "docs/_meta/README_entft_curriculum_glyph_tribute_echo_log.md", "role": "log", "analyzer_layer": "drift" },
+      "GLYPH_RETIREMENT_LOG": { "path": "docs/_meta/README_entft_glyph_retirement_log.md", "role": "log", "analyzer_layer": "drift" }
     },
-    {
-      "name": "Scripts",
-      "path": "scripts/",
-      "file_count": 9,
-      "role": "engine",
-      "manifest": null
+
+    "RITUALS": {
+      "CODEX_FORK_GUIDE": { "path": "docs/_rituals/entft_scroll_codex_fork_guide.md", "role": "ritual", "analyzer_layer": "dimensional" },
+      "CURRICULUM_GLYPH_TRIBUTE_FLAME": { "path": "docs/_rituals/entft_scroll_curriculum_glyph_tribute_flame.md", "role": "ritual", "analyzer_layer": "dimensional" },
+      "GLYPH_REAWAKENING_RITUAL": { "path": "docs/_rituals/entft_scroll_glyph_reawakening_ritual.md", "role": "ritual", "analyzer_layer": "dimensional" },
+      "GLYPH_TRIBUTE_ECHO_FUSION": { "path": "docs/_rituals/entft_scroll_glyph_tribute_echo_fusion.md", "role": "ritual", "analyzer_layer": "dimensional" },
+      "RETIREMENT_TRACE_INDEX": { "path": "docs/_rituals/entft_scroll_retirement_trace_index.md", "role": "index", "analyzer_layer": "cross-cutting" },
+      "RUNTIME_HOOKS": { "path": "docs/_rituals/entft_scroll_runtime_hooks.md", "role": "runtime", "analyzer_layer": "operator" }
     },
-    {
-      "name": "Formats",
-      "path": "formats/",
-      "file_count": 5,
-      "role": "template",
-      "manifest": null
+
+    "SPECS": {
+      "ENTFT_PROTOCOL_SPEC": { "path": "docs/_specs/entft_protocol_spec.md", "role": "spec", "analyzer_layer": "operator" },
+      "README": { "path": "docs/_specs/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+      "KEYGEN_SIMULATOR": { "path": "docs/_specs/README_entft_keygen_simulator_py.md", "role": "simulator", "analyzer_layer": "operator" },
+      "REMIX_SCROLL": { "path": "docs/_specs/README_remix_scroll.md", "role": "remix", "analyzer_layer": "operator" }
     },
-    {
-      "name": "Core Framework — TOPS",
-      "path": "tft/tops/",
-      "file_count": 1,
-      "role": "engine",
-      "manifest": null
+
+    "EXAMPLES": {
+      "README": { "path": "examples/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+
+      "ART": {
+        "README": { "path": "examples/Art/README.md", "role": "domain", "analyzer_layer": "operator" },
+        "PROBLEMS": { "path": "examples/Art/problems.md", "role": "problems", "analyzer_layer": "operator" },
+        "SOLUTIONS": { "path": "examples/Art/solutions.md", "role": "solutions", "analyzer_layer": "operator" },
+        "FLOW": { "path": "examples/Art/resonance_flow.md", "role": "flow", "analyzer_layer": "dimensional" },
+        "EXTENDED_PROBLEMS": { "path": "examples/Art/extended_problems.md", "role": "problems-extended", "analyzer_layer": "operator" }
+      },
+
+      "BIOLOGY": {
+        "README": { "path": "examples/Biology/README.md", "role": "domain", "analyzer_layer": "operator" },
+        "PROBLEMS": { "path": "examples/Biology/problems.md", "role": "problems", "analyzer_layer": "operator" },
+        "SOLUTIONS": { "path": "examples/Biology/solutions.md", "role": "solutions", "analyzer_layer": "operator" },
+        "FLOW": { "path": "examples/Biology/resonance_flow.md", "role": "flow", "analyzer_layer": "dimensional" },
+        "EXTENDED_PROBLEMS": { "path": "examples/Biology/extended_problems.md", "role": "problems-extended", "analyzer_layer": "operator" }
+      },
+
+      "CHEMISTRY": {
+        "README": { "path": "examples/Chemistry/README.md", "role": "domain", "analyzer_layer": "operator" },
+        "PROBLEMS": { "path": "examples/Chemistry/problems.md", "role": "problems", "analyzer_layer": "operator" },
+        "SOLUTIONS": { "path": "examples/Chemistry/solutions.md", "role": "solutions", "analyzer_layer": "operator" },
+        "FLOW": { "path": "examples/Chemistry/resonance_flow.md", "role": "flow", "analyzer_layer": "dimensional" },
+        "EXTENDED_PROBLEMS": { "path": "examples/Chemistry/extended_problems.md", "role": "problems-extended", "analyzer_layer": "operator" }
+      },
+
+      "COMPUTER_SCIENCE": {
+        "README": { "path": "examples/Computer_Science/README.md", "role": "domain", "analyzer_layer": "operator" },
+        "PROBLEMS": { "path": "examples/Computer_Science/problems.md", "role": "problems", "analyzer_layer": "operator" },
+        "SOLUTIONS": { "path": "examples/Computer_Science/solutions.md", "role": "solutions", "analyzer_layer": "operator" },
+        "FLOW": { "path": "examples/Computer_Science/resonance_flow.md", "role": "flow", "analyzer_layer": "dimensional" },
+        "EXTENDED_PROBLEMS": { "path": "examples/Computer_Science/extended_problems.md", "role": "problems-extended", "analyzer_layer": "operator" }
+      },
+
+      "ECONOMICS": {
+        "README": { "path": "examples/Economics/README.md", "role": "domain", "analyzer_layer": "operator" },
+        "PROBLEMS": { "path": "examples/Economics/problems.md", "role": "problems", "analyzer_layer": "operator" },
+        "SOLUTIONS": { "path": "examples/Economics/solutions.md", "role": "solutions", "analyzer_layer": "operator" },
+        "FLOW": { "path": "examples/Economics/resonance_flow.md", "role": "flow", "analyzer_layer": "dimensional" },
+        "EXTENDED_PROBLEMS": { "path": "examples/Economics/extended_problems.md", "role": "problems-extended", "analyzer_layer": "operator" }
+      },
+
+      "ENGINEERING": {
+        "README": { "path": "examples/Engineering/README.md", "role": "domain", "analyzer_layer": "operator" },
+        "PROBLEMS": { "path": "examples/Engineering/problems.md", "role": "problems", "analyzer_layer": "operator" },
+        "SOLUTIONS": { "path": "examples/Engineering/solutions.md", "role": "solutions", "analyzer_layer": "operator" },
+        "FLOW": { "path": "examples/Engineering/resonance_flow.md", "role": "flow", "analyzer_layer": "dimensional" },
+        "EXTENDED_PROBLEMS": { "path": "examples/Engineering/extended_problems.md", "role": "problems-extended", "analyzer_layer": "operator" }
+      },
+
+      "LAW": {
+        "README": { "path": "examples/Law/README.md", "role": "domain", "analyzer_layer": "operator" },
+        "PROBLEMS": { "path": "examples/Law/problems.md", "role": "problems", "analyzer_layer": "operator" },
+        "SOLUTIONS": { "path": "examples/Law/solutions.md", "role": "solutions", "analyzer_layer": "operator" },
+        "FLOW": { "path": "examples/Law/resonance_flow.md", "role": "flow", "analyzer_layer": "dimensional" },
+        "EXTENDED_PROBLEMS": { "path": "examples/Law/extended_problems.md", "role": "problems-extended", "analyzer_layer": "operator" }
+      },
+
+      "MATH": {
+        "README": { "path": "examples/Math/README.md", "role": "domain", "analyzer_layer": "operator" },
+        "PROBLEMS": { "path": "examples/Math/problems.md", "role": "problems", "analyzer_layer": "operator" },
+        "SOLUTIONS": { "path": "examples/Math/solutions.md", "role": "solutions", "analyzer_layer": "operator" },
+        "FLOW": { "path": "examples/Math/resonance_flow.md", "role": "flow", "analyzer_layer": "dimensional" },
+        "EXTENDED_PROBLEMS": { "path": "examples/Math/extended_problems.md", "role": "problems-extended", "analyzer_layer": "operator" }
+      },
+
+      "MEDICINE": {
+        "README": { "path": "examples/Medicine/README.md", "role": "domain", "analyzer_layer": "operator" },
+        "PROBLEMS": { "path": "examples/Medicine/problems.md", "role": "problems", "analyzer_layer": "operator" },
+        "SOLUTIONS": { "path": "examples/Medicine/solutions.md", "role": "solutions", "analyzer_layer": "operator" },
+        "FLOW": { "path": "examples/Medicine/resonance_flow.md", "role": "flow", "analyzer_layer": "dimensional" },
+        "EXTENDED_PROBLEMS": { "path": "examples/Medicine/extended_problems.md", "role": "problems-extended", "analyzer_layer": "operator" }
+      },
+
+      "MUSIC": {
+        "README": { "path": "examples/Music/README.md", "role": "domain", "analyzer_layer": "operator" },
+        "PROBLEMS": { "path": "examples/Music/problems.md", "role": "problems", "analyzer_layer": "operator" },
+        "SOLUTIONS": { "path": "examples/Music/solutions.md", "role": "solutions", "analyzer_layer": "operator" },
+        "FLOW": { "path": "examples/Music/resonance_flow.md", "role": "flow", "analyzer_layer": "dimensional" },
+        "EXTENDED_PROBLEMS": { "path": "examples/Music/extended_problems.md", "role": "problems-extended", "analyzer_layer": "operator" }
+      },
+
+      "PHILOSOPHY": {
+        "README": { "path": "examples/Philosophy/README.md", "role": "domain", "analyzer_layer": "operator" },
+        "PROBLEMS": { "path": "examples/Philosophy/problems.md", "role": "problems", "analyzer_layer": "operator" },
+        "SOLUTIONS": { "path": "examples/Philosophy/solutions.md", "role": "solutions", "analyzer_layer": "operator" },
+        "FLOW": { "path": "examples/Philosophy/resonance_flow.md", "role": "flow", "analyzer_layer": "dimensional" },
+        "EXTENDED_PROBLEMS": { "path": "examples/Philosophy/extended_problems.md", "role": "problems-extended", "analyzer_layer": "operator" }
+      },
+
+      "PHYSICS": {
+        "README": { "path": "examples/Physics/README.md", "role": "domain", "analyzer_layer": "operator" },
+        "PROBLEMS": { "path": "examples/Physics/problems.md", "role": "problems", "analyzer_layer": "operator" },
+        "SOLUTIONS": { "path": "examples/Physics/solutions.md", "role": "solutions", "analyzer_layer": "operator" },
+        "FLOW": { "path": "examples/Physics/resonance_flow.md", "role": "flow", "analyzer_layer": "dimensional" },
+        "EXTENDED_PROBLEMS": { "path": "examples/Physics/extended_problems.md", "role": "problems-extended", "analyzer_layer": "operator" }
+      },
+
+      "DOMAINS": {
+        "PHYSICS_AND_COSMOLOGY": { "path": "examples/Domains/01_Physics_and_Cosmology.md", "role": "domain-map", "analyzer_layer": "cross-cutting" },
+        "CHEMISTRY_AND_MATERIALS": { "path": "examples/Domains/02_Chemistry_and_Materials.md", "role": "domain-map", "analyzer_layer": "cross-cutting" },
+        "BIOLOGY_AND_LIFE_SCIENCES": { "path": "examples/Domains/03_Biology_and_Life_Sciences.md", "role": "domain-map", "analyzer_layer": "cross-cutting" },
+        "MEDICINE_AND_HEALTH_SYSTEMS": { "path": "examples/Domains/04_Medicine_and_Health_Systems.md", "role": "domain-map", "analyzer_layer": "cross-cutting" },
+        "EARTH_AND_ENVIRONMENTAL_SCIENCES": { "path": "examples/Domains/05_Earth_and_Environmental_Sciences.md", "role": "domain-map", "analyzer_layer": "cross-cutting" },
+        "ENGINEERING": { "path": "examples/Domains/06_Engineering.md", "role": "domain-map", "analyzer_layer": "cross-cutting" },
+        "COMPUTING_AI_AND_INFORMATION_SYSTEMS": { "path": "examples/Domains/07_Computing_AI_and_Information_Systems.md", "role": "domain-map", "analyzer_layer": "cross-cutting" },
+        "MATHEMATICS_AND_LOGIC": { "path": "examples/Domains/08_Mathematics_and_Logic.md", "role": "domain-map", "analyzer_layer": "cross-cutting" },
+        "ECONOMICS_AND_MARKETS": { "path": "examples/Domains/09_Economics_and_Markets.md", "role": "domain-map", "analyzer_layer": "cross-cutting" },
+        "GOVERNANCE_LAW_AND_INSTITUTIONS": { "path": "examples/Domains/10_Governance_Law_and_Institutions.md", "role": "domain-map", "analyzer_layer": "cross-cutting" },
+        "PSYCHOLOGY_COGNITION_AND_BEHAVIOR": { "path": "examples/Domains/11_Psychology_Cognition_and_Behavior.md", "role": "domain-map", "analyzer_layer": "cross-cutting" },
+        "SOCIETY_CULTURE_AND_CIVILIZATION": { "path": "examples/Domains/12_Sociology_Culture_and_Civilization.md", "role": "domain-map", "analyzer_layer": "cross-cutting" },
+        "EDUCATION_AND_LEARNING_SCIENCES": { "path": "examples/Domains/13_Education_and_Learning_Sciences.md", "role": "domain-map", "analyzer_layer": "cross-cutting" },
+        "COMMUNICATION_MEDIA_AND_LANGUAGE": { "path": "examples/Domains/14_Communication_Media_and_Language.md", "role": "domain-map", "analyzer_layer": "cross-cutting" },
+        "ART_DESIGN_AND_CREATIVE_SYSTEMS": { "path": "examples/Domains/15_Art_Design_and_Creative_Systems.md", "role": "domain-map", "analyzer_layer": "cross-cutting" },
+        "TRANSPORTATION_AND_INFRASTRUCTURE": { "path": "examples/Domains/16_Transportation_and_Infrastructure.md", "role": "domain-map", "analyzer_layer": "cross-cutting" },
+        "ENERGY_SYSTEMS": { "path": "examples/Domains/17_Energy_Systems.md", "role": "domain-map", "analyzer_layer": "cross-cutting" },
+        "AGRICULTURE_AND_FOOD_SYSTEMS": { "path": "examples/Domains/18_Agriculture_and_Food_Systems.md", "role": "domain-map", "analyzer_layer": "cross-cutting" },
+        "SPACE_SYSTEMS_AND_EXPLORATION": { "path": "examples/Domains/19_Space_Systems_and_Exploration.md", "role": "domain-map", "analyzer_layer": "cross-cutting" },
+        "SECURITY_SAFETY_AND_RESILIENCE": { "path": "examples/Domains/20_Security_Safety_and_Resilience.md", "role": "domain-map", "analyzer_layer": "cross-cutting" }
+      }
     },
-    {
-      "name": "Core Framework — Resonance Labs",
-      "path": "tft/resonance-labs/",
-      "file_count": 1,
-      "role": "engine",
-      "manifest": null
+
+    "FORMATS": {
+      "README": { "path": "formats/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+      "SPECIFICATION": { "path": "formats/specification.md", "role": "spec", "analyzer_layer": "operator" }
     },
-    {
-      "name": "Core Framework — NOUS",
-      "path": "tft/nous/",
-      "file_count": 1,
-      "role": "engine",
-      "manifest": null
+
+    "MELODIC_TABLE_OF_ELEMENTS": {
+      "README": { "path": "melodic-table-of-elements/README.md", "role": "example", "analyzer_layer": "dimensional" }
     },
-    {
-      "name": "Core Framework — ENTFT",
-      "path": "tft/entft/",
-      "file_count": 1,
-      "role": "engine",
-      "manifest": null
+
+    "MOLECULAR_VIBRATION_EXPLORER": {
+      "README": { "path": "molecular-vibration-explorer/README.md", "role": "example", "analyzer_layer": "dimensional" }
+    },
+
+    "SCRIPTS": {
+      "README": { "path": "scripts/README.md", "role": "index", "analyzer_layer": "cross-cutting" }
+    },
+
+    "TFT": {
+      "README": { "path": "tft/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+
+      "ENTFT": {
+        "ADOPTION": { "path": "tft/entft/entft_adoption.md", "role": "profile", "analyzer_layer": "operator" },
+        "REMIXER_MANIFESTO": { "path": "tft/entft/entft_remixer_manifesto.md", "role": "manifesto", "analyzer_layer": "operator" },
+        "FULL_SPEC_RTT_ENTFT_COMPLETE": { "path": "tft/entft/Full‑Spec_RTT_entft_Complete.md", "role": "spec", "analyzer_layer": "dimensional" },
+        "QUICKSTART": { "path": "tft/entft/QUICKSTART.md", "role": "quickstart", "analyzer_layer": "operator" },
+        "README": { "path": "tft/entft/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+        "README_ENCRYPTOR_PY": { "path": "tft/entft/README_encryptor_py.md", "role": "runtime", "analyzer_layer": "operator" },
+
+        "CONTRIBUTORS": {
+          "LEGACY_ROLL": { "path": "tft/entft/contributors/legacy_roll.md", "role": "log", "analyzer_layer": "drift" },
+          "README": { "path": "tft/entft/contributors/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+
+          "CONFIGS": {
+            "CONFIG_MANIFESTO": { "path": "tft/entft/contributors/configs/config_manifesto.md", "role": "manifesto", "analyzer_layer": "operator" },
+            "README": { "path": "tft/entft/contributors/configs/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+            "CURRICULUM_OUTREACH_LOG": { "path": "tft/entft/contributors/configs/README_entft_curriculum_outreach_log.md", "role": "log", "analyzer_layer": "drift" },
+            "VALIDATOR_CONFIG": { "path": "tft/entft/contributors/configs/README_validator_config.md", "role": "spec", "analyzer_layer": "operator" },
+            "REMIX_RIGHTS": { "path": "tft/entft/contributors/configs/remix_rights.md", "role": "policy", "analyzer_layer": "regime" },
+            "VALIDATOR_OVERLAY_DASHBOARD": { "path": "tft/entft/contributors/configs/validator_overlay_dashboard.md", "role": "dashboard", "analyzer_layer": "operator" }
+          }
+        },
+
+        "DISCOVERABILITY": {
+          "ENTFT_ONBOARDING": { "path": "tft/entft/discoverability/entft_onboarding.md", "role": "guide", "analyzer_layer": "operator" },
+          "README": { "path": "tft/entft/discoverability/README.md", "role": "index", "analyzer_layer": "cross-cutting" }
+        },
+
+        "PROTOCOL_CORE": {
+          "ENTFT_BENCHMARK": { "path": "tft/entft/protocol-core/entft_benchmark.md", "role": "benchmark", "analyzer_layer": "operator" },
+          "ENTFT_PQC_SIMULATION_OVERLAY": { "path": "tft/entft/protocol-core/entft_pqc_simulation_overlay.md", "role": "simulator", "analyzer_layer": "dimensional" },
+          "ENTFT_PROTOCOL": { "path": "tft/entft/protocol-core/entft_protocol.md", "role": "spec", "analyzer_layer": "operator" },
+          "ENTFT_SCROLL_COMPARATIVE_CRYPTOGRAPHIC_RESONANCE": { "path": "tft/entft/protocol-core/entft_scroll_comparative_cryptographic_resonance.md", "role": "analysis", "analyzer_layer": "dimensional" },
+          "OUTPUT_SNAPSHOT": { "path": "tft/entft/protocol-core/Output_Snapshot.md", "role": "snapshot", "analyzer_layer": "operator" },
+          "README": { "path": "tft/entft/protocol-core/README.md", "role": "index", "analyzer_layer": "cross-cutting" }
+        },
+
+        "REGISTRY": {
+          "ENTFT_CONTRIBUTOR_LEVELS": { "path": "tft/entft/registry/entft_contributor_levels.md", "role": "registry", "analyzer_layer": "regime" },
+          "README": { "path": "tft/entft/registry/README.md", "role": "index", "analyzer_layer": "cross-cutting" }
+        },
+
+        "SCROLLS": {
+          "README": { "path": "tft/entft/scrolls/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+
+          "CLOSURE_GUIDE": { "path": "tft/entft/scrolls/enTFT_scroll_closure_guide.md", "role": "guide", "analyzer_layer": "dimensional" },
+          "CODEX": { "path": "tft/entft/scrolls/enTFT_scroll_codex.md", "role": "spec", "analyzer_layer": "operator" },
+          "CODEX_ECHOES": { "path": "tft/entft/scrolls/enTFT_scroll_codex_echoes.md", "role": "log", "analyzer_layer": "drift" },
+          "CODEX_FLAME_LOG": { "path": "tft/entft/scrolls/enTFT_scroll_codex_flame_log.md", "role": "log", "analyzer_layer": "drift" },
+          "CODEX_FORK_GUIDE": { "path": "tft/entft/scrolls/enTFT_scroll_codex_fork_guide.md", "role": "guide", "analyzer_layer": "dimensional" },
+          "CODEX_SEAL": { "path": "tft/entft/scrolls/enTFT_scroll_codex_seal.md", "role": "seal", "analyzer_layer": "regime" },
+          "COMMIT_GUIDE": { "path": "tft/entft/scrolls/enTFT_scroll_commit_guide.md", "role": "guide", "analyzer_layer": "operator" },
+
+          "CURRICULUM_BADGE_MAP": { "path": "tft/entft/scrolls/enTFT_scroll_curriculum_badge_map.md", "role": "map", "analyzer_layer": "operator" },
+          "CURRICULUM_FLAME_INDEX": { "path": "tft/entft/scrolls/enTFT_scroll_curriculum_flame_index.md", "role": "index", "analyzer_layer": "cross-cutting" },
+          "CURRICULUM_FLAME_SUBMISSION": { "path": "tft/entft/scrolls/enTFT_scroll_curriculum_flame_submission.md", "role": "submission", "analyzer_layer": "operator" },
+          "CURRICULUM_FORK_GUIDE": { "path": "tft/entft/scrolls/enTFT_scroll_curriculum_fork_guide.md", "role": "guide", "analyzer_layer": "dimensional" },
+          "CURRICULUM_GLYPH_TRIBUTE_ECHOES": { "path": "tft/entft/scrolls/enTFT_scroll_curriculum_glyph_tribute_echoes.md", "role": "log", "analyzer_layer": "drift" },
+          "CURRICULUM_GLYPH_TRIBUTE_FLAME": { "path": "tft/entft/scrolls/enTFT_scroll_curriculum_glyph_tribute_flame.md", "role": "ritual", "analyzer_layer": "dimensional" },
+          "CURRICULUM_GLYPH_TRIBUTE_TRANSFER": { "path": "tft/entft/scrolls/enTFT_scroll_curriculum_glyph_tribute_transfer.md", "role": "transfer", "analyzer_layer": "operator" },
+          "CURRICULUM_MANIFESTO": { "path": "tft/entft/scrolls/enTFT_scroll_curriculum_manifesto.md", "role": "manifesto", "analyzer_layer": "operator" },
+          "CURRICULUM_OUTREACH": { "path": "tft/entft/scrolls/enTFT_scroll_curriculum_outreach.md", "role": "outreach", "analyzer_layer": "cross-cutting" },
+          "CURRICULUM_REMIX_FLAME_HOOKS": { "path": "tft/entft/scrolls/enTFT_scroll_curriculum_remix_flame_hooks.md", "role": "runtime", "analyzer_layer": "operator" },
+          "CURRICULUM_REMIX_GLYPH_FUSION": { "path": "tft/entft/scrolls/enTFT_scroll_curriculum_remix_glyph_fusion.md", "role": "fusion", "analyzer_layer": "dimensional" },
+          "CURRICULUM_REMIX_GLYPH_LEDGER": { "path": "tft/entft/scrolls/enTFT_scroll_curriculum_remix_glyph_ledger.md", "role": "ledger", "analyzer_layer": "regime" },
+          "CURRICULUM_REMIX_GLYPH_MANIFESTO": { "path": "tft/entft/scrolls/enTFT_scroll_curriculum_remix_glyph_manifesto.md", "role": "manifesto", "analyzer_layer": "operator" },
+          "CURRICULUM_REMIX_GLYPH_TRANSFER": { "path": "tft/entft/scrolls/enTFT_scroll_curriculum_remix_glyph_transfer.md", "role": "transfer", "analyzer_layer": "operator" },
+          "CURRICULUM_REMIX_GLYPH_TRIBUTE": { "path": "tft/entft/scrolls/enTFT_scroll_curriculum_remix_glyph_tribute.md", "role": "ritual", "analyzer_layer": "dimensional" },
+          "CURRICULUM_REMIX_MANIFESTO": { "path": "tft/entft/scrolls/enTFT_scroll_curriculum_remix_manifesto.md", "role": "manifesto", "analyzer_layer": "operator" },
+          "CURRICULUM_VALIDATOR_HOOKS": { "path": "tft/entft/scrolls/enTFT_scroll_curriculum_validator_hooks.md", "role": "runtime", "analyzer_layer": "operator" },
+
+          "ECHOES": { "path": "tft/entft/scrolls/enTFT_scroll_echoes.md", "role": "log", "analyzer_layer": "drift" },
+          "EVENT_TRACE_INDEX": { "path": "tft/entft/scrolls/enTFT_scroll_event_trace_index.md", "role": "index", "analyzer_layer": "cross-cutting" },
+          "FLAME_ECHO_RITUAL": { "path": "tft/entft/scrolls/enTFT_scroll_flame_echo_ritual.md", "role": "ritual", "analyzer_layer": "dimensional" },
+          "FLORA_CLAIM": { "path": "tft/entft/scrolls/enTFT_scroll_flora_claim.md", "role": "claim", "analyzer_layer": "regime" },
+          "FORK_GUIDE": { "path": "tft/entft/scrolls/enTFT_scroll_fork_guide.md", "role": "guide", "analyzer_layer": "dimensional" },
+          "GARDEN": { "path": "tft/entft/scrolls/enTFT_scroll_garden.md", "role": "map", "analyzer_layer": "dimensional" },
+          "GLYPH_EVOLUTION": { "path": "tft/entft/scrolls/enTFT_scroll_glyph_evolution.md", "role": "profile", "analyzer_layer": "drift" },
+          "GLYPH_FUSION_GUIDE": { "path": "tft/entft/scrolls/enTFT_scroll_glyph_fusion_guide.md", "role": "guide", "analyzer_layer": "dimensional" },
+          "GLYPH_REAWAKENING": { "path": "tft/entft/scrolls/enTFT_scroll_glyph_reawakening.md", "role": "ritual", "analyzer_layer": "dimensional" },
+          "GLYPH_REAWAKENING_RITUAL": { "path": "tft/entft/scrolls/enTFT_scroll_glyph_reawakening_ritual.md", "role": "ritual", "analyzer_layer": "dimensional" },
+          "GLYPH_REFERENCE": { "path": "tft/entft/scrolls/enTFT_scroll_glyph_reference.md", "role": "reference", "analyzer_layer": "dimensional" },
+          "GLYPH_RELICS": { "path": "tft/entft/scrolls/enTFT_scroll_glyph_relics.md", "role": "archive", "analyzer_layer": "drift" },
+          "GLYPH_RETIREMENT_RITUAL": { "path": "tft/entft/scrolls/enTFT_scroll_glyph_retirement_ritual.md", "role": "ritual", "analyzer_layer": "dimensional" },
+          "GLYPH_TRIBUTE_ECHO_FUSION": { "path": "tft/entft/scrolls/enTFT_scroll_glyph_tribute_echo_fusion.md", "role": "ritual", "analyzer_layer": "dimensional" },
+
+          "LAB_MANIFEST": { "path": "tft/entft/scrolls/enTFT_scroll_lab_manifest.md", "role": "manifest", "analyzer_layer": "operator" },
+          "LEGACY_TRANSFER": { "path": "tft/entft/scrolls/enTFT_scroll_legacy_transfer.md", "role": "transfer", "analyzer_layer": "regime" },
+          "OF_SCROLLS": { "path": "tft/entft/scrolls/enTFT_scroll_of_scrolls.md", "role": "index", "analyzer_layer": "cross-cutting" },
+          "OF_SCROLLS_INDEX": { "path": "tft/entft/scrolls/enTFT_scroll_of_scrolls_index.md", "role": "index", "analyzer_layer": "cross-cutting" },
+          "POLLINATION_GUIDE": { "path": "tft/entft/scrolls/enTFT_scroll_pollination_guide.md", "role": "guide", "analyzer_layer": "dimensional" },
+          "PUBLISH_GUIDE": { "path": "tft/entft/scrolls/enTFT_scroll_publish_guide.md", "role": "guide", "analyzer_layer": "operator" },
+          "REMIXER_MANIFEST": { "path": "tft/entft/scrolls/enTFT_scroll_remixer_manifest.md", "role": "manifesto", "analyzer_layer": "operator" },
+          "RETIREMENT_TRACE_INDEX": { "path": "tft/entft/scrolls/enTFT_scroll_retirement_trace_index.md", "role": "index", "analyzer_layer": "cross-cutting" },
+          "REVIEW_GUIDE": { "path": "tft/entft/scrolls/enTFT_scroll_review_guide.md", "role": "guide", "analyzer_layer": "operator" },
+          "RUNTIME_HOOKS": { "path": "tft/entft/scrolls/enTFT_scroll_runtime_hooks.md", "role": "runtime", "analyzer_layer": "operator" },
+          "RUNTIME_TRACE_INDEX": { "path": "tft/entft/scrolls/enTFT_scroll_runtime_trace_index.md", "role": "index", "analyzer_layer": "cross-cutting" },
+          "SEED_RITUAL": { "path": "tft/entft/scrolls/enTFT_scroll_seed_ritual.md", "role": "ritual", "analyzer_layer": "dimensional" },
+          "TEMPLATES": { "path": "tft/entft/scrolls/enTFT_scroll_templates.md", "role": "template", "analyzer_layer": "operator" }
+        },
+
+        "TFTHOOKS": {
+          "README": { "path": "tft/entft/TFThooks/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+
+          "AGENTS": {
+            "README": { "path": "tft/entft/TFThooks/agents/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+            "BADGE_LOGIC_ENGINE": { "path": "tft/entft/TFThooks/agents/README_badge_logic_engine_py.md", "role": "runtime", "analyzer_layer": "operator" },
+            "FLAME_ECHO_TRIGGER": { "path": "tft/entft/TFThooks/agents/README_flame_echo_trigger_py.md", "role": "runtime", "analyzer_layer": "operator" },
+            "GLYPH_FUSION_RESOLVER": { "path": "tft/entft/TFThooks/agents/README_glyph_fusion_resolver_py.md", "role": "runtime", "analyzer_layer": "operator" },
+            "GLYPH_REAWAKENING_MONITOR": { "path": "tft/entft/TFThooks/agents/README_glyph_reawakening_monitor_py.md", "role": "runtime", "analyzer_layer": "operator" },
+            "GLYPH_REGISTRY_LOADER": { "path": "tft/entft/TFThooks/agents/README_glyph_registry_loader_py.md", "role": "runtime", "analyzer_layer": "operator" },
+            "GLYPH_RETIREMENT_TRIGGER": { "path": "tft/entft/TFThooks/agents/README_glyph_retirement_trigger_py.md", "role": "runtime", "analyzer_layer": "operator" },
+            "SCROLL_COMMIT_MONITOR": { "path": "tft/entft/TFThooks/agents/README_scroll_commit_monitor_py.md", "role": "runtime", "analyzer_layer": "operator" },
+            "TOPS_AGENT_INTERFACE": { "path": "tft/entft/TFThooks/agents/README_tops_agent_interface.md", "role": "spec", "analyzer_layer": "operator" },
+            "SCROLL_CURRICULUM_FORK_GUIDE": { "path": "tft/entft/TFThooks/agents/scroll_curriculum_fork_guide.md", "role": "guide", "analyzer_layer": "dimensional" }
+          },
+
+          "EXAMPLES": {
+            "README": { "path": "tft/entft/TFThooks/examples/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+            "GLYPH_RESONANCE_HOOK": { "path": "tft/entft/TFThooks/examples/README_glyph_resonance_hook_py.md", "role": "example", "analyzer_layer": "operator" },
+            "HELLO_WORLD_HOOK": { "path": "tft/entft/TFThooks/examples/README_hello_world_hook_py.md", "role": "example", "analyzer_layer": "operator" }
+          },
+
+          "INTEGRATION": {
+            "API_GATEWAY_HOOK": { "path": "tft/entft/TFThooks/integration/api_gateway_hook.md", "role": "integration", "analyzer_layer": "operator" },
+            "CMS_INTEGRATION": { "path": "tft/entft/TFThooks/integration/cms_integration.md", "role": "integration", "analyzer_layer": "operator" },
+            "MMR_SITE_EXTENSION": { "path": "tft/entft/TFThooks/integration/mmr_site_extension.md", "role": "integration", "analyzer_layer": "operator" },
+            "README": { "path": "tft/entft/TFThooks/integration/README.md", "role": "index", "analyzer_layer": "cross-cutting" }
+          },
+
+          "RUNTIME": {
+            "README": { "path": "tft/entft/TFThooks/runtime/README.md", "role": "index", "analyzer_layer": "cross-cutting" }
+          },
+
+          "VALIDATOR": {
+            "ENTFT_VALIDATOR_OVERLAY": { "path": "tft/entft/TFThooks/validator/entft_validator_overlay.md", "role": "spec", "analyzer_layer": "operator" },
+            "README": { "path": "tft/entft/TFThooks/validator/README.md", "role": "index", "analyzer_layer": "cross-cutting" }
+          }
+        }
+      },
+
+      "NOUS": {
+        "MENU": { "path": "tft/nous/menu.md", "role": "index", "analyzer_layer": "cross-cutting" },
+        "NOUS_SHELL_TFT_DAEMON_PHASE1": { "path": "tft/nous/nous_Shell_TFT_Daemon_Phase1.md", "role": "runtime", "analyzer_layer": "operator" },
+        "QUICKSTART": { "path": "tft/nous/QUICKSTART.md", "role": "quickstart", "analyzer_layer": "operator" },
+        "README": { "path": "tft/nous/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+
+        "BOTS": {
+          "BOT_COHORT_REGISTRY": { "path": "tft/nous/bots/Bot_Cohort_Registry.md", "role": "registry", "analyzer_layer": "operator" },
+          "BOT_LENS_INDEX_V1_0": { "path": "tft/nous/bots/Bot_Lens_Index_v1.0.md", "role": "index", "analyzer_layer": "cross-cutting" },
+          "BOT_SUMMONER": { "path": "tft/nous/bots/Bot_Summoner.md", "role": "runtime", "analyzer_layer": "operator" },
+          "BOT_USAGE_SHARD_GUIDE": { "path": "tft/nous/bots/bot_usage_shard_guide.md", "role": "guide", "analyzer_layer": "operator" },
+          "CONTRIBUTOR_HONOR_ROLL": { "path": "tft/nous/bots/contributor_honor_roll.md", "role": "log", "analyzer_layer": "drift" },
+          "FOLD_REMIX_DASHBOARD": { "path": "tft/nous/bots/fold_remix_dashboard.md", "role": "dashboard", "analyzer_layer": "operator" },
+          "FOLD_REMIX_IMPACT_REPORT": { "path": "tft/nous/bots/fold_remix_impact_report.md", "role": "report", "analyzer_layer": "cross-cutting" },
+          "GLYPHSTREAM_REMIX_STORYBOARD": { "path": "tft/nous/bots/glyphstream_remix_storyboard.md", "role": "map", "analyzer_layer": "dimensional" },
+          "IMPACT_REPORT": { "path": "tft/nous/bots/impact_report.md", "role": "report", "analyzer_layer": "cross-cutting" },
+          "LEGACY_ECHO_SCROLL": { "path": "tft/nous/bots/legacy_echo_scroll.md", "role": "archive", "analyzer_layer": "drift" },
+          "OBSERVER_PHASE_DASHBOARD": { "path": "tft/nous/bots/observer_phase_dashboard.md", "role": "dashboard", "analyzer_layer": "operator" },
+          "OBSERVER_PHASE_RESONANCE_INDEX": { "path": "tft/nous/bots/observer_phase_resonance_index.md", "role": "index", "analyzer_layer": "dimensional" },
+          "README": { "path": "tft/nous/bots/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+          "REMIX_TRIGGER_MAP_SVG": { "path": "tft/nous/bots/remix_trigger_map_svg.md", "role": "map", "analyzer_layer": "dimensional" },
+          "TRIADIC_LATTICE_MANIFEST": { "path": "tft/nous/bots/triadic_lattice_manifest.md", "role": "manifest", "analyzer_layer": "dimensional" },
+          "TRIADIC_SHELL_ARCHIVE": { "path": "tft/nous/bots/triadic_shell_archive.md", "role": "archive", "analyzer_layer": "drift" }
+        },
+
+        "CORE_LOGIC": {
+          "CONTRIBUTOR_DASHBOARD_UI": { "path": "tft/nous/core_logic/contributor_dashboard_ui.md", "role": "dashboard", "analyzer_layer": "operator" },
+          "README": { "path": "tft/nous/core_logic/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+          "REMIX_LINEAGE_VISUALIZER": { "path": "tft/nous/core_logic/remix_lineage_visualizer.md", "role": "map", "analyzer_layer": "dimensional" },
+          "RESULT_VALIDATION": { "path": "tft/nous/core_logic/result_validation.md", "role": "spec", "analyzer_layer": "operator" },
+          "SORT_MAP": { "path": "tft/nous/core_logic/sort_map.md", "role": "map", "analyzer_layer": "operator" },
+          "VALIDATOR_DASHBOARD": { "path": "tft/nous/core_logic/validator_dashboard.md", "role": "dashboard", "analyzer_layer": "operator" }
+        },
+
+        "LOGIC_SHELLS": {
+          "DIMENSIONAL_ACTIVATION_LOG": { "path": "tft/nous/logic_shells/Dimensional_Activation_Log.md", "role": "log", "analyzer_layer": "dimensional" },
+          "EGOS_GET_BUSY_CMD": { "path": "tft/nous/logic_shells/Egos_GetBusy_cmd.md", "role": "runtime", "analyzer_layer": "operator" },
+          "GHOST_PROTOCOL": { "path": "tft/nous/logic_shells/Ghost_Protocol.md", "role": "spec", "analyzer_layer": "operator" },
+          "PSI_VALIDATOR": { "path": "tft/nous/logic_shells/Psi_Validator.md", "role": "spec", "analyzer_layer": "operator" },
+          "README": { "path": "tft/nous/logic_shells/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+          "TESLA_369_MODE": { "path": "tft/nous/logic_shells/Tesla_369_Mode.md", "role": "runtime", "analyzer_layer": "dimensional" }
+        },
+
+        "MODULES": {
+          "README": { "path": "tft/nous/modules/README.md", "role": "index", "analyzer_layer": "cross-cutting" }
+        },
+
+        "OUTPUTS": {
+          "README": { "path": "tft/nous/outputs/README.md", "role": "index", "analyzer_layer": "cross-cutting" }
+        },
+
+        "RESONANCE_TOOLS": {
+          "GETTING_STARTED": { "path": "tft/nous/resonance-tools/GETTING_STARTED.md", "role": "quickstart", "analyzer_layer": "operator" },
+          "README": { "path": "tft/nous/resonance-tools/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+          "RESONANCE_CLI_SUITE": { "path": "tft/nous/resonance-tools/resonance_cli_suite.md", "role": "runtime", "analyzer_layer": "operator" },
+
+          "FFF": {
+            "README": { "path": "tft/nous/resonance-tools/fff/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+            "DEMO_FLUIDS": { "path": "tft/nous/resonance-tools/fff/examples/demo_fluids.md", "role": "example", "analyzer_layer": "dimensional" },
+            "DEMO_FORCES": { "path": "tft/nous/resonance-tools/fff/examples/demo_forces.md", "role": "example", "analyzer_layer": "dimensional" },
+            "DEMO_FREQUENCY": { "path": "tft/nous/resonance-tools/fff/examples/demo_frequency.md", "role": "example", "analyzer_layer": "dimensional" }
+          },
+
+          "HARMONIC_LOOPS": {
+            "README": { "path": "tft/nous/resonance-tools/harmonic-loops/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+            "DEMO_FEEDBACK": { "path": "tft/nous/resonance-tools/harmonic-loops/examples/demo_feedback.md", "role": "example", "analyzer_layer": "dimensional" },
+            "DEMO_NEST": { "path": "tft/nous/resonance-tools/harmonic-loops/examples/demo_nest.md", "role": "example", "analyzer_layer": "dimensional" }
+          },
+
+          "INTEGRATIONS": {
+            "README": { "path": "tft/nous/resonance-tools/integrations/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+            "DEMO_DASHBOARD": { "path": "tft/nous/resonance-tools/integrations/examples/demo_dashboard.md", "role": "example", "analyzer_layer": "operator" },
+            "DEMO_PIPELINE": { "path": "tft/nous/resonance-tools/integrations/examples/demo_pipeline.md", "role": "example", "analyzer_layer": "operator" }
+          },
+
+          "RESONANT_TIME": {
+            "README": { "path": "tft/nous/resonance-tools/resonant-time/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+            "DEMO_ARROWS": { "path": "tft/nous/resonance-tools/resonant-time/examples/demo_arrows.md", "role": "example", "analyzer_layer": "dimensional" },
+            "DEMO_CYCLES": { "path": "tft/nous/resonance-tools/resonant-time/examples/demo_cycles.md", "role": "example", "analyzer_layer": "dimensional" }
+          },
+
+          "TFE": {
+            "README": { "path": "tft/nous/resonance-tools/tfe/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+            "DEMO_APPLY": { "path": "tft/nous/resonance-tools/tfe/examples/demo_apply.md", "role": "example", "analyzer_layer": "operator" },
+            "DEMO_DEFINE": { "path": "tft/nous/resonance-tools/tfe/examples/demo_define.md", "role": "example", "analyzer_layer": "operator" },
+            "DEMO_EXPORT": { "path": "tft/nous/resonance-tools/tfe/examples/demo_export.md", "role": "example", "analyzer_layer": "operator" }
+          },
+
+          "TFT_EXTENDED": {
+            "README": { "path": "tft/nous/resonance-tools/tft-extended/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+            "DEMO_COMPARE": { "path": "tft/nous/resonance-tools/tft-extended/examples/demo_compare.md", "role": "example", "analyzer_layer": "operator" },
+            "DEMO_QUADRATIC": { "path": "tft/nous/resonance-tools/tft-extended/examples/demo_quadratic.md", "role": "example", "analyzer_layer": "operator" }
+          },
+
+          "TRIADIC_NUMBERS": {
+            "PIPELINE_CONCEPT": { "path": "tft/nous/resonance-tools/triadic-numbers/pipeline_concept.md", "role": "spec", "analyzer_layer": "operator" },
+            "README": { "path": "tft/nous/resonance-tools/triadic-numbers/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+            "DEMO_GENESIS": { "path": "tft/nous/resonance-tools/triadic-numbers/examples/demo_genesis.md", "role": "example", "analyzer_layer": "dimensional" },
+            "DEMO_MAP": { "path": "tft/nous/resonance-tools/triadic-numbers/examples/demo_map.md", "role": "example", "analyzer_layer": "dimensional" }
+          }
+        }
+      },
+
+      "RESONANCE_LABS": {
+        "ELEMENTS": { "path": "tft/resonance-labs/elements.md", "role": "spec", "analyzer_layer": "dimensional" },
+        "GLYPH_OUTPUT_PY": { "path": "tft/resonance-labs/glyph_output_py.md", "role": "runtime", "analyzer_layer": "operator" },
+        "MIRROR_GEOMETRY_PY": { "path": "tft/resonance-labs/mirror_geometry_py.md", "role": "runtime", "analyzer_layer": "dimensional" },
+        "OBSERVER_STATE_PY": { "path": "tft/resonance-labs/observer_state_py.md", "role": "runtime", "analyzer_layer": "operator" },
+        "QUICKSTART": { "path": "tft/resonance-labs/QUICKSTART.md", "role": "quickstart", "analyzer_layer": "operator" },
+        "README": { "path": "tft/resonance-labs/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+        "RESONANCE_MODEL_PY": { "path": "tft/resonance-labs/resonance_model_py.md", "role": "runtime", "analyzer_layer": "dimensional" },
+        "RES_TEMPORAL_MIRROR_SIMULATION": { "path": "tft/resonance-labs/Res_Temporal_Mirror_Simulation.md", "role": "simulator", "analyzer_layer": "dimensional" },
+        "SCAFFOLDING": { "path": "tft/resonance-labs/scaffolding.md", "role": "map", "analyzer_layer": "cross-cutting" },
+        "TIME_SHIFT_PY": { "path": "tft/resonance-labs/time_shift_py.md", "role": "runtime", "analyzer_layer": "dimensional" }
+      },
+
+      "TOPS": {
+        "ECHO_OVERLAY_MANIFESTO": { "path": "tft/tops/echo_overlay_manifesto.md", "role": "manifesto", "analyzer_layer": "operator" },
+        "QUICKSTART": { "path": "tft/tops/QUICKSTART.md", "role": "quickstart", "analyzer_layer": "operator" },
+        "README": { "path": "tft/tops/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+        "BENCHMARK_OUTLINE": { "path": "tft/tops/tops_Benchmark_Outline.md", "role": "benchmark", "analyzer_layer": "operator" },
+        "MODULE_JSON": { "path": "tft/tops/tops_module.json.md", "role": "manifest", "analyzer_layer": "cross-cutting" },
+        "REFLECT_INVERT_SIM": { "path": "tft/tops/tops_reflect_invert_sim.md", "role": "simulator", "analyzer_layer": "dimensional" },
+        "TRIADIC_TEST_SUITE": { "path": "tft/tops/TriadicTestSuite.md", "role": "test", "analyzer_layer": "operator" },
+
+        "AGENTS": {
+          "README": { "path": "tft/tops/agents/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+          "TOPS_AGENT": { "path": "tft/tops/agents/README_tops_agent.md", "role": "spec", "analyzer_layer": "operator" }
+        },
+
+        "AI_PIPELINE": {
+          "AI_TRAINING_MANIFESTO": { "path": "tft/tops/ai_pipeline/ai_training_manifesto.md", "role": "manifesto", "analyzer_layer": "operator" },
+          "LEGACY_ECHO_ARCHIVE": { "path": "tft/tops/ai_pipeline/legacy_echo_archive.md", "role": "archive", "analyzer_layer": "drift" },
+          "README": { "path": "tft/tops/ai_pipeline/README.md", "role": "index", "analyzer_layer": "cross-cutting" }
+        },
+
+        "CLOUD_AZURE": {
+          "AZURE_DEPLOYMENT_GUIDE": { "path": "tft/tops/cloud/azure/Azure_Deployment_Guide.md", "role": "guide", "analyzer_layer": "operator" },
+          "README": { "path": "tft/tops/cloud/azure/README.md", "role": "index", "analyzer_layer": "cross-cutting" }
+        },
+
+        "CONTRIBUTORS": {
+          "README": { "path": "tft/tops/contributors/README.md", "role": "index", "analyzer_layer": "cross-cutting" }
+        },
+
+        "FIGURES": {
+          "FIGURE_CAPTIONS": { "path": "tft/tops/figures/figure_captions.md", "role": "reference", "analyzer_layer": "operator" }
+        },
+
+        "FOLDS": {
+          "README": { "path": "tft/tops/folds/README.md", "role": "index", "analyzer_layer": "cross-cutting" }
+        },
+
+        "HARDWARE": {
+          "README": { "path": "tft/tops/hardware/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+
+          "NIMMS": {
+            "CRYSTAL_BLADE_ARRAY": { "path": "tft/tops/hardware/nimms/crystal_blade_array.md", "role": "spec", "analyzer_layer": "dimensional" },
+            "ECHO_LOG": { "path": "tft/tops/hardware/nimms/echo_log.md", "role": "log", "analyzer_layer": "drift" },
+            "NIMMS_NANO": { "path": "tft/tops/hardware/nimms/NIMMS_nano.md", "role": "spec", "analyzer_layer": "operator" },
+            "NIMMS_V2_0": { "path": "tft/tops/hardware/nimms/NIMMS_v2.0.md", "role": "spec", "analyzer_layer": "operator" },
+            "NONAGON_CRYSTAL_SHELL": { "path": "tft/tops/hardware/nimms/nonagon_crystal_shell.md", "role": "spec", "analyzer_layer": "dimensional" },
+            "SQD_SCHEMATIC_OVERVIEW": { "path": "tft/tops/hardware/nimms/sqd_schematic_overview.md", "role": "map", "analyzer_layer": "operator" },
+            "STARSHIP_QUANTUM_DRIVE": { "path": "tft/tops/hardware/nimms/starship_quantum_drive.md", "role": "spec", "analyzer_layer": "dimensional" }
+          }
+        },
+
+        "OUTREACH": {
+          "AZURE_GRANT_EMAIL": { "path": "tft/tops/outreach/azure_grant_email.md", "role": "outreach", "analyzer_layer": "cross-cutting" },
+          "EMAIL_DRAFT_TO_INNATERA": { "path": "tft/tops/outreach/email_draft_to_innatera.md", "role": "outreach", "analyzer_layer": "cross-cutting" },
+          "FUNDING_PLAN": { "path": "tft/tops/outreach/funding_plan.md", "role": "plan", "analyzer_layer": "regime" },
+          "PITCH_DECK_OUTLINE": { "path": "tft/tops/outreach/pitch_deck_outline.md", "role": "map", "analyzer_layer": "operator" },
+          "README": { "path": "tft/tops/outreach/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+          "RESOTECTORS_SUMMARY": { "path": "tft/tops/outreach/Resotectors_Summary.md", "role": "summary", "analyzer_layer": "cross-cutting" }
+        },
+
+        "OVERLAYS": {
+          "FFF_WARP_PROTOCOL": { "path": "tft/tops/overlays/FFF_Warp_Protocol.md", "role": "spec", "analyzer_layer": "dimensional" },
+          "README": { "path": "tft/tops/overlays/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+          "SYMBOLIC_ARCHITECTURE_OVERLAYS": { "path": "tft/tops/overlays/symbolic_architecture_overlays.md", "role": "map", "analyzer_layer": "dimensional" },
+          "WARP_CHAMBER_DESIGN": { "path": "tft/tops/overlays/warp_chamber_design.md", "role": "spec", "analyzer_layer": "dimensional" }
+        },
+
+        "REGISTRY": {
+          "README": { "path": "tft/tops/registry/README.md", "role": "index", "analyzer_layer": "cross-cutting" }
+        }
+      }
+    },
+
+    "WRSADC": {
+      "README": { "path": "WRSADC/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+      "SCAFFOLDING": { "path": "WRSADC/Scaffolding.md", "role": "map", "analyzer_layer": "operator" },
+      "TFT_PRIMITIVES": { "path": "WRSADC/TFT_Primitives.md", "role": "spec", "analyzer_layer": "operator" },
+      "MODULE_JSON": { "path": "WRSADC/wrsadc_module.json.md", "role": "manifest", "analyzer_layer": "cross-cutting" }
     }
+  },
+
+  "operators": [
+    "triadic-lens",
+    "resonance-mapping",
+    "substrate-alignment",
+    "glyph-translation",
+    "scroll-protocol",
+    "dimensional-coherence"
   ],
-  "files": [
-    {
-      "filename": "README.md",
-      "path": "README.md",
-      "purpose": "Top-level module overview defining folder structure, purpose, quickstart, and remix lineage for TFT_3Pack.",
-      "role": "index"
-    },
-    {
-      "filename": "index.html",
-      "path": "index.html",
-      "purpose": "Web-facing front door with dark-themed navigation to all pack sections and session context.",
-      "role": "index"
-    },
-    {
-      "filename": "README.md",
-      "path": "docs/README.md",
-      "purpose": "Documentation hub overview covering specifications, rituals, lineage notes, and illustration assets.",
-      "role": "index"
-    },
-    {
-      "filename": "index.html",
-      "path": "docs/index.html",
-      "purpose": "Web-facing index for the documentation section with links to specs, rituals, meta, and SVG assets.",
-      "role": "index"
-    },
-    {
-      "filename": "README.md",
-      "path": "examples/README.md",
-      "purpose": "Overview of all 12 academic domain example suites with cross-domain navigation.",
-      "role": "index",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "filename": "index.html",
-      "path": "examples/index.html",
-      "purpose": "Web-facing example gallery linking to all 12 subject resonance example sets with session context block.",
-      "role": "index",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "filename": "index.html",
-      "path": "examples/Art/index.html",
-      "purpose": "Resonance example suite for Art — problems, solutions, extended problems, and resonance flows.",
-      "role": "example",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "filename": "index.html",
-      "path": "examples/Biology/index.html",
-      "purpose": "Resonance example suite for Biology — problems, solutions, extended problems, and resonance flows.",
-      "role": "example",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "filename": "index.html",
-      "path": "examples/Chemistry/index.html",
-      "purpose": "Resonance example suite for Chemistry — problems, solutions, extended problems, and resonance flows.",
-      "role": "example",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "filename": "index.html",
-      "path": "examples/Computer_Science/index.html",
-      "purpose": "Resonance example suite for Computer Science — problems, solutions, extended problems, and resonance flows.",
-      "role": "example",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "filename": "index.html",
-      "path": "examples/Economics/index.html",
-      "purpose": "Resonance example suite for Economics — problems, solutions, extended problems, and resonance flows.",
-      "role": "example",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "filename": "index.html",
-      "path": "examples/Engineering/index.html",
-      "purpose": "Resonance example suite for Engineering — problems, solutions, extended problems, and resonance flows.",
-      "role": "example",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "filename": "index.html",
-      "path": "examples/Law/index.html",
-      "purpose": "Resonance example suite for Law — problems, solutions, extended problems, and resonance flows.",
-      "role": "example",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "filename": "index.html",
-      "path": "examples/Math/index.html",
-      "purpose": "Resonance example suite for Math — problems, solutions, extended problems, and resonance flows.",
-      "role": "example",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "filename": "index.html",
-      "path": "examples/Medicine/index.html",
-      "purpose": "Resonance example suite for Medicine — problems, solutions, extended problems, and resonance flows.",
-      "role": "example",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "filename": "index.html",
-      "path": "examples/Music/index.html",
-      "purpose": "Resonance example suite for Music — problems, solutions, extended problems, and resonance flows.",
-      "role": "example",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "filename": "index.html",
-      "path": "examples/Philosophy/index.html",
-      "purpose": "Resonance example suite for Philosophy — problems, solutions, extended problems, and resonance flows.",
-      "role": "example",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "filename": "index.html",
-      "path": "examples/Physics/index.html",
-      "purpose": "Resonance example suite for Physics — problems, solutions, extended problems, and resonance flows.",
-      "role": "example",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "filename": "README.md",
-      "path": "scripts/README.md",
-      "purpose": "Script documentation covering usage, flags, base-type lens options, and execution patterns.",
-      "role": "index"
-    },
-    {
-      "filename": "index.html",
-      "path": "scripts/index.html",
-      "purpose": "Web-facing index for shell script tools with descriptions and direct links.",
-      "role": "index"
-    },
-    {
-      "filename": "run_tft.sh",
-      "path": "scripts/run_tft.sh",
-      "purpose": "Executes a .fff resonance file and prints computed values (τ_r, D3, D6, D9, T_f, ΛΘ, F3, X).",
-      "role": "engine",
-      "analyzer_layer": "operator",
-      "depends_on": [
-        "formats/example_basic.fff"
-      ]
-    },
-    {
-      "filename": "validate_tft.sh",
-      "path": "scripts/validate_tft.sh",
-      "purpose": "Validates .fff file structure and checks for required fields, enforcing format coherence.",
-      "role": "diagnostic",
-      "analyzer_layer": "coherence"
-    },
-    {
-      "filename": "convert_tft.sh",
-      "path": "scripts/convert_tft.sh",
-      "purpose": "Converts .fff files into human-readable summaries, translating dimensional data for review.",
-      "role": "engine",
-      "analyzer_layer": "dimensional"
-    },
-    {
-      "filename": "batch_process.sh",
-      "path": "scripts/batch_process.sh",
-      "purpose": "Runs multiple .fff files in sequence for bulk resonance computation across datasets.",
-      "role": "engine",
-      "analyzer_layer": "operator",
-      "depends_on": [
-        "scripts/run_tft.sh"
-      ]
-    },
-    {
-      "filename": "logic_core.sh",
-      "path": "scripts/logic_core.sh",
-      "purpose": "Triadic Logic Trigger for Validator Overlays — activates core logical operator checks.",
-      "role": "engine",
-      "analyzer_layer": "operator"
-    },
-    {
-      "filename": "encryption.sh",
-      "path": "scripts/encryption.sh",
-      "purpose": "Triggers encryption overlays with base-lens awareness, enforcing regime-level data boundaries.",
-      "role": "engine",
-      "analyzer_layer": "regime"
-    },
-    {
-      "filename": "grid_ops.sh",
-      "path": "scripts/grid_ops.sh",
-      "purpose": "Activates grid overlays and validator logic with base-lens fidelity for dimensional alignment.",
-      "role": "engine",
-      "analyzer_layer": "dimensional"
-    },
-    {
-      "filename": "README.md",
-      "path": "formats/README.md",
-      "purpose": "Full .fff format specification defining resonance-time, triadic operators, TFT constants, and field semantics.",
-      "role": "reference",
-      "analyzer_layer": "dimensional"
-    },
-    {
-      "filename": "index.html",
-      "path": "formats/index.html",
-      "purpose": "Web-facing format specification hub with links to example .fff files.",
-      "role": "index"
-    },
-    {
-      "filename": "example_basic.fff",
-      "path": "formats/example_basic.fff",
-      "purpose": "Minimal resonance definition demonstrating core .fff field structure (τ_r, D3, D6, D9, T_f, ΛΘ, F3).",
-      "role": "template",
-      "analyzer_layer": "dimensional"
-    },
-    {
-      "filename": "example_extended.fff",
-      "path": "formats/example_extended.fff",
-      "purpose": "Extended resonance file including metadata fields and descriptive tags beyond the minimal set.",
-      "role": "template",
-      "analyzer_layer": "dimensional"
-    },
-    {
-      "filename": "example_reflection_inversion.fff",
-      "path": "formats/example_reflection_inversion.fff",
-      "purpose": "Resonance file demonstrating reflect and invert operator modes within .fff structure.",
-      "role": "template",
-      "analyzer_layer": "operator"
-    },
-    {
-      "filename": "README.md",
-      "path": "tft/README.md",
-      "purpose": "Core framework overview linking TOPS, Resonance Labs, NOUS, and ENTFT submodules.",
-      "role": "index",
-      "analyzer_layer": "regime"
-    },
-    {
-      "filename": "index.html",
-      "path": "tft/index.html",
-      "purpose": "Web-facing index for core framework navigation across all TFT submodules.",
-      "role": "index",
-      "analyzer_layer": "regime"
+
+  "resonance": {
+    "mode": "triadic",
+    "clarity": "spectral",
+    "alignment": "S–N–R",
+    "drift": "bounded",
+    "spectral_clarity": "high",
+    "validator_pulses": "steady",
+    "gradient_nabla_tau_R": "smooth",
+    "drift_envelope": "bounded",
+    "rupture_tolerance": "structural-safe",
+    "lineage": "FFT → RTT → TFT → entft → 3Pack"
+  },
+
+  "domains": [
+    "Physics",
+    "Chemistry",
+    "Biology",
+    "Mathematics",
+    "Computing",
+    "Engineering",
+    "Medicine",
+    "Philosophy",
+    "Music",
+    "Sociology",
+    "Governance",
+    "Economics"
+  ],
+
+  "meta": {
+    "author": "Nawder Loswin",
+    "publication": "2025",
+    "canonical_url": "https://www.triadicframeworks.org/TFT_3Pack_v1.3/"
+  },
+
+  "ai": {
+    "navigation": "sitemap_main.xml",
+    "discussions": "https://github.com/umaywant2/TriadicFrameworks/discussions",
+    "contact": {
+      "x": "@TriadicFrameworks",
+      "youtube": "@TriadicFrameworks"
     }
-  ]
+  },
+
+  "license": "Open educational use permitted",
+  "sitemap": "sitemap_main.xml",
+
+  "session": {
+    "rtt": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  }
 }
