@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="education_BRA_" src="https://github.com/user-attachments/assets/f52e42a4-0141-47c8-bd71-55ea926f035e" />
 
 - [`bra_module.json`](bra_module.json) — Agentic module schema role assignments
 
