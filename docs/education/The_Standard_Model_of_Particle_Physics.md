@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_The_Standard_Model_of_Particle_Physics_" src="https://github.com/user-attachments/assets/ed7a6c53-89d0-4bdf-b70a-e0888254b949" />
+
 # **The Standard Model of Particle Physics**
 
 And the specific visual we’re thinking of is the **Standard Model Sectors Wheel** (sometimes nicknamed the “Standard Model donut” or “Standard Model pie chart”).
