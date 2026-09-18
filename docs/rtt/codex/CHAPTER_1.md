@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_codex_CHAPTER_1_" src="https://github.com/user-attachments/assets/5c5498ea-c01e-4532-ac58-c6ba3255dbfa" />
+
 # **📘 RTT CODEX — CHAPTER 1**  
 # **THE FOUNDATIONAL TRIAD**  
 ### *The Three Equations That Define the Universe in RTT*
