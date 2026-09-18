@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_peira_IRL_Monopoly_" src="https://github.com/user-attachments/assets/e4ed2fab-b2ac-4291-b779-dd6cd73d0248" />
+
 # 🏦 MONOPOLY — IRL MODULE  
 ### Indirect Resonance Learning (IRL)  
 ### PEIRA Series — Physical Education Indirect Regime Awareness
