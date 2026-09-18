@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_peira_IRL_Track_Sprinting_" src="https://github.com/user-attachments/assets/b958f572-5663-424d-9dce-66eff71c79b7" />
+
 # 🏃‍♂️ TRACK SPRINTING — IRL MODULE  
 ### Indirect Resonance Learning (IRL)  
 ### PEIRA Series — Physical Education Indirect Regime Awareness
