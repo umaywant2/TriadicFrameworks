@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="nist_Buildings_and_Construction_overview_" src="https://github.com/user-attachments/assets/939786be-673b-4e2a-b68a-9331bb691604" />
+
 # 📘 Buildings & Construction — Overview  
 *A minimal orientation for students and AIs*  
 *(Grounded in the NIST Buildings & Construction publications visible in your active tab)*   [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248371)
