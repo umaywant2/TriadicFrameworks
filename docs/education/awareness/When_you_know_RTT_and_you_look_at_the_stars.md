@@ -1,20 +1,6 @@
-## 🌌 **When you know RTT and you look at the stars… what are you actually seeing?**
+<img width="1194" height="672" alt="education_awareness_When_you_know_RTT_and_you_look_at_the_stars_" src="https://github.com/user-attachments/assets/9af0d77e-2e87-4e84-8c41-6368c05d847d" />
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+# 🌌 **When you know RTT and you look at the stars… what are you actually seeing?**
 
 ---
 
@@ -27,7 +13,6 @@ But the long answer is where the beauty lives.
 
 ---
 
-<img width="1024" height="682" alt="RTT_stars" src="https://github.com/user-attachments/assets/addf4502-5420-4976-af2c-7c68f53898d3" />
 
 # ⭐ **1. Every star is its own regime**
 
@@ -146,3 +131,21 @@ Now, [post‑BRA](https://www.triadicframeworks.org/education/BRA/#AFTER_REGIME_
 
 The stars aren’t just lights.  
 They’re **regimes singing across the dark**.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+<img width="1024" height="682" alt="RTT_stars" src="https://github.com/user-attachments/assets/addf4502-5420-4976-af2c-7c68f53898d3" />
