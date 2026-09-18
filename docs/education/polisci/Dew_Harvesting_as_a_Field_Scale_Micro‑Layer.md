@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_polisci_Dew_Harvesting_as_a_Field_Scale_Micro_Layer_" src="https://github.com/user-attachments/assets/a98b3e81-08f3-420b-995e-c49c91c4a23d" />
+
 ## 🌫️ Dew Harvesting as a Field‑Scale Micro‑Layer
 
 Anyone who has spent nights outdoors knows dew doesn’t arrive on a clock. It arrives when local temperature crosses a saturation boundary. You can feel it happen — the grass darkens, your feet soak with every step at peak dew point. The field becomes something else.
