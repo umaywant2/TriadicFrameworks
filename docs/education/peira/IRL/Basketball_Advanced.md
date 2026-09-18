@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_peira_IRL_Basketball_Advanced_" src="https://github.com/user-attachments/assets/9be4032c-31b1-4b2b-98c3-1accd1aaab40" />
+
 # 🏀 BASKETBALL (ADVANCED) — IRL MODULE  
 ### Indirect Resonance Learning (IRL)  
 ### PEIRA Series — Physical Education Indirect Regime Awareness
