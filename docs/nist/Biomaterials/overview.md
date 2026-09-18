@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="nist_Biomaterials_overview_" src="https://github.com/user-attachments/assets/37824f60-0d88-47c7-ad9f-231f2398ef7f" />
+
 # 📘 Biomaterials — Overview  
 *A minimal orientation for students and AIs*
 
