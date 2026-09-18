@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="rtt_12_" src="https://github.com/user-attachments/assets/81489ccc-7173-492a-a7dc-f893fbefdb5a" />
 
 - [`rtt-engine-12_module.json`](rtt-engine-12_module.json) — Agentic module schema role assignments
 
