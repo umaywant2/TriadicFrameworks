@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="energy_A_tiny_student_exercise_prompt_" src="https://github.com/user-attachments/assets/ea7ca3b3-97a1-43da-b4bf-7c1947119ba4" />
+
 # A Tiny Student Exercise: Feeling Gradient → Technique → Coherence
 
 This short exercise helps students *feel* regime‑aware energy directly, using nothing more than sound and attention.
