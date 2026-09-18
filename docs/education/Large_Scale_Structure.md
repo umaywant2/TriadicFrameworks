@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_Large_Scale_Structure_" src="https://github.com/user-attachments/assets/c203c098-8f5c-48f6-bd18-107326da3a39" />
+
 # Large-scale structure and the cosmic web in RTT/vST
 
 ## RTT/vST reframing
