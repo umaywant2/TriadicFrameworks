@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_polisci_Biospheres_" src="https://github.com/user-attachments/assets/d458a650-12aa-42b1-890c-6477899b6c31" />
+
 ## 🌍 Biosphere 2 — A Regime‑Aware Reading
 
 Biosphere 2 was one of the most ambitious artificial habitat experiments ever attempted. It aimed to create a closed ecological system capable of supporting human life by replicating Earth’s biosphere at a smaller scale. The experiment generated valuable data — and also unexpected challenges.
