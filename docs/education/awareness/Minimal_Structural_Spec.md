@@ -1,23 +1,6 @@
-<img width="682" height="682" alt="rtt_education_awareness" src="https://github.com/user-attachments/assets/eb36e7e3-ffe3-469e-bd9e-0e261161a8e6" />
+<img width="1194" height="672" alt="education_awareness_Minimal_Structural_Spec_" src="https://github.com/user-attachments/assets/4135bb57-892f-42e5-a04c-dd5a5082d730" />
 
-## RTT Awareness v0 — Minimal Structural Spec
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
-
+# RTT Awareness v0 — Minimal Structural Spec
 **Status:** v0 (seed)  
 **Purpose:** Declare and resolve structural coherence conditions across web substrates using existing, permissionless mechanisms.
 
@@ -172,3 +155,21 @@ This prevents remote control and preserves local trust.
 
 **RTT Awareness v0** is a structural header, not a theory.  
 It declares coherence conditions and lets systems resolve them locally.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+<img width="682" height="682" alt="rtt_education_awareness" src="https://github.com/user-attachments/assets/eb36e7e3-ffe3-469e-bd9e-0e261161a8e6" />
