@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="nist_Information_technology_overview_" src="https://github.com/user-attachments/assets/c1fc7984-2693-4692-9376-1903715aa349" />
+
 # 📘 Information Technology — Overview  
 *A minimal orientation for students and AIs*  
 *(Grounded in the NIST IT publications visible in your active tab)*
