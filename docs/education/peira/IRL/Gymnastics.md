@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_peira_IRL_Gymnastics_" src="https://github.com/user-attachments/assets/cf91abcc-054a-47f9-84de-affd48fc3d64" />
+
 # 🤸 GYMNASTICS — IRL MODULE  
 ### Indirect Resonance Learning (IRL)  
 ### PEIRA Series — Physical Education Indirect Regime Awareness
