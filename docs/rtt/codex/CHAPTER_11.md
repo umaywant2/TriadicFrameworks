@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_codex_CHAPTER_11_" src="https://github.com/user-attachments/assets/6b5131d5-93a7-486f-9d2f-1c2201eff66d" />
+
 # **📜 RTT CODEX — CHAPTER 11**  
 # **THE SECOND TRIAD**  
 ### *Spin — Electrolysis — Temperature: The Triadic Anatomy of Motion*
