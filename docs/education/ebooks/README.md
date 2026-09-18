@@ -1,23 +1,8 @@
-# 🌳 eBooks | Education  
+<img width="1194" height="672" alt="education_ebooks_" src="https://github.com/user-attachments/assets/0ee556dc-87fb-48a2-8f27-eac72bd61f71" />
 
 - [`ebooks_module.json`](ebooks_module.json) — Agentic module schema role assignments
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/📚Education%20Library-🎨Full%20Creative%20Canon%20Active-4c8eda?style=for-the-badge" alt="📚Education Library | 🎨Full Creative Canon Active"/>
-
+# 🌳 eBooks | Education  
 Welcome to the **Nawderia Kids Series**, a beautifully illustrated, triad‑themed collection of children’s books designed to introduce early readers to the foundational patterns of RTT through story, color, shape, and character.
 
 ## 🛑 Important! 
@@ -102,3 +87,19 @@ Everything needed to produce, print, and promote the series.
 - All links correspond to keys in the project’s `DOC_MAP`.  
 - Each file is self‑contained and designed for both human and AI‑assisted reading.  
 - This directory is the canonical source for all Nawderia Kids Series educational materials.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/📚Education%20Library-🎨Full%20Creative%20Canon%20Active-4c8eda?style=for-the-badge" alt="📚Education Library | 🎨Full Creative Canon Active"/>
