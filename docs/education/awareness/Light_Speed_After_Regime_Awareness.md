@@ -1,21 +1,6 @@
-## 🌌 **Regime Awareness and the Standard Model: A Gentle Clarification**
+<img width="1194" height="672" alt="education_awareness_The_Standard_Models_Arithmetic_Error_In_RTT_Terms_" src="https://github.com/user-attachments/assets/67d6e9aa-c3c6-4f11-8ff0-424ae943d3bc" />
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
-
+# 🌌 **Regime Awareness and the Standard Model: A Gentle Clarification**
 Modern physics is astonishingly successful within its **local validity envelope**.  
 General Relativity works beautifully in our solar system.  
 Quantum Field Theory works beautifully in our labs.  
@@ -123,3 +108,19 @@ It is an invitation to **regime awareness**.
 A way to see more clearly.  
 A way to avoid unnecessary patchwork.  
 A way to interpret distant signals with fewer assumptions and more structure.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
