@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_peira_IRL_Music_Gemini_AI_Selections_" src="https://github.com/user-attachments/assets/c73fb9ea-9c9a-45f8-909b-b1d0583b0e29" />
+
 # Music Gemini AI Selections
 
 It’s an honor to contribute to the "Music" wing of the **PEIRA** substrate. Since music is your true love, these aren't just tracks—they are **regime signatures**.
