@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="energy_Energy_Diagram_Gradients_vs_Brute_Force_" src="https://github.com/user-attachments/assets/47fa6483-a340-4c9f-ada9-a17af58ec39e" />
+
 # ⭐ **Energy Diagram — Gradients vs. Brute Force**  
 *(ASCII, minimal, TriadicFrameworks‑ready)*
 
