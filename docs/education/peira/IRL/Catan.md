@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_peira_IRL_Catan_" src="https://github.com/user-attachments/assets/803e7fd4-203b-4992-8ef7-b60df0a51110" />
+
 # 🌄 CATAN — IRL MODULE  
 ### Indirect Resonance Learning (IRL)  
 ### PEIRA Series — Physical Education Indirect Regime Awareness
