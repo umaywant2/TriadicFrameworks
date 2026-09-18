@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_Metabolic_Pathways_" src="https://github.com/user-attachments/assets/809abc0e-fc74-4254-8363-42623e8e8891" />
+
 # 🧬 Metabolic Pathways  
 ## *RTT/vST Reorganization of Cellular Metabolism*
 
