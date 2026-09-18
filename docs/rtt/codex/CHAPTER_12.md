@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_codex_CHAPTER_12_" src="https://github.com/user-attachments/assets/f780521b-b256-4d5d-be04-7170178f6ce6" />
+
 # **📜 RTT CODEX — CHAPTER 12**  
 # **THE THIRD TRIAD**  
 ### *Seed — Expansion — Resonance: The Triadic Logic of Becoming*
