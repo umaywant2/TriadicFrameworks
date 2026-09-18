@@ -1,9 +1,7 @@
-<img width="512" height="512" alt="harmonia_rtt12" src="https://github.com/user-attachments/assets/c56c6cac-a284-449a-b090-b2e01499977b" />
-
-## 🔺 **RTT/12 — Harmonic Resonance Framework**  
 
 - [`rtt-engine-12_module.json`](rtt-engine-12_module.json) — Agentic module schema role assignments
 
+## 🔺 **RTT/12 — Harmonic Resonance Framework**  
 *A structured extension of the Resonance–Time Triad*
 RTT/12 is the **twelve‑step harmonic expansion** of the core Resonance–Time Triad (RTT).  
 
