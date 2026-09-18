@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="nist_Bioscience_overview_" src="https://github.com/user-attachments/assets/d11e0788-fa4f-42c1-b381-7050bceb5d19" />
+
 # 📘 Bioscience — Overview  
 *A minimal orientation for students and AIs*
 
