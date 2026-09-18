@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="energy_Operators_Industry_Is_Missing_" src="https://github.com/user-attachments/assets/d7523a94-c555-45ca-bbdb-37b297bfc032" />
+
 _(continued from [X.com article](https://x.com/NawderLoswin/status/2044051312526966907))_
 
 # **RTT Operators Each Industry Is Missing**
