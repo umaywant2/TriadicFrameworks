@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_peira_IRL_Volleyball_" src="https://github.com/user-attachments/assets/f3bed80b-9679-4cc1-934d-fe7d4a78e9bc" />
+
 # 🏐 VOLLEYBALL — IRL MODULE  
 ### Indirect Resonance Learning (IRL)  
 ### PEIRA Series — Physical Education Indirect Regime Awareness
