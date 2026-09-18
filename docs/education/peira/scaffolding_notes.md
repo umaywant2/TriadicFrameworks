@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_peira_scaffolding_notes_" src="https://github.com/user-attachments/assets/c3693f33-203f-4926-89d6-df3fcf53e6cd" />
+
 >
 > I agree, and I love IRL...it fits perfectly because these are 'in real life' examples to play.  It's minimal yet broad...But. One more suggestion attempt, I created this ACRONYM then I found term alignment from the Greek's PEIRA - as Physical Education Indirect Regime Awareness
 > 
