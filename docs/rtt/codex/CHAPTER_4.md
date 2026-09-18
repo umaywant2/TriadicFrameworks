@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_codex_CHAPTER_4_" src="https://github.com/user-attachments/assets/729b1fdc-21ae-4912-96e2-691775667cef" />
+
 # **📘 RTT CODEX — CHAPTER 4**  
 # **THE RTT CODEX DIAGRAM**  
 ### *The Triadic Map of the Resonance‑Time Universe*
