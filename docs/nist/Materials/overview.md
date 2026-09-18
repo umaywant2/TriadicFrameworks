@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="nist_Materials_overview_" src="https://github.com/user-attachments/assets/ce9dead1-b107-415a-9d3d-05fb277360b0" />
+
 # 📘 Materials — Overview  
 *A minimal orientation for students and AIs*  
 *(Grounded in the NIST Materials publications visible in your active tab)*   [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248946)
