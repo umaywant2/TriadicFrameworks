@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_polisci_core-city-spec_" src="https://github.com/user-attachments/assets/91fa3210-eefe-45d8-9932-60efa3ec49fc" />
+
 # **TriadicFrameworks — Core City Specification**  
 *A structural, civic, and regime‑aligned blueprint for the 256‑million‑person Core City.*
 
