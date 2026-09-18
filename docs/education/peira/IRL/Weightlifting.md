@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_peira_IRL_Weightlifting_" src="https://github.com/user-attachments/assets/7d08438a-d79d-4f57-bebb-26210fb860da" />
+
 # 🏋️‍♂️ WEIGHTLIFTING — IRL MODULE  
 ### Indirect Resonance Learning (IRL)  
 ### PEIRA Series — Physical Education Indirect Regime Awareness
