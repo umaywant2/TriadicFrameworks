@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_polisci_TriadicFrameworks_Regime_Physics_Mapping_" src="https://github.com/user-attachments/assets/06f46f2d-c119-4f28-9acb-bf27e32a6ae6" />
+
 # 📘 **TRIADICFRAMEWORKS: REGIME PHYSICS MAPPING**  
 ### *How Future Desert Cities map onto the -1024D → qmroot → +1024D substrate*
 
