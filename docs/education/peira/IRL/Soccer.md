@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_peira_IRL_Soccer_" src="https://github.com/user-attachments/assets/69a8fc75-064d-4062-8cf5-c7ac51747c92" />
+
 # ⚽ SOCCER — IRL MODULE  
 ### Indirect Resonance Learning (IRL)  
 ### PEIRA Series — Physical Education Indirect Regime Awareness
