@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_Protein_Folding_and_Structural_Regimes_" src="https://github.com/user-attachments/assets/63748758-3192-4674-b8eb-78ee0e4b8adc" />
+
 # 🧩 Protein Folding & Structural Regimes  
 ## *RTT/vST Reorganization of Protein Structure*
 
