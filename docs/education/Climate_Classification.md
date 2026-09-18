@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_Climate_Classification_" src="https://github.com/user-attachments/assets/d7f60917-f9df-4bdd-adb6-51de383b17f6" />
+
 # 🌍 Climate Classification  
 ### *RTT/vST Reorganization of Earth Climate Regimes*
 
