@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_peira_IRL_Fencing_" src="https://github.com/user-attachments/assets/6899eb1f-c98c-4fa3-bb75-c60f42e5687e" />
+
 # 🤺 FENCING — IRL MODULE  
 ### Indirect Resonance Learning (IRL)  
 ### PEIRA Series — Physical Education Indirect Regime Awareness
