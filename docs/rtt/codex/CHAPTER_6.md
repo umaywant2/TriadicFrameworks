@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_codex_CHAPTER_6_" src="https://github.com/user-attachments/assets/a74716b3-3a8a-43fb-8983-8debf4b9ef20" />
+
 # **📗 RTT CODEX — CHAPTER 6**  
 # **THE THREE CORE IDEAS**  
 ### *The Simple Principles That Give RTT Its Power*
