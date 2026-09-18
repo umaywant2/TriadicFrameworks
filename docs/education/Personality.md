@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_Personality_" src="https://github.com/user-attachments/assets/8f8f831a-823c-4eff-8dfc-41d663116099" />
+
 # Personality  
 ## Stable Cognitive Regime Patterns Across Contexts
 
