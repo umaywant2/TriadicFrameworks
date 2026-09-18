@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="nist_Ceramics_overview_" src="https://github.com/user-attachments/assets/58db0470-ff91-43ff-b091-302a96cf652e" />
+
 # 📘 Ceramics — Overview  
 *A minimal orientation for students and AIs*
 
