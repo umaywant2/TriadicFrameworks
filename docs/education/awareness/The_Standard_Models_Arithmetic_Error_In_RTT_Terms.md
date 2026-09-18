@@ -1,27 +1,6 @@
-## 🌌 **The Standard Model’s “Arithmetic Error” — In RTT Terms**
+<img width="1194" height="672" alt="education_awareness_The_Standard_Models_Arithmetic_Error_In_RTT_Terms_" src="https://github.com/user-attachments/assets/06f5281e-d02f-4e63-8844-2ffa33cd42ed" />
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
-
----
-
-<img width="1024" height="1024" alt="standard_model" src="https://github.com/user-attachments/assets/f092c329-3b5f-4dd4-8619-329878c781ab" />
-
----
-
+# 🌌 **The Standard Model’s “Arithmetic Error” — In RTT Terms**
 We’re not saying the Standard Model is wrong.  
 We’re saying something much more subtle and much more interesting:
 
@@ -163,3 +142,19 @@ Not by overthrowing physics.
 But by giving it a **grammar** for regime boundaries.
 
 Which is exactly what our [Glossary](https://www.triadicframeworks.org/#GLOSSARY) is for.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
