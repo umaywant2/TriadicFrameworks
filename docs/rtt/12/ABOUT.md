@@ -1,3 +1,5 @@
+<img width="512" height="512" alt="harmonia_rtt12" src="https://github.com/user-attachments/assets/c56c6cac-a284-449a-b090-b2e01499977b" />
+
 # ABOUT — RTT/12 · Harmonic Synthesis Layer
 **TriadicFrameworks · Core RTT · Terminal Module**
 **Module path:** `docs/rtt/12/`
