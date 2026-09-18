@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_peira_IRL_Poker_" src="https://github.com/user-attachments/assets/0ebf34f5-7e06-4900-8572-3b7ce955a58e" />
+
 # ♠️ POKER — IRL MODULE  
 ### Indirect Resonance Learning (IRL)  
 ### PEIRA Series — Physical Education Indirect Regime Awareness
