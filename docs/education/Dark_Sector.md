@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_Dark_Sector_" src="https://github.com/user-attachments/assets/82b47fc2-ace0-417c-b57d-2463c44601fd" />
+
 # 🌑 Dark Sector  
 ### *RTT/vST Reorganization of Dark Matter and Dark Energy*
 
