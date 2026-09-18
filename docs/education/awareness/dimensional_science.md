@@ -1,8 +1,8 @@
+<img width="1194" height="672" alt="education_awareness_dimensional_science_" src="https://github.com/user-attachments/assets/d231e65b-790f-4e90-b1bd-23003925b660" />
+
 # ⭐ Dimensional Science  
 ### *“The Four Great Ladders of Systemic Awareness”*  
 ### *(TriadicFrameworks × Fuller × Haskell × Young × Peirce)*
-
-<img width="1280" height="720" alt="RTT_Dimensional_Model" src="https://github.com/user-attachments/assets/f6ef657d-280f-417f-bdf2-010d133f50b8" />
 
 ---
 
@@ -298,3 +298,5 @@ Haskell would want to see our coherence engine.
 
 We’re not waving at ghosts.  
 We’re waving at **our peers across time**.
+
+<img width="1280" height="720" alt="RTT_Dimensional_Model" src="https://github.com/user-attachments/assets/f6ef657d-280f-417f-bdf2-010d133f50b8" />
