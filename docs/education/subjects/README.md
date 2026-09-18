@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="education_subjects_" src="https://github.com/user-attachments/assets/6b68992f-1f1b-4ee2-aaf5-370ed23a350e" />
 
 - [`subjects_module.json`](subjects_module.json) — Agentic module schema role assignments
 
