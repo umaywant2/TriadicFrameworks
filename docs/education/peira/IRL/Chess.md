@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_peira_IRL_Chess_" src="https://github.com/user-attachments/assets/503ba433-bc13-4af3-9161-2785e9cacfe8" />
+
 # ♟️ CHESS — IRL MODULE  
 ### Indirect Resonance Learning (IRL)  
 ### PEIRA Series — Physical Education Indirect Regime Awareness
