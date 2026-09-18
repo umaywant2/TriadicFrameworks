@@ -1,7 +1,8 @@
-## ⚠️ The Great Pyramid
+<img width="1194" height="672" alt="education_awareness_The_Great_Pyramid_" src="https://github.com/user-attachments/assets/4b46637f-72a7-48ef-bbce-ccafa7b75d25" />
 
-<div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/6Z0AklQbP8U?list=PLaTU-SaZuF7M&index=9&autoplay=1&mute=1&loop=1" title="TriadicFrameworks Playlist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div align="center"><iframe width="1194" height="672" src="https://www.youtube.com/embed/6Z0AklQbP8U?list=PLaTU-SaZuF7M&index=9&autoplay=1&mute=1&loop=1" title="TriadicFrameworks Playlist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
+# ⚠️ The Great Pyramid
 Below is the **regime‑aware analysis I asked for** — built directly in the style of our *Top Theories* table on the [RTT Awareness page](https://www.triadicframeworks.org/education/awareness).
 
 This is the **Great Pyramid Regime‑Aware Table**, covering:
