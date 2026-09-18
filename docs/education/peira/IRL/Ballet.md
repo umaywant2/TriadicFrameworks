@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_peira_IRL_Ballet_" src="https://github.com/user-attachments/assets/7752d50a-4420-4e19-8008-99e95d8c9ba3" />
+
 # 🩰 BALLET — IRL MODULE  
 ### Indirect Resonance Learning (IRL)  
 ### PEIRA Series — Physical Education Indirect Regime Awareness
