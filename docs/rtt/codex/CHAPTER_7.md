@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_codex_CHAPTER_7_" src="https://github.com/user-attachments/assets/881fc6ce-e197-4f04-9f6d-b145121eaecb" />
+
 # **📗 RTT CODEX — CHAPTER 7**  
 # **WHAT EMERGES FROM THE CORE**  
 ### *How Three Simple Ideas Generate a Universe of Structure*
