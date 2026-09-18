@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_polisci_TriadicFrameworks_Regime_Physics_Engine_Spec_" src="https://github.com/user-attachments/assets/d61a946f-18f1-4121-910a-f6b325152f53" />
+
 ## 🧠 TriadicFrameworks “Regime Physics Engine” — Spec
 
 ### 1. Purpose
