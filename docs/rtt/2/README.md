@@ -1,8 +1,8 @@
-
-# RTT/2 — Structural Detection Engine (SDE)
+<img width="1194" height="672" alt="rtt_2_" src="https://github.com/user-attachments/assets/b76c07fa-877c-4e15-8836-a5e5eba31504" />
 
 - [`operators_module.json`](operators_module.json) — Agentic module schema role
 
+# RTT/2 — Structural Detection Engine (SDE)
 *(Based on `/docs/rtt/2/RTT2_Extract_Minimal.md`)*  
 
 RTT/2 introduces the **Structural Detection Engine**, the layer responsible for
