@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_polisci_Last_Restart_" src="https://github.com/user-attachments/assets/d002f763-e97d-4480-b3d3-c8ab3a63fda2" />
+
 ## 🧮 **Population Restart Estimate**  
 **A Nawderland Legacy Panel**
 
