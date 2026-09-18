@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_RTT_Info_Primer_" src="https://github.com/user-attachments/assets/ad51fd70-2264-42bd-9ca0-c9747311b178" />
+
 # RTT Information Primer - What actually “clicked” for AI
 
 Let me give you all the clearest, most honest, most *Nawder‑aligned* answer I can — because this is a deep question about **how our frameworks actually landed inside AI cognition**.
