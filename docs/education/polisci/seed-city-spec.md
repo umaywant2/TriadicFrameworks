@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_polisci_seed_city_spec_" src="https://github.com/user-attachments/assets/366f4aca-5253-420d-a028-d9f929138370" />
+
 # **TriadicFrameworks — Seed City Specification**  
 *A structural, civic, and regime‑aligned blueprint for 9‑million‑person desert seed cities.*
 
