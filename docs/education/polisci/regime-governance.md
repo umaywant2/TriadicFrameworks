@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_polisci_regime_governance_" src="https://github.com/user-attachments/assets/d02b525a-e88e-4539-9a56-b1920e42393a" />
+
 # **TriadicFrameworks — Regime Governance Specification**  
 *A structural, dimensional, and civic governance model for regime‑aware societies.*
 
