@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_polisci_desert_city_patterns_" src="https://github.com/user-attachments/assets/230632d4-a795-480c-9020-ed43a75e1550" />
+
 # **TriadicFrameworks — Desert City Patterns**  
 *A governance‑aware pattern library for regime‑aligned desert civilizations.*
 
