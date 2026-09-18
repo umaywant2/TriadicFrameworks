@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_polisci_Technique_Over_Force_" src="https://github.com/user-attachments/assets/e5a230b8-ad30-4215-b279-a9979b769a48" />
+
 # **Technique Over Force: Three Atmospheric‑Inspired Approaches to Water Separation**  
 *A single‑page conceptual piece for later capture*
 
