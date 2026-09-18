@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_polisci_Future_Desert_Cities_" src="https://github.com/user-attachments/assets/79c4f207-a402-4a2b-bb6f-05da7db95926" />
+
 # 🌍 **Future Desert Cities: A Manifesto for Regime‑Aligned Civilization**  
 ### *A TriadicFrameworks‑inspired vision for sustainable, substrate‑aware human settlement*
 
