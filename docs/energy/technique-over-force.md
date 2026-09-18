@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="energy_technique-over-force_" src="https://github.com/user-attachments/assets/da0e64ed-8ae5-4808-8243-a1886e2d3542" />
+
 # Technique Over Force — Gradients, Atmospheres, and Mechanical Elegance
 
 ## Opening Summary — Why Technique Replaces Force
