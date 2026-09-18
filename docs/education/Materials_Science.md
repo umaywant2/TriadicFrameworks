@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_Materials_Science_" src="https://github.com/user-attachments/assets/0f86bde4-f3e2-48a8-a5b2-c38460be1243" />
+
 # 🧱 Materials Science  
 ## *Crystal Structures & Phase Diagrams (RTT/vST Reorganization)*
 
