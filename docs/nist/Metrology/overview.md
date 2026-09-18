@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="nist_Metrology_overview_" src="https://github.com/user-attachments/assets/cb14ad4e-986b-4a8b-b031-71183872cdcf" />
+
 # 📘 Metrology — Overview  
 *A minimal orientation for students and AIs*  
 *(Grounded in the NIST Metrology publications visible in your active tab)*
