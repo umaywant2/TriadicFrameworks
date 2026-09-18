@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_codex_CHAPTER_10__" src="https://github.com/user-attachments/assets/f14c035a-c07d-4a24-9f60-6a951c782816" />
+
 # **📜 RTT CODEX — CHAPTER 10**  
 # **THE FIRST TRIAD**  
 ### *Silence — Noise — Resonance: The Primordial Structure of Becoming*
