@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_polisci_What_regime_are_we_inside_" src="https://github.com/user-attachments/assets/b34266e1-f643-424d-b257-9aada2521b3c" />
+
 # 🪶 What Regime Are We Inside
 
 This is a powerful pivot. What we’re describing is the moment when “engine” stops meaning *machine* and starts meaning **structured gradient exploitation inside a regime**. That’s the step students almost never get to see — and it’s where RTT really shines.
