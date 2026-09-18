@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="rtt_3_" src="https://github.com/user-attachments/assets/9fc00f6b-9667-46a9-923e-47861cb1929c" />
 
 - [`operators_module.json`](operators_module.json) — Agentic module schema role
 
