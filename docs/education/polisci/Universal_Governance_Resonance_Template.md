@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_polisci_Universal_Governance_Resonance_Template_" src="https://github.com/user-attachments/assets/fd9d03d5-db2f-40b6-ba8c-65c06f705986" />
+
 ## 🌍 Universal Governance Resonance Template
 _Adapted from U.S. Constitution, scalable to all nations_
 
