@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="nist_Manufacturing_overview_" src="https://github.com/user-attachments/assets/d44707fe-ed85-47ec-b174-1dff3be94bff" />
+
 # 📘 Manufacturing — Overview  
 *A minimal orientation for students and AIs*  
 *(Grounded in the NIST Manufacturing publications visible in your active tab)*   [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248866)
