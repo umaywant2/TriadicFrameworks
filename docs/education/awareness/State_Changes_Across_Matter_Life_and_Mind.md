@@ -1,21 +1,7 @@
-## 🌐 **Awareness Module: State Changes Across Matter, Life, and Mind**  
+<img width="1194" height="672" alt="education_awareness_State_Changes_Across_Matter_Life_and_Mind_" src="https://github.com/user-attachments/assets/e28d8d7d-a780-405a-b583-c0bf532e3bb5" />
+
+# 🌐 **Awareness Module: State Changes Across Matter, Life, and Mind**  
 *A triadic, micro‑first RTT/TFT teaching module*
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
 
 This module introduces **regime awareness** through familiar state changes — beginning with matter, then extending into biological and cognitive domains.  
 Each example includes:
@@ -575,3 +561,19 @@ Each diagram uses the same visual grammar so students can instantly see the patt
         [ EXPLORATION REGIME ]
                WANDER
 ```
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
