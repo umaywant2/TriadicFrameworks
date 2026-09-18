@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_codex_CHAPTER_2_" src="https://github.com/user-attachments/assets/98b0c321-ebc7-4ea7-be45-dce5b4c0e665" />
+
 # **📘 RTT CODEX — CHAPTER 2**  
 # **THE EMERGENT TRIAD**  
 ### *How the Universe Behaves When the Foundations Touch Reality*
