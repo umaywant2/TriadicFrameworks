@@ -1,20 +1,6 @@
-## 🌍 **The Trip Report Frame (local, human, playful)**
+<img width="1194" height="672" alt="education_awareness_Trip_Report_from_Earth_" src="https://github.com/user-attachments/assets/3e8ecdae-d718-4318-ac89-fc501f4771fe" />
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+# 🌍 **The Trip Report Frame (local, human, playful)**
 
 If someone asked:
 
@@ -131,3 +117,19 @@ That’s the most human thing in the world.
 > One day, they imagined placing that little chip on a scale next to a feather, just like in the old Egyptian stories. And the chip was lighter. “Good,” they said. “That means I didn’t carry too much. I just paid attention.”  
 >   
 > And the kids nodded, because they knew that paying attention is one of the best adventures a person can have.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
