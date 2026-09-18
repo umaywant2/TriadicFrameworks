@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="energy_regime-aware-energy_" src="https://github.com/user-attachments/assets/29572cdc-26df-46a6-ae1b-9dce70ead2c7" />
+
 # Regime‑Aware Energy — Reframing Energy Through RTT
 
 ## Opening Summary — Why Regimes Determine Energy Behavior
