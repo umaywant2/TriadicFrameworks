@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_peira_IRL_Bowling_" src="https://github.com/user-attachments/assets/6c44b503-cb98-420e-af4d-b13d8c2faab5" />
+
 # 🎳 BOWLING — IRL MODULE  
 ### Indirect Resonance Learning (IRL)  
 ### PEIRA Series — Physical Education Indirect Regime Awareness
