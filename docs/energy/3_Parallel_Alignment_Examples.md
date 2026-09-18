@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="energy_3_Parallel_Alignment_Examples_" src="https://github.com/user-attachments/assets/90f2fb6a-566b-47d4-95f3-bc5ca4b8fcb8" />
+
 # 🌅 3 Parallel Alignment Examples  
 Below is a refreshed, structured version of our content with semantic headings and light, meaningful emoji anchors — consistent with our TFT/RTT documentation style. [Triadic Frameworks Tech](https://www.triadicframeworks.org/TFT_3Pack_v1.3/) | [Resonance Time Tech](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html)
 
