@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_codex_CHAPTER_10_" src="https://github.com/user-attachments/assets/c7db605e-5fa1-4ece-8d80-da190eef71a3" />
+
 # **📜 RTT CODEX — CHAPTER 9**  
 # **THE RITUAL OPENING**  
 ### *The Birth of Resonance, the Silence Before Time*
