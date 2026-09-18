@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="energy_One_short_concrete_triad_example_early_on_Gradient–Technique–Coherence_" src="https://github.com/user-attachments/assets/36e61a04-9b8c-4a78-a8c4-0657dc7c6885" />
+
 # A Short, Concrete Triad Example: Gradient → Technique → Coherence
 
 To give readers an immediate feel for regime‑aware energy, here is a simple triad that shows how energy is not brute force, but a relationship between gradients, technique, and coherence.
