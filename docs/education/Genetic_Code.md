@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_Genetic_Code_" src="https://github.com/user-attachments/assets/d8a5de48-481f-4b46-8277-19c7207033e2" />
+
 # 🧬 Genetic Code  
 ### *RTT/vST Reorganization of Codons, Amino Acids, and Translation*
 
