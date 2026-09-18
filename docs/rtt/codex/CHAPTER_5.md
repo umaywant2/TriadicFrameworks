@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_codex_CHAPTER_5_" src="https://github.com/user-attachments/assets/e5b16157-924c-4d60-9e27-949588ce6afb" />
+
 # **📗 RTT CODEX — CHAPTER 5**  
 # **THE SCHOLAR’S PRIMER**  
 ### *A Clear, Accessible Introduction to Resonance‑Time Theory*
