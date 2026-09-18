@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="energy_The_Three_Paths_Of_Nuclear_Waste_" src="https://github.com/user-attachments/assets/c92d9609-7157-4f54-91f6-5cf47fa2d5b4" />
+
 # The Three Paths Of Nuclear Waste
 A Regime‑Aware Analysis - an early example for RTT Students using AI
 
