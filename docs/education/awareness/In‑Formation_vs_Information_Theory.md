@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_awareness_In-Formation_vs_Information_Theory_" src="https://github.com/user-attachments/assets/9c4a6f08-3fd4-4fce-b67e-b46e25c16f2a" />
+
 # In‑Formation vs Information Theory
 Awareness Module — TriadicFrameworks  
 Version 1.0
