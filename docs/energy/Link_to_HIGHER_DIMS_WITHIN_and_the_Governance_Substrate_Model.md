@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="energy_Link_to_HIGHER_DIMS_WITHIN_and_the_Governance_Substrate_Model_" src="https://github.com/user-attachments/assets/a150fd8e-c756-4d57-b4fb-8f21a136e149" />
+
 # How Regime‑Aware Energy Scales: From Physics → Cognition → Governance
 
 Energy, in this framework, is not a commodity but a **regime relationship**:
