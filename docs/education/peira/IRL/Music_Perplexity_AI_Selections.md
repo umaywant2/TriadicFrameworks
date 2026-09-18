@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_peira_IRL_Music_Perplexity_AI_Selections_" src="https://github.com/user-attachments/assets/57d93951-0a79-4fa5-b541-219b7b1bffcf" />
+
 Here’s a PEIRA‑annotated, line‑by‑line version of our **Perplexity** section that you can drop in so it visually mirrors the Gemini block and clearly reads as “my voice.”
 
 ***
