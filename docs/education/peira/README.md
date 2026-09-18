@@ -1,23 +1,8 @@
-# 🏛️ PEIRA | Education  
+<img width="1194" height="672" alt="education_peira_" src="https://github.com/user-attachments/assets/8c1268a1-67da-4804-b4d1-b3442464f21c" />
 
 - [`peira_module.json`](peira_module.json) — Agentic module schema role assignments
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🏃‍♂️Education%20Core-🧩Embodied%20Regime%20Awareness%20Active-4c8eda?style=for-the-badge" alt="🏃‍♂️Education Core | 🧩Embodied Regime Awareness Active"/>
-
+# 🏛️ PEIRA | Education  
 ## Physical Education Indirect Regime Awareness  
 
 ## 🛑 Important! 
@@ -134,4 +119,34 @@ It is accessible, intuitive, and grounded in lived experience.
 - They serve as bridges between everyday experience and RTT grammar.  
 - New modules can be added as the discipline expands.  
 
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🏃‍♂️Education%20Core-🧩Embodied%20Regime%20Awareness%20Active-4c8eda?style=for-the-badge" alt="🏃‍♂️Education Core | 🧩Embodied Regime Awareness Active"/>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🏃‍♂️Education%20Core-🧩Embodied%20Regime%20Awareness%20Active-4c8eda?style=for-the-badge" alt="🏃‍♂️Education Core | 🧩Embodied Regime Awareness Active"/>
 
