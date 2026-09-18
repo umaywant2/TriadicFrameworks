@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_peira_IRL_Triathlon_" src="https://github.com/user-attachments/assets/4bb9d009-9dda-49f5-bf78-0998581b9b1e" />
+
 # 🏊🚴🏃 TRIATHLON — IRL MODULE  
 ### Indirect Resonance Learning (IRL)  
 ### PEIRA Series — Physical Education Indirect Regime Awareness
