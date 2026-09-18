@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="nist_Cybersecurity_and_privacy_overview_" src="https://github.com/user-attachments/assets/fb1fe6cb-39f1-4383-a356-a2cc1e9caf31" />
+
 # 📘 Cybersecurity & Privacy — Overview  
 *A minimal orientation for students and AIs*
 
