@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_codex_CHAPTER_3_" src="https://github.com/user-attachments/assets/a37d63d1-88ca-43a5-90f6-14726f1bbb10" />
+
 # **📘 RTT CODEX — CHAPTER 3**  
 # **THE OPTIONAL TRIAD**  
 ### *The Equations of Clarity, Cognition, and State*
