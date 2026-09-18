@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_Neural_Coding_" src="https://github.com/user-attachments/assets/8c5e9d92-dd87-4f0d-bcee-436c1b274772" />
+
 # 🧠 Neural Coding  
 ### *RTT/vST Reorganization of Information Representation in Nervous Systems*
 
