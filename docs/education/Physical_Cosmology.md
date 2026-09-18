@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_Physical_Cosmology_" src="https://github.com/user-attachments/assets/ca0f9e9b-2064-4422-ac2b-a066e5e618f6" />
+
 # 🌌 Physical Cosmology  
 ### *RTT/vST Reorganization of the Universe as a Regime System*
 
