@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="energy_energy-walls_" src="https://github.com/user-attachments/assets/81548266-e297-425f-bf6e-a7521c75ddb6" />
+
 # Energy Walls — Classic “Impossible Because Energy” Claims
 
 Many scientific challenges are framed as “impossible” because the energy required appears too large, too inefficient, or fundamentally out of reach. These conclusions often arise from a force‑based worldview: if something resists, push harder. If something is stable, break it. If something is massive, accelerate it.
