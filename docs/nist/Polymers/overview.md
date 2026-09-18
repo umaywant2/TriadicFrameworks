@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="nist_Polymers_overview_" src="https://github.com/user-attachments/assets/bd67f4de-6a0d-4e86-b150-7ba705c0d0b0" />
+
 # 📘 Polymers — Overview  
 *A minimal orientation for students and AIs*  
 *(Grounded in the NIST Polymer‑tagged publications visible in your active tab)*   [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=249001)
