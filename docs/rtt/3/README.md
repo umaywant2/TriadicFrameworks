@@ -1,9 +1,7 @@
-<img width="512" height="512" alt="aurion_rtt3" src="https://github.com/user-attachments/assets/65511a2b-87ba-42df-8dc2-ec30d7d8db62" />
-
-# RTT/3 — Integration–Emission Engine (SIE)
 
 - [`operators_module.json`](operators_module.json) — Agentic module schema role
 
+# RTT/3 — Integration–Emission Engine (SIE)
 RTT/3 introduces the **Integration–Emission Engine**, the layer responsible for
 triad integration, emission classification, continuity mapping, collapse
 recovery, stability evaluation, and canonical emission scaling.
