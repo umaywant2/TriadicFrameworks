@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_peira_Series_Index_" src="https://github.com/user-attachments/assets/2f7af0a9-2ca6-4d55-b228-6e7a1de8b078" />
+
 # 📚 IRL SERIES INDEX  
 ### Indirect Resonance Learning (IRL)  
 ### PEIRA — Physical Education Indirect Regime Awareness
