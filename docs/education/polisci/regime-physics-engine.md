@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_polisci_regime_physics_engine_" src="https://github.com/user-attachments/assets/a49ba28e-cfe7-4bc4-a1b9-6de8cf9e928e" />
+
 # **TriadicFrameworks — Regime Physics Engine (RPE)**  
 *A substrate‑aware engine for modeling constraints, flows, and transitions in Future Desert Cities.*
 
