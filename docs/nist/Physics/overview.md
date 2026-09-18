@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="nist_Physics_overview_" src="https://github.com/user-attachments/assets/6d99fbda-e573-4718-86b7-80edc7e6eaf5" />
+
 # 📘 Physics — Overview  
 *A minimal orientation for students and AIs*  
 *(Grounded in the NIST Physics publications visible in your active tab)*   [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=249241)
