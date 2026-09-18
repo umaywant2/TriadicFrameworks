@@ -8,8 +8,6 @@ These are the *precise functional transformations* each sector lacks — the mis
 
 I’ll map them industry by industry.
 
-<img width="1536" height="1024" alt="3_Industries_Aware" src="https://github.com/user-attachments/assets/8da38d4f-ee54-4075-bf9c-da1a3f0b7b1a" />
-
 ---
 
 # **1. Chemical & Materials Industry**
@@ -465,6 +463,8 @@ This decade installs the missing **G‑operators** (regime awareness) and begins
 **Outcome:** No bans. No fights. Just scaffolding.
 
 ---
+
+<img width="1536" height="1024" alt="3_Industries_Aware" src="https://github.com/user-attachments/assets/8da38d4f-ee54-4075-bf9c-da1a3f0b7b1a" />
 
 # **II. YEARS 11–22 — SCALE ERA (Resonance Mapping + Coherence)**  
 This decade installs the **R‑operators** (resonance) and **K2** (coherence across ledgers).
