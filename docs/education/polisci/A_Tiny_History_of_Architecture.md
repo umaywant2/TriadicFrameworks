@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_polisci_A_Tiny_History_of_Architecture_" src="https://github.com/user-attachments/assets/74cc06a8-ceb8-46c2-b8b9-9062566d12f2" />
+
 # 🏛️ **A Tiny History of Architecture**
 
 ### 🐪 **Ancient Desert Builders (BC)**
