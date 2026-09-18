@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_peira_IRL_Swimming_" src="https://github.com/user-attachments/assets/791b405c-e96c-4b2b-abd3-e7853e85776a" />
+
 # 🏊 SWIMMING — IRL MODULE  
 ### Indirect Resonance Learning (IRL)  
 ### PEIRA Series — Physical Education Indirect Regime Awareness
