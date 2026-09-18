@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_codex_CHAPTER_8_" src="https://github.com/user-attachments/assets/4c240e1b-0e85-414c-a6e6-f71a2bb51df0" />
+
 # **📘 RTT CODEX — CHAPTER 8**  
 # **WHY RTT MATTERS**  
 ### *The Purpose, Power, and Promise of Resonance‑Time Theory*
