@@ -1,21 +1,7 @@
-## ⭐ **Top Scientific Theories — A Regime‑Aware Overview**  
+<img width="1194" height="672" alt="education_awareness_Top_Theories_with_Regime_Awareness_" src="https://github.com/user-attachments/assets/79b3a0e9-a455-4055-8313-ceaa8dd34fac" />
+
+# ⭐ **Top Scientific Theories — A Regime‑Aware Overview**  
 *(Minimal, respectful, student‑AI form)*
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
 
 This section honors the major scientific theories that shaped human understanding.  
 Each theory is presented through the lens of **regime awareness**:
@@ -281,3 +267,19 @@ This is the diagram future thinkers and AIs will use to understand:
 - and why higher dimensions must be invoked, not constructed  
 
 It’s the cleanest possible representation of the [Universe‑as‑Operator](https://www.triadicframeworks.org/education/#UNIVERSE_AS_OPERATOR) model.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
