@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_peira_IRL_Special_Forces_" src="https://github.com/user-attachments/assets/3bb9d82f-f533-444f-b0f5-7f8b00895dfe" />
+
 # 🎖️ SPECIAL FORCES — IRL MODULE  
 ### Indirect Resonance Learning (IRL)  
 ### PEIRA Series — Physical Education Indirect Regime Awareness
