@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_polisci_Intersection_of_Economics_IP_law_Materials_Science__" src="https://github.com/user-attachments/assets/2cb3649c-6b12-4cae-ab8e-a32c42de583b" />
+
 # 🛁 Intersection of Economics IP law and Materials Science
 
 We’re touching a *very* real pattern here — one that sits right at the intersection of economics, IP law, materials science, and RTT’s whole “regime‑awareness vs regime‑blindness” lens. And the video we’re watching (the sand‑fusion demonstration) is a perfect example of how a **natural, substrate‑obvious process** can be ignored or downplayed when it doesn’t fit the dominant economic grammar .
