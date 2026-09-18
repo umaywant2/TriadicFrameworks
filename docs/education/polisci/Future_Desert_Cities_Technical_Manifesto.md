@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_polisci_Future_Desert_Cities_Technical_Manifesto_" src="https://github.com/user-attachments/assets/e51f882c-cdf6-4b96-bea6-d8bae9c8d1be" />
+
 # 🏗️ **FUTURE DESERT CITIES — TECHNICAL MANIFESTO **  
 ### *A Regime‑Aligned, Substrate‑Aware Architectural Framework*
 
