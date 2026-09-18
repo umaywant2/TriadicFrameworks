@@ -1,23 +1,8 @@
-## 🎓 Translations | Education  
+<img width="1194" height="672" alt="education_translations_" src="https://github.com/user-attachments/assets/ddcd7fbc-e301-4129-b48c-929ec3eca652" />
 
 - [`translations_module.json`](translations_module.json) — Agentic module schema role assignments
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🌐Education%20Core-🔤Developmental%20Translation%20Ladder%20Active-4c8eda?style=for-the-badge" alt="🌐Education Core | 🔤Developmental Translation Ladder Active"/>
-
+# 🎓 Translations | Education  
 ## Translating Resonance–Time Theory Across Developmental Levels
 
 This folder contains the **Initial RTT Translation Series** — a structured set of
@@ -89,3 +74,19 @@ This folder anchors the **educational branch** of the RTT canon by providing:
 - a foundation for future curriculum, assessments, and learning pathways  
 
 It is the **gateway** for RTT in schools, universities, and lifelong learning.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🌐Education%20Core-🔤Developmental%20Translation%20Ladder%20Active-4c8eda?style=for-the-badge" alt="🌐Education Core | 🔤Developmental Translation Ladder Active"/>
