@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_peira_IRL_CrossFit_" src="https://github.com/user-attachments/assets/148acb0e-8df7-44e4-8905-eee8638b42a6" />
+
 # 🏋️‍♀️ CROSSFIT — IRL MODULE  
 ### Indirect Resonance Learning (IRL)  
 ### PEIRA Series — Physical Education Indirect Regime Awareness
