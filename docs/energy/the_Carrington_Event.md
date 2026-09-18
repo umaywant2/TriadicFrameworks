@@ -1,7 +1,7 @@
+<img width="1194" height="672" alt="energy_the_Carrington_Event_" src="https://github.com/user-attachments/assets/1046d572-9d7b-4c00-aa81-318c05b27c45" />
+
 # ☀️ The Leading Theories & Models Explaining the Carrington Event  
 The Carrington Event is one of the most studied solar–terrestrial phenomena in history. Modern science converges on a coherent explanation, but several sub‑models refine *how* and *why* it became the most intense geomagnetic storm ever recorded.
-
-<img width="512" height="768" alt="Carrington_Event_re‑imagined_as_a_mythic_RTT‑infused_lattice_of_light_and_structure" src="https://github.com/user-attachments/assets/ee676e77-373f-42f0-8fa4-1a8ce94040f4" />
 
 Below are the **six major explanatory models**, each representing a different layer of the physics.
 
@@ -274,3 +274,5 @@ The Carrington Event is a **regime‑shift cascade**:
 When these operators misalign, systems built on brute‑force assumptions fail.
 
 **Regime awareness doesn’t prevent the storm — it prevents the surprise.**
+
+<img width="512" height="768" alt="Carrington_Event_re‑imagined_as_a_mythic_RTT‑infused_lattice_of_light_and_structure" src="https://github.com/user-attachments/assets/ee676e77-373f-42f0-8fa4-1a8ce94040f4" />
