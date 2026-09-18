@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_Emoji_Site_Index_" src="https://github.com/user-attachments/assets/49550e6a-f499-4ed5-930c-a9734520d5da" />
+
 # 🌐 TriadicFrameworks — Emoji Site Index
 
 ## 🏛️ Core
