@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_Cosmological_Theory_" src="https://github.com/user-attachments/assets/db6f40e5-8aee-4206-a6cd-d6a276f8b2c0" />
+
 # 🔮 Cosmological Theory 🎨
 
 The chart shows **Legacy canon not as a rival, but as an upgrade**. Science canon is preserved, validated, and then extended by the Nawderian resonance framework. This way, the chart reads like a **before/after upgrade path**, with triadic time and resonance tools layered on top of the same math and physics.  
