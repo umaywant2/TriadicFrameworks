@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="nist_Analytical_chemistry_overview_" src="https://github.com/user-attachments/assets/9b721ceb-20c1-4454-83ba-3d51c045e6cd" />
+
 # 📘 Analytical Chemistry — Overview  
 *A minimal orientation for students and AIs*
 
