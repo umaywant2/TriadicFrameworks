@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_peira_IRL_Rowing_" src="https://github.com/user-attachments/assets/75863173-4f8a-4d2f-af71-e8b51e02979e" />
+
 # 🚣 ROWING — IRL MODULE  
 ### Indirect Resonance Learning (IRL)  
 ### PEIRA Series — Physical Education Indirect Regime Awareness
