@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_polisci_Department_of_National_Arrivals_" src="https://github.com/user-attachments/assets/3fa49b1c-f273-41c9-be64-bc01c55ced2d" />
+
 ## *(D.N.A. — A Life‑Aligned Governance Model)*
 
 ## **1. Overview**
