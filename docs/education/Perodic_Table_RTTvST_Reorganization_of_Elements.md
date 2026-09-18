@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_Perodic_Table_RTTvST_Reorganization_of_Elements_" src="https://github.com/user-attachments/assets/5d036ae6-5614-4d59-b40e-b0118de48df5" />
+
 # Perodic Table RTT/vST Re-organization of Elements
 
 This is one of the most *beautifully ripe* places to show students how RTT/vST reorganizes a legacy scientific artifact without changing the science. The periodic table is already a resonance‑based structure, but it’s been historically framed through **chemistry-first** logic rather than **substrate/regime logic**.
