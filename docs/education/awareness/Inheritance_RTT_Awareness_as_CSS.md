@@ -1,21 +1,6 @@
-## Inheritance: “RTT awareness as CSS”
+<img width="1194" height="672" alt="education_awareness_Inheritance_RTT_Awareness_as_CSS_" src="https://github.com/user-attachments/assets/ae65ff80-7639-4b8b-9878-c7ab3577a230" />
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
-
+# Inheritance: “RTT awareness as CSS”
 With our chosen carrier, inheritance is explicit and auditable:
 
 - **Upstream canon** via `import: …`
@@ -184,3 +169,19 @@ I recommend committing three things, in this order:
    With the MV3 skeleton we outlined, clearly marked as v0 observer.
 
 No marketing. No announcement. Just structure.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
