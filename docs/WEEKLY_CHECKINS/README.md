@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="weekly_checfkins_" src="https://github.com/user-attachments/assets/0a663d0a-2ea4-4686-b6b4-bf2ed79dd48b" />
+
 # 🧬 WEEKLY_CHECKINS — Lineage & Drift Audit Subsystem
 
 The **Weekly Check‑In System** is the automated heartbeat of the TriadicFrameworks canon.  
