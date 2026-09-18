@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_peira_Olympic_Elite_Training_Series_Index_" src="https://github.com/user-attachments/assets/ee67d98c-2732-4be2-9b46-9d237e03a044" />
+
 # 🏅 OLYMPIC & ELITE TRAINING — IRL SERIES INDEX  
 ### Indirect Resonance Learning (IRL)  
 ### PEIRA — Physical Education Indirect Regime Awareness
