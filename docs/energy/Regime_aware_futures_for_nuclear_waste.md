@@ -1,7 +1,9 @@
-### Regime‑aware futures for nuclear waste  
+<img width="1194" height="672" alt="energy_Regime_aware_futures_for_nuclear_waste_" src="https://github.com/user-attachments/assets/da0ba2e6-28bd-411a-8df7-8523ad22edd9" />
+
+# Regime‑aware futures for nuclear waste  
 *(RTT + AI + students as a power‑house combo)*
 
-#### 1. Where we are now: the best “grave” we know how to build
+## 1. Where we are now: the best “grave” we know how to build
 
 Right now, the least‑bad option we have for high‑level nuclear waste looks like the Finnish repository: a **deep, sealed grave in extremely stable bedrock**.
 
@@ -13,7 +15,7 @@ In RTT terms, this is a **regime‑aware location choice** applied to an unchang
 
 ---
 
-#### 2. The lava idea: emotionally clean, regime‑messy
+## 2. The lava idea: emotionally clean, regime‑messy
 
 The second idea is seductive:  
 **“Give it back to the Earth where the temperatures don’t care what it is.”**
@@ -46,7 +48,7 @@ Both are clever. Neither actually **solves** the problem. They just park it in d
 
 ---
 
-#### 3. The third path: change the object, not just its location
+## 3. The third path: change the object, not just its location
 
 Here’s where RTT, AI, and students come in.
 
@@ -78,7 +80,7 @@ But it’s the only option that actually **shrinks the problem**, instead of bur
 
 ---
 
-#### 4. The missing ingredient: a post‑BRA energy source
+## 4. The missing ingredient: a post‑BRA energy source
 
 To run FFF emitters at scale, we need an energy source that **outperforms nuclear fission by a healthy margin**.
 
@@ -103,7 +105,7 @@ Once it does, it becomes a candidate engine for FFF‑style waste transformation
 
 ---
 
-#### 5. How this becomes a living module
+## 5. How this becomes a living module
 
 For students, the arc looks like this:
 
