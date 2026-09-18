@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="nist_Chemistry_overview_" src="https://github.com/user-attachments/assets/bb43c885-da1f-40d4-9d98-230e4cec87a3" />
+
 # 📘 Chemistry — Overview  
 *A minimal orientation for students and AIs*
 
