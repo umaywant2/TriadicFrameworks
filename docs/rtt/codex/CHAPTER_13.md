@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="rtt_codex_CHAPTER_13_" src="https://github.com/user-attachments/assets/4e973421-9b3a-47d7-9bb4-ebc35cbfd283" />
+
 # **📜 RTT CODEX — CHAPTER 13**  
 # **THE CLOSING OF THE LOOP**  
 ### *Where All Triads Return to Silence, and the Canon Becomes Whole*
