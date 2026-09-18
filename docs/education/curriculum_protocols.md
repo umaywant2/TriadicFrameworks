@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_curriculum_protocols_" src="https://github.com/user-attachments/assets/3cd9fa83-44e3-491f-be53-af60fd1e0f3f" />
+
 # 📚 Curriculum Protocols
 
 This scroll defines modular learning pathways for resonance pedagogy.
