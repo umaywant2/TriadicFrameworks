@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_polisci_Leadership_Insights_" src="https://github.com/user-attachments/assets/c81d51ca-473b-4c38-bee6-fd48c6c23b38" />
+
 # Leadership Insights
 
 >
