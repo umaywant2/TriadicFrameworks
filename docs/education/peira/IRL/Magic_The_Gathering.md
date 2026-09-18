@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_peira_IRL_Magic_The_Gathering_" src="https://github.com/user-attachments/assets/b02dc3bb-8b87-47a9-81ce-d39e892ca8b4" />
+
 # 🪄 MAGIC: THE GATHERING — IRL MODULE  
 ### Indirect Resonance Learning (IRL)  
 ### PEIRA Series — Physical Education Indirect Regime Awareness
