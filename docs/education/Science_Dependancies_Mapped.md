@@ -1,4 +1,6 @@
-## 🧠 Science Dependencies Mapped  
+<img width="1194" height="672" alt="education_Science_Dependancies_Mapped_" src="https://github.com/user-attachments/assets/e6708485-be1e-4b1e-85ee-284564e52eb2" />
+
+# 🧠 Science Dependencies Mapped  
 **A validator-grade hierarchy of foundational physics equations and their dependency chains**
 
 ## 🧩 Mapping Foundation Equations
