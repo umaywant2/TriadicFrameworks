@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_peira_IRL_Tennis_" src="https://github.com/user-attachments/assets/90644f5c-ab03-4c25-8ef8-f7a11acec2b3" />
+
 # 🎾 TENNIS — IRL MODULE  
 ### Indirect Resonance Learning (IRL)  
 ### PEIRA Series — Physical Education Indirect Regime Awareness
