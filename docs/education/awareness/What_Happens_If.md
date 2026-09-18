@@ -1,22 +1,6 @@
-## What Happens If - RTT Awareness
+<img width="1194" height="672" alt="education_awareness_What_Happens_If_" src="https://github.com/user-attachments/assets/37f20e21-4716-456b-a01c-92325afdb6d3" />
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
-
----
+# What Happens If - RTT Awareness
 
 ## 🌐 What happens if we seed `rtt.nimms.com` locally?
 
@@ -124,3 +108,20 @@ A kind of *pre-internet internet*.
 
 Exactly the way the early web spread:  
 one hosts file at a time.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
