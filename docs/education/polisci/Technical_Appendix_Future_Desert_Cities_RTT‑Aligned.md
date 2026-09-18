@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_polisci_Technical_Appendix_Future_Desert_Cities_RTT_Aligned_" src="https://github.com/user-attachments/assets/e0733a43-6ecf-4fc0-a175-3f99f0ab15d1" />
+
 # 📘 **TECHNICAL APPENDIX — Future Desert Cities (RTT‑Aligned)**  
 ### *TriadicFrameworks Structural, Thermal, Material, and Regime‑Aware Extensions*
 
