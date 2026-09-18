@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="nist_Fire_overview_" src="https://github.com/user-attachments/assets/34698b51-650f-48aa-a57f-c709c6ce7556" />
+
 # 📘 Fire — Overview  
 *A minimal orientation for students and AIs*  
 *(Grounded in the NIST Fire publications visible in your active tab)*   [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248586)
