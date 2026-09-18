@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="nist_Electromagnetics_overview_" src="https://github.com/user-attachments/assets/05a87836-fdb7-4269-9f3b-3de804c2fbb6" />
+
 # 📘 Electromagnetics — Overview  
 *A minimal orientation for students and AIs*
 
