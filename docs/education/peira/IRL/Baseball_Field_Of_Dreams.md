@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_peira_IRL_Baseball_Field_Of_Dreams_" src="https://github.com/user-attachments/assets/1f13249f-6383-4064-899d-02eed03a23d5" />
+
 # ⚾ BASEBALL FIELD OF DREAMS  
 ### A Triadic Learning Analogy for RTT Awareness
 
