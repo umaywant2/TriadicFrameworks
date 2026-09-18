@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_peira_IRL_Biathlon_" src="https://github.com/user-attachments/assets/a310d7ca-240b-4b6a-9a8c-042ab9a0990d" />
+
 # 🎯⛷️ BIATHLON — IRL MODULE  
 ### Indirect Resonance Learning (IRL)  
 ### PEIRA Series — Physical Education Indirect Regime Awareness
