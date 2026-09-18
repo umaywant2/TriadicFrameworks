@@ -1,23 +1,8 @@
-# Population Studies  
+<img width="1194" height="672" alt="education_polisci_" src="https://github.com/user-attachments/assets/5692fd42-8717-4e77-9e55-e502ddcf4cd0" />
 
 - [`polisci_module.json`](polisci_module.json) — Agentic module schema role assignments
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🏛️Education%20Core-📊Population%20Regime%20Dynamics%20Active-4c8eda?style=for-the-badge" alt="🏛️Education Core | 📊Population & Regime Dynamics Active"/>
-
+# Population Studies  
 _"A glowing obelisk in the Hall of Human Reckonings..."_
 
 ### **What is this?**  
@@ -45,3 +30,20 @@ rtt=1 | coherence=declared | drift=bounded | paradox=structural
 RTT is a **learning model first** — it’s not meant to be instantly intuitive. Students help shape it, test it, and refine it. That’s the point.
 
 Everything here is **open and collaborative**, so learners from any background can join the process.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🏛️Education%20Core-📊Population%20Regime%20Dynamics%20Active-4c8eda?style=for-the-badge" alt="🏛️Education Core | 📊Population & Regime Dynamics Active"/>
+
