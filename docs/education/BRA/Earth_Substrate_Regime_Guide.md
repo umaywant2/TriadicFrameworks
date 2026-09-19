@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_BRA_Earth_Substrate_Regime_Guide_" src="https://github.com/user-attachments/assets/638cb0e3-992f-48cc-9369-2dbf834ab241" />
+
 # 🌍 Why Earth Needs Its Own Substrate Regime Guide  
 *(based on the content and structure of your Education page )*
 
