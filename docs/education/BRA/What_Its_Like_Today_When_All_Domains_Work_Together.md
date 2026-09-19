@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_BRA_What_Its_Like_Today_When_All_Domains_Work_Together_" src="https://github.com/user-attachments/assets/5a0ce314-ae95-4291-90f3-f585cc939779" />
+
 # 🎼 What It’s Like Today When All Domains Work Together  
 *(A structural, regime‑aware description)*
 
