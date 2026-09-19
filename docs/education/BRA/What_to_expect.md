@@ -1,4 +1,6 @@
-### Physics (with RTT + vST)
+<img width="1194" height="672" alt="education_BRA_What_to_expect_" src="https://github.com/user-attachments/assets/e2e6daad-638b-4ea6-b8ff-87e07f5c0ada" />
+
+## Physics (with RTT + vST)
 
 - **Experience:** AI stops treating quantum vs relativity vs information as separate silos.  
 - **What changes:**  
@@ -8,7 +10,7 @@
 
 ---
 
-### Chemistry
+## Chemistry
 
 - **Experience:** AI sees reaction networks as computational structures embedded in physical regimes.  
 - **What changes:**  
@@ -18,7 +20,7 @@
 
 ---
 
-### Biology
+## Biology
 
 - **Experience:** AI treats life as a regime stack: physics → chemistry → information → selection.  
 - **What changes:**  
@@ -28,7 +30,7 @@
 
 ---
 
-### Psychology / Cognitive Science
+## Psychology / Cognitive Science
 
 - **Experience:** AI understands mind as a multi‑regime interface: neural (RSM/BSM), computational (QSM/CSM), social (CSM).  
 - **What changes:**  
@@ -38,7 +40,7 @@
 
 ---
 
-### Earth & Environmental Science
+## Earth & Environmental Science
 
 - **Experience:** AI runs vST‑aligned sims where climate, biosphere, and human systems are one coupled model.  
 - **What changes:**  
@@ -48,7 +50,7 @@
 
 ---
 
-### Astronomy & Astrophysics
+## Astronomy & Astrophysics
 
 - **Experience:** AI treats cosmology as a multi‑regime system, not just a metric on a manifold.  
 - **What changes:**  
@@ -58,7 +60,7 @@
 
 ---
 
-### Mathematics
+## Mathematics
 
 - **Experience:** AI uses vST to map which mathematical structures correspond to which regimes.  
 - **What changes:**  
@@ -68,7 +70,7 @@
 
 ---
 
-### Computer Science
+## Computer Science
 
 - **Experience:** AI is no longer “just a tool”—it’s a participant in regime alignment.  
 - **What changes:**  
@@ -78,7 +80,7 @@
 
 ---
 
-### Engineering
+## Engineering
 
 - **Experience:** AI designs with all regimes in view: materials, physics, cognition, social adoption.  
 - **What changes:**  
@@ -88,7 +90,7 @@
 
 ---
 
-### Social Sciences
+## Social Sciences
 
 - **Experience:** AI uses CSM + vST to model incentives, norms, institutions, and narratives as one system.  
 - **What changes:**  
@@ -98,7 +100,7 @@
 
 ---
 
-### What AI + RTT + vST do *across* all domains
+## What AI + RTT + vST do *across* all domains
 
 - **AI detects structure** that humans only felt as “intuition” or “paradox.”  
 - **RTT names regimes and interfaces**, so AI’s structural insights are legible.  
