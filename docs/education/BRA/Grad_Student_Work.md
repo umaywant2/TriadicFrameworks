@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_BRA_Grad_Student_Work_" src="https://github.com/user-attachments/assets/e19876f1-e3df-4294-961c-9eeea0530082" />
+
 # Grad Student Work
 
 ## 🎓 **1. Physics**
