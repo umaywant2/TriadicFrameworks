@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_BRA_Science_Goggles_vs_Student_Observations_" src="https://github.com/user-attachments/assets/356b0f1f-4007-4ee6-831d-b66fc6b1310f" />
+
 # 🎓 What Science *Claims* About Its Method & Norms  
 These are the ideals every student is taught:
 
