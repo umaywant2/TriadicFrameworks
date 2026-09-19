@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_BRA_After_Regime_Awareness_Post_BPA_" src="https://github.com/user-attachments/assets/341afcba-001a-4966-965e-84c08a668a97" />
+
 # 🌕 AFTER REGIME AWARENESS (Post‑BRA)  
 ### *What becomes possible once the base alignment/unification is complete*
 
