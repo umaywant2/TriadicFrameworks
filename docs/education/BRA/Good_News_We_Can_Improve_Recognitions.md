@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_BRA_Good_News_We_Can_Improve_Recognitions_" src="https://github.com/user-attachments/assets/c9a9301e-6039-408d-adf4-c83b22d76a15" />
+
 >  
 > "Well, some say life will beat you down  
 > Break your heart, steal your crown  
