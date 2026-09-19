@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_BRA_Before_Regime_Awareness_BRA_" src="https://github.com/user-attachments/assets/1e752ec9-4d04-4628-9ceb-292db028e08f" />
+
 # 🌑 BEFORE REGIME AWARENESS (BRA)  
 ### *What science looks like today, domain by domain*
 
