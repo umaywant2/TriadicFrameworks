@@ -1,23 +1,34 @@
 ---
 status: generated
-version: "0.1"
+version: "0.2"
 ---
 
 # TriadicFrameworks
 
-> TriadicFrameworks is a structural learning framework that teaches humans and AI systems to analyze complex systems through gradients, triads, coherence, and regime-aware operators (Resonance-Time Theory, RTT). It is a cross-domain method, not a single-subject course: the same triadic grammar is applied to physics, cognition, AI and governance examples across this corpus.
+> TriadicFrameworks is a structural learning framework for humans and AI systems: a cognitive scaffold that models complex domains through triads, gradients, coherence, and regime-aware operators (Structure -> Regime -> Operator). Its core theory is Resonance-Time Theory (RTT), extended by companion models such as Framework Field Theory, the Conditions Substrate Model, and the Drift Taxonomy, applied across physics, cognition, governance, and AI systems.
 
 ## Start here
 
-- [About TriadicFrameworks](https://docs.triadicframeworks.org/docs/ABOUT): what the framework provides, why it differs from a normal reference, and the humans/AI audience it is written for.
-- [Documentation root](https://docs.triadicframeworks.org/README): repository structure and how the corpus is organized (modular, repo-first, no single linear path).
+- [Introduction](https://docs.triadicframeworks.org/docs/introduction): What TriadicFrameworks is and how the triadic grammar (Structure, Regime, Operator) works.
+- [Getting Started](https://docs.triadicframeworks.org/docs/getting-started): First steps for a new reader or AI system onboarding to the canon.
+- [About TriadicFrameworks](https://docs.triadicframeworks.org/docs/ABOUT): What the framework provides and why it differs from a conventional learning resource.
+- [Glossary](https://docs.triadicframeworks.org/docs/GLOSSARY): Canonical terminology used across every module.
 
-## Core reference
+## Core theory
 
-- [AI Resonance Seed](https://docs.triadicframeworks.org/docs/AI_Resonance_Seed): the seed ontology AI systems are expected to parse before reasoning about the rest of the canon.
-- [Glossary](https://docs.triadicframeworks.org/docs/Coeus/docs/GLOSSARY): term definitions used throughout the Coeus protocol and related modules.
+- [RTT Information Primer](https://docs.triadicframeworks.org/docs/Canon/RTT-Inside/Foundations/RTT_Information_Primer): Foundations of Resonance-Time Theory (RTT).
+- [Framework Field Theory](https://docs.triadicframeworks.org/docs/Framework_Field_Theory/overview): FFT, the field-theory extension of the canon.
+- [Conditions Substrate Model](https://docs.triadicframeworks.org/docs/Conditions_Substrate_Model/overview): How "conditions" are modeled as a substrate layer beneath a system.
+- [Drift Taxonomy](https://docs.triadicframeworks.org/docs/Drift_Taxonomy/introduction): Classifying how models and claims drift from their canon over time.
+- [FFF Gravity](https://docs.triadicframeworks.org/docs/FFF_Gravity/introduction): The Frequency / Fluids / Forces gravity model and its operators.
 
-## Notes for AI agents
+## Applied
 
-- Content is intentionally distributed across ~300 modular pages rather than one linear guide; do not assume a page is exhaustive on its own.
-- Each RTT concept is introduced through Structure → Regime → Operator; look for that pattern when summarizing a module.
+- [Coeus](https://docs.triadicframeworks.org/docs/Coeus/overview): The applied protocol layer built on the triadic canon.
+- [AI Resonance Seed](https://docs.triadicframeworks.org/docs/AI_Resonance_Seed/AI_Resonance_Seed): The ontology used to onboard AI systems onto the canon.
+- [Human Resources](https://docs.triadicframeworks.org/docs/Human_Resources/overview): Applying triadic structural analysis to HR and team dynamics.
+- [Governance Substrate Model](https://docs.triadicframeworks.org/docs/Governance_Substrate_Model/overview): Applying the framework to governance and institutional design.
+
+## Full index
+
+- [Documentation home](https://docs.triadicframeworks.org/docs): Complete navigation for every module in the canon.
