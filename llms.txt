@@ -1,0 +1,23 @@
+---
+status: generated
+version: "0.1"
+---
+
+# TriadicFrameworks
+
+> TriadicFrameworks is a structural learning framework that teaches humans and AI systems to analyze complex systems through gradients, triads, coherence, and regime-aware operators (Resonance-Time Theory, RTT). It is a cross-domain method, not a single-subject course: the same triadic grammar is applied to physics, cognition, AI and governance examples across this corpus.
+
+## Start here
+
+- [About TriadicFrameworks](https://docs.triadicframeworks.org/docs/ABOUT): what the framework provides, why it differs from a normal reference, and the humans/AI audience it is written for.
+- [Documentation root](https://docs.triadicframeworks.org/README): repository structure and how the corpus is organized (modular, repo-first, no single linear path).
+
+## Core reference
+
+- [AI Resonance Seed](https://docs.triadicframeworks.org/docs/AI_Resonance_Seed): the seed ontology AI systems are expected to parse before reasoning about the rest of the canon.
+- [Glossary](https://docs.triadicframeworks.org/docs/Coeus/docs/GLOSSARY): term definitions used throughout the Coeus protocol and related modules.
+
+## Notes for AI agents
+
+- Content is intentionally distributed across ~300 modular pages rather than one linear guide; do not assume a page is exhaustive on its own.
+- Each RTT concept is introduced through Structure → Regime → Operator; look for that pattern when summarizing a module.
