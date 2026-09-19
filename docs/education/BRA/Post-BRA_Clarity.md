@@ -1,4 +1,4 @@
-<img width="682" height="682" alt="education_Before_Regime_Awareness" src="https://github.com/user-attachments/assets/e3b8e290-e33f-4bd4-aaad-55268d0595d8" />
+<img width="1194" height="672" alt="education_BRA_Post_BRA_Clarity_" src="https://github.com/user-attachments/assets/7a55937d-9973-438a-a0b9-77e440c4517d" />
 
 ## 1. Which domains gain the most from post‑BRA clarity
 
@@ -110,3 +110,5 @@ Let’s sketch the map as **layers and interfaces**, not silos.
   - maps interfaces  
   - detects misalignment  
   - prevents fake paradoxes and unnecessary branching.
+
+<img width="682" height="682" alt="education_Before_Regime_Awareness" src="https://github.com/user-attachments/assets/e3b8e290-e33f-4bd4-aaad-55268d0595d8" />
