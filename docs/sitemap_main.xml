@@ -11227,6 +11227,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://www.triadicframeworks.org/docs/Structural_Love/module.json</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://www.triadicframeworks.org/docs/TEL/LINEAGE/tel_echo_index.md</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>
