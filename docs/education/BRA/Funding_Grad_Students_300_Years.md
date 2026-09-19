@@ -1,6 +1,8 @@
-### 1. Graduate‑level funded work over ~300 years
+<img width="1194" height="672" alt="education_BRA_Funding_Grad_Students_300_Years_" src="https://github.com/user-attachments/assets/fafc2978-ea4b-417d-9cf0-3a46f581b2db" />
 
-#### 1700s–late 1800s: Patronage, prestige, and practical state needs  
+## 1. Graduate‑level funded work over ~300 years
+
+### 1700s–late 1800s: Patronage, prestige, and practical state needs  
 - **Who funds:** Nobility, churches, early academies, colonial states, wealthy individuals.   [Wikipedia](https://en.wikipedia.org/wiki/History_of_science_policy)  
 - **Grad‑student equivalent:** Apprentices under famous scholars, often unpaid or lightly supported.  
 - **Project types:**
@@ -11,7 +13,7 @@
 - **Military share:** Significant but indirect (fortifications, ballistics, navigation).  
 - **Cross‑domain:** Mostly informal—natural philosophy blurred boundaries.
 
-#### Late 1800s–WWII: Professionalization and early institutional funding  
+### Late 1800s–WWII: Professionalization and early institutional funding  
 - **Who funds:** Universities, early national labs, industrial labs (e.g., chemical, electrical, telegraph/telephone).   [Wikipedia](https://en.wikipedia.org/wiki/History_of_science_policy)  
 - **Grad‑student projects:**  
   - Organic chemistry for dyes, explosives, pharmaceuticals  
@@ -21,7 +23,7 @@
 - **Military share:** Growing, especially in artillery, explosives, communications.  
 - **Cross‑domain:** Chemistry–industry, physics–engineering, but still framed as separate disciplines.
 
-#### WWII–Cold War: The great pivot to state and military funding  
+### WWII–Cold War: The great pivot to state and military funding  
 - **Who funds:** National governments, especially military and mission agencies (OSRD, later DoD, AEC, NASA, NIH, etc.).   [Columbia Magazine](https://magazine.columbia.edu/article/brief-history-science-funding)  [AHA](https://www.historians.org/resource/history-of-federal-science-funding/)  
 - **Grad‑student projects:**  
   - Nuclear physics, radar, cryptography, operations research  
@@ -31,7 +33,7 @@
 - **Military share:** Enormous; much of “basic” work is justified via strategic advantage.  
 - **Cross‑domain:** Very high—physics+engineering+math+CS+psychology under military umbrellas.
 
-#### Post‑Cold War–present: Mixed ecosystem, but path‑dependent  
+### Post‑Cold War–present: Mixed ecosystem, but path‑dependent  
 - **Who funds:** Governments (NSF, NIH, DoE, EU frameworks, etc.), defense agencies, industry, philanthropy.   [AHA](https://www.historians.org/resource/history-of-federal-science-funding/)  [Columbia Magazine](https://magazine.columbia.edu/article/brief-history-science-funding)  
 - **Grad‑student projects:**  
   - AI/ML, biotech, climate models, quantum tech, cybersecurity, social data science  
@@ -41,7 +43,7 @@
 
 ---
 
-### 2. Did science build safeguards against funding hijack?
+## 2. Did science build safeguards against funding hijack?
 
 Short answer: **not really in any robust, structural way.**
 
@@ -70,11 +72,11 @@ Instead, it built a culture that *talks* autonomy while structurally depending o
 
 ---
 
-### 3. If we plotted 300 years of grad‑level work: humanities vs military
+## 3. If we plotted 300 years of grad‑level work: humanities vs military
 
 We can’t get exact percentages, but we can make a **reasoned structural estimate**:
 
-#### 1700–1900
+### 1700–1900
 - **Humanity‑advancing work:**  
   - Medicine, public health, sanitation  
   - Agriculture, infrastructure, education  
@@ -87,7 +89,7 @@ Rough intuition:
 - Humanity‑oriented: maybe **60–70%**  
 - Military‑oriented: maybe **30–40%** (often dual‑use)
 
-#### 1900–1945
+### 1900–1945
 - Rapid growth in:
   - Explosives, aviation, radio, cryptography, chemical warfare  
 - Graduate work increasingly tied to national and industrial labs.
@@ -96,7 +98,7 @@ Rough intuition:
 - Humanity‑oriented: maybe **50–60%**  
 - Military‑oriented: maybe **40–50%**, especially in major powers
 
-#### 1945–1990 (Cold War)
+### 1945–1990 (Cold War)
 - Massive expansion of:
   - Nuclear physics, missiles, radar, satellites, computing, operations research  
 - Many “basic” projects justified via strategic competition.
@@ -105,7 +107,7 @@ Rough intuition:
 - Humanity‑oriented: maybe **40–50%**  
 - Military/strategic: maybe **50–60%**, much of it dual‑use (computing, materials, aerospace)
 
-#### 1990–present
+### 1990–present
 - Growth in:
   - Biotech, AI, climate science, public health, social data  
 - But also:
@@ -124,7 +126,7 @@ These are not precise numbers—they’re structural inferences from how funding
 
 ---
 
-### 4. The triadic observer’s suspicion about unification
+## 4. The triadic observer’s suspicion about unification
 
 Your last line is sharp:
 
