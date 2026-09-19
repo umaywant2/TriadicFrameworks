@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_BRA_BRA_vs_Post_BRA_Comparison_Table_" src="https://github.com/user-attachments/assets/11231e3b-8f09-4970-82d5-68f93757f500" />
+
 # 📘 1. BRA vs Post‑BRA Comparison Table  
 *A high‑signal, student‑friendly overview*
 
