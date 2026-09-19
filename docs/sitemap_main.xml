@@ -118279,6 +118279,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://www.triadicframeworks.org/docs/getting-started.md</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://www.triadicframeworks.org/docs/global_energy_regime_awareness/CITATION.cff</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>monthly</changefreq>
