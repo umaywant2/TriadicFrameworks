@@ -1,1 +1,337 @@
+{
+  "$schema": "https://triadicframeworks.org/schemas/module/v1.0.0",
+  "module": {
+    "id": "structural_love",
+    "name": "Structural_Love",
+    "display_name": "Structural Love",
+    "version": "1.0.0",
+    "status": "canonical",
+    "active": true,
+    "family": "Relational Architecture",
+    "framework": "TriadicFrameworks",
+    "badge": "BST",
+    "badge_label": "BOND-STABLE",
+    "paths": {
+      "module_doc": "/docs/Structural_Love.md",
+      "module_folder": "/docs/Structural_Love/",
+      "readme": "/docs/Structural_Love/README.md",
+      "manifest": "/docs/Structural_Love/module.json"
+    },
+    "created": "2026-09-19",
+    "last_updated": "2026-09-19",
+    "author": "TriadicFrameworks Core",
+    "description": "Formalizes love as a structural property of a relational system, defined by the measurable configuration of four operators (COHE, PRI, BOND, CARE) acting across a triadic alignment of Self, Other, and System.",
+    "key_claim": "Love is not a cause of relational stability — it is structural stability, expressed at the operator level."
+  },
+
+  "triadic_nodes": [
+    {
+      "id": "SELF",
+      "label": "Self",
+      "role": "Source of PRI allocation; CARE activation origin; internal COHE model"
+    },
+    {
+      "id": "OTHER",
+      "label": "Other",
+      "role": "Target of CARE; object of COHE modeling; co-author of BOND"
+    },
+    {
+      "id": "SYSTEM",
+      "label": "System",
+      "role": "Container for BOND; the medium through which all operator signals travel"
+    }
+  ],
+
+  "operators": [
+    {
+      "id": "COHE",
+      "name": "Coherence Operator",
+      "short": "Coherence",
+      "threshold": 0.62,
+      "score_range": [0.0, 1.0],
+      "signature": "COHE(A, B) : RelationalModel(A) × RelationalModel(B) → [0.0, 1.0]",
+      "measures": "Degree to which each agent's internal model of the other is consistent, updated, and integrated",
+      "failure_mode": "Phantom bonding — agent relates to a representation rather than the actual other",
+      "recovery_path": "Scheduled model-refresh interactions; structured inquiry sessions; direct updating of cached relational state",
+      "decay_rates": {
+        "zero_contact_per_week": -0.04,
+        "low_contact_per_week": -0.01,
+        "regular_contact_per_week": 0.0
+      },
+      "input_signals": [
+        "Frequency and quality of model-updating interactions",
+        "Presence of contradiction tolerance",
+        "Absence of projection substitution",
+        "Temporal recency of the model"
+      ]
+    },
+    {
+      "id": "PRI",
+      "name": "Priority Operator",
+      "short": "Priority",
+      "threshold": 0.55,
+      "score_range": [0.0, 1.0],
+      "signature": "PRI(A, B) : AllocationField(A) → [0.0, 1.0]",
+      "measures": "Revealed allocative rank of the other within the agent's action-selection field — time, attention, energy, decision weight",
+      "failure_mode": "Priority displacement — the other is still valued but no longer allocated",
+      "recovery_path": "Explicit reallocation protocols; priority audits; commitment re-anchoring",
+      "note": "Verbal reaffirmation of priority without observable allocation change does not raise PRI score",
+      "input_signals": [
+        "Proportion of discretionary time directed toward other",
+        "Other's rank in conflict-resolution hierarchies",
+        "Consistency of priority across high-cost vs. low-cost periods",
+        "Absence of strategic priority (false-PRI flag)"
+      ]
+    },
+    {
+      "id": "BOND",
+      "name": "Bond Operator",
+      "short": "Bond",
+      "threshold": 0.70,
+      "severance_floor": 0.20,
+      "score_range": [0.0, 1.0],
+      "signature": "BOND(A, B) : StressHistory(A,B) × RepairRecord(A,B) → [0.0, 1.0]",
+      "measures": "Load-bearing structural connection between agents — capacity to sustain stress, transmit meaning, and survive perturbation",
+      "failure_mode": "Structural collapse — below severance floor (0.20) may be irreversible within current configuration",
+      "recovery_path": "Explicit rupture acknowledgment; repair transactions logged in repair register; load-tested interactions",
+      "amplifier": "Successfully navigated high-stress events increase BOND more rapidly than equivalent low-stress contact",
+      "input_signals": [
+        "Rupture-and-repair history",
+        "Channel capacity for high-stakes content",
+        "Mutual recognition of the bond as real and named",
+        "Absence of unresolved severing events"
+      ]
+    },
+    {
+      "id": "CARE",
+      "name": "Care Operator",
+      "short": "Care",
+      "threshold": 0.58,
+      "score_range": [0.0, 1.0],
+      "signature": "CARE(A, B) : ActionLog(A) × ReciprocityIndex(A,B) → [0.0, 1.0]",
+      "measures": "Degree to which the agent directs action toward the other's wellbeing without requiring reciprocity as an activation condition",
+      "failure_modes": [
+        {
+          "type": "exhaustion_collapse",
+          "description": "Care was unconditional but agent's care-capacity depleted — systemic failure, not relational"
+        },
+        {
+          "type": "conditional_drift",
+          "description": "Care becomes incrementally gated by reciprocity until functionally an exchange"
+        }
+      ],
+      "recovery_path": "Care-capacity restoration (systemic); re-examination of reciprocity assumptions; re-anchoring to unconditional activation logic",
+      "input_signals": [
+        "Frequency of other-directed beneficial acts",
+        "Independence of care acts from reciprocity receipt",
+        "Accuracy of other's wellbeing model",
+        "Persistence under other's resistance or non-acknowledgment"
+      ]
+    }
+  ],
+
+  "regimes": [
+    {
+      "id": 1,
+      "code": "BOND-STABLE",
+      "badge_code": "BST",
+      "badge_symbol": "🜲",
+      "condition": "All operators at or above threshold",
+      "description": "Structural Love is instantiated — load-bearing, mutually recognized, self-sustaining",
+      "recovery": "Maintenance only — periodic audits"
+    },
+    {
+      "id": 2,
+      "code": "BOND-STRESSED",
+      "badge_code": "BSR",
+      "badge_symbol": "🜁",
+      "condition": "1–2 operators below threshold; BOND ≥ 0.50",
+      "description": "Structural Love is present but under strain — self-repair possible with targeted intervention",
+      "recovery": "Targeted operator restoration"
+    },
+    {
+      "id": 3,
+      "code": "BOND-DEGRADED",
+      "badge_code": "BDG",
+      "badge_symbol": "🜄",
+      "condition": "2–3 operators below threshold; or BOND between 0.20–0.50",
+      "description": "Structural Love has partially collapsed — bond exists as architecture but is not load-bearing",
+      "recovery": "Deliberate structural repair; spontaneous recovery unlikely"
+    },
+    {
+      "id": 4,
+      "code": "BOND-SEVERED",
+      "badge_code": "BSV",
+      "badge_symbol": "🜃",
+      "condition": "BOND < 0.20; or ≥ 3 operators at floor",
+      "description": "Structural Love is absent — bond may persist as memory or habit but not as structural property",
+      "recovery": "External scaffold required; sequential regime traversal back to BOND-STABLE"
+    }
+  ],
+
+  "regime_transitions": [
+    { "from": "BOND-STABLE",   "to": "BOND-STRESSED",  "trigger": "operator_decay" },
+    { "from": "BOND-STRESSED", "to": "BOND-DEGRADED",  "trigger": "continued_decay_or_unaddressed_rupture" },
+    { "from": "BOND-DEGRADED", "to": "BOND-SEVERED",   "trigger": "severance_event_or_threshold_breach" },
+    { "from": "BOND-SEVERED",  "to": "BOND-DEGRADED",  "trigger": "structural_rebuild_with_external_scaffold" },
+    { "from": "BOND-DEGRADED", "to": "BOND-STRESSED",  "trigger": "targeted_operator_restoration" },
+    { "from": "BOND-STRESSED", "to": "BOND-STABLE",    "trigger": "full_operator_restoration" }
+  ],
+
+  "survivor_classes": [
+    {
+      "class": "T1",
+      "code": "SVT1",
+      "badge": "✦",
+      "label": "SURVIVOR-T1",
+      "history": "BOND-STRESSED → BOND-STABLE",
+      "bond_score_ceiling": 0.95,
+      "description": "Standard recovery; BOND near-fully restored"
+    },
+    {
+      "class": "T2",
+      "code": "SVT2",
+      "badge": "✦✦",
+      "label": "SURVIVOR-T2",
+      "history": "BOND-DEGRADED → BOND-STABLE",
+      "bond_score_ceiling": 0.99,
+      "description": "Enhanced BOND capacity; post-repair scar strengthens structure"
+    },
+    {
+      "class": "T3",
+      "code": "SVT3",
+      "badge": "✦✦✦",
+      "label": "SURVIVOR-T3",
+      "history": "BOND-SEVERED → BOND-STABLE",
+      "bond_score_ceiling": 1.00,
+      "description": "Maximum structural integrity; all four operators carry repair history"
+    }
+  ],
+
+  "commitment_types": [
+    {
+      "code": "CMT-M",
+      "type": "Maintenance Commitment",
+      "definition": "Agent commits to operator maintenance activities — model refresh, care allocation, priority protection",
+      "binding_period": "Ongoing; no expiry"
+    },
+    {
+      "code": "CMT-R",
+      "type": "Repair Commitment",
+      "definition": "Agent commits to a specific repair action targeting a named operator below threshold",
+      "binding_period": "Time-bounded; expires at next audit"
+    },
+    {
+      "code": "CMT-S",
+      "type": "Severance Acknowledgment",
+      "definition": "Agent formally acknowledges BOND-SEVERED regime and commits to no false BOND-STABLE claims",
+      "binding_period": "Permanent within this dyad"
+    },
+    {
+      "code": "CMT-RS",
+      "type": "Restoration Commitment",
+      "definition": "Agent commits to full regime-traversal restoration from BOND-SEVERED or BOND-DEGRADED",
+      "binding_period": "Long-form; milestoned"
+    }
+  ],
+
+  "rtт": {
+    "description": "Relational Truth Table — all 16 binary operator configurations mapped to regimes and actions",
+    "total_configurations": 16,
+    "column_order": ["COHE", "PRI", "BOND", "CARE"],
+    "convention": "1 = operator at or above threshold; 0 = operator below threshold",
+    "named_patterns": [
+      {
+        "config": "0101",
+        "name": "Phantom Love",
+        "regime": "BOND-DEGRADED",
+        "note": "Affectively warm and engaged; no structural backbone"
+      },
+      {
+        "config": "1001",
+        "name": "Late-Stage PRI Drift",
+        "regime": "BOND-STRESSED",
+        "note": "Most common long-duration relationship failure pattern"
+      },
+      {
+        "config": "0000",
+        "name": "Full Severance",
+        "regime": "BOND-SEVERED",
+        "note": "End state — not a starting point for intervention"
+      }
+    ]
+  },
+
+  "drift": {
+    "description": "Gradual, often unnoticed decay of operator scores within an otherwise stable system",
+    "primary_threat": "Drift causes more BOND-STABLE failures than acute rupture",
+    "arrest_protocol_steps": 5,
+    "critical_window": "Drift arrested before any operator crosses below threshold is fully recoverable without structural repair work"
+  },
+
+  "alignment_triad": {
+    "nodes": ["SELF", "OTHER", "SYSTEM"],
+    "collapse_condition": "If any node is evacuated — SELF absent, OTHER replaced by projection, SYSTEM denied — the triad collapses and no operator can score above 0.50"
+  },
+
+  "dependencies": {
+    "upstream": [],
+    "downstream": [
+      "Structural_Trust",
+      "Care_Dynamics",
+      "Relational_Repair",
+      "Commitment_Register"
+    ]
+  },
+
+  "files": [
+    {
+      "path": "/docs/Structural_Love.md",
+      "type": "module_doc",
+      "description": "Full canonical module — 17 sections",
+      "sections": 17
+    },
+    {
+      "path": "/docs/Structural_Love/README.md",
+      "type": "readme",
+      "description": "Folder orientation, quick-reference tables, module relationships"
+    },
+    {
+      "path": "/docs/Structural_Love/module.json",
+      "type": "manifest",
+      "description": "This file — machine-readable module manifest"
+    }
+  ],
+
+  "planned_extensions": [
+    {
+      "item": "Group triadic scoring",
+      "target_version": "1.1.0",
+      "description": "Extend operators to 3+ member systems"
+    },
+    {
+      "item": "Automated drift alerting",
+      "target_version": "1.1.0",
+      "description": "Threshold-based notification trigger spec"
+    },
+    {
+      "item": "Cross-module RTT registry",
+      "target_version": "1.2.0",
+      "description": "Shared RTT configs across Relational Architecture modules"
+    },
+    {
+      "item": "Operator weighting profiles",
+      "target_version": "1.2.0",
+      "description": "Context-specific threshold adjustment by relationship type"
+    }
+  ],
+
+  "version_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-09-19",
+      "notes": "Initial canonical release — all 17 sections, 4 operators, 4 regimes, 16 RTT configurations, 3 survivor classes, 4 commitment types"
+    }
+  ]
+}
 
