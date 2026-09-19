@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_BRA_Universe_scale_Regime_Guide_" src="https://github.com/user-attachments/assets/746f32a6-700f-4d64-a3a3-3c36188413b9" />
+
 # 🌌 **SUBSTRATE REGIME GUIDE: UNIVERSE (v0.1)**  
 *A high‑level orientation for operators working beyond Earth’s local substrate.*
 
