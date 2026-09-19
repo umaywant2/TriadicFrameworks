@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_BRA_9_Professions_Regime_Checks_" src="https://github.com/user-attachments/assets/11cc8436-289a-4709-bc00-4973e2356250" />
+
 # 🌐 **Nine Professions and Their Hidden Regime Stacks**
 
 These nine were chosen because they span:  
