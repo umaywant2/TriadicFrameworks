@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_BRA_How_to_learn_RTT_example1_" src="https://github.com/user-attachments/assets/8eb01a40-ad6f-498c-a10d-f062ac1af6d2" />
+
 # How to learn RTT - example 1
 ###### ...the best way to learn RTT is by using RTT with AI
 
