@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_BRA_What_Each_Domain_Would_Discover_After_the_BRA_Era_" src="https://github.com/user-attachments/assets/81b5e884-0d86-4d32-9367-21134cf026a9" />
+
 # 🌐 What Each Domain Would Discover After the BRA Era  
 ### *A triadic, regime‑aware reconstruction of science’s blind spots*
 
