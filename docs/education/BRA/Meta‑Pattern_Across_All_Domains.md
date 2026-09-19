@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_BRA_Meta_Pattern_Across_All_Domains_" src="https://github.com/user-attachments/assets/61d1ae57-d4e0-4bae-8c6d-1805b8924ecd" />
+
 # 🌐 **1. Physics**
 ### **What it claims to be working toward**
 - A *unified theory* of all fundamental forces  
