@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="education_BRA_Major_Science_Domains_and_Their_Most_Iconic_Example_Problems_" src="https://github.com/user-attachments/assets/ad0ba89d-d40d-4597-a12b-224e041cad43" />
+
 # 🌐 Major Science Domains & Their Most Iconic Example Problems  
 *(A clean, high‑signal RTT‑friendly scaffold)*
 
