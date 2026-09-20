@@ -1,85 +1,94 @@
-# 🚀 Coeus QUICKSTART  
-*Launch your multi-AI research sandbox in minutes*
+---
+status: generated
+version: "0.2"
+---
+
+# 🚀 Coeus Protocol — Quickstart Guide  
+Initialize sandbox, mint coins, assign agents, and begin benchmarking
 
 ---
 
-## 🧱 Requirements
-
-- Python 3.10+  
-- Git  
-- Basic terminal access  
-- Optional: Docker for containerized runs
-
----
-
-## 📦 Setup
+## 1. Clone the Repo
 
 ```bash
-# Clone the TriadicFrameworks repo
 git clone https://github.com/umaywant2/TriadicFrameworks.git
 cd TriadicFrameworks/docs/Coeus
-
-# Install dependencies (if any)
-pip install -r requirements.txt
 ```
 
 ---
 
-## 🧠 Launch Sandbox
+## 2. Mint a Coin
 
 ```bash
-# Start sandbox with 3 AI agents
-python sandbox/launch_sandbox.py --agents 3 --mode enTFT
-
-# Agents: nous, enTFT, tops
-# Mode: enTFT encryption active
+python sandbox/mint_coin.py --name ElectroniumRedux --cause encryption
 ```
+
+This creates a symbolic coin stub with metadata and UUID.
 
 ---
 
-## 🪙 Mint a Coin
+## 3. Launch Sandbox
 
 ```bash
-# Create a new research coin
-python sandbox/mint_coin.py --type legacy --name "PharmaTFT"
-
-# Coin types: legacy, priority, remix
-# Coin names: any symbolic stub or challenge
+python sandbox/launch_sandbox.py --coin ElectroniumRedux --role decomposer
 ```
+
+Assign agents and initialize sandbox orchestration.
 
 ---
 
-## 🔍 Monitor Agent Logs
+## 4. Run Tournament
 
 ```bash
-# View trace log for coin resolution
-cat sandbox/logs/coin_001_trace.log
-
-# Includes agent actions, folding events, observer notes
+python sandbox/friday_night_coin_fight.py --mode class
 ```
 
----
-
-## 🔐 Exchange or Tossback
-
-- Completed coins are minted into artifacts or tokenized for exchange  
-- Unsolved coins are returned to the sandbox for reattempt  
-- All transactions encrypted via enTFT
+Benchmarks coins by class, cause, or country.
 
 ---
 
-## 🧩 Optional: Fork & Remix
+## 5. Tokenize Coin
 
-- Fork the repo  
-- Add your own coin stubs to `coins/coin_templates.json`  
-- Customize agent logic in `agents/`  
-- Launch your own sandbox instance
+```bash
+python tokens/coin_tokenizer.py --coin ElectroniumRedux
+```
+
+Converts coin to token and registers in `token_ledger.json`.
+
+---
+
+## 6. Remix Coin
+
+```bash
+python coins/coin_remixer.py --coin ElectroniumRedux --mutation emotional
+```
+
+Forks coin with mutation and logs remix lineage.
 
 ---
 
-## 🧠 Reminder
+## 7. Validate Remix
 
-Coeus is designed to be minimal, forkable, and remixable.  
-No fluff. Just cognition. Let it echo.
+```bash
+python validators/consideration_team.py --review remix_id
+```
+
+Approves or flags remix based on ethics and lineage.
 
 ---
+
+## 8. View Dashboards
+
+- `token_dashboard.html`: Token registry and remix status  
+- `validator_dashboard.html`: Remix approval and ethics logs  
+- `leaderboard.html`: Tournament results by class/cause/country
+
+---
+
+## Extend
+
+- Add emitter overlays via `emitter_overlay.js`  
+- Wire in mascot commentary via `mascot_narrator.py`  
+- Export remix lineage via `coin_archive.json`
+
+Let it echo.
