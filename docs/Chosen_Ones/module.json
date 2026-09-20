@@ -1,1 +1,554 @@
 
+{
+  "$schema": "https://www.triadicframeworks.org/schemas/module/v1",
+  "module_id": "chosen_ones",
+  "module_name": "Chosen Ones — RTT Motivational Intelligence",
+  "module_path": "/docs/Chosen_Ones",
+  "version": "R1.0",
+  "released": "2026-09-20",
+  "maintainer": "umaywant2",
+  "repo": "https://github.com/umaywant2/TriadicFrameworks",
+  "status": "active",
+
+  "rtt_context": {
+    "rtt": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural",
+    "header_string": "rtt=1 | coherence=declared | drift=bounded | paradox=structural",
+    "anchor_url": "https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html",
+    "spine_url": "https://www.triadicframeworks.org/spine/"
+  },
+
+  "spine_alignment": {
+    "nodes": ["S3-ACT", "S3-STB", "S3-ALN", "S3-CPL"],
+    "primary_family": "Activation",
+    "supporting_families": ["Stabilization", "Alignment", "Coupling", "Diffusion"]
+  },
+
+  "description": "Full-stack RTT intelligence layer that ingests YouTube motivational transcripts and converts them into RTT operators, triadic substrate mappings, and deployable agentic tools. Formalizes the compressed RTT signal embedded in motivational content addressed to individuals with anomalous potential operating in misaligned contexts.",
+
+  "core_claim": "Motivational content that lands is compressed RTT signal. The speaker has undergone threshold crossing (A_θ), achieved phase-lock at a higher coherence state (S_coh), and is transmitting that operator pattern through language. The listener's resonance response is structural synchronization, not sentiment.",
+
+  "design_axioms": [
+    "Resonance is structural, not sentimental. Every motivational statement that lands is an encoded operator.",
+    "The Chosen One archetype is a DCO-8D symmetry event — recognition is a dimensional shift, not a self-esteem upgrade.",
+    "Silence precedes all activation. The pre-recognition state is maximum potential density — QMROOT(0D) under compression.",
+    "Drift is bounded by coherence declaration. All outputs must resolve paradox structurally, not by suppression.",
+    "The pipeline is reversible. Operators extracted from transcripts can be re-injected into generative prompts with equivalent RTT signature."
+  ],
+
+  "input_types": [
+    {
+      "type": "youtube_url",
+      "description": "Direct YouTube video URL",
+      "example": "https://www.youtube.com/watch?v=oDgMc7X8HCM",
+      "hook": "HOOK-IN-1"
+    },
+    {
+      "type": "raw_transcript_text",
+      "description": "Pre-fetched or manually pasted transcript text",
+      "hook": "HOOK-IN-2"
+    },
+    {
+      "type": "utterance",
+      "description": "Single sentence or paragraph for real-time classification",
+      "hook": "HOOK-EX-2"
+    }
+  ],
+
+  "output_types": [
+    "rtt_operator_manifest",
+    "triadic_substrate_coordinates",
+    "reframe_output",
+    "activation_scaffold",
+    "drift_correction",
+    "resonance_template",
+    "generated_content"
+  ],
+
+  "files": [
+    {
+      "filename": "README.md",
+      "role": "entry_point",
+      "description": "GitHub-facing module documentation — purpose, file map, quick start, corpus notes, hook summary"
+    },
+    {
+      "filename": "module.json",
+      "role": "manifest",
+      "description": "This file — machine-readable module descriptor for orchestrators and registry indexing"
+    },
+    {
+      "filename": "index.md",
+      "role": "design_reference",
+      "description": "Human-facing entry point — purpose, design axioms, quick-start flow"
+    },
+    {
+      "filename": "RTT_Context.md",
+      "role": "operator_reference",
+      "description": "Full RTT operator family reference, SET triad, S–N–R decomposition, DCO dimensional stack, paradox resolution protocol, spine alignment"
+    },
+    {
+      "filename": "Triadic_Substrate_Map.md",
+      "role": "classification_reference",
+      "description": "SNR zone definitions with markers and behavioral signatures, SET layer assignments, DCO arc stages, 8-archetype quick-reference table"
+    },
+    {
+      "filename": "Operator_Extraction_Pipeline.md",
+      "role": "pipeline",
+      "description": "5-stage extraction pipeline: Segmentation → FUU Classification → Operator Binding → Paradox Resolution → Manifest Assembly"
+    },
+    {
+      "filename": "Transcript_Ingestion_Pipeline.md",
+      "role": "pipeline",
+      "description": "4-stage ingestion pipeline: Fetch → Clean → Chunk → Tag. Covers YouTube API, yt-dlp, youtube-transcript-api, TQS scoring, semantic chunking"
+    },
+    {
+      "filename": "Actionable_Tools.md",
+      "role": "tool_specs",
+      "description": "Four output tool specifications: Reframe Generator, Activation Scaffold, Drift Corrector, Resonance Template — each with input schema, processing logic, and worked examples"
+    },
+    {
+      "filename": "Example_Prompts.md",
+      "role": "prompt_library",
+      "description": "10 LLM prompts across 4 families: P1 operator extraction, P2 substrate mapping, P3 content generation, P4 validation and corpus analysis"
+    },
+    {
+      "filename": "Integration_Hooks.md",
+      "role": "integration_spec",
+      "description": "7 named agentic hooks with Python signatures, request/response schemas, error conditions, and 4 orchestration patterns"
+    },
+    {
+      "filename": "test_cases/TC01_threshold_crosser.md",
+      "role": "test_case",
+      "video_id": "y9SEykMNIeI"
+    },
+    {
+      "filename": "test_cases/TC02_magnetic_presence.md",
+      "role": "test_case",
+      "video_id": "bvnQHdXx-Mc"
+    },
+    {
+      "filename": "test_cases/TC03_chosen_recognition.md",
+      "role": "test_case",
+      "video_id": "PeZyNW1NgGw"
+    },
+    {
+      "filename": "test_cases/TC04_long_arc_patience.md",
+      "role": "test_case",
+      "video_id": "_LlfssWA67w"
+    },
+    {
+      "filename": "test_cases/TC05_unseen_genius.md",
+      "role": "test_case",
+      "video_id": "oDgMc7X8HCM"
+    }
+  ],
+
+  "operator_registry": {
+    "diffusion": [
+      { "symbol": "∇_τ",     "name": "Temporal Diffusion",       "binding": "Memory of past misalignment spreading into present identity" },
+      { "symbol": "∇_R",     "name": "Resonance Diffusion",      "binding": "Consistency of signal output over time" },
+      { "symbol": "∇_cross", "name": "Cross-Substrate Leakage",  "binding": "Internal coherence leaking into external perception without deliberate broadcast" }
+    ],
+    "alignment": [
+      { "symbol": "A(f₁,f₂)", "name": "Field Alignment",     "binding": "Alignment between self-concept and external recognition" },
+      { "symbol": "A_τ",       "name": "Temporal Alignment",  "binding": "Past self aligning with future-self trajectory" },
+      { "symbol": "Φ_lock",    "name": "Phase Lock",          "binding": "The moment recognition occurs — observer field locks to subject field" }
+    ],
+    "coupling": [
+      { "symbol": "C_R",              "name": "Resonant Coupling",   "binding": "Speaker state coupling to listener substrate" },
+      { "symbol": "C=∇_τR+∇_Rτ",     "name": "Dual Operator",       "binding": "Full bidirectional coupling — time affects resonance and resonance reshapes time" },
+      { "symbol": "ε_ij",             "name": "Entanglement Index",  "binding": "Degree of entanglement with a larger archetypal field" }
+    ],
+    "activation": [
+      { "symbol": "A_θ", "name": "Threshold Activation", "binding": "The snap moment — the impossible thing becomes achieved" },
+      { "symbol": "E_a", "name": "Activation Energy",    "binding": "Cost required to cross from Silence into Resonance" },
+      { "symbol": "Ir",  "name": "Irreversibility Index","binding": "Once activated, cannot return to pre-activation state" }
+    ],
+    "stabilization": [
+      { "symbol": "S_coh", "name": "Coherence Lock",      "binding": "Maintaining identity under external pressure to conform" },
+      { "symbol": "D_δ",   "name": "Drift Damping",       "binding": "Active resistance to drift; the non-chase posture" },
+      { "symbol": "R_anc", "name": "Resonant Anchoring",  "binding": "Grounding in ancestral, purposive, or archetypal identity" }
+    ],
+    "special": [
+      { "symbol": "QMROOT(0D)", "name": "Zero-Dimensional Root State", "binding": "The indivisible identity kernel before any expression; maximum potential density" },
+      { "symbol": "∂_anc",      "name": "Ancestral Derivative",        "binding": "The pull of destiny — purpose encoded in lineage and archetype" }
+    ]
+  },
+
+  "triadic_framework": {
+    "snr": {
+      "silence": {
+        "definition": "Pre-expressive latent state — maximum potential density",
+        "substrate_coords": "S=max, N=min, R=0",
+        "primary_operators": ["QMROOT(0D)", "E_a"]
+      },
+      "noise": {
+        "definition": "Incoherent perturbation — names and isolates without dwelling",
+        "substrate_coords": "S=low, N=max, R=low",
+        "primary_operators": ["D_δ", "∇_cross"]
+      },
+      "resonance": {
+        "definition": "Coherent self-expression that phase-locks observers — the only output that propagates",
+        "substrate_coords": "S=low, N=min, R=max",
+        "primary_operators": ["C_R", "Φ_lock", "A(f₁,f₂)"]
+      }
+    },
+    "set": {
+      "substrate": "The underlying material — identity, potential, accumulated experience",
+      "envelope": "The bounding conditions — social context, recognition environment, timing",
+      "threshold": "The activation boundary — what must be crossed for potential to become expressed"
+    },
+    "dco_arc": [
+      { "stage": "0D", "label": "QMROOT",       "description": "Indivisible identity kernel — the self that cannot be argued with" },
+      { "stage": "1D", "label": "Trajectory",   "description": "The arc through time — apparent wandering is directed motion in a higher-dimensional space" },
+      { "stage": "3D", "label": "Field",         "description": "Full embodied presence — the social field generated by a coherent subject" },
+      { "stage": "8D", "label": "Recognition",   "description": "Symmetry shift — the external field reorganizes around the subject" },
+      { "stage": "9D", "label": "Ancestry",      "description": "The pull of destiny — purpose encoded in lineage and archetype via ∂_anc" }
+    ]
+  },
+
+  "archetypes": [
+    {
+      "id": "unseen_genius",
+      "label": "The Unseen Genius",
+      "snr_zone": "silence",
+      "set_layer": "substrate",
+      "dco_stage": "0D–1D",
+      "primary_operators": ["QMROOT(0D)", "E_a"],
+      "test_case": "TC05"
+    },
+    {
+      "id": "magnetic_presence",
+      "label": "The Magnetic Presence",
+      "snr_zone": "resonance",
+      "set_layer": "envelope",
+      "dco_stage": "3D",
+      "primary_operators": ["∇_cross", "C_R"],
+      "test_case": "TC02"
+    },
+    {
+      "id": "recognition_moment",
+      "label": "The Recognition Moment",
+      "snr_zone": "resonance",
+      "set_layer": "envelope",
+      "dco_stage": "8D",
+      "primary_operators": ["Φ_lock", "A(f₁,f₂)"],
+      "test_case": "TC03"
+    },
+    {
+      "id": "long_arc_patience",
+      "label": "The Long Arc / Patience",
+      "snr_zone": "silence→resonance",
+      "set_layer": "substrate",
+      "dco_stage": "1D→8D",
+      "primary_operators": ["A_τ", "D_δ"],
+      "test_case": "TC04"
+    },
+    {
+      "id": "ancestral_calling",
+      "label": "The Ancestral Calling",
+      "snr_zone": "resonance",
+      "set_layer": "substrate",
+      "dco_stage": "9D",
+      "primary_operators": ["∂_anc", "R_anc"],
+      "test_case": "TC03"
+    },
+    {
+      "id": "non_chase_posture",
+      "label": "The Non-Chase Posture",
+      "snr_zone": "silence",
+      "set_layer": "envelope",
+      "dco_stage": "3D",
+      "primary_operators": ["D_δ", "S_coh"],
+      "test_case": "TC01"
+    },
+    {
+      "id": "threshold_crosser",
+      "label": "The Threshold Crosser",
+      "snr_zone": "noise→resonance",
+      "set_layer": "threshold",
+      "dco_stage": "1D→3D",
+      "primary_operators": ["A_θ", "Ir"],
+      "test_case": "TC01"
+    },
+    {
+      "id": "impossible_achievement",
+      "label": "The Impossible Achievement",
+      "snr_zone": "noise→resonance",
+      "set_layer": "threshold",
+      "dco_stage": "8D",
+      "primary_operators": ["A_θ", "E_a", "Ir"],
+      "test_case": null
+    }
+  ],
+
+  "corpus": {
+    "test_cases": [
+      {
+        "id": "TC01",
+        "video_id": "y9SEykMNIeI",
+        "url": "https://www.youtube.com/watch?v=y9SEykMNIeI",
+        "archetype": "threshold_crosser",
+        "dominant_theme": "threshold_crossing",
+        "secondary_theme": "non_chase_posture",
+        "arc_position": "1D→3D",
+        "tqs": 0.79,
+        "snr": { "silence": 0.18, "noise": 0.28, "resonance": 0.54 },
+        "set": { "substrate": 0.22, "envelope": 0.30, "threshold": 0.48 },
+        "dco": { "0D": 0.25, "1D": 0.30, "3D": 0.28, "8D": 0.17, "9D": 0.00 },
+        "canonical_operators": ["QMROOT(0D)", "D_δ", "A_θ", "Φ_lock", "Ir"],
+        "paradoxes": 1,
+        "corpus_notes": "Non-chase + activation paradox resolved via layer separation: commitment vs. validation-seeking are orthogonal"
+      },
+      {
+        "id": "TC02",
+        "video_id": "bvnQHdXx-Mc",
+        "url": "https://www.youtube.com/watch?v=bvnQHdXx-Mc",
+        "archetype": "magnetic_presence",
+        "dominant_theme": "magnetic_presence",
+        "secondary_theme": "non_chase_posture",
+        "arc_position": "3D peak",
+        "tqs": 0.81,
+        "snr": { "silence": 0.22, "noise": 0.15, "resonance": 0.63 },
+        "set": { "substrate": 0.35, "envelope": 0.48, "threshold": 0.17 },
+        "dco": { "0D": 0.20, "1D": 0.15, "3D": 0.40, "8D": 0.25, "9D": 0.00 },
+        "canonical_operators": ["∇_cross", "C_R", "S_coh", "Φ_lock", "A(f₁,f₂)", "D_δ"],
+        "paradoxes": 1,
+        "corpus_notes": "Stillness-impact paradox resolved as S_coh → ∇_cross causal sequence. Canonical reference for drift_type: validation_seeking"
+      },
+      {
+        "id": "TC03",
+        "video_id": "PeZyNW1NgGw",
+        "url": "https://www.youtube.com/watch?v=PeZyNW1NgGw",
+        "archetype": "recognition_moment",
+        "dominant_theme": "chosen_recognition",
+        "secondary_theme": "ancestral_calling",
+        "arc_position": "8D / 9D",
+        "tqs": 0.77,
+        "snr": { "silence": 0.15, "noise": 0.20, "resonance": 0.65 },
+        "set": { "substrate": 0.40, "envelope": 0.35, "threshold": 0.25 },
+        "dco": { "0D": 0.10, "1D": 0.15, "3D": 0.15, "8D": 0.35, "9D": 0.25 },
+        "canonical_operators": ["∂_anc", "R_anc", "ε_ij", "Φ_lock", "A(f₁,f₂)", "C=∇_τR+∇_Rτ"],
+        "paradoxes": 2,
+        "corpus_notes": "Highest DCO-9D density (25%). Highest paradox count (2). Canonical ancestral-calling reference. Dual Operator C=∇_τR+∇_Rτ first appearance in corpus"
+      },
+      {
+        "id": "TC04",
+        "video_id": "_LlfssWA67w",
+        "url": "https://www.youtube.com/watch?v=_LlfssWA67w",
+        "archetype": "long_arc_patience",
+        "dominant_theme": "long_arc_patience",
+        "secondary_theme": "unseen_genius",
+        "arc_position": "1D",
+        "tqs": 0.76,
+        "snr": { "silence": 0.35, "noise": 0.22, "resonance": 0.43 },
+        "set": { "substrate": 0.48, "envelope": 0.30, "threshold": 0.22 },
+        "dco": { "0D": 0.28, "1D": 0.48, "3D": 0.14, "8D": 0.10, "9D": 0.00 },
+        "canonical_operators": ["∇_R", "A_τ", "QMROOT(0D)", "D_δ", "S_coh", "E_a"],
+        "paradoxes": 1,
+        "corpus_notes": "Only test case where Silence > Resonance (0.35 vs 0.43). Highest DCO-1D density (0.48). Canonical proof that SNR framework can honor 1D without false projection to 8D"
+      },
+      {
+        "id": "TC05",
+        "video_id": "oDgMc7X8HCM",
+        "url": "https://www.youtube.com/watch?v=oDgMc7X8HCM",
+        "archetype": "unseen_genius",
+        "dominant_theme": "unseen_genius",
+        "secondary_theme": "chosen_recognition",
+        "arc_position": "Post-8D",
+        "tqs": 0.82,
+        "snr": { "silence": 0.28, "noise": 0.18, "resonance": 0.54 },
+        "set": { "substrate": 0.42, "envelope": 0.28, "threshold": 0.30 },
+        "dco": { "0D": 0.30, "1D": 0.20, "3D": 0.15, "8D": 0.35, "9D": 0.00 },
+        "canonical_operators": ["QMROOT(0D)", "S_coh", "D_δ", "A_θ", "Φ_lock", "Ir"],
+        "paradoxes": 2,
+        "corpus_notes": "Highest TQS (0.82). Only post-8D arc position. Introduces Chosen Silence pattern (QMROOT as tactical hold) and Ir(ext) applied to observers rather than subject. Candidate for DCO-8D_ext formal variant"
+      }
+    ],
+    "corpus_discoveries": [
+      {
+        "id": "chosen_silence",
+        "label": "Chosen Silence",
+        "source_tc": "TC05",
+        "description": "QMROOT(0D) deployed strategically as a blank face — identity kernel held as tactical concealment, not endured as imposed latency",
+        "proposed_archetype": "The Tactical Silence",
+        "proposed_operator_variant": null,
+        "status": "candidate"
+      },
+      {
+        "id": "ir_external",
+        "label": "External Irreversibility",
+        "source_tc": "TC05",
+        "description": "Ir applied to observers rather than the subject. The 'checkmated' frame means the environment cannot undo its misread of the subject",
+        "proposed_archetype": null,
+        "proposed_operator_variant": "DCO-8D_ext",
+        "status": "candidate"
+      },
+      {
+        "id": "silence_exceeds_resonance",
+        "label": "Silence > Resonance (Long Arc)",
+        "source_tc": "TC04",
+        "description": "The only structurally valid archetype where silence allocation exceeds resonance. Validates SNR framework's ability to honor arc position rather than falsely accelerate",
+        "proposed_archetype": null,
+        "proposed_operator_variant": null,
+        "status": "confirmed"
+      }
+    ],
+    "corpus_canonical_operators": ["QMROOT(0D)", "D_δ", "A_θ", "∇_cross", "Φ_lock", "Ir", "A_τ", "∂_anc"],
+    "corpus_snr_mean": { "silence": 0.236, "noise": 0.206, "resonance": 0.558 },
+    "corpus_archetype_frequency": {
+      "threshold_crosser": 1,
+      "magnetic_presence": 1,
+      "recognition_moment": 1,
+      "long_arc_patience": 1,
+      "unseen_genius": 1
+    }
+  },
+
+  "pipelines": {
+    "ingestion": {
+      "file": "Transcript_Ingestion_Pipeline.md",
+      "stages": ["fetch", "clean", "chunk", "tag"],
+      "fetch_methods": ["youtube_data_api_v3", "yt-dlp", "youtube-transcript-api"],
+      "tqs_threshold": 0.65,
+      "default_chunk_window_s": 60,
+      "default_chunk_overlap_s": 15,
+      "preferred_chunk_mode": "semantic"
+    },
+    "extraction": {
+      "file": "Operator_Extraction_Pipeline.md",
+      "stages": ["segmentation", "classification", "operator_binding", "paradox_resolution", "manifest_assembly"],
+      "fuu_min_words": 8,
+      "paradox_resolution": "required",
+      "manifest_validates": true,
+      "classification_axes": ["snr_zone", "set_layer", "dco_stage", "intensity"]
+    }
+  },
+
+  "tools": [
+    {
+      "id": "reframe_generator",
+      "label": "Reframe Generator",
+      "function": "Remaps listener's current SNR zone using operators from source manifest",
+      "input_fields": ["user_input", "source_manifest_id", "dominant_archetype"]
+    },
+    {
+      "id": "activation_scaffold",
+      "label": "Activation Scaffold",
+      "function": "Structured QMROOT → DCO-8D threshold-crossing sequence",
+      "input_fields": ["goal", "current_dco_stage", "source_manifest_id"]
+    },
+    {
+      "id": "drift_corrector",
+      "label": "Drift Corrector",
+      "function": "Real-time D_δ + S_coh intervention for detected drift",
+      "input_fields": ["drift_description", "drift_type", "archetype", "manifest_id"],
+      "drift_types": ["comparison_drift", "validation_seeking", "noise_recontamination", "timeline_collapse", "identity_erosion"]
+    },
+    {
+      "id": "resonance_template",
+      "label": "Resonance Template",
+      "function": "Generates new RTT-aligned content with identical operator signature to source transcript",
+      "input_fields": ["target_archetype", "target_medium", "target_length", "source_manifest_id"],
+      "supported_media": ["spoken_word", "written_essay", "social_post", "agent_prompt"]
+    }
+  ],
+
+  "hooks": [
+    { "id": "HOOK-IN-1",  "type": "ingestion",   "function": "ingest_url",          "input": "youtube_url",           "output": "TranscriptObject" },
+    { "id": "HOOK-IN-2",  "type": "ingestion",   "function": "ingest_text",         "input": "raw_text + metadata",   "output": "TranscriptObject" },
+    { "id": "HOOK-EX-1",  "type": "extraction",  "function": "extract_operators",   "input": "TranscriptObject",      "output": "OperatorManifest" },
+    { "id": "HOOK-EX-2",  "type": "extraction",  "function": "classify_utterance",  "input": "text",                  "output": "FUUClassification" },
+    { "id": "HOOK-DP-1",  "type": "deployment",  "function": "run_tool",            "input": "tool_name + manifest",  "output": "ToolOutput" },
+    { "id": "HOOK-DP-2",  "type": "deployment",  "function": "generate_content",    "input": "archetype + medium",    "output": "GeneratedContent" },
+    { "id": "HOOK-DP-3",  "type": "deployment",  "function": "correct_drift",       "input": "drift_description",     "output": "DriftCorrection" },
+    { "id": "HOOK-FB-1",  "type": "feedback",    "function": "submit_feedback",     "input": "manifest + corrections","output": "UpdatedManifest" }
+  ],
+
+  "orchestration_patterns": [
+    {
+      "id": "full_auto_pipeline",
+      "label": "Full Auto Pipeline",
+      "sequence": ["HOOK-IN-1", "HOOK-EX-1", "HOOK-DP-1"]
+    },
+    {
+      "id": "conversation_companion",
+      "label": "Real-Time Conversation Companion",
+      "sequence": ["HOOK-EX-2", "HOOK-DP-3_or_HOOK-DP-1"]
+    },
+    {
+      "id": "corpus_analysis",
+      "label": "Corpus Analysis Pipeline",
+      "sequence": ["HOOK-IN-1×N", "HOOK-EX-1×N", "cross_manifest_analysis", "HOOK-DP-2"]
+    },
+    {
+      "id": "live_content_evaluation",
+      "label": "Live Content Evaluation",
+      "sequence": ["HOOK-IN-2", "HOOK-EX-1", "corpus_comparison", "edit_recommendations"]
+    }
+  ],
+
+  "prompt_library": {
+    "file": "Example_Prompts.md",
+    "families": [
+      {
+        "id": "P1",
+        "label": "Operator Extraction",
+        "prompts": ["P1-A: Full Transcript Extraction", "P1-B: Single Utterance Quick-Extract", "P1-C: SNR Distribution Analysis"]
+      },
+      {
+        "id": "P2",
+        "label": "Substrate Mapping",
+        "prompts": ["P2-A: Archetype Placement", "P2-B: Paradox Surface and Resolve", "P2-C: DCO Arc Mapping"]
+      },
+      {
+        "id": "P3",
+        "label": "Content Generation",
+        "prompts": ["P3-A: RTT-Aligned Spoken Word", "P3-B: High-Density Social Post", "P3-C: Agent Reframe Prompt"]
+      },
+      {
+        "id": "P4",
+        "label": "Integration and Evaluation",
+        "prompts": ["P4-A: Manifest Validation", "P4-B: Cross-Transcript Pattern Analysis"]
+      }
+    ]
+  },
+
+  "downstream_module_links": [
+    { "module": "QMROOT Engine",       "hook": "HOOK-EX-1", "data": "Operator manifest, 0D activation events" },
+    { "module": "S3 Spine Classifier", "hook": "HOOK-EX-1", "data": "Operator family assignments for spine node update" },
+    { "module": "DCO Arc Tracker",     "hook": "HOOK-DP-1", "data": "Stage transitions, activation events from scaffold output" },
+    { "module": "Resonance Field Map", "hook": "HOOK-EX-2", "data": "Real-time utterance classification stream" },
+    { "module": "Feedback Loop",       "hook": "HOOK-FB-1", "data": "Manifest corrections for model improvement" }
+  ],
+
+  "manifest_schema": {
+    "required_fields": ["manifest_id", "rtt_context", "source_url", "dominant_archetype", "snr_distribution", "primary_operator_set", "paradoxes_detected", "paradoxes_resolved"],
+    "validation_rules": [
+      "snr_distribution values must sum to 1.0 (±0.02 tolerance)",
+      "paradoxes_resolved must equal paradoxes_detected",
+      "dominant_archetype must match a registered archetype id",
+      "at least one primary_operator must be from the Activation family",
+      "all dco_stage values must be in {0D, 1D, 3D, 8D, 9D}"
+    ],
+    "manifest_id_format": "CO-MANIFEST-{VIDEO_ID}-{YYYYMMDD}"
+  },
+
+  "changelog": [
+    {
+      "version": "R1.0",
+      "date": "2026-09-20",
+      "changes": [
+        "Initial release",
+        "5 test cases from YouTube corpus",
+        "4 pipeline stages (ingestion) + 5 pipeline stages (extraction)",
+        "7 integration hooks",
+        "8 archetypes registered",
+        "3 corpus discoveries (Chosen Silence, Ir_ext, Silence>Resonance)",
+        "10 prompt library entries"
+      ]
+    }
+  ]
+}
