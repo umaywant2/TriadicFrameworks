@@ -1,6 +1,6 @@
 ---
 status: generated
-version: "0.2"
+version: "0.3"
 ---
 
 <img width="1194" height="672" alt="About_TriadicFrameworks_" src="https://github.com/user-attachments/assets/5949fdd6-7faf-4331-86db-3702fb4a7922" />
@@ -35,7 +35,7 @@ badge_block: 🧭
 # 🧭 About TriadicFrameworks  
 ### *A Structural Learning Framework for Students and AI Systems*
 
-**What is a triadic framework?** A triadic framework models a system as three interacting parts instead of two — in this project's own vocabulary, **Structure**, **Regime**, and **Operator** — so that gradients, transitions, and coherence become visible instead of staying hidden inside a single flat model.
+**What is a triadic framework?** A triadic framework models a system as three interacting parts instead of two — in this project's own vocabulary, **Structure**, **Regime**, and **Operator** — so that gradients, transitions, and coherence become visible instead of staying hidden inside a single flat model. [See what each term means on its own →](/docs/GLOSSARY)
 
 TriadicFrameworks is one such framework. It teaches both humans and AI systems how to understand complex domains through **gradients**, **triads**, **coherence**, and **regime‑aware operators**.  
 It is not a textbook.  
