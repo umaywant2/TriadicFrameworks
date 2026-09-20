@@ -1,5 +1,5 @@
 ---
-status: generated
+status: deprecated
 version: "0.3"
 ---
 
