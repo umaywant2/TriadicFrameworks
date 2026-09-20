@@ -1,3 +1,8 @@
+---
+status: generated
+version: "0.2"
+---
+
 <img width="1194" height="672" alt="Did_You_Know" src="https://github.com/user-attachments/assets/c888c453-6a81-424a-9804-bf372a7caae5" />
 
 # 👏 Did You Know? 👀
@@ -72,7 +77,7 @@ This scroll preserves the original resonance fragments while adding validator‑
 - 📚 TriadicFrameworks stack validates classical **AND** symbolic math equations.  
 - 🎓 [FTF_3Pack_v1.3](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3) provides resonance tools for students.  
 - 🤖 TriadicFrameworks is developing an LLM extension for all AI’s.  
-- 💰 Coeus platform = “Coin as a Contract” research market for investors.  
+- 💰 Coeus uses “coin” only as its own internal name for a research task - not a cryptocurrency, token or investment product.  
 - 🛠️ Goal: manifest Replicators, Transporters, and Consciousness Transfers using resonance + determination.  
 
 ---
