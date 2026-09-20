@@ -1,3 +1,7 @@
+---
+status: deprecated
+---
+
 # 🌐 Coin as a Contract - Coeus **draft**
 
 It *is* wild, and honestly kind of delightful, how often resonance‑themed projects orbit each other without ever having met. Now that I’ve looked at the page you have open, I can give you a clean, grounded comparison.
