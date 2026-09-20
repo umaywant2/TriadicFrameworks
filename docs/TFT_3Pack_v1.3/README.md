@@ -1,3 +1,12 @@
+---
+title: "TFT 3-Pack — TriadicFrameworks"
+description: "A worked-example toolkit for TriadicFrameworks' Triadic Field Theory (TFT) model, across 12 academic domains. Not Fast Fourier Transform, Thin-Film Transistor, or Teamfight Tactics."
+status: generated
+version: "0.2"
+---
+
+# TFT 3-Pack — TriadicFrameworks' Triadic Field Theory toolkit
+
 <img width="1194" height="672" alt="TFT_3Pack_v1 3_" src="https://github.com/user-attachments/assets/222bf729-079e-4e8e-9078-03bd41d43ae0" />
 
 - [`tft_3pack_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/TFT_3Pack_v1.3/tft_3pack_module.json) — Agentic module schema role assignments
