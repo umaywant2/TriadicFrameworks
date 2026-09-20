@@ -1027,36 +1027,6 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://www.triadicframeworks.org/docs/Chosen_Ones/TC01_threshold_crosser.md</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.triadicframeworks.org/docs/Chosen_Ones/TC02_magnetic_presence.md</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.triadicframeworks.org/docs/Chosen_Ones/TC03_chosen_recognition.md</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.triadicframeworks.org/docs/Chosen_Ones/TC04_long_arc_patience.md</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.triadicframeworks.org/docs/Chosen_Ones/TC05_unseen_genius.md</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://www.triadicframeworks.org/docs/Chosen_Ones/Transcript_Ingestion_Pipeline.md</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -1082,6 +1052,36 @@
   </url>
   <url>
     <loc>https://www.triadicframeworks.org/docs/Chosen_Ones/module.json</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.triadicframeworks.org/docs/Chosen_Ones/test_cases/TC01_threshold_crosser.md</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.triadicframeworks.org/docs/Chosen_Ones/test_cases/TC02_magnetic_presence.md</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.triadicframeworks.org/docs/Chosen_Ones/test_cases/TC03_chosen_recognition.md</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.triadicframeworks.org/docs/Chosen_Ones/test_cases/TC04_long_arc_patience.md</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.triadicframeworks.org/docs/Chosen_Ones/test_cases/TC05_unseen_genius.md</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
