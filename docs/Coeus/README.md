@@ -1,6 +1,6 @@
 ---
 status: generated
-version: "0.2"
+version: "0.3"
 ---
 
 <img width="1194" height="672" alt="Coeus_" src="https://github.com/user-attachments/assets/0562f8b9-86c1-477e-9dc6-cf90e536628c" />
@@ -40,19 +40,17 @@ This repo includes:
 ## 🚀 Quickstart
 
 ```bash
-# Clone and enter sandbox
+# Clone and enter the sandbox
 git clone https://github.com/umaywant2/TriadicFrameworks.git
 cd TriadicFrameworks/docs/Coeus
 
-# Launch sandbox with 3 AI agents
-python launch_sandbox.py --agents 3 --mode entft
-
-# Mint a coin and begin resolution
-python mint_coin.py --type legacy --name "PharmaTFT"
-
-# View logs and observer trace
-cat logs/coin_001_trace.log
+# Launch the sandbox with the default 3-agent stack
+python sandbox/launch_sandbox.py
 ```
+
+This assigns roles across the `nous`, `entft` and `tops` agents and reports the sandbox as ready — it's the one step in this pipeline with a script that runs end-to-end today. `launch_sandbox.py` takes no command-line flags; the agent count (3) and mode (`enTFT`) are fixed in the script itself.
+
+The rest of the coin lifecycle below — tokenizing, remixing, review — is implemented as importable Python classes for use from your own script: `CoinTokenizer` (`tokens/coin_tokenizer.py`), `CoinRemixer` (`coins/coin_remixer.py`) and `ConsiderationTeam` (`validators/consideration_team.py`). A sample tournament runs directly with `python sandbox/friday_night_coin_fight.py`. There is no `mint_coin.py` yet, so a coin has to be built as a plain dict by hand before it can be tokenized, remixed or reviewed.
 
 ---
 
@@ -106,13 +104,15 @@ Coeus ships with:
 ```
 Coeus/
 ├── README.md
-├── QUICKSTART.md
 ├── sandbox/
 │   ├── launch_sandbox.py
-│   ├── mint_coin.py
-│   └── logs/
+│   └── friday_night_coin_fight.py
+├── tokens/
+│   └── coin_tokenizer.py
 ├── coins/
-│   └── coin_templates.json
+│   └── coin_remixer.py
+├── validators/
+│   └── consideration_team.py
 ├── agents/
 │   ├── nous.py
 │   ├── entft.py

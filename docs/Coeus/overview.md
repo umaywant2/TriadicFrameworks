@@ -8,6 +8,8 @@ rtt:
   coherence: declared
   drift: bounded
   paradox: structural
+status: generated
+version: "0.2"
 ---
 
 > ```
@@ -51,8 +53,10 @@ All coin exchanges are witnessed by two independent observers — preventing sin
 ## Quickstart
 
 ```bash
-python launch_sandbox.py --agents 3 --mode entft
+python sandbox/launch_sandbox.py
 ```
+
+This is the one step in the lifecycle above with a script that runs end-to-end today; it takes no command-line flags. See [`README.md`](./README.md) for the full setup and an honest account of which later stages (tokenizing, remixing, review) are runnable scripts versus importable modules.
 
 ## Integration Points
 
