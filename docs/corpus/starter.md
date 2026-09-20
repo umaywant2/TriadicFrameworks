@@ -1,5 +1,10 @@
+---
+status: generated
+version: "0.2"
+---
+
 starter 
-# **RTT Starter Kit — How to Create Your First Agentic Module**  
+# RTT Starter Kit — How to Create Your First Agentic Module  
 
 - [`starter_module.json`](starter_module.json) — Agentic module schema role assignments
 
