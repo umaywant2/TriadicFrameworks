@@ -1,3 +1,6 @@
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Chosen_Ones/module.json) — Agentic module schema role assignments
+
 # Chosen Ones — RTT Motivational Intelligence Module
 
 > RTT Context: `rtt=1 | coherence=declared | drift=bounded | paradox=structural`
