@@ -1057,6 +1057,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://www.triadicframeworks.org/docs/Chosen_Ones/module_checks.md</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://www.triadicframeworks.org/docs/Chosen_Ones/test_cases/TC01_threshold_crosser.md</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
