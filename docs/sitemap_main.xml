@@ -991,6 +991,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://www.triadicframeworks.org/docs/Chosen_Ones/README.md</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://www.triadicframeworks.org/docs/Coeus/Coeus_Protocol-Complete.html</loc>
     <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
