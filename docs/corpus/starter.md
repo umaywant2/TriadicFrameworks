@@ -1,10 +1,11 @@
 ---
 status: generated
-version: "0.2"
+version: "0.3"
 ---
 
-starter 
-# RTT Starter Kit — How to Create Your First Agentic Module  
+# RTT Starter Kit — How to Create Your First Agentic Module
+
+The RTT Starter Kit walks a first-time module author from downloading the starter files to publishing a working RTT module with agentic grammar on GitHub — start to finish in 1–3 hours.
 
 - [`starter_module.json`](starter_module.json) — Agentic module schema role assignments
 
