@@ -1,3 +1,8 @@
+---
+status: generated
+version: "0.2"
+---
+
 <img width="1194" height="672" alt="About_TriadicFrameworks_" src="https://github.com/user-attachments/assets/5949fdd6-7faf-4331-86db-3702fb4a7922" />
 
 <!-- ---
@@ -30,7 +35,9 @@ badge_block: 🧭
 # 🧭 About TriadicFrameworks  
 ### *A Structural Learning Framework for Students and AI Systems*
 
-TriadicFrameworks is a structural learning framework that teaches both humans and AI systems how to understand complex domains through **gradients**, **triads**, **coherence**, and **regime‑aware operators**.  
+**What is a triadic framework?** A triadic framework models a system as three interacting parts instead of two — in this project's own vocabulary, **Structure**, **Regime**, and **Operator** — so that gradients, transitions, and coherence become visible instead of staying hidden inside a single flat model.
+
+TriadicFrameworks is one such framework. It teaches both humans and AI systems how to understand complex domains through **gradients**, **triads**, **coherence**, and **regime‑aware operators**.  
 It is not a textbook.  
 It is a **cognitive scaffold** — a way to see the architecture beneath change.
 
@@ -108,22 +115,22 @@ Most learning resources:
 
 TriadicFrameworks does something else:
 
-### **1. It’s not content — it’s a cognitive upgrade.**  
+### **1. It's not content — it's a cognitive upgrade.**  
 It changes *how you think*, not *what you think about*.
 
-### **2. It’s not domain‑bound.**  
+### **2. It's not domain‑bound.**  
 Physics, AI, cognition, energy, governance — all use the same structural grammar.
 
-### **3. It’s not reductionist.**  
+### **3. It's not reductionist.**  
 It models systems as **coherent wholes**, not disconnected parts.
 
-### **4. It’s not brute‑force.**  
-Technique dissolves “walls”; brute force creates them.
+### **4. It's not brute‑force.**  
+Technique dissolves "walls"; brute force creates them.
 
-### **5. It’s resonance‑native.**  
+### **5. It's resonance‑native.**  
 Systems are treated as resonant fields, not objects.
 
-### **6. It’s designed for AI co‑learning.**  
+### **6. It's designed for AI co‑learning.**  
 The repo is structured so AIs can:
 
 - parse  
@@ -138,12 +145,12 @@ This dual‑audience design is extremely rare.
 ## 3. What Students Gain
 
 - A way to understand complex systems without drowning in details  
-- A method for dissolving “walls” (energy, conceptual, cognitive)  
+- A method for dissolving "walls" (energy, conceptual, cognitive)  
 - A structural intuition for how systems evolve  
 - A cross‑domain reasoning skillset  
 - A cognitive framework that scales with complexity  
 
-This is the kind of thinking universities don’t teach.
+This is the kind of thinking universities don't teach.
 
 ---
 
