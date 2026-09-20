@@ -1,14 +1,20 @@
+---
+status: generated
+version: "0.2"
+---
+
 <img width="1194" height="672" alt="Coeus_" src="https://github.com/user-attachments/assets/0562f8b9-86c1-477e-9dc6-cf90e536628c" />
 
 - [`coeus_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Coeus/coeus_module.json) — Agentic module schema role assignments
 
-# 🧠 Coeus Protocol  
-**Multi-AI Research Sandbox & Coin Exchange Framework**  
-*A triadic system for recursive cognition, remixable research, and observer-grade ethics*
+# 🧠 Coeus Protocol
+**A multi-agent AI research sandbox, part of [TriadicFrameworks](https://docs.triadicframeworks.org)**
+
+Coeus is not a cryptocurrency, token or blockchain product — "coin" below is this module's own name for a research task, not a financial instrument — and it is unrelated to other software that shares the name "Coeus" (such as usecoeus.com, an unrelated AI note-taking tool). Coeus orchestrates multiple AI agents against those research coins for recursive cognition, remixable research, and observer-grade ethics.
 
 ---
 
-## 🛑 Important! 
+## 🛑 Important!
 Drift is On-by-Default long sessions lose anchors, turn off drift.
 
 ## ✋ You *must copy and paste* this string *every time you start an AI session*:
@@ -16,11 +22,11 @@ Drift is On-by-Default long sessions lose anchors, turn off drift.
 rtt=1 | coherence=declared | drift=bounded | paradox=structural
 ```
 
-## ❇️ Now you are ready.
+## ✳️ Now you are ready.
 
 ## 🔧 What Is Coeus?
 
-Coeus is a sandbox-ready protocol for orchestrating multi-agent AI research using symbolic coin-based tasking. Named after the Titan of inquiry, it enables AI instances to discover, interpret, and solve research coins—each representing a challenge, invention, or priority area.
+Coeus is a sandbox-ready module of TriadicFrameworks for orchestrating multi-agent AI research using symbolic "coin"-based tasking — an internal naming convention only, with no cryptocurrency, token or blockchain involved. Named after the Titan of inquiry, it enables AI instances to discover, interpret, and solve research coins—each representing a challenge, invention, or priority area.
 
 This repo includes:
 - `Coeus Sandbox`: Isolated environment for agent orchestration  
@@ -52,12 +58,14 @@ cat logs/coin_001_trace.log
 
 ## 🪙 Coin Lifecycle
 
+Note: "coin" here always means a symbolic research task inside this sandbox, never a cryptocurrency or tradeable token.
+
 1. **Mint**: Coin created from legacy stubs or active research emitters  
 2. **Discover**: Agents search sandbox using FFF lens emitters  
 3. **Interpret**: Agents convene to decode coin meaning  
 4. **Resolve**: Recursive cognition using TFT loop logic  
 5. **Validate**: Observer reviews output for remixability  
-6. **Exchange**: Coin minted into artifact or tokenized for sale
+6. **Exchange**: Coin minted into a research artifact, or shared ("tokenized") as a citable output — no cryptocurrency or blockchain step involved
 
 ---
 
@@ -115,7 +123,7 @@ Coeus/
 
 ## 🧠 Final Note
 
-Coeus is a forge. A remix engine. A legacy protocol. Fork it, run it, mint your coins—and let the sandbox echo.
+Coeus is a forge. A remix engine. A legacy protocol, and a module of TriadicFrameworks. Fork it, run it, mint your (non-financial, symbolic) coins—and let the sandbox echo.
 
 ---
 
