@@ -1,3 +1,8 @@
+---
+status: generated
+version: "0.2"
+---
+
 # 🚀 Coeus Protocol — Quickstart Guide  
 Initialize sandbox, mint coins, assign agents, and begin benchmarking
 
@@ -6,8 +11,8 @@ Initialize sandbox, mint coins, assign agents, and begin benchmarking
 ## 1. Clone the Repo
 
 ```bash
-git clone https://github.com/your-org/CoeusProtocol.git
-cd CoeusProtocol
+git clone https://github.com/umaywant2/TriadicFrameworks.git
+cd TriadicFrameworks/docs/Coeus
 ```
 
 ---
