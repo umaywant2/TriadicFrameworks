@@ -1,3 +1,7 @@
+<img width="1194" height="672" alt="Structural_Love_" src="https://github.com/user-attachments/assets/6260990c-7d28-4f35-898a-a11bac7bdc9f" />
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Structural_Love/module.json) — Agentic module schema role assignments
+
 # Structural_Love — Module Folder
 
 > **TriadicFrameworks · Relational Architecture Family**
