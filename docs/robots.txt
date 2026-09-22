@@ -7,7 +7,7 @@ Allow: /
 # Protected internal areas
 Disallow: /admin/
 Disallow: /private/
-Disallow: /api/
+Disallow: /rtt/sort/
 Disallow: /cgi-bin/
 
 # Sitemap
