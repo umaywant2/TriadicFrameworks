@@ -1,1 +1,23 @@
+{
+  "skills": [
+    {
+      "id": "triadic-modules",
+      "name": "TriadicFrameworks Module Index",
+      "description": "Provides structured access to TriadicFrameworks modules, metadata, and canonical documentation.",
+      "href": "/.well-known/agent-skills/triadic-modules/SKILL.md"
+    },
+    {
+      "id": "quad-engine",
+      "name": "Quad Engine API",
+      "description": "Exposes the Quad Engine computational API, including resonance-time operators and module evaluation endpoints.",
+      "href": "/.well-known/agent-skills/quad-engine/SKILL.md"
+    },
+    {
+      "id": "rtt-operators",
+      "name": "RTT Operator Grammar",
+      "description": "Provides machine-readable RTT operator definitions, coherence layers, drift boundaries, and canonical grammar.",
+      "href": "/.well-known/agent-skills/rtt-operators/SKILL.md"
+    }
+  ]
+}
 
