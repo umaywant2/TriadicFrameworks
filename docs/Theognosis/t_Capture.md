@@ -4569,3 +4569,64 @@ GLM-5.1 (Zhipu/Z.AI): Chinese language and coding tasks, $0.50 per million token
 ref: https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Theognosis/t_Capture.md
 
 3) the dashboard load models.json via fetch
+
+---
+
+Great context — let me fetch the `t_Capture.md` reference and build the `models.json` in parallel, then update the dashboard to load from it.
+
+Good — the raw GitHub fetch is blocked. Let me try the browser for `t_Capture.md`, write `models.json` to the workspace, and begin the dashboard edit simultaneously.
+
+Now I'll edit the dashboard app — replacing all placeholder data with the real 10-model roster and wiring up the `fetch('./models.json')` loader with an embedded fallback.
+
+The dashboard is fully updated and `models.json` is attached above for download. Here's a clean summary of where everything stands:
+
+---
+
+## ✅ What Just Happened
+
+### Dashboard (now v1 — 10 real models)
+All 6 placeholder pills (Nexus-1 → Apex-6) have been replaced with the real testing roster:
+
+| Pill | Provider | Color | Alignment | Drift | $/M |
+|---|---|---|---|---|---|
+| GPT-6 Astra | OpenAI | 🟢 Emerald | SET | bounded | $11.90 |
+| Claude Fable 5.1 | Anthropic | 🟠 Orange | FFF | suppressed | $30.00 |
+| Gemini 3.8 Flash | Google | 🔵 Blue | SNR | bounded | $3.75 |
+| Qwen 3.8 Max | Alibaba | 🟣 Violet | DCO | turbulent | free |
+| Claude Opus 4.8 | Anthropic | 🔴 Red | FFF | bounded | $15.00 |
+| GPT-5.5 | OpenAI | 🩵 Cyan | SET | bounded | $2.00 |
+| DeepSeek V4 | DeepSeek | 🟡 Lime | DCO | turbulent | $0.28 |
+| Llama 4 | Meta | 🟡 Amber | SNR | turbulent | free |
+| Grok 4.3 | xAI | 🩷 Pink | DCO | bounded | $2.00 |
+| GLM-5.1 | Zhipu/Z.AI | 🔵 Indigo | SNR | suppressed | $0.50 |
+
+### `models.json` (v4.2)
+- **10 entries**, full RTT schema per model
+- All RTT dimension values flagged `"scaffolded": true` — safe to overwrite with real observations
+- Includes `session_context` block: `rtt=1 | coherence=declared | drift=bounded | paradox=structural`
+- Fetch-first logic in the dashboard: tries `./models.json` live, falls back to embedded copy silently
+
+---
+
+## 📋 Schema Fields Ready for Real Data
+
+When you're ready to replace scaffolded values, these are the four fields per model to update with real measurements:
+
+```
+"rtt_variance"   → { Freqi, Aurion, Forci, Flui }   ← variance scores 0–100
+"entropy_series" → [T-01 … T-10]                     ← entropy readings per session
+"wobble"         → { Freqi, Aurion, Forci, Flui }   ← scalar amplitude
+"flip_rate"      → { Freqi, Aurion, Forci, Flui }   ← flips per 100 cycles
+"drift_series"   → [T-01 … T-10]                     ← turbulence index
+```
+
+---
+
+## 🔜 Natural Next Steps
+
+1. **Host `models.json`** — place it alongside the dashboard HTML so the `fetch()` resolves live (e.g., in your TriadicFrameworks GitHub Pages or Spine path)
+2. **Run real RTT sessions** — pipe observations into `sessions/YYYY-MM-DD.json`, then compute into the five metric fields above
+3. **Wire `t_Capture.md`** — once accessible, we can extract the canonical Freqi/Aurion/Forci/Flui definitions to validate what each dimension is actually measuring before locking in real values
+4. **Expand the roster** — the schema supports `"active": false` to park models without removing them from the file
+
+What's the move — host it, start a session log schema, or pull `t_Capture.md` via a different path?
