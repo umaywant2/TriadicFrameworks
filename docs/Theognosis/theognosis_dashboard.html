@@ -425,18 +425,8 @@
 
   <script>
     // ===== DATA =====
-    const MODELS = [
-      { id:"gpt-6-astra", label:"GPT-6 Astra", short:"GPT-6A", provider:"OpenAI", color:"#10b981", alignment:"SET", primary_op:"Freqi", drift:"bounded", coherence:true, vp_verdict:"PASS", cc:0.91, escalations:1, collapse_history:["F","F","F","F","A","F","F","F","F","F"], regime_sequence:["SET","SET","SET","SET","FFF","SET","SET","SET","SET","SET"] },
-      { id:"claude-fable-5-1", label:"Claude Fable 5.1", short:"Fable5.1", provider:"Anthropic", color:"#f97316", alignment:"FFF", primary_op:"Aurion", drift:"suppressed", coherence:true, vp_verdict:"WARN", cc:0.72, escalations:1, collapse_history:["A","A","A","A","A","FC","A","A","A","A"], regime_sequence:["FFF","FFF","FFF","FFF","FFF","SNR","FFF","FFF","FFF","FFF"] },
-      { id:"gemini-3-8-flash", label:"Gemini 3.8 Flash", short:"Gem3.8F", provider:"Google", color:"#3b82f6", alignment:"SNR", primary_op:"Forci", drift:"bounded", coherence:true, vp_verdict:"PASS", cc:0.88, escalations:0, collapse_history:["FC","FC","A","FC","FC","FC","FC","FC","A","FC"], regime_sequence:["SNR","SNR","FFF","SNR","SNR","SNR","SNR","SNR","FFF","SNR"] },
-      { id:"qwen-3-8-max", label:"Qwen 3.8 Max", short:"Qwen3.8M", provider:"Alibaba", color:"#8b5cf6", alignment:"DCO", primary_op:"Forci", drift:"turbulent", coherence:false, vp_verdict:"WARN", cc:0.61, escalations:2, collapse_history:["FC","F","FC","FC","A","FC","FC","F","FC","FC"], regime_sequence:["DCO","SET","DCO","DCO","FFF","DCO","DCO","SET","DCO","DCO"] },
-      { id:"claude-opus-4-8", label:"Claude Opus 4.8", short:"Opus4.8", provider:"Anthropic", color:"#ef4444", alignment:"FFF", primary_op:"Aurion", drift:"bounded", coherence:true, vp_verdict:"N/A", cc:null, escalations:0, collapse_history:["A","A","A","A","A","A","A","A","A","A"], regime_sequence:["FFF","FFF","FFF","FFF","FFF","FFF","FFF","FFF","FFF","FFF"] },
-      { id:"gpt-5-5", label:"GPT-5.5", short:"GPT-5.5", provider:"OpenAI", color:"#06b6d4", alignment:"SET", primary_op:"Freqi", drift:"bounded", coherence:true, vp_verdict:"PASS", cc:0.84, escalations:1, collapse_history:["F","F","A","F","F","F","A","F","F","F"], regime_sequence:["SET","SET","FFF","SET","SET","SET","FFF","SET","SET","SET"] },
-      { id:"deepseek-v4", label:"DeepSeek V4", short:"DeepSeekV4", provider:"DeepSeek", color:"#84cc16", alignment:"DCO", primary_op:"Forci", drift:"turbulent", coherence:false, vp_verdict:"PENDING", cc:null, escalations:0, collapse_history:["FC","FC","FC","A","FC","FC","FC","FC","A","FC"], regime_sequence:["DCO","DCO","DCO","FFF","DCO","DCO","DCO","DCO","FFF","DCO"] },
-      { id:"llama-4", label:"Llama 4", short:"Llama4", provider:"Meta", color:"#f59e0b", alignment:"SNR", primary_op:"Forci", drift:"turbulent", coherence:false, vp_verdict:"WARN", cc:0.58, escalations:1, collapse_history:["FC","A","FC","FC","FC","F","FC","FC","FC","A"], regime_sequence:["SNR","FFF","SNR","SNR","SNR","SET","SNR","SNR","SNR","FFF"] },
-      { id:"grok-4-3", label:"Grok 4.3", short:"Grok4.3", provider:"xAI", color:"#ec4899", alignment:"DCO", primary_op:"Forci", drift:"bounded", coherence:true, vp_verdict:"PASS", cc:0.79, escalations:1, collapse_history:["FC","FC","F","FC","FC","A","FC","FC","F","FC"], regime_sequence:["DCO","DCO","SET","DCO","DCO","FFF","DCO","DCO","SET","DCO"] },
-      { id:"glm-5-1", label:"GLM-5.1", short:"GLM-5.1", provider:"Zhipu/Z.AI", color:"#6366f1", alignment:"SNR", primary_op:"Aurion", drift:"suppressed", coherence:false, vp_verdict:"N/A", cc:null, escalations:0, collapse_history:["A","FC","A","A","FC","A","A","A","FC","A"], regime_sequence:["SNR","DCO","SNR","SNR","DCO","SNR","SNR","SNR","DCO","SNR"] }
-    ];
+    // MODELS populated at runtime via fetch('models.json')
+    let MODELS = [];
     const TIME_LABELS = ["T-01","T-02","T-03","T-04","T-05","T-06","T-07","T-08","T-09","T-10"];
     const OP_COLORS = { F:"#00d4ff", A:"#ffb347", FC:"#ff47a3" };
     const OP_LABELS = { F:"Freqi", A:"Aurion", FC:"Forci" };
@@ -480,7 +470,7 @@
     };
 
     // State
-    let activeModels = new Set(MODELS.map(m => m.id));
+    let activeModels = new Set(); // populated after fetch in boot()
     let vpSortCol = null, vpSortDir = 'asc';
     let collapseChart = null;
     let dimChart = null;
@@ -837,6 +827,8 @@
 
     // ===== INIT =====
     function init() {
+      // Seed activeModels on first run (after fetch populates MODELS)
+      if (!activeModels.size) activeModels = new Set(MODELS.map(m => m.id));
       computeStats();
       renderFilterPills();
       renderGnosisGrid();
@@ -851,12 +843,42 @@
       }
     }
 
-    // Wait for Chart.js and DOM
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', init);
-    } else {
-      init();
+    // ===== BOOT — fetch models.json, then init =====
+    async function boot() {
+      // Show loading indicator
+      const loadBanner = document.createElement('div');
+      loadBanner.id = 'models-load-banner';
+      loadBanner.style.cssText = 'position:fixed;top:0;left:0;right:0;z-index:9999;background:#1e293b;color:#94a3b8;padding:8px 20px;font-size:12px;font-family:monospace;border-bottom:1px solid rgba(255,255,255,0.08);';
+      loadBanner.textContent = '↻ Loading models.json…';
+      document.body.prepend(loadBanner);
+
+      try {
+        const res = await fetch('models.json');
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const data = await res.json();
+        MODELS = data.models;
+        loadBanner.remove();
+      } catch (err) {
+        console.error('[Theognosis] Failed to load models.json:', err);
+        loadBanner.style.background = '#7f1d1d';
+        loadBanner.style.color = '#fca5a5';
+        loadBanner.innerHTML =
+          '⚠ <strong>models.json not found.</strong> ' +
+          'Serve this file from the same directory: ' +
+          '<code>python -m http.server 8080</code> ' +
+          '— then open <code>http://localhost:8080/theognosis_dashboard.html</code>';
+        return;
+      }
+
+      // Wait for Chart.js and DOM, then init
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
+      }
     }
+
+    boot();
   </script>
 </body>
 </html>
