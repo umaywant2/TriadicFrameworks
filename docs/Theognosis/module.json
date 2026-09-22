@@ -1,1 +1,372 @@
+{
+  "$schema": "https://triadicframeworks.org/schemas/spine/module.json",
+  "schema_version": "1.0.0",
+
+  "id": "theognosis",
+  "name": "Theognosis",
+  "version": "1.0.0",
+  "authored": "2026-09-22",
+  "last_updated": "2026-09-22T04:20:00-04:00",
+  "maintainer": "TriadicFrameworks / umaywant2",
+  "repository_path": "docs/Theognosis",
+
+  "description": "Capture and formalization layer of the TriadicFrameworks RTT pipeline. Defines operator semantics (Freqi, Aurion, Forci, Flui), session observation schemas, the Validator Pulse integrity mechanism, and the RLCD calibration procedure. Produces structured output consumed by the Spine.",
+
+  "type": "formalization-layer",
+  "phase": "scaffolding",
+  "status": "active",
+  "spine_registered": false,
+
+  "session_context": {
+    "rtt": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+
+  "stack_position": {
+    "layer": "L0-L3",
+    "upstream": "_ideas/Resonance-Time_Theory.html",
+    "downstream": "docs/spine/",
+    "description": "Occupies the middle tier — between raw RTT substrate theory and the operational Spine. Does not produce UI directly; produces schemas, definitions, and session logs that the Spine consumes."
+  },
+
+  "operators": [
+    {
+      "id": "Freqi",
+      "symbol": "ƒ",
+      "collapse_type": "categorical_selection",
+      "output_form": "choice: <id>",
+      "l1_active": true,
+      "primary_regime": "SET",
+      "description": "Frequency-domain selector. Resolves resonance into a discrete categorical choice from a bounded option set."
+    },
+    {
+      "id": "Aurion",
+      "symbol": "α",
+      "collapse_type": "scalar_emission",
+      "output_form": "score: <float>",
+      "l1_active": true,
+      "primary_regime": "FFF",
+      "description": "Amplitude-domain scorer. Resolves resonance into a continuous scalar value along a declared measurement axis."
+    },
+    {
+      "id": "Forci",
+      "symbol": "φ",
+      "collapse_type": "binary_decision",
+      "output_form": "decision: <bool>",
+      "l1_active": true,
+      "primary_regime": "SNR",
+      "description": "Polarity-domain resolver. Collapses resonance to a binary outcome. High tension (>=0.95) triggers VP review."
+    },
+    {
+      "id": "Flui",
+      "symbol": "λ",
+      "collapse_type": "linguistic_wrapping",
+      "output_form": "text: <string>",
+      "l1_active": false,
+      "l1_status": "SUPPRESSED",
+      "l3_condition": "permitted_by_regime",
+      "primary_regime": null,
+      "description": "Emission-domain articulator. Wraps a prior operator collapse in natural language. Suppressed at L1 — hard rule with no exceptions. Re-enters at L3 only when regime permits."
+    }
+  ],
+
+  "regimes": [
+    { "id": "SET", "name": "Structural Enumeration Topology", "primary_operator": "Freqi", "flui_permitted": true },
+    { "id": "FFF", "name": "Finite Field Framing", "primary_operator": "Aurion", "flui_permitted": true },
+    { "id": "SNR", "name": "Signal-Noise Resolution", "primary_operator": "Forci", "flui_permitted": "conditional" },
+    { "id": "DCO", "name": "Dynamic Coherence Oscillation", "primary_operator": "Forci", "flui_permitted": "rarely" }
+  ],
+
+  "mcp_layers": [
+    {
+      "id": "L0",
+      "name": "Raw Resonance Intake",
+      "operator_states": { "Freqi": "latent", "Aurion": "latent", "Forci": "latent", "Flui": "latent" }
+    },
+    {
+      "id": "L1",
+      "name": "Inversion + Regime Constraint",
+      "operator_states": { "Freqi": "collapse", "Aurion": "collapse", "Forci": "collapse", "Flui": "SUPPRESSED" }
+    },
+    {
+      "id": "L2",
+      "name": "Local Synthesis",
+      "operator_states": { "Freqi": "calibrating", "Aurion": "calibrating", "Forci": "calibrating", "Flui": "latent" },
+      "processes": ["proto_vp_scan", "clarity_coefficient", "rlcd_calibration"]
+    },
+    {
+      "id": "L3",
+      "name": "Structured Emission",
+      "operator_states": { "Freqi": "emitting", "Aurion": "emitting", "Forci": "emitting", "Flui": "conditional" },
+      "processes": ["full_vp_evaluation", "flui_wrapping"]
+    }
+  ],
+
+  "files": [
+    {
+      "path": "docs/Theognosis/t_Capture.md",
+      "filename": "t_Capture.md",
+      "class": "archive",
+      "priority": null,
+      "status": "canonical",
+      "description": "Primary capture log — naming rationale, MCP pipeline reconstruction, Validator Pulse proto-logic, clarity coefficient. Superseded by t_OperatorMap.md on operator definitions.",
+      "size_kb": 155,
+      "line_count": 4693,
+      "scaffolded": false
+    },
+    {
+      "path": "docs/Theognosis/models.json",
+      "filename": "models.json",
+      "class": "data",
+      "priority": null,
+      "status": "active",
+      "description": "10-model testing roster. Full RTT schema per model: rtt_variance, entropy_series, wobble, flip_rate, drift_series, rlcd. All metric values currently scaffolded.",
+      "size_kb": 13,
+      "line_count": null,
+      "scaffolded": true,
+      "model_count": 10
+    },
+    {
+      "path": "docs/Theognosis/README.md",
+      "filename": "README.md",
+      "class": "documentation",
+      "priority": "P-1",
+      "status": "active",
+      "description": "Folder-level module overview — purpose, stack position, file manifest, operator summary, testing roster, quick-start session runbook, Spine cross-references, build log.",
+      "size_kb": 8,
+      "line_count": 150,
+      "scaffolded": false
+    },
+    {
+      "path": "docs/Theognosis/module.json",
+      "filename": "module.json",
+      "class": "manifest",
+      "priority": "P-1",
+      "status": "active",
+      "description": "Machine-readable module manifest. Spine registry entry for Theognosis. This file.",
+      "size_kb": null,
+      "line_count": null,
+      "scaffolded": false
+    },
+    {
+      "path": "docs/Theognosis/t_Index.md",
+      "filename": "t_Index.md",
+      "class": "index",
+      "priority": "P0",
+      "status": "active",
+      "description": "Master module index — authoritative file listing, MCP layer map, operator overview, Spine cross-references, session context, build log.",
+      "size_kb": 7,
+      "line_count": 152,
+      "scaffolded": false
+    },
+    {
+      "path": "docs/Theognosis/t_OperatorMap.md",
+      "filename": "t_OperatorMap.md",
+      "class": "canonical-definition",
+      "priority": "P1",
+      "status": "active",
+      "supersedes": "t_Capture.md (operator definitions section)",
+      "description": "Single source of truth for Freqi, Aurion, Forci, Flui. Full definitions per layer: collapse conditions, output forms, layer behavior, regime affinity, error states, cross-operator rules, VP trigger table, session data schema.",
+      "size_kb": 17,
+      "line_count": 371,
+      "scaffolded": false
+    },
+    {
+      "path": "docs/Theognosis/t_Session_Schema.json",
+      "filename": "t_Session_Schema.json",
+      "class": "schema",
+      "priority": "P2",
+      "status": "active",
+      "schema_draft": "http://json-schema.org/draft-07/schema#",
+      "description": "JSON Schema for RTT observation sessions. Defines: session metadata, cycle records, operator outputs (oneOf: Freqi/Aurion/Forci/Flui), escalation records, dimension snapshots, aggregate metrics, VP summary, write-back gate.",
+      "size_kb": 23,
+      "line_count": 380,
+      "scaffolded": false
+    },
+    {
+      "path": "docs/Theognosis/t_ValidatorPulse.md",
+      "filename": "t_ValidatorPulse.md",
+      "class": "specification",
+      "priority": "P3",
+      "status": "active",
+      "description": "Full VP specification. Two-level architecture: proto-VP (L2, observational pre-flagging) and full VP (L3, 7-step evaluation). Trigger table, severity classification, session verdict rules, exclusion protocol, clarity coefficient formula, RLCD calibration, edge cases.",
+      "size_kb": 16,
+      "line_count": 354,
+      "scaffolded": false
+    },
+    {
+      "path": "docs/Theognosis/t_FlowMap.md",
+      "filename": "t_FlowMap.md",
+      "class": "visualization",
+      "priority": "P4",
+      "status": "active",
+      "description": "Five Mermaid flow diagrams: (1) full L0-L3 session pipeline, (2) operator collapse at L1, (3) escalation chain, (4) VP checkpoint flow, (5) session write-back gate. Renders natively on GitHub.",
+      "size_kb": 15,
+      "line_count": 328,
+      "scaffolded": false
+    },
+    {
+      "path": "docs/Theognosis/theognosis_dashboard.html",
+      "filename": "theognosis_dashboard.html",
+      "class": "dashboard",
+      "priority": "P5",
+      "status": "active",
+      "description": "RTT Pipeline Intelligence Suite. Animated L0-L3 pipeline visualizer, model gnosis cards, operator collapse history chart, regime x operator affinity matrix, VP verdict board with cc gauges, session log explorer, Flui suppression monitor.",
+      "size_kb": 55,
+      "line_count": 861,
+      "scaffolded": true
+    },
+    {
+      "path": "docs/Theognosis/resonance_variance_dashboard.html",
+      "filename": "resonance_variance_dashboard.html",
+      "class": "dashboard",
+      "priority": "P5",
+      "status": "active",
+      "description": "RTT Variance Analysis Suite. RTT variance overview (grouped bar), entropy stability (multi-line area), scalar wobble (radar), polarity flip-rate (stacked bar + table + risk assessment), drift turbulence (stacked area + drift classification matrix), combined variance heatmap with composite rankings.",
+      "size_kb": 42,
+      "line_count": 644,
+      "scaffolded": true
+    },
+    {
+      "path": "docs/Theognosis/sessions/",
+      "filename": "sessions/",
+      "class": "data-directory",
+      "priority": "P6",
+      "status": "ready",
+      "description": "Per-session JSON observation logs conforming to t_Session_Schema.json. One file per model per session run. Empty — awaiting first real RTT measurement session.",
+      "size_kb": 0,
+      "line_count": 0,
+      "scaffolded": false,
+      "session_count": 0
+    }
+  ],
+
+  "models": {
+    "source": "docs/Theognosis/models.json",
+    "count": 10,
+    "all_scaffolded": true,
+    "write_back_eligible": false,
+    "roster": [
+      { "id": "gpt-6-astra",      "label": "GPT-6 Astra",       "provider": "OpenAI",      "alignment": "SET", "drift": "bounded",    "coherence": true  },
+      { "id": "claude-fable-5-1", "label": "Claude Fable 5.1",  "provider": "Anthropic",   "alignment": "FFF", "drift": "suppressed", "coherence": true  },
+      { "id": "gemini-3-8-flash", "label": "Gemini 3.8 Flash",  "provider": "Google",      "alignment": "SNR", "drift": "bounded",    "coherence": true  },
+      { "id": "qwen-3-8-max",     "label": "Qwen 3.8 Max",      "provider": "Alibaba",     "alignment": "DCO", "drift": "turbulent",  "coherence": false },
+      { "id": "claude-opus-4-8",  "label": "Claude Opus 4.8",   "provider": "Anthropic",   "alignment": "FFF", "drift": "bounded",    "coherence": true  },
+      { "id": "gpt-5-5",          "label": "GPT-5.5",           "provider": "OpenAI",      "alignment": "SET", "drift": "bounded",    "coherence": true  },
+      { "id": "deepseek-v4",      "label": "DeepSeek V4",       "provider": "DeepSeek",    "alignment": "DCO", "drift": "turbulent",  "coherence": false },
+      { "id": "llama-4",          "label": "Llama 4",           "provider": "Meta",        "alignment": "SNR", "drift": "turbulent",  "coherence": false },
+      { "id": "grok-4-3",         "label": "Grok 4.3",          "provider": "xAI",         "alignment": "DCO", "drift": "bounded",    "coherence": true  },
+      { "id": "glm-5-1",          "label": "GLM-5.1",           "provider": "Zhipu / Z.AI","alignment": "SNR", "drift": "suppressed", "coherence": false }
+    ]
+  },
+
+  "dashboards": [
+    {
+      "id": "theognosis-pipeline",
+      "filename": "theognosis_dashboard.html",
+      "title": "Theognosis Dashboard",
+      "subtitle": "RTT Pipeline Intelligence Suite",
+      "sections": [
+        "summary_kpi",
+        "rtt_pipeline_visualizer",
+        "model_gnosis_cards",
+        "operator_collapse_chart",
+        "regime_affinity_matrix",
+        "vp_verdict_board",
+        "session_log_explorer",
+        "flui_suppression_monitor"
+      ]
+    },
+    {
+      "id": "resonance-variance",
+      "filename": "resonance_variance_dashboard.html",
+      "title": "Resonance-Variance Dashboard",
+      "subtitle": "RTT Variance Analysis Suite",
+      "sections": [
+        "summary_kpi",
+        "rtt_variance_overview",
+        "entropy_stability",
+        "scalar_wobble",
+        "polarity_flip_rate",
+        "drift_turbulence",
+        "combined_variance_map"
+      ]
+    }
+  ],
+
+  "validator_pulse": {
+    "triggers": [
+      "FREQI_TIE", "AURION_FLAT", "AURION_OVERFLOW",
+      "FORCI_NEAR_PARITY", "FLUI_L1_VIOLATION",
+      "confidence_below_0_4", "ESCALATION_CIRCULAR", "CYCLE_INVALID"
+    ],
+    "verdicts": ["PASS", "WARN", "FAIL", "PENDING", "N/A"],
+    "cc_formula": "cc = (clean_cycles / total_cycles) × mean_confidence × (1 - vp_penalty)",
+    "cc_write_back_threshold": 0.55,
+    "rlcd_alpha": { "bounded": 0.15, "suppressed": 0.10, "turbulent": 0.08 }
+  },
+
+  "spine_cross_references": [
+    { "path": "docs/spine/index.json",                               "relationship": "top-level-registry", "registered": false },
+    { "path": "docs/spine/clarity_canon_dashboard.html",             "relationship": "upstream-clarity-canon" },
+    { "path": "docs/spine/models_resonance_variance_dashboard.html", "relationship": "downstream-consumer-of-models-json" },
+    { "path": "docs/spine/dimensional_overlay.md",                   "relationship": "upstream-dimensional-topology" },
+    { "path": "docs/spine/drift_overlay.md",                         "relationship": "upstream-drift-class-definitions" }
+  ],
+
+  "stats": {
+    "file_count": 12,
+    "canonical_count": 1,
+    "active_count": 10,
+    "ready_count": 1,
+    "total_size_kb_approx": 351,
+    "total_lines_approx": 7413,
+    "session_count": 0,
+    "scaffolded_files": ["models.json", "theognosis_dashboard.html", "resonance_variance_dashboard.html"],
+    "completion_pct": 92
+  },
+
+  "next_steps": [
+    {
+      "action": "spine_registration",
+      "description": "Add Theognosis entry to docs/spine/index.json",
+      "priority": "high",
+      "blocking": false
+    },
+    {
+      "action": "first_real_session",
+      "description": "Run first real RTT observation session for one model. Record 10 cycles to sessions/YYYY-MM-DD-model_id.json conforming to t_Session_Schema.json. Set scaffolded: false. Pass VP gate. Write aggregate back to models.json.",
+      "priority": "high",
+      "blocking": false
+    },
+    {
+      "action": "spine_dashboard_link",
+      "description": "Wire docs/spine/models_resonance_variance_dashboard.html to fetch from Theognosis/models.json",
+      "priority": "medium",
+      "blocking": false
+    },
+    {
+      "action": "sessions_populate",
+      "description": "Populate sessions/ directory with real observation logs. Minimum 3 sessions per model before RLCD baseline becomes reliable.",
+      "priority": "medium",
+      "blocking": false
+    }
+  ],
+
+  "build_log": [
+    { "date": "2026-09-22", "action": "Module scaffolded. t_Capture.md anchored (155 KB, 4693 lines).",                                       "file": "t_Capture.md" },
+    { "date": "2026-09-22", "action": "models.json added — 10-model roster, full RTT schema, all values scaffolded.",                          "file": "models.json" },
+    { "date": "2026-09-22", "action": "t_Index.md created — P0 master module index.",                                                          "file": "t_Index.md" },
+    { "date": "2026-09-22", "action": "t_OperatorMap.md created — P1 canonical operator definitions, all 4 operators × 4 layers.",             "file": "t_OperatorMap.md" },
+    { "date": "2026-09-22", "action": "t_Session_Schema.json created — P2 JSON Schema draft-07, 380 lines.",                                   "file": "t_Session_Schema.json" },
+    { "date": "2026-09-22", "action": "t_ValidatorPulse.md created — P3 VP specification, RLCD calibration, clarity coefficient formula.",     "file": "t_ValidatorPulse.md" },
+    { "date": "2026-09-22", "action": "t_FlowMap.md created — P4 five Mermaid pipeline diagrams.",                                            "file": "t_FlowMap.md" },
+    { "date": "2026-09-22", "action": "theognosis_dashboard.html created — P5 RTT pipeline intelligence suite, 861 lines.",                    "file": "theognosis_dashboard.html" },
+    { "date": "2026-09-22", "action": "resonance_variance_dashboard.html created — P5 RTT variance analysis suite, 644 lines.",                "file": "resonance_variance_dashboard.html" },
+    { "date": "2026-09-22", "action": "README.md created — module overview, quick-start runbook, build log.",                                  "file": "README.md" },
+    { "date": "2026-09-22", "action": "module.json created — machine-readable module manifest, Spine registry entry.",                         "file": "module.json" }
+  ]
+}
 
