@@ -1,3 +1,6 @@
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Theognosis/module.json) — Agentic module schema role assignments
+
 # Theognosis
 
 > **Module Type:** Capture & Formalization Layer
