@@ -1,13 +1,15 @@
 ---
 title: AI Resonance Seed Dashboards
- description: Navigate the AI Resonance Seed dashboards for validator status, remix lineage, and glyphstream structure.
+description: Navigate the AI Resonance Seed dashboards for validator status, remix lineage, and glyphstream structure.
 status: generated
-version: "0.2"
+version: "0.3"
 ---
 
 # AI Resonance Seed Dashboards
 
 The AI Resonance Seed dashboards are reference views for validator activity, remix lineage, glyphstream structure, and contributor overlays. Start here when you need to understand the module's current monitoring surfaces.
+
+If you arrived here looking for the module itself, begin with the [AI Resonance Seed overview](/docs/AI_Resonance_Seed/README). If you need the project's shared vocabulary first, read [Core Terms: Structure, Regime, and Operator](/docs/GLOSSARY).
 
 ## Choose a dashboard
 
@@ -26,3 +28,4 @@ These pages are documentation views, not a live operational monitoring service. 
 - [AI Resonance Seed overview](/docs/AI_Resonance_Seed/README) — understand the module's role in RTT-Inside.
 - [How to read the ontology](/docs/AI_Resonance_Seed/How_To_Read_This_Ontology) — learn the reading order and core layers.
 - [Core Terms: Structure, Regime, and Operator](/docs/GLOSSARY) — review the project's shared structural vocabulary.
+- [RTT API reference](/docs/reference/api) — move from the conceptual model to the API documentation.
