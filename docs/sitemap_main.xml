@@ -101737,6 +101737,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://www.triadicframeworks.org/docs/Theognosis/models.json</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://www.triadicframeworks.org/docs/Theognosis/t_Capture.md</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -141152,6 +141158,12 @@
   </url>
   <url>
     <loc>https://www.triadicframeworks.org/docs/spine/matrix/triadic_matrix.json</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.triadicframeworks.org/docs/spine/models_resonance_variance_dashboard.html</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
