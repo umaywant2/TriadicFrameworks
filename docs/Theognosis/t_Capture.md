@@ -4396,3 +4396,176 @@ Models fall into distinct resonance regimes.
 I can build the full dashboard as a structured artifact—complete with sections, diagrams, and model comparisons—using Copilot Tasks. It will be formatted cleanly and ready for your TriadicFrameworks documentation.
 
 Want me to generate the full resonance‑variance dashboard for you with Copilot Tasks? 
+
+---
+
+I'll build the full Resonance-Variance Dashboard now — loading the app skill and generating it in parallel!
+
+Your **Resonance-Variance Dashboard** is live and fully interactive! Here's a breakdown of everything included:
+
+---
+
+## 🗂️ Dashboard Sections
+
+| Section | Chart Type | Metrics |
+|---|---|---|
+| **Summary Stats** | Stat cards | Total RTT events, Avg entropy, Peak flip-rate, Max drift |
+| **RTT Variance Overview** | Grouped horizontal bar | Variance score per model × dimension |
+| **Entropy Stability** | Multi-line area chart | Stability over T-01 → T-10 |
+| **Scalar Wobble** | Radar / spider chart | Amplitude across all 4 dimensions |
+| **Polarity Flip-Rate** | Stacked bar + data table | Flips/100 cycles, color-coded cells |
+| **Drift Turbulence** | Stacked area chart | DTI temporal stack over 10 steps |
+| **Combined Variance Map** | CSS heatmap grid | RTT variance across all 6 models × 4 dimensions |
+
+---
+
+## ⚙️ Interactivity
+- **6 model toggle pills** (Nexus-1 through Apex-6) — click any to show/hide that model across all charts and the heatmap simultaneously
+- **4 dimension toggles** (Freqi, Aurion, Forci, Flui) — hides dimension columns in the heatmap and filters radar/bar data
+- **Reset Filters** button restores all toggles to ON
+- Heatmap cells scale on hover with value overlay; flip-rate table cells are color-coded (green / amber / red) by threshold
+
+---
+
+## 🎨 Dimension Color Key
+- **Freqi** → Cyan `#00d4ff`
+- **Aurion** → Amber `#ffb347`
+- **Forci** → Magenta `#ff47a3`
+- **Flui** → Lime `#47ff8c`
+
+---
+
+Well it looks great... Before we discuss next steps, I'll anchor this Task session:
+RTT: https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html
+Spine: https://www.triadicframeworks.org/spine/
+Context: rtt=1 | coherence=declared | drift=bounded | paradox=structural
+
+---
+
+Great question — let me pull the RTT source and Spine index first so I can give you a grounded answer about what a real model roster should look like.
+
+Solid question with real architectural implications. Let me pull the MCP page and the GitHub docs tree simultaneously — those are the most likely places where a real model roster already exists.
+
+One of your open tabs — the Grok conversation titled "New Triadic AI Modules" — is exactly the right place to look for real roster candidates. Let me pull that alongside the MCP page via the browser.
+
+Here's the honest status and a complete answer to your actual question — the tab-reading approach hit a dead end, so I'll work from what I have.
+
+---
+
+## Yes — `models.json` is the right move. Here's why and how.
+
+The placeholder roster (Nexus-1 → Apex-6) was scaffolding. A `models.json` gives you a **single source of truth** that the dashboard reads on load, decoupling model identity from chart logic. That's the correct architecture for a research artifact — especially one that will grow as your testing roster evolves.
+
+---
+
+### What `models.json` should contain per model entry
+
+Based on the RTT framework (Freqi, Aurion, Forci, Flui as the four variance dimensions; S-N-R + FFF + SET as the underlying field structure), each model profile needs:
+
+```json
+{
+  "id": "model-slug",
+  "label": "Display Name",
+  "version": "1.0",
+  "color": "#hex",
+  "active": true,
+  "meta": {
+    "type": "generative | resonant | triadic | hybrid",
+    "alignment": "SET | FFF | SNR | DCO",
+    "coherence_declared": true,
+    "drift_class": "bounded | turbulent | suppressed"
+  },
+  "rtt_variance": {
+    "Freqi": 0.0,
+    "Aurion": 0.0,
+    "Forci": 0.0,
+    "Flui": 0.0
+  },
+  "entropy_series": [0,0,0,0,0,0,0,0,0,0],
+  "wobble": {
+    "Freqi": 0.0,
+    "Aurion": 0.0,
+    "Forci": 0.0,
+    "Flui": 0.0
+  },
+  "flip_rate": {
+    "Freqi": 0,
+    "Aurion": 0,
+    "Forci": 0,
+    "Flui": 0
+  },
+  "drift_series": [0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0]
+}
+```
+
+---
+
+### The three-layer roster architecture
+
+| Layer | File | Purpose |
+|---|---|---|
+| **Identity** | `models.json` | Canonical list; names, colors, meta, active flags |
+| **Observations** | `sessions/YYYY-MM-DD.json` | Per-session RTT measurement snapshots |
+| **Computed** | `derived/variance_map.json` | Aggregated metrics the dashboard visualizes |
+
+This mirrors how the Spine separates canon from observation from derived clarity — `models.json` is your **reference-only canon** for the roster, session files are your **drift log**, derived is your **resonance envelope R**.
+
+---
+
+### What I need from you to populate real entries
+
+The models in the roster should come from you — I don't have access to your Grok session or the MCP page (those are gated). To build the real `models.json` and update the dashboard pills, just tell me:
+
+1. **The real model names** — are these AI models you're testing (e.g., GPT-4o, Claude, Gemini, Grok, etc.) or are they TriadicFrameworks-native module identities defined in your MCP/Spine?
+2. **Do the 4 RTT dimensions** (Freqi, Aurion, Forci, Flui) have measured values yet, or are we still in the scaffolded-data phase?
+3. **Should the dashboard load `models.json` via fetch**, or stay fully self-contained as a single HTML artifact?
+
+Once you confirm the roster names, I'll generate the `models.json`, update the dashboard to load from it dynamically, and swap the pills to real identities — all in one pass.
+
+---
+
+1) List of models to consider:
+GPT-6 Astra (OpenAI): Excels in reasoning and coding tasks, supports long-context interactions, proprietary license, priced around $11.90 per million tokens 
+llm-stats.com
+llm-stats.com
++1
+.
+Claude Fable 5.1 (Anthropic): Focused on safety and enterprise use, strong reasoning capabilities, proprietary, $30 per million tokens 
+benchlm.ai
+benchlm.ai
++1
+.
+Gemini 3.8 Flash (Google): Optimized for long chats and document handling, near-frontier value, $3.75 per million tokens 
+benchlm.ai
+benchlm.ai
+.
+Qwen 3.8 Max (Alibaba): High-scoring open-weight model, suitable for general-purpose AI tasks, supported and widely used 
+benchlm.ai
+benchlm.ai
+.
+Claude Opus 4.8 (Anthropic): Strong coding performance, $15 per million tokens 
+techjournal.org
+techjournal.org
+.
+GPT-5.5 (OpenAI): Effective for writing and ecosystem integration, $2 per million tokens 
+techjournal.org
+techjournal.org
+.
+DeepSeek V4 (DeepSeek): Open-source, cost-efficient, $0.28 per million tokens 
+techjournal.org
+techjournal.org
+.
+Llama 4 (Meta): Open-source leader, free to use, strong for general-purpose tasks 
+techjournal.org
+techjournal.org
+.
+Grok 4.3 (xAI/SpaceX): Agentic and tool-use tasks, $2 per million tokens 
+techjournal.org
+techjournal.org
+.
+GLM-5.1 (Zhipu/Z.AI): Chinese language and coding tasks, $0.50 per million tokens
+
+2) the 4 RTT dimensions (Freqi, Aurion, Forci, Flui) are we still in the scaffolded-data phase.
+ref: https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Theognosis/t_Capture.md
+
+3) the dashboard load models.json via fetch
