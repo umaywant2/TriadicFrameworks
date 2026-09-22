@@ -103333,6 +103333,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://www.triadicframeworks.org/docs/api/quad/health/stub</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://www.triadicframeworks.org/docs/api/revocation_service.py</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
