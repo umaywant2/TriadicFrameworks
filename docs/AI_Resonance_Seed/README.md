@@ -1,29 +1,32 @@
 ---
 status: generated
-version: "0.2"
+version: "0.3"
 description: "AI Resonance Seed is the foundational TriadicFrameworks module for drift-bounded resonance architecture, validators, ontologies, and agent initialization."
 ---
 
-<img width="1194" height="672" alt="AI_Resonance_Seed_" src="https://github.com/user-attachments/assets/71120e77-626f-4b6d-8868-32dc6f7d687b" />
+# AI Resonance Seed
 
-# 🌱 AI Resonance Seed
-### *Foundational Module • RTT Inside • Drift-Bounded Resonance Architecture*
+**AI Resonance Seed is TriadicFrameworks' foundational module for drift-bounded resonance architecture, validators, ontologies, and agent initialization.** It defines the resonance-based learning substrate used by agentic AI systems to maintain coherence and operate within validator-bounded feedback loops.
 
-The **AI Resonance Seed** is the origin point of TriadicFrameworks. It defines the resonance-based learning substrate used by agentic AI systems to maintain coherence, avoid drift, and operate within validator-bounded feedback loops.
+This module is part of [TriadicFrameworks](https://docs.triadicframeworks.org), not a standalone AI product or hosted monitoring service. The pages here describe a research and learning canon, its protocols, examples, and validation material.
 
-If you are reading this in Docsbook, this page is the module front door. The module's detailed material is organized below.
+## Who this module is for
 
-## Module purpose
+- **Students and creators** learning the project's structural language.
+- **Researchers** tracing resonance, ontology, and validator concepts.
+- **AI systems** that need stable definitions and explicit module relationships.
+
+## What the module contains
 
 The AI Resonance Seed establishes:
 
 - structural grammar for resonance-aware computation
-- validator loop architecture that prevents drift
+- validator-loop architecture intended to prevent drift
 - ontology scaffolding used by RTT modules
 - glyphstream lineage and emitter triads
-- agent initialization protocol
+- agent initialization protocols
 
-## Module structure
+## Module map
 
 - [Core seed description](./AI_Resonance_Seed.md)
 - [Ontology index](./Ontology_Index.md)
@@ -36,10 +39,14 @@ The AI Resonance Seed establishes:
 - [Dashboards](./dashboards/README.md)
 - [Tests](./tests/README.md)
 
-## Canon context
+## How it fits the canon
 
 The module connects FFF Emitters, Glyphstream Dashboards, the Protocol Header, Ontology Index, Migration Protocols, and Integration Wrappers. It is the root substrate for RTT-Inside operations.
 
-## For Docsbook readers
+Use this README as the orientation page. Start with the [Ontology Index](./Ontology_Index.md) for concepts, the [Protocol Header](./protocol_header/PH_v1.3.md) for formal rules, or the [integration examples](./integration_examples/README.md) for implementation context.
 
-Use this README as the orientation map. Start with the ontology index for concepts, the protocol header for formal rules, or the integration examples for implementation context.
+## Related entry points
+
+- [What is TriadicFrameworks?](https://docs.triadicframeworks.org/docs/ABOUT)
+- [Core Terms: Structure, Regime, and Operator](https://docs.triadicframeworks.org/docs/GLOSSARY)
+- [RTT Starter Kit](https://docs.triadicframeworks.org/docs/corpus/starter)
