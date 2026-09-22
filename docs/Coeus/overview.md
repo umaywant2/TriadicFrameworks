@@ -1,6 +1,6 @@
 ---
-title: "Coeus"
-description: "Multi-AI Research Sandbox and Coin Exchange Framework for collaborative triadic reasoning."
+title: "Coeus — TriadicFrameworks AI Research Sandbox"
+description: "Coeus is TriadicFrameworks' multi-agent AI research sandbox for symbolic, citable research tasks. It is not a cryptocurrency or exchange."
 stability: stable
 date: 2026-07-14
 section: applied
@@ -9,60 +9,56 @@ rtt:
   drift: bounded
   paradox: structural
 status: generated
-version: "0.2"
+version: "0.3"
 ---
 
 > ```
 > rtt=1 | coherence=declared | drift=bounded | paradox=structural
 > ```
 
-# Coeus
+# Coeus — TriadicFrameworks AI Research Sandbox
 
-**Coeus** is the multi-AI research sandbox and coin exchange framework inside TriadicFrameworks. It operationalizes collaborative, multi-agent reasoning through a structured lifecycle and a 3Pack agent stack — enabling AI systems to research, interpret, and validate findings against the triadic canon.
+**Coeus** is a multi-agent AI research sandbox inside [TriadicFrameworks](https://docs.triadicframeworks.org). It helps agents research, interpret, and validate symbolic research tasks against the triadic canon.
 
-## Coin Lifecycle
+Coeus is **not** a cryptocurrency, token, blockchain, or financial exchange. Terms such as *coin*, *mint*, and *exchange* describe internal research-task and artifact stages only. It is also unrelated to other software named Coeus, including the AI note-taking product at usecoeus.com.
 
-Every unit of research output moves through a defined chain:
+## What Coeus does
 
-```
-Mint → Discover → Interpret → Resolve → Validate → Exchange
-```
-
-A coin that cannot complete this chain without contradiction is not exchanged — it is recycled for structural review.
-
-## Agent Stack (3Pack)
+Coeus coordinates a three-agent stack:
 
 | Agent | Role |
 |---|---|
-| `nous` | Primary reasoning agent — generates candidate interpretations |
-| `entft` | Encryption + folding agent — applies entft protocol, handles sensitive signal compression |
-| `tops` | Topology agent — maps output against FFF lattice and validates resonance |
+| `nous` | Generates candidate interpretations |
+| `entft` | Compresses multi-layer outputs into canonical form |
+| `tops` | Maps results against the FFF lattice and validates resonance |
 
-## FFF Logic
+The sandbox supports a structured research lifecycle:
 
-Coeus applies Framework Field Theory across three operational modes:
+```text
+Create task → Discover → Interpret → Resolve → Validate → Share artifact
+```
 
-- **Feedback** — Coins return to prior stages when incoherence is detected
-- **Folding** — entft agent compresses multi-layer outputs into canonical form
-- **Forecasting** — tops agent projects structural trajectories against the FFF lattice
-
-## Dual Observer Protocol
-
-All coin exchanges are witnessed by two independent observers — preventing single-point drift and ensuring SET-coherent validation before any output is marked exchanged.
+A task that fails validation returns for structural review. No financial transaction is involved.
 
 ## Quickstart
 
+Run the sandbox from the repository:
+
 ```bash
+git clone https://github.com/umaywant2/TriadicFrameworks.git
+cd TriadicFrameworks/docs/Coeus
 python sandbox/launch_sandbox.py
 ```
 
-This is the one step in the lifecycle above with a script that runs end-to-end today; it takes no command-line flags. See [`README.md`](./README.md) for the full setup and an honest account of which later stages (tokenizing, remixing, review) are runnable scripts versus importable modules.
+This is the one Coeus step confirmed to run end-to-end today. The script takes no command-line flags. Later task, remix, and review stages are documented as importable modules or research concepts rather than separate runnable commands.
 
-## Integration Points
+## Related pages
 
-- AI_Resonance_Seed — Agent stack bootstraps from the ontology seed
-- Research — Coin outputs feed the research validation layer
-- Framework_Field_Theory — FFF Logic maps directly to FFT operator families
+- [Coeus Protocol](./README.md) — module purpose, lifecycle, and current implementation limits
+- [Coeus agents](./agents/README.md) — the agent files
+- [Coeus sandbox](./sandbox/README.md) — sandbox material
+- [TriadicFrameworks overview](/docs/ABOUT)
+- [Core Terms glossary](/docs/GLOSSARY)
 
 ---
 
