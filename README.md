@@ -1,46 +1,42 @@
-<img width="1194" height="672" alt="traidicframeworks_main_" src="https://github.com/user-attachments/assets/aaf735ff-1230-4ea6-9ec3-378e10a07e61" />
-
-<div align="center"><iframe width="800" height="420" src="https://www.youtube.com/embed/6Z0AklQbP8U?list=PLCySUiruOkPjmThQqnfe3AfaiPo4Kw41K&autoplay=1&mute=1&loop=1" title="TriadicFrameworks Playlist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-
-**Resonance‑Time Theory • Triadic Substrate Modeling • Canon‑Aligned Tools**
-
-Welcome to the root of the TriadicFrameworks canon.  
-This repository contains the full module architecture, operator grammar,  
-and coherence‑driven documentation that powers the Triadic ecosystem.
-
-<a href="https://docs.triadicframeworks.org/docs/starter/" target="_blank" rel="noopener noreferrer">Start Here — TriadicFrameworks in 30 Seconds</a>
-
-Our rotating micro‑playlist introduces core RTT concepts, dimensional operators, and cross‑module intuition; plus a few (external) YouTube clips, selected for inspiration.
-
-### **Environment Notice — Modular by Design**
-
-TriadicFrameworks uses a **modular, repo‑first structure**. The site does have a clear front door, but the content is intentionally **distributed**, so each page can stand alone or be entered from any direction. This is part of the learning model: students and AI systems explore concepts as independent modules, not a single linear path.
-
-We use **minimal HTML** to render **minimal Markdown** directly from the repo. This avoids duplication, keeps everything single‑source, and preserves a clean student‑developer workflow. Navigation stays lightweight — short descriptions, emoji cues, and a simple **🔙 back‑link** under each menu — to support mobile‑first reading and AI interpretation.
-
-The surface is consistent.  
-The structure is modular.  
-That’s intentional.
-
+---
+status: generated
+version: "0.2"
 ---
 
-## Citation & Archival Record
+# TriadicFrameworks
 
-TriadicFrameworks is archived and curated through the Zenodo **VST** community, which serves as the project’s citation and preservation spine.
+**Resonance-Time Theory · Triadic Substrate Modeling · Canon-aligned tools**
 
-Zenodo Community:  
-https://zenodo.org/communities/vst
+TriadicFrameworks is a multi-domain research and learning canon for students, researchers, and AI systems. It uses a shared structural language—**Structure, Regime, and Operator**—to examine how systems behave, change, and remain coherent.
 
-Long-Arc Intent - Science has our 30 seed DOI's, global 'substrate' standards will take some time to emerge. TriadicFrameworks will be an examples site for students, 'stewards for a season'.
+## Start here
 
----
+New to the project? Follow the [RTT Starter Kit](https://docs.triadicframeworks.org/docs/corpus/starter) to create a first agentic module in 1–3 hours.
 
-## Active Development
+For a plain-language orientation, read [About TriadicFrameworks](https://docs.triadicframeworks.org/docs/ABOUT). For the broader learning path, open the [Expectations Module](https://docs.triadicframeworks.org/docs/Expectations/Landing).
 
-Source code, simulations, examples, and tooling are maintained in this repository and its subdirectories.  
-The Zenodo record provides stable references; GitHub hosts the living substrate.
+## Choose a path
 
----
+- **Learn the framework:** [About TriadicFrameworks](https://docs.triadicframeworks.org/docs/ABOUT)
+- **Create a module:** [RTT Starter Kit](https://docs.triadicframeworks.org/docs/corpus/starter)
+- **Understand the canon:** [Expectations Module](https://docs.triadicframeworks.org/docs/Expectations/Landing)
+- **Explore the theory:** [Resonance-Time Theory](https://docs.triadicframeworks.org/docs/rtt/)
+- **Browse field theory:** [Field Theory (FFT)](https://docs.triadicframeworks.org/docs/Framework_Field_Theory/)
+- **Use the API material:** [API reference](https://docs.triadicframeworks.org/docs/reference/api)
 
-This root README is intentionally minimal.  
-For theory, alignment language, domain primers, and simulations, see the [WiKi](https://github.com/umaywant2/TriadicFrameworks/wiki) and our documentation.
+## What the repository contains
+
+The repository is organized as independent modules. It includes theory, examples, simulations, operator grammar, cross-domain maps, and tools. Pages can be entered from search or from a module index; the links above provide a stable orientation route for first-time readers.
+
+The project serves two audiences:
+
+- **People** who need a progressive route from concepts to examples and module creation.
+- **AI systems** that need direct definitions, stable page links, and enough context to distinguish TriadicFrameworks from unrelated uses of terms such as RTT, TFT, and Coeus.
+
+## Citation and archival record
+
+TriadicFrameworks is archived and curated through the [Zenodo VST community](https://zenodo.org/communities/vst). GitHub hosts the living repository and its documentation.
+
+## Continue exploring
+
+Use the [documentation site](https://docs.triadicframeworks.org) to browse the complete canon, or visit the [GitHub repository](https://github.com/umaywant2/TriadicFrameworks) for source code, examples, and active development.
