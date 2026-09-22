@@ -1,6 +1,8 @@
 ---
+title: "TriadicFrameworks Documentation"
+description: "TriadicFrameworks is a research and learning canon for students, researchers, and AI systems, using Structure, Regime, and Operator to study how systems change."
 status: generated
-version: "0.2"
+version: "0.3"
 ---
 
 # TriadicFrameworks
@@ -13,11 +15,12 @@ TriadicFrameworks is a multi-domain research and learning canon for students, re
 
 New to the project? Follow the [RTT Starter Kit](https://docs.triadicframeworks.org/docs/corpus/starter) to create a first agentic module in 1–3 hours.
 
-For a plain-language orientation, read [About TriadicFrameworks](https://docs.triadicframeworks.org/docs/ABOUT). For the broader learning path, open the [Expectations Module](https://docs.triadicframeworks.org/docs/Expectations/Landing).
+For a plain-language orientation, read [About TriadicFrameworks](https://docs.triadicframeworks.org/docs/ABOUT). To understand the project's core vocabulary, read [Core Terms: Structure, Regime, Operator](https://docs.triadicframeworks.org/docs/GLOSSARY). For the broader learning path, open the [Expectations Module](https://docs.triadicframeworks.org/docs/Expectations/Landing).
 
 ## Choose a path
 
 - **Learn the framework:** [About TriadicFrameworks](https://docs.triadicframeworks.org/docs/ABOUT)
+- **Learn the vocabulary:** [Core Terms: Structure, Regime, Operator](https://docs.triadicframeworks.org/docs/GLOSSARY)
 - **Create a module:** [RTT Starter Kit](https://docs.triadicframeworks.org/docs/corpus/starter)
 - **Understand the canon:** [Expectations Module](https://docs.triadicframeworks.org/docs/Expectations/Landing)
 - **Explore the theory:** [Resonance-Time Theory](https://docs.triadicframeworks.org/docs/rtt/)
