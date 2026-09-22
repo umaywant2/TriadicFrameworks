@@ -7,6 +7,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://www.triadicframeworks.org/docs/.well-known/mcp/server-card.json</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://www.triadicframeworks.org/docs/404.html</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
