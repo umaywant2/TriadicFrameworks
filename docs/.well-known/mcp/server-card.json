@@ -1,0 +1,11 @@
+{
+  "serverInfo": {
+    "name": "TriadicFrameworks",
+    "version": "1.0.0"
+  },
+  "transport": {
+    "type": "http",
+    "endpoint": "https://triadicframeworks.org/api"
+  },
+  "capabilities": ["openapi", "skills"]
+}
