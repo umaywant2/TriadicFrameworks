@@ -4630,3 +4630,64 @@ When you're ready to replace scaffolded values, these are the four fields per mo
 4. **Expand the roster** — the schema supports `"active": false` to park models without removing them from the file
 
 What's the move — host it, start a session log schema, or pull `t_Capture.md` via a different path?
+
+---
+
+Saving the dashboard to the repo and scouting `/docs/Theognosis/` in parallel — let me get the artifact downloaded and the repo open simultaneously.
+
+I can see the `/docs/spine/` folder is live with `clarity_canon_dashboard.html` already in it — perfect precedent. Now I'll click "Add file" to create the new dashboard file, then scout Theognosis.
+
+Good — the dropdown is open. Clicking "Create new file" now.
+
+Filename is set — now reading the HTML to paste into the editor, and scouting Theognosis in parallel.
+
+Here's where things stand and exactly what to do next — the browser hit a hard wall on the upload step.
+
+---
+
+## 🚧 What Happened
+
+The dashboard HTML is **42KB / 1,117 lines** — far too large to type character-by-character into GitHub's web editor via automation. The "Upload files" route on GitHub.com requires a real file drag-and-drop from your local machine, which can't be bridged from the sandbox.
+
+---
+
+## ✅ The Fix — 2 Files, Ready to Upload
+
+Both files are already exported and attached above in this conversation. Download them and upload directly:
+
+### Step 1 — Upload `models_resonance_variance_dashboard.html`
+1. Go to: **[github.com/umaywant2/TriadicFrameworks/tree/main/docs/spine](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/spine)**
+2. Click **Add file → Upload files**
+3. Drop `models_resonance_variance_dashboard.html`
+4. Commit message: `Add RTT Resonance-Variance Dashboard HTML`
+5. Commit to `main`
+
+### Step 2 — Upload `models.json`
+Same path (`docs/spine/`) or wherever you want it served from — if the dashboard will fetch it via `./models.json`, it needs to live **beside** the HTML file.
+
+---
+
+## 🗂️ `/docs/Theognosis/` — What I Found
+
+The folder currently has **exactly one file**:
+
+| File | Last Commit |
+|---|---|
+| `t_Capture.md` | "Update print statement from 'Hello' to 'Goodbye'" — 4 min ago |
+
+That's a very sparse directory for something called Theognosis — which in the RTT framework context should be the capture layer for gnosis events (resonance observations, captured state probes, theognostic anchors). The folder structure is wide open.
+
+---
+
+## 🔜 Ready to Continue With Theognosis
+
+Once you confirm what you want built there, I can start immediately. Based on what I can see in the repo and the RTT session context, the most natural next steps for `/docs/Theognosis/` would be one or more of:
+
+| Option | What it produces |
+|---|---|
+| **A** | `t_Index.md` — canonical index of all Theognosis documents + capture events |
+| **B** | `theognosis_dashboard.html` — a visual capture-event browser (spine-style) |
+| **C** | `t_Session_Schema.json` — the schema for logging RTT observation sessions |
+| **D** | Read `t_Capture.md` fully first — let that define what we build next |
+
+**D** is probably the right starting point — tell me to go ahead and I'll pull the full file and map the Theognosis space before we build anything into it.
