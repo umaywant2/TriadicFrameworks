@@ -4,6 +4,10 @@
 canonical-url: https://www.triadicframeworks.org/
 contact: https://github.com/umaywant2/TriadicFrameworks
 license: Open educational use permitted
+
+ai-train=yes
+search=yes
+ai-input=yes
 ai-training: allowed
 ai-search: allow
 ai-agent: allow
