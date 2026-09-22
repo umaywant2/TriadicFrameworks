@@ -1,6 +1,6 @@
 ---
 status: generated
-version: "0.5"
+version: "0.6"
 description: "TriadicFrameworks documentation for Resonance-Time Theory, triadic system modeling, and canon-aligned AI and research tools."
 ---
 
@@ -26,7 +26,7 @@ If you searched for a definition, start with [Core Terms: Structure, Regime, and
 - **Understand the canon:** [Expectations Module](https://docs.triadicframeworks.org/docs/Expectations/Landing)
 - **Explore the theory:** [Resonance-Time Theory](https://docs.triadicframeworks.org/docs/rtt/)
 - **Browse field theory:** [Field Theory (FFT)](https://docs.triadicframeworks.org/docs/Framework_Field_Theory/)
-- **Use the API material:** [API reference](https://docs.triadicframeworks.org/docs/reference/api)
+- **Use the API material:** [RTT API (Beta)](https://docs.triadicframeworks.org/docs/api/rtt/README)
 
 ## What the repository contains
 
