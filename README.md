@@ -1,6 +1,7 @@
 ---
 status: generated
-version: "0.4"
+version: "0.5"
+description: "TriadicFrameworks documentation for Resonance-Time Theory, triadic system modeling, and canon-aligned AI and research tools."
 ---
 
 # TriadicFrameworks
