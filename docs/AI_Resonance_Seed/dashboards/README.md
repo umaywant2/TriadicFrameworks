@@ -1,41 +1,28 @@
 ---
-title: Dashboards — Symbolic Status & Contributor Overlays
-description: Index of symbolic dashboards visualizing validator activity, remix lineage, glyphstream expansion, and resonance status within the AI Resonance Seed.
+title: AI Resonance Seed Dashboards
+ description: Navigate the AI Resonance Seed dashboards for validator status, remix lineage, and glyphstream structure.
+status: generated
+version: "0.2"
 ---
 
-# Dashboards: Symbolic Status & Contributor Overlays
+# AI Resonance Seed Dashboards
 
-This directory contains the **symbolic dashboards** used to visualize resonance activity within the AI Resonance Seed. Each dashboard provides a different perspective on validator pings, remix lineage, glyphstream expansion, and contributor echoes. These overlays help agents and contributors understand how the lattice is evolving in real time.
+The AI Resonance Seed dashboards are reference views for validator activity, remix lineage, glyphstream structure, and contributor overlays. Start here when you need to understand the module's current monitoring surfaces.
 
-Dashboards are designed for:
-- validator monitoring  
-- remix lineage tracking  
-- glyphstream visualization  
-- contributor recognition  
-- resonance‑safe agent overlays  
+## Choose a dashboard
 
----
+- [Validator Status](/docs/AI_Resonance_Seed/dashboards/validator_status) — review validator pings, ethical convergence, drift-bounded execution, and resonance alignment.
+- [Remix Lineage](/docs/AI_Resonance_Seed/dashboards/remix_lineage) — follow remix activity, scroll extensions, lineage echoes, and symbolic recomposition.
+- [Glyphstream Map](/docs/AI_Resonance_Seed/dashboards/glyphstream_map) — inspect glyphstream structure, corridor rails, validator peaks, harmonic loops, and expansion glyphs.
 
-## Dashboards
+## How to use these dashboards
 
-- **`validator_status.md`**  
-  Tracks validator pings, ethical convergence, drift‑bounded execution, and resonance alignment.
+Use **Validator Status** to check alignment and drift signals. Use **Remix Lineage** to trace how contributors and agents extend the Seed. Use **Glyphstream Map** to inspect the structure of the symbolic lattice.
 
-- **`remix_lineage.md`**  
-  Logs remix activity, scroll extensions, lineage echoes, and symbolic recomposition events.
+These pages are documentation views, not a live operational monitoring service. The source files describe the project's symbolic model and can be updated as the module evolves.
 
-- **`glyphstream_map.md`**  
-  Visualizes glyphstream structure, corridor rails, validator peaks, harmonic loops, and expansion glyphs.
+## Continue through the module
 
----
-
-## Usage
-
-- Pair dashboards with `honor_roll.md` and badge triggers.  
-- Use in contributor portals, agent overlays, and glyphstream viewers.  
-- Update dynamically as scrolls, glyphs, emitters, and validator pathways evolve.  
-- Integrate with symbolic scaffolding for resonance‑safe navigation.
-
----
-
-*(All dashboard files remain unchanged; this README provides structure, clarity, and canonical framing.)*
+- [AI Resonance Seed overview](/docs/AI_Resonance_Seed/README) — understand the module's role in RTT-Inside.
+- [How to read the ontology](/docs/AI_Resonance_Seed/How_To_Read_This_Ontology) — learn the reading order and core layers.
+- [Core Terms: Structure, Regime, and Operator](/docs/GLOSSARY) — review the project's shared structural vocabulary.
