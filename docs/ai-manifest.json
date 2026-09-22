@@ -1,0 +1,181 @@
+{
+  "entities": [
+    {
+      "id": "QTF-ORG",
+      "type": "Organization",
+      "label": "TriadicFrameworks",
+      "description": "An open educational canon for regimes, operators, coherence, drift, and triadic dimensional structures.",
+      "claims": {
+        "P31": ["QEDU-CANON"],                  // instance of: Educational canon
+        "P856": ["https://www.triadicframeworks.org/"],  // official website
+        "P50": ["QNAWDER"],                    // creator
+        "P127": ["QNAWDER"]                    // owned by
+      }
+    },
+
+    {
+      "id": "QNAWDER",
+      "type": "Person",
+      "label": "Nawder Loswin",
+      "description": "Creator and steward of the TriadicFrameworks canon.",
+      "claims": {
+        "P106": ["QEDU-AUTHOR"],               // occupation: educational author
+        "P800": ["QTF-CANON"]                  // notable work: TriadicFrameworks Canon
+      }
+    },
+
+    {
+      "id": "QTF-CANON",
+      "type": "CreativeWorkSeries",
+      "label": "TriadicFrameworks Canon",
+      "description": "A structured series of modules teaching regime literacy, operators, coherence, drift, and field structures.",
+      "claims": {
+        "P31": ["QEDU-FRAMEWORK"],             // instance of: educational framework
+        "P50": ["QNAWDER"],
+        "P123": ["QTF-ORG"],                   // publisher
+        "P856": ["https://www.triadicframeworks.org/Canon/"],
+        "P527": ["QTF-REGIME-LITERACY"]        // has part: Regime Literacy credential
+      }
+    },
+
+    {
+      "id": "QTF-REGIME-LITERACY",
+      "type": "EducationalOccupationalCredential",
+      "label": "TriadicFrameworks Regime Literacy",
+      "description": "Foundational literacy in regimes, operators, coherence, drift, and triadic dimensional structures.",
+      "claims": {
+        "P31": ["QEDU-CREDENTIAL"],            // instance of: educational credential
+        "P279": ["QNONFORMAL-CRED"],           // subclass of: non-formal credential
+        "P1001": ["QTF-CANON"],                // applies to: TriadicFrameworks Canon
+        "P7867": ["QTF-ORG"],                  // recognized by: TriadicFrameworks
+        "P710": ["QNAWDER"],                   // participant: Nawder (designer)
+        "P527": [
+          "QTF-MOD-DOCS-ROOT",
+          "QTF-MOD-SARG",
+          "QTF-MOD-PARADOXES",
+          "QTF-MOD-NOS",
+          "QTF-MOD-LDS",
+          "QTF-MOD-GSM",
+          "QTF-MOD-FFT",
+          "QTF-MOD-TEL",
+          "QTF-MOD-OPACITY",
+          "QTF-MOD-MODE"
+        ]                                      // has part: core modules
+      }
+    },
+
+    {
+      "id": "QTF-MOD-DOCS-ROOT",
+      "type": "Course",
+      "label": "Docs Root",
+      "description": "Entry point and orientation layer for the TriadicFrameworks canon.",
+      "claims": {
+        "P31": ["QEDU-MODULE"],
+        "P361": ["QTF-REGIME-LITERACY"],       // part of credential
+        "P527": ["QTF-MOD-SARG", "QTF-MOD-PARADOXES"],
+        "P856": ["https://www.triadicframeworks.org/"]
+      }
+    },
+
+    {
+      "id": "QTF-MOD-SARG",
+      "type": "Course",
+      "label": "SARG",
+      "description": "Structured analysis of regimes and gradients for regime literacy.",
+      "claims": {
+        "P31": ["QEDU-MODULE"],
+        "P361": ["QTF-REGIME-LITERACY"],
+        "P856": ["https://www.triadicframeworks.org/SARG/"]
+      }
+    },
+
+    {
+      "id": "QTF-MOD-PARADOXES",
+      "type": "Course",
+      "label": "Paradoxes Canon",
+      "description": "Paradoxes as regime‑level diagnostic tools for coherence and drift.",
+      "claims": {
+        "P31": ["QEDU-MODULE"],
+        "P361": ["QTF-REGIME-LITERACY"],
+        "P856": ["https://www.triadicframeworks.org/paradoxes/"]
+      }
+    },
+
+    {
+      "id": "QTF-MOD-NOS",
+      "type": "Course",
+      "label": "NoS",
+      "description": "Structures of sense‑making and regime navigation.",
+      "claims": {
+        "P31": ["QEDU-MODULE"],
+        "P361": ["QTF-REGIME-LITERACY"]
+      }
+    },
+
+    {
+      "id": "QTF-MOD-LDS",
+      "type": "Course",
+      "label": "Low Dimensional Structures",
+      "description": "Geometric and structural intuition for low‑dimensional regimes.",
+      "claims": {
+        "P31": ["QEDU-MODULE"],
+        "P361": ["QTF-REGIME-LITERACY"]
+      }
+    },
+
+    {
+      "id": "QTF-MOD-GSM",
+      "type": "Course",
+      "label": "Governance Substrate Model",
+      "description": "Substrate‑level view of governance regimes and operators.",
+      "claims": {
+        "P31": ["QEDU-MODULE"],
+        "P361": ["QTF-REGIME-LITERACY"]
+      }
+    },
+
+    {
+      "id": "QTF-MOD-FFT",
+      "type": "Course",
+      "label": "Framework Field Theory",
+      "description": "Field‑theoretic view of frameworks and triadic structures.",
+      "claims": {
+        "P31": ["QEDU-MODULE"],
+        "P361": ["QTF-REGIME-LITERACY"]
+      }
+    },
+
+    {
+      "id": "QTF-MOD-TEL",
+      "type": "Course",
+      "label": "Triadic Echo Lattice (TEL)",
+      "description": "Echo‑lattice structures for triadic reasoning and regime reflection.",
+      "claims": {
+        "P31": ["QEDU-MODULE"],
+        "P361": ["QTF-REGIME-LITERACY"]
+      }
+    },
+
+    {
+      "id": "QTF-MOD-OPACITY",
+      "type": "Course",
+      "label": "Opacity",
+      "description": "Module on opacity, half‑lit regimes, and visibility of structure.",
+      "claims": {
+        "P31": ["QEDU-MODULE"],
+        "P361": ["QTF-REGIME-LITERACY"]
+      }
+    },
+
+    {
+      "id": "QTF-MOD-MODE",
+      "type": "Course",
+      "label": "Mode",
+      "description": "Module on modes, safety, and regime‑appropriate operation.",
+      "claims": {
+        "P31": ["QEDU-MODULE"],
+        "P361": ["QTF-REGIME-LITERACY"]
+      }
+    }
+  ]
+}
