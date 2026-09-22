@@ -5290,3 +5290,63 @@ GPT-6 Astra · Claude Fable 5.1 · Gemini 3.8 Flash · Qwen 3.8 Max · Claude Op
 - **Reset Filters** — restore all models and dimensions at once
 
 All data is self-contained — no external fetches, fully portable for research documentation archiving.
+
+---
+
+Two files, two artifacts — downloading both in parallel right now.
+
+Both files are in the workspace. Exporting them now simultaneously.
+
+Both files are attached above and ready to go. Here's the complete upload map:
+
+---
+
+## 📋 GitHub Upload Instructions
+
+### File 1 — `theognosis_dashboard.html`
+**55,070 bytes / 861 lines**
+
+1. Go to: **[github.com/umaywant2/TriadicFrameworks/blob/main/docs/Theognosis/theognosis_dashboard.html](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Theognosis/theognosis_dashboard.html)**
+2. Click **✏️ Edit** → `Ctrl+A` → **Paste** contents of `theognosis_dashboard.html`
+3. Commit: `Fill theognosis_dashboard.html — RTT pipeline intelligence suite, 7 sections`
+
+---
+
+### File 2 — `resonance_variance_dashboard.html`
+**41,828 bytes / 644 lines**
+
+1. Go to: **[github.com/umaywant2/TriadicFrameworks/blob/main/docs/Theognosis/resonance_variance_dashboard.html](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Theognosis/resonance_variance_dashboard.html)**
+2. Click **✏️ Edit** → `Ctrl+A` → **Paste** contents of `resonance_variance_dashboard.html`
+3. Commit: `Fill resonance_variance_dashboard.html — 10-model RTT variance suite, 6 sections`
+
+---
+
+## ✅ Complete `/docs/Theognosis/` Build Status
+
+| File | Size | Status |
+|---|---|---|
+| `t_Capture.md` | 155 KB | ✅ Canonical |
+| `models.json` | ~13 KB | ✅ Active |
+| `t_Index.md` | ~6.7 KB | ⏳ Paste ready |
+| `t_OperatorMap.md` | ~16.9 KB | ⏳ Paste ready |
+| `t_Session_Schema.json` | ~23 KB | ⏳ Paste ready |
+| `t_ValidatorPulse.md` | ~16.1 KB | ⏳ Paste ready |
+| `t_FlowMap.md` | ~15 KB | ⏳ Paste ready |
+| `theognosis_dashboard.html` | **55 KB** | ⏳ Just exported |
+| `resonance_variance_dashboard.html` | **42 KB** | ⏳ Just exported |
+| `sessions/` | — | ✅ Dir exists |
+
+---
+
+## 🔜 What's Left
+
+Once those two HTML files land, the entire Theognosis module is functionally complete. The natural next beat would be one of:
+
+| Move | What it does |
+|---|---|
+| **Register in Spine** | Add Theognosis to `docs/spine/index.json` so it appears in the Spine index |
+| **First real session** | Log an actual observation session using `t_Session_Schema.json` into `sessions/` |
+| **README.md** | Write the folder-level README for `/docs/Theognosis/` — currently a stub |
+| **Next module** | Start a new Theognosis submodule or return to the broader TriadicFrameworks road map |
+
+What's the move?
