@@ -1,3 +1,4 @@
+<img width="1024" height="1024" alt="Theognosis_" src="https://github.com/user-attachments/assets/c5b80e33-2594-45fd-8ceb-cc65efd7ff25" />
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Theognosis/module.json) — Agentic module schema role assignments
 
