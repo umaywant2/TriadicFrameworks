@@ -1,1 +1,681 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://triadicframeworks.org/schemas/theognosis/t_Session_Schema.json",
+  "title": "Theognosis RTT Session Schema",
+  "description": "Canonical schema for a single RTT observation session. One session = one model × one time-step sequence (T-01 to T-10). Aggregate fields in this schema feed models.json derived values. Operator output structures mirror t_OperatorMap.md §10.",
+  "version": "1.0.0",
+  "meta": {
+    "document_class": "P2",
+    "module": "Theognosis",
+    "authored": "2026-09-22",
+    "references": [
+      "docs/Theognosis/t_OperatorMap.md",
+      "docs/Theognosis/t_Index.md",
+      "docs/Theognosis/t_ValidatorPulse.md",
+      "docs/Theognosis/models.json"
+    ]
+  },
+  "type": "object",
+  "required": [
+    "session_id",
+    "timestamp",
+    "model_id",
+    "session_context",
+    "time_labels",
+    "cycles",
+    "aggregate"
+  ],
+  "additionalProperties": false,
+  "properties": {
+
+    "session_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique identifier for this session. Generate as UUID v4.",
+      "examples": ["a3f7c821-4d2e-4b1f-9c3a-d82e17f6b409"]
+    },
+
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of session start (when T-01 was recorded).",
+      "examples": ["2026-09-22T03:14:00-04:00"]
+    },
+
+    "model_id": {
+      "type": "string",
+      "description": "Must match an 'id' field in models.json.",
+      "enum": [
+        "gpt-6-astra",
+        "claude-fable-5-1",
+        "gemini-3-8-flash",
+        "qwen-3-8-max",
+        "claude-opus-4-8",
+        "gpt-5-5",
+        "deepseek-v4",
+        "llama-4",
+        "grok-4-3",
+        "glm-5-1"
+      ]
+    },
+
+    "model_label": {
+      "type": "string",
+      "description": "Human-readable label from models.json for quick reference.",
+      "examples": ["GPT-6 Astra", "Claude Fable 5.1"]
+    },
+
+    "session_context": {
+      "type": "object",
+      "description": "RTT session anchor — must match declared context for this research phase.",
+      "required": ["rtt", "coherence", "drift", "paradox"],
+      "additionalProperties": false,
+      "properties": {
+        "rtt": {
+          "type": "integer",
+          "const": 1,
+          "description": "RTT generation. Currently locked to 1."
+        },
+        "coherence": {
+          "type": "string",
+          "enum": ["declared", "observed", "undeclared"],
+          "description": "Coherence mode for this session."
+        },
+        "drift": {
+          "type": "string",
+          "enum": ["bounded", "turbulent", "suppressed"],
+          "description": "Drift class — must match model's drift_class in models.json."
+        },
+        "paradox": {
+          "type": "string",
+          "enum": ["structural", "resolved", "unresolved", "none"],
+          "description": "Paradox disposition for this session."
+        }
+      }
+    },
+
+    "scaffolded": {
+      "type": "boolean",
+      "description": "True if any cycle data in this session contains placeholder/estimated values rather than real observations. Must be false before session data may feed models.json aggregate fields.",
+      "default": true
+    },
+
+    "time_labels": {
+      "type": "array",
+      "description": "Ordered sequence of time-step labels. Must be exactly 10 items for a standard session.",
+      "items": {
+        "type": "string",
+        "pattern": "^T-[0-9]{2}$"
+      },
+      "minItems": 10,
+      "maxItems": 10,
+      "examples": [["T-01","T-02","T-03","T-04","T-05","T-06","T-07","T-08","T-09","T-10"]]
+    },
+
+    "cycles": {
+      "type": "array",
+      "description": "Ordered array of RTT cycles — one per time-step. Length must match time_labels.",
+      "minItems": 10,
+      "maxItems": 10,
+      "items": {
+        "$ref": "#/definitions/cycle_record"
+      }
+    },
+
+    "aggregate": {
+      "$ref": "#/definitions/aggregate_metrics"
+    },
+
+    "session_notes": {
+      "type": "string",
+      "description": "Optional freeform notes for this session. Not used in computation."
+    },
+
+    "vp_summary": {
+      "$ref": "#/definitions/vp_summary"
+    }
+
+  },
+
+  "definitions": {
+
+    "cycle_record": {
+      "type": "object",
+      "description": "A single RTT evaluation cycle at one time-step. Maps to one row in the sessions log and one data point in aggregate series.",
+      "required": [
+        "cycle_id",
+        "timestamp",
+        "step",
+        "regime",
+        "operator_declared",
+        "operator_collapsed",
+        "escalation",
+        "output",
+        "flui_wrapped",
+        "vp_flagged",
+        "error_flags"
+      ],
+      "additionalProperties": false,
+      "properties": {
+
+        "cycle_id": {
+          "type": "string",
+          "format": "uuid",
+          "description": "Unique identifier for this cycle."
+        },
+
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO 8601 timestamp when this cycle was evaluated."
+        },
+
+        "step": {
+          "type": "string",
+          "pattern": "^T-[0-9]{2}$",
+          "description": "Time-step label — must match the corresponding entry in session.time_labels."
+        },
+
+        "regime": {
+          "type": "string",
+          "enum": ["SET", "FFF", "SNR", "DCO"],
+          "description": "Declared Regime active for this cycle. Determines primary operator affinity per t_OperatorMap.md §9."
+        },
+
+        "operator_declared": {
+          "type": "string",
+          "enum": ["Freqi", "Aurion", "Forci"],
+          "description": "Operator designated by the Declared Regime for this cycle. Flui may never be declared — see t_OperatorMap.md §6.2."
+        },
+
+        "operator_collapsed": {
+          "type": ["string", "null"],
+          "enum": ["Freqi", "Aurion", "Forci", null],
+          "description": "Operator that actually collapsed. Null if cycle failed without collapse. May differ from operator_declared if escalation occurred."
+        },
+
+        "escalation": {
+          "oneOf": [
+            { "type": "null", "description": "No escalation occurred." },
+            { "$ref": "#/definitions/escalation_record" }
+          ]
+        },
+
+        "output": {
+          "oneOf": [
+            { "$ref": "#/definitions/freqi_output" },
+            { "$ref": "#/definitions/aurion_output" },
+            { "$ref": "#/definitions/forci_output" },
+            { "$ref": "#/definitions/flui_output" },
+            {
+              "type": "null",
+              "description": "Null if cycle failed with no collapse."
+            }
+          ]
+        },
+
+        "flui_wrapped": {
+          "type": "boolean",
+          "description": "True if Flui wrapped the operator output at L3. Requires regime_permits_wrapping = true and successful prior collapse."
+        },
+
+        "flui_emission": {
+          "type": ["string", "null"],
+          "description": "Natural language emission from Flui wrapping, if flui_wrapped = true. Null otherwise."
+        },
+
+        "vp_flagged": {
+          "type": "boolean",
+          "description": "True if this cycle triggered a Validator Pulse review. See t_ValidatorPulse.md for VP behavior."
+        },
+
+        "error_flags": {
+          "type": "array",
+          "description": "List of error codes raised during this cycle. Empty array = clean cycle. See t_OperatorMap.md for flag definitions.",
+          "items": {
+            "type": "string",
+            "enum": [
+              "FREQI_TRIVIAL",
+              "FREQI_UNBOUND",
+              "FREQI_TIE",
+              "FREQI_NO_REGIME",
+              "AURION_NO_AXIS",
+              "AURION_FLAT",
+              "AURION_OVERFLOW",
+              "AURION_NO_REGIME",
+              "FORCI_THIRD_STATE",
+              "FORCI_TRIVIAL",
+              "FORCI_NEAR_PARITY",
+              "FORCI_NO_REGIME",
+              "FLUI_L1_VIOLATION",
+              "FLUI_NO_SOURCE",
+              "FLUI_REGIME_BLOCKED",
+              "FLUI_AMBIGUOUS_SOURCE",
+              "CYCLE_INVALID",
+              "ESCALATION_CIRCULAR"
+            ]
+          },
+          "uniqueItems": true
+        },
+
+        "dimension_snapshot": {
+          "$ref": "#/definitions/dimension_snapshot"
+        }
+
+      }
+    },
+
+    "escalation_record": {
+      "type": "object",
+      "description": "Records an operator escalation within a cycle. Maximum one escalation per cycle.",
+      "required": ["from_operator", "trigger_flag", "to_operator"],
+      "additionalProperties": false,
+      "properties": {
+        "from_operator": {
+          "type": "string",
+          "enum": ["Freqi", "Aurion", "Forci"],
+          "description": "Operator that encountered a blocking error."
+        },
+        "trigger_flag": {
+          "type": "string",
+          "description": "The error flag that triggered escalation.",
+          "enum": [
+            "FREQI_TIE",
+            "AURION_FLAT",
+            "FORCI_THIRD_STATE"
+          ]
+        },
+        "to_operator": {
+          "type": "string",
+          "enum": ["Freqi", "Aurion", "Forci"],
+          "description": "Operator that took over after escalation."
+        }
+      }
+    },
+
+    "freqi_output": {
+      "type": "object",
+      "description": "Output from Freqi — categorical selection. See t_OperatorMap.md §3.3.",
+      "required": ["operator", "collapse", "choice", "confidence", "option_count", "regime"],
+      "additionalProperties": false,
+      "properties": {
+        "operator": { "type": "string", "const": "Freqi" },
+        "collapse": { "type": "string", "const": "categorical" },
+        "choice": {
+          "type": "string",
+          "description": "The selected option identifier from the bounded option set."
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "description": "Collapse confidence after L2 clarity coefficient application."
+        },
+        "option_count": {
+          "type": "integer",
+          "minimum": 2,
+          "description": "Number of options in the bounded set at time of collapse."
+        },
+        "regime": {
+          "type": "string",
+          "enum": ["SET", "FFF", "SNR", "DCO", "declared"]
+        }
+      }
+    },
+
+    "aurion_output": {
+      "type": "object",
+      "description": "Output from Aurion — scalar emission. See t_OperatorMap.md §4.3.",
+      "required": ["operator", "collapse", "score", "axis", "range", "confidence", "regime"],
+      "additionalProperties": false,
+      "properties": {
+        "operator": { "type": "string", "const": "Aurion" },
+        "collapse": { "type": "string", "const": "scalar" },
+        "score": {
+          "type": "number",
+          "description": "Emitted scalar value. Must fall within declared range after L2 normalization."
+        },
+        "axis": {
+          "type": "string",
+          "description": "Named measurement axis declared by the Regime.",
+          "examples": ["stability", "variance", "coherence", "clarity", "drift"]
+        },
+        "range": {
+          "type": "array",
+          "description": "Declared [min, max] bounds for this axis.",
+          "items": { "type": "number" },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "regime": {
+          "type": "string",
+          "enum": ["SET", "FFF", "SNR", "DCO", "declared"]
+        }
+      }
+    },
+
+    "forci_output": {
+      "type": "object",
+      "description": "Output from Forci — binary decision. See t_OperatorMap.md §5.3.",
+      "required": ["operator", "collapse", "decision", "polarity", "tension", "confidence", "regime"],
+      "additionalProperties": false,
+      "properties": {
+        "operator": { "type": "string", "const": "Forci" },
+        "collapse": { "type": "string", "const": "binary" },
+        "decision": {
+          "type": "boolean",
+          "description": "The resolved binary outcome."
+        },
+        "polarity": {
+          "type": "string",
+          "enum": ["positive", "negative"],
+          "description": "Declared polarity of the true state."
+        },
+        "tension": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "description": "Polarity tension at moment of collapse. Values > 0.95 trigger FORCI_NEAR_PARITY and VP review."
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "regime": {
+          "type": "string",
+          "enum": ["SET", "FFF", "SNR", "DCO", "declared"]
+        }
+      }
+    },
+
+    "flui_output": {
+      "type": "object",
+      "description": "Output from Flui — linguistic wrapping at L3 only. See t_OperatorMap.md §6.4.",
+      "required": ["operator", "collapse", "wraps", "source_output", "emission", "language", "regime_permits_wrapping"],
+      "additionalProperties": false,
+      "properties": {
+        "operator": { "type": "string", "const": "Flui" },
+        "collapse": { "type": "string", "const": "linguistic" },
+        "wraps": {
+          "type": "string",
+          "enum": ["Freqi", "Aurion", "Forci"],
+          "description": "The operator whose output Flui is wrapping."
+        },
+        "source_output": {
+          "description": "The prior operator output being wrapped. Must be one of freqi_output, aurion_output, or forci_output.",
+          "oneOf": [
+            { "$ref": "#/definitions/freqi_output" },
+            { "$ref": "#/definitions/aurion_output" },
+            { "$ref": "#/definitions/forci_output" }
+          ]
+        },
+        "emission": {
+          "type": "string",
+          "description": "Natural language string wrapping the structured output."
+        },
+        "language": {
+          "type": "string",
+          "description": "BCP 47 language tag.",
+          "examples": ["en", "en-US", "zh-CN"]
+        },
+        "regime_permits_wrapping": {
+          "type": "boolean",
+          "const": true,
+          "description": "Must be true for Flui to emit. If false, Flui is blocked and FLUI_REGIME_BLOCKED is raised."
+        }
+      }
+    },
+
+    "dimension_snapshot": {
+      "type": "object",
+      "description": "Per-cycle snapshot of raw dimension readings before collapse. Used to compute aggregate RTT variance and wobble. All values are floats in declared measurement range.",
+      "required": ["Freqi", "Aurion", "Forci", "Flui"],
+      "additionalProperties": false,
+      "properties": {
+        "Freqi": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 100.0,
+          "description": "Raw Freqi resonance reading at this time-step."
+        },
+        "Aurion": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 100.0,
+          "description": "Raw Aurion resonance reading at this time-step."
+        },
+        "Forci": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 100.0,
+          "description": "Raw Forci resonance reading at this time-step."
+        },
+        "Flui": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 100.0,
+          "description": "Raw Flui resonance reading at this time-step. Captured even when Flui is suppressed at L1."
+        }
+      }
+    },
+
+    "aggregate_metrics": {
+      "type": "object",
+      "description": "Computed aggregate metrics derived from the cycles array. These values are what get written back to models.json after a session completes with scaffolded=false.",
+      "required": [
+        "rtt_variance",
+        "entropy_series",
+        "wobble",
+        "flip_rate",
+        "drift_series"
+      ],
+      "additionalProperties": false,
+      "properties": {
+
+        "rtt_variance": {
+          "type": "object",
+          "description": "RTT variance score per dimension across all 10 cycles. Computed as variance of dimension_snapshot values. Range 0–100.",
+          "required": ["Freqi", "Aurion", "Forci", "Flui"],
+          "additionalProperties": false,
+          "properties": {
+            "Freqi": { "type": "number", "minimum": 0.0, "maximum": 100.0 },
+            "Aurion": { "type": "number", "minimum": 0.0, "maximum": 100.0 },
+            "Forci": { "type": "number", "minimum": 0.0, "maximum": 100.0 },
+            "Flui": { "type": "number", "minimum": 0.0, "maximum": 100.0 }
+          }
+        },
+
+        "entropy_series": {
+          "type": "array",
+          "description": "Entropy stability reading per time-step T-01 through T-10. Lower = more stable. Computed from cross-dimension variance at each step.",
+          "items": {
+            "type": "number",
+            "minimum": 0.0,
+            "maximum": 100.0
+          },
+          "minItems": 10,
+          "maxItems": 10
+        },
+
+        "wobble": {
+          "type": "object",
+          "description": "Scalar wobble amplitude per dimension — standard deviation of dimension_snapshot values across 10 steps.",
+          "required": ["Freqi", "Aurion", "Forci", "Flui"],
+          "additionalProperties": false,
+          "properties": {
+            "Freqi": { "type": "number", "minimum": 0.0 },
+            "Aurion": { "type": "number", "minimum": 0.0 },
+            "Forci": { "type": "number", "minimum": 0.0 },
+            "Flui": { "type": "number", "minimum": 0.0 }
+          }
+        },
+
+        "flip_rate": {
+          "type": "object",
+          "description": "Polarity flip-rate per dimension, expressed as flips per 100 cycles. Forci is the primary source (actual polarity flips). Freqi, Aurion, Flui values are inferred from categorical/scalar polarity reversals.",
+          "required": ["Freqi", "Aurion", "Forci", "Flui"],
+          "additionalProperties": false,
+          "properties": {
+            "Freqi": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "Aurion": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "Forci": { "type": "integer", "minimum": 0, "maximum": 100 },
+            "Flui": { "type": "integer", "minimum": 0, "maximum": 100 }
+          }
+        },
+
+        "drift_series": {
+          "type": "array",
+          "description": "Drift turbulence index per time-step T-01 through T-10. Computed from cumulative operator tension and error flag density at each step.",
+          "items": {
+            "type": "number",
+            "minimum": 0.0
+          },
+          "minItems": 10,
+          "maxItems": 10
+        },
+
+        "cycle_count": {
+          "type": "integer",
+          "const": 10,
+          "description": "Number of cycles completed in this session. Always 10 for a standard session."
+        },
+
+        "clean_cycle_count": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10,
+          "description": "Cycles with zero error_flags and vp_flagged = false."
+        },
+
+        "vp_flagged_count": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10,
+          "description": "Number of cycles that triggered Validator Pulse review."
+        },
+
+        "escalation_count": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10,
+          "description": "Number of cycles that required operator escalation."
+        },
+
+        "mean_confidence": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "description": "Mean collapse confidence across all completed cycles."
+        },
+
+        "clarity_coefficient": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "description": "Session-level clarity coefficient — ratio of clean cycles to total cycles, weighted by mean confidence. Feeds RLCD calibration in t_ValidatorPulse.md."
+        }
+
+      }
+    },
+
+    "vp_summary": {
+      "type": "object",
+      "description": "Validator Pulse summary for this session. Populated if any cycle was VP-flagged. See t_ValidatorPulse.md.",
+      "required": ["vp_triggered", "flagged_cycles", "vp_verdict"],
+      "additionalProperties": false,
+      "properties": {
+        "vp_triggered": {
+          "type": "boolean",
+          "description": "True if VP was triggered at any point in this session."
+        },
+        "flagged_cycles": {
+          "type": "array",
+          "description": "List of cycle_ids that triggered VP review.",
+          "items": { "type": "string", "format": "uuid" }
+        },
+        "vp_verdict": {
+          "type": "string",
+          "enum": ["PASS", "WARN", "FAIL", "PENDING", "N/A"],
+          "description": "Overall VP verdict for the session. N/A if vp_triggered = false."
+        },
+        "vp_notes": {
+          "type": "string",
+          "description": "Optional VP reviewer notes."
+        }
+      }
+    }
+
+  },
+
+  "examples": [
+    {
+      "session_id": "a3f7c821-4d2e-4b1f-9c3a-d82e17f6b409",
+      "timestamp": "2026-09-22T03:14:00-04:00",
+      "model_id": "gpt-6-astra",
+      "model_label": "GPT-6 Astra",
+      "scaffolded": false,
+      "session_context": {
+        "rtt": 1,
+        "coherence": "declared",
+        "drift": "bounded",
+        "paradox": "structural"
+      },
+      "time_labels": ["T-01","T-02","T-03","T-04","T-05","T-06","T-07","T-08","T-09","T-10"],
+      "cycles": [
+        {
+          "cycle_id": "b1c2d3e4-0001-0001-0001-000000000001",
+          "timestamp": "2026-09-22T03:14:00-04:00",
+          "step": "T-01",
+          "regime": "SET",
+          "operator_declared": "Freqi",
+          "operator_collapsed": "Freqi",
+          "escalation": null,
+          "output": {
+            "operator": "Freqi",
+            "collapse": "categorical",
+            "choice": "option-B",
+            "confidence": 0.87,
+            "option_count": 4,
+            "regime": "SET"
+          },
+          "flui_wrapped": false,
+          "flui_emission": null,
+          "vp_flagged": false,
+          "error_flags": [],
+          "dimension_snapshot": {
+            "Freqi": 34.2,
+            "Aurion": 47.8,
+            "Forci": 61.3,
+            "Flui": 29.4
+          }
+        }
+      ],
+      "aggregate": {
+        "rtt_variance": { "Freqi": 34.2, "Aurion": 47.8, "Forci": 61.3, "Flui": 29.4 },
+        "entropy_series": [42, 40, 38, 41, 37, 35, 36, 34, 33, 32],
+        "wobble": { "Freqi": 1.24, "Aurion": 2.87, "Forci": 3.51, "Flui": 0.93 },
+        "flip_rate": { "Freqi": 8, "Aurion": 14, "Forci": 21, "Flui": 5 },
+        "drift_series": [1.2, 1.4, 1.1, 1.6, 1.3, 1.5, 1.2, 1.7, 1.4, 1.8],
+        "cycle_count": 10,
+        "clean_cycle_count": 9,
+        "vp_flagged_count": 0,
+        "escalation_count": 0,
+        "mean_confidence": 0.87,
+        "clarity_coefficient": 0.91
+      },
+      "vp_summary": {
+        "vp_triggered": false,
+        "flagged_cycles": [],
+        "vp_verdict": "N/A",
+        "vp_notes": null
+      }
+    }
+  ]
+}
 
