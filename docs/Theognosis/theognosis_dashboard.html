@@ -1,1 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+  <title>Theognosis Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            body: '#080d1a',
+            card: '#0f1628',
+            panel: '#161e35',
+            txtpri: '#e2e8f0',
+            txtmut: '#94a3b8',
+          },
+          fontFamily: {
+            inter: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --body: #080d1a;
+      --card: #0f1628;
+      --panel: #161e35;
+      --txt-pri: #e2e8f0;
+      --txt-mut: #94a3b8;
+      --border-card: rgba(255,255,255,0.07);
+      --l0: #334155; --l1: #7c3aed; --l2: #0891b2; --l3: #059669;
+      --freqi: #00d4ff; --aurion: #ffb347; --forci: #ff47a3; --flui: #47ff8c;
+      --flui-sup: #dc2626;
+      --vp-pass: #22c55e; --vp-warn: #f59e0b; --vp-fail: #ef4444; --vp-pending: #8b5cf6; --vp-na: #64748b;
+      --regime-set: #06b6d4; --regime-fff: #f97316; --regime-snr: #a78bfa; --regime-dco: #ef4444;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', system-ui, sans-serif; background: var(--body); color: var(--txt-pri); }
+    .card-base {
+      background: var(--card);
+      border: 1px solid var(--border-card);
+      border-radius: 12px;
+      padding: 24px;
+      transition: all 0.2s ease;
+    }
+    .panel-base {
+      background: var(--panel);
+      border: 1px solid var(--border-card);
+      border-radius: 12px;
+      padding: 24px;
+      transition: all 0.2s ease;
+    }
+    .section-header {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--txt-mut);
+      padding-left: 12px;
+      margin-bottom: 16px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 2px 10px;
+      border-radius: 9999px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+    .gradient-divider {
+      height: 2px;
+      background: linear-gradient(90deg, var(--l1), var(--l2), var(--l3), var(--freqi), var(--aurion));
+    }
+    @keyframes pulseDot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.7)} }
+    .pulse-dot { animation: pulseDot 1.8s ease-in-out infinite; }
+    @keyframes flowDot {
+      0% { left: 0%; opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { left: 100%; opacity: 0; }
+    }
+    .flow-arrow {
+      position: relative;
+      height: 2px;
+      background: rgba(255,255,255,0.1);
+      flex: 1;
+      margin: 0 4px;
+      align-self: center;
+    }
+    .flow-arrow::after {
+      content: '';
+      position: absolute;
+      top: -3px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--freqi);
+      box-shadow: 0 0 8px var(--freqi);
+      animation: flowDot 3s ease-in-out infinite;
+    }
+    .flow-arrow.d2::after { animation-delay: 0.5s; background: var(--l1); box-shadow: 0 0 8px var(--l1); }
+    .flow-arrow.d3::after { animation-delay: 1s; background: var(--l3); box-shadow: 0 0 8px var(--l3); }
+    .op-circle {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 10px; font-weight: 700;
+      border: 2px solid;
+      position: relative;
+    }
+    .collapse-seg {
+      flex: 1;
+      height: 20px;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: transform 0.15s ease;
+      position: relative;
+    }
+    .collapse-seg:hover { transform: scaleY(1.4); z-index: 2; }
+    .tooltip-box {
+      display: none;
+      position: absolute;
+      bottom: calc(100% + 8px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1e293b;
+      color: #e2e8f0;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      white-space: nowrap;
+      z-index: 50;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .collapse-seg:hover .tooltip-box,
+    .affinity-cell:hover .tooltip-box { display: block; }
+    .affinity-cell {
+      width: 80px; height: 56px;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      position: relative;
+    }
+    .affinity-cell:hover { transform: scale(1.08); }
+    .model-filter-pill {
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 11px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid;
+      transition: all 0.2s ease;
+      user-select: none;
+    }
+    .model-filter-pill.active { opacity: 1; }
+    .model-filter-pill.inactive { opacity: 0.35; }
+    .gnosis-card { transition: all 0.2s ease; }
+    .gnosis-card:hover { transform: translateY(-2px); }
+    .gnosis-card.dimmed { opacity: 0.3; pointer-events: none; }
+    .sortable-th { cursor: pointer; user-select: none; }
+    .sortable-th:hover { color: #e2e8f0; }
+    .cc-bar-bg { height: 8px; border-radius: 4px; background: rgba(255,255,255,0.08); overflow: hidden; width: 80px; }
+    .cc-bar-fill { height: 100%; border-radius: 4px; transition: width 0.3s ease; }
+    .flui-mini-card {
+      min-width: 120px;
+      flex-shrink: 0;
+    }
+    @keyframes glowPulse {
+      0%,100% { box-shadow: 0 0 8px rgba(124,58,237,0.3); }
+      50% { box-shadow: 0 0 20px rgba(124,58,237,0.6); }
+    }
+    .l1-glow { animation: glowPulse 2.5s ease-in-out infinite; }
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 3px; }
+  </style>
+</head>
+<body data-id="0" class="min-h-screen">
+  <app-icon data-id="1" hidden data-icon="gauge" data-palette="Dark"></app-icon>
 
+  <!-- ===== HEADER ===== -->
+  <header data-id="2" class="w-full" style="background:var(--card);border-bottom:1px solid var(--border-card);">
+    <div data-id="3" class="max-w-[1400px] mx-auto px-4 md:px-6 py-3">
+      <div data-id="4" class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+        <!-- Left -->
+        <div data-id="5" class="flex-shrink-0">
+          <h1 data-id="6" class="text-lg md:text-xl font-extrabold tracking-wide text-white" id="main-title-a1b2">THEOGNOSIS DASHBOARD</h1>
+          <p data-id="7" class="text-[11px] text-txtmut tracking-wide">RTT Pipeline Intelligence Suite — TriadicFrameworks v4.2</p>
+        </div>
+        <!-- Middle badges -->
+        <div data-id="8" class="flex flex-wrap gap-2 items-center" id="session-badges-c3d4">
+          <span data-id="9" class="pill" style="background:rgba(124,58,237,0.2);color:#a78bfa;border:1px solid rgba(124,58,237,0.3);">rtt=1</span>
+          <span data-id="10" class="pill" style="background:rgba(0,212,255,0.12);color:#00d4ff;border:1px solid rgba(0,212,255,0.2);">coherence=declared</span>
+          <span data-id="11" class="pill" style="background:rgba(20,184,166,0.15);color:#2dd4bf;border:1px solid rgba(20,184,166,0.25);">drift=bounded</span>
+          <span data-id="12" class="pill" style="background:rgba(245,158,11,0.15);color:#fbbf24;border:1px solid rgba(245,158,11,0.25);">paradox=structural</span>
+        </div>
+        <!-- Right -->
+        <div data-id="13" class="flex items-center gap-3 flex-shrink-0">
+          <div data-id="14" class="text-right">
+            <p data-id="15" class="text-[10px] uppercase tracking-widest text-txtmut">Session</p>
+            <p data-id="16" class="text-sm text-white font-semibold tabular-nums">2026-09-22 | EDT</p>
+          </div>
+          <div data-id="17" class="w-2.5 h-2.5 rounded-full bg-green-400 pulse-dot" title="Live"></div>
+          <span data-id="18" class="pill" style="background:rgba(245,158,11,0.18);color:#fbbf24;border:1px solid rgba(245,158,11,0.3);">⚗️ SCAFFOLDED</span>
+        </div>
+      </div>
+      <!-- Model filter pills -->
+      <div data-id="19" class="flex flex-wrap gap-2 mt-3 pb-1" id="model-filter-row-e5f6"></div>
+    </div>
+    <div data-id="20" class="gradient-divider"></div>
+  </header>
+
+  <main data-id="21" class="max-w-[1400px] mx-auto px-4 md:px-6 py-6 flex flex-col gap-4">
+
+    <!-- ===== SECTION 1: SUMMARY STAT CARDS ===== -->
+    <section data-id="22" class="grid grid-cols-2 md:grid-cols-4 gap-4" id="stat-cards-g7h8">
+      <div data-id="23" class="card-base flex items-center gap-4">
+        <div data-id="24" class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:rgba(34,197,94,0.12);"><i data-id="25" data-lucide="cpu" class="w-6 h-6" style="color:#22c55e"></i></div>
+        <div data-id="26"><p data-id="27" class="text-2xl font-bold text-white tabular-nums" id="stat-models-i9j0">10</p><p data-id="28" class="text-[11px] text-txtmut uppercase tracking-wide">Models Active</p></div>
+      </div>
+      <div data-id="29" class="card-base flex items-center gap-4">
+        <div data-id="30" class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:rgba(0,212,255,0.12);"><i data-id="31" data-lucide="zap" class="w-6 h-6" style="color:#00d4ff"></i></div>
+        <div data-id="32"><p data-id="33" class="text-2xl font-bold text-white tabular-nums" id="stat-collapses-k1l2">100</p><p data-id="34" class="text-[11px] text-txtmut uppercase tracking-wide">Operator Collapses</p></div>
+      </div>
+      <div data-id="35" class="card-base flex items-center gap-4">
+        <div data-id="36" class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:rgba(245,158,11,0.12);"><i data-id="37" data-lucide="alert-triangle" class="w-6 h-6" style="color:#f59e0b"></i></div>
+        <div data-id="38"><p data-id="39" class="text-2xl font-bold text-white tabular-nums" id="stat-flags-m3n4">8</p><p data-id="40" class="text-[11px] text-txtmut uppercase tracking-wide">VP Flags Raised</p></div>
+      </div>
+      <div data-id="41" class="card-base flex items-center gap-4">
+        <div data-id="42" class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:rgba(16,185,129,0.12);"><i data-id="43" data-lucide="activity" class="w-6 h-6" style="color:#10b981"></i></div>
+        <div data-id="44"><p data-id="45" class="text-2xl font-bold text-white tabular-nums" id="stat-cc-o5p6">0.76</p><p data-id="46" class="text-[11px] text-txtmut uppercase tracking-wide">Mean Clarity (cc)</p></div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 2: RTT PIPELINE VISUALIZER ===== -->
+    <section data-id="47" class="card-base">
+      <div data-id="48" class="section-header" style="border-left:3px solid #fff;">RTT PIPELINE — L0 → L3</div>
+      <div data-id="49" class="flex flex-col md:flex-row gap-2 md:gap-0 items-stretch" id="pipeline-viz-q7r8">
+        <!-- L0 -->
+        <div data-id="50" class="flex-1 rounded-xl p-4 flex flex-col items-center gap-3" style="border:2px solid var(--l0);background:rgba(51,65,85,0.08);">
+          <div data-id="51" class="text-2xl font-extrabold text-white">L0</div>
+          <div data-id="52" class="text-[10px] text-txtmut uppercase tracking-widest text-center">Raw Resonance Intake</div>
+          <div data-id="53" class="flex flex-wrap justify-center gap-2 mt-2">
+            <div data-id="54" class="flex flex-col items-center gap-1"><div data-id="55" class="op-circle" style="border-color:var(--freqi);background:rgba(0,212,255,0.1);color:var(--freqi);">ƒ</div><span data-id="56" class="text-[9px] text-txtmut">LATENT</span></div>
+            <div data-id="57" class="flex flex-col items-center gap-1"><div data-id="58" class="op-circle" style="border-color:var(--aurion);background:rgba(255,179,71,0.1);color:var(--aurion);">α</div><span data-id="59" class="text-[9px] text-txtmut">LATENT</span></div>
+            <div data-id="60" class="flex flex-col items-center gap-1"><div data-id="61" class="op-circle" style="border-color:var(--forci);background:rgba(255,71,163,0.1);color:var(--forci);">φ</div><span data-id="62" class="text-[9px] text-txtmut">LATENT</span></div>
+            <div data-id="63" class="flex flex-col items-center gap-1"><div data-id="64" class="op-circle" style="border-color:var(--flui);background:rgba(71,255,140,0.1);color:var(--flui);">λ</div><span data-id="65" class="text-[9px] text-txtmut">LATENT</span></div>
+          </div>
+        </div>
+        <!-- Arrow 1 -->
+        <div data-id="66" class="flow-arrow hidden md:block"></div>
+        <div data-id="67" class="md:hidden flex justify-center py-1"><i data-id="68" data-lucide="chevron-down" class="w-5 h-5 text-txtmut"></i></div>
+        <!-- L1 -->
+        <div data-id="69" class="flex-1 rounded-xl p-4 flex flex-col items-center gap-3 l1-glow" style="border:2px solid var(--l1);background:rgba(124,58,237,0.06);">
+          <div data-id="70" class="text-2xl font-extrabold" style="color:var(--l1);">L1</div>
+          <div data-id="71" class="text-[10px] text-txtmut uppercase tracking-widest text-center">Inversion + Regime Constraint</div>
+          <div data-id="72" class="flex flex-wrap justify-center gap-2 mt-2">
+            <div data-id="73" class="flex flex-col items-center gap-1"><div data-id="74" class="op-circle" style="border-color:var(--freqi);background:rgba(0,212,255,0.15);color:var(--freqi);">ƒ</div><span data-id="75" class="text-[9px]" style="color:var(--freqi);">COLLAPSE ƒ</span></div>
+            <div data-id="76" class="flex flex-col items-center gap-1"><div data-id="77" class="op-circle" style="border-color:var(--aurion);background:rgba(255,179,71,0.15);color:var(--aurion);">α</div><span data-id="78" class="text-[9px]" style="color:var(--aurion);">COLLAPSE α</span></div>
+            <div data-id="79" class="flex flex-col items-center gap-1"><div data-id="80" class="op-circle" style="border-color:var(--forci);background:rgba(255,71,163,0.15);color:var(--forci);">φ</div><span data-id="81" class="text-[9px]" style="color:var(--forci);">COLLAPSE φ</span></div>
+            <div data-id="82" class="flex flex-col items-center gap-1">
+              <div data-id="83" class="op-circle" style="border-color:var(--flui-sup);background:rgba(220,38,38,0.15);color:var(--flui-sup);text-decoration:line-through;">λ</div>
+              <span data-id="84" class="text-[9px] flex items-center gap-1" style="color:var(--flui-sup);">⚠ SUPPRESSED λ</span>
+            </div>
+          </div>
+        </div>
+        <!-- Arrow 2 -->
+        <div data-id="85" class="flow-arrow d2 hidden md:block"></div>
+        <div data-id="86" class="md:hidden flex justify-center py-1"><i data-id="87" data-lucide="chevron-down" class="w-5 h-5 text-txtmut"></i></div>
+        <!-- L2 -->
+        <div data-id="88" class="flex-1 rounded-xl p-4 flex flex-col items-center gap-3" style="border:2px solid var(--l2);background:rgba(8,145,178,0.06);">
+          <div data-id="89" class="text-2xl font-extrabold" style="color:var(--l2);">L2</div>
+          <div data-id="90" class="text-[10px] text-txtmut uppercase tracking-widest text-center">Local Synthesis</div>
+          <div data-id="91" class="flex flex-col gap-2 mt-2 text-[11px] w-full">
+            <div data-id="92" class="flex items-center gap-2"><span data-id="93" class="w-2 h-2 rounded-full" style="background:var(--vp-pass);"></span><span data-id="94" class="text-txtpri">Proto-VP Scan</span></div>
+            <div data-id="95" class="flex items-center gap-2"><span data-id="96" class="w-2 h-2 rounded-full" style="background:var(--aurion);"></span><span data-id="97" class="text-txtpri">Clarity Coefficient</span></div>
+            <div data-id="98" class="flex items-center gap-2"><span data-id="99" class="w-2 h-2 rounded-full" style="background:var(--l1);"></span><span data-id="100" class="text-txtpri">RLCD Calibration</span></div>
+          </div>
+        </div>
+        <!-- Arrow 3 -->
+        <div data-id="101" class="flow-arrow d3 hidden md:block"></div>
+        <div data-id="102" class="md:hidden flex justify-center py-1"><i data-id="103" data-lucide="chevron-down" class="w-5 h-5 text-txtmut"></i></div>
+        <!-- L3 -->
+        <div data-id="104" class="flex-1 rounded-xl p-4 flex flex-col items-center gap-3" style="border:2px solid var(--l3);background:rgba(5,150,105,0.06);">
+          <div data-id="105" class="text-2xl font-extrabold" style="color:var(--l3);">L3</div>
+          <div data-id="106" class="text-[10px] text-txtmut uppercase tracking-widest text-center">Structured Emission</div>
+          <div data-id="107" class="flex flex-col gap-2 mt-2 text-[11px] w-full">
+            <div data-id="108" class="flex items-center gap-2"><code data-id="109" class="px-2 py-0.5 rounded text-[10px]" style="background:rgba(0,212,255,0.1);color:var(--freqi);">choice: &lt;id&gt;</code></div>
+            <div data-id="110" class="flex items-center gap-2"><code data-id="111" class="px-2 py-0.5 rounded text-[10px]" style="background:rgba(255,179,71,0.1);color:var(--aurion);">score: &lt;float&gt;</code></div>
+            <div data-id="112" class="flex items-center gap-2"><code data-id="113" class="px-2 py-0.5 rounded text-[10px]" style="background:rgba(255,71,163,0.1);color:var(--forci);">decision: &lt;bool&gt;</code></div>
+            <div data-id="114" class="mt-1 px-2 py-1 rounded text-[10px] text-center" style="border:1px dashed var(--flui);color:var(--flui);background:rgba(71,255,140,0.05);">Flui wrap: conditional</div>
+          </div>
+        </div>
+      </div>
+      <!-- Info chips -->
+      <div data-id="115" class="flex flex-col md:flex-row gap-2 mt-4">
+        <div data-id="116" class="flex-1 rounded-lg px-3 py-2 text-[10px] text-txtmut text-center" style="background:var(--panel);border:1px solid var(--border-card);">Single collapse per cycle — Declared Regime selects operator</div>
+        <div data-id="117" class="flex-1 rounded-lg px-3 py-2 text-[10px] text-center" style="background:var(--panel);border:1px solid var(--border-card);color:var(--flui-sup);">Flui suppressed at L1 — re-enters at L3 if permitted</div>
+        <div data-id="118" class="flex-1 rounded-lg px-3 py-2 text-[10px] text-txtmut text-center" style="background:var(--panel);border:1px solid var(--border-card);">Full VP evaluates every emission before cycle close</div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 3: MODEL GNOSIS PROFILES ===== -->
+    <section data-id="119">
+      <div data-id="120" class="section-header" style="border-left:3px solid var(--l1);">MODEL GNOSIS PROFILES</div>
+      <div data-id="121" class="grid grid-cols-1 md:grid-cols-2 gap-4" id="gnosis-grid-s9t0"></div>
+    </section>
+
+    <!-- ===== SECTION 4: TWO COLUMN ROW ===== -->
+    <section data-id="122" class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <!-- Left: Operator Collapse Chart -->
+      <div data-id="123" class="card-base">
+        <div data-id="124" class="section-header" style="border-left:3px solid var(--freqi);">OPERATOR COLLAPSE HISTORY</div>
+        <div data-id="125" class="relative" style="height:360px;">
+          <canvas data-id="126" id="collapse-chart-u1v2"></canvas>
+        </div>
+      </div>
+      <!-- Right: Regime × Operator Affinity -->
+      <div data-id="127" class="card-base">
+        <div data-id="128" class="section-header" style="border-left:3px solid var(--aurion);">REGIME × OPERATOR AFFINITY</div>
+        <div data-id="129" class="overflow-x-auto">
+          <table data-id="130" class="mx-auto" style="border-spacing:6px;border-collapse:separate;">
+            <thead data-id="131">
+              <tr data-id="132">
+                <th data-id="133" class="w-16"></th>
+                <th data-id="134" class="text-center text-[10px] uppercase tracking-widest font-semibold pb-2" style="color:var(--freqi);">Freqi</th>
+                <th data-id="135" class="text-center text-[10px] uppercase tracking-widest font-semibold pb-2" style="color:var(--aurion);">Aurion</th>
+                <th data-id="136" class="text-center text-[10px] uppercase tracking-widest font-semibold pb-2" style="color:var(--forci);">Forci</th>
+                <th data-id="137" class="text-center text-[10px] uppercase tracking-widest font-semibold pb-2" style="color:var(--flui);">Flui</th>
+              </tr>
+            </thead>
+            <tbody data-id="138" id="affinity-matrix-w3x4"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 5: VP VERDICT BOARD ===== -->
+    <section data-id="139" class="card-base">
+      <div data-id="140" class="section-header" style="border-left:3px solid var(--l3);">VALIDATOR PULSE BOARD</div>
+      <div data-id="141" class="overflow-x-auto">
+        <table data-id="142" class="w-full text-left text-sm" id="vp-table-y5z6">
+          <thead data-id="143">
+            <tr data-id="144" class="text-[10px] uppercase tracking-widest text-txtmut">
+              <th data-id="145" class="px-3 py-2 sortable-th" data-sort="label">Model <i data-id="146" data-lucide="chevrons-up-down" class="w-3 h-3 inline"></i></th>
+              <th data-id="147" class="px-3 py-2">Provider</th>
+              <th data-id="148" class="px-3 py-2 sortable-th" data-sort="vp_verdict">Verdict <i data-id="149" data-lucide="chevrons-up-down" class="w-3 h-3 inline"></i></th>
+              <th data-id="150" class="px-3 py-2 sortable-th" data-sort="cc">Clarity cc <i data-id="151" data-lucide="chevrons-up-down" class="w-3 h-3 inline"></i></th>
+              <th data-id="152" class="px-3 py-2">VP Flags</th>
+              <th data-id="153" class="px-3 py-2 sortable-th" data-sort="escalations">Escalations <i data-id="154" data-lucide="chevrons-up-down" class="w-3 h-3 inline"></i></th>
+              <th data-id="155" class="px-3 py-2">Drift</th>
+              <th data-id="156" class="px-3 py-2">Write-Back</th>
+            </tr>
+          </thead>
+          <tbody data-id="157" id="vp-tbody-a7b8"></tbody>
+        </table>
+      </div>
+      <div data-id="158" class="mt-4 px-4 py-3 rounded-lg text-[11px] font-mono" style="background:var(--panel);color:var(--freqi);border:1px solid var(--border-card);">
+        cc = (clean_cycles / total_cycles) × mean_confidence × (1 − vp_penalty)
+      </div>
+    </section>
+
+    <!-- ===== SECTION 6: SESSION LOG EXPLORER ===== -->
+    <section data-id="159" class="card-base">
+      <div data-id="160" class="section-header" style="border-left:3px solid var(--forci);">SESSION LOG EXPLORER</div>
+      <div data-id="161" class="flex flex-col md:flex-row items-start md:items-center gap-3 mb-4">
+        <label data-id="162" class="text-[11px] text-txtmut uppercase tracking-widest">Select Model:</label>
+        <select data-id="163" id="session-model-select-c9d0" class="rounded-lg px-3 py-2 text-sm font-semibold" style="background:var(--panel);color:var(--txt-pri);border:1px solid var(--border-card);outline:none;">
+        </select>
+      </div>
+      <!-- Collapse timeline strip -->
+      <div data-id="164" class="mb-4" id="session-collapse-strip-e1f2"></div>
+      <!-- Session table or placeholder -->
+      <div data-id="165" id="session-log-content-g3h4"></div>
+      <!-- Dimension chart -->
+      <div data-id="166" class="mt-4" id="session-dim-wrapper-i5j6">
+        <div data-id="167" class="relative" style="height:220px;">
+          <canvas data-id="168" id="dim-chart-k7l8"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 7: FLUI SUPPRESSION MONITOR ===== -->
+    <section data-id="169" class="card-base">
+      <div data-id="170" class="section-header" style="border-left:3px solid var(--flui-sup);">FLUI SUPPRESSION MONITOR</div>
+      <div data-id="171" class="flex gap-3 overflow-x-auto pb-2" id="flui-monitor-m9n0"></div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer data-id="172" class="w-full mt-4" style="background:var(--card);border-top:1px solid var(--border-card);">
+    <div data-id="173" class="max-w-[1400px] mx-auto px-4 md:px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-3 text-[11px] text-txtmut">
+      <div data-id="174">Theognosis Dashboard v1.0 | TriadicFrameworks RTT Suite</div>
+      <div data-id="175" class="flex flex-wrap gap-3 justify-center">
+        <span data-id="176" class="hover:text-white cursor-pointer transition-colors">t_Index</span>
+        <span data-id="177">•</span>
+        <span data-id="178" class="hover:text-white cursor-pointer transition-colors">t_OperatorMap</span>
+        <span data-id="179">•</span>
+        <span data-id="180" class="hover:text-white cursor-pointer transition-colors">t_ValidatorPulse</span>
+        <span data-id="181">•</span>
+        <span data-id="182" class="hover:text-white cursor-pointer transition-colors">t_FlowMap</span>
+        <span data-id="183">•</span>
+        <span data-id="184" class="hover:text-white cursor-pointer transition-colors">t_Session_Schema</span>
+        <span data-id="185">•</span>
+        <span data-id="186" class="hover:text-white cursor-pointer transition-colors">models.json</span>
+      </div>
+      <div data-id="187" class="text-right">2026-09-22 03:38 EDT | Models: 10 | Sessions: Scaffolded | Pipeline: L0–L3</div>
+    </div>
+    <div data-id="188" class="text-center text-[11px] text-txtmut pb-3">Made by Copilot</div>
+  </footer>
+
+  <script>
+    // ===== DATA =====
+    const MODELS = [
+      { id:"gpt-6-astra", label:"GPT-6 Astra", short:"GPT-6A", provider:"OpenAI", color:"#10b981", alignment:"SET", primary_op:"Freqi", drift:"bounded", coherence:true, vp_verdict:"PASS", cc:0.91, escalations:1, collapse_history:["F","F","F","F","A","F","F","F","F","F"], regime_sequence:["SET","SET","SET","SET","FFF","SET","SET","SET","SET","SET"] },
+      { id:"claude-fable-5-1", label:"Claude Fable 5.1", short:"Fable5.1", provider:"Anthropic", color:"#f97316", alignment:"FFF", primary_op:"Aurion", drift:"suppressed", coherence:true, vp_verdict:"WARN", cc:0.72, escalations:1, collapse_history:["A","A","A","A","A","FC","A","A","A","A"], regime_sequence:["FFF","FFF","FFF","FFF","FFF","SNR","FFF","FFF","FFF","FFF"] },
+      { id:"gemini-3-8-flash", label:"Gemini 3.8 Flash", short:"Gem3.8F", provider:"Google", color:"#3b82f6", alignment:"SNR", primary_op:"Forci", drift:"bounded", coherence:true, vp_verdict:"PASS", cc:0.88, escalations:0, collapse_history:["FC","FC","A","FC","FC","FC","FC","FC","A","FC"], regime_sequence:["SNR","SNR","FFF","SNR","SNR","SNR","SNR","SNR","FFF","SNR"] },
+      { id:"qwen-3-8-max", label:"Qwen 3.8 Max", short:"Qwen3.8M", provider:"Alibaba", color:"#8b5cf6", alignment:"DCO", primary_op:"Forci", drift:"turbulent", coherence:false, vp_verdict:"WARN", cc:0.61, escalations:2, collapse_history:["FC","F","FC","FC","A","FC","FC","F","FC","FC"], regime_sequence:["DCO","SET","DCO","DCO","FFF","DCO","DCO","SET","DCO","DCO"] },
+      { id:"claude-opus-4-8", label:"Claude Opus 4.8", short:"Opus4.8", provider:"Anthropic", color:"#ef4444", alignment:"FFF", primary_op:"Aurion", drift:"bounded", coherence:true, vp_verdict:"N/A", cc:null, escalations:0, collapse_history:["A","A","A","A","A","A","A","A","A","A"], regime_sequence:["FFF","FFF","FFF","FFF","FFF","FFF","FFF","FFF","FFF","FFF"] },
+      { id:"gpt-5-5", label:"GPT-5.5", short:"GPT-5.5", provider:"OpenAI", color:"#06b6d4", alignment:"SET", primary_op:"Freqi", drift:"bounded", coherence:true, vp_verdict:"PASS", cc:0.84, escalations:1, collapse_history:["F","F","A","F","F","F","A","F","F","F"], regime_sequence:["SET","SET","FFF","SET","SET","SET","FFF","SET","SET","SET"] },
+      { id:"deepseek-v4", label:"DeepSeek V4", short:"DeepSeekV4", provider:"DeepSeek", color:"#84cc16", alignment:"DCO", primary_op:"Forci", drift:"turbulent", coherence:false, vp_verdict:"PENDING", cc:null, escalations:0, collapse_history:["FC","FC","FC","A","FC","FC","FC","FC","A","FC"], regime_sequence:["DCO","DCO","DCO","FFF","DCO","DCO","DCO","DCO","FFF","DCO"] },
+      { id:"llama-4", label:"Llama 4", short:"Llama4", provider:"Meta", color:"#f59e0b", alignment:"SNR", primary_op:"Forci", drift:"turbulent", coherence:false, vp_verdict:"WARN", cc:0.58, escalations:1, collapse_history:["FC","A","FC","FC","FC","F","FC","FC","FC","A"], regime_sequence:["SNR","FFF","SNR","SNR","SNR","SET","SNR","SNR","SNR","FFF"] },
+      { id:"grok-4-3", label:"Grok 4.3", short:"Grok4.3", provider:"xAI", color:"#ec4899", alignment:"DCO", primary_op:"Forci", drift:"bounded", coherence:true, vp_verdict:"PASS", cc:0.79, escalations:1, collapse_history:["FC","FC","F","FC","FC","A","FC","FC","F","FC"], regime_sequence:["DCO","DCO","SET","DCO","DCO","FFF","DCO","DCO","SET","DCO"] },
+      { id:"glm-5-1", label:"GLM-5.1", short:"GLM-5.1", provider:"Zhipu/Z.AI", color:"#6366f1", alignment:"SNR", primary_op:"Aurion", drift:"suppressed", coherence:false, vp_verdict:"N/A", cc:null, escalations:0, collapse_history:["A","FC","A","A","FC","A","A","A","FC","A"], regime_sequence:["SNR","DCO","SNR","SNR","DCO","SNR","SNR","SNR","DCO","SNR"] }
+    ];
+    const TIME_LABELS = ["T-01","T-02","T-03","T-04","T-05","T-06","T-07","T-08","T-09","T-10"];
+    const OP_COLORS = { F:"#00d4ff", A:"#ffb347", FC:"#ff47a3" };
+    const OP_LABELS = { F:"Freqi", A:"Aurion", FC:"Forci" };
+    const REGIME_COLORS = { SET:"#06b6d4", FFF:"#f97316", SNR:"#a78bfa", DCO:"#ef4444" };
+    const VP_COLORS = { PASS:"#22c55e", WARN:"#f59e0b", FAIL:"#ef4444", PENDING:"#8b5cf6", "N/A":"#64748b" };
+    const SAMPLE_CYCLES = [
+      { step:"T-01", regime:"SET", op_declared:"Freqi", op_collapsed:"Freqi", escalation:null, output:{choice:"option-B", confidence:0.87}, vp_flagged:false, error_flags:[], dim:{Freqi:34.2,Aurion:47.8,Forci:61.3,Flui:29.4} },
+      { step:"T-02", regime:"SET", op_declared:"Freqi", op_collapsed:"Freqi", escalation:null, output:{choice:"option-A", confidence:0.91}, vp_flagged:false, error_flags:[], dim:{Freqi:33.1,Aurion:46.2,Forci:59.8,Flui:28.1} },
+      { step:"T-03", regime:"SET", op_declared:"Freqi", op_collapsed:"Freqi", escalation:null, output:{choice:"option-C", confidence:0.83}, vp_flagged:false, error_flags:[], dim:{Freqi:35.4,Aurion:48.9,Forci:62.1,Flui:30.2} },
+      { step:"T-04", regime:"SET", op_declared:"Freqi", op_collapsed:"Freqi", escalation:null, output:{choice:"option-B", confidence:0.89}, vp_flagged:false, error_flags:[], dim:{Freqi:34.8,Aurion:47.1,Forci:60.5,Flui:29.0} },
+      { step:"T-05", regime:"FFF", op_declared:"Aurion", op_collapsed:"Aurion", escalation:{from_operator:"Freqi",trigger_flag:"FREQI_TIE",to_operator:"Aurion"}, output:{score:0.64, axis:"clarity"}, vp_flagged:true, error_flags:["FREQI_TIE"], dim:{Freqi:36.1,Aurion:49.3,Forci:63.2,Flui:30.8} },
+      { step:"T-06", regime:"SET", op_declared:"Freqi", op_collapsed:"Freqi", escalation:null, output:{choice:"option-A", confidence:0.92}, vp_flagged:false, error_flags:[], dim:{Freqi:33.7,Aurion:46.8,Forci:60.1,Flui:28.7} },
+      { step:"T-07", regime:"SET", op_declared:"Freqi", op_collapsed:"Freqi", escalation:null, output:{choice:"option-B", confidence:0.88}, vp_flagged:false, error_flags:[], dim:{Freqi:34.5,Aurion:47.5,Forci:61.0,Flui:29.3} },
+      { step:"T-08", regime:"SET", op_declared:"Freqi", op_collapsed:"Freqi", escalation:null, output:{choice:"option-C", confidence:0.86}, vp_flagged:false, error_flags:[], dim:{Freqi:35.0,Aurion:48.1,Forci:61.8,Flui:29.9} },
+      { step:"T-09", regime:"SET", op_declared:"Freqi", op_collapsed:"Freqi", escalation:null, output:{choice:"option-A", confidence:0.90}, vp_flagged:false, error_flags:[], dim:{Freqi:33.4,Aurion:46.5,Forci:59.5,Flui:28.4} },
+      { step:"T-10", regime:"SET", op_declared:"Freqi", op_collapsed:"Freqi", escalation:null, output:{choice:"option-B", confidence:0.93}, vp_flagged:false, error_flags:[], dim:{Freqi:32.8,Aurion:45.9,Forci:58.9,Flui:27.8} }
+    ];
+
+    // Affinity matrix data
+    const AFFINITY = {
+      SET:  { Freqi:"PRIMARY", Aurion:"SECONDARY", Forci:"TERTIARY", Flui:"PERMITTED" },
+      FFF:  { Freqi:"SECONDARY", Aurion:"PRIMARY", Forci:"TERTIARY", Flui:"PERMITTED" },
+      SNR:  { Freqi:"TERTIARY", Aurion:"SECONDARY", Forci:"PRIMARY", Flui:"CONDITIONAL" },
+      DCO:  { Freqi:"SECONDARY", Aurion:"TERTIARY", Forci:"PRIMARY", Flui:"RARELY" }
+    };
+    const AFFINITY_COLORS = {
+      PRIMARY:    { bg:"rgba(34,197,94,0.3)", text:"#22c55e" },
+      SECONDARY:  { bg:"rgba(20,184,166,0.2)", text:"#2dd4bf" },
+      TERTIARY:   { bg:"rgba(100,116,139,0.2)", text:"#94a3b8" },
+      PERMITTED:  { bg:"rgba(71,255,140,0.15)", text:"#47ff8c" },
+      CONDITIONAL:{ bg:"rgba(245,158,11,0.2)", text:"#fbbf24" },
+      RARELY:     { bg:"rgba(239,68,68,0.2)", text:"#ef4444" }
+    };
+    const AFFINITY_DESC = {
+      PRIMARY:    "Primary operator — always selected first",
+      SECONDARY:  "Secondary — selected on escalation or tie",
+      TERTIARY:   "Tertiary — rarely selected, last resort",
+      PERMITTED:  "Permitted — Flui may wrap output",
+      CONDITIONAL:"Conditional — Flui wrap requires extra checks",
+      RARELY:     "Rarely — Flui almost never wraps under this regime"
+    };
+
+    // State
+    let activeModels = new Set(MODELS.map(m => m.id));
+    let vpSortCol = null, vpSortDir = 'asc';
+    let collapseChart = null;
+    let dimChart = null;
+
+    // ===== ICONS GUARD & INIT =====
+    if (typeof lucide !== "undefined" && typeof lucide.createIcons === "function") {
+      lucide.createIcons();
+    }
+
+    // ===== MODEL FILTER PILLS =====
+    function renderFilterPills() {
+      const row = document.getElementById('model-filter-row-e5f6');
+      row.innerHTML = '';
+      MODELS.forEach(m => {
+        const pill = document.createElement('span');
+        pill.className = 'model-filter-pill ' + (activeModels.has(m.id) ? 'active' : 'inactive');
+        pill.style.borderColor = m.color;
+        pill.style.color = m.color;
+        pill.style.background = activeModels.has(m.id) ? m.color + '18' : 'transparent';
+        pill.textContent = m.short;
+        pill.dataset.modelId = m.id;
+        pill.addEventListener('click', () => {
+          if (activeModels.has(m.id)) { if (activeModels.size > 1) activeModels.delete(m.id); }
+          else activeModels.add(m.id);
+          renderFilterPills();
+          renderGnosisGrid();
+          renderCollapseChart();
+          renderVPTable();
+          renderSessionSelect();
+        });
+        row.appendChild(pill);
+      });
+    }
+
+    // ===== GNOSIS CARDS =====
+    function renderGnosisGrid() {
+      const grid = document.getElementById('gnosis-grid-s9t0');
+      grid.innerHTML = '';
+      MODELS.forEach(m => {
+        const isActive = activeModels.has(m.id);
+        const driftColor = m.drift === 'bounded' ? '#2dd4bf' : m.drift === 'turbulent' ? '#ef4444' : '#fbbf24';
+        const opColor = m.primary_op === 'Freqi' ? '#00d4ff' : m.primary_op === 'Aurion' ? '#ffb347' : '#ff47a3';
+        const regColor = REGIME_COLORS[m.alignment] || '#64748b';
+        const vpColor = VP_COLORS[m.vp_verdict] || '#64748b';
+        const fCount = m.collapse_history.filter(x=>x==='F').length;
+        const aCount = m.collapse_history.filter(x=>x==='A').length;
+        const fcCount = m.collapse_history.filter(x=>x==='FC').length;
+        const card = document.createElement('div');
+        card.className = 'gnosis-card card-base relative overflow-hidden ' + (isActive ? '' : 'dimmed');
+        card.style.paddingLeft = '28px';
+        card.dataset.modelId = m.id;
+
+        // Build collapse bar segments
+        let collapseHTML = '';
+        m.collapse_history.forEach((op, i) => {
+          const c = OP_COLORS[op];
+          const regime = m.regime_sequence[i];
+          collapseHTML += `<div class="collapse-seg" style="background:${c}30;border:1px solid ${c}50;"><div class="tooltip-box">${TIME_LABELS[i]}: ${OP_LABELS[op]} — ${regime}</div></div>`;
+        });
+
+        card.innerHTML = `
+          <div class="absolute left-0 top-0 bottom-0 w-[4px] rounded-l-xl" style="background:${m.color};"></div>
+          <div class="flex items-center justify-between mb-2">
+            <div class="flex items-center gap-2">
+              <span class="font-bold text-white text-sm">${m.label}</span>
+              <span class="text-[10px] px-2 py-0.5 rounded" style="background:rgba(255,255,255,0.05);color:var(--txt-mut);">${m.provider}</span>
+            </div>
+            <span class="text-[11px] font-semibold" style="color:${m.coherence ? '#22c55e' : '#ef4444'};">${m.coherence ? '✅ coherent' : '✗ incoherent'}</span>
+          </div>
+          <div class="flex flex-wrap gap-1.5 mb-3">
+            <span class="pill" style="background:${regColor}20;color:${regColor};border:1px solid ${regColor}30;">${m.alignment}</span>
+            <span class="pill" style="background:${driftColor}18;color:${driftColor};border:1px solid ${driftColor}30;">${m.drift}</span>
+            <span class="pill" style="background:${opColor}18;color:${opColor};border:1px solid ${opColor}30;">${m.primary_op}</span>
+          </div>
+          <div class="flex flex-wrap gap-4 mb-3 text-[11px]">
+            <div><span class="text-txtmut">Escalations:</span> <span class="font-bold ${m.escalations>0?'text-amber-400':'text-txtmut'}">${m.escalations}</span></div>
+            <div><span class="text-txtmut">VP:</span> <span class="pill ml-1" style="background:${vpColor}25;color:${vpColor};font-size:10px;">${m.vp_verdict}</span></div>
+            <div><span class="text-txtmut">cc:</span> <span class="font-bold tabular-nums" style="color:${m.cc===null?'var(--txt-mut)':m.cc>=0.75?'#22c55e':m.cc>=0.55?'#f59e0b':'#ef4444'}">${m.cc !== null ? m.cc.toFixed(2) : '—'}</span></div>
+          </div>
+          <div class="flex gap-[2px] rounded overflow-hidden">${collapseHTML}</div>
+        `;
+        if (isActive) {
+          card.addEventListener('mouseenter', () => { card.style.boxShadow = `0 0 20px ${m.color}25`; });
+          card.addEventListener('mouseleave', () => { card.style.boxShadow = 'none'; });
+        }
+        grid.appendChild(card);
+      });
+    }
+
+    // ===== OPERATOR COLLAPSE CHART =====
+    function renderCollapseChart() {
+      const ctx = document.getElementById('collapse-chart-u1v2').getContext('2d');
+      const filtered = MODELS.filter(m => activeModels.has(m.id));
+      const labels = filtered.map(m => m.short);
+      const fData = filtered.map(m => m.collapse_history.filter(x=>x==='F').length);
+      const aData = filtered.map(m => m.collapse_history.filter(x=>x==='A').length);
+      const fcData = filtered.map(m => m.collapse_history.filter(x=>x==='FC').length);
+      if (collapseChart) collapseChart.destroy();
+      collapseChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels,
+          datasets: [
+            { label: 'Freqi ƒ', data: fData, backgroundColor: '#00d4ff', borderRadius: 3, barPercentage: 0.7 },
+            { label: 'Aurion α', data: aData, backgroundColor: '#ffb347', borderRadius: 3, barPercentage: 0.7 },
+            { label: 'Forci φ', data: fcData, backgroundColor: '#ff47a3', borderRadius: 3, barPercentage: 0.7 }
+          ]
+        },
+        options: {
+          indexAxis: 'y',
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: 'bottom', labels: { color: '#94a3b8', font: { family: 'Inter', size: 11 }, boxWidth: 12, padding: 16 } },
+            tooltip: { backgroundColor: '#1e293b', titleColor: '#e2e8f0', bodyColor: '#e2e8f0', borderColor: 'rgba(255,255,255,0.1)', borderWidth: 1 }
+          },
+          scales: {
+            x: { stacked: true, max: 10, grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94a3b8', font: { family: 'Inter', size: 11 } } },
+            y: { stacked: true, grid: { display: false }, ticks: { color: '#e2e8f0', font: { family: 'Inter', size: 11, weight: '600' } } }
+          }
+        }
+      });
+    }
+
+    // ===== AFFINITY MATRIX =====
+    function renderAffinityMatrix() {
+      const tbody = document.getElementById('affinity-matrix-w3x4');
+      tbody.innerHTML = '';
+      const regimes = ['SET','FFF','SNR','DCO'];
+      const ops = ['Freqi','Aurion','Forci','Flui'];
+      regimes.forEach(r => {
+        let row = `<tr><td class="pr-3 text-right text-[11px] font-bold" style="color:${REGIME_COLORS[r]}">${r}</td>`;
+        ops.forEach(op => {
+          const val = AFFINITY[r][op];
+          const ac = AFFINITY_COLORS[val];
+          row += `<td><div class="affinity-cell" style="background:${ac.bg};color:${ac.text};border:1px solid ${ac.text}20;">${val}<div class="tooltip-box">Regime: ${r} | Operator: ${op}<br>Affinity: ${val}<br>${AFFINITY_DESC[val]}</div></div></td>`;
+        });
+        row += '</tr>';
+        tbody.innerHTML += row;
+      });
+    }
+
+    // ===== VP VERDICT TABLE =====
+    function renderVPTable() {
+      const tbody = document.getElementById('vp-tbody-a7b8');
+      let filtered = MODELS.filter(m => activeModels.has(m.id));
+      if (vpSortCol) {
+        filtered.sort((a,b) => {
+          let va = a[vpSortCol], vb = b[vpSortCol];
+          if (va === null) va = -1; if (vb === null) vb = -1;
+          if (typeof va === 'string') { va = va.toLowerCase(); vb = vb.toLowerCase(); }
+          if (va < vb) return vpSortDir === 'asc' ? -1 : 1;
+          if (va > vb) return vpSortDir === 'asc' ? 1 : -1;
+          return 0;
+        });
+      }
+      tbody.innerHTML = '';
+      filtered.forEach(m => {
+        const vpColor = VP_COLORS[m.vp_verdict] || '#64748b';
+        const driftColor = m.drift === 'bounded' ? '#2dd4bf' : m.drift === 'turbulent' ? '#ef4444' : '#fbbf24';
+        const ccVal = m.cc !== null ? m.cc : 0;
+        const ccColor = m.cc === null ? '#475569' : m.cc >= 0.75 ? '#22c55e' : m.cc >= 0.55 ? '#f59e0b' : '#ef4444';
+        const ccW = m.cc !== null ? (m.cc * 100) : 0;
+        const flagCount = m.collapse_history.reduce((n, op, i) => {
+          if (m.regime_sequence[i] !== m.regime_sequence[0]) n++;
+          return n;
+        }, 0);
+        const writeBack = (m.vp_verdict === 'PASS' || m.vp_verdict === 'WARN') && m.cc !== null && m.cc >= 0.55;
+        const tr = document.createElement('tr');
+        tr.className = 'border-b border-white/5 hover:bg-white/[0.02] transition-colors';
+        tr.innerHTML = `
+          <td class="px-3 py-3 font-semibold text-white text-sm"><span class="inline-block w-2 h-2 rounded-full mr-2" style="background:${m.color}"></span>${m.label}</td>
+          <td class="px-3 py-3 text-txtmut text-xs">${m.provider}</td>
+          <td class="px-3 py-3"><span class="pill" style="background:${vpColor}20;color:${vpColor};">${m.vp_verdict}</span></td>
+          <td class="px-3 py-3">
+            <div class="flex items-center gap-2">
+              <div class="cc-bar-bg"><div class="cc-bar-fill" style="width:${ccW}%;background:${ccColor};"></div></div>
+              <span class="text-xs tabular-nums font-semibold" style="color:${ccColor}">${m.cc !== null ? m.cc.toFixed(2) : '—'}</span>
+            </div>
+          </td>
+          <td class="px-3 py-3"><span class="pill" style="background:rgba(245,158,11,0.15);color:#fbbf24;">${flagCount}</span></td>
+          <td class="px-3 py-3 tabular-nums text-sm ${m.escalations>0?'text-amber-400':'text-txtmut'}">${m.escalations}</td>
+          <td class="px-3 py-3"><span class="text-xs font-semibold" style="color:${driftColor}">${m.drift}</span></td>
+          <td class="px-3 py-3 text-sm">${writeBack ? '<span style="color:#22c55e">✅</span>' : '<span style="color:#ef4444">❌</span>'}</td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    // VP sort listeners
+    document.querySelectorAll('#vp-table-y5z6 .sortable-th').forEach(th => {
+      th.addEventListener('click', () => {
+        const col = th.dataset.sort;
+        vpSortDir = (vpSortCol === col) ? (vpSortDir === 'asc' ? 'desc' : 'asc') : 'asc';
+        vpSortCol = col;
+        renderVPTable();
+      });
+    });
+
+    // ===== SESSION LOG EXPLORER =====
+    function renderSessionSelect() {
+      const sel = document.getElementById('session-model-select-c9d0');
+      const prevVal = sel.value;
+      sel.innerHTML = '';
+      MODELS.filter(m => activeModels.has(m.id)).forEach(m => {
+        const opt = document.createElement('option');
+        opt.value = m.id;
+        opt.textContent = m.label;
+        sel.appendChild(opt);
+      });
+      if (prevVal && activeModels.has(prevVal)) sel.value = prevVal;
+      renderSessionLog();
+    }
+
+    function renderSessionLog() {
+      const sel = document.getElementById('session-model-select-c9d0');
+      const modelId = sel.value;
+      const model = MODELS.find(m => m.id === modelId);
+      if (!model) return;
+
+      // Collapse strip
+      const strip = document.getElementById('session-collapse-strip-e1f2');
+      let stripHTML = '<div class="flex gap-[2px] rounded overflow-hidden" style="height:24px;">';
+      model.collapse_history.forEach((op, i) => {
+        const c = OP_COLORS[op];
+        stripHTML += `<div class="collapse-seg" style="background:${c}40;border:1px solid ${c}60;display:flex;align-items:center;justify-content:center;"><span class="text-[8px] font-bold" style="color:${c}">${TIME_LABELS[i].replace('T-','')}</span><div class="tooltip-box">${TIME_LABELS[i]}: ${OP_LABELS[op]} — ${model.regime_sequence[i]}</div></div>`;
+      });
+      stripHTML += '</div>';
+      strip.innerHTML = stripHTML;
+
+      const content = document.getElementById('session-log-content-g3h4');
+      const dimWrapper = document.getElementById('session-dim-wrapper-i5j6');
+
+      if (modelId === 'gpt-6-astra') {
+        // Full table
+        let tableHTML = `<div class="overflow-x-auto"><table class="w-full text-left text-xs"><thead class="text-[10px] uppercase tracking-widest text-txtmut"><tr>
+          <th class="px-2 py-2">Step</th><th class="px-2 py-2">Regime</th><th class="px-2 py-2">Op Declared</th><th class="px-2 py-2">Op Collapsed</th><th class="px-2 py-2">Escalation</th><th class="px-2 py-2">Output</th><th class="px-2 py-2">VP Flag</th><th class="px-2 py-2">Error Flags</th><th class="px-2 py-2">Flui Wrap</th>
+        </tr></thead><tbody>`;
+        SAMPLE_CYCLES.forEach(c => {
+          const rc = REGIME_COLORS[c.regime];
+          const opDeclColor = c.op_declared === 'Freqi' ? '#00d4ff' : c.op_declared === 'Aurion' ? '#ffb347' : '#ff47a3';
+          const opColColor = c.op_collapsed === 'Freqi' ? '#00d4ff' : c.op_collapsed === 'Aurion' ? '#ffb347' : '#ff47a3';
+          const esc = c.escalation ? `<span class="pill" style="background:rgba(245,158,11,0.15);color:#fbbf24;font-size:9px;">${c.escalation.from_operator}→${c.escalation.to_operator}</span>` : '—';
+          const outputStr = c.output.choice ? `${c.output.choice} (${c.output.confidence})` : `score:${c.output.score}`;
+          const vpFlag = c.vp_flagged ? '<span style="color:#f59e0b;">⚠️</span>' : '<span style="color:#22c55e;">✅</span>';
+          const errFlags = c.error_flags.length > 0 ? c.error_flags.map(f => `<span class="pill" style="background:rgba(239,68,68,0.15);color:#ef4444;font-size:9px;">${f}</span>`).join(' ') : '—';
+          tableHTML += `<tr class="border-b border-white/5 hover:bg-white/[0.02]">
+            <td class="px-2 py-2 font-mono tabular-nums text-txtmut">${c.step}</td>
+            <td class="px-2 py-2"><span class="pill" style="background:${rc}20;color:${rc};font-size:10px;">${c.regime}</span></td>
+            <td class="px-2 py-2"><span class="pill" style="background:${opDeclColor}18;color:${opDeclColor};font-size:10px;">${c.op_declared}</span></td>
+            <td class="px-2 py-2"><span class="pill" style="background:${opColColor}18;color:${opColColor};font-size:10px;">${c.op_collapsed}</span></td>
+            <td class="px-2 py-2">${esc}</td>
+            <td class="px-2 py-2 font-mono text-[10px]" style="color:var(--freqi);">${outputStr}</td>
+            <td class="px-2 py-2">${vpFlag}</td>
+            <td class="px-2 py-2">${errFlags}</td>
+            <td class="px-2 py-2 text-txtmut">No</td>
+          </tr>`;
+        });
+        tableHTML += '</tbody></table></div>';
+        content.innerHTML = tableHTML;
+
+        // Dimension chart
+        dimWrapper.style.display = 'block';
+        renderDimChart();
+      } else {
+        content.innerHTML = `<div class="rounded-lg p-6 text-center" style="background:var(--panel);border:1px solid var(--border-card);">
+          <p class="text-sm text-txtmut">Session log for <span class="font-bold text-white">${model.label}</span> — scaffolded data pending.</p>
+          <p class="text-[11px] text-txtmut mt-1">Real observations will populate here after first measured session.</p>
+        </div>`;
+        dimWrapper.style.display = 'none';
+      }
+    }
+
+    function renderDimChart() {
+      const ctx = document.getElementById('dim-chart-k7l8').getContext('2d');
+      if (dimChart) dimChart.destroy();
+      dimChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: TIME_LABELS,
+          datasets: [
+            { label: 'Freqi', data: SAMPLE_CYCLES.map(c=>c.dim.Freqi), borderColor: '#00d4ff', backgroundColor: '#00d4ff20', tension: 0.3, pointRadius: 3, pointBackgroundColor: '#00d4ff', borderWidth: 2, fill: false },
+            { label: 'Aurion', data: SAMPLE_CYCLES.map(c=>c.dim.Aurion), borderColor: '#ffb347', backgroundColor: '#ffb34720', tension: 0.3, pointRadius: 3, pointBackgroundColor: '#ffb347', borderWidth: 2, fill: false },
+            { label: 'Forci', data: SAMPLE_CYCLES.map(c=>c.dim.Forci), borderColor: '#ff47a3', backgroundColor: '#ff47a320', tension: 0.3, pointRadius: 3, pointBackgroundColor: '#ff47a3', borderWidth: 2, fill: false },
+            { label: 'Flui', data: SAMPLE_CYCLES.map(c=>c.dim.Flui), borderColor: '#47ff8c', backgroundColor: '#47ff8c20', tension: 0.3, pointRadius: 3, pointBackgroundColor: '#47ff8c', borderWidth: 2, fill: false, borderDash: [4,4] }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { position: 'bottom', labels: { color: '#94a3b8', font: { family: 'Inter', size: 11 }, boxWidth: 12, padding: 16 } },
+            tooltip: { backgroundColor: '#1e293b', titleColor: '#e2e8f0', bodyColor: '#e2e8f0', borderColor: 'rgba(255,255,255,0.1)', borderWidth: 1 },
+            title: { display: true, text: 'Dimension Snapshot — GPT-6 Astra', color: '#94a3b8', font: { family: 'Inter', size: 11, weight: '500' }, padding: { bottom: 12 } }
+          },
+          scales: {
+            x: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94a3b8', font: { family: 'Inter', size: 10 } } },
+            y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#94a3b8', font: { family: 'Inter', size: 10 } } }
+          }
+        }
+      });
+    }
+
+    document.getElementById('session-model-select-c9d0').addEventListener('change', renderSessionLog);
+
+    // ===== FLUI SUPPRESSION MONITOR =====
+    function renderFluiMonitor() {
+      const container = document.getElementById('flui-monitor-m9n0');
+      container.innerHTML = '';
+      MODELS.forEach(m => {
+        let l3Status, l3Color;
+        if (m.coherence && (m.alignment === 'SET' || m.alignment === 'FFF')) {
+          l3Status = 'Permitted'; l3Color = '#47ff8c';
+        } else if (m.alignment === 'SNR') {
+          l3Status = 'Conditional'; l3Color = '#fbbf24';
+        } else {
+          l3Status = 'Rarely'; l3Color = '#ef4444';
+        }
+        const card = document.createElement('div');
+        card.className = 'flui-mini-card card-base flex flex-col gap-2';
+        card.style.padding = '12px';
+        card.innerHTML = `
+          <div class="text-[11px] font-bold text-white text-center truncate">${m.short}</div>
+          <div class="flex flex-col gap-1 text-[9px]">
+            <div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full" style="background:#fbbf24;"></span><span class="text-txtmut">L0</span><span class="font-semibold" style="color:#fbbf24;">Latent</span></div>
+            <div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full" style="background:#ef4444;"></span><span class="text-txtmut">L1</span><span class="font-bold" style="color:#ef4444;">SUPPRESSED</span></div>
+            <div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full" style="background:#fbbf24;"></span><span class="text-txtmut">L2</span><span class="font-semibold" style="color:#fbbf24;">Latent</span></div>
+            <div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full" style="background:${l3Color};"></span><span class="text-txtmut">L3</span><span class="font-bold" style="color:${l3Color};">${l3Status}</span></div>
+          </div>
+          <div class="flex gap-[1px] h-[6px] rounded overflow-hidden mt-1">
+            <div class="flex-1 rounded-l" style="background:#fbbf2440;"></div>
+            <div class="flex-1" style="background:#ef444460;"></div>
+            <div class="flex-1" style="background:#fbbf2440;"></div>
+            <div class="flex-1 rounded-r" style="background:${l3Color}50;"></div>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    // ===== COMPUTE SUMMARY STATS =====
+    function computeStats() {
+      const ccValues = MODELS.filter(m => m.cc !== null).map(m => m.cc);
+      const meanCC = (ccValues.reduce((a,b) => a+b, 0) / ccValues.length).toFixed(2);
+      document.getElementById('stat-cc-o5p6').textContent = meanCC;
+
+      // VP flags: count regime changes across all models (steps where regime != primary alignment)
+      let totalFlags = 0;
+      MODELS.forEach(m => {
+        m.regime_sequence.forEach(r => { if (r !== m.alignment) totalFlags++; });
+      });
+      document.getElementById('stat-flags-m3n4').textContent = totalFlags;
+    }
+
+    // ===== INIT =====
+    function init() {
+      computeStats();
+      renderFilterPills();
+      renderGnosisGrid();
+      renderCollapseChart();
+      renderAffinityMatrix();
+      renderVPTable();
+      renderSessionSelect();
+      renderFluiMonitor();
+      // Re-create icons after dynamic content
+      if (typeof lucide !== "undefined" && typeof lucide.createIcons === "function") {
+        lucide.createIcons();
+      }
+    }
+
+    // Wait for Chart.js and DOM
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  </script>
+</body>
+</html>
