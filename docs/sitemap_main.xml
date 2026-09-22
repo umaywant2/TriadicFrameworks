@@ -113125,12 +113125,6 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://www.triadicframeworks.org/docs/docs/quad-engine/SKILL.md</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
     <loc>https://www.triadicframeworks.org/docs/domain_tool_primers/README.md</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
@@ -128054,6 +128048,12 @@
   </url>
   <url>
     <loc>https://www.triadicframeworks.org/docs/public_support/visitor_ritual.md</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.triadicframeworks.org/docs/quad_engine/SKILL.md</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
