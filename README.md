@@ -1,6 +1,6 @@
 ---
 status: generated
-version: "0.10"
+version: "0.11"
 description: "TriadicFrameworks documentation for Resonance-Time Theory, triadic system modeling, and canon-aligned AI and research tools."
 ---
 
@@ -20,20 +20,28 @@ If you searched for a definition, start with [Core Terms: Structure, Regime, and
 
 ## Choose a path
 
-- **Learn the framework:** [About TriadicFrameworks](https://docs.triadicframeworks.org/docs/ABOUT)
-- **Find core definitions:** [Core Terms glossary](https://docs.triadicframeworks.org/docs/GLOSSARY)
-- **Create a module:** [RTT Starter Kit](https://docs.triadicframeworks.org/docs/corpus/starter)
-- **Understand the canon:** [Expectations Module](https://docs.triadicframeworks.org/docs/Expectations/Landing)
-- **Explore the theory:** [Resonance-Time Theory](https://docs.triadicframeworks.org/docs/rtt/)
-- **Browse field theory:** [Field Theory (FFT)](https://docs.triadicframeworks.org/docs/Framework_Field_Theory/)
-- **Explore AI Resonance Seed:** [AI Resonance Seed module](https://docs.triadicframeworks.org/docs/AI_Resonance_Seed/)
-- **Explore AI Resonance Seed dashboards:** [Dashboard introduction](https://docs.triadicframeworks.org/docs/AI_Resonance_Seed/dashboards/introduction)
-- **Explore Coeus:** [Coeus multi-agent AI research sandbox](https://docs.triadicframeworks.org/docs/Coeus/README)
-- **Use the API material:** [RTT API (Beta)](https://docs.triadicframeworks.org/docs/api/rtt/README)
+### Learn the framework
+
+- [About TriadicFrameworks](https://docs.triadicframeworks.org/docs/ABOUT) — get the plain-language orientation.
+- [Core Terms glossary](https://docs.triadicframeworks.org/docs/GLOSSARY) — find definitions for Structure, Regime, Operator, Coherence, Drift, RTT, AI Resonance Seed, and Coeus.
+- [Expectations Module](https://docs.triadicframeworks.org/docs/Expectations/Landing) — follow the broader learning path.
+
+### Build and integrate
+
+- [RTT Starter Kit](https://docs.triadicframeworks.org/docs/corpus/starter) — create a first agentic module.
+- [RTT API (Beta)](https://docs.triadicframeworks.org/docs/api/rtt/README) — use the API material.
+- [Coeus multi-agent AI research sandbox](https://docs.triadicframeworks.org/docs/Coeus/README) — explore the Coeus module in TriadicFrameworks, not cryptocurrency software.
+
+### Explore modules and theory
+
+- [Resonance-Time Theory](https://docs.triadicframeworks.org/docs/rtt/) — explore RTT.
+- [Field Theory (FFT)](https://docs.triadicframeworks.org/docs/Framework_Field_Theory/) — explore the project's Field Theory module.
+- [AI Resonance Seed module](https://docs.triadicframeworks.org/docs/AI_Resonance_Seed/) — explore AI Resonance Seed.
+- [AI Resonance Seed dashboards](https://docs.triadicframeworks.org/docs/AI_Resonance_Seed/dashboards/introduction) — open the dashboard introduction and choose Validator Status, Remix Lineage, or Glyphstream Map.
 
 ## What the repository contains
 
-The repository is organized as independent modules. It includes theory, examples, simulations, operator grammar, cross-domain maps, and tools. The links above provide a stable orientation route for first-time readers, while module indexes lead to deeper material.
+The repository is organized as independent modules. The links above provide a stable orientation route for first-time readers, while module indexes lead to deeper material.
 
 The project serves two audiences:
 
