@@ -3,4 +3,4 @@
   Link: </.well-known/agent-skills/index.json>; rel="agent-skills"
   Link: </.well-known/mcp/server-card.json>; rel="mcp-server"
   Link: </openapi>; rel="service-desc"
-  Link: </docs>; rel="service-doc"
+  Link: </>; rel="service-doc"
