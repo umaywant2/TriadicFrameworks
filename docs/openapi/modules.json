@@ -1,0 +1,40 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "TriadicFrameworks Modules API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/modules": {
+      "get": {
+        "summary": "List all modules",
+        "responses": {
+          "200": {
+            "description": "Module list"
+          }
+        }
+      }
+    },
+    "/api/modules/{id}": {
+      "get": {
+        "summary": "Get module metadata",
+        "responses": {
+          "200": {
+            "description": "Module metadata"
+          }
+        }
+      }
+    },
+    "/api/modules/health": {
+      "get": {
+        "summary": "Health check",
+        "responses": {
+          "200": {
+            "description": "Modules API health"
+          }
+        }
+      }
+    }
+  }
+}
+

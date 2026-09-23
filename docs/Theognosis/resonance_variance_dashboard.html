@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resonance-Variance Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+        }
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --bg-body: #080d1a;
+      --bg-card: #0f1628;
+      --bg-panel: #161e35;
+      --cyan: #00d4ff;
+      --amber: #ffb347;
+      --magenta: #ff47a3;
+      --lime: #47ff8c;
+      --purple: #c084fc;
+      --border-subtle: rgba(255,255,255,0.07);
+      --text-primary: #f1f5f9;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg-body); color: var(--text-primary); font-family: 'Inter', system-ui, sans-serif; font-variant-numeric: tabular-nums; }
+    .card { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 12px; transition: transform 0.2s, box-shadow 0.2s; }
+    .card:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,212,255,0.06); }
+    .panel { background: var(--bg-panel); border: 1px solid var(--border-subtle); border-radius: 12px; }
+    .section-header { font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); padding-left: 12px; font-weight: 600; }
+    .accent-cyan { border-left: 3px solid var(--cyan); }
+    .accent-amber { border-left: 3px solid var(--amber); }
+    .accent-magenta { border-left: 3px solid var(--magenta); }
+    .accent-lime { border-left: 3px solid var(--lime); }
+    .accent-purple { border-left: 3px solid var(--purple); }
+    .accent-white { border-left: 3px solid #ffffff; }
+    .pill { display: inline-flex; align-items: center; gap: 6px; padding: 5px 14px; border-radius: 9999px; font-size: 12px; font-weight: 500; cursor: pointer; border: 1px solid var(--border-subtle); background: var(--bg-panel); transition: all 0.2s; user-select: none; }
+    .pill.active { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.2); }
+    .pill:hover { background: rgba(255,255,255,0.1); }
+    .pill .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .dim-btn { padding: 5px 14px; border-radius: 9999px; font-size: 12px; font-weight: 600; cursor: pointer; border: 1px solid var(--border-subtle); background: var(--bg-panel); transition: all 0.2s; user-select: none; }
+    .dim-btn.active { border-color: currentColor; background: rgba(255,255,255,0.06); }
+    .dim-btn:hover { background: rgba(255,255,255,0.08); }
+    .pulse { width: 8px; height: 8px; border-radius: 50%; background: #10b981; animation: pulse-anim 2s infinite; display: inline-block; }
+    @keyframes pulse-anim { 0%,100% { opacity:1; box-shadow:0 0 0 0 rgba(16,185,129,0.6); } 50% { opacity:0.7; box-shadow:0 0 0 6px rgba(16,185,129,0); } }
+    .kpi-value { font-size: 28px; font-weight: 700; line-height: 1.1; }
+    .kpi-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); margin-top: 4px; }
+    .kpi-delta { font-size: 11px; font-weight: 600; margin-top: 4px; }
+    table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    th { text-align: left; font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); padding: 8px 12px; border-bottom: 1px solid var(--border-subtle); font-weight: 600; }
+    td { padding: 8px 12px; border-bottom: 1px solid rgba(255,255,255,0.04); vertical-align: middle; }
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 9999px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+    .badge-teal { background: rgba(20,184,166,0.15); color: #2dd4bf; }
+    .badge-red { background: rgba(239,68,68,0.15); color: #f87171; }
+    .badge-amber { background: rgba(245,158,11,0.15); color: #fbbf24; }
+    .badge-green { background: rgba(16,185,129,0.15); color: #34d399; }
+    .badge-magenta { background: rgba(255,71,163,0.15); color: #ff47a3; }
+    .badge-cyan { background: rgba(0,212,255,0.15); color: #00d4ff; }
+    .badge-purple { background: rgba(192,132,252,0.15); color: #c084fc; }
+    .badge-low { background: rgba(16,185,129,0.15); color: #34d399; }
+    .badge-med { background: rgba(245,158,11,0.15); color: #fbbf24; }
+    .badge-high { background: rgba(239,68,68,0.15); color: #f87171; }
+    .badge-critical { background: rgba(255,71,163,0.2); color: #ff47a3; }
+    .sticky-nav { position: sticky; top: 0; z-index: 50; background: rgba(8,13,26,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-subtle); }
+    .sticky-nav a { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-muted); padding: 10px 14px; display: inline-block; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+    .sticky-nav a:hover { color: var(--text-primary); }
+    .heatmap-cell { display: flex; align-items: center; justify-content: center; border-radius: 6px; font-size: 13px; font-weight: 600; min-height: 44px; position: relative; cursor: default; transition: transform 0.15s; }
+    .heatmap-cell:hover { transform: scale(1.05); z-index: 2; }
+    .tooltip-custom { position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: var(--bg-panel); color: var(--text-primary); padding: 6px 10px; border-radius: 8px; font-size: 11px; white-space: nowrap; pointer-events: none; opacity: 0; transition: opacity 0.15s; border: 1px solid var(--border-subtle); z-index: 10; }
+    .heatmap-cell:hover .tooltip-custom { opacity: 1; }
+    .mini-bar { height: 6px; border-radius: 3px; background: rgba(0,212,255,0.2); }
+    .mini-bar-fill { height: 100%; border-radius: 3px; background: var(--cyan); }
+    .sparkline { display: inline-flex; align-items: flex-end; gap: 1px; height: 16px; }
+    .sparkline span { width: 3px; border-radius: 1px; display: block; }
+    @media (max-width: 767px) {
+      .kpi-value { font-size: 22px; }
+      .side-by-side { flex-direction: column !important; }
+    }
+    .gradient-footer { height: 1px; background: linear-gradient(90deg, transparent, var(--cyan), var(--amber), var(--magenta), var(--lime), var(--purple), transparent); margin-bottom: 16px; }
+    /* Mobile nav */
+    #mobile-nav-menu { display: none; }
+    #mobile-nav-menu.open { display: flex; }
+  </style>
+</head>
+<body data-id="0">
+  <app-icon data-id="1" hidden data-icon="activity" data-palette="Dark"></app-icon>
+
+  <!-- STICKY MINI-NAV -->
+  <nav data-id="2" class="sticky-nav hidden md:block">
+    <div data-id="3" class="max-w-7xl mx-auto px-4 flex items-center overflow-x-auto">
+      <a data-id="4" href="#overview">Overview</a>
+      <a data-id="5" href="#entropy">Entropy</a>
+      <a data-id="6" href="#wobble">Wobble</a>
+      <a data-id="7" href="#fliprate">Flip-Rate</a>
+      <a data-id="8" href="#drift">Drift</a>
+      <a data-id="9" href="#heatmap">Variance Map</a>
+    </div>
+  </nav>
+  <!-- Mobile nav button -->
+  <div data-id="10" class="md:hidden sticky top-0 z-50 flex items-center justify-between px-4 py-2" style="background:rgba(8,13,26,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.07);">
+    <span data-id="11" style="font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);">Sections</span>
+    <button data-id="12" id="mobile-nav-btn" class="p-2" style="color:var(--text-secondary);">
+      <svg data-id="13" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line data-id="14" x1="3" y1="6" x2="21" y2="6"/><line data-id="15" x1="3" y1="12" x2="21" y2="12"/><line data-id="16" x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  <div data-id="17" id="mobile-nav-menu" class="fixed inset-0 z-[60] flex-col p-6" style="background:rgba(8,13,26,0.98);">
+    <button data-id="18" id="mobile-nav-close" class="self-end p-2 mb-4" style="color:var(--text-secondary);">
+      <svg data-id="19" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line data-id="20" x1="18" y1="6" x2="6" y2="18"/><line data-id="21" x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <a data-id="22" href="#overview" class="block py-3 text-sm" style="color:var(--text-secondary);">Overview</a>
+    <a data-id="23" href="#entropy" class="block py-3 text-sm" style="color:var(--text-secondary);">Entropy</a>
+    <a data-id="24" href="#wobble" class="block py-3 text-sm" style="color:var(--text-secondary);">Wobble</a>
+    <a data-id="25" href="#fliprate" class="block py-3 text-sm" style="color:var(--text-secondary);">Flip-Rate</a>
+    <a data-id="26" href="#drift" class="block py-3 text-sm" style="color:var(--text-secondary);">Drift</a>
+    <a data-id="27" href="#heatmap" class="block py-3 text-sm" style="color:var(--text-secondary);">Variance Map</a>
+  </div>
+
+  <main data-id="28" class="max-w-7xl mx-auto px-4 md:px-6 pb-12">
+
+    <!-- HEADER -->
+    <header data-id="29" class="pt-6 pb-4">
+      <div data-id="30" class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+        <div data-id="31">
+          <h1 data-id="32" class="text-xl md:text-2xl font-bold tracking-tight" style="color:#fff;">RESONANCE–VARIANCE DASHBOARD</h1>
+          <p data-id="33" class="text-xs mt-1" style="color:var(--text-muted);">RTT Variance Analysis Suite · Theognosis v4.2 · Session 2026-09-22</p>
+        </div>
+        <div data-id="34" class="flex items-center gap-3 flex-shrink-0">
+          <div data-id="35" class="panel px-3 py-1.5 flex items-center gap-2" style="font-size:11px;color:var(--text-secondary);">
+            <span data-id="36" class="pulse"></span>
+            <span data-id="37">LIVE</span>
+            <span data-id="38" style="color:var(--text-muted);">·</span>
+            <span data-id="39" style="color:var(--text-muted);">Nawder</span>
+            <span data-id="40" style="color:var(--text-muted);">·</span>
+            <span data-id="41" style="color:var(--text-muted);">03:45 EDT</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Model toggle pills -->
+      <div data-id="42" id="model-pills" class="flex flex-wrap gap-2 mt-5"></div>
+
+      <!-- Dimension toggles -->
+      <div data-id="43" class="flex flex-wrap items-center gap-2 mt-3">
+        <div data-id="44" id="dim-btns" class="flex flex-wrap gap-2"></div>
+        <button data-id="45" id="reset-filters" class="text-xs ml-2" style="color:var(--cyan);cursor:pointer;background:none;border:none;font-family:inherit;">Reset Filters</button>
+      </div>
+    </header>
+
+    <!-- KPI ROW -->
+    <section data-id="46" class="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 mb-6">
+      <div data-id="47" class="card p-4 md:p-5">
+        <div data-id="48" class="kpi-value" style="color:var(--cyan);">2,847</div>
+        <div data-id="49" class="kpi-label">Total RTT Variance Events</div>
+        <div data-id="50" class="kpi-delta" style="color:#34d399;">▲ +4.2%</div>
+      </div>
+      <div data-id="51" class="card p-4 md:p-5">
+        <div data-id="52" class="kpi-value" style="color:var(--amber);">54.1</div>
+        <div data-id="53" class="kpi-label">Avg Entropy Stability</div>
+        <div data-id="54" class="kpi-delta" style="color:#34d399;">▼ −1.8 more stable</div>
+      </div>
+      <div data-id="55" class="card p-4 md:p-5">
+        <div data-id="56" class="kpi-value" style="color:var(--magenta);">42<span data-id="57" style="font-size:14px;color:var(--text-muted);">/100 cyc</span></div>
+        <div data-id="58" class="kpi-label">Peak Polarity Flip-Rate</div>
+        <div data-id="59" class="kpi-delta" style="color:var(--text-muted);">Claude Opus 4.8 · Flui</div>
+      </div>
+      <div data-id="60" class="card p-4 md:p-5">
+        <div data-id="61" class="kpi-value" style="color:var(--purple);">5.0</div>
+        <div data-id="62" class="kpi-label">Max Drift Turbulence Index</div>
+        <div data-id="63" class="kpi-delta" style="color:var(--text-muted);">Claude Opus 4.8 · T-10</div>
+      </div>
+    </section>
+
+    <!-- MODEL ROSTER TABLE -->
+    <section data-id="64" class="card mb-6 overflow-x-auto">
+      <div data-id="65" class="p-4 md:p-5">
+        <div data-id="66" class="section-header accent-white mb-4">Model Roster</div>
+        <table data-id="67">
+          <thead data-id="68">
+            <tr data-id="69">
+              <th data-id="70">Model</th><th data-id="71">Provider</th><th data-id="72">Type</th><th data-id="73">License</th><th data-id="74">$/M Tokens</th><th data-id="75">RTT Alignment</th><th data-id="76">Drift Class</th><th data-id="77">Coherence</th>
+            </tr>
+          </thead>
+          <tbody data-id="78" id="roster-table-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECTION 1: RTT VARIANCE OVERVIEW -->
+    <section data-id="79" id="overview" class="card mb-6">
+      <div data-id="80" class="p-4 md:p-5">
+        <div data-id="81" class="section-header accent-cyan mb-4">Section 1 — RTT Variance Score by Model & Dimension</div>
+        <div data-id="82" class="relative" style="height:380px;"><canvas data-id="83" id="chart-rtt"></canvas></div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: ENTROPY STABILITY -->
+    <section data-id="84" id="entropy" class="card mb-6">
+      <div data-id="85" class="p-4 md:p-5">
+        <div data-id="86" class="section-header accent-amber mb-1">Section 2 — Entropy Stability Over Time</div>
+        <p data-id="87" class="text-xs mb-4" style="color:var(--text-muted);padding-left:15px;">Lower values indicate greater informational order</p>
+        <div data-id="88" class="relative" style="height:320px;"><canvas data-id="89" id="chart-entropy"></canvas></div>
+        <div data-id="90" class="mt-4">
+          <div data-id="91" class="text-xs font-semibold mb-2" style="color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;">Entropy Ranking (T-10)</div>
+          <div data-id="92" class="overflow-x-auto"><table data-id="93" id="entropy-rank-table"><thead data-id="94"><tr data-id="95"><th data-id="96">Rank</th><th data-id="97">Model</th><th data-id="98">T-10 Entropy</th><th data-id="99">Trend</th></tr></thead><tbody data-id="100"></tbody></table></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: SCALAR WOBBLE -->
+    <section data-id="101" id="wobble" class="card mb-6">
+      <div data-id="102" class="p-4 md:p-5">
+        <div data-id="103" class="section-header accent-magenta mb-4">Section 3 — Scalar Wobble (Radar)</div>
+        <div data-id="104" class="flex flex-col lg:flex-row gap-6">
+          <div data-id="105" class="flex-1 flex items-center justify-center" style="min-height:320px;"><canvas data-id="106" id="chart-wobble"></canvas></div>
+          <div data-id="107" class="flex-1 overflow-x-auto">
+            <table data-id="108" id="wobble-table"><thead data-id="109"><tr data-id="110"><th data-id="111">Model</th><th data-id="112">Freqi</th><th data-id="113">Aurion</th><th data-id="114">Forci</th><th data-id="115">Flui</th><th data-id="116">Composite</th></tr></thead><tbody data-id="117"></tbody></table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: POLARITY FLIP-RATE -->
+    <section data-id="118" id="fliprate" class="card mb-6">
+      <div data-id="119" class="p-4 md:p-5">
+        <div data-id="120" class="section-header accent-lime mb-4">Section 4 — Polarity Flip-Rate</div>
+        <div data-id="121" class="flex flex-col lg:flex-row gap-6 side-by-side">
+          <div data-id="122" class="flex-1"><div data-id="123" class="relative" style="height:340px;"><canvas data-id="124" id="chart-flip"></canvas></div></div>
+          <div data-id="125" class="flex-1 overflow-x-auto">
+            <table data-id="126" id="flip-table"><thead data-id="127"><tr data-id="128"><th data-id="129">Model</th><th data-id="130">Freqi</th><th data-id="131">Aurion</th><th data-id="132">Forci</th><th data-id="133">Flui</th><th data-id="134">Total</th></tr></thead><tbody data-id="135"></tbody></table>
+          </div>
+        </div>
+        <div data-id="136" class="panel p-4 mt-4">
+          <div data-id="137" class="text-xs font-semibold mb-3" style="color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;">Flip-Rate Risk Assessment — Top 3 Most Volatile</div>
+          <div data-id="138" id="flip-risk-list"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: DRIFT TURBULENCE -->
+    <section data-id="139" id="drift" class="card mb-6">
+      <div data-id="140" class="p-4 md:p-5">
+        <div data-id="141" class="section-header accent-purple mb-4">Section 5 — Drift Turbulence Index Over Time</div>
+        <div data-id="142" class="relative" style="height:320px;"><canvas data-id="143" id="chart-drift"></canvas></div>
+        <div data-id="144" class="mt-4">
+          <div data-id="145" class="text-xs font-semibold mb-3" style="color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;">Drift Classification Matrix</div>
+          <div data-id="146" class="grid grid-cols-1 md:grid-cols-3 gap-3" id="drift-matrix"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: COMBINED VARIANCE MAP -->
+    <section data-id="147" id="heatmap" class="card mb-6">
+      <div data-id="148" class="p-4 md:p-5">
+        <div data-id="149" class="section-header accent-white mb-4">Section 6 — Combined Variance Map (Heatmap)</div>
+        <div data-id="150" id="heatmap-grid" class="overflow-x-auto"></div>
+        <div data-id="151" class="flex items-center gap-2 mt-3 text-xs" style="color:var(--text-muted);">
+          <span data-id="152">Low</span>
+          <div data-id="153" style="width:180px;height:10px;border-radius:5px;background:linear-gradient(90deg,#0d4f4f,#a67c30,#b8194a);"></div>
+          <span data-id="154">High</span>
+        </div>
+        <div data-id="155" class="mt-6">
+          <div data-id="156" class="text-xs font-semibold mb-3" style="color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;">Composite Variance Rankings</div>
+          <div data-id="157" class="overflow-x-auto"><table data-id="158" id="composite-table"><thead data-id="159"><tr data-id="160"><th data-id="161">Rank</th><th data-id="162">Model</th><th data-id="163">Mean Variance</th><th data-id="164"></th></tr></thead><tbody data-id="165"></tbody></table></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer data-id="166" class="max-w-7xl mx-auto px-4 md:px-6 pb-8">
+    <div data-id="167" class="gradient-footer"></div>
+    <p data-id="168" class="text-center text-xs" style="color:var(--text-muted);">Resonance-Variance Dashboard v4.2 | RTT Metric Suite | TriadicFrameworks · Theognosis</p>
+    <p data-id="169" class="text-center text-xs mt-1" style="color:var(--text-muted);">Made by Copilot</p>
+  </footer>
+
+  <script>
+    // ===== DATA =====
+    const MODELS=[{id:"gpt-6-astra",label:"GPT-6 Astra",shortLabel:"GPT-6 Astra",provider:"OpenAI",color:"#10b981",type:"reasoning-frontier",license:"proprietary",cost:11.90,alignment:"SET",drift:"bounded",coherence:true,rtt:{Freqi:34.2,Aurion:47.8,Forci:61.3,Flui:29.4},entropy:[42,40,38,41,37,35,36,34,33,32],wobble:{Freqi:1.24,Aurion:2.87,Forci:3.51,Flui:0.93},flip:{Freqi:8,Aurion:14,Forci:21,Flui:5},driftSeries:[1.2,1.4,1.1,1.6,1.3,1.5,1.2,1.7,1.4,1.8]},{id:"claude-fable-51",label:"Claude Fable 5.1",shortLabel:"Fable 5.1",provider:"Anthropic",color:"#f97316",type:"safety-enterprise",license:"proprietary",cost:30.00,alignment:"FFF",drift:"suppressed",coherence:true,rtt:{Freqi:55.7,Aurion:38.1,Forci:44.9,Flui:67.2},entropy:[61,63,59,65,62,67,64,68,66,70],wobble:{Freqi:3.78,Aurion:1.45,Forci:2.13,Flui:4.62},flip:{Freqi:18,Aurion:9,Forci:12,Flui:27},driftSeries:[2.8,3.1,2.6,3.4,2.9,3.7,3.2,3.9,3.5,4.1]},{id:"gemini-38-flash",label:"Gemini 3.8 Flash",shortLabel:"Gemini 3.8F",provider:"Google",color:"#3b82f6",type:"multimodal-value",license:"proprietary",cost:3.75,alignment:"SNR",drift:"bounded",coherence:true,rtt:{Freqi:72.4,Aurion:81.5,Forci:33.6,Flui:52.1},entropy:[55,52,57,53,58,54,56,59,55,53],wobble:{Freqi:5.03,Aurion:6.21,Forci:1.87,Flui:3.44},flip:{Freqi:31,Aurion:38,Forci:7,Flui:19},driftSeries:[1.9,1.7,2.2,1.8,2.4,2.1,2.5,2.2,2.7,2.4]},{id:"qwen-38-max",label:"Qwen 3.8 Max",shortLabel:"Qwen 3.8M",provider:"Alibaba",color:"#8b5cf6",type:"open-weight-frontier",license:"open-weight",cost:0,alignment:"DCO",drift:"turbulent",coherence:false,rtt:{Freqi:41.9,Aurion:59.3,Forci:78.4,Flui:38.7},entropy:[35,37,34,36,33,35,32,34,31,30],wobble:{Freqi:2.15,Aurion:3.92,Forci:5.74,Flui:1.68},flip:{Freqi:11,Aurion:22,Forci:34,Flui:8},driftSeries:[0.8,1.0,0.7,1.2,0.9,1.1,0.8,1.3,1.0,1.5]},{id:"claude-opus-48",label:"Claude Opus 4.8",shortLabel:"Opus 4.8",provider:"Anthropic",color:"#ef4444",type:"coding-frontier",license:"proprietary",cost:15.00,alignment:"FFF",drift:"bounded",coherence:true,rtt:{Freqi:63.8,Aurion:27.4,Forci:56.1,Flui:84.3},entropy:[73,71,76,74,79,77,80,78,82,81],wobble:{Freqi:4.37,Aurion:0.84,Forci:3.29,Flui:6.15},flip:{Freqi:25,Aurion:4,Forci:17,Flui:42},driftSeries:[3.5,3.8,3.3,4.1,3.7,4.4,4.0,4.7,4.3,5.0]},{id:"gpt-55",label:"GPT-5.5",shortLabel:"GPT-5.5",provider:"OpenAI",color:"#06b6d4",type:"generative-ecosystem",license:"proprietary",cost:2.00,alignment:"SET",drift:"bounded",coherence:true,rtt:{Freqi:48.5,Aurion:72.9,Forci:39.2,Flui:45.6},entropy:[48,46,49,47,51,49,52,50,53,51],wobble:{Freqi:2.94,Aurion:5.13,Forci:1.52,Flui:2.87},flip:{Freqi:15,Aurion:29,Forci:10,Flui:13},driftSeries:[2.1,1.9,2.4,2.0,2.6,2.3,2.7,2.4,2.9,2.6]},{id:"deepseek-v4",label:"DeepSeek V4",shortLabel:"DeepSeek V4",provider:"DeepSeek",color:"#84cc16",type:"open-source-efficient",license:"open-source",cost:0.28,alignment:"DCO",drift:"turbulent",coherence:false,rtt:{Freqi:58.3,Aurion:43.7,Forci:69.1,Flui:33.8},entropy:[64,62,67,65,70,68,72,70,74,73],wobble:{Freqi:3.91,Aurion:2.34,Forci:4.87,Flui:1.76},flip:{Freqi:22,Aurion:16,Forci:31,Flui:9},driftSeries:[2.4,2.7,2.2,3.0,2.6,3.2,2.9,3.5,3.1,3.8]},{id:"llama-4",label:"Llama 4",shortLabel:"Llama 4",provider:"Meta",color:"#f59e0b",type:"open-source-leader",license:"open-source",cost:0,alignment:"SNR",drift:"turbulent",coherence:false,rtt:{Freqi:66.1,Aurion:52.4,Forci:41.7,Flui:74.9},entropy:[58,61,55,63,59,65,62,67,64,69],wobble:{Freqi:4.52,Aurion:3.17,Forci:2.63,Flui:5.38},flip:{Freqi:27,Aurion:19,Forci:14,Flui:36},driftSeries:[2.9,3.2,2.7,3.5,3.0,3.8,3.4,4.1,3.7,4.4]},{id:"grok-43",label:"Grok 4.3",shortLabel:"Grok 4.3",provider:"xAI",color:"#ec4899",type:"agentic-tool-use",license:"proprietary",cost:2.00,alignment:"DCO",drift:"bounded",coherence:true,rtt:{Freqi:44.7,Aurion:63.8,Forci:52.3,Flui:41.2},entropy:[51,49,54,52,56,53,57,55,59,57],wobble:{Freqi:2.68,Aurion:4.41,Forci:3.15,Flui:2.29},flip:{Freqi:13,Aurion:26,Forci:18,Flui:11},driftSeries:[1.6,1.9,1.4,2.1,1.7,2.3,1.9,2.6,2.2,2.8]},{id:"glm-51",label:"GLM-5.1",shortLabel:"GLM-5.1",provider:"Zhipu / Z.AI",color:"#6366f1",type:"multilingual-coding",license:"proprietary",cost:0.50,alignment:"SNR",drift:"suppressed",coherence:false,rtt:{Freqi:37.6,Aurion:55.2,Forci:29.8,Flui:61.4},entropy:[44,42,46,43,47,45,49,46,50,48],wobble:{Freqi:1.83,Aurion:3.56,Forci:1.27,Flui:4.03},flip:{Freqi:9,Aurion:21,Forci:6,Flui:24},driftSeries:[1.3,1.5,1.1,1.7,1.4,1.9,1.6,2.1,1.8,2.3]}];
+    const DIMS=["Freqi","Aurion","Forci","Flui"];
+    const DIM_COLORS={Freqi:"#00d4ff",Aurion:"#ffb347",Forci:"#ff47a3",Flui:"#47ff8c"};
+    const TIME_LABELS=["T-01","T-02","T-03","T-04","T-05","T-06","T-07","T-08","T-09","T-10"];
+
+    // ===== CHART.JS DEFAULTS =====
+    Chart.defaults.color='#94a3b8';
+    Chart.defaults.font.family="'Inter', system-ui, sans-serif";
+    Chart.defaults.font.size=11;
+    Chart.defaults.plugins.tooltip.backgroundColor='#161e35';
+    Chart.defaults.plugins.tooltip.titleColor='#ffffff';
+    Chart.defaults.plugins.tooltip.bodyColor='#e2e8f0';
+    Chart.defaults.plugins.tooltip.borderColor='rgba(255,255,255,0.1)';
+    Chart.defaults.plugins.tooltip.borderWidth=1;
+    Chart.defaults.plugins.tooltip.cornerRadius=8;
+    Chart.defaults.plugins.tooltip.padding=10;
+
+    // ===== STATE =====
+    const activeModels = new Set(MODELS.map(m=>m.id));
+    const activeDims = new Set(DIMS);
+    const charts = {};
+
+    function getActiveModels(){ return MODELS.filter(m=>activeModels.has(m.id)); }
+    function getActiveDims(){ return DIMS.filter(d=>activeDims.has(d)); }
+
+    // ===== RENDER PILLS =====
+    function renderPills(){
+      const c=document.getElementById('model-pills');
+      c.innerHTML='';
+      MODELS.forEach(m=>{
+        const el=document.createElement('span');
+        el.className='pill'+(activeModels.has(m.id)?' active':'');
+        el.dataset.model=m.id;
+        el.innerHTML=`<span class="dot" style="background:${m.color};${activeModels.has(m.id)?'':'opacity:0.3'}"></span>${m.shortLabel}`;
+        c.appendChild(el);
+      });
+    }
+    function renderDimBtns(){
+      const c=document.getElementById('dim-btns');
+      c.innerHTML='';
+      DIMS.forEach(d=>{
+        const el=document.createElement('button');
+        el.className='dim-btn'+(activeDims.has(d)?' active':'');
+        el.dataset.dim=d;
+        el.style.color=DIM_COLORS[d];
+        el.textContent=d;
+        c.appendChild(el);
+      });
+    }
+
+    // ===== MODEL ROSTER =====
+    function renderRoster(){
+      const tb=document.getElementById('roster-table-body');
+      tb.innerHTML='';
+      MODELS.forEach(m=>{
+        const driftBadge = m.drift==='bounded'?'badge-teal':m.drift==='turbulent'?'badge-red':'badge-amber';
+        const cohHtml = m.coherence?'<span style="color:#34d399;">✓</span>':'<span style="color:var(--text-muted);">—</span>';
+        const costStr = m.cost===0?'Free':'$'+m.cost.toFixed(2);
+        tb.innerHTML+=`<tr style="opacity:${activeModels.has(m.id)?1:0.35}">
+          <td><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${m.color};margin-right:8px;vertical-align:middle;"></span>${m.label}</td>
+          <td style="color:var(--text-secondary);">${m.provider}</td>
+          <td style="color:var(--text-secondary);">${m.type}</td>
+          <td><span class="badge ${m.license==='open-source'?'badge-green':m.license==='open-weight'?'badge-purple':'badge-cyan'}">${m.license}</span></td>
+          <td>${costStr}</td>
+          <td style="color:var(--text-secondary);">${m.alignment}</td>
+          <td><span class="badge ${driftBadge}">${m.drift}</span></td>
+          <td>${cohHtml}</td>
+        </tr>`;
+      });
+    }
+
+    // ===== CHART HELPERS =====
+    function destroyChart(key){ if(charts[key]){ charts[key].destroy(); delete charts[key]; } }
+    function hexToRgba(hex,a){ const r=parseInt(hex.slice(1,3),16),g=parseInt(hex.slice(3,5),16),b=parseInt(hex.slice(5,7),16); return `rgba(${r},${g},${b},${a})`; }
+
+    // ===== SECTION 1: RTT VARIANCE =====
+    function renderRTTChart(){
+      destroyChart('rtt');
+      const models=getActiveModels();
+      const dims=getActiveDims();
+      const datasets=dims.map(d=>({
+        label:d, data:models.map(m=>m.rtt[d]),
+        backgroundColor:hexToRgba(DIM_COLORS[d],0.75),
+        borderColor:DIM_COLORS[d], borderWidth:1, borderRadius:3,
+      }));
+      charts.rtt=new Chart(document.getElementById('chart-rtt'),{
+        type:'bar', data:{ labels:models.map(m=>m.shortLabel), datasets },
+        options:{ indexAxis:'y', responsive:true, maintainAspectRatio:false,
+          scales:{ x:{ max:100, grid:{ color:'rgba(255,255,255,0.05)' }, ticks:{ color:'#64748b' } }, y:{ grid:{ display:false }, ticks:{ color:'#94a3b8', font:{size:11} } } },
+          plugins:{ legend:{ labels:{ usePointStyle:true, pointStyle:'circle', padding:16, color:'#94a3b8' } } }
+        }
+      });
+    }
+
+    // ===== SECTION 2: ENTROPY =====
+    function renderEntropyChart(){
+      destroyChart('entropy');
+      const models=getActiveModels();
+      const datasets=models.map(m=>{
+        const ctx=document.getElementById('chart-entropy').getContext('2d');
+        const grad=ctx.createLinearGradient(0,0,0,300);
+        grad.addColorStop(0,hexToRgba(m.color,0.2));
+        grad.addColorStop(1,hexToRgba(m.color,0));
+        return { label:m.shortLabel, data:m.entropy, borderColor:m.color, backgroundColor:grad, fill:true, tension:0.4, borderWidth:2, pointRadius:2, pointHoverRadius:5 };
+      });
+      charts.entropy=new Chart(document.getElementById('chart-entropy'),{
+        type:'line', data:{ labels:TIME_LABELS, datasets },
+        options:{ responsive:true, maintainAspectRatio:false,
+          scales:{ x:{ grid:{ color:'rgba(255,255,255,0.04)' } }, y:{ grid:{ color:'rgba(255,255,255,0.05)' } } },
+          plugins:{ legend:{ labels:{ usePointStyle:true, pointStyle:'circle', padding:14, color:'#94a3b8', font:{size:10} } } }
+        }
+      });
+      // Ranking table
+      const sorted=[...models].sort((a,b)=>a.entropy[9]-b.entropy[9]);
+      const tb=document.querySelector('#entropy-rank-table tbody');
+      tb.innerHTML='';
+      sorted.forEach((m,i)=>{
+        const trend=m.entropy[9]-m.entropy[0];
+        const tColor=trend<=0?'#34d399':'#f87171';
+        const arrow=trend<=0?'▼':'▲';
+        const sparkHtml=m.entropy.map(v=>`<span style="height:${Math.round(v/82*16)}px;background:${m.color};"></span>`).join('');
+        tb.innerHTML+=`<tr><td>${i+1}</td><td><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:${m.color};margin-right:6px;"></span>${m.shortLabel}</td><td>${m.entropy[9]}</td><td><div class="sparkline">${sparkHtml}</div> <span style="color:${tColor};font-size:10px;">${arrow}${Math.abs(trend)}</span></td></tr>`;
+      });
+    }
+
+    // ===== SECTION 3: WOBBLE =====
+    function renderWobbleChart(){
+      destroyChart('wobble');
+      const models=getActiveModels();
+      const dims=getActiveDims();
+      const datasets=models.map(m=>({
+        label:m.shortLabel, data:dims.map(d=>m.wobble[d]),
+        borderColor:m.color, backgroundColor:hexToRgba(m.color,0.08),
+        borderWidth:2, pointRadius:3, pointHoverRadius:6, pointBackgroundColor:m.color,
+      }));
+      charts.wobble=new Chart(document.getElementById('chart-wobble'),{
+        type:'radar', data:{ labels:dims, datasets },
+        options:{ responsive:true, maintainAspectRatio:true,
+          scales:{ r:{ min:0, max:7, ticks:{ stepSize:1, color:'#64748b', backdropColor:'transparent' }, grid:{ color:'rgba(255,255,255,0.08)' }, angleLines:{ color:'rgba(255,255,255,0.08)' }, pointLabels:{ color:'#94a3b8', font:{size:12,weight:'600'} } } },
+          plugins:{ legend:{ labels:{ usePointStyle:true, pointStyle:'circle', padding:14, color:'#94a3b8', font:{size:10} } } }
+        }
+      });
+      // Wobble table
+      const tb=document.querySelector('#wobble-table tbody');
+      tb.innerHTML='';
+      models.forEach(m=>{
+        const comp=((m.wobble.Freqi+m.wobble.Aurion+m.wobble.Forci+m.wobble.Flui)/4).toFixed(2);
+        const wc=v=>v<2?'color:#34d399':v<=4?'color:#fbbf24':'color:#ff47a3';
+        tb.innerHTML+=`<tr>
+          <td><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:${m.color};margin-right:6px;"></span>${m.shortLabel}</td>
+          <td style="${wc(m.wobble.Freqi)}">${m.wobble.Freqi.toFixed(2)}</td>
+          <td style="${wc(m.wobble.Aurion)}">${m.wobble.Aurion.toFixed(2)}</td>
+          <td style="${wc(m.wobble.Forci)}">${m.wobble.Forci.toFixed(2)}</td>
+          <td style="${wc(m.wobble.Flui)}">${m.wobble.Flui.toFixed(2)}</td>
+          <td style="${wc(parseFloat(comp))};font-weight:600;">${comp}</td>
+        </tr>`;
+      });
+    }
+
+    // ===== SECTION 4: FLIP-RATE =====
+    function renderFlipChart(){
+      destroyChart('flip');
+      const models=getActiveModels();
+      const dims=getActiveDims();
+      const datasets=dims.map(d=>({
+        label:d, data:models.map(m=>m.flip[d]),
+        backgroundColor:hexToRgba(DIM_COLORS[d],0.7),
+        borderColor:DIM_COLORS[d], borderWidth:1,
+      }));
+      charts.flip=new Chart(document.getElementById('chart-flip'),{
+        type:'bar', data:{ labels:models.map(m=>m.shortLabel), datasets },
+        options:{ responsive:true, maintainAspectRatio:false,
+          scales:{ x:{ stacked:true, grid:{ display:false }, ticks:{ color:'#94a3b8', font:{size:10}, maxRotation:45 } }, y:{ stacked:true, grid:{ color:'rgba(255,255,255,0.05)' } } },
+          plugins:{ legend:{ labels:{ usePointStyle:true, pointStyle:'circle', padding:14, color:'#94a3b8', font:{size:10} } } }
+        }
+      });
+      // Flip table
+      const tb=document.querySelector('#flip-table tbody');
+      tb.innerHTML='';
+      const fc=v=>v<10?'color:#34d399':v<=25?'color:#fbbf24':'color:#ff47a3';
+      models.forEach(m=>{
+        const total=m.flip.Freqi+m.flip.Aurion+m.flip.Forci+m.flip.Flui;
+        tb.innerHTML+=`<tr>
+          <td><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:${m.color};margin-right:6px;"></span>${m.shortLabel}</td>
+          <td style="${fc(m.flip.Freqi)}">${m.flip.Freqi}</td>
+          <td style="${fc(m.flip.Aurion)}">${m.flip.Aurion}</td>
+          <td style="${fc(m.flip.Forci)}">${m.flip.Forci}</td>
+          <td style="${fc(m.flip.Flui)}">${m.flip.Flui}</td>
+          <td style="font-weight:600;">${total}</td>
+        </tr>`;
+      });
+      // Risk assessment
+      const combos=[];
+      MODELS.forEach(m=>DIMS.forEach(d=>combos.push({model:m.label,dim:d,val:m.flip[d],color:m.color})));
+      combos.sort((a,b)=>b.val-a.val);
+      const top3=combos.slice(0,3);
+      const rl=document.getElementById('flip-risk-list');
+      rl.innerHTML='';
+      top3.forEach((c,i)=>{
+        const risk=c.val>=35?'CRITICAL':c.val>=25?'HIGH':c.val>=15?'MED':'LOW';
+        const bc=risk==='CRITICAL'?'badge-critical':risk==='HIGH'?'badge-high':risk==='MED'?'badge-med':'badge-low';
+        rl.innerHTML+=`<div class="flex items-center gap-3 py-2 ${i<2?'border-b':'border-0'}" style="border-color:rgba(255,255,255,0.06);">
+          <span style="color:var(--text-muted);font-size:12px;width:16px;">${i+1}.</span>
+          <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:${c.color};"></span>
+          <span style="font-size:12px;color:var(--text-primary);flex:1;">${c.model} <span style="color:${DIM_COLORS[c.dim]};">· ${c.dim}</span></span>
+          <span style="font-size:13px;font-weight:600;color:var(--text-primary);width:40px;text-align:right;">${c.val}</span>
+          <span class="badge ${bc}">${risk}</span>
+        </div>`;
+      });
+    }
+
+    // ===== SECTION 5: DRIFT =====
+    function renderDriftChart(){
+      destroyChart('drift');
+      const models=getActiveModels();
+      const datasets=models.map((m,i)=>{
+        const ctx=document.getElementById('chart-drift').getContext('2d');
+        const grad=ctx.createLinearGradient(0,0,0,300);
+        grad.addColorStop(0,hexToRgba(m.color,0.35));
+        grad.addColorStop(1,hexToRgba(m.color,0.02));
+        return { label:m.shortLabel, data:m.driftSeries, borderColor:m.color, backgroundColor:grad, fill:true, tension:0.4, borderWidth:1.5, pointRadius:1, pointHoverRadius:4 };
+      });
+      charts.drift=new Chart(document.getElementById('chart-drift'),{
+        type:'line', data:{ labels:TIME_LABELS, datasets },
+        options:{ responsive:true, maintainAspectRatio:false,
+          scales:{ x:{ grid:{ color:'rgba(255,255,255,0.04)' } }, y:{ stacked:true, grid:{ color:'rgba(255,255,255,0.05)' } } },
+          plugins:{ legend:{ labels:{ usePointStyle:true, pointStyle:'circle', padding:14, color:'#94a3b8', font:{size:10} } } }
+        }
+      });
+      // Drift matrix
+      const mx=document.getElementById('drift-matrix');
+      mx.innerHTML='';
+      const classes={bounded:[],turbulent:[],suppressed:[]};
+      MODELS.forEach(m=>classes[m.drift].push(m));
+      [{key:'bounded',title:'Bounded',accent:'#2dd4bf',bc:'badge-teal'},{key:'turbulent',title:'Turbulent',accent:'#f87171',bc:'badge-red'},{key:'suppressed',title:'Suppressed',accent:'#fbbf24',bc:'badge-amber'}].forEach(cl=>{
+        mx.innerHTML+=`<div class="panel p-4">
+          <div class="text-xs font-semibold mb-2" style="color:${cl.accent};text-transform:uppercase;letter-spacing:0.1em;">${cl.title}</div>
+          ${classes[cl.key].map(m=>`<div class="flex items-center gap-2 py-1"><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:${m.color};"></span><span style="font-size:12px;color:var(--text-secondary);">${m.label}</span></div>`).join('')}
+        </div>`;
+      });
+    }
+
+    // ===== SECTION 6: HEATMAP =====
+    function heatColor(val){
+      // 0-100: low=#0d4f4f, mid=#a67c30, high=#b8194a
+      const t=val/100;
+      let r,g,b;
+      if(t<0.5){ const s=t*2; r=Math.round(13+(166-13)*s); g=Math.round(79+(124-79)*s); b=Math.round(79+(48-79)*s); }
+      else { const s=(t-0.5)*2; r=Math.round(166+(184-166)*s); g=Math.round(124+(25-124)*s); b=Math.round(48+(74-48)*s); }
+      return `rgb(${r},${g},${b})`;
+    }
+    function renderHeatmap(){
+      const models=getActiveModels();
+      const dims=getActiveDims();
+      const grid=document.getElementById('heatmap-grid');
+      const cols=dims.length+1;
+      grid.innerHTML=`<div style="display:grid;grid-template-columns:140px repeat(${dims.length},1fr);gap:4px;">
+        <div style="font-size:10px;color:var(--text-muted);padding:8px;"></div>
+        ${dims.map(d=>`<div style="font-size:10px;color:${DIM_COLORS[d]};text-align:center;padding:8px;font-weight:600;">${d}</div>`).join('')}
+        ${models.map(m=>`
+          <div style="font-size:11px;color:var(--text-secondary);padding:8px;display:flex;align-items:center;gap:6px;"><span style="width:6px;height:6px;border-radius:50%;background:${m.color};flex-shrink:0;"></span>${m.shortLabel}</div>
+          ${dims.map(d=>{
+            const v=m.rtt[d];
+            return `<div class="heatmap-cell" style="background:${heatColor(v)};color:#fff;font-size:13px;position:relative;">
+              ${v.toFixed(1)}
+              <div class="tooltip-custom">${m.label} · ${d}: ${v.toFixed(1)}</div>
+            </div>`;
+          }).join('')}
+        `).join('')}
+      </div>`;
+      // Composite rankings
+      const ranked=models.map(m=>{
+        const vals=DIMS.map(d=>m.rtt[d]);
+        const mean=vals.reduce((a,b)=>a+b,0)/4;
+        return {m,mean};
+      }).sort((a,b)=>b.mean-a.mean);
+      const maxMean=Math.max(...ranked.map(r=>r.mean));
+      const tb=document.querySelector('#composite-table tbody');
+      tb.innerHTML='';
+      ranked.forEach((r,i)=>{
+        const pct=Math.round(r.mean/maxMean*100);
+        tb.innerHTML+=`<tr>
+          <td>${i+1}</td>
+          <td><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:${r.m.color};margin-right:6px;"></span>${r.m.shortLabel}</td>
+          <td style="font-weight:600;">${r.mean.toFixed(1)}</td>
+          <td style="width:40%;"><div class="mini-bar" style="width:100%;"><div class="mini-bar-fill" style="width:${pct}%;background:${r.m.color};"></div></div></td>
+        </tr>`;
+      });
+    }
+
+    // ===== RENDER ALL =====
+    function renderAll(){
+      renderPills();
+      renderDimBtns();
+      renderRoster();
+      renderRTTChart();
+      renderEntropyChart();
+      renderWobbleChart();
+      renderFlipChart();
+      renderDriftChart();
+      renderHeatmap();
+    }
+
+    // ===== EVENT LISTENERS =====
+    document.getElementById('model-pills').addEventListener('click',function(e){
+      const pill=e.target.closest('.pill');
+      if(!pill) return;
+      const id=pill.dataset.model;
+      if(activeModels.has(id)){
+        if(activeModels.size<=1) return; // at least 1
+        activeModels.delete(id);
+      } else { activeModels.add(id); }
+      renderAll();
+    });
+
+    document.getElementById('dim-btns').addEventListener('click',function(e){
+      const btn=e.target.closest('.dim-btn');
+      if(!btn) return;
+      const d=btn.dataset.dim;
+      if(activeDims.has(d)){
+        if(activeDims.size<=1) return;
+        activeDims.delete(d);
+      } else { activeDims.add(d); }
+      renderAll();
+    });
+
+    document.getElementById('reset-filters').addEventListener('click',function(){
+      MODELS.forEach(m=>activeModels.add(m.id));
+      DIMS.forEach(d=>activeDims.add(d));
+      renderAll();
+    });
+
+    // Mobile nav
+    document.getElementById('mobile-nav-btn').addEventListener('click',function(){
+      document.getElementById('mobile-nav-menu').classList.add('open');
+    });
+    document.getElementById('mobile-nav-close').addEventListener('click',function(){
+      document.getElementById('mobile-nav-menu').classList.remove('open');
+    });
+    document.getElementById('mobile-nav-menu').addEventListener('click',function(e){
+      if(e.target.tagName==='A') this.classList.remove('open');
+    });
+
+    // Smooth scroll for anchors
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',function(e){
+        e.preventDefault();
+        const target=document.querySelector(this.getAttribute('href'));
+        if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
+      });
+    });
+
+    // ===== INIT =====
+    renderAll();
+  </script>
+</body>
+</html>

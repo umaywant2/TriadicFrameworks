@@ -1,35 +1,39 @@
-## 📘 Coeus Protocol Glossary (Refreshed with Emoti-Glyphs)
-
-| **Glyph** | **Term** | **Definition** |
-|----------|----------|----------------|
-| 🧠 | **TFT** | Triadic Framework Technology Core logic of Coeus Exchange. Used for coin decomposition, rail mapping, and remix orchestration. |
-| 🌊 | **FFF** | Forces, Fluids, Frequency Founding triadic principle for modeling new technologies. Used in emitter logic and symbolic overlays. |
-| 📜 | **CaaC** | Coins as a Contract Each coin encodes a contract—task, ethics, remix rights, and lineage. |
-| 🪙 | **Coin** | Symbolic research stub with task, edging, and observer logic. The atomic unit of cognition. |
-| 🧾 | **Token** | ERC-style artifact minted from a validated coin. Traceable, remixable, and timestamped. |
-| 🏛️ | **Exchange** | Sovereign space where validated tokens are listed, traded, and optionally split into derivative shares. |
-| 🧩 | **Derivative** | Share Fractional remix right or funding stake derived from a validated token. |
-| 🧬 | **Remix** | Lineage Citation chain for forked coins and derivative research. Immutable and symbolic. |
-| 👁️ | **Validator** | Human or AI agent reviewing coin trace logs, remix lineage, and ethics compliance. |
-| 🧪 | **Sandbox** | Isolated environment for agent orchestration, coin resolution, and tournament benchmarking. |
-| 🛤️ | **Rail** | Logic Dimensional modeling system used for decomposition and emitter targeting. |
-| 🔦 | **Emitter** | Visual or symbolic overlay that scans, highlights, or narrates coin resolution in real time. |
-| 🕵️ | **Observer** | Mode Dual-agent protocol for ethics validation and remix trace logging. |
-| 🔐 | **entft** | TFT Encryption sleeve protocol for trace validation, remix rights, and ethics enforcement. |
-| ⏱️ | **Resonant** | Resonant Timestamp UTC-stamped completion time with agent signature. Immutable and remix-citable. |
-| 🌀 | **Glyph** | Optional symbolic signature attached to coins, tokens, or remixers. Used in scrolls and dashboards. |
-| 🧭 | **CcC** | Cause/Class/Country Tournament dimensions used for benchmarking coins and remix lineage. |
-
+---
+title: "Coeus Research Glossary"
+description: "Definitions for Coeus' symbolic research tasks, agent roles, validation, and artifact lineage."
+status: generated
+version: "0.2"
 ---
 
-## 🧿 Archetypes
+# Coeus Research Glossary
 
-| **Glyph** | **Archetype** | **Rails** |
-|----------|---------------|-----------|
-| 🎶 | **Freqi** | Frequency archetype (rails 3, 6, 9) |
-| 💧 | **Flui** | Fluid archetype (rails 4, 5, 6) |
-| ⚡ | **Forci** | Force archetype (rails 6, 7, 8) |
-| 🚚 | _Carrier_ | Rails: 1–2 |
-| 🛣️ | _Corridor_ | D6 - Dimensional Denometer |
+This glossary defines Coeus terms in the context of TriadicFrameworks. Coeus uses symbolic language for research tasks and artifacts; it does not operate a cryptocurrency, token, blockchain, or financial exchange.
 
----
+| Term | Coeus meaning |
+|---|---|
+| **TFT** | Triadic framework logic used for task decomposition, rail mapping, and remix orchestration. |
+| **FFF** | Forces, Fluids, Frequency: a triadic principle used by emitter logic and symbolic overlays. |
+| **CaaC** | Coins as a Contract: the internal model for a research task's purpose, ethics, remix rights, and lineage. |
+| **Coin** | A symbolic research task with context, boundaries, and observer logic. It is not currency. |
+| **Token** | A symbolic, citable research artifact derived from a validated task. It is not an ERC token or financial instrument. |
+| **Validator** | A human or AI agent that reviews task traces, remix lineage, and ethics compliance. |
+| **Sandbox** | The isolated environment for agent orchestration, task resolution, and tournament benchmarking. |
+| **Rail** | A dimensional modeling system used for decomposition and emitter targeting. |
+| **Emitter** | A visual or symbolic overlay that scans, highlights, or narrates task resolution. |
+| **Observer** | A mode for ethics validation and remix trace logging. |
+| **entft** | The Coeus protocol component for trace validation, remix rights, and ethics enforcement. |
+| **Resonant** | A UTC-stamped completion state with an agent signature. |
+| **Glyph** | An optional symbolic signature attached to a task, artifact, or remixer. |
+| **CcC** | Cause, Class, and Country tournament dimensions used for benchmarking and remix lineage. |
+
+## Archetypes
+
+| Archetype | Meaning |
+|---|---|
+| **Freqi** | Frequency archetype using rails 3, 6, and 9. |
+| **Flui** | Fluid archetype using rails 4, 5, and 6. |
+| **Forci** | Force archetype using rails 6, 7, and 8. |
+| **Carrier** | A transport role using rails 1–2. |
+| **Corridor** | A dimensional modeling path using D6. |
+
+For the runnable path, start with the [Coeus Protocol](../README.md).

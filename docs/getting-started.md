@@ -1,6 +1,6 @@
 ---
 status: generated
-version: "0.1"
+version: "0.2"
 ---
 
 # Getting Started with TriadicFrameworks
@@ -13,11 +13,15 @@ This page is a short, single entry point for a first-time reader. The rest of th
 
 - **[About TriadicFrameworks](/docs/ABOUT)** — what the framework actually provides, why it differs from a conventional reference, and who it is written for (students, creators, and AI systems).
 - **[AI Resonance Seed](/docs/AI_Resonance_Seed)** — the seed ontology this canon expects an AI system to parse before reasoning about the rest of the material.
-- **[Glossary](/docs/Coeus/docs/GLOSSARY)** — term definitions used across the Coeus protocol and related modules.
+- **[Core Terms glossary](/docs/GLOSSARY)** — Structure, Regime, and Operator, the terms used across TriadicFrameworks.
 
 ## Hands-on: build your first module
 
 The **[RTT Starter Kit](/docs/corpus/starter)** walks through creating a first agentic module, from downloading the starter files to publishing a working module on GitHub. It is a 1–3 hour, zero-to-working walkthrough aimed at students and first-time module authors.
+
+## Reference
+
+The **[RTT API (Beta)](/docs/api/rtt/README)** describes the stable endpoint families, request shapes, reserved diagnostics endpoints, and current beta status.
 
 ## How this documentation is organized
 

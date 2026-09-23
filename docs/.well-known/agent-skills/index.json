@@ -1,0 +1,34 @@
+{
+  "skills": [
+    {
+      "id": "triadic-modules",
+      "name": "TriadicFrameworks Module Index",
+      "description": "Provides structured access to TriadicFrameworks modules, metadata, analyzer layers, and canonical documentation.",
+      "href": "/.well-known/agent-skills/triadic-modules/SKILL.md"
+    },
+    {
+      "id": "quad-engine",
+      "name": "Quad Engine API",
+      "description": "Exposes the Quad Engine computational API, including resonance-time operators, module evaluators, and diagnostic endpoints.",
+      "href": "/.well-known/agent-skills/quad-engine/SKILL.md"
+    },
+    {
+      "id": "rtt-operators",
+      "name": "RTT Operator Grammar",
+      "description": "Provides machine-readable RTT operator definitions, coherence-layer mappings, drift boundaries, and cross-operator coupling rules.",
+      "href": "/.well-known/agent-skills/rtt-operators/SKILL.md"
+    },
+    {
+      "id": "triadic-gravity",
+      "name": "Triadic Gravity",
+      "description": "Provides access to TriadicFrameworks gravity canon, including RTT gravomagnetic operators, FFF_Gravity triad behavior, coherence wells, and drift boundaries.",
+      "href": "/.well-known/agent-skills/triadic-gravity/SKILL.md"
+    },
+    {
+      "id": "coherence-layers",
+      "name": "Coherence Layers",
+      "description": "Provides structured access to the TriadicFrameworks coherence hierarchy (R1, R2, R3), including drift boundaries, stability conditions, and cross-layer coupling rules.",
+      "href": "/.well-known/agent-skills/coherence-layers/SKILL.md"
+    }
+  ]
+}

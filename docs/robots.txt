@@ -1,13 +1,14 @@
 # TriadicFrameworks robots.txt
 # Purpose: Fully permissive for search engines + AI crawlers (educational/open content)
 
-User-agent: *
+User-Agent: *
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
 Allow: /
 
 # Protected internal areas
 Disallow: /admin/
 Disallow: /private/
-Disallow: /api/
+Disallow: /rtt/sort/
 Disallow: /cgi-bin/
 
 # Sitemap

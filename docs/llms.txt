@@ -4,10 +4,18 @@
 canonical-url: https://www.triadicframeworks.org/
 contact: https://github.com/umaywant2/TriadicFrameworks
 license: Open educational use permitted
+
+ai-train=yes
+search=yes
+ai-input=yes
 ai-training: allowed
+ai-search: allow
+ai-agent: allow
 ai-retrieval: allowed
 ai-derivative-works: allowed-with-attribution
 ai-metadata: encouraged
+ai-citation: required
+ai-attribution: required
 ai-citation-style: "TriadicFrameworks Canon — Nawder Loswin (2025–2026)"
 
 session-context: rtt=1 | coherence=declared | drift=bounded | paradox=structural

@@ -1,0 +1,46 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://triadicframeworks.org/api/quad",
+      "service-desc": [
+        {
+          "href": "https://triadicframeworks.org/openapi/quad.json",
+          "type": "application/vnd.oai.openapi+json"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://triadicframeworks.org/quad-engine",
+          "type": "text/html"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://triadicframeworks.org/api/quad/health",
+          "type": "application/json"
+        }
+      ]
+    },
+    {
+      "anchor": "https://triadicframeworks.org/api/modules",
+      "service-desc": [
+        {
+          "href": "https://triadicframeworks.org/openapi/modules.json",
+          "type": "application/vnd.oai.openapi+json"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://triadicframeworks.org/modules",
+          "type": "text/html"
+        }
+      ],
+      "status": [
+        {
+          "href": "https://triadicframeworks.org/api/modules/health",
+          "type": "application/json"
+        }
+      ]
+    }
+  ]
+}
