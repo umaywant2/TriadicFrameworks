@@ -122569,6 +122569,12 @@
     <priority>0.80</priority>
   </url>
   <url>
+    <loc>https://www.triadicframeworks.org/docs/openapi/modules.json</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
     <loc>https://www.triadicframeworks.org/docs/openapi/quad.json</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
@@ -128066,6 +128072,12 @@
   </url>
   <url>
     <loc>https://www.triadicframeworks.org/docs/public_support/visitor_ritual.md</loc>
+    <lastmod>2026-09-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.triadicframeworks.org/docs/quad-engine/stub</loc>
     <lastmod>2026-09-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
