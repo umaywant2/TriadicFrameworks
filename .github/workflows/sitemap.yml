@@ -43,4 +43,5 @@ jobs:
           git config user.email "github-actions@github.com"
           git add docs/sitemap_main.xml
           git commit -m "Auto-update sitemap_main.xml" || echo "No changes"
+          git pull --rebase origin main
           git push
