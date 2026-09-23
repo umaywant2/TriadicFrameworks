@@ -1,11 +1,22 @@
 {
   "serverInfo": {
-    "name": "TriadicFrameworks",
-    "version": "1.0.0"
+    "name": "TriadicFrameworks MCP Server",
+    "version": "1.0.0",
+    "description": "Cosmology‑aligned multi‑tool server exposing TriadicFrameworks operators, module metadata, analyzers, and diagnostic tools."
   },
   "transport": {
     "type": "http",
-    "endpoint": "https://triadicframeworks.org/api"
+    "endpoint": "https://www.triadicframeworks.org/MCP/"
   },
-  "capabilities": ["openapi", "skills"]
+  "capabilities": [
+    "openapi",
+    "skills",
+    "modules",
+    "operators",
+    "diagnostics"
+  ],
+  "resources": {
+    "apiCatalog": "/.well-known/api-catalog",
+    "skillsIndex": "/.well-known/agent-skills/index.json"
+  }
 }
