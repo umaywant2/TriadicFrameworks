@@ -1,30 +1,52 @@
 ---
-title: "Core Terms: Structure, Regime, Operator"
-description: "What Structure, Regime and Operator mean in TriadicFrameworks - the three terms the whole canon is built on, defined one at a time."
 status: generated
-version: "0.2"
+version: "0.3"
+description: "Plain-language definitions of Structure, Regime, Operator, triadic framework, coherence, drift, and Resonance-Time Theory in TriadicFrameworks."
 ---
 
-# Core Terms: Structure, Regime, Operator
+# TriadicFrameworks Core Terms
 
-TriadicFrameworks models any system as three interacting parts instead of two. Every module in this canon uses these same three terms the same way. This page defines each one on its own.
+This glossary defines the terms readers need before exploring the TriadicFrameworks canon. It is the canonical starting point for plain-language definitions.
 
-## Structure — what a system is
+## Triadic framework
 
-Structure is the shape of a system: its parts, and how they relate to each other, independent of how it is currently behaving. It is the invariant — what stays the same while everything else about the system changes.
+A triadic framework models a system through three interacting parts rather than a flat description. In TriadicFrameworks, those parts are **Structure**, **Regime**, and **Operator**.
 
-## Regime — how a system behaves right now
+## Structure
 
-Regime is the state a system is in at a given moment: how it is currently behaving, and under what conditions. A system can move from one regime into another — a **regime shift** — without its underlying structure changing at all.
+**Structure** is what a system is made of: its components, relationships, boundaries, and stable arrangement. Ask: *What exists, and how is it connected?*
 
-## Operator — what you do to it
+## Regime
 
-An operator is an action taken on a structure, given its current regime, to produce a change. TriadicFrameworks reads and analyzes systems **operator-first**: identify the structure, read the regime it is in, then name the operator that applies.
+**Regime** is the condition under which a system behaves. It describes the operating context, constraints, transitions, and thresholds that change what the system can do. Ask: *Under what conditions does this structure hold or shift?*
 
-## Why three, not two
+## Operator
 
-Most models treat a system as data plus a rule that acts on it — two parts. TriadicFrameworks adds the regime in between, because the same operator on the same structure can produce a different result depending on what regime the structure is in at the time. That third part is what the rest of this canon calls **triadic**.
+**Operator** is an action or transformation applied to a system. It describes what a reader, agent, or process can do with the structure under a given regime. Ask: *What operation changes, tests, or moves the system?*
 
----
+## Coherence
 
-See also: [About TriadicFrameworks](/docs/ABOUT) for what the framework is for. Each module's own page shows how Structure, Regime and Operator apply to that module specifically.
+**Coherence** is the degree to which a system's parts, conditions, and operations remain mutually consistent. A coherence check looks for contradictions, broken links, or drift between declared structure and observed behavior.
+
+## Drift
+
+**Drift** is the loss of alignment between a system's declared structure, operating regime, and applied operators over time. TriadicFrameworks uses bounded drift and validator checks to keep long-running reasoning anchored.
+
+## Resonance-Time Theory (RTT)
+
+**Resonance-Time Theory** is the project's theory and module family for describing resonance, transitions, coherence, and time-aware system behavior. Start with the [RTT module](./rtt/) or the [RTT Starter Kit](./corpus/starter) for a practical path.
+
+## AI Resonance Seed
+
+**AI Resonance Seed** is a TriadicFrameworks module for agentic AI systems. It provides resonance-aware learning substrates, validator-bounded feedback loops, drift detection, ontology guidance, and integration examples. Start with the [AI Resonance Seed module](./AI_Resonance_Seed/).
+
+## Coeus
+
+**Coeus** is TriadicFrameworks' multi-agent AI research sandbox. Its terms such as “coin” and “token” describe symbolic research tasks and artifacts, not cryptocurrency, blockchain, or financial instruments. Start with the [Coeus Protocol](./Coeus/).
+
+## Continue
+
+- [About TriadicFrameworks](./ABOUT)
+- [RTT Starter Kit](./corpus/starter)
+- [AI Resonance Seed](./AI_Resonance_Seed/)
+- [Coeus Protocol](./Coeus/)
