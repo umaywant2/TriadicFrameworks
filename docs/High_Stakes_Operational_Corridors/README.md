@@ -1,3 +1,6 @@
+
+- [`High_Stakes_Operational_Corridors_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/High_Stakes_Operational_Corridors/High_Stakes_Operational_Corridors_module.json) — Agentic module schema role assignments
+
 # High_Stakes_Operational_Corridors
 
 > **RTT Module** · `hsoc-rtt-001` · schema `rtt/2.4` · category `safety-critical` · v`1.0.0`
