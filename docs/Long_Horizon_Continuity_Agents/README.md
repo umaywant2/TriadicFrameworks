@@ -1,3 +1,6 @@
+
+- [`Long_Horizon_Continuity_Agents_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Long_Horizon_Continuity_Agents/Long_Horizon_Continuity_Agents_module.json) — Agentic module schema role assignments
+
 # Long_Horizon_Continuity_Agents
 
 > **RTT Module** · `lhca-rtt-001` · schema `rtt/2.4` · category `continuity` · v`1.0.0`
