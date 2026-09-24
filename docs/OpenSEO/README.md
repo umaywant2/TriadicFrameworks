@@ -1,3 +1,6 @@
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/OpenSEO/module.json) — Agentic module schema role assignments
+
 # **README.md — OpenSEO**  
 **TriadicFrameworks Canon Module**  
 **Coherence:** declared  
