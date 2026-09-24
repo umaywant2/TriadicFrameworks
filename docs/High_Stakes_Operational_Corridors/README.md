@@ -1,3 +1,4 @@
+<img width="1024" height="1024" alt="High_Stakes_Operational_Corridors_" src="https://github.com/user-attachments/assets/626bf3b4-1a36-4ecf-8f00-723eb5605760" />
 
 - [`High_Stakes_Operational_Corridors_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/High_Stakes_Operational_Corridors/High_Stakes_Operational_Corridors_module.json) — Agentic module schema role assignments
 
