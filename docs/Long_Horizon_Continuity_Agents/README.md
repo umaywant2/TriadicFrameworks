@@ -1,3 +1,4 @@
+<img width="1024" height="1024" alt="Long_Horizon_Continuity_Agents_" src="https://github.com/user-attachments/assets/38ecb8e8-ea90-46f2-b184-75d7c3e8a4d1" />
 
 - [`Long_Horizon_Continuity_Agents_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Long_Horizon_Continuity_Agents/Long_Horizon_Continuity_Agents_module.json) — Agentic module schema role assignments
 
