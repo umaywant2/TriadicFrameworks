@@ -1,0 +1,290 @@
+{
+  "ai.module.name": "Long_Horizon_Continuity_Agents",
+  "ai.module.summary": "Agentic substrate module governing multi-step, temporally extended agent continuity across divergent regime transitions. Encodes persistence tensors, drift-tolerance envelopes, and coherence anchors for agents operating beyond single-context windows.",
+  "ai.module.category": "continuity",
+  "ai.module.version": "1.0.0",
+  "ai.module.purpose": "Provide RTT operator grammar and substrate-tensor role assignments that allow agentic pipelines to maintain goal coherence, identity persistence, and behavioral fidelity across long-horizon task sequences, context handoffs, and regime boundary crossings.",
+
+  "module_id": "lhca-rtt-001",
+  "schema_version": "rtt/2.4",
+  "created_at": "2026-09-23T20:23:00-04:00",
+  "authors": ["RTT Core Team"],
+  "license": "Apache-2.0",
+  "tags": ["long-horizon", "continuity", "agent", "temporal-persistence", "RTT"],
+
+  "roles": {
+    "engine": {
+      "description": "Core execution substrate responsible for propagating continuity tensors across time steps. Manages state serialization and resumption.",
+      "bindings": ["horizon_clock", "persistence_stack", "rehydration_protocol"],
+      "required": true
+    },
+    "profile": {
+      "description": "Agent identity profile tensor. Encodes behavioral fingerprint, goal hierarchy, and persona anchors used to verify identity continuity after context boundary crossings.",
+      "bindings": ["identity_hash", "goal_vector", "persona_anchor_set"],
+      "required": true
+    },
+    "signature": {
+      "description": "Cryptographic and semantic signature of the agent's operational state at each checkpoint. Used for drift detection and rollback authorization.",
+      "bindings": ["state_checksum", "semantic_hash", "temporal_stamp"],
+      "required": true
+    },
+    "diagnostic": {
+      "description": "Runtime health monitor for continuity fidelity. Emits drift alerts, coherence decay warnings, and regime-transition anomalies.",
+      "bindings": ["drift_monitor", "coherence_probe", "anomaly_emitter"],
+      "required": true
+    },
+    "map": {
+      "description": "Topological map of the long-horizon task graph. Nodes represent regime checkpoints; edges encode transition probabilities and drift vectors.",
+      "bindings": ["task_graph", "regime_transition_table", "horizon_depth_index"],
+      "required": true
+    },
+    "example": {
+      "description": "Canonical worked examples of long-horizon continuity scenarios: multi-session research agents, persistent negotiation threads, extended planning loops.",
+      "bindings": ["scenario_library", "trace_archive", "outcome_registry"],
+      "required": false
+    },
+    "extension": {
+      "description": "Optional extension points for plugging in domain-specific continuity strategies (e.g., memory consolidation adapters, external checkpoint stores).",
+      "bindings": ["adapter_registry", "plugin_manifest", "capability_flags"],
+      "required": false
+    },
+    "index": {
+      "description": "Searchable index of all continuity artifacts: checkpoints, drift records, coherence snapshots, and horizon maps.",
+      "bindings": ["artifact_index", "checkpoint_log", "drift_ledger"],
+      "required": true
+    },
+    "reference": {
+      "description": "Normative reference material: RTT operator grammar specs, continuity algebra definitions, temporal persistence axioms.",
+      "bindings": ["rtt_spec_link", "continuity_algebra_doc", "axiom_registry"],
+      "required": false
+    },
+    "template": {
+      "description": "Reusable scaffold templates for agent continuity configurations, checkpoint schemas, and horizon-depth profiles.",
+      "bindings": ["checkpoint_template", "horizon_profile_template", "drift_bound_template"],
+      "required": false
+    }
+  },
+
+  "analyzer_layers": {
+    "operator": {
+      "description": "Top-level RTT operator grammar layer. Governs how continuity operators compose, reduce, and project across the horizon tensor space.",
+      "operators": ["PERSIST", "HANDOFF", "REHYDRATE", "CHECKPOINT", "ROLLBACK"],
+      "precedence": 1,
+      "active": true
+    },
+    "dimensional": {
+      "description": "Dimensional analysis layer. Ensures that continuity tensors maintain dimensional consistency (temporal, semantic, behavioral) across regime transitions.",
+      "dimensions": ["temporal_depth", "semantic_width", "behavioral_fidelity", "goal_alignment"],
+      "constraint": "rank-preserving transforms only",
+      "active": true
+    },
+    "regime": {
+      "description": "Regime declaration layer. Defines the operational regimes an agent traverses during a long-horizon task and the permitted transition topologies.",
+      "regimes": [
+        {
+          "id": "WARM_CONTEXT",
+          "description": "Agent operates within a single uninterrupted context window. Full tensor fidelity.",
+          "drift_tolerance": 0.05,
+          "coherence_floor": 0.95
+        },
+        {
+          "id": "COLD_HANDOFF",
+          "description": "Agent crosses a context boundary; state must be serialized and rehydrated. Partial tensor fidelity expected.",
+          "drift_tolerance": 0.20,
+          "coherence_floor": 0.75
+        },
+        {
+          "id": "DEEP_HORIZON",
+          "description": "Agent operates across many successive context boundaries with cumulative drift. Requires active coherence reinforcement.",
+          "drift_tolerance": 0.40,
+          "coherence_floor": 0.60
+        },
+        {
+          "id": "RECOVERY",
+          "description": "Agent is being restored from a checkpoint after an anomalous drift event or forced rollback.",
+          "drift_tolerance": 0.15,
+          "coherence_floor": 0.80
+        }
+      ],
+      "active": true
+    },
+    "drift": {
+      "description": "Drift monitoring and bounding layer. Tracks cumulative behavioral and semantic deviation from the agent's baseline profile over the horizon.",
+      "drift_bounds": {
+        "semantic_drift_max": 0.35,
+        "behavioral_drift_max": 0.25,
+        "goal_vector_drift_max": 0.15,
+        "identity_drift_max": 0.10
+      },
+      "drift_metrics": ["cosine_deviation", "kl_divergence", "l2_norm_delta"],
+      "alert_thresholds": {
+        "warning": 0.60,
+        "critical": 0.85,
+        "halt": 1.00
+      },
+      "mitigation_strategies": ["coherence_reinforcement", "checkpoint_rollback", "goal_re-anchoring"],
+      "active": true
+    },
+    "coherence": {
+      "description": "Coherence anchor management layer. Maintains a set of invariant anchors that the agent must satisfy at every regime checkpoint to qualify as coherent.",
+      "coherence_anchors": [
+        {
+          "id": "CA-01",
+          "name": "Primary Goal Invariant",
+          "description": "The agent's primary goal vector must remain within drift_max of the original at all checkpoints.",
+          "required": true
+        },
+        {
+          "id": "CA-02",
+          "name": "Identity Signature Continuity",
+          "description": "The agent's semantic signature must match the registered profile hash within tolerance at every rehydration.",
+          "required": true
+        },
+        {
+          "id": "CA-03",
+          "name": "Behavioral Envelope Compliance",
+          "description": "Observable agent actions must remain within the declared behavioral envelope for the active regime.",
+          "required": true
+        },
+        {
+          "id": "CA-04",
+          "name": "Temporal Ordering Preservation",
+          "description": "The horizon clock must advance monotonically; retrograde steps are prohibited without an authorized ROLLBACK operator.",
+          "required": true
+        },
+        {
+          "id": "CA-05",
+          "name": "Context Handoff Integrity",
+          "description": "All serialized state bundles transferred across context boundaries must pass signature verification before rehydration.",
+          "required": false
+        }
+      ],
+      "active": true
+    },
+    "cross-cutting": {
+      "description": "Cross-cutting concerns layer. Handles observability, auditability, and inter-module communication that span all other analyzer layers.",
+      "capabilities": [
+        "telemetry_emission",
+        "audit_trail_recording",
+        "inter_module_event_bus",
+        "policy_enforcement_hooks",
+        "graceful_degradation_protocol"
+      ],
+      "event_schema": "rtt/events/continuity-v1",
+      "active": true
+    }
+  },
+
+  "substrate_tensor": {
+    "rank": 4,
+    "axes": ["time_step", "semantic_channel", "behavioral_mode", "regime_index"],
+    "dtype": "float32",
+    "persistence_format": "safetensors",
+    "checkpoint_interval_steps": 50,
+    "max_horizon_depth": 500,
+    "rehydration_protocol": "full_state_restore"
+  },
+
+  "validators": {
+    "drift_bound_validator": {
+      "type": "stub",
+      "description": "Validates that all drift metrics are within declared bounds for the active regime.",
+      "input_schema": {
+        "current_drift": {"type": "object", "keys": ["semantic", "behavioral", "goal_vector", "identity"]},
+        "active_regime": {"type": "string", "enum": ["WARM_CONTEXT", "COLD_HANDOFF", "DEEP_HORIZON", "RECOVERY"]}
+      },
+      "output_schema": {
+        "valid": {"type": "boolean"},
+        "violations": {"type": "array", "items": "string"},
+        "severity": {"type": "string", "enum": ["ok", "warning", "critical", "halt"]}
+      },
+      "implementation": "TODO: implement drift_bound_validator"
+    },
+    "coherence_anchor_validator": {
+      "type": "stub",
+      "description": "Checks all required coherence anchors against the current agent state at a checkpoint.",
+      "input_schema": {
+        "agent_state_bundle": {"type": "object"},
+        "checkpoint_id": {"type": "string"}
+      },
+      "output_schema": {
+        "anchors_passed": {"type": "array", "items": "string"},
+        "anchors_failed": {"type": "array", "items": "string"},
+        "coherence_score": {"type": "number", "minimum": 0.0, "maximum": 1.0}
+      },
+      "implementation": "TODO: implement coherence_anchor_validator"
+    },
+    "signature_integrity_validator": {
+      "type": "stub",
+      "description": "Verifies the semantic and cryptographic signature of a state bundle before rehydration.",
+      "input_schema": {
+        "state_bundle": {"type": "object"},
+        "registered_profile_hash": {"type": "string"}
+      },
+      "output_schema": {
+        "integrity_ok": {"type": "boolean"},
+        "hash_match": {"type": "boolean"},
+        "semantic_similarity": {"type": "number"}
+      },
+      "implementation": "TODO: implement signature_integrity_validator"
+    },
+    "regime_transition_validator": {
+      "type": "stub",
+      "description": "Validates that a proposed regime transition is permitted by the regime transition table and that pre-conditions are met.",
+      "input_schema": {
+        "from_regime": {"type": "string"},
+        "to_regime": {"type": "string"},
+        "current_drift": {"type": "object"},
+        "coherence_score": {"type": "number"}
+      },
+      "output_schema": {
+        "transition_permitted": {"type": "boolean"},
+        "blocking_reasons": {"type": "array", "items": "string"}
+      },
+      "implementation": "TODO: implement regime_transition_validator"
+    }
+  },
+
+  "examples": [
+    {
+      "id": "EX-LHCA-001",
+      "title": "Multi-Session Research Agent",
+      "description": "An agent conducting a week-long literature review across 12 context handoffs, maintaining goal coherence and citation consistency.",
+      "regime_sequence": ["WARM_CONTEXT", "COLD_HANDOFF", "WARM_CONTEXT", "COLD_HANDOFF", "DEEP_HORIZON"],
+      "drift_profile": {"semantic": 0.12, "behavioral": 0.08, "goal_vector": 0.05, "identity": 0.03},
+      "outcome": "Goal achieved; all coherence anchors CA-01 through CA-04 satisfied at all checkpoints."
+    },
+    {
+      "id": "EX-LHCA-002",
+      "title": "Persistent Negotiation Thread",
+      "description": "An agent negotiating a multi-party contract across 30 days with intermittent context resets and third-party integrations.",
+      "regime_sequence": ["WARM_CONTEXT", "COLD_HANDOFF", "RECOVERY", "WARM_CONTEXT", "DEEP_HORIZON"],
+      "drift_profile": {"semantic": 0.28, "behavioral": 0.19, "goal_vector": 0.11, "identity": 0.07},
+      "outcome": "One RECOVERY event triggered by semantic drift exceedance; rollback to checkpoint CP-14 successful."
+    }
+  ],
+
+  "extension_points": {
+    "memory_consolidation_adapter": {
+      "description": "Plug in external memory consolidation strategies (e.g., vector DB summarization, episodic compression).",
+      "interface": "IMemoryConsolidationAdapter",
+      "required": false
+    },
+    "external_checkpoint_store": {
+      "description": "Override the default in-process checkpoint store with an external persistent store (e.g., Redis, S3, database).",
+      "interface": "ICheckpointStore",
+      "required": false
+    },
+    "drift_metric_provider": {
+      "description": "Supply a custom drift metric calculation backend.",
+      "interface": "IDriftMetricProvider",
+      "required": false
+    }
+  },
+
+  "references": [
+    {"id": "REF-RTT-SPEC", "title": "RTT Operator Grammar Specification v2.4", "type": "spec"},
+    {"id": "REF-CONTINUITY-ALGEBRA", "title": "Continuity Algebra for Agentic Systems", "type": "paper"},
+    {"id": "REF-TEMPORAL-PERSISTENCE", "title": "Temporal Persistence Axioms for LLM Agents", "type": "whitepaper"}
+  ]
+}
