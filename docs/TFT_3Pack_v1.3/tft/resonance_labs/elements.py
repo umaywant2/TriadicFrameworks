@@ -5,7 +5,7 @@ import yaml
 import os
 
 # Load elemental config
-CONFIG_PATH = os.path.join(os.path.dirname(__file__), 'elements.yaml')
+CONFIG_PATH = os.path.join(os.path.dirname(__file__), 'elements.yml')
 
 def load_elements(path):
     with open(path, 'r', encoding='utf-8') as f:
