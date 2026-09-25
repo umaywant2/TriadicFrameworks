@@ -1,8 +1,8 @@
----
+<!-- ---
 status: generated
 version: "0.4"
 description: "Coeus is TriadicFrameworks' multi-agent AI research sandbox, with a runnable three-agent quickstart and symbolic research tasks."
----
+--- -->
 
 <img width="1194" height="672" alt="Coeus_" src="https://github.com/user-attachments/assets/0562f8b9-86c1-477e-9dc6-cf90e536628c" />
 
