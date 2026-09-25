@@ -31,7 +31,7 @@ A student might begin by simulating Carbon (C) using the following triadic profi
 - **Fluids**: Exists as graphite, diamond, graphene—fluid in structure  
 - **Frequency**: High vibrational modes, resonance in organic compounds  
 
-Using `elements.py`, the student can simulate Carbon’s response to energy input, visualize its resonance field, and compare it to Silicon (Si) and Germanium (Ge) in the same triadic cluster. They may then create a symbolic stub (`🜁`) and document their findings in `elements.yaml`.
+Using `elements.py`, the student can simulate Carbon’s response to energy input, visualize its resonance field, and compare it to Silicon (Si) and Germanium (Ge) in the same triadic cluster. They may then create a symbolic stub (`🜁`) and document their findings in `elements.yml`.
 
 ## Expansion Hooks
 
