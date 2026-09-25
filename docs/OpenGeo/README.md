@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="OpenGeo_" src="https://github.com/user-attachments/assets/9718d3d4-1e23-47b0-be49-fa40362ef106" />
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/OpenGeo/module.json) — Agentic module schema role assignments
 
