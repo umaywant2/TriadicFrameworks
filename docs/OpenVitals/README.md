@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="OpenVitals_" src="https://github.com/user-attachments/assets/de99e71b-7b88-427d-9995-7dd179d68ba9" />
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/OpenVitals/module.json) — Agentic module schema role assignments
 
