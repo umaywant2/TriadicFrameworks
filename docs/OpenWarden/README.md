@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="OpenWarden_" src="https://github.com/user-attachments/assets/3dcc4c0c-5b98-43d4-8a42-fc53ca26fce0" />
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/OpenWarden/module.json) — Agentic module schema role assignments
 - [`suite_map.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/OpenWarden/suite_map.json) — Agentic suite module schema role assignments
