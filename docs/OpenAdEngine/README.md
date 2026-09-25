@@ -1,3 +1,6 @@
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/OpenAdEngine/module.json) — Agentic module schema role assignments
+
 # 📢 **OpenAdEngine — README.md (TriadicFrameworks Canon)**  
 *(You can paste this directly into your GitHub editor tab.)*
 
