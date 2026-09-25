@@ -1,3 +1,6 @@
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/OpenLLM/module.json) — Agentic module schema role assignments
+
 # 🤖 **OpenLLM — README.md**  
 **OpenWarden Suite — Large Language Model Substrate**  
 **Version:** 1.0  
