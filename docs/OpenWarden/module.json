@@ -1,1 +1,73 @@
+{
+  "module": "OpenWarden",
+  "version": "1.0",
+  "category": "suite-root",
+  "role": "governance-kernel",
+  "analyzer_layer": "governance",
+  "regime": "open-substrate-suite",
+  "acronym": "Gen-Up Inverted Networks",
+  "identity": {
+    "purpose": "Suite root for all OpenWarden substrate modules; provides unified governance, metadata schema, drift taxonomy, operator grammar, and cross-module coherence rules.",
+    "signature": "openwarden-suite-root",
+    "resonance": 0.97,
+    "drift": "bounded",
+    "coherence": "declared"
+  },
+
+  "files": {
+    "README": "README.md",
+    "ARCHITECTURE": "architecture.md",
+    "CANONICAL_METADATA": "canonical_metadata.md",
+    "GOVERNANCE": "governance.md",
+    "OPERATORS": "operators.md",
+    "SUITE_MAP": "suite_map.json",
+    "INDEX": "index.html"
+  },
+
+  "children": {
+    "OpenSEO": "/docs/OpenSEO/module.json",
+    "OpenSoN": "/docs/OpenSoN/module.json",
+    "OpenGPU": "/docs/OpenGPU/module.json",
+    "OpenLLM": "/docs/OpenLLM/module.json",
+    "OpenIAM": "/docs/OpenIAM/module.json",
+    "OpenFeed": "/docs/OpenFeed/module.json",
+    "OpenCatalog": "/docs/OpenCatalog/module.json",
+    "OpenGeo": "/docs/OpenGeo/module.json",
+    "OpenStream": "/docs/OpenStream/module.json",
+    "OpenVitals": "/docs/OpenVitals/module.json",
+    "OpenRisk": "/docs/OpenRisk/module.json",
+    "OpenAdEngine": "/docs/OpenAdEngine/module.json"
+  },
+
+  "governance": {
+    "drift_policy": "bounded",
+    "coherence_policy": "suite-level",
+    "metadata_policy": "canonical-required",
+    "operator_policy": "root-governed",
+    "lineage_policy": "full-suite-lineage",
+    "visibility": "global"
+  },
+
+  "operators": {
+    "extend": true,
+    "condense": true,
+    "refactor": true,
+    "capture": true,
+    "annotate": true,
+    "correct": true,
+    "suite_enforce": true
+  },
+
+  "metadata_schema": {
+    "canonical_block": "canonical_metadata.md",
+    "governance_block": "governance.md",
+    "operator_block": "operators.md",
+    "session_context": "index.html#session-context"
+  },
+
+  "dependencies": {
+    "triadicframeworks": ">=1.0",
+    "rtt": ">=1.0"
+  }
+}
 
