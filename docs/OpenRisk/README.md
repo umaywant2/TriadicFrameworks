@@ -1,3 +1,6 @@
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/OpenRisk/module.json) — Agentic module schema role assignments
+
 # ⚠️ **OpenRisk — README.md**  
 **OpenWarden Suite — Risk Analysis Substrate**  
 **Version:** 1.0  
