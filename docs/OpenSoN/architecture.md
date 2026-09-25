@@ -1,6 +1,4 @@
-# **/docs/OpenSoN/architecture.md**
-
-## **OpenSoN Architecture — Narrative Substrate Design**
+# **OpenSoN Architecture — Narrative Substrate Design**
 
 OpenSoN defines a **structural architecture** for narrative systems: a way to build, maintain, and evolve stories with the same rigor used for technical frameworks, governance substrates, and dimensional operators.
 
