@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="OpenIAM_" src="https://github.com/user-attachments/assets/d4fa1318-c5de-4b42-823f-bebf225f9cdd" />
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/OpenIAM/module.json) — Agentic module schema role assignments
 
