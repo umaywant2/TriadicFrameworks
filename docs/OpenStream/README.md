@@ -1,3 +1,6 @@
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/OpenStream/module.json) — Agentic module schema role assignments
+
 # 🌊 **OpenStream — README.md**  
 **OpenWarden Suite — Streaming Substrate**  
 **Version:** 1.0  
