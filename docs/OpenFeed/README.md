@@ -1,3 +1,6 @@
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/OpenFeed/module.json) — Agentic module schema role assignments
+
 # 📡 **OpenFeed — README.md**  
 **OpenWarden Suite — Social Feed Substrate**  
 **Version:** 1.0  
