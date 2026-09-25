@@ -1,3 +1,6 @@
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/OpenSoN/module.json) — Agentic module schema role assignments
+
 # OpenSoN — Open Source Narrative Substrate
 
 OpenSoN is the **narrative substrate** of TriadicFrameworks — a way to make stories, documentation, and knowledge **coherence‑tracked, drift‑aware, and AI‑parsable** without losing their human texture.
