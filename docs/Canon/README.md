@@ -1,10 +1,12 @@
----
+<!-- ---
 status: generated
 version: "0.2"
 description: "The TriadicFrameworks Canon is the coherence-locked root for RTT foundations, operators, equations, measurement rules, and module navigation."
----
+--- -->
 
 <img width="1194" height="672" alt="triadicframeworks_Canon_" src="https://github.com/user-attachments/assets/76fae0c8-9538-4be0-b552-96202e561660" />
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Canon/module.json) — Agentic module schema role assignments
 
 # 🔵 TriadicFrameworks Canon
 **Coherence-Locked Root · v1.0**
