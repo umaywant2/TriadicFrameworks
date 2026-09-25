@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="OpenLLM_" src="https://github.com/user-attachments/assets/e00616a4-24b8-4a78-8a7f-4e5edc61e90a" />
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/OpenLLM/module.json) — Agentic module schema role assignments
 
