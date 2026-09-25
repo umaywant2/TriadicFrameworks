@@ -1,10 +1,12 @@
----
+<!-- ---
 status: generated
 version: "0.4"
 description: "What TriadicFrameworks is, who it serves, and how its Structure, Regime, and Operator language supports human and AI learning."
----
+--- -->
 
 <img width="1194" height="672" alt="About_TriadicFrameworks_" src="https://github.com/user-attachments/assets/5949fdd6-7faf-4331-86db-3702fb4a7922" />
+
+- [`ABOUT_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/ABOUT_module.json) — Agentic module schema role assignments
 
 # 🧭 About TriadicFrameworks  
 ### *A Structural Learning Framework for Students and AI Systems*
