@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="OpenSEO_" src="https://github.com/user-attachments/assets/aafb2928-b5d4-41c3-95f3-3121fb9bdb6c" />
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/OpenSEO/module.json) — Agentic module schema role assignments
 
