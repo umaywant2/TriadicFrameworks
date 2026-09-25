@@ -1,8 +1,12 @@
----
+<!-- ---
 status: generated
 version: "0.3"
 description: "Plain-language definitions of Structure, Regime, Operator, triadic framework, coherence, drift, and Resonance-Time Theory in TriadicFrameworks."
----
+--- -->
+
+<img width="1194" height="672" alt="GLOSSARY_" src="https://github.com/user-attachments/assets/84f8b7ea-bc45-4995-9a30-3e599e45cd7a" />
+
+- [``](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/GLOSSARY_module.json) — Agentic module schema role assignments
 
 # TriadicFrameworks Core Terms
 
