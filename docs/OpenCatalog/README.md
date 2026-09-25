@@ -1,3 +1,6 @@
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/OpenCatalog/module.json) — Agentic module schema role assignments
+
 # 🛒 **OpenCatalog — README.md**  
 **OpenWarden Suite — Product Catalog Substrate**  
 **Version:** 1.0  
