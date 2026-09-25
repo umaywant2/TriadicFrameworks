@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="OpenSoN_" src="https://github.com/user-attachments/assets/6b49c4fa-3590-4735-8833-32bdf8f70ff5" />
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/OpenSoN/module.json) — Agentic module schema role assignments
 
