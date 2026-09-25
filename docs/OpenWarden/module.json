@@ -27,7 +27,7 @@
   "children": {
     "OpenSEO": "/docs/OpenSEO/module.json",
     "OpenSoN": "/docs/OpenSoN/module.json",
-    "OpenGPU": "/docs/OpenGPU/module.json",
+    "OpenGPU": "/docs/TFT.OpenGPU.Stack.Module/module.json",
     "OpenLLM": "/docs/OpenLLM/module.json",
     "OpenIAM": "/docs/OpenIAM/module.json",
     "OpenFeed": "/docs/OpenFeed/module.json",
