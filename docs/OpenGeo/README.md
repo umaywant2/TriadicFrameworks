@@ -1,3 +1,6 @@
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/OpenGeo/module.json) — Agentic module schema role assignments
+
 # 🌍 **OpenGeo — README.md**  
 **OpenWarden Suite — Geospatial Metadata Substrate**  
 **Version:** 1.0  
