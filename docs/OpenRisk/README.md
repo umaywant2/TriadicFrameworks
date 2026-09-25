@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="OpenRisk_" src="https://github.com/user-attachments/assets/c302e51f-45cc-4371-9a1c-bb5750544800" />
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/OpenRisk/module.json) — Agentic module schema role assignments
 
