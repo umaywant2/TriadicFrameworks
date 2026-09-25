@@ -1,3 +1,6 @@
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/OpenVitals/module.json) — Agentic module schema role assignments
+
 # 🫀 **OpenVitals — README.md**  
 **OpenWarden Suite — Health & Physiological Signal Substrate**  
 **Version:** 1.0  
