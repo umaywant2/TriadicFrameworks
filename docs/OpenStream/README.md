@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="OpenStream_" src="https://github.com/user-attachments/assets/d9995f1b-0ff0-4192-9d29-de2247f89a4d" />
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/OpenStream/module.json) — Agentic module schema role assignments
 
