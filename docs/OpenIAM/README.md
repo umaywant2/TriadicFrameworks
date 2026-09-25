@@ -1,3 +1,6 @@
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/OpenIAM/module.json) — Agentic module schema role assignments
+
 # 🛡️ **OpenIAM — README.md**  
 **OpenWarden Suite — Identity & Access Substrate**  
 **Version:** 1.0  
