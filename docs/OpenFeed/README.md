@@ -1,3 +1,4 @@
+<img width="1194" height="672" alt="OpenFeed_" src="https://github.com/user-attachments/assets/90f34b10-57c4-4737-8501-b87ad8afc6fa" />
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/OpenFeed/module.json) — Agentic module schema role assignments
 
