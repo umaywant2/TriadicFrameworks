@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:ai="https://triadicframeworks.com/schemas/ai-sitemap/1.0">
+
+  <!-- TriadicFrameworks OpenAPI Suite Sitemap -->
+  <!-- Suite root: /docs/openapi/ -->
+  <!-- Generated: 2026-09-26T06:00:00-04:00 -->
+  <!-- Author: Nawder Loswin -->
+  <!-- Disambiguation: openapi here = open-aperture principle (TriadicFrameworks canon).
+       NOT the OpenAPI Specification (OAS/Swagger) REST-schema standard. -->
+
+  <url>
+    <loc>https://triadicframeworks.com/docs/openapi/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <ai:module>openapi</ai:module>
+    <ai:role>index</ai:role>
+    <ai:description>OpenAPI suite root. Navigation hub for all Open* surface modules.</ai:description>
+  </url>
+
+  <url>
+    <loc>https://triadicframeworks.com/docs/openapi/LLM</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <ai:module>openapi/LLM</ai:module>
+    <ai:role>engine</ai:role>
+    <ai:ring>Motion</ai:ring>
+    <ai:regime>generative</ai:regime>
+    <ai:description>OpenLLM surface: signature, operators, openapi loop, three rings, drift-event JSON, worked example.</ai:description>
+  </url>
+
+  <url>
+    <loc>https://triadicframeworks.com/docs/openapi/IAM</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <ai:module>openapi/IAM</ai:module>
+    <ai:role>engine</ai:role>
+    <ai:ring>Trust</ai:ring>
+    <ai:regime>governance</ai:regime>
+    <ai:description>OpenIAM surface: identity, access chain, principal registry, operators, worked example.</ai:description>
+    <ai:note>Suite Trust-ring anchor. Highest coherence threshold (0.85).</ai:note>
+  </url>
+
+  <url>
+    <loc>https://triadicframeworks.com/docs/openapi/Risk</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <ai:module>openapi/Risk</ai:module>
+    <ai:role>engine</ai:role>
+    <ai:ring>Trust</ai:ring>
+    <ai:regime>classification</ai:regime>
+    <ai:description>OpenRisk surface: risk tiers, severity formula, gate protocol, operators, openapi loop.</ai:description>
+  </url>
+
+  <url>
+    <loc>https://triadicframeworks.com/docs/openapi/Geo</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <ai:module>openapi/Geo</ai:module>
+    <ai:role>engine</ai:role>
+    <ai:ring>Motion</ai:ring>
+    <ai:regime>grounding</ai:regime>
+    <ai:description>OpenGeo surface: geospatial and temporal grounding, coordinate anchors, location scope levels.</ai:description>
+  </url>
+
+  <url>
+    <loc>https://triadicframeworks.com/docs/openapi/GPU</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <ai:module>openapi/GPU</ai:module>
+    <ai:role>engine</ai:role>
+    <ai:ring>Motion</ai:ring>
+    <ai:regime>execution</ai:regime>
+    <ai:description>OpenGPU surface: parallel execution substrate, execution modes, throughput regimes, gate protocol.</ai:description>
+  </url>
+
+  <url>
+    <loc>https://triadicframeworks.com/docs/openapi/Data</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <ai:module>openapi/Data</ai:module>
+    <ai:role>engine</ai:role>
+    <ai:ring>Meaning</ai:ring>
+    <ai:regime>registry</ai:regime>
+    <ai:description>OpenData surface: data surface, lineage registry, schema registry. Terminal step of every openapi loop.</ai:description>
+  </url>
+
+  <!-- Meta / registry files -->
+
+  <url>
+    <loc>https://triadicframeworks.com/docs/openapi/module.json</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <ai:role>index</ai:role>
+    <ai:description>Per-module manifest: all files with roles and analyzer layers.</ai:description>
+  </url>
+
+  <url>
+    <loc>https://triadicframeworks.com/docs/openapi/modules.json</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <ai:role>reference</ai:role>
+    <ai:description>Cross-suite registry of all Open* modules with IDs, versions, and signature summaries.</ai:description>
+  </url>
+
+  <url>
+    <loc>https://triadicframeworks.com/docs/openapi/quad.json</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <ai:role>map</ai:role>
+    <ai:description>Quad map: four-quadrant view of the suite by ring and regime.</ai:description>
+  </url>
+
+  <url>
+    <loc>https://triadicframeworks.com/docs/openapi/nav.json</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <ai:role>map</ai:role>
+    <ai:description>Suite navigation structure for site nav and AI agent traversal.</ai:description>
+  </url>
+
+</urlset>

@@ -1,40 +1,159 @@
 {
-  "openapi": "3.1.0",
-  "info": {
-    "title": "TriadicFrameworks Modules API",
-    "version": "1.0.0"
+  "$schema": "../schemas/module.schema.json",
+  "suite": "openapi",
+  "suite_name": "TriadicFrameworks OpenAPI Suite",
+  "suite_version": "1.0.0",
+  "generated": "2026-09-26T05:59:00-04:00",
+  "author": "Nawder Loswin",
+  "disambiguation": "openapi in this canon = open-aperture principle (TriadicFrameworks). Not the OpenAPI Specification (OAS/Swagger) REST-schema standard.",
+  "rings": {
+    "Trust": "Innermost ring. Identity, governance, signature validity.",
+    "Motion": "Middle ring. Operator application, drift propagation, loop execution.",
+    "Meaning": "Outer ring. Semantic coherence, output interpretation, cross-domain alignment."
   },
-  "paths": {
-    "/api/modules": {
-      "get": {
-        "summary": "List all modules",
-        "responses": {
-          "200": {
-            "description": "Module list"
-          }
-        }
-      }
+  "modules": [
+    {
+      "id": "openapi/LLM",
+      "name": "OpenLLM",
+      "file": "LLM.md",
+      "domain": "Language Model infrastructure",
+      "version": "1.0.0",
+      "status": "active",
+      "dimension_vector": ["semantic", "temporal", "causal"],
+      "regime": "generative",
+      "coherence_threshold": 0.78,
+      "operator_affinity": ["NORMALIZE", "ALIGN", "PROPAGATE", "COLLAPSE", "ANNOTATE", "REFRAME"],
+      "rings": ["Motion", "Trust", "Meaning"],
+      "drift_surface": true,
+      "lineage_hooks": true,
+      "cross_references": ["openapi/IAM", "openapi/Risk", "openapi/Geo", "openapi/GPU", "openapi/Data"],
+      "worked_example": true,
+      "drift_event_json": true,
+      "openapi_loop": true
     },
-    "/api/modules/{id}": {
-      "get": {
-        "summary": "Get module metadata",
-        "responses": {
-          "200": {
-            "description": "Module metadata"
-          }
-        }
-      }
+    {
+      "id": "openapi/IAM",
+      "name": "OpenIAM",
+      "file": "IAM.md",
+      "domain": "Identity & Access Management",
+      "version": "1.0.0",
+      "status": "active",
+      "dimension_vector": ["identity", "access", "temporal"],
+      "regime": "governance",
+      "coherence_threshold": 0.85,
+      "operator_affinity": ["VERIFY", "REVOKE", "DELEGATE", "ESCALATE", "ALIGN"],
+      "rings": ["Trust", "Motion", "Meaning"],
+      "drift_surface": true,
+      "lineage_hooks": true,
+      "cross_references": ["openapi/LLM", "openapi/Risk", "openapi/Geo", "openapi/GPU", "openapi/Data"],
+      "worked_example": true,
+      "drift_event_json": true,
+      "openapi_loop": true,
+      "note": "Trust-ring anchor for the entire suite. Highest coherence threshold."
     },
-    "/api/modules/health": {
-      "get": {
-        "summary": "Health check",
-        "responses": {
-          "200": {
-            "description": "Modules API health"
-          }
-        }
-      }
+    {
+      "id": "openapi/Risk",
+      "name": "OpenRisk",
+      "file": "Risk.md",
+      "domain": "Risk Regime Classification",
+      "version": "1.0.0",
+      "status": "active",
+      "dimension_vector": ["regime", "severity", "temporal"],
+      "regime": "classification",
+      "coherence_threshold": 0.80,
+      "operator_affinity": ["CLASSIFY", "GATE", "ESCALATE", "ABSORB", "PROPAGATE"],
+      "rings": ["Trust", "Meaning", "Motion"],
+      "risk_tiers": ["low", "moderate", "high", "critical"],
+      "risk_gate_threshold": 0.75,
+      "drift_surface": true,
+      "lineage_hooks": true,
+      "cross_references": ["openapi/IAM", "openapi/LLM", "openapi/Geo", "openapi/GPU", "openapi/Data"],
+      "worked_example": false,
+      "drift_event_json": true,
+      "openapi_loop": true
+    },
+    {
+      "id": "openapi/Geo",
+      "name": "OpenGeo",
+      "file": "Geo.md",
+      "domain": "Geospatial & Temporal Grounding",
+      "version": "1.0.0",
+      "status": "active",
+      "dimension_vector": ["spatial", "temporal", "regime"],
+      "regime": "grounding",
+      "coherence_threshold": 0.76,
+      "operator_affinity": ["ANCHOR", "OFFSET", "PROJECT", "COLLAPSE", "ALIGN"],
+      "rings": ["Motion", "Meaning", "Trust"],
+      "coordinate_system": "WGS84",
+      "temporal_resolution": "ISO8601",
+      "drift_surface": true,
+      "lineage_hooks": true,
+      "cross_references": ["openapi/LLM", "openapi/IAM", "openapi/Risk", "openapi/GPU", "openapi/Data"],
+      "worked_example": false,
+      "drift_event_json": true,
+      "openapi_loop": true
+    },
+    {
+      "id": "openapi/GPU",
+      "name": "OpenGPU",
+      "file": "GPU.md",
+      "domain": "Parallel Execution Substrate",
+      "version": "1.0.0",
+      "status": "active",
+      "dimension_vector": ["compute", "regime", "throughput"],
+      "regime": "execution",
+      "coherence_threshold": 0.72,
+      "operator_affinity": ["SCHEDULE", "PARTITION", "PIPELINE", "FLUSH", "ALIGN"],
+      "rings": ["Motion", "Trust", "Meaning"],
+      "execution_modes": ["batch", "real-time", "streaming", "inference"],
+      "risk_gate_dependency": "openapi/Risk",
+      "drift_surface": true,
+      "lineage_hooks": true,
+      "cross_references": ["openapi/Risk", "openapi/IAM", "openapi/LLM", "openapi/Data", "openapi/Geo"],
+      "worked_example": false,
+      "drift_event_json": true,
+      "openapi_loop": true
+    },
+    {
+      "id": "openapi/Data",
+      "name": "OpenData",
+      "file": "Data.md",
+      "domain": "Data Surface & Lineage Registry",
+      "version": "1.0.0",
+      "status": "active",
+      "dimension_vector": ["schema", "lineage", "access"],
+      "regime": "registry",
+      "coherence_threshold": 0.82,
+      "operator_affinity": ["INGEST", "VALIDATE", "INDEX", "PURGE", "PROPAGATE"],
+      "rings": ["Meaning", "Trust", "Motion"],
+      "lineage_store": "lineage/",
+      "schema_registry": "schemas/",
+      "iam_dependency": "openapi/IAM",
+      "drift_surface": true,
+      "lineage_hooks": true,
+      "cross_references": ["openapi/LLM", "openapi/IAM", "openapi/Risk", "openapi/Geo", "openapi/GPU"],
+      "worked_example": false,
+      "drift_event_json": true,
+      "openapi_loop": true,
+      "note": "Terminal step of every openapi loop. Lineage is only complete when Data.INDEX is called."
     }
-  }
+  ],
+  "suite_operator_affinity_union": [
+    "NORMALIZE", "ALIGN", "PROPAGATE", "COLLAPSE", "ANNOTATE", "REFRAME",
+    "VERIFY", "REVOKE", "DELEGATE", "ESCALATE",
+    "CLASSIFY", "GATE", "ABSORB",
+    "ANCHOR", "OFFSET", "PROJECT",
+    "SCHEDULE", "PARTITION", "PIPELINE", "FLUSH",
+    "INGEST", "VALIDATE", "INDEX", "PURGE"
+  ],
+  "suite_coherence_thresholds": {
+    "openapi/LLM":  0.78,
+    "openapi/IAM":  0.85,
+    "openapi/Risk": 0.80,
+    "openapi/Geo":  0.76,
+    "openapi/GPU":  0.72,
+    "openapi/Data": 0.82
+  },
+  "suite_minimum_coherence": 0.72,
+  "suite_anchor": "openapi/IAM"
 }
-

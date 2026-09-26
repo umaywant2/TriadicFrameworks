@@ -1,40 +1,68 @@
 {
-  "openapi": "3.1.0",
-  "info": {
-    "title": "Quad Engine API",
-    "version": "1.0.0"
-  },
-  "paths": {
-    "/api/quad": {
-      "get": {
-        "summary": "Quad Engine capabilities",
-        "responses": {
-          "200": {
-            "description": "Quad Engine metadata"
-          }
-        }
-      }
+  "$schema": "../schemas/module.schema.json",
+  "quad_id": "openapi/quad",
+  "suite": "openapi",
+  "version": "1.0.0",
+  "generated": "2026-09-26T06:00:00-04:00",
+  "description": "Four-quadrant view of the OpenAPI suite mapped by primary ring and regime.",
+  "axes": {
+    "x": {
+      "label": "Ring Priority",
+      "poles": ["Trust-first", "Motion-first"]
     },
-    "/api/quad/eval": {
-      "post": {
-        "summary": "Evaluate a Quad Engine operator",
-        "responses": {
-          "200": {
-            "description": "Evaluation result"
-          }
-        }
-      }
-    },
-    "/api/quad/health": {
-      "get": {
-        "summary": "Health check",
-        "responses": {
-          "200": {
-            "description": "Quad Engine health"
-          }
-        }
-      }
+    "y": {
+      "label": "Regime Orientation",
+      "poles": ["Governance", "Execution"]
     }
+  },
+  "quadrants": {
+    "Q1": {
+      "label": "Governance · Trust",
+      "description": "Modules whose primary ring is Trust and whose regime is governance or classification. These modules gate and verify before anything moves.",
+      "modules": ["openapi/IAM", "openapi/Risk"],
+      "operators": ["VERIFY", "REVOKE", "DELEGATE", "ESCALATE", "CLASSIFY", "GATE"]
+    },
+    "Q2": {
+      "label": "Governance · Motion",
+      "description": "Modules whose regime is governance but that also carry active Motion-ring responsibilities (propagation, loop execution).",
+      "modules": ["openapi/Data"],
+      "operators": ["INGEST", "VALIDATE", "INDEX", "PROPAGATE"]
+    },
+    "Q3": {
+      "label": "Execution · Trust",
+      "description": "Modules whose primary ring bridges Trust and execution substrate. Execution only proceeds after Trust clearance.",
+      "modules": ["openapi/GPU"],
+      "operators": ["SCHEDULE", "PARTITION", "PIPELINE", "FLUSH", "ALIGN"]
+    },
+    "Q4": {
+      "label": "Execution · Motion",
+      "description": "Modules whose primary concern is active operation in time and space — semantic generation, geospatial grounding.",
+      "modules": ["openapi/LLM", "openapi/Geo"],
+      "operators": ["NORMALIZE", "ALIGN", "PROPAGATE", "COLLAPSE", "REFRAME", "ANCHOR", "OFFSET", "PROJECT"]
+    }
+  },
+  "ring_map": {
+    "Trust":   ["openapi/IAM", "openapi/Risk", "openapi/Data"],
+    "Motion":  ["openapi/LLM", "openapi/GPU", "openapi/Geo"],
+    "Meaning": ["openapi/LLM", "openapi/IAM", "openapi/Data", "openapi/Geo"]
+  },
+  "coherence_spectrum": [
+    {"module": "openapi/GPU",  "threshold": 0.72, "position": "lowest"},
+    {"module": "openapi/Geo",  "threshold": 0.76, "position": "low"},
+    {"module": "openapi/LLM",  "threshold": 0.78, "position": "mid-low"},
+    {"module": "openapi/Risk", "threshold": 0.80, "position": "mid"},
+    {"module": "openapi/Data", "threshold": 0.82, "position": "mid-high"},
+    {"module": "openapi/IAM",  "threshold": 0.85, "position": "highest"}
+  ],
+  "execution_order": {
+    "description": "Canonical operator application sequence across the suite for a full cross-domain operation.",
+    "steps": [
+      {"order": 1, "module": "openapi/IAM",  "action": "VERIFY principal identity"},
+      {"order": 2, "module": "openapi/Risk", "action": "CLASSIFY risk envelope"},
+      {"order": 3, "module": "openapi/Geo",  "action": "ANCHOR spatial-temporal context"},
+      {"order": 4, "module": "openapi/LLM",  "action": "NORMALIZE and process"},
+      {"order": 5, "module": "openapi/GPU",  "action": "SCHEDULE and EXECUTE workload"},
+      {"order": 6, "module": "openapi/Data", "action": "INDEX lineage and VALIDATE payload"}
+    ]
   }
 }
-

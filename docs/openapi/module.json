@@ -1,0 +1,111 @@
+{
+  "$schema": "../schemas/module.schema.json",
+  "module_id": "openapi",
+  "module_name": "OpenAPI Suite",
+  "module_summary": "Open-aperture surface suite exposing signature, operators, drift surface, and lineage hooks for all Open* domains. Not to be confused with the OpenAPI Specification (OAS/Swagger) REST-schema standard.",
+  "category": "openapi",
+  "version": "1.0.0",
+  "status": "active",
+  "author": "Nawder Loswin",
+  "publication_date": "2025",
+  "last_reviewed": "2026-09-26",
+  "canonical_url": "https://triadicframeworks.com/docs/openapi/",
+  "rings": ["Trust", "Motion", "Meaning"],
+  "files": [
+    {
+      "path": "index.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting",
+      "description": "Suite root index. Navigation hub for all Open* surface modules."
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting",
+      "description": "HTML front door for the openapi suite with canonical head block."
+    },
+    {
+      "path": "README.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting",
+      "description": "Developer-facing README. Setup, navigation, and contribution guide."
+    },
+    {
+      "path": "LLM.md",
+      "role": "engine",
+      "analyzer_layer": "operator",
+      "description": "OpenLLM consolidated surface: architecture, canonical metadata, governance, operators, openapi loop, three rings, drift-event JSON, worked example."
+    },
+    {
+      "path": "IAM.md",
+      "role": "engine",
+      "analyzer_layer": "operator",
+      "description": "OpenIAM consolidated surface: identity, access chain, principal registry, operators, openapi loop, three rings, worked example."
+    },
+    {
+      "path": "Risk.md",
+      "role": "engine",
+      "analyzer_layer": "drift",
+      "description": "OpenRisk consolidated surface: risk tier definitions, severity formula, gate protocol, operators, openapi loop, three rings."
+    },
+    {
+      "path": "Geo.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional",
+      "description": "OpenGeo consolidated surface: geospatial and temporal grounding, coordinate anchors, location scope levels, operators, openapi loop."
+    },
+    {
+      "path": "GPU.md",
+      "role": "engine",
+      "analyzer_layer": "regime",
+      "description": "OpenGPU consolidated surface: parallel execution substrate, execution modes, throughput regimes, gate protocol, operators."
+    },
+    {
+      "path": "Data.md",
+      "role": "engine",
+      "analyzer_layer": "coherence",
+      "description": "OpenData consolidated surface: data surface, lineage registry, schema registry, lineage note schema, operators, lineage store structure."
+    },
+    {
+      "path": "module.json",
+      "role": "index",
+      "analyzer_layer": "cross-cutting",
+      "description": "Per-module manifest listing all files, roles, and analyzer layers for this suite."
+    },
+    {
+      "path": "modules.json",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting",
+      "description": "Cross-suite registry of all Open* modules with IDs, versions, and signature summaries."
+    },
+    {
+      "path": "quad.json",
+      "role": "map",
+      "analyzer_layer": "cross-cutting",
+      "description": "Quad map: four-quadrant view of the suite by ring and regime."
+    },
+    {
+      "path": "nav.json",
+      "role": "map",
+      "analyzer_layer": "cross-cutting",
+      "description": "Suite navigation structure for site nav and AI agent traversal."
+    },
+    {
+      "path": "sitemap.xml",
+      "role": "map",
+      "analyzer_layer": "cross-cutting",
+      "description": "XML sitemap for the openapi suite for search engines and AI crawlers."
+    }
+  ],
+  "operator_affinity": ["NORMALIZE", "ALIGN", "PROPAGATE", "VERIFY", "CLASSIFY", "GATE", "ANCHOR", "SCHEDULE", "INGEST"],
+  "drift_surface": true,
+  "lineage_hooks": true,
+  "cross_references": [
+    "openapi/LLM",
+    "openapi/IAM",
+    "openapi/Risk",
+    "openapi/Geo",
+    "openapi/GPU",
+    "openapi/Data"
+  ]
+}
