@@ -1,4 +1,11 @@
-# OPERATORS — High_Stakes_Operational_Corridors
+---
+title: "HSOC Operators Reference — Safety-Critical RTT Operators"
+description: "Complete operator grammar reference for High-Stakes Operational Corridors (GATE, AUTHORIZE, ESCALATE, HALT, ROLLBACK, AUDIT, RELEASE)."
+status: generated
+version: "0.2"
+---
+
+# HSOC Operators Reference
 
 > RTT Operator Grammar · Module `hsoc-rtt-001` · Layer: `operator` (precedence 1)
 
@@ -419,3 +426,15 @@ print(result.resumed_regime)    # "CRITICAL"
 | `ROLLBACK` | ✅ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
 | `AUDIT` | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | `RELEASE` | ✅ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+
+---
+
+## Next steps
+
+<!-- widget:cards plain cols=2 arrow=hover -->
+
+- [HSOC Overview & Module Landing](./README.md) — High-Stakes Operational Corridors overview, tensor shape, and regime summary {shield}
+- [Long-Horizon Continuity Agents](../Long_Horizon_Continuity_Agents/README.md) — Multi-step persistence and rehydration operators {history}
+- [Core Terms Glossary](/docs/GLOSSARY) — Reference definitions for Structure, Regime, Operator, and Coherence {book-open}
+
+<!-- /widget -->

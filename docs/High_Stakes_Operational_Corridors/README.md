@@ -1,8 +1,15 @@
-<img width="1024" height="1024" alt="High_Stakes_Operational_Corridors_" src="https://github.com/user-attachments/assets/e29baf18-dcf2-4053-92f1-ce09ff58f22b" />
+---
+title: "High-Stakes Operational Corridors (HSOC) — Safety-Critical Agent Module"
+description: "High-Stakes Operational Corridors (HSOC) is an RTT safety module for AI agents in high-risk financial, medical, and infrastructure systems."
+status: generated
+version: "0.2"
+---
+
+<img width="1024" height="1024" alt="High-Stakes Operational Corridors" src="https://github.com/user-attachments/assets/e29baf18-dcf2-4053-92f1-ce09ff58f22b" />
 
 - [`High_Stakes_Operational_Corridors_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/High_Stakes_Operational_Corridors/High_Stakes_Operational_Corridors_module.json) — Agentic module schema role assignments
 
-# High_Stakes_Operational_Corridors
+# High-Stakes Operational Corridors (HSOC)
 
 > **RTT Module** · `hsoc-rtt-001` · schema `rtt/2.4` · category `safety-critical` · v`1.0.0`
 
@@ -29,16 +36,15 @@ Where most agentic frameworks leave consequence management to the application la
 
 ## Module Layout
 
-```
-docs/High_Stakes_Operational_Corridors/
-├── module.json          # Canonical RTT module descriptor
-├── README.md            # This file
-├── OPERATORS.md         # RTT operator grammar reference
-├── ROLES.md             # Role enum definitions and bindings
-├── ANALYZER_LAYERS.md   # All six analyzer layers with config examples
-├── VALIDATORS.md        # Validator stubs with Python skeletons
-└── EXAMPLES.md          # Worked scenarios with JSON payloads
-```
+<!-- widget:cards feature cols=2 -->
+
+- [Operator Grammar Reference](./OPERATORS.md) — RTT operator definitions for GATE, AUTHORIZE, ESCALATE, HALT, ROLLBACK, AUDIT, and RELEASE. {shield} {color:purple}
+- [Role Definitions & Bindings](./ROLES.md) — Role enum definitions and clearance bindings. {users} {color:blue}
+- [Analyzer Layers Config](./ANALYZER_LAYERS.md) — All six analyzer layers with configuration examples. {layers} {color:green}
+- [Validators & Python Skeletons](./VALIDATORS.md) — Validator stubs and Python implementation skeletons. {check-circle} {color:teal}
+- [Worked Scenarios & Examples](./EXAMPLES.md) — Worked scenarios with JSON payloads and test cases. {code} {color:amber}
+
+<!-- /widget -->
 
 ---
 
@@ -144,12 +150,13 @@ See [`OPERATORS.md`](./OPERATORS.md) for full grammar and Python examples.
 
 ---
 
-## References
+## Next steps
 
-| ID | Title |
-|---|---|
-| REF-RTT-SPEC | RTT Operator Grammar Specification v2.4 |
-| REF-CONSTRAINT-ALGEBRA | Constraint Algebra for Safety-Critical Agentic Systems |
-| REF-CORRIDOR-TOPOLOGY | Corridor Topology Axioms and Halfspace Representations |
-| REF-AUTHORIZATION-GRAMMAR | RTT Authorization Grammar and Chain Verification Protocols |
-| REF-DEAD-MAN-SWITCH | Automated Safety Halt Mechanisms for High-Stakes AI Agents |
+<!-- widget:cards plain cols=2 arrow=hover -->
+
+- [HSOC Operators Reference](./OPERATORS.md) — Detailed operator grammar, Python signatures, and JSON payloads {shield}
+- [Long-Horizon Continuity Agents](../Long_Horizon_Continuity_Agents/README.md) — Explore state persistence across LLM context boundaries {history}
+- [Core Terms Glossary](/docs/GLOSSARY) — Reference definitions for Structure, Regime, Operator, and Coherence {book-open}
+- [RTT Starter Kit](/docs/corpus/starter) — Build your first agentic module with TriadicFrameworks {rocket}
+
+<!-- /widget -->

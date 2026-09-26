@@ -1,8 +1,15 @@
-<img width="1024" height="1024" alt="Long_Horizon_Continuity_Agents_" src="https://github.com/user-attachments/assets/38ecb8e8-ea90-46f2-b184-75d7c3e8a4d1" />
+---
+title: "Long-Horizon Continuity Agents (LHCA) — State & Identity Persistence Module"
+description: "Long-Horizon Continuity Agents (LHCA) is an RTT module for multi-step, temporally extended agent state persistence across LLM context windows."
+status: generated
+version: "0.2"
+---
+
+<img width="1024" height="1024" alt="Long-Horizon Continuity Agents" src="https://github.com/user-attachments/assets/38ecb8e8-ea90-46f2-b184-75d7c3e8a4d1" />
 
 - [`Long_Horizon_Continuity_Agents_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Long_Horizon_Continuity_Agents/Long_Horizon_Continuity_Agents_module.json) — Agentic module schema role assignments
 
-# Long_Horizon_Continuity_Agents
+# Long-Horizon Continuity Agents (LHCA)
 
 > **RTT Module** · `lhca-rtt-001` · schema `rtt/2.4` · category `continuity` · v`1.0.0`
 
@@ -28,16 +35,15 @@ Where most agentic frameworks treat each invocation as stateless, this module pr
 
 ## Module Layout
 
-```
-docs/Long_Horizon_Continuity_Agents/
-├── module.json          # Canonical RTT module descriptor
-├── README.md            # This file
-├── OPERATORS.md         # RTT operator grammar reference
-├── ROLES.md             # Role enum definitions and bindings
-├── ANALYZER_LAYERS.md   # All six analyzer layers with config examples
-├── VALIDATORS.md        # Validator stubs with Python skeletons
-└── EXAMPLES.md          # Worked scenarios with JSON payloads
-```
+<!-- widget:cards feature cols=2 -->
+
+- [Operator Grammar Reference](./OPERATORS.md) — RTT operator definitions for PERSIST, HANDOFF, REHYDRATE, CHECKPOINT, and ROLLBACK. {history} {color:purple}
+- [Role Definitions & Bindings](./ROLES.md) — Role enum definitions and persistence bindings. {users} {color:blue}
+- [Analyzer Layers Config](./ANALYZER_LAYERS.md) — All six analyzer layers with context configuration examples. {layers} {color:green}
+- [Validators & Python Skeletons](./VALIDATORS.md) — Validator stubs and rehydration skeletons. {check-circle} {color:teal}
+- [Worked Scenarios & Examples](./EXAMPLES.md) — Multi-step continuity scenarios with JSON payloads. {code} {color:amber}
+
+<!-- /widget -->
 
 ---
 
@@ -130,3 +136,15 @@ See [`OPERATORS.md`](./OPERATORS.md) for full grammar and Python examples.
 | REF-RTT-SPEC | RTT Operator Grammar Specification v2.4 |
 | REF-CONTINUITY-ALGEBRA | Continuity Algebra for Agentic Systems |
 | REF-TEMPORAL-PERSISTENCE | Temporal Persistence Axioms for LLM Agents |
+
+---
+
+## Next steps
+
+<!-- widget:cards plain cols=2 arrow=hover -->
+
+- [High-Stakes Operational Corridors](../High_Stakes_Operational_Corridors/README.md) — Safety-critical action gating and escalation ladders {shield}
+- [Core Terms Glossary](/docs/GLOSSARY) — Reference definitions for Structure, Regime, Operator, and Coherence {book-open}
+- [RTT Starter Kit](/docs/corpus/starter) — Build your first agentic module with TriadicFrameworks {rocket}
+
+<!-- /widget -->

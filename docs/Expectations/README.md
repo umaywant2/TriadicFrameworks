@@ -1,6 +1,13 @@
-<img width="1194" height="672" alt="Expectations_" src="https://github.com/user-attachments/assets/7e4cf7c6-bdfd-4228-b547-47ef1f5ad88e" />
+---
+title: "Expectations Module — TriadicFrameworks Orientation & Canon Rules"
+description: "Orientation, structural requirements, and cross-domain expectations for students, researchers, and AI agents entering TriadicFrameworks."
+status: generated
+version: "0.2"
+---
 
-# Expectations
+<img width="1194" height="672" alt="Expectations" src="https://github.com/user-attachments/assets/7e4cf7c6-bdfd-4228-b547-47ef1f5ad88e" />
+
+# Expectations Module
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Expectations/module.json) — Agentic module schema role assignments
 
@@ -8,7 +15,7 @@
 **Role:** Root‑level orientation & requirements stack  
 **Audience:** Students • Researchers • AI Agents
 
-## **Purpose**
+## Purpose
 
 The Expectations Module defines what newcomers — human or AI — should expect when entering TriadicFrameworks.  
 It is the **front door** to the canon, providing:
@@ -25,7 +32,20 @@ This module is a **core service** supporting FFT, FCG, RF‑Builder, IPD‑12, R
 
 ---
 
-## **What TriadicFrameworks Is**
+## Orientation & Entry Paths
+
+<!-- widget:cards feature cols=2 -->
+
+- [About TriadicFrameworks](/docs/ABOUT) — Plain-language orientation and high-level concept overview. {compass} {color:purple}
+- [Core Terms Glossary](/docs/GLOSSARY) — Canonical definitions for Structure, Regime, Operator, and Coherence. {book-open} {color:blue}
+- [RTT Starter Kit](/docs/corpus/starter) — Build your first agentic module in 1–3 hours. {rocket} {color:green}
+- [Resonance-Time Theory (RTT)](/docs/rtt/README) — Core substrate theory and operator grammar. {layers} {color:teal}
+
+<!-- /widget -->
+
+---
+
+## What TriadicFrameworks Is
 
 TriadicFrameworks is a **multi‑domain, observer‑centric canon** built on:
 
@@ -41,7 +61,7 @@ It is a **framework for frameworks**, not a single theory.
 
 ---
 
-## **What TriadicFrameworks Is Not**
+## What TriadicFrameworks Is Not
 
 TriadicFrameworks is **not**:
 
@@ -56,7 +76,7 @@ It is a **structured ecosystem** for cross‑domain reasoning.
 
 ---
 
-## **Expectations for Students**
+## Expectations for Students
 
 Students should expect:
 
@@ -71,7 +91,7 @@ Modules are designed to be learnable, navigable, and expandable.
 
 ---
 
-## **Expectations for Researchers**
+## Expectations for Researchers
 
 Researchers should expect:
 
@@ -88,7 +108,7 @@ TriadicFrameworks is built for serious cross‑domain research.
 
 ---
 
-## **Expectations for AI Agents**
+## Expectations for AI Agents
 
 AI agents should expect:
 
@@ -103,9 +123,9 @@ AI agents must treat TriadicFrameworks as a **stable canon**, not a generative p
 
 ---
 
-## **What TriadicFrameworks Already Provides (2026)**
+## What TriadicFrameworks Already Provides (2026)
 
-### **Core Engine**
+### Core Engine
 - IPD‑12 engine block  
 - intake manifolds (SIM–FSI)  
 - output headers (RTT/GU/FFT/Pantheon/Dim/Substrate/Observer/Medical)  
@@ -113,7 +133,7 @@ AI agents must treat TriadicFrameworks as a **stable canon**, not a generative p
 - observer loops (O1–O4)  
 - dimensional rails (L/C/N)
 
-### **Domain Modules**
+### Domain Modules
 - FFT  
 - FCG  
 - RF‑Builder  
@@ -122,7 +142,7 @@ AI agents must treat TriadicFrameworks as a **stable canon**, not a generative p
 - Pantheon  
 - Computational Medicine (H‑Med)
 
-### **Research Modules**
+### Research Modules
 - HPC+QC substrate engine  
 - observer overhead & gain spec  
 - medical header manifold  
@@ -132,32 +152,7 @@ AI agents must treat TriadicFrameworks as a **stable canon**, not a generative p
 
 ---
 
-## **Roadmap (2026–2027)**
-
-### **Near‑Term**
-- Expectations module (this directory)  
-- minimal formalism  
-- validation pathways  
-- contributor guidelines  
-- sample file index  
-- cross‑domain examples library  
-
-### **Mid‑Term**
-- IPD‑12 mathematical formalism  
-- observer‑centric simulation examples  
-- HPC+QC hybrid benchmarks  
-- medical progression models  
-- Pantheon tier alignment maps  
-
-### **Long‑Term**
-- full substrate engine library  
-- multi‑observer AI reasoning engine  
-- cross‑domain research preprint  
-- TriadicFrameworks v2.0 canon  
-
----
-
-## **How to Evaluate TriadicFrameworks**
+## How to Evaluate TriadicFrameworks
 
 Evaluate modules by:
 
@@ -172,7 +167,7 @@ This forms the **evaluation rubric** for all future modules.
 
 ---
 
-## **How to Contribute**
+## How to Contribute
 
 Contributors should:
 
@@ -190,7 +185,7 @@ This ensures canon consistency.
 
 ---
 
-## **Sample Files**
+## Sample Files
 
 Located in:
 
@@ -209,10 +204,23 @@ Includes:
 
 ---
 
-## **Capture Link**
+## Capture Link
 
 The full capture for this module is located at:
 
 ```
 /docs/Expectations/e_Capture.md
 ```
+
+---
+
+## Next steps
+
+<!-- widget:cards plain cols=2 arrow=hover -->
+
+- [About TriadicFrameworks](/docs/ABOUT) — Plain-language orientation and high-level concept overview {compass}
+- [Core Terms Glossary](/docs/GLOSSARY) — Canonical definitions for Structure, Regime, Operator, and Coherence {book-open}
+- [RTT Starter Kit](/docs/corpus/starter) — Build your first agentic module with TriadicFrameworks {rocket}
+- [High-Stakes Operational Corridors](/docs/High_Stakes_Operational_Corridors/README) — Safety-critical action gating and escalation ladders {shield}
+
+<!-- /widget -->
