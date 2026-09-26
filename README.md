@@ -1,8 +1,9 @@
----
+<!-- ---
 status: generated
 version: "0.11"
 description: "TriadicFrameworks documentation for Resonance-Time Theory, triadic system modeling, and canon-aligned AI and research tools."
----
+--- -->
+<img width="1194" height="672" alt="traidicframeworks_main_" src="https://github.com/user-attachments/assets/166f1815-c17b-4920-b4e7-37f3311dc51e" />
 
 # TriadicFrameworks
 
@@ -12,7 +13,7 @@ TriadicFrameworks is a multi-domain research and learning canon for students, re
 
 ## Start here
 
-New to the project? Follow the [RTT Starter Kit](https://docs.triadicframeworks.org/docs/corpus/starter) to create a first agentic module in 1–3 hours.
+New to the project? Follow the [RTT Starter Kit](https://docs.triadicframeworks.org/docs/book) to create a first agentic module in 1–3 hours.
 
 For a plain-language orientation, read [About TriadicFrameworks](https://docs.triadicframeworks.org/docs/ABOUT). For the broader learning path, open the [Expectations Module](https://docs.triadicframeworks.org/docs/Expectations/Landing).
 
