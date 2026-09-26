@@ -1,6 +1,11 @@
+---
+status: generated
+version: "0.2"
+---
+
 <!-- ---
 status: generated
-version: "0.11"
+version: "0.12"
 description: "TriadicFrameworks documentation for Resonance-Time Theory, triadic system modeling, and canon-aligned AI and research tools."
 --- -->
 <img width="1194" height="672" alt="traidicframeworks_main_" src="https://github.com/user-attachments/assets/166f1815-c17b-4920-b4e7-37f3311dc51e" />
@@ -13,7 +18,7 @@ TriadicFrameworks is a multi-domain research and learning canon for students, re
 
 ## Start here
 
-New to the project? Follow the [RTT Starter Kit](https://docs.triadicframeworks.org/docs/book) to create a first agentic module in 1–3 hours.
+New to the project? Follow the [RTT Starter Kit](https://docs.triadicframeworks.org/docs/corpus/starter) to create a first agentic module in 1–3 hours.
 
 For a plain-language orientation, read [About TriadicFrameworks](https://docs.triadicframeworks.org/docs/ABOUT). For the broader learning path, open the [Expectations Module](https://docs.triadicframeworks.org/docs/Expectations/Landing).
 
@@ -30,7 +35,7 @@ If you searched for a definition, start with [Core Terms: Structure, Regime, and
 ### Build and integrate
 
 - [RTT Starter Kit](https://docs.triadicframeworks.org/docs/corpus/starter) — create a first agentic module.
-- [RTT API (Beta)](https://docs.triadicframeworks.org/docs/api/rtt/README) — use the API material.
+- [RTT API (Beta)](https://docs.triadicframeworks.org/docs/MCP/m_Source) — use the API material.
 - [Coeus multi-agent AI research sandbox](https://docs.triadicframeworks.org/docs/Coeus/README) — explore the Coeus module in TriadicFrameworks, not cryptocurrency software.
 
 ### Explore modules and theory
