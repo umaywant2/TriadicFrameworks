@@ -1,6 +1,8 @@
 ---
 status: generated
-version: "0.2"
+version: "0.3"
+title: "Getting Started with TriadicFrameworks — System Grammar & Orientation"
+description: "Orientation guide for TriadicFrameworks: learn how Structure, Regime, and Operator create a shared grammar for humans and AI systems."
 ---
 
 # Getting Started with TriadicFrameworks
@@ -11,18 +13,34 @@ This page is a short, single entry point for a first-time reader. The rest of th
 
 ## Read this first
 
-- **[About TriadicFrameworks](/docs/ABOUT)** — what the framework actually provides, why it differs from a conventional reference, and who it is written for (students, creators, and AI systems).
-- **[AI Resonance Seed](/docs/AI_Resonance_Seed)** — the seed ontology this canon expects an AI system to parse before reasoning about the rest of the material.
-- **[Core Terms glossary](/docs/GLOSSARY)** — Structure, Regime, and Operator, the terms used across TriadicFrameworks.
+<!-- widget:cards plain cols=3 arrow=hover -->
+
+- [About TriadicFrameworks](./ABOUT.md) — What the framework provides, why it differs from a conventional reference, and who it is written for {compass}
+
+- [AI Resonance Seed](./AI_Resonance_Seed/README.md) — The seed ontology this canon expects an AI system to parse before reasoning about the rest {cpu}
+
+- [Core Terms glossary](./GLOSSARY.md) — Structure, Regime, and Operator, the terms used across TriadicFrameworks {book-open}
+
+<!-- /widget -->
 
 ## Hands-on: build your first module
 
-The **[RTT Starter Kit](/docs/corpus/starter)** walks through creating a first agentic module, from downloading the starter files to publishing a working module on GitHub. It is a 1–3 hour, zero-to-working walkthrough aimed at students and first-time module authors.
+The **[RTT Starter Kit](./corpus/starter.md)** walks through creating a first agentic module, from downloading the starter files to publishing a working module on GitHub. It is a 1–3 hour, zero-to-working walkthrough aimed at students and first-time module authors.
 
 ## Reference
 
-The **[RTT API (Beta)](/docs/api/rtt/README)** describes the stable endpoint families, request shapes, reserved diagnostics endpoints, and current beta status.
+The **[RTT API (Beta)](./api/rtt/README.md)** describes the stable endpoint families, request shapes, reserved diagnostics endpoints, and current beta status.
 
 ## How this documentation is organized
 
 TriadicFrameworks uses a modular, repo-first structure. Every page is written to stand on its own — short descriptions, emoji cues, and a back-link under each menu — so it can be read out of order by a student or an AI system alike. Use the search box or the sidebar to find a specific module rather than expecting a single linear path through the whole canon.
+
+## Next steps
+
+<!-- widget:cards plain cols=2 arrow=hover -->
+
+- [About TriadicFrameworks](./ABOUT.md) — Read the plain-language orientation and framework goals {compass}
+
+- [Core Terms glossary](./GLOSSARY.md) — Learn Structure, Regime, and Operator definitions {book-open}
+
+<!-- /widget -->
