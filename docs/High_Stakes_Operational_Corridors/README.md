@@ -1,3 +1,10 @@
+---
+title: High Stakes Operational Corridors
+description: RTT substrate module for bounded operational corridors, kill-switch topologies, hard constraint tensors, and regime-gated agent authorization.
+status: draft
+version: "0.2"
+---
+
 <img width="1024" height="1024" alt="High_Stakes_Operational_Corridors_" src="https://github.com/user-attachments/assets/e29baf18-dcf2-4053-92f1-ce09ff58f22b" />
 
 - [`High_Stakes_Operational_Corridors_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/High_Stakes_Operational_Corridors/High_Stakes_Operational_Corridors_module.json) — Agentic module schema role assignments

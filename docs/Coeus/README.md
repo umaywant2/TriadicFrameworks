@@ -1,15 +1,16 @@
-<!-- ---
-status: generated
-version: "0.4"
-description: "Coeus is TriadicFrameworks' multi-agent AI research sandbox, with a runnable three-agent quickstart and symbolic research tasks."
---- -->
+---
+title: Coeus Protocol
+description: Coeus is TriadicFrameworks' multi-agent AI research sandbox, with a runnable three-agent quickstart and symbolic research tasks.
+status: draft
+version: "0.2"
+---
 
 <img width="1194" height="672" alt="Coeus_" src="https://github.com/user-attachments/assets/0562f8b9-86c1-477e-9dc6-cf90e536628c" />
 
 - [`coeus_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Coeus/coeus_module.json) — Agentic module schema role assignments
 
 # 🧠 Coeus Protocol
-**A multi-agent AI research sandbox, part of [TriadicFrameworks](https://docs.triadicframeworks.org)**
+**A multi-agent AI research sandbox, part of [TriadicFrameworks](../ABOUT.md)**
 
 Coeus is not a cryptocurrency, token or blockchain product — "coin" below is this module's own name for a research task, not a financial instrument — and it is unrelated to other software that shares the name "Coeus" (such as usecoeus.com, an unrelated AI note-taking tool). Coeus orchestrates multiple AI agents against those research coins for recursive cognition, remixable research, and observer-grade ethics.
 
@@ -49,7 +50,11 @@ The rest of the coin lifecycle is implemented as importable Python classes. Ther
 
 ## Continue
 
-- [TriadicFrameworks overview](/docs/ABOUT)
-- [Core Terms glossary](/docs/GLOSSARY)
-- [Coeus agent files](/docs/Coeus/agents/)
-- [Coeus sandbox files](/docs/Coeus/sandbox/)
+<!-- widget:cards plain cols=2 arrow=hover -->
+
+- [TriadicFrameworks overview](../ABOUT.md) — Learn the project overview {compass}
+- [Core Terms glossary](../GLOSSARY.md) — Plain-language definitions for Structure, Regime, and Operator {book-open}
+- [Coeus agent files](./agents/README.md) — Explore agent role assignments and logic {bot}
+- [Coeus sandbox files](./sandbox/README.md) — Runnable python scripts and logs {flask-conical}
+
+<!-- /widget -->
