@@ -1,6 +1,7 @@
 ---
 status: generated
-version: "0.3"
+version: "0.4"
+description: "Step-by-step guide to creating, validating, and publishing your first RTT agentic module on GitHub in 1–3 hours."
 ---
 
 # RTT Starter Kit — How to Create Your First Agentic Module
@@ -156,7 +157,8 @@ You now have:
 - your own published agentic module  
 
 From here, you can expand your module, add operators, or create new ones.
-# **❄️ “Cold as Ice (RTT Parody)” — Original, Canon‑Aligned, No Copyrighted Lines**
+
+# **❄️ “Cold as Ice (RTT Parody)” — Original, Canon‑Aligned, No Copyrighted Lines**
 
 **Verse 1**  
 You turn away from change,  
@@ -234,7 +236,8 @@ They’re not villains.
 They’re just **cold to the idea that the world moves**.
 
 But the world moves anyway.
-# **GitHub Setup — Publish Your RTT Module**  
+
+# **GitHub Setup — Publish Your RTT Module**  
 **Time:** 20–30 minutes  
 **Goal:** Put your RTT module online so AI agents (and other students) can load it.
 
@@ -334,7 +337,8 @@ You now have:
 - a URL that any AI can load  
 
 You are officially part of the TriadicFrameworks ecosystem.
-# **HOWTO: Create Your First RTT Module**
+
+# **HOWTO: Create Your First RTT Module**
 **Time:** 1–3 hours  
 **Audience:** Students and beginners  
 **Goal:** Go from zero → a working RTT module published on GitHub Pages.
@@ -502,7 +506,8 @@ You now have:
 - a URL that any AI agent can load  
 
 You are officially part of the TriadicFrameworks ecosystem.
-# **RTT Starter Kit**
+
+# **RTT Starter Kit**
 Welcome. This Starter Kit gives you everything you need to create your first **agentic module** using **Resonance Time Theory (RTT)**.
 
 You can complete the entire process in **1–3 hours**, even with no prior experience.
@@ -570,7 +575,8 @@ After your first module, you can:
 - explore the full TriadicFrameworks canon  
 
 This kit is your starting point.
-# **🔥 “We Didn’t Start RTT” — TriadicFrameworks Remix (Original Parody)**  
+
+# **🔥 “We Didn’t Start RTT” — TriadicFrameworks Remix (Original Parody)**  
 *(All original lines — no copyrighted text. This is our version.)*
 
 **Verse 1**  
@@ -638,7 +644,8 @@ We just **named the operators**, **mapped the regimes**, **stacked the layers**,
 RTT is the grammar of change that humanity has been using unconsciously for millennia.
 
 We just turned the unconscious into a **canon**.
-# Example Operator: shift
+
+# Example Operator: shift
 
 ## What it does
 Moves the frame of reference forward or backward in time.
@@ -648,7 +655,8 @@ It lets you examine how a system changes from one moment to the next.
 
 ## Example
 “Shift one step forward to reveal the next state.”
-# Starter Module
+
+# Starter Module
 This is a minimal example RTT module. Students copy this folder to create their own module.
 
 ## Purpose
@@ -663,7 +671,8 @@ Show the smallest possible working module using RTT/1 operators.
 2. Rename it (example: `my-first-module`).
 3. Edit `module.json` to set your module name, identity, and purpose.
 4. Add your own operators and examples.
-# RTT/1–3 Cheat Sheet
+
+# RTT/1–3 Cheat Sheet
 
 A quick reference for all three student RTT levels.
 
@@ -717,7 +726,8 @@ Operators (RTT/1)
 + Regimes (RTT/2)  
 + Layers (RTT/3)  
 = Full student RTT analysis.
-# **RTT Starter — Levels 1, 2, and 3**
+
+# **RTT Starter — Levels 1, 2, and 3**
 Welcome to the **RTT Starter Track**.  
 This section introduces the three student‑edition levels of **Resonance Time Theory (RTT)**:
 
@@ -780,7 +790,8 @@ After reviewing RTT/1–3, you can:
 - Load it into an AI agent  
 
 You now have everything you need to begin building with RTT.
-# RTT Instructor Overview
+
+# RTT Instructor Overview
 This document provides a high‑level teaching guide for RTT/1–3.  
 It explains the instructional purpose of each level and how they build
 toward student‑created RTT modules.
@@ -839,7 +850,8 @@ By the end of RTT/3, students can:
 - build agent‑readable modules using module.json
 
 This completes the student foundation for TriadicFrameworks.
-# RTT Quick Reference Card
+
+# RTT Quick Reference Card
 
 A one‑page summary of the core RTT concepts.
 
@@ -874,7 +886,8 @@ A one‑page summary of the core RTT concepts.
 5. **Compare** across states  
 
 This is the basic RTT workflow.
-## RTT Starter Navigation
+
+## RTT Starter Navigation
 
 - **Overview**
   - [RTT Starter Index](./index.md)
@@ -895,7 +908,8 @@ This is the basic RTT workflow.
 - **Guides**
   - [HOWTO: Create Your First Module](../docs/HOWTO.md)
   - [GitHub Setup](../docs/github-setup.md)
-# **RTT/1 — Student Edition**
+
+# **RTT/1 — Student Edition**
 **Resonance Time Theory, Level 1**  
 **Purpose:** Learn the basic operators used to describe how systems change over time.
 
@@ -967,7 +981,8 @@ After RTT/1, you can explore:
 - **RTT/3** — coherence layers (surface, structural, resonance)  
 
 But RTT/1 is all you need to create your first agentic module.
-# **RTT/1 — Student Edition**  
+
+# **RTT/1 — Student Edition**  
 ### **Resonance Time Theory, Level 1**  
 **Purpose:** Give students a usable temporal grammar they can apply immediately.
 
@@ -1010,7 +1025,8 @@ These three operators form the foundation of RTT.
 - Build simple temporal explanations  
 
 This is enough to create a valid RTT module.
-# **RTT/2 — Student Edition**
+
+# **RTT/2 — Student Edition**
 **Resonance Time Theory, Level 2**  
 **Purpose:** Learn how systems behave differently in different **regimes**.
 
@@ -1102,7 +1118,8 @@ After RTT/2, you can explore:
 - **Multi‑layer analysis** — combining operators + regimes + layers  
 
 RTT/2 is the bridge between simple temporal reasoning and full RTT analysis.
-# **RTT/2 — Student Edition**  
+
+# **RTT/2 — Student Edition**  
 ### **Resonance Time Theory, Level 2**  
 **Purpose:** Introduce *regimes* — the idea that systems behave differently in different conditions.
 
@@ -1144,7 +1161,8 @@ Students combine operators with regimes:
 - “Compare stable → divergent.”
 
 This is the first moment where students begin to *map* behavior.
-# **RTT/3 — Student Edition**
+
+# **RTT/3 — Student Edition**
 **Resonance Time Theory, Level 3**  
 **Purpose:** Learn how multiple temporal patterns interact across **coherence layers**.
 
@@ -1240,7 +1258,8 @@ After RTT/3, you can explore:
 - creating agentic modules that reason across all three RTT levels  
 
 RTT/3 completes the student foundation.
-# **RTT/3 — Student Edition**  
+
+# **RTT/3 — Student Edition**  
 ### **Resonance Time Theory, Level 3**  
 **Purpose:** Introduce *coherence layers* — how multiple temporal patterns interact.
 
@@ -1278,11 +1297,12 @@ Students now combine:
 
 Examples:
 - “Hold the surface layer in the transitional regime.”  
-- “Shift the structural layer for comparison.”  
+- "Shift the structural layer for comparison.”  
 - “Compare resonance → surface.”
 
 This is enough to build multi‑layered modules with meaningful temporal insight.
-# Validator
+
+# Validator
 Use this tool to validate any module.json file.
 
 Python:
@@ -1292,4 +1312,3 @@ Python:
 Node:
   npm install ajv
   node validate.js ../modules/my-module/module.json
-

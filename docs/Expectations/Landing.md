@@ -1,3 +1,9 @@
+---
+status: generated
+version: "0.2"
+description: "Front door orientation, requirements stack, and recommended reading order for the TriadicFrameworks Expectations module."
+---
+
 # **TriadicFrameworks — Expectations Module**  
 ### *Root‑Level Orientation & Requirements Stack*  
 ### *A core service for students, researchers, and AI agents*
