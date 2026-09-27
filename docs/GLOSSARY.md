@@ -1,8 +1,8 @@
-<!-- ---
+---
 status: generated
-version: "0.3"
+version: "0.2"
 description: "Plain-language definitions of Structure, Regime, Operator, triadic framework, coherence, drift, and Resonance-Time Theory in TriadicFrameworks."
---- -->
+---
 
 <img width="1194" height="672" alt="GLOSSARY_" src="https://github.com/user-attachments/assets/84f8b7ea-bc45-4995-9a30-3e599e45cd7a" />
 
@@ -38,19 +38,23 @@ A triadic framework models a system through three interacting parts rather than 
 
 ## Resonance-Time Theory (RTT)
 
-**Resonance-Time Theory** is the project's theory and module family for describing resonance, transitions, coherence, and time-aware system behavior. Start with the [RTT module](./rtt/) or the [RTT Starter Kit](./corpus/starter) for a practical path.
+**Resonance-Time Theory** is the project's theory and module family for describing resonance, transitions, coherence, and time-aware system behavior. Start with the [RTT module](./rtt/README) or the [RTT Starter Kit](./corpus/starter) for a practical path.
 
 ## AI Resonance Seed
 
-**AI Resonance Seed** is a TriadicFrameworks module for agentic AI systems. It provides resonance-aware learning substrates, validator-bounded feedback loops, drift detection, ontology guidance, and integration examples. Start with the [AI Resonance Seed module](./AI_Resonance_Seed/).
+**AI Resonance Seed** is a TriadicFrameworks module for agentic AI systems. It provides resonance-aware learning substrates, validator-bounded feedback loops, drift detection, ontology guidance, and integration examples. Start with the [AI Resonance Seed module](./AI_Resonance_Seed/README).
 
 ## Coeus
 
-**Coeus** is TriadicFrameworks' multi-agent AI research sandbox. Its terms such as “coin” and “token” describe symbolic research tasks and artifacts, not cryptocurrency, blockchain, or financial instruments. Start with the [Coeus Protocol](./Coeus/).
+**Coeus** is TriadicFrameworks' multi-agent AI research sandbox. Its terms such as “coin” and “token” describe symbolic research tasks and artifacts, not cryptocurrency, blockchain, or financial instruments. Start with the [Coeus Protocol](./Coeus/README).
 
 ## Continue
 
-- [About TriadicFrameworks](./ABOUT)
-- [RTT Starter Kit](./corpus/starter)
-- [AI Resonance Seed](./AI_Resonance_Seed/)
-- [Coeus Protocol](./Coeus/)
+<!-- widget:cards plain cols=2 arrow=hover -->
+
+- [About TriadicFrameworks](./ABOUT) — Plain-language orientation {compass}
+- [RTT Starter Kit](./corpus/starter) — Step-by-step module guide {rocket}
+- [AI Resonance Seed](./AI_Resonance_Seed/README) — Agent substrate & validators {sparkles}
+- [Coeus Protocol](./Coeus/README) — Multi-agent research sandbox {bot}
+
+<!-- /widget -->

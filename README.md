@@ -1,9 +1,10 @@
-<!-- ---
+---
 status: generated
-version: "0.11"
+version: "0.2"
 description: "TriadicFrameworks documentation for Resonance-Time Theory, triadic system modeling, and canon-aligned AI and research tools."
---- -->
-<img width="1194" height="672" alt="traidicframeworks_main_" src="https://github.com/user-attachments/assets/166f1815-c17b-4920-b4e7-37f3311dc51e" />
+---
+
+<img width="1194" height="672" alt="triadicframeworks_main_" src="https://github.com/user-attachments/assets/166f1815-c17b-4920-b4e7-37f3311dc51e" />
 
 # TriadicFrameworks
 
@@ -13,7 +14,7 @@ TriadicFrameworks is a multi-domain research and learning canon for students, re
 
 ## Start here
 
-New to the project? Follow the [RTT Starter Kit](https://docs.triadicframeworks.org/docs/book) to create a first agentic module in 1–3 hours.
+New to the project? Follow the [RTT Starter Kit](https://docs.triadicframeworks.org/docs/corpus/starter) to create a first agentic module in 1–3 hours.
 
 For a plain-language orientation, read [About TriadicFrameworks](https://docs.triadicframeworks.org/docs/ABOUT). For the broader learning path, open the [Expectations Module](https://docs.triadicframeworks.org/docs/Expectations/Landing).
 
@@ -21,24 +22,23 @@ If you searched for a definition, start with [Core Terms: Structure, Regime, and
 
 ## Choose a path
 
-### Learn the framework
+<!-- widget:cards feature cols=2 -->
 
-- [About TriadicFrameworks](https://docs.triadicframeworks.org/docs/ABOUT) — get the plain-language orientation.
-- [Core Terms glossary](https://docs.triadicframeworks.org/docs/GLOSSARY) — find definitions for Structure, Regime, Operator, Coherence, Drift, RTT, AI Resonance Seed, and Coeus.
-- [Expectations Module](https://docs.triadicframeworks.org/docs/Expectations/Landing) — follow the broader learning path.
+- [About TriadicFrameworks](https://docs.triadicframeworks.org/docs/ABOUT) — Get a plain-language orientation to the framework {compass} {color:blue}
+- [Core Terms Glossary](https://docs.triadicframeworks.org/docs/GLOSSARY) — Find canonical definitions for Structure, Regime, Operator, Coherence, and Drift {book-open} {color:purple}
+- [RTT Starter Kit](https://docs.triadicframeworks.org/docs/corpus/starter) — Create and publish your first agentic module in 1–3 hours {rocket} {color:green}
+- [Expectations Module](https://docs.triadicframeworks.org/docs/Expectations/Landing) — Follow the broader learning path and requirements stack {target} {color:yellow}
 
-### Build and integrate
+<!-- /widget -->
 
-- [RTT Starter Kit](https://docs.triadicframeworks.org/docs/corpus/starter) — create a first agentic module.
-- [RTT API (Beta)](https://docs.triadicframeworks.org/docs/api/rtt/README) — use the API material.
-- [Coeus multi-agent AI research sandbox](https://docs.triadicframeworks.org/docs/Coeus/README) — explore the Coeus module in TriadicFrameworks, not cryptocurrency software.
+<!-- widget:cards plain cols=2 -->
 
-### Explore modules and theory
+- [Coeus Multi-Agent AI Research Sandbox](https://docs.triadicframeworks.org/docs/Coeus/README) — Explore the Coeus multi-agent research module {bot}
+- [AI Resonance Seed](https://docs.triadicframeworks.org/docs/AI_Resonance_Seed/) — Learn about agent initialization and drift-bounded substrates {sparkles}
+- [Resonance-Time Theory (RTT)](https://docs.triadicframeworks.org/docs/rtt/) — Explore foundational temporal operators and regime literacy {layers}
+- [Framework Field Theory (FFT)](https://docs.triadicframeworks.org/docs/Framework_Field_Theory/) — Study frameworks as field objects {network}
 
-- [Resonance-Time Theory](https://docs.triadicframeworks.org/docs/rtt/) — explore RTT.
-- [Field Theory (FFT)](https://docs.triadicframeworks.org/docs/Framework_Field_Theory/) — explore the project's Field Theory module.
-- [AI Resonance Seed module](https://docs.triadicframeworks.org/docs/AI_Resonance_Seed/) — explore AI Resonance Seed.
-- [AI Resonance Seed dashboards](https://docs.triadicframeworks.org/docs/AI_Resonance_Seed/dashboards/introduction) — open the dashboard introduction and choose Validator Status, Remix Lineage, or Glyphstream Map.
+<!-- /widget -->
 
 ## What the repository contains
 

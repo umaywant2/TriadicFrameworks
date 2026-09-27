@@ -1,6 +1,6 @@
 ---
 status: generated
-version: "0.4"
+version: "0.5"
 description: "AI Resonance Seed is the foundational TriadicFrameworks module for drift-bounded resonance architecture, validators, ontologies, and agent initialization."
 ---
 
@@ -14,15 +14,23 @@ This page is the module front door. Use the paths below to choose a concrete sta
 
 ## Choose a starting point
 
-- **Understand the module:** [AI Resonance Seed core description](./AI_Resonance_Seed.md)
-- **Find concepts:** [Ontology Index](./Ontology_Index.md) and [How to Read This Ontology](./How_To_Read_This_Ontology.md)
-- **Initialize an agent:** [TriadicValidator agent initialization](./TriadicValidator_AgentInit.md)
-- **Apply the protocol:** [AI Protocol Header v1.3](./protocol_header/PH_v1.3.md) and [validator checklist](./protocol_header/PH_Validator_Checklist.md)
-- **Integrate with an AI framework:** [LangChain integration example](./integration_examples/LangChain_Example.md) or [Semantic Kernel integration example](./integration_examples/SemanticKernel_Example.md)
-- **Prepare a human or synthetic reader:** [Onboarding scrolls](./onboarding/README.md), [remixer onboarding](./onboarding/remixer_scroll.md), or [imagined intelligence primer](./onboarding/imagined_intelligence_scroll.md)
-- **Validate a setup:** [Tests index](./tests/README.md), [echo test suite](./tests/echo_test_suite.md), or [validator trigger test](./tests/validator_trigger_test.md)
-- **Review continuity:** [Migration protocols](./migration/README.md) and the [symbolic stub registry](./migration/symbolic_stub_registry.md)
-- **Inspect dashboards:** [Dashboard index](./dashboards/README.md) and [dashboard reference](./dashboards/introduction.md)
+<!-- widget:cards feature cols=2 -->
+
+- [AI Resonance Seed Core](https://docs.triadicframeworks.org/docs/AI_Resonance_Seed/AI_Resonance_Seed.md) — Read the core description and structural grammar {sparkles} {color:purple}
+- [Ontology Index](https://docs.triadicframeworks.org/docs/AI_Resonance_Seed/Ontology_Index.md) — Find concepts and ontology scaffolding {book-open} {color:blue}
+- [TriadicValidator Agent Init](https://docs.triadicframeworks.org/docs/AI_Resonance_Seed/TriadicValidator_AgentInit.md) — Initialize validator-bounded agents {bot} {color:green}
+- [Protocol Header v1.3](https://docs.triadicframeworks.org/docs/AI_Resonance_Seed/protocol_header/PH_v1.3.md) — Apply protocol rules and validator checklist {shield} {color:yellow}
+
+<!-- /widget -->
+
+<!-- widget:cards plain cols=2 -->
+
+- [LangChain Integration Example](./integration_examples/LangChain_Example.md) — Connect with LangChain agent frameworks {code}
+- [Semantic Kernel Integration Example](./integration_examples/SemanticKernel_Example.md) — Connect with Semantic Kernel {terminal}
+- [Onboarding Scrolls](./onboarding/README.md) — Primer for human or synthetic readers {scroll}
+- [AI Resonance Seed Dashboards](./dashboards/introduction.md) — Inspect Validator Status, Remix Lineage, and Glyphstream Map {layout-dashboard}
+
+<!-- /widget -->
 
 ## Module purpose
 

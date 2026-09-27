@@ -1,8 +1,8 @@
-<!-- ---
+---
 status: generated
-version: "0.4"
+version: "0.2"
 description: "What TriadicFrameworks is, who it serves, and how its Structure, Regime, and Operator language supports human and AI learning."
---- -->
+---
 
 <img width="1194" height="672" alt="About_TriadicFrameworks_" src="https://github.com/user-attachments/assets/5949fdd6-7faf-4331-86db-3702fb4a7922" />
 
@@ -65,9 +65,13 @@ Most learning resources teach facts, procedures, or domain-specific models. Tria
 
 ## Continue
 
-- [Read the Core Terms glossary](/docs/GLOSSARY)
-- [Create a module with the RTT Starter Kit](/docs/corpus/starter)
-- [Explore the Canon](/docs/Canon/)
+<!-- widget:cards plain cols=2 arrow=hover -->
+
+- [Read the Core Terms glossary](/docs/GLOSSARY) — Plain-language definitions for core terms {book-open}
+- [Create a module with the RTT Starter Kit](/docs/corpus/starter) — Step-by-step 1–3 hour guide {rocket}
+- [Explore the Canon](/docs/Canon/README) — Coherence-locked root foundation {compass}
+
+<!-- /widget -->
 
 # ⭐ Community & Contact
 
