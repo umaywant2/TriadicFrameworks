@@ -1,3 +1,8 @@
+---
+status: generated
+version: "0.2"
+---
+
 <img width="1194" height="672" alt="CONTRIBUTING_" src="https://github.com/user-attachments/assets/930f67ad-adb3-41a3-84fd-0f4ded376dc6" />
 
 - [`CONTRIBUTING_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/CONTRIBUTING_module.json) — Agentic module schema role assignments
@@ -539,7 +544,7 @@ Every module has a version stamp in `module.json`. Every change to a module requ
 
 ### Changelog Requirements
 
-Every version increment requires a changelog entry. The changelog lives at [`/docs/book/changelog`](./book/changelog). Each entry follows this format:
+Every version increment requires a changelog entry. The changelog lives at [`/docs/AI_Resonance_Seed/changelog/`](/docs/AI_Resonance_Seed/changelog/). Each entry follows this format:
 
 ```markdown
 ## [MODULE-ID] v[VERSION] — [YYYY-MM-DD]
@@ -638,10 +643,9 @@ The best evidence that a module or session contribution is correct is a producti
 
 ---
 
-→ [Return to Book Index](./book/index)
-→ [Browse the Module Registry](./book/registry)
-→ [Canonical Session Library](./book/sessions)
-→ [Book Changelog](./book/changelog)
+→ [Return to Core Terms Glossary](/docs/GLOSSARY)
+→ [Explore AI Resonance Seed Changelogs](/docs/AI_Resonance_Seed/changelog/)
+→ [Read the RTT Starter Kit](/docs/corpus/starter)
 
 ---
 

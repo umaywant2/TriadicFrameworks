@@ -2,7 +2,7 @@
 title: AI Resonance Seed Dashboard Reference
 description: Choose the AI Resonance Seed reference page for validator status, remix lineage, or glyphstream structure.
 status: generated
-version: "0.2"
+version: "0.3"
 ---
 
 # AI Resonance Seed Dashboard Reference
@@ -18,9 +18,13 @@ The AI Resonance Seed dashboards are **reference pages** for validator activity,
 
 ## Choose your next step
 
-- **Learn the module first:** read the [AI Resonance Seed overview](/docs/AI_Resonance_Seed/README).
-- **Learn the shared vocabulary:** use the [Core Terms glossary](/docs/GLOSSARY) for Structure, Regime, and Operator.
-- **Follow the intended reading order:** open [How to read the ontology](/docs/AI_Resonance_Seed/How_To_Read_This_Ontology).
-- **Work with the API material:** continue to the [RTT API reference](/docs/api/rtt/README).
+<!-- widget:cards plain cols=2 arrow=hover -->
+
+- [AI Resonance Seed Overview](/docs/AI_Resonance_Seed/README) — Learn the foundational module and ontology {compass}
+- [Core Terms Glossary](/docs/GLOSSARY) — Shared vocabulary for Structure, Regime, and Operator {book-open}
+- [How to Read the Ontology](/docs/AI_Resonance_Seed/How_To_Read_This_Ontology) — Intended reading order for seed concepts {book-marked}
+- [RTT API Reference](/docs/api/rtt/README) — Endpoint definitions and structural signals {code}
+
+<!-- /widget -->
 
 The dashboard pages describe the project's symbolic model and reference surfaces. They do not claim that a validator, agent, or glyphstream is currently running.

@@ -1,3 +1,9 @@
+---
+status: generated
+version: "0.2"
+description: "TriadicFrameworks Expectations Module: Root-level orientation, canon maps, and requirements stack for students, researchers, and AI agents."
+---
+
 # **TriadicFrameworks — Expectations Module**  
 ### *Root‑Level Orientation & Requirements Stack*  
 ### *A core service for students, researchers, and AI agents*
@@ -132,4 +138,13 @@ This module is your **orientation layer**, your **requirements stack**, and your
 
 Begin with **Expectations.md**, then follow the maps outward into the engine, headers, domains, and research layers.
 
-Welcome to the canon.
+## Continue exploring
+
+<!-- widget:cards plain cols=2 arrow=hover -->
+
+- [About TriadicFrameworks](/docs/ABOUT) — Plain-language orientation and purpose {compass}
+- [Core Terms Glossary](/docs/GLOSSARY) — Definitions for Structure, Regime, and Operator {book-open}
+- [RTT Starter Kit](/docs/corpus/starter) — Build your first agentic module in 1-3 hours {rocket}
+- [Coeus Protocol](/docs/Coeus/) — Multi-agent AI research sandbox {bot}
+
+<!-- /widget -->
