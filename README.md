@@ -1,9 +1,10 @@
-<!-- ---
-status: generated
-version: "0.11"
+---
+status: draft
+version: "0.2"
 description: "TriadicFrameworks documentation for Resonance-Time Theory, triadic system modeling, and canon-aligned AI and research tools."
---- -->
-<img width="1194" height="672" alt="traidicframeworks_main_" src="https://github.com/user-attachments/assets/166f1815-c17b-4920-b4e7-37f3311dc51e" />
+---
+
+<img width="1194" height="672" alt="triadicframeworks_main_" src="https://github.com/user-attachments/assets/166f1815-c17b-4920-b4e7-37f3311dc51e" />
 
 # TriadicFrameworks
 
@@ -13,32 +14,44 @@ TriadicFrameworks is a multi-domain research and learning canon for students, re
 
 ## Start here
 
-New to the project? Follow the [RTT Starter Kit](https://docs.triadicframeworks.org/docs/book) to create a first agentic module in 1–3 hours.
+New to the project? Follow the [RTT Starter Kit](./docs/corpus/starter) to create a first agentic module in 1–3 hours.
 
-For a plain-language orientation, read [About TriadicFrameworks](https://docs.triadicframeworks.org/docs/ABOUT). For the broader learning path, open the [Expectations Module](https://docs.triadicframeworks.org/docs/Expectations/Landing).
+For a plain-language orientation, read [About TriadicFrameworks](./docs/ABOUT). For the broader learning path, open the [Expectations Module](./docs/Expectations/Landing).
 
-If you searched for a definition, start with [Core Terms: Structure, Regime, and Operator](https://docs.triadicframeworks.org/docs/GLOSSARY).
+If you searched for a definition, start with [Core Terms: Structure, Regime, and Operator](./docs/GLOSSARY).
 
 ## Choose a path
 
-### Learn the framework
+<!-- widget:cards feature cols=2 -->
 
-- [About TriadicFrameworks](https://docs.triadicframeworks.org/docs/ABOUT) — get the plain-language orientation.
-- [Core Terms glossary](https://docs.triadicframeworks.org/docs/GLOSSARY) — find definitions for Structure, Regime, Operator, Coherence, Drift, RTT, AI Resonance Seed, and Coeus.
-- [Expectations Module](https://docs.triadicframeworks.org/docs/Expectations/Landing) — follow the broader learning path.
+- [RTT Starter Kit](./docs/corpus/starter) — Go from zero to your first agentic module in 1–3 hours. {rocket} {color:green}
+- [About TriadicFrameworks](./docs/ABOUT) — Plain-language orientation and purpose of the canon. {compass} {color:purple}
+- [Core Terms Glossary](./docs/GLOSSARY) — Direct definitions for Structure, Regime, Operator, Coherence, Drift, RTT, AI Resonance Seed, and Coeus. {book-open} {color:blue}
+- [Expectations Module](./docs/Expectations/Landing) — Root-level requirements stack and orientation map. {layers} {color:yellow}
+
+<!-- /widget -->
 
 ### Build and integrate
 
-- [RTT Starter Kit](https://docs.triadicframeworks.org/docs/corpus/starter) — create a first agentic module.
-- [RTT API (Beta)](https://docs.triadicframeworks.org/docs/api/rtt/README) — use the API material.
-- [Coeus multi-agent AI research sandbox](https://docs.triadicframeworks.org/docs/Coeus/README) — explore the Coeus module in TriadicFrameworks, not cryptocurrency software.
+<!-- widget:cards plain cols=2 arrow=hover -->
+
+- [RTT Starter Kit](./docs/corpus/starter) — Create a first agentic module with validator checks {rocket}
+- [RTT API (Beta)](./docs/api/rtt/README) — Use the Resonance-Time Theory API material {code}
+- [Coeus AI Research Sandbox](./docs/Coeus/README) — Multi-agent research sandbox in TriadicFrameworks (unrelated to cryptocurrency software) {bot}
+- [AI Resonance Seed Dashboards](./docs/AI_Resonance_Seed/dashboards/introduction) — Validator status, remix lineage, and glyphstream reference {layout-dashboard}
+
+<!-- /widget -->
 
 ### Explore modules and theory
 
-- [Resonance-Time Theory](https://docs.triadicframeworks.org/docs/rtt/) — explore RTT.
-- [Field Theory (FFT)](https://docs.triadicframeworks.org/docs/Framework_Field_Theory/) — explore the project's Field Theory module.
-- [AI Resonance Seed module](https://docs.triadicframeworks.org/docs/AI_Resonance_Seed/) — explore AI Resonance Seed.
-- [AI Resonance Seed dashboards](https://docs.triadicframeworks.org/docs/AI_Resonance_Seed/dashboards/introduction) — open the dashboard introduction and choose Validator Status, Remix Lineage, or Glyphstream Map.
+<!-- widget:cards plain cols=2 arrow=hover -->
+
+- [Resonance-Time Theory (RTT)](./docs/rtt/) — Explore temporal operators, regimes, and coherence layers {history}
+- [Field Theory (FFT)](./docs/Framework_Field_Theory/) — Explore the project's Field Theory module {sparkles}
+- [AI Resonance Seed](./docs/AI_Resonance_Seed/) — Resonance-aware AI learning substrates and drift bounds {cpu}
+- [Core Terms Glossary](./docs/GLOSSARY) — Canonical definitions for core framework concepts {book-marked}
+
+<!-- /widget -->
 
 ## What the repository contains
 

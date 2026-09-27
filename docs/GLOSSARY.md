@@ -1,12 +1,10 @@
-<!-- ---
-status: generated
-version: "0.3"
+---
+status: draft
+version: "0.2"
 description: "Plain-language definitions of Structure, Regime, Operator, triadic framework, coherence, drift, and Resonance-Time Theory in TriadicFrameworks."
---- -->
+---
 
 <img width="1194" height="672" alt="GLOSSARY_" src="https://github.com/user-attachments/assets/84f8b7ea-bc45-4995-9a30-3e599e45cd7a" />
-
-- [`GLOSSARY_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/GLOSSARY_module.json) — Agentic module schema role assignments
 
 # TriadicFrameworks Core Terms
 
@@ -48,9 +46,13 @@ A triadic framework models a system through three interacting parts rather than 
 
 **Coeus** is TriadicFrameworks' multi-agent AI research sandbox. Its terms such as “coin” and “token” describe symbolic research tasks and artifacts, not cryptocurrency, blockchain, or financial instruments. Start with the [Coeus Protocol](./Coeus/).
 
-## Continue
+## Continue exploring
 
-- [About TriadicFrameworks](./ABOUT)
-- [RTT Starter Kit](./corpus/starter)
-- [AI Resonance Seed](./AI_Resonance_Seed/)
-- [Coeus Protocol](./Coeus/)
+<!-- widget:cards plain cols=2 arrow=hover -->
+
+- [About TriadicFrameworks](./ABOUT) — Learn the orientation and purpose of the canon {compass}
+- [RTT Starter Kit](./corpus/starter) — Create a first agentic module in 1–3 hours {rocket}
+- [AI Resonance Seed](./AI_Resonance_Seed/) — Explore resonance-aware learning substrates {cpu}
+- [Coeus Sandbox](./Coeus/) — Explore the multi-agent AI research sandbox {bot}
+
+<!-- /widget -->
