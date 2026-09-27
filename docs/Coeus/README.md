@@ -1,8 +1,9 @@
-<!-- ---
+---
+title: Coeus Protocol — Multi-Agent AI Research Sandbox
+description: Coeus is TriadicFrameworks' multi-agent AI research sandbox, with a runnable three-agent quickstart and symbolic research tasks.
 status: generated
-version: "0.4"
-description: "Coeus is TriadicFrameworks' multi-agent AI research sandbox, with a runnable three-agent quickstart and symbolic research tasks."
---- -->
+version: "0.2"
+---
 
 <img width="1194" height="672" alt="Coeus_" src="https://github.com/user-attachments/assets/0562f8b9-86c1-477e-9dc6-cf90e536628c" />
 
@@ -13,8 +14,11 @@ description: "Coeus is TriadicFrameworks' multi-agent AI research sandbox, with 
 
 Coeus is not a cryptocurrency, token or blockchain product — "coin" below is this module's own name for a research task, not a financial instrument — and it is unrelated to other software that shares the name "Coeus" (such as usecoeus.com, an unrelated AI note-taking tool). Coeus orchestrates multiple AI agents against those research coins for recursive cognition, remixable research, and observer-grade ethics.
 
-## 🛑 Important!
-Drift is On-by-Default long sessions lose anchors, turn off drift.
+<!-- widget:callout type=warning -->
+
+**Drift Control:** Drift is On-by-Default. Long sessions lose anchors unless drift bounds are configured.
+
+<!-- /widget -->
 
 ## ✋ Session string
 
@@ -47,9 +51,12 @@ The rest of the coin lifecycle is implemented as importable Python classes. Ther
 5. **Validate:** review output for remixability
 6. **Exchange:** share a citable research artifact; no cryptocurrency or blockchain step is involved
 
-## Continue
+## Continue Exploring
 
-- [TriadicFrameworks overview](/docs/ABOUT)
-- [Core Terms glossary](/docs/GLOSSARY)
-- [Coeus agent files](/docs/Coeus/agents/)
-- [Coeus sandbox files](/docs/Coeus/sandbox/)
+<!-- widget:cards plain cols=2 arrow=hover -->
+
+- [TriadicFrameworks overview](../ABOUT.md) — Plain-language orientation {compass}
+- [Core Terms glossary](../GLOSSARY.md) — Definitions for key terms {book-open}
+- [RTT Starter Kit](../corpus/starter.md) — Hands-on starter guide {rocket}
+
+<!-- /widget -->

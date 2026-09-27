@@ -1,8 +1,9 @@
-<!-- ---
+---
+title: About TriadicFrameworks
+description: What TriadicFrameworks is, who it serves, and how its Structure, Regime, and Operator language supports human and AI learning.
 status: generated
-version: "0.4"
-description: "What TriadicFrameworks is, who it serves, and how its Structure, Regime, and Operator language supports human and AI learning."
---- -->
+version: "0.2"
+---
 
 <img width="1194" height="672" alt="About_TriadicFrameworks_" src="https://github.com/user-attachments/assets/5949fdd6-7faf-4331-86db-3702fb4a7922" />
 
@@ -11,7 +12,7 @@ description: "What TriadicFrameworks is, who it serves, and how its Structure, R
 # 🧭 About TriadicFrameworks  
 ### *A Structural Learning Framework for Students and AI Systems*
 
-**What is a triadic framework?** A triadic framework models a system as three interacting parts instead of two — in this project's own vocabulary, **Structure**, **Regime**, and **Operator** — so that gradients, transitions, and coherence become visible instead of staying hidden inside a single flat model. [See what each term means on its own →](/docs/GLOSSARY)
+**What is a triadic framework?** A triadic framework models a system as three interacting parts instead of two — in this project's own vocabulary, **Structure**, **Regime**, and **Operator** — so that gradients, transitions, and coherence become visible instead of staying hidden inside a single flat model. [See what each term means on its own →](./GLOSSARY.md)
 
 TriadicFrameworks is one such framework. It teaches both humans and AI systems how to understand complex domains through **gradients**, **triads**, **coherence**, and **regime‑aware operators**.
 
@@ -61,21 +62,24 @@ Most learning resources teach facts, procedures, or domain-specific models. Tria
 
 ## 5. The One-Sentence Answer
 
-> **TriadicFrameworks gives humans and AIs a shared structural language for understanding how systems behave, change, collapse, and evolve.**
+<!-- widget:callout type=info -->
 
-## Continue
+**TriadicFrameworks gives humans and AIs a shared structural language for understanding how systems behave, change, collapse, and evolve.**
 
-- [Read the Core Terms glossary](/docs/GLOSSARY)
-- [Create a module with the RTT Starter Kit](/docs/corpus/starter)
-- [Explore the Canon](/docs/Canon/)
+<!-- /widget -->
+
+## Continue Exploring
+
+<!-- widget:cards plain cols=2 arrow=hover -->
+
+- [Read the Core Terms glossary](./GLOSSARY.md) — Canonical definitions {book-open}
+- [Create a module with the RTT Starter Kit](./corpus/starter.md) — Hands-on starter guide {rocket}
+- [Explore the Canon](./Canon/README.md) — Core theoretical foundation {compass}
+
+<!-- /widget -->
 
 # ⭐ Community & Contact
 
-### 💬 GitHub Discussions
-https://github.com/umaywant2/TriadicFrameworks/discussions
-
-### 🕊️ X (Twitter)
-@NawderLoswin
-
-### 🎥 YouTube
-@NawderLoswin
+- **GitHub Discussions:** [github.com/umaywant2/TriadicFrameworks/discussions](https://github.com/umaywant2/TriadicFrameworks/discussions)
+- **X (Twitter):** [@NawderLoswin](https://x.com/NawderLoswin)
+- **YouTube:** [YouTube Channel](https://www.youtube.com/channel/UC307lO6SLktiCZk8UIy3feQ)
