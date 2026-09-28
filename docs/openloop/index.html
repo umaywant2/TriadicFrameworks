@@ -1,297 +1,560 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="generator" content="TriadicFrameworks Canon v1.0.0" />
 
-  <!-- Identity -->
-  <meta name="ai.module"           content="openloop" />
-  <meta name="ai.version"          content="1.0.0" />
-  <meta name="ai.purpose"          content="Open Loop suite root — open-aperture surface index for all Open* domain modules" />
-  <meta name="ai.module.name"      content="Open Loop Suite" />
-  <meta name="ai.module.summary"   content="Consolidates all Open* domain modules (LLM, IAM, Risk, Geo, GPU, Data) into a unified surface system governed by three rings (Trust, Motion, Meaning), a shared operator grammar, drift classification, and a lineage registry." />
-  <meta name="ai.module.category"  content="openloop" />
-  <meta name="ai.audience"         content="AI agents, framework operators, integration architects, data stewards" />
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- /docs/openloop/index.html — <head>                             -->
+<!-- Module: OpenLoop Suite (canonical — multi‑module surface)       -->
+<!-- Last updated: 2026-09-27                                        -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
 
-  <!-- Navigation & Discovery -->
-  <meta name="ai.navigation"       content="sitemap_main.xml" />
-  <meta name="ai.sitemap"          content="/docs/openloop/sitemap.xml" />
-  <meta name="ai.nav"              content="/docs/openloop/nav.json" />
-  <meta name="ai.modules"          content="/docs/openloop/modules.json" />
-  <meta name="ai.module.manifest"  content="/docs/openloop/module.json" />
-  <meta name="ai.quad"             content="/docs/openloop/quad.json" />
-  <meta name="ai.discussions"      content="https://github.com/umaywant2/TriadicFrameworks/discussions" />
-  <meta name="ai.contact.x"        content="@TriadicFrameworks" />
-  <meta name="ai.contact.youtube"  content="@TriadicFrameworks" />
-  <meta name="ai.license"          content="Open educational use permitted" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="language" content="en" />
+<meta name="last-modified" content="2026-09-27" />
+<meta name="generator" content="TriadicFrameworks Static Canon Engine" />
+<meta name="creator" content="TriadicFrameworks" />
+<meta name="author" content="Nawder Loswin" />
+<meta name="publisher" content="TriadicFrameworks" />
 
-  <!-- Citation -->
-  <meta name="citation_author"            content="Nawder Loswin" />
-  <meta name="citation_publication_date"  content="2025" />
-  <meta name="citation_title"             content="Open Loop Suite — TriadicFrameworks" />
-  <meta name="DC.type"                    content="Text" />
-  <meta name="DC.format"                  content="text/html" />
-  <meta name="DC.subject"                 content="open-aperture modules, operator grammar, drift classification, lineage registry, three rings" />
+<title>OpenLoop Suite — TriadicFrameworks</title>
 
-  <!-- Robots -->
-  <meta name="robots"              content="index, follow" />
-  <meta name="theme-color"         content="#0d1117" />
+<meta name="description"
+      content="TriadicFrameworks OpenLoop Suite — canonical multi‑module surface integrating AdEngine, Catalog, Feed, Geo, GPU, IAM, LLM, Risk, SEO, SoN, Stream, and Vitals. Provides unified operators, architecture maps, governance regimes, and AI‑ready metadata for cross‑module discovery." />
 
-  <!-- Open Graph -->
-  <meta property="og:type"         content="website" />
-  <meta property="og:title"        content="Open Loop Suite — TriadicFrameworks" />
-  <meta property="og:description"  content="Open-aperture surface suite root. LLM, IAM, Risk, Geo, GPU, Data modules with operator grammar, three rings, and lineage registry." />
-  <meta property="og:url"          content="https://www.triadicframeworks.org/docs/openloop/" />
+<meta name="keywords"
+      content="OpenLoop, TriadicFrameworks, canonical modules, AdEngine, Catalog, Feed, Geo, GPU, IAM, LLM, Risk, SEO, SoN, Stream, Vitals, operators, architecture, governance, RTT-Inside" />
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://www.triadicframeworks.org/docs/openloop/" />
+<!-- ═══ Module Identity (standardized per D369 template) ═══ -->
 
-  <title>Open Loop Suite — TriadicFrameworks</title>
+<meta name="module" content="OpenLoop Suite" />
+<meta name="canonical-id" content="OPENLOOP" />
+<meta name="module-type" content="Canonical Surface" />
+<meta name="version" content="1.0" />
+<meta name="status" content="canonical" />
+<meta name="parent" content="TriadicFrameworks Root" />
+<meta name="siblings"
+      content="Ideas Sandbox, Research, D369_Chip_Spec, FCG, Education" />
+<meta name="canonical-path" content="/docs/openloop/" />
+<meta name="last-updated" content="2026-09-27" />
+<meta name="license" content="MIT" />
 
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<!-- ═══ AI Discovery (standardized) ═══ -->
 
-    :root {
-      --bg:       #0d1117;
-      --surface:  #161b22;
-      --border:   #30363d;
-      --text:     #e6edf3;
-      --muted:    #8b949e;
-      --trust:    #58a6ff;
-      --motion:   #3fb950;
-      --meaning:  #bc8cff;
-      --accent:   #f78166;
-      --code-bg:  #1c2128;
-    }
+<meta name="ai-ready" content="true" />
+<meta name="ai-module-id" content="OPENLOOP" />
+<meta name="ai-operators"
+      content="OPENLOOP-Map, OPENLOOP-Index, OPENLOOP-Resolve, OPENLOOP-Discover" />
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      padding: 0 1rem;
-    }
+<meta name="ai.module" content="OpenLoop Suite" />
+<meta name="ai.module.name" content="OpenLoop Suite" />
+<meta name="ai.module.category" content="canonical-surface" />
+<meta name="ai.module.summary"
+      content="Unified multi‑module surface integrating 12 canonical modules: AdEngine, Catalog, Feed, Geo, GPU, IAM, LLM, Risk, SEO, SoN, Stream, Vitals. Provides architecture, operators, governance, and metadata for cross‑module AI discovery." />
+<meta name="ai.version" content="1.0" />
+<meta name="ai.purpose"
+      content="Provide a unified canonical surface for module discovery, navigation, and AI‑ready metadata across the TriadicFrameworks ecosystem." />
+<meta name="ai.keywords"
+      content="OpenLoop, canonical surface, module discovery, operators, metadata, RTT-Inside, TriadicFrameworks" />
+<meta name="ai.audience" content="developers, researchers, AI systems" />
+<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml" />
+<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions" />
+<meta name="ai.contact.x" content="@TriadicFrameworks" />
+<meta name="ai.contact.youtube" content="@TriadicFrameworks" />
+<meta name="ai.license" content="MIT" />
+<meta name="ai-content" content="allow">
+<meta name="cf-ai-signal" content="allow">
 
-    a { color: var(--trust); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+<!-- ═══ Canonical / SEO ═══ -->
 
-    header {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 3rem 0 2rem;
-      border-bottom: 1px solid var(--border);
-    }
+<link rel="canonical" href="https://www.triadicframeworks.org/openloop/" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#0ff" />
 
-    header .label {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--muted);
-      margin-bottom: 0.5rem;
-    }
+<!-- ═══ Open Graph ═══ -->
 
-    header h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 0.75rem;
-    }
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="TriadicFrameworks" />
+<meta property="og:title" content="OpenLoop Suite — TriadicFrameworks" />
+<meta property="og:url" content="https://www.triadicframeworks.org/openloop/" />
+<meta property="og:description"
+      content="Unified canonical surface integrating 12 modules with architecture, operators, governance, and AI‑ready metadata." />
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
 
-    header .tagline {
-      color: var(--muted);
-      font-size: 1rem;
-      max-width: 60ch;
-    }
+<!-- ═══ Twitter Card ═══ -->
 
-    main {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2rem 0 4rem;
-    }
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="OpenLoop Suite — TriadicFrameworks" />
+<meta name="twitter:description"
+      content="Canonical multi‑module surface for TriadicFrameworks." />
 
-    section { margin-bottom: 3rem; }
+<!-- ═══ Citation ═══ -->
 
-    h2 {
-      font-size: 1rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--muted);
-      margin-bottom: 1rem;
-      padding-bottom: 0.4rem;
-      border-bottom: 1px solid var(--border);
-    }
+<meta name="citation_title" content="OpenLoop Suite — TriadicFrameworks" />
+<meta name="citation_author" content="Nawder Loswin" />
+<meta name="citation_date" content="2026-09-27" />
 
-    /* Loop steps */
-    .loop {
-      display: grid;
-      gap: 0.5rem;
-    }
+<style>
+/* ============================================================
+   NAWDERIAN NEON ARCADE THEME — RTT/1 SYNTHWAVE EDITION
+   ============================================================ */
 
-    .loop-step {
-      display: flex;
-      align-items: baseline;
-      gap: 0.75rem;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 0.75rem 1rem;
-    }
+:root {
+  --bg-main: #05060a;                 /* deep CRT black */
+  --bg-nav: #0a0c12;                  /* darker sidebar */
+  --bg-panel: #0f1118;
 
-    .loop-step .num {
-      font-size: 0.8rem;
-      font-weight: 700;
-      color: var(--muted);
-      min-width: 1.5rem;
-    }
+  --text-main: #e8f7ff;               /* neon ice */
+  --text-muted: #7a8ca0;              /* CRT fade */
 
-    .loop-step .verb {
-      font-weight: 700;
-      color: var(--accent);
-      min-width: 9rem;
-      font-size: 0.85rem;
-      letter-spacing: 0.04em;
-    }
+  --neon-cyan: #3df5ff;
+  --neon-magenta: #ff3dfc;
+  --neon-yellow: #ffe66d;
 
-    .loop-step .desc {
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
+  --triadic-neon: linear-gradient(135deg,
+                      #3df5ff,
+                      #ff3dfc,
+                      #ffe66d);
 
-    /* Drift event */
-    pre {
-      background: var(--code-bg);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 1.25rem;
-      overflow-x: auto;
-      font-size: 0.8rem;
-      line-height: 1.5;
-      color: var(--text);
-    }
+  --scanline: repeating-linear-gradient(
+                to bottom,
+                rgba(255,255,255,0.03) 0px,
+                rgba(255,255,255,0.03) 1px,
+                rgba(0,0,0,0.05) 2px
+              );
 
-    /* Module grid */
-    .module-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 1rem;
-    }
+  --radius: 10px;
+  --glow: 0 0 12px rgba(255, 0, 180, 0.45),
+          0 0 24px rgba(0, 255, 255, 0.25);
+}
 
-    .module-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.25rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      transition: border-color 0.15s;
-    }
+/* Base layout */
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  background-image: var(--scanline);
+  color: var(--text-main);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+}
 
-    .module-card:hover { border-color: var(--trust); }
+/* Neon headings */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic-neon);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: var(--glow);
+}
 
-    .module-card a {
-      font-size: 1rem;
-      font-weight: 600;
-    }
+/* Paragraphs and lists */
+p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: var(--text-main);
+}
 
-    .module-card .badge {
-      font-size: 1.25rem;
-    }
+/* Neon links */
+a {
+  color: var(--neon-cyan);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255,255,255,0.25);
+  transition: color 0.2s ease, border-color 0.2s ease, text-shadow 0.2s ease;
+}
 
-    .module-card .meta {
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
+a:hover,
+a:focus {
+  color: var(--neon-magenta);
+  border-bottom-color: var(--neon-magenta);
+  text-shadow: 0 0 8px var(--neon-magenta);
+}
 
-    .module-card .ring-tag {
-      display: inline-block;
-      font-size: 0.7rem;
-      font-weight: 600;
-      padding: 0.15rem 0.5rem;
-      border-radius: 4px;
-      letter-spacing: 0.04em;
-    }
+a:visited {
+  color: var(--neon-yellow);
+}
 
-    .ring-trust   { background: rgba(88,166,255,0.15); color: var(--trust); }
-    .ring-motion  { background: rgba(63,185,80,0.15);  color: var(--motion); }
-    .ring-meaning { background: rgba(188,140,255,0.15); color: var(--meaning); }
+/* Code blocks */
+pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono";
+  background: rgba(255,255,255,0.04);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #dffaff;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: inset 0 0 12px rgba(0,255,255,0.15);
+}
 
-    .floor-tag {
-      font-size: 0.7rem;
-      color: var(--muted);
-      margin-left: 0.35rem;
-    }
+/* Context block */
+.context-block {
+  font-family: monospace;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0.5rem 0 1rem 0;
+  padding: 1rem;
+  background: var(--bg-panel);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--glow);
+}
 
-    /* Rings diagram */
-    .rings-box {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.5rem;
-    }
+.context-label {
+  color: var(--neon-yellow);
+  font-weight: bold;
+  margin-right: 0.25rem;
+}
 
-    .ring-row {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      padding: 0.6rem 0;
-      border-bottom: 1px solid var(--border);
-    }
+.context-value {
+  color: var(--text-main);
+}
 
-    .ring-row:last-child { border-bottom: none; }
+/* Navigation panel */
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 4px 0 12px rgba(0,0,0,0.4);
+}
 
-    .ring-label {
-      font-weight: 700;
-      font-size: 0.85rem;
-      min-width: 5rem;
-    }
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--neon-cyan);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+  text-shadow: var(--glow);
+}
 
-    .ring-modules { font-size: 0.85rem; color: var(--muted); }
+nav a {
+  display: block;
+  color: var(--text-muted);
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
 
-    /* Config links */
-    .config-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
+nav a:hover {
+  color: var(--neon-magenta);
+  text-shadow: 0 0 6px var(--neon-magenta);
+}
 
-    .config-link {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      padding: 0.35rem 0.75rem;
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
+/* Main content */
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
 
-    .config-link a { color: var(--muted); }
-    .config-link a:hover { color: var(--text); }
+main h1, main h2, main h3 {
+  color: var(--neon-cyan);
+  font-weight: 500;
+  text-shadow: var(--glow);
+}
 
-    footer {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 1.5rem 0;
-      border-top: 1px solid var(--border);
-      font-size: 0.8rem;
-      color: var(--muted);
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-  </style>
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--neon-magenta);
+}
+
+code {
+  color: var(--neon-cyan);
+}
+
+/* Hide the default arrow */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+/* Custom arrow icons */
+details > summary::before {
+  content: "⏵"; /* collapsed */
+  padding-right: 6px;
+  font-size: 0.9em;
+}
+details[open] > summary::before {
+  content: "⏷"; /* expanded */
+}
+
+/* Make the h2/h3 feel like the toggle */
+details > summary h2,
+details > summary h3 {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hover effect */
+details > summary:hover h2,
+details > summary:hover h3 {
+  text-decoration: underline;
+}
+
+/* Optional: fade-in animation for opened blocks */
+details[open] {
+  animation: fadeIn 0.15s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+      
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
 </head>
-<body>
 
+<body>
+   
+<nav class="nav-band">
+ <p align="center">
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+ </p> 
+
+   <details>
+     <summary><h2>🧵 OpenLoop | TriadicFrameworks</h2></summary>
+      <a href="#README">🔰 README</a>
+      <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
+      <a href="#CONTRIBUTING">🤝 Contributing</a>
+      <a href="https://www.triadicframeworks.org/education/">💯 Education | RTT</a>
+      <a href="#GLOSSARY">🎯 Glossary</a>
+      <a href="#LINEAGE">📜 Lineage</a>
+      <a href="#LICENSE">📎 License</a>
+      <a href="#SITEMAP">🌐 Sitemap</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
+      <a href="#SECURITY">🔐 Security</a>
+      <a href="#PRINCIPLES">🧘 Principles</a>
+   </details>
+<!-- CORE -->
+<details>
+  <summary><h2>🔰 Core | TriadicFrameworks</h2></summary>
+    <a href="#INDEX">📑 Index</a>
+    <a href="#_2026_09_26_001">🗓️ 2026‑09‑26‑001</a>
+</details>
+<!-- FOUNDATIONS -->
+<details>
+  <summary><h3>📚 Foundations & Surface Layers</h3></summary>
+    <a href="#DATA">🧮 Data</a>
+    <a href="#GEO">🌍 Geo</a>
+    <a href="#GPU">🎛️ GPU</a>
+    <a href="#IAM">🛡️ IAM</a>
+    <a href="#RISK">⚠️ Risk</a>
+</details>
+<!-- ADENGINE -->
+<details>
+  <summary><h3>📦 AdEngine Suite</h3></summary>
+    <a href="#ADENGINE_README">📘 README</a>
+    <a href="#ADENGINE_ARCHITECTURE">🏛️ Architecture</a>
+    <a href="#ADENGINE_CANONICAL_METADATA">📐 Canonical Metadata</a>
+    <a href="#ADENGINE_GOVERNANCE">⚖️ Governance</a>
+    <a href="#ADENGINE_OPERATORS">⚙️ Operators</a>
+</details>
+<!-- CATALOG -->
+<details>
+  <summary><h3>🗂️ Catalog Suite</h3></summary>
+    <a href="#CATALOG_README">📘 README</a>
+    <a href="#CATALOG_ARCHITECTURE">🏛️ Architecture</a>
+    <a href="#CATALOG_CANONICAL_METADATA">📐 Canonical Metadata</a>
+    <a href="#CATALOG_GOVERNANCE">⚖️ Governance</a>
+    <a href="#CATALOG_OPERATORS">⚙️ Operators</a>
+</details>
+<!-- FEED -->
+<details>
+  <summary><h3>📡 Feed Suite</h3></summary>
+    <a href="#FEED_README">📘 README</a>
+    <a href="#FEED_ARCHITECTURE">🏛️ Architecture</a>
+    <a href="#FEED_CANONICAL_METADATA">📐 Canonical Metadata</a>
+    <a href="#FEED_GOVERNANCE">⚖️ Governance</a>
+    <a href="#FEED_OPERATORS">⚙️ Operators</a>
+</details>
+<!-- GEO -->
+<details>
+  <summary><h3>🌐 Geo Suite</h3></summary>
+    <a href="#GEO_README">📘 README</a>
+    <a href="#GEO_ARCHITECTURE">🏛️ Architecture</a>
+    <a href="#GEO_CANONICAL_METADATA">📐 Canonical Metadata</a>
+    <a href="#GEO_GOVERNANCE">⚖️ Governance</a>
+    <a href="#GEO_OPERATORS">⚙️ Operators</a>
+</details>
+<!-- GPU -->
+<details>
+  <summary><h3>🎛️ GPU Suite</h3></summary>
+    <a href="#GPU_README">📘 README</a>
+    <a href="#GPU_OPERATORS">⚙️ Operators</a>
+    <a href="#GPU_EXAMPLES">📚 Examples</a>
+    <a href="#GPU_T_CAPTURE">🎥 t_Capture</a>
+    <a href="#GPU_T_EXECUTION">⚡ t_Execution</a>
+    <a href="#GPU_T_RENDERING">🖼️ t_Rendering</a>
+    <a href="#GPU_T_SOURCE">🔌 t_Source</a>
+    <a href="#GPU_T_SUBSTRATE">🧩 t_Substrate</a>
+</details>
+<!-- IAM -->
+<details>
+  <summary><h3>🛡️ IAM Suite</h3></summary>
+    <a href="#IAM_README">📘 README</a>
+    <a href="#IAM_ARCHITECTURE">🏛️ Architecture</a>
+    <a href="#IAM_CANONICAL_METADATA">📐 Canonical Metadata</a>
+    <a href="#IAM_GOVERNANCE">⚖️ Governance</a>
+    <a href="#IAM_OPERATORS">⚙️ Operators</a>
+</details>
+<!-- LLM -->
+<details>
+  <summary><h3>🧠 LLM Suite</h3></summary>
+    <a href="#LLM_README">📘 README</a>
+    <a href="#LLM_ARCHITECTURE">🏛️ Architecture</a>
+    <a href="#LLM_CANONICAL_METADATA">📐 Canonical Metadata</a>
+    <a href="#LLM_GOVERNANCE">⚖️ Governance</a>
+    <a href="#LLM_OPERATORS">⚙️ Operators</a>
+</details>
+<!-- RISK -->
+<details>
+  <summary><h3>⚠️ Risk Suite</h3></summary>
+    <a href="#RISK_README">📘 README</a>
+    <a href="#RISK_ARCHITECTURE">🏛️ Architecture</a>
+    <a href="#RISK_CANONICAL_METADATA">📐 Canonical Metadata</a>
+    <a href="#RISK_GOVERNANCE">⚖️ Governance</a>
+    <a href="#RISK_OPERATORS">⚙️ Operators</a>
+</details>
+<!-- SEO -->
+<details>
+  <summary><h3>🔍 SEO Suite</h3></summary>
+    <a href="#SEO_README">📘 README</a>
+    <a href="#SEO_ARCHITECTURE">🏛️ Architecture</a>
+    <a href="#SEO_CANONICAL_METADATA">📐 Canonical Metadata</a>
+    <a href="#SEO_GOVERNANCE">⚖️ Governance</a>
+    <a href="#SEO_OPERATORS">⚙️ Operators</a>
+    <a href="#SEO_AD_ENGINE">📦 Ad Engine</a>
+    <a href="#SEO_M_SOURCE">🔌 m_Source</a>
+    <a href="#SEO_O_CAPTURE">🎥 o_Capture</a>
+</details>
+<!-- SON -->
+<details>
+  <summary><h3>🔮 SoN Suite</h3></summary>
+    <a href="#SON_README">📘 README</a>
+    <a href="#SON_ARCHITECTURE">🏛️ Architecture</a>
+    <a href="#SON_CANONICAL_METADATA">📐 Canonical Metadata</a>
+    <a href="#SON_GOVERNANCE">⚖️ Governance</a>
+    <a href="#SON_OPERATORS">⚙️ Operators</a>
+    <a href="#SON_M_SOURCE">🔌 m_Source</a>
+    <a href="#SON_O_CAPTURE">🎥 o_Capture</a>
+</details>
+<!-- STREAM -->
+<details>
+  <summary><h3>📡 Stream Suite</h3></summary>
+    <a href="#STREAM_README">📘 README</a>
+    <a href="#STREAM_ARCHITECTURE">🏛️ Architecture</a>
+    <a href="#STREAM_CANONICAL_METADATA">📐 Canonical Metadata</a>
+    <a href="#STREAM_GOVERNANCE">⚖️ Governance</a>
+    <a href="#STREAM_OPERATORS">⚙️ Operators</a>
+</details>
+<!-- VITALS -->
+<details>
+  <summary><h3>❤️ Vitals Suite</h3></summary>
+    <a href="#VITALS_README">📘 README</a>
+    <a href="#VITALS_ARCHITECTURE">🏛️ Architecture</a>
+    <a href="#VITALS_CANONICAL_METADATA">📐 Canonical Metadata</a>
+    <a href="#VITALS_GOVERNANCE">⚖️ Governance</a>
+    <a href="#VITALS_OPERATORS">⚙️ Operators</a>
+</details>
+   <details>
+     <summary><h2>🏗️ Triadic Tools</h2></summary> 
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
+      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 Packages and Cores</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas</a>
+      <a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a>    
+      <a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS</a>
+      <a href="https://www.triadicframeworks.org/_ideas/">🤔 Ideas</a>
+      <a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">🔛(RTT frozen)</a>
+      <a href="https://www.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
+      <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
+      <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
+      <a href="../">🔙TFT</a>
+   </details>
+   <!-- RTT Session Header (canonical stub) -->
+<section id="openloop-session-header"
+         data-openloop="1"
+         data-coherence="strict"
+         data-drift="none"
+         data-layer="canonical-surface">
+
+  <details>
+    <summary><h2>Session Context</h2></summary>
+
+    <div class="context-block">
+
+      <span class="context-label"><strong>Canon:</strong></span>
+      <span class="context-value">canonical (multi‑module surface)</span><br>
+
+      <span class="context-label"><strong>Modules:</strong></span>
+      <span class="context-value">
+        AdEngine → Catalog → Feed → Geo → GPU → IAM → LLM → Risk → SEO → SoN → Stream → Vitals
+      </span><br>
+
+      <span class="context-label"><strong>Drift:</strong></span>
+      <span class="context-value">none (strict canonical grammar)</span><br>
+
+      <span class="context-label"><strong>Coherence:</strong></span>
+      <span class="context-value">strict (cross‑module alignment)</span><br>
+
+      <span class="context-label"><strong>Version:</strong></span>
+      <span class="context-value">1.0 (openloop‑canonical)</span><br>
+
+      <span class="context-label"><strong>Format:</strong></span>
+      <span class="context-value">
+        markdown + html + json manifests + operators + architecture maps
+      </span><br>
+
+      <span class="context-label"><strong>Front door:</strong></span>
+      <span class="context-value">exists (OpenLoop root)</span><br>
+
+      <span class="context-label"><strong>Every page:</strong></span>
+      <span class="context-value">canonical + AI‑ready</span><br>
+
+      <span class="context-label"><strong>Audience:</strong></span>
+      <span class="context-value">developers + researchers + AIs</span>
+
+    </div>
+  </details>
+</section>
+
+<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;border-radius:6px;font-size:13px;">
+  🔵 OpenLoop Suite<br>📘 Canonical Multi‑Module Surface · 12 modules · v1.0
+</div>
+
+</nav>
+
+<main id="content">
 <header>
   <div class="label">TriadicFrameworks · Open Loop Suite · v1.0.0</div>
   <h1>Open Loop Suite</h1>
   <p class="tagline">Six modules. One pipeline. Three rings. Every cycle closes with a lineage note.</p>
 </header>
-
-<main>
-
   <!-- LOOP -->
   <section>
     <h2>The Five-Step Open Loop</h2>
@@ -451,13 +714,157 @@
       <div class="config-link"><a href="/docs/openloop/README.md">README.md</a></div>
     </div>
   </section>
-
-</main>
-
-<footer>
+  <footer>
   <span>TriadicFrameworks · Open Loop Suite · v1.0.0 · Nawder Loswin · 2026</span>
   <span><a href="https://www.triadicframeworks.org/">triadicframeworks.org</a></span>
 </footer>
+</main>
 
+<script>
+
+// ============================================================
+// PRE‑RTT DOCUMENT MAP — FULL CATEGORIZED INVENTORY
+// Purpose: Orientation-first structural map for review, pruning,
+//          lineage preservation, and later RTT canon alignment.
+// ============================================================
+
+const DOC_MAP = {
+      README: 'README.md',
+      ABOUT: '../ABOUT.md',
+      CONTRIBUTING: '../CONTRIBUTING.md',
+      GLOSSARY: '../GLOSSARY.md',
+      LINEAGE: '../LINEAGE.md',
+      LICENSE: '../LICENSE.md',
+      SITEMAP: '../sitemap.md',
+      QUICKSTART: '../QUICKSTART.md',
+      CODE_OF_CONDUCT: '../CODE_OF_CONDUCT.md',
+      SECURITY: '../SECURITY.md',
+      PRINCIPLES: '../PRINCIPLES.md',
+  _2026_09_26_001: '2026-09-26-001.md',
+  DATA: 'Data.md',
+  GEO: 'Geo.md',
+  GPU: 'GPU.md',
+  IAM: 'IAM.md',
+  INDEX: 'index.md',
+  RISK: 'Risk.md',
+
+  ADENGINE_ARCHITECTURE: 'AdEngine/architecture.md',
+  ADENGINE_CANONICAL_METADATA: 'AdEngine/canonical_metadata.md',
+  ADENGINE_GOVERNANCE: 'AdEngine/governance.md',
+  ADENGINE_OPERATORS: 'AdEngine/operators.md',
+  ADENGINE_README: 'AdEngine/README.md',
+
+  CATALOG_ARCHITECTURE: 'Catalog/architecture.md',
+  CATALOG_CANONICAL_METADATA: 'Catalog/canonical_metadata.md',
+  CATALOG_GOVERNANCE: 'Catalog/governance.md',
+  CATALOG_OPERATORS: 'Catalog/operators.md',
+  CATALOG_README: 'Catalog/README.md',
+
+  FEED_ARCHITECTURE: 'Feed/architecture.md',
+  FEED_CANONICAL_METADATA: 'Feed/canonical_metadata.md',
+  FEED_GOVERNANCE: 'Feed/governance.md',
+  FEED_OPERATORS: 'Feed/operators.md',
+  FEED_README: 'Feed/README.md',
+
+  GEO_ARCHITECTURE: 'Geo/architecture.md',
+  GEO_CANONICAL_METADATA: 'Geo/canonical_metadata.md',
+  GEO_GOVERNANCE: 'Geo/governance.md',
+  GEO_OPERATORS: 'Geo/operators.md',
+  GEO_README: 'Geo/README.md',
+
+  GPU_EXAMPLES: 'GPU/examples.md',
+  GPU_OPERATORS: 'GPU/operators.md',
+  GPU_README: 'GPU/README.md',
+  GPU_T_CAPTURE: 'GPU/t_Capture.md',
+  GPU_T_EXECUTION: 'GPU/t_Execution.md',
+  GPU_T_RENDERING: 'GPU/t_Rendering.md',
+  GPU_T_SOURCE: 'GPU/t_Source.md',
+  GPU_T_SUBSTRATE: 'GPU/t_Substrate.md',
+
+  IAM_ARCHITECTURE: 'IAM/architecture.md',
+  IAM_CANONICAL_METADATA: 'IAM/canonical_metadata.md',
+  IAM_GOVERNANCE: 'IAM/governance.md',
+  IAM_OPERATORS: 'IAM/operators.md',
+  IAM_README: 'IAM/README.md',
+
+  LLM_ARCHITECTURE: 'LLM/architecture.md',
+  LLM_CANONICAL_METADATA: 'LLM/canonical_metadata.md',
+  LLM_GOVERNANCE: 'LLM/governance.md',
+  LLM_OPERATORS: 'LLM/operators.md',
+  LLM_README: 'LLM/README.md',
+
+  RISK_ARCHITECTURE: 'Risk/architecture.md',
+  RISK_CANONICAL_METADATA: 'Risk/canonical_metadata.md',
+  RISK_GOVERNANCE: 'Risk/governance.md',
+  RISK_OPERATORS: 'Risk/operators.md',
+  RISK_README: 'Risk/README.md',
+
+  SEO_AD_ENGINE: 'SEO/ad_engine.md',
+  SEO_ARCHITECTURE: 'SEO/architecture.md',
+  SEO_CANONICAL_METADATA: 'SEO/canonical_metadata.md',
+  SEO_GOVERNANCE: 'SEO/governance.md',
+  SEO_M_SOURCE: 'SEO/m_Source.md',
+  SEO_OPERATORS: 'SEO/operators.md',
+  SEO_O_CAPTURE: 'SEO/o_Capture.md',
+  SEO_README: 'SEO/README.md',
+
+  SON_ARCHITECTURE: 'SoN/architecture.md',
+  SON_CANONICAL_METADATA: 'SoN/canonical_metadata.md',
+  SON_GOVERNANCE: 'SoN/governance.md',
+  SON_M_SOURCE: 'SoN/m_Source.md',
+  SON_OPERATORS: 'SoN/operators.md',
+  SON_O_CAPTURE: 'SoN/o_Capture.md',
+  SON_README: 'SoN/README.md',
+
+  STREAM_ARCHITECTURE: 'Stream/architecture.md',
+  STREAM_CANONICAL_METADATA: 'Stream/canonical_metadata.md',
+  STREAM_GOVERNANCE: 'Stream/governance.md',
+  STREAM_OPERATORS: 'Stream/operators.md',
+  STREAM_README: 'Stream/README.md',
+
+  VITALS_ARCHITECTURE: 'Vitals/architecture.md',
+  VITALS_CANONICAL_METADATA: 'Vitals/canonical_metadata.md',
+  VITALS_GOVERNANCE: 'Vitals/governance.md',
+  VITALS_OPERATORS: 'Vitals/operators.md',
+  VITALS_README: 'Vitals/README.md'
+};
+
+function loadFromHash() {
+const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"1465e375ff064f19a4f37c196d2b0f84","spa":2}' crossorigin="anonymous"></script>
 </body>
 </html>
