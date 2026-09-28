@@ -1,0 +1,70 @@
+{
+  "$schema": "../schemas/module.schema.json",
+  "quad_id": "openloop/quad",
+  "suite": "openloop",
+  "version": "1.0.0",
+  "generated": "2026-09-27T22:38:00-04:00",
+  "author": "Nawder Loswin",
+  "canonical_url": "https://www.triadicframeworks.org/docs/openloop/quad.json",
+  "description": "Four-quadrant view of the Open Loop suite mapped by primary ring and regime.",
+  "axes": {
+    "x": {
+      "label": "Ring Priority",
+      "poles": ["Trust-first", "Motion-first"]
+    },
+    "y": {
+      "label": "Regime Orientation",
+      "poles": ["Governance", "Execution"]
+    }
+  },
+  "quadrants": {
+    "Q1": {
+      "label": "Governance · Trust",
+      "description": "Modules whose primary ring is Trust and whose regime is governance or classification. These modules gate and verify before anything moves.",
+      "modules": ["openloop/IAM", "openloop/Risk"],
+      "operators": ["VERIFY", "REVOKE", "DELEGATE", "ESCALATE", "CLASSIFY", "GATE", "ABSORB"]
+    },
+    "Q2": {
+      "label": "Governance · Meaning",
+      "description": "Modules whose regime is registry/governance but that carry Meaning-ring responsibilities — maintaining the permanent record of operations.",
+      "modules": ["openloop/Data"],
+      "operators": ["INGEST", "VALIDATE", "INDEX", "PROPAGATE", "ANNOTATE"]
+    },
+    "Q3": {
+      "label": "Execution · Trust",
+      "description": "Modules whose primary ring bridges Trust and execution substrate. Execution only proceeds after Trust clearance from OpenIAM.",
+      "modules": ["openloop/GPU"],
+      "operators": ["SCHEDULE", "PARTITION", "PIPELINE", "FLUSH", "ALIGN"]
+    },
+    "Q4": {
+      "label": "Execution · Motion",
+      "description": "Modules whose primary concern is active operation in time and space — semantic generation, geospatial grounding.",
+      "modules": ["openloop/LLM", "openloop/Geo"],
+      "operators": ["NORMALIZE", "ALIGN", "PROPAGATE", "COLLAPSE", "REFRAME", "ANCHOR", "OFFSET", "PROJECT"]
+    }
+  },
+  "ring_map": {
+    "Trust":   ["openloop/IAM", "openloop/Risk", "openloop/Data"],
+    "Motion":  ["openloop/LLM", "openloop/GPU", "openloop/Geo"],
+    "Meaning": ["openloop/LLM", "openloop/IAM", "openloop/Data", "openloop/Geo"]
+  },
+  "coherence_spectrum": [
+    {"module": "openloop/GPU",  "threshold": 0.72, "position": "lowest",   "note": "Declared floor — execution tolerates higher variance"},
+    {"module": "openloop/Geo",  "threshold": 0.76, "position": "low",      "note": "Declared floor — grounding layer"},
+    {"module": "openloop/LLM",  "threshold": 0.78, "position": "mid-low",  "note": "Declared floor — generative surface"},
+    {"module": "openloop/Risk", "threshold": 0.80, "position": "mid",      "note": "Declared floor — classification gate"},
+    {"module": "openloop/Data", "threshold": 0.82, "position": "mid-high", "note": "Declared floor — lineage record must be coherent"},
+    {"module": "openloop/IAM",  "threshold": 0.85, "position": "highest",  "note": "Declared floor — Trust-ring anchor, highest in suite"}
+  ],
+  "execution_order": {
+    "description": "Canonical operator application sequence across the suite for a full cross-domain operation.",
+    "steps": [
+      {"order": 1, "module": "openloop/IAM",  "verb": "VERIFY",   "action": "Verify principal identity and issue access clearance"},
+      {"order": 2, "module": "openloop/Risk", "verb": "CLASSIFY", "action": "Classify risk envelope and issue GATE decision"},
+      {"order": 3, "module": "openloop/Geo",  "verb": "ANCHOR",   "action": "Anchor operation in spatial and temporal coordinates"},
+      {"order": 4, "module": "openloop/LLM",  "verb": "NORMALIZE","action": "Normalize language model payload to target schema"},
+      {"order": 5, "module": "openloop/GPU",  "verb": "SCHEDULE", "action": "Schedule and execute parallel computation"},
+      {"order": 6, "module": "openloop/Data", "verb": "INDEX",    "action": "Index lineage note and close the loop"}
+    ]
+  }
+}

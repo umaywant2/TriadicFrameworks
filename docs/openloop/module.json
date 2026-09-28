@@ -1,58 +1,63 @@
 {
   "$schema": "../schemas/module.schema.json",
-  "module_id": "openapi",
-  "module_name": "OpenAPI Suite",
-  "module_summary": "Open-aperture surface suite exposing signature, operators, drift surface, and lineage hooks for all Open* domains. Not to be confused with the OpenAPI Specification (OAS/Swagger) REST-schema standard.",
-  "category": "openapi",
+  "module_id": "openloop",
+  "module_name": "Open Loop Suite",
+  "module_summary": "Open-aperture surface suite exposing signature, operators, drift surface, and lineage hooks for all Open* domains. Governed by three rings (Trust, Motion, Meaning) and a five-step operational loop.",
+  "category": "openloop",
   "version": "1.0.0",
   "status": "active",
   "author": "Nawder Loswin",
   "publication_date": "2025",
-  "last_reviewed": "2026-09-26",
-  "canonical_url": "https://triadicframeworks.com/docs/openapi/",
+  "last_reviewed": "2026-09-27",
+  "canonical_url": "https://www.triadicframeworks.org/docs/openloop/",
   "rings": ["Trust", "Motion", "Meaning"],
+  "legacy": {
+    "prior_root": "openapi",
+    "stamped": "2026-09-26",
+    "note": "Prior suite root (openapi, 13-module OpenWarden architecture) is stamped legacy: true. Redirect active. All new operations use the six-module openloop suite."
+  },
   "files": [
     {
       "path": "index.md",
       "role": "index",
       "analyzer_layer": "cross-cutting",
-      "description": "Suite root index. Navigation hub for all Open* surface modules."
+      "description": "Suite root index. Navigation hub with condensed drift event on first screen."
     },
     {
       "path": "index.html",
       "role": "index",
       "analyzer_layer": "cross-cutting",
-      "description": "HTML front door for the openapi suite with canonical head block."
+      "description": "HTML front door for the openloop suite with canonical head block and fixed child links."
     },
     {
       "path": "README.md",
       "role": "reference",
       "analyzer_layer": "cross-cutting",
-      "description": "Developer-facing README. Setup, navigation, and contribution guide."
+      "description": "Developer-facing README. Contribution guide, operator grammar reference, setup, subfolder removal commands."
     },
     {
       "path": "LLM.md",
       "role": "engine",
       "analyzer_layer": "operator",
-      "description": "OpenLLM consolidated surface: architecture, canonical metadata, governance, operators, openapi loop, three rings, drift-event JSON, worked example."
+      "description": "OpenLLM consolidated surface: architecture, canonical metadata, governance, operators, open loop, three rings, drift-event JSON, worked example."
     },
     {
       "path": "IAM.md",
       "role": "engine",
       "analyzer_layer": "operator",
-      "description": "OpenIAM consolidated surface: identity, access chain, principal registry, operators, openapi loop, three rings, worked example."
+      "description": "OpenIAM consolidated surface: identity, access chain, principal registry, operators, open loop, three rings, worked example. Trust-ring anchor."
     },
     {
       "path": "Risk.md",
       "role": "engine",
       "analyzer_layer": "drift",
-      "description": "OpenRisk consolidated surface: risk tier definitions, severity formula, gate protocol, operators, openapi loop, three rings."
+      "description": "OpenRisk consolidated surface: risk tier definitions, severity formula, gate protocol, operators, open loop, three rings."
     },
     {
       "path": "Geo.md",
       "role": "engine",
       "analyzer_layer": "dimensional",
-      "description": "OpenGeo consolidated surface: geospatial and temporal grounding, coordinate anchors, location scope levels, operators, openapi loop."
+      "description": "OpenGeo consolidated surface: geospatial and temporal grounding, coordinate anchors, location scope levels, operators, open loop."
     },
     {
       "path": "GPU.md",
@@ -64,11 +69,11 @@
       "path": "Data.md",
       "role": "engine",
       "analyzer_layer": "coherence",
-      "description": "OpenData consolidated surface: data surface, lineage registry, schema registry, lineage note schema, operators, lineage store structure."
+      "description": "OpenData consolidated surface: data surface, lineage registry, schema registry, lineage note schema, operators, lineage store structure. Terminal step of every open loop."
     },
     {
       "path": "module.json",
-      "role": "index",
+      "role": "manifest",
       "analyzer_layer": "cross-cutting",
       "description": "Per-module manifest listing all files, roles, and analyzer layers for this suite."
     },
@@ -76,36 +81,25 @@
       "path": "modules.json",
       "role": "reference",
       "analyzer_layer": "cross-cutting",
-      "description": "Cross-suite registry of all Open* modules with IDs, versions, and signature summaries."
+      "description": "Cross-suite registry of all Open* modules with dimension vectors, coherence thresholds, and operator affinities."
     },
     {
       "path": "quad.json",
-      "role": "map",
+      "role": "reference",
       "analyzer_layer": "cross-cutting",
-      "description": "Quad map: four-quadrant view of the suite by ring and regime."
+      "description": "Four-quadrant view of the suite mapped by primary ring and regime."
     },
     {
       "path": "nav.json",
-      "role": "map",
+      "role": "reference",
       "analyzer_layer": "cross-cutting",
-      "description": "Suite navigation structure for site nav and AI agent traversal."
+      "description": "Suite navigation structure for site nav, AI agents, and sitemap generators."
     },
     {
       "path": "sitemap.xml",
-      "role": "map",
+      "role": "reference",
       "analyzer_layer": "cross-cutting",
-      "description": "XML sitemap for the openapi suite for search engines and AI crawlers."
+      "description": "XML sitemap for search engines and AI crawlers."
     }
-  ],
-  "operator_affinity": ["NORMALIZE", "ALIGN", "PROPAGATE", "VERIFY", "CLASSIFY", "GATE", "ANCHOR", "SCHEDULE", "INGEST"],
-  "drift_surface": true,
-  "lineage_hooks": true,
-  "cross_references": [
-    "openapi/LLM",
-    "openapi/IAM",
-    "openapi/Risk",
-    "openapi/Geo",
-    "openapi/GPU",
-    "openapi/Data"
   ]
 }

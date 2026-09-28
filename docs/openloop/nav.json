@@ -1,0 +1,131 @@
+{
+  "$schema": "../schemas/module.schema.json",
+  "nav_id": "openloop/nav",
+  "suite": "openloop",
+  "version": "1.0.0",
+  "generated": "2026-09-27T22:38:00-04:00",
+  "author": "Nawder Loswin",
+  "description": "Suite navigation structure for the TriadicFrameworks Open Loop suite. Used by site nav, AI agents, and sitemap generators.",
+  "root": {
+    "label": "Open Loop Suite",
+    "url": "/docs/openloop/",
+    "file": "index.md",
+    "html": "index.html",
+    "canonical_url": "https://www.triadicframeworks.org/docs/openloop/",
+    "description": "Open-aperture surface suite root. Entry point for all Open* domain modules."
+  },
+  "primary_nav": [
+    {
+      "id": "openloop/IAM",
+      "label": "OpenIAM",
+      "url": "/docs/openloop/IAM",
+      "file": "IAM.md",
+      "canonical_url": "https://www.triadicframeworks.org/docs/openloop/IAM",
+      "domain": "Identity & Access Management",
+      "ring_primary": "Trust",
+      "regime": "governance",
+      "pipeline_step": 1,
+      "badge": "🔑",
+      "note": "Suite Trust-ring anchor. Highest coherence floor (0.85)."
+    },
+    {
+      "id": "openloop/Risk",
+      "label": "OpenRisk",
+      "url": "/docs/openloop/Risk",
+      "file": "Risk.md",
+      "canonical_url": "https://www.triadicframeworks.org/docs/openloop/Risk",
+      "domain": "Risk Regime Classification",
+      "ring_primary": "Trust",
+      "regime": "classification",
+      "pipeline_step": 2,
+      "badge": "⚖️"
+    },
+    {
+      "id": "openloop/Geo",
+      "label": "OpenGeo",
+      "url": "/docs/openloop/Geo",
+      "file": "Geo.md",
+      "canonical_url": "https://www.triadicframeworks.org/docs/openloop/Geo",
+      "domain": "Geospatial & Temporal Grounding",
+      "ring_primary": "Motion",
+      "regime": "grounding",
+      "pipeline_step": 3,
+      "badge": "🌐"
+    },
+    {
+      "id": "openloop/LLM",
+      "label": "OpenLLM",
+      "url": "/docs/openloop/LLM",
+      "file": "LLM.md",
+      "canonical_url": "https://www.triadicframeworks.org/docs/openloop/LLM",
+      "domain": "Language Model Infrastructure",
+      "ring_primary": "Motion",
+      "regime": "generative",
+      "pipeline_step": 4,
+      "badge": "🧠"
+    },
+    {
+      "id": "openloop/GPU",
+      "label": "OpenGPU",
+      "url": "/docs/openloop/GPU",
+      "file": "GPU.md",
+      "canonical_url": "https://www.triadicframeworks.org/docs/openloop/GPU",
+      "domain": "Parallel Execution Substrate",
+      "ring_primary": "Motion",
+      "regime": "execution",
+      "pipeline_step": 5,
+      "badge": "⚡"
+    },
+    {
+      "id": "openloop/Data",
+      "label": "OpenData",
+      "url": "/docs/openloop/Data",
+      "file": "Data.md",
+      "canonical_url": "https://www.triadicframeworks.org/docs/openloop/Data",
+      "domain": "Data Surface & Lineage Registry",
+      "ring_primary": "Meaning",
+      "regime": "registry",
+      "pipeline_step": 6,
+      "badge": "📦",
+      "note": "Terminal step of every open loop."
+    }
+  ],
+  "meta_nav": [
+    {
+      "label": "Module Manifest",
+      "url": "/docs/openloop/module.json",
+      "file": "module.json",
+      "description": "Per-module file registry with roles and analyzer layers"
+    },
+    {
+      "label": "Modules Registry",
+      "url": "/docs/openloop/modules.json",
+      "file": "modules.json",
+      "description": "Cross-suite registry of all Open* modules"
+    },
+    {
+      "label": "Quad Map",
+      "url": "/docs/openloop/quad.json",
+      "file": "quad.json",
+      "description": "Four-quadrant view by ring and regime"
+    },
+    {
+      "label": "Sitemap",
+      "url": "/docs/openloop/sitemap.xml",
+      "file": "sitemap.xml",
+      "description": "XML sitemap for search engines and AI crawlers"
+    },
+    {
+      "label": "README",
+      "url": "/docs/openloop/README.md",
+      "file": "README.md",
+      "description": "Developer guide — contribution, operator grammar, setup"
+    }
+  ],
+  "breadcrumb_template": [
+    {"label": "TriadicFrameworks", "url": "/"},
+    {"label": "Docs", "url": "/docs/"},
+    {"label": "Open Loop Suite", "url": "/docs/openloop/"},
+    {"label": "{module}", "url": "/docs/openloop/{module_id}"}
+  ]
+}

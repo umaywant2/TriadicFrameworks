@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:ai="https://www.triadicframeworks.org/schemas/ai-sitemap/1.0">
+
+  <!-- TriadicFrameworks Open Loop Suite Sitemap -->
+  <!-- Suite root: /docs/openloop/ -->
+  <!-- Generated: 2026-09-27T22:38:00-04:00 -->
+  <!-- Author: Nawder Loswin -->
+
+  <url>
+    <loc>https://www.triadicframeworks.org/docs/openloop/</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <ai:module>openloop</ai:module>
+    <ai:role>index</ai:role>
+    <ai:description>Open Loop suite root. Navigation hub for all Open* surface modules. Five-step loop on first screen.</ai:description>
+  </url>
+
+  <url>
+    <loc>https://www.triadicframeworks.org/docs/openloop/IAM</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <ai:module>openloop/IAM</ai:module>
+    <ai:role>engine</ai:role>
+    <ai:ring>Trust</ai:ring>
+    <ai:regime>governance</ai:regime>
+    <ai:pipeline_step>1</ai:pipeline_step>
+    <ai:description>OpenIAM surface: identity, access chain, principal registry, operators, open loop, three rings, worked example.</ai:description>
+    <ai:note>Suite Trust-ring anchor. Highest coherence floor (0.85, declared).</ai:note>
+  </url>
+
+  <url>
+    <loc>https://www.triadicframeworks.org/docs/openloop/Risk</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <ai:module>openloop/Risk</ai:module>
+    <ai:role>engine</ai:role>
+    <ai:ring>Trust</ai:ring>
+    <ai:regime>classification</ai:regime>
+    <ai:pipeline_step>2</ai:pipeline_step>
+    <ai:description>OpenRisk surface: risk tiers T0–T3, severity formula, gate protocol, operators, open loop.</ai:description>
+  </url>
+
+  <url>
+    <loc>https://www.triadicframeworks.org/docs/openloop/Geo</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <ai:module>openloop/Geo</ai:module>
+    <ai:role>engine</ai:role>
+    <ai:ring>Motion</ai:ring>
+    <ai:regime>grounding</ai:regime>
+    <ai:pipeline_step>3</ai:pipeline_step>
+    <ai:description>OpenGeo surface: geospatial and temporal grounding, coordinate anchors, location scope levels, operators.</ai:description>
+  </url>
+
+  <url>
+    <loc>https://www.triadicframeworks.org/docs/openloop/LLM</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <ai:module>openloop/LLM</ai:module>
+    <ai:role>engine</ai:role>
+    <ai:ring>Motion</ai:ring>
+    <ai:regime>generative</ai:regime>
+    <ai:pipeline_step>4</ai:pipeline_step>
+    <ai:description>OpenLLM surface: signature, operators, open loop, three rings, drift-event JSON, worked example (LLM→IAM ALIGN).</ai:description>
+  </url>
+
+  <url>
+    <loc>https://www.triadicframeworks.org/docs/openloop/GPU</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <ai:module>openloop/GPU</ai:module>
+    <ai:role>engine</ai:role>
+    <ai:ring>Motion</ai:ring>
+    <ai:regime>execution</ai:regime>
+    <ai:pipeline_step>5</ai:pipeline_step>
+    <ai:description>OpenGPU surface: parallel execution substrate, execution modes, throughput regimes, SCHEDULE/FLUSH operators.</ai:description>
+  </url>
+
+  <url>
+    <loc>https://www.triadicframeworks.org/docs/openloop/Data</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <ai:module>openloop/Data</ai:module>
+    <ai:role>engine</ai:role>
+    <ai:ring>Meaning</ai:ring>
+    <ai:regime>registry</ai:regime>
+    <ai:pipeline_step>6</ai:pipeline_step>
+    <ai:description>OpenData surface: lineage registry, schema registry, lineage note schema, INDEX operator. Terminal step of every open loop.</ai:description>
+    <ai:note>Loop is not closed until OpenData indexes the lineage note.</ai:note>
+  </url>
+
+  <!-- Config and reference files -->
+
+  <url>
+    <loc>https://www.triadicframeworks.org/docs/openloop/module.json</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <ai:role>manifest</ai:role>
+    <ai:description>Per-module manifest. Lists all files, roles, and analyzer layers for the Open Loop suite.</ai:description>
+  </url>
+
+  <url>
+    <loc>https://www.triadicframeworks.org/docs/openloop/modules.json</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <ai:role>reference</ai:role>
+    <ai:description>Cross-suite registry. All Open* modules with dimension vectors, coherence thresholds, operator affinities.</ai:description>
+  </url>
+
+  <url>
+    <loc>https://www.triadicframeworks.org/docs/openloop/quad.json</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <ai:role>reference</ai:role>
+    <ai:description>Four-quadrant view of the suite mapped by primary ring and regime.</ai:description>
+  </url>
+
+  <url>
+    <loc>https://www.triadicframeworks.org/docs/openloop/nav.json</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <ai:role>reference</ai:role>
+    <ai:description>Suite navigation structure. Used by site nav, AI agents, and sitemap generators.</ai:description>
+  </url>
+
+  <url>
+    <loc>https://www.triadicframeworks.org/docs/openloop/README.md</loc>
+    <lastmod>2026-09-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <ai:role>reference</ai:role>
+    <ai:description>Developer-facing README. Contribution guide, operator grammar reference, setup, subfolder removal commands.</ai:description>
+  </url>
+
+</urlset>
