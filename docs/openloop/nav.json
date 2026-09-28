@@ -1,0 +1,119 @@
+{
+  "$schema": "../schemas/module.schema.json",
+  "nav_id": "openapi/nav",
+  "suite": "openapi",
+  "version": "1.0.0",
+  "generated": "2026-09-26T06:00:00-04:00",
+  "description": "Suite navigation structure for the TriadicFrameworks OpenAPI suite. Used by site nav, AI agents, and sitemap generators.",
+  "root": {
+    "label": "OpenAPI Suite",
+    "url": "/docs/openapi/",
+    "file": "index.md",
+    "html": "index.html",
+    "description": "Open-aperture surface suite root. Entry point for all Open* domain modules."
+  },
+  "primary_nav": [
+    {
+      "id": "openapi/LLM",
+      "label": "OpenLLM",
+      "url": "/docs/openapi/LLM",
+      "file": "LLM.md",
+      "domain": "Language Model infrastructure",
+      "ring_primary": "Motion",
+      "regime": "generative",
+      "badge": "🧠"
+    },
+    {
+      "id": "openapi/IAM",
+      "label": "OpenIAM",
+      "url": "/docs/openapi/IAM",
+      "file": "IAM.md",
+      "domain": "Identity & Access Management",
+      "ring_primary": "Trust",
+      "regime": "governance",
+      "badge": "🔑",
+      "note": "Suite Trust-ring anchor"
+    },
+    {
+      "id": "openapi/Risk",
+      "label": "OpenRisk",
+      "url": "/docs/openapi/Risk",
+      "file": "Risk.md",
+      "domain": "Risk Regime Classification",
+      "ring_primary": "Trust",
+      "regime": "classification",
+      "badge": "⚖️"
+    },
+    {
+      "id": "openapi/Geo",
+      "label": "OpenGeo",
+      "url": "/docs/openapi/Geo",
+      "file": "Geo.md",
+      "domain": "Geospatial & Temporal Grounding",
+      "ring_primary": "Motion",
+      "regime": "grounding",
+      "badge": "🌐"
+    },
+    {
+      "id": "openapi/GPU",
+      "label": "OpenGPU",
+      "url": "/docs/openapi/GPU",
+      "file": "GPU.md",
+      "domain": "Parallel Execution Substrate",
+      "ring_primary": "Motion",
+      "regime": "execution",
+      "badge": "⚡"
+    },
+    {
+      "id": "openapi/Data",
+      "label": "OpenData",
+      "url": "/docs/openapi/Data",
+      "file": "Data.md",
+      "domain": "Data Surface & Lineage Registry",
+      "ring_primary": "Meaning",
+      "regime": "registry",
+      "badge": "📦",
+      "note": "Terminal step of every openapi loop"
+    }
+  ],
+  "meta_nav": [
+    {
+      "label": "Module Manifest",
+      "url": "/docs/openapi/module.json",
+      "file": "module.json",
+      "description": "Per-module file registry with roles and analyzer layers"
+    },
+    {
+      "label": "Modules Registry",
+      "url": "/docs/openapi/modules.json",
+      "file": "modules.json",
+      "description": "Cross-suite registry of all Open* modules"
+    },
+    {
+      "label": "Quad Map",
+      "url": "/docs/openapi/quad.json",
+      "file": "quad.json",
+      "description": "Four-quadrant view by ring and regime"
+    },
+    {
+      "label": "Sitemap",
+      "url": "/docs/openapi/sitemap.xml",
+      "file": "sitemap.xml",
+      "description": "XML sitemap for search engines and AI crawlers"
+    }
+  ],
+  "breadcrumb_template": [
+    {"label": "TriadicFrameworks", "url": "/"},
+    {"label": "Docs",              "url": "/docs/"},
+    {"label": "OpenAPI Suite",     "url": "/docs/openapi/"},
+    {"label": "{module_name}",     "url": "/docs/openapi/{module_file}"}
+  ],
+  "execution_order_nav": [
+    {"order": 1, "label": "OpenIAM",  "url": "/docs/openapi/IAM",  "reason": "Verify identity first"},
+    {"order": 2, "label": "OpenRisk", "url": "/docs/openapi/Risk", "reason": "Classify risk second"},
+    {"order": 3, "label": "OpenGeo",  "url": "/docs/openapi/Geo",  "reason": "Anchor space-time third"},
+    {"order": 4, "label": "OpenLLM",  "url": "/docs/openapi/LLM",  "reason": "Process fourth"},
+    {"order": 5, "label": "OpenGPU",  "url": "/docs/openapi/GPU",  "reason": "Execute fifth"},
+    {"order": 6, "label": "OpenData", "url": "/docs/openapi/Data", "reason": "Write lineage last"}
+  ]
+}

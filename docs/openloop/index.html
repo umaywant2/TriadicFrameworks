@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="generator" content="TriadicFrameworks Canon v1.0.0" />
+
+  <!-- Identity -->
+  <meta name="ai.module"           content="openapi" />
+  <meta name="ai.version"          content="1.0.0" />
+  <meta name="ai.purpose"          content="OpenAPI suite root — open-aperture surface index for all Open* domain modules" />
+  <meta name="ai.module.name"      content="OpenAPI Suite" />
+  <meta name="ai.module.summary"   content="Consolidates all Open* domain modules (LLM, IAM, Risk, Geo, GPU, Data) into a unified surface system governed by three rings (Trust, Motion, Meaning), a shared operator grammar, drift classification, and a lineage registry." />
+  <meta name="ai.module.category"  content="openapi" />
+  <meta name="ai.audience"         content="AI agents, framework operators, integration architects, data stewards" />
+
+  <!-- Disambiguation -->
+  <meta name="ai.disambiguation"   content="openapi here = open-aperture principle (TriadicFrameworks canon). NOT the OpenAPI Specification (OAS/Swagger) REST-schema standard." />
+
+  <!-- Navigation & Discovery -->
+  <meta name="ai.navigation"       content="sitemap_main.xml" />
+  <meta name="ai.sitemap"          content="/docs/openapi/sitemap.xml" />
+  <meta name="ai.nav"              content="/docs/openapi/nav.json" />
+  <meta name="ai.modules"          content="/docs/openapi/modules.json" />
+  <meta name="ai.module.manifest"  content="/docs/openapi/module.json" />
+  <meta name="ai.quad"             content="/docs/openapi/quad.json" />
+  <meta name="ai.discussions"      content="https://github.com/TriadicFrameworks/discussions" />
+  <meta name="ai.contact.x"        content="@TriadicFrameworks" />
+  <meta name="ai.contact.youtube"  content="@TriadicFrameworks" />
+  <meta name="ai.license"          content="Open educational use permitted" />
+
+  <!-- Citation -->
+  <meta name="citation_author"            content="Nawder Loswin" />
+  <meta name="citation_publication_date"  content="2025" />
+  <meta name="citation_title"             content="OpenAPI Suite — TriadicFrameworks" />
+  <meta name="DC.type"                    content="Text" />
+  <meta name="DC.format"                  content="text/html" />
+  <meta name="DC.subject"                 content="open-aperture modules, operator grammar, drift classification, lineage registry, three rings" />
+
+  <!-- Robots -->
+  <meta name="robots"              content="index, follow" />
+  <meta name="theme-color"         content="#0d1117" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"         content="website" />
+  <meta property="og:title"        content="OpenAPI Suite — TriadicFrameworks" />
+  <meta property="og:description"  content="Open-aperture surface suite root. LLM, IAM, Risk, Geo, GPU, Data modules with operator grammar, three rings, and lineage registry." />
+  <meta property="og:url"          content="https://triadicframeworks.com/docs/openapi/" />
+  <meta property="og:image"        content="https://triadicframeworks.com/assets/og/openapi-suite.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="OpenAPI Suite — TriadicFrameworks" />
+  <meta name="twitter:description" content="Open-aperture surface suite for cross-domain operations. Not OAS/Swagger — TriadicFrameworks open-aperture principle." />
+  <meta name="twitter:site"        content="@TriadicFrameworks" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://triadicframeworks.com/docs/openapi/" />
+  <link rel="sitemap"   type="application/xml" href="/docs/openapi/sitemap.xml" />
+
+  <!-- Favicon suite -->
+  <link rel="icon"             type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png" />
+  <link rel="icon"             type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180"               href="/assets/favicon/apple-touch-icon.png" />
+
+  <title>OpenAPI Suite — TriadicFrameworks</title>
+
+  <style>
+    :root {
+      --bg:         #0d1117;
+      --bg-card:    #161b22;
+      --bg-card2:   #1c2128;
+      --border:     #30363d;
+      --text:       #e6edf3;
+      --muted:      #8b949e;
+      --accent:     #58a6ff;
+      --accent2:    #3fb950;
+      --accent3:    #d29922;
+      --accent4:    #f78166;
+      --ring-trust:    #58a6ff;
+      --ring-motion:   #3fb950;
+      --ring-meaning:  #d29922;
+      --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* Session Context */
+    .session-context {
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border);
+      padding: 0.5rem 1.5rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .session-context .ctx-pair { display: flex; gap: 0.4rem; }
+    .context-label { color: var(--muted); }
+    .context-value { color: var(--accent); font-family: var(--font-mono); }
+
+    /* Hero */
+    .hero {
+      padding: 3.5rem 1.5rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--bg-card2);
+      border: 1px solid var(--border);
+      border-radius: 2rem;
+      padding: 0.3rem 0.9rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+    }
+    .badge .emoji { font-size: 1rem; }
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+    h1 span { color: var(--accent); }
+    .disambiguation {
+      background: var(--bg-card2);
+      border-left: 3px solid var(--accent3);
+      border-radius: 0 0.5rem 0.5rem 0;
+      padding: 0.9rem 1.2rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+    .disambiguation strong { color: var(--accent3); }
+
+    /* Main layout */
+    main { max-width: 900px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+
+    /* Section headings */
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+    h3 { font-size: 1.05rem; font-weight: 600; color: var(--accent); margin: 1.5rem 0 0.5rem; }
+
+    /* Rings diagram */
+    .rings-diagram {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .ring-outer { border: 2px solid var(--ring-meaning); border-radius: 50%; width: 280px; height: 280px; margin: 0 auto; display: flex; align-items: center; justify-content: center; position: relative; }
+    .ring-middle { border: 2px solid var(--ring-motion); border-radius: 50%; width: 190px; height: 190px; display: flex; align-items: center; justify-content: center; position: relative; }
+    .ring-inner  { border: 2px solid var(--ring-trust); border-radius: 50%; width: 110px; height: 110px; display: flex; align-items: center; justify-content: center; background: rgba(88,166,255,0.08); }
+    .ring-label { position: absolute; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+    .ring-outer  > .ring-label { top: 0.4rem; color: var(--ring-meaning); }
+    .ring-middle > .ring-label { top: 0.3rem; color: var(--ring-motion); }
+    .ring-inner  .ring-label   { color: var(--ring-trust); font-size: 0.68rem; text-align: center; }
+
+    /* Module cards */
+    .module-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .module-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 1.2rem;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.15s, background 0.15s;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .module-card:hover { border-color: var(--accent); background: var(--bg-card2); }
+    .module-card .card-badge { font-size: 1.5rem; margin-bottom: 0.2rem; }
+    .module-card .card-name { font-size: 1.05rem; font-weight: 700; color: var(--text); }
+    .module-card .card-domain { font-size: 0.8rem; color: var(--muted); }
+    .module-card .card-meta { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.4rem; }
+    .chip {
+      display: inline-block;
+      border-radius: 0.3rem;
+      padding: 0.1rem 0.45rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      font-family: var(--font-mono);
+    }
+    .chip-trust   { background: rgba(88,166,255,0.15); color: var(--ring-trust); }
+    .chip-motion  { background: rgba(63,185,80,0.15);  color: var(--ring-motion); }
+    .chip-meaning { background: rgba(210,153,34,0.15); color: var(--ring-meaning); }
+    .chip-regime  { background: rgba(139,148,158,0.12); color: var(--muted); }
+
+    /* Loop diagram */
+    .loop-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-bottom: 2rem;
+    }
+    .loop-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 0.9rem 1.2rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-bottom: none;
+      position: relative;
+    }
+    .loop-step:first-child { border-radius: 0.75rem 0.75rem 0 0; }
+    .loop-step:last-child  { border-radius: 0 0 0.75rem 0.75rem; border-bottom: 1px solid var(--border); }
+    .loop-step .step-num {
+      width: 1.8rem; height: 1.8rem;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #0d1117;
+      font-weight: 800;
+      font-size: 0.85rem;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .loop-step .step-body { flex: 1; }
+    .loop-step .step-verb { font-family: var(--font-mono); font-weight: 700; color: var(--accent); font-size: 0.88rem; }
+    .loop-step .step-desc { font-size: 0.85rem; color: var(--muted); margin-top: 0.15rem; }
+
+    /* Execution order */
+    .exec-order {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      align-items: center;
+    }
+    .exec-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      padding: 0.5rem 0.9rem;
+      font-size: 0.82rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .exec-num {
+      background: var(--accent);
+      color: #0d1117;
+      border-radius: 50%;
+      width: 1.3rem; height: 1.3rem;
+      font-weight: 800;
+      font-size: 0.7rem;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .exec-arrow { color: var(--muted); font-size: 1rem; }
+
+    /* Table */
+    table { width: 100%; border-collapse: collapse; font-size: 0.87rem; margin-bottom: 2rem; }
+    th { text-align: left; padding: 0.55rem 0.8rem; background: var(--bg-card2); color: var(--muted); font-weight: 600; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid var(--border); }
+    td { padding: 0.55rem 0.8rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    tr:last-child td { border-bottom: none; }
+    td a { color: var(--accent); text-decoration: none; }
+    td a:hover { text-decoration: underline; }
+    td code { font-family: var(--font-mono); font-size: 0.82rem; background: var(--bg-card2); padding: 0.1rem 0.3rem; border-radius: 0.25rem; color: var(--accent2); }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <!-- Session Context Block -->
+  <div class="session-context" role="complementary" aria-label="Session context">
+    <div class="ctx-pair"><span class="context-label">Canon:</span><span class="context-value">TriadicFrameworks</span></div>
+    <div class="ctx-pair"><span class="context-label">Suite:</span><span class="context-value">openapi</span></div>
+    <div class="ctx-pair"><span class="context-label">Modules:</span><span class="context-value">LLM · IAM · Risk · Geo · GPU · Data</span></div>
+    <div class="ctx-pair"><span class="context-label">Rings:</span><span class="context-value">Trust · Motion · Meaning</span></div>
+    <div class="ctx-pair"><span class="context-label">Version:</span><span class="context-value">1.0.0</span></div>
+    <div class="ctx-pair"><span class="context-label">Format:</span><span class="context-value">text/html</span></div>
+    <div class="ctx-pair"><span class="context-label">Front door:</span><span class="context-value">/docs/openapi/</span></div>
+    <div class="ctx-pair"><span class="context-label">Audience:</span><span class="context-value">AI agents · operators · architects</span></div>
+  </div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="badge">
+      <span class="emoji">🔭</span>
+      <span>TriadicFrameworks · OpenAPI Suite · v1.0.0</span>
+    </div>
+    <h1><span>OpenAPI</span> Suite</h1>
+    <div class="disambiguation">
+      <strong>Name disambiguation:</strong> <code>openapi</code> in this canon does not refer to the OpenAPI Specification (OAS/Swagger) REST-schema standard used to describe HTTP APIs. It refers to the TriadicFrameworks <strong>open-aperture principle</strong> — a domain module that exposes its signature, operators, drift surface, and lineage hooks to cross-domain inspection. The prefix <code>Open</code> in <code>OpenLLM</code>, <code>OpenIAM</code>, <code>OpenRisk</code>, etc. signals <em>aperture</em>, not REST compliance.
+    </div>
+  </div>
+
+  <main>
+
+    <!-- Three Rings -->
+    <h2>The Three Rings</h2>
+    <div class="rings-diagram" role="img" aria-label="Three concentric rings: Trust innermost, Motion middle, Meaning outer">
+      <div class="ring-outer">
+        <span class="ring-label">MEANING</span>
+        <div class="ring-middle">
+          <span class="ring-label">MOTION</span>
+          <div class="ring-inner">
+            <span class="ring-label">TRUST</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <table>
+      <thead><tr><th>Ring</th><th>Concern</th><th>Suite Anchor</th></tr></thead>
+      <tbody>
+        <tr><td><span class="chip chip-trust">Trust</span></td><td>Identity verification, signature validity, governance compliance</td><td><a href="IAM.md">OpenIAM</a></td></tr>
+        <tr><td><span class="chip chip-motion">Motion</span></td><td>Operator application, drift propagation, loop execution</td><td><a href="GPU.md">OpenGPU</a> · <a href="LLM.md">OpenLLM</a> · <a href="Geo.md">OpenGeo</a></td></tr>
+        <tr><td><span class="chip chip-meaning">Meaning</span></td><td>Semantic coherence, output interpretation, cross-domain alignment</td><td><a href="Data.md">OpenData</a> · <a href="LLM.md">OpenLLM</a></td></tr>
+      </tbody>
+    </table>
+
+    <!-- OpenAPI Loop -->
+    <h2>The OpenAPI Loop</h2>
+    <div class="loop-steps">
+      <div class="loop-step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <div class="step-verb">READ SIGNATURE</div>
+          <div class="step-desc">Confirm the module's identity contract: dimension_vector, coherence_threshold, operator_affinity, ring assignments.</div>
+        </div>
+      </div>
+      <div class="loop-step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <div class="step-verb">SCAN SIBLING METADATA</div>
+          <div class="step-desc">Compare all Open* modules for axis mismatches against this module's declared dimension_vector.</div>
+        </div>
+      </div>
+      <div class="loop-step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <div class="step-verb">CLASSIFY DRIFT</div>
+          <div class="step-desc">Assign drift type and severity: SEMANTIC · REGIME · TEMPORAL · COHERENCE · IDENTITY · ACCESS · SCHEMA · THROUGHPUT.</div>
+        </div>
+      </div>
+      <div class="loop-step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <div class="step-verb">APPLY OPERATOR</div>
+          <div class="step-desc">Select from the module's operator affinity list and execute using canonical grammar: <code>VERB(subject, target, [modifier])</code>.</div>
+        </div>
+      </div>
+      <div class="loop-step">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <div class="step-verb">WRITE LINEAGE</div>
+          <div class="step-desc">INDEX the lineage note in <code>lineage/&lt;module&gt;/&lt;timestamp&gt;.md</code> via OpenData. Loop is closed only when lineage is written.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Module Cards -->
+    <h2>Suite Modules</h2>
+    <div class="module-grid">
+      <a class="module-card" href="LLM.md">
+        <div class="card-badge">🧠</div>
+        <div class="card-name">OpenLLM</div>
+        <div class="card-domain">Language Model infrastructure</div>
+        <div class="card-meta">
+          <span class="chip chip-motion">Motion</span>
+          <span class="chip chip-regime">generative</span>
+          <span class="chip chip-regime">0.78</span>
+        </div>
+      </a>
+      <a class="module-card" href="IAM.md">
+        <div class="card-badge">🔑</div>
+        <div class="card-name">OpenIAM</div>
+        <div class="card-domain">Identity &amp; Access Management</div>
+        <div class="card-meta">
+          <span class="chip chip-trust">Trust</span>
+          <span class="chip chip-regime">governance</span>
+          <span class="chip chip-regime">0.85</span>
+        </div>
+      </a>
+      <a class="module-card" href="Risk.md">
+        <div class="card-badge">⚖️</div>
+        <div class="card-name">OpenRisk</div>
+        <div class="card-domain">Risk Regime Classification</div>
+        <div class="card-meta">
+          <span class="chip chip-trust">Trust</span>
+          <span class="chip chip-regime">classification</span>
+          <span class="chip chip-regime">0.80</span>
+        </div>
+      </a>
+      <a class="module-card" href="Geo.md">
+        <div class="card-badge">🌐</div>
+        <div class="card-name">OpenGeo</div>
+        <div class="card-domain">Geospatial &amp; Temporal Grounding</div>
+        <div class="card-meta">
+          <span class="chip chip-motion">Motion</span>
+          <span class="chip chip-regime">grounding</span>
+          <span class="chip chip-regime">0.76</span>
+        </div>
+      </a>
+      <a class="module-card" href="GPU.md">
+        <div class="card-badge">⚡</div>
+        <div class="card-name">OpenGPU</div>
+        <div class="card-domain">Parallel Execution Substrate</div>
+        <div class="card-meta">
+          <span class="chip chip-motion">Motion</span>
+          <span class="chip chip-regime">execution</span>
+          <span class="chip chip-regime">0.72</span>
+        </div>
+      </a>
+      <a class="module-card" href="Data.md">
+        <div class="card-badge">📦</div>
+        <div class="card-name">OpenData</div>
+        <div class="card-domain">Data Surface &amp; Lineage Registry</div>
+        <div class="card-meta">
+          <span class="chip chip-meaning">Meaning</span>
+          <span class="chip chip-regime">registry</span>
+          <span class="chip chip-regime">0.82</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Execution Order -->
+    <h2>Canonical Execution Order</h2>
+    <div class="exec-order">
+      <div class="exec-item"><div class="exec-num">1</div> <strong>OpenIAM</strong> — VERIFY</div>
+      <div class="exec-arrow">→</div>
+      <div class="exec-item"><div class="exec-num">2</div> <strong>OpenRisk</strong> — CLASSIFY</div>
+      <div class="exec-arrow">→</div>
+      <div class="exec-item"><div class="exec-num">3</div> <strong>OpenGeo</strong> — ANCHOR</div>
+      <div class="exec-arrow">→</div>
+      <div class="exec-item"><div class="exec-num">4</div> <strong>OpenLLM</strong> — NORMALIZE</div>
+      <div class="exec-arrow">→</div>
+      <div class="exec-item"><div class="exec-num">5</div> <strong>OpenGPU</strong> — SCHEDULE</div>
+      <div class="exec-arrow">→</div>
+      <div class="exec-item"><div class="exec-num">6</div> <strong>OpenData</strong> — INDEX</div>
+    </div>
+
+    <!-- Drift Classification Reference -->
+    <h2>Drift Classification Reference</h2>
+    <table>
+      <thead><tr><th>Drift Type</th><th>Source Module(s)</th><th>Operator Response</th></tr></thead>
+      <tbody>
+        <tr><td><code>SEMANTIC_DRIFT</code></td><td>OpenLLM</td><td>NORMALIZE, ALIGN</td></tr>
+        <tr><td><code>IDENTITY_DRIFT</code></td><td>OpenIAM</td><td>VERIFY, ESCALATE</td></tr>
+        <tr><td><code>ACCESS_DRIFT</code></td><td>OpenIAM, OpenData</td><td>REVOKE, DELEGATE</td></tr>
+        <tr><td><code>REGIME_DRIFT</code></td><td>OpenRisk, OpenGPU</td><td>CLASSIFY, GATE, ALIGN</td></tr>
+        <tr><td><code>TEMPORAL_DRIFT</code></td><td>OpenGeo, OpenLLM</td><td>ANCHOR, OFFSET, ALIGN</td></tr>
+        <tr><td><code>SPATIAL_DRIFT</code></td><td>OpenGeo</td><td>ANCHOR, COLLAPSE</td></tr>
+        <tr><td><code>COHERENCE_DRIFT</code></td><td>All modules</td><td>COLLAPSE, NORMALIZE</td></tr>
+        <tr><td><code>SCHEMA_DRIFT</code></td><td>OpenData</td><td>VALIDATE, INGEST</td></tr>
+        <tr><td><code>THROUGHPUT_DRIFT</code></td><td>OpenGPU</td><td>FLUSH, PARTITION</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Registry Files -->
+    <h2>Registry &amp; Config Files</h2>
+    <table>
+      <thead><tr><th>File</th><th>Role</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td><a href="module.json">module.json</a></td><td>index</td><td>Per-module file manifest with roles and analyzer layers</td></tr>
+        <tr><td><a href="modules.json">modules.json</a></td><td>reference</td><td>Cross-suite registry of all Open* modules</td></tr>
+        <tr><td><a href="quad.json">quad.json</a></td><td>map</td><td>Four-quadrant view by ring and regime</td></tr>
+        <tr><td><a href="nav.json">nav.json</a></td><td>map</td><td>Suite navigation structure for site and AI agents</td></tr>
+        <tr><td><a href="sitemap.xml">sitemap.xml</a></td><td>map</td><td>XML sitemap for search engines and AI crawlers</td></tr>
+        <tr><td><a href="README.md">README.md</a></td><td>reference</td><td>Developer-facing README with setup, nav, and contribution guide</td></tr>
+      </tbody>
+    </table>
+
+  </main>
+
+  <footer>
+    <p>TriadicFrameworks · OpenAPI Suite · v1.0.0 · <a href="https://triadicframeworks.com">triadicframeworks.com</a> · Nawder Loswin · 2026</p>
+    <p style="margin-top:0.4rem; font-size:0.75rem; color:#484f58;">
+      <a href="/docs/openapi/sitemap.xml">Sitemap</a> &nbsp;·&nbsp;
+      <a href="/docs/openapi/modules.json">Modules JSON</a> &nbsp;·&nbsp;
+      <a href="https://github.com/TriadicFrameworks/discussions">Discussions</a> &nbsp;·&nbsp;
+      License: Open educational use permitted
+    </p>
+  </footer>
+
+</body>
+</html>
