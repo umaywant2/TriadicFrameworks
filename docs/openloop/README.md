@@ -1,3 +1,6 @@
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/openloop/module.json) — Agentic module schema role assignments
+
 # TriadicFrameworks · Open Loop Suite
 
 **Path:** `docs/openloop/`  
