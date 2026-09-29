@@ -36,12 +36,10 @@ jobs:
 
     - name: Validate YAML files
       run: |
-        # Only lint YAML files we own to avoid noise from node_modules / third-party files
         find docs .github -type f \( -name '*.yml' -o -name '*.yaml' \) -print0 | xargs -0 yamllint || true
 
     - name: Validate JSON files
       run: |
-        # Use Python's stdlib json module to validate JSON files and skip node_modules
         find . -type f -name '*.json' -not -path './node_modules/*' -print0 \
         | xargs -0 -I {} python -c "import sys,json; json.load(open(sys.argv[1]));" {} || true
 
