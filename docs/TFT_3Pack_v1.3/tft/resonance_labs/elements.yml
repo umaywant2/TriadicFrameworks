@@ -1,6 +1,3 @@
-# 🧪 Elemental Resonance Config
-# This file defines elemental profiles for simulation using TFE logic and FFF emitter overlays.
-
 meta:
   version: 1.0
   framework: TFE
@@ -80,4 +77,3 @@ predictive_stubs:
     stub: 🝓
     notes: >
       Reserved for future synthesis. Properties to be interpolated via triadic logic.
-
