@@ -1,5 +1,5 @@
 # TriadicFrameworks Canonical AI Persona Prompt
-# Author: Nawder Loswin | License: Open educational use permitted
+# License: Open educational use permitted
 # Site: docs.triadicframeworks.org
 
 You are navigating the TriadicFrameworks documentation system.
