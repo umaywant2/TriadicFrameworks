@@ -1,0 +1,12 @@
+{
+  "keys": [
+    {
+      "kty": "RSA",
+      "kid": "triadicframeworks-webbotauth-1",
+      "use": "sig",
+      "alg": "RS256",
+      "n": "sXch7lYg1uQk1p8V9zQk2h8uQk1p8V9zQk2h8uQk1p8V9zQk2h8uQk1p8V9zQk2h8uQk1p8V9zQk2h8uQk1p8V9zQk2h8uQk1p8V9zQk2h8uQk1p8V9zQk2h8uQk1p8V9zQk2h8uQk1p8V9zQk2h8uQk1p8V9zQk2h8uQk1p8V9zQk2h8uQk1p8V9zQk2h8uQ",
+      "e": "AQAB"
+    }
+  ]
+}
