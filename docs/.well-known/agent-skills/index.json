@@ -4,6 +4,14 @@
       "id": "openloop",
       "href": "/.well-known/agent-skills/openloop/SKILL.md"
     },
+{
+  "id": "mcp",
+  "href": "/.well-known/agent-skills/mcp/SKILL.md"
+},
+{
+  "id": "tft3pack",
+  "href": "/.well-known/agent-skills/tft3pack/SKILL.md"
+},
     {
       "id": "triadic-modules",
       "name": "TriadicFrameworks Module Index",
