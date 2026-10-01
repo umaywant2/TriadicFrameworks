@@ -1,0 +1,5 @@
+{
+  "endpoint": "/api/quad/health",
+  "status": "ok",
+  "description": "Health check for Quad Engine service."
+}
