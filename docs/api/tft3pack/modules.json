@@ -1,0 +1,10 @@
+{
+  "endpoint": "/api/tft3pack/modules",
+  "modules": [
+    {
+      "id": "core",
+      "name": "TFT 3Pack Core Module",
+      "href": "/api/tft3pack/modules/core.json"
+    }
+  ]
+}
