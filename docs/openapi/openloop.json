@@ -1,1 +1,160 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "OpenLoop API",
+    "version": "1.0.0",
+    "description": "Machine-readable access to TriadicFrameworks OpenLoop modules."
+  },
+
+  "paths": {
+    "/api/openloop": {
+      "get": {
+        "summary": "OpenLoop overview",
+        "description": "Returns general OpenLoop module information.",
+        "responses": {
+          "200": {
+            "description": "OpenLoop overview returned successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OpenLoopOverview"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "/api/openloop/modules": {
+      "get": {
+        "summary": "List OpenLoop modules",
+        "description": "Returns a list of available OpenLoop modules.",
+        "responses": {
+          "200": {
+            "description": "List of modules returned successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OpenLoopModuleList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "/api/openloop/modules/{id}": {
+      "get": {
+        "summary": "Get OpenLoop module by ID",
+        "description": "Returns detailed metadata for a specific OpenLoop module.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Module metadata returned successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OpenLoopModule"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Module not found."
+          }
+        }
+      }
+    },
+
+    "/api/openloop/health": {
+      "get": {
+        "summary": "OpenLoop health check",
+        "description": "Returns health and readiness information for the OpenLoop service.",
+        "responses": {
+          "200": {
+            "description": "Health status returned successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OpenLoopHealth"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "components": {
+    "schemas": {
+      "OpenLoopOverview": {
+        "type": "object",
+        "properties": {
+          "endpoint": { "type": "string" },
+          "description": { "type": "string" },
+          "modules": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/OpenLoopModuleRef" }
+          }
+        }
+      },
+
+      "OpenLoopModuleList": {
+        "type": "object",
+        "properties": {
+          "endpoint": { "type": "string" },
+          "modules": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/OpenLoopModuleRef" }
+          }
+        }
+      },
+
+      "OpenLoopModuleRef": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "href": { "type": "string" }
+        }
+      },
+
+      "OpenLoopModule": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "fields": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "examples": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      },
+
+      "OpenLoopHealth": {
+        "type": "object",
+        "properties": {
+          "endpoint": { "type": "string" },
+          "status": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    }
+  }
+}
 
