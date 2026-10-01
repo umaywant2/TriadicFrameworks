@@ -4,7 +4,5 @@
   "token_endpoint": "https://www.triadicframeworks.org/agent/token",
   "jwks_uri": "https://www.triadicframeworks.org/.well-known/jwks.json",
   "response_types_supported": ["token"],
-  "grant_types_supported": ["client_credentials"],
-  "subject_types_supported": ["public"],
-  "id_token_signing_alg_values_supported": ["RS256"]
+  "grant_types_supported": ["client_credentials"]
 }
