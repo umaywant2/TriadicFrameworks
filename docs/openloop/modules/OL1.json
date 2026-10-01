@@ -1,0 +1,10 @@
+{
+  "id": "OL1",
+  "name": "OpenLoop Module 1",
+  "description": "Example OpenLoop module.",
+  "fields": ["input", "output", "state"],
+  "examples": [
+    "Used in open-loop RTT evaluation.",
+    "Supports drift-tolerant module execution."
+  ]
+}
