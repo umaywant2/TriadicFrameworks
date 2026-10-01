@@ -1,0 +1,7 @@
+{
+  "id": "quad-op-2",
+  "name": "Coherence Analyzer",
+  "description": "Analyzes coherence-layer transitions and stability.",
+  "inputs": ["module", "coherence-layer"],
+  "outputs": ["coherence stability", "drift boundary notes"]
+}
