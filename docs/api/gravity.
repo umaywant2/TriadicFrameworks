@@ -1,8 +1,0 @@
-{
-  "endpoint": "/api/gravity",
-  "description": "Triadic Gravity overview endpoint.",
-  "resources": [
-    "/api/gravity/operators",
-    "/api/gravity/health"
-  ]
-}
