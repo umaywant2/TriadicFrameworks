@@ -1,1 +1,7 @@
-
+{
+  "id": "rtt",
+  "name": "RTT Operator Grammar",
+  "description": "Machine-readable RTT operator definitions.",
+  "roles": ["operator", "dimensional", "regime", "coherence"],
+  "href": "/.well-known/modules/rtt.json"
+}
