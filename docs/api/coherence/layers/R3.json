@@ -1,1 +1,13 @@
+{
+  "id": "R3",
+  "name": "Low Coherence",
+  "description": "Triadic layers misaligned; variance high; unstable envelope.",
+  "primitives": ["noise", "divergence", "phaseShift"],
+  "stability": "unstable",
+  "drift_boundary": "high",
+  "examples": [
+    "Used in unstable or high-drift RTT modules.",
+    "Indicates breakdown of coherence alignment."
+  ]
+}
 
