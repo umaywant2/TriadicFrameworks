@@ -1,1 +1,160 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "MCP API",
+    "version": "1.0.0",
+    "description": "Machine-readable access to TriadicFrameworks MCP subsystem."
+  },
+
+  "paths": {
+    "/api/mcp": {
+      "get": {
+        "summary": "MCP overview",
+        "description": "Returns general MCP subsystem information.",
+        "responses": {
+          "200": {
+            "description": "MCP overview returned successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/McpOverview"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "/api/mcp/modules": {
+      "get": {
+        "summary": "List MCP modules",
+        "description": "Returns a list of available MCP modules.",
+        "responses": {
+          "200": {
+            "description": "List of MCP modules returned successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/McpModuleList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "/api/mcp/modules/{id}": {
+      "get": {
+        "summary": "Get MCP module by ID",
+        "description": "Returns detailed metadata for a specific MCP module.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Module metadata returned successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/McpModule"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Module not found."
+          }
+        }
+      }
+    },
+
+    "/api/mcp/health": {
+      "get": {
+        "summary": "MCP health check",
+        "description": "Returns health and readiness information for the MCP subsystem.",
+        "responses": {
+          "200": {
+            "description": "Health status returned successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/McpHealth"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "components": {
+    "schemas": {
+      "McpOverview": {
+        "type": "object",
+        "properties": {
+          "endpoint": { "type": "string" },
+          "description": { "type": "string" },
+          "modules": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/McpModuleRef" }
+          }
+        }
+      },
+
+      "McpModuleList": {
+        "type": "object",
+        "properties": {
+          "endpoint": { "type": "string" },
+          "modules": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/McpModuleRef" }
+          }
+        }
+      },
+
+      "McpModuleRef": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "href": { "type": "string" }
+        }
+      },
+
+      "McpModule": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "fields": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "examples": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      },
+
+      "McpHealth": {
+        "type": "object",
+        "properties": {
+          "endpoint": { "type": "string" },
+          "status": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    }
+  }
+}
 
