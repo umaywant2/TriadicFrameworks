@@ -1,0 +1,7 @@
+{
+  "id": "quad-op-1",
+  "name": "Resonance-Time Evaluator",
+  "description": "Evaluates RTT resonance-time behavior within modules.",
+  "inputs": ["module", "payload"],
+  "outputs": ["resonance-time metrics", "diagnostic flags"]
+}
