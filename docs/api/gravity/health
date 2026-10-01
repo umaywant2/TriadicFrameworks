@@ -1,5 +1,0 @@
-{
-  "endpoint": "/api/gravity/health",
-  "status": "ok",
-  "description": "Health check for Triadic Gravity API."
-}
