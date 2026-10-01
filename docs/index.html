@@ -336,7 +336,7 @@ document.addEventListener("DOMContentLoaded", () => {
         required: ["module"]
       },
       async execute({ module }) {
-        const res = await fetch(`/docs/${module}/ABOUT.md`);
+        const res = await fetch(`/${module}/ABOUT.md`);
         if (!res.ok) return { error: "Module not found" };
         const text = await res.text();
         return { about: text };
