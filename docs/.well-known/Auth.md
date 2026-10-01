@@ -1,10 +1,11 @@
 # Authentication for AI Agents
 
 ## Overview
-TriadicFrameworks APIs use token-based authentication. Agents must obtain a token before accessing protected endpoints.
+TriadicFrameworks APIs use token-based authentication. Agents must obtain a
+token before accessing protected endpoints.
 
 ## Token Endpoint
-POST /auth/token
+POST /.well-known/auth/token
 
 ### Request
 Content-Type: application/json
@@ -26,9 +27,17 @@ Include the token in the Authorization header:
 Authorization: Bearer <access_token>
 
 ## Refreshing Tokens
-POST /auth/refresh
+POST /.well-known/auth/refresh
+
+### Request
 {
   "refresh_token": "..."
+}
+
+### Response
+{
+  "access_token": "...",
+  "expires_in": 3600
 }
 
 ## Error Responses
