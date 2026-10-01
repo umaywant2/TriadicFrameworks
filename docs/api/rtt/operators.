@@ -1,1 +1,16 @@
-
+{
+  "endpoint": "/api/rtt/operators",
+  "description": "List of RTT operators with metadata pointers.",
+  "operators": [
+    {
+      "id": "rtt-op-1",
+      "name": "Canonical Resonance Operator",
+      "href": "/api/rtt/operators/rtt-op-1.json"
+    },
+    {
+      "id": "rtt-op-2",
+      "name": "Coherence Layer Transition Operator",
+      "href": "/api/rtt/operators/rtt-op-2.json"
+    }
+  ]
+}
