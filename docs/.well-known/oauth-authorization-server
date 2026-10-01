@@ -1,0 +1,8 @@
+{
+  "issuer": "https://www.triadicframeworks.org",
+  "authorization_endpoint": "https://www.triadicframeworks.org/agent/auth",
+  "token_endpoint": "https://www.triadicframeworks.org/agent/token",
+  "jwks_uri": "https://www.triadicframeworks.org/.well-known/jwks.json",
+  "response_types_supported": ["token"],
+  "grant_types_supported": ["client_credentials"]
+}
