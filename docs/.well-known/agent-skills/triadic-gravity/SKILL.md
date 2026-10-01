@@ -54,7 +54,7 @@ This specification defines:
 ## Documentation
 Human-readable documentation is available at:
 
-`/docs/triadic-gravity`
+`/.well-known/triadic-gravity`
 
 This includes:
 - RTT gravomagnetic theory  
