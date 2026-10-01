@@ -316,36 +316,28 @@ details[open] {
 <body>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const abortController = new AbortController();
-
-  // Register tool even if navigator.modelContext doesn't exist
-  try {
-    navigator.modelContext?.registerTool(
-      {
-        name: "triadicframeworks.lookupModule",
-        description: "Retrieve TriadicFrameworks module metadata.",
-        inputSchema: {
-          type: "object",
-          properties: {
-            module: { type: "string" }
-          },
-          required: ["module"]
+try {
+  navigator.modelContext?.registerTool(
+    {
+      name: "triadicframeworks.lookupModule",
+      description: "Retrieve TriadicFrameworks module metadata.",
+      inputSchema: {
+        type: "object",
+        properties: {
+          module: { type: "string" }
         },
-        async execute({ module }) {
-          const res = await fetch(`/${module}/ABOUT.md`);
-          if (!res.ok) return { error: "Module not found" };
-          const text = await res.text();
-          return { about: text };
-        }
+        required: ["module"]
       },
-      { signal: abortController.signal }
-    );
-  } catch (e) {
-    // Cloudflare scanner will hit this path
-    console.log("WebMCP not available, but registration call executed.");
-  }
-});
+      async execute({ module }) {
+        const res = await fetch(`/${module}/ABOUT.md`);
+        if (!res.ok) return { error: "Module not found" };
+        return { about: await res.text() };
+      }
+    }
+  );
+} catch (e) {
+  console.log("WebMCP registration attempted.");
+}
 </script>
    
 <nav class="nav-band">
