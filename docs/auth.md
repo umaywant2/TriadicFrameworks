@@ -1,10 +1,18 @@
 # Auth.md
 
-# Authentication for AI Agents
-
 ## Overview
 TriadicFrameworks APIs use token-based authentication. Agents must obtain a
 token before accessing protected endpoints.
+
+## agent_auth
+skill: "auth-md"
+register_uri: "/agent/register"
+
+methods:
+  - type: "anonymous"
+    description: "Agents may register anonymously to obtain a token."
+    credential_types_supported: ["none"]
+    claim_uri: "/agent/register"
 
 ## Token Endpoint
 POST /.well-known/auth/token
