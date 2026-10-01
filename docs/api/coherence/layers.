@@ -1,0 +1,21 @@
+{
+  "endpoint": "/api/coherence/layers",
+  "description": "List of coherence layers.",
+  "layers": [
+    {
+      "id": "R1",
+      "name": "High Coherence",
+      "href": "/api/coherence/layers/R1.json"
+    },
+    {
+      "id": "R2",
+      "name": "Medium Coherence",
+      "href": "/api/coherence/layers/R2.json"
+    },
+    {
+      "id": "R3",
+      "name": "Low Coherence",
+      "href": "/api/coherence/layers/R3.json"
+    }
+  ]
+}
