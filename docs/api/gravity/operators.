@@ -1,8 +1,7 @@
 {
-  "endpoint": "/api/gravity",
-  "description": "Triadic Gravity overview endpoint.",
-  "resources": [
-    "/api/gravity/operators",
-    "/api/gravity/health"
+  "endpoint": "/api/gravity/operators",
+  "description": "List of Triadic Gravity operators.",
+  "operators": [
+    { "id": "grav-1", "href": "/api/gravity/operators/grav-1.json" }
   ]
 }
