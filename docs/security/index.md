@@ -31,7 +31,7 @@ We ask that you:
 ### **Acknowledgments**
 Researchers who responsibly disclose security issues may be recognized at:
 
-`https://triadicframeworks.org/docs/security/acknowledgments/` [(triadicframeworks.org in Bing)](https://www.bing.com/search?q="https%3A%2F%2Ftriadicframeworks.org%2Fdocs%2Fsecurity%2Facknowledgments%2F")
+`https://triadicframeworks.org/security/acknowledgments/` [(triadicframeworks.org in Bing)](https://www.bing.com/search?q="https%3A%2F%2Ftriadicframeworks.org%2Fsecurity%2Facknowledgments%2F")
 
 ### **Thank You**
 We appreciate your help in keeping TriadicFrameworks safe for everyone.
