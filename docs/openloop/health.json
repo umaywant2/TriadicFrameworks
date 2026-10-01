@@ -1,0 +1,5 @@
+{
+  "endpoint": "/api/openloop/health",
+  "status": "ok",
+  "description": "Health check for OpenLoop service."
+}
