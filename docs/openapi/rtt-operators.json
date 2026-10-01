@@ -1,1 +1,48 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "RTT Operator Grammar API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/rtt/operators": {
+      "get": {
+        "summary": "List RTT operators",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/rtt/operators/{id}": {
+      "get": {
+        "summary": "Get RTT operator by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/rtt/health": {
+      "get": {
+        "summary": "RTT operator service health check",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}
 
