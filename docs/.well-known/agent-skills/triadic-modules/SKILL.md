@@ -16,7 +16,7 @@ The OpenAPI description for this skill is available at:
 
 ## Documentation
 Human-readable documentation is available at:
-`/docs/modules`
+`/.well-known/modules`
 
 ## Notes
 This skill is intended for automated agents that need structured access to TriadicFrameworks module metadata.
