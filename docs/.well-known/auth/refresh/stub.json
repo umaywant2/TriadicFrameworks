@@ -1,0 +1,12 @@
+{
+  "endpoint": "/.well-known/auth/refresh",
+  "method": "POST",
+  "description": "AI agent token refresh endpoint.",
+  "request": {
+    "refresh_token": "string"
+  },
+  "response": {
+    "access_token": "string",
+    "expires_in": 3600
+  }
+}
