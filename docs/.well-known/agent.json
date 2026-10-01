@@ -1,0 +1,6 @@
+{
+  "name": "TriadicFrameworks Agent",
+  "description": "AI agent for TriadicFrameworks providing RTT, Quad Engine, Gravity, Coherence, OpenLoop, MCP, and TFT_3Pack capabilities.",
+  "skills": "/.well-known/agent-skills/index.json",
+  "mcp_server": "/.well-known/mcp/server-card.json"
+}
