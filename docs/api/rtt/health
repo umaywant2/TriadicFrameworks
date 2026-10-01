@@ -1,5 +1,0 @@
-{
-  "endpoint": "/api/rtt/health",
-  "status": "ok",
-  "description": "Health check for RTT operator service."
-}
