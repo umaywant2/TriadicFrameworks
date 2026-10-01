@@ -21,6 +21,40 @@
         }
       ]
     },
+{
+  "anchor": "/api/mcp",
+  "rel": [
+    {
+      "href": "/openapi/mcp.json",
+      "rel": "service-desc"
+    },
+    {
+      "href": "/docs/MCP",
+      "rel": "service-doc"
+    },
+    {
+      "href": "/.well-known/agent-skills/mcp/SKILL.md",
+      "rel": "agent-skills"
+    }
+  ]
+},
+{
+  "anchor": "/api/tft3pack",
+  "rel": [
+    {
+      "href": "/openapi/tft3pack.json",
+      "rel": "service-desc"
+    },
+    {
+      "href": "/docs/TFT_3Pack_v1.3",
+      "rel": "service-doc"
+    },
+    {
+      "href": "/.well-known/agent-skills/tft3pack/SKILL.md",
+      "rel": "agent-skills"
+    }
+  ]
+},
     {
       "anchor": "https://triadicframeworks.org/api/modules",
       "service-desc": [
