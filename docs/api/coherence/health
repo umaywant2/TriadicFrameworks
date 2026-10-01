@@ -1,5 +1,0 @@
-{
-  "endpoint": "/api/coherence/health",
-  "status": "ok",
-  "description": "Health check for coherence-layer service."
-}
