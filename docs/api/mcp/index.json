@@ -1,0 +1,11 @@
+{
+  "endpoint": "/api/mcp",
+  "description": "MCP subsystem overview.",
+  "modules": [
+    {
+      "id": "server",
+      "name": "MCP Server",
+      "href": "/api/mcp/modules/server.json"
+    }
+  ]
+}
