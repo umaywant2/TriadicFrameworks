@@ -1,6 +1,10 @@
 {
-  "resources": [
-    "/api/",
-    "/MCP/"
+  "resource": "https://www.triadicframeworks.org",
+  "authorization_servers": [
+    "https://www.triadicframeworks.org"
+  ],
+  "scopes_supported": [
+    "read",
+    "write"
   ]
 }
