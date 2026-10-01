@@ -13,7 +13,7 @@
   },
   "modules": [
     {
-      "id": "openapi/LLM",
+      "id": "openloop/LLM",
       "name": "OpenLLM",
       "file": "LLM.md",
       "domain": "Language Model infrastructure",
@@ -26,13 +26,13 @@
       "rings": ["Motion", "Trust", "Meaning"],
       "drift_surface": true,
       "lineage_hooks": true,
-      "cross_references": ["openapi/IAM", "openapi/Risk", "openapi/Geo", "openapi/GPU", "openapi/Data"],
+      "cross_references": ["openloop/IAM", "openloop/Risk", "openloop/Geo", "openloop/GPU", "openloop/Data"],
       "worked_example": true,
       "drift_event_json": true,
       "openapi_loop": true
     },
     {
-      "id": "openapi/IAM",
+      "id": "openloop/IAM",
       "name": "OpenIAM",
       "file": "IAM.md",
       "domain": "Identity & Access Management",
@@ -45,14 +45,14 @@
       "rings": ["Trust", "Motion", "Meaning"],
       "drift_surface": true,
       "lineage_hooks": true,
-      "cross_references": ["openapi/LLM", "openapi/Risk", "openapi/Geo", "openapi/GPU", "openapi/Data"],
+      "cross_references": ["openloop/LLM", "openloop/Risk", "openloop/Geo", "openloop/GPU", "openloop/Data"],
       "worked_example": true,
       "drift_event_json": true,
       "openapi_loop": true,
       "note": "Trust-ring anchor for the entire suite. Highest coherence threshold."
     },
     {
-      "id": "openapi/Risk",
+      "id": "openloop/Risk",
       "name": "OpenRisk",
       "file": "Risk.md",
       "domain": "Risk Regime Classification",
@@ -67,13 +67,13 @@
       "risk_gate_threshold": 0.75,
       "drift_surface": true,
       "lineage_hooks": true,
-      "cross_references": ["openapi/IAM", "openapi/LLM", "openapi/Geo", "openapi/GPU", "openapi/Data"],
+      "cross_references": ["openloop/IAM", "openloop/LLM", "openloop/Geo", "openloop/GPU", "openloop/Data"],
       "worked_example": false,
       "drift_event_json": true,
       "openapi_loop": true
     },
     {
-      "id": "openapi/Geo",
+      "id": "openloop/Geo",
       "name": "OpenGeo",
       "file": "Geo.md",
       "domain": "Geospatial & Temporal Grounding",
@@ -88,13 +88,13 @@
       "temporal_resolution": "ISO8601",
       "drift_surface": true,
       "lineage_hooks": true,
-      "cross_references": ["openapi/LLM", "openapi/IAM", "openapi/Risk", "openapi/GPU", "openapi/Data"],
+      "cross_references": ["openloop/LLM", "openloop/IAM", "openloop/Risk", "openloop/GPU", "openloop/Data"],
       "worked_example": false,
       "drift_event_json": true,
       "openapi_loop": true
     },
     {
-      "id": "openapi/GPU",
+      "id": "openloop/GPU",
       "name": "OpenGPU",
       "file": "GPU.md",
       "domain": "Parallel Execution Substrate",
@@ -106,16 +106,16 @@
       "operator_affinity": ["SCHEDULE", "PARTITION", "PIPELINE", "FLUSH", "ALIGN"],
       "rings": ["Motion", "Trust", "Meaning"],
       "execution_modes": ["batch", "real-time", "streaming", "inference"],
-      "risk_gate_dependency": "openapi/Risk",
+      "risk_gate_dependency": "openloop/Risk",
       "drift_surface": true,
       "lineage_hooks": true,
-      "cross_references": ["openapi/Risk", "openapi/IAM", "openapi/LLM", "openapi/Data", "openapi/Geo"],
+      "cross_references": ["openloop/Risk", "openloop/IAM", "openloop/LLM", "openloop/Data", "openloop/Geo"],
       "worked_example": false,
       "drift_event_json": true,
       "openapi_loop": true
     },
     {
-      "id": "openapi/Data",
+      "id": "openloop/Data",
       "name": "OpenData",
       "file": "Data.md",
       "domain": "Data Surface & Lineage Registry",
@@ -128,10 +128,10 @@
       "rings": ["Meaning", "Trust", "Motion"],
       "lineage_store": "lineage/",
       "schema_registry": "schemas/",
-      "iam_dependency": "openapi/IAM",
+      "iam_dependency": "openloop/IAM",
       "drift_surface": true,
       "lineage_hooks": true,
-      "cross_references": ["openapi/LLM", "openapi/IAM", "openapi/Risk", "openapi/Geo", "openapi/GPU"],
+      "cross_references": ["openloop/LLM", "openloop/IAM", "openloop/Risk", "openloop/Geo", "openloop/GPU"],
       "worked_example": false,
       "drift_event_json": true,
       "openapi_loop": true,
@@ -147,13 +147,13 @@
     "INGEST", "VALIDATE", "INDEX", "PURGE"
   ],
   "suite_coherence_thresholds": {
-    "openapi/LLM":  0.78,
-    "openapi/IAM":  0.85,
-    "openapi/Risk": 0.80,
-    "openapi/Geo":  0.76,
-    "openapi/GPU":  0.72,
-    "openapi/Data": 0.82
+    "openloop/LLM":  0.78,
+    "openloop/IAM":  0.85,
+    "openloop/Risk": 0.80,
+    "openloop/Geo":  0.76,
+    "openloop/GPU":  0.72,
+    "openloop/Data": 0.82
   },
   "suite_minimum_coherence": 0.72,
-  "suite_anchor": "openapi/IAM"
+  "suite_anchor": "openloop/IAM"
 }
