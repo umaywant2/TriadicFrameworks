@@ -1,78 +1,48 @@
 # Triadic Gravity Skill
 
 ## Overview
-The Triadic Gravity skill provides machine-readable access to the gravity-related components of TriadicFrameworks, including RTT gravomagnetic operators, FFF_Gravity triad behavior, coherence-well dynamics, drift boundaries, and cross-field coupling rules. Automated agents can use this skill to interpret gravity modules, evaluate coherence conditions, and integrate triadic gravity logic into computational workflows.
+This skill provides AI agents with structured access to the Triadic Gravity
+API. It exposes machine-readable endpoints for gravity metadata, operators,
+health checks, and OpenAPI documentation.
 
-This skill is intended for AI agents that require structured access to TriadicFrameworks’ gravity canon, including resonance-time behavior, coherence amplification, and triadic collapse conditions.
-
----
+Triadic Gravity is one of the core analytical engines within the
+TriadicFrameworks canon, providing structured gravitational operator
+definitions, coherence mappings, and substrate-aware metadata.
 
 ## Endpoints
 
 ### GET /api/gravity
-Returns general Triadic Gravity information, including:
-- gravity operator categories (RTT, FFF)
-- coherence-layer mappings (R1, R2, R3)
-- triadic gravity mechanisms
-- cross-field coupling rules
+Returns the top-level Triadic Gravity overview, including available
+subresources and metadata pointers.
 
 ### GET /api/gravity/operators
-Returns a machine-readable list of gravity-related operators, including:
-- gravomagnetic operators
-- coherence-well operators
-- drift-boundary operators
-- triadic-collapse operators
+Returns a list of all gravity operators, each with an ID and href pointing to
+its machine-readable definition.
 
 ### GET /api/gravity/operators/{id}
-Returns detailed metadata for a specific gravity operator, including:
-- canonical definition
-- coherence markers
-- resonance-time behavior
-- coupling rules (EM ↔ gravomagnetic)
-- failure modes
-- examples
+Returns metadata for a specific gravity operator. Agents should use the `href`
+values returned by `/api/gravity/operators` to discover valid operator IDs.
 
 ### GET /api/gravity/health
-Returns health and readiness information for the Triadic Gravity service.
+Returns a simple health check for the Triadic Gravity API.
 
----
-
-## OpenAPI
-The OpenAPI description for this skill is available at:
+## OpenAPI Specification
+A machine-readable OpenAPI document is available at:
 
 `/openapi/triadic-gravity.json`
 
-This specification defines:
-- gravity operator schemas  
-- coherence-layer structures  
-- drift-boundary fields  
-- triadic-collapse metadata  
-- error and diagnostic formats  
-
----
+This file describes all gravity endpoints, their parameters, and response
+schemas.
 
 ## Documentation
-Human-readable documentation is available at:
+Human-readable documentation for Triadic Gravity is available at:
 
 `/.well-known/triadic-gravity`
 
-This includes:
-- RTT gravomagnetic theory  
-- FFF_Gravity triad behavior  
-- coherence-well dynamics  
-- drift-boundary analysis  
-- triadic-collapse conditions  
-- examples and module integration notes  
-
----
+This directory contains conceptual explanations, module summaries, and
+operator-level descriptions intended for both human readers and AI agents.
 
 ## Notes
-This skill is designed for automated agents that need structured access to TriadicFrameworks’ gravity canon. It supports:
-- gravity operator lookup  
-- coherence-layer analysis  
-- drift-boundary evaluation  
-- triadic-collapse modeling  
-- integration with RTT, FFF_Gravity, and Quad Engine  
-
-Agents may use this skill to interpret gravity-related modules, perform operator-level reasoning, or integrate triadic gravity logic into automated workflows.
-
+This skill is part of the TriadicFrameworks agent skill suite and is intended
+for automated clients that require structured access to Triadic Gravity
+metadata and operator definitions.
