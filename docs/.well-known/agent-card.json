@@ -1,1 +1,67 @@
+{
+  "name": "TriadicFrameworks Agent",
+  "version": "1.0.0",
+  "description": "Autonomous AI agent for TriadicFrameworks providing RTT, Quad Engine, Triadic Gravity, Coherence Layers, OpenLoop, MCP, and TFT_3Pack capabilities.",
+
+  "supportedInterfaces": [
+    {
+      "id": "mcp",
+      "name": "Model Context Protocol",
+      "description": "MCP server interface for tool execution and structured agent workflows.",
+      "serviceUrl": "https://www.triadicframeworks.org/.well-known/mcp/server-card.json",
+      "transport": "http"
+    }
+  ],
+
+  "capabilities": [
+    {
+      "id": "triadic-evaluation",
+      "name": "Triadic Evaluation Engine",
+      "description": "Evaluates triadic structures across RTT, Quad Engine, Gravity, Coherence, and TFT_3Pack subsystems."
+    },
+    {
+      "id": "mcp-tools",
+      "name": "MCP Tool Execution",
+      "description": "Executes MCP tools exposed by TriadicFrameworks for structured agent workflows."
+    }
+  ],
+
+  "skills": [
+    {
+      "id": "rtt",
+      "name": "RTT Operators",
+      "description": "Resonance-Time Theory operators and evaluation structures."
+    },
+    {
+      "id": "quad-engine",
+      "name": "Quad Engine",
+      "description": "Four-channel evaluation engine for structural analysis."
+    },
+    {
+      "id": "triadic-gravity",
+      "name": "Triadic Gravity",
+      "description": "Gravity subsystem for triadic field dynamics."
+    },
+    {
+      "id": "coherence-layers",
+      "name": "Coherence Layers",
+      "description": "Layered coherence evaluation for multi-regime analysis."
+    },
+    {
+      "id": "openloop",
+      "name": "OpenLoop",
+      "description": "Open-loop structural evaluation and agent workflows."
+    },
+    {
+      "id": "mcp",
+      "name": "MCP",
+      "description": "Model Context Protocol server and tools."
+    },
+    {
+      "id": "tft3pack",
+      "name": "TFT 3Pack",
+      "description": "TriadicFrameworks TFT_3Pack subsystem for triadic module evaluation."
+    }
+  ]
+}
 
