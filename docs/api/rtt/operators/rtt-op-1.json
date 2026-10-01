@@ -1,1 +1,13 @@
+{
+  "id": "rtt-op-1",
+  "name": "Canonical Resonance Operator",
+  "category": "R1",
+  "description": "Defines the baseline resonance-time behavior for RTT systems.",
+  "coherence_layer": "R1",
+  "drift_boundary": "Stable",
+  "examples": [
+    "Used in baseline RTT module initialization.",
+    "Forms the foundation for higher-layer operators."
+  ]
+}
 
