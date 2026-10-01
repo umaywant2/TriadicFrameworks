@@ -13,16 +13,16 @@ open-loop modules within RTT, Quad Engine, or coherence-layer workflows.
 ## Endpoints
 
 ### GET /api/openloop
-General OpenLoop overview.
+Returns general OpenLoop module information.
 
 ### GET /api/openloop/modules
-List of available OpenLoop modules.
+Returns a list of available OpenLoop modules.
 
 ### GET /api/openloop/modules/{id}
-Detailed metadata for a specific OpenLoop module.
+Returns detailed metadata for a specific OpenLoop module.
 
 ### GET /api/openloop/health
-Health and readiness information for the OpenLoop service.
+Returns health and readiness information for the OpenLoop service.
 
 ---
 
@@ -31,6 +31,13 @@ The OpenAPI description for this skill is available at:
 
 `/openapi/openloop.json`
 
+This specification defines:
+- OpenLoop module schemas  
+- input/output field structures  
+- drift-tolerant execution metadata  
+- diagnostic fields  
+- error formats  
+
 ---
 
 ## Documentation
@@ -38,13 +45,22 @@ Human-readable documentation is available at:
 
 `/docs/openloop`
 
+This includes:
+- module definitions  
+- input/output structures  
+- drift-tolerant execution notes  
+- RTT integration examples  
+- coherence-layer alignment  
+
 ---
 
 ## Notes
 This skill supports:
-- open-loop module lookup
-- drift-tolerant execution
-- RTT integration
-- Quad Engine evaluation
+- open-loop module lookup  
+- drift-tolerant execution  
+- RTT integration  
+- Quad Engine evaluation  
 - coherence-layer alignment
 
+Agents may use this skill to interpret module metadata, perform open-loop
+reasoning, or integrate OpenLoop logic into automated workflows.
