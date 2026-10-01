@@ -1,0 +1,5 @@
+{
+  "endpoint": "/api/mcp/health",
+  "status": "ok",
+  "description": "Health check for MCP subsystem."
+}
