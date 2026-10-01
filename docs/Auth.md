@@ -1,4 +1,4 @@
-# auth.md
+# Auth.md
 
 # Authentication for AI Agents
 
