@@ -1,1 +1,13 @@
+{
+  "id": "R1",
+  "name": "High Coherence",
+  "description": "Triadic layers strongly aligned; variance minimal; stable harmonic envelope.",
+  "primitives": ["harmonic", "alignment", "pulse"],
+  "stability": "stable",
+  "drift_boundary": "low",
+  "examples": [
+    "Used in stable RTT module initialization.",
+    "Forms the foundation for high-coherence operators."
+  ]
+}
 
