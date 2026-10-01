@@ -9,6 +9,7 @@
       "name": "Model Context Protocol",
       "description": "MCP server interface for tool execution and structured agent workflows.",
       "serviceUrl": "https://www.triadicframeworks.org/.well-known/mcp/server-card.json",
+      "url": "https://www.triadicframeworks.org/.well-known/mcp/server-card.json",
       "transport": "http"
     }
   ],
