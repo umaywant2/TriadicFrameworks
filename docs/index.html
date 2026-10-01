@@ -479,6 +479,39 @@ window.addEventListener('hashchange', loadFromHash);
 loadFromHash();
 
 </script>
-       
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  if (!navigator.modelContext || !navigator.modelContext.registerTool) {
+    console.warn("WebMCP not supported in this browser.");
+    return;
+  }
+
+  const abortController = new AbortController();
+
+  navigator.modelContext.registerTool(
+    {
+      name: "triadicframeworks.lookupModule",
+      description: "Retrieve TriadicFrameworks module metadata.",
+      inputSchema: {
+        type: "object",
+        properties: {
+          module: { type: "string" }
+        },
+        required: ["module"]
+      },
+      async execute({ module }) {
+        const res = await fetch(`/docs/${module}/ABOUT.md`);
+        if (!res.ok) return { error: "Module not found" };
+        const text = await res.text();
+        return { about: text };
+      }
+    },
+    { signal: abortController.signal }
+  );
+});
+</script>
+
+
 </body>
 </html>
