@@ -1,3 +1,5 @@
+# auth.md
+
 # Authentication for AI Agents
 
 ## Overview
