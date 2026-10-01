@@ -1,1 +1,19 @@
-
+{
+  "modules": [
+    {
+      "id": "rtt",
+      "name": "RTT Operator Grammar",
+      "href": "/.well-known/modules/rtt.json"
+    },
+    {
+      "id": "quad-engine",
+      "name": "Quad Engine",
+      "href": "/.well-known/modules/quad-engine.json"
+    },
+    {
+      "id": "triadic-gravity",
+      "name": "Triadic Gravity",
+      "href": "/.well-known/modules/triadic-gravity.json"
+    }
+  ]
+}
