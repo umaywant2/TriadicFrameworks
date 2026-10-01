@@ -1,1 +1,13 @@
+{
+  "id": "R2",
+  "name": "Medium Coherence",
+  "description": "Triadic layers moderately aligned; variance present but controlled.",
+  "primitives": ["relation", "moderation"],
+  "stability": "neutral",
+  "drift_boundary": "medium",
+  "examples": [
+    "Used when transitioning between coherence states.",
+    "Supports moderate drift RTT modules."
+  ]
+}
 
