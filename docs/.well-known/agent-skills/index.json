@@ -1,6 +1,10 @@
 {
   "skills": [
     {
+      "id": "openloop",
+      "href": "/.well-known/agent-skills/openloop/SKILL.md"
+    },
+    {
       "id": "triadic-modules",
       "name": "TriadicFrameworks Module Index",
       "description": "Provides structured access to TriadicFrameworks modules, metadata, analyzer layers, and canonical documentation.",
