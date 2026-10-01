@@ -1,1 +1,160 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "TFT_3Pack API",
+    "version": "1.0.0",
+    "description": "Machine-readable access to TriadicFrameworks TFT_3Pack_v1.3 modules."
+  },
+
+  "paths": {
+    "/api/tft3pack": {
+      "get": {
+        "summary": "TFT_3Pack overview",
+        "description": "Returns general TFT_3Pack subsystem information.",
+        "responses": {
+          "200": {
+            "description": "TFT_3Pack overview returned successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Tft3PackOverview"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "/api/tft3pack/modules": {
+      "get": {
+        "summary": "List TFT_3Pack modules",
+        "description": "Returns a list of available TFT_3Pack modules.",
+        "responses": {
+          "200": {
+            "description": "List of modules returned successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Tft3PackModuleList"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "/api/tft3pack/modules/{id}": {
+      "get": {
+        "summary": "Get TFT_3Pack module by ID",
+        "description": "Returns detailed metadata for a specific TFT_3Pack module.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Module metadata returned successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Tft3PackModule"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Module not found."
+          }
+        }
+      }
+    },
+
+    "/api/tft3pack/health": {
+      "get": {
+        "summary": "TFT_3Pack health check",
+        "description": "Returns health and readiness information for the TFT_3Pack subsystem.",
+        "responses": {
+          "200": {
+            "description": "Health status returned successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Tft3PackHealth"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "components": {
+    "schemas": {
+      "Tft3PackOverview": {
+        "type": "object",
+        "properties": {
+          "endpoint": { "type": "string" },
+          "description": { "type": "string" },
+          "modules": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/Tft3PackModuleRef" }
+          }
+        }
+      },
+
+      "Tft3PackModuleList": {
+        "type": "object",
+        "properties": {
+          "endpoint": { "type": "string" },
+          "modules": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/Tft3PackModuleRef" }
+          }
+        }
+      },
+
+      "Tft3PackModuleRef": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "href": { "type": "string" }
+        }
+      },
+
+      "Tft3PackModule": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "fields": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "examples": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      },
+
+      "Tft3PackHealth": {
+        "type": "object",
+        "properties": {
+          "endpoint": { "type": "string" },
+          "status": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    }
+  }
+}
 
