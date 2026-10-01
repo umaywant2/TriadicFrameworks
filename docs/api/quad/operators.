@@ -1,0 +1,16 @@
+{
+  "endpoint": "/api/quad/operators",
+  "description": "List of Quad Engine operators.",
+  "operators": [
+    {
+      "id": "quad-op-1",
+      "name": "Resonance-Time Evaluator",
+      "href": "/api/quad/operators/quad-op-1.json"
+    },
+    {
+      "id": "quad-op-2",
+      "name": "Coherence Analyzer",
+      "href": "/api/quad/operators/quad-op-2.json"
+    }
+  ]
+}
