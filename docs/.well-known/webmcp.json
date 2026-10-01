@@ -1,0 +1,4 @@
+{
+  "server": "/.well-known/mcp/server-card.json",
+  "skills": "/.well-known/agent-skills/index.json"
+}
