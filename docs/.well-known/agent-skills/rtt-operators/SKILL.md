@@ -1,7 +1,12 @@
 # RTT Operator Grammar Skill
 
 ## Overview
-This skill provides machine-readable access to the RTT (Resonance-Time Theory) operator grammar used throughout TriadicFrameworks. It exposes operator definitions, coherence-layer mappings, drift boundaries, and cross-operator coupling rules. Automated agents can use this skill to interpret RTT modules, evaluate operator behavior, and integrate RTT logic into computational workflows.
+This skill provides machine-readable access to the RTT (Resonance-Time Theory)
+operator grammar used throughout TriadicFrameworks. It exposes operator
+definitions, coherence-layer mappings, drift boundaries, and cross-operator
+coupling rules. Automated agents can use this skill to interpret RTT modules,
+evaluate operator behavior, and integrate RTT logic into computational
+workflows.
 
 ---
 
@@ -30,39 +35,40 @@ Returns health and readiness information for the RTT operator service.
 ---
 
 ## OpenAPI
-The OpenAPI description for this skill is available at:
+A machine-readable OpenAPI description for this skill is available at:
 
 `/openapi/rtt-operators.json`
 
 This specification defines:
-- RTT operator schemas  
-- operator metadata formats  
-- coherence-layer structures  
-- drift boundary fields  
-- error and diagnostic formats  
+- RTT operator schemas
+- operator metadata formats
+- coherence-layer structures
+- drift boundary fields
+- error and diagnostic formats
 
 ---
 
 ## Documentation
 Human-readable documentation is available at:
 
-`/docs/rtt/operators`
+`/.well-known/rtt/operators`
 
-This includes:
-- full operator grammar  
-- coherence-layer explanations  
-- drift boundary theory  
-- cross-operator coupling rules  
-- examples and module integration notes  
+This directory contains:
+- full operator grammar
+- coherence-layer explanations
+- drift boundary theory
+- cross-operator coupling rules
+- examples and module integration notes
 
 ---
 
 ## Notes
-This skill is intended for automated agents that need structured access to RTT operator definitions and metadata. It supports:
-- RTT operator lookup  
-- coherence-layer analysis  
-- drift-boundary evaluation  
-- integration with Quad Engine and module analyzers  
+This skill is intended for automated agents that need structured access to RTT
+operator definitions and metadata. It supports:
+- RTT operator lookup
+- coherence-layer analysis
+- drift-boundary evaluation
+- integration with Quad Engine and module analyzers
 
-Agents may use this skill to interpret RTT-based modules, perform operator-level reasoning, or integrate RTT logic into automated workflows.
-
+Agents may use this skill to interpret RTT-based modules, perform
+operator-level reasoning, or integrate RTT logic into automated workflows.
