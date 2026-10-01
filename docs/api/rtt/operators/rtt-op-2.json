@@ -1,1 +1,13 @@
+{
+  "id": "rtt-op-2",
+  "name": "Coherence Layer Transition Operator",
+  "category": "R2",
+  "description": "Handles transitions between coherence layers in RTT.",
+  "coherence_layer": "R2",
+  "drift_boundary": "Moderate",
+  "examples": [
+    "Used when shifting from R1 to R2 coherence.",
+    "Supports multi-layer RTT module analysis."
+  ]
+}
 
