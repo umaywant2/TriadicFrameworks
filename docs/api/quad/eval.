@@ -1,0 +1,17 @@
+{
+  "endpoint": "/api/quad/eval",
+  "method": "POST",
+  "description": "Execute a Quad Engine evaluation request.",
+  "request": {
+    "operator": "string",
+    "module": "string",
+    "payload": "object",
+    "coherence_layer": "string"
+  },
+  "response": {
+    "evaluation_result": "object",
+    "resonance_time_metrics": "object",
+    "drift_boundary_notes": "string",
+    "diagnostic_flags": "array"
+  }
+}
