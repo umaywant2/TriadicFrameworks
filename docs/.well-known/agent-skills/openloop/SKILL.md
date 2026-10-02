@@ -43,7 +43,7 @@ This specification defines:
 ## Documentation
 Human-readable documentation is available at:
 
-`/docs/openloop`
+`/openloop`
 
 This includes:
 - module definitions  
