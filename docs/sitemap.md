@@ -30,7 +30,7 @@ _Inventory refresh: **2026-09-02** · **410** public URLs_
 ## 1. Core Frameworks (Structural Spine)
 
 - [ /rtt-datacenter-evaluator.html ](https://www.triadicframeworks.org/rtt-datacenter-evaluator.html)
-- [ /Triadic_Substrate_Meter_v1.html ](https://www.triadicframeworks.org/Triadic_Substrate_Meter_v1.html)
+- [ /Triadic_Substrate_Meter_v1.html ](https://www.triadicframeworks.org/triadic_detection/Triadic_Substrate_Meter_v1.html)
 - [ /hooks/ ](https://www.triadicframeworks.org/hooks/)
 - [ /Integrations/ ](https://www.triadicframeworks.org/Integrations/)
 - [ /Integrations/Dimensional_Substrate_MCP_Substrate_Mapping.html ](https://www.triadicframeworks.org/Integrations/Dimensional_Substrate_MCP_Substrate_Mapping.html)
