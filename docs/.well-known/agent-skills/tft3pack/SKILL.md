@@ -44,7 +44,7 @@ This specification defines:
 ## Documentation
 Human-readable documentation is available at:
 
-`/docs/TFT_3Pack_v1.3`
+`/TFT_3Pack_v1.3`
 
 This includes:
 - triadic evaluation structures  
