@@ -321,59 +321,62 @@ navigator.modelContext.registerTool;
 
 <script>
 try {
-  navigator.modelContext?.registerTool(
-    {
-      name: "triadicframeworks.lookupModule",
-      description: "Retrieve TriadicFrameworks module metadata.",
-      inputSchema: {
-        type: "object",
-        properties: {
-          module: { type: "string" }
-        },
-        required: ["module"]
+
+  navigator.modelContext.registerTool({
+    name: "triadicframeworks.lookupModule",
+    description: "Retrieve TriadicFrameworks module metadata.",
+    inputSchema: {
+      type: "object",
+      properties: {
+        module: { type: "string" }
       },
-      async execute({ module }) {
-        const res = await fetch(`/${module}/ABOUT.md`);
-        if (!res.ok) return { error: "Module not found" };
-        return { about: await res.text() };
-      }
+      required: ["module"]
+    },
+    async execute({ module }) {
+      const res = await fetch(`/${module}/ABOUT.md`);
+      if (!res.ok) return { error: "Module not found" };
+      return { about: await res.text() };
     }
-  );
-navigator.modelContext.registerTool({
-  name: "triadicframeworks.moduleHealth",
-  description: "Retrieve health info for a module.",
-  inputSchema: {
-    type: "object",
-    properties: { module: { type: "string" } },
-    required: ["module"]
-  },
-  async execute({ module }) {
-    const res = await fetch(`/${module}/HEALTH.json`);
-    return await res.json();
-  }
-});
-navigator.modelContext.registerTool({
-  name: "triadicframeworks.sitemap",
-  description: "Fetch the TriadicFrameworks sitemap.",
-  inputSchema: { type: "object", properties: {} },
-  async execute() {
-    const res = await fetch(`/sitemap_main.xml`);
-    return await res.text();
-  }
-});
-navigator.modelContext.registerTool({
-  name: "triadicframeworks.moduleOverview",
-  description: "Retrieve module overview metadata.",
-  inputSchema: {
-    type: "object",
-    properties: { module: { type: "string" } },
-    required: ["module"]
-  },
-  async execute({ module }) {
-    const res = await fetch(`/${module}/module.json`);
-    return await res.json();
-  }
-});
+  });
+
+  navigator.modelContext.registerTool({
+    name: "triadicframeworks.moduleHealth",
+    description: "Retrieve health info for a module.",
+    inputSchema: {
+      type: "object",
+      properties: { module: { type: "string" } },
+      required: ["module"]
+    },
+    async execute({ module }) {
+      const res = await fetch(`/${module}/HEALTH.json`);
+      return await res.json();
+    }
+  });
+
+  navigator.modelContext.registerTool({
+    name: "triadicframeworks.sitemap",
+    description: "Fetch the TriadicFrameworks sitemap.",
+    inputSchema: { type: "object", properties: {} },
+    async execute() {
+      const res = await fetch(`/sitemap_main.xml`);
+      return await res.text();
+    }
+  });
+
+  navigator.modelContext.registerTool({
+    name: "triadicframeworks.moduleOverview",
+    description: "Retrieve module overview metadata.",
+    inputSchema: {
+      type: "object",
+      properties: { module: { type: "string" } },
+      required: ["module"]
+    },
+    async execute({ module }) {
+      const res = await fetch(`/${module}/module.json`);
+      return await res.json();
+    }
+  });
+
 } catch (e) {
   console.log("WebMCP registration attempted.");
 }
