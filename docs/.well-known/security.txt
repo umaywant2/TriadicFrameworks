@@ -1,6 +1,6 @@
 Contact: mailto:nawder@triadicframeworks.org
-Policy: https://triadicframeworks.org/security/
-Acknowledgments: https://triadicframeworks.org/security/acknowledgments/
+Policy: https://www.triadicframeworks.org/security/
+Acknowledgments: https://www.triadicframeworks.org/security/acknowledgments/
 Expires: 2027-09-26T00:00:00Z
-Canonical: https://triadicframeworks.org/.well-known/security.txt
+Canonical: https://www.triadicframeworks.org/.well-known/security.txt
 
