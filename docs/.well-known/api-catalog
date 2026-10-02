@@ -1,22 +1,22 @@
 {
   "linkset": [
     {
-      "anchor": "https://triadicframeworks.org/api/quad",
+      "anchor": "https://www.triadicframeworks.org/api/quad",
       "service-desc": [
         {
-          "href": "https://triadicframeworks.org/openapi/quad.json",
+          "href": "https://www.triadicframeworks.org/openapi/quad.json",
           "type": "application/vnd.oai.openapi+json"
         }
       ],
       "service-doc": [
         {
-          "href": "https://triadicframeworks.org/quad-engine",
+          "href": "https://www.triadicframeworks.org/quad-engine",
           "type": "text/html"
         }
       ],
       "status": [
         {
-          "href": "https://triadicframeworks.org/api/quad/health",
+          "href": "https://www.triadicframeworks.org/api/quad/health",
           "type": "application/json"
         }
       ]
@@ -56,22 +56,22 @@
   ]
 },
     {
-      "anchor": "https://triadicframeworks.org/api/modules",
+      "anchor": "https://www.triadicframeworks.org/api/modules",
       "service-desc": [
         {
-          "href": "https://triadicframeworks.org/openapi/modules.json",
+          "href": "https://www.triadicframeworks.org/openapi/modules.json",
           "type": "application/vnd.oai.openapi+json"
         }
       ],
       "service-doc": [
         {
-          "href": "https://triadicframeworks.org/modules",
+          "href": "https://www.triadicframeworks.org/modules",
           "type": "text/html"
         }
       ],
       "status": [
         {
-          "href": "https://triadicframeworks.org/api/modules/health",
+          "href": "https://www.triadicframeworks.org/api/modules/health",
           "type": "application/json"
         }
       ]
