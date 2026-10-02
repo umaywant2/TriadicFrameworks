@@ -44,7 +44,7 @@ This specification defines:
 ## Documentation
 Human-readable documentation is available at:
 
-`/docs/MCP`
+`/MCP`
 
 This includes:
 - MCP server overview  
