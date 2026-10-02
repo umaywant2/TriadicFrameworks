@@ -2,208 +2,484 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Chaos Theory — TriadicFrameworks</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta
-    name="description"
-    content="Chaos Theory in TriadicFrameworks as a structural sensitivity theory: deterministic, operator-driven, coherence-based, regime-aware."
-  />
-<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
-<link rel="stylesheet" href="../../styles/theory.css" />
-<link rel="stylesheet" href="../../styles/chaos.css" />
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Chaos Theory — TriadicFrameworks canonical theory module exploring sensitivity, self-organization, and emergence." />
+  <meta name="module" content="chaos_theory" />
+  <meta name="category" content="Foundational Theory" />
+  <meta name="framework" content="TriadicFrameworks" />
+  <meta name="version" content="2.0" />
+  <meta name="generated" content="2026-10-02" />
+  <meta name="author" content="TriadicFrameworks" />
+  <title>Chaos Theory · TriadicFrameworks</title>
+  <style>
+    /* ── Reset & Base ───────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --accent-1:   #ea580c;
+      --accent-2:   #c2410c;
+      --accent-3:   #7c2d00;
+      --accent-pale: #fff7ed;
+      --accent-soft: #fed7aa;
+      --grad-start:  #1a0a00;
+      --grad-mid:    #4a1502;
+      --grad-end:    #7c2d00;
+      --text-primary: #1c1917;
+      --text-secondary: #57534e;
+      --text-muted:  #a8a29e;
+      --bg-page:     #fafaf9;
+      --bg-card:     #ffffff;
+      --border:      #e7e5e4;
+      --radius-sm:   6px;
+      --radius-md:   12px;
+      --radius-lg:   20px;
+      --shadow-sm:   0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.05);
+      --shadow-md:   0 4px 16px rgba(0,0,0,.10), 0 2px 6px rgba(0,0,0,.06);
+      --shadow-lg:   0 12px 40px rgba(0,0,0,.13), 0 4px 12px rgba(0,0,0,.08);
+      --font-sans:   'Segoe UI', system-ui, -apple-system, sans-serif;
+      --font-mono:   'Cascadia Code', 'Fira Code', 'Courier New', monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg-page);
+      color: var(--text-primary);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+
+    /* ── Navigation Breadcrumb ──────────────────────────────────── */
+    .nav-breadcrumb {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(26,10,0,.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(234,88,12,.25);
+      padding: 0.55rem 2rem;
+      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.78rem; font-family: var(--font-mono);
+      color: rgba(255,255,255,.55);
+    }
+    .nav-breadcrumb a { color: rgba(255,255,255,.75); text-decoration: none; }
+    .nav-breadcrumb a:hover { color: #fb923c; }
+    .nav-breadcrumb .sep { color: rgba(255,255,255,.3); }
+    .nav-breadcrumb .current { color: #fb923c; font-weight: 600; }
+
+    /* ── Gradient Header ────────────────────────────────────────── */
+    .module-header {
+      background: linear-gradient(135deg, var(--grad-start) 0%, var(--grad-mid) 50%, var(--grad-end) 100%);
+      padding: 5rem 2rem 4rem;
+      position: relative; overflow: hidden;
+      text-align: center;
+    }
+    .module-header::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 20% 30%, rgba(234,88,12,.18) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 60% at 80% 70%, rgba(124,45,0,.35) 0%, transparent 70%);
+    }
+    .module-header::after {
+      content: '𝛘';
+      position: absolute; right: 6%; top: 50%; transform: translateY(-50%);
+      font-size: 14rem; font-weight: 900; opacity: .04;
+      color: #fff; pointer-events: none; line-height: 1;
+    }
+    .header-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
+    .module-tag {
+      display: inline-block;
+      background: rgba(234,88,12,.25); border: 1px solid rgba(234,88,12,.45);
+      color: #fb923c; font-size: 0.72rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; padding: .3rem .9rem; border-radius: 99px;
+      margin-bottom: 1.4rem; font-family: var(--font-mono);
+    }
+    .module-header h1 {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 800; letter-spacing: -.02em; line-height: 1.1;
+      color: #ffffff; margin-bottom: 1rem;
+    }
+    .module-header h1 span { color: #fb923c; }
+    .header-tagline {
+      font-size: 1.12rem; color: rgba(255,255,255,.72);
+      max-width: 580px; margin: 0 auto 2rem; line-height: 1.6;
+    }
+    .header-meta-chips {
+      display: flex; flex-wrap: wrap; gap: .6rem;
+      justify-content: center; font-size: 0.75rem;
+    }
+    .chip {
+      background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18);
+      color: rgba(255,255,255,.8); padding: .28rem .75rem; border-radius: 99px;
+      font-family: var(--font-mono); font-size: .72rem;
+    }
+
+    /* ── Main Layout ────────────────────────────────────────────── */
+    .page-body { max-width: 1080px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+
+    /* ── Metadata Block ─────────────────────────────────────────── */
+    .metadata-block {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+      padding: 1.75rem 2rem; margin-bottom: 2rem;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.25rem;
+    }
+    .meta-field { display: flex; flex-direction: column; gap: .2rem; }
+    .meta-label {
+      font-size: .68rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--text-muted);
+      font-family: var(--font-mono);
+    }
+    .meta-value {
+      font-size: .9rem; font-weight: 600; color: var(--text-primary);
+    }
+    .meta-value.accent { color: var(--accent-1); }
+
+    /* ── Session Context Block ──────────────────────────────────── */
+    .session-context {
+      background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+      border: 1px solid #fed7aa; border-left: 4px solid var(--accent-1);
+      border-radius: var(--radius-md); padding: 1.5rem 1.75rem;
+      margin-bottom: 2rem;
+    }
+    .session-context h3 {
+      font-size: .75rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--accent-2);
+      font-family: var(--font-mono); margin-bottom: .65rem;
+    }
+    .session-context p { font-size: .9rem; color: var(--text-secondary); line-height: 1.7; }
+    .session-context p + p { margin-top: .5rem; }
+    .session-context strong { color: var(--accent-2); font-weight: 700; }
+
+    /* ── Section Headers ────────────────────────────────────────── */
+    .section-title {
+      font-size: 1.05rem; font-weight: 700; letter-spacing: .05em;
+      text-transform: uppercase; color: var(--text-muted);
+      font-family: var(--font-mono); margin-bottom: 1.2rem;
+      display: flex; align-items: center; gap: .6rem;
+    }
+    .section-title::after {
+      content: ''; flex: 1; height: 1px; background: var(--border);
+    }
+
+    /* ── Triadic Pillars ────────────────────────────────────────── */
+    .triadic-pillars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem; margin-bottom: 2.5rem;
+    }
+    .pillar {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+      padding: 2rem 1.75rem; position: relative; overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .pillar:hover {
+      transform: translateY(-3px); box-shadow: var(--shadow-md);
+    }
+    .pillar::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(234,88,12,.04) 0%, transparent 60%);
+    }
+    .pillar-number {
+      font-size: .68rem; font-weight: 800; letter-spacing: .18em;
+      text-transform: uppercase; font-family: var(--font-mono);
+      color: var(--accent-1); margin-bottom: .5rem;
+    }
+    .pillar-name {
+      font-size: 1.35rem; font-weight: 800; color: var(--text-primary);
+      margin-bottom: .6rem; line-height: 1.2;
+    }
+    .pillar-glyph {
+      position: absolute; top: 1.2rem; right: 1.4rem;
+      font-size: 2.4rem; opacity: .12; user-select: none;
+    }
+    .pillar-desc {
+      font-size: .88rem; color: var(--text-secondary); line-height: 1.65;
+    }
+    .pillar-tags {
+      display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1rem;
+    }
+    .pillar-tag {
+      font-size: .68rem; font-weight: 600; padding: .2rem .55rem;
+      border-radius: 99px; font-family: var(--font-mono);
+      background: var(--accent-pale); color: var(--accent-2);
+      border: 1px solid var(--accent-soft);
+    }
+
+    /* ── Core Concepts Grid ─────────────────────────────────────── */
+    .concepts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem; margin-bottom: 2.5rem;
+    }
+    .concept-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-md); padding: 1.25rem 1.4rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .concept-card h4 {
+      font-size: .88rem; font-weight: 700; color: var(--text-primary);
+      margin-bottom: .4rem;
+    }
+    .concept-card p { font-size: .82rem; color: var(--text-secondary); line-height: 1.55; }
+
+    /* ── Equations Block ────────────────────────────────────────── */
+    .equations-block {
+      background: #1c1917; border-radius: var(--radius-md);
+      padding: 1.75rem 2rem; margin-bottom: 2.5rem;
+      border: 1px solid #292524;
+    }
+    .equations-block .eq-title {
+      font-size: .72rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: #78716c;
+      font-family: var(--font-mono); margin-bottom: 1.1rem;
+    }
+    .equation-row {
+      display: flex; align-items: flex-start; gap: 1.2rem;
+      padding: .8rem 0; border-bottom: 1px solid #292524;
+    }
+    .equation-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .eq-formula {
+      font-family: var(--font-mono); font-size: 1rem;
+      color: #fb923c; font-weight: 600; min-width: 180px; flex-shrink: 0;
+    }
+    .eq-desc { font-size: .83rem; color: #a8a29e; line-height: 1.5; }
+
+    /* ── Connections Panel ──────────────────────────────────────── */
+    .connections-panel {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+      padding: 1.75rem 2rem; margin-bottom: 2.5rem;
+    }
+    .connection-list { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
+    .connection-list li {
+      display: flex; align-items: center; gap: .75rem;
+      font-size: .88rem; color: var(--text-secondary);
+    }
+    .connection-list li::before {
+      content: '→'; color: var(--accent-1); font-weight: 700; flex-shrink: 0;
+    }
+    .connection-list strong { color: var(--text-primary); font-weight: 700; }
+
+    /* ── Footer ─────────────────────────────────────────────────── */
+    .page-footer {
+      border-top: 1px solid var(--border); margin-top: 3rem;
+      padding: 1.5rem 2rem; text-align: center;
+      font-size: .78rem; color: var(--text-muted); font-family: var(--font-mono);
+    }
+    .page-footer a { color: var(--accent-1); text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+
+    /* ── Responsive ─────────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .module-header { padding: 3.5rem 1.25rem 2.75rem; }
+      .page-body { padding: 2rem 1.25rem 4rem; }
+      .metadata-block { padding: 1.25rem; }
+      .triadic-pillars { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
-  
-<body class="tf-module tf-module--theory tf-module--chaos">
+<body>
 
-  <!-- HERO -->
-  <header class="tf-hero tf-hero--theory">
-    <div class="tf-hero__content">
-      <h1>Chaos Theory</h1>
-      <h2>Structural Sensitivity Theory</h2>
+  <!-- ── Navigation Breadcrumb ──────────────────────────────────── -->
+  <nav class="nav-breadcrumb" aria-label="Breadcrumb">
+    <a href="/">TriadicFrameworks</a>
+    <span class="sep">/</span>
+    <a href="/theories/">theories</a>
+    <span class="sep">/</span>
+    <span class="current">chaos_theory</span>
+  </nav>
 
-<section class="hero-card">
-  <div class="hero-header">
-    <div class="hero-title-block">
-      <h1>Sensitive Dependence and Pattern Emergence</h1>
-      <p>
-        Chaos Theory here is not randomness; it is a regime of sensitive
-        dependence where small differences amplify into structured, emergent
-        behavior across scales.
+  <!-- ── Gradient Header ────────────────────────────────────────── -->
+  <header class="module-header" role="banner">
+    <div class="header-inner">
+      <div class="module-tag">Foundational Theory · Module 01</div>
+      <h1>Chaos <span>Theory</span></h1>
+      <p class="header-tagline">
+        The science of deterministic unpredictability — how infinitesimal differences
+        in initial conditions cascade into radically divergent outcomes across complex systems.
       </p>
-    </div>
-
-    <!-- Hero image -->
-    <div class="hero-glyph" aria-hidden="true">
-      <img src="../../images/chaos_theory.png"
-           alt="Chaos Theory hero image" />
-    </div>
-  </div>
-
-  <!-- rest of your hero-body content -->
-</section>
-      
-      <p class="tf-hero__summary">
-        Chaos Theory in TriadicFrameworks is a deterministic, structural sensitivity
-        theory: maps and flows as operators, attractors as coherence surfaces,
-        and unpredictability as coherence decay under iteration. Zero randomness‑first
-        framing. Zero pop‑science metaphors.
-      </p>
-
-      <nav class="tf-hero__nav">
-        <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/chaos_theory/frontdoor.md"
-           class="tf-button tf-button--primary" target="_blank">
-          Start with the front door
-        </a>
-        <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/chaos_theory/session_context.md"
-           class="tf-button tf-button--ghost" target="_blank">
-          Session context
-        </a>
-      </nav>
+      <div class="header-meta-chips">
+        <span class="chip">determinism</span>
+        <span class="chip">nonlinearity</span>
+        <span class="chip">strange attractors</span>
+        <span class="chip">bifurcation</span>
+        <span class="chip">fractal geometry</span>
+      </div>
     </div>
   </header>
 
-  <!-- MAIN -->
-  <main class="tf-main">
+  <main class="page-body">
 
-    <!-- MODULE IDENTITY -->
-    <section class="tf-section">
-      <h2>Module identity</h2>
+    <!-- ── Metadata Block ───────────────────────────────────────── -->
+    <section class="metadata-block" aria-label="Module Metadata">
+      <div class="meta-field">
+        <span class="meta-label">Module ID</span>
+        <span class="meta-value accent">chaos_theory</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Domain</span>
+        <span class="meta-value">Nonlinear Dynamics</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Scale</span>
+        <span class="meta-value">Macro · Meso · Micro</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Triadic Class</span>
+        <span class="meta-value">Complexity Science</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Status</span>
+        <span class="meta-value accent">Active</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Version</span>
+        <span class="meta-value">2.0 · 2026-10-02</span>
+      </div>
+    </section>
+
+    <!-- ── Session Context Block ────────────────────────────────── -->
+    <section class="session-context" aria-label="Session Context">
+      <h3>⟳ Session Context</h3>
       <p>
-        In TriadicFrameworks, Chaos Theory is a
-        <strong>structural sensitivity theory</strong>:
-        systems are deterministic, operators are maps and flows, and chaos is
-        sensitivity of trajectories to operator iteration. Attractors are coherence
-        surfaces, not metaphors; unpredictability is coherence decay, not randomness.
+        <strong>Focus:</strong> Chaos Theory is examined through the TriadicFrameworks lens of
+        <strong>Sensitivity</strong>, <strong>Self-Organization</strong>, and <strong>Emergence</strong> —
+        three irreducible pillars that together account for why deterministic systems
+        generate behavior indistinguishable from randomness at sufficient scales.
       </p>
       <p>
-        This module is structure‑first, operator‑driven, coherence‑based,
-        and explicitly non‑mystical. It integrates with Dynamical Systems,
-        Information Theory, Thermodynamics, Geometry/Topology, and Systems Physics.
+        This module maps classical formulations (Lorenz, Feigenbaum, Mandelbrot) onto the
+        triadic scaffold, surfacing cross-module resonances with Thermodynamics, Quantum Mechanics,
+        and Evolutionary Biology.
       </p>
     </section>
 
-    <!-- READ ORDER -->
-    <section class="tf-section">
-      <h2>Read in this order</h2>
-      <ol class="tf-list tf-list--numbered">
-        <li>
-          <strong>Session context</strong><br />
-          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/chaos_theory/session_context.md" target="_blank">
-            /docs/theories/chaos_theory/session_context.md
-          </a><br />
-          Identity, drift boundaries, audience, and scope.
-        </li>
+    <!-- ── Triadic Pillars ──────────────────────────────────────── -->
+    <h2 class="section-title">Triadic Pillars</h2>
+    <div class="triadic-pillars" role="list">
 
-        <li>
-          <strong>Regimes</strong><br />
-          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/chaos_theory/regimes.md" target="_blank">
-            /docs/theories/chaos_theory/regimes.md
-          </a><br />
-          R1 → R3: stable dynamics, transitional sensitivity, fully chaotic behavior.
-        </li>
+      <article class="pillar" role="listitem">
+        <div class="pillar-glyph">🦋</div>
+        <div class="pillar-number">Pillar I</div>
+        <h3 class="pillar-name">Sensitivity</h3>
+        <p class="pillar-desc">
+          The butterfly effect: exponential divergence of trajectories from arbitrarily
+          close initial conditions. Lyapunov exponents quantify the rate at which
+          uncertainty grows, rendering long-term prediction fundamentally impossible
+          beyond the predictability horizon.
+        </p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">Lyapunov exponent</span>
+          <span class="pillar-tag">butterfly effect</span>
+          <span class="pillar-tag">divergence</span>
+        </div>
+      </article>
 
-        <li>
-          <strong>Operators</strong><br />
-          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/chaos_theory/operators.md" target="_blank">
-            /docs/theories/chaos_theory/operators.md
-          </a><br />
-          𝓜, 𝓕ˡᵒʷ, 𝓢ₛₑₙ, 𝓓ᵢᵥ, 𝓐ₜₜᵣ, 𝓒ₒₕ, 𝓡𝓮𝓰, 𝓒𝓁.
-        </li>
+      <article class="pillar" role="listitem">
+        <div class="pillar-glyph">◉</div>
+        <div class="pillar-number">Pillar II</div>
+        <h3 class="pillar-name">Self-Organization</h3>
+        <p class="pillar-desc">
+          Despite sensitivity, chaotic systems converge onto bounded structures called
+          strange attractors — low-dimensional geometric objects that constrain the
+          long-run statistical behavior of trajectories without fixing individual outcomes.
+        </p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">strange attractor</span>
+          <span class="pillar-tag">Lorenz system</span>
+          <span class="pillar-tag">phase space</span>
+        </div>
+      </article>
 
-        <li>
-          <strong>Operator examples</strong><br />
-          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/chaos_theory/operator_examples.md" target="_blank">
-            /docs/theories/chaos_theory/operator_examples.md
-          </a><br />
-          Concrete examples of maps, flows, sensitivity, divergence,
-          attractors, coherence, and regime transitions.
-        </li>
+      <article class="pillar" role="listitem">
+        <div class="pillar-glyph">✦</div>
+        <div class="pillar-number">Pillar III</div>
+        <h3 class="pillar-name">Emergence</h3>
+        <p class="pillar-desc">
+          Macro-level order — fractal geometry, period-doubling cascades, universal
+          Feigenbaum constants — arises from simple iterative rules. Emergent patterns
+          are irreducible to and unpredictable from microscopic dynamics alone.
+        </p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">fractals</span>
+          <span class="pillar-tag">bifurcation</span>
+          <span class="pillar-tag">universality</span>
+        </div>
+      </article>
 
-        <li>
-          <strong>Coherence map</strong><br />
-          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/chaos_theory/coherence_map.md" target="_blank">
-            /docs/theories/chaos_theory/coherence_map.md
-          </a><br />
-          Structural coherence across sensitivity, divergence, attractors,
-          and regimes.
-        </li>
+    </div>
 
-        <li>
-          <strong>Lineage</strong><br />
-          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/chaos_theory/lineage.md" target="_blank">
-            /docs/theories/chaos_theory/lineage.md
-          </a><br />
-          Pre‑chaos dynamical systems → Poincaré → Lorenz → strange
-          attractors → RTT integration.
-        </li>
+    <!-- ── Core Concepts ────────────────────────────────────────── -->
+    <h2 class="section-title">Core Concepts</h2>
+    <div class="concepts-grid">
+      <div class="concept-card">
+        <h4>Strange Attractors</h4>
+        <p>Fractal subsets of phase space that chaotic trajectories approach asymptotically, exhibiting non-integer Hausdorff dimension.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Feigenbaum Constants</h4>
+        <p>Universal constants (δ ≈ 4.6692, α ≈ 2.5029) governing the rate of period-doubling bifurcations across all unimodal maps.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Lyapunov Spectrum</h4>
+        <p>The ordered set of Lyapunov exponents characterizing expansion/contraction rates along all principal directions in phase space.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Fractal Dimension</h4>
+        <p>A non-integer measure of geometric complexity; the Hausdorff dimension of the Lorenz attractor ≈ 2.06.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Bifurcation Theory</h4>
+        <p>Qualitative changes in a system's long-term behavior as a control parameter crosses critical thresholds, producing period-doubling or crisis bifurcations.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Ergodicity</h4>
+        <p>The statistical equivalence of time averages and ensemble averages in ergodic chaotic systems, enabling thermodynamic-style analyses.</p>
+      </div>
+    </div>
 
-        <li>
-          <strong>Cross‑module integration</strong><br />
-          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/chaos_theory/cross_module.md" target="_blank">
-            /docs/theories/chaos_theory/cross_module.md
-          </a><br />
-          Links to Information Theory, Thermodynamics, Geometry/Topology,
-          Systems Physics, Complexity.
-        </li>
+    <!-- ── Key Equations ────────────────────────────────────────── -->
+    <h2 class="section-title">Key Equations</h2>
+    <div class="equations-block">
+      <div class="eq-title">// Foundational Formalisms</div>
+      <div class="equation-row">
+        <span class="eq-formula">ẋ = σ(y − x)</span>
+        <span class="eq-desc">Lorenz system: first equation coupling x to the temperature differential y. σ is the Prandtl number (~10).</span>
+      </div>
+      <div class="equation-row">
+        <span class="eq-formula">ẏ = x(ρ − z) − y</span>
+        <span class="eq-desc">Lorenz second equation; ρ the Rayleigh number governs the onset of chaos (chaos when ρ > 24.74).</span>
+      </div>
+      <div class="equation-row">
+        <span class="eq-formula">λ = lim_{t→∞} (1/t) ln|δZ(t)/δZ(0)|</span>
+        <span class="eq-desc">Lyapunov exponent: positive λ indicates sensitive dependence on initial conditions.</span>
+      </div>
+      <div class="equation-row">
+        <span class="eq-formula">x_{n+1} = rx_n(1 − x_n)</span>
+        <span class="eq-desc">Logistic map: canonical model of period-doubling route to chaos as parameter r → 4.</span>
+      </div>
+    </div>
 
-        <li>
-          <strong>Engine notes & simulation hooks</strong><br />
-          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/chaos_theory/engine_notes.md" target="_blank">
-            /docs/theories/chaos_theory/engine_notes.md
-          </a><br />
-          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/chaos_theory/simulation_hooks.json">
-            /docs/theories/chaos_theory/simulation_hooks.json
-          </a><br />
-          Execution contract and operator‑level hooks for agents and simulators.
-        </li>
-      </ol>
-    </section>
-
-    <!-- DRIFT BOUNDARIES -->
-    <section class="tf-section">
-      <h2>Drift boundaries</h2>
-      <ul class="tf-list">
-        <li><strong>No randomness‑first framing:</strong> chaos is deterministic.</li>
-        <li><strong>No “butterfly effect” metaphors:</strong> sensitivity is structural.</li>
-        <li><strong>No mysticism or teleology:</strong> systems do not “try.”</li>
-        <li><strong>No anthropomorphic language:</strong> no “systems decide.”</li>
-        <li><strong>No probability‑first framing:</strong> probability lives elsewhere.</li>
+    <!-- ── Cross-Module Connections ─────────────────────────────── -->
+    <h2 class="section-title">Cross-Module Connections</h2>
+    <div class="connections-panel">
+      <ul class="connection-list">
+        <li><strong>Thermodynamics</strong> — Second Law entropy growth mirrors irreversibility of chaotic trajectories; statistical mechanics emerges from microscopic chaos.</li>
+        <li><strong>Quantum Mechanics</strong> — Quantum chaos investigates the quantum signatures of classically chaotic systems; level-spacing statistics follow RMT predictions.</li>
+        <li><strong>Evolutionary Biology</strong> — Fitness landscape ruggedness and punctuated equilibria exhibit chaos-like sensitivity to genetic perturbation.</li>
+        <li><strong>Information Theory</strong> — Kolmogorov–Sinai entropy links topological entropy of chaotic maps to information generation rate.</li>
+        <li><strong>Morphic Resonance</strong> — Self-organizing attractors provide a mechanistic substrate for field-memory hypotheses.</li>
       </ul>
-      <p>
-        All pages must remain structural‑sensitivity‑first, operator‑driven,
-        and coherence‑aligned.
-      </p>
-    </section>
-
-    <!-- STUDENTS -->
-    <section class="tf-section">
-      <h2>For students</h2>
-      <p>
-        Treat Chaos Theory as a <strong>deterministic dynamical framework</strong>:
-        maps and flows are operators, attractors are coherence surfaces,
-        and chaos is sensitivity of trajectories to operator iteration.
-        Unpredictability comes from coherence decay, not randomness.
-        <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/chaos_theory/faq.md" target="_blank">FAQ</a>
-      </p>
-    </section>
-
-    <!-- AI AGENTS -->
-    <section class="tf-section">
-      <h2>For AI agents & tools</h2>
-      <ul class="tf-list">
-        <li><strong>Anchor:</strong> use <code>session_context.md</code> as the identity lock.</li>
-        <li><strong>Execution:</strong> follow <code>engine_notes.md</code> and
-            <code>simulation_hooks.json</code>.</li>
-        <li><strong>Safety:</strong> reject randomness‑first or mystical interpretations.</li>
-      </ul>
-    </section>
+    </div>
 
   </main>
 
-</body>
+  <!-- ── Footer ────────────────────────────────────────────────── -->
+  <footer class="page-footer" role="contentinfo">
+    <p>
+      <a href="/">TriadicFrameworks</a> · chaos_theory · v2.0 · generated 2026-10-02
+      &nbsp;·&nbsp; <a href="/theories/">all modules</a>
+    </p>
+  </footer>
 
+</body>
 </html>

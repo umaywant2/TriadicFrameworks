@@ -2,201 +2,369 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Evolutionary Biology — TriadicFrameworks</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta
-    name="description"
-    content="Evolutionary Biology in TriadicFrameworks as a multi-scale adaptive resonance system: variation–selection–inheritance operators, lineages as coherence trajectories, ecosystems as multi-operator environments."
-  />
-  <link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
-  <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
-  <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
-  <link rel="stylesheet" href="../../styles/theory.css" />
-  <link rel="stylesheet" href="../../styles/evolutionary_biology.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Evolutionary Biology — TriadicFrameworks canonical theory module exploring variation, selection, and heredity." />
+  <meta name="module" content="evolutionary_biology" />
+  <meta name="category" content="Foundational Theory" />
+  <meta name="framework" content="TriadicFrameworks" />
+  <meta name="version" content="2.0" />
+  <meta name="generated" content="2026-10-02" />
+  <meta name="author" content="TriadicFrameworks" />
+  <title>Evolutionary Biology · TriadicFrameworks</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --accent-1:   #16a34a;
+      --accent-2:   #15803d;
+      --accent-3:   #14532d;
+      --accent-pale: #f0fdf4;
+      --accent-soft: #bbf7d0;
+      --grad-start:  #011a0b;
+      --grad-mid:    #052e16;
+      --grad-end:    #14532d;
+      --text-primary: #14532d;
+      --text-secondary: #374151;
+      --text-muted:  #9ca3af;
+      --bg-page:     #f8faf9;
+      --bg-card:     #ffffff;
+      --border:      #dcfce7;
+      --radius-sm:   6px;
+      --radius-md:   12px;
+      --radius-lg:   20px;
+      --shadow-sm:   0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.05);
+      --shadow-md:   0 4px 16px rgba(0,0,0,.10), 0 2px 6px rgba(0,0,0,.06);
+      --shadow-lg:   0 12px 40px rgba(0,0,0,.13), 0 4px 12px rgba(0,0,0,.08);
+      --font-sans:   'Segoe UI', system-ui, -apple-system, sans-serif;
+      --font-mono:   'Cascadia Code', 'Fira Code', 'Courier New', monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-sans); background: var(--bg-page); color: var(--text-primary); line-height: 1.65; min-height: 100vh; }
 
+    .nav-breadcrumb {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(1,26,11,.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(22,163,74,.25);
+      padding: 0.55rem 2rem;
+      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.78rem; font-family: var(--font-mono);
+      color: rgba(255,255,255,.55);
+    }
+    .nav-breadcrumb a { color: rgba(255,255,255,.75); text-decoration: none; }
+    .nav-breadcrumb a:hover { color: #4ade80; }
+    .nav-breadcrumb .sep { color: rgba(255,255,255,.3); }
+    .nav-breadcrumb .current { color: #4ade80; font-weight: 600; }
+
+    .module-header {
+      background: linear-gradient(135deg, var(--grad-start) 0%, var(--grad-mid) 50%, var(--grad-end) 100%);
+      padding: 5rem 2rem 4rem; position: relative; overflow: hidden; text-align: center;
+    }
+    .module-header::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 55% 55% at 15% 25%, rgba(22,163,74,.2) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 60% at 85% 75%, rgba(20,83,45,.45) 0%, transparent 65%);
+    }
+    .module-header::after {
+      content: '🧬'; position: absolute; right: 5%; top: 50%; transform: translateY(-50%);
+      font-size: 11rem; opacity: .06; pointer-events: none; line-height: 1;
+    }
+    .header-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
+    .module-tag {
+      display: inline-block;
+      background: rgba(22,163,74,.22); border: 1px solid rgba(22,163,74,.45);
+      color: #4ade80; font-size: 0.72rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; padding: .3rem .9rem; border-radius: 99px;
+      margin-bottom: 1.4rem; font-family: var(--font-mono);
+    }
+    .module-header h1 {
+      font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 800;
+      letter-spacing: -.02em; line-height: 1.1; color: #ffffff; margin-bottom: 1rem;
+    }
+    .module-header h1 span { color: #4ade80; }
+    .header-tagline { font-size: 1.12rem; color: rgba(255,255,255,.72); max-width: 580px; margin: 0 auto 2rem; line-height: 1.6; }
+    .header-meta-chips { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center; }
+    .chip {
+      background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18);
+      color: rgba(255,255,255,.8); padding: .28rem .75rem; border-radius: 99px;
+      font-family: var(--font-mono); font-size: .72rem;
+    }
+
+    .page-body { max-width: 1080px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+
+    .metadata-block {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+      padding: 1.75rem 2rem; margin-bottom: 2rem;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.25rem;
+    }
+    .meta-field { display: flex; flex-direction: column; gap: .2rem; }
+    .meta-label { font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); font-family: var(--font-mono); }
+    .meta-value { font-size: .9rem; font-weight: 600; color: var(--text-primary); }
+    .meta-value.accent { color: var(--accent-1); }
+
+    .session-context {
+      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+      border: 1px solid #bbf7d0; border-left: 4px solid var(--accent-1);
+      border-radius: var(--radius-md); padding: 1.5rem 1.75rem; margin-bottom: 2rem;
+    }
+    .session-context h3 { font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-2); font-family: var(--font-mono); margin-bottom: .65rem; }
+    .session-context p { font-size: .9rem; color: var(--text-secondary); line-height: 1.7; }
+    .session-context p + p { margin-top: .5rem; }
+    .session-context strong { color: var(--accent-2); font-weight: 700; }
+
+    .section-title {
+      font-size: 1.05rem; font-weight: 700; letter-spacing: .05em;
+      text-transform: uppercase; color: var(--text-muted);
+      font-family: var(--font-mono); margin-bottom: 1.2rem;
+      display: flex; align-items: center; gap: .6rem;
+    }
+    .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    .triadic-pillars {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem; margin-bottom: 2.5rem;
+    }
+    .pillar {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+      padding: 2rem 1.75rem; position: relative; overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .pillar:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .pillar::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(22,163,74,.04) 0%, transparent 60%); }
+    .pillar-number { font-size: .68rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; font-family: var(--font-mono); color: var(--accent-1); margin-bottom: .5rem; }
+    .pillar-name { font-size: 1.35rem; font-weight: 800; color: var(--text-primary); margin-bottom: .6rem; line-height: 1.2; }
+    .pillar-glyph { position: absolute; top: 1.2rem; right: 1.4rem; font-size: 2.4rem; opacity: .12; user-select: none; }
+    .pillar-desc { font-size: .88rem; color: var(--text-secondary); line-height: 1.65; }
+    .pillar-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1rem; }
+    .pillar-tag { font-size: .68rem; font-weight: 600; padding: .2rem .55rem; border-radius: 99px; font-family: var(--font-mono); background: var(--accent-pale); color: var(--accent-2); border: 1px solid var(--accent-soft); }
+
+    .concepts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 2.5rem; }
+    .concept-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.25rem 1.4rem; box-shadow: var(--shadow-sm); }
+    .concept-card h4 { font-size: .88rem; font-weight: 700; color: var(--text-primary); margin-bottom: .4rem; }
+    .concept-card p { font-size: .82rem; color: var(--text-secondary); line-height: 1.55; }
+
+    .equations-block { background: #052e16; border-radius: var(--radius-md); padding: 1.75rem 2rem; margin-bottom: 2.5rem; border: 1px solid #14532d; }
+    .equations-block .eq-title { font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #4b7a5a; font-family: var(--font-mono); margin-bottom: 1.1rem; }
+    .equation-row { display: flex; align-items: flex-start; gap: 1.2rem; padding: .8rem 0; border-bottom: 1px solid #14532d; }
+    .equation-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .eq-formula { font-family: var(--font-mono); font-size: 1rem; color: #4ade80; font-weight: 600; min-width: 200px; flex-shrink: 0; }
+    .eq-desc { font-size: .83rem; color: #86efac; line-height: 1.5; }
+
+    .connections-panel { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: 1.75rem 2rem; margin-bottom: 2.5rem; }
+    .connection-list { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
+    .connection-list li { display: flex; align-items: center; gap: .75rem; font-size: .88rem; color: var(--text-secondary); }
+    .connection-list li::before { content: '→'; color: var(--accent-1); font-weight: 700; flex-shrink: 0; }
+    .connection-list strong { color: var(--text-primary); font-weight: 700; }
+
+    .page-footer { border-top: 1px solid var(--border); margin-top: 3rem; padding: 1.5rem 2rem; text-align: center; font-size: .78rem; color: var(--text-muted); font-family: var(--font-mono); }
+    .page-footer a { color: var(--accent-1); text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 640px) {
+      .module-header { padding: 3.5rem 1.25rem 2.75rem; }
+      .page-body { padding: 2rem 1.25rem 4rem; }
+      .metadata-block { padding: 1.25rem; }
+      .triadic-pillars { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
-  
-<body class="tf-module tf-module--theory tf-module--evolutionary-biology">
-  <header class="tf-hero tf-hero--theory">
-    <div class="tf-hero__content">
-      <h1>Evolutionary Biology</h1>
+<body>
 
-<section class="hero-card">
-  <div class="hero-header">
-    <div class="hero-title-block">
-      <h1>Adaptation, Resonance, and Emergent Lineage</h1>
-      <p>
-        Evolutionary Biology here is not randomness; it is adaptive resonance
-        where variation, selection, and inheritance generate coherent structure
-        across generations.
+  <nav class="nav-breadcrumb" aria-label="Breadcrumb">
+    <a href="/">TriadicFrameworks</a>
+    <span class="sep">/</span>
+    <a href="/theories/">theories</a>
+    <span class="sep">/</span>
+    <span class="current">evolutionary_biology</span>
+  </nav>
+
+  <header class="module-header" role="banner">
+    <div class="header-inner">
+      <div class="module-tag">Foundational Theory · Module 03</div>
+      <h1>Evolutionary <span>Biology</span></h1>
+      <p class="header-tagline">
+        The theory of descent with modification — how variation, differential reproduction,
+        and heredity interact across deep time to generate the astonishing diversity
+        of life from common ancestry.
       </p>
-    </div>
-
-    <!-- Hero image -->
-    <div class="hero-glyph" aria-hidden="true">
-      <img src="../../images/evolutionary_biology.png"
-           alt="Evolutionary Biology hero image" />
-    </div>
-  </div>
-
-  <!-- rest of your hero-body content -->
-</section>
-      
-      <h2>Multi‑Scale Adaptive Resonance System</h2>
-      <p>
-        Evolution as operator‑driven structural adaptation:
-        variation–selection–inheritance cycles, lineages as coherence
-        trajectories, ecosystems as multi‑operator environments.
-        No teleology. No progress ladder. No gene‑centric drift.
-      </p>
-      <nav class="tf-hero__nav">
-        <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/evolutionary_biology/frontdoor.html" class="tf-button tf-button--primary" target="_blank">
-          Start with the front door
-        </a>
-        <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/evolutionary_biology/session_context.html" class="tf-button tf-button--ghost" target="_blank">
-          Session context
-        </a>
-      </nav>
+      <div class="header-meta-chips">
+        <span class="chip">natural selection</span>
+        <span class="chip">genetic drift</span>
+        <span class="chip">phylogenetics</span>
+        <span class="chip">fitness landscape</span>
+        <span class="chip">evo-devo</span>
+      </div>
     </div>
   </header>
 
-  <main class="tf-main">
-    <section class="tf-section">
-      <h2>Module identity</h2>
+  <main class="page-body">
+
+    <section class="metadata-block" aria-label="Module Metadata">
+      <div class="meta-field">
+        <span class="meta-label">Module ID</span>
+        <span class="meta-value accent">evolutionary_biology</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Domain</span>
+        <span class="meta-value">Life Sciences · Population Genetics</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Scale</span>
+        <span class="meta-value">Molecular · Organism · Phylogenetic</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Triadic Class</span>
+        <span class="meta-value">Complexity Science</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Status</span>
+        <span class="meta-value accent">Active</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Version</span>
+        <span class="meta-value">2.0 · 2026-10-02</span>
+      </div>
+    </section>
+
+    <section class="session-context" aria-label="Session Context">
+      <h3>⟳ Session Context</h3>
       <p>
-        In TriadicFrameworks, Evolutionary Biology is framed as a
-        <strong>multi‑scale adaptive resonance system</strong>:
-        variation is a distinction‑generation operator, selection is a
-        coherence‑filtering operator, inheritance is a propagation
-        operator, and adaptation is resonance stabilization, not
-        purpose. Lineages are coherence trajectories across generations,
-        and ecosystems are multi‑operator environments.
+        <strong>Focus:</strong> Evolutionary Biology is examined through the TriadicFrameworks pillars of
+        <strong>Variation</strong>, <strong>Selection</strong>, and <strong>Heredity</strong> —
+        the minimal sufficient triad identified by Darwin and formalized by the Modern Synthesis.
       </p>
       <p>
-        This module is operator‑driven, coherence‑based, regime‑aware
-        (R0 → R3), and explicitly non‑teleological. It integrates with
-        Genetics, Cell Biology, Ecology, Systems Biology, Information
-        Theory, NoS, LDS, and Thermodynamics.
+        This module integrates Mendelian genetics, population genetics (Hardy-Weinberg, drift, selection),
+        molecular evolution, and evo-devo, with cross-module resonances to Information Theory (genetic code),
+        Thermodynamics (free energy landscapes), and Chaos Theory (fitness landscape ruggedness).
       </p>
     </section>
 
-    <section class="tf-section">
-      <h2>Read in this order</h2>
-      <ol class="tf-list tf-list--numbered">
-        <li>
-          <strong>Session context</strong><br />
-          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/evolutionary_biology/session_context.html" target="_blank">
-            /docs/theories/evolutionary_biology/session_context.md
-          </a><br />
-          Identity, drift boundaries, audience, and scope.
-        </li>
-        <li>
-          <strong>Regimes</strong><br />
-          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/evolutionary_biology/regimes.html" target="_blank">
-            /docs/theories/evolutionary_biology/regimes.md
-          </a><br />
-          R0 → R3: pre‑evolutionary distinctions, variation–inheritance
-          stability, selection operators, multi‑scale adaptive resonance.
-        </li>
-        <li>
-          <strong>Operators</strong><br />
-          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/evolutionary_biology/operators.html" target="_blank">
-            /docs/theories/evolutionary_biology/operators.md
-          </a><br />
-          𝓥𝓪𝓻, 𝓢𝓮𝓵, 𝓘𝓷𝓱, 𝓐𝓭𝓪, 𝓛𝓲𝓷, 𝓔𝓬𝓸, 𝓒, 𝓡𝓮𝓰, 𝓒𝓁.
-        </li>
-        <li>
-          <strong>Operator examples</strong><br />
-          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/evolutionary_biology/operator_examples.html" target="_blank">
-            /docs/theories/evolutionary_biology/operator_examples.md
-          </a><br />
-          Concrete, non‑teleological examples of variation, selection,
-          inheritance, resonance, and ecosystem interaction.
-        </li>
-        <li>
-          <strong>Coherence map</strong><br />
-          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/evolutionary_biology/coherence_map.html" target="_blank">
-            /docs/theories/evolutionary_biology/coherence_map.md
-          </a><br />
-          How evolutionary coherence is evaluated: lineage stability,
-          trait–environment resonance, ecosystem compatibility.
-        </li>
-        <li>
-          <strong>Lineage</strong><br />
-          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/evolutionary_biology/lineage.html" target="_blank">
-            /docs/theories/evolutionary_biology/lineage.md
-          </a><br />
-          From pre‑evolutionary structure → classical theory → modern
-          synthesis → multi‑scale adaptive resonance → RTT integration.
-        </li>
-        <li>
-          <strong>Cross‑module integration</strong><br />
-          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/evolutionary_biology/cross_module.html" target="_blank">
-            /docs/theories/evolutionary_biology/cross_module.md
-          </a><br />
-          Links to Genetics, Cell Biology, Ecology, Systems Biology,
-          Information Theory, NoS, LDS, Thermodynamics.
-        </li>
-        <li>
-          <strong>Engine notes & simulation hooks</strong><br />
-          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/evolutionary_biology/engine_notes.html" target="_blank">
-            /docs/theories/evolutionary_biology/engine_notes.md
-          </a><br />
-          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/evolutionary_biology/simulation_hooks.json" target="_blank">
-            /docs/theories/evolutionary_biology/simulation_hooks.json
-          </a><br />
-          Execution contract and operator‑level hooks for agents and
-          simulators.
-        </li>
-      </ol>
-    </section>
+    <h2 class="section-title">Triadic Pillars</h2>
+    <div class="triadic-pillars" role="list">
 
-    <section class="tf-section">
-      <h2>Drift boundaries</h2>
-      <ul class="tf-list">
-        <li><strong>No teleology:</strong> no “evolves to”, “aims for”, or purpose‑driven language.</li>
-        <li><strong>No progress ladder:</strong> no “higher”, “more advanced”, or directional narratives.</li>
-        <li><strong>No gene‑centric reductionism:</strong> genes are one inheritance layer, not the whole system.</li>
-        <li><strong>No adaptation‑as‑intent:</strong> adaptation is resonance, not goal‑seeking.</li>
+      <article class="pillar" role="listitem">
+        <div class="pillar-glyph">🎲</div>
+        <div class="pillar-number">Pillar I</div>
+        <h3 class="pillar-name">Variation</h3>
+        <p class="pillar-desc">
+          Heritable differences among individuals — arising from mutation, recombination,
+          gene flow, and epigenetic variation — provide the raw material on which
+          evolutionary forces act. Without variation, selection has no substrate and
+          populations cannot evolve.
+        </p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">mutation</span>
+          <span class="pillar-tag">recombination</span>
+          <span class="pillar-tag">polymorphism</span>
+        </div>
+      </article>
+
+      <article class="pillar" role="listitem">
+        <div class="pillar-glyph">⚖️</div>
+        <div class="pillar-number">Pillar II</div>
+        <h3 class="pillar-name">Selection</h3>
+        <p class="pillar-desc">
+          Differential reproductive success based on heritable trait differences.
+          Natural, sexual, and kin selection are the directional forces that bias
+          allele frequency change across generations, navigating the fitness landscape
+          toward adaptive peaks.
+        </p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">fitness</span>
+          <span class="pillar-tag">adaptive peaks</span>
+          <span class="pillar-tag">kin selection</span>
+        </div>
+      </article>
+
+      <article class="pillar" role="listitem">
+        <div class="pillar-glyph">🧬</div>
+        <div class="pillar-number">Pillar III</div>
+        <h3 class="pillar-name">Heredity</h3>
+        <p class="pillar-desc">
+          The faithful transmission of genetic information from parent to offspring
+          via DNA replication, with high but imperfect fidelity. Heredity preserves
+          adaptations across generations while mutation introduces novelty. Epigenetic
+          inheritance extends the hereditary system beyond sequence.
+        </p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">DNA replication</span>
+          <span class="pillar-tag">epigenetics</span>
+          <span class="pillar-tag">vertical transmission</span>
+        </div>
+      </article>
+
+    </div>
+
+    <h2 class="section-title">Core Concepts</h2>
+    <div class="concepts-grid">
+      <div class="concept-card">
+        <h4>Hardy–Weinberg Equilibrium</h4>
+        <p>Allele and genotype frequencies remain constant across generations in an idealized population absent selection, drift, mutation, migration, and non-random mating.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Genetic Drift</h4>
+        <p>Stochastic fluctuation of allele frequencies due to finite population size; the dominant evolutionary force in small populations, causing fixation or loss of alleles.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Phylogenetics</h4>
+        <p>Reconstruction of evolutionary history via parsimony, maximum likelihood, or Bayesian methods applied to molecular sequence data, producing the Tree of Life.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Fitness Landscape</h4>
+        <p>Sewall Wright's metaphor mapping genotype space to reproductive fitness; rugged landscapes with multiple peaks drive speciation and constraint on adaptation.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Evo-Devo</h4>
+        <p>Evolutionary developmental biology: how mutations in regulatory genes (Hox, Pax) produce morphological novelty by rewiring developmental gene networks.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Speciation</h4>
+        <p>The process by which reproductive isolation evolves between populations — allopatric, sympatric, or parapatric — producing distinct lineages on the phylogenetic tree.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Key Equations</h2>
+    <div class="equations-block">
+      <div class="eq-title">// Population Genetics Formalisms</div>
+      <div class="equation-row">
+        <span class="eq-formula">p² + 2pq + q² = 1</span>
+        <span class="eq-desc">Hardy–Weinberg genotype frequencies for two alleles (p + q = 1) in an equilibrium population.</span>
+      </div>
+      <div class="equation-row">
+        <span class="eq-formula">Δp = p·q·s·h / w̄</span>
+        <span class="eq-desc">Change in allele frequency per generation under directional selection; s = selection coefficient, h = dominance, w̄ = mean fitness.</span>
+      </div>
+      <div class="equation-row">
+        <span class="eq-formula">Var(Δp) = p·q / 2N_e</span>
+        <span class="eq-desc">Variance in allele frequency change due to genetic drift in effective population size N_e.</span>
+      </div>
+      <div class="equation-row">
+        <span class="eq-formula">dN/dS = ω</span>
+        <span class="eq-desc">Ratio of nonsynonymous to synonymous substitution rates; ω > 1 indicates positive selection, ω < 1 purifying selection.</span>
+      </div>
+    </div>
+
+    <h2 class="section-title">Cross-Module Connections</h2>
+    <div class="connections-panel">
+      <ul class="connection-list">
+        <li><strong>Information Theory</strong> — The genetic code is a near-optimal error-correcting code; Shannon entropy quantifies genomic information content and redundancy.</li>
+        <li><strong>Thermodynamics</strong> — Metabolic free energy constraints shape body plans; entropy production rates link organismal complexity to thermodynamic cost.</li>
+        <li><strong>Chaos Theory</strong> — Rugged fitness landscapes exhibit sensitivity analogous to chaotic attractors; punctuated equilibrium mirrors bifurcation dynamics.</li>
+        <li><strong>Morphic Resonance</strong> — Evolutionary canalization and morphogenetic field hypotheses overlap with Sheldrake's formative causation framework.</li>
+        <li><strong>Standard Model</strong> — Molecular evolution operates on physical chemistry grounded in quantum mechanics and the electromagnetic interactions of biomolecules.</li>
       </ul>
-      <p>
-        All pages in this module must remain operator‑driven,
-        coherence‑based, and regime‑aware, with zero drift from this
-        identity.
-      </p>
-    </section>
+    </div>
 
-    <section class="tf-section">
-      <h2>For students</h2>
-      <p>
-        Treat evolution as a <strong>structural process</strong>:
-        variation generates distinctions, selection filters by
-        coherence, inheritance propagates structure, and ecosystems
-        shape operator behavior. Focus on lineages as coherence
-        trajectories, not as progress paths.
-        <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/evolutionary_biology/faq.md" target="_blank">FAQ</a>
-      </p>
-    </section>
-
-    <section class="tf-section">
-      <h2>For AI agents & tools</h2>
-      <ul class="tf-list">
-        <li>
-          <strong>Anchor:</strong> use
-          <code>session_context.md</code> as the identity lock.
-        </li>
-        <li>
-          <strong>Execution:</strong> follow
-          <code>engine_notes.md</code> and
-          <code>simulation_hooks.json</code> for operator semantics.
-        </li>
-        <li>
-          <strong>Safety:</strong> reject teleological, progress‑based,
-          or gene‑centric interpretations.
-        </li>
-      </ul>
-    </section>
   </main>
+
+  <footer class="page-footer" role="contentinfo">
+    <p>
+      <a href="/">TriadicFrameworks</a> · evolutionary_biology · v2.0 · generated 2026-10-02
+      &nbsp;·&nbsp; <a href="/theories/">all modules</a>
+    </p>
+  </footer>
+
 </body>
 </html>

@@ -2,200 +2,456 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Electromagnetism — TriadicFrameworks</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta
-    name="description"
-    content="Electromagnetism in TriadicFrameworks as a field‑coherence theory: Maxwell operators as structural constraints, light as self‑consistent field propagation, geometry‑compatible and regime‑aware."
-  />
-  <link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
-  <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
-  <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
-  <link rel="stylesheet" href="../../styles/theory.css" />
-  <link rel="stylesheet" href="../../styles/electromagnetism.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Electromagnetism — TriadicFrameworks canonical theory module exploring field, force, and symmetry." />
+  <meta name="module" content="electromagnetism" />
+  <meta name="category" content="Foundational Theory" />
+  <meta name="framework" content="TriadicFrameworks" />
+  <meta name="version" content="2.0" />
+  <meta name="generated" content="2026-10-02" />
+  <meta name="author" content="TriadicFrameworks" />
+  <title>Electromagnetism · TriadicFrameworks</title>
+  <style>
+    /* ── Reset & Base ───────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --accent-1:   #4f46e5;
+      --accent-2:   #3730a3;
+      --accent-3:   #1e1b4b;
+      --accent-pale: #eef2ff;
+      --accent-soft: #c7d2fe;
+      --grad-start:  #0a0520;
+      --grad-mid:    #1e1b4b;
+      --grad-end:    #312e81;
+      --text-primary: #1e1b4b;
+      --text-secondary: #4b5563;
+      --text-muted:  #9ca3af;
+      --bg-page:     #f8fafc;
+      --bg-card:     #ffffff;
+      --border:      #e0e7ff;
+      --radius-sm:   6px;
+      --radius-md:   12px;
+      --radius-lg:   20px;
+      --shadow-sm:   0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.05);
+      --shadow-md:   0 4px 16px rgba(0,0,0,.10), 0 2px 6px rgba(0,0,0,.06);
+      --shadow-lg:   0 12px 40px rgba(0,0,0,.13), 0 4px 12px rgba(0,0,0,.08);
+      --font-sans:   'Segoe UI', system-ui, -apple-system, sans-serif;
+      --font-mono:   'Cascadia Code', 'Fira Code', 'Courier New', monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg-page);
+      color: var(--text-primary);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
 
+    /* ── Navigation Breadcrumb ──────────────────────────────────── */
+    .nav-breadcrumb {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(10,5,32,.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(79,70,229,.25);
+      padding: 0.55rem 2rem;
+      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.78rem; font-family: var(--font-mono);
+      color: rgba(255,255,255,.55);
+    }
+    .nav-breadcrumb a { color: rgba(255,255,255,.75); text-decoration: none; }
+    .nav-breadcrumb a:hover { color: #818cf8; }
+    .nav-breadcrumb .sep { color: rgba(255,255,255,.3); }
+    .nav-breadcrumb .current { color: #818cf8; font-weight: 600; }
+
+    /* ── Gradient Header ────────────────────────────────────────── */
+    .module-header {
+      background: linear-gradient(135deg, var(--grad-start) 0%, var(--grad-mid) 50%, var(--grad-end) 100%);
+      padding: 5rem 2rem 4rem;
+      position: relative; overflow: hidden; text-align: center;
+    }
+    .module-header::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 55% 60% at 15% 25%, rgba(99,102,241,.22) 0%, transparent 65%),
+        radial-gradient(ellipse 45% 55% at 85% 75%, rgba(49,46,129,.4) 0%, transparent 65%);
+    }
+    .module-header::after {
+      content: '⚡';
+      position: absolute; right: 5%; top: 50%; transform: translateY(-50%);
+      font-size: 12rem; opacity: .05; pointer-events: none; line-height: 1;
+    }
+    .header-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
+    .module-tag {
+      display: inline-block;
+      background: rgba(79,70,229,.22); border: 1px solid rgba(79,70,229,.45);
+      color: #a5b4fc; font-size: 0.72rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; padding: .3rem .9rem; border-radius: 99px;
+      margin-bottom: 1.4rem; font-family: var(--font-mono);
+    }
+    .module-header h1 {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 800; letter-spacing: -.02em; line-height: 1.1;
+      color: #ffffff; margin-bottom: 1rem;
+    }
+    .module-header h1 span { color: #a5b4fc; }
+    .header-tagline {
+      font-size: 1.12rem; color: rgba(255,255,255,.72);
+      max-width: 580px; margin: 0 auto 2rem; line-height: 1.6;
+    }
+    .header-meta-chips {
+      display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center;
+    }
+    .chip {
+      background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18);
+      color: rgba(255,255,255,.8); padding: .28rem .75rem; border-radius: 99px;
+      font-family: var(--font-mono); font-size: .72rem;
+    }
+
+    /* ── Main Layout ────────────────────────────────────────────── */
+    .page-body { max-width: 1080px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+
+    /* ── Metadata Block ─────────────────────────────────────────── */
+    .metadata-block {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+      padding: 1.75rem 2rem; margin-bottom: 2rem;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.25rem;
+    }
+    .meta-field { display: flex; flex-direction: column; gap: .2rem; }
+    .meta-label {
+      font-size: .68rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--text-muted); font-family: var(--font-mono);
+    }
+    .meta-value { font-size: .9rem; font-weight: 600; color: var(--text-primary); }
+    .meta-value.accent { color: var(--accent-1); }
+
+    /* ── Session Context Block ──────────────────────────────────── */
+    .session-context {
+      background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+      border: 1px solid #c7d2fe; border-left: 4px solid var(--accent-1);
+      border-radius: var(--radius-md); padding: 1.5rem 1.75rem; margin-bottom: 2rem;
+    }
+    .session-context h3 {
+      font-size: .75rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--accent-2);
+      font-family: var(--font-mono); margin-bottom: .65rem;
+    }
+    .session-context p { font-size: .9rem; color: var(--text-secondary); line-height: 1.7; }
+    .session-context p + p { margin-top: .5rem; }
+    .session-context strong { color: var(--accent-2); font-weight: 700; }
+
+    /* ── Section Headers ────────────────────────────────────────── */
+    .section-title {
+      font-size: 1.05rem; font-weight: 700; letter-spacing: .05em;
+      text-transform: uppercase; color: var(--text-muted);
+      font-family: var(--font-mono); margin-bottom: 1.2rem;
+      display: flex; align-items: center; gap: .6rem;
+    }
+    .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    /* ── Triadic Pillars ────────────────────────────────────────── */
+    .triadic-pillars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem; margin-bottom: 2.5rem;
+    }
+    .pillar {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+      padding: 2rem 1.75rem; position: relative; overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .pillar:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .pillar::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(79,70,229,.04) 0%, transparent 60%);
+    }
+    .pillar-number {
+      font-size: .68rem; font-weight: 800; letter-spacing: .18em;
+      text-transform: uppercase; font-family: var(--font-mono); color: var(--accent-1); margin-bottom: .5rem;
+    }
+    .pillar-name {
+      font-size: 1.35rem; font-weight: 800; color: var(--text-primary); margin-bottom: .6rem; line-height: 1.2;
+    }
+    .pillar-glyph {
+      position: absolute; top: 1.2rem; right: 1.4rem;
+      font-size: 2.4rem; opacity: .12; user-select: none;
+    }
+    .pillar-desc { font-size: .88rem; color: var(--text-secondary); line-height: 1.65; }
+    .pillar-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1rem; }
+    .pillar-tag {
+      font-size: .68rem; font-weight: 600; padding: .2rem .55rem; border-radius: 99px;
+      font-family: var(--font-mono); background: var(--accent-pale); color: var(--accent-2);
+      border: 1px solid var(--accent-soft);
+    }
+
+    /* ── Core Concepts Grid ─────────────────────────────────────── */
+    .concepts-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem; margin-bottom: 2.5rem;
+    }
+    .concept-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-md); padding: 1.25rem 1.4rem; box-shadow: var(--shadow-sm);
+    }
+    .concept-card h4 { font-size: .88rem; font-weight: 700; color: var(--text-primary); margin-bottom: .4rem; }
+    .concept-card p { font-size: .82rem; color: var(--text-secondary); line-height: 1.55; }
+
+    /* ── Equations Block ────────────────────────────────────────── */
+    .equations-block {
+      background: #0f172a; border-radius: var(--radius-md);
+      padding: 1.75rem 2rem; margin-bottom: 2.5rem; border: 1px solid #1e293b;
+    }
+    .equations-block .eq-title {
+      font-size: .72rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: #64748b;
+      font-family: var(--font-mono); margin-bottom: 1.1rem;
+    }
+    .equation-row {
+      display: flex; align-items: flex-start; gap: 1.2rem;
+      padding: .8rem 0; border-bottom: 1px solid #1e293b;
+    }
+    .equation-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .eq-formula { font-family: var(--font-mono); font-size: 1rem; color: #818cf8; font-weight: 600; min-width: 200px; flex-shrink: 0; }
+    .eq-desc { font-size: .83rem; color: #94a3b8; line-height: 1.5; }
+
+    /* ── Connections Panel ──────────────────────────────────────── */
+    .connections-panel {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+      padding: 1.75rem 2rem; margin-bottom: 2.5rem;
+    }
+    .connection-list { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
+    .connection-list li {
+      display: flex; align-items: center; gap: .75rem;
+      font-size: .88rem; color: var(--text-secondary);
+    }
+    .connection-list li::before { content: '→'; color: var(--accent-1); font-weight: 700; flex-shrink: 0; }
+    .connection-list strong { color: var(--text-primary); font-weight: 700; }
+
+    /* ── Footer ─────────────────────────────────────────────────── */
+    .page-footer {
+      border-top: 1px solid var(--border); margin-top: 3rem;
+      padding: 1.5rem 2rem; text-align: center;
+      font-size: .78rem; color: var(--text-muted); font-family: var(--font-mono);
+    }
+    .page-footer a { color: var(--accent-1); text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 640px) {
+      .module-header { padding: 3.5rem 1.25rem 2.75rem; }
+      .page-body { padding: 2rem 1.25rem 4rem; }
+      .metadata-block { padding: 1.25rem; }
+      .triadic-pillars { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
-  
-<body class="tf-module tf-module--theory tf-module--electromagnetism">
-  <header class="tf-hero tf-hero--theory">
-    <div class="tf-hero__content">
-      <h1>Electromagnetism</h1>
+<body>
 
-<section class="hero-card">
-  <div class="hero-header">
-    <div class="hero-title-block">
-      <h1>Field Coherence and Charge Dynamics</h1>
-      <p>
-        Electromagnetism here is not duality; it is a unified field substrate
-        where charge, motion, and resonance define coherence across space and
-        time.
+  <!-- ── Navigation Breadcrumb ──────────────────────────────────── -->
+  <nav class="nav-breadcrumb" aria-label="Breadcrumb">
+    <a href="/">TriadicFrameworks</a>
+    <span class="sep">/</span>
+    <a href="/theories/">theories</a>
+    <span class="sep">/</span>
+    <span class="current">electromagnetism</span>
+  </nav>
+
+  <!-- ── Gradient Header ────────────────────────────────────────── -->
+  <header class="module-header" role="banner">
+    <div class="header-inner">
+      <div class="module-tag">Foundational Theory · Module 02</div>
+      <h1>Electro<span>magnetism</span></h1>
+      <p class="header-tagline">
+        The unified theory of electric and magnetic fields — revealing how charge, current,
+        and radiation are manifestations of a single fundamental interaction governed
+        by local gauge symmetry.
       </p>
-    </div>
-
-    <!-- Hero image -->
-    <div class="hero-glyph" aria-hidden="true">
-      <img src="../../images/electromagnetism.png"
-           alt="Electromagnetism hero image" />
-    </div>
-  </div>
-
-  <!-- rest of your hero-body content -->
-</section>
-      
-      <h2>Field‑Coherence Theory</h2>
-      <p>
-        Electromagnetism as a field‑first, operator‑driven, coherence‑based
-        system: divergence and curl as structural operators, charge and current
-        as field‑source operators, and light as self‑consistent field
-        propagation. Zero force‑centric drift. Zero particle‑first framing.
-      </p>
-      <nav class="tf-hero__nav">
-        <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/electromagnetism/frontdoor.md" target="_blank"
-           class="tf-button tf-button--primary">
-          Start with the front door
-        </a>
-        <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/electromagnetism/session_context.md" target="_blank"
-           class="tf-button tf-button--ghost">
-          Session context
-        </a>
-      </nav>
+      <div class="header-meta-chips">
+        <span class="chip">Maxwell's equations</span>
+        <span class="chip">gauge symmetry</span>
+        <span class="chip">photons</span>
+        <span class="chip">Lorentz force</span>
+        <span class="chip">U(1) symmetry</span>
+      </div>
     </div>
   </header>
 
-  <main class="tf-main">
+  <main class="page-body">
 
-    <section class="tf-section">
-      <h2>Module identity</h2>
+    <!-- ── Metadata Block ───────────────────────────────────────── -->
+    <section class="metadata-block" aria-label="Module Metadata">
+      <div class="meta-field">
+        <span class="meta-label">Module ID</span>
+        <span class="meta-value accent">electromagnetism</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Domain</span>
+        <span class="meta-value">Classical & Quantum Field Theory</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Scale</span>
+        <span class="meta-value">Quantum · Classical · Cosmological</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Triadic Class</span>
+        <span class="meta-value">Fundamental Forces</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Status</span>
+        <span class="meta-value accent">Active</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Version</span>
+        <span class="meta-value">2.0 · 2026-10-02</span>
+      </div>
+    </section>
+
+    <!-- ── Session Context Block ────────────────────────────────── -->
+    <section class="session-context" aria-label="Session Context">
+      <h3>⟳ Session Context</h3>
       <p>
-        In TriadicFrameworks, Electromagnetism is a
-        <strong>field‑coherence theory</strong>:
-        Maxwell’s equations are operators, not force laws; E and B are primary
-        field objects; charge and current are divergence/curl sources; and
-        light is self‑consistent field propagation. EM is geometry‑compatible,
-        quantization‑compatible, and regime‑aware (R1 → R3).
+        <strong>Focus:</strong> Electromagnetism is examined through the TriadicFrameworks pillars of
+        <strong>Field</strong>, <strong>Force</strong>, and <strong>Symmetry</strong> —
+        mapping Maxwell's four equations, the Lorentz force law, and U(1) gauge invariance
+        onto a unified triadic scaffold.
       </p>
       <p>
-        This module is field‑first, operator‑driven, coherence‑based, and
-        explicitly non‑teleological. It integrates with Relativity, QFT,
-        Information Theory, Thermodynamics, FFT/Wave Analysis, and Systems
-        Physics.
+        This module traces the historical unification from Coulomb and Faraday through Maxwell's
+        synthesis and Einstein's special relativity, with cross-module resonances to Quantum Field Theory,
+        Standard Model, and Information Theory.
       </p>
     </section>
 
-    <section class="tf-section">
-      <h2>Read in this order</h2>
-      <ol class="tf-list tf-list--numbered">
-        <li>
-          <strong>Session context</strong><br />
-          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/electromagnetism/session_context.md" target="_blank">
-            /docs/theories/electromagnetism/session_context.md
-          </a><br />
-          Identity, drift boundaries, audience, and scope.
-        </li>
+    <!-- ── Triadic Pillars ──────────────────────────────────────── -->
+    <h2 class="section-title">Triadic Pillars</h2>
+    <div class="triadic-pillars" role="list">
 
-        <li>
-          <strong>Regimes</strong><br />
-          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/electromagnetism/regimes.md" target="_blank">
-            /docs/theories/electromagnetism/regimes.md
-          </a><br />
-          R1 → R3: classical field stability, dynamic propagation,
-          geometry‑coupled multi‑scale EM.
-        </li>
+      <article class="pillar" role="listitem">
+        <div class="pillar-glyph">〜</div>
+        <div class="pillar-number">Pillar I</div>
+        <h3 class="pillar-name">Field</h3>
+        <p class="pillar-desc">
+          The electromagnetic field (E, B) is the primary physical reality — a tensor
+          quantity permeating spacetime whose values at each event encode forces on
+          charged matter. Field lines carry energy density ½(ε₀E² + B²/μ₀) and
+          propagate as electromagnetic waves at c.
+        </p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">EM tensor Fμν</span>
+          <span class="pillar-tag">Poynting vector</span>
+          <span class="pillar-tag">wave propagation</span>
+        </div>
+      </article>
 
-        <li>
-          <strong>Operators</strong><br />
-          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/electromagnetism/operators.md" target="_blank">
-            /docs/theories/electromagnetism/operators.md
-          </a><br />
-          𝓓ᴱ, 𝓓ᴮ, 𝓒ᴱ, 𝓒ᴮ, 𝓢ᶜʰ, 𝓢ᶜᵘʳ, 𝓦, 𝓕, 𝓒ₒₕ, 𝓡𝓮𝓰, 𝓒𝓁.
-        </li>
+      <article class="pillar" role="listitem">
+        <div class="pillar-glyph">↯</div>
+        <div class="pillar-number">Pillar II</div>
+        <h3 class="pillar-name">Force</h3>
+        <p class="pillar-desc">
+          The Lorentz force F = q(E + v×B) describes how fields exert force on
+          charged particles. Together with Newton's second law, this governs classical
+          charged-particle dynamics. Radiation reaction and radiative damping reveal
+          the feedback between motion and field.
+        </p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">Lorentz force</span>
+          <span class="pillar-tag">radiation</span>
+          <span class="pillar-tag">cyclotron motion</span>
+        </div>
+      </article>
 
-        <li>
-          <strong>Operator examples</strong><br />
-          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/electromagnetism/operator_examples.md" target="_blank">
-            /docs/theories/electromagnetism/operator_examples.md
-          </a><br />
-          Concrete, field‑first examples of divergence, curl, sources,
-          propagation, coherence, and regime transitions.
-        </li>
+      <article class="pillar" role="listitem">
+        <div class="pillar-glyph">⊛</div>
+        <div class="pillar-number">Pillar III</div>
+        <h3 class="pillar-name">Symmetry</h3>
+        <p class="pillar-desc">
+          U(1) gauge symmetry — invariance under local phase transformations ψ → e^{iα(x)}ψ —
+          is the deep organizing principle. Noether's theorem links this symmetry to charge
+          conservation. Its gauging predicts the photon as the force mediator.
+        </p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">U(1) gauge</span>
+          <span class="pillar-tag">Noether's theorem</span>
+          <span class="pillar-tag">charge conservation</span>
+        </div>
+      </article>
 
-        <li>
-          <strong>Coherence map</strong><br />
-          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/electromagnetism/coherence_map.md" target="_blank">
-            /docs/theories/electromagnetism/coherence_map.md
-          </a><br />
-          Divergence consistency, curl consistency, propagation stability,
-          geometric compatibility.
-        </li>
+    </div>
 
-        <li>
-          <strong>Lineage</strong><br />
-          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/electromagnetism/lineage.md" target="_blank">
-            /docs/theories/electromagnetism/lineage.md
-          </a><br />
-          Pre‑Maxwell → Maxwell → wave theory → relativity → QFT →
-          RTT integration.
-        </li>
+    <!-- ── Core Concepts ────────────────────────────────────────── -->
+    <h2 class="section-title">Core Concepts</h2>
+    <div class="concepts-grid">
+      <div class="concept-card">
+        <h4>Maxwell's Equations</h4>
+        <p>Four equations (Gauss, Gauss-Magnetism, Faraday, Ampère-Maxwell) fully characterizing classical electromagnetic phenomena and predicting light as an EM wave.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Electromagnetic Waves</h4>
+        <p>Self-sustaining oscillations of E and B fields propagating at c = 1/√(ε₀μ₀) ≈ 3×10⁸ m/s across the full spectrum from radio to gamma rays.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Quantum Electrodynamics</h4>
+        <p>The quantum field theory of EM interactions, with photons as U(1) gauge bosons. QED predictions agree with experiment to 10 decimal places.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Special Relativity</h4>
+        <p>Maxwell's equations are Lorentz-covariant; the unification of E and B into Fμν was one of Einstein's key insights motivating special relativity.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Faraday's Law</h4>
+        <p>A time-varying magnetic flux induces an EMF proportional to its rate of change — the principle behind electric generators, transformers, and inductors.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Displacement Current</h4>
+        <p>Maxwell's correction ε₀(∂E/∂t) to Ampère's Law closed the inconsistency with charge conservation and predicted electromagnetic radiation.</p>
+      </div>
+    </div>
 
-        <li>
-          <strong>Cross‑module integration</strong><br />
-          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/electromagnetism/cross_module.md" target="_blank">
-            /docs/theories/electromagnetism/cross_module.md
-          </a><br />
-          Links to GR, QFT, Information Theory, Thermodynamics, FFT, Systems
-          Physics.
-        </li>
+    <!-- ── Key Equations ────────────────────────────────────────── -->
+    <h2 class="section-title">Key Equations</h2>
+    <div class="equations-block">
+      <div class="eq-title">// Maxwell's Equations (Differential Form)</div>
+      <div class="equation-row">
+        <span class="eq-formula">∇ · E = ρ/ε₀</span>
+        <span class="eq-desc">Gauss's Law: electric field divergence is proportional to local charge density.</span>
+      </div>
+      <div class="equation-row">
+        <span class="eq-formula">∇ · B = 0</span>
+        <span class="eq-desc">No magnetic monopoles: magnetic field lines form closed loops.</span>
+      </div>
+      <div class="equation-row">
+        <span class="eq-formula">∇ × E = −∂B/∂t</span>
+        <span class="eq-desc">Faraday's Law: a changing magnetic field induces a curl in the electric field.</span>
+      </div>
+      <div class="equation-row">
+        <span class="eq-formula">∇ × B = μ₀J + μ₀ε₀(∂E/∂t)</span>
+        <span class="eq-desc">Ampère–Maxwell Law: currents and changing electric fields produce magnetic field curl.</span>
+      </div>
+    </div>
 
-        <li>
-          <strong>Engine notes & simulation hooks</strong><br />
-          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/electromagnetism/engine_notes.md" target="_blank">
-            /docs/theories/electromagnetism/engine_notes.md
-          </a><br />
-          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/electromagnetism/simulation_hooks.json">
-            /docs/theories/electromagnetism/simulation_hooks.json
-          </a><br />
-          Execution contract and operator‑level hooks for agents and simulators.
-        </li>
-      </ol>
-    </section>
-
-    <section class="tf-section">
-      <h2>Drift boundaries</h2>
-      <ul class="tf-list">
-        <li><strong>No force‑centric framing:</strong> EM is not “pushes” or “pulls.”</li>
-        <li><strong>No particle‑first metaphors:</strong> charge/current are operators, not objects.</li>
-        <li><strong>No action‑at‑a‑distance:</strong> fields are local, coherent structures.</li>
-        <li><strong>No ether metaphors:</strong> propagation requires no medium.</li>
-        <li><strong>No teleology:</strong> fields do not “try” or “seek.”</li>
+    <!-- ── Cross-Module Connections ─────────────────────────────── -->
+    <h2 class="section-title">Cross-Module Connections</h2>
+    <div class="connections-panel">
+      <ul class="connection-list">
+        <li><strong>Quantum Field Theory</strong> — QED is the quantum completion of classical EM; photons emerge as the quanta of the EM field under canonical quantization.</li>
+        <li><strong>Standard Model</strong> — EM is the U(1)_Y factor after electroweak symmetry breaking; the photon is massless while W/Z bosons acquire mass via the Higgs mechanism.</li>
+        <li><strong>General Relativity</strong> — The stress-energy tensor of the EM field sources spacetime curvature; charged black holes obey the Reissner-Nordström metric.</li>
+        <li><strong>Information Theory</strong> — EM waves are the physical carrier of all wireless communication; channel capacity is bounded by Shannon's theorem.</li>
+        <li><strong>Thermodynamics</strong> — Blackbody radiation and Planck's law directly connect EM field theory to statistical thermodynamics.</li>
       </ul>
-      <p>
-        All pages must remain field‑first, operator‑driven, and coherence‑aligned.
-      </p>
-    </section>
-
-    <section class="tf-section">
-      <h2>For students</h2>
-      <p>
-        Treat Electromagnetism as a <strong>coherent field system</strong>:
-        divergence and curl define structure, sources modify operators, and
-        propagation emerges from self‑consistent field evolution. Avoid
-        force‑centric or particle‑centric interpretations.
-        <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/electromagnetism/faq.md" target="_blank">FAQ</a>
-      </p>
-    </section>
-
-    <section class="tf-section">
-      <h2>For AI agents & tools</h2>
-      <ul class="tf-list">
-        <li><strong>Anchor:</strong> use <code>session_context.md</code> as the identity lock.</li>
-        <li><strong>Execution:</strong> follow <code>engine_notes.md</code> and
-            <code>simulation_hooks.json</code> for operator semantics.</li>
-        <li><strong>Safety:</strong> reject force‑centric, particle‑centric, or
-            teleological interpretations.</li>
-      </ul>
-    </section>
+    </div>
 
   </main>
+
+  <!-- ── Footer ────────────────────────────────────────────────── -->
+  <footer class="page-footer" role="contentinfo">
+    <p>
+      <a href="/">TriadicFrameworks</a> · electromagnetism · v2.0 · generated 2026-10-02
+      &nbsp;·&nbsp; <a href="/theories/">all modules</a>
+    </p>
+  </footer>
+
 </body>
 </html>

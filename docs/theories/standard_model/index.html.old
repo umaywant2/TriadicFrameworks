@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Canonical Metadata -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Standard Model — TriadicFrameworks</title>
+  <meta name="description" content="The Standard Model as a sector grammar of excitation modes, gauge geometry, Higgs stabilization, and resonance behavior across R2→R3.">
+  <meta name="keywords" content="standard model, sector grammar, excitations, gauge symmetry, higgs mechanism, qft, rtt, triadic frameworks">
+
+  <link rel="canonical" href="https://triadicframeworks.org/docs/theories/standard_model/">
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Standard Model — TriadicFrameworks">
+  <meta property="og:description" content="A sector grammar of excitation modes, gauge geometry, and Higgs-anchored stability.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://triadicframeworks.org/docs/theories/standard_model/">
+  <meta property="og:image" content="../../images/standard_model.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Standard Model — TriadicFrameworks">
+  <meta name="twitter:description" content="Excitation-based, gauge-geometry-aligned, substrate-aware Standard Model.">
+  <meta name="twitter:image" content="../../images/standard_model.png">
+
+  <!-- Citation -->
+  <meta name="citation_title" content="Standard Model — TriadicFrameworks">
+  <meta name="citation_author" content="Nawder Loswin">
+  <meta name="citation_publication_date" content="2025">
+  <meta name="DC.type" content="Text">
+  <meta name="DC.format" content="text/html">
+  <meta name="DC.subject" content="Standard Model, Gauge Symmetry, Excitation Modes, Higgs Mechanism">
+
+  <!-- AI Metadata -->
+  <meta name="ai.module" content="standard_model">
+  <meta name="ai.version" content="1.0">
+  <meta name="ai.purpose" content="Provide a sector-based, excitation-first interface to the Standard Model.">
+  <meta name="ai.keywords" content="standard model, excitations, gauge symmetry, higgs, resonance, rtt">
+  <meta name="ai.audience" content="students, researchers, physicists, AIs">
+  <meta name="ai.navigation" content="../../sitemap_main.xml">
+  <meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
+  <meta name="ai.contact.x" content="@TriadicFrameworks">
+  <meta name="ai.contact.youtube" content="@TriadicFrameworks">
+  <meta name="ai.license" content="Open educational use permitted">
+
+  <!-- Favicon -->
+  <link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+  <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
+  <!-- Canonical RTT‑Inside Styles -->
+  <link rel="stylesheet" href="/styles/theory.css">
+  <link rel="stylesheet" href="/styles/standard_model.css">
+
+  <meta name="theme-color" content="#1a1a1a">
+
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <div class="hero hero-qcompute">
+    <img src="../../images/standard_model.png"
+         alt="Standard Model Hero Image"
+         class="hero-img">
+    <div class="hero-overlay">
+      <h1>Standard Model</h1>
+      <p>Sector Grammar • Excitation‑Based • Gauge‑Geometry Aligned</p>
+      <div class="hero-icons">
+        <span>⚛️ Excitation Modes</span>
+        <span>🌀 Gauge Geometry</span>
+        <span>🌟 Higgs Stabilization</span>
+        <span>🔷 R2 → R3 Behavior</span>
+      </div>
+    </div>
+  </div>
+
+  <main class="container">
+
+    <!-- INTRO CARD -->
+    <div class="card">
+      <h2>Gauge Symmetry and Sector Coherence</h2>
+      <p>
+        The Standard Model here is not a patchwork of forces; it is a unified
+        gauge‑symmetric substrate where interaction fields and matter sectors
+        share a coherent operator grammar.
+      </p>
+    </div>
+
+    <!-- TWO‑COLUMN LAYOUT -->
+    <div class="layout">
+
+      <!-- LEFT COLUMN -->
+      <section class="card">
+        <h2>Session Context</h2>
+
+        <ul class="hero-list">
+          <li><span class="bullet"></span><div><strong>Canon:</strong> active (sector‑grammar • excitation‑based)</div></li>
+          <li><span class="bullet"></span><div><strong>Modules:</strong> QFT → Gauge Symmetry → Excitation Sectors → Higgs → Mass → Interaction Channels → Renormalization → Symmetry Restoration</div></li>
+          <li><span class="bullet"></span><div><strong>Drift:</strong> minimal (excitation‑true • no particle‑object ontology)</div></li>
+          <li><span class="bullet"></span><div><strong>Coherence:</strong> stable (gauge‑geometry • symmetry‑preserving)</div></li>
+          <li><span class="bullet"></span><div><strong>Version:</strong> 1.0 (sector‑grammar‑stable)</div></li>
+          <li><span class="bullet"></span><div><strong>Format:</strong> html + markdown + diagrams + resonance‑maps</div></li>
+          <li><span class="bullet"></span><div><strong>Front door:</strong> this page</div></li>
+          <li><span class="bullet"></span><div><strong>Every page:</strong> stands alone + AI‑parsable + excitation‑aligned</div></li>
+          <li><span class="bullet"></span><div><strong>Audience:</strong> students + researchers + physicists + AIs</div></li>
+        </ul>
+
+        <div class="hero-pill-row">
+          <span class="pill accent">Excitation‑first</span>
+          <span class="pill">Gauge‑aligned</span>
+          <span class="pill">Sector‑true</span>
+          <span class="pill">RTT‑aligned</span>
+          <span class="pill">Zero drift</span>
+        </div>
+      </section>
+
+      <!-- RIGHT COLUMN -->
+      <aside class="right-column">
+
+        <div class="card">
+          <h2>Module Navigation</h2>
+          <ul class="link-list">
+            <li><a href="README.md" target="_blank">README</a></li>
+            <li><a href="module.json" target="_blank">Module Identity</a></li>
+            <li><a href="module_rtt1.json" target="_blank">RTT/1 — Operator Grammar</a></li>
+            <li><a href="module_rtt2.json" target="_blank">RTT/2 — Resonance Geometry</a></li>
+            <li><a href="module_rtt3.json" target="_blank">RTT/3 — Substrate Integration</a></li>
+            <li><a href="session_context.md" target="_blank">Session Context</a></li>
+            <li><a href="operators.md" target="_blank">Operators</a></li>
+            <li><a href="regimes.md" target="_blank">Regimes</a></li>
+            <li><a href="coherence_map.md" target="_blank">Coherence Map</a></li>
+            <li><a href="examples.md" target="_blank">Examples</a></li>
+            <li><a href="faq.md" target="_blank">FAQ</a></li>
+            <li><a href="cross_module.md" target="_blank">Cross‑Module Integration</a></li>
+            <li><a href="lineage.md" target="_blank">Lineage</a></li>
+            <li><a href="simulation_hooks.json" target="_blank">Simulation Hooks</a></li>
+            <li><a href="engine_notes.md" target="_blank">Engine Notes</a></li>
+          </ul>
+        </div>
+
+      </aside>
+    </div>
+  </main>
+
+  <footer class="container">
+    <span>Standard Model · Sector‑grammar excitation interface · R2 → R3 compatible</span><br>
+    <span>Student‑ready · AI‑parsable · Canon‑aligned · Zero drift</span>
+  </footer>
+
+</body>
+</html>

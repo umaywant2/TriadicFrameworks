@@ -3,157 +3,413 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Thermodynamics — TriadicFrameworks canonical theory module exploring energy, entropy, and equilibrium." />
+  <meta name="module" content="thermodynamics" />
+  <meta name="category" content="Foundational Theory" />
+  <meta name="framework" content="TriadicFrameworks" />
+  <meta name="version" content="2.0" />
+  <meta name="generated" content="2026-10-02" />
+  <meta name="author" content="TriadicFrameworks" />
+  <title>Thermodynamics · TriadicFrameworks</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --accent-1:   #d97706;
+      --accent-2:   #b45309;
+      --accent-3:   #78350f;
+      --accent-pale: #fffbeb;
+      --accent-soft: #fde68a;
+      --grad-start:  #150a00;
+      --grad-mid:    #3d1a00;
+      --grad-end:    #78350f;
+      --text-primary: #1c1109;
+      --text-secondary: #4b5563;
+      --text-muted:  #9ca3af;
+      --bg-page:     #fffdf5;
+      --bg-card:     #ffffff;
+      --border:      #fef3c7;
+      --radius-sm:   6px;
+      --radius-md:   12px;
+      --radius-lg:   20px;
+      --shadow-sm:   0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.05);
+      --shadow-md:   0 4px 16px rgba(0,0,0,.10), 0 2px 6px rgba(0,0,0,.06);
+      --shadow-lg:   0 12px 40px rgba(0,0,0,.13), 0 4px 12px rgba(0,0,0,.08);
+      --font-sans:   'Segoe UI', system-ui, -apple-system, sans-serif;
+      --font-mono:   'Cascadia Code', 'Fira Code', 'Courier New', monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-sans); background: var(--bg-page); color: var(--text-primary); line-height: 1.65; min-height: 100vh; }
 
-  <title>Thermodynamics — TriadicFrameworks</title>
+    /* ── Navigation Breadcrumb ──────────────────────────────────── */
+    .nav-breadcrumb {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(21,10,0,.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(217,119,6,.25);
+      padding: 0.55rem 2rem;
+      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.78rem; font-family: var(--font-mono);
+      color: rgba(255,255,255,.55);
+    }
+    .nav-breadcrumb a { color: rgba(255,255,255,.75); text-decoration: none; }
+    .nav-breadcrumb a:hover { color: #fbbf24; }
+    .nav-breadcrumb .sep { color: rgba(255,255,255,.3); }
+    .nav-breadcrumb .current { color: #fbbf24; font-weight: 600; }
 
-  <!-- Canonical Metadata -->
-  <meta name="generator" content="TriadicFrameworks Engine 2026" />
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#ff7a3c" />
+    /* ── Gradient Header ────────────────────────────────────────── */
+    .module-header {
+      background: linear-gradient(135deg, var(--grad-start) 0%, var(--grad-mid) 50%, var(--grad-end) 100%);
+      padding: 5rem 2rem 4rem; position: relative; overflow: hidden; text-align: center;
+    }
+    .module-header::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 55% 55% at 15% 25%, rgba(217,119,6,.22) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 60% at 85% 75%, rgba(120,53,15,.55) 0%, transparent 65%);
+    }
+    .module-header::after {
+      content: 'S'; position: absolute; right: 6%; top: 50%; transform: translateY(-50%);
+      font-size: 16rem; font-weight: 900; opacity: .05; color: #fff; pointer-events: none; line-height: 1;
+    }
+    .header-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
+    .module-tag {
+      display: inline-block;
+      background: rgba(217,119,6,.22); border: 1px solid rgba(217,119,6,.45);
+      color: #fbbf24; font-size: 0.72rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; padding: .3rem .9rem; border-radius: 99px;
+      margin-bottom: 1.4rem; font-family: var(--font-mono);
+    }
+    .module-header h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -.02em; line-height: 1.1; color: #ffffff; margin-bottom: 1rem; }
+    .module-header h1 span { color: #fbbf24; }
+    .header-tagline { font-size: 1.12rem; color: rgba(255,255,255,.72); max-width: 580px; margin: 0 auto 2rem; line-height: 1.6; }
+    .header-meta-chips { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center; }
+    .chip { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); color: rgba(255,255,255,.8); padding: .28rem .75rem; border-radius: 99px; font-family: var(--font-mono); font-size: .72rem; }
 
-  <!-- Identity -->
-  <meta name="description" content="Thermodynamics as a constraint-first substrate grammar: temperature as substrate force, entropy as regime boundary, free energy as coherence operator, flows as gradient responses, equilibrium as fixed-point structure." />
-  <meta name="keywords" content="thermodynamics, constraint grammar, entropy, free energy, temperature, equilibrium, flows, rtt" />
-  <link rel="canonical" href="https://triadicframeworks.org/docs/theories/thermodynamics/" />
+    /* ── Main Layout ────────────────────────────────────────────── */
+    .page-body { max-width: 1080px; margin: 0 auto; padding: 3rem 2rem 5rem; }
 
-  <!-- OpenGraph -->
-  <meta property="og:title" content="Thermodynamics — TriadicFrameworks" />
-  <meta property="og:description" content="Constraint-first substrate grammar of temperature, entropy, free energy, flows, and equilibrium." />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://triadicframeworks.org/docs/theories/thermodynamics/" />
-  <meta property="og:image" content="../../images/thermodynamics_hero.png" />
+    /* ── Metadata Block ─────────────────────────────────────────── */
+    .metadata-block {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+      padding: 1.75rem 2rem; margin-bottom: 2rem;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.25rem;
+    }
+    .meta-field { display: flex; flex-direction: column; gap: .2rem; }
+    .meta-label { font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); font-family: var(--font-mono); }
+    .meta-value { font-size: .9rem; font-weight: 600; color: var(--text-primary); }
+    .meta-value.accent { color: var(--accent-1); }
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Thermodynamics — TriadicFrameworks" />
-  <meta name="twitter:description" content="Constraint-first substrate grammar of temperature, entropy, free energy, flows, and equilibrium." />
-  <meta name="twitter:image" content="../../images/thermodynamics_hero.png" />
+    /* ── Session Context Block ──────────────────────────────────── */
+    .session-context {
+      background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+      border: 1px solid #fde68a; border-left: 4px solid var(--accent-1);
+      border-radius: var(--radius-md); padding: 1.5rem 1.75rem; margin-bottom: 2rem;
+    }
+    .session-context h3 { font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-2); font-family: var(--font-mono); margin-bottom: .65rem; }
+    .session-context p { font-size: .9rem; color: var(--text-secondary); line-height: 1.7; }
+    .session-context p + p { margin-top: .5rem; }
+    .session-context strong { color: var(--accent-2); font-weight: 700; }
 
-  <!-- Citation Metadata -->
-  <meta name="citation_title" content="Thermodynamics — TriadicFrameworks" />
-  <meta name="citation_author" content="Nawder Loswin" />
-  <meta name="citation_publication_date" content="2025" />
-  <meta name="DC.type" content="Text" />
-  <meta name="DC.format" content="text/html" />
-  <meta name="DC.subject" content="Thermodynamics, Constraint Grammar, Entropy, Free Energy, Temperature, Equilibrium" />
+    /* ── Section Headers ────────────────────────────────────────── */
+    .section-title { font-size: 1.05rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--text-muted); font-family: var(--font-mono); margin-bottom: 1.2rem; display: flex; align-items: center; gap: .6rem; }
+    .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 
-  <!-- AI Metadata -->
-  <meta name="ai.module" content="thermodynamics" />
-  <meta name="ai.version" content="1.0" />
-  <meta name="ai.purpose" content="R1 constraint-first substrate grammar" />
-  <meta name="ai.keywords" content="temperature, entropy, free energy, flows, equilibrium, constraint geometry, rtt" />
-  <meta name="ai.audience" content="students, researchers, physicists, AIs" />
-  <meta name="ai.navigation" content="../../sitemap_main.xml" />
-  <meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions" />
-  <meta name="ai.contact.x" content="@TriadicFrameworks" />
-  <meta name="ai.contact.youtube" content="@TriadicFrameworks" />
-  <meta name="ai.license" content="Open educational use permitted" />
+    /* ── Triadic Pillars ────────────────────────────────────────── */
+    .triadic-pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem; }
+    .pillar { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: 2rem 1.75rem; position: relative; overflow: hidden; transition: transform .2s ease, box-shadow .2s ease; }
+    .pillar:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .pillar::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(217,119,6,.04) 0%, transparent 60%); }
+    .pillar-number { font-size: .68rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; font-family: var(--font-mono); color: var(--accent-1); margin-bottom: .5rem; }
+    .pillar-name { font-size: 1.35rem; font-weight: 800; color: var(--text-primary); margin-bottom: .6rem; line-height: 1.2; }
+    .pillar-glyph { position: absolute; top: 1.2rem; right: 1.4rem; font-size: 2.4rem; opacity: .12; user-select: none; }
+    .pillar-desc { font-size: .88rem; color: var(--text-secondary); line-height: 1.65; }
+    .pillar-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1rem; }
+    .pillar-tag { font-size: .68rem; font-weight: 600; padding: .2rem .55rem; border-radius: 99px; font-family: var(--font-mono); background: var(--accent-pale); color: var(--accent-2); border: 1px solid var(--accent-soft); }
 
-  <!-- Favicon -->
-  <link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
-  <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
-  <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
+    /* ── Laws Block ─────────────────────────────────────────────── */
+    .laws-block {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem; margin-bottom: 2.5rem;
+    }
+    .law-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-md); padding: 1.35rem 1.5rem; box-shadow: var(--shadow-sm);
+      border-top: 3px solid var(--accent-1);
+    }
+    .law-card .law-number { font-size: .7rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; font-family: var(--font-mono); color: var(--accent-1); margin-bottom: .3rem; }
+    .law-card h4 { font-size: .95rem; font-weight: 800; color: var(--text-primary); margin-bottom: .5rem; }
+    .law-card p { font-size: .82rem; color: var(--text-secondary); line-height: 1.55; }
 
-  <!-- Canonical RTT‑Inside Styles -->
-  <link rel="stylesheet" href="/styles/theory.css">
-  <link rel="stylesheet" href="/styles/thermodynamics.css">
+    /* ── Core Concepts Grid ─────────────────────────────────────── */
+    .concepts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 2.5rem; }
+    .concept-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.25rem 1.4rem; box-shadow: var(--shadow-sm); }
+    .concept-card h4 { font-size: .88rem; font-weight: 700; color: var(--text-primary); margin-bottom: .4rem; }
+    .concept-card p { font-size: .82rem; color: var(--text-secondary); line-height: 1.55; }
 
+    /* ── Equations Block ────────────────────────────────────────── */
+    .equations-block { background: #150a00; border-radius: var(--radius-md); padding: 1.75rem 2rem; margin-bottom: 2.5rem; border: 1px solid #3d1a00; }
+    .equations-block .eq-title { font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #78350f; font-family: var(--font-mono); margin-bottom: 1.1rem; }
+    .equation-row { display: flex; align-items: flex-start; gap: 1.2rem; padding: .8rem 0; border-bottom: 1px solid #3d1a00; }
+    .equation-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .eq-formula { font-family: var(--font-mono); font-size: 1rem; color: #fbbf24; font-weight: 600; min-width: 220px; flex-shrink: 0; }
+    .eq-desc { font-size: .83rem; color: #fcd34d; line-height: 1.5; }
+
+    /* ── Connections Panel ──────────────────────────────────────── */
+    .connections-panel { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: 1.75rem 2rem; margin-bottom: 2.5rem; }
+    .connection-list { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
+    .connection-list li { display: flex; align-items: center; gap: .75rem; font-size: .88rem; color: var(--text-secondary); }
+    .connection-list li::before { content: '→'; color: var(--accent-1); font-weight: 700; flex-shrink: 0; }
+    .connection-list strong { color: var(--text-primary); font-weight: 700; }
+
+    /* ── Footer ─────────────────────────────────────────────────── */
+    .page-footer { border-top: 1px solid var(--border); margin-top: 3rem; padding: 1.5rem 2rem; text-align: center; font-size: .78rem; color: var(--text-muted); font-family: var(--font-mono); }
+    .page-footer a { color: var(--accent-1); text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 640px) {
+      .module-header { padding: 3.5rem 1.25rem 2.75rem; }
+      .page-body { padding: 2rem 1.25rem 4rem; }
+      .metadata-block { padding: 1.25rem; }
+      .triadic-pillars { grid-template-columns: 1fr; }
+      .laws-block { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
-
 <body>
 
-  <!-- HERO -->
-  <div class="hero hero-qcompute">
-    <img src="../../images/thermodynamics_hero.png"
-         alt="Thermodynamics Hero Image"
-         class="hero-img">
-    <div class="hero-overlay">
-      <h1>Thermodynamics</h1>
-      <p>Constraint Grammar • Entropy • Free Energy</p>
-      <div class="hero-icons">
-        <span>🔥 Substrate Force</span>
-        <span>📉 Entropy Boundaries</span>
-        <span>⚖️ Free Energy Operator</span>
-        <span>🌡️ Gradient Flows</span>
+  <!-- ── Navigation Breadcrumb ──────────────────────────────────── -->
+  <nav class="nav-breadcrumb" aria-label="Breadcrumb">
+    <a href="/">TriadicFrameworks</a>
+    <span class="sep">/</span>
+    <a href="/theories/">theories</a>
+    <span class="sep">/</span>
+    <span class="current">thermodynamics</span>
+  </nav>
+
+  <!-- ── Gradient Header ────────────────────────────────────────── -->
+  <header class="module-header" role="banner">
+    <div class="header-inner">
+      <div class="module-tag">Foundational Theory · Module 08</div>
+      <h1>Thermo<span>dynamics</span></h1>
+      <p class="header-tagline">
+        The science of energy, heat, and work — four laws that constrain every physical
+        process in the universe, from stellar fusion to biochemical metabolism,
+        through the irreversible arrow of time defined by entropy.
+      </p>
+      <div class="header-meta-chips">
+        <span class="chip">entropy</span>
+        <span class="chip">free energy</span>
+        <span class="chip">irreversibility</span>
+        <span class="chip">Carnot efficiency</span>
+        <span class="chip">statistical mechanics</span>
       </div>
     </div>
-  </div>
+  </header>
 
-  <main class="container">
+  <main class="page-body">
 
-    <!-- INTRO CARD -->
-    <div class="card">
-      <h2>Constraint‑First Substrate Grammar</h2>
+    <!-- ── Metadata Block ───────────────────────────────────────── -->
+    <section class="metadata-block" aria-label="Module Metadata">
+      <div class="meta-field">
+        <span class="meta-label">Module ID</span>
+        <span class="meta-value accent">thermodynamics</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Domain</span>
+        <span class="meta-value">Classical Physics · Statistical Mechanics</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Scale</span>
+        <span class="meta-value">Macroscopic · Statistical · Quantum</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Triadic Class</span>
+        <span class="meta-value">Fundamental Framework</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Status</span>
+        <span class="meta-value accent">Active</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Version</span>
+        <span class="meta-value">2.0 · 2026-10-02</span>
+      </div>
+    </section>
+
+    <!-- ── Session Context Block ────────────────────────────────── -->
+    <section class="session-context" aria-label="Session Context">
+      <h3>⟳ Session Context</h3>
       <p>
-        Thermodynamics is the constraint‑first substrate grammar where temperature acts as a substrate force, entropy
-        defines regime boundaries, free energy governs coherence, flows follow gradients, and equilibrium appears as a
-        fixed‑point structure embedded in larger statistical, field‑theoretic, and cosmological regimes.
+        <strong>Focus:</strong> Thermodynamics is examined through the TriadicFrameworks pillars of
+        <strong>Energy</strong>, <strong>Entropy</strong>, and <strong>Equilibrium</strong> —
+        the three master concepts from which all four thermodynamic laws, the Boltzmann distribution,
+        free energy minimization, and the arrow of time emerge.
       </p>
-    </div>
+      <p>
+        This module integrates classical thermodynamics, statistical mechanics (Boltzmann, Gibbs,
+        Einstein), and modern extensions (non-equilibrium thermodynamics, fluctuation theorems),
+        with cross-module resonances to Chaos Theory, Information Theory,
+        Quantum Mechanics, and Evolutionary Biology.
+      </p>
+    </section>
 
-    <!-- TWO‑COLUMN LAYOUT -->
-    <div class="layout">
+    <!-- ── Triadic Pillars ──────────────────────────────────────── -->
+    <h2 class="section-title">Triadic Pillars</h2>
+    <div class="triadic-pillars" role="list">
 
-      <!-- LEFT COLUMN -->
-      <section class="card">
-        <h2>Module Summary</h2>
-        <p>
-          In TriadicFrameworks, Thermodynamics is treated as a
-          <strong>constraint geometry</strong>, not a mechanical theory. It defines:
+      <article class="pillar" role="listitem">
+        <div class="pillar-glyph">🔥</div>
+        <div class="pillar-number">Pillar I</div>
+        <h3 class="pillar-name">Energy</h3>
+        <p class="pillar-desc">
+          The First Law — energy conservation — is the central bookkeeping principle:
+          ΔU = Q − W. Internal energy changes equal heat absorbed minus work done.
+          Energy is interconvertible between heat, work, and internal modes,
+          but the total is invariant — it cannot be created or destroyed.
         </p>
-        <ul class="hero-list">
-          <li><span class="bullet"></span><div>temperature as a substrate force</div></li>
-          <li><span class="bullet"></span><div>entropy as a regime boundary</div></li>
-          <li><span class="bullet"></span><div>free energy as a coherence operator</div></li>
-          <li><span class="bullet"></span><div>equilibrium as a fixed‑point structure</div></li>
-          <li><span class="bullet"></span><div>flows as gradient responses to constraints</div></li>
-          <li><span class="bullet"></span><div>RTT regime behavior (R1 → R4, with Thermodynamics fully valid in R1)</div></li>
-        </ul>
-
-        <div class="hero-pill-row">
-          <span class="pill accent">Constraint‑first</span>
-          <span class="pill">Entropy‑aligned</span>
-          <span class="pill">Free‑energy‑driven</span>
-          <span class="pill">Gradient‑structured</span>
-          <span class="pill">Zero drift</span>
+        <div class="pillar-tags">
+          <span class="pillar-tag">First Law</span>
+          <span class="pillar-tag">internal energy</span>
+          <span class="pillar-tag">enthalpy</span>
         </div>
-      </section>
+      </article>
 
-      <!-- RIGHT COLUMN -->
-      <aside class="right-column">
-
-        <div class="card">
-          <h2>Module Navigation</h2>
-          <ul class="link-list">
-            <li><a href="README.md" target="_blank">README</a></li>
-            <li><a href="module.json" target="_blank">module.json</a></li>
-            <li><a href="module_rtt1.json" target="_blank">RTT/1 — Constraint Substrate</a></li>
-            <li><a href="module_rtt2.json" target="_blank">RTT/2 — Statistical Embedding</a></li>
-            <li><a href="module_rtt3.json" target="_blank">RTT/3 — Field‑Level Embedding</a></li>
-            <li><a href="session_context.md" target="_blank">Session Context</a></li>
-            <li><a href="regimes.md" target="_blank">Regimes</a></li>
-            <li><a href="operators.md" target="_blank">Operators</a></li>
-            <li><a href="operator_examples.md" target="_blank">Operator Examples</a></li>
-            <li><a href="examples.md" target="_blank">Examples</a></li>
-            <li><a href="explanations.md" target="_blank">Explanations</a></li>
-            <li><a href="faq.md" target="_blank">FAQ</a></li>
-            <li><a href="coherence_map.md" target="_blank">Coherence Map</a></li>
-            <li><a href="cross_module.md" target="_blank">Cross‑Module Integration</a></li>
-            <li><a href="lineage.md" target="_blank">Lineage</a></li>
-            <li><a href="simulation_hooks.json" target="_blank">Simulation Hooks</a></li>
-            <li><a href="engine_notes.md" target="_blank">Engine Notes</a></li>
-            <li><a href="frontdoor.md" target="_blank">Markdown Front Door</a></li>
-          </ul>
+      <article class="pillar" role="listitem">
+        <div class="pillar-glyph">∂</div>
+        <div class="pillar-number">Pillar II</div>
+        <h3 class="pillar-name">Entropy</h3>
+        <p class="pillar-desc">
+          The Second Law — entropy never decreases in an isolated system (ΔS ≥ 0) —
+          defines the irreversible arrow of time. Boltzmann's statistical interpretation
+          S = k_B ln(Ω) grounds entropy in the number of accessible microstates,
+          connecting macroscopic irreversibility to microscopic probability.
+        </p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">Second Law</span>
+          <span class="pillar-tag">S = k_B ln Ω</span>
+          <span class="pillar-tag">arrow of time</span>
         </div>
+      </article>
 
-      </aside>
+      <article class="pillar" role="listitem">
+        <div class="pillar-glyph">⚖</div>
+        <div class="pillar-number">Pillar III</div>
+        <h3 class="pillar-name">Equilibrium</h3>
+        <p class="pillar-desc">
+          Thermodynamic equilibrium — the state of maximum entropy and minimum free energy —
+          is the attractor toward which all isolated systems evolve. Phase transitions
+          (liquid-gas, ferromagnetic, superconducting) mark the qualitative reorganization
+          of matter at equilibrium boundaries, described by Landau order-parameter theory.
+        </p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">Gibbs free energy</span>
+          <span class="pillar-tag">phase transitions</span>
+          <span class="pillar-tag">critical phenomena</span>
+        </div>
+      </article>
+
     </div>
+
+    <!-- ── Four Laws ─────────────────────────────────────────────── -->
+    <h2 class="section-title">The Four Laws</h2>
+    <div class="laws-block">
+      <div class="law-card">
+        <div class="law-number">Zeroth Law</div>
+        <h4>Thermal Equilibrium</h4>
+        <p>If A is in thermal equilibrium with C, and B is with C, then A is in thermal equilibrium with B. This transitivity defines temperature as a well-posed physical quantity.</p>
+      </div>
+      <div class="law-card">
+        <div class="law-number">First Law</div>
+        <h4>Conservation of Energy</h4>
+        <p>ΔU = Q − W: the change in internal energy equals heat absorbed minus work done by the system. No perpetual motion machine of the first kind is possible.</p>
+      </div>
+      <div class="law-card">
+        <div class="law-number">Second Law</div>
+        <h4>Entropy Increase</h4>
+        <p>In any spontaneous process, the total entropy of the universe increases: ΔS_universe ≥ 0. No perpetual motion machine of the second kind is possible.</p>
+      </div>
+      <div class="law-card">
+        <div class="law-number">Third Law</div>
+        <h4>Absolute Zero</h4>
+        <p>The entropy of a perfect crystal approaches zero as temperature approaches absolute zero: lim_{T→0} S = 0. Absolute zero is unattainable in finite steps.</p>
+      </div>
+    </div>
+
+    <!-- ── Core Concepts ────────────────────────────────────────── -->
+    <h2 class="section-title">Core Concepts</h2>
+    <div class="concepts-grid">
+      <div class="concept-card">
+        <h4>Carnot Efficiency</h4>
+        <p>The maximum efficiency of any heat engine operating between temperatures T_H and T_C is η = 1 − T_C/T_H. Real engines are always less efficient.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Boltzmann Distribution</h4>
+        <p>In thermal equilibrium at temperature T, the probability of a microstate with energy E is P ∝ e^{−E/k_BT}. This underpins all of statistical mechanics.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Gibbs Free Energy</h4>
+        <p>G = H − TS: the thermodynamic potential governing spontaneity at constant T, P. Reactions proceed spontaneously when ΔG &lt; 0; ΔG = 0 at equilibrium.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Phase Transitions</h4>
+        <p>First-order transitions (solid→liquid, liquid→gas) involve latent heat; continuous (second-order) transitions exhibit diverging correlations and universality classes.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Fluctuation Theorems</h4>
+        <p>Crooks and Jarzynski relations extend thermodynamics to non-equilibrium systems: ΔF = −k_BT ln⟨e^{−W/k_BT}⟩, enabling free-energy measurements from irreversible work.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Maxwell's Demon</h4>
+        <p>A hypothetical demon sorting fast/slow molecules apparently violates the Second Law; Landauer's principle resolves the paradox: information erasure dissipates k_BT ln2 of energy per bit.</p>
+      </div>
+    </div>
+
+    <!-- ── Key Equations ────────────────────────────────────────── -->
+    <h2 class="section-title">Key Equations</h2>
+    <div class="equations-block">
+      <div class="eq-title">// Foundational Thermodynamic Formalisms</div>
+      <div class="equation-row">
+        <span class="eq-formula">dU = TdS − PdV + μdN</span>
+        <span class="eq-desc">Fundamental thermodynamic relation combining First and Second Laws; T = temperature, S = entropy, P = pressure, V = volume, μ = chemical potential, N = particle number.</span>
+      </div>
+      <div class="equation-row">
+        <span class="eq-formula">S = k_B ln Ω</span>
+        <span class="eq-desc">Boltzmann's entropy formula: entropy is proportional to the logarithm of the number of accessible microstates Ω. Engraved on Boltzmann's tomb in Vienna.</span>
+      </div>
+      <div class="equation-row">
+        <span class="eq-formula">G = H − TS</span>
+        <span class="eq-desc">Gibbs free energy: the thermodynamic potential minimized by constant-temperature, constant-pressure systems at equilibrium. ΔG &lt; 0 for spontaneous processes.</span>
+      </div>
+      <div class="equation-row">
+        <span class="eq-formula">η_Carnot = 1 − T_C / T_H</span>
+        <span class="eq-desc">Carnot efficiency: the theoretical maximum efficiency for a heat engine operating between hot reservoir T_H and cold reservoir T_C.</span>
+      </div>
+      <div class="equation-row">
+        <span class="eq-formula">P(E) = e^{−E/k_BT} / Z</span>
+        <span class="eq-desc">Boltzmann distribution; Z = Σe^{−Eₙ/k_BT} is the canonical partition function, the generating function for all thermodynamic quantities.</span>
+      </div>
+    </div>
+
+    <!-- ── Cross-Module Connections ─────────────────────────────── -->
+    <h2 class="section-title">Cross-Module Connections</h2>
+    <div class="connections-panel">
+      <ul class="connection-list">
+        <li><strong>Information Theory</strong> — Shannon entropy H = −Σpᵢ log pᵢ is mathematically identical to Boltzmann-Gibbs entropy; Maxwell's demon and Landauer's principle link information erasure directly to thermodynamic cost.</li>
+        <li><strong>Quantum Mechanics</strong> — Quantum statistical mechanics extends thermodynamics to quantum systems; the Third Law follows from the discrete ground state; black hole thermodynamics (Bekenstein-Hawking) links entropy to horizon area.</li>
+        <li><strong>Chaos Theory</strong> — Boltzmann's H-theorem and ergodicity connect microscopic chaotic dynamics to macroscopic entropy growth; the KS entropy provides a thermodynamic-style measure of chaos.</li>
+        <li><strong>Evolutionary Biology</strong> — Metabolic free energy availability constrains organismal body size and complexity; dissipative structures (Prigogine) explain how life maintains order far from equilibrium.</li>
+        <li><strong>General Relativity</strong> — Black hole thermodynamics: S = kA/4l_P² (Bekenstein-Hawking), where area A plays the role of entropy, temperature is the Hawking temperature T_H = ℏc³/(8πGMk_B).</li>
+      </ul>
+    </div>
+
   </main>
 
-  <footer class="container">
-    <span>Thermodynamics · Constraint‑first substrate grammar · R1‑true</span><br>
-    <span>Student‑ready · AI‑parsable · Canon‑aligned · Zero drift</span>
+  <!-- ── Footer ────────────────────────────────────────────────── -->
+  <footer class="page-footer" role="contentinfo">
+    <p>
+      <a href="/">TriadicFrameworks</a> · thermodynamics · v2.0 · generated 2026-10-02
+      &nbsp;·&nbsp; <a href="/theories/">all modules</a>
+    </p>
   </footer>
 
 </body>

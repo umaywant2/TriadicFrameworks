@@ -3,155 +3,377 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Quantum Mechanics — TriadicFrameworks canonical theory module exploring superposition, measurement, and entanglement." />
+  <meta name="module" content="quantum_mechanics" />
+  <meta name="category" content="Foundational Theory" />
+  <meta name="framework" content="TriadicFrameworks" />
+  <meta name="version" content="2.0" />
+  <meta name="generated" content="2026-10-02" />
+  <meta name="author" content="TriadicFrameworks" />
+  <title>Quantum Mechanics · TriadicFrameworks</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --accent-1:   #7c3aed;
+      --accent-2:   #6d28d9;
+      --accent-3:   #4c1d95;
+      --accent-pale: #f5f3ff;
+      --accent-soft: #ddd6fe;
+      --grad-start:  #0c0015;
+      --grad-mid:    #1e1035;
+      --grad-end:    #2e1065;
+      --text-primary: #2e1065;
+      --text-secondary: #374151;
+      --text-muted:  #9ca3af;
+      --bg-page:     #faf8ff;
+      --bg-card:     #ffffff;
+      --border:      #ede9fe;
+      --radius-sm:   6px;
+      --radius-md:   12px;
+      --radius-lg:   20px;
+      --shadow-sm:   0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.05);
+      --shadow-md:   0 4px 16px rgba(0,0,0,.10), 0 2px 6px rgba(0,0,0,.06);
+      --shadow-lg:   0 12px 40px rgba(0,0,0,.13), 0 4px 12px rgba(0,0,0,.08);
+      --font-sans:   'Segoe UI', system-ui, -apple-system, sans-serif;
+      --font-mono:   'Cascadia Code', 'Fira Code', 'Courier New', monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-sans); background: var(--bg-page); color: var(--text-primary); line-height: 1.65; min-height: 100vh; }
 
-  <title>Quantum Mechanics — TriadicFrameworks</title>
+    .nav-breadcrumb {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(12,0,21,.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(124,58,237,.25);
+      padding: 0.55rem 2rem;
+      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.78rem; font-family: var(--font-mono);
+      color: rgba(255,255,255,.55);
+    }
+    .nav-breadcrumb a { color: rgba(255,255,255,.75); text-decoration: none; }
+    .nav-breadcrumb a:hover { color: #a78bfa; }
+    .nav-breadcrumb .sep { color: rgba(255,255,255,.3); }
+    .nav-breadcrumb .current { color: #a78bfa; font-weight: 600; }
 
-  <!-- Canonical Metadata -->
-  <meta name="generator" content="TriadicFrameworks Engine 2026" />
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#4b4bff" />
+    .module-header {
+      background: linear-gradient(135deg, var(--grad-start) 0%, var(--grad-mid) 50%, var(--grad-end) 100%);
+      padding: 5rem 2rem 4rem; position: relative; overflow: hidden; text-align: center;
+    }
+    .module-header::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 55% 55% at 15% 25%, rgba(124,58,237,.22) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 60% at 85% 75%, rgba(46,16,101,.55) 0%, transparent 65%);
+    }
+    .module-header::after {
+      content: 'Ψ'; position: absolute; right: 5%; top: 50%; transform: translateY(-50%);
+      font-size: 14rem; font-weight: 900; opacity: .05; color: #fff; pointer-events: none; line-height: 1;
+    }
+    .header-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
+    .module-tag {
+      display: inline-block;
+      background: rgba(124,58,237,.22); border: 1px solid rgba(124,58,237,.45);
+      color: #a78bfa; font-size: 0.72rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; padding: .3rem .9rem; border-radius: 99px;
+      margin-bottom: 1.4rem; font-family: var(--font-mono);
+    }
+    .module-header h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -.02em; line-height: 1.1; color: #ffffff; margin-bottom: 1rem; }
+    .module-header h1 span { color: #a78bfa; }
+    .header-tagline { font-size: 1.12rem; color: rgba(255,255,255,.72); max-width: 580px; margin: 0 auto 2rem; line-height: 1.6; }
+    .header-meta-chips { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center; }
+    .chip { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); color: rgba(255,255,255,.8); padding: .28rem .75rem; border-radius: 99px; font-family: var(--font-mono); font-size: .72rem; }
 
-  <!-- Identity -->
-  <meta name="description" content="Quantum Mechanics as an amplitude-first operator grammar: states, operators, measurement, basis, entanglement, and RTT regime behavior." />
-  <meta name="keywords" content="quantum mechanics, amplitudes, operators, measurement, basis, entanglement, rtt, amplitude grammar" />
-  <link rel="canonical" href="https://triadicframeworks.org/docs/theories/quantum_mechanics/" />
+    .page-body { max-width: 1080px; margin: 0 auto; padding: 3rem 2rem 5rem; }
 
-  <!-- OpenGraph -->
-  <meta property="og:title" content="Quantum Mechanics — TriadicFrameworks" />
-  <meta property="og:description" content="Amplitude-first operator grammar unifying states, operators, measurement, basis geometry, and entanglement." />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://triadicframeworks.org/docs/theories/quantum_mechanics/" />
-  <meta property="og:image" content="../../images/quantum_mechanics.png" />
+    .metadata-block {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+      padding: 1.75rem 2rem; margin-bottom: 2rem;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.25rem;
+    }
+    .meta-field { display: flex; flex-direction: column; gap: .2rem; }
+    .meta-label { font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); font-family: var(--font-mono); }
+    .meta-value { font-size: .9rem; font-weight: 600; color: var(--text-primary); }
+    .meta-value.accent { color: var(--accent-1); }
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Quantum Mechanics — TriadicFrameworks" />
-  <meta name="twitter:description" content="Amplitude-first operator grammar unifying states, operators, measurement, basis geometry, and entanglement." />
-  <meta name="twitter:image" content="../../images/quantum_mechanics.png" />
+    .session-context {
+      background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+      border: 1px solid #ddd6fe; border-left: 4px solid var(--accent-1);
+      border-radius: var(--radius-md); padding: 1.5rem 1.75rem; margin-bottom: 2rem;
+    }
+    .session-context h3 { font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-2); font-family: var(--font-mono); margin-bottom: .65rem; }
+    .session-context p { font-size: .9rem; color: var(--text-secondary); line-height: 1.7; }
+    .session-context p + p { margin-top: .5rem; }
+    .session-context strong { color: var(--accent-2); font-weight: 700; }
 
-  <!-- Citation Metadata -->
-  <meta name="citation_title" content="Quantum Mechanics — TriadicFrameworks" />
-  <meta name="citation_author" content="Nawder Loswin" />
-  <meta name="citation_publication_date" content="2025" />
-  <meta name="DC.type" content="Text" />
-  <meta name="DC.format" content="text/html" />
-  <meta name="DC.subject" content="Quantum Mechanics, Amplitude Grammar, Operator Algebra, Measurement, Basis Geometry, Entanglement" />
+    .section-title { font-size: 1.05rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--text-muted); font-family: var(--font-mono); margin-bottom: 1.2rem; display: flex; align-items: center; gap: .6rem; }
+    .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 
-  <!-- AI Metadata -->
-  <meta name="ai.module" content="quantum_mechanics" />
-  <meta name="ai.version" content="1.0" />
-  <meta name="ai.purpose" content="R1 amplitude-level operator grammar" />
-  <meta name="ai.keywords" content="amplitudes, operators, measurement, basis, entanglement, rtt" />
-  <meta name="ai.audience" content="students, researchers, physicists, AIs" />
-  <meta name="ai.navigation" content="../../sitemap_main.xml" />
-  <meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions" />
-  <meta name="ai.contact.x" content="@TriadicFrameworks" />
-  <meta name="ai.contact.youtube" content="@TriadicFrameworks" />
-  <meta name="ai.license" content="Open educational use permitted" />
-  <!-- Favicon -->
-<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
+    .triadic-pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem; }
+    .pillar { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: 2rem 1.75rem; position: relative; overflow: hidden; transition: transform .2s ease, box-shadow .2s ease; }
+    .pillar:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .pillar::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(124,58,237,.04) 0%, transparent 60%); }
+    .pillar-number { font-size: .68rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; font-family: var(--font-mono); color: var(--accent-1); margin-bottom: .5rem; }
+    .pillar-name { font-size: 1.35rem; font-weight: 800; color: var(--text-primary); margin-bottom: .6rem; line-height: 1.2; }
+    .pillar-glyph { position: absolute; top: 1.2rem; right: 1.4rem; font-size: 2.4rem; opacity: .12; user-select: none; }
+    .pillar-desc { font-size: .88rem; color: var(--text-secondary); line-height: 1.65; }
+    .pillar-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1rem; }
+    .pillar-tag { font-size: .68rem; font-weight: 600; padding: .2rem .55rem; border-radius: 99px; font-family: var(--font-mono); background: var(--accent-pale); color: var(--accent-2); border: 1px solid var(--accent-soft); }
 
-  <!-- Canonical RTT‑Inside Styles -->
-  <link rel="stylesheet" href="/styles/theory.css">
-  <link rel="stylesheet" href="/styles/quantum_mechanics.css">
+    .concepts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 2.5rem; }
+    .concept-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.25rem 1.4rem; box-shadow: var(--shadow-sm); }
+    .concept-card h4 { font-size: .88rem; font-weight: 700; color: var(--text-primary); margin-bottom: .4rem; }
+    .concept-card p { font-size: .82rem; color: var(--text-secondary); line-height: 1.55; }
+
+    .equations-block { background: #0c0015; border-radius: var(--radius-md); padding: 1.75rem 2rem; margin-bottom: 2.5rem; border: 1px solid #1e1035; }
+    .equations-block .eq-title { font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #4c1d95; font-family: var(--font-mono); margin-bottom: 1.1rem; }
+    .equation-row { display: flex; align-items: flex-start; gap: 1.2rem; padding: .8rem 0; border-bottom: 1px solid #1e1035; }
+    .equation-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .eq-formula { font-family: var(--font-mono); font-size: .95rem; color: #a78bfa; font-weight: 600; min-width: 230px; flex-shrink: 0; }
+    .eq-desc { font-size: .83rem; color: #c4b5fd; line-height: 1.5; }
+
+    .interpretations-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: .85rem; margin-bottom: 2.5rem; }
+    .interp-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.1rem 1.25rem; box-shadow: var(--shadow-sm); }
+    .interp-card h4 { font-size: .82rem; font-weight: 700; color: var(--accent-2); margin-bottom: .35rem; }
+    .interp-card p { font-size: .79rem; color: var(--text-secondary); line-height: 1.5; }
+
+    .connections-panel { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: 1.75rem 2rem; margin-bottom: 2.5rem; }
+    .connection-list { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
+    .connection-list li { display: flex; align-items: center; gap: .75rem; font-size: .88rem; color: var(--text-secondary); }
+    .connection-list li::before { content: '→'; color: var(--accent-1); font-weight: 700; flex-shrink: 0; }
+    .connection-list strong { color: var(--text-primary); font-weight: 700; }
+
+    .page-footer { border-top: 1px solid var(--border); margin-top: 3rem; padding: 1.5rem 2rem; text-align: center; font-size: .78rem; color: var(--text-muted); font-family: var(--font-mono); }
+    .page-footer a { color: var(--accent-1); text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 640px) {
+      .module-header { padding: 3.5rem 1.25rem 2.75rem; }
+      .page-body { padding: 2rem 1.25rem 4rem; }
+      .metadata-block { padding: 1.25rem; }
+      .triadic-pillars { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
-
 <body>
 
-  <!-- HERO -->
-  <div class="hero hero-qcompute">
-    <img src="../../images/quantum_mechanics.png"
-         alt="Quantum Mechanics Hero Image"
-         class="hero-img">
-    <div class="hero-overlay">
-      <h1>Quantum Mechanics</h1>
-      <p>Amplitude Grammar • Operator‑First • R1 Substrate</p>
-      <div class="hero-icons">
-        <span>🎛 Amplitude‑First</span>
-        <span>📐 Operator Geometry</span>
-        <span>🔗 Entanglement Structure</span>
-        <span>🌀 Basis & Measurement</span>
+  <nav class="nav-breadcrumb" aria-label="Breadcrumb">
+    <a href="/">TriadicFrameworks</a>
+    <span class="sep">/</span>
+    <a href="/theories/">theories</a>
+    <span class="sep">/</span>
+    <span class="current">quantum_mechanics</span>
+  </nav>
+
+  <header class="module-header" role="banner">
+    <div class="header-inner">
+      <div class="module-tag">Foundational Theory · Module 06</div>
+      <h1>Quantum <span>Mechanics</span></h1>
+      <p class="header-tagline">
+        The fundamental theory of matter at atomic and subatomic scales — where probability
+        amplitudes, operator observables, and entanglement replace classical determinism
+        with a richer, irreducibly probabilistic description of nature.
+      </p>
+      <div class="header-meta-chips">
+        <span class="chip">wavefunction</span>
+        <span class="chip">uncertainty principle</span>
+        <span class="chip">entanglement</span>
+        <span class="chip">operators</span>
+        <span class="chip">Hilbert space</span>
       </div>
     </div>
-  </div>
+  </header>
 
-  <main class="container">
+  <main class="page-body">
 
-    <!-- INTRO CARD -->
-    <div class="card">
-      <h2>Amplitude Geometry and Operator Coherence</h2>
+    <section class="metadata-block" aria-label="Module Metadata">
+      <div class="meta-field">
+        <span class="meta-label">Module ID</span>
+        <span class="meta-value accent">quantum_mechanics</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Domain</span>
+        <span class="meta-value">Theoretical Physics · Atomic Physics</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Scale</span>
+        <span class="meta-value">Atomic · Subatomic · Quantum</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Triadic Class</span>
+        <span class="meta-value">Fundamental Framework</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Status</span>
+        <span class="meta-value accent">Active</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Version</span>
+        <span class="meta-value">2.0 · 2026-10-02</span>
+      </div>
+    </section>
+
+    <section class="session-context" aria-label="Session Context">
+      <h3>⟳ Session Context</h3>
       <p>
-        Quantum Mechanics here is not probabilistic chaos; it is an amplitude‑first
-        Hilbert‑space grammar where operators, states, and measurement define
-        coherence before collapse.
+        <strong>Focus:</strong> Quantum Mechanics is examined through the TriadicFrameworks pillars of
+        <strong>Superposition</strong>, <strong>Measurement</strong>, and <strong>Entanglement</strong> —
+        the three phenomena that most radically distinguish quantum from classical physics,
+        and whose interplay defines the measurement problem and foundational debates.
       </p>
-    </div>
+      <p>
+        This module covers the Hilbert space formalism, Schrödinger and Heisenberg pictures,
+        the uncertainty principle, Bell's theorem, and major interpretive frameworks,
+        with cross-module resonances to Quantum Field Theory, Information Theory, and General Relativity.
+      </p>
+    </section>
 
-    <!-- TWO‑COLUMN LAYOUT -->
-    <div class="layout">
+    <h2 class="section-title">Triadic Pillars</h2>
+    <div class="triadic-pillars" role="list">
 
-      <!-- LEFT COLUMN -->
-      <section class="card">
-        <h2>Module Summary</h2>
-        <p>
-          In TriadicFrameworks, Quantum Mechanics is treated as a
-          <strong>non‑classical amplitude geometry</strong>, not a particle theory and
-          not a wave theory. It defines:
+      <article class="pillar" role="listitem">
+        <div class="pillar-glyph">Ψ</div>
+        <div class="pillar-number">Pillar I</div>
+        <h3 class="pillar-name">Superposition</h3>
+        <p class="pillar-desc">
+          A quantum system exists as a linear combination of basis states |ψ⟩ = Σcₙ|n⟩
+          until an interaction forces it into a definite outcome. Superposition is
+          the source of quantum interference, the double-slit pattern, and the
+          computational power of quantum computers.
         </p>
-        <ul class="hero-list">
-          <li><span class="bullet"></span><div>amplitude states in Hilbert space</div></li>
-          <li><span class="bullet"></span><div>operator algebra (observables, evolution, measurement)</div></li>
-          <li><span class="bullet"></span><div>basis geometry and transformations</div></li>
-          <li><span class="bullet"></span><div>measurement as projection, not revelation</div></li>
-          <li><span class="bullet"></span><div>entanglement and tensor‑product structure</div></li>
-          <li><span class="bullet"></span><div>RTT regime behavior (R1 → R4, with QM fully valid only in R1)</div></li>
-        </ul>
-
-        <div class="hero-pill-row">
-          <span class="pill accent">Amplitude‑first</span>
-          <span class="pill">Operator‑aligned</span>
-          <span class="pill">Basis‑true</span>
-          <span class="pill">Hilbert‑geometry</span>
-          <span class="pill">Zero drift</span>
+        <div class="pillar-tags">
+          <span class="pillar-tag">wavefunction</span>
+          <span class="pillar-tag">interference</span>
+          <span class="pillar-tag">Hilbert space</span>
         </div>
-      </section>
+      </article>
 
-      <!-- RIGHT COLUMN -->
-      <aside class="right-column">
-
-        <div class="card">
-          <h2>Module Navigation</h2>
-          <ul class="link-list">
-            <li><a href="README.md" target="_blank">README</a></li>
-            <li><a href="module.json" target="_blank">module.json</a></li>
-            <li><a href="module_rtt1.json" target="_blank">RTT/1 — Amplitude Grammar</a></li>
-            <li><a href="module_rtt2.json" target="_blank">RTT/2 — Embedded in QFT</a></li>
-            <li><a href="module_rtt3.json" target="_blank">RTT/3 — High‑Energy Embedding</a></li>
-            <li><a href="session_context.md" target="_blank">Session Context</a></li>
-            <li><a href="operators.md" target="_blank">Operators</a></li>
-            <li><a href="operator_examples.md" target="_blank">Operator Examples</a></li>
-            <li><a href="regimes.md" target="_blank">Regimes</a></li>
-            <li><a href="coherence_map.md" target="_blank">Coherence Map</a></li>
-            <li><a href="examples.md" target="_blank">Examples</a></li>
-            <li><a href="explanations.md" target="_blank">Explanations</a></li>
-            <li><a href="faq.md" target="_blank">FAQ</a></li>
-            <li><a href="cross_module.md" target="_blank">Cross‑Module Integration</a></li>
-            <li><a href="lineage.md" target="_blank">Lineage</a></li>
-            <li><a href="simulation_hooks.json" target="_blank">Simulation Hooks</a></li>
-            <li><a href="engine_notes.md" target="_blank">Engine Notes</a></li>
-          </ul>
+      <article class="pillar" role="listitem">
+        <div class="pillar-glyph">👁</div>
+        <div class="pillar-number">Pillar II</div>
+        <h3 class="pillar-name">Measurement</h3>
+        <p class="pillar-desc">
+          Measurement collapses the wavefunction to a definite eigenvalue with probability
+          |cₙ|² (Born rule). The act of measurement is irreversible, non-unitary, and
+          physically distinct from unitary Schrödinger evolution — the tension between
+          these two dynamics is the measurement problem.
+        </p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">Born rule</span>
+          <span class="pillar-tag">collapse</span>
+          <span class="pillar-tag">observables</span>
         </div>
+      </article>
 
-      </aside>
+      <article class="pillar" role="listitem">
+        <div class="pillar-glyph">∞</div>
+        <div class="pillar-number">Pillar III</div>
+        <h3 class="pillar-name">Entanglement</h3>
+        <p class="pillar-desc">
+          Two particles in an entangled state |ψ⟩ ≠ |ψ₁⟩⊗|ψ₂⟩ exhibit correlated
+          measurement outcomes that violate Bell inequalities — ruling out all local
+          hidden variable theories. Entanglement is the resource underlying quantum
+          cryptography, teleportation, and error correction.
+        </p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">Bell inequalities</span>
+          <span class="pillar-tag">non-locality</span>
+          <span class="pillar-tag">quantum information</span>
+        </div>
+      </article>
+
     </div>
+
+    <h2 class="section-title">Core Concepts</h2>
+    <div class="concepts-grid">
+      <div class="concept-card">
+        <h4>Hilbert Space</h4>
+        <p>The mathematical arena of quantum mechanics: a complete complex inner product space where state vectors |ψ⟩ live and operators act as observables.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Heisenberg Uncertainty</h4>
+        <p>σₓ·σₚ ≥ ℏ/2: position and momentum cannot both be precisely defined simultaneously. A fundamental consequence of the operator commutation relation [x̂, p̂] = iℏ.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Spin</h4>
+        <p>An intrinsic angular momentum with no classical analogue; fermions carry half-integer spin (ℏ/2) and obey the Pauli exclusion principle that structures all chemistry.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Density Matrix</h4>
+        <p>The operator ρ = Σpₙ|ψₙ⟩⟨ψₙ| generalizes pure states to mixed states (statistical ensembles), essential for open quantum systems and quantum information.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Path Integral</h4>
+        <p>Feynman's reformulation: a particle "takes all paths" simultaneously, each weighted by e^{iS/ℏ}. Classical paths emerge by stationary phase approximation as ℏ → 0.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Decoherence</h4>
+        <p>Entanglement with environmental degrees of freedom suppresses quantum interference terms, converting apparent superpositions into classical probability mixtures — the mechanism of the quantum-to-classical transition.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Key Equations</h2>
+    <div class="equations-block">
+      <div class="eq-title">// Foundational Formalisms</div>
+      <div class="equation-row">
+        <span class="eq-formula">iℏ ∂|ψ⟩/∂t = Ĥ|ψ⟩</span>
+        <span class="eq-desc">Schrödinger equation: unitary time evolution of the quantum state. Ĥ is the Hamiltonian operator (total energy).</span>
+      </div>
+      <div class="equation-row">
+        <span class="eq-formula">P(aₙ) = |⟨aₙ|ψ⟩|²</span>
+        <span class="eq-desc">Born rule: the probability of measuring eigenvalue aₙ is the squared modulus of the projection of |ψ⟩ onto the eigenstate |aₙ⟩.</span>
+      </div>
+      <div class="equation-row">
+        <span class="eq-formula">[x̂, p̂] = iℏ</span>
+        <span class="eq-desc">Canonical commutation relation: position and momentum operators do not commute, implying the Heisenberg uncertainty principle.</span>
+      </div>
+      <div class="equation-row">
+        <span class="eq-formula">σₓ·σₚ ≥ ℏ/2</span>
+        <span class="eq-desc">Heisenberg uncertainty principle: the product of standard deviations of position and momentum is bounded below by ℏ/2.</span>
+      </div>
+    </div>
+
+    <h2 class="section-title">Interpretations</h2>
+    <div class="interpretations-grid">
+      <div class="interp-card">
+        <h4>Copenhagen</h4>
+        <p>The wavefunction is an epistemic tool; physical reality is only defined at measurement. The quantum-classical boundary is contextual.</p>
+      </div>
+      <div class="interp-card">
+        <h4>Many-Worlds (Everett)</h4>
+        <p>The wavefunction never collapses; all branches of superposition are real. Observers split into branches at each measurement event.</p>
+      </div>
+      <div class="interp-card">
+        <h4>Pilot Wave (de Broglie-Bohm)</h4>
+        <p>Particles have definite positions at all times, guided by a real wavefunction pilot wave. Non-local but deterministic.</p>
+      </div>
+      <div class="interp-card">
+        <h4>QBism</h4>
+        <p>Quantum states represent an agent's beliefs about future experiences; Born rule updates are personalist Bayesian updates.</p>
+      </div>
+      <div class="interp-card">
+        <h4>Relational QM</h4>
+        <p>Quantum states are relative to observers; there is no absolute observer-independent quantum state. Reality is relation, not substance.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Cross-Module Connections</h2>
+    <div class="connections-panel">
+      <ul class="connection-list">
+        <li><strong>Quantum Field Theory</strong> — QM is the non-relativistic limit of QFT; QFT promotes quantum mechanics to a framework consistent with special relativity and particle creation/annihilation.</li>
+        <li><strong>Information Theory</strong> — Quantum information extends classical Shannon information theory; entanglement enables quantum teleportation and superdense coding.</li>
+        <li><strong>Chaos Theory</strong> — Quantum chaos studies the quantum signatures of classically chaotic systems via energy-level statistics and eigenfunction scarring.</li>
+        <li><strong>General Relativity</strong> — The unification of QM and GR (quantum gravity) remains physics' deepest open problem; black hole information paradox sits at their intersection.</li>
+        <li><strong>Thermodynamics</strong> — Quantum statistical mechanics (density matrix formalism) derives thermodynamic laws from microscopic quantum dynamics; the third law follows from the quantum ground state.</li>
+      </ul>
+    </div>
+
   </main>
 
-  <footer class="container">
-    <span>Quantum Mechanics · R1 amplitude‑first operator grammar · Substrate of QFT</span><br>
-    <span>Student‑ready · AI‑parsable · Canon‑aligned · Zero drift</span>
+  <footer class="page-footer" role="contentinfo">
+    <p>
+      <a href="/">TriadicFrameworks</a> · quantum_mechanics · v2.0 · generated 2026-10-02
+      &nbsp;·&nbsp; <a href="/theories/">all modules</a>
+    </p>
   </footer>
 
 </body>

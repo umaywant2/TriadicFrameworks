@@ -1,153 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Standard Model — TriadicFrameworks canonical theory module exploring matter, force, and symmetry breaking." />
+  <meta name="module" content="standard_model" />
+  <meta name="category" content="Foundational Theory" />
+  <meta name="framework" content="TriadicFrameworks" />
+  <meta name="version" content="2.0" />
+  <meta name="generated" content="2026-10-02" />
+  <meta name="author" content="TriadicFrameworks" />
+  <title>Standard Model · TriadicFrameworks</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --accent-1:   #dc2626;
+      --accent-2:   #b91c1c;
+      --accent-3:   #7f1d1d;
+      --accent-pale: #fef2f2;
+      --accent-soft: #fecaca;
+      --grad-start:  #1a0000;
+      --grad-mid:    #450a0a;
+      --grad-end:    #7f1d1d;
+      --text-primary: #1c1817;
+      --text-secondary: #4b5563;
+      --text-muted:  #9ca3af;
+      --bg-page:     #fafaf9;
+      --bg-card:     #ffffff;
+      --border:      #fee2e2;
+      --radius-sm:   6px;
+      --radius-md:   12px;
+      --radius-lg:   20px;
+      --shadow-sm:   0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.05);
+      --shadow-md:   0 4px 16px rgba(0,0,0,.10), 0 2px 6px rgba(0,0,0,.06);
+      --shadow-lg:   0 12px 40px rgba(0,0,0,.13), 0 4px 12px rgba(0,0,0,.08);
+      --font-sans:   'Segoe UI', system-ui, -apple-system, sans-serif;
+      --font-mono:   'Cascadia Code', 'Fira Code', 'Courier New', monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-sans); background: var(--bg-page); color: var(--text-primary); line-height: 1.65; min-height: 100vh; }
 
-  <!-- Canonical Metadata -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    .nav-breadcrumb {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(26,0,0,.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(220,38,38,.25);
+      padding: 0.55rem 2rem;
+      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.78rem; font-family: var(--font-mono);
+      color: rgba(255,255,255,.55);
+    }
+    .nav-breadcrumb a { color: rgba(255,255,255,.75); text-decoration: none; }
+    .nav-breadcrumb a:hover { color: #f87171; }
+    .nav-breadcrumb .sep { color: rgba(255,255,255,.3); }
+    .nav-breadcrumb .current { color: #f87171; font-weight: 600; }
 
-  <title>Standard Model — TriadicFrameworks</title>
-  <meta name="description" content="The Standard Model as a sector grammar of excitation modes, gauge geometry, Higgs stabilization, and resonance behavior across R2→R3.">
-  <meta name="keywords" content="standard model, sector grammar, excitations, gauge symmetry, higgs mechanism, qft, rtt, triadic frameworks">
+    .module-header {
+      background: linear-gradient(135deg, var(--grad-start) 0%, var(--grad-mid) 50%, var(--grad-end) 100%);
+      padding: 5rem 2rem 4rem; position: relative; overflow: hidden; text-align: center;
+    }
+    .module-header::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 55% 55% at 15% 25%, rgba(220,38,38,.2) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 60% at 85% 75%, rgba(127,29,29,.5) 0%, transparent 65%);
+    }
+    .module-header::after {
+      content: 'SM'; position: absolute; right: 4%; top: 50%; transform: translateY(-50%);
+      font-size: 10rem; font-weight: 900; opacity: .05; color: #fff; pointer-events: none; line-height: 1; font-family: var(--font-mono);
+    }
+    .header-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
+    .module-tag {
+      display: inline-block;
+      background: rgba(220,38,38,.22); border: 1px solid rgba(220,38,38,.45);
+      color: #f87171; font-size: 0.72rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; padding: .3rem .9rem; border-radius: 99px;
+      margin-bottom: 1.4rem; font-family: var(--font-mono);
+    }
+    .module-header h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -.02em; line-height: 1.1; color: #ffffff; margin-bottom: 1rem; }
+    .module-header h1 span { color: #f87171; }
+    .header-tagline { font-size: 1.12rem; color: rgba(255,255,255,.72); max-width: 580px; margin: 0 auto 2rem; line-height: 1.6; }
+    .header-meta-chips { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center; }
+    .chip { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); color: rgba(255,255,255,.8); padding: .28rem .75rem; border-radius: 99px; font-family: var(--font-mono); font-size: .72rem; }
 
-  <link rel="canonical" href="https://triadicframeworks.org/docs/theories/standard_model/">
+    .page-body { max-width: 1080px; margin: 0 auto; padding: 3rem 2rem 5rem; }
 
-  <!-- OpenGraph -->
-  <meta property="og:title" content="Standard Model — TriadicFrameworks">
-  <meta property="og:description" content="A sector grammar of excitation modes, gauge geometry, and Higgs-anchored stability.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://triadicframeworks.org/docs/theories/standard_model/">
-  <meta property="og:image" content="../../images/standard_model.png">
+    .metadata-block {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+      padding: 1.75rem 2rem; margin-bottom: 2rem;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.25rem;
+    }
+    .meta-field { display: flex; flex-direction: column; gap: .2rem; }
+    .meta-label { font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); font-family: var(--font-mono); }
+    .meta-value { font-size: .9rem; font-weight: 600; color: var(--text-primary); }
+    .meta-value.accent { color: var(--accent-1); }
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Standard Model — TriadicFrameworks">
-  <meta name="twitter:description" content="Excitation-based, gauge-geometry-aligned, substrate-aware Standard Model.">
-  <meta name="twitter:image" content="../../images/standard_model.png">
+    .session-context {
+      background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+      border: 1px solid #fecaca; border-left: 4px solid var(--accent-1);
+      border-radius: var(--radius-md); padding: 1.5rem 1.75rem; margin-bottom: 2rem;
+    }
+    .session-context h3 { font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-2); font-family: var(--font-mono); margin-bottom: .65rem; }
+    .session-context p { font-size: .9rem; color: var(--text-secondary); line-height: 1.7; }
+    .session-context p + p { margin-top: .5rem; }
+    .session-context strong { color: var(--accent-2); font-weight: 700; }
 
-  <!-- Citation -->
-  <meta name="citation_title" content="Standard Model — TriadicFrameworks">
-  <meta name="citation_author" content="Nawder Loswin">
-  <meta name="citation_publication_date" content="2025">
-  <meta name="DC.type" content="Text">
-  <meta name="DC.format" content="text/html">
-  <meta name="DC.subject" content="Standard Model, Gauge Symmetry, Excitation Modes, Higgs Mechanism">
+    .section-title { font-size: 1.05rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--text-muted); font-family: var(--font-mono); margin-bottom: 1.2rem; display: flex; align-items: center; gap: .6rem; }
+    .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 
-  <!-- AI Metadata -->
-  <meta name="ai.module" content="standard_model">
-  <meta name="ai.version" content="1.0">
-  <meta name="ai.purpose" content="Provide a sector-based, excitation-first interface to the Standard Model.">
-  <meta name="ai.keywords" content="standard model, excitations, gauge symmetry, higgs, resonance, rtt">
-  <meta name="ai.audience" content="students, researchers, physicists, AIs">
-  <meta name="ai.navigation" content="../../sitemap_main.xml">
-  <meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
-  <meta name="ai.contact.x" content="@TriadicFrameworks">
-  <meta name="ai.contact.youtube" content="@TriadicFrameworks">
-  <meta name="ai.license" content="Open educational use permitted">
+    .triadic-pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem; }
+    .pillar { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: 2rem 1.75rem; position: relative; overflow: hidden; transition: transform .2s ease, box-shadow .2s ease; }
+    .pillar:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .pillar::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(220,38,38,.04) 0%, transparent 60%); }
+    .pillar-number { font-size: .68rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; font-family: var(--font-mono); color: var(--accent-1); margin-bottom: .5rem; }
+    .pillar-name { font-size: 1.35rem; font-weight: 800; color: var(--text-primary); margin-bottom: .6rem; line-height: 1.2; }
+    .pillar-glyph { position: absolute; top: 1.2rem; right: 1.4rem; font-size: 2.4rem; opacity: .12; user-select: none; }
+    .pillar-desc { font-size: .88rem; color: var(--text-secondary); line-height: 1.65; }
+    .pillar-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1rem; }
+    .pillar-tag { font-size: .68rem; font-weight: 600; padding: .2rem .55rem; border-radius: 99px; font-family: var(--font-mono); background: var(--accent-pale); color: var(--accent-2); border: 1px solid var(--accent-soft); }
 
-  <!-- Favicon -->
-  <link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
-  <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
-  <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
-  <!-- Canonical RTT‑Inside Styles -->
-  <link rel="stylesheet" href="/styles/theory.css">
-  <link rel="stylesheet" href="/styles/standard_model.css">
+    /* Particle table */
+    .particle-table-wrap { overflow-x: auto; margin-bottom: 2.5rem; }
+    .particle-table { width: 100%; border-collapse: collapse; font-size: .82rem; }
+    .particle-table th {
+      background: var(--accent-1); color: #fff;
+      padding: .6rem 1rem; text-align: left;
+      font-size: .7rem; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; font-family: var(--font-mono);
+    }
+    .particle-table td { padding: .55rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .particle-table tr:last-child td { border-bottom: none; }
+    .particle-table tr:hover td { background: var(--accent-pale); }
+    .particle-table .cat-label { font-weight: 700; color: var(--text-primary); font-family: var(--font-mono); font-size: .75rem; }
+    .particle-table .symbol { font-family: var(--font-mono); color: var(--accent-1); font-weight: 700; }
 
-  <meta name="theme-color" content="#1a1a1a">
+    .concepts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 2.5rem; }
+    .concept-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.25rem 1.4rem; box-shadow: var(--shadow-sm); }
+    .concept-card h4 { font-size: .88rem; font-weight: 700; color: var(--text-primary); margin-bottom: .4rem; }
+    .concept-card p { font-size: .82rem; color: var(--text-secondary); line-height: 1.55; }
 
+    .equations-block { background: #1a0000; border-radius: var(--radius-md); padding: 1.75rem 2rem; margin-bottom: 2.5rem; border: 1px solid #450a0a; }
+    .equations-block .eq-title { font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #7f1d1d; font-family: var(--font-mono); margin-bottom: 1.1rem; }
+    .equation-row { display: flex; align-items: flex-start; gap: 1.2rem; padding: .8rem 0; border-bottom: 1px solid #450a0a; }
+    .equation-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .eq-formula { font-family: var(--font-mono); font-size: .92rem; color: #f87171; font-weight: 600; min-width: 240px; flex-shrink: 0; }
+    .eq-desc { font-size: .83rem; color: #fca5a5; line-height: 1.5; }
+
+    .connections-panel { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: 1.75rem 2rem; margin-bottom: 2.5rem; }
+    .connection-list { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
+    .connection-list li { display: flex; align-items: center; gap: .75rem; font-size: .88rem; color: var(--text-secondary); }
+    .connection-list li::before { content: '→'; color: var(--accent-1); font-weight: 700; flex-shrink: 0; }
+    .connection-list strong { color: var(--text-primary); font-weight: 700; }
+
+    .page-footer { border-top: 1px solid var(--border); margin-top: 3rem; padding: 1.5rem 2rem; text-align: center; font-size: .78rem; color: var(--text-muted); font-family: var(--font-mono); }
+    .page-footer a { color: var(--accent-1); text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 640px) {
+      .module-header { padding: 3.5rem 1.25rem 2.75rem; }
+      .page-body { padding: 2rem 1.25rem 4rem; }
+      .metadata-block { padding: 1.25rem; }
+      .triadic-pillars { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
-
 <body>
 
-  <!-- HERO -->
-  <div class="hero hero-qcompute">
-    <img src="../../images/standard_model.png"
-         alt="Standard Model Hero Image"
-         class="hero-img">
-    <div class="hero-overlay">
-      <h1>Standard Model</h1>
-      <p>Sector Grammar • Excitation‑Based • Gauge‑Geometry Aligned</p>
-      <div class="hero-icons">
-        <span>⚛️ Excitation Modes</span>
-        <span>🌀 Gauge Geometry</span>
-        <span>🌟 Higgs Stabilization</span>
-        <span>🔷 R2 → R3 Behavior</span>
+  <nav class="nav-breadcrumb" aria-label="Breadcrumb">
+    <a href="/">TriadicFrameworks</a>
+    <span class="sep">/</span>
+    <a href="/theories/">theories</a>
+    <span class="sep">/</span>
+    <span class="current">standard_model</span>
+  </nav>
+
+  <header class="module-header" role="banner">
+    <div class="header-inner">
+      <div class="module-tag">Foundational Theory · Module 07</div>
+      <h1>Standard <span>Model</span></h1>
+      <p class="header-tagline">
+        Humanity's most precisely verified physical theory — a gauge quantum field theory
+        unifying the electromagnetic, weak, and strong forces under a single
+        SU(3)×SU(2)×U(1) symmetry group with 17 fundamental particles.
+      </p>
+      <div class="header-meta-chips">
+        <span class="chip">quarks &amp; leptons</span>
+        <span class="chip">gauge bosons</span>
+        <span class="chip">Higgs mechanism</span>
+        <span class="chip">SU(3)×SU(2)×U(1)</span>
+        <span class="chip">QCD · QED · EW</span>
       </div>
     </div>
-  </div>
+  </header>
 
-  <main class="container">
+  <main class="page-body">
 
-    <!-- INTRO CARD -->
-    <div class="card">
-      <h2>Gauge Symmetry and Sector Coherence</h2>
+    <section class="metadata-block" aria-label="Module Metadata">
+      <div class="meta-field">
+        <span class="meta-label">Module ID</span>
+        <span class="meta-value accent">standard_model</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Domain</span>
+        <span class="meta-value">Particle Physics · Gauge Theory</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Scale</span>
+        <span class="meta-value">Sub-nuclear · Quantum · Relativistic</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Triadic Class</span>
+        <span class="meta-value">Fundamental Framework</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Status</span>
+        <span class="meta-value accent">Active</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Version</span>
+        <span class="meta-value">2.0 · 2026-10-02</span>
+      </div>
+    </section>
+
+    <section class="session-context" aria-label="Session Context">
+      <h3>⟳ Session Context</h3>
       <p>
-        The Standard Model here is not a patchwork of forces; it is a unified
-        gauge‑symmetric substrate where interaction fields and matter sectors
-        share a coherent operator grammar.
+        <strong>Focus:</strong> The Standard Model is examined through the TriadicFrameworks pillars of
+        <strong>Matter</strong>, <strong>Force</strong>, and <strong>Symmetry Breaking</strong> —
+        the three structural layers that together account for all known particle interactions
+        except gravity, with extraordinary predictive precision.
       </p>
+      <p>
+        This module covers the fermion content (quarks, leptons), gauge boson sector,
+        Higgs mechanism, electroweak unification, QCD confinement, and the 19 free parameters
+        of the Standard Model, with cross-module resonances to Quantum Field Theory,
+        Electromagnetism, and General Relativity.
+      </p>
+    </section>
+
+    <h2 class="section-title">Triadic Pillars</h2>
+    <div class="triadic-pillars" role="list">
+
+      <article class="pillar" role="listitem">
+        <div class="pillar-glyph">⚛</div>
+        <div class="pillar-number">Pillar I</div>
+        <h3 class="pillar-name">Matter</h3>
+        <p class="pillar-desc">
+          Matter consists of 12 fundamental fermions (spin-½ particles): 6 quarks arranged
+          in 3 generations (up/down, charm/strange, top/bottom) and 6 leptons
+          (electron, muon, tau and their neutrinos). Each fermion has an antiparticle
+          counterpart with opposite quantum numbers.
+        </p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">quarks (6 flavors)</span>
+          <span class="pillar-tag">leptons (6)</span>
+          <span class="pillar-tag">3 generations</span>
+        </div>
+      </article>
+
+      <article class="pillar" role="listitem">
+        <div class="pillar-glyph">⟨⟩</div>
+        <div class="pillar-number">Pillar II</div>
+        <h3 class="pillar-name">Force</h3>
+        <p class="pillar-desc">
+          Three fundamental forces are mediated by 12 gauge bosons: the photon (EM,
+          U(1)), W⁺/W⁻/Z⁰ (weak, SU(2)), and 8 gluons (strong, SU(3)). Each
+          boson is the quantum of its respective gauge field, introduced by demanding
+          local gauge invariance of the Standard Model Lagrangian.
+        </p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">photon γ</span>
+          <span class="pillar-tag">W/Z bosons</span>
+          <span class="pillar-tag">gluons g</span>
+        </div>
+      </article>
+
+      <article class="pillar" role="listitem">
+        <div class="pillar-glyph">✦</div>
+        <div class="pillar-number">Pillar III</div>
+        <h3 class="pillar-name">Symmetry Breaking</h3>
+        <p class="pillar-desc">
+          The Higgs mechanism breaks electroweak SU(2)×U(1)_Y symmetry spontaneously
+          at ~246 GeV, giving W/Z bosons mass while leaving the photon massless.
+          The Higgs field also couples to fermions via Yukawa terms, generating all
+          fermion masses. The Higgs boson (125 GeV) was discovered in 2012.
+        </p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">Higgs boson H⁰</span>
+          <span class="pillar-tag">Yukawa coupling</span>
+          <span class="pillar-tag">electroweak SSB</span>
+        </div>
+      </article>
+
     </div>
 
-    <!-- TWO‑COLUMN LAYOUT -->
-    <div class="layout">
-
-      <!-- LEFT COLUMN -->
-      <section class="card">
-        <h2>Session Context</h2>
-
-        <ul class="hero-list">
-          <li><span class="bullet"></span><div><strong>Canon:</strong> active (sector‑grammar • excitation‑based)</div></li>
-          <li><span class="bullet"></span><div><strong>Modules:</strong> QFT → Gauge Symmetry → Excitation Sectors → Higgs → Mass → Interaction Channels → Renormalization → Symmetry Restoration</div></li>
-          <li><span class="bullet"></span><div><strong>Drift:</strong> minimal (excitation‑true • no particle‑object ontology)</div></li>
-          <li><span class="bullet"></span><div><strong>Coherence:</strong> stable (gauge‑geometry • symmetry‑preserving)</div></li>
-          <li><span class="bullet"></span><div><strong>Version:</strong> 1.0 (sector‑grammar‑stable)</div></li>
-          <li><span class="bullet"></span><div><strong>Format:</strong> html + markdown + diagrams + resonance‑maps</div></li>
-          <li><span class="bullet"></span><div><strong>Front door:</strong> this page</div></li>
-          <li><span class="bullet"></span><div><strong>Every page:</strong> stands alone + AI‑parsable + excitation‑aligned</div></li>
-          <li><span class="bullet"></span><div><strong>Audience:</strong> students + researchers + physicists + AIs</div></li>
-        </ul>
-
-        <div class="hero-pill-row">
-          <span class="pill accent">Excitation‑first</span>
-          <span class="pill">Gauge‑aligned</span>
-          <span class="pill">Sector‑true</span>
-          <span class="pill">RTT‑aligned</span>
-          <span class="pill">Zero drift</span>
-        </div>
-      </section>
-
-      <!-- RIGHT COLUMN -->
-      <aside class="right-column">
-
-        <div class="card">
-          <h2>Module Navigation</h2>
-          <ul class="link-list">
-            <li><a href="README.md" target="_blank">README</a></li>
-            <li><a href="module.json" target="_blank">Module Identity</a></li>
-            <li><a href="module_rtt1.json" target="_blank">RTT/1 — Operator Grammar</a></li>
-            <li><a href="module_rtt2.json" target="_blank">RTT/2 — Resonance Geometry</a></li>
-            <li><a href="module_rtt3.json" target="_blank">RTT/3 — Substrate Integration</a></li>
-            <li><a href="session_context.md" target="_blank">Session Context</a></li>
-            <li><a href="operators.md" target="_blank">Operators</a></li>
-            <li><a href="regimes.md" target="_blank">Regimes</a></li>
-            <li><a href="coherence_map.md" target="_blank">Coherence Map</a></li>
-            <li><a href="examples.md" target="_blank">Examples</a></li>
-            <li><a href="faq.md" target="_blank">FAQ</a></li>
-            <li><a href="cross_module.md" target="_blank">Cross‑Module Integration</a></li>
-            <li><a href="lineage.md" target="_blank">Lineage</a></li>
-            <li><a href="simulation_hooks.json" target="_blank">Simulation Hooks</a></li>
-            <li><a href="engine_notes.md" target="_blank">Engine Notes</a></li>
-          </ul>
-        </div>
-
-      </aside>
+    <h2 class="section-title">Particle Content</h2>
+    <div class="particle-table-wrap">
+      <table class="particle-table" aria-label="Standard Model Particles">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Particle</th>
+            <th>Symbol</th>
+            <th>Charge (e)</th>
+            <th>Mass (approx.)</th>
+            <th>Force / Role</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="cat-label">Quark</td><td>Up</td><td class="symbol">u</td><td>+2/3</td><td>2.2 MeV</td><td>Strong, EM, Weak</td></tr>
+          <tr><td class="cat-label">Quark</td><td>Down</td><td class="symbol">d</td><td>−1/3</td><td>4.7 MeV</td><td>Strong, EM, Weak</td></tr>
+          <tr><td class="cat-label">Quark</td><td>Top</td><td class="symbol">t</td><td>+2/3</td><td>172.7 GeV</td><td>Strong, EM, Weak</td></tr>
+          <tr><td class="cat-label">Lepton</td><td>Electron</td><td class="symbol">e⁻</td><td>−1</td><td>0.511 MeV</td><td>EM, Weak</td></tr>
+          <tr><td class="cat-label">Lepton</td><td>Electron neutrino</td><td class="symbol">νₑ</td><td>0</td><td>&lt;1.1 eV</td><td>Weak only</td></tr>
+          <tr><td class="cat-label">Gauge Boson</td><td>Photon</td><td class="symbol">γ</td><td>0</td><td>0 (massless)</td><td>Electromagnetic</td></tr>
+          <tr><td class="cat-label">Gauge Boson</td><td>W boson</td><td class="symbol">W±</td><td>±1</td><td>80.4 GeV</td><td>Weak (charged)</td></tr>
+          <tr><td class="cat-label">Gauge Boson</td><td>Z boson</td><td class="symbol">Z⁰</td><td>0</td><td>91.2 GeV</td><td>Weak (neutral)</td></tr>
+          <tr><td class="cat-label">Gauge Boson</td><td>Gluon</td><td class="symbol">g</td><td>0</td><td>0 (massless)</td><td>Strong (8 types)</td></tr>
+          <tr><td class="cat-label">Scalar Boson</td><td>Higgs</td><td class="symbol">H⁰</td><td>0</td><td>125.25 GeV</td><td>Mass generation</td></tr>
+        </tbody>
+      </table>
     </div>
+
+    <h2 class="section-title">Core Concepts</h2>
+    <div class="concepts-grid">
+      <div class="concept-card">
+        <h4>Color Confinement (QCD)</h4>
+        <p>Quarks carry color charge (red, green, blue) and are permanently confined within color-neutral hadrons by gluon exchange; the strong coupling grows with distance (asymptotic freedom at short range).</p>
+      </div>
+      <div class="concept-card">
+        <h4>Electroweak Unification</h4>
+        <p>Glashow, Salam, and Weinberg unified EM and weak forces at ~100 GeV under SU(2)_L × U(1)_Y, broken by the Higgs VEV to yield the photon and massive W/Z bosons.</p>
+      </div>
+      <div class="concept-card">
+        <h4>CKM Matrix</h4>
+        <p>The Cabibbo–Kobayashi–Maskawa matrix describes quark flavor mixing in weak decays; its CP-violating phase accounts for the observed matter-antimatter asymmetry in kaon systems.</p>
+      </div>
+      <div class="concept-card">
+        <h4>PMNS Matrix</h4>
+        <p>The Pontecorvo–Maki–Nakagawa–Sakata matrix governs neutrino flavor oscillations, implying neutrinos have small but nonzero masses — beyond the minimal SM.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Renormalization</h4>
+        <p>Ultraviolet divergences in loop calculations are systematically removed by renormalization; the SM is renormalizable, ensuring finite predictions at all perturbative orders.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Open Problems</h4>
+        <p>The SM does not incorporate gravity, dark matter, dark energy, or explain the hierarchy problem, strong CP problem, matter-antimatter asymmetry, or neutrino mass origin.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Key Equations</h2>
+    <div class="equations-block">
+      <div class="eq-title">// Standard Model Lagrangian Components</div>
+      <div class="equation-row">
+        <span class="eq-formula">ℒ_SM = ℒ_gauge + ℒ_fermion + ℒ_Higgs + ℒ_Yukawa</span>
+        <span class="eq-desc">The full SM Lagrangian: gauge kinetic terms, fermion kinetic+coupling terms, Higgs potential, and Yukawa mass-generation terms.</span>
+      </div>
+      <div class="equation-row">
+        <span class="eq-formula">ℒ_gauge = −¼ F_μν^a F^{aμν}</span>
+        <span class="eq-desc">Gauge field kinetic terms; F^a_μν = ∂_μA^a_ν − ∂_νA^a_μ + gf^{abc}A^b_μA^c_ν for non-Abelian SU(3) and SU(2).</span>
+      </div>
+      <div class="equation-row">
+        <span class="eq-formula">V(φ) = −μ²|φ|² + λ|φ|⁴</span>
+        <span class="eq-desc">Higgs Mexican hat potential; minimum at |φ|² = μ²/2λ ≡ v²/2 (v ≈ 246 GeV) spontaneously breaks SU(2)×U(1) → U(1)_EM.</span>
+      </div>
+      <div class="equation-row">
+        <span class="eq-formula">ℒ_Yukawa = −y_f (ψ̄_L φ ψ_R + h.c.)</span>
+        <span class="eq-desc">Yukawa coupling of fermions to the Higgs; after SSB, m_f = y_f · v/√2. The top quark has y_t ≈ 1 (order-unity coupling).</span>
+      </div>
+    </div>
+
+    <h2 class="section-title">Cross-Module Connections</h2>
+    <div class="connections-panel">
+      <ul class="connection-list">
+        <li><strong>Quantum Field Theory</strong> — The Standard Model is the specific QFT realized in nature; all SM predictions follow from path-integral quantization of its Lagrangian.</li>
+        <li><strong>Electromagnetism</strong> — QED (U(1) gauge theory) is the SM's electromagnetic sector; its coupling constant α ≈ 1/137 runs with energy.</li>
+        <li><strong>General Relativity</strong> — Gravity is excluded from the SM; combining QFT and GR into a consistent quantum gravity theory remains unsolved.</li>
+        <li><strong>Thermodynamics</strong> — The SM describes phase transitions in the early universe: QCD confinement at ~150 MeV and electroweak symmetry breaking at ~100 GeV.</li>
+        <li><strong>Information Theory</strong> — Quantum computing exploits SM-described particles; qubit decoherence timescales are governed by SM interactions with the environment.</li>
+      </ul>
+    </div>
+
   </main>
 
-  <footer class="container">
-    <span>Standard Model · Sector‑grammar excitation interface · R2 → R3 compatible</span><br>
-    <span>Student‑ready · AI‑parsable · Canon‑aligned · Zero drift</span>
+  <footer class="page-footer" role="contentinfo">
+    <p>
+      <a href="/">TriadicFrameworks</a> · standard_model · v2.0 · generated 2026-10-02
+      &nbsp;·&nbsp; <a href="/theories/">all modules</a>
+    </p>
   </footer>
 
 </body>

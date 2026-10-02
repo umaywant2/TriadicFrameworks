@@ -3,146 +3,385 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Morphic Resonance — TriadicFrameworks canonical theory module exploring field memory, formative causation, and collective habit." />
+  <meta name="module" content="morphic_resonance" />
+  <meta name="category" content="Foundational Theory" />
+  <meta name="framework" content="TriadicFrameworks" />
+  <meta name="version" content="2.0" />
+  <meta name="generated" content="2026-10-02" />
+  <meta name="author" content="TriadicFrameworks" />
+  <title>Morphic Resonance · TriadicFrameworks</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --accent-1:   #9333ea;
+      --accent-2:   #7e22ce;
+      --accent-3:   #581c87;
+      --accent-pale: #faf5ff;
+      --accent-soft: #e9d5ff;
+      --grad-start:  #0d0018;
+      --grad-mid:    #2e1065;
+      --grad-end:    #581c87;
+      --text-primary: #3b0764;
+      --text-secondary: #4b5563;
+      --text-muted:  #9ca3af;
+      --bg-page:     #fdf8ff;
+      --bg-card:     #ffffff;
+      --border:      #f3e8ff;
+      --radius-sm:   6px;
+      --radius-md:   12px;
+      --radius-lg:   20px;
+      --shadow-sm:   0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.05);
+      --shadow-md:   0 4px 16px rgba(0,0,0,.10), 0 2px 6px rgba(0,0,0,.06);
+      --shadow-lg:   0 12px 40px rgba(0,0,0,.13), 0 4px 12px rgba(0,0,0,.08);
+      --font-sans:   'Segoe UI', system-ui, -apple-system, sans-serif;
+      --font-mono:   'Cascadia Code', 'Fira Code', 'Courier New', monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-sans); background: var(--bg-page); color: var(--text-primary); line-height: 1.65; min-height: 100vh; }
 
-  <title>Morphic Resonance — TriadicFrameworks</title>
+    .nav-breadcrumb {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(13,0,24,.92); backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(147,51,234,.25);
+      padding: 0.55rem 2rem;
+      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.78rem; font-family: var(--font-mono);
+      color: rgba(255,255,255,.55);
+    }
+    .nav-breadcrumb a { color: rgba(255,255,255,.75); text-decoration: none; }
+    .nav-breadcrumb a:hover { color: #c084fc; }
+    .nav-breadcrumb .sep { color: rgba(255,255,255,.3); }
+    .nav-breadcrumb .current { color: #c084fc; font-weight: 600; }
 
-  <!-- Canonical Metadata -->
-  <meta name="generator" content="TriadicFrameworks Engine 2026" />
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#5b4bff" />
+    .module-header {
+      background: linear-gradient(135deg, var(--grad-start) 0%, var(--grad-mid) 50%, var(--grad-end) 100%);
+      padding: 5rem 2rem 4rem; position: relative; overflow: hidden; text-align: center;
+    }
+    .module-header::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 55% 55% at 15% 25%, rgba(147,51,234,.2) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 60% at 85% 75%, rgba(88,28,135,.5) 0%, transparent 65%);
+    }
+    .module-header::after {
+      content: '∿'; position: absolute; right: 5%; top: 50%; transform: translateY(-50%);
+      font-size: 14rem; opacity: .05; pointer-events: none; line-height: 1; color: #fff;
+    }
+    .header-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
+    .module-tag {
+      display: inline-block;
+      background: rgba(147,51,234,.22); border: 1px solid rgba(147,51,234,.45);
+      color: #c084fc; font-size: 0.72rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; padding: .3rem .9rem; border-radius: 99px;
+      margin-bottom: 1.4rem; font-family: var(--font-mono);
+    }
+    .module-header h1 {
+      font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 800;
+      letter-spacing: -.02em; line-height: 1.1; color: #ffffff; margin-bottom: 1rem;
+    }
+    .module-header h1 span { color: #c084fc; }
+    .header-tagline { font-size: 1.12rem; color: rgba(255,255,255,.72); max-width: 580px; margin: 0 auto 2rem; line-height: 1.6; }
+    .header-meta-chips { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center; }
+    .chip {
+      background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18);
+      color: rgba(255,255,255,.8); padding: .28rem .75rem; border-radius: 99px;
+      font-family: var(--font-mono); font-size: .72rem;
+    }
 
-  <!-- Identity -->
-  <meta name="description" content="Morphic Resonance as a dimensional-coherence interface: pattern activation via coherence structures and cross-temporal adjacency, not fields or metaphysical influence." />
-  <meta name="keywords" content="morphic resonance, dimensional coherence, pattern activation, resonance geometry, RTT, coherence surfaces" />
-  <link rel="canonical" href="https://triadicframeworks.org/docs/theories/morphic_resonance/" />
+    .page-body { max-width: 1080px; margin: 0 auto; padding: 3rem 2rem 5rem; }
 
-  <!-- OpenGraph -->
-  <meta property="og:title" content="Morphic Resonance — TriadicFrameworks" />
-  <meta property="og:description" content="Dimensional-coherence interface for cross-temporal pattern activation via coherence structures and adjacency." />
-  <meta property="og:type" content="article" />
-  <meta property="og:url" content="https://triadicframeworks.org/docs/theories/morphic_resonance/" />
-  <meta property="og:image" content="../../images/morphic_resonance_hero.png" />
+    .metadata-block {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+      padding: 1.75rem 2rem; margin-bottom: 2rem;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.25rem;
+    }
+    .meta-field { display: flex; flex-direction: column; gap: .2rem; }
+    .meta-label { font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); font-family: var(--font-mono); }
+    .meta-value { font-size: .9rem; font-weight: 600; color: var(--text-primary); }
+    .meta-value.accent { color: var(--accent-1); }
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Morphic Resonance — TriadicFrameworks" />
-  <meta name="twitter:description" content="Dimensional-coherence interface for cross-temporal pattern activation via coherence surfaces and adjacency." />
-  <meta name="twitter:image" content="../../images/morphic_resonance_hero.png" />
+    .session-context {
+      background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+      border: 1px solid #e9d5ff; border-left: 4px solid var(--accent-1);
+      border-radius: var(--radius-md); padding: 1.5rem 1.75rem; margin-bottom: 2rem;
+    }
+    .session-context h3 { font-size: .75rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-2); font-family: var(--font-mono); margin-bottom: .65rem; }
+    .session-context p { font-size: .9rem; color: var(--text-secondary); line-height: 1.7; }
+    .session-context p + p { margin-top: .5rem; }
+    .session-context strong { color: var(--accent-2); font-weight: 700; }
 
-  <!-- Citation Metadata -->
-  <meta name="citation_title" content="Morphic Resonance — TriadicFrameworks" />
-  <meta name="citation_author" content="Nawder Loswin" />
-  <meta name="citation_publication_date" content="2026" />
-  <meta name="DC.type" content="Text" />
-  <meta name="DC.format" content="text/html" />
-  <meta name="DC.subject" content="Morphic Resonance, Dimensional Coherence, Pattern Activation, Resonance Geometry, RTT" />
+    .section-title {
+      font-size: 1.05rem; font-weight: 700; letter-spacing: .05em;
+      text-transform: uppercase; color: var(--text-muted); font-family: var(--font-mono);
+      margin-bottom: 1.2rem; display: flex; align-items: center; gap: .6rem;
+    }
+    .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 
-  <!-- AI Metadata -->
-  <meta name="ai.module" content="morphic_resonance" />
-  <meta name="ai.version" content="1.0" />
-  <meta name="ai.purpose" content="Dimensional-coherence interface for cross-temporal pattern activation" />
-  <meta name="ai.keywords" content="morphic resonance, dimensional coherence, pattern activation, coherence surfaces, adjacency, RTT" />
-  <meta name="ai.audience" content="students, researchers, theorists, AIs" />
-  <meta name="ai.navigation" content="/sitemap_main.xml" />
-  <meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions" />
-  <meta name="ai.contact.x" content="@TriadicFrameworks" />
-  <meta name="ai.contact.youtube" content="@TriadicFrameworks" />
-  <meta name="ai.license" content="Open educational use permitted" />
-  <!-- Favicon -->
-<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
+    .triadic-pillars {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem; margin-bottom: 2.5rem;
+    }
+    .pillar {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+      padding: 2rem 1.75rem; position: relative; overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .pillar:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .pillar::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(147,51,234,.04) 0%, transparent 60%); }
+    .pillar-number { font-size: .68rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; font-family: var(--font-mono); color: var(--accent-1); margin-bottom: .5rem; }
+    .pillar-name { font-size: 1.35rem; font-weight: 800; color: var(--text-primary); margin-bottom: .6rem; line-height: 1.2; }
+    .pillar-glyph { position: absolute; top: 1.2rem; right: 1.4rem; font-size: 2.4rem; opacity: .12; user-select: none; }
+    .pillar-desc { font-size: .88rem; color: var(--text-secondary); line-height: 1.65; }
+    .pillar-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1rem; }
+    .pillar-tag { font-size: .68rem; font-weight: 600; padding: .2rem .55rem; border-radius: 99px; font-family: var(--font-mono); background: var(--accent-pale); color: var(--accent-2); border: 1px solid var(--accent-soft); }
 
-  <!-- Canonical RTT‑Inside Styles -->
-  <link rel="stylesheet" href="../../styles/theory.css">
-  <link rel="stylesheet" href="../../styles/morphic_resonance.css">
+    .concepts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 2.5rem; }
+    .concept-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.25rem 1.4rem; box-shadow: var(--shadow-sm); }
+    .concept-card h4 { font-size: .88rem; font-weight: 700; color: var(--text-primary); margin-bottom: .4rem; }
+    .concept-card p { font-size: .82rem; color: var(--text-secondary); line-height: 1.55; }
+
+    .postulates-block {
+      background: #1a0533; border-radius: var(--radius-md);
+      padding: 1.75rem 2rem; margin-bottom: 2.5rem; border: 1px solid #2e1065;
+    }
+    .postulates-block .eq-title { font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #6b21a8; font-family: var(--font-mono); margin-bottom: 1.1rem; }
+    .postulate-row { display: flex; align-items: flex-start; gap: 1.2rem; padding: .85rem 0; border-bottom: 1px solid #2e1065; }
+    .postulate-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .postulate-label { font-family: var(--font-mono); font-size: .85rem; color: #c084fc; font-weight: 700; min-width: 180px; flex-shrink: 0; }
+    .postulate-desc { font-size: .83rem; color: #d8b4fe; line-height: 1.55; }
+
+    .connections-panel { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); padding: 1.75rem 2rem; margin-bottom: 2.5rem; }
+    .connection-list { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
+    .connection-list li { display: flex; align-items: center; gap: .75rem; font-size: .88rem; color: var(--text-secondary); }
+    .connection-list li::before { content: '→'; color: var(--accent-1); font-weight: 700; flex-shrink: 0; }
+    .connection-list strong { color: var(--text-primary); font-weight: 700; }
+
+    .status-note {
+      background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+      border: 1px solid #e9d5ff; border-radius: var(--radius-md);
+      padding: 1.2rem 1.5rem; margin-bottom: 2.5rem;
+      font-size: .85rem; color: var(--text-secondary); line-height: 1.65;
+    }
+    .status-note strong { color: var(--accent-1); }
+
+    .page-footer { border-top: 1px solid var(--border); margin-top: 3rem; padding: 1.5rem 2rem; text-align: center; font-size: .78rem; color: var(--text-muted); font-family: var(--font-mono); }
+    .page-footer a { color: var(--accent-1); text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 640px) {
+      .module-header { padding: 3.5rem 1.25rem 2.75rem; }
+      .page-body { padding: 2rem 1.25rem 4rem; }
+      .metadata-block { padding: 1.25rem; }
+      .triadic-pillars { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
+<body>
 
-<body class="tf-module--morphic-resonance">
-  <!-- HERO -->
-     <img src="../../images/morphic_resonance_hero.png"
-         alt="Morphic Resonance Hero Image"
-         class="hero-glyph">
+  <nav class="nav-breadcrumb" aria-label="Breadcrumb">
+    <a href="/">TriadicFrameworks</a>
+    <span class="sep">/</span>
+    <a href="/theories/">theories</a>
+    <span class="sep">/</span>
+    <span class="current">morphic_resonance</span>
+  </nav>
 
-    <header class="tf-hero__content">
-     <h1>Morphic Resonance</h1>
-    </header>
-     
-  <main class="tf-main">
-      <section class="tf-hero__summary">  
-       <h2>Dimensional‑Coherence Interface</h2> 
-      </section>  
-     <div class="tf-hero__summary">  
-      <p>
-        Morphic Resonance is treated in TriadicFrameworks as a
-        <strong>dimensional‑coherence interface</strong>: patterns are coherence
-        structures, recurrence is activation across dimensional adjacency, and
-        similarity is coherence overlap — not fields, forces, or metaphysical influence.
+  <header class="module-header" role="banner">
+    <div class="header-inner">
+      <div class="module-tag">Foundational Theory · Module 04</div>
+      <h1>Morphic <span>Resonance</span></h1>
+      <p class="header-tagline">
+        Rupert Sheldrake's hypothesis of formative causation — proposing that self-organizing
+        systems are shaped by cumulative memory fields inherited from all previous
+        members of their kind across time and space.
       </p>
-     </div>
-      <div class="tf-button">
-        <span>🌀 Dimensional Coherence</span>
-        <span>🔷 Pattern Activation</span>
-        <span>🌐 Cross‑Temporal Adjacency</span>
-        <span>🔒 Zero Drift</span>
+      <div class="header-meta-chips">
+        <span class="chip">morphic fields</span>
+        <span class="chip">formative causation</span>
+        <span class="chip">collective memory</span>
+        <span class="chip">habit of nature</span>
+        <span class="chip">chreodes</span>
       </div>
+    </div>
+  </header>
 
-      <!-- LEFT COLUMN -->
-      <section class="tf-section">
-       <h2>Module Summary</h2>
-        <p>
-          In this canon, Morphic Resonance is a
-          <strong>pattern‑activation grammar</strong> that operates across
-          dimensional layers and RTT regimes. It defines:
+  <main class="page-body">
+
+    <section class="metadata-block" aria-label="Module Metadata">
+      <div class="meta-field">
+        <span class="meta-label">Module ID</span>
+        <span class="meta-value accent">morphic_resonance</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Domain</span>
+        <span class="meta-value">Speculative Biology · Field Theory</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Scale</span>
+        <span class="meta-value">Molecular · Organism · Collective</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Triadic Class</span>
+        <span class="meta-value">Extended Paradigm</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Status</span>
+        <span class="meta-value accent">Speculative · Active</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Version</span>
+        <span class="meta-value">2.0 · 2026-10-02</span>
+      </div>
+    </section>
+
+    <section class="session-context" aria-label="Session Context">
+      <h3>⟳ Session Context</h3>
+      <p>
+        <strong>Focus:</strong> Morphic Resonance is examined through the TriadicFrameworks pillars of
+        <strong>Field Memory</strong>, <strong>Formative Causation</strong>, and <strong>Collective Habit</strong> —
+        Sheldrake's proposed extension of field theory into biology, behavior, and cultural transmission.
+      </p>
+      <p>
+        This module treats Morphic Resonance as a conceptually serious extended paradigm,
+        mapping its postulates alongside mainstream alternatives (epigenetics, extended evolutionary synthesis),
+        with cross-module resonances to Quantum Mechanics, Chaos Theory, and Evolutionary Biology.
+        <strong>Epistemic status: hypothetical — predictions remain under empirical investigation.</strong>
+      </p>
+    </section>
+
+    <div class="status-note">
+      <strong>⚠ Epistemic Marker:</strong> Morphic Resonance is a minority scientific hypothesis.
+      Its core claims have not achieved mainstream empirical validation. This module maps
+      the theory's internal structure and cross-domain resonances rigorously, while maintaining
+      clear distinction from experimentally confirmed frameworks.
+    </div>
+
+    <h2 class="section-title">Triadic Pillars</h2>
+    <div class="triadic-pillars" role="list">
+
+      <article class="pillar" role="listitem">
+        <div class="pillar-glyph">🌀</div>
+        <div class="pillar-number">Pillar I</div>
+        <h3 class="pillar-name">Field Memory</h3>
+        <p class="pillar-desc">
+          Morphic fields are proposed non-material regions of influence that organize
+          the form and behavior of self-organizing systems. Unlike known physical fields,
+          they are hypothesized to carry cumulative memory from all past instances of
+          similar systems, regardless of spatial or temporal separation.
         </p>
-        <ul class="tf-list">
-          <li><span class="tf-button"></span><div>patterns as coherence structures</div></li>
-          <li><span class="tf-button"></span><div>coherence surfaces as activation regions</div></li>
-          <li><span class="tf-button"></span><div>dimensional adjacency as overlap, not coupling</div></li>
-          <li><span class="tf-button"></span><div>activation as structural, not causal transmission</div></li>
-          <li><span class="tf-button"></span><div>resonance layers across R1 → R3</div></li>
-          <li><span class="tf-button"></span><div>coherence diagnostics and collapse modes</div></li>
-        </ul>
-
-        <div class="tf-list">
-          <span class="tf-button--primary">Dimensional‑coherence</span>
-          <span class="tf-button--primary">Pattern‑activation</span>
-          <span class="tf-button--primary">Adjacency‑based</span>
-          <span class="tf-button--ghost">RTT‑aligned</span>
-          <span class="tf-button--ghost">Zero drift</span>
+        <div class="pillar-tags">
+          <span class="pillar-tag">morphic field</span>
+          <span class="pillar-tag">non-locality</span>
+          <span class="pillar-tag">cumulative memory</span>
         </div>
-       
+      </article>
 
-      <!-- RIGHT COLUMN -->
-      <aside class="right-column">
+      <article class="pillar" role="listitem">
+        <div class="pillar-glyph">🌿</div>
+        <div class="pillar-number">Pillar II</div>
+        <h3 class="pillar-name">Formative Causation</h3>
+        <p class="pillar-desc">
+          The hypothesis that form and behavior are causally shaped by morphic fields,
+          not solely by material chemistry. A developing embryo, a crystallizing molecule,
+          or a learning animal is guided by the accumulated pattern of its predecessors
+          via downward causation from field to matter.
+        </p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">chreodes</span>
+          <span class="pillar-tag">downward causation</span>
+          <span class="pillar-tag">morphogenesis</span>
+        </div>
+      </article>
 
-         <section class="tf-section">
-          <h2>Module Navigation</h2>
-          <ul class="tf-list">
-            <li><a href="README.md" target="_blank">README</a></li>
-            <li><a href="module.json" target="_blank">module.json</a></li>
-            <li><a href="session_context.md" target="_blank">Session Context</a></li>
-            <li><a href="regimes.md" target="_blank">Regimes</a></li>
-            <li><a href="operators.md" target="_blank">Operators</a></li>
-            <li><a href="operator_examples.md" target="_blank">Operator Examples</a></li>
-            <li><a href="coherence_map.md" target="_blank">Coherence Map</a></li>
-            <li><a href="lineage.md" target="_blank">Lineage</a></li>
-            <li><a href="simulation_hooks.json" target="_blank">Simulation Hooks</a></li>
-            <li><a href="examples.md" target="_blank">Examples</a></li>
-            <li><a href="explanations.md" target="_blank">Explanations</a></li>
-            <li><a href="faq.md" target="_blank">FAQ</a></li>
-            <li><a href="cross_module.md" target="_blank">Cross‑Module Integration</a></li>
-            <li><a href="engine_notes.md" target="_blank">Engine Notes</a></li>
-            <li><a href="frontdoor.md" target="_blank">Markdown Front Door</a></li>
-          </ul>
-         </section>   
-      </aside>
+      <article class="pillar" role="listitem">
+        <div class="pillar-glyph">🕸</div>
+        <div class="pillar-number">Pillar III</div>
+        <h3 class="pillar-name">Collective Habit</h3>
+        <p class="pillar-desc">
+          Natural laws are proposed as habits: regularities that grew more probable
+          through repetition rather than being fixed at the Big Bang. As a species or
+          behavior pattern is repeated across the collective, it becomes progressively
+          easier and more probable for new instances to replicate it.
+        </p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">habit of nature</span>
+          <span class="pillar-tag">probability amplification</span>
+          <span class="pillar-tag">resonance transfer</span>
+        </div>
+      </article>
+
+    </div>
+
+    <h2 class="section-title">Core Concepts</h2>
+    <div class="concepts-grid">
+      <div class="concept-card">
+        <h4>Morphogenetic Fields</h4>
+        <p>Waddington's pre-existing concept of developmental fields — extended by Sheldrake to include non-material memory components that persist beyond the death of an organism.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Chreodes</h4>
+        <p>Developmental pathways (from Waddington's epigenetic landscape) that canalize organisms toward stable endpoints; Sheldrake proposes these are maintained by morphic fields.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Crystal Habituation</h4>
+        <p>The empirical claim that novel compounds crystallize with increasing ease worldwide after first crystallization — proposed as evidence of morphic resonance in chemistry.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Behavioral Inheritance</h4>
+        <p>Cross-generational transmission of learned behaviors beyond genetic or epigenetic channels — proposed in rats learning maze tasks and cross-cultural skill acquisition.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Extended Mind</h4>
+        <p>Sheldrake's extension of morphic resonance to consciousness: memory as non-locally stored, perceptual fields extending beyond the brain into the environment.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Mainstream Alternatives</h4>
+        <p>Epigenetic inheritance, cultural evolution, and the extended evolutionary synthesis offer empirically grounded mechanisms for many phenomena morphic resonance aims to explain.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Core Postulates</h2>
+    <div class="postulates-block">
+      <div class="eq-title">// Sheldrake's Foundational Claims</div>
+      <div class="postulate-row">
+        <span class="postulate-label">Morphic Field Hypothesis</span>
+        <span class="postulate-desc">Each type of organism, molecule, or behavior is associated with a morphic field that organizes its form and activity across space-time.</span>
+      </div>
+      <div class="postulate-row">
+        <span class="postulate-label">Resonance Mechanism</span>
+        <span class="postulate-desc">Morphic resonance occurs when similar patterns in the present "tune into" the cumulative memory of past similar patterns, independent of distance.</span>
+      </div>
+      <div class="postulate-row">
+        <span class="postulate-label">Habit Accumulation</span>
+        <span class="postulate-desc">Repeated behaviors and structures incrementally reinforce their own probability of recurrence across the morphic field, making "laws" emergent regularities.</span>
+      </div>
+      <div class="postulate-row">
+        <span class="postulate-label">Non-locality</span>
+        <span class="postulate-desc">Morphic resonance is proposed to be non-local and atemporal — past instances influence present ones regardless of spatial or temporal separation.</span>
+      </div>
+    </div>
+
+    <h2 class="section-title">Cross-Module Connections</h2>
+    <div class="connections-panel">
+      <ul class="connection-list">
+        <li><strong>Quantum Mechanics</strong> — Non-locality and entanglement offer a physical precedent for action-at-a-distance; Sheldrake draws loose analogies to quantum coherence.</li>
+        <li><strong>Evolutionary Biology</strong> — Epigenetic inheritance and cultural evolution provide mainstream scaffolding for some phenomena morphic resonance targets.</li>
+        <li><strong>Chaos Theory</strong> — Strange attractors as physical analogues for chreodes; self-organizing attractors provide a mechanistic substrate for field-shaped morphogenesis.</li>
+        <li><strong>Information Theory</strong> — Field memory as a non-local information storage mechanism raises questions about channel capacity and encoding in non-material substrates.</li>
+        <li><strong>General Relativity</strong> — The concept of fields shaping matter echoes the geometric field theory of spacetime curvature, though morphic fields lack a physical metric.</li>
+      </ul>
+    </div>
+
   </main>
 
-  <footer class="footer">
-    <span>Morphic Resonance · Dimensional‑coherence interface · R1–R3 compatible</span><br>
-    <span>Student‑ready · AI‑parsable · Canon‑aligned · Zero drift</span>
+  <footer class="page-footer" role="contentinfo">
+    <p>
+      <a href="/">TriadicFrameworks</a> · morphic_resonance · v2.0 · generated 2026-10-02
+      &nbsp;·&nbsp; <a href="/theories/">all modules</a>
+    </p>
   </footer>
 
 </body>
