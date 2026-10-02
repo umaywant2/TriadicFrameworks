@@ -29,7 +29,7 @@
       "rel": "service-desc"
     },
     {
-      "href": "/docs/MCP",
+      "href": "/MCP",
       "rel": "service-doc"
     },
     {
@@ -46,7 +46,7 @@
       "rel": "service-desc"
     },
     {
-      "href": "/docs/TFT_3Pack_v1.3",
+      "href": "/TFT_3Pack_v1.3",
       "rel": "service-doc"
     },
     {
