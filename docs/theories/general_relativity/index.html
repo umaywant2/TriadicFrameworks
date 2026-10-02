@@ -2,155 +2,579 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>General Relativity — TriadicFrameworks</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="General Relativity as a geometric coherence theory of gravity in the TriadicFrameworks canon." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="General Relativity — TriadicFrameworks canonical theory module exploring curvature, geodesics, and the equivalence principle." />
   <meta name="module" content="general_relativity" />
-  <meta name="triadicframeworks-layer" content="R1–R3" />
-  <meta name="identity" content="geometric coherence theory of gravity" />
-  <link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
-  <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
-  <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
+  <meta name="category" content="Foundational Theory" />
+  <meta name="framework" content="TriadicFrameworks" />
+  <meta name="version" content="2.0" />
+  <meta name="generated" content="2026-10-02" />
+  <meta name="author" content="TriadicFrameworks" />
+  <title>General Relativity · TriadicFrameworks</title>
+  <style>
+    /* ── Reset & Base ───────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --accent-1:   #ca8a04;
+      --accent-2:   #a16207;
+      --accent-3:   #713f12;
+      --accent-pale: #fefce8;
+      --accent-soft: #fde68a;
+      --grad-start:  #08060a;
+      --grad-mid:    #1a1200;
+      --grad-end:    #3a2000;
+      --text-primary: #1c1409;
+      --text-secondary: #44403c;
+      --text-muted:  #a8a29e;
+      --bg-page:     #fdfcf7;
+      --bg-card:     #ffffff;
+      --border:      #fef08a;
+      --radius-sm:   6px;
+      --radius-md:   12px;
+      --radius-lg:   20px;
+      --shadow-sm:   0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.05);
+      --shadow-md:   0 4px 16px rgba(0,0,0,.10), 0 2px 6px rgba(0,0,0,.06);
+      --shadow-lg:   0 12px 40px rgba(0,0,0,.13), 0 4px 12px rgba(0,0,0,.08);
+      --font-sans:   'Segoe UI', system-ui, -apple-system, sans-serif;
+      --font-mono:   'Cascadia Code', 'Fira Code', 'Courier New', monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg-page);
+      color: var(--text-primary);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
 
-  <link rel="stylesheet" href="../../styles/theory.css">
-  <link rel="stylesheet" href="../../styles/general_relativity.css">
+    /* ── Navigation Breadcrumb ──────────────────────────────────── */
+    .nav-breadcrumb {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(8,6,10,.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(202,138,4,.22);
+      padding: 0.55rem 2rem;
+      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.78rem; font-family: var(--font-mono);
+      color: rgba(255,255,255,.5);
+    }
+    .nav-breadcrumb a { color: rgba(255,255,255,.72); text-decoration: none; }
+    .nav-breadcrumb a:hover { color: #fbbf24; }
+    .nav-breadcrumb .sep { color: rgba(255,255,255,.28); }
+    .nav-breadcrumb .current { color: #fbbf24; font-weight: 600; }
+
+    /* ── Gradient Header ────────────────────────────────────────── */
+    .module-header {
+      background: linear-gradient(135deg, var(--grad-start) 0%, var(--grad-mid) 55%, var(--grad-end) 100%);
+      padding: 5rem 2rem 4rem;
+      position: relative; overflow: hidden; text-align: center;
+    }
+    .module-header::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 65% 55% at 18% 28%, rgba(202,138,4,.16) 0%, transparent 68%),
+        radial-gradient(ellipse 50% 65% at 82% 72%, rgba(58,32,0,.6) 0%, transparent 68%),
+        radial-gradient(ellipse 35% 40% at 50% 50%, rgba(250,204,21,.05) 0%, transparent 60%);
+    }
+    /* Starfield dots */
+    .module-header::after {
+      content: 'G';
+      position: absolute; right: 5%; top: 50%; transform: translateY(-50%);
+      font-size: 17rem; font-weight: 900; opacity: .04;
+      color: #fde68a; pointer-events: none; line-height: 1;
+      font-style: italic;
+    }
+    .header-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
+    .module-tag {
+      display: inline-block;
+      background: rgba(202,138,4,.18); border: 1px solid rgba(202,138,4,.42);
+      color: #fbbf24; font-size: 0.72rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; padding: .3rem .9rem; border-radius: 99px;
+      margin-bottom: 1.4rem; font-family: var(--font-mono);
+    }
+    .module-header h1 {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 800; letter-spacing: -.025em; line-height: 1.1;
+      color: #ffffff; margin-bottom: 1rem;
+    }
+    .module-header h1 span { color: #fbbf24; }
+    .header-tagline {
+      font-size: 1.12rem; color: rgba(255,255,255,.7);
+      max-width: 590px; margin: 0 auto 2rem; line-height: 1.62;
+    }
+    .header-meta-chips {
+      display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center;
+    }
+    .chip {
+      background: rgba(255,255,255,.09); border: 1px solid rgba(255,255,255,.17);
+      color: rgba(255,255,255,.78); padding: .28rem .75rem; border-radius: 99px;
+      font-family: var(--font-mono); font-size: .72rem;
+    }
+
+    /* ── Main Layout ────────────────────────────────────────────── */
+    .page-body { max-width: 1080px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+
+    /* ── Metadata Block ─────────────────────────────────────────── */
+    .metadata-block {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+      padding: 1.75rem 2rem; margin-bottom: 2rem;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.25rem;
+    }
+    .meta-field { display: flex; flex-direction: column; gap: .2rem; }
+    .meta-label {
+      font-size: .68rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--text-muted); font-family: var(--font-mono);
+    }
+    .meta-value { font-size: .9rem; font-weight: 600; color: var(--text-primary); }
+    .meta-value.accent { color: var(--accent-1); }
+
+    /* ── Session Context Block ──────────────────────────────────── */
+    .session-context {
+      background: linear-gradient(135deg, #fefce8 0%, #fef9c3 100%);
+      border: 1px solid #fde68a; border-left: 4px solid var(--accent-1);
+      border-radius: var(--radius-md); padding: 1.5rem 1.75rem; margin-bottom: 2rem;
+    }
+    .session-context h3 {
+      font-size: .75rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--accent-2);
+      font-family: var(--font-mono); margin-bottom: .65rem;
+    }
+    .session-context p { font-size: .9rem; color: var(--text-secondary); line-height: 1.7; }
+    .session-context p + p { margin-top: .5rem; }
+    .session-context strong { color: var(--accent-2); font-weight: 700; }
+
+    /* ── Section Headers ────────────────────────────────────────── */
+    .section-title {
+      font-size: 1.05rem; font-weight: 700; letter-spacing: .05em;
+      text-transform: uppercase; color: var(--text-muted);
+      font-family: var(--font-mono); margin-bottom: 1.2rem;
+      display: flex; align-items: center; gap: .6rem;
+    }
+    .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    /* ── Triadic Pillars ────────────────────────────────────────── */
+    .triadic-pillars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem; margin-bottom: 2.5rem;
+    }
+    .pillar {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+      padding: 2rem 1.75rem; position: relative; overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .pillar:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .pillar::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(202,138,4,.04) 0%, transparent 60%);
+    }
+    .pillar-number {
+      font-size: .68rem; font-weight: 800; letter-spacing: .18em;
+      text-transform: uppercase; font-family: var(--font-mono);
+      color: var(--accent-1); margin-bottom: .5rem;
+    }
+    .pillar-name {
+      font-size: 1.35rem; font-weight: 800; color: var(--text-primary);
+      margin-bottom: .6rem; line-height: 1.2;
+    }
+    .pillar-glyph {
+      position: absolute; top: 1.2rem; right: 1.4rem;
+      font-size: 2.4rem; opacity: .12; user-select: none;
+    }
+    .pillar-desc { font-size: .88rem; color: var(--text-secondary); line-height: 1.65; }
+    .pillar-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1rem; }
+    .pillar-tag {
+      font-size: .68rem; font-weight: 600; padding: .2rem .55rem;
+      border-radius: 99px; font-family: var(--font-mono);
+      background: var(--accent-pale); color: var(--accent-2);
+      border: 1px solid var(--accent-soft);
+    }
+
+    /* ── Predictions Table ──────────────────────────────────────── */
+    .predictions-table-wrap { overflow-x: auto; margin-bottom: 2.5rem; }
+    .predictions-table { width: 100%; border-collapse: collapse; font-size: .82rem; }
+    .predictions-table th {
+      background: var(--accent-1); color: #fff;
+      padding: .6rem 1rem; text-align: left;
+      font-size: .7rem; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; font-family: var(--font-mono);
+    }
+    .predictions-table td {
+      padding: .55rem 1rem; border-bottom: 1px solid var(--border);
+      color: var(--text-secondary);
+    }
+    .predictions-table tr:last-child td { border-bottom: none; }
+    .predictions-table tr:hover td { background: var(--accent-pale); }
+    .predictions-table .pred { font-weight: 700; color: var(--text-primary); }
+    .predictions-table .status-confirmed {
+      font-family: var(--font-mono); font-size: .72rem; font-weight: 700;
+      color: #16a34a; background: #f0fdf4; border: 1px solid #bbf7d0;
+      padding: .15rem .5rem; border-radius: 99px;
+    }
+    .predictions-table .status-indirect {
+      font-family: var(--font-mono); font-size: .72rem; font-weight: 700;
+      color: #ca8a04; background: #fefce8; border: 1px solid #fde68a;
+      padding: .15rem .5rem; border-radius: 99px;
+    }
+
+    /* ── Core Concepts Grid ─────────────────────────────────────── */
+    .concepts-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem; margin-bottom: 2.5rem;
+    }
+    .concept-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-md); padding: 1.25rem 1.4rem; box-shadow: var(--shadow-sm);
+    }
+    .concept-card h4 { font-size: .88rem; font-weight: 700; color: var(--text-primary); margin-bottom: .4rem; }
+    .concept-card p { font-size: .82rem; color: var(--text-secondary); line-height: 1.55; }
+
+    /* ── Equations Block ────────────────────────────────────────── */
+    .equations-block {
+      background: #08060a; border-radius: var(--radius-md);
+      padding: 1.75rem 2rem; margin-bottom: 2.5rem; border: 1px solid #1a1200;
+    }
+    .equations-block .eq-title {
+      font-size: .72rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: #713f12;
+      font-family: var(--font-mono); margin-bottom: 1.1rem;
+    }
+    .equation-row {
+      display: flex; align-items: flex-start; gap: 1.2rem;
+      padding: .85rem 0; border-bottom: 1px solid #1a1200;
+    }
+    .equation-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .eq-formula {
+      font-family: var(--font-mono); font-size: .95rem;
+      color: #fbbf24; font-weight: 600; min-width: 240px; flex-shrink: 0;
+    }
+    .eq-desc { font-size: .83rem; color: #d4b483; line-height: 1.5; }
+
+    /* ── Connections Panel ──────────────────────────────────────── */
+    .connections-panel {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+      padding: 1.75rem 2rem; margin-bottom: 2.5rem;
+    }
+    .connection-list { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
+    .connection-list li {
+      display: flex; align-items: center; gap: .75rem;
+      font-size: .88rem; color: var(--text-secondary);
+    }
+    .connection-list li::before { content: '→'; color: var(--accent-1); font-weight: 700; flex-shrink: 0; }
+    .connection-list strong { color: var(--text-primary); font-weight: 700; }
+
+    /* ── Footer ─────────────────────────────────────────────────── */
+    .page-footer {
+      border-top: 1px solid var(--border); margin-top: 3rem;
+      padding: 1.5rem 2rem; text-align: center;
+      font-size: .78rem; color: var(--text-muted); font-family: var(--font-mono);
+    }
+    .page-footer a { color: var(--accent-1); text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+
+    /* ── Responsive ─────────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .module-header { padding: 3.5rem 1.25rem 2.75rem; }
+      .page-body { padding: 2rem 1.25rem 4rem; }
+      .metadata-block { padding: 1.25rem; }
+      .triadic-pillars { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
+<body>
 
-<body class="tf-module--general-relativity">
-   <!-- HERO -->
-  <img src="../../images/general_relativity.png"
-         alt="General Relativity hero image"
-         class="hero-img">
-  
-  <header class="tf-hero--theory">
-    <div class="tf-hero__content">
-      <h1>General Relativity</h1>
+  <!-- ── Navigation Breadcrumb ──────────────────────────────────── -->
+  <nav class="nav-breadcrumb" aria-label="Breadcrumb">
+    <a href="/">TriadicFrameworks</a>
+    <span class="sep">/</span>
+    <a href="/docs/theories/">theories</a>
+    <span class="sep">/</span>
+    <span class="current">general_relativity</span>
+  </nav>
+
+  <!-- ── Gradient Header ────────────────────────────────────────── -->
+  <header class="module-header" role="banner">
+    <div class="header-inner">
+      <div class="module-tag">Foundational Theory · Module 04</div>
+      <h1>General <span>Relativity</span></h1>
+      <p class="header-tagline">
+        Einstein's geometric theory of gravitation — mass-energy curves spacetime,
+        and curved spacetime tells matter how to move. The framework governing
+        black holes, gravitational waves, cosmology, and the large-scale structure
+        of the universe.
+      </p>
+      <div class="header-meta-chips">
+        <span class="chip">Einstein field equations</span>
+        <span class="chip">spacetime curvature</span>
+        <span class="chip">geodesics</span>
+        <span class="chip">equivalence principle</span>
+        <span class="chip">gravitational waves</span>
+      </div>
     </div>
   </header>
 
-  <main class="tf-main">  
-   <div class="tf-section">
-      <h2>Gravity as Coherent Curvature</h2>
-     <div class="hero-overlay">
-      <p>
-        General Relativity here is not a force model or a rubber‑sheet metaphor.
-        It is a geometric coherence theory where curvature, geodesics, and
-        stress‑energy form a stable operator grammar across regimes.
-      </p>
-      <div class="tf-button">
-        <span>🌌 Curvature‑first</span>
-        <span>🧭 Coherence‑driven</span>
-        <span>📐 Operator‑aligned</span>
-        <span>🔒 Zero drift</span>
+  <main class="page-body">
+
+    <!-- ── Metadata Block ───────────────────────────────────────── -->
+    <section class="metadata-block" aria-label="Module Metadata">
+      <div class="meta-field">
+        <span class="meta-label">Module ID</span>
+        <span class="meta-value accent">general_relativity</span>
       </div>
-     </div>
-    </div>
-  
+      <div class="meta-field">
+        <span class="meta-label">Domain</span>
+        <span class="meta-value">Theoretical Physics · Cosmology</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Scale</span>
+        <span class="meta-value">Stellar · Galactic · Cosmological</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Triadic Class</span>
+        <span class="meta-value">Fundamental Framework</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Status</span>
+        <span class="meta-value accent">Active</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Version</span>
+        <span class="meta-value">2.0 · 2026-10-02</span>
+      </div>
+    </section>
 
+    <!-- ── Session Context Block ────────────────────────────────── -->
+    <section class="session-context" aria-label="Session Context">
+      <h3>⟳ Session Context</h3>
+      <p>
+        <strong>Focus:</strong> General Relativity is examined through the TriadicFrameworks pillars of
+        <strong>Curvature</strong>, <strong>Geodesics</strong>, and <strong>Equivalence</strong> —
+        the three conceptual pillars that together constitute Einstein's complete reformulation
+        of gravitation as geometry, replacing Newton's instantaneous action-at-a-distance
+        with local field dynamics in a four-dimensional Lorentzian manifold.
+      </p>
+      <p>
+        This module covers the metric tensor, Einstein field equations, Schwarzschild and
+        Kerr solutions, gravitational waves, cosmological models (FLRW), and the
+        Penrose-Hawking singularity theorems, with cross-module resonances to
+        Quantum Mechanics, Thermodynamics, Information Theory, Electromagnetism,
+        and Standard Model.
+      </p>
+    </section>
 
-    <!-- TWO‑COLUMN LAYOUT -->
-    <div class="layout">
+    <!-- ── Triadic Pillars ──────────────────────────────────────── -->
+    <h2 class="section-title">Triadic Pillars</h2>
+    <div class="triadic-pillars" role="list">
 
-      <!-- LEFT COLUMN -->
-      <section class="tf-section">
-       <h2>Module Identity</h2>
-        <ul class="tf-section">
-          <li>
-            <span class="tf-list"></span>
-            <div>
-              <strong>Gravity = coherent curvature.</strong><br>
-              Curvature is a geometric operator field, not a force and not a visual metaphor.
-            </div>
-          </li>
-          <li>
-            <span class="tf-list"></span>
-            <div>
-              <strong>Geodesics = coherence trajectories.</strong><br>
-              Motion follows coherence‑preserving paths in spacetime.
-            </div>
-          </li>
-          <li>
-            <span class="tf-list"></span>
-            <div>
-              <strong>Stress‑energy = source operator.</strong><br>
-              Stress‑energy deforms curvature structurally, with no Newtonian fallback.
-            </div>
-          </li>
-        </ul>
-
-        <h2>Regimes & Scope</h2>
-        <ul class="tf-section">
-          <li>
-            <span class="tf-list"></span>
-            <div>
-              <strong>R1 → R3 geometry.</strong><br>
-              From stable metrics (R1) to curvature operators (R2) and dimensional curvature (R3).
-            </div>
-          </li>
-          <li>
-            <span class="tf-list"></span>
-            <div>
-              <strong>Cross‑module backbone.</strong><br>
-              Provides curvature substrate for QFT, LDS, NoS, thermodynamics, and information theory.
-            </div>
-          </li>
-        </ul>
-
-        <div class="tf-list">
-          <span class="tf-button">Curvature‑first</span>
-          <span class="tf-button">Coherence‑based</span>
-          <span class="tf-button">Operator‑driven</span>
-          <span class="tf-button">RTT‑aligned</span>
-          <span class="tf-button">Zero drift</span>
+      <article class="pillar" role="listitem">
+        <div class="pillar-glyph">∿</div>
+        <div class="pillar-number">Pillar I</div>
+        <h3 class="pillar-name">Curvature</h3>
+        <p class="pillar-desc">
+          Spacetime is a four-dimensional pseudo-Riemannian manifold with metric gμν.
+          Mass-energy — encoded in the stress-energy tensor Tμν — curves this manifold
+          via the Einstein field equations. The Riemann curvature tensor R^ρ_{σμν}
+          encodes tidal forces; its contractions (Ricci tensor, Ricci scalar) appear
+          directly in the field equations.
+        </p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">metric tensor gμν</span>
+          <span class="pillar-tag">Riemann tensor</span>
+          <span class="pillar-tag">Einstein tensor Gμν</span>
         </div>
-       </section>
+      </article>
 
-      <!-- RIGHT COLUMN -->
-      <aside class="right-column">
+      <article class="pillar" role="listitem">
+        <div class="pillar-glyph">〰</div>
+        <div class="pillar-number">Pillar II</div>
+        <h3 class="pillar-name">Geodesics</h3>
+        <p class="pillar-desc">
+          Free-falling bodies follow geodesics — the straightest possible paths through
+          curved spacetime. Gravity is not a force but the geometry of these paths.
+          The geodesic equation d²xμ/dτ² + Γμ_{αβ}(dxα/dτ)(dxβ/dτ) = 0 replaces
+          Newton's F = ma for motion under gravity. Light follows null geodesics,
+          which are bent near massive bodies.
+        </p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">geodesic equation</span>
+          <span class="pillar-tag">Christoffel symbols</span>
+          <span class="pillar-tag">gravitational lensing</span>
+        </div>
+      </article>
 
-        <section class="tf-section">
-          <h2>Start Here</h2>
-          <p>Core orientation for students, researchers, and AI agents.</p>
-          <ul class="tf-list">
-            <li><a href="session_context.md" target="_blank">Session context</a></li>
-            <li><a href="regimes.md" target="_blank">Regimes</a></li>
-            <li><a href="operators.md" target="_blank">Operators</a></li>
-            <li><a href="operator_examples.md" target="_blank">Operator examples</a></li>
-          </ul>
-        </section>
+      <article class="pillar" role="listitem">
+        <div class="pillar-glyph">⚖</div>
+        <div class="pillar-number">Pillar III</div>
+        <h3 class="pillar-name">Equivalence</h3>
+        <p class="pillar-desc">
+          Einstein's equivalence principle — that a uniformly accelerating frame is
+          locally indistinguishable from a gravitational field — is the conceptual
+          seed of GR. Its strong form (all laws of physics are locally Lorentz-invariant
+          in freely falling frames) implies gravitational time dilation, gravitational
+          redshift, and the geometric interpretation of gravity.
+        </p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">equivalence principle</span>
+          <span class="pillar-tag">gravitational redshift</span>
+          <span class="pillar-tag">time dilation</span>
+        </div>
+      </article>
 
-        <section class="tf-section">
-          <h2>Structure & Lineage</h2>
-          <p>Files that make the module runnable and cross‑module safe.</p>
-          <ul class="tf-list">
-            <li><a href="coherence_map.md" target="_blank">Coherence map</a></li>
-            <li><a href="lineage.md" target="_blank">Lineage</a></li>
-            <li><a href="cross_module.md" target="_blank">Cross‑module</a></li>
-            <li><a href="engine_notes.md" target="_blank">Engine notes</a></li>
-            <li><a href="faq.md" target="_blank">FAQ</a></li>
-            <li><a href="simulation_hooks.json" target="_blank"><code>simulation_hooks.json</code></a></li>
-          </ul>
-        </section>
-
-        <section class="tf-section">
-          <h2>How to Run This Canon</h2>
-          <p>Treat this module as a <strong>curvature engine</strong> you can extend:</p>
-          <ul class="tf-list">
-            <li>Define metrics with <code>𝓖</code> and compute curvature with <code>𝓡</code>.</li>
-            <li>Model stress‑energy with <code>𝓣</code> and <code>𝓓𝓮𝓯</code>.</li>
-            <li>Generate geodesics with <code>𝓖𝓮𝓸</code>.</li>
-            <li>Track coherence with <code>𝓒</code> and <code>𝓒𝓁</code>.</li>
-          </ul>
-         </section>
-
-      </aside>
     </div>
-</main>
 
-  <footer class="footer">
-    <span>General Relativity · Geometric coherence theory of gravity · R1–R3 compatible</span><br>
-    <span>Student‑ready · AI‑parsable · Canon‑aligned · Zero drift</span>
+    <!-- ── Key Predictions & Tests ──────────────────────────────── -->
+    <h2 class="section-title">Key Predictions &amp; Observational Tests</h2>
+    <div class="predictions-table-wrap">
+      <table class="predictions-table" aria-label="GR Predictions and Tests">
+        <thead>
+          <tr>
+            <th>Prediction</th>
+            <th>Year Predicted</th>
+            <th>Year Confirmed</th>
+            <th>Method</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="pred">Light deflection by the Sun</td>
+            <td>1915</td>
+            <td>1919</td>
+            <td>Eddington solar eclipse expedition</td>
+            <td><span class="status-confirmed">Confirmed</span></td>
+          </tr>
+          <tr>
+            <td class="pred">Perihelion precession of Mercury</td>
+            <td>1915</td>
+            <td>1915</td>
+            <td>Pre-existing anomaly: 43″/century explained</td>
+            <td><span class="status-confirmed">Confirmed</span></td>
+          </tr>
+          <tr>
+            <td class="pred">Gravitational redshift</td>
+            <td>1915</td>
+            <td>1959</td>
+            <td>Pound-Rebka experiment (Harvard tower)</td>
+            <td><span class="status-confirmed">Confirmed</span></td>
+          </tr>
+          <tr>
+            <td class="pred">Gravitational time dilation</td>
+            <td>1915</td>
+            <td>1971</td>
+            <td>Hafele-Keating atomic clocks on aircraft</td>
+            <td><span class="status-confirmed">Confirmed</span></td>
+          </tr>
+          <tr>
+            <td class="pred">Gravitational waves</td>
+            <td>1916</td>
+            <td>2015</td>
+            <td>LIGO detection of GW150914 (binary BH merger)</td>
+            <td><span class="status-confirmed">Confirmed</span></td>
+          </tr>
+          <tr>
+            <td class="pred">Black hole shadow</td>
+            <td>1915</td>
+            <td>2019</td>
+            <td>Event Horizon Telescope — M87*, Sgr A*</td>
+            <td><span class="status-confirmed">Confirmed</span></td>
+          </tr>
+          <tr>
+            <td class="pred">Frame dragging (Lense-Thirring)</td>
+            <td>1918</td>
+            <td>2004</td>
+            <td>Gravity Probe B satellite gyroscopes</td>
+            <td><span class="status-confirmed">Confirmed</span></td>
+          </tr>
+          <tr>
+            <td class="pred">Cosmological expansion (FLRW)</td>
+            <td>1922</td>
+            <td>1929</td>
+            <td>Hubble's recession velocity observations</td>
+            <td><span class="status-confirmed">Confirmed</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ── Core Concepts ────────────────────────────────────────── -->
+    <h2 class="section-title">Core Concepts</h2>
+    <div class="concepts-grid">
+      <div class="concept-card">
+        <h4>Schwarzschild Solution</h4>
+        <p>The exact vacuum solution for a static, spherically symmetric mass: ds² = −(1−r_s/r)c²dt² + (1−r_s/r)⁻¹dr² + r²dΩ². The Schwarzschild radius r_s = 2GM/c² defines the event horizon of a non-rotating black hole.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Kerr Metric</h4>
+        <p>The exact solution for a rotating black hole, parameterized by mass M and spin a = J/Mc. The ergosphere (outside the event horizon) allows energy extraction via the Penrose process.</p>
+      </div>
+      <div class="concept-card">
+        <h4>FLRW Cosmology</h4>
+        <p>The Friedmann-Lemaître-Robertson-Walker metric describes a homogeneous, isotropic expanding universe. The Friedmann equations govern the scale factor a(t), giving Big Bang cosmology and accelerating expansion (Λ).</p>
+      </div>
+      <div class="concept-card">
+        <h4>Gravitational Waves</h4>
+        <p>Perturbations of flat spacetime h_μν propagate at c. Produced by accelerating mass-energy asymmetries (binary mergers); detected via interferometric strain ΔL/L ~ 10⁻²¹ by LIGO/Virgo/KAGRA.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Singularity Theorems</h4>
+        <p>Penrose (1965) and Hawking (1970) proved that under physically reasonable conditions, geodesic incompleteness (singularities) is a generic prediction of GR — not a coordinate artifact.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Cosmological Constant Λ</h4>
+        <p>Einstein's Λ term was reintroduced to explain the observed accelerated expansion of the universe. Dark energy, with equation of state w ≈ −1, is observationally consistent with Λ but its origin remains unknown.</p>
+      </div>
+    </div>
+
+    <!-- ── Key Equations ────────────────────────────────────────── -->
+    <h2 class="section-title">Key Equations</h2>
+    <div class="equations-block">
+      <div class="eq-title">// Einstein's Geometric Formalisms</div>
+      <div class="equation-row">
+        <span class="eq-formula">Gμν + Λgμν = (8πG/c⁴)Tμν</span>
+        <span class="eq-desc">Einstein field equations: the Einstein tensor Gμν (geometry) equals the stress-energy tensor Tμν (matter-energy) scaled by 8πG/c⁴. Ten coupled nonlinear PDEs in four dimensions.</span>
+      </div>
+      <div class="equation-row">
+        <span class="eq-formula">Gμν = Rμν − ½Rgμν</span>
+        <span class="eq-desc">The Einstein tensor: Ricci tensor Rμν minus half the Ricci scalar R times the metric gμν. Satisfies ∇^μGμν = 0 (contracted Bianchi identity ↔ energy-momentum conservation).</span>
+      </div>
+      <div class="equation-row">
+        <span class="eq-formula">ds² = gμν dxμ dxν</span>
+        <span class="eq-desc">The spacetime interval: the invariant "distance" between events. Timelike (ds²&lt;0) for massive particles, null (ds²=0) for light, spacelike (ds²&gt;0) for causally disconnected events.</span>
+      </div>
+      <div class="equation-row">
+        <span class="eq-formula">d²xμ/dτ² + Γμ_{αβ}(dx^α/dτ)(dx^β/dτ) = 0</span>
+        <span class="eq-desc">Geodesic equation: the path of a freely falling particle in curved spacetime. Γμ_{αβ} are Christoffel symbols (metric connection coefficients), not tensors but encoding the curvature effect on motion.</span>
+      </div>
+      <div class="equation-row">
+        <span class="eq-formula">(ȧ/a)² = 8πGρ/3 − kc²/a² + Λc²/3</span>
+        <span class="eq-desc">First Friedmann equation: governs the expansion rate ȧ of the universe from the field equations applied to the FLRW metric. k = spatial curvature, ρ = energy density, Λ = cosmological constant.</span>
+      </div>
+    </div>
+
+    <!-- ── Cross-Module Connections ─────────────────────────────── -->
+    <h2 class="section-title">Cross-Module Connections</h2>
+    <div class="connections-panel">
+      <ul class="connection-list">
+        <li><strong>Quantum Mechanics</strong> — Quantum gravity remains physics' deepest open problem; GR and QM are mutually inconsistent at the Planck scale (l_P ≈ 1.6×10⁻³⁵ m). The black hole information paradox sits at their intersection.</li>
+        <li><strong>Thermodynamics</strong> — Black hole thermodynamics (Bekenstein-Hawking): S_BH = kA/4l²_P, T_H = ℏc³/(8πGMk_B). The four laws of black hole mechanics mirror the four laws of thermodynamics exactly.</li>
+        <li><strong>Information Theory</strong> — The holographic principle (Bekenstein bound) sets the maximum information storable in a region at S ≤ kA/4l²_P. The AdS/CFT correspondence maps bulk GR to boundary quantum field theory.</li>
+        <li><strong>Electromagnetism</strong> — The Reissner-Nordström metric describes charged black holes; the Kerr-Newman metric generalizes to rotating charged black holes. EM and gravity are jointly described by the Einstein-Maxwell equations.</li>
+        <li><strong>Standard Model</strong> — The SM describes matter fields that source GR via Tμν; cosmological phase transitions (electroweak, QCD) occurred in the early FLRW universe. Graviton quantization would extend the SM gauge structure.</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <!-- ── Footer ────────────────────────────────────────────────── -->
+  <footer class="page-footer" role="contentinfo">
+    <p>
+      <a href="/">TriadicFrameworks</a> · general_relativity · v2.0 · generated 2026-10-02
+      &nbsp;·&nbsp; <a href="/docs/theories/">all modules</a>
+    </p>
   </footer>
 
 </body>

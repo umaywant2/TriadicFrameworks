@@ -2,163 +2,541 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Information Theory — TriadicFrameworks</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Information Theory as a distinction-first coherence grammar in the TriadicFrameworks canon." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Information Theory — TriadicFrameworks canonical theory module exploring entropy, channel capacity, and compression." />
   <meta name="module" content="information_theory" />
-  <meta name="triadicframeworks-layer" content="R0–R3" />
-  <meta name="identity" content="distinction-first coherence grammar" />
-  <!-- Favicon -->
-<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
+  <meta name="category" content="Foundational Theory" />
+  <meta name="framework" content="TriadicFrameworks" />
+  <meta name="version" content="2.0" />
+  <meta name="generated" content="2026-10-02" />
+  <meta name="author" content="TriadicFrameworks" />
+  <title>Information Theory · TriadicFrameworks</title>
+  <style>
+    /* ── Reset & Base ───────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --accent-1:   #0d9488;
+      --accent-2:   #0f766e;
+      --accent-3:   #134e4a;
+      --accent-pale: #f0fdfa;
+      --accent-soft: #99f6e4;
+      --grad-start:  #000f0e;
+      --grad-mid:    #042f2e;
+      --grad-end:    #134e4a;
+      --text-primary: #134e4a;
+      --text-secondary: #374151;
+      --text-muted:  #9ca3af;
+      --bg-page:     #f0fdfb;
+      --bg-card:     #ffffff;
+      --border:      #ccfbf1;
+      --radius-sm:   6px;
+      --radius-md:   12px;
+      --radius-lg:   20px;
+      --shadow-sm:   0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.05);
+      --shadow-md:   0 4px 16px rgba(0,0,0,.10), 0 2px 6px rgba(0,0,0,.06);
+      --shadow-lg:   0 12px 40px rgba(0,0,0,.13), 0 4px 12px rgba(0,0,0,.08);
+      --font-sans:   'Segoe UI', system-ui, -apple-system, sans-serif;
+      --font-mono:   'Cascadia Code', 'Fira Code', 'Courier New', monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg-page);
+      color: var(--text-primary);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
 
-  <!-- Canonical RTT‑Inside Styles -->
-  <link rel="stylesheet" href="../../styles/theory.css">
-  <link rel="stylesheet" href="../../styles/information_theory.css">
+    /* ── Navigation Breadcrumb ──────────────────────────────────── */
+    .nav-breadcrumb {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(0,15,14,.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(13,148,136,.25);
+      padding: 0.55rem 2rem;
+      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.78rem; font-family: var(--font-mono);
+      color: rgba(255,255,255,.55);
+    }
+    .nav-breadcrumb a { color: rgba(255,255,255,.75); text-decoration: none; }
+    .nav-breadcrumb a:hover { color: #2dd4bf; }
+    .nav-breadcrumb .sep { color: rgba(255,255,255,.3); }
+    .nav-breadcrumb .current { color: #2dd4bf; font-weight: 600; }
+
+    /* ── Gradient Header ────────────────────────────────────────── */
+    .module-header {
+      background: linear-gradient(135deg, var(--grad-start) 0%, var(--grad-mid) 50%, var(--grad-end) 100%);
+      padding: 5rem 2rem 4rem;
+      position: relative; overflow: hidden; text-align: center;
+    }
+    .module-header::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 20% 30%, rgba(13,148,136,.2) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 60% at 80% 70%, rgba(19,78,74,.45) 0%, transparent 70%);
+    }
+    .module-header::after {
+      content: 'H';
+      position: absolute; right: 6%; top: 50%; transform: translateY(-50%);
+      font-size: 16rem; font-weight: 900; opacity: .05;
+      color: #fff; pointer-events: none; line-height: 1;
+    }
+    .header-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
+    .module-tag {
+      display: inline-block;
+      background: rgba(13,148,136,.22); border: 1px solid rgba(13,148,136,.45);
+      color: #2dd4bf; font-size: 0.72rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; padding: .3rem .9rem; border-radius: 99px;
+      margin-bottom: 1.4rem; font-family: var(--font-mono);
+    }
+    .module-header h1 {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 800; letter-spacing: -.02em; line-height: 1.1;
+      color: #ffffff; margin-bottom: 1rem;
+    }
+    .module-header h1 span { color: #2dd4bf; }
+    .header-tagline {
+      font-size: 1.12rem; color: rgba(255,255,255,.72);
+      max-width: 580px; margin: 0 auto 2rem; line-height: 1.6;
+    }
+    .header-meta-chips {
+      display: flex; flex-wrap: wrap; gap: .6rem; justify-content: center;
+    }
+    .chip {
+      background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18);
+      color: rgba(255,255,255,.8); padding: .28rem .75rem; border-radius: 99px;
+      font-family: var(--font-mono); font-size: .72rem;
+    }
+
+    /* ── Main Layout ────────────────────────────────────────────── */
+    .page-body { max-width: 1080px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+
+    /* ── Metadata Block ─────────────────────────────────────────── */
+    .metadata-block {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+      padding: 1.75rem 2rem; margin-bottom: 2rem;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.25rem;
+    }
+    .meta-field { display: flex; flex-direction: column; gap: .2rem; }
+    .meta-label {
+      font-size: .68rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--text-muted); font-family: var(--font-mono);
+    }
+    .meta-value { font-size: .9rem; font-weight: 600; color: var(--text-primary); }
+    .meta-value.accent { color: var(--accent-1); }
+
+    /* ── Session Context Block ──────────────────────────────────── */
+    .session-context {
+      background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+      border: 1px solid #99f6e4; border-left: 4px solid var(--accent-1);
+      border-radius: var(--radius-md); padding: 1.5rem 1.75rem; margin-bottom: 2rem;
+    }
+    .session-context h3 {
+      font-size: .75rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--accent-2);
+      font-family: var(--font-mono); margin-bottom: .65rem;
+    }
+    .session-context p { font-size: .9rem; color: var(--text-secondary); line-height: 1.7; }
+    .session-context p + p { margin-top: .5rem; }
+    .session-context strong { color: var(--accent-2); font-weight: 700; }
+
+    /* ── Section Headers ────────────────────────────────────────── */
+    .section-title {
+      font-size: 1.05rem; font-weight: 700; letter-spacing: .05em;
+      text-transform: uppercase; color: var(--text-muted);
+      font-family: var(--font-mono); margin-bottom: 1.2rem;
+      display: flex; align-items: center; gap: .6rem;
+    }
+    .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    /* ── Triadic Pillars ────────────────────────────────────────── */
+    .triadic-pillars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem; margin-bottom: 2.5rem;
+    }
+    .pillar {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+      padding: 2rem 1.75rem; position: relative; overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .pillar:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .pillar::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(13,148,136,.04) 0%, transparent 60%);
+    }
+    .pillar-number {
+      font-size: .68rem; font-weight: 800; letter-spacing: .18em;
+      text-transform: uppercase; font-family: var(--font-mono);
+      color: var(--accent-1); margin-bottom: .5rem;
+    }
+    .pillar-name {
+      font-size: 1.35rem; font-weight: 800; color: var(--text-primary);
+      margin-bottom: .6rem; line-height: 1.2;
+    }
+    .pillar-glyph {
+      position: absolute; top: 1.2rem; right: 1.4rem;
+      font-size: 2.4rem; opacity: .12; user-select: none;
+    }
+    .pillar-desc { font-size: .88rem; color: var(--text-secondary); line-height: 1.65; }
+    .pillar-tags { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1rem; }
+    .pillar-tag {
+      font-size: .68rem; font-weight: 600; padding: .2rem .55rem;
+      border-radius: 99px; font-family: var(--font-mono);
+      background: var(--accent-pale); color: var(--accent-2);
+      border: 1px solid var(--accent-soft);
+    }
+
+    /* ── Core Concepts Grid ─────────────────────────────────────── */
+    .concepts-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem; margin-bottom: 2.5rem;
+    }
+    .concept-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-md); padding: 1.25rem 1.4rem; box-shadow: var(--shadow-sm);
+    }
+    .concept-card h4 { font-size: .88rem; font-weight: 700; color: var(--text-primary); margin-bottom: .4rem; }
+    .concept-card p { font-size: .82rem; color: var(--text-secondary); line-height: 1.55; }
+
+    /* ── Equations Block ────────────────────────────────────────── */
+    .equations-block {
+      background: #000f0e; border-radius: var(--radius-md);
+      padding: 1.75rem 2rem; margin-bottom: 2.5rem; border: 1px solid #042f2e;
+    }
+    .equations-block .eq-title {
+      font-size: .72rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: #134e4a;
+      font-family: var(--font-mono); margin-bottom: 1.1rem;
+    }
+    .equation-row {
+      display: flex; align-items: flex-start; gap: 1.2rem;
+      padding: .8rem 0; border-bottom: 1px solid #042f2e;
+    }
+    .equation-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .eq-formula {
+      font-family: var(--font-mono); font-size: 1rem;
+      color: #2dd4bf; font-weight: 600; min-width: 220px; flex-shrink: 0;
+    }
+    .eq-desc { font-size: .83rem; color: #5eead4; line-height: 1.5; }
+
+    /* ── Source Coding Table ────────────────────────────────────── */
+    .coding-table-wrap { overflow-x: auto; margin-bottom: 2.5rem; }
+    .coding-table { width: 100%; border-collapse: collapse; font-size: .82rem; }
+    .coding-table th {
+      background: var(--accent-1); color: #fff;
+      padding: .6rem 1rem; text-align: left;
+      font-size: .7rem; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; font-family: var(--font-mono);
+    }
+    .coding-table td { padding: .55rem 1rem; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+    .coding-table tr:last-child td { border-bottom: none; }
+    .coding-table tr:hover td { background: var(--accent-pale); }
+    .coding-table .name { font-weight: 700; color: var(--text-primary); }
+    .coding-table .formula { font-family: var(--font-mono); color: var(--accent-1); font-size: .78rem; }
+
+    /* ── Connections Panel ──────────────────────────────────────── */
+    .connections-panel {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+      padding: 1.75rem 2rem; margin-bottom: 2.5rem;
+    }
+    .connection-list { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
+    .connection-list li {
+      display: flex; align-items: center; gap: .75rem;
+      font-size: .88rem; color: var(--text-secondary);
+    }
+    .connection-list li::before { content: '→'; color: var(--accent-1); font-weight: 700; flex-shrink: 0; }
+    .connection-list strong { color: var(--text-primary); font-weight: 700; }
+
+    /* ── Footer ─────────────────────────────────────────────────── */
+    .page-footer {
+      border-top: 1px solid var(--border); margin-top: 3rem;
+      padding: 1.5rem 2rem; text-align: center;
+      font-size: .78rem; color: var(--text-muted); font-family: var(--font-mono);
+    }
+    .page-footer a { color: var(--accent-1); text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+
+    /* ── Responsive ─────────────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .module-header { padding: 3.5rem 1.25rem 2.75rem; }
+      .page-body { padding: 2rem 1.25rem 4rem; }
+      .metadata-block { padding: 1.25rem; }
+      .triadic-pillars { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
+<body>
 
-<body class="tf-module tf-module--theory tf-module--information_theory">
-    <!-- HERO -->
-    <img src="../../images/information_theory.png"
-         alt="Information Theory hero image"
-         class="hero-img">
- <header class="tf-hero tf-hero--theory">
-  <div class=tf-module tf-module--theory tf-module--information_theory">
-   <h1>Information Theory</h1>
-  </div>
- </header>      
- 
-  <div class="tf-hero__content"> 
-     <h2>Information as Structured Distinction</h2>
-  </div>
-    <div class="hero-overlay">
-      <p>
-        Information Theory here is not abstraction; it is the quantification of
-        resonance and uncertainty, where signal and noise define the limits of
-        communication and understanding.
+  <!-- ── Navigation Breadcrumb ──────────────────────────────────── -->
+  <nav class="nav-breadcrumb" aria-label="Breadcrumb">
+    <a href="/">TriadicFrameworks</a>
+    <span class="sep">/</span>
+    <a href="/docs/theories/">theories</a>
+    <span class="sep">/</span>
+    <span class="current">information_theory</span>
+  </nav>
+
+  <!-- ── Gradient Header ────────────────────────────────────────── -->
+  <header class="module-header" role="banner">
+    <div class="header-inner">
+      <div class="module-tag">Foundational Theory · Module 05</div>
+      <h1>Information <span>Theory</span></h1>
+      <p class="header-tagline">
+        The mathematical science of quantifying, storing, and transmitting information —
+        Shannon's entropy bridges probability, compression, and channel capacity into
+        a universal framework that underlies all modern communication and computation.
       </p>
-    </div>
-
-    <div class="hero-icons">
-        <span>🔹 Distinction‑first</span>
-        <span>🔹 Coherence‑driven</span>
-        <span>🔹 Operator‑aligned</span>
-        <span>🔹 Zero drift</span>
+      <div class="header-meta-chips">
+        <span class="chip">Shannon entropy</span>
+        <span class="chip">channel capacity</span>
+        <span class="chip">source coding</span>
+        <span class="chip">mutual information</span>
+        <span class="chip">Kolmogorov complexity</span>
       </div>
-  </div>
-
-  <main class="container">
-
-    <!-- TWO‑COLUMN LAYOUT -->
-    <div class="layout">
-
-      <!-- LEFT COLUMN -->
-      <section class="tf-section">
-        <h2>Module Identity</h2>
-        <ul class="hero-list">
-          <li>
-            <span class="bullet"></span>
-            <div>
-              <strong>Information = structured distinction.</strong><br>
-              Distinctions are structural units, not symbols, bits, or semantic tokens.
-            </div>
-          </li>
-          <li>
-            <span class="tf-list"></span>
-            <div>
-              <strong>Coherence = distinction stability.</strong><br>
-              A system is coherent when its distinctions remain identifiable,
-              non‑degenerate, and operator‑stable across regimes.
-            </div>
-          </li>
-          <li>
-            <span class="tf-list"></span>
-            <div>
-              <strong>Signals = operators.</strong><br>
-              Signals are operators acting on distinction spaces, not “messages”
-              that must be interpreted.
-            </div>
-          </li>
-        </ul>
-
-        <h2>Regimes & Scope</h2>
-        <ul class="hero-list">
-          <li>
-            <span class="tf-list"></span>
-            <div>
-              <strong>R0 → R3 compatible.</strong><br>
-              From primitive distinctions (R0) to dimensional operators (R3),
-              with coherence preserved across transitions.
-            </div>
-          </li>
-          <li>
-            <span class="tf-list"></span>
-            <div>
-              <strong>Substrate‑neutral.</strong><br>
-              Not tied to channels, media, or semantics; usable for physics,
-              cognition, computation, and more.
-            </div>
-          </li>
-        </ul>
-
-        <div class="hero-pill-row">
-          <span class="pill accent">Distinction‑first</span>
-          <span class="pill">Coherence‑based</span>
-          <span class="pill">Operator‑driven</span>
-          <span class="pill">RTT‑aligned</span>
-          <span class="pill">Zero drift</span>
-        </div>
-      </section>
-
-      <!-- RIGHT COLUMN -->
-      <aside class="right-column">
-
-        <section class="tf-section">
-          <h2>Start Here</h2>
-          <p>Core orientation for students, operators, and AI agents.</p>
-          <ul class="tf-list">
-            <li><a href="session_context.md" target="_blank">Session context</a></li>
-            <li><a href="regimes.md" target="_blank">Regimes</a></li>
-            <li><a href="operators.md" target="_blank">Operators</a></li>
-            <li><a href="operator_examples.md" target="_blank">Operator examples</a></li>
-          </ul>
-        </section>
-
-        <section class="tf-section">
-          <h2>Structure & Engine</h2>
-          <p>Files that make the module runnable and cross‑module safe.</p>
-          <ul class="tf-list">
-            <li><a href="coherence_map.md" target="_blank">Coherence map</a></li>
-            <li><a href="lineage.md" target="_blank">Lineage</a></li>
-            <li><a href="cross_module.md" target="_blank">Cross‑module</a></li>
-            <li><a href="engine_notes.md" target="_blank">Engine notes</a></li>
-            <li><a href="faq.md" target="_blank">FAQ</a></li>
-            <li><a href="simulation_hooks.json" target="_blank"><code>simulation_hooks.json</code></a></li>
-          </ul>
-        </section>
-
-        <section class="tf-section">
-          <h2>How to Run This Canon</h2>
-          <p>Treat this module as a <strong>distinction engine</strong> you can extend:</p>
-          <ul class="tf-list">
-            <li>Define distinction spaces using <code>𝓓</code>.</li>
-            <li>Model signals as operators with <code>𝓢</code> and <code>𝓣</code>.</li>
-            <li>Track coherence with <code>𝓒</code> and <code>𝓘</code>.</li>
-            <li>Use <code>𝓡</code> to move across R0 → R3 without drift.</li>
-          </ul>
-        </section>
-
-      </aside>
     </div>
+  </header>
+
+  <main class="page-body">
+
+    <!-- ── Metadata Block ───────────────────────────────────────── -->
+    <section class="metadata-block" aria-label="Module Metadata">
+      <div class="meta-field">
+        <span class="meta-label">Module ID</span>
+        <span class="meta-value accent">information_theory</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Domain</span>
+        <span class="meta-value">Mathematics · Communications · CS</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Scale</span>
+        <span class="meta-value">Bit · Symbol · Channel · System</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Triadic Class</span>
+        <span class="meta-value">Fundamental Framework</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Status</span>
+        <span class="meta-value accent">Active</span>
+      </div>
+      <div class="meta-field">
+        <span class="meta-label">Version</span>
+        <span class="meta-value">2.0 · 2026-10-02</span>
+      </div>
+    </section>
+
+    <!-- ── Session Context Block ────────────────────────────────── -->
+    <section class="session-context" aria-label="Session Context">
+      <h3>⟳ Session Context</h3>
+      <p>
+        <strong>Focus:</strong> Information Theory is examined through the TriadicFrameworks pillars of
+        <strong>Entropy</strong>, <strong>Channel</strong>, and <strong>Compression</strong> —
+        the three structural elements of Shannon's 1948 framework that remain the foundation
+        of every digital communication system, data storage technology, and AI model today.
+      </p>
+      <p>
+        This module covers Shannon entropy, mutual information, the noisy-channel coding theorem,
+        source coding, algorithmic (Kolmogorov) complexity, and rate-distortion theory,
+        with cross-module resonances to Thermodynamics, Quantum Mechanics, Evolutionary Biology,
+        and Chaos Theory.
+      </p>
+    </section>
+
+    <!-- ── Triadic Pillars ──────────────────────────────────────── -->
+    <h2 class="section-title">Triadic Pillars</h2>
+    <div class="triadic-pillars" role="list">
+
+      <article class="pillar" role="listitem">
+        <div class="pillar-glyph">𝐻</div>
+        <div class="pillar-number">Pillar I</div>
+        <h3 class="pillar-name">Entropy</h3>
+        <p class="pillar-desc">
+          Shannon entropy H(X) = −Σ pᵢ log₂ pᵢ measures the average uncertainty
+          (or information content) of a random variable. It is the fundamental
+          lower bound on lossless compression: no code can compress below H bits
+          per symbol on average. Joint, conditional, and cross-entropy extend the
+          concept to dependent variables and model divergence.
+        </p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">H(X) = −Σp log p</span>
+          <span class="pillar-tag">uncertainty</span>
+          <span class="pillar-tag">KL divergence</span>
+        </div>
+      </article>
+
+      <article class="pillar" role="listitem">
+        <div class="pillar-glyph">📡</div>
+        <div class="pillar-number">Pillar II</div>
+        <h3 class="pillar-name">Channel</h3>
+        <p class="pillar-desc">
+          A communication channel maps inputs to outputs through a conditional
+          probability distribution p(y|x). Channel capacity C = max_{p(x)} I(X;Y)
+          is Shannon's noisy-channel theorem: reliable communication is possible
+          at any rate R &lt; C, and impossible for R &gt; C — a boundary independent
+          of the specific encoding scheme.
+        </p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">channel capacity C</span>
+          <span class="pillar-tag">mutual information</span>
+          <span class="pillar-tag">noise</span>
+        </div>
+      </article>
+
+      <article class="pillar" role="listitem">
+        <div class="pillar-glyph">⊞</div>
+        <div class="pillar-number">Pillar III</div>
+        <h3 class="pillar-name">Compression</h3>
+        <p class="pillar-desc">
+          Source coding theorems establish optimal lossless compression at rate H(X)
+          (Shannon) and lossy compression at rate R(D) — the rate-distortion function —
+          for a given fidelity D. Kolmogorov complexity K(x) provides an
+          algorithmic, distribution-free complement: the length of the shortest
+          program generating string x.
+        </p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">Huffman codes</span>
+          <span class="pillar-tag">arithmetic coding</span>
+          <span class="pillar-tag">Kolmogorov complexity</span>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ── Core Concepts ────────────────────────────────────────── -->
+    <h2 class="section-title">Core Concepts</h2>
+    <div class="concepts-grid">
+      <div class="concept-card">
+        <h4>Mutual Information</h4>
+        <p>I(X;Y) = H(X) − H(X|Y): the reduction in uncertainty about X given knowledge of Y. The symmetric measure of statistical dependence between two variables; zero iff X ⊥ Y.</p>
+      </div>
+      <div class="concept-card">
+        <h4>KL Divergence</h4>
+        <p>D_KL(P‖Q) = Σ pᵢ log(pᵢ/qᵢ): the asymmetric "distance" from distribution Q to P. Foundational in Bayesian inference, variational methods, and modern machine learning.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Noisy-Channel Theorem</h4>
+        <p>Shannon's fundamental theorem: for any channel with capacity C and rate R &lt; C, there exist codes achieving arbitrarily low error probability. Proves reliable communication is always achievable in principle.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Rate-Distortion Theory</h4>
+        <p>For lossy compression, the rate-distortion function R(D) gives the minimum bits per source symbol needed to reconstruct within distortion D. Achievable iff R ≥ R(D).</p>
+      </div>
+      <div class="concept-card">
+        <h4>Data Processing Inequality</h4>
+        <p>If X → Y → Z is a Markov chain, then I(X;Z) ≤ I(X;Y): post-processing can never increase mutual information. Establishes fundamental limits on inference pipelines.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Algorithmic Complexity</h4>
+        <p>Kolmogorov complexity K(x) is the length of the shortest program producing x. Incomputable in general but gives a distribution-free notion of randomness: x is random iff K(x) ≈ |x|.</p>
+      </div>
+    </div>
+
+    <!-- ── Key Equations ────────────────────────────────────────── -->
+    <h2 class="section-title">Key Equations</h2>
+    <div class="equations-block">
+      <div class="eq-title">// Shannon's Foundational Formalisms</div>
+      <div class="equation-row">
+        <span class="eq-formula">H(X) = −Σᵢ pᵢ log₂ pᵢ</span>
+        <span class="eq-desc">Shannon entropy: the average number of bits needed to encode one outcome of X. Maximized by the uniform distribution; zero for a deterministic variable.</span>
+      </div>
+      <div class="equation-row">
+        <span class="eq-formula">I(X;Y) = H(X) − H(X|Y)</span>
+        <span class="eq-desc">Mutual information: how much knowing Y reduces uncertainty about X. Equals H(X) + H(Y) − H(X,Y); symmetric in X and Y.</span>
+      </div>
+      <div class="equation-row">
+        <span class="eq-formula">C = max_{p(x)} I(X;Y)</span>
+        <span class="eq-desc">Channel capacity: supremum of mutual information over all input distributions. For an AWGN channel: C = B log₂(1 + SNR) — the Shannon-Hartley theorem.</span>
+      </div>
+      <div class="equation-row">
+        <span class="eq-formula">D_KL(P‖Q) = Σ pᵢ log(pᵢ / qᵢ)</span>
+        <span class="eq-desc">Kullback–Leibler divergence: expected log-likelihood ratio under P. Non-negative (Gibbs' inequality), zero iff P = Q; not a metric (asymmetric).</span>
+      </div>
+      <div class="equation-row">
+        <span class="eq-formula">L* ≥ H(X) / log₂ D</span>
+        <span class="eq-desc">Source coding lower bound: the expected length L* of any uniquely decodable D-ary code cannot fall below H(X)/log₂D. Huffman codes achieve L* &lt; H(X)/log₂D + 1.</span>
+      </div>
+    </div>
+
+    <!-- ── Source Coding Schemes ─────────────────────────────────── -->
+    <h2 class="section-title">Source Coding Schemes</h2>
+    <div class="coding-table-wrap">
+      <table class="coding-table" aria-label="Source Coding Comparison">
+        <thead>
+          <tr>
+            <th>Scheme</th>
+            <th>Type</th>
+            <th>Rate Bound</th>
+            <th>Key Property</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="name">Huffman Coding</td>
+            <td>Lossless · Symbol</td>
+            <td class="formula">H(X) ≤ L* &lt; H(X)+1</td>
+            <td>Optimal prefix-free; greedy tree construction</td>
+          </tr>
+          <tr>
+            <td class="name">Arithmetic Coding</td>
+            <td>Lossless · Sequence</td>
+            <td class="formula">L* → H(X) per symbol</td>
+            <td>Approaches entropy rate for long sequences</td>
+          </tr>
+          <tr>
+            <td class="name">LZ77 / LZ78</td>
+            <td>Lossless · Universal</td>
+            <td class="formula">→ H(X) asymptotically</td>
+            <td>No prior distribution needed; basis of gzip, zip</td>
+          </tr>
+          <tr>
+            <td class="name">JPEG / DCT</td>
+            <td>Lossy · Transform</td>
+            <td class="formula">R(D) function</td>
+            <td>Quantized transform coefficients; tunable distortion</td>
+          </tr>
+          <tr>
+            <td class="name">Turbo / LDPC Codes</td>
+            <td>Channel · Error-correcting</td>
+            <td class="formula">R → C (capacity-approaching)</td>
+            <td>Iterative belief-propagation decoding; near-Shannon limit</td>
+          </tr>
+          <tr>
+            <td class="name">Polar Codes</td>
+            <td>Channel · Provably optimal</td>
+            <td class="formula">R = C exactly</td>
+            <td>First provably capacity-achieving codes (Arıkan, 2009); used in 5G</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ── Cross-Module Connections ─────────────────────────────── -->
+    <h2 class="section-title">Cross-Module Connections</h2>
+    <div class="connections-panel">
+      <ul class="connection-list">
+        <li><strong>Thermodynamics</strong> — Shannon entropy is mathematically identical to Boltzmann-Gibbs entropy S = −k_B Σ pᵢ ln pᵢ; Landauer's principle links information erasure to heat dissipation (k_BT ln2 per bit).</li>
+        <li><strong>Quantum Mechanics</strong> — Von Neumann entropy S(ρ) = −Tr(ρ ln ρ) generalizes Shannon entropy to quantum states; entanglement entropy and quantum channel capacity form quantum information theory.</li>
+        <li><strong>Evolutionary Biology</strong> — The genetic code is a near-optimal error-correcting code; mutual information between codon and amino acid positions quantifies redundancy and conservation.</li>
+        <li><strong>Chaos Theory</strong> — Kolmogorov-Sinai (KS) entropy links topological entropy of a chaotic dynamical system to the Shannon information generation rate; positive KS entropy defines chaos.</li>
+        <li><strong>General Relativity</strong> — Bekenstein-Hawking black hole entropy S = kA/4l²_P is the maximum information storable in a region (holographic bound); the holographic principle maps bulk physics to boundary information.</li>
+      </ul>
+    </div>
+
   </main>
 
-  <footer class="container">
-    <span>Information Theory · Distinction‑first coherence grammar · R0–R3 compatible</span><br>
-    <span>Student‑ready · AI‑parsable · Canon‑aligned · Zero drift</span>
+  <!-- ── Footer ────────────────────────────────────────────────── -->
+  <footer class="page-footer" role="contentinfo">
+    <p>
+      <a href="/">TriadicFrameworks</a> · information_theory · v2.0 · generated 2026-10-02
+      &nbsp;·&nbsp; <a href="/docs/theories/">all modules</a>
+    </p>
   </footer>
 
 </body>
-  
 </html>
