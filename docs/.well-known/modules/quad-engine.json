@@ -1,1 +1,56 @@
+{
+  "module": {
+    "name": "quad-engine",
+    "category": "engines",
+    "summary": "Quad Engine provides four-mode operator execution for RTT analyzers, enabling multi-path evaluation, coherence scoring, and drift prediction.",
+    "purpose": "Serve as a multi-channel execution engine for RTT modules requiring parallel operator evaluation.",
+    "version": "1.0.0",
+    "canonical": true
+  },
+
+  "ai": {
+    "module.name": "quad-engine",
+    "module.summary": "Four-mode RTT execution engine supporting parallel operator evaluation and coherence scoring.",
+    "module.category": "RTT-Engine",
+    "navigation": "/quad-engine",
+    "discussions": "https://github.com/umaywant2/TriadicFrameworks/discussions",
+    "contact": {
+      "x": "@TriadicFrameworks",
+      "youtube": "@TriadicFrameworks"
+    }
+  },
+
+  "files": {
+    "module.json": "/quad-engine/module.json",
+    "service-doc": "/.well-known/modules/quad-engine/index.md",
+    "openapi": "/openapi/quad-engine.json",
+    "skill": "/.well-known/agent-skills/quad-engine/SKILL.md",
+    "examples": "/quad-engine/examples/",
+    "operators": "/quad-engine/operators/"
+  },
+
+  "operators": [
+    "quad.mode.alpha",
+    "quad.mode.beta",
+    "quad.mode.gamma",
+    "quad.mode.delta",
+    "quad.coherence.score",
+    "quad.parallel.evaluate"
+  ],
+
+  "analyzer_layers": {
+    "operator": ["alpha", "beta", "gamma", "delta"],
+    "dimensional": ["parallel-evaluation", "multi-path"],
+    "regime": ["coherence-scoring", "drift-evaluation"],
+    "drift": ["quad-drift-map"],
+    "coherence": ["quad-coherence-engine"],
+    "cross-cutting": ["RTT multi-engine coupling"]
+  },
+
+  "examples": [
+    "Quad-mode RTT operator evaluation",
+    "Parallel coherence scoring across four channels",
+    "Drift prediction using quad-engine multi-path"
+  ]
+}
 
