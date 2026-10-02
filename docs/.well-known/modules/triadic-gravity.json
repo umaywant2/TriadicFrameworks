@@ -1,1 +1,55 @@
+{
+  "module": {
+    "name": "triadic-gravity",
+    "category": "physics",
+    "summary": "Triadic gravity subsystem modeling resonance-driven gravitational behavior using triadic collapse, coherence thresholds, and RTT field dynamics.",
+    "purpose": "Provide operators, analyzers, and engines with gravity-field primitives expressed through triadic resonance mathematics.",
+    "version": "1.0.0",
+    "canonical": true
+  },
+
+  "ai": {
+    "module.name": "triadic-gravity",
+    "module.summary": "Gravity modeled as a triadic resonance field with collapse regimes and coherence thresholds.",
+    "module.category": "RTT-Physics",
+    "navigation": "/triadic-gravity",
+    "discussions": "https://github.com/umaywant2/TriadicFrameworks/discussions",
+    "contact": {
+      "x": "@TriadicFrameworks",
+      "youtube": "@TriadicFrameworks"
+    }
+  },
+
+  "files": {
+    "module.json": "/triadic-gravity/module.json",
+    "service-doc": "/.well-known/triadic-gravity/index.md",
+    "openapi": "/openapi/triadic-gravity.json",
+    "skill": "/.well-known/agent-skills/triadic-gravity/SKILL.md",
+    "examples": "/triadic-gravity/examples/",
+    "operators": "/triadic-gravity/operators/"
+  },
+
+  "operators": [
+    "gravity.collapse",
+    "gravity.resonance",
+    "gravity.coherence",
+    "gravity.field.map",
+    "gravity.drift.boundary"
+  ],
+
+  "analyzer_layers": {
+    "operator": ["collapse", "resonance", "coherence"],
+    "dimensional": ["field-mapping", "triadic-alignment"],
+    "regime": ["stability", "drift", "collapse"],
+    "drift": ["boundary-analysis"],
+    "coherence": ["RTT-coherence-equations"],
+    "cross-cutting": ["RTT ↔ FFF coupling"]
+  },
+
+  "examples": [
+    "Triadic collapse pattern for 3-body resonance",
+    "Gravity field coherence threshold mapping",
+    "RTT-driven gravitational drift analysis"
+  ]
+}
 
