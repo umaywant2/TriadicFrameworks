@@ -1,4 +1,4 @@
-- [`biorhythm_single_pass_eval.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/biorhythm_single_pass_eval.json) — Agentic module schema role assignments
+- [`biorhythm_single_pass_eval.json`](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Research/biorhythm_single_pass_eval.json) — Agentic module schema role assignments
 
 # Biorhythm Birth-Chart Claim — Single-Pass Evaluation
 
