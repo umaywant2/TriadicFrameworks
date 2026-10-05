@@ -1,3 +1,5 @@
+<img width="1194" height="672" alt="Research_biorhythm_single_pass_eval_" src="https://github.com/user-attachments/assets/4369d9ff-f28d-4cf3-8ce1-93a0ccd7721e" />
+
 - [`biorhythm_single_pass_eval.json`](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Research/biorhythm_single_pass_eval.json) — Agentic module schema role assignments
 
 # Biorhythm Birth-Chart Claim — Single-Pass Evaluation
