@@ -1,3 +1,5 @@
+- [`biorhythm_single_pass_eval.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/biorhythm_single_pass_eval.json) — Agentic module schema role assignments
+
 # Biorhythm Birth-Chart Claim — Single-Pass Evaluation
 
 **Substrate:** RTT Resonant-Time Triad — 𝒯_R = (f_R, τ_R, Q_R)  
