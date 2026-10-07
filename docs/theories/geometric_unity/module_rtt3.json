@@ -1,1 +1,48 @@
+{
+  "module": "Geometric Unity",
+  "rtt_pass": "RTT-3",
+  "version": "2026-bridge-1.0",
+
+  "paradox_detection": {
+    "type": "cycle-break",
+    "location": "Ω6 → Ω0",
+    "description": "The operator cycle fails to close at the physical boundary, producing a regime-boundary paradox.",
+    "notes": "This is the same paradox detected in RTT-1 and RTT-2."
+  },
+
+  "substrate_gap": {
+    "required": true,
+    "description": "GU requires a paradox-resilient substrate to close the operator cycle.",
+    "notes": "RTT identifies substrate dependence at Ω6."
+  },
+
+  "ipd12_alignment": {
+    "closure": "Ω6 → (Prime 11 → Prime 2 → Prime 5) → Ω0",
+    "structure": "3 quads, 12 primes, triad substrate",
+    "description": "IPD‑12 provides the intransitive-prime traversal needed to close the cycle.",
+    "notes": "Cycle closure is restored only when GU is hosted inside IPD‑12."
+  },
+
+  "triadic_alignment": {
+    "observer": "triad substrate",
+    "mapping": "observerse ↔ RTT coherence",
+    "notes": "Triadic observer substrate stabilizes observerse collapse."
+  },
+
+  "ten_in_1_qualification": {
+    "qualified": true,
+    "criteria": [
+      "regime boundaries",
+      "substrate alignment",
+      "paradox behavior",
+      "broken cycle",
+      "triadic interpretation",
+      "12-state mapping",
+      "cross-framework alignment"
+    ],
+    "notes": "GU satisfies all Ten‑in‑1 criteria."
+  },
+
+  "rtt_verdict": "Geometric Unity contains a substrate-dependent paradox resolved only through IPD‑12. RTT-3 confirms GU as a Ten‑in‑1 theory."
+}
 
