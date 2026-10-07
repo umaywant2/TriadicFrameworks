@@ -51,6 +51,37 @@ Every design decision in IPD‑12 answers a structural problem.
 
 ---
 
+### **Historical Origin — Why IPD‑12 Exists at All**
+
+IPD‑12 did not begin as an abstract operator engine.  
+It began as a *problem of alignment*.
+
+During early work integrating **Geometric Unity (GU)** into TriadicFrameworks, it became clear that GU’s geometry, curvature operators, and observerse structures were powerful — but they did not align cleanly with any existing substrate. The theory was speaking a language that needed a stronger foundation.
+
+Two insights triggered the creation of IPD‑12:
+
+**1. Intransitive primes**  
+While researching geometric operator behavior, the concept of *intransitive primes* surfaced — a structure where directed edges do not collapse into transitive hierarchies. This immediately resonated with childhood intuition around dice, polyhedra, and D&D mechanics. The idea of a **prime‑indexed, intransitive operator object** became the seed.
+
+**2. GU needed a worthy substrate**  
+Rather than modifying GU, the goal became to build a framework *worthy* of GU — one that could host its curvature, anomaly, dilaton, and observerse operators without distortion. This required a 12‑state engine capable of paradox stability, regime traversal, dimensional lift/collapse, and substrate alignment.
+
+From these two insights, the structure emerged:
+
+- **12 faces** → the minimum geometry supporting 4 triads, 2 hex‑cycles, and a full paradox loop  
+- **3 quads** → a natural split where each quad supports GU’s geometric tiers  
+- **triadic substrate overlay** → the foundational lattice that allows GU to express its operators without drift  
+- **prime indexing** → irreducible operator identities that map cleanly to GU, RTT, FFT, and Pantheon  
+- **intransitive edges** → paradox‑stable traversal without collapse  
+
+IPD‑12 was not created to replace GU.  
+It was created to **give GU power** — a substrate strong enough to express its geometry, stabilize its transitions, and anchor its observerse.
+
+This is why IPD‑12 sits at the intersection of RTT, GU, FFT, and Pantheon.  
+It is the structural engine that makes cross‑framework alignment possible.
+
+---
+
 ### Why primes?
 
 Prime numbers are the only integers with no internal factorization. An operator state built on a prime cannot be decomposed into a product of smaller states. This means:
