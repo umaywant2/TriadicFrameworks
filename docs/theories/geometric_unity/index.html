@@ -1,1 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Geometric Unity — TriadicFrameworks canonical theory module exploring curvature, anomaly cancellation, observerse structure, and substrate alignment." />
+  <meta name="module" content="geometric_unity" />
+  <meta name="category" content="Unified Geometry" />
+  <meta name="framework" content="TriadicFrameworks" />
+  <meta name="version" content="2026-bridge-1.0" />
+  <meta name="author" content="TriadicFrameworks" />
+  <title>Geometric Unity · TriadicFrameworks</title>
 
+  <!-- Styles mirrored from Chaos Theory module -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --accent-1:   #2563eb;
+      --accent-2:   #1d4ed8;
+      --accent-3:   #1e3a8a;
+      --accent-pale: #eff6ff;
+      --accent-soft: #bfdbfe;
+      --grad-start:  #0f172a;
+      --grad-mid:    #1e3a8a;
+      --grad-end:    #2563eb;
+      --text-primary: #1c1917;
+      --text-secondary: #57534e;
+      --text-muted:  #a8a29e;
+      --bg-page:     #f9fafb;
+      --bg-card:     #ffffff;
+      --border:      #e5e7eb;
+      --radius-sm:   6px;
+      --radius-md:   12px;
+      --radius-lg:   20px;
+      --shadow-sm:   0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.05);
+      --shadow-md:   0 4px 16px rgba(0,0,0,.10), 0 2px 6px rgba(0,0,0,.06);
+      --shadow-lg:   0 12px 40px rgba(0,0,0,.13), 0 4px 12px rgba(0,0,0,.08);
+      --font-sans:   'Segoe UI', system-ui, -apple-system, sans-serif;
+      --font-mono:   'Cascadia Code', 'Fira Code', 'Courier New', monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg-page);
+      color: var(--text-primary);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+
+    /* Breadcrumb */
+    .nav-breadcrumb {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(15,23,42,.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(37,99,235,.25);
+      padding: 0.55rem 2rem;
+      display: flex; align-items: center; gap: 0.5rem;
+      font-size: 0.78rem; font-family: var(--font-mono);
+      color: rgba(255,255,255,.55);
+    }
+    .nav-breadcrumb a { color: rgba(255,255,255,.75); text-decoration: none; }
+    .nav-breadcrumb a:hover { color: #93c5fd; }
+    .nav-breadcrumb .sep { color: rgba(255,255,255,.3); }
+    .nav-breadcrumb .current { color: #93c5fd; font-weight: 600; }
+
+    /* Header */
+    .module-header {
+      background: linear-gradient(135deg, var(--grad-start) 0%, var(--grad-mid) 50%, var(--grad-end) 100%);
+      padding: 5rem 2rem 4rem;
+      position: relative; overflow: hidden;
+      text-align: center;
+    }
+    .module-header::after {
+      content: '𝛤';
+      position: absolute; right: 6%; top: 50%; transform: translateY(-50%);
+      font-size: 14rem; font-weight: 900; opacity: .04;
+      color: #fff; pointer-events: none;
+    }
+    .header-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; }
+    .module-tag {
+      display: inline-block;
+      background: rgba(37,99,235,.25); border: 1px solid rgba(37,99,235,.45);
+      color: #93c5fd; font-size: 0.72rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; padding: .3rem .9rem; border-radius: 99px;
+      margin-bottom: 1.4rem; font-family: var(--font-mono);
+    }
+    .module-header h1 {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 800; letter-spacing: -.02em; line-height: 1.1;
+      color: #ffffff; margin-bottom: 1rem;
+    }
+    .module-header h1 span { color: #93c5fd; }
+    .header-tagline {
+      font-size: 1.12rem; color: rgba(255,255,255,.72);
+      max-width: 580px; margin: 0 auto 2rem; line-height: 1.6;
+    }
+    .header-meta-chips {
+      display: flex; flex-wrap: wrap; gap: .6rem;
+      justify-content: center; font-size: 0.75rem;
+    }
+    .chip {
+      background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18);
+      color: rgba(255,255,255,.8); padding: .28rem .75rem; border-radius: 99px;
+      font-family: var(--font-mono); font-size: .72rem;
+    }
+
+    /* Main */
+    .page-body { max-width: 1080px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+
+    /* Metadata */
+    .metadata-block {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+      padding: 1.75rem 2rem; margin-bottom: 2rem;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.25rem;
+    }
+    .meta-label {
+      font-size: .68rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--text-muted);
+      font-family: var(--font-mono);
+    }
+    .meta-value {
+      font-size: .9rem; font-weight: 600; color: var(--text-primary);
+    }
+    .meta-value.accent { color: var(--accent-1); }
+
+    /* Session Context */
+    .session-context {
+      background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+      border: 1px solid #bfdbfe; border-left: 4px solid var(--accent-1);
+      border-radius: var(--radius-md); padding: 1.5rem 1.75rem;
+      margin-bottom: 2rem;
+    }
+    .session-context h3 {
+      font-size: .75rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--accent-2);
+      font-family: var(--font-mono); margin-bottom: .65rem;
+    }
+
+    /* Section Titles */
+    .section-title {
+      font-size: 1.05rem; font-weight: 700; letter-spacing: .05em;
+      text-transform: uppercase; color: var(--text-muted);
+      font-family: var(--font-mono); margin-bottom: 1.2rem;
+      display: flex; align-items: center; gap: .6rem;
+    }
+    .section-title::after {
+      content: ''; flex: 1; height: 1px; background: var(--border);
+    }
+
+    /* Triadic Pillars */
+    .triadic-pillars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem; margin-bottom: 2.5rem;
+    }
+    .pillar {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+      padding: 2rem 1.75rem; position: relative; overflow: hidden;
+    }
+    .pillar-number {
+      font-size: .68rem; font-weight: 800; letter-spacing: .18em;
+      text-transform: uppercase; font-family: var(--font-mono);
+      color: var(--accent-1); margin-bottom: .5rem;
+    }
+    .pillar-name {
+      font-size: 1.35rem; font-weight: 800; color: var(--text-primary);
+      margin-bottom: .6rem; line-height: 1.2;
+    }
+    .pillar-desc {
+      font-size: .88rem; color: var(--text-secondary); line-height: 1.65;
+    }
+
+    /* Concepts */
+    .concepts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem; margin-bottom: 2.5rem;
+    }
+    .concept-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-md); padding: 1.25rem 1.4rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Equations */
+    .equations-block {
+      background: #1c1917; border-radius: var(--radius-md);
+      padding: 1.75rem 2rem; margin-bottom: 2.5rem;
+      border: 1px solid #292524;
+    }
+    .eq-title {
+      font-size: .72rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: #78716c;
+      font-family: var(--font-mono); margin-bottom: 1.1rem;
+    }
+    .equation-row {
+      display: flex; align-items: flex-start; gap: 1.2rem;
+      padding: .8rem 0; border-bottom: 1px solid #292524;
+    }
+    .eq-formula {
+      font-family: var(--font-mono); font-size: 1rem;
+      color: #93c5fd; font-weight: 600; min-width: 180px; flex-shrink: 0;
+    }
+    .eq-desc { font-size: .83rem; color: #a8a29e; line-height: 1.5; }
+
+    /* Connections */
+    .connections-panel {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+      padding: 1.75rem 2rem; margin-bottom: 2.5rem;
+    }
+    .connection-list { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
+    .connection-list li::before {
+      content: '→'; color: var(--accent-1); font-weight: 700; flex-shrink: 0;
+    }
+
+    /* Footer */
+    .page-footer {
+      border-top: 1px solid var(--border); margin-top: 3rem;
+      padding: 1.5rem 2rem; text-align: center;
+      font-size: .78rem; color: var(--text-muted); font-family: var(--font-mono);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Breadcrumb -->
+  <nav class="nav-breadcrumb" aria-label="Breadcrumb">
+    <a href="/">TriadicFrameworks</a>
+    <span class="sep">/</span>
+    <a href="/theories/">theories</a>
+    <span class="sep">/</span>
+    <span class="current">geometric_unity</span>
+  </nav>
+
+  <!-- Header -->
+  <header class="module-header">
+    <div class="header-inner">
+      <div class="module-tag">Unified Geometry · Module 07</div>
+      <h1>Geometric <span>Unity</span></h1>
+      <p class="header-tagline">
+        A unified geometric construction whose curvature sectors, anomaly cancellation behavior,
+        and observerse structure reveal a substrate gap resolved through IPD‑12.
+      </p>
+      <div class="header-meta-chips">
+        <span class="chip">curvature</span>
+        <span class="chip">anomaly cancellation</span>
+        <span class="chip">observerse</span>
+        <span class="chip">14D manifold</span>
+        <span class="chip">substrate alignment</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-body">
+
+    <!-- Metadata -->
+    <section class="metadata-block">
+      <div>
+        <span class="meta-label">Module ID</span>
+        <span class="meta-value accent">geometric_unity</span>
+      </div>
+      <div>
+        <span class="meta-label">Domain</span>
+        <span class="meta-value">Unified Geometry</span>
+      </div>
+      <div>
+        <span class="meta-label">Scale</span>
+        <span class="meta-value">Macro · Meso · Micro</span>
+      </div>
+      <div>
+        <span class="meta-label">Triadic Class</span>
+        <span class="meta-value">Geometric Unification</span>
+      </div>
+      <div>
+        <span class="meta-label">Status</span>
+        <span class="meta-value accent">Active</span>
+      </div>
+      <div>
+        <span class="meta-label">Version</span>
+        <span class="meta-value">2026‑bridge‑1.0</span>
+      </div>
+    </section>
+
+    <!-- Session Context -->
+    <section class="session-context">
+      <h3>⟳ Session Context</h3>
+      <p>
+        <strong>Focus:</strong> Geometric Unity is examined through the TriadicFrameworks lens of
+        <strong>Curvature</strong>, <strong>Observerse</strong>, and <strong>Spectral Stability</strong> —
+        three irreducible tiers that together reveal why GU’s operator cycle is nearly unified
+        yet breaks at the physical boundary.
+      </p>
+      <p>
+        This module integrates RTT, FFT, Ten‑in‑1, and IPD‑12 to surface GU’s substrate gap,
+        demonstrate its regime‑boundary paradox, and show how the 12‑state intransitive‑prime
+        substrate restores full operator closure.
+      </p>
+    </section>
+
+    <!-- Triadic Pillars -->
+    <h2 class="section-title">Triadic Pillars</h2>
+    <div class="triadic-pillars">
+
+      <article class="pillar">
+        <div class="pillar-number">Tier I</div>
+        <h3 class="pillar-name">Curvature</h3>
+        <p class="pillar-desc">
+          GU’s geometric deformation sector — curvature, connection, and manifold bending —
+          forms the drift-phase foundation. These operators (Ω0–Ω2) define the arena and
+          establish the geometric substrate for all higher-tier behavior.
+        </p>
+      </article>
+
+      <article class="pillar">
+        <div class="pillar-number">Tier II</div>
+        <h3 class="pillar-name">Observerse</h3>
+        <p class="pillar-desc">
+          GU’s fiber-bundle observerse (Ω3–Ω4) introduces observer-dependent structure and
+          coherence stabilization via dilaton and refractive vacuum modes. This tier aligns
+          directly with RTT’s coherence-phase behavior.
+        </p>
+      </article>
+
+      <article class="pillar">
+        <div class="pillar-number">Tier III</div>
+        <h3 class="pillar-name">Spectral Stability</h3>
+        <p class="pillar-desc">
+          GU’s spectral and physical operators (Ω5–Ω6) govern anomaly cancellation and the
+          utilization cliff. The cycle breaks at Ω6 → Ω0, revealing the substrate gap that
+          IPD‑12 resolves through intransitive prime traversal.
+        </p>
+      </article>
+
+    </div>
+
+    <!-- Core Concepts -->
+    <h2 class="section-title">Core Concepts</h2>
+    <div class="concepts-grid">
+      <div class="concept-card">
+        <h4>14D Manifold</h4>
+        <p>GU’s geometric arena — a fixed 14-dimensional manifold hosting curvature, connection, and observerse structures.</p>
+      </div>
+      <div class="concept-card">
+        <h4>Observerse</h4
