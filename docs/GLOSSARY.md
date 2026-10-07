@@ -38,19 +38,19 @@ A triadic framework models a system through three interacting parts rather than 
 
 ## Resonance-Time Theory (RTT)
 
-**Resonance-Time Theory** is the project's theory and module family for describing resonance, transitions, coherence, and time-aware system behavior. Start with the [RTT module](./rtt/) or the [RTT Starter Kit](./corpus/starter) for a practical path.
+**Resonance-Time Theory** is the project's theory and module family for describing resonance, transitions, coherence, and time-aware system behavior. Start with the [RTT module](https://www.triadicframeworks.org/rtt/) or the [RTT Starter Kit](https://www.triadicframeworks.org/starter/) for a practical path.
 
 ## AI Resonance Seed
 
-**AI Resonance Seed** is a TriadicFrameworks module for agentic AI systems. It provides resonance-aware learning substrates, validator-bounded feedback loops, drift detection, ontology guidance, and integration examples. Start with the [AI Resonance Seed module](./AI_Resonance_Seed/).
+**AI Resonance Seed** is a TriadicFrameworks module for agentic AI systems. It provides resonance-aware learning substrates, validator-bounded feedback loops, drift detection, ontology guidance, and integration examples. Start with the [AI Resonance Seed module](https://www.triadicframeworks.org/AI_Resonance_Seed/)
 
 ## Coeus
 
-**Coeus** is TriadicFrameworks' multi-agent AI research sandbox. Its terms such as “coin” and “token” describe symbolic research tasks and artifacts, not cryptocurrency, blockchain, or financial instruments. Start with the [Coeus Protocol](./Coeus/).
+**Coeus** is TriadicFrameworks' multi-agent AI research sandbox. Its terms such as “coin” and “token” describe symbolic research tasks and artifacts, not cryptocurrency, blockchain, or financial instruments. Start with the [Coeus Protocol](https://www.triadicframeworks.org/Coeus/).
 
 ## Continue
 
-- [About TriadicFrameworks](./ABOUT)
-- [RTT Starter Kit](./corpus/starter)
-- [AI Resonance Seed](./AI_Resonance_Seed/)
-- [Coeus Protocol](./Coeus/)
+- [About TriadicFrameworks](https://www.triadicframeworks.org/#ABOUT)
+- [RTT Starter Kit](https://www.triadicframeworks.org/starter/)
+- [AI Resonance Seed](https://www.triadicframeworks.org/AI_Resonance_Seed/)
+- [Coeus Protocol](https://www.triadicframeworks.org/Coeus/)
