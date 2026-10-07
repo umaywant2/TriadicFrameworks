@@ -1,1 +1,101 @@
+{
+  "module_name": "Theories",
+  "module_category": "theory-layer",
+  "module_purpose": "Parent registry for all TriadicFrameworks foundational theory modules, including the Ten‑in‑1 set and extended unified geometry modules.",
+  
+  "module_summary": "Theories is the canonical entry layer for TriadicFrameworks foundational theory modules. It provides regime-aware access to Chaos Theory, Electromagnetism, Evolutionary Biology, General Relativity, Information Theory, Morphic Resonance, Quantum Field Theory, Quantum Mechanics, the Standard Model, Thermodynamics, and Geometric Unity. Each module includes operators, coherence maps, regimes, lineage, examples, and full RTT/FFT/Ten‑in‑1 session context.",
+  
+  "modules": {
+    "chaos_theory": {
+      "path": "chaos_theory/module.json",
+      "frontdoor": "chaos_theory/frontdoor.md",
+      "index": "chaos_theory/index.html"
+    },
+    "electromagnetism": {
+      "path": "electromagnetism/module.json",
+      "frontdoor": "electromagnetism/frontdoor.md",
+      "index": "electromagnetism/index.html"
+    },
+    "evolutionary_biology": {
+      "path": "evolutionary_biology/module.json",
+      "frontdoor": "evolutionary_biology/frontdoor.md",
+      "index": "evolutionary_biology/index.html"
+    },
+    "general_relativity": {
+      "path": "general_relativity/module.json",
+      "frontdoor": "general_relativity/frontdoor.md",
+      "index": "general_relativity/index.html"
+    },
+    "information_theory": {
+      "path": "information_theory/module.json",
+      "frontdoor": "information_theory/frontdoor.md",
+      "index": "information_theory/index.html"
+    },
+    "morphic_resonance": {
+      "path": "morphic_resonance/module.json",
+      "frontdoor": "morphic_resonance/frontdoor.md",
+      "index": "morphic_resonance/index.html"
+    },
+    "quantum_field_theory": {
+      "path": "quantum_field_theory/module.json",
+      "frontdoor": "quantum_field_theory/frontdoor.md",
+      "index": "quantum_field_theory/index.html"
+    },
+    "quantum_mechanics": {
+      "path": "quantum_mechanics/module.json",
+      "frontdoor": "quantum_mechanics/frontdoor.md",
+      "index": "quantum_mechanics/index.html"
+    },
+    "standard_model": {
+      "path": "standard_model/module.json",
+      "frontdoor": "standard_model/frontdoor.md",
+      "index": "standard_model/index.html"
+    },
+    "thermodynamics": {
+      "path": "thermodynamics/module.json",
+      "frontdoor": "thermodynamics/frontdoor.md",
+      "index": "thermodynamics/index.html"
+    },
+
+    "geometric_unity": {
+      "path": "geometric_unity/module.json",
+      "frontdoor": "geometric_unity/index.html",
+      "index": "geometric_unity/index.html",
+      "about": "geometric_unity/ABOUT.md",
+      "bridge": "geometric_unity/bridge.md",
+      "regime_map": "geometric_unity/regime_map.md",
+      "pass_report": "geometric_unity/g_PassReport.md",
+      "capture": "geometric_unity/g_Capture.md",
+      "operators": "geometric_unity/operators.json"
+    }
+  },
+
+  "schema": {
+    "rtt1": "module_rtt1.schema.json",
+    "rtt2": "module_rtt2.schema.json",
+    "rtt3": "module_rtt3.schema.json"
+  },
+
+  "ai_metadata": {
+    "ai.module": "Theories",
+    "ai.version": "2026-1.0",
+    "ai.purpose": "Provide a unified, regime-aware entry layer into all TriadicFrameworks foundational theory modules.",
+    "ai.keywords": [
+      "TriadicFrameworks",
+      "Ten-in-1",
+      "foundational theories",
+      "regime awareness",
+      "RTT",
+      "FFT",
+      "Geometric Unity",
+      "IPD-12",
+      "operators",
+      "coherence maps",
+      "session context"
+    ],
+    "ai.audience": "students, developers, researchers, analysts, AIs",
+    "ai.module.summary": "Parent registry for all TriadicFrameworks foundational theory modules, including the Ten‑in‑1 set and Geometric Unity.",
+    "ai.module.category": "theory-layer"
+  }
+}
 
