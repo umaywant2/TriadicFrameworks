@@ -56,7 +56,7 @@ Every design decision in IPD‑12 answers a structural problem.
 IPD‑12 did not begin as an abstract operator engine.  
 It began as a *problem of alignment*.
 
-During early work integrating **Geometric Unity (GU)** into TriadicFrameworks, it became clear that GU’s geometry, curvature operators, and observerse structures were powerful — but they did not align cleanly with any existing substrate. The theory was speaking a language that needed a stronger foundation.
+During early work integrating **[Geometric Unity (GU)](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/theories/geometric_unity)** into TriadicFrameworks, it became clear that GU’s geometry, curvature operators, and observerse structures were powerful — but they did not align cleanly with any existing substrate. The theory was speaking a language that needed a stronger foundation.
 
 Two insights triggered the creation of IPD‑12:
 
