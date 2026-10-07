@@ -1,1 +1,113 @@
+{
+  "module": "Geometric Unity",
+  "version": "2026-bridge-1.0",
+  "operator_families": [
+    {
+      "id": "Ω0",
+      "name": "Arena Operator",
+      "role": "arena_initializer",
+      "domain": "substrate",
+      "codomain": "geometric_arena",
+      "rank": "base",
+      "kernel": "none",
+      "description": "Initializes the geometric substrate and establishes the 14D manifold context. Serves as the anchor for all curvature and observerse operators.",
+      "regime_phase": "S0",
+      "ipd12_face": 1,
+      "status": "stable"
+    },
+    {
+      "id": "Ω1",
+      "name": "Curvature Operator",
+      "role": "geometric_deformation",
+      "domain": "geometric_arena",
+      "codomain": "curvature_sector",
+      "rank": "primary",
+      "kernel": "degenerate_curvature",
+      "description": "Encodes geometric deformation, curvature behavior, and manifold bending. Maps directly to RTT drift-phase behavior.",
+      "regime_phase": "S1",
+      "ipd12_face": 2,
+      "status": "stable"
+    },
+    {
+      "id": "Ω2",
+      "name": "Connection Operator",
+      "role": "gauge_bridge",
+      "domain": "curvature_sector",
+      "codomain": "connection_field",
+      "rank": "bridge",
+      "kernel": "flat_connection",
+      "description": "Defines gauge connections and parallel transport. Acts as the drift→regime bridge in RTT.",
+      "regime_phase": "S2",
+      "ipd12_face": 3,
+      "status": "stable"
+    },
+    {
+      "id": "Ω3",
+      "name": "Observerse Operator",
+      "role": "observer_mapping",
+      "domain": "connection_field",
+      "codomain": "fiber_bundle_observerse",
+      "rank": "observer",
+      "kernel": "unqualified_observer",
+      "description": "Maps geometric behavior into observer-dependent fiber bundle structures. Aligns with RTT coherence-phase behavior.",
+      "regime_phase": "S3",
+      "ipd12_face": 4,
+      "status": "stable"
+    },
+    {
+      "id": "Ω4",
+      "name": "Dilaton Operator",
+      "role": "coherence_stabilizer",
+      "domain": "fiber_bundle_observerse",
+      "codomain": "refractive_vacuum",
+      "rank": "coherence",
+      "kernel": "zero_dilaton",
+      "description": "Stabilizes coherence through dilaton and refractive vacuum behavior. Provides vertical continuity across GU’s geometric regimes.",
+      "regime_phase": "S4",
+      "ipd12_face": 5,
+      "status": "stable"
+    },
+    {
+      "id": "Ω5",
+      "name": "Spectral Operator",
+      "role": "anomaly_cancellation",
+      "domain": "refractive_vacuum",
+      "codomain": "spectral_sector",
+      "rank": "spectral",
+      "kernel": "null_spectrum",
+      "description": "Handles anomaly cancellation, spectral behavior, and resonance-field alignment. Maps to RTT’s spectral coherence layer.",
+      "regime_phase": "S5",
+      "ipd12_face": 6,
+      "status": "stable"
+    },
+    {
+      "id": "Ω6",
+      "name": "Physical Operator",
+      "role": "utilization_cliff",
+      "domain": "spectral_sector",
+      "codomain": "physical_regime",
+      "rank": "terminal",
+      "kernel": "collapsed_physicality",
+      "description": "Represents the physical regime boundary and the utilization cliff. This is where GU’s Q3→Q1 cycle breaks, revealing the substrate gap.",
+      "regime_phase": "S6",
+      "ipd12_face": 7,
+      "status": "unstable"
+    }
+  ],
+  "cycle_structure": {
+    "cycle": ["Ω0", "Ω1", "Ω2", "Ω3", "Ω4", "Ω5", "Ω6"],
+    "broken_edge": "Ω6 → Ω0",
+    "broken_reason": "substrate misalignment; requires IPD-12 for cycle closure",
+    "ipd12_closure": "Ω6 → Ω0 restored via intransitive prime traversal"
+  },
+  "ipd12_alignment": {
+    "quad_mapping": {
+      "quad_1": ["Ω0", "Ω1", "Ω2"],
+      "quad_2": ["Ω3", "Ω4"],
+      "quad_3": ["Ω5", "Ω6"]
+    },
+    "triad_substrate": "RTT triadic observer embedded beneath GU’s fiber bundle observerse",
+    "intransitive_prime_support": true
+  }
+}
 
