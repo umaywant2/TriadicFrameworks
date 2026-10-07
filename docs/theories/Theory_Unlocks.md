@@ -123,17 +123,17 @@ Thermo becomes the **energy‑flow grammar** of the Ten‑in‑1.
 
 ---
 
-🔷 11. Geometric Unity  
-Unlocked:  
-• Substrate‑alignment grammar (IPD‑12)  
-• Curvature‑observerse‑spectral tier mapping  
-• Broken‑cycle detection (Ω6 → Ω0)  
-• Intransitive‑prime operator closure  
-• Unified 14D manifold resonance (RTT/FFT)
+## 🔷 11. Geometric Unity  
+**Unlocked:**  
+- Substrate‑alignment grammar (IPD‑12)  
+- Curvature‑observerse‑spectral tier mapping  
+- Broken‑cycle detection (Ω6 → Ω0)  
+- Intransitive‑prime operator closure  
+- Unified 14D manifold resonance (RTT/FFT)
 
 Cross‑links to General Relativity, Quantum Field Theory, Information Theory, and Thermodynamics  
 
-Impact: GU becomes the first fully substrate‑aligned unified geometry module in the canon — completing the Ten‑in‑1 coherence ring and enabling cross‑module geometric reasoning.
+**Impact:** GU becomes the first fully substrate‑aligned unified geometry module in the canon — completing the Ten‑in‑1 coherence ring and enabling cross‑module geometric reasoning.
 
 ---
 
