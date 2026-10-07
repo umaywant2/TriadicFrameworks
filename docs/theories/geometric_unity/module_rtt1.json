@@ -1,1 +1,36 @@
+{
+  "module": "Geometric Unity",
+  "rtt_pass": "RTT-1",
+  "version": "2026-bridge-1.0",
+
+  "drift_phase": {
+    "operators": ["Ω0", "Ω1", "Ω2"],
+    "description": "Arena initialization, curvature drift, and connection transport define GU’s drift-phase behavior. Drift is continuous and stable across S0–S2.",
+    "stability": "stable",
+    "notes": "Curvature and connection fields behave as classical drift operators with no paradox formation."
+  },
+
+  "regime_phase": {
+    "operators": ["Ω3", "Ω4"],
+    "description": "Observerse and dilaton coherence define GU’s regime-phase behavior. Coherence is strong but substrate-dependent.",
+    "stability": "semi-stable",
+    "notes": "Observer alignment is partial; coherence stabilizes but tapers approaching Ω5."
+  },
+
+  "coherence_phase": {
+    "operators": ["Ω5"],
+    "description": "Spectral anomaly cancellation defines GU’s coherence apex. Coherence is strong but fragile near the physical boundary.",
+    "stability": "fragile",
+    "notes": "Spectral alignment begins to destabilize as Ω6 approaches."
+  },
+
+  "regime_boundary": {
+    "operator": "Ω6",
+    "description": "Physical regime collapse and utilization cliff. The operator cycle breaks at Ω6 → Ω0.",
+    "boundary_type": "hard",
+    "notes": "RTT detects a regime-boundary paradox requiring substrate alignment."
+  },
+
+  "rtt_verdict": "Geometric Unity is vertically continuous but horizontally incomplete. The Ω6 → Ω0 break is a regime-boundary paradox."
+}
 
