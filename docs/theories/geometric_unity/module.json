@@ -1,1 +1,94 @@
+{
+  "module_name": "Geometric Unity",
+  "module_category": "theory",
+  "module_purpose": "A first-class TriadicFrameworks theory module providing a substrate-aligned interpretation of Eric Weinstein's Geometric Unity using RTT, FFT, Ten-in-1, and IPD-12.",
+  
+  "module_summary": "Geometric Unity is a unified geometric construction whose operators, curvature sectors, and observerse structures reveal a regime-boundary gap requiring a stronger substrate. This module provides a complete RTT/FFT/Ten-in-1 analysis and hosts GU inside IPD-12, enabling stable operator traversal, paradox resilience, and dimensional alignment.",
+  
+  "apex_operators": {
+    "omega_0": "Arena initializer; geometric substrate anchor",
+    "omega_1": "Curvature sector; geometric deformation operator",
+    "omega_2": "Gauge/connection operator; drift-regime bridge",
+    "omega_3": "Observerse operator; fiber bundle observer mapping",
+    "omega_4": "Dilaton/refractive vacuum operator; coherence stabilizer",
+    "omega_5": "Spectral operator; anomaly/cancellation sector",
+    "omega_6": "Physical operator; utilization cliff and regime boundary"
+  },
+
+  "geometry_descriptors": {
+    "dimensional_structure": "14-dimensional manifold with fiber bundle observerse",
+    "boundary_conditions": "Holographic surfaces interpreted as resonance-field constraints",
+    "metric_behavior": "Curvature and dilaton modes treated as coherence stabilizers",
+    "regime_boundary": "Vertical continuity with horizontal discontinuity; broken Q3→Q1 arrow"
+  },
+
+  "resonance_descriptors": {
+    "rtt_alignment": "RTT Drift/Regime/Coherence mapped to GU curvature, anomaly, and dilaton sectors",
+    "dimensional_lifts": "RTT divisional resonance used to interpret GU’s fixed 14D structure",
+    "collapse_behavior": "Lower-dimensional projections treated as RTT collapse operators",
+    "paradox_resilience": "Intransitive operator traversal stabilized via IPD-12"
+  },
+
+  "observer_model": {
+    "triadic_embedding": "RTT triadic observer embedded into GU’s fiber bundle observer",
+    "coherence_stabilization": "Dilaton and refractive vacuum modes treated as coherence operators",
+    "regime_alignment": "Curvature sectors treated as RTT regime phases"
+  },
+
+  "paradox_and_cycles": {
+    "paradox_summary": "GU anomaly cancellation interpreted as RTT paradox resolution operator",
+    "cycle_summary": "Geometric deformation cycles mapped to RTT drift-regime-coherence cycles",
+    "broken_cycle": "Q1→Q2→Q3→Q1 cycle breaks at Q3→Q1, revealing the substrate gap"
+  },
+
+  "capture_files": {
+    "primary_capture": "./g_Capture.md",
+    "pass_report": "./g_PassReport.md",
+    "bridge_paper": "./geometric_unity_bridge.md",
+    "operator_registry": "./operators.json",
+    "regime_map": "./regime_map.md"
+  },
+
+  "roles": {
+    "engine": ["geometric_unity_bridge.md"],
+    "profile": ["g_Capture.md"],
+    "signature": ["module.json"],
+    "diagnostic": ["operators.json"],
+    "map": ["regime_map.md"],
+    "example": ["examples.md"],
+    "extension": ["compatibility_notes.md"],
+    "index": ["README.md"],
+    "reference": ["external_links.md"],
+    "template": ["module_template.md"]
+  },
+
+  "analyzer_layers": {
+    "operator": ["apex_operators", "observer_model"],
+    "dimensional": ["geometry_descriptors", "resonance_descriptors"],
+    "regime": ["regime_map.md"],
+    "drift": ["metric_engineering_notes.md"],
+    "coherence": ["dilaton_coherence_notes.md"],
+    "cross-cutting": ["compatibility_notes.md"]
+  },
+
+  "ai_metadata": {
+    "ai.module": "Geometric Unity",
+    "ai.version": "2026-bridge-1.0",
+    "ai.purpose": "Substrate-aligned geometric unification bridge",
+    "ai.keywords": [
+      "Geometric Unity",
+      "Eric Weinstein",
+      "RTT",
+      "IPD-12",
+      "resonance fields",
+      "operator mapping",
+      "dimensional reconciliation",
+      "observer embedding",
+      "framework interoperability"
+    ],
+    "ai.audience": "Researchers, framework architects, RTT practitioners",
+    "ai.module.summary": "A resonance-first compatibility layer for Geometric Unity.",
+    "ai.module.category": "theory"
+  }
+}
 
