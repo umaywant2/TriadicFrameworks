@@ -26,6 +26,7 @@ _Inventory refresh: **2026-09-02** · **410** public URLs_
 - [ /theories/quantum_mechanics/ ](https://www.triadicframeworks.org/theories/quantum_mechanics/)
 - [ /theories/standard_model/ ](https://www.triadicframeworks.org/theories/standard_model/)
 - [ /theories/thermodynamics/ ](https://www.triadicframeworks.org/theories/thermodynamics/)
+- [ /theories/geometric_unity/ ](https://www.triadicframeworks.org/theories/geometric_unity/)
 
 ## 1. Core Frameworks (Structural Spine)
 
