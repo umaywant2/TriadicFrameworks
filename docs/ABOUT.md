@@ -11,7 +11,7 @@ description: "What TriadicFrameworks is, who it serves, and how its Structure, R
 # 🧭 About TriadicFrameworks  
 ### *A Structural Learning Framework for Students and AI Systems*
 
-**What is a triadic framework?** A triadic framework models a system as three interacting parts instead of two — in this project's own vocabulary, **Structure**, **Regime**, and **Operator** — so that gradients, transitions, and coherence become visible instead of staying hidden inside a single flat model. [See what each term means on its own →](/docs/GLOSSARY)
+**What is a triadic framework?** A triadic framework models a system as three interacting parts instead of two — in this project's own vocabulary, **Structure**, **Regime**, and **Operator** — so that gradients, transitions, and coherence become visible instead of staying hidden inside a single flat model. [See what each term means on its own →](https://www.triadicframeworks.org/#GLOSSARY)
 
 TriadicFrameworks is one such framework. It teaches both humans and AI systems how to understand complex domains through **gradients**, **triads**, **coherence**, and **regime‑aware operators**.
 
@@ -65,9 +65,9 @@ Most learning resources teach facts, procedures, or domain-specific models. Tria
 
 ## Continue
 
-- [Read the Core Terms glossary](/docs/GLOSSARY)
-- [Create a module with the RTT Starter Kit](/docs/corpus/starter)
-- [Explore the Canon](/docs/Canon/)
+- [Read the Core Terms glossary](https://www.triadicframeworks.org/#GLOSSARY)
+- [Create a module with the RTT Starter Kit](https://www.triadicframeworks.org/starter/)
+- [Explore the Canon](https://www.triadicframeworks.org/Canon/)
 
 # ⭐ Community & Contact
 
