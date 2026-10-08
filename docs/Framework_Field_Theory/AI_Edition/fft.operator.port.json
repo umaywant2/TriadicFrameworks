@@ -1,6 +1,28 @@
 {
   "$id": "https://triadicframeworks.org/schema/fft-ai-edition.json#/$defs/operatorPort",
   "type": "object",
+  "inputs": [
+  {
+    "name": "signal",
+    "type": "field.signal",
+    "description": "The input conceptual or data signal to be evaluated.",
+    "required": true
+  },
+  {
+    "name": "context",
+    "type": "rtt.context",
+    "description": "Optional RTT context profile for evaluation.",
+    "required": false
+  }
+],
+"outputs": [
+  {
+    "name": "clarity_value",
+    "type": "metric.clarity",
+    "description": "Computed clarity metric for the given signal.",
+    "required": true
+  }
+],
   "properties": {
     "name": { "type": "string" },
     "type": { "type": "string" },
