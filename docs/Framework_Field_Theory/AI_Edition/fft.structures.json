@@ -1,1 +1,30 @@
+{
+  "$id": "https://triadicframeworks.org/schema/fft-ai-edition.json#/$defs/structure",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "kind": {
+      "type": "string",
+      "enum": ["spine", "substrate", "field", "bundle"]
+    },
+    "name": { "type": "string" },
+    "description": { "type": "string" },
+    "operators": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Operator IDs participating in this structure."
+    },
+    "regimes": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Regime IDs bound to this structure."
+    },
+    "invariants": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Invariant IDs enforced at this structural level."
+    }
+  },
+  "required": ["id", "kind", "name"]
+}
 
