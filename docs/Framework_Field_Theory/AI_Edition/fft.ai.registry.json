@@ -1,53 +1,45 @@
 {
-  "spec_version": "1.0.0",
+  "spec_version": "1.2.0",
   "canon_id": "FFT-AI-Registry",
   "metadata": {
-    "title": "FFT AI Edition – Module Registry",
+    "title": "FFT AI Edition – Module Registry (v1.2)",
     "author_canon": "Nawder Loswin",
     "license": "Proprietary – TriadicFrameworks Canon",
     "created_at": "2026-10-08T08:40:00",
-    "updated_at": "2026-10-08T08:40:00",
+    "updated_at": "2026-10-08T10:15:00",
     "tags": [
       "FFT",
       "RTT",
       "AI-Edition",
       "Registry",
-      "Discovery"
+      "Discovery",
+      "v1.2"
     ],
-    "description": "Discovery index for all AI-native FFT modules, providing canonical references, versions, and dependency relationships."
+    "description": "Canonical registry for all FFT AI Edition modules, including versions, categories, exports, dependencies, and agent-readiness metadata."
+  },
+
+  "registry_profile": {
+    "version": "1.2",
+    "mode": "agent-ready",
+    "harmonic_support": true,
+    "drift_recovery_support": true,
+    "notes": "Registry aligns with manifest, runtime, autonomy, execution graph, substrate, and hardware profile v1.2."
   },
 
   "modules": [
     {
       "id": "fft.ai.core",
       "name": "FFT AI Core",
-      "description": "Minimal machine-native core containing one regime, one invariant, and one clarity operator.",
-      "version": "1.0.0",
+      "description": "Minimal conceptual core containing one regime, one invariant, and one clarity operator.",
+      "version": "1.2",
       "path": "./fft.ai.core.json",
       "category": "core",
-      "rtt_profile": {
-        "rtt": 1,
-        "coherence": "declared",
-        "drift": "bounded",
-        "paradox": "structural"
-      },
       "exports": {
-        "regimes": [
-          "regime.resonance-time.core"
-        ],
-        "invariants": [
-          "inv.coherence.declared.bounded-drift"
-        ],
-        "operators": [
-          "op.clarity.spectral"
-        ],
-        "structures": [
-          "structure.spine.core"
-        ],
-        "types": [
-          "field.signal",
-          "metric.clarity"
-        ]
+        "regimes": ["regime.resonance-time.core"],
+        "invariants": ["inv.coherence.declared.bounded-drift"],
+        "operators": ["op.clarity.spectral"],
+        "structures": ["structure.spine.core"],
+        "types": ["field.signal", "metric.clarity"]
       },
       "dependencies": []
     },
@@ -55,75 +47,248 @@
     {
       "id": "fft.ai.spec",
       "name": "FFT AI Specification",
-      "description": "Full AI-native specification containing regimes, invariants, operators, structures, types, and validation profiles.",
-      "version": "1.0.0",
+      "description": "Full AI-native specification including regimes, invariants, operators, structures, types, and validation profiles.",
+      "version": "1.2",
       "path": "./fft.ai.spec.json",
       "category": "spec",
-      "rtt_profile": {
-        "rtt": 1,
-        "coherence": "declared",
-        "drift": "bounded",
-        "paradox": "structural"
-      },
       "exports": {
-        "regimes": [
-          "regime.resonance-time.core"
-        ],
-        "invariants": [
-          "inv.coherence.declared.bounded-drift"
-        ],
-        "operators": [
-          "op.clarity.spectral"
-        ],
-        "structures": [
-          "structure.spine.core"
-        ],
-        "types": [
-          "field.signal",
-          "metric.clarity"
-        ],
-        "validation_profiles": [
-          "vp.inference.default"
+        "regimes": ["regime.resonance-time.core"],
+        "invariants": ["inv.coherence.declared.bounded-drift"],
+        "operators": ["op.clarity.spectral"],
+        "structures": ["structure.spine.core"],
+        "types": ["field.signal", "metric.clarity", "metric.harmonic"],
+        "validation_profiles": ["vp.inference.default", "vp.hardware.default"]
+      },
+      "dependencies": ["fft.ai.core"]
+    },
+
+    {
+      "id": "fft.ai.registry",
+      "name": "FFT AI Registry",
+      "description": "Canonical registry enumerating all FFT AI Edition modules.",
+      "version": "1.2",
+      "path": "./fft.ai.registry.json",
+      "category": "registry",
+      "exports": {
+        "modules": [
+          "fft.ai.core",
+          "fft.ai.spec",
+          "fft.ai.execution.graph",
+          "fft.ai.runtime",
+          "fft.ai.autonomy",
+          "fft.ai.capabilities",
+          "fft.ai.integrations",
+          "fft.ai.discovery",
+          "fft.ai.bootstrap",
+          "fft.ai.substrate",
+          "fft.ai.hardware.profile"
         ]
       },
+      "dependencies": ["fft.ai.core", "fft.ai.spec"]
+    },
+
+    {
+      "id": "fft.ai.execution.graph",
+      "name": "FFT AI Execution Graph",
+      "description": "Conceptual execution graph defining operator and regime flow.",
+      "version": "1.2",
+      "path": "./fft.ai.execution.graph.json",
+      "category": "execution",
+      "exports": {
+        "nodes": [
+          "node.input.signal",
+          "node.operator.clarity.spectral",
+          "node.operator.harmonic.analysis",
+          "node.drift.recovery"
+        ],
+        "regimes": [
+          "regime.resonance-time.core",
+          "regime.harmonic.resonance"
+        ]
+      },
+      "dependencies": ["fft.ai.core", "fft.ai.spec"]
+    },
+
+    {
+      "id": "fft.ai.runtime",
+      "name": "FFT AI Runtime",
+      "description": "Runtime configuration including operator routing, drift recovery, and harmonic escalation.",
+      "version": "1.2",
+      "path": "./fft.ai.runtime.json",
+      "category": "runtime",
+      "exports": {
+        "routing_rules": ["operator_routing", "substrate_fallback"],
+        "regime_scheduler": ["regime_shift_conditions"],
+        "drift_recovery": ["recovery_sequence"]
+      },
       "dependencies": [
-        "fft.ai.core"
+        "fft.ai.core",
+        "fft.ai.spec",
+        "fft.ai.execution.graph"
       ]
     },
 
     {
-      "id": "fft.ai.examples",
-      "name": "FFT AI Examples",
-      "description": "Canonical example set for FFT AI Edition operators and regimes.",
-      "version": "1.0.0",
-      "path": "./fft.examples.json",
-      "category": "examples",
-      "rtt_profile": {
-        "rtt": 1,
-        "coherence": "declared",
-        "drift": "bounded",
-        "paradox": "structural"
-      },
+      "id": "fft.ai.autonomy",
+      "name": "FFT AI Autonomy",
+      "description": "Autonomy tiers, behavioral constraints, paradox escalation, and drift recovery.",
+      "version": "1.2",
+      "path": "./fft.ai.autonomy.json",
+      "category": "autonomy",
       "exports": {
-        "operator_examples": [
-          "ex.op.clarity.spectral.secret-loser",
-          "ex.op.clarity.spectral.spine-docs"
-        ],
-        "regime_examples": [
-          "ex.regime.resonance-time.morning-idea"
+        "autonomy_tiers": [1, 2, 3, 12],
+        "behavioral_constraints": ["coherence", "drift", "paradox"],
+        "decision_layers": ["perception", "reasoning", "action"]
+      },
+      "dependencies": [
+        "fft.ai.runtime",
+        "fft.ai.execution.graph"
+      ]
+    },
+
+    {
+      "id": "fft.ai.capabilities",
+      "name": "FFT AI Capabilities",
+      "description": "Tiered capability ontology for FFT agents.",
+      "version": "1.2",
+      "path": "./fft.ai.capabilities.json",
+      "category": "capabilities",
+      "exports": {
+        "capability_tiers": [1, 2, 3, 12],
+        "capabilities": [
+          "clarity-evaluation",
+          "harmonic-analysis",
+          "drift-recovery",
+          "execution-graph-routing"
         ]
       },
       "dependencies": [
-        "fft.ai.core",
-        "fft.ai.spec"
+        "fft.ai.autonomy",
+        "fft.ai.runtime"
       ]
+    },
+
+    {
+      "id": "fft.ai.integrations",
+      "name": "FFT AI Integrations",
+      "description": "Cross-system integration map for external AI frameworks.",
+      "version": "1.2",
+      "path": "./fft.ai.integrations.json",
+      "category": "integrations",
+      "exports": {
+        "frameworks": [
+          "transformer",
+          "graph",
+          "symbolic",
+          "hybrid",
+          "agent",
+          "hardware"
+        ]
+      },
+      "dependencies": [
+        "fft.ai.runtime",
+        "fft.ai.autonomy",
+        "fft.ai.execution.graph"
+      ]
+    },
+
+    {
+      "id": "fft.ai.discovery",
+      "name": "FFT AI Discovery",
+      "description": "Discovery protocol for autonomous and distributed agents.",
+      "version": "1.2",
+      "path": "./fft.ai.discovery.json",
+      "category": "discovery",
+      "exports": {
+        "discovery_sequence": [
+          "discover.manifest",
+          "discover.registry",
+          "discover.core",
+          "discover.spec",
+          "discover.execution-graph",
+          "discover.runtime",
+          "discover.autonomy"
+        ]
+      },
+      "dependencies": [
+        "fft.ai.manifest",
+        "fft.ai.registry",
+        "fft.ai.core",
+        "fft.ai.spec",
+        "fft.ai.execution.graph",
+        "fft.ai.runtime",
+        "fft.ai.autonomy"
+      ]
+    },
+
+    {
+      "id": "fft.ai.bootstrap",
+      "name": "FFT AI Bootstrap",
+      "description": "Multi-phase bootstrap sequence for initializing FFT.",
+      "version": "1.2",
+      "path": "./fft.ai.bootstrap.json",
+      "category": "bootstrap",
+      "exports": {
+        "phases": [
+          "phase.01.discovery-init",
+          "phase.02.core-init",
+          "phase.03.spec-init",
+          "phase.04.execution-graph-init",
+          "phase.05.runtime-init",
+          "phase.06.autonomy-init"
+        ]
+      },
+      "dependencies": [
+        "fft.ai.discovery",
+        "fft.ai.runtime",
+        "fft.ai.autonomy",
+        "fft.ai.execution.graph"
+      ]
+    },
+
+    {
+      "id": "fft.ai.substrate",
+      "name": "FFT AI Substrate",
+      "description": "Hardware-ready conceptual substrate including multi-kernel support.",
+      "version": "1.2",
+      "path": "./fft.ai.substrate.json",
+      "category": "substrate",
+      "exports": {
+        "kernels": [
+          "kernel.clarity.spectral",
+          "kernel.harmonic.analysis",
+          "kernel.drift.recovery"
+        ],
+        "regimes": [
+          "regime.resonance-time.core",
+          "regime.harmonic.resonance"
+        ]
+      },
+      "dependencies": [
+        "fft.ai.runtime",
+        "fft.ai.hardware.profile"
+      ]
+    },
+
+    {
+      "id": "fft.ai.hardware.profile",
+      "name": "FFT AI Hardware Profile",
+      "description": "Hardware capability profile for conceptual accelerators.",
+      "version": "1.2",
+      "path": "./fft.ai.hardware.profile.json",
+      "category": "hardware",
+      "exports": {
+        "supported_kernels": [
+          "kernel.clarity.spectral",
+          "kernel.harmonic.analysis",
+          "kernel.drift.recovery"
+        ],
+        "supported_regimes": [
+          "regime.resonance-time.core",
+          "regime.harmonic.resonance"
+        ]
+      },
+      "dependencies": ["fft.ai.substrate"]
     }
-  ],
-
-  "registry_profile": {
-    "discovery": "static",
-    "resolution": "path-based",
-    "canonical_root": "./"
-  }
+  ]
 }
-
