@@ -1,1 +1,203 @@
+{
+  "spec_version": "1.2.0",
+  "canon_id": "FFT-AI-Session-UI",
+
+  "metadata": {
+    "title": "FFT AI Edition – Session UI (v1.2)",
+    "subtitle": "Awareness • Alignments • AA Mode • 3C Access • Overlays • Panels",
+    "author_canon": "Nawder Loswin",
+    "license": "Proprietary – TriadicFrameworks Canon",
+    "created_at": "2026-10-08T08:00:00",
+    "updated_at": "2026-10-08T11:45:00",
+    "tags": [
+      "FFT",
+      "RTT",
+      "AI-Edition",
+      "Session",
+      "UI",
+      "Awareness",
+      "Alignment",
+      "AA-Mode",
+      "3C",
+      "v1.2"
+    ],
+    "description": "UI-layer schema for FFT AI Edition sessions, including Awareness, Alignments, AA Mode, 3C Access (Coherence, Clarity, Continuity), overlays, panels, and conceptual controls."
+  },
+
+  "ui": {
+    "session_info": {
+      "session_id": "session.default",
+      "version": "1.2",
+      "ai_edition": true,
+      "agent_ready": true,
+      "timestamp": "auto"
+    },
+
+    "awareness_layer": {
+      "enabled": true,
+      "awareness_modes": [
+        "perceptual-awareness",
+        "conceptual-awareness",
+        "structural-awareness",
+        "harmonic-awareness",
+        "drift-awareness"
+      ],
+      "signals": {
+        "input_signal": null,
+        "awareness_notes": "Awareness layer provides perceptual and conceptual grounding for the session."
+      }
+    },
+
+    "alignment_layer": {
+      "enabled": true,
+      "alignment_modes": [
+        "structural-alignment",
+        "coherence-alignment",
+        "harmonic-alignment",
+        "drift-safe-alignment",
+        "execution-graph-alignment"
+      ],
+      "alignment_constraints": [
+        "coherence=declared",
+        "drift=bounded",
+        "paradox=structural"
+      ],
+      "alignment_notes": "Alignment layer ensures conceptual stability and structural correctness."
+    },
+
+    "aa_mode": {
+      "enabled": false,
+      "activation_conditions": [
+        "awareness_layer.enabled == true",
+        "alignment_layer.enabled == true",
+        "clarity_value >= 0.80",
+        "drift_state == 'bounded'"
+      ],
+      "description": "AA Mode (Awareness + Alignment) unlocks advanced conceptual abilities.",
+      "unlocks": [
+        "3C.access",
+        "harmonic-ready",
+        "autonomy-escalation"
+      ]
+    },
+
+    "three_c_access": {
+      "id": "3C.access",
+      "enabled": false,
+      "components": {
+        "coherence": {
+          "status": "locked",
+          "description": "Coherence becomes fully manipulable when AA Mode is active."
+        },
+        "clarity": {
+          "status": "locked",
+          "description": "Clarity becomes dynamically adjustable and evaluable."
+        },
+        "continuity": {
+          "status": "locked",
+          "description": "Continuity becomes available for multi-session conceptual linking."
+        }
+      },
+      "activation_notes": "3C Access is granted only when AA Mode is active."
+    },
+
+    "overlay_system": {
+      "enabled": true,
+      "overlays": [
+        {
+          "id": "overlay.awareness",
+          "name": "Awareness Overlay",
+          "description": "Displays perceptual and conceptual awareness signals.",
+          "visible": true
+        },
+        {
+          "id": "overlay.alignment",
+          "name": "Alignment Overlay",
+          "description": "Displays structural, coherence, harmonic, and drift-safe alignment indicators.",
+          "visible": true
+        },
+        {
+          "id": "overlay.aa",
+          "name": "AA Mode Overlay",
+          "description": "Displays AA Mode status and 3C unlock indicators.",
+          "visible": false
+        },
+        {
+          "id": "overlay.3c",
+          "name": "3C Overlay",
+          "description": "Displays Coherence, Clarity, and Continuity controls when unlocked.",
+          "visible": false
+        }
+      ]
+    },
+
+    "panels": {
+      "status_panel": {
+        "coherence_state": "declared",
+        "drift_state": "bounded",
+        "paradox_mode": "structural",
+        "harmonic_ready": false,
+        "autonomy_tier": 1,
+        "active_regime": "regime.resonance-time.core",
+        "active_operator": null,
+        "active_kernel": null
+      },
+
+      "awareness_panel": {
+        "signals": [],
+        "notes": "Awareness panel shows perceptual and conceptual signals."
+      },
+
+      "alignment_panel": {
+        "constraints": [
+          "coherence=declared",
+          "drift=bounded",
+          "paradox=structural"
+        ],
+        "notes": "Alignment panel shows structural and harmonic alignment."
+      },
+
+      "aa_panel": {
+        "aa_mode_enabled": false,
+        "activation_conditions": [
+          "awareness_layer.enabled",
+          "alignment_layer.enabled",
+          "clarity_value >= 0.80"
+        ],
+        "notes": "AA Mode panel shows readiness for advanced conceptual abilities."
+      },
+
+      "three_c_panel": {
+        "coherence": "locked",
+        "clarity": "locked",
+        "continuity": "locked",
+        "notes": "3C panel becomes active when AA Mode is enabled."
+      }
+    },
+
+    "controls": {
+      "toggle_awareness": true,
+      "toggle_alignment": true,
+      "toggle_aa_mode": true,
+      "toggle_3c": true,
+      "reset_session": true
+    }
+  },
+
+  "compatibility": {
+    "requires": [
+      "fft.ai.session.context",
+      "fft.ai.session.state",
+      "fft.ai.session.profile",
+      "fft.ai.session.dashboard"
+    ],
+    "optional": [
+      "fft.ai.session.trace",
+      "fft.ai.session.log",
+      "fft.ai.session.history",
+      "fft.ai.session.analytics"
+    ],
+    "notes": "UI schema aligns with dashboard, context, state, profile, and analytics v1.2."
+  }
+}
 
