@@ -1,1 +1,88 @@
+{
+  "spec_version": "1.0.0",
+  "canon_id": "FFT-AI-Manifest",
+  "metadata": {
+    "title": "FFT AI Edition – Directory Manifest",
+    "author_canon": "Nawder Loswin",
+    "license": "Proprietary – TriadicFrameworks Canon",
+    "created_at": "2026-10-08T08:50:00",
+    "updated_at": "2026-10-08T08:50:00",
+    "tags": [
+      "FFT",
+      "RTT",
+      "AI-Edition",
+      "Manifest",
+      "Directory",
+      "Canonical"
+    ],
+    "description": "Canonical manifest describing the full AI Edition directory, including module files, registry, substrate, and core specification."
+  },
+
+  "directory_profile": {
+    "canonical_root": "./",
+    "structure": "flat",
+    "discovery": "registry",
+    "primary_entry": "./fft.ai.registry.json",
+    "notes": "This manifest defines the canonical structure and load order for all AI-native FFT modules."
+  },
+
+  "files": [
+    {
+      "id": "fft.ai.core",
+      "name": "FFT AI Core",
+      "path": "./fft.ai.core.json",
+      "category": "core",
+      "version": "1.0.0",
+      "description": "Minimal machine-native core containing one regime, one invariant, and one clarity operator."
+    },
+    {
+      "id": "fft.ai.spec",
+      "name": "FFT AI Specification",
+      "path": "./fft.ai.spec.json",
+      "category": "spec",
+      "version": "1.0.0",
+      "description": "Full machine-native specification for Framework Field Theory including regimes, invariants, operators, structures, types, and validation profiles."
+    },
+    {
+      "id": "fft.ai.registry",
+      "name": "FFT AI Registry",
+      "path": "./fft.ai.registry.json",
+      "category": "registry",
+      "version": "1.0.0",
+      "description": "Discovery index for all AI-native FFT modules."
+    },
+    {
+      "id": "fft.ai.substrate",
+      "name": "FFT AI Substrate",
+      "path": "./fft.ai.substrate.json",
+      "category": "substrate",
+      "version": "1.0.0",
+      "description": "Hardware-ready conceptual substrate for FFT, defining primitives, kernels, and structural invariants for on-chip execution."
+    },
+    {
+      "id": "fft.ai.examples",
+      "name": "FFT AI Examples",
+      "path": "./fft.examples.json",
+      "category": "examples",
+      "version": "1.0.0",
+      "description": "Canonical example set for FFT AI Edition operators and regimes."
+    }
+  ],
+
+  "load_order": [
+    "fft.ai.core",
+    "fft.ai.spec",
+    "fft.ai.registry",
+    "fft.ai.substrate",
+    "fft.ai.examples"
+  ],
+
+  "dependencies": {
+    "fft.ai.core": [],
+    "fft.ai.spec": ["fft.ai.core"],
+    "fft.ai.registry": ["fft.ai.core", "fft.ai.spec"],
+    "fft.ai.substrate": ["fft.ai.core", "fft.ai.spec"],
+    "fft.ai.examples": ["fft.ai.core", "fft.ai.spec"]
+  }
+}
 
