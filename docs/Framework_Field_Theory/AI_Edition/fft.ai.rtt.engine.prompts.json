@@ -1,1 +1,57 @@
+{
+  "spec_version": "1.0.0",
+  "canon_id": "FFT-AI-RTT-Engine-Prompts",
+  "metadata": {
+    "title": "FFT AI Edition – RTT Engine Prompts",
+    "author_canon": "Nawder Loswin",
+    "license": "Proprietary – TriadicFrameworks Canon",
+    "created_at": "2026-10-08T09:05:00",
+    "updated_at": "2026-10-08T09:05:00",
+    "tags": ["FFT", "RTT", "Engines", "Prompts"],
+    "description": "Prompt sets for RTT engines lumen.rtt1.online, hephaestus.rtt2.online, aurion.rtt3.online, harmonia.rtt12.online."
+  },
+
+  "engines": [
+    {
+      "id": "lumen.rtt1.online",
+      "tier": 1,
+      "description": "Lumen engine for RTT Tier 1 clarity and coherence tasks.",
+      "prompts": [
+        "Evaluate clarity of the provided signal under RTT1 declared coherence.",
+        "Identify drift boundaries and return bounded/unbounded classification.",
+        "Summarize structural coherence in one canonical sentence."
+      ]
+    },
+    {
+      "id": "hephaestus.rtt2.online",
+      "tier": 2,
+      "description": "Hephaestus engine for RTT Tier 2 structural synthesis.",
+      "prompts": [
+        "Synthesize a structural representation of the signal using RTT2 operators.",
+        "Map paradox interactions and classify structural vs incidental.",
+        "Generate a coherence-preserving transformation of the input."
+      ]
+    },
+    {
+      "id": "aurion.rtt3.online",
+      "tier": 3,
+      "description": "Aurion engine for RTT Tier 3 conceptual field modeling.",
+      "prompts": [
+        "Construct a conceptual field representation of the signal.",
+        "Evaluate resonance-time alignment across multiple structural layers.",
+        "Produce a multi-regime clarity profile."
+      ]
+    },
+    {
+      "id": "harmonia.rtt12.online",
+      "tier": 12,
+      "description": "Harmonia engine for RTT Tier 12 harmonic synthesis and multi-domain coherence.",
+      "prompts": [
+        "Generate harmonic coherence mapping across all RTT regimes.",
+        "Evaluate paradox harmonics and produce a stability envelope.",
+        "Synthesize a multi-domain clarity tensor."
+      ]
+    }
+  ]
+}
 
