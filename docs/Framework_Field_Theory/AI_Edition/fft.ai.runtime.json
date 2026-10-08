@@ -1,1 +1,41 @@
+{
+  "spec_version": "1.0.0",
+  "canon_id": "FFT-AI-Runtime",
+  "metadata": {
+    "title": "FFT AI Edition – Runtime Configuration",
+    "author_canon": "Nawder Loswin",
+    "license": "Proprietary – TriadicFrameworks Canon",
+    "created_at": "2026-10-08T09:12:00",
+    "updated_at": "2026-10-08T09:12:00",
+    "tags": ["FFT", "RTT", "Runtime"],
+    "description": "Runtime configuration for FFT execution inside AI systems."
+  },
+
+  "runtime_profile": {
+    "execution_mode": "hybrid",
+    "validation": {
+      "inference": "vp.inference.default",
+      "hardware": "vp.hardware.default"
+    },
+    "rtt_profile": {
+      "rtt": 1,
+      "coherence": "declared",
+      "drift": "bounded",
+      "paradox": "structural"
+    },
+    "load_sequence": [
+      "fft.ai.core",
+      "fft.ai.spec",
+      "fft.ai.registry",
+      "fft.ai.substrate",
+      "fft.ai.hardware.profile",
+      "fft.ai.bootstrap"
+    ],
+    "entry_points": {
+      "primary_operator": "op.clarity.spectral",
+      "primary_regime": "regime.resonance-time.core",
+      "primary_invariant": "inv.coherence.declared.bounded-drift"
+    }
+  }
+}
 
