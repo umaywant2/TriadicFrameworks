@@ -1,1 +1,31 @@
+{
+  "$id": "https://triadicframeworks.org/schema/fft-ai-edition.json#/$defs/validationProfile",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "description": { "type": "string" },
+    "target": {
+      "type": "string",
+      "enum": ["training", "inference", "hardware", "simulation"]
+    },
+    "enforced_invariants": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Invariant IDs that must hold under this profile."
+    },
+    "allowed_paradox_modes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["structural", "incidental", "none"]
+      }
+    },
+    "max_drift": {
+      "type": "string",
+      "enum": ["bounded", "unbounded"]
+    }
+  },
+  "required": ["id", "name", "target"]
+}
 
