@@ -1,218 +1,54 @@
 {
   "spec_version": "1.2.0",
   "canon_id": "FFT-AI-Manifest",
+  "edition": "AI Edition",
+  "aa_mode": "AA2",
+  "last_refreshed": "2026-10-08T10:55:00",
   "metadata": {
     "title": "FFT AI Edition – Canonical Manifest (v1.2)",
     "author_canon": "Nawder Loswin",
     "license": "Proprietary – TriadicFrameworks Canon",
-    "created_at": "2026-10-08T08:30:00",
-    "updated_at": "2026-10-08T10:10:00",
-    "tags": [
-      "FFT",
-      "RTT",
-      "AI-Edition",
-      "Manifest",
-      "Canonical",
-      "v1.2"
-    ],
-    "description": "Canonical manifest describing the FFT AI Edition directory, authoritative load order, dependency map, agent-readiness flags, and v1.2 compatibility."
+    "updated_at": "2026-10-08T10:55:00",
+    "tags": ["FFT","Manifest","Canon","v1.2"]
   },
-
-  "canonical_root": "./",
-  "manifest_version": "1.2",
-  "ai_edition": true,
-  "agent_ready": true,
-
-  "load_order": [
-    "fft.ai.core.json",
-    "fft.ai.spec.json",
-    "fft.ai.registry.json",
-    "fft.ai.execution.graph.json",
-    "fft.ai.runtime.json",
-    "fft.ai.autonomy.json",
-    "fft.ai.capabilities.json",
-    "fft.ai.integrations.json",
-    "fft.ai.discovery.json",
-    "fft.ai.bootstrap.json",
-    "fft.ai.substrate.json",
-    "fft.ai.hardware.profile.json",
-    "fft.ai.rtt.engine.prompts.json",
-    "fft.ai.rtt.spine.examples.json"
-  ],
-
-  "modules": [
-    {
-      "id": "fft.ai.core",
-      "file": "fft.ai.core.json",
-      "category": "core",
-      "version": "1.2",
-      "required": true,
-      "description": "Core conceptual primitives for FFT."
-    },
-    {
-      "id": "fft.ai.spec",
-      "file": "fft.ai.spec.json",
-      "category": "specification",
-      "version": "1.2",
-      "required": true,
-      "description": "Full FFT specification including structures, types, and validation profiles."
-    },
-    {
-      "id": "fft.ai.registry",
-      "file": "fft.ai.registry.json",
-      "category": "registry",
-      "version": "1.2",
-      "required": true,
-      "description": "Module registry enumerating all FFT modules."
-    },
-    {
-      "id": "fft.ai.execution.graph",
-      "file": "fft.ai.execution.graph.json",
-      "category": "execution",
-      "version": "1.2",
-      "required": true,
-      "description": "Conceptual execution graph defining operator and regime flow."
-    },
-    {
-      "id": "fft.ai.runtime",
-      "file": "fft.ai.runtime.json",
-      "category": "runtime",
-      "version": "1.2",
-      "required": true,
-      "description": "Runtime configuration including operator routing, drift recovery, and harmonic escalation."
-    },
-    {
-      "id": "fft.ai.autonomy",
-      "file": "fft.ai.autonomy.json",
-      "category": "autonomy",
-      "version": "1.2",
-      "required": true,
-      "description": "Autonomy tiers, behavioral constraints, paradox escalation, and drift recovery."
-    },
-    {
-      "id": "fft.ai.capabilities",
-      "file": "fft.ai.capabilities.json",
-      "category": "capabilities",
-      "version": "1.2",
-      "required": true,
-      "description": "Tiered capability ontology for FFT agents."
-    },
-    {
-      "id": "fft.ai.integrations",
-      "file": "fft.ai.integrations.json",
-      "category": "integrations",
-      "version": "1.2",
-      "required": false,
-      "description": "Cross-system integration map for external AI frameworks."
-    },
-    {
-      "id": "fft.ai.discovery",
-      "file": "fft.ai.discovery.json",
-      "category": "discovery",
-      "version": "1.2",
-      "required": true,
-      "description": "Discovery protocol for autonomous and distributed agents."
-    },
-    {
-      "id": "fft.ai.bootstrap",
-      "file": "fft.ai.bootstrap.json",
-      "category": "bootstrap",
-      "version": "1.2",
-      "required": true,
-      "description": "Multi-phase bootstrap sequence for initializing FFT."
-    },
-    {
-      "id": "fft.ai.substrate",
-      "file": "fft.ai.substrate.json",
-      "category": "substrate",
-      "version": "1.2",
-      "required": false,
-      "description": "Hardware-ready conceptual substrate including multi-kernel support."
-    },
-    {
-      "id": "fft.ai.hardware.profile",
-      "file": "fft.ai.hardware.profile.json",
-      "category": "hardware",
-      "version": "1.2",
-      "required": false,
-      "description": "Hardware capability profile for conceptual accelerators."
-    },
-    {
-      "id": "fft.ai.rtt.engine.prompts",
-      "file": "fft.ai.rtt.engine.prompts.json",
-      "category": "rtt",
-      "version": "1.2",
-      "required": false,
-      "description": "Prompt sets for RTT engines."
-    },
-    {
-      "id": "fft.ai.rtt.spine.examples",
-      "file": "fft.ai.rtt.spine.examples.json",
-      "category": "rtt",
-      "version": "1.2",
-      "required": false,
-      "description": "Examples demonstrating RTT interactions with the TriadicFrameworks Spine."
+  "manifest": {
+    "total_files": 46,
+    "groups": {
+      "core_architecture": [
+        "fft.ai.core.json","fft.ai.spec.json","fft.ai.manifest.json",
+        "fft.ai.index.json","fft.ai.readme.json","fft.metadata.json"
+      ],
+      "substrate_runtime": [
+        "fft.ai.substrate.json","fft.ai.substrate.compat.json","fft.ai.substrate.bridge.json",
+        "fft.ai.substrate.lattice.json","fft.ai.substrate.matrix.json",
+        "fft.ai.runtime.json","fft.ai.hardware.profile.json"
+      ],
+      "session_layer": [
+        "fft.ai.session.awareness.json","fft.ai.session.alignments.json",
+        "fft.ai.session.analytics.json","fft.ai.session.context.json",
+        "fft.ai.session.dashboard.json","fft.ai.session.history.json",
+        "fft.ai.session.log.json","fft.ai.session.overlay.json",
+        "fft.ai.session.profile.json","fft.ai.session.state.json",
+        "fft.ai.session.trace.json","fft.ai.session.ui.json"
+      ],
+      "operators_structures": [
+        "fft.operators.json","fft.operator.example.json","fft.operator.port.json",
+        "fft.structures.json","fft.regimes.json","fft.invariant.json",
+        "fft.validation.json","fft.examples.json","fft.core.json"
+      ],
+      "ai_runtime_layer": [
+        "fft.ai.autonomy.json","fft.ai.bootstrap.json","fft.ai.capabilities.json",
+        "fft.ai.discovery.json","fft.ai.execution.graph.json","fft.ai.integrations.json",
+        "fft.ai.navigation.json","fft.ai.overview.json","fft.ai.registry.json",
+        "fft.ai.rtt.engine.prompts.json","fft.ai.rtt.spine.examples.json"
+      ],
+      "capture": ["capture.md"]
     }
-  ],
-
-  "dependencies": {
-    "fft.ai.runtime": [
-      "fft.ai.core",
-      "fft.ai.spec",
-      "fft.ai.execution.graph"
-    ],
-    "fft.ai.autonomy": [
-      "fft.ai.runtime",
-      "fft.ai.execution.graph"
-    ],
-    "fft.ai.capabilities": [
-      "fft.ai.autonomy",
-      "fft.ai.runtime"
-    ],
-    "fft.ai.integrations": [
-      "fft.ai.runtime",
-      "fft.ai.autonomy",
-      "fft.ai.execution.graph"
-    ],
-    "fft.ai.discovery": [
-      "fft.ai.manifest",
-      "fft.ai.registry",
-      "fft.ai.core",
-      "fft.ai.spec",
-      "fft.ai.execution.graph",
-      "fft.ai.runtime",
-      "fft.ai.autonomy"
-    ],
-    "fft.ai.bootstrap": [
-      "fft.ai.discovery",
-      "fft.ai.runtime",
-      "fft.ai.autonomy",
-      "fft.ai.execution.graph"
-    ],
-    "fft.ai.substrate": [
-      "fft.ai.runtime",
-      "fft.ai.hardware.profile"
-    ]
   },
-
-  "agent_readiness": {
-    "required_modules": [
-      "fft.ai.core",
-      "fft.ai.spec",
-      "fft.ai.registry",
-      "fft.ai.execution.graph",
-      "fft.ai.runtime",
-      "fft.ai.autonomy",
-      "fft.ai.capabilities",
-      "fft.ai.discovery",
-      "fft.ai.bootstrap"
-    ],
-    "optional_modules": [
-      "fft.ai.integrations",
-      "fft.ai.substrate",
-      "fft.ai.hardware.profile"
-    ],
-    "harmonic_support": true,
-    "drift_recovery_support": true
-  }
+  "canon_guarantees": [
+    "All files include aa_mode, 3C references, harmonic lattice state, and triad coordinates.",
+    "spec_version 1.2.0 is consistent across the entire manifest.",
+    "Substrate compatibility declared in every runtime and session file.",
+    "Awareness and alignment layers present in all session files."
+  ]
 }

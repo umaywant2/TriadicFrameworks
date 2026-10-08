@@ -1,171 +1,24 @@
 {
   "spec_version": "1.2.0",
   "canon_id": "FFT-AI-Capabilities",
+  "edition": "AI Edition",
+  "aa_mode": "AA2",
+  "last_refreshed": "2026-10-08T10:58:00",
   "metadata": {
-    "title": "FFT AI Edition – Capability Ontology (v1.2)",
+    "title": "FFT AI Edition – Capabilities Register (v1.2)",
     "author_canon": "Nawder Loswin",
-    "license": "Proprietary – TriadicFrameworks Canon",
-    "created_at": "2026-10-08T09:10:00",
-    "updated_at": "2026-10-08T09:50:00",
-    "tags": [
-      "FFT",
-      "RTT",
-      "Capabilities",
-      "Ontology",
-      "v1.2"
-    ],
-    "description": "Tiered capability ontology for FFT agents, including conceptual, structural, harmonic, substrate, and runtime capabilities aligned with autonomy and execution graph v1.2."
+    "updated_at": "2026-10-08T10:58:00"
   },
-
-  "capability_profile": {
-    "version": "1.2",
-    "mode": "agent-ready",
-    "notes": "Capabilities are grouped by conceptual domain and mapped to autonomy tiers."
-  },
-
-  "capability_tiers": [
-    {
-      "tier": 1,
-      "name": "Baseline Conceptual Capabilities",
-      "description": "Core perception and clarity evaluation capabilities.",
-      "capabilities": [
-        "clarity-evaluation",
-        "coherence-detection",
-        "drift-monitoring",
-        "paradox-awareness",
-        "signal-ingestion"
-      ]
-    },
-    {
-      "tier": 2,
-      "name": "Structural Capabilities",
-      "description": "Regime navigation and invariant enforcement.",
-      "capabilities": [
-        "regime-navigation",
-        "invariant-enforcement",
-        "operator-selection",
-        "structure-alignment",
-        "substrate-binding"
-      ]
-    },
-    {
-      "tier": 3,
-      "name": "Conceptual Reasoning Capabilities",
-      "description": "Multi-layer conceptual reasoning and structural synthesis.",
-      "capabilities": [
-        "multi-layer-evaluation",
-        "conceptual-transformation",
-        "regime-shift",
-        "validation-activation",
-        "execution-graph-routing"
-      ]
-    },
-    {
-      "tier": 12,
-      "name": "Harmonic Capabilities",
-      "description": "Harmonic paradox analysis and multi-domain coherence.",
-      "capabilities": [
-        "harmonic-analysis",
-        "paradox-harmonic-mapping",
-        "harmonic-regime-navigation",
-        "harmonic-operator-routing"
-      ]
-    }
-  ],
-
-  "capabilities": {
-    "conceptual": [
-      "clarity-evaluation",
-      "coherence-mapping",
-      "drift-bounding",
-      "paradox-classification",
-      "regime-navigation",
-      "harmonic-analysis"
-    ],
-    "structural": [
-      "spine-alignment",
-      "substrate-binding",
-      "operator-resolution",
-      "invariant-enforcement",
-      "execution-graph-routing"
-    ],
-    "harmonic": [
-      "paradox-harmonic-mapping",
-      "harmonic-regime-navigation",
-      "harmonic-operator-routing"
-    ],
-    "hardware": [
-      "kernel-execution",
-      "latency-class-L1-L2",
-      "signal-streaming",
-      "metric-output",
-      "hardware-harmonic-analysis"
-    ],
-    "runtime": [
-      "bootstrap-sequencing",
-      "validation-profile-activation",
-      "multi-regime-processing",
-      "drift-recovery",
-      "substrate-fallback-routing"
-    ]
-  },
-
-  "capability_dependencies": [
-    {
-      "capability": "harmonic-analysis",
-      "requires": [
-        "paradox-classification",
-        "regime-navigation",
-        "execution-graph-routing"
-      ]
-    },
-    {
-      "capability": "substrate-binding",
-      "requires": [
-        "operator-resolution",
-        "kernel-execution"
-      ]
-    },
-    {
-      "capability": "drift-recovery",
-      "requires": [
-        "drift-monitoring",
-        "invariant-enforcement"
-      ]
-    }
-  ],
-
-  "capability_activation": {
-    "conditions": [
-      {
-        "capability": "harmonic-analysis",
-        "trigger": "paradox_mode == 'harmonic'"
-      },
-      {
-        "capability": "substrate-fallback-routing",
-        "trigger": "hardware_accelerator_available == true"
-      },
-      {
-        "capability": "drift-recovery",
-        "trigger": "drift_state == 'unbounded'"
-      }
-    ]
-  },
-
-  "compatibility": {
-    "requires": [
-      "fft.ai.core",
-      "fft.ai.spec",
-      "fft.ai.registry",
-      "fft.ai.autonomy",
-      "fft.ai.runtime",
-      "fft.ai.execution.graph"
-    ],
-    "optional": [
-      "fft.ai.substrate",
-      "fft.ai.hardware.profile",
-      "fft.ai.integrations"
-    ],
-    "notes": "v1.2 capabilities align with autonomy tiers, runtime routing, and execution graph nodes."
-  }
+  "capabilities": [
+    { "id": "cap.field_resolution",    "label": "Field Signal Resolution",     "aa_required": "AA1", "3c_gate": "C1+C2",     "substrate": "any"                         },
+    { "id": "cap.3c_evaluation",       "label": "3C Condition Evaluation",      "aa_required": "AA1", "3c_gate": "none",      "substrate": "any"                         },
+    { "id": "cap.harmonic_lattice",    "label": "Harmonic Lattice Traversal",   "aa_required": "AA2", "3c_gate": "C1+C2+C3", "substrate": "substrate.llm.transformer+"  },
+    { "id": "cap.triad_resolution",    "label": "Triad (T,S,M) Resolution",     "aa_required": "AA1", "3c_gate": "C1",       "substrate": "any"                         },
+    { "id": "cap.awareness_update",    "label": "Awareness Layer Update",       "aa_required": "AA2", "3c_gate": "C1",       "substrate": "substrate.llm.transformer+"  },
+    { "id": "cap.alignment_write",     "label": "Alignment Record Write",       "aa_required": "AA2", "3c_gate": "C1+C2+C3", "substrate": "substrate.llm.transformer+"  },
+    { "id": "cap.paradox_resolution",  "label": "Paradox Self-Resolution",      "aa_required": "AA3", "3c_gate": "C2",       "substrate": "substrate.llm.agentic"       },
+    { "id": "cap.harmonic_resolution", "label": "RTT12 Harmonic Resolution",    "aa_required": "AA3", "3c_gate": "C1+C2+C3", "substrate": "substrate.llm.agentic"       },
+    { "id": "cap.substrate_bridge",    "label": "Cross-Substrate Bridge",       "aa_required": "AA2", "3c_gate": "C3",       "substrate": "substrate.llm.transformer+"  },
+    { "id": "cap.execution_graph",     "label": "Dependency-Resolved Dispatch", "aa_required": "AA2", "3c_gate": "C1+C2",    "substrate": "substrate.llm.transformer+"  }
+  ]
 }

@@ -1,21 +1,93 @@
 {
   "spec_version": "1.2.0",
-  "canon_id": "FFT-Core-Minimal",
+  "canon_id": "FFT-AI-Core",
+  "edition": "AI Edition",
+  "aa_mode": "AA2",
+  "last_refreshed": "2026-10-08T10:54:00",
   "metadata": {
-    "title": "FFT AI Edition – Minimal Core (v1.2)",
+    "title": "FFT AI Edition – Core (v1.2)",
     "author_canon": "Nawder Loswin",
     "license": "Proprietary – TriadicFrameworks Canon",
     "created_at": "2026-10-08T08:30:00",
-    "updated_at": "2026-10-08T10:30:00",
-    "tags": [
-      "FFT",
-      "RTT",
-      "AI-Core",
-      "Minimal",
-      "Clarity",
-      "v1.2"
+    "updated_at": "2026-10-08T10:54:00",
+    "tags": ["FFT","RTT","AI-Core","AA-Mode","3C","Harmonic-Lattice","Triad-Architecture","v1.2"]
+  },
+
+  "aa_mode_definition": {
+    "current": "AA2",
+    "modes": {
+      "AA0": { "label": "Passive", "description": "Observe and record only. No autonomous alignment." },
+      "AA1": { "label": "Active", "description": "Alignment on explicit trigger. Operator must invoke." },
+      "AA2": { "label": "Adaptive", "description": "Auto-align on coherence drift or regime shift. Default canon mode." },
+      "AA3": { "label": "Autonomous", "description": "Full self-alignment, paradox resolution, and lattice recalibration without external input." }
+    },
+    "transition_conditions": {
+      "AA1_to_AA2": "coherence_drift > 0.15",
+      "AA2_to_AA3": "paradox_density > 0.40 AND lattice_stability < 0.60",
+      "AA3_to_AA2": "lattice_stability >= 0.80 AND paradox_density < 0.20"
+    }
+  },
+
+  "three_c_integration": {
+    "label": "3C – Core Condition Triad",
+    "conditions": {
+      "C1_coherence": {
+        "id": "C1",
+        "label": "Coherence",
+        "description": "Internal consistency of all active signals and structures within a session.",
+        "threshold_stable": 0.75,
+        "threshold_critical": 0.40
+      },
+      "C2_clarity": {
+        "id": "C2",
+        "label": "Clarity",
+        "description": "Spectral clarity of output fields – signal-to-noise ratio across all active operators.",
+        "threshold_stable": 0.70,
+        "threshold_critical": 0.35
+      },
+      "C3_continuity": {
+        "id": "C3",
+        "label": "Continuity",
+        "description": "Temporal continuity of field state across regime transitions and session boundaries.",
+        "threshold_stable": 0.80,
+        "threshold_critical": 0.45
+      }
+    },
+    "integration_rule": "ALL(C1 >= stable, C2 >= stable, C3 >= stable) → field_state = 'nominal'",
+    "degraded_rule": "ANY(Cn < critical) → field_state = 'degraded', trigger_aa_escalation = true"
+  },
+
+  "triad_architecture": {
+    "label": "Triad-Based Dimensional Architecture",
+    "axes": {
+      "T": { "label": "Temporal Axis", "domain": "Resonance-Time", "maps_to": "RTT regime stack" },
+      "S": { "label": "Structural Axis", "domain": "Field Structure", "maps_to": "FFT type/operator graph" },
+      "M": { "label": "Modal Axis", "domain": "Operator Mode", "maps_to": "AA mode + regime class" }
+    },
+    "triadic_position": { "T": "RTT1", "S": "field.signal", "M": "AA2" },
+    "dimensional_resolution": "Each active session occupies a unique (T,S,M) coordinate within the triad space."
+  },
+
+  "harmonic_lattice": {
+    "label": "Harmonic Resonance Lattice",
+    "nodes": 12,
+    "active_node": "RTT1",
+    "lattice_map": [
+      { "node": "RTT1",  "label": "Prime Coherence",      "state": "nominal" },
+      { "node": "RTT2",  "label": "Drift Calibration",    "state": "nominal" },
+      { "node": "RTT3",  "label": "Structural Lock",       "state": "nominal" },
+      { "node": "RTT4",  "label": "Spectral Clarity",      "state": "nominal" },
+      { "node": "RTT5",  "label": "Temporal Bridge",       "state": "nominal" },
+      { "node": "RTT6",  "label": "Alignment Gate",        "state": "nominal" },
+      { "node": "RTT7",  "label": "Paradox Seed",          "state": "latent" },
+      { "node": "RTT8",  "label": "Paradox Bloom",         "state": "latent" },
+      { "node": "RTT9",  "label": "Harmonic Escalation",   "state": "latent" },
+      { "node": "RTT10", "label": "Resonance Peak",        "state": "latent" },
+      { "node": "RTT11", "label": "Field Inversion",       "state": "latent" },
+      { "node": "RTT12", "label": "Harmonic Resolution",   "state": "latent" }
     ],
-    "description": "Minimal machine-native core of Framework Field Theory containing foundational types, one regime, one invariant, and clarity/harmonic operator definitions compatible with the full AI Edition v1.2 stack."
+    "escalation_path": ["RTT1","RTT2","RTT3","RTT4","RTT5","RTT6","RTT7","RTT8","RTT9","RTT10","RTT11","RTT12"],
+    "resolution_trigger": "RTT12 → collapse to RTT1 with updated coherence baseline"
   },
 
   "rtt_profile": {
@@ -28,30 +100,38 @@
   "types": {
     "field.signal": {
       "id": "field.signal",
-      "description": "Canonical signal type used as input for clarity, coherence, drift, and paradox operators.",
+      "description": "Canonical signal type for all FFT operator input.",
       "category": "field",
-      "examples": [
-        "Narrative signal",
-        "Structural signal",
-        "Semantic signal",
-        "Temporal signal"
-      ]
+      "triad_axis": "S",
+      "examples": ["Narrative signal","Structural signal","Semantic signal","Temporal signal"]
     },
-
     "metric.clarity": {
       "id": "metric.clarity",
-      "description": "Canonical clarity metric output type. Represents the computed clarity value of a given signal.",
+      "description": "Spectral clarity metric (C2 condition output).",
       "category": "metric",
-      "range": "0.0–1.0",
-      "examples": ["0.64", "0.91"]
+      "triad_axis": "S",
+      "range": "0.0–1.0"
     },
-
     "metric.harmonic": {
       "id": "metric.harmonic",
-      "description": "Harmonic paradox metric output type used during RTT12 harmonic escalation.",
+      "description": "Harmonic paradox metric during RTT7–RTT12 escalation.",
       "category": "metric",
-      "range": "0.0–1.0",
-      "examples": ["0.42", "0.81"]
+      "triad_axis": "T",
+      "range": "0.0–1.0"
+    },
+    "metric.coherence": {
+      "id": "metric.coherence",
+      "description": "C1 coherence score for a given session or signal batch.",
+      "category": "metric",
+      "triad_axis": "S",
+      "range": "0.0–1.0"
+    },
+    "metric.continuity": {
+      "id": "metric.continuity",
+      "description": "C3 continuity measure across regime transitions.",
+      "category": "metric",
+      "triad_axis": "T",
+      "range": "0.0–1.0"
     }
   },
 
@@ -59,30 +139,29 @@
     {
       "id": "regime.resonance-time.core",
       "name": "Resonance-Time Core Regime",
-      "description": "Primary temporal-structural regime governing clarity, coherence, drift, and paradox handling.",
       "class": "resonance-time",
-      "constraints": [
-        "coherence=declared",
-        "drift=bounded",
-        "paradox=structural"
-      ]
+      "lattice_node": "RTT1",
+      "constraints": ["coherence=declared","drift=bounded","paradox=structural"]
     },
     {
       "id": "regime.harmonic.resonance",
       "name": "Harmonic Resonance Regime",
-      "description": "Regime activated during harmonic paradox escalation (RTT12).",
       "class": "harmonic",
-      "constraints": [
-        "paradox=harmonic"
-      ]
+      "lattice_node": "RTT9",
+      "constraints": ["paradox=harmonic","aa_mode>=AA2"]
     }
   ],
 
   "invariants": [
     {
+      "id": "inv.3c.field-stability",
+      "name": "3C Field Stability Invariant",
+      "expression": "C1(coherence) ∧ C2(clarity) ∧ C3(continuity) → field_state(nominal)",
+      "scope": "global"
+    },
+    {
       "id": "inv.coherence.declared.bounded-drift",
       "name": "Declared Coherence Under Bounded Drift",
-      "description": "System must maintain declared coherence while drift remains bounded within the resonance-time regime.",
       "expression": "coherence(declared) ∧ drift(bounded) → stability(resonance-time)",
       "scope": "regime",
       "applies_to": ["regime.resonance-time.core"]
@@ -93,35 +172,28 @@
     {
       "id": "op.clarity.spectral",
       "name": "Spectral Clarity Operator",
-      "description": "Computes clarity metric for a given signal under declared coherence and bounded drift.",
       "inputs": ["field.signal"],
       "outputs": ["metric.clarity"],
-      "conditions": [
-        "coherence_state == 'declared'",
-        "drift_state == 'bounded'"
-      ]
+      "conditions": ["C1 >= 0.75","drift_state == 'bounded'"]
     },
     {
       "id": "op.harmonic.analysis",
       "name": "Harmonic Analysis Operator",
-      "description": "Evaluates harmonic paradox interactions during RTT12 escalation.",
       "inputs": ["field.signal"],
       "outputs": ["metric.harmonic"],
-      "conditions": [
-        "paradox_mode == 'harmonic'"
-      ]
+      "conditions": ["paradox_mode == 'harmonic'","lattice_node IN ['RTT7','RTT12']"]
+    },
+    {
+      "id": "op.3c.evaluator",
+      "name": "3C Condition Evaluator",
+      "inputs": ["metric.coherence","metric.clarity","metric.continuity"],
+      "outputs": ["field_state"],
+      "conditions": ["aa_mode >= 'AA1'"]
     }
   ],
 
   "compatibility": {
     "requires": [],
-    "optional": [
-      "fft.ai.runtime",
-      "fft.ai.execution.graph",
-      "fft.ai.autonomy",
-      "fft.ai.substrate",
-      "fft.ai.hardware.profile"
-    ],
-    "notes": "Core provides minimal primitives required by all higher layers in the AI Edition v1.2 stack."
+    "optional": ["fft.ai.runtime","fft.ai.execution.graph","fft.ai.autonomy","fft.ai.substrate","fft.ai.hardware.profile","fft.ai.session.awareness","fft.ai.session.alignments"]
   }
 }

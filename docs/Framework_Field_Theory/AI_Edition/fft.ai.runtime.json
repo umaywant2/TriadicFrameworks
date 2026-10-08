@@ -1,172 +1,34 @@
 {
   "spec_version": "1.2.0",
   "canon_id": "FFT-AI-Runtime",
+  "edition": "AI Edition",
+  "aa_mode": "AA2",
+  "last_refreshed": "2026-10-08T10:56:00",
   "metadata": {
-    "title": "FFT AI Edition – Runtime Configuration (v1.2)",
+    "title": "FFT AI Edition – Runtime Engine (v1.2)",
     "author_canon": "Nawder Loswin",
-    "license": "Proprietary – TriadicFrameworks Canon",
-    "created_at": "2026-10-08T09:12:00",
-    "updated_at": "2026-10-08T09:32:00",
-    "tags": [
-      "FFT",
-      "RTT",
-      "AI-Edition",
-      "Runtime",
-      "Execution",
-      "v1.2"
-    ],
-    "description": "Enhanced runtime configuration for FFT agents, including multi-operator routing, drift-safe scheduling, paradox escalation, substrate fallback, and autonomy-tier alignment."
+    "updated_at": "2026-10-08T10:56:00"
   },
-
-  "runtime_profile": {
-    "execution_mode": "hybrid",
-    "agent_mode": "autonomous",
-    "runtime_version": "1.2",
-    "rtt_profile": {
-      "rtt": 1,
-      "coherence": "declared",
-      "drift": "bounded",
-      "paradox": "structural"
+  "runtime": {
+    "engine": "FFT-Runtime-R5",
+    "active_substrate": "substrate.llm.agentic",
+    "active_aa_mode": "AA2",
+    "active_lattice_node": "RTT1",
+    "three_c_state": {
+      "C1_coherence": 1.0,
+      "C2_clarity": 1.0,
+      "C3_continuity": 1.0,
+      "field_state": "nominal"
     },
-    "notes": "v1.2 runtime supports multi-layer execution, harmonic escalation, drift recovery, and substrate-aware operator routing."
-  },
-
-  "load_sequence": [
-    "fft.ai.core",
-    "fft.ai.spec",
-    "fft.ai.registry",
-    "fft.ai.execution.graph",
-    "fft.ai.integrations",
-    "fft.ai.autonomy",
-    "fft.ai.substrate",
-    "fft.ai.hardware.profile"
-  ],
-
-  "operator_routing": {
-    "primary": "op.clarity.spectral",
-    "fallback": "op.clarity.spectral", 
-    "harmonic": "op.harmonic.analysis",
-    "routing_rules": [
-      {
-        "condition": "drift_state == 'bounded'",
-        "route_to": "op.clarity.spectral"
-      },
-      {
-        "condition": "paradox_mode == 'harmonic'",
-        "route_to": "op.harmonic.analysis"
-      },
-      {
-        "condition": "substrate_available == true",
-        "route_to": "kernel.clarity.spectral"
-      }
-    ]
-  },
-
-  "regime_scheduler": {
-    "default_regime": "regime.resonance-time.core",
-    "regime_shift_conditions": [
-      {
-        "trigger": "clarity_value < 0.40",
-        "action": "shift_to_regime('resonance-time.core')"
-      },
-      {
-        "trigger": "paradox_mode == 'harmonic'",
-        "action": "shift_to_regime('harmonic.resonance')"
-      }
-    ],
-    "notes": "Scheduler ensures regime alignment with clarity, drift, and paradox conditions."
-  },
-
-  "drift_management": {
-    "max_state": "bounded",
-    "on_unbounded": "activate_recovery_sequence",
-    "recovery_sequence": [
-      "freeze_runtime_state",
-      "evaluate_drift_source",
-      "apply_structural_correction",
-      "restore_coherence",
-      "resume_execution"
-    ],
-    "notes": "Drift recovery aligns with autonomy v1.2 behavior."
-  },
-
-  "paradox_handling": {
-    "allowed_modes": ["structural"],
-    "escalation_modes": ["harmonic"],
-    "on_escalation": "route_to_harmonic_operator",
-    "notes": "Paradox escalation triggers harmonic analysis and regime shift."
-  },
-
-  "substrate_fallback": {
-    "enabled": true,
-    "conditions": [
-      {
-        "trigger": "hardware_accelerator_available == true",
-        "fallback_to": "kernel.clarity.spectral"
-      },
-      {
-        "trigger": "runtime_load > threshold",
-        "fallback_to": "kernel.clarity.spectral"
-      }
-    ],
-    "notes": "Substrate fallback ensures stable execution under load or hardware availability."
-  },
-
-  "validation": {
-    "inference": "vp.inference.default",
-    "hardware": "vp.hardware.default",
-    "on_failure": "halt_and_report",
-    "notes": "Validation profiles ensure conceptual correctness across all execution modes."
-  },
-
-  "autonomy_alignment": {
-    "required_autonomy_tier": 1,
-    "recommended_autonomy_tier": 3,
-    "harmonic_autonomy_tier": 12,
-    "notes": "Runtime aligns with autonomy tiers for multi-layer reasoning and harmonic escalation."
-  },
-
-  "runtime_events": [
-    {
-      "id": "event.runtime.initialized",
-      "description": "Triggered when FFT runtime completes initialization.",
-      "payload": ["runtime_version", "agent_mode"]
-    },
-    {
-      "id": "event.runtime.operator.routed",
-      "description": "Triggered when operator routing selects a new operator.",
-      "payload": ["operator_id", "reason"]
-    },
-    {
-      "id": "event.runtime.regime.shift",
-      "description": "Triggered when runtime shifts conceptual regimes.",
-      "payload": ["from_regime", "to_regime", "trigger"]
-    },
-    {
-      "id": "event.runtime.drift.recovery",
-      "description": "Triggered when drift recovery sequence activates.",
-      "payload": ["drift_state", "recovery_stage"]
-    },
-    {
-      "id": "event.runtime.paradox.escalation",
-      "description": "Triggered when paradox enters harmonic mode.",
-      "payload": ["paradox_mode", "harmonic_state"]
+    "triad_position": { "T": "RTT1", "S": "field.signal", "M": "AA2" },
+    "session_active": false,
+    "bootstrap_required": true,
+    "lifecycle": {
+      "phase_1_bootstrap": "Load fft.ai.bootstrap.json, declare AA Mode, verify substrate.",
+      "phase_2_3c_init": "Evaluate 3C baseline. Establish harmonic lattice at RTT1.",
+      "phase_3_operator_ready": "Dispatch operators via execution graph. Gate on 3C pass.",
+      "phase_4_session_active": "Write awareness, alignments, trace on each turn.",
+      "phase_5_teardown": "Flush session state, write history and analytics, collapse lattice to RTT1."
     }
-  ],
-
-  "compatibility": {
-    "requires": [
-      "fft.ai.core",
-      "fft.ai.spec",
-      "fft.ai.registry",
-      "fft.ai.execution.graph",
-      "fft.ai.integrations",
-      "fft.ai.autonomy"
-    ],
-    "optional": [
-      "fft.ai.substrate",
-      "fft.ai.hardware.profile"
-    ],
-    "notes": "v1.2 runtime requires execution graph and autonomy v1.2 for full agent readiness."
   }
 }

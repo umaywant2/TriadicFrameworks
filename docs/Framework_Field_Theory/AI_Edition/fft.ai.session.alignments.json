@@ -1,138 +1,33 @@
 {
   "spec_version": "1.2.0",
-  "canon_id": "FFT-AI-Session-Alignments",
-
+  "canon_id": "FFT-Session-Alignments",
+  "edition": "AI Edition",
+  "aa_mode": "AA2",
+  "last_refreshed": "2026-10-08T10:57:00",
   "metadata": {
     "title": "FFT AI Edition – Session Alignments (v1.2)",
-    "subtitle": "Structural • Coherence • Clarity • Continuity • Drift‑Safe • Paradox‑Safe • Harmonic",
     "author_canon": "Nawder Loswin",
-    "license": "Proprietary – TriadicFrameworks Canon",
-    "created_at": "2026-10-08T08:00:00",
-    "updated_at": "2026-10-08T12:00:00",
-    "tags": [
-      "FFT",
-      "RTT",
-      "AI-Edition",
-      "Session",
-      "Alignments",
-      "AA-Mode",
-      "3C",
-      "v1.2"
-    ],
-    "description": "Alignment engine for FFT AI Edition sessions, providing structural, coherence, clarity, continuity, drift-safe, paradox-safe, and harmonic alignment signals, including AA Mode and 3C readiness."
+    "updated_at": "2026-10-08T10:57:00"
   },
-
   "alignments": {
-    "enabled": true,
-    "version": "1.2",
-    "ai_edition": true,
-
-    "alignment_layers": [
-      "structural",
-      "coherence",
-      "clarity",
-      "continuity",
-      "drift-safe",
-      "paradox-safe",
-      "harmonic"
-    ],
-
-    "structural": {
-      "structure_integrity": "stable",
-      "structure_alignment": "high",
-      "invariants_respected": true,
-      "notes": "Structural alignment ensures conceptual structures conform to FFT invariants and RTT constraints."
+    "definition": "Alignment records are written after each successful 3C pass. They capture the triad position, AA mode, lattice node, and field state at the moment of alignment.",
+    "alignment_schema": {
+      "id": "string – unique alignment ID (ALN-YYYYMMDD-NNN)",
+      "timestamp": "ISO 8601",
+      "triad_position": { "T": "RTT node", "S": "field type", "M": "AA mode" },
+      "three_c_scores": { "C1": "float 0–1", "C2": "float 0–1", "C3": "float 0–1" },
+      "field_state": "nominal | degraded | critical",
+      "lattice_node": "RTTn",
+      "operator_applied": "operator ID",
+      "alignment_quality": "strong | nominal | weak"
     },
-
-    "coherence": {
-      "coherence_state": "declared",
-      "coherence_alignment_level": "high",
-      "coherence_stability": 0.91,
-      "notes": "Coherence alignment maintains conceptual coherence and prevents fragmentation."
+    "alignment_quality_rules": {
+      "strong":  "ALL(C1>=0.85, C2>=0.80, C3>=0.85)",
+      "nominal": "ALL(C1>=0.75, C2>=0.70, C3>=0.80)",
+      "weak":    "ANY(Cn between critical and stable thresholds)"
     },
-
-    "clarity": {
-      "clarity_value": 0.91,
-      "clarity_alignment_level": "high",
-      "clarity_stability": 0.90,
-      "notes": "Clarity alignment ensures conceptual clarity and reduces ambiguity."
-    },
-
-    "continuity": {
-      "continuity_state": "stable",
-      "continuity_alignment_level": "high",
-      "continuity_stability": 0.88,
-      "notes": "Continuity alignment maintains conceptual flow across multi-session reasoning."
-    },
-
-    "drift_safe": {
-      "drift_state": "bounded",
-      "drift_alignment_level": "high",
-      "drift_stability": 0.92,
-      "notes": "Drift-safe alignment prevents conceptual drift from becoming unbounded."
-    },
-
-    "paradox_safe": {
-      "paradox_mode": "structural",
-      "paradox_alignment_level": "moderate",
-      "paradox_stability": 0.78,
-      "notes": "Paradox-safe alignment ensures paradox intensity remains within structural bounds."
-    },
-
-    "harmonic": {
-      "harmonic_ready": false,
-      "harmonic_alignment_level": "latent",
-      "harmonic_stability": 0.83,
-      "notes": "Harmonic alignment prepares the system for RTT12 harmonic resonance."
-    },
-
-    "alignment_constraints": {
-      "coherence": "declared",
-      "drift": "bounded",
-      "paradox": "structural",
-      "harmonic_ready": false,
-      "continuity": "stable"
-    },
-
-    "alignment_invariants": [
-      "inv.coherence.declared.bounded-drift",
-      "inv.harmonic.paradox",
-      "inv.continuity.flow"
-    ],
-
-    "aa_mode_readiness": {
-      "awareness_ready": true,
-      "alignment_ready": true,
-      "clarity_threshold_met": true,
-      "coherence_stable": true,
-      "continuity_stable": true,
-      "drift_safe": true,
-      "paradox_safe": true,
-      "notes": "AA Mode readiness indicates the system can activate Awareness + Alignments."
-    },
-
-    "three_c_readiness": {
-      "coherence_ready": true,
-      "clarity_ready": true,
-      "continuity_ready": true,
-      "notes": "3C readiness indicates the system can unlock Coherence, Clarity, and Continuity once AA Mode is active."
-    }
-  },
-
-  "compatibility": {
-    "requires": [
-      "fft.ai.session.context",
-      "fft.ai.session.state",
-      "fft.ai.session.profile",
-      "fft.ai.session.awareness"
-    ],
-    "optional": [
-      "fft.ai.session.ui",
-      "fft.ai.session.overlay",
-      "fft.ai.session.dashboard",
-      "fft.ai.session.analytics"
-    ],
-    "notes": "Alignment engine aligns with awareness, context, state, profile, UI, overlay, and dashboard v1.2."
+    "records": [],
+    "alignment_policy": "SPEC-007: Alignment records SHOULD be written after every successful 3C pass. Strong alignments increment lattice stability by +0.05.",
+    "alignment_version": "v1.2.0-R5"
   }
 }
-

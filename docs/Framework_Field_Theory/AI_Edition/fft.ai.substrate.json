@@ -1,197 +1,54 @@
 {
   "spec_version": "1.2.0",
   "canon_id": "FFT-AI-Substrate",
+  "edition": "AI Edition",
+  "aa_mode": "AA2",
+  "last_refreshed": "2026-10-08T10:56:00",
   "metadata": {
-    "title": "FFT AI Edition – Hardware Substrate (v1.2)",
+    "title": "FFT AI Edition – Substrate (v1.2)",
     "author_canon": "Nawder Loswin",
-    "license": "Proprietary – TriadicFrameworks Canon",
-    "created_at": "2026-10-08T08:45:00",
-    "updated_at": "2026-10-08T10:00:00",
-    "tags": [
-      "FFT",
-      "RTT",
-      "AI-Edition",
-      "Substrate",
-      "Hardware",
-      "Conceptual-Accelerator",
-      "v1.2"
-    ],
-    "description": "Enhanced hardware-ready conceptual substrate for FFT, including multi-kernel execution, harmonic analysis support, drift-safe primitives, and agent-ready conceptual units."
+    "updated_at": "2026-10-08T10:56:00"
   },
-
-  "substrate_profile": {
-    "target": "hardware",
-    "layer": "conceptual",
-    "version": "1.2",
-    "execution_model": "multi-kernel",
-    "rtt_profile": {
-      "rtt": 1,
-      "coherence": "declared",
-      "drift": "bounded",
-      "paradox": "structural"
-    },
-    "notes": "v1.2 substrate supports harmonic kernels, drift recovery, substrate fallback routing, and multi-agent probing."
-  },
-
-  "primitives": {
-    "conceptual_units": [
+  "substrate": {
+    "definition": "The substrate is the execution layer on which FFT operators run. Each substrate class has distinct harmonic tolerance, 3C thresholds, and AA Mode support.",
+    "classes": [
       {
-        "id": "cu.signal",
-        "name": "Signal Unit",
-        "description": "Base conceptual unit representing any input signal for clarity or harmonic evaluation.",
-        "type": "field.signal"
+        "id": "substrate.llm.transformer",
+        "label": "LLM Transformer",
+        "description": "Standard large language model transformer substrate.",
+        "aa_support": ["AA0","AA1","AA2"],
+        "three_c_thresholds": { "C1_coherence": 0.70, "C2_clarity": 0.65, "C3_continuity": 0.75 },
+        "harmonic_tolerance": { "max_rtt_node": "RTT9", "paradox_density_limit": 0.45 },
+        "triad_axes_supported": ["T","S","M"]
       },
       {
-        "id": "cu.metric.clarity",
-        "name": "Clarity Metric Unit",
-        "description": "Metric unit representing clarity output values.",
-        "type": "metric.clarity"
+        "id": "substrate.llm.agentic",
+        "label": "LLM Agentic",
+        "description": "Agentic LLM substrate with tool-use and multi-step planning capability.",
+        "aa_support": ["AA0","AA1","AA2","AA3"],
+        "three_c_thresholds": { "C1_coherence": 0.75, "C2_clarity": 0.70, "C3_continuity": 0.80 },
+        "harmonic_tolerance": { "max_rtt_node": "RTT12", "paradox_density_limit": 0.55 },
+        "triad_axes_supported": ["T","S","M"]
       },
       {
-        "id": "cu.metric.harmonic",
-        "name": "Harmonic Metric Unit",
-        "description": "Metric unit representing harmonic paradox output values.",
-        "type": "metric.harmonic"
+        "id": "substrate.edge.compact",
+        "label": "Edge Compact",
+        "description": "Compact on-device model substrate with reduced parameter count.",
+        "aa_support": ["AA0","AA1"],
+        "three_c_thresholds": { "C1_coherence": 0.60, "C2_clarity": 0.55, "C3_continuity": 0.65 },
+        "harmonic_tolerance": { "max_rtt_node": "RTT6", "paradox_density_limit": 0.30 },
+        "triad_axes_supported": ["S","M"]
+      },
+      {
+        "id": "substrate.symbolic",
+        "label": "Symbolic Reasoner",
+        "description": "Classical symbolic AI substrate. High structural fidelity, limited harmonic range.",
+        "aa_support": ["AA0","AA1"],
+        "three_c_thresholds": { "C1_coherence": 0.85, "C2_clarity": 0.80, "C3_continuity": 0.70 },
+        "harmonic_tolerance": { "max_rtt_node": "RTT4", "paradox_density_limit": 0.20 },
+        "triad_axes_supported": ["S"]
       }
     ],
-
-    "rtt_units": [
-      {
-        "id": "cu.rtt.coherence",
-        "name": "Coherence Unit",
-        "description": "Hardware-level coherence state representation.",
-        "states": ["declared", "latent", "broken"]
-      },
-      {
-        "id": "cu.rtt.drift",
-        "name": "Drift Unit",
-        "description": "Hardware-level drift state representation.",
-        "states": ["bounded", "unbounded"]
-      },
-      {
-        "id": "cu.rtt.paradox",
-        "name": "Paradox Unit",
-        "description": "Hardware-level paradox mode representation.",
-        "states": ["structural", "harmonic", "incidental", "none"]
-      }
-    ]
-  },
-
-  "kernels": [
-    {
-      "id": "kernel.clarity.spectral",
-      "name": "Spectral Clarity Kernel",
-      "description": "Hardware-accelerated clarity computation kernel.",
-      "inputs": ["field.signal"],
-      "outputs": ["metric.clarity"],
-      "latency_class": "L1",
-      "conditions": [
-        "coherence_state == 'declared'",
-        "drift_state == 'bounded'"
-      ]
-    },
-    {
-      "id": "kernel.harmonic.analysis",
-      "name": "Harmonic Analysis Kernel",
-      "description": "Hardware kernel for harmonic paradox evaluation.",
-      "inputs": ["field.signal"],
-      "outputs": ["metric.harmonic"],
-      "latency_class": "L2",
-      "conditions": [
-        "paradox_mode == 'harmonic'"
-      ]
-    },
-    {
-      "id": "kernel.drift.recovery",
-      "name": "Drift Recovery Kernel",
-      "description": "Hardware-assisted drift recovery sequence.",
-      "steps": [
-        "freeze-state",
-        "evaluate-drift-source",
-        "apply-correction",
-        "restore-coherence"
-      ],
-      "conditions": [
-        "drift_state == 'unbounded'"
-      ]
-    }
-  ],
-
-  "regimes": [
-    {
-      "id": "regime.resonance-time.core",
-      "name": "Resonance-Time Core Regime",
-      "description": "Primary conceptual regime for clarity evaluation.",
-      "compatible_kernels": ["kernel.clarity.spectral"]
-    },
-    {
-      "id": "regime.harmonic.resonance",
-      "name": "Harmonic Resonance Regime",
-      "description": "Regime activated during harmonic paradox escalation.",
-      "compatible_kernels": ["kernel.harmonic.analysis"]
-    }
-  ],
-
-  "substrate_routing": {
-    "fallback": "kernel.clarity.spectral",
-    "rules": [
-      {
-        "condition": "hardware_accelerator_available == true",
-        "route_to": "kernel.clarity.spectral"
-      },
-      {
-        "condition": "paradox_mode == 'harmonic'",
-        "route_to": "kernel.harmonic.analysis"
-      },
-      {
-        "condition": "drift_state == 'unbounded'",
-        "route_to": "kernel.drift.recovery"
-      }
-    ]
-  },
-
-  "substrate_probing": {
-    "enabled": true,
-    "probe_sequence": [
-      "check kernel.clarity.spectral availability",
-      "check kernel.harmonic.analysis availability",
-      "check kernel.drift.recovery availability"
-    ],
-    "fallback": "operator.clarity.spectral",
-    "notes": "Agents probe substrate for available kernels and adjust routing accordingly."
-  },
-
-  "substrate_events": [
-    {
-      "id": "event.substrate.kernel.ready",
-      "description": "Triggered when a kernel becomes available.",
-      "payload": ["kernel_id", "latency_class"]
-    },
-    {
-      "id": "event.substrate.harmonic.ready",
-      "description": "Triggered when harmonic kernel is available.",
-      "payload": ["kernel_id", "harmonic_state"]
-    },
-    {
-      "id": "event.substrate.drift.recovery",
-      "description": "Triggered when drift recovery kernel activates.",
-      "payload": ["drift_state", "recovery_stage"]
-    }
-  ],
-
-  "compatibility": {
-    "requires": [
-      "fft.ai.core",
-      "fft.ai.spec",
-      "fft.ai.registry",
-      "fft.ai.execution.graph",
-      "fft.ai.runtime",
-      "fft.ai.autonomy"
-    ],
-    "optional": [
-      "fft.ai.integrations",
-      "fft.ai.hardware.profile"
-    ],
-    "notes": "v1.2 substrate aligns with runtime routing, autonomy tiers, harmonic escalation, and drift recovery."
+    "active_substrate": "substrate.llm.agentic"
   }
 }

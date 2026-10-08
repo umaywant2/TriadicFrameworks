@@ -1,172 +1,28 @@
 {
   "spec_version": "1.2.0",
-  "canon_id": "FFT-AI-Session-Dashboard",
-
+  "canon_id": "FFT-Session-Dashboard",
+  "edition": "AI Edition",
+  "aa_mode": "AA2",
+  "last_refreshed": "2026-10-08T10:57:00",
   "metadata": {
     "title": "FFT AI Edition – Session Dashboard (v1.2)",
-    "subtitle": "Real‑Time Status • Stability Indicators • Operator Panels • Regime View",
     "author_canon": "Nawder Loswin",
-    "license": "Proprietary – TriadicFrameworks Canon",
-    "created_at": "2026-10-08T08:00:00",
-    "updated_at": "2026-10-08T11:40:00",
-    "tags": [
-      "FFT",
-      "RTT",
-      "AI-Edition",
-      "Session",
-      "Dashboard",
-      "v1.2"
-    ],
-    "description": "Visual dashboard schema for FFT AI Edition sessions, providing real-time conceptual status, stability indicators, operator/regime panels, autonomy tier display, substrate routing, and analytics highlights."
+    "updated_at": "2026-10-08T10:57:00"
   },
-
   "dashboard": {
-    "session_info": {
-      "session_id": "session.default",
-      "version": "1.2",
-      "ai_edition": true,
-      "agent_ready": true,
-      "timestamp": "auto"
+    "layout": "summary_top | lattice_panel | 3c_panel | triad_panel | operator_queue | alignment_feed",
+    "summary_top": {
+      "session_id": null,
+      "substrate": "substrate.llm.agentic",
+      "aa_mode": "AA2",
+      "field_state": "uninitialized",
+      "turn_count": 0
     },
-
-    "status_panel": {
-      "coherence_state": "declared",
-      "drift_state": "bounded",
-      "paradox_mode": "structural",
-      "harmonic_ready": false,
-      "autonomy_tier": 1,
-      "active_regime": "regime.resonance-time.core",
-      "active_operator": null,
-      "active_kernel": null,
-      "execution_node": "node.input.signal"
-    },
-
-    "stability_indicators": {
-      "clarity_stability": 0.91,
-      "drift_stability": 0.92,
-      "paradox_stability": 0.78,
-      "harmonic_stability": 0.83,
-      "overall_stability_score": 0.86,
-      "notes": "High stability with predictable transitions and successful drift recovery."
-    },
-
-    "operator_panel": {
-      "available_operators": [
-        "op.clarity.spectral",
-        "op.harmonic.analysis",
-        "op.drift.recovery"
-      ],
-      "operator_conditions": {
-        "op.clarity.spectral": [
-          "coherence_state == 'declared'",
-          "drift_state == 'bounded'"
-        ],
-        "op.harmonic.analysis": [
-          "paradox_mode == 'harmonic'"
-        ],
-        "op.drift.recovery": [
-          "drift_state == 'unbounded'"
-        ]
-      }
-    },
-
-    "regime_panel": {
-      "active_regime": "regime.resonance-time.core",
-      "available_regimes": [
-        "regime.resonance-time.core",
-        "regime.harmonic.resonance"
-      ],
-      "regime_constraints": {
-        "regime.resonance-time.core": [
-          "coherence=declared",
-          "drift=bounded",
-          "paradox=structural"
-        ],
-        "regime.harmonic.resonance": [
-          "paradox=harmonic"
-        ]
-      }
-    },
-
-    "autonomy_panel": {
-      "current_tier": 1,
-      "allowed_transitions": [2, 3, 12],
-      "tier_path": [
-        "tier1",
-        "tier2",
-        "tier3",
-        "tier12"
-      ]
-    },
-
-    "substrate_panel": {
-      "kernel_candidates": [
-        "kernel.clarity.spectral",
-        "kernel.harmonic.analysis",
-        "kernel.drift.recovery"
-      ],
-      "hardware_flags": {
-        "accelerator_ready": true,
-        "harmonic_ready": false,
-        "drift_recovery_ready": true
-      }
-    },
-
-    "execution_graph_panel": {
-      "current_node": "node.input.signal",
-      "next_nodes": [
-        "node.operator.clarity.spectral",
-        "node.operator.harmonic.analysis",
-        "node.drift.recovery"
-      ],
-      "path_history": []
-    },
-
-    "analytics_highlights": {
-      "harmonic_clusters": [
-        {
-          "cluster_id": "harmonic.cluster.01",
-          "criteria": "harmonic_value >= 0.80",
-          "sessions": ["session.default"]
-        }
-      ],
-      "drift_patterns": [
-        {
-          "pattern_id": "drift.pattern.01",
-          "description": "Single unbounded drift event followed by successful recovery."
-        }
-      ],
-      "operator_sequence": [
-        "op.clarity.spectral",
-        "op.drift.recovery",
-        "op.harmonic.analysis"
-      ],
-      "kernel_sequence": [
-        "kernel.clarity.spectral",
-        "kernel.drift.recovery",
-        "kernel.harmonic.analysis"
-      ]
-    }
-  },
-
-  "compatibility": {
-    "requires": [
-      "fft.ai.session.context",
-      "fft.ai.session.state",
-      "fft.ai.session.profile",
-      "fft.ai.session.trace",
-      "fft.ai.session.log",
-      "fft.ai.session.history",
-      "fft.ai.session.analytics"
-    ],
-    "optional": [
-      "fft.ai.runtime",
-      "fft.ai.execution.graph",
-      "fft.ai.autonomy",
-      "fft.ai.substrate",
-      "fft.ai.hardware.profile"
-    ],
-    "notes": "Dashboard aligns with runtime, execution graph, autonomy, substrate, and hardware profile v1.2."
+    "lattice_panel": { "active_node": "RTT1", "phase": "foundation", "paradox_density": 0.0, "lattice_stability": 1.0 },
+    "three_c_panel": { "C1": null, "C2": null, "C3": null },
+    "triad_panel": { "T": "RTT1", "S": "field.signal", "M": "AA2" },
+    "operator_queue": [],
+    "alignment_feed": [],
+    "dashboard_version": "v1.2.0-R5"
   }
 }
-

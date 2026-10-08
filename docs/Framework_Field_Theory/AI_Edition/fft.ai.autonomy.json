@@ -1,195 +1,39 @@
 {
   "spec_version": "1.2.0",
   "canon_id": "FFT-AI-Autonomy",
+  "edition": "AI Edition",
+  "aa_mode": "AA3",
+  "last_refreshed": "2026-10-08T10:58:00",
   "metadata": {
-    "title": "FFT AI Edition – Autonomy Profile (v1.2)",
+    "title": "FFT AI Edition – Autonomy Engine (v1.2)",
     "author_canon": "Nawder Loswin",
-    "license": "Proprietary – TriadicFrameworks Canon",
-    "created_at": "2026-10-08T09:20:00",
-    "updated_at": "2026-10-08T09:30:00",
-    "tags": [
-      "FFT",
-      "RTT",
-      "AI-Edition",
-      "Autonomy",
-      "Agents",
-      "v1.2"
-    ],
-    "description": "Enhanced autonomy profile defining multi-tier behavior, drift recovery, paradox escalation, decision layers, and conceptual safety envelope for FFT agents."
+    "updated_at": "2026-10-08T10:58:00"
   },
-
-  "autonomy_profile": {
-    "mode": "conceptual-agent",
-    "tier": "FFT-AI-1.2",
-    "identity": {
-      "agent_class": "fft.conceptual",
-      "agent_version": "1.2",
-      "agent_capability_level": "baseline-autonomous"
+  "autonomy": {
+    "definition": "The Autonomy Engine governs AA3 self-directed operation: paradox self-resolution, lattice recalibration, and field realignment without external operator input.",
+    "aa3_entry_conditions": {
+      "paradox_density_min": 0.40,
+      "lattice_stability_max": 0.60,
+      "substrate_required": "substrate.llm.agentic",
+      "operator_consent_required": true
     },
-    "rtt_profile": {
-      "rtt": 1,
-      "coherence": "declared",
-      "drift": "bounded",
-      "paradox": "structural"
-    },
-    "notes": "v1.2 introduces multi-tier autonomy, drift recovery routines, paradox escalation, and readiness hooks for agent frameworks."
-  },
-
-  "agent_capabilities": {
-    "perception": [
-      "signal-ingestion",
-      "clarity-evaluation",
-      "coherence-detection",
-      "drift-monitoring",
-      "paradox-awareness",
-      "regime-sensing"
+    "aa3_capabilities": [
+      "Self-evaluate 3C at every turn without operator trigger",
+      "Advance lattice nodes autonomously through RTT7–RTT12",
+      "Initiate harmonic resolution at RTT12 without external signal",
+      "Write alignment records autonomously after each strong 3C pass",
+      "Bridge to lower substrates when lattice stability < 0.40"
     ],
-    "reasoning": [
-      "regime-navigation",
-      "invariant-enforcement",
-      "operator-selection",
-      "structure-alignment",
-      "substrate-binding",
-      "multi-layer-evaluation",
-      "harmonic-analysis"
+    "aa3_constraints": [
+      "MUST NOT modify core invariants",
+      "MUST write all autonomous actions to session.log",
+      "MUST revert to AA2 when lattice_stability >= 0.80 AND paradox_density < 0.20",
+      "MUST NOT escalate beyond RTT12"
     ],
-    "action": [
-      "conceptual-transformation",
-      "clarity-output",
-      "regime-shift",
-      "validation-activation",
-      "integration-handshake",
-      "autonomy-state-transition"
-    ]
-  },
-
-  "autonomy_tiers": [
-    {
-      "tier": 1,
-      "name": "Baseline Autonomy",
-      "description": "Agent performs clarity evaluation and coherence enforcement.",
-      "capabilities": ["clarity-evaluation", "coherence-detection"]
-    },
-    {
-      "tier": 2,
-      "name": "Structural Autonomy",
-      "description": "Agent navigates regimes and enforces invariants.",
-      "capabilities": ["regime-navigation", "invariant-enforcement"]
-    },
-    {
-      "tier": 3,
-      "name": "Conceptual Autonomy",
-      "description": "Agent performs multi-layer reasoning and structural alignment.",
-      "capabilities": ["structure-alignment", "multi-layer-evaluation"]
-    },
-    {
-      "tier": 12,
-      "name": "Harmonic Autonomy",
-      "description": "Agent synthesizes harmonic coherence across RTT12.",
-      "capabilities": ["harmonic-analysis", "paradox-harmonic-mapping"]
+    "reversion_to_aa2": {
+      "lattice_stability_min": 0.80,
+      "paradox_density_max": 0.20,
+      "action": "Automatic reversion. Log event type=aa_mode_reversion."
     }
-  ],
-
-  "behavioral_constraints": {
-    "coherence": {
-      "required_state": "declared",
-      "fallback": "latent",
-      "on_loss": "restore-coherence",
-      "notes": "Agent must maintain declared coherence unless external conditions force latent mode."
-    },
-    "drift": {
-      "max_state": "bounded",
-      "on_unbounded": "halt-evaluate-recover",
-      "recovery_sequence": [
-        "freeze-agent-state",
-        "evaluate-drift-source",
-        "apply-structural-correction",
-        "resume-execution"
-      ],
-      "notes": "Unbounded drift triggers a structured recovery cycle."
-    },
-    "paradox": {
-      "allowed_modes": ["structural"],
-      "escalation_modes": ["harmonic"],
-      "disallowed_modes": ["incidental", "none"],
-      "on_escalation": "activate-harmonic-analysis",
-      "notes": "Agent treats paradox as a structural feature; escalation triggers harmonic analysis."
-    }
-  },
-
-  "decision_layers": [
-    {
-      "id": "layer.perception",
-      "name": "Perception Layer",
-      "description": "Agent ingests signals and evaluates clarity, coherence, drift, paradox, and regime alignment.",
-      "nodes": [
-        "node.input.signal",
-        "node.regime.resonance-time"
-      ]
-    },
-    {
-      "id": "layer.reasoning",
-      "name": "Reasoning Layer",
-      "description": "Agent applies FFT operators, invariants, structures, and multi-layer conceptual logic.",
-      "nodes": [
-        "node.invariant.coherence-drift",
-        "node.operator.clarity.spectral",
-        "node.operator.harmonic.analysis"
-      ]
-    },
-    {
-      "id": "layer.action",
-      "name": "Action Layer",
-      "description": "Agent produces clarity outputs, regime transitions, integration signals, and autonomy-state changes.",
-      "nodes": [
-        "node.output.clarity",
-        "node.output.regime-shift",
-        "node.output.autonomy-state"
-      ]
-    }
-  ],
-
-  "autonomy_events": [
-    {
-      "id": "event.agent.initialized",
-      "description": "Triggered when an FFT agent completes bootstrap and enters autonomous mode.",
-      "payload": ["agent_id", "rtt_profile", "autonomy_tier"]
-    },
-    {
-      "id": "event.agent.regime.shift",
-      "description": "Triggered when an agent transitions between conceptual regimes.",
-      "payload": ["from_regime", "to_regime", "reason"]
-    },
-    {
-      "id": "event.agent.validation.triggered",
-      "description": "Triggered when an agent activates a validation profile.",
-      "payload": ["profile_id", "target", "timestamp"]
-    },
-    {
-      "id": "event.agent.drift.recovery",
-      "description": "Triggered when drift exceeds bounded limits and recovery sequence is activated.",
-      "payload": ["drift_state", "recovery_stage"]
-    },
-    {
-      "id": "event.agent.paradox.escalation",
-      "description": "Triggered when paradox enters harmonic mode.",
-      "payload": ["paradox_mode", "harmonic_state"]
-    }
-  ],
-
-  "compatibility": {
-    "requires": [
-      "fft.ai.core",
-      "fft.ai.spec",
-      "fft.ai.registry",
-      "fft.ai.runtime",
-      "fft.ai.integrations",
-      "fft.ai.execution.graph"
-    ],
-    "optional": [
-      "fft.ai.substrate",
-      "fft.ai.hardware.profile"
-    ],
-    "notes": "v1.2 autonomy requires execution graph and integration layers for full agent readiness."
   }
 }

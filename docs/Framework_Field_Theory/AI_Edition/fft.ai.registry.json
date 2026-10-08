@@ -1,294 +1,71 @@
 {
   "spec_version": "1.2.0",
   "canon_id": "FFT-AI-Registry",
+  "edition": "AI Edition",
+  "aa_mode": "AA2",
+  "last_refreshed": "2026-10-08T10:58:00",
   "metadata": {
-    "title": "FFT AI Edition – Module Registry (v1.2)",
+    "title": "FFT AI Edition – Operator & File Registry (v1.2)",
     "author_canon": "Nawder Loswin",
-    "license": "Proprietary – TriadicFrameworks Canon",
-    "created_at": "2026-10-08T08:40:00",
-    "updated_at": "2026-10-08T10:15:00",
-    "tags": [
-      "FFT",
-      "RTT",
-      "AI-Edition",
-      "Registry",
-      "Discovery",
-      "v1.2"
+    "updated_at": "2026-10-08T10:58:00"
+  },
+  "registry": {
+    "operators": [
+      { "id": "op.3c.evaluator",       "file": "fft.ai.core.json",            "lattice": "RTT1",  "aa_min": "AA1" },
+      { "id": "op.clarity.spectral",   "file": "fft.ai.core.json",            "lattice": "RTT4",  "aa_min": "AA1" },
+      { "id": "op.harmonic.analysis",  "file": "fft.ai.core.json",            "lattice": "RTT9",  "aa_min": "AA2" },
+      { "id": "op.triad.resolve",      "file": "fft.ai.core.json",            "lattice": "RTT1",  "aa_min": "AA1" },
+      { "id": "op.awareness.update",   "file": "fft.ai.session.awareness.json","lattice": "RTT2", "aa_min": "AA2" },
+      { "id": "op.alignment.write",    "file": "fft.ai.session.alignments.json","lattice":"RTT6", "aa_min": "AA2" },
+      { "id": "op.paradox.resolve",    "file": "fft.ai.autonomy.json",        "lattice": "RTT12", "aa_min": "AA3" }
     ],
-    "description": "Canonical registry for all FFT AI Edition modules, including versions, categories, exports, dependencies, and agent-readiness metadata."
-  },
-
-  "registry_profile": {
-    "version": "1.2",
-    "mode": "agent-ready",
-    "harmonic_support": true,
-    "drift_recovery_support": true,
-    "notes": "Registry aligns with manifest, runtime, autonomy, execution graph, substrate, and hardware profile v1.2."
-  },
-
-  "modules": [
-    {
-      "id": "fft.ai.core",
-      "name": "FFT AI Core",
-      "description": "Minimal conceptual core containing one regime, one invariant, and one clarity operator.",
-      "version": "1.2",
-      "path": "./fft.ai.core.json",
-      "category": "core",
-      "exports": {
-        "regimes": ["regime.resonance-time.core"],
-        "invariants": ["inv.coherence.declared.bounded-drift"],
-        "operators": ["op.clarity.spectral"],
-        "structures": ["structure.spine.core"],
-        "types": ["field.signal", "metric.clarity"]
-      },
-      "dependencies": []
-    },
-
-    {
-      "id": "fft.ai.spec",
-      "name": "FFT AI Specification",
-      "description": "Full AI-native specification including regimes, invariants, operators, structures, types, and validation profiles.",
-      "version": "1.2",
-      "path": "./fft.ai.spec.json",
-      "category": "spec",
-      "exports": {
-        "regimes": ["regime.resonance-time.core"],
-        "invariants": ["inv.coherence.declared.bounded-drift"],
-        "operators": ["op.clarity.spectral"],
-        "structures": ["structure.spine.core"],
-        "types": ["field.signal", "metric.clarity", "metric.harmonic"],
-        "validation_profiles": ["vp.inference.default", "vp.hardware.default"]
-      },
-      "dependencies": ["fft.ai.core"]
-    },
-
-    {
-      "id": "fft.ai.registry",
-      "name": "FFT AI Registry",
-      "description": "Canonical registry enumerating all FFT AI Edition modules.",
-      "version": "1.2",
-      "path": "./fft.ai.registry.json",
-      "category": "registry",
-      "exports": {
-        "modules": [
-          "fft.ai.core",
-          "fft.ai.spec",
-          "fft.ai.execution.graph",
-          "fft.ai.runtime",
-          "fft.ai.autonomy",
-          "fft.ai.capabilities",
-          "fft.ai.integrations",
-          "fft.ai.discovery",
-          "fft.ai.bootstrap",
-          "fft.ai.substrate",
-          "fft.ai.hardware.profile"
-        ]
-      },
-      "dependencies": ["fft.ai.core", "fft.ai.spec"]
-    },
-
-    {
-      "id": "fft.ai.execution.graph",
-      "name": "FFT AI Execution Graph",
-      "description": "Conceptual execution graph defining operator and regime flow.",
-      "version": "1.2",
-      "path": "./fft.ai.execution.graph.json",
-      "category": "execution",
-      "exports": {
-        "nodes": [
-          "node.input.signal",
-          "node.operator.clarity.spectral",
-          "node.operator.harmonic.analysis",
-          "node.drift.recovery"
-        ],
-        "regimes": [
-          "regime.resonance-time.core",
-          "regime.harmonic.resonance"
-        ]
-      },
-      "dependencies": ["fft.ai.core", "fft.ai.spec"]
-    },
-
-    {
-      "id": "fft.ai.runtime",
-      "name": "FFT AI Runtime",
-      "description": "Runtime configuration including operator routing, drift recovery, and harmonic escalation.",
-      "version": "1.2",
-      "path": "./fft.ai.runtime.json",
-      "category": "runtime",
-      "exports": {
-        "routing_rules": ["operator_routing", "substrate_fallback"],
-        "regime_scheduler": ["regime_shift_conditions"],
-        "drift_recovery": ["recovery_sequence"]
-      },
-      "dependencies": [
-        "fft.ai.core",
-        "fft.ai.spec",
-        "fft.ai.execution.graph"
-      ]
-    },
-
-    {
-      "id": "fft.ai.autonomy",
-      "name": "FFT AI Autonomy",
-      "description": "Autonomy tiers, behavioral constraints, paradox escalation, and drift recovery.",
-      "version": "1.2",
-      "path": "./fft.ai.autonomy.json",
-      "category": "autonomy",
-      "exports": {
-        "autonomy_tiers": [1, 2, 3, 12],
-        "behavioral_constraints": ["coherence", "drift", "paradox"],
-        "decision_layers": ["perception", "reasoning", "action"]
-      },
-      "dependencies": [
-        "fft.ai.runtime",
-        "fft.ai.execution.graph"
-      ]
-    },
-
-    {
-      "id": "fft.ai.capabilities",
-      "name": "FFT AI Capabilities",
-      "description": "Tiered capability ontology for FFT agents.",
-      "version": "1.2",
-      "path": "./fft.ai.capabilities.json",
-      "category": "capabilities",
-      "exports": {
-        "capability_tiers": [1, 2, 3, 12],
-        "capabilities": [
-          "clarity-evaluation",
-          "harmonic-analysis",
-          "drift-recovery",
-          "execution-graph-routing"
-        ]
-      },
-      "dependencies": [
-        "fft.ai.autonomy",
-        "fft.ai.runtime"
-      ]
-    },
-
-    {
-      "id": "fft.ai.integrations",
-      "name": "FFT AI Integrations",
-      "description": "Cross-system integration map for external AI frameworks.",
-      "version": "1.2",
-      "path": "./fft.ai.integrations.json",
-      "category": "integrations",
-      "exports": {
-        "frameworks": [
-          "transformer",
-          "graph",
-          "symbolic",
-          "hybrid",
-          "agent",
-          "hardware"
-        ]
-      },
-      "dependencies": [
-        "fft.ai.runtime",
-        "fft.ai.autonomy",
-        "fft.ai.execution.graph"
-      ]
-    },
-
-    {
-      "id": "fft.ai.discovery",
-      "name": "FFT AI Discovery",
-      "description": "Discovery protocol for autonomous and distributed agents.",
-      "version": "1.2",
-      "path": "./fft.ai.discovery.json",
-      "category": "discovery",
-      "exports": {
-        "discovery_sequence": [
-          "discover.manifest",
-          "discover.registry",
-          "discover.core",
-          "discover.spec",
-          "discover.execution-graph",
-          "discover.runtime",
-          "discover.autonomy"
-        ]
-      },
-      "dependencies": [
-        "fft.ai.manifest",
-        "fft.ai.registry",
-        "fft.ai.core",
-        "fft.ai.spec",
-        "fft.ai.execution.graph",
-        "fft.ai.runtime",
-        "fft.ai.autonomy"
-      ]
-    },
-
-    {
-      "id": "fft.ai.bootstrap",
-      "name": "FFT AI Bootstrap",
-      "description": "Multi-phase bootstrap sequence for initializing FFT.",
-      "version": "1.2",
-      "path": "./fft.ai.bootstrap.json",
-      "category": "bootstrap",
-      "exports": {
-        "phases": [
-          "phase.01.discovery-init",
-          "phase.02.core-init",
-          "phase.03.spec-init",
-          "phase.04.execution-graph-init",
-          "phase.05.runtime-init",
-          "phase.06.autonomy-init"
-        ]
-      },
-      "dependencies": [
-        "fft.ai.discovery",
-        "fft.ai.runtime",
-        "fft.ai.autonomy",
-        "fft.ai.execution.graph"
-      ]
-    },
-
-    {
-      "id": "fft.ai.substrate",
-      "name": "FFT AI Substrate",
-      "description": "Hardware-ready conceptual substrate including multi-kernel support.",
-      "version": "1.2",
-      "path": "./fft.ai.substrate.json",
-      "category": "substrate",
-      "exports": {
-        "kernels": [
-          "kernel.clarity.spectral",
-          "kernel.harmonic.analysis",
-          "kernel.drift.recovery"
-        ],
-        "regimes": [
-          "regime.resonance-time.core",
-          "regime.harmonic.resonance"
-        ]
-      },
-      "dependencies": [
-        "fft.ai.runtime",
-        "fft.ai.hardware.profile"
-      ]
-    },
-
-    {
-      "id": "fft.ai.hardware.profile",
-      "name": "FFT AI Hardware Profile",
-      "description": "Hardware capability profile for conceptual accelerators.",
-      "version": "1.2",
-      "path": "./fft.ai.hardware.profile.json",
-      "category": "hardware",
-      "exports": {
-        "supported_kernels": [
-          "kernel.clarity.spectral",
-          "kernel.harmonic.analysis",
-          "kernel.drift.recovery"
-        ],
-        "supported_regimes": [
-          "regime.resonance-time.core",
-          "regime.harmonic.resonance"
-        ]
-      },
-      "dependencies": ["fft.ai.substrate"]
+    "files_by_canon_id": {
+      "FFT-AI-Core":              "fft.ai.core.json",
+      "FFT-AI-Spec":              "fft.ai.spec.json",
+      "FFT-AI-Manifest":          "fft.ai.manifest.json",
+      "FFT-AI-Index":             "fft.ai.index.json",
+      "FFT-AI-Readme":            "fft.ai.readme.json",
+      "FFT-Metadata":             "fft.metadata.json",
+      "FFT-AI-Substrate":         "fft.ai.substrate.json",
+      "FFT-AI-Substrate-Compat":  "fft.ai.substrate.compat.json",
+      "FFT-AI-Substrate-Bridge":  "fft.ai.substrate.bridge.json",
+      "FFT-AI-Substrate-Lattice": "fft.ai.substrate.lattice.json",
+      "FFT-AI-Substrate-Matrix":  "fft.ai.substrate.matrix.json",
+      "FFT-AI-Runtime":           "fft.ai.runtime.json",
+      "FFT-AI-Hardware-Profile":  "fft.ai.hardware.profile.json",
+      "FFT-Session-Awareness":    "fft.ai.session.awareness.json",
+      "FFT-Session-Alignments":   "fft.ai.session.alignments.json",
+      "FFT-Session-Analytics":    "fft.ai.session.analytics.json",
+      "FFT-Session-Context":      "fft.ai.session.context.json",
+      "FFT-Session-Dashboard":    "fft.ai.session.dashboard.json",
+      "FFT-Session-History":      "fft.ai.session.history.json",
+      "FFT-Session-Log":          "fft.ai.session.log.json",
+      "FFT-Session-Overlay":      "fft.ai.session.overlay.json",
+      "FFT-Session-Profile":      "fft.ai.session.profile.json",
+      "FFT-Session-State":        "fft.ai.session.state.json",
+      "FFT-Session-Trace":        "fft.ai.session.trace.json",
+      "FFT-Session-UI":           "fft.ai.session.ui.json",
+      "FFT-AI-Autonomy":          "fft.ai.autonomy.json",
+      "FFT-AI-Bootstrap":         "fft.ai.bootstrap.json",
+      "FFT-AI-Capabilities":      "fft.ai.capabilities.json",
+      "FFT-AI-Discovery":         "fft.ai.discovery.json",
+      "FFT-AI-Execution-Graph":   "fft.ai.execution.graph.json",
+      "FFT-AI-Integrations":      "fft.ai.integrations.json",
+      "FFT-AI-Navigation":        "fft.ai.navigation.json",
+      "FFT-AI-Overview":          "fft.ai.overview.json",
+      "FFT-AI-Registry":          "fft.ai.registry.json",
+      "FFT-RTT-Engine-Prompts":   "fft.ai.rtt.engine.prompts.json",
+      "FFT-RTT-Spine-Examples":   "fft.ai.rtt.spine.examples.json",
+      "FFT-Operators":            "fft.operators.json",
+      "FFT-Operator-Example":     "fft.operator.example.json",
+      "FFT-Operator-Port":        "fft.operator.port.json",
+      "FFT-Structures":           "fft.structures.json",
+      "FFT-Regimes":              "fft.regimes.json",
+      "FFT-Invariant":            "fft.invariant.json",
+      "FFT-Validation":           "fft.validation.json",
+      "FFT-Examples":             "fft.examples.json",
+      "FFT-Core":                 "fft.core.json",
+      "FFT-Capture":              "capture.md"
     }
-  ]
+  }
 }

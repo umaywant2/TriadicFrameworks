@@ -1,237 +1,29 @@
 {
   "spec_version": "1.2.0",
   "canon_id": "FFT-AI-Discovery",
+  "edition": "AI Edition",
+  "aa_mode": "AA2",
+  "last_refreshed": "2026-10-08T10:58:00",
   "metadata": {
-    "title": "FFT AI Edition – Discovery Protocol (v1.2)",
+    "title": "FFT AI Edition – Discovery Layer (v1.2)",
     "author_canon": "Nawder Loswin",
-    "license": "Proprietary – TriadicFrameworks Canon",
-    "created_at": "2026-10-08T09:15:00",
-    "updated_at": "2026-10-08T09:45:00",
-    "tags": [
-      "FFT",
-      "RTT",
-      "AI-Edition",
-      "Discovery",
-      "Autonomous-Agents",
-      "v1.2"
-    ],
-    "description": "Enhanced discovery protocol enabling autonomous and distributed AI agents to locate, interpret, cache, probe, and initialize FFT AI Edition modules, substrates, and capabilities."
+    "updated_at": "2026-10-08T10:58:00"
   },
-
-  "discovery_profile": {
-    "mode": "autonomous-distributed",
-    "target": "ai-agent",
-    "version": "1.2",
-    "rtt_profile": {
-      "rtt": 1,
-      "coherence": "declared",
-      "drift": "bounded",
-      "paradox": "structural"
+  "discovery": {
+    "definition": "Enables runtime discovery of available FFT files, operators, substrates, and lattice configurations from the canon repository.",
+    "discovery_endpoints": {
+      "index": "fft.ai.index.json",
+      "manifest": "fft.ai.manifest.json",
+      "registry": "fft.ai.registry.json",
+      "capabilities": "fft.ai.capabilities.json"
     },
-    "notes": "v1.2 adds multi-agent discovery, distributed resolution, substrate probing, harmonic escalation detection, and runtime/autonomy alignment."
-  },
-
-  "entry_points": {
-    "manifest": "./fft.ai.manifest.json",
-    "registry": "./fft.ai.registry.json",
-    "core": "./fft.ai.core.json",
-    "spec": "./fft.ai.spec.json",
-    "execution_graph": "./fft.ai.execution.graph.json",
-    "runtime": "./fft.ai.runtime.json",
-    "autonomy": "./fft.ai.autonomy.json",
-    "integrations": "./fft.ai.integrations.json",
-    "substrate": "./fft.ai.substrate.json",
-    "hardware_profile": "./fft.ai.hardware.profile.json"
-  },
-
-  "discovery_sequence": [
-    {
-      "id": "discover.manifest",
-      "name": "Locate Manifest",
-      "description": "Agent identifies the canonical manifest to understand directory structure.",
-      "actions": [
-        "Load fft.ai.manifest.json",
-        "Verify canonical_root",
-        "Extract load_order",
-        "Cache manifest for distributed agents"
-      ],
-      "required": true
-    },
-    {
-      "id": "discover.registry",
-      "name": "Load Registry",
-      "description": "Agent loads the module registry to enumerate available FFT modules.",
-      "actions": [
-        "Load fft.ai.registry.json",
-        "Enumerate modules",
-        "Resolve module categories",
-        "Distribute registry snapshot to peer agents"
-      ],
-      "required": true
-    },
-    {
-      "id": "discover.core",
-      "name": "Initialize Core",
-      "description": "Agent loads the minimal FFT core to establish baseline conceptual primitives.",
-      "actions": [
-        "Load fft.ai.core.json",
-        "Register regime.resonance-time.core",
-        "Register inv.coherence.declared.bounded-drift",
-        "Register op.clarity.spectral",
-        "Verify core integrity across distributed agents"
-      ],
-      "required": true
-    },
-    {
-      "id": "discover.spec",
-      "name": "Load Full Specification",
-      "description": "Agent loads the full FFT specification to access structures, types, and validation profiles.",
-      "actions": [
-        "Load fft.ai.spec.json",
-        "Register structures",
-        "Register types",
-        "Register validation profiles",
-        "Probe spec for harmonic escalation support"
-      ],
-      "required": true
-    },
-    {
-      "id": "discover.execution-graph",
-      "name": "Load Execution Graph",
-      "description": "Agent loads the conceptual execution graph for routing and reasoning.",
-      "actions": [
-        "Load fft.ai.execution.graph.json",
-        "Register nodes and edges",
-        "Enable multi-operator branching",
-        "Enable drift-recovery routing",
-        "Enable harmonic escalation routing"
-      ],
-      "required": true
-    },
-    {
-      "id": "discover.runtime",
-      "name": "Load Runtime",
-      "description": "Agent loads runtime configuration for execution.",
-      "actions": [
-        "Load fft.ai.runtime.json",
-        "Register operator routing rules",
-        "Register regime scheduler",
-        "Register drift recovery routines",
-        "Register substrate fallback logic"
-      ],
-      "required": true
-    },
-    {
-      "id": "discover.autonomy",
-      "name": "Load Autonomy Profile",
-      "description": "Agent loads autonomy tiers and behavioral constraints.",
-      "actions": [
-        "Load fft.ai.autonomy.json",
-        "Register autonomy tiers",
-        "Register paradox escalation rules",
-        "Register drift recovery sequences",
-        "Align autonomy with runtime and execution graph"
-      ],
-      "required": true
-    },
-    {
-      "id": "discover.integrations",
-      "name": "Load Integration Map",
-      "description": "Agent loads cross-system integration bindings.",
-      "actions": [
-        "Load fft.ai.integrations.json",
-        "Register framework bindings",
-        "Register substrate bindings",
-        "Register harmonic operator bindings"
-      ],
-      "required": false
-    },
-    {
-      "id": "discover.substrate",
-      "name": "Load Substrate",
-      "description": "Agent loads hardware-ready conceptual substrate.",
-      "actions": [
-        "Load fft.ai.substrate.json",
-        "Probe substrate for kernel availability",
-        "Register hardware kernels",
-        "Enable substrate fallback routing"
-      ],
-      "required": false
-    },
-    {
-      "id": "discover.hardware",
-      "name": "Bind Hardware Profile",
-      "description": "Agent binds hardware capability profile to substrate and spec.",
-      "actions": [
-        "Load fft.ai.hardware.profile.json",
-        "Verify compatibility with substrate",
-        "Verify compatibility with spec",
-        "Enable hardware-accelerated execution"
-      ],
-      "required": false
-    }
-  ],
-
-  "multi_agent_discovery": {
-    "enabled": true,
-    "protocol": "fft-distributed-1.2",
-    "capabilities": [
-      "registry-sharing",
-      "manifest-caching",
-      "spec-consistency-checks",
-      "distributed-regime-alignment",
-      "harmonic-escalation-broadcast"
+    "discovery_protocol": [
+      "1. Load fft.ai.index.json to enumerate all files and their canon_id + lattice node.",
+      "2. Load fft.ai.capabilities.json to determine substrate-available capabilities.",
+      "3. Load fft.ai.registry.json to resolve operator → file mappings.",
+      "4. Validate all discovered files against spec_version 1.2.0.",
+      "5. Report any spec_version mismatches as FFT-WARN-DISCOVERY-VERSION."
     ],
-    "notes": "Allows multiple agents to coordinate FFT discovery and maintain conceptual consistency."
-  },
-
-  "substrate_probing": {
-    "enabled": true,
-    "checks": [
-      "kernel.clarity.spectral",
-      "kernel.harmonic.analysis"
-    ],
-    "fallback": "operator.clarity.spectral",
-    "notes": "Agents probe substrate for available kernels and adjust routing accordingly."
-  },
-
-  "discovery_events": [
-    {
-      "id": "event.discovery.initialized",
-      "description": "Triggered when discovery sequence begins.",
-      "payload": ["agent_id", "timestamp"]
-    },
-    {
-      "id": "event.discovery.module.loaded",
-      "description": "Triggered when an FFT module is successfully loaded.",
-      "payload": ["module_id", "version", "category"]
-    },
-    {
-      "id": "event.discovery.harmonic.detected",
-      "description": "Triggered when harmonic paradox mode is detected during discovery.",
-      "payload": ["harmonic_state", "trigger"]
-    },
-    {
-      "id": "event.discovery.substrate.probed",
-      "description": "Triggered when substrate probing completes.",
-      "payload": ["kernel_available", "hardware_status"]
-    }
-  ],
-
-  "compatibility": {
-    "requires": [
-      "fft.ai.core",
-      "fft.ai.spec",
-      "fft.ai.registry",
-      "fft.ai.execution.graph",
-      "fft.ai.runtime",
-      "fft.ai.autonomy"
-    ],
-    "optional": [
-      "fft.ai.integrations",
-      "fft.ai.substrate",
-      "fft.ai.hardware.profile"
-    ],
-    "notes": "v1.2 discovery requires execution graph, runtime, and autonomy layers for full agent readiness."
+    "discovery_version": "v1.2.0-R5"
   }
 }

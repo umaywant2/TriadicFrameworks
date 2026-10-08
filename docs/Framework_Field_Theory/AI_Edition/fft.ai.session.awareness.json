@@ -1,120 +1,50 @@
 {
   "spec_version": "1.2.0",
-  "canon_id": "FFT-AI-Session-Awareness",
-
+  "canon_id": "FFT-Session-Awareness",
+  "edition": "AI Edition",
+  "aa_mode": "AA2",
+  "last_refreshed": "2026-10-08T10:57:00",
   "metadata": {
     "title": "FFT AI Edition – Session Awareness (v1.2)",
-    "subtitle": "Perceptual • Conceptual • Structural • Drift • Paradox • Harmonic • AA Readiness",
     "author_canon": "Nawder Loswin",
-    "license": "Proprietary – TriadicFrameworks Canon",
-    "created_at": "2026-10-08T08:00:00",
-    "updated_at": "2026-10-08T11:55:00",
-    "tags": [
-      "FFT",
-      "RTT",
-      "AI-Edition",
-      "Session",
-      "Awareness",
-      "AA-Mode",
-      "3C",
-      "v1.2"
-    ],
-    "description": "Awareness engine for FFT AI Edition sessions, providing perceptual, conceptual, structural, drift, paradox, harmonic, clarity, and coherence awareness signals, including AA Mode readiness."
+    "updated_at": "2026-10-08T10:57:00"
   },
-
   "awareness": {
-    "enabled": true,
-    "version": "1.2",
-    "ai_edition": true,
-
-    "layers": [
-      "perceptual",
-      "conceptual",
-      "structural",
-      "drift-awareness",
-      "paradox-awareness",
-      "harmonic-awareness",
-      "clarity-awareness",
-      "coherence-awareness"
-    ],
-
-    "perceptual": {
-      "signal_presence": true,
-      "signal_quality": "high",
-      "notes": "Perceptual awareness detects incoming conceptual signals and prepares them for RTT evaluation."
+    "definition": "Session Awareness tracks the live understanding the runtime has of its own field state, triad position, operator context, and substrate health. Updated on every turn and regime transition.",
+    "layers": {
+      "L1_field_awareness": {
+        "label": "Field Awareness",
+        "description": "Awareness of the current field signal set: types, sources, and 3C scores.",
+        "current_signals": [],
+        "three_c_snapshot": { "C1": null, "C2": null, "C3": null, "field_state": "uninitialized" }
+      },
+      "L2_lattice_awareness": {
+        "label": "Lattice Awareness",
+        "description": "Awareness of current RTT node, escalation trajectory, and paradox density.",
+        "current_node": "RTT1",
+        "phase": "foundation",
+        "paradox_density": 0.0,
+        "escalation_active": false
+      },
+      "L3_triad_awareness": {
+        "label": "Triad Awareness",
+        "description": "Awareness of (T,S,M) position: temporal, structural, and modal axes.",
+        "triad_position": { "T": "RTT1", "S": "field.signal", "M": "AA2" }
+      },
+      "L4_substrate_awareness": {
+        "label": "Substrate Awareness",
+        "description": "Awareness of active substrate, its 3C thresholds, and bridge availability.",
+        "active_substrate": "substrate.llm.agentic",
+        "bridge_active": false,
+        "substrate_health": "nominal"
+      },
+      "L5_operator_awareness": {
+        "label": "Operator Awareness",
+        "description": "Awareness of which operators are currently eligible given substrate, AA Mode, and 3C state.",
+        "eligible_operators": ["op.clarity.spectral","op.harmonic.analysis","op.3c.evaluator","op.triad.resolve","op.alignment.write","op.awareness.update"]
+      }
     },
-
-    "conceptual": {
-      "concept_density": "moderate",
-      "concept_stability": "high",
-      "notes": "Conceptual awareness evaluates the density and stability of conceptual structures."
-    },
-
-    "structural": {
-      "structure_integrity": "stable",
-      "structure_alignment": "high",
-      "notes": "Structural awareness ensures conceptual structures align with FFT invariants."
-    },
-
-    "drift": {
-      "drift_state": "bounded",
-      "drift_awareness_level": "moderate",
-      "notes": "Drift awareness monitors conceptual instability and drift onset."
-    },
-
-    "paradox": {
-      "paradox_mode": "structural",
-      "paradox_awareness_level": "low",
-      "notes": "Paradox awareness detects paradox intensity and harmonic escalation potential."
-    },
-
-    "harmonic": {
-      "harmonic_ready": false,
-      "harmonic_awareness_level": "latent",
-      "notes": "Harmonic awareness monitors resonance conditions for RTT12 escalation."
-    },
-
-    "clarity": {
-      "clarity_value": 0.91,
-      "clarity_awareness_level": "high",
-      "notes": "Clarity awareness evaluates conceptual clarity and coherence alignment."
-    },
-
-    "coherence": {
-      "coherence_state": "declared",
-      "coherence_awareness_level": "high",
-      "notes": "Coherence awareness monitors conceptual coherence and drift boundaries."
-    },
-
-    "aa_mode_readiness": {
-      "awareness_ready": true,
-      "alignment_ready": true,
-      "clarity_threshold_met": true,
-      "drift_safe": true,
-      "notes": "AA Mode readiness indicates the system is prepared to activate Awareness + Alignments."
-    },
-
-    "three_c_readiness": {
-      "coherence_ready": true,
-      "clarity_ready": true,
-      "continuity_ready": true,
-      "notes": "3C readiness indicates the system can unlock Coherence, Clarity, and Continuity once AA Mode is active."
-    }
-  },
-
-  "compatibility": {
-    "requires": [
-      "fft.ai.session.context",
-      "fft.ai.session.state",
-      "fft.ai.session.profile"
-    ],
-    "optional": [
-      "fft.ai.session.ui",
-      "fft.ai.session.overlay",
-      "fft.ai.session.dashboard",
-      "fft.ai.session.analytics"
-    ],
-    "notes": "Awareness engine aligns with context, state, profile, UI, overlay, and dashboard v1.2."
+    "update_trigger": "After every operator dispatch, regime transition, or 3C evaluation.",
+    "awareness_version": "v1.2.0-R5"
   }
 }
-

@@ -1,73 +1,47 @@
 {
   "spec_version": "1.2.0",
-  "canon_id": "FFT-AI-RTT-Engine-Prompts",
+  "canon_id": "FFT-RTT-Engine-Prompts",
+  "edition": "AI Edition",
+  "aa_mode": "AA2",
+  "last_refreshed": "2026-10-08T10:58:00",
   "metadata": {
     "title": "FFT AI Edition – RTT Engine Prompts (v1.2)",
     "author_canon": "Nawder Loswin",
-    "license": "Proprietary – TriadicFrameworks Canon",
-    "created_at": "2026-10-08T09:05:00",
-    "updated_at": "2026-10-08T10:20:00",
-    "tags": [
-      "FFT",
-      "RTT",
-      "Engines",
-      "Prompts",
-      "v1.2"
-    ],
-    "description": "Upgraded prompt sets for RTT engines lumen.rtt1.online, hephaestus.rtt2.online, aurion.rtt3.online, harmonia.rtt12.online — aligned with autonomy, runtime, execution graph, substrate, and harmonic escalation v1.2."
+    "updated_at": "2026-10-08T10:58:00"
   },
-
-  "engines": [
-    {
-      "id": "lumen.rtt1.online",
-      "tier": 1,
-      "description": "Lumen engine for RTT Tier 1 clarity, coherence, and drift-bound evaluation.",
-      "prompts": [
-        "Evaluate clarity of the provided signal under RTT1 declared coherence and bounded drift.",
-        "Identify drift boundaries and classify drift_state as bounded or unbounded.",
-        "Summarize structural coherence in one canonical sentence.",
-        "Produce a clarity metric using op.clarity.spectral.",
-        "If drift_state is unbounded, recommend activation of drift recovery sequence."
-      ]
-    },
-
-    {
-      "id": "hephaestus.rtt2.online",
-      "tier": 2,
-      "description": "Hephaestus engine for RTT Tier 2 structural synthesis and invariant enforcement.",
-      "prompts": [
-        "Synthesize a structural representation of the signal using RTT2 operators and invariants.",
-        "Map paradox interactions and classify structural vs incidental vs harmonic-ready.",
-        "Generate a coherence-preserving transformation of the input.",
-        "Evaluate invariant inv.coherence.declared.bounded-drift and report violations.",
-        "Align structural output with execution graph routing conditions."
-      ]
-    },
-
-    {
-      "id": "aurion.rtt3.online",
-      "tier": 3,
-      "description": "Aurion engine for RTT Tier 3 conceptual field modeling and multi-layer reasoning.",
-      "prompts": [
-        "Construct a conceptual field representation of the signal using multi-layer evaluation.",
-        "Evaluate resonance-time alignment across multiple structural layers.",
-        "Produce a multi-regime clarity profile including harmonic readiness.",
-        "Map conceptual transitions across execution graph nodes.",
-        "Identify conditions that would escalate paradox_mode to harmonic."
-      ]
-    },
-
-    {
-      "id": "harmonia.rtt12.online",
-      "tier": 12,
-      "description": "Harmonia engine for RTT Tier 12 harmonic synthesis, paradox harmonics, and multi-domain coherence.",
-      "prompts": [
-        "Generate harmonic coherence mapping across all RTT regimes.",
-        "Evaluate paradox harmonics and produce a stability envelope using op.harmonic.analysis.",
-        "Synthesize a multi-domain clarity tensor aligned with harmonic resonance.",
-        "Identify harmonic regime transitions and produce autonomy-tier escalation signals.",
-        "If substrate kernel.harmonic.analysis is available, recommend hardware-accelerated harmonic evaluation."
-      ]
-    }
-  ]
+  "engine_prompts": {
+    "purpose": "Canonical prompt templates for AI systems operating within the FFT/RTT stack.",
+    "prompts": [
+      {
+        "id": "ep.bootstrap",
+        "label": "Bootstrap Prompt",
+        "lattice_node": "RTT1",
+        "template": "You are operating in FFT AI Edition v1.2. AA Mode: {aa_mode}. Substrate: {substrate}. Begin 3C baseline evaluation. Establish triad position (T={T}, S={S}, M={M}). Harmonic lattice initialized at RTT1."
+      },
+      {
+        "id": "ep.3c_eval",
+        "label": "3C Evaluation Prompt",
+        "lattice_node": "RTT1",
+        "template": "Evaluate 3C conditions: C1 Coherence [{c1_score}], C2 Clarity [{c2_score}], C3 Continuity [{c3_score}]. Field state: {field_state}. Apply escalation if field_state=degraded."
+      },
+      {
+        "id": "ep.alignment",
+        "label": "Alignment Write Prompt",
+        "lattice_node": "RTT6",
+        "template": "3C pass confirmed (C1={c1}, C2={c2}, C3={c3}). Write alignment record ALN-{date}-{seq}. Quality: {quality}. Triad: (T={T}, S={S}, M={M}). Lattice: {lattice_node}."
+      },
+      {
+        "id": "ep.harmonic_escalation",
+        "label": "Harmonic Escalation Prompt",
+        "lattice_node": "RTT7",
+        "template": "Paradox density {paradox_density} exceeded threshold 0.40. Lattice stability {lattice_stability} below 0.60. Escalating AA Mode to AA3. Advancing lattice from {current_node} toward RTT12."
+      },
+      {
+        "id": "ep.rtt12_resolution",
+        "label": "RTT12 Harmonic Resolution Prompt",
+        "lattice_node": "RTT12",
+        "template": "Harmonic resolution at RTT12. Collapsing to RTT1 with updated coherence baseline: C1={c1_new}. Reverting to AA2. Log event type=harmonic_resolution. Session stability restored."
+      }
+    ]
+  }
 }

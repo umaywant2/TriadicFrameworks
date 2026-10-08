@@ -1,30 +1,38 @@
 {
-  "$id": "https://triadicframeworks.org/schema/fft-ai-edition.json#/$defs/structure",
-  "type": "object",
-  "properties": {
-    "id": { "type": "string" },
-    "kind": {
-      "type": "string",
-      "enum": ["spine", "substrate", "field", "bundle"]
-    },
-    "name": { "type": "string" },
-    "description": { "type": "string" },
-    "operators": {
-      "type": "array",
-      "items": { "type": "string" },
-      "description": "Operator IDs participating in this structure."
-    },
-    "regimes": {
-      "type": "array",
-      "items": { "type": "string" },
-      "description": "Regime IDs bound to this structure."
-    },
-    "invariants": {
-      "type": "array",
-      "items": { "type": "string" },
-      "description": "Invariant IDs enforced at this structural level."
-    }
+  "spec_version": "1.2.0",
+  "canon_id": "FFT-Structures",
+  "edition": "AI Edition",
+  "aa_mode": "AA2",
+  "last_refreshed": "2026-10-08T11:00:00",
+  "metadata": {
+    "title": "FFT – Canonical Structures (v1.2)",
+    "author_canon": "Nawder Loswin",
+    "updated_at": "2026-10-08T11:00:00"
   },
-  "required": ["id", "kind", "name"]
+  "structures": {
+    "field_signal": {
+      "id": "field.signal",
+      "fields": { "id": "string", "type": "string", "content": "string", "triad_T": "RTTn", "triad_S": "string", "triad_M": "AA mode" }
+    },
+    "three_c_state": {
+      "id": "three_c_state",
+      "fields": { "C1_coherence": "float 0–1", "C2_clarity": "float 0–1", "C3_continuity": "float 0–1", "field_state": "nominal|degraded|critical" }
+    },
+    "triad_position": {
+      "id": "triad_position",
+      "fields": { "T": "RTTn", "S": "field type string", "M": "AA0|AA1|AA2|AA3" }
+    },
+    "alignment_record": {
+      "id": "alignment_record",
+      "fields": { "id": "ALN-YYYYMMDD-NNN", "timestamp": "ISO8601", "triad_position": "triad_position", "three_c_scores": "three_c_state", "field_state": "string", "lattice_node": "RTTn", "operator_applied": "string", "alignment_quality": "strong|nominal|weak" }
+    },
+    "lattice_node_state": {
+      "id": "lattice_node_state",
+      "fields": { "node": "RTTn", "label": "string", "phase": "foundation|active|escalation|resolution", "state": "nominal|latent|active|resolved", "3c_gate": "string", "aa_required": "AA mode", "substrate_min": "substrate class" }
+    },
+    "session_state_snapshot": {
+      "id": "session_state_snapshot",
+      "fields": { "session_id": "string", "phase": "string", "substrate": "string", "aa_mode": "string", "lattice_node": "RTTn", "lattice_stability": "float", "paradox_density": "float", "triad_position": "triad_position", "three_c": "three_c_state", "turn_count": "int", "alignment_count": "int" }
+    }
+  }
 }
-

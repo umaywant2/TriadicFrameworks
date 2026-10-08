@@ -1,205 +1,60 @@
 {
   "spec_version": "1.2.0",
   "canon_id": "FFT-AI-Index",
-
+  "edition": "AI Edition",
+  "aa_mode": "AA2",
+  "last_refreshed": "2026-10-08T10:55:00",
   "metadata": {
-    "title": "FFT AI Edition – Canonical Index (v1.2)",
+    "title": "FFT AI Edition – Master Index (v1.2)",
     "author_canon": "Nawder Loswin",
-    "license": "Proprietary – TriadicFrameworks Canon",
-    "created_at": "2026-10-08T08:05:00",
-    "updated_at": "2026-10-08T10:55:00",
-    "tags": [
-      "FFT",
-      "RTT",
-      "AI-Edition",
-      "Index",
-      "Navigation",
-      "v1.2"
-    ],
-    "description": "Machine-native index for FFT AI Edition modules, providing canonical ordering, categories, roles, and navigation anchors for autonomous agents."
+    "updated_at": "2026-10-08T10:55:00"
   },
-
-  "ai_edition": true,
-  "version": "1.2",
-  "canonical_root": "./",
-  "agent_ready": true,
-
   "index": [
-    {
-      "id": "core",
-      "name": "Core",
-      "file": "fft.ai.core.json",
-      "category": "core",
-      "role": "Minimal conceptual primitives: types, regimes, invariants, clarity/harmonic operators."
-    },
-    {
-      "id": "spec",
-      "name": "Specification",
-      "file": "fft.ai.spec.json",
-      "category": "specification",
-      "role": "Full conceptual definitions: structures, types, operators, invariants, validation profiles."
-    },
-    {
-      "id": "registry",
-      "name": "Registry",
-      "file": "fft.ai.registry.json",
-      "category": "registry",
-      "role": "Canonical index of all FFT AI Edition modules."
-    },
-    {
-      "id": "execution_graph",
-      "name": "Execution Graph",
-      "file": "fft.ai.execution.graph.json",
-      "category": "execution",
-      "role": "Conceptual flow of operators, regimes, drift recovery, harmonic escalation."
-    },
-    {
-      "id": "runtime",
-      "name": "Runtime",
-      "file": "fft.ai.runtime.json",
-      "category": "runtime",
-      "role": "Execution configuration: routing rules, drift recovery, paradox escalation."
-    },
-    {
-      "id": "autonomy",
-      "name": "Autonomy",
-      "file": "fft.ai.autonomy.json",
-      "category": "autonomy",
-      "role": "Autonomy tiers, behavioral constraints, decision layers."
-    },
-    {
-      "id": "capabilities",
-      "name": "Capabilities",
-      "file": "fft.ai.capabilities.json",
-      "category": "capabilities",
-      "role": "Tiered capability ontology for conceptual agents."
-    },
-    {
-      "id": "integrations",
-      "name": "Integrations",
-      "file": "fft.ai.integrations.json",
-      "category": "integrations",
-      "role": "Cross-system bindings for transformer, graph, symbolic, hybrid, agent, and hardware frameworks."
-    },
-    {
-      "id": "discovery",
-      "name": "Discovery",
-      "file": "fft.ai.discovery.json",
-      "category": "discovery",
-      "role": "Autonomous/distributed discovery protocol for loading FFT modules."
-    },
-    {
-      "id": "bootstrap",
-      "name": "Bootstrap",
-      "file": "fft.ai.bootstrap.json",
-      "category": "bootstrap",
-      "role": "Multi-phase conceptual bootloader for initializing FFT."
-    },
-    {
-      "id": "substrate",
-      "name": "Substrate",
-      "file": "fft.ai.substrate.json",
-      "category": "substrate",
-      "role": "Hardware-ready conceptual substrate with multi-kernel support."
-    },
-    {
-      "id": "hardware_profile",
-      "name": "Hardware Profile",
-      "file": "fft.ai.hardware.profile.json",
-      "category": "hardware",
-      "role": "Hardware capability profile for conceptual accelerators."
-    },
-    {
-      "id": "rtt_engine_prompts",
-      "name": "RTT Engine Prompts",
-      "file": "fft.ai.rtt.engine.prompts.json",
-      "category": "rtt",
-      "role": "RTT engine prompt sets for clarity, drift, paradox, and harmonic evaluation."
-    },
-    {
-      "id": "rtt_spine_examples",
-      "name": "RTT Spine Examples",
-      "file": "fft.ai.rtt.spine.examples.json",
-      "category": "rtt",
-      "role": "Examples demonstrating RTT interactions with the TriadicFrameworks Spine."
-    },
-    {
-      "id": "examples",
-      "name": "FFT Examples",
-      "file": "fft.ai.examples.json",
-      "category": "examples",
-      "role": "Clarity, drift, paradox, harmonic, substrate, and autonomy-tier examples."
-    },
-    {
-      "id": "metadata",
-      "name": "Metadata",
-      "file": "fft.ai.metadata.json",
-      "category": "metadata",
-      "role": "Unified metadata descriptor for all FFT AI Edition modules."
-    },
-    {
-      "id": "manifest",
-      "name": "Manifest",
-      "file": "fft.ai.manifest.json",
-      "category": "manifest",
-      "role": "Canonical manifest describing directory structure and load order."
-    },
-    {
-      "id": "readme",
-      "name": "Readme",
-      "file": "fft.ai.readme.json",
-      "category": "readme",
-      "role": "Front-door descriptor for the entire AI Edition."
-    }
-  ],
-
-  "navigation": {
-    "primary": [
-      "core",
-      "spec",
-      "registry",
-      "manifest",
-      "readme"
-    ],
-    "conceptual": [
-      "execution_graph",
-      "runtime",
-      "autonomy",
-      "capabilities"
-    ],
-    "system": [
-      "integrations",
-      "discovery",
-      "bootstrap"
-    ],
-    "hardware": [
-      "substrate",
-      "hardware_profile"
-    ],
-    "rtt": [
-      "rtt_engine_prompts",
-      "rtt_spine_examples"
-    ],
-    "examples": [
-      "examples"
-    ]
-  },
-
-  "compatibility": {
-    "requires": [
-      "fft.ai.manifest",
-      "fft.ai.registry",
-      "fft.ai.metadata"
-    ],
-    "optional": [
-      "fft.ai.runtime",
-      "fft.ai.execution.graph",
-      "fft.ai.autonomy",
-      "fft.ai.substrate",
-      "fft.ai.hardware.profile",
-      "fft.ai.integrations"
-    ],
-    "notes": "Index aligns with manifest, registry, metadata, autonomy, runtime, execution graph, substrate, and hardware profile v1.2."
-  }
+    { "file": "fft.ai.core.json",                "canon_id": "FFT-AI-Core",              "group": "core_architecture",   "aa_mode": "AA2", "lattice": "RTT1" },
+    { "file": "fft.ai.spec.json",                "canon_id": "FFT-AI-Spec",              "group": "core_architecture",   "aa_mode": "AA2", "lattice": "RTT1" },
+    { "file": "fft.ai.manifest.json",            "canon_id": "FFT-AI-Manifest",          "group": "core_architecture",   "aa_mode": "AA2", "lattice": "RTT1" },
+    { "file": "fft.ai.index.json",               "canon_id": "FFT-AI-Index",             "group": "core_architecture",   "aa_mode": "AA2", "lattice": "RTT1" },
+    { "file": "fft.ai.readme.json",              "canon_id": "FFT-AI-Readme",            "group": "core_architecture",   "aa_mode": "AA2", "lattice": "RTT1" },
+    { "file": "fft.metadata.json",               "canon_id": "FFT-Metadata",             "group": "core_architecture",   "aa_mode": "AA2", "lattice": "RTT1" },
+    { "file": "fft.ai.substrate.json",           "canon_id": "FFT-AI-Substrate",         "group": "substrate_runtime",   "aa_mode": "AA2", "lattice": "RTT3" },
+    { "file": "fft.ai.substrate.compat.json",    "canon_id": "FFT-AI-Substrate-Compat",  "group": "substrate_runtime",   "aa_mode": "AA2", "lattice": "RTT3" },
+    { "file": "fft.ai.substrate.bridge.json",    "canon_id": "FFT-AI-Substrate-Bridge",  "group": "substrate_runtime",   "aa_mode": "AA2", "lattice": "RTT5" },
+    { "file": "fft.ai.substrate.lattice.json",   "canon_id": "FFT-AI-Substrate-Lattice", "group": "substrate_runtime",   "aa_mode": "AA2", "lattice": "RTT6" },
+    { "file": "fft.ai.substrate.matrix.json",    "canon_id": "FFT-AI-Substrate-Matrix",  "group": "substrate_runtime",   "aa_mode": "AA2", "lattice": "RTT6" },
+    { "file": "fft.ai.runtime.json",             "canon_id": "FFT-AI-Runtime",           "group": "substrate_runtime",   "aa_mode": "AA2", "lattice": "RTT2" },
+    { "file": "fft.ai.hardware.profile.json",    "canon_id": "FFT-AI-Hardware-Profile",  "group": "substrate_runtime",   "aa_mode": "AA2", "lattice": "RTT3" },
+    { "file": "fft.ai.session.awareness.json",   "canon_id": "FFT-Session-Awareness",    "group": "session_layer",       "aa_mode": "AA2", "lattice": "RTT2" },
+    { "file": "fft.ai.session.alignments.json",  "canon_id": "FFT-Session-Alignments",   "group": "session_layer",       "aa_mode": "AA2", "lattice": "RTT6" },
+    { "file": "fft.ai.session.analytics.json",   "canon_id": "FFT-Session-Analytics",    "group": "session_layer",       "aa_mode": "AA2", "lattice": "RTT4" },
+    { "file": "fft.ai.session.context.json",     "canon_id": "FFT-Session-Context",      "group": "session_layer",       "aa_mode": "AA2", "lattice": "RTT2" },
+    { "file": "fft.ai.session.dashboard.json",   "canon_id": "FFT-Session-Dashboard",    "group": "session_layer",       "aa_mode": "AA2", "lattice": "RTT4" },
+    { "file": "fft.ai.session.history.json",     "canon_id": "FFT-Session-History",      "group": "session_layer",       "aa_mode": "AA2", "lattice": "RTT5" },
+    { "file": "fft.ai.session.log.json",         "canon_id": "FFT-Session-Log",          "group": "session_layer",       "aa_mode": "AA2", "lattice": "RTT4" },
+    { "file": "fft.ai.session.overlay.json",     "canon_id": "FFT-Session-Overlay",      "group": "session_layer",       "aa_mode": "AA2", "lattice": "RTT6" },
+    { "file": "fft.ai.session.profile.json",     "canon_id": "FFT-Session-Profile",      "group": "session_layer",       "aa_mode": "AA2", "lattice": "RTT2" },
+    { "file": "fft.ai.session.state.json",       "canon_id": "FFT-Session-State",        "group": "session_layer",       "aa_mode": "AA2", "lattice": "RTT2" },
+    { "file": "fft.ai.session.trace.json",       "canon_id": "FFT-Session-Trace",        "group": "session_layer",       "aa_mode": "AA2", "lattice": "RTT5" },
+    { "file": "fft.ai.session.ui.json",          "canon_id": "FFT-Session-UI",           "group": "session_layer",       "aa_mode": "AA2", "lattice": "RTT4" },
+    { "file": "fft.operators.json",              "canon_id": "FFT-Operators",             "group": "operators_structures","aa_mode": "AA2", "lattice": "RTT3" },
+    { "file": "fft.operator.example.json",       "canon_id": "FFT-Operator-Example",     "group": "operators_structures","aa_mode": "AA2", "lattice": "RTT3" },
+    { "file": "fft.operator.port.json",          "canon_id": "FFT-Operator-Port",        "group": "operators_structures","aa_mode": "AA2", "lattice": "RTT3" },
+    { "file": "fft.structures.json",             "canon_id": "FFT-Structures",           "group": "operators_structures","aa_mode": "AA2", "lattice": "RTT3" },
+    { "file": "fft.regimes.json",                "canon_id": "FFT-Regimes",              "group": "operators_structures","aa_mode": "AA2", "lattice": "RTT1" },
+    { "file": "fft.invariant.json",              "canon_id": "FFT-Invariant",            "group": "operators_structures","aa_mode": "AA2", "lattice": "RTT1" },
+    { "file": "fft.validation.json",             "canon_id": "FFT-Validation",           "group": "operators_structures","aa_mode": "AA2", "lattice": "RTT4" },
+    { "file": "fft.examples.json",               "canon_id": "FFT-Examples",             "group": "operators_structures","aa_mode": "AA2", "lattice": "RTT3" },
+    { "file": "fft.core.json",                   "canon_id": "FFT-Core",                 "group": "operators_structures","aa_mode": "AA2", "lattice": "RTT1" },
+    { "file": "fft.ai.autonomy.json",            "canon_id": "FFT-AI-Autonomy",          "group": "ai_runtime_layer",    "aa_mode": "AA3", "lattice": "RTT9" },
+    { "file": "fft.ai.bootstrap.json",           "canon_id": "FFT-AI-Bootstrap",         "group": "ai_runtime_layer",    "aa_mode": "AA2", "lattice": "RTT1" },
+    { "file": "fft.ai.capabilities.json",        "canon_id": "FFT-AI-Capabilities",      "group": "ai_runtime_layer",    "aa_mode": "AA2", "lattice": "RTT3" },
+    { "file": "fft.ai.discovery.json",           "canon_id": "FFT-AI-Discovery",         "group": "ai_runtime_layer",    "aa_mode": "AA2", "lattice": "RTT4" },
+    { "file": "fft.ai.execution.graph.json",     "canon_id": "FFT-AI-Execution-Graph",   "group": "ai_runtime_layer",    "aa_mode": "AA2", "lattice": "RTT5" },
+    { "file": "fft.ai.integrations.json",        "canon_id": "FFT-AI-Integrations",      "group": "ai_runtime_layer",    "aa_mode": "AA2", "lattice": "RTT5" },
+    { "file": "fft.ai.navigation.json",          "canon_id": "FFT-AI-Navigation",        "group": "ai_runtime_layer",    "aa_mode": "AA2", "lattice": "RTT4" },
+    { "file": "fft.ai.overview.json",            "canon_id": "FFT-AI-Overview",          "group": "ai_runtime_layer",    "aa_mode": "AA2", "lattice": "RTT1" },
+    { "file": "fft.ai.registry.json",            "canon_id": "FFT-AI-Registry",          "group": "ai_runtime_layer",    "aa_mode": "AA2", "lattice": "RTT4" },
+    { "file": "fft.ai.rtt.engine.prompts.json",  "canon_id": "FFT-RTT-Engine-Prompts",   "group": "ai_runtime_layer",    "aa_mode": "AA2", "lattice": "RTT6" },
+    { "file": "fft.ai.rtt.spine.examples.json",  "canon_id": "FFT-RTT-Spine-Examples",   "group": "ai_runtime_layer",    "aa_mode": "AA2", "lattice": "RTT6" },
+    { "file": "capture.md",                      "canon_id": "FFT-Capture",              "group": "capture",             "aa_mode": "AA2", "lattice": "RTT1" }
+  ]
 }
-

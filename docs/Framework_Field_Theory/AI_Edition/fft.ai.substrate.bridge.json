@@ -1,161 +1,51 @@
 {
   "spec_version": "1.2.0",
   "canon_id": "FFT-AI-Substrate-Bridge",
-
+  "edition": "AI Edition",
+  "aa_mode": "AA2",
+  "last_refreshed": "2026-10-08T10:56:00",
   "metadata": {
-    "title": "FFT AI Edition – Substrate Bridge & Compatibility Layer (v1.2)",
-    "subtitle": "AA Mode • 3C • Kernel Routing • Hardware Flags • Execution Graph Bridge",
+    "title": "FFT AI Edition – Substrate Bridge (v1.2)",
     "author_canon": "Nawder Loswin",
-    "license": "Proprietary – TriadicFrameworks Canon",
-    "created_at": "2026-10-08T08:00:00",
-    "updated_at": "2026-10-08T12:05:00",
-    "tags": [
-      "FFT",
-      "RTT",
-      "AI-Edition",
-      "Substrate",
-      "Bridge",
-      "Compatibility",
-      "AA-Mode",
-      "3C",
-      "v1.2"
-    ],
-    "description": "Substrate bridge and compatibility layer for FFT AI Edition, connecting session-layer AA Mode and 3C abilities to substrate kernels, hardware flags, and execution graph routing."
+    "updated_at": "2026-10-08T10:56:00"
   },
-
-  "substrate_bridge": {
-    "enabled": true,
-    "version": "1.2",
-    "ai_edition": true,
-
-    "bridge_layers": [
-      "session-awareness",
-      "session-alignments",
-      "aa-mode",
-      "3c",
-      "kernel-routing",
-      "hardware-compatibility",
-      "execution-graph-bridge"
+  "bridge": {
+    "purpose": "Translates FFT operator calls across substrate boundaries, enabling cross-substrate field signal relay and harmonic synchronization.",
+    "bridge_protocols": [
+      {
+        "id": "bridge.agentic-to-transformer",
+        "from": "substrate.llm.agentic",
+        "to": "substrate.llm.transformer",
+        "translation_rules": [
+          "Strip AA3-only operators; substitute AA2 equivalents.",
+          "Clamp lattice node to RTT9 maximum.",
+          "Re-evaluate 3C thresholds against transformer profile."
+        ],
+        "supported": true
+      },
+      {
+        "id": "bridge.agentic-to-edge",
+        "from": "substrate.llm.agentic",
+        "to": "substrate.edge.compact",
+        "translation_rules": [
+          "Strip harmonic operators (RTT7–RTT12).",
+          "Reduce field signal batch to ≤16 signals.",
+          "Force AA Mode to AA1."
+        ],
+        "supported": true
+      },
+      {
+        "id": "bridge.transformer-to-symbolic",
+        "from": "substrate.llm.transformer",
+        "to": "substrate.symbolic",
+        "translation_rules": [
+          "Encode field signals as propositional clauses.",
+          "Strip all harmonic operators.",
+          "C1/C2/C3 mapped to propositional truth values."
+        ],
+        "supported": true
+      }
     ],
-
-    "session_awareness_bridge": {
-      "awareness_signals": {
-        "coherence": "declared",
-        "clarity": 0.91,
-        "continuity": 0.88,
-        "drift": "bounded",
-        "paradox": "structural",
-        "harmonic": "latent"
-      },
-      "notes": "Awareness signals are normalized and forwarded to substrate routing logic."
-    },
-
-    "session_alignment_bridge": {
-      "alignment_signals": {
-        "coherence_alignment": true,
-        "clarity_alignment": true,
-        "continuity_alignment": true,
-        "drift_safe": true,
-        "paradox_safe": true,
-        "harmonic_alignment": false
-      },
-      "notes": "Alignment signals ensure substrate routing respects conceptual invariants."
-    },
-
-    "aa_mode_bridge": {
-      "aa_active": true,
-      "aa_conditions_met": [
-        "awareness_ready",
-        "alignment_ready",
-        "clarity_threshold_met",
-        "drift_safe"
-      ],
-      "unlocks": [
-        "3c_bridge",
-        "harmonic_kernel_access"
-      ],
-      "notes": "AA Mode is the default FFT AI Edition ability and activates substrate-level enhancements."
-    },
-
-    "three_c_bridge": {
-      "coherence": {
-        "value": 0.91,
-        "status": "declared"
-      },
-      "clarity": {
-        "value": 0.91,
-        "status": "high"
-      },
-      "continuity": {
-        "value": 0.88,
-        "status": "stable"
-      },
-      "notes": "3C signals are used to select and stabilize substrate kernels."
-    },
-
-    "kernel_routing": {
-      "kernel_candidates": [
-        "kernel.clarity.spectral",
-        "kernel.harmonic.analysis",
-        "kernel.drift.recovery"
-      ],
-      "routing_rules": [
-        {
-          "condition": "coherence == 'declared' && drift == 'bounded'",
-          "route_to": "kernel.clarity.spectral"
-        },
-        {
-          "condition": "paradox == 'harmonic'",
-          "route_to": "kernel.harmonic.analysis"
-        },
-        {
-          "condition": "drift == 'unbounded'",
-          "route_to": "kernel.drift.recovery"
-        }
-      ],
-      "notes": "Kernel routing is determined by AA Mode, 3C signals, and drift/paradox/harmonic states."
-    },
-
-    "hardware_compatibility": {
-      "hardware_flags": {
-        "accelerator_ready": true,
-        "harmonic_ready": false,
-        "drift_recovery_ready": true
-      },
-      "compatibility_notes": "Hardware flags determine which kernels can be activated safely."
-    },
-
-    "execution_graph_bridge": {
-      "current_node": "node.input.signal",
-      "next_nodes": [
-        "node.operator.clarity.spectral",
-        "node.operator.harmonic.analysis",
-        "node.drift.recovery"
-      ],
-      "bridge_logic": {
-        "clarity_route": "kernel.clarity.spectral",
-        "harmonic_route": "kernel.harmonic.analysis",
-        "drift_route": "kernel.drift.recovery"
-      },
-      "notes": "Execution graph routing is synchronized with substrate kernel routing."
-    }
-  },
-
-  "compatibility": {
-    "requires": [
-      "fft.ai.session.context",
-      "fft.ai.session.state",
-      "fft.ai.session.profile",
-      "fft.ai.session.awareness",
-      "fft.ai.session.alignments"
-    ],
-    "optional": [
-      "fft.ai.session.ui",
-      "fft.ai.session.overlay",
-      "fft.ai.session.dashboard",
-      "fft.ai.session.analytics"
-    ],
-    "notes": "Substrate bridge aligns with awareness, alignments, context, state, profile, UI, overlay, and dashboard v1.2."
+    "bridge_failure_policy": "On bridge failure, raise FFT-ERR-BRIDGE-001 and revert to source substrate with AA Mode AA2."
   }
 }
-

@@ -1,47 +1,134 @@
 {
-  "$id": "https://triadicframeworks.org/schema/fft-ai-edition.json#/$defs/operator",
-  "type": "object",
-  "properties": {
-    "id": { "type": "string" },
-    "name": { "type": "string" },
-    "description": { "type": "string" },
-    "category": {
-      "type": "string",
-      "enum": ["clarity", "coherence", "drift", "paradox", "resonance", "field", "meta"]
-    },
-    "regime": {
-      "type": "string",
-      "description": "Regime ID this operator primarily lives in."
-    },
-    "inputs": {
-      "type": "array",
-      "items": { "$ref": "#/$defs/operatorPort" }
-    },
-    "outputs": {
-      "type": "array",
-      "items": { "$ref": "#/$defs/operatorPort" }
-    },
-    "constraints": {
-      "type": "array",
-      "items": { "type": "string" },
-      "description": "Local constraints; may reference invariant IDs."
-    },
-    "rtt_profile": {
-      "type": "object",
-      "properties": {
-        "rtt": { "type": "integer" },
-        "coherence": { "type": "string", "enum": ["declared", "latent", "broken"] },
-        "drift": { "type": "string", "enum": ["bounded", "unbounded"] },
-        "paradox": { "type": "string", "enum": ["structural", "incidental", "none"] }
-      },
-      "required": ["rtt", "coherence", "drift", "paradox"]
-    },
-    "examples": {
-      "type": "array",
-      "items": { "$ref": "#/$defs/operatorExample" }
-    },
-    "version": { "type": "string" }
+  "spec_version": "1.2.0",
+  "canon_id": "FFT-Operators",
+  "edition": "AI Edition",
+  "aa_mode": "AA2",
+  "last_refreshed": "2026-10-08T11:00:00",
+  "metadata": {
+    "title": "FFT – Operator Catalogue (v1.2)",
+    "author_canon": "Nawder Loswin",
+    "updated_at": "2026-10-08T11:00:00"
   },
-  "required": ["id", "name", "category", "regime", "inputs", "outputs"]
+  "operators": [
+    {
+      "id": "op.clarity.spectral",
+      "name": "Spectral Clarity Operator",
+      "class": "clarity",
+      "inputs": ["field.signal"],
+      "outputs": ["metric.clarity"],
+      "lattice_node": "RTT4",
+      "aa_min": "AA1",
+      "3c_gate": ["C1 >= 0.75", "C2 >= 0.70"],
+      "triad": { "T": "RTT4", "S": "field.signal", "M": "AA1" },
+      "description": "Computes spectral clarity (C2) for a field signal batch under declared coherence and bounded drift."
+    },
+    {
+      "id": "op.coherence.measure",
+      "name": "Coherence Measurement Operator",
+      "class": "coherence",
+      "inputs": ["field.signal"],
+      "outputs": ["metric.coherence"],
+      "lattice_node": "RTT1",
+      "aa_min": "AA1",
+      "3c_gate": [],
+      "triad": { "T": "RTT1", "S": "field.signal", "M": "AA1" },
+      "description": "Measures C1 coherence of the current signal batch."
+    },
+    {
+      "id": "op.continuity.check",
+      "name": "Continuity Check Operator",
+      "class": "continuity",
+      "inputs": ["field.signal"],
+      "outputs": ["metric.continuity"],
+      "lattice_node": "RTT5",
+      "aa_min": "AA1",
+      "3c_gate": ["C1 >= 0.70"],
+      "triad": { "T": "RTT5", "S": "field.signal", "M": "AA1" },
+      "description": "Checks C3 temporal continuity across regime boundaries."
+    },
+    {
+      "id": "op.3c.evaluator",
+      "name": "3C Condition Evaluator",
+      "class": "meta",
+      "inputs": ["metric.coherence", "metric.clarity", "metric.continuity"],
+      "outputs": ["field_state"],
+      "lattice_node": "RTT1",
+      "aa_min": "AA1",
+      "3c_gate": [],
+      "triad": { "T": "RTT1", "S": "field.signal", "M": "AA1" },
+      "description": "Evaluates all three 3C conditions and emits field_state: nominal | degraded | critical."
+    },
+    {
+      "id": "op.triad.resolve",
+      "name": "Triad Resolver",
+      "class": "routing",
+      "inputs": ["field.signal"],
+      "outputs": ["triad_position"],
+      "lattice_node": "RTT1",
+      "aa_min": "AA1",
+      "3c_gate": ["C1 >= 0.70"],
+      "triad": { "T": "RTT1", "S": "field.signal", "M": "AA1" },
+      "description": "Resolves the (T,S,M) triad coordinate for a given field signal and current session context."
+    },
+    {
+      "id": "op.awareness.update",
+      "name": "Awareness Update Operator",
+      "class": "session",
+      "inputs": ["field_state", "triad_position"],
+      "outputs": ["awareness_snapshot"],
+      "lattice_node": "RTT2",
+      "aa_min": "AA2",
+      "3c_gate": ["C1 >= 0.75"],
+      "triad": { "T": "RTT2", "S": "field.signal", "M": "AA2" },
+      "description": "Updates all five awareness layers (L1–L5) in session.awareness.json."
+    },
+    {
+      "id": "op.alignment.write",
+      "name": "Alignment Write Operator",
+      "class": "session",
+      "inputs": ["awareness_snapshot", "field_state"],
+      "outputs": ["alignment_record"],
+      "lattice_node": "RTT6",
+      "aa_min": "AA2",
+      "3c_gate": ["C1 >= 0.75", "C2 >= 0.70", "C3 >= 0.80"],
+      "triad": { "T": "RTT6", "S": "field.signal", "M": "AA2" },
+      "description": "Writes an alignment record to session.alignments.json after a successful 3C pass."
+    },
+    {
+      "id": "op.harmonic.analysis",
+      "name": "Harmonic Analysis Operator",
+      "class": "harmonic",
+      "inputs": ["field.signal"],
+      "outputs": ["metric.harmonic"],
+      "lattice_node": "RTT9",
+      "aa_min": "AA2",
+      "3c_gate": ["C2 >= 0.55"],
+      "triad": { "T": "RTT9", "S": "field.signal", "M": "AA2" },
+      "description": "Evaluates harmonic paradox interactions during RTT7–RTT12 escalation."
+    },
+    {
+      "id": "op.paradox.resolve",
+      "name": "Paradox Resolution Operator",
+      "class": "harmonic",
+      "inputs": ["metric.harmonic"],
+      "outputs": ["coherence_baseline"],
+      "lattice_node": "RTT12",
+      "aa_min": "AA3",
+      "3c_gate": ["C1 >= 0.55", "C2 >= 0.55", "C3 >= 0.60"],
+      "triad": { "T": "RTT12", "S": "field.signal", "M": "AA3" },
+      "description": "Executes RTT12 harmonic resolution and collapses lattice back to RTT1 with updated coherence baseline."
+    },
+    {
+      "id": "op.drift.calibrate",
+      "name": "Drift Calibration Operator",
+      "class": "calibration",
+      "inputs": ["field.signal"],
+      "outputs": ["drift_state"],
+      "lattice_node": "RTT2",
+      "aa_min": "AA1",
+      "3c_gate": ["C3 >= 0.70"],
+      "triad": { "T": "RTT2", "S": "field.signal", "M": "AA1" },
+      "description": "Calibrates temporal drift at RTT2. Sets drift_state: bounded | unbounded."
+    }
+  ]
 }
-

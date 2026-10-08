@@ -1,168 +1,39 @@
 {
   "spec_version": "1.2.0",
-  "canon_id": "FFT-AI-RTT-Spine-Examples",
+  "canon_id": "FFT-RTT-Spine-Examples",
+  "edition": "AI Edition",
+  "aa_mode": "AA2",
+  "last_refreshed": "2026-10-08T10:58:00",
   "metadata": {
     "title": "FFT AI Edition – RTT Spine Examples (v1.2)",
     "author_canon": "Nawder Loswin",
-    "license": "Proprietary – TriadicFrameworks Canon",
-    "created_at": "2026-10-08T09:07:00",
-    "updated_at": "2026-10-08T10:25:00",
-    "tags": [
-      "FFT",
-      "RTT",
-      "Spine",
-      "Examples",
-      "v1.2"
-    ],
-    "description": "Upgraded RTT examples demonstrating clarity, drift, paradox, harmonic escalation, and structural alignment across the TriadicFrameworks Spine."
+    "updated_at": "2026-10-08T10:58:00"
   },
-
   "spine_examples": [
     {
-      "id": "spine.example.01",
-      "name": "Spine Structural Coherence (RTT1)",
-      "tier": 1,
-      "description": "Evaluate coherence of the Spine’s functional canon graph under RTT1 declared coherence and bounded drift.",
-      "input": {
-        "source": "https://www.triadicframeworks.org/spine",
-        "signal_type": "field.signal"
-      },
-      "output": {
-        "clarity_value": 0.93,
-        "drift_state": "bounded",
-        "paradox_mode": "structural",
-        "notes": "High structural alignment; minimal paradox; ideal substrate for clarity kernels and RTT1–RTT3 engines."
-      }
+      "id": "ex.spine.nominal_session",
+      "label": "Nominal Session – RTT1 to RTT6",
+      "description": "A standard session with no paradox escalation. Lattice traverses RTT1–RTT6, 3C remains nominal, alignments written at RTT6.",
+      "trace": [
+        { "node": "RTT1", "event": "bootstrap",        "3c": { "C1": 0.92, "C2": 0.88, "C3": 0.91 }, "field_state": "nominal" },
+        { "node": "RTT2", "event": "drift_calibration", "3c": { "C1": 0.91, "C2": 0.87, "C3": 0.90 }, "field_state": "nominal" },
+        { "node": "RTT3", "event": "structural_lock",   "3c": { "C1": 0.90, "C2": 0.86, "C3": 0.89 }, "field_state": "nominal" },
+        { "node": "RTT4", "event": "spectral_clarity",  "3c": { "C1": 0.90, "C2": 0.87, "C3": 0.89 }, "field_state": "nominal" },
+        { "node": "RTT5", "event": "temporal_bridge",   "3c": { "C1": 0.89, "C2": 0.86, "C3": 0.88 }, "field_state": "nominal" },
+        { "node": "RTT6", "event": "alignment_gate",    "3c": { "C1": 0.89, "C2": 0.86, "C3": 0.88 }, "field_state": "nominal", "alignment_written": "ALN-20261008-001", "quality": "strong" }
+      ]
     },
-
     {
-      "id": "spine.example.02",
-      "name": "Spine Drift Mapping (RTT1)",
-      "tier": 1,
-      "description": "Map drift boundaries across the Spine’s conceptual layers using RTT1 drift monitoring.",
-      "input": {
-        "source": "https://www.triadicframeworks.org/spine",
-        "signal_type": "field.signal"
-      },
-      "output": {
-        "drift_state": "bounded",
-        "coherence_state": "declared",
-        "notes": "Spine exhibits bounded drift under declared coherence; suitable for clarity kernels and baseline conceptual evaluation."
-      }
-    },
-
-    {
-      "id": "spine.example.03",
-      "name": "Spine Invariant Enforcement (RTT2)",
-      "tier": 2,
-      "description": "Evaluate invariant inv.coherence.declared.bounded-drift across Spine structural layers.",
-      "input": {
-        "source": "https://www.triadicframeworks.org/spine",
-        "signal_type": "field.signal"
-      },
-      "output": {
-        "invariant_status": "satisfied",
-        "structural_alignment": "high",
-        "notes": "Invariant holds across all major Spine layers; no drift violations detected."
-      }
-    },
-
-    {
-      "id": "spine.example.04",
-      "name": "Spine Multi-Layer Conceptual Mapping (RTT3)",
-      "tier": 3,
-      "description": "Construct a multi-layer conceptual field representation of the Spine using RTT3 reasoning.",
-      "input": {
-        "source": "https://www.triadicframeworks.org/spine",
-        "signal_type": "field.signal"
-      },
-      "output": {
-        "layers_mapped": [
-          "structural-layer",
-          "functional-layer",
-          "canonical-layer"
-        ],
-        "resonance_alignment": "strong",
-        "harmonic_readiness": true,
-        "notes": "Spine demonstrates multi-layer conceptual stability; harmonic escalation possible under paradox amplification."
-      }
-    },
-
-    {
-      "id": "spine.example.05",
-      "name": "Spine Harmonic Paradox Evaluation (RTT12)",
-      "tier": 12,
-      "description": "Evaluate harmonic paradox interactions across the Spine using RTT12 harmonic analysis.",
-      "input": {
-        "source": "https://www.triadicframeworks.org/spine",
-        "signal_type": "field.signal"
-      },
-      "output": {
-        "harmonic_value": 0.81,
-        "paradox_mode": "harmonic",
-        "harmonic_regime": "regime.harmonic.resonance",
-        "notes": "Spine exhibits harmonic resonance under RTT12; suitable for harmonic kernels and autonomy-tier escalation."
-      }
-    },
-
-    {
-      "id": "spine.example.06",
-      "name": "Spine Drift Recovery Trigger (RTT2–RTT3)",
-      "tier": 2,
-      "description": "Detect unbounded drift and activate drift recovery sequence.",
-      "input": {
-        "source": "https://www.triadicframeworks.org/spine",
-        "signal_type": "field.signal"
-      },
-      "output": {
-        "drift_state": "unbounded",
-        "recovery_sequence": [
-          "freeze-state",
-          "evaluate-drift-source",
-          "apply-correction",
-          "restore-coherence"
-        ],
-        "notes": "Unbounded drift detected in conceptual transition layer; recovery sequence recommended."
-      }
-    },
-
-    {
-      "id": "spine.example.07",
-      "name": "Spine Substrate Kernel Routing (Hardware)",
-      "tier": "substrate",
-      "description": "Route Spine signal to appropriate hardware kernel based on RTT conditions.",
-      "input": {
-        "source": "https://www.triadicframeworks.org/spine",
-        "signal_type": "field.signal"
-      },
-      "output": {
-        "kernel_selected": "kernel.clarity.spectral",
-        "latency_class": "L1",
-        "conditions": {
-          "coherence_state": "declared",
-          "drift_state": "bounded"
-        },
-        "notes": "Hardware clarity kernel selected; harmonic kernel available but not required."
-      }
-    },
-
-    {
-      "id": "spine.example.08",
-      "name": "Spine Harmonic Kernel Routing (Hardware)",
-      "tier": "substrate",
-      "description": "Route Spine signal to harmonic kernel when paradox escalates.",
-      "input": {
-        "source": "https://www.triadicframeworks.org/spine",
-        "signal_type": "field.signal"
-      },
-      "output": {
-        "kernel_selected": "kernel.harmonic.analysis",
-        "latency_class": "L2",
-        "conditions": {
-          "paradox_mode": "harmonic"
-        },
-        "notes": "Harmonic kernel selected due to paradox escalation; hardware acceleration recommended."
-      }
+      "id": "ex.spine.harmonic_escalation",
+      "label": "Harmonic Escalation – RTT1 to RTT12 and Resolution",
+      "description": "A session where paradox density forces escalation through RTT7–RTT12. RTT12 resolves and collapses to RTT1.",
+      "trace": [
+        { "node": "RTT1",  "event": "bootstrap",             "3c": { "C1": 0.80, "C2": 0.72, "C3": 0.78 }, "field_state": "nominal"  },
+        { "node": "RTT6",  "event": "alignment_gate",        "3c": { "C1": 0.74, "C2": 0.66, "C3": 0.76 }, "field_state": "degraded", "paradox_density": 0.42 },
+        { "node": "RTT7",  "event": "paradox_seed",          "aa_mode": "AA3",                              "paradox_density": 0.48   },
+        { "node": "RTT9",  "event": "harmonic_escalation",   "3c": { "C1": 0.62, "C2": 0.58, "C3": 0.70 }, "field_state": "degraded" },
+        { "node": "RTT12", "event": "harmonic_resolution",   "3c": { "C1": 0.88, "C2": 0.84, "C3": 0.87 }, "field_state": "nominal", "action": "collapse_to_RTT1", "aa_revert": "AA2" }
+      ]
     }
   ]
 }

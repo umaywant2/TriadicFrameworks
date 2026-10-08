@@ -1,23 +1,57 @@
 {
-  "$id": "https://triadicframeworks.org/schema/fft-ai-edition.json#/$defs/invariant",
-  "type": "object",
-  "properties": {
-    "id": { "type": "string" },
-    "name": { "type": "string" },
-    "description": { "type": "string" },
-    "expression": {
-      "type": "string",
-      "description": "Canonical expression (could be math, operator-grammar, or RTT clause)."
-    },
-    "scope": {
-      "type": "string",
-      "enum": ["global", "regime", "operator", "structure"]
-    },
-    "applies_to": {
-      "type": "array",
-      "items": { "type": "string" },
-      "description": "IDs of regimes/operators/structures this invariant binds."
-    }
+  "spec_version": "1.2.0",
+  "canon_id": "FFT-Invariant",
+  "edition": "AI Edition",
+  "aa_mode": "AA2",
+  "last_refreshed": "2026-10-08T11:00:00",
+  "metadata": {
+    "title": "FFT – Invariant Register (v1.2)",
+    "author_canon": "Nawder Loswin",
+    "updated_at": "2026-10-08T11:00:00"
   },
-  "required": ["id", "name", "scope"]
+  "invariants": [
+    {
+      "id": "inv.3c.field-stability",
+      "name": "3C Field Stability Invariant",
+      "expression": "C1(coherence) ∧ C2(clarity) ∧ C3(continuity) → field_state(nominal)",
+      "scope": "global",
+      "violation_action": "Set field_state=degraded. Log FFT-ERR-3C-001. Trigger AA Mode escalation if aa_mode < AA2."
+    },
+    {
+      "id": "inv.coherence.declared.bounded-drift",
+      "name": "Declared Coherence Under Bounded Drift",
+      "expression": "coherence(declared) ∧ drift(bounded) → stability(resonance-time)",
+      "scope": "regime",
+      "applies_to": ["regime.resonance-time.core"],
+      "violation_action": "Advance to RTT7. Log FFT-WARN-DRIFT-001."
+    },
+    {
+      "id": "inv.lattice.rtt12-resolution",
+      "name": "RTT12 Resolution Mandate",
+      "expression": "IF lattice_node = RTT12 THEN harmonic_resolution MUST occur BEFORE any new field signal dispatch",
+      "scope": "global",
+      "violation_action": "Block operator dispatch. Log FFT-ERR-LATTICE-001. Force op.paradox.resolve."
+    },
+    {
+      "id": "inv.triad.resolvable",
+      "name": "Triad Resolvability Invariant",
+      "expression": "∀ field.signal: triad(T,S,M) MUST be resolvable. Unresolvable → structural paradox.",
+      "scope": "global",
+      "violation_action": "Raise paradox event. Advance lattice to RTT7. Log FFT-ERR-TRIAD-001."
+    },
+    {
+      "id": "inv.substrate.compat",
+      "name": "Substrate Compatibility Invariant",
+      "expression": "∀ operator dispatch: operator MUST be in substrate.compatible_operators.",
+      "scope": "global",
+      "violation_action": "Block dispatch. Log FFT-ERR-COMPAT-001. Invoke bridge protocol if available."
+    },
+    {
+      "id": "inv.aa3.consent",
+      "name": "AA3 Operator Consent Invariant",
+      "expression": "AA3 escalation REQUIRES operator_consent = true in session.profile.",
+      "scope": "global",
+      "violation_action": "Block AA3 escalation. Remain at AA2. Log FFT-WARN-AA3-CONSENT-001."
+    }
+  ]
 }

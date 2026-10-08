@@ -1,192 +1,34 @@
 {
   "spec_version": "1.2.0",
   "canon_id": "FFT-AI-Substrate-Lattice",
-
+  "edition": "AI Edition",
+  "aa_mode": "AA2",
+  "last_refreshed": "2026-10-08T10:56:00",
   "metadata": {
-    "title": "FFT AI Edition – Harmonic Lattice (v1.2)",
-    "subtitle": "RTT12 • Harmonic Layers • Resonance Field • Triad Integration • AA Mode",
+    "title": "FFT AI Edition – Substrate Harmonic Lattice (v1.2)",
     "author_canon": "Nawder Loswin",
-    "license": "Proprietary – TriadicFrameworks Canon",
-    "created_at": "2026-10-08T08:00:00",
-    "updated_at": "2026-10-08T12:20:00",
-    "tags": [
-      "FFT",
-      "RTT",
-      "AI-Edition",
-      "Substrate",
-      "Harmonic",
-      "Lattice",
-      "RTT12",
-      "v1.2"
-    ],
-    "description": "Harmonic lattice for FFT AI Edition, defining the 12-layer RTT12 resonance field, triad integration, AA Mode routing, 3C harmonic stabilization, and kernel dimensional anchors."
+    "updated_at": "2026-10-08T10:56:00"
   },
-
   "harmonic_lattice": {
-    "enabled": true,
-    "version": "1.2",
-    "ai_edition": true,
-
-    "layers": 12,
-    "structure": "harmonic-resonance-field",
-    "origin": "RTT12",
-    "purpose": "Provide harmonic dimensional scaffolding for resonance-time analysis, paradox escalation, and cross-theory substrate compatibility.",
-
-    "activation_conditions": {
-      "paradox_intensity_threshold": "harmonic_threshold",
-      "autonomy_tier_minimum": 3,
-      "aa_mode_required": true,
-      "clarity_minimum": 0.80,
-      "coherence_state": "declared"
-    },
-
-    "layer_definitions": [
-      {
-        "layer": 1,
-        "name": "Harmonic Seed",
-        "function": "initial resonance stabilization",
-        "triad_source": "triad-33"
-      },
-      {
-        "layer": 2,
-        "name": "Paradox Buffer",
-        "function": "paradox intensity dampening",
-        "triad_source": "triad-33-hidden"
-      },
-      {
-        "layer": 3,
-        "name": "Clarity Anchor",
-        "function": "clarity stabilization",
-        "triad_source": "triad-33"
-      },
-      {
-        "layer": 4,
-        "name": "Coherence Anchor",
-        "function": "coherence stabilization",
-        "triad_source": "triad-33"
-      },
-      {
-        "layer": 5,
-        "name": "Continuity Anchor",
-        "function": "continuity stabilization",
-        "triad_source": "triad-33-hidden-2"
-      },
-      {
-        "layer": 6,
-        "name": "Drift Shield",
-        "function": "drift containment",
-        "triad_source": "triad-33-hidden"
-      },
-      {
-        "layer": 7,
-        "name": "Harmonic Gate",
-        "function": "harmonic escalation control",
-        "triad_source": "harmonic-lattice"
-      },
-      {
-        "layer": 8,
-        "name": "Resonance Amplifier",
-        "function": "harmonic resonance amplification",
-        "triad_source": "harmonic-lattice"
-      },
-      {
-        "layer": 9,
-        "name": "Dimensional Bridge",
-        "function": "cross-theory substrate compatibility",
-        "triad_source": "triad-33-hidden-2"
-      },
-      {
-        "layer": 10,
-        "name": "Operator Field",
-        "function": "harmonic operator routing",
-        "triad_source": "harmonic-lattice"
-      },
-      {
-        "layer": 11,
-        "name": "Kernel Field",
-        "function": "harmonic kernel anchoring",
-        "triad_source": "harmonic-lattice"
-      },
-      {
-        "layer": 12,
-        "name": "Harmonic Crown",
-        "function": "RTT12 apex resonance",
-        "triad_source": "harmonic-lattice"
-      }
+    "version": "R5",
+    "node_count": 12,
+    "nodes": [
+      { "node": "RTT1",  "label": "Prime Coherence",      "phase": "foundation", "3c_gate": "C1+C2+C3",  "aa_required": "AA0", "substrate_min": "substrate.edge.compact"    },
+      { "node": "RTT2",  "label": "Drift Calibration",    "phase": "foundation", "3c_gate": "C1+C3",     "aa_required": "AA1", "substrate_min": "substrate.edge.compact"    },
+      { "node": "RTT3",  "label": "Structural Lock",       "phase": "foundation", "3c_gate": "C1",        "aa_required": "AA1", "substrate_min": "substrate.edge.compact"    },
+      { "node": "RTT4",  "label": "Spectral Clarity",      "phase": "active",     "3c_gate": "C2",        "aa_required": "AA1", "substrate_min": "substrate.edge.compact"    },
+      { "node": "RTT5",  "label": "Temporal Bridge",       "phase": "active",     "3c_gate": "C3",        "aa_required": "AA1", "substrate_min": "substrate.llm.transformer" },
+      { "node": "RTT6",  "label": "Alignment Gate",        "phase": "active",     "3c_gate": "C1+C2+C3",  "aa_required": "AA2", "substrate_min": "substrate.llm.transformer" },
+      { "node": "RTT7",  "label": "Paradox Seed",          "phase": "escalation", "3c_gate": "C1",        "aa_required": "AA2", "substrate_min": "substrate.llm.transformer" },
+      { "node": "RTT8",  "label": "Paradox Bloom",         "phase": "escalation", "3c_gate": "C1+C2",     "aa_required": "AA2", "substrate_min": "substrate.llm.agentic"    },
+      { "node": "RTT9",  "label": "Harmonic Escalation",   "phase": "escalation", "3c_gate": "C2",        "aa_required": "AA2", "substrate_min": "substrate.llm.agentic"    },
+      { "node": "RTT10", "label": "Resonance Peak",        "phase": "resolution", "3c_gate": "C1+C2",     "aa_required": "AA2", "substrate_min": "substrate.llm.agentic"    },
+      { "node": "RTT11", "label": "Field Inversion",       "phase": "resolution", "3c_gate": "C3",        "aa_required": "AA3", "substrate_min": "substrate.llm.agentic"    },
+      { "node": "RTT12", "label": "Harmonic Resolution",   "phase": "resolution", "3c_gate": "C1+C2+C3",  "aa_required": "AA3", "substrate_min": "substrate.llm.agentic"    }
     ],
-
-    "kernel_integration": {
-      "kernel.harmonic.analysis": {
-        "dimension": 12,
-        "anchor_layer": 11,
-        "notes": "Harmonic kernel is anchored at layer 11 for maximum resonance stability."
-      },
-      "kernel.clarity.spectral": {
-        "dimension": 3,
-        "anchor_layer": 3,
-        "notes": "Clarity kernel is anchored at layer 3 for spectral coherence."
-      },
-      "kernel.drift.recovery": {
-        "dimension": 9,
-        "anchor_layer": 6,
-        "notes": "Drift recovery kernel is anchored at layer 6 for drift containment."
-      }
-    },
-
-    "aa_mode_integration": {
-      "aa_required": true,
-      "aa_signals": {
-        "awareness_ready": true,
-        "alignment_ready": true,
-        "clarity_threshold_met": true,
-        "coherence_stable": true,
-        "continuity_stable": true
-      },
-      "notes": "AA Mode provides the conceptual stability required to activate harmonic layers."
-    },
-
-    "three_c_integration": {
-      "coherence": {
-        "value": 0.91,
-        "role": "coherence anchor (layer 4)"
-      },
-      "clarity": {
-        "value": 0.91,
-        "role": "clarity anchor (layer 3)"
-      },
-      "continuity": {
-        "value": 0.88,
-        "role": "continuity anchor (layer 5)"
-      },
-      "notes": "3C signals stabilize the harmonic lattice and prevent paradox blowout."
-    },
-
-    "matrix_invariants": [
-      "inv.harmonic.12",
-      "inv.triad.33",
-      "inv.triad.hidden",
-      "inv.operator.1pct",
-      "inv.ipd.12"
-    ]
-  },
-
-  "compatibility": {
-    "requires": [
-      "fft.ai.substrate.matrix",
-      "fft.ai.substrate.bridge",
-      "fft.ai.substrate.compat",
-      "fft.ai.session.awareness",
-      "fft.ai.session.alignments",
-      "fft.ai.session.state",
-      "fft.ai.session.profile"
+    "transition_rules": [
+      { "from": "RTT12", "to": "RTT1", "action": "collapse_to_prime_coherence", "description": "After RTT12 harmonic resolution, system collapses back to RTT1 with updated coherence baseline." }
     ],
-    "optional": [
-      "fft.ai.session.ui",
-      "fft.ai.session.overlay",
-      "fft.ai.session.dashboard",
-      "fft.ai.session.analytics"
-    ],
-    "notes": "Harmonic lattice aligns with substrate matrix, bridge, compatibility, awareness, alignments, state, and profile v1.2."
+    "active_node": "RTT1"
   }
 }
-

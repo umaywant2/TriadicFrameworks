@@ -1,157 +1,27 @@
 {
   "spec_version": "1.2.0",
-  "canon_id": "FFT-AI-Session-Profile",
-
+  "canon_id": "FFT-Session-Profile",
+  "edition": "AI Edition",
+  "aa_mode": "AA2",
+  "last_refreshed": "2026-10-08T10:57:00",
   "metadata": {
     "title": "FFT AI Edition – Session Profile (v1.2)",
-    "subtitle": "Identity • Autonomy • Capabilities • Regimes • Operators • Substrate",
     "author_canon": "Nawder Loswin",
-    "license": "Proprietary – TriadicFrameworks Canon",
-    "created_at": "2026-10-08T08:00:00",
-    "updated_at": "2026-10-08T11:10:00",
-    "tags": [
-      "FFT",
-      "RTT",
-      "AI-Edition",
-      "Session",
-      "Profile",
-      "v1.2"
-    ],
-    "description": "Canonical profile describing the identity, autonomy tier, capability set, conceptual constraints, regimes, operators, substrate readiness, and validation profiles for an FFT AI Edition session."
+    "updated_at": "2026-10-08T10:57:00"
   },
-
-  "identity": {
-    "session_id": "auto",
-    "agent_ready": true,
-    "version": "1.2",
-    "ai_edition": true,
-    "canonical_root": "./",
-    "notes": "Session profile defines static identity and capability configuration for the agent."
-  },
-
-  "autonomy": {
-    "tier": 1,
-    "allowed_transitions": [2, 3, 12],
-    "decision_layers": [
-      "perception",
-      "reasoning",
-      "action"
-    ],
-    "behavioral_constraints": [
-      "coherence=declared",
-      "drift=bounded",
-      "paradox=structural"
-    ],
-    "notes": "Tier 1 autonomy focuses on clarity, coherence, drift-bounded evaluation, and safe conceptual reasoning."
-  },
-
-  "capabilities": {
-    "active_tier": 1,
-    "enabled": [
-      "clarity-evaluation",
-      "coherence-mapping",
-      "drift-detection",
-      "paradox-classification",
-      "execution-graph-routing"
-    ],
-    "available": [
-      "harmonic-analysis",
-      "drift-recovery",
-      "autonomy-escalation",
-      "substrate-routing"
-    ],
-    "notes": "Capabilities expand automatically when autonomy tier transitions occur."
-  },
-
-  "regimes": {
-    "active": "regime.resonance-time.core",
-    "available": [
-      "regime.resonance-time.core",
-      "regime.harmonic.resonance"
-    ],
-    "constraints": {
-      "regime.resonance-time.core": [
-        "coherence=declared",
-        "drift=bounded",
-        "paradox=structural"
-      ],
-      "regime.harmonic.resonance": [
-        "paradox=harmonic"
-      ]
-    }
-  },
-
-  "operators": {
-    "available": [
-      "op.clarity.spectral",
-      "op.harmonic.analysis",
-      "op.drift.recovery"
-    ],
-    "default_operator": "op.clarity.spectral",
-    "conditions": {
-      "op.clarity.spectral": [
-        "coherence_state == 'declared'",
-        "drift_state == 'bounded'"
-      ],
-      "op.harmonic.analysis": [
-        "paradox_mode == 'harmonic'"
-      ],
-      "op.drift.recovery": [
-        "drift_state == 'unbounded'"
-      ]
-    }
-  },
-
-  "substrate": {
-    "enabled": true,
-    "kernel_candidates": [
-      "kernel.clarity.spectral",
-      "kernel.harmonic.analysis",
-      "kernel.drift.recovery"
-    ],
-    "hardware_flags": {
-      "accelerator_ready": true,
-      "harmonic_ready": false,
-      "drift_recovery_ready": true
+  "profile": {
+    "operator_handle": "Nawder Loswin",
+    "preferred_aa_mode": "AA2",
+    "preferred_substrate": "substrate.llm.agentic",
+    "preferred_lattice_start": "RTT1",
+    "three_c_sensitivity": {
+      "C1_alert_below": 0.75,
+      "C2_alert_below": 0.70,
+      "C3_alert_below": 0.80
     },
-    "notes": "Substrate routing is determined by runtime conditions and operator selection."
-  },
-
-  "constraints": {
-    "coherence": "declared",
-    "drift": "bounded",
-    "paradox": "structural",
-    "harmonic_ready": false,
-    "notes": "Session profile defines conceptual constraints before runtime state evolves."
-  },
-
-  "validation": {
-    "profiles": [
-      "vp.inference.default",
-      "vp.hardware.default"
-    ],
-    "checks": [
-      "clarity_range",
-      "coherence_state",
-      "drift_state",
-      "paradox_mode",
-      "kernel_availability"
-    ]
-  },
-
-  "compatibility": {
-    "requires": [
-      "fft.ai.core",
-      "fft.ai.spec",
-      "fft.ai.runtime",
-      "fft.ai.execution.graph"
-    ],
-    "optional": [
-      "fft.ai.autonomy",
-      "fft.ai.substrate",
-      "fft.ai.hardware.profile",
-      "fft.ai.capabilities"
-    ],
-    "notes": "Session profile aligns with runtime, execution graph, autonomy, substrate, and hardware profile v1.2."
+    "autonomy_escalation_consent": true,
+    "alignment_write_enabled": true,
+    "harmonic_escalation_consent": true,
+    "profile_version": "v1.2.0-R5"
   }
 }

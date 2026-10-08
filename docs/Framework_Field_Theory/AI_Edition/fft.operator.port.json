@@ -1,33 +1,36 @@
 {
-  "$id": "https://triadicframeworks.org/schema/fft-ai-edition.json#/$defs/operatorPort",
-  "type": "object",
-  "inputs": [
-  {
-    "name": "signal",
-    "type": "field.signal",
-    "description": "The input conceptual or data signal to be evaluated.",
-    "required": true
+  "spec_version": "1.2.0",
+  "canon_id": "FFT-Operator-Port",
+  "edition": "AI Edition",
+  "aa_mode": "AA2",
+  "last_refreshed": "2026-10-08T11:00:00",
+  "metadata": {
+    "title": "FFT – Operator Port Definitions (v1.2)",
+    "author_canon": "Nawder Loswin",
+    "updated_at": "2026-10-08T11:00:00"
   },
-  {
-    "name": "context",
-    "type": "rtt.context",
-    "description": "Optional RTT context profile for evaluation.",
-    "required": false
+  "port_types": {
+    "input_ports": [
+      { "type": "field.signal",          "description": "Raw field signal batch input.",               "cardinality": "1..N" },
+      { "type": "metric.coherence",      "description": "C1 coherence score input.",                   "cardinality": "1"    },
+      { "type": "metric.clarity",        "description": "C2 clarity metric input.",                    "cardinality": "1"    },
+      { "type": "metric.continuity",     "description": "C3 continuity metric input.",                 "cardinality": "1"    },
+      { "type": "metric.harmonic",       "description": "Harmonic metric from RTT7–RTT12.",            "cardinality": "1"    },
+      { "type": "field_state",           "description": "Evaluated field state token.",               "cardinality": "1"    },
+      { "type": "triad_position",        "description": "Resolved (T,S,M) triad coordinate.",         "cardinality": "1"    },
+      { "type": "awareness_snapshot",    "description": "Output of op.awareness.update.",             "cardinality": "1"    }
+    ],
+    "output_ports": [
+      { "type": "metric.clarity",        "description": "Computed C2 clarity value.",                 "range": "0.0–1.0"    },
+      { "type": "metric.coherence",      "description": "Measured C1 coherence value.",               "range": "0.0–1.0"    },
+      { "type": "metric.continuity",     "description": "Measured C3 continuity value.",              "range": "0.0–1.0"    },
+      { "type": "metric.harmonic",       "description": "Harmonic paradox intensity.",                "range": "0.0–1.0"    },
+      { "type": "field_state",           "description": "nominal | degraded | critical.",             "range": "enum"       },
+      { "type": "triad_position",        "description": "Resolved (T,S,M) coordinate object.",       "range": "object"     },
+      { "type": "awareness_snapshot",    "description": "Updated awareness layer state.",             "range": "object"     },
+      { "type": "alignment_record",      "description": "Written alignment record with quality.",     "range": "object"     },
+      { "type": "drift_state",           "description": "bounded | unbounded.",                       "range": "enum"       },
+      { "type": "coherence_baseline",    "description": "Updated coherence baseline after RTT12.",   "range": "0.0–1.0"    }
+    ]
   }
-],
-"outputs": [
-  {
-    "name": "clarity_value",
-    "type": "metric.clarity",
-    "description": "Computed clarity metric for the given signal.",
-    "required": true
-  }
-],
-  "properties": {
-    "name": { "type": "string" },
-    "type": { "type": "string" },
-    "description": { "type": "string" },
-    "required": { "type": "boolean", "default": true }
-  },
-  "required": ["name", "type"]
 }

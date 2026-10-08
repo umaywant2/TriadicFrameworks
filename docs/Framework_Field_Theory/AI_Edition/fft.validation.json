@@ -1,31 +1,37 @@
 {
-  "$id": "https://triadicframeworks.org/schema/fft-ai-edition.json#/$defs/validationProfile",
-  "type": "object",
-  "properties": {
-    "id": { "type": "string" },
-    "name": { "type": "string" },
-    "description": { "type": "string" },
-    "target": {
-      "type": "string",
-      "enum": ["training", "inference", "hardware", "simulation"]
-    },
-    "enforced_invariants": {
-      "type": "array",
-      "items": { "type": "string" },
-      "description": "Invariant IDs that must hold under this profile."
-    },
-    "allowed_paradox_modes": {
-      "type": "array",
-      "items": {
-        "type": "string",
-        "enum": ["structural", "incidental", "none"]
-      }
-    },
-    "max_drift": {
-      "type": "string",
-      "enum": ["bounded", "unbounded"]
-    }
+  "spec_version": "1.2.0",
+  "canon_id": "FFT-Validation",
+  "edition": "AI Edition",
+  "aa_mode": "AA2",
+  "last_refreshed": "2026-10-08T11:00:00",
+  "metadata": {
+    "title": "FFT – Validation Rules (v1.2)",
+    "author_canon": "Nawder Loswin",
+    "updated_at": "2026-10-08T11:00:00"
   },
-  "required": ["id", "name", "target"]
+  "validation_rules": [
+    { "id": "VAL-001", "check": "spec_version == '1.2.0'",                                    "severity": "error",   "message": "File spec_version must be 1.2.0."                             },
+    { "id": "VAL-002", "check": "canon_id is non-empty string",                               "severity": "error",   "message": "canon_id is required."                                        },
+    { "id": "VAL-003", "check": "edition == 'AI Edition'",                                    "severity": "error",   "message": "edition must be 'AI Edition'."                                },
+    { "id": "VAL-004", "check": "aa_mode IN ['AA0','AA1','AA2','AA3']",                       "severity": "error",   "message": "aa_mode must be a valid AA Mode token."                      },
+    { "id": "VAL-005", "check": "last_refreshed matches ISO 8601",                            "severity": "warning", "message": "last_refreshed should be ISO 8601 datetime."                 },
+    { "id": "VAL-006", "check": "metadata.author_canon == 'Nawder Loswin'",                   "severity": "warning", "message": "author_canon should be Nawder Loswin."                       },
+    { "id": "VAL-007", "check": "3C thresholds present in substrate entries",                 "severity": "error",   "message": "Substrate entries must include three_c_thresholds."          },
+    { "id": "VAL-008", "check": "harmonic_lattice.node_count == 12",                          "severity": "error",   "message": "Harmonic lattice must have exactly 12 nodes."                },
+    { "id": "VAL-009", "check": "All operators include 3c_gate and aa_min",                   "severity": "error",   "message": "Operators must declare 3c_gate and aa_min."                  },
+    { "id": "VAL-010", "check": "All operators include triad field",                          "severity": "error",   "message": "Operators must declare triad (T,S,M) coordinate."            },
+    { "id": "VAL-011", "check": "session.state includes lattice_node, three_c, triad_position","severity": "error",  "message": "Session state must include lattice, 3C, and triad fields."  },
+    { "id": "VAL-012", "check": "fft.ai.index.json lists all files in AI_Edition folder",    "severity": "warning", "message": "Index should enumerate all AI_Edition files."                }
+  ],
+  "error_codes": {
+    "FFT-ERR-3C-001":          "3C condition failure — field_state set to degraded or critical.",
+    "FFT-ERR-COMPAT-001":      "Substrate compatibility failure — operator blocked.",
+    "FFT-ERR-BRIDGE-001":      "Substrate bridge failure — reverted to source substrate.",
+    "FFT-ERR-LATTICE-001":     "RTT12 operator dispatch blocked — resolution required.",
+    "FFT-ERR-TRIAD-001":       "Triad unresolvable — structural paradox raised.",
+    "FFT-WARN-DRIFT-001":      "Drift exceeded bounded state — lattice advancing to RTT7.",
+    "FFT-WARN-AA3-CONSENT-001":"AA3 escalation blocked — operator consent not granted.",
+    "FFT-WARN-3C-GATE":        "Operator skipped — 3C gate not met.",
+    "FFT-WARN-DISCOVERY-VERSION": "File spec_version mismatch detected during discovery."
+  }
 }
-

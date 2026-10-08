@@ -1,224 +1,42 @@
 {
   "spec_version": "1.2.0",
-  "canon_id": "FFT-Core-Examples",
-
+  "canon_id": "FFT-Examples",
+  "edition": "AI Edition",
+  "aa_mode": "AA2",
+  "last_refreshed": "2026-10-08T11:00:00",
   "metadata": {
-    "title": "Framework Field Theory – AI Edition Examples (v1.2)",
+    "title": "FFT – Field Examples (v1.2)",
     "author_canon": "Nawder Loswin",
-    "license": "Proprietary – TriadicFrameworks Canon",
-    "created_at": "2026-10-08T08:20:00",
-    "updated_at": "2026-10-08T10:45:00",
-    "tags": [
-      "FFT",
-      "RTT",
-      "Examples",
-      "Clarity",
-      "Harmonic",
-      "Drift",
-      "AI-Edition",
-      "v1.2"
-    ],
-    "description": "Expanded example set for FFT AI Edition operators and regimes, including clarity evaluation, drift mapping, paradox classification, harmonic escalation, substrate routing, and autonomy-tier transitions."
+    "updated_at": "2026-10-08T11:00:00"
   },
-
-  "operator_examples": [
+  "examples": [
     {
-      "operator_id": "op.clarity.spectral",
-      "examples": [
-        {
-          "id": "ex.op.clarity.spectral.secret-loser",
-          "description": "Evaluate clarity of Ozzy Osbourne's 'Secret Loser' as a narrative substrate.",
-          "input": {
-            "signal": "Lyrics excerpt: 'Trapped in a lonely body, I'm losing control... I don't exist.'",
-            "context": {
-              "rtt": 1,
-              "coherence": "declared",
-              "drift": "bounded",
-              "paradox": "structural"
-            }
-          },
-          "output": {
-            "clarity_value": 0.64,
-            "notes": "High paradox density; clarity emerges through admission of non-existence and concealed wounds."
-          }
-        },
-        {
-          "id": "ex.op.clarity.spectral.spine-docs",
-          "description": "Evaluate clarity of a TriadicFrameworks Spine documentation section.",
-          "input": {
-            "signal": "Spine module description from https://www.triadicframeworks.org/spine",
-            "context": {
-              "rtt": 1,
-              "coherence": "declared",
-              "drift": "bounded",
-              "paradox": "none"
-            }
-          },
-          "output": {
-            "clarity_value": 0.91,
-            "notes": "High structural coherence; low paradox; ideal canonical teaching substrate."
-          }
-        }
-      ]
-    },
-
-    {
-      "operator_id": "op.harmonic.analysis",
-      "examples": [
-        {
-          "id": "ex.op.harmonic.analysis.secret-loser",
-          "description": "Evaluate harmonic paradox interactions in 'Secret Loser'.",
-          "input": {
-            "signal": "Lyrics excerpt: 'I don't exist.'",
-            "context": {
-              "rtt": 12,
-              "coherence": "declared",
-              "drift": "bounded",
-              "paradox": "harmonic"
-            }
-          },
-          "output": {
-            "harmonic_value": 0.81,
-            "notes": "Narrative self-erasure produces harmonic resonance; paradox escalates cleanly into RTT12 domain."
-          }
-        }
-      ]
-    },
-
-    {
-      "operator_id": "op.drift.recovery",
-      "examples": [
-        {
-          "id": "ex.op.drift.recovery.transition-layer",
-          "description": "Activate drift recovery when conceptual transition layer becomes unstable.",
-          "input": {
-            "signal": "Transition between structural-layer and canonical-layer in Spine.",
-            "context": {
-              "rtt": 2,
-              "coherence": "declared",
-              "drift": "unbounded",
-              "paradox": "structural"
-            }
-          },
-          "output": {
-            "recovery_sequence": [
-              "freeze-state",
-              "evaluate-drift-source",
-              "apply-correction",
-              "restore-coherence"
-            ],
-            "notes": "Unbounded drift detected; recovery sequence restores declared coherence."
-          }
-        }
-      ]
-    }
-  ],
-
-  "regime_examples": [
-    {
-      "regime_id": "regime.resonance-time.core",
-      "examples": [
-        {
-          "id": "ex.regime.resonance-time.morning-idea",
-          "description": "Morning conceptual ignition: translating FFT into AI-native spec and on-chip substrate.",
-          "profile": {
-            "rtt": 1,
-            "coherence": "declared",
-            "drift": "bounded",
-            "paradox": "structural"
-          },
-          "notes": "Resonance-time regime stabilizes the paradox of human narrative being compressed into machine-native clarity."
-        },
-        {
-          "id": "ex.regime.resonance-time.spine-stability",
-          "description": "Evaluate stability of Spine conceptual layers under resonance-time regime.",
-          "profile": {
-            "rtt": 1,
-            "coherence": "declared",
-            "drift": "bounded",
-            "paradox": "none"
-          },
-          "notes": "Spine exhibits strong resonance-time stability; ideal substrate for clarity evaluation."
-        }
-      ]
-    },
-
-    {
-      "regime_id": "regime.harmonic.resonance",
-      "examples": [
-        {
-          "id": "ex.regime.harmonic.secret-loser",
-          "description": "Evaluate harmonic resonance of 'Secret Loser' narrative substrate.",
-          "profile": {
-            "rtt": 12,
-            "coherence": "declared",
-            "drift": "bounded",
-            "paradox": "harmonic"
-          },
-          "notes": "Narrative paradox escalates into harmonic resonance; suitable for harmonic kernel execution."
-        }
-      ]
-    }
-  ],
-
-  "substrate_examples": [
-    {
-      "id": "ex.substrate.kernel.clarity",
-      "description": "Route signal to clarity kernel under declared coherence and bounded drift.",
-      "input": {
-        "signal": "Spine documentation excerpt",
-        "context": {
-          "coherence_state": "declared",
-          "drift_state": "bounded"
-        }
-      },
-      "output": {
-        "kernel_selected": "kernel.clarity.spectral",
-        "latency_class": "L1",
-        "notes": "Clarity kernel selected; harmonic kernel available but not required."
-      }
+      "id": "ex.field.narrative",
+      "label": "Narrative Field Signal",
+      "type": "field.signal",
+      "content": "A temporal-narrative signal describing a structural drift event across three regime boundaries.",
+      "triad": { "T": "RTT3", "S": "field.signal", "M": "AA2" },
+      "expected_clarity": 0.82,
+      "expected_coherence": 0.88
     },
     {
-      "id": "ex.substrate.kernel.harmonic",
-      "description": "Route signal to harmonic kernel when paradox escalates.",
-      "input": {
-        "signal": "Secret Loser narrative excerpt",
-        "context": {
-          "paradox_mode": "harmonic"
-        }
-      },
-      "output": {
-        "kernel_selected": "kernel.harmonic.analysis",
-        "latency_class": "L2",
-        "notes": "Harmonic kernel selected due to paradox escalation; hardware acceleration recommended."
-      }
-    }
-  ],
-
-  "autonomy_examples": [
-    {
-      "id": "ex.autonomy.tier1.clarity",
-      "description": "Tier 1 autonomy: clarity evaluation with declared coherence.",
-      "input": {
-        "signal": "Spine structural description",
-        "tier": 1
-      },
-      "output": {
-        "clarity_value": 0.92,
-        "notes": "Tier 1 autonomy focuses on clarity and drift-bounded evaluation."
-      }
+      "id": "ex.field.paradox",
+      "label": "Paradox-Dense Field Signal",
+      "type": "field.signal",
+      "content": "A self-contradictory temporal signal generating paradox density 0.48.",
+      "triad": { "T": "RTT8", "S": "field.signal", "M": "AA3" },
+      "expected_clarity": 0.51,
+      "expected_coherence": 0.63,
+      "expected_paradox_density": 0.48
     },
     {
-      "id": "ex.autonomy.tier12.harmonic",
-      "description": "Tier 12 autonomy: harmonic paradox evaluation.",
-      "input": {
-        "signal": "Secret Loser paradox excerpt",
-        "tier": 12
-      },
-      "output": {
-        "harmonic_value": 0.83,
-        "notes": "Tier 12 autonomy activates harmonic regime and harmonic kernel routing."
-      }
+      "id": "ex.field.structural",
+      "label": "Structural Lock Signal",
+      "type": "field.signal",
+      "content": "A well-formed structural signal with high coherence and no drift.",
+      "triad": { "T": "RTT3", "S": "field.signal", "M": "AA1" },
+      "expected_clarity": 0.93,
+      "expected_coherence": 0.95
     }
   ]
 }

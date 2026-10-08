@@ -1,112 +1,27 @@
 {
   "spec_version": "1.2.0",
-  "canon_id": "FFT-AI-Session-Log",
-
+  "canon_id": "FFT-Session-Log",
+  "edition": "AI Edition",
+  "aa_mode": "AA2",
+  "last_refreshed": "2026-10-08T10:57:00",
   "metadata": {
     "title": "FFT AI Edition – Session Log (v1.2)",
-    "subtitle": "Multi‑Session Ledger • Summaries • Transitions • Operators • Regimes",
     "author_canon": "Nawder Loswin",
-    "license": "Proprietary – TriadicFrameworks Canon",
-    "created_at": "2026-10-08T08:00:00",
-    "updated_at": "2026-10-08T11:25:00",
-    "tags": [
-      "FFT",
-      "RTT",
-      "AI-Edition",
-      "Session",
-      "Log",
-      "Ledger",
-      "v1.2"
-    ],
-    "description": "Durable multi-session log aggregator for FFT AI Edition, summarizing state evolution, operator usage, regime shifts, autonomy transitions, and substrate routing across multiple sessions."
+    "updated_at": "2026-10-08T10:57:00"
   },
-
-  "ai_edition": true,
-  "version": "1.2",
-  "canonical_root": "./",
-  "agent_ready": true,
-
-  "sessions": [
-    {
-      "session_id": "session.default",
-      "timestamp_start": "auto",
-      "timestamp_end": "auto",
-
-      "initial_state": {
-        "coherence_state": "declared",
-        "drift_state": "bounded",
-        "paradox_mode": "structural",
-        "autonomy_tier": 1,
-        "active_regime": "regime.resonance-time.core",
-        "execution_node": "node.input.signal"
-      },
-
-      "final_state": {
-        "coherence_state": "declared",
-        "drift_state": "bounded",
-        "paradox_mode": "harmonic",
-        "autonomy_tier": 12,
-        "active_regime": "regime.harmonic.resonance",
-        "execution_node": "node.operator.harmonic.analysis"
-      },
-
-      "transitions_summary": {
-        "coherence": [
-          "declared → declared"
-        ],
-        "drift": [
-          "bounded → unbounded → bounded"
-        ],
-        "paradox": [
-          "structural → harmonic"
-        ],
-        "autonomy": [
-          "1 → 2 → 3 → 12"
-        ],
-        "regime": [
-          "core → harmonic"
-        ]
-      },
-
-      "operators_used": [
-        "op.clarity.spectral",
-        "op.drift.recovery",
-        "op.harmonic.analysis"
-      ],
-
-      "kernels_used": [
-        "kernel.clarity.spectral",
-        "kernel.drift.recovery",
-        "kernel.harmonic.analysis"
-      ],
-
-      "execution_graph_path": [
-        "node.input.signal",
-        "node.operator.clarity.spectral",
-        "node.drift.recovery",
-        "node.operator.harmonic.analysis"
-      ],
-
-      "trace_file": "fft.ai.session.trace.json",
-      "notes": "Session completed with harmonic resonance active and autonomy tier 12."
-    }
-  ],
-
-  "compatibility": {
-    "requires": [
-      "fft.ai.session.context",
-      "fft.ai.session.profile",
-      "fft.ai.session.state",
-      "fft.ai.session.trace"
-    ],
-    "optional": [
-      "fft.ai.runtime",
-      "fft.ai.execution.graph",
-      "fft.ai.autonomy",
-      "fft.ai.substrate",
-      "fft.ai.hardware.profile"
-    ],
-    "notes": "Session log aligns with runtime, execution graph, autonomy, substrate, and hardware profile v1.2."
+  "log": {
+    "log_schema": {
+      "entry_id": "string",
+      "timestamp": "ISO 8601",
+      "event_type": "bootstrap|operator_dispatch|3c_eval|alignment|regime_transition|lattice_advance|paradox_event|harmonic_resolution|teardown",
+      "aa_mode": "AA0–AA3",
+      "lattice_node": "RTTn",
+      "three_c_snapshot": { "C1": "float", "C2": "float", "C3": "float" },
+      "operator_id": "string|null",
+      "detail": "string"
+    },
+    "entries": [],
+    "log_policy": "All significant events MUST be logged. Log retained for the session lifetime. Flushed to session.history on teardown.",
+    "log_version": "v1.2.0-R5"
   }
 }
-

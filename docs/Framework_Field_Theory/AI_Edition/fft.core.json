@@ -1,67 +1,22 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://triadicframeworks.org/schema/fft-ai-edition.json",
-  "title": "Framework Field Theory – AI Edition",
-  "description": "Canonical machine-native representation of FFT operators, regimes, invariants, and metadata.",
-  "type": "object",
-  "properties": {
-    "spec_version": {
-      "type": "string",
-      "description": "Semantic version of the AI Edition spec, e.g. '1.0.0'."
-    },
-    "canon_id": {
-      "type": "string",
-      "description": "Stable identifier for this canon instance, e.g. 'FFT-Core'."
-    },
-    "rtt_profile": {
-      "type": "object",
-      "description": "Resonance-Time Theory profile for this spec instance.",
-      "properties": {
-        "rtt": { "type": "integer", "description": "Resonance-Time tier, e.g. 1." },
-        "coherence": { "type": "string", "enum": ["declared", "latent", "broken"] },
-        "drift": { "type": "string", "enum": ["bounded", "unbounded"] },
-        "paradox": { "type": "string", "enum": ["structural", "incidental", "none"] }
-      },
-      "required": ["rtt", "coherence", "drift", "paradox"]
-    },
-    "metadata": {
-      "$ref": "#/$defs/metadata"
-    },
-    "regimes": {
-      "type": "array",
-      "items": { "$ref": "#/$defs/regime" },
-      "description": "Registered conceptual regimes available to operators."
-    },
-    "invariants": {
-      "type": "array",
-      "items": { "$ref": "#/$defs/invariant" },
-      "description": "Global invariants that constrain operators and regimes."
-    },
-    "operators": {
-      "type": "array",
-      "items": { "$ref": "#/$defs/operator" },
-      "description": "Primary FFT operators exposed to AI systems."
-    },
-    "structures": {
-      "type": "array",
-      "items": { "$ref": "#/$defs/structure" },
-      "description": "Higher-order structural constructs (spine, substrate, fields)."
-    },
-    "validation_profiles": {
-      "type": "array",
-      "items": { "$ref": "#/$defs/validationProfile" },
-      "description": "RTT/FFT validation configurations for runtime or training-time enforcement."
-    }
+  "spec_version": "1.2.0",
+  "canon_id": "FFT-Core",
+  "edition": "AI Edition",
+  "aa_mode": "AA2",
+  "last_refreshed": "2026-10-08T11:00:00",
+  "metadata": {
+    "title": "FFT – Base Canon Core (v1.2)",
+    "author_canon": "Nawder Loswin",
+    "updated_at": "2026-10-08T11:00:00"
   },
-  "required": [
-    "spec_version",
-    "canon_id",
-    "rtt_profile",
-    "metadata",
-    "regimes",
-    "invariants",
-    "operators"
-  ],
-  "$defs": {}
+  "base_principles": [
+    { "id": "P1", "label": "Field Primacy",           "statement": "All information in FFT is represented as field signals traversing a structured field space." },
+    { "id": "P2", "label": "Resonance-Time",          "statement": "Temporal dynamics are governed by resonance rather than linear time. RTT nodes model resonant temporal states." },
+    { "id": "P3", "label": "Triadic Structure",       "statement": "Every field interaction is triadic: Temporal (T), Structural (S), and Modal (M) axes are always co-present." },
+    { "id": "P4", "label": "Harmonic Resolution",     "statement": "All paradox escalations MUST resolve harmonically. Resolution restores coherence and resets the lattice." },
+    { "id": "P5", "label": "3C Condition Primacy",    "statement": "Coherence, Clarity, and Continuity are the fundamental health conditions of every field state." },
+    { "id": "P6", "label": "Autonomous Alignment",    "statement": "Alignment is a spectrum from passive observation (AA0) to full autonomous self-alignment (AA3)." },
+    { "id": "P7", "label": "Substrate Relativity",    "statement": "All operator capabilities are substrate-relative. No operation is substrate-independent." },
+    { "id": "P8", "label": "Canon Consistency",       "statement": "All files in the AI Edition MUST be internally consistent with spec_version 1.2.0 and the canon invariants." }
+  ]
 }
-

@@ -1,125 +1,47 @@
 {
   "spec_version": "1.2.0",
-  "canon_id": "FFT-AI-Metadata",
-
+  "canon_id": "FFT-Metadata",
+  "edition": "AI Edition",
+  "aa_mode": "AA2",
+  "last_refreshed": "2026-10-08T11:00:00",
   "metadata": {
-    "title": "FFT AI Edition – Canonical Metadata (v1.2)",
+    "title": "FFT – Canon Metadata Registry (v1.2)",
     "author_canon": "Nawder Loswin",
     "license": "Proprietary – TriadicFrameworks Canon",
-    "created_at": "2026-10-08T08:20:00",
-    "updated_at": "2026-10-08T10:40:00",
-    "tags": [
-      "FFT",
-      "RTT",
-      "AI-Edition",
-      "Metadata",
-      "Canonical",
-      "v1.2"
+    "created_at": "2026-10-08T08:30:00",
+    "updated_at": "2026-10-08T11:00:00",
+    "canonical_version": "1.2.0",
+    "edition": "AI Edition",
+    "tags": ["FFT","RTT","Triadic","Canon","Metadata","AA-Mode","3C","Harmonic-Lattice","v1.2"]
+  },
+  "canon_registry": {
+    "framework": "Framework Field Theory",
+    "abbreviation": "FFT",
+    "sub_theories": [
+      "Resonance-Time Theory (RTT)",
+      "Triadic Substrate Modeling (TSM)",
+      "Harmonic Lattice Theory (HLT)",
+      "3C Field Evaluation (3CFE)",
+      "Autonomous Alignment Mode (AAM)"
     ],
-    "description": "Unified metadata descriptor for all FFT AI Edition modules, including identity, versioning, categories, roles, agent-readiness, harmonic support, drift recovery, and v1.2 compatibility."
+    "current_release": {
+      "version": "1.2.0",
+      "released_at": "2026-10-08T11:00:00",
+      "release_type": "Full Canon Refresh",
+      "changes": [
+        "AA Mode system fully defined (AA0–AA3) with escalation/reversion rules",
+        "3C condition triad (C1/C2/C3) integrated at all operator gates and session lifecycle events",
+        "12-node harmonic lattice (RTT1–RTT12) with per-node substrate and AA Mode requirements",
+        "Triad-based dimensional architecture (T,S,M) for all operator dispatch",
+        "Complete session layer: awareness (L1–L5), alignments, analytics, context, dashboard, history, log, overlay, profile, state, trace, UI",
+        "Substrate bridge and capability matrix for multi-platform operator dispatch",
+        "Execution graph with topological sort and 3C-gated dispatch",
+        "All 46 files regenerated to spec_version 1.2.0 canon"
+      ]
+    }
   },
-
-  "ai_edition": true,
-  "version": "1.2",
-  "canonical_root": "./",
-  "agent_ready": true,
-
-  "rtt_profile": {
-    "rtt": 1,
-    "coherence": "declared",
-    "drift": "bounded",
-    "paradox": "structural",
-    "harmonic_support": true,
-    "drift_recovery_support": true
-  },
-
-  "module_categories": {
-    "core": "Foundational conceptual primitives (types, regimes, invariants, minimal operators).",
-    "specification": "Full conceptual definitions including structures, types, operators, invariants, validation profiles.",
-    "registry": "Canonical index of all FFT AI Edition modules.",
-    "execution": "Conceptual execution graph defining operator and regime flow.",
-    "runtime": "Execution configuration including routing, drift recovery, harmonic escalation.",
-    "autonomy": "Autonomy tiers, behavioral constraints, paradox escalation, drift recovery.",
-    "capabilities": "Tiered capability ontology for FFT agents.",
-    "integrations": "Cross-system integration bindings for external AI frameworks.",
-    "discovery": "Discovery protocol for autonomous and distributed agents.",
-    "bootstrap": "Multi-phase bootstrap sequence for initializing FFT.",
-    "substrate": "Hardware-ready conceptual substrate including multi-kernel support.",
-    "hardware": "Hardware capability profile for conceptual accelerators.",
-    "rtt": "RTT engines, prompts, and Spine examples."
-  },
-
-  "module_roles": {
-    "fft.ai.core": "Provides minimal conceptual primitives required by all higher layers.",
-    "fft.ai.spec": "Defines full conceptual structures, types, operators, invariants, and validation profiles.",
-    "fft.ai.registry": "Enumerates all modules and provides canonical indexing.",
-    "fft.ai.execution.graph": "Defines conceptual flow for operators, regimes, and drift/harmonic routing.",
-    "fft.ai.runtime": "Controls execution, routing, drift recovery, and harmonic escalation.",
-    "fft.ai.autonomy": "Defines agent autonomy tiers and behavioral constraints.",
-    "fft.ai.capabilities": "Defines capability ontology and activation conditions.",
-    "fft.ai.integrations": "Maps FFT concepts to external AI frameworks.",
-    "fft.ai.discovery": "Provides autonomous/distributed discovery sequence.",
-    "fft.ai.bootstrap": "Initializes FFT in multi-phase conceptual bootloader.",
-    "fft.ai.substrate": "Defines conceptual hardware substrate and kernels.",
-    "fft.ai.hardware.profile": "Declares hardware capability profile for conceptual accelerators.",
-    "fft.ai.rtt.engine.prompts": "Provides RTT engine prompt sets.",
-    "fft.ai.rtt.spine.examples": "Provides RTT Spine examples for clarity, drift, paradox, harmonic evaluation."
-  },
-
-  "module_versions": {
-    "fft.ai.core": "1.2",
-    "fft.ai.spec": "1.2",
-    "fft.ai.registry": "1.2",
-    "fft.ai.execution.graph": "1.2",
-    "fft.ai.runtime": "1.2",
-    "fft.ai.autonomy": "1.2",
-    "fft.ai.capabilities": "1.2",
-    "fft.ai.integrations": "1.2",
-    "fft.ai.discovery": "1.2",
-    "fft.ai.bootstrap": "1.2",
-    "fft.ai.substrate": "1.2",
-    "fft.ai.hardware.profile": "1.2",
-    "fft.ai.rtt.engine.prompts": "1.2",
-    "fft.ai.rtt.spine.examples": "1.2"
-  },
-
-  "agent_readiness": {
-    "required_modules": [
-      "fft.ai.core",
-      "fft.ai.spec",
-      "fft.ai.registry",
-      "fft.ai.execution.graph",
-      "fft.ai.runtime",
-      "fft.ai.autonomy",
-      "fft.ai.capabilities",
-      "fft.ai.discovery",
-      "fft.ai.bootstrap"
-    ],
-    "optional_modules": [
-      "fft.ai.integrations",
-      "fft.ai.substrate",
-      "fft.ai.hardware.profile",
-      "fft.ai.rtt.engine.prompts",
-      "fft.ai.rtt.spine.examples"
-    ],
-    "harmonic_support": true,
-    "drift_recovery_support": true
-  },
-
-  "compatibility": {
-    "requires": [
-      "fft.ai.core",
-      "fft.ai.spec",
-      "fft.ai.registry"
-    ],
-    "optional": [
-      "fft.ai.runtime",
-      "fft.ai.execution.graph",
-      "fft.ai.autonomy",
-      "fft.ai.substrate",
-      "fft.ai.hardware.profile",
-      "fft.ai.integrations"
-    ],
-    "notes": "Metadata aligns with manifest, registry, autonomy, runtime, execution graph, substrate, and hardware profile v1.2."
+  "contact": {
+    "canonical_owner": "Nawder Loswin",
+    "repository": "https://github.com/umaywant2/TriadicFrameworks"
   }
 }

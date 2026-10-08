@@ -1,173 +1,46 @@
 {
   "spec_version": "1.2.0",
   "canon_id": "FFT-AI-Substrate-Compat",
-
+  "edition": "AI Edition",
+  "aa_mode": "AA2",
+  "last_refreshed": "2026-10-08T10:56:00",
   "metadata": {
-    "title": "FFT AI Edition – Substrate Compatibility Matrix (v1.2)",
-    "subtitle": "AA Mode • 3C • Kernel Compatibility • Theory Alignment • Substrate Repair",
+    "title": "FFT AI Edition – Substrate Compatibility (v1.2)",
     "author_canon": "Nawder Loswin",
-    "license": "Proprietary – TriadicFrameworks Canon",
-    "created_at": "2026-10-08T08:00:00",
-    "updated_at": "2026-10-08T12:10:00",
-    "tags": [
-      "FFT",
-      "RTT",
-      "AI-Edition",
-      "Substrate",
-      "Compatibility",
-      "AA-Mode",
-      "3C",
-      "v1.2"
-    ],
-    "description": "Deep compatibility matrix for FFT AI Edition, enabling substrate alignment, kernel compatibility, theory repair, AA Mode integration, and 3C-driven substrate harmonization."
+    "updated_at": "2026-10-08T10:56:00"
   },
-
-  "substrate_compat": {
-    "enabled": true,
-    "version": "1.2",
-    "ai_edition": true,
-
-    "compatibility_layers": [
-      "aa-mode",
-      "3c",
-      "kernel-compatibility",
-      "substrate-repair",
-      "theory-alignment",
-      "harmonic-escalation",
-      "execution-graph-compat"
-    ],
-
-    "aa_mode": {
-      "aa_active": true,
-      "aa_conditions_met": [
-        "awareness_ready",
-        "alignment_ready",
-        "clarity_threshold_met",
-        "coherence_stable",
-        "continuity_stable",
-        "drift_safe"
-      ],
-      "compatibility_notes": "AA Mode is required for substrate compatibility evaluation and repair."
-    },
-
-    "three_c": {
-      "coherence": {
-        "value": 0.91,
-        "status": "declared"
+  "compatibility_matrix": {
+    "purpose": "Defines which FFT operators and regime classes are compatible with each substrate.",
+    "entries": [
+      {
+        "substrate": "substrate.llm.agentic",
+        "compatible_operators": ["op.clarity.spectral","op.harmonic.analysis","op.3c.evaluator","op.triad.resolve","op.alignment.write","op.awareness.update"],
+        "compatible_regimes": ["regime.resonance-time.core","regime.harmonic.resonance"],
+        "max_aa_mode": "AA3",
+        "lattice_range": "RTT1–RTT12"
       },
-      "clarity": {
-        "value": 0.91,
-        "status": "high"
+      {
+        "substrate": "substrate.llm.transformer",
+        "compatible_operators": ["op.clarity.spectral","op.3c.evaluator","op.triad.resolve","op.awareness.update"],
+        "compatible_regimes": ["regime.resonance-time.core"],
+        "max_aa_mode": "AA2",
+        "lattice_range": "RTT1–RTT9"
       },
-      "continuity": {
-        "value": 0.88,
-        "status": "stable"
+      {
+        "substrate": "substrate.edge.compact",
+        "compatible_operators": ["op.clarity.spectral","op.3c.evaluator"],
+        "compatible_regimes": ["regime.resonance-time.core"],
+        "max_aa_mode": "AA1",
+        "lattice_range": "RTT1–RTT6"
       },
-      "compatibility_notes": "3C signals determine substrate stability and kernel selection."
-    },
-
-    "kernel_compatibility": {
-      "kernel_candidates": [
-        "kernel.clarity.spectral",
-        "kernel.harmonic.analysis",
-        "kernel.drift.recovery"
-      ],
-      "compatibility_rules": [
-        {
-          "condition": "coherence == 'declared' && drift == 'bounded'",
-          "compatible_kernel": "kernel.clarity.spectral"
-        },
-        {
-          "condition": "paradox == 'harmonic'",
-          "compatible_kernel": "kernel.harmonic.analysis"
-        },
-        {
-          "condition": "drift == 'unbounded'",
-          "compatible_kernel": "kernel.drift.recovery"
-        }
-      ],
-      "notes": "Kernel compatibility is determined by AA Mode + 3C + drift/paradox/harmonic states."
-    },
-
-    "substrate_repair": {
-      "repair_modes": [
-        "coherence-repair",
-        "clarity-repair",
-        "continuity-repair",
-        "drift-repair",
-        "paradox-repair",
-        "harmonic-repair"
-      ],
-      "repair_sequence": [
-        "detect-incompatibility",
-        "freeze-state",
-        "apply-fft-alignment",
-        "select-compatible-kernel",
-        "restore-coherence",
-        "validate-3c",
-        "resume-execution"
-      ],
-      "notes": "Substrate repair uses FFT alignment tools to restore compatibility."
-    },
-
-    "theory_alignment": {
-      "alignment_examples": [
-        {
-          "theory": "String Theory (11 dimensions)",
-          "issue": "substrate-incompatible",
-          "repair": "triad of 11’s → 33 usable dims",
-          "extension": "two hidden 33 triads + 1% operator",
-          "result": "substrate-compatible",
-          "notes": "FFT provides the alignment tools to make String Theory substrate-compatible."
-        },
-        {
-          "theory": "Geometric Unity",
-          "issue": "substrate-incompatible",
-          "repair": "IPD-12 framework",
-          "result": "full substrate compatibility",
-          "notes": "IPD-12 gives GU the substrate power it lacked."
-        }
-      ],
-      "compatibility_notes": "FFT is the universal substrate harmonizer; any theory can be aligned."
-    },
-
-    "harmonic_escalation": {
-      "harmonic_ready": false,
-      "harmonic_conditions": [
-        "paradox_intensity > harmonic_threshold",
-        "autonomy_tier >= 3"
-      ],
-      "harmonic_kernel": "kernel.harmonic.analysis",
-      "notes": "Harmonic escalation is used when substrate incompatibility cannot be resolved at structural level."
-    },
-
-    "execution_graph_compat": {
-      "current_node": "node.input.signal",
-      "compatibility_routes": {
-        "clarity_route": "kernel.clarity.spectral",
-        "harmonic_route": "kernel.harmonic.analysis",
-        "drift_route": "kernel.drift.recovery"
-      },
-      "notes": "Execution graph routing is synchronized with substrate compatibility evaluation."
-    }
+      {
+        "substrate": "substrate.symbolic",
+        "compatible_operators": ["op.clarity.spectral"],
+        "compatible_regimes": ["regime.resonance-time.core"],
+        "max_aa_mode": "AA1",
+        "lattice_range": "RTT1–RTT4"
+      }
+    ]
   },
-
-  "compatibility": {
-    "requires": [
-      "fft.ai.session.context",
-      "fft.ai.session.state",
-      "fft.ai.session.profile",
-      "fft.ai.session.awareness",
-      "fft.ai.session.alignments",
-      "fft.ai.substrate.bridge"
-    ],
-    "optional": [
-      "fft.ai.session.ui",
-      "fft.ai.session.overlay",
-      "fft.ai.session.dashboard",
-      "fft.ai.session.analytics"
-    ],
-    "notes": "Substrate compatibility matrix aligns with awareness, alignments, bridge, context, state, profile, UI, overlay, and dashboard v1.2."
-  }
+  "validation_rule": "Before operator dispatch, MUST verify substrate is in compatible_operators list. Incompatible dispatch raises FFT-ERR-COMPAT-001."
 }
-

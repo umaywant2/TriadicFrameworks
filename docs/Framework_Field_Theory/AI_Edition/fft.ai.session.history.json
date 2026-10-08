@@ -1,130 +1,30 @@
 {
   "spec_version": "1.2.0",
-  "canon_id": "FFT-AI-Session-History",
-
+  "canon_id": "FFT-Session-History",
+  "edition": "AI Edition",
+  "aa_mode": "AA2",
+  "last_refreshed": "2026-10-08T10:57:00",
   "metadata": {
     "title": "FFT AI Edition – Session History (v1.2)",
-    "subtitle": "Long‑Term Ledger • Harmonic Events • Drift Recovery • Autonomy Evolution",
     "author_canon": "Nawder Loswin",
-    "license": "Proprietary – TriadicFrameworks Canon",
-    "created_at": "2026-10-08T08:00:00",
-    "updated_at": "2026-10-08T11:30:00",
-    "tags": [
-      "FFT",
-      "RTT",
-      "AI-Edition",
-      "Session",
-      "History",
-      "Ledger",
-      "v1.2"
-    ],
-    "description": "Long-term archival history of FFT AI Edition sessions, including harmonic events, drift recovery counts, autonomy tier evolution, operator/regime usage statistics, and cross-session analytics."
+    "updated_at": "2026-10-08T10:57:00"
   },
-
-  "ai_edition": true,
-  "version": "1.2",
-  "canonical_root": "./",
-  "agent_ready": true,
-
   "history": {
-    "total_sessions": 1,
-    "first_session_timestamp": "auto",
-    "last_session_timestamp": "auto",
-
-    "aggregate_statistics": {
-      "coherence": {
-        "declared_count": 1,
-        "latent_count": 0,
-        "broken_count": 0
-      },
-      "drift": {
-        "bounded_count": 2,
-        "unbounded_count": 1,
-        "recovery_events": 1
-      },
-      "paradox": {
-        "structural_count": 1,
-        "harmonic_count": 1,
-        "harmonic_escalations": 1
-      },
-      "autonomy": {
-        "tier1_count": 1,
-        "tier2_count": 1,
-        "tier3_count": 1,
-        "tier12_count": 1,
-        "escalations": 2,
-        "deescalations": 0
-      },
-      "regimes": {
-        "core_count": 1,
-        "harmonic_count": 1,
-        "regime_shifts": 1
-      },
-      "operators": {
-        "op.clarity.spectral": 1,
-        "op.drift.recovery": 1,
-        "op.harmonic.analysis": 1
-      },
-      "kernels": {
-        "kernel.clarity.spectral": 1,
-        "kernel.drift.recovery": 1,
-        "kernel.harmonic.analysis": 1
-      }
+    "definition": "Persistent archive of completed session summaries flushed from session.log on teardown.",
+    "record_schema": {
+      "session_id": "string",
+      "start": "ISO 8601",
+      "end": "ISO 8601",
+      "substrate": "substrate class",
+      "aa_mode_peak": "AA0–AA3",
+      "lattice_peak": "RTTn",
+      "alignment_count": "int",
+      "paradox_events": "int",
+      "harmonic_resolutions": "int",
+      "final_field_state": "nominal|degraded|critical",
+      "summary": "string"
     },
-
-    "sessions": [
-      {
-        "session_id": "session.default",
-        "timestamp_start": "auto",
-        "timestamp_end": "auto",
-
-        "summary": {
-          "coherence": "declared → declared",
-          "drift": "bounded → unbounded → bounded",
-          "paradox": "structural → harmonic",
-          "autonomy": "1 → 2 → 3 → 12",
-          "regime": "core → harmonic",
-          "operators_used": [
-            "op.clarity.spectral",
-            "op.drift.recovery",
-            "op.harmonic.analysis"
-          ],
-          "kernels_used": [
-            "kernel.clarity.spectral",
-            "kernel.drift.recovery",
-            "kernel.harmonic.analysis"
-          ],
-          "execution_graph_path": [
-            "node.input.signal",
-            "node.operator.clarity.spectral",
-            "node.drift.recovery",
-            "node.operator.harmonic.analysis"
-          ]
-        },
-
-        "trace_file": "fft.ai.session.trace.json",
-        "log_file": "fft.ai.session.log.json",
-        "notes": "Session ended with harmonic resonance active and autonomy tier 12."
-      }
-    ]
-  },
-
-  "compatibility": {
-    "requires": [
-      "fft.ai.session.log",
-      "fft.ai.session.trace",
-      "fft.ai.session.state",
-      "fft.ai.session.context",
-      "fft.ai.session.profile"
-    ],
-    "optional": [
-      "fft.ai.runtime",
-      "fft.ai.execution.graph",
-      "fft.ai.autonomy",
-      "fft.ai.substrate",
-      "fft.ai.hardware.profile"
-    ],
-    "notes": "Session history aligns with runtime, execution graph, autonomy, substrate, and hardware profile v1.2."
+    "records": [],
+    "history_version": "v1.2.0-R5"
   }
 }
-

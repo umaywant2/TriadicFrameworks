@@ -1,179 +1,34 @@
 {
   "spec_version": "1.2.0",
-  "canon_id": "FFT-AI-Session-State",
-
+  "canon_id": "FFT-Session-State",
+  "edition": "AI Edition",
+  "aa_mode": "AA2",
+  "last_refreshed": "2026-10-08T10:57:00",
   "metadata": {
     "title": "FFT AI Edition – Session State (v1.2)",
-    "subtitle": "Dynamic Transitions • Drift • Paradox • Autonomy • Regime • Substrate",
     "author_canon": "Nawder Loswin",
-    "license": "Proprietary – TriadicFrameworks Canon",
-    "created_at": "2026-10-08T08:00:00",
-    "updated_at": "2026-10-08T11:15:00",
-    "tags": [
-      "FFT",
-      "RTT",
-      "AI-Edition",
-      "Session",
-      "State",
-      "Transitions",
-      "v1.2"
-    ],
-    "description": "Dynamic state-transition model for FFT AI Edition sessions, including coherence, drift, paradox, autonomy tier transitions, operator activation, regime shifts, and substrate kernel routing."
+    "updated_at": "2026-10-08T10:57:00"
   },
-
-  "session": {
-    "id": "session.default",
-    "version": "1.2",
-    "ai_edition": true,
-    "agent_ready": true
-  },
-
   "state": {
-    "coherence_state": "declared",
-    "drift_state": "bounded",
-    "paradox_mode": "structural",
-    "harmonic_ready": false,
-    "autonomy_tier": 1,
+    "session_id": null,
+    "phase": "pre-bootstrap",
+    "substrate": "substrate.llm.agentic",
+    "aa_mode": "AA2",
+    "lattice_node": "RTT1",
+    "lattice_stability": 1.0,
+    "paradox_density": 0.0,
+    "escalation_active": false,
+    "triad_position": { "T": "RTT1", "S": "field.signal", "M": "AA2" },
+    "three_c": {
+      "C1_coherence": 1.0,
+      "C2_clarity": 1.0,
+      "C3_continuity": 1.0,
+      "field_state": "nominal"
+    },
     "active_regime": "regime.resonance-time.core",
-    "active_operator": null,
-    "active_kernel": null,
-    "execution_node": "node.input.signal"
-  },
-
-  "transitions": {
-    "coherence": {
-      "declared_to_latent": {
-        "trigger": "signal_complexity > threshold",
-        "effect": "coherence_state = 'latent'"
-      },
-      "latent_to_declared": {
-        "trigger": "clarity_value >= 0.75",
-        "effect": "coherence_state = 'declared'"
-      },
-      "declared_to_broken": {
-        "trigger": "drift_state == 'unbounded'",
-        "effect": "coherence_state = 'broken'"
-      }
-    },
-
-    "drift": {
-      "bounded_to_unbounded": {
-        "trigger": "signal_instability > threshold",
-        "effect": "drift_state = 'unbounded'"
-      },
-      "unbounded_to_bounded": {
-        "trigger": "operator == 'op.drift.recovery'",
-        "effect": "drift_state = 'bounded'"
-      }
-    },
-
-    "paradox": {
-      "structural_to_harmonic": {
-        "trigger": "paradox_intensity > harmonic_threshold",
-        "effect": "paradox_mode = 'harmonic'"
-      },
-      "harmonic_to_structural": {
-        "trigger": "harmonic_value < 0.40",
-        "effect": "paradox_mode = 'structural'"
-      }
-    },
-
-    "autonomy": {
-      "tier1_to_tier2": {
-        "trigger": "clarity_value >= 0.85",
-        "effect": "autonomy_tier = 2"
-      },
-      "tier2_to_tier3": {
-        "trigger": "multi_layer_alignment == true",
-        "effect": "autonomy_tier = 3"
-      },
-      "tier3_to_tier12": {
-        "trigger": "paradox_mode == 'harmonic'",
-        "effect": "autonomy_tier = 12"
-      },
-      "tier12_to_tier3": {
-        "trigger": "harmonic_value < 0.50",
-        "effect": "autonomy_tier = 3"
-      }
-    },
-
-    "regime": {
-      "core_to_harmonic": {
-        "trigger": "paradox_mode == 'harmonic'",
-        "effect": "active_regime = 'regime.harmonic.resonance'"
-      },
-      "harmonic_to_core": {
-        "trigger": "paradox_mode == 'structural'",
-        "effect": "active_regime = 'regime.resonance-time.core'"
-      }
-    },
-
-    "operator": {
-      "activate_clarity": {
-        "trigger": "coherence_state == 'declared' && drift_state == 'bounded'",
-        "effect": "active_operator = 'op.clarity.spectral'"
-      },
-      "activate_harmonic": {
-        "trigger": "paradox_mode == 'harmonic'",
-        "effect": "active_operator = 'op.harmonic.analysis'"
-      },
-      "activate_drift_recovery": {
-        "trigger": "drift_state == 'unbounded'",
-        "effect": "active_operator = 'op.drift.recovery'"
-      }
-    },
-
-    "substrate": {
-      "route_to_clarity_kernel": {
-        "trigger": "active_operator == 'op.clarity.spectral'",
-        "effect": "active_kernel = 'kernel.clarity.spectral'"
-      },
-      "route_to_harmonic_kernel": {
-        "trigger": "active_operator == 'op.harmonic.analysis'",
-        "effect": "active_kernel = 'kernel.harmonic.analysis'"
-      },
-      "route_to_drift_recovery_kernel": {
-        "trigger": "active_operator == 'op.drift.recovery'",
-        "effect": "active_kernel = 'kernel.drift.recovery'"
-      }
-    },
-
-    "execution_graph": {
-      "advance_node": {
-        "trigger": "active_operator != null",
-        "effect": "execution_node = next_node(active_operator)"
-      }
-    }
-  },
-
-  "validation": {
-    "profiles": [
-      "vp.inference.default",
-      "vp.hardware.default"
-    ],
-    "checks": [
-      "coherence_state",
-      "drift_state",
-      "paradox_mode",
-      "autonomy_tier",
-      "kernel_availability",
-      "execution_node_valid"
-    ]
-  },
-
-  "compatibility": {
-    "requires": [
-      "fft.ai.session.context",
-      "fft.ai.session.profile",
-      "fft.ai.runtime",
-      "fft.ai.execution.graph"
-    ],
-    "optional": [
-      "fft.ai.autonomy",
-      "fft.ai.substrate",
-      "fft.ai.hardware.profile"
-    ],
-    "notes": "Session state aligns with runtime, execution graph, autonomy, substrate, and hardware profile v1.2."
+    "operator_queue": [],
+    "alignment_count": 0,
+    "turn_count": 0,
+    "state_version": "v1.2.0-R5"
   }
 }
-
