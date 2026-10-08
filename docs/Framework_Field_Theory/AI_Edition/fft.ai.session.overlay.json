@@ -1,1 +1,171 @@
+{
+  "spec_version": "1.2.0",
+  "canon_id": "FFT-AI-Session-Overlay",
+
+  "metadata": {
+    "title": "FFT AI Edition – Session Overlay Engine (v1.2)",
+    "subtitle": "Awareness • Alignments • AA Mode • 3C • Conceptual Overlays",
+    "author_canon": "Nawder Loswin",
+    "license": "Proprietary – TriadicFrameworks Canon",
+    "created_at": "2026-10-08T08:00:00",
+    "updated_at": "2026-10-08T11:50:00",
+    "tags": [
+      "FFT",
+      "RTT",
+      "AI-Edition",
+      "Overlay",
+      "AA-Mode",
+      "3C",
+      "v1.2"
+    ],
+    "description": "Overlay engine for FFT AI Edition sessions, including Awareness, Alignments, AA Mode, 3C overlays, operator overlays, regime overlays, drift/harmonic overlays, substrate overlays, and execution-graph overlays."
+  },
+
+  "overlay_engine": {
+    "enabled": true,
+    "default_mode": "AA",
+    "modes": [
+      "awareness",
+      "alignments",
+      "aa",
+      "3c",
+      "operator",
+      "regime",
+      "drift",
+      "harmonic",
+      "substrate",
+      "execution_graph"
+    ],
+
+    "awareness_overlay": {
+      "id": "overlay.awareness",
+      "description": "Perceptual + conceptual awareness of coherence, drift, paradox, harmonic, and clarity signals.",
+      "signals": {
+        "coherence_awareness": "high",
+        "drift_awareness": "moderate",
+        "paradox_awareness": "low",
+        "harmonic_awareness": "latent",
+        "clarity_awareness": "high"
+      }
+    },
+
+    "alignment_overlay": {
+      "id": "overlay.alignments",
+      "description": "Structural, coherence, drift-safe, paradox-safe, and harmonic alignment indicators.",
+      "alignments": {
+        "coherence_alignment": true,
+        "drift_alignment": true,
+        "paradox_alignment": true,
+        "harmonic_alignment": false,
+        "continuity_alignment": true
+      }
+    },
+
+    "aa_overlay": {
+      "id": "overlay.aa",
+      "description": "AA Mode overlay — Awareness + Alignments combined. Default FFT AI Edition mode.",
+      "active": true,
+      "unlocks": [
+        "overlay.3c"
+      ]
+    },
+
+    "three_c_overlay": {
+      "id": "overlay.3c",
+      "description": "3C overlay — Coherence, Clarity, Continuity — unlocked when AA Mode is active.",
+      "active": true,
+      "coherence": {
+        "value": 0.91,
+        "status": "declared"
+      },
+      "clarity": {
+        "value": 0.91,
+        "status": "high"
+      },
+      "continuity": {
+        "value": 0.88,
+        "status": "stable"
+      }
+    },
+
+    "operator_overlay": {
+      "id": "overlay.operator",
+      "description": "Displays active operator and operator conditions.",
+      "active_operator": null,
+      "available_operators": [
+        "op.clarity.spectral",
+        "op.harmonic.analysis",
+        "op.drift.recovery"
+      ]
+    },
+
+    "regime_overlay": {
+      "id": "overlay.regime",
+      "description": "Displays active regime and regime constraints.",
+      "active_regime": "regime.resonance-time.core",
+      "available_regimes": [
+        "regime.resonance-time.core",
+        "regime.harmonic.resonance"
+      ]
+    },
+
+    "drift_overlay": {
+      "id": "overlay.drift",
+      "description": "Displays drift state and drift recovery readiness.",
+      "drift_state": "bounded",
+      "recovery_ready": true
+    },
+
+    "harmonic_overlay": {
+      "id": "overlay.harmonic",
+      "description": "Displays harmonic mode, harmonic value, and harmonic readiness.",
+      "harmonic_mode": "structural",
+      "harmonic_value": 0.83,
+      "harmonic_ready": false
+    },
+
+    "substrate_overlay": {
+      "id": "overlay.substrate",
+      "description": "Displays substrate kernel routing and hardware flags.",
+      "kernel_candidates": [
+        "kernel.clarity.spectral",
+        "kernel.harmonic.analysis",
+        "kernel.drift.recovery"
+      ],
+      "hardware_flags": {
+        "accelerator_ready": true,
+        "harmonic_ready": false,
+        "drift_recovery_ready": true
+      }
+    },
+
+    "execution_graph_overlay": {
+      "id": "overlay.execution_graph",
+      "description": "Displays current execution graph node and next nodes.",
+      "current_node": "node.input.signal",
+      "next_nodes": [
+        "node.operator.clarity.spectral",
+        "node.operator.harmonic.analysis",
+        "node.drift.recovery"
+      ]
+    }
+  },
+
+  "compatibility": {
+    "requires": [
+      "fft.ai.session.context",
+      "fft.ai.session.state",
+      "fft.ai.session.profile",
+      "fft.ai.session.ui",
+      "fft.ai.session.dashboard"
+    ],
+    "optional": [
+      "fft.ai.session.trace",
+      "fft.ai.session.log",
+      "fft.ai.session.history",
+      "fft.ai.session.analytics"
+    ],
+    "notes": "Overlay engine aligns with UI, dashboard, context, state, and profile v1.2."
+  }
+}
 
