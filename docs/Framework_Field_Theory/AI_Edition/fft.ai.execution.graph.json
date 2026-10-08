@@ -1,33 +1,35 @@
 {
-  "spec_version": "1.0.0",
+  "spec_version": "1.2.0",
   "canon_id": "FFT-AI-Execution-Graph",
   "metadata": {
-    "title": "FFT AI Edition – Execution Graph",
+    "title": "FFT AI Edition – Execution Graph (v1.2)",
     "author_canon": "Nawder Loswin",
     "license": "Proprietary – TriadicFrameworks Canon",
     "created_at": "2026-10-08T09:22:00",
-    "updated_at": "2026-10-08T09:22:00",
+    "updated_at": "2026-10-08T09:35:00",
     "tags": [
       "FFT",
       "RTT",
       "AI-Edition",
       "Execution-Graph",
       "Operators",
-      "Regimes"
+      "Regimes",
+      "v1.2"
     ],
-    "description": "Conceptual execution graph for FFT operators and regimes, defining flow between perception, reasoning, and action layers."
+    "description": "Enhanced conceptual execution graph for FFT agents, supporting multi-operator routing, harmonic escalation, drift recovery, substrate fallback, and autonomy-tier alignment."
   },
 
   "graph_profile": {
     "mode": "conceptual",
     "target": "ai-agent",
+    "version": "1.2",
     "rtt_profile": {
       "rtt": 1,
       "coherence": "declared",
       "drift": "bounded",
       "paradox": "structural"
     },
-    "notes": "This graph describes how FFT operators and regimes are traversed during agent execution."
+    "notes": "v1.2 execution graph aligns with autonomy and runtime upgrades, enabling multi-layer conceptual flow."
   },
 
   "nodes": [
@@ -35,42 +37,100 @@
       "id": "node.input.signal",
       "type": "input",
       "name": "Signal Ingestion",
-      "description": "Entry point for incoming signals to be evaluated.",
-      "payload": {
-        "signal_type": "field.signal"
-      }
+      "description": "Entry point for incoming conceptual signals.",
+      "payload": { "signal_type": "field.signal" }
     },
+
     {
       "id": "node.regime.resonance-time",
       "type": "regime",
       "name": "Resonance-Time Core Regime",
       "ref": "regime.resonance-time.core",
-      "description": "Temporal-structural regime governing clarity, coherence, drift, and paradox handling."
+      "description": "Primary temporal-structural regime."
     },
+
     {
       "id": "node.invariant.coherence-drift",
       "type": "invariant",
       "name": "Declared Coherence Under Bounded Drift",
       "ref": "inv.coherence.declared.bounded-drift",
-      "description": "Ensures declared coherence while drift remains bounded."
+      "description": "Ensures coherence and bounded drift."
     },
+
     {
       "id": "node.operator.clarity.spectral",
       "type": "operator",
       "name": "Spectral Clarity Operator",
       "ref": "op.clarity.spectral",
-      "description": "Computes clarity value over the signal within the resonance-time regime.",
+      "description": "Computes clarity metric.",
       "inputs": ["field.signal"],
       "outputs": ["metric.clarity"]
     },
+
+    {
+      "id": "node.operator.harmonic.analysis",
+      "type": "operator",
+      "name": "Harmonic Analysis Operator",
+      "ref": "op.harmonic.analysis",
+      "description": "Evaluates harmonic paradox states.",
+      "inputs": ["field.signal"],
+      "outputs": ["metric.harmonic"]
+    },
+
+    {
+      "id": "node.kernel.clarity.spectral",
+      "type": "kernel",
+      "name": "Spectral Clarity Kernel",
+      "ref": "kernel.clarity.spectral",
+      "description": "Hardware-accelerated clarity computation.",
+      "inputs": ["field.signal"],
+      "outputs": ["metric.clarity"]
+    },
+
+    {
+      "id": "node.regime.harmonic",
+      "type": "regime",
+      "name": "Harmonic Resonance Regime",
+      "ref": "regime.harmonic.resonance",
+      "description": "Regime activated during paradox escalation."
+    },
+
+    {
+      "id": "node.drift.recovery",
+      "type": "process",
+      "name": "Drift Recovery Sequence",
+      "description": "Structured recovery when drift becomes unbounded.",
+      "steps": [
+        "freeze-runtime-state",
+        "evaluate-drift-source",
+        "apply-structural-correction",
+        "restore-coherence",
+        "resume-execution"
+      ]
+    },
+
     {
       "id": "node.output.clarity",
       "type": "output",
       "name": "Clarity Output",
-      "description": "Provides clarity metric for downstream reasoning or action.",
-      "payload": {
-        "metric_type": "metric.clarity"
-      }
+      "description": "Primary clarity metric output.",
+      "payload": { "metric_type": "metric.clarity" }
+    },
+
+    {
+      "id": "node.output.harmonic",
+      "type": "output",
+      "name": "Harmonic Output",
+      "description": "Harmonic paradox output.",
+      "payload": { "metric_type": "metric.harmonic" }
+    },
+
+    {
+      "id": "node.output.autonomy-state",
+      "type": "output",
+      "name": "Autonomy State Output",
+      "description": "Agent autonomy-tier transition output.",
+      "payload": { "state": "autonomy-tier" }
     }
   ],
 
@@ -79,25 +139,70 @@
       "id": "edge.input-to-regime",
       "from": "node.input.signal",
       "to": "node.regime.resonance-time",
-      "description": "Signal enters the resonance-time regime for evaluation."
+      "description": "Signal enters resonance-time regime."
     },
     {
       "id": "edge.regime-to-invariant",
       "from": "node.regime.resonance-time",
       "to": "node.invariant.coherence-drift",
-      "description": "Regime activates invariant to enforce coherence and bounded drift."
+      "description": "Invariant enforces coherence and bounded drift."
     },
     {
-      "id": "edge.invariant-to-operator",
+      "id": "edge.invariant-to-clarity",
       "from": "node.invariant.coherence-drift",
       "to": "node.operator.clarity.spectral",
-      "description": "Invariant conditions gate execution of the clarity operator."
+      "description": "Clarity operator executes under invariant conditions."
+    },
+    {
+      "id": "edge.invariant-to-harmonic",
+      "from": "node.invariant.coherence-drift",
+      "to": "node.operator.harmonic.analysis",
+      "condition": "paradox_mode == 'harmonic'",
+      "description": "Harmonic operator executes during paradox escalation."
     },
     {
       "id": "edge.operator-to-output",
       "from": "node.operator.clarity.spectral",
       "to": "node.output.clarity",
-      "description": "Clarity operator produces metric output for downstream use."
+      "description": "Clarity metric produced."
+    },
+    {
+      "id": "edge.harmonic-to-output",
+      "from": "node.operator.harmonic.analysis",
+      "to": "node.output.harmonic",
+      "description": "Harmonic metric produced."
+    },
+    {
+      "id": "edge.operator-to-kernel",
+      "from": "node.operator.clarity.spectral",
+      "to": "node.kernel.clarity.spectral",
+      "condition": "substrate_available == true",
+      "description": "Hardware kernel executes clarity operator."
+    },
+    {
+      "id": "edge.drift-to-recovery",
+      "from": "node.invariant.coherence-drift",
+      "to": "node.drift.recovery",
+      "condition": "drift_state == 'unbounded'",
+      "description": "Drift recovery sequence activated."
+    },
+    {
+      "id": "edge.recovery-to-regime",
+      "from": "node.drift.recovery",
+      "to": "node.regime.resonance-time",
+      "description": "Return to resonance-time regime after recovery."
+    },
+    {
+      "id": "edge.harmonic-escalation",
+      "from": "node.operator.harmonic.analysis",
+      "to": "node.regime.harmonic",
+      "description": "Escalation into harmonic resonance regime."
+    },
+    {
+      "id": "edge.regime-to-autonomy",
+      "from": "node.regime.harmonic",
+      "to": "node.output.autonomy-state",
+      "description": "Agent autonomy-tier transition triggered by harmonic regime."
     }
   ],
 
@@ -115,14 +220,18 @@
       "name": "Reasoning Layer",
       "nodes": [
         "node.invariant.coherence-drift",
-        "node.operator.clarity.spectral"
+        "node.operator.clarity.spectral",
+        "node.operator.harmonic.analysis",
+        "node.drift.recovery"
       ]
     },
     {
       "id": "layer.action",
       "name": "Action Layer",
       "nodes": [
-        "node.output.clarity"
+        "node.output.clarity",
+        "node.output.harmonic",
+        "node.output.autonomy-state"
       ]
     }
   ],
@@ -130,8 +239,9 @@
   "entry_points": {
     "primary": "node.input.signal",
     "primary_operator": "node.operator.clarity.spectral",
+    "harmonic_operator": "node.operator.harmonic.analysis",
     "primary_regime": "node.regime.resonance-time",
+    "harmonic_regime": "node.regime.harmonic",
     "primary_invariant": "node.invariant.coherence-drift"
   }
 }
-
