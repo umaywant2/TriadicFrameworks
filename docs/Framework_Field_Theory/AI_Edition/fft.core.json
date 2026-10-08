@@ -1,1 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/schema/fft-ai-edition.json",
+  "title": "Framework Field Theory – AI Edition",
+  "description": "Canonical machine-native representation of FFT operators, regimes, invariants, and metadata.",
+  "type": "object",
+  "properties": {
+    "spec_version": {
+      "type": "string",
+      "description": "Semantic version of the AI Edition spec, e.g. '1.0.0'."
+    },
+    "canon_id": {
+      "type": "string",
+      "description": "Stable identifier for this canon instance, e.g. 'FFT-Core'."
+    },
+    "rtt_profile": {
+      "type": "object",
+      "description": "Resonance-Time Theory profile for this spec instance.",
+      "properties": {
+        "rtt": { "type": "integer", "description": "Resonance-Time tier, e.g. 1." },
+        "coherence": { "type": "string", "enum": ["declared", "latent", "broken"] },
+        "drift": { "type": "string", "enum": ["bounded", "unbounded"] },
+        "paradox": { "type": "string", "enum": ["structural", "incidental", "none"] }
+      },
+      "required": ["rtt", "coherence", "drift", "paradox"]
+    },
+    "metadata": {
+      "$ref": "#/$defs/metadata"
+    },
+    "regimes": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/regime" },
+      "description": "Registered conceptual regimes available to operators."
+    },
+    "invariants": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/invariant" },
+      "description": "Global invariants that constrain operators and regimes."
+    },
+    "operators": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/operator" },
+      "description": "Primary FFT operators exposed to AI systems."
+    },
+    "structures": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/structure" },
+      "description": "Higher-order structural constructs (spine, substrate, fields)."
+    },
+    "validation_profiles": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/validationProfile" },
+      "description": "RTT/FFT validation configurations for runtime or training-time enforcement."
+    }
+  },
+  "required": [
+    "spec_version",
+    "canon_id",
+    "rtt_profile",
+    "metadata",
+    "regimes",
+    "invariants",
+    "operators"
+  ],
+  "$defs": {}
+}
 
