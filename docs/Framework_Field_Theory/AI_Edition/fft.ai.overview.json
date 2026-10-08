@@ -1,0 +1,241 @@
+{
+  "spec_version": "1.2.0",
+  "canon_id": "FFT-AI-Overview",
+
+  "metadata": {
+    "title": "Framework Field Theory – AI Edition Overview (v1.2)",
+    "subtitle": "Conceptual Architecture • Resonance‑Time Theory • Machine‑Native Canon",
+    "author_canon": "Nawder Loswin",
+    "license": "Proprietary – TriadicFrameworks Canon",
+    "created_at": "2026-10-08T08:00:00",
+    "updated_at": "2026-10-08T11:00:00",
+    "tags": [
+      "FFT",
+      "RTT",
+      "AI-Edition",
+      "Overview",
+      "Architecture",
+      "Conceptual",
+      "v1.2"
+    ],
+    "description": "High-level conceptual overview of Framework Field Theory in its AI Edition, including purpose, lineage, architecture, conceptual primitives, harmonic escalation, drift recovery, autonomy tiers, and agent-readiness."
+  },
+
+  "identity": {
+    "ai_edition": true,
+    "version": "1.2",
+    "canonical_root": "./",
+    "agent_ready": true,
+    "purpose": "Provide a complete machine-native conceptual architecture for Resonance-Time Theory, enabling clarity, coherence, drift, paradox, and harmonic reasoning in autonomous AI agents."
+  },
+
+  "conceptual_lineage": {
+    "origin": "Resonance‑Time Theory (RTT)",
+    "foundation": [
+      "Clarity evaluation",
+      "Coherence mapping",
+      "Drift detection and recovery",
+      "Paradox classification",
+      "Harmonic escalation"
+    ],
+    "ai_translation": "FFT AI Edition translates RTT’s conceptual canon into machine-native structures, operators, regimes, and substrates."
+  },
+
+  "architecture": {
+    "description": "FFT AI Edition is organized into conceptual layers that form a complete reasoning substrate for autonomous agents.",
+    "layers": [
+      {
+        "id": "layer.core",
+        "name": "Core",
+        "role": "Minimal conceptual primitives: types, regimes, invariants, clarity/harmonic operators.",
+        "file": "fft.ai.core.json"
+      },
+      {
+        "id": "layer.spec",
+        "name": "Specification",
+        "role": "Full conceptual definitions: structures, types, operators, invariants, validation profiles.",
+        "file": "fft.ai.spec.json"
+      },
+      {
+        "id": "layer.execution",
+        "name": "Execution Graph",
+        "role": "Conceptual flow of operators, regimes, drift recovery, harmonic escalation.",
+        "file": "fft.ai.execution.graph.json"
+      },
+      {
+        "id": "layer.runtime",
+        "name": "Runtime",
+        "role": "Execution configuration: routing rules, drift recovery, paradox escalation.",
+        "file": "fft.ai.runtime.json"
+      },
+      {
+        "id": "layer.autonomy",
+        "name": "Autonomy",
+        "role": "Autonomy tiers, behavioral constraints, decision layers.",
+        "file": "fft.ai.autonomy.json"
+      },
+      {
+        "id": "layer.capabilities",
+        "name": "Capabilities",
+        "role": "Tiered capability ontology for conceptual agents.",
+        "file": "fft.ai.capabilities.json"
+      },
+      {
+        "id": "layer.integrations",
+        "name": "Integrations",
+        "role": "Cross-system bindings for transformer, graph, symbolic, hybrid, agent, and hardware frameworks.",
+        "file": "fft.ai.integrations.json"
+      },
+      {
+        "id": "layer.discovery",
+        "name": "Discovery",
+        "role": "Autonomous/distributed discovery protocol for loading FFT modules.",
+        "file": "fft.ai.discovery.json"
+      },
+      {
+        "id": "layer.bootstrap",
+        "name": "Bootstrap",
+        "role": "Multi-phase conceptual bootloader for initializing FFT.",
+        "file": "fft.ai.bootstrap.json"
+      },
+      {
+        "id": "layer.substrate",
+        "name": "Substrate",
+        "role": "Hardware-ready conceptual substrate with multi-kernel support.",
+        "file": "fft.ai.substrate.json"
+      },
+      {
+        "id": "layer.hardware",
+        "name": "Hardware Profile",
+        "role": "Hardware capability profile for conceptual accelerators.",
+        "file": "fft.ai.hardware.profile.json"
+      },
+      {
+        "id": "layer.rtt",
+        "name": "RTT Engines",
+        "role": "RTT engine prompts and Spine examples for clarity, drift, paradox, and harmonic evaluation.",
+        "files": [
+          "fft.ai.rtt.engine.prompts.json",
+          "fft.ai.rtt.spine.examples.json"
+        ]
+      },
+      {
+        "id": "layer.examples",
+        "name": "Examples",
+        "role": "Clarity, drift, paradox, harmonic, substrate, and autonomy-tier examples.",
+        "file": "fft.ai.examples.json"
+      },
+      {
+        "id": "layer.metadata",
+        "name": "Metadata",
+        "role": "Unified metadata descriptor for all FFT AI Edition modules.",
+        "file": "fft.ai.metadata.json"
+      },
+      {
+        "id": "layer.manifest",
+        "name": "Manifest",
+        "role": "Canonical manifest describing directory structure and load order.",
+        "file": "fft.ai.manifest.json"
+      },
+      {
+        "id": "layer.index",
+        "name": "Index",
+        "role": "Machine-native index for all modules.",
+        "file": "fft.ai.index.json"
+      },
+      {
+        "id": "layer.readme",
+        "name": "Readme",
+        "role": "Front-door descriptor for the entire AI Edition.",
+        "file": "fft.ai.readme.json"
+      }
+    ]
+  },
+
+  "conceptual_primitives": {
+    "types": [
+      "field.signal",
+      "metric.clarity",
+      "metric.harmonic",
+      "state.coherence",
+      "state.drift",
+      "state.paradox"
+    ],
+    "regimes": [
+      "regime.resonance-time.core",
+      "regime.harmonic.resonance"
+    ],
+    "operators": [
+      "op.clarity.spectral",
+      "op.harmonic.analysis",
+      "op.drift.recovery"
+    ],
+    "invariants": [
+      "inv.coherence.declared.bounded-drift",
+      "inv.harmonic.paradox"
+    ]
+  },
+
+  "harmonic_escalation": {
+    "description": "Harmonic escalation is the RTT12-level transformation where paradox becomes harmonic and clarity becomes multi-domain.",
+    "conditions": [
+      "paradox_mode == 'harmonic'",
+      "autonomy_tier == 12"
+    ],
+    "kernel": "kernel.harmonic.analysis",
+    "regime": "regime.harmonic.resonance"
+  },
+
+  "drift_recovery": {
+    "description": "Drift recovery restores coherence when drift becomes unbounded.",
+    "trigger": "drift_state == 'unbounded'",
+    "sequence": [
+      "freeze-state",
+      "evaluate-drift-source",
+      "apply-correction",
+      "restore-coherence"
+    ],
+    "operator": "op.drift.recovery"
+  },
+
+  "agent_readiness": {
+    "required_modules": [
+      "fft.ai.core",
+      "fft.ai.spec",
+      "fft.ai.registry",
+      "fft.ai.execution.graph",
+      "fft.ai.runtime",
+      "fft.ai.autonomy",
+      "fft.ai.capabilities",
+      "fft.ai.discovery",
+      "fft.ai.bootstrap"
+    ],
+    "optional_modules": [
+      "fft.ai.integrations",
+      "fft.ai.substrate",
+      "fft.ai.hardware.profile",
+      "fft.ai.rtt.engine.prompts",
+      "fft.ai.rtt.spine.examples",
+      "fft.ai.examples"
+    ],
+    "harmonic_support": true,
+    "drift_recovery_support": true
+  },
+
+  "compatibility": {
+    "requires": [
+      "fft.ai.core",
+      "fft.ai.spec",
+      "fft.ai.registry"
+    ],
+    "optional": [
+      "fft.ai.runtime",
+      "fft.ai.execution.graph",
+      "fft.ai.autonomy",
+      "fft.ai.substrate",
+      "fft.ai.hardware.profile",
+      "fft.ai.integrations"
+    ],
+    "notes": "Overview aligns with manifest, registry, index, autonomy, runtime, execution graph, substrate, and hardware profile v1.2."
+  }
+}
