@@ -116,7 +116,7 @@ Here’s the **triadic expression plan** for each PART, designed so the set read
 ---
 
 ### **PART XIII — External Reviewer**
-**Triadic Expression:** *[The Horizon of Dialogue](./PART_XIII_External_Reviewer/PART_XIII_External_Reviewer_The_Horizon_of_Dialogue.png)*  
+**Triadic Expression:** *[The Horizon of Dialogue](https://github.com/user-attachments/assets/03ea6091-e12a-4764-b645-7c308dc17a16)*  
 - Visual: external observer standing before the triadic field, light bridging both sides.  
 - Symbolism: external validation, coherence across perspectives.  
 - Palette: horizon golds and deep blues.  
