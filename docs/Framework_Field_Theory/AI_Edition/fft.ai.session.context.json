@@ -1,1 +1,166 @@
+{
+  "spec_version": "1.2.0",
+  "canon_id": "FFT-AI-Session-Context",
+
+  "metadata": {
+    "title": "FFT AI Edition – Session Context (v1.2)",
+    "subtitle": "Runtime State • Regime • Drift • Paradox • Autonomy • Substrate",
+    "author_canon": "Nawder Loswin",
+    "license": "Proprietary – TriadicFrameworks Canon",
+    "created_at": "2026-10-08T08:00:00",
+    "updated_at": "2026-10-08T11:05:00",
+    "tags": [
+      "FFT",
+      "RTT",
+      "AI-Edition",
+      "Session",
+      "Context",
+      "Runtime",
+      "v1.2"
+    ],
+    "description": "Canonical runtime session context for FFT AI Edition, including clarity/harmonic operators, regimes, drift/paradox states, autonomy tiers, execution-graph nodes, and substrate kernel routing."
+  },
+
+  "session": {
+    "id": "session.default",
+    "timestamp": "auto",
+    "agent_ready": true,
+    "version": "1.2"
+  },
+
+  "state": {
+    "coherence_state": "declared",
+    "drift_state": "bounded",
+    "paradox_mode": "structural",
+    "harmonic_ready": false,
+    "notes": "Default session state for RTT1–RTT3 reasoning."
+  },
+
+  "regime": {
+    "active_regime": "regime.resonance-time.core",
+    "regime_class": "resonance-time",
+    "regime_constraints": [
+      "coherence=declared",
+      "drift=bounded",
+      "paradox=structural"
+    ]
+  },
+
+  "autonomy": {
+    "tier": 1,
+    "decision_layer": "perception",
+    "allowed_transitions": [2, 3, 12],
+    "notes": "Tier 1 autonomy focuses on clarity, coherence, and drift-bounded evaluation."
+  },
+
+  "execution_graph": {
+    "current_node": "node.input.signal",
+    "next_nodes": [
+      "node.operator.clarity.spectral",
+      "node.operator.harmonic.analysis",
+      "node.drift.recovery"
+    ],
+    "routing_conditions": {
+      "clarity_route": "coherence_state == 'declared' && drift_state == 'bounded'",
+      "harmonic_route": "paradox_mode == 'harmonic'",
+      "drift_recovery_route": "drift_state == 'unbounded'"
+    }
+  },
+
+  "operators": {
+    "available": [
+      "op.clarity.spectral",
+      "op.harmonic.analysis",
+      "op.drift.recovery"
+    ],
+    "active_operator": null,
+    "operator_conditions": {
+      "op.clarity.spectral": [
+        "coherence_state == 'declared'",
+        "drift_state == 'bounded'"
+      ],
+      "op.harmonic.analysis": [
+        "paradox_mode == 'harmonic'"
+      ],
+      "op.drift.recovery": [
+        "drift_state == 'unbounded'"
+      ]
+    }
+  },
+
+  "substrate": {
+    "kernel_selected": null,
+    "kernel_candidates": [
+      "kernel.clarity.spectral",
+      "kernel.harmonic.analysis",
+      "kernel.drift.recovery"
+    ],
+    "routing_rules": [
+      {
+        "condition": "coherence_state == 'declared' && drift_state == 'bounded'",
+        "route_to": "kernel.clarity.spectral"
+      },
+      {
+        "condition": "paradox_mode == 'harmonic'",
+        "route_to": "kernel.harmonic.analysis"
+      },
+      {
+        "condition": "drift_state == 'unbounded'",
+        "route_to": "kernel.drift.recovery"
+      }
+    ],
+    "hardware_flags": {
+      "accelerator_ready": true,
+      "harmonic_ready": false,
+      "drift_recovery_ready": true
+    }
+  },
+
+  "signal": {
+    "type": "field.signal",
+    "content": null,
+    "notes": "Session context expects a signal to be provided by the calling agent."
+  },
+
+  "capabilities": {
+    "active_tier": 1,
+    "supported": [
+      "clarity-evaluation",
+      "drift-detection",
+      "paradox-classification",
+      "harmonic-analysis",
+      "execution-graph-routing"
+    ]
+  },
+
+  "validation": {
+    "profiles": [
+      "vp.inference.default",
+      "vp.hardware.default"
+    ],
+    "pending_checks": [
+      "clarity_range",
+      "coherence_state",
+      "drift_state",
+      "paradox_mode",
+      "kernel_availability"
+    ]
+  },
+
+  "compatibility": {
+    "requires": [
+      "fft.ai.core",
+      "fft.ai.spec",
+      "fft.ai.runtime",
+      "fft.ai.execution.graph"
+    ],
+    "optional": [
+      "fft.ai.autonomy",
+      "fft.ai.substrate",
+      "fft.ai.hardware.profile",
+      "fft.ai.capabilities"
+    ],
+    "notes": "Session context aligns with runtime, execution graph, autonomy, substrate, and hardware profile v1.2."
+  }
+}
 
