@@ -1,15 +1,77 @@
 {
-  "spec_version": "1.0.0",
+  "spec_version": "1.2.0",
   "canon_id": "FFT-AI-Capabilities",
   "metadata": {
-    "title": "FFT AI Edition – Capability Map",
+    "title": "FFT AI Edition – Capability Ontology (v1.2)",
     "author_canon": "Nawder Loswin",
     "license": "Proprietary – TriadicFrameworks Canon",
     "created_at": "2026-10-08T09:10:00",
-    "updated_at": "2026-10-08T09:10:00",
-    "tags": ["FFT", "RTT", "Capabilities"],
-    "description": "Unified capability map for AI systems implementing FFT AI Edition."
+    "updated_at": "2026-10-08T09:50:00",
+    "tags": [
+      "FFT",
+      "RTT",
+      "Capabilities",
+      "Ontology",
+      "v1.2"
+    ],
+    "description": "Tiered capability ontology for FFT agents, including conceptual, structural, harmonic, substrate, and runtime capabilities aligned with autonomy and execution graph v1.2."
   },
+
+  "capability_profile": {
+    "version": "1.2",
+    "mode": "agent-ready",
+    "notes": "Capabilities are grouped by conceptual domain and mapped to autonomy tiers."
+  },
+
+  "capability_tiers": [
+    {
+      "tier": 1,
+      "name": "Baseline Conceptual Capabilities",
+      "description": "Core perception and clarity evaluation capabilities.",
+      "capabilities": [
+        "clarity-evaluation",
+        "coherence-detection",
+        "drift-monitoring",
+        "paradox-awareness",
+        "signal-ingestion"
+      ]
+    },
+    {
+      "tier": 2,
+      "name": "Structural Capabilities",
+      "description": "Regime navigation and invariant enforcement.",
+      "capabilities": [
+        "regime-navigation",
+        "invariant-enforcement",
+        "operator-selection",
+        "structure-alignment",
+        "substrate-binding"
+      ]
+    },
+    {
+      "tier": 3,
+      "name": "Conceptual Reasoning Capabilities",
+      "description": "Multi-layer conceptual reasoning and structural synthesis.",
+      "capabilities": [
+        "multi-layer-evaluation",
+        "conceptual-transformation",
+        "regime-shift",
+        "validation-activation",
+        "execution-graph-routing"
+      ]
+    },
+    {
+      "tier": 12,
+      "name": "Harmonic Capabilities",
+      "description": "Harmonic paradox analysis and multi-domain coherence.",
+      "capabilities": [
+        "harmonic-analysis",
+        "paradox-harmonic-mapping",
+        "harmonic-regime-navigation",
+        "harmonic-operator-routing"
+      ]
+    }
+  ],
 
   "capabilities": {
     "conceptual": [
@@ -17,25 +79,93 @@
       "coherence-mapping",
       "drift-bounding",
       "paradox-classification",
-      "regime-navigation"
+      "regime-navigation",
+      "harmonic-analysis"
     ],
     "structural": [
       "spine-alignment",
       "substrate-binding",
       "operator-resolution",
-      "invariant-enforcement"
+      "invariant-enforcement",
+      "execution-graph-routing"
+    ],
+    "harmonic": [
+      "paradox-harmonic-mapping",
+      "harmonic-regime-navigation",
+      "harmonic-operator-routing"
     ],
     "hardware": [
       "kernel-execution",
       "latency-class-L1-L2",
       "signal-streaming",
-      "metric-output"
+      "metric-output",
+      "hardware-harmonic-analysis"
     ],
     "runtime": [
       "bootstrap-sequencing",
       "validation-profile-activation",
-      "multi-regime-processing"
+      "multi-regime-processing",
+      "drift-recovery",
+      "substrate-fallback-routing"
     ]
+  },
+
+  "capability_dependencies": [
+    {
+      "capability": "harmonic-analysis",
+      "requires": [
+        "paradox-classification",
+        "regime-navigation",
+        "execution-graph-routing"
+      ]
+    },
+    {
+      "capability": "substrate-binding",
+      "requires": [
+        "operator-resolution",
+        "kernel-execution"
+      ]
+    },
+    {
+      "capability": "drift-recovery",
+      "requires": [
+        "drift-monitoring",
+        "invariant-enforcement"
+      ]
+    }
+  ],
+
+  "capability_activation": {
+    "conditions": [
+      {
+        "capability": "harmonic-analysis",
+        "trigger": "paradox_mode == 'harmonic'"
+      },
+      {
+        "capability": "substrate-fallback-routing",
+        "trigger": "hardware_accelerator_available == true"
+      },
+      {
+        "capability": "drift-recovery",
+        "trigger": "drift_state == 'unbounded'"
+      }
+    ]
+  },
+
+  "compatibility": {
+    "requires": [
+      "fft.ai.core",
+      "fft.ai.spec",
+      "fft.ai.registry",
+      "fft.ai.autonomy",
+      "fft.ai.runtime",
+      "fft.ai.execution.graph"
+    ],
+    "optional": [
+      "fft.ai.substrate",
+      "fft.ai.hardware.profile",
+      "fft.ai.integrations"
+    ],
+    "notes": "v1.2 capabilities align with autonomy tiers, runtime routing, and execution graph nodes."
   }
 }
-
