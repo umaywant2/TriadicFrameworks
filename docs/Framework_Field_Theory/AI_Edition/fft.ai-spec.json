@@ -7,6 +7,29 @@
     "drift": "bounded",
     "paradox": "structural"
   },
+"types": {
+  "field.signal": {
+    "id": "field.signal",
+    "description": "Canonical signal type used as input for clarity, coherence, drift, and paradox operators.",
+    "category": "field",
+    "examples": [
+      "Narrative signal",
+      "Structural signal",
+      "Semantic signal",
+      "Temporal signal"
+    ]
+  },
+  "metric.clarity": {
+    "id": "metric.clarity",
+    "description": "Canonical clarity metric output type. Represents the computed clarity value of a given signal.",
+    "category": "metric",
+    "range": "0.0–1.0",
+    "examples": [
+      "0.64",
+      "0.91"
+    ]
+  }
+},
   "metadata": {
     "title": "Framework Field Theory – AI Edition (Core Spec)",
     "author_canon": "Nawder Loswin",
