@@ -1,0 +1,116 @@
+{
+  "spec_version": "1.0.0",
+  "canon_id": "FFT-AI-Bootstrap",
+  "metadata": {
+    "title": "FFT AI Edition – Bootstrap Sequence",
+    "author_canon": "Nawder Loswin",
+    "license": "Proprietary – TriadicFrameworks Canon",
+    "created_at": "2026-10-08T09:00:00",
+    "updated_at": "2026-10-08T09:00:00",
+    "tags": [
+      "FFT",
+      "RTT",
+      "AI-Edition",
+      "Bootstrap",
+      "Initialization"
+    ],
+    "description": "Canonical boot sequence for initializing FFT AI Edition in AI systems, including load order, validation, and substrate activation."
+  },
+
+  "boot_profile": {
+    "target": "ai-system",
+    "mode": "conceptual-framework-init",
+    "rtt_profile": {
+      "rtt": 1,
+      "coherence": "declared",
+      "drift": "bounded",
+      "paradox": "structural"
+    },
+    "notes": "This sequence assumes access to the AI Edition directory, registry, spec, core, substrate, and examples."
+  },
+
+  "stages": [
+    {
+      "id": "stage.01.discover",
+      "name": "Discover AI Edition",
+      "description": "Locate and load the AI Edition manifest and registry.",
+      "actions": [
+        "Load ./fft.ai.manifest.json",
+        "Load ./fft.ai.registry.json"
+      ],
+      "required": true
+    },
+    {
+      "id": "stage.02.load-core",
+      "name": "Load Core Module",
+      "description": "Initialize the minimal FFT AI core (regime, invariant, clarity operator).",
+      "actions": [
+        "Load ./fft.ai.core.json",
+        "Register regime.resonance-time.core",
+        "Register inv.coherence.declared.bounded-drift",
+        "Register op.clarity.spectral"
+      ],
+      "required": true
+    },
+    {
+      "id": "stage.03.load-spec",
+      "name": "Load Full Specification",
+      "description": "Load the full FFT AI spec including structures, types, and validation profiles.",
+      "actions": [
+        "Load ./fft.ai.spec.json",
+        "Register structure.spine.core",
+        "Register types field.signal and metric.clarity",
+        "Register vp.inference.default"
+      ],
+      "required": true
+    },
+    {
+      "id": "stage.04.load-substrate",
+      "name": "Load Hardware Substrate",
+      "description": "Load hardware-ready conceptual substrate for FFT kernels.",
+      "actions": [
+        "Load ./fft.ai.substrate.json",
+        "Register kernel.clarity.spectral",
+        "Register structure.spine.hardware",
+        "Register vp.hardware.default"
+      ],
+      "required": false
+    },
+    {
+      "id": "stage.05.bind-hardware",
+      "name": "Bind Hardware Profile",
+      "description": "Bind hardware capability profile to substrate and spec.",
+      "actions": [
+        "Load ./fft.ai.hardware.profile.json",
+        "Verify compatibility with fft.ai.substrate.json and fft.ai.spec.json"
+      ],
+      "required": false
+    },
+    {
+      "id": "stage.06.activate-validation",
+      "name": "Activate Validation Profiles",
+      "description": "Enable RTT/FFT validation for inference and hardware execution.",
+      "actions": [
+        "Activate vp.inference.default for AI inference",
+        "Activate vp.hardware.default for hardware execution (if available)"
+      ],
+      "required": true
+    },
+    {
+      "id": "stage.07.load-examples",
+      "name": "Load Examples",
+      "description": "Load canonical examples for testing and calibration.",
+      "actions": [
+        "Load ./fft.examples.json",
+        "Register operator_examples and regime_examples"
+      ],
+      "required": false
+    }
+  ],
+
+  "entry_points": {
+    "primary_operator": "op.clarity.spectral",
+    "primary_regime": "regime.resonance-time.core",
+    "primary_invariant": "inv.coherence.declared.bounded-drift"
+  }
+}
