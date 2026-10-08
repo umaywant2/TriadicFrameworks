@@ -1,89 +1,171 @@
 {
-  "spec_version": "1.0.0",
+  "spec_version": "1.2.0",
   "canon_id": "FFT-AI-Hardware-Profile",
   "metadata": {
-    "title": "FFT AI Edition – Hardware Capability Profile",
+    "title": "FFT AI Edition – Hardware Capability Profile (v1.2)",
     "author_canon": "Nawder Loswin",
     "license": "Proprietary – TriadicFrameworks Canon",
     "created_at": "2026-10-08T08:55:00",
-    "updated_at": "2026-10-08T08:55:00",
+    "updated_at": "2026-10-08T10:05:00",
     "tags": [
       "FFT",
       "RTT",
       "AI-Edition",
       "Hardware",
       "Capability",
-      "Accelerator"
+      "Accelerator",
+      "v1.2"
     ],
-    "description": "Hardware capability declaration for conceptual accelerators implementing FFT AI substrate and kernels."
+    "description": "Enhanced hardware capability declaration for conceptual accelerators implementing FFT AI substrate kernels, harmonic analysis, drift recovery, and autonomy-tier alignment."
   },
 
   "hardware_profile": {
     "target_class": "conceptual-accelerator",
-    "generation": "1",
+    "generation": "1.2",
     "vendor": "TriadicFrameworks",
-    "model": "FFT-RTT-CA-1",
+    "model": "FFT-RTT-CA-1.2",
+    "execution_model": "multi-kernel",
     "rtt_profile": {
       "rtt": 1,
       "coherence": "declared",
       "drift": "bounded",
       "paradox": "structural"
     },
-    "notes": "This profile describes hardware capable of executing FFT AI substrate kernels and enforcing RTT invariants at silicon or firmware level."
+    "notes": "v1.2 hardware supports harmonic kernels, drift recovery kernels, substrate probing, and autonomy-tier alignment."
   },
 
   "capabilities": {
     "supported_regimes": [
-      "regime.resonance-time.core"
+      "regime.resonance-time.core",
+      "regime.harmonic.resonance"
     ],
     "supported_invariants": [
       "inv.coherence.declared.bounded-drift"
     ],
     "supported_kernels": [
-      "kernel.clarity.spectral"
+      "kernel.clarity.spectral",
+      "kernel.harmonic.analysis",
+      "kernel.drift.recovery"
     ],
     "supported_types": [
       "field.signal",
-      "metric.clarity"
+      "metric.clarity",
+      "metric.harmonic"
     ],
     "validation_profiles": [
-      "vp.hardware.default"
+      "vp.hardware.default",
+      "vp.hardware.harmonic"
     ]
   },
 
   "limits": {
-    "max_concurrent_kernels": 32,
-    "max_signal_bandwidth": "high",
-    "precision_class": "FP32",
-    "latency_classes": [
-      "L1",
-      "L2"
-    ],
-    "notes": "Values are conceptual placeholders; concrete implementations may refine numeric limits."
+    "max_concurrent_kernels": 64,
+    "max_signal_bandwidth": "ultra-high",
+    "precision_class": "FP32-FP64 hybrid",
+    "latency_classes": ["L1", "L2", "L3"],
+    "harmonic_latency_boost": "enabled",
+    "notes": "Values represent conceptual hardware classes; concrete implementations may refine numeric limits."
   },
 
   "interfaces": {
     "control_plane": {
       "type": "firmware",
-      "description": "Firmware-level control interface for configuring regimes, invariants, and validation profiles."
+      "description": "Firmware-level control interface for configuring regimes, invariants, kernels, and validation profiles."
     },
     "data_plane": {
       "type": "stream",
-      "description": "Streaming interface for signals and clarity metrics.",
+      "description": "Streaming interface for signals, clarity metrics, harmonic metrics, and drift recovery states.",
       "input_types": [
         "field.signal"
       ],
       "output_types": [
-        "metric.clarity"
+        "metric.clarity",
+        "metric.harmonic"
       ]
+    },
+    "diagnostic_plane": {
+      "type": "telemetry",
+      "description": "Telemetry interface for drift states, paradox modes, kernel availability, and substrate probing results."
     }
   },
 
+  "kernel_execution": {
+    "routing_rules": [
+      {
+        "condition": "coherence_state == 'declared' && drift_state == 'bounded'",
+        "route_to": "kernel.clarity.spectral"
+      },
+      {
+        "condition": "paradox_mode == 'harmonic'",
+        "route_to": "kernel.harmonic.analysis"
+      },
+      {
+        "condition": "drift_state == 'unbounded'",
+        "route_to": "kernel.drift.recovery"
+      }
+    ],
+    "fallback": "kernel.clarity.spectral",
+    "notes": "Routing aligns with runtime v1.2 and substrate v1.2."
+  },
+
+  "substrate_probing": {
+    "enabled": true,
+    "probe_sequence": [
+      "check kernel.clarity.spectral availability",
+      "check kernel.harmonic.analysis availability",
+      "check kernel.drift.recovery availability"
+    ],
+    "hardware_flags": [
+      "accelerator_ready",
+      "harmonic_ready",
+      "drift_recovery_ready"
+    ],
+    "notes": "Hardware probing integrates with discovery v1.2 and bootstrap v1.2."
+  },
+
+  "autonomy_alignment": {
+    "supported_autonomy_tiers": [1, 2, 3, 12],
+    "harmonic_autonomy_tier": 12,
+    "drift_recovery_tier": 2,
+    "notes": "Hardware supports autonomy-tier transitions and harmonic escalation."
+  },
+
+  "hardware_events": [
+    {
+      "id": "event.hardware.kernel.ready",
+      "description": "Triggered when a kernel becomes available.",
+      "payload": ["kernel_id", "latency_class"]
+    },
+    {
+      "id": "event.hardware.harmonic.ready",
+      "description": "Triggered when harmonic kernel is available.",
+      "payload": ["kernel_id", "harmonic_state"]
+    },
+    {
+      "id": "event.hardware.drift.recovery",
+      "description": "Triggered when drift recovery kernel activates.",
+      "payload": ["drift_state", "recovery_stage"]
+    },
+    {
+      "id": "event.hardware.probe.complete",
+      "description": "Triggered when substrate probing completes.",
+      "payload": ["probe_results", "hardware_flags"]
+    }
+  ],
+
   "compatibility": {
-    "substrate_ref": "./fft.ai.substrate.json",
-    "spec_ref": "./fft.ai.spec.json",
-    "registry_ref": "./fft.ai.registry.json",
-    "notes": "Hardware must be able to load and interpret the FFT AI substrate, spec, and registry to be considered fully compatible."
+    "requires": [
+      "fft.ai.core",
+      "fft.ai.spec",
+      "fft.ai.registry",
+      "fft.ai.execution.graph",
+      "fft.ai.runtime",
+      "fft.ai.autonomy",
+      "fft.ai.substrate"
+    ],
+    "optional": [
+      "fft.ai.integrations"
+    ],
+    "notes": "v1.2 hardware profile aligns with substrate, runtime, autonomy, and execution graph layers for full agent readiness."
   }
 }
-
