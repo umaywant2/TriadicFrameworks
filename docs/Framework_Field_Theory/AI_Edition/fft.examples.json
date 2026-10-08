@@ -1,1 +1,79 @@
+{
+  "spec_version": "1.0.0",
+  "canon_id": "FFT-Core-Examples",
+  "metadata": {
+    "title": "Framework Field Theory – AI Edition Examples",
+    "author_canon": "Nawder Loswin",
+    "license": "Proprietary – TriadicFrameworks Canon",
+    "created_at": "2026-10-08T08:20:00",
+    "updated_at": "2026-10-08T08:20:00",
+    "tags": [
+      "FFT",
+      "RTT",
+      "Examples",
+      "Clarity",
+      "Secret-Loser"
+    ],
+    "description": "Canonical example set for FFT AI Edition operators and regimes."
+  },
+  "operator_examples": [
+    {
+      "operator_id": "op.clarity.spectral",
+      "examples": [
+        {
+          "id": "ex.op.clarity.spectral.secret-loser",
+          "description": "Evaluate clarity of Ozzy Osbourne's 'Secret Loser' as a narrative substrate.",
+          "input": {
+            "signal": "Lyrics: 'Trapped in a lonely body, I'm losing control... I don't exist.'",
+            "context": {
+              "rtt": 1,
+              "coherence": "declared",
+              "drift": "bounded",
+              "paradox": "structural"
+            }
+          },
+          "output": {
+            "clarity_value": 0.64,
+            "notes": "High paradox density; clarity emerges in the admission of non-existence and hidden wounds."
+          }
+        },
+        {
+          "id": "ex.op.clarity.spectral.spine-docs",
+          "description": "Evaluate clarity of a TriadicFrameworks spine documentation section.",
+          "input": {
+            "signal": "Spine module description from https://www.triadicframeworks.org/spine/",
+            "context": {
+              "rtt": 1,
+              "coherence": "declared",
+              "drift": "bounded",
+              "paradox": "none"
+            }
+          },
+          "output": {
+            "clarity_value": 0.91,
+            "notes": "High structural coherence; low paradox; suitable as a canonical teaching substrate."
+          }
+        }
+      ]
+    }
+  ],
+  "regime_examples": [
+    {
+      "regime_id": "regime.resonance-time.core",
+      "examples": [
+        {
+          "id": "ex.regime.resonance-time.morning-idea",
+          "description": "Morning conceptual ignition: translating FFT into AI-native spec and on-chip substrate.",
+          "profile": {
+            "rtt": 1,
+            "coherence": "declared",
+            "drift": "bounded",
+            "paradox": "structural"
+          },
+          "notes": "Resonance-time regime stabilizes the paradox of human narrative being compressed into machine-native clarity."
+        }
+      ]
+    }
+  ]
+}
 
