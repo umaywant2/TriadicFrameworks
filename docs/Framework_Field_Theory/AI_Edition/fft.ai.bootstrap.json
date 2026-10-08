@@ -1,116 +1,198 @@
 {
-  "spec_version": "1.0.0",
+  "spec_version": "1.2.0",
   "canon_id": "FFT-AI-Bootstrap",
   "metadata": {
-    "title": "FFT AI Edition – Bootstrap Sequence",
+    "title": "FFT AI Edition – Bootstrap Sequence (v1.2)",
     "author_canon": "Nawder Loswin",
     "license": "Proprietary – TriadicFrameworks Canon",
     "created_at": "2026-10-08T09:00:00",
-    "updated_at": "2026-10-08T09:00:00",
+    "updated_at": "2026-10-08T09:55:00",
     "tags": [
       "FFT",
       "RTT",
       "AI-Edition",
       "Bootstrap",
-      "Initialization"
+      "Initialization",
+      "v1.2"
     ],
-    "description": "Canonical boot sequence for initializing FFT AI Edition in AI systems, including load order, validation, and substrate activation."
+    "description": "Enhanced bootstrap sequence for initializing FFT AI Edition in autonomous and distributed AI systems, including substrate probing, harmonic escalation readiness, drift-safe initialization, and multi-agent coordination."
   },
 
-  "boot_profile": {
-    "target": "ai-system",
-    "mode": "conceptual-framework-init",
+  "bootstrap_profile": {
+    "mode": "hybrid-autonomous",
+    "version": "1.2",
+    "target": "ai-agent",
     "rtt_profile": {
       "rtt": 1,
       "coherence": "declared",
       "drift": "bounded",
       "paradox": "structural"
     },
-    "notes": "This sequence assumes access to the AI Edition directory, registry, spec, core, substrate, and examples."
+    "notes": "v1.2 bootstrap prepares agents for conceptual execution, harmonic escalation, substrate routing, and autonomy-tier activation."
   },
 
-  "stages": [
+  "phases": [
     {
-      "id": "stage.01.discover",
-      "name": "Discover AI Edition",
-      "description": "Locate and load the AI Edition manifest and registry.",
+      "id": "phase.01.discovery-init",
+      "name": "Discovery Initialization",
+      "description": "Begin discovery sequence and load manifest + registry.",
       "actions": [
-        "Load ./fft.ai.manifest.json",
-        "Load ./fft.ai.registry.json"
+        "Load fft.ai.manifest.json",
+        "Load fft.ai.registry.json",
+        "Verify canonical_root",
+        "Extract load_order",
+        "Cache manifest for distributed agents"
       ],
       "required": true
     },
+
     {
-      "id": "stage.02.load-core",
-      "name": "Load Core Module",
-      "description": "Initialize the minimal FFT AI core (regime, invariant, clarity operator).",
+      "id": "phase.02.core-init",
+      "name": "Core Initialization",
+      "description": "Load FFT core primitives and establish baseline conceptual environment.",
       "actions": [
-        "Load ./fft.ai.core.json",
+        "Load fft.ai.core.json",
         "Register regime.resonance-time.core",
         "Register inv.coherence.declared.bounded-drift",
-        "Register op.clarity.spectral"
+        "Register op.clarity.spectral",
+        "Verify core consistency across distributed agents"
       ],
       "required": true
     },
+
     {
-      "id": "stage.03.load-spec",
-      "name": "Load Full Specification",
-      "description": "Load the full FFT AI spec including structures, types, and validation profiles.",
+      "id": "phase.03.spec-init",
+      "name": "Specification Initialization",
+      "description": "Load full FFT specification including structures, types, and validation profiles.",
       "actions": [
-        "Load ./fft.ai.spec.json",
-        "Register structure.spine.core",
-        "Register types field.signal and metric.clarity",
-        "Register vp.inference.default"
+        "Load fft.ai.spec.json",
+        "Register structures",
+        "Register types",
+        "Register validation profiles",
+        "Probe spec for harmonic escalation support"
       ],
       "required": true
     },
+
     {
-      "id": "stage.04.load-substrate",
-      "name": "Load Hardware Substrate",
-      "description": "Load hardware-ready conceptual substrate for FFT kernels.",
+      "id": "phase.04.execution-graph-init",
+      "name": "Execution Graph Initialization",
+      "description": "Load conceptual execution graph for routing and reasoning.",
       "actions": [
-        "Load ./fft.ai.substrate.json",
-        "Register kernel.clarity.spectral",
-        "Register structure.spine.hardware",
-        "Register vp.hardware.default"
+        "Load fft.ai.execution.graph.json",
+        "Register nodes and edges",
+        "Enable multi-operator branching",
+        "Enable drift-recovery routing",
+        "Enable harmonic escalation routing"
+      ],
+      "required": true
+    },
+
+    {
+      "id": "phase.05.runtime-init",
+      "name": "Runtime Initialization",
+      "description": "Load runtime configuration and prepare execution environment.",
+      "actions": [
+        "Load fft.ai.runtime.json",
+        "Register operator routing rules",
+        "Register regime scheduler",
+        "Register drift recovery routines",
+        "Register substrate fallback logic"
+      ],
+      "required": true
+    },
+
+    {
+      "id": "phase.06.autonomy-init",
+      "name": "Autonomy Initialization",
+      "description": "Load autonomy tiers and behavioral constraints.",
+      "actions": [
+        "Load fft.ai.autonomy.json",
+        "Register autonomy tiers",
+        "Register paradox escalation rules",
+        "Register drift recovery sequences",
+        "Align autonomy with runtime and execution graph"
+      ],
+      "required": true
+    },
+
+    {
+      "id": "phase.07.integrations-init",
+      "name": "Integration Initialization",
+      "description": "Load cross-system integration bindings.",
+      "actions": [
+        "Load fft.ai.integrations.json",
+        "Register framework bindings",
+        "Register substrate bindings",
+        "Register harmonic operator bindings"
       ],
       "required": false
     },
+
     {
-      "id": "stage.05.bind-hardware",
-      "name": "Bind Hardware Profile",
+      "id": "phase.08.substrate-probe",
+      "name": "Substrate Probing",
+      "description": "Probe conceptual substrate for available kernels.",
+      "actions": [
+        "Load fft.ai.substrate.json",
+        "Probe kernel.clarity.spectral",
+        "Probe kernel.harmonic.analysis",
+        "Enable substrate fallback routing"
+      ],
+      "required": false
+    },
+
+    {
+      "id": "phase.09.hardware-bind",
+      "name": "Hardware Binding",
       "description": "Bind hardware capability profile to substrate and spec.",
       "actions": [
-        "Load ./fft.ai.hardware.profile.json",
-        "Verify compatibility with fft.ai.substrate.json and fft.ai.spec.json"
-      ],
-      "required": false
-    },
-    {
-      "id": "stage.06.activate-validation",
-      "name": "Activate Validation Profiles",
-      "description": "Enable RTT/FFT validation for inference and hardware execution.",
-      "actions": [
-        "Activate vp.inference.default for AI inference",
-        "Activate vp.hardware.default for hardware execution (if available)"
-      ],
-      "required": true
-    },
-    {
-      "id": "stage.07.load-examples",
-      "name": "Load Examples",
-      "description": "Load canonical examples for testing and calibration.",
-      "actions": [
-        "Load ./fft.examples.json",
-        "Register operator_examples and regime_examples"
+        "Load fft.ai.hardware.profile.json",
+        "Verify compatibility with substrate",
+        "Verify compatibility with spec",
+        "Enable hardware-accelerated execution"
       ],
       "required": false
     }
   ],
 
-  "entry_points": {
-    "primary_operator": "op.clarity.spectral",
-    "primary_regime": "regime.resonance-time.core",
-    "primary_invariant": "inv.coherence.declared.bounded-drift"
+  "bootstrap_events": [
+    {
+      "id": "event.bootstrap.started",
+      "description": "Triggered when bootstrap sequence begins.",
+      "payload": ["agent_id", "timestamp"]
+    },
+    {
+      "id": "event.bootstrap.phase.complete",
+      "description": "Triggered when a bootstrap phase completes.",
+      "payload": ["phase_id", "status"]
+    },
+    {
+      "id": "event.bootstrap.harmonic.ready",
+      "description": "Triggered when harmonic escalation support is detected.",
+      "payload": ["harmonic_state", "operator_id"]
+    },
+    {
+      "id": "event.bootstrap.substrate.ready",
+      "description": "Triggered when substrate probing completes.",
+      "payload": ["kernel_available", "hardware_status"]
+    }
+  ],
+
+  "compatibility": {
+    "requires": [
+      "fft.ai.core",
+      "fft.ai.spec",
+      "fft.ai.registry",
+      "fft.ai.execution.graph",
+      "fft.ai.runtime",
+      "fft.ai.autonomy"
+    ],
+    "optional": [
+      "fft.ai.integrations",
+      "fft.ai.substrate",
+      "fft.ai.hardware.profile"
+    ],
+    "notes": "v1.2 bootstrap aligns with autonomy, runtime, execution graph, and discovery layers for full agent readiness."
   }
 }
