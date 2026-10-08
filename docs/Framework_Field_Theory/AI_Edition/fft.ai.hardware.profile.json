@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "canon_id": "FFT-AI-Hardware-Profile",
+  "metadata": {
+    "title": "FFT AI Edition – Hardware Capability Profile",
+    "author_canon": "Nawder Loswin",
+    "license": "Proprietary – TriadicFrameworks Canon",
+    "created_at": "2026-10-08T08:55:00",
+    "updated_at": "2026-10-08T08:55:00",
+    "tags": [
+      "FFT",
+      "RTT",
+      "AI-Edition",
+      "Hardware",
+      "Capability",
+      "Accelerator"
+    ],
+    "description": "Hardware capability declaration for conceptual accelerators implementing FFT AI substrate and kernels."
+  },
+
+  "hardware_profile": {
+    "target_class": "conceptual-accelerator",
+    "generation": "1",
+    "vendor": "TriadicFrameworks",
+    "model": "FFT-RTT-CA-1",
+    "rtt_profile": {
+      "rtt": 1,
+      "coherence": "declared",
+      "drift": "bounded",
+      "paradox": "structural"
+    },
+    "notes": "This profile describes hardware capable of executing FFT AI substrate kernels and enforcing RTT invariants at silicon or firmware level."
+  },
+
+  "capabilities": {
+    "supported_regimes": [
+      "regime.resonance-time.core"
+    ],
+    "supported_invariants": [
+      "inv.coherence.declared.bounded-drift"
+    ],
+    "supported_kernels": [
+      "kernel.clarity.spectral"
+    ],
+    "supported_types": [
+      "field.signal",
+      "metric.clarity"
+    ],
+    "validation_profiles": [
+      "vp.hardware.default"
+    ]
+  },
+
+  "limits": {
+    "max_concurrent_kernels": 32,
+    "max_signal_bandwidth": "high",
+    "precision_class": "FP32",
+    "latency_classes": [
+      "L1",
+      "L2"
+    ],
+    "notes": "Values are conceptual placeholders; concrete implementations may refine numeric limits."
+  },
+
+  "interfaces": {
+    "control_plane": {
+      "type": "firmware",
+      "description": "Firmware-level control interface for configuring regimes, invariants, and validation profiles."
+    },
+    "data_plane": {
+      "type": "stream",
+      "description": "Streaming interface for signals and clarity metrics.",
+      "input_types": [
+        "field.signal"
+      ],
+      "output_types": [
+        "metric.clarity"
+      ]
+    }
+  },
+
+  "compatibility": {
+    "substrate_ref": "./fft.ai.substrate.json",
+    "spec_ref": "./fft.ai.spec.json",
+    "registry_ref": "./fft.ai.registry.json",
+    "notes": "Hardware must be able to load and interpret the FFT AI substrate, spec, and registry to be considered fully compatible."
+  }
+}
+
