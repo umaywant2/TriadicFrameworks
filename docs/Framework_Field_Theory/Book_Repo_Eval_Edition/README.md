@@ -5,7 +5,7 @@ Here’s the **triadic expression plan** for each PART, designed so the set read
 
 ---
 
-<img width="1536" height="1024" alt="RTT_stars" src="./RTT_stars.png" />
+<img width="1536" height="1024" alt="RTT_stars" src="https://github.com/user-attachments/assets/ac1bc9bf-449a-4699-90a4-df3244065a29" />
 
 ### **PART I — Origin**
 **Triadic Expression:** *[Genesis of Frameworks](./PART_I_Origin/PART_I_Origin_Genesis_of_Frameworks.png)*  
