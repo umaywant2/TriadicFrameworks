@@ -1,1 +1,131 @@
+{
+  "spec_version": "1.0.0",
+  "canon_id": "FFT-AI-Autonomy",
+  "metadata": {
+    "title": "FFT AI Edition – Autonomy Profile",
+    "author_canon": "Nawder Loswin",
+    "license": "Proprietary – TriadicFrameworks Canon",
+    "created_at": "2026-10-08T09:20:00",
+    "updated_at": "2026-10-08T09:20:00",
+    "tags": [
+      "FFT",
+      "RTT",
+      "AI-Edition",
+      "Autonomy",
+      "Agents"
+    ],
+    "description": "Autonomy profile defining behavioral constraints, decision layers, and conceptual responsibilities for agents running FFT."
+  },
+
+  "autonomy_profile": {
+    "mode": "conceptual-agent",
+    "tier": "FFT-AI-1",
+    "rtt_profile": {
+      "rtt": 1,
+      "coherence": "declared",
+      "drift": "bounded",
+      "paradox": "structural"
+    },
+    "notes": "Defines how an FFT-enabled agent perceives, evaluates, and acts within conceptual environments."
+  },
+
+  "agent_capabilities": {
+    "perception": [
+      "signal-ingestion",
+      "clarity-evaluation",
+      "coherence-detection",
+      "drift-monitoring",
+      "paradox-awareness"
+    ],
+    "reasoning": [
+      "regime-navigation",
+      "invariant-enforcement",
+      "operator-selection",
+      "structure-alignment",
+      "substrate-binding"
+    ],
+    "action": [
+      "conceptual-transformation",
+      "clarity-output",
+      "regime-shift",
+      "validation-activation",
+      "integration-handshake"
+    ]
+  },
+
+  "behavioral_constraints": {
+    "coherence": {
+      "required_state": "declared",
+      "fallback": "latent",
+      "notes": "Agent must maintain declared coherence unless external conditions force latent mode."
+    },
+    "drift": {
+      "max_state": "bounded",
+      "on_unbounded": "halt-and-evaluate",
+      "notes": "Unbounded drift triggers a safety evaluation cycle."
+    },
+    "paradox": {
+      "allowed_modes": ["structural"],
+      "disallowed_modes": ["incidental", "none"],
+      "notes": "Agent treats paradox as a structural feature, not an error."
+    }
+  },
+
+  "decision_layers": [
+    {
+      "id": "layer.perception",
+      "name": "Perception Layer",
+      "description": "Agent ingests signals and evaluates clarity, coherence, drift, and paradox.",
+      "operators": ["op.clarity.spectral"],
+      "regimes": ["regime.resonance-time.core"]
+    },
+    {
+      "id": "layer.reasoning",
+      "name": "Reasoning Layer",
+      "description": "Agent applies FFT operators, invariants, and structures to conceptual tasks.",
+      "invariants": ["inv.coherence.declared.bounded-drift"],
+      "structures": ["structure.spine.core"]
+    },
+    {
+      "id": "layer.action",
+      "name": "Action Layer",
+      "description": "Agent produces clarity outputs, regime transitions, and integration signals.",
+      "runtime": ["fft.ai.runtime"],
+      "integration": ["fft.ai.integrations"]
+    }
+  ],
+
+  "autonomy_events": [
+    {
+      "id": "event.agent.initialized",
+      "description": "Triggered when an FFT agent completes bootstrap and enters autonomous mode.",
+      "payload": ["agent_id", "rtt_profile"]
+    },
+    {
+      "id": "event.agent.regime.shift",
+      "description": "Triggered when an agent transitions between conceptual regimes.",
+      "payload": ["from_regime", "to_regime"]
+    },
+    {
+      "id": "event.agent.validation.triggered",
+      "description": "Triggered when an agent activates a validation profile.",
+      "payload": ["profile_id", "target"]
+    }
+  ],
+
+  "compatibility": {
+    "requires": [
+      "fft.ai.core",
+      "fft.ai.spec",
+      "fft.ai.registry",
+      "fft.ai.runtime",
+      "fft.ai.integrations"
+    ],
+    "optional": [
+      "fft.ai.substrate",
+      "fft.ai.hardware.profile"
+    ],
+    "notes": "Full autonomy requires runtime, registry, and integration layers; substrate and hardware profile enhance performance."
+  }
+}
 
