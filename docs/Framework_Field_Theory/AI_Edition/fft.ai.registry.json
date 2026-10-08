@@ -1,1 +1,129 @@
+{
+  "spec_version": "1.0.0",
+  "canon_id": "FFT-AI-Registry",
+  "metadata": {
+    "title": "FFT AI Edition – Module Registry",
+    "author_canon": "Nawder Loswin",
+    "license": "Proprietary – TriadicFrameworks Canon",
+    "created_at": "2026-10-08T08:40:00",
+    "updated_at": "2026-10-08T08:40:00",
+    "tags": [
+      "FFT",
+      "RTT",
+      "AI-Edition",
+      "Registry",
+      "Discovery"
+    ],
+    "description": "Discovery index for all AI-native FFT modules, providing canonical references, versions, and dependency relationships."
+  },
+
+  "modules": [
+    {
+      "id": "fft.ai.core",
+      "name": "FFT AI Core",
+      "description": "Minimal machine-native core containing one regime, one invariant, and one clarity operator.",
+      "version": "1.0.0",
+      "path": "./fft.ai.core.json",
+      "category": "core",
+      "rtt_profile": {
+        "rtt": 1,
+        "coherence": "declared",
+        "drift": "bounded",
+        "paradox": "structural"
+      },
+      "exports": {
+        "regimes": [
+          "regime.resonance-time.core"
+        ],
+        "invariants": [
+          "inv.coherence.declared.bounded-drift"
+        ],
+        "operators": [
+          "op.clarity.spectral"
+        ],
+        "structures": [
+          "structure.spine.core"
+        ],
+        "types": [
+          "field.signal",
+          "metric.clarity"
+        ]
+      },
+      "dependencies": []
+    },
+
+    {
+      "id": "fft.ai.spec",
+      "name": "FFT AI Specification",
+      "description": "Full AI-native specification containing regimes, invariants, operators, structures, types, and validation profiles.",
+      "version": "1.0.0",
+      "path": "./fft.ai.spec.json",
+      "category": "spec",
+      "rtt_profile": {
+        "rtt": 1,
+        "coherence": "declared",
+        "drift": "bounded",
+        "paradox": "structural"
+      },
+      "exports": {
+        "regimes": [
+          "regime.resonance-time.core"
+        ],
+        "invariants": [
+          "inv.coherence.declared.bounded-drift"
+        ],
+        "operators": [
+          "op.clarity.spectral"
+        ],
+        "structures": [
+          "structure.spine.core"
+        ],
+        "types": [
+          "field.signal",
+          "metric.clarity"
+        ],
+        "validation_profiles": [
+          "vp.inference.default"
+        ]
+      },
+      "dependencies": [
+        "fft.ai.core"
+      ]
+    },
+
+    {
+      "id": "fft.ai.examples",
+      "name": "FFT AI Examples",
+      "description": "Canonical example set for FFT AI Edition operators and regimes.",
+      "version": "1.0.0",
+      "path": "./fft.examples.json",
+      "category": "examples",
+      "rtt_profile": {
+        "rtt": 1,
+        "coherence": "declared",
+        "drift": "bounded",
+        "paradox": "structural"
+      },
+      "exports": {
+        "operator_examples": [
+          "ex.op.clarity.spectral.secret-loser",
+          "ex.op.clarity.spectral.spine-docs"
+        ],
+        "regime_examples": [
+          "ex.regime.resonance-time.morning-idea"
+        ]
+      },
+      "dependencies": [
+        "fft.ai.core",
+        "fft.ai.spec"
+      ]
+    }
+  ],
+
+  "registry_profile": {
+    "discovery": "static",
+    "resolution": "path-based",
+    "canonical_root": "./"
+  }
+}
 
