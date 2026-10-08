@@ -1,1 +1,167 @@
+{
+  "spec_version": "1.0.0",
+  "canon_id": "FFT-AI-Substrate",
+  "metadata": {
+    "title": "FFT AI Edition – Hardware Substrate",
+    "author_canon": "Nawder Loswin",
+    "license": "Proprietary – TriadicFrameworks Canon",
+    "created_at": "2026-10-08T08:45:00",
+    "updated_at": "2026-10-08T08:45:00",
+    "tags": [
+      "FFT",
+      "RTT",
+      "AI-Edition",
+      "Substrate",
+      "Hardware",
+      "On-Chip"
+    ],
+    "description": "Hardware-ready conceptual substrate for Framework Field Theory. Defines the minimal conceptual primitives, operator kernels, and structural invariants required for on-chip FFT execution."
+  },
+
+  "substrate_profile": {
+    "target": "hardware",
+    "layer": "conceptual",
+    "execution_model": "operator-kernel",
+    "rtt_profile": {
+      "rtt": 1,
+      "coherence": "declared",
+      "drift": "bounded",
+      "paradox": "structural"
+    },
+    "notes": "This substrate provides the minimal conceptual kernel required for hardware-level FFT operations. It is designed for firmware, microcode, conceptual accelerators, and AI-native silicon."
+  },
+
+  "primitives": {
+    "conceptual_units": [
+      {
+        "id": "cu.signal",
+        "name": "Signal Unit",
+        "description": "Base conceptual unit representing any input signal for clarity evaluation.",
+        "type": "field.signal"
+      },
+      {
+        "id": "cu.metric.clarity",
+        "name": "Clarity Metric Unit",
+        "description": "Base metric unit representing clarity output values.",
+        "type": "metric.clarity"
+      }
+    ],
+    "rtt_units": [
+      {
+        "id": "cu.rtt.coherence",
+        "name": "Coherence Unit",
+        "description": "Hardware-level coherence state representation.",
+        "states": ["declared", "latent", "broken"]
+      },
+      {
+        "id": "cu.rtt.drift",
+        "name": "Drift Unit",
+        "description": "Hardware-level drift state representation.",
+        "states": ["bounded", "unbounded"]
+      },
+      {
+        "id": "cu.rtt.paradox",
+        "name": "Paradox Unit",
+        "description": "Hardware-level paradox mode representation.",
+        "states": ["structural", "incidental", "none"]
+      }
+    ]
+  },
+
+  "regimes": [
+    {
+      "id": "regime.resonance-time.core",
+      "name": "Resonance-Time Core Regime",
+      "description": "Primary temporal-structural regime governing clarity, coherence, drift, and paradox handling.",
+      "class": "resonance-time",
+      "constraints": [
+        "coherence=declared",
+        "drift=bounded",
+        "paradox=structural"
+      ]
+    }
+  ],
+
+  "invariants": [
+    {
+      "id": "inv.coherence.declared.bounded-drift",
+      "name": "Declared Coherence Under Bounded Drift",
+      "description": "System must maintain declared coherence while drift remains bounded within the resonance-time regime.",
+      "expression": "coherence(declared) ∧ drift(bounded) → stability(resonance-time)",
+      "scope": "hardware",
+      "applies_to": [
+        "regime.resonance-time.core",
+        "kernel.clarity.spectral"
+      ]
+    }
+  ],
+
+  "kernels": [
+    {
+      "id": "kernel.clarity.spectral",
+      "name": "Spectral Clarity Kernel",
+      "description": "Hardware-level operator kernel for computing clarity values over conceptual signals.",
+      "operator_ref": "op.clarity.spectral",
+      "inputs": [
+        {
+          "name": "signal",
+          "type": "field.signal",
+          "unit": "cu.signal",
+          "required": true
+        }
+      ],
+      "outputs": [
+        {
+          "name": "clarity_value",
+          "type": "metric.clarity",
+          "unit": "cu.metric.clarity",
+          "required": true
+        }
+      ],
+      "constraints": [
+        "inv.coherence.declared.bounded-drift"
+      ],
+      "execution": {
+        "mode": "deterministic",
+        "latency_class": "L1",
+        "notes": "Designed for conceptual accelerators and AI-native silicon."
+      },
+      "version": "1.0.0"
+    }
+  ],
+
+  "structures": [
+    {
+      "id": "structure.spine.hardware",
+      "kind": "spine",
+      "name": "FFT Hardware Spine",
+      "description": "Hardware-level structural backbone for FFT substrate. Defines the conceptual load-bearing axis for clarity kernels.",
+      "kernels": [
+        "kernel.clarity.spectral"
+      ],
+      "regimes": [
+        "regime.resonance-time.core"
+      ],
+      "invariants": [
+        "inv.coherence.declared.bounded-drift"
+      ]
+    }
+  ],
+
+  "validation_profiles": [
+    {
+      "id": "vp.hardware.default",
+      "name": "Default Hardware Validation Profile",
+      "description": "Validation profile for hardware execution of FFT kernels.",
+      "target": "hardware",
+      "enforced_invariants": [
+        "inv.coherence.declared.bounded-drift"
+      ],
+      "allowed_paradox_modes": [
+        "structural"
+      ],
+      "max_drift": "bounded"
+    }
+  ]
+}
 
