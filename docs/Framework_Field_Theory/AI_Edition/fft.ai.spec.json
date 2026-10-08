@@ -1,52 +1,52 @@
 {
   "spec_version": "1.0.0",
-  "canon_id": "FFT-Core",
+  "canon_id": "FFT-AI-Spec",
   "rtt_profile": {
     "rtt": 1,
     "coherence": "declared",
     "drift": "bounded",
     "paradox": "structural"
   },
-"types": {
-  "field.signal": {
-    "id": "field.signal",
-    "description": "Canonical signal type used as input for clarity, coherence, drift, and paradox operators.",
-    "category": "field",
-    "examples": [
-      "Narrative signal",
-      "Structural signal",
-      "Semantic signal",
-      "Temporal signal"
-    ]
+  "metadata": {
+    "title": "FFT AI Edition – Full Specification",
+    "author_canon": "Nawder Loswin",
+    "license": "Proprietary – TriadicFrameworks Canon",
+    "created_at": "2026-10-08T08:40:00",
+    "updated_at": "2026-10-08T08:40:00",
+    "tags": [
+      "FFT",
+      "RTT",
+      "AI-Edition",
+      "Spec",
+      "Clarity"
+    ],
+    "description": "Full machine-native specification for Framework Field Theory including regimes, invariants, operators, structures, types, and validation profiles."
   },
-  "metric.clarity": {
-    "id": "metric.clarity",
-    "description": "Canonical clarity metric output type. Represents the computed clarity value of a given signal.",
-    "category": "metric",
-    "range": "0.0–1.0",
-    "examples": [
-      "0.64",
-      "0.91"
-    ]
-  }
-},
-"structures": [
-  {
-    "id": "structure.spine.core",
-    "kind": "spine",
-    "name": "FFT Spine",
-    "description": "Primary structural backbone for Framework Field Theory. Defines the conceptual load-bearing axis for clarity, coherence, drift, and paradox operators.",
-    "operators": [
-      "op.clarity.spectral"
-    ],
-    "regimes": [
-      "regime.resonance-time.core"
-    ],
-    "invariants": [
-      "inv.coherence.declared.bounded-drift"
-    ]
-  }
-],
+
+  "types": {
+    "field.signal": {
+      "id": "field.signal",
+      "description": "Canonical signal type used as input for clarity, coherence, drift, and paradox operators.",
+      "category": "field",
+      "examples": [
+        "Narrative signal",
+        "Structural signal",
+        "Semantic signal",
+        "Temporal signal"
+      ]
+    },
+    "metric.clarity": {
+      "id": "metric.clarity",
+      "description": "Canonical clarity metric output type. Represents the computed clarity value of a given signal.",
+      "category": "metric",
+      "range": "0.0–1.0",
+      "examples": [
+        "0.64",
+        "0.91"
+      ]
+    }
+  },
+
   "regimes": [
     {
       "id": "regime.resonance-time.core",
@@ -60,6 +60,7 @@
       ]
     }
   ],
+
   "invariants": [
     {
       "id": "inv.coherence.declared.bounded-drift",
@@ -72,6 +73,7 @@
       ]
     }
   ],
+
   "operators": [
     {
       "id": "op.clarity.spectral",
@@ -85,12 +87,6 @@
           "type": "field.signal",
           "description": "The input conceptual or data signal to be evaluated.",
           "required": true
-        },
-        {
-          "name": "context",
-          "type": "rtt.context",
-          "description": "Optional RTT context profile for evaluation.",
-          "required": false
         }
       ],
       "outputs": [
@@ -110,44 +106,28 @@
         "drift": "bounded",
         "paradox": "structural"
       },
-      "examples": [
-        {
-          "id": "ex.op.clarity.spectral.001",
-          "description": "Evaluate clarity of a single narrative signal under declared coherence.",
-          "input": {
-            "signal": "Narrative: 'Secret Loser' lyrical substrate.",
-            "context": {
-              "rtt": 1,
-              "coherence": "declared",
-              "drift": "bounded",
-              "paradox": "structural"
-            }
-          },
-          "output": {
-            "clarity_value": 0.78
-          }
-        }
-      ],
       "version": "1.0.0"
     }
   ],
+
   "structures": [
     {
-  "id": "structure.spine.core",
-  "kind": "spine",
-  "name": "FFT Spine",
-  "description": "Primary structural backbone for Framework Field Theory. Defines the conceptual load-bearing axis for clarity, coherence, drift, and paradox operators.",
-  "operators": [
-    "op.clarity.spectral"
+      "id": "structure.spine.core",
+      "kind": "spine",
+      "name": "FFT Spine",
+      "description": "Primary structural backbone for Framework Field Theory. Defines the conceptual load-bearing axis for clarity, coherence, drift, and paradox operators.",
+      "operators": [
+        "op.clarity.spectral"
+      ],
+      "regimes": [
+        "regime.resonance-time.core"
+      ],
+      "invariants": [
+        "inv.coherence.declared.bounded-drift"
+      ]
+    }
   ],
-  "regimes": [
-    "regime.resonance-time.core"
-  ],
-  "invariants": [
-    "inv.coherence.declared.bounded-drift"
-  ]
-}
-  ],
+
   "validation_profiles": [
     {
       "id": "vp.inference.default",
@@ -164,4 +144,3 @@
     }
   ]
 }
-
