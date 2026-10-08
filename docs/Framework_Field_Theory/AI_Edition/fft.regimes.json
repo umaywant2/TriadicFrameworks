@@ -1,1 +1,20 @@
+{
+  "$id": "https://triadicframeworks.org/schema/fft-ai-edition.json#/$defs/regime",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "description": { "type": "string" },
+    "class": {
+      "type": "string",
+      "enum": ["resonance-time", "drift", "coherence", "paradox", "field"]
+    },
+    "constraints": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Human-readable constraint summaries; machine binding via invariants."
+    }
+  },
+  "required": ["id", "name", "class"]
+}
 
