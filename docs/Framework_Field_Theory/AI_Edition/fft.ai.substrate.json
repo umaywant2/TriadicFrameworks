@@ -1,34 +1,36 @@
 {
-  "spec_version": "1.0.0",
+  "spec_version": "1.2.0",
   "canon_id": "FFT-AI-Substrate",
   "metadata": {
-    "title": "FFT AI Edition – Hardware Substrate",
+    "title": "FFT AI Edition – Hardware Substrate (v1.2)",
     "author_canon": "Nawder Loswin",
     "license": "Proprietary – TriadicFrameworks Canon",
     "created_at": "2026-10-08T08:45:00",
-    "updated_at": "2026-10-08T08:45:00",
+    "updated_at": "2026-10-08T10:00:00",
     "tags": [
       "FFT",
       "RTT",
       "AI-Edition",
       "Substrate",
       "Hardware",
-      "On-Chip"
+      "Conceptual-Accelerator",
+      "v1.2"
     ],
-    "description": "Hardware-ready conceptual substrate for Framework Field Theory. Defines the minimal conceptual primitives, operator kernels, and structural invariants required for on-chip FFT execution."
+    "description": "Enhanced hardware-ready conceptual substrate for FFT, including multi-kernel execution, harmonic analysis support, drift-safe primitives, and agent-ready conceptual units."
   },
 
   "substrate_profile": {
     "target": "hardware",
     "layer": "conceptual",
-    "execution_model": "operator-kernel",
+    "version": "1.2",
+    "execution_model": "multi-kernel",
     "rtt_profile": {
       "rtt": 1,
       "coherence": "declared",
       "drift": "bounded",
       "paradox": "structural"
     },
-    "notes": "This substrate provides the minimal conceptual kernel required for hardware-level FFT operations. It is designed for firmware, microcode, conceptual accelerators, and AI-native silicon."
+    "notes": "v1.2 substrate supports harmonic kernels, drift recovery, substrate fallback routing, and multi-agent probing."
   },
 
   "primitives": {
@@ -36,16 +38,23 @@
       {
         "id": "cu.signal",
         "name": "Signal Unit",
-        "description": "Base conceptual unit representing any input signal for clarity evaluation.",
+        "description": "Base conceptual unit representing any input signal for clarity or harmonic evaluation.",
         "type": "field.signal"
       },
       {
         "id": "cu.metric.clarity",
         "name": "Clarity Metric Unit",
-        "description": "Base metric unit representing clarity output values.",
+        "description": "Metric unit representing clarity output values.",
         "type": "metric.clarity"
+      },
+      {
+        "id": "cu.metric.harmonic",
+        "name": "Harmonic Metric Unit",
+        "description": "Metric unit representing harmonic paradox output values.",
+        "type": "metric.harmonic"
       }
     ],
+
     "rtt_units": [
       {
         "id": "cu.rtt.coherence",
@@ -63,105 +72,126 @@
         "id": "cu.rtt.paradox",
         "name": "Paradox Unit",
         "description": "Hardware-level paradox mode representation.",
-        "states": ["structural", "incidental", "none"]
+        "states": ["structural", "harmonic", "incidental", "none"]
       }
     ]
   },
-
-  "regimes": [
-    {
-      "id": "regime.resonance-time.core",
-      "name": "Resonance-Time Core Regime",
-      "description": "Primary temporal-structural regime governing clarity, coherence, drift, and paradox handling.",
-      "class": "resonance-time",
-      "constraints": [
-        "coherence=declared",
-        "drift=bounded",
-        "paradox=structural"
-      ]
-    }
-  ],
-
-  "invariants": [
-    {
-      "id": "inv.coherence.declared.bounded-drift",
-      "name": "Declared Coherence Under Bounded Drift",
-      "description": "System must maintain declared coherence while drift remains bounded within the resonance-time regime.",
-      "expression": "coherence(declared) ∧ drift(bounded) → stability(resonance-time)",
-      "scope": "hardware",
-      "applies_to": [
-        "regime.resonance-time.core",
-        "kernel.clarity.spectral"
-      ]
-    }
-  ],
 
   "kernels": [
     {
       "id": "kernel.clarity.spectral",
       "name": "Spectral Clarity Kernel",
-      "description": "Hardware-level operator kernel for computing clarity values over conceptual signals.",
-      "operator_ref": "op.clarity.spectral",
-      "inputs": [
-        {
-          "name": "signal",
-          "type": "field.signal",
-          "unit": "cu.signal",
-          "required": true
-        }
-      ],
-      "outputs": [
-        {
-          "name": "clarity_value",
-          "type": "metric.clarity",
-          "unit": "cu.metric.clarity",
-          "required": true
-        }
-      ],
-      "constraints": [
-        "inv.coherence.declared.bounded-drift"
-      ],
-      "execution": {
-        "mode": "deterministic",
-        "latency_class": "L1",
-        "notes": "Designed for conceptual accelerators and AI-native silicon."
-      },
-      "version": "1.0.0"
-    }
-  ],
-
-  "structures": [
+      "description": "Hardware-accelerated clarity computation kernel.",
+      "inputs": ["field.signal"],
+      "outputs": ["metric.clarity"],
+      "latency_class": "L1",
+      "conditions": [
+        "coherence_state == 'declared'",
+        "drift_state == 'bounded'"
+      ]
+    },
     {
-      "id": "structure.spine.hardware",
-      "kind": "spine",
-      "name": "FFT Hardware Spine",
-      "description": "Hardware-level structural backbone for FFT substrate. Defines the conceptual load-bearing axis for clarity kernels.",
-      "kernels": [
-        "kernel.clarity.spectral"
+      "id": "kernel.harmonic.analysis",
+      "name": "Harmonic Analysis Kernel",
+      "description": "Hardware kernel for harmonic paradox evaluation.",
+      "inputs": ["field.signal"],
+      "outputs": ["metric.harmonic"],
+      "latency_class": "L2",
+      "conditions": [
+        "paradox_mode == 'harmonic'"
+      ]
+    },
+    {
+      "id": "kernel.drift.recovery",
+      "name": "Drift Recovery Kernel",
+      "description": "Hardware-assisted drift recovery sequence.",
+      "steps": [
+        "freeze-state",
+        "evaluate-drift-source",
+        "apply-correction",
+        "restore-coherence"
       ],
-      "regimes": [
-        "regime.resonance-time.core"
-      ],
-      "invariants": [
-        "inv.coherence.declared.bounded-drift"
+      "conditions": [
+        "drift_state == 'unbounded'"
       ]
     }
   ],
 
-  "validation_profiles": [
+  "regimes": [
     {
-      "id": "vp.hardware.default",
-      "name": "Default Hardware Validation Profile",
-      "description": "Validation profile for hardware execution of FFT kernels.",
-      "target": "hardware",
-      "enforced_invariants": [
-        "inv.coherence.declared.bounded-drift"
-      ],
-      "allowed_paradox_modes": [
-        "structural"
-      ],
-      "max_drift": "bounded"
+      "id": "regime.resonance-time.core",
+      "name": "Resonance-Time Core Regime",
+      "description": "Primary conceptual regime for clarity evaluation.",
+      "compatible_kernels": ["kernel.clarity.spectral"]
+    },
+    {
+      "id": "regime.harmonic.resonance",
+      "name": "Harmonic Resonance Regime",
+      "description": "Regime activated during harmonic paradox escalation.",
+      "compatible_kernels": ["kernel.harmonic.analysis"]
     }
-  ]
-}
+  ],
 
+  "substrate_routing": {
+    "fallback": "kernel.clarity.spectral",
+    "rules": [
+      {
+        "condition": "hardware_accelerator_available == true",
+        "route_to": "kernel.clarity.spectral"
+      },
+      {
+        "condition": "paradox_mode == 'harmonic'",
+        "route_to": "kernel.harmonic.analysis"
+      },
+      {
+        "condition": "drift_state == 'unbounded'",
+        "route_to": "kernel.drift.recovery"
+      }
+    ]
+  },
+
+  "substrate_probing": {
+    "enabled": true,
+    "probe_sequence": [
+      "check kernel.clarity.spectral availability",
+      "check kernel.harmonic.analysis availability",
+      "check kernel.drift.recovery availability"
+    ],
+    "fallback": "operator.clarity.spectral",
+    "notes": "Agents probe substrate for available kernels and adjust routing accordingly."
+  },
+
+  "substrate_events": [
+    {
+      "id": "event.substrate.kernel.ready",
+      "description": "Triggered when a kernel becomes available.",
+      "payload": ["kernel_id", "latency_class"]
+    },
+    {
+      "id": "event.substrate.harmonic.ready",
+      "description": "Triggered when harmonic kernel is available.",
+      "payload": ["kernel_id", "harmonic_state"]
+    },
+    {
+      "id": "event.substrate.drift.recovery",
+      "description": "Triggered when drift recovery kernel activates.",
+      "payload": ["drift_state", "recovery_stage"]
+    }
+  ],
+
+  "compatibility": {
+    "requires": [
+      "fft.ai.core",
+      "fft.ai.spec",
+      "fft.ai.registry",
+      "fft.ai.execution.graph",
+      "fft.ai.runtime",
+      "fft.ai.autonomy"
+    ],
+    "optional": [
+      "fft.ai.integrations",
+      "fft.ai.hardware.profile"
+    ],
+    "notes": "v1.2 substrate aligns with runtime routing, autonomy tiers, harmonic escalation, and drift recovery."
+  }
+}
