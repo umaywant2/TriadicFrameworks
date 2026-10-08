@@ -60,7 +60,23 @@
       "description": "Hardware-ready conceptual substrate for FFT, defining primitives, kernels, and structural invariants for on-chip execution."
     },
     {
-      "id": "fft.ai.examples",
+      "id": "fft.ai.hardware.profile",
+      "name": "FFT AI Hardware Profile",
+      "path": "./fft.ai.hardware.profile.json",
+      "category": "hardware",
+      "version": "1.0.0",
+      "description": "Hardware capability declaration for conceptual accelerators implementing FFT AI substrate and kernels."
+    },
+    {
+      "id": "fft.ai.bootstrap",
+      "name": "FFT AI Bootstrap",
+      "path": "./fft.ai.bootstrap.json",
+      "category": "bootstrap",
+      "version": "1.0.0",
+      "description": "Boot sequence for initializing FFT AI Edition in AI systems."
+    },
+    {
+      "id": "fft.examples",
       "name": "FFT AI Examples",
       "path": "./fft.examples.json",
       "category": "examples",
@@ -74,7 +90,9 @@
     "fft.ai.spec",
     "fft.ai.registry",
     "fft.ai.substrate",
-    "fft.ai.examples"
+    "fft.ai.hardware.profile",
+    "fft.ai.bootstrap",
+    "fft.examples"
   ],
 
   "dependencies": {
@@ -82,7 +100,8 @@
     "fft.ai.spec": ["fft.ai.core"],
     "fft.ai.registry": ["fft.ai.core", "fft.ai.spec"],
     "fft.ai.substrate": ["fft.ai.core", "fft.ai.spec"],
-    "fft.ai.examples": ["fft.ai.core", "fft.ai.spec"]
+    "fft.ai.hardware.profile": ["fft.ai.substrate", "fft.ai.spec"],
+    "fft.ai.bootstrap": ["fft.ai.core", "fft.ai.spec", "fft.ai.registry", "fft.ai.substrate"],
+    "fft.examples": ["fft.ai.core", "fft.ai.spec"]
   }
 }
-
