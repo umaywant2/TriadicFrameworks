@@ -1,0 +1,23 @@
+{
+  "$id": "https://triadicframeworks.org/schema/fft-ai-edition.json#/$defs/invariant",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "description": { "type": "string" },
+    "expression": {
+      "type": "string",
+      "description": "Canonical expression (could be math, operator-grammar, or RTT clause)."
+    },
+    "scope": {
+      "type": "string",
+      "enum": ["global", "regime", "operator", "structure"]
+    },
+    "applies_to": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "IDs of regimes/operators/structures this invariant binds."
+    }
+  },
+  "required": ["id", "name", "scope"]
+}
