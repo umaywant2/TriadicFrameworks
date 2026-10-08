@@ -1,1 +1,137 @@
+{
+  "spec_version": "1.0.0",
+  "canon_id": "FFT-AI-Execution-Graph",
+  "metadata": {
+    "title": "FFT AI Edition – Execution Graph",
+    "author_canon": "Nawder Loswin",
+    "license": "Proprietary – TriadicFrameworks Canon",
+    "created_at": "2026-10-08T09:22:00",
+    "updated_at": "2026-10-08T09:22:00",
+    "tags": [
+      "FFT",
+      "RTT",
+      "AI-Edition",
+      "Execution-Graph",
+      "Operators",
+      "Regimes"
+    ],
+    "description": "Conceptual execution graph for FFT operators and regimes, defining flow between perception, reasoning, and action layers."
+  },
+
+  "graph_profile": {
+    "mode": "conceptual",
+    "target": "ai-agent",
+    "rtt_profile": {
+      "rtt": 1,
+      "coherence": "declared",
+      "drift": "bounded",
+      "paradox": "structural"
+    },
+    "notes": "This graph describes how FFT operators and regimes are traversed during agent execution."
+  },
+
+  "nodes": [
+    {
+      "id": "node.input.signal",
+      "type": "input",
+      "name": "Signal Ingestion",
+      "description": "Entry point for incoming signals to be evaluated.",
+      "payload": {
+        "signal_type": "field.signal"
+      }
+    },
+    {
+      "id": "node.regime.resonance-time",
+      "type": "regime",
+      "name": "Resonance-Time Core Regime",
+      "ref": "regime.resonance-time.core",
+      "description": "Temporal-structural regime governing clarity, coherence, drift, and paradox handling."
+    },
+    {
+      "id": "node.invariant.coherence-drift",
+      "type": "invariant",
+      "name": "Declared Coherence Under Bounded Drift",
+      "ref": "inv.coherence.declared.bounded-drift",
+      "description": "Ensures declared coherence while drift remains bounded."
+    },
+    {
+      "id": "node.operator.clarity.spectral",
+      "type": "operator",
+      "name": "Spectral Clarity Operator",
+      "ref": "op.clarity.spectral",
+      "description": "Computes clarity value over the signal within the resonance-time regime.",
+      "inputs": ["field.signal"],
+      "outputs": ["metric.clarity"]
+    },
+    {
+      "id": "node.output.clarity",
+      "type": "output",
+      "name": "Clarity Output",
+      "description": "Provides clarity metric for downstream reasoning or action.",
+      "payload": {
+        "metric_type": "metric.clarity"
+      }
+    }
+  ],
+
+  "edges": [
+    {
+      "id": "edge.input-to-regime",
+      "from": "node.input.signal",
+      "to": "node.regime.resonance-time",
+      "description": "Signal enters the resonance-time regime for evaluation."
+    },
+    {
+      "id": "edge.regime-to-invariant",
+      "from": "node.regime.resonance-time",
+      "to": "node.invariant.coherence-drift",
+      "description": "Regime activates invariant to enforce coherence and bounded drift."
+    },
+    {
+      "id": "edge.invariant-to-operator",
+      "from": "node.invariant.coherence-drift",
+      "to": "node.operator.clarity.spectral",
+      "description": "Invariant conditions gate execution of the clarity operator."
+    },
+    {
+      "id": "edge.operator-to-output",
+      "from": "node.operator.clarity.spectral",
+      "to": "node.output.clarity",
+      "description": "Clarity operator produces metric output for downstream use."
+    }
+  ],
+
+  "layers": [
+    {
+      "id": "layer.perception",
+      "name": "Perception Layer",
+      "nodes": [
+        "node.input.signal",
+        "node.regime.resonance-time"
+      ]
+    },
+    {
+      "id": "layer.reasoning",
+      "name": "Reasoning Layer",
+      "nodes": [
+        "node.invariant.coherence-drift",
+        "node.operator.clarity.spectral"
+      ]
+    },
+    {
+      "id": "layer.action",
+      "name": "Action Layer",
+      "nodes": [
+        "node.output.clarity"
+      ]
+    }
+  ],
+
+  "entry_points": {
+    "primary": "node.input.signal",
+    "primary_operator": "node.operator.clarity.spectral",
+    "primary_regime": "node.regime.resonance-time",
+    "primary_invariant": "node.invariant.coherence-drift"
+  }
+}
 
