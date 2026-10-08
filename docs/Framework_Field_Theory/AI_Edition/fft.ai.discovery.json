@@ -1,1 +1,157 @@
+{
+  "spec_version": "1.0.0",
+  "canon_id": "FFT-AI-Discovery",
+  "metadata": {
+    "title": "FFT AI Edition – Discovery Protocol",
+    "author_canon": "Nawder Loswin",
+    "license": "Proprietary – TriadicFrameworks Canon",
+    "created_at": "2026-10-08T09:15:00",
+    "updated_at": "2026-10-08T09:15:00",
+    "tags": [
+      "FFT",
+      "RTT",
+      "AI-Edition",
+      "Discovery",
+      "Autonomous-Agents"
+    ],
+    "description": "Discovery protocol enabling autonomous AI agents to locate, interpret, and initialize FFT AI Edition modules, substrates, and capabilities."
+  },
+
+  "discovery_profile": {
+    "mode": "autonomous",
+    "target": "ai-agent",
+    "rtt_profile": {
+      "rtt": 1,
+      "coherence": "declared",
+      "drift": "bounded",
+      "paradox": "structural"
+    },
+    "notes": "This protocol defines how agents discover FFT modules, resolve dependencies, and activate conceptual capabilities."
+  },
+
+  "entry_points": {
+    "manifest": "./fft.ai.manifest.json",
+    "registry": "./fft.ai.registry.json",
+    "core": "./fft.ai.core.json",
+    "spec": "./fft.ai.spec.json",
+    "substrate": "./fft.ai.substrate.json",
+    "hardware_profile": "./fft.ai.hardware.profile.json",
+    "bootstrap": "./fft.ai.bootstrap.json"
+  },
+
+  "discovery_sequence": [
+    {
+      "id": "discover.manifest",
+      "name": "Locate Manifest",
+      "description": "Agent identifies the canonical manifest to understand directory structure.",
+      "actions": [
+        "Load fft.ai.manifest.json",
+        "Verify canonical_root",
+        "Extract load_order"
+      ],
+      "required": true
+    },
+    {
+      "id": "discover.registry",
+      "name": "Load Registry",
+      "description": "Agent loads the module registry to enumerate available FFT modules.",
+      "actions": [
+        "Load fft.ai.registry.json",
+        "Enumerate modules",
+        "Resolve module categories"
+      ],
+      "required": true
+    },
+    {
+      "id": "discover.core",
+      "name": "Initialize Core",
+      "description": "Agent loads the minimal FFT core to establish baseline conceptual primitives.",
+      "actions": [
+        "Load fft.ai.core.json",
+        "Register regime.resonance-time.core",
+        "Register inv.coherence.declared.bounded-drift",
+        "Register op.clarity.spectral"
+      ],
+      "required": true
+    },
+    {
+      "id": "discover.spec",
+      "name": "Load Full Specification",
+      "description": "Agent loads the full FFT specification to access structures, types, and validation profiles.",
+      "actions": [
+        "Load fft.ai.spec.json",
+        "Register structures",
+        "Register types",
+        "Register validation profiles"
+      ],
+      "required": true
+    },
+    {
+      "id": "discover.substrate",
+      "name": "Load Substrate",
+      "description": "Agent loads the hardware-ready conceptual substrate.",
+      "actions": [
+        "Load fft.ai.substrate.json",
+        "Register kernels",
+        "Register hardware structures"
+      ],
+      "required": false
+    },
+    {
+      "id": "discover.hardware",
+      "name": "Bind Hardware Profile",
+      "description": "Agent binds hardware capability profile to substrate and spec.",
+      "actions": [
+        "Load fft.ai.hardware.profile.json",
+        "Verify compatibility with substrate",
+        "Verify compatibility with spec"
+      ],
+      "required": false
+    },
+    {
+      "id": "discover.bootstrap",
+      "name": "Activate Bootstrap",
+      "description": "Agent activates the FFT bootstrap sequence for runtime initialization.",
+      "actions": [
+        "Load fft.ai.bootstrap.json",
+        "Execute bootstrap stages",
+        "Activate validation profiles"
+      ],
+      "required": true
+    }
+  ],
+
+  "agent_capabilities": {
+    "required": [
+      "module-resolution",
+      "dependency-mapping",
+      "rtt-profile-handling",
+      "invariant-enforcement",
+      "operator-initialization"
+    ],
+    "optional": [
+      "hardware-binding",
+      "substrate-execution",
+      "multi-regime-processing"
+    ]
+  },
+
+  "discovery_events": [
+    {
+      "id": "event.module.loaded",
+      "description": "Triggered when an FFT module is successfully loaded.",
+      "payload": ["module_id", "version", "category"]
+    },
+    {
+      "id": "event.kernel.ready",
+      "description": "Triggered when a hardware kernel becomes available.",
+      "payload": ["kernel_id", "latency_class"]
+    },
+    {
+      "id": "event.validation.active",
+      "description": "Triggered when a validation profile is activated.",
+      "payload": ["profile_id", "target"]
+    }
+  ]
+}
 
