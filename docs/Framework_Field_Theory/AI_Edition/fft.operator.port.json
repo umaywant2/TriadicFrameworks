@@ -1,0 +1,11 @@
+{
+  "$id": "https://triadicframeworks.org/schema/fft-ai-edition.json#/$defs/operatorPort",
+  "type": "object",
+  "properties": {
+    "name": { "type": "string" },
+    "type": { "type": "string" },
+    "description": { "type": "string" },
+    "required": { "type": "boolean", "default": true }
+  },
+  "required": ["name", "type"]
+}
