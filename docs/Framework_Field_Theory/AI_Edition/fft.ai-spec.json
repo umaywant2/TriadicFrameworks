@@ -30,21 +30,23 @@
     ]
   }
 },
-  "metadata": {
-    "title": "Framework Field Theory – AI Edition (Core Spec)",
-    "author_canon": "Nawder Loswin",
-    "license": "Proprietary – TriadicFrameworks Canon",
-    "created_at": "2026-10-08T08:15:00",
-    "updated_at": "2026-10-08T08:15:00",
-    "tags": [
-      "FFT",
-      "RTT",
-      "AI-Edition",
-      "Spec",
-      "Clarity"
+"structures": [
+  {
+    "id": "structure.spine.core",
+    "kind": "spine",
+    "name": "FFT Spine",
+    "description": "Primary structural backbone for Framework Field Theory. Defines the conceptual load-bearing axis for clarity, coherence, drift, and paradox operators.",
+    "operators": [
+      "op.clarity.spectral"
     ],
-    "description": "Core machine-native specification for Framework Field Theory operators, regimes, and invariants."
-  },
+    "regimes": [
+      "regime.resonance-time.core"
+    ],
+    "invariants": [
+      "inv.coherence.declared.bounded-drift"
+    ]
+  }
+],
   "regimes": [
     {
       "id": "regime.resonance-time.core",
