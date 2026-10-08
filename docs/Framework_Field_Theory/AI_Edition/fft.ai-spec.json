@@ -1,1 +1,126 @@
+{
+  "spec_version": "1.0.0",
+  "canon_id": "FFT-Core",
+  "rtt_profile": {
+    "rtt": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "metadata": {
+    "title": "Framework Field Theory – AI Edition (Core Spec)",
+    "author_canon": "Nawder Loswin",
+    "license": "Proprietary – TriadicFrameworks Canon",
+    "created_at": "2026-10-08T08:15:00",
+    "updated_at": "2026-10-08T08:15:00",
+    "tags": [
+      "FFT",
+      "RTT",
+      "AI-Edition",
+      "Spec",
+      "Clarity"
+    ],
+    "description": "Core machine-native specification for Framework Field Theory operators, regimes, and invariants."
+  },
+  "regimes": [
+    {
+      "id": "regime.resonance-time.core",
+      "name": "Resonance-Time Core Regime",
+      "description": "Primary temporal-structural regime governing clarity, coherence, drift, and paradox handling.",
+      "class": "resonance-time",
+      "constraints": [
+        "coherence=declared",
+        "drift=bounded",
+        "paradox=structural"
+      ]
+    }
+  ],
+  "invariants": [
+    {
+      "id": "inv.coherence.declared.bounded-drift",
+      "name": "Declared Coherence Under Bounded Drift",
+      "description": "System must maintain declared coherence while drift remains bounded within the resonance-time regime.",
+      "expression": "coherence(declared) ∧ drift(bounded) → stability(resonance-time)",
+      "scope": "regime",
+      "applies_to": [
+        "regime.resonance-time.core"
+      ]
+    }
+  ],
+  "operators": [
+    {
+      "id": "op.clarity.spectral",
+      "name": "Spectral Clarity",
+      "description": "Computes a clarity value over a given signal within the resonance-time regime, enforcing bounded drift.",
+      "category": "clarity",
+      "regime": "regime.resonance-time.core",
+      "inputs": [
+        {
+          "name": "signal",
+          "type": "field.signal",
+          "description": "The input conceptual or data signal to be evaluated.",
+          "required": true
+        },
+        {
+          "name": "context",
+          "type": "rtt.context",
+          "description": "Optional RTT context profile for evaluation.",
+          "required": false
+        }
+      ],
+      "outputs": [
+        {
+          "name": "clarity_value",
+          "type": "metric.clarity",
+          "description": "Computed clarity metric for the given signal.",
+          "required": true
+        }
+      ],
+      "constraints": [
+        "inv.coherence.declared.bounded-drift"
+      ],
+      "rtt_profile": {
+        "rtt": 1,
+        "coherence": "declared",
+        "drift": "bounded",
+        "paradox": "structural"
+      },
+      "examples": [
+        {
+          "id": "ex.op.clarity.spectral.001",
+          "description": "Evaluate clarity of a single narrative signal under declared coherence.",
+          "input": {
+            "signal": "Narrative: 'Secret Loser' lyrical substrate.",
+            "context": {
+              "rtt": 1,
+              "coherence": "declared",
+              "drift": "bounded",
+              "paradox": "structural"
+            }
+          },
+          "output": {
+            "clarity_value": 0.78
+          }
+        }
+      ],
+      "version": "1.0.0"
+    }
+  ],
+  "structures": [],
+  "validation_profiles": [
+    {
+      "id": "vp.inference.default",
+      "name": "Default Inference Profile",
+      "description": "Standard validation profile for AI inference using FFT operators.",
+      "target": "inference",
+      "enforced_invariants": [
+        "inv.coherence.declared.bounded-drift"
+      ],
+      "allowed_paradox_modes": [
+        "structural"
+      ],
+      "max_drift": "bounded"
+    }
+  ]
+}
 
