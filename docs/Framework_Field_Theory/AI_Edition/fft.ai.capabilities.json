@@ -1,1 +1,41 @@
+{
+  "spec_version": "1.0.0",
+  "canon_id": "FFT-AI-Capabilities",
+  "metadata": {
+    "title": "FFT AI Edition – Capability Map",
+    "author_canon": "Nawder Loswin",
+    "license": "Proprietary – TriadicFrameworks Canon",
+    "created_at": "2026-10-08T09:10:00",
+    "updated_at": "2026-10-08T09:10:00",
+    "tags": ["FFT", "RTT", "Capabilities"],
+    "description": "Unified capability map for AI systems implementing FFT AI Edition."
+  },
+
+  "capabilities": {
+    "conceptual": [
+      "clarity-evaluation",
+      "coherence-mapping",
+      "drift-bounding",
+      "paradox-classification",
+      "regime-navigation"
+    ],
+    "structural": [
+      "spine-alignment",
+      "substrate-binding",
+      "operator-resolution",
+      "invariant-enforcement"
+    ],
+    "hardware": [
+      "kernel-execution",
+      "latency-class-L1-L2",
+      "signal-streaming",
+      "metric-output"
+    ],
+    "runtime": [
+      "bootstrap-sequencing",
+      "validation-profile-activation",
+      "multi-regime-processing"
+    ]
+  }
+}
 
