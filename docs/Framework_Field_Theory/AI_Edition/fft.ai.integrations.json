@@ -1,53 +1,67 @@
 {
-  "spec_version": "1.0.0",
+  "spec_version": "1.2.0",
   "canon_id": "FFT-AI-Integrations",
   "metadata": {
-    "title": "FFT AI Edition – Integration Map",
+    "title": "FFT AI Edition – Integration Map (v1.2)",
     "author_canon": "Nawder Loswin",
     "license": "Proprietary – TriadicFrameworks Canon",
     "created_at": "2026-10-08T09:18:00",
-    "updated_at": "2026-10-08T09:18:00",
+    "updated_at": "2026-10-08T09:40:00",
     "tags": [
       "FFT",
       "RTT",
       "AI-Edition",
       "Integrations",
       "Frameworks",
-      "Cross-System"
+      "Cross-System",
+      "v1.2"
     ],
-    "description": "Cross-system integration map for external AI frameworks, enabling FFT AI Edition to interface with conceptual engines, runtime environments, and hybrid substrates."
+    "description": "Enhanced cross-system integration map enabling FFT AI Edition to interface with transformer models, graph systems, symbolic engines, hybrid substrates, agent frameworks, and conceptual accelerators."
   },
 
   "integration_profile": {
     "mode": "multi-framework",
     "target": "external-ai-systems",
+    "version": "1.2",
     "rtt_profile": {
       "rtt": 1,
       "coherence": "declared",
       "drift": "bounded",
       "paradox": "structural"
     },
-    "notes": "Defines how FFT modules, operators, regimes, and substrates integrate with external AI frameworks."
+    "notes": "v1.2 adds harmonic escalation, substrate routing, agent-framework bindings, and multi-operator mapping."
   },
 
   "frameworks": [
     {
       "id": "framework.transformer",
       "name": "Transformer-Based Models",
-      "description": "Integration layer for transformer architectures (attention-based systems).",
+      "description": "Integration layer for attention-based architectures.",
       "bindings": {
         "operators": [
           {
             "operator_id": "op.clarity.spectral",
             "binding": "attention-post-processing",
-            "notes": "Clarity operator evaluates coherence of attention outputs."
+            "notes": "Evaluates coherence of attention outputs."
+          },
+          {
+            "operator_id": "op.harmonic.analysis",
+            "binding": "attention-harmonic-evaluation",
+            "notes": "Activated when paradox escalates to harmonic mode."
           }
         ],
         "regimes": [
           {
             "regime_id": "regime.resonance-time.core",
             "binding": "temporal-stability-layer",
-            "notes": "Resonance-time regime stabilizes temporal drift in transformer sequences."
+            "notes": "Stabilizes drift in sequential attention."
+          }
+        ],
+        "substrate": [
+          {
+            "kernel_id": "kernel.clarity.spectral",
+            "binding": "hardware-accelerated-attention-evaluation",
+            "notes": "Optional hardware execution path."
           }
         ]
       }
@@ -56,13 +70,13 @@
     {
       "id": "framework.graph",
       "name": "Graph Neural Networks",
-      "description": "Integration layer for GNNs and structural graph-based AI systems.",
+      "description": "Integration layer for structural graph-based AI systems.",
       "bindings": {
         "operators": [
           {
             "operator_id": "op.clarity.spectral",
             "binding": "node-state-evaluation",
-            "notes": "Clarity operator evaluates structural coherence across graph nodes."
+            "notes": "Evaluates structural coherence across graph nodes."
           }
         ],
         "structures": [
@@ -70,6 +84,42 @@
             "structure_id": "structure.spine.core",
             "binding": "canonical-graph-backbone",
             "notes": "FFT Spine maps directly to GNN backbone layers."
+          }
+        ],
+        "regimes": [
+          {
+            "regime_id": "regime.resonance-time.core",
+            "binding": "graph-stability-regime",
+            "notes": "Ensures stable conceptual transitions across graph layers."
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "framework.symbolic",
+      "name": "Symbolic Reasoning Engines",
+      "description": "Integration layer for symbolic logic and rule-based systems.",
+      "bindings": {
+        "invariants": [
+          {
+            "invariant_id": "inv.coherence.declared.bounded-drift",
+            "binding": "symbolic-constraint-layer",
+            "notes": "Enforces coherence constraints during symbolic reasoning."
+          }
+        ],
+        "operators": [
+          {
+            "operator_id": "op.clarity.spectral",
+            "binding": "symbolic-clarity-evaluation",
+            "notes": "Evaluates clarity of symbolic expressions."
+          }
+        ],
+        "runtime": [
+          {
+            "runtime_id": "fft.ai.runtime",
+            "binding": "symbolic-execution-controller",
+            "notes": "Manages transitions between symbolic and conceptual execution modes."
           }
         ]
       }
@@ -80,18 +130,54 @@
       "name": "Hybrid Symbolic-Neural Systems",
       "description": "Integration layer for systems combining symbolic reasoning with neural inference.",
       "bindings": {
-        "invariants": [
+        "operators": [
           {
-            "invariant_id": "inv.coherence.declared.bounded-drift",
-            "binding": "symbolic-constraint-layer",
-            "notes": "Invariant enforces coherence constraints during symbolic reasoning."
+            "operator_id": "op.clarity.spectral",
+            "binding": "hybrid-clarity-evaluation",
+            "notes": "Evaluates clarity across hybrid reasoning paths."
           }
         ],
         "runtime": [
           {
             "runtime_id": "fft.ai.runtime",
             "binding": "hybrid-execution-controller",
-            "notes": "Runtime manages transitions between symbolic and neural execution modes."
+            "notes": "Controls transitions between symbolic and neural execution."
+          }
+        ],
+        "invariants": [
+          {
+            "invariant_id": "inv.coherence.declared.bounded-drift",
+            "binding": "hybrid-coherence-layer",
+            "notes": "Maintains coherence across hybrid reasoning."
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "framework.agent",
+      "name": "Autonomous Agent Frameworks",
+      "description": "Integration layer for agent systems (AutoGen, LangChain, Semantic Kernel, custom RTT agents).",
+      "bindings": {
+        "autonomy": [
+          {
+            "profile_id": "fft.ai.autonomy",
+            "binding": "agent-behavior-controller",
+            "notes": "Provides autonomy tiers, drift recovery, paradox escalation."
+          }
+        ],
+        "execution_graph": [
+          {
+            "graph_id": "fft.ai.execution.graph",
+            "binding": "agent-execution-flow",
+            "notes": "Defines conceptual flow for agent reasoning."
+          }
+        ],
+        "runtime": [
+          {
+            "runtime_id": "fft.ai.runtime",
+            "binding": "agent-runtime-controller",
+            "notes": "Aligns agent execution with FFT runtime v1.2."
           }
         ]
       }
@@ -115,6 +201,13 @@
             "binding": "firmware-initialization",
             "notes": "Substrate loaded during hardware boot sequence."
           }
+        ],
+        "harmonic": [
+          {
+            "operator_id": "op.harmonic.analysis",
+            "binding": "harmonic-kernel-execution",
+            "notes": "Optional hardware execution path for harmonic paradox analysis."
+          }
         ]
       }
     }
@@ -124,17 +217,22 @@
     {
       "id": "event.framework.bound",
       "description": "Triggered when FFT binds to an external framework.",
-      "payload": ["framework_id", "binding_type"]
+      "payload": ["framework_id", "binding_type", "timestamp"]
     },
     {
       "id": "event.operator.mapped",
       "description": "Triggered when an FFT operator is mapped to an external system.",
-      "payload": ["operator_id", "binding"]
+      "payload": ["operator_id", "binding", "context"]
     },
     {
       "id": "event.runtime.engaged",
       "description": "Triggered when FFT runtime activates inside an external AI system.",
       "payload": ["runtime_id", "execution_mode"]
+    },
+    {
+      "id": "event.harmonic.escalation",
+      "description": "Triggered when harmonic paradox mode is activated.",
+      "payload": ["operator_id", "harmonic_state"]
     }
   ],
 
@@ -143,13 +241,14 @@
       "fft.ai.core",
       "fft.ai.spec",
       "fft.ai.registry",
-      "fft.ai.runtime"
+      "fft.ai.runtime",
+      "fft.ai.autonomy",
+      "fft.ai.execution.graph"
     ],
     "optional": [
       "fft.ai.substrate",
       "fft.ai.hardware.profile"
     ],
-    "notes": "External frameworks must support RTT profiles and invariant enforcement to fully integrate FFT."
+    "notes": "v1.2 integrations require autonomy and execution graph layers for full agent readiness."
   }
 }
-
