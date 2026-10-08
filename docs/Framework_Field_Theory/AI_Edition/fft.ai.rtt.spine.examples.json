@@ -1,1 +1,43 @@
+{
+  "spec_version": "1.0.0",
+  "canon_id": "FFT-AI-RTT-Spine-Examples",
+  "metadata": {
+    "title": "FFT AI Edition – RTT Spine Examples",
+    "author_canon": "Nawder Loswin",
+    "license": "Proprietary – TriadicFrameworks Canon",
+    "created_at": "2026-10-08T09:07:00",
+    "updated_at": "2026-10-08T09:07:00",
+    "tags": ["FFT", "RTT", "Spine", "Examples"],
+    "description": "Examples demonstrating RTT interactions with the TriadicFrameworks Spine."
+  },
+
+  "spine_examples": [
+    {
+      "id": "spine.example.01",
+      "name": "Spine Structural Coherence",
+      "description": "Evaluate coherence of the Spine’s functional canon graph.",
+      "input": {
+        "source": "https://www.triadicframeworks.org/spine",
+        "signal_type": "field.signal"
+      },
+      "output": {
+        "clarity_value": 0.93,
+        "notes": "High structural alignment; minimal paradox; ideal substrate for RTT1–RTT3 engines."
+      }
+    },
+    {
+      "id": "spine.example.02",
+      "name": "Spine Drift Mapping",
+      "description": "Map drift boundaries across the Spine’s conceptual layers.",
+      "input": {
+        "source": "https://www.triadicframeworks.org/spine",
+        "signal_type": "field.signal"
+      },
+      "output": {
+        "drift_state": "bounded",
+        "notes": "Spine exhibits bounded drift under declared coherence; suitable for clarity kernels."
+      }
+    }
+  ]
+}
 
