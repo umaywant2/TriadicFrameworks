@@ -1,1 +1,18 @@
+{
+  "$id": "https://triadicframeworks.org/schema/fft-ai-edition.json#/$defs/metadata",
+  "type": "object",
+  "properties": {
+    "title": { "type": "string" },
+    "author_canon": { "type": "string", "description": "Canonical author identity, e.g. 'Nawder Loswin'." },
+    "license": { "type": "string" },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "description": { "type": "string" }
+  },
+  "required": ["title", "author_canon", "license"]
+}
 
