@@ -1,0 +1,11 @@
+{
+  "$id": "https://triadicframeworks.org/schema/fft-ai-edition.json#/$defs/operatorExample",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "description": { "type": "string" },
+    "input": { "type": "object" },
+    "output": { "type": "object" }
+  },
+  "required": ["id", "description"]
+}
