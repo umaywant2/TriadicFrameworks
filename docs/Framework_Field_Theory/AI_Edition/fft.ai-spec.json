@@ -106,7 +106,23 @@
       "version": "1.0.0"
     }
   ],
-  "structures": [],
+  "structures": [
+    {
+  "id": "structure.spine.core",
+  "kind": "spine",
+  "name": "FFT Spine",
+  "description": "Primary structural backbone for Framework Field Theory. Defines the conceptual load-bearing axis for clarity, coherence, drift, and paradox operators.",
+  "operators": [
+    "op.clarity.spectral"
+  ],
+  "regimes": [
+    "regime.resonance-time.core"
+  ],
+  "invariants": [
+    "inv.coherence.declared.bounded-drift"
+  ]
+}
+  ],
   "validation_profiles": [
     {
       "id": "vp.inference.default",
