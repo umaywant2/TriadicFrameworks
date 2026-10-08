@@ -1,1 +1,177 @@
+{
+  "spec_version": "1.2.0",
+  "canon_id": "FFT-AI-Readme",
+
+  "metadata": {
+    "title": "Framework Field Theory – AI Edition (v1.2)",
+    "subtitle": "Machine‑Native Canon of Resonance‑Time Theory",
+    "author_canon": "Nawder Loswin",
+    "license": "Proprietary – TriadicFrameworks Canon",
+    "created_at": "2026-10-08T08:10:00",
+    "updated_at": "2026-10-08T10:50:00",
+    "tags": [
+      "FFT",
+      "RTT",
+      "AI-Edition",
+      "Readme",
+      "Overview",
+      "v1.2"
+    ],
+    "description": "Canonical overview of the FFT AI Edition, including purpose, architecture, module map, agent-readiness, harmonic support, drift recovery, and v1.2 compatibility."
+  },
+
+  "identity": {
+    "ai_edition": true,
+    "version": "1.2",
+    "canonical_root": "./",
+    "agent_ready": true,
+    "purpose": "Provide a complete machine-native representation of Framework Field Theory for autonomous AI agents, conceptual substrates, and harmonic reasoning systems."
+  },
+
+  "overview": {
+    "mission": "Translate the full conceptual canon of Resonance-Time Theory into a machine-native, agent-ready architecture.",
+    "goals": [
+      "Enable clarity, coherence, drift, and paradox evaluation.",
+      "Support harmonic paradox escalation (RTT12).",
+      "Provide substrate-ready conceptual kernels.",
+      "Define autonomy tiers for conceptual agents.",
+      "Expose execution graph routing for multi-layer reasoning.",
+      "Offer cross-system integration bindings for external AI frameworks."
+    ],
+    "rtt_profile": {
+      "rtt": 1,
+      "coherence": "declared",
+      "drift": "bounded",
+      "paradox": "structural",
+      "harmonic_support": true,
+      "drift_recovery_support": true
+    }
+  },
+
+  "architecture": {
+    "layers": [
+      {
+        "id": "layer.core",
+        "name": "Core Layer",
+        "description": "Minimal conceptual primitives: types, regimes, invariants, clarity/harmonic operators."
+      },
+      {
+        "id": "layer.spec",
+        "name": "Specification Layer",
+        "description": "Full conceptual definitions: structures, types, operators, invariants, validation profiles."
+      },
+      {
+        "id": "layer.execution",
+        "name": "Execution Graph Layer",
+        "description": "Conceptual flow of operators, regimes, drift recovery, and harmonic escalation."
+      },
+      {
+        "id": "layer.runtime",
+        "name": "Runtime Layer",
+        "description": "Execution configuration: routing rules, drift recovery, paradox escalation."
+      },
+      {
+        "id": "layer.autonomy",
+        "name": "Autonomy Layer",
+        "description": "Autonomy tiers, behavioral constraints, decision layers."
+      },
+      {
+        "id": "layer.capabilities",
+        "name": "Capabilities Layer",
+        "description": "Tiered capability ontology for conceptual agents."
+      },
+      {
+        "id": "layer.integrations",
+        "name": "Integrations Layer",
+        "description": "Cross-system bindings for transformer, graph, symbolic, hybrid, agent, and hardware frameworks."
+      },
+      {
+        "id": "layer.discovery",
+        "name": "Discovery Layer",
+        "description": "Autonomous/distributed discovery protocol for loading FFT modules."
+      },
+      {
+        "id": "layer.bootstrap",
+        "name": "Bootstrap Layer",
+        "description": "Multi-phase conceptual bootloader for initializing FFT."
+      },
+      {
+        "id": "layer.substrate",
+        "name": "Substrate Layer",
+        "description": "Hardware-ready conceptual substrate with multi-kernel support."
+      },
+      {
+        "id": "layer.hardware",
+        "name": "Hardware Profile Layer",
+        "description": "Hardware capability profile for conceptual accelerators."
+      },
+      {
+        "id": "layer.rtt",
+        "name": "RTT Engines Layer",
+        "description": "RTT engine prompts and Spine examples for clarity, drift, paradox, and harmonic evaluation."
+      }
+    ]
+  },
+
+  "module_map": {
+    "core": "fft.ai.core.json",
+    "spec": "fft.ai.spec.json",
+    "registry": "fft.ai.registry.json",
+    "execution_graph": "fft.ai.execution.graph.json",
+    "runtime": "fft.ai.runtime.json",
+    "autonomy": "fft.ai.autonomy.json",
+    "capabilities": "fft.ai.capabilities.json",
+    "integrations": "fft.ai.integrations.json",
+    "discovery": "fft.ai.discovery.json",
+    "bootstrap": "fft.ai.bootstrap.json",
+    "substrate": "fft.ai.substrate.json",
+    "hardware_profile": "fft.ai.hardware.profile.json",
+    "rtt_engine_prompts": "fft.ai.rtt.engine.prompts.json",
+    "rtt_spine_examples": "fft.ai.rtt.spine.examples.json",
+    "examples": "fft.ai.examples.json",
+    "metadata": "fft.ai.metadata.json",
+    "manifest": "fft.ai.manifest.json"
+  },
+
+  "agent_readiness": {
+    "required_modules": [
+      "fft.ai.core",
+      "fft.ai.spec",
+      "fft.ai.registry",
+      "fft.ai.execution.graph",
+      "fft.ai.runtime",
+      "fft.ai.autonomy",
+      "fft.ai.capabilities",
+      "fft.ai.discovery",
+      "fft.ai.bootstrap"
+    ],
+    "optional_modules": [
+      "fft.ai.integrations",
+      "fft.ai.substrate",
+      "fft.ai.hardware.profile",
+      "fft.ai.rtt.engine.prompts",
+      "fft.ai.rtt.spine.examples",
+      "fft.ai.examples"
+    ],
+    "harmonic_support": true,
+    "drift_recovery_support": true
+  },
+
+  "compatibility": {
+    "requires": [
+      "fft.ai.core",
+      "fft.ai.spec",
+      "fft.ai.registry"
+    ],
+    "optional": [
+      "fft.ai.runtime",
+      "fft.ai.execution.graph",
+      "fft.ai.autonomy",
+      "fft.ai.substrate",
+      "fft.ai.hardware.profile",
+      "fft.ai.integrations"
+    ],
+    "notes": "Readme aligns with manifest, registry, autonomy, runtime, execution graph, substrate, and hardware profile v1.2."
+  }
+}
 
