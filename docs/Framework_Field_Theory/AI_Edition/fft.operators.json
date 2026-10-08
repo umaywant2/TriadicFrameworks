@@ -1,1 +1,47 @@
+{
+  "$id": "https://triadicframeworks.org/schema/fft-ai-edition.json#/$defs/operator",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "description": { "type": "string" },
+    "category": {
+      "type": "string",
+      "enum": ["clarity", "coherence", "drift", "paradox", "resonance", "field", "meta"]
+    },
+    "regime": {
+      "type": "string",
+      "description": "Regime ID this operator primarily lives in."
+    },
+    "inputs": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/operatorPort" }
+    },
+    "outputs": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/operatorPort" }
+    },
+    "constraints": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Local constraints; may reference invariant IDs."
+    },
+    "rtt_profile": {
+      "type": "object",
+      "properties": {
+        "rtt": { "type": "integer" },
+        "coherence": { "type": "string", "enum": ["declared", "latent", "broken"] },
+        "drift": { "type": "string", "enum": ["bounded", "unbounded"] },
+        "paradox": { "type": "string", "enum": ["structural", "incidental", "none"] }
+      },
+      "required": ["rtt", "coherence", "drift", "paradox"]
+    },
+    "examples": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/operatorExample" }
+    },
+    "version": { "type": "string" }
+  },
+  "required": ["id", "name", "category", "regime", "inputs", "outputs"]
+}
 
