@@ -1,1 +1,155 @@
+{
+  "spec_version": "1.0.0",
+  "canon_id": "FFT-AI-Integrations",
+  "metadata": {
+    "title": "FFT AI Edition – Integration Map",
+    "author_canon": "Nawder Loswin",
+    "license": "Proprietary – TriadicFrameworks Canon",
+    "created_at": "2026-10-08T09:18:00",
+    "updated_at": "2026-10-08T09:18:00",
+    "tags": [
+      "FFT",
+      "RTT",
+      "AI-Edition",
+      "Integrations",
+      "Frameworks",
+      "Cross-System"
+    ],
+    "description": "Cross-system integration map for external AI frameworks, enabling FFT AI Edition to interface with conceptual engines, runtime environments, and hybrid substrates."
+  },
+
+  "integration_profile": {
+    "mode": "multi-framework",
+    "target": "external-ai-systems",
+    "rtt_profile": {
+      "rtt": 1,
+      "coherence": "declared",
+      "drift": "bounded",
+      "paradox": "structural"
+    },
+    "notes": "Defines how FFT modules, operators, regimes, and substrates integrate with external AI frameworks."
+  },
+
+  "frameworks": [
+    {
+      "id": "framework.transformer",
+      "name": "Transformer-Based Models",
+      "description": "Integration layer for transformer architectures (attention-based systems).",
+      "bindings": {
+        "operators": [
+          {
+            "operator_id": "op.clarity.spectral",
+            "binding": "attention-post-processing",
+            "notes": "Clarity operator evaluates coherence of attention outputs."
+          }
+        ],
+        "regimes": [
+          {
+            "regime_id": "regime.resonance-time.core",
+            "binding": "temporal-stability-layer",
+            "notes": "Resonance-time regime stabilizes temporal drift in transformer sequences."
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "framework.graph",
+      "name": "Graph Neural Networks",
+      "description": "Integration layer for GNNs and structural graph-based AI systems.",
+      "bindings": {
+        "operators": [
+          {
+            "operator_id": "op.clarity.spectral",
+            "binding": "node-state-evaluation",
+            "notes": "Clarity operator evaluates structural coherence across graph nodes."
+          }
+        ],
+        "structures": [
+          {
+            "structure_id": "structure.spine.core",
+            "binding": "canonical-graph-backbone",
+            "notes": "FFT Spine maps directly to GNN backbone layers."
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "framework.hybrid",
+      "name": "Hybrid Symbolic-Neural Systems",
+      "description": "Integration layer for systems combining symbolic reasoning with neural inference.",
+      "bindings": {
+        "invariants": [
+          {
+            "invariant_id": "inv.coherence.declared.bounded-drift",
+            "binding": "symbolic-constraint-layer",
+            "notes": "Invariant enforces coherence constraints during symbolic reasoning."
+          }
+        ],
+        "runtime": [
+          {
+            "runtime_id": "fft.ai.runtime",
+            "binding": "hybrid-execution-controller",
+            "notes": "Runtime manages transitions between symbolic and neural execution modes."
+          }
+        ]
+      }
+    },
+
+    {
+      "id": "framework.hardware",
+      "name": "Conceptual Accelerators",
+      "description": "Integration layer for hardware-level conceptual substrates.",
+      "bindings": {
+        "kernels": [
+          {
+            "kernel_id": "kernel.clarity.spectral",
+            "binding": "conceptual-kernel-execution",
+            "notes": "Hardware executes clarity kernel directly on conceptual signals."
+          }
+        ],
+        "substrate": [
+          {
+            "substrate_id": "fft.ai.substrate",
+            "binding": "firmware-initialization",
+            "notes": "Substrate loaded during hardware boot sequence."
+          }
+        ]
+      }
+    }
+  ],
+
+  "integration_events": [
+    {
+      "id": "event.framework.bound",
+      "description": "Triggered when FFT binds to an external framework.",
+      "payload": ["framework_id", "binding_type"]
+    },
+    {
+      "id": "event.operator.mapped",
+      "description": "Triggered when an FFT operator is mapped to an external system.",
+      "payload": ["operator_id", "binding"]
+    },
+    {
+      "id": "event.runtime.engaged",
+      "description": "Triggered when FFT runtime activates inside an external AI system.",
+      "payload": ["runtime_id", "execution_mode"]
+    }
+  ],
+
+  "compatibility": {
+    "requires": [
+      "fft.ai.core",
+      "fft.ai.spec",
+      "fft.ai.registry",
+      "fft.ai.runtime"
+    ],
+    "optional": [
+      "fft.ai.substrate",
+      "fft.ai.hardware.profile"
+    ],
+    "notes": "External frameworks must support RTT profiles and invariant enforcement to fully integrate FFT."
+  }
+}
 
