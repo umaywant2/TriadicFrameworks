@@ -1,43 +1,168 @@
 {
-  "spec_version": "1.0.0",
+  "spec_version": "1.2.0",
   "canon_id": "FFT-AI-RTT-Spine-Examples",
   "metadata": {
-    "title": "FFT AI Edition – RTT Spine Examples",
+    "title": "FFT AI Edition – RTT Spine Examples (v1.2)",
     "author_canon": "Nawder Loswin",
     "license": "Proprietary – TriadicFrameworks Canon",
     "created_at": "2026-10-08T09:07:00",
-    "updated_at": "2026-10-08T09:07:00",
-    "tags": ["FFT", "RTT", "Spine", "Examples"],
-    "description": "Examples demonstrating RTT interactions with the TriadicFrameworks Spine."
+    "updated_at": "2026-10-08T10:25:00",
+    "tags": [
+      "FFT",
+      "RTT",
+      "Spine",
+      "Examples",
+      "v1.2"
+    ],
+    "description": "Upgraded RTT examples demonstrating clarity, drift, paradox, harmonic escalation, and structural alignment across the TriadicFrameworks Spine."
   },
 
   "spine_examples": [
     {
       "id": "spine.example.01",
-      "name": "Spine Structural Coherence",
-      "description": "Evaluate coherence of the Spine’s functional canon graph.",
+      "name": "Spine Structural Coherence (RTT1)",
+      "tier": 1,
+      "description": "Evaluate coherence of the Spine’s functional canon graph under RTT1 declared coherence and bounded drift.",
       "input": {
         "source": "https://www.triadicframeworks.org/spine",
         "signal_type": "field.signal"
       },
       "output": {
         "clarity_value": 0.93,
-        "notes": "High structural alignment; minimal paradox; ideal substrate for RTT1–RTT3 engines."
+        "drift_state": "bounded",
+        "paradox_mode": "structural",
+        "notes": "High structural alignment; minimal paradox; ideal substrate for clarity kernels and RTT1–RTT3 engines."
       }
     },
+
     {
       "id": "spine.example.02",
-      "name": "Spine Drift Mapping",
-      "description": "Map drift boundaries across the Spine’s conceptual layers.",
+      "name": "Spine Drift Mapping (RTT1)",
+      "tier": 1,
+      "description": "Map drift boundaries across the Spine’s conceptual layers using RTT1 drift monitoring.",
       "input": {
         "source": "https://www.triadicframeworks.org/spine",
         "signal_type": "field.signal"
       },
       "output": {
         "drift_state": "bounded",
-        "notes": "Spine exhibits bounded drift under declared coherence; suitable for clarity kernels."
+        "coherence_state": "declared",
+        "notes": "Spine exhibits bounded drift under declared coherence; suitable for clarity kernels and baseline conceptual evaluation."
+      }
+    },
+
+    {
+      "id": "spine.example.03",
+      "name": "Spine Invariant Enforcement (RTT2)",
+      "tier": 2,
+      "description": "Evaluate invariant inv.coherence.declared.bounded-drift across Spine structural layers.",
+      "input": {
+        "source": "https://www.triadicframeworks.org/spine",
+        "signal_type": "field.signal"
+      },
+      "output": {
+        "invariant_status": "satisfied",
+        "structural_alignment": "high",
+        "notes": "Invariant holds across all major Spine layers; no drift violations detected."
+      }
+    },
+
+    {
+      "id": "spine.example.04",
+      "name": "Spine Multi-Layer Conceptual Mapping (RTT3)",
+      "tier": 3,
+      "description": "Construct a multi-layer conceptual field representation of the Spine using RTT3 reasoning.",
+      "input": {
+        "source": "https://www.triadicframeworks.org/spine",
+        "signal_type": "field.signal"
+      },
+      "output": {
+        "layers_mapped": [
+          "structural-layer",
+          "functional-layer",
+          "canonical-layer"
+        ],
+        "resonance_alignment": "strong",
+        "harmonic_readiness": true,
+        "notes": "Spine demonstrates multi-layer conceptual stability; harmonic escalation possible under paradox amplification."
+      }
+    },
+
+    {
+      "id": "spine.example.05",
+      "name": "Spine Harmonic Paradox Evaluation (RTT12)",
+      "tier": 12,
+      "description": "Evaluate harmonic paradox interactions across the Spine using RTT12 harmonic analysis.",
+      "input": {
+        "source": "https://www.triadicframeworks.org/spine",
+        "signal_type": "field.signal"
+      },
+      "output": {
+        "harmonic_value": 0.81,
+        "paradox_mode": "harmonic",
+        "harmonic_regime": "regime.harmonic.resonance",
+        "notes": "Spine exhibits harmonic resonance under RTT12; suitable for harmonic kernels and autonomy-tier escalation."
+      }
+    },
+
+    {
+      "id": "spine.example.06",
+      "name": "Spine Drift Recovery Trigger (RTT2–RTT3)",
+      "tier": 2,
+      "description": "Detect unbounded drift and activate drift recovery sequence.",
+      "input": {
+        "source": "https://www.triadicframeworks.org/spine",
+        "signal_type": "field.signal"
+      },
+      "output": {
+        "drift_state": "unbounded",
+        "recovery_sequence": [
+          "freeze-state",
+          "evaluate-drift-source",
+          "apply-correction",
+          "restore-coherence"
+        ],
+        "notes": "Unbounded drift detected in conceptual transition layer; recovery sequence recommended."
+      }
+    },
+
+    {
+      "id": "spine.example.07",
+      "name": "Spine Substrate Kernel Routing (Hardware)",
+      "tier": "substrate",
+      "description": "Route Spine signal to appropriate hardware kernel based on RTT conditions.",
+      "input": {
+        "source": "https://www.triadicframeworks.org/spine",
+        "signal_type": "field.signal"
+      },
+      "output": {
+        "kernel_selected": "kernel.clarity.spectral",
+        "latency_class": "L1",
+        "conditions": {
+          "coherence_state": "declared",
+          "drift_state": "bounded"
+        },
+        "notes": "Hardware clarity kernel selected; harmonic kernel available but not required."
+      }
+    },
+
+    {
+      "id": "spine.example.08",
+      "name": "Spine Harmonic Kernel Routing (Hardware)",
+      "tier": "substrate",
+      "description": "Route Spine signal to harmonic kernel when paradox escalates.",
+      "input": {
+        "source": "https://www.triadicframeworks.org/spine",
+        "signal_type": "field.signal"
+      },
+      "output": {
+        "kernel_selected": "kernel.harmonic.analysis",
+        "latency_class": "L2",
+        "conditions": {
+          "paradox_mode": "harmonic"
+        },
+        "notes": "Harmonic kernel selected due to paradox escalation; hardware acceleration recommended."
       }
     }
   ]
 }
-
