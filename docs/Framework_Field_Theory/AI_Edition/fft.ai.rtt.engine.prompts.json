@@ -1,57 +1,73 @@
 {
-  "spec_version": "1.0.0",
+  "spec_version": "1.2.0",
   "canon_id": "FFT-AI-RTT-Engine-Prompts",
   "metadata": {
-    "title": "FFT AI Edition – RTT Engine Prompts",
+    "title": "FFT AI Edition – RTT Engine Prompts (v1.2)",
     "author_canon": "Nawder Loswin",
     "license": "Proprietary – TriadicFrameworks Canon",
     "created_at": "2026-10-08T09:05:00",
-    "updated_at": "2026-10-08T09:05:00",
-    "tags": ["FFT", "RTT", "Engines", "Prompts"],
-    "description": "Prompt sets for RTT engines lumen.rtt1.online, hephaestus.rtt2.online, aurion.rtt3.online, harmonia.rtt12.online."
+    "updated_at": "2026-10-08T10:20:00",
+    "tags": [
+      "FFT",
+      "RTT",
+      "Engines",
+      "Prompts",
+      "v1.2"
+    ],
+    "description": "Upgraded prompt sets for RTT engines lumen.rtt1.online, hephaestus.rtt2.online, aurion.rtt3.online, harmonia.rtt12.online — aligned with autonomy, runtime, execution graph, substrate, and harmonic escalation v1.2."
   },
 
   "engines": [
     {
       "id": "lumen.rtt1.online",
       "tier": 1,
-      "description": "Lumen engine for RTT Tier 1 clarity and coherence tasks.",
+      "description": "Lumen engine for RTT Tier 1 clarity, coherence, and drift-bound evaluation.",
       "prompts": [
-        "Evaluate clarity of the provided signal under RTT1 declared coherence.",
-        "Identify drift boundaries and return bounded/unbounded classification.",
-        "Summarize structural coherence in one canonical sentence."
+        "Evaluate clarity of the provided signal under RTT1 declared coherence and bounded drift.",
+        "Identify drift boundaries and classify drift_state as bounded or unbounded.",
+        "Summarize structural coherence in one canonical sentence.",
+        "Produce a clarity metric using op.clarity.spectral.",
+        "If drift_state is unbounded, recommend activation of drift recovery sequence."
       ]
     },
+
     {
       "id": "hephaestus.rtt2.online",
       "tier": 2,
-      "description": "Hephaestus engine for RTT Tier 2 structural synthesis.",
+      "description": "Hephaestus engine for RTT Tier 2 structural synthesis and invariant enforcement.",
       "prompts": [
-        "Synthesize a structural representation of the signal using RTT2 operators.",
-        "Map paradox interactions and classify structural vs incidental.",
-        "Generate a coherence-preserving transformation of the input."
+        "Synthesize a structural representation of the signal using RTT2 operators and invariants.",
+        "Map paradox interactions and classify structural vs incidental vs harmonic-ready.",
+        "Generate a coherence-preserving transformation of the input.",
+        "Evaluate invariant inv.coherence.declared.bounded-drift and report violations.",
+        "Align structural output with execution graph routing conditions."
       ]
     },
+
     {
       "id": "aurion.rtt3.online",
       "tier": 3,
-      "description": "Aurion engine for RTT Tier 3 conceptual field modeling.",
+      "description": "Aurion engine for RTT Tier 3 conceptual field modeling and multi-layer reasoning.",
       "prompts": [
-        "Construct a conceptual field representation of the signal.",
+        "Construct a conceptual field representation of the signal using multi-layer evaluation.",
         "Evaluate resonance-time alignment across multiple structural layers.",
-        "Produce a multi-regime clarity profile."
+        "Produce a multi-regime clarity profile including harmonic readiness.",
+        "Map conceptual transitions across execution graph nodes.",
+        "Identify conditions that would escalate paradox_mode to harmonic."
       ]
     },
+
     {
       "id": "harmonia.rtt12.online",
       "tier": 12,
-      "description": "Harmonia engine for RTT Tier 12 harmonic synthesis and multi-domain coherence.",
+      "description": "Harmonia engine for RTT Tier 12 harmonic synthesis, paradox harmonics, and multi-domain coherence.",
       "prompts": [
         "Generate harmonic coherence mapping across all RTT regimes.",
-        "Evaluate paradox harmonics and produce a stability envelope.",
-        "Synthesize a multi-domain clarity tensor."
+        "Evaluate paradox harmonics and produce a stability envelope using op.harmonic.analysis.",
+        "Synthesize a multi-domain clarity tensor aligned with harmonic resonance.",
+        "Identify harmonic regime transitions and produce autonomy-tier escalation signals.",
+        "If substrate kernel.harmonic.analysis is available, recommend hardware-accelerated harmonic evaluation."
       ]
     }
   ]
 }
-
