@@ -1,1 +1,205 @@
+{
+  "spec_version": "1.2.0",
+  "canon_id": "FFT-AI-Index",
+
+  "metadata": {
+    "title": "FFT AI Edition – Canonical Index (v1.2)",
+    "author_canon": "Nawder Loswin",
+    "license": "Proprietary – TriadicFrameworks Canon",
+    "created_at": "2026-10-08T08:05:00",
+    "updated_at": "2026-10-08T10:55:00",
+    "tags": [
+      "FFT",
+      "RTT",
+      "AI-Edition",
+      "Index",
+      "Navigation",
+      "v1.2"
+    ],
+    "description": "Machine-native index for FFT AI Edition modules, providing canonical ordering, categories, roles, and navigation anchors for autonomous agents."
+  },
+
+  "ai_edition": true,
+  "version": "1.2",
+  "canonical_root": "./",
+  "agent_ready": true,
+
+  "index": [
+    {
+      "id": "core",
+      "name": "Core",
+      "file": "fft.ai.core.json",
+      "category": "core",
+      "role": "Minimal conceptual primitives: types, regimes, invariants, clarity/harmonic operators."
+    },
+    {
+      "id": "spec",
+      "name": "Specification",
+      "file": "fft.ai.spec.json",
+      "category": "specification",
+      "role": "Full conceptual definitions: structures, types, operators, invariants, validation profiles."
+    },
+    {
+      "id": "registry",
+      "name": "Registry",
+      "file": "fft.ai.registry.json",
+      "category": "registry",
+      "role": "Canonical index of all FFT AI Edition modules."
+    },
+    {
+      "id": "execution_graph",
+      "name": "Execution Graph",
+      "file": "fft.ai.execution.graph.json",
+      "category": "execution",
+      "role": "Conceptual flow of operators, regimes, drift recovery, harmonic escalation."
+    },
+    {
+      "id": "runtime",
+      "name": "Runtime",
+      "file": "fft.ai.runtime.json",
+      "category": "runtime",
+      "role": "Execution configuration: routing rules, drift recovery, paradox escalation."
+    },
+    {
+      "id": "autonomy",
+      "name": "Autonomy",
+      "file": "fft.ai.autonomy.json",
+      "category": "autonomy",
+      "role": "Autonomy tiers, behavioral constraints, decision layers."
+    },
+    {
+      "id": "capabilities",
+      "name": "Capabilities",
+      "file": "fft.ai.capabilities.json",
+      "category": "capabilities",
+      "role": "Tiered capability ontology for conceptual agents."
+    },
+    {
+      "id": "integrations",
+      "name": "Integrations",
+      "file": "fft.ai.integrations.json",
+      "category": "integrations",
+      "role": "Cross-system bindings for transformer, graph, symbolic, hybrid, agent, and hardware frameworks."
+    },
+    {
+      "id": "discovery",
+      "name": "Discovery",
+      "file": "fft.ai.discovery.json",
+      "category": "discovery",
+      "role": "Autonomous/distributed discovery protocol for loading FFT modules."
+    },
+    {
+      "id": "bootstrap",
+      "name": "Bootstrap",
+      "file": "fft.ai.bootstrap.json",
+      "category": "bootstrap",
+      "role": "Multi-phase conceptual bootloader for initializing FFT."
+    },
+    {
+      "id": "substrate",
+      "name": "Substrate",
+      "file": "fft.ai.substrate.json",
+      "category": "substrate",
+      "role": "Hardware-ready conceptual substrate with multi-kernel support."
+    },
+    {
+      "id": "hardware_profile",
+      "name": "Hardware Profile",
+      "file": "fft.ai.hardware.profile.json",
+      "category": "hardware",
+      "role": "Hardware capability profile for conceptual accelerators."
+    },
+    {
+      "id": "rtt_engine_prompts",
+      "name": "RTT Engine Prompts",
+      "file": "fft.ai.rtt.engine.prompts.json",
+      "category": "rtt",
+      "role": "RTT engine prompt sets for clarity, drift, paradox, and harmonic evaluation."
+    },
+    {
+      "id": "rtt_spine_examples",
+      "name": "RTT Spine Examples",
+      "file": "fft.ai.rtt.spine.examples.json",
+      "category": "rtt",
+      "role": "Examples demonstrating RTT interactions with the TriadicFrameworks Spine."
+    },
+    {
+      "id": "examples",
+      "name": "FFT Examples",
+      "file": "fft.ai.examples.json",
+      "category": "examples",
+      "role": "Clarity, drift, paradox, harmonic, substrate, and autonomy-tier examples."
+    },
+    {
+      "id": "metadata",
+      "name": "Metadata",
+      "file": "fft.ai.metadata.json",
+      "category": "metadata",
+      "role": "Unified metadata descriptor for all FFT AI Edition modules."
+    },
+    {
+      "id": "manifest",
+      "name": "Manifest",
+      "file": "fft.ai.manifest.json",
+      "category": "manifest",
+      "role": "Canonical manifest describing directory structure and load order."
+    },
+    {
+      "id": "readme",
+      "name": "Readme",
+      "file": "fft.ai.readme.json",
+      "category": "readme",
+      "role": "Front-door descriptor for the entire AI Edition."
+    }
+  ],
+
+  "navigation": {
+    "primary": [
+      "core",
+      "spec",
+      "registry",
+      "manifest",
+      "readme"
+    ],
+    "conceptual": [
+      "execution_graph",
+      "runtime",
+      "autonomy",
+      "capabilities"
+    ],
+    "system": [
+      "integrations",
+      "discovery",
+      "bootstrap"
+    ],
+    "hardware": [
+      "substrate",
+      "hardware_profile"
+    ],
+    "rtt": [
+      "rtt_engine_prompts",
+      "rtt_spine_examples"
+    ],
+    "examples": [
+      "examples"
+    ]
+  },
+
+  "compatibility": {
+    "requires": [
+      "fft.ai.manifest",
+      "fft.ai.registry",
+      "fft.ai.metadata"
+    ],
+    "optional": [
+      "fft.ai.runtime",
+      "fft.ai.execution.graph",
+      "fft.ai.autonomy",
+      "fft.ai.substrate",
+      "fft.ai.hardware.profile",
+      "fft.ai.integrations"
+    ],
+    "notes": "Index aligns with manifest, registry, metadata, autonomy, runtime, execution graph, substrate, and hardware profile v1.2."
+  }
+}
 
