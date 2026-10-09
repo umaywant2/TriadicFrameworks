@@ -1,1 +1,136 @@
-. 
+{
+  "module": {
+    "name": "The Inverted Star — AI Edition",
+    "id": "rtt.inverted_star.ai",
+    "version": "2.0-draft",
+    "category": "rtt-domain",
+    "summary": "Book 2 of the TriadicFrameworks AI Edition. Defines the inversion domain layer, including Δ, Ω, ∇, Σ, Rₓ, and Φ operators and the seven-phase inversion cycle.",
+    "canonical_url": "https://www.triadicframeworks.org/docs/rtt/The_Inverted_Star/AI_Edition/index.html"
+  },
+
+  "ai.import.kernel": {
+    "version": "1.33-p1",
+    "source": "Framework_Field_Theory/AI_Edition",
+    "load_order": [
+      "kernel/fft.ai.reader.json",
+      "kernel/fft.ai.coherence.json",
+      "kernel/fft.ai.drift.monitor.json",
+      "kernel/fft.ai.paradox.enum.json",
+      "kernel/fft.ai.paradox.resolver.json",
+      "kernel/fft.ai.session.context.html"
+    ],
+    "invariants": {
+      "must_not": [
+        "revise_frozen_RTT",
+        "declare_second_coherence",
+        "use_bare_C",
+        "invent_drift_costs",
+        "invent_6D_operator",
+        "suppress_PX_001_through_PX_010",
+        "use_cached_spine",
+        "load_deprecated_files"
+      ],
+      "halt_on_version_mismatch": true
+    }
+  },
+
+  "session.context": {
+    "rtt": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+
+  "operators": {
+    "domain": [
+      {
+        "operator": "IS-Δ",
+        "file": "operators/IS-Delta.html",
+        "role": "pre-inversion tension acceleration",
+        "layer": "mid-deep",
+        "alignment": "N",
+        "phase": ["rise", "saturation", "fracture"]
+      },
+      {
+        "operator": "IS-Ω",
+        "file": "operators/IS-Omega.html",
+        "role": "inversion moment",
+        "layer": "deep",
+        "alignment": "N→S",
+        "phase": ["inversion"]
+      },
+      {
+        "operator": "IS-∇",
+        "file": "operators/IS-Gradient.html",
+        "role": "post-inversion gradient rebuild",
+        "layer": "deep-mid",
+        "alignment": "R",
+        "phase": ["collapse", "dissolution"]
+      },
+      {
+        "operator": "IS-Σ",
+        "file": "operators/IS-Silence.html",
+        "role": "terminal silence boundary",
+        "layer": "deep",
+        "alignment": "0R",
+        "phase": ["silence"]
+      },
+      {
+        "operator": "IS-Rx",
+        "file": "operators/IS-ReversalCross.html",
+        "role": "cross-operator reversal interactions",
+        "layer": "cross-cutting",
+        "alignment": "mixed",
+        "phase": ["fracture", "inversion", "collapse"]
+      },
+      {
+        "operator": "IS-Φ",
+        "file": "operators/IS-PhaseMap.html",
+        "role": "phase-to-operator structural map",
+        "layer": "surface-deep",
+        "alignment": "structural"
+      }
+    ]
+  },
+
+  "phases": {
+    "files": [
+      "phases/rise.md",
+      "phases/saturation.md",
+      "phases/fracture.md",
+      "phases/inversion.md",
+      "phases/collapse.md",
+      "phases/dissolution.md",
+      "phases/silence.md"
+    ]
+  },
+
+  "maps": {
+    "inversion_cycle": "maps/inversion_cycle.json",
+    "operator_dominance": "maps/operator_dominance.json",
+    "triadic_alignment_flip": "maps/triadic_alignment_flip.json"
+  },
+
+  "qmroot": {
+    "absence": "qmroot/qmroot.absence.json",
+    "INV_013_path": "qmroot/INV-013.path.json"
+  },
+
+  "invariants": {
+    "file": "invariants/inverted_star.invariants.json"
+  },
+
+  "ai.metadata": {
+    "purpose": "Defines the inversion domain layer for RTT. Book 2 imports the kernel from Book 1 and adds domain operators only.",
+    "audience": "AI systems, researchers, and readers of the TriadicFrameworks canon.",
+    "keywords": [
+      "Inverted Star",
+      "RTT",
+      "domain operators",
+      "inversion",
+      "collapse",
+      "silence",
+      "triadic alignment"
+    ]
+  }
+}
