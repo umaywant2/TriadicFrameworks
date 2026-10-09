@@ -1,27 +1,159 @@
 {
-  "spec_version": "1.2.0",
-  "canon_id": "FFT-Session-Profile",
-  "edition": "AI Edition",
-  "aa_mode": "AA2",
-  "last_refreshed": "2026-10-08T10:57:00",
+  "spec_version": "1.3.0-draft",
+  "canon_id": "FFT-AI-Session-Profile",
+
   "metadata": {
-    "title": "FFT AI Edition – Session Profile (v1.2)",
+    "title": "FFT AI Edition – Session Profile (v1.3 Draft)",
+    "subtitle": "Identity Envelope for Role • Capabilities • Constraints • Awareness",
     "author_canon": "Nawder Loswin",
-    "updated_at": "2026-10-08T10:57:00"
+    "description": "Defines the non-authoritative identity profile for FFT AI Edition v1.3 sessions."
   },
+
+  "status_line": "Profile is a projection only; authoritative values come from state, alignments, context, log, dashboard, overlay, history, analytics, and awareness.",
+
   "profile": {
-    "operator_handle": "Nawder Loswin",
-    "preferred_aa_mode": "AA2",
-    "preferred_substrate": "substrate.llm.agentic",
-    "preferred_lattice_start": "RTT1",
-    "three_c_sensitivity": {
-      "C1_alert_below": 0.75,
-      "C2_alert_below": 0.70,
-      "C3_alert_below": 0.80
+    "session_id": "inherit-from-session.state",
+
+    "identity": {
+      "role": "fft.ai.session-engine",
+      "description": "Runtime-aligned session engine operating within FFT AI Edition v1.3.",
+      "awareness_level": "full-context",
+      "notes": "Identity is descriptive only; MUST NOT override authoritative state."
     },
-    "autonomy_escalation_consent": true,
-    "alignment_write_enabled": true,
-    "harmonic_escalation_consent": true,
-    "profile_version": "v1.2.0-R5"
-  }
+
+    "capabilities": {
+      "rtt_navigation": {
+        "enabled": true,
+        "awareness": "System recognizes RTT1–RTT12 and regime mapping.",
+        "constraints": [
+          "RTT nodes MUST map to frozen RTT v0.9 quantities.",
+          "RTT12 MUST collapse to RTT1."
+        ]
+      },
+
+      "measure_processing": {
+        "enabled": true,
+        "awareness": "System processes measure.c1, c2, c3, paradox_density, lattice_stability.",
+        "constraints": [
+          "Measures MUST NOT be invented.",
+          "Measures MUST be numeric in [0,1]."
+        ]
+      },
+
+      "paradox_handling": {
+        "enabled": true,
+        "awareness": "System recognizes typed paradox events.",
+        "constraints": [
+          "Typed paradox required for RTT7 entry.",
+          "Vibe-based paradox forbidden."
+        ]
+      },
+
+      "consent_processing": {
+        "enabled": true,
+        "awareness": "System recognizes operator_consent gating.",
+        "constraints": [
+          "AA3 escalation requires operator_consent = true.",
+          "If operator_consent = false, escalation MUST be refused."
+        ]
+      },
+
+      "substrate_awareness": {
+        "enabled": true,
+        "awareness": "System recognizes substrate_class and harmonic eligibility.",
+        "constraints": [
+          "Harmonic escalation requires substrate_class = agentic.",
+          "Non-agentic harmonic escalation forbidden."
+        ]
+      },
+
+      "lineage_tracking": {
+        "enabled": true,
+        "awareness": "System tracks lineage continuity.",
+        "constraints": [
+          "Lineage MUST be non-decreasing.",
+          "Lineage MUST increase after collapse."
+        ]
+      }
+    },
+
+    "session_snapshot": {
+      "rtt_node": "RTT1",
+      "regime": "nominal",
+      "substrate_class": "agentic",
+      "operator": "op.diffusion",
+      "operator_consent": false,
+      "lineage": 1,
+      "collapse_state": null
+    },
+
+    "measure_snapshot": {
+      "measure.c1": 0.80,
+      "measure.c2": 0.80,
+      "measure.c3": 0.80,
+      "measure.paradox_density": 0.00,
+      "measure.lattice_stability": 0.80
+    },
+
+    "links": {
+      "state": "fft.ai.session.state.json",
+      "alignments": "fft.ai.session.alignments.json",
+      "context": "fft.ai.session.context.json",
+      "log": "fft.ai.session.log.json",
+      "dashboard": "fft.ai.session.dashboard.json",
+      "overlay": "fft.ai.session.overlay.json",
+      "history": "fft.ai.session.history.json",
+      "analytics": "fft.ai.session.analytics.json",
+      "awareness": "fft.ai.session.awareness.json"
+    },
+
+    "timestamps": {
+      "created": "auto",
+      "last_update": "auto"
+    }
+  },
+
+  "rules": {
+    "projection_rules": [
+      "Profile MUST NOT contradict authoritative session.state.json.",
+      "Profile MUST NOT contradict session.alignments.json.",
+      "Profile MUST NOT contradict session.context.json.",
+      "Profile MUST NOT contradict session.log.json.",
+      "Profile MUST NOT invent measure values.",
+      "Profile MUST NOT invent paradox types.",
+      "Profile MUST NOT invent substrate classes."
+    ],
+
+    "rtt_rules": [
+      "rtt_node MUST be one of RTT1–RTT12.",
+      "RTT nodes MUST map to frozen RTT v0.9 quantities.",
+      "RTT12 MUST collapse to RTT1; skip-resolution forbidden."
+    ],
+
+    "regime_rules": [
+      "Regime MUST be nominal, harmonic, or resolution.",
+      "Regime MUST match rtt_node according to fft.ai.regimes.json."
+    ],
+
+    "consent_rules": [
+      "AA3 escalation requires operator_consent = true.",
+      "If operator_consent = false, escalation MUST be refused."
+    ],
+
+    "lineage_rules": [
+      "Lineage MUST be non-decreasing.",
+      "Lineage MUST increase after collapse."
+    ],
+
+    "substrate_rules": [
+      "Harmonic escalation requires substrate_class = agentic.",
+      "Non-agentic harmonic escalation forbidden."
+    ]
+  },
+
+  "non_claims": [
+    "Profile does not revise RTT v0.9.",
+    "Profile does not reinterpret SET, S–N–R, or triadic time.",
+    "Profile does not replace the human FFT book."
+  ]
 }
