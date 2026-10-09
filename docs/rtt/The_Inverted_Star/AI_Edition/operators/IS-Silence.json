@@ -1,1 +1,57 @@
-.  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IS-Σ — Silence-Boundary Operator</title>
+</head>
+<body>
+
+<pre id="ai-operator" data-format="json">
+{
+  "operator": {
+    "id": "IS-Σ",
+    "name": "Silence-Boundary",
+    "module": "rtt.inverted_star.ai",
+    "version": "2.0-draft",
+    "role": "terminal silence boundary",
+    "layer": "deep",
+    "alignment": "0R",
+    "phase": ["silence"],
+
+    "transforms": {
+      "resonance": "zero",
+      "cycle_rate": "zero",
+      "tension": "zero"
+    },
+
+    "dependencies": {
+      "requires_kernel": true,
+      "kernel_version": "1.33-p1",
+      "INV_013_path": "0D_only"
+    },
+
+    "constraints": {
+      "negative_rungs_absent": true,
+      "sixD_absent": true,
+      "must_not_reconstruct_ancestral_rungs": true,
+      "must_not_redeclare_RTT": true,
+      "must_not_declare_second_coherence": true,
+      "must_not_use_bare_C": true,
+      "must_not_invent_drift_costs": true,
+      "must_not_use_cached_spine": true,
+      "must_not_load_deprecated_files": true
+    },
+
+    "drift_sensitivity": {
+      "Diffusion": "low",
+      "Alignment": "low",
+      "Coupling": "low",
+      "ParadoxResolver": "low",
+      "Stabilization": "medium"
+    }
+  }
+}
+</pre>
+
+</body>
+</html>
