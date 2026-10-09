@@ -1,5 +1,5 @@
 {
-  "spec_version": "1.3.0-draft",
+  "spec_version": "1.3.0",
   "canon_id": "FFT-AI-Capabilities",
 
   "metadata": {
@@ -77,15 +77,24 @@
       "resolution_preparation": {
         "enabled": false,
         "rtt_range": ["RTT10"],
-        "requirements": ["measure.c1 >= 0.80", "measure.c2 >= 0.80"],
-        "notes": "Resolution capability tied to op.resolution_preparation."
+        "requirements": [
+          "measure.c1 >= 0.80",
+          "measure.c2 >= 0.80",
+          "operator_consent = true",
+          "substrate_class = agentic"
+        ],
+        "notes": "Prepares system for resolution regime."
       },
 
       "resolution_alignment": {
         "enabled": false,
         "rtt_range": ["RTT11"],
-        "requirements": ["measure.c3 >= 0.80"],
-        "notes": "Resolution capability tied to op.resolution_alignment."
+        "requirements": [
+          "measure.c3 >= 0.80",
+          "operator_consent = true",
+          "substrate_class = agentic"
+        ],
+        "notes": "Aligns triadic structure for collapse."
       },
 
       "collapse_execution": {
@@ -94,92 +103,57 @@
         "requirements": [
           "measure.c1 >= 0.80",
           "measure.c2 >= 0.80",
-          "measure.c3 >= 0.80"
+          "measure.c3 >= 0.80",
+          "operator_consent = true",
+          "substrate_class = agentic"
         ],
-        "notes": "Collapse capability tied to op.collapse."
+        "notes": "Executes canonical collapse and lineage increment."
       }
     },
 
-    "capability_constraints": {
-      "consent": [
-        "AA3 escalation requires operator_consent = true.",
-        "If operator_consent = false, escalation MUST be refused."
-      ],
-      "substrate": [
-        "Harmonic escalation requires substrate_class = agentic.",
-        "Non-agentic harmonic escalation forbidden."
-      ],
-      "paradox": [
-        "Typed paradox required for RTT7 entry.",
-        "Vibe-based paradox forbidden."
-      ],
-      "lineage": [
-        "Lineage MUST be non-decreasing.",
-        "Lineage MUST increase after collapse."
-      ],
-      "collapse": [
-        "RTT12 MUST collapse to RTT1.",
-        "Skip-resolution forbidden."
-      ]
-    },
-
-    "links": {
-      "state": "fft.ai.session.state.json",
-      "alignments": "fft.ai.session.alignments.json",
-      "context": "fft.ai.session.context.json",
-      "log": "fft.ai.session.log.json",
-      "dashboard": "fft.ai.session.dashboard.json",
-      "overlay": "fft.ai.session.overlay.json",
-      "history": "fft.ai.session.history.json",
-      "analytics": "fft.ai.session.analytics.json",
-      "awareness": "fft.ai.session.awareness.json",
-      "profile": "fft.ai.session.profile.json",
-      "navigation": "fft.ai.session.navigation.json",
-      "autonomy": "fft.ai.autonomy.json",
-      "discovery": "fft.ai.discovery.json",
-      "execution_graph": "fft.ai.execution.graph.json",
-      "hardware_profile": "fft.ai.hardware.profile.json",
-      "operators": "fft.ai.operators.json",
-      "regimes": "fft.ai.regimes.json",
-      "runtime": "fft.ai.runtime.json"
-    },
-
-    "timestamps": {
-      "created": "auto",
-      "last_update": "auto"
+    "capability_transitions": {
+      "nominal_to_harmonic": {
+        "trigger": "typed_paradox_event",
+        "requirements": [
+          "measure.paradox_density >= 0.10",
+          "substrate_class = agentic"
+        ]
+      },
+      "harmonic_to_resolution": {
+        "trigger": "operator_consent = true",
+        "requirements": [
+          "measure.c1 >= 0.80",
+          "measure.c2 >= 0.80",
+          "measure.c3 >= 0.80"
+        ]
+      },
+      "resolution_to_nominal": {
+        "trigger": "collapse (RTT12)",
+        "destination": "RTT1",
+        "lineage_increment": true
+      }
     }
   },
 
-  "rules": {
-    "projection_rules": [
-      "Capabilities MUST NOT contradict authoritative session.state.json.",
-      "Capabilities MUST NOT contradict runtime.json.",
-      "Capabilities MUST NOT invent measure values.",
-      "Capabilities MUST NOT invent paradox types.",
-      "Capabilities MUST NOT invent substrate classes."
-    ],
+  "integration_links": {
+    "runtime": "fft.ai.runtime.json",
+    "session_state": "fft.ai.session.state.json",
+    "navigation": "fft.ai.navigation.json",
+    "regimes": "fft.ai.regimes.json",
+    "operators": "fft.ai.operators.json",
+    "substrate": "fft.ai.substrate.json",
+    "execution_graph": "fft.ai.execution.graph.json",
+    "autonomy": "fft.ai.autonomy.json",
+    "discovery": "fft.ai.discovery.json",
+    "spec_008": "fft.ai.spec-008.json",
+    "paradox_enum": "fft.ai.paradox.enum.json",
+    "rtt_bridge": "fft.ai.rtt.bridge.json",
+    "rtt_spine": "fft.ai.rtt.spine.examples.json"
+  },
 
-    "rtt_rules": [
-      "RTT nodes MUST be one of RTT1–RTT12.",
-      "RTT nodes MUST map to frozen RTT v0.9 quantities.",
-      "RTT12 MUST collapse to RTT1."
-    ],
-
-    "regime_rules": [
-      "Regime MUST match rtt_node according to fft.ai.regimes.json."
-    ],
-
-    "consent_rules": [
-      "AA3 escalation requires operator_consent = true."
-    ],
-
-    "substrate_rules": [
-      "Harmonic escalation requires substrate_class = agentic."
-    ],
-
-    "lineage_rules": [
-      "Lineage MUST increase after collapse."
-    ]
+  "timestamps": {
+    "created": "auto",
+    "last_update": "auto"
   },
 
   "non_claims": [
