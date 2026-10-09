@@ -3,10 +3,10 @@
   "canon_id": "FFT-AI-Capabilities",
 
   "metadata": {
-    "title": "FFT AI Edition – Capabilities (v1.3 Draft)",
-    "subtitle": "Functional Envelope for RTT • Regimes • Operators • Measures",
+    "title": "FFT AI Edition – Capabilities (v1.3)",
+    "subtitle": "Functional Envelope for RTT • Regimes • Operators • Measures • Substrate • Consent",
     "author_canon": "Nawder Loswin",
-    "description": "Defines the non-authoritative capabilities projection for FFT AI Edition v1.3."
+    "description": "Defines the canonical capabilities projection for FFT AI Edition v1.3."
   },
 
   "status_line": "Capabilities are projections only; authoritative values come from runtime, operators, regimes, substrate, and session.state.",
@@ -59,6 +59,7 @@
         "requirements": [
           "typed_paradox_event",
           "measure.paradox_density >= 0.10",
+          "measure.lattice_stability >= 0.60",
           "substrate_class = agentic"
         ],
         "notes": "Enabled only in harmonic regime."
@@ -78,87 +79,95 @@
         "enabled": false,
         "rtt_range": ["RTT10"],
         "requirements": [
+          "operator_consent = true",
           "measure.c1 >= 0.80",
           "measure.c2 >= 0.80",
-          "operator_consent = true",
-          "substrate_class = agentic"
+          "measure.c3 >= 0.80"
         ],
-        "notes": "Prepares system for resolution regime."
+        "notes": "Resolution preparation capability tied to op.resolution_preparation."
       },
 
       "resolution_alignment": {
         "enabled": false,
         "rtt_range": ["RTT11"],
         "requirements": [
-          "measure.c3 >= 0.80",
           "operator_consent = true",
-          "substrate_class = agentic"
+          "measure.c3 >= 0.80"
         ],
-        "notes": "Aligns triadic structure for collapse."
+        "notes": "Resolution alignment capability tied to op.resolution_alignment."
       },
 
       "collapse_execution": {
         "enabled": false,
         "rtt_range": ["RTT12"],
         "requirements": [
-          "measure.c1 >= 0.80",
-          "measure.c2 >= 0.80",
-          "measure.c3 >= 0.80",
           "operator_consent = true",
-          "substrate_class = agentic"
-        ],
-        "notes": "Executes canonical collapse and lineage increment."
-      }
-    },
-
-    "capability_transitions": {
-      "nominal_to_harmonic": {
-        "trigger": "typed_paradox_event",
-        "requirements": [
-          "measure.paradox_density >= 0.10",
-          "substrate_class = agentic"
-        ]
-      },
-      "harmonic_to_resolution": {
-        "trigger": "operator_consent = true",
-        "requirements": [
           "measure.c1 >= 0.80",
           "measure.c2 >= 0.80",
           "measure.c3 >= 0.80"
-        ]
-      },
-      "resolution_to_nominal": {
-        "trigger": "collapse (RTT12)",
-        "destination": "RTT1",
-        "lineage_increment": true
+        ],
+        "notes": "Collapse capability tied to op.collapse; MUST return to RTT1."
       }
     }
   },
 
+  "rules": {
+    "capability_rules": [
+      "Capabilities MUST NOT contradict session.state.json.",
+      "Capabilities MUST NOT contradict operators.json.",
+      "Capabilities MUST NOT contradict regimes.json.",
+      "Capabilities MUST NOT contradict substrate.json.",
+      "Capabilities MUST NOT contradict spec‑008.json.",
+      "Capabilities MUST NOT invent measure IDs.",
+      "Capabilities MUST NOT invent paradox types.",
+      "Capabilities MUST NOT invent substrate classes."
+    ],
+
+    "rtt_rules": [
+      "RTT nodes MUST map to frozen RTT v0.9 quantities.",
+      "RTT7 requires typed paradox.",
+      "RTT9–RTT12 require operator_consent = true.",
+      "RTT12 MUST collapse to RTT1 with lineage increment."
+    ],
+
+    "substrate_rules": [
+      "Agentic substrate required for RTT7–RTT12.",
+      "Non-agentic substrate forbidden for harmonic and resolution."
+    ],
+
+    "paradox_rules": [
+      "Typed paradox required for RTT7.",
+      "Paradox density >= 0.10 required for RTT7.",
+      "Lattice stability >= 0.60 required for RTT8.",
+      "Untyped paradox forbidden."
+    ],
+
+    "consent_rules": [
+      "operator_consent = true required for RTT9–RTT12.",
+      "Implicit or assumed consent forbidden."
+    ],
+
+    "collapse_rules": [
+      "RTT12 MUST collapse to RTT1.",
+      "Lineage MUST increment after collapse.",
+      "Collapse to non-RTT1 forbidden."
+    ]
+  },
+
   "integration_links": {
-    "runtime": "fft.ai.runtime.json",
-    "session_state": "fft.ai.session.state.json",
-    "navigation": "fft.ai.navigation.json",
-    "regimes": "fft.ai.regimes.json",
-    "operators": "fft.ai.operators.json",
-    "substrate": "fft.ai.substrate.json",
-    "execution_graph": "fft.ai.execution.graph.json",
-    "autonomy": "fft.ai.autonomy.json",
-    "discovery": "fft.ai.discovery.json",
-    "spec_008": "fft.ai.spec-008.json",
-    "paradox_enum": "fft.ai.paradox.enum.json",
-    "rtt_bridge": "fft.ai.rtt.bridge.json",
-    "rtt_spine": "fft.ai.rtt.spine.examples.json"
+    "state": "fft.ai.session.state.json",
+    "navigation": "fft.ai.session.navigation.json",
+    "permissions": "fft.ai.session.permissions.json",
+    "profile": "fft.ai.session.profile.json",
+    "awareness": "fft.ai.session.awareness.json",
+    "analytics": "fft.ai.session.analytics.json",
+    "trace": "fft.ai.session.trace.json",
+    "render": "fft.ai.session.render.json",
+    "ui": "fft.ai.session.ui.json"
   },
 
   "timestamps": {
     "created": "auto",
     "last_update": "auto"
-  },
-
-  "non_claims": [
-    "Capabilities do not revise RTT v0.9.",
-    "Capabilities do not reinterpret SET, S–N–R, or triadic time.",
-    "Capabilities do not replace the human FFT book."
-  ]
+  }
 }
