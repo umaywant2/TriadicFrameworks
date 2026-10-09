@@ -4,12 +4,12 @@
 
   "metadata": {
     "title": "FFT AI Edition – Session Analytics (v1.3)",
-    "subtitle": "Derived Metrics for RTT • Regime • Measures • Paradox • Consent",
+    "subtitle": "Derived Metrics for RTT • Regime • Measures • Paradox • Consent • Collapse",
     "author_canon": "Nawder Loswin",
     "description": "Defines the non-authoritative analytics projection for FFT AI Edition v1.3."
   },
 
-  "status_line": "Analytics is a projection only; authoritative values come from session.state, alignments, context, and log.",
+  "status_line": "Analytics is a projection only; authoritative values come from session.state, alignments, context, log, dashboard, overlay, history, analytics, navigation, permissions, profile, trace, and render.",
 
   "analytics": {
     "session_id": "inherit-from-session.state",
@@ -19,7 +19,7 @@
         "source": "measure.c1",
         "value": 0.80,
         "label": "Coherence Score",
-        "notes": "Direct projection of measure.c1; no transformations allowed."
+        "notes": "Direct projection of measure.c1; MUST NOT transform."
       },
 
       "clarity_score": {
@@ -71,67 +71,70 @@
           "measure.c2 >= 0.80",
           "measure.c3 >= 0.80"
         ],
-        "notes": "Projection only; collapse MUST be authoritative in session.state."
+        "notes": "Projection only; collapse MUST return to RTT1."
       }
-    },
-
-    "links": {
-      "state": "fft.ai.session.state.json",
-      "alignments": "fft.ai.session.alignments.json",
-      "context": "fft.ai.session.context.json",
-      "log": "fft.ai.session.log.json",
-      "dashboard": "fft.ai.session.dashboard.json",
-      "overlay": "fft.ai.session.overlay.json",
-      "history": "fft.ai.session.history.json"
-    },
-
-    "timestamps": {
-      "created": "auto",
-      "last_update": "auto"
     }
   },
 
   "rules": {
-    "projection_rules": [
-      "Analytics MUST NOT contradict authoritative session.state.json.",
-      "Analytics MUST NOT contradict session.alignments.json.",
-      "Analytics MUST NOT contradict session.context.json.",
-      "Analytics MUST NOT contradict session.log.json.",
-      "Analytics MUST NOT invent measure values.",
+    "analytics_rules": [
+      "Analytics MUST NOT contradict session.state.json.",
+      "Analytics MUST NOT contradict substrate.json.",
+      "Analytics MUST NOT contradict operators.json.",
+      "Analytics MUST NOT contradict regimes.json.",
+      "Analytics MUST NOT contradict spec‑008.json.",
+      "Analytics MUST NOT invent measure IDs.",
       "Analytics MUST NOT invent paradox types.",
       "Analytics MUST NOT invent substrate classes."
     ],
 
-    "rtt_rules": [
-      "rtt_node MUST be one of RTT1–RTT12.",
-      "RTT nodes MUST map to frozen RTT v0.9 quantities.",
-      "RTT12 MUST collapse to RTT1; skip-resolution forbidden."
+    "measure_rules": [
+      "measure.c1 >= 0.80 required for RTT1, RTT4, RTT10.",
+      "measure.c2 >= 0.80 required for RTT2, RTT5, RTT10.",
+      "measure.c3 >= 0.80 required for RTT3, RTT6, RTT11.",
+      "measure.paradox_density >= 0.10 required for RTT7.",
+      "measure.lattice_stability >= 0.60 required for RTT8."
     ],
 
-    "regime_rules": [
-      "Regime MUST be nominal, harmonic, or resolution.",
-      "Regime MUST match rtt_node according to fft.ai.regimes.json."
+    "paradox_rules": [
+      "Typed paradox required for RTT7.",
+      "Paradox density >= 0.10 required for RTT7.",
+      "Lattice stability >= 0.60 required for RTT8.",
+      "Untyped paradox forbidden."
     ],
 
     "consent_rules": [
-      "AA3 escalation requires operator_consent = true.",
-      "If operator_consent = false, escalation MUST be refused."
+      "operator_consent = true required for RTT9–RTT12.",
+      "Implicit or assumed consent forbidden."
     ],
 
-    "lineage_rules": [
-      "Lineage MUST be non-decreasing.",
-      "Lineage MUST increase after collapse."
-    ],
-
-    "substrate_rules": [
-      "Harmonic escalation requires substrate_class = agentic.",
-      "Non-agentic harmonic escalation forbidden."
+    "collapse_rules": [
+      "RTT12 MUST collapse to RTT1.",
+      "Lineage MUST increment after collapse.",
+      "Collapse to non-RTT1 forbidden."
     ]
   },
 
-  "non_claims": [
-    "Analytics does not revise RTT v0.9.",
-    "Analytics does not reinterpret SET, S–N–R, or triadic time.",
-    "Analytics does not replace the human FFT book."
-  ]
+  "integration_links": {
+    "state": "fft.ai.session.state.json",
+    "context": "fft.ai.session.context.json",
+    "alignments": "fft.ai.session.alignments.json",
+    "log": "fft.ai.session.log.json",
+    "dashboard": "fft.ai.session.dashboard.json",
+    "overlay": "fft.ai.session.overlay.json",
+    "history": "fft.ai.session.history.json",
+    "analytics": "fft.ai.session.analytics.json",
+    "navigation": "fft.ai.session.navigation.json",
+    "permissions": "fft.ai.session.permissions.json",
+    "profile": "fft.ai.session.profile.json",
+    "awareness": "fft.ai.session.awareness.json",
+    "trace": "fft.ai.session.trace.json",
+    "render": "fft.ai.session.render.json",
+    "ui": "fft.ai.session.ui.json"
+  },
+
+  "timestamps": {
+    "created": "auto",
+    "last_update": "auto"
+  }
 }
