@@ -1,40 +1,137 @@
 {
-  "spec_version": "1.2.0",
-  "canon_id": "FFT-Session-Analytics",
-  "edition": "AI Edition",
-  "aa_mode": "AA2",
-  "last_refreshed": "2026-10-08T10:57:00",
+  "spec_version": "1.3.0-draft",
+  "canon_id": "FFT-AI-Session-Analytics",
+
   "metadata": {
-    "title": "FFT AI Edition – Session Analytics (v1.2)",
+    "title": "FFT AI Edition – Session Analytics (v1.3 Draft)",
+    "subtitle": "Derived Metrics for RTT • Regime • Measures • Paradox • Consent",
     "author_canon": "Nawder Loswin",
-    "updated_at": "2026-10-08T10:57:00"
+    "description": "Defines the non-authoritative analytics projection for FFT AI Edition v1.3."
   },
+
+  "status_line": "Analytics is a projection only; authoritative values come from session.state, alignments, context, and log.",
+
   "analytics": {
-    "schema": {
-      "session_id": "string",
-      "session_start": "ISO 8601",
-      "session_end": "ISO 8601 | null",
-      "substrate": "substrate class ID",
-      "aa_mode_peak": "AA0–AA3",
-      "lattice_peak_node": "RTT1–RTT12",
-      "three_c_averages": { "C1_avg": "float", "C2_avg": "float", "C3_avg": "float" },
-      "operator_invocations": "integer",
-      "alignment_count": "integer",
-      "alignment_quality_breakdown": { "strong": "int", "nominal": "int", "weak": "int" },
-      "paradox_events": "integer",
-      "regime_transitions": "integer",
-      "harmonic_escalations": "integer",
-      "harmonic_resolutions": "integer",
-      "field_state_distribution": { "nominal": "int", "degraded": "int", "critical": "int" }
+    "session_id": "inherit-from-session.state",
+
+    "derived": {
+      "coherence_score": {
+        "source": "measure.c1",
+        "value": 0.80,
+        "label": "Coherence Score",
+        "notes": "Direct projection of measure.c1; no transformations allowed."
+      },
+
+      "clarity_score": {
+        "source": "measure.c2",
+        "value": 0.80,
+        "label": "Clarity Score",
+        "notes": "Direct projection of measure.c2."
+      },
+
+      "continuity_score": {
+        "source": "measure.c3",
+        "value": 0.80,
+        "label": "Continuity Score",
+        "notes": "Direct projection of measure.c3; MUST NOT decrease across transitions."
+      },
+
+      "stability_index": {
+        "source": "measure.lattice_stability",
+        "value": 0.80,
+        "label": "Lattice Stability Index",
+        "notes": "Projection only; authoritative value comes from session.state."
+      },
+
+      "paradox_intensity": {
+        "source": "measure.paradox_density",
+        "value": 0.00,
+        "label": "Paradox Intensity",
+        "notes": "Typed paradox required for RTT7 entry; density MUST be canonical."
+      },
+
+      "harmonic_viability": {
+        "value": false,
+        "label": "Harmonic Viability",
+        "rules": [
+          "measure.paradox_density >= 0.10",
+          "measure.lattice_stability >= 0.60",
+          "substrate_class = agentic",
+          "operator_consent = true"
+        ],
+        "notes": "Projection only; MUST NOT override authoritative state."
+      },
+
+      "collapse_readiness": {
+        "value": false,
+        "label": "Collapse Readiness",
+        "rules": [
+          "rtt_node = RTT12",
+          "measure.c1 >= 0.80",
+          "measure.c2 >= 0.80",
+          "measure.c3 >= 0.80"
+        ],
+        "notes": "Projection only; collapse MUST be authoritative in session.state."
+      }
     },
-    "current_session": null,
-    "historical_sessions": [],
-    "aggregates": {
-      "total_sessions": 0,
-      "total_alignments": 0,
-      "total_paradox_events": 0,
-      "total_harmonic_resolutions": 0
+
+    "links": {
+      "state": "fft.ai.session.state.json",
+      "alignments": "fft.ai.session.alignments.json",
+      "context": "fft.ai.session.context.json",
+      "log": "fft.ai.session.log.json",
+      "dashboard": "fft.ai.session.dashboard.json",
+      "overlay": "fft.ai.session.overlay.json",
+      "history": "fft.ai.session.history.json"
     },
-    "analytics_version": "v1.2.0-R5"
-  }
+
+    "timestamps": {
+      "created": "auto",
+      "last_update": "auto"
+    }
+  },
+
+  "rules": {
+    "projection_rules": [
+      "Analytics MUST NOT contradict authoritative session.state.json.",
+      "Analytics MUST NOT contradict session.alignments.json.",
+      "Analytics MUST NOT contradict session.context.json.",
+      "Analytics MUST NOT contradict session.log.json.",
+      "Analytics MUST NOT invent measure values.",
+      "Analytics MUST NOT invent paradox types.",
+      "Analytics MUST NOT invent substrate classes."
+    ],
+
+    "rtt_rules": [
+      "rtt_node MUST be one of RTT1–RTT12.",
+      "RTT nodes MUST map to frozen RTT v0.9 quantities.",
+      "RTT12 MUST collapse to RTT1; skip-resolution forbidden."
+    ],
+
+    "regime_rules": [
+      "Regime MUST be nominal, harmonic, or resolution.",
+      "Regime MUST match rtt_node according to fft.ai.regimes.json."
+    ],
+
+    "consent_rules": [
+      "AA3 escalation requires operator_consent = true.",
+      "If operator_consent = false, escalation MUST be refused."
+    ],
+
+    "lineage_rules": [
+      "Lineage MUST be non-decreasing.",
+      "Lineage MUST increase after collapse."
+    ],
+
+    "substrate_rules": [
+      "Harmonic escalation requires substrate_class = agentic.",
+      "Non-agentic harmonic escalation forbidden."
+    ]
+  },
+
+  "non_claims": [
+    "Analytics does not revise RTT v0.9.",
+    "Analytics does not reinterpret SET, S–N–R, or triadic time.",
+    "Analytics does not replace the human FFT book."
+  ]
 }
