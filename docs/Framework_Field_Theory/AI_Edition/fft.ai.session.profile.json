@@ -4,12 +4,12 @@
 
   "metadata": {
     "title": "FFT AI Edition – Session Profile (v1.3)",
-    "subtitle": "Identity Envelope for RTT • Regime • Substrate • Consent • Paradox • Lineage",
+    "subtitle": "Identity Envelope for RTT • Regime • Operator • Substrate • Consent • Paradox • Lineage",
     "author_canon": "Nawder Loswin",
     "description": "Defines the canonical identity profile for FFT AI Edition v1.3 sessions."
   },
 
-  "status_line": "Profile is a projection only; authoritative values come from session.state, context, alignments, log, dashboard, overlay, history, analytics, navigation, and awareness.",
+  "status_line": "Profile is a projection only; authoritative values come from session.state, context, alignments, log, dashboard, overlay, history, analytics, navigation, permissions, and awareness.",
 
   "profile": {
     "session_id": "inherit-from-session.state",
@@ -58,7 +58,11 @@
       "history": "fft.ai.session.history.json",
       "analytics": "fft.ai.session.analytics.json",
       "navigation": "fft.ai.session.navigation.json",
-      "awareness": "fft.ai.session.awareness.json"
+      "awareness": "fft.ai.session.awareness.json",
+      "permissions": "fft.ai.session.permissions.json",
+      "trace": "fft.ai.session.trace.json",
+      "render": "fft.ai.session.render.json",
+      "ui": "fft.ai.session.ui.json"
     },
 
     "timestamps": {
@@ -73,27 +77,19 @@
       "Profile MUST NOT contradict session.context.json.",
       "Profile MUST NOT contradict session.alignments.json.",
       "Profile MUST NOT contradict session.log.json.",
+      "Profile MUST NOT contradict session.navigation.json.",
+      "Profile MUST NOT contradict session.permissions.json.",
       "Profile MUST NOT invent measure IDs.",
       "Profile MUST NOT invent paradox types.",
       "Profile MUST NOT invent substrate classes."
     ],
 
-    "rtt_rules": [
-      "RTT nodes MUST map to frozen RTT v0.9 quantities.",
-      "RTT7 requires typed paradox.",
-      "RTT9–RTT12 require operator_consent = true.",
-      "RTT12 MUST collapse to RTT1 with lineage increment."
-    ],
-
-    "regime_rules": [
-      "Nominal regime allowed only for RTT1–RTT6.",
-      "Harmonic regime allowed only for RTT7–RTT9.",
-      "Resolution regime allowed only for RTT10–RTT12."
-    ],
-
-    "substrate_rules": [
-      "Agentic substrate required for RTT7–RTT12.",
-      "Non-agentic substrate forbidden for harmonic and resolution."
+    "measure_rules": [
+      "measure.c1 >= 0.80 required for RTT1, RTT4, RTT10.",
+      "measure.c2 >= 0.80 required for RTT2, RTT5, RTT10.",
+      "measure.c3 >= 0.80 required for RTT3, RTT6, RTT11.",
+      "measure.paradox_density >= 0.10 required for RTT7.",
+      "measure.lattice_stability >= 0.60 required for RTT8."
     ],
 
     "paradox_rules": [
@@ -103,15 +99,29 @@
       "Untyped paradox forbidden."
     ],
 
-    "consent_rules": [
-      "operator_consent = true required for RTT9–RTT12.",
-      "Implicit or assumed consent forbidden."
-    ],
-
-    "collapse_rules": [
-      "RTT12 MUST collapse to RTT1.",
-      "Lineage MUST increment after collapse.",
-      "Collapse to non-RTT1 forbidden."
+    "capability_rules": [
+      "Capabilities MUST NOT contradict runtime.json.",
+      "Capabilities MUST NOT contradict operators.json.",
+      "Capabilities MUST NOT contradict regimes.json.",
+      "Capabilities MUST NOT contradict substrate.json.",
+      "Capabilities MUST NOT contradict spec‑008.json."
     ]
+  },
+
+  "integration_links": {
+    "state": "fft.ai.session.state.json",
+    "context": "fft.ai.session.context.json",
+    "alignments": "fft.ai.session.alignments.json",
+    "log": "fft.ai.session.log.json",
+    "dashboard": "fft.ai.session.dashboard.json",
+    "overlay": "fft.ai.session.overlay.json",
+    "history": "fft.ai.session.history.json",
+    "analytics": "fft.ai.session.analytics.json",
+    "navigation": "fft.ai.session.navigation.json",
+    "permissions": "fft.ai.session.permissions.json",
+    "awareness": "fft.ai.session.awareness.json",
+    "trace": "fft.ai.session.trace.json",
+    "render": "fft.ai.session.render.json",
+    "ui": "fft.ai.session.ui.json"
   }
 }
