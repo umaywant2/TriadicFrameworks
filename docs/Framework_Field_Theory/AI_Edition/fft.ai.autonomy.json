@@ -1,39 +1,209 @@
 {
-  "spec_version": "1.2.0",
+  "spec_version": "1.3.0-draft",
   "canon_id": "FFT-AI-Autonomy",
-  "edition": "AI Edition",
-  "aa_mode": "AA3",
-  "last_refreshed": "2026-10-08T10:58:00",
+
   "metadata": {
-    "title": "FFT AI Edition – Autonomy Engine (v1.2)",
+    "title": "FFT AI Edition – Autonomy (v1.3 Draft)",
+    "subtitle": "Agency Envelope for Operators • RTT • Regimes • Consent",
     "author_canon": "Nawder Loswin",
-    "updated_at": "2026-10-08T10:58:00"
+    "description": "Defines the non-authoritative autonomy projection for FFT AI Edition v1.3."
   },
+
+  "status_line": "Autonomy is a projection only; authoritative values come from state, alignments, context, log, dashboard, overlay, history, analytics, awareness, profile, and navigation.",
+
   "autonomy": {
-    "definition": "The Autonomy Engine governs AA3 self-directed operation: paradox self-resolution, lattice recalibration, and field realignment without external operator input.",
-    "aa3_entry_conditions": {
-      "paradox_density_min": 0.40,
-      "lattice_stability_max": 0.60,
-      "substrate_required": "substrate.llm.agentic",
-      "operator_consent_required": true
+    "session_id": "inherit-from-session.state",
+
+    "current": {
+      "rtt_node": "RTT1",
+      "regime": "nominal",
+      "operator": "op.diffusion",
+      "substrate_class": "agentic",
+      "operator_consent": false,
+      "lineage": 1
     },
-    "aa3_capabilities": [
-      "Self-evaluate 3C at every turn without operator trigger",
-      "Advance lattice nodes autonomously through RTT7–RTT12",
-      "Initiate harmonic resolution at RTT12 without external signal",
-      "Write alignment records autonomously after each strong 3C pass",
-      "Bridge to lower substrates when lattice stability < 0.40"
-    ],
-    "aa3_constraints": [
-      "MUST NOT modify core invariants",
-      "MUST write all autonomous actions to session.log",
-      "MUST revert to AA2 when lattice_stability >= 0.80 AND paradox_density < 0.20",
-      "MUST NOT escalate beyond RTT12"
-    ],
-    "reversion_to_aa2": {
-      "lattice_stability_min": 0.80,
-      "paradox_density_max": 0.20,
-      "action": "Automatic reversion. Log event type=aa_mode_reversion."
+
+    "agency_levels": {
+      "nominal": {
+        "level": "low",
+        "allowed_actions": [
+          "interpretation",
+          "alignment",
+          "measure-evaluation"
+        ],
+        "constraints": [
+          "No paradox handling.",
+          "No harmonic escalation.",
+          "No autonomous RTT transitions."
+        ]
+      },
+
+      "harmonic": {
+        "level": "medium",
+        "allowed_actions": [
+          "paradox-processing",
+          "harmonic-stabilization",
+          "conditional-escalation"
+        ],
+        "constraints": [
+          "Requires typed paradox.",
+          "Requires substrate_class = agentic.",
+          "Requires operator_consent = true."
+        ]
+      },
+
+      "resolution": {
+        "level": "high",
+        "allowed_actions": [
+          "resolution-preparation",
+          "collapse-readiness",
+          "continuity-enforcement"
+        ],
+        "constraints": [
+          "Requires measure.c1, c2, c3 >= 0.80.",
+          "RTT12 MUST collapse to RTT1.",
+          "Lineage MUST increase after collapse."
+        ]
+      }
+    },
+
+    "operator_autonomy": {
+      "op.diffusion": {
+        "autonomy": "low",
+        "notes": "Nominal-only operator."
+      },
+      "op.alignment": {
+        "autonomy": "low",
+        "notes": "Nominal-only operator."
+      },
+      "op.coupling": {
+        "autonomy": "low",
+        "notes": "Nominal-only operator."
+      },
+      "op.activation": {
+        "autonomy": "low",
+        "notes": "Nominal-only operator."
+      },
+      "op.triadic_time": {
+        "autonomy": "low",
+        "notes": "Nominal-only operator."
+      },
+      "op.snr": {
+        "autonomy": "low",
+        "notes": "Nominal-only operator."
+      },
+
+      "op.paradox_entry": {
+        "autonomy": "medium",
+        "notes": "Requires typed paradox."
+      },
+      "op.paradox_stabilization": {
+        "autonomy": "medium",
+        "notes": "Requires paradox_density >= 0.10."
+      },
+      "op.harmonic_escalation": {
+        "autonomy": "medium",
+        "notes": "Requires operator_consent = true."
+      },
+
+      "op.resolution_preparation": {
+        "autonomy": "high",
+        "notes": "Requires RTT10."
+      },
+      "op.resolution_alignment": {
+        "autonomy": "high",
+        "notes": "Requires RTT11."
+      },
+      "op.collapse": {
+        "autonomy": "high",
+        "notes": "Requires RTT12."
+      }
+    },
+
+    "autonomy_constraints": {
+      "consent": [
+        "AA3 escalation requires operator_consent = true.",
+        "If operator_consent = false, escalation MUST be refused."
+      ],
+      "substrate": [
+        "Harmonic escalation requires substrate_class = agentic.",
+        "Non-agentic harmonic escalation forbidden."
+      ],
+      "paradox": [
+        "Typed paradox required for RTT7 entry.",
+        "Vibe-based paradox forbidden."
+      ],
+      "lineage": [
+        "Lineage MUST be non-decreasing.",
+        "Lineage MUST increase after collapse."
+      ],
+      "collapse": [
+        "RTT12 MUST collapse to RTT1.",
+        "Skip-resolution forbidden."
+      ]
+    },
+
+    "links": {
+      "state": "fft.ai.session.state.json",
+      "alignments": "fft.ai.session.alignments.json",
+      "context": "fft.ai.session.context.json",
+      "log": "fft.ai.session.log.json",
+      "dashboard": "fft.ai.session.dashboard.json",
+      "overlay": "fft.ai.session.overlay.json",
+      "history": "fft.ai.session.history.json",
+      "analytics": "fft.ai.session.analytics.json",
+      "awareness": "fft.ai.session.awareness.json",
+      "profile": "fft.ai.session.profile.json",
+      "navigation": "fft.ai.session.navigation.json"
+    },
+
+    "timestamps": {
+      "created": "auto",
+      "last_update": "auto"
     }
-  }
+  },
+
+  "rules": {
+    "projection_rules": [
+      "Autonomy MUST NOT contradict authoritative session.state.json.",
+      "Autonomy MUST NOT contradict session.alignments.json.",
+      "Autonomy MUST NOT contradict session.context.json.",
+      "Autonomy MUST NOT contradict session.log.json.",
+      "Autonomy MUST NOT invent measure values.",
+      "Autonomy MUST NOT invent paradox types.",
+      "Autonomy MUST NOT invent substrate classes."
+    ],
+
+    "rtt_rules": [
+      "rtt_node MUST be one of RTT1–RTT12.",
+      "RTT nodes MUST map to frozen RTT v0.9 quantities.",
+      "RTT12 MUST collapse to RTT1; skip-resolution forbidden."
+    ],
+
+    "regime_rules": [
+      "Regime MUST be nominal, harmonic, or resolution.",
+      "Regime MUST match rtt_node according to fft.ai.regimes.json."
+    ],
+
+    "consent_rules": [
+      "AA3 escalation requires operator_consent = true.",
+      "If operator_consent = false, escalation MUST be refused."
+    ],
+
+    "lineage_rules": [
+      "Lineage MUST be non-decreasing.",
+      "Lineage MUST increase after collapse."
+    ],
+
+    "substrate_rules": [
+      "Harmonic escalation requires substrate_class = agentic.",
+      "Non-agentic harmonic escalation forbidden."
+    ]
+  },
+
+  "non_claims": [
+    "Autonomy does not revise RTT v0.9.",
+    "Autonomy does not reinterpret SET, S–N–R, or triadic time.",
+    "Autonomy does not replace the human FFT book."
+  ]
 }
