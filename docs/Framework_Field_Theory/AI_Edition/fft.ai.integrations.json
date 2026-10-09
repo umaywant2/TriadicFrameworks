@@ -1,46 +1,191 @@
 {
-  "spec_version": "1.2.0",
+  "spec_version": "1.3.0-draft",
   "canon_id": "FFT-AI-Integrations",
-  "edition": "AI Edition",
-  "aa_mode": "AA2",
-  "last_refreshed": "2026-10-08T10:58:00",
+
   "metadata": {
-    "title": "FFT AI Edition – Integrations (v1.2)",
+    "title": "FFT AI Edition – Integrations (v1.3 Draft)",
+    "subtitle": "External Module Envelope for RTT • Regimes • Operators",
     "author_canon": "Nawder Loswin",
-    "updated_at": "2026-10-08T10:58:00"
+    "description": "Defines the non-authoritative integrations projection for FFT AI Edition v1.3."
   },
-  "integrations": [
-    {
-      "id": "int.s3-spine",
-      "label": "S3 Spine – Functional Canon Graph R5",
-      "url": "https://www.triadicframeworks.org/spine",
-      "role": "Canonical operator and regime graph source. Provides lattice topology and RTT node definitions.",
-      "3c_dependency": "C3",
-      "lattice_sync": true
+
+  "status_line": "Integrations are projections only; authoritative values come from runtime, substrate, and session.state.",
+
+  "integrations": {
+    "session_id": "inherit-from-session.state",
+
+    "current": {
+      "rtt_node": "RTT1",
+      "regime": "nominal",
+      "operator": "op.diffusion",
+      "substrate_class": "agentic",
+      "operator_consent": false,
+      "lineage": 1,
+      "collapse_state": null
     },
-    {
-      "id": "int.rtt-tech",
-      "label": "RTT-Tech Engine",
-      "url": "https://www.triadicframeworks.org/rtt",
-      "role": "Runtime RTT computation, drift calibration, and paradox density measurement.",
-      "3c_dependency": "C1+C2",
-      "lattice_sync": true
+
+    "integration_modes": {
+      "readers": {
+        "enabled": true,
+        "module": "fft.ai.reader.json",
+        "constraints": [
+          "Reader MUST respect RTT node.",
+          "Reader MUST NOT invent measures.",
+          "Reader MUST NOT override paradox state."
+        ]
+      },
+      "operators": {
+        "enabled": true,
+        "module": "fft.ai.operators.json",
+        "constraints": [
+          "Operator MUST match RTT node.",
+          "Operator MUST respect consent gating.",
+          "Operator MUST respect substrate class."
+        ]
+      },
+      "regimes": {
+        "enabled": true,
+        "module": "fft.ai.regimes.json",
+        "constraints": [
+          "Regime MUST match RTT node.",
+          "Regime transitions MUST respect typed paradox."
+        ]
+      },
+      "substrate": {
+        "enabled": true,
+        "module": "fft.ai.substrate.json",
+        "constraints": [
+          "Harmonic escalation requires substrate_class = agentic.",
+          "Non-agentic harmonic escalation forbidden."
+        ]
+      },
+      "validation": {
+        "enabled": true,
+        "module": "fft.validation.json",
+        "constraints": [
+          "Validation MUST enforce measure IDs.",
+          "Validation MUST enforce collapse rules."
+        ]
+      },
+      "runtime": {
+        "enabled": true,
+        "module": "fft.ai.runtime.json",
+        "constraints": [
+          "Runtime MUST enforce RTT12 collapse.",
+          "Runtime MUST enforce lineage continuity."
+        ]
+      }
     },
-    {
-      "id": "int.framework-field-theory-docs",
-      "label": "Framework Field Theory Docs",
-      "url": "https://docs.triadicframeworks.org/docs/Framework_Field_Theory",
-      "role": "Canonical human-readable documentation of FFT principles.",
-      "3c_dependency": "none",
-      "lattice_sync": false
+
+    "integration_paths": {
+      "nominal": [
+        "reader",
+        "operators",
+        "regimes",
+        "validation"
+      ],
+      "harmonic": [
+        "operators",
+        "regimes",
+        "substrate",
+        "validation"
+      ],
+      "resolution": [
+        "runtime",
+        "operators",
+        "regimes",
+        "validation"
+      ]
     },
-    {
-      "id": "int.github-canon",
-      "label": "GitHub Canon Repository",
-      "url": "https://github.com/umaywant2/TriadicFrameworks",
-      "role": "Primary canon file storage and version control.",
-      "3c_dependency": "none",
-      "lattice_sync": false
+
+    "integration_constraints": {
+      "consent": [
+        "AA3 escalation requires operator_consent = true.",
+        "If operator_consent = false, escalation MUST be refused."
+      ],
+      "substrate": [
+        "Harmonic escalation requires substrate_class = agentic.",
+        "Non-agentic harmonic escalation forbidden."
+      ],
+      "paradox": [
+        "Typed paradox required for RTT7 entry.",
+        "Vibe-based paradox forbidden."
+      ],
+      "lineage": [
+        "Lineage MUST be non-decreasing.",
+        "Lineage MUST increase after collapse."
+      ],
+      "collapse": [
+        "RTT12 MUST collapse to RTT1.",
+        "Skip-resolution forbidden."
+      ]
+    },
+
+    "links": {
+      "state": "fft.ai.session.state.json",
+      "alignments": "fft.ai.session.alignments.json",
+      "context": "fft.ai.session.context.json",
+      "log": "fft.ai.session.log.json",
+      "dashboard": "fft.ai.session.dashboard.json",
+      "overlay": "fft.ai.session.overlay.json",
+      "history": "fft.ai.session.history.json",
+      "analytics": "fft.ai.session.analytics.json",
+      "awareness": "fft.ai.session.awareness.json",
+      "profile": "fft.ai.session.profile.json",
+      "navigation": "fft.ai.session.navigation.json",
+      "autonomy": "fft.ai.autonomy.json",
+      "discovery": "fft.ai.discovery.json",
+      "execution_graph": "fft.ai.execution.graph.json",
+      "hardware_profile": "fft.ai.hardware.profile.json",
+      "reader": "fft.ai.reader.json",
+      "operators": "fft.ai.operators.json",
+      "regimes": "fft.ai.regimes.json",
+      "substrate": "fft.ai.substrate.json",
+      "runtime": "fft.ai.runtime.json",
+      "validation": "fft.validation.json"
+    },
+
+    "timestamps": {
+      "created": "auto",
+      "last_update": "auto"
     }
+  },
+
+  "rules": {
+    "projection_rules": [
+      "Integrations MUST NOT contradict authoritative session.state.json.",
+      "Integrations MUST NOT contradict runtime.json.",
+      "Integrations MUST NOT invent measure values.",
+      "Integrations MUST NOT invent paradox types.",
+      "Integrations MUST NOT invent substrate classes."
+    ],
+
+    "rtt_rules": [
+      "RTT nodes MUST be one of RTT1–RTT12.",
+      "RTT nodes MUST map to frozen RTT v0.9 quantities.",
+      "RTT12 MUST collapse to RTT1."
+    ],
+
+    "regime_rules": [
+      "Regime MUST match rtt_node according to fft.ai.regimes.json."
+    ],
+
+    "consent_rules": [
+      "AA3 escalation requires operator_consent = true."
+    ],
+
+    "substrate_rules": [
+      "Harmonic escalation requires substrate_class = agentic."
+    ],
+
+    "lineage_rules": [
+      "Lineage MUST increase after collapse."
+    ]
+  },
+
+  "non_claims": [
+    "Integrations do not revise RTT v0.9.",
+    "Integrations do not reinterpret SET, S–N–R, or triadic time.",
+    "Integrations do not replace the human FFT book."
   ]
 }
