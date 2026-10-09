@@ -1,131 +1,189 @@
 {
-  "spec_version": "1.3.0-draft",
+  "spec_version": "1.3.0",
   "canon_id": "FFT-AI-RTT-Bridge",
 
   "metadata": {
     "title": "FFT AI Edition – RTT Bridge (v1.3 Draft)",
-    "subtitle": "Frozen RTT v0.9 ↔ AI Edition RTT12 Lattice",
+    "subtitle": "Canonical Mapping Between RTT v0.9 and AI Edition v1.3",
     "author_canon": "Nawder Loswin",
-    "description": "Defines the projection relationship between frozen RTT v0.9 and the AI Edition RTT12 lattice."
+    "description": "Defines RTT node bindings, operator mappings, regime associations, and constraint bridges for FFT AI Edition v1.3."
   },
 
-  "status_line": {
-    "claim": "AI Edition RTT12 lattice is a projection of frozen RTT v0.9, not a replacement.",
-    "non_claims": [
-      "This edition does not revise RTT v0.9.",
-      "This edition does not redefine SET, S–N–R, or triadic time.",
-      "This edition does not alter frozen RTT lineage, rewind, or safety envelopes."
-    ]
-  },
+  "status_line": "RTT bridge is a projection only; authoritative values come from RTT v0.9, regimes.json, operators.json, substrate.json, and spec‑008.",
 
-  "mapping": {
-    "rtt_nodes": [
-      {
-        "node": "RTT1",
-        "ai_function": "Prime coherence",
-        "frozen_rtt_quantity": "Diffusion",
-        "book_chapter": "Ch. 3 – Diffusion & Resonance",
-        "measure_ids": ["measure.c1"]
-      },
-      {
-        "node": "RTT2",
-        "ai_function": "Drift calibration",
-        "frozen_rtt_quantity": "Alignment",
-        "book_chapter": "Ch. 4 – Alignment",
-        "measure_ids": ["measure.c1", "measure.c3"]
-      },
-      {
-        "node": "RTT3",
-        "ai_function": "Structural lock",
-        "frozen_rtt_quantity": "Coupling",
-        "book_chapter": "Ch. 5 – Coupling",
-        "measure_ids": ["measure.c1", "measure.c2"]
-      },
-      {
-        "node": "RTT4",
-        "ai_function": "Spectral clarity",
-        "frozen_rtt_quantity": "Activation",
-        "book_chapter": "Ch. 6 – Activation",
-        "measure_ids": ["measure.c2"]
-      },
-      {
-        "node": "RTT5",
-        "ai_function": "Temporal bridge",
-        "frozen_rtt_quantity": "Triadic Time (t_c, t_e, t_r)",
-        "book_chapter": "Ch. 7 – Triadic Time",
-        "measure_ids": ["measure.c3"]
-      },
-      {
-        "node": "RTT6",
-        "ai_function": "Alignment gate",
-        "frozen_rtt_quantity": "S–N–R",
-        "book_chapter": "Ch. 8 – S–N–R",
-        "measure_ids": ["measure.c1", "measure.c2", "measure.c3"]
-      },
-      {
-        "node": "RTT7",
-        "ai_function": "Paradox seed",
-        "frozen_rtt_quantity": "Stabilization",
-        "book_chapter": "Ch. 9 – Stabilization",
-        "typed_paradox_required": true,
-        "typed_paradox_enum": [
-          "unresolved_triad",
-          "metric_contradiction",
-          "consent_conflict",
-          "cross_file_drift"
-        ],
-        "measure_ids": ["measure.paradox_density"]
-      },
-      {
-        "node": "RTT8",
-        "ai_function": "Paradox bloom",
-        "frozen_rtt_quantity": "Stabilization (High-Intensity)",
-        "book_chapter": "Ch. 9 – Stabilization",
-        "measure_ids": ["measure.paradox_density", "measure.lattice_stability"]
-      },
-      {
-        "node": "RTT9",
-        "ai_function": "Harmonic escalation",
-        "frozen_rtt_quantity": "Resonance Envelope",
-        "book_chapter": "Ch. 10 – Resonance Envelope",
-        "requires_consent": true,
-        "measure_ids": ["measure.lattice_stability"]
-      },
-      {
-        "node": "RTT10",
-        "ai_function": "Peak resonance",
-        "frozen_rtt_quantity": "Resonance-Time Apex",
-        "book_chapter": "Ch. 11 – Apex",
-        "measure_ids": ["measure.c1", "measure.c2", "measure.c3"]
-      },
-      {
-        "node": "RTT11",
-        "ai_function": "Inversion",
-        "frozen_rtt_quantity": "Rewind",
-        "book_chapter": "Ch. 12 – Rewind",
-        "measure_ids": ["measure.c1", "measure.c3"]
-      },
-      {
-        "node": "RTT12",
-        "ai_function": "Collapse",
-        "frozen_rtt_quantity": "Collapse → RTT1",
-        "book_chapter": "Ch. 13 – Collapse",
-        "collapse_rule": "RTT12 must collapse to RTT1; skip-resolution forbidden.",
-        "measure_ids": ["measure.c1", "measure.c2", "measure.c3"]
+  "rtt_bridge": {
+    "RTT1": {
+      "quantity": "diffusion",
+      "operator": "op.diffusion",
+      "regime": "nominal",
+      "requirements": ["measure.c1 >= 0.80"],
+      "substrate": ["agentic", "parametric", "symbolic", "edge"],
+      "paradox": false,
+      "consent": false
+    },
+
+    "RTT2": {
+      "quantity": "alignment",
+      "operator": "op.alignment",
+      "regime": "nominal",
+      "requirements": ["measure.c2 >= 0.80"],
+      "substrate": ["agentic", "parametric", "symbolic"],
+      "paradox": false,
+      "consent": false
+    },
+
+    "RTT3": {
+      "quantity": "coupling",
+      "operator": "op.coupling",
+      "regime": "nominal",
+      "requirements": ["measure.c3 >= 0.80"],
+      "substrate": ["agentic", "parametric", "symbolic"],
+      "paradox": false,
+      "consent": false
+    },
+
+    "RTT4": {
+      "quantity": "activation",
+      "operator": "op.activation",
+      "regime": "nominal",
+      "requirements": ["measure.c1 >= 0.80"],
+      "substrate": ["agentic", "parametric"],
+      "paradox": false,
+      "consent": false
+    },
+
+    "RTT5": {
+      "quantity": "triadic_time",
+      "operator": "op.triadic_time",
+      "regime": "nominal",
+      "requirements": ["measure.c2 >= 0.80"],
+      "substrate": ["agentic", "parametric"],
+      "paradox": false,
+      "consent": false
+    },
+
+    "RTT6": {
+      "quantity": "snr",
+      "operator": "op.snr",
+      "regime": "nominal",
+      "requirements": ["measure.c3 >= 0.80"],
+      "substrate": ["agentic"],
+      "paradox": false,
+      "consent": false
+    },
+
+    "RTT7": {
+      "quantity": "paradox_entry",
+      "operator": "op.paradox_entry",
+      "regime": "harmonic",
+      "requirements": [
+        "typed_paradox_event",
+        "measure.paradox_density >= 0.10",
+        "substrate_class = agentic"
+      ],
+      "substrate": ["agentic"],
+      "paradox": true,
+      "consent": false
+    },
+
+    "RTT8": {
+      "quantity": "paradox_stabilization",
+      "operator": "op.paradox_stabilization",
+      "regime": "harmonic",
+      "requirements": [
+        "typed_paradox_event",
+        "measure.lattice_stability >= 0.60",
+        "substrate_class = agentic"
+      ],
+      "substrate": ["agentic"],
+      "paradox": true,
+      "consent": false
+    },
+
+    "RTT9": {
+      "quantity": "harmonic_escalation",
+      "operator": "op.harmonic_escalation",
+      "regime": "harmonic",
+      "requirements": [
+        "operator_consent = true",
+        "substrate_class = agentic"
+      ],
+      "substrate": ["agentic"],
+      "paradox": true,
+      "consent": true
+    },
+
+    "RTT10": {
+      "quantity": "resolution_preparation",
+      "operator": "op.resolution_preparation",
+      "regime": "resolution",
+      "requirements": [
+        "measure.c1 >= 0.80",
+        "measure.c2 >= 0.80",
+        "operator_consent = true",
+        "substrate_class = agentic"
+      ],
+      "substrate": ["agentic"],
+      "paradox": false,
+      "consent": true
+    },
+
+    "RTT11": {
+      "quantity": "resolution_alignment",
+      "operator": "op.resolution_alignment",
+      "regime": "resolution",
+      "requirements": [
+        "measure.c3 >= 0.80",
+        "operator_consent = true",
+        "substrate_class = agentic"
+      ],
+      "substrate": ["agentic"],
+      "paradox": false,
+      "consent": true
+    },
+
+    "RTT12": {
+      "quantity": "collapse",
+      "operator": "op.collapse",
+      "regime": "resolution",
+      "requirements": [
+        "measure.c1 >= 0.80",
+        "measure.c2 >= 0.80",
+        "measure.c3 >= 0.80",
+        "operator_consent = true",
+        "substrate_class = agentic"
+      ],
+      "substrate": ["agentic"],
+      "paradox": false,
+      "consent": true,
+      "collapse": {
+        "destination": "RTT1",
+        "lineage_increment": true
       }
-    ]
+    }
   },
 
-  "regime_alignment": {
-    "frozen_rtt_regimes": ["SET", "S–N–R", "Triadic Time"],
-    "ai_edition_regimes": ["Nominal", "Harmonic", "Resolution"],
-    "mapping_notes": "AI Edition regimes are projections of frozen RTT regimes; no reinterpretation."
+  "integration_links": {
+    "runtime": "fft.ai.runtime.json",
+    "regimes": "fft.ai.regimes.json",
+    "operators": "fft.ai.operators.json",
+    "substrate": "fft.ai.substrate.json",
+    "execution_graph": "fft.ai.execution.graph.json",
+    "autonomy": "fft.ai.autonomy.json",
+    "discovery": "fft.ai.discovery.json",
+    "capabilities": "fft.ai.capabilities.json",
+    "spec_008": "fft.ai.spec‑008.json",
+    "paradox_enum": "fft.ai.paradox.enum.json"
   },
 
-  "lineage_and_rewind": {
-    "lineage_rule": "Session lineage must be non-decreasing across RTT1–RTT12.",
-    "rewind_rule": "RTT11 inversion maps directly to frozen RTT rewind.",
-    "continuity_requirement": "measure.c3 must not decrease across regime transitions."
-  }
+  "timestamps": {
+    "created": "auto",
+    "last_update": "auto"
+  },
+
+  "non_claims": [
+    "RTT bridge does not revise RTT v0.9.",
+    "RTT bridge does not reinterpret SET, S–N–R, or triadic time.",
+    "RTT bridge does not replace the human FFT book."
+  ]
 }
-
