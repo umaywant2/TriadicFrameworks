@@ -1,4 +1,6 @@
-**SuperGrok Imagine Video Script: “The Seven Operators Animate the 3D–9D Dimensional Echoes”**
+<img width="1024" height="1024" alt="rtt_api_module_image" src="https://github.com/user-attachments/assets/03982645-fd0a-4217-9e02-010364c21827" />
+
+## **SuperGrok Imagine Video Script: “The Seven Operators Animate the 3D–9D Dimensional Echoes”**
 
 **Prompt for SuperGrok Imagine (copy-paste ready – optimized for ~45–60 second cinematic video loop or segmented generation):**
 
