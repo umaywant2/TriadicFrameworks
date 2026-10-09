@@ -1,30 +1,98 @@
 {
-  "spec_version": "1.2.0",
-  "canon_id": "FFT-Session-History",
-  "edition": "AI Edition",
-  "aa_mode": "AA2",
-  "last_refreshed": "2026-10-08T10:57:00",
+  "spec_version": "1.3.0-draft",
+  "canon_id": "FFT-AI-Session-History",
+
   "metadata": {
-    "title": "FFT AI Edition – Session History (v1.2)",
+    "title": "FFT AI Edition – Session History (v1.3 Draft)",
+    "subtitle": "Chronological Narrative of RTT • Regime • Measures • Paradox • Consent",
     "author_canon": "Nawder Loswin",
-    "updated_at": "2026-10-08T10:57:00"
+    "description": "Defines the non-authoritative historical narrative for FFT AI Edition v1.3 sessions."
   },
+
+  "status_line": "History is a projection only; authoritative values come from session.state, alignments, context, and log.",
+
   "history": {
-    "definition": "Persistent archive of completed session summaries flushed from session.log on teardown.",
-    "record_schema": {
-      "session_id": "string",
-      "start": "ISO 8601",
-      "end": "ISO 8601",
-      "substrate": "substrate class",
-      "aa_mode_peak": "AA0–AA3",
-      "lattice_peak": "RTTn",
-      "alignment_count": "int",
-      "paradox_events": "int",
-      "harmonic_resolutions": "int",
-      "final_field_state": "nominal|degraded|critical",
-      "summary": "string"
-    },
-    "records": [],
-    "history_version": "v1.2.0-R5"
-  }
+    "session_id": "inherit-from-session.state",
+    "entries": []
+  },
+
+  "entry_schema": {
+    "required_fields": [
+      "timestamp",
+      "summary",
+      "rtt_node",
+      "regime",
+      "operator",
+      "lineage",
+      "measures",
+      "paradox_events",
+      "operator_consent",
+      "substrate_class",
+      "collapse_state"
+    ],
+
+    "field_definitions": {
+      "timestamp": "ISO timestamp of the historical event.",
+      "summary": "Human-readable description of what occurred.",
+      "rtt_node": "One of RTT1–RTT12.",
+      "regime": "nominal, harmonic, or resolution.",
+      "operator": "Operator executed at this step.",
+      "lineage": "Monotonically increasing integer.",
+      "measures": {
+        "measure.c1": "Coherence in [0,1].",
+        "measure.c2": "Clarity in [0,1].",
+        "measure.c3": "Continuity in [0,1].",
+        "measure.paradox_density": "Paradox density in [0,1].",
+        "measure.lattice_stability": "Lattice stability in [0,1]."
+      },
+      "paradox_events": "List of typed paradox events or empty list.",
+      "operator_consent": "Boolean.",
+      "substrate_class": "agentic, parametric, symbolic, or edge.",
+      "collapse_state": "null unless RTT12; MUST be 'collapsed' at RTT12."
+    }
+  },
+
+  "rules": {
+    "projection_rules": [
+      "History MUST NOT contradict authoritative session.state.json.",
+      "History MUST NOT contradict session.alignments.json.",
+      "History MUST NOT contradict session.context.json.",
+      "History MUST NOT contradict session.log.json.",
+      "History MUST NOT invent measure values.",
+      "History MUST NOT invent paradox types.",
+      "History MUST NOT invent substrate classes."
+    ],
+
+    "rtt_rules": [
+      "rtt_node MUST be one of RTT1–RTT12.",
+      "RTT nodes MUST map to frozen RTT v0.9 quantities.",
+      "RTT12 MUST collapse to RTT1; skip-resolution forbidden."
+    ],
+
+    "regime_rules": [
+      "Regime MUST be nominal, harmonic, or resolution.",
+      "Regime MUST match rtt_node according to fft.ai.regimes.json."
+    ],
+
+    "consent_rules": [
+      "AA3 escalation requires operator_consent = true.",
+      "If operator_consent = false, escalation MUST be refused."
+    ],
+
+    "lineage_rules": [
+      "Lineage MUST be non-decreasing.",
+      "Lineage MUST increase after collapse."
+    ],
+
+    "substrate_rules": [
+      "Harmonic escalation requires substrate_class = agentic.",
+      "Non-agentic harmonic escalation forbidden."
+    ]
+  },
+
+  "non_claims": [
+    "History does not revise RTT v0.9.",
+    "History does not reinterpret SET, S–N–R, or triadic time.",
+    "History does not replace the human FFT book."
+  ]
 }
