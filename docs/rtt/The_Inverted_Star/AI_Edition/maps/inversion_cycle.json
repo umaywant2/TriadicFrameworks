@@ -1,1 +1,45 @@
-. 
+{
+  "map": "inversion_cycle",
+  "module": "rtt.inverted_star.ai",
+  "version": "2.0-draft",
+
+  "phases": [
+    "rise",
+    "saturation",
+    "fracture",
+    "inversion",
+    "collapse",
+    "dissolution",
+    "silence"
+  ],
+
+  "operator_sequence": [
+    "Δ",
+    "Δ",
+    "Δ→Ω",
+    "Ω",
+    "∇",
+    "∇→Σ",
+    "Σ"
+  ],
+
+  "dominance": {
+    "rise": "Δ",
+    "saturation": "Δ",
+    "fracture": "Δ→Ω",
+    "inversion": "Ω",
+    "collapse": "∇",
+    "dissolution": "∇",
+    "silence": "Σ"
+  },
+
+  "alignment": {
+    "rise": "N",
+    "saturation": "N",
+    "fracture": "mixed",
+    "inversion": "N→S",
+    "collapse": "R",
+    "dissolution": "R",
+    "silence": "0R"
+  }
+}
