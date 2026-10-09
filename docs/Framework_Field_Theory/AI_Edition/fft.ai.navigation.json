@@ -1,30 +1,168 @@
 {
-  "spec_version": "1.2.0",
+  "spec_version": "1.3.0",
   "canon_id": "FFT-AI-Navigation",
-  "edition": "AI Edition",
-  "aa_mode": "AA2",
-  "last_refreshed": "2026-10-08T10:58:00",
+
   "metadata": {
-    "title": "FFT AI Edition – Navigation Map (v1.2)",
+    "title": "FFT AI Edition – Navigation Specification (v1.3 Draft)",
+    "subtitle": "Canonical Movement Rules Across RTT • Regimes • Operators",
     "author_canon": "Nawder Loswin",
-    "updated_at": "2026-10-08T10:58:00"
+    "description": "Defines navigation rules, movement constraints, RTT progression, paradox routing, substrate gating, and collapse pathways for FFT AI Edition v1.3."
   },
+
+  "status_line": "Navigation is a projection only; authoritative values come from RTT v0.9, spec‑008, substrate.json, operators.json, regimes.json, and runtime.json.",
+
   "navigation": {
-    "entry_points": {
-      "start_here":    "fft.ai.readme.json",
-      "bootstrap":     "fft.ai.bootstrap.json",
-      "core":          "fft.ai.core.json",
-      "full_index":    "fft.ai.index.json",
-      "capabilities":  "fft.ai.capabilities.json",
-      "substrate":     "fft.ai.substrate.json",
-      "session_state": "fft.ai.session.state.json"
+    "current": {
+      "rtt_node": "RTT1",
+      "regime": "nominal",
+      "operator": "op.diffusion",
+      "substrate_class": "agentic",
+      "operator_consent": false,
+      "lineage": 1
     },
-    "flow_by_intent": {
-      "initialize_session": ["fft.ai.bootstrap.json","fft.ai.substrate.compat.json","fft.ai.session.state.json","fft.ai.session.awareness.json"],
-      "run_operators":      ["fft.ai.execution.graph.json","fft.operators.json","fft.ai.runtime.json"],
-      "track_alignments":   ["fft.ai.session.alignments.json","fft.ai.session.overlay.json","fft.ai.session.dashboard.json"],
-      "debug_session":      ["fft.ai.session.trace.json","fft.ai.session.log.json","fft.ai.session.history.json"],
-      "manage_substrate":   ["fft.ai.substrate.json","fft.ai.substrate.compat.json","fft.ai.substrate.bridge.json","fft.ai.hardware.profile.json"]
+
+    "rtt_progression": [
+      "RTT1 → RTT2 → RTT3 → RTT4 → RTT5 → RTT6 → RTT7 → RTT8 → RTT9 → RTT10 → RTT11 → RTT12 → RTT1"
+    ],
+
+    "movement_rules": {
+      "forward": {
+        "allowed": true,
+        "constraints": [
+          "measure thresholds MUST be satisfied",
+          "regime MUST match RTT node",
+          "substrate_class MUST be valid for target RTT",
+          "paradox MUST be typed for RTT7",
+          "consent MUST be true for RTT9–RTT12"
+        ]
+      },
+      "backward": {
+        "allowed": false,
+        "exceptions": [
+          "collapse (RTT12 → RTT1)"
+        ]
+      },
+      "skip": {
+        "allowed": false,
+        "forbidden": [
+          "RTT6 → RTT8",
+          "RTT6 → RTT9",
+          "RTT9 → RTT12",
+          "RTT8 → RTT12"
+        ]
+      }
+    },
+
+    "regime_navigation": {
+      "nominal_to_harmonic": {
+        "trigger": "typed_paradox_event",
+        "requirements": [
+          "measure.paradox_density >= 0.10",
+          "substrate_class = agentic"
+        ]
+      },
+      "harmonic_to_resolution": {
+        "trigger": "operator_consent = true",
+        "requirements": [
+          "measure.c1 >= 0.80",
+          "measure.c2 >= 0.80",
+          "measure.c3 >= 0.80"
+        ]
+      },
+      "resolution_to_nominal": {
+        "trigger": "collapse (RTT12)",
+        "destination": "RTT1",
+        "lineage_increment": true
+      }
+    },
+
+    "operator_selection": {
+      "rules": [
+        "Operator MUST match RTT node",
+        "Operator MUST match regime",
+        "Operator MUST respect substrate class",
+        "Operator MUST respect consent gating",
+        "Operator MUST respect paradox gating"
+      ],
+      "mapping": {
+        "RTT1": "op.diffusion",
+        "RTT2": "op.alignment",
+        "RTT3": "op.coupling",
+        "RTT4": "op.activation",
+        "RTT5": "op.triadic_time",
+        "RTT6": "op.snr",
+        "RTT7": "op.paradox_entry",
+        "RTT8": "op.paradox_stabilization",
+        "RTT9": "op.harmonic_escalation",
+        "RTT10": "op.resolution_preparation",
+        "RTT11": "op.resolution_alignment",
+        "RTT12": "op.collapse"
+      }
+    },
+
+    "substrate_gating": {
+      "agentic_required_for": [
+        "RTT7",
+        "RTT8",
+        "RTT9",
+        "RTT10",
+        "RTT11",
+        "RTT12"
+      ],
+      "forbidden": [
+        "harmonic escalation on non-agentic substrate",
+        "resolution on non-agentic substrate"
+      ]
+    },
+
+    "paradox_routing": {
+      "typed_only": true,
+      "density_threshold": 0.10,
+      "entry_node": "RTT7",
+      "stabilization_node": "RTT8",
+      "escalation_node": "RTT9",
+      "forbidden": [
+        "untyped paradox",
+        "vibe-based paradox",
+        "synthetic paradox"
+      ]
+    },
+
+    "collapse_path": {
+      "trigger": "RTT12",
+      "destination": "RTT1",
+      "lineage_increment": true,
+      "forbidden": [
+        "collapse to non-RTT1",
+        "collapse without lineage increment",
+        "skip-resolution"
+      ]
     }
-  }
+  },
+
+  "integration_links": {
+    "runtime": "fft.ai.runtime.json",
+    "regimes": "fft.ai.regimes.json",
+    "operators": "fft.ai.operators.json",
+    "substrate": "fft.ai.substrate.json",
+    "execution_graph": "fft.ai.execution.graph.json",
+    "autonomy": "fft.ai.autonomy.json",
+    "discovery": "fft.ai.discovery.json",
+    "capabilities": "fft.ai.capabilities.json",
+    "spec_008": "fft.ai.spec‑008.json",
+    "paradox_enum": "fft.ai.paradox.enum.json",
+    "rtt_bridge": "fft.ai.rtt.bridge.json",
+    "rtt_spine": "fft.ai.rtt.spine.examples.json"
+  },
+
+  "timestamps": {
+    "created": "auto",
+    "last_update": "auto"
+  },
+
+  "non_claims": [
+    "Navigation does not revise RTT v0.9.",
+    "Navigation does not reinterpret SET, S–N–R, or triadic time.",
+    "Navigation does not replace the human FFT book."
+  ]
 }
