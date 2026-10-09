@@ -1,1 +1,17 @@
-. 
+{
+  "kernel": "fft.ai.paradox.resolver",
+  "version": "1.33-p1",
+
+  "resolver": {
+    "mode": "structural",
+    "requires": {
+      "paradox": "structural",
+      "drift": "bounded",
+      "coherence": "declared"
+    }
+  },
+
+  "invariants": {
+    "must_not_revise_frozen_RTT": true
+  }
+}
