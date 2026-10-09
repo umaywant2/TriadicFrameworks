@@ -3,13 +3,13 @@
   "canon_id": "FFT-AI-Overview",
 
   "metadata": {
-    "title": "FFT AI Edition – Overview (v1.3 Draft)",
-    "subtitle": "Conceptual Map of Architecture • Layers • Runtime • Session",
+    "title": "FFT AI Edition – Overview (v1.3)",
+    "subtitle": "Conceptual Map of Architecture • Layers • Runtime • Session • Substrate • Operators • RTT",
     "author_canon": "Nawder Loswin",
-    "description": "Defines the non-authoritative overview projection for FFT AI Edition v1.3."
+    "description": "Defines the canonical overview projection for FFT AI Edition v1.3."
   },
 
-  "status_line": "Overview is a projection only; authoritative values come from manifest, registry, and module specifications.",
+  "status_line": "Overview is a projection only; authoritative values come from manifest, registry, index, and module specifications.",
 
   "overview": {
     "edition": "AI Edition",
@@ -21,7 +21,9 @@
         "description": "Foundational kernel of FFT AI Edition.",
         "modules": [
           "fft.ai.core.json",
+          "fft.ai.core_v1_2_.json",
           "fft.ai.spec.json",
+          "fft.ai.spec-008.json",
           "fft.ai.manifest.json",
           "fft.ai.index.json",
           "fft.ai.readme.json",
@@ -30,7 +32,7 @@
       },
 
       "substrate_runtime": {
-        "description": "Execution substrate, compatibility, lattice, and runtime.",
+        "description": "Execution substrate, compatibility, lattice, matrix, and runtime.",
         "modules": [
           "fft.ai.substrate.json",
           "fft.ai.substrate.compat.json",
@@ -38,14 +40,23 @@
           "fft.ai.substrate.lattice.json",
           "fft.ai.substrate.matrix.json",
           "fft.ai.runtime.json",
-          "fft.ai.hardware.profile.json"
+          "fft.ai.hardware.profile.json",
+          "fft.ai.bootstrap.json",
+          "fft.ai.integrations.json",
+          "fft.ai.discovery.json",
+          "fft.ai.execution.graph.json",
+          "fft.ai.capabilities.json",
+          "fft.ai.reader.json",
+          "fft.ai.overview.json",
+          "fft.ai.registry.json"
         ]
       },
 
       "session_layer": {
-        "description": "Full session model including state, context, alignments, log, dashboard, overlay, history, UI, profile, analytics, awareness.",
+        "description": "Full session model including state, context, alignments, log, dashboard, overlay, history, UI, profile, analytics, awareness, navigation, permissions, render, and trace.",
         "modules": [
           "fft.ai.session.state.json",
+          "fft.ai.session.state.refresh.json",
           "fft.ai.session.context.json",
           "fft.ai.session.alignments.json",
           "fft.ai.session.log.json",
@@ -56,12 +67,15 @@
           "fft.ai.session.ui.json",
           "fft.ai.session.profile.json",
           "fft.ai.session.analytics.json",
-          "fft.ai.session.awareness.json"
+          "fft.ai.session.awareness.json",
+          "fft.ai.session.navigation.json",
+          "fft.ai.session.permissions.json",
+          "fft.ai.session.render.json"
         ]
       },
 
       "operators_structures": {
-        "description": "Operators, regimes, invariants, structures, validation, examples.",
+        "description": "Operators, regimes, invariants, structures, validation, examples, paradox enumeration.",
         "modules": [
           "fft.ai.operators.json",
           "fft.operator.example.json",
@@ -71,79 +85,38 @@
           "fft.invariant.json",
           "fft.validation.json",
           "fft.examples.json",
-          "fft.core.json"
-        ]
-      },
-
-      "ai_runtime_layer": {
-        "description": "Autonomy, discovery, execution graph, navigation, capabilities, integrations, registry, RTT spine, prompts.",
-        "modules": [
-          "fft.ai.autonomy.json",
-          "fft.ai.bootstrap.json",
-          "fft.ai.capabilities.json",
-          "fft.ai.discovery.json",
-          "fft.ai.execution.graph.json",
-          "fft.ai.integrations.json",
-          "fft.ai.navigation.json",
-          "fft.ai.registry.json",
-          "fft.ai.rtt.engine.prompts.json",
-          "fft.ai.rtt.spine.examples.json"
-        ]
-      },
-
-      "capture": {
-        "description": "Miscellaneous capture and documentation.",
-        "modules": [
-          "capture.md",
-          "index.html"
+          "fft.ai.paradox.enum.json",
+          "fft.ai.rtt.bridge.json",
+          "fft.ai.rtt.spine.examples.json",
+          "fft.ai.rtt.engine.prompts.json"
         ]
       }
-    },
-
-    "relationships": {
-      "session_to_runtime": "Session files define state; runtime enforces execution and collapse.",
-      "operators_to_rtt": "Operators map directly to RTT nodes and regime transitions.",
-      "substrate_to_harmonic": "Harmonic escalation requires agentic substrate.",
-      "analytics_to_measures": "Analytics derive from measure IDs; no invention allowed.",
-      "awareness_to_profile": "Awareness defines cognitive envelope; profile defines identity envelope.",
-      "execution_graph_to_navigation": "Execution graph defines flow; navigation defines movement."
-    },
-
-    "canonical_rules": {
-      "rtt": [
-        "RTT nodes MUST map to frozen RTT v0.9 quantities.",
-        "RTT12 MUST collapse to RTT1.",
-        "Skip-resolution forbidden."
-      ],
-      "regime": [
-        "Regime MUST match RTT node according to fft.ai.regimes.json."
-      ],
-      "consent": [
-        "AA3 escalation requires operator_consent = true."
-      ],
-      "substrate": [
-        "Harmonic escalation requires substrate_class = agentic."
-      ],
-      "lineage": [
-        "Lineage MUST increase after collapse."
-      ]
     }
   },
 
-  "links": {
+  "rules": {
+    "overview_rules": [
+      "Overview MUST list all modules in manifest.json.",
+      "Overview MUST NOT invent module names.",
+      "Overview MUST NOT omit session-layer modules.",
+      "Overview MUST match registry.json.",
+      "Overview MUST match index.json.",
+      "Overview MUST match spec-008.json."
+    ]
+  },
+
+  "integration_links": {
     "manifest": "fft.ai.manifest.json",
+    "registry": "fft.ai.registry.json",
     "index": "fft.ai.index.json",
-    "registry": "fft.ai.registry.json"
+    "runtime": "fft.ai.runtime.json",
+    "session_state": "fft.ai.session.state.json",
+    "session_trace": "fft.ai.session.trace.json",
+    "session_render": "fft.ai.session.render.json"
   },
 
   "timestamps": {
     "created": "auto",
     "last_update": "auto"
-  },
-
-  "non_claims": [
-    "Overview does not revise RTT v0.9.",
-    "Overview does not reinterpret SET, S–N–R, or triadic time.",
-    "Overview does not replace the human FFT book."
-  ]
+  }
 }
