@@ -1,22 +1,8 @@
-# 🗂️ Assets 
+<img width="1194" height="672" alt="assets_" src="https://github.com/user-attachments/assets/8d1d3063-7612-43a1-90c2-fb20b1a72752" />
 
 - [`assets_module.json`](assets_module.json) — Agentic module schema role assignments
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+# 🗂️ Assets 
 
 This folder contains **supporting files** — images, diagrams, blueprints, and other media artifacts.
 
@@ -42,3 +28,19 @@ They make the framework accessible, memorable, and remixable.
 ## Cross‑Links
 - [../papers](../papers) → research scrolls that embed figures
 - [../curriculum](../curriculum) → educational modules using diagrams
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
