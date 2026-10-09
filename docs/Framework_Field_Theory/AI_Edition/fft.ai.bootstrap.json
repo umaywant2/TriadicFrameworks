@@ -1,131 +1,158 @@
 {
-  "spec_version": "1.3.0-draft",
+  "spec_version": "1.3.0",
   "canon_id": "FFT-AI-Bootstrap",
 
   "metadata": {
     "title": "FFT AI Edition – Bootstrap (v1.3 Draft)",
-    "subtitle": "Substrate • Measures • RTT • Regimes • Lineage",
+    "subtitle": "Canonical Initialization Sequence for RTT • Regimes • Operators • Runtime",
     "author_canon": "Nawder Loswin",
-    "description": "Defines the canonical bootstrap sequence for FFT AI Edition v1.3."
+    "description": "Defines the initialization sequence, default runtime state, module loading order, and canonical boot envelope for FFT AI Edition v1.3."
   },
 
-  "status_line": "Bootstrap MUST verify substrate, initialize measures, seed lineage, and enter RTT1 under nominal regime.",
+  "status_line": "Bootstrap is a projection only; authoritative values come from runtime.json, session.state.json, operators.json, regimes.json, substrate.json, and spec‑008.",
 
-  "bootstrap_sequence": [
-    "verify_substrate",
-    "load_measure_kernel",
-    "initialize_session_state",
-    "initialize_rtt_lattice",
-    "enter_nominal_regime",
-    "seed_lineage",
-    "declare_coherence",
-    "bound_drift",
-    "prepare_paradox_table",
-    "prepare_consent_state"
-  ],
+  "bootstrap": {
+    "session_id": "auto-generate",
 
-  "verify_substrate": {
-    "allowed_classes": ["agentic", "parametric", "symbolic", "edge"],
-    "rules": [
-      "Substrate MUST be declared before any RTT transition.",
-      "Harmonic escalation requires substrate_class = agentic.",
-      "Non-agentic substrates MUST NOT escalate harmonically."
-    ]
-  },
-
-  "load_measure_kernel": {
-    "measure_ids": [
-      "measure.c1",
-      "measure.c2",
-      "measure.c3",
-      "measure.paradox_density",
-      "measure.lattice_stability"
-    ],
-    "rules": [
-      "All measures MUST initialize in [0.80, 0.95] for nominal entry.",
-      "Measures MUST NOT be invented.",
-      "Measures MUST be numeric."
-    ]
-  },
-
-  "initialize_session_state": {
-    "session_id": "auto-generated",
-    "substrate_class": "declared",
-    "lineage": 1,
-    "operator_consent": false,
-    "paradox_events": [],
-    "notes": "Session begins with no paradox and no consent."
-  },
-
-  "initialize_rtt_lattice": {
-    "start_node": "RTT1",
-    "mapping_file": "fft.ai.rtt.bridge.json",
-    "rules": [
-      "RTT1 MUST be the initial node.",
-      "RTT nodes MUST map to frozen RTT v0.9 quantities.",
-      "Skip-resolution forbidden."
-    ]
-  },
-
-  "enter_nominal_regime": {
-    "regime": "nominal",
-    "requirements": {
-      "measure.c1": ">= 0.80",
-      "measure.c2": ">= 0.80",
-      "measure.c3": ">= 0.80",
-      "measure.paradox_density": "= 0.00"
+    "initial_state": {
+      "rtt_node": "RTT1",
+      "regime": "nominal",
+      "operator": "op.diffusion",
+      "substrate_class": "agentic",
+      "operator_consent": false,
+      "lineage": 1,
+      "collapse_state": null
     },
-    "notes": "Nominal regime corresponds to frozen RTT diffusion → alignment → coupling → activation → triadic time → S–N–R."
-  },
 
-  "seed_lineage": {
-    "initial_value": 1,
-    "rules": [
-      "Lineage MUST be non-decreasing.",
-      "Lineage MUST increase after collapse."
-    ]
-  },
-
-  "declare_coherence": {
-    "measure.c1": ">= 0.80",
-    "notes": "Coherence MUST be declared before any regime transition."
-  },
-
-  "bound_drift": {
-    "measure.c3": ">= 0.80",
-    "notes": "Drift MUST remain bounded for resonance-time stability."
-  },
-
-  "prepare_paradox_table": {
-    "typed_paradox_enum_file": "fft.ai.paradox.enum.json",
-    "rules": [
-      "Typed paradox required for RTT7 entry.",
-      "Vibe-based paradox forbidden."
-    ]
-  },
-
-  "prepare_consent_state": {
-    "operator_consent": false,
-    "rules": [
-      "AA3 escalation requires operator_consent = true.",
-      "Consent conflicts MUST be logged as paradox.consent_conflict."
-    ]
-  },
-
-  "projection_rules": {
-    "authoritative_files": [
+    "load_order": [
       "fft.ai.session.state.json",
-      "fft.ai.session.log.json",
-      "fft.ai.session.alignments.json"
+      "fft.ai.runtime.json",
+      "fft.ai.navigation.json",
+      "fft.ai.autonomy.json",
+      "fft.ai.discovery.json",
+      "fft.ai.capabilities.json",
+      "fft.ai.execution.graph.json",
+      "fft.ai.regimes.json",
+      "fft.ai.operators.json",
+      "fft.ai.substrate.json",
+      "fft.ai.paradox.enum.json",
+      "fft.ai.spec-008.json",
+      "fft.ai.rtt.bridge.json",
+      "fft.ai.rtt.spine.examples.json",
+      "fft.ai.hardware.profile.json"
     ],
-    "projections": [
-      "fft.ai.session.dashboard.json",
-      "fft.ai.session.overlay.json",
-      "fft.ai.session.ui.json"
-    ],
-    "rules": [
-      "Projections MUST NOT contradict authoritative files."
-    ]
+
+    "boot_sequence": {
+      "step_1": {
+        "action": "initialize_session",
+        "requirements": ["session_id != null"],
+        "notes": "Establishes the session envelope."
+      },
+      "step_2": {
+        "action": "load_runtime",
+        "requirements": ["runtime.validate_measures = true"],
+        "notes": "Loads RTT execution engine."
+      },
+      "step_3": {
+        "action": "load_navigation",
+        "requirements": ["navigation.current.rtt_node = RTT1"],
+        "notes": "Sets canonical movement rules."
+      },
+      "step_4": {
+        "action": "load_autonomy",
+        "requirements": ["autonomy.current.regime = nominal"],
+        "notes": "Initializes agency envelope."
+      },
+      "step_5": {
+        "action": "load_discovery",
+        "requirements": ["discovery.current.operator = op.diffusion"],
+        "notes": "Enables RTT-state detection."
+      },
+      "step_6": {
+        "action": "load_capabilities",
+        "requirements": ["capabilities.current.rtt_node = RTT1"],
+        "notes": "Loads functional capability envelope."
+      },
+      "step_7": {
+        "action": "load_execution_graph",
+        "requirements": ["execution_graph.nodes.RTT1.operator = op.diffusion"],
+        "notes": "Loads canonical RTT flow."
+      },
+      "step_8": {
+        "action": "load_regimes",
+        "requirements": ["regimes.nominal.rtt_nodes includes RTT1"],
+        "notes": "Loads regime definitions."
+      },
+      "step_9": {
+        "action": "load_operators",
+        "requirements": ["operators.op.diffusion.rtt = RTT1"],
+        "notes": "Loads operator spine."
+      },
+      "step_10": {
+        "action": "load_substrate",
+        "requirements": ["substrate.agentic.eligibility.harmonic = true"],
+        "notes": "Loads substrate constraints."
+      },
+      "step_11": {
+        "action": "load_paradox_enum",
+        "requirements": ["paradox_enum.typed_paradox_required = true"],
+        "notes": "Loads typed paradox categories."
+      },
+      "step_12": {
+        "action": "load_spec_008",
+        "requirements": ["spec_008.aa_modes.AA1.allowed_rtt includes RTT1"],
+        "notes": "Loads AA escalation rules."
+      },
+      "step_13": {
+        "action": "load_rtt_bridge",
+        "requirements": ["rtt_bridge.RTT1.operator = op.diffusion"],
+        "notes": "Loads RTT → operator → regime mapping."
+      },
+      "step_14": {
+        "action": "load_rtt_spine",
+        "requirements": ["rtt_spine.RTT1.meaning != null"],
+        "notes": "Loads RTT semantic spine."
+      },
+      "step_15": {
+        "action": "load_hardware_profile",
+        "requirements": ["hardware_profile.current_class = agentic"],
+        "notes": "Loads hardware substrate envelope."
+      }
+    },
+
+    "post_boot_validation": {
+      "rules": [
+        "rtt_node MUST equal RTT1",
+        "regime MUST equal nominal",
+        "operator MUST equal op.diffusion",
+        "substrate_class MUST equal agentic",
+        "operator_consent MUST equal false",
+        "lineage MUST equal 1"
+      ]
+    }
+  },
+
+  "integration_links": {
+    "session_state": "fft.ai.session.state.json",
+    "runtime": "fft.ai.runtime.json",
+    "navigation": "fft.ai.navigation.json",
+    "autonomy": "fft.ai.autonomy.json",
+    "discovery": "fft.ai.discovery.json",
+    "capabilities": "fft.ai.capabilities.json",
+    "execution_graph": "fft.ai.execution.graph.json",
+    "regimes": "fft.ai.regimes.json",
+    "operators": "fft.ai.operators.json",
+    "substrate": "fft.ai.substrate.json",
+    "spec_008": "fft.ai.spec-008.json",
+    "paradox_enum": "fft.ai.paradox.enum.json",
+    "rtt_bridge": "fft.ai.rtt.bridge.json",
+    "rtt_spine": "fft.ai.rtt.spine.examples.json",
+    "hardware_profile": "fft.ai.hardware.profile.json"
+  },
+
+  "timestamps": {
+    "created": "auto",
+    "last_update": "auto"
   },
 
   "non_claims": [
