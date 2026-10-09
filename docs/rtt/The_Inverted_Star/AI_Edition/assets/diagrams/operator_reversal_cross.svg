@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="480" height="260" viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill:#050505; }
+    .box { fill:#111; stroke:#666; stroke-width:1.5; }
+    .title { fill:#fff; font-family:system-ui,sans-serif; font-size:18px; font-weight:bold; }
+    .label { fill:#9cf; font-family:system-ui,sans-serif; font-size:13px; }
+    .text { fill:#ccc; font-family:system-ui,sans-serif; font-size:12px; }
+    .cycle { fill:#ccc; font-family:system-ui,sans-serif; font-size:12px; }
+  </style>
+
+  <rect x="0" y="0" width="480" height="260" class="bg"/>
+
+  <text x="240" y="32" text-anchor="middle" class="title">
+    Rₓ — Reversal‑Cross (cross‑operator)
+  </text>
+
+  <rect x="60" y="60" width="360" height="150" rx="10" class="box"/>
+
+  <text x="80" y="90" class="label">Layer:</text>
+  <text x="190" y="90" class="text">cross‑cutting</text>
+
+  <text x="80" y="110" class="label">Alignment:</text>
+  <text x="180" y="110" class="text">mixed</text>
+
+  <text x="80" y="130" class="label">Phases:</text>
+  <text x="230" y="130" class="text">fracture, inversion, collapse</text>
+
+  <text x="80" y="155" class="label">Dominance cycle:</text>
+  <text x="260" y="155" class="cycle">Δ → Ω → ∇ → Σ</text>
+
+  <text x="80" y="180" class="label">Transforms:</text>
+  <text x="80" y="200" class="text">triadic_alignment flip→stabilize • operator_priority by phase</text>
+</svg>
