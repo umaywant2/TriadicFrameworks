@@ -1,1 +1,30 @@
-. 
+{
+  "qmroot": "INV-013-path",
+  "module": "rtt.inverted_star.ai",
+  "version": "2.0-draft",
+
+  "INV_013": {
+    "required_path": "0D_Silence_only",
+    "excludes": [
+      "6D",
+      "negative_rungs",
+      "ancestral_rung_reconstruction"
+    ],
+    "reason": "INV-013 requires only a terminal boundary path; RTT forbids higher-dimensional or ancestral rung traversal."
+  },
+
+  "boundary": {
+    "operator": "Σ",
+    "alignment": "0R",
+    "resonance": "zero",
+    "cycle_rate": "zero",
+    "tension": "zero"
+  },
+
+  "invariants": {
+    "sixD_absent": true,
+    "negative_rungs_absent": true,
+    "must_not_invent_6D_operator": true,
+    "must_not_reconstruct_ancestral_rungs": true
+  }
+}
