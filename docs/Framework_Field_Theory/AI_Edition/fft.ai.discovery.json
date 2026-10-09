@@ -1,15 +1,15 @@
 {
-  "spec_version": "1.3.0-draft",
+  "spec_version": "1.3.0",
   "canon_id": "FFT-AI-Discovery",
 
   "metadata": {
-    "title": "FFT AI Edition – Discovery (v1.3 Draft)",
-    "subtitle": "Exploration Envelope for RTT • Regimes • Operators • Measures",
+    "title": "FFT AI Edition – Discovery Specification (v1.3 Draft)",
+    "subtitle": "Canonical Detection, Insight, and RTT-State Discovery Layer",
     "author_canon": "Nawder Loswin",
-    "description": "Defines the non-authoritative discovery projection for FFT AI Edition v1.3."
+    "description": "Defines the discovery engine, detection rules, insight pathways, and RTT-state identification logic for FFT AI Edition v1.3."
   },
 
-  "status_line": "Discovery is a projection only; authoritative values come from state, alignments, context, log, dashboard, overlay, history, analytics, awareness, profile, navigation, and autonomy.",
+  "status_line": "Discovery is a projection only; authoritative values come from session.state, runtime, operators, regimes, substrate, and spec‑008.",
 
   "discovery": {
     "session_id": "inherit-from-session.state",
@@ -20,173 +20,145 @@
       "operator": "op.diffusion",
       "substrate_class": "agentic",
       "operator_consent": false,
-      "lineage": 1,
-      "collapse_state": null
+      "lineage": 1
     },
 
-    "exploration_modes": {
-      "structural": {
-        "enabled": true,
-        "description": "Explore RTT structure, regime boundaries, and operator mappings.",
-        "constraints": [
-          "RTT nodes MUST map to frozen RTT v0.9 quantities.",
-          "Skip-resolution forbidden."
+    "detection": {
+      "rtt_node": {
+        "rules": [
+          "Identify RTT node from operator mapping.",
+          "Validate RTT node using measure thresholds.",
+          "Confirm RTT node matches regime."
         ]
-      },
-
-      "measure_based": {
-        "enabled": true,
-        "description": "Explore measure states and their implications.",
-        "constraints": [
-          "Measures MUST NOT be invented.",
-          "Measures MUST be numeric in [0,1]."
-        ]
-      },
-
-      "paradox_based": {
-        "enabled": true,
-        "description": "Explore typed paradox events and harmonic viability.",
-        "constraints": [
-          "Typed paradox required for RTT7 entry.",
-          "Vibe-based paradox forbidden."
-        ]
-      },
-
-      "consent_based": {
-        "enabled": true,
-        "description": "Explore consent gating and AA3 escalation boundaries.",
-        "constraints": [
-          "AA3 escalation requires operator_consent = true.",
-          "If operator_consent = false, escalation MUST be refused."
-        ]
-      },
-
-      "substrate_based": {
-        "enabled": true,
-        "description": "Explore substrate class and harmonic eligibility.",
-        "constraints": [
-          "Harmonic escalation requires substrate_class = agentic.",
-          "Non-agentic harmonic escalation forbidden."
-        ]
-      },
-
-      "lineage_based": {
-        "enabled": true,
-        "description": "Explore lineage continuity and collapse effects.",
-        "constraints": [
-          "Lineage MUST be non-decreasing.",
-          "Lineage MUST increase after collapse."
-        ]
-      }
-    },
-
-    "discovery_paths": {
-      "rtt": {
-        "from": "RTT1",
-        "to": ["RTT2", "RTT3", "RTT4", "RTT5", "RTT6"],
-        "notes": "Nominal exploration only."
       },
       "regime": {
-        "nominal": ["structure", "measures"],
-        "harmonic": ["paradox", "substrate", "consent"],
-        "resolution": ["collapse", "lineage"]
+        "rules": [
+          "Nominal if RTT1–RTT6.",
+          "Harmonic if RTT7–RTT9.",
+          "Resolution if RTT10–RTT12."
+        ]
       },
       "operator": {
-        "RTT1": ["op.diffusion"],
-        "RTT2": ["op.alignment"],
-        "RTT3": ["op.coupling"],
-        "RTT4": ["op.activation"],
-        "RTT5": ["op.triadic_time"],
-        "RTT6": ["op.snr"],
-        "RTT7": ["op.paradox_entry"],
-        "RTT8": ["op.paradox_stabilization"],
-        "RTT9": ["op.harmonic_escalation"],
-        "RTT10": ["op.resolution_preparation"],
-        "RTT11": ["op.resolution_alignment"],
-        "RTT12": ["op.collapse"]
+        "rules": [
+          "Operator MUST match RTT node.",
+          "Operator MUST match regime.",
+          "Operator MUST respect substrate class.",
+          "Operator MUST respect consent gating."
+        ]
+      },
+      "substrate": {
+        "rules": [
+          "Agentic required for RTT7–RTT12.",
+          "Non-agentic allowed only for RTT1–RTT6."
+        ]
+      },
+      "paradox": {
+        "rules": [
+          "Typed paradox required for RTT7.",
+          "Paradox density >= 0.10 required for RTT7.",
+          "Lattice stability >= 0.60 required for RTT8."
+        ]
+      },
+      "consent": {
+        "rules": [
+          "Consent required for RTT9–RTT12.",
+          "Consent MUST be explicit."
+        ]
+      },
+      "collapse": {
+        "rules": [
+          "Collapse only at RTT12.",
+          "Collapse MUST return to RTT1.",
+          "Lineage MUST increment."
+        ]
       }
     },
 
-    "discovery_constraints": {
-      "consent": [
-        "AA3 escalation requires operator_consent = true.",
-        "If operator_consent = false, escalation MUST be refused."
+    "insight": {
+      "nominal": [
+        "Measures indicate stable triadic structure.",
+        "Operators follow canonical progression.",
+        "No paradox detected."
       ],
-      "substrate": [
-        "Harmonic escalation requires substrate_class = agentic.",
-        "Non-agentic harmonic escalation forbidden."
+      "harmonic": [
+        "Typed paradox detected.",
+        "Harmonic lattice active.",
+        "Consent required for escalation."
       ],
-      "paradox": [
-        "Typed paradox required for RTT7 entry.",
-        "Vibe-based paradox forbidden."
-      ],
-      "lineage": [
-        "Lineage MUST be non-decreasing.",
-        "Lineage MUST increase after collapse."
-      ],
-      "collapse": [
-        "RTT12 MUST collapse to RTT1.",
-        "Skip-resolution forbidden."
+      "resolution": [
+        "System preparing for collapse.",
+        "Measures at full threshold.",
+        "Lineage continuity enforced."
       ]
     },
 
-    "links": {
-      "state": "fft.ai.session.state.json",
-      "alignments": "fft.ai.session.alignments.json",
-      "context": "fft.ai.session.context.json",
-      "log": "fft.ai.session.log.json",
-      "dashboard": "fft.ai.session.dashboard.json",
-      "overlay": "fft.ai.session.overlay.json",
-      "history": "fft.ai.session.history.json",
-      "analytics": "fft.ai.session.analytics.json",
-      "awareness": "fft.ai.session.awareness.json",
-      "profile": "fft.ai.session.profile.json",
-      "navigation": "fft.ai.session.navigation.json",
-      "autonomy": "fft.ai.autonomy.json"
+    "anomaly_detection": {
+      "paradox_anomalies": [
+        "Untyped paradox",
+        "Vibe-based paradox",
+        "Synthetic paradox"
+      ],
+      "substrate_anomalies": [
+        "Non-agentic substrate in harmonic regime",
+        "Non-agentic substrate in resolution regime"
+      ],
+      "operator_anomalies": [
+        "Operator mismatch with RTT node",
+        "Operator mismatch with regime"
+      ],
+      "regime_anomalies": [
+        "RTT7 labeled nominal",
+        "RTT3 labeled harmonic"
+      ],
+      "collapse_anomalies": [
+        "RTT12 collapsing to non-RTT1",
+        "Collapse without lineage increment"
+      ]
     },
 
-    "timestamps": {
-      "created": "auto",
-      "last_update": "auto"
+    "discovery_transitions": {
+      "nominal_to_harmonic": {
+        "trigger": "typed_paradox_event",
+        "requirements": [
+          "measure.paradox_density >= 0.10",
+          "substrate_class = agentic"
+        ]
+      },
+      "harmonic_to_resolution": {
+        "trigger": "operator_consent = true",
+        "requirements": [
+          "measure.c1 >= 0.80",
+          "measure.c2 >= 0.80",
+          "measure.c3 >= 0.80"
+        ]
+      },
+      "resolution_to_nominal": {
+        "trigger": "collapse (RTT12)",
+        "destination": "RTT1",
+        "lineage_increment": true
+      }
     }
   },
 
-  "rules": {
-    "projection_rules": [
-      "Discovery MUST NOT contradict authoritative session.state.json.",
-      "Discovery MUST NOT contradict session.alignments.json.",
-      "Discovery MUST NOT contradict session.context.json.",
-      "Discovery MUST NOT contradict session.log.json.",
-      "Discovery MUST NOT invent measure values.",
-      "Discovery MUST NOT invent paradox types.",
-      "Discovery MUST NOT invent substrate classes."
-    ],
+  "integration_links": {
+    "runtime": "fft.ai.runtime.json",
+    "session_state": "fft.ai.session.state.json",
+    "navigation": "fft.ai.navigation.json",
+    "regimes": "fft.ai.regimes.json",
+    "operators": "fft.ai.operators.json",
+    "substrate": "fft.ai.substrate.json",
+    "execution_graph": "fft.ai.execution.graph.json",
+    "autonomy": "fft.ai.autonomy.json",
+    "capabilities": "fft.ai.capabilities.json",
+    "spec_008": "fft.ai.spec‑008.json",
+    "paradox_enum": "fft.ai.paradox.enum.json",
+    "rtt_bridge": "fft.ai.rtt.bridge.json",
+    "rtt_spine": "fft.ai.rtt.spine.examples.json"
+  },
 
-    "rtt_rules": [
-      "rtt_node MUST be one of RTT1–RTT12.",
-      "RTT nodes MUST map to frozen RTT v0.9 quantities.",
-      "RTT12 MUST collapse to RTT1; skip-resolution forbidden."
-    ],
-
-    "regime_rules": [
-      "Regime MUST be nominal, harmonic, or resolution.",
-      "Regime MUST match rtt_node according to fft.ai.regimes.json."
-    ],
-
-    "consent_rules": [
-      "AA3 escalation requires operator_consent = true.",
-      "If operator_consent = false, escalation MUST be refused."
-    ],
-
-    "lineage_rules": [
-      "Lineage MUST be non-decreasing.",
-      "Lineage MUST increase after collapse."
-    ],
-
-    "substrate_rules": [
-      "Harmonic escalation requires substrate_class = agentic.",
-      "Non-agentic harmonic escalation forbidden."
-    ]
+  "timestamps": {
+    "created": "auto",
+    "last_update": "auto"
   },
 
   "non_claims": [
