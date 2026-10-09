@@ -1,0 +1,75 @@
+{
+  "spec_version": "1.3.0-draft",
+  "canon_id": "FFT-AI-Core",
+
+  "metadata": {
+    "title": "FFT AI Edition – Core Measurement Kernel (v1.3 Draft)",
+    "subtitle": "C1 • C2 • C3 • Paradox Density • Lattice Stability",
+    "author_canon": "Nawder Loswin",
+    "description": "Defines the measurement kernel required for normative gates in FFT AI Edition v1.3."
+  },
+
+  "measurement_kernel": {
+    "measures": {
+      "C1_coherence": {
+        "id": "measure.c1",
+        "range": [0, 1],
+        "definition": "Fraction of active claims that do not contradict declared invariants or other active claims.",
+        "notes": "C1 is the coherence backbone; required for all regime transitions."
+      },
+      "C2_clarity": {
+        "id": "measure.c2",
+        "range": [0, 1],
+        "definition": "Fraction of outputs whose fields are filled from canon or user input, not invented.",
+        "notes": "A filled placeholder is not clarity."
+      },
+      "C3_continuity": {
+        "id": "measure.c3",
+        "range": [0, 1],
+        "definition": "Fraction of session fields that survive a regime transition with same canon_id and non-decreasing lineage.",
+        "notes": "Continuity is required for RTT6 → RTT7 transitions."
+      },
+      "paradox_density": {
+        "id": "measure.paradox_density",
+        "range": [0, 1],
+        "definition": "Count of typed paradox events in the current lattice pass divided by signals dispatched.",
+        "notes": "Typed paradox events required; no vibe-based paradox."
+      },
+      "lattice_stability": {
+        "id": "measure.lattice_stability",
+        "range": [0, 1],
+        "definition": "Minimum of C1, C2, C3 after the last gate, decayed only by logged paradox events.",
+        "notes": "Primary gate for harmonic escalation."
+      }
+    },
+
+    "typed_paradox_events": [
+      "unresolved_triad",
+      "metric_contradiction",
+      "consent_conflict",
+      "cross_file_drift"
+    ],
+
+    "gate_requirements": {
+      "rtt7_entry": {
+        "requires": [
+          "typed_paradox_event",
+          "measure.paradox_density"
+        ]
+      },
+      "aa3_escalation": {
+        "requires": [
+          "measure.lattice_stability",
+          "inv.aa3.consent"
+        ]
+      },
+      "rtt12_collapse": {
+        "requires": [
+          "measure.c1",
+          "measure.c2",
+          "measure.c3"
+        ]
+      }
+    }
+  }
+}
