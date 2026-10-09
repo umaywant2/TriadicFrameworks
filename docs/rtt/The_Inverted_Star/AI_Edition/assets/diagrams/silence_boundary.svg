@@ -1,1 +1,32 @@
-. 
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="720" height="360" viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg">
+
+  <style>
+    .bg { fill:#050505; }
+    .circle { fill:none; stroke:#666; stroke-width:2; }
+    .inner { fill:#000; stroke:#9cf; stroke-width:2; }
+    .label { fill:#fff; font-family:system-ui, sans-serif; font-size:16px; font-weight:bold; }
+    .text { fill:#ccc; font-family:system-ui, sans-serif; font-size:13px; }
+  </style>
+
+  <rect x="0" y="0" width="720" height="360" class="bg"/>
+
+  <text x="360" y="40" text-anchor="middle" class="label">
+    Silence Boundary — Σ (0D)
+  </text>
+
+  <!-- outer context -->
+  <circle cx="360" cy="190" r="140" class="circle"/>
+  <text x="360" y="70" text-anchor="middle" class="text">post‑inversion domain</text>
+
+  <!-- inner 0D silence -->
+  <circle cx="360" cy="190" r="40" class="inner"/>
+  <text x="360" y="190" text-anchor="middle" class="label">Σ</text>
+  <text x="360" y="215" text-anchor="middle" class="text">0R • 0D</text>
+
+  <!-- constraints -->
+  <text x="360" y="260" text-anchor="middle" class="text">
+    6D = absent • negative rungs = absent • INV‑013 path = 0D only
+  </text>
+
+</svg>
