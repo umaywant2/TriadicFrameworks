@@ -1,34 +1,136 @@
 {
-  "spec_version": "1.2.0",
+  "spec_version": "1.3.0-draft",
   "canon_id": "FFT-AI-Runtime",
-  "edition": "AI Edition",
-  "aa_mode": "AA2",
-  "last_refreshed": "2026-10-08T10:56:00",
+
   "metadata": {
-    "title": "FFT AI Edition – Runtime Engine (v1.2)",
+    "title": "FFT AI Edition – Runtime Engine (v1.3 Draft)",
+    "subtitle": "Dispatch • Measures • Paradox • Consent • RTT • Collapse",
     "author_canon": "Nawder Loswin",
-    "updated_at": "2026-10-08T10:56:00"
+    "description": "Defines the canonical runtime loop and execution rules for FFT AI Edition v1.3."
   },
-  "runtime": {
-    "engine": "FFT-Runtime-R5",
-    "active_substrate": "substrate.llm.agentic",
-    "active_aa_mode": "AA2",
-    "active_lattice_node": "RTT1",
-    "three_c_state": {
-      "C1_coherence": 1.0,
-      "C2_clarity": 1.0,
-      "C3_continuity": 1.0,
-      "field_state": "nominal"
-    },
-    "triad_position": { "T": "RTT1", "S": "field.signal", "M": "AA2" },
-    "session_active": false,
-    "bootstrap_required": true,
-    "lifecycle": {
-      "phase_1_bootstrap": "Load fft.ai.bootstrap.json, declare AA Mode, verify substrate.",
-      "phase_2_3c_init": "Evaluate 3C baseline. Establish harmonic lattice at RTT1.",
-      "phase_3_operator_ready": "Dispatch operators via execution graph. Gate on 3C pass.",
-      "phase_4_session_active": "Write awareness, alignments, trace on each turn.",
-      "phase_5_teardown": "Flush session state, write history and analytics, collapse lattice to RTT1."
-    }
-  }
+
+  "status_line": "Runtime MUST evaluate measures, enforce consent, handle paradox, obey RTT mapping, and guarantee collapse.",
+
+  "runtime_loop": [
+    "load_session_state",
+    "evaluate_measures",
+    "evaluate_regime",
+    "evaluate_paradox",
+    "evaluate_consent",
+    "dispatch_operator",
+    "update_lineage",
+    "check_collapse",
+    "write_session_log"
+  ],
+
+  "load_session_state": {
+    "authoritative_files": [
+      "fft.ai.session.state.json",
+      "fft.ai.session.alignments.json",
+      "fft.ai.session.log.json"
+    ],
+    "rules": [
+      "Projections (dashboard, overlay, UI) MUST NOT override authoritative state.",
+      "Session MUST load substrate_class before dispatch."
+    ]
+  },
+
+  "evaluate_measures": {
+    "measure_ids": [
+      "measure.c1",
+      "measure.c2",
+      "measure.c3",
+      "measure.paradox_density",
+      "measure.lattice_stability"
+    ],
+    "rules": [
+      "Measures MUST be numeric in [0,1].",
+      "Measures MUST NOT be invented.",
+      "Every gate MUST cite a measure ID."
+    ]
+  },
+
+  "evaluate_regime": {
+    "regime_file": "fft.ai.regimes.json",
+    "rules": [
+      "Nominal regime requires measure.c1, c2, c3 >= 0.80 and paradox_density = 0.",
+      "Harmonic regime requires typed paradox and lattice_stability >= 0.60.",
+      "Resolution regime requires c1, c2, c3 >= 0.80."
+    ]
+  },
+
+  "evaluate_paradox": {
+    "typed_paradox_enum_file": "fft.ai.paradox.enum.json",
+    "rules": [
+      "RTT7 entry requires typed paradox.",
+      "Paradox MUST be canonical.",
+      "Vibe-based paradox forbidden.",
+      "Paradox density MUST be present for RTT7–RTT9."
+    ]
+  },
+
+  "evaluate_consent": {
+    "rules": [
+      "AA3 escalation requires operator_consent = true.",
+      "If operator_consent = false, escalation MUST be refused.",
+      "Consent conflicts MUST be logged as paradox.consent_conflict."
+    ]
+  },
+
+  "dispatch_operator": {
+    "operator_file": "fft.ai.operators.json",
+    "rules": [
+      "Operator MUST match current RTT node.",
+      "Operator MUST satisfy measure requirements.",
+      "Operator MUST satisfy paradox requirements.",
+      "Operator MUST satisfy consent requirements.",
+      "Operator MUST satisfy substrate requirements.",
+      "Operator MUST NOT invent outputs."
+    ]
+  },
+
+  "update_lineage": {
+    "rules": [
+      "Lineage MUST be non-decreasing.",
+      "Lineage MUST increase after collapse.",
+      "Continuity (measure.c3) MUST NOT decrease across transitions."
+    ]
+  },
+
+  "check_collapse": {
+    "rules": [
+      "RTT12 MUST collapse to RTT1.",
+      "Skip-resolution forbidden.",
+      "Collapse requires measure.c1, c2, c3.",
+      "Collapse MUST increase lineage."
+    ]
+  },
+
+  "write_session_log": {
+    "rules": [
+      "Session log MUST reflect authoritative state.",
+      "Projections MUST NOT contradict log.",
+      "Paradox events MUST be recorded with typed paradox ID."
+    ]
+  },
+
+  "rtt_mapping": {
+    "bridge_file": "fft.ai.rtt.bridge.json",
+    "rules": [
+      "RTT nodes MUST map to frozen RTT v0.9 quantities.",
+      "Runtime MUST NOT reinterpret SET, S–N–R, or triadic time."
+    ]
+  },
+
+  "substrate_rules": {
+    "allowed_classes": ["agentic", "parametric", "symbolic", "edge"],
+    "harmonic_requires_agentic": true,
+    "non_agentic_harmonic_forbidden": true
+  },
+
+  "non_claims": [
+    "Runtime does not revise RTT v0.9.",
+    "Runtime does not reinterpret SET, S–N–R, or triadic time.",
+    "Runtime does not replace the human FFT book."
+  ]
 }
